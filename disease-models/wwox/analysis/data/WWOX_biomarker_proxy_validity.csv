@@ -1,0 +1,5 @@
+tissue,tpm,rank_of_54,pct_of_brain,proxy_verdict
+Whole blood (PBMC),0.71,1.0,10.0,WEAK — near detection floor
+EBV-transformed lymphocytes (LCL),3.17,13.0,46.0,"MODERATE — measurable, expandable in culture"
+Cultured fibroblasts,2.24,6.0,33.0,"MODERATE — measurable, skin-biopsy access"
+Brain (median of 13 regions),6.82,,100.0,TARGET — not accessible in vivo

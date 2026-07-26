@@ -1,0 +1,119 @@
+{
+  "version": "2026-07-05",
+  "description": "case-specific operational scoring matrix for WWOX LEGEND triage. Scores relevance to the case's genotype, biology, therapeutic windows, repurposing and safety. It is triage, not evidence.",
+  "tiers": [
+    {"name": "P0_FAST_TRACK", "min_score": 42, "meaning": "Immediate case-relevant review: allele, urgent safety, or concrete therapeutic window."},
+    {"name": "P1_HIGH", "min_score": 28, "meaning": "High-value deep-dive/discovery/hypothesis candidate."},
+    {"name": "P2_MEDIUM", "min_score": 16, "meaning": "Useful discovery or endpoint signal; queue after high-priority items."},
+    {"name": "P3_LOW", "min_score": 8, "meaning": "Background or weak bridge; preserve, do not prioritize now."},
+    {"name": "P4_BACKGROUND", "min_score": -999, "meaning": "Very low case-specific value after current evidence."}
+  ],
+  "axes": [
+    {
+      "id": "PROBAND_ALLELE_Q230P_PROTEIN",
+      "weight": 14,
+      "label": "Q230P/protein-rescue",
+      "terms": ["q230p", "gln230pro", "sdr domain", "wwox missense", "protein stability", "misfold", "folding", "chaperone", "pharmacological chaperone", "kinetic stabilizer", "proteostasis", "thermostability", "destabilizing variant"],
+      "rationale": "Directly relevant to the case's missense allele and rescue-by-stabilization hypothesis."
+    },
+    {
+      "id": "PROBAND_ALLELE_SPLICE_ASO",
+      "weight": 14,
+      "label": "splice/ASO",
+      "terms": ["c.1057-2a>g", "splice acceptor", "exon 9", "cryptic splice", "antisense oligonucleotide", "aso", "sso", "splice switching", "rna therapy", "splice correction"],
+      "rationale": "Directly relevant to the case's splice allele and ASO/SSO rescue logic."
+    },
+    {
+      "id": "WWOX_REPLACEMENT_GT",
+      "weight": 12,
+      "label": "gene-therapy/AAV",
+      "terms": ["gene therapy", "aav", "lentiviral", "gene delivery", "wwox overexpression", "promoter", "wpre", "intrathecal", "cns delivery", "gene replacement"],
+      "rationale": "Relevant to replacement/bridge-to-GT strategy and delivery design."
+    },
+    {
+      "id": "NEURO_NETWORK_SEIZURE_TIME",
+      "weight": 10,
+      "label": "network/seizure/time-window",
+      "terms": ["developmental and epileptic", "epileptic encephalopathy", "seizure", "infantile spasms", "nmdar", "gaba", "excitability", "sleep", "circadian", "network", "synaptic", "eeg"],
+      "rationale": "Relevant to time-sensitive network stability, seizures, sleep and functional endpoints."
+    },
+    {
+      "id": "MYELIN_GLIA_DEVELOPMENT",
+      "weight": 9,
+      "label": "myelin/glia/development",
+      "terms": ["myelin", "oligodendrocyte", "white matter", "gliogenesis", "astrocyte", "microglia", "neurodevelopment", "brain development", "cerebellar", "cerebellum"],
+      "rationale": "Relevant to developmental window and network/myelin preservation."
+    },
+    {
+      "id": "NEUROINFLAMMATION_IMMUNE",
+      "weight": 8,
+      "label": "neuroinflammation/immune",
+      "terms": ["neuroinflammation", "inflammation", "microglia", "astroglia", "cytokine", "il-6", "il-1", "tnf", "jak", "stat", "jak2/stat3", "pd-l1", "macrophage", "immune evasion"],
+      "rationale": "Relevant to modifiable inflammatory and glial-state hypotheses."
+    },
+    {
+      "id": "METABOLIC_REDOX_MITO",
+      "weight": 7,
+      "label": "metabolic/redox/mitochondria",
+      "terms": ["mitochond", "redox", "ros", "hif1", "hif-1", "p73", "glycolysis", "lipid", "oleic acid", "scd5", "metabolism", "bioenergetic"],
+      "rationale": "Relevant to WWOX metabolic state, stress response and druggable downstream biology."
+    },
+    {
+      "id": "REPURPOSING_CONCRETE",
+      "weight": 7,
+      "label": "repurposing/concrete intervention",
+      "terms": ["drug repurposing", "repurpos", "inhibitor", "activator", "approved drug", "small molecule", "peptide", "zfra", "lithium", "wnt", "myc", "gsk3", "tau", "treatment", "therapeutic"],
+      "rationale": "Relevant when a concrete modulator or therapeutic class can enter hypothesis-forge."
+    },
+    {
+      "id": "PEDIATRIC_RARE_DISEASE_TRANSFER",
+      "weight": 6,
+      "label": "pediatric/rare-disease transfer",
+      "terms": ["pediatric", "infant", "child", "rare disease", "n-of-1", "developmental delay", "woree", "scar12", "case report", "patient-derived", "organoid"],
+      "rationale": "Improves translational fit to the case and rare-disease workflows."
+    },
+    {
+      "id": "SAFETY_BLOCK1",
+      "weight": 11,
+      "label": "BLOCK-1/safety",
+      "terms": ["toxicity", "side effect", "adverse", "safety", "contraindication", "immune checkpoint", "immunotherapy", "cisplatin", "apoptosis", "bcl-xl", "mcl-1", "oncogenic", "tumor", "cancer risk", "corrigendum", "retraction"],
+      "rationale": "High review priority for safety/evidence correction; not automatically therapeutic priority."
+    },
+    {
+      "id": "EVIDENCE_FUNCTIONAL_PRIMARY",
+      "weight": 5,
+      "label": "functional evidence",
+      "terms": ["functional validation", "knockout", "knockdown", "rescue", "patient-derived", "animal model", "mouse model", "in vivo", "in vitro", "multi-omics", "single-cell", "rna-seq", "proteomics"],
+      "rationale": "Raises priority when evidence is mechanistic/functional rather than association-only."
+    }
+  ],
+  "penalties": [
+    {
+      "id": "ASSOCIATION_ONLY",
+      "weight": -5,
+      "terms": ["gwas", "mendelian randomization", "polymorphism", "susceptibility locus", "association study"],
+      "unless_any_axis": ["PROBAND_ALLELE_Q230P_PROTEIN", "PROBAND_ALLELE_SPLICE_ASO", "NEURO_NETWORK_SEIZURE_TIME", "WWOX_REPLACEMENT_GT"],
+      "rationale": "Pure association without mechanism is lower priority."
+    },
+    {
+      "id": "ONCOLOGY_ONLY_WEAK_BRIDGE",
+      "weight": -4,
+      "terms": ["carcinoma", "cancer", "tumor", "chemotherapy", "metastasis"],
+      "unless_any_axis": ["WWOX_REPLACEMENT_GT", "NEUROINFLAMMATION_IMMUNE", "METABOLIC_REDOX_MITO", "REPURPOSING_CONCRETE", "SAFETY_BLOCK1", "EVIDENCE_FUNCTIONAL_PRIMARY"],
+      "rationale": "Oncology is valuable only when it carries WWOX mechanism, druggability, safety or transferable biology."
+    },
+    {
+      "id": "NON_HUMAN_TRAIT_WEAK",
+      "weight": -6,
+      "terms": ["sheep", "yak", "pig", "litter size", "milk protein", "agricultural"],
+      "unless_any_axis": ["PROBAND_ALLELE_Q230P_PROTEIN", "EVIDENCE_FUNCTIONAL_PRIMARY"],
+      "rationale": "Animal/agricultural trait papers usually have weak case transfer unless mechanistic."
+    }
+  ],
+  "boosts": [
+    {"condition": "sweep_class:SAFETY_SIGNAL", "weight": 5, "rationale": "Safety/evidence correction needs attention even when therapeutic value is uncertain."},
+    {"condition": "sweep_class:CANONICAL_CANDIDATE", "weight": 4, "rationale": "Canonical candidates deserve fast review."},
+    {"condition": "intake_class:NEW", "weight": 2, "rationale": "New actionable items should surface."},
+    {"condition": "intake_class:CORPUS_CATALOGUED", "weight": 2, "rationale": "Catalogued but not deep-dived items may hide old value."}
+  ]
+}

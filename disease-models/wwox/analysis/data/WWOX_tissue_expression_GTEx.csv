@@ -1,0 +1,55 @@
+tissue,tpm,category
+Whole_Blood,0.709234,Blood (PBMC proxy)
+Muscle_Skeletal,0.8968020000000001,Other/peripheral
+Heart_Left_Ventricle,1.1185200000000002,Other/peripheral
+Pancreas,1.68823,Other/peripheral
+Heart_Atrial_Appendage,1.7444099999999998,Other/peripheral
+Cells_Cultured_fibroblasts,2.23766,Fibroblasts (proxy)
+Colon_Transverse,2.45132,Other/peripheral
+Liver,2.54595,Other/peripheral
+Small_Intestine_Terminal_Ileum,2.74905,Other/peripheral
+Stomach,2.8523400000000003,Other/peripheral
+Spleen,2.94617,Other/peripheral
+Esophagus_Muscularis,3.00798,Other/peripheral
+Cells_EBV-transformed_lymphocytes,3.16558,Lymphocytes (PBMC proxy)
+Esophagus_Gastroesophageal_Junction,3.41851,Other/peripheral
+Adrenal_Gland,3.7314199999999995,Other/peripheral
+Colon_Sigmoid,3.8385,Other/peripheral
+Kidney_Cortex,3.9125900000000002,Other/peripheral
+Esophagus_Mucosa,4.03169,Other/peripheral
+Lung,4.36723,Other/peripheral
+Kidney_Medulla,4.39117,Other/peripheral
+Adipose_Visceral_Omentum,4.43055,Other/peripheral
+Minor_Salivary_Gland,4.86484,Other/peripheral
+Skin_Not_Sun_Exposed_Suprapubic,4.8824,Other/peripheral
+Skin_Sun_Exposed_Lower_leg,5.06572,Other/peripheral
+Adipose_Subcutaneous,5.28332,Other/peripheral
+Fallopian_Tube,5.3088,Other/peripheral
+Brain_Hippocampus,5.58518,CNS/neural (TARGET)
+Bladder,5.603330000000001,Other/peripheral
+Prostate,5.6507,Other/peripheral
+Brain_Putamen_basal_ganglia,5.67835,CNS/neural (TARGET)
+Breast_Mammary_Tissue,5.6887,Other/peripheral
+Vagina,5.75281,Other/peripheral
+Artery_Coronary,5.9848300000000005,Other/peripheral
+Brain_Amygdala,6.16809,CNS/neural (TARGET)
+Brain_Nucleus_accumbens_basal_ganglia,6.22283,CNS/neural (TARGET)
+Pituitary,6.471419999999999,Peripheral nerve
+Testis,6.47785,Other/peripheral
+Artery_Aorta,6.51789,Other/peripheral
+Ovary,6.680039999999999,Other/peripheral
+Brain_Anterior_cingulate_cortex_BA24,6.77433,CNS/neural (TARGET)
+Brain_Caudate_basal_ganglia,6.81567,CNS/neural (TARGET)
+Brain_Frontal_Cortex_BA9,6.8204,CNS/neural (TARGET)
+Brain_Cortex,6.84932,CNS/neural (TARGET)
+Cervix_Endocervix,6.86342,Other/peripheral
+Artery_Tibial,6.89228,Other/peripheral
+Brain_Hypothalamus,7.426810000000001,CNS/neural (TARGET)
+Brain_Substantia_nigra,7.4768,CNS/neural (TARGET)
+Cervix_Ectocervix,7.81982,Other/peripheral
+Uterus,8.1582,Other/peripheral
+Nerve_Tibial,8.244819999999999,Peripheral nerve
+Brain_Spinal_cord_cervical_c-1,10.4735,CNS/neural (TARGET)
+Brain_Cerebellum,11.2144,CNS/neural (TARGET)
+Brain_Cerebellar_Hemisphere,12.1278,CNS/neural (TARGET)
+Thyroid,13.798,Other/peripheral

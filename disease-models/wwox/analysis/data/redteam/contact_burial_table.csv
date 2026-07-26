@@ -1,0 +1,9 @@
+residue,RSA_folded,RSA_helix_deleted,nearest_helix_contact_A,note
+L187,0.001,0.183,3.41,"degron anchor, buried by helix (Y238)"
+V190,0.0,0.301,3.46,"degron anchor, buried by helix (L239)"
+Q191,0.277,0.4,3.65,"KFERQ Q, partially exposed"
+Q230,0.0,,,"buried, pi-helix bulge"
+L239,0.0,,,buried helix core
+C299,0.0,0.119,,buried core (packs L280/L397/I268); SG 10.7A from K297-NZ; contacts lid H233 3.44A
+I405,0.041,,,"ERLIQ hydrophobic, buried"
+Q406,0.581,,,"ERLIQ Q, exposed"

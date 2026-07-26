@@ -1,0 +1,260 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LEGEND full-text read receipt",
+  "type": "object",
+  "required": [
+    "event_id",
+    "record_kind",
+    "study_id",
+    "event_at",
+    "analysis_at",
+    "workflow",
+    "evidence_depth",
+    "source_locator",
+    "source_fingerprint",
+    "coverage",
+    "outputs",
+    "evidence_basis",
+    "prior_receipt",
+    "reread_reason"
+  ],
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "pattern": "^FTR-[0-9]{8}-[A-Za-z0-9._-]+-[0-9]{2}$"
+    },
+    "record_kind": {
+      "enum": [
+        "contemporaneous_receipt",
+        "legacy_reconstruction"
+      ]
+    },
+    "study_id": {
+      "type": "object",
+      "properties": {
+        "pmid": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9]{1,8}$"
+        },
+        "doi": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "minProperties": 1,
+      "additionalProperties": false
+    },
+    "event_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "analysis_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "workflow": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_depth": {
+      "enum": [
+        "retrieved_not_read",
+        "queried_not_full_read",
+        "abstract_only",
+        "partial_fulltext_read",
+        "complete_fulltext_read"
+      ]
+    },
+    "source_locator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_fingerprint": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "coverage": {
+      "type": "object",
+      "required": [
+        "abstract",
+        "introduction",
+        "methods",
+        "results",
+        "figures",
+        "tables",
+        "discussion",
+        "limitations",
+        "supplementary"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "abstract": {
+          "enum": [
+            "read",
+            "captions_only",
+            "not_present",
+            "unavailable",
+            "not_read",
+            "unknown_legacy"
+          ]
+        },
+        "introduction": {
+          "enum": [
+            "read",
+            "captions_only",
+            "not_present",
+            "unavailable",
+            "not_read",
+            "unknown_legacy"
+          ]
+        },
+        "methods": {
+          "enum": [
+            "read",
+            "captions_only",
+            "not_present",
+            "unavailable",
+            "not_read",
+            "unknown_legacy"
+          ]
+        },
+        "results": {
+          "enum": [
+            "read",
+            "captions_only",
+            "not_present",
+            "unavailable",
+            "not_read",
+            "unknown_legacy"
+          ]
+        },
+        "figures": {
+          "enum": [
+            "read",
+            "captions_only",
+            "not_present",
+            "unavailable",
+            "not_read",
+            "unknown_legacy"
+          ]
+        },
+        "tables": {
+          "enum": [
+            "read",
+            "captions_only",
+            "not_present",
+            "unavailable",
+            "not_read",
+            "unknown_legacy"
+          ]
+        },
+        "discussion": {
+          "enum": [
+            "read",
+            "captions_only",
+            "not_present",
+            "unavailable",
+            "not_read",
+            "unknown_legacy"
+          ]
+        },
+        "limitations": {
+          "enum": [
+            "read",
+            "captions_only",
+            "not_present",
+            "unavailable",
+            "not_read",
+            "unknown_legacy"
+          ]
+        },
+        "supplementary": {
+          "enum": [
+            "read",
+            "captions_only",
+            "not_present",
+            "unavailable",
+            "not_read",
+            "unknown_legacy"
+          ]
+        },
+        "references": {
+          "enum": [
+            "read",
+            "captions_only",
+            "not_present",
+            "unavailable",
+            "not_read",
+            "unknown_legacy"
+          ]
+        }
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "evidence_basis": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "prior_receipt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^FTR-[0-9]{8}-[A-Za-z0-9._-]+-[0-9]{2}$"
+    },
+    "reread_reason": {
+      "enum": [
+        "first_read",
+        "new_version_or_supplement",
+        "inadequate_prior_coverage",
+        "contradiction_or_retraction",
+        "new_question_outside_prior_coverage",
+        "adversarial_reanalysis",
+        "explicit_operator_request",
+        "receipt_correction"
+      ]
+    },
+    "ledger_prev_hash": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$",
+      "description": "Stamped by the ledger writer, never authored by hand: SHA-256 of the canonical serialization of the preceding event, null for the first. Present on every persisted record; absent from the receipt a skill or agent emits."
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "coverageState": {
+      "enum": [
+        "read",
+        "not_present",
+        "unavailable",
+        "not_read",
+        "unknown_legacy"
+      ]
+    }
+  }
+}

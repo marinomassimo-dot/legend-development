@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+title: "LEGEND — Mechanistic Intelligence for Rare Disease (WWOX public edition)"
+message: "If you use this framework, its disease model, or its learned-gates registry, please cite it."
+type: software
+abstract: >-
+  LEGEND is a public-evidence framework that turns fragmented cross-disciplinary
+  literature into an auditable, provenance-tracked disease-mechanism model, while
+  recording where AI-assisted reasoning fails and converting each documented failure
+  into a reusable, often executable guardrail. The public edition ships the
+  disease-agnostic engine (instruction core, epistemic discipline, protocols,
+  structural LINT, batch-commit machinery, learned-gates registry, 20 operational
+  skills and 5 reusable subagents) together with a de-identified, disease-level model
+  of WWOX-related disorders (WOREE / WWOX-DEE and SCAR12) built from public
+  literature and public databases only. It contains no individual-level record and is
+  not medical advice. Developed in partnership with, and sponsored by, the WWOX
+  Foundation, which is the project's sponsor rather than a copyright holder.
+authors:
+  - name: "The LEGEND project"
+contact:
+  - name: "WWOX Foundation"
+    website: "https://www.wwox.org/"
+keywords:
+  - rare disease
+  - WWOX
+  - WOREE
+  - developmental and epileptic encephalopathy
+  - disease mechanism
+  - knowledge graph
+  - evidence provenance
+  - epistemic discipline
+  - failure-aware evaluation
+  - AI for science
+license: MIT

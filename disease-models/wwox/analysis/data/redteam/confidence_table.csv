@@ -1,0 +1,9 @@
+metric,value
+helix 226-251 (mean pLDDT),98.4
+LRSVQ 187-191 (mean pLDDT),98.4
+ERLIQ 402-409 (mean pLDDT),96.9
+SDR core 125-414 (mean pLDDT),90.3
+"helix<->LRSVQ (mean PAE, A)",1.4
+"helix<->402-409 (mean PAE, A)",1.7
+"helix<->triad (mean PAE, A)",2.0
+"C299<->triad (mean PAE, A)",1.4

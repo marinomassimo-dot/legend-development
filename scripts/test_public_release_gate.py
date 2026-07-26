@@ -1,0 +1,363 @@
+#!/usr/bin/env python3
+"""Regression tests for public_release_gate.py."""
+
+from __future__ import annotations
+
+import importlib.util
+import shutil
+import subprocess
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+
+GATE_PATH = Path(__file__).with_name("public_release_gate.py")
+SPEC = importlib.util.spec_from_file_location("public_release_gate", GATE_PATH)
+assert SPEC and SPEC.loader
+GATE = importlib.util.module_from_spec(SPEC)
+sys.modules[SPEC.name] = GATE
+SPEC.loader.exec_module(GATE)
+
+
+class GateTests(unittest.TestCase):
+    def make_repo(self) -> Path:
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        root = Path(temp.name)
+        (root / "README.md").write_text("# Public project\n", encoding="utf-8")
+        return root
+
+    def test_direct_identifier_blocks(self) -> None:
+        root = self.make_repo()
+        (root / "note.md").write_text("Bim" + "ba", encoding="utf-8")
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertIn("DIRECT_IDENTIFIER", {item.code for item in findings})
+
+    def test_detector_sources_do_not_embed_sensitive_vocabulary(self) -> None:
+        sensitive_codepoints = (
+            (66, 101, 97),
+            (66, 101, 97, 116, 114, 105, 99, 101),
+            (66, 105, 109, 98, 97),
+            (77, 97, 115, 115, 105, 109, 111),
+            (66, 101, 114, 103, 97, 109, 111),
+        )
+        sources = [
+            GATE_PATH,
+            GATE_PATH.with_name("independent_privacy_scan.py"),
+        ]
+        leaks = []
+        for path in sources:
+            lowered = path.read_text(encoding="utf-8").lower()
+            for codepoints in sensitive_codepoints:
+                token = "".join(map(chr, codepoints)).lower()
+                if token in lowered:
+                    leaks.append(f"{path.name}: sensitive detector token embedded")
+        self.assertFalse(leaks, "\n".join(leaks))
+
+    def test_common_lowercase_homonym_does_not_block(self) -> None:
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "Use the massimo available context.", encoding="utf-8"
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertNotIn(
+            "DIRECT_IDENTIFIER", {item.code for item in findings}
+        )
+
+    def test_uppercase_identifier_inside_compound_token_blocks(self) -> None:
+        root = self.make_repo()
+        sensitive = "".join(map(chr, (66, 101, 97))).upper()
+        (root / "note.md").write_text(
+            f"MODE: {sensitive}_PRIORITY_MATRIX", encoding="utf-8"
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertIn(
+            "DIRECT_IDENTIFIER", {item.code for item in findings}
+        )
+
+    def test_case_linkage_blocks(self) -> None:
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "The proband has maternal c.1057-2A>G and paternal Q230P.",
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        codes = {item.code for item in findings}
+        self.assertIn("REIDENTIFYING_VARIANT_COMBINATION", codes)
+        self.assertIn("PARENT_OF_ORIGIN_LINKAGE", codes)
+        self.assertIn("PARENT_OF_ORIGIN_VARIANT_LINKAGE", codes)
+
+    def test_parent_origin_variant_blocks_without_person_noun(self) -> None:
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "The maternally inherited allele was c.1057−2A>G.",
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertIn(
+            "PARENT_OF_ORIGIN_VARIANT_LINKAGE",
+            {item.code for item in findings},
+        )
+
+    def test_italian_parent_origin_after_exact_variants_blocks(self) -> None:
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "Genotipo compound eterozigote: c.1057-2A>G, materno, "
+            "e Q230P, paterno.",
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        codes = {item.code for item in findings}
+        self.assertIn("PARENT_OF_ORIGIN_VARIANT_LINKAGE", codes)
+        self.assertIn("REIDENTIFYING_VARIANT_COMBINATION", codes)
+
+    def test_unrelated_negation_does_not_suppress_parent_origin(self) -> None:
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            'Not "find a stabilizer": the compound het has maternal '
+            "c.1057-2A>G and paternal Q230P.",
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        codes = {item.code for item in findings}
+        self.assertIn("PARENT_OF_ORIGIN_VARIANT_LINKAGE", codes)
+        self.assertIn("REIDENTIFYING_VARIANT_COMBINATION", codes)
+
+    def test_parent_origin_reference_genotype_blocks_without_variant(self) -> None:
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "The maternal side of the reference genotype is splice-related.",
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertIn(
+            "PARENT_OF_ORIGIN_REFERENCE_GENOTYPE",
+            {item.code for item in findings},
+        )
+
+    def test_parent_origin_sides_pairing_blocks_without_exact_variants(self) -> None:
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "A bypass would avoid both maternal splicing and paternal "
+            "misfolding.",
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertIn(
+            "PARENT_OF_ORIGIN_PAIRING",
+            {item.code for item in findings},
+        )
+
+    def test_compound_genotype_blocks_without_proband_word(self) -> None:
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "The biallelic genotype comprised p.(Gln230Pro) and "
+            "c.1057–2 A>G in trans.",
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertIn(
+            "REIDENTIFYING_VARIANT_COMBINATION",
+            {item.code for item in findings},
+        )
+
+    def test_cross_paragraph_compound_summary_blocks(self) -> None:
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "Worked example one: Q230P is a folding defect.\n\n"
+            "Worked example two: c.1057-2A>G is a splice defect.\n\n"
+            "Together these two variants illustrate one "
+            "compound-heterozygous genotype.\n",
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertIn(
+            "REIDENTIFYING_VARIANT_COMBINATION",
+            {item.code for item in findings},
+        )
+
+    def test_affected_individual_carrying_both_variants_blocks(self) -> None:
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "The affected individual carried both Q230P and c.1057-2A>G.",
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertIn(
+            "REIDENTIFYING_VARIANT_COMBINATION",
+            {item.code for item in findings},
+        )
+
+    def test_explicitly_decoupled_parent_origin_policy_passes(self) -> None:
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "Q230P is a public disease example; parent-of-origin has been "
+            "removed and decoupled from every variant.",
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertNotIn(
+            "PARENT_OF_ORIGIN_VARIANT_LINKAGE",
+            {item.code for item in findings},
+        )
+
+    def test_explicit_privacy_exclusion_is_not_case_linkage(self) -> None:
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "All individual-linking material has been removed: no identified "
+            "person, no clinical regimen, no parent-of-origin, no institution. "
+            "Q230P is a disease-level worked example.",
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        codes = {item.code for item in findings}
+        self.assertNotIn("CLINICAL_CASE_LINKAGE", codes)
+        self.assertNotIn("GEOGRAPHIC_CASE_LINKAGE", codes)
+        self.assertNotIn("PARENT_OF_ORIGIN_LINKAGE", codes)
+
+    def test_broken_relative_link_blocks(self) -> None:
+        root = self.make_repo()
+        (root / "README.md").write_text("[missing](missing.md)\n", encoding="utf-8")
+        findings = []
+        GATE.scan_links(root, findings)
+        self.assertIn("BROKEN_MARKDOWN_LINK", {item.code for item in findings})
+
+    def test_batch_commit_snapshot_directory_is_not_scanned(self) -> None:
+        """Obeying the BATCH_COMMIT backup phase must not fail the gate.
+
+        Phase 3 of the protocol requires a snapshot of the canonical files under `backup/`
+        before any canonical write. The copies keep the originals' relative links, which no
+        longer resolve from the snapshot's depth — so scanning them turned the mandatory
+        backup into a BLOCK. A gate that punishes the backup teaches sessions to skip it.
+        """
+        root = self.make_repo()
+        snapshot = root / "backup" / "snap_20260726_1600" / "registries"
+        snapshot.mkdir(parents=True)
+        (snapshot / "working_model_current.md").write_text(
+            "[narrative view](../disease_model.md)\n", encoding="utf-8"
+        )
+        findings = []
+        GATE.scan_links(root, findings)
+        self.assertEqual([], [item.code for item in findings])
+
+    def test_secret_blocks(self) -> None:
+        root = self.make_repo()
+        (root / "config.txt").write_text(
+            "OPENAI_API_KEY=" + "sk-" + ("a" * 32),
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertIn("OPENAI_KEY", {item.code for item in findings})
+
+    def test_real_email_blocks_but_placeholders_pass(self) -> None:
+        root = self.make_repo()
+        (root / "contacts.md").write_text(
+            "Contact researcher@real-lab.org.\n"
+            "Example: your-email@example.com or gate@example.invalid.\n",
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        email_findings = [
+            item for item in findings if item.code == "EMAIL_ADDRESS"
+        ]
+        self.assertEqual(1, len(email_findings))
+        self.assertEqual(1, email_findings[0].line)
+
+    def test_nested_disease_data_requires_provenance(self) -> None:
+        root = self.make_repo()
+        asset = root / "disease-models" / "wwox" / "analysis" / "data"
+        asset.mkdir(parents=True)
+        (asset / "result.csv").write_text("x\n1\n", encoding="utf-8")
+        (root / "DATA_SOURCES.md").write_text(
+            "# Data sources\nNo declared assets.\n", encoding="utf-8"
+        )
+        findings = []
+        GATE.scan_provenance(root, findings)
+        self.assertIn(
+            "UNDECLARED_DATA_ASSET", {item.code for item in findings}
+        )
+
+    def test_nested_disease_data_matches_declared_scope(self) -> None:
+        root = self.make_repo()
+        asset = root / "disease-models" / "wwox" / "analysis" / "data"
+        asset.mkdir(parents=True)
+        (asset / "result.csv").write_text("x\n1\n", encoding="utf-8")
+        (root / "DATA_SOURCES.md").write_text(
+            "# Data sources\n`analysis/data/*.csv`\n", encoding="utf-8"
+        )
+        findings = []
+        GATE.scan_provenance(root, findings)
+        self.assertNotIn(
+            "UNDECLARED_DATA_ASSET", {item.code for item in findings}
+        )
+
+    def test_public_variants_without_person_link_do_not_trigger_combo(self) -> None:
+        root = self.make_repo()
+        (root / "examples.md").write_text(
+            "Q230P is a public worked example.\n"
+            "c.1057-2A>G is independently discussed as a splice example.\n",
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertNotIn(
+            "REIDENTIFYING_VARIANT_COMBINATION",
+            {item.code for item in findings},
+        )
+
+    def test_clean_git_archive_executes_gate(self) -> None:
+        root = self.make_repo()
+        (root / "scripts").mkdir()
+        shutil.copy2(GATE_PATH, root / "scripts" / "public_release_gate.py")
+        (root / "DATA_SOURCES.md").write_text(
+            "# Data sources\nNo shipped data assets.\n", encoding="utf-8"
+        )
+        (root / "THIRD_PARTY_NOTICES.md").write_text(
+            "# Third-party notices\nNone.\n", encoding="utf-8"
+        )
+        (root / "_external_repos").mkdir()
+        (root / "_external_repos" / "MANIFEST.md").write_text(
+            "# External repositories\nNone vendored.\n", encoding="utf-8"
+        )
+        workflow = root / ".github" / "workflows"
+        workflow.mkdir(parents=True)
+        (workflow / "public-release-gate.yml").write_text(
+            "name: test\n", encoding="utf-8"
+        )
+        commands = [
+            ["git", "init", "-q"],
+            ["git", "config", "user.email", "gate@example.invalid"],
+            ["git", "config", "user.name", "Release Gate Test"],
+            ["git", "add", "."],
+            ["git", "commit", "-qm", "fixture"],
+        ]
+        for command in commands:
+            subprocess.run(command, cwd=root, check=True)
+        findings = []
+        GATE.run_clean_clone(root, findings, None)
+        self.assertNotIn(
+            "CLEAN_CLONE_GATE_FAILED",
+            {item.code for item in findings},
+            msg="\n".join(item.message for item in findings),
+        )
+
+
+if __name__ == "__main__":
+    unittest.main()

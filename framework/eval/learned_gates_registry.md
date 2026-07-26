@@ -1,0 +1,133 @@
+# Learned gates registry
+
+This registry preserves reusable error-prevention procedures learned during
+LEGEND development. It contains method only: no private case history, family
+relationship, unpublished clinical fact or patient-level recommendation.
+
+A gate constrains what an analysis may claim. It is not evidence and does not
+replace primary-source reading, domain review or experimental validation.
+
+Status vocabulary:
+
+- `ACTIVE_METHOD`: applied as a documented reasoning constraint;
+- `ACTIVE_EXECUTABLE`: enforced by public code and regression tests;
+- `PROPOSED`: specified but not yet validated across enough examples;
+- `PENDING_EXECUTABLE`: active as method, not yet encoded in a public checker.
+
+## Transfer, provenance and control design
+
+| Gate | Trigger | Required representation / decision rule | Status |
+|---|---|---|---|
+| `MECHANISM_TRANSFER_FIREWALL` | A causal edge is transferred across variants, models or experimental systems | Attach `variant/model`, `experimental system` and `epistemic level` to every edge. A transferred edge remains a bridge hypothesis until measured in the target system. | ACTIVE_METHOD |
+| `CONTROL_SPECIFICITY_RULE` | A positive control is used to validate a different endpoint | State the exact intermediate validated by the control. Never generalise control validity to an unmeasured biological endpoint. | ACTIVE_METHOD |
+| `POCKET_NOT_PRODUCT` | A computational pocket is promoted toward a therapeutic strategy | Require, in order: correct mechanism, recoverable fold, functional orthogonality, direct binding and functional rescue. | ACTIVE_METHOD |
+| `NUMERIC_PROVENANCE_FIREWALL` | A structural or quantitative number supports a mechanism | Record file/row, numbering scheme, selected atoms or statistic, units, tool/version and reproducible command. | ACTIVE_METHOD |
+| `NUMERIC_GLYPH_FIDELITY_GATE` | A direction, sign or ranking is read from a number extracted out of a PDF text layer | The text layer is not the document. Publisher fonts routinely encode `−` (U+2212) as an absent glyph and an en-dash as a stray letter, so an extractor silently returns `3.55` where the page prints `−3.55` — inverting every log2 value in a table and manufacturing a contradiction that does not exist. Before any directional claim from an extracted table: (a) verify the extraction against the **rendered page image**, not another text pass, and (b) treat a table that disagrees with its own group heading as an extraction fault until disproved, never as an author error. Cheap tell: search the document for `U+2212` and for a knockout notation such as `Capn1/` — a genotype that lost its superscript minus signs proves the whole file dropped them. | ACTIVE_METHOD |
+| `CONTROL_TOPOLOGY_CHECK` | A control is called structurally independent or “off-site” | Check 3D contacts, burial, sensitivity to the same perturbation and independent functional data. Sequence distance is insufficient. | ACTIVE_METHOD |
+| `CAUSAL_AXIS_GATE` | A perturbation is interpreted as proving a whole pathway | Conclude only on the directly measured axis and include `INCONCLUSIVE` in the outcome matrix. | ACTIVE_METHOD |
+| `POCKET_PROVENANCE_GATE` | A pocket/druggability output supports GO/NO-GO | Preserve structure crop/input, preparation, tool/version, parameters, raw output, distance metric, lining residues and ensemble definition. | ACTIVE_METHOD |
+| `TAG_PROXIMITY_CHECK` | A tagged construct is used as if the tag were neutral | Check tag distance from motifs and functional surfaces and require an untagged or alternative-tag control where relevant. | ACTIVE_METHOD |
+
+## Repair and synthesis integrity
+
+| Gate | Trigger | Required representation / decision rule | Status |
+|---|---|---|---|
+| `REPAIR_PROPAGATION_MATRIX` | A baseline claim is reversed or materially narrowed | Enumerate source claim, corrected formulation, every canonical/non-canonical mirror, contaminated candidate and stale search string. Close only after a post-repair audit classifies every residual occurrence. | PENDING_EXECUTABLE |
+| `DIRECTIONAL_CONTEXT_GATE` | Studies report apparently opposite directions | Record dose/abundance, duration, cell type, stress state, genotype and endpoint time. Merge only comparable edges; otherwise preserve a non-monotonic/context-dependent model. | ACTIVE_METHOD |
+| `FUNCTIONAL_ORTHOGONALITY_PANEL` | A rescue or stabiliser is evaluated | Require independent readouts for abundance/localisation, relevant partner interaction, directional functional output, and viability/stress within a physiological window. | ACTIVE_METHOD |
+| `ASSAY_SEMANTICS_GATE` | Titles/captions label an assay more strongly than methods allow | Record compared groups, perturbation/dose, physical measurand, inferred biological endpoint and specificity/directness. Protocol and groups override editorial labels. | ACTIVE_METHOD |
+| `DEGRADATION_DIRECTION_GATE` | A degradation study contains several proteins, markers or inhibitors | Record substrate, recruiter/regulator, recognition determinant, compartment/pathway, perturbation and molecular species whose abundance changes. Unknown roles stay unknown. | ACTIVE_METHOD |
+| `REPORTER_IDENTITY_GATE` | A reporter name implies a pathway | Record catalogue ID, molecular design, signal-generating event, primary/alternative pathways and specificity controls. Catalogue and primary method literature override shorthand names. | ACTIVE_METHOD |
+| `MECHANISM_DIRECTNESS_GATE` | Marker plus phenotype is turned into an unmeasured intermediate | Separate perturbation, directly measured physical variable, observed endpoint, inferred intermediate/external premise and the assay that could falsify it. | ACTIVE_METHOD |
+| `TARGET_ATTRIBUTION_GATE` | A compound-associated rescue is called target-mediated | Record identity/dose, binding or engagement, inactive chemical control, genetic epistasis, resistant rescue, off-target/cytotoxicity and direct-vs-surrogate endpoint. Require orthogonal chemical and genetic support. | ACTIVE_METHOD |
+| `EVIDENCE_REUSE_GATE` | A review, reused cohort or same-lineage publication appears to replicate a finding | Record source type, new-vs-reused data, originating paper/cohort/figure, laboratory independence, same-experiment mechanism and relevant interests. Reuse improves traceability, not replication count. | ACTIVE_METHOD |
+
+## Outcome, comparator and rescue validity
+
+| Gate | Trigger | Required representation / decision rule | Status |
+|---|---|---|---|
+| `OUTCOME_CLAIM_GATE` | A study uses prognostic, predictive or biomarker language | Record biomarker, prespecified outcome, comparison, effect size/uncertainty, covariates, validation and incremental utility. Without a linked analysis, classify as descriptive/exploratory. | ACTIVE_METHOD |
+| `STAGE_MATCHED_COMPARATOR_GATE` | Omics or phenotype groups differ in genotype and biological stage/context | Record genotype, stage, tissue/cell type, age/exposure, clonal selection and missing comparator. Genotype attribution requires matched, longitudinal or isogenic separation. | ACTIVE_METHOD |
+| `PROTEIN_STATE_IDENTITY_GATE` | Abundance is used as proof of functional rescue | Represent abundance, solubility, PTM, localisation, partner occupancy, functional output and dose/stress. Stable, sequestered or mislocalised protein is not a rescue. | ACTIVE_METHOD |
+| `STIMULUS_CONDITIONAL_RESCUE_GATE` | A rescue is measured only at baseline or only under challenge | Record baseline, defined stressor, dose/time, target state, desired output, off-axis outputs, assay-sensitivity control and rescue dose. A GO requires physiological dose and no pathological hyper-response. | ACTIVE_METHOD |
+| `ALLELIC_ARCHITECTURE_RESOLUTION_GATE` | Exon-level CNV/SV calls drive allele-specific interpretation or design | Resolve affected exons, breakpoints, phase/cis-trans, discontinuous events, transcript/junction, protein isoform and assay closing each level. Exon overlap alone is insufficient. | ACTIVE_METHOD |
+| `DUAL_DIAGNOSIS_ATTRIBUTION_GATE` | A report contains more than one plausible molecular diagnosis | Separate variants/classification, phase, functional evidence, gene-specific phenotypes, diagnostic biomarkers, target-specific treatment and temporal outcome. Keep attribution confounded until independently disambiguated. | ACTIVE_METHOD |
+| `DENOMINATOR_FIRST_COHORT_GATE` | A cohort percentage is interpreted as prevalence, yield or prognosis | Record source population, selection, total denominator, tested, negatives, platforms, exclusions, access/cost and centre/founder clustering before interpreting percentages. | ACTIVE_METHOD |
+
+## Reproducibility, replication and prediction
+
+| Gate | Trigger | Required representation / decision rule | Status |
+|---|---|---|---|
+| `PRE_EXTERNAL_CLAIM_VERIFICATION_GATE` | A factual or numeric claim will leave the repository | Reproduce it with a command or reconcile it with the current source file; cite the verification next to the number. Plausible explanation is not verification. | ACTIVE_METHOD |
+| `SYNTHETIC_REPLICATE_GATE` | Bootstrap, pseudo-replication or augmentation increases apparent sample count | Record original biological n, technical n, synthetic n, randomisation unit, synthetic-data steps and uncertainty returned to the biological level. Synthetic samples never become independent experiments. | ACTIVE_METHOD |
+| `CROSS_LINE_REPLICATION_GATE` | Different cell lines are pooled as replicates | Separate independent lines, within-line biological replicates, technical replicates, randomisation unit and treatment-by-line model. Cross-line convergence is contextual generalisation, not exchangeable replication. | ACTIVE_METHOD |
+| `ASSOCIATION_TO_PREDICTION_GATE` | An association is called a predictor | Separate association, prognostic model, validated prediction and clinical utility. Language cannot exceed the level supported by timing, validation, discrimination, calibration and incremental value. | ACTIVE_METHOD |
+| `TREATMENT_PREDICTION_INTERACTION_GATE` | Outcome among treated subjects is interpreted as differential response | Distinguish prognostic effect, treatment effect and treatment-by-marker interaction. Require an appropriate control, prespecified interaction and independent replication before “predictive biomarker”. | ACTIVE_METHOD |
+| `PHOSPHOSTATE_TRANSITION_GATE` | Cross-sectional PTM states are drawn as a temporal switch | Require same-system time course, stoichiometry/localisation, modifying enzymes, validated mutants, necessity/sufficiency and rescue. Otherwise use `reciprocal state association`. | ACTIVE_METHOD |
+
+## Externalisation, automation and workflow authority
+
+| Gate | Trigger | Required representation / decision rule | Status |
+|---|---|---|---|
+| `EXTERNAL_DOSSIER_CANONICAL_DRIFT_GATE` | A dossier is labelled ready for external review | Build `strong statement → primary source → current state → superseded claim → sustainable epistemic level`. Any unexplained divergence from a canonical repair blocks release. | PENDING_EXECUTABLE |
+| `CLAIM_MIRROR_PARITY_GATE` | A claim is added, removed or repaired in the canonical registry | Compare the complete set of `CLAIM NNN` registry IDs with the Working Model BLOCK 2 table. A missing, orphaned or duplicate mirror ID blocks BATCH_COMMIT even when every individual wikilink resolves. | ACTIVE_EXECUTABLE |
+| `PIPELINE_HANDOFF_FORMAT_GATE` | One stage's output file is fed to the next stage as input | A completeness gate that blocks on zero records proves the chain *noticed* the break, not that the chain works. Assert the stronger property: every format the producing stage can emit must be an accepted input of the consuming stage, with a regression test on the **most natural operator input**, not only the decorated one. Observed instance: the intake triage echoes bare PMIDs in its `Input` column while the sweep matched only a literal `PMID` prefix, so a plain PMID list — the commonest batch there is — yielded zero records at every run. Loosening a parser is not enough; scope the widened match so it cannot swallow years, counts or other in-range digits. | ACTIVE_EXECUTABLE |
+| `OBLIGATION_WITHOUT_ARTIFACT_GATE` | A workflow requires a step that leaves no output of its own — assess the group, measure field density, expand multi-hop, cross-query the existing corpus | **An obligation that produces no artifact cannot be enforced, because absence is silent.** Post-hoc review is structurally blind here: it inspects what was written, and a skipped step writes nothing. Two inversions close it. (a) Give every such obligation a **required slot** in a work manifest, where it is either evidenced — integer counts, resolved identifiers, measured hits — or **explicitly waived with an argument long enough to disagree with**; a short waiver like "n/a" is how a checklist dies, so reject it. (b) **Gate the strongest claim on the manifest, at the moment it is made, not afterwards**: `complete_fulltext_read` is refused unless the manifest validates, which makes the over-claim unavailable rather than merely auditable. Stated residual: a manifest can be filled with hollow but well-formed content — this makes that *reviewable* instead of invisible, and makes the honest path cheaper than the dishonest one. Enforced by `deepdive_manifest.py` + `fulltext_receipts.py record` + `session_self_eval.py`. | ACTIVE_EXECUTABLE |
+| `READING_MUST_LAND_GATE` | A full text is recorded as completely read | Reading that reaches no ledger, queue or registry is indistinguishable from reading that never happened — and worse, the receipt asserts coverage the system cannot show. Require (a) the PMID/DOI and a real record ID to coexist in the same structured landing section — an incidental process-note mention does not count — and (b) **every output the receipt declares to resolve**: named files must exist, named record IDs must be present in the file that names them, and a named output file must contain the receipt's PMID, DOI or receipt ID. Existence alone is insufficient because concurrent studies can reuse the same candidate filename. A generated view derived from the ledger the paper failed to reach does not count as landing. Enforced by `session_self_eval.py`. | ACTIVE_EXECUTABLE |
+| `PDF_PAGE_COUNT_RECONCILIATION_GATE` | Page count is used to support `complete_fulltext_read` | PDF metadata, `file`, a browser and the parser can disagree. Coverage is anchored to the document actually enumerated by the sequential-reading parser: record its page count, count supplements separately, and explain every mismatch in the dossier/receipt before claiming completeness. A larger metadata number is not safer; it can create fictitious unread pages or false reassurance. | ACTIVE_METHOD |
+| `SELF_ASSESSMENT_IS_NOT_EVIDENCE_GATE` | A session or agent reports on how well its own process ran | An agent grading its own work returns green through its own blind spots: on 2026-07-26 a session reported "the process ran well" while four substantive gaps were open, each invisible to it precisely because it was the thing not done. Split the review: everything checkable becomes an executable check that can fail the session, and the residue stays as **written** judgement questions whose unanswered state is itself visible. Never let the same pass both perform the work and certify it, and never write the summary before the diagnosis — a takeaway drafted first describes a session that went well. | ACTIVE_EXECUTABLE |
+| `SELF_EVALUATION_MUST_REACH_WORKFLOW_GATE` | A diagnostic protocol exists but the orchestrator can close without invoking it | A strong checklist outside the normative route is orphan documentation. Wire it into the bootstrap, operating core and orchestrator **before** growth/takeaways; require an executable verdict plus a durable written diagnosis. Route executable failures into `legend_lint.py`, the component that actually emits `BLOCK_BATCH_COMMIT`, and regression-test that an orphan read changes the LINT verdict. A weak judgement answer owes a proportional micro-upgrade. | ACTIVE_EXECUTABLE |
+| `COVERAGE_BEFORE_EXPANSION` | New blocking logic is proposed | Add positive, negative and end-to-end regression coverage for existing guards before expanding their authority. | ACTIVE_EXECUTABLE |
+| `RADAR_DECISION_SEPARATION_GATE` | Automated scouting proposes repository changes | Separate read-only radar/reporting from human-reviewed curation and implementation. Radar cannot modify canonical state, install dependencies or execute external code. | ACTIVE_METHOD |
+| `READING_DEBT_PARTITION_GATE` | A batch checkpoint reports one residual count | Partition into `READ_NEXT`, `ACCESS_DEBT`, `AUDIT_OR_INTEGRITY_ONLY` and `SUPPLEMENT_DEBT`, with one unambiguous resume cursor. | ACTIVE_METHOD |
+| `FULLTEXT_RECEIPT_PERSISTENCE_GATE` | Any route retrieves, queries, samples or completely reads a full text | Resolve PMID/DOI, query the authoritative disease ledger, emit the honest depth and section coverage, then append under lock before claiming completion. Missing/invalid history, an unpersisted event or a non-exhaustive route cannot clear reading debt. Historical uncertainty stays `legacy_reconstruction`/`unknown_legacy`. | ACTIVE_EXECUTABLE |
+| `RECEIPT_CORRECTION_WITHOUT_REREAD_GATE` | An immutable receipt has correct reading evidence but a wrong output path/record caused by a collision | Never rewrite history and never manufacture a second read. Append a `receipt_correction` linked to the latest event; keep identity, analysis time, evidence depth, source fingerprint and coverage byte-equivalent, changing only correction metadata and outputs. Consumers select the latest equal-depth event; regressions reject substantive evidence drift. | ACTIVE_EXECUTABLE |
+| `APPEND_ONLY_IS_A_MECHANISM_GATE` | Any file is described as append-only, immutable, authoritative or a durable ledger | Calling a file append-only does nothing; the word must be produced by a mechanism. Require (a) a per-record hash chain, so a rewritten or deleted historical record invalidates every record after it, (b) an **external tail anchor** in a different file, because a chain cannot see truncation — lopping off the last records leaves a perfectly self-consistent prefix — and (c) a writer that re-verifies the whole prior history *inside its lock*, so an append cannot extend, or launder, a corrupted past. State the residual limit explicitly: a coordinated edit of ledger *and* anchor is reviewable, not undetectable. | ACTIVE_EXECUTABLE |
+| `CONTRACT_MUST_REACH_THE_GATE` | A new integrity contract is added to the system | A contract enforced only by reporting tools is documentation. Trace it to the component that can actually emit the blocking verdict — here `legend_lint.py`, the sole source of `BLOCK_BATCH_COMMIT`/`BLOCK_SYSTEM` — and verify with an adversarial test that the damage the contract describes really changes the verdict. Views that "fail closed" (coverage reports, queues) constrain nobody: nothing consults them before a commit. | ACTIVE_EXECUTABLE |
+| `HISTORICAL_DEBT_RATCHET_GATE` | Legacy records assert something the current evidence standard cannot certify | Do not delete them (falsifies history) and do not retroactively upgrade them (manufactures evidence). Freeze both the count and exact record identities: a count-only ratchet can be bypassed by removing one grandfathered assertion and adding a new unsupported one elsewhere. Block every non-grandfathered identity; report a falling set as an invitation to lower the baseline and allowlist. | ACTIVE_EXECUTABLE |
+| `DISMECH_DELTA_GATE` | LEGEND claims novelty relative to an external schema/tool/KB | Audit the real external resource first and state only what it demonstrably does not represent. | ACTIVE_METHOD |
+| `EVIDENCE_CELL_CROSS_REVIEW_GATE` | A large reading batch is delegated | Separate primary reader, adversarial reviewer and graph/synthesis curator; require coverage, anchors, epistemic tags, novelty delta and unresolved-conflict escalation. | PROPOSED |
+
+## Release, front-door and claim-maturity gates
+
+These gates were learned by applying the framework **to itself** while preparing
+this public edition. They govern what a repository, README or proposal is
+allowed to claim about its own maturity — the same false-negative/overclaim
+discipline turned inward.
+
+| Gate | Trigger | Required representation / decision rule | Status |
+|---|---|---|---|
+| `CAPABILITY_CLAIM_MATURITY_GATE` | A public document advertises a capability | Classify every capability as `SPECIFIED` (workflow documented), `IMPLEMENTED` (code present), `BUNDLED` (required assets/dependencies shipped) or `EXTERNAL/OPTIONAL` (separate install or authorization). A present `SKILL.md` proves specification, never distributed executability. Predictive backends are described as hypothesis generators, never as validation. | ACTIVE_METHOD |
+| `FRONT_DOOR_MATURITY_GATE` | An entry document mixes existing assets with intentions | Within the first two screens, in order: `AVAILABLE NOW`, `IN DEVELOPMENT`, the problem, the scientific question, the planned outputs. Present tense only for what exists; future tense or `in development` for unfrozen benchmarks, unrun evaluations and unsubmitted work. An observed error is a *candidate* benchmark case until evidence and adjudication freeze it. | ACTIVE_METHOD |
+| `README_EVIDENCE_FUNNEL_GATE` | A showcase document catalogues before it demonstrates | Order the argument as a funnel: problem → cross-domain insight → observable transformation → epistemic discipline → failure loop → the question → repository map → limits. Detail only the decisive differences; defer the census to a capability file. Every status claim uses `available`, `work in progress` or `planned/proposed`. | ACTIVE_METHOD |
+| `TRACK_FIT_GATE` | A proposal is written against a multi-track call | Before freezing, tag every work package and budget line `PRIMARY_SCIENTIFIC_OUTCOME`, `ENABLING_METHOD` or `OUT_OF_TRACK`. Title, first question, main deliverable, metrics and the budget majority must converge on the declared track's outcome; tooling, provenance and evaluation stay enabling methods. A reviewer must be able to answer "which mechanism will be better understood?" in one sentence. | ACTIVE_METHOD |
+| `ANCHOR_MIGRATION_GATE` | Links, headings or record identifiers are renamed, translated or migrated | A record can survive a rewrite while its *navigability* dies. Before declaring a migration complete: (a) every fragment must resolve against the **complete** target heading, (b) records defined outside headings must use block IDs rather than an impossible heading fragment, and (c) **the migration must be re-run through the privacy gate** — inlining a heading copies its text into every referring line, so a heading carrying an identifier propagates it repository-wide. A green file-existence check is not a green link check. | ACTIVE_EXECUTABLE |
+| `PUBLIC_RELEASE_GATE` | Any material leaves a private workspace for a public one | Verify semantic privacy and re-identifying *combinations* (not keywords), provenance labelling, secrets, link/dependency integrity, README↔repository consistency and clean-clone executability. Keyword scrubbing is explicitly insufficient: the aggregate of individually harmless facts is the attack surface. | ACTIVE_EXECUTABLE |
+
+> **Why these are in a scientific registry.** The failure they prevent is the
+> same one the scientific gates prevent — a claim outrunning its evidence — with
+> the repository itself as the object. `CAPABILITY_CLAIM_MATURITY_GATE` exists
+> because "the skill file is present" was very nearly accepted as proof that a
+> capability shipped.
+
+## Executable seed
+
+The public runtime currently enforces a smaller executable subset:
+
+- missing-current and commit-boundary separation;
+- duplicate paper/claim/discovery/commit-candidate identifiers;
+- exact claim-ID parity between the canonical registry and Working Model mirror;
+- allowed claim/paper states;
+- paper/corpus claim-link integrity;
+- premise tagging and revival triggers for negative conclusions;
+- batch completeness and publication-integrity routing;
+- study deduplication and retraction checking;
+- full-text receipt schema/semantics, atomic anchored append, linear lineage, identity-based
+  historical ratchet, exhaustive route classification and fail-closed coverage/queue joins;
+- public-release privacy, provenance, secrets, links and clean-clone checks.
+
+See `framework/scripts/test_legend_lint.py`,
+`framework/scripts/test_fulltext_receipts.py`, `scripts/test_fulltext_trace_contract.py`,
+`.claude/skills/legend-batch-inferential-sweep/scripts/test_batch_inferential_sweep.py`,
+`.claude/skills/legend-study-intake-triage/scripts/test_study_dedup_triage.py`
+and `scripts/test_public_release_gate.py`.

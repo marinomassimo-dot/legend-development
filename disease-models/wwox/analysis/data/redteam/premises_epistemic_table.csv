@@ -1,0 +1,13 @@
+#,premise,epistemic_level,evidence,red_team_verdict
+1,"Q230P: transcript normal, protein absent (patient)",EXPERIMENTAL,Johannsen2018,STANDS — direct measurement
+1b,Johannsen distinguished degradation from translation defect,(claimed),—,FALSE — authors explicitly say 'impaired translation OR premature degradation'; not resolved
+2,Q230 destabilizes helix 227-249,STRUCTURAL INFERENCE,AF pLDDT 98.5; Pro ddG +2.77; pi-bulge,"STRONG — high-confidence model, Pro in strained pi-helix"
+3,Helix 227-249 packs against LRSVQ anchors L187/V190,STRUCTURAL INFERENCE,min dist 3.4-3.5A; PAE 1.4A,"STRONG — genuine tight packing, high AF confidence"
+4,Helix acts as a LID burying the anchors,STRUCTURAL INFERENCE,in-silico deletion: V190 0->0.30,"MODERATE — supported but static, no repacking; and 187 is co-buried by ERLIQ region"
+5,LRSVQ is THE operative KFERQ degron,POST-HOC HYPOTHESIS,Zhang 'speculated'; never mutated,WEAK — LRSVQ non-canonical (needs pS189); ERLIQ 402-406 is a better canonical motif
+6,Exposed motif -> HSC70 binding,EXPERIMENTAL (for P252A only),Zhang Fig4I,STANDS for P252A; UNTESTED for Q230P
+7,HSC70 -> CMA/lysosome -> degradation,EXPERIMENTAL (P252A),"Zhang CQ/NH4Cl rescue, LAMP1",STANDS for P252A; extrapolated to Q230P
+8,Q230P uses the SAME CMA route as P252A,EXTRAPOLATION,none,UNTESTED — the single biggest gap; Q230P never assayed for HSC70/lysosome
+9,Route is ubiquitin-INDEPENDENT,(implied by 'CMA not proteasome'),—,FALSE/COMPLICATED — Zhang shows P252A is strongly K63-polyubiquitinated
+10,P252 caps/terminates the helix,STRUCTURAL,"DSSP: helix ends 249; P252 in loop, rsa 0.42","FALSE — P252 is downstream in a loop, not a C-cap"
+11,"C299R acts via catalysis, not degradation",STRUCTURAL INFERENCE,C299-K297 3.44A; 19.6A from degron,STRONG — supports two-route model

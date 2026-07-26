@@ -1,0 +1,166 @@
+{
+  "pmid": "22193544",
+  "doi": "10.1038/cdd.2011.188",
+  "receipt": "FTR-20260726-22193544-02",
+  "group_assessment": {
+    "total_publications": 472,
+    "publications_on_gene": 3,
+    "dominant_field": "Corresponding/senior author Lu P-J (National Cheng Kung Univ, Tainan) has 472 PubMed records and only 3 on WWOX \u2014 this is a GSK3beta/prolyl-isomerase-and-cancer laboratory, not a WWOX laboratory. Decisive counterweight: co-author Chang N-S has 137 records of which 66 are on WWOX \u2014 he is the founder of the WWOX field. First author Wang H-Y has 2 WWOX records; Hsiao M has 1.",
+    "is_primary_group_for_disease": false,
+    "method": "NCBI eutils esearch counts, 2026-07-26: 'Lu PJ[au]' 472; 'Lu PJ[au] AND WWOX' 3; 'Chang NS[au]' 137; 'Chang NS[au] AND WWOX' 66; 'Wang HY[au] AND WWOX' 2; 'Hsiao M[au] AND WWOX' 1. Author-name ambiguity is HIGH for these initial-form Taiwanese names; the counts bound magnitude, they do not identify individuals with certainty.",
+    "performed_during_run": true,
+    "weighting": "The two halves must be weighted separately and must not be merged. (1) The GSK3beta biochemistry \u2014 in-vitro kinase assay, GST pull-down domain mapping, point mutants, competitive peptide, microtubule light-scattering \u2014 is done by a group whose native expertise is kinase signalling. That is the part to trust most, and it is also the part that is internally self-consistent across five independent assay types. (2) The WWOX framing is backstopped by Chang N-S, the field's originator. That raises prior plausibility but imports a KNOWN dispute: PAPER 053 (Aldaz 2014) records that the Chang lab's WWOX localization and pro-apoptotic claims are contested, with Aldaz attributing part of them to adenoviral-vector artefact. Nothing in the present paper depends on that disputed localization, so the dispute does not propagate here \u2014 but any downstream use of this paper's WWOX cell-biology framing must carry the flag. (3) The reverse asymmetry of the Saadane case applies: here WWOX did NOT arrive through an unbiased screen; it was the starting hypothesis, supplied by the field's founder. The observation is therefore weaker as independent confirmation than a naive-lab hit would be, while the interpretation is stronger.",
+    "research_type": "mixed",
+    "research_type_basis": "Senior author Lu P-J runs a kinase-signalling lab (472 records, 3 on WWOX) \u2014 adjacent_method_expert for WWOX, experimental_lab for GSK3beta. Co-author Chang N-S is the founder of the WWOX field (66/137). Methods show a full wet-lab plus in-house MD capability: radiometric kinase assay, GST purification and domain mapping, site-directed mutagenesis, confocal, turbidimetric microtubule assay, CHARMM/Discovery Studio simulation. NOT a WOREE/disease group: no author works on the disease."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX AND GSK3B",
+        "count": 4
+      },
+      {
+        "query": "WWOX AND (GSK3 OR \"glycogen synthase kinase\")",
+        "count": 5
+      },
+      {
+        "query": "WWOX AND tau",
+        "count": 16
+      },
+      {
+        "query": "WWOX AND neurite",
+        "count": 3
+      },
+      {
+        "query": "WWOX AND \"neuronal differentiation\"",
+        "count": 6
+      },
+      {
+        "query": "WWOX AND DYRK1A",
+        "count": 0
+      }
+    ],
+    "verdict": "Five records in all of PubMed for WWOX x GSK3. In a rare disease a near-empty intersection means the edge is UNTESTED, not tested-and-rejected \u2014 the same reading applied to WWOX x calpain (2 records) in the PMID 34214506 manifest. Practical consequence: CLAIM 016 and the whole TX-005 lithium line currently rest on a two-paper literature, of which this is one. WWOX x DYRK1A returns ZERO, which is why the priming-kinase route proposed in the commit candidate is filed as IPOTESI/ESPANSIONE with no literature support whatsoever, not as an inference.",
+    "performed_during_run": true
+  },
+  "multihop": {
+    "gene_direct_refs_in_source": [
+      "ref 2 \u2014 Sze CI et al. 2004, PMID 15126504, 'Down-regulation of WWOX induces Tau phosphorylation in vitro. A potential role in Alzheimer's disease' \u2014 the paper this one is read as contradicting on WWOX-Tau direct binding",
+      "ref 12 \u2014 Chen ST et al., WWOX differentially expressed across mouse brain development stages; the stated motivation for the whole study",
+      "ref 17 \u2014 JNK1/WOX1 interaction, the basis of the c-jun folding control for L404A",
+      "ref 9 \u2014 Chou et al., GSKIP, the GSK3beta-inhibitor template for the motif alignment",
+      "ref 18/19 \u2014 GSK3beta-GSKIPtide and GSK3beta-AxinGID structures (1O9U), the template for the whole in-silico interface model"
+    ],
+    "resolved": [
+      "ref 27 \u2014 PMID 20067585 \u2014 queued FT-022",
+      "ref 12 \u2014 PMID 15026124 \u2014 queued FT-023",
+      "ref 2 \u2014 PMID 15126504 \u2014 queued FT-024",
+      "ref 17 \u2014 PMID 17178850 \u2014 queued FT-025"
+    ],
+    "queued": [
+      "FT-022",
+      "FT-023",
+      "FT-024",
+      "FT-025"
+    ],
+    "note": "Reference-list expansion completed after the first declared-debt pass: four decision-relevant sources resolved to PMID, deduplicated and landed in the full-text queue. None inherits complete-read status from Wang 2012.",
+    "references_enumerated": 28
+  },
+  "corpus_crossquery": {
+    "query": "L404 / 388-407 / WWOXtide / GSK3 across disease-models/wwox/",
+    "hits": 9,
+    "verdict": "This is NOT new territory \u2014 it is the opposite situation from the calpain case, and more uncomfortable. The residue L404 and the region 388-407 are ALREADY load-bearing in the analysis layer: therapeutic_strategies_current.md TX-003 and proteostasis_rationale.md both instruct that an SDR stabilizer 'must avoid the functional region (388-407/L404)', and the Q230P red-team report builds a whole 'second functional exclusion zone' on it. The red-team's own missing-info item 7 reads: 'Residue-level confirmation that L404 is required for WWOX-GSK3beta binding \u2014 cited (Wang et al., PMC3354054) but NOT VERIFIED here.' The paper was therefore CITED AS A PREMISE BY FIVE FILES WHILE UNREAD, and is absent from paper_registry_current.md. This deep dive exists to close that gap. Verdict: the premise holds \u2014 but the system had been running on an unverified citation."
+  },
+  "retraction_check": {
+    "method": "python3 .claude/skills/legend-study-intake-triage/scripts/retraction_check.py --pmids 22193544 --all --json \u2014 EXECUTED this run",
+    "result": "status OK \u2014 no retraction, no Expression of Concern, no correction notice",
+    "honesty_note": "Executed, unlike in the PMID 34214506 manifest. Note however that PubMed carries no notice for the mislabelled Supplementary Figure A documented in this deep dive; a retraction check cannot surface a supplementary-material defect."
+  },
+  "landing": [
+    "DL-MECH-019",
+    "DL-MECH-064",
+    "DL-MECH-065",
+    "DL-MECH-066",
+    "DL-BIO-012",
+    "DIS-009",
+    "DIS-010",
+    "D-14",
+    "FT-022",
+    "FT-023",
+    "FT-024",
+    "FT-025"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-start",
+      "used": true,
+      "reason": "State manifest read first, LINT_AUTOMATIC run: PASS. Ledger verify: OK."
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true,
+      "reason": "study_dedup_triage.py executed on the single record: verdict NEW, corpus match P263, labels WWOX_DIRECT/VARIANT_STRUCTURE/NEURO_BRIDGE."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Not invoked as a skill; the cascade was executed inline (idconv -> efetch JATS -> Europe PMC supplementaryFiles -> europepmc pdf=render). Same tiers, but the skill's retrieval manifest was not written. Minor process deviation, declared."
+    },
+    {
+      "skill": "legend-batch-inferential-sweep",
+      "used": false,
+      "reason": "Correctly not invoked: the operator asked for ONE study, so there is no batch to sweep. The sweep is a whole-batch obligation, not a per-paper one."
+    },
+    {
+      "skill": "legend-proband-priority-matrix",
+      "used": false,
+      "reason": "Applied as reasoning, not as a skill, to choose this record from the 281 unprocessed ones \u2014 axes hit: neurodevelopment, proteostasis/SDR function, druggable node. A single-record ranking is degenerate, so the skill would have added ceremony without information."
+    },
+    {
+      "skill": "research-group-analyst",
+      "used": false,
+      "reason": "Agent not invoked (its knowledge base is not shipped in this edition and spawning was not requested). The assessment was performed manually and DURING the run via eutils counts \u2014 the omission that the PMID 34214506 manifest confessed to has not recurred, but the agent itself still has not been exercised."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "Not invoked as a skill. Discovery-class findings are proposed in the commit candidate as DL-MECH-019 correction plus new entries; they are NOT yet appended to discovery_ledger_current.md, which is the operator's call. Flagged so the compounding effect is not silently broken again."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "Not invoked. One therapeutic hypothesis (priming-kinase route) was forged inline. Given WWOX x DYRK1A = 0 records, a full co-scientist generate/critique/rank/evolve loop over a zero-evidence node would manufacture false portfolio depth."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "Deliberately deferred. No molecule is promoted: the WWOXtide peptide is millimolar and the DYRK1A route is IPOTESI. Running ADMET now would imply a rationale that does not exist. BLOCK-1 reasoning was applied qualitatively in the commit candidate instead."
+    },
+    {
+      "skill": "legend-paperqa",
+      "used": false,
+      "reason": "Corpus cross-query done with local search. PaperQA needs external API traffic the operator must authorize \u2014 deliberate refusal, not oversight."
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Deep dive executed inline in the main session. Unlike the PMID 34214506 run, stage-1 group credibility was NOT dropped. The skill would still have enforced the order more cheaply."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Correctly not invoked: this is 1 candidate (2 counting the staged CC-20260726-001), below the 5-candidate threshold; no weekly and no urgent trigger fired."
+    },
+    {
+      "skill": "legend-capability-scout",
+      "used": true,
+      "reason": "Run at session close; produced the D-14 proposal and the figure-inspection gate proposal."
+    },
+    {
+      "skill": "legend-session-takeaways",
+      "used": true,
+      "reason": "Session closed with the tabular takeaways."
+    }
+  ],
+  "concurrency_note": "A CONCURRENT LEGEND session was active during this run: it downloaded PMID 35716775 into files/fulltext/ and appended receipt FTR-20260726-35716775-01 (retrieved_not_read) at 10:22Z, re-anchoring the state manifest from 24 to 25 events mid-session. This run's append chained onto that new head under flock and re-verified clean. No parallel branch was declared by either session \u2014 PARALLEL_BRANCH discipline was not followed by whichever session started second."
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Legend Research Loop"
+  short_description: "Controlled experiments with keep or discard"
+  default_prompt: "Use $legend-research-loop to test this change with a baseline, a success criterion and a keep/discard decision."

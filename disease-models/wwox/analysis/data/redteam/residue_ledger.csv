@@ -1,0 +1,13 @@
+id,name,expected,observed,status,role_in_model
+Q230,Gln230,Q,Q,OK,Missense p.Gln230Pro; in a compound-heterozygous context the protein-making allele. In SDR domain. Claimed mid-helix 226-251.
+L239,Leu239,L,L,OK,L239R = severe DEE; claimed on same helix 226-251.
+P252,Pro252,P,P,OK,Zhang P252A: HSC70+/CMA/lysosome. Claimed C-cap Pro of helix.
+P282,Pro282,P,P,OK,"Zhang P282A: stable, HSC70-neg. Claimed 'outside'. NOTE also LOF (loses POLE4)."
+C299,Cys299,C,C,OK,"C299R severe, buried, claimed 3.4A from catalytic triad -> catalysis route."
+S281,Ser281,S,S,OK,SDR catalytic triad (Ser).
+Y293,Tyr293,Y,Y,OK,SDR catalytic triad (Tyr); UniProt active site 'proton acceptor'.
+K297,Lys297,K,K,OK,SDR catalytic triad (Lys).
+G372,Gly372,G,G,OK,G372R proposed natural negative control (Aqeilan iPSC).
+LRSVQ 187-191,Leu-Arg-Ser-Val-Gln,LRSVQ,LRSVQ,OK,"Proposed KFERQ-like degron; anchors L187/V190. UNVALIDATED (Zhang 'speculated', never mutated)."
+ERLIQ 402-406,Glu-Arg-Leu-Ile-Gln,ERLIQ,ERLIQ,OK,Alternative candidate KFERQ motif to test.
+GANSGIG 131-137,Rossmann GxxxGxG,GANSGIG,GANSGIG,OK,NAD(P)-binding Rossmann fold fingerprint; confirms SDR.

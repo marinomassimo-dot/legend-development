@@ -1,0 +1,130 @@
+{
+  "pmid": "34214506",
+  "doi": "10.1016/j.ajpath.2021.06.006",
+  "receipt": "FTR-20260726-34214506-02",
+  "group_assessment": {
+    "total_publications": 207,
+    "publications_on_gene": 1,
+    "dominant_field": "diabetic retinopathy (140 of 207 for the senior author, Kern TS); first author Saadane A has 36 publications, 1 on WWOX",
+    "is_primary_group_for_disease": false,
+    "method": "PubMed esearch counts, 2026-07-26: Kern TS[au]; Kern TS[au] AND WWOX; Kern TS[au] AND diabetic retinopathy; Saadane A[au]; Saadane A[au] AND WWOX",
+    "weighting": "Cuts both ways and the two weights must not be merged. WWOX arrived through unbiased label-free proteomics in a laboratory with no WWOX prior and nothing to defend, so the OBSERVATION is stronger than the same hit from a WWOX group would be. The INTERPRETATION is correspondingly weaker: the unsupported 'Wwox is a substrate for calpain' label is predictable domain inexperience, not sloppiness, which is why DIS-008 rejects the claim while leaving the possibility open.",
+    "performed_during_run": false,
+    "honesty_note": "This assessment was NOT performed during the pipeline run. It was done afterwards, only because the operator asked why the step had been skipped. legend-deepdive specifies group credibility as stage 1; the run began at stage 2. This manifest exists so that this class of omission cannot recur silently.",
+    "research_type": "experimental_lab",
+    "research_type_basis": "Kern T S / Saadane A: diabetic-retinopathy wet-lab (in vivo mouse, ex vivo retina, Capn1-/- genetics, label-free proteomics, ERG electrophysiology, 661W line). First encounter with WWOX (1/207). Not a disease group; not a gene group."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX AND calpain",
+        "count": 2
+      },
+      {
+        "query": "WWOX AND photoreceptor",
+        "count": 2
+      },
+      {
+        "query": "WWOX AND retina",
+        "count": 4
+      }
+    ],
+    "verdict": "The WWOX x calpain intersection is two records in all of PubMed. In a rare disease a near-empty intersection is a signal, not an absence: it means the edge is untested rather than tested and rejected. Also bounds the multi-hop debt at FT-020 to a tractable size.",
+    "performed_during_run": false
+  },
+  "multihop": {
+    "gene_direct_refs_in_source": [
+      "ref 38 \u2014 activated WWOX in degenerating photoreceptors, light-induced damage and rd mice",
+      "ref 39 \u2014 O'Keefe 2011, Drosophila WWOX orthologue, aerobic metabolism and oxidative stress",
+      "ref 87 \u2014 WWOX binds IkBa and modulates NF-kB"
+    ],
+    "resolved": [],
+    "queued": [
+      "FT-020"
+    ],
+    "note": "NOT DONE during the run. All three are WWOX-direct and cited inside a source that was read cover to cover. Ref 87 underpins the transcriptional alternative on which DIS-008 rests, so the rejection currently stands on a source not read at first hand. Declared debt, not a closed step.",
+    "references_enumerated": 87,
+    "references_enumerated_basis": "Europe PMC references endpoint for PMID 34214506; the PMC JATS deposit for PMC8579242 exposes no parseable <ref> elements, so the count comes from Europe PMC rather than the article XML. Backfilled by the PMID 22193544 session for schema compliance \u2014 the originating session owns any refinement."
+  },
+  "corpus_crossquery": {
+    "query": "calpain across disease-models/wwox/",
+    "hits": 0,
+    "verdict": "Calpain appears nowhere in the disease model except the seed corpus and the generated batch queue. The mechanism is genuinely new territory for this model, which is why the leads had to create DL-MECH-061 rather than attach to an existing claim."
+  },
+  "retraction_check": {
+    "method": "PubMed record inspected via web fetch; retraction_check.py was NOT executed",
+    "result": "no retraction or correction notice displayed",
+    "honesty_note": "A script exists for this in the intake-triage skill and was not used. Weaker evidence than the repository can produce."
+  },
+  "landing": [
+    "DL-MECH-061",
+    "DL-MECH-062",
+    "DL-BIO-010",
+    "DIS-008",
+    "FT-018",
+    "FT-019",
+    "FT-020"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "legend-batch-inferential-sweep",
+      "used": true
+    },
+    {
+      "skill": "legend-proband-priority-matrix",
+      "used": true
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-session-takeaways",
+      "used": true
+    },
+    {
+      "skill": "research-group-analyst",
+      "used": false,
+      "reason": "Skipped during the run \u2014 the omission that motivated this whole manifest. Performed manually afterwards; the agent itself was never invoked and its knowledge base is not shipped in this edition."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "Not invoked. Discovery entries were drafted into a staging file instead of the cumulative ledger, which broke the compounding effect until repaired by hand."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "Not invoked despite a REPURPOSING_SEED classification, which is one of its stated triggers. Defensible only because the underlying mechanism is unestablished."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "Deliberately deferred: MDL 28170 is a concrete molecule but gated behind DL-MECH-061 surviving a proteolysis test. Promoting an ADMET profile now would imply a rationale that does not yet exist."
+    },
+    {
+      "skill": "legend-paperqa",
+      "used": false,
+      "reason": "Corpus cross-query performed by local search instead. PaperQA needs external API traffic the operator must authorize, so it is a deliberate refusal rather than an oversight."
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Deep dive executed inline rather than through the skill, which is why its stage-1 group-credibility step was silently dropped. The skill would have enforced the order."
+    },
+    {
+      "skill": "legend-capability-scout",
+      "used": false,
+      "reason": "Capability work was done but the skill was never invoked, so upgrades came from stumbling over defects rather than from a systematic gap search."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Correctly not invoked: one commit candidate is below the five-candidate threshold and no weekly or urgent trigger fired."
+    }
+  ]
+}

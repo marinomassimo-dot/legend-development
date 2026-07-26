@@ -1,0 +1,450 @@
+{
+  "schema_version": "1.0",
+  "generated_on": "2026-07-25",
+  "purpose": "Public, non-identifying inventory of private-to-public capability preservation.",
+  "status_vocabulary": {
+    "PRESERVED": "Public component retains the source capability without private data.",
+    "RESTORED": "An accidental public gap was repaired and verified.",
+    "ABSTRACTED": "Method is preserved at a public disease/framework level, not copied verbatim.",
+    "PARTIAL": "Useful public material exists, but the source capability is not yet fully represented.",
+    "PENDING_CONTENT_REWRITE": "Assigned to the content-transformation lane; no empty placeholder is allowed.",
+    "LEGACY_UNREPRODUCIBLE": "Public-derived artifact is retained but exact original execution provenance is unavailable.",
+    "EXCLUDED_PRIVATE": "Deliberately absent because it contains private operational or clinical material.",
+    "EXCLUDED_THIRD_PARTY": "Deliberately not redistributed; represented by licence-aware manifest only."
+  },
+  "components": [
+    {
+      "id": "public_release_gate",
+      "source_class": "release safety tooling",
+      "public_paths": [
+        "scripts/public_release_gate.py",
+        "scripts/test_public_release_gate.py"
+      ],
+      "status": "PRESERVED",
+      "lane": "gate_tooling",
+      "verification": "Twenty-two regression tests plus post-first-green adversarial upgrades for obfuscated variant notation, cross-paragraph genotype reassembly, compound-het abbreviations, unrelated-negation resistance, Italian and English parent-of-origin linkage in either word order, pairing of both parental sides, reference-genotype linkage, non-placeholder email addresses, digest-only detector vocabulary, uppercase compound identifiers and nested disease-data provenance."
+    },
+    {
+      "id": "independent_privacy_scanner",
+      "source_class": "independent privacy verification",
+      "public_paths": [
+        "scripts/independent_privacy_scan.py",
+        "scripts/test_independent_privacy_scan.py"
+      ],
+      "status": "PRESERVED",
+      "lane": "gate_tooling",
+      "verification": "Read-only scan plus six regression fixtures for sensitive-city hashing, standalone/glued/uppercase-compound name detection and lexical-homonym severity."
+    },
+    {
+      "id": "provenance_and_licensing",
+      "source_class": "data provenance and third-party notices",
+      "public_paths": [
+        "DATA_SOURCES.md",
+        "THIRD_PARTY_NOTICES.md",
+        "scripts/test_provenance_coverage.py"
+      ],
+      "status": "PRESERVED",
+      "lane": "gate_tooling",
+      "verification": "Automated cited-source licence/status coverage, shipped-asset coverage, SHA-256 anchor verification, optional-environment notices and exact-version notice coverage for release-analysis dependencies."
+    },
+    {
+      "id": "continuous_integration",
+      "source_class": "release and runtime regression automation",
+      "public_paths": [
+        ".github/workflows/public-release-gate.yml",
+        "requirements-analysis.txt",
+        "scripts/run_release_regressions.py",
+        "scripts/test_fresh_clone_reader_journey.py"
+      ],
+      "status": "RESTORED",
+      "lane": "gate_tooling",
+      "verification": "CI and hostile-review runbook share one ordered regression inventory before the release gate; workflow permissions are read-only and third-party actions are pinned to immutable verified-release commit SHAs."
+    },
+    {
+      "id": "documented_command_integrity",
+      "source_class": "README, manual and registry executable-path preservation",
+      "public_paths": [
+        "scripts/test_documented_commands.py"
+      ],
+      "status": "RESTORED",
+      "lane": "gate_tooling",
+      "verification": "Every repository-local Python path documented in Markdown resolves to an existing file, and every documented CLI option appears in that executable's help contract."
+    },
+    {
+      "id": "deep_link_integrity",
+      "source_class": "Markdown fragments and LEGEND wikilink record targets",
+      "public_paths": [
+        "scripts/test_link_targets.py",
+        "release/LINK_MIGRATION_HANDOFF.md"
+      ],
+      "status": "RESTORED",
+      "lane": "gate_tooling",
+      "verification": "All 234 historical shorthand/title mismatches were migrated without changing scientific assertions; the five canonical claim-registry changes used BATCH_COMMIT. Standard Markdown fragments resolve, stable CLAIM/PAPER/RL/RC/TX/HYP/DL/FM/DIS identifiers exist in the correct registry, Obsidian fragments match exact headings, and non-heading FM records use stable block anchors."
+    },
+    {
+      "id": "public_claim_truthfulness",
+      "source_class": "front-door capability claims versus shipped release state",
+      "public_paths": [
+        "CAPABILITIES.md",
+        "release/losslessness_manifest.json",
+        "scripts/test_public_claims_contract.py"
+      ],
+      "status": "RESTORED",
+      "lane": "content_transform",
+      "verification": "CAPABILITIES now describes the restored runtime and qualifies its preservation claim against the named PARTIAL/PENDING manifest rows; both executable truthfulness checks pass."
+    },
+    {
+      "id": "mission_and_objectives_contract",
+      "source_class": "public WWOX mission, scientific scope and scalable-method objectives",
+      "public_paths": [
+        "disease-models/wwox/mission.md",
+        "README.md",
+        "scripts/test_mission_contract.py"
+      ],
+      "status": "RESTORED",
+      "lane": "gate_tooling",
+      "verification": "The mission is a README front door and explicitly preserves cross-domain WWOX corpus coverage, complete full-text reading, epistemic labels, semantic-wiki objects, therapeutic/biomarker and variant-level objectives, capability compounding, rare-disease portability, measurable coverage and non-completion boundaries. A regression test prevents the prior private-person framing and parity-of-sources conflicts from returning."
+    },
+    {
+      "id": "git_release_surface_integrity",
+      "source_class": "public file inclusion at first Git staging",
+      "public_paths": [
+        ".gitignore",
+        "scripts/test_release_surface.py"
+      ],
+      "status": "RESTORED",
+      "lane": "gate_tooling",
+      "verification": "Temporary-repository git check-ignore audit proves that no current public source or skill is silently excluded; a broad pattern that hid the priority-matrix skill was removed. The shipped Claude Code example cannot default to bypassPermissions."
+    },
+    {
+      "id": "structured_data_integrity",
+      "source_class": "machine-readable public assets",
+      "public_paths": [
+        "scripts/test_structured_data_integrity.py"
+      ],
+      "status": "RESTORED",
+      "lane": "gate_tooling",
+      "verification": "All public JSON parses, CSV/TSV row widths are consistent, text assets decode as UTF-8, and no release file is empty."
+    },
+    {
+      "id": "skill_instructions",
+      "source_class": "nineteen reusable LEGEND skills and references",
+      "public_paths": [
+        ".claude/skills"
+      ],
+      "status": "ABSTRACTED",
+      "lane": "content_transform",
+      "verification": "All expected skill directories are present; frontmatter validation remains tracked separately."
+    },
+    {
+      "id": "skill_package_integrity",
+      "source_class": "skill discovery and loadability contract",
+      "public_paths": [
+        "scripts/test_skill_packages.py"
+      ],
+      "status": "RESTORED",
+      "lane": "gate_tooling",
+      "verification": "All nineteen packages have loadable frontmatter; all ten non-content skill assets are present, Python assets compile, and agent metadata has required interface fields."
+    },
+    {
+      "id": "skill_runtime",
+      "source_class": "batch sweep, deduplication, retraction, priority, and KG runtime",
+      "public_paths": [
+        ".claude/skills/legend-batch-inferential-sweep/scripts/batch_inferential_sweep.py",
+        ".claude/skills/legend-hypothesis-forge/scripts/kg_thin_slice.py",
+        ".claude/skills/legend-proband-priority-matrix/scripts/score_proband_priority.py",
+        ".claude/skills/legend-study-intake-triage/scripts/retraction_check.py",
+        ".claude/skills/legend-study-intake-triage/scripts/study_dedup_triage.py"
+      ],
+      "status": "RESTORED",
+      "lane": "gate_tooling",
+      "verification": "Offline behavior tests, compilation and both privacy scanners."
+    },
+    {
+      "id": "framework_operational_runtime",
+      "source_class": "structural lint, batch snapshot/restore and unread-gold prioritisation",
+      "public_paths": [
+        "scripts/test_cli_smoke.py",
+        "framework/scripts/legend_lint.py",
+        "framework/scripts/batch_commit.py",
+        "framework/scripts/unread_gold.py",
+        "framework/scripts/test_legend_lint.py",
+        "framework/scripts/test_batch_commit.py"
+      ],
+      "status": "RESTORED",
+      "lane": "shared_non_content",
+      "verification": "Temporary-repository regression tests, safe snapshot/confirmed-restore CLI, read-only unread-gold CLI and repository-wide --help smoke contract."
+    },
+    {
+      "id": "learned_gate_memory",
+      "source_class": "compounding error-prevention procedures",
+      "public_paths": [
+        "framework/eval/learned_gates_registry.md"
+      ],
+      "status": "RESTORED",
+      "lane": "gate_tooling",
+      "verification": "Thirty-six named public-safe procedures inventoried and privacy-scanned."
+    },
+    {
+      "id": "orchestration_and_parallelism",
+      "source_class": "autopilot, atomic workflow and collision-safe parallel design",
+      "public_paths": [
+        ".claude/skills/legend/SKILL.md",
+        ".claude/skills/legend-start/SKILL.md",
+        ".claude/skills/legend-ingest/SKILL.md",
+        ".claude/skills/legend-deepdive/SKILL.md",
+        ".claude/skills/legend-commit/SKILL.md",
+        "framework/protocols/parallel_legend_protocol.md",
+        "framework/protocols/prompt_batch_commit.md"
+      ],
+      "status": "ABSTRACTED",
+      "lane": "content_transform",
+      "verification": "The reusable state-dispatch, human start gate, atomic batch-commit, append-only candidate queue, multi-hop expansion and parallel-deep-dive/sequential-commit invariants are present. Private design-history diffs and task reports are intentionally not shipped."
+    },
+    {
+      "id": "external_computational_workshop",
+      "source_class": "curated routing to third-party tools",
+      "public_paths": [
+        "_external_repos/MANIFEST.md",
+        "scripts/test_external_manifest.py"
+      ],
+      "status": "ABSTRACTED",
+      "lane": "gate_tooling",
+      "verification": "All thirty-six computational backends plus the external Superpowers workflow route have licence/constraint, pin/UNPINNED state, runtime and audit status."
+    },
+    {
+      "id": "phenotypic_similarity_runtime",
+      "source_class": "offline ontology-based disease-neighbour analysis",
+      "public_paths": [
+        "scripts/phenotypic_neighbors.py",
+        "scripts/test_phenotypic_neighbors.py",
+        "disease-models/wwox/analysis/phenotypic_neighbors.md"
+      ],
+      "status": "PRESERVED",
+      "lane": "gate_tooling",
+      "verification": "Synthetic ontology unit tests."
+    },
+    {
+      "id": "structural_context_runtime",
+      "source_class": "offline AlphaFold residue and motif geometry",
+      "public_paths": [
+        "scripts/legend/residue_context.py",
+        "scripts/legend/kferq_geometry.py",
+        "disease-models/wwox/analysis/scripts/residue_context.py",
+        "disease-models/wwox/analysis/scripts/kferq_geometry.py",
+        "disease-models/wwox/analysis/scripts/prepare_redteam_structures.py",
+        "disease-models/wwox/analysis/scripts/test_structural_analysis.py"
+      ],
+      "status": "RESTORED",
+      "lane": "gate_tooling",
+      "verification": "Six regression/smoke tests on the shipped public AlphaFold structure, byte-reproducible reconstruction of the omitted lid-removal control, and a historical-path compatibility entrypoint."
+    },
+    {
+      "id": "exploratory_md_runtime",
+      "source_class": "optional molecular-dynamics preparation and pilot execution",
+      "public_paths": [
+        "environment-md.yml",
+        "disease-models/wwox/analysis/scripts/md_q230p_pilot.py",
+        "disease-models/wwox/analysis/scripts/md_helix_screen.py",
+        "disease-models/wwox/analysis/scripts/md_helix_analyze.py",
+        "disease-models/wwox/analysis/scripts/md_status.py",
+        "disease-models/wwox/analysis/scripts/md_run_matrix.py",
+        "disease-models/wwox/analysis/scripts/test_md_q230p_pilot.py",
+        "disease-models/wwox/analysis/scripts/test_md_helix_screen.py",
+        "disease-models/wwox/analysis/scripts/test_md_helix_analyze.py",
+        "disease-models/wwox/analysis/scripts/test_md_status.py",
+        "disease-models/wwox/analysis/scripts/test_md_run_matrix.py"
+      ],
+      "status": "RESTORED",
+      "lane": "gate_tooling",
+      "verification": "Dependency-free dry-runs, input fail-fast, variant-map, resumable matrix, aggregation, epistemic and read-only run-status tests pass. The optional environment is pinned from the last known working private pilot; heavy execution is not part of the release gate and is not treated as biological evidence."
+    },
+    {
+      "id": "legacy_model_outputs",
+      "source_class": "ESM-2, ThermoMPNN and historical structural derivatives",
+      "public_paths": [
+        "disease-models/wwox/analysis/data"
+      ],
+      "status": "LEGACY_UNREPRODUCIBLE",
+      "lane": "provenance",
+      "verification": "Integrity-retained public derivatives; limitations disclosed in DATA_SOURCES.md."
+    },
+    {
+      "id": "canonical_working_model",
+      "source_class": "current disease working model",
+      "public_paths": [
+        "disease-models/wwox/registries/working_model_current.md"
+      ],
+      "status": "RESTORED",
+      "lane": "content_transform",
+      "verification": "Substantive current preserves the required architecture and changelog; canonical-structure tests, framework LINT and both privacy scanners pass."
+    },
+    {
+      "id": "canonical_claim_registry",
+      "source_class": "current scientific claim registry",
+      "public_paths": [
+        "disease-models/wwox/registries/claim_registry_current.md"
+      ],
+      "status": "RESTORED",
+      "lane": "content_transform",
+      "verification": "All 33 canonical claims are materialized; structural, scientific-consistency and upgraded semantic-privacy checks pass."
+    },
+    {
+      "id": "canonical_paper_registry",
+      "source_class": "current paper registry",
+      "public_paths": [
+        "disease-models/wwox/registries/paper_registry_current.md"
+      ],
+      "status": "RESTORED",
+      "lane": "content_transform",
+      "verification": "All 43 promoted papers and 356 corpus records are materialized; structure, prose, link and privacy checks pass."
+    },
+    {
+      "id": "canonical_literature_tracking",
+      "source_class": "current literature tracking log",
+      "public_paths": [
+        "disease-models/wwox/registries/literature_tracking_log_current.md"
+      ],
+      "status": "RESTORED",
+      "lane": "content_transform",
+      "verification": "All 382 tracked literature records are materialized; cardinality, link and privacy checks pass."
+    },
+    {
+      "id": "discovery_ledger",
+      "source_class": "cumulative discovery and failure memory",
+      "public_paths": [
+        "disease-models/wwox/research/discovery_ledger_current.md"
+      ],
+      "status": "RESTORED",
+      "lane": "content_transform",
+      "verification": "The full cumulative disease-level ledger is materialized; scientific-correction propagation, upgraded parent-of-origin/combination privacy detection and independent scanning pass."
+    },
+    {
+      "id": "therapeutic_hypothesis_ledger",
+      "source_class": "generate-critique-rank-evolve hypothesis portfolio",
+      "public_paths": [
+        "disease-models/wwox/research/therapeutic_hypotheses_ledger_current.md"
+      ],
+      "status": "RESTORED",
+      "lane": "content_transform",
+      "verification": "The full generate-critique-rank-evolve portfolio is materialized at disease level and both upgraded privacy scanners pass."
+    },
+    {
+      "id": "scientific_analysis_narratives",
+      "source_class": "structural, splice, proteostasis, therapy-lever and tissue-proxy interpretation",
+      "public_paths": [
+        "disease-models/wwox/analysis/variant_structural_pipeline.md",
+        "disease-models/wwox/analysis/variant_triage_rescuability.md",
+        "disease-models/wwox/analysis/therapy_levers.md",
+        "disease-models/wwox/analysis/README.md",
+        "disease-models/wwox/analysis/proteostasis_rationale.md",
+        "scripts/test_scientific_consistency.py"
+      ],
+      "status": "RESTORED",
+      "lane": "content_transform",
+      "verification": "A dedicated proteostasis rationale restores the compressed mechanism. Six fail-closed consistency checks pass and preserve the later canonical corrections on mechanism uncertainty, read-across, recoverability, ASO scope and structural interpretation."
+    },
+    {
+      "id": "analysis_package_parity",
+      "source_class": "Claude Science/Q230P narrative and structural-input preservation",
+      "public_paths": [
+        "disease-models/wwox/analysis/data/redteam/README.md",
+        "disease-models/wwox/analysis/scripts/prepare_redteam_structures.py",
+        "scripts/test_analysis_package_contract.py"
+      ],
+      "status": "RESTORED",
+      "lane": "content_transform",
+      "verification": "All five compressed private narrative classes retain their decisive method anchors and substantive public replacements. Four omitted structure inputs are honestly disclosed, checksum-anchored and reconstructable/downloadable through README commands that match the shipped CLI."
+    },
+    {
+      "id": "manual_corpus",
+      "source_class": "operator, deep-dive and orchestration manuals",
+      "public_paths": [
+        "ARCHITECTURE.md",
+        "CAPABILITIES.md",
+        "framework/instruction",
+        "framework/manuals/deep_dive_manual.md",
+        "framework/manuals/operator_manual.md",
+        "scripts/test_deepdive_method_contract.py"
+      ],
+      "status": "RESTORED",
+      "lane": "content_transform",
+      "verification": "Full-size public manuals are materialized, ten reusable deep-dive invariants are preserved, the executable skill routes to the full manual, and the mechanical rewrite-scar regression is green."
+    },
+    {
+      "id": "reusable_agent_prompts",
+      "source_class": "full-text, deep-dive, research-group, intake and scouting agent prompts",
+      "public_paths": [
+        ".claude/agents/fulltext-dossier.md",
+        ".claude/agents/legend-deepdive.md",
+        ".claude/agents/research-group-analyst.md",
+        ".claude/agents/study-intake-triage.md",
+        ".claude/agents/wwox-scout.md"
+      ],
+      "status": "RESTORED",
+      "lane": "content_transform",
+      "verification": "Five reusable prompts ported with semantic de-identification and public three-layer paths (no case identifiers, no legacy private-layer paths); enforced by scripts/test_agent_pipeline_contract.py."
+    },
+    {
+      "id": "agent_pipeline_integrity",
+      "source_class": "agent discovery and public-path contract",
+      "public_paths": [
+        "scripts/test_agent_pipeline_contract.py"
+      ],
+      "status": "RESTORED",
+      "lane": "gate_tooling",
+      "verification": "Fail-closed checks confirm all five named agents are materialized with valid frontmatter, public three-layer paths and resolvable named dependencies."
+    },
+    {
+      "id": "semantic_graph_generator",
+      "source_class": "derived Obsidian-style semantic graph runtime",
+      "public_paths": [
+        "framework/scripts/generate_semantic_graph.py",
+        "framework/scripts/test_generate_semantic_graph.py"
+      ],
+      "status": "RESTORED",
+      "lane": "gate_tooling",
+      "verification": "Synthetic-fixture generation, safe replacement marker and non-canonical output tests; restored pathway/concept entry points, all seven public-safe concept families and the optional biomarker-framework node. Canonical registry links are retargeted to generated nodes or rendered as non-links when no node exists, and generation fails closed on any unresolved internal wikilink. A full run over the shipped public registries generated 109 derived files from 43 papers, 33 claims and 16 research lines with zero unresolved links."
+    },
+    {
+      "id": "private_clinical_overlay",
+      "source_class": "patient, family, sample, regimen and provider material",
+      "public_paths": [],
+      "status": "EXCLUDED_PRIVATE",
+      "lane": "never_public",
+      "verification": "Semantic privacy and case-linkage gates."
+    },
+    {
+      "id": "private_operational_history",
+      "source_class": "live logs, inbox, staging, backups, full texts and local caches",
+      "public_paths": [],
+      "status": "EXCLUDED_PRIVATE",
+      "lane": "never_public",
+      "verification": "Excluded by policy and .gitignore."
+    },
+    {
+      "id": "vendored_third_party_repositories",
+      "source_class": "external source trees, model weights and large datasets",
+      "public_paths": [
+        "_external_repos/MANIFEST.md"
+      ],
+      "status": "EXCLUDED_THIRD_PARTY",
+      "lane": "manifest_only",
+      "verification": "No third-party source tree is redistributed."
+    },
+    {
+      "id": "pending_disease_layer_content",
+      "source_class": "disease-layer artifacts declared by the architecture but not yet written publicly",
+      "public_paths": [],
+      "planned_public_paths": [
+        "disease-models/wwox/registries/session_commit_log.md",
+        "disease-models/wwox/meta/meta_neuroinflammation_current.md",
+        "disease-models/wwox/meta/meta_gene_therapy_current.md",
+        "disease-models/wwox/meta/meta_cerebellar_axis_current.md"
+      ],
+      "status": "PENDING_CONTENT_REWRITE",
+      "lane": "content_transform",
+      "verification": "The public LINT engine already checks a disease-level commit-candidate queue when present, and the architecture declares three further meta-analyses (neuroinflammation, gene therapy, cerebellar axis) as pending creation. No empty placeholder is allowed: these ship only when they carry real content."
+    }
+  ]
+}

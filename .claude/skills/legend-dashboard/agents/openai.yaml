@@ -1,0 +1,4 @@
+interface:
+  display_name: "LEGEND Dashboard"
+  short_description: "Obsidian dashboards for LEGEND"
+  default_prompt: "Create or refresh LEGEND dashboard notes from workspace state."

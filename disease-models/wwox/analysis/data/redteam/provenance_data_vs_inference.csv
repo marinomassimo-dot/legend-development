@@ -1,0 +1,16 @@
+claim,epistemic_level,source,note
+"Q230P transcript normal, protein absent (patient fibroblasts)",EXPERIMENTAL,Johannsen2018 PMID29808465,qRT-PCR normal; Western absent. Homozygous Q230P.
+Johannsen: cause is 'impaired translation OR premature degradation',EXPERIMENTAL(authors' interpretation),Johannsen2018,Authors did NOT distinguish translation vs degradation. Degradation is NOT established for Q230P.
+Q230P degraded via CMA/HSC70/lysosome,INFERENCE(extrapolated),dossier from Zhang P252A,Q230P itself was NEVER tested for HSC70/CMA/lysosome/CHX. All CMA data is on P252A.
+"P252A: low protein, mRNA normal -> accelerated turnover",EXPERIMENTAL,"Zhang2025 PMID41124647 Fig4A,B",CHX chase confirms fast degradation.
+MG-132 (proteasome) does NOT rescue any WWOX,EXPERIMENTAL,Zhang2025 Fig4C,Proteasome not the route. (This is the dossier's key operational correction.)
+Chloroquine & NH4Cl (lysosome) rescue P252A,EXPERIMENTAL,"Zhang2025 Fig4D,E",Lysosome-dependent.
+3-MA (macroautophagy) does NOT rescue,EXPERIMENTAL,Zhang2025 Fig4F,Excludes macroautophagy -> consistent with CMA/microautophagy.
+"P252A IS strongly polyubiquitinated, predominantly K63-linked",EXPERIMENTAL,"Zhang2025 Fig4G,H",IMPORTANT: not ubiquitin-free. K63-Ub is an autophagy/lysosome signal. Contradicts 'ubiquitin-independent' framing.
+HSC70 co-IPs P252A but NOT WT nor P282A,EXPERIMENTAL,Zhang2025 Fig4I,Genuine mutant-specific HSC70 binding.
+P252A colocalizes with LAMP1 (lysosome),EXPERIMENTAL,Zhang2025 Fig4J,IF; paper phrasing 'transferred to lysosomes'.
+LRSVQ 187-191 is the operative KFERQ motif,HYPOTHESIS(post-hoc),Zhang2025 text,Explicitly a 'speculation'; motif was NEVER mutated. This is the model's weakest load-bearing premise.
+P282A is stable & HSC70-negative,EXPERIMENTAL,Zhang2025,"BUT P282A is still LOF (loses POLE4 interaction, loses tumor suppression) -> stability != function."
+Helix 226-251 packs against L187/V190 as a 'lid',"INFERENCE(structural, AlphaFold)",dossier,No experimental SDR structure exists. To be tested in steps 2-4.
+Q230 side chain occludes the motif,RETRACTED,dossier self-correction,Dossier already falsified this ('5th occluder').
+"C299R acts via catalysis (near triad), not degradation",INFERENCE(structural),dossier,Two independent routes claimed. To be tested (C299->triad distance) in step 4.

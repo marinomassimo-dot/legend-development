@@ -1,0 +1,6 @@
+start,end,motif,type,mean_RSA_folded,max_RSA_folded,accessibility
+406,410,QERLG,canonical,0.361,0.581,exposed
+402,406,ERLIQ,canonical,0.27,0.581,partial
+118,122,QGRDF,canonical,0.217,0.359,partial
+408,412,RLGSQ,phospho-activated,0.344,0.519,exposed
+187,191,LRSVQ,phospho-activated,0.166,0.435,partial

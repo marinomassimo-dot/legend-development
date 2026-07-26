@@ -1,0 +1,273 @@
+#!/usr/bin/env python3
+"""Regression suite for the batch queue.
+
+The queue is a claim about *what has been read*, so the failure that matters is
+overstating coverage. The join was originally written to index every identifier appearing
+in a record body; that attributed a record's read depth to every paper it merely cited and
+inflated "full text read" roughly six-fold. The first test below is that bug, frozen.
+
+The second concern is drift: the committed queue is generated, so a registry change without
+a regeneration shows a reader numbers that no longer describe the repository.
+"""
+
+from __future__ import annotations
+
+import subprocess
+import sys
+import textwrap
+import unittest
+from pathlib import Path
+from tempfile import TemporaryDirectory
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import batch_queue as bq  # noqa: E402
+import fulltext_receipts as receipts  # noqa: E402
+
+ROOT = Path(__file__).resolve().parents[2]
+REGISTRIES = ROOT / "disease-models" / "wwox" / "registries"
+QUEUE = REGISTRIES / "batch_queue.md"
+
+
+def fixture(test_case: unittest.TestCase, registry_body: str) -> Path:
+    temporary = TemporaryDirectory()
+    test_case.addCleanup(temporary.cleanup)
+    registries = Path(temporary.name) / "disease-models" / "wwox" / "registries"
+    registries.mkdir(parents=True)
+    (registries / "paper_registry_current.md").write_text(registry_body, encoding="utf-8")
+    (registries / "fulltext_read_receipts.jsonl").touch()
+    return registries
+
+
+class JoinTests(unittest.TestCase):
+    def test_cited_identifiers_do_not_inherit_read_depth(self) -> None:
+        registries = fixture(
+            self,
+            textwrap.dedent(
+                """\
+                ## PAPER 001
+                **Identifier:** PMID 11111111
+                **Status:** claim_linked
+                **Evidence depth:** full text reviewed (coverage_status: complete_fulltext_read)
+                **Note:** compares favourably with PMID 22222222 and DOI 10.1000/cited.1
+                """
+            )
+        )
+        index = bq.registry_index(registries)
+        self.assertEqual(index["pmid:11111111"]["depth"], "full text")
+        self.assertNotIn("pmid:22222222", index, "a cited PMID must not inherit read depth")
+        self.assertNotIn("doi:10.1000/cited.1", index)
+
+    def test_corpus_placeholder_is_catalogued_not_read(self) -> None:
+        registries = fixture(
+            self,
+            "## CORPUS P900\n**Identifier:** PMID 33333333\n**Status:** screened — corpus placeholder\n"
+        )
+        index = bq.registry_index(registries)
+        self.assertEqual(index["pmid:33333333"]["depth"], "catalogued only")
+
+    def test_legacy_corpus_stub_heading_is_catalogued(self) -> None:
+        registries = fixture(
+            self,
+            "## CORPUS-STUB-001\n**Identifier:** PMID 33333334\n"
+            "**Status:** screened — corpus placeholder\n"
+        )
+        index = bq.registry_index(registries)
+        self.assertEqual(index["pmid:33333334"]["depth"], "catalogued only")
+
+    def test_bare_tracking_identifier_is_an_exact_pmid(self) -> None:
+        registries = fixture(self, "## PAPER 001\n**Identifier:** pending normalization\n")
+        (registries / "literature_tracking_log_current.md").write_text(
+            "**Identifier value:** 41153369\n", encoding="utf-8"
+        )
+        index = bq.registry_index(registries)
+        self.assertEqual(index["pmid:41153369"]["depth"], "screened")
+
+    def test_promoted_paper_overrides_earlier_corpus_stub(self) -> None:
+        registries = fixture(
+            self,
+            textwrap.dedent(
+                """\
+                ## CORPUS-STUB-001
+                **Identifier:** PMID 33333335
+                **Status:** screened — corpus placeholder
+
+                ## PAPER 039
+                **Identifier:** PMID 33333335
+                **Evidence depth:** full text reviewed (coverage_status: complete_fulltext_read)
+                """
+            )
+        )
+        index = bq.registry_index(registries)
+        self.assertEqual(index["pmid:33333335"]["depth"], "full text")
+        self.assertEqual(index["pmid:33333335"]["record"], "PAPER 039")
+
+    def test_doi_match_is_case_insensitive(self) -> None:
+        registries = fixture(
+            self,
+            "## PAPER 002\n**Identifier:** DOI 10.1000/Mixed.Case\n**Status:** integrated\n"
+        )
+        index = bq.registry_index(registries)
+        self.assertIn("doi:10.1000/mixed.case", index)
+
+    def test_complete_receipt_upgrades_queue_depth_before_batch_commit(self) -> None:
+        registries = fixture(
+            self,
+            "## PAPER 002\n**Identifier:** PMID 42193054 / DOI 10.1000/example\n"
+            "**Status:** integrated\n",
+        )
+        receipt = {
+            "event_id": "FTR-20260726-42193054-01",
+            "record_kind": "contemporaneous_receipt",
+            "study_id": {"pmid": "42193054", "doi": "10.1000/example"},
+            "event_at": "2026-07-26T08:00:00+02:00",
+            "analysis_at": "2026-07-26T07:00:00+02:00",
+            "workflow": "test",
+            "evidence_depth": "complete_fulltext_read",
+            "source_locator": "PMC123",
+            "source_fingerprint": None,
+            "coverage": {key: "read" for key in receipts.COVERAGE_KEYS},
+            "outputs": ["dossier.md"],
+            "evidence_basis": ["coverage_map", "dossier"],
+            "prior_receipt": None,
+            "reread_reason": "first_read",
+        }
+        receipts.append_receipt(registries / "fulltext_read_receipts.jsonl", receipt)
+        index = bq.registry_index(registries)
+        self.assertEqual(index["pmid:42193054"]["depth"], "full text")
+        self.assertEqual(index["pmid:42193054"]["record"], f"receipt {receipt['event_id']}")
+
+    def test_missing_receipt_ledger_fails_closed(self) -> None:
+        registries = fixture(
+            self,
+            "## PAPER 002\n**Identifier:** PMID 42193054\n**Status:** integrated\n",
+        )
+        (registries / "fulltext_read_receipts.jsonl").unlink()
+        with self.assertRaisesRegex(SystemExit, "missing full-text receipt ledger"):
+            bq.registry_index(registries)
+
+
+class QueueIntegrityTests(unittest.TestCase):
+    def test_repeated_paper_across_snapshots_is_counted_once(self) -> None:
+        with TemporaryDirectory() as temporary:
+            registries = Path(temporary)
+            header = "pmid\tyear\tfree_full_text\ttype\tdoi\ttitle\n"
+            first = header + "11111111\t2025\tno\tprimary\t10.1000/x\tOld title\n"
+            second = header + "11111111\t2025\tyes\tprimary\t10.1000/x\tCurrent title\n"
+            (registries / "corpus_seed_pubmed_20250101.tsv").write_text(first, encoding="utf-8")
+            (registries / "corpus_seed_pubmed_20260101.tsv").write_text(second, encoding="utf-8")
+            seeds, occurrences = bq.load_seeds(registries)
+            self.assertEqual(occurrences, 2)
+            self.assertEqual(len(seeds), 1)
+            self.assertEqual(seeds[0]["free_full_text"], "yes")
+            self.assertEqual(len(seeds[0]["_sources"].split(";")), 2)
+
+    def test_seed_corpus_is_present_and_dated(self) -> None:
+        seeds = sorted(REGISTRIES.glob("corpus_seed_*.tsv"))
+        self.assertTrue(seeds, "no seed corpus shipped")
+        for seed in seeds:
+            self.assertRegex(
+                seed.name,
+                r"corpus_seed_[a-z]+_\d{8}\.tsv",
+                "a seed snapshot must carry its source and date in the filename",
+            )
+
+    def test_seed_carries_no_personal_data(self) -> None:
+        """The seed is derived from a mail export; headers must never reach the repository."""
+        import re
+
+        forbidden = re.compile(r"(?i)@[a-z0-9.-]+\.[a-z]{2,}|sent by|clipboard - pubmed")
+        for seed in REGISTRIES.glob("corpus_seed_*.tsv"):
+            found = forbidden.findall(seed.read_text(encoding="utf-8"))
+            self.assertFalse(found, f"{seed.name} carries export metadata: {found[:3]}")
+
+    def test_totals_are_internally_consistent(self) -> None:
+        report = bq.build(ROOT, "wwox")
+        self.assertEqual(sum(report["counts"].values()), report["seed_total"])
+        self.assertEqual(len(report["queue"]), report["seed_total"])
+        self.assertEqual(
+            report["seed_occurrences"] - report["duplicate_occurrences"],
+            report["seed_total"],
+        )
+        self.assertLessEqual(report["free_full_text"], report["seed_total"])
+        self.assertLessEqual(report["year_min"], report["year_max"])
+        self.assertLessEqual(report["published_since_2020"], report["seed_total"])
+
+    def test_committed_markdown_lists_every_seed_record_with_status(self) -> None:
+        report = bq.build(ROOT, "wwox")
+        rendered = bq.render(report, limit=0)
+        self.assertEqual(rendered.count("https://pubmed.ncbi.nlm.nih.gov/"), report["seed_total"])
+        self.assertIn("| full text | PAPER ", rendered)
+        self.assertIn("| abstract only | PAPER ", rendered)
+
+    def test_coverage_is_not_overstated_against_the_registry(self) -> None:
+        """Records counted as read may never exceed the registry's own full-text claims."""
+        registry = (REGISTRIES / "paper_registry_current.md").read_text(encoding="utf-8").lower()
+        claimed = sum(registry.count(marker) for marker in bq.FULL_TEXT_MARKERS)
+        report = bq.build(ROOT, "wwox")
+        self.assertLessEqual(report["counts"].get("full text", 0), claimed)
+
+    def test_committed_queue_is_current(self) -> None:
+        self.assertTrue(QUEUE.is_file(), f"missing generated queue: {QUEUE}")
+        result = subprocess.run(
+            [
+                sys.executable,
+                str(ROOT / "framework" / "scripts" / "batch_queue.py"),
+                "--root",
+                str(ROOT),
+                "--check",
+                str(QUEUE),
+            ],
+            capture_output=True,
+            text=True,
+        )
+        self.assertEqual(
+            result.returncode,
+            0,
+            "The committed batch queue has drifted. Regenerate it:\n"
+            "  python3 framework/scripts/batch_queue.py "
+            "--out disease-models/wwox/registries/batch_queue.md\n"
+            f"{result.stdout}{result.stderr}",
+        )
+
+
+class ActionabilityTests(unittest.TestCase):
+    """The queue must answer "what is unprocessed?", not delegate it back to the reader."""
+
+    def test_every_record_carries_an_authoritative_triage_verdict(self) -> None:
+        report = bq.build(ROOT, "wwox")
+        for item in report["queue"]:
+            self.assertIn(
+                item["triage_class"],
+                bq.ACTION,
+                f"{item['pmid']} has no recognised intake verdict",
+            )
+
+    def test_no_record_is_left_in_an_unresolved_bucket(self) -> None:
+        """Regression on the earlier design, where 45% of the corpus meant 'go find out'."""
+        report = bq.build(ROOT, "wwox")
+        undecided = [item for item in report["queue"] if item["triage_class"] == "unmatched"]
+        self.assertFalse(undecided, "the start-here answer must not contain an unmatched bucket")
+
+    def test_start_here_total_matches_the_two_actionable_classes(self) -> None:
+        report = bq.build(ROOT, "wwox")
+        expected = report["actions"].get("NEW", 0) + report["actions"].get("CORPUS_CATALOGUED", 0)
+        self.assertEqual(report["outstanding"], expected)
+        self.assertLessEqual(report["ready_now"], report["outstanding"])
+
+    def test_verdicts_agree_with_the_intake_gate_itself(self) -> None:
+        """One classifier, not two: this file must reuse the gate, never approximate it."""
+        report = bq.build(ROOT, "wwox")
+        records = bq.triage.build_index(ROOT)
+        index = bq.triage.build_identifier_index(ROOT)
+        sample = report["queue"][:25]
+        for item in sample:
+            line = f"{item['title']}. — PMID {item['pmid']} · DOI  · YEAR {item['year']}"
+            verdict = bq.triage.match_row(
+                {"line": line, "raw": "", "aggregate": "no"}, records, index
+            )
+            self.assertEqual(verdict["class"], item["triage_class"], item["pmid"])
+
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)

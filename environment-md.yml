@@ -1,0 +1,11 @@
+name: legend-md
+channels:
+  - conda-forge
+dependencies:
+  # Reconstructed from the last known working private pilot environment.
+  # This optional environment is not part of the release-gate dependency set.
+  - python=3.9.6
+  - numpy=1.26.4
+  - openmm=8.1.1
+  - pdbfixer=1.12
+  - mdtraj=1.10.3

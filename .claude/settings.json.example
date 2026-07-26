@@ -1,0 +1,63 @@
+{
+  "_comment": [
+    "Example Claude Code settings for running LEGEND end-to-end.",
+    "Copy to .claude/settings.local.json and adapt to your machine.",
+    "It is an EXAMPLE on purpose: it ships the *shape* of the autonomy contract",
+    "(see .claude/skills/legend/SKILL.md), not one machine's paths.",
+    "",
+    "Why it matters: the autopilot can keep running across the explicitly approved",
+    "operations below while the operator is away. Unlisted actions still require",
+    "review, so expand the allow-list only after inspecting the exact command.",
+    "",
+    "SECURITY: this template deliberately does not enable 'bypassPermissions'. That",
+    "mode ignores the allow-list and is appropriate only inside an isolated container",
+    "or VM. Never run an autonomous session with credentials or identifiable clinical",
+    "material in scope. Paid or network services are never auto-authorized: the skills",
+    "stop and ask for those."
+  ],
+
+  "permissions": {
+    "defaultMode": "default",
+
+    "allow": [
+      "Read",
+      "Write",
+      "Edit",
+
+      "Bash(python3 framework/scripts/legend_lint.py *)",
+      "Bash(python3 framework/scripts/batch_commit.py *)",
+      "Bash(python3 framework/scripts/unread_gold.py *)",
+      "Bash(python3 framework/scripts/generate_semantic_graph.py *)",
+      "Bash(python3 scripts/public_release_gate.py *)",
+      "Bash(python3 scripts/run_release_regressions.py *)",
+      "Bash(python3 .claude/skills/legend-study-intake-triage/scripts/*)",
+      "Bash(python3 .claude/skills/legend-batch-inferential-sweep/scripts/*)",
+      "Bash(python3 .claude/skills/legend-proband-priority-matrix/scripts/*)",
+      "Bash(python3 .claude/skills/legend-hypothesis-forge/scripts/*)",
+      "Bash(python3 disease-models/*/analysis/scripts/*)",
+
+      "Bash(mkdir -p *)",
+      "Bash(cp *)",
+      "Bash(ls *)",
+      "Bash(find . *)",
+      "Bash(git add *)",
+      "Bash(git commit -m *)",
+      "Bash(git status)",
+      "Bash(git diff *)",
+
+      "Bash(python3 -m venv *)"
+    ],
+
+    "_comment_mcp": [
+      "MCP connectors are optional. PubMed is the one the intake/scout skills use;",
+      "authorize it in your own client. Nothing in this repository requires it to run",
+      "the LINT, the release gate, or the analysis pipeline."
+    ],
+    "allowMcp": [
+      "mcp__PubMed__search_articles",
+      "mcp__PubMed__get_article_metadata",
+      "mcp__PubMed__get_full_text_article",
+      "mcp__PubMed__convert_article_ids"
+    ]
+  }
+}

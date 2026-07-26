@@ -1,0 +1,134 @@
+{
+  "pmid": "35716775",
+  "doi": "10.1016/j.jbc.2022.102145",
+  "receipt": "FTR-20260726-35716775-02",
+  "group_assessment": {
+    "total_publications": 120,
+    "publications_on_gene": 4,
+    "dominant_field": "Ora Schueler-Furman: peptide/protein interaction modeling and motif-mediated interactions; collaborator Jordan H. Chill: 46 PubMed papers, 1 on WWOX, with biomolecular NMR specialization",
+    "is_primary_group_for_disease": false,
+    "method": "PubMed esearch counts on 2026-07-26: Schueler-Furman O[Author]; Schueler-Furman O[Author] AND WWOX; Chill JH[Author]; Chill JH[Author] AND WWOX. Institutional/ORCID profiles used for affiliation and method focus.",
+    "weighting": "The observation and interpretation receive different weights. The group is not a WOREE clinical lab, so disease transfer remains weak; however, its sustained expertise in peptide docking, tandem WW repeats and NMR directly matches the biophysical question, raising confidence in the measurements. The AlphaFold pose and any reference-genotype extension remain weaker than the NMR/ITC data and are not upgraded by group reputation.",
+    "performed_during_run": true,
+    "research_type": "experimental_lab",
+    "research_type_basis": "Backfilled by the PMID 22193544 session for schema compliance. The originating session should refine this classification and the reference count if it disagrees."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX[All Fields] AND WW2[All Fields]",
+        "count": 5
+      },
+      {
+        "query": "WWOX[All Fields] AND tandem WW[All Fields]",
+        "count": 3
+      },
+      {
+        "query": "WWOX[All Fields] AND PPxY[All Fields]",
+        "count": 17
+      },
+      {
+        "query": "WWOX[All Fields] AND ErbB4[All Fields]",
+        "count": 12
+      }
+    ],
+    "verdict": "The exact tandem-WW intersection is sparse (3\u20135 PubMed records), while the broader PPxY/ErbB4 neighborhood is still small. This makes source resolution and construct-level comparison more valuable than adding another broad review."
+  },
+  "multihop": {
+    "gene_direct_refs_in_source": [
+      "PMID 24550385 \u2014 WWOX interactome / WW-domain interactions",
+      "PMID 15070730 \u2014 WWOX-p73 association",
+      "PMID 24308844 \u2014 WWOX-ErbB4 binding origin",
+      "PMID 22634283 \u2014 WWOX-WBP1/WBP2 biophysics",
+      "PMID 25703206 \u2014 allostery in WWOX ligand binding",
+      "PMID 30619736 \u2014 WWOX interactome",
+      "PMID 25662954 \u2014 WWOX structural review",
+      "PMID 32185845 \u2014 phosphorylation-regulated WWOX-p73 interaction"
+    ],
+    "resolved": [
+      "24550385: present in corpus/registry, no complete receipt",
+      "15070730: present in seed corpus, no complete receipt",
+      "24308844: present in registry/seed, no complete receipt, queued FT-021",
+      "22634283: present in registry/seed, no complete receipt",
+      "25703206: present in registry/seed, no complete receipt",
+      "30619736: registered and has receipt history but status does not clear complete-reading gate",
+      "25662954: review already catalogued; not a primary-data substitute",
+      "32185845: registered WWOX-p73 paper, no complete receipt"
+    ],
+    "queued": [
+      "FT-021"
+    ],
+    "note": "PMID 24308844 is the highest-gain next hop because it is the direct ErbB4 precursor and can test whether the topology findings survive different constructs/context. Other references remain resolved corpus debt rather than silently inherited as read.",
+    "references_enumerated": 56
+  },
+  "corpus_crossquery": {
+    "query": "WW1|WW2|PPxY|ErbB4 across the four current registries plus discovery ledger",
+    "hits": 90,
+    "verdict": "The paper meets an existing canonical edge rather than creating an isolated novelty: CLAIM 024 already states tandem cooperativity through anonymous CORPUS P204, and CLAIM 028 carries partner/context dependence. The correct action is source normalization and nuance, not a duplicate claim."
+  },
+  "retraction_check": {
+    "method": "python3 .claude/skills/legend-study-intake-triage/scripts/retraction_check.py --pmids 35716775",
+    "result": "No retraction, expression of concern or correction found; command exited without a flag on 2026-07-26."
+  },
+  "landing": [
+    "DL-MECH-017",
+    "DL-BIO-011",
+    "DL-MECH-063",
+    "FT-021"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend",
+      "used": true
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": true
+    },
+    {
+      "skill": "legend-capability-scout",
+      "used": true
+    },
+    {
+      "skill": "legend-session-takeaways",
+      "used": true
+    },
+    {
+      "skill": "research-group-analyst",
+      "used": false,
+      "reason": "The assessment was executed inline for this single paper because agent delegation was not authorized; its complete method and evidence were still applied."
+    },
+    {
+      "skill": "legend-batch-inferential-sweep",
+      "used": false,
+      "reason": "The operator requested one selected WWOX-direct paper, not a supplied study batch; full deep-dive analysis superseded a second automated abstract ranking pass."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "No concrete molecule or therapy emerged; forcing a therapeutic hypothesis would overstate a fragment-level binding study."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No compound or intervention was promoted, so molecule-level safety/ADMET triage had no valid object."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "One candidate is below the five-candidate threshold and the operator did not authorize BATCH_COMMIT."
+    }
+  ]
+}

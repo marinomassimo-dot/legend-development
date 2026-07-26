@@ -1,0 +1,6 @@
+model,Q230P protein absent,P252A CMA/lysosome,MG-132 null,P252A K63-polyUb,HSC70 binds P252A only,P252A LAMP1,P282A stable but LOF,C299R severe,high AF confidence SDR
+M0: Helix-lid -> LRSVQ exposure -> CMA (original),+ (via destabilization),+,+,0 (unexplained),+,+,+ (P282 outside),0 (needs 2nd route),+ (uses AF)
+M1: Global SDR misfolding -> generic CMA/quality-control (motif-agnostic),+,+,+,+ (misfold->K63->lysophagy),+ (exposes hydrophobics),+,- (P282A stable yet folded?),+ (any destabiliser),+
+"M2: Same route but degron = ERLIQ 402-406 (canonical), not LRSVQ",+,+,+,0,+,+,+,0,+
+"M3: ACK1/ITCH-driven (phospho -> ubiquitin -> lysosome), CMA secondary",0,+ (K63 fits),+,+ (primary),0,+,0,0,0
+"M4: Q230P is a TRANSLATION/folding-yield defect (co-translational), not degradation",+ (Johannsen ambiguous),0 (P252A only),+ (trivially),- (P252A is degraded),- ,- ,0,0,0

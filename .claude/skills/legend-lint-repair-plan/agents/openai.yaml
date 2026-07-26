@@ -1,0 +1,4 @@
+interface:
+  display_name: "LEGEND Lint Repair"
+  short_description: "Plan safe repairs for LEGEND LINT"
+  default_prompt: "Run LEGEND lint and produce a gate-aware repair plan."

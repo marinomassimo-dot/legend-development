@@ -1,0 +1,33 @@
+# === Privacy hard-guard (defense in depth) ===
+# The public edition must NEVER contain patient-specific or individual-linking data.
+# These patterns are excluded belt-and-suspenders, even though such files are not
+# authored into this repository in the first place (the private N-of-1 overlay is
+# kept entirely outside this repo).
+_qa/
+files/
+backup/
+staging/
+tmp/
+overlay/
+*private*
+*patient*
+*_clinical_*
+*_overlay_*
+
+# "Proband" may be used in public, disease-level methodology. Do not ignore it
+# by name: semantic case linkage is enforced by the release gate instead.
+
+# === Standard ===
+.DS_Store
+*.log
+__pycache__/
+*.pyc
+.venv/
+venv/
+node_modules/
+.env
+
+# Optional molecular-dynamics runs are large, generated and non-canonical.
+md-output/
+*.dcd
+state.tsv

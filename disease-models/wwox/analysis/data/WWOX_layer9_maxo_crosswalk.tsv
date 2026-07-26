@@ -1,0 +1,11 @@
+modality_class	maxo_intent	maxo_id	maxo_label	coverage
+splice-correcting ASO (splice-site alleles)	antisense oligonucleotide	MAXO:0001593	antisense oligonucleotide inhibitor therapy	exact
+splice-correcting ASO — CNS delivery	intrathecal antisense oligonucleotide	MAXO:0020026	intrathecal antisense oligonucleotide inhibitor therapy	exact
+sequence correction (gene/base/prime editing)	gene editing	MAXO:0001484	gene editing therapy	exact
+transcriptional up-regulation (CRISPRa) of endogenous WWOX	gene therapy (parent)	MAXO:0001001	gene therapy	parent_only
+pharmacological chaperone / proteostasis modulation (folding-defective missense)	pharmacotherapy (parent; no specific MAXO term)	MAXO:0000058	pharmacotherapy	parent_only
+downstream pathway modulation (small molecule)	enzyme inhibitor agent therapy	MAXO:0000648	enzyme inhibitor agent therapy	exact
+repurposed small molecule (pathway node)	pharmacotherapy (parent; no specific MAXO term)	MAXO:0000058	pharmacotherapy	parent_only
+seizure control (window protection)	anticonvulsant agent therapy	MAXO:0000167	anticonvulsant agent therapy	exact
+network/EEG surveillance (window protection)	electroencephalography	MAXO:0000932	electroencephalography	exact
+gene addition (viral vector)	gene therapy	MAXO:0001001	gene therapy	exact

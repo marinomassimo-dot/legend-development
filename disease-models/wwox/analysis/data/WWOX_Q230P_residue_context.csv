@@ -1,0 +1,11 @@
+property,value
+Residue,Gln230
+Domain,SDR/oxidoreductase (aa ~130-350)
+Secondary structure,α-helix (227-232)
+pLDDT (model confidence),98.5 (very high)
+Relative SASA,0.00
+Burial class,fully buried (core)
+"Backbone H-bond (i,i-4)",N230–O226 = 3.03 Å (present)
+Side-chain H-bonds,"4 (Thr221, Asp223, Ala185, Leu184)"
+Salt-bridge partner,Asp223 (NE2–OD2 2.72 Å)
+Consequence of Gln→Pro,Pro lacks backbone amide H → breaks helix H-bond; ring is sterically incompatible with buried helical core; all 4 side-chain H-bonds lost
