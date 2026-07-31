@@ -60,11 +60,41 @@ class Finding:
     message: str
 
 
+def unpublishable_paths(root: Path) -> frozenset[str]:
+    """Paths that are simultaneously untracked *and* gitignored.
+
+    Such a file cannot reach a published clone: it is not in the index, and
+    `.gitignore` prevents it from being added by accident. Scanning it produces
+    findings about material that is, by construction, private — which is how the
+    working-tree scan ended up reporting BLOCKs for the funding dossiers under
+    `grants/` and for local scratch directories.
+
+    The condition is deliberately a conjunction, not a directory allowlist. A
+    file that is gitignored but has been force-added (`git add -f`) *is* tracked,
+    is therefore publishable, and must still be scanned — an allowlist keyed on
+    directory names would silently exempt exactly the case that matters. Outside
+    a git checkout (an exported release copy) nothing is exempt.
+    """
+    try:
+        completed = subprocess.run(
+            ["git", "-C", str(root), "ls-files", "-z",
+             "--others", "--ignored", "--exclude-standard"],
+            check=True, capture_output=True, text=True,
+        )
+    except (OSError, subprocess.CalledProcessError):
+        return frozenset()
+    return frozenset(entry for entry in completed.stdout.split("\0") if entry)
+
+
 def iter_files(root: Path) -> Iterable[Path]:
+    exempt = unpublishable_paths(root)
     for path in root.rglob("*"):
         if not path.is_file():
             continue
-        if any(part in SKIP_DIRS for part in path.relative_to(root).parts):
+        relative = path.relative_to(root)
+        if any(part in SKIP_DIRS for part in relative.parts):
+            continue
+        if relative.as_posix() in exempt:
             continue
         yield path
 

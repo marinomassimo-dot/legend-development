@@ -38,6 +38,29 @@ FORBIDDEN_PUBLIC_DIRECTORIES = {
 MAX_PUBLIC_FILE_BYTES = 20 * 1024 * 1024
 
 
+def tracked_paths() -> frozenset[str]:
+    """Files in the index — i.e. the ones that actually reach a published clone."""
+    completed = subprocess.run(
+        ["git", "-C", str(ROOT), "ls-files", "-z"],
+        check=False, capture_output=True, text=True,
+    )
+    return frozenset(entry for entry in completed.stdout.split("\0") if entry)
+
+
+def tracked_public_content_roots() -> frozenset[str]:
+    """Top-level directories that hold at least one tracked (published) file.
+
+    Derived from the index rather than hardcoded, so it can't go stale as the
+    repository grows. A directory with no tracked files (`grants/`, `staging/`,
+    `files/`, `backup/`, ...) is deliberately private working material, not a
+    silently-hidden public capability — it is exempt by construction, the same
+    way `unpublishable_paths` in public_release_gate.py exempts it.
+    """
+    return frozenset(
+        entry.split("/", 1)[0] for entry in tracked_paths() if "/" in entry
+    )
+
+
 def is_expected_generated_path(relative: Path) -> bool:
     return (
         any(part in EXPECTED_IGNORED_PARTS for part in relative.parts)
@@ -73,10 +96,20 @@ def unexpectedly_ignored_files() -> list[str]:
             for line in completed.stdout.splitlines()
             if line.strip()
         }
+    # Checking "is this exact path tracked" is vacuous: a file that just got
+    # newly hidden by an ignore-rule edit is untracked in the working tree by
+    # definition (that's what "hidden" means), so it would never appear in the
+    # index either. The actual risk is a public *directory* — one that already
+    # ships tracked content — silently losing a new file to a broad pattern
+    # like `*private*`. Scope the check to that: an ignored-and-untracked file
+    # is a problem only when it sits under a directory the release already
+    # tracks; directories with zero tracked files are private working areas by
+    # construction (mirrors `unpublishable_paths` in public_release_gate.py).
+    public_roots = tracked_public_content_roots()
     return sorted(
         path.as_posix()
         for path in ignored
-        if not is_expected_generated_path(path)
+        if not is_expected_generated_path(path) and path.parts[0] in public_roots
     )
 
 

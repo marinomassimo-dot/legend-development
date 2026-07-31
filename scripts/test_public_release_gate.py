@@ -359,5 +359,73 @@ class GateTests(unittest.TestCase):
         )
 
 
+class UnpublishableExemptionTests(unittest.TestCase):
+    """The scan exemption must key on publishability, not on directory name.
+
+    A gitignored *and* untracked file cannot reach a published clone, so scanning
+    it only produces noise about deliberately private material. The moment the
+    same file is force-added it becomes publishable, and the gate must see it
+    again. A directory allowlist cannot express that distinction — it exempts the
+    dangerous case along with the safe one.
+    """
+
+    def make_git_repo(self) -> Path:
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        root = Path(temp.name)
+        (root / "README.md").write_text("# Public project\n", encoding="utf-8")
+        (root / ".gitignore").write_text("grants/\n", encoding="utf-8")
+        for command in (
+            ["git", "init", "-q"],
+            ["git", "config", "user.email", "gate@example.invalid"],
+            ["git", "config", "user.name", "Release Gate Test"],
+            ["git", "add", "README.md", ".gitignore"],
+            ["git", "commit", "-qm", "fixture"],
+        ):
+            subprocess.run(command, cwd=root, check=True)
+        return root
+
+    def write_sensitive_dossier(self, root: Path) -> Path:
+        dossier = root / "grants" / "call" / "answers.md"
+        dossier.parent.mkdir(parents=True)
+        dossier.write_text(
+            "Primary contact: someone@example.org\n", encoding="utf-8"
+        )
+        return dossier
+
+    def test_untracked_gitignored_dossier_is_not_scanned(self) -> None:
+        root = self.make_git_repo()
+        self.write_sensitive_dossier(root)
+        scanned = {path.relative_to(root).as_posix() for path in GATE.iter_files(root)}
+        self.assertNotIn("grants/call/answers.md", scanned)
+
+    def test_force_added_dossier_is_scanned_and_blocks(self) -> None:
+        root = self.make_git_repo()
+        self.write_sensitive_dossier(root)
+        subprocess.run(
+            ["git", "add", "-f", "grants/call/answers.md"], cwd=root, check=True
+        )
+
+        scanned = {path.relative_to(root).as_posix() for path in GATE.iter_files(root)}
+        self.assertIn(
+            "grants/call/answers.md",
+            scanned,
+            msg="a tracked file is publishable and must never be exempt",
+        )
+
+        findings: list = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        offending = {
+            item.code for item in findings
+            if item.path == "grants/call/answers.md"
+        }
+        self.assertIn("EMAIL_ADDRESS", offending)
+
+    def test_exemption_is_empty_outside_a_git_checkout(self) -> None:
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        self.assertEqual(frozenset(), GATE.unpublishable_paths(Path(temp.name)))
+
+
 if __name__ == "__main__":
     unittest.main()

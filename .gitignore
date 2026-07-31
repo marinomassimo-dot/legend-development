@@ -17,6 +17,13 @@ overlay/
 # "Proband" may be used in public, disease-level methodology. Do not ignore it
 # by name: semantic case linkage is enforced by the release gate instead.
 
+# === Grant applications (never published) ===
+# Working dossiers for research-funding calls: named individuals, contact
+# details, organisation IDs, budget figures and draft form answers. Kept in the
+# working tree so each new call reuses the accumulated context, excluded from
+# the published repository by design.
+grants/
+
 # === Standard ===
 .DS_Store
 *.log
