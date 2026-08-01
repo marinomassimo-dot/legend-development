@@ -16,6 +16,81 @@ Developed in partnership with, and sponsored by, the **[WWOX Foundation](https:/
 
 ---
 
+## Institutional support
+
+LEGEND is sponsored by the [WWOX Foundation](https://www.wwox.org/), which has
+supported and funded research into WWOX-related disorders (WOREE / WWOX-DEE and
+SCAR12) over many years, working with clinicians and investigators
+internationally and maintaining its own Scientific Advisory Board. The
+Foundation contributes institutional backing, research priorities, governance
+input and access to the international WWOX network.
+
+The Foundation's letter of support is published here:
+[`docs/WWOX-Foundation-letter-of-support-public.pdf`](docs/WWOX-Foundation-letter-of-support-public.pdf).
+It is worth reading as context for what this repository is, because it is
+written from outside the codebase. It covers four things:
+
+- **Rationale and origin** — why an ultra-rare disorder rests on a
+  well-studied gene, and why the evidence that would interpret a variant
+  exists only in fragments across literatures that do not cite one another.
+  LEGEND began as an attempt to bring that evidence into one structured
+  corpus.
+
+- **Evidence of value and scientific discipline** — an author-independent,
+  read-only test of the system run by the Foundation's Director using a
+  different host reasoning model, without the developer operating the
+  workflow. It records both what the system got right and a real limitation
+  it exposed: title-level triage can underrate a paper's scientific
+  importance.
+
+- **Grant-period plan and Foundation contribution** — what is scoped to six
+  months versus what is a multi-year direction of travel, and what the
+  Foundation itself contributes.
+
+- **Why WWOX is a demanding test case** — why this gene punishes context
+  transfer across the wrong variant or tissue, punishes unwarranted causal
+  certainty, and rewards calibrated abstention.
+
+### Why a rare-disease foundation is building this
+
+Rare-disease research infrastructure is usually built inside academic groups
+and adopted by disease foundations downstream. Here that order is reversed. A
+foundation that has spent years commissioning, funding and following WWOX
+research is now operating the tooling directly: Claude Code provides the
+structured execution layer for reading, curation and evaluation, and the grant
+proposal would extend this through Claude Science for reproducible
+computational work.
+
+That position is not incidental to the method. A rare-disease foundation
+carries the whole problem at once — the mechanism, the clinical picture, the
+state of the literature and what would actually change a family's situation —
+and is therefore accountable for a mistaken causal claim in a way a single
+laboratory is not. It also works against a clock that a laboratory does not
+share: for a child with a severe developmental and epileptic encephalopathy,
+the developmental window that matters is measured in months, not funding
+cycles. Urgency of that kind does not license lower standards — it is
+precisely why the standards here are explicit and enforced, rather than left
+to the good judgement of whoever is reading. Rare-disease research today is
+well supplied with capable models and poorly supplied with the discipline to
+use them on sparse, fragmented evidence without overclaiming. What this
+repository contributes is not a result but a working method:
+provenance-tracked reading, an enforced separation between data, inference and
+hypothesis, rejections that remain auditable, and a public accounting of where
+the reasoning fails. The framework is disease-agnostic by design, so a second
+rare-disease community should be able to inherit it rather than rebuild it.
+
+---
+
+The published copy of the letter reproduces the signed text in full, with the
+handwritten signature omitted; the signed original is retained privately and
+available on request.
+
+The WWOX Foundation name, logo, letterhead and letter of support are not
+covered by this repository's MIT License. All associated rights remain with
+the WWOX Foundation.
+
+---
+
 ## Why WWOX needs a cross-disciplinary approach
 
 **WWOX** (*WW domain-containing oxidoreductase*) has two unusually separated scientific histories:
