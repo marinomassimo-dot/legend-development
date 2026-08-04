@@ -310,7 +310,24 @@ class BlindInputFirewallTests(unittest.TestCase):
             root = Path(tmp)
             bundle = root / "bundle"
             (bundle / "output").mkdir(parents=True)
-            manifest = {"bundle_files": [], "allowed_outputs": [
+            projection_path = bundle / "inputs/receipt_eligibility_projection.jsonl"
+            projection_path.parent.mkdir(parents=True)
+            projection = {
+                "active_complete_receipt_event": "FTR-COMPLETE",
+                "evidence_depth": "complete_fulltext_read",
+                "paper_id": "056",
+                "projection_kind": "eligibility_only",
+                "source_fingerprint": "a" * 64,
+                "source_locator": "PMC | sources/PAPER056.xml",
+                "study_id": {"pmid": "22193544"},
+            }
+            write_jsonl(projection_path, [projection])
+            manifest = {"bundle_files": [{
+                "bundle_path": "inputs/receipt_eligibility_projection.jsonl",
+                "role": "eligibility_only_receipt_projection",
+                "sha256": protocol.sha256_file(projection_path),
+                "source_path": "unused",
+            }], "allowed_outputs": [
                 "output/reconciliation_attestation.json", "output/run_attestation.json",
                 "output/second_derivation_authored.jsonl",
                 "output/second_derivation_reconciled.jsonl"]}
@@ -321,9 +338,16 @@ class BlindInputFirewallTests(unittest.TestCase):
             authored = occurrence("o1", "WWOX binds GSK3β", 0)
             authored["locator_extraction_receipt_event"] = None
             authored["terminal_state"] = "LOCATOR_PROVENANCE_MISSING"
+            authored["eligibility_receipt_event"] = "FTR-COMPLETE"
+            authored["locator"] = {"snippet": "short extract",
+                                   "source_fingerprint": "a" * 64,
+                                   "structural_anchor": "Results"}
+            authored["unreached_tests"] = ["SOURCE_SUPPORT_NOT_FOUND",
+                                            "ELIGIBLE_FOR_EXPORT"]
             reconciled = dict(authored)
-            reconciled["locator_extraction_receipt_event"] = "FTR-NEW"
+            reconciled["locator_extraction_receipt_event"] = "FTR-LOCATOR-2"
             reconciled["terminal_state"] = "ELIGIBLE_FOR_EXPORT"
+            reconciled["unreached_tests"] = []
             authored_path = bundle / "output/second_derivation_authored.jsonl"
             reconciled_path = bundle / "output/second_derivation_reconciled.jsonl"
             write_jsonl(authored_path, [authored])
@@ -337,19 +361,45 @@ class BlindInputFirewallTests(unittest.TestCase):
             }
             (bundle / "output/reconciliation_attestation.json").write_text(
                 json.dumps(attestation), encoding="utf-8")
+            ledger_path = root / "ledger.jsonl"
+            write_jsonl(ledger_path, [
+                {"event_id": "FTR-COMPLETE", "prior_receipt": None,
+                 "workflow": "deep_dive", "evidence_depth": "complete_fulltext_read",
+                 "study_id": {"pmid": "22193544"}, "source_fingerprint": "a" * 64,
+                 "outputs": ["paper_registry_current.md"]},
+                {"event_id": "FTR-LOCATOR-1", "prior_receipt": "FTR-COMPLETE",
+                 "workflow": "phase2_locator_extraction",
+                 "evidence_depth": "queried_not_full_read",
+                 "study_id": {"pmid": "22193544"}, "source_fingerprint": "a" * 64,
+                 "outputs": ["first-sidecar.jsonl"]},
+                {"event_id": "FTR-LOCATOR-2", "prior_receipt": "FTR-LOCATOR-1",
+                 "workflow": "phase2_independent_locator_extraction",
+                 "evidence_depth": "queried_not_full_read",
+                 "study_id": {"pmid": "22193544"}, "source_fingerprint": "a" * 64,
+                 "outputs": [protocol.ARCHIVED_AUTHORED_REL]},
+            ])
             original = protocol.BLIND_MANIFEST
             protocol.BLIND_MANIFEST = sealed
             try:
-                self.assertEqual(protocol.verify_reconciliation(bundle), [])
+                self.assertEqual(protocol.verify_reconciliation(bundle, ledger_path), [])
                 reconciled["proposition"] = "rewritten"
                 write_jsonl(reconciled_path, [reconciled])
                 attestation["reconciled_sha256"] = protocol.sha256_file(reconciled_path)
                 (bundle / "output/reconciliation_attestation.json").write_text(
                     json.dumps(attestation), encoding="utf-8")
                 self.assertIn("reconciliation rewrote authored content at record 1",
-                              protocol.verify_reconciliation(bundle))
+                              protocol.verify_reconciliation(bundle, ledger_path))
             finally:
                 protocol.BLIND_MANIFEST = original
+
+    def test_locator_receipt_may_descend_through_prior_extraction(self) -> None:
+        receipts = {
+            "complete": {"event_id": "complete", "prior_receipt": None},
+            "first": {"event_id": "first", "prior_receipt": "complete"},
+            "second": {"event_id": "second", "prior_receipt": "first"},
+        }
+        self.assertTrue(protocol.receipt_descends_from(receipts, "second", "complete"))
+        self.assertFalse(protocol.receipt_descends_from(receipts, "first", "second"))
 
 
 class CanonicalisationTests(unittest.TestCase):

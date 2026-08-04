@@ -29,6 +29,11 @@ BASELINE = DATA / "dismech_phase2_baseline.json"
 BLIND_MANIFEST = DATA / "dismech_blind_input_manifest.json"
 CANON_CONFIG = DATA / "dismech_canonicalisation_v1.json"
 RECEIPT_PROJECTION = DATA / "dismech_blind_receipt_projection.jsonl"
+RECEIPT_LEDGER = REPO_ROOT / "disease-models/wwox/registries/fulltext_read_receipts.jsonl"
+ARCHIVED_AUTHORED_REL = (
+    "disease-models/wwox/analysis/data/"
+    "dismech_second_derivation_authored_016_024_035.jsonl"
+)
 BLIND_MANIFEST_REL = Path(
     "disease-models/wwox/analysis/data/dismech_blind_input_manifest.json")
 
@@ -377,7 +382,7 @@ def verify_canonicalisation(config: dict[str, Any]) -> list[str]:
     return errors
 
 
-def verify_reconciliation(bundle: Path) -> list[str]:
+def verify_reconciliation(bundle: Path, ledger_path: Path = RECEIPT_LEDGER) -> list[str]:
     """Prove that provenance reconciliation did not rewrite authored judgement."""
     errors = verify_blind_bundle(bundle, stage="reconciled")
     if errors:
@@ -395,6 +400,28 @@ def verify_reconciliation(bundle: Path) -> list[str]:
         after_fixed = {k: v for k, v in after.items() if k not in allowed}
         if before_fixed != after_fixed:
             errors.append(f"reconciliation rewrote authored content at record {index}")
+        mutable_changed = any(before.get(field) != after.get(field) for field in allowed)
+        if before.get("terminal_state") != "LOCATOR_PROVENANCE_MISSING":
+            if mutable_changed:
+                errors.append(
+                    f"reconciliation changed a record that was not provenance-blocked at record {index}")
+            continue
+        receipt_id = after.get("locator_extraction_receipt_event")
+        if not receipt_id:
+            errors.append(f"reconciliation omitted locator receipt at record {index}")
+            continue
+        expected_state = (
+            "ELIGIBLE_FOR_EXPORT" if (before.get("locator") or {}).get("snippet")
+            else "SOURCE_SUPPORT_NOT_FOUND"
+        )
+        if after.get("terminal_state") != expected_state:
+            errors.append(
+                f"reconciliation assigned {after.get('terminal_state')!r}, expected "
+                f"{expected_state!r} at record {index}")
+        if after.get("unreached_tests") != []:
+            errors.append(f"reconciliation left unreached tests at record {index}")
+
+    errors.extend(verify_reconciliation_receipt_lineage(bundle, left, right, ledger_path))
     attestation = load_json(attestation_path)
     if attestation.get("authored_sha256") != sha256_file(authored):
         errors.append("reconciliation attestation has wrong authored_sha256")
@@ -403,6 +430,141 @@ def verify_reconciliation(bundle: Path) -> list[str]:
     if attestation.get("allowed_changed_fields") != sorted(allowed):
         errors.append("reconciliation attestation declares the wrong mutable fields")
     return errors
+
+
+def receipt_descends_from(receipts: dict[str, dict[str, Any]], event_id: str,
+                          ancestor_id: str) -> bool:
+    """Return true when ancestor_id occurs anywhere in event_id's prior chain."""
+    seen: set[str] = set()
+    current = event_id
+    while current and current not in seen:
+        seen.add(current)
+        if current == ancestor_id:
+            return True
+        event = receipts.get(current)
+        if event is None:
+            return False
+        current = event.get("prior_receipt")
+    return False
+
+
+def same_study_identity(left: dict[str, Any], right: dict[str, Any]) -> bool:
+    """Match on a shared PMID or DOI without requiring identical identifier coverage."""
+    left_pmid, right_pmid = str(left.get("pmid", "")), str(right.get("pmid", ""))
+    left_doi, right_doi = str(left.get("doi", "")).lower(), str(right.get("doi", "")).lower()
+    return bool((left_pmid and left_pmid == right_pmid)
+                or (left_doi and left_doi == right_doi))
+
+
+def verify_reconciliation_receipt_lineage(
+        bundle: Path, authored_rows: list[dict[str, Any]],
+        reconciled_rows: list[dict[str, Any]],
+        ledger_path: Path = RECEIPT_LEDGER) -> list[str]:
+    """Validate post-blind locator receipts through full append-only ancestry."""
+    errors: list[str] = []
+    try:
+        ledger_rows = load_jsonl(ledger_path)
+        projection_rows = load_jsonl(bundle / "inputs/receipt_eligibility_projection.jsonl")
+    except (FileNotFoundError, ValueError, json.JSONDecodeError) as exc:
+        return [f"locator receipt lineage unavailable: {exc}"]
+    receipts = {row.get("event_id"): row for row in ledger_rows if row.get("event_id")}
+    projection = {f"PAPER {row['paper_id']}": row for row in projection_rows}
+    checked: set[tuple[str, str]] = set()
+    for number, (before, after) in enumerate(zip(authored_rows, reconciled_rows), 1):
+        if before.get("terminal_state") != "LOCATOR_PROVENANCE_MISSING":
+            continue
+        source_id = str(before.get("source_id"))
+        receipt_id = after.get("locator_extraction_receipt_event")
+        if not receipt_id or (source_id, receipt_id) in checked:
+            continue
+        checked.add((source_id, receipt_id))
+        projected = projection.get(source_id)
+        receipt = receipts.get(receipt_id)
+        if projected is None:
+            errors.append(f"record {number}: {source_id} is absent from receipt projection")
+            continue
+        if receipt is None:
+            errors.append(f"record {number}: locator receipt {receipt_id!r} is absent from ledger")
+            continue
+        if receipt.get("workflow") != "phase2_independent_locator_extraction":
+            errors.append(f"record {number}: locator receipt has wrong workflow")
+        if receipt.get("evidence_depth") != "queried_not_full_read":
+            errors.append(f"record {number}: locator receipt has wrong evidence depth")
+        if not same_study_identity(receipt.get("study_id", {}),
+                                   projected.get("study_id", {})):
+            errors.append(f"record {number}: locator receipt has wrong study identity")
+        fingerprint = projected.get("source_fingerprint")
+        if receipt.get("source_fingerprint") != fingerprint:
+            errors.append(f"record {number}: locator receipt fingerprint differs from projection")
+        locator = before.get("locator") or {}
+        if locator and locator.get("source_fingerprint") != fingerprint:
+            errors.append(f"record {number}: locator fingerprint differs from projection")
+        qualifying = before.get("eligibility_receipt_event")
+        if qualifying != projected.get("active_complete_receipt_event"):
+            errors.append(f"record {number}: authored eligibility receipt differs from projection")
+        elif not receipt_descends_from(receipts, receipt_id, qualifying):
+            errors.append(
+                f"record {number}: locator receipt does not descend from qualifying complete read")
+        if ARCHIVED_AUTHORED_REL not in receipt.get("outputs", []):
+            errors.append(f"record {number}: locator receipt does not name archived authored output")
+    return errors
+
+
+def reconcile_locator_receipts(bundle: Path, ledger_path: Path = RECEIPT_LEDGER) -> None:
+    """Create the provenance-only reconciled output deterministically from the ledger."""
+    errors = verify_blind_bundle(bundle, stage="authored")
+    if errors:
+        raise ValueError("authored bundle is invalid: " + "; ".join(errors))
+    authored_path = bundle / "output/second_derivation_authored.jsonl"
+    authored = load_jsonl(authored_path)
+    projection_rows = load_jsonl(bundle / "inputs/receipt_eligibility_projection.jsonl")
+    projection = {f"PAPER {row['paper_id']}": row for row in projection_rows}
+    ledger = load_jsonl(ledger_path)
+    receipts = {row.get("event_id"): row for row in ledger if row.get("event_id")}
+    selected: dict[str, str] = {}
+    for source_id, projected in projection.items():
+        qualifying = projected["active_complete_receipt_event"]
+        candidates = [
+            row for row in ledger
+            if row.get("workflow") == "phase2_independent_locator_extraction"
+            and same_study_identity(row.get("study_id", {}),
+                                    projected.get("study_id", {}))
+            and ARCHIVED_AUTHORED_REL in row.get("outputs", [])
+            and receipt_descends_from(receipts, row.get("event_id", ""), qualifying)
+        ]
+        if candidates:
+            selected[source_id] = candidates[-1]["event_id"]
+
+    reconciled: list[dict[str, Any]] = []
+    for row in authored:
+        updated = dict(row)
+        if row.get("terminal_state") == "LOCATOR_PROVENANCE_MISSING":
+            source_id = str(row.get("source_id"))
+            if source_id not in selected:
+                raise ValueError(f"no valid independent locator receipt for {source_id}")
+            updated["locator_extraction_receipt_event"] = selected[source_id]
+            updated["terminal_state"] = (
+                "ELIGIBLE_FOR_EXPORT" if (row.get("locator") or {}).get("snippet")
+                else "SOURCE_SUPPORT_NOT_FOUND")
+            updated["unreached_tests"] = []
+        reconciled.append(updated)
+    reconciled_path = bundle / "output/second_derivation_reconciled.jsonl"
+    reconciled_path.write_text(
+        "".join(json.dumps(row, sort_keys=True, ensure_ascii=False) + "\n"
+                for row in reconciled), encoding="utf-8")
+    attestation = {
+        "allowed_changed_fields": sorted(
+            {"locator_extraction_receipt_event", "terminal_state", "unreached_tests"}),
+        "authored_sha256": sha256_file(authored_path),
+        "receipt_events": sorted(set(selected.values())),
+        "receipt_lineage_check": "full ancestry to qualifying complete-read receipt",
+        "reconciled_sha256": sha256_file(reconciled_path),
+    }
+    (bundle / "output/reconciliation_attestation.json").write_text(
+        json.dumps(attestation, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    errors = verify_reconciliation(bundle, ledger_path)
+    if errors:
+        raise ValueError("generated reconciliation is invalid: " + "; ".join(errors))
 
 
 def verify_measurement_attestations(bundle: Path) -> list[str]:
@@ -630,6 +792,8 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("verify-receipt-projection")
     reconcile = sub.add_parser("verify-reconciliation")
     reconcile.add_argument("bundle", type=Path)
+    build_reconciliation = sub.add_parser("reconcile-locator-receipts")
+    build_reconciliation.add_argument("bundle", type=Path)
     compare = sub.add_parser("compare")
     compare.add_argument("baseline", type=Path)
     compare.add_argument("bundle", type=Path)
@@ -650,6 +814,13 @@ def main(argv: list[str] | None = None) -> int:
             errors = verify_receipt_projection()
         elif args.command == "verify-reconciliation":
             errors = verify_reconciliation(args.bundle)
+        elif args.command == "reconcile-locator-receipts":
+            errors = verify_phase2_baseline()
+            if errors:
+                raise ValueError("baseline invalid: " + "; ".join(errors))
+            reconcile_locator_receipts(args.bundle)
+            print("RECONCILIATION WRITTEN AND VERIFIED")
+            return 0
         else:
             errors = verify_phase2_baseline() + verify_measurement_attestations(args.bundle)
             if errors:

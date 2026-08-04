@@ -6,11 +6,39 @@
 >
 > Public, disease-level and de-identified. Nothing here is medical advice.
 
-**Date:** 2026-08-04 · **Revision:** 11 · **Status:** GIT-ANCHORED INSTRUMENT, measurement not run
+**Date:** 2026-08-04 · **Revision:** 12 · **Status:** CLEAN AUTHORED RUN, reconciliation pending
 **Governs:** the independent second derivation owed by `dismech_export_spec.md` §14.1  
 **Integrity baseline:** `data/dismech_phase2_baseline.json`  
 **Blind contract:** `dismech_blind_derivation_contract.md`  
 **Protocol tool:** `disease-models/wwox/analysis/scripts/dismech_independent_protocol.py`
+
+## Revision 12 — locator lineage is ancestry, not direct parentage
+
+The first real blind run completed cleanly and made the direct-parent limitation executable.
+Its authored output is immutable and retained byte-for-byte. Reconciliation initially could not
+proceed: the receipt writer correctly requires every repeated study event to name the latest
+event, while blind contract v1 described the new locator receipt as a direct child of the
+qualifying complete read. PAPER 055 and PAPER 056 already had first-pass locator receipts after
+their complete reads, so no honest new event could satisfy both rules.
+
+Rev. 12 changes only the post-authoring provenance rule:
+
+1. the new locator receipt links to the latest event, preserving the append-only ledger;
+2. the reconciler walks the complete `prior_receipt` ancestry and requires the projected
+   complete-read receipt to occur anywhere in that chain;
+3. study identity, source fingerprint, targeted-extraction workflow and durable authored-output
+   path must also agree;
+4. only a provenance-blocked occurrence may change, and only its receipt ID, terminal state and
+   `unreached_tests`;
+5. a present locator becomes `ELIGIBLE_FOR_EXPORT`; a completed negative locator decision becomes
+   `SOURCE_SUPPORT_NOT_FOUND`.
+
+This is a post-blind protocol amendment. It does not expose any first-pass result to the actor,
+change the sealed bundle, rewrite the clean authored output or require the scientific derivation
+to be repeated. Blind contract v1 remains the historical contract attested by the run; Rev. 12
+governs only ledger persistence and deterministic reconciliation.
+
+---
 
 ## Revision 11 — aggregate verdicts disclose unavailable verification
 
@@ -462,6 +490,25 @@ decision: KEEP, pending Claude hostile review of Rev. 11.
 next_step: after a green review, select an actor with no exposure to prior derivations.
 ```
 
+```text
+experiment_id: DISMECH-INDEPENDENCE-PROTOCOL-REV12
+question: Can a second targeted-extraction receipt preserve the ledger's latest-parent rule while
+          proving descent from the qualifying complete read?
+baseline: direct parentage is impossible after the first-pass locator receipt: the writer rejects
+          the complete read as a stale parent, while the reconciliation contract rejects the
+          latest locator event as non-complete.
+single_change: replace direct-parent equality in post-authoring reconciliation with a cycle-safe
+               ancestry walk from the new locator event to the projected complete-read event.
+success_criterion: complete → first locator → independent locator passes; reversed or broken
+                   ancestry fails; authored bytes and all non-provenance fields remain unchanged.
+result: ancestry and immutable-field regressions implemented; real receipt persistence pending.
+guardrails: blind bundle and clean authored output unchanged; no reread claimed; canonical
+            scientific files untouched; lineage must still match study, fingerprint and output.
+decision: KEEP for implementation, pending full suite and real-ledger reconciliation.
+next_step: persist two targeted receipts through the validated writer, reconcile deterministically
+           and run the four-axis comparison.
+```
+
 ## Related artefacts
 
 - `dismech_export_spec.md`
@@ -471,5 +518,7 @@ next_step: after a green review, select an actor with no exposure to prior deriv
 - `data/dismech_blind_input_manifest.json`
 - `data/dismech_blind_receipt_projection.jsonl`
 - `data/dismech_canonicalisation_v1.json`
+- `data/dismech_second_derivation_authored_016_024_035.jsonl`
+- `data/dismech_second_derivation_run_attestation_016_024_035.json`
 - `disease-models/wwox/analysis/scripts/dismech_independent_protocol.py`
 - `disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py`
