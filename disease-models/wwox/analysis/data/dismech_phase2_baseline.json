@@ -1,6 +1,6 @@
 {
   "frozen_at": "2026-08-04T09:37:21Z",
-  "git_head_at_freeze": "91a92e5f590e95471806ffd3555d1fe754b1c4c2",
+  "git_head_at_freeze": "be9a7fd080d1b5b78011598be4f3ba677ee5b00d",
   "git_verification_policy": "baseline bytes must match HEAD; every declared input and output must match git_head_at_freeze:path via git cat-file; freeze commit must be an ancestor of HEAD",
   "inputs": {
     "blind_derivation_contract": {
@@ -33,7 +33,7 @@
     },
     "independent_protocol_tests": {
       "path": "disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py",
-      "sha256": "1e41fc9d8f5507d34099da9bf92c4e70b1f86f425d1e1113abaed9348a5c9887"
+      "sha256": "674597246e563f962a83987a2bb7a672b0be289102062285baa02a5c0ddef092"
     },
     "paper_registry": {
       "path": "disease-models/wwox/registries/paper_registry_current.md",
