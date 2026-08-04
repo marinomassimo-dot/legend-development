@@ -412,3 +412,59 @@ assenti da registry, coda e tracking log.
 già nel registry, **7 no**. Un tasso di mancanza del 27% sulla bibliografia di un paper già in
 registry come fonte di tre claim.
 **Current status:** ⬜ nessuno recuperato, nessuno letto.
+
+---
+
+## FT-033
+**Paper:** Gribaa M et al. 2007, *Brain* 130(7):1921–1928 — DOI 10.1093/brain/awm078
+(riferimento 4 di [[paper_registry_current#PAPER 014]])
+**Title:** A new form of childhood onset, autosomal recessive spinocerebellar ataxia and epilepsy is localized at 16q21-q23
+**Priority:** **ALTA**
+**Why:** è **l'origine di SCAR12** — lo studio di linkage che definisce l'entità prima ancora
+che WWOX fosse identificato come il gene (Mallaret 2014). Tutto il polo mite dello spettro
+poggia su questa descrizione, e LEGEND non l'ha mai letta: sta usando SCAR12 come categoria
+senza aver visto il documento che la costituisce. Rilevante per
+[[claim_registry_current#CLAIM 017]] e [[claim_registry_current#CLAIM 008]].
+**Come è emerso:** enumerazione dei 47 riferimenti di Gao 2025.
+**Current status:** ⬜ non recuperato, non letto.
+
+---
+
+## FT-034
+**Papers:** i restanti 6 riferimenti gene-diretti di [[paper_registry_current#PAPER 014]]
+ignoti a LEGEND.
+
+| Rif. | Anno | DOI | Titolo | Perché |
+|---|---|---|---|---|
+| 46 | 2021 | 10.1165/rcmb.2020-0145OC | Cigarette smoke and e-cigarette vapor downregulate lung WWOX expression, associated with increased severity of murine ARDS | **il seed di repurposing.** Gao propone antinfiammatori per le complicanze respiratorie WWOX-null appoggiandosi a questo e ai rif. 45/47. Il 45 (Singla 2017) LEGEND ce l'ha; questo no |
+| 9 | 2023 | 10.7759/cureus.46216 | Respiratory dysfunction in epileptic encephalopathies: insights and challenges | l'altro pilastro dell'asse respiratorio, che in Gao è una delle tre sole associazioni significative |
+| 26 | 2019 | 10.1002/ana.25619 | The genetic landscape of epilepsy of infancy with migrating focal seizures | EIMFS è una delle sindromi in cui Oliver classifica WWOX-DEE; qui c'è il panorama genetico completo |
+| 41 | 2017 | 10.1684/epd.2017.0924 | Practical clues for diagnosing WWOX encephalopathy | indizi diagnostici pratici — utile alla domanda "il fenotipo predice la classe genotipica?" |
+| 24 | 2023 | 10.1007/s12035-023-03346-3 | Whole-genome sequencing among Kazakhstani children with early-onset epilepsy | coorte non occidentale: contrasta il bias di ascertainment che Gao dichiara su di sé |
+| 29 | 2022 | 10.21203/rs.3.rs-1682290/v1 | Compound heterozygous deletions of WWOX caused a WOREE syndrome (**preprint**) | preprint: solo osservazione, non può superare `in observation` |
+
+**Nota sul metodo, da registrare.** Il primo controllo su questa bibliografia era **su DOI** e
+dava 12 ignoti. Cinque erano stati accodati poche ore prima da Oliver e Teplyshova e registrati
+**per PMID**: la chiave singola non li vedeva. Rifatto su entrambe le chiavi → 7.
+**Un audit di bibliografia con una sola chiave sovrastima i propri risultati, e li sovrastima
+nella direzione che lo lusinga.**
+**Current status:** ⬜ nessuno recuperato, nessuno letto.
+
+---
+
+## FT-035
+**Paper:** [[paper_registry_current#PAPER 014]] — materiale mancante della **stessa** lettura
+**Title:** Gao 2025 — eTable 1/2/3 e figure a risoluzione piena
+**Priority:** **MEDIA-ALTA**
+**Why:** il receipt `FTR-20260804-40875931-02` è `partial_fulltext_read` per una ragione
+precisa, non generica: **eTable 1** contiene i dati grezzi per caso (le 18 risposte binarie e
+le classificazioni di variante) e **Figura 2B** è la griglia 44 × 18 da cui Tabella 2 è
+calcolata. Senza, due cose non si possono verificare: (a) l'identità del **quinto individuo
+senza crisi** — il testo ne nomina quattro ma riporta crisi in 45/50, quindi ce n'è uno non
+nominato, e con M/M a n=6 un singolo individuo sposta la proporzione di 17 punti sul `p=0.016`;
+(b) se le tre associazioni significative reggano a una riclassificazione **funzionale** invece
+che sintattica delle varianti.
+**Next action:** eTable 1 è supplementary di *Neurology*; serve accesso istituzionale o
+richiesta agli autori (i dati grezzi sono dichiarati disponibili su richiesta al
+corresponding author).
+**Current status:** ⬜ non recuperato.

@@ -234,14 +234,111 @@ papers cite them and LEGEND had seen neither.** Queued as FT-030/031/032.
 Three commit candidates recorded. **None applied** — the four canonical current files change
 only under an operator-authorized `BATCH_COMMIT`.
 
+---
+
+## 7. Gao 2025 (PAPER 014) — a paper that contradicts its own table
+
+`FTR-20260804-40875931-02` · **`partial_fulltext_read`** · 20 verbatim locators ·
+manifest [`PMID40875931.json`](../research/deepdive_manifests/PMID40875931.json).
+Operator-supplied PDF; *Neurology*, all rights reserved, not retained. Prior record was a
+`legacy_reconstruction` with `unknown_legacy` on every section.
+
+**What LEGEND already had, and I did not discover.** CLAIM 013 already records the three
+significant associations with their exact figures, the survival bias, *and* the sentence
+*"case ID 11 (N/M: null+Q230P) è l'unico deceduto nel cohort"*. The registry was accurate before
+this reading. Saying so first, because this is the third time in this session the system's
+prior work was ahead of my summary of it.
+
+### The finding: the Discussion asserts what Table 2 refutes
+
+> **Discussion, p. e213883(11):** *"…the more severe phenotypes such as seizures, hypertonia,
+> respiratory complications, **and higher mortality** are significantly associated with null/null
+> genotypes."*
+
+> **Table 2, 'Premature death' row:** N/N **0 (0.0%)** · N/M **1 (7.7%)** · M/M 0 (0.0%) ·
+> χ² 2.44 · **p = 0.432**
+
+In this cohort there were **zero deaths among null/null**, the single death was **null/missense**,
+and the association is **not significant**. The paper's own Results section states this correctly
+— it lists only hypertonia, seizures and respiratory complications as significant. The
+overstatement is confined to the Discussion, where a result imported from Oliver 2023 (ref. 6) is
+absorbed into a sentence whose grammar attributes it to *"these genotype-phenotype correlations"*,
+i.e. to this study.
+
+**Why it matters more than a wording slip.** CLAIM 033 is `in observation` and rests on Oliver's
+`p = .0085`. If Gao 2025 were read as independently replicating the mortality gradient, that claim
+would look corroborated by two cohorts. It is not: **Gao's mortality data are underpowered
+(one death in 44) and point the other way.** One paper, read carelessly, would have converted a
+single-source finding into a false convergence — and convergence is precisely what LEGEND uses to
+promote `INFERENZA` toward `DATO`.
+
+### The detail that closes the loop
+
+The cohort's only death — case ID 11 — carries **p.(Gln72\*) + p.(Gln230Pro)**. CLAIM 033's first
+reservation already records that **Q230P is a missense variant that abolishes the protein**
+([[paper_registry_current#PAPER 041]]).
+
+`PREMISE: DATO` (Q230P abolishes protein) → **`INFERENZA`**: on a *functional* rather than
+*syntactic* classification, case ID 11 is null/null. The syntactic scheme placed the cohort's
+only death in the wrong class, and correcting it would move the single death from N/M to N/N —
+the direction the Discussion asserts. **The Discussion may be right about the biology and wrong
+about its own evidence**, which are different failures and must not be merged. Not applied:
+n = 1, and Gao performed no functional assay on any variant (Methods: classification is
+in-silico throughout).
+
+### A counting discrepancy in the paper
+
+Seizures are reported in **45/50**, which implies **five** seizure-free individuals. The
+Discussion names **four** (IDs 12, 13, 14, 18). Two of those four were excluded from the
+correlation analysis, so among the 44 analysed, the named cases give one N/M and one M/M —
+while Table 2's counts imply one N/M and **two** M/M. The arithmetic is consistent with a fifth,
+unnamed seizure-free individual in the missense/missense group. With **M/M at n = 6**, that one
+individual is 17 percentage points of the class carrying the `p = 0.016` seizure association.
+Resolvable only from eTable 1 or Figure 2B → queued as **FT-035**.
+
+### Commit candidates
+
+1. **CLAIM 013** — add that the paper's mortality sentence is not supported by its own Table 2,
+   and that its genotype-phenotype signal is *specific* (hypertonia, seizures, respiratory) while
+   global severity is flat at `p = 1` for walking, talking, sitting and developmental delay.
+2. **CLAIM 033** — record Gao 2025 as **non-replication** of the mortality gradient, not as
+   corroboration; and record the functional-reclassification inference on case ID 11 with its
+   n = 1 caveat.
+
+Neither applied.
+
+### Why this receipt is `partial`, deliberately
+
+`figures: captions_only`. The page renderings were seen, but Figure 2B is the 44 × 18 per-case
+grid from which Table 2 is computed, and it could not be resolved at the available resolution.
+Claiming `read` would assert a verification I cannot back — and Figure 2B is exactly what would
+settle the counting discrepancy above. This is defect **(b)** from §"Three defects" biting in
+practice: the vocabulary offers no value for *"inspected but not resolvable"*, so the conservative
+choice costs PAPER 014 its ratchet reduction. Correct direction, visible cost.
+
+### Reference audit, and a correction to my own method
+
+47 references, 40 WWOX-direct, **7 unknown to LEGEND** — including **Gribaa 2007**, the original
+SCAR12 linkage study. LEGEND has been using SCAR12 as a category without having read the paper
+that constitutes it (→ FT-033).
+
+The first pass reported **12** unknown. Five of those had been queued hours earlier from Oliver
+and Teplyshova and recorded **by PMID**, while my check keyed on **DOI**. Re-run on both keys: 7.
+**A reference audit keyed on one identifier over-reports its own findings, and over-reports in
+the direction that flatters the audit.**
+
 ## Verification
 
 ```
 deepdive_manifest.py --pmid 39507621   → PASS (2 declared gaps)
 deepdive_manifest.py --pmid 36779245   → PASS (3 declared gaps)
-fulltext_receipts.py verify            → OK: 41 chained, tail anchored
+deepdive_manifest.py --pmid 40875931   → PASS (3 declared gaps)
+fulltext_receipts.py verify            → OK: 42 chained, tail anchored
 test_deepdive_manifest.py              → 12 tests, falsified both directions
 legend_lint.py .                       → PASS; ratchet lowered 21 → 20
 ```
+
+Three readings, three receipts, 56 verbatim locators. Two reached
+`complete_fulltext_read`; one is `partial` on purpose and says why.
 
 The four canonical current files were not modified.

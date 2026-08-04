@@ -8,15 +8,15 @@
 
 ## ▶ Start here
 
-**275 records have not been processed.** **238** of them have a free full text and can be worked immediately.
+**272 records have not been processed.** **235** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
-| 🟢 **`NEW`** | 45 | never seen by the system — **the front of the queue** |
+| 🟢 **`NEW`** | 42 | never seen by the system — **the front of the queue** |
 | 🟢 **`CORPUS_CATALOGUED`** | 230 | catalogued and deduplicated, never analytically processed |
 | 🟡 `OUT_OF_SCOPE_LIKELY` | 142 | no scope signal in the title — later in the queue, **never discarded** |
 | 🟡 `AMBIGUOUS` | 6 | identifiers must be resolved before ingest |
-| ⏳ `IN_PIPELINE` | 8 | already in flight |
+| ⏳ `IN_PIPELINE` | 11 | already in flight |
 | ✅ `KNOWN_INTEGRATED` | 28 | done — read depth in the table below |
 
 The two green rows are the answer to *"where do I start?"*. The table further down lists
@@ -80,16 +80,13 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 |---|---:|:---:|---|---|---|
 | [40191585](https://pubmed.ncbi.nlm.nih.gov/40191585/) | 2025 | ✅ | primary | unmatched | Identifying individuals with rare disease variants by inferring shared ancestral haplotypes from SNP array data |
 | [37781246](https://pubmed.ncbi.nlm.nih.gov/37781246/) | 2023 | ✅ | primary | unmatched | Molecular landscapes of glioblastoma cell lines revealed a group of patients that do not benefit from WWOX tumor suppressor expression |
-| [37095367](https://pubmed.ncbi.nlm.nih.gov/37095367/) | 2023 | ✅ | primary | unmatched | Whole-Genome Sequencing Among Kazakhstani Children with Early-Onset Epilepsy Revealed New Gene Variants and Phenotypic Variability |
 | [35715422](https://pubmed.ncbi.nlm.nih.gov/35715422/) | 2022 | ✅ | primary | unmatched | Analysis of clinical phenotypic and genotypic spectra in 36 children patients with Epilepsy of Infancy with Migrating Focal Seizures |
 | [34948746](https://pubmed.ncbi.nlm.nih.gov/34948746/) | 2021 | ✅ | primary | unmatched | Effect of WW Domain-Containing Oxidoreductase Gene Polymorphism on Clinicopathological Characteristics of Patients with EGFR Mutant Lung Adenocarcinoma in Taiwan |
 | [34204789](https://pubmed.ncbi.nlm.nih.gov/34204789/) | 2021 | ✅ | primary | unmatched | PLEK2, RRM2, GCSH: A Novel WWOX-Dependent Biomarker Triad of Glioblastoma at the Crossroads of Cytoskeleton Reorganization and Metabolism Alterations |
 | [33520443](https://pubmed.ncbi.nlm.nih.gov/33520443/) | 2021 | ✅ | primary | unmatched | Identification of a novel association for the WWOX/HIF1A axis with gestational diabetes mellitus (GDM) |
-| [33058734](https://pubmed.ncbi.nlm.nih.gov/33058734/) | 2021 | ✅ | primary | unmatched | Cigarette Smoke and Nicotine-Containing Electronic-Cigarette Vapor Downregulate Lung WWOX Expression, Which Is Associated with Increased Severity of Murine Acute Respiratory Distress Syndrome |
 | [32799870](https://pubmed.ncbi.nlm.nih.gov/32799870/) | 2020 | ✅ | primary | unmatched | Retraction Note: HGF and TGFβ1 differently influenced Wwox regulatory function on Twist program for mesenchymal-epithelial transition in bone metastatic versus parental breast carcinoma cells |
 | [32509092](https://pubmed.ncbi.nlm.nih.gov/32509092/) | 2020 | ✅ | primary | unmatched | Aberrant expression of WWOX and its association with cancer stem cell biomarker expression |
 | [31966058](https://pubmed.ncbi.nlm.nih.gov/31966058/) | 2020 | ✅ | primary | unmatched | Expression and clinical significance of WWOX, Elf5, Snail1 and EMT related factors in epithelial ovarian cancer |
-| [31618474](https://pubmed.ncbi.nlm.nih.gov/31618474/) | 2019 | ✅ | primary | unmatched | The Genetic Landscape of Epilepsy of Infancy with Migrating Focal Seizures |
 | [31315632](https://pubmed.ncbi.nlm.nih.gov/31315632/) | 2019 | ✅ | primary | unmatched | A p53/TIAF1/WWOX triad exerts cancer suppression but may cause brain protein aggregation due to p53/WWOX functional antagonism |
 | [31155927](https://pubmed.ncbi.nlm.nih.gov/31155927/) | 2019 | ✅ | primary | unmatched | Downregulation of WW domain-containing oxidoreductase leads to tamoxifen-resistance by the inactivation of Hippo signaling |
 | [31008954](https://pubmed.ncbi.nlm.nih.gov/31008954/) | 2019 | ✅ | primary | unmatched | The clinicopathological significance of ubiquitin-conjugating enzyme E2C, leucine-rich repeated-containing G protein-coupled receptor, WW domain-containing oxidoreductase, and vasculogenic mimicry in invasive breast carcinoma |
@@ -495,7 +492,10 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [42082822](https://pubmed.ncbi.nlm.nih.gov/42082822/) | 2026 | ✅ | primary | unmatched | The Role of WWOX Gene Variant in Hypospadias and 46,XY Disorders of Sexual Development |
 | [41984841](https://pubmed.ncbi.nlm.nih.gov/41984841/) | 2026 | ✅ | primary | unmatched | WWOX maintains epidermal identity and suppresses EMT to prevent aggressive cutaneous squamous cell carcinoma |
 | [39952983](https://pubmed.ncbi.nlm.nih.gov/39952983/) | 2025 | ✅ | primary | unmatched | Genome-wide identification and functional validation of the WW domain containing oxidoreductase gene associated with sleep duration |
+| [37095367](https://pubmed.ncbi.nlm.nih.gov/37095367/) | 2023 | ✅ | primary | unmatched | Whole-Genome Sequencing Among Kazakhstani Children with Early-Onset Epilepsy Revealed New Gene Variants and Phenotypic Variability |
 | [35573960](https://pubmed.ncbi.nlm.nih.gov/35573960/) | 2022 | ✅ | primary | unmatched | A Phenotypic-Driven Approach for the Diagnosis of WOREE Syndrome |
+| [33058734](https://pubmed.ncbi.nlm.nih.gov/33058734/) | 2021 | ✅ | primary | unmatched | Cigarette Smoke and Nicotine-Containing Electronic-Cigarette Vapor Downregulate Lung WWOX Expression, Which Is Associated with Increased Severity of Murine Acute Respiratory Distress Syndrome |
+| [31618474](https://pubmed.ncbi.nlm.nih.gov/31618474/) | 2019 | ✅ | primary | unmatched | The Genetic Landscape of Epilepsy of Infancy with Migrating Focal Seizures |
 | [17360458](https://pubmed.ncbi.nlm.nih.gov/17360458/) | 2007 | ✅ | primary | unmatched | Targeted deletion of Wwox reveals a tumor suppressor function |
 | [40263068](https://pubmed.ncbi.nlm.nih.gov/40263068/) | 2025 | — | primary | unmatched | Corrigendum to "WWOX attenuates the progression of gallbladder cancer by suppressing cellular glycolysis through the modulation of the P73/HIF-1a signaling pathway" [Tissue Cell 95 (2025) 102885] |
 | [39933386](https://pubmed.ncbi.nlm.nih.gov/39933386/) | 2025 | — | primary | unmatched | Infantile Epileptic Spasms Syndrome: Unveiling clinical and genetic variability in a case series from Argentina |

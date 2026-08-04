@@ -1,0 +1,182 @@
+{
+  "pmid": "40875931",
+  "doi": "10.1212/WNL.0000000000213883",
+  "receipt": "FTR-20260804-40875931-02",
+  "landing": [
+    "FTR-20260804-40875931-02",
+    "PAPER 014",
+    "CLAIM 013",
+    "CLAIM 033",
+    "full_text_queue_current#FT-033",
+    "full_text_queue_current#FT-034"
+  ],
+  "skills_considered": [
+    {"skill": "legend-study-intake-triage", "used": true},
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline in the main session. The source is an operator-supplied PDF held only in the conversation, not on disk, so a read-only sub-agent with Read/Grep/Glob could not open it — delegating would have produced an analysis of the registry's summary of the paper instead of of the paper."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "The operator supplied the full text directly. Neurology is not open access and the article carries an all-rights-reserved notice, so no retrieval or local storage was attempted."
+    },
+    {
+      "skill": "legend-batch-inferential-sweep",
+      "used": false,
+      "reason": "One paper, not a batch."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "One discovery-grade lead was surfaced and is recorded as a locator rather than promoted: the paper's own proposal that anti-inflammatory treatment may be relevant to WWOX-null respiratory complications, resting on three lung references (45-47). Promoting it needs those three read, and they are not; two of the three are unknown to LEGEND and are queued as FT-034."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "The repurposing seed above is one sentence in a Discussion resting on unread primary sources. Forging a hypothesis on it now would build on a premise tagged DEFAULT_FROM_TEXTBOOK in all but name."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Two commit candidates recorded, not applied. The four canonical current files change only under an operator-authorized BATCH_COMMIT."
+    }
+  ],
+  "group_assessment": {
+    "waived": "The two publication counts cannot be measured: the PubMed connector is unauthorized in this session, and an estimate written into an integer slot is indistinguishable from a measurement. What the paper establishes is recorded here so the waiver loses nothing. research_type is descriptive_clinical, and unusually so: the data are parent/caregiver survey responses to 18 binary symptom questions via REDCap, not clinical examination — the authors say so and attribute their lower rates of drug resistance, MRI abnormality, hypertonia, microcephaly and dysmorphism to exactly that. Genetic classification is in-silico (Franklin/Genoox, REVEL, SpliceAI, SpliceVault, VariantValidator) with manual ACMG curation; no functional assay was performed on any variant. is_primary_group_for_disease: this is the closest thing the disease has — Gold sits on the Australian WWOX Foundation scientific advisory board, the cohort IS the Foundation's international registry, and Oliver and Scheffer carry over from PAPER 018. Weighting: the genotype table is the paper's durable contribution and is strong (50 individuals, 45 families, 25 novel SNVs, coordinates submitted to ClinVar). The phenotype-frequency estimates are the weakest layer and the authors flag the survival bias themselves. The Discussion is weaker than the Results and in one place contradicts the paper's own table — see the locators. NOTE: the waiver is per-section but the impediment is per-field; declining two unmeasurable integers also discards three fields determined from the Methods."
+  },
+  "field_density": {
+    "waived": "Requires a live PubMed query; the connector is unauthorized in this session. Not the gating question either: the paper is already PAPER 014 and this run replaces a legacy_reconstruction that carried unknown_legacy on every section."
+  },
+  "multihop": {
+    "references_enumerated": 47,
+    "gene_direct_refs_in_source": [
+      "10.1093/brain/awm078", "10.7759/cureus.46216", "10.1007/s12035-023-03346-3",
+      "10.1002/ana.25619", "10.21203/rs.3.rs-1682290/v1", "10.1684/epd.2017.0924",
+      "10.1165/rcmb.2020-0145OC"
+    ],
+    "resolved": [],
+    "queued": [
+      "10.1093/brain/awm078", "10.7759/cureus.46216", "10.1007/s12035-023-03346-3",
+      "10.1002/ana.25619", "10.21203/rs.3.rs-1682290/v1", "10.1684/epd.2017.0924",
+      "10.1165/rcmb.2020-0145OC"
+    ],
+    "note": "47 references, 40 WWOX-direct, 28 already in the corpus. Twelve appeared absent on a DOI-keyed check; five of those twelve were queued earlier today from the reference lists of PMID 39507621 and 36779245 and were recorded by PMID, so the DOI key missed them. Re-run with both keys: 7 genuinely unknown, listed above. Recording the correction because a reference-list audit keyed on one identifier over-reports its own findings, and the over-report is in the direction that flatters the audit."
+  },
+  "corpus_crossquery": {
+    "query": "Which of this paper's 40 WWOX-direct references are already in paper_registry_current.md, literature_tracking_log_current.md, full_text_queue_current.md, research_candidates_current.md or batch_queue.md — matching on DOI and, for entries recorded by PMID, on PMID?",
+    "hits": 33,
+    "note": "33 of 40 known (28 pre-existing plus 5 queued earlier today), 7 unknown. Queued as FT-033 (Gribaa 2007, the original SCAR12 linkage) and FT-034 (the remaining six, including the two lung/ARDS references that carry the paper's anti-inflammatory suggestion)."
+  },
+  "retraction_check": {
+    "result": "No retraction, correction or expression of concern. Publication history printed in the article: received 17 January 2025, accepted 12 May 2025, submitted and externally peer reviewed, handling editor Courtney Wusthoff. Checked against the operator-supplied PDF only; not re-verified against a live PubMed query, because the connector is unauthorized in this session.",
+    "checked": true
+  },
+  "verbatim_locators": {
+    "waived": false,
+    "entries": [
+      {
+        "proposition": "The Discussion states that higher mortality is significantly associated with null/null — a claim this paper's own Table 2 does not support.",
+        "snippet": "Partial retention of WWOX function in those individuals with missense variants may explain why the more severe phenotypes such as seizures, hypertonia, respiratory complications, and higher mortality are significantly associated with null/null genotypes.",
+        "anchor": "Discussion, page e213883(11), paragraph beginning 'Of interest, in our study, 4 individuals did not report seizures'"
+      },
+      {
+        "proposition": "Table 2 shows premature death is NOT significant and that the cohort's only death was in the null/missense group, with zero deaths among null/null.",
+        "snippet": "Premature death 0 (0.0) 1 (7.7) 0 (0.0) 2 2.44 0.432",
+        "anchor": "Table 2, 'Premature death' row — columns N/N (n = 25), N/M (n = 13), M/M (n = 6), df, chi-square, Fisher exact p"
+      },
+      {
+        "proposition": "The single premature death in the cohort carries Q230P in trans with a nonsense allele, and is therefore coded null/missense by the syntactic scheme.",
+        "snippet": "Notably, case ID 11 with WWOX variants (p.(Gln72*); p.(Gln230Pro)) was the only individual who died prematurely, although the cause of death was unknown.",
+        "anchor": "Discussion, page e213883(11), variant-frequency paragraph"
+      },
+      {
+        "proposition": "Q230P is present twice in the cohort — once compound heterozygous with a nonsense allele (case 11) and once homozygous (case 23) — and the paper questions its designation as a mutational hotspot.",
+        "snippet": "By contrast, p.(Gln230Pro), which has been previously reported as a \"mutational hotspot\" in WWOX, was only present in 2 individuals in our cohort (case ID 11 and ID 23).",
+        "anchor": "Discussion, page e213883(11), variant-frequency paragraph"
+      },
+      {
+        "proposition": "Case 23 is homozygous for Q230P, i.e. a missense/missense genotype at the allele CLAIM 033 records as abolishing the protein.",
+        "snippet": "23 g.78424953A>C c.689A>C p.(Gln230Pro) Missense Homozygous Novel",
+        "anchor": "Table 1, WWOX-DEE Cohort Genotypes, case ID 23"
+      },
+      {
+        "proposition": "Only three of eighteen phenotypes differ significantly by genotype class; global disability measures do not differ at all.",
+        "snippet": "Individuals with the N/N variant genotype were more likely to have parent-reported hypertonia (p = 0.003), seizures (p = 0.016), and respiratory complications (p = 0.02) than individuals with the N/M or M/M variant genotype. The differences in proportions of each variant genotype in all other phenotypic features were not significantly significant.",
+        "anchor": "Results, Genotype-Phenotype Correlations, page e213883(9)"
+      },
+      {
+        "proposition": "The measures of global severity are flat across genotype classes at p = 1 — the same dissociation Oliver 2023 reported by a different method.",
+        "snippet": "Unable to walk 22 (88.0) 11 (84.6) 5 (83.3) 2 0.14 1",
+        "anchor": "Table 2, 'Unable to walk' row; 'Unable to talk' and 'Unable to sit' and 'Developmental delay' carry p = 1 in the same table"
+      },
+      {
+        "proposition": "No hotspot region exists in this cohort or in the aggregated literature, but exon 6 dominates the copy-number events.",
+        "snippet": "No identifiable hotspot regions were observed for both our cohort and previously reported variants (Figure 1C); however, most of the exon-spanning variants included exon 6, either deleted or duplicated (17/35)",
+        "anchor": "Results, WWOX Variant Spectrum, page e213883(6)"
+      },
+      {
+        "proposition": "Genotype class assignment was in-silico throughout; no functional assay was performed on any variant in this cohort.",
+        "snippet": "Deletions and duplications were curated as null by determining whether these events would result in frameshifts and/or loss/disruption of significant portions of functional domains.",
+        "anchor": "Methods, Variant Classification, page e213883(6)"
+      },
+      {
+        "proposition": "Six of fifty cases could not be assigned a genotype class at all, so the correlation analysis runs on 44.",
+        "snippet": "Forty-four of the 50 cases were included in the genotype-phenotype correlation analysis. Six cases were excluded where we could not confidently predict the effect of the variant as null.",
+        "anchor": "Methods, Genotype-Phenotype Correlations, page e213883(6)"
+      },
+      {
+        "proposition": "Four individuals had no seizures, all carrying an allele of mild or uncertain effect, and the authors raise SCAR12 as an alternative reading for them.",
+        "snippet": "Notably, all 4 of these individuals experienced some level of mobility issues, all exhibiting hypotonia. This may suggest ataxia and, therefore, may indicate the SCAR12 phenotype; however, an in-depth diagnosis is required to delineate this.",
+        "anchor": "Results, Genotype-Phenotype Correlations, page e213883(9)"
+      },
+      {
+        "proposition": "Seizures were reported in 45 of 50, which implies five seizure-free individuals — one more than the Discussion enumerates.",
+        "snippet": "The next most reported features were seizures (45/50; 90%), the inability to walk (nonambulant) (42/50; 88%) and talk (nonverbal) (42/50; 88%)",
+        "anchor": "Results, Phenotypic Features, page e213883(8) — read against 'Four individuals did not have seizures (case IDs 12, 13, 14, and 18)' on page e213883(9)"
+      },
+      {
+        "proposition": "The registry is explicitly biased toward living and possibly milder individuals, which is the authors' own explanation for their divergence from prior cohorts.",
+        "snippet": "the patient registry may be biased toward capturing data from living individuals, possibly with milder phenotypes or better clinical management, or it may relate to the time when parents were willing to actively participate in joining a disease-based registry.",
+        "anchor": "Discussion, page e213883(11), opening paragraph"
+      },
+      {
+        "proposition": "Drug resistance was reported at half the previously published rate, which the authors attribute to parent rather than expert ascertainment.",
+        "snippet": "However, only 50% of cases were reported to be resistant to antiseizure medication, compared with 97% of previously reported cases.",
+        "anchor": "Discussion, page e213883(10)"
+      },
+      {
+        "proposition": "The authors read their own genotype-phenotype gradient as an argument that partial functional restoration should be therapeutically sufficient.",
+        "snippet": "These genotype-phenotype correlations indicate that therapies that could even partially restore WWOX function may be beneficial.",
+        "anchor": "Discussion, page e213883(11)"
+      },
+      {
+        "proposition": "A repurposing seed: the authors propose anti-inflammatory treatment for WWOX-null respiratory complications, on the basis of WWOX's role in lung endothelial barrier function.",
+        "snippet": "understanding the risk factors associated with respiratory complications in these individuals may guide clinical management where anti-inflammatory medications may be useful in the prevention and treatment of WWOX-null-associated respiratory complications.",
+        "anchor": "Discussion, page e213883(11), respiratory paragraph — resting on references 45 (Singla 2017, lung WWOX knockdown and neutrophilic inflammation), 46 (Zeng 2021, smoke-induced lung WWOX downregulation and ARDS severity) and 47 (Tanimura 2021, endothelial WWOX)"
+      },
+      {
+        "proposition": "The cohort raises the global reported count of WWOX-DEE individuals from 99 to 143 and adds 45 novel biallelic genotypes.",
+        "snippet": "Our study increases the global reported incidence of individuals with WWOX-DEE from 99 to 143 individuals and includes 45 novel biallelic genotypes to the 60 previously reported in the literature",
+        "anchor": "Discussion, page e213883(10), opening paragraph"
+      },
+      {
+        "proposition": "Sibling pairs were phenotypically concordant except one discordant for drug resistance, bounding intrafamilial variability.",
+        "snippet": "Five sibling pairs were included in our cohort, all having similar phenotypes, except for the individual with ID 26 who had drug-resistant seizures while their older sibling (ID 25) did not.",
+        "anchor": "Results, Genotype-Phenotype Correlations, page e213883(9)"
+      },
+      {
+        "proposition": "Domain boundaries used by this paper, which place Q230P inside the SDR catalytic domain and away from both WW domains.",
+        "snippet": "WWOX protein domains WW1 (aa 17-49), WW2 (aa 58-90), short-chain dehydrogenase/reductase aka SDR (aa 121-330), and D3 (aa 331-414) are orientated with exons 1-9 shown below.",
+        "anchor": "Figure 1 caption, panel C, page e213883(7)"
+      },
+      {
+        "proposition": "The cohort's genotype-class proportions, which set the denominators for every association in Table 2 and show how small the missense/missense group is.",
+        "snippet": "Over half (n = 25, 56.8%) displayed the N/N variant genotype, 13 (29.5%) the N/M variant genotype, and only 6 (13.6%) the M/M variant genotype",
+        "anchor": "Results, WWOX Variant Spectrum, page e213883(6)"
+      }
+    ],
+    "note": "Twenty locators, captured during the reading. Two are anchored to Table 1 and Table 2 cells and one to a figure caption; the rest to body text. The pair that matters most is entries 1 and 2, which are the paper's Discussion and the paper's own table saying opposite things about mortality."
+  }
+}
