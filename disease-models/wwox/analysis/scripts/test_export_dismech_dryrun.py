@@ -122,15 +122,42 @@ class OutputDiscipline(unittest.TestCase):
         ledger_a = [l for l in losses if l["kind"] == "ledger_a"]
         self.assertEqual(built["report"]["eligible"] + len(ledger_a), total)
 
-    def test_every_exported_evidence_carries_both_receipts(self) -> None:
+    def test_every_exported_evidence_carries_a_snippet(self) -> None:
         built, _ = exporter.build(exporter.load(exporter.SIDECAR))
         for entry in built["entries"].values():
             for node in entry["pathophysiology"]:
                 for item in node["evidence"]:
-                    provenance = item["_provenance"]
-                    self.assertTrue(provenance["eligibility_receipt"])
-                    self.assertTrue(provenance["locator_extraction_receipt"])
                     self.assertTrue(item["snippet"])
+
+    def test_provenance_travels_beside_the_entry_not_inside_it(self) -> None:
+        """The schema has no provenance slot; inventing one produces YAML a reader ignores.
+
+        Losing the receipt lineage to satisfy the schema would discard the one thing this
+        pipeline carries, so it moves to a companion file rather than disappearing.
+        """
+        built, _ = exporter.build(exporter.load(exporter.SIDECAR))
+        for entry in built["entries"].values():
+            for node in entry["pathophysiology"]:
+                for key in node:
+                    self.assertFalse(key.startswith("_"),
+                                     f"non-schema key {key!r} left inside the entry")
+                for item in node["evidence"]:
+                    for key in item:
+                        self.assertFalse(key.startswith("_"))
+        self.assertTrue(built["provenance"])
+        for row in built["provenance"]:
+            self.assertTrue(row["eligibility_receipt"])
+            self.assertTrue(row["locator_extraction_receipt"])
+            self.assertTrue(row["occurrence_id"])
+
+    def test_confidence_criteria_are_recorded_beside_the_entry(self) -> None:
+        """Rule E1's justification must survive even though the schema cannot hold it."""
+        built, _ = exporter.build(exporter.load(exporter.SIDECAR))
+        self.assertTrue(built["confidence"])
+        for row in built["confidence"]:
+            self.assertIn("criteria", row)
+            self.assertIn(row["mechanism_confidence"],
+                          {"ESTABLISHED", "PROVISIONAL", "HYPOTHETICAL"})
 
     def test_output_is_deterministic(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -164,7 +191,7 @@ class HonestEmptiness(unittest.TestCase):
 
     def test_unassigned_assertions_are_reported_not_dropped(self) -> None:
         original = exporter.CLAIM_TARGETS
-        exporter.CLAIM_TARGETS = {k: [] for k in original}
+        exporter.CLAIM_TARGETS = dict.fromkeys(original, [])
         try:
             built, _ = exporter.build(exporter.load(exporter.SIDECAR))
         finally:

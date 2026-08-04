@@ -85,6 +85,40 @@ is read to receipt. **The shared module has a rationale and still lacks its evid
 Every exported evidence item carries **both** receipt IDs, the verbatim snippet, the source
 anchor, and the link basis in both directions.
 
+## Phase 4, offline: validated against the pinned schema
+
+The field mapping was written by reading `dismech.yaml`, and reading is not checking.
+[`validate_dismech_yaml.py`](./scripts/validate_dismech_yaml.py) compares the emitted entries
+against what the schema declares — slot names per class, permissible enum values, required
+slots — with the pin verified by recomputing the git blob id rather than trusting a label.
+
+**First run: 130 problems, all of one shape.** Every schema-legal part passed — `Disease`
+slots, `Pathophysiology` slots, `EvidenceItem` slots, and all three enums
+(`mechanism_confidence`, `supports`, `evidence_source`). What failed were four keys of my own
+invention: `_provenance`, `_confidence_criteria`, `_evidence_assertion_id`,
+`_originating_claim_ids`.
+
+That is the failure mode worth catching. A key the schema does not declare is not rejected by
+a permissive reader — it is **silently ignored**. The entries would have looked complete and
+arrived carrying nothing of the receipt lineage.
+
+**The fix is not to drop the provenance.** Losing it to satisfy the schema would discard the
+one thing this pipeline exists to carry. It moves to companion files beside the entry:
+
+| File | Holds |
+|---|---|
+| `MONDO_*.yaml` | schema-clean entries; `notes` names the LEGEND assertion id and its claims |
+| `provenance.json` | 17 records: occurrence, claim, PMID, **both** receipt IDs, source anchor, link basis |
+| `confidence_criteria.json` | 16 records: the six-criterion justification behind each `mechanism_confidence` |
+| `loss_report.json` | the two ledgers and the routing justification |
+
+**Second run: 0 schema problems**, on both entries. A regression asserts that no key
+beginning with `_` survives inside an entry and that the provenance is non-empty — so the
+next person cannot quietly trade one for the other.
+
+What this still does not do is what `just qc` does upstream: resolve ontology terms and match
+snippets against cached references. Both need the DisMech repository and the network.
+
 ## What is not established
 
 - **That these two nodes should be submitted.** They are one proposition — the WWOX 388–407

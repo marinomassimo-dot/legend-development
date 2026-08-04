@@ -137,7 +137,9 @@ def build(records: list[dict]) -> tuple[dict, list[dict]]:
     entries = {mondo: {"name": name, "disease_term": {"id": mondo, "label": name},
                        "pathophysiology": []} for mondo, name in TARGETS.items()}
     attachments = 0
-    unassigned = []
+    unassigned: list[dict] = []
+    provenance: list[dict] = []
+    confidence_records: list[dict] = []
 
     for assertion_id, members in sorted(groups.items()):
         first = members[0]
@@ -160,33 +162,48 @@ def build(records: list[dict]) -> tuple[dict, list[dict]]:
                 "evidence_source": evidence_source_for(m.get("context") or ""),
                 "snippet": locator["snippet"],
                 "explanation": m["context"],
-                "_provenance": {
-                    "occurrence_id": m["occurrence_id"],
-                    "originating_claim_id": m["claim_id"],
-                    "eligibility_receipt": m["eligibility_receipt_event"],
-                    "locator_extraction_receipt": m["locator_extraction_receipt_event"],
-                    "source_anchor": locator.get("anchor"),
-                    "raw_link_role_paper_to_claim": m.get("raw_link_role_paper_to_claim"),
-                    "claim_link_basis": m.get("claim_link_basis"),
-                },
+            })
+            # Provenance is not a DisMech slot, and inventing one would produce YAML a
+            # permissive reader silently ignores. It travels in a companion file instead,
+            # keyed by occurrence, so the entry stays schema-clean and the receipt lineage
+            # stays auditable. Losing it to satisfy a schema would discard the one thing
+            # this pipeline exists to carry.
+            provenance.append({
+                "evidence_assertion_id": assertion_id,
+                "occurrence_id": m["occurrence_id"],
+                "originating_claim_id": m["claim_id"],
+                "pmid": m["pmid"],
+                "eligibility_receipt": m["eligibility_receipt_event"],
+                "locator_extraction_receipt": m["locator_extraction_receipt_event"],
+                "source_anchor": locator.get("anchor"),
+                "raw_link_role_paper_to_claim": m.get("raw_link_role_paper_to_claim"),
+                "claim_link_basis": m.get("claim_link_basis"),
+                "epistemic_type": m["epistemic_type"],
+                "evidence_relation": relation,
             })
 
+        claims = sorted({m["claim_id"] for m in members})
         node = {
             "name": first["proposition"],
             "description": first["proposition"],
             "mechanism_confidence": confidence,        # Rule E2: never omitted
+            # `notes` is a real slot, so the reviewer sees where this came from without
+            # the entry carrying invented keys.
+            "notes": (f"LEGEND {assertion_id}; from CLAIM {', '.join(claims)}. "
+                      f"Provenance and receipt lineage in provenance.json."),
             "evidence": evidence,
-            "_confidence_criteria": criteria,
-            "_evidence_assertion_id": assertion_id,
-            "_originating_claim_ids": sorted({m["claim_id"] for m in members}),
         }
+        confidence_records.append({"evidence_assertion_id": assertion_id,
+                                   "mechanism_confidence": confidence,
+                                   "criteria": criteria,
+                                   "originating_claim_ids": claims})
         # Rule C2: no modifier is emitted at all — no occurrence records a signed direction.
         # Rule M1: no conforms_to — every candidate module is UNASSESSED.
 
         if not targets:
             unassigned.append({"evidence_assertion_id": assertion_id,
                                "proposition": first["proposition"],
-                               "originating_claim_ids": node["_originating_claim_ids"]})
+                               "originating_claim_ids": claims})
             continue
         for mondo in targets:
             entries[mondo]["pathophysiology"].append(node)
@@ -205,6 +222,8 @@ def build(records: list[dict]) -> tuple[dict, list[dict]]:
         "ledger_b_losses": Counter(l["state"] for l in losses if l["kind"] == "ledger_b"),
         "losses": losses,
         "entries_emitted": {m: len(e["pathophysiology"]) for m, e in entries.items()},
+        "provenance_records": len(provenance),
+        "confidence_records": len(confidence_records),
     }
 
     # §5.4, identity one: every occurrence lands somewhere, exported or classified.
@@ -216,7 +235,8 @@ def build(records: list[dict]) -> tuple[dict, list[dict]]:
                            if any(CLAIM_TARGETS.get(x["claim_id"]) for x in m))
     if attachments and exported_members == 0:
         raise SystemExit("REFUSED: attachments emitted with no exported member")
-    return {"entries": entries, "report": report}, losses
+    return ({"entries": entries, "report": report, "provenance": provenance,
+             "confidence": confidence_records}, losses)
 
 
 def yaml_dump(value, indent: int = 0) -> str:
@@ -286,6 +306,12 @@ def main() -> int:
     report = built["report"]
     report["ledger_a_losses"] = dict(report["ledger_a_losses"])
     report["ledger_b_losses"] = dict(report["ledger_b_losses"])
+    (arguments.out_dir / "provenance.json").write_text(
+        json.dumps(built["provenance"], indent=2, sort_keys=True, ensure_ascii=False) + "\n",
+        encoding="utf-8")
+    (arguments.out_dir / "confidence_criteria.json").write_text(
+        json.dumps(built["confidence"], indent=2, sort_keys=True, ensure_ascii=False) + "\n",
+        encoding="utf-8")
     (arguments.out_dir / "loss_report.json").write_text(
         json.dumps(report, indent=2, sort_keys=True, ensure_ascii=False) + "\n", encoding="utf-8")
 
