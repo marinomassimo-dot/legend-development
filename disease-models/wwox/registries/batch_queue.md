@@ -8,15 +8,15 @@
 
 ## ▶ Start here
 
-**277 records have not been processed.** **240** of them have a free full text and can be worked immediately.
+**275 records have not been processed.** **238** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
-| 🟢 **`NEW`** | 47 | never seen by the system — **the front of the queue** |
+| 🟢 **`NEW`** | 45 | never seen by the system — **the front of the queue** |
 | 🟢 **`CORPUS_CATALOGUED`** | 230 | catalogued and deduplicated, never analytically processed |
 | 🟡 `OUT_OF_SCOPE_LIKELY` | 142 | no scope signal in the title — later in the queue, **never discarded** |
 | 🟡 `AMBIGUOUS` | 6 | identifiers must be resolved before ingest |
-| ⏳ `IN_PIPELINE` | 6 | already in flight |
+| ⏳ `IN_PIPELINE` | 8 | already in flight |
 | ✅ `KNOWN_INTEGRATED` | 28 | done — read depth in the table below |
 
 The two green rows are the answer to *"where do I start?"*. The table further down lists
@@ -59,8 +59,8 @@ not redistribute or license the article text.
 | **Catalogued, never processed** — the reading debt | 100 | 22% |
 | Known to the tracking log only | 125 | 27% |
 | Processed from the abstract | 9 | 2% |
-| Partial full text read | 1 | 0% |
-| Full text read | 21 | 5% |
+| Partial full text read | 0 | 0% |
+| Full text read | 22 | 5% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
 `fulltext_read_receipts.jsonl`. Historical registry-only full-text declarations remain
@@ -82,7 +82,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [37781246](https://pubmed.ncbi.nlm.nih.gov/37781246/) | 2023 | ✅ | primary | unmatched | Molecular landscapes of glioblastoma cell lines revealed a group of patients that do not benefit from WWOX tumor suppressor expression |
 | [37095367](https://pubmed.ncbi.nlm.nih.gov/37095367/) | 2023 | ✅ | primary | unmatched | Whole-Genome Sequencing Among Kazakhstani Children with Early-Onset Epilepsy Revealed New Gene Variants and Phenotypic Variability |
 | [35715422](https://pubmed.ncbi.nlm.nih.gov/35715422/) | 2022 | ✅ | primary | unmatched | Analysis of clinical phenotypic and genotypic spectra in 36 children patients with Epilepsy of Infancy with Migrating Focal Seizures |
-| [35573960](https://pubmed.ncbi.nlm.nih.gov/35573960/) | 2022 | ✅ | primary | unmatched | A Phenotypic-Driven Approach for the Diagnosis of WOREE Syndrome |
 | [34948746](https://pubmed.ncbi.nlm.nih.gov/34948746/) | 2021 | ✅ | primary | unmatched | Effect of WW Domain-Containing Oxidoreductase Gene Polymorphism on Clinicopathological Characteristics of Patients with EGFR Mutant Lung Adenocarcinoma in Taiwan |
 | [34204789](https://pubmed.ncbi.nlm.nih.gov/34204789/) | 2021 | ✅ | primary | unmatched | PLEK2, RRM2, GCSH: A Novel WWOX-Dependent Biomarker Triad of Glioblastoma at the Crossroads of Cytoskeleton Reorganization and Metabolism Alterations |
 | [33520443](https://pubmed.ncbi.nlm.nih.gov/33520443/) | 2021 | ✅ | primary | unmatched | Identification of a novel association for the WWOX/HIF1A axis with gestational diabetes mellitus (GDM) |
@@ -116,7 +115,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [18460020](https://pubmed.ncbi.nlm.nih.gov/18460020/) | 2008 | ✅ | primary | unmatched | Role of the WWOX gene, encompassing fragile region FRA16D, in suppression of pancreatic carcinoma cells |
 | [18452537](https://pubmed.ncbi.nlm.nih.gov/18452537/) | 2008 | ✅ | primary | unmatched | Low levels of WWOX protein immunoexpression correlate with tumour grade and a less favourable outcome in patients with urinary bladder tumours |
 | [17823927](https://pubmed.ncbi.nlm.nih.gov/17823927/) | 2007 | ✅ | primary | unmatched | WWOX hypomorphic mice display a higher incidence of B-cell lymphomas and develop testicular atrophy |
-| [17360458](https://pubmed.ncbi.nlm.nih.gov/17360458/) | 2007 | ✅ | primary | unmatched | Targeted deletion of Wwox reveals a tumor suppressor function |
 | [15070730](https://pubmed.ncbi.nlm.nih.gov/15070730/) | 2004 | ✅ | primary | unmatched | Functional association between Wwox tumor suppressor protein and p73, a p53 homolog |
 | [35363364](https://pubmed.ncbi.nlm.nih.gov/35363364/) | 2022 | — | review | unmatched | Identification of epilepsy concomitant candidate genes recognized in Saudi epileptic patients |
 | [29852413](https://pubmed.ncbi.nlm.nih.gov/29852413/) | 2018 | — | primary | unmatched | Diagnostic yield of targeted massively parallel sequencing in children with epileptic encephalopathy |
@@ -497,6 +495,8 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [42082822](https://pubmed.ncbi.nlm.nih.gov/42082822/) | 2026 | ✅ | primary | unmatched | The Role of WWOX Gene Variant in Hypospadias and 46,XY Disorders of Sexual Development |
 | [41984841](https://pubmed.ncbi.nlm.nih.gov/41984841/) | 2026 | ✅ | primary | unmatched | WWOX maintains epidermal identity and suppresses EMT to prevent aggressive cutaneous squamous cell carcinoma |
 | [39952983](https://pubmed.ncbi.nlm.nih.gov/39952983/) | 2025 | ✅ | primary | unmatched | Genome-wide identification and functional validation of the WW domain containing oxidoreductase gene associated with sleep duration |
+| [35573960](https://pubmed.ncbi.nlm.nih.gov/35573960/) | 2022 | ✅ | primary | unmatched | A Phenotypic-Driven Approach for the Diagnosis of WOREE Syndrome |
+| [17360458](https://pubmed.ncbi.nlm.nih.gov/17360458/) | 2007 | ✅ | primary | unmatched | Targeted deletion of Wwox reveals a tumor suppressor function |
 | [40263068](https://pubmed.ncbi.nlm.nih.gov/40263068/) | 2025 | — | primary | unmatched | Corrigendum to "WWOX attenuates the progression of gallbladder cancer by suppressing cellular glycolysis through the modulation of the P73/HIF-1a signaling pathway" [Tissue Cell 95 (2025) 102885] |
 | [39933386](https://pubmed.ncbi.nlm.nih.gov/39933386/) | 2025 | — | primary | unmatched | Infantile Epileptic Spasms Syndrome: Unveiling clinical and genetic variability in a case series from Argentina |
 | [15126504](https://pubmed.ncbi.nlm.nih.gov/15126504/) | 2004 | — | primary | unmatched | Down-regulation of WW domain-containing oxidoreductase induces Tau phosphorylation in vitro. A potential role in Alzheimer's disease |
@@ -535,12 +535,12 @@ for an entirely unprocessed record.
 | [25331887](https://pubmed.ncbi.nlm.nih.gov/25331887/) | 2014 | ✅ | abstract only | PAPER 027 | WWOX, the common fragile site FRA16D gene product, regulates ATM activation and the DNA damage response |
 | [25012504](https://pubmed.ncbi.nlm.nih.gov/25012504/) | 2014 | ✅ | abstract only | PAPER 024 | Tumor suppressor WWOX regulates glucose metabolism via HIF1α modulation |
 | [33914858](https://pubmed.ncbi.nlm.nih.gov/33914858/) | 2021 | — | abstract only | PAPER 004 | Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects |
-| [36779245](https://pubmed.ncbi.nlm.nih.gov/36779245/) | 2023 | ✅ | partial full text | receipt FTR-20260804-36779245-01 | WWOX developmental and epileptic encephalopathy: Understanding the epileptology and the mortality risk |
 | [42193054](https://pubmed.ncbi.nlm.nih.gov/42193054/) | 2026 | ✅ | full text | PAPER 012 | WWOX-Related Epileptic Encephalopathy (WOREE Syndrome): Clinical Case Study and Literature Review |
 | [41562193](https://pubmed.ncbi.nlm.nih.gov/41562193/) | 2026 | ✅ | full text | PAPER 010 | Endogenous Processes Underlying Clock-Like Mutational Signatures |
 | [39507621](https://pubmed.ncbi.nlm.nih.gov/39507621/) | 2024 | ✅ | full text | PAPER 015 | Case report: Adult patient with WWOX developmental and epileptic encephalopathy: 40 years of observation |
 | [39420317](https://pubmed.ncbi.nlm.nih.gov/39420317/) | 2024 | ✅ | full text | PAPER 028 | Dissociation of the nuclear WWOX/TRAF2 switch renders UV/cold shock-mediated nuclear bubbling cell death at low temperatures |
 | [39101447](https://pubmed.ncbi.nlm.nih.gov/39101447/) | 2024 | ✅ | full text | PAPER 016 | Developmental epileptic encephalopathy caused by homozygosity of a c.172+1G>C variant in the WWOX gene |
+| [36779245](https://pubmed.ncbi.nlm.nih.gov/36779245/) | 2023 | ✅ | full text | receipt FTR-20260804-36779245-02 | WWOX developmental and epileptic encephalopathy: Understanding the epileptology and the mortality risk |
 | [35716775](https://pubmed.ncbi.nlm.nih.gov/35716775/) | 2022 | ✅ | full text | PAPER 055 | Structural insights into the role of the WW2 domain on tandem WW-PPxY motif interactions of oxidoreductase WWOX |
 | [34747138](https://pubmed.ncbi.nlm.nih.gov/34747138/) | 2021 | ✅ | full text | PAPER 005 | Neonatal neuronal WWOX gene therapy rescues Wwox null phenotypes |
 | [34634460](https://pubmed.ncbi.nlm.nih.gov/34634460/) | 2021 | ✅ | full text | PAPER 031 | Altered neocortical oscillations and cellular excitability in an in vitro Wwox knockout mouse model of epileptic encephalopathy |

@@ -179,18 +179,69 @@ self-reinforcing, and it stood for the rest of the session as a blocker requirin
 institutional subscription. It required no subscription. **Record what was tried, not what
 exists.**
 
-Oliver 2023 is now completable in one step. It is **not** complete: the figures are inspected,
-the verbatim locators are not captured, and this contract requires them. Recorded in
-[`full_text_queue_current#FT-029`](../research/full_text_queue_current.md) — renumbered there
-from a duplicate `FT-026`, an ID collision created earlier in this same session.
+---
+
+## 6. Oliver 2023 completed
+
+`FTR-20260804-36779245-02` · `complete_fulltext_read` · **20 verbatim locators** ·
+manifest [`PMID36779245.json`](../research/deepdive_manifests/PMID36779245.json).
+Coverage: text, Tables 1–3 and all four figures `read`; supplementary `unavailable`
+(HTTP 200 serving HTML, verified twice). Ledger at 41, chain and tail anchored.
+
+**A correction to what §5 implied.** The reading did *not* discover that Oliver refutes the
+intermediate phenotype. **CLAIM 033 already carried that sentence verbatim**, as the second of
+four mandatory reservations, together with the observation that the reference genotype's class
+(`null/missense`) is not resolved separately but aggregated with `missense/missense`. LEGEND
+knew. What did not exist was the **locator** — which is the entire point of the contract, and
+a smaller claim than the one I made. Stated plainly because the difference matters: the
+system's science was ahead of my summary of it.
+
+What the completed reading does add:
+
+**a. A registered paper asserts what the registry flags as unsupported.** Teplyshova 2024
+(PAPER 015) states that null/missense phenotypes *"fall in an intermediate range"*, attributing
+it to the literature, in the paragraph immediately after it cites Oliver 2023 for the mortality
+statistic. Oliver 2023 is the paper that found **no evidence** for that intermediate class.
+Both are now in the registry, both with complete receipts and locators, and they disagree.
+→ commit candidate: **CLAIM 033 status `in observation` → `conflicting evidence`**, with
+PAPER 015 named as the conflicting source.
+
+**b. CLAIM 017 conflates mildness with survival.** Its Summary ties *"survival into later
+childhood/adulthood"* to *"milder phenotypes such as SCAR12"*. Two independent sources now say
+otherwise: Oliver's **oldest living patient, 23 y 11 m — Patient 2, homozygous p.Gln230Pro,
+missense/missense — is a full DEE**, profoundly impaired and non-ambulant; Teplyshova's
+40-year-old is likewise homozygous missense with full DEE. Adult survival in this disease
+tracks **the presence of a missense allele**, not phenotypic mildness. → commit candidate:
+qualify CLAIM 017's Summary. **Not** a reversal — the WOREE↔SCAR12 spectrum stands.
+
+**c. A precision the working model should not lose.** `p = .65` on seizure onset (Fig. 4B) is a
+comparison **between genotype classes within WWOX-DEE**. It is *not* a statement about DEE
+versus SCAR12, where Oliver separately reports SCAR12 onset at 9–12 months against weeks for
+DEE. Reading it as the latter would manufacture a contradiction with CLAIM 017 that does not
+exist.
+
+**d. Patient 2 is a natural-history datum on the reference-genotype axis.** Homozygous Q230P,
+21 years of follow-up, EEG evolving to *"a diffuse low-voltage background without epileptiform
+abnormalities"*. Q230P is the allele CLAIM 033's first reservation names as missense that
+**abolishes the protein** — so the longest-followed survivor carries a missense allele with
+null-like protein consequence. That is the sharpest single case against reading the genotype
+classes as a functional gradient, and it is one patient, in one cohort.
+
+**e. Seven more unread gene-direct references**, 27% of the list of a paper already supporting
+three claims. Two of them were queued hours earlier from Teplyshova's list: **two independent
+papers cite them and LEGEND had seen neither.** Queued as FT-030/031/032.
+
+Three commit candidates recorded. **None applied** — the four canonical current files change
+only under an operator-authorized `BATCH_COMMIT`.
 
 ## Verification
 
 ```
 deepdive_manifest.py --pmid 39507621   → PASS (2 declared gaps)
-fulltext_receipts.py verify            → OK: 40 chained, tail anchored
+deepdive_manifest.py --pmid 36779245   → PASS (3 declared gaps)
+fulltext_receipts.py verify            → OK: 41 chained, tail anchored
 test_deepdive_manifest.py              → 12 tests, falsified both directions
-legend_lint.py .                       → resolved; ratchet lowered 21 → 20
+legend_lint.py .                       → PASS; ratchet lowered 21 → 20
 ```
 
 The four canonical current files were not modified.

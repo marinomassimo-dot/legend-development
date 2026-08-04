@@ -349,10 +349,16 @@ focale lateralizzante; **Fig. 2** mostra atrofia fronto-temporale e ippocampale,
 nervo ottico, anomalie della sostanza bianca e corpo calloso sottile.
 **Supplementary: confermati non disponibili.** `s001.docx` e `s002.xlsx` rispondono 200 ma
 servono HTML, non i documenti. `unavailable` non impedisce un receipt completo.
-**Next action:** la lettura è ora completabile in un passo — restano da catturare i
-`verbatim_locators` (il contratto del 2026-08-04) prima di poter emettere
-`complete_fulltext_read` e sbloccare l'export di CLAIM 017. È un secondo deep dive, non ancora
-fatto: le figure sono ispezionate, i locator no.
+**✅ CHIUSA il 2026-08-04.** Receipt `FTR-20260804-36779245-02`,
+`evidence_depth: complete_fulltext_read`, 20 `verbatim_locators`, manifest
+[`PMID36779245.json`](deepdive_manifests/PMID36779245.json). Copertura: testo, Tabelle 1–3 e
+tutte e 4 le figure `read`; supplementary `unavailable` (verificato: HTTP 200 che serve HTML).
+**Correzione editoriale del 24 marzo 2023** presa in conto — riguarda la colonna 9 di Tabella 1,
+cioè il Paziente 9: qualunque lettura di quella tabella deve usare i valori corretti.
+**Il risultato che cambia il modello:** il paper afferma esplicitamente che **non esiste
+evidenza di un fenotipo "intermedio"** — vedi le tre commit candidate su
+[[claim_registry_current#CLAIM 017]] e [[claim_registry_current#CLAIM 033]] in
+[`locator_contract_live_test.md`](../analysis/locator_contract_live_test.md).
 
 ---
 
@@ -381,4 +387,28 @@ in Oliver 2023 Fig. 4A mostra la sopravvivenza **migliore** delle tre. Ogni caso
 quella classe conta, perché è quella su cui le bande di confidenza sono più larghe e la
 lettura del gradiente è meno solida.
 **Come è emerso:** stessa enumerazione di FT-030. Mai visto da LEGEND.
+**Priorità alzata il 2026-08-04:** compare **anche** nella lista riferimenti di Oliver 2023
+([[paper_registry_current#PAPER 018]]). Due paper indipendenti lo citano e LEGEND non l'aveva
+mai visto — la doppia citazione non duplica la voce, ne alza la priorità. Lo stesso vale per
+FT-030.
 **Current status:** ⬜ non recuperato, non letto.
+
+---
+
+## FT-032
+**Papers:** i 5 riferimenti gene-diretti di [[paper_registry_current#PAPER 018]] (Oliver 2023)
+assenti da registry, coda e tracking log.
+**Priority:** **MEDIA-ALTA** — sui primi due, **ALTA**.
+
+| PMID | Anno | Sede | Titolo | Perché |
+|---|---|---|---|---|
+| 30094525 | 2018 | *Neurol Sci* | WWOX-associated encephalopathies: identification of the phenotypic spectrum and the resulting genotype-phenotype correlation | è **la** correlazione genotipo-fenotipo pre-Oliver: serve per sapere se il "range intermedio" che Teplyshova 2024 attribuisce alla letteratura nasce qui, e se Oliver lo stia contraddicendo o correggendo |
+| 35573960 | 2022 | *Front Pediatr* | A phenotypic-driven approach for the diagnosis of WOREE syndrome | approccio diagnostico fenotipo-guidato; tocca direttamente la questione se il fenotipo predica la classe genotipica — che Oliver Fig. 4B nega sull'asse dell'esordio |
+| 26345274 | 2015 | *Am J Med Genet A* | Severe CNS involvement in WWOX mutations: description of five new cases | cinque casi nella serie storica su cui poggia la statistica di mortalità |
+| 17360458 | 2007 | *PNAS* | Targeted deletion of Wwox reveals a tumor suppressor function | il knockout murino originale — fonte primaria per il modello animale |
+| 11719429 | 2001 | *Cancer Res* | WWOX, the FRA16D gene, behaves as a suppressor of tumor growth | il paper fondativo del gene. Parità delle fonti: è oncologia, ed è la biologia molecolare di WWOX alla sorgente |
+
+**Come sono emersi:** enumerando i 50 riferimenti di Oliver 2023 — 26 gene-diretti con PMID, 19
+già nel registry, **7 no**. Un tasso di mancanza del 27% sulla bibliografia di un paper già in
+registry come fonte di tre claim.
+**Current status:** ⬜ nessuno recuperato, nessuno letto.
