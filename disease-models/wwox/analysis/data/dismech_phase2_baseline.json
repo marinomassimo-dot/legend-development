@@ -1,6 +1,7 @@
 {
   "frozen_at": "2026-08-04T09:37:21Z",
-  "git_head_at_freeze": "8ab8e4b86393f536cba7f96146c7ae34f1877992",
+  "git_head_at_freeze": "91a92e5f590e95471806ffd3555d1fe754b1c4c2",
+  "git_verification_policy": "baseline bytes must match HEAD; every declared input and output must match git_head_at_freeze:path via git cat-file; freeze commit must be an ancestor of HEAD",
   "inputs": {
     "blind_derivation_contract": {
       "path": "disease-models/wwox/analysis/dismech_blind_derivation_contract.md",
@@ -21,6 +22,18 @@
     "derivation_script": {
       "path": "disease-models/wwox/analysis/scripts/derive_dismech_sidecar.py",
       "sha256": "be84e53577783c93974994a368c48d7742a51883f82c0bc3114768ce7304c328"
+    },
+    "independent_canonicalisation": {
+      "path": "disease-models/wwox/analysis/data/dismech_canonicalisation_v1.json",
+      "sha256": "79eabb8c5d4ee14d868aa984ea4bfabbb5d5d4ed473481f21b291ddd370c90c4"
+    },
+    "independent_protocol_script": {
+      "path": "disease-models/wwox/analysis/scripts/dismech_independent_protocol.py",
+      "sha256": "0ce0cce3faa14555511b77de57f48fff3336f3a3d553ca20883d49b92ade4846"
+    },
+    "independent_protocol_tests": {
+      "path": "disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py",
+      "sha256": "1e41fc9d8f5507d34099da9bf92c4e70b1f86f425d1e1113abaed9348a5c9887"
     },
     "paper_registry": {
       "path": "disease-models/wwox/registries/paper_registry_current.md",
