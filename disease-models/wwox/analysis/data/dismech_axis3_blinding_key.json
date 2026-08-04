@@ -1,0 +1,36 @@
+{
+  "do_not_open_before_reviewing": "This maps the blinded sides back to their authors. Reading it before completing dismech_axis3_review_sheet_blinded.md defeats the only purpose the blinding has.",
+  "schema": "dismech-axis3-blinding-key-v1",
+  "seed": 20260804,
+  "shuffle_scope": "per anchor, independently — recognising a side at one anchor reveals nothing about another",
+  "sides": {
+    "A": "reference derivation (dismech_sidecar_016_024_035.jsonl)",
+    "B": "independent derivation, realigned (dismech_second_derivation_realigned_016_024_035.jsonl)"
+  },
+  "normalisation_applied": [
+    "Unicode NFC",
+    "whitespace collapse",
+    "dash unification",
+    "GSK3beta / GSK-3beta / GSK-3β -> GSK3β",
+    "trailing full stop removed"
+  ],
+  "normalisation_withheld": "Nothing else. Word order, qualifiers, spelling variants and named experimental context are the object of the judgement and were left untouched.",
+  "residual_tells": [
+    "anchor 6 carries both 'stabilises' and 'stabilizes'",
+    "anchor 6 carries 'uM' on one side only",
+    "one side consistently names the experimental system and the mutant control (anchors 8, 10, 11)"
+  ],
+  "mapping": {
+    "1": {"α": "B", "β": "A"},
+    "2": {"α": "B", "β": "A"},
+    "3": {"α": "A", "β": "B"},
+    "4": {"α": "B", "β": "A"},
+    "5": {"α": "B", "β": "A"},
+    "6": {"α": "B", "β": "A"},
+    "7": {"α": "A", "β": "B"},
+    "8": {"α": "B", "β": "A"},
+    "9": {"α": "B", "β": "A"},
+    "10": {"α": "B", "β": "A"},
+    "11": {"α": "B", "β": "A"}
+  }
+}
