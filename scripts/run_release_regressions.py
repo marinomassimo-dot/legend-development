@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -22,6 +23,7 @@ TESTS = (
     "scripts/test_skill_packages.py",
     "scripts/test_agent_pipeline_contract.py",
     "scripts/test_provenance_coverage.py",
+    "scripts/test_release_runner_verdict.py",
     "scripts/test_release_surface.py",
     "scripts/test_structured_data_integrity.py",
     "scripts/test_external_manifest.py",
@@ -56,6 +58,32 @@ TESTS = (
 )
 
 
+SKIP_REASON_RE = re.compile(r"\.\.\. skipped ['\"](.+?)['\"]\s*$")
+SKIP_SUMMARY_RE = re.compile(r"OK \(skipped=(\d+)\)")
+
+
+def extract_skip_reasons(output: str) -> list[str]:
+    """Return one reason per unittest skip, retaining unknown reasons explicitly."""
+    reasons = [match.group(1) for line in output.splitlines()
+               if (match := SKIP_REASON_RE.search(line))]
+    declared = sum(int(value) for value in SKIP_SUMMARY_RE.findall(output))
+    if declared > len(reasons):
+        reasons.extend(["reason unavailable"] * (declared - len(reasons)))
+    return reasons
+
+
+def format_success_verdict(target_count: int,
+                           skips: list[tuple[str, str]]) -> list[str]:
+    if not skips:
+        return [f"REGRESSION VERDICT: PASS ({target_count} targets)"]
+    lines = [
+        f"REGRESSION VERDICT: PASS WITH SKIPS "
+        f"({target_count} targets, {len(skips)} skipped)"
+    ]
+    lines.extend(f"- {target}: {reason}" for target, reason in skips)
+    return lines
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Run the complete public-release regression inventory."
@@ -65,13 +93,27 @@ def main() -> int:
         action="store_true",
         help="print the ordered test inventory without executing it",
     )
+    parser.add_argument(
+        "--only",
+        action="append",
+        metavar="RELATIVE_TEST_PATH",
+        help="run only the named regression target; repeat for more than one",
+    )
     args = parser.parse_args()
 
     if args.list:
         print("\n".join(TESTS))
         return 0
 
-    missing = [relative for relative in TESTS if not (ROOT / relative).is_file()]
+    selected = tuple(args.only) if args.only else TESTS
+    unknown = [relative for relative in selected if relative not in TESTS]
+    if unknown:
+        print("ERROR: --only target is not in the release inventory:", file=sys.stderr)
+        for relative in unknown:
+            print(f"- {relative}", file=sys.stderr)
+        return 2
+
+    missing = [relative for relative in selected if not (ROOT / relative).is_file()]
     if missing:
         print("ERROR: missing regression targets:", file=sys.stderr)
         for relative in missing:
@@ -79,9 +121,15 @@ def main() -> int:
         return 2
 
     failures = []
-    for relative in TESTS:
+    skips: list[tuple[str, str]] = []
+    for relative in selected:
         print(f"RUN {relative}", flush=True)
-        result = subprocess.run([sys.executable, relative], cwd=ROOT)
+        result = subprocess.run(
+            [sys.executable, relative], cwd=ROOT,
+            stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+        sys.stdout.write(result.stdout)
+        sys.stdout.flush()
+        skips.extend((relative, reason) for reason in extract_skip_reasons(result.stdout))
         if result.returncode:
             failures.append((relative, result.returncode))
 
@@ -90,7 +138,8 @@ def main() -> int:
         for relative, returncode in failures:
             print(f"- {relative}: exit {returncode}", file=sys.stderr)
         return 1
-    print(f"REGRESSION VERDICT: PASS ({len(TESTS)} targets)")
+    for line in format_success_verdict(len(selected), skips):
+        print(line)
     return 0
 
 

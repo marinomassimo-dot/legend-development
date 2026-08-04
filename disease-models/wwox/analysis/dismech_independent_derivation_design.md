@@ -6,11 +6,32 @@
 >
 > Public, disease-level and de-identified. Nothing here is medical advice.
 
-**Date:** 2026-08-04 · **Revision:** 10 · **Status:** GIT-ANCHORED INSTRUMENT, measurement not run  
+**Date:** 2026-08-04 · **Revision:** 11 · **Status:** GIT-ANCHORED INSTRUMENT, measurement not run
 **Governs:** the independent second derivation owed by `dismech_export_spec.md` §14.1  
 **Integrity baseline:** `data/dismech_phase2_baseline.json`  
 **Blind contract:** `dismech_blind_derivation_contract.md`  
 **Protocol tool:** `disease-models/wwox/analysis/scripts/dismech_independent_protocol.py`
+
+## Revision 11 — aggregate verdicts disclose unavailable verification
+
+Claude's Rev. 10 review confirmed that the Git anchor fails closed in a source archive, then
+showed that the aggregate release runner still printed an unqualified `PASS` because Python's
+test-level skip was visible only inside the individual target output. Rev. 11 makes the aggregate
+verdict no stronger than the checks actually run:
+
+1. the runner captures and republishes every target's output;
+2. every `unittest` skip is counted with its stated reason;
+3. zero skips retain `REGRESSION VERDICT: PASS`;
+4. one or more skips produce `REGRESSION VERDICT: PASS WITH SKIPS`, the count and a target/reason
+   line for each unavailable check;
+5. an archive regression invokes the aggregate runner without `.git` and requires the verdict to
+   name the unavailable Git-anchor verification.
+
+This is a qualified successful run, not an authoritative integrity attestation. A fresh clone
+with the object database remains the environment required for the unqualified pre-measurement
+verdict.
+
+---
 
 ## Revision 10 — terminate trust in immutable Git objects
 
@@ -421,6 +442,24 @@ guardrails: no push; no four-current scientific change; append-only receipt pref
             authorised committer.
 decision: KEEP, pending Claude re-review of the Git trust boundary.
 next_step: only after a green review, select an actor with no exposure to prior derivations.
+```
+
+```text
+experiment_id: DISMECH-INDEPENDENCE-PROTOCOL-REV11
+question: Does the aggregate release verdict disclose when the authoritative Git-anchor check
+          cannot run in a source archive?
+baseline: Rev. 10's protocol test correctly skipped its positive Git-object check without .git,
+          while the aggregate runner still printed an unqualified PASS over all 40 targets.
+single_change: aggregate unittest skip counts and reasons in the release runner and qualify the
+               successful verdict whenever at least one check is skipped.
+success_criterion: a source-archive execution names the Git-object skip in PASS WITH SKIPS; a run
+                   with zero skips alone may emit the plain PASS form; the runner remains exit 0
+                   because the limitation is disclosed rather than misrepresented as verified.
+result: implemented with a nested source-archive runner regression; measurement not run.
+guardrails: no baseline, scientific registry, sidecar or production matcher modified; no skip is
+            converted into a failure or silently discarded.
+decision: KEEP, pending Claude hostile review of Rev. 11.
+next_step: after a green review, select an actor with no exposure to prior derivations.
 ```
 
 ## Related artefacts
