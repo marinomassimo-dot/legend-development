@@ -140,6 +140,18 @@ atterrata solo nel discovery ledger — si usa il waiver, che richiede un argome
 40 caratteri. Il waiver è legittimo; il silenzio no, e compare come `[DECLARED GAP]` in
 `session_self_eval.py`.
 
+> **Chi consuma i locator, e perché la ragione non è solo storica.** La motivazione qui sopra
+> guarda indietro. Quella che conta guarda avanti: **l'export verso DisMech non può emettere una
+> proposizione senza la frase che la sostiene.** Ogni nodo esportato porta il testo citato
+> verbatim, l'ancora di sezione e il receipt della lettura che l'ha prodotto — una conclusione
+> raggiunta con cura ma senza la sua citazione **non ha modo di entrare**, e non perché la regola
+> lo vieti: non c'è nulla da attaccarle come evidenza.
+>
+> La conseguenza operativa è aritmetica. Una lettura fatta oggi senza locator è una lettura che
+> va **rifatta** prima di poter essere esportata. Su un corpus che cresce di centinaia di full
+> text, catturare al momento è l'unica strategia che non produce un debito proporzionale al
+> lavoro svolto. Vedi [`analysis/README.md`](../../disease-models/wwox/analysis/README.md#the-dismech-export-pipeline).
+
 ---
 
 ## 5. LETTURA PROFONDA OBBLIGATORIA

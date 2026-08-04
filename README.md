@@ -6,7 +6,10 @@ First disease model: **WWOX-related disorders** (WOREE / WWOX-DEE and SCAR12).
 Developed in partnership with, and sponsored by, the **[WWOX Foundation](https://www.wwox.org/)** ([sponsorship statement](SPONSORSHIP.md)).
 
 **Available now:** public framework, operational skill specifications, WWOX disease model and evaluation specification.  
-**In development:** frozen benchmark, formal evaluation and DisMech contribution.
+**In development:** frozen benchmark and formal evaluation.
+**DisMech contribution:** the export pipeline is built and runs — specification, sidecar, dry run
+and offline schema validation — and **nothing has been submitted**. Upstream validation and the
+pull request are outstanding. [Details and status per phase](disease-models/wwox/analysis/README.md#the-dismech-export-pipeline).
 
 > **LEGEND is not a bibliography.** It reads full texts, preserves biological context and provenance, separates observation from inference, and turns documented reasoning failures into reusable guardrails.
 
