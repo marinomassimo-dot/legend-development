@@ -58,8 +58,8 @@ not redistribute or license the article text.
 | **Not found by identifier** — run the intake gate | 203 | 44% |
 | **Catalogued, never processed** — the reading debt | 100 | 22% |
 | Known to the tracking log only | 125 | 27% |
-| Processed from the abstract | 10 | 2% |
-| Partial full text read | 0 | 0% |
+| Processed from the abstract | 9 | 2% |
+| Partial full text read | 1 | 0% |
 | Full text read | 21 | 5% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
@@ -527,7 +527,6 @@ for an entirely unprocessed record.
 | [24456803](https://pubmed.ncbi.nlm.nih.gov/24456803/) | 2014 | ✅ | full text | PAPER 043 | The supposed tumor suppressor gene WWOX is mutated in an early lethal microcephaly syndrome with epilepsy, growth retardation and retinal degeneration |
 | [24369382](https://pubmed.ncbi.nlm.nih.gov/24369382/) | 2014 | ✅ | full text | PAPER 042 | The tumour suppressor gene WWOX is mutated in autosomal recessive cerebellar ataxia with epilepsy and mental retardation |
 | [41153369](https://pubmed.ncbi.nlm.nih.gov/41153369/) | 2025 | ✅ | abstract only | PAPER 013 | Genetic Etiology of Developmental and Epileptic Encephalopathy in a Turkish Cohort: A Single-Center Study with Targeted Gene Panel and Whole Exome Sequencing |
-| [36779245](https://pubmed.ncbi.nlm.nih.gov/36779245/) | 2023 | ✅ | abstract only | PAPER 018 | WWOX developmental and epileptic encephalopathy: Understanding the epileptology and the mortality risk |
 | [35328751](https://pubmed.ncbi.nlm.nih.gov/35328751/) | 2022 | ✅ | abstract only | PAPER 023 | The WWOX/HIF1A Axis Downregulation Alters Glucose Metabolism and Predispose to Metabolic Disorders |
 | [32581702](https://pubmed.ncbi.nlm.nih.gov/32581702/) | 2020 | ✅ | abstract only | PAPER 020 | Loss of Wwox Perturbs Neuronal Migration and Impairs Early Cortical Development |
 | [32000863](https://pubmed.ncbi.nlm.nih.gov/32000863/) | 2020 | ✅ | abstract only | PAPER 019 | Wwox deficiency leads to neurodevelopmental and degenerative neuropathies and glycogen synthase kinase 3β-mediated epileptic seizure activity in mice |
@@ -536,6 +535,7 @@ for an entirely unprocessed record.
 | [25331887](https://pubmed.ncbi.nlm.nih.gov/25331887/) | 2014 | ✅ | abstract only | PAPER 027 | WWOX, the common fragile site FRA16D gene product, regulates ATM activation and the DNA damage response |
 | [25012504](https://pubmed.ncbi.nlm.nih.gov/25012504/) | 2014 | ✅ | abstract only | PAPER 024 | Tumor suppressor WWOX regulates glucose metabolism via HIF1α modulation |
 | [33914858](https://pubmed.ncbi.nlm.nih.gov/33914858/) | 2021 | — | abstract only | PAPER 004 | Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects |
+| [36779245](https://pubmed.ncbi.nlm.nih.gov/36779245/) | 2023 | ✅ | partial full text | receipt FTR-20260804-36779245-01 | WWOX developmental and epileptic encephalopathy: Understanding the epileptology and the mortality risk |
 | [42193054](https://pubmed.ncbi.nlm.nih.gov/42193054/) | 2026 | ✅ | full text | PAPER 012 | WWOX-Related Epileptic Encephalopathy (WOREE Syndrome): Clinical Case Study and Literature Review |
 | [41562193](https://pubmed.ncbi.nlm.nih.gov/41562193/) | 2026 | ✅ | full text | PAPER 010 | Endogenous Processes Underlying Clock-Like Mutational Signatures |
 | [39507621](https://pubmed.ncbi.nlm.nih.gov/39507621/) | 2024 | ✅ | full text | PAPER 015 | Case report: Adult patient with WWOX developmental and epileptic encephalopathy: 40 years of observation |
