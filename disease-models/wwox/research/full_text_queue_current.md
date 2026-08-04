@@ -468,3 +468,20 @@ che sintattica delle varianti.
 richiesta agli autori (i dati grezzi sono dichiarati disponibili su richiesta al
 corresponding author).
 **Current status:** ⬜ non recuperato.
+
+---
+
+## FT-036
+**Paper:** PMID 10861292 — riferimento gene-diretto di [[paper_registry_current#PAPER 019]]
+(Cheng 2020, receipt `FTR-20260804-32000863-01`)
+**Title:** Common chromosomal fragile site FRA16D sequence: identification of the FOR gene spanning FRA16D
+**Priority:** **MEDIA**
+**Why:** è la caratterizzazione di sequenza del sito fragile che **contiene** WWOX. Parità delle
+fonti: è un lavoro di genomica del cancro del 2000, e per LEGEND è il documento che descrive
+*perché* questo locus si rompe. Rilevante per l'interpretazione delle CNV, che in
+[[paper_registry_current#PAPER 014]] sono il 31% delle varianti e si concentrano sull'esone 6.
+**Come è emerso:** enumerazione dei 66 riferimenti di Cheng 2020 — 27 gene-diretti con PMID, **26
+già nel corpus**. Il tasso di copertura del 96% su quest'asse contrasta con le tre letture
+cliniche precedenti, che avevano trovato 7 o più lacune ciascuna: **la densità del corpus non è
+uniforme, è alta sul meccanismo murino e bassa sulle coorti cliniche.**
+**Current status:** ⬜ non recuperato, non letto.

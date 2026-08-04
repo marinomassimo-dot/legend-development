@@ -327,18 +327,128 @@ and Teplyshova and recorded **by PMID**, while my check keyed on **DOI**. Re-run
 **A reference audit keyed on one identifier over-reports its own findings, and over-reports in
 the direction that flatters the audit.**
 
+---
+
+## 8. Cheng 2020 (PAPER 019) — read to discharge the export blocker, and what it found instead
+
+`FTR-20260804-32000863-01` · **`complete_fulltext_read`** · **22 verbatim locators** ·
+manifest [`PMID32000863.json`](../research/deepdive_manifests/PMID32000863.json).
+All seven main figures and all nine supplementary figures inspected. CC BY 4.0.
+
+Read for one reason: the two `ELIGIBILITY_DEBT` records in the DisMech sidecar sat on CLAIM 016,
+whose only unbacked source was this paper.
+
+### The prediction was wrong, and the way it was wrong is the point
+
+I predicted the sidecar would go **17 → 19 eligible**. It did not.
+
+```
+ELIGIBILITY_DEBT        2 → 0      the reading debt was discharged
+LINK_ROLE_NON_SUPPORTING 0 → 2      ← they moved here
+ELIGIBLE_FOR_EXPORT     17 → 17    unchanged
+```
+
+The eligibility gate had been **masking a second, independent blocker**. The state precedence
+puts `ELIGIBILITY_DEBT` ahead of `LINK_ROLE_NON_SUPPORTING`, so until the receipt landed, the
+link defect was invisible. This is the fail-closed ordering working: one gate at a time, and no
+record advances until every prior gate is genuinely clear.
+
+**The defect is in the registry, not the pipeline.** CLAIM 016 reads:
+
+```
+Source:    Cheng et al. 2020 · [[paper_registry_current#PAPER 056]] (Wang 2012 …)
+Wikilinks: [[paper_registry_current#PAPER 019]] · [[PAPER 056]] · [[CLAIM 035]]
+```
+
+The `Source` field **names Cheng 2020 in prose but wikilinks the other paper**. PAPER 019 — which
+*is* Cheng 2020 — appears only in the generic `Wikilinks` line, so the derivation reads the
+CLAIM 016 → PAPER 019 relation as `wikilink_only` → `UNQUALIFIED_REFERENCE`, not `SUPPORTING`.
+Correctly: an unqualified mention is not an assertion of support.
+
+→ **commit candidate: CLAIM 016 `Source` must wikilink PAPER 019 alongside PAPER 056.** A one-line
+correction to a canonical file, so it needs `BATCH_COMMIT` and the operator. Once applied, the two
+records should clear to `ELIGIBLE_FOR_EXPORT` with nothing else changing. **Not applied.**
+
+### What the figures gave that the text did not
+
+**a. Lithium is not shown to be genotype-specific.** The text says only *"lithium chloride
+significantly suppressed PTZ-induced epileptic seizure in Wwox−/− mice"*. **Figure 7d has three
+panels — +/+, +/− and −/− — and lithium suppresses seizures in all three.** The experiment
+therefore does not separate *"corrects the WWOX lesion"* from *"raises seizure threshold in any
+mouse"*.
+
+**b. The inversion.** Ethosuximide, the comparator the paper says lithium beats, **is**
+genotype-specific: Figure 7b marks it non-significant in +/+ and +/− and significant only in −/−.
+The drug with the specificity is the one the paper treats as the also-ran.
+
+**c. "Elevated" is the wrong word.** Figure 7c prints its densitometry: **total GSK3β is flat**
+(2.2–2.6 in every genotype and region); what falls is inhibitory Ser9 phosphorylation
+(cerebellum 2.7 → 1.3). GSK3β is **dis-inhibited, not more abundant.** CLAIM 016's Summary says
+*"GSK3β is elevated"*, which reads as abundance. → commit candidate: correct to *activation*.
+
+**Premise tagging.** The inference *"GSK3β mediates the Wwox-null seizure hypersusceptibility"*
+rests on `PREMISE: DEFAULT_FROM_TEXTBOOK` — **"lithium is a GSK3β inhibitor"**. Lithium is not
+selective, and this paper's own Discussion supplies the alternatives: lithium *"rescue[s]
+Wnt-dependent cerebellar midline fusion and neurogenesis deficits"* and *"induce[s]
+β-catenin-mediated myelin gene expression in mouse Schwann cells"* — both of which are lesions
+this mouse has. No selective GSK3β inhibitor and no genetic epistasis was tested.
+
+`REVIVAL_TRIGGER` for the stronger causal reading: a **selective** GSK3β inhibitor, or Gsk3b
+epistasis on the Wwox-null background, showing rescue **in the null and not in controls**.
+
+This does not refute CLAIM 016 — it *sharpens* it in the direction the claim already leans.
+GSK3β as amplifier of a structurally malformed network survives; GSK3β as the demonstrated
+mediator does not, and was never demonstrated.
+
+### A carrier signal, and it is specific
+
+Across every quantified developmental measure the heterozygote is **indistinguishable from
+wild-type** — brain weight (S1f, n.s.), cortical Ki67 at birth (S6b, n.s.), DCX densitometry
+(S7: 2.60/2.38, 2.21/2.82, 2.47/2.43 for +/+ vs +/−), Tc-MEP amplitude (Fig. 2b, n.s.).
+
+**One measure breaks the pattern.** Tc-MEP **latency** is significantly prolonged in +/− and —
+read from Figure 2c — is **not significantly different from the homozygous null**. The single
+haploinsufficient readout in the entire paper is a conduction-latency measure, i.e. a myelin
+readout, and motor evoked potentials are routine in humans.
+
+`INFERENZA` — a candidate Tier 1/2 carrier readout on the myelin axis. One study, one species,
+n = 5 heterozygotes. Recorded as a locator, **not** promoted to the biomarker file.
+
+### Also worth having
+
+Brain water content is flat across genotypes (S1g), which excludes oedema as the explanation for
+the smaller brain. Cortical thinning is measurable at **E16.5, in utero, before any seizure**
+(S5c). Brain-wide apoptosis is quantified at 0.19% vs 0.89% (S9c). Peripheral nerve shows
+Schwann-cell apoptosis and **onion-bulb degeneration** — a Charcot-Marie-Tooth-like PNS lesion in
+a disorder framed as central. Two independently targeted knockout strains, built specifically to
+exclude an aberrant product of the retained exon 1, agree on every behavioural measure.
+
+### A retrieval note that keeps recurring
+
+The supplementary was reachable only from the publisher's static-content endpoint; PMC returned
+**HTTP 200 serving HTML**, the same false negative that hid Oliver's figures in §5. **Three times
+in one session a "200" or a "404" has been mistaken for absence.** A retrieval outcome is a
+property of the route, not of the document.
+
 ## Verification
 
 ```
 deepdive_manifest.py --pmid 39507621   → PASS (2 declared gaps)
 deepdive_manifest.py --pmid 36779245   → PASS (3 declared gaps)
 deepdive_manifest.py --pmid 40875931   → PASS (3 declared gaps)
-fulltext_receipts.py verify            → OK: 42 chained, tail anchored
+deepdive_manifest.py --pmid 32000863   → PASS (3 declared gaps)
+fulltext_receipts.py verify            → OK: 43 chained, tail anchored
 test_deepdive_manifest.py              → 12 tests, falsified both directions
+test_export_dismech_dryrun.py          → 20 tests
 legend_lint.py .                       → PASS; ratchet lowered 21 → 20
 ```
 
-Three readings, three receipts, 56 verbatim locators. Two reached
+Four readings, four receipts, **78 verbatim locators**. Three reached
 `complete_fulltext_read`; one is `partial` on purpose and says why.
+
+Two DisMech blockers moved. The routing basis is now measured and backed
+(§6). The CLAIM 016 eligibility debt is discharged and has exposed a
+registry link defect behind it (§8) — a one-line correction that only
+`BATCH_COMMIT` may apply.
 
 The four canonical current files were not modified.
