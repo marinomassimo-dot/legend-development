@@ -226,6 +226,34 @@ class HonestEmptiness(unittest.TestCase):
                             "a blocked basis must name what blocks it")
         self.assertTrue(justification["consequence"])
 
+    def test_committed_sidecar_is_current(self) -> None:
+        """The sidecar in the repository must match a fresh derivation."""
+        self.assertIsNone(exporter.sidecar_staleness(),
+                          "re-derive the sidecar: the exporter would emit superseded state")
+
+    def test_a_stale_sidecar_is_refused(self) -> None:
+        """The gap this closes: the dry run read a file, so a landed reading left it stale.
+
+        On 2026-08-04 a complete read moved two CLAIM 016 occurrences out of
+        ELIGIBILITY_DEBT and the dry run kept reporting them as eligibility debt, printing
+        DRY_RUN_SCHEMA_VERIFIED. Every other gate here fails closed; this one reported green
+        on superseded input.
+        """
+        with tempfile.TemporaryDirectory() as tmp:
+            stale = Path(tmp) / "stale.jsonl"
+            lines = exporter.SIDECAR.read_text(encoding="utf-8").splitlines(keepends=True)
+            stale.write_text("".join(lines[:-1]), encoding="utf-8")
+            reason = exporter.sidecar_staleness(stale)
+        self.assertIsNotNone(reason)
+        self.assertIn("stale", reason)
+        self.assertIn("--out", reason, "the refusal must name the command that repairs it")
+
+    def test_missing_sidecar_is_refused_not_ignored(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            reason = exporter.sidecar_staleness(Path(tmp) / "absent.jsonl")
+        self.assertIsNotNone(reason)
+        self.assertIn("not found", reason)
+
     def test_routing_basis_is_measured_from_the_ledger_not_asserted(self) -> None:
         """Point it at a ledger with no complete read and it must report blocked."""
         with tempfile.TemporaryDirectory() as tmp:

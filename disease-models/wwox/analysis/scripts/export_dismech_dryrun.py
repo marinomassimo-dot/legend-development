@@ -26,6 +26,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import importlib.util
 import json
 import sys
 from collections import Counter, defaultdict
@@ -69,6 +70,50 @@ ROUTING_BASIS_PMIDS = {
     "36779245": "PAPER 018 — Oliver 2023, source of CLAIM 017",
     "39507621": "PAPER 015 — Teplyshova 2024, source of CLAIM 017",
 }
+
+
+def sidecar_staleness(path: Path | None = None) -> str | None:
+    """Return a refusal reason if the committed sidecar no longer matches a fresh derivation.
+
+    The exporter reads a sidecar file, not the registries. So when a reading lands, the
+    sidecar is stale until someone re-derives it — and until then this script emits YAML from
+    superseded state and prints `DRY_RUN_SCHEMA_VERIFIED`, which is a success message about
+    the wrong data.
+
+    That is not hypothetical. On 2026-08-04 a `complete_fulltext_read` for PAPER 019 moved two
+    CLAIM 016 occurrences out of `ELIGIBILITY_DEBT`, and the dry run kept reporting them as
+    eligibility debt, successfully, because the file it reads had not been regenerated. Every
+    other gate in this pipeline fails closed; this one reported green on stale input.
+
+    Returns None when current. Never raises on a missing derivation module — an environment
+    that cannot re-derive gets a refusal, not a silent pass.
+    """
+    target = path or SIDECAR
+    if not target.is_file():
+        return f"sidecar not found: {target}"
+    derive_path = HERE / "derive_dismech_sidecar.py"
+    if not derive_path.is_file():
+        return f"cannot verify sidecar freshness: {derive_path.name} is missing"
+    spec = importlib.util.spec_from_file_location("_derive_for_freshness", derive_path)
+    if spec is None or spec.loader is None:
+        return f"cannot load {derive_path.name} to verify sidecar freshness"
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    produced = module.serialise(module.derive()).encode("utf-8")
+    on_disk = target.read_bytes()
+    if produced == on_disk:
+        return None
+    # A refusal message that can itself raise is a refusal that does not arrive: `relative_to`
+    # throws for any path outside the repository, which is exactly the case a test uses.
+    def show(path: Path) -> str:
+        try:
+            return str(path.relative_to(HERE.parents[3]))
+        except ValueError:
+            return str(path)
+
+    return (f"sidecar is stale: {len(on_disk)} bytes on disk, {len(produced)} produced by a "
+            f"fresh derivation. Re-derive it before exporting:\n"
+            f"    python3 {show(derive_path)} --out {show(target)}")
 
 
 def routing_basis_receipts(ledger: Path | None = None) -> dict[str, str]:
@@ -332,6 +377,10 @@ def main() -> int:
 
     if "staging" not in arguments.out_dir.parts:
         raise SystemExit("REFUSED: the dry run writes to staging/ only")
+
+    stale = sidecar_staleness()
+    if stale:
+        raise SystemExit(f"REFUSED: {stale}")
 
     verified = False
     if arguments.schema_sha:
