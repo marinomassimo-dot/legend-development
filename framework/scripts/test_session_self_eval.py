@@ -166,6 +166,9 @@ MANIFEST_OK = {
                  "references_enumerated": 87},
     "corpus_crossquery": {"query": "calpain", "hits": 0, "verdict": "new territory"},
     "retraction_check": {"method": "PubMed record", "result": "none"},
+    "verbatim_locators": {"entries": [{"proposition": "fixture proposition",
+                                       "snippet": "a verbatim sentence long enough to be a real locator",
+                                       "anchor": "Results, Fig. 1"}]},
     "landing": ["DL-MECH-061"],
     "skills_considered": [{"skill": "find-fulltext", "used": True}],
 }

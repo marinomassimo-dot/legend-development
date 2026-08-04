@@ -215,6 +215,10 @@ class PublicLintTests(unittest.TestCase):
                              "references_enumerated": 12},
                 "corpus_crossquery": {"query": "mechanism", "hits": 1, "verdict": "represented"},
                 "retraction_check": {"method": "test fixture", "result": "none"},
+                "verbatim_locators": {"entries": [{
+                    "proposition": "fixture proposition",
+                    "snippet": "a verbatim sentence long enough to be a real locator",
+                    "anchor": "Results, Fig. 1"}]},
                 "landing": [f"DL-MECH-{index:03d}"],
                 "skills_considered": [{"skill": "find-fulltext", "used": True}],
             }
