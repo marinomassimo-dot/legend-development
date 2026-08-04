@@ -1,11 +1,11 @@
 {
-  "frozen_at": "2026-08-04T16:34:04Z",
-  "git_head_at_freeze": "199e81969b968fad47aa415b13b03d1f81027485",
+  "frozen_at": "2026-08-04T16:52:16Z",
+  "git_head_at_freeze": "76f8670fd78e81e5aac59111d9f1466f5e6149f9",
   "git_verification_policy": "baseline bytes must match HEAD; every declared input and output must match git_head_at_freeze:path via git cat-file; freeze commit must be an ancestor of HEAD",
   "inputs": {
     "authored_assertions": {
       "path": "disease-models/wwox/analysis/data/dismech_authored_assertions.json",
-      "sha256": "a8d476ff4f17f74515b4dd7cccb5a94b514d93cdde5c93bda66dcd8c0c1ae94b"
+      "sha256": "e1318c1c131331074cf3bfa76609928249c90ed37acec3c6c5fab189d1d65018"
     },
     "blind_derivation_contract": {
       "path": "disease-models/wwox/analysis/dismech_blind_derivation_contract.md",
@@ -99,7 +99,7 @@
   "output": {
     "path": "disease-models/wwox/analysis/data/dismech_sidecar_016_024_035.jsonl",
     "records": 49,
-    "sha256": "bb3fbf085ae116c336170511e274b61e3320de76f8ecce18a17cfc8dfeeb889b"
+    "sha256": "e13e29ade5b9c10edcdeaf862d5a61c431ec9082814016a6975296038584b8da"
   },
-  "revision": "rev.8 (atomization repaired after blind review)"
+  "revision": "rev.9 (precision repaired, four axes closed)"
 }
