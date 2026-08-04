@@ -181,28 +181,78 @@ def fp(*parts: object) -> str:
 
 
 # --------------------------------------------------------------- registry ---
+def _plain_label(label: str) -> str:
+    """A heading without its decoration: no emoji, backticks or bold markers."""
+    stripped = re.sub(r"[`*]", "", label)
+    stripped = re.sub(r"[^\w\s()/.,'’\-–—]", " ", stripped, flags=re.UNICODE)
+    return re.sub(r"\s+", " ", stripped).strip()
+
+
+def _field_bodies(block: str) -> list[dict[str, str]]:
+    """Split a claim block into its fields.
+
+    A field ends at the next `**Label:**` *or at a horizontal rule*. Omitting the rule made
+    the last field of every claim swallow the `---` separator, so its final sentence never
+    compared equal to the same sentence read by anyone else.
+    """
+    fields: list[dict[str, str]] = []
+    # The heading must start its line. Inline bold mid-sentence — CLAIM 035 carries
+    # `**(2) Un avvertimento di misura:**` inside a field body — is not a new field, and
+    # treating it as one silently truncates the field it sits in.
+    matches = list(re.finditer(r"^\*\*([^*\n]{2,90}?):\*\*", block, re.M))
+    for index, match in enumerate(matches):
+        start = match.end()
+        end = matches[index + 1].start() if index + 1 < len(matches) else len(block)
+        body = block[start:end]
+        rule = re.search(r"\n\s*---\s*(?:\n|$)", body)
+        if rule:
+            body = body[: rule.start()]
+        fields.append({"label": match.group(1),
+                       "plain": _plain_label(match.group(1)),
+                       "body": body.strip()})
+    return fields
+
+
 def read_anchor(claim_id: str, field_label: str, sentence: int | None) -> str:
     """Return the verbatim registry text at an anchor, or raise."""
     text = REGISTRY.read_text(encoding="utf-8")
     blocks = [b for b in re.split(r"\n## CLAIM ", text)[1:] if b[:3] == claim_id]
     if not blocks:
         raise SystemExit(f"anchor failure: CLAIM {claim_id} not found")
-    m = re.search(r"\*\*" + re.escape(field_label) + r":\*\*(.*?)(?=\n\*\*|\Z)",
-                  blocks[0], re.S)
-    if not m:
+    # Field headings carry markup: CLAIM 016 has `🔴 **\`PREMISE_TAG\` sul claim
+    # esistente**`. An anchor may name the heading with or without that decoration — the
+    # independent run wrote the plain form, and a verbatim-only match rejected it as a
+    # missing field. Resolve on the decoration-free form, which is what a reader would
+    # write, and keep the verbatim form working.
+    body = None
+    for candidate in _field_bodies(blocks[0]):
+        if candidate["label"] == field_label or candidate["plain"] == _plain_label(field_label):
+            body = candidate["body"]
+            break
+    if body is None:
         raise SystemExit(f"anchor failure: CLAIM {claim_id} has no field {field_label!r}")
-    body = m.group(1).strip()
     if sentence is None:
         return body
     parts = re.split(r"(?<=[.!?])\s+(?=[A-Z\U0001F534⚠(«*])", body)
+    # `sentence` is ZERO-BASED: the first sentence of a field is sent[0]. Left unstated in
+    # the first contract, an independent run indexed from 1, and every anchor it produced
+    # pointed one sentence late — 16 of 16 shared anchors compared different text, which
+    # read as total semantic disagreement until the offset was found. A negative ordinal is
+    # rejected rather than silently wrapping to the end of the list.
+    if sentence < 0:
+        raise SystemExit(
+            f"anchor failure: sent[{sentence}] is negative — ordinals are zero-based, "
+            f"the first sentence of a field is sent[0]")
     if sentence >= len(parts):
         raise SystemExit(
             f"anchor failure: CLAIM {claim_id} | {field_label} has "
-            f"{len(parts)} sentences, sent[{sentence}] requested")
+            f"{len(parts)} sentences, sent[{sentence}] requested (ordinals are zero-based, "
+            f"so the last is sent[{len(parts) - 1}])")
     return parts[sentence].strip()
 
 
 def anchor_str(claim_id: str, field_label: str, sentence: int | None) -> str:
+    """Build an anchor. The sentence ordinal is zero-based; see `read_anchor`."""
     tail = "" if sentence is None else f"|sent[{sentence}]"
     return f"claim_registry_current.md#CLAIM {claim_id}|{field_label}{tail}"
 
@@ -378,6 +428,14 @@ def derive() -> list[dict]:
                                  "locator_fingerprint", "epistemic_type",
                                  "evidence_relation"],
         "occurrence_id_components": ["claim_id", "registry_anchor", "ordinal"],
+        "anchor_format": {
+            "shape": "claim_registry_current.md#CLAIM NNN|<field heading>|sent[n]",
+            "sentence_ordinal_base": 0,
+            "occurrence_ordinal_base": 0,
+            "note": "Both ordinals are zero-based. Stated explicitly because leaving the "
+                    "sentence base unstated made two independent derivations index from "
+                    "different origins and compare different text.",
+        },
         "provenance_sources": {
             "claim_status": "claim_registry_current.md",
             "pmid": "paper_registry_current.md",

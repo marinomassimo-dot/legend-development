@@ -232,6 +232,68 @@ class FailOpenTests(unittest.TestCase):
         self.assertIn("link_claim_to_paper", manifest["provenance_sources"])
 
 
+class AnchorOrdinalBaseTests(unittest.TestCase):
+    """The sentence ordinal base was unstated, and it cost an entire measurement.
+
+    An independent run indexed sentences from 1 while the reference indexed from 0.
+    Every one of the 16 comparable shared anchors then pointed at different text, and
+    the comparison reported total semantic disagreement that was purely an off-by-one.
+    """
+
+    def test_first_sentence_of_a_field_is_sent_zero(self) -> None:
+        first = derive_mod.read_anchor("035", "Summary", 0)
+        whole = derive_mod.read_anchor("035", "Summary", None)
+        self.assertTrue(whole.startswith(first[:40]),
+                        "sent[0] must be the FIRST sentence of the field, not the second")
+
+    def test_sentences_are_contiguous_from_zero(self) -> None:
+        whole = derive_mod.read_anchor("035", "Summary", None)
+        for ordinal in range(5):
+            with self.subTest(ordinal=ordinal):
+                self.assertIn(derive_mod.read_anchor("035", "Summary", ordinal)[:30], whole)
+
+    def test_negative_ordinal_is_rejected_not_wrapped(self) -> None:
+        """Python would silently index from the end; that is a wrong anchor, not a valid one."""
+        with self.assertRaises(SystemExit):
+            derive_mod.read_anchor("035", "Summary", -1)
+
+    def test_out_of_range_ordinal_names_the_last_valid_one(self) -> None:
+        with self.assertRaises(SystemExit) as caught:
+            derive_mod.read_anchor("035", "Summary", 99)
+        self.assertIn("zero-based", str(caught.exception))
+
+    def test_manifest_declares_the_ordinal_base(self) -> None:
+        manifest = next(r for r in derive_mod.derive()
+                        if r["record_kind"] == "derivation_manifest")
+        self.assertEqual(manifest["anchor_format"]["sentence_ordinal_base"], 0)
+        self.assertEqual(manifest["anchor_format"]["occurrence_ordinal_base"], 0)
+
+    def test_blind_contract_states_the_base(self) -> None:
+        contract = HERE.parents[0] / "dismech_blind_derivation_contract.md"
+        if not contract.exists():
+            self.skipTest("blind contract not present")
+        text = contract.read_text(encoding="utf-8")
+        self.assertIn("zero-based", text)
+        self.assertIn("sent[0]", text,
+                      "the contract must show the first sentence is sent[0]")
+
+    def test_every_emitted_anchor_resolves_to_its_recorded_span(self) -> None:
+        """The span and the anchor must agree, or the anchor is pointing elsewhere."""
+        for record in derive_mod.derive():
+            if record["record_kind"] != "assertion_candidate":
+                continue
+            anchor = record["registry_anchor"]
+            body = anchor.split("#", 1)[1]
+            claim = body.split("|")[0].replace("CLAIM ", "")
+            field = body.split("|")[1]
+            ordinal = None
+            if "|sent[" in body:
+                ordinal = int(body.rsplit("sent[", 1)[1].rstrip("]"))
+            with self.subTest(anchor=anchor):
+                self.assertEqual(derive_mod.read_anchor(claim, field, ordinal),
+                                 record["raw_registry_span"])
+
+
 class ContractDriftTests(unittest.TestCase):
     """Rev. 6 added a state in code and not in the specification. This catches that."""
 

@@ -1,0 +1,18 @@
+{
+  "anchors_confirmed": 31,
+  "fields_left_verbatim": [
+    "proposition",
+    "context",
+    "locator",
+    "epistemic_type",
+    "evidence_relation",
+    "source_id",
+    "terminal_state"
+  ],
+  "output_sha256": "837d5e777fbb07323b03978360eeca992b0b975e9ab8fc047d826fa8288b10ef",
+  "reason": "the anchor format did not declare its sentence-ordinal base; the independent run indexed from 1 and the reference from 0",
+  "record_kind": "realignment_manifest",
+  "source": "disease-models/wwox/analysis/data/dismech_second_derivation_authored_016_024_035.jsonl",
+  "source_sha256": "ec117b0a3b7194ff283dc9e16dc081817cafbbe2a7949409403f8586a446e07b",
+  "transformation": "registry_anchor sent[n] -> sent[n-1]; occurrence_id recomputed"
+}

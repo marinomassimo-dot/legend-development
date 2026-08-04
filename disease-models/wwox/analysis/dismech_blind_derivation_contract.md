@@ -58,8 +58,15 @@ of the assertion. Do not remove them to make two statements look alike.
 For every candidate record:
 
 - `claim_id`: `016`, `024` or `035`;
-- `registry_anchor`: `claim_registry_current.md#CLAIM NNN|<field heading>|sent[n]`;
-- `raw_registry_span`: the exact registry sentence used;
+- `registry_anchor`: `claim_registry_current.md#CLAIM NNN|<field heading>|sent[n]`.
+  🔴 **`n` is zero-based: the first sentence of the field is `sent[0]`, not `sent[1]`.**
+  This was left unstated in the first version of the contract, and the first independent
+  run indexed from 1. Every anchor it produced pointed one sentence later than the same
+  anchor in the reference derivation, so the two runs compared different text and agreed
+  on nothing — a measured disagreement that was entirely an off-by-one. State the base,
+  and check the first sentence of a field lands on `sent[0]` before going further;
+- `raw_registry_span`: the exact registry sentence used. It must be the text found at the
+  declared anchor — if the span and the anchor disagree, the anchor is wrong;
 - `atomization_outcome`: `ATOMIZED`, `ATOMIZATION_REQUIRED` or `NOT_EVIDENCE`.
 
 For every occurrence add `registry_ordinal`, a zero-based local ordinal within its candidate.
