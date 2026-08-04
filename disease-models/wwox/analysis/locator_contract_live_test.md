@@ -356,8 +356,8 @@ record advances until every prior gate is genuinely clear.
 **The defect is in the registry, not the pipeline.** CLAIM 016 reads:
 
 ```
-Source:    Cheng et al. 2020 · [[paper_registry_current#PAPER 056]] (Wang 2012 …)
-Wikilinks: [[paper_registry_current#PAPER 019]] · [[PAPER 056]] · [[CLAIM 035]]
+Source:    Cheng et al. 2020 · <link to PAPER 056> (Wang 2012 — residue-level mechanism)
+Wikilinks: <link to PAPER 019> · <link to PAPER 056> · <link to CLAIM 035>
 ```
 
 The `Source` field **names Cheng 2020 in prose but wikilinks the other paper**. PAPER 019 — which

@@ -21,7 +21,7 @@
     {
       "bundle_path": "inputs/receipt_eligibility_projection.jsonl",
       "role": "eligibility_only_receipt_projection",
-      "sha256": "9c3cc6642a607ac5f9cb0cb66aa02ef4d5767eb1f68ec1bf19cc5ad5486dd5bc",
+      "sha256": "1b5733b133d9282fc0b357556a453eb75be15481dec275809a10da73b217b069",
       "source_path": "disease-models/wwox/analysis/data/dismech_blind_receipt_projection.jsonl"
     },
     {
@@ -29,6 +29,13 @@
       "role": "generic_rules_without_first_pass_results",
       "sha256": "d6601bda9eceedc08ec211e5944652847443f0ffd042a6c0aff8793f8011700e",
       "source_path": "disease-models/wwox/analysis/dismech_blind_derivation_contract.md"
+    },
+    {
+      "bundle_path": "sources/PAPER019.xml",
+      "paper_id": "019",
+      "role": "locator_source",
+      "sha256": "792b5b296863674d0295a7dba918ee7c59ade8cdff64ee8ec9d8f01bd12f00f5",
+      "source_path": "files/fulltext/PMID32000863_Cheng2020_PMC.xml"
     },
     {
       "bundle_path": "sources/PAPER055.pdf",

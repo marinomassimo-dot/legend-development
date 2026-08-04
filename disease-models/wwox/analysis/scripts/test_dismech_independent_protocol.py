@@ -5,6 +5,7 @@ from __future__ import annotations
 import importlib.util
 import hashlib
 import json
+import re
 import shutil
 import subprocess
 import tempfile
@@ -212,20 +213,80 @@ class ReceiptProjectionTests(unittest.TestCase):
         self.assertEqual(protocol.verify_receipt_projection(), [])
 
     def test_projection_is_complete_for_target_claims_only(self) -> None:
+        """The rule, not the roster.
+
+        This asserted the exact set {"055", "056"} and the exact receipt ids behind them.
+        Both were true of the data at the time. When PAPER 019 was read to complete depth on
+        2026-08-04 the test failed for the right reason but with the wrong message — it
+        reported an unexpected paper rather than a rule violation, because it was testing the
+        roster. Now it re-derives the expected roster from the same two inputs the rule names:
+        papers cited by the target claims, intersected with papers holding a complete receipt.
+        """
         rows = protocol.derive_receipt_projection()
         by_paper = {row["paper_id"]: row for row in rows}
-        self.assertEqual(set(by_paper), {"055", "056"})
-        self.assertEqual(by_paper["055"]["active_complete_receipt_event"],
-                         "FTR-20260726-35716775-03")
-        self.assertEqual(by_paper["056"]["active_complete_receipt_event"],
-                         "FTR-20260726-22193544-03")
+
+        claims = (protocol.REPO_ROOT
+                  / "disease-models/wwox/registries/claim_registry_current.md"
+                  ).read_text(encoding="utf-8")
+        papers = (protocol.REPO_ROOT
+                  / "disease-models/wwox/registries/paper_registry_current.md"
+                  ).read_text(encoding="utf-8")
+        manifest = protocol.load_json(protocol.BLIND_MANIFEST)
+        ledger = protocol.load_jsonl(
+            protocol.REPO_ROOT
+            / "disease-models/wwox/registries/fulltext_read_receipts.jsonl")
+        complete_pmids = {str(e.get("study_id", {}).get("pmid", "")) for e in ledger
+                          if e.get("evidence_depth") == "complete_fulltext_read"}
+
+        cited: set[str] = set()
+        for claim_id in manifest["target_claim_ids"]:
+            block = protocol._registry_block(claims, "CLAIM", claim_id)
+            cited.update(re.findall(r"\bPAPER\s+(\d{3})\b", block))
+        expected = set()
+        for paper_id in cited:
+            block = protocol._registry_block(papers, "PAPER", paper_id)
+            pmid = re.search(r"^\*\*Identifier:\*\*.*?\bPMID\s+([0-9]{7,8})\b",
+                             block, re.MULTILINE)
+            if pmid and pmid.group(1) in complete_pmids:
+                expected.add(paper_id)
+
+        self.assertEqual(set(by_paper), expected,
+                         "the projection must be exactly the target-cited papers that hold a "
+                         "complete receipt — no more, and no fewer")
+        self.assertTrue(expected, "the fixture must contain at least one projected paper")
+        for row in rows:
+            self.assertEqual(row["evidence_depth"], "complete_fulltext_read")
+            self.assertTrue(row["active_complete_receipt_event"].startswith("FTR-"))
+
+    def test_complete_read_outside_the_target_claims_never_projects(self) -> None:
+        """The firewall that matters: a complete read of a non-target paper must not leak."""
+        rows = protocol.derive_receipt_projection()
         projected_pmids = {row["study_id"]["pmid"] for row in rows}
-        self.assertNotIn("21212533", projected_pmids, "non-target complete read leaked in")
-        self.assertNotIn("34214506", projected_pmids, "non-target complete read leaked in")
+        for pmid in ("21212533", "34214506", "39507621", "36779245", "40875931"):
+            self.assertNotIn(pmid, projected_pmids,
+                             f"complete read of non-target PMID {pmid} leaked into the bundle")
 
     def test_cited_paper_without_complete_receipt_is_absent_by_rule(self) -> None:
+        """Named PAPER 019 until it was read on 2026-08-04. Derive the case instead."""
         rows = protocol.derive_receipt_projection()
-        self.assertNotIn("019", {row["paper_id"] for row in rows})
+        projected = {row["paper_id"] for row in rows}
+        manifest = protocol.load_json(protocol.BLIND_MANIFEST)
+        claims = (protocol.REPO_ROOT
+                  / "disease-models/wwox/registries/claim_registry_current.md"
+                  ).read_text(encoding="utf-8")
+        cited: set[str] = set()
+        for claim_id in manifest["target_claim_ids"]:
+            cited.update(re.findall(
+                r"\bPAPER\s+(\d{3})\b",
+                protocol._registry_block(claims, "CLAIM", claim_id)))
+        for paper_id in sorted(cited - projected):
+            with self.subTest(paper=paper_id):
+                bundle = {e["paper_id"] for e in manifest["bundle_files"]
+                          if e.get("role") == "locator_source"}
+                self.assertNotIn(
+                    paper_id, bundle,
+                    f"PAPER {paper_id} is cited by a target claim and is not projected, so it "
+                    "holds no complete receipt — it must not be bundled as a locator source")
 
 
 class BlindInputFirewallTests(unittest.TestCase):
@@ -241,7 +302,10 @@ class BlindInputFirewallTests(unittest.TestCase):
 
     def test_receipt_projection_contains_no_first_pass_results(self) -> None:
         rows = protocol.load_jsonl(protocol.DATA / "dismech_blind_receipt_projection.jsonl")
-        self.assertEqual(len(rows), 2)
+        # Row count is data, not firewall: it was 2 until PAPER 019 was read on 2026-08-04.
+        # What must hold regardless of how many papers qualify is that no row carries a
+        # first-pass result. Asserting the count made a legitimate reading look like a leak.
+        self.assertTrue(rows, "the projection must not be empty")
         forbidden = {"outputs", "evidence_basis", "workflow", "locator",
                      "locator_extraction_receipt_event"}
         for row in rows:

@@ -100,8 +100,23 @@ class ProvenanceTests(unittest.TestCase):
         self.assertTrue(sha and len(sha) == 64)
 
     def test_paper_without_a_receipt_yields_no_depth(self) -> None:
-        depth, _elig, _loc, _sha = derive_mod.read_receipts("32000863")
+        """A PMID the ledger does not contain must not yield a complete depth.
+
+        This named PMID 32000863 until 2026-08-04, when that paper was read and the test
+        began asserting the opposite of what it says. A test that encodes today's data as its
+        fixture reports on the fixture, not on the behaviour — the same defect found the same
+        day in the exporter's routing constant. A PMID that cannot acquire a receipt cannot
+        rot.
+        """
+        absent = "00000000"
+        self.assertFalse(any(absent in line for line in
+                             derive_mod.RECEIPT_LEDGER.read_text(encoding="utf-8").splitlines()),
+                         "the sentinel PMID must stay absent from the ledger")
+        depth, elig, locator, sha = derive_mod.read_receipts(absent)
         self.assertNotEqual(depth, "complete_fulltext_read")
+        self.assertIsNone(elig)
+        self.assertIsNone(locator)
+        self.assertIsNone(sha)
 
     def test_local_artefact_audit_is_a_separate_command(self) -> None:
         """Re-hashing local files is an audit, never part of the derivation."""

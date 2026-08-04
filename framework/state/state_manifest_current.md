@@ -196,8 +196,8 @@ with every existing check passing. It is invisible by construction, because lean
 writes nothing anywhere. So it is measured instead of assumed.
 
 ```yaml
-unread_premise_baseline: 17
-unread_premise_measured_on: 2026-07-26
+unread_premise_baseline: 16
+unread_premise_measured_on: 2026-08-04
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions
