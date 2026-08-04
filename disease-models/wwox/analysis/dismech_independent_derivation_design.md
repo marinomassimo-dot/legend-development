@@ -28,8 +28,8 @@ verdict no stronger than the checks actually run:
    name the unavailable Git-anchor verification.
 
 This is a qualified successful run, not an authoritative integrity attestation. A fresh clone
-with the object database remains the environment required for the unqualified pre-measurement
-verdict.
+with the object database remains the environment required for an unskipped Git-anchor check;
+other environment-dependent checks may still qualify the aggregate verdict independently.
 
 ---
 
