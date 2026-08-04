@@ -6,11 +6,35 @@
 >
 > Public, disease-level and de-identified. Nothing here is medical advice.
 
-**Date:** 2026-08-04 · **Revision:** 9 · **Status:** INSTRUMENT READY, measurement not run  
+**Date:** 2026-08-04 · **Revision:** 10 · **Status:** GIT-ANCHORED INSTRUMENT, measurement not run  
 **Governs:** the independent second derivation owed by `dismech_export_spec.md` §14.1  
 **Integrity baseline:** `data/dismech_phase2_baseline.json`  
 **Blind contract:** `dismech_blind_derivation_contract.md`  
 **Protocol tool:** `disease-models/wwox/analysis/scripts/dismech_independent_protocol.py`
+
+## Revision 10 — terminate trust in immutable Git objects
+
+Claude's Rev. 9 review demonstrated that allowlist and baseline could be edited together and
+re-sealed. Rev. 10 changes the trust model rather than adding another mutable hash file:
+
+1. every declared input and output is committed in an immutable freeze commit;
+2. `git_head_at_freeze` names that ancestor commit;
+3. `verify-baseline` obtains each frozen blob with `git cat-file`, never from the working tree;
+4. the declared hash must match the frozen blob and the current working bytes;
+5. the baseline's own working bytes must equal its blob at `HEAD`;
+6. the freeze commit must exist and be an ancestor of `HEAD`.
+
+The exact two-file attack is a regression: editing the repository allowlist and updating its hash
+inside an uncommitted baseline fails both because the baseline differs from `HEAD` and because the
+new declared hash disagrees with the blob in the pinned tree.
+
+This closes in-place and uncommitted re-sealing and makes every frozen byte recoverable with Git.
+It does not claim protection from an actor authorised to create and approve a new sequence of
+commits: at that boundary, commit review and the externally observed commit ID are the trust
+anchor. The tool records and reports that identity rather than pretending a self-authored hash can
+replace it.
+
+---
 
 ## Revision 9 — root-of-trust and projection closure
 
@@ -63,11 +87,9 @@ Bundle construction invokes this verifier internally. Authenticating the bundle 
 an unsealed repository manifest is insufficient: the repository manifest itself is now part of
 the sealed root of trust.
 
-**Recovery boundary.** A hash proves integrity of bytes that still exist; it does not recover
-uncommitted bytes. The independent measurement therefore must not run until every
-baseline-referenced repository artefact is version-controlled at the pinned tree or retained in a
-content-addressed snapshot. Until that condition holds, the baseline is sealed but not durably
-recoverable.
+**Recovery boundary.** Every declared baseline input and output must exist as a blob in the pinned
+Git tree. The verifier reads and hashes those blobs directly. A working file that exists but was
+never committed cannot satisfy the contract.
 
 Verification:
 
@@ -375,6 +397,24 @@ result: both changes implemented and regression-tested; independent measurement 
 guardrails: Rev. 7 sidecar unchanged; no canonical scientific file or production dedup modified.
 decision: KEEP, pending Claude re-review.
 next_step: hostile-review Rev. 9, then durable commit/snapshot before selecting a fresh blind actor.
+```
+
+```text
+experiment_id: DISMECH-INDEPENDENCE-PROTOCOL-REV10
+question: Does pinning every declared byte to an ancestor Git tree reject a coordinated working-
+          tree edit of allowlist + baseline while making all sealed bytes recoverable?
+baseline: Rev. 9 terminated trust at a mutable, uncommitted baseline.
+single_change: commit the complete Phase-2 packet, then verify baseline-at-HEAD and every declared
+               input/output against git_head_at_freeze:path via git cat-file.
+success_criterion: clean committed baseline passes; one-file edits fail; two-file allowlist +
+                   baseline reseal fails for both HEAD mismatch and frozen-blob mismatch; every
+                   declared path is retrievable from the pinned ancestor.
+result: implemented with a temporary-Git exploit regression and clean-export verification.
+guardrails: no push; no four-current scientific change; append-only receipt prefix remains valid;
+            trust boundary is stated as reviewed Git history, not absolute protection from an
+            authorised committer.
+decision: KEEP, pending Claude re-review of the Git trust boundary.
+next_step: only after a green review, select an actor with no exposure to prior derivations.
 ```
 
 ## Related artefacts

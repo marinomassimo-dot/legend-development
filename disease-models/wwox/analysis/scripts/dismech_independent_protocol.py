@@ -13,6 +13,7 @@ import hashlib
 import json
 import re
 import shutil
+import subprocess
 import sys
 import unicodedata
 from collections import defaultdict
@@ -150,10 +151,42 @@ def verify_receipt_projection(root: Path | None = None,
     return []
 
 
-def verify_phase2_baseline(path: Path = BASELINE) -> list[str]:
+def _git_blob(root: Path, revision: str, relative_path: str) -> bytes:
+    result = subprocess.run(
+        ["git", "cat-file", "blob", f"{revision}:{relative_path}"],
+        cwd=root, capture_output=True)
+    if result.returncode:
+        raise ValueError(
+            f"git blob unavailable: {revision}:{relative_path}: "
+            f"{result.stderr.decode('utf-8', errors='replace').strip()}")
+    return result.stdout
+
+
+def _git_ok(root: Path, *arguments: str) -> bool:
+    return subprocess.run(["git", *arguments], cwd=root, stdout=subprocess.DEVNULL,
+                          stderr=subprocess.DEVNULL).returncode == 0
+
+
+def verify_phase2_baseline(path: Path | None = None, *, verify_git: bool = True) -> list[str]:
     """Return errors; an empty list means every sealed byte still matches."""
+    path = path or BASELINE
     baseline = load_json(path)
     errors: list[str] = []
+    freeze = baseline.get("git_head_at_freeze")
+    if verify_git:
+        try:
+            relative_baseline = path.resolve().relative_to(REPO_ROOT.resolve()).as_posix()
+            head_baseline = _git_blob(REPO_ROOT, "HEAD", relative_baseline)
+        except (ValueError, OSError) as exc:
+            errors.append(f"baseline git anchor unavailable: {exc}")
+        else:
+            if path.read_bytes() != head_baseline:
+                errors.append("baseline working bytes differ from HEAD")
+        if not freeze or not _git_ok(REPO_ROOT, "cat-file", "-e", f"{freeze}^{{commit}}"):
+            errors.append("git_head_at_freeze is not an available commit")
+        elif not _git_ok(REPO_ROOT, "merge-base", "--is-ancestor", freeze, "HEAD"):
+            errors.append("git_head_at_freeze is not an ancestor of HEAD")
+
     for name, record in baseline["inputs"].items():
         source = REPO_ROOT / record["path"]
         if not source.is_file():
@@ -177,6 +210,21 @@ def verify_phase2_baseline(path: Path = BASELINE) -> list[str]:
                     errors.append(f"{name}: sealed prefix tail event changed")
         elif sha256_file(source) != record["sha256"]:
             errors.append(f"{name}: sha256 mismatch")
+        if verify_git and freeze:
+            try:
+                frozen_bytes = _git_blob(REPO_ROOT, freeze, record["path"])
+            except ValueError as exc:
+                errors.append(f"{name}: {exc}")
+            else:
+                if record.get("verification_policy") == "append_only_prefix":
+                    frozen_lines = frozen_bytes.splitlines(keepends=True)
+                    count = record["prefix_event_count"]
+                    if len(frozen_lines) < count:
+                        errors.append(f"{name}: frozen git blob is shorter than sealed prefix")
+                    elif sha256_bytes(b"".join(frozen_lines[:count])) != record["prefix_sha256"]:
+                        errors.append(f"{name}: frozen git prefix disagrees with declared hash")
+                elif sha256_bytes(frozen_bytes) != record["sha256"]:
+                    errors.append(f"{name}: frozen git blob disagrees with declared hash")
 
     output = baseline["output"]
     output_path = REPO_ROOT / output["path"]
@@ -184,6 +232,14 @@ def verify_phase2_baseline(path: Path = BASELINE) -> list[str]:
         errors.append(f"output: missing {output['path']}")
     elif sha256_file(output_path) != output["sha256"]:
         errors.append("output: sha256 mismatch")
+    if verify_git and freeze:
+        try:
+            frozen_output = _git_blob(REPO_ROOT, freeze, output["path"])
+        except ValueError as exc:
+            errors.append(f"output: {exc}")
+        else:
+            if sha256_bytes(frozen_output) != output["sha256"]:
+                errors.append("output: frozen git blob disagrees with declared hash")
     projection_record = baseline["inputs"].get("blind_receipt_projection")
     if projection_record:
         errors.extend(verify_receipt_projection(

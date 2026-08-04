@@ -3,7 +3,10 @@
 from __future__ import annotations
 
 import importlib.util
+import hashlib
 import json
+import shutil
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -65,7 +68,7 @@ class BaselineTests(unittest.TestCase):
             output.write_bytes((original_root / baseline["output"]["path"]).read_bytes())
             protocol.REPO_ROOT = root
             try:
-                self.assertEqual(protocol.verify_phase2_baseline(), [])
+                self.assertEqual(protocol.verify_phase2_baseline(verify_git=False), [])
             finally:
                 protocol.REPO_ROOT = original_root
 
@@ -90,7 +93,7 @@ class BaselineTests(unittest.TestCase):
             protocol.REPO_ROOT = root
             try:
                 self.assertIn("receipt_ledger: sealed prefix bytes changed",
-                              protocol.verify_phase2_baseline())
+                              protocol.verify_phase2_baseline(verify_git=False))
             finally:
                 protocol.REPO_ROOT = original_root
 
@@ -136,13 +139,70 @@ class BaselineTests(unittest.TestCase):
             protocol.REPO_ROOT = root
             protocol.BLIND_MANIFEST = manifest_path
             try:
-                errors = protocol.verify_phase2_baseline()
+                errors = protocol.verify_phase2_baseline(verify_git=False)
                 with self.assertRaisesRegex(ValueError, "sealed baseline failed"):
                     protocol.build_blind_bundle(root / "leakbundle")
             finally:
                 protocol.REPO_ROOT = original_root
                 protocol.BLIND_MANIFEST = original_manifest
         self.assertIn("blind_input_manifest: sha256 mismatch", errors)
+
+    def test_two_file_reseal_disagrees_with_pinned_git_tree(self) -> None:
+        """Changing allowlist + declared hash cannot rewrite the frozen Git tree."""
+        baseline = json.loads(protocol.BASELINE.read_text(encoding="utf-8"))
+        original_root = protocol.REPO_ROOT
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            for record in baseline["inputs"].values():
+                source = original_root / record["path"]
+                target = root / record["path"]
+                target.parent.mkdir(parents=True, exist_ok=True)
+                shutil.copyfile(source, target)
+            output = root / baseline["output"]["path"]
+            output.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(original_root / baseline["output"]["path"], output)
+            baseline_path = root / protocol.BASELINE.relative_to(original_root)
+            baseline_path.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(protocol.BASELINE, baseline_path)
+
+            def git(*args: str) -> str:
+                result = subprocess.run(["git", *args], cwd=root, check=True,
+                                        capture_output=True, text=True)
+                return result.stdout.strip()
+
+            git("init", "-q")
+            git("config", "user.email", "protocol-test@example.invalid")
+            git("config", "user.name", "Protocol Test")
+            git("add", ".")
+            git("commit", "-qm", "frozen inputs")
+            frozen = git("rev-parse", "HEAD")
+            temp_baseline = json.loads(baseline_path.read_text(encoding="utf-8"))
+            temp_baseline["git_head_at_freeze"] = frozen
+            baseline_path.write_text(json.dumps(temp_baseline, indent=2, sort_keys=True) + "\n",
+                                     encoding="utf-8")
+            git("add", baseline_path.relative_to(root).as_posix())
+            git("commit", "-qm", "anchor baseline")
+
+            protocol.REPO_ROOT = root
+            try:
+                self.assertEqual(protocol.verify_phase2_baseline(baseline_path), [])
+                manifest_path = root / temp_baseline["inputs"]["blind_input_manifest"]["path"]
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                manifest["bundle_files"].append({
+                    "bundle_path": "inputs/leak.jsonl", "role": "leaked_first_pass",
+                    "sha256": temp_baseline["output"]["sha256"],
+                    "source_path": temp_baseline["output"]["path"],
+                })
+                manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+                temp_baseline["inputs"]["blind_input_manifest"]["sha256"] = hashlib.sha256(
+                    manifest_path.read_bytes()).hexdigest()
+                baseline_path.write_text(json.dumps(temp_baseline, indent=2, sort_keys=True) + "\n",
+                                         encoding="utf-8")
+                errors = protocol.verify_phase2_baseline(baseline_path)
+            finally:
+                protocol.REPO_ROOT = original_root
+        self.assertIn("baseline working bytes differ from HEAD", errors)
+        self.assertIn("blind_input_manifest: frozen git blob disagrees with declared hash", errors)
 
 
 class ReceiptProjectionTests(unittest.TestCase):
