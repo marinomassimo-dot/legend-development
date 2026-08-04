@@ -44,6 +44,8 @@ def write_jsonl(path: Path, rows: list[dict]) -> None:
 
 class BaselineTests(unittest.TestCase):
     def test_current_phase2_baseline_verifies(self) -> None:
+        if not protocol._git_ok(protocol.REPO_ROOT, "rev-parse", "--is-inside-work-tree"):
+            self.skipTest("Git object database absent; verify-baseline must fail closed here")
         self.assertEqual(protocol.verify_phase2_baseline(), [])
 
     def test_append_only_suffix_does_not_invalidate_prefix(self) -> None:

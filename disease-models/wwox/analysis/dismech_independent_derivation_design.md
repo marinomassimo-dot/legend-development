@@ -34,6 +34,12 @@ commits: at that boundary, commit review and the externally observed commit ID a
 anchor. The tool records and reports that identity rather than pretending a self-authored hash can
 replace it.
 
+A source archive without `.git` is publishable and can run the non-Git release checks, but it
+cannot verify this baseline or build a blind bundle: `verify-baseline` returns non-zero by design.
+The authoritative pre-measurement check therefore runs in a fresh clone that retains its Git
+object database. The regression suite skips only the Git-specific positive test when that database
+is absent; the CLI itself never converts absence into success.
+
 ---
 
 ## Revision 9 — root-of-trust and projection closure
