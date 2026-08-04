@@ -60,7 +60,7 @@ Every assertion classified: **DATO** (directly supported by this source) / **INF
 2. Any COMMIT CANDIDATEs queued in the commit-candidate log (if ≥5 candidates → suggest `legend-commit`).
 3. Next-search agenda + the papers already fished/queued for the next hop.
 4. A one-line synthesis: what grew in the discovery capital this turn (e.g. "MOL-007 and MECH-012 converge → new IPOTESI on GSK3β rescue").
-5. One `FULLTEXT_READ_RECEIPT` for every paper actually analysed, conforming to `framework/protocols/fulltext_read_receipt.md`; the main session must persist it before closing.
+5. One `FULLTEXT_READ_RECEIPT` for every paper actually analysed, conforming to `framework/protocols/fulltext_read_receipt.md`; the main session must persist it before closing. Capture `verbatim_locators` while the document is open: for every lead the reading carries out, what it is evidence *for*, the sentence quoted **verbatim**, and its position — section, figure or table. `framework/scripts/deepdive_manifest.py` refuses a `complete_fulltext_read` without them, and a discovery lead with no quote behind it is exactly the kind that cannot be defended later.
 
 ## When NOT to use it
 If the operator only wants to file a paper into the canonical system without the discovery hunt → `legend-deepdive`. If the source is not yet triaged → `legend-ingest` first.

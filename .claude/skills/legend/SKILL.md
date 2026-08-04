@@ -87,6 +87,8 @@ Before opening the paper, apply the duplicate-work gate in `framework/protocols/
 
 Every route that actually reads a full text must return a `FULLTEXT_READ_RECEIPT`. The autopilot/main session persists that receipt before it reports the paper as analysed or moves it out of reading debt. A read-only subagent returning a receipt is not enough until the caller persists it.
 
+**Verbatim locators are captured while the document is open, not recovered afterwards.** For every statement a reading carries out, record what it is evidence *for*, the sentence quoted **verbatim**, and its position — section, figure or table — in the work manifest under `verbatim_locators`. `framework/scripts/deepdive_manifest.py` refuses a `complete_fulltext_read` without them. A receipt attests that a document was read; it does not attest which sentence supports which statement, and on 2026-08-04 an export found that no verbatim locator existed anywhere in the canonical state. Waiving is legitimate with an argument; silence is not.
+
 Persist it with the executable — never by hand-editing the ledger, which would break its hash chain and halt the system:
 
 ```bash

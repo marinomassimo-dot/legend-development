@@ -25,6 +25,7 @@ TESTS = (
     "scripts/test_provenance_coverage.py",
     "scripts/test_release_runner_verdict.py",
     "scripts/test_guard_bash_command.py",
+    "scripts/test_locator_obligation_reaches_every_route.py",
     "scripts/test_release_surface.py",
     "scripts/test_structured_data_integrity.py",
     "scripts/test_external_manifest.py",

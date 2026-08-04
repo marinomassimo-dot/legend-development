@@ -56,6 +56,14 @@ After the dossier, return a `FULLTEXT_READ_RECEIPT` conforming to
 LEGEND state, the caller is responsible for persisting it. If any available section remains
 `not_read`, use `partial_fulltext_read`, never `complete_fulltext_read`.
 
+**Capture verbatim locators while the document is open.** For every extraction the dossier
+carries, record what it is evidence *for*, the sentence quoted **verbatim**, and its position
+— section, figure or table. They belong with the dossier so the caller can put them in the
+work manifest under `verbatim_locators`; `framework/scripts/deepdive_manifest.py` refuses a
+`complete_fulltext_read` without them. A receipt attests that a document was read; it does not
+attest which sentence supports which statement, and recovering a quote later costs the reading
+a second time.
+
 ## Hard rules
 - Faithful and neutral: report what the paper says, not what it implies for the reference genotype. No DATO/INFERENZA tags, no claim states, no clinical recommendations.
 - Never fabricate findings or fill gaps from prior knowledge. If the full text is unavailable, say so and stay at abstract level.

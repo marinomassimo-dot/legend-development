@@ -44,6 +44,29 @@ Results, Figures, Tables, Discussion, Limitations and Supplementary. Each value 
 not contain `not_read`. Only a conservative `legacy_reconstruction` may use `unknown_legacy`,
 and that state can never support `complete_fulltext_read`.
 
+### 🔴 A receipt attests reading. It does not attest quotation.
+
+**Capture the verbatim locator while the document is open.** For every statement the reading
+will carry out, record the exact sentence that supports it: what it is evidence *for*, the
+sentence quoted verbatim, and where in the source it sits — section, figure or table. They go
+in the work manifest under `verbatim_locators`, and
+[`deepdive_manifest.py`](../scripts/deepdive_manifest.py) refuses a `complete_fulltext_read`
+without them.
+
+**Reading and quoting are different facts, and the receipt only carries the first.** On
+**2026-08-04** an export to an external knowledge base found that **no verbatim locator
+existed anywhere in the canonical state**, across every complete read in this ledger.
+Fourteen had to be recovered afterwards from two already-read papers, reopening the files and
+issuing targeted receipts. The readings had recorded conclusions and not quotations.
+
+Seconds while the document is open; a second reading to recover. And a knowledge base that
+requires exact quotes — as DisMech does — cannot accept a conclusion without one, however
+carefully it was reached.
+
+If a reading supports no statement at all, waive the section with an argument. Waiving is
+legitimate; silence is not, and a waiver surfaces as `[DECLARED GAP]` in
+`session_self_eval.py`.
+
 ### 🔴 `captions_only` — because a caption is not its figure
 
 `read` on `figures` or `supplementary` means **the images were inspected**. When only captions

@@ -101,6 +101,13 @@ resume a partial read; repeat a complete read only with an explicit `reread_reas
 Retrieval, extraction, indexing, RAG queries and selected passages do not equal
 `complete_fulltext_read`. See `framework/protocols/fulltext_read_receipt.md`.
 
+**Capture the verbatim locator while the document is open.** For every statement the reading
+carries out, record what it is evidence for, the sentence quoted verbatim, and its position —
+section, figure or table — under `verbatim_locators` in the work manifest. A
+`complete_fulltext_read` is refused without them. The receipt attests that the document was
+read; it does not attest which sentence supports which statement, and those are different
+facts. A reading that supports no statement waives the section with an argument.
+
 ---
 
 ## 6. MAIN WORKFLOW
