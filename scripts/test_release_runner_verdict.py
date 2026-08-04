@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import importlib.util
 import io
+import shutil
 import subprocess
 import sys
 import tarfile
@@ -55,23 +56,10 @@ class ArchiveVerdictIntegrationTests(unittest.TestCase):
                 with tarfile.open(fileobj=io.BytesIO(completed.stdout), mode="r:") as archive:
                     archive.extractall(archive_root)
             else:
-                # We are already running from a legitimate source archive. Copy only
-                # the runner and its selected target, preserving the no-.git condition.
-                for relative in ("scripts/run_release_regressions.py", PROTOCOL_TEST,
-                                 "disease-models/wwox/analysis/scripts/dismech_independent_protocol.py",
-                                 "disease-models/wwox/analysis/scripts/derive_dismech_sidecar.py",
-                                 "disease-models/wwox/analysis/data/dismech_phase2_baseline.json",
-                                 "disease-models/wwox/analysis/data/dismech_blind_input_manifest.json",
-                                 "disease-models/wwox/analysis/data/dismech_blind_receipt_projection.jsonl",
-                                 "disease-models/wwox/analysis/data/dismech_canonicalisation_v1.json",
-                                 "disease-models/wwox/analysis/data/dismech_sidecar_016_024_035.jsonl",
-                                 "disease-models/wwox/analysis/dismech_blind_derivation_contract.md",
-                                 "disease-models/wwox/registries/claim_registry_current.md",
-                                 "disease-models/wwox/registries/paper_registry_current.md",
-                                 "disease-models/wwox/registries/fulltext_read_receipts.jsonl"):
-                    source, target = ROOT / relative, archive_root / relative
-                    target.parent.mkdir(parents=True, exist_ok=True)
-                    target.write_bytes(source.read_bytes())
+                # We are already running from a legitimate source archive. Copy its
+                # complete public surface, preserving the no-.git condition and avoiding
+                # a second, hand-maintained approximation of protocol dependencies.
+                shutil.copytree(ROOT, archive_root, dirs_exist_ok=True)
 
             result = subprocess.run(
                 [sys.executable, "scripts/run_release_regressions.py",
