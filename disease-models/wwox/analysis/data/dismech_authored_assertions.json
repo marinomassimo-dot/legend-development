@@ -57,7 +57,7 @@
       "outcome": "ATOMIZED",
       "occurrences": [
         {
-          "proposition": "The strongest direct WW2 engagement requires a short engineered linker",
+          "proposition": "The direct WW2 interaction grows stronger with a short engineered polyglycine linker than with the longer native one",
           "context": "comparison of native PY1PY2 against PY1PY2S with a polyglycine linker",
           "epistemic_type": "DATO",
           "evidence_relation": "SUPPORT",
@@ -163,21 +163,21 @@
       "outcome": "ATOMIZED",
       "occurrences": [
         {
-          "proposition": "WWOX inhibits Tau phosphorylation at S396 and S404 but not at the MKK4 site S422",
-          "context": "SH-SY5Y differentiated with retinoic acid; in vitro kinase assay",
+          "proposition": "WWOX inhibits Tau phosphorylation at S396 and S404 but not at the MKK4 site S422, and the GSK3beta-binding-deficient L404A does not",
+          "context": "SH-SY5Y differentiated with retinoic acid; in vitro kinase assay; WT WWOX compared with L404A",
           "epistemic_type": "DATO",
           "evidence_relation": "SUPPORT",
           "source_id": "PAPER 056",
-          "snippet": "Ectopically expressed WWOX significantly inhibited Tau phosphorylation at S404 and S396 but not S422.",
+          "snippet": "Ectopically expressed WWOX significantly inhibited Tau phosphorylation at S404 and S396 but not S422. However, this inhibition was diminished when WWOX L404A was used.",
           "source_anchor": "Results, in vitro kinase assay, Fig. 4c"
         },
         {
-          "proposition": "WWOX restores the ability of Tau to promote microtubule assembly, and the GSK3beta-binding-deficient L404A does not",
-          "context": "light-scattering microtubule assembly assay; WT WWOX compared with L404A",
+          "proposition": "WWOX restores the ability of Tau to promote microtubule assembly after GSK3beta has diminished it, and the GSK3beta-binding-deficient L404A does not",
+          "context": "light-scattering microtubule assembly assay; GSK3beta reduces assembly, WT WWOX compared with L404A",
           "epistemic_type": "DATO",
           "evidence_relation": "SUPPORT",
           "source_id": "PAPER 056",
-          "snippet": "In conclusion, our data demonstrated that WWOX could restore the ability of Tau to promote microtubule formation by inhibiting GSK3β activity.",
+          "snippet": "GSK3β diminished the microtubule assembly, as reflected by decreased turbidity. […] Interestingly, the GSK3β-binding deficient WWOX, WWOX L404A, could not restore the microtubule assembly activity.",
           "source_anchor": "Results, microtubule assembly assay, Fig. 5e"
         },
         {
