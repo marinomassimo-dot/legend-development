@@ -371,6 +371,27 @@ Within each shared anchor:
 The comparator never pairs by ordinal. It also refuses to force a pair merely to reduce the
 unmatched count. Every canonical candidate, ambiguity and unmatched occurrence is a review item.
 
+**The comparator's output is a queue, not a verdict.** On 2026-08-04 it reported zero matches
+and a blind human reviewer found ten `SAME` in the same set: the comparator measures wording,
+and wording is not meaning. A match count from this axis is never a result on its own.
+
+**Reviewer vocabulary.** The human step uses six values, and the sixth was missing on first
+use — a reviewer who judged that one proposition contains another could label the contained
+one but had no term for the container, and fell back on `DIFFERENT`. Three verdicts were that
+artefact.
+
+| Verdict | Meaning |
+|---|---|
+| `SAME` | The same fact, stated in different words |
+| `SUBSUMED` | Contained in a proposition on the other side that also says more |
+| `SUBSUMES` | Contains a proposition on the other side and says more |
+| `SPLIT` | Corresponds to two or more on the other side, taken together |
+| `DIFFERENT` | Not the same assertion, whatever the surface similarity |
+| `ABSENT` | No counterpart at this anchor |
+
+`SUBSUMED` and `SUBSUMES` must be used as a pair: labelling one without the other leaves a
+containment recorded as a disagreement.
+
 ### Axis 4 — deduplication
 
 Dedup partitions are compared only over unambiguous cross-run correspondences. For every pair of

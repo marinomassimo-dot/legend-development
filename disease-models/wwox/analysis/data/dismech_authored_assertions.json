@@ -57,12 +57,21 @@
       "outcome": "ATOMIZED",
       "occurrences": [
         {
-          "proposition": "The strongest direct WW2 engagement requires a short engineered linker; the native ErbB4 PY1PY2 linker gives a weaker interaction",
+          "proposition": "The strongest direct WW2 engagement requires a short engineered linker",
           "context": "comparison of native PY1PY2 against PY1PY2S with a polyglycine linker",
           "epistemic_type": "DATO",
           "evidence_relation": "SUPPORT",
           "source_id": "PAPER 055",
           "snippet": "To some extent, this is due to the longer native linker connecting PY1 and PY2, since the interaction grew stronger when a shorter flexible non-native polyglycine linker (similar to the one in the other two double-motif peptides) was used",
+          "source_anchor": "Results, double-motif peptide titrations, Fig. 5"
+        },
+        {
+          "proposition": "Native ErbB4 PY1PY2 remains predominantly bound through WW1, unlike the engineered short-linker peptides",
+          "context": "NMR chemical-shift perturbation pattern on WW2, native PY1PY2 against engineered double-motif peptides",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 055",
+          "snippet": "In contrast, the WW2 CSP pattern distinguished between native sequence PY1PY2, reminiscent of PY3, and PY1PY2S (poly G linker), PY1PY3, and PY3PY3 for which large WW2 CSPs suggest a strong interaction with this domain as well.",
           "source_anchor": "Results, double-motif peptide titrations, Fig. 5"
         }
       ]
@@ -161,6 +170,24 @@
           "source_id": "PAPER 056",
           "snippet": "Ectopically expressed WWOX significantly inhibited Tau phosphorylation at S404 and S396 but not S422.",
           "source_anchor": "Results, in vitro kinase assay, Fig. 4c"
+        },
+        {
+          "proposition": "WWOX restores the ability of Tau to promote microtubule assembly, and the GSK3beta-binding-deficient L404A does not",
+          "context": "light-scattering microtubule assembly assay; WT WWOX compared with L404A",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 056",
+          "snippet": "In conclusion, our data demonstrated that WWOX could restore the ability of Tau to promote microtubule formation by inhibiting GSK3β activity.",
+          "source_anchor": "Results, microtubule assembly assay, Fig. 5e"
+        },
+        {
+          "proposition": "WWOX promotes retinoic-acid-induced differentiation of SH-SY5Y cells, and the L404A mutation abolishes the increase",
+          "context": "SH-SY5Y differentiation under retinoic acid; WT WWOX compared with L404A",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 056",
+          "snippet": "WWOX significantly increased the percentage of differentiated SH-SY5Y cells. However, this increase was abolished when L404 was mutated to alanine.",
+          "source_anchor": "Results, differentiation assay, Fig. 5f-g"
         }
       ]
     },
@@ -188,8 +215,8 @@
       "outcome": "ATOMIZED",
       "occurrences": [
         {
-          "proposition": "Phospho-GSK3beta-S9 is unchanged while GSK3beta output falls",
-          "context": "observed under retinoic-acid-induced differentiation, not inside the WWOX-inhibition experiment",
+          "proposition": "Phospho-GSK3beta-S9 is unchanged while Tau phosphorylation at S396 and S404 falls",
+          "context": "observed under retinoic-acid-induced differentiation, not inside the WWOX-inhibition experiment. Earlier wording said 'GSK3beta output falls', which abstracts a measured fall in Tau phosphorylation into a statement about kinase output; a blind reviewer flagged it as an interpretation and it is restated to what the source measures",
           "epistemic_type": "DATO",
           "evidence_relation": "PARTIAL",
           "source_id": "PAPER 056",

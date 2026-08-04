@@ -124,18 +124,43 @@ automatically right — some of its extras may over-split, and the comparison ca
 What is established is narrower and firmer: **at one anchor the reference derivation
 collapsed three coordinated assertions into one, and two findings were lost by it.**
 
+## Repairs applied, same day
+
+Anchor 8 was not the only under-split. A scan of every reference anchor by span length per
+occurrence found two more, one of which the blind reviewer had independently flagged as
+`SPLIT`.
+
+| Anchor | Was | Now | Added |
+|---|---:|---:|---|
+| `CLAIM 035 \| Summary \| sent[1]` | 1 | **3** | microtubule-assembly rescue (Fig. 5e) · RA-induced differentiation and its loss in L404A (Fig. 5f–g) |
+| `CLAIM 024 \| Precisazione \| sent[1]` | 1 | **2** | native ErbB4 PY1PY2 stays predominantly WW1-bound (Fig. 5) |
+
+Both new assertions in CLAIM 035 carry verbatim locators from PAPER 056, which was already
+read and receipted; no new reading was required, only quotation.
+
+The `GSK3β output falls` proposition is restated to what the source measures — *"phospho-S9
+unchanged while Tau phosphorylation at S396 and S404 falls"* — and the context field records
+why, so the abstraction is not silently reintroduced.
+
+**The correction is confirmed by the measurement that found it.** Split agreement against the
+independent derivation moved from **7 of 11 to 9 of 11**. Applying rule 4 moved the reference
+toward a reader who had never seen it — which is the only kind of evidence that a repair was
+right rather than merely different.
+
+Sidecar: 19 → 22 occurrences, 14 → 17 `ELIGIBLE_FOR_EXPORT`, 13 → 16 evidence assertions.
+
+`SUBSUMES` is added to the reviewer vocabulary in the design, paired with `SUBSUMED`.
+
 ## Next
 
-1. Re-derive `CLAIM 035 | Summary | sent[1]` at the correct granularity — three assertions,
-   with locators for each. The two missing ones need quotes from PAPER 056, which is already
-   read and receipted.
-2. Re-examine every reference anchor whose sentence contains a coordinating conjunction;
-   anchor 8 is unlikely to be the only one.
-3. Add `SUBSUMES` to the verdict vocabulary.
-4. Reconsider the `GSK3β output falls` proposition: either restate it as the measured fall
-   in Tau S396/S404 phosphorylation, or mark the abstraction as the inference it is.
-5. Axis 4 becomes measurable for the first time — there is now a non-empty correspondence
-   set — but only over the 10 `SAME` pairs, which is a small universe. Do it after step 1.
+1. Axis 4 is now measurable — a non-empty correspondence set exists — but over ten `SAME`
+   pairs, which is a small universe. Worth running, not worth concluding much from.
+2. The two remaining borderline long spans (`CLAIM 024 | Summary | sent[2]`,
+   `CLAIM 035 | Clinical meaning | sent[2]`) each fuse a prescription with a mechanism. They
+   are arguable, and were left alone rather than split on a rule that does not clearly cover
+   them — which is itself a gap in rule 4.
+3. A second blind reviewer on the corrected set would test whether 9 of 11 holds, or whether
+   the repair traded one under-split for an over-split.
 
 ## Raw reply
 
