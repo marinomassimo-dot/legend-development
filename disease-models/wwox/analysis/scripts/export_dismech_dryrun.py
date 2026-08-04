@@ -46,7 +46,33 @@ TARGETS = {
 # Which target an occurrence's evidence speaks to. Authored, because it is a judgement:
 # a molecular finding about WWOX is not automatically a finding about either disorder.
 # Empty means "not assigned to a disease entry", and that is a reportable outcome.
-CLAIM_TARGETS = {"016": ["MONDO:0014533"], "024": [], "035": []}
+#
+# All three claims route to BOTH entries. The justification is this repository's own
+# CLAIM 008 and CLAIM 017, both `consolidated baseline` / `DATO`: WOREE and SCAR12 form one
+# genotype-phenotype spectrum, severe to milder, and CLAIM 030 adds that severity tracks
+# residual protein FUNCTION rather than abundance. A finding about how WWOX works therefore
+# describes the mechanism of both ends of one spectrum, not of one disorder.
+#
+# The two entries differ in phenotype and severity, not in mechanism — which is why the
+# molecular nodes are shared and the clinical content is not.
+#
+# 🔴 The claim that licenses this routing is itself NOT exportable. CLAIM 008 and CLAIM 017
+# have no source with a complete-read receipt, so they terminate in ELIGIBILITY_DEBT. The
+# reason we may place a node on both entries is a claim we cannot yet put in either.
+CLAIM_TARGETS = {"016": ["MONDO:0014533", "MONDO:0013687"],
+                 "024": ["MONDO:0014533", "MONDO:0013687"],
+                 "035": ["MONDO:0014533", "MONDO:0013687"]}
+ROUTING_JUSTIFICATION = {
+    "decision": "molecular WWOX findings route to both disease entries",
+    "basis": ["CLAIM 008 (consolidated baseline, DATO): WOREE and SCAR12 form a "
+              "genotype-phenotype spectrum",
+              "CLAIM 017 (consolidated baseline, DATO): the disease spans severe "
+              "WOREE/WWOX-DEE to milder SCAR12-like phenotypes",
+              "CLAIM 030 (in observation): severity tracks residual protein function"],
+    "basis_is_exportable": False,
+    "basis_blocked_by": "no source of CLAIM 008 or CLAIM 017 carries a complete-read receipt",
+    "consequence": "the routing is a curation judgement recorded here, not an asserted node",
+}
 
 RELATION_TO_SUPPORTS = {"SUPPORT": "SUPPORT", "PARTIAL": "PARTIAL", "REFUTE": "REFUTE"}
 TYPE_TO_RELATION = {"DATO": {"SUPPORT", "PARTIAL"}, "INFERENZA": {"PARTIAL"}}
@@ -174,6 +200,7 @@ def build(records: list[dict]) -> tuple[dict, list[dict]]:
         "evidence_assertions": len(groups),
         "node_evidence_attachments": attachments,
         "unassigned_to_any_disease_entry": unassigned,
+        "routing_justification": ROUTING_JUSTIFICATION,
         "ledger_a_losses": Counter(l["state"] for l in losses if l["kind"] == "ledger_a"),
         "ledger_b_losses": Counter(l["state"] for l in losses if l["kind"] == "ledger_b"),
         "losses": losses,

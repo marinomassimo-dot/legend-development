@@ -143,18 +143,52 @@ class OutputDiscipline(unittest.TestCase):
 
 
 class HonestEmptiness(unittest.TestCase):
-    def test_an_entry_with_no_evidence_is_emitted_empty_not_omitted(self) -> None:
-        """A disease that received nothing must be visible as a gap."""
-        built, _ = exporter.build(exporter.load(exporter.SIDECAR))
+    """These test the behaviour, not the current routing.
+
+    An earlier version asserted that SCAR12 was empty and that assertions were unassigned.
+    Both were true of the data at the time and neither was a rule; when the routing changed
+    on evidence, the tests failed for the wrong reason. A test that breaks when data
+    legitimately changes was testing the data.
+    """
+
+    def test_every_declared_target_appears_even_with_no_nodes(self) -> None:
+        """A disease that receives nothing must be visible as a gap, not omitted."""
+        original = exporter.CLAIM_TARGETS
+        exporter.CLAIM_TARGETS = {k: ["MONDO:0014533"] for k in original}
+        try:
+            built, _ = exporter.build(exporter.load(exporter.SIDECAR))
+        finally:
+            exporter.CLAIM_TARGETS = original
         self.assertIn("MONDO:0013687", built["entries"])
         self.assertEqual(built["entries"]["MONDO:0013687"]["pathophysiology"], [])
 
     def test_unassigned_assertions_are_reported_not_dropped(self) -> None:
-        built, _ = exporter.build(exporter.load(exporter.SIDECAR))
+        original = exporter.CLAIM_TARGETS
+        exporter.CLAIM_TARGETS = {k: [] for k in original}
+        try:
+            built, _ = exporter.build(exporter.load(exporter.SIDECAR))
+        finally:
+            exporter.CLAIM_TARGETS = original
         unassigned = built["report"]["unassigned_to_any_disease_entry"]
-        self.assertTrue(unassigned, "molecular assertions with no disease target must surface")
+        self.assertTrue(unassigned, "assertions with no disease target must surface")
+        self.assertEqual(sum(len(e["pathophysiology"]) for e in built["entries"].values()), 0)
         for row in unassigned:
             self.assertTrue(row["originating_claim_ids"])
+
+    def test_routing_records_that_its_own_basis_is_not_exportable(self) -> None:
+        """The claim licensing the routing is itself in eligibility debt; say so."""
+        built, _ = exporter.build(exporter.load(exporter.SIDECAR))
+        justification = built["report"]["routing_justification"]
+        self.assertFalse(justification["basis_is_exportable"])
+        self.assertTrue(justification["basis_blocked_by"])
+        self.assertTrue(any("CLAIM 008" in b for b in justification["basis"]))
+
+    def test_attachments_are_counted_separately_from_assertions(self) -> None:
+        """A shared proposition attaches once per entry; the two counts must not be equated."""
+        built, _ = exporter.build(exporter.load(exporter.SIDECAR))
+        report = built["report"]
+        emitted = sum(len(e["pathophysiology"]) for e in built["entries"].values())
+        self.assertEqual(report["node_evidence_attachments"], emitted)
 
 
 if __name__ == "__main__":

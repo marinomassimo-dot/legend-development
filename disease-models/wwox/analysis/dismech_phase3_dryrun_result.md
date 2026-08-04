@@ -13,37 +13,57 @@
 ## What came out
 
 ```
-occurrences 22 · eligible 17 · evidence assertions 16 · attachments 2
-MONDO:0014533 (WOREE/DEE28):  2 pathophysiology nodes
-MONDO:0013687 (SCAR12):       0 pathophysiology nodes
-unassigned to any disease entry: 14
+occurrences 22 · eligible 17 · evidence assertions 16 · attachments 32
+MONDO:0014533 (WOREE/DEE28):  16 pathophysiology nodes
+MONDO:0013687 (SCAR12):       16 pathophysiology nodes
+unassigned to any disease entry: 0
 losses — Ledger A {SOURCE_SUPPORT_NOT_FOUND: 3, ELIGIBILITY_DEBT: 2} · Ledger B {SCHEMA_LOSS: 8}
 ```
 
-Seventeen occurrences pass every gate. **Two nodes are emitted.** The gap between those two
-numbers is the finding.
+### The first run emitted two nodes, and that was the finding
 
-## The finding: a claim about a gene is not a claim about a disease
+Before the disease attribution was made, fourteen of sixteen evidence assertions had no
+target and the exporter reported them rather than placing them somewhere plausible. They are
+statements like *"L404 is strictly required for the WWOX–GSK3β interaction"* — verified,
+locator-backed, eligible, and not by themselves statements about the pathophysiology of
+either disorder.
 
-Fourteen of the sixteen evidence assertions were not assigned to either disorder, and the
-exporter reports them rather than placing them somewhere plausible.
+Nothing in the pipeline supplied that bridge. The sidecar decomposes claims about a **gene**;
+a DisMech entry is about a **disease**. That judgement had never been asked of anyone — not
+the derivation, not the independent run, not the two blind reviewers.
 
-They are statements like *"L404 is strictly required for the WWOX–GSK3β interaction"* and
-*"WW2 engages a second PPxY motif when the topology is compatible"*. Every one is verified,
-locator-backed, and eligible. None of them is, by itself, a statement about the
-pathophysiology of WOREE or of SCAR12.
+### The attribution, and where it comes from
 
-**Nothing in the pipeline supplies that bridge.** The sidecar decomposes claims about WWOX;
-a DisMech entry is about a disease. Deciding that a molecular finding belongs in a disorder's
-pathophysiology is a curation judgement, and no one has made it — not the derivation, not
-the independent run, not the two blind reviewers, none of whom were ever asked.
+WOREE and SCAR12 are one genotype-phenotype spectrum: severe toward null/null and total loss
+of function, milder at SCAR12, which is still severe and differs by a few motor milestones
+rather than by mechanism. This repository already asserts it:
 
-So the honest state is: **the export machinery works and the content is not yet
-disease-attributed.** That is a better outcome than two well-formed entries would have been,
-because well-formed entries would have hidden the same gap behind plausible YAML.
+| Claim | Status | |
+|---|---|---|
+| **CLAIM 008** | `consolidated baseline` · `DATO` | WOREE and SCAR12 form a genotype-phenotype spectrum |
+| **CLAIM 017** | `consolidated baseline` · `DATO` | the disease spans severe WOREE/WWOX-DEE to milder SCAR12-like phenotypes |
+| CLAIM 030 | `in observation` | severity tracks residual protein **function**, not abundance |
 
-**SCAR12 receives nothing**, and the file is emitted empty rather than omitted, so the gap is
-visible in the output instead of inferable from its absence.
+A finding about how WWOX works therefore describes the mechanism of both ends of one
+spectrum. **The two entries differ in phenotype and severity, not in mechanism** — which is
+exactly why the molecular nodes are shared and the clinical content is not. All sixteen
+assertions now route to both entries: 32 attachments from 16 assertions.
+
+### 🔴 The claim that licenses the routing cannot itself be exported
+
+Neither CLAIM 008 nor CLAIM 017 has a source with a complete-read receipt. Both terminate in
+`ELIGIBILITY_DEBT`. **The reason we may place a node on both entries is a claim we cannot yet
+put in either.**
+
+The routing is therefore recorded in the loss report as a curation judgement with its basis
+named and its basis's ineligibility declared, rather than emitted as an asserted node. A
+regression asserts that the report says so.
+
+This also settles a question left open in the specification. §10 recommended entry-local
+nodes over a shared module *"because no proposition meets all three conditions"*. Condition
+(ii) — holds for both disorders without weakening — is now met on this evidence. Condition
+(i) — supported by an assertion passing §5 — is not, and will not be until CLAIM 008 or 017
+is read to receipt. **The shared module has a rationale and still lacks its evidence.**
 
 ## What the exporter refuses to do, verified
 
@@ -77,14 +97,15 @@ anchor, and the link basis in both directions.
 
 ## Next
 
-1. **Decide the disease attribution.** For each of the fourteen, does it belong in the
-   pathophysiology of WOREE, of SCAR12, of both, or of neither? This is the judgement the
-   whole pipeline has been deferring, and it cannot be automated.
-2. Only two claims of thirty-five are represented here. The PoC scope was always three
-   claims; a submittable entry needs the rest of the model to clear the same gates.
-3. Phase 4 — running DisMech's own validators against the emitted YAML — is now possible for
-   the first time, and would test the field mapping against the real schema rather than
-   against our reading of it.
+1. **Read CLAIM 008 or CLAIM 017 to receipt.** It is the shortest path to two things at once:
+   the spectrum becomes exportable, and §10's shared module gains the evidence it lacks. One
+   paper, already in the registry, and the reading debt is the only thing in the way.
+2. Only three claims of thirty-five are represented. A submittable entry needs the rest of
+   the model through the same gates — and the locator requirement now in the deep-dive
+   contract means new readings will arrive export-ready rather than needing retrofit.
+3. Phase 4 — running DisMech's own validators against the emitted YAML — is now possible and
+   would test the field mapping against the real schema rather than against our reading of
+   it. Sixteen nodes per entry is enough material for that test to mean something.
 
 ## Related
 
