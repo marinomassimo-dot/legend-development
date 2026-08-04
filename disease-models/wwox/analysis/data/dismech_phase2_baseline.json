@@ -1,6 +1,6 @@
 {
-  "frozen_at": "2026-08-04T14:38:15Z",
-  "git_head_at_freeze": "6d428905252fd0ab45286dae03402e800809f89c",
+  "frozen_at": "2026-08-04T15:49:55Z",
+  "git_head_at_freeze": "4c0173c4c1e28e17208f62a33e6a113b1af22084",
   "git_verification_policy": "baseline bytes must match HEAD; every declared input and output must match git_head_at_freeze:path via git cat-file; freeze commit must be an ancestor of HEAD",
   "inputs": {
     "authored_assertions": {
@@ -9,7 +9,7 @@
     },
     "blind_derivation_contract": {
       "path": "disease-models/wwox/analysis/dismech_blind_derivation_contract.md",
-      "sha256": "d6601bda9eceedc08ec211e5944652847443f0ffd042a6c0aff8793f8011700e"
+      "sha256": "a9cbe178c7d9072e844b81cc5a0535dfaba89e216fca0da2b9caef228d5bf283"
     },
     "blind_input_manifest": {
       "path": "disease-models/wwox/analysis/data/dismech_blind_input_manifest.json",
@@ -25,7 +25,7 @@
     },
     "derivation_script": {
       "path": "disease-models/wwox/analysis/scripts/derive_dismech_sidecar.py",
-      "sha256": "169075296c2513bc40dd97734621e7e0c648e4f5fbacffdb833217bae39bea26"
+      "sha256": "dd42be987c61b3e2af96862a0147a0e8398e32cff509d06fad646dfd29462c04"
     },
     "independent_authored_output": {
       "path": "disease-models/wwox/analysis/data/dismech_second_derivation_authored_016_024_035.jsonl",
@@ -61,7 +61,7 @@
     },
     "test_suite": {
       "path": "disease-models/wwox/analysis/scripts/test_derive_dismech_sidecar.py",
-      "sha256": "ba6095ee02e4474d77cfe0c3c93a872bc07bfc65a17ac4ef25e5a5c4d6ebdc2c"
+      "sha256": "19b537f45882fb2e5d63adf90563dc0c4fa10ff033a2d5ad508e75ad3fc5c153"
     }
   },
   "invariants": {
@@ -99,7 +99,7 @@
   "output": {
     "path": "disease-models/wwox/analysis/data/dismech_sidecar_016_024_035.jsonl",
     "records": 49,
-    "sha256": "a19ea4c67c743c7e2ed29ea214d7dffd0d5e2f68c47c05753361594c5369170a"
+    "sha256": "92145b31ea937069c04cd89ca00b42711b4d56ba0a66d34271166031a6d86ccc"
   },
-  "revision": "rev.12 (authored table externalised; independent run archived)"
+  "revision": "rev.7 (anchor ordinal base declared)"
 }
