@@ -735,6 +735,17 @@ def compare_derivations(baseline_path: Path, second_path: Path,
     # Cross-run occurrence correspondence is defined only by unambiguous semantic matches.
     left_lookup = {r["occurrence_id"]: r for r in left}
     right_lookup = {r["occurrence_id"]: r for r in right}
+    structural_id_collisions = []
+    for occurrence_id in sorted(set(left_lookup) & set(right_lookup)):
+        first, second = left_lookup[occurrence_id], right_lookup[occurrence_id]
+        if _text_key(first) != _text_key(second):
+            structural_id_collisions.append({
+                "occurrence_id": occurrence_id,
+                "baseline_anchor": _anchor(first),
+                "second_anchor": _anchor(second),
+                "baseline_content_fingerprint": first.get("content_fingerprint"),
+                "second_content_fingerprint": second.get("content_fingerprint"),
+            })
     production_disagreements = []
     canonical_disagreements = []
     for i, first in enumerate(all_matches):
@@ -762,10 +773,13 @@ def compare_derivations(baseline_path: Path, second_path: Path,
         "second_unmatched": [{"occurrence_id": r["occurrence_id"], "anchor": _anchor(r),
                               "proposition": r.get("proposition"), "context": r.get("context")}
                              for r in unmatched_right],
+        "structural_id_content_collisions": structural_id_collisions,
         "ordinal_used_as_join_key": False,
     }
     report["axis_4_deduplication"] = {
         "comparison_universe": "unambiguous cross-run matches only",
+        "measurement_status": (
+            "MEASURED" if all_matches else "NOT_MEASURABLE_EMPTY_CORRESPONDENCE"),
         "production_partition_disagreements": production_disagreements,
         "canonical_candidate_partition_disagreements": canonical_disagreements,
         "production_key_modified": False,
@@ -775,7 +789,7 @@ def compare_derivations(baseline_path: Path, second_path: Path,
         or report["axis_1_anchor_selection"]["second_only"]
         or all_ambiguous or unmatched_left or unmatched_right
         or any(m["band"] == "CANONICAL_CANDIDATE" for m in all_matches)
-        or production_disagreements or canonical_disagreements)
+        or structural_id_collisions or production_disagreements or canonical_disagreements)
     return report
 
 

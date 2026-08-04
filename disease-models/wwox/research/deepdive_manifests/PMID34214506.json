@@ -34,9 +34,9 @@
   },
   "multihop": {
     "gene_direct_refs_in_source": [
-      "ref 38 \u2014 activated WWOX in degenerating photoreceptors, light-induced damage and rd mice",
-      "ref 39 \u2014 O'Keefe 2011, Drosophila WWOX orthologue, aerobic metabolism and oxidative stress",
-      "ref 87 \u2014 WWOX binds IkBa and modulates NF-kB"
+      "ref 38 — activated WWOX in degenerating photoreceptors, light-induced damage and rd mice",
+      "ref 39 — O'Keefe 2011, Drosophila WWOX orthologue, aerobic metabolism and oxidative stress",
+      "ref 87 — WWOX binds IkBa and modulates NF-kB"
     ],
     "resolved": [],
     "queued": [
@@ -44,7 +44,7 @@
     ],
     "note": "NOT DONE during the run. All three are WWOX-direct and cited inside a source that was read cover to cover. Ref 87 underpins the transcriptional alternative on which DIS-008 rests, so the rejection currently stands on a source not read at first hand. Declared debt, not a closed step.",
     "references_enumerated": 87,
-    "references_enumerated_basis": "Europe PMC references endpoint for PMID 34214506; the PMC JATS deposit for PMC8579242 exposes no parseable <ref> elements, so the count comes from Europe PMC rather than the article XML. Backfilled by the PMID 22193544 session for schema compliance \u2014 the originating session owns any refinement."
+    "references_enumerated_basis": "Europe PMC references endpoint for PMID 34214506; the PMC JATS deposit for PMC8579242 exposes no parseable <ref> elements, so the count comes from Europe PMC rather than the article XML. Backfilled by the PMID 22193544 session for schema compliance — the originating session owns any refinement."
   },
   "corpus_crossquery": {
     "query": "calpain across disease-models/wwox/",
@@ -89,7 +89,7 @@
     {
       "skill": "research-group-analyst",
       "used": false,
-      "reason": "Skipped during the run \u2014 the omission that motivated this whole manifest. Performed manually afterwards; the agent itself was never invoked and its knowledge base is not shipped in this edition."
+      "reason": "Skipped during the run — the omission that motivated this whole manifest. Performed manually afterwards; the agent itself was never invoked and its knowledge base is not shipped in this edition."
     },
     {
       "skill": "legend-discovery",
@@ -126,5 +126,8 @@
       "used": false,
       "reason": "Correctly not invoked: one commit candidate is below the five-candidate threshold and no weekly or urgent trigger fired."
     }
-  ]
+  ],
+  "verbatim_locators": {
+    "waived": "locators were not captured at reading time: this reading predates the requirement, introduced 2026-08-04 after an external export found that no verbatim locator existed anywhere in the canonical state. Extraction from the retained artefact is queued and does not require re-reading; the debt is declared here rather than left silent."
+  }
 }

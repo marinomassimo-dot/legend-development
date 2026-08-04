@@ -113,6 +113,33 @@ Per ogni paper importante devi sempre indicare:
 - **Evidence depth:** full text reviewed / partial full text / abstract-only
 - **Full text status:** found / not found / user upload needed
 
+### 4.5 Locator verbatim (obbligatorio dal 2026-08-04)
+
+**Mentre il documento è aperto**, per ogni affermazione che porterai fuori dalla lettura,
+registra la frase esatta che la sostiene:
+
+| Campo | Cosa contiene |
+|---|---|
+| `proposition` | che cosa la citazione sostiene — se non lo sai dire, la citazione è decorativa |
+| `snippet` | la frase **verbatim** dalla fonte, minimo 30 caratteri |
+| `anchor` | dove si trova: sezione, figura o tabella |
+
+Vanno nel work manifest, sezione `verbatim_locators`, e sono validati da
+[`deepdive_manifest.py`](../scripts/deepdive_manifest.py).
+
+> 🔴 **Perché è obbligatorio.** Un receipt attesta che il documento è stato **letto per
+> intero**. Non attesta *quale frase sostiene quale affermazione* — sono due fatti diversi.
+> Il 2026-08-04 un export verso una knowledge base esterna ha trovato che **nessun locator
+> verbatim esisteva in tutto lo stato canonico**, per nessuna delle letture complete a
+> ledger: quattordici sono stati recuperati a posteriori da due paper già letti, riaprendo i
+> file e emettendo receipt mirati. Catturare la frase mentre il documento è aperto costa
+> secondi; recuperarla dopo costa la lettura una seconda volta.
+
+Se la lettura non sostiene alcuna affermazione — letta per trasferimento di metodo, o
+atterrata solo nel discovery ledger — si usa il waiver, che richiede un argomento di almeno
+40 caratteri. Il waiver è legittimo; il silenzio no, e compare come `[DECLARED GAP]` in
+`session_self_eval.py`.
+
 ---
 
 ## 5. LETTURA PROFONDA OBBLIGATORIA

@@ -464,6 +464,19 @@ class CrossRunMatchingTests(unittest.TestCase):
         unmatched = report["axis_3_proposition_correspondence"]["second_unmatched"]
         self.assertEqual([row["occurrence_id"] for row in unmatched], ["extra"])
 
+    def test_same_structural_id_with_different_content_is_explicit(self) -> None:
+        report = self._compare(
+            [occurrence("shared", "WWOX binds GSK3β", 0)],
+            [occurrence("shared", "L404 is required", 0)])
+        axis3 = report["axis_3_proposition_correspondence"]
+        self.assertEqual(
+            [row["occurrence_id"] for row in axis3["structural_id_content_collisions"]],
+            ["shared"])
+        self.assertEqual(
+            report["axis_4_deduplication"]["measurement_status"],
+            "NOT_MEASURABLE_EMPTY_CORRESPONDENCE")
+        self.assertTrue(report["review_required"])
+
     def test_dedup_partition_uses_only_unambiguous_correspondence(self) -> None:
         left = [occurrence("b1", "p1", 0, dedup_key="same"),
                 occurrence("b2", "p2", 1, dedup_key="same")]
@@ -472,6 +485,7 @@ class CrossRunMatchingTests(unittest.TestCase):
         report = self._compare(left, right)
         axis4 = report["axis_4_deduplication"]
         self.assertEqual(axis4["comparison_universe"], "unambiguous cross-run matches only")
+        self.assertEqual(axis4["measurement_status"], "MEASURED")
         self.assertEqual(len(axis4["production_partition_disagreements"]), 1)
         self.assertFalse(axis4["production_key_modified"])
 

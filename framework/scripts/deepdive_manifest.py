@@ -39,7 +39,13 @@ MANIFEST_DIR = "disease-models/{disease}/research/deepdive_manifests"
 MIN_WAIVER_CHARS = 40
 MIN_REASON_CHARS = 20
 
-SECTIONS = ("group_assessment", "field_density", "multihop", "corpus_crossquery", "retraction_check")
+SECTIONS = ("group_assessment", "field_density", "multihop", "corpus_crossquery",
+            "retraction_check", "verbatim_locators")
+
+# A quote shorter than this is not a locator, it is a gesture at one. The threshold is
+# deliberately low: the cost of recording a real sentence during a reading is seconds,
+# and the cost of recovering it afterwards is re-opening the PDF.
+MIN_SNIPPET_CHARS = 30
 # What kind of evidence the group can produce, read off the Methods rather than the journal.
 # A descriptive series and a wet-lab mechanism are not interchangeable support for the same
 # claim, and this is a separate axis from how many papers the group has on the gene.
@@ -175,6 +181,45 @@ def validate(manifest: Any) -> tuple[list[str], list[str]]:
             errors.append("corpus_crossquery.hits: must be an integer")
         if not str(cross.get("query", "")).strip():
             errors.append("corpus_crossquery.query: name what was asked of the existing corpus")
+
+    # A receipt attests that a document was read in full. It does not attest which sentence
+    # supports which statement, and those are different facts. On 2026-08-04 an export to an
+    # external knowledge base found that **no verbatim locator existed anywhere in the
+    # canonical state**, across every complete read in the ledger: fourteen had to be
+    # retro-extracted from two already-read papers, with targeted receipts, because the
+    # reading had recorded conclusions and not quotations. Capturing the sentence while the
+    # document is open costs seconds; recovering it later costs the reading again.
+    locators = manifest["verbatim_locators"]
+    if not _waived(locators, "verbatim_locators", errors):
+        entries = locators.get("entries")
+        if not isinstance(entries, list) or not entries:
+            errors.append(
+                "verbatim_locators.entries: record at least one verbatim quote with the "
+                "proposition it supports — or waive the section with an argument if the "
+                "reading supports no proposition at all"
+            )
+        else:
+            for position, entry in enumerate(entries, 1):
+                if not isinstance(entry, dict):
+                    errors.append(f"verbatim_locators.entries[{position}]: must be an object")
+                    continue
+                if not str(entry.get("proposition", "")).strip():
+                    errors.append(
+                        f"verbatim_locators.entries[{position}].proposition: name what this "
+                        "quote is evidence FOR — a quote with no proposition is decoration"
+                    )
+                snippet = str(entry.get("snippet", "")).strip()
+                if len(snippet) < MIN_SNIPPET_CHARS:
+                    errors.append(
+                        f"verbatim_locators.entries[{position}].snippet: quote the source "
+                        f"verbatim, at least {MIN_SNIPPET_CHARS} characters"
+                    )
+                if not str(entry.get("anchor", "")).strip():
+                    errors.append(
+                        f"verbatim_locators.entries[{position}].anchor: state where in the "
+                        "source it is — section, figure or table. A quote nobody can find "
+                        "again is not verifiable"
+                    )
 
     retraction = manifest["retraction_check"]
     if not _waived(retraction, "retraction_check", errors):

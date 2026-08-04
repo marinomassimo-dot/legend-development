@@ -43,6 +43,7 @@ TESTS = (
     "framework/scripts/test_pubmed_clipboard_to_seed.py",
     "framework/scripts/test_fulltext_receipts.py",
     "framework/scripts/test_session_self_eval.py",
+    "framework/scripts/test_deepdive_manifest.py",
     ".claude/skills/legend-study-intake-triage/scripts/"
     "test_study_dedup_triage.py",
     ".claude/skills/legend-batch-inferential-sweep/scripts/"

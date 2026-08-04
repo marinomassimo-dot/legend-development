@@ -1,0 +1,384 @@
+{
+  "schema": "dismech-authored-assertions-v1",
+  "note": "Authored judgement for the Phase-2 sidecar: which registry text becomes an assertion, how it is split, and the verbatim locator for each. Everything else — identifiers, keys, grouping, terminal states — is computed by the derivation script from the registries and the receipt ledger. This file is the part that requires a reader; it is kept outside the code so that adding claims is data entry, not editing a Python literal.",
+  "artefact_path": {
+    "PAPER 055": "files/fulltext/PMID35716775_Rotem-Bamberger2022.pdf",
+    "PAPER 056": "files/fulltext/PMID22193544_Wang2012_PMC_JATS.xml",
+    "PAPER 019": null
+  },
+  "candidates": [
+    {
+      "claim_id": "024",
+      "field_label": "Summary",
+      "sentence": 0,
+      "outcome": "ATOMIZED",
+      "occurrences": [
+        {
+          "proposition": "WW2 lacks significant inherent affinity for the ErbB4 PY3 motif, yet the tandem domain binds PY3 more strongly than isolated WW1 (30 vs 78 uM)",
+          "context": "purified human WWOX WW fragments and synthetic ErbB4 peptides; no full-length protein, no cell, no animal",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 055",
+          "snippet": "despite the fact that WW2 lacks significant inherent affinity to PY3, the stabilized WWOX tandem domain binds the ErbB4 PY3 substrate with stronger affinity than an isolated WW1 domain (30 versus 78 μM",
+          "source_anchor": "Discussion, 'WW2 stabilizes the partially unfolded WW1 domain'"
+        },
+        {
+          "proposition": "WW2 stabilises the otherwise unstable WW1 domain",
+          "context": "urea denaturation and CD/NMR on isolated versus tandem WW domains",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 055",
+          "snippet": "Monitoring tryptophan fluorescence changes in urea denaturation experiments showed that WW1 is structured only within the context of the WW1 – WW2 tandem domain, but not in its isolated form, indicating significant stabilization of WW1 by WW2",
+          "source_anchor": "Results, 'WWOX domain WW1 is stabilized by domain WW2', Fig. 2"
+        }
+      ]
+    },
+    {
+      "claim_id": "024",
+      "field_label": "Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)",
+      "sentence": 0,
+      "outcome": "ATOMIZED",
+      "occurrences": [
+        {
+          "proposition": "WW2 engages a second PPxY motif directly when sequence, spacing, linker and orientation create a compatible topology",
+          "context": "NMR CSP titrations of the tandem domain with native and engineered double-motif peptides",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 055",
+          "snippet": "the WW2 CSP pattern distinguished between native sequence PY1PY2, reminiscent of PY3, and PY1PY2S (poly G linker), PY1PY3, and PY3PY3 for which large WW2 CSPs suggest a strong interaction with this domain as well",
+          "source_anchor": "Results, double-motif peptide titrations, Fig. 5"
+        }
+      ]
+    },
+    {
+      "claim_id": "024",
+      "field_label": "Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)",
+      "sentence": 1,
+      "outcome": "ATOMIZED",
+      "occurrences": [
+        {
+          "proposition": "The strongest direct WW2 engagement requires a short engineered linker; the native ErbB4 PY1PY2 linker gives a weaker interaction",
+          "context": "comparison of native PY1PY2 against PY1PY2S with a polyglycine linker",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 055",
+          "snippet": "To some extent, this is due to the longer native linker connecting PY1 and PY2, since the interaction grew stronger when a shorter flexible non-native polyglycine linker (similar to the one in the other two double-motif peptides) was used",
+          "source_anchor": "Results, double-motif peptide titrations, Fig. 5"
+        }
+      ]
+    },
+    {
+      "claim_id": "024",
+      "field_label": "Summary",
+      "sentence": 2,
+      "outcome": "ATOMIZED",
+      "occurrences": [
+        {
+          "proposition": "WW-domain variants should not be interpreted domain-by-domain in isolation",
+          "context": "generalisation from the in-vitro fragment system to pathogenic variant interpretation",
+          "epistemic_type": "INFERENZA",
+          "evidence_relation": "PARTIAL",
+          "source_id": "PAPER 055",
+          "snippet": null,
+          "source_anchor": "no statement on disease-variant interpretation anywhere in the source; every mutation discussed is engineered"
+        }
+      ]
+    },
+    {
+      "claim_id": "024",
+      "field_label": "Clinical meaning",
+      "sentence": 1,
+      "outcome": "NOT_EVIDENCE",
+      "items": [
+        {
+          "construct_type": "CAVEAT",
+          "content": "Not directly applicable to Q230P, which lies in the SDR domain",
+          "representation_state": "SCHEMA_LOSS",
+          "mitigation": "none"
+        }
+      ]
+    },
+    {
+      "claim_id": "024",
+      "field_label": "Transferability",
+      "sentence": null,
+      "outcome": "NOT_EVIDENCE",
+      "items": [
+        {
+          "construct_type": "TRANSFERABILITY",
+          "content": "T2 - indirect but high for the genotype interpretation framework",
+          "representation_state": "SCHEMA_LOSS",
+          "mitigation": "none"
+        }
+      ]
+    },
+    {
+      "claim_id": "035",
+      "field_label": "Summary",
+      "sentence": 0,
+      "outcome": "ATOMIZED",
+      "occurrences": [
+        {
+          "proposition": "WWOX amino acids 388-407 are required for the interaction with GSK3beta",
+          "context": "GST pull-down with WWOX truncations delta389 and delta286",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 056",
+          "snippet": "This indicates that WWOX amino acids 388–407 are required for its interaction with GSK3β.",
+          "source_anchor": "Results, 'The WWOX-GSK3B interaction is mediated by a conserved motif in WWOX', Fig. 3c"
+        },
+        {
+          "proposition": "WWOX 388-412 contains the FXXXLI/VXRLE motif conserved in GSKIP, Axin and FRAT",
+          "context": "sequence alignment of WWOX against known GSK3beta-binding proteins",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 056",
+          "snippet": "WWOX296−320 and WWOX388−412 contain FXXXLI/VXRLE, a highly conserved GSK3β-binding motif within GSKIP115−139, Axin381−405, and FRAT205−229",
+          "source_anchor": "Results, sequence alignment, Fig. 2a"
+        },
+        {
+          "proposition": "L404 is strictly required for the WWOX-GSK3beta interaction",
+          "context": "GST pull-down with engineered point mutants L404A and L311A",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 056",
+          "snippet": "the mutation of L404A, but not L311A, completely abolishes the binding of WWOX to GSK3β",
+          "source_anchor": "Results, GST pull-down, Fig. 3d"
+        }
+      ]
+    },
+    {
+      "claim_id": "035",
+      "field_label": "Summary",
+      "sentence": 1,
+      "outcome": "ATOMIZED",
+      "occurrences": [
+        {
+          "proposition": "WWOX inhibits Tau phosphorylation at S396 and S404 but not at the MKK4 site S422",
+          "context": "SH-SY5Y differentiated with retinoic acid; in vitro kinase assay",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 056",
+          "snippet": "Ectopically expressed WWOX significantly inhibited Tau phosphorylation at S404 and S396 but not S422.",
+          "source_anchor": "Results, in vitro kinase assay, Fig. 4c"
+        }
+      ]
+    },
+    {
+      "claim_id": "035",
+      "field_label": "Summary",
+      "sentence": 2,
+      "outcome": "ATOMIZED",
+      "occurrences": [
+        {
+          "proposition": "The WWOX-GSK3beta interaction is detectable between endogenous proteins in mouse brain",
+          "context": "endogenous co-immunoprecipitation from mouse brain extract",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 056",
+          "snippet": "immunoprecipitation was performed in mouse brain extracts to verify the physiological interaction between WWOX and GSK3β. Figure 2e shows that both GSK3β and WWOX were precipitated by anti-GSK3β or anti-WWOX antibodies.",
+          "source_anchor": "Results, 'WWOX interacts and colocalises with GSK3beta in vivo', Fig. 2e"
+        }
+      ]
+    },
+    {
+      "claim_id": "035",
+      "field_label": "Summary",
+      "sentence": 3,
+      "outcome": "ATOMIZED",
+      "occurrences": [
+        {
+          "proposition": "Phospho-GSK3beta-S9 is unchanged while GSK3beta output falls",
+          "context": "observed under retinoic-acid-induced differentiation, not inside the WWOX-inhibition experiment",
+          "epistemic_type": "DATO",
+          "evidence_relation": "PARTIAL",
+          "source_id": "PAPER 056",
+          "snippet": "We found that the phosphorylation levels of phospho-GSK3β S9 and phospho-β-catenin remained normal.",
+          "source_anchor": "Results, RA-induced differentiation, Fig. 1b-c"
+        }
+      ]
+    },
+    {
+      "claim_id": "035",
+      "field_label": "Summary",
+      "sentence": 4,
+      "outcome": "ATOMIZED",
+      "occurrences": [
+        {
+          "proposition": "Tau knockdown abolishes the WWOX effect, and WWOX with siRNA-GSK3beta is non-additive",
+          "context": "SH-SY5Y double-manipulation knockdown experiments",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 056",
+          "snippet": "Neither WWOX overexpression nor GSK3β knockdown promoted neurite outgrowth in the Tau knockdown condition, indicating that Tau is the effector of both WWOX and GSK3β",
+          "source_anchor": "Results, double-manipulation experiment, Fig. 6a-b"
+        },
+        {
+          "proposition": "WWOX, GSK3beta and Tau lie on one linear pathway with Tau as the effector",
+          "context": "interpretation of the SH-SY5Y epistasis results, stated by the authors in the Discussion",
+          "epistemic_type": "INFERENZA",
+          "evidence_relation": "PARTIAL",
+          "source_id": "PAPER 056",
+          "snippet": "our results connect WWOX, GSK3β and Tau in an exclusive, direct manner and describe a novel mechanism by which WWOX promotes neuronal SH-SY5Y cell differentiation",
+          "source_anchor": "Discussion"
+        }
+      ]
+    },
+    {
+      "claim_id": "035",
+      "field_label": "Clinical meaning",
+      "sentence": 2,
+      "outcome": "ATOMIZED",
+      "occurrences": [
+        {
+          "proposition": "A WWOX-DEE study using phospho-S9 as a readout of GSK3beta activity will produce a false negative",
+          "context": "transfer of the S9-independence finding to a WWOX-DEE measurement setting",
+          "epistemic_type": "INFERENZA",
+          "evidence_relation": "PARTIAL",
+          "source_id": "PAPER 056",
+          "snippet": null,
+          "source_anchor": "no statement in the source about pS9 as a readout in a WWOX-deficient setting"
+        }
+      ]
+    },
+    {
+      "claim_id": "035",
+      "field_label": "Genotype/model relevance",
+      "sentence": 1,
+      "outcome": "ATOMIZED",
+      "occurrences": [
+        {
+          "proposition": "The WWOX-GSK3beta-Tau mechanism transfers to human neurons and to WWOX-DEE",
+          "context": "no WWOX-DEE allele tested; wild-type and engineered mutants only",
+          "epistemic_type": "INFERENZA",
+          "evidence_relation": "PARTIAL",
+          "source_id": "PAPER 056",
+          "snippet": null,
+          "source_anchor": "no WWOX-DEE allele and no human neuron appears anywhere in the source"
+        }
+      ]
+    },
+    {
+      "claim_id": "035",
+      "field_label": "Transferability",
+      "sentence": null,
+      "outcome": "NOT_EVIDENCE",
+      "items": [
+        {
+          "construct_type": "TRANSFERABILITY",
+          "content": "T2 mechanistic",
+          "representation_state": "SCHEMA_LOSS",
+          "mitigation": "none"
+        }
+      ]
+    },
+    {
+      "claim_id": "016",
+      "field_label": "Summary",
+      "sentence": 0,
+      "outcome": "ATOMIZED",
+      "occurrences": [
+        {
+          "proposition": "In Wwox-null mice GSK3beta is elevated in cortex, hippocampus and cerebellum",
+          "context": "Wwox-null full knockout mouse; regional protein abundance",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 019",
+          "snippet": null,
+          "source_anchor": null
+        },
+        {
+          "proposition": "Lithium suppresses PTZ-induced seizure susceptibility in the Wwox-null mouse",
+          "context": "Wwox-null full knockout mouse; PTZ challenge",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 019",
+          "snippet": null,
+          "source_anchor": null
+        }
+      ]
+    },
+    {
+      "claim_id": "016",
+      "field_label": "Summary",
+      "sentence": 1,
+      "outcome": "ATOMIZATION_REQUIRED"
+    },
+    {
+      "claim_id": "016",
+      "field_label": "Meccanismo aggiunto (BATCH_20260726_001)",
+      "sentence": 0,
+      "outcome": "ATOMIZED",
+      "occurrences": [
+        {
+          "proposition": "WWOX amino acids 388-407 are required for the interaction with GSK3beta",
+          "context": "GST pull-down with WWOX truncations delta389 and delta286",
+          "epistemic_type": "DATO",
+          "evidence_relation": "SUPPORT",
+          "source_id": "PAPER 056",
+          "snippet": "This indicates that WWOX amino acids 388–407 are required for its interaction with GSK3β.",
+          "source_anchor": "Results, 'The WWOX-GSK3B interaction is mediated by a conserved motif in WWOX', Fig. 3c"
+        }
+      ]
+    },
+    {
+      "claim_id": "016",
+      "field_label": "Meccanismo aggiunto (BATCH_20260726_001)",
+      "sentence": 1,
+      "outcome": "ATOMIZED",
+      "occurrences": [
+        {
+          "proposition": "Reducing WWOX raises GSK3beta output on Tau, consistent with de-repression rather than a level change",
+          "context": "WWOX RNAi in SH-SY5Y; pTau S396 readout",
+          "epistemic_type": "INFERENZA",
+          "evidence_relation": "PARTIAL",
+          "source_id": "PAPER 056",
+          "snippet": "SH-SY5Y cells in which WWOX expression was reduced by RNAi showed increased pTau S396 levels and notably decreased neurite outgrowth",
+          "source_anchor": "Results, RA-induced differentiation, Fig. 1d-e"
+        }
+      ]
+    },
+    {
+      "claim_id": "016",
+      "field_label": "🔴 `PREMISE_TAG` sul claim esistente",
+      "sentence": null,
+      "outcome": "NOT_EVIDENCE",
+      "items": [
+        {
+          "construct_type": "PREMISE_TAG",
+          "content": "Load-bearing premise: protein abundance reports kinase activity. PREMISE: DEFAULT_FROM_TEXTBOOK; abundance and activity are dissociable in this system",
+          "representation_state": "SCHEMA_LOSS",
+          "mitigation": "Discussion kind=KNOWLEDGE_GAP status=OPEN"
+        }
+      ]
+    },
+    {
+      "claim_id": "016",
+      "field_label": "Clinical meaning",
+      "sentence": 0,
+      "outcome": "NOT_EVIDENCE",
+      "items": [
+        {
+          "construct_type": "CAVEAT",
+          "content": "Not a clinical candidate for the reference genotype at present",
+          "representation_state": "SCHEMA_LOSS",
+          "mitigation": "none"
+        }
+      ]
+    },
+    {
+      "claim_id": "016",
+      "field_label": "Transferability",
+      "sentence": null,
+      "outcome": "NOT_EVIDENCE",
+      "items": [
+        {
+          "construct_type": "TRANSFERABILITY",
+          "content": "T2 mechanistic / T4 clinical",
+          "representation_state": "SCHEMA_LOSS",
+          "mitigation": "none"
+        }
+      ]
+    }
+  ]
+}

@@ -39,6 +39,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 REGISTRY = Path(__file__).resolve().parents[2] / "registries" / "claim_registry_current.md"
+DATA_DIR = Path(__file__).resolve().parents[1] / "data"
 
 PAPER_REGISTRY = Path(__file__).resolve().parents[2] / "registries" / "paper_registry_current.md"
 RECEIPT_LEDGER = Path(__file__).resolve().parents[2] / "registries" / "fulltext_read_receipts.jsonl"
@@ -211,14 +212,6 @@ CLAIM_IDS = ("016", "024", "035")
 
 # Only the artefact *path* is authored; its PMID, receipts, depth and fingerprint
 # are read from the registries and the ledger, and the bytes are re-hashed on disk.
-ARTEFACT_PATH = {
-    "PAPER 055": "files/fulltext/PMID35716775_Rotem-Bamberger2022.pdf",
-    "PAPER 056": "files/fulltext/PMID22193544_Wang2012_PMC_JATS.xml",
-    "PAPER 019": None,
-}
-# A claim that cites a paper without the paper declaring a qualified role is a
-# supporting citation by construction: the claim rests on it. It is not an
-# unmapped role, and treating it as one silently disqualifies real evidence.
 # A bare wikilink is a cross-reference, not a declaration of support: it must not
 # silently become evidence. Only a paper named in the claim's Source field, or a
 # qualified role declared by the paper registry, counts as supporting.
@@ -229,134 +222,41 @@ ROLE_NORM = {"source_field": "SUPPORTING", "wikilink_only": "UNQUALIFIED_REFEREN
              "supports": "SUPPORTING", "supplies the functional assay": "SUPPORTING",
              "tensions": "NON_SUPPORTING"}
 
-S = "SUPPORT"
-P = "PARTIAL"
-# occurrence: (proposition, context, epistemic_type, relation, source, snippet, source_anchor)
-# snippet None + source_anchor text => support was sought in the source and not found.
-CANDIDATES = [
- # ---- CLAIM 024 -----------------------------------------------------------
- ("024", "Summary", 0, "ATOMIZED", [
-   ("WW2 lacks significant inherent affinity for the ErbB4 PY3 motif, yet the tandem domain binds PY3 more strongly than isolated WW1 (30 vs 78 uM)",
-    "purified human WWOX WW fragments and synthetic ErbB4 peptides; no full-length protein, no cell, no animal",
-    "DATO", S, "PAPER 055",
-    "despite the fact that WW2 lacks significant inherent affinity to PY3, the stabilized WWOX tandem domain binds the ErbB4 PY3 substrate with stronger affinity than an isolated WW1 domain (30 versus 78 μM",
-    "Discussion, 'WW2 stabilizes the partially unfolded WW1 domain'"),
-   ("WW2 stabilises the otherwise unstable WW1 domain",
-    "urea denaturation and CD/NMR on isolated versus tandem WW domains",
-    "DATO", S, "PAPER 055",
-    "Monitoring tryptophan fluorescence changes in urea denaturation experiments showed that WW1 is structured only within the context of the WW1 – WW2 tandem domain, but not in its isolated form, indicating significant stabilization of WW1 by WW2",
-    "Results, 'WWOX domain WW1 is stabilized by domain WW2', Fig. 2")]),
- ("024", "Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)", 0, "ATOMIZED", [
-   ("WW2 engages a second PPxY motif directly when sequence, spacing, linker and orientation create a compatible topology",
-    "NMR CSP titrations of the tandem domain with native and engineered double-motif peptides",
-    "DATO", S, "PAPER 055",
-    "the WW2 CSP pattern distinguished between native sequence PY1PY2, reminiscent of PY3, and PY1PY2S (poly G linker), PY1PY3, and PY3PY3 for which large WW2 CSPs suggest a strong interaction with this domain as well",
-    "Results, double-motif peptide titrations, Fig. 5")]),
- ("024", "Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)", 1, "ATOMIZED", [
-   ("The strongest direct WW2 engagement requires a short engineered linker; the native ErbB4 PY1PY2 linker gives a weaker interaction",
-    "comparison of native PY1PY2 against PY1PY2S with a polyglycine linker",
-    "DATO", S, "PAPER 055",
-    "To some extent, this is due to the longer native linker connecting PY1 and PY2, since the interaction grew stronger when a shorter flexible non-native polyglycine linker (similar to the one in the other two double-motif peptides) was used",
-    "Results, double-motif peptide titrations, Fig. 5")]),
- ("024", "Summary", 2, "ATOMIZED", [
-   ("WW-domain variants should not be interpreted domain-by-domain in isolation",
-    "generalisation from the in-vitro fragment system to pathogenic variant interpretation",
-    "INFERENZA", P, "PAPER 055", None,
-    "no statement on disease-variant interpretation anywhere in the source; every mutation discussed is engineered")]),
- ("024", "Clinical meaning", 1, "NOT_EVIDENCE", [
-   ("CAVEAT", "Not directly applicable to Q230P, which lies in the SDR domain", "SCHEMA_LOSS", "none")]),
- ("024", "Transferability", None, "NOT_EVIDENCE", [
-   ("TRANSFERABILITY", "T2 - indirect but high for the genotype interpretation framework", "SCHEMA_LOSS", "none")]),
 
- # ---- CLAIM 035 -----------------------------------------------------------
- ("035", "Summary", 0, "ATOMIZED", [
-   ("WWOX amino acids 388-407 are required for the interaction with GSK3beta",
-    "GST pull-down with WWOX truncations delta389 and delta286",
-    "DATO", S, "PAPER 056",
-    "This indicates that WWOX amino acids 388–407 are required for its interaction with GSK3β.",
-    "Results, 'The WWOX-GSK3B interaction is mediated by a conserved motif in WWOX', Fig. 3c"),
-   ("WWOX 388-412 contains the FXXXLI/VXRLE motif conserved in GSKIP, Axin and FRAT",
-    "sequence alignment of WWOX against known GSK3beta-binding proteins",
-    "DATO", S, "PAPER 056",
-    "WWOX296−320 and WWOX388−412 contain FXXXLI/VXRLE, a highly conserved GSK3β-binding motif within GSKIP115−139, Axin381−405, and FRAT205−229",
-    "Results, sequence alignment, Fig. 2a"),
-   ("L404 is strictly required for the WWOX-GSK3beta interaction",
-    "GST pull-down with engineered point mutants L404A and L311A",
-    "DATO", S, "PAPER 056",
-    "the mutation of L404A, but not L311A, completely abolishes the binding of WWOX to GSK3β",
-    "Results, GST pull-down, Fig. 3d")]),
- ("035", "Summary", 1, "ATOMIZED", [
-   ("WWOX inhibits Tau phosphorylation at S396 and S404 but not at the MKK4 site S422",
-    "SH-SY5Y differentiated with retinoic acid; in vitro kinase assay",
-    "DATO", S, "PAPER 056",
-    "Ectopically expressed WWOX significantly inhibited Tau phosphorylation at S404 and S396 but not S422.",
-    "Results, in vitro kinase assay, Fig. 4c")]),
- ("035", "Summary", 2, "ATOMIZED", [
-   ("The WWOX-GSK3beta interaction is detectable between endogenous proteins in mouse brain",
-    "endogenous co-immunoprecipitation from mouse brain extract",
-    "DATO", S, "PAPER 056",
-    "immunoprecipitation was performed in mouse brain extracts to verify the physiological interaction between WWOX and GSK3β. Figure 2e shows that both GSK3β and WWOX were precipitated by anti-GSK3β or anti-WWOX antibodies.",
-    "Results, 'WWOX interacts and colocalises with GSK3beta in vivo', Fig. 2e")]),
- ("035", "Summary", 3, "ATOMIZED", [
-   ("Phospho-GSK3beta-S9 is unchanged while GSK3beta output falls",
-    "observed under retinoic-acid-induced differentiation, not inside the WWOX-inhibition experiment",
-    "DATO", P, "PAPER 056",
-    "We found that the phosphorylation levels of phospho-GSK3β S9 and phospho-β-catenin remained normal.",
-    "Results, RA-induced differentiation, Fig. 1b-c")]),
- ("035", "Summary", 4, "ATOMIZED", [
-   ("Tau knockdown abolishes the WWOX effect, and WWOX with siRNA-GSK3beta is non-additive",
-    "SH-SY5Y double-manipulation knockdown experiments",
-    "DATO", S, "PAPER 056",
-    "Neither WWOX overexpression nor GSK3β knockdown promoted neurite outgrowth in the Tau knockdown condition, indicating that Tau is the effector of both WWOX and GSK3β",
-    "Results, double-manipulation experiment, Fig. 6a-b"),
-   ("WWOX, GSK3beta and Tau lie on one linear pathway with Tau as the effector",
-    "interpretation of the SH-SY5Y epistasis results, stated by the authors in the Discussion",
-    "INFERENZA", P, "PAPER 056",
-    "our results connect WWOX, GSK3β and Tau in an exclusive, direct manner and describe a novel mechanism by which WWOX promotes neuronal SH-SY5Y cell differentiation",
-    "Discussion")]),
- ("035", "Clinical meaning", 2, "ATOMIZED", [
-   ("A WWOX-DEE study using phospho-S9 as a readout of GSK3beta activity will produce a false negative",
-    "transfer of the S9-independence finding to a WWOX-DEE measurement setting",
-    "INFERENZA", P, "PAPER 056", None,
-    "no statement in the source about pS9 as a readout in a WWOX-deficient setting")]),
- ("035", "Genotype/model relevance", 1, "ATOMIZED", [
-   ("The WWOX-GSK3beta-Tau mechanism transfers to human neurons and to WWOX-DEE",
-    "no WWOX-DEE allele tested; wild-type and engineered mutants only",
-    "INFERENZA", P, "PAPER 056", None,
-    "no WWOX-DEE allele and no human neuron appears anywhere in the source")]),
- ("035", "Transferability", None, "NOT_EVIDENCE", [
-   ("TRANSFERABILITY", "T2 mechanistic", "SCHEMA_LOSS", "none")]),
+AUTHORED = DATA_DIR / "dismech_authored_assertions.json"
 
- # ---- CLAIM 016 -----------------------------------------------------------
- ("016", "Summary", 0, "ATOMIZED", [
-   ("In Wwox-null mice GSK3beta is elevated in cortex, hippocampus and cerebellum",
-    "Wwox-null full knockout mouse; regional protein abundance",
-    "DATO", S, "PAPER 019", None, None),
-   ("Lithium suppresses PTZ-induced seizure susceptibility in the Wwox-null mouse",
-    "Wwox-null full knockout mouse; PTZ challenge",
-    "DATO", S, "PAPER 019", None, None)]),
- ("016", "Summary", 1, "ATOMIZATION_REQUIRED", []),
- ("016", "Meccanismo aggiunto (BATCH_20260726_001)", 0, "ATOMIZED", [
-   ("WWOX amino acids 388-407 are required for the interaction with GSK3beta",
-    "GST pull-down with WWOX truncations delta389 and delta286",
-    "DATO", S, "PAPER 056",
-    "This indicates that WWOX amino acids 388–407 are required for its interaction with GSK3β.",
-    "Results, 'The WWOX-GSK3B interaction is mediated by a conserved motif in WWOX', Fig. 3c")]),
- ("016", "Meccanismo aggiunto (BATCH_20260726_001)", 1, "ATOMIZED", [
-   ("Reducing WWOX raises GSK3beta output on Tau, consistent with de-repression rather than a level change",
-    "WWOX RNAi in SH-SY5Y; pTau S396 readout",
-    "INFERENZA", P, "PAPER 056",
-    "SH-SY5Y cells in which WWOX expression was reduced by RNAi showed increased pTau S396 levels and notably decreased neurite outgrowth",
-    "Results, RA-induced differentiation, Fig. 1d-e")]),
- ("016", "\U0001F534 `PREMISE_TAG` sul claim esistente", None, "NOT_EVIDENCE", [
-   ("PREMISE_TAG",
-    "Load-bearing premise: protein abundance reports kinase activity. PREMISE: DEFAULT_FROM_TEXTBOOK; abundance and activity are dissociable in this system",
-    "SCHEMA_LOSS", "Discussion kind=KNOWLEDGE_GAP status=OPEN")]),
- ("016", "Clinical meaning", 0, "NOT_EVIDENCE", [
-   ("CAVEAT", "Not a clinical candidate for the reference genotype at present", "SCHEMA_LOSS", "none")]),
- ("016", "Transferability", None, "NOT_EVIDENCE", [
-   ("TRANSFERABILITY", "T2 mechanistic / T4 clinical", "SCHEMA_LOSS", "none")]),
-]
+
+def load_authored(path: Path = None) -> tuple[dict[str, str | None], list[tuple]]:
+    """Load the authored judgement: which text becomes an assertion, and its locator.
+
+    Kept outside the code deliberately. Everything the derivation computes — identifiers,
+    dedup keys, grouping, terminal states — is derived from the registries and the ledger;
+    this file holds the part that requires a reader. Adding claims is then data entry
+    rather than editing a Python literal, which is what a corpus of hundreds of claims
+    needs.
+    """
+    document = json.loads((path or AUTHORED).read_text(encoding="utf-8"))
+    artefacts = document["artefact_path"]
+    candidates: list[tuple] = []
+    for entry in document["candidates"]:
+        outcome = entry["outcome"]
+        if outcome == "ATOMIZED":
+            payload = [(o["proposition"], o["context"], o["epistemic_type"],
+                        o["evidence_relation"], o["source_id"],
+                        o.get("snippet"), o.get("source_anchor"))
+                       for o in entry["occurrences"]]
+        elif outcome == "NOT_EVIDENCE":
+            payload = [(i["construct_type"], i["content"],
+                        i["representation_state"], i["mitigation"])
+                       for i in entry["items"]]
+        else:
+            payload = []
+        candidates.append((entry["claim_id"], entry["field_label"],
+                           entry["sentence"], outcome, payload))
+    return artefacts, candidates
+
+
+ARTEFACT_PATH, CANDIDATES = load_authored()
 
 LEDGER_A_ORDER = ["STATUS_INELIGIBLE", "ATOMIZATION_REQUIRED", "IDENTIFIER_UNRESOLVED",
                   "ELIGIBILITY_DEBT", "LINK_ROLE_NON_SUPPORTING",

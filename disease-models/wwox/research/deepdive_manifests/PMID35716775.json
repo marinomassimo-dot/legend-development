@@ -32,18 +32,18 @@
         "count": 12
       }
     ],
-    "verdict": "The exact tandem-WW intersection is sparse (3\u20135 PubMed records), while the broader PPxY/ErbB4 neighborhood is still small. This makes source resolution and construct-level comparison more valuable than adding another broad review."
+    "verdict": "The exact tandem-WW intersection is sparse (3–5 PubMed records), while the broader PPxY/ErbB4 neighborhood is still small. This makes source resolution and construct-level comparison more valuable than adding another broad review."
   },
   "multihop": {
     "gene_direct_refs_in_source": [
-      "PMID 24550385 \u2014 WWOX interactome / WW-domain interactions",
-      "PMID 15070730 \u2014 WWOX-p73 association",
-      "PMID 24308844 \u2014 WWOX-ErbB4 binding origin",
-      "PMID 22634283 \u2014 WWOX-WBP1/WBP2 biophysics",
-      "PMID 25703206 \u2014 allostery in WWOX ligand binding",
-      "PMID 30619736 \u2014 WWOX interactome",
-      "PMID 25662954 \u2014 WWOX structural review",
-      "PMID 32185845 \u2014 phosphorylation-regulated WWOX-p73 interaction"
+      "PMID 24550385 — WWOX interactome / WW-domain interactions",
+      "PMID 15070730 — WWOX-p73 association",
+      "PMID 24308844 — WWOX-ErbB4 binding origin",
+      "PMID 22634283 — WWOX-WBP1/WBP2 biophysics",
+      "PMID 25703206 — allostery in WWOX ligand binding",
+      "PMID 30619736 — WWOX interactome",
+      "PMID 25662954 — WWOX structural review",
+      "PMID 32185845 — phosphorylation-regulated WWOX-p73 interaction"
     ],
     "resolved": [
       "24550385: present in corpus/registry, no complete receipt",
@@ -130,5 +130,30 @@
       "used": false,
       "reason": "One candidate is below the five-candidate threshold and the operator did not authorize BATCH_COMMIT."
     }
-  ]
+  ],
+  "verbatim_locators": {
+    "entries": [
+      {
+        "proposition": "WW2 lacks significant inherent affinity for the ErbB4 PY3 motif, yet the tandem domain binds PY3 more strongly than isolated WW1 (30 vs 78 uM)",
+        "snippet": "despite the fact that WW2 lacks significant inherent affinity to PY3, the stabilized WWOX tandem domain binds the ErbB4 PY3 substrate with stronger affinity than an isolated WW1 domain (30 versus 78 μM",
+        "anchor": "Discussion, 'WW2 stabilizes the partially unfolded WW1 domain'"
+      },
+      {
+        "proposition": "WW2 stabilises the otherwise unstable WW1 domain",
+        "snippet": "Monitoring tryptophan fluorescence changes in urea denaturation experiments showed that WW1 is structured only within the context of the WW1 – WW2 tandem domain, but not in its isolated form, indicating significant stabilization of WW1 by WW2",
+        "anchor": "Results, 'WWOX domain WW1 is stabilized by domain WW2', Fig. 2"
+      },
+      {
+        "proposition": "WW2 engages a second PPxY motif directly when sequence, spacing, linker and orientation create a compatible topology",
+        "snippet": "the WW2 CSP pattern distinguished between native sequence PY1PY2, reminiscent of PY3, and PY1PY2S (poly G linker), PY1PY3, and PY3PY3 for which large WW2 CSPs suggest a strong interaction with this domain as well",
+        "anchor": "Results, double-motif peptide titrations, Fig. 5"
+      },
+      {
+        "proposition": "The strongest direct WW2 engagement requires a short engineered linker; the native ErbB4 PY1PY2 linker gives a weaker interaction",
+        "snippet": "To some extent, this is due to the longer native linker connecting PY1 and PY2, since the interaction grew stronger when a shorter flexible non-native polyglycine linker (similar to the one in the other two double-motif peptides) was used",
+        "anchor": "Results, double-motif peptide titrations, Fig. 5"
+      }
+    ],
+    "source": "extracted 2026-08-04 from the artefact whose sha256 matches the receipt fingerprint"
+  }
 }

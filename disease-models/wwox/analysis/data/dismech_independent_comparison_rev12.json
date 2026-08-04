@@ -1,0 +1,604 @@
+{
+  "aggregate_verdict": null,
+  "axis_1_anchor_selection": {
+    "baseline_only": [
+      [
+        "016",
+        "claim_registry_current.md#CLAIM 016|Meccanismo aggiunto (BATCH_20260726_001)|sent[0]"
+      ],
+      [
+        "016",
+        "claim_registry_current.md#CLAIM 016|Summary|sent[0]"
+      ],
+      [
+        "024",
+        "claim_registry_current.md#CLAIM 024|Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)|sent[0]"
+      ],
+      [
+        "024",
+        "claim_registry_current.md#CLAIM 024|Summary|sent[0]"
+      ],
+      [
+        "035",
+        "claim_registry_current.md#CLAIM 035|Clinical meaning|sent[2]"
+      ],
+      [
+        "035",
+        "claim_registry_current.md#CLAIM 035|Genotype/model relevance|sent[1]"
+      ],
+      [
+        "035",
+        "claim_registry_current.md#CLAIM 035|Summary|sent[0]"
+      ]
+    ],
+    "intersection_count": 7,
+    "jaccard_diagnostic": 0.30434782608695654,
+    "second_only": [
+      [
+        "016",
+        "claim_registry_current.md#CLAIM 016|Meccanismo aggiunto (BATCH_20260726_001)|sent[2]"
+      ],
+      [
+        "016",
+        "claim_registry_current.md#CLAIM 016|Meccanismo aggiunto (BATCH_20260726_001)|sent[3]"
+      ],
+      [
+        "016",
+        "claim_registry_current.md#CLAIM 016|PREMISE_TAG sul claim esistente|sent[2]"
+      ],
+      [
+        "016",
+        "claim_registry_current.md#CLAIM 016|Summary|sent[1]"
+      ],
+      [
+        "016",
+        "claim_registry_current.md#CLAIM 016|Summary|sent[2]"
+      ],
+      [
+        "024",
+        "claim_registry_current.md#CLAIM 024|Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)|sent[2]"
+      ],
+      [
+        "024",
+        "claim_registry_current.md#CLAIM 024|Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)|sent[3]"
+      ],
+      [
+        "024",
+        "claim_registry_current.md#CLAIM 024|Summary|sent[1]"
+      ],
+      [
+        "035",
+        "claim_registry_current.md#CLAIM 035|Summary|sent[5]"
+      ]
+    ],
+    "union_count": 23
+  },
+  "axis_2_atomisation_and_sources": [
+    {
+      "anchor": [
+        "016",
+        "claim_registry_current.md#CLAIM 016|Meccanismo aggiunto (BATCH_20260726_001)|sent[1]"
+      ],
+      "baseline_occurrence_count": 1,
+      "epistemic_types": [
+        [
+          "INFERENZA"
+        ],
+        [
+          "DATO"
+        ]
+      ],
+      "evidence_relations": [
+        [
+          "PARTIAL"
+        ],
+        [
+          "SUPPORT"
+        ]
+      ],
+      "second_occurrence_count": 2,
+      "source_ids": [
+        [
+          "PAPER 056"
+        ],
+        [
+          "PAPER 056"
+        ]
+      ]
+    },
+    {
+      "anchor": [
+        "024",
+        "claim_registry_current.md#CLAIM 024|Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)|sent[1]"
+      ],
+      "baseline_occurrence_count": 1,
+      "epistemic_types": [
+        [
+          "DATO"
+        ],
+        [
+          "DATO"
+        ]
+      ],
+      "evidence_relations": [
+        [
+          "SUPPORT"
+        ],
+        [
+          "SUPPORT"
+        ]
+      ],
+      "second_occurrence_count": 2,
+      "source_ids": [
+        [
+          "PAPER 055"
+        ],
+        [
+          "PAPER 055"
+        ]
+      ]
+    },
+    {
+      "anchor": [
+        "024",
+        "claim_registry_current.md#CLAIM 024|Summary|sent[2]"
+      ],
+      "baseline_occurrence_count": 1,
+      "epistemic_types": [
+        [
+          "INFERENZA"
+        ],
+        [
+          "DATO"
+        ]
+      ],
+      "evidence_relations": [
+        [
+          "PARTIAL"
+        ],
+        [
+          "SUPPORT"
+        ]
+      ],
+      "second_occurrence_count": 1,
+      "source_ids": [
+        [
+          "PAPER 055"
+        ],
+        [
+          "PAPER 055"
+        ]
+      ]
+    },
+    {
+      "anchor": [
+        "035",
+        "claim_registry_current.md#CLAIM 035|Summary|sent[1]"
+      ],
+      "baseline_occurrence_count": 1,
+      "epistemic_types": [
+        [
+          "DATO"
+        ],
+        [
+          "DATO"
+        ]
+      ],
+      "evidence_relations": [
+        [
+          "SUPPORT"
+        ],
+        [
+          "SUPPORT"
+        ]
+      ],
+      "second_occurrence_count": 3,
+      "source_ids": [
+        [
+          "PAPER 056"
+        ],
+        [
+          "PAPER 056"
+        ]
+      ]
+    },
+    {
+      "anchor": [
+        "035",
+        "claim_registry_current.md#CLAIM 035|Summary|sent[2]"
+      ],
+      "baseline_occurrence_count": 1,
+      "epistemic_types": [
+        [
+          "DATO"
+        ],
+        [
+          "DATO"
+        ]
+      ],
+      "evidence_relations": [
+        [
+          "SUPPORT"
+        ],
+        [
+          "SUPPORT"
+        ]
+      ],
+      "second_occurrence_count": 3,
+      "source_ids": [
+        [
+          "PAPER 056"
+        ],
+        [
+          "PAPER 056"
+        ]
+      ]
+    },
+    {
+      "anchor": [
+        "035",
+        "claim_registry_current.md#CLAIM 035|Summary|sent[3]"
+      ],
+      "baseline_occurrence_count": 1,
+      "epistemic_types": [
+        [
+          "DATO"
+        ],
+        [
+          "DATO"
+        ]
+      ],
+      "evidence_relations": [
+        [
+          "PARTIAL"
+        ],
+        [
+          "SUPPORT"
+        ]
+      ],
+      "second_occurrence_count": 1,
+      "source_ids": [
+        [
+          "PAPER 056"
+        ],
+        [
+          "PAPER 056"
+        ]
+      ]
+    },
+    {
+      "anchor": [
+        "035",
+        "claim_registry_current.md#CLAIM 035|Summary|sent[4]"
+      ],
+      "baseline_occurrence_count": 2,
+      "epistemic_types": [
+        [
+          "DATO",
+          "INFERENZA"
+        ],
+        [
+          "DATO"
+        ]
+      ],
+      "evidence_relations": [
+        [
+          "PARTIAL",
+          "SUPPORT"
+        ],
+        [
+          "SUPPORT"
+        ]
+      ],
+      "second_occurrence_count": 1,
+      "source_ids": [
+        [
+          "PAPER 056"
+        ],
+        [
+          "PAPER 056"
+        ]
+      ]
+    }
+  ],
+  "axis_3_proposition_correspondence": {
+    "ambiguous_match_groups": [],
+    "baseline_unmatched": [
+      {
+        "anchor": [
+          "016",
+          "claim_registry_current.md#CLAIM 016|Meccanismo aggiunto (BATCH_20260726_001)|sent[1]"
+        ],
+        "context": "WWOX RNAi in SH-SY5Y; pTau S396 readout",
+        "occurrence_id": "OCC-a8b56eccaec1",
+        "proposition": "Reducing WWOX raises GSK3beta output on Tau, consistent with de-repression rather than a level change"
+      },
+      {
+        "anchor": [
+          "024",
+          "claim_registry_current.md#CLAIM 024|Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)|sent[1]"
+        ],
+        "context": "comparison of native PY1PY2 against PY1PY2S with a polyglycine linker",
+        "occurrence_id": "OCC-e44a8c8a17c9",
+        "proposition": "The strongest direct WW2 engagement requires a short engineered linker; the native ErbB4 PY1PY2 linker gives a weaker interaction"
+      },
+      {
+        "anchor": [
+          "024",
+          "claim_registry_current.md#CLAIM 024|Summary|sent[2]"
+        ],
+        "context": "generalisation from the in-vitro fragment system to pathogenic variant interpretation",
+        "occurrence_id": "OCC-2ae5d4d89c8e",
+        "proposition": "WW-domain variants should not be interpreted domain-by-domain in isolation"
+      },
+      {
+        "anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[1]"
+        ],
+        "context": "SH-SY5Y differentiated with retinoic acid; in vitro kinase assay",
+        "occurrence_id": "OCC-9a79e630201f",
+        "proposition": "WWOX inhibits Tau phosphorylation at S396 and S404 but not at the MKK4 site S422"
+      },
+      {
+        "anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[2]"
+        ],
+        "context": "endogenous co-immunoprecipitation from mouse brain extract",
+        "occurrence_id": "OCC-c96d2d7c14fa",
+        "proposition": "The WWOX-GSK3beta interaction is detectable between endogenous proteins in mouse brain"
+      },
+      {
+        "anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[3]"
+        ],
+        "context": "observed under retinoic-acid-induced differentiation, not inside the WWOX-inhibition experiment",
+        "occurrence_id": "OCC-155feac3e168",
+        "proposition": "Phospho-GSK3beta-S9 is unchanged while GSK3beta output falls"
+      },
+      {
+        "anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[4]"
+        ],
+        "context": "SH-SY5Y double-manipulation knockdown experiments",
+        "occurrence_id": "OCC-61cfe4b3765a",
+        "proposition": "Tau knockdown abolishes the WWOX effect, and WWOX with siRNA-GSK3beta is non-additive"
+      },
+      {
+        "anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[4]"
+        ],
+        "context": "interpretation of the SH-SY5Y epistasis results, stated by the authors in the Discussion",
+        "occurrence_id": "OCC-668225ef0fee",
+        "proposition": "WWOX, GSK3beta and Tau lie on one linear pathway with Tau as the effector"
+      }
+    ],
+    "ordinal_used_as_join_key": false,
+    "second_unmatched": [
+      {
+        "anchor": [
+          "016",
+          "claim_registry_current.md#CLAIM 016|Meccanismo aggiunto (BATCH_20260726_001)|sent[1]"
+        ],
+        "context": "Recombinant human WWOX fragments and point mutants in GST pull-downs, plus overexpressed constructs in SH-SY5Y cells; no WWOX-DEE allele tested.",
+        "occurrence_id": "OCC-a8b56eccaec1",
+        "proposition": "WWOX directly binds GSK3β through its ADH/SDR domain, using the 388–407 region with L404 required for binding."
+      },
+      {
+        "anchor": [
+          "016",
+          "claim_registry_current.md#CLAIM 016|Meccanismo aggiunto (BATCH_20260726_001)|sent[1]"
+        ],
+        "context": "Purified recombinant-protein kinase assay and WWOX overexpression in SH-SY5Y cells; inhibition depends on WWOX L404.",
+        "occurrence_id": "OCC-8247383223e9",
+        "proposition": "WWOX binding inhibits GSK3β kinase activity toward Tau."
+      },
+      {
+        "anchor": [
+          "024",
+          "claim_registry_current.md#CLAIM 024|Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)|sent[1]"
+        ],
+        "context": "Purified human WWOX isolated and tandem WW-domain fragments; fluorescence, CD, and NMR.",
+        "occurrence_id": "OCC-e44a8c8a17c9",
+        "proposition": "WW2 pre-orders and stabilizes the otherwise unstable WW1 domain."
+      },
+      {
+        "anchor": [
+          "024",
+          "claim_registry_current.md#CLAIM 024|Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)|sent[1]"
+        ],
+        "context": "Purified WWOX WW1–WW2 and native or engineered ErbB4-derived tandem peptides; ITC/NMR; not validated in full-length WWOX or cells.",
+        "occurrence_id": "OCC-c27bb3ed5559",
+        "proposition": "WW2 can directly engage a second PPxY motif when a dual-motif peptide presents a compatible sequence, spacing, linker, and orientation."
+      },
+      {
+        "anchor": [
+          "024",
+          "claim_registry_current.md#CLAIM 024|Summary|sent[2]"
+        ],
+        "context": "Purified human WWOX WW1–WW2 and synthetic ErbB4-derived peptides; ITC and NMR; strongest gains involve engineered tandem peptides.",
+        "occurrence_id": "OCC-2ae5d4d89c8e",
+        "proposition": "The tandem WW1–WW2 construct binds dual-PPxY peptides more strongly than corresponding single-motif configurations, with gains up to about tenfold."
+      },
+      {
+        "anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[1]"
+        ],
+        "context": "GST pull-down using recombinant full-length and domain-fragment WWOX against GSK3β.",
+        "occurrence_id": "OCC-9a79e630201f",
+        "proposition": "WWOX binds GSK3β through its ADH/SDR domain."
+      },
+      {
+        "anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[1]"
+        ],
+        "context": "Recombinant truncation constructs and sequence comparison; the modeled interface is predictive rather than experimentally solved.",
+        "occurrence_id": "OCC-bd5539424281",
+        "proposition": "WWOX residues 388–407 are required for binding GSK3β and are similar to Axin/FRAT/GSKIP GSK3β-binding motifs."
+      },
+      {
+        "anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[1]"
+        ],
+        "context": "Recombinant L404A and L311A point mutants in GST pull-down and SH-SY5Y co-immunoprecipitation; folding control used c-jun binding.",
+        "occurrence_id": "OCC-b52375877312",
+        "proposition": "WWOX L404 is required for GSK3β binding, whereas the nearby L311 control is not."
+      },
+      {
+        "anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[2]"
+        ],
+        "context": "Purified-protein kinase assay and WWOX overexpression in SH-SY5Y cells; S422 used as a non-GSK3β site control.",
+        "occurrence_id": "OCC-c96d2d7c14fa",
+        "proposition": "WT WWOX, but not L404A, inhibits GSK3β-dependent Tau phosphorylation at S396 and S404 without affecting S422."
+      },
+      {
+        "anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[2]"
+        ],
+        "context": "In vitro tubulin/Tau microtubule assembly measured by light scattering after GSK3β and WWOX perturbation.",
+        "occurrence_id": "OCC-1dc1931dd614",
+        "proposition": "WT WWOX, but not GSK3β-binding-deficient L404A, restores Tau-dependent microtubule assembly impaired by GSK3β."
+      },
+      {
+        "anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[2]"
+        ],
+        "context": "RA-treated human SH-SY5Y neuroblastoma cells with WWOX overexpression; neurites scored by length threshold; no disease allele tested.",
+        "occurrence_id": "OCC-fb69d09bf77c",
+        "proposition": "WT WWOX promotes RA-induced neurite outgrowth in SH-SY5Y cells, and the effect is abolished by L404A."
+      },
+      {
+        "anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[3]"
+        ],
+        "context": "Mouse brain extract; reciprocal immunoprecipitation with anti-WWOX and anti-GSK3β.",
+        "occurrence_id": "OCC-155feac3e168",
+        "proposition": "Endogenous WWOX and GSK3β reciprocally co-immunoprecipitate from mouse brain extract."
+      },
+      {
+        "anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[4]"
+        ],
+        "context": "Human SH-SY5Y neuroblastoma cells treated with retinoic acid; correlative time course, not a direct S9 epistasis experiment.",
+        "occurrence_id": "OCC-61cfe4b3765a",
+        "proposition": "During RA-induced SH-SY5Y differentiation, phospho-GSK3β S9 remains unchanged while WWOX rises and Tau S396/S404 phosphorylation falls."
+      }
+    ],
+    "structural_id_content_collisions": [
+      {
+        "baseline_anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[3]"
+        ],
+        "baseline_content_fingerprint": "CF-1c537d7453b0",
+        "occurrence_id": "OCC-155feac3e168",
+        "second_anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[3]"
+        ],
+        "second_content_fingerprint": "CF-420791030467"
+      },
+      {
+        "baseline_anchor": [
+          "024",
+          "claim_registry_current.md#CLAIM 024|Summary|sent[2]"
+        ],
+        "baseline_content_fingerprint": "CF-8323eec752b3",
+        "occurrence_id": "OCC-2ae5d4d89c8e",
+        "second_anchor": [
+          "024",
+          "claim_registry_current.md#CLAIM 024|Summary|sent[2]"
+        ],
+        "second_content_fingerprint": "CF-6a195edff2bf"
+      },
+      {
+        "baseline_anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[4]"
+        ],
+        "baseline_content_fingerprint": "CF-61a63453cf8d",
+        "occurrence_id": "OCC-61cfe4b3765a",
+        "second_anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[4]"
+        ],
+        "second_content_fingerprint": "CF-88e4dcebc644"
+      },
+      {
+        "baseline_anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[1]"
+        ],
+        "baseline_content_fingerprint": "CF-f86b15366cd1",
+        "occurrence_id": "OCC-9a79e630201f",
+        "second_anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[1]"
+        ],
+        "second_content_fingerprint": "CF-42004e294c32"
+      },
+      {
+        "baseline_anchor": [
+          "016",
+          "claim_registry_current.md#CLAIM 016|Meccanismo aggiunto (BATCH_20260726_001)|sent[1]"
+        ],
+        "baseline_content_fingerprint": "CF-fc0427e598c2",
+        "occurrence_id": "OCC-a8b56eccaec1",
+        "second_anchor": [
+          "016",
+          "claim_registry_current.md#CLAIM 016|Meccanismo aggiunto (BATCH_20260726_001)|sent[1]"
+        ],
+        "second_content_fingerprint": "CF-db7fb2f1e0da"
+      },
+      {
+        "baseline_anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[2]"
+        ],
+        "baseline_content_fingerprint": "CF-5b705e4ebda3",
+        "occurrence_id": "OCC-c96d2d7c14fa",
+        "second_anchor": [
+          "035",
+          "claim_registry_current.md#CLAIM 035|Summary|sent[2]"
+        ],
+        "second_content_fingerprint": "CF-5cd3b81fbf37"
+      },
+      {
+        "baseline_anchor": [
+          "024",
+          "claim_registry_current.md#CLAIM 024|Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)|sent[1]"
+        ],
+        "baseline_content_fingerprint": "CF-34d3a75b0dfa",
+        "occurrence_id": "OCC-e44a8c8a17c9",
+        "second_anchor": [
+          "024",
+          "claim_registry_current.md#CLAIM 024|Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)|sent[1]"
+        ],
+        "second_content_fingerprint": "CF-6d31a7366138"
+      }
+    ],
+    "unambiguous_matches": []
+  },
+  "axis_4_deduplication": {
+    "canonical_candidate_partition_disagreements": [],
+    "comparison_universe": "unambiguous cross-run matches only",
+    "measurement_status": "NOT_MEASURABLE_EMPTY_CORRESPONDENCE",
+    "production_key_modified": false,
+    "production_partition_disagreements": []
+  },
+  "comparison_contract": "independent-comparison-v1",
+  "review_required": true
+}

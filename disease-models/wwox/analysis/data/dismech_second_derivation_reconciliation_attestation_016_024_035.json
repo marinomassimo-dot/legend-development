@@ -1,0 +1,14 @@
+{
+  "allowed_changed_fields": [
+    "locator_extraction_receipt_event",
+    "terminal_state",
+    "unreached_tests"
+  ],
+  "authored_sha256": "ec117b0a3b7194ff283dc9e16dc081817cafbbe2a7949409403f8586a446e07b",
+  "receipt_events": [
+    "FTR-20260804-22193544-05",
+    "FTR-20260804-35716775-05"
+  ],
+  "receipt_lineage_check": "full ancestry to qualifying complete-read receipt",
+  "reconciled_sha256": "33f2db6c7e933b6c147cde8e8461f8ddd8066b46eed2d287a86f1094acb6de23"
+}

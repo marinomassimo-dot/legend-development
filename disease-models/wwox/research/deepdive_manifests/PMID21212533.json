@@ -14,10 +14,22 @@
   },
   "field_density": {
     "queries": [
-      {"query": "\"GSK-3beta2\" OR \"GSK3B2\" OR \"GSK-3β2\"", "count": 6},
-      {"query": "GSK3B AND \"splice variant\" AND tau", "count": 1},
-      {"query": "WWOX AND GSK3B", "count": 4},
-      {"query": "WWOX AND (\"splice variant\" OR isoform) AND GSK3", "count": 0}
+      {
+        "query": "\"GSK-3beta2\" OR \"GSK3B2\" OR \"GSK-3β2\"",
+        "count": 6
+      },
+      {
+        "query": "GSK3B AND \"splice variant\" AND tau",
+        "count": 1
+      },
+      {
+        "query": "WWOX AND GSK3B",
+        "count": 4
+      },
+      {
+        "query": "WWOX AND (\"splice variant\" OR isoform) AND GSK3",
+        "count": 0
+      }
     ],
     "verdict": "Six records in all of PubMed on the neuron-specific isoform itself. The isoform that Castano 2010 reports is REQUIRED for axon growth, that is enriched in growth cones, and that peaks in the developing brain, has been studied by essentially nobody. And the intersection this deep dive actually proposes — WWOX x GSK3 isoform — returns ZERO. That is the strongest emptiness measured in this model so far: not a contested question, an unasked one. Practical consequence: the decisive experiment (WWOX and WWOXtide against beta1 vs beta2 in parallel) has no competitor and no prior art to reconcile with.",
     "performed_during_run": true
@@ -33,7 +45,10 @@
       "ref 4 — PMID 12065620 — queued FT-027 (HIGH: corrects a misattribution made by this session)",
       "ref 5 — PMID 19607922 — queued FT-028 (HIGH: growth-cone localisation, same lab as FT-022)"
     ],
-    "queued": ["FT-027", "FT-028"],
+    "queued": [
+      "FT-027",
+      "FT-028"
+    ],
     "references_enumerated": 24,
     "note": "Reference list enumerated during the run (24 numbered references, verified against the extracted text). Two gene-adjacent sources resolved to PMID, deduplicated against registries and queued. Both were unknown to the model. Refs 13-24 are structural papers not queued individually: their load-bearing content (the CT is unresolved in every published GSK-3beta crystal) is already extracted and recorded, and queueing twelve structures to re-derive one negative fact would be ceremony. That is a declared choice, not an oversight."
   },
@@ -47,19 +62,74 @@
     "result": "all three OK — no retraction, no Expression of Concern, no correction notice",
     "honesty_note": "Checked pre-emptively for the two queued papers as well, so a future session inherits the check instead of repeating it."
   },
-  "landing": ["DL-MECH-066", "DL-MECH-067", "DL-MECH-068", "DL-BIO-013", "FT-026", "FT-027", "FT-028"],
-  "skills_considered": [
-    {"skill": "legend-session-self-eval", "used": true, "reason": "Part 1 executed before writing anything, per the order the protocol mandates."},
-    {"skill": "legend-study-intake-triage", "used": true, "reason": "Receipt preflight (status --pmid 21212533, exit 1) plus queue match: the paper was already tracked as FT-026, so no duplicate intake was created."},
-    {"skill": "find-fulltext", "used": false, "reason": "Not invoked as a skill, but its tier logic was followed and the outcome recorded: Europe PMC fullTextUrlList flagged a Free PDF on J-STAGE, downloaded and validated by magic bytes (%PDF-1.3, 4 pages, matching pages 146-149). The 'no text layer' first impression was a false alarm from reading raw compressed streams; pypdf extracted 21234 characters."},
-    {"skill": "legend-discovery", "used": false, "reason": "Not invoked as a skill, but its OUTPUT contract was honoured this time: findings were appended directly to discovery_ledger_current.md rather than parked in staging, which is the defect the PMID 22193544 self-evaluation identified and this run was explicitly meant not to repeat."},
-    {"skill": "legend-batch-inferential-sweep", "used": false, "reason": "One paper is not a batch; the sweep is a whole-batch obligation and would produce a single degenerate row."},
-    {"skill": "legend-proband-priority-matrix", "used": false, "reason": "The paper's priority was already fixed as HIGH when it was queued as FT-026 by the preceding deep dive; re-ranking a single pre-prioritised item adds no information."},
-    {"skill": "legend-hypothesis-forge", "used": false, "reason": "Deliberately deferred. The decisive measurement (WWOX vs beta1/beta2) does not exist, so forging a hypothesis portfolio on top of an unmeasured premise would manufacture depth. One mechanistic lead (DL-MECH-068) is recorded with its premise exposed instead."},
-    {"skill": "legend-safety-triage", "used": false, "reason": "No molecule is promoted. The finding CONSTRAINS an existing candidate (TX-005 lithium) rather than proposing a new compound, so an ADMET profile would answer a question nobody asked."},
-    {"skill": "legend-paperqa", "used": false, "reason": "External API traffic requires operator authorisation; the targeted open-access substitution was done with direct retrieval and sentence-level extraction, recorded as its own queried_not_full_read receipt."},
-    {"skill": "legend-commit", "used": false, "reason": "Correctly not invoked: still below the five-candidate threshold, no weekly trigger, no urgent category. Canonical propagation of CLAIM 016 remains a separate BATCH_COMMIT decision."},
-    {"skill": "legend-session-takeaways", "used": true, "reason": "Closing synthesis, after the self-evaluation rather than before it."}
+  "landing": [
+    "DL-MECH-066",
+    "DL-MECH-067",
+    "DL-MECH-068",
+    "DL-BIO-013",
+    "FT-026",
+    "FT-027",
+    "FT-028"
   ],
-  "correction_made_this_run": "This run CORRECTED an attribution error made by the preceding one. The PMID 22193544 session recorded, from the secondary review PMC3139124, that beta2 phosphorylates tau 'on different, partly overlapping residues' and treated Saeki 2011 as the primary source for it. Reading Saeki 2011 in full shows it tested ONE site only — Ser396 — and never addressed site selectivity. The different-sites claim traces to Mukai 2002 (PMID 12065620), still unread and now queued as FT-027. Verifying a secondary source at the primary is exactly what surfaced this, and Ser404 — the other site that matters in PMID 22193544 — remains untested by anyone."
+  "skills_considered": [
+    {
+      "skill": "legend-session-self-eval",
+      "used": true,
+      "reason": "Part 1 executed before writing anything, per the order the protocol mandates."
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true,
+      "reason": "Receipt preflight (status --pmid 21212533, exit 1) plus queue match: the paper was already tracked as FT-026, so no duplicate intake was created."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Not invoked as a skill, but its tier logic was followed and the outcome recorded: Europe PMC fullTextUrlList flagged a Free PDF on J-STAGE, downloaded and validated by magic bytes (%PDF-1.3, 4 pages, matching pages 146-149). The 'no text layer' first impression was a false alarm from reading raw compressed streams; pypdf extracted 21234 characters."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "Not invoked as a skill, but its OUTPUT contract was honoured this time: findings were appended directly to discovery_ledger_current.md rather than parked in staging, which is the defect the PMID 22193544 self-evaluation identified and this run was explicitly meant not to repeat."
+    },
+    {
+      "skill": "legend-batch-inferential-sweep",
+      "used": false,
+      "reason": "One paper is not a batch; the sweep is a whole-batch obligation and would produce a single degenerate row."
+    },
+    {
+      "skill": "legend-proband-priority-matrix",
+      "used": false,
+      "reason": "The paper's priority was already fixed as HIGH when it was queued as FT-026 by the preceding deep dive; re-ranking a single pre-prioritised item adds no information."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "Deliberately deferred. The decisive measurement (WWOX vs beta1/beta2) does not exist, so forging a hypothesis portfolio on top of an unmeasured premise would manufacture depth. One mechanistic lead (DL-MECH-068) is recorded with its premise exposed instead."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No molecule is promoted. The finding CONSTRAINS an existing candidate (TX-005 lithium) rather than proposing a new compound, so an ADMET profile would answer a question nobody asked."
+    },
+    {
+      "skill": "legend-paperqa",
+      "used": false,
+      "reason": "External API traffic requires operator authorisation; the targeted open-access substitution was done with direct retrieval and sentence-level extraction, recorded as its own queried_not_full_read receipt."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Correctly not invoked: still below the five-candidate threshold, no weekly trigger, no urgent category. Canonical propagation of CLAIM 016 remains a separate BATCH_COMMIT decision."
+    },
+    {
+      "skill": "legend-session-takeaways",
+      "used": true,
+      "reason": "Closing synthesis, after the self-evaluation rather than before it."
+    }
+  ],
+  "correction_made_this_run": "This run CORRECTED an attribution error made by the preceding one. The PMID 22193544 session recorded, from the secondary review PMC3139124, that beta2 phosphorylates tau 'on different, partly overlapping residues' and treated Saeki 2011 as the primary source for it. Reading Saeki 2011 in full shows it tested ONE site only — Ser396 — and never addressed site selectivity. The different-sites claim traces to Mukai 2002 (PMID 12065620), still unread and now queued as FT-027. Verifying a secondary source at the primary is exactly what surfaced this, and Ser404 — the other site that matters in PMID 22193544 — remains untested by anyone.",
+  "verbatim_locators": {
+    "waived": "locators were not captured at reading time: this reading predates the requirement, introduced 2026-08-04 after an external export found that no verbatim locator existed anywhere in the canonical state. Extraction from the retained artefact is queued and does not require re-reading; the debt is declared here rather than left silent."
+  }
 }
