@@ -1,6 +1,6 @@
 {
-  "frozen_at": "2026-08-04T21:26:07Z",
-  "git_head_at_freeze": "8a49d755b282a5c64aba422eda3d7484bf17c37e",
+  "frozen_at": "2026-08-04T21:29:19Z",
+  "git_head_at_freeze": "8ca27121fadbbe37fe15ffddab97fbc60939c469",
   "git_verification_policy": "baseline bytes must match HEAD; every declared input and output must match git_head_at_freeze:path via git cat-file; freeze commit must be an ancestor of HEAD",
   "inputs": {
     "authored_assertions": {
@@ -61,7 +61,7 @@
     },
     "test_suite": {
       "path": "disease-models/wwox/analysis/scripts/test_derive_dismech_sidecar.py",
-      "sha256": "f64529740b772ce7d52198961b2c7380b9ab11c8d5277251044467f08b51e7fb"
+      "sha256": "3c6c42400e1fbcfc65edbd8a565f19ad4aea993a2804a1da6af84b41483fd467"
     }
   },
   "invariants": {
@@ -101,5 +101,5 @@
     "records": 49,
     "sha256": "29fe900b7849ffc15b1a01bc76486916c41694b10a227c0a4948335cde982a24"
   },
-  "revision": "rev.15 \u2014 blind bundle widened for PAPER 019 after FTR-20260804-32000863-01"
+  "revision": "rev.16 \u2014 re-sealed after the structural sentinel fix in test_derive_dismech_sidecar.py"
 }
