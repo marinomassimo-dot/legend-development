@@ -1,6 +1,6 @@
 {
-  "frozen_at": "2026-08-04T09:37:21Z",
-  "git_head_at_freeze": "be9a7fd080d1b5b78011598be4f3ba677ee5b00d",
+  "frozen_at": "2026-08-04T14:34:46Z",
+  "git_head_at_freeze": "0d1e45007966e3eb193598a18175d4419a217f98",
   "git_verification_policy": "baseline bytes must match HEAD; every declared input and output must match git_head_at_freeze:path via git cat-file; freeze commit must be an ancestor of HEAD",
   "inputs": {
     "blind_derivation_contract": {
@@ -27,13 +27,21 @@
       "path": "disease-models/wwox/analysis/data/dismech_canonicalisation_v1.json",
       "sha256": "79eabb8c5d4ee14d868aa984ea4bfabbb5d5d4ed473481f21b291ddd370c90c4"
     },
+    "independent_authored_output": {
+      "path": "disease-models/wwox/analysis/data/dismech_second_derivation_authored_016_024_035.jsonl",
+      "sha256": "ec117b0a3b7194ff283dc9e16dc081817cafbbe2a7949409403f8586a446e07b"
+    },
     "independent_protocol_script": {
       "path": "disease-models/wwox/analysis/scripts/dismech_independent_protocol.py",
-      "sha256": "0ce0cce3faa14555511b77de57f48fff3336f3a3d553ca20883d49b92ade4846"
+      "sha256": "ef15ff90505eb7033f9bc128cef115170f77d6cec0edb8ff3177ea29c5151915"
     },
     "independent_protocol_tests": {
       "path": "disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py",
-      "sha256": "674597246e563f962a83987a2bb7a672b0be289102062285baa02a5c0ddef092"
+      "sha256": "bc40a294d97ade1d1a404de9eb5c66eff3f301894e04236142fc8717d2d40d5a"
+    },
+    "independent_run_attestation": {
+      "path": "disease-models/wwox/analysis/data/dismech_second_derivation_run_attestation_016_024_035.json",
+      "sha256": "d094ae864d494b7856c5e87c862c891335fc3f037b6140b00e160e929e317724"
     },
     "paper_registry": {
       "path": "disease-models/wwox/registries/paper_registry_current.md",
@@ -41,9 +49,9 @@
     },
     "receipt_ledger": {
       "path": "disease-models/wwox/registries/fulltext_read_receipts.jsonl",
-      "prefix_event_count": 36,
-      "prefix_sha256": "f533f39ec7f45e7ef655d69f3dcef5e6b7f88bfacb431693c1d358320ddd91ab",
-      "prefix_tail_event_id": "FTR-20260804-22193544-04",
+      "prefix_event_count": 38,
+      "prefix_sha256": "a8344345f05281328c2fce716d818afaa0568c21e9f9db407446abb0c0b16df0",
+      "prefix_tail_event_id": "FTR-20260804-22193544-05",
       "verification_policy": "append_only_prefix"
     },
     "test_suite": {
@@ -88,5 +96,5 @@
     "records": 49,
     "sha256": "a19ea4c67c743c7e2ed29ea214d7dffd0d5e2f68c47c05753361594c5369170a"
   },
-  "revision": "rev.7"
+  "revision": "rev.12"
 }
