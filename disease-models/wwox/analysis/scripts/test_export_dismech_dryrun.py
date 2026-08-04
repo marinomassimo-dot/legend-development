@@ -202,13 +202,42 @@ class HonestEmptiness(unittest.TestCase):
         for row in unassigned:
             self.assertTrue(row["originating_claim_ids"])
 
-    def test_routing_records_that_its_own_basis_is_not_exportable(self) -> None:
-        """The claim licensing the routing is itself in eligibility debt; say so."""
+    def test_routing_states_whether_its_own_basis_is_backed_by_a_receipt(self) -> None:
+        """The routing must declare the standing of the claims that license it.
+
+        This asserted `basis_is_exportable is False` until 2026-08-04 — a hardcoded constant
+        that was true when written and stopped being true the moment PAPER 018 and PAPER 015
+        reached `complete_fulltext_read`, without anything failing. That is precisely what
+        this class's docstring warns against, committed inside the class itself. The value is
+        now measured from the receipt ledger and the test checks the contract: whichever way
+        it comes out, the report must say so and must justify it.
+        """
         built, _ = exporter.build(exporter.load(exporter.SIDECAR))
         justification = built["report"]["routing_justification"]
+        self.assertTrue(any("CLAIM 008" in b for b in justification["basis"]))
+        self.assertIn("basis_receipts", justification)
+        if justification["basis_is_exportable"]:
+            self.assertTrue(justification["basis_receipts"],
+                            "an exportable basis must name the receipts backing it")
+            self.assertNotIn("basis_blocked_by", justification)
+        else:
+            self.assertFalse(justification["basis_receipts"])
+            self.assertTrue(justification["basis_blocked_by"],
+                            "a blocked basis must name what blocks it")
+        self.assertTrue(justification["consequence"])
+
+    def test_routing_basis_is_measured_from_the_ledger_not_asserted(self) -> None:
+        """Point it at a ledger with no complete read and it must report blocked."""
+        with tempfile.TemporaryDirectory() as tmp:
+            empty = Path(tmp) / "ledger.jsonl"
+            empty.write_text(json.dumps({
+                "event_id": "FTR-TEST-36779245-01",
+                "study_id": {"pmid": "36779245"},
+                "evidence_depth": "partial_fulltext_read"}) + "\n", encoding="utf-8")
+            justification = exporter.routing_justification(empty)
         self.assertFalse(justification["basis_is_exportable"])
         self.assertTrue(justification["basis_blocked_by"])
-        self.assertTrue(any("CLAIM 008" in b for b in justification["basis"]))
+        self.assertFalse(justification["basis_receipts"])
 
     def test_attachments_are_counted_separately_from_assertions(self) -> None:
         """A shared proposition attaches once per entry; the two counts must not be equated."""

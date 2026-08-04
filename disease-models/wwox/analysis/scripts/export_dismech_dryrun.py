@@ -62,17 +62,64 @@ TARGETS = {
 CLAIM_TARGETS = {"016": ["MONDO:0014533", "MONDO:0013687"],
                  "024": ["MONDO:0014533", "MONDO:0013687"],
                  "035": ["MONDO:0014533", "MONDO:0013687"]}
-ROUTING_JUSTIFICATION = {
-    "decision": "molecular WWOX findings route to both disease entries",
-    "basis": ["CLAIM 008 (consolidated baseline, DATO): WOREE and SCAR12 form a "
-              "genotype-phenotype spectrum",
-              "CLAIM 017 (consolidated baseline, DATO): the disease spans severe "
-              "WOREE/WWOX-DEE to milder SCAR12-like phenotypes",
-              "CLAIM 030 (in observation): severity tracks residual protein function"],
-    "basis_is_exportable": False,
-    "basis_blocked_by": "no source of CLAIM 008 or CLAIM 017 carries a complete-read receipt",
-    "consequence": "the routing is a curation judgement recorded here, not an asserted node",
+# PMIDs of the papers the routing claims cite, per their `Wikilinks` in the claim registry.
+# Kept explicit rather than parsed: the routing basis is an authored judgement, and which
+# papers it rests on must be visible to a reviewer, not inferred at run time.
+ROUTING_BASIS_PMIDS = {
+    "36779245": "PAPER 018 — Oliver 2023, source of CLAIM 017",
+    "39507621": "PAPER 015 — Teplyshova 2024, source of CLAIM 017",
 }
+
+
+def routing_basis_receipts(ledger: Path | None = None) -> dict[str, str]:
+    """Which routing-basis papers carry a persisted `complete_fulltext_read` receipt.
+
+    Measured, never asserted. This value was hardcoded `False` until 2026-08-04, which was
+    true when it was written and silently stopped being true the moment a reading landed —
+    exactly the failure the test suite's own docstring warns about: a constant that encodes
+    the data at authoring time keeps reporting it long after the data moved.
+    """
+    path = ledger or (HERE.parents[2] / "wwox/registries/fulltext_read_receipts.jsonl")
+    if not path.is_file():
+        return {}
+    backed: dict[str, str] = {}
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        record = json.loads(line)
+        pmid = str((record.get("study_id") or {}).get("pmid") or "")
+        if pmid in ROUTING_BASIS_PMIDS and record.get(
+                "evidence_depth") == "complete_fulltext_read":
+            backed[pmid] = record["event_id"]
+    return backed
+
+
+def routing_justification(ledger: Path | None = None) -> dict:
+    backed = routing_basis_receipts(ledger)
+    exportable = bool(backed)
+    justification = {
+        "decision": "molecular WWOX findings route to both disease entries",
+        "basis": ["CLAIM 008 (consolidated baseline, DATO): WOREE and SCAR12 form a "
+                  "genotype-phenotype spectrum",
+                  "CLAIM 017 (consolidated baseline, DATO): the disease spans severe "
+                  "WOREE/WWOX-DEE to milder SCAR12-like phenotypes",
+                  "CLAIM 030 (in observation): severity tracks residual protein function"],
+        "basis_is_exportable": exportable,
+        "basis_receipts": {ROUTING_BASIS_PMIDS[p]: e for p, e in sorted(backed.items())},
+    }
+    if exportable:
+        justification["consequence"] = (
+            "the routing now rests on sources with persisted complete-read receipts. It "
+            "remains a curation judgement about WHICH entries a molecular finding describes; "
+            "a backed basis makes the judgement defensible, it does not make it a node. "
+            "CLAIM 008 still has no source with a complete read."
+        )
+    else:
+        justification["basis_blocked_by"] = (
+            "no source of CLAIM 008 or CLAIM 017 carries a complete-read receipt")
+        justification["consequence"] = (
+            "the routing is a curation judgement recorded here, not an asserted node")
+    return justification
 
 RELATION_TO_SUPPORTS = {"SUPPORT": "SUPPORT", "PARTIAL": "PARTIAL", "REFUTE": "REFUTE"}
 TYPE_TO_RELATION = {"DATO": {"SUPPORT", "PARTIAL"}, "INFERENZA": {"PARTIAL"}}
@@ -217,7 +264,7 @@ def build(records: list[dict]) -> tuple[dict, list[dict]]:
         "evidence_assertions": len(groups),
         "node_evidence_attachments": attachments,
         "unassigned_to_any_disease_entry": unassigned,
-        "routing_justification": ROUTING_JUSTIFICATION,
+        "routing_justification": routing_justification(),
         "ledger_a_losses": Counter(l["state"] for l in losses if l["kind"] == "ledger_a"),
         "ledger_b_losses": Counter(l["state"] for l in losses if l["kind"] == "ledger_b"),
         "losses": losses,
