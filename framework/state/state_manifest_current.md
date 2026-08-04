@@ -151,8 +151,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 39
-fulltext_ledger_head: 158f3b8728c924856f8eb8ddf12a36361a23104fca79fb7b812939ec06d3ed89
+fulltext_ledger_events: 40
+fulltext_ledger_head: 8d8152d89868b36568c3c7063cf22cde065ae7db6c29a5c8082b156ad7550824
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -165,7 +165,7 @@ python3 framework/scripts/fulltext_receipts.py verify
 
 ### Registry-declaration ratchet
 
-Twenty-one registry records carry a historical `full text reviewed` declaration with no
+Twenty registry records carry a historical `full text reviewed` declaration with no
 surviving complete-coverage receipt. They are kept visible rather than deleted or
 retroactively upgraded — the work happened, the evidence of *how completely* did not
 survive. The baseline below is a **ratchet**: history is grandfathered by both count and
@@ -175,8 +175,8 @@ must be backed by a persisted `complete_fulltext_read` receipt, or `LINT_AUTOMAT
 `BLOCK_BATCH_COMMIT`.
 
 ```yaml
-registry_only_fulltext_declarations_baseline: 21
-registry_only_fulltext_declaration_ids: ["PAPER 005", "PAPER 010", "PAPER 011", "PAPER 012", "PAPER 014", "PAPER 015", "PAPER 016", "PAPER 028", "PAPER 029", "PAPER 031", "PAPER 032", "PAPER 039", "PAPER 040", "PAPER 042", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050", "PAPER 053"]
+registry_only_fulltext_declarations_baseline: 20
+registry_only_fulltext_declaration_ids: ["PAPER 005", "PAPER 010", "PAPER 011", "PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 029", "PAPER 031", "PAPER 032", "PAPER 039", "PAPER 040", "PAPER 042", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050", "PAPER 053"]
 ```
 
 Lowering the baseline is the intended direction of travel: back-fill a record with real

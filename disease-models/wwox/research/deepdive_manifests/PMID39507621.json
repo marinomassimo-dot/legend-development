@@ -1,0 +1,166 @@
+{
+  "pmid": "39507621",
+  "doi": "10.3389/fgene.2024.1477466",
+  "receipt": "FTR-20260804-39507621-01",
+  "landing": [
+    "FTR-20260804-39507621-01",
+    "CLAIM 020",
+    "CLAIM 017",
+    "CLAIM 008",
+    "PAPER 015"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline in the main session rather than delegated: the object was to test whether the locator obligation actually fires on a live reading, and delegating would have tested the agent's copy of the rule instead of the route the operator uses."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "The PMC XML was already in the local corpus from an earlier session; retrieval was not the missing step, the reading was."
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": false,
+      "reason": "No study list arrived. The paper is already PAPER 015 in the registry, so intake triage had no undetermined status to resolve."
+    },
+    {
+      "skill": "legend-batch-inferential-sweep",
+      "used": false,
+      "reason": "A single paper, not a batch; a second abstract-ranking pass would rank one item against nothing."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "The reading is a debt closure on an existing PAPER record, not a discovery hunt. The one lead it did surface (EEG polygraphy visible only in the figures) is recorded as a locator rather than promoted to the ledger, because a single case report does not support a lead status on its own."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "No molecule or mechanism emerged that was not already tracked; the gene-therapy paragraph is this report's summary of a study already in the therapeutics layer."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Candidates recorded, not applied. The four canonical current files change only under an operator-authorized BATCH_COMMIT, which was not requested."
+    }
+  ],
+  "group_assessment": {
+    "waived": "The two publication counts cannot be measured in this session: the PubMed connector is unauthorized, and an estimate written into an integer slot is indistinguishable from a measurement. Waiving rather than guessing. What the Methods do establish is recorded here so the waiver loses nothing: research_type is descriptive_clinical (single patient, exome + Sanger + long-term video-EEG, no model and no cohort); is_primary_group_for_disease is false (a Moscow clinical epileptology and epilepsy-genetics pairing, adult service plus paediatric genetic diagnostics, not a WWOX laboratory); and the weighting is that this report's authority rests on the observation, not the group — the 40-year natural-history datum is checkable against the published age envelope, whereas the Discussion's genotype-phenotype statements are this group's summary of other people's cohorts and carry those cohorts' weight, not this report's. NOTE: the waiver is per-section but the impediment is per-field, so declining two unmeasurable integers also discards three fields that were determined from the Methods. See the run report.",
+    "performed_during_run": false
+  },
+  "field_density": {
+    "waived": "Field density measures how crowded the surrounding literature is, which requires a live PubMed query; the connector is unauthorized in this session. It was also not the gating question for this run: the paper is already PAPER 015 in the registry and this reading closes a receipt gap rather than deciding an intake."
+  },
+  "multihop": {
+    "references_enumerated": 19,
+    "gene_direct_refs_in_source": [
+      "24456803", "38161429", "10786676", "23459853", "34034642", "32051108",
+      "29808465", "24369382", "25411445", "36779245", "30356099", "34747138",
+      "30361190", "34831305", "25716914", "30853297"
+    ],
+    "resolved": [
+      "24456803", "38161429", "10786676", "23459853", "34034642", "29808465",
+      "24369382", "25411445", "36779245", "30356099", "34747138", "30361190",
+      "34831305", "30853297"
+    ],
+    "queued": ["32051108", "25716914"],
+    "note": "16 of 19 references are WWOX-direct. Fourteen are already in paper_registry_current.md. Two are absent from the registry, the full-text queue and the tracking log — that is, LEGEND had never seen them, and would not have learned so without enumerating the list: PMID 32051108 (compound-heterozygous WWOX epilepsy, Chinese patient) and PMID 25716914 (biallelic WWOX epileptic encephalopathy first described prenatally). The second is the more interesting of the two, because this report records absent foetal movement in the last month of pregnancy and attributes prenatal onset to the literature; a prenatal-presentation case is the direct test of that. Both are queued as reading debt, not resolved."
+  },
+  "corpus_crossquery": {
+    "query": "Which of this paper's 16 gene-direct references are already recorded in paper_registry_current.md, and which are absent from the registry, the full-text queue and the literature tracking log?",
+    "hits": 14,
+    "note": "Run mechanically over the canonical registries, not by recall. The 2 misses are the value: an unenumerated reference list hides its own gaps."
+  },
+  "retraction_check": {
+    "result": "No retraction, correction or expression of concern in the PMC record. Verified against the local PMC XML article-meta only; not re-checked against a live PubMed query, because the connector is unauthorized in this session. A notice issued after the local copy was fetched would therefore not be visible here.",
+    "checked": true
+  },
+  "verbatim_locators": {
+    "entries": [
+      {
+        "proposition": "The WWOX genotype-phenotype relation is a graded spectrum: biallelic null produces the severe DEE pole, biallelic missense the ataxia pole, and null/missense an intermediate range.",
+        "snippet": "The phenotype of patients depends on the following combination: premature translation termination due to biallelic null (i.e., frameshift, nonsense, donor/acceptor, splice site, and deletion) variants lead to more severe phenotypes of early epileptic encephalopathy, while biallelic missense variants lead to a predominantly spinocerebellar ataxia phenotype. The phenotype of patients carrying null and missense variants falls in an intermediate range",
+        "anchor": "Discussion, genotype-phenotype paragraph"
+      },
+      {
+        "proposition": "Carrying at least one missense allele is associated with higher 5-year survival than biallelic null.",
+        "snippet": "It has been shown that the risk of mortality correlates with the WWOX genotype, with the presence of at least one missense variant increasing the probability of 5-year survival from <50% to >75%",
+        "anchor": "Discussion, mortality paragraph"
+      },
+      {
+        "proposition": "No region of WWOX has been established as specifically associated with the DEE phenotype.",
+        "snippet": "Notably, no specific region within the gene has been conclusively linked to WWOX-DEE.",
+        "anchor": "Introduction, ClinVar variant-count paragraph"
+      },
+      {
+        "proposition": "Before this report the oldest published WWOX-DEE patient was under 24 years old, in a literature of roughly 80 patients.",
+        "snippet": "Approximately 80 patients with WWOX-DEE have been described in the literature, with the oldest being 23 years and 11 months old at date",
+        "anchor": "Discussion, opening sentence"
+      },
+      {
+        "proposition": "A homozygous WWOX missense genotype is compatible with acquisition of sitting, crawling and supported walking in early childhood.",
+        "snippet": "The child could sit independently after 1 year, crawl from 1.5 years, and walk with support from 3 years of age.",
+        "anchor": "Clinical features, first paragraph"
+      },
+      {
+        "proposition": "Motor skills acquired in childhood were subsequently lost, with regression beginning in adolescence and progressing to loss of independent sitting.",
+        "snippet": "After 12 years of life, a regression of acquired skills and a reduction of independent motor activity were noted; he ceased to walk and then sit on his own.",
+        "anchor": "Clinical features, third paragraph"
+      },
+      {
+        "proposition": "Respiratory decline, not seizures, drove the late-stage trajectory, with bulbar failure from the mid-thirties.",
+        "snippet": "From 36 years of age, the frequency of pneumonia has increased to four times a year, often requiring inpatient treatment, and bulbar palsy has appeared, leading to tube feeding.",
+        "anchor": "Clinical features, fourth paragraph"
+      },
+      {
+        "proposition": "Seizures were resistant to seven antiseizure medications spanning distinct mechanisms, over four decades.",
+        "snippet": "Various antiseizure medications have been prescribed: phenobarbital, valproic acid, carbamazepine, topiramate, levetiracetam, ethosuximide, and perampanel. No sustained positive effect of treatment was detected.",
+        "anchor": "History of epilepsy"
+      },
+      {
+        "proposition": "The p.Thr12Met residue lies outside the WW and SDR domains, in the N-terminal segment.",
+        "snippet": "The variant p. Thr12Met is located in the N-terminal domain and does not fall within any known domains. However, it is predicted as a tyrosine phosphorylation site by NetPhos 2.0 Server",
+        "anchor": "Introduction, penultimate paragraph"
+      },
+      {
+        "proposition": "The variant is homozygous in exon 1, absent from HGMD and ClinVar at the time, and classified likely pathogenic under ACMG PM2/PM5/PP3/PP4.",
+        "snippet": "A homozygous variant in exon 1 of the WWOX gene (hg19, chr16:78133710C>T) NM_016373.4:c.35C>T was identified, leading to the replacement of an amino acid at position 12 (p.Thr12Met).",
+        "anchor": "Exome sequencing, second paragraph"
+      },
+      {
+        "proposition": "Neuron-restricted WWOX re-expression by AAV9 rescued seizures, hypoglycaemia, myelination deficits and lethality in Wwox-null mice, per the report's summary of the cited study.",
+        "snippet": "Testing the efficacy of AAV-SynI-WWOX delivery in Wwox-null mice demonstrated that specific neuronal restoration of WWOX expression rescued brain hyperexcitability and seizures, hypoglycemia, myelination deficits, and the premature lethality and behavioural deficits of Wwox-null mice.",
+        "anchor": "Discussion, gene-therapy paragraph"
+      },
+      {
+        "proposition": "The interictal EEG at 36 years was recorded with simultaneous ECG and EMG polygraphy on an 18-channel longitudinal bipolar montage, so myoclonic and non-motor discharges are separable in the record.",
+        "snippet": "EEG longitudinal bipolar montage. Sweep: 30 mm/s; sensitivity: 100 mV/mm; bandpass: 1-70 Hz.",
+        "anchor": "Figure 2 and Figure 3, images inspected: channel labels Fp1-F3 through Cz-Pz plus dedicated ECG (250 uV/mm) and EMG (200 uV/mm) traces, timestamps 21/4/2019. The polygraphy is visible only in the images; neither caption nor text mentions the ECG/EMG channels."
+      },
+      {
+        "proposition": "Background organisation was preserved at 36 years: a posterior dominant rhythm was present and sleep retained stages and physiological patterns, despite four decades of daily seizures.",
+        "snippet": "shows a background posterior dominant rhythm of 7-8 Hz. Sleep was divided into stages and phases; physiological patterns were well represented.",
+        "anchor": "Clinical features, EEG paragraph"
+      },
+      {
+        "proposition": "Epileptiform activity was sleep-activated, reaching 70-80% of some epochs while staying below 20-25% overall.",
+        "snippet": "The prevalence of epileptiform activity increased in sleep, reaching 70%-80% on some epochs, but overall remaining below 20%-25%.",
+        "anchor": "Clinical features, EEG paragraph"
+      },
+      {
+        "proposition": "Structural brain imaging was non-contributory in this patient, and MRI was never performed.",
+        "snippet": "Brain computed tomography at the age of 35 years did not show any significant pathological lesions. No magnetic resonance imaging of the brain was performed.",
+        "anchor": "Clinical features, final paragraph"
+      },
+      {
+        "proposition": "The genetic diagnosis arrived 38 years after onset, the patient having carried a cerebral palsy label for most of his life.",
+        "snippet": "For many years, the patient was given a diagnosis of cerebral palsy; 38 years after the onset of the disease, he was given a molecular genetic diagnosis of WWOX-associated developmental and epileptic encephalopathy.",
+        "anchor": "Abstract"
+      }
+    ],
+    "waived": false,
+    "note": "Sixteen locators captured during the reading, not reconstructed afterwards. One (the EEG polygraphy) is anchored to an inspected image rather than to text, and is recorded precisely because neither the caption nor the body states it. All three figures were inspected, including Figure 1, a clinical photograph. The first pass abstained from that image on privacy grounds and was wrong to: the privacy risk lives in what LEGEND records, not in what it looks at, so abstaining protected nothing and left the D-14 failure mode — a caption that misdescribes its own image — unchecked. The non-identifying finding is recorded and no description of the individual is: the image is publisher-redacted across the lower face, the three dysmorphic features named in the caption lie in the visible region and are not contradicted by it, and no feature is visible that the text omits. The image resolution does not support independent grading of palpebral-fissure slant, so the caption is uncontradicted rather than confirmed."
+  }
+}

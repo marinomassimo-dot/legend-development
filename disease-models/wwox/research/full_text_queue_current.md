@@ -323,10 +323,62 @@ localizzazione subcellulare quantitativa, poi confrontarla con la finestra mieli
 
 ---
 
-## FT-026
+## FT-029
 **Paper:** PMID 36779245 — Oliver KL et al. 2023, *Epilepsia* 64:1351–1367 ([[paper_registry_current#PAPER 018]])
+> **ID corretto il 2026-08-04.** Questa voce era stata creata come `FT-026`, ID già occupato da
+> Saeki 2011. Rinumerata a `FT-029`; il wikilink `[[full_text_queue_current#FT-026]]` nel
+> discovery ledger punta correttamente alla voce Saeki e non va toccato.
 **Title:** WWOX developmental and epileptic encephalopathy: Understanding the epileptology and the mortality risk
 **Priority:** **HIGH**
 **Why:** è la fonte di [[claim_registry_current#CLAIM 017]] (spettro WOREE↔SCAR12) e del `p = .0085` citato da [[claim_registry_current#CLAIM 033]]. Una lettura **completa** renderebbe lo spettro esportabile verso DisMech e darebbe al modulo condiviso l'evidenza che gli manca — oggi il routing verso entrambe le entry poggia su una claim che non può essere esportata.
 **Current status:** 🟡 **letto parzialmente** il 2026-08-04, receipt `FTR-20260804-36779245-01`, `evidence_depth: partial_fulltext_read`. Testo JATS letto per intero (abstract, introduzione, metodi, risultati, discussione, Tabelle 1 e 3); **le quattro figure sono disponibili solo come didascalie** e due supplementary non sono stati recuperati. Figura 4 *è* l'analisi di sopravvivenza e Figura 3 la mappa delle varianti: giudicarle dalla didascalia è il fallimento per cui esiste il valore `captions_only`. Tentativi falliti: pacchetto OA PMC (404), OA PDF (404), URL immagine `/bin/` (301 non risolto), endpoint PDF Europe PMC (404).
-**Next action:** procurare le **immagini** di Figura 3 e Figura 4 — da editore, abbonamento istituzionale o qualunque via che produca il PDF. È l'unica cosa che separa questa lettura da `complete_fulltext_read`, e con essa CLAIM 017 diventa esportabile nello stesso passo.
+**Aggiornamento 2026-08-04 — le figure sono state recuperate e ispezionate.** Il blocco non era
+l'accesso, era la rotta. Tutte e quattro le immagini si ottengono da
+`https://pmc.ncbi.nlm.nih.gov/articles/instance/<PMCID-senza-PMC>/bin/<file>.jpg`, con il PMCID
+risolto via `elink.fcgi?dbfrom=pubmed&db=pmc&id=<PMID>` — non dal nome host provato in
+precedenza, che restituiva 301. La rotta è stata trovata usandola su un altro paper
+(PMID 39507621) e poi riprovata qui: **la lezione riutilizzabile è che un 301/404 su una rotta
+immagine non è un verdetto di indisponibilità, ed era stato registrato come tale.**
+Contenuto letto dalle immagini, non dalle didascalie: **Fig. 4A** ordina la sopravvivenza
+null/missenso > missenso/missenso > null/null, con bande di confidenza ampiamente sovrapposte
+fra i primi due — e il `p = .0085` è un log-rank **a tre gruppi**, non un confronto a coppie;
+**Fig. 4B** dà `p = .65` sull'esordio delle crisi, cioè il gruppo genotipico **non** predice
+l'età d'esordio; **Fig. 3** colloca le due missenso associate a SCAR12 (p.Pro47Thr esone 2,
+p.Gly372Arg esone 9) alle estremità opposte della proteina; **Fig. 1C** documenta una semiologia
+focale lateralizzante; **Fig. 2** mostra atrofia fronto-temporale e ippocampale, atrofia del
+nervo ottico, anomalie della sostanza bianca e corpo calloso sottile.
+**Supplementary: confermati non disponibili.** `s001.docx` e `s002.xlsx` rispondono 200 ma
+servono HTML, non i documenti. `unavailable` non impedisce un receipt completo.
+**Next action:** la lettura è ora completabile in un passo — restano da catturare i
+`verbatim_locators` (il contratto del 2026-08-04) prima di poter emettere
+`complete_fulltext_read` e sbloccare l'export di CLAIM 017. È un secondo deep dive, non ancora
+fatto: le figure sono ispezionate, i locator no.
+
+---
+
+## FT-030
+**Paper:** PMID 25716914 — Mignot C et al. 2015 (riferimento 18 di [[paper_registry_current#PAPER 015]])
+**Title:** WWOX and severe autosomal recessive epileptic encephalopathy: first case in the prenatal period
+**Priority:** **MEDIA-ALTA**
+**Why:** Teplyshova 2024 registra **assenza di attività motoria fetale nell'ultimo mese di
+gravidanza** e attribuisce alla letteratura l'idea che le varianti WWOX disturbino lo sviluppo
+del sistema nervoso già in fase embrionale. Questo è il caso a presentazione prenatale, cioè il
+test diretto di quell'attribuzione: o la sostiene con un dato indipendente, o mostra che poggia
+su un singolo caso. Rilevante per la finestra temporale d'insorgenza, che vincola qualsiasi
+ipotesi di intervento precoce.
+**Come è emerso:** enumerando la lista dei riferimenti di PMID 39507621. Assente da
+`paper_registry_current`, dalla coda full-text e dal tracking log — LEGEND non l'aveva mai visto.
+**Current status:** ⬜ non recuperato, non letto.
+
+---
+
+## FT-031
+**Paper:** PMID 32051108 — (riferimento 6 di [[paper_registry_current#PAPER 015]])
+**Title:** A Chinese patient with epilepsy and WWOX compound heterozygous mutations
+**Priority:** **MEDIA**
+**Why:** caso a eterozigosi composta, cioè la classe genotipica intermedia (null/missenso) che
+in Oliver 2023 Fig. 4A mostra la sopravvivenza **migliore** delle tre. Ogni caso indipendente in
+quella classe conta, perché è quella su cui le bande di confidenza sono più larghe e la
+lettura del gradiente è meno solida.
+**Come è emerso:** stessa enumerazione di FT-030. Mai visto da LEGEND.
+**Current status:** ⬜ non recuperato, non letto.

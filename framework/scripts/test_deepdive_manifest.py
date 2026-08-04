@@ -89,6 +89,26 @@ class WaiverIsAnArgument(unittest.TestCase):
         errors, _ = gate.validate(minimal(verbatim_locators={"waived": "n/a"}))
         self.assertTrue(any("verbatim_locators" in e for e in errors))
 
+    def test_declining_to_waive_does_not_read_as_a_waiver(self) -> None:
+        """`waived: false` is the idiomatic JSON for "I am not waiving this".
+
+        Found by writing a real manifest (PMID 39507621) rather than by reading the code: the
+        gate answered "a waiver must state why", which argues the author into waiving a section
+        they meant to fill — and it returned early, so the entries were never validated. A
+        guard whose error message points at the omission is worse than no guard.
+        """
+        errors, incomplete = gate.validate(minimal(verbatim_locators={
+            "waived": False,
+            "entries": [{"proposition": "P", "snippet": "a" * 60, "anchor": "Results"}]}))
+        self.assertEqual(errors, [])
+        self.assertEqual(incomplete, [])
+
+    def test_declining_to_waive_still_validates_the_entries(self) -> None:
+        """The early return was the real damage: bad entries passed unexamined."""
+        errors, _ = gate.validate(minimal(verbatim_locators={
+            "waived": False, "entries": []}))
+        self.assertTrue(any("at least one verbatim quote" in e for e in errors))
+
     def test_argued_waiver_is_accepted_but_declared_incomplete(self) -> None:
         """Waiving is allowed; waiving silently is not."""
         errors, incomplete = gate.validate(minimal(verbatim_locators={

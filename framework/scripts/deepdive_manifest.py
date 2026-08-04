@@ -68,7 +68,11 @@ def _waived(section: Any, name: str, errors: list[str]) -> bool:
         errors.append(f"{name}: must be an object")
         return True
     waiver = section.get("waived")
-    if waiver is None:
+    # `false` is the idiomatic JSON for "I am NOT waiving this". Treating it as a malformed
+    # waiver told the author to "state why" — pushing them to write a waiver reason for a
+    # section they meant to fill — and returned True, so the section's real contents were
+    # never validated at all. The message argued for the omission the gate exists to prevent.
+    if waiver is None or waiver is False:
         return False
     if not isinstance(waiver, str) or len(waiver.strip()) < MIN_WAIVER_CHARS:
         errors.append(
