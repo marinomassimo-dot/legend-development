@@ -1,6 +1,6 @@
 {
-  "frozen_at": "2026-08-04T16:52:16Z",
-  "git_head_at_freeze": "76f8670fd78e81e5aac59111d9f1466f5e6149f9",
+  "frozen_at": "2026-08-04T21:26:07Z",
+  "git_head_at_freeze": "8a49d755b282a5c64aba422eda3d7484bf17c37e",
   "git_verification_policy": "baseline bytes must match HEAD; every declared input and output must match git_head_at_freeze:path via git cat-file; freeze commit must be an ancestor of HEAD",
   "inputs": {
     "authored_assertions": {
@@ -13,11 +13,11 @@
     },
     "blind_input_manifest": {
       "path": "disease-models/wwox/analysis/data/dismech_blind_input_manifest.json",
-      "sha256": "533cffbdda31d4a658657c66f867634079d600ca5855938fe3e2a6bfd2f7f8c9"
+      "sha256": "b63d4b3f0f2560175ef27e838a8600f7fdd0e94d5e0b1199cac1ef02851faa9d"
     },
     "blind_receipt_projection": {
       "path": "disease-models/wwox/analysis/data/dismech_blind_receipt_projection.jsonl",
-      "sha256": "9c3cc6642a607ac5f9cb0cb66aa02ef4d5767eb1f68ec1bf19cc5ad5486dd5bc"
+      "sha256": "1b5733b133d9282fc0b357556a453eb75be15481dec275809a10da73b217b069"
     },
     "claim_registry": {
       "path": "disease-models/wwox/registries/claim_registry_current.md",
@@ -41,7 +41,7 @@
     },
     "independent_protocol_tests": {
       "path": "disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py",
-      "sha256": "667143eac297e4350ee99bfe8162351a7e59a0f0aa0dc87ef563bd0eda07a23b"
+      "sha256": "7f574d5661f2a36639c566e541a28ea6a48e0af7df290163997e3a314211d786"
     },
     "independent_run_attestation": {
       "path": "disease-models/wwox/analysis/data/dismech_second_derivation_run_attestation_016_024_035.json",
@@ -56,12 +56,12 @@
       "prefix_event_count": 38,
       "prefix_sha256": "a8344345f05281328c2fce716d818afaa0568c21e9f9db407446abb0c0b16df0",
       "prefix_tail_event_id": "FTR-20260804-22193544-05",
-      "sha256": "a8344345f05281328c2fce716d818afaa0568c21e9f9db407446abb0c0b16df0",
+      "sha256": "dc18a3b3574f754232727cd72e52f9fe6fbc51a3e67ea21beee27812c7aed82e",
       "verification_policy": "append_only_prefix"
     },
     "test_suite": {
       "path": "disease-models/wwox/analysis/scripts/test_derive_dismech_sidecar.py",
-      "sha256": "19b537f45882fb2e5d63adf90563dc0c4fa10ff033a2d5ad508e75ad3fc5c153"
+      "sha256": "f64529740b772ce7d52198961b2c7380b9ab11c8d5277251044467f08b51e7fb"
     }
   },
   "invariants": {
@@ -99,7 +99,7 @@
   "output": {
     "path": "disease-models/wwox/analysis/data/dismech_sidecar_016_024_035.jsonl",
     "records": 49,
-    "sha256": "e13e29ade5b9c10edcdeaf862d5a61c431ec9082814016a6975296038584b8da"
+    "sha256": "29fe900b7849ffc15b1a01bc76486916c41694b10a227c0a4948335cde982a24"
   },
-  "revision": "rev.9 (precision repaired, four axes closed)"
+  "revision": "rev.15 \u2014 blind bundle widened for PAPER 019 after FTR-20260804-32000863-01"
 }

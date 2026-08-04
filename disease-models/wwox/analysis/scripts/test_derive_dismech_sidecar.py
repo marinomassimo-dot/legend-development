@@ -109,8 +109,13 @@ class ProvenanceTests(unittest.TestCase):
         rot.
         """
         absent = "00000000"
-        self.assertFalse(any(absent in line for line in
-                             derive_mod.RECEIPT_LEDGER.read_text(encoding="utf-8").splitlines()),
+        # Check the field, not the file: "00000000" occurs as a substring inside sha256
+        # digests, so a text search reported the sentinel as present and failed for a reason
+        # that had nothing to do with the behaviour under test.
+        recorded = {str(json.loads(line).get("study_id", {}).get("pmid", ""))
+                    for line in derive_mod.RECEIPT_LEDGER.read_text(
+                        encoding="utf-8").splitlines() if line.strip()}
+        self.assertNotIn(absent, recorded,
                          "the sentinel PMID must stay absent from the ledger")
         depth, elig, locator, sha = derive_mod.read_receipts(absent)
         self.assertNotEqual(depth, "complete_fulltext_read")
