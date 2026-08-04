@@ -1,0 +1,63 @@
+{
+  "allowed_outputs": [
+    "output/reconciliation_attestation.json",
+    "output/run_attestation.json",
+    "output/second_derivation_authored.jsonl",
+    "output/second_derivation_reconciled.jsonl"
+  ],
+  "bundle_files": [
+    {
+      "bundle_path": "inputs/claim_registry_current.md",
+      "role": "scientific_registry",
+      "sha256": "35e412e3fda44e6567b95e20fbb726749b990e97e42dde32a5e4cd8939fa287d",
+      "source_path": "disease-models/wwox/registries/claim_registry_current.md"
+    },
+    {
+      "bundle_path": "inputs/paper_registry_current.md",
+      "role": "scientific_registry",
+      "sha256": "03742dcb2cabb3ad264134bfbc57659ceb7eaf3d9983f7f63a8922b6e43f04d5",
+      "source_path": "disease-models/wwox/registries/paper_registry_current.md"
+    },
+    {
+      "bundle_path": "inputs/receipt_eligibility_projection.jsonl",
+      "role": "eligibility_only_receipt_projection",
+      "sha256": "9c3cc6642a607ac5f9cb0cb66aa02ef4d5767eb1f68ec1bf19cc5ad5486dd5bc",
+      "source_path": "disease-models/wwox/analysis/data/dismech_blind_receipt_projection.jsonl"
+    },
+    {
+      "bundle_path": "protocol/blind_derivation_contract.md",
+      "role": "generic_rules_without_first_pass_results",
+      "sha256": "d6601bda9eceedc08ec211e5944652847443f0ffd042a6c0aff8793f8011700e",
+      "source_path": "disease-models/wwox/analysis/dismech_blind_derivation_contract.md"
+    },
+    {
+      "bundle_path": "sources/PAPER055.pdf",
+      "paper_id": "055",
+      "role": "locator_source",
+      "sha256": "304a4d30245c740339a9bbba7e40767d1bfcc7d71ee152df72a071af97921673",
+      "source_path": "files/fulltext/PMID35716775_Rotem-Bamberger2022.pdf"
+    },
+    {
+      "bundle_path": "sources/PAPER056.xml",
+      "paper_id": "056",
+      "role": "locator_source",
+      "sha256": "eb6f568d046f8df831d15e7f8795fcb1d6ac713ec6305f7ded3ad2a330388268",
+      "source_path": "files/fulltext/PMID22193544_Wang2012_PMC_JATS.xml"
+    }
+  ],
+  "excluded_material_classes": [
+    "first sidecar and report",
+    "first derivation generator and tests",
+    "Phase-2 baseline and invariant counts",
+    "full receipt ledger including Phase-2 locator events",
+    "full export specification sections enumerating live decompositions",
+    "independent-comparison design and canonicalisation fixture",
+    "prior chat transcripts and reviews"
+  ],
+  "manifest_version": "dismech-blind-input-v1",
+  "target_claim_ids": [
+    "016",
+    "024",
+    "035"
+  ]
+}

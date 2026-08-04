@@ -45,6 +45,8 @@ TESTS = (
     "test_study_dedup_triage.py",
     ".claude/skills/legend-batch-inferential-sweep/scripts/"
     "test_batch_inferential_sweep.py",
+    "disease-models/wwox/analysis/scripts/test_derive_dismech_sidecar.py",
+    "disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py",
     "disease-models/wwox/analysis/scripts/test_structural_analysis.py",
     "disease-models/wwox/analysis/scripts/test_md_q230p_pilot.py",
     "disease-models/wwox/analysis/scripts/test_md_helix_screen.py",

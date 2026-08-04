@@ -1,0 +1,86 @@
+{
+  "aliases": [
+    {
+      "canonical": "GSK3β",
+      "entity_id": "gene-symbol:GSK3B",
+      "entity_type": "protein",
+      "matching": "case-sensitive whole-token",
+      "variants": [
+        "GSK3beta",
+        "GSK-3beta",
+        "GSK-3β"
+      ]
+    }
+  ],
+  "negative_fixtures": [
+    {
+      "left": "WWOX binds GSK3β",
+      "right": "WWOX does not bind GSK3beta"
+    },
+    {
+      "left": "WWOX inhibits GSK3β",
+      "right": "GSK3beta inhibits WWOX"
+    },
+    {
+      "left": "The binding segment spans residues 388–407",
+      "right": "The binding segment spans residues 388-412"
+    },
+    {
+      "left": "GSK3β-S9 is unchanged",
+      "right": "GSK3beta-S9 is decreased"
+    },
+    {
+      "left": "human neurons",
+      "right": "mouse brain"
+    }
+  ],
+  "positive_fixtures": [
+    {
+      "left": "WWOX binds GSK3β",
+      "right": "  WWOX  binds GSK3beta  "
+    },
+    {
+      "left": "residues 388–407",
+      "right": "residues 388-407"
+    }
+  ],
+  "transforms_in_order": [
+    {
+      "fields": [
+        "proposition",
+        "context"
+      ],
+      "name": "unicode_nfc"
+    },
+    {
+      "fields": [
+        "proposition",
+        "context"
+      ],
+      "mapping": {
+        "‐": "-",
+        "‑": "-",
+        "‒": "-",
+        "–": "-",
+        "—": "-",
+        "−": "-"
+      },
+      "name": "dash_unification"
+    },
+    {
+      "fields": [
+        "proposition",
+        "context"
+      ],
+      "name": "whitespace_collapse_and_trim"
+    },
+    {
+      "fields": [
+        "proposition",
+        "context"
+      ],
+      "name": "closed_biomedical_aliases"
+    }
+  ],
+  "version": "dismech-canonicalisation-v1"
+}
