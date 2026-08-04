@@ -1,0 +1,54 @@
+{
+  "do_not_open_before_reviewing": "This maps the blinded sides back to their authors. Reading it before the round-2 reply is in hand defeats the only purpose the blinding has.",
+  "schema": "dismech-axis3-blinding-key-v1",
+  "round": 2,
+  "seed": 20260805,
+  "differs_from_round_1": "New seed, so the α/β mapping is not the round-1 mapping. The two replies cannot be aligned by label, and knowledge of the first key does not carry over.",
+  "shuffle_scope": "per anchor, independently — recognising a side at one anchor reveals nothing about another",
+  "sides": {
+    "A": "reference derivation, after the atomization repair (dismech_sidecar_016_024_035.jsonl)",
+    "B": "independent derivation, realigned (dismech_second_derivation_realigned_016_024_035.jsonl)"
+  },
+  "anchors_repaired_between_rounds": {
+    "note": "Agreement at these three is close to circular: side A was edited using round 1's diagnosis. The eight untouched anchors carry the independent signal.",
+    "CLAIM 035|Summary|sent[1]": "1 -> 3 propositions, after three ABSENT verdicts",
+    "CLAIM 024|Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)|sent[1]": "1 -> 2 propositions, after a SPLIT verdict",
+    "CLAIM 035|Summary|sent[3]": "proposition restated after being called an interpretation"
+  },
+  "anchors_untouched": [
+    "CLAIM 016|Meccanismo aggiunto (BATCH_20260726_001)|sent[0]",
+    "CLAIM 016|Meccanismo aggiunto (BATCH_20260726_001)|sent[1]",
+    "CLAIM 016|Summary|sent[0]",
+    "CLAIM 024|Precisazione meccanicistica (BATCH_20260726_001, fonte primaria identificata)|sent[0]",
+    "CLAIM 024|Summary|sent[0]",
+    "CLAIM 035|Summary|sent[0]",
+    "CLAIM 035|Summary|sent[2]",
+    "CLAIM 035|Summary|sent[4]"
+  ],
+  "normalisation_applied": [
+    "Unicode NFC",
+    "whitespace collapse",
+    "dash unification",
+    "GSK3beta / GSK-3beta / GSK-3β -> GSK3β",
+    "stabilizes -> stabilises (a spelling tell in round 1)",
+    "trailing full stop removed"
+  ],
+  "normalisation_withheld": "Nothing else. Word order, qualifiers and named experimental context are the object of the judgement and were left untouched.",
+  "residual_tells": [
+    "anchor 6 carries 'uM' on one side only",
+    "one side consistently names the experimental system and the mutant control"
+  ],
+  "mapping": {
+    "1": {"α": "B", "β": "A"},
+    "2": {"α": "B", "β": "A"},
+    "3": {"α": "A", "β": "B"},
+    "4": {"α": "A", "β": "B"},
+    "5": {"α": "B", "β": "A"},
+    "6": {"α": "B", "β": "A"},
+    "7": {"α": "A", "β": "B"},
+    "8": {"α": "A", "β": "B"},
+    "9": {"α": "A", "β": "B"},
+    "10": {"α": "B", "β": "A"},
+    "11": {"α": "B", "β": "A"}
+  }
+}
