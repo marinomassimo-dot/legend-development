@@ -67,6 +67,21 @@ class GateTests(unittest.TestCase):
             "DIRECT_IDENTIFIER", {item.code for item in findings}
         )
 
+    def test_identifier_like_substring_inside_sha256_does_not_block(self) -> None:
+        root = self.make_repo()
+        digest = "".join((
+            "6f", "83", "e1", "2f", "4e", "c4", "d6", "45", "4b", "ea", "02", "50",
+            "b7", "5b", "41", "1c", "1f", "70", "06", "26", "4d", "63", "90", "30",
+            "e1", "3e", "6e", "89", "90", "8e", "f5", "ed",
+        ))
+        (root / "note.md").write_text(
+            f"sha256: {digest}",
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertNotIn("DIRECT_IDENTIFIER", {item.code for item in findings})
+
     def test_uppercase_identifier_inside_compound_token_blocks(self) -> None:
         root = self.make_repo()
         sensitive = "".join(map(chr, (66, 101, 97))).upper()

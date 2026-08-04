@@ -202,6 +202,13 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         "84b3b06a9ad46e0cbde25d76822932275bdd7c523095911095a930c68b4dc3f3",
     })
     identifier_token = re.compile(r"(?<![A-Za-z])[A-Za-z]{3,24}(?![A-Za-z])")
+    # A cryptographic digest is not prose, and the letters inside one are not a name.
+    # A long digest can contain a three-letter sensitive token by chance — the longer the
+    # repository carries content-addressed seals, the more often. Matches that fall inside
+    # a long hexadecimal run are therefore skipped, so that re-sealing a baseline cannot
+    # trip the privacy gate at random. This narrows only the digest interior: an identifier
+    # in ordinary text is unaffected.
+    hex_run = re.compile(r"(?<![0-9A-Fa-f])[0-9A-Fa-f]{32,}(?![0-9A-Fa-f])")
     email_address = re.compile(
         r"(?i)(?<![A-Z0-9._%+-])"
         r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}"
@@ -279,7 +286,11 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         rel = str(path.relative_to(root))
         if rel in GATE_INTERNAL_FILES:
             continue
+        digest_spans = [m.span() for m in hex_run.finditer(text)]
         for match in identifier_token.finditer(text):
+            if any(start <= match.start() and match.end() <= end
+                   for start, end in digest_spans):
+                continue
             exact_digest = hashlib.sha256(match.group(0).encode()).hexdigest()
             folded_digest = hashlib.sha256(
                 match.group(0).casefold().encode()
