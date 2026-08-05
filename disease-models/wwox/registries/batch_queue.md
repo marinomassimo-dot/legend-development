@@ -40,7 +40,7 @@ and never claims to be current. The status column is *derived on every run*, so 
 quietly disagree with the canonical state. When a snapshot is exhausted, add another one
 next to it; older snapshots stay valid as history.
 
-**Seed corpus:** `corpus_seed_pubmed_20260705.tsv`, `corpus_seed_pubmed_20260805.tsv` — 706 records, 468 with free full text.
+**Seed corpus:** `corpus_seed_pubmed_20260705.tsv`, `corpus_seed_pubmed_20260805.tsv` — 706 records, 0 with free full text.
 Coverage years: **2000–2026**; 215 records are from 2020 onward. This is therefore a
 broad historical-plus-recent corpus, not a recent-only list.
 The snapshots contain 1165 export occurrences; 459 repeated occurrence(s) are deduplicated in this queue.
@@ -813,21 +813,42 @@ Then, in an agent runtime: *"deep dive PMID …"* for a canonical claim, or
 not reading something: the ranking exists to order the work, and an unread record stays
 tracked until it is read. See [`gold_is_in_the_details.md`](../../../framework/master/gold_is_in_the_details.md).
 
-## Add a newer PubMed Clipboard snapshot
+## Refresh the corpus seed
 
-Save the PubMed Clipboard email/export as plain text outside the repository, then run:
+**Preferred — harvest directly from E-utilities.** No Clipboard, no 200-record page,
+no session: the query is an argument, so another disease model reuses it unchanged.
+
+```bash
+python3 framework/scripts/pubmed_corpus_harvest.py \
+    --term "WWOX OR WOREE" \
+    --out-dir disease-models/wwox/registries \
+    --slug corpus_seed_pubmed_YYYYMMDD --no-abstracts
+python3 framework/scripts/batch_queue.py \
+    --out disease-models/wwox/registries/batch_queue.md
+```
+
+It emits three files: a lossless `.jsonl`, the compact `.tsv` this queue reads, and a
+`.manifest.json` recording the query as sent, the `QueryTranslation` PubMed actually
+ran, the UTC timestamp, the expected count and the asserted invariants. Drop
+`--no-abstracts` to keep abstracts — send that run to a gitignored directory, because
+abstracts may carry publisher copyright and bulk redistribution is an operator call.
+
+🔴 The result is **every record returned by that query at that moment**, never "every
+paper on the gene": PubMed expands a free-text query by Automatic Term Mapping, and the
+manifest records what it actually ran. `pubmed_free_full_text_link: no` means PubMed
+exposes no link it classifies as free — it does **not** mean paywalled.
+
+**Fallback — a Clipboard export a human already has:**
 
 ```bash
 python3 framework/scripts/pubmed_clipboard_to_seed.py \
     --input /path/to/pubmed_clipboard.txt \
     --out disease-models/wwox/registries/corpus_seed_pubmed_YYYYMMDD.tsv
-python3 framework/scripts/batch_queue.py \
-    --out disease-models/wwox/registries/batch_queue.md
 ```
 
-The converter emits bibliographic fields only; mail headers and sender/recipient data
-are discarded. Keep the date in the filename. Repeated PMIDs across snapshots are
-counted once in the queue, with every seed filename retained as provenance.
+That converter emits bibliographic fields only and discards abstracts, because a pasted
+export can carry mail headers and sender data. Keep the date in the filename. Repeated
+PMIDs across snapshots are counted once, with every seed filename kept as provenance.
 
 ## Scope
 

@@ -1,0 +1,34 @@
+{
+  "distinct_pmids": 706,
+  "expected_count": 706,
+  "harvested_at_utc": "2026-08-05T16:00:30Z",
+  "harvester_version": "2.0",
+  "invariants_asserted": [
+    "parsed_count == expected_count",
+    "distinct_pmids == parsed_count",
+    "every record-level tag has a parser"
+  ],
+  "not_claimed": "This is every record returned by the query above at the timestamp above, not 'every paper on the gene'. PubMed applies Automatic Term Mapping; the query_translation field records what was actually run. pubmed_free_full_text_link=no means PubMed exposes no link it classifies as free \u2014 it does not mean paywalled.",
+  "outputs": {
+    "s.jsonl": {
+      "lossless": true,
+      "sha256": "b3cf6fe4225e241977f82b7890798060984b75278379e465320f611ba95dc8cb"
+    },
+    "s.tsv": {
+      "abstracts": false,
+      "lossless": false,
+      "sha256": "0fee98320bb2c9b5c4c1946837a24c2916fa664d94f24daee3b618fd27bdcf6e"
+    }
+  },
+  "parsed_count": 706,
+  "pubmed_free_full_text_links": 468,
+  "query_as_sent": "WWOX OR WOREE",
+  "query_translation": "\"wwox protein human\"[Supplementary Concept] OR \"wwox protein human\"[All Fields] OR \"wwox\"[All Fields] OR \"WOREE\"[All Fields]",
+  "record_types": [
+    "PubmedArticle"
+  ],
+  "source": "NCBI E-utilities. Abstracts may be under publisher copyright; check terms before redistributing.",
+  "with_abstract": 693,
+  "with_corrections": 40,
+  "with_other_abstract": 4
+}
