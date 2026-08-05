@@ -44,6 +44,7 @@ TESTS = (
     "framework/scripts/test_coverage_report.py",
     "framework/scripts/test_batch_queue.py",
     "framework/scripts/test_pubmed_clipboard_to_seed.py",
+    "framework/scripts/test_pubmed_corpus_harvest.py",
     "framework/scripts/test_fulltext_receipts.py",
     "framework/scripts/test_session_self_eval.py",
     "framework/scripts/test_deepdive_manifest.py",
