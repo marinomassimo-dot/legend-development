@@ -449,6 +449,28 @@ def harvest(term: str) -> tuple[list[dict], dict]:
             "free — it does not mean paywalled."),
         "source": "NCBI E-utilities. Abstracts may be under publisher copyright; check terms "
                   "before redistributing.",
+        # 🔴 The hazard this corpus creates. Hundreds of abstracts, local and greppable, are a
+        # standing temptation to answer from them — which is the exact failure the parity-of-
+        # sources principle exists to prevent, and which `grep as a method of analysis` is
+        # already forbidden for. The convenience is real and so is the risk, so the permitted
+        # uses are declared in the artefact itself rather than left to memory.
+        "evidential_status": "NOT_EVIDENCE",
+        "permitted_uses": [
+            "triage, deduplication and priority ranking over titles and abstracts",
+            "census: counting what exists against what the model has read",
+            "export pre-flight: checking whether an abstract carries a proposition BEFORE the "
+            "full text is opened, so the anchor is captured while the document is open",
+        ],
+        "forbidden_uses": [
+            "reading. An abstract is not the paper, and the decisive detail is routinely "
+            "absent from it — on 2026-08-04 a figure panel reversed a conclusion the running "
+            "text did not contain",
+            "supporting a claim, a verbatim locator or a FULLTEXT_READ_RECEIPT. A receipt "
+            "whose source is this file is refused by "
+            "scripts/test_abstract_corpus_is_not_evidence.py",
+            "substituting for a full-text read in the reading debt: a paper covered here is "
+            "still unread",
+        ],
     }
     return records, manifest, free_here
 
