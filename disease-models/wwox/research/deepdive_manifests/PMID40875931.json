@@ -75,6 +75,8 @@
   },
   "verbatim_locators": {
     "waived": false,
+    "source_fulltext_indexed": false,
+    "abstract_anchoring_waived": "Measured on 2026-08-05: Europe PMC returns inEPMC=N, isOpenAccess=N and no fullTextIdList for PMID 40875931, so an external validator can cache only the abstract. Two propositions are anchored to the abstract below and are externally verifiable. The remaining eighteen cannot be: they rest on Table 1, Table 2 and the Discussion, and the abstract states none of them — it gives the three significant associations as a summary sentence without the per-phenotype counts, does not print the premature-death row that contradicts the Discussion, does not mention case ID 11 or Q230P, and does not carry the 45/50 seizure figure. Anchoring them to the abstract would mean quoting text that does not say what the proposition claims, which is the failure the locator contract exists to prevent. They stay full-text-anchored and are marked not externally verifiable rather than quietly reworded.",
     "entries": [
       {
         "proposition": "The Discussion states that higher mortality is significantly associated with null/null — a claim this paper's own Table 2 does not support.",
@@ -104,7 +106,8 @@
       {
         "proposition": "Only three of eighteen phenotypes differ significantly by genotype class; global disability measures do not differ at all.",
         "snippet": "Individuals with the N/N variant genotype were more likely to have parent-reported hypertonia (p = 0.003), seizures (p = 0.016), and respiratory complications (p = 0.02) than individuals with the N/M or M/M variant genotype. The differences in proportions of each variant genotype in all other phenotypic features were not significantly significant.",
-        "anchor": "Results, Genotype-Phenotype Correlations, page e213883(9)"
+        "abstract_snippet": "Individuals classified with a null/null genotype (56.8%) were more likely to have hypertonia, seizures and respiratory complications compared with individuals with null/missense (29.5%) or missense/missense (13.6%) variant genotypes.",
+        "anchor": "Results, Genotype-Phenotype Correlations, page e213883(9); the abstract states the same association without the per-phenotype p values"
       },
       {
         "proposition": "The measures of global severity are flat across genotype classes at p = 1 — the same dissociation Oliver 2023 reported by a different method.",
@@ -174,7 +177,8 @@
       {
         "proposition": "The cohort's genotype-class proportions, which set the denominators for every association in Table 2 and show how small the missense/missense group is.",
         "snippet": "Over half (n = 25, 56.8%) displayed the N/N variant genotype, 13 (29.5%) the N/M variant genotype, and only 6 (13.6%) the M/M variant genotype",
-        "anchor": "Results, WWOX Variant Spectrum, page e213883(6)"
+        "abstract_snippet": "we have collected and analyzed data from 50 individuals with biallelic WWOX variants across 45 families, identifying 25 variants that have not been previously reported",
+        "anchor": "Results, WWOX Variant Spectrum, page e213883(6); the abstract gives the cohort size and novel-variant count, and the class percentages appear there inline"
       }
     ],
     "note": "Twenty locators, captured during the reading. Two are anchored to Table 1 and Table 2 cells and one to a figure caption; the rest to body text. The pair that matters most is entries 1 and 2, which are the paper's Discussion and the paper's own table saying opposite things about mortality."

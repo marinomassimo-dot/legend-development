@@ -28,6 +28,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
@@ -46,6 +47,9 @@ SECTIONS = ("group_assessment", "field_density", "multihop", "corpus_crossquery"
 # deliberately low: the cost of recording a real sentence during a reading is seconds,
 # and the cost of recovering it afterwards is re-opening the PDF.
 MIN_SNIPPET_CHARS = 30
+# An elided quote is verbatim in each half and not verbatim as a whole. LEGEND reads it fine;
+# a validator doing exact substring matching against a cached source rejects it.
+ELISION_RE = re.compile(r"\[\s*(?:…|\.\.\.)\s*\]|\s(?:…|\.\.\.)\s")
 # What kind of evidence the group can produce, read off the Methods rather than the journal.
 # A descriptive series and a wet-lab mechanism are not interchangeable support for the same
 # claim, and this is a separate axis from how many papers the group has on the gene.
@@ -224,6 +228,41 @@ def validate(manifest: Any) -> tuple[list[str], list[str]]:
                         "source it is — section, figure or table. A quote nobody can find "
                         "again is not verifiable"
                     )
+                if ELISION_RE.search(snippet):
+                    errors.append(
+                        f"verbatim_locators.entries[{position}].snippet: stitched quote. Two "
+                        "spans joined by an ellipsis are each verbatim but the whole is not, "
+                        "and an external validator matching exact substrings will reject it. "
+                        "Split it into two entries, or quote one contiguous span"
+                    )
+
+        # A snippet is verified by matching it against a cached copy of the source. When the
+        # source is not full-text indexed, the only text an external validator can hold is the
+        # ABSTRACT — so a full-text quote is unverifiable there, however faithful it is.
+        # Measured 2026-08-05: 2 of 8 read papers are abstract-only in Europe PMC, and 0 of 17
+        # exportable snippets occur in an abstract. At batch scale that is a quarter of the
+        # corpus discovering, after the reading, that its evidence cannot be carried out.
+        # Declaring the index state costs one lookup while the paper is open; recovering an
+        # abstract-anchored quote later costs the reading again.
+        indexed = locators.get("source_fulltext_indexed")
+        if not _waived(locators, "verbatim_locators", []) and indexed is None:
+            incomplete.append(
+                "verbatim_locators.source_fulltext_indexed: not declared — state whether the "
+                "source is full-text indexed (Europe PMC inEPMC/fullTextIdList), because it "
+                "decides whether these quotes are externally verifiable")
+        elif indexed is False:
+            unverifiable = [position for position, entry in enumerate(entries or [], 1)
+                            if isinstance(entry, dict)
+                            and not str(entry.get("abstract_snippet", "")).strip()]
+            reason = str(locators.get("abstract_anchoring_waived", "")).strip()
+            if unverifiable and len(reason) < MIN_WAIVER_CHARS:
+                errors.append(
+                    "verbatim_locators: the source is not full-text indexed, so an external "
+                    "validator can only see its abstract. Entries "
+                    f"{unverifiable} carry no `abstract_snippet`. Add one where the abstract "
+                    "supports the proposition, or set `abstract_anchoring_waived` to an "
+                    f"argument of at least {MIN_WAIVER_CHARS} characters saying why the "
+                    "abstract cannot carry them")
 
     retraction = manifest["retraction_check"]
     if not _waived(retraction, "retraction_check", errors):

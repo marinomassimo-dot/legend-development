@@ -65,6 +65,7 @@
   },
   "verbatim_locators": {
     "waived": false,
+    "source_fulltext_indexed": true,
     "entries": [
       {
         "proposition": "READ FROM THE IMAGE, NOT THE TEXT: lithium suppressed PTZ-induced seizures in ALL THREE genotypes, including wild-type — so the experiment does not establish a Wwox-specific rescue.",

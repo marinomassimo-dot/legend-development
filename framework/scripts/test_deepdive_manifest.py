@@ -38,7 +38,7 @@ def minimal(**overrides) -> dict:
         "multihop": {"gene_direct_refs_in_source": [], "references_enumerated": 28},
         "corpus_crossquery": {"query": "GSK3 in the existing corpus", "hits": 3},
         "retraction_check": {"result": "no retraction notice found"},
-        "verbatim_locators": {"entries": [
+        "verbatim_locators": {"source_fulltext_indexed": True, "entries": [
             {"proposition": "WWOX 388-407 is required for the interaction with GSK3beta",
              "snippet": "This indicates that WWOX amino acids 388-407 are required for its interaction with GSK3b.",
              "anchor": "Results, Fig. 3c"}]},
@@ -98,7 +98,7 @@ class WaiverIsAnArgument(unittest.TestCase):
         guard whose error message points at the omission is worse than no guard.
         """
         errors, incomplete = gate.validate(minimal(verbatim_locators={
-            "waived": False,
+            "waived": False, "source_fulltext_indexed": True,
             "entries": [{"proposition": "P", "snippet": "a" * 60, "anchor": "Results"}]}))
         self.assertEqual(errors, [])
         self.assertEqual(incomplete, [])
@@ -134,6 +134,57 @@ class CommittedManifestsHold(unittest.TestCase):
                 with self.subTest(manifest=path.name, anchor=entry.get("anchor")):
                     self.assertTrue(str(entry["anchor"]).strip())
                     self.assertGreaterEqual(len(entry["snippet"]), gate.MIN_SNIPPET_CHARS)
+
+
+class ExternallyVerifiableQuotes(unittest.TestCase):
+    """A quote nobody outside LEGEND can check is not usable as external evidence.
+
+    DisMech verifies each snippet by exact substring match against a cached copy of the source.
+    Measured 2026-08-05: 2 of 8 read papers are abstract-only in Europe PMC, and 0 of 17
+    exportable snippets occur in an abstract — every locator LEGEND produces is a full-text
+    locator, by design. For an indexed source that is fine; for an abstract-only one the quote
+    cannot be verified at all, and finding that out after the reading means reading again.
+    """
+
+    def test_stitched_quote_is_rejected(self) -> None:
+        errors, _ = gate.validate(minimal(verbatim_locators={"entries": [
+            {"proposition": "P",
+             "snippet": "the first half of the sentence […] and the second half of it",
+             "anchor": "Results"}]}))
+        self.assertTrue(any("stitched quote" in e for e in errors))
+
+    def test_contiguous_quote_is_accepted(self) -> None:
+        errors, _ = gate.validate(minimal(verbatim_locators={
+            "source_fulltext_indexed": True,
+            "entries": [{"proposition": "P", "snippet": "a" * 60, "anchor": "Results"}]}))
+        self.assertEqual(errors, [])
+
+    def test_abstract_only_source_needs_abstract_anchors_or_an_argument(self) -> None:
+        errors, _ = gate.validate(minimal(verbatim_locators={
+            "source_fulltext_indexed": False,
+            "entries": [{"proposition": "P", "snippet": "a" * 60, "anchor": "Results"}]}))
+        self.assertTrue(any("not full-text indexed" in e for e in errors))
+
+    def test_an_abstract_anchor_satisfies_it(self) -> None:
+        errors, _ = gate.validate(minimal(verbatim_locators={
+            "source_fulltext_indexed": False,
+            "entries": [{"proposition": "P", "snippet": "a" * 60, "anchor": "Results",
+                         "abstract_snippet": "the abstract says this"}]}))
+        self.assertEqual(errors, [])
+
+    def test_an_argued_waiver_also_satisfies_it(self) -> None:
+        errors, _ = gate.validate(minimal(verbatim_locators={
+            "source_fulltext_indexed": False,
+            "abstract_anchoring_waived": "the abstract reports only the headline association "
+                                         "and states none of these propositions",
+            "entries": [{"proposition": "P", "snippet": "a" * 60, "anchor": "Results"}]}))
+        self.assertEqual(errors, [])
+
+    def test_undeclared_index_state_is_a_visible_gap(self) -> None:
+        """Not a block — the lookup needs the network — but never silence."""
+        _errors, incomplete = gate.validate(minimal(verbatim_locators={
+            "entries": [{"proposition": "P", "snippet": "a" * 60, "anchor": "Results"}]}))
+        self.assertTrue(any("source_fulltext_indexed" in item for item in incomplete))
 
 
 if __name__ == "__main__":

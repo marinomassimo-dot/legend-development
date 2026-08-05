@@ -161,6 +161,7 @@
       }
     ],
     "waived": false,
+    "source_fulltext_indexed": true,
     "note": "Sixteen locators captured during the reading, not reconstructed afterwards. One (the EEG polygraphy) is anchored to an inspected image rather than to text, and is recorded precisely because neither the caption nor the body states it. All three figures were inspected, including Figure 1, a clinical photograph. The first pass abstained from that image on privacy grounds and was wrong to: the privacy risk lives in what LEGEND records, not in what it looks at, so abstaining protected nothing and left the D-14 failure mode — a caption that misdescribes its own image — unchecked. The non-identifying finding is recorded and no description of the individual is: the image is publisher-redacted across the lower face, the three dysmorphic features named in the caption lie in the visible region and are not contradicted by it, and no feature is visible that the text omits. The image resolution does not support independent grading of palpebral-fissure slant, so the caption is uncontradicted rather than confirmed."
   }
 }
