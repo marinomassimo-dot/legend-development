@@ -41,7 +41,7 @@ def minimal(**overrides) -> dict:
         "verbatim_locators": {"source_fulltext_indexed": True, "entries": [
             {"proposition": "WWOX 388-407 is required for the interaction with GSK3beta",
              "snippet": "This indicates that WWOX amino acids 388-407 are required for its interaction with GSK3b.",
-             "anchor": "Results, Fig. 3c"}]},
+             "surface": "body", "anchor": "Results, Fig. 3c"}]},
     }
     manifest.update(overrides)
     return manifest
@@ -99,7 +99,8 @@ class WaiverIsAnArgument(unittest.TestCase):
         """
         errors, incomplete = gate.validate(minimal(verbatim_locators={
             "waived": False, "source_fulltext_indexed": True,
-            "entries": [{"proposition": "P", "snippet": "a" * 60, "anchor": "Results"}]}))
+            "entries": [{"proposition": "P", "snippet": "a" * 60, "surface": "body",
+                         "anchor": "Results"}]}))
         self.assertEqual(errors, [])
         self.assertEqual(incomplete, [])
 

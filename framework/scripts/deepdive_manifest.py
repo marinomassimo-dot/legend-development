@@ -47,6 +47,18 @@ SECTIONS = ("group_assessment", "field_density", "multihop", "corpus_crossquery"
 # deliberately low: the cost of recording a real sentence during a reading is seconds,
 # and the cost of recovering it afterwards is re-opening the PDF.
 MIN_SNIPPET_CHARS = 30
+# 🔴 The refusal lives here, in the gate, not only in a regression test. Reviewed 2026-08-05:
+# a locator whose anchor named `files/corpus/*.jsonl` passed `validate()` with zero errors,
+# because the only check was a test nobody is obliged to run before writing.
+CORPUS_ARTEFACT = re.compile(
+    r"files/corpus/|corpus_seed_pubmed|_corpus\.jsonl|corpus_abstracts", re.IGNORECASE)
+# Which surface a quote was taken from. Declared per locator, because "which artefact was
+# named" and "which surface was actually used" are different facts, and only the first was
+# ever checked: an agent could read the abstract, write a plausible dossier, declare the XML,
+# and pass. `body`/`table`/`supplement` are text and are machine-checkable against the
+# artefact; `figure` is pixels and can only be attested; `abstract` is honest but weak.
+LOCATOR_SURFACES = {"body", "figure", "table", "supplement", "abstract"}
+TEXT_SURFACES = {"body", "table", "supplement"}
 # An elided quote is verbatim in each half and not verbatim as a whole. LEGEND reads it fine;
 # a validator doing exact substring matching against a cached source rejects it.
 ELISION_RE = re.compile(r"\[\s*(?:…|\.\.\.)\s*\]|\s(?:…|\.\.\.)\s")
@@ -228,6 +240,17 @@ def validate(manifest: Any) -> tuple[list[str], list[str]]:
                         "source it is — section, figure or table. A quote nobody can find "
                         "again is not verifiable"
                     )
+                if CORPUS_ARTEFACT.search(str(entry.get("anchor", ""))) or \
+                        CORPUS_ARTEFACT.search(str(entry.get("artifact", ""))):
+                    errors.append(
+                        f"verbatim_locators.entries[{position}]: anchored to a bibliographic "
+                        "corpus. An export of abstracts is not a document; anchor into the "
+                        "paper — section, figure or table")
+                surface = entry.get("surface")
+                if surface is not None and surface not in LOCATOR_SURFACES:
+                    errors.append(
+                        f"verbatim_locators.entries[{position}].surface: must be one of "
+                        f"{sorted(LOCATOR_SURFACES)}")
                 if ELISION_RE.search(snippet):
                     errors.append(
                         f"verbatim_locators.entries[{position}].snippet: stitched quote. Two "
@@ -244,6 +267,20 @@ def validate(manifest: Any) -> tuple[list[str], list[str]]:
         # corpus discovering, after the reading, that its evidence cannot be carried out.
         # Declaring the index state costs one lookup while the paper is open; recovering an
         # abstract-anchored quote later costs the reading again.
+        # The hole this closes: declared provenance is not the surface actually used. Reading
+        # only the abstract, writing a plausible dossier and naming the XML as the source
+        # passed every check, because nothing asked WHERE each quote came from.
+        declared = [e.get("surface") for e in (entries or []) if isinstance(e, dict)]
+        if entries and all(s is None for s in declared):
+            incomplete.append(
+                "verbatim_locators: no entry declares a `surface` (body/figure/table/"
+                "supplement/abstract) — provenance is named but the surface used is not")
+        elif entries and declared and all(s == "abstract" for s in declared if s):
+            errors.append(
+                "verbatim_locators: every locator is anchored to the abstract. Whatever "
+                "artefact this manifest names, the abstract is the surface that was read, "
+                "and that cannot support a complete full-text reading")
+
         indexed = locators.get("source_fulltext_indexed")
         if not _waived(locators, "verbatim_locators", []) and indexed is None:
             incomplete.append(

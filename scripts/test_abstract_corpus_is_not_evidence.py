@@ -24,6 +24,7 @@ pre-flight. Those are the reasons it exists.
 """
 from __future__ import annotations
 
+import importlib.util
 import json
 import re
 import sys
@@ -77,6 +78,82 @@ class CorpusIsNotASource(unittest.TestCase):
                 with self.subTest(manifest=path.name, entry=position):
                     self.assertIsNone(CORPUS_MARKERS.search(str(entry.get("anchor", ""))),
                                       "an anchor must name a section, figure or table")
+
+
+class TheWritersRefuseItThemselves(unittest.TestCase):
+    """The refusal must live in the writer, not only here.
+
+    Reviewed 2026-08-05: a hand-built `complete_fulltext_read` naming `files/corpus/*.jsonl`
+    as the document it read passed `validate_receipt()` with no complaint, and a locator
+    anchored to the corpus passed `deepdive_manifest.validate()` with zero errors. The only
+    objection lived in this file — and a test nobody is obliged to run before writing blocks
+    nothing, while `record` appends and re-anchors the chain. These tests assert the refusal
+    where it has to be.
+    """
+
+    @staticmethod
+    def _module(name: str, relative: str):
+        spec = importlib.util.spec_from_file_location(name, ROOT / relative)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module
+
+    def setUp(self) -> None:
+        self.receipts = self._module("rec", "framework/scripts/fulltext_receipts.py")
+        self.gate = self._module("gate", "framework/scripts/deepdive_manifest.py")
+        self.receipt = {
+            "event_id": "FTR-20260805-99999999-01",
+            "record_kind": "contemporaneous_receipt",
+            "study_id": {"pmid": "99999999", "doi": "10.1000/xyz"},
+            "event_at": "2026-08-05T10:00:00Z", "analysis_at": "2026-08-05T10:00:00Z",
+            "workflow": "deep read", "evidence_depth": "complete_fulltext_read",
+            "source_locator": "files/fulltext/paper.xml", "source_fingerprint": "a" * 64,
+            "coverage": {k: "read" for k in
+                         ("abstract", "introduction", "methods", "results", "figures",
+                          "tables", "discussion", "limitations", "supplementary")},
+            "outputs": ["x.md"], "evidence_basis": ["coverage_map"],
+            "prior_receipt": None, "reread_reason": "first_read"}
+
+    def test_a_legitimate_receipt_still_validates(self) -> None:
+        self.assertEqual(self.receipts.validate_receipt(self.receipt), [])
+
+    def test_the_receipt_writer_refuses_a_corpus_source(self) -> None:
+        bad = {**self.receipt, "source_locator": "files/corpus/wwox_20260805.jsonl"}
+        self.assertTrue(any("bibliographic corpus" in e
+                            for e in self.receipts.validate_receipt(bad)))
+
+    def test_the_receipt_writer_refuses_a_corpus_evidence_basis(self) -> None:
+        bad = {**self.receipt, "evidence_basis": ["files/corpus/wwox_20260805.jsonl"]}
+        self.assertTrue(any("bibliographic corpus" in e
+                            for e in self.receipts.validate_receipt(bad)))
+
+    def test_the_manifest_gate_refuses_a_corpus_anchor(self) -> None:
+        for path in sorted(MANIFESTS.glob("PMID*.json")):
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            entries = manifest.get("verbatim_locators", {}).get("entries")
+            if not entries:
+                continue
+            manifest["verbatim_locators"]["entries"][0]["anchor"] = \
+                "files/corpus/wwox_20260805.jsonl abstract"
+            errors, _ = self.gate.validate(manifest)
+            self.assertTrue(any("bibliographic corpus" in e for e in errors))
+            return
+        self.skipTest("no manifest with locators to mutate")
+
+    def test_an_all_abstract_manifest_cannot_support_a_complete_read(self) -> None:
+        """Declared provenance is not the surface used — this checks the surface."""
+        for path in sorted(MANIFESTS.glob("PMID*.json")):
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            entries = manifest.get("verbatim_locators", {}).get("entries")
+            if not entries:
+                continue
+            for entry in entries:
+                entry["surface"] = "abstract"
+            errors, _ = self.gate.validate(manifest)
+            self.assertTrue(any("every locator is anchored to the abstract" in e
+                                for e in errors))
+            return
+        self.skipTest("no manifest with locators to mutate")
 
 
 class ArtefactCarriesItsOwnTerms(unittest.TestCase):

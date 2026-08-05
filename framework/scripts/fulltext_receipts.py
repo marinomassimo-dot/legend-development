@@ -99,6 +99,14 @@ REQUIRED = {
 CHAIN_FIELD = "ledger_prev_hash"
 LEDGER_MANAGED = {CHAIN_FIELD}
 # A locator with a path separator that is neither a URL nor a bare DOI is a local artifact.
+# 🔴 A bibliographic export is not a document. The refusal must live HERE, in the writer, not
+# only in a regression test: a test that is not run blocks nothing, and `record` appends and
+# re-anchors the chain before any suite has a chance to object. Reviewed 2026-08-05, where a
+# hand-built receipt naming `files/corpus/*.jsonl` as the document it read passed
+# `validate_receipt()` with no complaint at all.
+CORPUS_ARTEFACT = re.compile(
+    r"files/corpus/|corpus_seed_pubmed|_corpus\.jsonl|corpus_abstracts", re.IGNORECASE)
+
 URL_LOCATOR = re.compile(r"^[a-z][a-z0-9+.-]*://", re.I)
 DOI_LOCATOR = re.compile(r"^(?:https?://doi\.org/)?10\.\d{4,9}/\S+$", re.I)
 LOCAL_ARTIFACT_SUFFIXES = {
@@ -223,10 +231,47 @@ def _parse_datetime(value: str) -> datetime:
     return datetime.fromisoformat(candidate)
 
 
+def validate_new_receipt(receipt: Any) -> list[str]:
+    """Rules applied to a receipt being WRITTEN, never to one already in the ledger.
+
+    History is grandfathered on purpose. `validate_receipt` runs over every line whenever the
+    ledger is loaded, so tightening it retroactively would not correct the past — it would
+    halt the system on records that can no longer be edited. Same shape as the two ratchets in
+    the state manifest: the backlog stays visible, and only new work meets the tighter rule.
+
+    Reviewed 2026-08-05: five of forty-four receipts carry `analysis_at` at exactly
+    `00:00:00Z`. Midnight to the second is a placeholder, not an observation, and a receipt
+    whose `record_kind` is *contemporaneous* is asserting when the work happened.
+    """
+    if not isinstance(receipt, dict):
+        return []
+    errors: list[str] = []
+    if receipt.get("record_kind") == "contemporaneous_receipt":
+        for field in ("event_at", "analysis_at"):
+            if str(receipt.get(field) or "").endswith("T00:00:00Z"):
+                errors.append(
+                    f"{field} is exactly midnight UTC. A contemporaneous receipt asserts when "
+                    "the work happened; midnight to the second is a placeholder. Record the "
+                    "real time, or file the event as a legacy_reconstruction.")
+    return errors
+
+
 def validate_receipt(receipt: Any) -> list[str]:
     if not isinstance(receipt, dict):
         return ["receipt must be a JSON object"]
     errors: list[str] = []
+    for field in ("source_locator", "workflow"):
+        if CORPUS_ARTEFACT.search(str(receipt.get(field) or "")):
+            errors.append(
+                f"{field} names a bibliographic corpus. An export of abstracts is not a "
+                "document and cannot be the thing a reading read — see CLAUDE.md rule 8. "
+                "Name the paper's own artefact, or record the depth honestly as "
+                "`abstract_only`.")
+    for item in receipt.get("evidence_basis") or []:
+        if CORPUS_ARTEFACT.search(str(item)):
+            errors.append(
+                "evidence_basis cites a bibliographic corpus as the basis of a reading")
+            break
     missing = REQUIRED - set(receipt)
     extra = set(receipt) - REQUIRED - LEDGER_MANAGED
     chain = receipt.get(CHAIN_FIELD)
@@ -450,7 +495,7 @@ def append_receipt(
     if fcntl is None:
         raise RuntimeError("POSIX file locking unavailable; refusing unlocked receipt append")
     record = {key: value for key, value in receipt.items() if key not in LEDGER_MANAGED}
-    errors = validate_receipt(record)
+    errors = validate_receipt(record) + validate_new_receipt(record)
     if errors:
         raise ValueError("; ".join(errors))
     path.parent.mkdir(parents=True, exist_ok=True)
