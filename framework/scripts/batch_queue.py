@@ -338,7 +338,13 @@ def _build_uncached(root: Path, disease: str) -> dict:
         "seed_occurrences": occurrences,
         "duplicate_occurrences": occurrences - len(seeds),
         "seed_total": len(seeds),
-        "free_full_text": sum(1 for seed in seeds if seed.get("free_full_text") == "yes"),
+        # 🔴 The same default the comment on FREE_FULL_TEXT_COLUMNS was written about, in the
+        # one place the fix did not reach. The queue rows went through `_free_full_text` and
+        # counted 468; this summary read the raw pre-rename key and reported 0 — inside the
+        # same generated file, which then told every reader "706 records, 0 with free full
+        # text" while listing 468 rows marked yes. A helper that exists is not a helper that
+        # is used, and `.get` on a renamed column is silent by design.
+        "free_full_text": sum(1 for seed in seeds if _free_full_text(seed) == "yes"),
         "year_min": min(years) if years else None,
         "year_max": max(years) if years else None,
         "published_since_2020": sum(year >= 2020 for year in years),
@@ -526,7 +532,8 @@ def render(report: dict, limit: int) -> str:
         "    --out disease-models/wwox/registries/batch_queue.md",
         "```",
         "",
-        "It emits three files: a lossless `.jsonl`, the compact `.tsv` this queue reads, and a",
+        "It emits three files: a record-level `.jsonl` (lossless except the fields the",
+        "manifest names under `not_captured`), the compact `.tsv` this queue reads, and a",
         "`.manifest.json` recording the query as sent, the `QueryTranslation` PubMed actually",
         "ran, the UTC timestamp, the expected count and the asserted invariants. Drop",
         "`--no-abstracts` to keep abstracts — send that run to a gitignored directory, because",

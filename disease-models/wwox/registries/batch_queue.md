@@ -40,7 +40,7 @@ and never claims to be current. The status column is *derived on every run*, so 
 quietly disagree with the canonical state. When a snapshot is exhausted, add another one
 next to it; older snapshots stay valid as history.
 
-**Seed corpus:** `corpus_seed_pubmed_20260705.tsv`, `corpus_seed_pubmed_20260805.tsv` — 706 records, 0 with free full text.
+**Seed corpus:** `corpus_seed_pubmed_20260705.tsv`, `corpus_seed_pubmed_20260805.tsv` — 706 records, 468 with free full text.
 Coverage years: **2000–2026**; 215 records are from 2020 onward. This is therefore a
 broad historical-plus-recent corpus, not a recent-only list.
 The snapshots contain 1165 export occurrences; 459 repeated occurrence(s) are deduplicated in this queue.
@@ -827,7 +827,8 @@ python3 framework/scripts/batch_queue.py \
     --out disease-models/wwox/registries/batch_queue.md
 ```
 
-It emits three files: a lossless `.jsonl`, the compact `.tsv` this queue reads, and a
+It emits three files: a record-level `.jsonl` (lossless except the fields the
+manifest names under `not_captured`), the compact `.tsv` this queue reads, and a
 `.manifest.json` recording the query as sent, the `QueryTranslation` PubMed actually
 ran, the UTC timestamp, the expected count and the asserted invariants. Drop
 `--no-abstracts` to keep abstracts — send that run to a gitignored directory, because

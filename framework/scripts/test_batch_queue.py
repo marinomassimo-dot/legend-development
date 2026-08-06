@@ -197,6 +197,20 @@ class QueueIntegrityTests(unittest.TestCase):
         self.assertLessEqual(report["year_min"], report["year_max"])
         self.assertLessEqual(report["published_since_2020"], report["seed_total"])
 
+    def test_the_free_full_text_summary_matches_the_rows_it_summarises(self) -> None:
+        """`0 <= 706` was true and useless.
+
+        The summary read `seed["free_full_text"]` while the rows went through
+        `_free_full_text`, so after the harvester renamed the column the generated queue
+        announced "706 records, 0 with free full text" directly above 468 rows marked `yes`.
+        A total that cannot disagree with its own rows is the only version worth asserting.
+        """
+        report = bq.build(ROOT, "wwox")
+        self.assertEqual(
+            report["free_full_text"],
+            sum(1 for item in report["queue"] if item["free_full_text"] == "yes"))
+        self.assertGreaterEqual(report["free_full_text"], report["ready_now"])
+
     def test_committed_markdown_lists_every_seed_record_with_status(self) -> None:
         report = bq.build(ROOT, "wwox")
         rendered = bq.render(report, limit=0)
