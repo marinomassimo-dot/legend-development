@@ -23,6 +23,7 @@ TESTS = (
     "scripts/test_skill_packages.py",
     "scripts/test_agent_pipeline_contract.py",
     "scripts/test_provenance_coverage.py",
+    "scripts/test_freeze_scope.py",
     "scripts/test_release_runner_verdict.py",
     "scripts/test_guard_bash_command.py",
     "scripts/test_locator_obligation_reaches_every_route.py",
