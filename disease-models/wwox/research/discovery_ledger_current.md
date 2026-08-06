@@ -2023,3 +2023,83 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
 - **Esperimento discriminante / azione:** ottenere `FT-041` e leggere la sua tabella di
   chimica ematica. È la singola azione con il rapporto valore/costo più alto oggi disponibile.
 - **Interconnessioni:** `DL-MECH-073` · `DL-MECH-074` · `DL-MECH-075` · `FT-041` · `FT-042`.
+- **RISOLTO 2026-08-06:** `FT-041` letto integralmente (`FTR-20260806-17803050-01`). Verdetto
+  diviso: il **contrasto specifico** con il topo è confermato (glucosio, calcio, elettroliti
+  normali nel ratto), ma **"clearly excluded" è sovradimensionato** — BUN ~3.2–3.5× e
+  creatinina significativamente aumentati. Vedi `DL-MECH-077`. E una seconda affermazione di
+  `FT-042` è **refutata dalla sua stessa fonte**: vedi `DL-MECH-078`.
+
+### DL-MECH-077 — Il ratto è uremico senza essere ipoglicemico: il confondente non si esclude, si sposta — e gli autori offrono una spiegazione che nessuno ha mai testato
+- **Status:** open · **Tag epistemico:** `DATO` (le misure) + `IPOTESI` (le due spiegazioni
+  concorrenti).
+- **Fonte:** Suzuki, Takenaka, Suzuki 2007, *Comparative Medicine* 57(4):360–369 — PMID
+  **17803050**, **nessun DOI, nessun PMCID**; dieci pagine, sei figure, tre tabelle e 35
+  referenze lette integralmente; receipt `FTR-20260806-17803050-01`, manifest con 32 locator
+  verificati. Full text ottenuto dall'operatore dopo il rifiuto di ogni aggregatore.
+- **DATO — Table 2, `n=4` normali e `5` mutanti per sesso:** BUN 12.6 → **40.3** mg/ml (♀,
+  `P<0.05`) e 10.1 → **35.6** (♂, `P<0.01`); creatinina 0.48 → **0.64** (♀, `P<0.01`) e 0.45 →
+  **0.58** (♂, `P<0.01`); fosfato inorganico significativo solo nelle femmine. **Glucosio,
+  calcio, Na⁺, K⁺, Cl⁻ e trigliceridi: tutti non significativi.**
+- **VERDETTO sulla tensione di `DL-MECH-076`, diviso:** il **contrasto specifico** che
+  `FT-042` traccia col topo è **confermato** — il ratto non ha ipoglicemia, ipocalcemia né
+  squilibrio elettrolitico, che sono invece il profilo del null murino. Ma la frase
+  *"**Normal levels of serum constituents** clearly excluded the possibility that these
+  abnormal excitabilities are resulted from a systemic metabolic disorder"* è **falsa come
+  affermazione generale**: BUN triplo e creatinina elevata non sono livelli normali. Il ratto
+  è **uremico senza essere ipoglicemico**. Il confondente sistemico non è escluso: è di natura
+  diversa da quella del topo.
+- 🔴 **IPOTESI CONCORRENTE MAI TESTATA — la scoperta che questa lettura porta:** gli autori
+  scrivono *"Alternatively, the increases in plasma BUN and CRE may be related to the
+  **increased production** of these compounds"* e *"the production of urea-nitrogen and
+  creatinine may be increased due to **hypercatabolism and muscle disruption**"*, con
+  precedente nominato: il ceppo **SER** ha BUN elevato insieme a ritardo di crescita e crisi
+  motorie. **Questo compete direttamente con l'ipotesi di acidosi tubulare renale che PMID
+  19936220 ha costruito per il topo sullo stesso marcatore** — e quel paper non l'ha mai
+  considerata. Un animale con convulsioni tonico-cloniche ripetute, gravemente cachettico e
+  atassico ha una via non renale ovvia verso urea e creatinina alte.
+- **DATO — i tre negativi che complicano la lettura renale:** *"we could not find any
+  pathologic alteration in their kidneys"*; *"urostick tests and blood examinations did not
+  identify any manifestations of proteinuria and anemia"*; e la cautela degli autori *"if
+  renal excretive function is reduced in the mutant rats, the degree of dysfunction may not be
+  severe"*. Da confrontare col topo, dove PMID 19936220 trovò invece anemia (3% NRBC in 1 di 2).
+- **Densità di campo 2026-08-06:** `WWOX AND ("blood urea nitrogen" OR creatinine)` → **1**
+  record. `WWOX AND (hypercatabolism OR "muscle disruption")` → **0**. Il BUN elevato è ora
+  documentato di prima mano in **tre** luoghi — topo null, questo ratto, e la citazione
+  incrociata fra i due — con **tre spiegazioni implicite diverse e zero follow-up**.
+- **Esperimento discriminante:** gli autori lo nominano e spiegano perché non l'hanno fatto —
+  test di clearance renale, impraticabile perché nanismo e letalità rendono difficile
+  raccogliere urina. Nel topo servirebbe in parallelo creatina-chinasi e massa muscolare per
+  separare le due vie.
+- **Interconnessioni:** `DL-MECH-074` · `DL-MECH-076` · `DL-MECH-078` · `FT-041` · `FT-042`.
+
+### DL-MECH-078 — Un abstract che sovradichiara il proprio corpo, e la citazione che ci si è appoggiata: il nanismo *lde* NON è spiegato dal GH
+- **Status:** open · **Tag epistemico:** `CORREZIONE` di attribuzione su un `DATO` negativo.
+- **Fonti:** PMID **17803050** (letto) e PMID **19500159** (letto, `FTR-20260806-19500159-01`).
+- 🔴 **La catena, terza istanza in un giorno:** PMID 19500159 scrive *"The cause of severe
+  dwarfism with retarded bone growth in lde/lde rats may be related, at least in part, to
+  **lower levels of pituitary growth hormone** (Suzuki et al. 2007)"*. Ma PMID 17803050 —
+  la fonte citata — dice il contrario nel corpo: *"although the plasma GH level was slightly
+  lower in mutant than in normal rats, **the difference was not significant**"*, e conclude
+  *"suggesting that the severe type of dwarfism observed in lde/lde rats **cannot be explained
+  solely by low levels of plasma GH**"*. Le cellule GH-positive sono presenti e il GH ha peso
+  molecolare normale.
+- 🔴 **Da dove nasce l'errore — ed è il punto:** l'**abstract** di PMID 17803050 scrive *"as
+  well as decreased concentrations of plasma growth hormone"*, **senza qualificazione**,
+  mentre il corpo la dichiara non significativa. **L'abstract sovradichiara il proprio corpo**,
+  e il paper del 2009 ha citato la versione dell'abstract. Verificato meccanicamente: quella
+  frase risolve sulla superficie *abstract* e non sul *body* dell'artefatto.
+- **Perché conta per il metodo, non solo per il fatto:** il 2026-08-06 l'operatore ha fornito
+  esattamente quell'abstract e la sessione ha rifiutato di trattarlo come lettura. Se lo avesse
+  accettato, **"GH ridotto" sarebbe entrato nel modello come dato, e non lo è.** È la
+  dimostrazione più pulita possibile della regola *un abstract non è una lettura*, e la terza
+  istanza in giornata di `IMPORTED_PREMISE_ATTRIBUTION_GATE` — la prima in cui la
+  sovradichiarazione nasce **dentro l'abstract della fonte** anziché nel paper citante.
+- **DATO — cosa resta non spiegato:** il nanismo *lde* non ha causa nota. Non è GH, non è
+  recettore del GH (gli autori argomentano che un GH plasmatico non elevato esclude il modello
+  Laron), e la crescita cerebrale relativa raddoppiata è dichiarata GH-indipendente. Densità di
+  campo: `WWOX AND "growth hormone"` → **0** record.
+- **DATO collaterale — l'atassia:** 95% dei mutanti, 0% dei normali, e **non cerebellare**
+  (*"we did not detect any marked pathologic changes in the cerebella"*). È il fenotipo più
+  penetrante dell'intero modello *lde*, più delle crisi (34%), e la letteratura a valle non lo
+  porta affatto.
+- **Interconnessioni:** `DL-MECH-075` · `DL-MECH-076` · `DL-MECH-077` · `FT-041` · `FT-042`.

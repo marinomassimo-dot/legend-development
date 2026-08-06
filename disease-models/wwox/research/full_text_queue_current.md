@@ -583,29 +583,30 @@ murino deriva. Va letto insieme a `FT-042`, non dopo. Vedi `DL-MECH-073`.
 serum constituents **clearly excluded** the possibility that these abnormal excitabilities are
 resulted from a systemic metabolic disorder"* — oltre al 33% di crisi spontanee e al GH
 ipofisario basso. Vedi `DL-MECH-076`.
-**Current status:** ⬜ **NON LETTO — `PAYWALL`, debito dichiarato e aperto.** Recupero
-tentato 2026-08-06: **nessun DOI registrato**, quindi Unpaywall, OpenAlex e Semantic Scholar
-non sono nemmeno indirizzabili; `elink pubmed→pmc` non restituisce `LinkSetDb`, quindi non è
-depositato in PMC (AALAS deposita volumi più recenti di *Comparative Medicine*, non questo del
-2007). Record chiuso genuino — la classe più difficile della cascata. Handoff:
-`files/fulltext/PMID17803050_Suzuki2007.handoff.md`.
-📄 **ABSTRACT ACQUISITO 2026-08-06 — `abstract_only`, NON una lettura, il debito resta
-aperto.** L'operatore ha fornito il solo abstract PubMed. Non è stato emesso alcun receipt: un
-abstract non chiude una voce di coda e non salda debito di lettura. È registrato qui perché
-**mette in tensione una frase di `FT-042`**: riporta che i ratti mutanti *"had significantly
-increased concentrations of plasma urea nitrogen, creatinine, and inorganic phosphate, as well
-as decreased concentrations of plasma growth hormone"* — una firma di compromissione renale,
-non "livelli normali di costituenti sierici". Riporta inoltre 95% di andatura atassica, ~34%
-di crisi, e peso cerebrale relativo significativamente più alto (stesso brain sparing del
-topo). **Ciò che serve dal full text: la tabella di chimica ematica**, che decide se la
-dissociazione crisi-versus-malattia-sistemica regge.
-**Via più economica:** stesso autore corrispondente di `FT-042` — recapiti nella handoff card,
-fuori dal materiale pubblico; in alternativa ILL per citazione (*Comp Med* 2007;57(4):360–369)
-o accesso socio AALAS.
-**Nota:** PMID 19936220 cita questo paper per tre comparatori oggi di seconda mano in LEGEND —
-densità ossea solo lievemente ridotta nei ratti *lde/lde*, nessun osteosarcoma nella loro breve
-vita, e **BUN significativamente più alto**, che è l'eco nel ratto dell'uremia misurata nel
-topo null — e l'abstract ora lo conferma direttamente.
+**Current status:** ✅ **LETTO INTEGRALMENTE 2026-08-06** — receipt
+`FTR-20260806-17803050-01`; manifest schema-v2 con **32 locator** verificati strict (25 corpo,
+4 tabella, 3 figura), zero gap, zero waiver di sezione; dossier in
+`fulltext_dossiers/PMID17803050.md`. Dieci pagine, sei figure e tre tabelle ispezionate sulle
+pagine renderizzate, 35 referenze enumerate. Nessun materiale supplementare esiste.
+**Provenienza:** irrecuperabile da ogni aggregatore — **senza DOI** Unpaywall, OpenAlex e
+Semantic Scholar non sono indirizzabili e non c'è deposito PMC. Full text fornito
+dall'operatore; layer testuale trascritto verbatim in artefatto HTML locale con separazione
+abstract/corpo dimostrata prima dell'uso — **separazione qui load-bearing**, perché
+l'errore centrale che questa lettura scopre vive in una frase presente **solo nell'abstract**.
+🔴 **Esito — verdetto diviso su `FT-042`, e la seconda metà cade.** (1) Il contrasto specifico
+col topo è **confermato**: glucosio, calcio ed elettroliti normali nel ratto. Ma *"clearly
+excluded"* è **sovradimensionato** — BUN ~3.2–3.5× e creatinina significativamente aumentati:
+il ratto è **uremico senza essere ipoglicemico**. Gli autori offrono inoltre una spiegazione
+concorrente mai testata (ipercatabolismo e disgregazione muscolare da crisi ripetute, con
+precedente nel ceppo SER) che **compete direttamente con l'ipotesi di acidosi tubulare renale
+costruita per il topo**. Vedi `DL-MECH-077`. (2) 🔴 L'attribuzione del nanismo al GH ipofisario
+basso è **refutata dalla fonte stessa**: la differenza **non è significativa** e il paper
+conclude che il nanismo *"cannot be explained solely by low levels of plasma GH"*. La frase
+non qualificata esiste **solo nell'abstract** di questo paper. Vedi `DL-MECH-078`.
+**Nota di metodo:** il 2026-08-06 l'operatore aveva fornito prima il solo abstract, registrato
+come `abstract_only` **senza receipt**. Se fosse stato accettato come lettura, "GH ridotto"
+sarebbe entrato nel modello come dato — e non lo è. Correzioni isolate in
+`staging/commit_candidate_20260806_17803050.md`.
 
 ---
 
