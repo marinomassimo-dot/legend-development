@@ -197,6 +197,52 @@ class QueueIntegrityTests(unittest.TestCase):
         self.assertLessEqual(report["year_min"], report["year_max"])
         self.assertLessEqual(report["published_since_2020"], report["seed_total"])
 
+    def test_retraction_status_reaches_the_rendered_queue(self) -> None:
+        """XML → TSV → queue → a row a reader cannot miss.
+
+        The harvester carried `corrections` into the seed and the queue ignored the column,
+        so "a paper under an expression of concern reaches triage looking clean" stayed true
+        while the fix was reported as done. A column nothing reads is a column that does not
+        exist.
+        """
+        with TemporaryDirectory() as temporary:
+            registries = Path(temporary)
+            header = ("pmid\tyear\tpubmed_free_full_text_link\ttype\tdoi\tcorrections\t"
+                      "title\n")
+            rows = (
+                "11111111\t2025\tyes\tprimary\t10.1000/a\tRetractionIn:42464650\tRetracted\n"
+                "22222222\t2025\tyes\tprimary\t10.1000/b\tExpressionOfConcernIn:9\tConcern\n"
+                "33333333\t2025\tyes\tprimary\t10.1000/c\tErratumIn:8\tErratum\n"
+                "44444444\t2025\tyes\tprimary\t10.1000/d\t\tClean\n"
+            )
+            (registries / "corpus_seed_pubmed_20260806.tsv").write_text(
+                header + rows, encoding="utf-8")
+            seeds, _ = bq.load_seeds(registries)
+            flags = {seed["pmid"]: bq._integrity(seed) for seed in seeds}
+        self.assertEqual(flags, {"11111111": "retracted", "22222222": "concern",
+                                 "33333333": "corrected", "44444444": ""})
+
+    def test_an_erratum_is_not_a_retraction(self) -> None:
+        """Both are `corrections` in the XML and they mean opposite things for reading."""
+        self.assertEqual(bq._integrity({"corrections": "ErratumIn:1; RetractionIn:2"}),
+                         "retracted")
+        self.assertEqual(bq._integrity({"corrections": "ErratumIn:1"}), "corrected")
+        self.assertEqual(bq._integrity({}), "")
+
+    def test_the_rendered_table_shows_the_integrity_flag(self) -> None:
+        report = {
+            "disease": "wwox", "seed_files": ["s.tsv"], "seed_occurrences": 1,
+            "duplicate_occurrences": 0, "seed_total": 1, "free_full_text": 1,
+            "year_min": 2025, "year_max": 2025, "published_since_2020": 1,
+            "counts": {"screened": 1}, "actions": {"NEW": 1}, "outstanding": 1,
+            "ready_now": 1,
+            "queue": [{"triage_class": "NEW", "action": "read", "pmid": "11111111",
+                       "year": "2025", "title": "A paper", "free_full_text": "yes",
+                       "integrity": "retracted", "type": "primary", "depth": "screened",
+                       "record": "", "source": "s.tsv"}],
+        }
+        self.assertIn("🛑 RETRACTED", bq.render(report, limit=0))
+
     def test_the_free_full_text_summary_matches_the_rows_it_summarises(self) -> None:
         """`0 <= 706` was true and useless.
 

@@ -109,6 +109,35 @@ RECEIPT_DEPTH = {
 FREE_FULL_TEXT_COLUMNS = ("pubmed_free_full_text_link", "free_full_text")
 
 
+# 🔴 A retraction or an expression of concern is not an erratum, and the difference decides
+# whether a paper may be read as evidence at all. The harvester carries every notice in the
+# seed's `corrections` column; a column nothing reads is a column that does not exist, and
+# "a paper under an EoC reaches triage looking clean" stays true until the queue shows it.
+INTEGRITY_REF_TYPES = ("RetractionIn", "RetractedPublication", "ExpressionOfConcernIn",
+                       "ExpressionOfConcernFor", "RetractionOf")
+# Shown before the title, where a reader cannot miss it. Ranking is deliberately left alone:
+# where a retracted paper belongs in a reading queue is a scientific decision, not a sort key.
+INTEGRITY_PREFIX = {"retracted": "🛑 RETRACTED — ",
+                    "concern": "⚠️ EXPRESSION OF CONCERN — ",
+                    "corrected": "✎ corrected — "}
+
+
+def _integrity(seed: dict[str, str]) -> str:
+    """`retracted` · `concern` · `corrected` · `""` — the strongest notice on the record.
+
+    Ordered by consequence, not by appearance: a paper carrying both an erratum and a
+    retraction is retracted.
+    """
+    notices = (seed.get("corrections") or "")
+    if not notices.strip():
+        return ""
+    if any(kind in notices for kind in ("RetractionIn", "RetractedPublication", "RetractionOf")):
+        return "retracted"
+    if "ExpressionOfConcern" in notices:
+        return "concern"
+    return "corrected"
+
+
 def _free_full_text(seed: dict[str, str]) -> str:
     for column in FREE_FULL_TEXT_COLUMNS:
         if column in seed:
@@ -305,6 +334,7 @@ def _build_uncached(root: Path, disease: str) -> dict:
                 "year": seed.get("year", ""),
                 "title": seed.get("title", ""),
                 "free_full_text": _free_full_text(seed),
+                "integrity": _integrity(seed),
                 "type": seed.get("type", ""),
                 "depth": depth,
                 "record": hit["record"] if hit else "",
@@ -465,7 +495,8 @@ def render(report: dict, limit: int) -> str:
         if limit > 0 and shown >= limit:
             break
         free = "✅" if item["free_full_text"] == "yes" else "—"
-        title = item["title"].replace("|", "\\|")
+        title = INTEGRITY_PREFIX.get(item.get("integrity", ""), "") + \
+            item["title"].replace("|", "\\|")
         head.append(
             f"| [{item['pmid']}](https://pubmed.ncbi.nlm.nih.gov/{item['pmid']}/) "
             f"| {item['year']} | {free} | {item['type']} | {item['depth']} | {title} |"
@@ -493,7 +524,8 @@ def render(report: dict, limit: int) -> str:
         if item["depth"] not in {"abstract only", "partial full text", "full text"}:
             continue
         free = "✅" if item["free_full_text"] == "yes" else "—"
-        title = item["title"].replace("|", "\\|")
+        title = INTEGRITY_PREFIX.get(item.get("integrity", ""), "") + \
+            item["title"].replace("|", "\\|")
         head.append(
             f"| [{item['pmid']}](https://pubmed.ncbi.nlm.nih.gov/{item['pmid']}/) "
             f"| {item['year']} | {free} | {item['depth']} | {item['record']} | {title} |"

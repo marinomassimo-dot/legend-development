@@ -39,6 +39,10 @@ from typing import Any
 from html.parser import HTMLParser
 from xml.etree import ElementTree
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import corpus_firewall as firewall  # noqa: E402
+
 MANIFEST_DIR = "disease-models/{disease}/research/deepdive_manifests"
 
 # A waiver must be an argument, not a shrug. Short strings like "n/a" or "not relevant"
@@ -57,8 +61,10 @@ CURRENT_SCHEMA_VERSION = 2
 # 🔴 The refusal lives here, in the gate, not only in a regression test. Reviewed 2026-08-05:
 # a locator whose anchor named `files/corpus/*.jsonl` passed `validate()` with zero errors,
 # because the only check was a test nobody is obliged to run before writing.
-CORPUS_ARTEFACT = re.compile(
-    r"files/corpus/|corpus_seed_pubmed|_corpus\.jsonl|corpus_abstracts", re.IGNORECASE)
+# Reviewed 2026-08-06: by-name recognition survives no rename, and a copy out of
+# `files/corpus/` is the obvious move for anyone the name check has just refused. The shared
+# definition also asks what the file IS — see `corpus_firewall.looks_like_corpus`.
+CORPUS_ARTEFACT = firewall.CORPUS_ARTEFACT
 # Which surface a quote was taken from. Declared per locator, because "which artefact was
 # named" and "which surface was actually used" are different facts, and only the first was
 # ever checked: an agent could read the abstract, write a plausible dossier, declare the XML,
@@ -369,8 +375,10 @@ def validate(
                     continue
                 if path_value in artifacts:
                     errors.append(f"{prefix}.path: duplicate artifact {path_value}")
-                if CORPUS_ARTEFACT.search(path_value):
-                    errors.append(f"{prefix}.path: a bibliographic corpus is not evidence")
+                objection = firewall.corpus_objection(path_value, root)
+                if objection:
+                    errors.append(f"{prefix}.path: {objection} — a bibliographic corpus is "
+                                  "not evidence")
                 if not SHA256_RE.fullmatch(digest):
                     errors.append(f"{prefix}.sha256: lowercase SHA-256 required")
                 if kind not in ARTIFACT_KINDS:
@@ -428,8 +436,8 @@ def validate(
                         "source it is — section, figure or table. A quote nobody can find "
                         "again is not verifiable"
                     )
-                if CORPUS_ARTEFACT.search(str(entry.get("anchor", ""))) or \
-                        CORPUS_ARTEFACT.search(str(entry.get("artifact", ""))):
+                if firewall.names_a_corpus(str(entry.get("anchor", ""))) or \
+                        firewall.names_a_corpus(str(entry.get("artifact", ""))):
                     errors.append(
                         f"verbatim_locators.entries[{position}]: anchored to a bibliographic "
                         "corpus. An export of abstracts is not a document; anchor into the "

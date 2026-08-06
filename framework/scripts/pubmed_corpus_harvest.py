@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Harvest a PubMed corpus from E-utilities: lossless JSONL, a compact seed, and a manifest.
+"""Harvest a PubMed corpus from E-utilities: a record-level JSONL, a seed TSV, and a manifest.
 
 Why not the Clipboard
 ---------------------
@@ -34,20 +34,21 @@ Three invariants, each a refusal:
 ESearch returns at most 10 000 UIDs regardless of `retstart`, so the free-full-text annotation
 is refused above that ceiling rather than silently truncated. Partition by date and merge.
 
-Losslessness
-------------
-The JSONL keeps what PubMed sent: personal and collective authors with affiliations *and the
-role of the list they came from*, both electronic and print dates, volume/issue/pagination/
-e-location, language, ISSN, publication status, every article identifier, MeSH headings with
-their qualifiers, keywords, chemicals, `CommentsCorrectionsList` (retractions, errata) with
-the source citation, and `OtherAbstract` preserved *separately* with its language rather than
-folded into the abstract. The TSV is a derived convenience for the batch queue and is allowed
-to be lossy; the JSONL is not.
+Fidelity
+--------
+The JSONL is a **structured record-level projection**, not a copy of the DTD. It keeps
+personal and collective authors with affiliations *and the role of the list they came from*,
+both electronic and print dates, volume/issue/pagination/e-location, language, ISSN,
+publication status, every article identifier, MeSH headings with their qualifiers, keywords,
+chemicals, `CommentsCorrectionsList` (retractions, errata) with the source citation, and
+`OtherAbstract` preserved *separately* with its language rather than folded into the abstract.
+The TSV is a derived convenience for the batch queue and is lossy by design.
 
-🔴 **"Lossless" is a claim, so it is enumerated.** What is deliberately not captured is listed
-in the manifest under `not_captured`. An unqualified losslessness claim cannot be checked, and
-an unqualified claim is how MeSH headings went missing for a full harvest cycle while the
-manifest said `lossless: true`.
+🔴 **The word "lossless" is retired.** It was in this docstring while every MeSH heading was
+being dropped, and nothing could tell — an unqualified fidelity claim cannot be checked, so it
+is not a claim, it is a mood. What is deliberately excluded is enumerated in `NOT_CAPTURED`
+and republished in the manifest, and `test_every_pubmed_element_is_captured_or_named` fails on
+any element that is neither captured nor named there.
 
 Usage
 -----
@@ -67,6 +68,7 @@ import json
 import os
 import random
 import re
+import subprocess
 import sys
 import time
 import urllib.error
@@ -76,6 +78,11 @@ import xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from email.utils import parsedate_to_datetime
 from pathlib import Path
+from typing import Any
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from corpus_firewall import CORPUS_ARTEFACT, names_a_corpus  # noqa: E402
 
 HARVESTER_VERSION = "3.0"
 EUTILS = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils"
@@ -87,34 +94,42 @@ RETRY_CEILING_SECONDS = 60.0
 SEED_FIELDS = ("pmid", "year", "pubmed_free_full_text_link", "pmcid", "type", "doi",
                "journal", "corrections", "title", "abstract")
 YEAR_RE = re.compile(r"(1[5-9]\d{2}|20\d{2}|21\d{2})")
+SHA256_RE = re.compile(r"[a-f0-9]{64}")
 
 # Record-level tags that are not records. `DeleteCitation` is how PubMed reports a UID
 # withdrawn between the search and the fetch; treating it as an unknown type refused the whole
 # harvest and blamed the parser for an upstream deletion.
 NON_RECORD_TAGS = frozenset({"DeleteCitation"})
 
-# 🔴 The guards that keep this corpus out of the evidence path — `fulltext_receipts.py`,
-# `deepdive_manifest.py` and `test_abstract_corpus_is_not_evidence.py` — recognise a corpus
-# **by its path**, not by its contents. `--out-dir` and `--slug` are free parameters, so the
-# same harvest written to `staging/wwox.jsonl` produces an artefact those guards do not see:
-# a receipt could then name it as the document it read and every check would pass. The
-# convention only holds if something enforces it, so the harvester refuses to write anywhere
-# the firewall would not recognise. This pattern is verbatim the one in the two writers and in
-# the firewall test; `test_pubmed_corpus_harvest.py` pins all four copies identical, because
-# four hand-maintained copies of one regex drift and the drift is silent on both sides.
-CORPUS_ARTEFACT = re.compile(
-    r"files/corpus/|corpus_seed_pubmed|_corpus\.jsonl|corpus_abstracts", re.IGNORECASE)
+# 🔴 The guards that keep this corpus out of the evidence path recognise it by name AND, since
+# 2026-08-06, by contents. Both live in `corpus_firewall`: one shared definition instead of
+# four hand-maintained copies of one regex, which drift silently on both sides.
+MANIFEST_SCHEMA_VERSION = 2
+SUPPORTED_MANIFEST_SCHEMAS = (2,)
 
-# What the JSONL deliberately does not carry. Named, so "lossless" is checkable.
+# What the JSONL deliberately does not carry. Enumerated, so the fidelity claim is checkable
+# rather than asserted — and pinned by `test_every_pubmed_element_is_captured_or_named`, which
+# walks a fixture and fails on any element that is neither captured nor listed here.
 NOT_CAPTURED = (
-    "MedlineCitation/GrantList",
-    "MedlineCitation/Article/DataBankList",
-    "MedlineCitation/MedlineJournalInfo",
+    "MedlineCitation/@Owner",
+    "MedlineCitation/@Status",
     "MedlineCitation/CitationSubset",
+    "MedlineCitation/CoiStatement",
     "MedlineCitation/GeneralNote",
+    "MedlineCitation/GeneSymbolList",
+    "MedlineCitation/InvestigatorList",
+    "MedlineCitation/MedlineJournalInfo",
+    "MedlineCitation/NumberOfReferences",
+    "MedlineCitation/PersonalNameSubjectList",
+    "MedlineCitation/SpaceFlightMission",
     "MedlineCitation/SupplMeshList",
+    "MedlineCitation/Article/Abstract/@CopyrightInformation is kept; the rest of "
+    "Article/DataBankList is not",
+    "MedlineCitation/Article/GrantList",
+    "MedlineCitation/Article/VernacularTitle when an ArticleTitle exists",
     "PubmedData/ReferenceList",
     "PubmedData/History beyond PubMedPubDate",
+    "PubmedBookData/@ objects beyond PublicationStatus and ArticleIdList",
 )
 
 
@@ -543,6 +558,12 @@ def abstract_text(record: dict) -> str:
         for p in record["abstract_parts"] if p["text"]))
 
 
+def strip_abstracts(record: dict) -> dict:
+    """Every surface an abstract can reach: the main text, translations, and the copyright
+    line that comes attached to it. Removing one of three is not removing the abstract."""
+    return {**record, "abstract_parts": [], "other_abstracts": [], "copyright": ""}
+
+
 def correction_flags(record: dict) -> str:
     """`RetractionIn:12345678; ExpressionOfConcernIn:87654321`, or empty.
 
@@ -609,6 +630,7 @@ def harvest(term: str) -> tuple[list[dict], dict, set[str]]:
     free_here = {r["pmid"] for r in records if r["pmid"] in free}
     manifest = {
         "harvester_version": HARVESTER_VERSION,
+        "manifest_schema_version": MANIFEST_SCHEMA_VERSION,
         "harvested_at_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "query_as_sent": term,
         "query_translation": result["query_translation"],
@@ -677,24 +699,39 @@ def output_path(out_dir: Path, slug: str, extension: str) -> Path:
     return out_dir / f"{slug}{extension}"
 
 
+def refuse_bad_slug(slug: str) -> None:
+    """A slug is a filename, not a path.
+
+    `--slug ../../staging/wwox` walked out of the destination while every name-based check
+    still saw the directory it was told about. A slug that is not a bare basename is refused
+    rather than sanitised: silently rewriting what the operator asked for is how you get a
+    corpus somewhere nobody looks.
+    """
+    if not slug or slug != Path(slug).name or slug in {".", ".."} or slug.startswith("."):
+        raise HarvestError(
+            f"--slug must be a bare filename, got {slug!r}. Separators and `..` let the "
+            "output escape the destination the firewall was shown.")
+
+
 def refuse_unrecognised_destination(paths: list[Path]) -> None:
     """Refuse to write a corpus where the evidence firewall cannot see it.
 
-    The three guards match a corpus by path. If the harvest lands outside their pattern, the
-    artefact is identical and the refusals silently stop applying — a receipt could name it as
-    the document it read and `validate_receipt` would have no objection. Enforcing the
-    convention at the only place that creates these files is cheaper than teaching three
-    validators to sniff file contents, and it fails closed.
+    🔴 Reviewed 2026-08-06: this check read the path as a *string*, so
+    `files/corpus/../../staging/wwox.jsonl` passed — it contains `files/corpus/` and is not in
+    `files/corpus/` at all. A check that accepts the one input it exists to refuse is worse
+    than no check, because it is reported as a closed risk. `names_a_corpus` resolves first.
+
+    This remains the weaker half of the firewall by construction: it enforces the naming
+    convention where corpora are created, so the paths the guards match are the paths that
+    exist. It cannot survive a later `cp` or `mv`, which is why the writers now also refuse by
+    file *contents* — see `corpus_firewall.looks_like_corpus`.
     """
-    unseen = [str(path) for path in paths
-              if not CORPUS_ARTEFACT.search(str(path).replace(os.sep, "/"))]
+    unseen = [str(path) for path in paths if not names_a_corpus(str(path))]
     if unseen:
         raise HarvestError(
             "destination not recognised as a corpus by the evidence firewall: "
-            f"{unseen}. A corpus written outside that pattern is invisible to "
-            "fulltext_receipts.py and deepdive_manifest.py, which refuse it by path. Write "
-            "under a `files/corpus/` directory, or use a slug containing `corpus_seed_pubmed` "
-            "(the naming the registry seeds already use).")
+            f"{unseen}. Write under a `files/corpus/` directory, or use a slug containing "
+            "`corpus_seed_pubmed` (the naming the registry seeds already use).")
 
 
 def _stage(path: Path, write_body) -> Path:
@@ -704,7 +741,9 @@ def _stage(path: Path, write_body) -> Path:
     received the path, so nobody else can clean it up.
     """
     path.parent.mkdir(parents=True, exist_ok=True)
-    temporary = path.with_name(path.name + ".partial")
+    # Process-unique: a fixed `.partial` name means two harvests of the same slug write the
+    # same temporary and one promotes the other's half-written bytes.
+    temporary = path.with_name(f"{path.name}.{os.getpid()}.partial")
     try:
         with temporary.open("w", encoding="utf-8", newline="") as handle:
             write_body(handle)
@@ -758,16 +797,30 @@ def write_corpus(records: list[dict], manifest: dict, free: set[str],
     checksums — exactly the artefact the firewall assumes cannot exist, because its whole
     design is that the corpus declares its own status. Staging all three and promoting last
     shrinks that window from a network round-trip to a rename.
+
+    Three renames are still three renames, and POSIX gives no way to make them one. What
+    closes the remaining window is the *order* plus a reader that checks: the manifest is
+    promoted last and carries the checksums of the other two, so a set torn between the first
+    and third rename has a manifest that no longer describes its own files, and `verify()`
+    says so. A partial set is detectable rather than prevented — claiming otherwise would be
+    the same kind of overstatement as calling the JSONL lossless.
     """
+    refuse_bad_slug(slug)
     targets = {extension: output_path(out_dir, slug, extension)
                for extension in (".jsonl", ".tsv", ".manifest.json")}
     refuse_unrecognised_destination(list(targets.values()))
 
-    seed_records = records if abstracts else [{**r, "abstract_parts": []} for r in records]
+    # 🔴 `--no-abstracts` used to strip the TSV and leave every abstract in the JSONL beside
+    # it. The flag was documented that way, which made it worse rather than better: the
+    # documented refresh command sends `--no-abstracts` to `disease-models/wwox/registries`,
+    # a *tracked* directory, so an operator asking for a safe bibliographic export got 706
+    # publisher-copyright abstracts written into the publishable tree. A flag named for what
+    # it removes must remove it from everything it writes.
+    emitted = records if abstracts else [strip_abstracts(r) for r in records]
     staged: dict[str, Path] = {}
     try:
-        staged[".jsonl"] = _stage(targets[".jsonl"], jsonl_body(records))
-        staged[".tsv"] = _stage(targets[".tsv"], seed_body(seed_records, free))
+        staged[".jsonl"] = _stage(targets[".jsonl"], jsonl_body(emitted))
+        staged[".tsv"] = _stage(targets[".tsv"], seed_body(emitted, free))
         manifest["outputs"] = {
             f"{slug}.jsonl": {"sha256": _digest(staged[".jsonl"]),
                               "content": "full record, minus not_captured"},
@@ -809,10 +862,28 @@ def verify(manifest_path: Path) -> list[str]:
     if manifest.get("evidential_status") not in (None, "NOT_EVIDENCE"):
         problems.append(f"evidential_status is {manifest['evidential_status']!r}, not "
                         "NOT_EVIDENCE")
-    if manifest.get("harvester_version") != HARVESTER_VERSION:
+
+    # A snapshot is history: it does not become wrong because the harvester moved on. What
+    # must be current is the *schema*, so the version check is a supported range, not equality
+    # — otherwise every compatible release retroactively invalidates every archived corpus and
+    # the check trains people to ignore it.
+    schema = manifest.get("manifest_schema_version")
+    if schema is None:
         problems.append(
-            f"harvested by version {manifest.get('harvester_version')!r}; this is "
-            f"{HARVESTER_VERSION!r}. Re-harvest before relying on the record-level fields.")
+            "manifest declares no `manifest_schema_version`; it predates the schema that "
+            "carries the terms of use. Re-harvest before relying on the record-level fields.")
+    elif schema not in SUPPORTED_MANIFEST_SCHEMAS:
+        problems.append(f"manifest schema {schema!r} is outside the supported range "
+                        f"{list(SUPPORTED_MANIFEST_SCHEMAS)}")
+
+    expected_total = manifest.get("expected_count")
+    parsed = manifest.get("parsed_count")
+    deleted = manifest.get("deleted_by_pubmed") or []
+    if isinstance(expected_total, int) and isinstance(parsed, int):
+        if parsed + len(deleted) != expected_total:
+            problems.append(
+                f"the manifest contradicts its own invariant: parsed {parsed} + deleted "
+                f"{len(deleted)} != expected {expected_total}")
 
     outputs = manifest.get("outputs") or {}
     if not outputs:
@@ -823,17 +894,60 @@ def verify(manifest_path: Path) -> list[str]:
             problems.append(f"{name}: declared in the manifest, absent from disk")
             continue
         expected = (entry or {}).get("sha256", "")
-        actual = _digest(path)
-        if expected and actual != expected:
-            problems.append(f"{name}: sha256 {actual} does not match the manifest {expected}")
+        if not SHA256_RE.fullmatch(str(expected)):
+            # An absent checksum silently skipped the comparison, so the weakest manifest got
+            # the cleanest verdict.
+            problems.append(f"{name}: manifest records no usable sha256, so this file cannot "
+                            "be verified at all")
+        elif _digest(path) != expected:
+            problems.append(f"{name}: sha256 {_digest(path)} does not match the manifest "
+                            f"{expected}")
         if name.endswith(".jsonl"):
-            pmids = [json.loads(line)["pmid"]
-                     for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
-            if manifest.get("parsed_count") not in (None, len(pmids)):
-                problems.append(f"{name}: holds {len(pmids)} records, manifest claims "
-                                f"{manifest['parsed_count']}")
-            if len(set(pmids)) != len(pmids):
-                problems.append(f"{name}: {len(pmids) - len(set(pmids))} duplicate PMID(s)")
+            problems.extend(_verify_jsonl(path, name, parsed))
+    return problems
+
+
+def _tracked_destination(path: Path) -> bool:
+    """True when git would keep this file — so abstracts must not be written there.
+
+    Fails toward `True`: if git cannot answer, the advice is to strip the abstracts. Being
+    told to drop them from a gitignored corpus costs a re-harvest; the other error publishes
+    700 abstracts under publisher copyright.
+    """
+    try:
+        completed = subprocess.run(
+            ["git", "check-ignore", "-q", str(path)],
+            cwd=path.parent if path.parent.exists() else Path.cwd(),
+            capture_output=True, timeout=10, check=False)
+    except (OSError, subprocess.SubprocessError):
+        return True
+    return completed.returncode != 0
+
+
+def _verify_jsonl(path: Path, name: str, parsed: Any) -> list[str]:
+    """Count and de-duplicate the records, reporting damage instead of raising it.
+
+    A corrupt corpus is exactly the input this command exists for; answering it with a
+    JSONDecodeError traceback tells the operator the *checker* is broken.
+    """
+    pmids: list[str] = []
+    for number, line in enumerate(path.read_text(encoding="utf-8",
+                                                 errors="replace").splitlines(), 1):
+        if not line.strip():
+            continue
+        try:
+            record = json.loads(line)
+        except json.JSONDecodeError as error:
+            return [f"{name}: line {number} is not valid JSON ({error.msg}); the file is "
+                    "damaged and its counts cannot be checked"]
+        if not isinstance(record, dict) or not record.get("pmid"):
+            return [f"{name}: line {number} carries no pmid; this is not a corpus record"]
+        pmids.append(record["pmid"])
+    problems = []
+    if isinstance(parsed, int) and parsed != len(pmids):
+        problems.append(f"{name}: holds {len(pmids)} records, manifest claims {parsed}")
+    if len(set(pmids)) != len(pmids):
+        problems.append(f"{name}: {len(pmids) - len(set(pmids))} duplicate PMID(s)")
     return problems
 
 
@@ -844,7 +958,9 @@ def main() -> int:
     parser.add_argument("--out-dir", type=Path, help="destination directory")
     parser.add_argument("--slug", default="corpus", help="basename for the emitted files")
     parser.add_argument("--no-abstracts", action="store_true",
-                        help="omit abstracts from the derived TSV (the JSONL keeps them)")
+                        help="omit abstracts, translated abstracts and the abstract copyright "
+                             "line from BOTH emitted files — use it for any destination that "
+                             "is tracked by git")
     parser.add_argument("--count-only", action="store_true")
     parser.add_argument("--verify", type=Path, metavar="MANIFEST",
                         help="re-check a corpus already on disk against its own manifest")
@@ -856,6 +972,20 @@ def main() -> int:
             print(f"  ✗ {problem}")
         print(f"{arguments.verify}: {'FAIL' if problems else 'OK'} "
               f"({len(problems)} problem(s))")
+        # A checker that reports a corpus red and stops has handed the operator a problem, not
+        # a finding. Both corpora on disk predate the schema that carries the terms of use;
+        # the remediation is one command and it belongs here, next to the verdict.
+        if any("predates" in problem for problem in problems):
+            manifest = json.loads(arguments.verify.read_text(encoding="utf-8"))
+            slug = arguments.verify.name.replace(".manifest.json", "")
+            print("\nThis corpus predates the current schema. Re-harvest it in place:\n"
+                  f"  python3 {Path(__file__).name} \\\n"
+                  f"      --term {manifest.get('query_as_sent', '<term>')!r} \\\n"
+                  f"      --out-dir {arguments.verify.parent} \\\n"
+                  f"      --slug {slug}"
+                  f"{' --no-abstracts' if _tracked_destination(arguments.verify) else ''}"
+                  "\nThe old snapshot stays valid as dated history; re-harvesting produces a "
+                  "new one, it does not repair the old.")
         return 1 if problems else 0
 
     if not arguments.term:

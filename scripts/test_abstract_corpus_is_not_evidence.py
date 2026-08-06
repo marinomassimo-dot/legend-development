@@ -28,6 +28,7 @@ import importlib.util
 import json
 import re
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -155,6 +156,36 @@ class TheWritersRefuseItThemselves(unittest.TestCase):
                                 for e in errors))
             return
         self.skipTest("no manifest with locators to mutate")
+
+    def test_a_renamed_corpus_cannot_support_a_complete_read(self) -> None:
+        """End to end: harvest → rename out of the pattern → claim a reading → refused.
+
+        The by-name guard was the whole defence, and `cp files/corpus/wwox.jsonl
+        files/fulltext/paper.jsonl` walked straight through it. Nothing about that copy is
+        exotic; it is what someone does when a check refuses them. The receipt writer now
+        asks what the file IS.
+        """
+        harvester = self._module("harv", "framework/scripts/pubmed_corpus_harvest.py")
+        with tempfile.TemporaryDirectory() as tmp:
+            innocent = Path(tmp) / "PMID99999999_paper.jsonl"
+            harvester.write_jsonl([{
+                "pmid": "99999999", "record_type": "PubmedArticle", "title": "A paper",
+                "abstract_parts": [{"label": "", "category": "", "text": "An abstract."}],
+                "identifiers": {"pmid": "99999999"},
+            }], innocent)
+            bad = {**self.receipt, "source_locator": str(innocent)}
+            errors = self.receipts.validate_receipt(bad)
+            self.assertTrue(any("bibliographic export" in error for error in errors),
+                            f"a renamed corpus passed the receipt writer: {errors}")
+
+    def test_a_real_full_text_is_still_accepted(self) -> None:
+        """A guard that refuses the papers gets switched off, and then guards nothing."""
+        with tempfile.TemporaryDirectory() as tmp:
+            paper = Path(tmp) / "PMID99999999_paper.xml"
+            paper.write_text("<article><body><p>WWOX is a gene.</p></body></article>",
+                             encoding="utf-8")
+            good = {**self.receipt, "source_locator": str(paper)}
+            self.assertEqual(self.receipts.validate_receipt(good), [])
 
     def test_a_pubmed_record_url_cannot_support_a_complete_read(self) -> None:
         bad = {
