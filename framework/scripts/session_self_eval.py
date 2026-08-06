@@ -73,7 +73,7 @@ def unread_premises(root: Path, disease: str, receipts: list[dict]) -> dict[str,
     """
     read_pmids = {
         (receipt.get("study_id") or {}).get("pmid")
-        for receipt in receipts
+        for receipt in standing_reads(receipts)
         if receipt.get("evidence_depth") == "complete_fulltext_read"
     }
     registry = root / f"disease-models/{disease}/registries/paper_registry_current.md"
@@ -99,9 +99,27 @@ def unread_premises(root: Path, disease: str, receipts: list[dict]) -> dict[str,
 
 
 def load_receipts(ledger: Path) -> list[dict]:
+    """Every event, invalidated ones included. History is history."""
     if not ledger.exists():
         return []
     return [json.loads(line) for line in ledger.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+
+def standing_reads(receipts: list[dict]) -> list[dict]:
+    """The events that still attest a reading.
+
+    🔴 This file answered "what has been read?" by filtering raw events on `evidence_depth`,
+    which honours no `receipt_invalidation` at all. `receipt_depth_index` and
+    `coverage_report.py` both subtract withdrawn events; this one did not, so an invalidated
+    `complete_fulltext_read` would still have cleared the unread-premise ratchet and still
+    have demanded a work manifest. Nothing exploited it — the single live invalidation targets
+    a `partial_fulltext_read` — but a check that disagrees with the ledger's own index is a
+    check that will eventually be believed over it.
+    """
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import fulltext_receipts
+
+    return fulltext_receipts.active_receipts(receipts)
 
 
 def resolve(root: Path, name: str, disease: str) -> Path | None:
@@ -144,7 +162,8 @@ def main() -> int:
 
     ledger = root / f"disease-models/{disease}/registries/fulltext_read_receipts.jsonl"
     receipts = load_receipts(ledger)
-    complete = [r for r in receipts if r.get("evidence_depth") == "complete_fulltext_read"]
+    complete = [r for r in standing_reads(receipts)
+                if r.get("evidence_depth") == "complete_fulltext_read"]
     corrected_events = {
         r.get("prior_receipt") for r in receipts
         if r.get("reread_reason") == "receipt_correction"

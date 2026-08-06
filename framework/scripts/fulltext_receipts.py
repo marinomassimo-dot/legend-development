@@ -288,21 +288,33 @@ def validate_new_receipt(receipt: Any) -> list[str]:
     return errors
 
 
-def validate_receipt(receipt: Any) -> list[str]:
+def validate_receipt(receipt: Any, root: Optional[Path] = None) -> list[str]:
     if not isinstance(receipt, dict):
         return ["receipt must be a JSON object"]
     errors: list[str] = []
     depth = receipt.get("evidence_depth")
     reading = depth in {"partial_fulltext_read", "complete_fulltext_read"}
+    # 🔴 The content half of the firewall resolved the locator against the process CWD,
+    # because no root was threaded here — `deepdive_manifest.validate` passes one, this did
+    # not. Running the CLI from anywhere but the repository root therefore disabled it
+    # silently: a renamed 706-record abstract export was accepted as a `partial_fulltext_read`
+    # from `/`, and refused from the repo. Worse than fail-open, it was fail-open at WRITE and
+    # fail-closed at READ — once persisted, `verify` and the LINT both report BLOCK_SYSTEM
+    # forever, and the only edit that would clear it breaks the hash chain.
     for field in ("source_locator", "workflow"):
-        objection = firewall.corpus_objection(str(receipt.get(field) or "")) if reading else ""
+        value = str(receipt.get(field) or "")
+        # `source_locator` must be a locator; `workflow` is a label, and prose that merely
+        # mentions the corpus is honest documentation of a permitted use.
+        checkable = reading and (field == "source_locator" or firewall.path_like(value))
+        objection = firewall.corpus_objection(value, root) if checkable else ""
         if objection:
             errors.append(
                 f"{field} {objection}. An export of abstracts is not a full-text document — "
                 "see CLAUDE.md rule 8. Name the paper's own artefact, or record the depth "
                 "honestly as `abstract_only`.")
     for item in receipt.get("evidence_basis") or []:
-        if reading and firewall.corpus_objection(str(item)):
+        if reading and firewall.path_like(str(item)) \
+                and firewall.corpus_objection(str(item), root):
             errors.append(
                 "evidence_basis cites a bibliographic corpus as the basis of a reading")
             break
@@ -575,19 +587,49 @@ def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
     return errors
 
 
+def invalidated_event_ids(events: list[dict[str, Any]]) -> set[str]:
+    """The `event_id`s a `receipt_invalidation` has withdrawn.
+
+    An invalidation names ONE event — `validate_receipt` refuses it otherwise. Every consumer
+    of the ledger must subtract exactly that event and nothing else.
+    """
+    return {str(event["invalidates_receipt"]) for event in events
+            if event.get("record_kind") == "receipt_invalidation"
+            and event.get("invalidates_receipt")}
+
+
+def active_receipts(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Reading events that still stand: neither invalidations nor invalidated.
+
+    Exported because "which receipts still count" was being answered independently in three
+    places, and one of them answered it wrong.
+    """
+    withdrawn = invalidated_event_ids(events)
+    return [event for event in events
+            if event.get("record_kind") != "receipt_invalidation"
+            and str(event.get("event_id")) not in withdrawn]
+
+
 def receipt_depth_index(path: Path) -> dict[str, dict[str, Any]]:
+    """Deepest surviving receipt per identifier.
+
+    🔴 This used to drop the whole *study key* when it met an invalidation:
+    `index.pop(f"pmid:{pmid}")`. An invalidation names one event, so withdrawing a July
+    `partial_fulltext_read` also erased a June `complete_fulltext_read` for the same paper —
+    a correction aimed at one receipt silently deleted the reading history around it. In a
+    system where a false negative is a compounding loss, that is the worst direction to fail:
+    a paper genuinely read in full reappears as unread, re-enters the debt, and gets read
+    again. Reproduced 2026-08-06 with two receipts and one invalidation; the index came back
+    empty. Only the named event is subtracted now.
+    """
     index: dict[str, dict[str, Any]] = {}
-    for receipt in load_ledger(path):
+    for receipt in active_receipts(load_ledger(path)):
         study = receipt["study_id"]
         keys = []
         if study.get("pmid"):
             keys.append(f"pmid:{study['pmid']}")
         if study.get("doi"):
             keys.append(f"doi:{normalise_doi(study['doi'])}")
-        if receipt.get("record_kind") == "receipt_invalidation":
-            for key in keys:
-                index.pop(key, None)
-            continue
         for key in keys:
             current = index.get(key)
             if current is None or DEPTHS[receipt["evidence_depth"]] >= DEPTHS[current["evidence_depth"]]:
@@ -630,8 +672,9 @@ def append_receipt(
         require_work_manifest(record, root, disease, strict=True)
         strict_errors = _strict_local_source(record, root)
     else:
-        strict_errors = []
-    errors = validate_receipt(record) + validate_new_receipt(record) + strict_errors
+        root, strict_errors = None, []
+    # `root` matters: without it the corpus content check resolves against the process CWD.
+    errors = validate_receipt(record, root) + validate_new_receipt(record) + strict_errors
     if errors:
         raise ValueError("; ".join(errors))
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -900,7 +943,12 @@ def main() -> int:
         doi = normalise_doi(args.doi)
         if not pmid and not doi:
             raise ValueError("status needs --pmid or --doi")
-        matches = [item for item in load_ledger(ledger) if same_study(item, pmid, doi)]
+        # `status` is the command the protocol tells an agent to trust before re-reading a
+        # paper, so it must answer with the receipts that still STAND. Filtering the raw
+        # ledger reported a withdrawn complete read as a complete read — and counted the
+        # invalidation event beside it, showing two where there should be zero.
+        matches = [item for item in active_receipts(load_ledger(ledger))
+                   if same_study(item, pmid, doi)]
         matches.sort(key=lambda item: DEPTHS[item["evidence_depth"]], reverse=True)
         print(json.dumps(matches, indent=2, ensure_ascii=False))
         return 0 if any(item["evidence_depth"] == "complete_fulltext_read" for item in matches) else 1

@@ -7,6 +7,8 @@ import copy
 import hashlib
 import json
 import multiprocessing
+import os
+import tempfile
 import sys
 import time
 import unittest
@@ -17,6 +19,8 @@ from tempfile import TemporaryDirectory
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import fulltext_receipts as receipts  # noqa: E402
+
+ROOT = Path(__file__).resolve().parents[2]
 
 try:
     import fcntl
@@ -583,6 +587,135 @@ class FulltextReceiptTests(unittest.TestCase):
         third["reread_reason"] = "adversarial_reanalysis"
         with self.assertRaisesRegex(ValueError, "latest prior_receipt"):
             receipts.append_receipt(self.ledger, third)
+
+
+class CorpusCheckScope(unittest.TestCase):
+    """The content half of the firewall, and what it must NOT refuse."""
+
+    RECEIPT = {
+        "event_id": "FTR-20260806-99999999-01", "record_kind": "contemporaneous_receipt",
+        "study_id": {"pmid": "99999999", "doi": "10.1000/x"},
+        "event_at": "2026-08-06T10:00:00Z", "analysis_at": "2026-08-06T10:00:00Z",
+        "workflow": "deep read", "evidence_depth": "partial_fulltext_read",
+        "source_locator": "files/fulltext/paper.xml", "source_fingerprint": "a" * 64,
+        "coverage": {k: "read" for k in receipts.COVERAGE_KEYS},
+        "outputs": ["x.md"], "evidence_basis": ["coverage_map"],
+        "prior_receipt": None, "reread_reason": "first_read"}
+
+    def test_a_renamed_corpus_is_refused_from_any_working_directory(self) -> None:
+        """The check resolved the locator against the process CWD, not the repository.
+
+        Running the CLI from anywhere but the repo root disabled the content half silently:
+        a renamed abstract export was accepted from `/` and refused from the repo. Fail-open
+        at write and fail-closed at read — once persisted, `verify` and the LINT both report
+        BLOCK_SYSTEM forever and the only edit that clears it breaks the hash chain.
+        """
+        with TemporaryDirectory() as tmp:
+            sandbox = Path(tmp)
+            (sandbox / "files/fulltext").mkdir(parents=True)
+            (sandbox / "files/fulltext/PMID99999999_paper.jsonl").write_text(
+                json.dumps({"pmid": "1", "record_type": "PubmedArticle", "title": "A paper",
+                            "identifiers": {}, "abstract_parts": []}) + "\n",
+                encoding="utf-8")
+            bad = {**self.RECEIPT,
+                   "source_locator": "files/fulltext/PMID99999999_paper.jsonl"}
+            cwd = os.getcwd()
+            os.chdir(tempfile.gettempdir())
+            try:
+                errors = receipts.validate_receipt(bad, sandbox)
+            finally:
+                os.chdir(cwd)
+        self.assertTrue(any("bibliographic export" in error for error in errors))
+
+    def test_honest_prose_about_a_permitted_use_is_not_refused(self) -> None:
+        """Triage from the corpus is PERMITTED, so describing it must stay free.
+
+        Running free text through the corpus check refused
+        `workflow: "triaged from files/corpus/ then read the publisher PDF end to end"` —
+        an accurate account of a legitimate workflow — while the same reading described
+        vaguely passed. That guard rewards under-documenting the provenance.
+        """
+        for field, value in (
+            ("workflow", "triaged from files/corpus/ then read the publisher PDF end to end"),
+            ("workflow", "selected via the corpus_seed_pubmed_20260806 snapshot; PDF read"),
+        ):
+            with self.subTest(value=value):
+                self.assertEqual(receipts.validate_receipt({**self.RECEIPT, field: value}), [])
+        self.assertEqual(receipts.validate_receipt({**self.RECEIPT, "evidence_basis": [
+            "corpus_abstracts triage flagged this paper; the quote is from Results p.4"]}), [])
+
+    def test_a_bare_corpus_path_is_still_refused_in_those_fields(self) -> None:
+        for field, value in (("workflow", "files/corpus/wwox_20260806.jsonl"),
+                             ("evidence_basis", ["files/corpus/wwox_20260806.jsonl"])):
+            with self.subTest(field=field):
+                self.assertTrue(receipts.validate_receipt({**self.RECEIPT, field: value}))
+
+
+class InvalidationScope(unittest.TestCase):
+    """An invalidation names ONE event. It must subtract exactly that one."""
+
+    LEDGER = [
+        {"event_id": "A", "record_kind": "contemporaneous_receipt",
+         "study_id": {"pmid": "12345678"}, "evidence_depth": "complete_fulltext_read"},
+        {"event_id": "B", "record_kind": "contemporaneous_receipt",
+         "study_id": {"pmid": "12345678"}, "evidence_depth": "partial_fulltext_read"},
+        {"event_id": "C", "record_kind": "receipt_invalidation",
+         "study_id": {"pmid": "12345678"}, "evidence_depth": "partial_fulltext_read",
+         "prior_receipt": "B", "invalidates_receipt": "B"},
+    ]
+
+    def _index(self, ledger):
+        original = receipts.load_ledger
+        receipts.load_ledger = lambda path: ledger
+        try:
+            return receipts.receipt_depth_index(Path("ignored"))
+        finally:
+            receipts.load_ledger = original
+
+    def test_withdrawing_one_receipt_keeps_the_others(self) -> None:
+        """`index.pop(study_key)` erased the reading history AROUND the withdrawn event.
+
+        Reproduced 2026-08-06: invalidating a partial read deleted a complete read of the
+        same paper, so a paper genuinely read in full came back as unread — re-entering the
+        debt and inviting a re-read. The worst direction to fail in a system that treats a
+        false negative as a compounding loss.
+        """
+        index = self._index(self.LEDGER)
+        self.assertIn("pmid:12345678", index)
+        self.assertEqual(index["pmid:12345678"]["event_id"], "A")
+
+    def test_withdrawing_the_only_receipt_empties_the_key(self) -> None:
+        index = self._index([self.LEDGER[1], self.LEDGER[2]])
+        self.assertNotIn("pmid:12345678", index)
+
+    def test_the_invalidation_event_never_counts_as_a_reading(self) -> None:
+        """It carries an `evidence_depth` it exists to negate."""
+        standing = receipts.active_receipts(self.LEDGER)
+        self.assertEqual([event["event_id"] for event in standing], ["A"])
+
+    def test_status_reports_only_receipts_that_still_stand(self) -> None:
+        """`status --pmid` is what the protocol tells an agent to trust before re-reading."""
+        source = (ROOT / "framework/scripts/fulltext_receipts.py").read_text(encoding="utf-8")
+        self.assertIn("active_receipts(load_ledger(ledger))", source,
+                      "status filters the raw ledger and ignores invalidations")
+
+    def test_the_live_ledger_honours_its_own_invalidations(self) -> None:
+        """Derived from the ledger, not from a hardcoded PMID.
+
+        The first version asserted `"pmid:23446842" not in index`, which is a closed-world
+        claim over append-only state: the day someone legitimately reads that paper and
+        appends a valid receipt, the test fails while nothing is wrong. The repository's own
+        `test_no_closed_world_assertions_on_live_state` caught it.
+        """
+        ledger = ROOT / "disease-models/wwox/registries/fulltext_read_receipts.jsonl"
+        if not ledger.is_file():
+            self.skipTest("no ledger in this checkout")
+        withdrawn = receipts.invalidated_event_ids(receipts.load_ledger(ledger))
+        if not withdrawn:
+            self.skipTest("no invalidation in the live ledger")
+        backing = {entry["event_id"] for entry in receipts.receipt_depth_index(ledger).values()}
+        self.assertFalse(backing & withdrawn,
+                         "the depth index is backed by a withdrawn receipt")
 
 
 if __name__ == "__main__":

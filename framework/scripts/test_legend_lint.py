@@ -20,6 +20,7 @@ from legend_lint import (  # noqa: E402
     _check_commit_candidate_ids,
     _check_discovery_ids,
     _check_dismissals,
+    _check_publication_integrity_claims,
     claim_paper_findings,
     lint,
     parse_corpus_ids,
@@ -146,6 +147,39 @@ class PublicLintTests(unittest.TestCase):
             item.code == "CLAIM_CITES_PUBLICATION_INTEGRITY_HOLD"
             for item in result.findings
         ))
+
+    def _integrity_findings(self, papers: str, claims: str) -> list:
+        findings: list = []
+        _check_publication_integrity_claims(
+            findings, str(Path(__file__).resolve().parents[2]), claims, papers)
+        return [item for item in findings
+                if item.code == "CLAIM_CITES_PUBLICATION_INTEGRITY_HOLD"]
+
+    def test_a_held_corpus_placeholder_is_not_invisible(self) -> None:
+        """The gate scanned `## PAPER` blocks only.
+
+        Two of the live held records — PMID 32606933 and 26041563 — exist as CORPUS
+        placeholders, and claims already wikilink CORPUS records. The gate was blind to the
+        exact record type the retracted papers currently live in.
+        """
+        papers = "## CORPUS P310\n**Identifier:** PMID 32606933\n**Status:** screened\n"
+        claims = ("## CLAIM 902\n**Status:** in observation\n"
+                  "**Wikilinks:** [[paper_registry_current#CORPUS P310]]\n")
+        self.assertTrue(self._integrity_findings(papers, claims))
+
+    def test_citing_the_retraction_notice_is_not_blocked(self) -> None:
+        """The most appropriate source for "this was retracted" is the notice itself.
+
+        `owned` collected EVERY PMID in the Identifier field, and that field legitimately
+        carries cross-references, so a claim citing the notice produced BLOCK_BATCH_COMMIT
+        and halted the commit workflow. `_integrity` gets the notice-versus-affected
+        distinction right; the gate then threw it away one function later.
+        """
+        papers = ("## PAPER 901\n**Identifier:** PMID 32799870 / DOI 10.1038/x — retraction "
+                  "notice for PMID 26041563\n**Status:** integrated\n")
+        claims = ("## CLAIM 901\n**Status:** in observation\n"
+                  "**Wikilinks:** [[paper_registry_current#PAPER 901]]\n")
+        self.assertEqual(self._integrity_findings(papers, claims), [])
 
     def test_ordinary_erratum_does_not_block_a_claim(self) -> None:
         papers = (

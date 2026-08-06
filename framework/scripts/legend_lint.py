@@ -470,24 +470,42 @@ def _check_publication_integrity_claims(findings, repo_root, claims_text, papers
     if not held:
         return
 
-    paper_pmids = {}
-    for paper_id, bodies in split_blocks(papers_text, "PAPER").items():
-        owned = set()
-        for body in bodies:
-            identifier = field(body, "Identifier") or ""
-            owned.update(re.findall(r"(?i)PMID\s*:?[ ]*(\d{7,8})", identifier))
-            if not owned:
-                owned.update(re.findall(r"(?<!\d)(\d{7,8})(?!\d)", identifier))
-        paper_pmids[paper_id] = owned
+    # 🔴 Two separate scoping defects, both reproduced 2026-08-06.
+    #
+    # `owned` collected EVERY PMID in the Identifier field, and that field legitimately
+    # carries cross-references — a retraction notice's own record names the paper it
+    # retracts. So a claim citing the retraction notice, which is the single most
+    # appropriate source for "this was retracted", produced BLOCK_BATCH_COMMIT and halted
+    # the commit workflow. `_integrity` gets the notice-versus-affected distinction right
+    # and this threw it away one function later. Only the FIRST identifier on the line is
+    # the record's own.
+    #
+    # And the scan covered `## PAPER` blocks only, while two of the live held records —
+    # PMID 32606933 and 26041563 — exist as `CORPUS` placeholders, which claims already
+    # wikilink. The gate was blind to the exact record type the retracted papers live in.
+    # `split_blocks` requires a numeric id, so it cannot see `CORPUS P310` at all.
+    heading = re.compile(r"^##\s+((?:PAPER|CORPUS)[\s-]+[A-Za-z0-9-]+)\s*$", re.M)
+    marks = list(heading.finditer(papers_text))
+    record_pmids = {}
+    for position, mark in enumerate(marks):
+        end = marks[position + 1].start() if position + 1 < len(marks) else len(papers_text)
+        identifier = field(papers_text[mark.end():end], "Identifier") or ""
+        # Stop at the first separator: everything after it is context, not identity.
+        own_part = re.split(r"\s+—|\s+-\s|;|\bnormalized\b", identifier, 1)[0]
+        found = re.findall(r"(?i)PMID\s*:?[ ]*(\d{7,8})", own_part) \
+            or re.findall(r"(?<!\d)(\d{7,8})(?!\d)", own_part)
+        record_id = " ".join(mark.group(1).split())
+        record_pmids.setdefault(record_id, set()).update(found[:1])
 
+    linked = re.compile(r"\[\[paper_registry_current#((?:PAPER|CORPUS)[\s-]+[A-Za-z0-9-]+)\]\]")
     for claim_id, bodies in split_blocks(claims_text, "CLAIM").items():
         for body in bodies:
-            for paper_id in WIKILINK_PAPER.findall(body):
-                for pmid in sorted(paper_pmids.get(paper_id, set()) & held.keys()):
+            for paper_id in {" ".join(m.split()) for m in linked.findall(body)}:
+                for pmid in sorted(record_pmids.get(paper_id, set()) & held.keys()):
                     findings.append(Finding(
                         "BLOCK_BATCH_COMMIT",
                         "CLAIM_CITES_PUBLICATION_INTEGRITY_HOLD",
-                        f"CLAIM {claim_id} links PAPER {paper_id} / PMID {pmid}, which is "
+                        f"CLAIM {claim_id} links {paper_id} / PMID {pmid}, which is "
                         f"under {batch_queue.HOLD} ({held[pmid]}). Audit or remove this "
                         "support before canonical promotion",
                     ))

@@ -113,7 +113,10 @@ FREE_FULL_TEXT_COLUMNS = ("pubmed_free_full_text_link", "free_full_text")
 # whether a paper may be read as evidence at all. The harvester carries every notice in the
 # seed's `corrections` column; a column nothing reads is a column that does not exist, and
 # "a paper under an EoC reaches triage looking clean" stays true until the queue shows it.
-INTEGRITY_REF_TYPES = ("RetractionIn", "RetractedPublication", "ExpressionOfConcernIn")
+# (A former `INTEGRITY_REF_TYPES` tuple lived here, referenced by nothing and listing
+# `RetractedPublication` — a value PubMed never emits; the real publication type is
+# `Retracted Publication`, checked in `_integrity`. A dead constant that reads like the
+# authoritative list is worse than no list: the next reader maintains it instead of the code.)
 # Shown before the title, where a reader cannot miss it.
 INTEGRITY_PREFIX = {"retracted": "🛑 RETRACTED — ",
                     "concern": "⚠️ EXPRESSION OF CONCERN — ",
@@ -161,14 +164,33 @@ def _integrity(seed: dict[str, str]) -> str:
     links (`RetractionOf`, `ExpressionOfConcernFor`) mark the editorial notice, which is an
     audit source rather than an affected paper. Ordered by consequence, not by appearance: a
     paper carrying both an erratum and a retraction is retracted.
+
+    🔴 `unknown` is not `clean`. A seed harvested before the `corrections` column existed
+    carries no integrity data at all, and `seed.get("corrections") or ""` reported every one
+    of those rows as carrying no notice — indistinguishable from a true zero, and silent.
+    That is the same hazard the comment on FREE_FULL_TEXT_COLUMNS was written about, fifty
+    lines above in this file, with the opposite handling: there a missing column is refused,
+    here it defaulted. Today every live row comes from the 2026-08-06 snapshot, so nothing is
+    affected; the gap reopens the moment a query stops returning a record that only an older
+    snapshot holds. Reported rather than raised, because a legacy snapshot is a legitimate
+    thing to hold — what is not legitimate is calling it clean.
     """
+    if "corrections" not in seed:
+        return "unknown"
     notices = (seed.get("corrections") or "")
+    publication_types = {part.strip() for part in (seed.get("type") or "").split(";")}
+    # 🔴 This test sat BELOW the empty-`corrections` early return, so it could never fire in
+    # the only situation it exists for: a record PubMed types as retracted whose
+    # CommentsCorrections link is absent or lost in harvest. Dead code that read as a
+    # safety net. The publication type is a statement about the record itself, so it is
+    # checked before anything is allowed to short-circuit.
+    if "Retracted Publication" in publication_types:
+        return "retracted"
     if not notices.strip():
         return ""
-    kinds = {part.strip().split(":", 1)[0]
+    kinds = {part.split(":", 1)[0].strip()
              for part in notices.split(";") if part.strip()}
-    publication_types = {part.strip() for part in (seed.get("type") or "").split(";")}
-    if "RetractionIn" in kinds or "Retracted Publication" in publication_types:
+    if "RetractionIn" in kinds:
         return "retracted"
     if "ExpressionOfConcernIn" in kinds:
         return "concern"
@@ -478,6 +500,9 @@ def _build_uncached(root: Path, disease: str) -> dict:
         "held": held,
         "held_integrated": [item for item in held if item["integrated"]],
         "held_referenced": [item for item in held if item["current_references"]],
+        # Rows whose seed predates the `corrections` column: integrity not checked, which is
+        # a different fact from integrity checked and clean. Counted so it cannot stay silent.
+        "integrity_unknown": [item for item in queue if item["integrity"] == "unknown"],
         "year_min": min(years) if years else None,
         "year_max": max(years) if years else None,
         "published_since_2020": sum(year >= 2020 for year in years),
@@ -497,8 +522,19 @@ def _render_integrity(report: dict) -> list[str]:
     at the moment it becomes necessary. What changes is what it may *support*.
     """
     held = report.get("held") or []
-    if not held:
+    unchecked = report.get("integrity_unknown") or []
+    if not held and not unchecked:
         return []
+    if not held:
+        return [
+            "## 🛑 Publication integrity — eligibility as evidence",
+            "",
+            f"**No record is under `{HOLD}`, but {len(unchecked)} record(s) carry no",
+            "correction data at all** — their seed snapshot predates the `corrections`",
+            "column. Integrity *unchecked* is not integrity *clean*. Re-harvest the seed",
+            "before treating these as admissible.",
+            "",
+        ]
     lines = [
         "## 🛑 Publication integrity — eligibility as evidence",
         "",
@@ -522,6 +558,17 @@ def _render_integrity(report: dict) -> list[str]:
     integrated = report.get("held_integrated") or []
     referenced = report.get("held_referenced") or []
     lines += ["", ""]
+    # 🔴 This warning used to live only in the `not held` branch, so it vanished in the mixed
+    # case — the reader was told "2 records are held" and nothing about 459 whose integrity
+    # was never looked at. A caveat that disappears when there is also a finding is a caveat
+    # that disappears exactly when the report is being read most carefully.
+    if unchecked:
+        lines += [
+            f"> ❔ **{len(unchecked)} further record(s) carry no correction data**: their seed",
+            "> snapshot predates the `corrections` column, so they were never checked. That is",
+            "> not the same as clean. Re-harvest before treating them as admissible.",
+            "",
+        ]
     if integrated:
         lines += [
             f"> 🔴 **{len(integrated)} of these "
