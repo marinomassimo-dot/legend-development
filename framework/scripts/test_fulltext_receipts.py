@@ -18,6 +18,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import fulltext_receipts as receipts  # noqa: E402
 
+ROOT = Path(__file__).resolve().parents[2]
+
 try:
     import fcntl
 except ImportError:  # pragma: no cover - the runtime deliberately fails closed without it
@@ -583,6 +585,58 @@ class FulltextReceiptTests(unittest.TestCase):
         third["reread_reason"] = "adversarial_reanalysis"
         with self.assertRaisesRegex(ValueError, "latest prior_receipt"):
             receipts.append_receipt(self.ledger, third)
+
+
+class InvalidationScope(unittest.TestCase):
+    """An invalidation names ONE event. It must subtract exactly that one."""
+
+    LEDGER = [
+        {"event_id": "A", "record_kind": "contemporaneous_receipt",
+         "study_id": {"pmid": "12345678"}, "evidence_depth": "complete_fulltext_read"},
+        {"event_id": "B", "record_kind": "contemporaneous_receipt",
+         "study_id": {"pmid": "12345678"}, "evidence_depth": "partial_fulltext_read"},
+        {"event_id": "C", "record_kind": "receipt_invalidation",
+         "study_id": {"pmid": "12345678"}, "evidence_depth": "partial_fulltext_read",
+         "prior_receipt": "B", "invalidates_receipt": "B"},
+    ]
+
+    def _index(self, ledger):
+        original = receipts.load_ledger
+        receipts.load_ledger = lambda path: ledger
+        try:
+            return receipts.receipt_depth_index(Path("ignored"))
+        finally:
+            receipts.load_ledger = original
+
+    def test_withdrawing_one_receipt_keeps_the_others(self) -> None:
+        """`index.pop(study_key)` erased the reading history AROUND the withdrawn event.
+
+        Reproduced 2026-08-06: invalidating a partial read deleted a complete read of the
+        same paper, so a paper genuinely read in full came back as unread — re-entering the
+        debt and inviting a re-read. The worst direction to fail in a system that treats a
+        false negative as a compounding loss.
+        """
+        index = self._index(self.LEDGER)
+        self.assertIn("pmid:12345678", index)
+        self.assertEqual(index["pmid:12345678"]["event_id"], "A")
+
+    def test_withdrawing_the_only_receipt_empties_the_key(self) -> None:
+        index = self._index([self.LEDGER[1], self.LEDGER[2]])
+        self.assertNotIn("pmid:12345678", index)
+
+    def test_the_invalidation_event_never_counts_as_a_reading(self) -> None:
+        """It carries an `evidence_depth` it exists to negate."""
+        standing = receipts.active_receipts(self.LEDGER)
+        self.assertEqual([event["event_id"] for event in standing], ["A"])
+
+    def test_the_live_ledger_is_unchanged_by_the_fix(self) -> None:
+        """The one live invalidation targets a study with a single receipt, so the corrected
+        semantics must produce exactly the previous result."""
+        ledger = ROOT / "disease-models/wwox/registries/fulltext_read_receipts.jsonl"
+        if not ledger.is_file():
+            self.skipTest("no ledger in this checkout")
+        index = receipts.receipt_depth_index(ledger)
+        self.assertNotIn("pmid:23446842", index)
 
 
 if __name__ == "__main__":

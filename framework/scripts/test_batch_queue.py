@@ -391,12 +391,39 @@ class QueueIntegrityTests(unittest.TestCase):
         self.assertEqual(flags, {"11111111": "retracted", "22222222": "concern",
                                  "33333333": "corrected", "44444444": ""})
 
+    def test_a_seed_without_the_column_is_unknown_not_clean(self) -> None:
+        """The hazard the FREE_FULL_TEXT_COLUMNS comment was written about, fifty lines up.
+
+        A snapshot harvested before `corrections` existed carries no integrity data, and
+        `.get(...) or ""` reported every one of those rows as carrying no notice —
+        indistinguishable from a true zero, and silent.
+        """
+        self.assertEqual(bq._integrity({"pmid": "1"}), "unknown")
+        self.assertEqual(bq._integrity({"pmid": "1", "corrections": ""}), "")
+        self.assertEqual(bq._eligibility("unknown"), "",
+                         "unknown must not become a hold — it is a gap, not a finding")
+
+    def test_unchecked_records_are_reported_even_with_no_holds(self) -> None:
+        report = {"disease": "wwox", "held": [], "held_integrated": [],
+                  "held_referenced": [], "integrity_unknown": [{"pmid": "1"}]}
+        rendered = "\n".join(bq._render_integrity(report))
+        self.assertIn("not integrity *clean*", rendered)
+        self.assertIn("Re-harvest", rendered)
+
+    def test_the_live_corpus_has_no_unchecked_records(self) -> None:
+        """Today every row comes from the 2026-08-06 snapshot. If this ever fails, the
+        integrity gate has gone partially blind and the report must say so."""
+        report = bq.build(ROOT, "wwox")
+        self.assertEqual(report["integrity_unknown"], [])
+
     def test_an_erratum_is_not_a_retraction(self) -> None:
         """Both are `corrections` in the XML and they mean opposite things for reading."""
         self.assertEqual(bq._integrity({"corrections": "ErratumIn:1; RetractionIn:2"}),
                          "retracted")
         self.assertEqual(bq._integrity({"corrections": "ErratumIn:1"}), "corrected")
-        self.assertEqual(bq._integrity({}), "")
+        # A checked row with no notice. The unchecked case is `unknown` — see
+        # test_a_seed_without_the_column_is_unknown_not_clean.
+        self.assertEqual(bq._integrity({"corrections": ""}), "")
 
     def test_editorial_notice_direction_is_not_mistaken_for_the_affected_paper(self) -> None:
         """`RetractionOf` lives on the notice; `RetractionIn` lives on the paper."""

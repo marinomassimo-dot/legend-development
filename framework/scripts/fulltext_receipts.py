@@ -575,19 +575,49 @@ def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
     return errors
 
 
+def invalidated_event_ids(events: list[dict[str, Any]]) -> set[str]:
+    """The `event_id`s a `receipt_invalidation` has withdrawn.
+
+    An invalidation names ONE event — `validate_receipt` refuses it otherwise. Every consumer
+    of the ledger must subtract exactly that event and nothing else.
+    """
+    return {str(event["invalidates_receipt"]) for event in events
+            if event.get("record_kind") == "receipt_invalidation"
+            and event.get("invalidates_receipt")}
+
+
+def active_receipts(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Reading events that still stand: neither invalidations nor invalidated.
+
+    Exported because "which receipts still count" was being answered independently in three
+    places, and one of them answered it wrong.
+    """
+    withdrawn = invalidated_event_ids(events)
+    return [event for event in events
+            if event.get("record_kind") != "receipt_invalidation"
+            and str(event.get("event_id")) not in withdrawn]
+
+
 def receipt_depth_index(path: Path) -> dict[str, dict[str, Any]]:
+    """Deepest surviving receipt per identifier.
+
+    🔴 This used to drop the whole *study key* when it met an invalidation:
+    `index.pop(f"pmid:{pmid}")`. An invalidation names one event, so withdrawing a July
+    `partial_fulltext_read` also erased a June `complete_fulltext_read` for the same paper —
+    a correction aimed at one receipt silently deleted the reading history around it. In a
+    system where a false negative is a compounding loss, that is the worst direction to fail:
+    a paper genuinely read in full reappears as unread, re-enters the debt, and gets read
+    again. Reproduced 2026-08-06 with two receipts and one invalidation; the index came back
+    empty. Only the named event is subtracted now.
+    """
     index: dict[str, dict[str, Any]] = {}
-    for receipt in load_ledger(path):
+    for receipt in active_receipts(load_ledger(path)):
         study = receipt["study_id"]
         keys = []
         if study.get("pmid"):
             keys.append(f"pmid:{study['pmid']}")
         if study.get("doi"):
             keys.append(f"doi:{normalise_doi(study['doi'])}")
-        if receipt.get("record_kind") == "receipt_invalidation":
-            for key in keys:
-                index.pop(key, None)
-            continue
         for key in keys:
             current = index.get(key)
             if current is None or DEPTHS[receipt["evidence_depth"]] >= DEPTHS[current["evidence_depth"]]:
