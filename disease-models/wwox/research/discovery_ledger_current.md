@@ -1830,3 +1830,94 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
   **19936220**, primario per generazione del modello, non ha receipt ed è ora `FT-043`.
   PMID **19500159** resta `FT-042`. PMID **17470496** è solo lineage SCAR pre-gene, già
   documentato altrove e non load-bearing per gli endpoint di questo studio.
+- **RISOLTO 2026-08-06 (parziale):** `FT-043` è stato letto integralmente
+  (`FTR-20260806-19936220-01`). La premessa importata si spezza in due: la **morte precoce**
+  è misurata di prima mano in PMID 19936220; l'**epilettogenesi non è misurata lì in nessuna
+  forma**. Vedi `DL-MECH-073`. La causalità resta `UNRESOLVED`, ma il confondente sistemico
+  è ora quantificato anziché plausibile: vedi `DL-MECH-074`.
+
+### DL-MECH-073 — La catena "epilettogenesi" del KO murino non termina in un topo: attraversa PMID 19936220 e atterra nel ratto *lde*
+- **Status:** open · **Tag epistemico:** `DATO` (assenza di misura, verificata) +
+  `CORREZIONE` di attribuzione. `CORREZIONE` è una funzione diagnostica del ledger, non uno
+  stato canonico.
+- **Fonte:** Ludes-Meyers et al. 2009, *PLoS ONE* 4:e7775 — PMID **19936220**,
+  PMCID **PMC2777388**, DOI `10.1371/journal.pone.0007775`; full text JATS, sei figure
+  ispezionate come immagini, tre tabelle e 28 riferimenti letti integralmente; receipt
+  `FTR-20260806-19936220-01`, manifest con 23 locator verbatim verificati.
+- 🔴 **DATO — assenza di misura:** PMID 19936220 non contiene EEG, osservazione di crisi,
+  test comportamentale, istologia cerebrale o esame neurologico. L'**unica** misura cerebrale
+  dell'intero paper è il peso del cervello in Table 2. Le parole *seizure* ed *epilepsy*
+  compaiono nel corpo una sola volta ciascuna, dentro una singola frase di Discussione che
+  cita un **ratto** (referenza 26 = PMID 19500159). Le stringhe `EEG`, `hippocamp`, `GABA`,
+  `convuls` e `behav` non compaiono affatto. Verificato con audit meccanico **dopo** la
+  lettura, non al posto di essa.
+- **DATO — l'altra metà regge:** la mortalità precoce è di prima mano e quantificata: 43%
+  (15/35) morti a 72 h, 77% entro il giorno 17, nessuno oltre lo svezzamento; Figura 3B
+  mostra un **arresto** della crescita (plateau a ~4 g dal giorno 10 al 17), non un
+  rallentamento.
+- 🔴 **CORREZIONE — doppio salto non dichiarato:** l'allele del ratto *lde* è una delezione
+  di 13 bp nell'esone 9 → frameshift C-terminale (371–424aa), **non un null**, e le crisi
+  citate sono **audiogene**. Trasferirle a un KO murino null attraversa specie *e* classe
+  allelica senza che nessuna delle due transizioni sia mai stata scritta.
+- 🔴 **CORREZIONE — driver Cre diverso:** PMID 19936220 usa **EIIA-Cre** (Jackson 003724),
+  PMID 30290271 usa **BK5-Cre**. Condividono l'allele floxed, non il knockout. PMID 19936220
+  è il primario per l'**allele**, solo parzialmente per il **modello**.
+- 🔴 **PREMISE: DEFAULT_FROM_TEXTBOOK — ablazione nel cervello mai mostrata.** Il Western
+  (Fig. 2C, identità dei tessuti visibile solo nel raster) copre **rene, polmone e milza**;
+  l'IHC (Fig. 6) copre solo il rene. Nessun lisato cerebrale, in nessun punto del paper.
+  "Una Cre zigotica delete ovunque" è attesa, non misura — ed è esattamente il tipo di
+  premessa troppo ovvia per essere scritta che questo sistema obbliga a nominare.
+- **Impatto sul grafo:** cinque superfici ripetono la stessa frase e vanno **spezzate**, non
+  cancellate: `CLAIM 005` (evidence boundary), changelog `WM_v4.0`, dossier PMID 30290271,
+  session evaluation 2026-08-06, e `DL-MECH-072` sopra. Morte precoce → confermata di prima
+  mano; epilettogenesi → non in questo paper.
+- **Debito:** `FT-042` (PMID 19500159) e `FT-041` (PMID 17803050) passano da "primari del
+  modello ratto" a **terminale effettivo di una premessa oggi attribuita a un paper murino**.
+  Nessun nuovo debito aperto: 22 delle 28 referenze sono già nello stato strutturato e le
+  due che contano erano già in coda.
+- **Esperimento discriminante:** nessuno serve per questa correzione — è una questione di
+  attribuzione, risolvibile solo leggendo `FT-042`/`FT-041`. **Interconnessioni:**
+  `DL-MECH-072` · `DL-MECH-074` · `CLAIM 005` · `FT-041` · `FT-042` · `FT-043`.
+
+### DL-MECH-074 — Il null sistemico di Wwox a 2–3 settimane è un animale metabolicamente scompensato: il confondente non è plausibile, è misurato
+- **Status:** open · **Tag epistemico:** `DATO` (le misure) + `INFERENZA` (la portata come
+  confondente).
+- **Fonte:** PMID **19936220**, Table 2, Table 3 e Figure 4/6; receipt
+  `FTR-20260806-19936220-01`.
+- **DATO — crisi metabolica sistemica a P18:** glucosio 143.5 vs 250.6 mg/dL (`p=0.000131`);
+  bicarbonato totale 14.50±3.5 vs 21.67 mEq/L (`p=0.006227`); BUN 37.25 vs 17.67 mg/dL
+  (`p=0.01086`); calcio 10.18 vs 11.13 mg/dL (`p=0.000385`); WBC 4.2 vs 9.45 ×10³/µL
+  (`n=2/gruppo`, non testato); 3% di eritrociti nucleati in 1 KO su 2. Più atrofia splenica
+  (0.21% vs 0.53% del peso corporeo, `p=0.0015`) con ipocellularità della polpa rossa e
+  corticale timica assottigliata.
+- **INFERENZA — perché conta oltre questo paper:** ipoglicemia e acidosi metabolica alterano
+  di per sé espressione dei marcatori interneuronali, reattività gliale e soglia convulsiva.
+  Qualunque fenotipo ippocampale misurato in un null **sistemico** a 2–3 settimane è misurato
+  in un animale simultaneamente ipoglicemico, acidotico, uremico e anemico. Questo non
+  confuta quei fenotipi: rende **impossibile per design** separare la perdita neuronale
+  cell-autonoma di Wwox dal danno metabolico secondario. È esattamente il divario che
+  l'allele condizionale generato in questo paper è stato costruito per chiudere.
+- 🔴 **CORREZIONE — peso del cervello letto al contrario:** Table 2 dà assoluto 0.390 → 0.356 g
+  (−8.7%) e relativo 5.0% → **8.5%** del peso corporeo (`p=0.0003`). La significatività è sul
+  **relativo** ed è guidata dal denominatore crollato. È **brain sparing** in cachessia, non
+  crescita cerebrale. Importare "increased brain weight in KO mice" senza il rapporto inverte
+  la biologia.
+- **DATO — l'ipotesi degli autori, e cosa ne è stato:** il paper propone l'acidosi tubulare
+  renale come causa di morte (`we hypothesize`, `we speculate`), sostenuta dall'espressione
+  di Wwox nei tubuli contorti distali (Fig. 6). Densità di campo misurata 2026-08-06: la query
+  `WWOX AND ("metabolic acidosis" OR "renal tubular acidosis")` restituisce **esattamente un
+  record — questo paper**. `WWOX AND hematopoiesis` → 3 (uno è questo); `WWOX AND "bone
+  mineralization"` → 1 (questo). `WWOX AND osteosarcoma` → 28. In diciassette anni nessuno,
+  autori compresi, ha testato il meccanismo che il paper propone per la letalità.
+- **TENSION — osteosarcoma, conflitto esplicito e irrisolto:** 9 KO per necroscopia completa,
+  raggi X, istopatologia multiorgano e microCT → **zero** lesioni neoplastiche. Aqeilan 2007
+  (PMID 17360458) riporta 4/13 (31%) con lesioni periostali compatibili con osteosarcoma.
+  Secondo conflitto: attività osteoclastica superiore in Aqeilan **senza quantificazione**,
+  nessuna differenza qui **con** quantificazione. Gli autori chiudono con *"The reason(s) for
+  the discrepancies between studies remain to be determined."* → `conflicting evidence`, non
+  biologia risolta.
+- **Esperimento discriminante:** delezione condizionale ristretta al sistema nervoso con
+  l'allele `Wwox^flox` già validato qui, con chimica del sangue misurata in parallelo, per
+  separare Wwox neuronale cell-autonomo da acidosi/ipoglicemia sistemica. Il reagente esiste
+  dal 2009 e, per le densità sopra, è largamente inutilizzato in questa direzione.
+- **Interconnessioni:** `DL-MECH-072` · `DL-MECH-073` · `CLAIM 005` · `FT-043`.

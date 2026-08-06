@@ -574,6 +574,9 @@ queue, coda full-text e discovery ledger. Deve portare mortalità, crescita, ata
 fenotipo epilettico antecedenti alla mappatura Wwox; il paper 2019 li importa soltanto.
 **Come è emerso:** enumerazione delle 56 referenze durante la lettura completa di PMID
 31340538 (`FTR-20260806-31340538-01`), seguita da cross-query meccanica del corpus.
+**Priorità rivista 2026-08-06:** compare anche come referenza 27 di PMID 19936220, accanto a
+`FT-042`, nella stessa frase di Discussione da cui l'intera premessa "epilettogenesi" del KO
+murino deriva. Va letto insieme a `FT-042`, non dopo. Vedi `DL-MECH-073`.
 **Current status:** ⬜ non recuperato, non letto.
 
 ---
@@ -588,6 +591,13 @@ crisi audiogeniche del modello `lde`. `DL-MECH-026` usa già questi risultati ma
 non ha receipt; Tochigi 2019 li cita, non li rimisura tutti. Va letto prima di usare il 95% di
 penetranza o la causalità genetica come dato di prima mano.
 **Come è emerso:** multi-hop di PMID 31340538 e audit del preesistente `DL-MECH-026`.
+**Priorità rivista 2026-08-06 — ALTA/1:** la lettura completa di `FT-043` ha stabilito che
+l'epilettogenesi attribuita al KO murino **non è misurata** in PMID 19936220 e vi entra solo
+come citazione di questo paper (referenza 26). PMID 19500159 non è più "il primario del
+modello ratto": è il **terminale effettivo** di una premessa oggi attribuita a un paper
+murino, su specie e classe allelica diverse (delezione 13 bp esone 9 → frameshift
+C-terminale, non un null; crisi audiogene). Finché non è letto, nessuna formulazione
+canonica può dire che un modello murino Wwox-null "mostra epilettogenesi". Vedi `DL-MECH-073`.
 **Current status:** ⬜ record presente; full text precedentemente non accessibile, non letto.
 
 ---
@@ -603,4 +613,14 @@ una ricevuta completa; va letto prima di promuovere causalità genetica, specifi
 controllo o dettagli di generazione come dati di prima mano.
 **Come è emerso:** enumerazione delle 90 referenze durante la lettura completa di PMID
 30290271 (`FTR-20260806-30290271-01`) e cross-query dei 20 riferimenti WWOX-/modello-/malattia-diretti.
-**Current status:** ⬜ record presente; nessun full-text receipt, non letto integralmente.
+**Current status:** ✅ **LETTO INTEGRALMENTE 2026-08-06** — receipt `FTR-20260806-19936220-01`;
+manifest schema-v2 con 23 locator verbatim verificati strict e zero gap; dossier in
+`fulltext_dossiers/PMID19936220.md`. Full text JATS + PDF + sei figure ispezionate come
+immagini + tre tabelle + 28 referenze (28/28 PMID risolti). Nessun materiale supplementare
+esiste; nessuna sezione limitations.
+**Esito:** la premessa importata si spezza. **Morte precoce = confermata di prima mano**
+(43% a 72 h, 77% al giorno 17, 100% prima dello svezzamento; arresto della crescita dal
+giorno 10). 🔴 **Epilettogenesi = non misurata qui in nessuna forma** — nessun EEG, crisi,
+comportamento o istologia cerebrale; l'unica misura cerebrale del paper è il peso in Table 2.
+La catena prosegue verso il ratto *lde* (`FT-042`/`FT-041`). Vedi `DL-MECH-073` e
+`DL-MECH-074`. Correzioni isolate in `staging/commit_candidate_20260806_19936220.md`.
