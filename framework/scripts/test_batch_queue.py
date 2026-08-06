@@ -29,6 +29,42 @@ REGISTRIES = ROOT / "disease-models" / "wwox" / "registries"
 QUEUE = REGISTRIES / "batch_queue.md"
 
 
+def _harvester():
+    """The real harvester, so the end-to-end tests start from PubMed XML and not from a
+    hand-written TSV that assumes the very column mapping under test."""
+    import importlib.util
+
+    spec = importlib.util.spec_from_file_location(
+        "harvest", ROOT / "framework/scripts/pubmed_corpus_harvest.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+def _pubmed_xml(pmid: str, title: str, notices: list[tuple[str, str]]) -> str:
+    corrections = "".join(
+        f'<CommentsCorrections RefType="{ref_type}"><PMID>{other}</PMID>'
+        f"<RefSource>J Test. 2026</RefSource></CommentsCorrections>"
+        for ref_type, other in notices)
+    block = f"<CommentsCorrectionsList>{corrections}</CommentsCorrectionsList>" if notices \
+        else ""
+    return (
+        f"<PubmedArticle><MedlineCitation><PMID>{pmid}</PMID><Article>"
+        f"<Journal><Title>J Test</Title><JournalIssue><PubDate><Year>2019</Year>"
+        f"</PubDate></JournalIssue></Journal><ArticleTitle>{title}</ArticleTitle>"
+        f"<PublicationTypeList><PublicationType>Journal Article</PublicationType>"
+        f"</PublicationTypeList></Article>{block}</MedlineCitation>"
+        f"<PubmedData><ArticleIdList>"
+        f'<ArticleId IdType="pubmed">{pmid}</ArticleId>'
+        f'<ArticleId IdType="doi">10.1000/{pmid}</ArticleId>'
+        f"</ArticleIdList></PubmedData></PubmedArticle>")
+
+
+def _pubmed_set(*articles: str) -> bytes:
+    return ('<?xml version="1.0"?><PubmedArticleSet>' + "".join(articles)
+            + "</PubmedArticleSet>").encode("utf-8")
+
+
 def fixture(test_case: unittest.TestCase, registry_body: str) -> Path:
     temporary = TemporaryDirectory()
     test_case.addCleanup(temporary.cleanup)
@@ -196,6 +232,111 @@ class QueueIntegrityTests(unittest.TestCase):
         self.assertLessEqual(report["free_full_text"], report["seed_total"])
         self.assertLessEqual(report["year_min"], report["year_max"])
         self.assertLessEqual(report["published_since_2020"], report["seed_total"])
+
+    def test_publication_integrity_is_eligibility_not_ranking(self) -> None:
+        """End to end: PubMed XML → seed TSV → queue JSON → rendered Markdown → hold.
+
+        Publication integrity answers *may this support a claim*, which is a different
+        question from *what should I read next*. Both directions of the confusion are
+        expensive: sorting a retracted paper down the queue stops nobody citing it, and
+        dropping it from the listing deletes the audit trail exactly when it is needed. So
+        this asserts the hold appears, the ordering does not move, and the record stays.
+        """
+        harvest = _harvester()
+        retracted = _pubmed_xml("11111111", "A retracted paper",
+                                [("RetractionIn", "42464650")])
+        concerned = _pubmed_xml("22222222", "A paper under concern",
+                                [("ExpressionOfConcernIn", "42464651")])
+        corrected = _pubmed_xml("33333333", "A paper with an erratum",
+                                [("ErratumIn", "42464652")])
+        clean = _pubmed_xml("44444444", "An untouched paper", [])
+        records = harvest.parse(_pubmed_set(retracted, concerned, corrected, clean))
+
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            registries = root / "disease-models" / "wwox" / "registries"
+            registries.mkdir(parents=True)
+            (registries / "fulltext_read_receipts.jsonl").touch()
+            (registries / "paper_registry_current.md").write_text(
+                "## PAPER 006\n**Identifier:** PMID 11111111\n**Status:** integrated\n"
+                "**Evidence depth:** full text reviewed\n", encoding="utf-8")
+            harvest.write_seed(records, {r["pmid"] for r in records},
+                               registries / "corpus_seed_pubmed_20260806.tsv")
+
+            report = bq.build(root, "wwox")
+            rendered = bq.render(report, limit=0)
+
+        rows = {item["pmid"]: item for item in report["queue"]}
+        self.assertEqual(rows["11111111"]["eligibility"], bq.HOLD)
+        self.assertEqual(rows["22222222"]["eligibility"], bq.HOLD)
+        self.assertEqual(rows["33333333"]["eligibility"], "",
+                         "an erratum is not an integrity event and must not be held")
+        self.assertEqual(rows["44444444"]["eligibility"], "")
+        self.assertEqual({item["pmid"] for item in report["held"]},
+                         {"11111111", "22222222"})
+
+        # The record stays in the queue: readable for audit, not deleted from the listing.
+        for pmid in ("11111111", "22222222", "33333333", "44444444"):
+            with self.subTest(pmid=pmid):
+                self.assertIn(pmid, rendered)
+        self.assertIn(bq.HOLD, rendered)
+        self.assertIn("admissibility", rendered)
+
+    def test_a_held_record_already_integrated_triggers_a_claim_audit(self) -> None:
+        """The exposure is never the future work.
+
+        A retraction is published after the reading, so the claims at risk are the ones that
+        already exist. A hold that only governs what happens next leaves them untouched.
+        """
+        harvest = _harvester()
+        records = harvest.parse(_pubmed_set(
+            _pubmed_xml("11111111", "A retracted paper", [("RetractionIn", "42464650")]),
+            _pubmed_xml("55555555", "A retracted paper nobody used",
+                        [("RetractionIn", "42464653")])))
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            registries = root / "disease-models" / "wwox" / "registries"
+            registries.mkdir(parents=True)
+            (registries / "fulltext_read_receipts.jsonl").touch()
+            (registries / "paper_registry_current.md").write_text(
+                "## PAPER 006\n**Identifier:** PMID 11111111\n**Status:** integrated\n"
+                "**Evidence depth:** full text reviewed\n", encoding="utf-8")
+            harvest.write_seed(records, set(),
+                               registries / "corpus_seed_pubmed_20260806.tsv")
+            report = bq.build(root, "wwox")
+            rendered = bq.render(report, limit=0)
+
+        self.assertEqual([item["pmid"] for item in report["held_integrated"]], ["11111111"])
+        self.assertIn("PAPER 006", rendered)
+        self.assertIn("Re-examine every", rendered)
+
+    def test_the_hold_does_not_reorder_the_queue(self) -> None:
+        """Admissibility must not leak into priority, in either direction."""
+        harvest = _harvester()
+        titles = [("11111111", [("RetractionIn", "1")]), ("22222222", []),
+                  ("33333333", [("ExpressionOfConcernIn", "2")]), ("44444444", [])]
+        orders = []
+        for corrections in (True, False):
+            records = harvest.parse(_pubmed_set(*[
+                _pubmed_xml(pmid, f"Paper {pmid}", notices if corrections else [])
+                for pmid, notices in titles]))
+            with TemporaryDirectory() as temporary:
+                root = Path(temporary)
+                registries = root / "disease-models" / "wwox" / "registries"
+                registries.mkdir(parents=True)
+                (registries / "fulltext_read_receipts.jsonl").touch()
+                (registries / "paper_registry_current.md").write_text("", encoding="utf-8")
+                harvest.write_seed(records, set(),
+                                   registries / "corpus_seed_pubmed_20260806.tsv")
+                orders.append([item["pmid"] for item in bq.build(root, "wwox")["queue"]])
+        self.assertEqual(orders[0], orders[1],
+                         "integrity status changed the reading order; it is an eligibility "
+                         "gate, not a sort key")
+
+    def test_no_held_records_means_no_integrity_section(self) -> None:
+        """A gate that fires on every run is a gate nobody reads."""
+        report = {"disease": "wwox", "held": [], "held_integrated": []}
+        self.assertEqual(bq._render_integrity(report), [])
 
     def test_retraction_status_reaches_the_rendered_queue(self) -> None:
         """XML → TSV → queue → a row a reader cannot miss.

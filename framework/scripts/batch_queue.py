@@ -115,11 +115,40 @@ FREE_FULL_TEXT_COLUMNS = ("pubmed_free_full_text_link", "free_full_text")
 # "a paper under an EoC reaches triage looking clean" stays true until the queue shows it.
 INTEGRITY_REF_TYPES = ("RetractionIn", "RetractedPublication", "ExpressionOfConcernIn",
                        "ExpressionOfConcernFor", "RetractionOf")
-# Shown before the title, where a reader cannot miss it. Ranking is deliberately left alone:
-# where a retracted paper belongs in a reading queue is a scientific decision, not a sort key.
+# Shown before the title, where a reader cannot miss it.
 INTEGRITY_PREFIX = {"retracted": "🛑 RETRACTED — ",
                     "concern": "⚠️ EXPRESSION OF CONCERN — ",
                     "corrected": "✎ corrected — "}
+
+# 🔴 Publication integrity is an ELIGIBILITY gate, not a ranking key. The two are routinely
+# confused and the confusion is expensive in both directions: sorting a retracted paper to the
+# bottom of a reading queue neither prevents it from supporting a claim nor stops anyone
+# reading it, while removing it from the queue destroys the audit trail exactly when it is
+# needed. So ordering is left untouched — where a paper belongs in a reading queue is a
+# priority question — and admissibility as evidence is answered separately.
+#
+# A held record stays catalogued and stays readable. What it may not do is support or promote
+# a claim. And because a retraction lands *after* the reading, the dangerous case is the one
+# already integrated: the queue names those explicitly, because a hold that only governs
+# future work leaves the claims that already rest on the paper exactly where they were.
+INTEGRITY_HOLD_STATES = ("retracted", "concern")
+HOLD = "PUBLICATION_INTEGRITY_HOLD"
+INTEGRITY_ACTION = {
+    "retracted": "may not support or promote any claim; audit every claim already resting "
+                 "on it; readable for audit only",
+    "concern": "no canonical promotion until the concern is resolved; readable for audit",
+    "corrected": "annotation only — read the correction with the paper; no hold",
+}
+
+
+def _eligibility(integrity: str) -> str:
+    """`PUBLICATION_INTEGRITY_HOLD` or "". An erratum is not an integrity event.
+
+    A corrigendum says the record was repaired; a retraction says it should not have stood.
+    Collapsing them would either hold hundreds of sound papers — and a gate that fires on
+    everything gets ignored — or let a retracted one through.
+    """
+    return HOLD if integrity in INTEGRITY_HOLD_STATES else ""
 
 
 def _integrity(seed: dict[str, str]) -> str:
@@ -335,6 +364,7 @@ def _build_uncached(root: Path, disease: str) -> dict:
                 "title": seed.get("title", ""),
                 "free_full_text": _free_full_text(seed),
                 "integrity": _integrity(seed),
+                "eligibility": _eligibility(_integrity(seed)),
                 "type": seed.get("type", ""),
                 "depth": depth,
                 "record": hit["record"] if hit else "",
@@ -375,6 +405,13 @@ def _build_uncached(root: Path, disease: str) -> dict:
         # text" while listing 468 rows marked yes. A helper that exists is not a helper that
         # is used, and `.get` on a renamed column is silent by design.
         "free_full_text": sum(1 for seed in seeds if _free_full_text(seed) == "yes"),
+        # Eligibility, reported beside the reading queue and never mixed into it. `held` is
+        # every record under a hold; `held_integrated` is the subset the model may already be
+        # leaning on, which is the only part that is urgent — a retraction is published after
+        # the reading, so the claims exposed to it are the ones that already exist.
+        "held": [item for item in queue if item["eligibility"] == HOLD],
+        "held_integrated": [item for item in queue if item["eligibility"] == HOLD
+                            and item["record"]],
         "year_min": min(years) if years else None,
         "year_max": max(years) if years else None,
         "published_since_2020": sum(year >= 2020 for year in years),
@@ -384,6 +421,59 @@ def _build_uncached(root: Path, disease: str) -> dict:
         "ready_now": len(ready_now),
         "queue": queue,
     }
+
+
+def _render_integrity(report: dict) -> list[str]:
+    """The eligibility section. Deliberately not a ranking, and deliberately not a filter.
+
+    Held records keep their place in the queue below: a paper you may not cite is still a
+    paper you may have to read, and removing it from the listing would delete the audit trail
+    at the moment it becomes necessary. What changes is what it may *support*.
+    """
+    held = report.get("held") or []
+    if not held:
+        return []
+    lines = [
+        "## 🛑 Publication integrity — eligibility as evidence",
+        "",
+        f"**{len(held)} record(s) are under `{HOLD}`.** This is an *admissibility* gate, not a",
+        "priority: their position in the queue below is unchanged, they remain catalogued, and",
+        "they remain readable **for audit**. What they may not do is support or promote a claim.",
+        "",
+        "An ordinary erratum or corrigendum is **not** an integrity event and carries no hold —",
+        "a corrigendum says the record was repaired, a retraction says it should not have stood.",
+        "",
+        "| PMID | Status | Registry record | Required action |",
+        "|---|---|---|---|",
+    ]
+    for item in held:
+        lines.append(
+            f"| [{item['pmid']}](https://pubmed.ncbi.nlm.nih.gov/{item['pmid']}/) "
+            f"| {item['integrity']} | {item['record'] or '—'} "
+            f"| {INTEGRITY_ACTION[item['integrity']]} |"
+        )
+    integrated = report.get("held_integrated") or []
+    lines += ["", ""]
+    if integrated:
+        lines += [
+            f"> 🔴 **{len(integrated)} of these "
+            f"{'is' if len(integrated) == 1 else 'are'} already integrated into the "
+            "registries.**",
+            "> A retraction is published *after* the reading, so the exposure is never the",
+            "> future work — it is the claims that already rest on the paper. Re-examine every",
+            "> claim linked to the records below before the next `BATCH_COMMIT`:",
+            ">",
+        ]
+        lines += [f"> - `{item['record']}` — PMID {item['pmid']} ({item['integrity']})"
+                  for item in integrated]
+        lines.append("")
+    else:
+        lines += [
+            "> No held record carries a registry entry, so no existing claim is currently",
+            "> exposed. This is checked on every run, not assumed.",
+            "",
+        ]
+    return lines
 
 
 def render(report: dict, limit: int) -> str:
@@ -416,6 +506,9 @@ def render(report: dict, limit: int) -> str:
         "every record in this order, so a second person can take the next unclaimed row without",
         "coordinating with anyone.",
         "",
+    ]
+    head += _render_integrity(report)
+    head += [
         "> **These verdicts are not computed here.** They come from the intake gate",
         "> (`legend-study-intake-triage`), imported and run over the seed corpus, so the repository",
         "> has exactly one classifier. An earlier version of this file answered with its own",
