@@ -403,6 +403,26 @@ class QueueIntegrityTests(unittest.TestCase):
         self.assertEqual(bq._eligibility("unknown"), "",
                          "unknown must not become a hold — it is a gap, not a finding")
 
+    def test_a_retracted_publication_type_holds_without_a_correction_link(self) -> None:
+        """This test sat below the empty-`corrections` early return, so it could never fire
+        in the only case it exists for: a record PubMed types as retracted whose
+        CommentsCorrections link is absent or lost in harvest. Dead code reading as a net."""
+        self.assertEqual(
+            bq._integrity({"corrections": "", "type": "Journal Article; Retracted Publication"}),
+            "retracted")
+
+    def test_whitespace_around_a_reftype_does_not_lose_the_hold(self) -> None:
+        self.assertEqual(bq._integrity({"corrections": " RetractionIn : 42464650"}), "retracted")
+
+    def test_the_unchecked_caveat_survives_alongside_a_finding(self) -> None:
+        """It lived only in the `not held` branch, so it vanished in the mixed case — the
+        reader was told 2 records were held and nothing about 459 never looked at."""
+        report = {"disease": "wwox", "held_integrated": [], "held_referenced": [],
+                  "held": [{"pmid": "1", "integrity": "retracted", "record": "",
+                            "integrated": False, "current_references": []}],
+                  "integrity_unknown": [{"pmid": "2"}]}
+        self.assertIn("no correction data", "\n".join(bq._render_integrity(report)))
+
     def test_unchecked_records_are_reported_even_with_no_holds(self) -> None:
         report = {"disease": "wwox", "held": [], "held_integrated": [],
                   "held_referenced": [], "integrity_unknown": [{"pmid": "1"}]}

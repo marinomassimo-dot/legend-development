@@ -7,6 +7,8 @@ import copy
 import hashlib
 import json
 import multiprocessing
+import os
+import tempfile
 import sys
 import time
 import unittest
@@ -587,6 +589,68 @@ class FulltextReceiptTests(unittest.TestCase):
             receipts.append_receipt(self.ledger, third)
 
 
+class CorpusCheckScope(unittest.TestCase):
+    """The content half of the firewall, and what it must NOT refuse."""
+
+    RECEIPT = {
+        "event_id": "FTR-20260806-99999999-01", "record_kind": "contemporaneous_receipt",
+        "study_id": {"pmid": "99999999", "doi": "10.1000/x"},
+        "event_at": "2026-08-06T10:00:00Z", "analysis_at": "2026-08-06T10:00:00Z",
+        "workflow": "deep read", "evidence_depth": "partial_fulltext_read",
+        "source_locator": "files/fulltext/paper.xml", "source_fingerprint": "a" * 64,
+        "coverage": {k: "read" for k in receipts.COVERAGE_KEYS},
+        "outputs": ["x.md"], "evidence_basis": ["coverage_map"],
+        "prior_receipt": None, "reread_reason": "first_read"}
+
+    def test_a_renamed_corpus_is_refused_from_any_working_directory(self) -> None:
+        """The check resolved the locator against the process CWD, not the repository.
+
+        Running the CLI from anywhere but the repo root disabled the content half silently:
+        a renamed abstract export was accepted from `/` and refused from the repo. Fail-open
+        at write and fail-closed at read — once persisted, `verify` and the LINT both report
+        BLOCK_SYSTEM forever and the only edit that clears it breaks the hash chain.
+        """
+        with TemporaryDirectory() as tmp:
+            sandbox = Path(tmp)
+            (sandbox / "files/fulltext").mkdir(parents=True)
+            (sandbox / "files/fulltext/PMID99999999_paper.jsonl").write_text(
+                json.dumps({"pmid": "1", "record_type": "PubmedArticle", "title": "A paper",
+                            "identifiers": {}, "abstract_parts": []}) + "\n",
+                encoding="utf-8")
+            bad = {**self.RECEIPT,
+                   "source_locator": "files/fulltext/PMID99999999_paper.jsonl"}
+            cwd = os.getcwd()
+            os.chdir(tempfile.gettempdir())
+            try:
+                errors = receipts.validate_receipt(bad, sandbox)
+            finally:
+                os.chdir(cwd)
+        self.assertTrue(any("bibliographic export" in error for error in errors))
+
+    def test_honest_prose_about_a_permitted_use_is_not_refused(self) -> None:
+        """Triage from the corpus is PERMITTED, so describing it must stay free.
+
+        Running free text through the corpus check refused
+        `workflow: "triaged from files/corpus/ then read the publisher PDF end to end"` —
+        an accurate account of a legitimate workflow — while the same reading described
+        vaguely passed. That guard rewards under-documenting the provenance.
+        """
+        for field, value in (
+            ("workflow", "triaged from files/corpus/ then read the publisher PDF end to end"),
+            ("workflow", "selected via the corpus_seed_pubmed_20260806 snapshot; PDF read"),
+        ):
+            with self.subTest(value=value):
+                self.assertEqual(receipts.validate_receipt({**self.RECEIPT, field: value}), [])
+        self.assertEqual(receipts.validate_receipt({**self.RECEIPT, "evidence_basis": [
+            "corpus_abstracts triage flagged this paper; the quote is from Results p.4"]}), [])
+
+    def test_a_bare_corpus_path_is_still_refused_in_those_fields(self) -> None:
+        for field, value in (("workflow", "files/corpus/wwox_20260806.jsonl"),
+                             ("evidence_basis", ["files/corpus/wwox_20260806.jsonl"])):
+            with self.subTest(field=field):
+                self.assertTrue(receipts.validate_receipt({**self.RECEIPT, field: value}))
+
+
 class InvalidationScope(unittest.TestCase):
     """An invalidation names ONE event. It must subtract exactly that one."""
 
@@ -628,6 +692,12 @@ class InvalidationScope(unittest.TestCase):
         """It carries an `evidence_depth` it exists to negate."""
         standing = receipts.active_receipts(self.LEDGER)
         self.assertEqual([event["event_id"] for event in standing], ["A"])
+
+    def test_status_reports_only_receipts_that_still_stand(self) -> None:
+        """`status --pmid` is what the protocol tells an agent to trust before re-reading."""
+        source = (ROOT / "framework/scripts/fulltext_receipts.py").read_text(encoding="utf-8")
+        self.assertIn("active_receipts(load_ledger(ledger))", source,
+                      "status filters the raw ledger and ignores invalidations")
 
     def test_the_live_ledger_is_unchanged_by_the_fix(self) -> None:
         """The one live invalidation targets a study with a single receipt, so the corrected

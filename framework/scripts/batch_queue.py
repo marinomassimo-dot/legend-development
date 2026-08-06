@@ -113,7 +113,10 @@ FREE_FULL_TEXT_COLUMNS = ("pubmed_free_full_text_link", "free_full_text")
 # whether a paper may be read as evidence at all. The harvester carries every notice in the
 # seed's `corrections` column; a column nothing reads is a column that does not exist, and
 # "a paper under an EoC reaches triage looking clean" stays true until the queue shows it.
-INTEGRITY_REF_TYPES = ("RetractionIn", "RetractedPublication", "ExpressionOfConcernIn")
+# (A former `INTEGRITY_REF_TYPES` tuple lived here, referenced by nothing and listing
+# `RetractedPublication` — a value PubMed never emits; the real publication type is
+# `Retracted Publication`, checked in `_integrity`. A dead constant that reads like the
+# authoritative list is worse than no list: the next reader maintains it instead of the code.)
 # Shown before the title, where a reader cannot miss it.
 INTEGRITY_PREFIX = {"retracted": "🛑 RETRACTED — ",
                     "concern": "⚠️ EXPRESSION OF CONCERN — ",
@@ -175,12 +178,19 @@ def _integrity(seed: dict[str, str]) -> str:
     if "corrections" not in seed:
         return "unknown"
     notices = (seed.get("corrections") or "")
+    publication_types = {part.strip() for part in (seed.get("type") or "").split(";")}
+    # 🔴 This test sat BELOW the empty-`corrections` early return, so it could never fire in
+    # the only situation it exists for: a record PubMed types as retracted whose
+    # CommentsCorrections link is absent or lost in harvest. Dead code that read as a
+    # safety net. The publication type is a statement about the record itself, so it is
+    # checked before anything is allowed to short-circuit.
+    if "Retracted Publication" in publication_types:
+        return "retracted"
     if not notices.strip():
         return ""
-    kinds = {part.strip().split(":", 1)[0]
+    kinds = {part.split(":", 1)[0].strip()
              for part in notices.split(";") if part.strip()}
-    publication_types = {part.strip() for part in (seed.get("type") or "").split(";")}
-    if "RetractionIn" in kinds or "Retracted Publication" in publication_types:
+    if "RetractionIn" in kinds:
         return "retracted"
     if "ExpressionOfConcernIn" in kinds:
         return "concern"
@@ -548,6 +558,10 @@ def _render_integrity(report: dict) -> list[str]:
     integrated = report.get("held_integrated") or []
     referenced = report.get("held_referenced") or []
     lines += ["", ""]
+    # 🔴 This warning used to live only in the `not held` branch, so it vanished in the mixed
+    # case — the reader was told "2 records are held" and nothing about 459 whose integrity
+    # was never looked at. A caveat that disappears when there is also a finding is a caveat
+    # that disappears exactly when the report is being read most carefully.
     if unchecked:
         lines += [
             f"> ❔ **{len(unchecked)} further record(s) carry no correction data**: their seed",

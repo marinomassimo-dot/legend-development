@@ -119,6 +119,19 @@ def looks_like_corpus(path: Path) -> bool:
     return False
 
 
+def path_like(value: str) -> bool:
+    """True when a value is a locator rather than a sentence.
+
+    🔴 Free prose was being run through the corpus check, so an honest workflow note —
+    "triaged from files/corpus/ then read the publisher PDF end to end" — was refused, while
+    the same reading described vaguely sailed through. That guard rewards under-documenting
+    the provenance, which is the opposite of what this repository is for: triage from the
+    corpus is a PERMITTED use and saying so out loud must stay free. A locator has no spaces.
+    """
+    text = str(value or "").strip()
+    return bool(text) and not any(character.isspace() for character in text)
+
+
 def corpus_objection(value: str, root: Path | None = None) -> str:
     """The reason this path may not be evidence, or "" if there is none.
 
