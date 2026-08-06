@@ -699,14 +699,23 @@ class InvalidationScope(unittest.TestCase):
         self.assertIn("active_receipts(load_ledger(ledger))", source,
                       "status filters the raw ledger and ignores invalidations")
 
-    def test_the_live_ledger_is_unchanged_by_the_fix(self) -> None:
-        """The one live invalidation targets a study with a single receipt, so the corrected
-        semantics must produce exactly the previous result."""
+    def test_the_live_ledger_honours_its_own_invalidations(self) -> None:
+        """Derived from the ledger, not from a hardcoded PMID.
+
+        The first version asserted `"pmid:23446842" not in index`, which is a closed-world
+        claim over append-only state: the day someone legitimately reads that paper and
+        appends a valid receipt, the test fails while nothing is wrong. The repository's own
+        `test_no_closed_world_assertions_on_live_state` caught it.
+        """
         ledger = ROOT / "disease-models/wwox/registries/fulltext_read_receipts.jsonl"
         if not ledger.is_file():
             self.skipTest("no ledger in this checkout")
-        index = receipts.receipt_depth_index(ledger)
-        self.assertNotIn("pmid:23446842", index)
+        withdrawn = receipts.invalidated_event_ids(receipts.load_ledger(ledger))
+        if not withdrawn:
+            self.skipTest("no invalidation in the live ledger")
+        backing = {entry["event_id"] for entry in receipts.receipt_depth_index(ledger).values()}
+        self.assertFalse(backing & withdrawn,
+                         "the depth index is backed by a withdrawn receipt")
 
 
 if __name__ == "__main__":
