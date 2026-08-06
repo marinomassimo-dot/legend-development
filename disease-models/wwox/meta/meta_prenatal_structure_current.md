@@ -25,9 +25,11 @@ The current convergence supports a strong but prudent reading:
 The prenatal/structural block now rests on a three-paper core:
 - **Iacomino 2020** → migration, cortical mislayering, cytoskeleton/microtubule program disruption across human fetal tissue, rat and hNPC
 - **Cheng 2020** → neurodevelopmental/degenerative phenotype with GSK3β-linked seizure susceptibility in severe Wwox deficiency
-- **Kumada 2019** → cortical development failure with hypomyelination and impaired oligodendroglial/glial maturation
+- **Tochigi 2019** → cortical development failure with hypomyelination and impaired oligodendroglial/glial maturation — ⚠️ **early postnatal (PND5–21), not prenatal**
 
 This convergence makes the structural axis no longer merely possible, but one of the central explanatory levels of the WWOX-DEE model.
+
+> 🔴 **Correction — `BATCH_20260806_002`.** The third item was recorded as *"Kumada 2019"* and its registry record carried an invented title naming *lissencephaly*. The author is **Tochigi**; the published title ends *"…in a Rat Model of Lethal Dwarfism with Epilepsy"*, and the word *lissencephaly* appears nowhere in the paper. The study measures PND5, 10, 15 and 21 and **no prenatal time point at all**. It therefore belongs to this file as the **postnatal bridge** between the prenatal structural core and P4 — not as one of the prenatal measurements. Two of the three convergence items above (Iacomino, and the human/hNPC material) carry the prenatal claim; this one carries maturation. Corrected after the complete full-text read, receipt `FTR-20260806-31340538-01`.
 
 ## Evidence anchors
 

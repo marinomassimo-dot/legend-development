@@ -107,7 +107,7 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 **Source:** Hussain et al., 2019, *Neurobiology of Disease* 121:163–176 — PMID 30290271 (full text read 2026-08-06, receipt `FTR-20260806-30290271-01`)
 **Wikilinks:** [[paper_registry_current#PAPER 006]]
 **Impact on Working Model:** modifier logic. **Not** BLOCK-1 / medication policy.
-**Evidence boundary:** NPY CA1/CA3 are reported as showing no obvious difference; the whole-hippocampus NPY panel carries **no significance marker** — a visual panel observation, not a reported test. IBA1/GFAP in DG are marginal and unmarked. Only `Il6`, not `Tnf-a`, is significant (`n=4/group`). GAD65/67 is protein abundance only. Early death and epileptogenesis in this model are **imported premises** (PMID 19936220, Mallaret 2014), not re-measured here — see `FT-043`.
+**Evidence boundary:** NPY CA1/CA3 are reported as showing no obvious difference; the whole-hippocampus NPY panel carries **no significance marker** — a visual panel observation, not a reported test. IBA1/GFAP in DG are marginal and unmarked. Only `Il6`, not `Tnf-a`, is significant (`n=4/group`). GAD65/67 is protein abundance only. **Imported premises, now traced to their end (2026-08-06).** Early death and epileptogenesis were attributed here to PMID 19936220 and Mallaret 2014. All three links of that chain have since been read in full. **Early death is first-hand** in PMID 19936220: 43% dead by 72 h, 77% by day 17, none past weaning (`FTR-20260806-19936220-01`). 🔴 **Epileptogenesis is not measured there in any form** — no EEG, no seizure observation, no behavioural assay, no brain histology; the only brain measurement in that paper is organ weight. It enters it once, as a Discussion citation of the **rat** `lde` model. 🔴 **And that terminus asserts the opposite for the mouse:** PMID 19500159 states in three places, and in a Table 2 whose `Epilepsy` row is **empty for both mouse models**, that Wwox-null mice show no epilepsy (`FTR-20260806-19500159-01`). Seizures in the Wwox literature are a **rat `lde/lde`** phenotype — see [[claim_registry_current#CLAIM 037]]. **No canonical statement may describe a Wwox-null mouse as showing epileptogenesis.** Whether the mouse lacks the phenotype or dies before expressing it is open and testable: the earliest rat seizure onset (day 16) already exceeds the entire lifespan of the mouse null.
 
 ---
 
@@ -253,8 +253,9 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 **clinical relevance:** HIGH
 **Summary:** Across fetal human tissue, rat lde/lde and human neural progenitor models, WWOX loss is associated with impaired neuronal migration, altered cortical layering, dysregulated cytoskeleton-related developmental programs, and defective cortical maturation with downstream hypomyelination/glial-development abnormalities.
 **Clinical meaning:** Strongly supports the reading that part of WWOX-DEE may arise on a prenatal/early structural substrate, not only on postnatal network instability.
-**Source:** Iacomino et al. 2020 / Kumada et al. 2019 / Kośla et al. 2019
-**Wikilinks:** [[paper_registry_current#PAPER 020]] (Iacomino) · [[paper_registry_current#PAPER 021]] (Kumada) · [[paper_registry_current#PAPER 022]] (Kośla)
+**Source:** Iacomino et al. 2020 / **Tochigi** et al. 2019 / Kośla et al. 2019
+**Wikilinks:** [[paper_registry_current#PAPER 020]] (Iacomino) · [[paper_registry_current#PAPER 021]] (Tochigi) · [[paper_registry_current#PAPER 022]] (Kośla)
+**Evidence boundary (BATCH_20260806_002):** the multi-paper convergence is retained, but **PMID 31340538 (Tochigi) contributes early postnatal maturation and hypomyelination at PND5–21 — not prenatal migration, not cortical layering, and no directly observed prenatal assembly.** It measures no prenatal time point. Its record previously carried an invented title naming *lissencephaly*, which had been steering it toward a migration/layering reading the study does not make. The prenatal component of this claim therefore rests on Iacomino and Kośla, not on this paper.
 **Impact on Working Model:** supports P3 as central structural axis and tightens link P3↔P4; no direct operational change
 
 ---
@@ -269,8 +270,9 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 **clinical relevance:** HIGH
 **Summary:** The convergence of impaired migration, cortical misassembly, layering defects, hypomyelination, glial-maturation abnormalities and early network hyperexcitability strongly suggests that part of WWOX-DEE is developmentally pre-wired rather than generated only postnatally.
 **Clinical meaning:** Refines interpretation of EEG severity and explains why early MRI may underestimate structural burden. Supports a structural reading of WWOX-DEE without implying a direct treatment change for the reference genotype.
-**Source:** Iacomino 2020 / Cheng 2020 / Kumada 2019 / Repudi 2021
-**Wikilinks:** [[paper_registry_current#PAPER 020]] (Iacomino) · [[paper_registry_current#PAPER 019]] (Cheng) · [[paper_registry_current#PAPER 021]] (Kumada) · [[paper_registry_current#PAPER 004]] (Repudi Brain)
+**Source:** Iacomino 2020 / Cheng 2020 / **Tochigi** 2019 / Repudi 2021
+**Wikilinks:** [[paper_registry_current#PAPER 020]] (Iacomino) · [[paper_registry_current#PAPER 019]] (Cheng) · [[paper_registry_current#PAPER 021]] (Tochigi) · [[paper_registry_current#PAPER 004]] (Repudi Brain)
+**Evidence boundary (BATCH_20260806_002):** *"developmentally pre-wired"* must not be read as *"prenatally demonstrated"*. **PMID 31340538 (Tochigi) is an early postnatal study (PND5–21)** and contributes maturation and hypomyelination, not prenatal misassembly; it is the postnatal bridge between the prenatal core and P4, not one of the prenatal measurements. Its author and title were corrected in this batch after the full-text read.
 **Impact on Working Model:** strengthens structural reading of the reference genotype; now baseline-level conceptual support
 
 ---
@@ -625,3 +627,71 @@ If comparable studies conflict:
 **Source:** [[paper_registry_current#PAPER 056]] (Wang 2012, PMID 22193544)
 **Wikilinks:** [[paper_registry_current#PAPER 056]] · [[claim_registry_current#CLAIM 016]] · [[claim_registry_current#CLAIM 030]] · [[claim_registry_current#CLAIM 028]]
 **Impact on Working Model:** nessun cambio BLOCCO 1. Irrigidisce il vincolo di disegno su TX-003 (la regione 388–407/L404 è ora una zona di esclusione supportata da `DATO`, non da citazione); fornisce un readout funzionale a CLAIM 030; aggiunge un caveat di misura sui biomarcatori.
+
+---
+
+## CLAIM 036
+**Title:** A systemic constitutive Wwox-null mouse at P18 is metabolically decompensated, so any brain phenotype measured in that window carries a quantified systemic confounder
+**Status:** in observation
+**Type:** DATO (le misure) + INFERENZA (la portata come confondente)
+**Pathway:** P5 — metabolismo / rene; confondente trasversale a P1, P2, P6
+**Genotype/model relevance:** topo, null sistemico costitutivo `Wwox^ΔCre/ΔCre` generato con **EIIA-Cre**. Nessun allele WWOX-DEE. Rilevante come **vincolo di disegno**, non come meccanismo di malattia.
+**Transferability:** T3 — non trasferisce un fenotipo, trasferisce un avvertimento metodologico
+**clinical relevance:** INDIRECT
+**Summary:** A postnatal day 18 il null sistemico mostra glucosio 143.5 vs 250.6 mg/dL (`p=0.000131`), bicarbonato totale 14.50±3.5 vs 21.67 mEq/L (`p=0.006227`), BUN 37.25 vs 17.67 mg/dL (`p=0.01086`), calcio 10.18 vs 11.13 mg/dL (`p=0.000385`), WBC 4.2 vs 9.45 ×10³/µL (`n=2/gruppo`), atrofia splenica (0.21% vs 0.53% del peso corporeo, `p=0.0015`) con ipocellularità della polpa rossa e corticale timica assottigliata. Chimica ematica `n=3/3/4`.
+**Clinical meaning:** Nessuna. È un vincolo di disegno: qualunque fenotipo ippocampale o cerebrale misurato in un null **sistemico** nella finestra P14–P18 è misurato in un animale simultaneamente ipoglicemico, acidotico, uremico e anemico. Questo **non confuta** tali fenotipi — rende **impossibile per costruzione** separare la perdita neuronale cell-autonoma di Wwox dal danno metabolico secondario. È esattamente il divario che l'allele condizionale `Wwox^flox`, generato nello stesso paper, è stato costruito per chiudere e che nessuno ha usato in questa direzione. **Non è parere medico.**
+**Evidence boundary:** 🔴 Il peso cerebrale è **brain sparing in cachessia, non crescita**: assoluto 0.390 → 0.356 g (−8.7%), relativo 5.0% → **8.5%** del peso corporeo, e la significatività (`p=0.0003`) è sul **relativo**, guidata dal denominatore crollato. Importarlo senza il rapporto inverte la biologia. 🔴 `PREMISE: DEFAULT_FROM_TEXTBOOK` — **l'ablazione di Wwox nel cervello non è mai mostrata**: il western copre rene, polmone e milza (identità dei tessuti visibile solo nel raster di Fig. 2C) e l'IHC solo il rene. Una Cre zigotica rende attesa la delezione globale, ma l'attesa non è misura. **`REVIVAL_TRIGGER`:** un western o un'IHC su lisato cerebrale da `EIIA-Cre; Wwox^ΔCre/ΔCre`, da qualunque fonte. 🔴 Driver Cre **diverso** da quello di [[claim_registry_current#CLAIM 005]]: EIIA-Cre qui, BK5-Cre in PMID 30290271 — allele floxed condiviso, knockout diverso.
+**Source:** [[paper_registry_current#PAPER 057]] (Ludes-Meyers 2009, PMID 19936220; full text read 2026-08-06, receipt `FTR-20260806-19936220-01`)
+**Wikilinks:** [[paper_registry_current#PAPER 057]] · [[claim_registry_current#CLAIM 005]] · [[claim_registry_current#CLAIM 038]]
+**Impact on Working Model:** nessun cambio BLOCCO 1. Aggiunge un vincolo di disegno trasversale: i null sistemici nella finestra P14–P18 non separano cell-autonomo da sistemico.
+
+---
+
+## CLAIM 037
+**Title:** The seizure phenotype of the Wwox literature is a rat `lde/lde` phenotype, electrographically documented, and it is explicitly absent in Wwox-null mice
+**Status:** in observation
+**Type:** DATO
+**Pathway:** P2 — eccitabilità / epilettogenesi
+**Genotype/model relevance:** ratto, ceppo LDE, delezione spontanea di 13 bp nell'esone 9 di `Wwox` — **strutturalmente frameshift C-terminale (371–424aa), funzionalmente null a livello proteico** (mRNA normale, né 47 né 42 kDa rilevabili in testicolo e ippocampo, con epitopo dell'anticorpo **fuori** dalla regione alterata). Non è un allele WWOX-DEE umano.
+**Transferability:** T2 per la vulnerabilità conservata da perdita biallelica; **T3** per qualunque trasferimento del fenotipo epilettico a un modello murino o a un genotipo umano
+**clinical relevance:** MODERATE
+**Summary:** Crisi audiogene in **19/20 (95%)** su tre stimolazioni (coorte **solo femminile**, denominatore al netto di 3 morti); crisi spontanee **30/50 (60%)** nella progenie backcross e **33.8% (22/65) ♂ / 33.9% (19/56) ♀** nel ceppo inbred; **0/14** controlli normali, né indotte né spontanee. Latenza che si accorcia 56±24 → 36±4 → 25±3 s su tre giorni (progressione kindling-like). **EEG:** spike interictali ~10 Hz sporadici in **tutti** i mutanti non stimolati, sincronizzati bilateralmente, ampiezza occipitale > frontale, assenti nei normali (`n=5` mutanti, `3` normali); complessi punta-onda lenta 5–6 Hz prima delle convulsioni cloniche. **Substrato anatomico:** vacuoli extracellulari in CA1 e amigdala, 9/9 affetti contro 0/10 normali, con giro dentato e CA3 risparmiati.
+**Clinical meaning:** Nessuna implicazione farmacologica. Il modello è un candidato per l'**epilessia pediatrica** per tempistica di esordio (16–63 giorni postnatali) e possiede il substrato strutturale che la letteratura murina non ha. **Non è parere medico.**
+**Evidence boundary:** 🔴 **I topi Wwox-null non hanno epilessia riportata** — affermato tre volte in PMID 19500159 e formalizzato in Table 2, dove la riga `Epilepsy` è compilata solo per `lde/lde`. Gli autori lasciano aperta la spiegazione (i topi potrebbero morire prima di convulsionare) e la sopravvivenza la rende testabile: 2–3 settimane nel topo contro **3–12 settimane** nel ratto, con esordio più precoce delle crisi al giorno 16. ⚠️ Il 95% audiogeno è **solo femminile**, dichiarato unicamente nella didascalia della Fig. 6. ⚠️ Il 34% spontaneo è **un pavimento, non un tasso**: gli autori dichiarano che crisi non rilevate e morte precoce lo spingono in basso. ⚠️ La vacuolizzazione **non ha corrispettivo** in epilessia umana né in altri modelli animali, il che limita il trasferimento. ⚠️ Due soli paper, **un solo laboratorio, mai replicati indipendentemente** — mitigato dal fatto che il fenotipo fu osservato **prima** che il gene fosse identificato. 🔴 `PREMISE: DEFAULT_FROM_TEXTBOOK` — la scomparsa della proteina mutante è attribuita al sistema ubiquitina-proteasoma **senza alcun saggio di turnover, inibitore o determinazione di via**; è lo stesso default falsificato il 2026-07-12 per un altro allele WWOX, il cui turnover passava per una via lisosomiale HSC70-associata insensibile a MG-132. **`REVIVAL_TRIGGER`:** un chase con cicloesimide più inibitori proteasomali versus lisosomiali/CMA sulla proteina lde.
+**Source:** [[paper_registry_current#PAPER 058]] (Suzuki 2009, PMID 19500159; receipt `FTR-20260806-19500159-01`) · [[paper_registry_current#PAPER 059]] (Suzuki 2007, PMID 17803050; receipt `FTR-20260806-17803050-01`)
+**Wikilinks:** [[paper_registry_current#PAPER 058]] · [[paper_registry_current#PAPER 059]] · [[claim_registry_current#CLAIM 005]] · [[claim_registry_current#CLAIM 038]] · [[claim_registry_current#CLAIM 039]]
+**Impact on Working Model:** nessun cambio BLOCCO 1. Sposta l'epilettogenesi da premessa importata su un modello murino a `DATO` misurato su un modello **di ratto**, con la discordanza di specie registrata anziché appianata.
+
+---
+
+## CLAIM 038
+**Title:** Elevated BUN and creatinine recur across Wwox rodent models with two competing explanations — renal insufficiency or seizure-driven hypercatabolism — and neither has ever been tested
+**Status:** in observation
+**Type:** DATO (le misure) + IPOTESI (entrambe le spiegazioni)
+**Pathway:** P5 — metabolismo / rene
+**Genotype/model relevance:** ratto `lde/lde` (misure primarie) e topo `Wwox`-null sistemico (misura convergente). Nessun dato umano.
+**Transferability:** T3 — questione aperta, non fenotipo trasferibile
+**clinical relevance:** INDIRECT
+**Summary:** Nel ratto a 28 giorni: BUN 12.6 → **40.3** mg/ml (♀, `P<0.05`) e 10.1 → **35.6** (♂, `P<0.01`); creatinina 0.48 → **0.64** (♀) e 0.45 → **0.58** (♂), entrambe `P<0.01`; fosfato inorganico significativo solo nelle femmine (`n=4` normali, `5` mutanti per sesso). **Glucosio, calcio, Na⁺, K⁺, Cl⁻ e trigliceridi: tutti non significativi.** Il ratto è dunque **uremico senza essere ipoglicemico** — profilo opposto a quello del topo null, che è entrambi (vedi [[claim_registry_current#CLAIM 036]]).
+**Clinical meaning:** Nessuna. Due spiegazioni concorrenti, entrambe `IPOTESI`, entrambe mai testate: **(1) insufficienza renale** — ma i reni sono **istologicamente normali**, non c'è proteinuria né anemia, e gli autori stessi concludono che «if renal excretive function is reduced … the degree of dysfunction may not be severe»; **(2) produzione aumentata da ipercatabolismo e disgregazione muscolare** dovuta a crisi ripetute, con precedente nominato nel ceppo SER (BUN elevato + ritardo di crescita + crisi motorie). 🔴 La seconda **compete direttamente con l'ipotesi di acidosi tubulare renale** che PMID 19936220 avanza per il topo sullo stesso marcatore, e che quel paper non ha mai considerato. **Non è parere medico.**
+**Evidence boundary:** Il BUN elevato è ora documentato di prima mano in **tre** luoghi — topo null, ratto `lde/lde`, e la citazione incrociata fra i due — con **tre spiegazioni implicite diverse e zero follow-up**. Densità di campo misurata 2026-08-06: `WWOX AND ("metabolic acidosis" OR "renal tubular acidosis")` → **1** record; `WWOX AND ("blood urea nitrogen" OR creatinine)` → **1**; `WWOX AND (hypercatabolism OR "muscle disruption")` → **0**. ⚠️ CPK, ALP, GPT e GOT nella Table 2 del ratto portano note di **numerosità campionaria, non di significatività**: il CPK femminile è ~8.5× più alto **senza alcun marcatore** — non importabile in nessuna direzione. **Esperimento discriminante**, nominato dagli autori insieme alla ragione per cui non l'hanno fatto: test di clearance renale, impraticabile perché nanismo e letalità rendono difficile raccogliere urina. Nel topo servirebbero in parallelo creatina-chinasi e massa muscolare per separare le due vie.
+**Source:** [[paper_registry_current#PAPER 059]] (Suzuki 2007, PMID 17803050) · [[paper_registry_current#PAPER 057]] (Ludes-Meyers 2009, PMID 19936220)
+**Wikilinks:** [[paper_registry_current#PAPER 059]] · [[paper_registry_current#PAPER 057]] · [[claim_registry_current#CLAIM 036]] · [[claim_registry_current#CLAIM 037]]
+**Impact on Working Model:** nessun cambio BLOCCO 1. Apre una domanda meccanicistica mai posta e impone che qualunque testo canonico che tocchi Wwox e funzione renale porti **entrambe** le ipotesi.
+
+---
+
+## CLAIM 039
+**Title:** Ataxic gait is the most penetrant phenotype of the rat `lde/lde` model — 95% versus 0% — and it is not cerebellar
+**Status:** in observation
+**Type:** DATO
+**Pathway:** P1 — neurosviluppo / funzione motoria
+**Genotype/model relevance:** ratto `lde/lde`, valutato a 21 giorni in 19 femmine e 20 maschi mutanti contro 14 femmine e 12 maschi normali
+**Transferability:** T3 — fenotipo di ratto, allele non umano
+**clinical relevance:** INDIRECT
+**Summary:** **95%** dei mutanti mostra andatura atassica contro **0%** dei normali. È più penetrante delle crisi spontanee (~34%) e più penetrante di qualunque altro fenotipo neurologico del modello. Gli autori esaminano il cervelletto e **non trovano alterazioni patologiche marcate**, in contrasto esplicito con il topo *ataxia and male sterility* (AMS).
+**Clinical meaning:** Nessuna. È registrata perché è il fenotipo neurologico **più penetrante dell'intero modello `lde`** e la letteratura a valle non lo porta affatto: la catena di citazioni che ha trasmesso «epilessia» attraverso due specie ha lasciato cadere per strada un fenotipo quasi completamente penetrante. **Non è parere medico.**
+**Evidence boundary:** L'atassia **non ha spiegazione strutturale** in questo paper: il cervelletto è istologicamente indenne e nessun'altra regione, oltre a ippocampo e amigdala, mostra alterazioni al microscopio ottico. Non sono stati eseguiti test motori quantitativi (rotarod, footprint, analisi cinematica): la valutazione è osservazionale e non in cieco. Nessun dato su progressione temporale.
+**Source:** [[paper_registry_current#PAPER 059]] (Suzuki 2007, PMID 17803050; receipt `FTR-20260806-17803050-01`)
+**Wikilinks:** [[paper_registry_current#PAPER 059]] · [[claim_registry_current#CLAIM 037]]
+**Impact on Working Model:** nessun cambio BLOCCO 1. Recupera un fenotipo perso in trasmissione e apre una domanda anatomica non risolta.

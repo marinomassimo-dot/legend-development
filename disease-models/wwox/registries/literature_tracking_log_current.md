@@ -802,9 +802,10 @@ Serves to:
 ---
 
 ## LIT-0023
-**Short title:** Kumada 2019 rat lde/lde
-**Authors:** Kumada et al.
+**Short title:** Tochigi 2019 rat lde/lde
+**Authors:** Tochigi et al.
 **Year:** 2019
+**Metadata correction (BATCH_20260806_002):** previously recorded as *"Kumada et al."*; the author is **Tochigi**. The paired `PAPER 021` record also carried an invented title naming *lissencephaly*, corrected in the same batch. Source: complete full-text read, receipt `FTR-20260806-31340538-01`.
 **Source type:** rat developmental study
 **Journal/source:** IJMS
 **Identifier type:** PMID / DOI
@@ -8269,6 +8270,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Next action:** full-text retrieval; depth pass if model-shifting
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: Generation and characterization of mice carrying a conditional allele of the Wwox tumor suppressor gene
+**Resolved (BATCH_20260806_002):** ✅ **letto integralmente 2026-08-06**, receipt `FTR-20260806-19936220-01` (corretto append-only da `-02`, solo lista output). Promosso a [[paper_registry_current#PAPER 057]]; questa voce resta come lineage di triage. **Current status:** processed — full text reviewed. **Claim links:** 036 (new) · 038 · 005. Coda `FT-043` chiusa.
 
 ## LIT-0296
 **Short title:** Upregulation of the putative oncogene COTE1 contributes to human hepatocarcin...
@@ -10581,6 +10583,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Next action:** full-text retrieval; depth pass if model-shifting
 **Flags:** FASE 1 batch entry / no deep-dive yet
 **Note:** Title: A spontaneous mutation of the Wwox gene and audiogenic seizures in rats with lethal dwarfism and epilepsy
+**Resolved (BATCH_20260806_002):** ✅ **letto integralmente 2026-08-06**, receipt `FTR-20260806-19500159-01`. Promosso a [[paper_registry_current#PAPER 058]]; questa voce resta come lineage di triage. **Current status:** processed — full text reviewed (supplementari `unavailable`, HTTP 403). **Claim links:** 037 (new) · 005 · 038. Coda `FT-042` chiusa. Il triage lo aveva assegnato a `P5 — metabolismo`: l'asse primario è **P2, eccitabilità**.
 
 ## LIT-0364
 **Short title:** Reversing effect of exogenous WWOX gene expression on malignant phenotype of...
@@ -11947,6 +11950,36 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Next action:** acquisire [[full_text_queue_current#FT-022]]–[[full_text_queue_current#FT-025]]; l'esperimento discriminante proposto (pull-down GSK3β su WWOX-WT vs Q230P vs G372R vs L404A) resta non eseguito
 **Flags:** full text read (receipts `FTR-20260726-22193544-01` + `-02`) / **UNREAD_PREMISE risolta** / difetto di figura supplementare documentato / author-dispute flag (Chang N-S)
 **Note:** Promosso a [[paper_registry_current#PAPER 056]]. Chiude il missing-info item #7 del red-team Q230P: **L404 è confermato necessario** al legame WWOX–GSK3β da cinque readout indipendenti, quindi la zona di esclusione 388–407/L404 per uno stabilizzatore SDR passa da *citata* a `DATO`. 🔴 Difetto della fonte: la Supplementary Figure A non contiene alcun blot per Tau pur essendo citata come la co-IP che dimostra il negativo — vedi DIS-010 e la riga `D-14` di *DEFAULTS THAT BIT US*. ⚠️ Il riferimento `CORPUS P263` del candidato è un indice della TSV di seed, non il record [[paper_registry_current#CORPUS P263]] del registry (Chang 2014, PMID 25537520).
+
+---
+
+## LIT-0405
+**Short title:** Suzuki 2007 — fenotipo originario del ratto `lde`, prima del gene
+**Authors:** Suzuki H, Takenaka M, Suzuki K
+**Year:** 2007
+**Source type:** primary — caratterizzazione fenotipica di un mutante spontaneo
+**Journal/source:** *Comparative Medicine* 57(4):360–369
+**Identifier type:** PMID
+**Identifier value:** PMID 17803050 — **nessun DOI registrato, nessun PMCID**
+**Date discovered:** 2026-08-06
+**Date processed:** 2026-08-06
+**Discovery window:** multi-hop 2026-08-06
+**Discovery source:** referenza 27 di PMID 19936220 e riferimento portante di PMID 19500159 — l'unico dei riferimenti WWOX-diretti assente da ogni registro
+**Discovery query:** enumerazione delle referenze durante la lettura completa di `FT-043`, poi di `FT-042`
+**Status:** claim_linked
+**Primary pathway:** P5 — metabolismo / rene
+**Genotype/model tag:** ratto, locus `lde` **ipotetico** — il gene non era ancora identificato
+**Species:** rat
+**Transferability:** T3
+**Directness to the reference genotype:** bassa — nessun allele umano, nessun gene identificato all'epoca
+**Over-inference risk:** **alto se letto solo per abstract**, vedi sotto
+**clinical relevance:** INDIRECT
+**Claim links:** CLAIM 038 (new, primary) · CLAIM 039 (new, primary) · CLAIM 037 (co-source)
+**Working Model impact:** BLOCK 2 only — CLAIM 038 e 039 aggiunti, CLAIM 037 co-sorgente. Nessun cambio BLOCCO 1.
+**Report mentions:** CC-20260806-17803050 → BATCH_20260806_002
+**Next action:** nessuna coda aperta da questo paper. L'esperimento discriminante — clearance renale, o creatina-chinasi e massa muscolare in parallelo — è registrato in [[claim_registry_current#CLAIM 038]].
+**Flags:** full text read (receipt `FTR-20260806-17803050-01`) / **recuperato solo per via operatore** — nessun DOI rende il record irraggiungibile da Unpaywall, OpenAlex e Semantic Scholar / **UNREAD_PREMISE risolta** per tre affermazioni di [[paper_registry_current#PAPER 058]]
+**Note:** Promosso a [[paper_registry_current#PAPER 059]]. 🔴 **Ha refutato una citazione che poggiava su di esso:** PMID 19500159 attribuisce il nanismo `lde` al GH ipofisario basso citando questo paper; qui la differenza **non è significativa** e il paper conclude che il nanismo *"cannot be explained solely by low levels of plasma GH"*. La frase non qualificata esiste **solo nell'abstract** di questo stesso paper — l'abstract sovradichiara il proprio corpo. **Nota di metodo:** il 2026-08-06 l'operatore aveva fornito prima il solo abstract, registrato come `abstract_only` **senza receipt**, lasciando `FT-041` aperta. Se fosse stato accettato come lettura, «GH ridotto» sarebbe entrato nel modello come dato, e non lo è. È il controfattuale più pulito della regola *un abstract non è una lettura*.
 
 ---
 

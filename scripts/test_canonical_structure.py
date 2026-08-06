@@ -10,14 +10,18 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRIES = ROOT / "disease-models" / "wwox" / "registries"
-# Updated deliberately by BATCH_20260726_001: +2 claims (034, 035), +3 papers
-# (054, 055, 056), +3 tracking records (LIT-0402/0403/0404). The corpus placeholder
-# count is unchanged because no placeholder was merged or removed.
+# Updated deliberately by BATCH_20260806_002: +4 claims (036, 037, 038, 039), +3 papers
+# (057, 058, 059), +1 tracking record (LIT-0405). The corpus placeholder count is unchanged:
+# CORPUS P295 and P363 were promoted to PAPER 057 and 058 but are preserved append-only as
+# triage lineage, and PMID 17803050 had no placeholder at all — it reached the registry only
+# through the multi-hop expansion of two other readings.
+# Prev, BATCH_20260726_001: +2 claims (034, 035), +3 papers (054, 055, 056), +3 tracking
+# records (LIT-0402/0403/0404).
 EXPECTED_COUNTS = {
-    "claims": 35,
-    "papers": 46,
+    "claims": 39,
+    "papers": 49,
     "corpus": 356,
-    "literature": 385,
+    "literature": 386,
 }
 
 

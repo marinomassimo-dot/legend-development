@@ -456,10 +456,12 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 ---
 
 ## PAPER 021
-**Short title:** Kumada 2019 rat lde/lde
-**Full title:** Loss of Wwox Causes Defective Development of Cerebral Cortex with Hypomyelination in a Rat Model of Lissencephaly
-**Authors:** Kumada et al.
+**Short title:** Tochigi 2019 rat lde/lde
+**Full title:** Loss of Wwox Causes Defective Development of Cerebral Cortex with Hypomyelination in a Rat Model of Lethal Dwarfism with Epilepsy
+**Authors:** Tochigi et al.
 **Year:** 2019
+**Metadata correction (BATCH_20260806_002):** the previous record read *"Kumada et al."* and gave the title as *"…in a Rat Model of **Lissencephaly**"*. Both were wrong: the author is **Tochigi**, and the published title ends *"…in a Rat Model of **Lethal Dwarfism with Epilepsy**"*. The word *lissencephaly* appears nowhere in the paper and was never its subject — the invented title had been silently steering this record toward a migration/layering interpretation the study does not make. Corrected from the complete full-text read, receipt `FTR-20260806-31340538-01`.
+**Role correction (BATCH_20260806_002):** reclassified from *"prenatal cortex / myelin assembly anchor"* to **early postnatal cortical neurite/glial/myelin maturation anchor (PND5–21)**. The study measures NeuN count/signal, cortical thickness, MAP2, MBP, CNP, APC/CC1, GFAP and Iba1 at PND5/10/15/21. It measures **no prenatal time point**, no OPC abundance, no lineage autonomy, no rescue or reversibility, no myelin ultrastructure, no conduction and no GSK3β/Tau mechanism. `n ≥ 3` males per group per age, multiple uncorrected Student t-tests, no declared blinding, randomisation or power calculation.
 **Source type:** rat developmental study
 **Journal/source:** *International Journal of Molecular Sciences*
 **Identifier:** PMID 31340538 / DOI 10.3390/ijms20143596
@@ -1823,6 +1825,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Full title:** WWOX gene restoration prevents lung cancer growth in vitro and in vivo
 **Identifier:** PMID 16223882 / DOI 10.1073/pnas.0505485102
 **Status:** not_processed
+**Integrity status:** 🔴 `PUBLICATION_INTEGRITY_HOLD` — **expression of concern**. Field added in `BATCH_20260806_002`, closing a debt declared on 2026-08-06. **No canonical claim rests on this record.** It is cited once, as reference 17 of [[paper_registry_current#PAPER 057]], among four background xenograft examples in that paper's Introduction, and supports none of its measured results — verified during the complete read (`FTR-20260806-19936220-01`). Not admissible as evidentiary support; admissible only as bibliographic lineage.
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -2395,6 +2398,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Full title:** p73 participates in WWOX-mediated apoptosis in leukemia cells
 **Identifier:** PMID 23446842 / DOI 10.3892/ijmm.2013.1289
 **Status:** not_processed
+**Integrity status:** 🔴 `PUBLICATION_INTEGRITY_HOLD` — **retracted**. Field added in `BATCH_20260806_002`, closing a debt declared on 2026-08-06. **No canonical claim rests on this record.** Its only entanglement was a receipt-to-PAPER identity mismatch: the legacy receipt `FTR-20260726-23446842-01` was quarantined append-only by `FTR-20260806-23446842-02`, and active depth and generated coverage no longer attribute it to this PMID. Not admissible as evidentiary support in any form.
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -3968,6 +3972,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Claim links:** none — triage only
 **Role:** secondary full-text target
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Resolved (BATCH_20260806_002):** promoted to [[paper_registry_current#PAPER 057]] after the complete full-text read (`FTR-20260806-19936220-01`). This placeholder is preserved append-only as triage lineage; the integrated record is authoritative. Its `Tier B` and `Primary pathway: P5` were triage guesses and are superseded there.
 
 ## CORPUS P296
 **Short title:** Upregulation of the putative oncogene COTE1 contributes to human hepatocarcin...
@@ -5328,6 +5333,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Claim links:** none — triage only
 **Role:** secondary full-text target
 **Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Resolved (BATCH_20260806_002):** promoted to [[paper_registry_current#PAPER 058]] after the complete full-text read (`FTR-20260806-19500159-01`). This placeholder is preserved append-only as triage lineage; the integrated record is authoritative. Its triage `Primary pathway: P5 — metabolism` was wrong: the paper's primary axis is **P2, excitability and epileptogenesis**.
 
 ## CORPUS P364
 **Short title:** Reversing effect of exogenous WWOX gene expression on malignant phenotype of...
@@ -6458,3 +6464,76 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Role:** fonte primaria, risolta a livello di residuo, dell'arco WWOX–GSK3β che il modello trattava già come portante; e fonte di un difetto documentato di figura supplementare
 **Note:** WWOX lega GSK3β tramite il dominio ADH/SDR su un segmento di 20 residui (**388–407**) omologo al motivo di docking Axin/FRAT/GSKIP, con **L404 strettamente necessario**: `L404A` abolisce legame, inibizione della chinasi in vitro e in cellula, recupero dell'assemblaggio dei microtubuli e beneficio sul differenziamento, mentre il vicino `L311A` non fa nulla di tutto ciò. Il legame blocca la fosforilazione di Tau su **S396/S404** ma non su S422 (sito MKK4), **con GSK3β totale e fosfo-S9 invariati**. Il risultato più fisiologico è la **co-IP reciproca fra proteine endogene in estratto di cervello di topo**. 🔴 **Difetto documentato:** la Supplementary Figure A, citata dal testo *e* dalla propria legenda come la co-IP che dimostra *«WWOX does not associate with Tau»*, **non contiene alcun blot per Tau** — i suoi due pannelli sono etichettati WWOX e GSK3β. Il negativo **non è valutabile**: vedi [[dismissal_ledger_current#DIS-010 — «WWOX non lega Tau (Wang 2012)» → ⏸️ **NON STABILITA — il negativo è rifiutato per assenza di dato**]]. ⚠️ Altri limiti trovati leggendo: linea cellulare unica e aneuploide; sovraespressione ovunque (stechiometria endogena mai misurata); endpoint di differenziamento soggettivo e non in cieco; ampiezze d'effetto **incoerenti fra figure** per la stessa manipolazione; il saggio chinasico non è ricostruibile senza ambiguità (0.3 vs 0.2 µg di GST-WWOX, 25 µg/ml vs 0.5 µg di Tau, 30 °C/20 min vs 20 °C/10 min); il modello di interfaccia Fig 3f-h è **predizione GOR IV innestata su 1O9U**, non dato strutturale; il controllo di folding per L404A è a **partner singolo** (c-jun); WWOXtide è attivo a concentrazione **millimolare**. ⚠️ Il co-autore **Chang N-S** è l'originatore del campo WWOX; [[paper_registry_current#PAPER 053]] registra che le affermazioni del suo laboratorio su **localizzazione** e ruolo pro-apoptotico sono contestate da Aldaz. Nulla in questo lavoro dipende da quella localizzazione contesa, quindi la disputa non si propaga — ma il flag viaggia con qualunque uso della sua cornice di biologia cellulare. **Lineage:** il riferimento `CORPUS P263` del candidato CC-20260726-003 è un indice della TSV di seed, **non** il record [[paper_registry_current#CORPUS P263]] del registry (che è Chang 2014, PMID 25537520).
 **Wikilinks:** [[claim_registry_current#CLAIM 035]] · [[claim_registry_current#CLAIM 016]] · [[claim_registry_current#CLAIM 030]] · [[claim_registry_current#CLAIM 028]] · [[paper_registry_current#PAPER 019]] · [[paper_registry_current#PAPER 053]]
+
+---
+
+## PAPER 057
+**Short title:** Ludes-Meyers 2009 — allele condizionale `Wwox^flox` + fenotipo sistemico del null
+**Full title:** Generation and characterization of mice carrying a conditional allele of the Wwox tumor suppressor gene
+**Authors:** Ludes-Meyers JH, Kil H, Parker-Thornburg J, Kusewitt DF, Bedford MT, Aldaz CM
+**Year:** 2009
+**Source type:** primary — generazione di reagente + fenotipizzazione murina di base
+**Journal/source:** *PLoS ONE* 2009;4(11):e7775
+**Identifier:** PMID 19936220 / PMCID PMC2777388 / DOI 10.1371/journal.pone.0007775
+**Status:** processed
+**Evidence depth:** full text reviewed (coverage_status: complete_fulltext_read) — receipt `FTR-20260806-19936220-01`, corretto append-only da `FTR-20260806-19936220-02` (solo lista output; nessuna rilettura). Manifest schema-v2 con 23 locator verbatim verificati.
+**Integrity status:** clean — nessuna ritrattazione, expression of concern o correzione su PubMed o Europe PMC al 2026-08-06
+**Primary pathway:** P5 — metabolismo / rene
+**Secondary pathway:** reagente condizionale; ematopoiesi; osso
+**Model/species:** topo; allele `Wwox^flox` (esone 1 floxed, cassetta pgk-neo ritenuta e fiancheggiata da siti FRT) e null sistemico `Wwox^ΔCre/ΔCre` generato con **EIIA-Cre** (Jackson 003724)
+**Genotype/model:** nessun allele WWOX-DEE. **Driver Cre diverso** da PMID 30290271, che usa BK5-Cre: allele floxed condiviso, knockout diverso.
+**Transferability:** T3 — null sistemico murino, fenotipizzazione motivata dall'oncologia. Ciò che trasferisce è **metodologico**, non fenotipico.
+**clinical relevance:** INDIRECT
+**Claim links:** 036 (new) · 038 (supplies the mouse renal datum) · 005 (bounds its imported premises)
+**Role:** primario **dell'allele** `Wwox^flox`, e solo parzialmente **del modello** usato da PMID 30290271. **Non** è una fonte di fenotipo neurologico.
+**Note:** Mortalità di prima mano e quantificata: **43% (15/35) morti a 72 h, 77% entro il giorno 17, nessuno oltre lo svezzamento**; Fig. 3B mostra un **arresto** della crescita (plateau a ~4 g dal giorno 10 al 17). 🔴 **L'epilettogenesi non è misurata qui in nessuna forma** — nessun EEG, crisi, comportamento o istologia cerebrale; l'unica misura cerebrale del paper è il peso dell'organo in Table 2. Le parole *seizure* ed *epilepsy* compaiono nel corpo una volta ciascuna, in una frase di Discussione che cita il **ratto** `lde`. 🔴 L'ablazione proteica è mostrata **solo in rene, polmone e milza** (identità dei tessuti visibile unicamente nel raster della Fig. 2C) e l'IHC solo nel rene: **nessun lisato cerebrale**. ⚠️ Il peso cerebrale è brain sparing (assoluto −8.7%, relativo 5.0% → 8.5%), non crescita. ⚠️ **Conflitto irrisolto sull'osteosarcoma:** 9 KO per necroscopia completa, raggi X, istopatologia multiorgano e microCT → **zero** lesioni neoplastiche, contro 4/13 (31%) riportati da Aqeilan 2007 (PMID 17360458); gli autori chiudono con *"The reason(s) for the discrepancies between studies remain to be determined."* ⚠️ L'osteoide è `p = 0.07` e «tended» nei Results, ma «we observed» nella Discussione. ⚠️ `N. Ob/BS` è significativo a `p = 0.02` **senza direzione dichiarata** e senza figura. ⚠️ Trappola di trascrizione: le coppie numeriche dell'osso sono ordinate WT/HET prima, KO poi, mentre il soggetto della frase è «KO mice» — l'inversione ricorre tre volte. ⚠️ Il χ² mendeliano è a 3 giorni, dentro la finestra in cui si verifica il 43% della mortalità. **Ipotesi degli autori mai testata:** acidosi tubulare renale come causa di morte — `WWOX AND ("metabolic acidosis" OR "renal tubular acidosis")` restituisce **un solo record PubMed, questo paper**, in diciassette anni. **Reagente:** eterozigoti normali su ogni asse misurato; la cassetta neo ritenuta è stata testata e non è ipomorfica.
+**Wikilinks:** [[claim_registry_current#CLAIM 036]] · [[claim_registry_current#CLAIM 038]] · [[claim_registry_current#CLAIM 005]] · [[paper_registry_current#PAPER 058]] · [[paper_registry_current#CORPUS P295]]
+
+---
+
+## PAPER 058
+**Short title:** Suzuki 2009 — mappatura di `lde` su `Wwox` + crisi audiogene nel ratto
+**Full title:** A spontaneous mutation of the Wwox gene and audiogenic seizures in rats with lethal dwarfism and epilepsy
+**Authors:** Suzuki H, Katayama K, Takenaka M, Amakasu K, Saito K, Suzuki K
+**Year:** 2009
+**Source type:** primary — mappatura di linkage + sequenziamento + EEG + fenotipizzazione comportamentale
+**Journal/source:** *Genes, Brain and Behavior* 2009;8(7):650–660
+**Identifier:** PMID 19500159 / DOI 10.1111/j.1601-183X.2009.00502.x — **nessun PMCID**
+**Status:** processed
+**Evidence depth:** full text reviewed (coverage_status: complete_fulltext_read) — receipt `FTR-20260806-19500159-01`; manifest schema-v2 con **30 locator** verificati (24 corpo, 2 tabella, 4 figura)
+**Integrity status:** clean — nessuna ritrattazione, expression of concern o correzione su PubMed al 2026-08-06
+**Supplementary status:** ⚠️ **unavailable, non saltati** — Figure S1/S2, Video S1 e Tabelle S1/S2 esistono e sono citati cinque volte; il recupero restituisce **HTTP 403** su entrambe le vie Wiley e il PDF non contiene allegati. Curve di crescita, sopravvivenza, pesi d'organo e statistica di segregazione sono letti solo come i Results li descrivono.
+**Primary pathway:** P2 — eccitabilità / epilettogenesi
+**Secondary pathway:** genetica del modello; espressione proteica
+**Model/species:** ratto, ceppo inbred LDE; delezione spontanea di 13 bp nell'esone 9 di `Wwox`
+**Genotype/model:** **strutturalmente frameshift C-terminale (371–424aa), funzionalmente null a livello proteico** — mRNA normale, né 47 né 42 kDa rilevabili in testicolo e ippocampo, con epitopo dell'anticorpo **fuori** dalla regione alterata. Nessun allele umano.
+**Transferability:** T2 per la vulnerabilità conservata da perdita biallelica; **T3** per il trasferimento del fenotipo epilettico
+**clinical relevance:** MODERATE
+**Claim links:** 037 (new) · 005 (refutes its imported premise for the mouse) · 038 (frames the serum question)
+**Role:** **terminale effettivo** della catena di citazioni che attribuiva l'epilettogenesi a un modello murino
+**Note:** 🔴 **Afferma l'opposto della premessa importata, quattro volte:** *"Although neither epileptic seizures nor abnormal behavior has been reported in Wwox KO (knockout) mice"* (Introduzione); *"neither abnormal behavior nor impaired motor skill was observed in the Wwox KO mice … lde/lde rats show ataxic gait and spontaneous epileptic seizures"* (Discussione); *"the reason for no detection of spontaneous epilepsy in the KO mice is unknown … the KO mice may die before they experience epileptic seizure"*; e **Table 2**, dove la riga `Epilepsy` è compilata solo per `lde/lde` ed è **vuota per entrambi i modelli murini**. Fenotipo del ratto di prima mano: 19/20 (95%) crisi audiogene, 30/50 (60%) spontanee, 0/14 controlli, latenza 56±24 → 36±4 → 25±3 s, spike interictali ~10 Hz in tutti i mutanti non stimolati, vacuoli ippocampali 9/9 contro 0/10. 🔴 Il 95% è una coorte **solo femminile**, dichiarata unicamente nella didascalia della Fig. 6. 🔴 La didascalia della Fig. 1 **assegna male i propri pannelli** (il titolo dà normal a (a, b); l'immagine mostra normal in (a, c)): chi legge la didascalia senza l'immagine inverte quale ippocampo è malato. 🔴 `PREMISE: DEFAULT_FROM_TEXTBOOK` — la scomparsa della proteina mutante è attribuita al sistema ubiquitina-proteasoma **senza saggio di turnover, inibitore o determinazione di via**. ⚠️ Due affermazioni comparative poggiano interamente su [[paper_registry_current#PAPER 059]]: il siero «normale» e il GH ipofisario basso; la seconda è **refutata** da quella fonte. ⚠️ Table 2 elenca osteosarcoma per il KO murino, propagando una affermazione contestata da [[paper_registry_current#PAPER 057]], accettato più tardi nel 2009.
+**Wikilinks:** [[claim_registry_current#CLAIM 037]] · [[claim_registry_current#CLAIM 005]] · [[claim_registry_current#CLAIM 038]] · [[paper_registry_current#PAPER 059]] · [[paper_registry_current#PAPER 057]] · [[paper_registry_current#CORPUS P363]]
+
+---
+
+## PAPER 059
+**Short title:** Suzuki 2007 — fenotipo originario del ratto `lde`, prima che il gene fosse noto
+**Full title:** Phenotypic Characterization of Spontaneously Mutated Rats Showing Lethal Dwarfism and Epilepsy
+**Authors:** Suzuki H, Takenaka M, Suzuki K
+**Year:** 2007
+**Source type:** primary — caratterizzazione fenotipica di un mutante spontaneo
+**Journal/source:** *Comparative Medicine* 2007;57(4):360–369
+**Identifier:** PMID 17803050 — **nessun DOI registrato, nessun PMCID, nessun deposito PMC**
+**Status:** processed
+**Evidence depth:** full text reviewed (coverage_status: complete_fulltext_read) — receipt `FTR-20260806-17803050-01`; manifest schema-v2 con **32 locator** verificati (25 corpo, 4 tabella, 3 figura)
+**Integrity status:** clean — nessuna ritrattazione, expression of concern o correzione su PubMed al 2026-08-06
+**Primary pathway:** P5 — metabolismo / rene
+**Secondary pathway:** P2 eccitabilità; P1 funzione motoria; sviluppo testicolare
+**Model/species:** ratto, ceppo inbred LDE derivato da una colonia chiusa Wistar-Imamichi
+**Genotype/model:** locus **`lde` ipotetico** — il gene non era ancora identificato. Nessun allele WWOX-DEE.
+**Transferability:** T3
+**clinical relevance:** INDIRECT
+**Claim links:** 037 (co-source) · 038 (new, primary) · 039 (new, primary)
+**Role:** fenotipo originario del ratto `lde`, **antecedente all'identificazione del gene**
+**Note:** 🔴 **Credibilità strutturale:** accettato in **aprile 2007, due anni prima** che lo stesso gruppo mappasse `lde` su `Wwox`, e **nessuna** delle 35 referenze è WWOX-correlata perché nessuna poteva esserlo. I fenotipi non possono essere un gruppo WWOX-motivato che trova un risultato WWOX-forma. **Chimica ematica (Table 2, `n=4` normali / `5` mutanti per sesso):** BUN 12.6 → **40.3** ♀ e 10.1 → **35.6** ♂; creatinina 0.48 → **0.64** ♀ e 0.45 → **0.58** ♂; fosfato significativo solo ♀. **Glucosio, calcio, Na⁺, K⁺, Cl⁻ e trigliceridi tutti non significativi** — il ratto è **uremico senza essere ipoglicemico**. 🔴 **Spiegazione concorrente mai testata:** reni **istologicamente normali**, niente proteinuria, niente anemia, e gli autori propongono *"the production of urea-nitrogen and creatinine may be increased due to **hypercatabolism and muscle disruption**"* con precedente nel ceppo SER — ipotesi che compete direttamente con l'acidosi tubulare renale proposta per il topo in [[paper_registry_current#PAPER 057]]. 🔴 **Refuta una citazione che poggia su di esso:** [[paper_registry_current#PAPER 058]] attribuisce il nanismo al GH ipofisario basso citando questo paper, ma qui la differenza **non è significativa**, le cellule GH-positive sono presenti, e il paper conclude che il nanismo *"cannot be explained solely by low levels of plasma GH"*. La frase non qualificata esiste **solo nell'abstract** di questo paper: l'abstract sovradichiara il proprio corpo. **Fenotipo:** crisi 33.8% (22/65) ♂ e 33.9% (19/56) ♀, esordio 16–63 d, tre pattern, osservazione >6 h/giorno — **un pavimento, non un tasso**, per dichiarazione degli autori; atassia **95%** contro 0%, **non cerebellare**; sopravvivenza fino a 77 d ♂ e 84 d ♀ contro 1.5% di mortalità nei normali; vacuoli in CA1 e amigdala, assenti nei normali, senza corrispettivo in epilessia umana. ⚠️ Il χ² mendeliano poggia su **33 di 254 figliate**, selezionate per sopravvivenza. ⚠️ CPK, ALP, GPT e GOT portano note di **numerosità, non di significatività**: il CPK femminile è ~8.5× più alto **senza marcatore**. ⚠️ Brain sparing anche qui, con peso cerebrale assoluto **non** significativamente ridotto nei maschi. **Causa di morte: esplicitamente ignota.**
+**Wikilinks:** [[claim_registry_current#CLAIM 037]] · [[claim_registry_current#CLAIM 038]] · [[claim_registry_current#CLAIM 039]] · [[paper_registry_current#PAPER 058]] · [[paper_registry_current#PAPER 057]]

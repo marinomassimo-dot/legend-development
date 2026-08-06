@@ -40,7 +40,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v4.0
+working_model_version: WM_v4.1
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -102,17 +102,17 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260806_001
+last_batch_commit_id: BATCH_20260806_002
 last_batch_commit_date: 2026-08-06
-last_batch_commit_type: MAJOR
-commit_candidates_propagated: 1
-commit_candidates_superseded: 0
+last_batch_commit_type: MINOR
+commit_candidates_propagated: 4
+commit_candidates_superseded: 1
 commit_candidates_deferred: 0
-target_wm_version: WM_v4.0
+target_wm_version: WM_v4.1
 last_wm_update: 2026-08-06
-last_wm_batch_commit_id: BATCH_20260806_001
-trigger: "explicit operator authorization for a MAJOR safety-language removal"
-notes: "CC-20260806-30290271 → CLAIM 005 narrowed to what PMID 30290271 measures and its medication caution DELETED (the source tests no drug, no GABA concentration, no inhibitory function); PAPER 006 / LIT-006 identifiers normalized; CORPUS-STUB-085 resolved as duplicate, preserved append-only; meta_gaba_paradox corrected from interneuron loss to marker-positive abundance, NPY marked DG-only, Il6-not-Tnf-a recorded. MAJOR because removing safety language from a consolidated baseline claim is a policy change even when it removes rather than adds; the experimental datum is NOT demoted. Publication-integrity audit of the 7 held records run first (staging/audit_publication_integrity_20260806.md): no canonical claim rests on any of them. Pre-flight and post-propagation LINT PASS; snapshot backup/snap_20260806_batch_wm40. Prev: BATCH_20260726_001 (MINOR, WM_v3.2) — CC-20260726-001/002/003 → PAPER 054/055/056, CLAIM 034/035 new, CLAIM 009/016/024 modified; snapshot backup/snap_20260726_1600."
+last_wm_batch_commit_id: BATCH_20260806_002
+trigger: "explicit operator authorization; threshold also met (4 pending candidates)"
+notes: "BATCH_20260806_002 (MINOR, WM_v4.0 → WM_v4.1). Four candidates propagated: CC-20260806-19936220, CC-20260806-19500159, CC-20260806-17803050 and CC-20260806-31340538. CC-20260806-19936220 item 1 was SUPERSEDED by CC-20260806-19500159 item 1 before propagation — the verdict moved from 'unsupported' to 'contradicted' once the terminus was read — so the superseded count is 1. THE IMPORTED-PREMISE CHAIN UNDER CLAIM 005 IS NOW TRACED END TO END, EVERY LINK READ IN FULL: early death is first-hand in PMID 19936220, but epileptogenesis is not measured there in any form, and the terminal source PMID 19500159 states in three places, plus a Table 2 whose Epilepsy row is empty for both mouse models, that Wwox-null MICE SHOW NO EPILEPSY. Two citation hops had converted an explicit negative about a rat into a positive assertion about a mouse; the co-cited premise in the same sentence was true, which is why it read as verified. New claims 036 (systemic metabolic decompensation of the P18 mouse null as a quantified confounder, with PREMISE: DEFAULT_FROM_TEXTBOOK on brain ablation never shown), 037 (the seizure phenotype as a rat lde/lde phenotype, EEG-documented, allele corrected to structurally frameshift and functionally protein-null), 038 (recurring BUN/creatinine with two competing untested explanations, renal insufficiency versus seizure-driven hypercatabolism, the second competing directly with the renal-tubular-acidosis hypothesis PMID 19936220 never tested), 039 (ataxia 95 percent versus 0 percent, non-cerebellar, the most penetrant lde phenotype and one the downstream literature dropped). PAPER 057/058/059 and LIT-0405 created; CORPUS P295 and P363 marked promoted append-only. PAPER 021 metadata corrected: the author is Tochigi, not Kumada, and the record carried an INVENTED TITLE naming lissencephaly, a word absent from the paper, which had been steering it toward a migration/layering reading the study does not make; CLAIM 014/015 now bound it to early postnatal maturation (PND5-21) and meta_prenatal_structure reclassifies it as the postnatal bridge. DIS-011 and DIS-012 entered in the dismissal ledger with revival triggers. meta_gaba_paradox given a provenance correction and the competing systemic-confounder explanation. Integrity status fields added to the held records PMID 16223882 (expression of concern) and PMID 23446842 (retracted), closing a debt declared at session start; no canonical claim rests on either. Pre-flight and post-propagation LINT PASS; release gate PASS/0; receipts 52 chained and tail-anchored; self-eval PASS with active complete reads 15. Snapshot backup/snap_20260806_batch_wm41. Prev: CC-20260806-30290271 → CLAIM 005 narrowed to what PMID 30290271 measures and its medication caution DELETED (the source tests no drug, no GABA concentration, no inhibitory function); PAPER 006 / LIT-006 identifiers normalized; CORPUS-STUB-085 resolved as duplicate, preserved append-only; meta_gaba_paradox corrected from interneuron loss to marker-positive abundance, NPY marked DG-only, Il6-not-Tnf-a recorded. MAJOR because removing safety language from a consolidated baseline claim is a policy change even when it removes rather than adds; the experimental datum is NOT demoted. Publication-integrity audit of the 7 held records run first (staging/audit_publication_integrity_20260806.md): no canonical claim rests on any of them. Pre-flight and post-propagation LINT PASS; snapshot backup/snap_20260806_batch_wm40. Prev: BATCH_20260726_001 (MINOR, WM_v3.2) — CC-20260726-001/002/003 → PAPER 054/055/056, CLAIM 034/035 new, CLAIM 009/016/024 modified; snapshot backup/snap_20260726_1600."
 ```
 
 ---
