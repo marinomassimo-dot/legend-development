@@ -526,7 +526,26 @@ def lint(repo_root):
         paper_ids = set(parse_ids(papers, "PAPER"))
         corpus_ids = set(parse_corpus_ids(papers))
         findings.extend(claim_paper_findings(claims, paper_ids, corpus_ids))
-        _check_publication_integrity_claims(findings, repo_root, claims, papers)
+        # 🔴 This check reaches outside the LINT: it imports `batch_queue`, which pulls the
+        # intake skill from `.claude/skills/`, and reads every corpus seed. Any of that can
+        # fail for reasons that have nothing to do with the canonical state — a missing skill
+        # directory, a malformed seed row — and an uncaught failure exited 1 with EMPTY
+        # stdout, no `VERDICT:` line, outside the documented 0/2/3 contract. A gate that
+        # dies without a verdict is indistinguishable from a gate that was never run, and it
+        # is the integrity check: the one whose silence is least safe to assume benign.
+        try:
+            _check_publication_integrity_claims(findings, repo_root, claims, papers)
+        except SystemExit as error:
+            findings.append(Finding(
+                "BLOCK_BATCH_COMMIT", "INTEGRITY_CHECK_UNAVAILABLE",
+                f"the publication-integrity check could not read the corpus seed: {error}. "
+                "Held records cannot be detected, so promotion is blocked until it can run"))
+        except Exception as error:                       # noqa: BLE001 — reported, not raised
+            findings.append(Finding(
+                "BLOCK_BATCH_COMMIT", "INTEGRITY_CHECK_UNAVAILABLE",
+                f"the publication-integrity check failed to run: "
+                f"{type(error).__name__}: {error}. Held records cannot be detected, so "
+                "promotion is blocked until it can run"))
         discovery_path = os.path.join(repo_root, DISCOVERY_LEDGER)
         if os.path.isfile(discovery_path):
             _check_discovery_ids(findings, _read(discovery_path))

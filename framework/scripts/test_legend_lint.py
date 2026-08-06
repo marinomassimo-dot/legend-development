@@ -155,6 +155,26 @@ class PublicLintTests(unittest.TestCase):
         return [item for item in findings
                 if item.code == "CLAIM_CITES_PUBLICATION_INTEGRITY_HOLD"]
 
+    def test_an_unavailable_integrity_check_blocks_instead_of_crashing(self) -> None:
+        """It imports `batch_queue`, which reaches into `.claude/skills/`, and reads every
+        seed. Either can fail for reasons unrelated to the canonical state, and an uncaught
+        failure exited 1 with EMPTY stdout — no `VERDICT:` line, outside the documented
+        0/2/3 contract. A gate that dies without a verdict is indistinguishable from a gate
+        nobody ran, and this is the one whose silence is least safe to assume benign.
+        """
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            make_repository(root, GOOD_CLAIMS, "# Paper Registry\n## PAPER 001\n"
+                            "**Status:** integrated\n**Identifier:** PMID: 11111111\n")
+            registries = root / "disease-models/wwox/registries"
+            (registries / "corpus_seed_pubmed_20260806.tsv").write_text(
+                "pmid\tyear\tpubmed_free_full_text_link\ttype\tdoi\tcorrections\ttitle\n"
+                "\t\t\t\t\t\t\n", encoding="utf-8")
+            result = lint(temporary)
+        self.assertTrue(any(item.code == "INTEGRITY_CHECK_UNAVAILABLE"
+                            for item in result.findings))
+        self.assertEqual(result.verdict, "BLOCK_BATCH_COMMIT")
+
     def test_a_held_corpus_placeholder_is_not_invisible(self) -> None:
         """The gate scanned `## PAPER` blocks only.
 

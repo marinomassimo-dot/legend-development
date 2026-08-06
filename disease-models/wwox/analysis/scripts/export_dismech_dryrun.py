@@ -34,6 +34,9 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE.parents[0] / "data"
+
+sys.path.insert(0, str(HERE.parents[3] / "framework" / "scripts"))
+from fulltext_receipts import active_receipts as _standing  # noqa: E402
 SIDECAR = DATA / "dismech_sidecar_016_024_035.jsonl"
 SPEC_PIN = "e1a5bde3b0d35b23808018648a8fc267dc96b10c"   # dismech.yaml blob, §0 of the spec
 SPEC_COMMIT = "c43343af4054eeeab847621eaab1e10da7efde84"
@@ -128,10 +131,23 @@ def routing_basis_receipts(ledger: Path | None = None) -> dict[str, str]:
     if not path.is_file():
         return {}
     backed: dict[str, str] = {}
-    for line in path.read_text(encoding="utf-8").splitlines():
-        if not line.strip():
-            continue
-        record = json.loads(line)
+    # A withdrawn receipt is not a routing basis. This read the raw ledger, so an invalidated
+    # complete read still backed the export — and the invalidation event, which copies the
+    # depth it exists to negate, backed it a second time.
+    #
+    # 🔴 DECLARED DEBT, 2026-08-06. `derive_dismech_sidecar.py` and
+    # `dismech_independent_protocol.py` carry the SAME defect and are deliberately left
+    # uncorrected: their SHA-256 is sealed into `dismech_phase2_baseline.json`, so editing
+    # them — even to add this comment — breaks the Phase-2 provenance seal, and re-sealing
+    # without re-deriving the sidecar would assert that sealed numbers came from code that
+    # produced them when they did not. The seal is working as designed; the fix belongs in
+    # the next re-derivation cycle, together with a re-seal. No live exposure today: the
+    # ledger's only invalidation targets a `partial_fulltext_read`, and neither script is
+    # reached by it. This note lives here because the two scripts that need it cannot carry
+    # a comment without invalidating themselves.
+    events = [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines()
+              if line.strip()]
+    for record in _standing(events):
         pmid = str((record.get("study_id") or {}).get("pmid") or "")
         if pmid in ROUTING_BASIS_PMIDS and record.get(
                 "evidence_depth") == "complete_fulltext_read":
