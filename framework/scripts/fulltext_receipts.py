@@ -79,6 +79,7 @@ REREAD_REASONS = {
     "adversarial_reanalysis",
     "explicit_operator_request",
     "receipt_correction",
+    "receipt_invalidation",
 }
 REQUIRED = {
     "event_id",
@@ -96,7 +97,9 @@ REQUIRED = {
     "prior_receipt",
     "reread_reason",
 }
-OPTIONAL_AUTHORED = {"source_kind", "analysis_time_precision"}
+OPTIONAL_AUTHORED = {
+    "source_kind", "analysis_time_precision", "invalidates_receipt", "invalidation_reason",
+}
 SOURCE_KINDS = {"fulltext_local", "fulltext_remote", "abstract", "metadata", "corpus_export"}
 ANALYSIS_TIME_PRECISIONS = {"second", "minute", "date_only", "unknown"}
 # Stamped by the ledger writer, never authored by hand: an author describes a reading
@@ -343,12 +346,22 @@ def validate_receipt(receipt: Any) -> list[str]:
     precision = receipt.get("analysis_time_precision")
     if precision is not None and precision not in ANALYSIS_TIME_PRECISIONS:
         errors.append("invalid analysis_time_precision")
-    if receipt["record_kind"] not in {"contemporaneous_receipt", "legacy_reconstruction"}:
+    if receipt["record_kind"] not in {
+        "contemporaneous_receipt", "legacy_reconstruction", "receipt_invalidation",
+    }:
         errors.append("invalid record_kind")
     elif receipt["record_kind"] == "contemporaneous_receipt" and receipt["analysis_at"] is None:
         errors.append("contemporaneous receipt requires analysis_at")
     elif receipt["record_kind"] == "legacy_reconstruction" and not receipt["evidence_basis"]:
         errors.append("legacy reconstruction requires evidence_basis")
+    elif receipt["record_kind"] == "receipt_invalidation":
+        if receipt.get("reread_reason") != "receipt_invalidation":
+            errors.append("receipt_invalidation record requires matching reread_reason")
+        if receipt.get("invalidates_receipt") != receipt.get("prior_receipt"):
+            errors.append("receipt_invalidation must invalidate its direct prior_receipt")
+        reason = receipt.get("invalidation_reason")
+        if not isinstance(reason, str) or len(reason.strip()) < 40:
+            errors.append("receipt_invalidation requires a substantive invalidation_reason")
     if receipt["analysis_at"] is not None and not _valid_datetime(receipt["analysis_at"]):
         errors.append("invalid analysis_at: timezone-aware ISO-8601 required")
     elif (
@@ -373,8 +386,10 @@ def validate_receipt(receipt: Any) -> list[str]:
         errors.append("invalid coverage state")
     else:
         values = set(coverage.values())
-        if "unknown_legacy" in values and receipt["record_kind"] != "legacy_reconstruction":
-            errors.append("unknown_legacy coverage is allowed only for legacy reconstruction")
+        if ("unknown_legacy" in values
+                and receipt["record_kind"] not in {"legacy_reconstruction",
+                                                    "receipt_invalidation"}):
+            errors.append("unknown_legacy coverage is allowed only for legacy history")
         if receipt["evidence_depth"] == "complete_fulltext_read":
             if {"not_read", "unknown_legacy"} & values:
                 errors.append("complete_fulltext_read cannot leave a section not_read or unknown_legacy")
@@ -539,18 +554,23 @@ def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
             matching_prior = [item for item in prior_for_study if item["event_id"] == prior_id]
             if not matching_prior:
                 errors.append(f"line {number}: prior_receipt is not an earlier event for this study")
-            elif receipt["reread_reason"] == "receipt_correction":
+            elif receipt["reread_reason"] in {"receipt_correction", "receipt_invalidation"}:
                 prior = matching_prior[0]
                 immutable_fields = (
-                    "record_kind", "study_id", "analysis_at", "evidence_depth",
+                    "study_id", "analysis_at", "evidence_depth",
                     "source_locator", "source_fingerprint", "coverage",
                 )
                 changed = [field for field in immutable_fields if receipt[field] != prior[field]]
                 if changed:
                     errors.append(
-                        f"line {number}: receipt_correction changed substantive fields: "
+                        f"line {number}: {receipt['reread_reason']} changed substantive fields: "
                         + ", ".join(changed)
                     )
+                if (receipt["reread_reason"] == "receipt_correction"
+                        and receipt["record_kind"] != prior["record_kind"]):
+                    errors.append(
+                        f"line {number}: receipt_correction changed substantive fields: "
+                        "record_kind")
         seen.append(receipt)
     return errors
 
@@ -564,6 +584,10 @@ def receipt_depth_index(path: Path) -> dict[str, dict[str, Any]]:
             keys.append(f"pmid:{study['pmid']}")
         if study.get("doi"):
             keys.append(f"doi:{normalise_doi(study['doi'])}")
+        if receipt.get("record_kind") == "receipt_invalidation":
+            for key in keys:
+                index.pop(key, None)
+            continue
         for key in keys:
             current = index.get(key)
             if current is None or DEPTHS[receipt["evidence_depth"]] >= DEPTHS[current["evidence_depth"]]:

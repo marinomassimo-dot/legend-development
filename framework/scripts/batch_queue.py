@@ -113,11 +113,12 @@ FREE_FULL_TEXT_COLUMNS = ("pubmed_free_full_text_link", "free_full_text")
 # whether a paper may be read as evidence at all. The harvester carries every notice in the
 # seed's `corrections` column; a column nothing reads is a column that does not exist, and
 # "a paper under an EoC reaches triage looking clean" stays true until the queue shows it.
-INTEGRITY_REF_TYPES = ("RetractionIn", "RetractedPublication", "ExpressionOfConcernIn",
-                       "ExpressionOfConcernFor", "RetractionOf")
+INTEGRITY_REF_TYPES = ("RetractionIn", "RetractedPublication", "ExpressionOfConcernIn")
 # Shown before the title, where a reader cannot miss it.
 INTEGRITY_PREFIX = {"retracted": "🛑 RETRACTED — ",
                     "concern": "⚠️ EXPRESSION OF CONCERN — ",
+                    "retraction_notice": "ℹ️ RETRACTION NOTICE — ",
+                    "concern_notice": "ℹ️ EXPRESSION-OF-CONCERN NOTICE — ",
                     "corrected": "✎ corrected — "}
 
 # 🔴 Publication integrity is an ELIGIBILITY gate, not a ranking key. The two are routinely
@@ -137,6 +138,8 @@ INTEGRITY_ACTION = {
     "retracted": "may not support or promote any claim; audit every claim already resting "
                  "on it; readable for audit only",
     "concern": "no canonical promotion until the concern is resolved; readable for audit",
+    "retraction_notice": "editorial notice documenting a retraction; not itself retracted",
+    "concern_notice": "editorial notice documenting a concern; not itself under concern",
     "corrected": "annotation only — read the correction with the paper; no hold",
 }
 
@@ -152,18 +155,29 @@ def _eligibility(integrity: str) -> str:
 
 
 def _integrity(seed: dict[str, str]) -> str:
-    """`retracted` · `concern` · `corrected` · `""` — the strongest notice on the record.
+    """Classify the record and preserve the direction of PubMed correction links.
 
-    Ordered by consequence, not by appearance: a paper carrying both an erratum and a
-    retraction is retracted.
+    `RetractionIn` and `ExpressionOfConcernIn` mark the affected publication. Their inverse
+    links (`RetractionOf`, `ExpressionOfConcernFor`) mark the editorial notice, which is an
+    audit source rather than an affected paper. Ordered by consequence, not by appearance: a
+    paper carrying both an erratum and a retraction is retracted.
     """
     notices = (seed.get("corrections") or "")
     if not notices.strip():
         return ""
-    if any(kind in notices for kind in ("RetractionIn", "RetractedPublication", "RetractionOf")):
+    kinds = {part.strip().split(":", 1)[0]
+             for part in notices.split(";") if part.strip()}
+    publication_types = {part.strip() for part in (seed.get("type") or "").split(";")}
+    if "RetractionIn" in kinds or "Retracted Publication" in publication_types:
         return "retracted"
-    if "ExpressionOfConcern" in notices:
+    if "ExpressionOfConcernIn" in kinds:
         return "concern"
+    # Direction matters. These values occur on the editorial notice and point *to* the
+    # affected article. Holding the notice would forbid the source that documents the hold.
+    if "RetractionOf" in kinds:
+        return "retraction_notice"
+    if "ExpressionOfConcernFor" in kinds:
+        return "concern_notice"
     return "corrected"
 
 
@@ -202,8 +216,17 @@ def identifiers(field: str) -> tuple[set[str], set[str]]:
 def store_deepest(index: dict[str, dict[str, str]], key: str, entry: dict[str, str]) -> None:
     """Keep the deepest evidence record, independent of physical file order."""
     current = index.get(key)
-    if current is None or DEPTH_RANK[entry["depth"]] > DEPTH_RANK[current["depth"]]:
+    if current is None:
         index[key] = entry
+    elif DEPTH_RANK[entry["depth"]] > DEPTH_RANK[current["depth"]]:
+        replacement = dict(entry)
+        replacement["integrated"] = bool(entry.get("integrated") or current.get("integrated"))
+        index[key] = replacement
+    elif entry.get("integrated"):
+        # Evidence depth and canonical integration are independent axes. A deeper receipt
+        # must not erase the fact that a PAPER entry is integrated, and a shallow PAPER must
+        # not replace the deeper receipt merely to preserve that flag.
+        current["integrated"] = True
 
 
 def registry_index(registries: Path) -> dict[str, dict[str, str]]:
@@ -236,7 +259,17 @@ def registry_index(registries: Path) -> dict[str, dict[str, str]]:
             depth = "catalogued only"
         else:
             depth = "abstract only"
-        entry = {"record": record_id, "depth": depth}
+        status_match = re.search(r"(?m)^\*\*Status:\*\*\s*(.*)$", body)
+        status = (status_match.group(1) if status_match else "").strip().lower()
+        entry = {
+            "record": record_id,
+            "depth": depth,
+            # A CORPUS placeholder, tracking-log hit, or receipt proves contact with the
+            # record, not canonical integration. Calling all three "already integrated"
+            # overstated the exposure and hid the distinction the audit needs.
+            "integrated": (record_id.startswith("PAPER ")
+                           and status in {"integrated", "claim_linked"}),
+        }
         # Only the record's own Identifier field. Indexing every identifier that appears
         # anywhere in the body would attribute a record's read depth to every paper it
         # merely cites — an overstatement of coverage by roughly six-fold when measured.
@@ -258,13 +291,13 @@ def registry_index(registries: Path) -> dict[str, dict[str, str]]:
                 store_deepest(
                     index,
                     f"pmid:{pmid}",
-                    {"record": "tracking log", "depth": "screened"},
+                    {"record": "tracking log", "depth": "screened", "integrated": False},
                 )
             for doi in dois:
                 store_deepest(
                     index,
                     f"doi:{doi}",
-                    {"record": "tracking log", "depth": "screened"},
+                    {"record": "tracking log", "depth": "screened", "integrated": False},
                 )
     for key, receipt in receipt_index.items():
         store_deepest(
@@ -273,6 +306,7 @@ def registry_index(registries: Path) -> dict[str, dict[str, str]]:
             {
                 "record": f"receipt {receipt['event_id']}",
                 "depth": RECEIPT_DEPTH[receipt["evidence_depth"]],
+                "integrated": False,
             },
         )
     return index
@@ -393,6 +427,7 @@ def _build_uncached(root: Path, disease: str) -> dict:
                 "type": seed.get("type", ""),
                 "depth": depth,
                 "record": hit["record"] if hit else "",
+                "integrated": bool(hit and hit.get("integrated")),
                 "source": seed["_sources"],
             }
         )
@@ -441,7 +476,7 @@ def _build_uncached(root: Path, disease: str) -> dict:
         # leaning on, which is the only part that is urgent — a retraction is published after
         # the reading, so the claims exposed to it are the ones that already exist.
         "held": held,
-        "held_integrated": [item for item in held if item["record"]],
+        "held_integrated": [item for item in held if item["integrated"]],
         "held_referenced": [item for item in held if item["current_references"]],
         "year_min": min(years) if years else None,
         "year_max": max(years) if years else None,
@@ -490,8 +525,8 @@ def _render_integrity(report: dict) -> list[str]:
     if integrated:
         lines += [
             f"> 🔴 **{len(integrated)} of these "
-            f"{'is' if len(integrated) == 1 else 'are'} already integrated into the "
-            "registries.**",
+            f"{'is' if len(integrated) == 1 else 'are'} already integrated as canonical "
+            "PAPER entries.**",
             "> A retraction is published *after* the reading, so the exposure is never the",
             "> future work — it is the claims that already rest on the paper. Re-examine every",
             "> claim linked to the records below before the next `BATCH_COMMIT`:",
@@ -502,7 +537,8 @@ def _render_integrity(report: dict) -> list[str]:
         lines.append("")
     elif referenced:
         lines += [
-            f"> ⚠️ No held record has a registry entry, but {len(referenced)} held PMID(s)",
+            f"> ⚠️ No held record is canonically integrated as a PAPER, but "
+            f"{len(referenced)} held PMID(s)",
             "> appear on current scientific surfaces. An appearance is not automatically a",
             "> supporting claim, but absence of a registry record cannot prove absence of",
             "> exposure. Audit the files named in the table before the next `BATCH_COMMIT`.",
@@ -510,7 +546,7 @@ def _render_integrity(report: dict) -> list[str]:
         ]
     else:
         lines += [
-            "> No held record carries a registry entry and no held PMID appears on a current",
+            "> No held record is canonically integrated and no held PMID appears on a current",
             "> scientific surface. No existing exposure was found by these two checks.",
             "",
         ]
@@ -577,11 +613,12 @@ def render(report: dict, limit: int) -> str:
             f"{report['duplicate_occurrences']} repeated occurrence(s) are deduplicated in this queue."
         ),
         "",
-        "**Provenance and limit.** The current seed is an operator-curated PubMed Clipboard",
-        "export dated 2026-07-05. The exact upstream query and selection procedure were not",
-        "retained, so this is a useful worklist — **not a systematic or exhaustive WWOX search**.",
-        "`free_full_text=yes` records PubMed's `Free PMC article` flag at export time; it does",
-        "not redistribute or license the article text.",
+        "**Provenance and limit.** Provenance is snapshot-specific. E-utilities snapshots ship",
+        "with a manifest recording the query as sent, PubMed's QueryTranslation, timestamp and",
+        "count; older Clipboard-derived snapshots may not retain the exact upstream selection.",
+        "The union is a useful worklist — **not a systematic or exhaustive WWOX search**.",
+        "`free_full_text=yes` means PubMed exposed a link it classified as free at snapshot",
+        "time; it does not redistribute or license the article text.",
         "",
         "## Read depth of what *has* been touched",
         "",

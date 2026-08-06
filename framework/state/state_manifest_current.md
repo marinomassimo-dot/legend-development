@@ -121,10 +121,10 @@ notes: "CC-20260726-001/002/003 → PAPER 054/055/056, CLAIM 034/035 new, CLAIM 
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260806_005
+last_lint_id: LINT_20260806_006
 last_lint_date: 2026-08-06
 last_lint_result: PASS
-notes: "PMID 30290271 read completely from article HTML/PDF with all six figures, Table 1, both supplements and 90 references audited. Receipt FTR-20260806-30290271-01 appended (46 -> 47 events). After adversarial cross-review, the schema-v2 manifest carries 14 exact body-text locators plus 7 fingerprinted figure locators and passes strict verification with zero gaps. Panel-level absence of significance marks is represented as visual absence-of-report, not equivalence; the tiny RNA-seq dataset supports neither the authors' coherent epilepsy program nor a coherent counter-program; early death/epileptogenesis are imported premises pending FT-043. The candidate is explicitly MAJOR (target WM_v4.0_2026-08-06), deletes the unsupported medication-safety language and requires operator authorization. Unread-premise baseline is the live 13/13; self-eval 24/24 PASS. PubMed pipeline commits 212850e, 510414d and d9ccac9 merged and independently hardened: content firewall accepts object/JSONL/array packaging without false-positive matching on generic experimental JSONL; publication-integrity exposure scans current scientific surfaces; LINT now blocks a canonical claim linked to a retraction/EoC hold while ordinary errata remain non-blocking. Batch queue regenerated once. LINT PASS; public release gate PASS/BLOCKS 0; clean-worktree release regressions PASS WITH SKIPS (48 targets, one declared local-fulltext skip)."
+notes: "PMID 30290271 read completely from article HTML/PDF with all six figures, Table 1, both supplements and 90 references audited. Receipt FTR-20260806-30290271-01 appended (46 -> 47 events). After adversarial cross-review, its schema-v2 manifest carries 14 exact body-text locators plus 7 fingerprinted figure locators and passes strict verification with zero gaps. The candidate is explicitly MAJOR (target WM_v4.0_2026-08-06), deletes unsupported medication-safety language and requires operator authorization; unread-premise baseline is the live 13/13 and self-eval is 24/24 PASS. PubMed pipeline commits 212850e, 510414d and d9ccac9 merged and independently hardened. A fresh 2026-08-06 harvest preserves 706/706 records, 693 abstracts in the gitignored NOT_EVIDENCE corpus and a tracked no-abstract projection with 40 correction links. RefType direction was corrected: 7 affected publications are held, while 4 editorial notices remain admissible audit sources. Five held PMIDs occur on current surfaces, but none is integrated as a canonical PAPER and no claim wikilink depends on one; PMID 28151481 was already explicitly excluded. Legacy receipt FTR-20260726-23446842-01 was the sole receipt-to-PAPER identity mismatch and is quarantined append-only by FTR-20260806-23446842-02; active depth and generated coverage no longer attribute it to PMID 23446842. LINT PASS; public release gate PASS/BLOCKS 0. The pre-refresh clean-worktree release suite passed with one declared local-fulltext skip; post-refresh suite pending this lint event."
 ```
 
 ---
@@ -151,8 +151,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 47
-fulltext_ledger_head: cf10574e6bc3a755da74d68b47cb9e8e8112230198aaecabbd5c4f0f41ddf121
+fulltext_ledger_events: 48
+fulltext_ledger_head: 7e72304ff2852a570ba92480d7ae7f7139817a3431e014d45396f951d7ac9e55
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.

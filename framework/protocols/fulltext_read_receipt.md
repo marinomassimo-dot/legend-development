@@ -257,3 +257,14 @@ The writer requires the correction to preserve `record_kind`, study identity, `a
 evidence depth, source locator/fingerprint and the complete coverage map; only event metadata,
 evidence basis and outputs may change. Consumers use the latest equal-depth event, while the
 incorrect historical event remains visible in the hash chain.
+
+### Invalidating a receipt whose study identity is unsupported
+
+A metadata correction cannot repair a receipt whose reading evidence belongs to a different
+study: preserving the wrong identity would keep false reading depth, while changing it would
+rewrite what the event attested. Append a linked `record_kind: receipt_invalidation` event
+with `reread_reason: receipt_invalidation`, `invalidates_receipt` equal to its direct
+`prior_receipt`, and a substantive `invalidation_reason`. The reading fields remain unchanged
+so the administrative event cannot manufacture a new read. Consumers remove that study from
+the active depth index; the invalid original remains visible and hash-chained. A later genuine
+read may establish new depth through a new linked event.

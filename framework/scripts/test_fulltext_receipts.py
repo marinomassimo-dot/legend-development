@@ -300,6 +300,45 @@ class FulltextReceiptTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "changed substantive fields"):
             receipts.append_receipt(self.ledger, bad)
 
+    def test_receipt_invalidation_quarantines_a_misattributed_legacy_event(self) -> None:
+        """Append-only history can retract an index claim without rewriting the bad event."""
+        legacy = example("FTR-20260725-42193054-01", "partial_fulltext_read")
+        legacy["record_kind"] = "legacy_reconstruction"
+        legacy["analysis_at"] = None
+        legacy["coverage"] = {key: "unknown_legacy" for key in receipts.COVERAGE_KEYS}
+        receipts.append_receipt(self.ledger, legacy)
+
+        invalidation = copy.deepcopy(legacy)
+        invalidation.update({
+            "event_id": "FTR-20260725-42193054-02",
+            "event_at": "2026-07-25T21:00:00Z",
+            "record_kind": "receipt_invalidation",
+            "workflow": "identity audit; no reread",
+            "evidence_basis": ["the persisted output belongs to a different PMID"],
+            "prior_receipt": legacy["event_id"],
+            "reread_reason": "receipt_invalidation",
+            "invalidates_receipt": legacy["event_id"],
+            "invalidation_reason": (
+                "The legacy reconstruction points to a PAPER entry owned by a different "
+                "PMID, so it cannot attest reading depth for this study."
+            ),
+        })
+        receipts.append_receipt(self.ledger, invalidation)
+
+        self.assertEqual(len(receipts.load_ledger(self.ledger)), 2)
+        self.assertFalse(receipts.receipt_depth_index(self.ledger))
+
+        bad = copy.deepcopy(invalidation)
+        bad.update({
+            "event_id": "FTR-20260725-42193054-03",
+            "event_at": "2026-07-25T22:00:00Z",
+            "prior_receipt": invalidation["event_id"],
+            "invalidates_receipt": invalidation["event_id"],
+            "invalidation_reason": "too short",
+        })
+        with self.assertRaisesRegex(ValueError, "substantive invalidation_reason"):
+            receipts.append_receipt(self.ledger, bad)
+
     def test_cited_or_different_study_does_not_match(self) -> None:
         receipt = example("FTR-20260725-42193054-01")
         receipts.append_receipt(self.ledger, receipt)

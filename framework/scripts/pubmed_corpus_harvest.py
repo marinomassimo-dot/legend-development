@@ -771,10 +771,13 @@ def jsonl_body(records: list[dict]):
     return body
 
 
-def seed_body(records: list[dict], free: set[str]):
+def seed_body(records: list[dict], free: set[str], *, include_abstract: bool = True):
     def body(handle):
-        writer = csv.DictWriter(handle, fieldnames=SEED_FIELDS, delimiter="\t",
-                                quoting=csv.QUOTE_MINIMAL, extrasaction="ignore")
+        fields = SEED_FIELDS if include_abstract else tuple(
+            field for field in SEED_FIELDS if field != "abstract")
+        writer = csv.DictWriter(handle, fieldnames=fields, delimiter="\t",
+                                quoting=csv.QUOTE_MINIMAL, extrasaction="ignore",
+                                lineterminator="\n")
         writer.writeheader()
         writer.writerows(to_seed_row(r, free) for r in records)
     return body
@@ -820,7 +823,8 @@ def write_corpus(records: list[dict], manifest: dict, free: set[str],
     staged: dict[str, Path] = {}
     try:
         staged[".jsonl"] = _stage(targets[".jsonl"], jsonl_body(emitted))
-        staged[".tsv"] = _stage(targets[".tsv"], seed_body(emitted, free))
+        staged[".tsv"] = _stage(
+            targets[".tsv"], seed_body(emitted, free, include_abstract=abstracts))
         manifest["outputs"] = {
             f"{slug}.jsonl": {"sha256": _digest(staged[".jsonl"]),
                               "content": "full record, minus not_captured"},

@@ -321,7 +321,9 @@ class QueueIntegrityTests(unittest.TestCase):
             registries = root / "disease-models" / "wwox" / "registries"
             registries.mkdir(parents=True)
             (registries / "fulltext_read_receipts.jsonl").touch()
-            (registries / "paper_registry_current.md").write_text("", encoding="utf-8")
+            (registries / "paper_registry_current.md").write_text(
+                "## CORPUS P006\n**Identifier:** PMID 11111111\n"
+                "**Status:** screened\n", encoding="utf-8")
             meta = root / "disease-models" / "wwox" / "meta"
             meta.mkdir(parents=True)
             (meta / "meta_index_current.md").write_text(
@@ -396,6 +398,19 @@ class QueueIntegrityTests(unittest.TestCase):
         self.assertEqual(bq._integrity({"corrections": "ErratumIn:1"}), "corrected")
         self.assertEqual(bq._integrity({}), "")
 
+    def test_editorial_notice_direction_is_not_mistaken_for_the_affected_paper(self) -> None:
+        """`RetractionOf` lives on the notice; `RetractionIn` lives on the paper."""
+        affected = {"corrections": "RetractionIn:42464650"}
+        notice = {"corrections": "RetractionOf:23446842"}
+        concern_notice = {"corrections": "ExpressionOfConcernFor:16223882"}
+
+        self.assertEqual(bq._integrity(affected), "retracted")
+        self.assertEqual(bq._eligibility(bq._integrity(affected)), bq.HOLD)
+        self.assertEqual(bq._integrity(notice), "retraction_notice")
+        self.assertEqual(bq._eligibility(bq._integrity(notice)), "")
+        self.assertEqual(bq._integrity(concern_notice), "concern_notice")
+        self.assertEqual(bq._eligibility(bq._integrity(concern_notice)), "")
+
     def test_the_rendered_table_shows_the_integrity_flag(self) -> None:
         report = {
             "disease": "wwox", "seed_files": ["s.tsv"], "seed_occurrences": 1,
@@ -427,7 +442,9 @@ class QueueIntegrityTests(unittest.TestCase):
     def test_committed_markdown_lists_every_seed_record_with_status(self) -> None:
         report = bq.build(ROOT, "wwox")
         rendered = bq.render(report, limit=0)
-        self.assertEqual(rendered.count("https://pubmed.ncbi.nlm.nih.gov/"), report["seed_total"])
+        queue_tables = rendered.split("## Complete outstanding queue", 1)[1]
+        self.assertEqual(
+            queue_tables.count("https://pubmed.ncbi.nlm.nih.gov/"), report["seed_total"])
         self.assertIn("| full text | PAPER ", rendered)
         self.assertIn("| abstract only | PAPER ", rendered)
 

@@ -568,6 +568,8 @@ class OutputSet(unittest.TestCase):
                     self.assertNotIn("Un resume en francais", body)
                     self.assertNotIn("chapter abstract", body)
             self.assertIn("36779245", (out / "wwox.jsonl").read_text(encoding="utf-8"))
+            header = (out / "wwox.tsv").read_text(encoding="utf-8").splitlines()[0]
+            self.assertNotIn("abstract", header.split("\t"))
 
     def test_the_default_run_still_keeps_abstracts(self) -> None:
         records, manifest, free = _harvest(document(ARTICLE), count=1)

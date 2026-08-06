@@ -1,0 +1,69 @@
+{
+  "deleted_by_pubmed": [],
+  "distinct_pmids": 706,
+  "evidential_status": "NOT_EVIDENCE",
+  "expected_count": 706,
+  "forbidden_uses": [
+    "reading. An abstract is not the paper, and the decisive detail is routinely absent from it \u2014 on 2026-08-04 a figure panel reversed a conclusion the running text did not contain",
+    "supporting a claim, a verbatim locator or a FULLTEXT_READ_RECEIPT. A receipt whose source is this file is refused by scripts/test_abstract_corpus_is_not_evidence.py",
+    "substituting for a full-text read in the reading debt: a paper covered here is still unread"
+  ],
+  "harvested_at_utc": "2026-08-06T11:30:18Z",
+  "harvester_version": "3.0",
+  "invariants_asserted": [
+    "parsed_count + len(deleted_by_pubmed) == expected_count",
+    "distinct_pmids == parsed_count",
+    "every record-level tag has a parser"
+  ],
+  "manifest_schema_version": 2,
+  "not_captured": [
+    "MedlineCitation/@Owner",
+    "MedlineCitation/@Status",
+    "MedlineCitation/CitationSubset",
+    "MedlineCitation/CoiStatement",
+    "MedlineCitation/GeneralNote",
+    "MedlineCitation/GeneSymbolList",
+    "MedlineCitation/InvestigatorList",
+    "MedlineCitation/MedlineJournalInfo",
+    "MedlineCitation/NumberOfReferences",
+    "MedlineCitation/PersonalNameSubjectList",
+    "MedlineCitation/SpaceFlightMission",
+    "MedlineCitation/SupplMeshList",
+    "MedlineCitation/Article/Abstract/@CopyrightInformation is kept; the rest of Article/DataBankList is not",
+    "MedlineCitation/Article/GrantList",
+    "MedlineCitation/Article/VernacularTitle when an ArticleTitle exists",
+    "PubmedData/ReferenceList",
+    "PubmedData/History beyond PubMedPubDate",
+    "PubmedBookData/@ objects beyond PublicationStatus and ArticleIdList"
+  ],
+  "not_claimed": "This is every record returned by the query above at the timestamp above, not 'every paper on the gene'. PubMed applies Automatic Term Mapping; the query_translation field records what was actually run. pubmed_free_full_text_link=no means PubMed exposes no link it classifies as free \u2014 it does not mean paywalled.",
+  "outputs": {
+    "corpus_seed_pubmed_20260806.jsonl": {
+      "content": "full record, minus not_captured",
+      "sha256": "88ef362603241ffcde7a7c7ddbdbdd84d878ee5dd223d8401c3c53bd746ae13c"
+    },
+    "corpus_seed_pubmed_20260806.tsv": {
+      "abstracts": false,
+      "content": "derived triage convenience \u2014 lossy by design",
+      "sha256": "e9bc1b67f1947bc8f7ca0fc8d3e4258d27628c84129d96744827a47e446e0baf"
+    }
+  },
+  "parsed_count": 706,
+  "permitted_uses": [
+    "triage, deduplication and priority ranking over titles and abstracts",
+    "census: counting what exists against what the model has read",
+    "export pre-flight: checking whether an abstract carries a proposition BEFORE the full text is opened, so the anchor is captured while the document is open"
+  ],
+  "pubmed_free_full_text_links": 468,
+  "query_as_sent": "WWOX OR WOREE",
+  "query_translation": "\"wwox protein human\"[Supplementary Concept] OR \"wwox protein human\"[All Fields] OR \"wwox\"[All Fields] OR \"WOREE\"[All Fields]",
+  "record_types": [
+    "PubmedArticle"
+  ],
+  "source": "NCBI E-utilities. Abstracts may be under publisher copyright; check terms before redistributing.",
+  "with_abstract": 693,
+  "with_abstract_text": 693,
+  "with_corrections": 40,
+  "with_mesh": 579,
+  "with_other_abstract": 4
+}
