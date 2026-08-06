@@ -202,6 +202,27 @@ class QueueIntegrityTests(unittest.TestCase):
             self.assertEqual(seeds[0]["free_full_text"], "yes")
             self.assertEqual(len(seeds[0]["_sources"].split(";")), 2)
 
+    def test_only_the_current_snapshot_keeps_a_tracked_jsonl(self) -> None:
+        """Decided 2026-08-06: TSVs accumulate as history, the JSONL mirrors one snapshot.
+
+        The record-level JSONL is 3.7 MB — the largest tracked file in the repository, 28% of
+        its weight, and nothing reads it: `batch_queue` uses the 150 KB TSV. It is kept
+        because it is the only durable record of MeSH, authors and affiliations at harvest
+        time, and PubMed is not reproducible backwards. What is not acceptable is accruing
+        another 3.7 MB of near-duplicate history on every refresh, which is what would have
+        happened silently. Dated TSVs remain the audit trail; the JSONL tracks the newest
+        snapshot only.
+        """
+        seeds = sorted(REGISTRIES.glob("corpus_seed_*.tsv"))
+        jsonls = sorted(REGISTRIES.glob("corpus_seed_*.jsonl"))
+        self.assertLessEqual(
+            len(jsonls), 1,
+            "more than one tracked corpus JSONL: keep the newest, the older snapshots stay "
+            f"as dated TSVs. Found {[p.name for p in jsonls]}")
+        if jsonls and seeds:
+            self.assertEqual(jsonls[0].stem, seeds[-1].stem,
+                             "the tracked JSONL must mirror the newest seed snapshot")
+
     def test_seed_corpus_is_present_and_dated(self) -> None:
         seeds = sorted(REGISTRIES.glob("corpus_seed_*.tsv"))
         self.assertTrue(seeds, "no seed corpus shipped")

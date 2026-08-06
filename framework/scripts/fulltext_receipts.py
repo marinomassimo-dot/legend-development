@@ -374,6 +374,22 @@ def validate_receipt(receipt: Any, root: Optional[Path] = None) -> list[str]:
         reason = receipt.get("invalidation_reason")
         if not isinstance(reason, str) or len(reason.strip()) < 40:
             errors.append("receipt_invalidation requires a substantive invalidation_reason")
+        # 🔴 Withdrawing a reading must cost what admitting you have not read it costs.
+        # Appending a `complete_fulltext_read` demands a fingerprinted artifact, a schema-v2
+        # work manifest and verbatim locators; withdrawing one demanded forty characters. The
+        # asymmetry runs the wrong way for a system whose stated threat model is that a false
+        # negative is the compounding loss — three genuine complete reads were withdrawn in
+        # one command each, with every gate still green. So an invalidation that removes a
+        # complete read has to put the paper back on the books: reading debt made explicit is
+        # legitimate work in progress, and silence is exactly what this refuses.
+        if str(receipt.get("evidence_depth")) == "complete_fulltext_read" and not any(
+                "full_text_queue_current" in str(output)
+                for output in (receipt.get("outputs") or [])):
+            errors.append(
+                "an invalidation that withdraws a complete_fulltext_read must name a "
+                "full_text_queue_current.md entry in `outputs`: removing the receipt "
+                "re-opens the reading debt, and a debt nobody declared is indistinguishable "
+                "from a paper nobody needed to read")
     if receipt["analysis_at"] is not None and not _valid_datetime(receipt["analysis_at"]):
         errors.append("invalid analysis_at: timezone-aware ISO-8601 required")
     elif (

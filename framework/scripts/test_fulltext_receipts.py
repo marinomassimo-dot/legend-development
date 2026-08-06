@@ -693,6 +693,43 @@ class InvalidationScope(unittest.TestCase):
         standing = receipts.active_receipts(self.LEDGER)
         self.assertEqual([event["event_id"] for event in standing], ["A"])
 
+    def test_withdrawing_a_complete_read_must_re_open_the_debt(self) -> None:
+        """Withdrawing a reading must cost what admitting you never did it costs.
+
+        Appending a complete read demands a fingerprinted artifact, a work manifest and
+        verbatim locators; withdrawing one demanded forty characters of prose. Three genuine
+        complete reads were withdrawn in one command each with every gate still green.
+        """
+        base = {
+            "event_id": "FTR-20260806-12345678-02", "record_kind": "receipt_invalidation",
+            "study_id": {"pmid": "12345678"}, "event_at": "2026-08-06T10:00:00Z",
+            "analysis_at": None, "workflow": "audit",
+            "evidence_depth": "complete_fulltext_read",
+            "source_locator": "files/fulltext/paper.xml", "source_fingerprint": "a" * 64,
+            "coverage": {k: "unknown_legacy" for k in receipts.COVERAGE_KEYS},
+            "outputs": ["disease-models/wwox/registries/paper_registry_current.md#PAPER 001"],
+            "evidence_basis": ["identity audit"], "prior_receipt": "FTR-20260726-12345678-01",
+            "invalidates_receipt": "FTR-20260726-12345678-01",
+            "invalidation_reason": "the persisted receipt names a paper it cannot attest, so "
+                                   "it cannot establish reading depth for this study",
+            "reread_reason": "receipt_invalidation"}
+        self.assertTrue(any("re-opens the reading debt" in error
+                            for error in receipts.validate_receipt(base)))
+        with_debt = {**base, "outputs": base["outputs"] + [
+            "disease-models/wwox/research/full_text_queue_current.md#FT-099"]}
+        self.assertFalse(any("re-opens the reading debt" in error
+                             for error in receipts.validate_receipt(with_debt)))
+
+    def test_withdrawing_a_partial_read_needs_no_queue_entry(self) -> None:
+        """A partial read was never a discharged debt, so withdrawing it re-opens nothing."""
+        ledger = ROOT / "disease-models/wwox/registries/fulltext_read_receipts.jsonl"
+        if not ledger.is_file():
+            self.skipTest("no ledger in this checkout")
+        for event in receipts.load_ledger(ledger):
+            if event.get("record_kind") == "receipt_invalidation":
+                self.assertEqual(receipts.validate_receipt(event), [],
+                                 f"{event['event_id']} no longer validates")
+
     def test_status_reports_only_receipts_that_still_stand(self) -> None:
         """`status --pmid` is what the protocol tells an agent to trust before re-reading."""
         source = (ROOT / "framework/scripts/fulltext_receipts.py").read_text(encoding="utf-8")

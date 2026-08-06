@@ -493,6 +493,57 @@ class TheFirewallMustBeAbleToSeeTheCorpus(unittest.TestCase):
             harvest.write_seed(records, set(), innocent)
             self.assertTrue(firewall.looks_like_corpus(innocent))
 
+    def test_a_reformatted_corpus_is_still_recognised(self) -> None:
+        """Each of these is a rename plus one trivial reformat — the whole escape class."""
+        record = {"pmid": "1", "title": "A paper", "abstract_parts": [],
+                  "identifiers": {}, "record_type": "PubmedArticle"}
+        stripped = {k: v for k, v in record.items() if k != "record_type"}
+        cases = {
+            "wrapper object": json.dumps({"query": "WWOX", "records": [record]}),
+            "comment header": "// harvested 2026-08-06\n" + json.dumps(record),
+            "pretty array": json.dumps([record], indent=2),
+            "record_type removed": json.dumps(stripped),
+            "seed as csv": "pmid,year,pmcid,type,doi,journal,title\n1,2019,,x,,J,A\n",
+            "marker columns dropped": "pmid\tyear\tpmcid\ttype\tdoi\tjournal\ttitle\n",
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            for name, body in cases.items():
+                path = Path(tmp) / "renamed.dat"
+                path.write_text(body, encoding="utf-8")
+                with self.subTest(reformat=name):
+                    self.assertTrue(firewall.looks_like_corpus(path))
+
+    def test_a_re_encoded_corpus_is_a_declared_limit(self) -> None:
+        """Stated, not patched: decompressing arbitrary declared artifacts to hunt for
+        abstracts is a larger surface than it closes, and neither is done by accident."""
+        import gzip
+
+        body = json.dumps({"pmid": "1", "title": "A", "abstract_parts": [],
+                           "identifiers": {}})
+        with tempfile.TemporaryDirectory() as tmp:
+            for name, raw in (("gzip", gzip.compress(body.encode())),
+                              ("utf-16", body.encode("utf-16"))):
+                path = Path(tmp) / "x.dat"
+                path.write_bytes(raw)
+                with self.subTest(encoding=name):
+                    self.assertFalse(firewall.looks_like_corpus(path))
+        source = (ROOT / "framework/scripts/corpus_firewall.py").read_text(encoding="utf-8")
+        self.assertIn("Declared limit", source,
+                      "the limit must be written down where the code is read")
+
+    def test_working_tables_that_cite_pmids_are_not_corpora(self) -> None:
+        """A guard that refuses the working data gets switched off, and then guards nothing."""
+        tables = {
+            "curated case table": "pmid\ttitle\tabstract\tvariant\tzygosity\n1\tA\tx\tQ230P\thom\n",
+            "variant table": "gene\tvariant\tpmid\ttitle\tfree_full_text\nWWOX\tQ230P\t1\tA\tyes\n",
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            for name, body in tables.items():
+                path = Path(tmp) / "table.tsv"
+                path.write_text(body, encoding="utf-8")
+                with self.subTest(table=name):
+                    self.assertFalse(firewall.looks_like_corpus(path))
+
     def test_a_real_paper_is_not_mistaken_for_a_corpus(self) -> None:
         """A guard that refuses the papers is worse than no guard: it gets switched off."""
         with tempfile.TemporaryDirectory() as tmp:

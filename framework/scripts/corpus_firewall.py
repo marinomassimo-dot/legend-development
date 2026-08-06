@@ -20,6 +20,15 @@ So this module carries both halves:
 * `CORPUS_ARTEFACT` — the naming convention, enforced at creation so the convention holds;
 * `looks_like_corpus` — what the *file on disk* actually is, which no rename survives.
 
+🔴 **Declared limit.** The content half reads bytes as text, so a corpus that has been
+*re-encoded* — gzipped, or written as UTF-16 — is not recognised. Both were probed and both
+escape. This is stated rather than patched because decompressing and transcoding arbitrary
+declared artifacts to hunt for abstracts is a larger attack surface than the one it closes,
+and because neither is something anyone does by accident: the failure this module exists to
+prevent is the honest shortcut, not the determined adversary. The naming half still fires on
+both whenever the path retains the convention, and `deepdive_manifest` independently refuses
+any artifact whose suffix it cannot verify text against.
+
 The second is the load-bearing one. A guard that only knows the first is a guard against
 accidents, not against the failure mode: hundreds of greppable abstracts sitting locally make
 answering from them feel like working, and the file does not have to be called `corpus` for
@@ -44,6 +53,16 @@ CORPUS_RECORD_KEYS = frozenset({"pmid", "title", "abstract_parts", "identifiers"
 # The header of a derived seed TSV, under either the current or the pre-2026-08-05 column name.
 CORPUS_TSV_COLUMNS = frozenset({"pmid", "title"})
 CORPUS_TSV_MARKERS = ("pubmed_free_full_text_link", "free_full_text", "abstract")
+# 🔴 `{pmid,title}` plus any one marker was both too loose and too tight at once. Too loose:
+# a curated case table (`pmid title abstract variant zygosity`) and a variant table carrying
+# `free_full_text` were both refused as corpora — and a guard that refuses the working data
+# gets switched off. Too tight: dropping the two marker columns from the real seed walked it
+# straight through. The seed's column set is known, so count it. A bibliographic export shares
+# most of these; a table that happens to cite PMIDs shares two or three.
+CORPUS_TSV_FIELDS = frozenset({
+    "pmid", "year", "pubmed_free_full_text_link", "free_full_text", "pmcid", "type", "doi",
+    "journal", "corrections", "title", "abstract"})
+CORPUS_TSV_MIN_FIELDS = 5
 
 SNIFF_BYTES = 1048576
 
@@ -57,6 +76,11 @@ def _first_json_record(text: str) -> dict | None:
     the closing bracket or the rest of a potentially large corpus.
     """
     candidate = text.lstrip("\ufeff \t\r\n")
+    # Skip comment lines: a `//`-prefixed provenance header is a two-second edit that used to
+    # walk the whole file past the check.
+    while candidate.startswith(("//", "#")):
+        _, _, candidate = candidate.partition("\n")
+        candidate = candidate.lstrip()
     if candidate.startswith("["):
         candidate = candidate[1:].lstrip()
     if not candidate.startswith("{"):
@@ -65,7 +89,16 @@ def _first_json_record(text: str) -> dict | None:
         value, _ = json.JSONDecoder().raw_decode(candidate)
     except json.JSONDecodeError:
         return None
-    return value if isinstance(value, dict) else None
+    if not isinstance(value, dict):
+        return None
+    # One level of wrapping: `{"query": \u2026, "records": [ \u2026corpus\u2026 ]}` is the shape anyone
+    # produces when they "tidy up" an export, and it hid every record behind a lid.
+    if not (CORPUS_RECORD_KEYS & set(value)):
+        for nested in value.values():
+            if isinstance(nested, list) and nested and isinstance(nested[0], dict) \
+                    and CORPUS_RECORD_KEYS <= set(nested[0]):
+                return nested[0]
+    return value
 
 
 def names_a_corpus(value: str) -> bool:
@@ -105,16 +138,23 @@ def looks_like_corpus(path: Path) -> bool:
 
     text = head.decode("utf-8", errors="replace")
     record = _first_json_record(text)
-    if (record is not None
-            and record.get("record_type") in CORPUS_RECORD_TYPES
-            and CORPUS_RECORD_KEYS <= set(record)):
+    # `record_type` is no longer required. All four of `pmid`, `title`, `abstract_parts` and
+    # `identifiers` together are already specific to this harvester's output — `abstract_parts`
+    # is a name we invented — so demanding a fifth exact value bought no precision and cost a
+    # whole escape route: deleting one field walked the corpus straight through.
+    if record is not None and CORPUS_RECORD_KEYS <= set(record):
         return True
 
     first = head.split(b"\n", 1)[0].strip()
     header = first.decode("utf-8", errors="replace")
-    if "\t" in header:
-        columns = {column.strip().lower() for column in header.split("\t")}
-        if CORPUS_TSV_COLUMNS <= columns and any(m in columns for m in CORPUS_TSV_MARKERS):
+    # Delimiter-agnostic: converting the seed to CSV is a one-line change and it defeated a
+    # check that insisted on a literal tab.
+    for delimiter in ("\t", ","):
+        if delimiter not in header:
+            continue
+        columns = {column.strip().strip('"').lower() for column in header.split(delimiter)}
+        if CORPUS_TSV_COLUMNS <= columns \
+                and len(columns & CORPUS_TSV_FIELDS) >= CORPUS_TSV_MIN_FIELDS:
             return True
     return False
 
