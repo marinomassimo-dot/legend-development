@@ -30,6 +30,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import corpus_firewall as firewall  # noqa: E402
+
 try:
     import fcntl
 except ImportError:  # pragma: no cover - POSIX is required for fail-closed append locking
@@ -107,8 +111,13 @@ LEDGER_MANAGED = {CHAIN_FIELD}
 # re-anchors the chain before any suite has a chance to object. Reviewed 2026-08-05, where a
 # hand-built receipt naming `files/corpus/*.jsonl` as the document it read passed
 # `validate_receipt()` with no complaint at all.
-CORPUS_ARTEFACT = re.compile(
-    r"files/corpus/|corpus_seed_pubmed|_corpus\.jsonl|corpus_abstracts", re.IGNORECASE)
+#
+# Reviewed again 2026-08-06: recognising a corpus by NAME is a guard against accidents, not
+# against the failure mode. `cp files/corpus/wwox.jsonl files/fulltext/paper.jsonl` defeats it
+# completely, and nothing about the copy is unusual — it is what someone does when a check
+# refuses them. So the definition now lives in `corpus_firewall`, which also asks what the
+# file on disk actually IS. A rename does not turn abstracts into a paper.
+CORPUS_ARTEFACT = firewall.CORPUS_ARTEFACT
 ABSTRACT_ONLY_LOCATOR = re.compile(
     r"(?:https?://)?(?:www\.)?pubmed\.ncbi\.nlm\.nih\.gov/|"
     r"(?:https?://)?eutils\.ncbi\.nlm\.nih\.gov/entrez/eutils/|"
@@ -281,18 +290,16 @@ def validate_receipt(receipt: Any) -> list[str]:
         return ["receipt must be a JSON object"]
     errors: list[str] = []
     depth = receipt.get("evidence_depth")
+    reading = depth in {"partial_fulltext_read", "complete_fulltext_read"}
     for field in ("source_locator", "workflow"):
-        if CORPUS_ARTEFACT.search(str(receipt.get(field) or "")) and depth in {
-            "partial_fulltext_read", "complete_fulltext_read"
-        }:
+        objection = firewall.corpus_objection(str(receipt.get(field) or "")) if reading else ""
+        if objection:
             errors.append(
-                f"{field} names a bibliographic corpus. An export of abstracts is not a "
-                "full-text document — see CLAUDE.md rule 8. Name the paper's own artefact, "
-                "or record the depth honestly as `abstract_only`.")
+                f"{field} {objection}. An export of abstracts is not a full-text document — "
+                "see CLAUDE.md rule 8. Name the paper's own artefact, or record the depth "
+                "honestly as `abstract_only`.")
     for item in receipt.get("evidence_basis") or []:
-        if CORPUS_ARTEFACT.search(str(item)) and depth in {
-            "partial_fulltext_read", "complete_fulltext_read"
-        }:
+        if reading and firewall.corpus_objection(str(item)):
             errors.append(
                 "evidence_basis cites a bibliographic corpus as the basis of a reading")
             break

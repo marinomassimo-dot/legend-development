@@ -8,18 +8,27 @@ raises is fixed the same minute; one that quietly drops a record type, or trunca
 from __future__ import annotations
 
 import csv
+import hashlib
 import importlib.util
 import json
+import re
 import sys
 import tempfile
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-SPEC = importlib.util.spec_from_file_location(
-    "harvest", ROOT / "framework/scripts/pubmed_corpus_harvest.py")
-harvest = importlib.util.module_from_spec(SPEC)
-SPEC.loader.exec_module(harvest)
+
+
+def _module(name: str, relative: str):
+    spec = importlib.util.spec_from_file_location(name, ROOT / relative)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    return module
+
+
+harvest = _module("harvest", "framework/scripts/pubmed_corpus_harvest.py")
+firewall = _module("firewall", "framework/scripts/corpus_firewall.py")
 
 
 ARTICLE = """
@@ -46,6 +55,18 @@ ARTICLE = """
     <Language>eng</Language>
     <PublicationTypeList><PublicationType>Journal Article</PublicationType></PublicationTypeList>
    </Article>
+   <ChemicalList>
+    <Chemical><RegistryNumber>EC 3.1.1.-</RegistryNumber>
+     <NameOfSubstance UI="C000001">WWOX protein, human</NameOfSubstance></Chemical>
+   </ChemicalList>
+   <MeshHeadingList>
+    <MeshHeading><DescriptorName UI="D004827" MajorTopicYN="Y">Epilepsy</DescriptorName>
+     <QualifierName UI="Q000235" MajorTopicYN="N">genetics</QualifierName></MeshHeading>
+    <MeshHeading><DescriptorName UI="D006801" MajorTopicYN="N">Humans</DescriptorName>
+    </MeshHeading>
+   </MeshHeadingList>
+   <KeywordList Owner="NOTNLM">
+    <Keyword MajorTopicYN="N">WOREE</Keyword></KeywordList>
    <OtherAbstract Type="Publisher" Language="fre">
     <AbstractText>Un resume en francais.</AbstractText></OtherAbstract>
    <CommentsCorrectionsList>
@@ -76,7 +97,11 @@ BOOK = """
     <PubDate><MedlineDate>Winter 2024</MedlineDate></PubDate></Book>
    <ArticleTitle>WWOX-Related Disorders</ArticleTitle>
    <Abstract><AbstractText>A chapter abstract.</AbstractText></Abstract>
-   <AuthorList><Author><LastName>Aldaz</LastName><ForeName>C Marcelo</ForeName></Author>
+   <AuthorList Type="authors">
+    <Author><LastName>Aldaz</LastName><ForeName>C Marcelo</ForeName></Author>
+   </AuthorList>
+   <AuthorList Type="editors">
+    <Author><LastName>Adam</LastName><ForeName>Margaret P</ForeName></Author>
    </AuthorList>
    <PublicationTypeList><PublicationType>Review</PublicationType></PublicationTypeList>
   </BookDocument>
@@ -102,6 +127,19 @@ PLAIN = """
 def document(*bodies: str) -> bytes:
     return ('<?xml version="1.0"?><PubmedArticleSet>' + "".join(bodies)
             + "</PubmedArticleSet>").encode("utf-8")
+
+
+def _harvest(payload: bytes, count: int, free: set[str] | None = None, term: str = "anything"):
+    """Run `harvest()` against a fixed payload, with the network stubbed out."""
+    original = (harvest.search, harvest._request, harvest.uids)
+    harvest.search = lambda query: {"count": count, "webenv": "W", "query_key": "1",
+                                    "query_translation": "expanded(" + query + ")"}
+    harvest._request = lambda endpoint, params, retries=5: payload
+    harvest.uids = lambda query: set(free or set())
+    try:
+        return harvest.harvest(term)
+    finally:
+        harvest.search, harvest._request, harvest.uids = original
 
 
 class RecordTypes(unittest.TestCase):
@@ -166,11 +204,88 @@ class Losslessness(unittest.TestCase):
         self.assertEqual(correction["ref_type"], "RetractionIn")
         self.assertEqual(correction["pmid"], "42464650")
 
+    def test_the_retraction_source_citation_survives(self) -> None:
+        """`find("RefSource") or ET.Element("x")`: a childless Element is falsy.
+
+        The fallback won every time, so all 40 correction notices in the 2026-08-05 harvest
+        carried an empty citation while ref_type and pmid looked perfect. The test above
+        asserted the two fields that were right.
+        """
+        self.assertEqual(self.row["corrections"][0]["citation"], "Int J Mol Med. 2026")
+
+    def test_mesh_headings_are_captured_with_qualifiers(self) -> None:
+        """A corpus for triage that drops MeSH has dropped the field triage ranks on."""
+        headings = {h["descriptor"]: h for h in self.row["mesh_headings"]}
+        self.assertEqual(set(headings), {"Epilepsy", "Humans"})
+        self.assertTrue(headings["Epilepsy"]["major"])
+        self.assertFalse(headings["Humans"]["major"])
+        self.assertEqual(headings["Epilepsy"]["qualifiers"][0]["name"], "genetics")
+
+    def test_keywords_and_chemicals_are_captured(self) -> None:
+        self.assertEqual([k["term"] for k in self.row["keywords"]], ["WOREE"])
+        self.assertEqual(self.row["keywords"][0]["owner"], "NOTNLM")
+        self.assertEqual(self.row["chemicals"][0]["name"], "WWOX protein, human")
+        self.assertEqual(self.row["chemicals"][0]["registry_number"], "EC 3.1.1.-")
+
+    def test_editors_are_not_recorded_as_authors(self) -> None:
+        """A BookDocument carries AuthorList Type="authors" AND Type="editors".
+
+        `iter("Author")` flattened both, so the GeneReviews series editors became authors of
+        every chapter — real names attached to the wrong relationship to the work.
+        """
+        book = harvest.parse(document(BOOK))[0]
+        roles = {person["last_name"]: person["role"] for person in book["authors"]}
+        self.assertEqual(roles, {"Aldaz": "authors", "Adam": "editors"})
+
+    def test_a_missing_author_list_type_defaults_to_authors(self) -> None:
+        self.assertEqual({p["role"] for p in self.row["authors"]}, {"authors"})
+
     def test_authors_keep_affiliations_collectives_and_orcid(self) -> None:
         people = self.row["authors"]
         self.assertEqual(people[0]["affiliations"], ["Epilepsy Research Centre"])
         self.assertEqual(people[0]["identifiers"]["ORCID"], "0000-0002-0000-0001")
         self.assertEqual(people[1]["collective_name"], "The WWOX Study Group")
+
+    def test_every_pubmed_element_is_captured_or_named(self) -> None:
+        """"Lossless" is a claim, so it gets a ratchet rather than a promise.
+
+        A new DTD element must be captured, or listed in `NOT_CAPTURED`, or fail here. The
+        previous version asserted losslessness in a docstring while dropping every MeSH
+        heading, and nothing could tell.
+        """
+        import xml.etree.ElementTree as ET
+
+        captured = {
+            "PubmedArticleSet", "PubmedArticle", "MedlineCitation", "PMID", "Article",
+            "Journal", "Title", "ISOAbbreviation", "ISSN", "JournalIssue", "Volume", "Issue",
+            "PubDate", "Year", "Month", "Day", "MedlineDate", "ArticleTitle", "Pagination",
+            "MedlinePgn", "ELocationID", "Abstract", "AbstractText", "CopyrightInformation",
+            "AuthorList", "Author", "LastName", "ForeName", "Initials", "CollectiveName",
+            "AffiliationInfo", "Affiliation", "Identifier", "Language", "PublicationTypeList",
+            "PublicationType", "ArticleDate", "VernacularTitle", "OtherAbstract",
+            "CommentsCorrectionsList", "CommentsCorrections", "RefSource", "PubmedData",
+            "PublicationStatus", "ArticleIdList", "ArticleId", "History", "PubMedPubDate",
+            "MeshHeadingList", "MeshHeading", "DescriptorName", "QualifierName",
+            "KeywordList", "Keyword", "ChemicalList", "Chemical", "NameOfSubstance",
+            "RegistryNumber", "PubmedBookArticle", "BookDocument", "Book", "BookTitle",
+            "PubmedBookData",
+        }
+        named = " ".join(harvest.NOT_CAPTURED)
+        unaccounted = set()
+        for element in ET.fromstring(document(ARTICLE, BOOK, PLAIN)).iter():
+            if element.tag not in captured and element.tag not in named:
+                unaccounted.add(element.tag)
+        self.assertEqual(unaccounted, set(),
+                         "these elements are neither captured nor listed in NOT_CAPTURED")
+
+    def test_the_fidelity_claim_is_qualified_not_absolute(self) -> None:
+        source = (ROOT / "framework/scripts/pubmed_corpus_harvest.py").read_text(
+            encoding="utf-8")
+        self.assertIn("not_captured", source)
+        for excluded in ("CoiStatement", "GeneSymbolList", "InvestigatorList",
+                         "NumberOfReferences", "PersonalNameSubjectList"):
+            with self.subTest(field=excluded):
+                self.assertIn(excluded, source)
 
     def test_bibliographic_detail_is_kept(self) -> None:
         self.assertEqual(self.row["journal"]["volume"], "64")
@@ -219,6 +334,337 @@ class Output(unittest.TestCase):
         self.assertEqual(back["29262231"]["pubmed_free_full_text_link"], "no")
 
 
+class Transport(unittest.TestCase):
+    """Failures of the wire, which are the ordinary case on a 700-record efetch."""
+
+    def test_a_truncated_body_is_retryable_not_a_crash(self) -> None:
+        """`_raise_on_xml_error` returned quietly on ParseError.
+
+        A truncated page therefore passed the check as if it were good and crashed later
+        inside `parse()` with a bare ParseError traceback — after no retry at all, which is
+        precisely the failure a retry loop exists for.
+        """
+        with self.assertRaises(harvest.TransientHarvestError):
+            harvest._raise_on_xml_error(b'<?xml version="1.0"?><PubmedArticleSet><Pubmed')
+
+    def test_a_permanent_error_body_is_not_retried(self) -> None:
+        """Five backoffs do not make "Invalid db name" into a valid query."""
+        attempts = []
+
+        class _Response:
+            def __enter__(self_inner):
+                attempts.append(1)
+                return self_inner
+
+            def __exit__(self_inner, *_): return False
+
+            def read(self_inner):
+                return b"<eSearchResult><ERROR>Invalid db name</ERROR></eSearchResult>"
+
+        original = harvest.urllib.request.urlopen
+        harvest.urllib.request.urlopen = lambda url, timeout=0: _Response()
+        try:
+            with self.assertRaises(harvest.HarvestError) as caught:
+                harvest._request("esearch.fcgi", {"db": "nope"}, retries=5)
+        finally:
+            harvest.urllib.request.urlopen = original
+        self.assertEqual(len(attempts), 1, "a malformed query was retried")
+        self.assertIn("Invalid db name", str(caught.exception))
+
+    def test_a_retry_after_date_does_not_crash_the_backoff(self) -> None:
+        """RFC 7231 allows an HTTP-date. `float()` on one raises inside the handler.
+
+        The crash landed on a 429 — the single response the retry loop exists to survive.
+        """
+        self.assertLessEqual(harvest._retry_after("Wed, 21 Oct 2015 07:28:00 GMT", 0),
+                             harvest.RETRY_CEILING_SECONDS)
+        self.assertEqual(harvest._retry_after("30", 0), 30.0)
+        self.assertEqual(harvest._retry_after(None, 3), 8.0)
+
+    def test_a_hostile_retry_after_is_capped(self) -> None:
+        self.assertEqual(harvest._retry_after("86400", 0), harvest.RETRY_CEILING_SECONDS)
+
+
+class DeletedUpstream(unittest.TestCase):
+    """A PMID withdrawn between the search and the fetch is not a parser defect."""
+
+    DELETED = "<DeleteCitation><PMID>99999999</PMID></DeleteCitation>"
+
+    def test_a_delete_citation_is_not_an_unknown_record_type(self) -> None:
+        payload = document(ARTICLE, self.DELETED)
+        self.assertEqual(harvest.unparsed_record_tags(payload), set())
+        self.assertEqual(harvest.deleted_pmids(payload), {"99999999"})
+
+    def test_the_count_invariant_accounts_for_deletions(self) -> None:
+        records, manifest, _ = _harvest(document(ARTICLE, self.DELETED), count=2)
+        self.assertEqual(len(records), 1)
+        self.assertEqual(manifest["deleted_by_pubmed"], ["99999999"])
+        self.assertEqual(manifest["parsed_count"] + len(manifest["deleted_by_pubmed"]),
+                         manifest["expected_count"])
+
+    def test_a_real_shortfall_is_still_refused(self) -> None:
+        with self.assertRaises(harvest.HarvestError):
+            _harvest(document(ARTICLE, self.DELETED), count=3)
+
+
+class TheFirewallMustBeAbleToSeeTheCorpus(unittest.TestCase):
+    """The guards recognise a corpus by PATH. `--out-dir` is a free parameter."""
+
+    def test_every_guard_uses_the_one_shared_definition(self) -> None:
+        """Four hand-maintained copies of one regex drift, and the drift is silent."""
+        for relative in ("framework/scripts/pubmed_corpus_harvest.py",
+                         "framework/scripts/fulltext_receipts.py",
+                         "framework/scripts/deepdive_manifest.py"):
+            with self.subTest(guard=relative):
+                text = (ROOT / relative).read_text(encoding="utf-8")
+                self.assertIn("corpus_firewall", text,
+                              f"{relative} does not use the shared firewall definition")
+                self.assertNotIn('r"files/corpus/', text,
+                                 f"{relative} still carries its own copy of the pattern")
+
+    def test_a_destination_the_guards_cannot_see_is_refused(self) -> None:
+        for destination in ("staging/wwox.jsonl", "files/fulltext/wwox_20260805.jsonl",
+                            "files/corpus2/wwox.jsonl"):
+            with self.subTest(destination=destination):
+                with self.assertRaises(harvest.HarvestError) as caught:
+                    harvest.refuse_unrecognised_destination([Path(destination)])
+                self.assertIn("firewall", str(caught.exception))
+
+    def test_dot_dot_cannot_walk_out_of_a_recognised_directory(self) -> None:
+        """`files/corpus/../../staging/wwox.jsonl` contains `files/corpus/` and is not in it.
+
+        The check read the path as a string, so it accepted the single input it exists to
+        refuse — and reported the risk as closed.
+        """
+        for destination in ("files/corpus/../../staging/wwox.jsonl",
+                            "files/corpus/../fulltext/wwox.jsonl",
+                            "a/corpus_seed_pubmed/../../../tmp/x.jsonl"):
+            with self.subTest(destination=destination):
+                with self.assertRaises(harvest.HarvestError):
+                    harvest.refuse_unrecognised_destination([Path(destination)])
+
+    def test_a_slug_is_a_filename_not_a_path(self) -> None:
+        for slug in ("../../staging/wwox", "sub/wwox", "..", "", "."):
+            with self.subTest(slug=slug):
+                with self.assertRaises(harvest.HarvestError):
+                    harvest.refuse_bad_slug(slug)
+        harvest.refuse_bad_slug("corpus_seed_pubmed_20260806")
+
+    def test_a_renamed_corpus_is_still_recognised_by_its_contents(self) -> None:
+        """The move anyone makes when a name check refuses them: copy it somewhere else."""
+        records = harvest.parse(document(ARTICLE, BOOK))
+        with tempfile.TemporaryDirectory() as tmp:
+            innocent = Path(tmp) / "files/fulltext/PMID36779245_paper.jsonl"
+            innocent.parent.mkdir(parents=True)
+            harvest.write_jsonl(records, innocent)
+            self.assertFalse(firewall.names_a_corpus(str(innocent)),
+                             "the name check is not supposed to catch this one")
+            self.assertTrue(firewall.looks_like_corpus(innocent))
+            self.assertTrue(firewall.corpus_objection(str(innocent)))
+
+    def test_a_renamed_seed_tsv_is_recognised_too(self) -> None:
+        records = harvest.parse(document(ARTICLE))
+        with tempfile.TemporaryDirectory() as tmp:
+            innocent = Path(tmp) / "notes.tsv"
+            harvest.write_seed(records, set(), innocent)
+            self.assertTrue(firewall.looks_like_corpus(innocent))
+
+    def test_a_real_paper_is_not_mistaken_for_a_corpus(self) -> None:
+        """A guard that refuses the papers is worse than no guard: it gets switched off."""
+        with tempfile.TemporaryDirectory() as tmp:
+            for name, body in (("paper.xml", "<article><body><p>WWOX is a gene.</p></body>"
+                                             "</article>"),
+                               ("paper.html", "<html><body>WWOX</body></html>"),
+                               ("notes.md", "# Reading notes\n\npmid 36779245 was read."),
+                               ("data.tsv", "gene\tvalue\nWWOX\t1.2\n"),
+                               ("results.jsonl", '{"gene": "WWOX", "value": 1.2}\n')):
+                path = Path(tmp) / name
+                path.write_text(body, encoding="utf-8")
+                with self.subTest(file=name):
+                    self.assertFalse(firewall.looks_like_corpus(path))
+
+    def test_the_conventional_destinations_are_accepted(self) -> None:
+        harvest.refuse_unrecognised_destination([
+            Path("files/corpus/wwox_20260805.jsonl"),
+            Path("disease-models/wwox/registries/corpus_seed_pubmed_20260805.tsv")])
+
+    def test_the_writer_refuses_before_it_writes_anything(self) -> None:
+        records = harvest.parse(document(ARTICLE))
+        with tempfile.TemporaryDirectory() as tmp:
+            destination = Path(tmp) / "elsewhere"
+            with self.assertRaises(harvest.HarvestError):
+                harvest.write_corpus(records, {}, set(), destination, "wwox")
+            self.assertFalse(destination.exists(), "a refused harvest left files behind")
+
+
+class OutputSet(unittest.TestCase):
+    def test_a_dotted_slug_does_not_rename_the_outputs(self) -> None:
+        """`(dir / "wwox.v2").with_suffix(".jsonl")` is `wwox.jsonl` — a manifest describing
+        files that do not exist."""
+        self.assertEqual(harvest.output_path(Path("files/corpus"), "wwox.v2", ".jsonl").name,
+                         "wwox.v2.jsonl")
+
+    def test_the_three_artefacts_are_promoted_together(self) -> None:
+        records = harvest.parse(document(ARTICLE, BOOK))
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "files/corpus"
+            harvest.write_corpus(records, {"parsed_count": 2}, {"36779245"}, out, "wwox")
+            self.assertFalse(list(out.glob("*.partial")))
+            manifest = json.loads((out / "wwox.manifest.json").read_text(encoding="utf-8"))
+            self.assertEqual(sorted(manifest["outputs"]), ["wwox.jsonl", "wwox.tsv"])
+            for name, entry in manifest["outputs"].items():
+                self.assertEqual(
+                    hashlib.sha256((out / name).read_bytes()).hexdigest(), entry["sha256"])
+
+    def test_a_manifest_failure_leaves_no_orphan_corpus(self) -> None:
+        """Data on disk with no terms of use is the one artefact the firewall assumes away."""
+        records = harvest.parse(document(ARTICLE))
+        unserialisable = {"parsed_count": 1, "boom": object()}
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "files/corpus"
+            with self.assertRaises(TypeError):
+                harvest.write_corpus(records, unserialisable, set(), out, "wwox")
+            self.assertEqual(sorted(p.name for p in out.iterdir()), [])
+
+    def test_no_abstracts_strips_the_jsonl_too(self) -> None:
+        """The documented refresh sends `--no-abstracts` into a TRACKED directory.
+
+        Stripping only the TSV meant an operator asking for a safe bibliographic export wrote
+        706 publisher-copyright abstracts into the publishable tree, and the flag's own help
+        text said so — which made it worse, not better.
+        """
+        records, manifest, free = _harvest(document(ARTICLE, BOOK), count=2)
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "files/corpus"
+            harvest.write_corpus(records, manifest, free, out, "wwox", abstracts=False)
+            for name in ("wwox.jsonl", "wwox.tsv"):
+                body = (out / name).read_text(encoding="utf-8")
+                with self.subTest(file=name):
+                    self.assertNotIn("Thirteen patients", body)
+                    self.assertNotIn("Un resume en francais", body)
+                    self.assertNotIn("chapter abstract", body)
+            self.assertIn("36779245", (out / "wwox.jsonl").read_text(encoding="utf-8"))
+
+    def test_the_default_run_still_keeps_abstracts(self) -> None:
+        records, manifest, free = _harvest(document(ARTICLE), count=1)
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp) / "files/corpus"
+            harvest.write_corpus(records, manifest, free, out, "wwox")
+            self.assertIn("Thirteen patients",
+                          (out / "wwox.jsonl").read_text(encoding="utf-8"))
+
+    def test_concurrent_runs_do_not_share_a_temporary(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            target = Path(tmp) / "corpus.jsonl"
+            captured = []
+            harvest._stage(target, lambda h: captured.append(h) or h.write("{}\n"))
+            leftovers = list(Path(tmp).glob("*.partial"))
+            self.assertEqual(len(leftovers), 1)
+            self.assertNotEqual(leftovers[0].name, "corpus.jsonl.partial")
+
+    def test_the_seed_exposes_retraction_status(self) -> None:
+        """40 of 706 records carry a notice and the triage surface showed none of them."""
+        row = harvest.to_seed_row(harvest.parse(document(ARTICLE))[0], set())
+        self.assertEqual(row["corrections"], "RetractionIn:42464650")
+        self.assertIn("corrections", harvest.SEED_FIELDS)
+
+
+class VerifyAnExistingCorpus(unittest.TestCase):
+    """Nothing read the checksums back, so a damaged corpus looked exactly like a good one."""
+
+    def _corpus(self, tmp: Path) -> Path:
+        records, manifest, free = _harvest(document(ARTICLE, BOOK), count=2)
+        out = tmp / "files/corpus"
+        harvest.write_corpus(records, manifest, free, out, "wwox")
+        return out / "wwox.manifest.json"
+
+    def test_an_untouched_corpus_verifies(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            self.assertEqual(harvest.verify(self._corpus(Path(tmp))), [])
+
+    def test_an_edited_corpus_is_caught(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest_path = self._corpus(Path(tmp))
+            jsonl = manifest_path.parent / "wwox.jsonl"
+            jsonl.write_text(jsonl.read_text(encoding="utf-8").splitlines()[0] + "\n",
+                             encoding="utf-8")
+            problems = harvest.verify(manifest_path)
+            self.assertTrue(any("sha256" in p for p in problems))
+            self.assertTrue(any("holds 1 records" in p for p in problems))
+
+    def test_a_missing_checksum_is_not_a_pass(self) -> None:
+        """The comparison ran only `if expected`, so the weakest manifest verified cleanest."""
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest_path = self._corpus(Path(tmp))
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["outputs"]["wwox.jsonl"].pop("sha256")
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            self.assertTrue(any("no usable sha256" in p
+                                for p in harvest.verify(manifest_path)))
+
+    def test_a_damaged_jsonl_is_reported_not_raised(self) -> None:
+        """A corrupt corpus is the input this command exists for; a traceback answers it by
+        saying the checker is broken."""
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest_path = self._corpus(Path(tmp))
+            (manifest_path.parent / "wwox.jsonl").write_text('{"pmid": "1"}\n{oops\n',
+                                                             encoding="utf-8")
+            problems = harvest.verify(manifest_path)
+            self.assertTrue(any("not valid JSON" in p for p in problems))
+
+    def test_a_manifest_that_contradicts_its_own_invariant_is_caught(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest_path = self._corpus(Path(tmp))
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["expected_count"] = 99
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            self.assertTrue(any("its own invariant" in p
+                                for p in harvest.verify(manifest_path)))
+
+    def test_a_later_harvester_version_does_not_invalidate_a_snapshot(self) -> None:
+        """A snapshot is history. It does not become wrong because the tool moved on — and a
+        check that says otherwise trains people to ignore it."""
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest_path = self._corpus(Path(tmp))
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["harvester_version"] = "3.1"
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            self.assertEqual(harvest.verify(manifest_path), [])
+
+    def test_an_unsupported_schema_is_caught(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest_path = self._corpus(Path(tmp))
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["manifest_schema_version"] = 99
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            self.assertTrue(any("outside the supported range" in p
+                                for p in harvest.verify(manifest_path)))
+
+    def test_a_torn_output_set_is_detectable(self) -> None:
+        """Three renames cannot be one. The manifest is promoted last and carries the other
+        two checksums, so a set torn mid-promotion no longer describes itself."""
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest_path = self._corpus(Path(tmp))
+            jsonl = manifest_path.parent / "wwox.jsonl"
+            jsonl.write_text(jsonl.read_text(encoding="utf-8") + '{"pmid": "999"}\n',
+                             encoding="utf-8")
+            self.assertTrue(any("sha256" in p for p in harvest.verify(manifest_path)))
+
+    def test_a_corpus_predating_the_terms_of_use_is_caught(self) -> None:
+        """The live 2026-08-05 corpus: version 2.0, and none of the terms 2.0 was to write."""
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest_path = self._corpus(Path(tmp))
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            for field in ("evidential_status", "permitted_uses", "forbidden_uses",
+                          "manifest_schema_version"):
+                manifest.pop(field)
+            manifest["harvester_version"] = "2.0"
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            problems = harvest.verify(manifest_path)
+            self.assertTrue(any("evidential_status" in p for p in problems))
+            self.assertTrue(any("manifest_schema_version" in p for p in problems))
+
+
 class Refusals(unittest.TestCase):
     """Every one of these is a corpus that would otherwise have shipped silently short."""
 
@@ -252,17 +698,7 @@ class CompletenessInvariants(unittest.TestCase):
     """
 
     def _run(self, payload: bytes, count: int) -> None:
-        original_search, original_request, original_uids = (
-            harvest.search, harvest._request, harvest.uids)
-        harvest.search = lambda term: {"count": count, "webenv": "W", "query_key": "1",
-                                       "query_translation": term}
-        harvest._request = lambda endpoint, params, retries=5: payload
-        harvest.uids = lambda term: set()
-        try:
-            harvest.harvest("anything")
-        finally:
-            harvest.search, harvest._request, harvest.uids = (
-                original_search, original_request, original_uids)
+        _harvest(payload, count)
 
     def test_a_short_harvest_is_refused(self) -> None:
         with self.assertRaises(harvest.HarvestError) as caught:
@@ -282,17 +718,8 @@ class CompletenessInvariants(unittest.TestCase):
         self.assertIn("unhandled record type", str(caught.exception))
 
     def test_a_complete_harvest_records_its_invariants(self) -> None:
-        original_search, original_request, original_uids = (
-            harvest.search, harvest._request, harvest.uids)
-        harvest.search = lambda term: {"count": 2, "webenv": "W", "query_key": "1",
-                                       "query_translation": "expanded(" + term + ")"}
-        harvest._request = lambda endpoint, params, retries=5: document(ARTICLE, BOOK)
-        harvest.uids = lambda term: {"36779245"}
-        try:
-            records, manifest, free = harvest.harvest("WWOX")
-        finally:
-            harvest.search, harvest._request, harvest.uids = (
-                original_search, original_request, original_uids)
+        records, manifest, free = _harvest(
+            document(ARTICLE, BOOK), count=2, free={"36779245"}, term="WWOX")
         self.assertEqual(len(records), 2)
         self.assertEqual(manifest["parsed_count"], manifest["expected_count"])
         self.assertEqual(manifest["distinct_pmids"], 2)
