@@ -21,7 +21,13 @@
     },
     "claim_registry": {
       "path": "disease-models/wwox/registries/claim_registry_current.md",
-      "sha256": "35e412e3fda44e6567b95e20fbb726749b990e97e42dde32a5e4cd8939fa287d"
+      "scope_blocks": [
+        "CLAIM 016",
+        "CLAIM 024",
+        "CLAIM 035"
+      ],
+      "scope_sha256": "9e562e2a73597c69bcaff71ae9d598a551b101f3f6d2023e0b25a585149aad30",
+      "verification_policy": "sealed_scope"
     },
     "derivation_script": {
       "path": "disease-models/wwox/analysis/scripts/derive_dismech_sidecar.py",
@@ -35,21 +41,19 @@
       "path": "disease-models/wwox/analysis/data/dismech_canonicalisation_v1.json",
       "sha256": "79eabb8c5d4ee14d868aa984ea4bfabbb5d5d4ed473481f21b291ddd370c90c4"
     },
-    "independent_protocol_script": {
-      "path": "disease-models/wwox/analysis/scripts/dismech_independent_protocol.py",
-      "sha256": "98d5400cb0c7d4ca9fced06917474da9a0fe4d76acf2c240ff508c91d37fecc7"
-    },
-    "independent_protocol_tests": {
-      "path": "disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py",
-      "sha256": "7f574d5661f2a36639c566e541a28ea6a48e0af7df290163997e3a314211d786"
-    },
     "independent_run_attestation": {
       "path": "disease-models/wwox/analysis/data/dismech_second_derivation_run_attestation_016_024_035.json",
       "sha256": "d094ae864d494b7856c5e87c862c891335fc3f037b6140b00e160e929e317724"
     },
     "paper_registry": {
       "path": "disease-models/wwox/registries/paper_registry_current.md",
-      "sha256": "03742dcb2cabb3ad264134bfbc57659ceb7eaf3d9983f7f63a8922b6e43f04d5"
+      "scope_blocks": [
+        "PAPER 019",
+        "PAPER 055",
+        "PAPER 056"
+      ],
+      "scope_sha256": "2da5463cebc9c8f666e43e1b7be130ebb0d2962e17ce0dee390e8367b0d88d2a",
+      "verification_policy": "sealed_scope"
     },
     "receipt_ledger": {
       "path": "disease-models/wwox/registries/fulltext_read_receipts.jsonl",
@@ -101,5 +105,17 @@
     "records": 49,
     "sha256": "29fe900b7849ffc15b1a01bc76486916c41694b10a227c0a4948335cde982a24"
   },
-  "revision": "rev.16 \u2014 re-sealed after the structural sentinel fix in test_derive_dismech_sidecar.py"
+  "revision": "rev.16 \u2014 re-sealed after the structural sentinel fix in test_derive_dismech_sidecar.py",
+  "window": {
+    "before_phase5_pr": "Re-verify that scope_sha256 for claim_registry and paper_registry still match. That is the check that protects the submission \u2014 a contribution derived from superseded claims \u2014 and it is the one the whole-file hash could not express.",
+    "closed_on": "2026-08-06",
+    "rationale": "The four comparison axes are closed (dismech_axis4_result.md: 'This closes the four axes'). Axis 4 is near-empty for a structural reason, not for want of data: the production dedup key merges two occurrences only when an author wrote the same sentence twice, so a third derivation would reproduce the same one-merge-against-none comparison at any scale. Axis 2 was already confirmed by two blind reviewers and the independent derivation is archived, not staged for reuse. No measurement remains that a further derivation against these inputs would inform.",
+    "state": "closed",
+    "verification_scope": "Immutable inputs and the output are verified whole, at git_head_at_freeze and in the working tree. The receipt ledger is verified by append-only prefix. The two canonical registries are verified by the blocks the derivation consumed. Editing a registry outside that scope is not a violation of this freeze; editing inside it is.",
+    "verifier_excluded": [
+      "disease-models/wwox/analysis/scripts/dismech_independent_protocol.py",
+      "disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py"
+    ],
+    "verifier_exclusion_reason": "A verifier sealed by the baseline it checks can never be repaired, only abandoned: every correction to the checker falsifies the seal. Data, derivation scripts and outputs stay sealed; the checker does not. Its integrity is carried by git history and its own test suite."
+  }
 }

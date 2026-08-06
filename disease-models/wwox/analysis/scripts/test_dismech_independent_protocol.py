@@ -554,5 +554,66 @@ class CrossRunMatchingTests(unittest.TestCase):
         self.assertFalse(axis4["production_key_modified"])
 
 
+class SealedScopeTests(unittest.TestCase):
+    """A freeze over a living registry must pin what was consumed, not the container.
+
+    Re-sealed 2026-08-06. The previous whole-file hash reported an edit to CLAIM 005 — a claim
+    this experiment never reads — as identical to an edit inside the export scope, so it fired
+    on every registry commit and could not fire harder on the one that mattered.
+    """
+
+    REGISTRY = (
+        "# Claim registry\n\n"
+        "## CLAIM 005\n**Status:** consolidated baseline\n**Summary:** out of scope.\n\n"
+        "## CLAIM 016\n**Status:** in observation\n**Summary:** in scope.\n\n"
+        "## CLAIM 024\n**Status:** in observation\n**Summary:** also in scope.\n"
+    )
+    SCOPE = ["CLAIM 016", "CLAIM 024"]
+
+    def digest(self, text: str) -> str:
+        return protocol.sha256_bytes(protocol.registry_scope_bytes(text, self.SCOPE))
+
+    def test_an_edit_outside_the_scope_is_not_a_violation(self) -> None:
+        """The exact case that broke the seal: CLAIM 005 moved, the export scope did not."""
+        edited = self.REGISTRY.replace("**Summary:** out of scope.",
+                                       "**Summary:** narrowed, medication caution deleted.")
+        self.assertNotEqual(edited, self.REGISTRY)
+        self.assertEqual(self.digest(edited), self.digest(self.REGISTRY))
+
+    def test_an_edit_inside_the_scope_is_a_violation(self) -> None:
+        """And the check is worthless unless this one fails."""
+        edited = self.REGISTRY.replace("**Summary:** in scope.", "**Summary:** reworded.")
+        self.assertNotEqual(self.digest(edited), self.digest(self.REGISTRY))
+
+    def test_a_vanished_scope_block_is_reported_not_ignored(self) -> None:
+        with self.assertRaises(ValueError):
+            protocol.registry_scope_bytes(
+                self.REGISTRY.replace("## CLAIM 016", "## CLAIM 999"), self.SCOPE)
+
+    def test_the_live_baseline_pins_no_living_file_by_whole_hash(self) -> None:
+        baseline = protocol.load_json(protocol.BASELINE)
+        living = {"claim_registry_current.md", "paper_registry_current.md",
+                  "fulltext_read_receipts.jsonl"}
+        for name, record in baseline["inputs"].items():
+            if Path(record["path"]).name in living:
+                with self.subTest(input=name):
+                    self.assertIn(record.get("verification_policy"),
+                                  {"sealed_scope", "append_only_prefix"},
+                                  f"{name} is pinned by whole file — see FREEZE_SCOPE_GATE")
+
+    def test_the_verifier_is_not_sealed_by_the_baseline_it_checks(self) -> None:
+        """Otherwise the seal can only ever be abandoned, never repaired."""
+        baseline = protocol.load_json(protocol.BASELINE)
+        sealed = {Path(record["path"]).name for record in baseline["inputs"].values()}
+        self.assertNotIn("dismech_independent_protocol.py", sealed)
+        self.assertNotIn("test_dismech_independent_protocol.py", sealed)
+
+    def test_the_window_declares_itself_closed(self) -> None:
+        window = protocol.load_json(protocol.BASELINE).get("window") or {}
+        self.assertEqual(window.get("state"), "closed")
+        self.assertIn("axes", window.get("rationale", ""))
+        self.assertTrue(window.get("before_phase5_pr"))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

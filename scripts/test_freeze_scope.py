@@ -50,24 +50,23 @@ STATE_MANIFEST = ROOT / "framework/state/state_manifest_current.md"
 SCOPED_PIN_KEYS = ("append_only_prefix", "prefix_sha256", "prefix_length", "scope",
                    "blocks", "revision", "extracted")
 
-# 🔴 Known offender, 2026-08-06: `dismech_phase2_baseline.json` pins the two canonical
-# registries by whole file. It broke on `BATCH_20260806_001` — over CLAIM 005, which is not
-# even in its export scope of CLAIM 016/024/035.
+# 🔴 **Empty, and it took four hours to get here.** The one known offender —
+# `dismech_phase2_baseline.json`, which pinned both canonical registries by whole file and
+# broke on `BATCH_20260806_001` over CLAIM 005, a claim outside its own export scope — was
+# re-sealed on 2026-08-06: the registries are now pinned by the blocks the derivation
+# consumed, and the verifier was lifted out of the seal it implements so it could be repaired
+# at all.
 #
-# The receipt ledger is deliberately NOT listed, and the reason matters more than the entry.
-# The same baseline pins it with `verification_policy: append_only_prefix`, `prefix_event_count`
-# and `prefix_sha256` — correctly, three lines above the two that are wrong. The prose version
-# of this gate, written minutes before this check existed, asserted the opposite: that the
-# ledger was whole-file pinned and that the append-only pattern "was not adopted". This test
-# refuted it on first run. That is the entire argument for executable gates over registry
-# prose, demonstrated on the author of the prose.
+# Two things this list should keep saying after the entry is gone. The receipt ledger was
+# never an offender: the same baseline had always pinned it with
+# `verification_policy: append_only_prefix`, correctly, three lines above the two entries that
+# were wrong — and the prose version of this gate claimed the opposite until this file refuted
+# it on first run. And the tiering was therefore never unknown to anyone; it was applied to the
+# file that grows and not to the files that live.
 #
-# Grandfathered by exact identity, not by count, so the list cannot shrink by swapping one
-# offender for another.
-GRANDFATHERED = {
-    "disease-models/wwox/analysis/data/dismech_phase2_baseline.json": {
-        "claim_registry", "paper_registry"},
-}
+# Grandfather by exact identity, never by count, so the list can only shrink by fixing
+# something rather than by swapping one offender for another.
+GRANDFATHERED: dict[str, set[str]] = {}
 
 
 def living_files() -> set[str]:

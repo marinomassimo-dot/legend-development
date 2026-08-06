@@ -78,6 +78,23 @@ def _registry_block(text: str, kind: str, identifier: str) -> str:
     return match.group(1)
 
 
+def registry_scope_bytes(text: str, blocks: list[str]) -> bytes:
+    """The declared blocks, concatenated in declared order, as sealed bytes.
+
+    A freeze over a *living* registry must pin what the derivation consumed, not the file
+    that happened to contain it. `BATCH_20260806_001` edited CLAIM 005 — outside the export
+    scope of CLAIM 016/024/035, which had not moved by a byte — and a whole-file hash reported
+    that as indistinguishable from an edit to the scope itself. It fires on every registry
+    commit and cannot fire harder on the one commit that matters. See `FREEZE_SCOPE_GATE` and
+    `scripts/test_freeze_scope.py`.
+    """
+    parts = []
+    for block in blocks:
+        kind, _, identifier = block.partition(" ")
+        parts.append(f"## {kind} {identifier}" + _registry_block(text, kind, identifier))
+    return "".join(parts).encode("utf-8")
+
+
 def derive_receipt_projection(root: Path = REPO_ROOT,
                               manifest_path: Path | None = None) -> list[dict[str, Any]]:
     """Derive the complete eligibility projection from target claims and live receipts.
@@ -213,6 +230,16 @@ def verify_phase2_baseline(path: Path | None = None, *, verify_git: bool = True)
             else:
                 if tail.get("event_id") != record["prefix_tail_event_id"]:
                     errors.append(f"{name}: sealed prefix tail event changed")
+        elif record.get("verification_policy") == "sealed_scope":
+            try:
+                scope = registry_scope_bytes(source.read_text(encoding="utf-8"),
+                                             record["scope_blocks"])
+            except ValueError as exc:
+                errors.append(f"{name}: sealed scope no longer resolves: {exc}")
+            else:
+                if sha256_bytes(scope) != record["scope_sha256"]:
+                    errors.append(f"{name}: sealed scope changed "
+                                  f"({', '.join(record['scope_blocks'])})")
         elif sha256_file(source) != record["sha256"]:
             errors.append(f"{name}: sha256 mismatch")
         if verify_git and freeze:
@@ -228,6 +255,16 @@ def verify_phase2_baseline(path: Path | None = None, *, verify_git: bool = True)
                         errors.append(f"{name}: frozen git blob is shorter than sealed prefix")
                     elif sha256_bytes(b"".join(frozen_lines[:count])) != record["prefix_sha256"]:
                         errors.append(f"{name}: frozen git prefix disagrees with declared hash")
+                elif record.get("verification_policy") == "sealed_scope":
+                    try:
+                        frozen_scope = registry_scope_bytes(
+                            frozen_bytes.decode("utf-8"), record["scope_blocks"])
+                    except ValueError as exc:
+                        errors.append(f"{name}: frozen scope no longer resolves: {exc}")
+                    else:
+                        if sha256_bytes(frozen_scope) != record["scope_sha256"]:
+                            errors.append(
+                                f"{name}: frozen git scope disagrees with declared hash")
                 elif sha256_bytes(frozen_bytes) != record["sha256"]:
                     errors.append(f"{name}: frozen git blob disagrees with declared hash")
 
