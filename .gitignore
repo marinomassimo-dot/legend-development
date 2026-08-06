@@ -38,3 +38,10 @@ node_modules/
 md-output/
 *.dcd
 state.tsv
+
+# Browser-automation session artefacts. Retrieval via a real browser (publisher
+# bot-blocks) drops page snapshots, console logs and network traces here. They
+# are transient, they record the URLs a session visited, and they have no place
+# in a public repository — the retrieval outcome belongs in
+# files/fulltext/_retrieval_manifest.jsonl and the handoff card instead.
+.playwright-mcp/

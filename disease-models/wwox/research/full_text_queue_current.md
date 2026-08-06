@@ -577,7 +577,19 @@ fenotipo epilettico antecedenti alla mappatura Wwox; il paper 2019 li importa so
 **Priorità rivista 2026-08-06:** compare anche come referenza 27 di PMID 19936220, accanto a
 `FT-042`, nella stessa frase di Discussione da cui l'intera premessa "epilettogenesi" del KO
 murino deriva. Va letto insieme a `FT-042`, non dopo. Vedi `DL-MECH-073`.
-**Current status:** ⬜ non recuperato, non letto.
+**Current status:** ⬜ **NON LETTO — `PAYWALL`, debito dichiarato e aperto.** Recupero
+tentato 2026-08-06: **nessun DOI registrato**, quindi Unpaywall, OpenAlex e Semantic Scholar
+non sono nemmeno indirizzabili; `elink pubmed→pmc` non restituisce `LinkSetDb`, quindi non è
+depositato in PMC (AALAS deposita volumi più recenti di *Comparative Medicine*, non questo del
+2007). Record chiuso genuino — la classe più difficile della cascata. Handoff:
+`files/fulltext/PMID17803050_Suzuki2007.handoff.md`.
+**Via più economica:** stesso autore corrispondente di `FT-042` — recapiti nella handoff card,
+fuori dal materiale pubblico; in alternativa ILL per citazione (*Comp Med* 2007;57(4):360–369)
+o accesso socio AALAS.
+**Nota:** PMID 19936220 cita questo paper per tre comparatori oggi di seconda mano in LEGEND —
+densità ossea solo lievemente ridotta nei ratti *lde/lde*, nessun osteosarcoma nella loro breve
+vita, e **BUN significativamente più alto**, che è l'eco nel ratto dell'uremia misurata nel
+topo null.
 
 ---
 
@@ -598,7 +610,19 @@ modello ratto": è il **terminale effettivo** di una premessa oggi attribuita a 
 murino, su specie e classe allelica diverse (delezione 13 bp esone 9 → frameshift
 C-terminale, non un null; crisi audiogene). Finché non è letto, nessuna formulazione
 canonica può dire che un modello murino Wwox-null "mostra epilettogenesi". Vedi `DL-MECH-073`.
-**Current status:** ⬜ record presente; full text precedentemente non accessibile, non letto.
+**Current status:** ⬜ **NON LETTO — `OA_BUT_BOT_BLOCKED`, debito dichiarato e aperto.**
+Recupero ritentato 2026-08-06 su otto tier (PMC/Europe PMC, Unpaywall, OpenAlex, Semantic
+Scholar, OpenAIRE/Zenodo/CORE, publisher via `curl`, publisher via browser reale, ricerca web
+aperta). Il record è **bronze OA** — libero da leggere, senza licenza e **senza alcun deposito
+in repository**: esiste una sola location, `onlinelibrary.wiley.com/doi/pdfdirect/...`.
+`curl` riceve una pagina di sfida HTML da 5.978 byte; Playwright headless non supera
+l'interstitial Cloudflare (Ray `a26fb07affb9ed54`). Non è un paywall, è un blocco anti-bot:
+**un essere umano che clicca il landing page in un browser normale quasi certamente lo
+ottiene.** Handoff con template e tier provati:
+`files/fulltext/PMID19500159_Suzuki2009.handoff.md`.
+**Via più economica:** l'autore corrispondente (Nippon Veterinary and Life Science University)
+è lo stesso di `FT-041` — **una sola email sblocca entrambi i terminali della catena**. I
+recapiti stanno nella handoff card, fuori dal materiale pubblico.
 
 ---
 
