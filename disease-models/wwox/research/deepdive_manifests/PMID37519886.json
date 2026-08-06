@@ -1,0 +1,273 @@
+{
+  "schema_version": 2,
+  "pmid": "37519886",
+  "doi": "10.3389/fgene.2023.1214968",
+  "receipt": "FTR-20260805-37519886-01",
+  "receipt_provenance_note": "The persisted append-only receipt predates automatic writer timestamps and records event_at/analysis_at as 2026-08-05T00:00:00Z. Treat that value as date-level legacy precision, not an observed second. The ledger is not rewritten; new receipts carry analysis_time_precision and receive event_at from the writer.",
+  "landing": [
+    "FTR-20260805-37519886-01",
+    "staging/deepdive_PMID37519886_Kolat2023.md",
+    "staging/commit_candidate_20260805_001.md",
+    "paper_registry_current#CORPUS-STUB-095",
+    "literature_tracking_log_current#LIT-0117",
+    "discovery_ledger_current#DL-MECH-069",
+    "full_text_queue_current#FT-037",
+    "full_text_queue_current#FT-038",
+    "learned_gates_registry#CUTPOINT_ENDPOINT_DRIFT_GATE",
+    "learned_gates_registry#RANK_OVERRIDE_SELECTION_GATE"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline in the main session. The decisive content of this paper is in the figure images and the supplement, and the locator contract requires the quote and the image inspection to come from the same open document; delegating would have split them."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": true
+    },
+    {
+      "skill": "legend-batch-inferential-sweep",
+      "used": false,
+      "reason": "A single record was supplied, not a batch; the sweep has no second pass to make over one paper."
+    },
+    {
+      "skill": "legend-proband-priority-matrix",
+      "used": false,
+      "reason": "Ranking orders a batch for reading. One paper, already read in full, has nothing left to order."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "The two transfers in the dossier are an assay control and a construct-design parameter, not therapeutic candidates. Forging a hypothesis portfolio out of a bladder-cancer over-expression study would manufacture candidates the evidence does not support."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No molecule, compound or SMILES emerged. There is nothing to run through the BLOCK-1 ADMET gate."
+    },
+    {
+      "skill": "legend-aso-designer",
+      "used": false,
+      "reason": "No splice-switching content. The 3'UTR miR-186-5p site is an mRNA-stability element, not a splice target, and an antagomiR is explicitly not proposed for this genotype."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "One commit candidate was queued, not applied. The four canonical current files change only under an operator-authorised BATCH_COMMIT, and the operator excluded them from this task."
+    },
+    {
+      "skill": "legend-session-self-eval",
+      "used": true
+    },
+    {
+      "skill": "legend-capability-scout",
+      "used": true
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 80,
+    "publications_on_gene": 40,
+    "research_type": "mixed",
+    "is_primary_group_for_disease": false,
+    "weighting": "Measured on Europe PMC 2026-08-05: AUTH:\"Bednarek AK\" = 80 records, AUTH:\"Bednarek AK\" AND WWOX = 40, i.e. half the senior author's output is on this gene; first author AUTH:\"Kolat D\" = 62 with 13 on WWOX. This is a primary group FOR THE GENE and not a primary group for the disease - there is no WWOX-DEE, WOREE or neurodevelopmental work in the corpus, and the two questions are recorded separately because they are different questions. research_type is 'mixed' and the halves must be named: the wet half is real (lentiviral stable transduction of three lines with Western confirmation, CAGE library preparation from RIN>7 RNA, qPCR against three reference genes plus a calibrator and Pfaffl quantification) and the computational half dominates the argument (limma-voom, mSVM-RFE with 10-fold CV, MFA, six ncRNA interaction databases, GTRD, ENCORI, ncFANs, RNAhybrid, TargetScan, Evaluate Cutpoints). Weighting: group experience raises confidence in EXECUTION - the transductions, the deposited GSE193659 dataset and the qPCR are credible - and transfers nothing to INTERPRETATION, because the causal architecture of Figure 7 is assembled from prediction servers and gene expertise does not convert a predicted arc into a measured one. Disease-transfer weight is minimal by construction: nothing here touches the nervous system. No declared conflicts of interest."
+  },
+  "field_density": {
+    "queries": [
+      {"query": "WWOX AND (lncRNA OR \"long non-coding RNA\")", "count": 303, "source": "Europe PMC REST search, 2026-08-05"},
+      {"query": "WWOX AND \"bladder cancer\"", "count": 231, "source": "Europe PMC REST search, 2026-08-05"},
+      {"query": "LINC01137", "count": 88, "source": "Europe PMC REST search, 2026-08-05"},
+      {"query": "WWOX AND \"miR-186\"", "count": 30, "source": "Europe PMC REST search, 2026-08-05"},
+      {"query": "WWOX AND UPF1", "count": 12, "source": "Europe PMC REST search, 2026-08-05"},
+      {"query": "LINC01137 AND WWOX", "count": 4, "source": "Europe PMC REST search, 2026-08-05"}
+    ],
+    "note": "The specific axis is genuinely thin (4 records) while the surrounding fields are not (303 and 231). The novelty claim in the title is about the combination and is fair. The PubMed connector is unauthorised in this session, so the counts come from Europe PMC; that is a measurement in a different index, not an estimate, and the index is named next to each number."
+  },
+  "multihop": {
+    "references_enumerated": 80,
+    "gene_direct_refs_in_source": [
+      "24550385", "26166818", "34140629", "17890317", "27840941", "32101017",
+      "25708809", "32132039", "30619736", "34204789", "30622118", "32300104",
+      "34513711", "34204827", "35563688", "34816661", "23824713", "28496150",
+      "30211123", "18452537", "33946771", "30307120", "28977834", "31230746",
+      "32931356", "21347750", "31456594", "36336217", "36499501"
+    ],
+    "resolved": [
+      "24550385", "26166818", "34140629", "17890317", "27840941", "32101017",
+      "25708809", "32132039", "30619736", "34204789", "30622118", "32300104",
+      "34513711", "34204827", "35563688", "34816661", "23824713", "28496150",
+      "30211123", "18452537", "33946771", "30307120", "28977834", "31230746",
+      "32931356", "21347750", "31456594", "36336217"
+    ],
+    "queued": ["36499501", "30619736"],
+    "note": "80 references enumerated from the PMC XML back matter. 29 are WWOX- or axis-direct and carry a PMID. 28 of the 29 resolve to an existing LEGEND record (19 in paper_registry_current.md as corpus placeholders, 9 more only as catalogued rows in batch_queue.md). Exactly one is absent from every canonical and research file: PMID 36499501, Huyan 2022, which makes miR-186-5p a bladder-cancer exosomal miRNA driving NK-cell dysfunction - the single most axis-relevant reference in the list. Queued as FT-037. PMID 30619736 (Hussain 2018 WWOX TAP-MS interactome) is present in the registry but has no full-text receipt and is the source of the WWOX-UPF1 edge this reading now leans on, so it is queued as FT-038 rather than treated as read."
+  },
+  "corpus_crossquery": {
+    "query": "Which of this paper's 29 WWOX-/axis-direct references (those carrying a PMID) already exist in paper_registry_current.md, and which are absent from the paper registry, the literature tracking log, batch_queue.md, the full-text queue and the discovery ledger?",
+    "hits": 19,
+    "note": "Run mechanically over the canonical registries and the research layer after the reading, as a bibliographic audit and not as a method of analysis. 19 of 29 present in paper_registry_current.md, 9 more only in batch_queue.md, 1 absent everywhere (36499501). A 34% miss rate against the paper registry on the reference list of a paper that has itself sat in that registry as an unprocessed stub since April 2026."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "No retraction, no expression of concern and no correction. Verified against the Europe PMC core record for EXT_ID:37519886 on 2026-08-05: commentCorrectionList is absent, isOpenAccess Y, license cc by, inEPMC Y. Note for the audit trail: the reference list contains a corrigendum (PMID 34513711, 'Corrigendum: Fragile gene WWOX guides TFAP2A/TFAP2C-dependent actions against tumor progression in grade II bladder cancer'), which corrects an EARLIER paper by the same group and not this one - a title that is easy to mis-attribute on a keyword pass. The PubMed connector is unauthorised in this session, so this was not re-checked against a live PubMed query."
+  },
+  "source_artifacts": [
+    {"path": "files/fulltext/PMID37519886_PMC.xml", "sha256": "f186e028e04f2e9fe40622b4bac10dc2e88caa27054e21a0d6ab0dcb2e2163ed", "kind": "article_text"},
+    {"path": "files/fulltext/PMID37519886_Kolat2023_supplement.docx", "sha256": "bd4a7bc7a0aeebf0147e216a239c6ec2a6d8fbd678d1ae01d72406ef903fd935", "kind": "supplement_text"},
+    {"path": "files/fulltext/PMID37519886_figures/fig1.jpg", "sha256": "65aafe3a0b77b30338382f21d2a08c0c349b0aad2a9bba11b8a944855cddf2b6", "kind": "figure"},
+    {"path": "files/fulltext/PMID37519886_figures/fig3.jpg", "sha256": "baad261b9ff48c8de932ca5308e0d890ffa03d8a06b3cad15987981d54b3e473", "kind": "figure"},
+    {"path": "files/fulltext/PMID37519886_figures/fig6.jpg", "sha256": "c5950371b024e18f7aedb9879305f6b11b648b9f6bcbc06ac349f61ea721874e", "kind": "figure"},
+    {"path": "files/fulltext/PMID37519886_figures/image3.tiff", "sha256": "cacbac8f59ae32cef8334570e807b10e38dce452129ce5e8676c801f3b0760b9", "kind": "figure"},
+    {"path": "files/fulltext/PMID37519886_figures/image4.tiff", "sha256": "f0d8e7e809182ed9fccd034b3f0ce8ee1ddcdea695fed16177a6103ab14d8044", "kind": "figure"},
+    {"path": "files/fulltext/PMID37519886_figures/image5.tiff", "sha256": "8e78ce68583d6b588abeaa07d2f1e907b20df7162aa60d959af389d7ef1bd15e", "kind": "figure"},
+    {"path": "files/fulltext/PMID37519886_figures/image7.tif", "sha256": "00b050f2a75967d89b92829e1d009ae49be3acdaee3fad7db00cff78b86e0ce4", "kind": "figure"}
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "entries": [
+      {
+        "proposition": "Three different bladder-cancer cell lines are used as the three biological replicates, so every p-value in the CAGE-seq arm rests on cross-line pooling rather than within-line replication.",
+        "snippet": "The bladder cancer cell lines were treated as biological replicates of a specific cellular variant to limit the impact of tumor heterogeneity, similar to our previous study",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37519886_PMC.xml",
+        "anchor": "Methods, 2.1 Cell culture, stable transductions, and variant comparisons, final sentence"
+      },
+      {
+        "proposition": "The replication unit is stated on the face of the workflow figure, which is where a reader who skips the Methods would still meet it.",
+        "snippet": "each variant (WK, WA, WC, KA, KC, KK) had 3 biological replicates (one per specific cell line)",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID37519886_figures/fig1.jpg",
+        "anchor": "Figure 1, image inspected - RESULTS column, Stage 1 annotation"
+      },
+      {
+        "proposition": "LINC01137 was selected over the top-ranked feature because its direction fits the hypothesis being tested - the selection criterion is the model under test.",
+        "snippet": "Increased expression of LINC01137 during WWOX overexpression suggests that LINC01137 might be able to unravel a direct WWOX-containing lncRNA/miRNA/mRNA axis (Figure 3E) because the expression of lncRNA and mRNA in such axes is oftentimes positively correlated",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37519886_PMC.xml",
+        "anchor": "Results, 3.2, paragraph following the mSVM-RFE ranking"
+      },
+      {
+        "proposition": "The mSVM-RFE ranking put HIPK1-AS1 first and LINC01137 second; only the direction of change separated them.",
+        "snippet": "Expression of these genes was shown on separate scales (Figure 3D), emphasizing that only the expression of LINC01137 was elevated in WWOX-overexpressing variants.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID37519886_figures/fig3.jpg",
+        "anchor": "Results, 3.2 - read against Figure 3C, image inspected, where the AvgRank column reads HIPK1-AS1 1.0, LINC01137 2.6, LINC01063 7.9, SNED1-AS1 8"
+      },
+      {
+        "proposition": "At the selection step the authors themselves marked the miRNA of the axis as undetermined, inside the figure that summarises the step.",
+        "snippet": "miRNA (miR-186? miR-6515? to be investigated in next steps)",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID37519886_figures/fig3.jpg",
+        "anchor": "Figure 3E, image inspected - schematic label between the lncRNA and mRNA cartoons"
+      },
+      {
+        "proposition": "UPF1 and RBM22 - an NMD helicase and a spliceosomal RNA-binding protein - are treated as transcription factors on the strength of GTRD ChIP peaks, with no ChIP or knockdown performed here.",
+        "snippet": "Two candidate transcription factors, RBM22 and UPF1, were evaluated for their binding sites near the divergent promoter",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37519886_PMC.xml",
+        "anchor": "Results, 3.3, second paragraph"
+      },
+      {
+        "proposition": "The transcriptional half of the model is offered as a possibility rather than a measurement.",
+        "snippet": "This suggests that UPF1 might be involved in the WWOX-dependent upregulation of LINC01137 and simultaneous RBM22-independent co-regulation of ZC3H12A.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37519886_PMC.xml",
+        "anchor": "Results, 3.3"
+      },
+      {
+        "proposition": "The sponge interaction that names the paper was not confirmed in any database and was reconstructed from prediction tools instead.",
+        "snippet": "the potential binding of miR-186 and LINC01137 with the specific sequence was not confirmed straightforwardly in any database",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37519886_PMC.xml",
+        "anchor": "Results, 3.6"
+      },
+      {
+        "proposition": "The direction of the triplex effect - the edge that closes the positive-feedback loop - is assumed, not measured, and the authors say so.",
+        "snippet": "Such structures can repress or induce gene expression",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37519886_PMC.xml",
+        "anchor": "Results, 3.6, immediately followed by 'but the latter can be assumed in our case'"
+      },
+      {
+        "proposition": "The WWOX-UPF1 protein interaction is imported from an independent interactome study and is the one molecularly substantiated edge in the core network; it engages the WW1 domain through a canonical PPxY motif.",
+        "snippet": "the direct interaction between WWOX and UPF1 proteins is possible via the proline-rich motif of UPF1 (1005PPGY1008) and the first tryptophan domain of WWOX (WW1)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37519886_PMC.xml",
+        "anchor": "Results, 3.6, opening sentence"
+      },
+      {
+        "proposition": "The independent validation cohort reproduces the WWOX-linked correlations but not the LINC01137-miR-186 anti-correlation - the sponge edge is precisely the one that fails to replicate, and the concession is made in a subordinate clause.",
+        "snippet": "The results indicated that despite the lack of an evident correlation between MIR186 and LINC01137, the WWOX gene still correlated positively with LINC01137 and negatively with MIR186",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37519886_PMC.xml",
+        "anchor": "Results, 3.5, opening paragraph"
+      },
+      {
+        "proposition": "The gene set feeding the definitive MFA was filtered by a criterion that preserves the expression profile under test; the supplementary figure states the removal explicitly.",
+        "snippet": "genes excluded from a final gene set due to the introduction of excessive deviation when searching for differences between groups of various WWOX/LINC01137/MIR186 expression",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID37519886_figures/image7.tif",
+        "anchor": "Supplementary Figure S7, image inspected - legend of the right-hand panel; ACTB, S100A9 and RPS19 are the excluded three, reducing the ten intersected genes of Supplementary Figure S6 to seven"
+      },
+      {
+        "proposition": "The same filtering step is described in the main text in neutral language that does not reveal that three genes were dropped.",
+        "snippet": "These requirements were as follows: a) well explanation of the aforementioned expression profiles in CCLE-BLCA, TCGA-BLCA, and GSE193659 datasets; b) an intersection between all three datasets; and c) no distortion of the examined expression profile.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37519886_PMC.xml",
+        "anchor": "Results, 3.4, final paragraph"
+      },
+      {
+        "proposition": "Feature selection inside the subsidiary MFAs followed an ad-hoc count rule rather than a prespecified statistical threshold.",
+        "snippet": "if there are at least 5 genes above threshold, take all of them",
+        "surface": "figure",
+        "artifact": ["files/fulltext/PMID37519886_figures/image3.tiff", "files/fulltext/PMID37519886_figures/image4.tiff", "files/fulltext/PMID37519886_figures/image5.tiff"],
+        "anchor": "Supplementary Figures S3, S4 and S5, images inspected - 'GENERAL RULES' box, followed by '(2) if there are less than 5 genes above threshold, take the first 10'"
+      },
+      {
+        "proposition": "The flagship survival result is an intersection of two data-derived dichotomisations that discards most of the cohort, and the paper says so in terms of overlap rather than of discarded patients.",
+        "snippet": "the intersected patients constituted at least 70% of the reference group, a group that determined the maximum overlap due to its size",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID37519886_figures/fig6.jpg",
+        "anchor": "Results, 3.5 - read against Figure 6, image inspected, whose UpSet inset gives 25 patients WWOX-high & LINC01137-high versus 7 WWOX-low & LINC01137-low, with 58 discordant patients excluded from a cohort of 93"
+      },
+      {
+        "proposition": "Group sizes for the same gene differ between endpoints because the optimal cutpoint was recomputed per endpoint, so 'high' is not the same set of patients across the three columns.",
+        "snippet": "Survival endpoints were evaluated on patients from GSE31684 and TCGA-BLCA using optimal cutoff values for the expression of a single gene",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID37519886_figures/fig6.jpg",
+        "anchor": "Methods, 2.9 - read against Figure 6, image inspected, whose risk tables give WWOX-high as 15 patients for OS, 28 for DSS and 29 for PFI, and LINC01137-high as 68, 83 and 11"
+      },
+      {
+        "proposition": "The asterisks in the survival summary mark log-rank significance and can therefore sit on a hazard ratio whose confidence interval contains 1; the table does not say which test the star refers to.",
+        "snippet": "High expression is favorable (statistical significance is met: p<0.05 [*]; p<0.01 [**]; p<0.001 [***])",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID37519886_Kolat2023_supplement.docx",
+        "anchor": "Supplementary Table 3, legend - read against its own GSE31684 PFI cell for LINC01137, which reads 0.157*(0.02, 1.15)"
+      },
+      {
+        "proposition": "The novelty claim is about the combination rather than about any of its parts, and it is stated as such.",
+        "snippet": "Interestingly, there was no research on WWOX and ncRNAs in bladder cancer (Table 1), placing our study at the beginning of such literature.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37519886_PMC.xml",
+        "anchor": "Introduction, final sentence"
+      },
+      {
+        "proposition": "The conclusion presents the predicted feedback loop as an established relationship, which is the overstatement this reading records.",
+        "snippet": "In this axis, WWOX is involved in the positive feedback loop with LINC01137, i.e., the lncRNA that sponges WWOX-targeting miR-186-5p.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID37519886_PMC.xml",
+        "anchor": "Conclusion, 4"
+      }
+    ],
+    "note": "Nineteen evidentiary locators: twelve anchored to non-abstract article text, six to inspected figure images (Figures 1, 3C, 3E, 6 and Supplementary Figures S3-S5, S7), and one to the supplementary DOCX table. The former abstract-only locator was removed from the evidentiary set: the abstract remains useful context but is not evidence for a complete read. Every locator names a SHA-256-bound artifact. Main Figures 1-7 were retrieved from pmc.ncbi.nlm.nih.gov/articles/instance/10373930/bin/ and Supplementary Figures S1-S10 were extracted from the 23 MB supplement DOCX obtained via the Europe PMC supplementaryFiles endpoint. Reading captions alone would have supported none of the image-anchored propositions."
+  }
+}

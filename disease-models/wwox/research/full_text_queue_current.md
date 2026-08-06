@@ -485,3 +485,41 @@ già nel corpus**. Il tasso di copertura del 96% su quest'asse contrasta con le 
 cliniche precedenti, che avevano trovato 7 o più lacune ciascuna: **la densità del corpus non è
 uniforme, è alta sul meccanismo murino e bassa sulle coorti cliniche.**
 **Current status:** ⬜ non recuperato, non letto.
+
+---
+
+## FT-037
+**Paper:** PMID 36499501 — Huyan et al. 2022, *Int J Mol Sci* 23(23):15177
+**Title:** miR-221-5p and miR-186-5p are the critical bladder cancer derived exosomal miRNAs in natural killer cell dysfunction
+**Priority:** **MEDIA-ALTA**
+**Why:** è il riferimento **più vicino all'asse** del paper che lo cita e l'unico dei 29
+riferimenti gene-/asse-diretti di PMID 37519886 **assente da ogni file LEGEND** — registro
+paper, tracking log, batch queue, coda full-text e discovery ledger. Dà a miR-186-5p una
+biologia misurata (miRNA esosomiale che induce disfunzione delle cellule NK in BLCA) là dove
+Kołat 2023 gli dà solo un ruolo predetto in una rete ceRNA. Se WWOX-loss alza miR-186-5p, il
+percorso verso l'evasione immunitaria è meglio sostenuto dell'asse ceRNA del titolo; e la
+direzione conta anche per capire *quale* metà dell'asse valga la pena inseguire.
+**Come è emerso:** enumerazione dei 80 riferimenti di Kołat 2023 durante la lettura completa del
+2026-08-05 (receipt `FTR-20260805-37519886-01`), poi cross-query meccanica dei 29 PMID
+gene-/asse-diretti contro le registry: 19 nel registro paper, 9 solo in `batch_queue.md`,
+**1 assente ovunque**. Questo.
+**Transfer atteso al genotipo di riferimento:** basso e dichiarato — oncologia/immunologia
+adulta. Va letto come `DISCOVERY_ONLY`, non come candidato canonico.
+**Current status:** ⬜ non recuperato, non letto.
+
+---
+
+## FT-038
+**Paper:** PMID 30619736 — Hussain et al. 2018, *Front Oncol* 8:591
+**Title:** Delineating WWOX protein interactome by tandem affinity purification-mass spectrometry: identification of top interactors and key metabolic pathways involved
+**Priority:** **ALTA**
+**Why:** è la **sorgente dell'arco WWOX·UPF1** su cui poggia [[discovery_ledger_current#DL-MECH-069 — 🔑 L'efficienza dell'NMD potrebbe essere **WWOX-dipendente**, e questo tocca sia l'allele di sito accettore sia l'esperimento disegnato per caratterizzarlo|DL-MECH-069]]:
+l'interazione WW1 ↔ ¹⁰⁰⁵PPGY¹⁰⁰⁸ di UPF1, cioè il ponte fra WWOX e il macchinario NMD che
+decide il destino del trascritto PTC dell'allele di sito accettore. Il record è già nel registro
+paper e **è citato come premessa** nel discovery ledger, ma **non ha alcuna ricevuta di
+lettura**: è esattamente la forma di debito che il ratchet `unread_premise` esiste per rendere
+visibile. Da leggere prima che `DL-MECH-069` possa salire di stato — servono la stechiometria
+dell'interazione, i controlli di specificità, e se UPF1 compaia con altri componenti del
+complesso EJC/NMD.
+**Come è emerso:** durante la lettura di PMID 37519886, che importa l'arco senza misurarlo.
+**Current status:** ⬜ recuperato? no — non letto.

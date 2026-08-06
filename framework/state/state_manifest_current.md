@@ -121,10 +121,10 @@ notes: "CC-20260726-001/002/003 → PAPER 054/055/056, CLAIM 034/035 new, CLAIM 
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260726_005
-last_lint_date: 2026-07-26
+last_lint_id: LINT_20260806_001
+last_lint_date: 2026-08-06
 last_lint_result: PASS
-notes: "Clean-clone publication check: an exported copy (everything .gitignore excludes removed) returns LINT PASS, release gate PASS/BLOCKS 0, link integrity OK and REGRESSION VERDICT: PASS (38 targets). Before the repair the same copy returned exit 2 with four UNRESOLVED_OUTPUT_FILE blocks, because three active receipts named staging drafts as outputs; corrected by appending FTR-20260726-34214506-03 / -35716775-03 / -22193544-03, which re-point the outputs to the canonical landing without rewriting history. Previous run LINT_20260726_004 — post-propagation LINT of BATCH_20260726_001: PASS with one INFO (CLAIM 010, background only). Session self-evaluation PASS — every complete read has landed and every declared output resolves. Unread-premise debt unchanged at 17/17 (at baseline, not above it). Previous run LINT_20260726_003: post-hardening audit — chain/tail/path uniqueness, atomic anchored append, linear lineage and identity-based historical declaration ratchet verified adversarially."
+notes: "Hostile-review remediation of the PMID 37519886 abstract firewall. The CLI now distinguishes structure-only success (artifacts, SHA-256 and exact locators explicitly NOT VERIFIED) from strict manifest verification; the protocol defines abstract_snippet as interoperability-only companion metadata, never evidentiary support. The mutation battery now requires every target to be green before mutation, so a red baseline is untestable and makes the run incomplete/FAIL rather than a false catch. Clean working-tree export: mutation battery PASS (19/19 individually; 14/14 distinct targets fail simultaneously), regression PASS WITH SKIPS (48 targets; two declared environment skips), LINT PASS and public release gate PASS/BLOCKS 0. The local tree correctly produces an incomplete battery verdict because gitignored files/, staging/ and backup/ make the release-surface baseline red. Authoritative append remains the fail-closed choke point: new complete reads require a local SHA-256-bound full-text source, schema-v2 manifest, zero declared gaps, non-abstract locator surfaces and artifact-bound exact text verification. The real manifest passes strict verification with 19 evidentiary locators and 0 gaps. Earlier: receipt FTR-20260805-37519886-01 appended as the first complete read of that study (43 -> 44 events); generated coverage and queue views refreshed; unread-premise debt 16/16."
 ```
 
 ---
@@ -151,8 +151,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 43
-fulltext_ledger_head: e62c43175c36813ff4abdb49e13fcf35377b775d9d8261272400680840928b34
+fulltext_ledger_events: 44
+fulltext_ledger_head: 0047a5acf3fdd5e8e316130ae34cd3a0c457d35f55a475413b3487ebf9ff1543
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
