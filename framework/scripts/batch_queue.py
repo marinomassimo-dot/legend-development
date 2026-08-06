@@ -309,6 +309,31 @@ def load_seeds(registries: Path) -> tuple[list[dict[str, str]], int]:
     return list(seeds_by_key.values()), occurrences
 
 
+def current_surface_references(root: Path, disease: str,
+                               pmids: set[str]) -> dict[str, list[str]]:
+    """Return exact held-PMID appearances across the disease's current surfaces.
+
+    A registry entry is strong evidence that a paper was integrated, but it is not the only
+    place a citation can affect reasoning. Meta analyses and other current scientific files
+    can cite a PMID before a paper record exists. Reporting "no existing claim is exposed"
+    from the registry join alone was therefore an unsafe negative. This scan does not claim
+    that every appearance supports a claim; it names the files that require audit.
+    """
+    found = {pmid: [] for pmid in pmids}
+    if not pmids:
+        return found
+    disease_root = root / "disease-models" / disease
+    for path in sorted(disease_root.rglob("*_current.md")):
+        try:
+            text = path.read_text(encoding="utf-8")
+        except OSError:
+            continue
+        for pmid in pmids:
+            if re.search(rf"(?<!\d){re.escape(pmid)}(?!\d)", text):
+                found[pmid].append(path.relative_to(root).as_posix())
+    return found
+
+
 _BUILD_CACHE: dict[tuple[str, str], dict] = {}
 
 
@@ -390,6 +415,12 @@ def _build_uncached(root: Path, disease: str) -> dict:
         if item["free_full_text"] == "yes" and item["depth"] != "full text"
     ]
     years = [int(seed["year"]) for seed in seeds if seed.get("year", "").isdigit()]
+    held = [item for item in queue if item["eligibility"] == HOLD]
+    references = current_surface_references(
+        root, disease, {item["pmid"] for item in held if item["pmid"]})
+    for item in held:
+        item["current_references"] = references.get(item["pmid"], [])
+
     return {
         "disease": disease,
         "seed_files": sorted(
@@ -409,9 +440,9 @@ def _build_uncached(root: Path, disease: str) -> dict:
         # every record under a hold; `held_integrated` is the subset the model may already be
         # leaning on, which is the only part that is urgent — a retraction is published after
         # the reading, so the claims exposed to it are the ones that already exist.
-        "held": [item for item in queue if item["eligibility"] == HOLD],
-        "held_integrated": [item for item in queue if item["eligibility"] == HOLD
-                            and item["record"]],
+        "held": held,
+        "held_integrated": [item for item in held if item["record"]],
+        "held_referenced": [item for item in held if item["current_references"]],
         "year_min": min(years) if years else None,
         "year_max": max(years) if years else None,
         "published_since_2020": sum(year >= 2020 for year in years),
@@ -443,16 +474,18 @@ def _render_integrity(report: dict) -> list[str]:
         "An ordinary erratum or corrigendum is **not** an integrity event and carries no hold —",
         "a corrigendum says the record was repaired, a retraction says it should not have stood.",
         "",
-        "| PMID | Status | Registry record | Required action |",
-        "|---|---|---|---|",
+        "| PMID | Status | Registry record | Current references | Required action |",
+        "|---|---|---|---|---|",
     ]
     for item in held:
         lines.append(
             f"| [{item['pmid']}](https://pubmed.ncbi.nlm.nih.gov/{item['pmid']}/) "
             f"| {item['integrity']} | {item['record'] or '—'} "
+            f"| {'<br>'.join(f'`{path}`' for path in item.get('current_references', [])) or '—'} "
             f"| {INTEGRITY_ACTION[item['integrity']]} |"
         )
     integrated = report.get("held_integrated") or []
+    referenced = report.get("held_referenced") or []
     lines += ["", ""]
     if integrated:
         lines += [
@@ -467,10 +500,18 @@ def _render_integrity(report: dict) -> list[str]:
         lines += [f"> - `{item['record']}` — PMID {item['pmid']} ({item['integrity']})"
                   for item in integrated]
         lines.append("")
+    elif referenced:
+        lines += [
+            f"> ⚠️ No held record has a registry entry, but {len(referenced)} held PMID(s)",
+            "> appear on current scientific surfaces. An appearance is not automatically a",
+            "> supporting claim, but absence of a registry record cannot prove absence of",
+            "> exposure. Audit the files named in the table before the next `BATCH_COMMIT`.",
+            "",
+        ]
     else:
         lines += [
-            "> No held record carries a registry entry, so no existing claim is currently",
-            "> exposed. This is checked on every run, not assumed.",
+            "> No held record carries a registry entry and no held PMID appears on a current",
+            "> scientific surface. No existing exposure was found by these two checks.",
             "",
         ]
     return lines

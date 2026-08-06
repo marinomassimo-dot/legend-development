@@ -12,6 +12,7 @@ import re
 import subprocess
 import sys
 from dataclasses import dataclass
+from pathlib import Path
 
 CURRENTS = [
     "disease-models/wwox/registries/working_model_current.md",
@@ -440,6 +441,57 @@ def claim_paper_findings(claims_text, paper_ids, corpus_ids=None):
                                             f"CLAIM {cid}: CORPUS P{ref} does not exist"))
     return findings
 
+
+def _check_publication_integrity_claims(findings, repo_root, claims_text, papers_text):
+    """Block promotion when a canonical claim links to a held PubMed record.
+
+    The generated queue is an audit surface, not an authority: printing
+    `PUBLICATION_INTEGRITY_HOLD` there cannot by itself stop a `BATCH_COMMIT`. This check
+    closes that last mile while keeping the scope precise. A retracted paper may remain in
+    the registry for audit; what is forbidden is using its PAPER entry to support a claim.
+    Expressions of concern receive the same temporary promotion hold. Ordinary errata do
+    not.
+    """
+    here = os.path.dirname(os.path.abspath(__file__))
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    import batch_queue  # noqa: PLC0415 - shared integrity vocabulary and seed reader
+
+    registries = os.path.join(repo_root, "disease-models/wwox/registries")
+    if not os.path.isdir(registries):
+        return
+    seeds, _ = batch_queue.load_seeds(Path(registries))
+    held = {
+        seed.get("pmid", ""): batch_queue._integrity(seed)
+        for seed in seeds
+        if batch_queue._eligibility(batch_queue._integrity(seed)) == batch_queue.HOLD
+    }
+    held.pop("", None)
+    if not held:
+        return
+
+    paper_pmids = {}
+    for paper_id, bodies in split_blocks(papers_text, "PAPER").items():
+        owned = set()
+        for body in bodies:
+            identifier = field(body, "Identifier") or ""
+            owned.update(re.findall(r"(?i)PMID\s*:?[ ]*(\d{7,8})", identifier))
+            if not owned:
+                owned.update(re.findall(r"(?<!\d)(\d{7,8})(?!\d)", identifier))
+        paper_pmids[paper_id] = owned
+
+    for claim_id, bodies in split_blocks(claims_text, "CLAIM").items():
+        for body in bodies:
+            for paper_id in WIKILINK_PAPER.findall(body):
+                for pmid in sorted(paper_pmids.get(paper_id, set()) & held.keys()):
+                    findings.append(Finding(
+                        "BLOCK_BATCH_COMMIT",
+                        "CLAIM_CITES_PUBLICATION_INTEGRITY_HOLD",
+                        f"CLAIM {claim_id} links PAPER {paper_id} / PMID {pmid}, which is "
+                        f"under {batch_queue.HOLD} ({held[pmid]}). Audit or remove this "
+                        "support before canonical promotion",
+                    ))
+
 def lint(repo_root):
     findings = []
     for rel in CURRENTS:
@@ -456,6 +508,7 @@ def lint(repo_root):
         paper_ids = set(parse_ids(papers, "PAPER"))
         corpus_ids = set(parse_corpus_ids(papers))
         findings.extend(claim_paper_findings(claims, paper_ids, corpus_ids))
+        _check_publication_integrity_claims(findings, repo_root, claims, papers)
         discovery_path = os.path.join(repo_root, DISCOVERY_LEDGER)
         if os.path.isfile(discovery_path):
             _check_discovery_ids(findings, _read(discovery_path))

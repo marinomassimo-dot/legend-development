@@ -462,6 +462,30 @@ class TheFirewallMustBeAbleToSeeTheCorpus(unittest.TestCase):
             self.assertTrue(firewall.looks_like_corpus(innocent))
             self.assertTrue(firewall.corpus_objection(str(innocent)))
 
+    def test_json_packaging_cannot_bypass_content_recognition(self) -> None:
+        """Whitespace and an outer array do not change what the records are."""
+        record = harvest.parse(document(ARTICLE))[0]
+        with tempfile.TemporaryDirectory() as tmp:
+            pretty = Path(tmp) / "pretty.data"
+            array = Path(tmp) / "array.data"
+            pretty.write_text(json.dumps(record, indent=2), encoding="utf-8")
+            array.write_text(json.dumps([record], indent=2), encoding="utf-8")
+            self.assertTrue(firewall.looks_like_corpus(pretty))
+            self.assertTrue(firewall.looks_like_corpus(array))
+
+    def test_common_metadata_keys_do_not_make_an_unrelated_jsonl_a_corpus(self) -> None:
+        """A guard that rejects legitimate structured data will eventually be disabled."""
+        experiment = {
+            "record_type": "experiment",
+            "pmid": "36779245",
+            "identifiers": {"run": "R1"},
+            "measurements": [{"gene": "WWOX", "value": 1.2}],
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "experiment.jsonl"
+            path.write_text(json.dumps(experiment) + "\n", encoding="utf-8")
+            self.assertFalse(firewall.looks_like_corpus(path))
+
     def test_a_renamed_seed_tsv_is_recognised_too(self) -> None:
         records = harvest.parse(document(ARTICLE))
         with tempfile.TemporaryDirectory() as tmp:

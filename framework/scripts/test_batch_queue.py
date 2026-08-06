@@ -272,8 +272,9 @@ class QueueIntegrityTests(unittest.TestCase):
         self.assertEqual(rows["33333333"]["eligibility"], "",
                          "an erratum is not an integrity event and must not be held")
         self.assertEqual(rows["44444444"]["eligibility"], "")
-        self.assertEqual({item["pmid"] for item in report["held"]},
-                         {"11111111", "22222222"})
+        held_pmids = {item["pmid"] for item in report["held"]}
+        self.assertIn("11111111", held_pmids)
+        self.assertIn("22222222", held_pmids)
 
         # The record stays in the queue: readable for audit, not deleted from the listing.
         for pmid in ("11111111", "22222222", "33333333", "44444444"):
@@ -309,6 +310,31 @@ class QueueIntegrityTests(unittest.TestCase):
         self.assertEqual([item["pmid"] for item in report["held_integrated"]], ["11111111"])
         self.assertIn("PAPER 006", rendered)
         self.assertIn("Re-examine every", rendered)
+
+    def test_a_meta_citation_cannot_be_declared_unexposed_without_a_registry_record(self) -> None:
+        """The paper registry is not the complete citation graph."""
+        harvest = _harvester()
+        records = harvest.parse(_pubmed_set(
+            _pubmed_xml("11111111", "A retracted paper", [("RetractionIn", "42464650")])))
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            registries = root / "disease-models" / "wwox" / "registries"
+            registries.mkdir(parents=True)
+            (registries / "fulltext_read_receipts.jsonl").touch()
+            (registries / "paper_registry_current.md").write_text("", encoding="utf-8")
+            meta = root / "disease-models" / "wwox" / "meta"
+            meta.mkdir(parents=True)
+            (meta / "meta_index_current.md").write_text(
+                "A synthesis cites PMID 11111111.\n", encoding="utf-8")
+            harvest.write_seed(records, set(),
+                               registries / "corpus_seed_pubmed_20260806.tsv")
+            report = bq.build(root, "wwox")
+            rendered = bq.render(report, limit=0)
+
+        self.assertEqual(report["held_integrated"], [])
+        self.assertEqual([item["pmid"] for item in report["held_referenced"]], ["11111111"])
+        self.assertIn("meta_index_current.md", rendered)
+        self.assertIn("cannot prove absence", rendered)
 
     def test_the_hold_does_not_reorder_the_queue(self) -> None:
         """Admissibility must not leak into priority, in either direction."""

@@ -123,6 +123,50 @@ class PublicLintTests(unittest.TestCase):
         )
         self.assertFalse(claim_paper_findings(corpus, {"001"}, {"210"}))
 
+    def test_claim_link_to_publication_integrity_hold_blocks_batch_commit(self) -> None:
+        papers = (
+            "# Paper Registry\n"
+            "## PAPER 001\n"
+            "**Status:** integrated\n"
+            "**Identifier:** PMID: 11111111\n"
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            make_repository(root, GOOD_CLAIMS, papers)
+            registries = root / "disease-models/wwox/registries"
+            (registries / "corpus_seed_pubmed_20260806.tsv").write_text(
+                "pmid\tyear\tpubmed_free_full_text_link\ttype\tdoi\tcorrections\ttitle\n"
+                "11111111\t2025\tyes\tprimary\t\tRetractionIn:9\tHeld paper\n",
+                encoding="utf-8",
+            )
+            result = lint(temporary)
+
+        self.assertEqual(result.verdict, "BLOCK_BATCH_COMMIT")
+        self.assertTrue(any(
+            item.code == "CLAIM_CITES_PUBLICATION_INTEGRITY_HOLD"
+            for item in result.findings
+        ))
+
+    def test_ordinary_erratum_does_not_block_a_claim(self) -> None:
+        papers = (
+            "# Paper Registry\n"
+            "## PAPER 001\n"
+            "**Status:** integrated\n"
+            "**Identifier:** PMID: 11111111\n"
+        )
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            make_repository(root, GOOD_CLAIMS, papers)
+            registries = root / "disease-models/wwox/registries"
+            (registries / "corpus_seed_pubmed_20260806.tsv").write_text(
+                "pmid\tyear\tpubmed_free_full_text_link\ttype\tdoi\tcorrections\ttitle\n"
+                "11111111\t2025\tyes\tprimary\t\tErratumIn:9\tCorrected paper\n",
+                encoding="utf-8",
+            )
+            result = lint(temporary)
+
+        self.assertEqual(result.verdict, "PASS")
+
     def test_working_model_claim_mirror_must_match_registry(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             root = Path(temporary)

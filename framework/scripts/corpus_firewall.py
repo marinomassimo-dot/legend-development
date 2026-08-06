@@ -8,8 +8,10 @@ own copy of one regular expression, which is two failure modes at once — the c
 **a name is not a fact**.
 
 Recognition by name is the weaker half and cannot be made strong. `--out-dir` is a free
-parameter; a corpus can be copied, renamed, or produced by a different tool entirely, and the
-regex sees none of that. Reviewed 2026-08-06: even the harvester's own destination check was
+parameter; a corpus can be copied or renamed, and the regex sees none of that. Content
+recognition deliberately targets the committed harvester schema: claiming to recognise every
+bibliographic format would turn an evidence guard into a paper-rejection hazard. Reviewed
+2026-08-06: even the harvester's own destination check was
 bypassable with `files/corpus/../../staging/wwox.jsonl`, which matches the pattern as a string
 and writes somewhere else.
 
@@ -34,14 +36,36 @@ from pathlib import Path
 CORPUS_ARTEFACT = re.compile(
     r"files/corpus/|corpus_seed_pubmed|_corpus\.jsonl|corpus_abstracts", re.IGNORECASE)
 
-# Fields that identify a harvested PubMed record. A JSONL whose first line carries these is a
-# bibliographic export whatever it has been renamed to.
-CORPUS_RECORD_KEYS = frozenset({"record_type", "abstract_parts", "identifiers", "pmid"})
+# Fields and values that identify this harvester's PubMed records. Requiring an exact record
+# type plus the stable schema is intentional. "Three familiar keys" produced a false positive
+# for an unrelated experimental JSONL carrying `record_type`, `pmid`, and `identifiers`.
+CORPUS_RECORD_TYPES = frozenset({"PubmedArticle", "PubmedBookArticle"})
+CORPUS_RECORD_KEYS = frozenset({"pmid", "title", "abstract_parts", "identifiers"})
 # The header of a derived seed TSV, under either the current or the pre-2026-08-05 column name.
 CORPUS_TSV_COLUMNS = frozenset({"pmid", "title"})
 CORPUS_TSV_MARKERS = ("pubmed_free_full_text_link", "free_full_text", "abstract")
 
-SNIFF_BYTES = 65536
+SNIFF_BYTES = 1048576
+
+
+def _first_json_record(text: str) -> dict | None:
+    """Decode the first object from JSONL, a JSON object, or a JSON array.
+
+    `json.loads(first_line)` only recognised compact JSONL. The same records pretty-printed
+    across lines or wrapped in an array survived a rename, which made a content firewall
+    depend on whitespace and packaging. `raw_decode` needs only the first array element, not
+    the closing bracket or the rest of a potentially large corpus.
+    """
+    candidate = text.lstrip("\ufeff \t\r\n")
+    if candidate.startswith("["):
+        candidate = candidate[1:].lstrip()
+    if not candidate.startswith("{"):
+        return None
+    try:
+        value, _ = json.JSONDecoder().raw_decode(candidate)
+    except json.JSONDecodeError:
+        return None
+    return value if isinstance(value, dict) else None
 
 
 def names_a_corpus(value: str) -> bool:
@@ -79,15 +103,14 @@ def looks_like_corpus(path: Path) -> bool:
     except OSError:
         return False
 
-    first = head.split(b"\n", 1)[0].strip()
-    if first.startswith(b"{"):
-        try:
-            record = json.loads(first.decode("utf-8", errors="replace"))
-        except (json.JSONDecodeError, UnicodeDecodeError):
-            record = None
-        if isinstance(record, dict) and len(CORPUS_RECORD_KEYS & set(record)) >= 3:
-            return True
+    text = head.decode("utf-8", errors="replace")
+    record = _first_json_record(text)
+    if (record is not None
+            and record.get("record_type") in CORPUS_RECORD_TYPES
+            and CORPUS_RECORD_KEYS <= set(record)):
+        return True
 
+    first = head.split(b"\n", 1)[0].strip()
     header = first.decode("utf-8", errors="replace")
     if "\t" in header:
         columns = {column.strip().lower() for column in header.split("\t")}
