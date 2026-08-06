@@ -1,0 +1,186 @@
+{
+  "schema_version": 2,
+  "pmid": "31340538",
+  "doi": "10.3390/ijms20143596",
+  "receipt": "FTR-20260806-31340538-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID31340538.md",
+    "discovery_ledger_current#DL-MECH-071",
+    "full_text_queue_current#FT-040",
+    "full_text_queue_current#FT-041",
+    "full_text_queue_current#FT-042",
+    "staging/commit_candidate_20260806_31340538.md",
+    "learned_gates_registry#DEVELOPMENTAL_TIMEPOINT_ATTRIBUTION_GATE"
+  ],
+  "skills_considered": [
+    {"skill": "legend", "used": true},
+    {"skill": "legend-study-intake-triage", "used": true},
+    {"skill": "find-fulltext", "used": true},
+    {"skill": "legend-deepdive", "used": true},
+    {"skill": "legend-discovery", "used": true},
+    {"skill": "legend-session-self-eval", "used": true},
+    {"skill": "legend-capability-scout", "used": true},
+    {
+      "skill": "legend-batch-inferential-sweep",
+      "used": false,
+      "reason": "The paper had already been swept, ranked and downloaded in the preceding 16-record batch; repeating that batch stage would add no new routing information."
+    },
+    {
+      "skill": "legend-proband-priority-matrix",
+      "used": false,
+      "reason": "FT-040 was already the operator-approved next cursor and had already received its P0 ranking in the preceding batch."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "The paper qualifies a pre-existing remyelination hypothesis but produces no new molecule or intervention; the missing OPC and autonomy experiments must come first."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No drug or compound is tested or newly proposed by this study, so there is no candidate for a BLOCK-1 safety assessment."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Canonical corrections were queued as a commit candidate; no BATCH_COMMIT was authorised and the four scientific current files remain unchanged."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 41,
+    "publications_on_gene": 3,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "PubMed counts measured 2026-08-06 for exact senior/corresponding author Suzuki Hiroetsu: 41 total records, 3 with WWOX and 32 involving rat/rats. Exact Katayama Kentaro counts were 26 total and 2 with WWOX; exact first author Tochigi Yuki returned 3 WWOX records, while the total-count request was rate-limited and is not used. This is an experienced veterinary rat-model laboratory that originated, maintained and genetically mapped the lde strain, so execution weight is high for rat phenotyping, histology and strain-specific observations. It is not a primary clinical WWOX-DEE group and has a small WWOX portfolio; interpretation of human disease, cell autonomy, GSK3β mediation and reversibility receives no expertise uplift. The paper is a real wet-lab developmental study, not a descriptive series."
+  },
+  "field_density": {
+    "queries": [
+      {"query": "WWOX AND hypomyelination", "count": 4, "source": "PubMed ESearch, 2026-08-06"},
+      {"query": "WWOX AND MAP2", "count": 0, "source": "PubMed ESearch, 2026-08-06"},
+      {"query": "WWOX AND oligodendrocyte", "count": 4, "source": "PubMed ESearch, 2026-08-06"},
+      {"query": "WWOX AND microglia", "count": 4, "source": "PubMed ESearch, 2026-08-06"},
+      {"query": "WWOX AND astrocyte", "count": 5, "source": "PubMed ESearch, 2026-08-06"}
+    ],
+    "note": "The WWOX-by-myelin/glia field was extremely thin, and no PubMed record combines WWOX with MAP2. This makes the neurite/myelin observations unusual and worth preserving, while increasing—not decreasing—the need to separate their measured endpoints from the authors' GSK3β, autonomy and human-transfer interpretations."
+  },
+  "multihop": {
+    "references_enumerated": 56,
+    "gene_direct_refs_in_source": [
+      "14526170", "23254685", "23254778", "17360458", "17823927", "19936220",
+      "22574198", "16941225", "21476439", "17803050", "19500159", "22071891",
+      "25595191", "26499798", "27869163", "24932569", "15026124", "24456803",
+      "25403906", "24369382", "26345274", "30746283", "30356099", "29808465",
+      "28721938", "15073846", "14695174", "15064722", "30290271", "27495153"
+    ],
+    "resolved": [
+      "14526170", "23254685", "23254778", "17360458", "17823927", "19936220",
+      "22574198", "16941225", "21476439", "19500159", "22071891", "25595191",
+      "26499798", "27869163", "24932569", "15026124", "24456803", "25403906",
+      "24369382", "26345274", "30746283", "30356099", "29808465", "28721938",
+      "15073846", "14695174", "15064722", "30290271", "27495153"
+    ],
+    "queued": ["FT-041", "FT-042"],
+    "note": "All 56 XML references were enumerated. Thirty are WWOX-, lde-model- or WWOX-disorder-direct and carry PMIDs. Twenty-nine resolve in at least one structured registry/research file; 24 occur in paper_registry_current.md. PMID 17803050, the original lde phenotype study, was absent from all five structured files and is now FT-041. PMID 19500159 resolves in the registry but has no receipt and is the load-bearing genetic-mapping/seizure source imported by this paper and DL-MECH-026, so it is now FT-042."
+  },
+  "corpus_crossquery": {
+    "query": "Which of the paper's 30 WWOX-/lde-/disease-direct PMIDs already occur in the structured corpus, and where does the repository attribute claims to PMID 31340538 beyond its measured endpoints?",
+    "hits": 24,
+    "note": "Mechanical audit after the vertical read: 24 of 30 direct PMIDs occur in paper_registry_current.md, 5 additional PMIDs occur in another structured queue/log, and 1 is absent everywhere (17803050). Horizontal comparison found incorrect author/title metadata in PAPER 021/LIT-0023 and three boundary errors: use as a prenatal anchor despite PND5-21 experiments, 'neurons intact' despite neurite loss, and normal heterozygous brain despite no heterozygote developmental phenotyping. These are queued, not silently repaired in canonical state."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "No retraction, expression of concern or correction found by the repository retraction gate for PMID 31340538 on 2026-08-06. PMCID PMC6678113 is the open full-text record."
+  },
+  "source_artifacts": [
+    {"path": "files/fulltext/PMID31340538_Tochigi2019.xml", "sha256": "02d5615819012880f6054935cf8a7b700a78690e9e8835b3e5364be7b60cf00c", "kind": "article_text"},
+    {"path": "files/fulltext/PMID31340538_Tochigi2019_assets/ijms-20-03596-g001.jpg", "sha256": "94c994a8da1f5b85e75afff580da35fa5cd2c72a0de47f18302678f68679cd5f", "kind": "figure"},
+    {"path": "files/fulltext/PMID31340538_Tochigi2019_assets/ijms-20-03596-g002.jpg", "sha256": "760dd46eaa851165ab3987cd6245bbdd19e7a1eb236bc969ffcb0c81826ad65e", "kind": "figure"},
+    {"path": "files/fulltext/PMID31340538_Tochigi2019_assets/ijms-20-03596-g003.jpg", "sha256": "954af9081a4ed4b0aa7b8b67b25c7b1594f5b36e5ed3f679676c419240c5b2b6", "kind": "figure"},
+    {"path": "files/fulltext/PMID31340538_Tochigi2019_assets/ijms-20-03596-g004.jpg", "sha256": "539e4f1a0e7b75ca66592992c4b71f901cbc39e1842601b84ad70b04c8f2fd59", "kind": "figure"},
+    {"path": "files/fulltext/PMID31340538_Tochigi2019_assets/ijms-20-03596-g005.jpg", "sha256": "0f7a6573e37a89771b12199bdce2f3b993f593dbde9b471e95c8402cb4ff40f2", "kind": "figure"},
+    {"path": "files/fulltext/PMID31340538_Tochigi2019_assets/ijms-20-03596-g006.jpg", "sha256": "bf54eafa0bd54d93ffd8f01bdc1e9d6b635c15e153f985a11d118cb40ec91460", "kind": "figure"}
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "entries": [
+      {
+        "proposition": "The model's Wwox lesion is a 13-base-pair deletion in exon 9, with mutant RNA previously detected but no normal Wwox protein detected.",
+        "snippet": "Linkage analysis and a candidate approach showed that a 13-bp deletion in exon 9 of the Wwox gene was responsible for lde phenotype",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31340538_Tochigi2019.xml",
+        "anchor": "Introduction, paragraph describing the lde strain and prior genetic mapping"
+      },
+      {
+        "proposition": "Measured neuronal abundance and cortical thickness are preserved while the neuritic marker MAP2 is reduced.",
+        "snippet": "there is no significant difference between +/+ and lde/lde rats in the thickness of cerebral cortices at all ages",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31340538_Tochigi2019.xml",
+        "anchor": "Results 2.2, opening neuronal paragraph"
+      },
+      {
+        "proposition": "The positive neuronal phenotype is impaired neurite maturation, not loss of NeuN-positive cells.",
+        "snippet": "the level of its expression was significantly lower in cerebral cortices of lde/lde than of +/+ rats at all ages",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31340538_Tochigi2019.xml",
+        "anchor": "Results 2.2, MAP2 Western blot result"
+      },
+      {
+        "proposition": "Myelin markers and APC-positive mature oligodendrocytes are reduced during early postnatal development.",
+        "snippet": "the number of APC-positive cells was significantly lower in a subarea of the cerebral cortex including the WM region of lde/lde than of +/+ rats on PNDs 15–21",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31340538_Tochigi2019.xml",
+        "anchor": "Results 2.2, oligodendrocyte/myelination paragraph"
+      },
+      {
+        "proposition": "The cortical glial result has reduced GFAP-positive and Iba1-positive measures rather than gliosis.",
+        "snippet": "the expression level of Iba1 in cerebral cortices were significantly lower in lde/lde than in +/+ rats at the all ages examined",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31340538_Tochigi2019.xml",
+        "anchor": "Results 2.2, astrocyte and microglia paragraph"
+      },
+      {
+        "proposition": "At PND21, Wwox immunoreactivity was not detected in Iba1-positive microglia by this assay.",
+        "snippet": "Iba1-positive microglia in the cerebral cortex and CC were not immunostained with antibody to Wwox",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31340538_Tochigi2019.xml",
+        "anchor": "Results 2.3, cellular localisation paragraph"
+      },
+      {
+        "proposition": "The faint homozygous band is observed, while its identity, instability and lack of function are interpretations rather than direct assays.",
+        "snippet": "suggesting that this faint signal may be that of a mutated protein escaping from ubiquitin-mediated protein degradation due to its instability",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31340538_Tochigi2019.xml",
+        "anchor": "Discussion, paragraph interpreting the 46.2-kDa band"
+      },
+      {
+        "proposition": "The authors explicitly identify the opposite glial sign between their cortex result and the Wwox-knockout mouse hippocampus study.",
+        "snippet": "These results are apparently in contrast to our present data showing significant reductions in dendrite growth of wide-ranging neurons and GFAP- and Iba1-positive areas in the cerebral cortex",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31340538_Tochigi2019.xml",
+        "anchor": "Discussion, final glial paragraph"
+      },
+      {
+        "proposition": "The biological replication is at least three affected and three normal male rats per experiment and age.",
+        "snippet": "At least three affected and three normal males were included in each experiment (western blot and immunostaining) and examined each day",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31340538_Tochigi2019.xml",
+        "anchor": "Materials and Methods 4.1, Animals"
+      },
+      {
+        "proposition": "A survival-motivated litter-size intervention was applied around the earliest measured time point.",
+        "snippet": "the numbers of littermates were reduced to <5 pups at around PND 5 to enhance the survive of lde/lde pups",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31340538_Tochigi2019.xml",
+        "anchor": "Materials and Methods 4.1, Animals"
+      },
+      {
+        "proposition": "The figures use separate Student t-tests for genotype comparisons at each age, with no reported multiplicity correction.",
+        "snippet": "A statistical analysis was performed between +/+ and lde/lde at each PND indicated, respectively. Student’s t-test was used to determine statistical significance",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31340538_Tochigi2019.xml",
+        "anchor": "Figure 3 caption; repeated in Figures 4 and 5 captions"
+      }
+    ]
+  }
+}

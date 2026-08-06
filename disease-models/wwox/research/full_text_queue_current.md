@@ -552,4 +552,34 @@ receipt completo; deve essere letto prima di estrarre tempistica, autonomia cell
 mediazione lipidico/traffico.
 **Come è emerso:** multi-hop e horizontal pass di PMID 33255508, receipt
 `FTR-20260806-33255508-01`, `DL-MECH-070`.
-**Current status:** ⬜ full text PMC6678113 recuperato nel batch 2026-08-06, non ancora letto.
+**Current status:** ✅ full text, tutte le 6 figure e 56 referenze letti il 2026-08-06;
+receipt `FTR-20260806-31340538-01`; dossier `fulltext_dossiers/PMID31340538.md`.
+
+---
+
+## FT-041
+**Paper:** PMID 17803050 — Suzuki et al. 2007, *Comparative Medicine* 57:360-369
+**Title:** Phenotypic characterization of spontaneously mutated rats showing lethal dwarfism
+and epilepsy
+**Priority:** **ALTA**
+**Why:** è il primo primario fenotipico del ratto `lde` e l'unico dei 30 riferimenti
+WWOX/modello/malattia-diretti di PMID 31340538 assente da paper registry, tracking log, batch
+queue, coda full-text e discovery ledger. Deve portare mortalità, crescita, atassia e
+fenotipo epilettico antecedenti alla mappatura Wwox; il paper 2019 li importa soltanto.
+**Come è emerso:** enumerazione delle 56 referenze durante la lettura completa di PMID
+31340538 (`FTR-20260806-31340538-01`), seguita da cross-query meccanica del corpus.
+**Current status:** ⬜ non recuperato, non letto.
+
+---
+
+## FT-042
+**Paper:** PMID 19500159 — Suzuki et al. 2009, *Genes Brain Behav* 8:650-660
+**Title:** A spontaneous mutation of the Wwox gene and audiogenic seizures in rats with
+lethal dwarfism and epilepsy
+**Priority:** **ALTA**
+**Why:** è il primario load-bearing per mappatura della delezione esone 9, mRNA/proteina e
+crisi audiogeniche del modello `lde`. `DL-MECH-026` usa già questi risultati ma il full text
+non ha receipt; Tochigi 2019 li cita, non li rimisura tutti. Va letto prima di usare il 95% di
+penetranza o la causalità genetica come dato di prima mano.
+**Come è emerso:** multi-hop di PMID 31340538 e audit del preesistente `DL-MECH-026`.
+**Current status:** ⬜ record presente; full text precedentemente non accessibile, non letto.

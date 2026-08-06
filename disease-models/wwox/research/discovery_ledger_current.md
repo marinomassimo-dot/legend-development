@@ -1730,3 +1730,46 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
   mediatrice sia già identificata.
 - **Interconnessioni:** `CLAIM 003` · `CLAIM 004` · `CLAIM 005` · `CLAIM 026` ·
   `DL-MECH-010` · `DL-MECH-012` · `DL-MECH-018` · `DL-MECH-031` · `FT-039` · `FT-040`.
+
+---
+
+### DL-MECH-071 — Il ratto *lde* separa numero neuronale da maturazione neurite/mielina, ma non dimostra prenatalità, autonomia gliale o reversibilità
+
+- **Status:** open · **Tag:** `DATO` (fenotipo PND5–21) + `INFERENZA` (dissociazione
+  abbondanza/maturazione) + `CORREZIONE` (limiti dello stato precedente) · **Fonte:** Tochigi
+  et al. 2019, PMID 31340538 / PMCID PMC6678113 / DOI 10.3390/ijms20143596; testo, sei
+  figure e 56 riferimenti letti integralmente il 2026-08-06, receipt
+  `FTR-20260806-31340538-01`; dossier `research/fulltext_dossiers/PMID31340538.md`.
+- **DATO:** tra PND5 e PND21 il `lde/lde` non mostra differenze rilevate in conta NeuN,
+  NeuN-WB o spessore corticale, ma mostra MAP2/processi neuritici ridotti, MBP/CNP ridotti e
+  meno oligodendrociti maturi APC/CC1 a PND15–21. GFAP/Iba1 corticali sono ridotti, non
+  attivati.
+- **Correzione di perimetro:** “neuroni intatti” in `DL-MECH-027` significa soltanto
+  **abbondanza NeuN e spessore misurati preservati**; neuriti, connettività e fisiologia non
+  sono intatti. “Il substrato è salvabile” resta `IPOTESI`: nessun rescue o reversibilità è
+  testato. Il paper non conta OPC (`NG2/PDGFRA/Olig2`) e quindi non dimostra arresto di
+  maturazione. Non separa un effetto oligodendrocitario autonomo da malattia sistemica o
+  segnalazione assone–glia.
+- **Correzione temporale:** tutti i nuovi esperimenti sono PND5–21. Questo studio sostiene
+  maturazione corticale/mielinica **postnatale precoce**, non è da solo un dato prenatale né
+  una prova di migrazione/cortical layering. `CLAIM 014/015` dipendono per la prenatalità
+  dagli altri studi della convergenza.
+- **Tensione gliale:** gli autori dichiarano il contrasto con PMID 30290271: riduzione
+  GFAP/Iba1 nella corteccia del ratto contro attivazione astro/microgliale nell'ippocampo del
+  topo KO. La direzione gliale è regione/modello/stadio-dipendente finché un disegno
+  comparativo non la risolve; non usare uno dei due segni come universale.
+- **Genotipo:** la delezione esone 9 `c.1190_1202del/p.Leu371Thrfs*53` rende il ratto un
+  comparator utile per il lato exon-9/null del genotipo di riferimento, non un modello di
+  splicing correggibile e non un modello di Q230P. La bandina mutante è osservata; instabilità
+  e assenza di funzione sono interpretazioni non misurate qui.
+- **Qualità:** soli maschi, almeno `n=3+3` per età/esperimento, molti t-test senza correzione
+  di molteplicità, nessun blinding/randomizzazione/power dichiarato, litter size ridotta per
+  sopravvivenza. Effetti grandi e convergenti fra IHC/WB sostengono il fenotipo; precisione e
+  causalità di linea cellulare restano limitate.
+- **Esperimento discriminante:** confronto isogenico/condizionale con conta OPC, lineage
+  tracing, g-ratio/EM e funzione di conduzione, più rescue neuronale versus oligodendrogliale.
+  L'esito separa ritardo sistemico, segnale assone–glia e difetto gliale autonomo.
+- **Debito:** `FT-041` (PMID 17803050, fenotipo originario del ratto) e `FT-042` (PMID
+  19500159, mappatura causale/epilessia) prima di usare penetranza delle crisi o causalità
+  genetica come dati letti. **Interconnessioni:** `DL-MECH-026` · `DL-MECH-027` ·
+  `DL-MECH-031` · `CLAIM 014` · `CLAIM 015` · `CLAIM 032` · `FT-041` · `FT-042`.

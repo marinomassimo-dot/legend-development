@@ -121,10 +121,10 @@ notes: "CC-20260726-001/002/003 → PAPER 054/055/056, CLAIM 034/035 new, CLAIM 
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260806_002
+last_lint_id: LINT_20260806_003
 last_lint_date: 2026-08-06
 last_lint_result: PASS
-notes: "PMID 33255508 read completely from PMC XML with all nine figure images and two supplementary workbooks inspected. Receipt FTR-20260806-33255508-01 appended (44 -> 45 events); schema-v2 manifest passes strict artifact/hash/exact-locator verification with zero gaps. Review-level lipid/trafficking-to-myelin synthesis was kept as INFERENZA (DL-MECH-070), not promoted to a causal claim; primary debts added as FT-039/FT-040. SYNTHESIS_MEDIATION_GATE added. Generated coverage refreshed. Unread-premise ratchet lowered from 16 to the live 14: one complete read plus one newly explicit queue debt. LINT PASS; public release gate PASS/BLOCKS 0. Full regression runner's release-surface failures are the documented consequence of local gitignored files/, staging/ and backup/ roots; its real baseline mismatch was repaired and test_session_self_eval passes 24/24."
+notes: "PMID 31340538 read completely from PMC XML with all six figure images inspected and 56 references enumerated. Receipt FTR-20260806-31340538-01 appended (45 -> 46 events); schema-v2 manifest passes strict artifact/hash/exact-locator verification with zero gaps. The source corrects the existing author/title attribution and bounds its new experiments to PND5-21, so it cannot itself serve as a prenatal anchor; preserved NeuN abundance was not promoted to intact neurons, reversibility, OPC arrest or cell autonomy. DL-MECH-071 and FT-041/FT-042 landed; canonical corrections remain isolated for a future BATCH_COMMIT. DEVELOPMENTAL_TIMEPOINT_ATTRIBUTION_GATE added. Generated coverage refreshed. Unread premises remain at the live 14/14 because FT-040 was already explicit debt. LINT PASS; public release gate PASS/BLOCKS 0. Full regression runner reproduces only the documented live-workspace release-surface failures caused by intentionally gitignored backup/, files/ and staging/ roots plus local full-text assets."
 ```
 
 ---
@@ -151,8 +151,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 45
-fulltext_ledger_head: d11285bb2aac489a9adc8d008178bfb921a5d0ecfcd28d2bd58d6abbb4b16425
+fulltext_ledger_events: 46
+fulltext_ledger_head: e8a535c1fec1abd2e1aed09a70a24ed078503c46997819aa3e05cc0ebd0a1de3
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
