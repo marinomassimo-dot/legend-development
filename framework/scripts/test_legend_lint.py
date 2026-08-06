@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import sys
 import tempfile
 import unittest
@@ -164,8 +165,6 @@ class PublicLintTests(unittest.TestCase):
         ledger = root / RECEIPT_LEDGER
         ledger.parent.mkdir(parents=True, exist_ok=True)
         ledger.write_text("", encoding="utf-8")
-        for receipt in receipts_list:
-            fulltext_receipts.append_receipt(ledger, receipt)
         manifest = root / STATE_MANIFEST
         manifest.parent.mkdir(parents=True, exist_ok=True)
         manifest.write_text(
@@ -176,30 +175,30 @@ class PublicLintTests(unittest.TestCase):
             "registry_only_fulltext_declaration_ids: []\n",
             encoding="utf-8",
         )
-        fulltext_receipts.write_state_anchor(
-            manifest, fulltext_receipts.load_ledger(ledger)
-        )
-
-        complete = [
-            receipt for receipt in receipts_list
-            if receipt.get("evidence_depth") == "complete_fulltext_read"
-        ]
-        landing = root / "disease-models/wwox/research/discovery_ledger_current.md"
-        landing.parent.mkdir(parents=True, exist_ok=True)
-        sections = []
-        for index, receipt in enumerate(complete, start=1):
+        complete = []
+        for source_receipt in receipts_list:
+            receipt = json.loads(json.dumps(source_receipt))
+            receipt["source_kind"] = "fulltext_local"
+            receipt["analysis_time_precision"] = "second"
             pmid = receipt["study_id"]["pmid"]
-            sections.append(f"### DL-MECH-{index:03d} — test landing\nPMID {pmid}\n")
-            for output in receipt.get("outputs") or []:
-                if output.endswith(".md"):
-                    target = root / output
-                    target.parent.mkdir(parents=True, exist_ok=True)
-                    target.write_text(f"# Output for PMID {pmid}\n", encoding="utf-8")
+            artifact_relative = f"files/fulltext/PMID{pmid}.xml"
+            artifact = root / artifact_relative
+            artifact.parent.mkdir(parents=True, exist_ok=True)
+            quote = "a verbatim sentence long enough to be a real locator"
+            artifact.write_text(
+                f"<article><body><p>{quote}</p></body></article>", encoding="utf-8")
+            digest = hashlib.sha256(artifact.read_bytes()).hexdigest()
+            receipt["source_locator"] = artifact_relative
+            receipt["source_fingerprint"] = digest
+
             manifest_dir = root / "disease-models/wwox/research/deepdive_manifests"
             manifest_dir.mkdir(parents=True, exist_ok=True)
             work_manifest = {
+                "schema_version": 2,
                 "pmid": pmid,
                 "receipt": receipt["event_id"],
+                "source_artifacts": [{
+                    "path": artifact_relative, "sha256": digest, "kind": "article_text"}],
                 "group_assessment": {
                     "total_publications": 10,
                     "publications_on_gene": 2,
@@ -215,16 +214,32 @@ class PublicLintTests(unittest.TestCase):
                              "references_enumerated": 12},
                 "corpus_crossquery": {"query": "mechanism", "hits": 1, "verdict": "represented"},
                 "retraction_check": {"method": "test fixture", "result": "none"},
-                "verbatim_locators": {"entries": [{
+                "verbatim_locators": {"source_fulltext_indexed": True, "entries": [{
                     "proposition": "fixture proposition",
-                    "snippet": "a verbatim sentence long enough to be a real locator",
+                    "snippet": quote,
+                    "surface": "body",
+                    "artifact": artifact_relative,
                     "anchor": "Results, Fig. 1"}]},
-                "landing": [f"DL-MECH-{index:03d}"],
+                "landing": ["DL-MECH-001"],
                 "skills_considered": [{"skill": "find-fulltext", "used": True}],
             }
             (manifest_dir / f"PMID{pmid}.json").write_text(
-                json.dumps(work_manifest), encoding="utf-8"
-            )
+                json.dumps(work_manifest), encoding="utf-8")
+            fulltext_receipts.append_receipt(ledger, receipt)
+            if receipt.get("evidence_depth") == "complete_fulltext_read":
+                complete.append(receipt)
+
+        landing = root / "disease-models/wwox/research/discovery_ledger_current.md"
+        landing.parent.mkdir(parents=True, exist_ok=True)
+        sections = []
+        for index, receipt in enumerate(complete, start=1):
+            pmid = receipt["study_id"]["pmid"]
+            sections.append(f"### DL-MECH-{index:03d} — test landing\nPMID {pmid}\n")
+            for output in receipt.get("outputs") or []:
+                if output.endswith(".md"):
+                    target = root / output
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    target.write_text(f"# Output for PMID {pmid}\n", encoding="utf-8")
         landing.write_text("\n".join(sections) or "# No complete reads\n", encoding="utf-8")
         return ledger
 

@@ -126,13 +126,17 @@ class JoinTests(unittest.TestCase):
             "evidence_depth": "complete_fulltext_read",
             "source_locator": "PMC123",
             "source_fingerprint": None,
+            "source_kind": "fulltext_remote",
+            "analysis_time_precision": "second",
             "coverage": {key: "read" for key in receipts.COVERAGE_KEYS},
             "outputs": ["dossier.md"],
             "evidence_basis": ["coverage_map", "dossier"],
             "prior_receipt": None,
             "reread_reason": "first_read",
         }
-        receipts.append_receipt(registries / "fulltext_read_receipts.jsonl", receipt)
+        scratch_ledger = registries.parent.parent.parent / "receipt_fixture.jsonl"
+        receipts.append_receipt(scratch_ledger, receipt)
+        scratch_ledger.replace(registries / "fulltext_read_receipts.jsonl")
         index = bq.registry_index(registries)
         self.assertEqual(index["pmid:42193054"]["depth"], "full text")
         self.assertEqual(index["pmid:42193054"]["record"], f"receipt {receipt['event_id']}")

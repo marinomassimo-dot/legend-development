@@ -26,7 +26,7 @@ import re
 import stat
 import sys
 import tempfile
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Optional
 
@@ -92,6 +92,9 @@ REQUIRED = {
     "prior_receipt",
     "reread_reason",
 }
+OPTIONAL_AUTHORED = {"source_kind", "analysis_time_precision"}
+SOURCE_KINDS = {"fulltext_local", "fulltext_remote", "abstract", "metadata", "corpus_export"}
+ANALYSIS_TIME_PRECISIONS = {"second", "minute", "date_only", "unknown"}
 # Stamped by the ledger writer, never authored by hand: an author describes a reading
 # event, the ledger describes its own history. Keeping it out of REQUIRED means a skill
 # or agent emits exactly the receipt documented in the protocol, with no integrity
@@ -106,6 +109,12 @@ LEDGER_MANAGED = {CHAIN_FIELD}
 # `validate_receipt()` with no complaint at all.
 CORPUS_ARTEFACT = re.compile(
     r"files/corpus/|corpus_seed_pubmed|_corpus\.jsonl|corpus_abstracts", re.IGNORECASE)
+ABSTRACT_ONLY_LOCATOR = re.compile(
+    r"(?:https?://)?(?:www\.)?pubmed\.ncbi\.nlm\.nih\.gov/|"
+    r"(?:https?://)?eutils\.ncbi\.nlm\.nih\.gov/entrez/eutils/|"
+    r"(?:^|/)abstract(?:[/?#]|$)",
+    re.IGNORECASE,
+)
 
 URL_LOCATOR = re.compile(r"^[a-z][a-z0-9+.-]*://", re.I)
 DOI_LOCATOR = re.compile(r"^(?:https?://doi\.org/)?10\.\d{4,9}/\S+$", re.I)
@@ -239,20 +248,31 @@ def validate_new_receipt(receipt: Any) -> list[str]:
     halt the system on records that can no longer be edited. Same shape as the two ratchets in
     the state manifest: the backlog stays visible, and only new work meets the tighter rule.
 
-    Reviewed 2026-08-05: five of forty-four receipts carry `analysis_at` at exactly
-    `00:00:00Z`. Midnight to the second is a placeholder, not an observation, and a receipt
-    whose `record_kind` is *contemporaneous* is asserting when the work happened.
+    New records carry an explicit source kind and timestamp precision. Exact-midnight string
+    matching was intentionally removed: it rejected a real midnight, missed equivalent
+    offsets and rewarded changing a fabricated value by one second. The authoritative writer
+    stamps ``event_at`` itself; ``analysis_at`` keeps the worker's declared precision.
     """
     if not isinstance(receipt, dict):
         return []
     errors: list[str] = []
     if receipt.get("record_kind") == "contemporaneous_receipt":
-        for field in ("event_at", "analysis_at"):
-            if str(receipt.get(field) or "").endswith("T00:00:00Z"):
+        source_kind = receipt.get("source_kind")
+        if source_kind not in SOURCE_KINDS:
+            errors.append(f"source_kind is required for new receipts: one of {sorted(SOURCE_KINDS)}")
+        precision = receipt.get("analysis_time_precision")
+        if precision not in ANALYSIS_TIME_PRECISIONS:
+            errors.append(
+                "analysis_time_precision is required for new contemporaneous receipts: "
+                f"one of {sorted(ANALYSIS_TIME_PRECISIONS)}")
+        if receipt.get("evidence_depth") in {"partial_fulltext_read", "complete_fulltext_read"}:
+            if source_kind not in {"fulltext_local", "fulltext_remote"}:
                 errors.append(
-                    f"{field} is exactly midnight UTC. A contemporaneous receipt asserts when "
-                    "the work happened; midnight to the second is a placeholder. Record the "
-                    "real time, or file the event as a legacy_reconstruction.")
+                    "partial/complete full-text evidence requires a fulltext source_kind")
+            if ABSTRACT_ONLY_LOCATOR.search(str(receipt.get("source_locator") or "")):
+                errors.append(
+                    "an abstract or PubMed record URL cannot support partial/complete "
+                    "full-text evidence")
     return errors
 
 
@@ -260,20 +280,24 @@ def validate_receipt(receipt: Any) -> list[str]:
     if not isinstance(receipt, dict):
         return ["receipt must be a JSON object"]
     errors: list[str] = []
+    depth = receipt.get("evidence_depth")
     for field in ("source_locator", "workflow"):
-        if CORPUS_ARTEFACT.search(str(receipt.get(field) or "")):
+        if CORPUS_ARTEFACT.search(str(receipt.get(field) or "")) and depth in {
+            "partial_fulltext_read", "complete_fulltext_read"
+        }:
             errors.append(
                 f"{field} names a bibliographic corpus. An export of abstracts is not a "
-                "document and cannot be the thing a reading read — see CLAUDE.md rule 8. "
-                "Name the paper's own artefact, or record the depth honestly as "
-                "`abstract_only`.")
+                "full-text document — see CLAUDE.md rule 8. Name the paper's own artefact, "
+                "or record the depth honestly as `abstract_only`.")
     for item in receipt.get("evidence_basis") or []:
-        if CORPUS_ARTEFACT.search(str(item)):
+        if CORPUS_ARTEFACT.search(str(item)) and depth in {
+            "partial_fulltext_read", "complete_fulltext_read"
+        }:
             errors.append(
                 "evidence_basis cites a bibliographic corpus as the basis of a reading")
             break
     missing = REQUIRED - set(receipt)
-    extra = set(receipt) - REQUIRED - LEDGER_MANAGED
+    extra = set(receipt) - REQUIRED - OPTIONAL_AUTHORED - LEDGER_MANAGED
     chain = receipt.get(CHAIN_FIELD)
     if chain is not None and not re.fullmatch(r"[a-f0-9]{64}", str(chain)):
         errors.append(f"{CHAIN_FIELD} must be lowercase SHA-256 or null")
@@ -306,6 +330,12 @@ def validate_receipt(receipt: Any) -> list[str]:
         errors.append("invalid event_at: timezone-aware ISO-8601 required")
     if receipt["evidence_depth"] not in DEPTHS:
         errors.append("invalid evidence_depth")
+    source_kind = receipt.get("source_kind")
+    if source_kind is not None and source_kind not in SOURCE_KINDS:
+        errors.append("invalid source_kind")
+    precision = receipt.get("analysis_time_precision")
+    if precision is not None and precision not in ANALYSIS_TIME_PRECISIONS:
+        errors.append("invalid analysis_time_precision")
     if receipt["record_kind"] not in {"contemporaneous_receipt", "legacy_reconstruction"}:
         errors.append("invalid record_kind")
     elif receipt["record_kind"] == "contemporaneous_receipt" and receipt["analysis_at"] is None:
@@ -391,6 +421,63 @@ def validate_receipt(receipt: Any) -> list[str]:
         or not re.fullmatch(r"FTR-[0-9]{8}-[A-Za-z0-9._-]+-[0-9]{2}", prior)
     ):
         errors.append("invalid prior_receipt")
+    return errors
+
+
+def _authoritative_context(path: Path) -> Optional[tuple[Path, str]]:
+    """Infer the workspace and disease only for the canonical receipt sink shape."""
+    resolved = path.resolve()
+    parts = resolved.parts
+    try:
+        position = len(parts) - 4
+        if (
+            position >= 0
+            and parts[position] == "disease-models"
+            and parts[position + 2] == "registries"
+            and parts[position + 3] == "fulltext_read_receipts.jsonl"
+        ):
+            root = Path(*parts[:position])
+            if not root.is_absolute():
+                root = Path(resolved.anchor, *parts[1:position])
+            return root, parts[position + 1]
+    except (IndexError, ValueError):
+        pass
+    return None
+
+
+def _strict_local_source(receipt: dict[str, Any], root: Path) -> list[str]:
+    """Bind a new complete read to a real local full-text artifact at write time."""
+    if receipt.get("record_kind") != "contemporaneous_receipt":
+        return []
+    if receipt.get("evidence_depth") != "complete_fulltext_read":
+        return []
+    if receipt.get("reread_reason") == "receipt_correction":
+        return []
+    errors: list[str] = []
+    if receipt.get("source_kind") != "fulltext_local":
+        errors.append(
+            "new complete reads require source_kind `fulltext_local`; snapshot a lawful "
+            "full-text PDF/XML/HTML before recording")
+        return errors
+    locator = str(receipt.get("source_locator") or "")
+    if not locator or locator != locator.strip() or " (" in locator:
+        errors.append(
+            "source_locator for a new complete read must be the exact repository-relative "
+            "artifact path, without annotations")
+        return errors
+    candidate = (root / locator).resolve()
+    try:
+        candidate.relative_to(root.resolve())
+    except ValueError:
+        errors.append("source_locator escapes the workspace")
+        return errors
+    if not candidate.is_file():
+        errors.append(f"source full-text artifact does not exist: {locator}")
+        return errors
+    expected = str(receipt.get("source_fingerprint") or "")
+    actual = hashlib.sha256(candidate.read_bytes()).hexdigest()
+    if expected != actual:
+        errors.append("source_fingerprint does not match the full-text artifact")
     return errors
 
 
@@ -495,7 +582,25 @@ def append_receipt(
     if fcntl is None:
         raise RuntimeError("POSIX file locking unavailable; refusing unlocked receipt append")
     record = {key: value for key, value in receipt.items() if key not in LEDGER_MANAGED}
-    errors = validate_receipt(record) + validate_new_receipt(record)
+    authoritative = _authoritative_context(path)
+    if authoritative is not None:
+        root, disease = authoritative
+        expected_manifest = default_manifest_path(root).resolve()
+        if manifest is None:
+            manifest = expected_manifest
+        elif manifest.resolve() != expected_manifest:
+            raise ValueError(
+                "the authoritative receipt sink must use its repository state manifest")
+        # `event_at` is persistence time, not a value a worker guesses. `analysis_at` remains
+        # the worker's statement and carries its own explicit precision.
+        if record.get("record_kind") == "contemporaneous_receipt":
+            record["event_at"] = datetime.now(timezone.utc).isoformat(
+                timespec="seconds").replace("+00:00", "Z")
+        require_work_manifest(record, root, disease, strict=True)
+        strict_errors = _strict_local_source(record, root)
+    else:
+        strict_errors = []
+    errors = validate_receipt(record) + validate_new_receipt(record) + strict_errors
     if errors:
         raise ValueError("; ".join(errors))
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -629,7 +734,9 @@ def default_manifest_path(root: Path) -> Path:
     return root / "framework" / "state" / "state_manifest_current.md"
 
 
-def require_work_manifest(receipt: Any, root: Path, disease: str) -> None:
+def require_work_manifest(
+    receipt: Any, root: Path, disease: str, *, strict: bool = True
+) -> None:
     """Refuse the strongest claim until the work behind it exists.
 
     `complete_fulltext_read` is the only depth that clears reading debt, so it is the only
@@ -637,8 +744,8 @@ def require_work_manifest(receipt: Any, root: Path, disease: str) -> None:
     chained and immutable. Gating it here makes the claim unavailable rather than merely
     auditable — the difference between reducing the gap and closing it.
 
-    Deliberately narrow: retrieval, partial reads and legacy reconstructions are untouched,
-    and a missing validator degrades to a warning rather than blocking the ledger.
+    Deliberately narrow: retrieval, partial reads and legacy reconstructions are untouched.
+    New complete reads fail closed when the validator or any required artifact is absent.
     """
     if not isinstance(receipt, dict):
         return
@@ -646,18 +753,46 @@ def require_work_manifest(receipt: Any, root: Path, disease: str) -> None:
         return
     if receipt.get("record_kind") != "contemporaneous_receipt":
         return
+    if receipt.get("reread_reason") == "receipt_correction":
+        return
     pmid = (receipt.get("study_id") or {}).get("pmid")
     if not pmid:
         return
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     try:
         import deepdive_manifest
-    except ImportError:  # pragma: no cover - validator absent
-        print("WARNING: deepdive_manifest validator unavailable; manifest not enforced", file=sys.stderr)
-        return
-    errors, incomplete = deepdive_manifest.load_and_validate(root.resolve(), disease, str(pmid))
+    except ImportError as exc:  # pragma: no cover - validator absent
+        raise ValueError(
+            "complete_fulltext_read refused — deepdive_manifest validator unavailable"
+        ) from exc
+    errors, incomplete = deepdive_manifest.load_and_validate(
+        root.resolve(), disease, str(pmid),
+        verify_artifacts=strict,
+        require_current_schema=strict,
+    )
     for item in incomplete:
         print(f"  [DECLARED GAP] {item}", file=sys.stderr)
+    if strict and incomplete:
+        errors.extend(f"declared gap: {item}" for item in incomplete)
+
+    manifest_file = deepdive_manifest.manifest_path(root.resolve(), disease, str(pmid))
+    if not errors and strict:
+        try:
+            work = json.loads(manifest_file.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError) as exc:
+            errors.append(f"cannot read work manifest for source binding: {exc}")
+        else:
+            source = str(receipt.get("source_locator") or "")
+            digest = str(receipt.get("source_fingerprint") or "")
+            declared = {
+                str(item.get("path")): str(item.get("sha256"))
+                for item in work.get("source_artifacts", [])
+                if isinstance(item, dict)
+            }
+            if declared.get(source) != digest:
+                errors.append(
+                    "receipt source_locator/source_fingerprint is not the same fingerprinted "
+                    "article artifact declared by the work manifest")
     if errors:
         raise ValueError(
             "complete_fulltext_read refused — "
@@ -726,7 +861,6 @@ def main() -> int:
             return 0
         if args.command == "record":
             receipt = json.loads(Path(args.receipt).read_text(encoding="utf-8"))
-            require_work_manifest(receipt, Path(args.root), args.disease)
             persisted = append_receipt(ledger, receipt, manifest=manifest)
             print(f"RECORDED: {persisted['event_id']}")
             return 0

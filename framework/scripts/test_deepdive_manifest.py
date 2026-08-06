@@ -10,10 +10,12 @@ keep the distinction enforceable.
 from __future__ import annotations
 
 import importlib.util
+import hashlib
 import json
 import sys
 import unittest
 from pathlib import Path
+from tempfile import TemporaryDirectory
 
 HERE = Path(__file__).resolve().parent
 SPEC = importlib.util.spec_from_file_location("deepdive_manifest", HERE / "deepdive_manifest.py")
@@ -43,6 +45,19 @@ def minimal(**overrides) -> dict:
              "snippet": "This indicates that WWOX amino acids 388-407 are required for its interaction with GSK3b.",
              "surface": "body", "anchor": "Results, Fig. 3c"}]},
     }
+    manifest.update(overrides)
+    return manifest
+
+
+def schema_v2(artifact_path: str = "files/fulltext/paper.xml", **overrides) -> dict:
+    manifest = minimal()
+    manifest["schema_version"] = 2
+    manifest["source_artifacts"] = [{
+        "path": artifact_path,
+        "sha256": "a" * 64,
+        "kind": "article_text",
+    }]
+    manifest["verbatim_locators"]["entries"][0]["artifact"] = artifact_path
     manifest.update(overrides)
     return manifest
 
@@ -82,6 +97,97 @@ class EntriesMustBeUsable(unittest.TestCase):
         errors, _ = gate.validate(minimal(verbatim_locators={"entries": [
             {"proposition": "P", "snippet": "it binds", "anchor": "Results"}]}))
         self.assertTrue(any("verbatim" in e for e in errors))
+
+    def test_schema_v2_requires_surface_on_every_locator(self) -> None:
+        manifest = schema_v2()
+        del manifest["verbatim_locators"]["entries"][0]["surface"]
+        errors, _ = gate.validate(manifest)
+        self.assertTrue(any("surface: required" in error for error in errors))
+
+    def test_schema_v2_requires_declared_artifact_on_every_locator(self) -> None:
+        manifest = schema_v2()
+        manifest["verbatim_locators"]["entries"][0]["artifact"] = "other.xml"
+        errors, _ = gate.validate(manifest)
+        self.assertTrue(any("not declared in source_artifacts" in error for error in errors))
+
+    def test_schema_v2_refuses_even_one_abstract_evidence_locator(self) -> None:
+        manifest = schema_v2()
+        manifest["verbatim_locators"]["entries"][0]["surface"] = "abstract"
+        errors, _ = gate.validate(manifest)
+        self.assertTrue(any("cannot be an evidentiary locator" in error for error in errors))
+
+    def test_schema_v2_allows_abstract_snippet_only_as_body_locator_companion(self) -> None:
+        manifest = schema_v2()
+        manifest["verbatim_locators"]["entries"][0]["abstract_snippet"] = (
+            "The abstract independently states the same headline proposition."
+        )
+        errors, _ = gate.validate(manifest)
+        self.assertEqual(errors, [])
+
+    def test_current_schema_is_a_write_time_ratchet(self) -> None:
+        errors, _ = gate.validate(minimal(), require_current_schema=True)
+        self.assertTrue(any("new complete reads require" in error for error in errors))
+
+    def test_strict_verification_distinguishes_abstract_from_body(self) -> None:
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            relative = "files/fulltext/paper.xml"
+            artifact = root / relative
+            artifact.parent.mkdir(parents=True)
+            artifact.write_text(
+                "<article><abstract><p>The abstract-only proposition has enough characters "
+                "to pass the minimum.</p></abstract><body><p>A different body sentence also "
+                "has enough characters.</p></body></article>", encoding="utf-8")
+            manifest = schema_v2(relative)
+            manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+                artifact.read_bytes()).hexdigest()
+            entry = manifest["verbatim_locators"]["entries"][0]
+            entry["snippet"] = "The abstract-only proposition has enough characters to pass the minimum."
+            entry["surface"] = "body"
+            errors, _ = gate.validate(manifest, root=root, verify_artifacts=True)
+            self.assertTrue(any("abstract but not the non-abstract body" in e for e in errors))
+
+    def test_strict_verification_refuses_fingerprint_mismatch(self) -> None:
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            relative = "files/fulltext/paper.xml"
+            artifact = root / relative
+            artifact.parent.mkdir(parents=True)
+            artifact.write_text("<article><body><p>" + "a" * 80 + "</p></body></article>",
+                                encoding="utf-8")
+            errors, _ = gate.validate(schema_v2(relative), root=root, verify_artifacts=True)
+            self.assertTrue(any("fingerprint mismatch" in error for error in errors))
+
+    def test_html_abstract_container_is_not_body_evidence(self) -> None:
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            relative = "files/fulltext/paper.html"
+            artifact = root / relative
+            artifact.parent.mkdir(parents=True)
+            quote = "This proposition appears only inside the HTML abstract container."
+            artifact.write_text(
+                f'<html><div class="article-abstract">{quote}</div>'
+                '<main>The full article body says something else entirely.</main></html>',
+                encoding="utf-8")
+            manifest = schema_v2(relative)
+            manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+                artifact.read_bytes()).hexdigest()
+            manifest["verbatim_locators"]["entries"][0]["snippet"] = quote
+            errors, _ = gate.validate(manifest, root=root, verify_artifacts=True)
+            self.assertTrue(any("abstract but not the non-abstract body" in e for e in errors))
+
+    def test_malformed_xml_fails_closed_instead_of_merging_surfaces(self) -> None:
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            relative = "files/fulltext/paper.xml"
+            artifact = root / relative
+            artifact.parent.mkdir(parents=True)
+            artifact.write_text("<article><abstract>" + "a" * 60, encoding="utf-8")
+            manifest = schema_v2(relative)
+            manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+                artifact.read_bytes()).hexdigest()
+            errors, _ = gate.validate(manifest, root=root, verify_artifacts=True)
+            self.assertTrue(any("cannot parse structured XML" in error for error in errors))
 
 
 class WaiverIsAnArgument(unittest.TestCase):
@@ -186,6 +292,21 @@ class ExternallyVerifiableQuotes(unittest.TestCase):
         _errors, incomplete = gate.validate(minimal(verbatim_locators={
             "entries": [{"proposition": "P", "snippet": "a" * 60, "anchor": "Results"}]}))
         self.assertTrue(any("source_fulltext_indexed" in item for item in incomplete))
+
+
+class CliVerdictNamesItsVerificationScope(unittest.TestCase):
+    def test_default_success_does_not_imply_artifact_verification(self) -> None:
+        scope = gate.verification_scope(
+            verify_artifacts=False, require_current_schema=False)
+        self.assertIn("STRUCTURE ONLY", scope)
+        self.assertIn("NOT VERIFIED", scope)
+
+    def test_strict_success_names_every_manifest_persistence_check(self) -> None:
+        scope = gate.verification_scope(
+            verify_artifacts=True, require_current_schema=True)
+        self.assertIn("MANIFEST STRICT", scope)
+        self.assertIn("SHA-256", scope)
+        self.assertIn("exact text locators verified", scope)
 
 
 if __name__ == "__main__":

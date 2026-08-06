@@ -67,6 +67,23 @@ If a reading supports no statement at all, waive the section with an argument. W
 legitimate; silence is not, and a waiver surfaces as `[DECLARED GAP]` in
 `session_self_eval.py`.
 
+For every **new** complete read, the work manifest uses schema v2. Each evidentiary locator
+must declare `surface` and `artifact`; `abstract` is not an evidentiary surface. The manifest
+binds every artifact to SHA-256. At persistence time, body/table/supplement quotations are
+matched against the declared local XML/HTML/TXT/DOCX with the article abstract separated
+from its body; visual locators are bound to the inspected image hash. Missing fields,
+unverified text, missing artifacts and declared gaps all block the append. Historical schema
+v1 manifests remain visible as migration debt and are not rewritten. For a PDF, declare the
+fingerprinted PDF as `article_binary` and a deterministic extracted TXT as `article_text`;
+text locators point to the latter while the receipt remains bound to the former.
+
+`abstract_snippet` resolves a different, interoperability-only obligation: when an external
+index exposes the abstract but not the full text, it may accompany a non-abstract locator so
+the headline proposition remains externally checkable. It is companion metadata, **never the
+evidentiary quote**: it does not change `surface`, does not satisfy body/table/supplement
+verification and cannot support `complete_fulltext_read`. The locator must still carry its
+verbatim full-text `snippet`, non-abstract `surface` and fingerprinted `artifact`.
+
 ### 🔴 `captions_only` — because a caption is not its figure
 
 `read` on `figures` or `supplementary` means **the images were inspected**. When only captions
@@ -110,6 +127,8 @@ FULLTEXT_READ_RECEIPT:
   evidence_depth: complete_fulltext_read
   source_locator: <PMCID, lawful URL, or local path>
   source_fingerprint: <sha256 when a lawful local artifact exists, otherwise null>
+  source_kind: fulltext_local
+  analysis_time_precision: second
   coverage:
     abstract: read
     introduction: read
@@ -129,8 +148,13 @@ FULLTEXT_READ_RECEIPT:
 `source_fingerprint` is mandatory whenever a **contemporaneous** receipt names a local
 artifact. A receipt over a file that carries no digest claims "I read *this* document"
 about something that can be replaced, truncated or regenerated afterwards while the receipt
-keeps vouching for it. Remote locators (a PMCID, a lawful URL, a bare DOI) have nothing to
-hash and stay `null`; a `legacy_reconstruction` cannot hash what it did not witness.
+keeps vouching for it. Remote locators (a PMCID, a lawful full-text URL, a bare DOI) have
+nothing to hash and stay `null` for partial/legacy events. A **new complete** receipt is
+stricter: it requires a lawful local PDF/XML/HTML snapshot, its exact repository-relative
+path and a matching SHA-256, so a PubMed abstract page cannot masquerade as the document.
+`event_at` is stamped by the authoritative writer; `analysis_at` remains the worker's
+declaration and carries explicit `analysis_time_precision`. A `legacy_reconstruction` cannot
+hash what it did not witness.
 
 Machine-readable shape: [`fulltext_read_receipt.schema.json`](../schemas/fulltext_read_receipt.schema.json).
 
@@ -161,7 +185,7 @@ a failure the previous one cannot see:
 |---|---|---|
 | `ledger_prev_hash` chain over every persisted event | a historical event rewritten or deleted | `validate`, and `LINT` as `BLOCK_SYSTEM` |
 | tail anchor (`fulltext_ledger_events` + `fulltext_ledger_head`) in the state manifest | the ledger **truncated from the end** — the surviving prefix stays perfectly self-consistent, so no chain can see this | `verify`, and `LINT` as `BLOCK_SYSTEM` |
-| exclusive `flock` + full revalidation and atomic anchor update inside the lock | concurrent appends interleaving, appends extending an already-corrupted history, and partially written manifest updates | `append_receipt` |
+| exclusive `flock` + full revalidation, strict schema-v2 work-manifest verification and atomic anchor update inside the lock | concurrent appends interleaving, direct calls bypassing the CLI gate, appends extending an already-corrupted history, and partially written manifest updates | `append_receipt` |
 
 The chain field is stamped by the ledger writer and never authored by hand: a skill or agent
 emits exactly the receipt shown above, with no integrity bookkeeping to get wrong.

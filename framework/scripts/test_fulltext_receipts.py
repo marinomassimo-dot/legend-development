@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import copy
+import hashlib
 import json
 import multiprocessing
 import sys
@@ -34,6 +35,8 @@ def example(event_id: str, depth: str = "complete_fulltext_read") -> dict:
         "evidence_depth": depth,
         "source_locator": "PMC123",
         "source_fingerprint": None,
+        "source_kind": "fulltext_remote",
+        "analysis_time_precision": "second",
         "coverage": {key: "read" for key in receipts.COVERAGE_KEYS},
         "outputs": ["dossier_42193054.md"],
         "evidence_basis": ["coverage_map", "dossier"],
@@ -62,6 +65,87 @@ class FulltextReceiptTests(unittest.TestCase):
         loaded = receipts.load_ledger(self.ledger)
         self.assertEqual([item["event_id"] for item in loaded], [receipt["event_id"]])
         self.assertTrue(receipts.same_study(loaded[0], "42193054", ""))
+
+    def test_new_complete_receipt_refuses_pubmed_abstract_url(self) -> None:
+        receipt = example("FTR-20260725-42193054-01")
+        receipt["source_locator"] = "https://pubmed.ncbi.nlm.nih.gov/42193054/"
+        errors = receipts.validate_new_receipt(receipt)
+        self.assertTrue(any("PubMed record URL" in error for error in errors))
+
+    def test_authoritative_complete_read_requires_local_snapshot(self) -> None:
+        receipt = example("FTR-20260725-42193054-01")
+        errors = receipts._strict_local_source(receipt, Path(self.temporary.name))
+        self.assertTrue(any("require source_kind `fulltext_local`" in error for error in errors))
+
+    def test_abstract_only_receipt_may_name_the_corpus_without_clearing_debt(self) -> None:
+        receipt = example("FTR-20260725-42193054-01", "abstract_only")
+        receipt.update({
+            "source_locator": "files/corpus/wwox.jsonl",
+            "source_fingerprint": "a" * 64,
+            "source_kind": "corpus_export",
+        })
+        self.assertEqual(receipts.validate_receipt(receipt), [])
+        self.assertEqual(receipts.validate_new_receipt(receipt), [])
+
+    def test_new_receipt_uses_precision_not_midnight_string_guessing(self) -> None:
+        receipt = example("FTR-20260725-42193054-01")
+        receipt["analysis_at"] = "2026-07-25T00:00:00Z"
+        self.assertEqual(receipts.validate_new_receipt(receipt), [])
+        del receipt["analysis_time_precision"]
+        self.assertTrue(any("analysis_time_precision" in error
+                            for error in receipts.validate_new_receipt(receipt)))
+
+    def test_direct_append_to_authoritative_sink_cannot_skip_work_manifest(self) -> None:
+        root = Path(self.temporary.name)
+        ledger = root / "disease-models/test/registries/fulltext_read_receipts.jsonl"
+        state = root / "framework/state/state_manifest_current.md"
+        state.parent.mkdir(parents=True)
+        state.write_text(
+            "fulltext_ledger_events: 0\nfulltext_ledger_head: null\n", encoding="utf-8")
+        fulltext = root / "files/fulltext/paper.xml"
+        fulltext.parent.mkdir(parents=True)
+        fulltext.write_text("<article><body>full text</body></article>", encoding="utf-8")
+        receipt = example("FTR-20260725-42193054-01")
+        receipt.update({
+            "source_locator": "files/fulltext/paper.xml",
+            "source_fingerprint": hashlib.sha256(fulltext.read_bytes()).hexdigest(),
+            "source_kind": "fulltext_local",
+        })
+        with self.assertRaisesRegex(ValueError, "no deep-dive work manifest"):
+            receipts.append_receipt(ledger, receipt)
+        self.assertFalse(ledger.exists(), "the gate ran after persistence")
+
+    def test_declared_manifest_gap_blocks_a_new_complete_read(self) -> None:
+        receipt = example("FTR-20260725-42193054-01")
+        root = Path(self.temporary.name)
+        work = root / "disease-models/test/research/deepdive_manifests/PMID42193054.json"
+        work.parent.mkdir(parents=True)
+        work.write_text(json.dumps({
+            "source_artifacts": [{"path": "PMC123", "sha256": ""}]
+        }), encoding="utf-8")
+        with mock.patch("deepdive_manifest.load_and_validate",
+                        return_value=([], ["missing locator surface"])):
+            with self.assertRaisesRegex(ValueError, "declared gap"):
+                receipts.require_work_manifest(receipt, root, "test", strict=True)
+
+    def test_missing_manifest_validator_fails_closed(self) -> None:
+        receipt = example("FTR-20260725-42193054-01")
+        real_import = __import__
+
+        def refuse_validator(name, *args, **kwargs):
+            if name == "deepdive_manifest":
+                raise ImportError("simulated missing validator")
+            return real_import(name, *args, **kwargs)
+
+        saved = sys.modules.pop("deepdive_manifest", None)
+        try:
+            with mock.patch("builtins.__import__", side_effect=refuse_validator):
+                with self.assertRaisesRegex(ValueError, "validator unavailable"):
+                    receipts.require_work_manifest(
+                        receipt, Path(self.temporary.name), "test", strict=True)
+        finally:
+            if saved is not None:
+                sys.modules["deepdive_manifest"] = saved
 
     def test_complete_read_cannot_rest_on_captions_only(self) -> None:
         """A caption is authored prose; the figure is the data (D-14).

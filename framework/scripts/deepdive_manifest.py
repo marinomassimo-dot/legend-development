@@ -27,11 +27,17 @@ evidence and resolved identifiers are harder to fabricate than an unchecked chec
 from __future__ import annotations
 
 import argparse
+import hashlib
+import html
 import json
 import re
 import sys
+import unicodedata
+import zipfile
 from pathlib import Path
 from typing import Any
+from html.parser import HTMLParser
+from xml.etree import ElementTree
 
 MANIFEST_DIR = "disease-models/{disease}/research/deepdive_manifests"
 
@@ -47,6 +53,7 @@ SECTIONS = ("group_assessment", "field_density", "multihop", "corpus_crossquery"
 # deliberately low: the cost of recording a real sentence during a reading is seconds,
 # and the cost of recovering it afterwards is re-opening the PDF.
 MIN_SNIPPET_CHARS = 30
+CURRENT_SCHEMA_VERSION = 2
 # 🔴 The refusal lives here, in the gate, not only in a regression test. Reviewed 2026-08-05:
 # a locator whose anchor named `files/corpus/*.jsonl` passed `validate()` with zero errors,
 # because the only check was a test nobody is obliged to run before writing.
@@ -59,6 +66,8 @@ CORPUS_ARTEFACT = re.compile(
 # artefact; `figure` is pixels and can only be attested; `abstract` is honest but weak.
 LOCATOR_SURFACES = {"body", "figure", "table", "supplement", "abstract"}
 TEXT_SURFACES = {"body", "table", "supplement"}
+ARTIFACT_KINDS = {"article_binary", "article_text", "supplement_text", "figure", "table"}
+SHA256_RE = re.compile(r"[a-f0-9]{64}")
 # An elided quote is verbatim in each half and not verbatim as a whole. LEGEND reads it fine;
 # a validator doing exact substring matching against a cached source rejects it.
 ELISION_RE = re.compile(r"\[\s*(?:…|\.\.\.)\s*\]|\s(?:…|\.\.\.)\s")
@@ -98,12 +107,147 @@ def _waived(section: Any, name: str, errors: list[str]) -> bool:
     return True
 
 
-def validate(manifest: Any) -> tuple[list[str], list[str]]:
+def _normalise_text(value: str) -> str:
+    """Normalise presentation whitespace without weakening exact-word matching."""
+    return " ".join(html.unescape(value).split())
+
+
+def _match_key(value: str) -> str:
+    """Canonical quote key resilient only to markup and presentation punctuation.
+
+    PMC inline tags split ``(Figure 3E)`` and superscripts such as ``1005PPGY1008`` into
+    separate text nodes. Removing non-alphanumeric presentation characters restores the
+    authored character sequence while preserving wording, order, digits and case.
+    """
+    normal = unicodedata.normalize("NFKC", html.unescape(value))
+    return "".join(character for character in normal if character.isalnum())
+
+
+def _xml_surfaces(raw: bytes) -> tuple[str, str]:
+    """Return (non-abstract text, abstract text) from XML/HTML-like content.
+
+    A quote found only in ``<abstract>`` must not validate a locator declared as ``body``.
+    ElementTree handles PMC XML. Malformed XML fails closed; silently stripping its tags would
+    merge the abstract back into the body and recreate the shortcut this validator prevents.
+    """
+    try:
+        root = ElementTree.fromstring(raw)
+    except ElementTree.ParseError as exc:
+        raise ValueError(f"cannot parse structured XML: {exc}") from exc
+
+    body_parts: list[str] = []
+    abstract_parts: list[str] = []
+
+    def walk(node: ElementTree.Element, in_abstract: bool = False) -> None:
+        local = node.tag.rsplit("}", 1)[-1].lower() if isinstance(node.tag, str) else ""
+        here = in_abstract or local == "abstract"
+        target = abstract_parts if here else body_parts
+        if node.text:
+            target.append(node.text)
+        for child in node:
+            walk(child, here)
+            if child.tail:
+                target.append(child.tail)
+
+    walk(root)
+    return _normalise_text(" ".join(body_parts)), _normalise_text(" ".join(abstract_parts))
+
+
+class _SurfaceHTMLParser(HTMLParser):
+    """Separate common full-text HTML abstract containers from the article body."""
+
+    VOID_ELEMENTS = {
+        "area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta",
+        "param", "source", "track", "wbr",
+    }
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self._abstract_stack: list[bool] = []
+        self.body: list[str] = []
+        self.abstract: list[str] = []
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        if tag.lower() in self.VOID_ELEMENTS:
+            return
+        values = " ".join(value or "" for key, value in attrs if key in {"id", "class"})
+        marker = tag.lower() == "abstract" or bool(
+            re.search(r"(?:^|[-_\s])abstract(?:$|[-_\s])", values, re.IGNORECASE))
+        self._abstract_stack.append(marker or any(self._abstract_stack))
+
+    def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        return
+
+    def handle_endtag(self, tag: str) -> None:
+        if self._abstract_stack:
+            self._abstract_stack.pop()
+
+    def handle_data(self, data: str) -> None:
+        (self.abstract if any(self._abstract_stack) else self.body).append(data)
+
+
+def _html_surfaces(raw: bytes) -> tuple[str, str]:
+    parser = _SurfaceHTMLParser()
+    parser.feed(raw.decode("utf-8", errors="strict"))
+    parser.close()
+    return _normalise_text(" ".join(parser.body)), _normalise_text(" ".join(parser.abstract))
+
+
+def _artifact_text(path: Path, kind: str) -> tuple[str, str]:
+    """Return (body/supplement text, abstract text) for strict write-time verification."""
+    suffix = path.suffix.lower()
+    if suffix == ".docx":
+        with zipfile.ZipFile(path) as archive:
+            raw = archive.read("word/document.xml")
+        body, _abstract = _xml_surfaces(raw)
+        return body, ""
+    if suffix == ".xml":
+        return _xml_surfaces(path.read_bytes())
+    if suffix in {".html", ".htm"}:
+        return _html_surfaces(path.read_bytes())
+    if suffix in {".txt", ".md"}:
+        return _normalise_text(path.read_text(encoding="utf-8")), ""
+    if kind in {"article_text", "supplement_text", "table"}:
+        raise ValueError(f"text verification is unsupported for {path.suffix or 'this file type'}")
+    return "", ""
+
+
+def _safe_repo_path(root: Path, relative: str) -> Path:
+    candidate = (root / relative).resolve()
+    try:
+        candidate.relative_to(root.resolve())
+    except ValueError as exc:
+        raise ValueError("artifact path escapes the workspace") from exc
+    return candidate
+
+
+def validate(
+    manifest: Any,
+    *,
+    root: Path | None = None,
+    verify_artifacts: bool = False,
+    require_current_schema: bool = False,
+) -> tuple[list[str], list[str]]:
     """Return (errors, incomplete_steps)."""
     errors: list[str] = []
     incomplete: list[str] = []
     if not isinstance(manifest, dict):
         return ["manifest must be a JSON object"], []
+
+    schema_version = manifest.get("schema_version", 1)
+    if not isinstance(schema_version, int) or schema_version < 1:
+        errors.append("schema_version: must be a positive integer")
+        schema_version = 1
+    if schema_version > CURRENT_SCHEMA_VERSION:
+        errors.append(
+            f"schema_version: {schema_version} is newer than validator version "
+            f"{CURRENT_SCHEMA_VERSION}")
+    if require_current_schema and schema_version != CURRENT_SCHEMA_VERSION:
+        errors.append(
+            f"schema_version: new complete reads require {CURRENT_SCHEMA_VERSION}; "
+            f"found {schema_version}")
+    if verify_artifacts and root is None:
+        errors.append("artifact verification requires a workspace root")
 
     for key in ("pmid", "receipt", "landing", "skills_considered", *SECTIONS):
         if key not in manifest:
@@ -202,6 +346,50 @@ def validate(manifest: Any) -> tuple[list[str], list[str]]:
         if not str(cross.get("query", "")).strip():
             errors.append("corpus_crossquery.query: name what was asked of the existing corpus")
 
+    artifacts: dict[str, dict[str, str]] = {}
+    text_cache: dict[str, tuple[str, str]] = {}
+    match_cache: dict[str, tuple[str, str]] = {}
+    if schema_version >= 2:
+        declared_artifacts = manifest.get("source_artifacts")
+        if not isinstance(declared_artifacts, list) or not declared_artifacts:
+            errors.append(
+                "source_artifacts: schema v2 requires at least one fingerprinted full-text "
+                "or visual artifact")
+        else:
+            for position, artifact in enumerate(declared_artifacts, 1):
+                prefix = f"source_artifacts[{position}]"
+                if not isinstance(artifact, dict):
+                    errors.append(f"{prefix}: must be an object")
+                    continue
+                path_value = str(artifact.get("path", "")).strip()
+                digest = str(artifact.get("sha256", "")).strip()
+                kind = str(artifact.get("kind", "")).strip()
+                if not path_value:
+                    errors.append(f"{prefix}.path: must be a repository-relative path")
+                    continue
+                if path_value in artifacts:
+                    errors.append(f"{prefix}.path: duplicate artifact {path_value}")
+                if CORPUS_ARTEFACT.search(path_value):
+                    errors.append(f"{prefix}.path: a bibliographic corpus is not evidence")
+                if not SHA256_RE.fullmatch(digest):
+                    errors.append(f"{prefix}.sha256: lowercase SHA-256 required")
+                if kind not in ARTIFACT_KINDS:
+                    errors.append(f"{prefix}.kind: must be one of {sorted(ARTIFACT_KINDS)}")
+                artifacts[path_value] = {"sha256": digest, "kind": kind}
+                if verify_artifacts and root is not None:
+                    try:
+                        resolved = _safe_repo_path(root, path_value)
+                    except ValueError as exc:
+                        errors.append(f"{prefix}.path: {exc}")
+                        continue
+                    if not resolved.is_file():
+                        errors.append(f"{prefix}.path: artifact does not exist: {path_value}")
+                    elif SHA256_RE.fullmatch(digest):
+                        actual = hashlib.sha256(resolved.read_bytes()).hexdigest()
+                        if actual != digest:
+                            errors.append(
+                                f"{prefix}.sha256: fingerprint mismatch for {path_value}")
+
     # A receipt attests that a document was read in full. It does not attest which sentence
     # supports which statement, and those are different facts. On 2026-08-04 an export to an
     # external knowledge base found that **no verbatim locator existed anywhere in the
@@ -247,10 +435,68 @@ def validate(manifest: Any) -> tuple[list[str], list[str]]:
                         "corpus. An export of abstracts is not a document; anchor into the "
                         "paper — section, figure or table")
                 surface = entry.get("surface")
-                if surface is not None and surface not in LOCATOR_SURFACES:
+                if schema_version >= 2 and surface is None:
+                    errors.append(
+                        f"verbatim_locators.entries[{position}].surface: required by schema v2")
+                elif surface is not None and surface not in LOCATOR_SURFACES:
                     errors.append(
                         f"verbatim_locators.entries[{position}].surface: must be one of "
                         f"{sorted(LOCATOR_SURFACES)}")
+                if schema_version >= 2 and surface == "abstract":
+                    errors.append(
+                        f"verbatim_locators.entries[{position}].surface: abstract material may "
+                        "be recorded as triage context, but cannot be an evidentiary locator "
+                        "for a complete read")
+
+                artifact_values = entry.get("artifact")
+                if isinstance(artifact_values, str):
+                    artifact_paths = [artifact_values]
+                elif isinstance(artifact_values, list) and all(
+                    isinstance(item, str) and item.strip() for item in artifact_values
+                ):
+                    artifact_paths = artifact_values
+                else:
+                    artifact_paths = []
+                if schema_version >= 2 and not artifact_paths:
+                    errors.append(
+                        f"verbatim_locators.entries[{position}].artifact: required by schema v2")
+                unknown = [path for path in artifact_paths if path not in artifacts]
+                if schema_version >= 2 and unknown:
+                    errors.append(
+                        f"verbatim_locators.entries[{position}].artifact: not declared in "
+                        f"source_artifacts: {unknown}")
+
+                if (
+                    verify_artifacts and root is not None and schema_version >= 2
+                    and surface in TEXT_SURFACES and snippet and artifact_paths and not unknown
+                ):
+                    matched = False
+                    verification_failures: list[str] = []
+                    for artifact_path in artifact_paths:
+                        metadata = artifacts[artifact_path]
+                        try:
+                            resolved = _safe_repo_path(root, artifact_path)
+                            if artifact_path not in text_cache:
+                                text_cache[artifact_path] = _artifact_text(
+                                    resolved, metadata["kind"])
+                                match_cache[artifact_path] = tuple(
+                                    _match_key(value) for value in text_cache[artifact_path])
+                            body_key, abstract_key = match_cache[artifact_path]
+                        except (OSError, KeyError, ValueError, zipfile.BadZipFile) as exc:
+                            verification_failures.append(str(exc))
+                            continue
+                        snippet_key = _match_key(snippet)
+                        if snippet_key in body_key:
+                            matched = True
+                            break
+                        if snippet_key in abstract_key:
+                            verification_failures.append(
+                                "quote occurs in the abstract but not the non-abstract body")
+                    if not matched:
+                        detail = "; ".join(verification_failures) or "exact text not found"
+                        errors.append(
+                            f"verbatim_locators.entries[{position}].snippet: not verified in "
+                            f"the declared {surface} artifact ({detail})")
                 if ELISION_RE.search(snippet):
                     errors.append(
                         f"verbatim_locators.entries[{position}].snippet: stitched quote. Two "
@@ -271,7 +517,7 @@ def validate(manifest: Any) -> tuple[list[str], list[str]]:
         # only the abstract, writing a plausible dossier and naming the XML as the source
         # passed every check, because nothing asked WHERE each quote came from.
         declared = [e.get("surface") for e in (entries or []) if isinstance(e, dict)]
-        if entries and all(s is None for s in declared):
+        if schema_version < 2 and entries and all(s is None for s in declared):
             incomplete.append(
                 "verbatim_locators: no entry declares a `surface` (body/figure/table/"
                 "supplement/abstract) — provenance is named but the surface used is not")
@@ -313,7 +559,14 @@ def validate(manifest: Any) -> tuple[list[str], list[str]]:
     return errors, incomplete
 
 
-def load_and_validate(root: Path, disease: str, pmid: str) -> tuple[list[str], list[str]]:
+def load_and_validate(
+    root: Path,
+    disease: str,
+    pmid: str,
+    *,
+    verify_artifacts: bool = False,
+    require_current_schema: bool = False,
+) -> tuple[list[str], list[str]]:
     path = manifest_path(root, disease, pmid)
     if not path.exists():
         return [
@@ -324,7 +577,40 @@ def load_and_validate(root: Path, disease: str, pmid: str) -> tuple[list[str], l
         manifest = json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
         return [f"{path.name}: invalid JSON ({exc})"], []
-    return validate(manifest)
+    return validate(
+        manifest,
+        root=root,
+        verify_artifacts=verify_artifacts,
+        require_current_schema=require_current_schema,
+    )
+
+
+def verification_scope(*, verify_artifacts: bool, require_current_schema: bool) -> str:
+    """Describe exactly what a successful CLI run established.
+
+    Structural validation is useful for auditing legacy manifests, but it is not the
+    persistence boundary. Keep that distinction in the verdict itself so a bare ``PASS``
+    cannot be mistaken for hash- and quote-level verification.
+    """
+    if verify_artifacts and require_current_schema:
+        return (
+            "MANIFEST STRICT: current schema required; local artifact existence, SHA-256 "
+            "and exact text locators verified"
+        )
+    if verify_artifacts:
+        return (
+            "ARTIFACT CHECKS: local artifact existence, SHA-256 and exact text locators "
+            "verified where declared; legacy schema still allowed"
+        )
+    if require_current_schema:
+        return (
+            "CURRENT SCHEMA, STRUCTURE ONLY: local artifact existence, SHA-256 and exact "
+            "text locators NOT VERIFIED"
+        )
+    return (
+        "STRUCTURE ONLY: local artifact existence, SHA-256 and exact text locators NOT "
+        "VERIFIED"
+    )
 
 
 def main() -> int:
@@ -332,16 +618,36 @@ def main() -> int:
     parser.add_argument("--workspace", default=".")
     parser.add_argument("--disease", default="wwox")
     parser.add_argument("--pmid", required=True)
+    parser.add_argument(
+        "--verify-artifacts", action="store_true",
+        help="verify local existence, SHA-256 and exact text locators",
+    )
+    parser.add_argument(
+        "--require-current-schema", action="store_true",
+        help="refuse legacy manifest schemas",
+    )
     args = parser.parse_args()
-    errors, incomplete = load_and_validate(Path(args.workspace).resolve(), args.disease, args.pmid)
+    errors, incomplete = load_and_validate(
+        Path(args.workspace).resolve(), args.disease, args.pmid,
+        verify_artifacts=args.verify_artifacts,
+        require_current_schema=args.require_current_schema,
+    )
     for item in incomplete:
         print(f"  [INCOMPLETE] {item}")
+    scope = verification_scope(
+        verify_artifacts=args.verify_artifacts,
+        require_current_schema=args.require_current_schema,
+    )
     if errors:
-        print("VERDICT: FAIL")
+        print(f"VERDICT: FAIL — verification scope: {scope}")
         for error in errors:
             print(f"  [BLOCK] {error}")
         return 1
-    print(f"VERDICT: PASS — manifest for PMID {args.pmid} is complete ({len(incomplete)} declared gap(s))")
+    state = "complete" if not incomplete else "structurally valid with declared gaps"
+    print(
+        f"VERDICT: PASS — manifest for PMID {args.pmid} is {state} "
+        f"({len(incomplete)} gap(s)); verification scope: {scope}"
+    )
     return 0
 
 

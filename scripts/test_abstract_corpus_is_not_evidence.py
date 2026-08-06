@@ -14,7 +14,7 @@ stopped the corpus being named as the source of evidence. This is that join.
 
 Three prohibitions, each mechanical:
 
-* no `FULLTEXT_READ_RECEIPT` may name the corpus as its `source_locator`;
+* no partial/complete `FULLTEXT_READ_RECEIPT` may name the corpus as its source;
 * no deep-dive manifest may name it as an artefact or a locator anchor;
 * the harvester must keep declaring the corpus non-evidential, so the artefact carries its own
   terms of use rather than relying on this file being read.
@@ -49,9 +49,10 @@ def _receipts() -> list[dict]:
 
 
 class CorpusIsNotASource(unittest.TestCase):
-    def test_no_receipt_reads_the_abstract_corpus(self) -> None:
+    def test_no_fulltext_receipt_reads_the_abstract_corpus(self) -> None:
         offenders = [r["event_id"] for r in _receipts()
-                     if CORPUS_MARKERS.search(str(r.get("source_locator") or ""))]
+                     if r.get("evidence_depth") in {"partial_fulltext_read", "complete_fulltext_read"}
+                     and CORPUS_MARKERS.search(str(r.get("source_locator") or ""))]
         self.assertFalse(
             offenders,
             "these receipts name an abstract corpus as the document they read:\n  "
@@ -154,6 +155,16 @@ class TheWritersRefuseItThemselves(unittest.TestCase):
                                 for e in errors))
             return
         self.skipTest("no manifest with locators to mutate")
+
+    def test_a_pubmed_record_url_cannot_support_a_complete_read(self) -> None:
+        bad = {
+            **self.receipt,
+            "source_locator": "https://pubmed.ncbi.nlm.nih.gov/99999999/",
+            "source_kind": "fulltext_remote",
+            "analysis_time_precision": "second",
+        }
+        self.assertTrue(any("PubMed record URL" in error
+                            for error in self.receipts.validate_new_receipt(bad)))
 
 
 class ArtefactCarriesItsOwnTerms(unittest.TestCase):

@@ -79,13 +79,17 @@ class ReportIntegrityTests(unittest.TestCase):
                 "evidence_depth": "complete_fulltext_read",
                 "source_locator": "PMC123",
                 "source_fingerprint": None,
+                "source_kind": "fulltext_remote",
+                "analysis_time_precision": "second",
                 "coverage": {key: "read" for key in receipts.COVERAGE_KEYS},
                 "outputs": ["dossier.md"],
                 "evidence_basis": ["coverage_map", "dossier"],
                 "prior_receipt": None,
                 "reread_reason": "first_read",
             }
-            receipts.append_receipt(ledger, receipt)
+            scratch_ledger = root / "receipt_fixture.jsonl"
+            receipts.append_receipt(scratch_ledger, receipt)
+            scratch_ledger.replace(ledger)
             report = cov.build(root, "wwox")
             self.assertEqual(report["depth"]["full_text"], 1)
             self.assertEqual(report["receipt_backed_complete_records"], 1)
