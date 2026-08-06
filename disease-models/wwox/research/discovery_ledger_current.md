@@ -1694,3 +1694,39 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
 **Next-search agenda:** `READ_NEXT` PMID 36499501 (`FT-037`) — miR-186-5p esosomiale e disfunzione NK in BLCA: è la referenza più vicina all'asse e **mancava da ogni file LEGEND**. Poi PMID 30619736 (`FT-038`), l'interattoma TAP-MS che fornisce l'arco WWOX·UPF1 su cui `DL-MECH-069` poggia: è citato come premessa e non è mai stato letto. Non mettere in coda gli altri contesti tumorali di LINC01137: senza un esperimento di perturbazione aggiungono coorti, non meccanismo.
 
 **Riflessione di processo:** il valore di questa lettura è quasi tutto nelle **immagini** — undici dei fatti registrati non esistono nell'XML, che porta solo le didascalie. Le figure principali sono arrivate da `pmc.ncbi.nlm.nih.gov/articles/instance/<PMCID>/bin/`, il supplemento da `https://www.ebi.ac.uk/europepmc/webservices/rest/PMC<ID>/supplementaryFiles`, che ha restituito in un solo zip il DOCX da 23 MB **e** tutte le figure, dopo che la rotta PMC `bin/` per il supplemento aveva risposto con un interstiziale JavaScript e l'API Frontiers con un 500. Quella rotta va promossa a **prima** opzione per i supplementi in `find-fulltext`, non a ultima.
+
+---
+
+### DL-MECH-070 — Il ponte WWOX–lipidi/traffico–mielina è una sintesi plausibile, non una catena causale dimostrata
+
+- **Status:** open · **Tag:** `DATO` (espressione da dataset pubblici e primari citati) +
+  `INFERENZA` (ponte integrativo) · **Fonte:** Aldaz & Hussain 2020, PMID 33255508 /
+  PMCID PMC7727818 / DOI 10.3390/ijms21238922; full text, nove figure e due tabelle
+  supplementari letti il 2026-08-06 (`FTR-20260806-33255508-01`). Dossier:
+  `research/fulltext_dossiers/PMID33255508.md`.
+- **Cosa mostra davvero:** la rianalisi di BrainRNAseq colloca Wwox più alto negli OPC che
+  negli oligodendrociti maturi; i primari citati collegano separatamente WWOX a metabolismo
+  lipidico e proteine di traffico endosoma/lisosoma. Nessun esperimento del paper perturba
+  questi nodi in neuroni o oligodendrociti e nessuna mediazione della mielinizzazione è
+  misurata.
+- **Statement epistemico:** `WWOX -> {lipid homeostasis, endomembrane trafficking}` è
+  supportato da primari esterni; `{lipid homeostasis, trafficking} -> myelin biogenesis` è
+  biologia generale; quindi `WWOX -> myelination via those routes` resta `INFERENZA`.
+- **Confronto col grafo:** non crea un claim. `CLAIM 003/004` e `DL-MECH-010/031` possiedono
+  prove primarie più forti per un difetto mielinico non-cell-autonomo guidato dal neurone;
+  `CLAIM 026/DL-MECH-018` porta l'interattoma cellulare, ma non il trasferimento neurale.
+  L'espressione negli OPC non dimostra autonomia cellulare e non contraddice la genetica
+  condizionale successiva.
+- **Q230P:** la review conta otto casi in sei famiglie ma dichiara ignoto il meccanismo della
+  maggior parte dei missense. La ricorrenza non autorizza né perdita catalitica né
+  misfolding; il record resta subordinato ai dati funzionali primari già presenti nel grafo.
+- **Esperimento discriminante:** in un modello neurale isogenico WWOX-loss/rescue, misurare
+  in parallelo traffico SEC23IP/SCAMP3/VOPP1, lipidomica della linea oligodendrogliale e
+  maturazione/mielina; una normalizzazione della mielina senza normalizzazione dei primi due
+  falsifica la mediazione proposta.
+- **Debito esplicito:** leggere PMID 24871327 (`FT-039`) e PMID 31340538 (`FT-040`) prima di
+  usare il ponte come premessa; PMID 30290271 e 30619736 restano rispettivamente `FT-008` e
+  `FT-038`. **Belief:** alto che il ponte sia una domanda ben motivata; basso che la via
+  mediatrice sia già identificata.
+- **Interconnessioni:** `CLAIM 003` · `CLAIM 004` · `CLAIM 005` · `CLAIM 026` ·
+  `DL-MECH-010` · `DL-MECH-012` · `DL-MECH-018` · `DL-MECH-031` · `FT-039` · `FT-040`.

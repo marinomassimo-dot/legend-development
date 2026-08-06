@@ -121,10 +121,10 @@ notes: "CC-20260726-001/002/003 → PAPER 054/055/056, CLAIM 034/035 new, CLAIM 
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260806_001
+last_lint_id: LINT_20260806_002
 last_lint_date: 2026-08-06
 last_lint_result: PASS
-notes: "Hostile-review remediation of the PMID 37519886 abstract firewall. The CLI now distinguishes structure-only success (artifacts, SHA-256 and exact locators explicitly NOT VERIFIED) from strict manifest verification; the protocol defines abstract_snippet as interoperability-only companion metadata, never evidentiary support. The mutation battery now requires every target to be green before mutation, so a red baseline is untestable and makes the run incomplete/FAIL rather than a false catch. Clean working-tree export: mutation battery PASS (19/19 individually; 14/14 distinct targets fail simultaneously), regression PASS WITH SKIPS (48 targets; two declared environment skips), LINT PASS and public release gate PASS/BLOCKS 0. The local tree correctly produces an incomplete battery verdict because gitignored files/, staging/ and backup/ make the release-surface baseline red. Authoritative append remains the fail-closed choke point: new complete reads require a local SHA-256-bound full-text source, schema-v2 manifest, zero declared gaps, non-abstract locator surfaces and artifact-bound exact text verification. The real manifest passes strict verification with 19 evidentiary locators and 0 gaps. Earlier: receipt FTR-20260805-37519886-01 appended as the first complete read of that study (43 -> 44 events); generated coverage and queue views refreshed; unread-premise debt 16/16."
+notes: "PMID 33255508 read completely from PMC XML with all nine figure images and two supplementary workbooks inspected. Receipt FTR-20260806-33255508-01 appended (44 -> 45 events); schema-v2 manifest passes strict artifact/hash/exact-locator verification with zero gaps. Review-level lipid/trafficking-to-myelin synthesis was kept as INFERENZA (DL-MECH-070), not promoted to a causal claim; primary debts added as FT-039/FT-040. SYNTHESIS_MEDIATION_GATE added. Generated coverage refreshed. Unread-premise ratchet lowered from 16 to the live 14: one complete read plus one newly explicit queue debt. LINT PASS; public release gate PASS/BLOCKS 0. Full regression runner's release-surface failures are the documented consequence of local gitignored files/, staging/ and backup/ roots; its real baseline mismatch was repaired and test_session_self_eval passes 24/24."
 ```
 
 ---
@@ -151,8 +151,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 44
-fulltext_ledger_head: 0047a5acf3fdd5e8e316130ae34cd3a0c457d35f55a475413b3487ebf9ff1543
+fulltext_ledger_events: 45
+fulltext_ledger_head: d11285bb2aac489a9adc8d008178bfb921a5d0ecfcd28d2bd58d6abbb4b16425
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -187,17 +187,18 @@ from the grandfathered list.
 
 A separate and harsher debt, measured on 2026-07-26 by `session_self_eval.py`. The *reasoning*
 layer — metas, therapeutic strategies, the analysis files — cites papers as **support for
-conclusions**. Seventeen of the eighteen PMIDs cited there have **no complete-read receipt, no
-registry full-text declaration and no full-text-queue entry**: the model leans on them, and
-nobody opened them.
+conclusions**. The first measurement found seventeen of eighteen PMIDs with **no
+complete-read receipt, no registry full-text declaration and no full-text-queue entry**. The
+ratchet has since fallen as papers were read or their debt was made explicit; the current
+baseline below must equal the live count, never preserve historical padding.
 
 This is the failure mode that let PMID 22193544 be load-bearing in five files while unread,
 with every existing check passing. It is invisible by construction, because leaning on a paper
 writes nothing anywhere. So it is measured instead of assumed.
 
 ```yaml
-unread_premise_baseline: 16
-unread_premise_measured_on: 2026-08-04
+unread_premise_baseline: 14
+unread_premise_measured_on: 2026-08-06
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

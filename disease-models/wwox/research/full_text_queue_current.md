@@ -523,3 +523,33 @@ dell'interazione, i controlli di specificità, e se UPF1 compaia con altri compo
 complesso EJC/NMD.
 **Come è emerso:** durante la lettura di PMID 37519886, che importa l'arco senza misurarlo.
 **Current status:** ⬜ recuperato? no — non letto.
+
+---
+
+## FT-039
+**Paper:** PMID 24871327 — Iatan et al. 2014, *Circ Cardiovasc Genet* 7:491-504
+**Title:** The WWOX gene modulates high-density lipoprotein and lipid metabolism
+**Priority:** **ALTA**
+**Why:** è il primario citato da PMID 33255508 per il primo dei due passaggi del ponte
+`WWOX -> lipid homeostasis -> myelin`. La review lo descrive come “strong evidence”, ma la
+lettura corrente non trasferisce quell'etichetta: servono modello, perturbazione, endpoint e
+dimensioni d'effetto del primario prima che il nodo lipidico possa sostenere un'inferenza
+neurale o un biomarcatore.
+**Come è emerso:** multi-hop della lettura completa di PMID 33255508, receipt
+`FTR-20260806-33255508-01`, `DL-MECH-070`.
+**Current status:** ⬜ presente nel corpus, non letto integralmente.
+
+---
+
+## FT-040
+**Paper:** PMID 31340538 — Tochigi et al. 2019, *Int J Mol Sci* 20:3596
+**Title:** Loss of Wwox Causes Defective Development of Cerebral Cortex with Hypomyelination
+in a Rat Model of Lethal Dwarfism with Epilepsy
+**Priority:** **ALTA**
+**Why:** è il primario animale direttamente citato dalla review per sviluppo corticale e
+ipomielinizzazione. Il grafo lo usa già come ancora strutturale, ma non esiste ancora un
+receipt completo; deve essere letto prima di estrarre tempistica, autonomia cellulare o
+mediazione lipidico/traffico.
+**Come è emerso:** multi-hop e horizontal pass di PMID 33255508, receipt
+`FTR-20260806-33255508-01`, `DL-MECH-070`.
+**Current status:** ⬜ full text PMC6678113 recuperato nel batch 2026-08-06, non ancora letto.
