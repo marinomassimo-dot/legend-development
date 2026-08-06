@@ -1,0 +1,263 @@
+{
+  "schema_version": 2,
+  "pmid": "30290271",
+  "doi": "10.1016/j.nbd.2018.09.026",
+  "receipt": "FTR-20260806-30290271-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID30290271.md",
+    "discovery_ledger_current#DL-MECH-072",
+    "full_text_queue_current#FT-008",
+    "full_text_queue_current#FT-043",
+    "staging/commit_candidate_20260806_30290271.md",
+    "learned_gates_registry#MARKER_TO_FUNCTION_GATE"
+  ],
+  "skills_considered": [
+    {"skill": "legend", "used": true},
+    {"skill": "legend-study-intake-triage", "used": true},
+    {"skill": "find-fulltext", "used": true},
+    {"skill": "legend-deepdive", "used": true},
+    {"skill": "legend-discovery", "used": true},
+    {"skill": "legend-session-self-eval", "used": true},
+    {"skill": "legend-capability-scout", "used": true},
+    {"skill": "documents", "used": true},
+    {"skill": "spreadsheets", "used": true},
+    {
+      "skill": "browser-control",
+      "used": true,
+      "reason": "The in-app browser was invoked only after direct source retrieval encountered the publisher challenge; the runtime reported that no browser was available, so no browser-derived evidence was used."
+    },
+    {
+      "skill": "legend-batch-inferential-sweep",
+      "used": false,
+      "reason": "FT-008 was already the approved reading cursor and already present in the scientific queue; a new broad batch ranking would not change source selection."
+    },
+    {
+      "skill": "legend-proband-priority-matrix",
+      "used": false,
+      "reason": "The paper was already a high-priority GABA/glia source selected for full reading; no person-level prioritisation is permitted in the public edition."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "The read chiefly corrects assay-to-claim compression. It yields a discriminating experiment but no sufficiently mature new therapeutic hypothesis."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "The study tests no drug or intervention. Its existing medication implication was rejected as unsupported rather than promoted to safety triage."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Canonical corrections were isolated in a commit candidate; no BATCH_COMMIT was authorised and the four scientific current files remain unchanged."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 138,
+    "publications_on_gene": 38,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "PubMed exact-author counts measured 2026-08-06: senior/corresponding author Aldaz CM had 138 records and 38 with WWOX; first author Hussain Tabish had 29 and 6 with WWOX. Shetty AK had 476 records, including 61 with epilepsy. The collaboration therefore has high execution weight for WWOX mouse genetics and hippocampal stereology/glial histology. It is not a primary human WWOX-DEE clinical group, and expertise does not repair the systemic-null design, tiny RNA-seq sample or missing functional and causal assays."
+  },
+  "field_density": {
+    "queries": [
+      {"query": "WWOX AND GABAergic", "count": 4, "source": "PubMed ESearch, 2026-08-06"},
+      {"query": "WWOX AND parvalbumin", "count": 1, "source": "PubMed ESearch, 2026-08-06"},
+      {"query": "WWOX AND microglia", "count": 4, "source": "PubMed ESearch, 2026-08-06"},
+      {"query": "WWOX AND astrocyte", "count": 5, "source": "PubMed ESearch, 2026-08-06"},
+      {"query": "WWOX AND hippocampus", "count": 12, "source": "PubMed ESearch, 2026-08-06"}
+    ],
+    "note": "The WWOX-by-interneuron/glia literature is sparse, with only one parvalbumin hit. This makes the regional phenotype important but increases the need to preserve exact assay, region and significance boundaries rather than promote marker counts to GABA or circuit function."
+  },
+  "multihop": {
+    "references_enumerated": 90,
+    "gene_direct_refs_in_source": [
+      "24456803", "24932569", "27121845", "10786676", "25403906", "25537520",
+      "15026124", "27495153", "17470496", "19936220", "24369382", "25411445",
+      "16941225", "10861292", "27869163", "19500159", "15126504", "26345274",
+      "25716914", "22193544"
+    ],
+    "resolved": [
+      "24456803", "24932569", "27121845", "10786676", "25403906", "25537520",
+      "15026124", "27495153", "19936220", "24369382", "25411445", "16941225",
+      "10861292", "27869163", "19500159", "15126504", "26345274", "25716914",
+      "22193544"
+    ],
+    "queued": ["FT-042", "FT-043"],
+    "note": "All 90 references were read and 89 PMIDs resolved. Twenty are WWOX-, model- or disease-direct. Nineteen resolve in the structured corpus. PMID 19936220 is the load-bearing model-generation primary, lacks a receipt and is now FT-043. PMID 19500159 already remains FT-042. PMID 17470496 is a pre-gene SCAR linkage paper already recorded as bibliographic lineage in a prior dossier and is not load-bearing for the measured GABA/glia endpoints, so it was not duplicated as a new reading debt."
+  },
+  "corpus_crossquery": {
+    "query": "Which of the paper's 20 WWOX-/model-/disease-direct PMIDs already occur in the structured corpus, and where does the repository attribute claims to PMID 30290271 beyond its measured endpoints?",
+    "hits": 19,
+    "note": "Mechanical audit after the vertical read found 19 of 20 direct PMIDs in a structured registry or queue. Horizontal audit found PMID 30290271 duplicated as PAPER 006/LIT-006 and CORPUS-STUB-085, with identifiers missing from the integrated records. CLAIM 005 already says markers, but turns one systemic model into plural models, omits the whole-hippocampus PV versus DG-only NPY pattern and attaches a medication caution. The GABA meta additionally compresses marker-positive abundance into interneuron loss and GAD65/67 abundance toward GABA/E-I function. These corrections are queued rather than silently applied to canonical state."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Europe PMC metadata checked on 2026-08-06 showed no retraction flag, expression of concern or correction list for PMID 30290271. PMCID PMC7104842 identifies the full-text record."
+  },
+  "source_artifacts": [
+    {"path": "files/fulltext/PMID30290271_Hussain2019.html", "sha256": "a415d54a6ef09e7c1921e864ba6cd02ef2939fb2f0e93d4511247aaff3dfa89b", "kind": "article_text"},
+    {"path": "files/fulltext/PMID30290271_Hussain2019.pdf", "sha256": "c44c8472e20c83cb0c00f91d9f9adff0e8ce7019218fd4194e8c95e8cb8fc14a", "kind": "article_binary"},
+    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F1.jpg", "sha256": "da793a2be5b3aa4d63bc975f603b109648513da1a0c88e053f9b7170fa52c931", "kind": "figure"},
+    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F2.jpg", "sha256": "32618ac267eda2bac20274a8ec4b4e1b833be8d2efd574afbe64704feb3092ef", "kind": "figure"},
+    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F3.jpg", "sha256": "46eed2dc7d72d26dda5922da134a0cfe53c2e8c21c244cebb7895bd44decad66", "kind": "figure"},
+    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F4.jpg", "sha256": "be2dcae4ae3d94705d4703f219e7c5d1b17b7bfda9dd3fef906567e83295bcdf", "kind": "figure"},
+    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F5.jpg", "sha256": "f7d1b3080d75c4b76050e664c3eecdd482b7d4a4eb49345c278e233c66252c0d", "kind": "figure"},
+    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F6.jpg", "sha256": "f42d050ff5cf6a290d847f2d1432bcb3fc4ef501ee175e3701ed1485efe71486", "kind": "figure"},
+    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/supplement/Supplementary_Table_1.docx", "sha256": "be21e2547d1532f824b720016b8ff4566bda87750b177bd296238e9380471a23", "kind": "table"},
+    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/supplement/Supplementary_Table_2.xlsx", "sha256": "452dbc85302b319a9f6e81870a2705df926463fec458152520992f72b86de390", "kind": "table"}
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "entries": [
+      {
+        "proposition": "The study uses a mixed-background full systemic knockout generated through persistent oocyte Cre activity.",
+        "snippet": "we crossed male Wwox flox/wt mice with female BK5-Cre + Wwox flox/wt mice (both in mixed 129SV/C57Bl/6 background)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Methods 2.1, Animals, paragraph P8"
+      },
+      {
+        "proposition": "Two-week mice of both sexes were pooled without a reported sex-stratified analysis.",
+        "snippet": "Mice from both sexes approximately 50% male, 50% female were used for all studies",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Methods 2.1, Animals, paragraph P8"
+      },
+      {
+        "proposition": "PV-positive counts are reduced across the whole hippocampus by 44 percent.",
+        "snippet": "The overall reduction of PV+ interneurons in Wwox KO mice amounted to 44% when the hippocampus was taken in its entirety",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Results 3.1, paragraph P18"
+      },
+      {
+        "proposition": "The significant NPY-positive reduction is regional rather than a whole-hippocampus result.",
+        "snippet": "the DG region of Wwox KO mice displayed a 30% reduction in the total number of NPY+ interneurons when compared to control WT mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Results 3.1, paragraph P19"
+      },
+      {
+        "proposition": "CA1 and CA3 NPY-positive counts do not show an obvious genotype difference.",
+        "snippet": "the CA1 and CA3 subfields, did not exhibit any obvious difference in the number of NPY+ interneurons between Wwox KO and WT mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Results 3.1, paragraph P19"
+      },
+      {
+        "proposition": "The glial quantitative assay measures immunoreactive area fraction rather than cell number.",
+        "snippet": "The areas occupied by IBA-1+ microglia and GFAP+ astrocyte elements (area fractions) were measured per unit area of the tissue",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Methods 2.5, paragraph P12"
+      },
+      {
+        "proposition": "Only Il6 is reported significant among the two assayed inflammatory cytokines.",
+        "snippet": "We observed > 1.5 fold upregulation of both cytokines (Il6 significant at p < .05)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Results 3.3, paragraph P23"
+      },
+      {
+        "proposition": "The paper directly measures lower GAD65/67 protein abundance, not GABA concentration or flux.",
+        "snippet": "revealed significantly lower levels of GAD65/67 protein expression",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Results 3.4, paragraph P24"
+      },
+      {
+        "proposition": "The RNA-seq biological sample size is two knockout versus three wild-type neurosphere samples.",
+        "snippet": "Wwox KO mice (n = 2) relative to Wwox WT (n = 3)",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Figure 6 caption, paragraph P65"
+      },
+      {
+        "proposition": "The transcriptomic result comprises 283 genes with 184 upregulated and 99 downregulated.",
+        "snippet": "Out of the 283 differentially expressedgenes, 184 transcripts were up-regulated and 99 were down-regulated",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Results 3.5, paragraph P26"
+      },
+      {
+        "proposition": "The claimed broad neurosphere qPCR validation is not shown.",
+        "snippet": "All these RNA-Seq observations were validated by qRT-PCR on RNA isolated from neurospheres (data not shown)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Results 3.5, paragraph P27"
+      },
+      {
+        "proposition": "Only Grin2c, Grm3 and Kcna2 are highlighted as concordant in the separate in-vivo qPCR comparison.",
+        "snippet": "the most striking changes behaving in the same direction in both conditions was the very significant downregulation in expression of the NMDA receptor Grin2c, glutamate receptor Grm3, and voltage-gated potassium channel Kcna2 genes",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Results 3.5, paragraph P28"
+      },
+      {
+        "proposition": "The authors explicitly leave the causal direction of the inflammatory phenotype unresolved.",
+        "snippet": "further investigation is needed to gather additional mechanistic insight on what is cause or consequence upon Wwox loss of function",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Discussion, paragraph P32"
+      },
+      {
+        "proposition": "The analysis uses separate two-tailed unpaired t-tests for cell subtypes and biomarkers.",
+        "snippet": "Student’s two-tailed unpaired t-test was used to compare interneurons numbers and additional biomarkers",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Methods 2.6, paragraph P13"
+      },
+      {
+        "proposition": "Figure 1 marks PV-positive differences in DG, CA1 and whole hippocampus, while CA3 carries no significance mark; the whole-hippocampus 44 percent result must not be reduced to regional-only wording.",
+        "snippet": "Bar charts (C1–C3 and D) show stereological results comparing the number of PV+ interneurons in DG (C1), CA1 subfield (C2), CA3 subfield (C3), and the entire hippocampus (D)",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F1.jpg",
+        "anchor": "Figure 1 image inspected at original resolution: C1 has two asterisks, C2 one, C3 none and D two; caption P60 defines one versus two asterisks"
+      },
+      {
+        "proposition": "Figure 2 marks the NPY-positive difference only in DG; the whole-hippocampus panel D has no significance mark, which is an absence-of-report observation rather than evidence of equivalence.",
+        "snippet": "Bar charts (C1–C3 and D) compare the average number of NPY+ interneurons in DG (C1), CA1 subfield (C2), CA3 subfield (C2), and the entire hippocampus (D)",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F2.jpg",
+        "anchor": "Figure 2 image inspected at original resolution: significance asterisk appears over C1 only; C2, C3 and D are unmarked; caption P61 defines the asterisk"
+      },
+      {
+        "proposition": "Figure 3 supports increased IBA1 area fraction in CA1, CA3 and whole hippocampus while DG is unmarked, and the assay is area fraction rather than cell number.",
+        "snippet": "A significant increase in the area fraction (AF) occupied by IBA-1+ structures in CA1 and CA3 subfield as well as entire hippocampus can be observed in Wwox KO mouse",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F3.jpg",
+        "anchor": "Figure 3 image inspected at original resolution: C1/DG carries no significance mark; C2, C3 and D do; caption P62"
+      },
+      {
+        "proposition": "Figure 4 supports increased GFAP area fraction in CA1, CA3 and whole hippocampus while DG is unmarked; panel E marks Il6 but not Tnf-a.",
+        "snippet": "A considerable increase in the AF occupied by GFAP+ structures in the CA1 and CA3 subfields as well as the entire hippocampus is observed in Wwox KO mice",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F4.jpg",
+        "anchor": "Figure 4 image inspected at original resolution: C1/DG and the Tnf-a bar are unmarked; C2, C3, D and Il6 carry significance marks; caption P63"
+      },
+      {
+        "proposition": "Figure 5 contains five lanes per genotype and reports combined GAD65/67 densitometry, not a direct GABA assay.",
+        "snippet": "Bar graphs representing the average densitometry immunoblot bands representing Gad65/67 protein expression, normalized to Actin loading control, in Wwox WT (n = 5) and Wwox KO (n = 5) mice",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F5.jpg",
+        "anchor": "Figure 5 image inspected at original resolution: panel A shows five WT and five KO lanes; panel B is combined Gad65/67 densitometry; caption P64"
+      },
+      {
+        "proposition": "Figure 6 visually exposes the tiny RNA-seq sample and labels panel D as relative linear fold change despite plotting signed negative values, so the transformation is not transparent.",
+        "snippet": "Y axis in the RNA-Seq data graph (C) represents relative log2 FC values while in hippocampi graph (D) it represents relative linear FC values",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F6.jpg",
+        "anchor": "Figure 6 image inspected at original resolution: heatmap has two KO and three WT columns; panel D uses a signed negative axis labelled relative linear FC; caption P65"
+      },
+      {
+        "proposition": "Epileptogenesis and death by approximately three weeks are imported premises attributed to earlier studies, not outcomes measured anew in this paper.",
+        "snippet": "we reported that Wwox gene deletion leads to epileptogenesis and early death in mice, where all mice die by approximately 3 weeks of age",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30290271_Hussain2019.html",
+        "anchor": "Introduction, paragraph P6, citing Ludes-Meyers 2009 (PMID 19936220) and Mallaret 2014; primary remains FT-043"
+      }
+    ]
+  }
+}

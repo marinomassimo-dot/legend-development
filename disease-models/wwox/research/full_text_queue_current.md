@@ -81,12 +81,18 @@ Queue of priority full texts to retrieve or deep-dive to consolidate the operati
 ---
 
 ## FT-008
-**Paper:** Hussain et al. 2019 (NEW — verify vs Hussain 2023 already in system)
-**Title:** WWOX KO → reduced GABAergic interneurons and hippocampal GABA synthesis; E/I imbalance
+**Paper:** PMID 30290271 — Hussain et al. 2019, *Neurobiology of Disease* 121:163–176
+**Title:** Wwox deletion leads to reduced GABA-ergic inhibitory interneuron numbers and activation of microglia and astrocytes in mouse hippocampus
 **Priority:** HIGH
-**Why:** key primary for the GABA paradox (P2, meta_gaba_paradox) — currently only cited via review
-**Current status:** not confirmed in registry (Hussain hits may be 2023 only)
-**Next action:** disambiguate Hussain 2019 vs 2023; retrieve full text
+**Why:** primary systemic-KO source for regional PV/NPY marker-positive counts, IBA1/GFAP
+area fractions and GAD65/67 protein. It does not directly measure GABA synthesis/abundance,
+E/I balance, synaptic inhibition, seizure activity or interneuron death.
+**Current status:** ✅ full text, all 6 figures, Table 1, both supplementary tables and all 90
+references read on 2026-08-06; receipt `FTR-20260806-30290271-01`; dossier
+`fulltext_dossiers/PMID30290271.md`. Already represented by `PAPER 006` and `LIT-006`, with
+duplicate `CORPUS-STUB-085`; canonical normalization awaits `BATCH_COMMIT`.
+**Next action:** propagate the queued identifier/dedup and evidence-boundary corrections only
+through an authorised `BATCH_COMMIT`.
 
 ---
 
@@ -583,3 +589,18 @@ non ha receipt; Tochigi 2019 li cita, non li rimisura tutti. Va letto prima di u
 penetranza o la causalità genetica come dato di prima mano.
 **Come è emerso:** multi-hop di PMID 31340538 e audit del preesistente `DL-MECH-026`.
 **Current status:** ⬜ record presente; full text precedentemente non accessibile, non letto.
+
+---
+
+## FT-043
+**Paper:** PMID 19936220 — Ludes-Meyers et al. 2009, *PLoS ONE* 4:e7775
+**Title:** Generation and characterization of mice carrying a conditional allele of the Wwox tumor suppressor gene
+**Priority:** **ALTA**
+**Why:** è il primario load-bearing per generazione, ricombinazione e fenotipo basale del
+modello knockout usato da PMID 30290271. Hussain 2019 importa quel protocollo e non rimisura
+tutti i passaggi di costruzione/validazione del modello. Il record è già nel corpus ma non ha
+una ricevuta completa; va letto prima di promuovere causalità genetica, specificità del
+controllo o dettagli di generazione come dati di prima mano.
+**Come è emerso:** enumerazione delle 90 referenze durante la lettura completa di PMID
+30290271 (`FTR-20260806-30290271-01`) e cross-query dei 20 riferimenti WWOX-/modello-/malattia-diretti.
+**Current status:** ⬜ record presente; nessun full-text receipt, non letto integralmente.

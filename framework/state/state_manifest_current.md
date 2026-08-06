@@ -121,10 +121,10 @@ notes: "CC-20260726-001/002/003 → PAPER 054/055/056, CLAIM 034/035 new, CLAIM 
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260806_003
+last_lint_id: LINT_20260806_004
 last_lint_date: 2026-08-06
 last_lint_result: PASS
-notes: "PMID 31340538 read completely from PMC XML with all six figure images inspected and 56 references enumerated. Receipt FTR-20260806-31340538-01 appended (45 -> 46 events); schema-v2 manifest passes strict artifact/hash/exact-locator verification with zero gaps. The source corrects the existing author/title attribution and bounds its new experiments to PND5-21, so it cannot itself serve as a prenatal anchor; preserved NeuN abundance was not promoted to intact neurons, reversibility, OPC arrest or cell autonomy. DL-MECH-071 and FT-041/FT-042 landed; canonical corrections remain isolated for a future BATCH_COMMIT. DEVELOPMENTAL_TIMEPOINT_ATTRIBUTION_GATE added. Generated coverage refreshed. Unread premises remain at the live 14/14 because FT-040 was already explicit debt. LINT PASS; public release gate PASS/BLOCKS 0. Full regression runner reproduces only the documented live-workspace release-surface failures caused by intentionally gitignored backup/, files/ and staging/ roots plus local full-text assets."
+notes: "PMID 30290271 read completely from article HTML/PDF with all six figures, Table 1, both supplements and 90 references audited. Receipt FTR-20260806-30290271-01 appended (46 -> 47 events). After adversarial cross-review, the schema-v2 manifest carries 14 exact body-text locators plus 7 fingerprinted figure locators and passes strict verification with zero gaps. Panel-level absence of significance marks is now represented as visual absence-of-report, not equivalence; the tiny RNA-seq dataset supports neither the authors' coherent epilepsy program nor a coherent counter-program; early death/epileptogenesis are tagged as imported premises pending FT-043. The commit candidate is explicitly MAJOR (target WM_v4.0_2026-08-06), resolves the medication-language decision by deletion and requires operator authorization. Unread-premise baseline lowered to the live 13/13; self-eval suite 24/24 PASS. LINT PASS; public release gate PASS/BLOCKS 0. PubMed pipeline branch 212850e remains unmerged pending fixes from hostile review."
 ```
 
 ---
@@ -151,8 +151,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 46
-fulltext_ledger_head: e8a535c1fec1abd2e1aed09a70a24ed078503c46997819aa3e05cc0ebd0a1de3
+fulltext_ledger_events: 47
+fulltext_ledger_head: cf10574e6bc3a755da74d68b47cb9e8e8112230198aaecabbd5c4f0f41ddf121
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -197,7 +197,7 @@ with every existing check passing. It is invisible by construction, because lean
 writes nothing anywhere. So it is measured instead of assumed.
 
 ```yaml
-unread_premise_baseline: 14
+unread_premise_baseline: 13
 unread_premise_measured_on: 2026-08-06
 ```
 

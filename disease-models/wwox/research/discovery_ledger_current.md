@@ -1773,3 +1773,60 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
   19500159, mappatura causale/epilessia) prima di usare penetranza delle crisi o causalità
   genetica come dati letti. **Interconnessioni:** `DL-MECH-026` · `DL-MECH-027` ·
   `DL-MECH-031` · `CLAIM 014` · `CLAIM 015` · `CLAIM 032` · `FT-041` · `FT-042`.
+### DL-MECH-072 — Il KO murino definisce vulnerabilità PV pan-ippocampale e NPY regionale, con reattività gliale, ma non misura GABA, E/I, morte interneuronale o causalità infiammazione→crisi
+- **Status:** open · **Tag epistemico:** `DATO` + `INFERENZA`. Le etichette
+  `CORREZIONE`, `TENSION` e `UNRESOLVED` sotto sono funzioni diagnostiche del ledger, non
+  livelli epistemici aggiuntivi e non devono migrare come stati canonici.
+- **Fonte:** Hussain et al. 2019, *Neurobiology of Disease* — PMID **30290271**,
+  PMCID **PMC7104842**, DOI `10.1016/j.nbd.2018.09.026`; full text, sei figure,
+  Table 1, entrambi i supplementi e 90 riferimenti letti integralmente; receipt
+  `FTR-20260806-30290271-01`.
+- **DATO — PV:** nel KO sistemico a due settimane i conteggi stereologici PV+ sono inferiori
+  in DG (`p<.005`), CA1 (`p<.05`) e ippocampo intero (−44%, `p<.005`); CA3 non raggiunge
+  significatività. `n=7/gruppo`.
+- **DATO — NPY:** riduzione del 30% soltanto in DG (`p<.05`); CA1, CA3 e ippocampo intero
+  non sono significativi. `n=6/gruppo`. La sintesi testuale degli autori è più larga dei
+  pannelli quantitativi.
+- **CORREZIONE — marker ≠ perdita cellulare:** PV+/NPY+ sono conteggi di cellule positive al
+  marcatore. Senza lineage pan-GABA, fate mapping, apoptosi o birthdating non distinguono
+  morte da downregulation del marcatore, cambio di destino o ritardo maturativo.
+- **DATO — glia:** area fraction IBA1 e GFAP aumentata in CA1/CA3/ippocampo intero, DG
+  marginale; la morfologia IBA1 è compatibile con reattività. Area fraction non è numero di
+  cellule e non separa ipertrofia da iperplasia. Solo `Il6`, non `Tnf-a`, è significativo
+  (`n=4/gruppo`).
+- **TENSION:** PMID 31340538 misura nel ratto *lde* una riduzione corticale di GFAP/Iba1,
+  segno opposto a questo ippocampo murino. Regione, specie, età, modello e stadio di malattia
+  restano spiegazioni concorrenti; “WWOX loss causa gliosi” non è una direzione universale.
+- **CORREZIONE — GABA/E-I:** il Western mostra meno GAD65/67 (`n=5/gruppo`), non GABA,
+  flusso di sintesi, rilascio, gradiente del cloro, correnti sinaptiche o rapporto E/I. Il
+  deficit inibitorio funzionale va attribuito al diverso studio elettrofisiologico, non
+  retroproiettato qui.
+- **DATO — RNA-seq:** neurosfere ippocampali neonatali coltivate, KO `n=2` versus WT `n=3`;
+  283 DEG (184 up, 99 down), con singoli trascritti in entrambe le direzioni: `Kcna2`, `Grm3`,
+  `Grin2b`, `Arx`, `Atp1a2`, `Grin2c` e `Wwox` down; `Gabbr2`, `Gabra2`, `Calb2` e `Htr3a`
+  up. Con questo `n`, il dataset non stabilisce né il programma “epilessia” degli autori né
+  un coerente contro-programma “misto”. Le categorie IPA sono annotazione/enrichment, non
+  validazione causale; la validazione qPCR completa nelle neurosfere è `data not shown`. In
+  vivo sono mostrati solo `Grin2c`, `Grm3` e `Kcna2` concordanti (`n=4/gruppo`).
+- **UNRESOLVED — causalità:** nessun EEG, crisi, comportamento, rescue o KO condizionale.
+  Gli autori stessi dichiarano irrisolto che l'infiammazione sia causa o conseguenza.
+  `PREMISE IMPORTATA`: epileptogenesis e morte a circa tre settimane sono attribuite nel
+  paper a Ludes-Meyers 2009 (PMID 19936220) e Mallaret 2014, non rimisurate qui. Finché
+  `FT-043` non è letto, crisi precedenti/malattia terminale restano confondenti plausibili,
+  non una base verificata per un rigetto canonico.
+- **Transfer:** T2 per vulnerabilità conservata da perdita biallelica di WWOX; basso per
+  residuo funzionale Q230P, allele splice-acceptor e strategia farmacologica. Il paper non
+  testa farmaci e non autorizza una regola clinica “carico GABAergico forte = cautela”.
+- **Esperimento discriminante:** KO neuronale/interneurone-condizionale e time course prima e
+  dopo l'esordio, con lineage pan-GABA + PV/NPY, apoptosi, GABA misurato, patch clamp/EEG e
+  quantificazione gliale per numero/morfologia; rescue temporizzato di Wwox per separare
+  difetto primario da conseguenza di crisi/malattia.
+- **Impatto sul grafo:** `PAPER 006`/`LIT-006` vanno normalizzati con PMID/PMCID/DOI e uniti
+  append-only al duplicato `CORPUS-STUB-085`; `CLAIM 005` e il meta GABA devono preservare
+  PV pan-ippocampale versus NPY DG-specifico ed essere privati dell'inferenza farmacologica
+  non sostenuta. Correzioni isolate in
+  `staging/commit_candidate_20260806_30290271.md`, in attesa di `BATCH_COMMIT`.
+- **Multi-hop:** tutte le 90 referenze enumerate; 20 WWOX-/modello-/malattia-dirette. PMID
+  **19936220**, primario per generazione del modello, non ha receipt ed è ora `FT-043`.
+  PMID **19500159** resta `FT-042`. PMID **17470496** è solo lineage SCAR pre-gene, già
+  documentato altrove e non load-bearing per gli endpoint di questo studio.
