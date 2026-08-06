@@ -40,7 +40,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v3.2
+working_model_version: WM_v4.0
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -102,17 +102,17 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260726_001
-last_batch_commit_date: 2026-07-26
-last_batch_commit_type: MANUAL
-commit_candidates_propagated: 3
+last_batch_commit_id: BATCH_20260806_001
+last_batch_commit_date: 2026-08-06
+last_batch_commit_type: MAJOR
+commit_candidates_propagated: 1
 commit_candidates_superseded: 0
 commit_candidates_deferred: 0
-target_wm_version: WM_v3.2
-last_wm_update: 2026-07-26
-last_wm_batch_commit_id: BATCH_20260726_001
-trigger: "explicit operator request (below the 5-candidate threshold; manual trigger)"
-notes: "CC-20260726-001/002/003 → PAPER 054/055/056, CLAIM 034/035 new, CLAIM 009/016/024 modified. Three lineage references in the candidates (CORPUS P376, CORPUS P263, and a conditional CORPUS P204 merge) were rejected in the conflict phase and not propagated. Pre-flight and post-propagation LINT PASS; snapshot backup/snap_20260726_1600."
+target_wm_version: WM_v4.0
+last_wm_update: 2026-08-06
+last_wm_batch_commit_id: BATCH_20260806_001
+trigger: "explicit operator authorization for a MAJOR safety-language removal"
+notes: "CC-20260806-30290271 → CLAIM 005 narrowed to what PMID 30290271 measures and its medication caution DELETED (the source tests no drug, no GABA concentration, no inhibitory function); PAPER 006 / LIT-006 identifiers normalized; CORPUS-STUB-085 resolved as duplicate, preserved append-only; meta_gaba_paradox corrected from interneuron loss to marker-positive abundance, NPY marked DG-only, Il6-not-Tnf-a recorded. MAJOR because removing safety language from a consolidated baseline claim is a policy change even when it removes rather than adds; the experimental datum is NOT demoted. Publication-integrity audit of the 7 held records run first (staging/audit_publication_integrity_20260806.md): no canonical claim rests on any of them. Pre-flight and post-propagation LINT PASS; snapshot backup/snap_20260806_batch_wm40. Prev: BATCH_20260726_001 (MINOR, WM_v3.2) — CC-20260726-001/002/003 → PAPER 054/055/056, CLAIM 034/035 new, CLAIM 009/016/024 modified; snapshot backup/snap_20260726_1600."
 ```
 
 ---
@@ -121,10 +121,10 @@ notes: "CC-20260726-001/002/003 → PAPER 054/055/056, CLAIM 034/035 new, CLAIM 
 
 ```yaml
 last_lint_type: LINT_AUTOMATIC
-last_lint_id: LINT_20260806_006
+last_lint_id: LINT_20260806_007
 last_lint_date: 2026-08-06
 last_lint_result: PASS
-notes: "PMID 30290271 read completely from article HTML/PDF with all six figures, Table 1, both supplements and 90 references audited. Receipt FTR-20260806-30290271-01 appended (46 -> 47 events). After adversarial cross-review, its schema-v2 manifest carries 14 exact body-text locators plus 7 fingerprinted figure locators and passes strict verification with zero gaps. The candidate is explicitly MAJOR (target WM_v4.0_2026-08-06), deletes unsupported medication-safety language and requires operator authorization; unread-premise baseline is the live 13/13 and self-eval is 24/24 PASS. PubMed pipeline commits 212850e, 510414d and d9ccac9 merged and independently hardened. A fresh 2026-08-06 harvest preserves 706/706 records, 693 abstracts in the gitignored NOT_EVIDENCE corpus and a tracked no-abstract projection with 40 correction links. RefType direction was corrected: 7 affected publications are held, while 4 editorial notices remain admissible audit sources. Five held PMIDs occur on current surfaces, but none is integrated as a canonical PAPER and no claim wikilink depends on one; PMID 28151481 was already explicitly excluded. Legacy receipt FTR-20260726-23446842-01 was the sole receipt-to-PAPER identity mismatch and is quarantined append-only by FTR-20260806-23446842-02; active depth and generated coverage no longer attribute it to PMID 23446842. LINT PASS; public release gate PASS/BLOCKS 0. The pre-refresh clean-worktree release suite passed with one declared local-fulltext skip; post-refresh suite pending this lint event."
+notes: "PMID 30290271 read completely from article HTML/PDF with all six figures, Table 1, both supplements and 90 references audited. Receipt FTR-20260806-30290271-01 appended (46 -> 47 events). After adversarial cross-review, its schema-v2 manifest carries 14 exact body-text locators plus 7 fingerprinted figure locators and passes strict verification with zero gaps. The candidate is explicitly MAJOR (target WM_v4.0_2026-08-06), deletes unsupported medication-safety language and requires operator authorization; unread-premise baseline is the live 13/13 and self-eval is 24/24 PASS. PubMed pipeline commits 212850e, 510414d and d9ccac9 merged and independently hardened. A fresh 2026-08-06 harvest preserves 706/706 records, 693 abstracts in the gitignored NOT_EVIDENCE corpus and a tracked no-abstract projection with 40 correction links. RefType direction was corrected: 7 affected publications are held, while 4 editorial notices remain admissible audit sources. Five held PMIDs occur on current surfaces, but none is integrated as a canonical PAPER and no claim wikilink depends on one; PMID 28151481 was already explicitly excluded. Legacy receipt FTR-20260726-23446842-01 was the sole receipt-to-PAPER identity mismatch and is quarantined append-only by FTR-20260806-23446842-02; active depth and generated coverage no longer attribute it to PMID 23446842. LINT PASS; public release gate PASS/BLOCKS 0. The pre-refresh clean-worktree release suite passed with one declared local-fulltext skip; post-refresh suite pending this lint event. 2026-08-06 continuation (LINT_20260806_007): an independent blind review with no context on the code reproduced eight further defects, all fixed — the corpus content firewall was disabled by the process working directory (fail-open at write, fail-closed forever at read); the same guard refused honest prose describing a permitted triage use; the LINT integrity gate could not see the CORPUS placeholders two held records live in, and blocked claims citing the retraction notice itself; `status --pmid` ignored invalidations. Earlier in the same pass, an invalidation was found to withdraw a paper's whole reading history instead of the named event. Firewall detection re-tuned against the seed's real column set: six of eight escapes closed, both false positives gone, gzip/UTF-16 declared open rather than patched. Withdrawing a complete read now requires re-opening the reading debt. Two DisMech consumers left uncorrected by design: their SHA-256 is sealed into the Phase-2 baseline and re-sealing without re-deriving would falsify provenance. BATCH_20260806_001 propagated (MAJOR, WM_v4.0). Release regressions PASS WITH SKIPS on a clean worktree."
 ```
 
 ---

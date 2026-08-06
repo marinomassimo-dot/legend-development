@@ -13,7 +13,7 @@ Analysis of the role of the GABAergic system in the WWOX loss-of-function contex
 ## Evidence Base
 
 ### Core papers (corpus 1–180)
-- Paper 85 (PMID 30290271) — Hussain 2019 Neurobiol Dis: hippocampal Wwox KO → ↓ PV+, NPY+, GAD65/67; microgliosis + astrogliosis
+- Paper 85 (PMID 30290271) — Hussain 2019 Neurobiol Dis: **systemic** Wwox KO at two weeks → ↓ PV+ (DG, CA1 and whole hippocampus, −44%), ↓ NPY+ **in DG only** (CA1/CA3 show no obvious difference; the whole-hippocampus panel carries no significance marker), ↓ GAD65/67 **protein**; ↑ IBA1/GFAP **area fraction** in CA1/CA3/whole, DG marginal. Full text read 2026-08-06, receipt `FTR-20260806-30290271-01` — see [[paper_registry_current#PAPER 006]]
 - Paper 87 (PMID 33914858) — Repudi 2021 Brain: neuronal Wwox deletion → hyperexcitability + myelin defects (overlap with the network meta)
 - Paper 53 (PMID 36828035) — Hussain 2023 Prog Neurobiol: P47T partial LoF → epilepsy, progressive neuroinflammation, cerebellar degeneration
 
@@ -31,8 +31,8 @@ Analysis of the role of the GABAergic system in the WWOX loss-of-function contex
 ## Core Findings (DATO)
 
 **Mouse KO signal — inhibitory deficit**
-- In the hippocampal KO: reduced PV+ interneurons, reduced NPY+ interneurons, reduced GAD65/67, glial activation, increased pro-inflammatory cytokines (paper 85)
-- Reading: loss/suffering of the mature inhibitory compartment
+- In the systemic KO: fewer **PV-positive** cells (DG, CA1, whole hippocampus), fewer **NPY-positive** cells **in DG only**, lower **GAD65/67 protein**, higher IBA1/GFAP **area fraction**, and `Il6` — **but not `Tnf-a`** — significantly raised (`n=4/group`) (paper 85)
+- Reading, corrected 2026-08-06: **marker-positive abundance**, not loss or suffering of the inhibitory compartment. A marker count cannot distinguish cell death from downregulated marker expression, altered fate or delayed maturation; the study performs no pan-GABA lineage count, birthdating, fate mapping or apoptosis assay. `MARKER_TO_FUNCTION_GATE` — the four layers (marker abundance · lineage/survival · transmitter concentration · circuit function) stay separate unless each is measured
 
 **Human organoid signal — opposite direction**
 - In WWOX-KO organoids: increased GABAergic markers (Steinberg 2024)
@@ -115,7 +115,7 @@ The same pharmacological GABA modulation can have very different effects dependi
 ## Claim Impact
 
 ### Strengthened claim
-- CLAIM 005: reduced GABAergic interneurons + glial activation in WWOX-KO (Hussain 2019) — consolidated baseline; confirmed by paper 85
+- CLAIM 005: reduced interneuron **markers** + regional glial reactivity in **one** systemic WWOX-KO (Hussain 2019) — consolidated baseline. Narrowed at `WM_v4.0`: the source carries no medication implication, and its NPY result is DG-specific
 
 ### Claim in tension
 - "Less GABA as the core explanatory model" — NOT consolidated; insufficient

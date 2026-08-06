@@ -217,12 +217,12 @@ Serves to:
 
 ## LIT-006
 **Short title:** Hussain 2019 GABA/glia
-**Authors:** Hussain et al.
+**Authors:** Hussain T, Kil H, Hattiangady B, Lee J, Kodali M, Shuai B, Attaluri S, Tome-Garcia J, Meghed M, Jang M-H, Shetty AK, Aldaz CM
 **Year:** 2019
 **Source type:** murine mechanistic study
-**Journal/source:** Neurobiology of Disease
-**Identifier type:** pending normalization
-**Identifier value:** pending
+**Journal/source:** Neurobiology of Disease 121:163–176
+**Identifier type:** PMID
+**Identifier value:** 30290271
 **Date discovered:** 2025-12
 **Date processed:** 2025-12
 **Discovery window:** 2025-W50

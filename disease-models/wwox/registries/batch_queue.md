@@ -8,16 +8,16 @@
 
 ## ▶ Start here
 
-**422 records have not been processed.** **264** of them have a free full text and can be worked immediately.
+**421 records have not been processed.** **264** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
 | 🟢 **`NEW`** | 79 | never seen by the system — **the front of the queue** |
-| 🟢 **`CORPUS_CATALOGUED`** | 343 | catalogued and deduplicated, never analytically processed |
+| 🟢 **`CORPUS_CATALOGUED`** | 342 | catalogued and deduplicated, never analytically processed |
 | 🟡 `OUT_OF_SCOPE_LIKELY` | 222 | no scope signal in the title — later in the queue, **never discarded** |
 | 🟡 `AMBIGUOUS` | 7 | identifiers must be resolved before ingest |
 | ⏳ `IN_PIPELINE` | 19 | already in flight |
-| ✅ `KNOWN_INTEGRATED` | 36 | done — read depth in the table below |
+| ✅ `KNOWN_INTEGRATED` | 37 | done — read depth in the table below |
 
 The two green rows are the answer to *"where do I start?"*. The table further down lists
 every record in this order, so a second person can take the next unclaimed row without
@@ -786,7 +786,6 @@ for an entirely unprocessed record.
 | [33916893](https://pubmed.ncbi.nlm.nih.gov/33916893/) | 2021 | ✅ | full text | PAPER 040 | Neurological Disorders Associated with WWOX Germline Mutations-A Comprehensive Overview. |
 | [33255508](https://pubmed.ncbi.nlm.nih.gov/33255508/) | 2020 | ✅ | full text | receipt FTR-20260806-33255508-01 | WWOX Loss of Function in Neurodevelopmental and Neurodegenerative Disorders. |
 | [30362252](https://pubmed.ncbi.nlm.nih.gov/30362252/) | 2019 | ✅ | full text | PAPER 044 | Early infantile-onset epileptic encephalopathy 28 due to a homozygous microdeletion involving the WWOX gene in a region of uniparental disomy. |
-| [30290271](https://pubmed.ncbi.nlm.nih.gov/30290271/) | 2019 | ✅ | full text | receipt FTR-20260806-30290271-01 | Wwox deletion leads to reduced GABA-ergic inhibitory interneuron numbers and activation of microglia and astrocytes in mouse hippocampus. |
 | [27495153](https://pubmed.ncbi.nlm.nih.gov/27495153/) | 2016 | ✅ | full text | PAPER 049 | W44X mutation in the WWOX gene causes intractable seizures and developmental delay: a case report. |
 | [26857392](https://pubmed.ncbi.nlm.nih.gov/26857392/) | 2016 | ✅ | full text | PAPER 050 | ✎ corrected — Relevance of Sp Binding Site Polymorphism in WWOX for Treatment Outcome in Pancreatic Cancer. |
 | [24932569](https://pubmed.ncbi.nlm.nih.gov/24932569/) | 2014 | ✅ | full text | PAPER 053 | WWOX at the crossroads of cancer, metabolic syndrome related traits and CNS pathologies. |
@@ -818,6 +817,7 @@ for an entirely unprocessed record.
 | [34214506](https://pubmed.ncbi.nlm.nih.gov/34214506/) | 2021 | ✅ | full text | PAPER 054 | Photoreceptor Cell Calcium Dysregulation and Calpain Activation Promote Pathogenic Photoreceptor Oxidative Stress and Inflammation in Prodromal Diabetic Retinopathy. |
 | [32000863](https://pubmed.ncbi.nlm.nih.gov/32000863/) | 2020 | ✅ | full text | receipt FTR-20260804-32000863-01 | Wwox deficiency leads to neurodevelopmental and degenerative neuropathies and glycogen synthase kinase 3β-mediated epileptic seizure activity in mice. |
 | [31340538](https://pubmed.ncbi.nlm.nih.gov/31340538/) | 2019 | ✅ | full text | receipt FTR-20260806-31340538-01 | Loss of Wwox Causes Defective Development of Cerebral Cortex with Hypomyelination in a Rat Model of Lethal Dwarfism with Epilepsy. |
+| [30290271](https://pubmed.ncbi.nlm.nih.gov/30290271/) | 2019 | ✅ | full text | PAPER 006 | Wwox deletion leads to reduced GABA-ergic inhibitory interneuron numbers and activation of microglia and astrocytes in mouse hippocampus. |
 | [30619736](https://pubmed.ncbi.nlm.nih.gov/30619736/) | 2018 | ✅ | full text | PAPER 032 | Delineating WWOX Protein Interactome by Tandem Affinity Purification-Mass Spectrometry: Identification of Top Interactors and Key Metabolic Pathways Involved. |
 | [22193544](https://pubmed.ncbi.nlm.nih.gov/22193544/) | 2012 | ✅ | full text | PAPER 056 | WW domain-containing oxidoreductase promotes neuronal differentiation via negative regulation of glycogen synthase kinase 3β. |
 | [40875931](https://pubmed.ncbi.nlm.nih.gov/40875931/) | 2025 | — | full text | PAPER 014 | WWOX-Related Developmental and Epileptic Encephalopathy: Expanding the Clinical Spectrum and Deciphering the Genotype-Phenotype. |

@@ -137,13 +137,14 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 
 ## PAPER 006
 **Short title:** Hussain 2019 GABA/glia
-**Full title:** WWOX loss leads to GABAergic interneuron reduction and glial activation
-**Authors:** Hussain et al.
+**Full title:** Wwox deletion leads to reduced GABA-ergic inhibitory interneuron numbers and activation of microglia and astrocytes in mouse hippocampus
+**Authors:** Hussain T, Kil H, Hattiangady B, Lee J, Kodali M, Shuai B, Attaluri S, Tome-Garcia J, Meghed M, Jang M-H, Shetty AK, Aldaz CM
 **Year:** 2019
 **Source type:** murine mechanistic study
-**Journal/source:** *Neurobiology of Disease*
-**Identifier:** pending normalization
+**Journal/source:** *Neurobiology of Disease* 121:163–176
+**Identifier:** PMID 30290271 / PMCID PMC7104842 / DOI 10.1016/j.nbd.2018.09.026
 **Status:** integrated
+**Evidence depth:** full text reviewed (coverage_status: complete_fulltext_read) — receipt `FTR-20260806-30290271-01`, 2026-08-06
 **Primary pathway:** P2 — GABAergic vulnerability
 **Secondary pathway:** P6 — glia
 **Model/species:** mouse
@@ -151,8 +152,8 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **Transferability:** T2
 **clinical relevance:** MODERATE
 **Claim links:** 005
-**Role:** safety/pathway support
-**Note:** do not overtranslate as "GABA forbidden"; use as structured caution
+**Role:** pathway support (marker-level). **Not** safety support.
+**Note:** do not overtranslate as "GABA forbidden" — and, since 2026-08-06, do not translate it as a medication caution either. The source measures marker-positive counts, glial area fractions and GAD65/67 protein; it measures no GABA, no inhibitory current, no E/I ratio, no seizure and no drug. `CORPUS-STUB-085` is this same paper (duplicate, resolved 2026-08-06; the stub is preserved as append-only history).
 
 ---
 
@@ -1521,11 +1522,11 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 85
 **Full title:** Wwox deletion leads to reduced GABA-ergic inhibitory interneuron numbers and activation of microglia and astrocytes in mouse hippocampus
 **Identifier:** PMID 30290271 / DOI 10.1016/j.nbd.2018.09.026
-**Status:** not_processed
+**Status:** resolved — duplicate of [[paper_registry_current#PAPER 006]]
 **Registry role:** corpus placeholder only
 **Claim links:** none
-**Next action:** screening / triage required
-**Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
+**Next action:** none — the full processed record lives in PAPER 006
+**Note:** Added during Phase 1 corpus-to-registry alignment. Resolved 2026-08-06 as the same publication as PAPER 006, which carries the complete-read receipt `FTR-20260806-30290271-01`. Preserved lossless as append-only history, not deleted and not a second record of the same paper.
 
 ## CORPUS-STUB-086
 **Corpus paper no:** 86

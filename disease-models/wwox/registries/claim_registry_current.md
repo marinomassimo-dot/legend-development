@@ -102,11 +102,12 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 **Genotype/model relevance:** murino / Wwox-KO sistemico; genotipo caution: KO ≠ compound het; segnale GABAergico e gliale plausibilmente trasferibile come meccanismo generale di vulnerabilità
 **Transferability:** T2
 **clinical relevance:** MODERATE
-**Summary:** WWOX-KO models show reduced inhibitory interneuron markers and glial activation.
-**Clinical meaning:** Supports caution with strong GABAergic burden and supports glial axis as modifier.
-**Source:** Hussain et al., 2019, *Neurobiology of Disease*
+**Summary:** In **one** systemic constitutive Wwox-KO mouse model at two weeks, PV-positive interneuron counts are lower in DG, CA1 and across the whole hippocampus (−44%), NPY-positive counts are lower **in DG only**, and IBA1/GFAP immunoreactive area fractions are higher in CA1, CA3 and whole hippocampus. Marker-positive abundance and area fraction — not cell loss, not glial cell number.
+**Clinical meaning:** Supports the glial axis as a modifier. **No medication implication.** The source measures no GABA concentration, no synaptic inhibition, no E/I ratio and no drug: a medication caution cannot be attributed to it, and would have to enter as a separately sourced multi-source inference.
+**Source:** Hussain et al., 2019, *Neurobiology of Disease* 121:163–176 — PMID 30290271 (full text read 2026-08-06, receipt `FTR-20260806-30290271-01`)
 **Wikilinks:** [[paper_registry_current#PAPER 006]]
-**Impact on Working Model:** safety / modifier logic
+**Impact on Working Model:** modifier logic. **Not** BLOCK-1 / medication policy.
+**Evidence boundary:** NPY CA1/CA3 are reported as showing no obvious difference; the whole-hippocampus NPY panel carries **no significance marker** — a visual panel observation, not a reported test. IBA1/GFAP in DG are marginal and unmarked. Only `Il6`, not `Tnf-a`, is significant (`n=4/group`). GAD65/67 is protein abundance only. Early death and epileptogenesis in this model are **imported premises** (PMID 19936220, Mallaret 2014), not re-measured here — see `FT-043`.
 
 ---
 
