@@ -8,7 +8,7 @@ reintroduces it, then asserts the corresponding test refuses it.
 Two passes, and the second is the one that matters:
 
 * **one at a time** — does each guard fire on its own defect?
-* **all at once** — does any guard MASK another? A suite where breaking twelve things fails
+* **all at once** — does any guard MASK another? A suite where breaking many things fails
   three tests has blind spots that per-defect testing cannot reveal, because each defect was
   measured while everything else was healthy.
 
@@ -38,6 +38,7 @@ ROOT = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(".")
 TOUCHED = [
     ".claude/agents/legend-deepdive.md",
     "framework/scripts/deepdive_manifest.py",
+    "framework/scripts/fulltext_receipts.py",
     "disease-models/wwox/analysis/scripts/export_dismech_dryrun.py",
     "disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py",
     "AGENTS.md",
@@ -108,6 +109,39 @@ DEFECTS = {
         "framework/scripts/test_deepdive_manifest.py",
         sub("framework/scripts/deepdive_manifest.py",
             "        elif indexed is False:", "        elif False:")),
+    "PubMed abstract accepted as complete source": (
+        "framework.scripts.test_fulltext_receipts.FulltextReceiptTests.test_new_complete_receipt_refuses_pubmed_abstract_url",
+        sub("framework/scripts/fulltext_receipts.py",
+            "if ABSTRACT_ONLY_LOCATOR.search(str(receipt.get(\"source_locator\") or \"\")):",
+            "if False and ABSTRACT_ONLY_LOCATOR.search(str(receipt.get(\"source_locator\") or \"\")):")),
+    "remote source accepted for authoritative complete read": (
+        "framework.scripts.test_fulltext_receipts.FulltextReceiptTests.test_authoritative_complete_read_requires_local_snapshot",
+        sub("framework/scripts/fulltext_receipts.py",
+            'if receipt.get("source_kind") != "fulltext_local":', "if False:")),
+    "authoritative append skips the work manifest": (
+        "framework.scripts.test_fulltext_receipts.FulltextReceiptTests.test_direct_append_to_authoritative_sink_cannot_skip_work_manifest",
+        sub("framework/scripts/fulltext_receipts.py",
+            "        require_work_manifest(record, root, disease, strict=True)",
+            "        if False: require_work_manifest(record, root, disease, strict=True)")),
+    "declared manifest gaps accepted before append": (
+        "framework.scripts.test_fulltext_receipts.FulltextReceiptTests.test_declared_manifest_gap_blocks_a_new_complete_read",
+        sub("framework/scripts/fulltext_receipts.py",
+            "    if strict and incomplete:", "    if False:")),
+    "schema-v2 locator surface made optional": (
+        "framework.scripts.test_deepdive_manifest.EntriesMustBeUsable.test_schema_v2_requires_surface_on_every_locator",
+        sub("framework/scripts/deepdive_manifest.py",
+            "                if schema_version >= 2 and surface is None:",
+            "                if False:")),
+    "one abstract locator accepted as evidence": (
+        "framework.scripts.test_deepdive_manifest.EntriesMustBeUsable.test_schema_v2_refuses_even_one_abstract_evidence_locator",
+        sub("framework/scripts/deepdive_manifest.py",
+            '                if schema_version >= 2 and surface == "abstract":',
+            "                if False:")),
+    "text locator no longer checked against artifact": (
+        "framework.scripts.test_deepdive_manifest.EntriesMustBeUsable.test_strict_verification_distinguishes_abstract_from_body",
+        sub("framework/scripts/deepdive_manifest.py",
+            "                        if snippet_key in body_key:",
+            "                        if True:")),
     "routing basis hardcoded again": (
         "disease-models/wwox/analysis/scripts/test_export_dismech_dryrun.py",
         sub("disease-models/wwox/analysis/scripts/export_dismech_dryrun.py",
@@ -123,7 +157,7 @@ DEFECTS = {
             'self.assertEqual(set(by_paper), {"055", "056"},')),
     "corpus rule removed from AGENTS.md": (
         "scripts/test_abstract_corpus_is_not_evidence.py",
-        drop_line("AGENTS.md", "A local abstract corpus is not evidence")),
+        drop_line("AGENTS.md", "A local abstract corpus is not full-text evidence")),
     "corpus declared evidential": (
         "scripts/test_abstract_corpus_is_not_evidence.py",
         sub("framework/scripts/pubmed_corpus_harvest.py",
@@ -144,16 +178,31 @@ DEFECTS = {
 
 
 def run(target: str) -> int:
-    return subprocess.run([sys.executable, target], cwd=ROOT,
+    command = ([sys.executable, target] if target.endswith(".py")
+               else [sys.executable, "-m", "unittest", target])
+    return subprocess.run(command, cwd=ROOT,
                           capture_output=True, text=True).returncode
 
 
 def main() -> int:
     snapshot()
     print("=== ONE AT A TIME — each defect against its guard\n")
-    caught = stale = 0
+    # 🔴 A target that is ALREADY red proves nothing when it goes red again. The battery
+    # reported 19/19 while one of them — test_release_surface, red in any working tree that
+    # still has files/ or staging/ — would have counted as CAUGHT with the guard deleted.
+    # That is the battery committing, inside itself, the exact defect it exists to detect.
+    baseline = {}
+    for target in sorted({t for t, _a in DEFECTS.values()}):
+        baseline[target] = run(target) == 0
+
+    caught = stale = unusable = 0
     for name, (target, apply) in DEFECTS.items():
         restore()
+        if not baseline[target]:
+            unusable += 1
+            print(f"  [BASELINE RED ]  {name}: {Path(target).name} already fails unmutated, "
+                  "so its result carries no information here")
+            continue
         problem = apply()
         if problem:
             stale += 1
@@ -162,10 +211,15 @@ def main() -> int:
         failed = run(target) != 0
         caught += failed
         print(f"  [{'CAUGHT' if failed else 'ESCAPED':<13}]  {name}")
-    print(f"\n  {caught}/{len(DEFECTS)} caught · {stale} stale anchor(s)")
+    testable = len(DEFECTS) - unusable
+    print(f"\n  {caught}/{testable} caught · {stale} stale anchor(s) · "
+          f"{unusable} untestable in this environment")
     if stale:
         print("  A stale anchor is not a pass: the defect was never reintroduced, so the "
               "guard was never tested. Update it.")
+    if unusable:
+        print("  A red baseline is not a pass either. Run against a clean export "
+              "(git archive HEAD) where those targets are green.")
 
     print("\n=== ALL AT ONCE — does any guard mask another?\n")
     restore()
@@ -179,8 +233,10 @@ def main() -> int:
     print(f"\n  {applied} simultaneous defects · {failing}/{len(targets)} targets fail")
     restore()
 
-    ok = caught == len(DEFECTS) and not stale and failing == len(targets)
+    ok = caught == testable and not stale and not unusable and failing == len(targets)
     print(f"\nVERDICT: {'PASS' if ok else 'FAIL'} — target restored")
+    if not ok and unusable and caught == testable and not stale:
+        print("  (every testable defect was caught; the run is incomplete, not failing)")
     return 0 if ok else 1
 
 
