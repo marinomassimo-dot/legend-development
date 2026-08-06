@@ -513,6 +513,49 @@ def validate(
                         "Split it into two entries, or quote one contiguous span"
                     )
 
+                # `abstract_snippet` exists so that a locator on a source nobody can index
+                # stays verifiable through the one surface an external validator does hold.
+                # Until 2026-08-06 nothing checked that the quote was actually IN the abstract,
+                # so any string discharged the duty and the field certified only that its
+                # author had typed something. Found by mutation-testing the reading of PMID
+                # 19500159: a fabricated abstract quote passed while the same fabrication in
+                # `snippet` was caught, because only one of the two was ever matched. The
+                # abstract text is already parsed and cached one branch above; not using it
+                # was the whole defect.
+                abstract_snippet = str(entry.get("abstract_snippet", "")).strip()
+                if (
+                    verify_artifacts and root is not None and schema_version >= 2
+                    and abstract_snippet and artifact_paths and not unknown
+                ):
+                    abstract_matched = False
+                    abstract_failures: list[str] = []
+                    for artifact_path in artifact_paths:
+                        metadata = artifacts[artifact_path]
+                        try:
+                            resolved = _safe_repo_path(root, artifact_path)
+                            if artifact_path not in text_cache:
+                                text_cache[artifact_path] = _artifact_text(
+                                    resolved, metadata["kind"])
+                                match_cache[artifact_path] = tuple(
+                                    _match_key(value) for value in text_cache[artifact_path])
+                            _body_key, abstract_key = match_cache[artifact_path]
+                        except (OSError, KeyError, ValueError, zipfile.BadZipFile) as exc:
+                            abstract_failures.append(str(exc))
+                            continue
+                        if not abstract_key:
+                            abstract_failures.append(
+                                f"{artifact_path} exposes no abstract surface")
+                            continue
+                        if _match_key(abstract_snippet) in abstract_key:
+                            abstract_matched = True
+                            break
+                    if not abstract_matched:
+                        detail = "; ".join(abstract_failures) or "exact text not found"
+                        errors.append(
+                            f"verbatim_locators.entries[{position}].abstract_snippet: not "
+                            f"found in the abstract of any declared artifact ({detail}). An "
+                            "abstract anchor that is not in the abstract verifies nothing")
+
         # A snippet is verified by matching it against a cached copy of the source. When the
         # source is not full-text indexed, the only text an external validator can hold is the
         # ABSTRACT — so a full-text quote is unverifiable there, however faithful it is.

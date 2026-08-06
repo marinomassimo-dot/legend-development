@@ -176,6 +176,55 @@ class EntriesMustBeUsable(unittest.TestCase):
             errors, _ = gate.validate(manifest, root=root, verify_artifacts=True)
             self.assertTrue(any("abstract but not the non-abstract body" in e for e in errors))
 
+    def test_fabricated_abstract_snippet_is_refused(self) -> None:
+        """An abstract anchor that is not in the abstract verifies nothing.
+
+        Regression for a hole found on 2026-08-06 by mutation-testing a real reading (PMID
+        19500159, a bronze-OA source with no PMC deposit). `abstract_snippet` is what keeps a
+        locator verifiable when the source is not full-text indexed, yet nothing matched it
+        against the abstract: any string discharged the duty. The same fabrication placed in
+        `snippet` was caught, so the manifest certified the weaker field and not the stronger.
+        """
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            relative = "files/fulltext/paper.xml"
+            artifact = root / relative
+            artifact.parent.mkdir(parents=True)
+            artifact.write_text(
+                "<article><abstract><p>The abstract states one specific measured "
+                "outcome.</p></abstract><body><p>A different body sentence also has "
+                "enough characters to quote.</p></body></article>", encoding="utf-8")
+            manifest = schema_v2(relative)
+            manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+                artifact.read_bytes()).hexdigest()
+            entry = manifest["verbatim_locators"]["entries"][0]
+            entry["snippet"] = "A different body sentence also has enough characters to quote."
+            entry["surface"] = "body"
+            entry["abstract_snippet"] = "The abstract states an outcome it never mentions."
+            errors, _ = gate.validate(manifest, root=root, verify_artifacts=True)
+            self.assertTrue(any("abstract_snippet" in error for error in errors))
+
+    def test_truthful_abstract_snippet_passes(self) -> None:
+        """The guard must accept a real abstract quote, or it would only teach authors to drop the field."""
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            relative = "files/fulltext/paper.xml"
+            artifact = root / relative
+            artifact.parent.mkdir(parents=True)
+            artifact.write_text(
+                "<article><abstract><p>The abstract states one specific measured "
+                "outcome.</p></abstract><body><p>A different body sentence also has "
+                "enough characters to quote.</p></body></article>", encoding="utf-8")
+            manifest = schema_v2(relative)
+            manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+                artifact.read_bytes()).hexdigest()
+            entry = manifest["verbatim_locators"]["entries"][0]
+            entry["snippet"] = "A different body sentence also has enough characters to quote."
+            entry["surface"] = "body"
+            entry["abstract_snippet"] = "The abstract states one specific measured outcome."
+            errors, _ = gate.validate(manifest, root=root, verify_artifacts=True)
+            self.assertFalse([error for error in errors if "abstract_snippet" in error])
+
     def test_malformed_xml_fails_closed_instead_of_merging_surfaces(self) -> None:
         with TemporaryDirectory() as temporary:
             root = Path(temporary)

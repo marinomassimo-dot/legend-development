@@ -1,0 +1,334 @@
+{
+  "schema_version": 2,
+  "pmid": "19500159",
+  "doi": "10.1111/j.1601-183X.2009.00502.x",
+  "receipt": "FTR-20260806-19500159-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID19500159.md",
+    "discovery_ledger_current#DL-MECH-075",
+    "discovery_ledger_current#DL-MECH-076",
+    "full_text_queue_current#FT-042",
+    "full_text_queue_current#FT-041",
+    "staging/commit_candidate_20260806_19500159.md"
+  ],
+  "skills_considered": [
+    {"skill": "find-fulltext", "used": true},
+    {"skill": "legend-deepdive", "used": true},
+    {"skill": "legend-discovery", "used": true},
+    {"skill": "legend-session-self-eval", "used": true},
+    {"skill": "legend-capability-scout", "used": true},
+    {"skill": "legend-session-takeaways", "used": true},
+    {
+      "skill": "legend-study-intake-triage",
+      "used": false,
+      "reason": "No study list arrived. The cursor was the single queue entry FT-042, already deduplicated against the registries when it was created, so re-triaging one known record adds no disambiguation."
+    },
+    {
+      "skill": "legend-batch-inferential-sweep",
+      "used": false,
+      "reason": "There is no batch. FT-042 was an approved single-paper cursor with a written reason; a batch ranking could not change which source was opened."
+    },
+    {
+      "skill": "legend-proband-priority-matrix",
+      "used": false,
+      "reason": "Ranking a single already-selected paper is vacuous, and no person-level prioritisation is permitted in the public edition."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "The read resolves an attribution and opens a species-difference question. It matures no therapeutic hypothesis, and forging candidates on an unresolved cross-species discrepancy would manufacture apparent progress."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No compound is administered and no molecule is proposed. There is nothing for the BLOCK-1 ADMET gate to evaluate."
+    },
+    {
+      "skill": "legend-aso-designer",
+      "used": false,
+      "reason": "The lde allele is a spontaneous 13-bp coding deletion in a rat, not a splice variant, and carries no human splice allele for which a splice-switching oligonucleotide could be designed."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Corrections are isolated in a commit candidate. No BATCH_COMMIT was authorised in this session and the four scientific current files remain unchanged."
+    },
+    {
+      "skill": "legend-paperqa",
+      "used": false,
+      "reason": "The source was read in full and sequentially from a local fingerprinted artifact. A retrieval-augmented query would be a strictly weaker evidence route than the reading already performed, and would send text to an external API."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 43,
+    "publications_on_gene": 2,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "PubMed counts measured 2026-08-06: Suzuki H at Nippon Veterinary and Life Science University returns 43 records, of which 2 concern Wwox. This is a veterinary-physiology group whose speciality is deriving and phenotyping spontaneous rat mutants from a closed Wistar-Imamichi colony; the paper's own introduction lists five prior strains they established and mapped. That is exactly the competence this paper needs — colony genetics, backcrossing, linkage mapping and whole-animal phenotyping — and the EEG methodology is their own, previously published in mice. They are not a WWOX group and not a WWOX-DEE clinical group: Wwox is the gene the mapping landed on, not the gene they set out to study. The consequence for interpretation is favourable rather than adverse: the seizure phenotype was observed before the gene was known, so it cannot be a case of a WWOX-motivated group looking for a WWOX-shaped result."
+  },
+  "field_density": {
+    "queries": [
+      {"query": "Wwox AND audiogenic", "count": 2, "source": "PubMed ESearch, 2026-08-06"},
+      {"query": "Wwox AND \"lethal dwarfism\"", "count": 2, "source": "PubMed ESearch, 2026-08-06"},
+      {"query": "Wwox AND rat AND epilepsy", "count": 6, "source": "PubMed ESearch, 2026-08-06"},
+      {"query": "Wwox AND EEG", "count": 11, "source": "PubMed ESearch, 2026-08-06"}
+    ],
+    "note": "Only two PubMed records connect Wwox to audiogenic seizures and only two to lethal dwarfism; in both cases the pair is this paper and its companion PMID 17803050 (FT-041). The entire rat-lde literature on which a large share of LEGEND's seizure reasoning ultimately rests is two papers from one laboratory, never independently replicated in seventeen years. That is not a criticism of the work, which is careful; it is a statement about how thin the base is, and it raises rather than lowers the value of reading both primaries rather than citing them."
+  },
+  "multihop": {
+    "references_enumerated": 30,
+    "gene_direct_refs_in_source": [
+      "17360458", "18487609", "19141473", "10786676", "11719429", "17175392",
+      "15026124", "11948448", "15364336", "17803050", "17823927"
+    ],
+    "resolved": [
+      "17360458", "18487609", "19141473", "10786676", "11719429", "17175392",
+      "15026124", "11948448", "15364336", "17803050", "17823927"
+    ],
+    "queued": ["FT-041"],
+    "note": "The reference list was read in full (30 entries across the References section and the Supporting Information block). Eleven are WWOX- or model-direct and were resolved; the remainder are rat-genetics, audiogenic-seizure-model and EEG-methods sources outside the gene's scope. The single load-bearing debt is reference Suzuki et al. 2007 = PMID 17803050 = FT-041, which this paper cites for three of its most consequential comparative statements: that lde/lde rats have normal serum constituents, that spontaneous seizures occur in 33 percent, and that dwarfism relates to low pituitary growth hormone. FT-041 remains unread; only its abstract was supplied on 2026-08-06 and an abstract is not a reading. That abstract is nevertheless sufficient to show a tension with this paper's phrasing, recorded in corpus_crossquery and in DL-MECH-076."
+  },
+  "corpus_crossquery": {
+    "query": "Does this paper support the premise that a Wwox-null MOUSE shows epileptogenesis, which five LEGEND surfaces trace here through PMID 19936220?",
+    "hits": 5,
+    "note": "It does the opposite, explicitly and in three separate places. The Introduction states that neither epileptic seizures nor abnormal behaviour has been reported in Wwox KO mice. The Discussion repeats that neither abnormal behaviour nor impaired motor skill was observed in them, contrasting this with the rat's ataxic gait and spontaneous seizures. A further Discussion paragraph names the absence as an open problem and offers an explanation, that the mice may die before they can experience a seizure. Table 2 formalises it: the Epilepsy row carries an entry for lde/lde only and is empty for both mouse models. So the chain PMID 30290271 -> PMID 19936220 -> epileptogenesis does not merely fail for want of support at its middle link; its terminal source asserts the contrary for the mouse. The five surfaces needing correction are claim_registry_current CLAIM 005, the working_model_current changelog, the PMID 30290271 dossier, the 2026-08-06 session evaluation and discovery_ledger_current DL-MECH-072/073."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Checked 2026-08-06 on PubMed EFetch. PublicationType is Journal Article plus Research Support Non-U.S. Gov't; the CommentsCorrections RefType list is empty; there is no RetractionIn, RetractionOf or expression-of-concern link. The record is clean and admissible."
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID19500159_Suzuki2009.pdf",
+      "sha256": "e1a0a87dc7faac002c20f060293aa7f6962f8ba61105bf6237e72bc4a0dd5c56",
+      "kind": "article_binary"
+    },
+    {
+      "path": "files/fulltext/PMID19500159_Suzuki2009.html",
+      "sha256": "a1a391516ea409d70afa1f4b2948bfeabdaf0442530bd6b23d842c1551afb49b",
+      "kind": "article_text"
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": false,
+    "abstract_anchoring_waived": "Four locators are abstract-anchored because the abstract genuinely carries them: the 13-bp deletion with absent protein, the 95 percent audiogenic penetrance, the EEG interictal spikes and the hippocampal/amygdalar vacuolation. The remaining twenty-six cannot be, and the reason is the finding itself. This reading's decisive results are things the abstract does not mention at all: that Wwox knockout MICE show no epilepsy, that the mouse-versus-rat contrast is formalised in Table 2, that the antibody epitope lies outside the mutated region, that a systemic metabolic cause is excluded on the authority of an unread companion paper, that the headline penetrance was measured in females only, and that the Figure 1 caption misassigns its own panels. An abstract is a summary of what the authors chose to foreground; every one of those points is precisely what a summary drops. Anchoring them to the abstract is not possible, and pretending otherwise would be the failure this field exists to prevent. Their verifiability instead rests on the fingerprinted local artifacts declared above, both reproducible from the operator's institutionally obtained PDF.",
+    "unverifiable_reason": "The article is not full-text indexed in Europe PMC: it has no PMCID, inEPMC is N and hasPDF is N, and every OA aggregator resolves to a single bronze-OA publisher URL that refuses automated retrieval. An external validator holding only the PubMed abstract therefore cannot re-verify any full-text quote. To keep verification real rather than notional, the operator's institutionally obtained PDF was fingerprinted and its text layer transcribed verbatim into a local HTML artifact with the abstract wrapped in a container the validator recognises, restoring the schema-v2 abstract/body separation that a flat text file would have silently destroyed. The separation was proven before use: an abstract-only sentence resolves to the abstract surface and not the body. Both artifacts are fingerprinted below and every locator was verified against the body surface.",
+    "entries": [
+      {
+        "proposition": "The terminal source of the epileptogenesis premise states that Wwox knockout MICE have no reported epileptic seizures, which contradicts rather than supports the claim five LEGEND surfaces trace to it.",
+        "snippet": "Although neither epileptic seizures nor abnormal behavior has been reported in Wwox KO (knockout) mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Introduction, final paragraph on page 2, immediately before the study's stated aim"
+      },
+      {
+        "proposition": "The absence of epilepsy in the mouse is treated by these authors as an open discrepancy with a candidate explanation, not as an oversight, which makes the rat-to-mouse transfer a question rather than an assumption.",
+        "snippet": "Although the reason for no detection of spontaneous epilepsy in the KO mice is unknown, in addition to genetic background and species specificity influencing on survival and epileptogenesis, the KO mice may die before they experience epileptic seizure",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Discussion, page 9, paragraph following the audiogenic-seizure summary"
+      },
+      {
+        "proposition": "The behavioural contrast is stated a third time and extended to motor phenotype, so the species difference is a deliberate, repeated claim of this paper.",
+        "snippet": "Although neither abnormal behavior nor impaired motor skill was observed in the Wwox KO mice (Aqeilan et al. 2007), lde/lde rats show ataxic gait and spontaneous epileptic",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Discussion, end of page 8 continuing to page 9"
+      },
+      {
+        "proposition": "The rat lde allele, though a C-terminal frameshift rather than a deletion of the locus, behaves as a protein-level functional null in the two tissues assayed — which refines the allele-class caution recorded on 2026-08-06 from PMID 19936220.",
+        "snippet": "These results indicate that the 13-bp deletion in exon 9 of the Wwox gene is a functional null mutation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Results, 'Expression of Wwox mRNA and protein', final sentence, page 5",
+        "abstract_snippet": "whereas both products were undetectable in the testes and hippocampi of lde/lde rats"
+      },
+      {
+        "proposition": "Transcript level is unaffected, so the loss is post-transcriptional and cannot be explained by nonsense-mediated decay of the mutant message.",
+        "snippet": "Wwox mRNA was expressed in testes and hippocampi, with similar levels of expression in wild-type and lde/lde rats",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Results, 'Expression of Wwox mRNA and protein', page 4, referring to Figure 4"
+      },
+      {
+        "proposition": "The antibody epitope lies outside the region altered by the mutation, so the absent Western signal means absent protein rather than a masked epitope. This is the control that makes the functional-null conclusion admissible.",
+        "snippet": "The Wwox epitope bound by the anti-Wwox antibody used in this study did not contain the region altered by the lde mutation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Materials and methods, 'Western blot analysis of Wwox protein', final sentence, page 3; sourced to a personal communication from the antibody vendor"
+      },
+      {
+        "proposition": "The mechanism proposed for the protein's disappearance is asserted, not measured: no turnover assay, no inhibitor and no route determination appears anywhere in the paper.",
+        "snippet": "C-terminal sequence in lde/lde rats may lead to the aberrant conformation of them, as degenerated by ubiquitin proteasome system",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Discussion, page 10, opening sentence. PREMISE: DEFAULT_FROM_TEXTBOOK — this is the same 'misfolded therefore proteasome' default that the 2026-07-12 thyroid-cancer episode already falsified for a different WWOX missense allele, where turnover ran through an HSC70-associated lysosomal route and did not respond to MG-132."
+      },
+      {
+        "proposition": "Audiogenic seizure penetrance is 95 percent, and the denominator is 20 animals after exclusions rather than the 23 initially exposed.",
+        "snippet": "Excluding the 3 rats that died, 19 of 20 rats (95%) experienced at least once audiogenic seizure",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Results, 'Audiogenic seizures', page 5. The three excluded animals died or were autopsied during the three-day schedule, so the denominator is survivor-conditioned.",
+        "abstract_snippet": "Sound stimulation induced epileptic seizures in 95% of lde/lde rats"
+      },
+      {
+        "proposition": "Latency to seizure shortens across repeated daily stimulations, a kindling-like progression rather than a fixed trait threshold.",
+        "snippet": "latencies before seizure induction gradually decreased during repeated stimulations",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Results, 'Audiogenic seizures', page 5; the paper reports 56 ± 24 s, then 36 ± 4 s, then 25 ± 3 s across the three exposures"
+      },
+      {
+        "proposition": "No control animal seized under identical stimulation, which bounds the phenotype to genotype rather than to the stimulus.",
+        "snippet": "None of the 14 normal rats experienced audiogenically induced or spontaneous epileptic seizures or any other abnormal behavior",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Results, 'Audiogenic seizures', page 5"
+      },
+      {
+        "proposition": "Spontaneous seizure incidence measured first-hand in this paper's backcross cohort is 60 percent, roughly double the 33 percent the authors cite from their own earlier strain.",
+        "snippet": "Spontaneous epileptic seizures were detected in 30 of the 50 (60%) backcross progeny examined",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Results, 'Autosomal recessive inheritance under altered genetic background', page 4. The 33 percent figure is imported from PMID 17803050 (FT-041), unread."
+      },
+      {
+        "proposition": "Epileptiform activity is documented electrographically and not only behaviourally, and it is present in every mutant even without stimulation.",
+        "snippet": "Interictal spikes (at about 10 Hz) were sporadically observed in all lde/lde rats under non-stimulated conditions",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Results, 'Analysis of EEGs', page 5; spikes were bilaterally synchronised with larger occipital than frontal amplitude and absent in normal rats",
+        "abstract_snippet": "Electroencephalogram (EEG) analysis showed interictal spikes, fast waves during WR and burst of spikes during clonic phases"
+      },
+      {
+        "proposition": "The EEG cohort is very small and sex-mixed, which bounds the electrographic result to a demonstration rather than a quantified prevalence.",
+        "snippet": "EEGs were recorded in five lde/lde (two males and three females) and three normal (two males and one female) rats",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Materials and methods, 'EEG recording', page 4; surgery was performed at 30-42 days and recording continued until the animal died or the baseline degraded"
+      },
+      {
+        "proposition": "The paper explicitly excludes a systemic metabolic cause for the rat's hyperexcitability — the strongest single statement it makes about mechanism, and one that rests entirely on an unread source.",
+        "snippet": "Normal levels of serum constituents clearly excluded the possibility that these abnormal excitabilities are resulted from a systemic metabolic disorder",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Discussion, page 9, end of the EEG paragraph. The whole claim is cited to Suzuki et al. 2007 = PMID 17803050 = FT-041, which is unread; its abstract reports significantly increased plasma urea nitrogen, creatinine and inorganic phosphate, so 'normal levels of serum constituents' is at best a narrower statement than the sentence's scope."
+      },
+      {
+        "proposition": "The mouse null's lethality is attributed here to a severe serum abnormality, independently corroborating the measured systemic decompensation recorded from PMID 19936220 on the same day.",
+        "snippet": "Postnatal earlier lethality in the KO mice seems to be related to their severely reduced serum levels of total protein, glucose and cholesterol as well as abnormal levels of electrolytes",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Discussion, page 7, citing the Supporting Information of Aqeilan et al. 2008"
+      },
+      {
+        "proposition": "The rat is asserted to lack that metabolic derangement, which is what would make the two models a natural dissociation of seizures from systemic illness — if the assertion holds.",
+        "snippet": "By contrast, 28-day-old lde/lde rats had normal levels of these constituents",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Discussion, page 7, immediately following the mouse serum sentence; also cited to the unread PMID 17803050"
+      },
+      {
+        "proposition": "The rat survives substantially longer than the mouse null, which is the material fact behind the 'the mice may die first' explanation for the absent mouse epilepsy.",
+        "snippet": "whereas a considerable number of the lde/lde rats survived after weaning (21 days of age) and died before maturation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Discussion, page 7; Table 2 gives viability as 2-3 weeks for the mouse knockout against 3-12 weeks for lde/lde"
+      },
+      {
+        "proposition": "Heterozygotes are phenotypically normal in the rat as in the mouse, converging on the absence of a haploinsufficiency phenotype in rodents.",
+        "snippet": "however, +/lde rats are phenotypically normal",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Discussion, page 9, final paragraph on protein expression"
+      },
+      {
+        "proposition": "Heterozygote protein is measurably reduced without any phenotype, so a partial reduction in Wwox protein is tolerated in rat tissue.",
+        "snippet": "The Wwox signal intensities in +/lde testicular and hippocampal extracts were reduced approximately 20–40% compared with wild type",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Results, 'Expression of Wwox mRNA and protein', page 5, referring to Figure 5"
+      },
+      {
+        "proposition": "The rat reproduces the mouse's relative brain enlargement, which is brain sparing during wasting in both species and must not be read as brain overgrowth in either.",
+        "snippet": "The relative weight of brain was significantly larger in affected than in normal females and males",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Results, page 4; the preceding sentence states that except for brain weights the absolute weights of most organs were significantly lower in affected rats. Underlying numbers are in Table S1, which was not supplied."
+      },
+      {
+        "proposition": "The anatomical lesion is fully penetrant in hippocampus and partial in amygdala, with clean controls — the structural correlate the mouse literature lacks.",
+        "snippet": "many extracellular vacuoles in the hippocampi of all affected (n = 9) (Fig. 1b,d) and the amygdala of six affected backcross progeny, but not in any of the normal rats (n = 10)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Results, page 4, referring to Figure 1",
+        "abstract_snippet": "a high incidence of epilepsy and many vacuoles in the hippocampus and amygdala"
+      },
+      {
+        "proposition": "The regional restriction of the vacuolation is itself unusual among genetic epilepsy models, which is what makes it mechanistically interesting rather than incidental degeneration.",
+        "snippet": "vacuolization localized to a specific region, such as the hippocampus or amygdala, has not been reported in other genetic epilepsy models",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Discussion, page 9, contrasted with the widespread spongy degeneration of the tremor and SER rat models"
+      },
+      {
+        "proposition": "The rat develops no tumours, adding a third genotype to the contested picture of WWOX-loss tumorigenesis in rodents.",
+        "snippet": "we did not observe a significant incidence of tumors in lde/lde rats",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Discussion, page 10. Note that Table 2 nonetheless lists osteosarcoma for the mouse knockout, taking Aqeilan at face value; PMID 19936220, accepted later in 2009, found zero osteosarcoma in nine knockouts by four modalities."
+      },
+      {
+        "proposition": "The rat's bone and calcium phenotype is milder than the mouse's, so the skeletal severity is not a conserved consequence of Wwox loss.",
+        "snippet": "Although we found that lde/lde rats also have slightly lower bone density on computed tomographic (CT) images than do normal rats (data not shown), lde/lde rats have normal plasma calcium levels",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Discussion, page 7. The supporting CT result is declared 'data not shown'."
+      },
+      {
+        "proposition": "The headline 95 percent audiogenic penetrance was measured in females only, a restriction stated in the figure and absent from the Results narrative and the abstract.",
+        "snippet": "induced by three trials of sound stimulation (once daily for 3 days) in 21- to 33-day-old lde/lde females",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.pdf",
+        "anchor": "Figure 6 caption and bar chart inspected on the rendered page 7: four stacked bars (First, Second, Third, Total) split into wild-running-only in black and wild-running-plus-tonic-clonic in grey. The Total bar reaches roughly 95 percent with about 40 percent of it wild-running-only. Neither the Results text nor the abstract states that this cohort is female-only."
+      },
+      {
+        "proposition": "The Western blot shows complete absence of both Wwox species in mutant tissue, with heterozygote lanes visibly intermediate.",
+        "snippet": "No signal was detected in the testes and hippocampi of lde/lde protein extracts",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.pdf",
+        "anchor": "Figure 5 image inspected on the rendered page 7: six lanes, +/+, +/lde and lde/lde for testis and hippocampus, with a 50 and 37 kDa ladder. Wwox bands are present in the first two genotypes and absent in lde/lde in both tissues. The caption itself warns that faint signals near 42 kDa are fluorescence leakage from the beta-actin channel, which is an honest disclosure of a confound in the same figure."
+      },
+      {
+        "proposition": "The Figure 1 caption assigns its panels to the wrong genotypes, so anyone reading the caption without the image will invert which hippocampus is normal.",
+        "snippet": "Coronal sections of hippocampus in normal (a, b) and affected backcross (c, d) female rats at 28 days of age",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.pdf",
+        "anchor": "Figure 1 image inspected on the rendered page 5. The image shows a and c without vacuoles and b and d with them, so the panels are normal (a, c) and affected (b, d) — not the (a, b) versus (c, d) split the caption title asserts. The caption's own body text contradicts its title, describing 'many vacuoles' in (a, b) while calling (a, b) normal, and misspells size as 'seize'. This is a caption-versus-image discrepancy of exactly the class that the coverage vocabulary's `captions_only` value exists to make detectable."
+      },
+      {
+        "proposition": "Interictal spikes are visible as discrete marked events in the mutant trace and absent in the control trace, supporting the text's claim at the level of the raw record.",
+        "snippet": "Interictal spikes (arrows) were sporadically observed in EEG of lde/lde rats",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.pdf",
+        "anchor": "Figure 7 image inspected on the rendered page 8: eight-channel traces, four unipolar and four bipolar, for a normal male (a) and an lde/lde male (b), with an electrode-position schematic (c). The normal trace is visibly flat; the mutant trace carries higher-amplitude activity with two arrowed spikes on the bipolar occipital leads."
+      },
+      {
+        "proposition": "Table 2 formalises the species difference: the Epilepsy row is populated for the rat alone and is empty for both mouse models, which is the single clearest refutation of the imported premise.",
+        "snippet": "Epilepsy Wild running and tonic–clonic convulsion",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Table 2, 'Phenotypic comparison in the WWOX mutated animals', final row, page 9. The table's three columns are Wwox-/- mice, Wwox gt/gt hypomorph mice and lde/lde rats; only the third carries an epilepsy entry. The Vacuolization row is likewise rat-only."
+      },
+      {
+        "proposition": "The same table records the viability gap that underwrites the authors' explanation for why the mouse may never be observed to seize.",
+        "snippet": "Viability 2–3 weeks 2 years 3–12 weeks",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID19500159_Suzuki2009.html",
+        "anchor": "Table 2, Viability row, page 9: 2-3 weeks for the targeted mouse knockout, 2 years for the gene-trap hypomorph, 3-12 weeks for lde/lde rats"
+      }
+    ]
+  }
+}

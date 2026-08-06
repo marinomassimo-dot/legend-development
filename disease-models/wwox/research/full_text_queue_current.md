@@ -577,19 +577,35 @@ fenotipo epilettico antecedenti alla mappatura Wwox; il paper 2019 li importa so
 **Priorità rivista 2026-08-06:** compare anche come referenza 27 di PMID 19936220, accanto a
 `FT-042`, nella stessa frase di Discussione da cui l'intera premessa "epilettogenesi" del KO
 murino deriva. Va letto insieme a `FT-042`, non dopo. Vedi `DL-MECH-073`.
+**Priorità rivista 2026-08-06 (seconda volta) — MASSIMA.** Dopo la lettura completa di
+`FT-042`, questo non è più un primario di contorno: è la fonte su cui poggia
+**interamente** l'affermazione più forte che `FT-042` fa sul meccanismo — *"Normal levels of
+serum constituents **clearly excluded** the possibility that these abnormal excitabilities are
+resulted from a systemic metabolic disorder"* — oltre al 33% di crisi spontanee e al GH
+ipofisario basso. Vedi `DL-MECH-076`.
 **Current status:** ⬜ **NON LETTO — `PAYWALL`, debito dichiarato e aperto.** Recupero
 tentato 2026-08-06: **nessun DOI registrato**, quindi Unpaywall, OpenAlex e Semantic Scholar
 non sono nemmeno indirizzabili; `elink pubmed→pmc` non restituisce `LinkSetDb`, quindi non è
 depositato in PMC (AALAS deposita volumi più recenti di *Comparative Medicine*, non questo del
 2007). Record chiuso genuino — la classe più difficile della cascata. Handoff:
 `files/fulltext/PMID17803050_Suzuki2007.handoff.md`.
+📄 **ABSTRACT ACQUISITO 2026-08-06 — `abstract_only`, NON una lettura, il debito resta
+aperto.** L'operatore ha fornito il solo abstract PubMed. Non è stato emesso alcun receipt: un
+abstract non chiude una voce di coda e non salda debito di lettura. È registrato qui perché
+**mette in tensione una frase di `FT-042`**: riporta che i ratti mutanti *"had significantly
+increased concentrations of plasma urea nitrogen, creatinine, and inorganic phosphate, as well
+as decreased concentrations of plasma growth hormone"* — una firma di compromissione renale,
+non "livelli normali di costituenti sierici". Riporta inoltre 95% di andatura atassica, ~34%
+di crisi, e peso cerebrale relativo significativamente più alto (stesso brain sparing del
+topo). **Ciò che serve dal full text: la tabella di chimica ematica**, che decide se la
+dissociazione crisi-versus-malattia-sistemica regge.
 **Via più economica:** stesso autore corrispondente di `FT-042` — recapiti nella handoff card,
 fuori dal materiale pubblico; in alternativa ILL per citazione (*Comp Med* 2007;57(4):360–369)
 o accesso socio AALAS.
 **Nota:** PMID 19936220 cita questo paper per tre comparatori oggi di seconda mano in LEGEND —
 densità ossea solo lievemente ridotta nei ratti *lde/lde*, nessun osteosarcoma nella loro breve
 vita, e **BUN significativamente più alto**, che è l'eco nel ratto dell'uremia misurata nel
-topo null.
+topo null — e l'abstract ora lo conferma direttamente.
 
 ---
 
@@ -610,19 +626,31 @@ modello ratto": è il **terminale effettivo** di una premessa oggi attribuita a 
 murino, su specie e classe allelica diverse (delezione 13 bp esone 9 → frameshift
 C-terminale, non un null; crisi audiogene). Finché non è letto, nessuna formulazione
 canonica può dire che un modello murino Wwox-null "mostra epilettogenesi". Vedi `DL-MECH-073`.
-**Current status:** ⬜ **NON LETTO — `OA_BUT_BOT_BLOCKED`, debito dichiarato e aperto.**
-Recupero ritentato 2026-08-06 su otto tier (PMC/Europe PMC, Unpaywall, OpenAlex, Semantic
-Scholar, OpenAIRE/Zenodo/CORE, publisher via `curl`, publisher via browser reale, ricerca web
-aperta). Il record è **bronze OA** — libero da leggere, senza licenza e **senza alcun deposito
-in repository**: esiste una sola location, `onlinelibrary.wiley.com/doi/pdfdirect/...`.
-`curl` riceve una pagina di sfida HTML da 5.978 byte; Playwright headless non supera
-l'interstitial Cloudflare (Ray `a26fb07affb9ed54`). Non è un paywall, è un blocco anti-bot:
-**un essere umano che clicca il landing page in un browser normale quasi certamente lo
-ottiene.** Handoff con template e tier provati:
-`files/fulltext/PMID19500159_Suzuki2009.handoff.md`.
-**Via più economica:** l'autore corrispondente (Nippon Veterinary and Life Science University)
-è lo stesso di `FT-041` — **una sola email sblocca entrambi i terminali della catena**. I
-recapiti stanno nella handoff card, fuori dal materiale pubblico.
+**Current status:** ✅ **LETTO INTEGRALMENTE 2026-08-06** — receipt
+`FTR-20260806-19500159-01`; manifest schema-v2 con **30 locator** verificati strict (24 corpo,
+2 tabella, 4 figura), zero gap, zero waiver di sezione; dossier in
+`fulltext_dossiers/PMID19500159.md`. Undici pagine, otto figure e due tabelle ispezionate sulle
+pagine renderizzate, referenze enumerate.
+**Provenienza:** otto tier automatici rifiutati (bronze OA, Cloudflare); full text ottenuto
+dall'operatore per accesso istituzionale. Poiché il paper non esiste in alcuna forma
+strutturata leggibile, il layer testuale del PDF è stato trascritto verbatim in un artefatto
+HTML locale **con l'abstract racchiuso in un contenitore riconosciuto**, così la separazione
+abstract/corpo di schema-v2 è preservata anziché aggirata — e la separazione è stata dimostrata
+prima dell'uso.
+⚠️ **Supplementari dichiarati `unavailable`, non saltati:** Figure S1/S2, Video S1 e Tabelle
+S1/S2 esistono e sono citati cinque volte. Il recupero ha restituito **HTTP 403** sia
+sull'endpoint supplementi Wiley sia sull'ancora supporting-information, e il PDF non contiene
+allegati. Curve di crescita, sopravvivenza, pesi d'organo e statistica di segregazione sono
+quindi letti solo come i Results li descrivono.
+🔴 **Esito — la premessa non è solo priva di sostegno: il terminale afferma il contrario.**
+Questo paper dichiara in tre punti e in Table 2 che i **topi Wwox-null non hanno epilessia**;
+la riga *Epilepsy* della tabella è compilata solo per `lde/lde`. Il fenotipo del **ratto** è
+invece solido (95% crisi audiogene, 60% spontanee, 0/14 controlli, spike interictali in tutti i
+mutanti, vacuoli ippocampali 9/9 vs 0/10). Vedi `DL-MECH-075`.
+⚠️ **Aperto:** l'esclusione della causa metabolica sistemica nel ratto (*"clearly excluded"*)
+poggia interamente su `FT-041`, non letto, il cui abstract riporta urea, creatinina e fosfato
+**aumentati**. Vedi `DL-MECH-076`. Correzioni isolate in
+`staging/commit_candidate_20260806_19500159.md`.
 
 ---
 
