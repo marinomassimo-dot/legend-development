@@ -129,6 +129,14 @@ means something no one will look.
 4. **State scale assumptions out loud.** An artefact that silently assumes the current volume
    is a defect waiting for a quiet birthday. If a design only works below some size, write the
    size down.
+5. **Before building a guard, look for it — it is probably already here.** Three times in one
+   day the correct pattern existed in this repository, applied at one site and not carried to
+   the second: `append_only_prefix` in the ledger but not the registries; the corpus marker
+   copied into four guards; `tracked_paths()` unused by two checks in its own file. The
+   failure mode of a system that grows by accretion is not ignorance, it is **uneven
+   application**. Grep the vocabulary — `prefix`, `anchor`, `tracked`, `scope`, `ratchet` —
+   before inventing a mechanism, and if you diverge from what you find, say why.
+   `PATTERN_ALREADY_SOLVED_GATE`.
 
 **Why this section exists.** The receipt ledger was given `append_only_prefix` because someone
 thought about growth — for the file that grows. The registries never got the equivalent, and a
