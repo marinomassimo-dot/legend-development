@@ -11,7 +11,10 @@
     "full_text_queue_current#FT-034"
   ],
   "skills_considered": [
-    {"skill": "legend-study-intake-triage", "used": true},
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
     {
       "skill": "legend-deepdive",
       "used": false,
@@ -52,14 +55,22 @@
   "multihop": {
     "references_enumerated": 47,
     "gene_direct_refs_in_source": [
-      "10.1093/brain/awm078", "10.7759/cureus.46216", "10.1007/s12035-023-03346-3",
-      "10.1002/ana.25619", "10.21203/rs.3.rs-1682290/v1", "10.1684/epd.2017.0924",
+      "10.1093/brain/awm078",
+      "10.7759/cureus.46216",
+      "10.1007/s12035-023-03346-3",
+      "10.1002/ana.25619",
+      "10.21203/rs.3.rs-1682290/v1",
+      "10.1684/epd.2017.0924",
       "10.1165/rcmb.2020-0145OC"
     ],
     "resolved": [],
     "queued": [
-      "10.1093/brain/awm078", "10.7759/cureus.46216", "10.1007/s12035-023-03346-3",
-      "10.1002/ana.25619", "10.21203/rs.3.rs-1682290/v1", "10.1684/epd.2017.0924",
+      "10.1093/brain/awm078",
+      "10.7759/cureus.46216",
+      "10.1007/s12035-023-03346-3",
+      "10.1002/ana.25619",
+      "10.21203/rs.3.rs-1682290/v1",
+      "10.1684/epd.2017.0924",
       "10.1165/rcmb.2020-0145OC"
     ],
     "note": "47 references, 40 WWOX-direct, 28 already in the corpus. Twelve appeared absent on a DOI-keyed check; five of those twelve were queued earlier today from the reference lists of PMID 39507621 and 36779245 and were recorded by PMID, so the DOI key missed them. Re-run with both keys: 7 genuinely unknown, listed above. Recording the correction because a reference-list audit keyed on one identifier over-reports its own findings, and the over-report is in the direction that flatters the audit."
@@ -76,6 +87,7 @@
   "verbatim_locators": {
     "waived": false,
     "source_fulltext_indexed": false,
+    "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:40875931 on 2026-08-07: inEPMC=N, no PMCID, hasPDF=N — no full text indexed, so an external validator sees only the abstract.",
     "abstract_anchoring_waived": "Measured on 2026-08-05: Europe PMC returns inEPMC=N, isOpenAccess=N and no fullTextIdList for PMID 40875931, so an external validator can cache only the abstract. Two propositions are anchored to the abstract below and are externally verifiable. The remaining eighteen cannot be: they rest on Table 1, Table 2 and the Discussion, and the abstract states none of them — it gives the three significant associations as a summary sentence without the per-phenotype counts, does not print the premature-death row that contradicts the Discussion, does not mention case ID 11 or Q230P, and does not carry the 45/50 seizure figure. Anchoring them to the abstract would mean quoting text that does not say what the proposition claims, which is the failure the locator contract exists to prevent. They stay full-text-anchored and are marked not externally verifiable rather than quietly reworded.",
     "entries": [
       {

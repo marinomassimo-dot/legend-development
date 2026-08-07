@@ -11,16 +11,46 @@
     "learned_gates_registry#SYNTHESIS_MEDIATION_GATE"
   ],
   "skills_considered": [
-    {"skill": "legend", "used": true},
-    {"skill": "legend-study-intake-triage", "used": true},
-    {"skill": "legend-batch-inferential-sweep", "used": true},
-    {"skill": "legend-proband-priority-matrix", "used": true},
-    {"skill": "find-fulltext", "used": true},
-    {"skill": "legend-deepdive", "used": true},
-    {"skill": "legend-discovery", "used": true},
-    {"skill": "spreadsheets", "used": true},
-    {"skill": "legend-session-self-eval", "used": true},
-    {"skill": "legend-capability-scout", "used": true},
+    {
+      "skill": "legend",
+      "used": true
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "legend-batch-inferential-sweep",
+      "used": true
+    },
+    {
+      "skill": "legend-proband-priority-matrix",
+      "used": true
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": true
+    },
+    {
+      "skill": "spreadsheets",
+      "used": true
+    },
+    {
+      "skill": "legend-session-self-eval",
+      "used": true
+    },
+    {
+      "skill": "legend-capability-scout",
+      "used": true
+    },
     {
       "skill": "legend-hypothesis-forge",
       "used": false,
@@ -46,30 +76,92 @@
   },
   "field_density": {
     "queries": [
-      {"query": "WWOX AND myelin", "count": 8, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "WWOX AND oligodendrocyte", "count": 4, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "WWOX AND GABAergic", "count": 4, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "WWOX AND neuroinflammation", "count": 5, "source": "PubMed ESearch, 2026-08-06"}
+      {
+        "query": "WWOX AND myelin",
+        "count": 8,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "WWOX AND oligodendrocyte",
+        "count": 4,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "WWOX AND GABAergic",
+        "count": 4,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "WWOX AND neuroinflammation",
+        "count": 5,
+        "source": "PubMed ESearch, 2026-08-06"
+      }
     ],
     "note": "The WWOX-by-myelin and WWOX-by-oligodendrocyte intersections remain small. That makes the review's bridge useful as a search map, not strong by repetition; the direct primary experiments must bear any causal conclusion."
   },
   "multihop": {
     "references_enumerated": 86,
     "gene_direct_refs_in_source": [
-      "10786676", "11719429", "24932569", "27869163", "24369382", "30746283",
-      "30094525", "30356099", "19500159", "16941225", "31340538", "21115974",
-      "28283473", "17470496", "25411445", "19936220", "30290271", "32000863",
-      "32581702", "27121845", "30350478", "30158849", "20942981", "24871327",
-      "15064722", "30619736"
-    ],
-    "resolved": [
-      "10786676", "11719429", "24932569", "27869163", "24369382", "30746283",
-      "30094525", "30356099", "19500159", "16941225", "31340538", "21115974",
-      "28283473", "25411445", "19936220", "30290271", "32000863", "32581702",
-      "27121845", "30350478", "30158849", "20942981", "24871327", "15064722",
+      "10786676",
+      "11719429",
+      "24932569",
+      "27869163",
+      "24369382",
+      "30746283",
+      "30094525",
+      "30356099",
+      "19500159",
+      "16941225",
+      "31340538",
+      "21115974",
+      "28283473",
+      "17470496",
+      "25411445",
+      "19936220",
+      "30290271",
+      "32000863",
+      "32581702",
+      "27121845",
+      "30350478",
+      "30158849",
+      "20942981",
+      "24871327",
+      "15064722",
       "30619736"
     ],
-    "queued": ["FT-008", "FT-038", "FT-039", "FT-040"],
+    "resolved": [
+      "10786676",
+      "11719429",
+      "24932569",
+      "27869163",
+      "24369382",
+      "30746283",
+      "30094525",
+      "30356099",
+      "19500159",
+      "16941225",
+      "31340538",
+      "21115974",
+      "28283473",
+      "25411445",
+      "19936220",
+      "30290271",
+      "32000863",
+      "32581702",
+      "27121845",
+      "30350478",
+      "30158849",
+      "20942981",
+      "24871327",
+      "15064722",
+      "30619736"
+    ],
+    "queued": [
+      "FT-008",
+      "FT-038",
+      "FT-039",
+      "FT-040"
+    ],
     "note": "The 86 XML references were enumerated after sequential reading. Twenty-six title-direct WWOX/disease/mechanism references carry PMIDs. Twenty-five resolve in the paper registry, tracking log, batch queue or research queue. PMID 17470496, the pre-gene linkage paper for the 16q21-q23 SCAR locus, is absent from those five structured files; it is bibliographic lineage rather than a load-bearing mechanism and is recorded in the durable dossier. The primary GABA and interactome debts were already FT-008/FT-038; the lipid and rat-myelin primaries are newly FT-039/FT-040."
   },
   "corpus_crossquery": {
@@ -82,22 +174,71 @@
     "result": "No retraction, expression of concern or correction was returned for any of the 16 batch records, including PMID 33255508, by the intake retraction gate on 2026-08-06. The Europe PMC full-text record is PMCID PMC7727818 and the article is open access."
   },
   "source_artifacts": [
-    {"path": "files/fulltext/PMID33255508_Aldaz2020.xml", "sha256": "92f0f3bc8af67a19a88c210f918c7341244853237567647cfc4246aa06a0c0a7", "kind": "article_text"},
-    {"path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g001.jpg", "sha256": "45cb51820b2287c203e925e4ce6d07ed2bc1d72ccfe8d0eb991d320c33877e0e", "kind": "figure"},
-    {"path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g002.jpg", "sha256": "d1e3ff223a71127c9d049e9d1f97ba11186c5dc4323e9684717a3d782d288194", "kind": "figure"},
-    {"path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g003.jpg", "sha256": "cc79942fd734c1dc9bde6ddd3d9efb5f514c7abc3abf1d4f19a3a543ab06692b", "kind": "figure"},
-    {"path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g004.jpg", "sha256": "d297d7e107337791ab6f8d24ca32327b22ee3ceeeddea60cff26b06e1bcd56b9", "kind": "figure"},
-    {"path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g005.jpg", "sha256": "bf8333547adedefe90675d761d94d3dce5520899465fa319457540347792279e", "kind": "figure"},
-    {"path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g006.jpg", "sha256": "456bdc33827aabff76623e4378b61c3492a2f1fc2b15a59203b11da1fcd83751", "kind": "figure"},
-    {"path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g007.jpg", "sha256": "9ad0ace201656a73375198f3a5974015200ac9f2a924bf2e4aa444a23e13ae3a", "kind": "figure"},
-    {"path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g008.jpg", "sha256": "6a2a2e462a8be1a105cdaa5f6a6f1772b7089c19c966f1cd855b319f3d3d0080", "kind": "figure"},
-    {"path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g009.jpg", "sha256": "6b6df4b266671bb1542095dcae4654ba468107dab235a9dea2a03de21114343a", "kind": "figure"},
-    {"path": "files/fulltext/PMID33255508_Aldaz2020_assets/supplement/IJMS review-CMA and TH/Supplementray Table 1.xlsx", "sha256": "6c2cae6ceeac9bb5fddb2c9d6edf300f3559593d82ccc8d584f1942dc88b9a10", "kind": "table"},
-    {"path": "files/fulltext/PMID33255508_Aldaz2020_assets/supplement/IJMS review-CMA and TH/Supplementray Table 2.xlsx", "sha256": "34e8b6099afc127110ec4da5eec5a30d1bc504f24a6cf85f230df1535a855f1b", "kind": "table"}
+    {
+      "path": "files/fulltext/PMID33255508_Aldaz2020.xml",
+      "sha256": "92f0f3bc8af67a19a88c210f918c7341244853237567647cfc4246aa06a0c0a7",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g001.jpg",
+      "sha256": "45cb51820b2287c203e925e4ce6d07ed2bc1d72ccfe8d0eb991d320c33877e0e",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g002.jpg",
+      "sha256": "d1e3ff223a71127c9d049e9d1f97ba11186c5dc4323e9684717a3d782d288194",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g003.jpg",
+      "sha256": "cc79942fd734c1dc9bde6ddd3d9efb5f514c7abc3abf1d4f19a3a543ab06692b",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g004.jpg",
+      "sha256": "d297d7e107337791ab6f8d24ca32327b22ee3ceeeddea60cff26b06e1bcd56b9",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g005.jpg",
+      "sha256": "bf8333547adedefe90675d761d94d3dce5520899465fa319457540347792279e",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g006.jpg",
+      "sha256": "456bdc33827aabff76623e4378b61c3492a2f1fc2b15a59203b11da1fcd83751",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g007.jpg",
+      "sha256": "9ad0ace201656a73375198f3a5974015200ac9f2a924bf2e4aa444a23e13ae3a",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g008.jpg",
+      "sha256": "6a2a2e462a8be1a105cdaa5f6a6f1772b7089c19c966f1cd855b319f3d3d0080",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID33255508_Aldaz2020_assets/ijms-21-08922-g009.jpg",
+      "sha256": "6b6df4b266671bb1542095dcae4654ba468107dab235a9dea2a03de21114343a",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID33255508_Aldaz2020_assets/supplement/IJMS review-CMA and TH/Supplementray Table 1.xlsx",
+      "sha256": "6c2cae6ceeac9bb5fddb2c9d6edf300f3559593d82ccc8d584f1942dc88b9a10",
+      "kind": "table"
+    },
+    {
+      "path": "files/fulltext/PMID33255508_Aldaz2020_assets/supplement/IJMS review-CMA and TH/Supplementray Table 2.xlsx",
+      "sha256": "34e8b6099afc127110ec4da5eec5a30d1bc504f24a6cf85f230df1535a855f1b",
+      "kind": "table"
+    }
   ],
   "verbatim_locators": {
     "waived": false,
     "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:33255508 on 2026-08-07: inEPMC=Y, PMCID PMC7727818, hasPDF=Y — full text is indexed, so an external validator can re-verify body quotes.",
     "entries": [
       {
         "proposition": "The OPC observation is lineage expression, not evidence that WWOX acts cell-autonomously in oligodendrocytes.",

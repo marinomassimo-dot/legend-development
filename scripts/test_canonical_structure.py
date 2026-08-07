@@ -3,26 +3,15 @@
 
 from __future__ import annotations
 
-import re
+import sys
 import unittest
 from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
 REGISTRIES = ROOT / "disease-models" / "wwox" / "registries"
-# Updated deliberately by BATCH_20260806_002: +4 claims (036, 037, 038, 039), +3 papers
-# (057, 058, 059), +1 tracking record (LIT-0405). The corpus placeholder count is unchanged:
-# CORPUS P295 and P363 were promoted to PAPER 057 and 058 but are preserved append-only as
-# triage lineage, and PMID 17803050 had no placeholder at all — it reached the registry only
-# through the multi-hop expansion of two other readings.
-# Prev, BATCH_20260726_001: +2 claims (034, 035), +3 papers (054, 055, 056), +3 tracking
-# records (LIT-0402/0403/0404).
-EXPECTED_COUNTS = {
-    "claims": 39,
-    "papers": 49,
-    "corpus": 356,
-    "literature": 386,
-}
+sys.path.insert(0, str(ROOT / "framework" / "scripts"))
+import growth_anchors  # noqa: E402
 
 
 def text(name: str) -> str:
@@ -30,33 +19,39 @@ def text(name: str) -> str:
 
 
 class CanonicalStructureTests(unittest.TestCase):
-    def test_claim_paper_corpus_and_literature_cardinality(self) -> None:
-        claims = re.findall(
-            r"^##\s+(CLAIM\s+\d+)\s*$",
+    def test_cardinality_matches_the_declared_growth_anchor(self) -> None:
+        """No expected counts live here any more.
+
+        This test used to pin `EXPECTED_COUNTS = {claims: 35, ...}` and every batch edited
+        those four numbers by hand. That is the failure the growth principle names: updating
+        the constraint cost four keystrokes while complying with it cost a whole commit, so
+        the number tracked whatever made the suite green. On 2026-08-06 it was duly bumped
+        35 → 39 with an explanatory comment, which is exactly what the check existed to
+        prevent, and nobody noticed until the operator asked whether the design assumed growth.
+
+        Now the counts are anchored in `framework/state/growth_anchors.jsonl` by a recorder
+        that re-measures the registries and refuses a declared delta that does not match them.
+        Growth is legal and cheap; undeclared growth is not possible to anchor at all.
+        """
+        violations, _improvements, _live = growth_anchors.evaluate(ROOT, "wwox")
+        structural = [item for item in violations if item.startswith("STRUCTURAL_")]
+        self.assertEqual(
+            [], structural,
+            "Registry cardinality moved without a declared delta. Record it with:\n"
+            "  python3 framework/scripts/growth_anchors.py record --batch <ID> --claims +N\n"
+            + "\n".join(structural))
+
+    def test_record_identifiers_are_unique(self) -> None:
+        identifiers = growth_anchors.structural_identifiers(
             text("claim_registry_current.md"),
-            re.M,
-        )
-        papers_text = text("paper_registry_current.md")
-        papers = re.findall(r"^##\s+(PAPER\s+\d+)\s*$", papers_text, re.M)
-        corpus = re.findall(
-            r"^##\s+(CORPUS(?:-STUB-|\s+P)\d+)\s*$",
-            papers_text,
-            re.M,
-        )
-        literature = re.findall(
-            r"^##\s+(LIT-(?!\[)[A-Z0-9-]+)\s*$",
-            text("literature_tracking_log_current.md"),
-            re.M,
-        )
-        observed = {
-            "claims": len(claims),
-            "papers": len(papers),
-            "corpus": len(corpus),
-            "literature": len(literature),
+            text("paper_registry_current.md"),
+            text("literature_tracking_log_current.md"))
+        duplicates = {
+            kind: sorted({i for i in found if found.count(i) > 1})
+            for kind, found in identifiers.items()
+            if len(found) != len(set(found))
         }
-        self.assertEqual(EXPECTED_COUNTS, observed)
-        for identifiers in (claims, papers, corpus, literature):
-            self.assertEqual(len(identifiers), len(set(identifiers)))
+        self.assertEqual({}, duplicates, f"Duplicate record identifiers: {duplicates}")
 
     def test_working_model_keeps_required_architecture(self) -> None:
         working = text("working_model_current.md")

@@ -12,15 +12,42 @@
     "learned_gates_registry#MARKER_TO_FUNCTION_GATE"
   ],
   "skills_considered": [
-    {"skill": "legend", "used": true},
-    {"skill": "legend-study-intake-triage", "used": true},
-    {"skill": "find-fulltext", "used": true},
-    {"skill": "legend-deepdive", "used": true},
-    {"skill": "legend-discovery", "used": true},
-    {"skill": "legend-session-self-eval", "used": true},
-    {"skill": "legend-capability-scout", "used": true},
-    {"skill": "documents", "used": true},
-    {"skill": "spreadsheets", "used": true},
+    {
+      "skill": "legend",
+      "used": true
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": true
+    },
+    {
+      "skill": "legend-session-self-eval",
+      "used": true
+    },
+    {
+      "skill": "legend-capability-scout",
+      "used": true
+    },
+    {
+      "skill": "documents",
+      "used": true
+    },
+    {
+      "skill": "spreadsheets",
+      "used": true
+    },
     {
       "skill": "browser-control",
       "used": true,
@@ -61,29 +88,83 @@
   },
   "field_density": {
     "queries": [
-      {"query": "WWOX AND GABAergic", "count": 4, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "WWOX AND parvalbumin", "count": 1, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "WWOX AND microglia", "count": 4, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "WWOX AND astrocyte", "count": 5, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "WWOX AND hippocampus", "count": 12, "source": "PubMed ESearch, 2026-08-06"}
+      {
+        "query": "WWOX AND GABAergic",
+        "count": 4,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "WWOX AND parvalbumin",
+        "count": 1,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "WWOX AND microglia",
+        "count": 4,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "WWOX AND astrocyte",
+        "count": 5,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "WWOX AND hippocampus",
+        "count": 12,
+        "source": "PubMed ESearch, 2026-08-06"
+      }
     ],
     "note": "The WWOX-by-interneuron/glia literature is sparse, with only one parvalbumin hit. This makes the regional phenotype important but increases the need to preserve exact assay, region and significance boundaries rather than promote marker counts to GABA or circuit function."
   },
   "multihop": {
     "references_enumerated": 90,
     "gene_direct_refs_in_source": [
-      "24456803", "24932569", "27121845", "10786676", "25403906", "25537520",
-      "15026124", "27495153", "17470496", "19936220", "24369382", "25411445",
-      "16941225", "10861292", "27869163", "19500159", "15126504", "26345274",
-      "25716914", "22193544"
-    ],
-    "resolved": [
-      "24456803", "24932569", "27121845", "10786676", "25403906", "25537520",
-      "15026124", "27495153", "19936220", "24369382", "25411445", "16941225",
-      "10861292", "27869163", "19500159", "15126504", "26345274", "25716914",
+      "24456803",
+      "24932569",
+      "27121845",
+      "10786676",
+      "25403906",
+      "25537520",
+      "15026124",
+      "27495153",
+      "17470496",
+      "19936220",
+      "24369382",
+      "25411445",
+      "16941225",
+      "10861292",
+      "27869163",
+      "19500159",
+      "15126504",
+      "26345274",
+      "25716914",
       "22193544"
     ],
-    "queued": ["FT-042", "FT-043"],
+    "resolved": [
+      "24456803",
+      "24932569",
+      "27121845",
+      "10786676",
+      "25403906",
+      "25537520",
+      "15026124",
+      "27495153",
+      "19936220",
+      "24369382",
+      "25411445",
+      "16941225",
+      "10861292",
+      "27869163",
+      "19500159",
+      "15126504",
+      "26345274",
+      "25716914",
+      "22193544"
+    ],
+    "queued": [
+      "FT-042",
+      "FT-043"
+    ],
     "note": "All 90 references were read and 89 PMIDs resolved. Twenty are WWOX-, model- or disease-direct. Nineteen resolve in the structured corpus. PMID 19936220 is the load-bearing model-generation primary, lacks a receipt and is now FT-043. PMID 19500159 already remains FT-042. PMID 17470496 is a pre-gene SCAR linkage paper already recorded as bibliographic lineage in a prior dossier and is not load-bearing for the measured GABA/glia endpoints, so it was not duplicated as a new reading debt."
   },
   "corpus_crossquery": {
@@ -96,20 +177,61 @@
     "result": "Europe PMC metadata checked on 2026-08-06 showed no retraction flag, expression of concern or correction list for PMID 30290271. PMCID PMC7104842 identifies the full-text record."
   },
   "source_artifacts": [
-    {"path": "files/fulltext/PMID30290271_Hussain2019.html", "sha256": "a415d54a6ef09e7c1921e864ba6cd02ef2939fb2f0e93d4511247aaff3dfa89b", "kind": "article_text"},
-    {"path": "files/fulltext/PMID30290271_Hussain2019.pdf", "sha256": "c44c8472e20c83cb0c00f91d9f9adff0e8ce7019218fd4194e8c95e8cb8fc14a", "kind": "article_binary"},
-    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F1.jpg", "sha256": "da793a2be5b3aa4d63bc975f603b109648513da1a0c88e053f9b7170fa52c931", "kind": "figure"},
-    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F2.jpg", "sha256": "32618ac267eda2bac20274a8ec4b4e1b833be8d2efd574afbe64704feb3092ef", "kind": "figure"},
-    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F3.jpg", "sha256": "46eed2dc7d72d26dda5922da134a0cfe53c2e8c21c244cebb7895bd44decad66", "kind": "figure"},
-    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F4.jpg", "sha256": "be2dcae4ae3d94705d4703f219e7c5d1b17b7bfda9dd3fef906567e83295bcdf", "kind": "figure"},
-    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F5.jpg", "sha256": "f7d1b3080d75c4b76050e664c3eecdd482b7d4a4eb49345c278e233c66252c0d", "kind": "figure"},
-    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F6.jpg", "sha256": "f42d050ff5cf6a290d847f2d1432bcb3fc4ef501ee175e3701ed1485efe71486", "kind": "figure"},
-    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/supplement/Supplementary_Table_1.docx", "sha256": "be21e2547d1532f824b720016b8ff4566bda87750b177bd296238e9380471a23", "kind": "table"},
-    {"path": "files/fulltext/PMID30290271_Hussain2019_assets/supplement/Supplementary_Table_2.xlsx", "sha256": "452dbc85302b319a9f6e81870a2705df926463fec458152520992f72b86de390", "kind": "table"}
+    {
+      "path": "files/fulltext/PMID30290271_Hussain2019.html",
+      "sha256": "a415d54a6ef09e7c1921e864ba6cd02ef2939fb2f0e93d4511247aaff3dfa89b",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID30290271_Hussain2019.pdf",
+      "sha256": "c44c8472e20c83cb0c00f91d9f9adff0e8ce7019218fd4194e8c95e8cb8fc14a",
+      "kind": "article_binary"
+    },
+    {
+      "path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F1.jpg",
+      "sha256": "da793a2be5b3aa4d63bc975f603b109648513da1a0c88e053f9b7170fa52c931",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F2.jpg",
+      "sha256": "32618ac267eda2bac20274a8ec4b4e1b833be8d2efd574afbe64704feb3092ef",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F3.jpg",
+      "sha256": "46eed2dc7d72d26dda5922da134a0cfe53c2e8c21c244cebb7895bd44decad66",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F4.jpg",
+      "sha256": "be2dcae4ae3d94705d4703f219e7c5d1b17b7bfda9dd3fef906567e83295bcdf",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F5.jpg",
+      "sha256": "f7d1b3080d75c4b76050e664c3eecdd482b7d4a4eb49345c278e233c66252c0d",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID30290271_Hussain2019_assets/figures/F6.jpg",
+      "sha256": "f42d050ff5cf6a290d847f2d1432bcb3fc4ef501ee175e3701ed1485efe71486",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID30290271_Hussain2019_assets/supplement/Supplementary_Table_1.docx",
+      "sha256": "be21e2547d1532f824b720016b8ff4566bda87750b177bd296238e9380471a23",
+      "kind": "table"
+    },
+    {
+      "path": "files/fulltext/PMID30290271_Hussain2019_assets/supplement/Supplementary_Table_2.xlsx",
+      "sha256": "452dbc85302b319a9f6e81870a2705df926463fec458152520992f72b86de390",
+      "kind": "table"
+    }
   ],
   "verbatim_locators": {
     "waived": false,
     "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:30290271 on 2026-08-07: inEPMC=Y, PMCID PMC7104842, hasPDF=Y — full text is indexed, so an external validator can re-verify body quotes.",
     "entries": [
       {
         "proposition": "The study uses a mixed-background full systemic knockout generated through persistent oocyte Cre activity.",

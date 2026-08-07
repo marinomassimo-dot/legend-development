@@ -163,6 +163,33 @@ python3 framework/scripts/fulltext_receipts.py anchor
 python3 framework/scripts/fulltext_receipts.py verify
 ```
 
+## 6.2 GROWTH ANCHORS
+
+Every constant below that says *"how big the system is right now"* is written by
+[`growth_anchors.py`](../scripts/growth_anchors.py) and by nothing else. **No value in this
+section may be typed by hand.** The rule it enforces is stricter than "automate it": *updating
+a constraint must cost at least as much as complying with it.* The recorder re-measures the
+registries and refuses a declared delta that does not match them, so a number cannot be bumped
+to make a suite green — the only way to move it is to have made the change you declare.
+
+```yaml
+growth_anchor_ledger: framework/state/growth_anchors.jsonl
+growth_anchor_events: 1
+growth_anchor_head: 39d2b88f8e7da407b5ce363c85fdbc36a3035882caaaaf70945d059cae991ffb
+```
+
+```bash
+python3 framework/scripts/growth_anchors.py check     # live vs anchors
+python3 framework/scripts/growth_anchors.py verify    # chain + tail anchor
+python3 framework/scripts/growth_anchors.py record --batch <ID> --claims +4 --papers +3
+python3 framework/scripts/growth_anchors.py tighten   # a ratchet fell; re-anchor it
+```
+
+The two ratchets documented below keep their own fields for backwards compatibility —
+`legend_lint.py` and `session_self_eval.py` read them directly — but those fields are now
+**written by `growth_anchors.py tighten`**, never by a person. The asymmetry is deliberate and
+recorded here so a later reader does not mistake it for an oversight.
+
 ### Registry-declaration ratchet
 
 Twenty registry records carry a historical `full text reviewed` declaration with no
@@ -198,7 +225,7 @@ writes nothing anywhere. So it is measured instead of assumed.
 
 ```yaml
 unread_premise_baseline: 13
-unread_premise_measured_on: 2026-08-06
+unread_premise_measured_on: 2026-08-07
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

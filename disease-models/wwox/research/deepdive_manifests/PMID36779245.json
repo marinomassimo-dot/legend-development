@@ -56,13 +56,23 @@
   "multihop": {
     "references_enumerated": 50,
     "gene_direct_refs_in_source": [
-      "35573960", "30094525", "26345274", "17360458", "11719429",
-      "32051108", "25716914"
+      "35573960",
+      "30094525",
+      "26345274",
+      "17360458",
+      "11719429",
+      "32051108",
+      "25716914"
     ],
     "resolved": [],
     "queued": [
-      "35573960", "30094525", "26345274", "17360458", "11719429",
-      "32051108", "25716914"
+      "35573960",
+      "30094525",
+      "26345274",
+      "17360458",
+      "11719429",
+      "32051108",
+      "25716914"
     ],
     "note": "50 references; 26 are WWOX-direct with a PMID, of which 19 are already in paper_registry_current.md. Seven are not. Two of those seven — PMID 32051108 and 25716914 — were queued hours earlier as FT-031 and FT-030 from the reference list of PMID 39507621: two independent papers cite them and LEGEND had seen neither, which raises their priority rather than duplicating it. The remaining five are queued as FT-032. The listed gene_direct_refs_in_source are the unresolved ones only; the 19 already in the registry are counted in corpus_crossquery.hits and are not repeated here."
   },
@@ -78,6 +88,7 @@
   "verbatim_locators": {
     "waived": false,
     "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:36779245 on 2026-08-07: inEPMC=Y, PMCID PMC10952634, hasPDF=Y — full text is indexed, so an external validator can re-verify body quotes.",
     "entries": [
       {
         "proposition": "The paper explicitly finds NO evidence for an intermediate genotype class: carrying one versus two missense variants made no difference, and missense-carrying WWOX-DEE patients were as severe as null/null patients.",

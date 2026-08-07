@@ -283,6 +283,7 @@ python3 framework/scripts/legend_lint.py .          # structural LINT over the c
 python3 framework/scripts/test_legend_lint.py       # its regression suite
 python3 framework/scripts/unread_gold.py --help     # the unread-gold sweep
 python3 framework/scripts/fulltext_receipts.py verify  # ledger chain + state-manifest tail anchor
+python3 framework/scripts/growth_anchors.py check      # registry cardinality + both debt ratchets
 python3 scripts/public_release_gate.py              # the publication gate (privacy, links, provenance)
 python3 scripts/run_release_regressions.py          # every release suite at once
 ```

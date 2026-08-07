@@ -11,12 +11,30 @@
     "staging/commit_candidate_20260806_17803050.md"
   ],
   "skills_considered": [
-    {"skill": "find-fulltext", "used": true},
-    {"skill": "legend-deepdive", "used": true},
-    {"skill": "legend-discovery", "used": true},
-    {"skill": "legend-session-self-eval", "used": true},
-    {"skill": "legend-capability-scout", "used": true},
-    {"skill": "legend-session-takeaways", "used": true},
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": true
+    },
+    {
+      "skill": "legend-session-self-eval",
+      "used": true
+    },
+    {
+      "skill": "legend-capability-scout",
+      "used": true
+    },
+    {
+      "skill": "legend-session-takeaways",
+      "used": true
+    },
     {
       "skill": "legend-study-intake-triage",
       "used": false,
@@ -67,10 +85,26 @@
   },
   "field_density": {
     "queries": [
-      {"query": "WWOX AND (\"blood urea nitrogen\" OR creatinine)", "count": 1, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "WWOX AND \"growth hormone\"", "count": 0, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "WWOX AND (hypercatabolism OR \"muscle disruption\")", "count": 0, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "epilepsy AND \"blood urea nitrogen\" AND rats[mh]", "count": 3, "source": "PubMed ESearch, 2026-08-06"}
+      {
+        "query": "WWOX AND (\"blood urea nitrogen\" OR creatinine)",
+        "count": 1,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "WWOX AND \"growth hormone\"",
+        "count": 0,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "WWOX AND (hypercatabolism OR \"muscle disruption\")",
+        "count": 0,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "epilepsy AND \"blood urea nitrogen\" AND rats[mh]",
+        "count": 3,
+        "source": "PubMed ESearch, 2026-08-06"
+      }
     ],
     "note": "The renal-marker question is a near-total void. One PubMed record links WWOX to blood urea nitrogen or creatinine, zero link it to growth hormone, and zero to hypercatabolism. Yet elevated BUN is now documented first-hand in three independent places — the mouse null (PMID 19936220, BUN 37.25 vs 17.67), this rat (BUN roughly 3.2-3.5x normal in both sexes, plus creatinine), and by explicit cross-citation between the two. Three papers measured it, each proposed or implied a different explanation, and nobody has ever followed it up. The competing-explanation query is the more striking one: this paper's own alternative hypothesis, that raised BUN and creatinine reflect hypercatabolism and muscle disruption from repeated seizures rather than renal failure, returns zero records when paired with WWOX and has never been tested in any WWOX model."
   },
@@ -105,6 +139,7 @@
   "verbatim_locators": {
     "waived": false,
     "source_fulltext_indexed": false,
+    "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:17803050 on 2026-08-07: inEPMC=N, no PMCID, hasPDF=N — no full text indexed, so an external validator sees only the abstract.",
     "abstract_anchoring_waived": "Three locators are abstract-anchored where the abstract genuinely carries the proposition. The remaining twenty-nine cannot be, and one of them is the reason: this paper's abstract states 'decreased concentrations of plasma growth hormone' without qualification, while its body reports the difference as NOT statistically significant and concludes the dwarfism cannot be explained by low GH. Anchoring the GH proposition to the abstract would anchor it to the very sentence the full text refutes. The same holds structurally for the rest — the authors' alternative hypercatabolic explanation for raised BUN, the normal kidney histology, the absent proteinuria and anaemia, the seizure-detection limitation, the survivor-selected litter subset and every table value are precisely the qualifications an abstract drops. Their verifiability rests instead on the two fingerprinted local artifacts declared above, both reproducible from the operator's PDF.",
     "unverifiable_reason": "The article has no DOI, no PMCID and no PMC deposit, so Unpaywall, OpenAlex and Semantic Scholar cannot be keyed at all and Europe PMC holds metadata only. An external validator can see nothing but the PubMed abstract. To keep verification real, the operator's PDF was fingerprinted and its text layer transcribed verbatim into a local HTML artifact with the abstract wrapped in a container the validator recognises, restoring the schema-v2 abstract/body separation that a flat text file would have destroyed. The separation was proven before use: the GH sentence resolves to the abstract surface and not the body, which is exactly the distinction this reading turns on.",
     "entries": [

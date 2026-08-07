@@ -82,32 +82,106 @@
   },
   "field_density": {
     "queries": [
-      {"query": "WWOX AND (lncRNA OR \"long non-coding RNA\")", "count": 303, "source": "Europe PMC REST search, 2026-08-05"},
-      {"query": "WWOX AND \"bladder cancer\"", "count": 231, "source": "Europe PMC REST search, 2026-08-05"},
-      {"query": "LINC01137", "count": 88, "source": "Europe PMC REST search, 2026-08-05"},
-      {"query": "WWOX AND \"miR-186\"", "count": 30, "source": "Europe PMC REST search, 2026-08-05"},
-      {"query": "WWOX AND UPF1", "count": 12, "source": "Europe PMC REST search, 2026-08-05"},
-      {"query": "LINC01137 AND WWOX", "count": 4, "source": "Europe PMC REST search, 2026-08-05"}
+      {
+        "query": "WWOX AND (lncRNA OR \"long non-coding RNA\")",
+        "count": 303,
+        "source": "Europe PMC REST search, 2026-08-05"
+      },
+      {
+        "query": "WWOX AND \"bladder cancer\"",
+        "count": 231,
+        "source": "Europe PMC REST search, 2026-08-05"
+      },
+      {
+        "query": "LINC01137",
+        "count": 88,
+        "source": "Europe PMC REST search, 2026-08-05"
+      },
+      {
+        "query": "WWOX AND \"miR-186\"",
+        "count": 30,
+        "source": "Europe PMC REST search, 2026-08-05"
+      },
+      {
+        "query": "WWOX AND UPF1",
+        "count": 12,
+        "source": "Europe PMC REST search, 2026-08-05"
+      },
+      {
+        "query": "LINC01137 AND WWOX",
+        "count": 4,
+        "source": "Europe PMC REST search, 2026-08-05"
+      }
     ],
     "note": "The specific axis is genuinely thin (4 records) while the surrounding fields are not (303 and 231). The novelty claim in the title is about the combination and is fair. The PubMed connector is unauthorised in this session, so the counts come from Europe PMC; that is a measurement in a different index, not an estimate, and the index is named next to each number."
   },
   "multihop": {
     "references_enumerated": 80,
     "gene_direct_refs_in_source": [
-      "24550385", "26166818", "34140629", "17890317", "27840941", "32101017",
-      "25708809", "32132039", "30619736", "34204789", "30622118", "32300104",
-      "34513711", "34204827", "35563688", "34816661", "23824713", "28496150",
-      "30211123", "18452537", "33946771", "30307120", "28977834", "31230746",
-      "32931356", "21347750", "31456594", "36336217", "36499501"
+      "24550385",
+      "26166818",
+      "34140629",
+      "17890317",
+      "27840941",
+      "32101017",
+      "25708809",
+      "32132039",
+      "30619736",
+      "34204789",
+      "30622118",
+      "32300104",
+      "34513711",
+      "34204827",
+      "35563688",
+      "34816661",
+      "23824713",
+      "28496150",
+      "30211123",
+      "18452537",
+      "33946771",
+      "30307120",
+      "28977834",
+      "31230746",
+      "32931356",
+      "21347750",
+      "31456594",
+      "36336217",
+      "36499501"
     ],
     "resolved": [
-      "24550385", "26166818", "34140629", "17890317", "27840941", "32101017",
-      "25708809", "32132039", "30619736", "34204789", "30622118", "32300104",
-      "34513711", "34204827", "35563688", "34816661", "23824713", "28496150",
-      "30211123", "18452537", "33946771", "30307120", "28977834", "31230746",
-      "32931356", "21347750", "31456594", "36336217"
+      "24550385",
+      "26166818",
+      "34140629",
+      "17890317",
+      "27840941",
+      "32101017",
+      "25708809",
+      "32132039",
+      "30619736",
+      "34204789",
+      "30622118",
+      "32300104",
+      "34513711",
+      "34204827",
+      "35563688",
+      "34816661",
+      "23824713",
+      "28496150",
+      "30211123",
+      "18452537",
+      "33946771",
+      "30307120",
+      "28977834",
+      "31230746",
+      "32931356",
+      "21347750",
+      "31456594",
+      "36336217"
     ],
-    "queued": ["36499501", "30619736"],
+    "queued": [
+      "36499501",
+      "30619736"
+    ],
     "note": "80 references enumerated from the PMC XML back matter. 29 are WWOX- or axis-direct and carry a PMID. 28 of the 29 resolve to an existing LEGEND record (19 in paper_registry_current.md as corpus placeholders, 9 more only as catalogued rows in batch_queue.md). Exactly one is absent from every canonical and research file: PMID 36499501, Huyan 2022, which makes miR-186-5p a bladder-cancer exosomal miRNA driving NK-cell dysfunction - the single most axis-relevant reference in the list. Queued as FT-037. PMID 30619736 (Hussain 2018 WWOX TAP-MS interactome) is present in the registry but has no full-text receipt and is the source of the WWOX-UPF1 edge this reading now leans on, so it is queued as FT-038 rather than treated as read."
   },
   "corpus_crossquery": {
@@ -120,19 +194,56 @@
     "result": "No retraction, no expression of concern and no correction. Verified against the Europe PMC core record for EXT_ID:37519886 on 2026-08-05: commentCorrectionList is absent, isOpenAccess Y, license cc by, inEPMC Y. Note for the audit trail: the reference list contains a corrigendum (PMID 34513711, 'Corrigendum: Fragile gene WWOX guides TFAP2A/TFAP2C-dependent actions against tumor progression in grade II bladder cancer'), which corrects an EARLIER paper by the same group and not this one - a title that is easy to mis-attribute on a keyword pass. The PubMed connector is unauthorised in this session, so this was not re-checked against a live PubMed query."
   },
   "source_artifacts": [
-    {"path": "files/fulltext/PMID37519886_PMC.xml", "sha256": "f186e028e04f2e9fe40622b4bac10dc2e88caa27054e21a0d6ab0dcb2e2163ed", "kind": "article_text"},
-    {"path": "files/fulltext/PMID37519886_Kolat2023_supplement.docx", "sha256": "bd4a7bc7a0aeebf0147e216a239c6ec2a6d8fbd678d1ae01d72406ef903fd935", "kind": "supplement_text"},
-    {"path": "files/fulltext/PMID37519886_figures/fig1.jpg", "sha256": "65aafe3a0b77b30338382f21d2a08c0c349b0aad2a9bba11b8a944855cddf2b6", "kind": "figure"},
-    {"path": "files/fulltext/PMID37519886_figures/fig3.jpg", "sha256": "baad261b9ff48c8de932ca5308e0d890ffa03d8a06b3cad15987981d54b3e473", "kind": "figure"},
-    {"path": "files/fulltext/PMID37519886_figures/fig6.jpg", "sha256": "c5950371b024e18f7aedb9879305f6b11b648b9f6bcbc06ac349f61ea721874e", "kind": "figure"},
-    {"path": "files/fulltext/PMID37519886_figures/image3.tiff", "sha256": "cacbac8f59ae32cef8334570e807b10e38dce452129ce5e8676c801f3b0760b9", "kind": "figure"},
-    {"path": "files/fulltext/PMID37519886_figures/image4.tiff", "sha256": "f0d8e7e809182ed9fccd034b3f0ce8ee1ddcdea695fed16177a6103ab14d8044", "kind": "figure"},
-    {"path": "files/fulltext/PMID37519886_figures/image5.tiff", "sha256": "8e78ce68583d6b588abeaa07d2f1e907b20df7162aa60d959af389d7ef1bd15e", "kind": "figure"},
-    {"path": "files/fulltext/PMID37519886_figures/image7.tif", "sha256": "00b050f2a75967d89b92829e1d009ae49be3acdaee3fad7db00cff78b86e0ce4", "kind": "figure"}
+    {
+      "path": "files/fulltext/PMID37519886_PMC.xml",
+      "sha256": "f186e028e04f2e9fe40622b4bac10dc2e88caa27054e21a0d6ab0dcb2e2163ed",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID37519886_Kolat2023_supplement.docx",
+      "sha256": "bd4a7bc7a0aeebf0147e216a239c6ec2a6d8fbd678d1ae01d72406ef903fd935",
+      "kind": "supplement_text"
+    },
+    {
+      "path": "files/fulltext/PMID37519886_figures/fig1.jpg",
+      "sha256": "65aafe3a0b77b30338382f21d2a08c0c349b0aad2a9bba11b8a944855cddf2b6",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID37519886_figures/fig3.jpg",
+      "sha256": "baad261b9ff48c8de932ca5308e0d890ffa03d8a06b3cad15987981d54b3e473",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID37519886_figures/fig6.jpg",
+      "sha256": "c5950371b024e18f7aedb9879305f6b11b648b9f6bcbc06ac349f61ea721874e",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID37519886_figures/image3.tiff",
+      "sha256": "cacbac8f59ae32cef8334570e807b10e38dce452129ce5e8676c801f3b0760b9",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID37519886_figures/image4.tiff",
+      "sha256": "f0d8e7e809182ed9fccd034b3f0ce8ee1ddcdea695fed16177a6103ab14d8044",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID37519886_figures/image5.tiff",
+      "sha256": "8e78ce68583d6b588abeaa07d2f1e907b20df7162aa60d959af389d7ef1bd15e",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID37519886_figures/image7.tif",
+      "sha256": "00b050f2a75967d89b92829e1d009ae49be3acdaee3fad7db00cff78b86e0ce4",
+      "kind": "figure"
+    }
   ],
   "verbatim_locators": {
     "waived": false,
     "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:37519886 on 2026-08-07: inEPMC=Y, PMCID PMC10373930, hasPDF=Y — full text is indexed, so an external validator can re-verify body quotes.",
     "entries": [
       {
         "proposition": "Three different bladder-cancer cell lines are used as the three biological replicates, so every p-value in the CAGE-seq arm rests on cross-line pooling rather than within-line replication.",
@@ -229,7 +340,11 @@
         "proposition": "Feature selection inside the subsidiary MFAs followed an ad-hoc count rule rather than a prespecified statistical threshold.",
         "snippet": "if there are at least 5 genes above threshold, take all of them",
         "surface": "figure",
-        "artifact": ["files/fulltext/PMID37519886_figures/image3.tiff", "files/fulltext/PMID37519886_figures/image4.tiff", "files/fulltext/PMID37519886_figures/image5.tiff"],
+        "artifact": [
+          "files/fulltext/PMID37519886_figures/image3.tiff",
+          "files/fulltext/PMID37519886_figures/image4.tiff",
+          "files/fulltext/PMID37519886_figures/image5.tiff"
+        ],
         "anchor": "Supplementary Figures S3, S4 and S5, images inspected - 'GENERAL RULES' box, followed by '(2) if there are less than 5 genes above threshold, take the first 10'"
       },
       {

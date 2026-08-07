@@ -26,7 +26,12 @@
         "CLAIM 024",
         "CLAIM 035"
       ],
-      "scope_sha256": "9e562e2a73597c69bcaff71ae9d598a551b101f3f6d2023e0b25a585149aad30",
+      "scope_sha256": "cd7ee06f8604b1a075a32b27e5393713e3b7ccb7eb3517597afbb0e44ae9c237",
+      "scope_block_sha256": {
+        "CLAIM 016": "caa8b36e7ca4125be0787b9e93c661f6ce3e40d6472f43596f98ca27fa0385d4",
+        "CLAIM 024": "ec0386de2fc625e3ee6a8654ee7b51959fa4cf921b7ff3debb4c78cdb9a2e9d8",
+        "CLAIM 035": "1d98248cb4dc7932ab8891ae28a01a1e8cccfaf35453c0bb73368ac01e53fd14"
+      },
       "verification_policy": "sealed_scope"
     },
     "derivation_script": {
@@ -52,7 +57,12 @@
         "PAPER 055",
         "PAPER 056"
       ],
-      "scope_sha256": "2da5463cebc9c8f666e43e1b7be130ebb0d2962e17ce0dee390e8367b0d88d2a",
+      "scope_sha256": "86869835bac3992ce7011c57f853c6f5a367f49918222674290f36845a81b4cf",
+      "scope_block_sha256": {
+        "PAPER 019": "19cbaa2658effebab78956ea4176493c52f333f6c5991199b5560db467291bb3",
+        "PAPER 055": "99d27a6d8a6baca392aa17fca7827bf7c843146a5824951fbd9f1054a73145c4",
+        "PAPER 056": "12bd6327bfb56e50f25474a372dd3395353ebe0acd4b4cc9e577f7b03fdbd24c"
+      },
       "verification_policy": "sealed_scope"
     },
     "receipt_ledger": {
@@ -105,9 +115,10 @@
     "records": 49,
     "sha256": "29fe900b7849ffc15b1a01bc76486916c41694b10a227c0a4948335cde982a24"
   },
-  "revision": "rev.16 \u2014 re-sealed after the structural sentinel fix in test_derive_dismech_sidecar.py",
+  "revision": "rev.17 — extractor strips trailing block separators; scope digests recomputed from the frozen blob at git_head_at_freeze and confirmed identical to live; per-block digests added for drift reporting",
   "window": {
-    "before_phase5_pr": "Re-verify that scope_sha256 for claim_registry and paper_registry still match. That is the check that protects the submission \u2014 a contribution derived from superseded claims \u2014 and it is the one the whole-file hash could not express.",
+    "before_phase5_pr": "Run assert_exportable(). It supersedes the manual re-verification this field used to describe: it reports per-block drift and refuses to export over anything unacknowledged. The risk it protects against is unchanged — shipping a contribution derived from superseded claims.",
+    "live_state_policy": "Living inputs report DRIFT; they do not assert violation. scope_drift() compares each consumed block against its sealed per-block digest and returns a per-block report. verify_phase2_baseline() treats that drift as information, not error: exports are periodic and the model keeps being corrected, so every past seal would otherwise go red at its own moment, correctly and uselessly, until nobody read the suite. The gate bites at export time only — assert_exportable() refuses a NEW export built on blocks whose drift nobody has resolved. Acknowledgements live in dismech_drift_acknowledgements.jsonl, bind to the exact live digest, and expire the moment the block moves again, because otherwise 'resolved' decays into 'ignored once, ignored forever'. The frozen-blob half of the verifier is unchanged and stays an error: it is content-addressed, immutable, and the only half that does not degrade as the model grows.",
     "closed_on": "2026-08-06",
     "rationale": "The four comparison axes are closed (dismech_axis4_result.md: 'This closes the four axes'). Axis 4 is near-empty for a structural reason, not for want of data: the production dedup key merges two occurrences only when an author wrote the same sentence twice, so a third derivation would reproduce the same one-merge-against-none comparison at any scale. Axis 2 was already confirmed by two blind reviewers and the independent derivation is archived, not staged for reuse. No measurement remains that a further derivation against these inputs would inform.",
     "state": "closed",

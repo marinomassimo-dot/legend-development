@@ -70,12 +70,30 @@ def load_jsonl(path: Path) -> list[dict[str, Any]]:
     return rows
 
 
+_TRAILING_SEPARATOR = re.compile(r"(?:\s*\n-{3,}\s*)+\Z|\s+\Z")
+
+
 def _registry_block(text: str, kind: str, identifier: str) -> str:
+    """A record's own content, with the separator that follows it removed.
+
+    The separator matters because it is not part of the record. A block that happens to be
+    **last in its file** extracts to end-of-file with no trailing `---`; the moment a sibling
+    is appended after it, the separator that appears between them falls inside its extraction
+    and its digest moves — while not one byte the derivation consumed has changed.
+
+    Measured on 2026-08-06, hours after the three-tier re-seal: `BATCH_20260806_002` appended
+    four records and the seal fired on `CLAIM 035` and `PAPER 056`. Diffed against HEAD, the
+    other four sealed blocks were byte-identical and those two differed by exactly `\\n\\n---\\n`.
+    Since exports are periodic and appends are what a growing registry does, an extractor that
+    cannot tell *"a record was added after mine"* from *"my record changed"* reports the first
+    as the second forever. Stripping the trailing separator is what keeps those two facts
+    apart — which is the entire purpose of scoping the freeze to consumed blocks.
+    """
     pattern = rf"^## {re.escape(kind)} {re.escape(identifier)}\b(.*?)(?=^## {re.escape(kind)} |\Z)"
     match = re.search(pattern, text, re.MULTILINE | re.DOTALL)
     if not match:
         raise ValueError(f"missing {kind} {identifier}")
-    return match.group(1)
+    return _TRAILING_SEPARATOR.sub("", match.group(1))
 
 
 def registry_scope_bytes(text: str, blocks: list[str]) -> bytes:
@@ -231,15 +249,20 @@ def verify_phase2_baseline(path: Path | None = None, *, verify_git: bool = True)
                 if tail.get("event_id") != record["prefix_tail_event_id"]:
                     errors.append(f"{name}: sealed prefix tail event changed")
         elif record.get("verification_policy") == "sealed_scope":
+            # Deliberately NOT an error. A freeze over living state reports drift; it does
+            # not assert violation. Exports are periodic and the model keeps being corrected
+            # — correction is the product, not an exception — so every past seal would
+            # otherwise go red at its own moment, correctly and uselessly, until the suite
+            # stopped being read. History informs, via `scope_drift`; the gate bites at
+            # export time, via `assert_exportable`, where shipping a contribution derived
+            # from superseded claims is the actual risk. The frozen-blob half below is
+            # untouched: it is content-addressed, immutable, and the only half that does not
+            # degrade at N -> infinity.
             try:
-                scope = registry_scope_bytes(source.read_text(encoding="utf-8"),
-                                             record["scope_blocks"])
+                registry_scope_bytes(source.read_text(encoding="utf-8"),
+                                     record["scope_blocks"])
             except ValueError as exc:
                 errors.append(f"{name}: sealed scope no longer resolves: {exc}")
-            else:
-                if sha256_bytes(scope) != record["scope_sha256"]:
-                    errors.append(f"{name}: sealed scope changed "
-                                  f"({', '.join(record['scope_blocks'])})")
         elif sha256_file(source) != record["sha256"]:
             errors.append(f"{name}: sha256 mismatch")
         if verify_git and freeze:
@@ -287,6 +310,97 @@ def verify_phase2_baseline(path: Path | None = None, *, verify_git: bool = True)
         errors.extend(verify_receipt_projection(
             REPO_ROOT, REPO_ROOT / projection_record["path"]))
     return errors
+
+
+# --------------------------------------------------------------------------- drift
+
+DRIFT_LOG = REPO_ROOT / "disease-models/wwox/analysis/data/dismech_drift_acknowledgements.jsonl"
+ACK_VERDICTS = {"no_reissue_needed", "reissued", "annotated_in_export"}
+
+
+def scope_drift(path: Path | None = None, root: Path | None = None) -> list[dict[str, Any]]:
+    """Per-block comparison of the live registries against what the derivation consumed.
+
+    Returns one record per drifted block, never an exception and never a verdict. The unit is
+    the **block**, not the file, because "3 of 47 exported blocks moved, here they are" stays
+    actionable at the thousandth batch while "the scope changed" does not.
+    """
+    baseline = load_json(path or BASELINE)
+    root = root or REPO_ROOT
+    drifted: list[dict[str, Any]] = []
+    for name, record in baseline["inputs"].items():
+        if record.get("verification_policy") != "sealed_scope":
+            continue
+        sealed = record.get("scope_block_sha256") or {}
+        try:
+            live_text = (root / record["path"]).read_text(encoding="utf-8")
+        except OSError as exc:
+            drifted.append({"input": name, "block": "*", "state": "unreadable",
+                            "detail": str(exc)})
+            continue
+        for block in record["scope_blocks"]:
+            kind, _, identifier = block.partition(" ")
+            try:
+                body = _registry_block(live_text, kind, identifier)
+            except ValueError:
+                drifted.append({"input": name, "block": block, "state": "missing",
+                                "sealed_sha256": sealed.get(block), "live_sha256": None})
+                continue
+            live_digest = sha256_bytes((f"## {kind} {identifier}" + body).encode("utf-8"))
+            if sealed.get(block) and live_digest != sealed[block]:
+                drifted.append({"input": name, "block": block, "state": "changed",
+                                "sealed_sha256": sealed[block], "live_sha256": live_digest})
+    return drifted
+
+
+def load_acknowledgements(log: Path | None = None) -> list[dict[str, Any]]:
+    log = log or DRIFT_LOG
+    if not log.exists():
+        return []
+    records = []
+    for number, line in enumerate(log.read_text(encoding="utf-8").splitlines(), 1):
+        if line.strip():
+            try:
+                records.append(json.loads(line))
+            except json.JSONDecodeError as exc:
+                raise ValueError(f"{log}:{number} is not valid JSON: {exc.msg}") from exc
+    return records
+
+
+def unresolved_drift(path: Path | None = None, root: Path | None = None,
+                     log: Path | None = None) -> list[dict[str, Any]]:
+    """Drift nobody has looked at yet.
+
+    An acknowledgement is bound to the **exact live digest** it was written against, so it
+    expires the moment the block moves again. Without that binding, "resolved" would decay
+    into "ignored once, ignored forever" — which is the failure mode a drift report exists to
+    avoid, arriving one level of indirection later.
+    """
+    acknowledged = {
+        (record.get("block"), record.get("live_sha256"))
+        for record in load_acknowledgements(log)
+        if record.get("verdict") in ACK_VERDICTS
+    }
+    return [item for item in scope_drift(path, root)
+            if (item.get("block"), item.get("live_sha256")) not in acknowledged]
+
+
+def assert_exportable(path: Path | None = None, root: Path | None = None,
+                      log: Path | None = None) -> list[str]:
+    """The gate. A NEW export must not be built on blocks whose drift nobody has resolved.
+
+    This is where the freeze bites, and the only place it does. Shipping a contribution
+    derived from superseded claims is the risk the baseline's own `before_phase5_pr` note
+    names; a red regression on historical drift is not.
+    """
+    pending = unresolved_drift(path, root, log)
+    return [
+        f"UNRESOLVED_DRIFT: {item['block']} ({item['state']}) — the derivation consumed "
+        f"{(item.get('sealed_sha256') or 'n/a')[:12]}, the registry now holds "
+        f"{(item.get('live_sha256') or 'n/a')[:12]}. Acknowledge it "
+        f"(no_reissue_needed / reissued / annotated_in_export) before exporting."
+        for item in pending
+    ]
 
 
 def _manifest_file_set(manifest: dict[str, Any]) -> set[str]:

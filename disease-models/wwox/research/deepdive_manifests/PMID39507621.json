@@ -56,16 +56,43 @@
   "multihop": {
     "references_enumerated": 19,
     "gene_direct_refs_in_source": [
-      "24456803", "38161429", "10786676", "23459853", "34034642", "32051108",
-      "29808465", "24369382", "25411445", "36779245", "30356099", "34747138",
-      "30361190", "34831305", "25716914", "30853297"
+      "24456803",
+      "38161429",
+      "10786676",
+      "23459853",
+      "34034642",
+      "32051108",
+      "29808465",
+      "24369382",
+      "25411445",
+      "36779245",
+      "30356099",
+      "34747138",
+      "30361190",
+      "34831305",
+      "25716914",
+      "30853297"
     ],
     "resolved": [
-      "24456803", "38161429", "10786676", "23459853", "34034642", "29808465",
-      "24369382", "25411445", "36779245", "30356099", "34747138", "30361190",
-      "34831305", "30853297"
+      "24456803",
+      "38161429",
+      "10786676",
+      "23459853",
+      "34034642",
+      "29808465",
+      "24369382",
+      "25411445",
+      "36779245",
+      "30356099",
+      "34747138",
+      "30361190",
+      "34831305",
+      "30853297"
     ],
-    "queued": ["32051108", "25716914"],
+    "queued": [
+      "32051108",
+      "25716914"
+    ],
     "note": "16 of 19 references are WWOX-direct. Fourteen are already in paper_registry_current.md. Two are absent from the registry, the full-text queue and the tracking log — that is, LEGEND had never seen them, and would not have learned so without enumerating the list: PMID 32051108 (compound-heterozygous WWOX epilepsy, Chinese patient) and PMID 25716914 (biallelic WWOX epileptic encephalopathy first described prenatally). The second is the more interesting of the two, because this report records absent foetal movement in the last month of pregnancy and attributes prenatal onset to the literature; a prenatal-presentation case is the direct test of that. Both are queued as reading debt, not resolved."
   },
   "corpus_crossquery": {
@@ -162,6 +189,7 @@
     ],
     "waived": false,
     "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:39507621 on 2026-08-07: inEPMC=Y, PMCID PMC11537890, hasPDF=Y — full text is indexed, so an external validator can re-verify body quotes.",
     "note": "Sixteen locators captured during the reading, not reconstructed afterwards. One (the EEG polygraphy) is anchored to an inspected image rather than to text, and is recorded precisely because neither the caption nor the body states it. All three figures were inspected, including Figure 1, a clinical photograph. The first pass abstained from that image on privacy grounds and was wrong to: the privacy risk lives in what LEGEND records, not in what it looks at, so abstaining protected nothing and left the D-14 failure mode — a caption that misdescribes its own image — unchecked. The non-identifying finding is recorded and no description of the individual is: the image is publisher-redacted across the lower face, the three dysmorphic features named in the caption lie in the visible region and are not contradicted by it, and no feature is visible that the text omits. The image resolution does not support independent grading of palpebral-fissure slant, so the caption is uncontradicted rather than confirmed."
   }
 }

@@ -13,13 +13,34 @@
     "staging/commit_candidate_20260806_19936220.md"
   ],
   "skills_considered": [
-    {"skill": "legend-start", "used": true},
-    {"skill": "find-fulltext", "used": true},
-    {"skill": "legend-deepdive", "used": true},
-    {"skill": "legend-discovery", "used": true},
-    {"skill": "legend-session-self-eval", "used": true},
-    {"skill": "legend-capability-scout", "used": true},
-    {"skill": "legend-session-takeaways", "used": true},
+    {
+      "skill": "legend-start",
+      "used": true
+    },
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-discovery",
+      "used": true
+    },
+    {
+      "skill": "legend-session-self-eval",
+      "used": true
+    },
+    {
+      "skill": "legend-capability-scout",
+      "used": true
+    },
+    {
+      "skill": "legend-session-takeaways",
+      "used": true
+    },
     {
       "skill": "legend-study-intake-triage",
       "used": false,
@@ -70,30 +91,99 @@
   },
   "field_density": {
     "queries": [
-      {"query": "Wwox AND conditional allele", "count": 4, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "WWOX AND (\"metabolic acidosis\" OR \"renal tubular acidosis\")", "count": 1, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "WWOX AND hypoglycemia", "count": 6, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "WWOX AND hematopoiesis", "count": 3, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "WWOX AND \"bone mineralization\"", "count": 1, "source": "PubMed ESearch, 2026-08-06"},
-      {"query": "WWOX AND osteosarcoma", "count": 28, "source": "PubMed ESearch, 2026-08-06"}
+      {
+        "query": "Wwox AND conditional allele",
+        "count": 4,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "WWOX AND (\"metabolic acidosis\" OR \"renal tubular acidosis\")",
+        "count": 1,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "WWOX AND hypoglycemia",
+        "count": 6,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "WWOX AND hematopoiesis",
+        "count": 3,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "WWOX AND \"bone mineralization\"",
+        "count": 1,
+        "source": "PubMed ESearch, 2026-08-06"
+      },
+      {
+        "query": "WWOX AND osteosarcoma",
+        "count": 28,
+        "source": "PubMed ESearch, 2026-08-06"
+      }
     ],
     "note": "The single most consequential density result: the query linking WWOX to metabolic or renal tubular acidosis returns exactly one record, and that record is this paper. The renal-tubular-acidosis hypothesis this paper advances for the cause of Wwox-null lethality has, in the seventeen years since, never been tested or even revisited by anyone including its authors. The same sparseness holds for hematopoiesis (3 records, one of which is this paper) and bone mineralization (1 record, this paper). By contrast WWOX-and-osteosarcoma returns 28. The field kept the oncological reading of the Wwox-null mouse and discarded the systemic-metabolic one, even though the systemic phenotype is what actually kills the animals and is the phenotype most likely to confound any brain measurement made in the same P14-P18 window."
   },
   "multihop": {
     "references_enumerated": 28,
     "gene_direct_refs_in_source": [
-      "10786676", "10861292", "11013073", "11572989", "11719429", "17458891", "17163164",
-      "15064722", "16438931", "15070730", "16061658", "15548692", "18487609", "16223882",
-      "16818616", "19458077", "17360458", "17823927", "14526170", "16941225", "19500159",
+      "10786676",
+      "10861292",
+      "11013073",
+      "11572989",
+      "11719429",
+      "17458891",
+      "17163164",
+      "15064722",
+      "16438931",
+      "15070730",
+      "16061658",
+      "15548692",
+      "18487609",
+      "16223882",
+      "16818616",
+      "19458077",
+      "17360458",
+      "17823927",
+      "14526170",
+      "16941225",
+      "19500159",
       "17803050"
     ],
     "resolved": [
-      "10786676", "10861292", "11013073", "11572989", "11719429", "17458891", "17163164",
-      "17234335", "11847285", "15064722", "16438931", "15070730", "16061658", "15548692",
-      "19357348", "18487609", "16223882", "16818616", "19458077", "17360458", "17823927",
-      "8364601", "8650183", "14526170", "16941225", "19500159", "17803050", "10802662"
+      "10786676",
+      "10861292",
+      "11013073",
+      "11572989",
+      "11719429",
+      "17458891",
+      "17163164",
+      "17234335",
+      "11847285",
+      "15064722",
+      "16438931",
+      "15070730",
+      "16061658",
+      "15548692",
+      "19357348",
+      "18487609",
+      "16223882",
+      "16818616",
+      "19458077",
+      "17360458",
+      "17823927",
+      "8364601",
+      "8650183",
+      "14526170",
+      "16941225",
+      "19500159",
+      "17803050",
+      "10802662"
     ],
-    "queued": ["FT-041", "FT-042"],
+    "queued": [
+      "FT-041",
+      "FT-042"
+    ],
     "note": "All 28 references were read and all 28 PMIDs resolved. Twenty-two are WWOX-, model- or disease-direct and 22 of 28 occur somewhere in the structured state. The six absent are generic method or family-background sources (McCarrick DT-A positive-negative targeting 8364601, Lakso EIIA-Cre 8650183, Sun Fgf4 conditional 10802662, two SDR-family reviews 17234335 and 11847285) plus Krummel 11013073 on FRA16D characterisation, which is locus-direct but not load-bearing for any measured endpoint here. No new reading debt is opened by this paper, because the two references that matter most are already queued: reference 26 is PMID 19500159, already FT-042, and reference 27 is PMID 17803050, already FT-041. That is the decisive multi-hop result. The premise 'epileptogenesis in this model', which PMID 30290271 imports and attributes to this paper, is not measured here at all; it enters this paper only as a Discussion citation of references 26 and 27, which are rat lde papers. The premise chain therefore terminates in FT-042/FT-041, not here, and reading those two is now the only way to establish it as first-hand. Reference 17 is PMID 16223882, which carries a publication-integrity hold; it is cited once in the Introduction as one of four background xenograft examples and supports no measured result of this paper, so no claim derived from this reading depends on a held record."
   },
   "corpus_crossquery": {
@@ -150,6 +240,7 @@
   "verbatim_locators": {
     "waived": false,
     "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:19936220 on 2026-08-07: inEPMC=Y, PMCID PMC2777388, hasPDF=Y — full text is indexed, so an external validator can re-verify body quotes.",
     "entries": [
       {
         "proposition": "Epileptogenesis is not measured anywhere in this paper. Its single appearance is a Discussion citation of a rat model, so the premise PMID 30290271 attributes to this study is second-hand here and terminates in references 26 and 27.",

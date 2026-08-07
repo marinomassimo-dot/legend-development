@@ -9,7 +9,10 @@
     "full_text_queue_current#FT-036"
   ],
   "skills_considered": [
-    {"skill": "find-fulltext", "used": true},
+    {
+      "skill": "find-fulltext",
+      "used": true
+    },
     {
       "skill": "legend-deepdive",
       "used": false,
@@ -49,9 +52,13 @@
   },
   "multihop": {
     "references_enumerated": 66,
-    "gene_direct_refs_in_source": ["10861292"],
+    "gene_direct_refs_in_source": [
+      "10861292"
+    ],
     "resolved": [],
-    "queued": ["10861292"],
+    "queued": [
+      "10861292"
+    ],
     "note": "66 references, 27 WWOX/FRA16D-direct with a PMID, 26 already in the corpus. One unknown: PMID 10861292, the FRA16D sequence and FOR gene identification. The 96% hit rate is itself informative — LEGEND's coverage of the mouse-and-mechanism axis is dense, unlike the clinical-cohort axis where the last three readings each found 7 or more gaps."
   },
   "corpus_crossquery": {
@@ -66,6 +73,7 @@
   "verbatim_locators": {
     "waived": false,
     "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:32000863 on 2026-08-07: inEPMC=Y, PMCID PMC6990504, hasPDF=Y — full text is indexed, so an external validator can re-verify body quotes.",
     "entries": [
       {
         "proposition": "READ FROM THE IMAGE, NOT THE TEXT: lithium suppressed PTZ-induced seizures in ALL THREE genotypes, including wild-type — so the experiment does not establish a Wwox-specific rescue.",

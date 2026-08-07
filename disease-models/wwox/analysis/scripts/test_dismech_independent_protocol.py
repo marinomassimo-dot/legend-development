@@ -590,6 +590,34 @@ class SealedScopeTests(unittest.TestCase):
             protocol.registry_scope_bytes(
                 self.REGISTRY.replace("## CLAIM 016", "## CLAIM 999"), self.SCOPE)
 
+    def test_appending_a_sibling_block_is_not_a_violation(self) -> None:
+        """The test that was missing, and the case that fired on 2026-08-06.
+
+        `CLAIM 024` is last in this fixture, so its extraction runs to end-of-file. Appending
+        `CLAIM 036` after it inserts the separator that necessarily sits between two records
+        — and the previous extractor counted that separator as part of CLAIM 024. A growing
+        registry appends constantly, so an extractor that cannot tell *"a record was added
+        after mine"* from *"my record changed"* reports the first as the second forever.
+        """
+        appended = self.REGISTRY + (
+            "\n---\n\n## CLAIM 036\n**Status:** in observation\n**Summary:** brand new.\n")
+        self.assertNotEqual(appended, self.REGISTRY)
+        self.assertEqual(self.digest(appended), self.digest(self.REGISTRY))
+
+    def test_trailing_separator_variants_all_normalise(self) -> None:
+        """Whichever separator style a future batch uses, the sealed digest must not move."""
+        for tail in ("\n---\n", "\n\n---\n\n", "\n\n---\n\n---\n\n", "\n\n\n"):
+            with self.subTest(tail=repr(tail)):
+                self.assertEqual(self.digest(self.REGISTRY + tail),
+                                 self.digest(self.REGISTRY))
+
+    def test_appending_still_cannot_hide_a_real_edit(self) -> None:
+        """Separator tolerance must not become content tolerance."""
+        appended = (self.REGISTRY.replace("**Summary:** also in scope.",
+                                          "**Summary:** also in scope, reworded.")
+                    + "\n---\n\n## CLAIM 036\n**Summary:** new.\n")
+        self.assertNotEqual(self.digest(appended), self.digest(self.REGISTRY))
+
     def test_the_live_baseline_pins_no_living_file_by_whole_hash(self) -> None:
         baseline = protocol.load_json(protocol.BASELINE)
         living = {"claim_registry_current.md", "paper_registry_current.md",
@@ -613,6 +641,134 @@ class SealedScopeTests(unittest.TestCase):
         self.assertEqual(window.get("state"), "closed")
         self.assertIn("axes", window.get("rationale", ""))
         self.assertTrue(window.get("before_phase5_pr"))
+
+
+class DriftReportsAndTheExportGateTests(unittest.TestCase):
+    """A freeze over living state informs; the gate bites at export time.
+
+    Exports are periodic and in principle endless, and the model keeps being corrected —
+    correction is the product, not an exception. So each past seal would otherwise go red at
+    its own moment, correctly and uselessly, until nobody read the suite. These tests pin the
+    two halves of that split: historical drift must NOT fail the baseline, and unresolved
+    drift MUST stop a new export.
+    """
+
+    REGISTRY = (
+        "# Claim registry\n\n"
+        "## CLAIM 016\n**Summary:** as consumed.\n\n"
+        "## CLAIM 024\n**Summary:** also as consumed.\n"
+    )
+
+    def setUp(self) -> None:
+        self._tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self._tmp.name)
+        registry = self.root / "registries/claims.md"
+        registry.parent.mkdir(parents=True)
+        registry.write_text(self.REGISTRY, encoding="utf-8")
+        self.registry = registry
+        self.log = self.root / "acks.jsonl"
+
+        def digest(block: str, text: str) -> str:
+            kind, _, ident = block.partition(" ")
+            body = protocol._registry_block(text, kind, ident)
+            return protocol.sha256_bytes((f"## {kind} {ident}" + body).encode("utf-8"))
+
+        self.digest = digest
+        # `output` is verified against the repository root rather than the injected one, so
+        # the fixture borrows the real record. The property under test is the scope half; the
+        # output half is held constant instead of being fought.
+        real_output = protocol.load_json(protocol.BASELINE)["output"]
+        self.baseline_path = self.root / "baseline.json"
+        self.baseline_path.write_text(json.dumps({
+            "inputs": {"claim_registry": {
+                "path": "registries/claims.md",
+                "scope_blocks": ["CLAIM 016", "CLAIM 024"],
+                "verification_policy": "sealed_scope",
+                "scope_block_sha256": {
+                    "CLAIM 016": digest("CLAIM 016", self.REGISTRY),
+                    "CLAIM 024": digest("CLAIM 024", self.REGISTRY),
+                },
+            }},
+            "output": real_output,
+        }), encoding="utf-8")
+
+    def tearDown(self) -> None:
+        self._tmp.cleanup()
+
+    def drift(self):
+        return protocol.scope_drift(self.baseline_path, self.root)
+
+    def gate(self):
+        return protocol.assert_exportable(self.baseline_path, self.root, self.log)
+
+    def move_one_block(self) -> str:
+        self.registry.write_text(
+            self.REGISTRY.replace("**Summary:** as consumed.",
+                                  "**Summary:** corrected by a later reading."),
+            encoding="utf-8")
+        return self.digest("CLAIM 016", self.registry.read_text(encoding="utf-8"))
+
+    def test_no_drift_when_nothing_moved(self) -> None:
+        self.assertEqual([], self.drift())
+        self.assertEqual([], self.gate())
+
+    def test_drift_is_reported_per_block_not_per_file(self) -> None:
+        self.move_one_block()
+        drifted = self.drift()
+        self.assertEqual(1, len(drifted), "one block moved, so one record — not 'the scope'")
+        self.assertEqual("CLAIM 016", drifted[0]["block"])
+        self.assertEqual("changed", drifted[0]["state"])
+
+    def test_a_vanished_block_drifts_rather_than_raising(self) -> None:
+        self.registry.write_text(self.REGISTRY.replace("## CLAIM 024", "## CLAIM 099"),
+                                 encoding="utf-8")
+        states = {item["block"]: item["state"] for item in self.drift()}
+        self.assertEqual("missing", states.get("CLAIM 024"))
+
+    def test_unresolved_drift_blocks_a_new_export(self) -> None:
+        self.move_one_block()
+        problems = self.gate()
+        self.assertEqual(1, len(problems))
+        self.assertIn("UNRESOLVED_DRIFT", problems[0])
+        self.assertIn("CLAIM 016", problems[0])
+
+    def test_acknowledging_the_drift_clears_the_gate(self) -> None:
+        live = self.move_one_block()
+        self.log.write_text(json.dumps({
+            "block": "CLAIM 016", "live_sha256": live,
+            "verdict": "no_reissue_needed",
+            "reason": "the export cites this claim for a sentence the correction did not touch",
+        }) + "\n", encoding="utf-8")
+        self.assertEqual([], self.gate())
+        self.assertEqual(1, len(self.drift()), "the drift itself still shows in the report")
+
+    def test_an_acknowledgement_expires_when_the_block_moves_again(self) -> None:
+        """Otherwise 'resolved' decays into 'ignored once, ignored forever'."""
+        live = self.move_one_block()
+        self.log.write_text(json.dumps({
+            "block": "CLAIM 016", "live_sha256": live, "verdict": "no_reissue_needed",
+            "reason": "reviewed",
+        }) + "\n", encoding="utf-8")
+        self.assertEqual([], self.gate())
+        self.registry.write_text(
+            self.REGISTRY.replace("**Summary:** as consumed.", "**Summary:** corrected twice."),
+            encoding="utf-8")
+        self.assertEqual(1, len(self.gate()),
+                         "a second correction must need a second look")
+
+    def test_an_unknown_verdict_does_not_count_as_acknowledgement(self) -> None:
+        live = self.move_one_block()
+        self.log.write_text(json.dumps({
+            "block": "CLAIM 016", "live_sha256": live, "verdict": "looks fine to me",
+        }) + "\n", encoding="utf-8")
+        self.assertEqual(1, len(self.gate()),
+                         "free-text verdicts must not open the gate")
+
+    def test_historical_drift_does_not_fail_the_baseline_verifier(self) -> None:
+        """The whole point: a corrected registry is not a broken freeze."""
+        self.move_one_block()
+        errors = protocol.verify_phase2_baseline(self.baseline_path, verify_git=False)
+        self.assertEqual([], [e for e in errors if "scope" in e.lower()])
 
 
 if __name__ == "__main__":

@@ -584,7 +584,35 @@ def validate(
                 "verbatim_locators.source_fulltext_indexed: not declared — state whether the "
                 "source is full-text indexed (Europe PMC inEPMC/fullTextIdList), because it "
                 "decides whether these quotes are externally verifiable")
-        elif indexed is False:
+        elif indexed is not None:
+            # This boolean gates a real duty: `false` obliges every locator to carry an
+            # abstract anchor or an argued waiver. Until 2026-08-07 nothing accompanied it, so
+            # flipping it to `true` discharged that duty silently — the last honour-system
+            # field in a chain where artifact existence, fingerprint, body match, abstract
+            # separation and abstract-anchor match are all verified. It is not checked online:
+            # a validator that needs the network fails on a plane and, worse, fails *open* on
+            # a hiccup. Instead it is made symmetric with `retraction_check`, which has always
+            # worked this way — a claim plus the evidence for it, reviewable in a diff.
+            # Audited 2026-08-07: all eleven declarations then in the repository were correct
+            # against Europe PMC, so this requirement was introduced with zero grandfathering,
+            # a window that closes the first time a manifest lands without it.
+            # SCALE LIMIT, stated rather than discovered later: this is a bridge, not the
+            # destination. "Reviewable in a diff" presumes a reviewer, and at five hundred
+            # manifests that reviewer does not exist. The destination is to *derive* the index
+            # state from a cached Europe PMC snapshot and stop asking an author for it at all —
+            # the same shape as the receipt ledger's anchor. The evidence string written here
+            # already has the field a derivation would populate, so that migration is a change
+            # of author, not of schema. Revisit when manifests pass ~100, or sooner if any
+            # audit finds a declaration that disagrees with the database.
+            evidence = str(locators.get("source_fulltext_indexed_evidence", "")).strip()
+            if len(evidence) < MIN_WAIVER_CHARS:
+                errors.append(
+                    "verbatim_locators.source_fulltext_indexed_evidence: state how the index "
+                    f"state was determined, in at least {MIN_WAIVER_CHARS} characters — the "
+                    "query, the date and what came back (e.g. 'Europe PMC EXT_ID:19936220 on "
+                    "2026-08-06: inEPMC=Y, PMCID PMC2777388'). A bare boolean that gates the "
+                    "abstract-anchoring duty is the one field left that nobody can check")
+        if indexed is False:
             unverifiable = [position for position, entry in enumerate(entries or [], 1)
                             if isinstance(entry, dict)
                             and not str(entry.get("abstract_snippet", "")).strip()]

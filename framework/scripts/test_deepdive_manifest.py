@@ -40,7 +40,7 @@ def minimal(**overrides) -> dict:
         "multihop": {"gene_direct_refs_in_source": [], "references_enumerated": 28},
         "corpus_crossquery": {"query": "GSK3 in the existing corpus", "hits": 3},
         "retraction_check": {"result": "no retraction notice found"},
-        "verbatim_locators": {"source_fulltext_indexed": True, "entries": [
+        "verbatim_locators": {"source_fulltext_indexed": True, "source_fulltext_indexed_evidence": "Europe PMC EXT_ID:1 on 2026-08-07: inEPMC=Y, PMCID PMC1 — fixture lookup", "entries": [
             {"proposition": "WWOX 388-407 is required for the interaction with GSK3beta",
              "snippet": "This indicates that WWOX amino acids 388-407 are required for its interaction with GSK3b.",
              "surface": "body", "anchor": "Results, Fig. 3c"}]},
@@ -253,7 +253,7 @@ class WaiverIsAnArgument(unittest.TestCase):
         guard whose error message points at the omission is worse than no guard.
         """
         errors, incomplete = gate.validate(minimal(verbatim_locators={
-            "waived": False, "source_fulltext_indexed": True,
+            "waived": False, "source_fulltext_indexed": True, "source_fulltext_indexed_evidence": "Europe PMC EXT_ID:1 on 2026-08-07: inEPMC=Y, PMCID PMC1 — fixture lookup",
             "entries": [{"proposition": "P", "snippet": "a" * 60, "surface": "body",
                          "anchor": "Results"}]}))
         self.assertEqual(errors, [])
@@ -311,30 +311,76 @@ class ExternallyVerifiableQuotes(unittest.TestCase):
 
     def test_contiguous_quote_is_accepted(self) -> None:
         errors, _ = gate.validate(minimal(verbatim_locators={
-            "source_fulltext_indexed": True,
+            "source_fulltext_indexed": True, "source_fulltext_indexed_evidence": "Europe PMC EXT_ID:1 on 2026-08-07: inEPMC=Y, PMCID PMC1 — fixture lookup",
             "entries": [{"proposition": "P", "snippet": "a" * 60, "anchor": "Results"}]}))
         self.assertEqual(errors, [])
 
     def test_abstract_only_source_needs_abstract_anchors_or_an_argument(self) -> None:
         errors, _ = gate.validate(minimal(verbatim_locators={
-            "source_fulltext_indexed": False,
+            "source_fulltext_indexed": False, "source_fulltext_indexed_evidence": "Europe PMC EXT_ID:1 on 2026-08-07: inEPMC=Y, PMCID PMC1 — fixture lookup",
             "entries": [{"proposition": "P", "snippet": "a" * 60, "anchor": "Results"}]}))
         self.assertTrue(any("not full-text indexed" in e for e in errors))
 
     def test_an_abstract_anchor_satisfies_it(self) -> None:
         errors, _ = gate.validate(minimal(verbatim_locators={
-            "source_fulltext_indexed": False,
+            "source_fulltext_indexed": False, "source_fulltext_indexed_evidence": "Europe PMC EXT_ID:1 on 2026-08-07: inEPMC=Y, PMCID PMC1 — fixture lookup",
             "entries": [{"proposition": "P", "snippet": "a" * 60, "anchor": "Results",
                          "abstract_snippet": "the abstract says this"}]}))
         self.assertEqual(errors, [])
 
     def test_an_argued_waiver_also_satisfies_it(self) -> None:
         errors, _ = gate.validate(minimal(verbatim_locators={
-            "source_fulltext_indexed": False,
+            "source_fulltext_indexed": False, "source_fulltext_indexed_evidence": "Europe PMC EXT_ID:1 on 2026-08-07: inEPMC=Y, PMCID PMC1 — fixture lookup",
             "abstract_anchoring_waived": "the abstract reports only the headline association "
                                          "and states none of these propositions",
             "entries": [{"proposition": "P", "snippet": "a" * 60, "anchor": "Results"}]}))
         self.assertEqual(errors, [])
+
+    def test_a_bare_boolean_index_state_is_refused(self) -> None:
+        """The last honour-system field in the chain, closed 2026-08-07.
+
+        `source_fulltext_indexed` gates a real duty — `false` obliges every locator to carry
+        an abstract anchor or an argued waiver — and until now nothing accompanied it, so
+        flipping it to `true` discharged that duty silently. It is not checked online: a
+        validator that needs the network fails on a plane and, worse, fails *open* on a
+        hiccup. It is made symmetric with `retraction_check` instead: a claim plus its
+        evidence, reviewable in a diff.
+        """
+        manifest = minimal()
+        del manifest["verbatim_locators"]["source_fulltext_indexed_evidence"]
+        errors, _ = gate.validate(manifest)
+        self.assertTrue(any("source_fulltext_indexed_evidence" in e for e in errors))
+
+    def test_the_duty_cannot_be_discharged_by_flipping_the_flag(self) -> None:
+        """The attack the evidence field exists to price: `false` -> `true` and the
+        abstract-anchoring obligation evaporates. It must now cost a dated, specific,
+        checkable string rather than one character."""
+        cheap = minimal(verbatim_locators={
+            "source_fulltext_indexed": True,
+            "entries": [{"proposition": "P", "snippet": "a" * 60, "anchor": "Results"}]})
+        errors, _ = gate.validate(cheap)
+        self.assertTrue(any("source_fulltext_indexed_evidence" in e for e in errors))
+
+    def test_a_gesture_at_evidence_is_not_evidence(self) -> None:
+        manifest = minimal()
+        manifest["verbatim_locators"]["source_fulltext_indexed_evidence"] = "checked"
+        errors, _ = gate.validate(manifest)
+        self.assertTrue(any("source_fulltext_indexed_evidence" in e for e in errors))
+
+    def test_every_shipped_manifest_carries_its_index_evidence(self) -> None:
+        """The back-fill window: on 2026-08-07 all eleven declarations were correct against
+        Europe PMC, so the requirement shipped with zero grandfathering. This test is what
+        keeps that true — the window closes the first time a manifest lands without it."""
+        missing = []
+        for path in sorted(MANIFESTS.glob("*.json")):
+            locators = json.loads(path.read_text(encoding="utf-8")).get("verbatim_locators")
+            if not isinstance(locators, dict) or "source_fulltext_indexed" not in locators:
+                continue
+            evidence = str(locators.get("source_fulltext_indexed_evidence", "")).strip()
+            if len(evidence) < gate.MIN_WAIVER_CHARS:
+                missing.append(path.name)
+        self.assertEqual([], missing,
+                         "manifests declaring the index state without evidence for it")
 
     def test_undeclared_index_state_is_a_visible_gap(self) -> None:
         """Not a block — the lookup needs the network — but never silence."""
