@@ -157,25 +157,40 @@ class ReleaseSurfaceTests(unittest.TestCase):
         )
         self.assertEqual([], missing)
 
-    def test_private_quarantine_roots_are_absent(self) -> None:
-        present = sorted(
-            name
-            for name in FORBIDDEN_PUBLIC_DIRECTORIES
-            if (ROOT / name).exists()
+    # 🔴 These two asked the local disk a question only the published surface can answer, and
+    # a live research workspace always answers wrong: `backup/`, `files/` and `staging/` exist
+    # here by design and are gitignored, and one locally cached full text is over the size cap.
+    # Both failures were true and permanent, so this file was permanently red — and on
+    # 2026-08-06 it swallowed a real defect: two new shebang entrypoints shipped non-executable
+    # and were reported as "only the environmental red". An alarm you have learned to ignore is
+    # an alarm that will absorb the next real one, which is the argument this repository spent
+    # the day making about seals over living state, arriving by the door nobody was watching.
+    #
+    # The fix is not to split the file or to weaken the checks: it is to ask the question they
+    # actually mean. What ships is what git tracks. `tracked_paths()` was already here — its
+    # own docstring already said a directory holding no tracked files is fine — and these two
+    # simply did not use it. Scoping to tracked content is *stricter*, not looser: an
+    # accidentally committed private root or oversized blob still fails, and now it fails
+    # somewhere anyone will read.
+    def test_no_private_quarantine_root_holds_tracked_content(self) -> None:
+        offenders = sorted(
+            path for path in tracked_paths()
+            if path.split("/", 1)[0] in FORBIDDEN_PUBLIC_DIRECTORIES
         )
-        self.assertEqual([], present)
+        self.assertEqual(
+            [], offenders,
+            "these tracked files live under a private quarantine root:\n  "
+            + "\n  ".join(offenders))
 
     def test_no_symlinks_or_oversized_public_files(self) -> None:
         symlinks = []
         oversized = []
-        for path in ROOT.rglob("*"):
-            relative = path.relative_to(ROOT)
+        for relative in sorted(tracked_paths()):
+            path = ROOT / relative
             if path.is_symlink():
-                symlinks.append(relative.as_posix())
+                symlinks.append(relative)
             elif path.is_file() and path.stat().st_size > MAX_PUBLIC_FILE_BYTES:
-                oversized.append(
-                    f"{relative.as_posix()}: {path.stat().st_size} bytes"
-                )
+                oversized.append(f"{relative}: {path.stat().st_size} bytes")
         self.assertEqual([], symlinks, "Symlinks require explicit release review")
         self.assertEqual([], oversized, "Oversized files:\n" + "\n".join(oversized))
 
