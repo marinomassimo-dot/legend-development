@@ -33,6 +33,33 @@ Knowledge growth without capability growth eventually becomes unmanageable.
 Capability growth without disciplined evidence becomes speculation. LEGEND
 requires both to grow together.
 
+### The horizon this is built for
+
+The destination is a platform holding the knowledge of everything connected to
+WWOX and WOREE — **directly, indirectly, or by inference** — and to the pathways
+that cascade from them.
+
+The order of attack is deliberate:
+
+1. the **WOREE field leaders**, read completely, because a model that cites the
+   people who generate the evidence without having read them is resting on
+   authority rather than on evidence;
+2. **all of WWOX**;
+3. everything that **cascades**: MYC, WNT, the genotype and phenotype space,
+   therapies aimed at specific symptoms;
+4. every new study as it appears, and whatever further literature the inferences
+   — and the inferences upon inferences — turn out to require.
+
+The intended scale is **hundreds of thousands of full texts and beyond**. That
+number is a direction, not a ceiling.
+
+🔴 **Read the current numbers as a starting point, never as the design target.**
+Growth is deliberately slow at this stage because the infrastructure is being
+built now so that nobody has to reopen it at scale later. Every check, constant,
+ratchet, seal and baseline in this repository must therefore answer one question
+before it ships — *will this still be informative at the thousandth batch?* The
+binding consequences are in [`CLAUDE.md`](../../CLAUDE.md#-the-system-is-alive-and-always-growing--design-for-that-never-for-today).
+
 ---
 
 ## 2. Scientific scope — the whole WWOX literature

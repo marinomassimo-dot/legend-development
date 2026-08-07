@@ -88,6 +88,54 @@ Full statement: [`framework/master/gold_is_in_the_details.md`](framework/master/
 
 ---
 
+## 🌱 The system is alive and always growing — design for that, never for today
+
+> **LEGEND is never finished, and no artefact in it may assume it is.** The corpus grows every
+> day. Batches follow batches, exports are periodic and in principle endless, and the model is
+> corrected as it grows — correction is not an exception, it is the product.
+
+**Calibrate before designing.** Today: ~15 complete reads, 39 canonical claims, 49 integrated
+papers, 358 corpus placeholders. One PubMed query on one gene returns 706 records. The
+intended trajectory is **hundreds of thousands of full texts and beyond** — the WOREE field
+leaders first, then all of WWOX, then everything that cascades: MYC, WNT, genotypes,
+phenotypes, symptom-specific therapies, and whatever is needed for the inferences and the
+inferences upon inferences. Growth is slow *now* because the infrastructure of tomorrow is
+being built so nobody has to reopen it later. **Today's numbers are a starting point, never a
+design target.**
+
+🔴 **The question every check, constant, seal, baseline and ratchet must answer before it
+ships: _will this still be informative at the thousandth batch?_** A control that is correct
+today and noise at scale is not a control — it is a future alarm nobody hears, and the day it
+means something no one will look.
+
+**Four binding consequences, each learned by paying for it:**
+
+1. **Never pin a number a human must remember to update.** The change must be re-anchored by
+   the tool that causes it, as `fulltext_receipts.py record` re-anchors the ledger. The real
+   criterion is sharper than "automate it": **updating a constraint must cost at least as much
+   as complying with it.** When updating is cheaper than conforming, the guard is already
+   lost — someone will bump the number to make the suite green, which is precisely the gesture
+   the check existed to prevent. That has already happened here, diligent comment and all.
+2. **A freeze over living state reports drift; it does not assert violation.** Immutable
+   inputs are sealed whole. Living state — canonical registries, append-only ledgers — is
+   verified by *what was consumed*: prefix digests, extracted scope. And because exports are
+   periodic and the model keeps being corrected, each past seal would otherwise go red at its
+   own moment, correctly and uselessly. History informs; the gate bites at export time, where
+   shipping a contribution derived from superseded claims is the real risk. See
+   `FREEZE_SCOPE_GATE` and [`scripts/test_freeze_scope.py`](scripts/test_freeze_scope.py).
+3. **A fact about an external database is derived and cached, never hand-declared.** At five
+   hundred manifests "visible in review" means invisible: it presumes a reviewer who, at
+   scale, does not exist.
+4. **State scale assumptions out loud.** An artefact that silently assumes the current volume
+   is a defect waiting for a quiet birthday. If a design only works below some size, write the
+   size down.
+
+**Why this section exists.** The receipt ledger was given `append_only_prefix` because someone
+thought about growth — for the file that grows. The registries never got the equivalent, and a
+2026-08-06 re-seal fixed *which bytes* were pinned without fixing *what happens over time*.
+The principle was understood and applied unevenly, twice. It is written here so the next design
+inherits it instead of rediscovering it.
+
 ## System architecture — layers
 
 | Layer | Folder | Purpose |
