@@ -127,9 +127,22 @@ class DocumentedCommandIntegrityTests(unittest.TestCase):
         help_by_target = {}
         problems = []
         for document, line_number, target, arguments in documented_cli_invocations():
-            if target not in help_by_target:
+            # Sub-command aware. Top-level `--help` never lists a sub-command's own flags, so
+            # a checker that only asks for it silently stops protecting every tool built with
+            # `add_subparsers` — `fulltext_receipts.py record --receipt` and
+            # `growth_anchors.py record --batch` among them. Found on 2026-08-07 when the
+            # second of those was documented and reported as three missing flags that all
+            # exist. The key is (target, sub-command) so each sub-command is asked once.
+            words = arguments.split()
+            subcommand = words[0] if words and not words[0].startswith("-") else None
+            key = (target, subcommand)
+            if key not in help_by_target:
+                command = [sys.executable, str(target)]
+                if subcommand:
+                    command.append(subcommand)
+                command.append("--help")
                 completed = subprocess.run(
-                    [sys.executable, str(target), "--help"],
+                    command,
                     cwd=ROOT,
                     env=environment,
                     check=False,
@@ -137,16 +150,17 @@ class DocumentedCommandIntegrityTests(unittest.TestCase):
                     text=True,
                     timeout=15,
                 )
-                help_by_target[target] = completed.stdout + completed.stderr
+                help_by_target[key] = completed.stdout + completed.stderr
                 if completed.returncode:
                     problems.append(
-                        f"{target.relative_to(ROOT)}: --help exited "
+                        f"{target.relative_to(ROOT)}"
+                        f"{' ' + subcommand if subcommand else ''}: --help exited "
                         f"{completed.returncode}"
                     )
             for flag in re.findall(
                 r"(?<![\w-])--[A-Za-z][A-Za-z0-9-]*", arguments
             ):
-                if flag not in help_by_target[target]:
+                if flag not in help_by_target[key]:
                     problems.append(
                         f"{document.relative_to(ROOT)}:{line_number}: "
                         f"{target.relative_to(ROOT)} does not expose {flag}"

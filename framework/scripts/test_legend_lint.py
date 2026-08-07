@@ -312,7 +312,12 @@ class PublicLintTests(unittest.TestCase):
                              "references_enumerated": 12},
                 "corpus_crossquery": {"query": "mechanism", "hits": 1, "verdict": "represented"},
                 "retraction_check": {"method": "test fixture", "result": "none"},
-                "verbatim_locators": {"source_fulltext_indexed": True, "entries": [{
+                "verbatim_locators": {
+                    "source_fulltext_indexed": True,
+                    "source_fulltext_indexed_evidence": (
+                        "Europe PMC EXT_ID:12345678 on 2026-08-07: inEPMC=Y, PMCID PMC1 "
+                        "— fixture lookup"),
+                    "entries": [{
                     "proposition": "fixture proposition",
                     "snippet": quote,
                     "surface": "body",
