@@ -35,7 +35,7 @@ flowchart LR
     style DIS fill:#5f3a1f,stroke:#a7703a,color:#fff
 ```
 
-**Genuinely reusable without modification:** the instruction core, the epistemic discipline, all seven protocols, the LINT engine, the batch-commit machinery, the learned-gates registry, both manuals, and 17 of the 20 skills.
+**Genuinely reusable without modification:** the instruction core, the epistemic discipline, all seven protocols, the LINT engine, the batch-commit machinery, the learned-gates registry, both manuals, and 17 of the 21 skills.
 
 **Reusable after retuning one JSON file:** the priority matrix.
 

@@ -10,6 +10,7 @@
   ".claude/skills/legend-capability-scout/SKILL.md": "not_applicable",
   ".claude/skills/legend-commit/SKILL.md": "not_applicable",
   ".claude/skills/legend-dashboard/SKILL.md": "not_applicable",
+  ".claude/skills/legend-locator-audit/SKILL.md": "not_applicable",
   ".claude/skills/legend-deepdive/SKILL.md": "complete_analysis",
   ".claude/skills/legend-discovery/SKILL.md": "complete_analysis",
   ".claude/skills/legend-hypothesis-forge/SKILL.md": "receipt_reuse_only",

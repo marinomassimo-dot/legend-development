@@ -8,7 +8,7 @@ abstract: >-
   recording where AI-assisted reasoning fails and converting each documented failure
   into a reusable, often executable guardrail. The public edition ships the
   disease-agnostic engine (instruction core, epistemic discipline, protocols,
-  structural LINT, batch-commit machinery, learned-gates registry, 20 operational
+  structural LINT, batch-commit machinery, learned-gates registry, 21 operational
   skills and 5 reusable subagents) together with a de-identified, disease-level model
   of WWOX-related disorders (WOREE / WWOX-DEE and SCAR12) built from public
   literature and public databases only. It contains no individual-level record and is

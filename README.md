@@ -13,7 +13,7 @@ pull request are outstanding. [Details and status per phase](disease-models/wwox
 
 > **LEGEND is not a bibliography.** It reads full texts, preserves biological context and provenance, separates observation from inference, and turns documented reasoning failures into reusable guardrails.
 
-**Start here** → [FAQ: what it does, how to start it, why it is different](FAQ.md) · [Mission and objectives](disease-models/wwox/mission.md) · [What it can do: 20 skills + 5 agents](SKILLS.md) · [Explore the WWOX model](disease-models/wwox/disease_model.md) · [Architecture](ARCHITECTURE.md) · [Capabilities census](CAPABILITIES.md) · [Evaluation spec](framework/eval/README.md) · [Use it for another disease](framework/ADOPTING.md)
+**Start here** → [FAQ: what it does, how to start it, why it is different](FAQ.md) · [Mission and objectives](disease-models/wwox/mission.md) · [What it can do: 21 skills + 5 agents](SKILLS.md) · [Explore the WWOX model](disease-models/wwox/disease_model.md) · [Architecture](ARCHITECTURE.md) · [Capabilities census](CAPABILITIES.md) · [Evaluation spec](framework/eval/README.md) · [Use it for another disease](framework/ADOPTING.md)
 
 **Run it** → [Quick start](#quick-start-after-cloning) · [Operator manual](framework/manuals/operator_manual.md) · [Contributing](CONTRIBUTING.md)
 
@@ -267,7 +267,7 @@ environment is separate; see [`environment-md.yml`](environment-md.yml) and
 
 ### Running the skills
 
-The 20 skills in [`.claude/skills/`](.claude/skills/) are executable
+The 21 skills in [`.claude/skills/`](.claude/skills/) are executable
 specifications, not code you invoke by path. Open the cloned repository in an
 agent runtime that reads instruction files — they are authored for
 [Claude Code](https://claude.com/claude-code), which discovers them
@@ -312,10 +312,10 @@ deep-link regression above verifies exact headings and stable record targets.
 | [`…/registries/batch_queue.md`](disease-models/wwox/registries/batch_queue.md) | **Where to start a batch** — the complete dated bibliography snapshot joined against the registries: what is still outstanding, free full text first, plus the command for adding a newer PubMed Clipboard export |
 | [`disease-models/wwox/research/`](disease-models/wwox/research/) | Research questions, candidates, reading queue, dismissal ledger, and the two **compounding-memory** ledgers (discovery, therapeutic hypotheses) |
 | [`disease-models/wwox/analysis/`](disease-models/wwox/analysis/) | The in-silico variant-triage pipeline, its data and figures, the adversarial red-team, and a pre-registered MD protocol |
-| [`.claude/skills/`](.claude/skills/) | 20 reusable workflows for intake, full-text analysis, discovery, evaluation and integrity |
+| [`.claude/skills/`](.claude/skills/) | 21 reusable workflows for intake, full-text analysis, discovery, evaluation and integrity |
 | [`.claude/agents/`](.claude/agents/) | 5 reusable subagent prompts the skills dispatch to |
 | [`framework/manuals/`](framework/manuals/) | Operator manual and deep-dive manual — how to actually run a session |
-| [`SKILLS.md`](SKILLS.md) | **The catalogue of what this system can do** — 20 skills, 5 agents, each with an honest maturity status |
+| [`SKILLS.md`](SKILLS.md) | **The catalogue of what this system can do** — 21 skills, 5 agents, each with an honest maturity status |
 | [`CLAUDE.md`](CLAUDE.md) · [`AGENTS.md`](AGENTS.md) | The operating bootstrap: modes, gates, batch triggers, claim states, recovery |
 | [`framework/ADOPTING.md`](framework/ADOPTING.md) | How to instantiate the engine for a different disease — and what stays yours to write |
 | [`CONTRIBUTING.md`](CONTRIBUTING.md) | The rules a contribution must respect, starting with the privacy boundary |

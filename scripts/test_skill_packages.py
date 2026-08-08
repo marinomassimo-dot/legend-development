@@ -16,7 +16,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILLS = ROOT / ".claude" / "skills"
-EXPECTED_COUNT = 20
+EXPECTED_COUNT = 21
 NAME = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 EXPECTED_NON_CONTENT_ASSETS = {
     "legend-batch-inferential-sweep/scripts/batch_inferential_sweep.py",

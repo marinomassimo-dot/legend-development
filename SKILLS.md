@@ -1,6 +1,6 @@
 # Skills & agents — what this system can actually do
 
-The reasoning power of LEGEND does not live in one big prompt. It lives in **20 composable skills** and **5 reusable subagents** that call each other in a defined order, each with its own gate, its own output contract and — where it exists — its own runnable code.
+The reasoning power of LEGEND does not live in one big prompt. It lives in **21 composable skills** and **5 reusable subagents** that call each other in a defined order, each with its own gate, its own output contract and — where it exists — its own runnable code.
 
 This page is the catalogue. It exists because a skill is only useful if you can find it.
 
@@ -95,6 +95,7 @@ The dotted arrow is the point of the whole system: a batch does not only add kno
 | [`legend-commit`](.claude/skills/legend-commit/SKILL.md) | The only moment the canonical files change. 8 phases, snapshot/restore, all-or-nothing. Ships [`batch_commit.py`](framework/scripts/batch_commit.py). | BUNDLED |
 | [`legend-lint-repair-plan`](.claude/skills/legend-lint-repair-plan/SKILL.md) | Turns LINT output into a repair plan grouped by gate impact. Plans only, unless told otherwise. | SPECIFIED |
 | [`legend-session-self-eval`](.claude/skills/legend-session-self-eval/SKILL.md) | The diagnosis a session runs on itself, before it is allowed to describe how it went. Runs the executable gate first ([`session_self_eval.py`](framework/scripts/session_self_eval.py), receipt verification, LINT), *then* forces the written judgement against the 27-question protocol, then turns the weakest answer into a proportional micro-upgrade. It exists because the protocol it dispatches was in the repository, with tests, and was not being run — and failed the session on two blocking checks the moment it finally was. | BUNDLED |
+| [`legend-locator-audit`](.claude/skills/legend-locator-audit/SKILL.md) | A blind adversarial audit of the quotes behind a reading, before that reading may touch a `consolidated baseline` claim or justify a MAJOR bump. The auditor gets only the `(proposition, quote, anchor)` triples and the source — never the dossier, never who read it — and answers two mechanical questions per triple: does this quote support this proposition, and does the source say more or less than it claims. It exists because a careful, complete, well-executed reading recorded *"NPY: whole hippocampus not significant"* for a paper that reports no statistic there at all, and every structural check passed. Deliberately not applied to every reading: a gate that fires on everything gets switched off. | BUNDLED |
 | [`legend-research-loop`](.claude/skills/legend-research-loop/SKILL.md) | Controlled micro-experiments on the system itself: baseline → one variable → predefined success criterion → `KEEP` / `DISCARD` / `INCONCLUSIVE` / `CRASH`. It is how a procedural change earns adoption instead of being adopted on plausibility. | SPECIFIED |
 | [`legend-dashboard`](.claude/skills/legend-dashboard/SKILL.md) | Obsidian-friendly status and navigation notes over the Markdown workspace. | SPECIFIED |
 

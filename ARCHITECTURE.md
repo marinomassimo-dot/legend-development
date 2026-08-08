@@ -72,6 +72,7 @@ The operational capability set, genericized:
 | `legend-safety-triage` | ADMET / druggability / CNS BBB triage for candidate molecules |
 | `legend-paperqa` | Cited RAG over a local full-text corpus |
 | `legend-session-self-eval` | Post-batch self-diagnosis: executable gate, then the written judgement, then the micro-upgrade |
+| `legend-locator-audit` | Blind adversarial audit of a reading's quotes before it may touch a baseline claim |
 | `legend-research-loop` | Controlled micro-experiments (baseline → one variable → KEEP/DISCARD) |
 | `legend-capability-scout` | Post-session capability-growth radar |
 | `legend-session-takeaways` | Compact end-of-session synthesis |

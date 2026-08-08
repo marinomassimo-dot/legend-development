@@ -3,7 +3,7 @@
 Guidance for Claude Code — and for any agent or reader — working in this repository. This file is the **operating bootstrap**: read it before doing anything, and read [`framework/state/state_manifest_current.md`](framework/state/state_manifest_current.md) first, every session.
 
 > ## 📌 Public Edition note — read this first
-> This is the **public, de-identified edition** of LEGEND. It ships the **full framework** (instruction core, 20 skills, 5 reusable agents, protocols, evaluation, manuals, runnable scripts) plus **disease-level WWOX science from public literature**.
+> This is the **public, de-identified edition** of LEGEND. It ships the **full framework** (instruction core, 21 skills, 5 reusable agents, protocols, evaluation, manuals, runnable scripts) plus **disease-level WWOX science from public literature**.
 >
 > The repository is organized into **three layers**, and that layering *is* the privacy design:
 > - **`framework/`** — the generic, patient-free engine;
@@ -177,7 +177,7 @@ inherits it instead of rediscovering it.
 | **8 — Master** | [`framework/master/`](framework/master/) | the parity-of-sources principle. |
 | **9 — Therapeutics** | [`disease-models/wwox/therapeutics/`](disease-models/wwox/therapeutics/) | scored portfolio of candidate strategies. Read-only toward the 4 currents; promotion via pipeline. |
 | *— Manuals* | [`framework/manuals/`](framework/manuals/) | operator manual, deep-dive manual. |
-| *— Skills / Agents* | [`.claude/skills/`](.claude/skills/), [`.claude/agents/`](.claude/agents/) | 20 skills + 5 reusable agent prompts. |
+| *— Skills / Agents* | [`.claude/skills/`](.claude/skills/), [`.claude/agents/`](.claude/agents/) | 21 skills + 5 reusable agent prompts. |
 
 **Cross-references are basename wikilinks** (`[[claim_registry_current#CLAIM 019]]`) and are path-independent — they keep working regardless of folder. When locating a file, search by name; the folder only tells you its layer.
 
