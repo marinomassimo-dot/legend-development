@@ -79,6 +79,24 @@ This is not an aspiration. On **2026-07-12** a paper on **thyroid cancer**, file
 4. **`grep`/keyword is forbidden as a method of analysis** — only for technical file search, dedup, or post-reading audit. Never to decide what a paper says.
 5. **For every available full text:** inspect beyond abstract and conclusions (Methods, Results, figures/tables, limits, supplementary) and produce a **coverage map**. `Evidence depth: full text reviewed` requires `coverage_status: complete_fulltext_read`; otherwise declare `partial full text` or `FULL TEXT LARGE — COMPLETE READING IN PROGRESS`.
 5b. **Capture the verbatim locator while the document is open.** For every statement the reading will carry out, record what it is evidence *for*, the sentence quoted **verbatim**, and where it sits — section, figure or table. They go in the work manifest under `verbatim_locators`, and a `complete_fulltext_read` is refused without them. 🔴 **A receipt attests that a document was read; it does not attest which sentence supports which statement.** On 2026-08-04 an export found that *no verbatim locator existed anywhere in the canonical state*, across every complete read in the ledger — fourteen had to be recovered by reopening papers already read. Capturing costs seconds; recovering costs the reading twice. If a reading supports no statement, waive with an argument: waiving is legitimate, silence is not.
+
+5c. 🔴 **A verbatim locator may only be verified against text extracted deterministically.** The
+question is not which tool is best — tools age, and naming one here would be a hand-pinned
+constant in prose. The question is whether the character sequence you match against is *the
+author's*. A model that converts a PDF to Markdown reconstructs: it normalises, re-flows,
+occasionally paraphrases. A quote checked against that output can pass while matching **the
+reconstruction and not the paper** — the gate would report `verified` on a sentence nobody
+wrote. That is the worst class of false positive this system can produce, because it is silent
+and it wears the badge of having been checked. ML converters are legitimate *reading aids* and
+must never be declared as the artifact behind a locator. `deepdive_manifest._artifact_text`
+already enforces half of this: it verifies text only for `.xml`, `.html`, `.txt`, `.docx` and
+refuses every other suffix for a text `kind`, so a PDF cannot itself be a text surface. The
+half it cannot see is *how a `.txt` was produced* — so a derived text artifact declares its
+extraction method, and the reading declares both artifacts fingerprinted: the original as
+`article_binary`, the extracted text as `article_text`. Figures are a separate surface and are
+inspected at original resolution, never read through a text conversion — on 2026-08-04 a figure
+panel reversed a conclusion the running text did not contain, and on 2026-08-06 an unmarked
+asterisk was the difference between "not significant" and "not tested".
 6. **Reading debt is explicit and must be honoured:** what was not read today enters the queue with a tracked debt; it does not disappear.
 7. **Universal full-text trace:** every route that actually analyses a full text must emit a `FULLTEXT_READ_RECEIPT` and the main session must persist it before reporting the paper as read. Check prior receipts first; a repeated complete read requires an explicit `reread_reason`. Retrieval, indexing, PaperQA/RAG queries and selected passages are not a complete read. Protocol and schema: [`fulltext_read_receipt.md`](framework/protocols/fulltext_read_receipt.md).
 
