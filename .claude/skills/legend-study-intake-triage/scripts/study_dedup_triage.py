@@ -69,14 +69,31 @@ def is_corpus_placeholder(record_id: str, block: str, status: str) -> bool:
     return "corpus placeholder" in haystack or "not_processed" in haystack
 
 
+# The canonical registry conventions are owned by `framework/scripts/growth_anchors.py`. This
+# file is deliberately standard-library-only so the skill runs in a fresh clone, so it cannot
+# import them — it restates them, and `test_record_conventions.py` fails if the two ever
+# disagree about a real record. Behavioural equivalence, verified, instead of a copy nobody
+# checks.
+#
+# The version this replaced accepted `CORPUS` followed by any word, so the two
+# `## CORPUS COVERAGE …` prose section headings were split as records: 407 blocks against 405
+# real ones, and `is_corpus_placeholder()` then classified both as corpus placeholders whose
+# field lookups read appendix prose. The operational conventions (INBOX / FT / CC) keep their
+# looser form on purpose — `## FT-012 — STRATEGIC WATCH (not a standard FT item)` is a real
+# record whose heading legitimately carries trailing text.
+BLOCK_START = re.compile(
+    r"^##\s+("
+    r"(?:PAPER\s+\d+)"
+    r"|(?:CORPUS(?:-STUB-|\s+P)\d+)"
+    r"|(?:LIT-(?!\[)[A-Z0-9-]+)"
+    r"|(?:(?:INBOX|FT|CC)[-\s]?\w+.*?)"
+    r")$",
+    re.M,
+)
+
+
 def split_blocks(text: str) -> list[tuple[str, str]]:
-    starts = list(
-        re.finditer(
-            r"^##\s+((?:PAPER|CORPUS-STUB|CORPUS|LIT|INBOX|FT|CC)[-\s]?\w+.*?)$",
-            text,
-            re.M,
-        )
-    )
+    starts = list(BLOCK_START.finditer(text))
     blocks = []
     for index, match in enumerate(starts):
         end = starts[index + 1].start() if index + 1 < len(starts) else len(text)

@@ -113,7 +113,7 @@ Full statement: [`framework/master/gold_is_in_the_details.md`](framework/master/
 > corrected as it grows — correction is not an exception, it is the product.
 
 **Calibrate before designing.** Today: ~15 complete reads, 39 canonical claims, 49 integrated
-papers, 358 corpus placeholders. One PubMed query on one gene returns 706 records. The
+papers, 356 corpus placeholders. One PubMed query on one gene returns 706 records. The
 intended trajectory is **hundreds of thousands of full texts and beyond** — the WOREE field
 leaders first, then all of WWOX, then everything that cascades: MYC, WNT, genotypes,
 phenotypes, symptom-specific therapies, and whatever is needed for the inferences and the

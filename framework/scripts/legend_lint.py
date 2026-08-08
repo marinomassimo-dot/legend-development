@@ -14,6 +14,20 @@ import sys
 from dataclasses import dataclass
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import growth_anchors  # noqa: E402 - the single definition of a canonical record heading
+
+# Bound at module level, not inside the function that uses it, so a test can pin it by
+# identity. A blind review reintroduced the original defect here as
+# `HEADINGS["papers"]` — a subset instead of the full set — and the dedicated suite went 8/8
+# green, because a function-local has nothing to assert against.
+PAPER_REGISTRY_RECORD = growth_anchors.PAPER_REGISTRY_RECORD
+PAPER_REGISTRY_WIKILINK = re.compile(
+    r"\[\[paper_registry_current#("
+    + "|".join(f"(?:{growth_anchors.RECORD_PATTERNS[key]})" for key in ("papers", "corpus"))
+    + r")\]\]"
+)
+
 CURRENTS = [
     "disease-models/wwox/registries/working_model_current.md",
     "disease-models/wwox/registries/claim_registry_current.md",
@@ -88,7 +102,18 @@ def parse_ids(text, kind):
     return re.findall(r'^##\s+' + kind + r'\s+(\d+)\b', text, re.M)
 
 def parse_corpus_ids(text):
-    return re.findall(r'^##\s+CORPUS\s+P(\d+)\b', text, re.M)
+    """Numeric ids of the `CORPUS Pn` placeholders claims are allowed to wikilink.
+
+    The heading convention comes from `growth_anchors`, never from a regex written here.
+    Which of those headings is *linkable* is a separate, local policy: `CORPUS-STUB-n`
+    records exist and are counted, but no claim wikilinks one, so they are filtered out
+    after recognition rather than by pretending the registry has only one corpus form.
+    """
+    return [
+        match.group(1)
+        for identifier in growth_anchors.HEADINGS["corpus"].findall(text)
+        if (match := re.fullmatch(r'CORPUS\s+P(\d+)', identifier))
+    ]
 
 def working_model_claim_mirror_findings(working_model_text, claims_text):
     """Require the Working Model's BLOCK 2 mirror to contain every canonical claim ID."""
@@ -456,6 +481,7 @@ def _check_publication_integrity_claims(findings, repo_root, claims_text, papers
     if here not in sys.path:
         sys.path.insert(0, here)
     import batch_queue  # noqa: PLC0415 - shared integrity vocabulary and seed reader
+    import growth_anchors  # noqa: PLC0415 - the single definition of a record heading
 
     registries = os.path.join(repo_root, "disease-models/wwox/registries")
     if not os.path.isdir(registries):
@@ -484,8 +510,12 @@ def _check_publication_integrity_claims(findings, repo_root, claims_text, papers
     # PMID 32606933 and 26041563 — exist as `CORPUS` placeholders, which claims already
     # wikilink. The gate was blind to the exact record type the retracted papers live in.
     # `split_blocks` requires a numeric id, so it cannot see `CORPUS P310` at all.
-    heading = re.compile(r"^##\s+((?:PAPER|CORPUS)[\s-]+[A-Za-z0-9-]+)\s*$", re.M)
-    marks = list(heading.finditer(papers_text))
+    #
+    # This was fixed here with a locally-written regex, which made it the fifth private copy
+    # of "what a record heading looks like" — and on 2026-08-08 the shortest of those five
+    # copies was found to be silently mis-parsing the registry. The conventions now come from
+    # `growth_anchors.RECORD_PATTERNS`, so a new one reaches every consumer at once.
+    marks = list(PAPER_REGISTRY_RECORD.finditer(papers_text))
     record_pmids = {}
     for position, mark in enumerate(marks):
         end = marks[position + 1].start() if position + 1 < len(marks) else len(papers_text)
@@ -497,10 +527,11 @@ def _check_publication_integrity_claims(findings, repo_root, claims_text, papers
         record_id = " ".join(mark.group(1).split())
         record_pmids.setdefault(record_id, set()).update(found[:1])
 
-    linked = re.compile(r"\[\[paper_registry_current#((?:PAPER|CORPUS)[\s-]+[A-Za-z0-9-]+)\]\]")
     for claim_id, bodies in split_blocks(claims_text, "CLAIM").items():
         for body in bodies:
-            for paper_id in {" ".join(m.split()) for m in linked.findall(body)}:
+            for paper_id in {
+                " ".join(m.split()) for m in PAPER_REGISTRY_WIKILINK.findall(body)
+            }:
                 for pmid in sorted(record_pmids.get(paper_id, set()) & held.keys()):
                     findings.append(Finding(
                         "BLOCK_BATCH_COMMIT",

@@ -45,6 +45,7 @@ sys.path.insert(
 )
 import study_dedup_triage as triage  # noqa: E402
 import fulltext_receipts as receipts  # noqa: E402
+import growth_anchors  # noqa: E402 - the single definition of a canonical record heading
 
 # What the reader is actually asking: "which of these has nobody processed yet?"
 # The answer comes from the intake gate, which is the authoritative classifier — this file
@@ -71,9 +72,10 @@ ACTION_RANK = {
 
 PMID = re.compile(r"PMID\s*:?\s*(\d{7,8})", re.IGNORECASE)
 DOI = re.compile(r"\b10\.\d{4,9}/[^\s\)\]\|,;]+")
-ENTRY = re.compile(
-    r"(?m)^##\s+(PAPER\s+\d+|CORPUS\s+P\d+|CORPUS-STUB-\d+)\s*$"
-)
+# This file had the only complete list of the paper registry's three record conventions, and
+# it kept it privately. `coverage_report.py` had a shorter list and was wrong for months. The
+# list now lives in `growth_anchors.RECORD_PATTERNS`; this is a re-export, not a copy.
+ENTRY = growth_anchors.PAPER_REGISTRY_RECORD
 
 FULL_TEXT_MARKERS = (
     "full text reviewed",

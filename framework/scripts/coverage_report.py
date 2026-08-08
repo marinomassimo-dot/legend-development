@@ -37,8 +37,16 @@ from collections import Counter
 from pathlib import Path
 
 import fulltext_receipts as receipts
+import growth_anchors
 
-ENTRY = re.compile(r"(?m)^##\s+(PAPER\s+\d+|CORPUS\s+P\d+)\s*$")
+# The record conventions are defined once, in `growth_anchors.py`, and imported — never
+# restated. This file used to restate them, and knew only `PAPER n` and `CORPUS Pn`. The 168
+# `CORPUS-STUB-n` records were not merely absent from the denominator: an unrecognised heading
+# does not split, so their bodies were absorbed into the preceding record and their `**Key:**`
+# lines overwrote its fields. See the comment on `RECORD_PATTERNS` for what that did to
+# `PAPER 032`.
+ENTRY = growth_anchors.PAPER_REGISTRY_RECORD
+TRACKING_ENTRY = growth_anchors.HEADINGS["literature"]
 FIELD = re.compile(r"(?m)^\*\*(?P<key>[^:*]+):\*\*\s*(?P<value>.*)$")
 PMID = re.compile(r"PMID[:\s]*(\d{7,8})")
 DOI = re.compile(r"\b10\.\d{4,9}/[^\s\)\]\|,;]+", re.I)
@@ -212,7 +220,7 @@ def build(root: Path, disease: str) -> dict:
     tracked = 0
     if tracking_path.is_file():
         tracking = tracking_path.read_text(encoding="utf-8")
-        tracked = len(re.findall(r"(?m)^##\s+LIT-\d+", tracking))
+        tracked = len(TRACKING_ENTRY.findall(tracking))
         pmids |= set(PMID.findall(tracking))
 
     debt = [

@@ -25,11 +25,20 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import growth_anchors  # noqa: E402 - the single definition of a canonical record heading
+
 # The public, disease-level paper registry (added once it holds public bibliographic state only).
 REGISTRY = "disease-models/wwox/registries/paper_registry_current.md"
 
 # A CORPUS record starts with "## CORPUS <id>" and ends at the next "## ".
-BLOCK_RE = re.compile(r"^## (CORPUS[ -][^\n]+)$", re.M)
+#
+# The convention comes from `growth_anchors`, never from a regex written here. The version
+# this replaced — `^## (CORPUS[ -][^\n]+)$` — also matched the two `## CORPUS COVERAGE …`
+# prose section headings, so this tool reported 358 corpus records where the registry holds
+# 356, and two of its "unread gold" candidates were appendix preambles with empty tier,
+# relevance and status. That inflated 358 is the number `CLAUDE.md` quotes.
+BLOCK_RE = growth_anchors.HEADINGS["corpus"]
 
 FIELD_RE = {
     "title": re.compile(r"^\*\*Full title:\*\*\s*(.+)$", re.M),

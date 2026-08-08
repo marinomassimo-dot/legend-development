@@ -51,6 +51,7 @@ TESTS = (
     "framework/scripts/test_session_self_eval.py",
     "framework/scripts/test_deepdive_manifest.py",
     "framework/scripts/test_growth_anchors.py",
+    "framework/scripts/test_record_conventions.py",
     ".claude/skills/legend-study-intake-triage/scripts/"
     "test_study_dedup_triage.py",
     ".claude/skills/legend-batch-inferential-sweep/scripts/"

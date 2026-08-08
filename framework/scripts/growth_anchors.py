@@ -83,12 +83,82 @@ REGISTRIES = {
 # would have re-anchored the literature count six lower than the check it replaced. Two
 # implementations of "what counts" drift, and the drift is invisible until they disagree about
 # a real record.
-HEADINGS = {
-    "claims": re.compile(r"(?m)^##\s+(CLAIM\s+\d+)\s*$"),
-    "papers": re.compile(r"(?m)^##\s+(PAPER\s+\d+)\s*$"),
-    "corpus": re.compile(r"(?m)^##\s+(CORPUS(?:-STUB-|\s+P)\d+)\s*$"),
-    "literature": re.compile(r"(?m)^##\s+(LIT-(?!\[)[A-Z0-9-]+)\s*$"),
+#
+# 🔴 That drift was found in production on 2026-08-08, and it was not a counting error.
+# `coverage_report.py` carried a fifth copy that knew `PAPER n` and `CORPUS Pn` but not
+# `CORPUS-STUB-n`. An unrecognised heading does not merely go uncounted — **it does not split
+# the record**, so 168 stub bodies were absorbed into whichever record preceded them, and the
+# repeated `**Key:**` lines overwrote that record's own fields. `PAPER 032`, the sole primary
+# source of `CLAIM 026`, was therefore read as `PMID 23446842` — a different, retracted
+# paper — with its `Status` flipped from `claim_linked` to `not_processed`. Receipt matching
+# keys off exactly that field, so the record resolved against another study's reading history.
+# A parser that silently mis-attributes is worse than one that silently under-counts, and the
+# two failures have the same single cause: a record convention known to some consumers and not
+# others.
+#
+# 🔴 The scope of that consequence, stated exactly — an incident narrative embedded in the
+# definition everyone imports must not itself overshoot, which is the whole discipline this
+# repository runs on. The mis-resolution reached `coverage_report.py` and, through it, the
+# LINT registry-declaration ratchet, which imports that parser. The ratchet's **verdict was
+# unchanged**: `PAPER 032` classifies `full_text` under both parses and is grandfathered
+# either way, so no gate fired and none should have. What was wrong was the attribution, not
+# a block that was missed. An earlier draft of this comment claimed the ratchet read it that
+# way with consequence; a blind review refuted that, and the correction is kept visible here
+# rather than quietly rewritten.
+#
+# So the alternation fragments live here, once, and every consumer composes them. Adding a
+# record convention is a one-line change in this dict; forgetting to tell a consumer about it
+# is no longer possible.
+RECORD_PATTERNS = {
+    "claims": r"CLAIM\s+\d+",
+    "papers": r"PAPER\s+\d+",
+    "corpus": r"CORPUS(?:-STUB-|\s+P)\d+",
+    "literature": r"LIT-(?!\[)[A-Z0-9-]+",
 }
+
+
+def heading_re(*keys: str) -> re.Pattern[str]:
+    """A `^## <id>$` matcher over one or more record conventions, capturing the identifier.
+
+    Consumers that split a registry into records must pass **every** convention that file
+    uses. Passing a subset is the defect described above: the omitted records are not just
+    missed, their bodies contaminate their neighbours.
+    """
+    unknown = [key for key in keys if key not in RECORD_PATTERNS]
+    if unknown:
+        raise KeyError(f"unknown record convention(s): {', '.join(unknown)}")
+    if not keys:
+        raise KeyError("at least one record convention is required")
+    # Each fragment is isolated in a non-capturing group before it is joined, and the result
+    # is asserted to expose exactly one group. Without this, the docstring's promise that
+    # "adding a convention is a one-line change in this dict" is a trap: a fragment written
+    # with a capturing group — `r"NOTE-(\d+)"` is the obvious way to write one — silently
+    # flips `findall` from returning identifiers to returning tuples, in every consumer at
+    # once. `structural_identifiers`, the growth-anchor cardinality that depends on it, and
+    # `parse_corpus_ids` would all break in different and confusing ways.
+    body = "|".join(f"(?:{RECORD_PATTERNS[key]})" for key in keys)
+    pattern = re.compile(r"(?m)^##\s+(" + body + r")\s*$")
+    if pattern.groups != 1:
+        raise ValueError(
+            f"record patterns {keys} expose {pattern.groups} capture groups; each fragment "
+            f"must use non-capturing groups only, so findall keeps returning identifiers"
+        )
+    return pattern
+
+
+HEADINGS = {key: heading_re(key) for key in RECORD_PATTERNS}
+
+# The paper registry interleaves all three of its conventions in one file, so anything that
+# splits it into records must use this, never a subset.
+#
+# Known and currently inert: `coverage_report.py` imports this module at module level while
+# `measure_registry_only()` imports `coverage_report` lazily, so running THIS file as a script
+# loads `growth_anchors` twice — once as `__main__`, once as itself. Every shared value here
+# is an immutable pattern, so the duplicate is harmless today. It is recorded because the
+# design's invariant is object *identity*, and that invariant is false inside this module's
+# own entrypoint. Do not hoist the lazy import in `measure_registry_only()` to module scope:
+# that turns a latent duplicate into a real circular import.
+PAPER_REGISTRY_RECORD = heading_re("papers", "corpus")
 
 
 # --------------------------------------------------------------------------- measurement
