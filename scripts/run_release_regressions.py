@@ -51,6 +51,7 @@ TESTS = (
     "framework/scripts/test_fulltext_receipts.py",
     "framework/scripts/test_session_self_eval.py",
     "framework/scripts/test_deepdive_manifest.py",
+    "framework/scripts/test_regenerate_adjudications.py",
     "framework/scripts/test_growth_anchors.py",
     "framework/scripts/test_record_conventions.py",
     "framework/scripts/test_trace_claim_foundation.py",
