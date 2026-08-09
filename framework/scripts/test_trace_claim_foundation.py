@@ -150,6 +150,27 @@ class MutationBattery(unittest.TestCase):
         self.assertEqual(len(misleading["species_drift"]), 1)
         self.assertEqual(misleading["species_drift"], silent["species_drift"])
 
+    def test_mutation_wikilink_only_edge_is_a_reference_not_evidence(self) -> None:
+        """A cross-reference must not be able to raise a drift finding.
+
+        Defect 27 of the DisMech export contract: a paper named in a claim's `Source` field
+        normalises to `SUPPORTING`, one that only appears in its wikilinks normalises to
+        `UNQUALIFIED_REFERENCE`. Live, this is the whole difference between `CLAIM 005`,
+        whose rat source declares the bond from the paper side, and `CLAIM 031`, which cites
+        a murine gene-therapy paper for convergence with a therapeutic inference.
+        """
+        build(self.tmp)
+        papers = (self.tmp / "disease-models" / "fixture" / "registries"
+                  / "paper_registry_current.md")
+        papers.write_text(
+            papers.read_text(encoding="utf-8").replace(
+                "**Claim links:** 100", "**Claim links:** 777"),
+            encoding="utf-8")
+        result = tcf.Foundation(self.tmp, "fixture").trace("CLAIM 100")
+        self.assertEqual({entry["edge"] for entry in result["supports"]}, {"wikilink_only"})
+        self.assertEqual(result["species_drift"], [],
+                         "a wikilink-only reference is navigation, not evidence")
+
     def test_coverage_is_always_reported(self) -> None:
         coverage = self.trace()["coverage"]
         self.assertEqual(coverage["supporting_papers"], 2)

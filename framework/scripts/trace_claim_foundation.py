@@ -65,6 +65,11 @@ STRUCTURAL_FIELDS = {
     "paper": ("Model/species", "Claim links", "Wikilinks", "Evidence depth", "Identifier"),
 }
 
+# Which declared edges carry evidential weight. `wikilink_only` deliberately does not: a
+# cross-reference is navigation, and calling it evidence is how a convergent citation gets
+# read as a source. Same normalisation the DisMech export contract already applies.
+EVIDENTIAL_EDGES = frozenset({"source_field", "claim_links"})
+
 FIELD = re.compile(r"^\*\*([^:*]+):\*\*\s*(.*)$")
 PAPER_REF = re.compile(r"\bPAPER\s+(\d{3})\b")
 CLAIM_REF = re.compile(r"\bCLAIM\s+(\d{3})\b")
@@ -210,16 +215,38 @@ class Foundation:
     def lose(self, state: str, subject: str, detail: str) -> None:
         self.losses.append({"state": state, "subject": subject, "detail": detail})
 
-    def supporting_papers(self, claim_id: str) -> list[str]:
-        """Papers a claim rests on, read from both directions of the declared edges."""
+    def supporting_papers(self, claim_id: str) -> list[tuple[str, str]]:
+        """Papers a claim rests on, as ``(paper, edge_kind)``, from both declared directions.
+
+        🔴 The two directions are **not** the same relation, and treating them as one was a
+        defect this repository had already paid for elsewhere: defect 27 of the DisMech
+        export contract separates a paper named in a claim's `Source` field — which
+        normalises to `SUPPORTING` — from one that merely appears in its `Wikilinks`, which
+        normalises to `UNQUALIFIED_REFERENCE` and is *not* supporting evidence. The exporter
+        learned it; this tool was written without it.
+
+        It matters here concretely. `PAPER 058` is bound to `CLAIM 005` by the **paper's own**
+        `Claim links`, annotated *"refutes its imported premise for the mouse"* — a declared
+        evidential relation. `PAPER 011` appears only in `CLAIM 031`'s wikilinks, cited for
+        convergence with a therapeutic inference. Reporting both as "rests on" makes a
+        legitimate cross-reference look like the imported-premise defect.
+        """
         number = claim_id.split()[-1]
-        linked = set(PAPER_REF.findall(self.claims.get(claim_id, {}).get("Wikilinks", "")))
+        claim = self.claims.get(claim_id, {})
+        edges: dict[str, str] = {}
+        for paper_number in PAPER_REF.findall(claim.get("Wikilinks", "")):
+            edges[paper_number] = "wikilink_only"
         for pid, fields in self.papers.items():
-            if number in CLAIM_REF.findall("CLAIM " + fields.get("Claim links", "")):
-                linked.add(pid.split()[-1])
-            if number in {n for n in re.findall(r"\b(\d{3})\b", fields.get("Claim links", ""))}:
-                linked.add(pid.split()[-1])
-        return sorted(f"PAPER {n}" for n in linked)
+            paper_number = pid.split()[-1]
+            declared = re.findall(r"\b(\d{3})\b", fields.get("Claim links", ""))
+            if number in declared:
+                edges[paper_number] = "claim_links"
+        source = claim.get("Source", "")
+        for pmid in PMID.findall(source):
+            for pid, fields in self.papers.items():
+                if pmid in PMID.findall(fields.get("Identifier", "")):
+                    edges[pid.split()[-1]] = "source_field"
+        return sorted((f"PAPER {n}", kind) for n, kind in edges.items())
 
     def trace(self, claim_id: str) -> dict:
         if claim_id not in self.claims:
@@ -232,7 +259,7 @@ class Foundation:
                       claim.get("Genotype/model relevance", "")[:80])
 
         supports, drifts = [], []
-        for paper_id in self.supporting_papers(claim_id):
+        for paper_id, edge_kind in self.supporting_papers(claim_id):
             self.candidates += 1
             fields = self.papers.get(paper_id)
             if fields is None:
@@ -247,6 +274,8 @@ class Foundation:
             pmids = PMID.findall(fields.get("Identifier", ""))
             entry = {
                 "paper": paper_id,
+                "edge": edge_kind,
+                "evidential": edge_kind in EVIDENTIAL_EDGES,
                 "pmid": pmids[0] if pmids else None,
                 "species": organism,
                 "species_state": state,
@@ -254,7 +283,8 @@ class Foundation:
                 "manifest_backed": bool(pmids) and pmids[0] in self.manifest_pmids,
             }
             supports.append(entry)
-            if declared_model and organism and organism != declared_model:
+            if (edge_kind in EVIDENTIAL_EDGES
+                    and declared_model and organism and organism != declared_model):
                 drifts.append({
                     "claim": claim_id,
                     "claim_model": declared_model,
@@ -301,8 +331,10 @@ def render(result: dict, explain: bool) -> str:
     for entry in result["supports"]:
         mark = "locator-backed" if entry["manifest_backed"] else "no work manifest"
         pmid = f"PMID {entry['pmid']}" if entry["pmid"] else "no PMID"
+        role = "evidence" if entry["evidential"] else "reference only"
         lines.append(f"  {entry['paper']:<10} {pmid:<14} "
-                     f"{entry['species'] or entry['species_state']:<12} ({mark})")
+                     f"{entry['species'] or entry['species_state']:<12} "
+                     f"{role:<15} ({entry['edge']}, {mark})")
     coverage = result["coverage"]
     lines.append("")
     lines.append(f"## Coverage — {coverage['manifest_backed']}/{coverage['supporting_papers']} "
