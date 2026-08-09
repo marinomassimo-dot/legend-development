@@ -627,6 +627,30 @@ validatore ora rifiuta l'intera superficie (`SUSPECT text surface`) invece di no
 perché ripulire i controlli spalmerebbe il difetto su ogni citazione tratta da lì e le
 citazioni tornerebbero a verificare — contro un documento che non è più il paper.
 
+**🔴 AGGIORNAMENTO 2026-08-09 — i cinque locator corrotti sono AGGIUDICATI sulla pagina.**
+Verbale e immagini fingerprintate in
+[`page_adjudications/PMID17803050/`](page_adjudications/PMID17803050/README.md). Misura invece
+di stima: i 29 locator stanno su **5 pagine**, 0 non localizzati, e solo **5** hanno
+corruzione *dentro* la citazione; gli altri 24 sono puliti nel proprio span e vanno solo
+ri-ancorati. Cinque rendering, non ventinove, perché `entries[0]` e `entries[1]` sono frasi
+adiacenti e un solo ritaglio le aggiudica entrambe. Mappature confermate sulla pagina:
+`U+001D`→`<`, `U+000C`→`⁺` in apice, `–`→`⁻` in apice, `q`→`±`.
+**Nessuna delle cinque cambia un valore, una direzione o un verdetto di significatività:**
+`CLAIM 038` e `CLAIM 039` reggono esattamente come scritte. Mancava la capacità di
+*dimostrarle*, non i fatti. Restano da ri-ancorare i 24 puliti e da sostituire la superficie
+dichiarata nel manifest — scrittura canonica, quindi dietro `BATCH_COMMIT`.
+
+**Nota di metodo, pagata sul campo:** il primo rendering ha usato come ago `significantly (P`
+ed è finito su **un'altra frase** di pagina 2 che porta la stessa corruzione. Avrebbe
+aggiudicato il carattere giusto per il locator sbagliato. È il rischio della prima occorrenza
+documentato in `_quote_matches`, incontrato pochi minuti dopo averlo scritto: **si aggiudica
+su un ago univoco per quel locator**, non sul frammento che contiene il carattere corrotto.
+
+**Debito latente registrato (non lavoro):** tre `.xlsx` sono dichiarati con `kind` testuale in
+due manifest e il validatore non sa leggerli. Nessun locator li nomina, quindi il difetto è
+inerte e fallisce nella direzione sicura — chi ci appoggiasse un locator lo vedrebbe rifiutato
+in scrittura.
+
 **La superficie va RI-DERIVATA dalla fonte, non corretta a mano.** Una correzione manuale su
 34 punti è indistinguibile da una riscrittura e non è verificabile da nulla. Finché non è
 ri-derivata, `CLAIM 038` e `CLAIM 039` poggiano su locator non verificabili: le *conclusioni*
