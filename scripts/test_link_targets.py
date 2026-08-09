@@ -31,6 +31,11 @@ RECORD_ID = re.compile(
     r"|\b(?:RL|RC|TX|DL-(?:BIO|MECH|MOL|REPO)|FM|DIS)-"
     r"[A-Z0-9-]*\d{3}\b"
     r"|\bHYP-\d{8}-\d{2}\b"
+    # `LIT-` records are the lifecycle entries of the literature tracking log. The log holds
+    # 380 of them — 10 three-digit and 370 four-digit — and until now no family claimed them,
+    # so a wikilink naming one was resolved like free text. No such wikilink exists yet: this
+    # is a forward guard, and it says so rather than claiming to have validated anything.
+    r"|\bLIT-\d{3,4}\b"
 )
 EXAMPLE_FRAGMENT = re.compile(
     r"^(?:heading|ID|ID-NNN|PAPER NNN|CLAIM NNN|RL-XXX-NNN|"
@@ -47,6 +52,7 @@ EXPECTED_TARGET = {
     "DL": "discovery_ledger_current",
     "FM": "discovery_ledger_current",
     "DIS": "dismissal_ledger_current",
+    "LIT": "literature_tracking_log_current",
 }
 
 
