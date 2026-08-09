@@ -151,8 +151,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 52
-fulltext_ledger_head: 4d471a379a23eee21cd6098db6562a2cea8c9e83dbb92e4c54490ea9c9cffcf8
+fulltext_ledger_events: 56
+fulltext_ledger_head: c0e06309a200ec0aa064b0e12698868d3fdce302c82f5fd5634dccbf61bb7d32
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -174,8 +174,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 1
-growth_anchor_head: 39d2b88f8e7da407b5ce363c85fdbc36a3035882caaaaf70945d059cae991ffb
+growth_anchor_events: 2
+growth_anchor_head: b3d0a2b6e4ecc05009cb9d4e9b61932057000ea3c83c1d6c5b81053734b528f5
 ```
 
 ```bash
@@ -224,8 +224,8 @@ with every existing check passing. It is invisible by construction, because lean
 writes nothing anywhere. So it is measured instead of assumed.
 
 ```yaml
-unread_premise_baseline: 13
-unread_premise_measured_on: 2026-08-07
+unread_premise_baseline: 12
+unread_premise_measured_on: 2026-08-09
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

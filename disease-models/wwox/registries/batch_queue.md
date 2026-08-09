@@ -8,15 +8,15 @@
 
 ## ▶ Start here
 
-**422 records have not been processed.** **262** of them have a free full text and can be worked immediately.
+**421 records have not been processed.** **261** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
-| 🟢 **`NEW`** | 79 | never seen by the system — **the front of the queue** |
+| 🟢 **`NEW`** | 78 | never seen by the system — **the front of the queue** |
 | 🟢 **`CORPUS_CATALOGUED`** | 343 | catalogued and deduplicated, never analytically processed |
 | 🟡 `OUT_OF_SCOPE_LIKELY` | 222 | no scope signal in the title — later in the queue, **never discarded** |
 | 🟡 `AMBIGUOUS` | 7 | identifiers must be resolved before ingest |
-| ⏳ `IN_PIPELINE` | 18 | already in flight |
+| ⏳ `IN_PIPELINE` | 19 | already in flight |
 | ✅ `KNOWN_INTEGRATED` | 37 | done — read depth in the table below |
 
 The two green rows are the answer to *"where do I start?"*. The table further down lists
@@ -81,11 +81,11 @@ time; it does not redistribute or license the article text.
 
 | Status | Records | Share |
 |---|---:|---:|
-| **Not found by identifier** — run the intake gate | 329 | 47% |
+| **Not found by identifier** — run the intake gate | 328 | 46% |
 | **Catalogued, never processed** — the reading debt | 168 | 24% |
 | Known to the tracking log only | 165 | 23% |
 | Processed from the abstract | 11 | 2% |
-| Partial full text read | 1 | 0% |
+| Partial full text read | 2 | 0% |
 | Full text read | 32 | 5% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
@@ -106,7 +106,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 |---|---:|:---:|---|---|---|
 | [42092735](https://pubmed.ncbi.nlm.nih.gov/42092735/) | 2026 | ✅ | Case Reports; Journal Article | unmatched | WWOX Mutation as a Rare Cause of Neonatal-Infantile Parkinsonism Mimicking a Neurotransmitter Disorder: A Case Report. |
 | [42395553](https://pubmed.ncbi.nlm.nih.gov/42395553/) | 2026 | ✅ | Journal Article; Preprint | unmatched | WWOX contributes to DNA damage, but not somatic instability in Huntington's disease. |
-| [42397075](https://pubmed.ncbi.nlm.nih.gov/42397075/) | 2026 | ✅ | Journal Article | unmatched | Disrupted WWOX-MYC interplay impairs neurogenesis in human brain organoids. |
 | [40191585](https://pubmed.ncbi.nlm.nih.gov/40191585/) | 2025 | ✅ | Journal Article | unmatched | Identifying individuals with rare disease variants by inferring shared ancestral haplotypes from SNP array data. |
 | [37781246](https://pubmed.ncbi.nlm.nih.gov/37781246/) | 2023 | ✅ | Journal Article | unmatched | Molecular landscapes of glioblastoma cell lines revealed a group of patients that do not benefit from WWOX tumor suppressor expression. |
 | [35715422](https://pubmed.ncbi.nlm.nih.gov/35715422/) | 2022 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Analysis of clinical phenotypic and genotypic spectra in 36 children patients with Epilepsy of Infancy with Migrating Focal Seizures. |
@@ -767,7 +766,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41661231](https://pubmed.ncbi.nlm.nih.gov/41661231/) | 2026 | — | Journal Article | screened | RNAseq-based meta-analyses revealed tumor suppressor-inducer fusion events in liver, oral, and ovarian cancer in the Indian population: a cancer cell surviving mechanism. |
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 
-*(showing all 662 outstanding records)*
+*(showing all 661 outstanding records)*
 
 ## Already processed from this seed
 
@@ -793,6 +792,7 @@ for an entirely unprocessed record.
 | [19936220](https://pubmed.ncbi.nlm.nih.gov/19936220/) | 2009 | ✅ | full text | PAPER 057 | Generation and characterization of mice carrying a conditional allele of the Wwox tumor suppressor gene. |
 | [19500159](https://pubmed.ncbi.nlm.nih.gov/19500159/) | 2009 | ✅ | full text | PAPER 058 | A spontaneous mutation of the Wwox gene and audiogenic seizures in rats with lethal dwarfism and epilepsy. |
 | [30361190](https://pubmed.ncbi.nlm.nih.gov/30361190/) | 2018 | — | full text | PAPER 045 | West syndrome, developmental and epileptic encephalopathy, and severe CNS disorder associated with WWOX mutations. |
+| [42397075](https://pubmed.ncbi.nlm.nih.gov/42397075/) | 2026 | ✅ | partial full text | receipt FTR-20260809-42397075-02 | Disrupted WWOX-MYC interplay impairs neurogenesis in human brain organoids. |
 | [41153369](https://pubmed.ncbi.nlm.nih.gov/41153369/) | 2025 | ✅ | abstract only | PAPER 013 | Genetic Etiology of Developmental and Epileptic Encephalopathy in a Turkish Cohort: A Single-Center Study with Targeted Gene Panel and Whole Exome Sequencing. |
 | [35328751](https://pubmed.ncbi.nlm.nih.gov/35328751/) | 2022 | ✅ | abstract only | PAPER 023 | The WWOX/HIF1A Axis Downregulation Alters Glucose Metabolism and Predispose to Metabolic Disorders. |
 | [33914858](https://pubmed.ncbi.nlm.nih.gov/33914858/) | 2021 | ✅ | abstract only | PAPER 004 | Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [22193544](https://pubmed.ncbi.nlm.nih.gov/22193544/) | 2012 | ✅ | full text | PAPER 056 | WW domain-containing oxidoreductase promotes neuronal differentiation via negative regulation of glycogen synthase kinase 3β. |
 | [40875931](https://pubmed.ncbi.nlm.nih.gov/40875931/) | 2025 | — | full text | PAPER 014 | WWOX-Related Developmental and Epileptic Encephalopathy: Expanding the Clinical Spectrum and Deciphering the Genotype-Phenotype. |
 
-*(showing all 44 processed records from the seed)*
+*(showing all 45 processed records from the seed)*
 
 ## How to work one
 

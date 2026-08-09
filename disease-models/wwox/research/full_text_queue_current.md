@@ -677,3 +677,55 @@ giorno 10). 🔴 **Epilettogenesi = non misurata qui in nessuna forma** — ness
 comportamento o istologia cerebrale; l'unica misura cerebrale del paper è il peso in Table 2.
 La catena prosegue verso il ratto *lde* (`FT-042`/`FT-041`). Vedi `DL-MECH-073` e
 `DL-MECH-074`. Correzioni isolate in `staging/commit_candidate_20260806_19936220.md`.
+
+## FT-044
+**Paper:** PMID 33914858 — Repudi et al. 2021, *Brain* 144:3061–3077
+**Title:** Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects
+**Priority:** **ALTA**
+**Why:** è la fonte primaria di `CLAIM 003` (*consolidated baseline*) — ipomielinizzazione
+non-cell-autonoma da delezione neuronale di Wwox — e il sistema non ne ha mai avuto il testo
+fino al 2026-08-07. Nessuna receipt esiste per questo PMID.
+**Come è emerso:** corpus Aqeilan RI, gruppo 1 della sessione di lettura 2026-08-09.
+**Current status:** 🔴 **LETTURA SOSPESA 2026-08-09 — NESSUNA RECEIPT EMESSA.** La sospensione
+**non** è per budget né per copertura incompleta: è per invalidità della superficie testuale.
+L'estrazione deterministica (PyMuPDF `get_text()`) restituisce dai Methods
+`Results were considered significant when P 5 0.05`, mentre la pagina **stampa** `P < 0.05`
+— dimostrato renderizzando a 600 dpi p. 5 dello stesso PDF. In tutto il documento: **zero
+occorrenze di `<`, `>`, `≤`, `≥`** contro 14 di `P 5 0.0…`; anche `fold change 41.5`
+(`> 1.5`) e `delta (55 Hz)` (`<5 Hz`, una banda di frequenza). `fitz`, `pdfplumber` e `pypdf`
+concordano tutti e tre sul carattere sbagliato, quindi **incrociare due estrattori non
+rileva il difetto**.
+**Perché non è stato riparato:** riparare il testo richiede un gate che non esiste ancora, e
+una riparazione non verificata da un gate è indistinguibile da una riscrittura. 🔴 **Il
+meccanismo del difetto NON è stabilito** — l'ipotesi `ToUnicode` è stata testata e falsificata
+(15 font su 16 non dichiarano alcun `ToUnicode`, e la copertura non discrimina: PMID 42397075
+ha 7/18 ed estrae pulito, PMID 17803050 ha 5/6 ed estrae corrotto). L'unico `DATO` è la
+**discrepanza fra pagina renderizzata e testo estratto**. Un guard non può poggiare sulla
+causa finché la causa è ignota: dovrà essere sintomatico e la pagina renderizzata dovrà
+dirimere. Dettaglio completo e riproduzione in
+`staging/finding_20260809_tounicode_extraction.md`.
+**Debito:** aperto e **non** parzialmente saldato. Non esiste lettura parziale di questo
+paper da cui ripartire: nessun locator è stato estratto dalla superficie sospetta, per
+scelta. Riaprire **solo dopo** il gate sulla superficie testuale.
+**Nota di sicurezza già chiusa:** audit di tutti i locator persistiti — 242 stringhe citate su
+15 manifest, **zero contaminate**. Le claim canoniche 038/039, che poggiano sull'altro PDF
+affetto (PMID 17803050), non citano soglie e sono intatte. Il difetto esiste nella pipeline e
+**non ha raggiunto lo stato canonico**.
+
+## FT-045
+**Paper:** PMID 42128308 — Aqeilan 2026, *Neurobiol Dis*
+**Title:** WWOX in brain development and disease: Molecular mechanisms and therapeutic opportunities
+**Priority:** **MEDIA**
+**Why:** review di sintesi del leader del campo sull'asse cervello; utile come mappa delle
+posizioni correnti del gruppo, non come fonte primaria di dati.
+**Come è emerso:** corpus Aqeilan RI, coda 2026-08-08 (posizione 3, il più recente dopo i due
+2026 primari).
+**Current status:** ⬜ **MAI APERTO — NESSUNA LETTURA È AVVENUTA.** Va detto con precisione,
+perché è diverso da una lettura che non produce affermazioni: il documento non è mai stato
+aperto in alcuna sessione, non esiste testo estratto, non esiste receipt e non esiste
+rinuncia argomentata da scrivere — non c'è lettura su cui argomentare. L'artefatto è presente
+e fingerprintato (`PMID42128308_Aqeilan2026.pdf`, 17 pp., 7 immagini, SHA-256
+`520c2743630b86e5e6c2af7a3e2f527d7a31ab7810839ed275c87b0d804d6be7`).
+**Debito:** interamente aperto. È un PDF, quindi al momento della lettura va prima cercata una
+superficie XML/HTML PMC e, se non esiste, applicato il sentinella sulla superficie testuale
+prima che qualunque locator vi poggi.
