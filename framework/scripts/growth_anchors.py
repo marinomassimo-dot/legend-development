@@ -99,6 +99,15 @@ REGISTRY_SIZE_TRIGGER_BYTES = 1_048_576
 # into `ignored once, ignored forever`, which is the state this whole module exists to
 # prevent. Deferring again is cheap; deferring silently and permanently is not available.
 SCALE_ACK_MARGIN = 0.25
+
+# 🔴 Known gap, deliberately unimplemented until the first trigger fires. Acknowledging costs
+# a command; sharding costs days. If acknowledging stays cheaper indefinitely, nobody ever
+# shards and the ordering this policy was built on inverts — somewhere around the third
+# deferral, when "we looked and deferred" has become the routine answer rather than a
+# decision. The escalation that closes it: from the third acknowledgement of the same
+# registry, either the note must carry a date by which the shard will happen, or this module
+# stops recording and starts warning. Building it now would be guessing at the shape of a
+# situation nobody has been in; building it at the first trigger will not be.
 # These four patterns ARE the definition of "a canonical record" for the whole repository.
 # They were lifted verbatim from `scripts/test_canonical_structure.py`, which owned the
 # cardinality before this module existed, and that test now imports them from here instead of
