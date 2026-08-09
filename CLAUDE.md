@@ -122,7 +122,7 @@ Three binding consequences:
   used XML or HTML. Where no structured surface exists — `PMID 17803050` has neither DOI nor
   PMCID — the paper enters a **different class** and the full-text queue must say so.
 - **A derived text surface is screened before it may carry a locator**, by
-  [`deepdive_manifest.py`](../scripts/deepdive_manifest.py): C0 controls, printable
+  [`deepdive_manifest.py`](framework/scripts/deepdive_manifest.py): C0 controls, printable
   substitutions and *suspicion by absence* — statistical language with none of `< > ≤ ≥ ± × −`.
   A `SUSPECT` surface is **refused, never normalised**: cleaning it launders the defect into
   every quote drawn from it.

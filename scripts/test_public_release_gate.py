@@ -442,5 +442,94 @@ class UnpublishableExemptionTests(unittest.TestCase):
         self.assertEqual(frozenset(), GATE.unpublishable_paths(Path(temp.name)))
 
 
+class NestedCheckoutTests(unittest.TestCase):
+    """A checkout inside the checkout is not this repository's publishable material.
+
+    `git ls-files --others --ignored` does not descend into one: it returns the directory
+    as a single entry with a trailing slash. Exempting by exact string therefore exempted
+    the directory and nothing in it, and the gate scanned every file of the nested
+    checkout — including its own negative fixtures, which are privacy-violating on purpose.
+
+    Measured when per-session worktrees arrived: 340 files scanned, 37 BLOCKs, all false.
+    These tests mount a nested checkout so the next walker added to this module cannot
+    quietly reintroduce it.
+    """
+
+    def mount(self) -> tuple[Path, Path]:
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        root = Path(temp.name)
+        (root / "README.md").write_text("# Public project\n", encoding="utf-8")
+        (root / ".gitignore").write_text(".claude/worktrees/\n", encoding="utf-8")
+        for command in (
+            ["git", "init", "-q"],
+            ["git", "config", "user.email", "gate@example.invalid"],
+            ["git", "config", "user.name", "Release Gate Test"],
+            ["git", "add", "README.md", ".gitignore"],
+            ["git", "commit", "-qm", "fixture"],
+        ):
+            subprocess.run(command, cwd=root, check=True)
+
+        nested = root / ".claude" / "worktrees" / "session"
+        nested.mkdir(parents=True)
+        subprocess.run(["git", "init", "-q"], cwd=nested, check=True)
+        offending = nested / "scripts" / "fixture.py"
+        offending.parent.mkdir()
+        # The shape that produced the false positives: a negative fixture whose whole job is
+        # to contain a marker the gate must fire on — in a checkout that is not ours.
+        offending.write_text("CONTACT = 'someone@example.org'\n", encoding="utf-8")
+        return root, offending
+
+    def test_files_of_a_nested_checkout_are_not_scanned(self) -> None:
+        root, offending = self.mount()
+        scanned = {path.relative_to(root).as_posix() for path in GATE.iter_files(root)}
+        self.assertNotIn(offending.relative_to(root).as_posix(), scanned)
+        self.assertIn("README.md", scanned)
+
+    def test_a_nested_checkout_raises_no_finding(self) -> None:
+        root, _ = self.mount()
+        findings: list = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertEqual(
+            [], [item for item in findings if ".claude/worktrees/" in item.path],
+            msg="a finding about another checkout is noise the real signal hides behind")
+
+    def test_the_exemption_is_a_prefix_not_an_exact_path(self) -> None:
+        """The unit underneath, stated directly so a refactor cannot lose it."""
+        exempt = frozenset({".claude/worktrees/"})
+        self.assertTrue(GATE.is_exempt(".claude/worktrees/session/scripts/fixture.py", exempt))
+        self.assertTrue(GATE.is_exempt(".claude/worktrees/", exempt))
+        self.assertFalse(GATE.is_exempt(".claude/settings.json", exempt))
+        self.assertFalse(
+            GATE.is_exempt("grants/call/answers.md", frozenset({"grants/call/answers.md/"})),
+            msg="a file entry never gains prefix authority over unrelated paths")
+
+    def test_a_nested_checkout_outside_gitignore_is_still_skipped(self) -> None:
+        """The case the prefix exemption cannot reach, and the reason pruning also exists.
+
+        Mutation-tested: disabling `is_nested_checkout` left every other test in this class
+        green, because `.claude/worktrees/` is gitignored and the prefix rule already
+        covered it. A checkout mounted somewhere *not* ignored is invisible to
+        `ls-files --others --ignored` altogether — nothing exempts it, and only the walker
+        refusing to descend keeps another repository's files out of this gate.
+        """
+        root, _ = self.mount()
+        stray = root / "vendor" / "other-repo"
+        stray.mkdir(parents=True)
+        subprocess.run(["git", "init", "-q"], cwd=stray, check=True)
+        (stray / "leak.md").write_text("Contact: someone@example.org\n", encoding="utf-8")
+
+        scanned = {path.relative_to(root).as_posix() for path in GATE.iter_files(root)}
+        self.assertNotIn("vendor/other-repo/leak.md", scanned)
+        self.assertNotIn("vendor/other-repo", {
+            path.relative_to(root).as_posix() for path in GATE.walk_publishable(root)})
+
+    def test_directories_of_a_nested_checkout_do_not_enter_the_name_index(self) -> None:
+        """The second walker: wikilink resolution indexes directory names too."""
+        root, _ = self.mount()
+        walked = {path.relative_to(root).as_posix() for path in GATE.walk_publishable(root)}
+        self.assertFalse({item for item in walked if item.startswith(".claude/worktrees/")})
+
+
 if __name__ == "__main__":
     unittest.main()

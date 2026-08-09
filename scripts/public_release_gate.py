@@ -86,17 +86,64 @@ def unpublishable_paths(root: Path) -> frozenset[str]:
     return frozenset(entry for entry in completed.stdout.split("\0") if entry)
 
 
-def iter_files(root: Path) -> Iterable[Path]:
+def is_exempt(relative: str, exempt: frozenset[str]) -> bool:
+    """Exact match, or *under* a directory entry that git collapsed.
+
+    🔴 `git ls-files --others --ignored` does not descend into a nested checkout: it
+    returns the directory as one entry with a trailing slash. Matching those entries by
+    exact string therefore exempts the directory and nothing inside it, so every file of a
+    nested checkout is scanned as if it were publishable material of this repository.
+
+    Measured when per-session worktrees were introduced under `.claude/worktrees/`: the
+    gate scanned 340 files of a nested checkout and reported 37 BLOCKs, of which every one
+    was false — 22 from `test_public_release_gate.py`, whose negative fixtures are
+    privacy-violating strings *on purpose*, and 12 from the gate scanning its own source.
+    A publication gate that cries wolf 37 times is worse than no gate: the day a real
+    marker appears it will be item 38 of a list nobody reads.
+    """
+    if relative in exempt:
+        return True
+    return any(entry.endswith("/") and relative.startswith(entry) for entry in exempt)
+
+
+def is_nested_checkout(path: Path) -> bool:
+    """A directory that is itself a git checkout — worktree (`.git` file) or clone (dir)."""
+    return (path / ".git").exists()
+
+
+def walk_publishable(root: Path) -> Iterable[Path]:
+    """Every file and directory that could reach a published clone of *this* repository.
+
+    Pruning happens at the directory level rather than per path, so a nested checkout costs
+    nothing to skip and cannot leak through a walker that forgot to filter. All three
+    walkers in this module route through here: the defect above existed because they did
+    not.
+    """
     exempt = unpublishable_paths(root)
-    for path in root.rglob("*"):
-        if not path.is_file():
-            continue
-        relative = path.relative_to(root)
-        if any(part in SKIP_DIRS for part in relative.parts):
-            continue
-        if relative.as_posix() in exempt:
-            continue
-        yield path
+    for dirpath, dirnames, filenames in os.walk(root):
+        here = Path(dirpath)
+        dirnames[:] = sorted(
+            name for name in dirnames
+            if name not in SKIP_DIRS
+            and not is_nested_checkout(here / name)
+            and not is_exempt((here / name).relative_to(root).as_posix() + "/", exempt)
+        )
+        if here != root:
+            yield here
+        for name in sorted(filenames):
+            path = here / name
+            relative = path.relative_to(root)
+            if any(part in SKIP_DIRS for part in relative.parts):
+                continue
+            if is_exempt(relative.as_posix(), exempt):
+                continue
+            yield path
+
+
+def iter_files(root: Path) -> Iterable[Path]:
+    for path in walk_publishable(root):
+        if path.is_file():
+            yield path
 
 
 def iter_text_files(root: Path) -> Iterable[Path]:
@@ -502,10 +549,8 @@ def scan_links(root: Path, findings: list[Finding]) -> None:
     for file_path in iter_files(root):
         by_name.setdefault(file_path.name, []).append(file_path)
         by_name.setdefault(file_path.stem, []).append(file_path)
-    for directory in root.rglob("*"):
-        if directory.is_dir() and not any(
-            part in SKIP_DIRS for part in directory.relative_to(root).parts
-        ):
+    for directory in walk_publishable(root):
+        if directory.is_dir():
             by_name.setdefault(directory.name, []).append(directory)
 
     for path in iter_text_files(root):
@@ -641,7 +686,9 @@ def scan_readme_consistency(root: Path, findings: list[Finding]) -> None:
         return
     text = read_text(readme)
     lower = text.lower()
-    python_files = list(root.rglob("*.py"))
+    # Through the shared walker: a nested checkout would otherwise double this count and
+    # make an overclaim check pass on code that is not part of this repository at all.
+    python_files = [path for path in iter_files(root) if path.suffix == ".py"]
 
     if "full machine" in lower and len(python_files) <= 1:
         findings.append(
