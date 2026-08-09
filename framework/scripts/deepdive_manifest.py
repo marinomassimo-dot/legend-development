@@ -166,6 +166,37 @@ def _match_key(value: str) -> str:
 DECISIVE_CHARACTERS = frozenset("<>≤≥=≠−–—-+±")
 
 
+def crop_contains_span(
+    crop: tuple[float, float, float, float],
+    span: tuple[float, float, float, float],
+) -> bool:
+    """Does an adjudication crop contain the whole span it claims to adjudicate?
+
+    Both are ``(x0, y0, x1, y1)`` in PDF points. The crop is declared by whoever rendered it;
+    the span is what ``page.search_for`` returns for the quoted text.
+
+    🔴 **An adjudication artifact must contain the entire span it adjudicates.** Image
+    anchoring is currently the looser of the two evidence routes: a text locator is compared
+    character by character against its artifact, while an image locator is believed on its
+    word. On 2026-08-09 a crop declared to adjudicate a table row stopped at x=320 while the
+    row ran to x=524 — the whole male-rat half of the quoted values sat outside the picture,
+    and a locator anchored there would have been "verified" against pixels that do not exist.
+
+    Unlike almost everything else this repository enforces, this needs no reader: both
+    rectangles are already in hand, and containment is arithmetic. Edges count as contained —
+    a span flush against the boundary is fully rendered, and being strict by a hair would
+    reject correct artifacts and teach people to pad crops until the check stops complaining.
+    """
+    crop_x0, crop_y0, crop_x1, crop_y1 = crop
+    span_x0, span_y0, span_x1, span_y1 = span
+    return (
+        crop_x0 <= span_x0
+        and crop_y0 <= span_y0
+        and crop_x1 >= span_x1
+        and crop_y1 >= span_y1
+    )
+
+
 def _fold_with_offsets(value: str) -> tuple[str, str, list[int]]:
     """Return ``(normalised, alphanumeric key, offset of each kept character)``.
 

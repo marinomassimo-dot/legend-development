@@ -97,12 +97,29 @@ itself: Table 2 shows `Female rats` / `Male rats` over `Normal` / `Mutant`, and 
 absolute-versus-relative proposition readable from the image alone rather than only from the
 locator's anchor text.
 
-**The general rule this earns, for when the 24 are re-anchored:** *an adjudication artifact
-must contain the entire span it adjudicates.* Unlike most of what this repository checks by
-argument, this one is **machine-verifiable** — the crop rectangle against the span rectangle
-on the page, both of which `search_for` already returns. Building it is the check that would
-make image anchoring as strict as text anchoring, and image anchoring is currently the looser
-of the two. Not now: at re-anchoring time, because that is when it is load-bearing.
+**The general rule this earns:** *an adjudication artifact must contain the entire span it
+adjudicates.* Unlike most of what this repository checks by argument, this one needs no
+reader — the crop rectangle against the span rectangle, both already in hand.
+
+**Implemented** as `deepdive_manifest.crop_contains_span`. All three artifacts above pass:
+
+| locator | crop | verdict |
+|---|---|---|
+| `entries[0]`, `entries[1]` | p3 `(300, 630, 580, 690)` | ✅ contained |
+| `entries[25]`, `entries[26]` | p4 `(40, 480, 570, 562)` | ✅ contained |
+| `entries[27]` | p4 `(40, 62, 570, 250)` | ✅ contained |
+
+🔴 **A design constraint the check surfaced immediately, and it is the same lesson twice in one
+day.** Containment is only meaningful against *the right span*. The first verification run
+reported `p03` as OUTSIDE — because `search_for("significantly (P")` returns hits in **both
+columns**, and the left-column occurrence lies outside the crop. The crop was correct; the
+needle was ambiguous. Two of the five needles here still return more than one hit.
+
+So when the 24 are re-anchored, the check cannot take a bare quote fragment: **each image
+locator must carry a needle unique on its page**, or the span it resolves to is a guess. That
+is the `find()` first-occurrence hazard for a third time — in `_quote_matches`, then in the
+first render of `entries[0]`, now in the containment check itself. Three different mechanisms,
+one root: *a quote fragment does not identify a location.*
 
 Source PDF: `files/fulltext/PMID17803050_Suzuki2007.pdf`,
 `32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69`.

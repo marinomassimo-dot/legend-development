@@ -317,6 +317,33 @@ class EntriesMustBeUsable(unittest.TestCase):
                 f"a form feed standing in for a charge sign must refuse the surface; got {errors}",
             )
 
+    def test_an_image_anchor_must_contain_the_span_it_adjudicates(self) -> None:
+        """🔴 Today image anchoring is the looser of the two, and this closes the gap.
+
+        A text locator is compared character by character against its artifact. An image
+        locator is believed on its word. On 2026-08-09 a crop declared to adjudicate a table
+        row stopped at x=320 while the row ran to x=524, so four values inside the quoted span
+        were outside the picture — a locator that would have been "verified" against pixels
+        that were not there.
+
+        Both rectangles are already available: the crop is declared, and `search_for` returns
+        the span. Containment is arithmetic.
+        """
+        page_span = (191.0, 523.9, 524.2, 532.2)          # the BUN row, as the page has it
+        self.assertFalse(
+            gate.crop_contains_span((40, 505, 320, 560), page_span),
+            "a crop that stops at x=320 cannot adjudicate a row reaching x=524",
+        )
+        self.assertTrue(
+            gate.crop_contains_span((40, 480, 570, 562), page_span),
+            "the corrected full-width crop does contain the row",
+        )
+        # Touching edges count as contained: a span flush against the crop boundary is fully
+        # rendered. Off by a hair in the strict direction would reject correct artifacts and
+        # teach people to pad crops arbitrarily.
+        self.assertTrue(gate.crop_contains_span((191, 523.9, 524.2, 532.2), page_span))
+        self.assertFalse(gate.crop_contains_span((191.5, 523.9, 524.2, 532.2), page_span))
+
     def _screen(self, name: str, payload: str):
         """Run the surface screen directly and return the refusal message, or ''."""
         with TemporaryDirectory() as temporary:
