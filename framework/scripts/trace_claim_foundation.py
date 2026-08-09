@@ -115,19 +115,32 @@ def read(path: Path) -> str:
     return path.read_text(encoding="utf-8", errors="replace")
 
 
-def split_records(text: str, convention: str) -> dict[str, str]:
-    """Split a registry into ``{identifier: block}`` using the canonical heading matcher.
+def split_records(text: str, keep: str, *conventions: str) -> dict[str, str]:
+    """Split a registry on **every** convention it uses, then return only the wanted kind.
 
-    The pattern comes from ``growth_anchors``, never from a regex written here: a consumer
-    that invents its own record heading is how a record silently gets absorbed into its
-    neighbour's body.
+    🔴 The first version passed one convention and kept it. `growth_anchors.heading_re`
+    warns against exactly that in its own docstring — *"the omitted records are not just
+    missed, their bodies contaminate their neighbours"* — and the warning was earned here:
+    `paper_registry_current.md` holds 49 `PAPER` records and **356 `CORPUS` placeholders**
+    interleaved with them, so splitting on `PAPER` alone let every placeholder body be
+    absorbed into the paper above it.
+
+    Measured impact at the time of the fix: one block absorbed a neighbour and zero declared
+    fields changed value, because `declared_fields` keeps the first occurrence of each field
+    and every paper declared its own. That is luck, not safety — the day a `PAPER` record
+    omits a field an absorbed placeholder declares, it inherits it silently. Splitting on
+    both conventions and discarding what is not wanted costs one argument and removes the
+    class.
     """
-    pattern = growth_anchors.HEADINGS[convention]
+    pattern = growth_anchors.heading_re(*(conventions or (keep,)))
+    wanted = re.compile(f"^(?:{growth_anchors.RECORD_PATTERNS[keep]})$")
     matches = list(pattern.finditer(text))
     blocks: dict[str, str] = {}
     for index, match in enumerate(matches):
         end = matches[index + 1].start() if index + 1 < len(matches) else len(text)
-        blocks[" ".join(match.group(1).split())] = text[match.end():end]
+        identifier = " ".join(match.group(1).split())
+        if wanted.match(identifier):
+            blocks[identifier] = text[match.end():end]
     return blocks
 
 
@@ -194,7 +207,8 @@ class Foundation:
     def __init__(self, root: Path, disease: str) -> None:
         registries = root / "disease-models" / disease / "registries"
         self.claims_raw = split_records(read(registries / "claim_registry_current.md"), "claims")
-        self.papers_raw = split_records(read(registries / "paper_registry_current.md"), "papers")
+        self.papers_raw = split_records(
+            read(registries / "paper_registry_current.md"), "papers", "papers", "corpus")
         self.manifest_dir = root / "disease-models" / disease / "research" / "deepdive_manifests"
         self.losses: list[dict[str, str]] = []
         self.candidates = 0

@@ -193,6 +193,44 @@ class MutationBattery(unittest.TestCase):
                          "the fixture ships no manifests, and the report must say so")
 
 
+class RecordSplitBattery(unittest.TestCase):
+    """The paper registry interleaves 49 PAPER records with 356 CORPUS placeholders."""
+
+    def setUp(self) -> None:
+        self.tmp = Path(tempfile.mkdtemp(prefix="trace-split-"))
+        self.addCleanup(shutil.rmtree, self.tmp, ignore_errors=True)
+
+    def test_a_corpus_placeholder_cannot_donate_a_field_to_the_paper_above_it(self) -> None:
+        """Split on one convention and the placeholder's body joins its neighbour's.
+
+        The live registries survived that defect only because every PAPER happened to
+        declare its own fields and the parser keeps the first occurrence. This fixture
+        removes that luck: PAPER 900 declares no species, and the CORPUS placeholder
+        immediately below it declares one. Inheriting it would be silent and wrong.
+        """
+        build(self.tmp, papers=("900",))
+        papers = (self.tmp / "disease-models" / "fixture" / "registries"
+                  / "paper_registry_current.md")
+        # The field must be *absent*, not empty. An empty declaration is still a first
+        # occurrence, and `declared_fields` keeps the first — so a fixture that merely
+        # blanks it would pass against the broken split too, and prove nothing.
+        text = "\n".join(line for line in papers.read_text(encoding="utf-8").splitlines()
+                         if not line.startswith("**Model/species:**"))
+        papers.write_text(
+            text + "\n## CORPUS-STUB-004\n**Model/species:** rat\n**Claim links:** none\n",
+            encoding="utf-8")
+        foundation = tcf.Foundation(self.tmp, "fixture")
+        self.assertEqual(foundation.papers["PAPER 900"].get("Model/species", ""), "",
+                         "PAPER 900 declares no species and must not inherit the "
+                         "placeholder's")
+        self.assertNotIn("CORPUS-STUB-004", foundation.papers)
+
+    def test_the_live_paper_registry_splits_into_exactly_its_papers(self) -> None:
+        foundation = tcf.Foundation(REPO, "wwox")
+        self.assertTrue(all(pid.startswith("PAPER ") for pid in foundation.papers))
+        self.assertEqual(len(foundation.papers), 49)
+
+
 class LineageBattery(unittest.TestCase):
     """The multi-hop half: the 2026-08-06 defect was three hops, not one."""
 
