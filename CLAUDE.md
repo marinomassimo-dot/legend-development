@@ -97,6 +97,38 @@ extraction method, and the reading declares both artifacts fingerprinted: the or
 inspected at original resolution, never read through a text conversion — on 2026-08-04 a figure
 panel reversed a conclusion the running text did not contain, and on 2026-08-06 an unmarked
 asterisk was the difference between "not significant" and "not tested".
+
+5d. 🔴 **In this corpus the rendered page is the reference surface, and the text layer is the
+convenient derivative.** Rule 5c above still implies the opposite — that deterministic
+extraction gives you the author's characters and the page is a fallback for hard cases. On
+**2026-08-09** that premise was falsified, and not marginally. `PMID 33914858`'s extracted
+text reads `P 5 0.05` where the page prints `P < 0.05`; `fitz`, `pdfplumber` and `pypdf` all
+agree on the wrong character, because they read the same defective text layer. **Cross-checking
+extractors detects nothing** — their consensus is about that layer, not about the paper.
+
+The scale is the point: **33 of 51 local PDFs carry the defect**, and it eats exactly what
+matters. Adjudicated at 600 dpi against the page: `Wwox\x01/\x01` is `Wwox⁻/⁻` and
+`Wwox\x02/\x01` is `Wwox⁺/⁻` — homozygous null versus heterozygote, the load-bearing
+distinction of a knockout paper, carried entirely by control characters. Also `NF-\x01B` for
+`NF-κB`, `\x0180°C` for `−80°C`, `q` for `±` (140 times in one paper), `D2` for `χ²`, `t` for
+`×`. **Roughly 80% of the damage is printable**, so no control-character check can see it, and
+"repairing" the visible controls yields a surface that looks clean and reads wrong.
+
+Three binding consequences:
+
+- **Prefer XML/HTML PMC over the PDF, always, and record the absence.** This is not a
+  convenience. Structured markup carries correct entities and has no rendered page to diverge
+  from, and it is the reason the fifteen existing complete reads are sound: every one of them
+  used XML or HTML. Where no structured surface exists — `PMID 17803050` has neither DOI nor
+  PMCID — the paper enters a **different class** and the full-text queue must say so.
+- **A derived text surface is screened before it may carry a locator**, by
+  [`deepdive_manifest.py`](../scripts/deepdive_manifest.py): C0 controls, printable
+  substitutions and *suspicion by absence* — statistical language with none of `< > ≤ ≥ ± × −`.
+  A `SUSPECT` surface is **refused, never normalised**: cleaning it launders the defect into
+  every quote drawn from it.
+- **Never hand-correct a corrupted surface.** A manual fix across dozens of points is
+  indistinguishable from a rewrite and verifiable by nothing. Re-derive it, or anchor the
+  affected locators to the rendered page and say so.
 6. **Reading debt is explicit and must be honoured:** what was not read today enters the queue with a tracked debt; it does not disappear.
 7. **Universal full-text trace:** every route that actually analyses a full text must emit a `FULLTEXT_READ_RECEIPT` and the main session must persist it before reporting the paper as read. Check prior receipts first; a repeated complete read requires an explicit `reread_reason`. Retrieval, indexing, PaperQA/RAG queries and selected passages are not a complete read. Protocol and schema: [`fulltext_read_receipt.md`](framework/protocols/fulltext_read_receipt.md).
 

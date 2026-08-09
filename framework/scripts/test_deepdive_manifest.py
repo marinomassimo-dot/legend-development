@@ -317,6 +317,74 @@ class EntriesMustBeUsable(unittest.TestCase):
                 f"a form feed standing in for a charge sign must refuse the surface; got {errors}",
             )
 
+    def _screen(self, name: str, payload: str):
+        """Run the surface screen directly and return the refusal message, or ''."""
+        with TemporaryDirectory() as temporary:
+            path = Path(temporary) / name
+            path.write_text(payload, encoding="utf-8")
+            try:
+                gate._artifact_text(path, "article_text")
+            except ValueError as error:
+                return str(error)
+        return ""
+
+    def test_printable_substitutions_are_caught_though_no_control_is_present(self) -> None:
+        """🔴 The C0 screen sees 34 corruptions in PMID 17803050. About 145 more are PRINTABLE.
+
+        Adjudicated at 600 dpi against the page: `q` stands for `±` (140 occurrences in that
+        one paper), `D2` for `χ²`, `t` for `×`. No control-character check will ever see them.
+        Worse, if someone "repairs" the 34 controls the artifact goes clean at the C0 gate and
+        stays wrong on the page — a silent, verified-looking lie.
+        """
+        for label, payload in (
+            ("plus-minus as q", "Weights are given as mean 12 q 3 standard deviation units."),
+            ("chi-squared as D2", "Incidence in mutant rats was analyzed by D2 test to confirm."),
+            ("times as t", "Relative weight was absolute weight 100 t 100 divided by body mass."),
+        ):
+            with self.subTest(substitution=label):
+                message = self._screen("derived.txt", payload)
+                self.assertIn("SUSPECT", message, f"{label} must refuse the surface")
+
+    def test_a_statistical_paper_with_no_operators_at_all_is_suspect(self) -> None:
+        """Suspicion by ABSENCE — what the surface does not have.
+
+        Fourteen corpus PDFs carry statistical language and not one of `< > ≤ ≥ ± × −`. Two
+        of them are adjudicated corrupt. A paper that tests significance and never once prints
+        a comparator is not a tidy paper; it is a text layer that lost them.
+        """
+        message = self._screen(
+            "derived.txt",
+            "Differences were significant by t test. The P value was small. Significance "
+            "was assessed with a standard deviation of the mean across every cohort tested.")
+        self.assertIn("SUSPECT", message)
+
+    def test_the_absence_rule_reads_entities_not_raw_markup(self) -> None:
+        """A PMC XML writes `&lt;`, and that IS a comparator. Counting raw bytes would refuse
+        every structured artifact in the corpus — the very surfaces that are known good."""
+        # Deliberately NOT through a whole XML document: `<article>` and `<p>` put literal
+        # `<` and `>` into the raw markup, so a document-level fixture cannot tell an
+        # entity-aware count from a byte count — it passes either way. Mutation-testing caught
+        # exactly that: "absence counts raw bytes" escaped a document-level version of this
+        # test. The function is probed directly so the assertion has nothing to hide behind.
+        prose = ("Differences were significant by t test. The P value was small and the "
+                 "standard deviation is reported for every cohort.")
+        gate._refuse_suspect_surface(Path("paper.xml"), prose + " Threshold was P &lt; 0.05.")
+        with self.assertRaises(ValueError) as caught:
+            gate._refuse_suspect_surface(Path("paper.xml"), prose + " Threshold was small.")
+        self.assertIn("ABSENCE", str(caught.exception))
+
+    def test_day_two_is_not_chi_squared(self) -> None:
+        """The real false positive, from PMID 26675548: `two days (D2), D5 and D7`.
+
+        Calibrated against all 51 local PDFs before shipping: bare `\\bD2\\b` flags this
+        legitimate timepoint label. The signature is anchored to statistical context instead.
+        """
+        message = self._screen(
+            "derived.txt",
+            "Lysates were collected two days (D2), D5 and D7 following transduction of the "
+            "cells, and analysed by immunoblot against the loading control.")
+        self.assertEqual(message, "", "a day-2 label must not be read as a chi-squared test")
+
     def test_every_artifact_branch_screens_raw_text_for_controls(self) -> None:
         """The XML branch was covered by accident, and accidents are not defences.
 

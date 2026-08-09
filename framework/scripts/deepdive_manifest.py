@@ -307,6 +307,36 @@ def _html_surfaces(raw: bytes) -> tuple[str, str]:
     return _normalise_text(" ".join(parser.body)), _normalise_text(" ".join(parser.abstract))
 
 
+# 🔴 Substitutions that are PRINTABLE, and therefore invisible to any control-character
+# check. Adjudicated at 600 dpi against the printed page of PMID 17803050 on 2026-08-09: the
+# C0 screen sees 34 corruptions in that paper and roughly 145 more are ordinary letters.
+# `q` alone stands in for `±` 140 times.
+#
+# This matters most in the repair case. Fix the 34 controls and the artifact goes CLEAN at the
+# C0 gate while staying wrong on the page — a surface that now looks verified and is not.
+#
+# Every signature below was calibrated against all 51 local PDFs before shipping. Bare
+# `\bD2\b` was the draft, and it flags `two days (D2), D5 and D7` in PMID 26675548, which is a
+# real timepoint label. It is anchored to statistical context instead. `q` and `t` produce
+# zero hits across the other fifty PDFs.
+PRINTABLE_SUBSTITUTIONS = (
+    (re.compile(r"\d\s+q\s+\d"), "'q' where the page prints U+00B1 '±'"),
+    (re.compile(r"\bD2\s+test\b|\banalyz\w+\s+by\s+D2\b|\bD2\s*=\s*\d"),
+     "'D2' where the page prints U+03C7 U+00B2 'χ²'"),
+    (re.compile(r"\d\s+t\s+\d{2,}"), "'t' where the page prints U+00D7 '×'"),
+)
+
+# Suspicion by ABSENCE — what the surface does NOT have. Fourteen corpus PDFs carry
+# statistical language and not one of these operators; two are adjudicated corrupt. A paper
+# that tests significance and never once prints a comparator is not a tidy paper, it is a text
+# layer that lost them. This is the only signature that survives a "repair" of the visible
+# damage, which is exactly why it exists.
+TYPOGRAPHIC_OPERATORS = "<>≤≥±×−"
+STATISTICAL_LANGUAGE = re.compile(
+    r"significan|P-value|P value|standard deviation|\bt[- ]test\b|chi-squared", re.I)
+MIN_STATISTICAL_MENTIONS = 3
+
+
 def _refuse_suspect_surface(path: Path, *parts: str) -> None:
     """A declared text surface holding C0 controls is SUSPECT and is refused, not cleaned.
 
@@ -326,6 +356,33 @@ def _refuse_suspect_surface(path: Path, *parts: str) -> None:
                 f"not whitespace — it is a glyph that did not survive extraction, so every "
                 f"quote taken from this surface is unverifiable. Re-derive the artifact from "
                 f"the source; do not strip the controls"
+            )
+
+    # The remaining checks read entities, not raw markup: a PMC XML writes `&lt;`, and that IS
+    # a comparator. Counting raw bytes would refuse every structured artifact in the corpus —
+    # precisely the surfaces that are known good.
+    for part in parts:
+        readable = html.unescape(part)
+        for pattern, description in PRINTABLE_SUBSTITUTIONS:
+            found = pattern.search(readable)
+            if found:
+                raise ValueError(
+                    f"SUSPECT text surface: {path.name} contains {description} at offset "
+                    f"{found.start()} ({found.group()!r}). This substitution is PRINTABLE, so "
+                    f"no control-character check can see it, and repairing the controls would "
+                    f"leave the surface looking clean and reading wrong. Adjudicate against "
+                    f"the rendered page and re-derive; do not edit the character"
+                )
+        mentions = len(STATISTICAL_LANGUAGE.findall(readable))
+        operators = sum(readable.count(character) for character in TYPOGRAPHIC_OPERATORS)
+        if mentions >= MIN_STATISTICAL_MENTIONS and operators == 0:
+            raise ValueError(
+                f"SUSPECT text surface: {path.name} uses statistical language "
+                f"({mentions} mentions) and contains none of "
+                f"{' '.join(TYPOGRAPHIC_OPERATORS)}. Suspicion here is by ABSENCE: a paper "
+                f"that tests significance and never prints a comparator is a text layer that "
+                f"lost them. Adjudicate against the rendered page before declaring this "
+                f"surface"
             )
 
 

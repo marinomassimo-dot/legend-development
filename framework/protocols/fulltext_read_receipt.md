@@ -77,6 +77,29 @@ v1 manifests remain visible as migration debt and are not rewritten. For a PDF, 
 fingerprinted PDF as `article_binary` and a deterministic extracted TXT as `article_text`;
 text locators point to the latter while the receipt remains bound to the former.
 
+### 🔴 A text layer is not its page
+
+**Seek XML/HTML PMC first, every time, and record its absence.** A PDF text layer is a
+derivative of convenience; in this corpus it is often not the author's characters at all.
+`PMID 33914858` extracts as `P 5 0.05` where the page prints `P < 0.05`, and three independent
+extractors agree on the wrong character because they read the same defective layer —
+**cross-checking extractors detects nothing**. 33 of 51 local PDFs carry the defect, and it
+consumes precisely the load-bearing marks: `Wwox\x01/\x01` for `Wwox⁻/⁻` against
+`Wwox\x02/\x01` for `Wwox⁺/⁻`, `q` for `±`, `D2` for `χ²`, `t` for `×`. Roughly four fifths of
+the damage is printable, so a control-character screen alone is not enough and a "repair" of
+the visible controls produces a surface that looks verified and is not.
+
+Structured markup carries correct entities and has no rendered page to diverge from. That is
+why every one of the fifteen existing complete reads is sound: all used XML or HTML.
+
+`deepdive_manifest.py` screens a declared text surface for C0 controls, printable
+substitutions and **suspicion by absence** — statistical language with none of
+`< > ≤ ≥ ± × −`. A `SUSPECT` surface is refused, never normalised, and it cannot support
+`complete_fulltext_read`. When no structured surface exists, the reading either anchors the
+affected locators to the rendered page — which adjudicates, because the drawn glyph is the
+author's — or declares the debt. It never hand-corrects the text: a manual fix across dozens
+of points is indistinguishable from a rewrite and verifiable by nothing.
+
 `abstract_snippet` resolves a different, interoperability-only obligation: when an external
 index exposes the abstract but not the full text, it may accompany a non-abstract locator so
 the headline proposition remains externally checkable. It is companion metadata, **never the
