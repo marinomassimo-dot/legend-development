@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "pmid": "17803050",
   "citation": "Suzuki et al. 2007, Comparative Medicine 57:360-369",
   "rights": {
@@ -13,6 +13,11 @@
     "path": "files/fulltext/PMID17803050_Suzuki2007.pdf",
     "sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
   },
+  "manifest": "disease-models/wwox/research/deepdive_manifests/PMID17803050.json",
+  "needles": {
+    "why": "A locator identifier alone is a promise. The needle is the search string that resolves the locator to a span on the printed page, so the recipe can be checked end to end by a command — needle to span, span inside crop, crop to digest — instead of by eye. Each needle must occur exactly once on its page: a fragment that matches twice does not identify a location. Each is also a fragment of the snippet of the locator it adjudicates, which is what stops a needle from silently drifting to a different sentence.",
+    "table_rows": "Where a locator quotes a table row, the row does not exist as a contiguous run in the text layer — the columns are laid out separately — so the needle is the row label, or the one cell value that is unique on the page."
+  },
   "artifacts": [
     {
       "file": "p03_electrolytes_and_BUN_significance.png",
@@ -20,7 +25,10 @@
       "crop": [300, 630, 580, 690],
       "dpi": 500,
       "sha256": "cdaf28ae2e6eb78e95d467085e6dc1a21859f33f0dacf7c0b3b890e7852a2a74",
-      "adjudicates": ["entries[0]", "entries[1]"]
+      "adjudicates": [
+        {"locator": "entries[0]", "needle": "the levels of BUN,"},
+        {"locator": "entries[1]", "needle": "aberration enzymes (CPK, ALP,"}
+      ]
     },
     {
       "file": "p04_table2_BUN_CRE_GLU.png",
@@ -28,7 +36,10 @@
       "crop": [40, 480, 570, 562],
       "dpi": 500,
       "sha256": "9b2268e2d64658b113b3a45e09e93d308ec0d2639004d138012eba46f62fe90b",
-      "adjudicates": ["entries[25]", "entries[26]"]
+      "adjudicates": [
+        {"locator": "entries[25]", "needle": "BUN (mg/ml)"},
+        {"locator": "entries[26]", "needle": "GLU (mg/ml)"}
+      ]
     },
     {
       "file": "p04_table1_organ_weights.png",
@@ -36,7 +47,9 @@
       "crop": [40, 62, 570, 250],
       "dpi": 400,
       "sha256": "98ebfb5061b258104c56687279b10f0c4b9220a143b3ccba3f50f5a4a2ba031e",
-      "adjudicates": ["entries[27]"]
+      "adjudicates": [
+        {"locator": "entries[27]", "needle": "1426.4"}
+      ]
     },
     {
       "file": "p02_reanchor_6_locators.png",
@@ -44,8 +57,14 @@
       "crop": [86, 309, 583, 605],
       "dpi": 300,
       "sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
-      "adjudicates": ["entries[10]", "entries[11]", "entries[12]", "entries[15]",
-                      "entries[16]", "entries[21]"]
+      "adjudicates": [
+        {"locator": "entries[10]", "needle": "We detected epileptic seizures"},
+        {"locator": "entries[11]", "needle": "with seizures first detected"},
+        {"locator": "entries[12]", "needle": "95% of the mutant"},
+        {"locator": "entries[15]", "needle": "All male mutant rats"},
+        {"locator": "entries[16]", "needle": "most of the phenotypically"},
+        {"locator": "entries[21]", "needle": "Because some rats with"}
+      ]
     },
     {
       "file": "p05_reanchor_3_locators.png",
@@ -53,7 +72,11 @@
       "crop": [170, 549, 522, 721],
       "dpi": 300,
       "sha256": "d4d6712ac2b290398660aa711aa4f2d3e8433bfef1c56f9d221a4e3681238540",
-      "adjudicates": ["entries[2]", "entries[18]", "entries[19]"]
+      "adjudicates": [
+        {"locator": "entries[2]", "needle": "although mutant rats had"},
+        {"locator": "entries[18]", "needle": "the CA1 region of"},
+        {"locator": "entries[19]", "needle": "In contrast no vacuoles"}
+      ]
     },
     {
       "file": "p08_reanchor_14_locators.png",
@@ -61,9 +84,22 @@
       "crop": [43, 160, 558, 689],
       "dpi": 300,
       "sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-      "adjudicates": ["entries[3]", "entries[4]", "entries[5]", "entries[6]", "entries[7]",
-                      "entries[8]", "entries[9]", "entries[13]", "entries[14]", "entries[17]",
-                      "entries[20]", "entries[22]", "entries[23]", "entries[24]"]
+      "adjudicates": [
+        {"locator": "entries[3]", "needle": "urostick tests and blood"},
+        {"locator": "entries[4]", "needle": "production of urea-nitrogen and"},
+        {"locator": "entries[5]", "needle": "The spontaneously epileptic rat"},
+        {"locator": "entries[6]", "needle": "if renal excretive function"},
+        {"locator": "entries[7]", "needle": "GH level was slightly"},
+        {"locator": "entries[8]", "needle": "suggesting that the severe"},
+        {"locator": "entries[9]", "needle": "cells in the anterior"},
+        {"locator": "entries[13]", "needle": "A limitation in our"},
+        {"locator": "entries[14]", "needle": "at 15 KHz (88"},
+        {"locator": "entries[17]", "needle": "absolute weight of mutant"},
+        {"locator": "entries[20]", "needle": "although similar vacuoles in"},
+        {"locator": "entries[22]", "needle": "seizures began during the"},
+        {"locator": "entries[23]", "needle": "in contrast with the"},
+        {"locator": "entries[24]", "needle": "Although the cause of"}
+      ]
     },
     {
       "file": "p08_table3_chi_squared.png",
@@ -71,7 +107,9 @@
       "crop": [40, 62, 570, 150],
       "dpi": 500,
       "sha256": "56cb858e4b1e25bb8a0f5fb0a5fadd27094f1499724d16e95e6f7912f2f57c64",
-      "adjudicates": ["entries[28]"]
+      "adjudicates": [
+        {"locator": "entries[28]", "needle": "Total rats"}
+      ]
     }
   ]
 }

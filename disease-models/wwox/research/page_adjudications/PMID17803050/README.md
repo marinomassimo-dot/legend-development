@@ -209,9 +209,40 @@ the mismatch was their error or ours.
 three digests above are therefore the output of the integer rectangles, not of the original
 floats — and containment was re-verified against the rounded values before adopting them.
 
+## The needles live in the recipe, not in a notebook
+
+The 29 search strings that resolve each locator to its span were, for one day, the only part
+of this work that existed nowhere but in a session transcript. They are now **in
+[`adjudications.json`](adjudications.json)**, one per locator, which is the same rule the
+images taught: *publish the derivation, not the derived*. A needle is derivation — it costs
+nothing to ship, and it is what turns `adjudicates: ["entries[10]"]` from a promise into a
+claim `regenerate_adjudications.py verify` can settle.
+
+They are not listed again here. Twenty-nine strings restated in prose beside a file that
+holds them is exactly the drift the dpi and the rounded rectangles above already caused once.
+
+The chain the command now walks end to end — **needle → span → span inside crop → crop →
+digest** — refuses four things, each watched failing before being trusted:
+
+| mutation | verdict |
+|---|---|
+| a bare locator with no needle (the shape this file had yesterday) | REFUSED |
+| a needle matching twice on its page — `Brain`, which occurs in both weight tables | REFUSED |
+| a crop that stops before the row it adjudicates (the 2026-08-09 defect) | REFUSED |
+| a needle that names one locator and quotes a neighbouring one | REFUSED |
+
+The fourth is the one that needed the manifest link. A needle can be unique, sit inside the
+crop, and still belong to a different sentence that happens to share the picture — and a
+picture containing the right region is not evidence that it contains *this* locator. So the
+recipe names the manifest, and each needle is checked to be a fragment of the snippet of the
+locator it claims. Removing the manifest link degrades honestly: uniqueness and containment
+are still checked, and the run says out loud what it could not check.
+
 ## What remains before the gate lifts
 
-All 29 locators now have a page anchor whose containment is machine-verified. What is still
-owed is the **canonical write**: replacing the refused `.html` surface in the manifest with
-these image anchors, and recording the needle and crop for each. That is a `BATCH_COMMIT`
-edit, which is exactly what `batch_commit_gate: BLOCK_BATCH_COMMIT` is holding.
+All 29 locators now have a page anchor whose containment is machine-verified, and a needle
+that regenerates it. What is still owed is the **canonical write**: replacing the refused
+`.html` surface in the manifest with these image anchors. That is a `BATCH_COMMIT` edit,
+which is exactly what `batch_commit_gate: BLOCK_BATCH_COMMIT` is holding — and because the
+needles are now in the recipe, that write copies them rather than re-deriving 29 strings by
+hand, which would have been 29 chances to be wrong.
