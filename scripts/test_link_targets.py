@@ -10,13 +10,26 @@ label because translated editions may legitimately translate that text.
 
 from __future__ import annotations
 
+import importlib.util
+import os
 import re
+import subprocess
+import sys
+import tempfile
 import unittest
 from pathlib import Path
 from urllib.parse import unquote
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+# One definition of "this directory is another checkout", shared with the publication gate.
+_GATE_PATH = Path(__file__).with_name("public_release_gate.py")
+_SPEC = importlib.util.spec_from_file_location("public_release_gate", _GATE_PATH)
+assert _SPEC and _SPEC.loader
+GATE = importlib.util.module_from_spec(_SPEC)
+sys.modules[_SPEC.name] = GATE
+_SPEC.loader.exec_module(GATE)
 # `backup/` holds the snapshots that Phase 3 of the BATCH_COMMIT protocol *requires* before
 # any canonical write. A snapshot is a byte-identical copy of the current files, so scanning
 # it makes every canonical record resolve to two files and every relative link inside the copy
@@ -56,12 +69,23 @@ EXPECTED_TARGET = {
 }
 
 
-def markdown_files() -> list[Path]:
-    return sorted(
-        path
-        for path in ROOT.rglob("*.md")
-        if not any(part in SKIP_PARTS for part in path.relative_to(ROOT).parts)
-    )
+def markdown_files(root: Path = ROOT) -> list[Path]:
+    """Markdown of *this* checkout only.
+
+    🔴 `rglob` walked into any checkout mounted inside this one, so a worktree's copy of the
+    registries became a second definition of every record: duplicate basenames for the
+    resolver, and every dangling link in another repository reported as a defect in this one.
+    Pruning, not an ignore rule — the audit is supposed to see gitignored files, it is just
+    not supposed to see other repositories.
+    """
+    found: list[Path] = []
+    for dirpath, dirnames, filenames in os.walk(root):
+        here = Path(dirpath)
+        dirnames[:] = [name for name in dirnames
+                       if name not in SKIP_PARTS
+                       and not GATE.is_nested_checkout(here / name)]
+        found.extend(here / name for name in filenames if name.endswith(".md"))
+    return sorted(found)
 
 
 def heading_slug(title: str) -> str:
@@ -280,6 +304,39 @@ class LinkTargetTests(unittest.TestCase):
             "Obsidian wikilink fragments do not exactly match headings "
             f"({len(problems)}):\n" + "\n".join(preview),
         )
+
+
+class NestedCheckoutIsNotOurs(unittest.TestCase):
+    """The test builds the condition instead of hoping to be run somewhere that has it.
+
+    🔴 This class exists because of how the sibling defect was missed. The fix was verified
+    from inside a worktree, where a nested checkout cannot exist — so the suite was green and
+    could not have been anything else. A test that depends on the ambient checkout having the
+    right shape is not a test of the code; it is a test of where you happened to run it.
+    """
+
+    def mount(self) -> tuple[Path, Path]:
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        root = Path(temp.name)
+        (root / "own.md").write_text("# Ours\n", encoding="utf-8")
+        nested = root / ".claude" / "worktrees" / "session"
+        nested.mkdir(parents=True)
+        subprocess.run(["git", "init", "-q"], cwd=nested, check=True)
+        stray = nested / "broken.md"
+        stray.write_text("[[claim_registry_current#CLAIM 999]]\n", encoding="utf-8")
+        return root, stray
+
+    def test_markdown_of_a_nested_checkout_is_not_collected(self) -> None:
+        root, stray = self.mount()
+        collected = markdown_files(root)
+        self.assertIn(root / "own.md", collected)
+        self.assertNotIn(stray, collected)
+
+    def test_the_walk_would_otherwise_have_found_it(self) -> None:
+        """Proves the fixture is capable of failing, which is the point of the class."""
+        root, stray = self.mount()
+        self.assertIn(stray, sorted(root.rglob("*.md")))
 
 
 if __name__ == "__main__":
