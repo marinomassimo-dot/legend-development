@@ -75,6 +75,30 @@ REGISTRIES = {
     "papers": "disease-models/{disease}/registries/paper_registry_current.md",
     "literature": "disease-models/{disease}/registries/literature_tracking_log_current.md",
 }
+
+# --- third policy: `scale_trigger` -------------------------------------------------------
+#
+# The two policies above answer "is the anchored number still true?". Neither answers "is
+# this file still a workable shape?", and that is a different question with a different
+# failure mode: nothing is corrupt, the registry simply outgrows the thing it is — one
+# Markdown document that a batch rewrites whole and a human reviews as a diff.
+#
+# The threshold is a declared engineering judgement, and it is written here rather than
+# discovered because there is nothing to discover: no measurement in the repository knows
+# when a diff stops being reviewable. Two properties keep it honest. It is roughly twice the
+# largest registry at the time of writing (462 KB), so it cannot fire spuriously today and
+# a session cannot be tempted to relax it to get on with its work. And crossing it does not
+# block: it declares an architectural decision *due*, which is exactly what the sharding
+# question is — canonical Markdown split into a family, versus an event store — a decision
+# deferred on purpose and only defensible while someone is still watching the number.
+REGISTRY_SIZE_TRIGGER_BYTES = 1_048_576
+
+# An acknowledgement is how "we looked, and we are deferring" is recorded. It binds to the
+# size measured when it was made and **expires** once the file has grown a further quarter,
+# mirroring the freeze contract's drift acknowledgements: without expiry, `resolved` decays
+# into `ignored once, ignored forever`, which is the state this whole module exists to
+# prevent. Deferring again is cheap; deferring silently and permanently is not available.
+SCALE_ACK_MARGIN = 0.25
 # These four patterns ARE the definition of "a canonical record" for the whole repository.
 # They were lifted verbatim from `scripts/test_canonical_structure.py`, which owned the
 # cardinality before this module existed, and that test now imports them from here instead of
@@ -179,6 +203,42 @@ def measure_structural(root: Path, disease: str) -> dict[str, int]:
             structural_identifiers(claims_text, papers_text, literature_text).items()}
 
 
+def measure_registry_bytes(root: Path, disease: str) -> dict[str, int]:
+    """Size of each canonical registry on disk, measured, never declared.
+
+    A size a human types is a size a human maintains, and this module exists because that
+    arrangement fails quietly.
+    """
+    return {name: (root / template.format(disease=disease)).stat().st_size
+            for name, template in sorted(REGISTRIES.items())}
+
+
+def scale_triggers(live: dict[str, Any], state: dict[str, Any]) -> list[str]:
+    """Registries past the trigger whose acknowledgement is missing or has expired.
+
+    Returns human-readable lines. This never reports a violation: nothing here is wrong,
+    something here is *due*.
+    """
+    acknowledged = (state or {}).get("scale_ack") or {}
+    lines: list[str] = []
+    for name, size in sorted((live.get("registry_bytes") or {}).items()):
+        if size <= REGISTRY_SIZE_TRIGGER_BYTES:
+            continue
+        at = acknowledged.get(name)
+        if at is None:
+            lines.append(
+                f"SCALE_TRIGGER: {name} registry is {size / 1024:.0f} KB, past the "
+                f"{REGISTRY_SIZE_TRIGGER_BYTES / 1024:.0f} KB trigger. The sharding decision "
+                f"is due — canonical Markdown family versus event store. Record the outcome "
+                f"with `growth_anchors.py acknowledge-scale --note '<decision>'`.")
+        elif size > at * (1 + SCALE_ACK_MARGIN):
+            lines.append(
+                f"SCALE_TRIGGER: {name} registry is {size / 1024:.0f} KB, a further "
+                f"{(size / at - 1) * 100:.0f}% beyond the {at / 1024:.0f} KB at which the "
+                f"deferral was acknowledged. The acknowledgement has expired; decide again.")
+    return lines
+
+
 def structural_identifiers(claims_text: str, papers_text: str,
                            literature_text: str) -> dict[str, list[str]]:
     """The record identifiers themselves, so callers can check uniqueness as well as count."""
@@ -234,6 +294,10 @@ def measure_all(root: Path, disease: str) -> dict[str, Any]:
         "structural": measure_structural(root, disease),
         "registry_only_fulltext": measure_registry_only(root, disease),
         "unread_premises": measure_unread_premises(root, disease),
+        # Measured on every call like everything else here, and deliberately *not* an
+        # anchored value: sizes are expected to move constantly, so anchoring them would
+        # produce a violation on every batch. Only the acknowledgement is anchored.
+        "registry_bytes": measure_registry_bytes(root, disease),
     }
 
 
@@ -432,9 +496,19 @@ def cmd_check(root: Path, disease: str, _args) -> int:
         print(f"  [IMPROVED] {item}")
     for item in violations:
         print(f"  [BLOCK] {item}")
+    # Reported here, enforced in `record`. A scale trigger is not a disagreement between the
+    # anchors and the model — nothing is wrong — so failing `check` on it would block a suite
+    # over an architectural question and teach everyone to pass `--no-scale`. It bites where
+    # the cost is real: the next batch that tries to anchor further growth.
+    triggers = scale_triggers(live, tail_state(load_ledger(root / LEDGER_REL)) or {})
+    for item in triggers:
+        print(f"  [SCALE] {item}")
     if violations:
         print("VERDICT: BLOCK — growth anchors disagree with the live model")
         return 1
+    if triggers:
+        print("VERDICT: PASS — anchors match; a scale decision is due (see [SCALE] above)")
+        return 0
     print("VERDICT: PASS — every growth anchor matches what the tool measured")
     return 0
 
@@ -448,7 +522,10 @@ def cmd_record(root: Path, disease: str, args) -> int:
         if state is not None:
             print("REFUSED: anchors already exist; --bootstrap is for the first record only")
             return 2
-        event = append_event(root, disease, "bootstrap", live,
+        # `registry_bytes` is measured, not anchored: it moves on every batch, so anchoring
+        # it would manufacture a violation each time and train sessions to ignore the module.
+        event = append_event(root, disease, "bootstrap",
+                             {k: v for k, v in live.items() if k != "registry_bytes"},
                              args.note or "initial anchor of the live measurement", args.batch)
         changed = reanchor_manifest(root, disease)
         print(f"RECORDED: {event['event_id']}")
@@ -494,9 +571,60 @@ def cmd_record(root: Path, disease: str, args) -> int:
             return 1
         anchors[key] = live[key]
 
+    # Where the trigger bites. A batch may keep growing a registry that has passed the
+    # trigger, but not while pretending nobody noticed: the deferral has to be on the record
+    # and still current. Acknowledging costs one command and one sentence of reasoning —
+    # cheaper than sharding, dearer than silence, which is the ordering this module wants.
+    pending = scale_triggers(live, state)
+    if pending:
+        for item in pending:
+            print(f"  [SCALE] {item}")
+        print("REFUSED: this batch grows a registry whose scale decision is outstanding. "
+              "Record the decision with `acknowledge-scale`, or shard, then record again.")
+        return 1
+
     note = args.note or "structural growth declared by " + args.batch
     event = append_event(root, disease, "batch", anchors, note, args.batch)
     changed = reanchor_manifest(root, disease)
+    print(f"RECORDED: {event['event_id']}")
+    print("ANCHORED: " + ", ".join(changed))
+    return 0
+
+
+def cmd_acknowledge_scale(root: Path, disease: str, args) -> int:
+    """Record that the sharding decision was taken, and bind it to the size it was taken at.
+
+    There is deliberately no way to acknowledge a registry that has not crossed the trigger:
+    a pre-emptive acknowledgement would be a permanent silence bought before the question was
+    asked, which is the failure mode `SCALE_ACK_MARGIN` exists to close from the other side.
+    """
+    live = measure_all(root, disease)
+    events = load_ledger(root / LEDGER_REL)
+    state = tail_state(events) or {}
+    pending = scale_triggers(live, state)
+    if not pending:
+        print("NOTHING TO ACKNOWLEDGE: no registry is past the trigger, or every deferral "
+              "on record is still current")
+        return 0
+    if not args.note:
+        print("REFUSED: --note is required. The value of this record is the reasoning, not "
+              "the timestamp; an acknowledgement without one is a silence with a date on it.")
+        return 2
+
+    sizes = live["registry_bytes"]
+    over = {name: size for name, size in sizes.items()
+            if size > REGISTRY_SIZE_TRIGGER_BYTES}
+    anchors = {"scale_ack": {**(state.get("scale_ack") or {}), **over}}
+    if state.get("structural"):
+        anchors["structural"] = state["structural"]
+    for key in ("registry_only_fulltext", "unread_premises"):
+        if state.get(key) is not None:
+            anchors[key] = state[key]
+    event = append_event(root, disease, "scale_ack", anchors, args.note, args.batch)
+    changed = reanchor_manifest(root, disease)
+    for name, size in sorted(over.items()):
+        print(f"  [ACKNOWLEDGED] {name} at {size / 1024:.0f} KB; this record expires once it "
+              f"reaches {size * (1 + SCALE_ACK_MARGIN) / 1024:.0f} KB")
     print(f"RECORDED: {event['event_id']}")
     print("ANCHORED: " + ", ".join(changed))
     return 0
@@ -599,6 +727,11 @@ def build_parser() -> argparse.ArgumentParser:
     tighten = sub.add_parser("tighten", help="re-anchor a ratchet that fell")
     tighten.add_argument("--batch")
     tighten.add_argument("--note")
+
+    ack = sub.add_parser("acknowledge-scale",
+                         help="record the sharding decision for a registry past the trigger")
+    ack.add_argument("--batch")
+    ack.add_argument("--note", help="the decision and its reasoning; required")
     return parser
 
 
@@ -609,6 +742,7 @@ COMMANDS = {
     "tighten": cmd_tighten,
     "verify": cmd_verify,
     "anchor": cmd_anchor,
+    "acknowledge-scale": cmd_acknowledge_scale,
 }
 
 

@@ -48,6 +48,9 @@ class Harness:
             "structural": {"claims": 10, "papers": 20, "corpus": 30, "literature": 40},
             "registry_only_fulltext": ["PAPER 001", "PAPER 002"],
             "unread_premises": ["111", "222"],
+            # Well under the trigger, so the existing policy tests stay about the policy
+            # they were written for. The scale tests raise these deliberately.
+            "registry_bytes": {"claims": 1_000, "literature": 2_000, "papers": 3_000},
         }
         self._original = ga.measure_all
         ga.measure_all = lambda root, disease: json.loads(json.dumps(self.live))
@@ -184,6 +187,83 @@ class GrowthAnchorTests(unittest.TestCase):
 
     def test_double_bootstrap_is_refused(self) -> None:
         self.assertEqual(2, self.h.run("record", "--bootstrap", "--batch", "B1"))
+
+
+class ScaleTriggerTests(unittest.TestCase):
+    """The third policy: nothing is wrong, something is due.
+
+    A registry can be perfectly anchored and still have outgrown the shape it is. These
+    tests are about the one property that makes such a signal survive: it must not be
+    silenceable more cheaply than it is satisfiable.
+    """
+
+    def setUp(self) -> None:
+        self._stack = TemporaryDirectory()
+        self.h = Harness(self._stack)
+        self.assertEqual(0, self.h.run("record", "--bootstrap", "--batch", "B0"))
+
+    def tearDown(self) -> None:
+        self.h.restore()
+        self._stack.cleanup()
+
+    def over(self, size: int | None = None) -> None:
+        self.h.live["registry_bytes"]["literature"] = size or (
+            ga.REGISTRY_SIZE_TRIGGER_BYTES + 1)
+
+    def grow(self, claims: int = 2) -> int:
+        self.h.live["structural"]["claims"] += claims
+        return self.h.run("record", "--batch", "B1", "--claims", f"+{claims}")
+
+    def test_a_registry_under_the_trigger_says_nothing(self) -> None:
+        self.assertEqual([], ga.scale_triggers(self.h.live, {}))
+
+    def test_crossing_the_trigger_is_reported_but_does_not_fail_check(self) -> None:
+        """It must not block a suite: an architectural question is not a broken anchor."""
+        self.over()
+        self.assertEqual(0, self.h.run("check"))
+        self.assertTrue(ga.scale_triggers(self.h.live, {}))
+
+    def test_a_batch_may_not_anchor_further_growth_while_the_decision_is_outstanding(self):
+        """Where it bites, and the reason it is not merely advisory."""
+        self.over()
+        self.assertEqual(1, self.grow())
+
+    def test_acknowledging_without_reasoning_is_refused(self) -> None:
+        self.over()
+        self.assertEqual(2, self.h.run("acknowledge-scale", "--batch", "B1"))
+
+    def test_acknowledging_unblocks_the_batch_and_quiets_the_report(self) -> None:
+        self.over()
+        self.assertEqual(0, self.h.run("acknowledge-scale", "--batch", "B1", "--note",
+                                       "deferred: sharding blocked on the wikilink resolver"))
+        self.assertEqual([], ga.scale_triggers(self.h.live, ga.tail_state(self.h.events())))
+        self.assertEqual(0, self.grow())
+
+    def test_an_acknowledgement_expires_once_the_file_grows_past_the_margin(self) -> None:
+        """Without this, `deferred` becomes permanent and the trigger is decoration."""
+        self.over()
+        self.h.run("acknowledge-scale", "--batch", "B1", "--note", "deferred once")
+        state = ga.tail_state(self.h.events())
+        acknowledged = self.h.live["registry_bytes"]["literature"]
+        self.h.live["registry_bytes"]["literature"] = int(
+            acknowledged * (1 + ga.SCALE_ACK_MARGIN)) + 1
+        triggers = ga.scale_triggers(self.h.live, state)
+        self.assertTrue(triggers)
+        self.assertIn("expired", triggers[0])
+        self.assertEqual(1, self.grow(), "an expired deferral must block again")
+
+    def test_a_registry_cannot_be_acknowledged_before_it_crosses_the_trigger(self) -> None:
+        """A pre-emptive acknowledgement would be silence bought before the question."""
+        self.assertEqual(0, self.h.run("acknowledge-scale", "--batch", "B1", "--note", "early"))
+        self.assertEqual({}, (ga.tail_state(self.h.events()) or {}).get("scale_ack", {}))
+
+    def test_acknowledgement_survives_a_later_ordinary_batch(self) -> None:
+        """A `record` event must not drop the acknowledgement it did not touch."""
+        self.over()
+        self.h.run("acknowledge-scale", "--batch", "B1", "--note", "deferred")
+        self.assertEqual(0, self.grow())
+        state = ga.tail_state(self.h.events())
+        self.assertIn("literature", state.get("scale_ack", {}))
 
 
 class MeasurementIsSingleSourced(unittest.TestCase):
