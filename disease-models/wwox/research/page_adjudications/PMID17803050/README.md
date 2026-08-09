@@ -37,9 +37,12 @@ rule holds and above it you are enlarging rather than looking.
 |---|---|---|---|
 | `entries[0]` | `significantly (P \x1d 0.05) higher` | **`significantly (P < 0.05) higher`** | `p03_…png` |
 | `entries[1]` | `(Ca2\x0c, Na\x0c, K\x0c, and Cl–)` | **`(Ca²⁺, Na⁺, K⁺, and Cl⁻)`** | `p03_…png` |
-| `entries[25]` | `BUN … 12.6 q 4.3 / 40.3 q 3.7c` | **`12.6 ± 4.3 / 40.3 ± 3.7ᶜ`** | `p04_table2_…png` |
-| `entries[26]` | `GLU … 169.0 q 26.7 / 145.4 q 26.5` | **`169.0 ± 26.7 / 145.4 ± 26.5`** | `p04_table2_…png` |
-| `entries[27]` | `Brain 1426.4 q 45.6 / 1338.3 q 107.2c` | **`1426.4 ± 45.6 / 1338.3 ± 107.2ᶜ`** | `p04_table1_…png` |
+| `entries[25]` | `BUN … 12.6 q 4.3 / 40.3 q 3.7c / 10.1 q 2.7 / 35.6 q 12.8d` | **`12.6 ± 4.3 / 40.3 ± 3.7ᶜ ‖ 10.1 ± 2.7 / 35.6 ± 12.8ᵈ`** | `p04_table2_…png` |
+| `entries[26]` | `GLU … 169.0 q 26.7 / 145.4 q 26.5 / 155.0 q 30.1 / 157.4 q 38.9` | **`169.0 ± 26.7 / 145.4 ± 26.5 ‖ 155.0 ± 30.1 / 157.4 ± 38.9`** | `p04_table2_…png` |
+| `entries[27]` | `Brain 1426.4 q 45.6 / 1338.3 q 107.2c / 2254.2 q 274.7 / 4542.0 q 1375.3e` | **`1426.4 ± 45.6 / 1338.3 ± 107.2ᶜ` (absolute) ‖ `2254.2 ± 274.7 / 4542.0 ± 1375.3ᵉ` (relative)** | `p04_table1_…png` |
+
+`‖` separates the two column groups: *Female rats* from *Male rats* in Table 2, and
+*Absolute (mg)* from *Relative* in Table 1. Both are visible in the images.
 
 Mappings confirmed on the page: `U+001D` → `<`, `U+000C` → superscript `⁺`, `–` → superscript
 `⁻`, `q` → `±`. These match the substitution map independently established across the corpus.
@@ -69,11 +72,37 @@ the corrupted character.
 
 ## Artifacts
 
-| file | sha256 |
-|---|---|
-| `p03_electrolytes_and_BUN_significance.png` | `cdaf28ae2e6eb78e95d467085e6dc1a21859f33f0dacf7c0b3b890e7852a2a74` |
-| `p04_table2_BUN_CRE_GLU.png` | `c6df6dd90b50d51ef4f2327ca81ddfe9bf79b217dcd79c2fbc6b4ab3be520ca4` |
-| `p04_table1_organ_weights.png` | `b017ee91caa839d98f4d0de790cdd42b1c64127e7a58a03d6d0ddefeec436eb6` |
+| file | crop (page 4, PDF points) | sha256 |
+|---|---|---|
+| `p03_electrolytes_and_BUN_significance.png` | p3 `(300, 630, 580, 690)` @600 | `cdaf28ae2e6eb78e95d467085e6dc1a21859f33f0dacf7c0b3b890e7852a2a74` |
+| `p04_table2_BUN_CRE_GLU.png` | `(40, 480, 570, 562)` @500 | `9b2268e2d64658b113b3a45e09e93d308ec0d2639004d138012eba46f62fe90b` |
+| `p04_table1_organ_weights.png` | `(40, 62, 570, 250)` @400 | `98ebfb5061b258104c56687279b10f0c4b9220a143b3ccba3f50f5a4a2ba031e` |
+
+### 🔴 Correction, same day — the first two table crops did not contain their own span
+
+The originals were `Rect(40, 505, 320, 560)` and a matching narrow band. The BUN row extends
+to **x ≈ 524**: `12.6` sits at x=191 and `35.6` at x=510. Four values that are *inside* the
+quoted spans of `entries[25]` and `entries[26]` — the whole male-rat half of both rows — fell
+outside the image. **A locator anchored to that artifact would have been verified against
+pixels that were not there.**
+
+Adjudicated separately, the missing values are all `±` and no number or direction changes, so
+the finding below stands. But the artifact promised more than the proof it carried, which is
+the same defect class as everything else this week, committed while documenting that defect
+class. Found by an independent reviewer, not by me.
+
+Both crops now include the full row width **and the column headers**, so each image explains
+itself: Table 2 shows `Female rats` / `Male rats` over `Normal` / `Mutant`, and Table 1 shows
+`Absolute (mg)` / `Relative` over the same pair — which is what makes `entries[27]`'s
+absolute-versus-relative proposition readable from the image alone rather than only from the
+locator's anchor text.
+
+**The general rule this earns, for when the 24 are re-anchored:** *an adjudication artifact
+must contain the entire span it adjudicates.* Unlike most of what this repository checks by
+argument, this one is **machine-verifiable** — the crop rectangle against the span rectangle
+on the page, both of which `search_for` already returns. Building it is the check that would
+make image anchoring as strict as text anchoring, and image anchoring is currently the looser
+of the two. Not now: at re-anchoring time, because that is when it is load-bearing.
 
 Source PDF: `files/fulltext/PMID17803050_Suzuki2007.pdf`,
 `32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69`.
