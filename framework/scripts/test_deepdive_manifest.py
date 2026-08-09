@@ -205,6 +205,104 @@ class EntriesMustBeUsable(unittest.TestCase):
             )
             self.assertEqual(errors, [], "a punctuation-only split must still fold cleanly")
 
+    # 🔴 The first repair asked the wrong question. It asked "does the SNIPPET look risky?"
+    # The question that decides correctness is "does normalising change the answer?" — and
+    # the four cases below all answer yes while the snippet itself looks perfectly innocent.
+    # Deletion, not substitution, is the dangerous direction: a quote that has LOST a
+    # character carries nothing decisive to trigger a refusal.
+
+    def test_a_deleted_comparator_cannot_verify_against_a_source_that_has_one(self) -> None:
+        """The direction the first repair missed entirely.
+
+        `(P 0.05)` holds no comparator, so no snippet-inspection rule can flag it — and it
+        folds onto exactly the same key as the `(P < 0.05)` the source actually states.
+        """
+        with TemporaryDirectory() as temporary:
+            errors, _ = self._comparator_fixture(
+                Path(temporary),
+                body="Levels were significantly (P &lt; 0.05) higher in mutants than controls.",
+                snippet="Levels were significantly (P 0.05) higher in mutants than controls.",
+            )
+            self.assertNotEqual(
+                errors, [],
+                "a quote whose comparator is GONE must not verify against a source that has "
+                "one; nothing about the snippet looks risky, which is the whole problem",
+            )
+
+    def test_a_c0_separator_is_not_whitespace_and_cannot_be_normalised_away(self) -> None:
+        """`'\\x1d'.isspace()` is True, so `str.split()` silently eats the corruption.
+
+        This is why the 17803050 locator is stamped `strict`: both sides normalise to the
+        same string. A C0 separator is not whitespace in any typography — it is a glyph that
+        did not survive extraction.
+        """
+        with TemporaryDirectory() as temporary:
+            errors, _ = self._comparator_fixture(
+                Path(temporary),
+                body="Values were significantly (P \x1d 0.023) lower in the mutant cohort.",
+                snippet="Values were significantly (P 0.023) lower in the mutant cohort.",
+            )
+            self.assertNotEqual(
+                errors, [], "a C0 separator must never be treated as collapsible whitespace")
+
+    def test_a_text_artifact_containing_c0_controls_is_refused_outright(self) -> None:
+        """A declared surface holding C0 controls is SUSPECT: refused, not repaired.
+
+        Normalising it would launder the defect into every quote drawn from it.
+        """
+        # A .txt derived from a PDF is where this defect actually lives — an XML carrying a
+        # C0 control is not well-formed and already fails to parse, which is fail-closed but
+        # by a different route and would not exercise this check.
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            relative = "staging/derived.txt"
+            artifact = root / relative
+            artifact.parent.mkdir(parents=True, exist_ok=True)
+            artifact.write_text(
+                "Values were significantly (P \x1d 0.023) lower in the mutant cohort here.",
+                encoding="utf-8")
+            manifest = schema_v2(relative)
+            manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+                artifact.read_bytes()).hexdigest()
+            entry = manifest["verbatim_locators"]["entries"][0]
+            entry["snippet"] = "Values were significantly (P 0.023) lower in the mutant cohort."
+            entry["surface"] = "body"
+            errors, _ = gate.validate(manifest, root=root, verify_artifacts=True)
+            self.assertTrue(
+                any("SUSPECT" in error for error in errors),
+                f"the artifact itself must be refused as a verification surface; got {errors}",
+            )
+
+    def test_a_stripped_charge_cannot_verify_against_the_ion(self) -> None:
+        """`Ca²⁺` folds to `Ca2`, and so does the plain text `Ca2`. The charge vanishes."""
+        with TemporaryDirectory() as temporary:
+            errors, _ = self._comparator_fixture(
+                Path(temporary),
+                body="Concentrations of the divalent cation Ca²⁺ were comparable across groups.",
+                snippet="Concentrations of the divalent cation Ca2 were comparable across groups.",
+            )
+            self.assertNotEqual(
+                errors, [], "a stripped ionic charge must not verify against the charged ion")
+
+    def test_the_normaliser_never_treats_a_c0_control_as_whitespace(self) -> None:
+        """A unit-level invariant, deliberately independent of the SUSPECT surface check.
+
+        Mutation-testing showed the two defences overlap: with the surface check in place,
+        reverting the normaliser to `str.split()` escaped every other test. Overlapping
+        defences are fine; a defence that exists ONLY as a side effect of another is not,
+        because the day the outer one is narrowed the inner one silently stops holding.
+        """
+        self.assertIn(
+            "\x1d",
+            gate._normalise_text("Values were significantly (P \x1d 0.023) lower."),
+            "str.split() and \\s both consume C0 separators; the whitespace class must be "
+            "explicit so the corruption survives to reach the SUSPECT check",
+        )
+        self.assertEqual(
+            gate._normalise_text("a   b\tc\nd"), "a b c d",
+            "real presentation whitespace, including NBSP, must still collapse",
+        )
+
     def test_strict_match_is_preferred_over_folding(self) -> None:
         """An intact quote carrying comparators verifies without ever reaching the fold."""
         sentence = "Upregulation exceeded > 1.5 fold (p < .05) across both replicates."

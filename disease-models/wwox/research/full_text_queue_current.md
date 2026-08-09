@@ -608,7 +608,30 @@ come `abstract_only` **senza receipt**. Se fosse stato accettato come lettura, "
 sarebbe entrato nel modello come dato — e non lo è. Correzioni isolate in
 `staging/commit_candidate_20260806_17803050.md`.
 
----
+**🔴 RIAPERTO 2026-08-09 — LA SUPERFICIE TESTUALE DI QUESTA LETTURA È RIFIUTATA.**
+**Questa lettura è ora nello stesso stato di `FT-044` (PMID 33914858).**
+
+L'artefatto `files/fulltext/PMID17803050_Suzuki2007.html` è una trascrizione del text layer
+del PDF, e quel text layer è difettoso: contiene **34 corruzioni note** in cui un carattere di
+confronto è stato sostituito dal separatore C0 `U+001D`. Il paper stampa `(P < 0.023)`;
+l'artefatto dice `(P \x1d 0.023)`; il locator persistito dice `(P  0.05)`.
+
+**Perché nessun controllo l'aveva vista.** `_normalise_text` usava `str.split()`, e in Python
+`'\x1d'.isspace()` è `True`: il separatore veniva collassato a spazio su *entrambi* i lati,
+artefatto e citazione normalizzavano alla stessa stringa, e il match usciva timbrato
+**`strict`** — il livello che significa "sequenza di caratteri dell'autore trovata intatta".
+Il normalizzatore lavava via il difetto che avrebbe dovuto esporre.
+
+**Conseguenza sui 29 locator testuali di questa lettura:** non sono verificabili. Il
+validatore ora rifiuta l'intera superficie (`SUSPECT text surface`) invece di normalizzarla,
+perché ripulire i controlli spalmerebbe il difetto su ogni citazione tratta da lì e le
+citazioni tornerebbero a verificare — contro un documento che non è più il paper.
+
+**La superficie va RI-DERIVATA dalla fonte, non corretta a mano.** Una correzione manuale su
+34 punti è indistinguibile da una riscrittura e non è verificabile da nulla. Finché non è
+ri-derivata, `CLAIM 038` e `CLAIM 039` poggiano su locator non verificabili: le *conclusioni*
+non sono in discussione — restano lette da un umano sul documento — ma la loro **catena di
+prova** sì.
 
 ## FT-042
 **Paper:** PMID 19500159 — Suzuki et al. 2009, *Genes Brain Behav* 8:650-660
@@ -736,6 +759,35 @@ match strict per primo; fallback alfanumerico **solo** se lo snippet non porta c
 uguaglianze o numeri con segno; altrimenti `UNVERIFIABLE_PUNCTUATION` e il locator non passa.
 Costo misurato sui 118 locator persistiti: **96 strict · 13 folded · 9 refused**. I 9 vanno
 ricatturati dal documento. Mutation-test 4/4, zero fughe, in entrambe le direzioni.
+
+**🔴 SECONDA RITRATTAZIONE APPEND-ONLY 2026-08-09 — la ritrattazione precedente era a sua
+volta parziale, ed è il tipo di errore peggiore: una correzione che sembra chiudere il caso.**
+
+La riparazione descritta sopra copriva la **sostituzione** e non la **cancellazione**.
+Chiedeva *«lo snippet sembra rischioso?»*, ispezionandolo per comparatori. Ma uno snippet che
+ha **perso** il comparatore non ne contiene alcuno: `(P 0.05)` non ha nulla da segnalare, e
+si ripiega esattamente sulla stessa chiave del `(P < 0.05)` che la fonte afferma. La
+direzione pericolosa era quella scoperta.
+
+E il locator citato qui sopra — `(P  0.05)` in `PMID17803050.json` — **non era `folded`: era
+`strict`**, per la ragione descritta in `FT-041`. Dire «il matcher ora lo copre» era falso.
+
+**La domanda giusta non è «lo snippet sembra rischioso?» ma «normalizzare cambia la
+risposta?»** La seconda riparazione la implementa: il fold costruisce la chiave alfanumerica
+**conservando gli offset originali**, localizza il match, ritaglia dallo *artifact* lo span
+corrispondente e confronta la sequenza di caratteri decisivi dei due lati. Cancellazione,
+sostituzione e segno inserito cambiano tutti quella sequenza, quindi sono tutti intercettati —
+esatto in entrambe le direzioni, e indipendente da quanto lo snippet «sembri» innocuo.
+
+In più: `_normalise_text` non usa più `str.split()` ma una **classe di whitespace esplicita**
+(`[ \t\n\r\f\v   ]`), e un `article_text` che contiene controlli C0 è una
+superficie `SUSPECT` **rifiutata alla validazione**, mai normalizzata.
+
+**Nuova misura sui 118:** **79 strict · 10 folded · 29 non verificabili** — i 29 sono l'intera
+superficie di `PMID17803050`, ora rifiutata in blocco. Mutation-test 6/6, zero fughe. La prima
+passata ne aveva 4/6 con una fuga scoperta solo aggiungendo un test unitario sul
+normalizzatore: le due difese si sovrapponevano, e una difesa che esiste solo come effetto
+collaterale di un'altra smette di valere il giorno in cui l'altra viene ristretta.
 **Debito:** aperto e **non** parzialmente saldato. Non esiste lettura parziale di questo
 paper da cui ripartire: nessun locator è stato estratto dalla superficie sospetta, per
 scelta. Riaprire **solo dopo** il gate sulla superficie testuale.

@@ -113,9 +113,28 @@ def _waived(section: Any, name: str, errors: list[str]) -> bool:
     return True
 
 
+# 🔴 An EXPLICIT whitespace class. Never `str.split()`, and never `\s`.
+#
+# Python's definition of whitespace includes the C0 separators — `'\x1d'.isspace()` is True —
+# so `" ".join(value.split())` silently swallows them. That is not a nicety: PMID 17803050's
+# extracted text renders `(P < 0.023)` as `(P \x1d 0.023)`, and `str.split()` turns that into
+# `(P 0.023)`. Both the corrupt artifact and a quote copying the corruption normalise to the
+# same string, so the match is stamped `strict` and the missing comparator disappears from the
+# record. The normaliser was laundering the defect it was supposed to expose.
+#
+# A C0 separator is not whitespace in any typography. It is a glyph that did not survive
+# extraction, and it must reach the SUSPECT check below intact.
+PRESENTATION_WHITESPACE = re.compile(r"[ \t\n\r\f\v   ]+")
+
+# C0 controls that are never legitimate text. Tab, newline and carriage return are excluded
+# because they are real layout characters; everything else here is extraction damage.
+C0_CONTROL = re.compile(r"[\x00-\x08\x0b\x0c\x0e-\x1f\x7f]")
+
+
 def _normalise_text(value: str) -> str:
     """Normalise presentation whitespace without weakening exact-word matching."""
-    return " ".join(html.unescape(value).split())
+    unified = unicodedata.normalize("NFKC", html.unescape(value))
+    return PRESENTATION_WHITESPACE.sub(" ", unified).strip()
 
 
 def _match_key(value: str) -> str:
@@ -149,26 +168,67 @@ def _carries_decisive_punctuation(value: str) -> bool:
         SIGNED_DIGIT_RE.search(normal))
 
 
+def _fold_with_offsets(value: str) -> tuple[str, str, list[int]]:
+    """Return ``(normalised, alphanumeric key, offset of each kept character)``.
+
+    The offsets are what make the fold auditable: they let the caller walk back from a match
+    in the folded key to the exact span of the original text it came from, and compare what
+    the fold threw away on each side.
+    """
+    normal = _normalise_text(value)
+    kept: list[str] = []
+    offsets: list[int] = []
+    for index, character in enumerate(normal):
+        if character.isalnum():
+            kept.append(character)
+            offsets.append(index)
+    return normal, "".join(kept), offsets
+
+
+def _decisive_sequence(value: str) -> tuple[str, ...]:
+    """The ordered decisive characters of a span — what the fold would silently discard."""
+    return tuple(character for character in value if character in DECISIVE_CHARACTERS)
+
+
 def _quote_matches(snippet: str, text: str) -> tuple[bool, str]:
     """Verify a quote against an artifact surface. Returns ``(matched, mode)``.
 
-    ``mode`` is one of:
-
     ``strict``   the authored character sequence was found intact — the only unqualified pass.
-    ``folded``   found only after discarding punctuation. Permitted **solely** because PMC
-                 inline markup genuinely splits ``(Figure 3E)`` across text nodes, and only
-                 when the snippet carries nothing decisive to lose.
-    ``refused``  strict failed and the snippet contains a comparator, an equality or a signed
-                 number. The fold would answer a question it cannot see, so it is not run.
+    ``folded``   found after discarding punctuation, **and** the decisive characters of the
+                 quote match those of the exact span it was found in.
+    ``refused``  the fold located the words but the decisive characters disagree.
 
-    Strict is attempted first, always. The fold is a concession to markup, never a licence to
-    ignore the characters on which a finding turns.
+    🔴 **The question is not "does the snippet look risky?" — it is "does normalising change
+    the answer?"** The first version of this asked the former, by inspecting the snippet for
+    comparators. That catches SUBSTITUTION and is blind to DELETION, which is the dangerous
+    direction: `(P 0.05)` carries no comparator to notice, and folds onto exactly the same key
+    as the `(P < 0.05)` the source states. Nothing about such a quote looks wrong.
+
+    So the fold is now checked against its own evidence. The match is located in the folded
+    key, the corresponding span of the original artifact text is cut back out through the
+    offset map, and the decisive characters of that span are compared with the snippet's. A
+    deletion, a substitution and an inserted sign are all caught, because all three change the
+    sequence being compared rather than the appearance of the quote.
     """
-    if _normalise_text(snippet) in _normalise_text(text):
+    snippet_normal = _normalise_text(snippet)
+    text_normal = _normalise_text(text)
+    if snippet_normal in text_normal:
         return True, "strict"
-    if _carries_decisive_punctuation(snippet):
+
+    _snippet_normal, snippet_key, _snippet_offsets = _fold_with_offsets(snippet)
+    text_normal_folded, text_key, text_offsets = _fold_with_offsets(text)
+    if not snippet_key:
+        return False, "folded"
+    position = text_key.find(snippet_key)
+    if position < 0:
+        return False, "folded"
+
+    start = text_offsets[position]
+    end = text_offsets[position + len(snippet_key) - 1] + 1
+    span = text_normal_folded[start:end]
+    if _decisive_sequence(span) != _decisive_sequence(snippet_normal):
         return False, "refused"
-    return _match_key(snippet) in _match_key(text), "folded"
+    return True, "folded"
 
 
 def _xml_surfaces(raw: bytes) -> tuple[str, str]:
@@ -241,6 +301,28 @@ def _html_surfaces(raw: bytes) -> tuple[str, str]:
     return _normalise_text(" ".join(parser.body)), _normalise_text(" ".join(parser.abstract))
 
 
+def _refuse_suspect_surface(path: Path, *parts: str) -> None:
+    """A declared text surface holding C0 controls is SUSPECT and is refused, not cleaned.
+
+    🔴 Refused, never normalised. Stripping the controls would launder the defect into every
+    quote drawn from the surface, and the quotes would then verify — against a document that
+    no longer matches the paper. A C0 separator is not stray whitespace; it is the residue of
+    a glyph that did not survive extraction, and on 2026-08-09 the glyph it replaced was the
+    `<` in `(P < 0.023)`. The surface has to be re-derived from the source, which is work a
+    validator cannot do and must not pretend to have done.
+    """
+    for part in parts:
+        found = C0_CONTROL.search(part)
+        if found:
+            raise ValueError(
+                f"SUSPECT text surface: {path.name} contains the C0 control "
+                f"U+{ord(found.group()):04X} at offset {found.start()}. A control character is "
+                f"not whitespace — it is a glyph that did not survive extraction, so every "
+                f"quote taken from this surface is unverifiable. Re-derive the artifact from "
+                f"the source; do not strip the controls"
+            )
+
+
 def _artifact_text(path: Path, kind: str) -> tuple[str, str]:
     """Return (body/supplement text, abstract text) for strict write-time verification."""
     suffix = path.suffix.lower()
@@ -248,13 +330,22 @@ def _artifact_text(path: Path, kind: str) -> tuple[str, str]:
         with zipfile.ZipFile(path) as archive:
             raw = archive.read("word/document.xml")
         body, _abstract = _xml_surfaces(raw)
+        _refuse_suspect_surface(path, body)
         return body, ""
     if suffix == ".xml":
-        return _xml_surfaces(path.read_bytes())
+        body, abstract = _xml_surfaces(path.read_bytes())
+        _refuse_suspect_surface(path, body, abstract)
+        return body, abstract
     if suffix in {".html", ".htm"}:
-        return _html_surfaces(path.read_bytes())
+        body, abstract = _html_surfaces(path.read_bytes())
+        _refuse_suspect_surface(path, body, abstract)
+        return body, abstract
     if suffix in {".txt", ".md"}:
-        return _normalise_text(path.read_text(encoding="utf-8")), ""
+        # Read the raw text and screen it BEFORE normalising: the check must see the file as
+        # it is, not as the normaliser would like it to be.
+        raw_text = path.read_text(encoding="utf-8")
+        _refuse_suspect_surface(path, raw_text)
+        return _normalise_text(raw_text), ""
     if kind in {"article_text", "supplement_text", "table"}:
         raise ValueError(f"text verification is unsupported for {path.suffix or 'this file type'}")
     return "", ""
