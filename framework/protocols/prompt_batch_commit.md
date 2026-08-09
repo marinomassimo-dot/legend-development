@@ -175,6 +175,32 @@ Modify `working_model_current.md`.
 - Update the WM change log
 - Verify that every cited claim exists and has a compatible status
 
+#### 4.7 Regenerate the derived surfaces (before the LINT sees the result)
+
+Any file that is *generated from* the registries must be regenerated here, inside the
+snapshot-protected window, so that a failure to regenerate aborts the batch like any other
+propagation failure.
+
+```bash
+python3 framework/scripts/coverage_report.py --disease wwox \
+    --out disease-models/wwox/registries/coverage_report.md
+python3 framework/scripts/batch_queue.py --disease wwox \
+    --out disease-models/wwox/registries/batch_queue.md
+```
+
+🔴 **Why this is a phase and not a reminder.** `coverage_report.md` declares itself generated
+and a regression re-derives it and fails when it has drifted. Until this step existed, that
+regression could only fire *after* the fact: a batch propagated, the report went stale, the
+commit completed, and the release suite reported the drift to whoever ran it next. The check
+was doing its job at the wrong moment — it announced a defect the protocol had just been
+allowed to create. Regenerating inside Phase 4 means the drift cannot outlive the batch that
+caused it.
+
+**Derived surfaces that are computed on demand need nothing here.** `trace_claim_foundation`
+and `build_evidence_index` write no file and are rebuilt from the registries on every call,
+which is why they were designed that way: a derived artifact that is never stored cannot go
+stale. Only add a command above when a generated file is actually committed.
+
 > **If even a single change fails: ABORT + restore from the Phase 3 snapshot.**
 
 ---

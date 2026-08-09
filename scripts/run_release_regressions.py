@@ -30,6 +30,7 @@ TESTS = (
     "scripts/test_no_closed_world_assertions_on_live_state.py",
     "scripts/test_abstract_corpus_is_not_evidence.py",
     "scripts/test_release_surface.py",
+    "scripts/test_generated_surfaces_are_regenerated.py",
     "scripts/test_structured_data_integrity.py",
     "scripts/test_external_manifest.py",
     "scripts/test_cli_smoke.py",
