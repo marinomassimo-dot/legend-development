@@ -124,9 +124,51 @@ def _match_key(value: str) -> str:
     PMC inline tags split ``(Figure 3E)`` and superscripts such as ``1005PPGY1008`` into
     separate text nodes. Removing non-alphanumeric presentation characters restores the
     authored character sequence while preserving wording, order, digits and case.
+
+    🔴 It does **not** preserve meaning, and the docstring above said "presentation
+    punctuation" as if every discarded character were decoration. Folding to alphanumerics
+    maps ``(P < 0.05)``, ``(P > 0.05)`` and ``(P 0.05)`` onto the single key ``P005``. On the
+    one axis where this repository has already been wrong — `CLAIM 005`, corrected over the
+    difference between "no significance marker" and "not significant" — the verifier was
+    blind, and it stamped `verified` regardless. Use `_quote_matches`, never this alone.
     """
     normal = unicodedata.normalize("NFKC", html.unescape(value))
     return "".join(character for character in normal if character.isalnum())
+
+
+# Characters whose removal can invert a scientific proposition rather than tidy it.
+# Comparators and equality decide whether a result is a result; a sign decides direction.
+DECISIVE_CHARACTERS = frozenset("<>≤≥=≠−–—-+±")
+SIGNED_DIGIT_RE = re.compile(r"[+\-−–—]\s*\d")
+
+
+def _carries_decisive_punctuation(value: str) -> bool:
+    """True when alphanumeric folding would destroy a load-bearing character."""
+    normal = unicodedata.normalize("NFKC", html.unescape(value))
+    return any(character in DECISIVE_CHARACTERS for character in normal) or bool(
+        SIGNED_DIGIT_RE.search(normal))
+
+
+def _quote_matches(snippet: str, text: str) -> tuple[bool, str]:
+    """Verify a quote against an artifact surface. Returns ``(matched, mode)``.
+
+    ``mode`` is one of:
+
+    ``strict``   the authored character sequence was found intact — the only unqualified pass.
+    ``folded``   found only after discarding punctuation. Permitted **solely** because PMC
+                 inline markup genuinely splits ``(Figure 3E)`` across text nodes, and only
+                 when the snippet carries nothing decisive to lose.
+    ``refused``  strict failed and the snippet contains a comparator, an equality or a signed
+                 number. The fold would answer a question it cannot see, so it is not run.
+
+    Strict is attempted first, always. The fold is a concession to markup, never a licence to
+    ignore the characters on which a finding turns.
+    """
+    if _normalise_text(snippet) in _normalise_text(text):
+        return True, "strict"
+    if _carries_decisive_punctuation(snippet):
+        return False, "refused"
+    return _match_key(snippet) in _match_key(text), "folded"
 
 
 def _xml_surfaces(raw: bytes) -> tuple[str, str]:
@@ -354,7 +396,6 @@ def validate(
 
     artifacts: dict[str, dict[str, str]] = {}
     text_cache: dict[str, tuple[str, str]] = {}
-    match_cache: dict[str, tuple[str, str]] = {}
     if schema_version >= 2:
         declared_artifacts = manifest.get("source_artifacts")
         if not isinstance(declared_artifacts, list) or not declared_artifacts:
@@ -487,19 +528,30 @@ def validate(
                             if artifact_path not in text_cache:
                                 text_cache[artifact_path] = _artifact_text(
                                     resolved, metadata["kind"])
-                                match_cache[artifact_path] = tuple(
-                                    _match_key(value) for value in text_cache[artifact_path])
-                            body_key, abstract_key = match_cache[artifact_path]
+                            body_text, abstract_text = text_cache[artifact_path]
                         except (OSError, KeyError, ValueError, zipfile.BadZipFile) as exc:
                             verification_failures.append(str(exc))
                             continue
-                        snippet_key = _match_key(snippet)
-                        if snippet_key in body_key:
-                            matched = True
+                        matched, mode = _quote_matches(snippet, body_text)
+                        if matched:
                             break
-                        if snippet_key in abstract_key:
+                        # The abstract probe runs whatever the body verdict was. It is
+                        # diagnostic, not permissive — it never sets `matched` — and skipping
+                        # it on a refusal would hide the single most useful thing we can tell
+                        # the author: the sentence exists, in the wrong surface.
+                        abstract_matched, _abstract_mode = _quote_matches(
+                            snippet, abstract_text)
+                        if abstract_matched:
                             verification_failures.append(
                                 "quote occurs in the abstract but not the non-abstract body")
+                        if mode == "refused":
+                            verification_failures.append(
+                                "UNVERIFIABLE_PUNCTUATION: the quote was not found with its "
+                                "characters intact, and it carries a comparator, an equality "
+                                "or a signed number. Falling back to alphanumeric matching "
+                                "would compare a string with those characters removed, which "
+                                "cannot tell '< 0.05' from '> 0.05' or from no comparator at "
+                                "all. Re-capture this quote from the document")
                     if not matched:
                         detail = "; ".join(verification_failures) or "exact text not found"
                         errors.append(
@@ -536,19 +588,23 @@ def validate(
                             if artifact_path not in text_cache:
                                 text_cache[artifact_path] = _artifact_text(
                                     resolved, metadata["kind"])
-                                match_cache[artifact_path] = tuple(
-                                    _match_key(value) for value in text_cache[artifact_path])
-                            _body_key, abstract_key = match_cache[artifact_path]
+                            _body_text, abstract_text = text_cache[artifact_path]
                         except (OSError, KeyError, ValueError, zipfile.BadZipFile) as exc:
                             abstract_failures.append(str(exc))
                             continue
-                        if not abstract_key:
+                        if not abstract_text:
                             abstract_failures.append(
                                 f"{artifact_path} exposes no abstract surface")
                             continue
-                        if _match_key(abstract_snippet) in abstract_key:
-                            abstract_matched = True
+                        abstract_matched, mode = _quote_matches(
+                            abstract_snippet, abstract_text)
+                        if abstract_matched:
                             break
+                        if mode == "refused":
+                            abstract_failures.append(
+                                "UNVERIFIABLE_PUNCTUATION: not found with its characters "
+                                "intact, and it carries a comparator, an equality or a signed "
+                                "number")
                     if not abstract_matched:
                         detail = "; ".join(abstract_failures) or "exact text not found"
                         errors.append(

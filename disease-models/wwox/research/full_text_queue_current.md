@@ -703,7 +703,39 @@ ha 7/18 ed estrae pulito, PMID 17803050 ha 5/6 ed estrae corrotto). L'unico `DAT
 **discrepanza fra pagina renderizzata e testo estratto**. Un guard non può poggiare sulla
 causa finché la causa è ignota: dovrà essere sintomatico e la pagina renderizzata dovrà
 dirimere. Dettaglio completo e riproduzione in
-`staging/finding_20260809_tounicode_extraction.md`.
+[`framework/eval/finding_20260809_text_surface_fidelity.md`](../../../framework/eval/finding_20260809_text_surface_fidelity.md).
+
+**🔴 CORREZIONE APPEND-ONLY 2026-08-09 (seconda passata) — due affermazioni di questa voce
+erano sbagliate, ed entrambe erano rassicuranti.**
+
+**(a) «Il difetto non ha raggiunto lo stato canonico» era FALSO.** L'ho scritto sulla base di
+un audit che cercava le firme sbagliate: `\x1d` e `P\s*[45]\s*0?\.\d+`. La firma reale che
+domina in questo corpus è il **comparatore assente del tutto** — non sostituito da un altro
+carattere, semplicemente sparito. `deepdive_manifests/PMID17803050.json` entries[0] cita
+`«significantly (P  0.05) higher»`, dove il paper stampa `(P < 0.05)`. Il difetto **è dentro
+un manifest persistito**, in una fonte canonica (`PAPER 059`, base di `CLAIM 038`/`CLAIM 039`).
+Il mio «242 stringhe, zero contaminate» era un falso negativo prodotto da una query, non una
+verifica. *Un audit che non trova nulla va sospettato prima di essere creduto: la prima cosa
+da verificare è che stesse cercando la cosa giusta.*
+
+**(b) Il sentinella dichiarato non intercetta quella firma**, e non per una svista nelle
+soglie: perché **la normalizzazione precede il controllo**. Il criterio veniva applicato dopo
+un passaggio che già scartava la punteggiatura, quindi guardava una stringa da cui il
+comparatore era stato tolto — cercava un carattere sbagliato in un testo da cui ogni
+carattere di quel tipo era già stato rimosso.
+
+**Firma aggiunta al sentinella:** `\([Pp]\s+\d` — «parentesi, P, spazio, cifra», cioè una
+soglia statistica senza comparatore. Va valutata **sul testo grezzo**, prima di qualunque
+normalizzazione.
+
+**Difetto correlato, riparato oggi nel verificatore** (`deepdive_manifest._match_key`):
+la chiave di match scartava *ogni* carattere non alfanumerico, mappando `(P < 0.05)`,
+`(P > 0.05)` e `(P 0.05)` sulla stessa chiave `P005`. Il verificatore era cieco esattamente
+sull'asse su cui si decide se un risultato è un risultato — lo stesso di `CLAIM 005`. Ora:
+match strict per primo; fallback alfanumerico **solo** se lo snippet non porta comparatori,
+uguaglianze o numeri con segno; altrimenti `UNVERIFIABLE_PUNCTUATION` e il locator non passa.
+Costo misurato sui 118 locator persistiti: **96 strict · 13 folded · 9 refused**. I 9 vanno
+ricatturati dal documento. Mutation-test 4/4, zero fughe, in entrambe le direzioni.
 **Debito:** aperto e **non** parzialmente saldato. Non esiste lettura parziale di questo
 paper da cui ripartire: nessun locator è stato estratto dalla superficie sospetta, per
 scelta. Riaprire **solo dopo** il gate sulla superficie testuale.

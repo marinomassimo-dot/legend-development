@@ -147,6 +147,71 @@ class EntriesMustBeUsable(unittest.TestCase):
             errors, _ = gate.validate(manifest, root=root, verify_artifacts=True)
             self.assertTrue(any("abstract but not the non-abstract body" in e for e in errors))
 
+    def _comparator_fixture(self, root: Path, body: str, snippet: str):
+        """A one-locator schema-v2 manifest over a body of our choosing."""
+        relative = "files/fulltext/paper.xml"
+        artifact = root / relative
+        artifact.parent.mkdir(parents=True, exist_ok=True)
+        artifact.write_text(
+            f"<article><abstract><p>Unrelated abstract sentence of ample length.</p>"
+            f"</abstract><body><p>{body}</p></body></article>", encoding="utf-8")
+        manifest = schema_v2(relative)
+        manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+            artifact.read_bytes()).hexdigest()
+        entry = manifest["verbatim_locators"]["entries"][0]
+        entry["snippet"] = snippet
+        entry["surface"] = "body"
+        return gate.validate(manifest, root=root, verify_artifacts=True)
+
+    def test_a_comparator_cannot_be_folded_away(self) -> None:
+        """🔴 The defect this repository was one manifest away from institutionalising.
+
+        Alphanumeric folding maps `(P < 0.05)`, `(P > 0.05)` and `(P 0.05)` onto `P005`. A
+        quote claiming significance would verify against a source stating the opposite, and
+        the gate would stamp it `verified`. That is the CLAIM 005 axis exactly.
+        """
+        with TemporaryDirectory() as temporary:
+            errors, _ = self._comparator_fixture(
+                Path(temporary),
+                body="The difference was not significant (P &gt; 0.05) in either cohort here.",
+                snippet="The difference was not significant (P < 0.05) in either cohort here.",
+            )
+            self.assertTrue(
+                any("UNVERIFIABLE_PUNCTUATION" in error for error in errors),
+                f"a flipped comparator must never verify; got {errors}",
+            )
+
+    def test_an_absent_comparator_cannot_be_folded_away(self) -> None:
+        """The 2026-08-09 corpus case: the source lost the glyph, the quote copied the loss."""
+        with TemporaryDirectory() as temporary:
+            errors, _ = self._comparator_fixture(
+                Path(temporary),
+                body="Levels were significantly (P 0.05) higher in mutant than normal rats.",
+                snippet="Levels were significantly (P < 0.05) higher in mutant than normal rats.",
+            )
+            self.assertTrue(any("UNVERIFIABLE_PUNCTUATION" in error for error in errors), errors)
+
+    def test_markup_split_quotes_without_comparators_still_verify(self) -> None:
+        """The fold is a real concession to PMC markup and must survive the repair.
+
+        If tightening the matcher had broken this, the fix would have traded a silent false
+        positive for a noisy false negative, and sessions would learn to route around it.
+        """
+        with TemporaryDirectory() as temporary:
+            errors, _ = self._comparator_fixture(
+                Path(temporary),
+                body="Expression rose in the ventricular zone (Figure <italic>3E</italic>).",
+                snippet="Expression rose in the ventricular zone (Figure 3E).",
+            )
+            self.assertEqual(errors, [], "a punctuation-only split must still fold cleanly")
+
+    def test_strict_match_is_preferred_over_folding(self) -> None:
+        """An intact quote carrying comparators verifies without ever reaching the fold."""
+        sentence = "Upregulation exceeded > 1.5 fold (p < .05) across both replicates."
+        matched, mode = gate._quote_matches(sentence, f"Context. {sentence} More context.")
+        self.assertTrue(matched)
+        self.assertEqual(mode, "strict")
+
     def test_strict_verification_refuses_fingerprint_mismatch(self) -> None:
         with TemporaryDirectory() as temporary:
             root = Path(temporary)

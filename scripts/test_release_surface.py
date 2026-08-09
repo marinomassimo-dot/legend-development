@@ -194,10 +194,16 @@ class ReleaseSurfaceTests(unittest.TestCase):
         self.assertEqual([], symlinks, "Symlinks require explicit release review")
         self.assertEqual([], oversized, "Oversized files:\n" + "\n".join(oversized))
 
+    # 🔴 These two were the last `rglob` walkers in this file. The comment above already says
+    # it — "what ships is what git tracks" — and `tracked_paths()` was already here, used by
+    # two other checks. The fourth instance in three days of a pattern solved at one site and
+    # not carried to the next. It bit on 2026-08-09: five untracked scratch scripts in an
+    # ignored directory turned this suite red, and the "fix" was to chmod files that will
+    # never ship, to satisfy a release rule that was never about them. A release check that
+    # polices private scratch space trains people to make the working tree lie.
     def test_paths_have_no_case_or_unicode_normalization_collisions(self) -> None:
         folded: dict[str, list[str]] = defaultdict(list)
-        for path in ROOT.rglob("*"):
-            relative = path.relative_to(ROOT).as_posix()
+        for relative in tracked_paths():
             key = unicodedata.normalize("NFC", relative).casefold()
             folded[key].append(relative)
         collisions = [items for items in folded.values() if len(items) > 1]
@@ -205,11 +211,14 @@ class ReleaseSurfaceTests(unittest.TestCase):
 
     def test_shebang_python_entrypoints_are_executable(self) -> None:
         failures = []
-        for path in ROOT.rglob("*.py"):
-            if not path.read_bytes().startswith(b"#!"):
+        for relative in sorted(tracked_paths()):
+            if not relative.endswith(".py"):
+                continue
+            path = ROOT / relative
+            if not path.is_file() or not path.read_bytes().startswith(b"#!"):
                 continue
             if not path.stat().st_mode & 0o111:
-                failures.append(path.relative_to(ROOT).as_posix())
+                failures.append(relative)
         self.assertEqual(
             [],
             failures,
