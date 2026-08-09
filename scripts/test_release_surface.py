@@ -3,10 +3,13 @@
 
 from __future__ import annotations
 
+import importlib.util
 import json
+import os
 import re
 import shutil
 import subprocess
+import sys
 import tempfile
 import unittest
 import unicodedata
@@ -15,6 +18,14 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
+
+# One definition of "this directory is another checkout", shared with the publication gate.
+_GATE_PATH = Path(__file__).with_name("public_release_gate.py")
+_SPEC = importlib.util.spec_from_file_location("public_release_gate", _GATE_PATH)
+assert _SPEC and _SPEC.loader
+GATE = importlib.util.module_from_spec(_SPEC)
+sys.modules[_SPEC.name] = GATE
+_SPEC.loader.exec_module(GATE)
 EXPECTED_IGNORED_PARTS = {
     ".DS_Store",
     "__pycache__",
@@ -69,10 +80,32 @@ def is_expected_generated_path(relative: Path) -> bool:
     )
 
 
+def walk_this_checkout(root: Path) -> list[Path]:
+    """Every file of *this* checkout, refusing to descend into another one.
+
+    🔴 This question has to be asked of the disk — that is the whole point of the audit, and
+    an exemption keyed on `.gitignore` would answer it in a circle. But a checkout mounted
+    inside this one is a different repository's disk, and walking into it made every one of
+    its files look like a public file this repository had silently hidden: 351 of them, once
+    per-session worktrees appeared under `.claude/worktrees/`.
+
+    Pruning is the only correct instrument here, and `is_nested_checkout` is imported rather
+    than re-implemented because a second copy of "what is a checkout" is how the first one
+    stops being maintained.
+    """
+    found: list[Path] = []
+    for dirpath, dirnames, filenames in os.walk(root):
+        here = Path(dirpath)
+        dirnames[:] = [name for name in dirnames
+                       if not GATE.is_nested_checkout(here / name)]
+        found.extend(here / name for name in filenames)
+    return found
+
+
 def unexpectedly_ignored_files() -> list[str]:
     files = sorted(
         path.relative_to(ROOT)
-        for path in ROOT.rglob("*")
+        for path in walk_this_checkout(ROOT)
         if path.is_file() and path.name != ".gitignore"
     )
     with tempfile.TemporaryDirectory(prefix="legend-ignore-audit-") as temporary:
@@ -150,6 +183,32 @@ class ReleaseSurfaceTests(unittest.TestCase):
             ignored,
             "Public files hidden by .gitignore:\n" + "\n".join(ignored),
         )
+
+    def test_the_ignore_audit_does_not_walk_into_another_checkout(self) -> None:
+        """Built here rather than found in the ambient tree.
+
+        🔴 The audit must ask the disk, so no ignore rule can exempt anything from it — which
+        means pruning is the only instrument available, and the only one that can be got
+        wrong silently. When per-session worktrees appeared, 351 files of another checkout
+        were reported as public files this repository had quietly hidden. The fix was then
+        verified from inside a worktree, where a nested checkout cannot exist; the suite was
+        green because the environment could not exhibit the defect, not because it was gone.
+        """
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        root = Path(temp.name)
+        (root / "own.md").write_text("# Ours\n", encoding="utf-8")
+        nested = root / ".claude" / "worktrees" / "session"
+        nested.mkdir(parents=True)
+        subprocess.run(["git", "init", "-q"], cwd=nested, check=True)
+        stray = nested / "hidden.md"
+        stray.write_text("# Another repository's file\n", encoding="utf-8")
+
+        walked = walk_this_checkout(root)
+        self.assertIn(root / "own.md", walked)
+        self.assertNotIn(stray, walked)
+        self.assertIn(stray, [p for p in root.rglob("*") if p.is_file()],
+                      "the fixture must be capable of failing, or it proves nothing")
 
     def test_required_release_files_exist(self) -> None:
         missing = sorted(
