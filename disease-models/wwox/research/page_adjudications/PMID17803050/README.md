@@ -124,8 +124,47 @@ one root: *a quote fragment does not identify a location.*
 Source PDF: `files/fulltext/PMID17803050_Suzuki2007.pdf`,
 `32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69`.
 
+## The other 23, re-anchored
+
+Every remaining locator now resolves to a **needle unique on its page** and a crop verified by
+`crop_contains_span` — not by eye. One crop per page, because renders are per region:
+
+| artifact | page | locators | crop | containment |
+|---|---:|---:|---|---|
+| `p02_reanchor_6_locators.png` | 2 | 6 | `(86, 309, 583, 605)` | ✅ all |
+| `p05_reanchor_3_locators.png` | 5 | 3 | `(170, 549, 522, 721)` | ✅ all |
+| `p08_reanchor_14_locators.png` | 8 | 14 | `(43, 160, 558, 689)` | ✅ all |
+
+Needles were derived mechanically: the shortest run of words from each snippet that
+`search_for` returns exactly once on its page. All 23 resolved.
+
+## 🔴 The count was wrong: six corrupted, not five
+
+`entries[28]` was classified clean and is not. Its snippet — `Total rats 228 83 233.3 77.8
+0.47` — stops at the χ² value and carries no corrupted character. But its **anchor** states
+*"chi-square 0.47, P > 0.50"*, and that row reads `0.47 \x1f0.50` in the text layer: the `>`
+is a control character, and the column header itself is `D2` for `χ²`.
+
+**The classification counted corruption inside the `snippet` and not inside the `anchor`** —
+yet the anchor is part of what the locator asserts, and here it asserts the one thing the text
+surface cannot support. It surfaced only because it was the single locator for which no unique
+needle could be derived: its words are all digits. A defect found by the failure of an
+unrelated mechanism is a defect that was not being looked for.
+
+Adjudicated on the page (`p08_table3_chi_squared.png`, crop `(40, 62, 570, 150)` @500):
+Table 3 prints **`χ²`** and **`>0.50`**, **`>0.90`**, **`>0.25`**. The anchor's claim is
+correct and is now provable. Mappings confirmed again: `D2` → `χ²`, `U+001F` → `>`.
+
+| file | sha256 (first 16) |
+|---|---|
+| `p02_reanchor_6_locators.png` | `609374d76c0266d9…` |
+| `p05_reanchor_3_locators.png` | `144a48ec1d8c62da…` |
+| `p08_reanchor_14_locators.png` | `2ef5446ad0d1b3f8…` |
+| `p08_table3_chi_squared.png` | `56cb858e4b1e25bb…` |
+
 ## What remains before the gate lifts
 
-The 24 clean locators still need re-anchoring, and the manifest still declares the refused
-`.html` surface. That edit is a canonical write and waits for `BATCH_COMMIT`, which is exactly
-what `batch_commit_gate: BLOCK_BATCH_COMMIT` is holding.
+All 29 locators now have a page anchor whose containment is machine-verified. What is still
+owed is the **canonical write**: replacing the refused `.html` surface in the manifest with
+these image anchors, and recording the needle and crop for each. That is a `BATCH_COMMIT`
+edit, which is exactly what `batch_commit_gate: BLOCK_BATCH_COMMIT` is holding.
