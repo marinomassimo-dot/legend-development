@@ -72,11 +72,40 @@ def tracked_public_content_roots() -> frozenset[str]:
     )
 
 
+def recipe_accounted_images() -> frozenset[str]:
+    """Images an `adjudications.json` declares, and therefore hides on purpose.
+
+    🔴 A page-adjudication crop is deliberately kept out of the public edition: it
+    reproduces the author's printed characters, and the articles adjudicated so far carry
+    all-rights-reserved notices. But it sits beside a tracked `README.md` and a tracked
+    recipe, so from this audit's point of view it looks exactly like a public file an
+    ignore rule quietly swallowed — which is the accident this test exists to catch.
+
+    The exemption is **derived from the recipe, never hand-listed**: only a file some
+    `adjudications.json` names, with a digest, is allowed to be hidden. An image dropped
+    into one of these directories without a recipe still fails, and that is the real
+    hazard — a reproduction shipped or hidden with nothing accounting for it.
+    """
+    accounted: set[str] = set()
+    for recipe in ROOT.glob("disease-models/*/research/page_adjudications/*/adjudications.json"):
+        try:
+            declared = json.loads(recipe.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        directory = recipe.parent.relative_to(ROOT)
+        for artifact in declared.get("artifacts", []):
+            name = artifact.get("file")
+            if name and artifact.get("sha256"):
+                accounted.add((directory / name).as_posix())
+    return frozenset(accounted)
+
+
 def is_expected_generated_path(relative: Path) -> bool:
     return (
         any(part in EXPECTED_IGNORED_PARTS for part in relative.parts)
         or relative.suffix in EXPECTED_IGNORED_SUFFIXES
         or relative.parts[:1] == ("md-output",)
+        or relative.as_posix() in recipe_accounted_images()
     )
 
 
