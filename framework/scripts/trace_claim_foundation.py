@@ -248,6 +248,70 @@ class Foundation:
                     edges[pid.split()[-1]] = "source_field"
         return sorted((f"PAPER {n}", kind) for n, kind in edges.items())
 
+    def paper_edges(self, paper_id: str) -> list[str]:
+        """Papers this paper declares a bond to, from its own `Wikilinks` field."""
+        fields = self.papers.get(paper_id, {})
+        return sorted({f"PAPER {n}" for n in PAPER_REF.findall(fields.get("Wikilinks", ""))}
+                      - {paper_id})
+
+    def lineage(self, claim_id: str, max_depth: int = 4) -> dict:
+        """Walk the declared paper-to-paper bonds outward from a claim's evidence.
+
+        The species check in `trace` compares a claim against the papers it *directly*
+        rests on. That is one hop, and the 2026-08-06 defect took three: a claim cited a
+        mouse paper, which cited a rat paper in its Discussion, which rested on an earlier
+        rat characterisation. Each hop looked fine to whoever wrote it.
+
+        This walks those hops and reports where the organism changes along the way.
+
+        🔴 **Bounded, and the bound is the finding.** The registry declares 12 paper-to-paper
+        bonds across 49 papers, and the densest cluster is precisely the one a human built
+        while chasing this defect by hand. So today the lineage mostly reaches where someone
+        has already been. It becomes predictive as those bonds accumulate — it is not
+        predictive yet, and a report that implied otherwise would be selling the graph on
+        work the graph did not do.
+        """
+        base = self.trace(claim_id)
+        declared_model = base["declared_model"]
+        seen = {entry["paper"]: 0 for entry in base["supports"] if entry["evidential"]}
+        paths = {paper: [paper] for paper in seen}
+        frontier = list(seen)
+        while frontier:
+            current = frontier.pop(0)
+            if seen[current] >= max_depth:
+                continue
+            for neighbour in self.paper_edges(current):
+                if neighbour in seen:
+                    continue
+                seen[neighbour] = seen[current] + 1
+                paths[neighbour] = paths[current] + [neighbour]
+                frontier.append(neighbour)
+
+        reached, crossings = [], []
+        for paper_id, depth in sorted(seen.items(), key=lambda item: (item[1], item[0])):
+            fields = self.papers.get(paper_id, {})
+            organism, state = normalise_species(fields.get("Model/species", ""))
+            pmids = PMID.findall(fields.get("Identifier", ""))
+            hop = {
+                "paper": paper_id,
+                "pmid": pmids[0] if pmids else None,
+                "depth": depth,
+                "species": organism,
+                "species_state": state,
+                "path": paths[paper_id],
+            }
+            reached.append(hop)
+            if depth > 0 and declared_model and organism and organism != declared_model:
+                crossings.append(hop)
+        return {
+            "claim": claim_id,
+            "declared_model": declared_model,
+            "reached": reached,
+            "indirect_species_crossings": crossings,
+            "graph": {"papers_with_edges": sum(1 for p in self.papers if self.paper_edges(p)),
+                      "papers": len(self.papers)},
+        }
+
     def trace(self, claim_id: str) -> dict:
         if claim_id not in self.claims:
             raise KeyError(f"{claim_id} is not a record in the claim registry")
@@ -369,6 +433,33 @@ def render(result: dict, explain: bool) -> str:
     return "\n".join(lines)
 
 
+def render_lineage(result: dict) -> str:
+    graph = result["graph"]
+    lines = [f"# {result['claim']} — citation lineage", ""]
+    lines.append(f"declared model: {result['declared_model'] or '(undeclared)'}")
+    lines.append(f"declared paper-to-paper bonds: {graph['papers_with_edges']} of "
+                 f"{graph['papers']} papers carry any")
+    lines.append("")
+    for hop in result["reached"]:
+        arrow = "  " * hop["depth"] + ("evidence" if hop["depth"] == 0 else f"hop {hop['depth']}")
+        pmid = f"PMID {hop['pmid']}" if hop["pmid"] else "no PMID"
+        lines.append(f"  {hop['paper']:<10} {pmid:<14} "
+                     f"{hop['species'] or hop['species_state']:<12} {arrow}")
+    lines.append("")
+    if result["indirect_species_crossings"]:
+        lines.append("## 🔴 THE CHAIN CHANGES ORGANISM AWAY FROM THE CLAIM")
+        for hop in result["indirect_species_crossings"]:
+            lines.append(f"  {' → '.join(hop['path'])}")
+            lines.append(f"    ends at PMID {hop['pmid']}, a '{hop['species']}' study, "
+                         f"{hop['depth']} hop(s) from the claim's own evidence.")
+    else:
+        lines.append("## The chain stays within the declared model")
+    lines.append("")
+    lines.append("Bound: this reaches only where a bond has been declared. Most papers here")
+    lines.append("declare none, so absence of a crossing is not evidence of absence.")
+    return "\n".join(lines)
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--root", default=".", help="repository root")
@@ -376,6 +467,9 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--claim", help="claim identifier, e.g. 'CLAIM 005'")
     parser.add_argument("--all-drift", action="store_true",
                         help="scan every claim and report only the species drifts")
+    parser.add_argument("--lineage", action="store_true",
+                        help="walk declared paper-to-paper bonds outward from the claim")
+    parser.add_argument("--max-depth", type=int, default=4, help="lineage hop limit")
     parser.add_argument("--json", action="store_true", help="machine-readable output")
     parser.add_argument("--explain", action="store_true",
                         help="print the fields the detector was allowed to read")
@@ -398,8 +492,13 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     if not args.claim:
-        parser.error("one of --claim or --all-drift is required")
-    result = Foundation(root, args.disease).trace(args.claim)
+        parser.error("one of --claim, --lineage or --all-drift is required")
+    foundation = Foundation(root, args.disease)
+    if args.lineage:
+        result = foundation.lineage(args.claim, args.max_depth)
+        print(json.dumps(result, indent=2) if args.json else render_lineage(result))
+        return 0
+    result = foundation.trace(args.claim)
     print(json.dumps(result, indent=2) if args.json else render(result, args.explain))
     return 0
 
