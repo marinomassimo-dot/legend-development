@@ -122,13 +122,41 @@ Three binding consequences:
   used XML or HTML. Where no structured surface exists — `PMID 17803050` has neither DOI nor
   PMCID — the paper enters a **different class** and the full-text queue must say so.
 - **A derived text surface is screened before it may carry a locator**, by
-  [`deepdive_manifest.py`](../scripts/deepdive_manifest.py): C0 controls, printable
+  [`deepdive_manifest.py`](framework/scripts/deepdive_manifest.py): C0 controls, printable
   substitutions and *suspicion by absence* — statistical language with none of `< > ≤ ≥ ± × −`.
   A `SUSPECT` surface is **refused, never normalised**: cleaning it launders the defect into
   every quote drawn from it.
 - **Never hand-correct a corrupted surface.** A manual fix across dozens of points is
   indistinguishable from a rewrite and verifiable by nothing. Re-derive it, or anchor the
   affected locators to the rendered page and say so.
+
+5e. 🔴 **A page adjudication is published as a recipe, never as the image.** The crop that
+proves what the author wrote *is* a reproduction of what the author wrote — the property that
+makes it evidence is the property that makes it someone else's to redistribute. The papers
+this corpus most needs to adjudicate are the oldest ones, which are the least likely to carry
+an open licence: `PMID 17803050` is all-rights-reserved, with no DOI, no PMCID and no open
+deposit, and its crops cover up to 46% of a printed page plus three complete tables.
+
+So the state records **source-PDF digest · page · crop rectangle in PDF points · dpi ·
+SHA-256 of the image**, in an `adjudications.json` beside each set, and
+[`regenerate_adjudications.py`](framework/scripts/regenerate_adjudications.py) turns that back
+into the identical bytes from a reader's own copy of the article. The verification is
+unchanged; the reproduction is not shipped. This is the same rule `files/` has always
+followed — **publish the derivation, not the derived** — applied to the one place that was
+doing the opposite. 33 of 51 local PDFs will eventually need adjudicating, so this is a
+standing policy, not a one-off.
+
+Two things the recipe must satisfy, both machine-checked rather than argued:
+`crop_contains_span` for every locator it adjudicates, **re-checked after any rounding**; and
+a digest that regenerates. Making the recipe executable immediately caught two of seven
+entries that prose had recorded wrongly — a dpi that was never used, and rectangles printed
+rounded for display so that the published recipe was not the one that had been run. **A recipe
+recorded only in prose decays silently; one a command runs cannot.**
+
+🔴 **The privacy gate does not and cannot cover this.** `public_release_gate.py` looks for
+patient re-identification and does it well; copyright is outside its domain. Before any push
+to a public remote, read `git diff origin/main..main --stat -- disease-models/` yourself. It
+is the one judgement no gate here makes for you, and publishing is not reversible.
 6. **Reading debt is explicit and must be honoured:** what was not read today enters the queue with a tracked debt; it does not disappear.
 7. **Universal full-text trace:** every route that actually analyses a full text must emit a `FULLTEXT_READ_RECEIPT` and the main session must persist it before reporting the paper as read. Check prior receipts first; a repeated complete read requires an explicit `reread_reason`. Retrieval, indexing, PaperQA/RAG queries and selected passages are not a complete read. Protocol and schema: [`fulltext_read_receipt.md`](framework/protocols/fulltext_read_receipt.md).
 

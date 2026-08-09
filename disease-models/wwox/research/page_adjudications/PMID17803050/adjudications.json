@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "pmid": "17803050",
+  "citation": "Suzuki et al. 2007, Comparative Medicine 57:360-369",
+  "rights": {
+    "notice": "Copyright 2007 by the American Association for Laboratory Animal Science",
+    "open_licence": null,
+    "pmc_deposit": false,
+    "redistribution": "NOT_REDISTRIBUTED",
+    "why": "The article carries an all-rights-reserved notice, has no DOI and no PMCID, and is not covered by any open deposit. The crops reproduce substantial portions of the printed page, so the images are not published with this repository. This file is the recipe that regenerates them from a copy of the PDF the reader already holds."
+  },
+  "source_pdf": {
+    "path": "files/fulltext/PMID17803050_Suzuki2007.pdf",
+    "sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+  },
+  "artifacts": [
+    {
+      "file": "p03_electrolytes_and_BUN_significance.png",
+      "page": 3,
+      "crop": [300, 630, 580, 690],
+      "dpi": 500,
+      "sha256": "cdaf28ae2e6eb78e95d467085e6dc1a21859f33f0dacf7c0b3b890e7852a2a74",
+      "adjudicates": ["entries[0]", "entries[1]"]
+    },
+    {
+      "file": "p04_table2_BUN_CRE_GLU.png",
+      "page": 4,
+      "crop": [40, 480, 570, 562],
+      "dpi": 500,
+      "sha256": "9b2268e2d64658b113b3a45e09e93d308ec0d2639004d138012eba46f62fe90b",
+      "adjudicates": ["entries[25]", "entries[26]"]
+    },
+    {
+      "file": "p04_table1_organ_weights.png",
+      "page": 4,
+      "crop": [40, 62, 570, 250],
+      "dpi": 400,
+      "sha256": "98ebfb5061b258104c56687279b10f0c4b9220a143b3ccba3f50f5a4a2ba031e",
+      "adjudicates": ["entries[27]"]
+    },
+    {
+      "file": "p02_reanchor_6_locators.png",
+      "page": 2,
+      "crop": [86, 309, 583, 605],
+      "dpi": 300,
+      "sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
+      "adjudicates": ["entries[10]", "entries[11]", "entries[12]", "entries[15]",
+                      "entries[16]", "entries[21]"]
+    },
+    {
+      "file": "p05_reanchor_3_locators.png",
+      "page": 5,
+      "crop": [170, 549, 522, 721],
+      "dpi": 300,
+      "sha256": "d4d6712ac2b290398660aa711aa4f2d3e8433bfef1c56f9d221a4e3681238540",
+      "adjudicates": ["entries[2]", "entries[18]", "entries[19]"]
+    },
+    {
+      "file": "p08_reanchor_14_locators.png",
+      "page": 8,
+      "crop": [43, 160, 558, 689],
+      "dpi": 300,
+      "sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+      "adjudicates": ["entries[3]", "entries[4]", "entries[5]", "entries[6]", "entries[7]",
+                      "entries[8]", "entries[9]", "entries[13]", "entries[14]", "entries[17]",
+                      "entries[20]", "entries[22]", "entries[23]", "entries[24]"]
+    },
+    {
+      "file": "p08_table3_chi_squared.png",
+      "page": 8,
+      "crop": [40, 62, 570, 150],
+      "dpi": 500,
+      "sha256": "56cb858e4b1e25bb8a0f5fb0a5fadd27094f1499724d16e95e6f7912f2f57c64",
+      "adjudicates": ["entries[28]"]
+    }
+  ]
+}

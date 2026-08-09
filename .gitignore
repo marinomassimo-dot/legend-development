@@ -7,6 +7,20 @@ _qa/
 files/
 backup/
 staging/
+
+# Page-adjudication crops. A crop of a printed page reproduces the author's characters —
+# which is exactly what makes it evidence, and exactly why it cannot be redistributed. The
+# articles adjudicated so far carry all-rights-reserved notices and no open deposit. What
+# ships instead is `adjudications.json` beside each set: source-PDF digest, page, crop
+# rectangle, dpi and the SHA-256 of the image. `regenerate_adjudications.py` turns that back
+# into the identical bytes from a copy of the article the reader already holds, so the
+# verification is unchanged and nothing copyrighted is republished. Same rule as `files/`
+# above: publish the derivation, not the derived.
+disease-models/*/research/page_adjudications/**/*.png
+disease-models/*/research/page_adjudications/**/*.jpg
+disease-models/*/research/page_adjudications/**/*.jpeg
+disease-models/*/research/page_adjudications/**/*.tif
+disease-models/*/research/page_adjudications/**/*.tiff
 tmp/
 overlay/
 *private*
