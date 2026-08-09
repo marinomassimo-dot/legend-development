@@ -135,9 +135,32 @@ notes: "PMID 30290271 read completely from article HTML/PDF with all six figures
 current_state: READY
 deep_dive_gate: OPEN
 ingest_gate: OPEN
-batch_commit_gate: OPEN
+batch_commit_gate: BLOCK_BATCH_COMMIT
 active_parallel_branches: none
 ```
+
+### Why `batch_commit_gate` is closed — 2026-08-09
+
+**Not because the verifier is weak.** It was, and it has been repaired and mutation-tested
+8/8. The gate is closed because of what the repaired verifier now *reports*.
+
+`files/fulltext/PMID17803050_Suzuki2007.html` — the declared `article_text` behind `PAPER 059`,
+the primary source of `CLAIM 038` and `CLAIM 039` — carries **34 C0 controls standing in for
+characters that did not survive extraction**: 17 × `U+001D`, 9 × `U+000C`, 5 × `U+001E`,
+3 × `U+001F`. Two are confirmed against the printed page: `(P \x1d 0.023)` for `(P < 0.023)`,
+and `Ca2\x0c` for `Ca²⁺`. The validator now refuses that surface outright, so **29 canonical
+locators are unverifiable** — by the system's own check, not by anyone's opinion.
+
+Reading and locator capture stay safe, which is why this is `BLOCK_BATCH_COMMIT` and **not**
+`BLOCK_SYSTEM`: nothing about acquiring evidence is compromised. Promotion is what must wait,
+because promoting now would consolidate claims whose evidence chain the validator rejects.
+
+**What lifts it:** the surface re-derived from the source — never hand-corrected. A manual fix
+across 34 points is indistinguishable from a rewrite and verifiable by nothing. Then the 29
+locators re-verified against the new artifact, and any that fail re-captured from the document.
+
+The conclusions of `CLAIM 038` and `CLAIM 039` are **not** in question here. A human read them
+off the paper. What is in question is whether the repository can still *prove* it.
 
 ---
 

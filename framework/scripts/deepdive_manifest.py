@@ -124,7 +124,13 @@ def _waived(section: Any, name: str, errors: list[str]) -> bool:
 #
 # A C0 separator is not whitespace in any typography. It is a glyph that did not survive
 # extraction, and it must reach the SUSPECT check below intact.
-PRESENTATION_WHITESPACE = re.compile(r"[ \t\n\r\f\v   ]+")
+# The class holds ONLY what a typesetter would actually set. `\f` (form feed) and `\v`
+# (vertical tab) are NOT presentation whitespace in extracted text — they are damage, and
+# folding them is the same laundering as `\x1d`. The corpus proves it: PMID 17803050's
+# transcribed surface holds the literal bytes `Ca2\x0c, inorganic phos-` where the paper
+# prints `Ca²⁺` — the form feed stands in for the superscript plus. Collapse it to a space
+# and the quoted `Ca2` matches STRICTLY, and a calcium ion loses its charge in the record.
+PRESENTATION_WHITESPACE = re.compile(r"[ \t\n\r   ]+")
 
 # C0 controls that are never legitimate text. Tab, newline and carriage return are excluded
 # because they are real layout characters; everything else here is extraction damage.
@@ -158,14 +164,6 @@ def _match_key(value: str) -> str:
 # Characters whose removal can invert a scientific proposition rather than tidy it.
 # Comparators and equality decide whether a result is a result; a sign decides direction.
 DECISIVE_CHARACTERS = frozenset("<>≤≥=≠−–—-+±")
-SIGNED_DIGIT_RE = re.compile(r"[+\-−–—]\s*\d")
-
-
-def _carries_decisive_punctuation(value: str) -> bool:
-    """True when alphanumeric folding would destroy a load-bearing character."""
-    normal = unicodedata.normalize("NFKC", html.unescape(value))
-    return any(character in DECISIVE_CHARACTERS for character in normal) or bool(
-        SIGNED_DIGIT_RE.search(normal))
 
 
 def _fold_with_offsets(value: str) -> tuple[str, str, list[int]]:
@@ -219,6 +217,14 @@ def _quote_matches(snippet: str, text: str) -> tuple[bool, str]:
     text_normal_folded, text_key, text_offsets = _fold_with_offsets(text)
     if not snippet_key:
         return False, "folded"
+    # `find` takes the FIRST occurrence. If the same word sequence appears more than once in
+    # the artifact with different punctuation — a sentence restated in the discussion, a
+    # figure caption echoing the body — the span compared is the first one, not necessarily
+    # the one the reader quoted. That can refuse a quote another occurrence would have
+    # matched. This is deliberate and it is the safe direction of the error: a refusal costs
+    # a re-capture, an acceptance costs a false `verified` on the axis that decides whether a
+    # result is a result. If false refusals ever become common enough to matter, scan every
+    # occurrence and accept when ANY span agrees — never widen by relaxing the comparison.
     position = text_key.find(snippet_key)
     if position < 0:
         return False, "folded"
@@ -324,25 +330,32 @@ def _refuse_suspect_surface(path: Path, *parts: str) -> None:
 
 
 def _artifact_text(path: Path, kind: str) -> tuple[str, str]:
-    """Return (body/supplement text, abstract text) for strict write-time verification."""
+    """Return (body/supplement text, abstract text) for strict write-time verification.
+
+    🔴 The control screen runs on the RAW DECODED BYTES of every branch, before any parser
+    and before any normalisation. It used to run on the parsed output, which left the XML
+    branch defended **by accident**: ElementTree rejects C0 controls as not-well-formed, so
+    XML artifacts were refused without the screen ever executing. A defence that only works
+    because a third-party parser happens to be strict is not a defence — it is a coincidence
+    with a good track record, and it disappears silently the day the parser becomes tolerant
+    or someone swaps in a lenient one. No test would have noticed.
+    """
     suffix = path.suffix.lower()
     if suffix == ".docx":
         with zipfile.ZipFile(path) as archive:
             raw = archive.read("word/document.xml")
+        _refuse_suspect_surface(path, raw.decode("utf-8", errors="replace"))
         body, _abstract = _xml_surfaces(raw)
-        _refuse_suspect_surface(path, body)
         return body, ""
     if suffix == ".xml":
-        body, abstract = _xml_surfaces(path.read_bytes())
-        _refuse_suspect_surface(path, body, abstract)
-        return body, abstract
+        raw = path.read_bytes()
+        _refuse_suspect_surface(path, raw.decode("utf-8", errors="replace"))
+        return _xml_surfaces(raw)
     if suffix in {".html", ".htm"}:
-        body, abstract = _html_surfaces(path.read_bytes())
-        _refuse_suspect_surface(path, body, abstract)
-        return body, abstract
+        raw = path.read_bytes()
+        _refuse_suspect_surface(path, raw.decode("utf-8", errors="replace"))
+        return _html_surfaces(raw)
     if suffix in {".txt", ".md"}:
-        # Read the raw text and screen it BEFORE normalising: the check must see the file as
-        # it is, not as the normaliser would like it to be.
         raw_text = path.read_text(encoding="utf-8")
         _refuse_suspect_surface(path, raw_text)
         return _normalise_text(raw_text), ""

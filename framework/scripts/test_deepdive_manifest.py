@@ -284,6 +284,62 @@ class EntriesMustBeUsable(unittest.TestCase):
             self.assertNotEqual(
                 errors, [], "a stripped ionic charge must not verify against the charged ion")
 
+    def test_a_form_feed_standing_in_for_a_charge_sign_is_refused(self) -> None:
+        """The real corpus case, not a constructed one.
+
+        `files/fulltext/PMID17803050_Suzuki2007.html` contains the literal bytes
+        `Ca2\\x0c, inorganic phos-` where the paper prints `Ca²⁺`. The form feed replaced the
+        superscript plus. If `\\f` is treated as presentation whitespace it collapses to a
+        space, `Ca2 ` matches the quoted `Ca2` STRICTLY, and the ion silently loses its charge
+        in the record. `\\f` and `\\v` are not typography in extracted text — they are damage,
+        and the whitespace class must contain only what a typesetter would set.
+        """
+        with TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            relative = "staging/derived.txt"
+            artifact = root / relative
+            artifact.parent.mkdir(parents=True, exist_ok=True)
+            artifact.write_text(
+                "Serum glucose (GLU), triglyceride (TG), Ca2\x0c, inorganic phosphate (IP) "
+                "and creatine phosphokinase were measured in every animal of both cohorts.",
+                encoding="utf-8")
+            manifest = schema_v2(relative)
+            manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+                artifact.read_bytes()).hexdigest()
+            entry = manifest["verbatim_locators"]["entries"][0]
+            entry["snippet"] = (
+                "Serum glucose (GLU), triglyceride (TG), Ca2, inorganic phosphate (IP) "
+                "and creatine phosphokinase were measured in every animal of both cohorts.")
+            entry["surface"] = "body"
+            errors, _ = gate.validate(manifest, root=root, verify_artifacts=True)
+            self.assertTrue(
+                any("SUSPECT" in error for error in errors),
+                f"a form feed standing in for a charge sign must refuse the surface; got {errors}",
+            )
+
+    def test_every_artifact_branch_screens_raw_text_for_controls(self) -> None:
+        """The XML branch was covered by accident, and accidents are not defences.
+
+        ElementTree happens to reject C0 controls as not-well-formed, so the XML branch
+        refused them without this check ever running. The day a parser becomes tolerant — or
+        someone swaps in a lenient one — the defence would vanish and no test would notice.
+        Every branch screens the raw decoded bytes, before any normalisation.
+        """
+        for name, payload in (
+            ("paper.xml", "<article><body><p>Values (P \x1d 0.05) differed here.</p></body></article>"),
+            ("paper.html", "<html><body><p>Values (P \x1d 0.05) differed here.</p></body></html>"),
+            ("derived.txt", "Values (P \x1d 0.05) differed markedly here."),
+        ):
+            with self.subTest(artifact=name), TemporaryDirectory() as temporary:
+                path = Path(temporary) / name
+                path.write_text(payload, encoding="utf-8")
+                with self.assertRaises(ValueError) as caught:
+                    gate._artifact_text(path, "article_text")
+                self.assertIn(
+                    "SUSPECT", str(caught.exception),
+                    f"{name} must be refused by the control screen, not by a parser accident",
+                )
+
     def test_the_normaliser_never_treats_a_c0_control_as_whitespace(self) -> None:
         """A unit-level invariant, deliberately independent of the SUSPECT surface check.
 
@@ -298,6 +354,16 @@ class EntriesMustBeUsable(unittest.TestCase):
             "str.split() and \\s both consume C0 separators; the whitespace class must be "
             "explicit so the corruption survives to reach the SUSPECT check",
         )
+        # `\f` and `\v` get their own assertions rather than riding on the one above. Putting
+        # `\f` back into the whitespace class ESCAPED the entire suite until this line
+        # existed: the SUSPECT surface check refuses the artifact first, so no end-to-end test
+        # can ever observe what the normaliser did. Every layer needs one assertion naming it.
+        self.assertIn(
+            "\x0c", gate._normalise_text("triglyceride (TG), Ca2\x0c, inorganic phosphate"),
+            "a form feed replaced the charge sign of Ca²⁺ in the real corpus; collapsing it "
+            "to a space lets the stripped `Ca2` match strictly",
+        )
+        self.assertIn("\x0b", gate._normalise_text("a\x0bb"))
         self.assertEqual(
             gate._normalise_text("a   b\tc\nd"), "a b c d",
             "real presentation whitespace, including NBSP, must still collapse",
