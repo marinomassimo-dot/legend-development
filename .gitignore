@@ -39,6 +39,14 @@ md-output/
 *.dcd
 state.tsv
 
+# Per-session git worktrees. Ten interactive sessions have run against this single
+# checkout, sharing one HEAD, one index and one working tree — so a branch created by
+# one of them silently redirected another's commit, and a checkout by any of them
+# would rewrite files the others had open. Isolating each session in its own worktree
+# fixes that at the root, and the worktree directories are checkouts of this same
+# repository: they must never be added back into it.
+.claude/worktrees/
+
 # Browser-automation session artefacts. Retrieval via a real browser (publisher
 # bot-blocks) drops page snapshots, console logs and network traces here. They
 # are transient, they record the URLs a session visited, and they have no place
