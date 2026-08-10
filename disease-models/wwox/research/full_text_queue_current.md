@@ -1598,7 +1598,41 @@ il paper dichiara nel titolo della sezione da cui il dato proviene. Conseguenza 
 Seahorse su KO contro WT alla stessa settimana **riprodurrebbe il confondimento**; l'esperimento
 va appaiato per **stadio di differenziamento**, non per età di coltura.
 
-**Next action:** lettura completa, 69 pannelli, partendo da Fig 4 ed EV3 (RNA-seq) e da Fig 2
-(iperreccitabilità, confrontabile con `FT-058`). Recuperare prima i nove supplementari: la
-`Appendix Fig S3A/B` **è** l'output GSEA/GO, e anche il reperto metabolico qui sopra poggia sulla
-descrizione testuale di un pannello che nessuno ha visto.
+### 🔴 Secondo preflight — quello sulle FIGURE, che è una domanda diversa dalla prima
+
+*«Superficie strutturata trovata» non implica «migliore superficie figure trovata».* Misurato:
+
+| sorgente | figure | larghezza | ppi effettivi @7in | `smask` |
+|---|---|---|---|---|
+| CDN PMC (`cdn.ncbi.nlm.nih.gov/pmc/blobs/…`) | 12 file | 585–712 px | **84–102** | — |
+| **PDF locale** `PMID34268881_Steinberg2021.pdf` | **6** immagini >40 kpx | 1213–1419 px | **173–203** | **0** su tutte e sei |
+
+🔴 **Il PDF locale è la superficie figure migliore, di un fattore 2.** E `smask = 0` su tutte
+significa che `extract_image()` restituisce ciò che la pagina mostra — la condizione stabilita
+il 2026-08-10 mattina. **Il PDF resta però solo superficie FIGURE:** il testo continua a venire
+dall'XML, che è la superficie della regola 5d. Le due cose non si mescolano.
+
+**A 84–102 ppi la lettura dei 69 pannelli non è fattibile:** un pannello di `EV1` sarebbe
+~200×180 px. Chi apre `FT-059` estragga le figure dal PDF, non le scarichi dal CDN.
+
+### 🔴 I supplementari sono dietro un controllo anti-automazione, e non l'ho aggirato
+
+`/articles/instance/8350905/bin/EMMM-13-e13610-s00N.*` restituisce `200` con una pagina
+*«Preparing to download…»* che porta un **challenge proof-of-work** (`cloudpmc-viewer-pow`,
+`POW_DIFFICULTY 4`, cookie `cloudpmc-viewer-pow`). **Risolverlo sarebbe aggirare un controllo di
+accesso che l'operatore del servizio ha messo deliberatamente. Non è stato fatto.** La rotta è
+registrata con la sua risposta letterale; chi ha accesso da browser scarichi gli otto file a
+mano — sono `s001.pdf` (Expanded View Figures), `s004.docx` (Appendix), `s002/003/005/006/008.xlsx`
+(Table EV1–EV5), `s007.pdf` (Review Process File).
+
+🔴 **Conseguenza sul budget, ed è pesante:** le cinque figure EV — `EV1 10 · EV2 8 · EV3 6 ·
+EV4 4 · EV5 4` = **32 dei 69 pannelli** — vivono nell'Expanded View PDF, cioè **dietro quel
+controllo**. Le sei figure principali (37 pannelli) sono nel PDF locale. Senza `s001.pdf` la
+copertura massima raggiungibile è **37/69**, e va dichiarata come tale invece che presentata
+come completa.
+
+**Next action:** ① procurarsi `s001.pdf` e `s004.docx` per via manuale — la `Appendix Fig S3A/B`
+**è** l'output GSEA/GO su cui poggia `DL-MECH-034` e anche `DL-MECH-094`; ② estrarre le sei
+figure principali dal PDF locale a 173–203 ppi; ③ lettura completa partendo da Fig 4 ed EV3
+(RNA-seq) e da Fig 2 (iperreccitabilità, confrontabile con `FT-058`). **Se ② e ③ partono senza
+①, dichiarare `figures: read` su 37/69 e `supplementary: unavailable` con questa rotta citata.**
