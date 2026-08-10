@@ -588,7 +588,15 @@ class FulltextReceiptTests(unittest.TestCase):
         legacy["evidence_basis"] = ["surviving dossier with partial coverage"]
         self.assertFalse(receipts.validate_receipt(legacy))
 
-    def test_repeated_study_lineage_must_link_the_latest_event(self) -> None:
+    def test_two_readings_of_one_study_may_share_a_parent(self) -> None:
+        """🔴 The rule this replaced demanded the LATEST prior, and that is a positional proxy
+        for a lineage question. It held only while history was linear.
+
+        Measured on 2026-08-10: two actors read PMID 42422765 in parallel, at 10:17 and 12:19,
+        and both legitimately continued the same earlier receipt. Neither had seen the other.
+        The old rule would have forced the ledger to assert that one built on a reading its
+        author never saw — a known falsehood written to satisfy a positional invariant.
+        """
         first = receipts.append_receipt(self.ledger, example("FTR-20260725-42193054-01"))
         second = example("FTR-20260725-42193054-02", "partial_fulltext_read")
         second["coverage"]["supplementary"] = "not_read"
@@ -596,11 +604,36 @@ class FulltextReceiptTests(unittest.TestCase):
         second["reread_reason"] = "new_question_outside_prior_coverage"
         receipts.append_receipt(self.ledger, second)
 
-        third = example("FTR-20260725-42193054-03")
-        third["prior_receipt"] = first["event_id"]
-        third["reread_reason"] = "adversarial_reanalysis"
-        with self.assertRaisesRegex(ValueError, "latest prior_receipt"):
-            receipts.append_receipt(self.ledger, third)
+        sibling = example("FTR-20260725-42193054-03")
+        sibling["prior_receipt"] = first["event_id"]
+        sibling["reread_reason"] = "adversarial_reanalysis"
+        receipts.append_receipt(self.ledger, sibling)
+        self.assertEqual(len(receipts.load_ledger(self.ledger)), 3)
+
+    def test_a_repeated_reading_may_still_not_declare_no_parent_at_all(self) -> None:
+        """Membership replaced recency; it did not replace the duty to say what came before.
+
+        Deliberately declared `first_read`, because that is the gap the LEDGER-level check
+        covers and the per-record one does not: "continued or repeated work requires
+        prior_receipt" is keyed on the reason the author gave, and an author who believes they
+        are reading a paper for the first time gives `first_read` honestly. Only the ledger
+        knows the study already has a receipt.
+        """
+        receipts.append_receipt(self.ledger, example("FTR-20260725-42193054-01"))
+        orphan = example("FTR-20260725-42193054-02")
+        orphan["prior_receipt"] = None
+        orphan["reread_reason"] = "first_read"
+        with self.assertRaisesRegex(ValueError, "prior_receipt is null"):
+            receipts.append_receipt(self.ledger, orphan)
+
+    def test_a_parent_from_another_study_is_still_refused(self) -> None:
+        """The membership check is what remains load-bearing once recency is gone."""
+        receipts.append_receipt(self.ledger, example("FTR-20260725-42193054-01"))
+        stray = example("FTR-20260725-42193054-02")
+        stray["prior_receipt"] = "FTR-20260725-11111111-01"
+        stray["reread_reason"] = "adversarial_reanalysis"
+        with self.assertRaisesRegex(ValueError, "not an earlier event for this study"):
+            receipts.append_receipt(self.ledger, stray)
 
 
 class CorpusCheckScope(unittest.TestCase):

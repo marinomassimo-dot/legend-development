@@ -21,6 +21,44 @@ SPEC.loader.exec_module(runner)
 PROTOCOL_TEST = "disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py"
 
 
+class EveryTestSuiteIsActuallyRun(unittest.TestCase):
+    """🔴 A suite nobody runs is not a suite, and the inventory is hand-maintained.
+
+    `TESTS` in the runner is a literal tuple, so a new file is only verified if its author
+    remembers to register it. Two did not: `test_dossier_quote_audit.py` and
+    `test_reading_state.py` were both written, both green, and neither was in the release
+    battery — which reported PASS over 57 targets while ignoring them.
+
+    `test_release_surface.py` already checks a convention on new script files (the executable
+    bit) and caught a missing one the same day it shipped. It just checks the wrong level:
+    whether the file looks right, not whether anything runs it. Same defence, next site — the
+    uneven-application failure this repository keeps finding in itself.
+    """
+
+    # An exclusion must be a decision, not an oversight, so it is named with its reason here
+    # rather than silently absent from `TESTS`.
+    NOT_RUN_BY_DESIGN: dict[str, str] = {}
+
+    def test_every_tracked_test_file_is_in_the_runner(self) -> None:
+        listed = subprocess.run(
+            ["git", "ls-files", "*test_*.py"],
+            cwd=ROOT, capture_output=True, text=True, check=True).stdout.split()
+        tracked = {path for path in listed if Path(path).name.startswith("test_")}
+        registered = set(runner.TESTS)
+        missing = sorted(tracked - registered - set(self.NOT_RUN_BY_DESIGN))
+        self.assertEqual(
+            missing, [],
+            "these test files exist and the release battery never runs them; add them to "
+            "TESTS in scripts/run_release_regressions.py, or record why not in "
+            "NOT_RUN_BY_DESIGN with a reason")
+
+    def test_the_runner_names_no_file_that_is_gone(self) -> None:
+        """The other direction: a target that no longer exists would fail loudly, but a
+        target renamed to something already covered would quietly shrink the battery."""
+        absent = sorted(name for name in runner.TESTS if not (ROOT / name).is_file())
+        self.assertEqual(absent, [], "TESTS names files that do not exist")
+
+
 class VerdictFormattingTests(unittest.TestCase):
     def test_plain_pass_requires_zero_skips(self) -> None:
         self.assertEqual(runner.format_success_verdict(40, []),

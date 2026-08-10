@@ -575,9 +575,35 @@ def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
                 errors.append(f"line {number}: conflicting identifiers for the same study")
         prior_for_study = [item for item in seen if same_study(item, pmid, doi)]
         prior_id = receipt["prior_receipt"]
-        if prior_for_study and prior_id != prior_for_study[-1]["event_id"]:
+        # 🔴 MEMBERSHIP, not recency, and the change is the point rather than a relaxation.
+        #
+        # This rule used to demand that a repeated reading link the LATEST earlier receipt for
+        # its study. That is a positional proxy for a question about lineage, and it holds only
+        # while history is linear. It is not linear any more and will not be again: on
+        # 2026-08-10 two actors read PMID 42422765 in parallel, at 10:17 and 12:19, and BOTH
+        # legitimately continued `FTR-20260810-42422765-01`. Neither had seen the other. After
+        # the merge the older rule demanded that the 12:19 reading link the 10:17 one — which
+        # would have made the ledger assert that one reader built on a reading they never saw.
+        #
+        # Writing a known falsehood into canonical state to satisfy a positional invariant is
+        # the trade this repository refused earlier the same day over an enum that had no true
+        # value. Same shape, different contract: **when no admitted arrangement is true, the
+        # defect is the rule.**
+        #
+        # So `prior_receipt` means what it says — the reading THIS one builds on — and two
+        # independent readings of one study may share a parent. That is the normal case under
+        # parallel branches, not an exception. What the old rule was really protecting, "does
+        # a reader know this paper was already read and what that reading covered", is not a
+        # property of any single event and cannot be: an event records what its author knew,
+        # and A could not name a receipt that did not exist in A's world. It belongs to a view
+        # over all of them — `reading_state.py`, derived and committed — which is also the only
+        # place a FORK can be reported instead of silently linearised.
+        if prior_for_study and prior_id is None:
             errors.append(
-                f"line {number}: repeated study must link its latest prior_receipt"
+                f"line {number}: prior_receipt is null and this study already has "
+                f"{len(prior_for_study)} receipt(s), so a further reading must say which one "
+                f"it builds on. Sharing a parent with a parallel reading is allowed; "
+                f"declaring no parent at all is not"
             )
         if prior_id is not None:
             matching_prior = [item for item in prior_for_study if item["event_id"] == prior_id]
