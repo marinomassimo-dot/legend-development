@@ -207,10 +207,10 @@
       },
       {
         "proposition": "The sentence the panel contradicts, quoted verbatim from the article text.",
-        "snippet": "Locomotor activity parameters, including movement velocity and total distance traveled, as well as spatial exploration of center and periphery zones, showed no significant differences between groups",
+        "snippet": "Locomotor activity parameters, including movement velocity and total distance traveled, as well as spatial exploration of center and periphery zones, showed no significant differences between groups (Figures 4B, 4D–4G)",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Results, 'Neuronal WWOX restoration normalizes neurobehavioral function'",
+        "anchor": "Results, 'Neuronal WWOX restoration normalizes neurobehavioral function' — snippet extended on 2026-08-10 to carry the figure reference, so the contradicts target can be verified from the manifest alone.",
         "panel_text_relation": "text_only"
       },
       {
@@ -232,10 +232,10 @@
       },
       {
         "proposition": "The sentence panel 7C contradicts.",
-        "snippet": "Averaged spike counts further confirmed a significant elevation in spike activity in KO animals",
+        "snippet": "Averaged spike counts further confirmed a significant elevation in spike activity in KO animals (Figure 7C)",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Results, epileptiform-activity section",
+        "anchor": "Results, epileptiform-activity section — snippet extended on 2026-08-10 to carry the figure reference, so the contradicts target can be verified from the manifest alone.",
         "panel_text_relation": "text_only"
       },
       {
