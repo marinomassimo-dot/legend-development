@@ -1036,3 +1036,61 @@ nell'elenco di reclamo di questa voce, `30370248` non compariva da nessuna parte
 e `34747138` — l'unico con debito già *misurato*, tre receipt `partial_fulltext_read` — non
 ha una voce di coda affatto. Il triage resta interamente da fare, e il numero da citare
 quando si dice "quanti sono classificati" è **0 su 21**, non 19.
+
+---
+
+## FT-048 — discrepanza interna in PMID 30755385, da risolvere alla fonte
+**Paper:** PMID 30755385 / DOI 10.1016/j.molmet.2019.01.010 — AbuRemaileh et al. 2019, *Mol Metab*
+**Title:** Loss of Wwox in skeletal muscle — ITT age discrepancy between Figure 2 caption and Methods
+**Surface:** PMID 30755385 · `structured` · sentinella `clean` · PMID30755385_AbuRemaileh2019.pdf, PMID30755385_AbuRemaileh2019_PMC.xml
+**Priority:** **MEDIA**
+**Why:** la didascalia della Figura 2 data l'ITT a **10 mesi**, la sezione Methods 4.4 a **6
+mesi**. Non è una svista tipografica indifferente: l'insulin tolerance test è la misura da cui
+dipende l'interpretazione metabolica sistemica, e quattro mesi in un modello murino sono una
+finestra di malattia diversa. Finché non è risolta, qualunque uso quantitativo di quella
+figura porta con sé un'incertezza di età che nessuna citazione a valle riporterebbe.
+**Come è emerso:** dal **rapporto di lettura** di una seconda sessione su PMID 30755385, non
+dalla lettura stessa — cioè da qualcuno che ha confrontato didascalia e Methods invece di
+leggerli in sequenza. Vale la pena registrarlo come metodo: le discrepanze interne non si
+vedono leggendo, si vedono confrontando.
+**Next action:** risolvere alla fonte — corrispondenza con gli autori o erratum — prima che la
+figura sostenga un'affermazione quantitativa. Nel frattempo, chi la cita dichiara entrambe le
+età.
+**Current status:** ⬜ aperta. Il paper è letto (`FTR-20260810-30755385-01`); è la discrepanza
+a non essere risolta, non la lettura.
+
+---
+
+## FT-049 — 🔴 INFERENZA: il tessuto di misura non è il tessuto di necessità
+**Papers:** PMID 24871327 · PMID 34747138 · PMID 30755385 — le tre fonti che la sostengono
+**Title:** Un fenotipo misurato nel sangue o a livello sistemico non identifica il tessuto in cui la lesione causale risiede
+**Surface:** PMID 24871327 · `structured` · sentinella `clean` · PMID24871327_Iatan2014_PMC.html  ·  PMID 34747138 · `structured` · sentinella `clean` · PMID34747138_Repudi2021_PMC.xml  ·  PMID 30755385 · `structured` · sentinella `clean` · PMID30755385_AbuRemaileh2019.pdf, PMID30755385_AbuRemaileh2019_PMC.xml
+**Priority:** **ALTA** (è una regola di lettura, non un singolo studio)
+**Epistemic status:** **`INFERENZA`** — convergenza di tre osservazioni indipendenti, mai
+dimostrata come principio nel contesto WWOX. Non è `DATO` e non va citata come tale.
+`PREMISE: DATO` per ciascuna delle tre osservazioni; `PREMISE: INFERENZA` per la
+generalizzazione.
+**Why:** le tre fonti si dispongono in una figura che nessuna di loro afferma da sola.
+
+| Fonte | Osservazione | Direzione |
+|---|---|---|
+| Iatan 2014 (PMID 24871327) | il KO **epatico** di *Wwox* **non** abbassa l'HDL plasmatico | il tessuto ovvio non è quello necessario |
+| Repudi 2021 (PMID 34747138) | il restauro **neuronale-only** (AAV9-hSynI) recupera fenotipi **periferici**, ipoglicemia inclusa | il tessuto di necessità può stare a monte del compartimento misurato |
+| AbuRemaileh 2019 (PMID 30755385) | il KO **muscolare** produce un fenotipo **sistemico** | un compartimento non ovvio basta a generare la misura sistemica |
+
+**Perché conta qui e non altrove:** il modello di malattia ragiona su marcatori periferici —
+lipidi, glucosio, BUN/creatinina — come se il compartimento in cui si misurano indicasse dove
+agire. Queste tre letture dicono che non lo indica. Vincola direttamente la scelta dei
+biomarcatori Tier 1/2 (un marcatore ematico può essere valido come *readout* ed essere muto
+sul *bersaglio*) e la logica di targeting terapeutico.
+**Come è emersa:** dal rapporto di una seconda sessione su PMID 30755385, che ha messo in fila
+tre letture separate. 🔴 **Non esisteva in alcun file canonico** — né claim registry, né
+working model, né meta — pur essendo sostenuta da tre paper già letti. È il tipo di perdita
+che il sistema è costruito per non subire: tre `DATO` in casa e l'inferenza che li unisce in
+nessun posto interrogabile.
+**Next action:** promuoverla via commit candidate → `BATCH_COMMIT`, come `INFERENZA` esplicita
+nel claim registry o in [[meta_metabolism_current]], con le tre fonti wikilinkate. **Non può
+salire a `DATO`** senza un esperimento che testi la dissociazione compartimento/necessità in
+modo diretto.
+**Current status:** ⬜ registrata qui perché interrogabile subito; canonicamente **non**
+promossa — `batch_commit_gate` è chiuso.
