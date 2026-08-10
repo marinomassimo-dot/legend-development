@@ -899,7 +899,8 @@ completa, e ventuno di essi non compaiono affatto in questa coda.** Non sono sta
 deprioritizzati: non sono mai stati classificati. Fra questi c'è l'intera serie Aqeilan
 locale — `27308416`, `27308504`, `27551470`, `29724996`, `30082886`, `30755385`, `32300104`,
 `34831305`, `26256646`, `27550453` — più `21318118`, `22634283`, `23254685`, `31428585`,
-`34634460`, `17575124`, `20530675`, `42395553`, `42422765`.
+`34634460`, `17575124`, `20530675`, `42395553`, `42422765`, `30370248` *(aggiunto il
+2026-08-10: mancava da questa lista, vedi la riconciliazione sotto)*.
 
 **Perché conta più dei singoli titoli:** la coda ordina ciò che qualcuno ha pensato di
 accodare, non ciò che è in casa. Un paper può stare sul disco in una superficie pulita e
@@ -911,3 +912,48 @@ conteneva **un solo elemento**, ed è il motivo per cui è stato letto 24871327.
 **Come è emerso:** cross-query del corpus durante la lettura di FT-039.
 **Next action:** classificare i 21, non leggerli — è lavoro di triage, non di lettura.
 **Current status:** ⬜ aperto.
+
+### 🔴 Come ho contato — e perché il numero va letto con la definizione accanto (2026-08-10)
+
+Riconciliazione richiesta dopo che due conteggi diversi sullo stesso corpus hanno dato 21 e
+19. Non erano in disaccordo sui fatti: erano due domande diverse, e una terza risposta era
+sbagliata. Tutte e tre servono a chi legge questa voce dopo.
+
+**Il criterio usato qui è: il PMID compare letteralmente in un blocco `## FT-`.** Stretto,
+verificabile con un comando, e insensibile a come un record nomina il suo paper.
+
+| criterio | classificati | non classificati |
+|---|---|---|
+| PMID letterale in un blocco FT | 19 / 21 | 2 |
+| PMID **oppure** cognome+anno del nome file | 20 / 21 | 1 |
+
+**Il 19 è un artefatto di questa voce, e va detto.** Quei 19 PMID hanno un record `FT-`
+**perché FT-047 li elenca** — cioè perché li ha elencati la voce che denuncia che non erano
+classificati. Prima che FT-047 esistesse il conteggio era **zero su 21**. Un conteggio che si
+soddisfa da sé non misura nulla: se qualcuno rilancia la query domani troverà 19 "in coda" e
+concluderà che il problema è quasi risolto. Non lo è — sono 19 righe in una tabella di
+reclamo, non 19 triage.
+
+**Il criterio largo è peggiore, non migliore: entrambi i suoi due match in più sono falsi.**
+- `34747138` → `FT-044`: FT-044 è **PMID 33914858**, Repudi et al. 2021 su *Brain*. `34747138`
+  è Repudi et al. 2021 su *EMBO Mol Med*. **Stesso primo autore, stesso anno, due paper
+  diversi** — e il secondo ha un record proprio altrove. Cognome+anno non è una chiave.
+- `42422765` → `FT-007`: FT-007 è Abudiab et al. 2025, e nomina "Obeid 2026" solo come la
+  review che l'ha fatto emergere. Il match cade sulla **citazione della fonte**, non sul paper.
+
+Questo replica esattamente la lezione già scritta in FT-034 — *"un audit di bibliografia con
+una sola chiave sovrastima i propri risultati, e li sovrastima nella direzione che lo
+lusinga"* — con l'aggravante che qui la seconda chiave non aggiunge copertura: **aggiunge due
+falsi positivi**, e li aggiunge nella direzione che fa sembrare la coda più completa.
+
+**E la lista sopra ne aveva persa una.** `PMID 30370248` (Tanna 2018, XML PMC locale) non
+compariva né in FT-047 né altrove: l'omissione è stata commessa **dentro la voce che denuncia
+le omissioni**, il che è la prova più diretta possibile che l'enumerazione a mano non è
+affidabile a questa scala. È aggiunta qui: `30370248`.
+
+**Il conteggio corretto, con la definizione attaccata:** 21 superfici strutturate senza
+lettura completa. **Zero hanno una voce `FT-` dedicata al paper**: i 19 compaiono soltanto
+nell'elenco di reclamo di questa voce, `30370248` non compariva da nessuna parte fino a oggi,
+e `34747138` — l'unico con debito già *misurato*, tre receipt `partial_fulltext_read` — non
+ha una voce di coda affatto. Il triage resta interamente da fare, e il numero da citare
+quando si dice "quanti sono classificati" è **0 su 21**, non 19.

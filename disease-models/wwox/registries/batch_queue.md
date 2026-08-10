@@ -8,15 +8,15 @@
 
 ## ▶ Start here
 
-**419 records have not been processed.** **258** of them have a free full text and can be worked immediately.
+**417 records have not been processed.** **256** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
-| 🟢 **`NEW`** | 76 | never seen by the system — **the front of the queue** |
+| 🟢 **`NEW`** | 74 | never seen by the system — **the front of the queue** |
 | 🟢 **`CORPUS_CATALOGUED`** | 343 | catalogued and deduplicated, never analytically processed |
-| 🟡 `OUT_OF_SCOPE_LIKELY` | 222 | no scope signal in the title — later in the queue, **never discarded** |
+| 🟡 `OUT_OF_SCOPE_LIKELY` | 221 | no scope signal in the title — later in the queue, **never discarded** |
 | 🟡 `AMBIGUOUS` | 7 | identifiers must be resolved before ingest |
-| ⏳ `IN_PIPELINE` | 21 | already in flight |
+| ⏳ `IN_PIPELINE` | 24 | already in flight |
 | ✅ `KNOWN_INTEGRATED` | 37 | done — read depth in the table below |
 
 The two green rows are the answer to *"where do I start?"*. The table further down lists
@@ -105,7 +105,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | PMID | Year | FT | Type | Status | Title |
 |---|---:|:---:|---|---|---|
 | [42092735](https://pubmed.ncbi.nlm.nih.gov/42092735/) | 2026 | ✅ | Case Reports; Journal Article | unmatched | WWOX Mutation as a Rare Cause of Neonatal-Infantile Parkinsonism Mimicking a Neurotransmitter Disorder: A Case Report. |
-| [42395553](https://pubmed.ncbi.nlm.nih.gov/42395553/) | 2026 | ✅ | Journal Article; Preprint | unmatched | WWOX contributes to DNA damage, but not somatic instability in Huntington's disease. |
 | [40191585](https://pubmed.ncbi.nlm.nih.gov/40191585/) | 2025 | ✅ | Journal Article | unmatched | Identifying individuals with rare disease variants by inferring shared ancestral haplotypes from SNP array data. |
 | [37781246](https://pubmed.ncbi.nlm.nih.gov/37781246/) | 2023 | ✅ | Journal Article | unmatched | Molecular landscapes of glioblastoma cell lines revealed a group of patients that do not benefit from WWOX tumor suppressor expression. |
 | [35715422](https://pubmed.ncbi.nlm.nih.gov/35715422/) | 2022 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Analysis of clinical phenotypic and genotypic spectra in 36 children patients with Epilepsy of Infancy with Migrating Focal Seizures. |
@@ -130,7 +129,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [28373548](https://pubmed.ncbi.nlm.nih.gov/28373548/) | 2017 | ✅ | Expression of Concern; Journal Article | unmatched | ℹ️ EXPRESSION-OF-CONCERN NOTICE — Editorial Expression of Concern: WWOX gene restoration prevents lung cancer growth in vitro and in vivo. |
 | [27845895](https://pubmed.ncbi.nlm.nih.gov/27845895/) | 2017 | ✅ | Journal Article | unmatched | Hyaluronan activates Hyal-2/WWOX/Smad4 signaling and causes bubbling cell death when the signaling complex is overexpressed. |
 | [27313745](https://pubmed.ncbi.nlm.nih.gov/27313745/) | 2016 | ✅ | Journal Article | unmatched | Reduced expression of the WW domain-containing oxidoreductase in human hematopoietic malignancies. |
-| [27551470](https://pubmed.ncbi.nlm.nih.gov/27551470/) | 2015 | ✅ | Journal Article | unmatched | Current questions and controversies in chromosome fragile site research: does WWOX, the gene product of common fragile site FRA16D, have a passive or active role in cancer? |
 | [26055163](https://pubmed.ncbi.nlm.nih.gov/26055163/) | 2015 | ✅ | Biography; Historical Article; Journal Article; Portrait | unmatched | In Memoriam: Shur-Tzu (Su) Chen, a pioneer in tumor suppressor WWOX for neuroscience. |
 | [25659037](https://pubmed.ncbi.nlm.nih.gov/25659037/) | 2015 | ✅ | Journal Article | unmatched | WWOX suppresses prostate cancer cell progression through cyclin D1-mediated cell cycle arrest in the G1 phase. |
 | [25517572](https://pubmed.ncbi.nlm.nih.gov/25517572/) | 2015 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | The Functional Copy Number Variation-67048 in WWOX Contributes to Increased Risk of COPD in Southern and Eastern Chinese. |
@@ -630,7 +628,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [21965145](https://pubmed.ncbi.nlm.nih.gov/21965145/) | 2012 | ✅ | Journal Article | unmatched | Copy number alterations in prostate tumors and disease aggressiveness. |
 | [21901168](https://pubmed.ncbi.nlm.nih.gov/21901168/) | 2011 | ✅ | Journal Article | unmatched | Identification of an In Vivo MEK/WOX1 Complex as a Master Switch for Apoptosis in T Cell Leukemia. |
 | [21743832](https://pubmed.ncbi.nlm.nih.gov/21743832/) | 2011 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't; Review | unmatched | Human T-cell lymphotropic virus: a model of NF-κB-associated tumorigenesis. |
-| [21318118](https://pubmed.ncbi.nlm.nih.gov/21318118/) | 2011 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Review | unmatched | Common fragile site tumor suppressor genes and corresponding mouse models of cancer. |
 | [21069451](https://pubmed.ncbi.nlm.nih.gov/21069451/) | 2011 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | unmatched | Aberrant expression of DNA damage response proteins is associated with breast cancer subtype and clinical features. |
 | [21212468](https://pubmed.ncbi.nlm.nih.gov/21212468/) | 2010 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S. | unmatched | Zfra is a small wizard in the mitochondrial apoptosis. |
 | [21072196](https://pubmed.ncbi.nlm.nih.gov/21072196/) | 2010 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Profiling gene expression induced by protease-activated receptor 2 (PAR2) activation in human kidney cells. |
@@ -737,6 +734,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [11526514](https://pubmed.ncbi.nlm.nih.gov/11526514/) | 2001 | — | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Identification of homozygous deletions at chromosome 16q23 in aflatoxin B1 exposed hepatocellular carcinoma. |
 | [42082822](https://pubmed.ncbi.nlm.nih.gov/42082822/) | 2026 | ✅ | Case Reports; Journal Article | unmatched | The Role of WWOX Gene Variant in Hypospadias and 46,XY Disorders of Sexual Development. |
 | [41984841](https://pubmed.ncbi.nlm.nih.gov/41984841/) | 2026 | ✅ | Journal Article | unmatched | WWOX maintains epidermal identity and suppresses EMT to prevent aggressive cutaneous squamous cell carcinoma. |
+| [42395553](https://pubmed.ncbi.nlm.nih.gov/42395553/) | 2026 | ✅ | Journal Article; Preprint | unmatched | WWOX contributes to DNA damage, but not somatic instability in Huntington's disease. |
 | [40263068](https://pubmed.ncbi.nlm.nih.gov/40263068/) | 2025 | ✅ | Published Erratum | unmatched | ✎ corrected — Corrigendum to "WWOX attenuates the progression of gallbladder cancer by suppressing cellular glycolysis through the modulation of the P73/HIF-1a signaling pathway" [Tissue Cell 95 (2025) 102885]. |
 | [39952983](https://pubmed.ncbi.nlm.nih.gov/39952983/) | 2025 | ✅ | Journal Article | unmatched | Genome-wide identification and functional validation of the WW domain containing oxidoreductase gene associated with sleep duration. |
 | [39933386](https://pubmed.ncbi.nlm.nih.gov/39933386/) | 2025 | ✅ | Journal Article | unmatched | Infantile Epileptic Spasms Syndrome: Unveiling clinical and genetic variability in a case series from Argentina. |
@@ -744,6 +742,8 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [35573960](https://pubmed.ncbi.nlm.nih.gov/35573960/) | 2022 | ✅ | Journal Article | unmatched | A Phenotypic-Driven Approach for the Diagnosis of WOREE Syndrome. |
 | [33058734](https://pubmed.ncbi.nlm.nih.gov/33058734/) | 2021 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | unmatched | ✎ corrected — Cigarette Smoke and Nicotine-Containing Electronic-Cigarette Vapor Downregulate Lung WWOX Expression, Which Is Associated with Increased Severity of Murine Acute Respiratory Distress Syndrome. |
 | [31618474](https://pubmed.ncbi.nlm.nih.gov/31618474/) | 2019 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | unmatched | ✎ corrected — The Genetic Landscape of Epilepsy of Infancy with Migrating Focal Seizures. |
+| [27551470](https://pubmed.ncbi.nlm.nih.gov/27551470/) | 2015 | ✅ | Journal Article | unmatched | Current questions and controversies in chromosome fragile site research: does WWOX, the gene product of common fragile site FRA16D, have a passive or active role in cancer? |
+| [21318118](https://pubmed.ncbi.nlm.nih.gov/21318118/) | 2011 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Review | unmatched | Common fragile site tumor suppressor genes and corresponding mouse models of cancer. |
 | [18974271](https://pubmed.ncbi.nlm.nih.gov/18974271/) | 2009 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | unmatched | Targeted ablation of the WW domain-containing oxidoreductase tumor suppressor leads to impaired steroidogenesis. |
 | [15126504](https://pubmed.ncbi.nlm.nih.gov/15126504/) | 2004 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S.; Research Support, U.S. Gov't, P.H.S. | unmatched | Down-regulation of WW domain-containing oxidoreductase induces Tau phosphorylation in vitro. A potential role in Alzheimer's disease. |
 | [15070730](https://pubmed.ncbi.nlm.nih.gov/15070730/) | 2004 | ✅ | Journal Article; Research Support, U.S. Gov't, P.H.S. | unmatched | Functional association between Wwox tumor suppressor protein and p73, a p53 homolog. |
