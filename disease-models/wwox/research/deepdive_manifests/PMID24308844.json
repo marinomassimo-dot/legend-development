@@ -54,7 +54,9 @@
   "hold": false
  },
  "source_artifacts": [
-  {"path": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml", "sha256": "00da56df985d59b873d8ceea546fdb870138201aaa8c3e22badec660c30581ce", "kind": "article_text"}
+  {"path": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml", "sha256": "00da56df985d59b873d8ceea546fdb870138201aaa8c3e22badec660c30581ce", "kind": "article_text"},
+  {"path": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f2.jpg", "sha256": "4263ac51dea8340f433b2118c436cca7cb589dd7e3d2be7f6568b439fa745635", "kind": "figure"},
+  {"path": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f3.jpg", "sha256": "bf3303060b318fbd865e5f4a70260dc372376f4264ce7b0f345b07c6e64a7ba9", "kind": "figure"}
  ],
  "verbatim_locators": {
   "waived": false,
@@ -71,8 +73,10 @@
    "rule": "Orchestrator instruction, 2026-08-10: one locator per main figure or a named, argued waiver. Silence is not a waiver.",
    "budget_declared_before_reading": "Counted from the JATS before opening the body: 7 main figures, 10 table-wraps, 0 supplementary. Budget set at one locator per main figure, tables cited where the running text leans on them, supplementary declared not_present.",
    "main_figures_in_article": 7,
-   "figures_with_at_least_one_locator": 0,
-   "waiver": "🔴 ALL SEVEN FIGURES WAIVED, and the reason is mine and not the paper's: the session's remaining context was not enough to fetch them, measure smask, and inspect them at deposited resolution, and inspecting them badly is worse than declaring the gap. This is a named waiver under the rule, not silence: coverage.figures is recorded as not_read and the receipt is partial_fulltext_read. FT-055 carries the debt. What the waiver costs is stated rather than minimised — Figures 2 and 4 are the ITC isotherms behind Tables 1 and 4, so the fits that produce every Kd quoted here are unexamined; Figure 3 is the structural model behind the W44/Y85 argument; Figures 5-7 carry the light scattering and the molecular dynamics.",
+   "figures_with_at_least_one_locator": 2,
+   "figures_fetched": "All seven fetched from the PMC CDN and fingerprinted, 7 distinct digests, 400-800 px at 150 dpi. RESOLUTION RECORDED WITH THE SURFACE, per the practice this session promoted: these are the renditions PMC serves and no higher-resolution deposit was sought, so a mark finer than a side-chain label could have been missed. That limit is stated rather than assumed away.",
+   "waiver_remaining": "Figures 1, 4, 5, 6 and 7 remain without a locator, waived by name: 1 is the ErbB4 architecture and peptide sequences, 4 the tandem-module isotherms, 5 the light-scattering profiles, 6 and 7 the molecular dynamics. FT-055 carries them. Figures 2 and 3 were inspected because they are the two the reading turned on — the isotherms behind every Kd, and the structural model behind the W44/Y85 argument.",
+   "superseded_waiver": "🔴 ALL SEVEN FIGURES WAIVED, and the reason is mine and not the paper's: the session's remaining context was not enough to fetch them, measure smask, and inspect them at deposited resolution, and inspecting them badly is worse than declaring the gap. This is a named waiver under the rule, not silence: coverage.figures is recorded as not_read and the receipt is partial_fulltext_read. FT-055 carries the debt. What the waiver costs is stated rather than minimised — Figures 2 and 4 are the ITC isotherms behind Tables 1 and 4, so the fits that produce every Kd quoted here are unexamined; Figure 3 is the structural model behind the W44/Y85 argument; Figures 5-7 carry the light scattering and the molecular dynamics.",
    "tables": "3 of 5 numeric tables read cell by cell (1, 3, 4 — the affinity tables). Tables 2 and 5 read in the running text only, declared as a partial.",
    "supplementary": "not_present — the JATS records pmc-prop-has-supplement no. This is an honest empty slot, not an unread one."
   },
@@ -133,6 +137,25 @@
     "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
     "anchor": "Table 4, ErbB4_PY3 row, Kd column — WW1-WW2 tandem module. Declared surface table; verified character-for-character.",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 FIGURE 3 IS A GENERATED MODEL THAT DEPICTS A COMPLEX THIS PAPER PROVES DOES NOT EXIST, and it is cited as the rationale for the non-existence. Panel b draws WW2 with the ErbB4_PY3 peptide threaded through its groove in the same pose as panel a, with Y85 occupying the position W44 holds in WW1 — while the paper's central ITC result is that WW2 binds no PPXY motif under any temperature, ionic strength or pH. The text is honest that these are models built with MODELLER by homology to a YAP WW-PPXY complex, but the consequence is not drawn: a model built by homology to a BOUND template necessarily places the ligand in the groove, so it cannot represent non-binding and cannot be evidence for it. Only the calorimetry can carry that claim, and it does. This is the schematic-surface problem in its clearest form — a panel that would inherit the authority of a measurement if labelled 'figure' without qualification, and whose apparent agreement with the text is an artefact of how it was built.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3, panels a and b at 604x908: both show the ErbB4_PY3 peptide in orange running across a triple-stranded blue beta-sheet with side chains drawn in red and the peptide's P0, P+1 and Y+3 in green. Panel a labels W44, Y33, T42, A35, H37, E40 on WW1; panel b labels Y85, F74, T83, V76, H78, K81 on WW2 in the structurally equivalent positions, with the peptide bound in the same pose. No feature of panel b marks the complex as hypothetical.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f3.jpg",
+    "anchor": "Figure 3, panels a and b, read at the resolution PMC serves, 604x908 px at 150 dpi. RESOLUTION RECORDED WITH THE SURFACE: no higher-resolution deposit was sought in this pass, so a label finer than the side-chain annotations could have been missed.",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[0]",
+    "needle": "no binding was observed for the WW2 domain to any of the PPXY motif",
+    "cited_panel_check": "MISMATCH BY CONSTRUCTION, and it is the interesting kind. The sentence about non-binding cites the ITC, not Figure 3; Figure 3 is cited two paragraphs later as the structural rationale for it. So the panel does not falsify the sentence — it cannot, because a homology model of a complex is incapable of representing its absence. Recorded as panel_qualifies_text rather than as a contradiction: what the panel qualifies is the weight the figure can bear, not the truth of the claim."
+   },
+   {
+    "proposition": "🔴 EVERY DISSOCIATION CONSTANT IN THIS PAPER RESTS ON A FIT WHOSE STOICHIOMETRY WAS ASSUMED, AND THE ISOTHERMS SHOW WHY IT HAD TO BE. The Methods state that all binding stoichiometries were fixed to unity while only enthalpy and Kd were allowed to float. The panel shows the reason: the PY1 and PY2 isotherms are near-featureless decays with no sigmoidal inflection and no saturation out to a molar ratio of 20 — the classic low-c regime in which the shape of the curve does not determine N, and fixing it is the standard remedy. That is defensible practice, and it means the 383 and 362 micromolar in Table 1 are model-dependent numbers rather than read-off ones. The text acknowledges difficulty in determining enthalpy for weak interactions; it does not say the same of the affinities. Anyone carrying these constants downstream should carry that they were fitted with N assumed.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2, three ITC panels at 701x306. Upper traces: injection peaks decaying over 80 minutes. Lower binding isotherms: ErbB4_PY1 runs from about -0.6 to -0.1 kcal/mol across molar ratios 0 to 20 with no inflection point and no plateau; ErbB4_PY2 from about -0.3 to -0.05 over the same range, likewise featureless; ErbB4_PY3 from about -1.5 to -0.15 over molar ratios 0 to 11, the only one showing appreciable curvature. Red fitted lines are drawn through all three.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f2.jpg",
+    "anchor": "Figure 2, panels a, b and c, isotherm shape and axis ranges, read at the resolution PMC serves, 701x306 px at 150 dpi. Resolution recorded with the surface.",
+    "panel_text_relation": "panel_only"
    },
    {
     "proposition": "🔴 THE AUTHORS' OWN LIMIT ON THEIR OWN MODEL SYSTEM, stated without prompting. This is the sentence that most distinguishes this paper's rhetoric from the four before it: the reduction is not written as an absence, the caveat is written as a caveat.",
