@@ -16,6 +16,21 @@ import urllib.request
 from pathlib import Path
 
 
+# 🔴 Identify the caller honestly. The previous value was `Mozilla/5.0`, and that single
+# line was the difference between *interacting as the page expects* and *pretending to be
+# something else*: the interstitial publishes its own challenge, difficulty and cookie name
+# for a client to solve, so solving it is the intended interaction — misrepresenting who is
+# solving it is not, and NCBI asks tools to say what they are.
+#
+# Scale is the real constraint here, not this one request. A proof-of-work page prices
+# automation deliberately, and one document at a time is the case it means to allow. This
+# script takes ONE url and ONE output by construction and must stay that way: if it ever
+# grows a corpus loop, it stops being a retrieval of last resort and becomes the load the
+# mechanism exists to refuse. Bulk access has a sanctioned route — E-utilities with an API
+# key, and the OA package service — and those are tried first by `find-fulltext`, which is
+# why this is reached only after they have failed.
+USER_AGENT = "LEGEND-research/1.0 (rare-disease literature model; single-document retrieval)"
+
 CHALLENGE_RE = re.compile(r'const POW_CHALLENGE = "([^"]+)"')
 DIFFICULTY_RE = re.compile(r'const POW_DIFFICULTY = "([0-9]+)"')
 COOKIE_NAME_RE = re.compile(r'const POW_COOKIE_NAME = "([^"]+)"')
@@ -42,7 +57,7 @@ def solve_pow(challenge: str, difficulty: int) -> tuple[int, str]:
 
 
 def fetch(url: str) -> tuple[bytes, dict[str, object]]:
-    headers = {"User-Agent": "Mozilla/5.0", "Accept": "application/pdf,*/*"}
+    headers = {"User-Agent": USER_AGENT, "Accept": "application/pdf,*/*"}
     with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=60) as response:
         first = response.read()
         first_status = response.status
