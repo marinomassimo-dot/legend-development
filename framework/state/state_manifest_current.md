@@ -102,12 +102,13 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260810_002
+last_batch_commit_id: BATCH_20260810_003
 last_batch_commit_date: 2026-08-10
 last_batch_commit_type: MINOR
-commit_candidates_propagated: 2
+commit_candidates_propagated: 1
 commit_candidates_superseded: 0
-commit_candidates_deferred: 1
+commit_candidates_deferred: 0
+batch_20260810_003_scope: "PROPAGATED 1, and the queue of deferred candidates is now empty. CC-20260810-30755385: CORPUS-STUB-039 promoted to PAPER 061 (PMID 30755385, AbuRemaileh 2019, muscle-specific Wwox KO), placeholder preserved append-only, LIT-0063 completed. Linked to CLAIM 009 as supporting evidence that skeletal-muscle WWOX loss is SUFFICIENT for local and systemic metabolic phenotypes, with two boundaries written into both the claim and the paper record: the model is a conditional muscle KO and not a WWOX-DEE allele, so nothing transfers to CNS; and mitochondrial glucose oxidation was NEVER MEASURED — no respirometry, no flux assay. meta_metabolism_current.md listed 'reduced glucose oxidation' under Core Findings (DATO); it was an inference from upstream markers sitting among the data, and is now labelled, with the promotion condition attached (ex-vivo flux on primary fibres, or muscle-specific rescue). CLAIM 009 stays INFERENZA and its Type is unchanged. The causal boundary is recorded too: tissue-specific deletion plus local FDG plus acute C2C12 knock-down support a muscle-intrinsic component and do not prove the whole in-vivo phenotype is tissue-autonomous. The 'tissue of measurement is not tissue of necessity' inference is written into the integrated model as INFERENZA with its three sources and its promotion condition. Two things it exposed and did not hide: PMID 24871327 is read but still CORPUS-STUB-108, so the meta names the placeholder rather than a PAPER record that does not exist; and the ITT age discrepancy (Figure 2 caption 10 months, Methods 4.4 six months) is carried on the paper record with the instruction to declare both ages until it is resolved at source."
 batch_20260810_002_scope: "PROPAGATED 2. CC-20260810-42422765-S8: the shorthand 'finestra terapeutica P1-P5' is removed from the PAPER record for PMID 42422765 and replaced with what Figure S8 shows — efficacy at several early postnatal doses including P5, the interval incompletely sampled per endpoint, the upper boundary beyond P5 untested. S8 has no P0 group; survival to P40 omits P4 and to P300 keeps only P1 and P5; weight and glucose at P14 draw WT-vs-KO and WT-vs-P5 with no treated-vs-KO comparison, and ns is not equivalence; panels E-I test P5 only. 'P1-P5' read as a validated continuous window what is a sparse set of sampled points with the comparison that matters never drawn. CC-20260805-001: CORPUS-STUB-095 promoted to PAPER 060 (PMID 37519886, Kolat 2023), placeholder preserved append-only, LIT-0117 completed from 'corpus paper 95' to full metadata with its complete_fulltext_read receipt. Promotion of provenance, not of scope: T3, clinical relevance LOW, no claim link, DISCOVERY_ONLY. STILL DEFERRED 1: CC-20260810-30755385, whose registry promotion is mechanical but which also asks for a meta_metabolism rewrite separating direct measurement from inferred mitochondrial glucose oxidation, and a CLAIM 009 link. Half-applying it would leave the registry claiming a reading the meta does not carry. Its two most transferable products are already recorded outside the canonical layer and are not waiting on it: FT-048 (the ITT age discrepancy) and FT-049 (tissue of measurement is not tissue of necessity, as INFERENZA with its three sources)."
 target_wm_version: WM_v4.1
 last_wm_update: 2026-08-06
@@ -235,8 +236,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 6
-growth_anchor_head: b98faa747a08564da46f36d8a08e6e71b5807d2b04a5fefa59a8aa1c5c640af3
+growth_anchor_events: 7
+growth_anchor_head: 0568800d0f9857f33474846b02f0a1454d9169e7589e85659a02b45dc601eb06
 ```
 
 ```bash

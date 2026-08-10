@@ -34,7 +34,7 @@ The metabolic role of WWOX, glycolytic shift, HIF1A/AMPK regulation, energetic v
 - WWOX sequesters HIF1α in the cytoplasm via the WW domain; WWOX loss → free HIF1α → upregulation of glycolytic genes
 - WWOX loss → shift toward aerobic glycolysis (Warburg-like effect) in cell and animal models
 - WWOX physically interacts with AMPK; WWOX loss → impaired AMPK activation
-- In WWOX-specific muscle mouse models: reduced slow-twitch fiber, reduced mitochondrial content, reduced glucose oxidation
+- In WWOX-specific muscle mouse models ([[paper_registry_current#PAPER 061]], PMID 30755385, letto integralmente 2026-08-10): **misurato** — ridotta fibra slow-twitch, ridotto contenuto mitocondriale (mtDNA), ridotta captazione muscolare di FDG, trascritti, p-AMPK/p-ACC, lattato sierico. 🔴 **NON misurato: l'ossidazione mitocondriale del glucosio.** Nessuna respirometria muscolare e nessun saggio di flusso sono stati eseguiti. Fino al 2026-08-10 questa riga diceva *«reduced glucose oxidation»* sotto `Core Findings (DATO)`: era un'**inferenza dai marcatori a monte**, elencata fra i dati. Corretto in `BATCH_20260810_003` (`CC-20260810-30755385`). La direzione resta plausibile e ora è etichettata: vedi il modello integrato qui sotto. **Condizione per promuoverla a DATO:** flusso ex-vivo su fibre primarie, oppure rescue muscolo-specifico.
 - In cell models: WWOX loss → increased glucose uptake + reduced mitochondrial respiration
 - WWOX-specific human metabolic signal: mildly elevated lactate in a null/null WOREE patient (Chong 2023) — a very small but human datum
 - In Drosophila: WWOX modulates the mitochondrial respiratory complex; WWOX alteration → reduced response to mitochondrial metabolic stress
@@ -55,6 +55,25 @@ WWOX loss
 + impaired AMPK → altered metabolic stress response
 + possible lactate accumulation in severe scenarios
 ```
+
+🔴 **Il compartimento in cui un fenotipo si misura non identifica il tessuto in cui risiede la
+lesione causale** — `INFERENZA`, non `DATO`, registrata qui il 2026-08-10 perché vincola
+direttamente questo modello e la scelta dei biomarcatori. Tre letture indipendenti la
+sostengono e nessuna la afferma da sola: il KO **epatico** di *Wwox* **non** abbassa l'HDL
+plasmatico (PMID 24871327, letto il 2026-08-10 ma ancora
+[[paper_registry_current#CORPUS-STUB-108]] — promozione dovuta, non ancora fatta); il restauro **neuronale-only**
+recupera fenotipi **periferici**, ipoglicemia inclusa ([[claim_registry_current#CLAIM 004]],
+PMID 34747138); il KO **muscolare** produce un fenotipo **sistemico**
+([[paper_registry_current#PAPER 061]], PMID 30755385). Conseguenza operativa: un marcatore
+ematico può essere un `readout` valido ed essere **muto sul bersaglio**. `PREMISE: INFERENZA`
+per la generalizzazione, `PREMISE: DATO` per ciascuna delle tre osservazioni. Non promuovibile
+a `DATO` senza un esperimento che testi direttamente la dissociazione compartimento/necessità.
+Traccia interrogabile: [[full_text_queue_current#FT-049]].
+
+🔴 **Confine causale di `PAPER 061`, da non superare.** Delezione tessuto-specifica + FDG
+locale + knock-down acuto in C2C12 sostengono una componente **muscolo-intrinseca**; non
+provano che l'intero fenotipo in vivo sia autonomo di tessuto. La promozione richiede flusso
+ex-vivo su fibre primarie o rescue muscolo-specifico.
 
 ---
 

@@ -1074,10 +1074,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 39
 **Full title:** WWOX somatic ablation in skeletal muscles alters glucose metabolism
 **Identifier:** PMID 30755385 / DOI 10.1016/j.molmet.2019.01.010
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 061]] (BATCH_20260810_003, `CC-20260810-30755385`)
+**Registry role:** corpus placeholder only — **conservato append-only come storia di audit, mai cancellato**
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — risolto per promozione
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-040
@@ -6559,3 +6559,24 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Role:** promosso da `CORPUS-STUB-095` (BATCH_20260810_002, `CC-20260805-001`); il placeholder è conservato append-only
 **Note:** Promozione **di registro e di provenienza, non di portata**: la lettura completa è avvenuta il 2026-08-05 e il record ne prende atto, ma il paper resta oncologia/immunologia adulta e va letto come `DISCOVERY_ONLY`. È la fonte da cui è emerso [[full_text_queue_current#FT-037]] (PMID 36499501), l'unico dei 29 riferimenti gene-/asse-diretti assente da ogni file LEGEND, e dà a miR-186-5p un ruolo **predetto** in una rete ceRNA — non misurato. Il valore per il modello di malattia sta nel metodo di enumerazione della bibliografia, non nella biologia vescicale.
 **Wikilinks:** [[paper_registry_current#CORPUS-STUB-095]] · [[full_text_queue_current#FT-037]] · [[literature_tracking_log_current#LIT-0117]]
+
+## PAPER 061
+**Short title:** AbuRemaileh 2019 — ablazione di WWOX nel muscolo scheletrico e metabolismo del glucosio
+**Full title:** WWOX somatic ablation in skeletal muscles alters glucose metabolism
+**Authors:** Abu-Remaileh M, Aqeilan RI, et al.
+**Year:** 2019
+**Source type:** primario sperimentale — KO tessuto-specifico murino + knock-down acuto in C2C12
+**Journal/source:** *Molecular Metabolism* 2019;22:132–140
+**Identifier:** PMID 30755385 / DOI 10.1016/j.molmet.2019.01.010
+**Status:** processed
+**Evidence depth:** full text reviewed (coverage_status: complete_fulltext_read) — receipt `FTR-20260810-30755385-01`; manifest `deepdive_manifests/PMID30755385.json`
+**Integrity status:** clean
+**Primary pathway:** P5 — metabolismo
+**Model/species:** topo, delezione di *Wwox* muscolo-specifica; linee C2C12
+**Genotype/model:** KO condizionale muscolo-scheletrico; **non** un allele WWOX-DEE, **non** CNS
+**Transferability:** T2 — meccanismo trasferibile, tessuto no
+**clinical relevance:** INDIRECT
+**Claim links:** 009 (evidenza a sostegno: la perdita di WWOX nel muscolo scheletrico è **sufficiente** a produrre fenotipi metabolici locali e sistemici)
+**Role:** promosso da `CORPUS-STUB-039` (BATCH_20260810_003, `CC-20260810-30755385`); il placeholder è conservato append-only
+**Note:** 🔴 **Confine di misura, da tenere.** **Misurato:** captazione muscolare di FDG, mtDNA, trascritti, p-AMPK/p-ACC, lattato sierico, fibra slow-twitch. **Non misurato:** l'ossidazione mitocondriale del glucosio — nessuna respirometria muscolare, nessun saggio di flusso. Prima del 2026-08-10 [[meta_metabolism_current]] la elencava fra i `Core Findings (DATO)`: era un'inferenza dai marcatori a monte, e ora è etichettata come tale. 🔴 **Confine causale:** delezione tessuto-specifica + FDG locale + knock-down acuto sostengono una componente **muscolo-intrinseca**; **non** provano che l'intero fenotipo in vivo sia autonomo di tessuto. Promozione condizionata a flusso ex-vivo su fibre primarie o rescue muscolo-specifico. ⚠️ **Discrepanza interna non risolta:** la didascalia della Figura 2 data l'ITT a **10 mesi**, Methods 4.4 a **6 mesi** — quattro mesi sono una finestra di malattia diversa in un topo; chi cita quella figura dichiara entrambe le età finché non è risolta alla fonte ([[full_text_queue_current#FT-048]]). Disegno statistico limitato. 🔑 **Il contributo che va oltre il paper:** è una delle tre fonti dell'inferenza *«il tessuto di misura non è il tessuto di necessità»* ([[full_text_queue_current#FT-049]]) — un KO muscolare che produce un fenotipo sistemico, accanto a un KO epatico che non abbassa l'HDL e a un restauro neuronale che recupera la periferia.
+**Wikilinks:** [[paper_registry_current#CORPUS-STUB-039]] · [[claim_registry_current#CLAIM 009]] · [[meta_metabolism_current]] · [[full_text_queue_current#FT-048]] · [[full_text_queue_current#FT-049]] · [[literature_tracking_log_current#LIT-0063]]

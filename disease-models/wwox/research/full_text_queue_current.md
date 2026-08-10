@@ -1039,7 +1039,8 @@ quando si dice "quanti sono classificati" è **0 su 21**, non 19.
 
 ---
 
-## FT-048 — discrepanza interna in PMID 30755385, da risolvere alla fonte
+## FT-048
+*Discrepanza interna in PMID 30755385, da risolvere alla fonte.*
 **Paper:** PMID 30755385 / DOI 10.1016/j.molmet.2019.01.010 — AbuRemaileh et al. 2019, *Mol Metab*
 **Title:** Loss of Wwox in skeletal muscle — ITT age discrepancy between Figure 2 caption and Methods
 **Surface:** PMID 30755385 · `structured` · sentinella `clean` · PMID30755385_AbuRemaileh2019.pdf, PMID30755385_AbuRemaileh2019_PMC.xml
@@ -1061,7 +1062,8 @@ a non essere risolta, non la lettura.
 
 ---
 
-## FT-049 — 🔴 INFERENZA: il tessuto di misura non è il tessuto di necessità
+## FT-049
+*🔴 `INFERENZA`: il tessuto di misura non è il tessuto di necessità.*
 **Papers:** PMID 24871327 · PMID 34747138 · PMID 30755385 — le tre fonti che la sostengono
 **Title:** Un fenotipo misurato nel sangue o a livello sistemico non identifica il tessuto in cui la lesione causale risiede
 **Surface:** PMID 24871327 · `structured` · sentinella `clean` · PMID24871327_Iatan2014_PMC.html  ·  PMID 34747138 · `structured` · sentinella `clean` · PMID34747138_Repudi2021_PMC.xml  ·  PMID 30755385 · `structured` · sentinella `clean` · PMID30755385_AbuRemaileh2019.pdf, PMID30755385_AbuRemaileh2019_PMC.xml

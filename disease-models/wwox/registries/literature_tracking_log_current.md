@@ -2089,15 +2089,21 @@ Serves to:
 ---
 
 ## LIT-0063
-**Short title:** corpus paper 39
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** AbuRemaileh 2019 — ablazione di WWOX nel muscolo scheletrico
+**Authors:** Abu-Remaileh M, Aqeilan RI, et al.
+**Year:** 2019
+**Source type:** primario sperimentale — KO tessuto-specifico murino + knock-down in C2C12
+**Journal/source:** *Molecular Metabolism* 22:132–140
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 30755385 / DOI 10.1016/j.molmet.2019.01.010
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260810-30755385-01`
+**Registry record:** [[paper_registry_current#PAPER 061]] (promosso da `CORPUS-STUB-039`, BATCH_20260810_003)
+**Primary pathway:** P5 — metabolismo
+**Genotype/model tag:** KO condizionale muscolo-scheletrico murino; non CNS, non allele WWOX-DEE
+**Transferability:** T2 — meccanismo trasferibile, tessuto no
+**clinical relevance:** INDIRECT
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-10
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 39
