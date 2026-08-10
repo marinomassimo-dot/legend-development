@@ -769,8 +769,61 @@ def common_prefix_length(base: list[dict[str, Any]], incoming: list[dict[str, An
     return length
 
 
+RENAMEABLE = ("event_id", "prior_receipt")
+
+
+def _renamed(event: dict[str, Any], renames: dict[str, str]) -> dict[str, Any]:
+    """Apply a rename map to one event's identity fields, SIMULTANEOUSLY.
+
+    🔴 Simultaneous, not sequential, and that is the whole hazard. The real case is a slide —
+    `-02`→`-03`, `-03`→`-04`, `-04`→`-05` — and applying those one after another walks every
+    event into the slot the next rename is about to vacate, so `-02` ends up as `-05` and
+    three events share a name. One pass over the ORIGINAL value is the only correct order,
+    because there isn't one.
+
+    `prior_receipt` is renamed too. An event whose predecessor was renamed and whose pointer
+    was not is a provenance link to an identifier that no longer exists — the same defect the
+    rename exists to remove, moved one field to the left.
+    """
+    if not renames:
+        return event
+    for field in RENAMEABLE:
+        value = event.get(field)
+        if isinstance(value, str) and value in renames:
+            event[field] = renames[value]
+    return event
+
+
+def _rename_errors(renames: dict[str, str], base: list[dict[str, Any]],
+                   incoming: list[dict[str, Any]], shared: int) -> list[str]:
+    """Every way a declared rename can be wrong, before anything is written."""
+    errors: list[str] = []
+    suffix_ids = {event.get("event_id") for event in incoming[shared:]}
+    prefix_ids = {event.get("event_id") for event in incoming[:shared]}
+    base_ids = {event.get("event_id") for event in base}
+    for old, new in renames.items():
+        if old not in suffix_ids:
+            # A rename naming nothing is a typo, and silently succeeding would leave the
+            # collision it was meant to resolve while reporting that it was resolved.
+            where = (" — it is in the SHARED prefix, which this rechain does not move and "
+                     "must not touch" if old in prefix_ids else "")
+            errors.append(
+                f"--rename {old}={new}: no event {old} among the {len(suffix_ids)} being "
+                f"moved{where}")
+        if new in base_ids:
+            errors.append(
+                f"--rename {old}={new}: {new} already exists in the base ledger; a rename "
+                "that lands on an occupied identifier creates the collision it is resolving")
+        if new in suffix_ids and new not in renames:
+            errors.append(
+                f"--rename {old}={new}: {new} is already used by another event being moved "
+                "and is not itself being renamed; declare the whole slide, not one step of it")
+    return errors
+
+
 def rechain(
-    base: list[dict[str, Any]], incoming: list[dict[str, Any]]
+    base: list[dict[str, Any]], incoming: list[dict[str, Any]],
+    renames: dict[str, str] | None = None,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], int]:
     """Rebase `incoming`'s divergent suffix onto `base`, touching only the chain field.
 
@@ -795,6 +848,15 @@ def rechain(
       thing a merge can break: two branches can mint the same `event_id`, or record
       conflicting identities for one study, and both are invisible until the lines are in one
       file.
+
+    🔴 `renames` is the ONE declared exception to "moves an event, does not modify it", and it
+    exists because the sequence check above is unsatisfiable without it. When two branches
+    mint the same `event_id` on different work, no ordering resolves them — one has to be
+    renumbered, and the only lawful place for that is here, declared on the command line and
+    checked, rather than in an editor where nothing would check it at all. The exception is
+    narrow by construction: only `event_id` and `prior_receipt` may change, only in the events
+    being MOVED, only to identifiers nobody holds, and the body guard below still runs over
+    every other field.
     """
     errors = validate_ledger_chain(base)
     if errors:
@@ -806,7 +868,11 @@ def rechain(
                          + "; ".join(errors))
 
     shared = common_prefix_length(base, incoming)
-    suffix = [copy.deepcopy(event) for event in incoming[shared:]]
+    renames = dict(renames or {})
+    rename_errors = _rename_errors(renames, base, incoming, shared)
+    if rename_errors:
+        raise ValueError("; ".join(rename_errors))
+    suffix = [_renamed(copy.deepcopy(event), renames) for event in incoming[shared:]]
 
     # Deep-copied, and the base is re-compared at the end. Sharing references with the caller
     # would make `rechain` able to alter the history it is rebasing onto without any of the
@@ -819,10 +885,26 @@ def rechain(
     moved: list[dict[str, Any]] = []
     for original, event in zip(incoming[shared:], suffix):
         event[CHAIN_FIELD] = ledger_head(merged)
-        if event_body(event) != event_body(original):
+        # 🔴 The guard does NOT go through `_renamed`. Comparing the renamed event against a
+        # renamed copy of the original was the obvious shape and it is worthless: any bug
+        # inside `_renamed` is applied to both sides and cancels, so the check certifies the
+        # code it is supposed to be checking. Caught by mutation-testing it — a deliberate
+        # corruption injected into `_renamed` passed clean.
+        #
+        # So the expectation is recomputed from the DECLARED map here, and every other field
+        # is compared untouched. A rename cannot be cover for an edit, and a broken rename
+        # cannot hide behind being applied twice.
+        expected = {}
+        for field in RENAMEABLE:
+            value = original.get(field)
+            expected[field] = renames.get(value, value) if isinstance(value, str) else value
+        left = {k: v for k, v in event_body(event).items() if k not in RENAMEABLE}
+        right = {k: v for k, v in event_body(original).items() if k not in RENAMEABLE}
+        if left != right or any(event.get(f) != expected[f] for f in RENAMEABLE):
             raise ValueError(
-                f"rechain altered {original.get('event_id')} beyond {CHAIN_FIELD}; "
-                "a rechain moves an event in history, it does not modify it")
+                f"rechain altered {original.get('event_id')} beyond {CHAIN_FIELD}"
+                + (" and the declared renames" if renames else "")
+                + "; a rechain moves an event in history, it does not modify it")
         merged.append(event)
         moved.append(event)
 
@@ -1082,6 +1164,10 @@ def main() -> int:
         "--onto", required=True,
         help="the base ledger to rebase onto — e.g. `git show main:<ledger> > base.jsonl`")
     rechain_cmd.add_argument(
+        "--rename", action="append", default=[], metavar="OLD=NEW",
+        help=("renumber an event being moved, e.g. FTR-...-02=FTR-...-03. Repeatable, and a "
+              "slide must be declared whole: all renames apply at once"))
+    rechain_cmd.add_argument(
         "--dry-run", action="store_true",
         help="report the plan and write nothing")
     args = parser.parse_args()
@@ -1132,16 +1218,28 @@ def main() -> int:
                 raise ValueError(f"base ledger does not exist: {base_path}")
             base = load_ledger(base_path)
             incoming = load_ledger(ledger)
-            merged, moved, shared = rechain(base, incoming)
+            renames: dict[str, str] = {}
+            for pair in args.rename:
+                if pair.count("=") != 1 or not all(part.strip() for part in pair.split("=")):
+                    raise ValueError(f"--rename expects OLD=NEW, got {pair!r}")
+                old, new = (part.strip() for part in pair.split("="))
+                if old in renames:
+                    raise ValueError(f"--rename {old} declared twice")
+                renames[old] = new
+            merged, moved, shared = rechain(base, incoming, renames)
             print(f"BASE:     {len(base)} event(s) from {base_path}")
             print(f"INCOMING: {len(incoming)} event(s) from {ledger}")
             print(f"SHARED:   {shared} event(s) — the two histories agree up to here")
             if not moved:
                 print("NOTHING TO REBASE: this ledger adds no event the base does not have")
                 return 0
+            reverse = {new: old for old, new in renames.items()}
             for event in moved:
-                print(f"  MOVE {event.get('event_id')}  "
-                      f"{event.get('evidence_depth', '?')}  "
+                identifier = event.get("event_id")
+                was = reverse.get(str(identifier))
+                print(f"  MOVE {identifier}"
+                      + (f"  (was {was})" if was else "")
+                      + f"  {event.get('evidence_depth', '?')}  "
                       f"pmid {event.get('study_id', {}).get('pmid', '?')}")
             if args.dry_run:
                 print(f"DRY RUN: {len(moved)} event(s) would move; "

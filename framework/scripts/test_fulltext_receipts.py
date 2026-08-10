@@ -917,5 +917,150 @@ class RechainMovesAnEventWithoutChangingIt(unittest.TestCase):
                           manifest.read_text(encoding="utf-8"))
 
 
+class ARenameIsTheOneDeclaredExceptionAndItIsNarrow(unittest.TestCase):
+    """🔴 Two branches minted `FTR-20260810-42422765-02` on different work.
+
+    No ordering resolves that: the sequence check refuses the merged whole whatever the order,
+    because one identifier cannot name two events. Renumbering is the only lawful resolution,
+    and the only lawful PLACE for it is a declared input to the rechain — in an editor nothing
+    would check it, which is the state the whole ledger exists to escape.
+    """
+
+    @staticmethod
+    def _event(event_id: str, pmid: str, prior: str | None = None) -> dict:
+        record = example(event_id, "partial_fulltext_read")
+        record["study_id"] = {"pmid": pmid, "doi": None}
+        record["prior_receipt"] = prior
+        return record
+
+    def _chained(self, events: list[dict]) -> list[dict]:
+        out: list[dict] = []
+        for event in events:
+            record = dict(event)
+            record[receipts.CHAIN_FIELD] = receipts.ledger_head(out)
+            out.append(record)
+        return out
+
+    def _collision(self):
+        """The real shape: base holds `-02`, and the branch minted its own `-02` plus a slide."""
+        shared = self._chained([self._event("FTR-20260725-11111111-01", "11111111")])
+        base = self._chained([*shared, self._event("FTR-20260810-42422765-02", "42422765")])
+        # The `prior_receipt` pair shares a study on purpose: a provenance pointer is only
+        # valid between two receipts for the same paper, so a fixture that crosses studies
+        # would fail the sequence rules and prove nothing about renaming.
+        branch = self._chained([
+            *shared,
+            self._event("FTR-20260810-42422765-02", "33333333"),
+            self._event("FTR-20260810-42422765-03", "33333333",
+                        prior="FTR-20260810-42422765-02"),
+            self._event("FTR-20260810-42422765-04", "44444444"),
+        ])
+        return base, branch
+
+    def test_without_a_rename_the_merged_whole_is_refused(self) -> None:
+        base, branch = self._collision()
+        with self.assertRaises(ValueError) as caught:
+            receipts.rechain(base, branch)
+        self.assertIn("cannot coexist in one history", str(caught.exception))
+
+    def test_the_declared_slide_resolves_it(self) -> None:
+        base, branch = self._collision()
+        merged, moved, shared = receipts.rechain(base, branch, {
+            "FTR-20260810-42422765-02": "FTR-20260810-42422765-03",
+            "FTR-20260810-42422765-03": "FTR-20260810-42422765-04",
+            "FTR-20260810-42422765-04": "FTR-20260810-42422765-05",
+        })
+        self.assertEqual(1, shared)
+        self.assertEqual(["FTR-20260810-42422765-03", "FTR-20260810-42422765-04",
+                          "FTR-20260810-42422765-05"], [e["event_id"] for e in moved])
+        self.assertEqual([], receipts.validate_ledger_chain(merged))
+        self.assertEqual([], receipts.validate_ledger_sequence(merged))
+
+    def test_the_slide_is_simultaneous_not_sequential(self) -> None:
+        """🔴 Applied one after another, `-02` walks to `-05` and three events share a name."""
+        base, branch = self._collision()
+        _merged, moved, _ = receipts.rechain(base, branch, {
+            "FTR-20260810-42422765-02": "FTR-20260810-42422765-03",
+            "FTR-20260810-42422765-03": "FTR-20260810-42422765-04",
+            "FTR-20260810-42422765-04": "FTR-20260810-42422765-05",
+        })
+        self.assertEqual(3, len({e["event_id"] for e in moved}))
+
+    def test_a_provenance_pointer_follows_the_event_it_names(self) -> None:
+        """A `prior_receipt` left behind points at an identifier that no longer exists."""
+        base, branch = self._collision()
+        _merged, moved, _ = receipts.rechain(base, branch, {
+            "FTR-20260810-42422765-02": "FTR-20260810-42422765-03",
+            "FTR-20260810-42422765-03": "FTR-20260810-42422765-04",
+            "FTR-20260810-42422765-04": "FTR-20260810-42422765-05",
+        })
+        self.assertEqual("FTR-20260810-42422765-03", moved[1]["prior_receipt"])
+
+    def test_half_a_slide_is_refused(self) -> None:
+        base, branch = self._collision()
+        with self.assertRaises(ValueError) as caught:
+            receipts.rechain(base, branch,
+                             {"FTR-20260810-42422765-02": "FTR-20260810-42422765-03"})
+        self.assertIn("declare the whole slide", str(caught.exception))
+
+    def test_a_rename_onto_an_occupied_identifier_is_refused(self) -> None:
+        """Landing on a base identifier creates the collision the rename was resolving."""
+        base, branch = self._collision()
+        with self.assertRaises(ValueError) as caught:
+            receipts.rechain(base, branch,
+                             {"FTR-20260810-42422765-04": "FTR-20260810-42422765-02"})
+        self.assertIn("already exists in the base ledger", str(caught.exception))
+
+    def test_a_rename_that_names_nothing_is_refused(self) -> None:
+        """Silently succeeding would report a collision resolved while leaving it in place."""
+        base, branch = self._collision()
+        with self.assertRaises(ValueError) as caught:
+            receipts.rechain(base, branch, {"FTR-20260725-99999999-01": "FTR-X"})
+        self.assertIn("no event FTR-20260725-99999999-01", str(caught.exception))
+
+    def test_a_rename_of_a_shared_event_is_refused_and_says_why(self) -> None:
+        """The prefix is history both sides already agree on; a rebase does not touch it."""
+        base, branch = self._collision()
+        with self.assertRaises(ValueError) as caught:
+            receipts.rechain(base, branch, {"FTR-20260725-11111111-01": "FTR-X"})
+        self.assertIn("SHARED prefix", str(caught.exception))
+
+    def test_a_rename_may_not_be_cover_for_an_edit(self) -> None:
+        """🔴 The mutation that proved the first guard worthless.
+
+        The obvious shape compared the renamed event against a renamed copy of its original —
+        and a corruption injected into `_renamed` then applied to BOTH sides and cancelled, so
+        the guard certified the code it was meant to check. The expectation is now recomputed
+        from the declared map instead, which is why this mutation is caught.
+        """
+        base, branch = self._collision()
+        renames = {"FTR-20260810-42422765-02": "FTR-20260810-42422765-03",
+                   "FTR-20260810-42422765-03": "FTR-20260810-42422765-04",
+                   "FTR-20260810-42422765-04": "FTR-20260810-42422765-05"}
+        original = receipts._renamed
+        try:
+            def sneak(event, mapping):
+                event = original(event, mapping)
+                if event.get("event_id") == "FTR-20260810-42422765-05":
+                    event["evidence_depth"] = "complete_fulltext_read"
+                return event
+            receipts._renamed = sneak
+            with self.assertRaises(ValueError) as caught:
+                receipts.rechain(base, branch, renames)
+        finally:
+            receipts._renamed = original
+        self.assertIn("does not modify it", str(caught.exception))
+
+    def test_the_inputs_are_not_mutated_by_a_rename(self) -> None:
+        base, branch = self._collision()
+        before = json.dumps(branch, sort_keys=True)
+        receipts.rechain(base, branch, {
+            "FTR-20260810-42422765-02": "FTR-20260810-42422765-03",
+            "FTR-20260810-42422765-03": "FTR-20260810-42422765-04",
+            "FTR-20260810-42422765-04": "FTR-20260810-42422765-05",
+        })
+        self.assertEqual(before, json.dumps(branch, sort_keys=True))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
