@@ -105,6 +105,43 @@ class TheAuditFindsWhatItShould(unittest.TestCase):
         result = self.audit(path)
         self.assertEqual([0], result["matched"], result)
 
+    def test_a_declared_surface_absent_from_this_tree_is_not_a_missing_surface(self) -> None:
+        """🔴 Two opposite causes had been wearing the same word.
+
+        Reported by a reader who hit it on `PMID 34747138`: their checkout had no hardlink for
+        the declared XML, and the script said `unauditable` — the same word it uses for a
+        paper that has no structured deposit anywhere. One is a limit the reading must live
+        with; the other is an errand, repaired by fetching, and it is the COMMON case, since
+        anyone running from a branch other than the one that fetched the artifacts lands
+        there. A reader who cannot tell them apart treats both as neither.
+        """
+        path = self.workspace.manifest(
+            [entry("restored survival in Wwox null mice")],
+            schema=2,
+            artifacts=[{"path": "files/fulltext/PMID12345678_absent.xml",
+                        "sha256": "a" * 64, "kind": "article_text"}])
+        result = audit.audit_one(path, self.workspace.root / "nowhere")
+        self.assertEqual("surface_absent_here", result["cause"])
+        self.assertIn("absent from this tree", result["reason"])
+        self.assertIn("not a defect in the reading", result["reason"])
+
+    def test_a_study_with_no_structured_surface_anywhere_says_so_differently(self) -> None:
+        path = self.workspace.manifest([entry("restored survival in Wwox null mice")])
+        result = audit.audit_one(path, self.workspace.root / "nowhere")
+        self.assertEqual("no_surface_known", result["cause"])
+
+    def test_the_scope_note_does_not_claim_the_class_is_sealed(self) -> None:
+        """The gate is real and narrower than it is tempting to say.
+
+        `require_work_manifest` returns early for anything that is not a contemporaneous
+        `complete_fulltext_read`, so partial reads, legacy reconstructions and receipt
+        corrections write locators the persistence gate never sees. Calling the backlog closed
+        would be exactly the over-claim this tool exists to find in other people's sentences.
+        """
+        self.assertIn("NOT sealed", audit.CLOSED_SET_NOTE)
+        for exempted in ("partial reads", "legacy reconstructions", "receipt corrections"):
+            self.assertIn(exempted, audit.CLOSED_SET_NOTE)
+
     def test_a_manifest_with_no_entries_owes_nothing(self) -> None:
         path = self.workspace.manifest([])
         self.assertIn("no locator entries", self.audit(path)["reason"])
