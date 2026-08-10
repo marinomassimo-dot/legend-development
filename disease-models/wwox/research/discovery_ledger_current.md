@@ -2238,3 +2238,156 @@ Aperto il rif. 3 (`PMID 24550385`, `FT-054`) sono emerse tre cose che riscrivono
 - **Conseguenza operativa:** qualunque claim canonico su «WWOX e scelta della via di riparazione» deve portare il conflitto attaccato e **dichiarare la direzione della manipolazione**, non solo il sistema. Un claim che dica soltanto «WWOX favorisce il NHEJ» o «WWOX favorisce l'HDR» è sottospecificato rispetto a ciò che la letteratura contiene oggi.
 - **REVIVAL_TRIGGER:** la lettura di Park et al. (rif. 17 di `38499540`, PMID non risolto) è ora l'hop di massimo valore: è lo studio con cui `38499540` dichiara allineamento, e definirebbe se la via «resezione precoce» riconcilia le due misure.
 - **Interconnessioni:** `DL-MECH-083` · `IMPORTED_PREMISE_ATTRIBUTION_GATE` · `DL-METH-082`.
+
+> 🔴 **Nota di merge, 2026-08-10.** Le voci che seguono arrivano da un secondo ramo che ha
+> appeso al ledger nello stesso momento del precedente. **Tenute entrambe**: un ledger
+> append-only si somma, non si sceglie, e scartare un lato avrebbe cancellato la lettura di un
+> attore nel file che esiste per accumularla.
+>
+> Una collisione di numerazione va dichiarata invece che nascosta: i due rami hanno allocato
+> «il prossimo numero libero» contro istantanee diverse, ed entrambi sono arrivati a **081**.
+> La voce di questo secondo blocco è stata rinumerata da `DL-THER-081` a **`DL-THER-089`**,
+> che era il buco lasciato dalla stessa collisione — verificato prima di toccarla che nessun
+> file la citasse, mentre `DL-METH-081` è citata dalla coda dei full text e quindi non si
+> muove. È la stessa forma dei quattro `FT-` duplicati trovati oggi, e la stessa ragione:
+> **due rami che contano l'ultimo numero di due code diverse producono lo stesso numero.**
+
+### DL-THER-089 — A51, primo intervento farmacologico su un modello neurale umano WWOX-deficiente: recupera i progenitori e non i neuroni di strato
+- **Status:** open · **Tag epistemico:** `IPOTESI`. **Non è un candidato terapeutico** e non va descritto come tale: nessuno dei quattro requisiti di Track C è soddisfatto — la direzione di pathway non è firmata, il readout prossimale non è Tier 1/2, la sicurezza CNS pediatrica non è valutata, e il composto non è selettivo per il bersaglio nominato.
+- **Fonti:** PMID **42397075** (letto, `FTR-20260810-42397075-04`, manifest `PMID42397075.json`, **30 locator**, `MANIFEST STRICT PASS`). *Conteggio e receipt aggiornati il 2026-08-10 sera: la voce era stata scritta a 25 locator e sul receipt `-03`, entrambi veri quando scritti e superati dalla chiusura della lettura.*
+- **Cosa è A51:** un inibitore **multi-chinasi**, non un inibitore di MYC. Il paper stesso lo definisce *"a multi-kinase inhibitor (A51) established to suppress Wnt and MYC expression"*. Dose submassimale 125 nM, dalla settimana 8 alla 15 in vitro, composto fornito dal gruppo Ben-Neriah. 🔴 `PREMISE_TAG` · `PREMISE: INFERENZA` — «l'inibizione di MYC recupera la neurogenesi» poggia su un intervento che sopprime **due** vie, e l'attribuzione causale a MYC eredita l'ambiguità. Gli autori la dichiarano, non la nascondono.
+- 🔴 **DATO dai pannelli — il recupero è parziale e selettivo, e il pannello separa ciò che la frase unisce** (Suppl. Fig. 7F–G, letta a 170 ppi e **ri-letta a 258 ppi** il 2026-08-10 sera — il contenitore ne forniva 213 e la lettura originale era sotto; i valori qui sotto **reggono**, artefatti entrambi fingerprintati):
+
+  | misura | WT | KO | KO + A51 | verdetto |
+  |---|---:|---:|---:|---|
+  | SOX2⁺ | ≈27% | ≈60% | ≈33% | normalizzato (`ns` vs WT) |
+  | SOX2⁺MYC⁺ | ≈48% | ≈72% | ≈50% | normalizzato (`ns` vs WT) |
+  | NEUN⁺ | ≈30% | ≈6% | ≈18% | recuperato (`*` vs KO) |
+  | **SATB2⁺** | ≈1,4% | ≈0,35% | ≈0,7% | **`ns` KO-vs-A51 — nessun recupero** |
+  | **CTIP2⁺** | ≈12,5% | ≈0,2% | ≈0,3% | **`ns` KO-vs-A51**, resta `****` sotto WT |
+
+  Inibire MYC ripristina **identità progenitrice e marcatura pan-neuronale** e lascia dove stava la **produzione di neuroni di strato**, profondi e superficiali. Qualunque riformulazione a valle deve portarsi dietro questa scissione.
+- 🔴 **BLOCK-1 — la domanda di sicurezza, aperta e non risolta:** un inibitore multi-chinasi che sopprime **Wnt** in un contesto **neurologico pediatrico in sviluppo**. Wnt canonico è richiesto per la proliferazione dei progenitori neurali e la patterning corticale; sopprimerlo durante la corticogenesi non è un effetto collaterale ipotetico ma il meccanismo stesso per cui il composto riduce i progenitori — che in questo esperimento è l'esito desiderato. **La finestra terapeutica fra «riduce i progenitori in eccesso» e «impedisce la corticogenesi normale» non è misurata da nessuna parte in questo lavoro**, che testa una dose sola su un genotipo solo. Nessuna promozione oltre `IPOTESI` finché non esiste una curva dose-risposta con un braccio WT trattato.
+- **Vincoli metodologici ereditati, tutti dichiarati dal paper:** l'esperimento di inibizione MYC è uno dei **tre** che il paper esclude dalle differenziazioni indipendenti (con scRNA-seq e ChIP-seq NSC) — cioè i tre su cui poggia la tesi WWOX–MYC; e *"No randomization or blinding was applied in this study"*.
+- **Cosa serve per muoverlo di un gradino:** (a) un inibitore MYC selettivo, per separare Wnt da MYC; (b) una dose-risposta con braccio WT trattato, per la finestra; (c) un readout prossimale Tier 1/2 legato al gene, che oggi non esiste — SOX2 e NEUN sono marcatori di identità cellulare, non biomarcatori di funzione WWOX.
+- **Interconnessioni:** `FT-039` · `DL-MECH-078` · [[claim_registry_current#CLAIM 003]] · [[therapeutic_hypotheses_ledger_current]] · manifest `PMID42397075.json` entries A51.
+- **Destinazione dichiarata:** questa voce **è materiale per un commit candidate**, non un commit candidate. La distinzione è quella che l'orchestratore ha isolato oggi: né il nome di un file né una stringa contenuta identificano un candidato, quindi lo dichiaro qui in prosa e la promozione resta di chi possiede il gate.
+
+---
+
+> ## 🔢 Nota di allocazione — perché queste quattro voci partono da 085 e non da 082
+>
+> `082` e `084` sono liberi. Non li prendo. **L'allocazione degli ID di questo ledger è
+> concorrente e non guardata**, e la collisione di allocazione è stata isolata come classe
+> proprio oggi: chi scrive fa la cosa giusta e collide lo stesso, perché nessuna disciplina di
+> scrittura la previene — solo una guardia o un'allocazione centralizzata. So che B ha in mano
+> `DL-METH-079` e `DL-MECH-083`; non so cosa abbiano Plan e Codex.
+>
+> Quindi prendo **085–088 come blocco contiguo, con uno stacco sopra 083**, e lo dichiaro qui
+> invece di prendere i numeri liberi in silenzio. Uno stacco costa nulla; una collisione costa
+> un `BLOCK_BATCH_COMMIT` a chi merge per secondo. Se l'allocazione diventa centralizzata,
+> questa nota è il primo posto da cui cancellarla.
+
+### DL-BIO-085 — L'abbondanza di proteina WWOX non è una lettura della funzione di WWOX, e le due misure che lo chiudono vengono da lati opposti
+- **Status:** open · **Tag epistemico:** `DATO` per ciascuna delle due osservazioni, `INFERENZA` per la conclusione congiunta.
+- **Fonti:** PMID **42128308** (letto, `FTR-20260810-42128308-02`, manifest `PMID42128308.json`, 25 locator, `MANIFEST STRICT PASS`), sezioni 10.1 e 10.3. **Nessuna delle due misure dipende da un preprint** — è la ragione per cui questa voce è la più solida delle quattro.
+- 🔴 **Le due misure, e sono in direzione opposta:**
+
+  | modello | proteina WWOX | fenotipo | fonte primaria citata |
+  |---|---|---|---|
+  | **`Wwox^P47T/P47T`** knock-in murino | **pari al wild type** | epilessia ad esordio adulto, neurodegenerazione cerebellare, atassia, neuroinfiammazione progressiva | Hussain et al. 2023 |
+  | **Organoidi frontali SCAR12** da iPSC paziente | **minima** | morfologia, marcatori di strato e rapporto E/I **simili ai controlli sani** | Steinberg et al. 2021 |
+
+- **Il meccanismo che spiega la prima riga è dichiarato:** la mutazione P47T *«disrupts the WW1 domain's PPXY motif, leading to partial WWOX loss-of-function and impaired binding with downstream interaction partners»*. Cioè **perdita di funzione per interazione fallita, non per proteina persa.**
+- 🔴 **La conseguenza per il layer biomarker, che è la ragione di questa voce:** un biomarcatore Tier 1/2 costruito sull'**abbondanza** di WWOX classificherebbe **P47T come normale** e **SCAR12 come gravemente colpito**, e sarebbe sbagliato **in entrambi i casi e in direzioni opposte**. L'abbondanza non predice né la presenza né l'assenza del fenotipo cellulare.
+- **Come si connette a ciò che questo repository già sa:** è l'asse **funzione** che fallisce mentre **sintesi** e **solubilità** passano — la separazione a cinque vie (*sintesi · solubilità · turnover · rotta · funzione*) che il caso del carcinoma tiroideo del 2026-07-12 impose a questo sistema. Allora fu dimostrata su una linea tumorale e su un allele; **qui è dimostrata in vivo su un allele di malattia e su materiale neurale umano di paziente.**
+- 🔴 `PREMISE_TAG` — *«se la proteina c'è, la funzione c'è»* · `PREMISE: DEFAULT_FROM_TEXTBOOK`. Va nella tabella `DEFAULTS THAT BIT US` del [[dismissal_ledger_current]], accanto a *«stabilizzare ⇒ funzione ripristinata»*, che è la stessa premessa vista dal lato terapeutico.
+- **Cosa serve per muoverlo di un gradino:** un readout **funzionale** prossimale e legato al gene — un partner di interazione la cui occupazione si misuri, non una banda su un blot. Oggi non esiste in questo corpus, e questa voce serve soprattutto a dire che **il posto vuoto è quello**.
+- **Interconnessioni:** `FT-045` · `DL-THER-089` · `DEFAULTS THAT BIT US` in [[dismissal_ledger_current]] · [[biomarker_endpoint]].
+- **Destinazione dichiarata:** **materiale per un commit candidate**, non un candidato. Promozione a chi possiede il gate.
+
+### DL-MECH-086 — La review dice «restored» dove il suo stesso primario mostra dieci volte il wild type, e la parentesi che lo falsificherebbe non è disegnata
+- **Status:** open · **Tag epistemico:** `DATO` sui due fatti, `INFERENZA` sul nesso.
+- **Fonti:** PMID **42128308** §10.4 (testo) contro PMID **42397075** Suppl. Fig. 10B–C (pannelli, riletti a **258 ppi**).
+- **Il fatto testuale:** la review, dello stesso gruppo e con lo stesso primo autore del primario di ottimizzazione, scrive che la ri-espressione neuronale di WWOX ha *«restored deep-layer neuronal markers (CTIP2, SATB2)»*.
+- 🔴 **Il fatto grafico:** nel primario, SATB2 mRNA nel WOREE trattato **non torna al wild type**: la scatola va da ≈1 a ≈11 contro wild type a ≈1,3, con la linea non trattata a ≈0,6. BCL11B/CTIP2 arriva a ≈3,0 contro 1. *(Correzione registrata: avevo prima scritto «circa dieci volte» come valore centrale; a 258 ppi quello è il tetto della scatola. La lettura corretta **affila** il reperto — una distribuzione trattata che va da wild type a undici volte wild type è **assenza di controllo del livello**, che nomina il meccanismo invece della magnitudine.)*
+- 🔴 **Perché la parola sopravvive, ed è la parte strutturale:** le parentesi di significatività corrono **WT-vs-EGFP** e **EGFP-vs-WWOX**. **La parentesi WT-vs-trattato non è disegnata.** Il confronto che falsificherebbe *«restored»* non è mai stato fatto. Verificato come **assenza** a 258 ppi dopo che la lettura originale era a 170 — *una parentesi assente è un reperto ed è anche ciò che una risoluzione bassa fabbrica*, quindi ogni affermazione di assenza di quella pagina è stata ricontrollata, non solo la sospetta.
+- 🔴 **Il passaggio che va nominato e non dato per fatto:** la review cita `Steinberg et al. 2024` al **DOI del preprint** `10.1101/2024.12.22.630016`, mentre io ho letto il **manoscritto accettato** (`PMID 42397075`, *Brain*). La contraddizione è quindi fra **la lettura che la review fa del preprint** e **la mia del manoscritto accettato**. Non si dissolve — la versione accettata è quella che il campo citerà — ma i pannelli supplementari aggiudicati a 258 ppi **possono non essere quelli che la review ha letto**, e questo va scritto nel candidate invece che assunto.
+- **Interconnessioni:** `FT-045` · `FT-039` · `DL-MECH-087` · manifest `PMID42128308.json` entries[5] e `PMID42397075.json` entries[22].
+- **Destinazione dichiarata:** **materiale per un commit candidate**.
+
+### DL-THER-087 — L'anello WPRE si chiude dentro un solo documento, e nessuno dei due capi cita l'altro
+- **Status:** open · **Tag epistemico:** `DATO` sui tre fatti, `INFERENZA` sul nesso.
+- **Fonti:** PMID **42128308** §10.4 e §11 (testo) · PMID **42422765** `entries[15]` (pannelli).
+
+  | dove | cosa dice |
+  |---|---|
+  | **§10.4** | rimuovere WPRE era *«aimed at avoiding excessive or poorly controlled transgene expression while preserving sufficient therapeutic efficacy»* |
+  | **primario** | la rimozione **richiese sei volte la dose** per recuperare efficacia; la proteina senza WPRE a 2E10 sta **a o sotto il wild type** |
+  | **§11** | *«high-dose AAV administration»* è il motore della patologia dei gangli delle radici dorsali e *«a key regulatory concern in pediatric CNS gene therapy programs»* |
+
+- 🔴 **L'efficacia non è stata *preservata a dose*: è stata ricomprata con vettore**, nella valuta che la review stessa nomina come il problema di sicurezza. La review celebra la scelta di progetto in una sezione e, due sezioni dopo, nomina il costo di quella scelta come il principale ostacolo regolatorio del campo — **senza collegarli**.
+- **Il vincolo che il primario e la review si scambiano senza saperlo:** §11 pretende che *«any effective strategy must recapitulate its natural spatiotemporal expression patterns»*; `PMID 42397075` mostra che l'AAV9 produce WWOX **da 0,4 a 7 volte il wild type** fra linee trattate con lo stesso vettore. **La review enuncia un requisito che il vettore corrente dimostrabilmente non soddisfa, e il primario che lo dimostra è dello stesso gruppo.**
+- **Cosa serve per muoverlo di un gradino:** una curva dose-risposta che riporti **insieme** efficacia e biodistribuzione periferica sullo stesso asse. Oggi vivono in paper diversi e in sezioni diverse dello stesso paper.
+- **Interconnessioni:** `FT-045` · `FT-041` · `DL-MECH-086` · manifest `PMID42128308.json` entries[6].
+- **Destinazione dichiarata:** **materiale per un commit candidate**.
+
+### DL-META-088 — Due fonti non referate, lo stesso statuto, due trattamenti diversi a due pagine di distanza
+- **Status:** open · **Tag epistemico:** `DATO`. **Non è una critica al paper: è un fatto sulla superficie che un lettore a valle eredita senza vederlo.**
+- **Fonti:** PMID **42128308**, bibliografia enumerata (**103 voci**, 35 WWOX-dirette, 4 preprint, tutti WWOX-diretti).
+- **L'asimmetria:**
+
+  | fonte | statuto | come la review la presenta |
+  |---|---|---|
+  | Lucas-Clarke et al. 2025 | bioRxiv `10.1101/2025.05.01.651195` | *«A recent preprint by (Lucas-Clarke et al., 2025)»* — **dichiarato** |
+  | **Abudiab et al. 2025** | bioRxiv `10.1101/2025.11.22.689900` | citato **sette volte in modo sostanziale** — **mai dichiarato** |
+
+- 🔴 **Dove pesa:** due citazioni in sezione 6 (WWOX fra i geni oligodendrogliali più disregolati; il risultato cuprizone *«at least in part through regulation of the key oligodendrocyte transcription factor SOX10»*) e **quattro righe distinte della Tabella 1** — Olig2-Cre O-KO, la sfida cuprizone su quella linea, la coltura OPC ex vivo, lo snRNA-seq delle lesioni MS. La Tabella 2 chiama il concetto cell-autonomo *«a particularly important emerging concept»* e i meccanismi SOX10 *«a major new direction»*.
+- **Chi legge la Tabella 1 porta via quattro righe di evidenza murina senza sapere che nessuna è referata.**
+- 🔴 **Conseguenza già pagata, su di me:** avevo registrato il contrasto basale-contro-cuprizone come *requisito condizionale* con la formula *«un readout oligodendrogliale non sfidato è un falso negativo per costruzione»*. **Declassato a `IPOTESI`**: fonte unica, non referata. La forma del reperto non cambia; il suo supporto sì, e non avevo controllato quale. `PREMISE_TAG` mancante sotto una conclusione che sembrava reggersi da sola.
+- **Il reperto collaterale, che vale una riga in coda e non un'indagine:** due dei quattro preprint (`Steinberg 2024`, `Obeid 2026`) sono citati a DOI di preprint **benché pubblicati** come `PMID 42397075` e `PMID 42422765`. **Il corpus contiene ora almeno due paper la cui citazione più recente in letteratura punta a una versione che non abbiamo.**
+- **Cosa lo renderebbe generale invece che aneddotico:** un controllo su ogni review nel corpus che confronti **quante fonti non referate cita** con **quante ne dichiara tali**. Riporterebbe `matched N of population P` ed esibirebbe `P − N`, che è la forma che Mirror ha isolato oggi. Non l'ho costruito: è infrastruttura e questa era una sessione di lettura.
+- 🔴 **AGGIUNTO LA SERA STESSA — l'asimmetria dei preprint non è isolata: è una delle TRE compressioni indipendenti dello stesso documento, su tre lati diversi.** Tre istanze indipendenti in un solo testo non sono uno stile: sono un modo di leggere le fonti, ed è una proprietà della superficie che un lettore a valle eredita per intero.
+
+  | lato | la review dice | il suo stesso primario mostra |
+  |---|---|---|
+  | **molecolare** | AAV9 ha *«restored deep-layer neuronal markers (CTIP2, SATB2)»* | SATB2 va da wild type a **undici volte** wild type, e **la parentesi WT-vs-trattato non è disegnata** (`PMID 42397075`) |
+  | **terapeutico** | rimuovere WPRE *«aimed at avoiding excessive or poorly controlled transgene expression while preserving sufficient therapeutic efficacy»* | la rimozione richiese **sei volte la dose**, e §11 della review stessa nomina l'alta dose come la principale preoccupazione regolatoria pediatrica (`PMID 42422765`) |
+  | **clinico** | *«a homozygous missense WWOX mutation (p.Ser304Tyr) … despite the mutation type typically being associated with milder phenotypes»* | la variante è **ACMG «Unclear clinical significance»**, gli autori scrivono che la patogenicità *«require[s] validation»*, e c'è un **secondo candidato in `CACNA1A`** contro una DEE **autosomica dominante** (`PMID 39416860`) |
+
+  **Tre volte la metà semplice**, e ogni volta la metà che cade è quella che introdurrebbe una qualificazione. Nessuna delle tre è visibile leggendo la review; tutte e tre lo sono leggendo **ciò che la review cita**. Fonti: `FT-045` · `FT-055` · manifest `PMID42128308.json` entries[5], entries[6], entries[23], entries[24].
+- 🔴 **QUARTA, TROVATA DOPO LE ALTRE TRE, E DI UNA SPECIE DIVERSA: le prime tre RIDUCONO un risultato, questa ne INVERTE il senso.** La review presenta il caso dell'introne 4 di Oliver 2023 come una crepa nel framework — *«technically falls under category 2 … However, the observed clinical severity was comparable to that of patients with category 1 genotypes»*. Ma Oliver **codifica quella delezione come null**, perché causa lo skipping dell'esone 5 mentre quella dell'introne 3 è benigna, e tabula il paziente 6 come **`Missense/null`**: un ordinario caso di classe 2. E in uno schema dove la classe 2 **non mostra alcun fenotipo intermedio**, un classe-2 grave quanto un classe-1 è **il risultato atteso**. La review lo offre come anomalia; è il framework che funziona come la sua fonte dice che funziona. Fonte: `FT-056`, `FTR-20260810-36779245-03`.
+
+---
+
+> ## 🔢 Nota di allocazione — `089` lasciato libero
+> Il blocco `085`–`088` era il mio, dichiarato. Questa voce arriva dopo ed è indipendente, quindi
+> prendo **`090`** lasciando `089` come stacco, per la ragione già scritta sopra: l'allocazione
+> è concorrente e non guardata, e nel frattempo altri attori hanno allocato.
+
+### DL-BIO-090 — «Missenso» non è una classe funzionale: la premessa sotto la traccia ipomorfi/ASO va riscritta, non difesa con un controesempio
+- **Status:** open · **Tag epistemico:** `DATO` sulle tre osservazioni, `INFERENZA` sulla riscrittura.
+- **Perché esiste questa voce:** oggi la premessa *«missenso ⇒ funzione residua ⇒ più lieve»* è stata attaccata due volte cercando un **controesempio** — Feng 2024, poi Oliver 2023. **Era il modo sbagliato di affrontarla.** Un controesempio presuppone che la categoria sia ben formata e che qualche membro si comporti male. Qui è la **categoria** a non esistere.
+
+- 🔴 **Le tre osservazioni, tutte dalla stessa fonte e tutte verbatim:**
+
+  | osservazione | citazione |
+  |---|---|
+  | **stesso residuo, due malattie** | *«p.Pro47 has been associated with two pathogenic variants; the more conservative change to threonine was found in SCAR12»* — contro l'arginina in WWOX-DEE |
+  | **nessuna via di scampo regionale** | *«no region of the gene emerged as specific for being associated with WWOX-DEE»*; le due missenso SCAR12 stanno **vicine** a varianti DEE |
+  | **nessun intermedio, dalla fonte dello schema** | *«We found no difference between individuals with one or two missense variants and therefore no evidence to support an "intermediate" phenotype»* |
+
+- **La riscrittura, e va usata al posto della premessa vecchia:** la gravità in WWOX è **specifica della sostituzione**, non del tipo di variante, non del residuo e non della regione. `p.Pro47Thr` e `p.Pro47Arg` sono entrambi missensi sullo **stesso residuo** e danno malattie diverse. Quindi:
+  - **`missense` è una categoria di annotazione, non una categoria funzionale.** Usarla per predire la gravità, la funzione residua o l'idoneità a un approccio terapeutico è una **inferenza non supportata**, e ogni volta che compare in questo repository va sostituita con la domanda *«questa sostituzione, misurata come?»*.
+  - **La sola stratificazione che i dati sostengono è binaria e su un asse solo:** null/null contro *almeno un missenso*, sulla **sopravvivenza** (p = .0085). Sull'esordio delle crisi **nessuna differenza fra i tre gruppi** (p = .65).
+  - 🔴 **Conseguenza per la traccia ASO/ipomorfi:** un allele non è un bersaglio ASO perché è missenso. Lo è se **quella sostituzione** lascia proteina misurabilmente funzionale — che è la domanda di `DL-BIO-085`, dove `P47T` mostra proteina a livello wild type e funzione persa per fallimento di interazione. **Le due voci sono la stessa domanda vista dalle due estremità:** 085 dice che l'abbondanza non misura la funzione, 090 dice che l'annotazione non la predice. **Fra le due non resta nessuna scorciatoia: la funzione va misurata.**
+
+- 🔴 **E la ricorrenza cambia quanto vale rispondere.** `p.Gln230Pro` compare in **tre dei dodici pazienti non imparentati** di Oliver — omozigote in due — **più sei famiglie già riportate** da Iran, Afghanistan, Francia e Marocco. È **l'allele missenso WWOX-DEE più ricorrente della letteratura**, ed è quello attorno a cui è costruito l'intero lavoro di proteostasi di questo repository. La domanda su Q230P non è uno studio di caso: **riguarda l'allele più frequente del campo.**
+
+- **Cautela sull'unico numero che qualcuno sarà tentato di citare come prognosi:** la coorte di Oliver è dichiaratamente **più anziana** (media 8a 2m contro 3a 4m) e **meno letale** (23% contro 38%) della letteratura con cui è messa in pool, con null/null al 50% contro 60%. La curva di sopravvivenza è un **confronto fra gruppi**, non una prognosi. Chi la citasse come prognosi userebbe un dato di ascertainment come dato clinico.
+
+- **Cosa serve per muoverlo di un gradino:** un saggio funzionale per singola sostituzione — non abbondanza, non solubilità, ma **occupazione di un partner di interazione** — applicato per primo a `Q230P` per ricorrenza e a `P47T`/`P47R` perché sono la coppia che dimostra il punto sullo stesso residuo.
+- **Interconnessioni:** `DL-BIO-085` · `DL-META-088` · `FT-055` · `FT-056` · `DEFAULTS THAT BIT US` in [[dismissal_ledger_current]] · [[claim_registry_current]].
+- **Destinazione dichiarata:** **materiale per un commit candidate.** È una *sostituzione* di premessa, non un'aggiunta, quindi tocca affermazioni già in stato canonico e la promozione va fatta da chi possiede il gate, non da me.
+- **Interconnessioni:** `FT-045` · `DL-MECH-086` · manifest `PMID42128308.json` entries[7], entries[23], entries[24].
+- **Destinazione dichiarata:** **materiale per un commit candidate**.

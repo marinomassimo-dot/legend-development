@@ -883,29 +883,136 @@ scelta. Riaprire **solo dopo** il gate sulla superficie testuale.
 affetto (PMID 17803050), non citano soglie e sono intatte. Il difetto esiste nella pipeline e
 **non ha raggiunto lo stato canonico**.
 
-## FT-045
-**Paper:** PMID 42128308 — Aqeilan 2026, *Neurobiol Dis*
+## FT-045 — ✅ CHIUSA il 2026-08-10
+
+**Paper:** PMID 42128308 — Obeid, Wang, Abudiab, Akkawi & Aqeilan 2026, *Neurobiol Dis* 107446
 **Title:** WWOX in brain development and disease: Molecular mechanisms and therapeutic opportunities
-**Surface:** PMID 42128308 · `pdf_only` · sentinella `clean` · PMID42128308_Aqeilan2026.pdf
-**Priority:** **MEDIA**
-**Why:** review di sintesi del leader del campo sull'asse cervello; utile come mappa delle
-posizioni correnti del gruppo, non come fonte primaria di dati.
-**Come è emerso:** corpus Aqeilan RI, coda 2026-08-08 (posizione 3, il più recente dopo i due
-2026 primari).
-**Current status:** ⬜ **MAI APERTO — NESSUNA LETTURA È AVVENUTA.** Va detto con precisione,
-🔴 **e va detto anche che il ledger sembra dire il contrario:** esiste
-`FTR-20260726-42128308-01`, `partial_fulltext_read`, del 2026-07-26. Non è una contraddizione,
-è un `record_kind: legacy_reconstruction` — un receipt costruito da una dichiarazione di
-registry, non da una lettura. Il ledger e questa voce dicono la stessa cosa in due vocabolari,
-e senza questa riga la prossima sessione avrebbe dovuto scoprirlo da sola.
-perché è diverso da una lettura che non produce affermazioni: il documento non è mai stato
-aperto in alcuna sessione, non esiste testo estratto, non esiste receipt e non esiste
-rinuncia argomentata da scrivere — non c'è lettura su cui argomentare. L'artefatto è presente
-e fingerprintato (`PMID42128308_Aqeilan2026.pdf`, 17 pp., 7 immagini, SHA-256
-`520c2743630b86e5e6c2af7a3e2f527d7a31ab7810839ed275c87b0d804d6be7`).
-**Debito:** interamente aperto. È un PDF, quindi al momento della lettura va prima cercata una
-superficie XML/HTML PMC e, se non esiste, applicato il sentinella sulla superficie testuale
-prima che qualunque locator vi poggi.
+**Surface:** PMID 42128308 · `pdf_only` — **nessun deposito PMC**, verificato (`esummary`
+restituisce solo `pubmed`/`doi`/`pii`, `elink` a `pmc` nessun linkset) · sentinella `clean` ·
+`PMID42128308_Aqeilan2026.pdf` + `_fitz.txt` con ricetta di estrazione dichiarata.
+
+**Lettura completa**, receipt `FTR-20260810-42128308-02`, manifest
+[`PMID42128308.json`](deepdive_manifests/PMID42128308.json) — 23 locator, `MANIFEST STRICT
+PASS`, 0 gap, ricontrollato in modo indipendente da `locator_audit.py` a 20/20 testo, 3
+immagine, zero citazioni non trovate. Dossier:
+[`PMID42128308_partial_locators.md`](fulltext_dossiers/PMID42128308_partial_locators.md).
+Copertura: tutte e dodici le sezioni, entrambe le tabelle, tutte e quattro le figure `read`;
+`methods`/`results`/`supplementary` **`not_present`** — è una review narrativa senza dati
+primari.
+
+**Il receipt precedente non era una lettura.** `FTR-20260726-42128308-01` è un
+`record_kind: legacy_reconstruction`, costruito da una dichiarazione di registry. Il nuovo lo
+cita come `prior_receipt` con `reread_reason: inadequate_prior_coverage`.
+
+### 🔴 Il reperto: una figura generata da un modello linguistico contraddice il testo, e la regola 5c punta dalla parte sbagliata
+
+La sezione 1 elenca **sei** categorie di gene neuroevolutivo ai siti fragili, fra cui
+*glutamate receptor signaling pathways (GRID1, GRM5)*. **La Figura 2 ne mostra cinque:** la
+categoria sparisce, **GRID1 non compare da nessuna parte** e **GRM5 è spostato sotto
+*neuron projection development***. Anche la didascalia ne elenca cinque — didascalia e pannello
+concordano fra loro e **divergono entrambi dal corpo del testo**. L'ultima frase della
+didascalia è: *«This figure was prepared using Gemini.»*
+
+La 5c privilegia il pannello sulla prosa, e se l'è guadagnato — il 2026-08-04 un pannello
+rovesciò una conclusione che il testo non conteneva. **Ma quella regola è scritta per i
+pannelli di DATI**, dove il pannello è l'osservazione. Questo pannello è un *rendering a valle
+della prosa*, e la sua didascalia lo dichiara. Chi applicasse qui il default della 5c
+porterebbe via che GRM5 è un gene di *neuron projection development* e che GRID1 non è affatto
+un gene neuroevolutivo ai CFS. **Sbagliato due volte, e il testo aveva ragione.**
+
+🔴 `PREMISE_TAG` — la premessa portante della 5c è *una figura è un'osservazione*.
+`PREMISE: DEFAULT_FROM_TEXTBOOK`, falsa per questa classe. **Il discriminante è già nel
+documento e costa zero: la didascalia dichiara il generatore** — FigureLabs (Fig. 1), Gemini
+(Fig. 2), Biorender (Fig. 3), Biorender + Figure Labs (Fig. 4).
+
+### Tre difetti di infrastruttura, annotati e non riparati qui
+
+1. **`contradicts` è un puntatore intra-manifest** (`entries[N]`). Due dei reperti più forti di
+   questa lettura legano un locator di questo manifest a un locator di un *altro*
+   (`PMID 42397075 entries[22]`, `PMID 42422765 entries[15]`). La grammatica non ha una casella
+   per il legame cross-paper: vive solo nella prosa e **nessuno strumento lo vede**.
+2. **`text_contradicted_by_panel` presuppone che il pannello sia un dato.** Entrambe le voci
+   `figure` di questa lettura puntano a **schemi**. La relazione è reale come discrepanza e
+   priva di senso come evidenza, e il valore non ha modo di dire quale delle due.
+3. **I dossier in prosa portano citazioni che nessun validatore vede.** La citazione della
+   sezione 11 scritta stamattina in questo stesso dossier era **unita attraverso un a capo** e
+   **non verifica** contro la superficie; gli snippet di manifest sono confrontati carattere per
+   carattere, quelli dei dossier no. Ri-ancorata nel manifest.
+
+### Cosa cambia una decisione
+
+- 🔴 **La review dice «restored» dove il suo stesso primario mostra dieci volte il wild type**
+  (§10.4 su Steinberg 2024 = `PMID 42397075`, chiuso lo stesso giorno; SATB2 ≈ 10×, CTIP2 ≈ 3×).
+  La parola sopravvive perché **la parentesi WT-vs-trattato non è disegnata**.
+- 🔴 **L'anello WPRE si chiude dentro un solo documento e nessuno dei due capi cita l'altro:**
+  §10.4 presenta la rimozione come scelta di sicurezza, `PMID 42422765` mostra che è costata
+  **sei volte la dose**, §11 nomina l'alta dose come la principale preoccupazione regolatoria
+  pediatrica.
+- 🔴 **L'abbondanza di proteina WWOX non è una lettura della funzione di WWOX**, dimostrato dai
+  due lati: P47T ha proteina pari al wild type e fenotipo grave; gli organoidi SCAR12 hanno
+  proteina minima e fenotipo quasi normale.
+- 🔴 **Il framework genotipo-fenotipo a tre classi è pubblicato e falsificato nella stessa
+  sezione** — e il controesempio decisivo è un **missenso omozigote (p.Ser304Tyr) che uccide
+  nella prima infanzia**. «Missenso ⇒ funzione residua ⇒ più lieve» è la premessa sotto buona
+  parte del ragionamento su ipomorfi e ASO in questo repository.
+- **Un requisito che solo una sfida rivela:** `Olig2-Cre; O-KO` è *«No major defects»* al
+  basale e difettoso sotto cuprizone. **Un readout oligodendrogliale non sfidato è un falso
+  negativo per costruzione.**
+- **Correnti di potassio elevate** nei neuroni piramidali Wwox-KO, lette come compenso
+  maladattivo: nodo prossimale, firmato e farmacologicamente maturo che **nessuno qui ha ancora
+  guardato**.
+
+### ✅ Debito multi-hop chiuso lo stesso giorno — 103 riferimenti, 35 WWOX-diretti, 4 preprint
+
+**Il verdetto sul delimitatore è calcolato, non affermato:** 100% delle voci accettate inizia
+con il cognome del primo autore, 87,4% porta un DOI, e il controllo stampa un rigetto se una
+delle due scende sotto soglia. 🔴 **Due tentativi precedenti hanno fallito e sono il punto.**
+Spezzare su `Cognome, X.,` dava **237** — sovrastima, perché il pattern cattura anche autori a
+metà lista. Filtrare per ordine alfabetico dava **4** — sottostima catastrofica, perché il primo
+candidato era un autore di metà lista che ordina a `v` e ha avvelenato la catena. E quel
+tentativo **stampava «piccolo, quindi l'assunzione regge» accanto a un tasso di rigetto del
+98%**, perché la frase era hardcoded invece che calcolata. **Un verdetto che non può fallire non
+è un verdetto.**
+
+### 🔴 La claim di autonomia cellulare della mielina poggia su un preprint mai dichiarato tale
+
+`Abudiab et al. 2025` è **bioRxiv `10.1101/2025.11.22.689900`**. È citato **sette volte in
+modo sostanziale** — due in sezione 6 (WWOX fra i geni oligodendrogliali più disregolati; il
+risultato cuprizone e SOX10) e in **quattro righe distinte della Tabella 1**: Olig2-Cre O-KO,
+la sfida cuprizone su quella linea, la coltura OPC ex vivo, e lo snRNA-seq delle lesioni MS.
+La Tabella 2 chiama il concetto cell-autonomo *«a particularly important emerging concept»* e i
+meccanismi SOX10 *«a major new direction»*.
+
+**Mai una volta è descritto come preprint.** Due pagine prima la review scrive *«A recent
+preprint by (Lucas-Clarke et al., 2025)»* dell'altra fonte non referata che usa. **L'asimmetria
+di dichiarazione è dentro lo stesso documento.**
+
+🔴 **Correzione a una mia affermazione di due ore prima.** Avevo registrato il contrasto
+basale-contro-cuprizone come *requisito condizionale* e chiamato un readout oligodendrogliale
+non sfidato *un falso negativo per costruzione*. Resta **IPOTESI e non DATO**: la sua unica
+fonte non è referata. La forma del reperto non cambia, il suo supporto sì — **e non avevo
+controllato quale**.
+
+### Due dei quattro preprint sono citazioni scadute, e una tocca lavoro già qui dentro
+
+La review cita `Steinberg et al. 2024` a `10.1101/2024.12.22.630016` e `Obeid et al. 2026` a
+`10.64898/2026.03.11.710995` — entrambi DOI di preprint. **Entrambi sono pubblicati**: come
+`PMID 42397075` (*Brain*) e `PMID 42422765` (*Mol Ther Nucleic Acids*), letti oggi nella loro
+forma pubblicata.
+
+🔴 **La conseguenza non è cosmetica:** il preprint di `42397075` può differire dal manoscritto
+accettato che ho aggiudicato, **inclusi i pannelli supplementari letti a 258 ppi**. Ogni
+affermazione di questa review attribuita a *«Steinberg et al. 2024»* riguarda una versione che
+non ho controllato — quindi la contraddizione sul *«restored»* è fra **la lettura che la review
+fa del preprint** e **la mia lettura del manoscritto accettato**. Non la dissolve, perché la
+versione accettata è quella che il campo citerà: ma nomina un passaggio che avevo dato per
+scontato.
+
+**Debito residuo:** i 31 riferimenti WWOX-diretti che non sono né preprint né già in registro
+**non sono triageati in coda**. È lavoro di coda e questa era una sessione di lettura;
+l'enumerazione esiste perché il triage si possa fare **senza riaprire il paper**. La lista è
+DOI-keyed con **un solo PMID su 103**, quindi il dedup contro un registro PMID-keyed richiede
+prima la risoluzione dei DOI.
 
 ---
 
@@ -1317,3 +1424,256 @@ premesse importate invece dei risultati.
 **Current status:** ⬜ aperto, artefatto in casa, **identità verificata**. Non iniziato:
 interrotto prima di aprire il corpo per contesto residuo insufficiente a chiuderlo bene, che è
 una condizione d'interruzione dichiarata e non un rinvio.
+
+---
+
+> 🔴 **Nota di merge, 2026-08-10.** Le voci che seguono arrivano da un secondo ramo. Tenute
+> entrambe, e questa volta **senza collisione**: `048`–`054` da un lato, `055`–`056`
+> dall'altro. L'attore del secondo ramo aveva lasciato `053`–`054` liberi *come stacco*,
+> esattamente per non ripetere i quattro duplicati `FT-` trovati poche ore prima — e i numeri
+> che aveva evitato sono precisamente quelli che l'altro ramo ha poi usato. **Una spaziatura
+> dichiarata ha fatto il lavoro che un identificatore condiviso non poteva fare.**
+
+## FT-055 — ✅ APERTA E CHIUSA il 2026-08-10
+
+> **Numerazione:** `048`–`052` sono in uso o in rinumerazione da altri attori, `053`–`054`
+> lasciati liberi come stacco. Stessa disciplina dichiarata per `DL-*-085`: l'allocazione qui è
+> concorrente e non guardata, uno stacco costa nulla e una collisione costa un
+> `BLOCK_BATCH_COMMIT` a chi mergia per secondo.
+
+**Paper:** PMID 39416860 / DOI 10.3389/fped.2024.1453778 — Feng et al. 2024, *Front Pediatr* 12:1453778
+**Title:** WWOX-related epileptic encephalopathy caused by a novel mutation in the WWOX gene: a case report
+**Surface:** PMID 39416860 · `structured` · PMC11479972, JATS XML, CC BY 4.0 · più il PDF
+dell'editore come contenitore della figura.
+**Priority:** **ALTA** — non per il paper, per **la premessa che si diceva falsificasse**.
+
+**Perché è stata aperta:** `PMID 42128308` §9 la offre come uno dei tre controesempi che
+falsificano il framework genotipo-fenotipo a tre classi — *«a homozygous missense WWOX mutation
+(p.Ser304Tyr), in which the patient exhibited rapid clinical deterioration and died in early
+infancy, despite the mutation type typically being associated with milder phenotypes»*.
+**«Missenso ⇒ funzione residua ⇒ più lieve» è la premessa sotto il ragionamento su ipomorfi e
+ASO in questo repository**, quindi un controesempio pubblicato che la uccide vale più di
+qualunque paper nuovo.
+
+**Lettura completa**, receipt `FTR-20260810-39416860-01`, manifest
+[`PMID39416860.json`](deepdive_manifests/PMID39416860.json) — 11 locator, `MANIFEST STRICT
+PASS`. Copertura: testo, Tabella 1 e Figura 1 `read`; **supplementary `unavailable`** (checklist
+CARE; PMC 404 sul percorso `bin`, pacchetto OA offerto solo su `ftp://`).
+
+### 🔴 Il verdetto: la premessa NON è falsificata, e la review l'ha presentata come se lo fosse
+
+La zigosità che la review riporta è **accurata**. Quattro cose che la review non porta:
+
+| | |
+|---|---|
+| **ACMG** | la variante è **«Unclear clinical significance»**, dichiarato **due volte** — prima frase dell'analisi genetica e Tabella 1 |
+| **gli autori stessi** | ultima frase: la patogenicità *«require[s] validation through animal experiments and additional cases»* |
+| **secondo gene** | `CACNA1A c.4646A>G` p.Gln1549Arg, paterna, eterozigote, contro **DEE-42 autosomica dominante**, anch'essa VUS |
+| **coerenza interna** | il paper scrive **c.991C>A** nel testo e in conclusione, **c.911C>A** in Tabella 1 e in discussione |
+
+Sull'ultima, **l'aritmetica decide contro il testo corrente**: il codone 304 copre i nucleotidi
+910–912, quindi `c.911` cade nel codone 304 e `c.991` nel codone **331**. Solo `c.911C>A` è
+compatibile con `p.Ser304Tyr`. **E la stessa frase sbaglia anche l'amminoacido** — dice *«from
+glycine to serine»* stampando `p.Ser304Tyr`, serina→tirosina, nella propria parentesi. Due
+errori in una frase, e la metà che propaga a valle è la notazione proteica, cioè quella giusta.
+
+Gli autori argomentano contro il contributo di CACNA1A — il fenotipo DEE-42 non corrisponde
+bene, il padre lo porta senza fenotipo — e **l'argomento è ragionevole**. Ma è un argomento, non
+una dimostrazione, e un controesempio usato per rovesciare una regola genotipo-fenotipo non può
+lasciar cadere in silenzio un candidato concorrente in un gene epilettico dominante.
+
+**Cosa sopravvive, e non è poco:** un bambino omozigote per un missenso WWOX, da genitori
+consanguinei (cugini) entrambi portatori eterozigoti, esordio a un mese, nessun inseguimento
+oculare, nessun controllo del capo, ipoacusia bilaterale, corpo calloso sottile, EEG
+epilettiforme con asincronia interemisferica, **morto a sei mesi**. Come **osservazione
+fenotipica** regge qualunque sia la classificazione formale della variante. Ciò che il paper non
+può stabilire è che il missenso l'abbia **causata** — ed è il passo che la review compie.
+
+### 🔴 Terza istanza in una sola review della stessa compressione, ora sul lato clinico
+
+`PMID 42128308` dice *«restored»* dove il suo stesso primario mostra dieci volte il wild type;
+presenta la rimozione di WPRE come scelta di sicurezza dove il primario mostra un costo di sei
+volte la dose; e qui comprime **una VUS con un candidato concorrente** in *«despite the mutation
+type typically being associated with milder phenotypes»*. **Tre volte la review enuncia la metà
+semplice.** È una proprietà della review, visibile solo leggendo ciò che cita.
+
+### Cosa la figura ha risolto e cosa ha rifiutato di risolvere
+
+Il **trio è interamente nel pannello e solo asserito nel testo**: probando omozigote su lettura
+**forward e reverse**, entrambi i genitori eterozigoti per WWOX, **madre wild-type** per
+CACNA1A — che è ciò che rende quell'allele esclusivamente paterno.
+
+🔴 **L'aggiudicazione per cui avevo aperto il pannello è fallita, e registrarlo è il risultato.**
+Le tracce mostrano che la sostituzione è **C→A**, compatibile con **entrambe** le posizioni
+candidate perché entrambe sono C>A: **un cromatogramma non porta una coordinata**. Ho anche
+**rifiutato di aggiudicare l'EEG** — una singola epoca rappresentativa non stabilisce la
+distribuzione regionale che la didascalia rivendica.
+
+**La rotta della figura è essa stessa un reperto:** PMC dà 404 sul percorso `bin`, il pacchetto
+OA è offerto solo su `ftp://`, l'HTML di Frontiers serve `image_m` a **1056×604**. Il PDF
+dell'editore porta la stessa figura a **1955×1118, 300 ppi effettivi, `smask = 0`** — 1,85× più
+pixel per dimensione. Misurato prima di estrarre, secondo la regola corretta stasera. Leggere
+una base Sanger dalla copia servita avrebbe significato leggerla con un terzo dei pixel che
+l'editore ha spedito.
+
+**Debito residuo, ed è dove va guardato adesso:** i due controesempi che deciderebbero davvero
+la questione — **la delezione dell'introne 4 di Oliver 2023** (categoria 2 per genotipo,
+categoria 1 per gravità) e i **sei pazienti prevalentemente missenso di Havali 2021** — restano
+non letti. Dopo questa lettura sono loro, e non questo paper, gli elementi di coda di maggior
+valore per la premessa ipomorfi/ASO. **Entrambi triageati la sera stessa: vedi `FT-056`.**
+
+---
+
+## FT-056 — 🟡 TRIAGE, NON LETTURA — i due controesempi che decidono la premessa
+
+**Papers:** PMID 34034642 / DOI 10.1080/01616412.2021.1932173 — Havali et al. 2021, *Neurol Res*
+· PMID 36779245 / DOI 10.1111/epi.17542 — Oliver et al. 2023, *Epilepsia*
+**Priority:** **ALTA** — sono i due che decidono *«missenso ⇒ funzione residua ⇒ più lieve»*,
+dopo che `FT-055` ha stabilito che il terzo controesempio non la falsifica.
+
+### 🔴 Havali 2021 — closed access, e lo dichiaro come rotta, non come proprietà
+
+| rotta | risposta letterale |
+|---|---|
+| `elink pubmed→pmc` | **nessun linkset `pubmed_pmc`** — solo `pubmed_pmc_refs`, che sono articoli *che citano* questo |
+| `esummary articleids` | solo `pubmed` e `doi`; **nessun `pmc`** |
+| Europe PMC | `isOpenAccess: N` · `inPMC: N` · `hasPDF: N` · *«Subscription required»* |
+| Unpaywall | `is_oa: false` · `oa_status: closed` · nessuna `oa_location` |
+
+🔴 **Formulazione deliberata:** *non l'ho potuto recuperare per queste rotte*, **non** *«è
+irrecuperabile»*. La lezione del 2026-08-10 mattina è che ho già testato una volta la mia
+capacità di recuperare un artefatto e registrato la risposta come proprietà dell'artefatto —
+due ritrattazioni poggiavano su quella premessa falsa. Chi ha accesso istituzionale lo prenda.
+
+🔴 **E una trappola nella rotta stessa, che vale oltre questo paper:** `elink` ha restituito tre
+`<Id>` e leggerli senza il `LinkName` avrebbe fatto concludere che un deposito PMC esisteva.
+Erano `pubmed_pmc_refs`. **Un `<Id>` nella risposta non è un `<Id>` alla domanda che hai fatto.**
+
+### 🔴 Oliver 2023 — già letto il 2026-08-04, e i suoi locator non sono verificabili
+
+`FTR-20260804-36779245-02`, `complete_fulltext_read`. Manifest `PMID36779245.json`: **schema
+`None`, 20 locator, ZERO `source_artifacts`**. L'artefatto però **esiste**
+(`PMID36779245_Oliver2023_PMC.xml`, 183 753 byte, CC BY-NC-ND). Nessuna rilettura: la regola 7
+la ammette solo con `reread_reason`, e qui non serve una rilettura — serve una misura.
+
+**Misurata. E la causa non sono le letture: è la normalizzazione del validatore.**
+
+| variante | verificati |
+|---|---|
+| il validatore com'è oggi | **7 / 20** |
+| + punteggiatura Unicode ripiegata | 9 / 20 |
+| elementi inline uniti **senza** spazio | 7 / 20 |
+| **entrambe insieme** | **16 / 20** |
+
+Il meccanismo, misurato e non supposto: l'XML contiene `<italic>WWOX</italic>‐DEE` **30 volte**,
+e `_xml_surfaces` unisce **ogni** nodo di testo con uno spazio. La superficie estratta legge
+quindi `WWOX ‐DEE` (27 occorrenze) e `WWOX‐ DEE` (8) — **uno spazio che l'autore non ha mai
+scritto**, fabbricato al confine del markup. Unendo gli elementi inline senza separatore,
+`WWOX ‐DEE` passa da 27 a **0** e `WWOX‐DEE` da 0 a **35**.
+
+**Nessuna delle due correzioni basta da sola** — 7 e 7 — e insieme fanno 16. I **4 residui**
+falliscono tutti in posizione tarda e su un marcatore di citazione: è una **terza causa
+distinta**, probabilmente il contenuto di `<xref>` che la citazione omette e l'estrattore
+conserva.
+
+🔴 **Una prima ipotesi era sbagliata e la misura l'ha colta:** avevo attribuito tutto alla
+punteggiatura Unicode, che da sola ne recupera **2 su 13**. Registrato perché è il motivo per
+cui la seconda ipotesi è stata *testata* invece che asserita.
+
+**Perché conta oltre questo paper:** il nome del gene è in corsivo in ogni rivista, quindi
+**ogni citazione che contiene `WWOX-DEE` fallisce, in tutto il corpus** — e il gene attorno a
+cui ruota questo repository è il token che più probabilmente rompe un locator. I conteggi
+*«not found»* di chi misura la salute del corpus vanno riletti alla luce di questo: **le letture
+sono in larga parte sane e il difetto è nel normalizzatore.**
+
+**Controllo sui miei:** 90 locator testuali su sei manifest, **0 portano uno spazio fabbricato**.
+Non per merito — le mie catture verificavano contro l'estrattore stesso, quindi uno spazio
+fabbricato sarebbe entrato nello snippet e avrebbe *superato* il controllo. Non è successo, ma
+la protezione era accidentale.
+
+**Non riparato qui:** è infrastruttura e oggi si legge. La correzione tocca `_xml_surfaces` e
+va con la sua batteria di mutazione, perché una normalizzazione troppo aggressiva
+nasconderebbe esattamente le sostituzioni stampabili che il sentinella della regola 5d esiste
+per trovare.
+
+**Cosa resta da leggere davvero:** il caso dell'introne 4 di Oliver 2023 — categoria 2 per
+genotipo, categoria 1 per gravità — **non è fra i 20 locator esistenti**, verificato. Quindi il
+paper è letto ma il reperto che serve alla premessa non è catturato. **Fatta la sera stessa:
+vedi sotto.**
+
+### ✅ Lettura mirata di Oliver 2023 — `FTR-20260810-36779245-03`, `partial_fulltext_read`
+
+`reread_reason: inadequate_prior_coverage`. Lette: metodi 2.4, risultati 3.6 e 3.7, Tabella 3 e
+la discussione corrispondente. **Le sezioni non toccate sono dichiarate `not_read`**, non
+ereditate dal receipt precedente. Nove citazioni verificate uniche contro il corpo estratto, e
+**sette di nove anche nel markup grezzo** — scelte deliberatamente per non attraversare un
+confine di corsivo, così sono verbatim in entrambi i sensi e non solo rispetto all'artefatto
+dell'estrattore.
+
+#### 🔴 La risposta è più grande della domanda: la classe centrale del framework non esiste nei dati della fonte che l'ha costruita
+
+Lo schema a tre classi **è di Oliver**: *«classified into three genotypic classes based on
+variant types: (1) null/null, (2) null/missense, (3) missense/missense»*. E la conclusione di
+Oliver è:
+
+> *«We found no difference between individuals with one or two missense variants and therefore
+> no evidence to support an "intermediate" phenotype»*
+
+La review `PMID 42128308` presenta la classe 2 come *«associated with intermediate phenotypes»*
+e poi offre controesempi a un framework **la cui stessa fonte nega quella classe**. Non è un
+controesempio dentro il framework: è **la fonte del framework che ne smentisce un terzo**.
+
+#### Ciò che i dati sostengono è binario, non ternario, e su un asse solo
+
+75 casi: null/null n=45 · null/missense n=15 · missense/missense n=15.
+
+| asse | risultato |
+|---|---|
+| **tempo alla morte** | *«survival was much poorer for the double null group compared with the patients who had at least one missense pathogenic variant»* — **p = .0085** log-rank; sopravvivenza a 5 anni **<50%** contro **>75%**; a 10 anni **25%** contro **>60%** |
+| **tempo all'esordio delle crisi** | *«we found no difference in time to seizure onset between the three genetic groups»* — **p = .65** |
+
+Il paper stesso raggruppa le due classi missenso come *«the other two, presumably less severe,
+genetic groups»*: **una divisione binaria, scritta come tale.**
+
+#### 🔴 Il caso introne 4 — ed è la review a sbagliarne la classe
+
+Paziente 6 è tabulato `c.49G > A, p.Glu17Lys (mat)/intron 4 deletion (pat)` con combinazione
+genetica **`Missense/null`**: Oliver classifica la delezione dell'introne 4 **come null**,
+perché *«the intron 3 deletion was a benign variant, whereas the intron 4 variant resulted in
+exon 5 skipping»*. È dunque **un ordinario caso di classe 2 secondo la codifica di Oliver**, non
+un'anomalia. La review lo descrive come un caso che *«technically falls under category 2 … with
+one allele lacking a canonical deletion mutation»* la cui gravità eguagliava la categoria 1 —
+ma in uno schema dove la classe 2 **non mostra alcun fenotipo intermedio**, un paziente di
+classe 2 grave quanto la classe 1 è **il risultato atteso, non un controesempio**.
+
+#### 🔴 E «missenso» non è affatto una classe di gravità — la risposta profonda alla premessa
+
+> *«p.Pro47 has been associated with two pathogenic variants; the more conservative change to
+> threonine was found in SCAR12»* — contro la sostituzione ad arginina trovata in WWOX-DEE.
+
+**Lo stesso residuo, due sostituzioni, due malattie.** E *«no region of the gene emerged as
+specific»* per DEE contro SCAR12: le due varianti missenso SCAR12 stanno **vicine** a varianti
+DEE. La gravità è **specifica della sostituzione**, non del residuo e non della regione: quindi
+*«missenso ⇒ funzione residua ⇒ più lieve»* fallisce **al livello della propria categoria**.
+
+Chiude un anello con `FT-045`: **P47T** è l'allele del modello murino SCAR12 che tiene la
+proteina WWOX **a livello wild type** disattivando il motivo PPXY della WW1.
+
+#### Due dati che atterrano qui dentro
+
+- **`p.Gln230Pro` è l'allele missenso WWOX-DEE più ricorrente della letteratura**: tre dei dodici
+  pazienti non imparentati di Oliver — omozigote in due, eterozigote composto in uno — più **sei
+  famiglie già riportate** da Iran, Afghanistan, Francia e Marocco. È l'allele attorno a cui è
+  costruito il lavoro di proteostasi di questo repository.
+- **Ascertainment, dichiarato dal paper:** la loro coorte è più anziana (media 8a 2m contro 3a
+  4m) e meno letale (23% contro 38%) della letteratura con cui è messa in pool, con null/null al
+  50% contro 60%. È una ragione per leggere la curva di sopravvivenza **come confronto fra
+  gruppi**, non come prognosi assoluta.
+
+#### 🔴 Perché queste nove citazioni non sono nel manifest
+
+`PMID36779245.json` è schema `None` con zero artefatti, e 13 dei suoi 20 locator falliscono per
+la causa misurata sopra. **Dichiarare l'artefatto e alzare lo schema porterebbe quei 13 da
+"non verificati" a FAIL duro** — è lavoro di un altro attore e non sta a me romperlo. Le
+citazioni stanno nel receipt, verificate, **pronte ad atterrare quando il normalizzatore sarà
+riparato**, che è di Plan.

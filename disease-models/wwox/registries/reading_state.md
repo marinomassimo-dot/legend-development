@@ -20,7 +20,15 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**51 paper(s)** with at least one receipt · **76 receipt(s)** · **0 paper(s) read in parallel** by two receipts sharing a parent.
+**52 paper(s)** with at least one receipt · **84 receipt(s)** · **1 paper(s) read in parallel** by two receipts sharing a parent.
+
+## Papers read in parallel
+
+Two receipts naming one parent. Neither supersedes the other; the union below is the state, and no single receipt states it.
+
+| paper | shared parent | siblings |
+|---|---|---|
+| PMID 42422765 | `FTR-20260810-42422765-01` | `FTR-20260810-42422765-02`, `FTR-20260810-42422765-03` |
 
 ## Union of coverage, per paper
 
@@ -62,19 +70,20 @@ sharing a parent are the normal case under parallel branches.
 | PMID 35716775 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | read | — | 5 |
 | PMID 36537114 | `partial_fulltext_read` | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | — | 1 |
 | PMID 36572673 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | not_present | read | read | 1 |
-| PMID 36779245 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | unavailable | read | 2 |
+| PMID 36779245 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | unavailable | read | 3 |
 | PMID 37519886 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | read | read | 1 |
 | PMID 38161429 | `partial_fulltext_read` | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | — | 1 |
 | PMID 38182577 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | read | read | read | 2 |
 | PMID 38499540 | `partial_fulltext_read` | read | read | read | read | read | not_present | read | read | not_read | read | 1 |
 | PMID 39101447 | `partial_fulltext_read` | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | — | 1 |
+| PMID 39416860 | `complete_fulltext_read` | read | read | read | read | read | read | read | read | unavailable | read | 1 |
 | PMID 39420317 | `partial_fulltext_read` | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | — | 1 |
 | PMID 39507621 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | not_present | not_present | read | 2 |
 | PMID 40875931 | `partial_fulltext_read` | read | read | read | read | captions_only | read | read | read | unavailable | read | 2 |
 | PMID 41562193 | `partial_fulltext_read` | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | — | 1 |
 | PMID 41984841 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | not_present | read | read | 1 |
-| PMID 42128308 | `partial_fulltext_read` | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | — | 1 |
+| PMID 42128308 | `complete_fulltext_read` | read | read | not_present | not_present | read | read | read | read | not_present | read | 2 |
 | PMID 42193054 | `partial_fulltext_read` | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | — | 1 |
-| PMID 42397075 | `partial_fulltext_read` | read | read | not_read | read | captions_only | not_present | read | read | not_read | not_read | 2 |
-| PMID 42422765 | `partial_fulltext_read` | read | not_read | not_read | not_read | not_read | not_read | read | read | not_read | not_read | 3 |
+| PMID 42397075 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | read | read | read | 4 |
+| PMID 42422765 | `partial_fulltext_read` | read | read | read | read | read | not_present | read | read | unavailable | read | 6 |
 

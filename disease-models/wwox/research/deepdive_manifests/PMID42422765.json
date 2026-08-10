@@ -1,0 +1,397 @@
+{
+ "schema_version": 2,
+ "pmid": "42422765",
+ "doi": "10.1016/j.omta.2026.201791",
+ "receipt": "FTR-20260810-42422765-04",
+ "landing": [
+  "FTR-20260810-42422765-04",
+  "PAPER 011",
+  "PMID42422765_partial_locators.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline; figure inspection and locator capture had to come from the same open document."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "HTML was local. Figures came from the PMC CDN; the supplementary was already in the shared files/ tree, fetched by another actor — which I failed to check before declaring it unavailable."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "Single paper, already PAPER 011."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "OWED. This is a dose-and-timing gene-therapy study and belongs in the therapeutic tracker; forging is separate work and is not claimed as done."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "OWED and now stronger than owed. Two text-versus-panel contradictions and two withdrawn-then-reinstated claims of my own make this the reading most in need of a blind adversarial pass before any claim edit rests on it."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 137,
+  "publications_on_gene": 65,
+  "counts_measured": "PubMed esearch 2026-08-10: 'Aqeilan RI[au]' 137, 'Aqeilan RI[au] AND WWOX' 65.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": true,
+  "is_primary_group_for_gene": true,
+  "weighting": "Primary group for gene and disease, as with PMID 34747138 — but with a declared change that reweights interpretation: this study is supported by Mahzi Therapeutics, three co-authors are employed by Mahzi and the senior author consults for it, where the 2021 paper declared no conflict. The measurements are the same laboratory's and carry the same weight; the framing of those measurements is now produced under a commercial development interest. That is not a reason to discount the data and is a reason to prefer panels over prose — which two independent text-versus-panel contradictions in this paper independently justify.",
+  "note": "Research-group knowledge base excluded from the public edition; this rests on measured counts, the Methods and the declaration of interests."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Aqeilan RI[au] AND WWOX",
+    "route": "PubMed esearch 2026-08-10",
+    "count": 65
+   }
+  ],
+  "note": "Maximum density: a WWOX gene-therapy dose-and-timing study from the gene's primary laboratory."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 73,
+  "gene_direct_refs_in_source": [],
+  "enumeration_method": "All reference PMIDs parsed from the PMC HTML: 73 carry a PMID. Gene-directedness was not classified — that is triage work and is deliberately deferred, so the list is recorded as unknown-to-LEGEND rather than split by topic.",
+  "resolved": [],
+  "queued": [
+   {
+    "scope": "35 references unknown to LEGEND",
+    "queue": "full_text_queue_current",
+    "pmids": [
+     "8093806",
+     "8790426",
+     "9560156",
+     "9801369",
+     "10821275",
+     "15924863",
+     "16372011",
+     "16543131",
+     "17293857",
+     "17597793",
+     "18650338",
+     "20219994",
+     "20493923",
+     "21802995",
+     "21817014",
+     "24076602",
+     "25286085",
+     "27569545",
+     "27798114",
+     "28721938",
+     "29967406",
+     "30747918",
+     "30949922",
+     "31297130",
+     "32561861",
+     "32940068",
+     "34977274",
+     "37481701",
+     "38277269",
+     "39022742",
+     "39237642",
+     "39589822",
+     "39847501",
+     "40106582",
+     "40349107"
+    ],
+    "why": "48 percent of the PMID-bearing bibliography of a paper already in the registry as PAPER 011 — the largest single-paper multi-hop debt this corpus has recorded. Enumerated and left in queue by instruction; classifying 35 records is queue work, not reading work."
+   }
+  ],
+  "dedup_performed": "All 73 PMIDs checked against paper_registry_current, full_text_queue_current and literature_tracking_log_current on 2026-08-10: 38 known, 35 unknown.",
+  "reason": "Enumerated and queued, not pursued."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does the shared files/ tree already hold artifacts for this paper that my worktree cannot see, given that files/ is gitignored and therefore per-worktree?",
+  "hits": 2,
+  "finding": "Yes, and this is the finding of the session. mmc1.pdf and mmc2.pdf were in files/fulltext/PMID42422765_Obeid2026_assets/ at 12:13, fetched by another actor. I declared the supplementary unavailable at 13:26 after five failed routes of my own, having tested whether I could retrieve it and recorded the answer as a property of the artifact. Two retractions rested on that false premise and both have been reopened."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-08-10",
+  "route": "PubMed esummary for 42422765",
+  "result": "No retraction, no expression of concern, no erratum.",
+  "hold": false
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
+   "sha256": "00fadaf411998f4e453f55a8fc65dcaf9567ce259671286e1f7863aff6da9bd3",
+   "kind": "article_text"
+  },
+  {
+   "path": "files/fulltext/PMID42422765_Obeid2026_assets/mmc1.pdf",
+   "sha256": "dd4919a80af937037309eddd2939db4f11af230e00849bf4b362832bcb5572e9",
+   "kind": "article_binary"
+  },
+  {
+   "path": "files/fulltext/PMID42422765_Obeid2026_assets/mmc2.pdf",
+   "sha256": "523b09e47b52620cacda9826bce88ac77dd8de65626f5148e2c8630383869cb4",
+   "kind": "article_binary"
+  },
+  {
+   "path": "files/fulltext/figures/PMID42422765/gr1.jpg",
+   "sha256": "9956521d22c3787ba10551dd7a4284faca01e569a0bdb20ba852064cf5be6c51",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/figures/PMID42422765/gr2.jpg",
+   "sha256": "08f9f3f4e7ef7a61fab0d78c1e5764a959c5ad2f7e16b0f777f68e852254a69b",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/figures/PMID42422765/gr3.jpg",
+   "sha256": "c63f930cf5c558aea1d5c1bf90bd1d3dbf72e94ec378bd9f499748c768b4997d",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/figures/PMID42422765/gr4.jpg",
+   "sha256": "4bfa9eefa0e9eae4ccc12c97894c7044419785e63b8128952377a97d4d566d6d",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/figures/PMID42422765/gr5.jpg",
+   "sha256": "9510b8511d31db8ad31654b64aa3744142e19c1af88024290a39c3dc863df8a8",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/figures/PMID42422765/gr6.jpg",
+   "sha256": "a7c90344223caf323cfb92aea250d3753c12ae057594239dc406b0865ba959f4",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/figures/PMID42422765/gr7.jpg",
+   "sha256": "3a01e962c0cb5d6986f4c0cd5d57aeaaf1107d36679cc6828bcf67e11425ce7c",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID42422765_Obeid2026_assets/S_p09_200dpi.png",
+   "sha256": "5380be56d9fe4348b3439d65dc8a78e4dca33ad4da45289cc6840965637d0501",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID42422765_Obeid2026_assets/S_p10_200dpi.png",
+   "sha256": "49f915ca6f2d522a6b950a507a2e1f3d955b0bebce3642839acba77ad2e500ea",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID42422765_Obeid2026_assets/S_p08_200dpi.png",
+   "sha256": "e92ba3564609ed1626ef674f6282dfc6ac985c92e1e3a754a991f06267f6fc7d",
+   "kind": "figure"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC HTML held locally and fingerprinted; supplementary retrieved as mmc1.pdf and mmc2.pdf into the shared files/ tree and fingerprinted; figure images from the PMC CDN at the measured 104 ppi ceiling, and supplementary figure pages rendered from mmc1.pdf at a measured 200 effective ppi.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored and none could be. The abstract reports dose-dependent durable rescue; every proposition below is a bound on that claim, a panel reading, or an internal inconsistency between the paper's text and its own figures. All fourteen text snippets were machine-verified against the declared artifact and none matches the abstract.",
+  "entries": [
+   {
+    "proposition": "THE PAPER'S TEXT CONTRADICTS ITS OWN FIGURE 4. The text asserts no significant difference in locomotor velocity or distance; panels 4D and 4E each carry an asterisk, and the caption defines asterisk as p < 0.05 while using ns freely in the same figure. Read from a fingerprinted raster image, not from a text layer.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Panel 4D velocity WT ~9.5 vs KO+W HD ~11.5 with bracket labelled *; panel 4E total distance WT ~3400 vs ~4300 with bracket labelled *; panels 4F, 4G, 4H, 4I, 4J each labelled ns.",
+    "surface": "figure",
+    "artifact": "files/fulltext/figures/PMID42422765/gr4.jpg",
+    "anchor": "Figure 4, panels D-K, read at 104 effective ppi from the PMC CDN image",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[1]",
+    "contradicts_needle": "showed no significant differences between groups"
+   },
+   {
+    "proposition": "The sentence the panel contradicts, quoted verbatim from the article text.",
+    "snippet": "Locomotor activity parameters, including movement velocity and total distance traveled, as well as spatial exploration of center and periphery zones, showed no significant differences between groups (Figures 4B, 4D–4G)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
+    "anchor": "Results, 'Neuronal WWOX restoration normalizes neurobehavioral function' — snippet extended on 2026-08-10 to carry the figure reference, so the contradicts target can be verified from the manifest alone.",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The caption that fixes what the asterisk means, removing any reading in which the panels and the sentence could both be right.",
+    "snippet": "Statistical analysis was performed using Student’s t test (∗p < 0.05; ns, not significant), Error bars represent mean ± SD",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
+    "anchor": "Figure 4 caption, final sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SECOND TEXT-VERSUS-PANEL CONTRADICTION, on the epilepsy claim. Panel 7C prints 0.2000 above the WT-versus-KO bracket for average spikes per day, with no asterisk and no ns, at n = 5 per group; the running text calls the same comparison a significant elevation. The SWD panel 7E is unaffected and solid: **** for WT-vs-KO and KO-vs-HD, ns for WT-vs-HD. Read from a fingerprinted raster image, never from a text layer — the 0.2000 is printed pixels, not extracted characters.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Panel 7C: '0.2000' printed above the bracket joining WT and KO. Panel 7E: brackets labelled **** (WT-KO), **** (KO-HD) and ns (WT-HD).",
+    "surface": "figure",
+    "artifact": "files/fulltext/figures/PMID42422765/gr7.jpg",
+    "anchor": "Figure 7, panels C and E, read at 104 effective ppi. A second independent raster surface exists for re-verification: the article body of mmc2.pdf, which can be rendered and compared without touching any text layer.",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[4]",
+    "contradicts_needle": "a significant elevation in spike activity in KO animals"
+   },
+   {
+    "proposition": "The sentence panel 7C contradicts.",
+    "snippet": "Averaged spike counts further confirmed a significant elevation in spike activity in KO animals (Figure 7C)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
+    "anchor": "Results, epileptiform-activity section — snippet extended on 2026-08-10 to carry the figure reference, so the contradicts target can be verified from the manifest alone.",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Figure 7 caption, which fixes the significance scale and also corrects the cohort size I had estimated from the plotted points as about 3.",
+    "snippet": "n = 5 littermates per group. Statistical significance was determined using Student’s t test. ∗p < 0.05; ns, non-significant",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
+    "anchor": "Figure 7 caption, panel C description",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE DOSE-DEPENDENCE OF MYELINATION IS NEVER QUANTIFIED. Three separate panels show treated-animal myelination and none measures it: Figure 6F, Supplementary S7I and Supplementary S8G are all representative images without graphs or statistics. The only MBP quantification in the paper, Figure 6E, compares WT against KO with no treated arm. This claim was withdrawn earlier today on the false premise that S7I held the quantification, and is reinstated on what the panel shows.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] S7 panel I: three MBP images labelled WT-RI, KO+W-LD, KO+W-HD, with no axis, no bar and no significance marker; its caption reads 'Representative MBP immunostaining at ~P90'.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p09_200dpi.png",
+    "anchor": "Supplementary Figure S7, panel I and caption, rendered from mmc1.pdf page 9 at 200 effective ppi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The sentence that cites S7I as if it carried the quantification — the sentence that caused the mistaken withdrawal.",
+    "snippet": "HD treatment achieved near-complete rescue across affected regions, whereas LD treatment produced only partial recovery relative to HD (Figures 6F; S7I)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
+    "anchor": "Results, myelination section, citing Figures 6F and S7I",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Neuroinflammation IS quantified, and the low dose is significantly worse than wild type on astrogliosis while the high dose is not — one more instance of LD failing where HD succeeds. S7F and S7H contain no untreated-KO arm, so within S7 the claimed reduction has no baseline; S8I supplies it.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] S7F % Iba1 area: WT ~9.3, LD ~16.2, HD ~10.9, brackets ns (WT-LD) and ns (WT-HD). S7H % GFAP area: WT ~1.75, LD ~3.05, HD ~1.9, brackets ** (WT-LD) and ns (WT-HD).",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p09_200dpi.png",
+    "anchor": "Supplementary Figure S7, panels F and H, rendered from mmc1.pdf page 9 at 200 effective ppi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The untreated-KO baseline missing from S7 exists in S8I, and it supports the paper's astrogliosis claim: GFAP-positive cells WT about 5, KO about 44, treated at P5 back to about 5, with *** for WT-vs-KO and ns for WT-vs-treated.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] S8 panel I: three bars, WT ~5, KO ~44, KO+W (P5) ~5; brackets labelled *** (WT-KO) and ns (WT-treated).",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p10_200dpi.png",
+    "anchor": "Supplementary Figure S8, panel I, rendered from mmc1.pdf page 10 at 200 effective ppi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE P0-P5 WINDOW, VERIFIED AGAINST ITS PANEL rather than taken from running text. Treatment at any point P1-P5 gives survival to 300 days, and weight and glucose at P14 are ns against wild type across all five timepoints. What the panels add: the 300-day plot shows only P1 and P5; P2, P3 and P4 appear solely in the 40-day panel, and P3 is an n=3 arm that lost animals.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] S8A: KO+WWOX arms at P1 (n=6), P2 (n=6), P3 (n=3), P5 (n=7) against KO+RI (n=6) dead by ~15 days; only P3 falls, to ~67% at ~24 days. S8B: P1 and P5 plateau near 75% to 300 days. S8C and S8D: brackets *** and ** for WT-vs-KO, and a single ns spanning all five treated timepoints against WT.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p10_200dpi.png",
+    "anchor": "Supplementary Figure S8, panels A-D, rendered from mmc1.pdf page 10 at 200 effective ppi",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The survival threshold, stated in plain text and no longer read off a curve: the low dose does not produce animals that reach three months.",
+    "snippet": "LD-treated mice did not survive to P90; therefore, analyses were limited to WT and HD-treated groups",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
+    "anchor": "Results, behaviour section, explaining why testing was limited to WT and HD groups",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "THE SURVIVAL THRESHOLD HAS NO MEASURED EXPRESSION DIFFERENCE BEHIND IT. Two doses differing 2.1-fold are statistically indistinguishable in vector genomes and mRNA across four brain regions — seven of eight comparisons ns, the exception being hippocampal DNA — while producing opposite survival outcomes. Cerebellum stays below wild type at both doses; the hippocampal KO lane reads 1.1 where the other three blots read 0.02, 0.03 and 0.08.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5 panels A-D and E-H: ns on cortex, midbrain and cerebellum for both DNA and mRNA, * on hippocampal DNA only. Panels I-L lane values relative to WT: cortex KO 0.02, hippocampus KO 1.1, midbrain KO 0.03, cerebellum KO 0.08; cerebellum LD 0.7/0.5/0.7 and HD 0.7/0.5/0.2.",
+    "surface": "figure",
+    "artifact": "files/fulltext/figures/PMID42422765/gr5.jpg",
+    "anchor": "Figure 5, all twelve panels at P30, read at 104 effective ppi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The paper's own explanation for that mismatch, credited and unverifiable here: expression predicts survival within each dose group, which lets group means overlap while outcomes diverge. It is a post-hoc comparison of survivors against non-survivors, i.e. selection-conditioned, and it rests on supplementary panels S5A-S5D.",
+    "snippet": "mice from either treatment group that failed to survive exhibited reduced WWOX expression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
+    "anchor": "Results, expression section, citing Figures S5A-S5D",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Four survival doses exist across two figures and no single figure displays them: at 4E10 and 8E10 no treated arm survives, at 1.23E11 death by about 90 days, at 2.63E11 a plateau. The threshold is therefore not an artefact of comparing two doses.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2B: KO+AAV-hWWOX 4E10 (n=3) dead ~18-20 days, 8E10 (n=5) dead ~17 days, KO+AAV-WWOX-WPRE 4E10 (n=3) ~33% at ~25 days, against KO (n=4) dead ~17-18 days.",
+    "surface": "figure",
+    "artifact": "files/fulltext/figures/PMID42422765/gr2.jpg",
+    "anchor": "Figure 2, panel B, read at 104 effective ppi. NOTE: the running text states that 8E10 without WPRE rescued lethality, which my panel reading does not support; recorded as a discrepancy to re-verify, with the presumption in favour of the text.",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "WPRE removal did not lower transgene burden — it made it predictable and required a six-fold dose increase to recover efficacy. Protein without WPRE at 2E10 sits at or below wild type.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2E lane values relative to WT=1, cortex/hippocampus/midbrain/cerebellum: WWOX without WPRE 0.8/0.9/0.3/0.1 at 2E10 and 4.7/5.9/1.5/0.4 at 4E10; WWOX+WPRE 11.6/11.9/4/2.4 at 2E10 and 25.6/22.3/11.6/6.2 at 4E10.",
+    "surface": "figure",
+    "artifact": "files/fulltext/figures/PMID42422765/gr2.jpg",
+    "anchor": "Figure 2, panel E, read at 104 effective ppi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The Methods settle from their own side the correction I had to make to my Figure 1 criticism: the promoter comparison used WPRE-bearing constructs throughout, so its 4E10 is not the 4E10 of Figures 2 and 3.",
+    "snippet": "Constructs driven by EF1α, CMV, and MBP included WPRE, whereas the hSynI-driven vector was generated both with and without WPRE",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
+    "anchor": "Materials and methods, 'Plasmid vectors'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The MBP vector produced essentially no detectable WWOX, so the oligodendrocyte question raised by PMID 34747138 is unanswered by this experiment rather than answered negatively.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1 panel M, WWOX immunohistochemistry in cortex, one column per promoter: EF1-Alpha weak and diffuse, CMV moderate, MBP essentially blank, SynI strong and cellular.",
+    "surface": "figure",
+    "artifact": "files/fulltext/figures/PMID42422765/gr1.jpg",
+    "anchor": "Figure 1, panel M, read at 104 effective ppi. Qualification: the panel shows cortex, where oligodendrocyte density is lower than in white matter; no corpus-callosum column is shown.",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The construct is neuron-specific but not CNS-confined: after neonatal ICV, WWOX protein reaches the sciatic nerve of high-dose animals while the liver stays negative. A biodistribution fact any safety assessment needs, obtained by the sciatic-nerve and spinal-cord dissection the Methods describe.",
+    "snippet": "WWOX protein was also detected in the sciatic nerve of HD-treated mice",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
+    "anchor": "Results, expression section, citing Figures S6E-S6G; paired with 'no WWOX expression was detected in the liver following either LD or HD treatment'",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "S6 QUALIFIES THE PNS LOCATOR ABOVE RATHER THAN CONFIRMING IT CLEANLY. The sciatic-nerve result is a blot with no quantification and visibly variable band intensity across seven high-dose animals; the panel the caption pairs it with contains four wild-type lanes rather than a WT-versus-treated comparison. The liver result is clean: treated lanes sit in the same 0.03-0.1 range as untreated Wwox-null lanes, i.e. at background for an animal with no WWOX. Cerebellum remains below wild type at P300, confirming from a second timepoint what Figure 5L showed at P30.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] S6E: four lanes all labelled WT, values 1 / 0.9 / 0.3 / 0.6. S6F: lanes KO then seven HD, no numeric quantification, band intensity ranging from strong to barely detectable. S6H liver: WT 1, KO 0.2, KO 0.1, LD 0.03, LD 0.1, HD 0.05, HD 0.1. S6A spinal cord: WT 1, WT 1.3, KO 0.01, LD 0.8, LD 0.3, HD 1.2, HD 1.3. S6D at P300: WT 1, KO 0.1, cortex 4.6, hippocampus 4.7, midbrain 3.1, cerebellum 0.6.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p08_200dpi.png",
+    "anchor": "Supplementary Figure S6, panels A, D, E, F, H, rendered from mmc1.pdf page 8 at 200 effective ppi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Injection technique changed between the two papers, a declared methodological upgrade: stereotaxic here, free-hand in PMID 34747138.",
+    "snippet": "conducted using stereotactic technique to ensure consistency",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
+    "anchor": "Materials and methods, 'ICV injection of AAV particles into P0-P5 Wwox-null mice'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Blinding is declared more weakly than in the 2021 paper, which stated it unconditionally.",
+    "snippet": "Data were analyzed in a blinded manner when feasible",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
+    "anchor": "Materials and methods, 'Statistical analysis'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Declared commercial interest, absent from the 2021 paper, which stated no conflict of interest. Recorded as context for the two text-versus-panel contradictions above, not as an argument against the data.",
+    "snippet": "R.I.A. is a consultant for Mahzi Therapeutics. A.B., T.B., and Y.W. are employed by Mahzi Therapeutics",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
+    "anchor": "Declaration of interests; the work is also declared as supported by Mahzi Therapeutics in the Acknowledgments",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Transduction efficiency, correcting a number I had carried over from the 2021 paper.",
+    "snippet": "rising from ∼40% to ∼55%–60% following treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
+    "anchor": "Results, WPRE section, citing Figure S3C",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}

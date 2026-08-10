@@ -1,0 +1,189 @@
+{
+  "schema_version": 2,
+  "pmid": "39416860",
+  "doi": "10.3389/fped.2024.1453778",
+  "receipt": "FTR-20260810-39416860-01",
+  "landing": [
+    "FTR-20260810-39416860-01",
+    "PMID39416860_locators.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline. The paper was opened to test one specific premise carried by a review read hours earlier, and the answer needed the review's sentence and this paper's table side by side."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_measured": "Not measured. Lanzhou University Second Hospital, Department of Neonatology — a clinical case-report group with no prior WWOX output in this corpus. Declared as not measured rather than guessed.",
+    "research_type": "descriptive_clinical",
+    "output_kind": "case_report",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "A single case report classifying its own central variant as a VUS and closing by asking for animal validation. Its evidential weight is the phenotype it observed, not the genotype–phenotype inference drawn from it downstream."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "WWOX[tiab] AND \"case reports\"[pt]",
+        "route": "PubMed esearch 2026-08-10",
+        "count": 29
+      },
+      {
+        "query": "Feng D[au] AND WWOX",
+        "route": "PubMed esearch 2026-08-10",
+        "count": 2
+      }
+    ],
+    "note": "🔴 I FIRST WROTE 'density not queried, a query would be decoration' AND THE VALIDATOR REFUSED IT, CORRECTLY. I had decided a rule did not apply to me because the paper's relevance was not in doubt — but density is not about relevance, it is about where a paper sits in a field, and it costs one request. The measured answer is more interesting than my refusal: this case report is one of only 29 WWOX case reports indexed, so the counterexample population the three-class framework is argued over is small enough that a single VUS case moves it."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 0,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "NOT PERFORMED and declared. 14 numbered references; the one that matters, ref 14, is the AAV9 gene-therapy study, which is PMID 34747138 and already read. Nothing else in the list is new to this corpus by title."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Is this paper already known, already read, and does a structured surface exist?",
+    "hits": 6,
+    "finding": "Present as CORPUS-STUB-175 in paper_registry_current.md, status not_processed, corpus placeholder only — so no full-text declaration to honour. Present in four corpus seed files and in batch_queue.md as 'screened'. NO RECEIPT: never read. PMCID PMC11479972 existed, so the structured surface was preferred over any PDF per rule 5d, and the DOI was resolved to a PMID from the LOCAL corpus rather than by a retrieval."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-10",
+    "route": "corrections field of the local PubMed corpus record for 39416860",
+    "result": "corrections: [] — no retraction, no expression of concern, no erratum.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID39416860_Feng2024_PMC.xml",
+      "sha256": "8ded55499fc5db1d5a79fa1920f4625a4e4bca2b194e5e3609219c79218de192",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID39416860_Feng2024_assets/fped-12-1453778.pdf",
+      "sha256": "879a2170b732c0b343732359e53c82e7976a296730f35af2ba6ff4c648fb38b1",
+      "kind": "article_binary"
+    },
+    {
+      "path": "files/fulltext/PMID39416860_Feng2024_assets/fig1_p02_1955x1118_300ppi.png",
+      "sha256": "9d903d9e2f2fc81168b0251756c4a315eca55e365656369336fec8aecc604198",
+      "kind": "figure"
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC11479972, JATS XML fetched from PMC efetch. CC BY 4.0, license block present in the article metadata. Structured surface, so rule 5d's preferred class and no rendered page to diverge from.",
+    "abstract_anchoring_waived": "Every proposition below comes from the body, Table 1 or the Conclusion. The abstract carries none of the four findings — it does not mention the VUS classification, the CACNA1A variant, the nucleotide discrepancy or the authors' validation caveat.",
+    "surface_note": "Snippets carry JATS markup where the sentence contains it, because the artifact is the markup. The table locator quotes across two <td> boundaries so that the variant and its zygosity are inside one quoted span rather than asserted to be adjacent.",
+    "entries": [
+      {
+        "proposition": "🔴 THE VARIANT IS A VUS, STATED IN THE PAPER'S OWN FIRST SENTENCE OF GENETIC ANALYSIS, AND THE REVIEW THAT CITES THIS CASE DOES NOT SAY SO. PMID 42128308 §9 presents this case as 'a homozygous missense WWOX mutation (p.Ser304Tyr), in which the patient exhibited rapid clinical deterioration and died in early infancy, despite the mutation type typically being associated with milder phenotypes' — offered as one of three counterexamples that falsify the three-class genotype–phenotype framework. The paper classifies the variant ACMG 'unclear clinical significance', twice: here, and in Table 1.",
+        "snippet": "c.4646A&gt;G are categorized as having “unclear clinical significance”",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39416860_Feng2024_PMC.xml",
+        "anchor": "Section 2.2 Genetic analysis, opening sentence; the same classification appears in Table 1 for both genes",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I opened this paper to test whether it falsifies the premise the review says it falsifies, and the first sentence of the genetic analysis answers it"
+      },
+      {
+        "proposition": "🔴 THE AUTHORS THEMSELVES SAY THE PATHOGENICITY IS NOT ESTABLISHED, IN THEIR LAST SENTENCE. This is the paper's own conclusion, and it is the sentence the review had to pass over to use the case as a counterexample. A case report that declares its central variant unvalidated cannot, on its own, falsify a genotype–phenotype rule.",
+        "snippet": "and its correlation with the clinical phenotype require validation through animal experiments and additional cases",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39416860_Feng2024_PMC.xml",
+        "anchor": "Section 4 Conclusion, final sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence to the end; the paper closes by disclaiming exactly what the review borrows from it"
+      },
+      {
+        "proposition": "🔴 THE PAPER CANNOT AGREE WITH ITSELF ON THE NUCLEOTIDE, AND ARITHMETIC SETTLES IT AGAINST THE RUNNING TEXT. The Results prose says 'base 991' and writes c.991C>A; Table 1 and the Discussion write c.911C>A. Codon 304 spans nucleotides 910–912, so c.911 falls in codon 304 and c.991 falls in codon 331. Only c.911C>A is consistent with p.Ser304Tyr. THE SAME SENTENCE ALSO GETS THE AMINO ACID WRONG: it reports a change 'from glycine to serine' while the HGVS it prints in the same parenthesis is p.Ser304Tyr, serine to tyrosine. Two errors in one sentence, and the version that propagates into the review is the protein notation, which is the half that is right.",
+        "snippet": "resulted in a mutation of amino acid 304 from glycine to serine",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39416860_Feng2024_PMC.xml",
+        "anchor": "Section 2.2 Genetic analysis; compare Table 1 and the Discussion, which both print c.911C>A",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — I was checking the variant against the review's description and the paper's own two statements of it did not match each other"
+      },
+      {
+        "proposition": "🔴 TABLE 1 PUTS THE ZYGOSITY THE REVIEW USED AND THE CLASSIFICATION IT OMITTED IN THE SAME ROW, AND THIS SNIPPET QUOTES BOTH IN ONE SPAN. c.911C>A (p.Ser304Tyr) — HOMOZYGOTE — developmental and epileptic encephalopathy-28 — AR — from both parents — 'Unclear clinical significance'. So the review's 'homozygous missense' is accurate, and what it drops is four columns to the right of what it kept. The snippet was originally written with the XML markup between the cells and did not verify: the validator strips tags and joins text nodes, so a table locator must quote the ROW AS READ, not the row as marked up. The corrected version is better than the original for the reason the finding exists — the omitted classification is now inside the quoted span rather than asserted to be adjacent to it.",
+        "snippet": ": c.911C>A (p.Ser304Tyr) Homozygote Developmental and epileptic encephalopathy-28 AR Paternal/maternal Unclear clinical significance",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID39416860_Feng2024_PMC.xml",
+        "anchor": "Table 1, WWOX row, genetic-variant and zygosity columns",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I went to the table specifically because the running text had contradicted itself"
+      },
+      {
+        "proposition": "🔴 A SECOND CANDIDATE VARIANT IN A SECOND DEE GENE, WHICH THE REVIEW DOES NOT MENTION AT ALL. The child also carries CACNA1A c.4646A>G p.Gln1549Arg, paternal, heterozygous, listed against developmental and epileptic encephalopathy-42 — an AUTOSOMAL DOMINANT condition, so one allele suffices in principle — and also classified 'unclear clinical significance'. The authors argue against its contribution and their argument is reasonable: the DEE-42 phenotype does not match well, and the father carries it without a phenotype. But that is an argument, not a demonstration, and a counterexample used to overturn a genotype–phenotype rule cannot silently drop a competing candidate in a dominant epilepsy gene.",
+        "snippet": "the mutation is less likely contributing to the clinical phenotypes",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39416860_Feng2024_PMC.xml",
+        "anchor": "Discussion, the CACNA1A paragraph; the variant and its classification are in Table 1",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — reading the discussion for the authors' own interpretation, which is where the second gene is argued about rather than announced"
+      },
+      {
+        "proposition": "THE PHENOTYPE ITSELF IS REAL AND SEVERE, AND THIS IS WHAT SURVIVES. Onset at one month; unresponsive glazed eyes with no object tracking; no head control, cannot turn over; bilateral hearing loss with no response to sound; patent foramen ovale; MRI with deepened bilateral frontal sulci, small gyri and a slender corpus callosum; EEG at four months with medium-to-high amplitude spikes and asynchrony between sides. Phenobarbital gave poor control, levetiracetam slight improvement. Consanguineous parents — first cousins — both heterozygous carriers, which is what makes the homozygous state.",
+        "snippet": "Both parents are healthy relatives (cousins)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39416860_Feng2024_PMC.xml",
+        "anchor": "Section 2.1 Clinical manifestation",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "AND THE OUTCOME, IN ONE SENTENCE THE PAPER PLACES IN THE FOLLOW-UP SECTION RATHER THAN THE ABSTRACT. Death at six months. The observation stands whatever the variant's formal classification: a child homozygous for a WWOX missense allele, from consanguineous carriers, with a lethal infantile course. What the paper cannot establish is that the missense CAUSED it — which is the step the review takes.",
+        "snippet": "But he died at the age of 6 months",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39416860_Feng2024_PMC.xml",
+        "anchor": "Section 2.3 Treatment and follow-up, final sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — the sentence is one line and sits after the discharge note, which reads as good news until the next clause"
+      },
+      {
+        "proposition": "A GARBLED ATTRIBUTION IN THE THERAPEUTIC PARAGRAPH, RECORDED BECAUSE IT IS THE PARAGRAPH A CLINICIAN WOULD ACT ON. The paper describes the preclinical WWOX gene therapy as using 'an adenoviral vector' — it is adeno-ASSOCIATED, AAV9, a different vector class with different immunogenicity, tropism and regulatory profile — and attributes it to 'the Mahertz and Akhilan laboratories', which are corruptions of Mahzi and Aqeilan. The underlying claim, reduced premature mortality and audiogenic seizure susceptibility with partial normalisation of development, is correct and is PMID 34747138, read on 2026-08-10.",
+        "snippet": "an adenoviral vector carrying the ",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID39416860_Feng2024_PMC.xml",
+        "anchor": "Discussion, the gene-therapy paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — I read the therapeutic paragraph closely because it is the one that names our own corpus, and the vector class was wrong"
+      },
+      {
+        "proposition": "🔴 THE TRIO IS FULLY RESOLVED IN THE PANEL AND ONLY PARTLY IN THE TEXT, AND THE HOMOZYGOSITY IS READ TWICE. Panel F, WWOX: the proband is labelled homozygous on FORWARD and again on REVERSE sequencing — two independent reads of the same base — while father and mother are each labelled heterozygous on forward. Panel G, CACNA1A: proband heterozygous forward and reverse, father heterozygous, MOTHER WILD-TYPE. So the recessive WWOX genotype and the exclusively paternal origin of the CACNA1A allele are both visible as traces, where the running text asserts them and says only that 'Sanger sequencing was used to validate the test results'. This is the strongest evidence in the paper and it is entirely in the figure.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1 panel F, four Sanger traces labelled 'patient forward sequencing homozygous', 'patient reverse sequencing homozygous', 'father forward sequencing heterozygous', 'mother forward sequencing heterozygous'. Panel G, four traces labelled 'patient forward sequencing heterozygous', 'patient reverse sequencing heterozygous', 'father forward sequencing heterozygous', 'mother forward sequencing wild-type'. Each trace carries a boxed base and a red arrow at the variant position.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID39416860_Feng2024_assets/fig1_p02_1955x1118_300ppi.png",
+        "anchor": "Figure 1, panels F and G, extracted from page 2 of the publisher PDF at its native 300 effective ppi",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "sought — I opened the figure specifically to adjudicate the paper's contradiction about the nucleotide, and found the trio structure instead"
+      },
+      {
+        "proposition": "🔴 THE ADJUDICATION I OPENED THE PANEL FOR FAILED, AND SAYING SO IS THE POINT. The paper writes c.991C>A in the running text and conclusion and c.911C>A in Table 1 and the discussion. I inspected the traces to settle it. The panel shows the substitution is C→A — the proband's boxed base reads A where both parents read C, against the flanking sequence GCTCTGCAACATCCTTCTC[·]CAACGAGCTGCACCGTCGCC — which is consistent with BOTH candidate positions, because both are C>A. A chromatogram carries no coordinate. So the figure CANNOT resolve the discrepancy, and the only thing that does is arithmetic: codon 304 spans nucleotides 910–912, so c.911 is in codon 304 and c.991 is in codon 331. The panel corroborates the substitution and is silent on the position. Recording a failed adjudication as a failed adjudication is cheaper than leaving a reader to assume the figure settled it.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1 panel F, patient forward trace: sequence above the chromatogram reads G C T C T G C A A C A T C C T T C T C, then the boxed and arrowed base, then C A A C G A G C T G C A C C G T C G C C. Proband boxed base A; father and mother boxed base C at the same position with identical flanking sequence. No nucleotide coordinate appears anywhere in the panel; the numeric scale above each trace is the read position, running 140–170 for the patient forward trace and 250–280 for the reverse.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID39416860_Feng2024_assets/fig1_p02_1955x1118_300ppi.png",
+        "anchor": "Figure 1, panel F, patient forward and reverse traces against the parental traces",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "sought, and the answer was no — I went to the panel to settle c.911 against c.991 and a chromatogram cannot carry a coordinate"
+      },
+      {
+        "proposition": "THE IMAGING PANELS, AND WHERE I STOP. Panels A–C are axial sections with red arrows to the frontal lobe (A, B) and to the 'temporale lobe' (C, sic); panel D is a sagittal section with an arrow to a visibly slender corpus callosum, which is the finding the caption claims and the one an inspection can support. Panel E is a 16-channel EEG epoch, Fp1 to T6. 🔴 I DECLINE TO ADJUDICATE THE EEG. The caption claims spikes 'primarily observed in the bilateral frontal Poles and frontal and central regions during sleep' with occasional spread to occipital areas; a single representative epoch cannot establish a regional distribution, and reading one from a reproduction is exactly the cross-figure over-reach that failed three times on 2026-08-10. The epoch is consistent with the caption and does not verify it.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1: panels A, B, C axial brain MRI with red arrows labelled 'frontal lobe', 'frontal lobe' and 'temporale lobe'; panel D sagittal MRI with a red arrow labelled 'corpus callosum' pointing at a thin callosal body. Panel E, EEG montage of 16 derivations Fp1-Avf, Fp2-Avf, F3-Avf, F4-Avf, C3-Avf, C4-Avf, P3-Avf, P4-Avf, O1-Avf, O2-Avf, F7-Avf, F8-Avf, T3-Avf, T4-Avf, T5-Avf, T6-Avf, over six numbered segments.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID39416860_Feng2024_assets/fig1_p02_1955x1118_300ppi.png",
+        "anchor": "Figure 1, panels A–E",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found — inspected as part of closing the figure surface rather than in pursuit of a claim"
+      }
+    ],
+    "figure_provenance_note": "🔴 THE FIGURE ROUTE IS A FINDING IN ITSELF. PMC's bin path 404s for both the figure and the supplementary; the PMC OA package is offered only over ftp://; the Frontiers HTML serves image_m at 1056x604. The publisher PDF holds the same figure at 1955x1118, 300 effective ppi, DeviceRGB, smask = 0 — 1.85x more pixels per dimension than the served copy. Measured before extracting, per the rule corrected this evening: smask == 0 means the extracted stream is what the page shows, so extraction is faithful here and the digest is of the publisher's bytes. Reading a Sanger base call from the served copy would have been reading it with a third of the pixels the publisher shipped."
+  }
+}
