@@ -197,8 +197,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 2
-growth_anchor_head: b3d0a2b6e4ecc05009cb9d4e9b61932057000ea3c83c1d6c5b81053734b528f5
+growth_anchor_events: 3
+growth_anchor_head: 2d885421e2589ccf32804f26375307511a18ddb30768f2045b6ec6f1be3f1ff2
 ```
 
 ```bash
@@ -247,8 +247,8 @@ with every existing check passing. It is invisible by construction, because lean
 writes nothing anywhere. So it is measured instead of assumed.
 
 ```yaml
-unread_premise_baseline: 12
-unread_premise_measured_on: 2026-08-09
+unread_premise_baseline: 10
+unread_premise_measured_on: 2026-08-10
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

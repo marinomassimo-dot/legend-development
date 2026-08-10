@@ -8,23 +8,27 @@
 ## Scope
 Queue of priority full texts to retrieve or deep-dive to consolidate the operational dataset.
 
-**Before choosing what to read, consult [[surface_census]]** — a derived page saying, per paper, whether a structured (XML/HTML) surface exists locally, whether only a PDF does, whether nothing does, and which PDF text layers carry a known corruption signature. It answers *"what can I read right now, and can I quote it?"* before a session spends a retrieval on the wrong format. It is generated and never hand-edited, and it is deliberately **not** part of this file: a PMID here is a declaration of reading debt, and a derived table listing the whole corpus is not one.
+**Ogni voce dichiara un identificatore risolvibile.** `**Paper:**` / `**Papers:**` apre con un PMID o un DOI — o con `NOT_AN_ARTICLE` per l'unica voce che non è un articolo e non lo sarà mai. Il `LINT` lo verifica (`QUEUE_ENTRY_WITHOUT_IDENTIFIER`, `QUEUE_ENTRY_IDENTIFIER_NOT_LEADING`) come verifica i wikilink: **un riferimento che non si risolve non è un riferimento.** Il 2026-08-10, 21 voci su 45 nominavano il proprio paper solo con un numero interno morto, un id d'inbox o un autore-anno; `FT-004` e `FT-029` erano lo stesso paper da mesi, duplicato che nessun dedup poteva vedere.
+
+**La riga `**Surface:**` è derivata — non modificarla a mano.** La rigenera `python3 framework/scripts/surface_census.py --annotate`, e nomina solo i PMID che la voce già dichiara. Il quadro d'insieme, con i paper del corpus che nessuna voce ha in coda, sta in [[surface_census]]: pagina generata, tenuta **fuori** da questo file perché un PMID qui è una dichiarazione di debito di lettura, e una tabella derivata dell'intero corpus non lo è.
 
 ---
 
 ## FT-001
-**Paper:** 93 — Cheng 2020
+**Paper:** PMID 32000863 / DOI 10.1186/s40478-020-0883-3 — Cheng et al. 2020, *Acta Neuropathol Commun* ([[paper_registry_current#PAPER 019]])
 **Title:** Wwox deficiency leads to neurodevelopmental and degenerative neuropathies and GSK3β-mediated epileptic seizure activity in mice
+**Surface:** PMID 32000863 · `structured` · sentinella `clean` · PMID32000863_Cheng2020_PMC.xml, PMID32000863_Cheng2020_supplementary.pdf
 **Priority:** HIGH
 **Why:** structural substrate + GSK3β + PNS + cerebellar involvement
-**Current status:** cited in meta, not yet deeply extracted
-**Next action:** full text deep extraction
+**Current status:** ✅ **RISOLTA — letta integralmente il 2026-08-04**, receipt `FTR-20260804-32000863-01`, `complete_fulltext_read`. 🔴 La voce è rimasta ferma a *«cited in meta, not yet deeply extracted»* per sei giorni **dopo** la lettura: il receipt esisteva, la coda non lo sapeva. Non è un caso isolato — vedi `FT-004` e `FT-010`.
+**Next action:** nessuna. Voce chiusa con la sua ragione, conservata per tracciabilità.
 
 ---
 
 ## FT-002
-**Paper:** 97 — Iacomino 2020
+**Paper:** PMID 32581702 / DOI 10.3389/fnins.2020.00644 — Iacomino et al. 2020, *Front Neurosci* ([[paper_registry_current#PAPER 020]])
 **Title:** Loss of Wwox Perturbs Neuronal Migration and Impairs Early Cortical Development
+**Surface:** PMID 32581702 · `absent`
 **Priority:** HIGH
 **Why:** core prenatal migration/cortical layering paper
 **Current status:** cited in meta, not yet deeply extracted
@@ -33,8 +37,9 @@ Queue of priority full texts to retrieve or deep-dive to consolidate the operati
 ---
 
 ## FT-003
-**Paper:** 151 — Piard 2019 EJPN
+**Paper:** PMID 30853297 / DOI 10.1016/j.ejpn.2019.02.003 — Piard et al. 2019, *Eur J Paediatr Neurol* ([[paper_registry_current#PAPER 025]])
 **Title:** Novel WWOX deleterious variants cause early infantile epileptic encephalopathy, severe developmental delay and dysmorphic features
+**Surface:** PMID 30853297 · `absent`
 **Priority:** HIGH
 **Why:** exon 6 skipping + Q230P compound-context logic
 **Current status:** abstract-level use in system
@@ -43,18 +48,20 @@ Queue of priority full texts to retrieve or deep-dive to consolidate the operati
 ---
 
 ## FT-004
-**Paper:** 30 / PAPER 018 — Oliver 2023
+**Paper:** PMID 36779245 / DOI 10.1111/epi.17542 — Oliver KL et al. 2023, *Epilepsia* ([[paper_registry_current#PAPER 018]])
 **Title:** WWOX developmental and epileptic encephalopathy: Understanding the epileptology and the mortality risk
+**Surface:** PMID 36779245 · `structured` · sentinella `clean` · PMID36779245_Oliver2023_PMC.xml
 **Priority:** HIGH
 **Why:** key survival/natural history cohort; directly relevant to N/M vs N/N interpretation
-**Current status:** queued; PMC available
-**Next action:** full text extraction from PMC10952634
+**Current status:** ✅ **RISOLTA — duplicata di [[full_text_queue_current#FT-029]]**, che è la voce viva per questo paper. Letta integralmente il 2026-08-04, receipt `FTR-20260804-36779245-02`, `complete_fulltext_read` (preceduto da `-01`, `partial_fulltext_read`). 🔴 Due voci per lo stesso PMID sono esistite in parallelo perché questa lo nominava come *«30 / PAPER 018»* e quella per PMID: **un identificatore non risolvibile non è solo debito, è un duplicato che nessun dedup può vedere.**
+**Next action:** nessuna. Conservata: cancellarla toglierebbe la traccia del duplicato invece della sua causa.
 
 ---
 
 ## FT-005
-**Paper:** 106 — Kośla 2019
+**Paper:** PMID 31543760 / DOI 10.3389/fncel.2019.00391 — Kośla et al. 2019, *Front Cell Neurosci* ([[paper_registry_current#PAPER 022]])
 **Title:** The WWOX Gene Influences Cellular Pathways in the Neuronal Differentiation of Human Neural Progenitor Cells
+**Surface:** PMID 31543760 · `absent`
 **Priority:** MED
 **Why:** supports developmental differentiation axis
 **Current status:** processed only at bootstrap level
@@ -63,8 +70,9 @@ Queue of priority full texts to retrieve or deep-dive to consolidate the operati
 ---
 
 ## FT-006
-**Paper:** 125 — Choo 2015
+**Paper:** PMID 26390919 / DOI 10.1002/gcc.22286 — Choo et al. 2015, *Genes Chromosomes Cancer*
 **Title:** Tumor suppressor WWOX moderates the mitochondrial respiratory complex
+**Surface:** PMID 26390919 · `absent`
 **Priority:** MED
 **Why:** could strengthen mitochondrial axis beyond HIF1A/glycolysis
 **Current status:** cited in meta only
@@ -73,8 +81,10 @@ Queue of priority full texts to retrieve or deep-dive to consolidate the operati
 ---
 
 ## FT-007
-**Paper:** Abudiab et al. 2025 (NEW — surfaced by Obeid 2026 review)
-**Title:** WWOX as a cell-autonomous regulator of oligodendrocyte differentiation and remyelination (cuprizone; SOX10)
+**Paper:** DOI 10.1101/2025.11.22.689900 — bioRxiv preprint, 2025-11-22 (Aqeilan lab; emerso dalla review Obeid 2026, [[paper_registry_current#PAPER 029]])
+**Title:** WWOX deficiency uncovers a cell-autonomous mechanism impairing myelin repair
+🔴 **Titolo corretto il 2026-08-10.** La voce portava *«WWOX as a cell-autonomous regulator of oligodendrocyte differentiation and remyelination (cuprizone; SOX10)»*, che è una **parafrasi del meccanismo, non il titolo del lavoro**. Stessa classe di difetto del titolo inventato di `PAPER 021`. La parafrasi resta utile e sopravvive qui sotto in `Why`; smette di fingersi un titolo.
+**Surface:** `unjoined` — la voce dichiara solo un DOI; il corpus locale è indicizzato per PMID, quindi non c'è nulla a cui agganciarla.
 **Priority:** HIGH
 **Why:** adds a SECOND myelin mechanism (cell-autonomous oligodendroglial, via SOX10, stress/remyelination-dependent) alongside the known non-cell-autonomous neuronal one → P4/P6
 **Current status:** not in registry; cited via review only
@@ -85,6 +95,7 @@ Queue of priority full texts to retrieve or deep-dive to consolidate the operati
 ## FT-008
 **Paper:** PMID 30290271 — Hussain et al. 2019, *Neurobiology of Disease* 121:163–176
 **Title:** Wwox deletion leads to reduced GABA-ergic inhibitory interneuron numbers and activation of microglia and astrocytes in mouse hippocampus
+**Surface:** PMID 30290271 · `structured` · sentinella `clean` · PMID30290271_Hussain2019.html, PMID30290271_Hussain2019.pdf
 **Priority:** HIGH
 **Why:** primary systemic-KO source for regional PV/NPY marker-positive counts, IBA1/GFAP
 area fractions and GAD65/67 protein. It does not directly measure GABA synthesis/abundance,
@@ -99,8 +110,10 @@ through an authorised `BATCH_COMMIT`.
 ---
 
 ## FT-009
-**Paper:** Lucas-Clarke et al. 2025 (NEW — preprint)
-**Title:** WWOX, Aβ42 neurotoxicity and metabolic reprogramming in Drosophila (ATF4/UPR; methionine; HIF1α-independent)
+**Paper:** DOI 10.1101/2025.05.01.651195 — Lucas-Clarke HJ et al., bioRxiv preprint, 2025-05-01
+**Title:** Alzheimer's disease risk gene *Wwox* protects against amyloid pathology through metabolic reprogramming
+🔴 **Titolo corretto il 2026-08-10** — anche qui la voce portava una parafrasi (*«WWOX, Aβ42 neurotoxicity and metabolic reprogramming in Drosophila (ATF4/UPR; methionine; HIF1α-independent)»*) al posto del titolo. Due su due fra le voci senza identificatore: **una voce che non dichiara un ID tende a non dichiarare nemmeno un titolo verificabile.**
+**Surface:** `unjoined` — la voce dichiara solo un DOI; il corpus locale è indicizzato per PMID, quindi non c'è nulla a cui agganciarla.
 **Priority:** MED-HIGH
 **Why:** P5 metabolism — introduces a HIF1α-INDEPENDENT axis → tension with CLAIM 025 (WWOX/HIF1A ratio); protection via methionine suppression, not lactate
 **Current status:** not in registry; preprint (observation only)
@@ -109,28 +122,34 @@ through an authorised `BATCH_COMMIT`.
 ---
 
 ## FT-010
-**Paper:** Steinberg et al. 2024 (detail beyond current CLAIM 002 use)
-**Title:** scRNA-seq of WWOX-KO neural organoids — radial-glia expansion, MYC top-upregulated, severity gradient KO>WOREE>SCAR12
+**Paper:** PMID 42397075 / DOI 10.1093/brain/awag239 — Aqeilan lab 2026, *Brain* ([[paper_registry_current#PAPER 001]], registrato come preprint «Steinberg 2024 organoids»)
+**Title:** Disrupted WWOX-MYC interplay impairs neurogenesis in human brain organoids
+**Surface:** PMID 42397075 · `pdf_only` · sentinella `clean` · PMID42397075_Aqeilan2026.pdf
 **Priority:** MED
 **Why:** mechanistic depth (MYC↔WWOX, progenitor dynamics) for CLAIM 002 / human spectrum
-**Current status:** cited; full mechanistic detail not extracted
-**Next action:** full text extraction
+**Come è stato risolto:** `PAPER 001` dichiara `Identifier: preprint` e nessun PMID; il ponte al pubblicato è nel tracking log, `CC-2026-07-05-008 — upgrade di PAPER 001 (Aqeilan/Davila, *Brain* awag239)`. **L'identità c'era, in un altro file, in una riga di changelog.**
+**Current status:** 🟡 **letto parzialmente il 2026-08-09** — receipt `FTR-20260809-42397075-01` e `-02`, entrambi `partial_fulltext_read`. La voce diceva *«cited; full mechanistic detail not extracted»*: vero prima del 9 agosto, non aggiornato dopo. Debito residuo reale, ma minore di quanto la voce dichiarasse.
+**Next action:** chiudere il parziale → `complete_fulltext_read`. Superficie: PDF, `clean` al sentinella ma pur sempre PDF — cercare prima XML/HTML PMC.
 
 ---
 
 ## FT-011
-**Paper:** Akkawi et al. 2024 (NEW)
-**Title:** MYC is negatively regulated by WWOX
+**Paper:** PMID 38182577 / DOI 10.1038/s41419-023-06378-8 — Akkawi R, Hidmi O, Haj-Yahia A, Monin J, Diment J, Drier Y, Stein GS, Aqeilan RI 2024, *Cell Death Dis*
+**Title:** WWOX promotes osteosarcoma development via upregulation of Myc
+🔴 **Titolo corretto il 2026-08-10, e questa correzione cambia il segno.** La voce dichiarava *«MYC is negatively regulated by WWOX»* — che è il **verso opposto** del titolo del lavoro. Il paper mostra entrambe le cose (il ripristino di WWOX riduce Myc nelle cellule doppio-KO), ma la voce presentava la conclusione che serviva al nodo MYC come se fosse il titolo. **Una parafrasi orientata è peggio di un titolo mancante: sopravvive alla lettura di chi si fida della coda.**
+**Surface:** PMID 38182577 · `pdf_only` · sentinella `clean` · PMID38182577_Akkawi2024.pdf
 **Priority:** MED
-**Why:** mechanistic anchor for the MYC node seen in WWOX-KO radial glia
-**Current status:** not in registry
-**Next action:** retrieve; link to Steinberg 2024 / CLAIM 002
+**Why:** mechanistic anchor for the MYC node seen in WWOX-KO radial glia — da leggere sapendo che il contesto è osteosarcoma e che la direzione dichiarata nel titolo è positiva
+**Current status:** non nel paper registry; presente nel corpus locale come PDF, con l'erratum `PMID 38355659` (*Correction: WWOX promotes osteosarcoma development via upregulation of Myc*) anch'esso locale.
+**Next action:** recuperare; leggere insieme all'erratum; ricollegare a `FT-010` / CLAIM 002 **dopo** aver stabilito in che condizioni il segno si inverte.
 
 ---
 
 ## FT-012 — STRATEGIC WATCH (not a standard FT item)
+**Paper:** NOT_AN_ARTICLE — comunicato stampa istituzionale, nessun PMID e nessun DOI **per costruzione**, non per debito. L'identificatore comparirà con il report peer-reviewed, ed è quello che questa voce sorveglia.
 **Source:** PRESS / institutional release, NOT peer-reviewed — EurekAlert 1131219, Times of Israel, Jerusalem Post, AFHU (2026-06-15)
 **Event:** **FIRST-IN-HUMAN WWOX gene-replacement therapy** (Aqeilan lab) reported 2026 in an infant with WWOX-related genetic epilepsy, delivered directly into the brain (ICV). *(News-level; individual case specifics are not reproduced here.)*
+**Surface:** `n/a` — non è un articolo, non c'è superficie da censire.
 **Priority:** STRATEGIC — HIGHEST
 **Epistemic status:** background/observation only — press, no clinical data published; do NOT treat as DATO. Watch for the peer-reviewed clinical report.
 **Why:** the closest existing development to the disease context — same gene, same disorder class, pediatric, the exact therapy class. Decision-relevant for gene-therapy strategy / possible access pathways.
@@ -139,8 +158,9 @@ through an authorised `BATCH_COMMIT`.
 ---
 
 ## FT-013
-**Paper:** INBOX-007 — Denkboy Ongen 2026
+**Paper:** PMID 42082822 / DOI 10.1007/s43032-026-02112-9 — Denkboy Öngen et al. 2026, *Reprod Sci* (INBOX-007)
 **Title:** The Role of WWOX Gene Variant in Hypospadias and 46,XY Disorders of Sexual Development
+**Surface:** PMID 42082822 · `absent`
 **Priority:** MED
 **Why:** WWOX-direct human variant paper outside CNS; possible genotype/variant biology bridge, but likely low direct applicability.
 **Current status:** queued from PubMed clipboard triage 2026-07-05
@@ -149,8 +169,9 @@ through an authorised `BATCH_COMMIT`.
 ---
 
 ## FT-014
-**Paper:** INBOX-008 — Bidany-Mizrahi/Aqeilan 2026
+**Paper:** PMID 41984841 / DOI 10.1073/pnas.2534844123 — Bidany-Mizrahi / Aqeilan 2026, *PNAS* (INBOX-008)
 **Title:** WWOX maintains epidermal identity and suppresses EMT to prevent aggressive cutaneous squamous cell carcinoma
+**Surface:** PMID 41984841 · `pdf_only` · sentinella `clean` · PMID41984841_BidanyMizrahi2026.pdf
 **Priority:** HIGH
 **Why:** WWOX-direct Aqeilan-lab mechanistic paper; EMT/identity/stress-response bridge may inform broader WWOX pathway logic despite oncology domain.
 **Current status:** queued from PubMed clipboard triage 2026-07-05
@@ -159,8 +180,9 @@ through an authorised `BATCH_COMMIT`.
 ---
 
 ## FT-015
-**Paper:** INBOX-009 — Tang 2025 corrigendum
+**Paper:** PMID 40263068 / DOI 10.1016/j.tice.2025.102926 — Tang et al. 2025, *Tissue Cell* (corrigendum; l'originale è PMID 40198927 / DOI 10.1016/j.tice.2025.102885) (INBOX-009)
 **Title:** Corrigendum to "WWOX attenuates the progression of gallbladder cancer by suppressing cellular glycolysis through the modulation of the P73/HIF-1a signaling pathway"
+**Surface:** PMID 40263068 · `absent`  ·  PMID 40198927 · `absent`
 **Priority:** MED-HIGH
 **Why:** Corrigendum to a WWOX/HIF1A/p73 metabolism paper already relevant to CLAIM 025-style metabolism logic; must verify whether correction is formal or affects interpretation.
 **Current status:** queued from PubMed clipboard triage 2026-07-05
@@ -169,8 +191,9 @@ through an authorised `BATCH_COMMIT`.
 ---
 
 ## FT-016
-**Paper:** INBOX-011 — Kim 2025
+**Paper:** PMID 39952983 / DOI 10.1038/s41598-024-81158-8 — Kim et al. 2025, *Sci Rep* (INBOX-011)
 **Title:** Genome-wide identification and functional validation of the WW domain containing oxidoreductase gene associated with sleep duration
+**Surface:** PMID 39952983 · `absent`
 **Priority:** MED-HIGH
 **Why:** WWOX-direct, human genetics + functional validation; possible neuro/circadian/excitability bridge, not WOREE-specific.
 **Current status:** queued from PubMed clipboard triage 2026-07-05
@@ -179,8 +202,9 @@ through an authorised `BATCH_COMMIT`.
 ---
 
 ## FT-017
-**Paper:** INBOX-012 — Martin 2025
+**Paper:** PMID 39933386 / DOI 10.1016/j.seizure.2025.01.025 — Martin et al. 2025, *Seizure* (INBOX-012)
 **Title:** Infantile Epileptic Spasms Syndrome: Unveiling clinical and genetic variability in a case series from Argentina
+**Surface:** PMID 39933386 · `absent`
 **Priority:** LOW-MED
 **Why:** DEE/epileptic-spasms bridge literature; useful only if WWOX appears in the cohort or if genotype/phenotype management patterns transfer.
 **Current status:** queued from PubMed clipboard triage 2026-07-05
@@ -191,6 +215,7 @@ through an authorised `BATCH_COMMIT`.
 ## FT-018
 **Paper:** PMID 28123895 — Bandini 2016
 **Title:** The non-inflammatory role of C1q during Her2/neu-driven mammary carcinogenesis
+**Surface:** PMID 28123895 · `absent`
 **Priority:** HIGH
 **Why:** l'abstract riporta **attivazione di WWOX ridotta** in tumori C1q-deficienti → C1q come regolatore a monte dello **stato di attivazione** di WWOX (non del livello). C1q è centrale nel pruning sinaptico microgliale ed è druggabile (anticorpi anti-C1q già in trial umani). Asse neuroinfiammazione + stato di attivazione.
 **Current status:** `NEW` all'intake 2026-07-26; abstract letto, **full text NON letto**. PMCID PMC5214935 (open).
@@ -202,6 +227,7 @@ through an authorised `BATCH_COMMIT`.
 ## FT-019
 **Paper:** PMID 21444760 — Leduc 2011
 **Title:** The mouse QTL map helps interpret human genome-wide association studies for HDL cholesterol
+**Surface:** PMID 21444760 · `absent`
 **Priority:** MEDIUM
 **Why:** `Wwox` emerge come gene candidato per HDL per convergenza QTL murino × GWAS umano. Rilevante per la meta metabolica e, via colesterolo cerebrale, per l'asse mielina.
 **Current status:** `NEW` all'intake 2026-07-26; abstract letto, **full text NON letto**. PMCID PMC3090235 (open).
@@ -210,8 +236,10 @@ through an authorised `BATCH_COMMIT`.
 ---
 
 ## FT-020
-**Paper:** riferimenti 38, 39 e 87 di PMID 34214506 — non risolti a PMID
-**Title:** (38) WWOX attivato in fotorecettori degeneranti da danno luminoso e in topi `rd`; (39) O'Keefe 2011, ortologo WWOX di *Drosophila*, metabolismo aerobico e stress ossidativo; (87) WWOX lega IκBα e modula NF-κB
+**Papers:** PMID 21075834 *(rif. 39, confermato)* · PMID 15664696 *(rif. 38, **candidato**)* · PMID 21115974 *(rif. 87, **candidato**)* — i tre riferimenti WWOX-diretti di PMID 34214506 rimasti non risolti alla creazione della voce
+**Title:** (39) **confermato** — *Drosophila orthologue of WWOX, the chromosomal fragile site FRA16D tumour suppressor gene, functions in aerobic metabolism and regulates reactive oxygen species* (O'Keefe 2011, *Hum Mol Genet*): titolo e descrizione coincidono. · (38) **candidato** — *Light-induced retinal damage involves tyrosine 33 phosphorylation, mitochondrial and nuclear translocation of WW domain-containing oxidoreductase in vivo* (2005, *Neuroscience*): copre il danno luminoso, **non** i topi `rd` che la descrizione nomina. · (87) **candidato** — *The tumor suppressor gene WWOX links the canonical and noncanonical NF-κB pathways in HTLV-I Tax-mediated tumorigenesis* (Fu 2011, *Blood*): modula NF-κB, ma il legame diretto a IκBα non compare nel titolo.
+🔴 **I due candidati non sono risolti, sono ristretti.** Vanno confermati contro la reference list di PMID 34214506, non contro la loro plausibilità. Restano marcati finché quella verifica non avviene: **un candidato promosso a identità è come si perde il paper giusto senza accorgersene.**
+**Surface:** PMID 21075834 · `absent`  ·  PMID 15664696 · `absent`  ·  PMID 21115974 · `pdf_only` · sentinella `SUSPECT` · PMID21115974_Fu2011.pdf  ·  PMID 34214506 · `pdf_only` · sentinella `SUSPECT` · PMID34214506_Saadane2021.pdf
 **Priority:** HIGH
 **Why:** tutti e tre **WWOX-diretti** e citati dentro una fonte già letta integralmente. Il rif. 87 è la base della via trascrizionale alternativa che regge [[dismissal_ledger_current#DIS-008 — «La calpaina è una via di degradazione/turnover per WWOX» → ⏸️ **NON STABILITA (rigettata come affermazione, non come possibilità)**]]: finché non è letto, quella via resta plausibile ma non verificata alla fonte.
 **Current status:** debito di espansione multi-hop **non svolto** nella sessione 2026-07-26.
@@ -222,6 +250,7 @@ through an authorised `BATCH_COMMIT`.
 ## FT-021
 **Paper:** PMID 24308844 — Schuchardt et al. 2013
 **Title:** Molecular origin of the binding of WWOX tumor suppressor to ErbB4 receptor tyrosine kinase
+**Surface:** PMID 24308844 · `absent`
 **Priority:** HIGH
 **Why:** fonte primaria WWOX–ErbB4 direttamente a monte di PMID 35716775; serve a verificare quali determinanti di sequenza/affinità precedenti sopravvivono oltre il nuovo modello topology-dependent e a evitare che peptidi ingegnerizzati vengano generalizzati ai partner naturali.
 **Current status:** già catalogato in paper/tracking registry; nessuna `complete_fulltext_read` receipt trovata al 2026-07-26. Debito multi-hop esplicitamente aperto.
@@ -237,6 +266,7 @@ through an authorised `BATCH_COMMIT`.
 ## FT-022
 **Paper:** PMID 20067585 — Castaño Z, Gordon-Weeks PR, Kypta RM (rif. 27 di PMID 22193544)
 **Title:** The neuron-specific isoform of glycogen synthase kinase-3β is required for axon growth
+**Surface:** PMID 20067585 · `absent`  ·  PMID 22193544 · `structured` · sentinella `clean` · PMID22193544_Wang2012.pdf, PMID22193544_Wang2012_PMC_JATS.xml
 **Priority:** **HIGH**
 **Why:** candidata risoluzione della contraddizione che Wang 2012 **ammette e non risolve** (GSK3β blocca o favorisce la crescita neuritica?). Se l'arco WWOX-rilevante e la crescita assonale passano per **isoforme diverse**, un inibitore globale come il litio le colpisce entrambe → rischio su [[therapeutic_strategies_current#TX-005 — Repurposing: lithium / GSK3β (and other nodes)|TX-005]] **oggi assente dal punteggio**. È anche il `REVIVAL_TRIGGER` (c) di `DIS-009`. Regge `DL-MECH-066`.
 **Current status:** 🔴 **PAYWALLED — resta APERTO, e vale ancora la priorità HIGH.** Cascata di
@@ -259,6 +289,7 @@ vs β2 e quanto è grande; se il litio o inibitori ATP-competitivi discriminano 
 ## FT-026
 **Paper:** PMID 21212533 — Saeki K, Machida M, Kinoshita Y, Takasawa R, Tanuma S 2011, *Biol Pharm Bull* 34(1):146-149
 **Title:** Glycogen synthase kinase-3β2 has lower phosphorylation activity to tau than glycogen synthase kinase-3β1
+**Surface:** PMID 21212533 · `pdf_only` · sentinella `SUSPECT` · PMID21212533_Saeki2011.pdf
 **Priority:** **HIGH**
 **Why:** **fonte primaria** del fatto oggi più carico di conseguenze sull'asse GSK3β: che le due
 isoforme fosforilino tau con cinetica e siti diversi. Oggi lo conosciamo solo attraverso una
@@ -281,6 +312,7 @@ per isoforma da chiunque.**
 ## FT-027
 **Paper:** PMID 12065620 — Mukai F, Ishiguro K, Sano Y, Fujita SC 2002, *J Neurochem* 81(5):1073-1083
 **Title:** Alternative splicing isoform of tau protein kinase I / glycogen synthase kinase 3beta
+**Surface:** PMID 12065620 · `absent`
 **Priority:** **HIGH**
 **Why:** è la **vera fonte primaria** del claim che le due isoforme fosforilino tau su **residui in
 parte diversi** (`Ser199` β1-specifico) — claim che questa sessione aveva erroneamente attribuito a
@@ -295,6 +327,7 @@ ipotizzato in `DL-MECH-067`/`DL-MECH-068`.
 ## FT-028
 **Paper:** PMID 19607922 — Wood-Kaczmar A, Kraus M, Ishiguro K, Philpott KL, Gordon-Weeks PR 2009, *Mol Cell Neurosci* 42(3):184-194
 **Title:** An alternatively spliced form of glycogen synthase kinase-3beta is targeted to growing neurites and growth cones
+**Surface:** PMID 19607922 · `absent`
 **Priority:** **HIGH**
 **Why:** fonte primaria della localizzazione di β2 in **neuriti e coni di crescita**, che è il perno
 dell'argomento di sicurezza sulla finestra evolutiva in `DL-MECH-068`(a). Oggi la conosciamo solo
@@ -308,6 +341,7 @@ localizzazione subcellulare quantitativa, poi confrontarla con la finestra mieli
 ## FT-023
 **Paper:** PMID 15026124 — Chen ST et al. 2004, *Neuroscience* (rif. 12 di PMID 22193544)
 **Title:** Expression of WW domain-containing oxidoreductase WOX1 in the developing murine nervous system
+**Surface:** PMID 15026124 · `absent`  ·  PMID 22193544 · `structured` · sentinella `clean` · PMID22193544_Wang2012.pdf, PMID22193544_Wang2012_PMC_JATS.xml
 **Priority:** **HIGH**
 **Why:** è la **motivazione dichiarata** dell'intero lavoro di Wang 2012 e, più in generale, la fonte originaria della tesi che WWOX abbia un ruolo nel differenziamento e nella maturazione neuronale — cioè una premessa del modello di malattia. Ed è **ignota al modello**: la tesi neuroevolutiva è in uso senza che la sua fonte primaria sia mai stata letta. Stessa classe di difetto di `UNREAD_PREMISE`.
 **Current status:** **ignoto al modello** — assente da paper registry, tracking log e batch queue al 2026-07-26.
@@ -316,6 +350,7 @@ localizzazione subcellulare quantitativa, poi confrontarla con la finestra mieli
 ## FT-024
 **Paper:** PMID 15126504 — Sze CI et al. 2004, *J Biol Chem* (rif. 2 di PMID 22193544)
 **Title:** Down-regulation of WW domain-containing oxidoreductase induces Tau phosphorylation in vitro. A potential role in Alzheimer's disease
+**Surface:** PMID 15126504 · `absent`  ·  PMID 22193544 · `structured` · sentinella `clean` · PMID22193544_Wang2012.pdf, PMID22193544_Wang2012_PMC_JATS.xml
 **Priority:** **HIGH**
 **Why:** **controparte diretta** di `DIS-010` e dell'arco *tau* di `DL-MECH-019`. Sarebbe anche il **terzo studio** che consentirebbe di riesaminare lo status di [[claim_registry_current#CLAIM 016]] (oggi due sole fonti, e `WWOX AND GSK3` restituisce 5 record in tutto PubMed).
 **Current status:** 🔴 **citato come premessa da `analysis/therapy_levers.md` (lever B1) senza essere mai stato letto** — è l'istanza che ha motivato il check `UNREAD_PREMISE`. In batch queue, segnalato senza full text libero; JBC 2004 è plausibilmente disponibile su PMC post-embargo.
@@ -324,6 +359,7 @@ localizzazione subcellulare quantitativa, poi confrontarla con la finestra mieli
 ## FT-025
 **Paper:** PMID 17178850 — Gaudio E et al. 2006, *Cancer Res* (rif. 17 di PMID 22193544)
 **Title:** Physical association with WWOX suppresses c-Jun transcriptional activity
+**Surface:** PMID 17178850 · `pdf_only` · sentinella `clean` · PMID17178850_Aqeilan2006.pdf  ·  PMID 22193544 · `structured` · sentinella `clean` · PMID22193544_Wang2012.pdf, PMID22193544_Wang2012_PMC_JATS.xml
 **Priority:** MEDIUM
 **Why:** regge l'**unico controllo di folding** offerto per il mutante `L404A` (co-IP di c-jun conservato). Un controllo a partner singolo è debole per escludere un difetto conformazionale locale proprio nella regione in esame: serve sapere quanto è robusta e quanto è sensibile al fold quella interazione.
 **Current status:** **ignoto al modello** — assente da paper registry, tracking log e batch queue al 2026-07-26.
@@ -337,6 +373,7 @@ localizzazione subcellulare quantitativa, poi confrontarla con la finestra mieli
 > Saeki 2011. Rinumerata a `FT-029`; il wikilink `[[full_text_queue_current#FT-026]]` nel
 > discovery ledger punta correttamente alla voce Saeki e non va toccato.
 **Title:** WWOX developmental and epileptic encephalopathy: Understanding the epileptology and the mortality risk
+**Surface:** PMID 36779245 · `structured` · sentinella `clean` · PMID36779245_Oliver2023_PMC.xml
 **Priority:** **HIGH**
 **Why:** è la fonte di [[claim_registry_current#CLAIM 017]] (spettro WOREE↔SCAR12) e del `p = .0085` citato da [[claim_registry_current#CLAIM 033]]. Una lettura **completa** renderebbe lo spettro esportabile verso DisMech e darebbe al modulo condiviso l'evidenza che gli manca — oggi il routing verso entrambe le entry poggia su una claim che non può essere esportata.
 **Current status:** 🟡 **letto parzialmente** il 2026-08-04, receipt `FTR-20260804-36779245-01`, `evidence_depth: partial_fulltext_read`. Testo JATS letto per intero (abstract, introduzione, metodi, risultati, discussione, Tabelle 1 e 3); **le quattro figure sono disponibili solo come didascalie** e due supplementary non sono stati recuperati. Figura 4 *è* l'analisi di sopravvivenza e Figura 3 la mappa delle varianti: giudicarle dalla didascalia è il fallimento per cui esiste il valore `captions_only`. Tentativi falliti: pacchetto OA PMC (404), OA PDF (404), URL immagine `/bin/` (301 non risolto), endpoint PDF Europe PMC (404).
@@ -373,6 +410,7 @@ evidenza di un fenotipo "intermedio"** — vedi le tre commit candidate su
 ## FT-030
 **Paper:** PMID 25716914 — Mignot C et al. 2015 (riferimento 18 di [[paper_registry_current#PAPER 015]])
 **Title:** WWOX and severe autosomal recessive epileptic encephalopathy: first case in the prenatal period
+**Surface:** PMID 25716914 · `absent`
 **Priority:** **MEDIA-ALTA**
 **Why:** Teplyshova 2024 registra **assenza di attività motoria fetale nell'ultimo mese di
 gravidanza** e attribuisce alla letteratura l'idea che le varianti WWOX disturbino lo sviluppo
@@ -389,6 +427,7 @@ ipotesi di intervento precoce.
 ## FT-031
 **Paper:** PMID 32051108 — (riferimento 6 di [[paper_registry_current#PAPER 015]])
 **Title:** A Chinese patient with epilepsy and WWOX compound heterozygous mutations
+**Surface:** PMID 32051108 · `absent`
 **Priority:** **MEDIA**
 **Why:** caso a eterozigosi composta, cioè la classe genotipica intermedia (null/missenso) che
 in Oliver 2023 Fig. 4A mostra la sopravvivenza **migliore** delle tre. Ogni caso indipendente in
@@ -404,8 +443,11 @@ FT-030.
 ---
 
 ## FT-032
-**Papers:** i 5 riferimenti gene-diretti di [[paper_registry_current#PAPER 018]] (Oliver 2023)
-assenti da registry, coda e tracking log.
+**Papers:** PMID 30094525 · PMID 35573960 · PMID 26345274 · PMID 17360458 · PMID 11719429 — i 5
+riferimenti gene-diretti di [[paper_registry_current#PAPER 018]] (Oliver 2023) assenti da
+registry, coda e tracking log. *(Gli ID erano già nella tabella qui sotto; qui salgono sulla
+riga di identità, dove un dedup li può leggere.)*
+**Surface:** PMID 30094525 · `absent`  ·  PMID 35573960 · `absent`  ·  PMID 26345274 · `absent`  ·  PMID 17360458 · `pdf_only` · sentinella `SUSPECT` · PMID17360458_Aqeilan2007.pdf  ·  PMID 11719429 · `absent`
 **Priority:** **MEDIA-ALTA** — sui primi due, **ALTA**.
 
 | PMID | Anno | Sede | Titolo | Perché |
@@ -424,9 +466,11 @@ registry come fonte di tre claim.
 ---
 
 ## FT-033
-**Paper:** Gribaa M et al. 2007, *Brain* 130(7):1921–1928 — DOI 10.1093/brain/awm078
-(riferimento 4 di [[paper_registry_current#PAPER 014]])
+**Paper:** DOI 10.1093/brain/awm078 — Gribaa M et al. 2007, *Brain* 130(7):1921–1928
+(riferimento 4 di [[paper_registry_current#PAPER 014]]). *Nessun PMID nelle fonti locali: la voce
+è pre-WWOX e assente dal seed PubMed WWOX, quindi il DOI è l'identificatore, non un ripiego.*
 **Title:** A new form of childhood onset, autosomal recessive spinocerebellar ataxia and epilepsy is localized at 16q21-q23
+**Surface:** `unjoined` — la voce dichiara solo un DOI; il corpus locale è indicizzato per PMID, quindi non c'è nulla a cui agganciarla.
 **Priority:** **ALTA**
 **Why:** è **l'origine di SCAR12** — lo studio di linkage che definisce l'entità prima ancora
 che WWOX fosse identificato come il gene (Mallaret 2014). Tutto il polo mite dello spettro
@@ -439,8 +483,13 @@ senza aver visto il documento che la costituisce. Rilevante per
 ---
 
 ## FT-034
-**Papers:** i restanti 6 riferimenti gene-diretti di [[paper_registry_current#PAPER 014]]
-ignoti a LEGEND.
+**Papers:** DOI 10.1165/rcmb.2020-0145OC · DOI 10.7759/cureus.46216 · DOI 10.1002/ana.25619 ·
+**Surface:** `unjoined` — la voce dichiara solo un DOI; il corpus locale è indicizzato per PMID, quindi non c'è nulla a cui agganciarla.
+DOI 10.1684/epd.2017.0924 · DOI 10.1007/s12035-023-03346-3 · DOI 10.21203/rs.3.rs-1682290/v1 —
+i restanti 6 riferimenti gene-diretti di [[paper_registry_current#PAPER 014]] ignoti a LEGEND.
+*(Come per `FT-032`: gli ID erano nella tabella, non sulla riga di identità. La nota sul metodo
+qui sotto — «un audit con una sola chiave sovrastima i propri risultati» — vale anche qui: una
+voce che tiene gli ID solo in tabella è invisibile a un dedup che legge la riga `Paper:`.)*
 
 | Rif. | Anno | DOI | Titolo | Perché |
 |---|---|---|---|---|
@@ -461,8 +510,9 @@ nella direzione che lo lusinga.**
 ---
 
 ## FT-035
-**Paper:** [[paper_registry_current#PAPER 014]] — materiale mancante della **stessa** lettura
+**Paper:** PMID 40875931 / DOI 10.1212/WNL.0000000000213883 — Gao K et al. 2025, *Neurology* ([[paper_registry_current#PAPER 014]]) — materiale mancante della **stessa** lettura
 **Title:** Gao 2025 — eTable 1/2/3 e figure a risoluzione piena
+**Surface:** PMID 40875931 · `absent`
 **Priority:** **MEDIA-ALTA**
 **Why:** il receipt `FTR-20260804-40875931-02` è `partial_fulltext_read` per una ragione
 precisa, non generica: **eTable 1** contiene i dati grezzi per caso (le 18 risposte binarie e
@@ -483,6 +533,7 @@ corresponding author).
 **Paper:** PMID 10861292 — riferimento gene-diretto di [[paper_registry_current#PAPER 019]]
 (Cheng 2020, receipt `FTR-20260804-32000863-01`)
 **Title:** Common chromosomal fragile site FRA16D sequence: identification of the FOR gene spanning FRA16D
+**Surface:** PMID 10861292 · `absent`
 **Priority:** **MEDIA**
 **Why:** è la caratterizzazione di sequenza del sito fragile che **contiene** WWOX. Parità delle
 fonti: è un lavoro di genomica del cancro del 2000, e per LEGEND è il documento che descrive
@@ -499,6 +550,7 @@ uniforme, è alta sul meccanismo murino e bassa sulle coorti cliniche.**
 ## FT-037
 **Paper:** PMID 36499501 — Huyan et al. 2022, *Int J Mol Sci* 23(23):15177
 **Title:** miR-221-5p and miR-186-5p are the critical bladder cancer derived exosomal miRNAs in natural killer cell dysfunction
+**Surface:** PMID 36499501 · `absent`
 **Priority:** **MEDIA-ALTA**
 **Why:** è il riferimento **più vicino all'asse** del paper che lo cita e l'unico dei 29
 riferimenti gene-/asse-diretti di PMID 37519886 **assente da ogni file LEGEND** — registro
@@ -520,6 +572,7 @@ adulta. Va letto come `DISCOVERY_ONLY`, non come candidato canonico.
 ## FT-038
 **Paper:** PMID 30619736 — Hussain et al. 2018, *Front Oncol* 8:591
 **Title:** Delineating WWOX protein interactome by tandem affinity purification-mass spectrometry: identification of top interactors and key metabolic pathways involved
+**Surface:** PMID 30619736 · `absent`
 **Priority:** **ALTA**
 **Why:** è la **sorgente dell'arco WWOX·UPF1** su cui poggia [[discovery_ledger_current#DL-MECH-069 — 🔑 L'efficienza dell'NMD potrebbe essere **WWOX-dipendente**, e questo tocca sia l'allele di sito accettore sia l'esperimento disegnato per caratterizzarlo|DL-MECH-069]]:
 l'interazione WW1 ↔ ¹⁰⁰⁵PPGY¹⁰⁰⁸ di UPF1, cioè il ponte fra WWOX e il macchinario NMD che
@@ -537,6 +590,7 @@ complesso EJC/NMD.
 ## FT-039
 **Paper:** PMID 24871327 — Iatan et al. 2014, *Circ Cardiovasc Genet* 7:491-504
 **Title:** The WWOX gene modulates high-density lipoprotein and lipid metabolism
+**Surface:** PMID 24871327 · `structured` · sentinella `clean` · PMID24871327_Iatan2014_PMC.html
 **Priority:** **ALTA**
 **Why:** è il primario citato da PMID 33255508 per il primo dei due passaggi del ponte
 `WWOX -> lipid homeostasis -> myelin`. La review lo descrive come “strong evidence”, ma la
@@ -553,6 +607,7 @@ neurale o un biomarcatore.
 **Paper:** PMID 31340538 — Tochigi et al. 2019, *Int J Mol Sci* 20:3596
 **Title:** Loss of Wwox Causes Defective Development of Cerebral Cortex with Hypomyelination
 in a Rat Model of Lethal Dwarfism with Epilepsy
+**Surface:** PMID 31340538 · `structured` · sentinella `clean` · PMID31340538_Tochigi2019.xml
 **Priority:** **ALTA**
 **Why:** è il primario animale direttamente citato dalla review per sviluppo corticale e
 ipomielinizzazione. Il grafo lo usa già come ancora strutturale, ma non esiste ancora un
@@ -569,6 +624,7 @@ receipt `FTR-20260806-31340538-01`; dossier `fulltext_dossiers/PMID31340538.md`.
 **Paper:** PMID 17803050 — Suzuki et al. 2007, *Comparative Medicine* 57:360-369
 **Title:** Phenotypic characterization of spontaneously mutated rats showing lethal dwarfism
 and epilepsy
+**Surface:** PMID 17803050 · `pdf_only` · sentinella `SUSPECT` · PMID17803050_Suzuki2007.html, PMID17803050_Suzuki2007.pdf
 **Priority:** **ALTA**
 **Why:** è il primo primario fenotipico del ratto `lde` e l'unico dei 30 riferimenti
 WWOX/modello/malattia-diretti di PMID 31340538 assente da paper registry, tracking log, batch
@@ -663,6 +719,7 @@ prova** sì.
 **Paper:** PMID 19500159 — Suzuki et al. 2009, *Genes Brain Behav* 8:650-660
 **Title:** A spontaneous mutation of the Wwox gene and audiogenic seizures in rats with
 lethal dwarfism and epilepsy
+**Surface:** PMID 19500159 · `pdf_only` · sentinella `clean` · PMID19500159_Suzuki2009.html, PMID19500159_Suzuki2009.pdf
 **Priority:** **ALTA**
 **Why:** è il primario load-bearing per mappatura della delezione esone 9, mRNA/proteina e
 crisi audiogeniche del modello `lde`. `DL-MECH-026` usa già questi risultati ma il full text
@@ -707,6 +764,7 @@ poggia interamente su `FT-041`, non letto, il cui abstract riporta urea, creatin
 ## FT-043
 **Paper:** PMID 19936220 — Ludes-Meyers et al. 2009, *PLoS ONE* 4:e7775
 **Title:** Generation and characterization of mice carrying a conditional allele of the Wwox tumor suppressor gene
+**Surface:** PMID 19936220 · `structured` · sentinella `clean` · PMID19936220_Ludes-Meyers2009.pdf, PMID19936220_Ludes-Meyers2009_PMC.xml
 **Priority:** **ALTA**
 **Why:** è il primario load-bearing per generazione, ricombinazione e fenotipo basale del
 modello knockout usato da PMID 30290271. Hussain 2019 importa quel protocollo e non rimisura
@@ -730,6 +788,7 @@ La catena prosegue verso il ratto *lde* (`FT-042`/`FT-041`). Vedi `DL-MECH-073` 
 ## FT-044
 **Paper:** PMID 33914858 — Repudi et al. 2021, *Brain* 144:3061–3077
 **Title:** Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects
+**Surface:** PMID 33914858 · `pdf_only` · sentinella `SUSPECT` · PMID33914858_Aqeilan2021.pdf
 **Priority:** **ALTA**
 **Why:** è la fonte primaria di `CLAIM 003` (*consolidated baseline*) — ipomielinizzazione
 non-cell-autonoma da delezione neuronale di Wwox — e il sistema non ne ha mai avuto il testo
@@ -825,12 +884,18 @@ affetto (PMID 17803050), non citano soglie e sono intatte. Il difetto esiste nel
 ## FT-045
 **Paper:** PMID 42128308 — Aqeilan 2026, *Neurobiol Dis*
 **Title:** WWOX in brain development and disease: Molecular mechanisms and therapeutic opportunities
+**Surface:** PMID 42128308 · `pdf_only` · sentinella `clean` · PMID42128308_Aqeilan2026.pdf
 **Priority:** **MEDIA**
 **Why:** review di sintesi del leader del campo sull'asse cervello; utile come mappa delle
 posizioni correnti del gruppo, non come fonte primaria di dati.
 **Come è emerso:** corpus Aqeilan RI, coda 2026-08-08 (posizione 3, il più recente dopo i due
 2026 primari).
 **Current status:** ⬜ **MAI APERTO — NESSUNA LETTURA È AVVENUTA.** Va detto con precisione,
+🔴 **e va detto anche che il ledger sembra dire il contrario:** esiste
+`FTR-20260726-42128308-01`, `partial_fulltext_read`, del 2026-07-26. Non è una contraddizione,
+è un `record_kind: legacy_reconstruction` — un receipt costruito da una dichiarazione di
+registry, non da una lettura. Il ledger e questa voce dicono la stessa cosa in due vocabolari,
+e senza questa riga la prossima sessione avrebbe dovuto scoprirlo da sola.
 perché è diverso da una lettura che non produce affermazioni: il documento non è mai stato
 aperto in alcuna sessione, non esiste testo estratto, non esiste receipt e non esiste
 rinuncia argomentata da scrivere — non c'è lettura su cui argomentare. L'artefatto è presente

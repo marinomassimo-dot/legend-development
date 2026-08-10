@@ -24,6 +24,7 @@ attaches a surface verdict to the wrong paper and nothing downstream ever questi
 from __future__ import annotations
 
 import os
+import re
 import subprocess
 import sys
 import unittest
@@ -169,13 +170,32 @@ class QueueResolution(unittest.TestCase):
             "## FT-020\n**Paper:** riferimenti 38, 39 e 87 di PMID 34214506 — "
             "non risolti a PMID\n**Priority:** HIGH\n")
         self.assertEqual({}, resolved)
-        self.assertEqual([("FT-020", "no_pmid_declared",
+        self.assertEqual([("FT-020", "identity_not_leading",
                            "riferimenti 38, 39 e 87 di PMID 34214506 — non risolti a PMID")],
                          losses)
 
     def test_an_entry_without_an_identity_line_is_its_own_loss_state(self) -> None:
         _resolved, losses = census.resolve_queue("## FT-032\n**Priority:** HIGH\n")
         self.assertEqual([("FT-032", "no_identity_line", "—")], losses)
+
+    def test_one_entry_may_declare_several_papers(self) -> None:
+        """`FT-032` carries five references of one paper's bibliography, `FT-034` six. Taking
+        only the first would have silently dropped nine papers into the same invisibility the
+        entries were created to end."""
+        resolved, losses = census.resolve_queue(
+            "## FT-032\n**Papers:** PMID 30094525 · PMID 35573960 · PMID 11719429\n")
+        self.assertEqual({"30094525": ["FT-032"], "35573960": ["FT-032"],
+                          "11719429": ["FT-032"]}, resolved)
+        self.assertEqual([], losses)
+
+    def test_doi_only_and_not_an_article_are_states_not_failures(self) -> None:
+        """Three preprints and a 2007 pre-WWOX study have no PMID in any local source, and a
+        press release will never have one. Calling either a loss would push an honest entry
+        toward inventing an identifier."""
+        _resolved, losses = census.resolve_queue(
+            "## FT-033\n**Paper:** DOI 10.1093/brain/awm078 — Gribaa 2007\n\n"
+            "## FT-012\n**Paper:** NOT_AN_ARTICLE — press release under watch\n")
+        self.assertEqual(["doi_only", "not_an_article"], [state for _id, state, _ in losses])
 
     def test_the_last_entry_is_not_swallowed(self) -> None:
         resolved, _losses = census.resolve_queue(
@@ -189,15 +209,16 @@ class Accounting(unittest.TestCase):
 
     def assert_balances(self, result) -> None:
         self.assertEqual(
-            result.corpus_papers + result.queue_entries,
-            len(result.papers) + result.merged + result.duplicate_entries
-            + len(result.losses),
-        )
+            result.corpus_papers + result.queued_papers - result.merged,
+            len(result.papers), "row identity")
+        self.assertEqual(
+            result.resolved_entries + len(result.losses),
+            result.queue_entries, "entry identity")
 
     def test_a_queue_that_overlaps_duplicates_and_misses_the_corpus(self) -> None:
         queue = (
             "## FT-001\n**Paper:** PMID 1111111 — local\n\n"      # merged with the corpus
-            "## FT-002\n**Paper:** PMID 1111111 — local again\n\n"  # duplicate entry
+            "## FT-002\n**Paper:** PMID 1111111 — local again\n\n"  # same paper, second entry
             "## FT-003\n**Paper:** PMID 9999999 — never retrieved\n\n"  # absent
             "## FT-004\n**Paper:** 93 — Cheng 2020\n\n"           # unresolved
             "## FT-005\n**Priority:** HIGH\n"                     # no identity line
@@ -206,15 +227,15 @@ class Accounting(unittest.TestCase):
                                PMID1111111_a__xml=JATS, PMID2222222_b__pdf=b"%PDF-1.4")
         self.assert_balances(result)
         self.assertEqual(2, result.corpus_papers)
+        self.assertEqual(2, result.queued_papers)
         self.assertEqual(1, result.merged)
-        self.assertEqual(1, result.duplicate_entries)
         self.assertEqual(2, len(result.losses))
         self.assertEqual(3, len(result.papers))
 
-    def test_the_rendered_page_states_the_identity_and_it_holds(self) -> None:
+    def test_the_rendered_page_states_the_identities_and_they_hold(self) -> None:
         text = census.render(build_fixture(self), "2026-08-10")
-        self.assertIn("The two agree.", text)
-        self.assertNotIn("THE TWO DISAGREE", text)
+        self.assertIn("**Accounting.**", text)
+        self.assertNotIn("MISMATCH", text)
 
 
 class TheCensusStaysOutOfTheQueue(unittest.TestCase):
@@ -231,11 +252,37 @@ class TheCensusStaysOutOfTheQueue(unittest.TestCase):
     this reason.
     """
 
+    QUEUE = ROOT / "disease-models" / "wwox" / "research" / "full_text_queue_current.md"
+
     def test_the_queue_carries_no_generated_census(self) -> None:
-        queue = (ROOT / "disease-models" / "wwox" / "research"
-                 / "full_text_queue_current.md").read_text(encoding="utf-8")
-        self.assertNotIn("Surface census", queue)
-        self.assertNotIn("surface_census.py", queue)
+        """The census *page* must not be spliced in. Its regeneration command may be named:
+        this assertion used to forbid the string `surface_census.py` outright and fired on
+        the one line telling a reader not to hand-edit the derived field — a guard written
+        wider than the thing it guards, which is how a true alarm gets relaxed later."""
+        queue = self.QUEUE.read_text(encoding="utf-8")
+        for marker in ("Generated file — do not edit by hand",
+                       "### Loss ledger", "### Per paper", "### Totals"):
+            self.assertNotIn(marker, queue)
+
+    def test_no_generated_line_names_a_paper_its_own_entry_does_not(self) -> None:
+        """🔴 The property, checked live, that the string ban was only approximating.
+
+        Laundering is possible exactly when a generated line introduces a PMID the entry
+        does not itself declare, because `session_self_eval.py` reads any PMID in this file
+        as declared reading debt. Entry prose may cite other papers freely — it is written
+        by a person, and that is what the ratchet is measuring. The generated line may not.
+        """
+        pmid = re.compile(r"\b(\d{6,8})\b")
+        text = self.QUEUE.read_text(encoding="utf-8")
+        for entry_id, body in census.queue_entries(text):
+            surface = census.SURFACE_FIELD.search(body)
+            if surface is None:
+                continue
+            declared, _dois, _state = census.entry_identity(body)
+            introduced = set(pmid.findall(surface.group(0))) - set(declared)
+            self.assertEqual(set(), introduced,
+                             f"{entry_id}: the generated Surface line names {introduced}, "
+                             f"which its identity line does not declare")
 
     def test_the_census_is_not_a_landing_file(self) -> None:
         import session_self_eval  # noqa: PLC0415 — imported for its declared list only
@@ -251,6 +298,55 @@ class TheCensusStaysOutOfTheQueue(unittest.TestCase):
         self.assertIn("Generated file — do not edit by hand", page)
         self.assertIn("--out disease-models/wwox/research/surface_census.md", page)
         self.assertNotIn("_current.md\n", page.split("```")[1])
+
+
+class Annotation(unittest.TestCase):
+    """`--annotate` rewrites one line inside 45 hand-written entries. It has to be exact.
+
+    🔴 The property that makes it safe is not "it looks right", it is that the annotated
+    queue declares **the same set of PMIDs** as the original. That is the whole difference
+    from the census table this replaced: a line naming papers the entry already names cannot
+    turn a derived surface into the declared reading debt `session_self_eval.py` counts.
+    """
+
+    QUEUE = (
+        "# FULL TEXT QUEUE\n\n## Scope\nhand-written preamble\n\n---\n\n"
+        "## FT-001\n**Paper:** PMID 1111111 — local\n**Title:** A title\n"
+        "**Priority:** HIGH\n**Why:** because\n"
+        "**Priorità rivista 2026-08-06:** prose that begins like the field\n\n"
+        "## FT-002\n**Paper:** DOI 10.1101/2025.05.01.651195 — a preprint\n**Why:** because\n"
+    )
+
+    def setUp(self) -> None:
+        self.census = build_fixture(self)
+
+    def test_the_line_lands_above_priority_and_not_inside_later_prose(self) -> None:
+        annotated = census.annotate(self.QUEUE, self.census)
+        first = annotated.split("## FT-002")[0]
+        self.assertLess(first.index("**Surface:**"), first.index("**Priority:**"))
+        self.assertGreater(first.index("**Priorità rivista"), first.index("**Surface:**"))
+
+    def test_an_entry_without_a_priority_field_is_annotated_after_its_identity(self) -> None:
+        annotated = census.annotate(self.QUEUE, self.census)
+        second = annotated.split("## FT-002")[1]
+        self.assertLess(second.index("**Surface:**"), second.index("**Why:**"))
+        self.assertIn("unjoined", second)
+
+    def test_regenerating_is_idempotent(self) -> None:
+        once = census.annotate(self.QUEUE, self.census)
+        twice = census.annotate(once, self.census)
+        self.assertEqual(once, twice)
+        self.assertEqual(2, once.count("**Surface:**"))
+
+    def test_everything_else_survives_byte_for_byte(self) -> None:
+        annotated = census.annotate(self.QUEUE, self.census)
+        stripped = census.SURFACE_FIELD.sub("", annotated)
+        self.assertEqual(self.QUEUE, stripped)
+
+    def test_annotation_declares_no_paper_the_queue_did_not_already_declare(self) -> None:
+        pmids = re.compile(r"\b\d{6,8}\b")
+        annotated = census.annotate(self.QUEUE, self.census)
+        self.assertEqual(set(pmids.findall(self.QUEUE)), set(pmids.findall(annotated)))
 
 
 class MissingCorpusIsNotAnEmptyCorpus(unittest.TestCase):
@@ -290,10 +386,19 @@ class LiveCorpus(unittest.TestCase):
         surfaces = {paper.surface for paper in self.result.papers}
         self.assertEqual({"structured", "pdf_only", "absent"}, surfaces)
         self.assertEqual(
-            self.result.corpus_papers + self.result.queue_entries,
-            len(self.result.papers) + self.result.merged
-            + self.result.duplicate_entries + len(self.result.losses),
-        )
+            self.result.corpus_papers + self.result.queued_papers - self.result.merged,
+            len(self.result.papers))
+        self.assertEqual(
+            self.result.resolved_entries + len(self.result.losses),
+            self.result.queue_entries)
+
+    def test_every_live_queue_entry_declares_a_resolvable_identity(self) -> None:
+        """The 2026-08-10 data pass, held in place. 21 of 45 entries named their paper only
+        as a dead internal number, an inbox id or an author-year; two named a paper they
+        merely cited. What remains unjoined is typed, and every type is a state — never an
+        entry that failed to say what it is."""
+        states = {state for _id, state, _line in self.result.losses}
+        self.assertLessEqual(states, {"doi_only", "not_an_article"})
 
     def test_the_screen_finds_corruption_and_does_not_find_it_everywhere(self) -> None:
         """A screen that flagged nothing would be decorative; one that flagged everything

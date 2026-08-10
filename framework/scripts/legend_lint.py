@@ -37,6 +37,7 @@ CURRENTS = [
 DISCOVERY_LEDGER = "disease-models/wwox/research/discovery_ledger_current.md"
 SESSION_COMMIT_LOG = "disease-models/wwox/registries/session_commit_log.md"
 DISMISSAL_LEDGER = "disease-models/wwox/research/dismissal_ledger_current.md"
+FULL_TEXT_QUEUE = "disease-models/wwox/research/full_text_queue_current.md"
 RECEIPT_LEDGER = "disease-models/wwox/registries/fulltext_read_receipts.jsonl"
 STATE_MANIFEST = "framework/state/state_manifest_current.md"
 RATCHET_BASELINE = re.compile(
@@ -227,6 +228,96 @@ def _check_dismissals(findings, text):
                 f"{dis_id}: rests on a textbook default without a REVIVAL_TRIGGER — "
                 f"a default is not a foundation, it is a research target",
             ))
+
+
+QUEUE_ENTRY_RE = re.compile(r'^##\s+(FT-\d+)', re.M)
+QUEUE_IDENTITY_RE = re.compile(r'^\*\*(?:Papers?|Source):\*\*(.*)$', re.M)
+QUEUE_PMID_RE = re.compile(r'\bPMID[:\s]*(\d{6,8})\b')
+QUEUE_DOI_RE = re.compile(r'\b10\.\d{4,9}/[^\s)\]|,;*]+')
+QUEUE_NOT_AN_ARTICLE = "NOT_AN_ARTICLE"
+# 🔴 The identity line must *open* with its identity. This is the whole defence, and it was
+# briefly lost: widening the reader to accept several identifiers on one line — `FT-032`
+# carries five — turned it into a scan of the line, and a scan resolves `FT-020`, whose line
+# read *"riferimenti 38, 39 e 87 di PMID 34214506 — non risolti a PMID"*, to the paper that
+# *cites* the three works it was asking for. Anchoring the opening keeps both: prose-first
+# lines are refused, and everything an entry declares after a valid opening still counts.
+QUEUE_OPENS_RE = re.compile(
+    r'^\s*(?:PMID[:\s]*\d{6,8}|(?:DOI[:\s]*)?10\.\d{4,9}/|' + QUEUE_NOT_AN_ARTICLE + r')')
+
+
+def queue_entry_identity(body):
+    """What one FT entry declares: (pmids, dois, state).
+
+    The single definition of the queue's identity-line grammar. `surface_census.py` imports
+    it rather than restating it, so the checker and the census cannot drift apart on what
+    "declared" means — which is exactly the drift that produced `FT-004`/`FT-029`.
+
+    States: `resolved` · `not_an_article` · `identity_not_leading` (the line says something
+    before it says which paper) · `no_identifier` · `no_identity_line`.
+    """
+    identity = QUEUE_IDENTITY_RE.search(body)
+    if identity is None:
+        return [], [], "no_identity_line"
+    line = identity.group(1)
+    if QUEUE_NOT_AN_ARTICLE in line:
+        return [], [], "not_an_article"
+    pmids = QUEUE_PMID_RE.findall(line)
+    dois = QUEUE_DOI_RE.findall(line)
+    if not (pmids or dois):
+        return [], [], "no_identifier"
+    if not QUEUE_OPENS_RE.match(line):
+        return [], [], "identity_not_leading"
+    return pmids, dois, "resolved"
+
+
+def _check_queue_identifiers(findings, text):
+    """Every full-text queue entry must say, on its identity line, which paper it is.
+
+    This is the same genus as the wikilink check above: a reference that cannot be resolved
+    is not a reference. On 2026-08-10, 21 of 45 entries named their paper only as a dead
+    internal number (`93 — Cheng 2020`), an inbox id, an author-year, or nothing at all, and
+    the cost was not theoretical. `FT-004` and `FT-029` were the same paper for months
+    because one said `30 / PAPER 018` and the other said `PMID 36779245` — a duplicate no
+    dedup could see. `FT-001` sat at *"not yet deeply extracted"* for six days after a
+    `complete_fulltext_read` receipt, because nothing could join the entry to the ledger.
+    Two entries carried a paraphrase where the title goes, and one of those paraphrases had
+    the sign of the finding backwards.
+
+    `WARN_BUT_PROCEED`, not a block: an entry arrives before its identifier is known, and a
+    queue that refuses to accept work-in-progress is a queue people stop using. The warning
+    is what keeps the twenty-one from coming back one batch at a time.
+
+    Run against the pre-fix file it reports all 21, and against the fixed file none —
+    measured, not assumed. Two of the 21 needed the ordering rule rather than the presence
+    rule: `FT-020` named the PMID of the paper that *cites* the three works it was asking
+    for, and `FT-033` buried a real DOI behind its citation. A check that only asked "is an
+    identifier present?" would have passed both, one of them wrongly.
+    """
+    entries = list(QUEUE_ENTRY_RE.finditer(text))
+    for index, match in enumerate(entries):
+        end = entries[index + 1].start() if index + 1 < len(entries) else len(text)
+        body = text[match.start():end]
+        _pmids, _dois, state = queue_entry_identity(body)
+        if state in ("resolved", "not_an_article"):
+            continue
+        identity = QUEUE_IDENTITY_RE.search(body)
+        line = identity.group(1).strip()[:70] if identity else ""
+        if state == "no_identity_line":
+            findings.append(Finding(
+                "WARN_BUT_PROCEED", "QUEUE_ENTRY_WITHOUT_IDENTITY",
+                f"{match.group(1)}: no `**Paper:**` / `**Papers:**` / `**Source:**` line — "
+                f"the entry does not say which paper it is about"))
+        elif state == "identity_not_leading":
+            findings.append(Finding(
+                "WARN_BUT_PROCEED", "QUEUE_ENTRY_IDENTIFIER_NOT_LEADING",
+                f"{match.group(1)}: the identity line names an identifier but does not open "
+                f"with it, so it may belong to a paper this entry only cites — put the "
+                f"entry's own PMID/DOI first: {line}"))
+        else:
+            findings.append(Finding(
+                "WARN_BUT_PROCEED", "QUEUE_ENTRY_WITHOUT_IDENTIFIER",
+                f"{match.group(1)}: identity line declares no PMID and no DOI — "
+                f"declare one, or `NOT_AN_ARTICLE` if there will never be one: {line}"))
 
 
 def _check_commit_candidate_ids(findings, text):
@@ -586,6 +677,9 @@ def lint(repo_root):
         dismissal_path = os.path.join(repo_root, DISMISSAL_LEDGER)
         if os.path.isfile(dismissal_path):
             _check_dismissals(findings, _read(dismissal_path))
+        queue_path = os.path.join(repo_root, FULL_TEXT_QUEUE)
+        if os.path.isfile(queue_path):
+            _check_queue_identifiers(findings, _read(queue_path))
         _check_fulltext_receipts(findings, repo_root)
         if not any(item.severity == "BLOCK_SYSTEM" for item in findings):
             _check_session_self_evaluation(findings, repo_root)

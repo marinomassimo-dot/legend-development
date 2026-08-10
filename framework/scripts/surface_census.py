@@ -74,6 +74,7 @@ from datetime import date
 from pathlib import Path
 
 import deepdive_manifest
+import legend_lint
 
 # 🔴 Imported, not re-implemented, and deliberately reaching for private names. The
 # signatures in `deepdive_manifest` were calibrated against all 51 local PDFs — the `q` that
@@ -114,8 +115,14 @@ QUEUE_ENTRY = re.compile(r"^## (?P<id>FT-\d+)", re.M)
 # entry says so in the same sentence. Under-resolving is recoverable: it lands in the loss
 # ledger, where a human can see it. Mis-resolving attaches a surface verdict to the wrong
 # paper, and nothing downstream would ever question it.
-IDENTITY_PMID = re.compile(r"^\*\*(?:Paper|Source):\*\*\s*PMID[:\s]*(?P<pmid>\d{6,8})\b", re.M)
-IDENTITY_LINE = re.compile(r"^\*\*(?:Paper|Source):\*\*(?P<value>.*)$", re.M)
+# 🔴 The identity-line grammar lives in `legend_lint.py` and is imported, not restated. Both
+# files ask the same question — which paper is this entry about — and a second copy would have
+# them answer it differently the first time either changed. That drift is not hypothetical: it
+# happened inside this file on 2026-08-10, when widening the reader to accept several
+# identifiers per line silently dropped the anchoring that keeps `FT-020` from resolving to
+# the paper it cites. A unit test caught it; one definition means there is nothing to catch.
+IDENTITY_LINE = legend_lint.QUEUE_IDENTITY_RE
+entry_identity = legend_lint.queue_entry_identity
 
 SURFACE_MEANING = {
     "structured": "publisher XML/HTML present — read this one (rule 5d)",
@@ -183,9 +190,10 @@ class Census:
     corpus_digest: str
     extractor: str
     queue_entries: int
+    resolved_entries: int
     corpus_papers: int
+    queued_papers: int
     merged: int
-    duplicate_entries: int
     text_dumps: list
 
 
@@ -222,24 +230,22 @@ def queue_entries(text: str):
 def resolve_queue(text: str):
     """Return PMID -> [FT ids], and a typed loss ledger for the entries that resolve to none.
 
-    Two loss states, both derived exactly rather than guessed: an entry either has no
-    identity line at all, or has one that declares no PMID. Anything finer (legacy registry
-    number / inbox id / author-year / press release) would be a heuristic over prose that
-    will rot, so the ledger prints the line verbatim and lets a reader classify it.
+    An entry resolved by DOI alone is *not* a loss — `FT-033` is a 2007 pre-WWOX linkage
+    study with no PMID in any local source, and `FT-007`/`FT-009` are bioRxiv preprints. The
+    census simply has nothing local to join them to, which is a different fact from the
+    entry failing to say what it is, and is recorded as its own state.
     """
     resolved: dict = {}
     losses: list = []
     for entry_id, body in queue_entries(text):
-        identity = IDENTITY_PMID.search(body)
-        if identity:
-            resolved.setdefault(identity.group("pmid"), []).append(entry_id)
+        pmids, dois, state = entry_identity(body)
+        if pmids:
+            for pmid in pmids:
+                resolved.setdefault(pmid, []).append(entry_id)
             continue
         line = IDENTITY_LINE.search(body)
-        if line is None:
-            losses.append((entry_id, "no_identity_line", "—"))
-        else:
-            losses.append((entry_id, "no_pmid_declared",
-                           " ".join(line.group("value").split())))
+        verbatim = " ".join(line.group(1).split()) if line else "—"
+        losses.append((entry_id, "doi_only" if dois else state, verbatim))
     return resolved, losses
 
 
@@ -350,7 +356,7 @@ def build(root: Path, corpus_dir: Path, disease: str) -> Census:
         f"{path.name}:{path.stat().st_size}"
         for path in sorted(corpus_dir.iterdir()) if path.is_file()
     )
-    resolved_entries = sum(len(ids) for ids in resolved.values())
+    entries = queue_entries(text)
     return Census(
         papers=sorted(papers.values(), key=lambda item: int(item.pmid)),
         losses=losses,
@@ -359,10 +365,11 @@ def build(root: Path, corpus_dir: Path, disease: str) -> Census:
         corpus_entries=sum(len(files) for files in by_pmid.values()) + len(unattributed),
         corpus_digest=hashlib.sha256(listing.encode("utf-8")).hexdigest()[:16],
         extractor=extractor_identity() or "none",
-        queue_entries=len(queue_entries(text)),
+        queue_entries=len(entries),
+        resolved_entries=len(entries) - len(losses),
         corpus_papers=len(by_pmid),
+        queued_papers=len(resolved),
         merged=len(set(resolved) & set(by_pmid)),
-        duplicate_entries=resolved_entries - len(resolved),
         text_dumps=sorted(name for files in by_pmid.values()
                           for name, kind in files if kind == "text_dump"),
     )
@@ -478,34 +485,99 @@ def render(census: Census, today: str) -> str:
         )
 
     emitted = len(census.papers)
-    candidates = census.corpus_papers + census.queue_entries
-    accounted = emitted + census.merged + census.duplicate_entries + len(census.losses)
+    rows_ok = emitted == census.corpus_papers + census.queued_papers - census.merged
+    entries_ok = census.queue_entries == census.resolved_entries + len(census.losses)
     lines += [
         "",
-        "### Loss ledger — queue entries carrying no resolvable paper identity",
+        "### Loss ledger — queue entries this census cannot join to a local surface",
         "",
-        "The census can only speak about an entry that says which paper it is. These do not, "
-        "so they are declared rather than dropped: an entry missing from a derived surface and "
-        "an entry with nothing to say look identical unless the difference is written down.",
+        "Not all of these are defects. An entry resolved by DOI alone says exactly what it is; "
+        "the corpus is simply keyed by PMID, so there is nothing local to join it to. An entry "
+        "declaring `NOT_AN_ARTICLE` will never have an identifier. Both are declared rather "
+        "than dropped, because an entry missing from a derived surface and an entry with "
+        "nothing to say look identical unless the difference is written down.",
         "",
-        "| Entry | Loss state | `**Paper:**` line, verbatim |",
+        "| Entry | State | Identity line, verbatim |",
         "|---|---|---|",
     ]
     lines += [f"| {entry_id} | `{state}` | {cell(line)} |"
               for entry_id, state, line in census.losses]
     lines += [
         "",
-        f"**Accounting:** {census.corpus_papers} corpus papers + {census.queue_entries} queue "
-        f"entries = **{candidates}** candidates. {emitted} rows emitted + {census.merged} "
-        f"merged (queued *and* local) + {census.duplicate_entries} duplicate entries + "
-        f"{len(census.losses)} unresolved = **{accounted}**. "
-        + ("The two agree." if candidates == accounted
-           else "🔴 THE TWO DISAGREE — this file is wrong."),
+        f"**Accounting.** Rows: {census.corpus_papers} corpus papers + {census.queued_papers} "
+        f"queued papers − {census.merged} in both = **{emitted}** emitted. "
+        + ("✓ " if rows_ok else "🔴 MISMATCH — ")
+        + f"Entries: {census.resolved_entries} resolved + {len(census.losses)} unjoined = "
+        f"**{census.queue_entries}** queue entries. "
+        + ("✓" if entries_ok else "🔴 MISMATCH"),
         "",
         "*Not medical advice. This page describes file formats, not findings.*",
         "",
     ]
     return "\n".join(lines) + "\n"
+
+
+# The per-entry annotation. One generated line inside each hand-written entry, so a session
+# choosing what to read next sees the surface where it is deciding, not one file away.
+#
+# 🔴 This is safe where the census table was not, and the difference is exact: the line names
+# only PMIDs the entry's own identity line already declares. It adds no paper to the queue, so
+# it cannot turn a derived table into the declared reading debt `session_self_eval.py` counts.
+# That was the whole defect, and it is why the corpus-wide table stays in its own file.
+SURFACE_FIELD = re.compile(r"^\*\*Surface:\*\*.*\n", re.M)
+# Exactly the field, not the prose that starts like it. Four entries carry lines such as
+# `**Priorità rivista 2026-08-06:**` deep in their body; a looser pattern would drop the
+# generated line into the middle of a narrative in whichever entry lost its `**Priority:**`.
+PRIORITY_FIELD = re.compile(r"^\*\*(?:Priority|Priorità):\*\*", re.M)
+
+
+def surface_note(body: str, census: Census) -> str:
+    pmids, _dois, state = entry_identity(body)
+    if state == "not_an_article":
+        return "**Surface:** `n/a` — non è un articolo, non c'è superficie da censire.\n"
+    if not pmids:
+        return ("**Surface:** `unjoined` — la voce dichiara solo un DOI; il corpus locale è "
+                "indicizzato per PMID, quindi non c'è nulla a cui agganciarla.\n")
+    index = {paper.pmid: paper for paper in census.papers}
+    parts = []
+    for pmid in pmids:
+        paper = index.get(pmid)
+        if paper is None:
+            parts.append(f"PMID {pmid} · `absent`")
+            continue
+        verdict = census.sentinel.get(pmid, ("", ""))[0]
+        clause = f"PMID {pmid} · `{paper.surface}`"
+        if verdict:
+            clause += f" · sentinella `{verdict}`"
+        files = ", ".join(name for name, _kind in paper.surfaces)
+        parts.append(clause + (f" · {files}" if files else ""))
+    return "**Surface:** " + "  ·  ".join(parts) + "\n"
+
+
+def annotate(text: str, census: Census) -> str:
+    """Rewrite the `**Surface:**` line of every FT entry, in place and idempotently.
+
+    Everything else in the entry is copied byte for byte. The line goes immediately above
+    `**Priority:**` where there is one — the queue's own reading order puts identity first,
+    then what it costs to read, then why — and directly after the identity line otherwise.
+    """
+    matches = list(QUEUE_ENTRY.finditer(text))
+    if not matches:
+        return text
+    out = []
+    for _entry_id, body in queue_entries(text):
+        body = SURFACE_FIELD.sub("", body)
+        note = surface_note(body, census)
+        priority = PRIORITY_FIELD.search(body)
+        if priority:
+            cut = priority.start()
+        else:
+            identity = IDENTITY_LINE.search(body)
+            cut = identity.end() + 1 if identity else len(body)
+        out.append(body[:cut] + note + body[cut:])
+    # The bodies tile `text` from the first heading onward, so everything before it — the
+    # queue's own title and Scope — is carried through untouched.
+    return text[:matches[0].start()] + "".join(out)
 
 
 def main(argv=None) -> int:
@@ -516,6 +588,9 @@ def main(argv=None) -> int:
                         help="corpus directory (default: <root>/files/fulltext)")
     parser.add_argument("--out", type=Path, default=None,
                         help="write the census here instead of standard output")
+    parser.add_argument("--annotate", action="store_true",
+                        help="rewrite the **Surface:** line of every entry in the full-text "
+                             "queue, in place and idempotently")
     parser.add_argument("--date", default=date.today().isoformat())
     arguments = parser.parse_args(argv)
 
@@ -530,7 +605,16 @@ def main(argv=None) -> int:
         )
         return 2
 
-    page = render(build(arguments.root, corpus_dir, arguments.disease), arguments.date)
+    census = build(arguments.root, corpus_dir, arguments.disease)
+    if arguments.annotate:
+        path = queue_file(arguments.root, arguments.disease)
+        original = path.read_text(encoding="utf-8")
+        path.write_text(annotate(original, census), encoding="utf-8")
+        print(f"annotated {census.queue_entries} entries in {path.name}")
+        if arguments.out is None:
+            return 0
+
+    page = render(census, arguments.date)
     if arguments.out is None:
         print(page, end="")
         return 0

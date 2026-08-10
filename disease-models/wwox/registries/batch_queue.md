@@ -8,15 +8,15 @@
 
 ## ▶ Start here
 
-**421 records have not been processed.** **261** of them have a free full text and can be worked immediately.
+**420 records have not been processed.** **261** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
-| 🟢 **`NEW`** | 78 | never seen by the system — **the front of the queue** |
+| 🟢 **`NEW`** | 77 | never seen by the system — **the front of the queue** |
 | 🟢 **`CORPUS_CATALOGUED`** | 343 | catalogued and deduplicated, never analytically processed |
 | 🟡 `OUT_OF_SCOPE_LIKELY` | 222 | no scope signal in the title — later in the queue, **never discarded** |
-| 🟡 `AMBIGUOUS` | 7 | identifiers must be resolved before ingest |
-| ⏳ `IN_PIPELINE` | 19 | already in flight |
+| 🟡 `AMBIGUOUS` | 6 | identifiers must be resolved before ingest |
+| ⏳ `IN_PIPELINE` | 21 | already in flight |
 | ✅ `KNOWN_INTEGRATED` | 37 | done — read depth in the table below |
 
 The two green rows are the answer to *"where do I start?"*. The table further down lists
@@ -178,7 +178,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [17947476](https://pubmed.ncbi.nlm.nih.gov/17947476/) | 2007 | — | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S. | unmatched | Wwox and Ap2gamma expression levels predict tamoxifen response. |
 | [16438931](https://pubmed.ncbi.nlm.nih.gov/16438931/) | 2006 | — | Journal Article; Research Support, Non-U.S. Gov't | unmatched | PKA-mediated protein phosphorylation regulates ezrin-WWOX interaction. |
 | [15580310](https://pubmed.ncbi.nlm.nih.gov/15580310/) | 2005 | — | Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S. | unmatched | 17beta-Estradiol upregulates and activates WOX1/WWOXv1 and WOX2/WWOXv2 in vitro: potential role in cancerous progression of breast and prostate to a premetastatic state in vivo. |
-| [15664696](https://pubmed.ncbi.nlm.nih.gov/15664696/) | 2005 | — | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Light-induced retinal damage involves tyrosine 33 phosphorylation, mitochondrial and nuclear translocation of WW domain-containing oxidoreductase in vivo. |
 | [15044096](https://pubmed.ncbi.nlm.nih.gov/15044096/) | 2004 | — | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Effect of exogenous E2F-1 on the expression of common chromosome fragile site genes, FHIT and WWOX. |
 | [15073125](https://pubmed.ncbi.nlm.nih.gov/15073125/) | 2004 | — | Journal Article; Research Support, U.S. Gov't, P.H.S. | unmatched | The tumor suppressor gene WWOX at FRA16D is involved in pancreatic carcinogenesis. |
 | [11979549](https://pubmed.ncbi.nlm.nih.gov/11979549/) | 2002 | — | Comparative Study; Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, P.H.S. | unmatched | The common fragile site FRA16D and its associated gene WWOX are highly conserved in the mouse at Fra8E1. |
@@ -510,7 +509,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [17163164](https://pubmed.ncbi.nlm.nih.gov/17163164/) | 2006 | — | Journal Article; Research Support, N.I.H., Extramural; Review | screened | WWOX, a chromosomal fragile site gene and its role in cancer. |
 | [15131042](https://pubmed.ncbi.nlm.nih.gov/15131042/) | 2004 | — | Journal Article; Research Support, U.S. Gov't, P.H.S. | screened | Loss of WWOX expression in gastric carcinoma. |
 | [42464650](https://pubmed.ncbi.nlm.nih.gov/42464650/) | 2026 | ✅ | Journal Article; Retraction Notice | unmatched | ℹ️ RETRACTION NOTICE — [Retracted] p73 participates in WWOX-mediated apoptosis in leukemia cells. |
-| [38355659](https://pubmed.ncbi.nlm.nih.gov/38355659/) | 2024 | ✅ | Published Erratum | unmatched | ✎ corrected — Correction: WWOX promotes osteosarcoma development via upregulation of Myc. |
 | [34513711](https://pubmed.ncbi.nlm.nih.gov/34513711/) | 2021 | ✅ | Published Erratum | unmatched | ✎ corrected — Corrigendum: Fragile Gene WWOX Guides TFAP2A/TFAP2C-Dependent Actions Against Tumor Progression in Grade II Bladder Cancer. |
 | [30783266](https://pubmed.ncbi.nlm.nih.gov/30783266/) | 2019 | ✅ | Published Erratum | unmatched | ✎ corrected — Correction: The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature. |
 | [30470736](https://pubmed.ncbi.nlm.nih.gov/30470736/) | 2018 | ✅ | Published Erratum | unmatched | ✎ corrected — Author Correction: WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
@@ -743,6 +741,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [40263068](https://pubmed.ncbi.nlm.nih.gov/40263068/) | 2025 | ✅ | Published Erratum | unmatched | ✎ corrected — Corrigendum to "WWOX attenuates the progression of gallbladder cancer by suppressing cellular glycolysis through the modulation of the P73/HIF-1a signaling pathway" [Tissue Cell 95 (2025) 102885]. |
 | [39952983](https://pubmed.ncbi.nlm.nih.gov/39952983/) | 2025 | ✅ | Journal Article | unmatched | Genome-wide identification and functional validation of the WW domain containing oxidoreductase gene associated with sleep duration. |
 | [39933386](https://pubmed.ncbi.nlm.nih.gov/39933386/) | 2025 | ✅ | Journal Article | unmatched | Infantile Epileptic Spasms Syndrome: Unveiling clinical and genetic variability in a case series from Argentina. |
+| [38355659](https://pubmed.ncbi.nlm.nih.gov/38355659/) | 2024 | ✅ | Published Erratum | unmatched | ✎ corrected — Correction: WWOX promotes osteosarcoma development via upregulation of Myc. |
 | [37095367](https://pubmed.ncbi.nlm.nih.gov/37095367/) | 2023 | ✅ | Journal Article | unmatched | ✎ corrected — Whole-Genome Sequencing Among Kazakhstani Children with Early-Onset Epilepsy Revealed New Gene Variants and Phenotypic Variability. |
 | [35573960](https://pubmed.ncbi.nlm.nih.gov/35573960/) | 2022 | ✅ | Journal Article | unmatched | A Phenotypic-Driven Approach for the Diagnosis of WOREE Syndrome. |
 | [33058734](https://pubmed.ncbi.nlm.nih.gov/33058734/) | 2021 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | unmatched | ✎ corrected — Cigarette Smoke and Nicotine-Containing Electronic-Cigarette Vapor Downregulate Lung WWOX Expression, Which Is Associated with Increased Severity of Murine Acute Respiratory Distress Syndrome. |
@@ -754,6 +753,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [25716914](https://pubmed.ncbi.nlm.nih.gov/25716914/) | 2015 | — | Case Reports; Journal Article | unmatched | WWOX and severe autosomal recessive epileptic encephalopathy: first case in the prenatal period. |
 | [26345274](https://pubmed.ncbi.nlm.nih.gov/26345274/) | 2015 | — | Case Reports; Journal Article | unmatched | Severe CNS involvement in WWOX mutations: Description of five new cases. |
 | [17178850](https://pubmed.ncbi.nlm.nih.gov/17178850/) | 2006 | — | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | unmatched | Physical association with WWOX suppresses c-Jun transcriptional activity. |
+| [15664696](https://pubmed.ncbi.nlm.nih.gov/15664696/) | 2005 | — | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Light-induced retinal damage involves tyrosine 33 phosphorylation, mitochondrial and nuclear translocation of WW domain-containing oxidoreductase in vivo. |
 | [15026124](https://pubmed.ncbi.nlm.nih.gov/15026124/) | 2004 | — | Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S. | unmatched | Expression of WW domain-containing oxidoreductase WOX1 in the developing murine nervous system. |
 | [11719429](https://pubmed.ncbi.nlm.nih.gov/11719429/) | 2001 | — | Journal Article; Research Support, U.S. Gov't, P.H.S. | unmatched | WWOX, the FRA16D gene, behaves as a suppressor of tumor growth. |
 | [28123895](https://pubmed.ncbi.nlm.nih.gov/28123895/) | 2016 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | The non-inflammatory role of C1q during Her2/neu-driven mammary carcinogenesis. |

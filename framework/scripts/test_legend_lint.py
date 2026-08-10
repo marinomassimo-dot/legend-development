@@ -20,6 +20,7 @@ from legend_lint import (  # noqa: E402
     _check_commit_candidate_ids,
     _check_discovery_ids,
     _check_dismissals,
+    _check_queue_identifiers,
     _check_publication_integrity_claims,
     claim_paper_findings,
     lint,
@@ -545,6 +546,46 @@ class PublicLintTests(unittest.TestCase):
             "- REVIVAL_TRIGGER: reopen if direct evidence appears\n",
         )
         self.assertFalse(findings)
+
+    def test_queue_entry_identifier_gate(self) -> None:
+        """A queue entry that cannot be resolved is a reference that is not a reference.
+
+        The four accepted shapes are pinned from both sides, because each one was a real
+        entry on 2026-08-10: a PMID, a DOI alone (`FT-033`, a 2007 pre-WWOX study with no
+        PMID in any local source), several identifiers on one line (`FT-032` carries five),
+        and an explicit `NOT_AN_ARTICLE` (`FT-012`, a press release under strategic watch
+        that will never have one). Accepting only the first would have pushed three honest
+        entries into inventing an identifier, which is worse than declaring none.
+        """
+        def codes(text):
+            findings = []
+            _check_queue_identifiers(findings, text)
+            return [item.code for item in findings]
+
+        self.assertEqual(
+            ["QUEUE_ENTRY_WITHOUT_IDENTIFIER"],
+            codes("## FT-001\n**Paper:** 93 — Cheng 2020\n**Priority:** HIGH\n"))
+        self.assertEqual(
+            ["QUEUE_ENTRY_WITHOUT_IDENTITY"],
+            codes("## FT-032\n**Priority:** HIGH\n**Why:** five references\n"))
+        self.assertEqual([], codes("## FT-001\n**Paper:** PMID 32000863 — Cheng 2020\n"))
+        self.assertEqual([], codes("## FT-033\n**Paper:** DOI 10.1093/brain/awm078 — Gribaa\n"))
+        self.assertEqual([], codes("## FT-032\n**Papers:** PMID 30094525 · PMID 11719429\n"))
+        self.assertEqual([], codes("## FT-012\n**Paper:** NOT_AN_ARTICLE — press release\n"))
+
+        # 🔴 The case a "is an identifier present?" check answers wrongly. FT-020, verbatim:
+        # the PMID belongs to the paper that *cites* the three works the entry is asking for,
+        # and the entry says so in the same sentence.
+        self.assertEqual(
+            ["QUEUE_ENTRY_IDENTIFIER_NOT_LEADING"],
+            codes("## FT-020\n**Paper:** riferimenti 38, 39 e 87 di PMID 34214506 — "
+                  "non risolti a PMID\n"))
+
+        # The last entry must not be swallowed: it is the one a new batch appends to.
+        self.assertEqual(
+            ["QUEUE_ENTRY_WITHOUT_IDENTIFIER"],
+            codes("## FT-001\n**Paper:** PMID 32000863\n\n---\n\n"
+                  "## FT-002\n**Paper:** 97 — Iacomino 2020\n"))
 
 
 if __name__ == "__main__":

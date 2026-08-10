@@ -11,7 +11,7 @@
 > A photograph, not an invariant. `files/fulltext/` is gitignored and grows between sessions, so these numbers describe the corpus on the census date and nothing re-checks them afterwards — compare the listing digest below against your own copy before trusting a row. This page blocks nothing and has no threshold: it exists so that rule 5d's *"record the absence"* is a fact in the state instead of a rediscovery made three papers into a reading.
 
 **Census date:** 2026-08-10  
-**Corpus:** `fulltext` — 102 entries, 77 papers, listing digest `0138a3abb3ac9977`  
+**Corpus:** `fulltext` — 102 entries, 77 papers, listing digest `4612910a792d650b`  
 **Sentinel:** `deepdive_manifest._refuse_suspect_surface`, PDF text via PyMuPDF 1.26.5
 
 ### Totals
@@ -20,7 +20,7 @@
 |---|---:|---|
 | `structured` | 31 | publisher XML/HTML present — read this one (rule 5d) |
 | `pdf_only` | 46 | no structured surface locally — acquire XML/HTML before reading |
-| `absent` | 13 | queued, nothing local at all — retrieve first |
+| `absent` | 29 | queued, nothing local at all — retrieve first |
 
 Sentinel over the surface each paper would actually be read from — the structured file where one exists, the PDF otherwise. Structured markup is screened too, because a suffix is not a surface; see the note below:
 
@@ -38,20 +38,44 @@ Sentinel over the surface each paper would actually be read from — the structu
 
 | Paper | Queue | Surface | Sentinel | Local surfaces |
 |---|---|---|---|---|
+| PMID 32000863 | FT-001 | `structured` | `clean` | PMID32000863_Cheng2020_PMC.xml, PMID32000863_Cheng2020_supplementary.pdf |
+| PMID 32581702 | FT-002 | `absent` | — | — |
+| PMID 30853297 | FT-003 | `absent` | — | — |
+| PMID 36779245 | FT-004, FT-029 | `structured` | `clean` | PMID36779245_Oliver2023_PMC.xml |
+| PMID 31543760 | FT-005 | `absent` | — | — |
+| PMID 26390919 | FT-006 | `absent` | — | — |
 | PMID 30290271 | FT-008 | `structured` | `clean` | PMID30290271_Hussain2019.html, PMID30290271_Hussain2019.pdf |
+| PMID 42397075 | FT-010 | `pdf_only` | `clean` | PMID42397075_Aqeilan2026.pdf |
+| PMID 38182577 | FT-011 | `pdf_only` | `clean` | PMID38182577_Akkawi2024.pdf |
+| PMID 42082822 | FT-013 | `absent` | — | — |
+| PMID 41984841 | FT-014 | `pdf_only` | `clean` | PMID41984841_BidanyMizrahi2026.pdf |
+| PMID 40198927 | FT-015 | `absent` | — | — |
+| PMID 40263068 | FT-015 | `absent` | — | — |
+| PMID 39952983 | FT-016 | `absent` | — | — |
+| PMID 39933386 | FT-017 | `absent` | — | — |
 | PMID 28123895 | FT-018 | `absent` | — | — |
 | PMID 21444760 | FT-019 | `absent` | — | — |
+| PMID 15664696 | FT-020 | `absent` | — | — |
+| PMID 21075834 | FT-020 | `absent` | — | — |
+| PMID 21115974 | FT-020 | `pdf_only` | `SUSPECT` — contains the C0 control U+0001 | PMID21115974_Fu2011.pdf |
+| PMID 34214506 | FT-020 | `pdf_only` | `SUSPECT` — contains the C0 control U+0002 | PMID34214506_Saadane2021.pdf |
 | PMID 24308844 | FT-021 | `absent` | — | — |
 | PMID 20067585 | FT-022 | `absent` | — | — |
+| PMID 22193544 | FT-022, FT-023, FT-024, FT-025 | `structured` | `clean` | PMID22193544_Wang2012.pdf, PMID22193544_Wang2012_PMC_JATS.xml |
 | PMID 15026124 | FT-023 | `absent` | — | — |
 | PMID 15126504 | FT-024 | `absent` | — | — |
 | PMID 17178850 | FT-025 | `pdf_only` | `clean` | PMID17178850_Aqeilan2006.pdf |
 | PMID 21212533 | FT-026 | `pdf_only` | `SUSPECT` — contains the C0 control U+0002 | PMID21212533_Saeki2011.pdf |
 | PMID 12065620 | FT-027 | `absent` | — | — |
 | PMID 19607922 | FT-028 | `absent` | — | — |
-| PMID 36779245 | FT-029 | `structured` | `clean` | PMID36779245_Oliver2023_PMC.xml |
 | PMID 25716914 | FT-030 | `absent` | — | — |
 | PMID 32051108 | FT-031 | `absent` | — | — |
+| PMID 11719429 | FT-032 | `absent` | — | — |
+| PMID 17360458 | FT-032 | `pdf_only` | `SUSPECT` — contains the C0 control U+0001 | PMID17360458_Aqeilan2007.pdf |
+| PMID 26345274 | FT-032 | `absent` | — | — |
+| PMID 30094525 | FT-032 | `absent` | — | — |
+| PMID 35573960 | FT-032 | `absent` | — | — |
+| PMID 40875931 | FT-035 | `absent` | — | — |
 | PMID 10861292 | FT-036 | `absent` | — | — |
 | PMID 36499501 | FT-037 | `absent` | — | — |
 | PMID 30619736 | FT-038 | `absent` | — | — |
@@ -69,7 +93,6 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 16061658 | — | `pdf_only` | `SUSPECT` — contains the C0 control U+0001 | PMID16061658_Aqeilan2005.pdf |
 | PMID 16223882 | — | `pdf_only` | `SUSPECT` — contains the C0 control U+0001 | PMID16223882_Fabbri2005.pdf |
 | PMID 17289881 | — | `pdf_only` | `SUSPECT` — contains the C0 control U+0001 | PMID17289881_Aqeilan2007.pdf |
-| PMID 17360458 | — | `pdf_only` | `SUSPECT` — contains the C0 control U+0001 | PMID17360458_Aqeilan2007.pdf |
 | PMID 17458891 | — | `pdf_only` | `SUSPECT` — contains the C0 control U+0001 | PMID17458891_Aqeilan2007.pdf |
 | PMID 17575124 | — | `structured` | `clean` | PMID17575124_Aqeilan2007_PMC.html |
 | PMID 17909041 | — | `pdf_only` | `SUSPECT` — contains the C0 control U+0001 | PMID17909041_Aqeilan2007.pdf |
@@ -78,10 +101,8 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 18674750 | — | `pdf_only` | `SUSPECT` — contains the C0 control U+0002 | PMID18674750_Lee2008.pdf |
 | PMID 18974271 | — | `pdf_only` | `SUSPECT` — contains the C0 control U+0001 | PMID18974271_Aqeilan2009.pdf |
 | PMID 20530675 | — | `structured` | `clean` | PMID20530675_Kurek2010_PMC.html |
-| PMID 21115974 | — | `pdf_only` | `SUSPECT` — contains the C0 control U+0001 | PMID21115974_Fu2011.pdf |
 | PMID 21318118 | — | `structured` | `clean` | PMID21318118_Drusco2011_PMC.xml |
 | PMID 21731849 | — | `pdf_only` | `clean` | PMID21731849_DelMare2011.pdf |
-| PMID 22193544 | — | `structured` | `clean` | PMID22193544_Wang2012.pdf, PMID22193544_Wang2012_PMC_JATS.xml |
 | PMID 22634283 | — | `structured` | `clean` | PMID22634283_McDonald2012_PMC.html |
 | PMID 23254685 | — | `structured` | `clean` | PMID23254685_Abdeen2013_PMC.html |
 | PMID 23370280 | — | `pdf_only` | `SUSPECT` — contains the C0 control U+0002 | PMID23370280_Salah2013.pdf |
@@ -107,11 +128,9 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 30755385 | — | `structured` | `clean` | PMID30755385_AbuRemaileh2019_PMC.xml |
 | PMID 31075076 | — | `pdf_only` | `clean` | PMID31075076_Abdeen2019.pdf |
 | PMID 31428585 | — | `structured` | `clean` | PMID31428585_Chang2019_PMC.xml |
-| PMID 32000863 | — | `structured` | `clean` | PMID32000863_Cheng2020_PMC.xml, PMID32000863_Cheng2020_supplementary.pdf |
 | PMID 32300104 | — | `structured` | `clean` | PMID32300104_Khawaled2020_PMC.xml |
 | PMID 33255508 | — | `structured` | `clean` | PMID33255508_Aldaz2020.xml |
 | PMID 33916893 | — | `pdf_only` | `SUSPECT` — contains the C0 control U+0001 | PMID33916893_Banne2021.pdf |
-| PMID 34214506 | — | `pdf_only` | `SUSPECT` — contains the C0 control U+0002 | PMID34214506_Saadane2021.pdf |
 | PMID 34268881 | — | `pdf_only` | `SUSPECT` — contains the C0 control U+0001 | PMID34268881_Steinberg2021.pdf |
 | PMID 34634460 | — | `structured` | `clean` | PMID34634460_Breton2021_PMC.xml |
 | PMID 34747138 | — | `structured` | `clean` | PMID34747138_Repudi2021_PMC.xml |
@@ -119,45 +138,26 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 35716775 | — | `pdf_only` | `SUSPECT` — PMID35716775_Rotem-Bamberger2022.pdf: contains the C0 control U+0001 | PMID35716775_Rotem-Bamberger2022.pdf, PMID35716775_Rotem-Bamberger2022_supplement.pdf |
 | PMID 36572673 | — | `pdf_only` | `clean` | PMID36572673_Husanie2022.pdf |
 | PMID 37519886 | — | `structured` | `clean` | PMID37519886_PMC.xml |
-| PMID 38182577 | — | `pdf_only` | `clean` | PMID38182577_Akkawi2024.pdf |
 | PMID 38355659 | — | `pdf_only` | `clean` | PMID38355659_Akkawi2024.pdf |
 | PMID 38499540 | — | `pdf_only` | `clean` | PMID38499540_BidanyMizrahi2024.pdf |
 | PMID 39507621 | — | `structured` | `clean` | PMID39507621_Teplyshova2024_PMC.xml |
 | PMID 41562193 | — | `pdf_only` | `clean` | PMID41562193_Druck2026.pdf |
-| PMID 41984841 | — | `pdf_only` | `clean` | PMID41984841_BidanyMizrahi2026.pdf |
 | PMID 42395553 | — | `structured` | `clean` | PMID42395553_PMC.xml |
-| PMID 42397075 | — | `pdf_only` | `clean` | PMID42397075_Aqeilan2026.pdf |
 | PMID 42422765 | — | `structured` | `clean` | PMID42422765_Obeid2026_PMC.html |
 
-### Loss ledger — queue entries carrying no resolvable paper identity
+### Loss ledger — queue entries this census cannot join to a local surface
 
-The census can only speak about an entry that says which paper it is. These do not, so they are declared rather than dropped: an entry missing from a derived surface and an entry with nothing to say look identical unless the difference is written down.
+Not all of these are defects. An entry resolved by DOI alone says exactly what it is; the corpus is simply keyed by PMID, so there is nothing local to join it to. An entry declaring `NOT_AN_ARTICLE` will never have an identifier. Both are declared rather than dropped, because an entry missing from a derived surface and an entry with nothing to say look identical unless the difference is written down.
 
-| Entry | Loss state | `**Paper:**` line, verbatim |
+| Entry | State | Identity line, verbatim |
 |---|---|---|
-| FT-001 | `no_pmid_declared` | 93 — Cheng 2020 |
-| FT-002 | `no_pmid_declared` | 97 — Iacomino 2020 |
-| FT-003 | `no_pmid_declared` | 151 — Piard 2019 EJPN |
-| FT-004 | `no_pmid_declared` | 30 / PAPER 018 — Oliver 2023 |
-| FT-005 | `no_pmid_declared` | 106 — Kośla 2019 |
-| FT-006 | `no_pmid_declared` | 125 — Choo 2015 |
-| FT-007 | `no_pmid_declared` | Abudiab et al. 2025 (NEW — surfaced by Obeid 2026 review) |
-| FT-009 | `no_pmid_declared` | Lucas-Clarke et al. 2025 (NEW — preprint) |
-| FT-010 | `no_pmid_declared` | Steinberg et al. 2024 (detail beyond current CLAIM 002 use) |
-| FT-011 | `no_pmid_declared` | Akkawi et al. 2024 (NEW) |
-| FT-012 | `no_pmid_declared` | PRESS / institutional release, NOT peer-reviewed — EurekAlert 1131219, Times of Israel, Jerusalem Post, AFHU (2026-06-15) |
-| FT-013 | `no_pmid_declared` | INBOX-007 — Denkboy Ongen 2026 |
-| FT-014 | `no_pmid_declared` | INBOX-008 — Bidany-Mizrahi/Aqeilan 2026 |
-| FT-015 | `no_pmid_declared` | INBOX-009 — Tang 2025 corrigendum |
-| FT-016 | `no_pmid_declared` | INBOX-011 — Kim 2025 |
-| FT-017 | `no_pmid_declared` | INBOX-012 — Martin 2025 |
-| FT-020 | `no_pmid_declared` | riferimenti 38, 39 e 87 di PMID 34214506 — non risolti a PMID |
-| FT-032 | `no_identity_line` | — |
-| FT-033 | `no_pmid_declared` | Gribaa M et al. 2007, *Brain* 130(7):1921–1928 — DOI 10.1093/brain/awm078 |
-| FT-034 | `no_identity_line` | — |
-| FT-035 | `no_pmid_declared` | [[paper_registry_current#PAPER 014]] — materiale mancante della **stessa** lettura |
+| FT-007 | `doi_only` | DOI 10.1101/2025.11.22.689900 — bioRxiv preprint, 2025-11-22 (Aqeilan lab; emerso dalla review Obeid 2026, [[paper_registry_current#PAPER 029]]) |
+| FT-009 | `doi_only` | DOI 10.1101/2025.05.01.651195 — Lucas-Clarke HJ et al., bioRxiv preprint, 2025-05-01 |
+| FT-012 | `not_an_article` | NOT_AN_ARTICLE — comunicato stampa istituzionale, nessun PMID e nessun DOI **per costruzione**, non per debito. L'identificatore comparirà con il report peer-reviewed, ed è quello che questa voce sorveglia. |
+| FT-033 | `doi_only` | DOI 10.1093/brain/awm078 — Gribaa M et al. 2007, *Brain* 130(7):1921–1928 |
+| FT-034 | `doi_only` | DOI 10.1165/rcmb.2020-0145OC · DOI 10.7759/cureus.46216 · DOI 10.1002/ana.25619 · |
 
-**Accounting:** 77 corpus papers + 45 queue entries = **122** candidates. 90 rows emitted + 11 merged (queued *and* local) + 0 duplicate entries + 21 unresolved = **122**. The two agree.
+**Accounting.** Rows: 77 corpus papers + 48 queued papers − 19 in both = **106** emitted. ✓ Entries: 40 resolved + 5 unjoined = **45** queue entries. ✓
 
 *Not medical advice. This page describes file formats, not findings.*
 
