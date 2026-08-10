@@ -2502,3 +2502,70 @@ l'altra**, e l'unico modo di saperlo è la figura che nessuno ha visto.
 - **Destinazione dichiarata:** **materiale per un commit candidate**, come qualificazione di
   `DL-MECH-034` e come **correzione dell'esperimento discriminante**. Non tocca il verso della
   conclusione: tocca ciò che serve per stabilirlo.
+
+---
+
+### 🔴 DL-THER-095 — ITCH **alza** l'abbondanza di WWOX, e nessun file canonico lo dice: `DIS-003` ha una maniglia a valle che non ha mai nominato
+
+- **Status:** open · **Tag epistemico:** `DATO` sulle misure di Abu-Odeh 2014, `INFERENZA` sulla
+  convergenza terapeutica.
+- **Fonte:** `PMID 24550385` — Abu-Odeh et al. 2014, *J Biol Chem* 289(13):8865-8880. Letto il
+  2026-08-10, receipt `FTR-20260810-24550385-01` (`partial_fulltext_read`: testo integrale,
+  pannelli non ispezionati), manifest `PMID24550385.json`, 13 locator, `MANIFEST STRICT PASS`.
+  **Prima lettura di questo paper in questo corpus dalla sua fonte primaria.**
+
+- ✅ **Cosa lo stato sapeva già** — e va detto per primo, perché è la terza volta stasera. Il
+  linkage e il sito ci sono: `DEFAULTS THAT BIT US` porta `D-01` *«polyubiquitination →
+  proteasome»* come default falsificato, e `DIS-001` è stato riaperto esattamente su questa
+  biologia, con la nota corretta che **inibire ITCH sarebbe sbagliato** (si toglierebbe a WWOX
+  la funzione DDR via ATM; ITCH è promiscuo, i topi `Itch⁻/⁻` sono autoimmuni).
+
+- 🔴 **Cosa non c'è, in nessuno dei 18 punti in cui ITCH compare: il segno.** Tutte le menzioni
+  trattano ITCH come qualcosa da *inibire*. Nessuna dice che la sua attività **aumenta**
+  l'abbondanza di WWOX. Le tre misure, dalla fonte primaria:
+
+  | esperimento | risultato, verbatim |
+  |---|---|
+  | CHX chase, sovraespressione | *«Expression of ITCH in the presence of CHX **extended the half-life** of WWOX as compared with CHX alone»* |
+  | MEF `Itch⁻/⁻`, livelli | *«We found that WWOX levels were **decreased** in Itch[⁻/⁻] mouse embryonic fibroblasts»* |
+  | MEF `Itch⁻/⁻`, emivita | *«WWOX **half-life is shorter** in the absence of ITCH»*, p < 0.001 |
+  | inquadramento degli autori | *«ITCH ubiquitinates WWOX **independent of degradation**»* · *«coexpression of WWOX and ITCH **stabilizes** WWOX levels»* |
+
+  Guadagno **e** perdita di funzione, per livello **e** per emivita, in cellule non trasfettate
+  per la metà delle misure. Non è un artefatto da sovraespressione.
+
+- 🔴 **La conseguenza, ed è il motivo per cui questa voce è `DL-THER` e non `DL-MECH`.**
+  `DIS-003` — *«Boosting WWOX expression» → REJECTION THAT HOLDS* — rifiuta di alzare
+  trascrizione/traduzione **perché il collo di bottiglia è a valle**. Ma «a valle» non è un
+  luogo vuoto: **l'ubiquitinazione K63 mediata da ITCH è una maniglia a valle sull'abbondanza di
+  WWOX**, cioè precisamente il ramo che quel rifiuto lascia aperto e non nomina.
+
+- **`PREMISE_TAG`:** `PREMISE: DATO` sulle tre misure (fonte primaria, letta, citazioni
+  verificate contro artefatto impronta-to) · `PREMISE: INFERENZA` sul trasferimento al genotipo
+  di riferimento, che **non è dimostrato**: Abu-Odeh lavora su WWOX wild-type in HEK293 e MEF,
+  non su Q230P, e non testa se un allele destabilizzato risponda alla stessa via.
+
+- 🔴 **La convergenza, che è la parte operativa.** Se ITCH sia una leva per il genotipo di
+  riferimento dipende dalla disgiunzione che `DL-META-091` non ha potuto risolvere:
+
+  > **degradazione prematura → una leva stabilizzante è on-target · traduzione impedita → non
+  > c'è niente da stabilizzare.**
+
+  Quindi **il western che discrimina traduzione da degradazione su fibroblasti Q230P decide
+  anche se ITCH è una leva.** È lo stesso recupero già indicato come il più redditizio della
+  coda — il PDF di Johannsen, `PMID 29808465`, closed access. **Due premesse aperte, una sola
+  misura.** Un esperimento che risolve due voci del ledger vale più di due che ne risolvono una
+  ciascuna, ed è la ragione per cui questa convergenza va scritta e non lasciata implicita.
+
+- **Cosa NON si propone.** Non inibire ITCH — `DIS-001` ha già ragione su questo. E non si
+  propone *nulla* come candidato terapeutico: la direzione plausibile sarebbe **aumentare** o
+  mimare l'ubiquitinazione K63 su WWOX, che oggi non ha un agente, non ha un readout proximale
+  e non ha dati CNS/pediatrici. Resta ipotesi nei ledger, come impone `mission.md`.
+- **`REVIVAL_TRIGGER` / condizione di chiusura:** ① il western che discrimina i due rami su
+  Q230P; ② una misura di abbondanza di WWOX-Q230P in funzione dell'attività di ITCH, che è
+  l'esperimento che trasferisce — o no — Abu-Odeh al genotipo di riferimento.
+- **Interconnessioni:** `DL-MECH-083` (premessa chiusa) · `DL-META-091` · `DIS-001` · `DIS-003` ·
+  `D-01` in [[dismissal_ledger_current#DEFAULTS THAT BIT US]] · `FT-060` · `FT-057`.
+- **Destinazione dichiarata:** **materiale per un commit candidate.** Tocca un rifiuto canonico
+  (`DIS-003`) aggiungendogli un ramo che non nomina, quindi la promozione è di chi possiede il
+  gate.

@@ -1631,8 +1631,79 @@ controllo**. Le sei figure principali (37 pannelli) sono nel PDF locale. Senza `
 copertura massima raggiungibile è **37/69**, e va dichiarata come tale invece che presentata
 come completa.
 
+**Vedi anche `FT-060`**, letto la stessa sera.
+
 **Next action:** ① procurarsi `s001.pdf` e `s004.docx` per via manuale — la `Appendix Fig S3A/B`
 **è** l'output GSEA/GO su cui poggia `DL-MECH-034` e anche `DL-MECH-094`; ② estrarre le sei
 figure principali dal PDF locale a 173–203 ppi; ③ lettura completa partendo da Fig 4 ed EV3
 (RNA-seq) e da Fig 2 (iperreccitabilità, confrontabile con `FT-058`). **Se ② e ③ partono senza
 ①, dichiarare `figures: read` su 37/69 e `supplementary: unavailable` con questa rotta citata.**
+
+---
+
+## FT-060 — Abu-Odeh 2014: la premessa K274/ITCH chiusa dalla fonte primaria, e ITCH **stabilizza** WWOX
+
+**Paper:** PMID 24550385 / DOI 10.1074/jbc.M113.526137 — Abu-Odeh et al. 2014, *J Biol Chem*
+289(13):8865–8880
+**Title:** Characterizing WW Domain Interactions of Tumor Suppressor WWOX Reveals Its
+Association with Multiprotein Networks
+**Surface:** `structured` — PMC HTML già nel `files/` condiviso, `sha256 9fe41a3e3a55b0bd…`;
+PDF editore impronta-to come `article_binary`, **non** usato come superficie di testo.
+**Priority:** **ALTA** — è la fonte da cui `PMID 25331887` importa K274 e ITCH senza dimostrarli,
+cioè la premessa sotto `DL-MECH-083`.
+
+**Current status:** 🟡 **LETTO il 2026-08-10, dichiarato parziale** — receipt
+`FTR-20260810-24550385-01`, `partial_fulltext_read`; manifest `PMID24550385.json`, **13 locator**,
+`MANIFEST STRICT PASS` sotto entrambi i validatori. Abstract, introduzione, risultati e
+discussione letti per intero; **metodi e referenze no; nessun pannello ispezionato**
+(`figures: captions_only`).
+
+### Il budget contato **leggendo le didascalie**, non da un parser
+
+**7 figure, 39 pannelli**: Fig 1 A–F · Fig 2 A–D · Fig 3 A–F · Fig 4 A–F · Fig 5 A–G ·
+Fig 6 A–F · Fig 7 A–D. Tre script ad hoc avevano dato 7, poi 9, poi 6 — ogni volta un matcher
+che falliva restituendo un numero piccolo e plausibile. **`figures_present` ricavato dal paper
+significa leggere le didascalie; non ha mai significato aspettare che un parser sappia
+contare.** Il budget è un mezzo, non un cancello.
+
+### Cosa chiude, e cosa aggiunge
+
+| | |
+|---|---|
+| **K274** | *«these data suggest that ITCH predominantly mediates polyubiquitination of WWOX at Lys-274»* — MS + mutagenesi: `K274R` non ubiquitinato, `K100R` sì ma meno. **Predominante, non esclusivo.** |
+| **K63** | *«predominantly Lys-63-linked»*, con anticorpi validati su un controllo K48 **e** confermato ortogonalmente con Ub `Lys-63 only` / `Lys-48 only`. È la misura primaria sotto il nostro `D-01`. |
+| 🔴 **direzione** | *«ITCH ubiquitinates WWOX **independent of degradation**»* · CHX: ITCH **allunga** l'emivita · MEF `Itch⁻/⁻`: WWOX **ridotta**, emivita **più corta**, p<0.001 |
+
+🔴 **Lo stato conosceva il linkage e il sito — terza volta stasera che è avanti a me — e non
+conosceva il segno.** ITCH compare 18 volte nei file canonici e **ogni** menzione lo tratta come
+qualcosa da *inibire* (`DIS-001`, che giustamente sconsiglia: si toglierebbe a WWOX la funzione
+DDR via ATM). **Nessuna dice che l'attività di ITCH alza l'abbondanza di WWOX.**
+
+### 🔴 La convergenza: due premesse aperte, un solo esperimento
+
+`DIS-003` rifiuta *«boosting WWOX expression»* **perché il collo di bottiglia è a valle della
+trascrizione** — e l'ubiquitinazione K63 mediata da ITCH **è** una maniglia a valle
+sull'abbondanza di WWOX, cioè esattamente il ramo che quel rifiuto lascia aperto. Se sia
+on-target per il genotipo di riferimento dipende dalla disgiunzione che `DL-META-091` non ha
+potuto risolvere: **degradazione prematura → la leva è on-target; traduzione impedita → non c'è
+niente da stabilizzare.**
+
+> **Il western che discrimina traduzione da degradazione su fibroblasti Q230P decide anche se
+> ITCH è una leva.** È lo stesso recupero già indicato come il più redditizio della coda
+> (`FT-057`, Johannsen `29808465`). Due premesse, una misura.
+
+`INFERENZA` — materiale per i ledger di ipotesi, **mai** un candidato terapeutico.
+
+### Un difetto della didascalia, sul pannello che porta il residuo
+
+La legenda della Fig 5 annuncia i due spettri MS/MS come pannelli **«E and F»**, poi li etichetta
+**«(C)»** e **«(D)»** — lettere già assegnate sopra, nella stessa didascalia, al blot dei mutanti
+ITCH e al Coomassie — e aggiunge **«(E)»** per la colorazione degli ioni. Quattro etichette per
+due spettri, due riusate. Il testo corrente risolve (*«Fig. 5, E and F»*), quindi il reperto
+regge; ma chi segue la legenda per lo spettro di **K274** finisce su un blot di altro.
+**Contare i pannelli leggendo è ciò che l'ha messo davanti; un parser avrebbe contato sette
+lettere e tirato dritto.**
+
+**Next action:** ispezionare i pannelli dal PDF editore — in particolare **Fig 5G**, dove il
+risultato `K274R` è un blot letto come *«was not [ubiquitinated]»* senza densitometria, cioè la
+classe in cui un pannello cambia una conclusione. Poi metodi e referenze (multi-hop non svolto).

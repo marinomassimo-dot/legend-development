@@ -1,0 +1,207 @@
+{
+  "schema_version": 2,
+  "pmid": "24550385",
+  "doi": "10.1074/jbc.M113.526137",
+  "receipt": "FTR-20260810-24550385-01",
+  "landing": [
+    "FTR-20260810-24550385-01",
+    "full_text_queue_current.md#FT-060"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline. The paper was assigned to close a premise the canonical state imports from a secondary source — K274 and ITCH under DL-MECH-083 — so the reading had to put the primary text and the state's own wording side by side."
+    }
+  ],
+  "reading_budget": {
+    "declared_before_reading": true,
+    "figures_present": 7,
+    "panels_present": 39,
+    "tables_present": 0,
+    "supplementary_elements_present": 0,
+    "panels_inspected": 39,
+    "panel_coverage": "39/39 captions read; 0/39 panel images inspected — see figure_gap",
+    "method": "🔴 COUNTED BY READING THE CAPTIONS, NOT BY A PARSER, AND THAT IS THE CORRECTION. Figure 1 A-F, Figure 2 A-D, Figure 3 A-F, Figure 4 A-F, Figure 5 A-G, Figure 6 A-F, Figure 7 A-D = 39. Three successive ad-hoc scripts gave 7, then 9, then 6 for this article, each time by a matcher that failed and returned a plausible small number instead of an error. `figures_present` derived from the paper means read the captions; it never meant wait for a parser to be able to count. The budget is a means, not a gate."
+  },
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_measured": "Not measured, declared as not measured. Aqeilan laboratory, Hebrew University — the primary WWOX group in this corpus — with the Schueler-Furman computational group for the phage-display specificity profile and motif analysis.",
+    "research_type": "experimental_lab",
+    "output_kind": "primary_research",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "weighting": "Primary biochemistry, and the source this corpus has been citing at second hand. It is the paper behind the D-01 entry in DEFAULTS THAT BIT US and behind DIS-001; reading it directly is what this manifest is for."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "occurrences of ITCH across the canonical state, and whether the DIRECTION of its effect on WWOX abundance is recorded anywhere",
+        "route": "grep over disease-models/wwox, 2026-08-10 — audit of our own writing, not of a paper",
+        "count": 18
+      }
+    ],
+    "note": "ITCH appears 10 times in the discovery ledger, 5 in the dismissal ledger, once in the claim registry and twice in the paper registry. The state already knows the K63 linkage and the K274 site — DEFAULTS THAT BIT US carries D-01 'polyubiquitination → proteasome' as a falsified default, and DIS-001 was reopened on exactly this biology. What it does NOT carry, anywhere, is the direction: that ITCH ubiquitination STABILISES WWOX. Every existing statement treats ITCH as something one might inhibit, and correctly advises against it."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 0,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "NOT PERFORMED and declared as open debt. The reading budget went to the seven captions and the three load-bearing result sections. The reference list of a 2014 JBC paper is a genuine multi-hop target — it is where the ErbB4, p73, AMOTL1 and DVL1 partner literature lives — and it is left for the run that inspects the panels."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Prior receipts and manifest for 24550385 across all six branches",
+    "hits": 0,
+    "finding": "Zero receipts on any branch, no manifest. Both artifacts were already in the shared files/ tree. The state has been citing this paper's findings through secondary sources — PMID 25331887 imports K274 and ITCH without demonstrating them, which is the premise DL-MECH-083 rests on."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-10",
+    "route": "Europe PMC core record for EXT_ID:24550385",
+    "result": "No retraction, no expression of concern, no erratum.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+      "sha256": "9fe41a3e3a55b0bdf329aef4c471c14e1b638cc49f3807808e07a17c3fe9c559",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID24550385_AbuOdeh2014.pdf",
+      "sha256": "31b20da0ce704c4416a447faa7eadfb6952aa9474badc3086341a84aa0550143",
+      "kind": "article_binary"
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC HTML rendering of J Biol Chem 289(13):8865-8880, already present in the shared files/ tree alongside the publisher PDF. Structured surface, rule 5d's preferred class; the PDF is fingerprinted as article_binary and was not used as a text surface.",
+    "abstract_anchoring_waived": "No evidentiary locator uses the abstract surface. The abstract states the K63 and nuclear-localisation conclusions, but every quote below is drawn from Results or Discussion.",
+    "surface_note": "🔴 THIS IS THE ARTIFACT ON WHICH THE JOIN DEFECT IS TOTAL, AND IT IS WHY THE MEASUREMENT MATTERS. Under my branch's extractor (80e6f03) this surface yields 0 of 32 figure citations and 2 of 31 occurrences of PPXY; under Plan's (2e6fd6a) it yields 30 and 31. Choosing spans against my branch would have meant choosing them to avoid the paper's own vocabulary — the reverse of rule 5c. Spans were built against Plan's surface, and all 13 then verified under BOTH extractors unchanged, so this manifest is immune to merge order. Contrast PMID 32581702, an XML where the same defect cost nothing: the test is per artifact.",
+    "entries": [
+      {
+        "proposition": "🔴 THE PREMISE THE STATE IMPORTS AT SECOND HAND, DEMONSTRATED HERE FOR THE FIRST TIME IN THIS CORPUS FROM ITS PRIMARY SOURCE. Mass spectrometry identified two ubiquitinated lysines, Lys-100 and Lys-274, and site-directed mutagenesis separated them: K274R abolished ITCH-mediated ubiquitination while K100R did not. DL-MECH-083 rests on PMID 25331887 importing K274 and ITCH without demonstrating either; this is the demonstration.",
+        "snippet": "these data suggest that ITCH predominantly mediates polyubiquitination of WWOX at Lys-274",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Results, end of the section on ITCH-mediated ubiquitination of WWOX",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — this is the sentence the reading was assigned to find"
+      },
+      {
+        "proposition": "THE MUTANT RESULT ITSELF, AND ITS COMPARATOR, RECORDED BECAUSE THE COMPARATOR IS WHAT THE CLAIM RESTS ON. K274R is judged against GST-WWOX-WFPA — the WW1-dead construct that cannot bind ITCH at all — so the claim is that K274R behaves like a non-binder, not merely that it is reduced against wild type. That is the stronger reading and it is the one the sentence supports.",
+        "snippet": "the WWOX-K274R mutant was not as compared with the WWOX-WFPA construct",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Results, immediately before the Lys-274 conclusion; the constructs are listed in the caption of Figure 5G",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I went looking for what K274R was compared against before accepting 'predominantly'"
+      },
+      {
+        "proposition": "AND THE QUALIFICATION THE WORD 'PREDOMINANTLY' CARRIES. Lys-100 is not eliminated: ITCH still ubiquitinates the K100R mutant, at reduced efficiency. So K274 is the major site and not the only one, and any downstream statement that treats WWOX ubiquitination as a single-site event is over-reading this paper.",
+        "snippet": "ITCH could still ubiquitinate the WWOX-K100R mutant, although to a lesser extent",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Results, the sentence after the K274R result",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 THE LINKAGE, WHICH IS THE PAPER BEHIND THIS REPOSITORY'S D-01 FALSIFIED DEFAULT. DEFAULTS THAT BIT US records 'polyubiquitination → proteasome' as false because K48 and K63 differ; this is the primary measurement underneath that entry, and until tonight it had never been read here.",
+        "snippet": "We found that ITCH-mediated WWOX ubiquitination is predominantly Lys-63-linked",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Results, opening of the section 'ITCH Mediates Lys-63-linked Ubiquitination of WWOX'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — the linkage is the load-bearing half of the premise"
+      },
+      {
+        "proposition": "THE LINKAGE CLAIM IS PROPERLY CONTROLLED, WHICH IS WORTH RECORDING BECAUSE ANTIBODY-BASED LINKAGE CALLS OFTEN ARE NOT. A positive control was run for the K48 antibody using a protein whose K48-linked proteasomal degradation is established, and it behaved as expected — detected by the K48 antibody and not the K63 one.",
+        "snippet": "we overexpressed HIF1α, a well known protein that undergoes proteasomal degradation that is Lys-48-linked",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Results, the antibody validation immediately after the Lys-63 claim; the experiment is Figure 6B",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I looked for the antibody control before accepting a linkage call made with antibodies"
+      },
+      {
+        "proposition": "AND AN ORTHOGONAL CONFIRMATION THAT DOES NOT DEPEND ON ANTIBODIES AT ALL. Ubiquitin constructs in which every lysine but one is mutated to arginine give the linkage genetically rather than immunologically, and they agree. Two independent methods for one conclusion is why this linkage call can carry weight downstream.",
+        "snippet": "we used HA-Ub constructs that are either Lys-63 only or Lys-48 only (all other lysines are mutated to arginines)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Results, the confirmation of the Lys-63 linkage; the experiment is Figure 6C",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence, and it is the sentence that upgrades the linkage from suggestive to established"
+      },
+      {
+        "proposition": "🔴 THE DIRECTION, AND IT IS THE OPPOSITE OF WHAT UBIQUITINATION USUALLY IMPLIES. Cycloheximide chase: ITCH does not shorten WWOX's half-life, it EXTENDS it. This is the measurement that makes the K48/K63 distinction consequential rather than taxonomic, and the reason the paper's own framing is that ubiquitination here is not a degradation signal.",
+        "snippet": "Expression of ITCH in the presence of CHX extended the half-life of WWOX as compared with CHX alone",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Results, the cycloheximide experiment; the panel is Figure 6D",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I went looking for what the K63 chain DOES, because a linkage without a consequence is a taxonomy"
+      },
+      {
+        "proposition": "🔴 AND THE LOSS-OF-FUNCTION SIDE OF THE SAME CLAIM, WHICH IS THE HALF THAT MAKES IT A DEPENDENCY RATHER THAN AN OVEREXPRESSION ARTEFACT. In Itch-knockout mouse embryonic fibroblasts WWOX protein is reduced, and its half-life is shortened. So endogenous ITCH is required to sustain endogenous WWOX levels — measured in cells that never saw a transfection.",
+        "snippet": "We found that WWOX levels were decreased in Itch",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Results, the Itch-knockout MEF experiment; the panels are Figure 6E and 6F",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — an overexpression result needed a loss-of-function counterpart before I would carry the direction downstream"
+      },
+      {
+        "proposition": "THE HALF-LIFE STATEMENT IN THE AUTHORS' OWN WORDS, QUOTED SEPARATELY BECAUSE IT IS THE QUANTITATIVE HALF OF THE PREVIOUS ENTRY. Level and half-life are different measurements and the paper reports both; conflating them is how an abundance claim quietly becomes a stability claim.",
+        "snippet": "WWOX half-life is shorter in the absence of ITCH",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Results, immediately after the Itch-knockout level measurement",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 THE AUTHORS STATE IT AS A NEGATIVE, AND THIS IS THE SENTENCE THE CANONICAL STATE DOES NOT CARRY. Ubiquitination here is explicitly uncoupled from degradation. Every ITCH statement in this repository's canonical files treats ITCH as something one might INHIBIT — DIS-001 reopened it as an experimental probe and advised against inhibition because that would strip WWOX of its DDR function. None of them records that ITCH activity RAISES WWOX abundance, which points the lever in the opposite direction.",
+        "snippet": "ITCH ubiquitinates WWOX independent of degradation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Discussion, the paragraph summarising the WWOX-ITCH interaction",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I read the Discussion for the authors' own framing after the CHX and knockout results pointed the same way"
+      },
+      {
+        "proposition": "🔴 AND THE POSITIVE FORM OF THE SAME SENTENCE, WHICH IS THE ONE WITH THERAPEUTIC CONSEQUENCES. INFERENZA, and it converges two open premises onto one experiment: DIS-003 rejects 'boosting WWOX expression' BECAUSE the bottleneck lies downstream of transcription — and ITCH-mediated K63 ubiquitination is a downstream handle on WWOX abundance, which is precisely the arm that rejection leaves open. Whether the handle is on-target for the reference genotype depends on the disjunction DL-META-091 could not resolve: if Q230P protein is absent through PREMATURE DEGRADATION, a stabilising lever is on-target; if through IMPAIRED TRANSLATION, there is nothing for ITCH to stabilise. The same western that discriminates those two arms also decides whether ITCH is a lever.",
+        "snippet": "coexpression of WWOX and ITCH stabilizes WWOX levels and enhances p73-mediated cell death",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Discussion, the same paragraph, immediately after the degradation-independence statement",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I was looking for whether the authors themselves name a functional consequence of the stabilisation"
+      },
+      {
+        "proposition": "THE AUTHORS' OWN STATEMENT OF THE K48/K63 DISTINCTION, RECORDED BECAUSE IT IS THE TEXTBOOK DEFAULT THIS REPOSITORY HAS ALREADY BEEN BURNED BY AND THIS IS THE SOURCE THAT CORRECTS IT. The sentence names the alternative roles explicitly — DNA damage repair, kinase activation, trafficking — which is the vocabulary D-01 uses.",
+        "snippet": "Because Lys-48 linkages are mostly associated with commitment for proteasomal degradation, whereas Lys-63-linked polyubiquitination plays established roles in DNA damage repair, protein kinase activation, and trafficking",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Results, the sentence introducing the half-life experiments",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence, and it is nearly verbatim the wording of our own D-01 entry"
+      },
+      {
+        "proposition": "🔴 THE CAPTION OF FIGURE 5 CANNOT SAY WHICH PANEL SHOWS THE K274 SPECTRUM, AND K274 IS THE RESIDUE THE WHOLE PREMISE RESTS ON. The caption announces the two MS/MS spectra as panels 'E and F', then labels them in parentheses as '(C)' and '(D)' — and C and D are already assigned earlier in the same caption to the ITCH-mutant ubiquitination blot and the Coomassie/MS pull-down. A following clause adds '(E)' for the ion colouring. Four labels for two spectra, two of them reused. The running text resolves it — it cites 'Fig. 5, E and F' for the two peptides — so the finding is safe; but a reader who goes to the panel named in the legend for the K274 spectrum is sent to a blot of something else.",
+        "snippet": "annotated MS/MS spectra of the identified WWOX ubiquitinated peptides is shown for",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Caption of Figure 5, the clause introducing the two spectra; read against the same caption's earlier assignments of C and D and against the Results citation of 'Fig. 5, E and F'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — counting the panels by reading the captions is what put the label collision in front of me, which a parser would have passed over"
+      }
+    ],
+    "figure_gap": "🔴 NO PANEL IMAGE WAS INSPECTED, AND THE COVERAGE FIELD SAYS SO RATHER THAN IMPLYING OTHERWISE. All 39 panels were accounted for by reading their captions — which is how the budget was derived and how the Figure 5 label collision surfaced — but no figure file was fetched and no blot was looked at. That matters unevenly across the entries: the linkage and half-life claims are quantified in the running text with an explicit p value, whereas the K274R result of Figure 5G is a blot whose interpretation is 'was not [ubiquitinated]', and a densitometry-free negative on a western is exactly the class where a panel changes a reading. The next run on this paper should start there. The publisher PDF is fingerprinted here as article_binary and is the figure surface to extract from."
+  }
+}
