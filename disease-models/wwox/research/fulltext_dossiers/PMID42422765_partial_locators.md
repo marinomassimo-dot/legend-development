@@ -488,6 +488,61 @@ that this laboratory avoids the WT-versus-treated comparison — **Figure 3's ca
 comes out significant, the surrounding prose still reports normalisation. The comparison is
 present in the data and absent from the vocabulary.
 
+### 🔴🔴 SECOND CORRECTION — the Figure 1 entry above is wrong, and wrong the same way as the first
+
+Reading the results text after the panels dissolved both claims I built from Figure 1. The
+cause is identical to the Figure 3 error I corrected earlier: **I read panels without their
+captions, and then reasoned across figures as if the labels matched.** They do not.
+
+**The Figure 1 caption specifies the constructs:**
+> "AAV9-EF1a-hWWOX-WPRE (4 × 1010 vg, n = 5), AAV9-CMV- hWWOX -WPRE (4 × 1010 vg, n = 5), AAV9-MBP- hWWOX -WPRE (4 × 1010 vg, n = 5), and AAV9-hSynI- hWWOX -WPRE (4 × 1010 vg, n = 6)"
+
+`surface: body` · Figure 1 caption. **Every promoter in Figure 1 carries WPRE.**
+
+**Correction 1 — the discrepancy I flagged does not exist.** I recorded Figure 1J (Synapsin,
+4E10, surviving) against Figure 2B (`KO + AAV-hWWOX 4E10`, dead at ~18–20 days) as an open
+discrepancy in the same construct. They are **different constructs**: Figure 1J is *with*
+WPRE, Figure 2B's `hWWOX` arms are *without*. Figure 2B's own WPRE arm — `KO + AAV-WWOX-WPRE
+(4E10)` — is the comparable one, and it behaves like Figure 1J, surviving longer before
+falling. Registering it as "to verify, not to assert" was the right call; the verification has
+now happened and the answer is that there was nothing there.
+
+**Correction 2 — and this one I stated far too strongly.** I wrote that "the promoter
+hierarchy was established below the dose at which the winner works", reasoning that Figure 1's
+4 × 10¹⁰ is 6.6-fold below Figure 3's effective dose. That comparison is invalid: **4 × 10¹⁰
+with WPRE is not 4 × 10¹⁰ without it.** Figure 2E measures the difference — WPRE multiplies
+protein 10- to 15-fold, and `W+WPRE` at 4 × 10¹⁰ reads `25.6 / 22.3 / 11.6 / 6.2`, at or above
+what the WPRE-free high dose achieves in Figure 5. **The promoter comparison was run at a
+perfectly reasonable expression level.** My criticism was an artefact of treating "4E10" as
+one quantity across two figures that define it differently.
+
+What survives of that entry, and it is the part the authors themselves state:
+> "While transgene expression was not quantitatively normalized across promoter conditions, the observed differences likely reflect a combination of cell-type specificity and expression dynamics."
+
+The ranking is confounded by expression level, which is a real limitation and a declared one —
+but it is **not** the sub-threshold artefact I claimed. The panel-M observation stands
+unchanged: MBP produced essentially no detectable WWOX, so the oligodendrocyte question
+remains open rather than answered.
+
+### 🔴 The finding about my own method, which is the most useful thing in this reading
+
+**Twice on one paper I built a criticism from panels read without their captions.** Both times
+the caption sat in a layout I had already generated; both times the error ran in the direction
+of finding a defect. The first correction I described as "a pattern that has held three times
+is when the fourth case stops being checked". That was the right diagnosis and an incomplete
+remedy — I named the failure and then repeated it two figures later.
+
+The operative rule is narrower and enforceable: **a figure is not read until its caption is
+read, and a cross-figure comparison is not valid until both captions have been checked for
+identical construct, dose and units.** Panels carry numbers; captions carry what the numbers
+are *of*. Reading the first without the second is not partial reading — it is a reliable
+generator of false findings, and it produced two here.
+
+Worth stating plainly: this reading's most-quoted results — the survival threshold, the
+expression/survival mismatch, the `0.2000`, the behavioural overshoot — all survive, because
+each rests on a single figure with its caption. **Every claim that died was a cross-figure
+inference.**
+
 ## Reading debt this leaves — explicit and large
 
 - **Introduction, all seven results sections and Materials and Methods: not read.**
