@@ -56,7 +56,10 @@
  "source_artifacts": [
   {"path": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml", "sha256": "00da56df985d59b873d8ceea546fdb870138201aaa8c3e22badec660c30581ce", "kind": "article_text"},
   {"path": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f2.jpg", "sha256": "4263ac51dea8340f433b2118c436cca7cb589dd7e3d2be7f6568b439fa745635", "kind": "figure"},
-  {"path": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f3.jpg", "sha256": "bf3303060b318fbd865e5f4a70260dc372376f4264ce7b0f345b07c6e64a7ba9", "kind": "figure"}
+  {"path": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f3.jpg", "sha256": "bf3303060b318fbd865e5f4a70260dc372376f4264ce7b0f345b07c6e64a7ba9", "kind": "figure"},
+  {"path": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f4.jpg", "sha256": "3f5fcd8bdd01bb348d011071c0a070271524f4a4e2dc88e60d3e39c8a11f16ad", "kind": "figure"},
+  {"path": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f5.jpg", "sha256": "62770c5e11e4d689518cc881846088ea761626647ef314ebb2018ee206492168", "kind": "figure"},
+  {"path": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f6.jpg", "sha256": "fb57a5f0f919c5f4115350123d6e4904f1a63206d118ad4fc9a48d02ca198ce8", "kind": "figure"}
  ],
  "verbatim_locators": {
   "waived": false,
@@ -73,9 +76,9 @@
    "rule": "Orchestrator instruction, 2026-08-10: one locator per main figure or a named, argued waiver. Silence is not a waiver.",
    "budget_declared_before_reading": "Counted from the JATS before opening the body: 7 main figures, 10 table-wraps, 0 supplementary. Budget set at one locator per main figure, tables cited where the running text leans on them, supplementary declared not_present.",
    "main_figures_in_article": 7,
-   "figures_with_at_least_one_locator": 2,
+   "figures_with_at_least_one_locator": 5,
    "figures_fetched": "All seven fetched from the PMC CDN and fingerprinted, 7 distinct digests, 400-800 px at 150 dpi. RESOLUTION RECORDED WITH THE SURFACE, per the practice this session promoted: these are the renditions PMC serves and no higher-resolution deposit was sought, so a mark finer than a side-chain label could have been missed. That limit is stated rather than assumed away.",
-   "waiver_remaining": "Figures 1, 4, 5, 6 and 7 remain without a locator, waived by name: 1 is the ErbB4 architecture and peptide sequences, 4 the tandem-module isotherms, 5 the light-scattering profiles, 6 and 7 the molecular dynamics. FT-055 carries them. Figures 2 and 3 were inspected because they are the two the reading turned on — the isotherms behind every Kd, and the structural model behind the W44/Y85 argument.",
+   "waiver_remaining": "🔴 TWO FIGURES REMAIN WITHOUT A LOCATOR, WAIVED BY NAME. Figure 1 is the ErbB4 domain architecture and the peptide sequence table — a schematic plus the sequences, and the sequences are the one part that is data rather than drawing, so it is the more consequential of the two. Figure 7 is the series of molecular-dynamics snapshots, which is a visualisation of the trajectory quantified in Figure 6 and therefore carries no measurement Figure 6 does not already carry. Neither was inspected. FT-055 stays open for them. Figures 2, 3, 4, 5 and 6 were inspected at the resolution PMC serves and each carries at least one locator.",
    "superseded_waiver": "🔴 ALL SEVEN FIGURES WAIVED, and the reason is mine and not the paper's: the session's remaining context was not enough to fetch them, measure smask, and inspect them at deposited resolution, and inspecting them badly is worse than declaring the gap. This is a named waiver under the rule, not silence: coverage.figures is recorded as not_read and the receipt is partial_fulltext_read. FT-055 carries the debt. What the waiver costs is stated rather than minimised — Figures 2 and 4 are the ITC isotherms behind Tables 1 and 4, so the fits that produce every Kd quoted here are unexamined; Figure 3 is the structural model behind the W44/Y85 argument; Figures 5-7 carry the light scattering and the molecular dynamics.",
    "tables": "3 of 5 numeric tables read cell by cell (1, 3, 4 — the affinity tables). Tables 2 and 5 read in the running text only, declared as a partial.",
    "supplementary": "not_present — the JATS records pmc-prop-has-supplement no. This is an honest empty slot, not an unread one."
@@ -156,6 +159,34 @@
     "artifact": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f2.jpg",
     "anchor": "Figure 2, panels a, b and c, isotherm shape and axis ranges, read at the resolution PMC serves, 701x306 px at 150 dpi. Resolution recorded with the surface.",
     "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The tandem-module isotherms, and they are visibly better data than Figure 2 — the heats are roughly twice as large and the PY3 curve has real curvature. The same low-c caveat applies to PY1 and PY2, which still do not saturate. Recorded so that the two-fold improvement the text claims for the tandem module is anchored to isotherms of comparable, not superior, determinacy.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4, three ITC panels at 800x343. Binding isotherms: ErbB4_PY1 from about -1.4 to -0.15 kcal/mol out to molar ratio 20; ErbB4_PY2 from about -1.1 to -0.1 out to 16; ErbB4_PY3 from about -3.0 to -0.1 out to 13, with pronounced curvature over the first four molar equivalents. Injection heats in the upper traces reach -0.8, -0.6 and -1.6 microcal/s respectively.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f4.jpg",
+    "anchor": "Figure 4, panels a, b and c, isotherm shape and axis ranges, read at 800x343 px, 150 dpi — the resolution PMC serves.",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "🔴 THE MOLAR MASSES THAT CARRY THE 'REMARKABLE AGREEMENT' COME FROM THREE POINTS EACH. Panel b is the Zimm analysis, and every plot contains exactly three measurements — one per scattering angle — with the middle point sitting well below its neighbours in all three constructs. The molar mass is the y-intercept of a horizontal line fitted through that scatter, and Table 5 then reports agreement with sequence-calculated masses as remarkable. The absence of angular dependence the text infers is visible in the sense that there is no monotonic trend; what is not visible is a precision sufficient to call the agreement remarkable. AND A SEPARATE LIMIT, MINE NOT THEIRS: the text reports a small left-hand shoulder on the WW1 elution peak as evidence of homodimerisation, and at 762x351 I cannot resolve it either way. Recorded as unresolvable at this resolution rather than as confirmed or denied — which is the reason resolution is now recorded alongside surface.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 5 at 762x351. Panel a: three SEC elution profiles peaking near 250 ml, WW1 and WW2 reaching about 2x10^-4 refractive index change and WW1-WW2 about 4x10^-4. Panel b: three Zimm plots, each with exactly three data points against sin^2(theta/2), WW1 at roughly 15, 11 and 14, WW2 at 14, 11 and 16, WW1-WW2 at 8.5, 7 and 8.5, each with a horizontal red fit. Panel c: three autocorrelation decays.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f5.jpg",
+    "anchor": "Figure 5, panels a, b and c, read at 762x351 px, 150 dpi — the resolution PMC serves, and insufficient to adjudicate the elution shoulder.",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PAIR, PANEL SIDE. The simulation does not reach equilibrium in the sense the text claims. The RMSD trace oscillates between roughly 6 and 12 angstroms for the entire 250 ns with no plateau, so 'slowly reaches structural equilibrium' describes a trajectory that has not converged. The direction matters: the authors use the large RMSD to argue the two domains are NOT stably associated, so a non-converged trajectory weakens their inference rather than flattering it — the same shape as the loading imbalance in PMID 25331887 Figure 4D. Panels b and c, by contrast, support the text exactly: WW1 fluctuates higher than WW2, the linker lower than both, and the radius of gyration expands then compacts as described.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6 at 400x646. Panel a, RMSD against time: rises from 0 to about 8 angstroms within the first 10 ns, then oscillates between roughly 6 and 12 for the remaining 240 ns with no visible plateau, ending near 11. Panel b, RMSF per residue: the shaded WW1 block spanning about residues 22-43 peaks near 11 angstroms, the shaded WW2 block spanning about 63-84 peaks near 8, and the unshaded interdomain region between them stays between 3 and 6. Panel c, radius of gyration: about 15 angstroms at the start, peaking near 20.5 around 50 ns, declining to about 14 after 150 ns.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_assets/nihms547377f6.jpg",
+    "anchor": "Figure 6, panels a, b and c, read at 400x646 px, 150 dpi — the resolution PMC serves.",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[16]",
+    "needle": "the WW1 domain appears to be somewhat less stable compared to WW2 domain",
+    "cited_panel_check": "🔴 PARTIAL, AND DECLARED AS SUCH RATHER THAN CLAIMED WHOLE. The contradicted sentence cites Figure 6b and this locator reads Figure 6 including 6b, so the cited-panel invariant is satisfied. But what 6b shows AGREES with that sentence — WW1 does fluctuate more than WW2. What the panel contradicts is a DIFFERENT sentence of the same paragraph, 'slowly reaches structural equilibrium', which cites Figure 6a. The pointer is aimed at the locator this manifest holds; the strictly correct target is not captured as a locator, and rather than manufacture one to make the pairing tidy, the mismatch is written here. This is the same class the citation audit found earlier today, produced by me a second time, and the honest record is the fix.",
+    "note_on_relation": "If the grammar allowed a pointer at a sentence not held as a locator, this would be text_contradicted_by_panel against 'slowly reaches structural equilibrium' and text_confirmed_by_panel against the stability comparison. It cannot express both, which is the gap."
    },
    {
     "proposition": "🔴 THE AUTHORS' OWN LIMIT ON THEIR OWN MODEL SYSTEM, stated without prompting. This is the sentence that most distinguishes this paper's rhetoric from the four before it: the reduction is not written as an absence, the caveat is written as a caveat.",
