@@ -381,7 +381,7 @@
    },
    {
     "proposition": "What the statistics do better than either sibling paper: normality tested, ANOVA with Tukey or Dunnett, or multiple t-tests with Benjamini-Hochberg FDR — multiplicity correction named, which neither PMID 34747138 nor PMID 42422765 declared.",
-    "snippet": "multiple t-tests correcting for multiple comparisons by controlling the False Discovery Rate",
+    "snippet": "multiple t-tests, correcting for multiple comparisons by controlling the False Discovery Rate",
     "surface": "body",
     "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
     "anchor": "Statistical analysis",
