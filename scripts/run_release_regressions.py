@@ -57,6 +57,7 @@ TESTS = (
     "framework/scripts/test_trace_claim_foundation.py",
     "framework/scripts/test_build_evidence_index.py",
     "framework/scripts/test_surface_census.py",
+    "framework/scripts/test_locator_audit.py",
     ".claude/skills/legend-study-intake-triage/scripts/"
     "test_study_dedup_triage.py",
     ".claude/skills/legend-batch-inferential-sweep/scripts/"
