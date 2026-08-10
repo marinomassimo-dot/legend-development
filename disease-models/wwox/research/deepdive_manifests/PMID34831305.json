@@ -188,7 +188,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
         "anchor": "Section 2.2, cell-targeted Wwox-KO paragraph",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "Only Nestin- and Synapsin-targeted deletion were reported to recapitulate the null phenotype in the stated interval.",
@@ -196,7 +196,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
         "anchor": "Section 2.2, cell-targeted Wwox-KO paragraph",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The review attributes neurological and systemic null-like phenotypes to Nestin and mature-neuron deletion.",
@@ -204,7 +204,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
         "anchor": "Section 2.2, cell-targeted Wwox-KO paragraph",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The review labels the neuron-to-oligodendrocyte myelin phenotype non-cell-autonomous.",
@@ -212,7 +212,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
         "anchor": "Section 2.2, RNA-seq and oligodendrocyte validation paragraph",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The authors explicitly contrast a normal metabolic screen in one severe human case with rodent findings.",
@@ -220,7 +220,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
         "anchor": "Section 3.1, Abdel-Salam human case paragraph",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "Early organoid WWOX expression was localized mainly to ventricular radial glia before broadening later.",
@@ -228,7 +228,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
         "anchor": "Section 3.3.2, early organoid expression paragraph",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The organoid metabolic signal is transcriptomic pathway enrichment, not a flux measurement.",
@@ -236,7 +236,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
         "anchor": "Section 3.3.2, bulk RNA-seq paragraph",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "Diffuse organoid restoration was incomplete and motivated a cell-type-specific strategy.",
@@ -244,7 +244,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
         "anchor": "Section 5, organoid restoration paragraph",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The review reports that neuron-specific WWOX restoration rescues phenotypes measured outside the CNS.",
@@ -252,7 +252,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
         "anchor": "Section 5, AAV9-hSynI-WWOX paragraph",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The authors acknowledge that no available model is complete and advocate model combination.",
@@ -260,23 +260,23 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
         "anchor": "Section 6, concluding paragraph",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "Figure 1 is a qualitative expression schematic rather than a quantitative comparison.",
         "snippet": "The image is an annotated anatomical schematic of adult human brain, adult mouse brain and an organoid cross-section; it contains no plotted samples, uncertainty or statistical comparison.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_assets/cells-10-03082-g001.jpg",
-      "anchor": "Figure 1, inspected at the returned native 757×434 pixels after 600-effective-PPI preflight",
-      "evidence_relation": "panel_only"
+        "anchor": "Figure 1, inspected at the returned native 757×434 pixels after 600-effective-PPI preflight",
+        "panel_text_relation": "panel_only"
       },
       {
         "proposition": "Figure 2 does not draw the four cell-targeted deletion groups or their negative arms.",
         "snippet": "The infographic collapses conventional, conditional and cell-targeted Wwox-KO mice into one model branch and displays phenotype bullets without separate Nestin, Synapsin, GFAP or Olig2 comparison groups.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_assets/cells-10-03082-g002.jpg",
-      "anchor": "Figure 2, inspected at the returned native 772×550 pixels after 600-effective-PPI preflight",
-      "evidence_relation": "panel_only"
+        "anchor": "Figure 2, inspected at the returned native 772×550 pixels after 600-effective-PPI preflight",
+        "panel_text_relation": "panel_only"
       },
       {
         "proposition": "Table 1's visual model comparison represents only the Nestin and Synapsin cell-targeted models.",
@@ -284,7 +284,7 @@
         "surface": "table",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
         "anchor": "Table 1, cell-targeted model column header",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       }
     ]
   }

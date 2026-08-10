@@ -170,7 +170,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
         "anchor": "Results, mRNA profiling paragraph",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The Results report 833 downregulated and 724 upregulated genes.",
@@ -178,7 +178,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
         "anchor": "Results, mRNA profiling paragraph",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The stated transcriptomic significance rule required fourfold change and FDR below 0.05.",
@@ -186,7 +186,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
         "anchor": "Methods, mRNA profiling",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The integrated miRNA targets were computational predictions rather than generally validated targets.",
@@ -194,7 +194,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
         "anchor": "Methods, miRNA target prediction",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "Mutation of the SMAD3 3'UTR abolished miR-146a repression.",
@@ -202,7 +202,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
         "anchor": "Results, miR-146a/SMAD3 paragraph",
-        "evidence_relation": "text_and_panel_agree"
+        "panel_text_relation": "text_confirmed_by_panel"
       },
       {
         "proposition": "The WWOX IP-MS experiment used three biological replicates.",
@@ -210,7 +210,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
         "anchor": "Methods, mass spectrometry",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "WWOX-DVL2 association was validated by exogenous co-IP and increased with Wnt ligand.",
@@ -218,7 +218,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
         "anchor": "Results, WWOX interactome paragraph",
-        "evidence_relation": "text_and_panel_agree"
+        "panel_text_relation": "text_confirmed_by_panel"
       },
       {
         "proposition": "The therapeutic conclusion is prospective rather than experimentally tested.",
@@ -226,33 +226,32 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
         "anchor": "Discussion, concluding sentence",
-        "evidence_relation": "text_only"
+        "panel_text_relation": "text_only"
       },
-    {
-      "proposition": "The Figure 1 caption assigns WWOX blue and WFPA green in the clustering panel.",
-      "snippet": "Of these, two clusters included genes that were strongly upregulated or downregulated in WWOX (blue) cells compared to EV (red) or WFPA (green) cells.",
-      "surface": "body",
-      "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
-      "anchor": "Figure 1A caption, text half of the caption/pixel colour contradiction",
-      "evidence_relation": "text_contradicted_by_panel",
-      "evidence_pair": "PMID32300104-FIG1-CAPTION-PIXELS"
-    },
-    {
-      "proposition": "Figure 1's caption swaps the plotted WWOX and WFPA colour identities.",
+      {
+        "proposition": "The Figure 1 caption assigns WWOX blue and WFPA green in the clustering panel.",
+        "snippet": "Of these, two clusters included genes that were strongly upregulated or downregulated in WWOX (blue) cells compared to EV (red) or WFPA (green) cells.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
+        "anchor": "Figure 1A caption, text half of the caption/pixel colour contradiction",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 1's caption swaps the plotted WWOX and WFPA colour identities.",
         "snippet": "The PCA pixels label EV red, WWOX green and WFPA blue; the caption instead assigns WWOX blue and WFPA green.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID32300104_Khawaled2020_assets/41392_2020_136_Fig1_HTML.jpg",
-      "anchor": "Figure 1B, inspected at native pixels after 96-effective-PPI preflight",
-      "evidence_relation": "text_contradicted_by_panel",
-      "evidence_pair": "PMID32300104-FIG1-CAPTION-PIXELS"
+        "anchor": "Figure 1B, inspected at native pixels after 96-effective-PPI preflight",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[8]"
       },
       {
         "proposition": "The anti-miR-146a experiment gives partial rather than full SMAD3 rescue.",
         "snippet": "Panel D densitometry shows SMAD3 near 1.00 in EV, 0.40 in WWOX plus control anti-miR, and 0.66 after anti-miR-146a.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID32300104_Khawaled2020_assets/41392_2020_136_Fig4_HTML.jpg",
-      "anchor": "Figure 4D, inspected at native pixels after 96-effective-PPI preflight",
-      "evidence_relation": "panel_only"
+        "anchor": "Figure 4D, inspected at native pixels after 96-effective-PPI preflight",
+        "panel_text_relation": "panel_only"
       },
       {
         "proposition": "Wild-type WWOX lowers the Wnt target AXIN2 whereas the WW1 mutant does not reproduce that effect.",
@@ -260,15 +259,15 @@
         "surface": "figure",
         "artifact": "files/fulltext/PMID32300104_Khawaled2020_assets/41392_2020_136_Fig5_HTML.jpg",
         "anchor": "Figure 5C,E, inspected at native pixels after 96-effective-PPI preflight",
-        "evidence_relation": "text_and_panel_agree"
+        "panel_text_relation": "text_confirmed_by_panel"
       },
       {
         "proposition": "The supplementary nuclear beta-catenin metric is coupled to the WWOX intervention through its denominator.",
         "snippet": "Supplementary Figure S2 labels the reported densitometry β-catenin/WWOX ratio even though WWOX is the manipulated protein; Lamin is displayed but not used as the denominator.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID32300104_Khawaled2020_assets/supp-page-03.png",
-      "anchor": "Supplementary Figure S2, page 3, rendered after measuring a 150-effective-PPI minimum ceiling",
-      "evidence_relation": "panel_only"
+        "anchor": "Supplementary Figure S2, page 3, rendered after measuring a 150-effective-PPI minimum ceiling",
+        "panel_text_relation": "panel_only"
       }
     ]
   }

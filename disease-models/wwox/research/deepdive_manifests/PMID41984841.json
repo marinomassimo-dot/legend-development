@@ -176,7 +176,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
         "anchor": "Results, conditional cSCC penetrance paragraph",
-        "evidence_relation": "text_and_panel_agree"
+        "panel_text_relation": "text_confirmed_by_panel"
       },
       {
         "proposition": "Wwox loss accelerated tumour incidence and onset in a p53-null background.",
@@ -184,7 +184,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
         "anchor": "Results, conditional cSCC penetrance paragraph",
-        "evidence_relation": "text_and_panel_agree"
+        "panel_text_relation": "text_confirmed_by_panel"
       },
       {
         "proposition": "Chemical carcinogenesis exposed a tumour-promoting Wwox phenotype without engineered p53 loss.",
@@ -192,7 +192,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
         "anchor": "Results, DMBA-TPA paragraph",
-        "evidence_relation": "text_and_panel_agree"
+        "panel_text_relation": "text_confirmed_by_panel"
       },
       {
         "proposition": "The DKO tumours contained epithelial, hybrid and mesenchymal states.",
@@ -200,7 +200,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
         "anchor": "Results, EMT validation paragraph",
-        "evidence_relation": "text_and_panel_agree"
+        "panel_text_relation": "text_confirmed_by_panel"
       },
       {
         "proposition": "Endogenous WWOX and p63 are proximal and occur in the same complex in the tested keratinocyte systems.",
@@ -208,7 +208,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
         "anchor": "Results, PLA and coimmunoprecipitation paragraph",
-        "evidence_relation": "text_and_panel_agree"
+        "panel_text_relation": "text_confirmed_by_panel"
       },
       {
         "proposition": "WWOX loss reduced p63 occupancy at epithelial target loci.",
@@ -216,7 +216,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
         "anchor": "Results, p63 ChIP-seq paragraph",
-        "evidence_relation": "text_and_panel_agree"
+        "panel_text_relation": "text_confirmed_by_panel"
       },
       {
         "proposition": "The human tissue surface showed parallel reductions but does not itself establish prognosis or causality.",
@@ -224,7 +224,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
         "anchor": "Results, human tissue microarray paragraph",
-        "evidence_relation": "text_and_panel_agree"
+        "panel_text_relation": "text_confirmed_by_panel"
       },
       {
         "proposition": "Figure 1 visually shows context dependence and no clear Wwox allele-dose separation in the p53-null stratum.",
@@ -232,51 +232,49 @@
         "surface": "figure",
         "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig01.jpg",
         "anchor": "Figure 1C-D, inspected at native pixels after 96-effective-PPI preflight",
-        "evidence_relation": "text_and_panel_agree"
+        "panel_text_relation": "text_confirmed_by_panel"
       },
-    {
-      "proposition": "The Figure 2 caption states that the figure contains EMT immunostaining and category quantification.",
-      "snippet": "Immunostaining of epithelial (E-cadherin) and mesenchymal (Vimentin) markers with the Tomato lineage reporter in cSCCs from three p53fl/fl genotypes. Representative images highlight epithelial (magenta), mesenchymal (yellow), and hybrid (cyan) tumor cells.",
-      "surface": "body",
-      "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
-      "anchor": "Figure 2 caption, text half of the caption/pixel contradiction",
-      "evidence_relation": "text_contradicted_by_panel",
-      "evidence_pair": "PMID41984841-FIG2-CAPTION-PIXELS"
-    },
-    {
-      "proposition": "Figure 2 pixels do not contain the EMT panels appended to its caption.",
+      {
+        "proposition": "The Figure 2 caption states that the figure contains EMT immunostaining and category quantification.",
+        "snippet": "Immunostaining of epithelial (E-cadherin) and mesenchymal (Vimentin) markers with the Tomato lineage reporter in cSCCs from three p53fl/fl genotypes. Representative images highlight epithelial (magenta), mesenchymal (yellow), and hybrid (cyan) tumor cells.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
+        "anchor": "Figure 2 caption, text half of the caption/pixel contradiction",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 2 pixels do not contain the EMT panels appended to its caption.",
         "snippet": "The downloaded Figure 2 contains the sorting workflow, volcano plots, heatmaps and pathway bars, but no E-cadherin/Vimentin tumour images or EMT-category graph.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig02.jpg",
-      "anchor": "Figure 2, full pixel inspection after 96-effective-PPI preflight",
-      "evidence_relation": "text_contradicted_by_panel",
-      "evidence_pair": "PMID41984841-FIG2-CAPTION-PIXELS"
-    },
-    {
-      "proposition": "The Figure 5A caption states that a p63/β-tubulin PLA negative-control panel is present.",
-      "snippet": "(Right) PLA between p63 and b-tubulin used as negative control and Quantification (%) of PLA positive cells.",
-      "surface": "body",
-      "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
-      "anchor": "Figure 5A caption, text half of the caption/pixel contradiction",
-      "evidence_relation": "text_contradicted_by_panel",
-      "evidence_pair": "PMID41984841-FIG5A-CAPTION-PIXELS"
-    },
-    {
-      "proposition": "The downloaded Figure 5A pixels omit the caption-declared p63/β-tubulin PLA negative control.",
-      "snippet": "Panel A shows p63/WWOX PLA for siCR and siP63 plus the p63/WWOX western blot, but no separately labelled p63/β-tubulin PLA image or quantification.",
-      "surface": "figure",
-      "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig05.jpg",
-      "anchor": "Figure 5A, panel half of the caption/pixel contradiction, inspected after 96-effective-PPI preflight",
-      "evidence_relation": "text_contradicted_by_panel",
-      "evidence_pair": "PMID41984841-FIG5A-CAPTION-PIXELS"
-    },
-    {
-      "proposition": "The ChIP-seq visual is discovery-level because the figure declares one replicate.",
+        "anchor": "Figure 2, full pixel inspection after 96-effective-PPI preflight",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[8]"
+      },
+      {
+        "proposition": "The Figure 5A caption states that a p63/β-tubulin PLA negative-control panel is present.",
+        "snippet": "(Right) PLA between p63 and b-tubulin used as negative control and Quantification (%) of PLA positive cells.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
+        "anchor": "Figure 5A caption, text half of the caption/pixel contradiction",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The downloaded Figure 5A pixels omit the caption-declared p63/β-tubulin PLA negative control.",
+        "snippet": "Panel A shows p63/WWOX PLA for siCR and siP63 plus the p63/WWOX western blot, but no separately labelled p63/β-tubulin PLA image or quantification.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig05.jpg",
+        "anchor": "Figure 5A, panel half of the caption/pixel contradiction, inspected after 96-effective-PPI preflight",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[10]"
+      },
+      {
+        "proposition": "The ChIP-seq visual is discovery-level because the figure declares one replicate.",
         "snippet": "Panel C displays p63-target heatmaps and peak profiles and prints n = 1 beside the ChIP-seq panel.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig05.jpg",
         "anchor": "Figure 5C, inspected at native pixels after 96-effective-PPI preflight",
-        "evidence_relation": "text_and_panel_agree"
+        "panel_text_relation": "text_confirmed_by_panel"
       },
       {
         "proposition": "The supplementary carcinogenesis image supports a p53-proficient sensitisation phenotype.",
@@ -284,7 +282,7 @@
         "surface": "figure",
         "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/supp-page-02.png",
         "anchor": "Supplement page 2, rendered only after measuring a 381.1-effective-PPI minimum ceiling",
-        "evidence_relation": "text_and_panel_agree"
+        "panel_text_relation": "text_confirmed_by_panel"
       }
     ]
   }
