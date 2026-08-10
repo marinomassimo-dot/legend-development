@@ -86,7 +86,7 @@
    },
    {
     "proposition": "READ FROM THE IMAGE: ethosuximide, by contrast, IS genotype-specific — non-significant in +/+ and +/−, significant only in −/−. The drug the paper favours lacks the specificity the comparator has.",
-    "snippet": "Pretreatment of an antiepileptic drug ethosuximide suppressed PTZ-induced seizure in Wwox −/− mice (Fig. 7 b), although ethosuximide pretreatment had no effects on the behavior changes in Wwox +/+ and Wwox +/− mice treated with a low dose of PTZ.",
+    "snippet": "Pretreatment of an antiepileptic drug ethosuximide suppressed PTZ-induced seizure in Wwox−/− mice (Fig. 7b), although ethosuximide pretreatment had no effects on the behavior changes in Wwox+/+ and Wwox+/− mice treated with a low dose of PTZ.",
     "anchor": "Figure 7b, image inspected — PTZ versus PTZ+ETS marked n.s. in the +/+ and +/− panels and significant in the −/− panel; the text states this for ethosuximide and does not state the converse for lithium",
     "surface": "body",
     "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
@@ -102,7 +102,7 @@
    },
    {
     "proposition": "The causal attribution to GSK3-beta rests on lithium, and the paper's own Discussion names lithium's other documented actions in this very system.",
-    "snippet": "Administration of lithium in mice has been demonstrated to attenuate PTZ-induced clonic seizure [ 10 ], and rescue Wnt-dependent cerebellar midline fusion and neurogenesis deficits early in development [ 38 ]. Lithium treatment has also been shown to induce β-catenin-mediated myelin gene expression in mouse Schwann cells and enhance remyelination of the injured peripheral nerves in mice [ 47 ].",
+    "snippet": "Administration of lithium in mice has been demonstrated to attenuate PTZ-induced clonic seizure [10], and rescue Wnt-dependent cerebellar midline fusion and neurogenesis deficits early in development [38]. Lithium treatment has also been shown to induce β-catenin-mediated myelin gene expression in mouse Schwann cells and enhance remyelination of the injured peripheral nerves in mice [47].",
     "anchor": "Discussion, final substantive paragraph",
     "surface": "body",
     "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
@@ -117,7 +117,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "snippet": "Injection of a potent GSK3β inhibitor lithium chloride significantly suppressed PTZ-induced epileptic seizure in Wwox −/− mice (Fig. 7 d).",
+    "snippet": "Injection of a potent GSK3β inhibitor lithium chloride significantly suppressed PTZ-induced epileptic seizure in Wwox−/− mice (Fig. 7d).",
     "proposition": "The paper's own statement of the lithium result, restricted to the null genotype.",
     "anchor": "Results, GSK-3β section, final paragraph",
     "surface": "body",
@@ -150,7 +150,7 @@
    },
    {
     "proposition": "READ FROM THE IMAGE: heterozygotes have a Tc-MEP latency statistically indistinguishable from homozygous nulls while their amplitude is normal — a dissociation, and a candidate carrier readout.",
-    "snippet": "an increase in Tc-MEP latency was determined in Wwox +/− mice (2.13 ± 0.22 msec; p < 0.05) when compared with the wild-type mice (Fig. 2 b, c), suggesting that Wwox haploinsufficiency may cause a partial Tc-MEP deteriorative change in mice.",
+    "snippet": "an increase in Tc-MEP latency was determined in Wwox+/− mice (2.13 ± 0.22 msec; p < 0.05) when compared with the wild-type mice (Fig. 2b, c), suggesting that Wwox haploinsufficiency may cause a partial Tc-MEP deteriorative change in mice.",
     "anchor": "Figure 2b–c, images inspected — amplitude +/+ versus +/− marked n.s. and +/− versus −/− significant; latency +/+ versus +/− significant and +/− versus −/− marked n.s. The text gives the +/+ comparison and not the +/− versus −/− one.",
     "surface": "body",
     "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
@@ -214,7 +214,7 @@
    },
    {
     "proposition": "Dosing and design of the seizure experiments, needed to judge how far the pharmacology reaches.",
-    "snippet": "Ethosuximide (i.p., 150 mg/kg), a T-type Ca 2+ channel blocker that has anticonvulsant activity (Luszczki et al., 2005), was injected into mice 45 min before PTZ-induced clonic seizures. LiCl (i.p., 60 mg/kg) were pretreated three times within 1 h before PTZ injection.",
+    "snippet": "Ethosuximide (i.p., 150 mg/kg), a T-type Ca2+ channel blocker that has anticonvulsant activity (Luszczki et al., 2005), was injected into mice 45 min before PTZ-induced clonic seizures. LiCl (i.p., 60 mg/kg) were pretreated three times within 1 h before PTZ injection.",
     "anchor": "Methods, 'Induction of seizure'",
     "surface": "body",
     "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",

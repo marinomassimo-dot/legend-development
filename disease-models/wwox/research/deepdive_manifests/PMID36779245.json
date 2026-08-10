@@ -93,7 +93,7 @@
   "entries": [
    {
     "proposition": "The paper explicitly finds NO evidence for an intermediate genotype class: carrying one versus two missense variants made no difference, and missense-carrying WWOX-DEE patients were as severe as null/null patients.",
-    "snippet": "We found no difference between individuals with one or two missense variants and therefore no evidence to support an “intermediate” phenotype, as our WWOX ‐DEE patients were as severe as those with two loss‐of‐function null alleles.",
+    "snippet": "We found no difference between individuals with one or two missense variants and therefore no evidence to support an “intermediate” phenotype, as our WWOX‐DEE patients were as severe as those with two loss‐of‐function null alleles.",
     "anchor": "Discussion, gene-dosage paragraph",
     "surface": "body",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
@@ -101,7 +101,7 @@
    },
    {
     "proposition": "Survival separates null/null from anything carrying a missense allele; the statistic is a three-group log-rank.",
-    "snippet": "Using the Kaplan–Meier method to analyze time to death, we found that survival was much poorer for the double null group compared with the patients who had at least one missense pathogenic variant ( p ‐value = .0085, log‐rank test).",
+    "snippet": "Using the Kaplan–Meier method to analyze time to death, we found that survival was much poorer for the double null group compared with the patients who had at least one missense pathogenic variant (p‐value = .0085, log‐rank test).",
     "anchor": "Results, Genotype-phenotype correlation",
     "surface": "body",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
@@ -117,7 +117,7 @@
    },
    {
     "proposition": "Genotype class does not predict age at seizure onset — a negative result on a different axis from survival.",
-    "snippet": "we found no difference in time to seizure onset between the three genetic groups ( p ‐value = .65, log‐rank test",
+    "snippet": "we found no difference in time to seizure onset between the three genetic groups (p‐value = .65, log‐rank test",
     "anchor": "Results, Genotype-phenotype correlation",
     "surface": "body",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
@@ -125,7 +125,7 @@
    },
    {
     "proposition": "No region of WWOX is specific to the DEE phenotype, and the two SCAR12 missense variants sit close to DEE variants rather than in a separate domain.",
-    "snippet": "no region of the gene emerged as specific for being associated with WWOX ‐DEE. Furthermore, the two missense variants associated with the rarer, milder SCAR12 phenotype are situated in close proximity to WWOX ‐DEE variants: p.Gly372Arg in exon 9 and p.Pro47Thr in exon 2.",
+    "snippet": "no region of the gene emerged as specific for being associated with WWOX‐DEE. Furthermore, the two missense variants associated with the rarer, milder SCAR12 phenotype are situated in close proximity to WWOX‐DEE variants: p.Gly372Arg in exon 9 and p.Pro47Thr in exon 2.",
     "anchor": "Results, Genetic variants, final paragraph",
     "surface": "body",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
@@ -133,7 +133,7 @@
    },
    {
     "proposition": "The same codon produces both disease poles depending on the substitution: Pro47Thr in SCAR12, Pro47Arg in WWOX-DEE.",
-    "snippet": "p.Pro47 has been associated with two pathogenic variants; the more conservative change to threonine was found in SCAR12 26 compared with the arginine substitution found in WWOX ‐DEE",
+    "snippet": "p.Pro47 has been associated with two pathogenic variants; the more conservative change to threonine was found in SCAR12 26 compared with the arginine substitution found in WWOX‐DEE",
     "anchor": "Results, Genetic variants, final paragraph",
     "surface": "body",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
@@ -149,7 +149,7 @@
    },
    {
     "proposition": "Mortality is 35% across the combined series, driven by respiratory complications.",
-    "snippet": "WWOX ‐DEE has a high mortality rate of 35%, with 23 of 62 individuals deceased in the literature and 3 of 13 patients here.",
+    "snippet": "WWOX‐DEE has a high mortality rate of 35%, with 23 of 62 individuals deceased in the literature and 3 of 13 patients here.",
     "anchor": "Discussion, mortality paragraph",
     "surface": "body",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
@@ -157,7 +157,7 @@
    },
    {
     "proposition": "A distinctive MRI pattern is present and is detectable within days of birth, not only after seizure burden accumulates.",
-    "snippet": "We identified a WWOX ‐DEE pattern of severe frontotemporal atrophy, hippocampal atrophy, very thin corpus callosum, optic atrophy, and white matter signal abnormalities. These findings were evident from as early as 15 days of life, with repeat MRI revealing increased cerebral atrophy over time.",
+    "snippet": "We identified a WWOX‐DEE pattern of severe frontotemporal atrophy, hippocampal atrophy, very thin corpus callosum, optic atrophy, and white matter signal abnormalities. These findings were evident from as early as 15 days of life, with repeat MRI revealing increased cerebral atrophy over time.",
     "anchor": "Discussion, imaging paragraph",
     "surface": "body",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
@@ -173,7 +173,7 @@
    },
    {
     "proposition": "No patient developed a tumour despite WWOX being an established tumour suppressor; the authors attribute this to early mortality rather than to absence of risk.",
-    "snippet": "there are no reports of WWOX ‐DEE or SCAR12 patients with tumors; however, this could simply be due to the high early mortality rate of WWOX‐ DEE",
+    "snippet": "there are no reports of WWOX‐DEE or SCAR12 patients with tumors; however, this could simply be due to the high early mortality rate of WWOX‐DEE",
     "anchor": "Discussion, tumour-suppressor paragraph",
     "surface": "body",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
@@ -181,7 +181,7 @@
    },
    {
     "proposition": "Severe hypomyelination is reproduced across rodent models and in human WWOX-deficient brain organoids, giving a human in-vitro system for the myelin axis.",
-    "snippet": "the brains of Wwox‐ mutant rodents demonstrate severe hypomyelination, 13 , 46 , 47 , 48 a finding more recently observed in human WWOX‐deficient brain organoids.",
+    "snippet": "the brains of Wwox‐mutant rodents demonstrate severe hypomyelination, 13 , 46 , 47 , 48 a finding more recently observed in human WWOX‐deficient brain organoids.",
     "anchor": "Discussion, models paragraph",
     "surface": "body",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",
@@ -197,7 +197,7 @@
    },
    {
     "proposition": "One third of cases required chromosomal microarray alongside sequencing; sequencing alone would have missed them.",
-    "snippet": "Without this dual approach, one third of our WWOX‐ DEE cases would have been missed.",
+    "snippet": "Without this dual approach, one third of our WWOX‐DEE cases would have been missed.",
     "anchor": "Discussion, diagnostic-workup paragraph",
     "surface": "body",
     "artifact": "files/fulltext/PMID36779245_Oliver2023_PMC.xml",

@@ -201,7 +201,7 @@
    },
    {
     "proposition": "PAIR 1, BODY SIDE. The text claims tumour load was measured relative to body weight.",
-    "snippet": "tumor load, as assessed by liver weight relative to body weight, was significantly higher in Wwox ΔHep mice as compared with control mice (Fig. 2e )",
+    "snippet": "tumor load, as assessed by liver weight relative to body weight, was significantly higher in WwoxΔHep mice as compared with control mice (Fig. 2e)",
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Hepatocyte-specific WWOX ablation accelerates HCC development'",
@@ -221,7 +221,7 @@
    },
    {
     "proposition": "PAIR 2, BODY SIDE. The text asserts the glycolytic targets did not change at the early timepoints — an assertion of measured absence.",
-    "snippet": "demonstrated no change at 1 and 3-months post treatment (Fig. 4a, b )",
+    "snippet": "demonstrated no change at 1 and 3-months post treatment (Fig. 4a, b)",
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Enhanced expression of glycolytic genes in livers of DEN-WwoxDeltaHep mice', first paragraph",
@@ -241,7 +241,7 @@
    },
    {
     "proposition": "PAIR 3, BODY SIDE. The text puts all four proliferation genes, Axin included, up from one month.",
-    "snippet": "display higher levels in the Wwox ΔHep mouse groups from as early as 1-month post DEN treatment (Fig. 3f )",
+    "snippet": "display higher levels in the WwoxΔHep mouse groups from as early as 1-month post DEN treatment (Fig. 3f)",
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Hepatocyte-specific WWOX ablation is associated with increased proliferation'",
@@ -261,7 +261,7 @@
    },
    {
     "proposition": "PAIR 4, BODY SIDE. The therapeutic claim: digoxin downregulates the HIF1alpha targets in the knockout.",
-    "snippet": "showed downregulations of HIF1α targets, whereas no significant changes were observed in digoxin-treated DEN control mice (Fig. 5d, f )",
+    "snippet": "showed downregulations of HIF1α targets, whereas no significant changes were observed in digoxin-treated DEN control mice (Fig. 5d, f)",
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Inhibition of HIF1alpha rescued the effect of WWOX loss'",
@@ -281,7 +281,7 @@
    },
    {
     "proposition": "PAIR 5, BODY SIDE. The text places the c-Myc elevation after hepatectomy on days 2, 3 and 4.",
-    "snippet": "displayed higher levels in Wwox ΔHep mice group on day 2, 3, and 4 as compared with control mice (Fig. 7d )",
+    "snippet": "displayed higher levels in WwoxΔHep mice group on day 2, 3, and 4 as compared with control mice (Fig. 7d)",
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Wwox ablation is associated with increased proliferation upon partial hepatectomy'",
@@ -301,7 +301,7 @@
    },
    {
     "proposition": "PAIR 6, BODY SIDE. The text says the knockout proliferation index kept rising while the control fell — the basis for the claim that WWOX loss removes the termination phase of liver regeneration. THE CITATION IS INHERITED, NOT THE SENTENCE'S OWN: this sentence names no figure, so the snippet is extended backwards to carry the citation of the sentence immediately before it, which is the panel the passage is reading. That inheritance is a reader's inference and is declared as one here rather than presented as the author's pointer.",
-    "snippet": "(Fig. 7a, b ). Intriguingly, whereas the proliferation index was reduced 4 and 7 days post hepatectomy in control mice, it continued rising in Wwox ΔHep mice",
+    "snippet": "(Fig. 7a, b). Intriguingly, whereas the proliferation index was reduced 4 and 7 days post hepatectomy in control mice, it continued rising in WwoxΔHep mice",
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Wwox ablation is associated with increased proliferation upon partial hepatectomy', sentence beginning 'Intriguingly, whereas the proliferation index was reduced 4 and 7 days post hepatectomy in control mice'",
@@ -385,7 +385,7 @@
    },
    {
     "proposition": "CROSS-PAPER OVER-EXTENSION BY LOST QUALIFIER — not a contradiction, and the distinction is the finding. Reference 24 is Iatan 2014, PMID 24871327, which reports lowered HDL-C in the TOTAL-BODY null and separately reports that the sole deletion of Wwox in hepatocytes did NOT change HDL-C in either sex. This Discussion drops the genotype qualifier, writing 'Wwox knockout mouse models' without restriction, inside a paragraph whose entire subject is the liver. The cited result is real; the scope it is carried at is not. That is the failure mode to tag, because a reader checking whether the source says something about HDL will find that it does.",
-    "snippet": "Wwox knockout mouse models 24 display decreased serum HDL-C",
+    "snippet": "Wwox knockout mouse models24 display decreased serum HDL-C",
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Discussion, paragraph beginning 'WWOX anti-proliferative function in HCC might also involve modulation of fatty acid/lipid metabolism'",

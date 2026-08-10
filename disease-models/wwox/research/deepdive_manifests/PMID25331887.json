@@ -245,7 +245,7 @@
   "entries": [
    {
     "proposition": "THE CENTRAL RESULT, and it is the one the whole WWOX-DDR line rests on: WWOX is required for normal ATM checkpoint signalling. Stated by the paper as a level effect across three ATM readouts.",
-    "snippet": "WWOX-depleted MCF7 cells exhibited reduced p-ATM, p-H2AX (γ-H2AX), and p-KAP1 levels ( Fig. 2 C , lanes 7–12), suggesting blunted ATM function",
+    "snippet": "WWOX-depleted MCF7 cells exhibited reduced p-ATM, p-H2AX (γ-H2AX), and p-KAP1 levels (Fig. 2C, lanes 7–12), suggesting blunted ATM function",
     "surface": "body",
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
     "anchor": "Results, 'WWOX Regulates Activation of the ATM Checkpoint', first paragraph",
@@ -269,7 +269,7 @@
    },
    {
     "proposition": "The specificity claim: the DNA-damage induction is asserted to be particular to WWOX and not to its fragile-site neighbour or to the other classic fragile gene.",
-    "snippet": "no altered expressions of the fragile site gene FHIT and the WWOX neighboring gene MAF after induction of DSBs were observed ( Fig. 1 A ), suggesting that this effect is specific for WWOX",
+    "snippet": "no altered expressions of the fragile site gene FHIT and the WWOX neighboring gene MAF after induction of DSBs were observed (Fig. 1A), suggesting that this effect is specific for WWOX",
     "surface": "body",
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
     "anchor": "Results, 'Induction of WWOX Expression After DNA Damage', second sentence",
@@ -289,7 +289,7 @@
    },
    {
     "proposition": "🔴 THE RESULT THAT PUTS THIS PAPER IN CONFLICT WITH PMID 38499540, and the reason it was queued. WWOX raises homologous recombination roughly twofold in a DR-GFP reporter.",
-    "snippet": "The GFP-positive population increased approximately twofold from 10% to 21% after I-SceI expression in the cells expressing WWOX ( Fig. 3 E ), suggesting a more efficient HR repair in the cells containing WWOX",
+    "snippet": "The GFP-positive population increased approximately twofold from 10% to 21% after I-SceI expression in the cells expressing WWOX (Fig. 3E), suggesting a more efficient HR repair in the cells containing WWOX",
     "surface": "body",
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
     "anchor": "Results, 'WWOX Regulates DNA Repair', HR reporter paragraph",
@@ -305,7 +305,7 @@
    },
    {
     "proposition": "TEXT-VERSUS-CAPTION PAIR, RUNNING-TEXT SIDE. The Results sentence attributes the 15-minute foci comparison to NCS.",
-    "snippet": "We observed higher numbers of γ-H2AX foci in MCF7 control cells compared with WWOX-depleted cells at 15 min after NCS treatment ( Fig. 3 C and Fig. S3 B )",
+    "snippet": "We observed higher numbers of γ-H2AX foci in MCF7 control cells compared with WWOX-depleted cells at 15 min after NCS treatment (Fig. 3C and Fig. S3B)",
     "surface": "body",
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
     "anchor": "Results, 'WWOX Depletion Leads to Impaired γ-H2AX Foci Formation', final paragraph",
@@ -329,7 +329,7 @@
    },
    {
     "proposition": "The foci delay in knockout MEFs, stated by the paper as a delay.",
-    "snippet": "Confocal microscopy revealed that γ-H2AX foci formation was clearly delayed in KO MEFs compared with their WT counterparts ( Fig. 3 A )",
+    "snippet": "Confocal microscopy revealed that γ-H2AX foci formation was clearly delayed in KO MEFs compared with their WT counterparts (Fig. 3A)",
     "surface": "body",
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
     "anchor": "Results, 'WWOX Depletion Leads to Impaired γ-H2AX Foci Formation'",
@@ -345,7 +345,7 @@
    },
    {
     "proposition": "The rescue that makes the knockout phenotype attributable to WWOX rather than to the clone.",
-    "snippet": "reconstitution of WWOX expression in KO MEFs rescued γ-H2AX foci formation to comparable levels as in WT cells ( Fig. 3 B )",
+    "snippet": "reconstitution of WWOX expression in KO MEFs rescued γ-H2AX foci formation to comparable levels as in WT cells (Fig. 3B)",
     "surface": "body",
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
     "anchor": "Results, 'WWOX Depletion Leads to Impaired γ-H2AX Foci Formation'",
@@ -361,7 +361,7 @@
    },
    {
     "proposition": "The microhomology repair result, quoted with the numbers the text gives.",
-    "snippet": "control MCF7 cells were able to recover about 80% of Luc activity, whereas WWOX-depleted MCF7 cells recovered only 15% ( Fig. 3 D )",
+    "snippet": "control MCF7 cells were able to recover about 80% of Luc activity, whereas WWOX-depleted MCF7 cells recovered only 15% (Fig. 3D)",
     "surface": "body",
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
     "anchor": "Results, 'WWOX Regulates DNA Repair', pGL2-Luc paragraph",
@@ -385,7 +385,7 @@
    },
    {
     "proposition": "The direct corollary, and the reason the K63 result is not a curiosity: removing the acceptor lysine SHORTENS the protein's half-life. Ubiquitination here preserves WWOX rather than consuming it, which is the exact inverse of the default the dismissal ledger records as having bitten this project before — polyubiquitination read as a proteasomal death sentence. Any future reasoning about WWOX turnover, in any genotype, has to start from the fact that at least one of its ubiquitin chains does the opposite.",
-    "snippet": "We found, indeed, that half-life of WWOX-K274R is shorter compared with WWOX ( Fig. S7 B )",
+    "snippet": "We found, indeed, that half-life of WWOX-K274R is shorter compared with WWOX (Fig. S7B)",
     "surface": "body",
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
     "anchor": "Results, 'WWOX Is Ubiquitinated at Lysine 274 on DNA Damage'. The supporting panel S7B is in the supplementary PDF, which is NOT retrievable — see the note on coverage below — so this statement is carried as the authors' assertion with its evidence declared absent.",
@@ -393,7 +393,7 @@
    },
    {
     "proposition": "The residue claim: K274 is named as the acceptor and the mutant is said to lack the modification.",
-    "snippet": "K274R mutant WWOX lacked DNA damage-induced ubiquitination ( Fig. 6 A ), identifying K274 as a main ubiquitin acceptor lysine residue on DSBs",
+    "snippet": "K274R mutant WWOX lacked DNA damage-induced ubiquitination (Fig. 6A), identifying K274 as a main ubiquitin acceptor lysine residue on DSBs",
     "surface": "body",
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
     "anchor": "Results, 'WWOX Is Ubiquitinated at Lysine 274 on DNA Damage', opening",
@@ -409,7 +409,7 @@
    },
    {
     "proposition": "The nuclear-ubiquitination claim, stated as an absolute negative for the WW1 mutant.",
-    "snippet": "Nuclear GST-WWOX, but not WWOX-WFPA, was found to be polyubiquitinated ( Fig. 5 B )",
+    "snippet": "Nuclear GST-WWOX, but not WWOX-WFPA, was found to be polyubiquitinated (Fig. 5B)",
     "surface": "body",
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
     "anchor": "Results, 'DNA Damage Triggers Nuclear Accumulation and Ubiquitination of WWOX', fractionation paragraph",
@@ -429,7 +429,7 @@
    },
    {
     "proposition": "The ligase claim, stated with the same absolute-negative construction.",
-    "snippet": "ectopic expression of ITCH but not a catalytic mutant mediated WWOX ubiquitination ( Fig. 7 A , lane 3 vs. lane 5)",
+    "snippet": "ectopic expression of ITCH but not a catalytic mutant mediated WWOX ubiquitination (Fig. 7A, lane 3 vs. lane 5)",
     "surface": "body",
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
     "anchor": "Results, 'Ub E3 Ligase ITCH Ubiquitinates WWOX After DNA Damage', opening",
@@ -449,7 +449,7 @@
    },
    {
     "proposition": "The genetic confirmation of the ITCH arm, and the cleanest control in the figure: the ITCH row is blank in the knockout, so the knockout is validated in the same blot that reports the phenotype.",
-    "snippet": "Itch -KO cells display reduced p-KAP1 activation as well as reduced WWOX accumulation",
+    "snippet": "Itch-KO cells display reduced p-KAP1 activation as well as reduced WWOX accumulation",
     "surface": "body",
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
     "anchor": "Results, 'Ub E3 Ligase ITCH Ubiquitinates WWOX After DNA Damage', MEF paragraph",
@@ -473,7 +473,7 @@
    },
    {
     "proposition": "The genome-instability result, and the boundary condition inside it: WWOX loss does not itself break DNA. It amplifies damage-induced breakage.",
-    "snippet": "depletion of WWOX was associated with increased DSBs after induction of DNA damage ( Fig. 2 A and B )",
+    "snippet": "depletion of WWOX was associated with increased DSBs after induction of DNA damage (Fig. 2 A and B)",
     "surface": "body",
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
     "anchor": "Results, 'WWOX Depletion Decreases Genomic Stability Upon DNA Damage'",

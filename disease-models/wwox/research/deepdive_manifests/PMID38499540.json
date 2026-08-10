@@ -218,7 +218,7 @@
    },
    {
     "proposition": "PAIR 4, BODY SIDE — this one is the running text, not a caption, and it carries the author's own citation to the panel. The claim that DNA damage does not differ is what licenses the inference that the repair-marker differences are not simply a damage effect.",
-    "snippet": "we did not detect any notable variations in the levels of damage among the distinct cell lines or genotypes (Fig. 5A–D )",
+    "snippet": "we did not detect any notable variations in the levels of damage among the distinct cell lines or genotypes (Fig. 5A–D)",
     "surface": "body",
     "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml",
     "anchor": "Results, final paragraph, sentence citing Fig 5A–D",
@@ -262,7 +262,7 @@
    },
    {
     "proposition": "The in vivo direction, stated by the body with the author's own citations to the two panels. Confirmed on both: NHEJ marker down, HDR marker up, on WWOX loss.",
-    "snippet": "substantial decrease in foci of the NHEJ marker 53BP1, in the normal mammary tissue lacking Wwox (Fig. 2A )",
+    "snippet": "substantial decrease in foci of the NHEJ marker 53BP1, in the normal mammary tissue lacking Wwox (Fig. 2A)",
     "surface": "body",
     "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml",
     "anchor": "Results, paragraph comparing normal mammary tissue between genotypes",
@@ -270,7 +270,7 @@
    },
    {
     "proposition": "The other half of the same in vivo comparison, again with the author's citation. Confirmed on Fig 2B.",
-    "snippet": "loss of WWOX led to more abundant foci in the normal mammary cells (Fig. 2B )",
+    "snippet": "loss of WWOX led to more abundant foci in the normal mammary cells (Fig. 2B)",
     "surface": "body",
     "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml",
     "anchor": "Results, paragraph comparing normal mammary tissue between genotypes",

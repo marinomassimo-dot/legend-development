@@ -40,8 +40,14 @@ class EveryTestSuiteIsActuallyRun(unittest.TestCase):
     NOT_RUN_BY_DESIGN: dict[str, str] = {}
 
     def test_every_tracked_test_file_is_in_the_runner(self) -> None:
+        # 🔴 `--others --exclude-standard` as well as the index, because the moment this check
+        # matters most is BEFORE the new suite is committed. Written first with a bare
+        # `git ls-files`, it passed over `test_recapture_snippets.py` — a file that existed,
+        # was green, and was not in the battery — because the listing it consulted could not
+        # see anything uncommitted. A guard blind precisely when it is needed is the shape this
+        # repository keeps finding in itself; here it was in the guard against that shape.
         listed = subprocess.run(
-            ["git", "ls-files", "*test_*.py"],
+            ["git", "ls-files", "--cached", "--others", "--exclude-standard", "*test_*.py"],
             cwd=ROOT, capture_output=True, text=True, check=True).stdout.split()
         tracked = {path for path in listed if Path(path).name.startswith("test_")}
         registered = set(runner.TESTS)

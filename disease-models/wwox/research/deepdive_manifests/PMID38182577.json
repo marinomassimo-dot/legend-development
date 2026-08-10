@@ -219,7 +219,7 @@
    },
    {
     "proposition": "QUALIFIED PAIR, BODY SIDE. The text calls the WWOX add-back a restoration and its effect on Myc a significant reduction, and cites Fig 6D for it. Fig 6D contains no WWOX re-expression arm at all — see entries[28] for its own caption and entries[29] for its panels — so the citation does not point at the experiment the sentence reports.",
-    "snippet": "significant reduction in Myc levels upon WWOX restoration (Fig. 6D )",
+    "snippet": "significant reduction in Myc levels upon WWOX restoration (Fig. 6D)",
     "surface": "body",
     "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
     "anchor": "Results, 'WWOX loss results in Myc alteration in yBM cells', ChIP-Seq paragraph",
@@ -238,7 +238,7 @@
    },
    {
     "proposition": "QUALIFIED PAIR, BODY SIDE — AND A CORRECTION OF THIS MANIFEST'S OWN QUOTING. The text describes Myc as lowly expressed in the p53-only knockout, which is what makes the Myc programme 'unique' to the double knockout. The first version of this locator stopped the quote at 'in SKO yBM' and so removed the author's own comparator, 'as compared to those in DKO cells'. With the comparator restored the sentence is RELATIVE and it is true; clipping it made it look absolute, and the pair that rested on the clipped form was my construction rather than the paper's error. The snippet now runs to the citation the passage gives, (Fig. 6A, B ).",
-    "snippet": "low expression of Myc and its targets in SKO yBM as compared to those in DKO cells. In fact, the Myc target pathway was unique to yBM DKO cells (Fig. 6A, B )",
+    "snippet": "low expression of Myc and its targets in SKO yBM as compared to those in DKO cells. In fact, the Myc target pathway was unique to yBM DKO cells (Fig. 6A, B)",
     "surface": "body",
     "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
     "anchor": "Results, 'WWOX loss results in Myc alteration in yBM cells', opening sentence",
@@ -257,7 +257,7 @@
    },
    {
     "proposition": "PAIR, BODY SIDE. The selectivity claim that makes simvastatin look like a targeted option: the drug spares normal bone marrow.",
-    "snippet": "did not affect control BM cells (Fig. 7C )",
+    "snippet": "did not affect control BM cells (Fig. 7C)",
     "surface": "body",
     "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
     "anchor": "Results, 'MCM7 upregulation in DKO yBM cells contributes to their tumorigenic ability', simvastatin dose-response sentence",
@@ -389,7 +389,7 @@
    },
    {
     "proposition": "SUPPLEMENT PAIR, BODY SIDE. The text reports both Myc AND MCM7 as higher in the double knockout, citing Fig S5F. MCM7 is the whole basis of the simvastatin arm, so the protein-level claim matters.",
-    "snippet": "higher level of Myc and MCM7 in DKO yBM cells relative to that in SKO yBM cells (Fig. S5F )",
+    "snippet": "higher level of Myc and MCM7 in DKO yBM cells relative to that in SKO yBM cells (Fig. S5F)",
     "surface": "body",
     "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
     "anchor": "Results, 'MCM7 upregulation in DKO yBM cells contributes to their tumorigenic ability', sentence citing Fig S5F",

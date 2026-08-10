@@ -332,12 +332,45 @@ def _quote_matches(snippet: str, text: str) -> tuple[bool, str]:
     return True, "folded"
 
 
+# 🔴 Elements that do NOT interrupt a word, so the text either side of them is contiguous in
+# the author's sentence. Every other tag is treated as a block boundary and still contributes a
+# separator, which is the conservative direction: unknown markup keeps the old behaviour and
+# only these known-inline tags change.
+#
+# Why this list exists. Until 2026-08-10 every text node was joined with a space, so
+# `<italic>WWOX</italic>‐DEE` came out as `WWOX ‐DEE` — a space the author never wrote,
+# manufactured at a markup boundary. Measured: 53 of the 59 local structured surfaces contain
+# at least one such boundary, `PMID24550385` alone has 218, and the token most often broken is
+# the gene this repository is about, because a journal italicises it in every sentence.
+#
+# The damage was not the failed matches. It was the REPAIRS: quotes re-taken from the joined
+# output carry the fabricated space, so they verify today and will stop verifying — correctly —
+# the moment this is fixed. On PMID 32000863 the five snippets carrying it are exactly the five
+# a note recorded as repaired that morning, an insert recorded before the cause was known.
+# **A repair inherits the correctness of the tool it was verified against.**
+XML_INLINE_TAGS = {
+    "italic", "bold", "sup", "sub", "sc", "underline", "monospace", "roman", "sans-serif",
+    "overline", "strike", "styled-content", "named-content", "xref", "ext-link", "uri",
+    "inline-formula", "inline-graphic", "email", "fn", "target", "milestone-start",
+    "milestone-end", "break",
+}
+HTML_INLINE_TAGS = {
+    "i", "em", "b", "strong", "sup", "sub", "span", "a", "code", "small", "u", "mark",
+    "abbr", "cite", "q", "s", "var", "kbd", "samp", "time", "big", "tt", "font", "label",
+}
+
+
 def _xml_surfaces(raw: bytes) -> tuple[str, str]:
     """Return (non-abstract text, abstract text) from XML/HTML-like content.
 
     A quote found only in ``<abstract>`` must not validate a locator declared as ``body``.
     ElementTree handles PMC XML. Malformed XML fails closed; silently stripping its tags would
     merge the abstract back into the body and recreate the shortcut this validator prevents.
+
+    Inline elements are joined with NO separator and block elements with one — see
+    ``XML_INLINE_TAGS``. This does not weaken the suspect screen: ``_refuse_suspect_surface``
+    runs on the raw decoded bytes upstream of here, so a printable substitution is caught
+    before any joining happens and cannot be normalised away by this function.
     """
     try:
         root = ElementTree.fromstring(raw)
@@ -347,19 +380,26 @@ def _xml_surfaces(raw: bytes) -> tuple[str, str]:
     body_parts: list[str] = []
     abstract_parts: list[str] = []
 
+    def local_name(node: ElementTree.Element) -> str:
+        return node.tag.rsplit("}", 1)[-1].lower() if isinstance(node.tag, str) else ""
+
     def walk(node: ElementTree.Element, in_abstract: bool = False) -> None:
-        local = node.tag.rsplit("}", 1)[-1].lower() if isinstance(node.tag, str) else ""
-        here = in_abstract or local == "abstract"
+        here = in_abstract or local_name(node) == "abstract"
         target = abstract_parts if here else body_parts
         if node.text:
             target.append(node.text)
         for child in node:
+            block = local_name(child) not in XML_INLINE_TAGS
+            if block:
+                target.append(" ")
             walk(child, here)
+            if block:
+                target.append(" ")
             if child.tail:
                 target.append(child.tail)
 
     walk(root)
-    return _normalise_text(" ".join(body_parts)), _normalise_text(" ".join(abstract_parts))
+    return _normalise_text("".join(body_parts)), _normalise_text("".join(abstract_parts))
 
 
 class _SurfaceHTMLParser(HTMLParser):
@@ -376,12 +416,20 @@ class _SurfaceHTMLParser(HTMLParser):
         self.body: list[str] = []
         self.abstract: list[str] = []
 
+    def _separate(self, tag: str) -> None:
+        """A block boundary interrupts a word; an inline one does not — see HTML_INLINE_TAGS."""
+        if tag.lower() in HTML_INLINE_TAGS:
+            return
+        (self.abstract if any(self._abstract_stack) else self.body).append(" ")
+
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         if tag.lower() in self.VOID_ELEMENTS:
+            self._separate(tag)
             return
         values = " ".join(value or "" for key, value in attrs if key in {"id", "class"})
         marker = tag.lower() == "abstract" or bool(
             re.search(r"(?:^|[-_\s])abstract(?:$|[-_\s])", values, re.IGNORECASE))
+        self._separate(tag)
         self._abstract_stack.append(marker or any(self._abstract_stack))
 
     def handle_startendtag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
@@ -390,6 +438,7 @@ class _SurfaceHTMLParser(HTMLParser):
     def handle_endtag(self, tag: str) -> None:
         if self._abstract_stack:
             self._abstract_stack.pop()
+        self._separate(tag)
 
     def handle_data(self, data: str) -> None:
         (self.abstract if any(self._abstract_stack) else self.body).append(data)
@@ -399,7 +448,7 @@ def _html_surfaces(raw: bytes) -> tuple[str, str]:
     parser = _SurfaceHTMLParser()
     parser.feed(raw.decode("utf-8", errors="strict"))
     parser.close()
-    return _normalise_text(" ".join(parser.body)), _normalise_text(" ".join(parser.abstract))
+    return _normalise_text("".join(parser.body)), _normalise_text("".join(parser.abstract))
 
 
 # 🔴 Substitutions that are PRINTABLE, and therefore invisible to any control-character
