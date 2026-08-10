@@ -2243,3 +2243,107 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
 - **Destinazione dichiarata:** **materiale per un commit candidate.** È una *sostituzione* di premessa, non un'aggiunta, quindi tocca affermazioni già in stato canonico e la promozione va fatta da chi possiede il gate, non da me.
 - **Interconnessioni:** `FT-045` · `DL-MECH-086` · manifest `PMID42128308.json` entries[7], entries[23], entries[24].
 - **Destinazione dichiarata:** **materiale per un commit candidate**.
+
+---
+
+### 🔴 DL-META-091 — Johannsen 2018 non è mai stato letto, e il modello ci poggia sopra 21 volte
+
+> **Allocazione:** 091–093 sono miei (sessione A, 2026-08-10 sera). 084 e 089 restano i buchi
+> dichiarati in precedenza; 083 è di B.
+
+- **Status:** open · **Tag epistemico:** `DATO` sul censimento, `INFERENZA` su cosa comporta.
+- **Come è emerso — e il punto è *come*, non *cosa*.** Non l'ho cercato. Stavo registrando la
+  ricevuta di `PMID 32581702` e avevo scritto `references: not_read`. **Il writer del ledger ha
+  rifiutato**: una `complete_fulltext_read` non può lasciare una sezione non letta. Enumerare la
+  `<ref-list>` è costato due minuti — 50 referenze, 22 WWOX-dirette — e incrociarle contro ogni
+  ricevuta di tutti e sei i rami ha prodotto nove paper invisibili al piano di lettura (`FT-057`).
+  Uno di quei nove è **Johannsen 2018, `PMID 29808465`**.
+
+- 🔴 **Il censimento, misurato e non stimato:**
+
+  | dove | quante volte |
+  |---|---|
+  | `discovery_ledger_current.md` | **21** occorrenze |
+  | `claim_registry_current.md` · `paper_registry_current.md` · `disease_model.md` | presente |
+  | `dismissal_ledger_current.md` · `therapeutic_hypotheses_ledger_current.md` | presente |
+  | `analysis/proteostasis_rationale.md` | presente |
+  | **ricevute full-text, su `main` · `lettore` · `lettore-b` · `mirror` · `evidence-index` · `codex`** | **0** |
+
+- 🔴 **Cosa regge esattamente.** Il dato che il modello importa da Johannsen è
+  *«Q230P → trascritto normale, proteina assente»*. **È la base dell'intera traccia di
+  proteostasi**: è ciò che rende Q230P un amorfo funzionale invece che un missenso ipomorfo, ed
+  è la ragione per cui il genotipo di riferimento viene letto «più vicino a null/null che a
+  quei fratelli» (`DL-MECH-037`, e la riserva a riga 819 di questo ledger). Se quel dato fosse
+  qualificato — un solo paziente, una sola condizione, un anticorpo, un'unica frazione — nulla
+  di ciò che ne discende cambierebbe *segno*, ma tutto cambierebbe *forza*.
+
+- **`PREMISE_TAG`:** 🔴 `PREMISE: DEFAULT_FROM_TEXTBOOK` — non perché il dato sia dubbio, ma
+  perché **nessuno in questo sistema ha visto la figura che lo mostra.** È il caso puro di
+  `UNREAD_PREMISE`: una premessa che ha attraversato l'intero stato canonico senza mai passare
+  dal gate che esiste per le premesse.
+- **`REVIVAL_TRIGGER` / condizione di chiusura:** leggere `PMID 29808465` per intero, con
+  ispezione della figura che mostra trascritto e proteina, e verificare **(a)** che il dato sia
+  su Q230P e non su un'altra variante SDR, **(b)** con quale n e in quale materiale, **(c)** se
+  il trascritto normale sia stato misurato o inferito.
+- **Interconnessioni:** `FT-057` · `FT-002` · `DL-MECH-037` · `DL-BIO-090` · `DL-BIO-085` ·
+  [[dismissal_ledger_current#DEFAULTS THAT BIT US]] · `analysis/proteostasis_rationale.md`.
+- **Destinazione dichiarata:** **priorità di lettura**, non commit candidate. Non c'è nulla da
+  promuovere finché il paper non è letto; c'è da leggere.
+
+---
+
+### 🔴 DL-MECH-092 — `p.R264Ter` non è un null finché qualcuno non misura: tronca **dopo** l'MTS e **prima** del sito catalitico
+
+- **Status:** open · **Tag epistemico:** `DATO` sulla posizione (pannello 1G di `PMID 32581702`),
+  `INFERENZA` sulle due biologie che ne discendono.
+- **Il fatto.** Il pannello 1G colloca `p.R264Ter` in rosso al confine C-terminale del blocco
+  **MTS**, immediatamente prima del `Loop` e del `Catalytic Site`, su una proteina di 414 residui.
+  Il paper dichiara la disgiunzione e non la risolve: *«resulting in a loss of normal Wwox
+  function either through protein truncation (and disruption of the active C-terminal
+  short-chain dehydrogenase/reductase SDR domain), or nonsense-mediated mRNA decay»*. Nessun
+  western, nessuna quantificazione del trascritto, nessun materiale del paziente.
+- 🔴 **Perché i due rami non sono intercambiabili.** Se il trascritto è degradato dall'NMD, il
+  prodotto è **assenza**. Se sfugge all'NMD, il prodotto conserva **WW1, l'NLS, WW2, il sito
+  NADP e l'intera sequenza di targeting mitocondriale**, e perde solo la catalisi e ciò che le
+  sta a valle: cioè una **Wwox cataliticamente morta che raggiunge ancora i mitocondri e presenta
+  ancora entrambi i domini WW ai partner PPXY**. Sono due malattie diverse — e due problemi
+  terapeutici opposti: *un'assenza non si può stabilizzare; un interattore morto-ma-presente
+  potrebbe non doverlo essere.*
+- **`PREMISE_TAG`:** 🔴 `PREMISE: DEFAULT_FROM_TEXTBOOK` — «variante nonsenso ⇒ null». È la
+  stessa premessa non misurata su cui poggia la classificazione null/missenso di Oliver 2023
+  (`PMID 36779245`), dove una delezione intronica viene codificata `null` per convenzione.
+  Sommata a `DL-BIO-090` — «missenso» non è una classe funzionale — resta che **nessuna delle
+  due classi del sistema a tre classi è definita da una misura.**
+- **`REVIVAL_TRIGGER`:** qualunque dato proteico su un allele nonsenso WWOX — western su
+  materiale di paziente, o un modello che esprima il troncato — decide il ramo.
+- **Interconnessioni:** `FT-002` · `FT-057` · `DL-BIO-090` · `DL-META-091` · manifest
+  `PMID32581702.json` entries[6], entries[7].
+- **Destinazione dichiarata:** **materiale per un commit candidate**, come qualificazione di
+  premessa e non come nuova affermazione.
+
+---
+
+### DL-META-093 — Tre modi in cui il riassunto di un paper non è il suo dato, tutti e tre nello stesso articolo
+
+- **Status:** open · **Tag epistemico:** `DATO` — tutti e tre verificati contro i pannelli.
+- **Perché una voce sola per tre reperti:** perché sono la stessa cosa vista da tre lati, e
+  perché tutti e tre sarebbero passati inosservati leggendo solo il testo corrente.
+
+  | # | il testo dice | il pannello mostra |
+  |---|---|---|
+  | 1 | *«altered distribution of BrdU-positive cells»*, senza numeri | **8 zone su 10** significative, con la zona 2 che va da ~810 a ~70 cellule/mm² — **un ordine di grandezza**, il più grande effetto del paper |
+  | 2 | l'abstract attribuisce il reperto trascrittomico ai **progenitori** | nel pannello progenitori i geni etichettati sono **grigi o verdi sotto soglia**; sono rossi solo nel pannello **neuroni** |
+  | 3 | la Discussione dice *«significantly reduced expression»* | l'asse di significatività **non è ricostruibile**: soglia a ~0.83 su un asse che si dichiara `-Log10 p`, cioè p≈0.15, e punti sopra 1.0 che una probabilità NOISeq non può assumere |
+
+- 🔴 **L'inversione di enfasi è il reperto generale.** L'effetto che il testo mette in prima
+  linea (Satb2, ~un terzo, due asterischi) è **molto più piccolo** di quello che liquida in sei
+  parole (BrdU, 8/10, ~11×). Non è disonestà: è che il testo racconta la storia che l'autore
+  sta argomentando, e il pannello contiene quello che l'esperimento ha prodotto. **Chi legge
+  solo il testo eredita l'enfasi dell'autore al posto dei suoi dati.**
+- **Corollario operativo, e va oltre questo paper:** la regola di copertura dei pannelli non
+  serve a «trovare di più». Serve perché **il testo corrente è una selezione fatta da qualcun
+  altro con un obiettivo diverso dal nostro.**
+- **Interconnessioni:** `FT-002` · `DL-BIO-085` · manifest `PMID32581702.json` entries[2], [3],
+  [10], [11], [20] · l'istruzione permanente dell'Orchestratore del 2026-08-10 sulla copertura.
+- **Destinazione dichiarata:** **materiale per un commit candidate** e argomento a favore della
+  regola di copertura, misurato invece che asserito.

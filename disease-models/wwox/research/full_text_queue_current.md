@@ -28,11 +28,33 @@ Queue of priority full texts to retrieve or deep-dive to consolidate the operati
 ## FT-002
 **Paper:** PMID 32581702 / DOI 10.3389/fnins.2020.00644 — Iacomino et al. 2020, *Front Neurosci* ([[paper_registry_current#PAPER 020]])
 **Title:** Loss of Wwox Perturbs Neuronal Migration and Impairs Early Cortical Development
-**Surface:** PMID 32581702 · `absent`
+**Surface:** PMID 32581702 · `structured` · PMCID `PMC7300205`, JATS XML da PMC efetch, CC BY ·
+`PMID32581702_Repudi2020_PMC.xml` · quattro figure dall'editore in `files/figures/PMID32581702/`
 **Priority:** HIGH
 **Why:** core prenatal migration/cortical layering paper
-**Current status:** cited in meta, not yet deeply extracted
-**Next action:** full text deep extraction
+**Current status:** ✅ **LETTO INTEGRALMENTE il 2026-08-10** — receipt `FTR-20260810-32581702-01`,
+`complete_fulltext_read`; manifest `PMID32581702.json`, 21 locator, `MANIFEST STRICT PASS` sotto
+**entrambi** i validatori (`80e6f03` e `2e6fd6a`). Copertura pannelli **22/22**, budget dichiarato
+*prima* della lettura. La voce diceva *«cited in meta, not yet deeply extracted»*: era esatta, ed
+è la classe `UNREAD_PREMISE` — una fonte su cui il modello si appoggiava senza averla letta.
+
+**Cosa ha prodotto la lettura** (dettaglio completo nel manifest e nel receipt):
+
+| reperto | dove vive |
+|---|---|
+| 🔴 il paper si contraddice sull'`n` dei controlli del suo unico esperimento umano — Methods *un* feto, Results *tre*, e la figura mostra **una** colonna Ctrl per colorazione | entries[0], [1], [14] |
+| 🔴 l'effetto più grande del paper (BrdU, **8 zone su 10** significative, ~11× alla zona 2) è riassunto nel testo come *«altered distribution»*, senza un numero | entries[2], [3] |
+| 🔴 `p.R264Ter` tronca **subito dopo l'MTS e prima del sito catalitico**: se il trascritto sfugge all'NMD il prodotto conserva WW1, WW2, NLS e l'intera sequenza di targeting mitocondriale | entries[6], [7] |
+| 🔴 l'asse di significatività dell'unica figura molecolare **non è ricostruibile** — né p-value né probabilità NOISeq | entries[10], [20] |
+| 🔴 l'abstract attribuisce ai **progenitori** ciò che il pannello mostra nei **neuroni** | entries[11] |
+| 🔴 il test proteico della claim centrale è stato fatto, è risultato **non significativo**, e la Discussione non lo ripete | entries[13] |
+| `p.P47R` (WOREE, pannello 1G) contro `p.Pro47Thr` (SCAR12, Discussione) — conferma indipendente del reperto di Oliver 2023 | entries[7], [8] |
+
+**Supplementari:** `unavailable` — cinque rotte esaurite e nominate nel manifest. Pesa: la
+`Supplementary Figure S3` **è** l'immunoistochimica di TUBA1A, cioè il negativo proteico, e non è
+stata ispezionata. Chi la ottiene riapra `entries[13]` per primo.
+
+**Next action:** nessuna sul paper. Il debito residuo è `FT-057`, che questa lettura ha generato.
 
 ---
 
@@ -1389,3 +1411,45 @@ la causa misurata sopra. **Dichiarare l'artefatto e alzare lo schema porterebbe 
 "non verificati" a FAIL duro** — è lavoro di un altro attore e non sta a me romperlo. Le
 citazioni stanno nel receipt, verificate, **pronte ad atterrare quando il normalizzatore sarà
 riparato**, che è di Plan.
+
+---
+
+## FT-057 — 🔴 NOVE REFERENZE WWOX-DIRETTE CHE LA CODA NON AVEVA MAI VISTO
+
+**Papers:** PMID 30356099 · PMID 25411445 · PMID 29808465 · PMID 30158849 · PMID 17823927 ·
+PMID 16941225 · PMID 25403906 · PMID 25416187 · PMID 17163164
+**Origine:** multi-hop di `FT-002` (`PMID 32581702`), svolto il 2026-08-10.
+**Priority:** **ALTA** — due di queste sono i maggiori lavori di coorte WOREE del campo.
+
+**Come sono emerse, e perché è un reperto e non un elenco.** Avevo scritto `references:
+not_read` sulla ricevuta di una lettura completa. **Il writer del ledger l'ha rifiutato** — una
+lettura completa non può lasciare una sezione non letta. Enumerare la `<ref-list>` JATS è
+costato due minuti: **50 referenze, 49 con PMID, 22 WWOX-dirette.** Incrociate contro ogni
+ricevuta di tutti e sei i rami e contro questa coda, **nove non esistono da nessuna parte**.
+
+🔴 **Il rifiuto ha prodotto più della scorciatoia.** Non è un aneddoto: è la misura di quanto
+costa dichiarare aperto un debito invece di chiuderlo. Due minuti contro nove paper invisibili
+al piano di lettura.
+
+| PMID | lavoro | perché conta |
+|---|---|---|
+| **30356099** | Piard 2018 — *The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome* | **la coorte WOREE più grande del campo.** `FT-002` la cita per il dato «segni antenatali fino al 25% dei casi» |
+| **25411445** | Mignot 2015 — *WWOX-related encephalopathies: delineation of the phenotypical spectrum* | il lavoro che **ha definito lo spettro**. Citato come fonte delle varianti nonsenso/frameshift severe |
+| **29808465** | Johannsen 2018 — *A novel missense variant in the SDR domain leads to complete [loss of WWOX]* | 🔴 **decide la domanda che `FT-002` lascia aperta**: un missenso nel dominio SDR che abolisce la proteina. È il caso in cui «missenso» non implica prodotto presente |
+| 30158849 | Liu 2018 — *WWOX phosphorylation, signaling, and role in neurodegeneration* | asse neurodegenerazione, *Front Neurosci* |
+| 17823927 | Ludes-Meyers 2007 — topi ipomorfi per WWOX | modello ipomorfo, non nullo — la classe che manca al confronto |
+| 16941225 | Nunez 2006 — *WWOX protein expression in normal human tissues* | la mappa di espressione basale su cui poggiano gli argomenti tissutali |
+| 25403906 | Ben-Salem 2015 — delezione di un intero esone | fenotipo antenatale |
+| 25416187 | Tabarki 2015a — *The fragile site WWOX gene and the developing brain* | |
+| 17163164 | Ramos & Aldaz 2006 — WWOX come gene di sito fragile nel cancro | parità delle fonti: oncologia |
+
+**Stato delle altre 13, per completezza:** già lette integralmente `19500159`, `24871327`,
+`30370248`, `31340538` · ricevuta parziale `24369382`, `24456803`, `24932569` · in coda non lette
+`11719429` (`FT-020`… no: da verificare), `15026124` (`FT-023`), `17360458`, `25716914`
+(`FT-030`), `26345274`, `31543760` (`FT-005`).
+
+**Preflight di superficie: NON ancora eseguito su queste nove.** Va fatto come primo gesto,
+prima di aprire qualunque PDF, e l'esito va registrato in entrambi i casi.
+
+**Next action:** preflight strutturale sulle nove → poi `30356099` e `25411445` per prime, perché
+sono le coorti su cui ogni ragionamento genotipo-fenotipo di questo modello si appoggia.
