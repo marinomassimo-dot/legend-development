@@ -330,6 +330,60 @@ it would also test whether expression tracks dose at all.
   is the kind of internal inconsistency that a reader quoting hippocampal fold-change would
   carry forward unknowingly.
 
+### 🔴 Figure 2 (`gr2.jpg`, sha256 `08f9f3f4e7ef7a61fab0d78c1e5764a959c5ad2f7e16b0f777f68e852254a69b`) — two doses below the ones in Figure 3, and none of them rescues survival
+
+`surface: figure`, 104 ppi. This figure tests the WPRE question at **4 × 10¹⁰ and 8 × 10¹⁰
+vg** — that is, at **a third and two thirds of the low dose** used in Figure 3
+(1.23 × 10¹¹). Panel B, Kaplan–Meier:
+
+| arm | outcome |
+|---|---|
+| WT (n=5) | alive past 40 days |
+| KO (n=4) | dead ~17–18 days |
+| KO + hWWOX **4E10** (n=3) | dead ~18–20 days |
+| KO + hWWOX **8E10** (n=5) | dead ~17 days |
+| KO + WWOX-WPRE **4E10** (n=3) | ~33% to ~25 days |
+
+**No treated arm in this figure survives.** Put beside Figure 3, the paper contains a
+four-point survival dose series that no single figure displays:
+
+| dose | survival |
+|---|---|
+| 4 × 10¹⁰ · 8 × 10¹⁰ | no benefit — death at ~17–25 days |
+| 1.23 × 10¹¹ (LD) | death at ~90 days |
+| 2.63 × 10¹¹ (HD) | plateau ~80% at 300 days |
+
+The threshold recorded from Figure 3 is therefore **not an artefact of comparing two doses**:
+across four doses spanning 6.6-fold, survival stays near zero, then extends, then plateaus.
+The transition sits between 1.23 and 2.63 × 10¹¹ — which is exactly the interval the
+`REVIVAL_TRIGGER` asks to be filled.
+
+### The WPRE decision, and the loop it closed
+
+Panel E, protein relative to WT = 1, cortex / hippocampus / midbrain / cerebellum:
+
+| construct | 2 × 10¹⁰ | 4 × 10¹⁰ |
+|---|---|---|
+| WWOX, **no** WPRE | `0.8 / 0.9 / 0.3 / 0.1` | `4.7 / 5.9 / 1.5 / 0.4` |
+| WWOX **+ WPRE** | `11.6 / 11.9 / 4 / 2.4` | `25.6 / 22.3 / 11.6 / 6.2` |
+
+WPRE multiplies expression roughly **10–15 fold**, and without it at 2 × 10¹⁰ the protein sits
+**at or below wild type**. Panels F and G show the visual counterpart: with WPRE the neuronal
+signal is intense and diffuse, matching the Discussion's "prominent punctate staining".
+
+🔴 **The design loop is worth stating in full, because the paper states it only in pieces.**
+WPRE was removed deliberately, to keep expression predictable and near-endogenous. Removing it
+dropped expression to wild-type level or below. Efficacy was then recovered by raising the
+dose about six-fold, from 4 × 10¹⁰ to 2.63 × 10¹¹. And at that dose the hippocampus reads
+**9- to 19-fold over wild type** (Figure 5J) — comparable to what WPRE produced at a fraction
+of the dose.
+
+So the vector was made more predictable, not lower-expressing. That is a defensible
+engineering choice and probably the right one: a controlled promoter at high dose is not the
+same risk profile as an enhancer element with a steep response. But it is **not** the story
+"we reduced expression for safety", and a reader taking the WPRE removal as evidence of lower
+transgene burden would be wrong about the final construct.
+
 ## Reading debt this leaves — explicit and large
 
 - **Introduction, all seven results sections and Materials and Methods: not read.**
