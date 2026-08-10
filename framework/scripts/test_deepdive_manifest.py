@@ -838,8 +838,78 @@ class PanelTextRelationBites(unittest.TestCase):
         manifest = self._two_entries(panel_text_relation="text_confirmed_by_panel")
         errors, _ = gate.validate(manifest, require_current_schema=True)
         self.assertTrue(any(
-            "only `text_contradicted_by_panel` may name a contradicted locator" in item
+            "contradicts: only a `text_contradicted_by_panel` locator may carry one" in item
             for item in errors))
+
+    @staticmethod
+    def _qualifying_pair(**entry_overrides) -> dict:
+        """The same fixture for the second coupled relation, so both are exercised alike."""
+        manifest = schema_v2()
+        manifest["verbatim_locators"]["entries"][0]["panel_text_relation"] = "text_only"
+        panel = {
+            "proposition": "The panel bears on the sentence and neither agrees nor disagrees",
+            "snippet": "[figure attestation] Fig. 3b carries a lane the sentence never cites",
+            "surface": "figure",
+            "anchor": "Figure 3b, read at 500 dpi",
+            "artifact": manifest["source_artifacts"][0]["path"],
+            "panel_text_relation": "panel_qualifies_text",
+            "qualifies": "entries[0]",
+            "qualifies_needle": "amino acids 388-407",
+        }
+        panel.update(entry_overrides)
+        manifest["verbatim_locators"]["entries"].append(panel)
+        return manifest
+
+    def test_the_qualifying_baseline_passes(self) -> None:
+        """🔴 A red baseline is not a capture — every refusal below needs this to be green."""
+        errors, _ = gate.validate(self._qualifying_pair(), require_current_schema=True)
+        self.assertEqual([item for item in errors if "qualif" in item], [], errors)
+
+    def test_a_qualification_without_a_pointer_is_a_block(self) -> None:
+        manifest = self._qualifying_pair()
+        del manifest["verbatim_locators"]["entries"][1]["qualifies"]
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("must name it as `entries[N]`" in item for item in errors), errors)
+
+    def test_a_qualification_without_a_needle_is_a_block(self) -> None:
+        """The pointer is an index into a reorderable array; the needle is what pins it."""
+        manifest = self._qualifying_pair()
+        del manifest["verbatim_locators"]["entries"][1]["qualifies_needle"]
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("qualifies_needle:" in item for item in errors), errors)
+
+    def test_a_qualifying_needle_from_the_wrong_sentence_is_a_block(self) -> None:
+        manifest = self._qualifying_pair(qualifies_needle="a span in no snippet at all")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("is not a fragment of the snippet" in item for item in errors),
+                        errors)
+
+    def test_a_panel_cannot_qualify_another_panel(self) -> None:
+        manifest = self._qualifying_pair()
+        manifest["verbatim_locators"]["entries"][0]["surface"] = "figure"
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("is not a text surface" in item for item in errors), errors)
+
+    def test_a_locator_cannot_qualify_itself(self) -> None:
+        manifest = self._qualifying_pair(qualifies="entries[1]")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("cannot qualify itself" in item for item in errors), errors)
+
+    def test_a_contradiction_may_not_carry_a_qualification_pointer(self) -> None:
+        """Both directions, because one-way checks are how a pair drifts apart."""
+        manifest = self._two_entries(qualifies="entries[0]")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any(
+            "qualifies: only a `panel_qualifies_text` locator may carry one" in item
+            for item in errors), errors)
+
+    def test_a_qualification_may_not_carry_a_contradiction_pointer(self) -> None:
+        """The pointers are not interchangeable: each names the relation that owns it."""
+        manifest = self._two_entries(panel_text_relation="panel_qualifies_text")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any(
+            "contradicts: only a `text_contradicted_by_panel` locator may carry one" in item
+            for item in errors), errors)
 
     def test_the_pointer_grammar_matches_the_adjudication_recipes(self) -> None:
         """Zero-based, as `adjudications.json` writes it — the reference this repo already has.

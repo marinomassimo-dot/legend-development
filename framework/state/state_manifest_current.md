@@ -311,10 +311,33 @@ In every case the text was **accurate and incomplete** — the one thing a text-
 cannot see.
 
 So each schema-v2 locator declares `panel_text_relation`: `text_only` · `panel_only` ·
-`text_confirmed_by_panel` · `text_contradicted_by_panel` · `unknown_legacy`.
-`text_contradicted_by_panel` must name the locator it overturns, as `contradicts:
-"entries[N]"`, and that pointer is a `BLOCK` when missing — an unpointed contradiction is
-prose in a JSON field that no reader can trace and no command can check.
+`text_confirmed_by_panel` · `text_contradicted_by_panel` · `panel_qualifies_text` ·
+`unknown_legacy`. The two **coupled** relations must name the locator they bear on, as
+`contradicts: "entries[N]"` and `qualifies: "entries[N]"`, and that pointer is a `BLOCK` when
+missing — an unpointed assertion about another locator is prose in a JSON field that no reader
+can trace and no command can check.
+
+🔴 **`panel_qualifies_text` was added on 2026-08-10, on six independent instances across five
+papers found by three actors who had not spoken.** The panel bears on the sentence and
+*neither agrees nor disagrees with it*: on `PMID 36779245` the text says one versus two
+missense variants make no difference while Figure 4A orders null/missense **above**
+missense/missense with overlapping bands; on `PMID 32000863` the caption says lithium
+suppressed seizures in `Wwox−/−` mice — **which is true** — and the panel shows the same
+suppression in `+/+` and `+/−`; on `PMID 38182577` two pairs were **downgraded from
+contradiction** after checking that the panel is not the one the sentence cites.
+
+Every admitted value was **false** on those entries: `text_only` denies a panel that exists,
+`panel_only` denies a text relation that exists, `text_confirmed_by_panel` is false,
+`text_contradicted_by_panel` is the word that had been removed *after being verified wrong*,
+and `unknown_legacy` is false for a reading made today. **When no admitted value is true, the
+defect is the enum, not the choice** — forcing one would write a known falsehood into
+canonical state, and that outlasts any ordering of contracts. *«Incomplete is not false»* is
+the shortest statement of the relation.
+
+The needle field is `qualifies_needle`, not the bare `needle` the value was first emitted
+with. That is the **smaller** vocabulary, not the larger: `contradicts`/`contradicts_needle`
+already fixes the grammar as `<pointer>`/`<pointer>_needle`, so a bare `needle` would be a
+second naming convention living beside the first.
 
 🔴 **And the pointer alone is not enough, because `entries[N]` is a position in an array that
 can be reordered.** The three checks around it — the target exists, it is a text surface, it

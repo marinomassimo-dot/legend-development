@@ -93,14 +93,49 @@ PANEL_TEXT_RELATIONS = {
     "panel_only",                   # read from the image; the text carries no equivalent
     "text_confirmed_by_panel",      # both were looked at and they agree
     "text_contradicted_by_panel",   # both were looked at and they do not — see COUPLING below
+    # 🔴 The panel bears on the sentence and neither agrees nor disagrees with it. Added
+    # 2026-08-10 on SIX independent instances across five papers, found by three actors who
+    # had not spoken: PMID 36779245 entry 0, where the text says one versus two missense
+    # variants make no difference and Figure 4A orders null/missense ABOVE missense/missense
+    # with overlapping bands; PMID 32000863 entry 0, where the caption says lithium suppressed
+    # seizures in Wwox−/− mice — true — and the panel shows the same suppression in +/+ and
+    # +/−; the Iatan case; and the two pairs on PMID 38182577 that B DOWNGRADED from
+    # contradiction after checking that the panel is not the one the sentence cites.
+    #
+    # Every admitted value was false on those entries, and that is what decided it: `text_only`
+    # denies a panel that exists, `panel_only` denies a text relation that exists,
+    # `text_confirmed_by_panel` is false, `text_contradicted_by_panel` is the word that was
+    # removed after being verified wrong, and `unknown_legacy` is false for a reading made
+    # today. **When no admitted value is true, the defect is the enum.** Forcing one would
+    # write a known falsehood into canonical state, which outlasts any ordering of contracts.
+    #
+    # "Incomplete is not false" is the shortest statement of the relation.
+    "panel_qualifies_text",         # the panel bears on it and does neither — see COUPLING below
     "unknown_legacy",               # captured before this field existed; owed a re-read, not a guess
 }
-# 🔴 COUPLING. `text_contradicted_by_panel` is an assertion about ANOTHER locator, so it has to
-# name it. Without the pointer the claim is unfalsifiable prose sitting in a JSON field: a
-# reader cannot tell which sentence was contradicted, and a command cannot check anything at
-# all. The marker therefore belongs to the PANEL locator — the evidence that makes the
-# assertion — and `contradicts` resolves to the text locator it overturns.
-CONTRADICTS_RE = re.compile(r"^entries\[(\d+)\]$")
+# 🔴 COUPLING. `text_contradicted_by_panel` and `panel_qualifies_text` are both assertions
+# about ANOTHER locator, so both have to name it. Without the pointer the claim is
+# unfalsifiable prose sitting in a JSON field: a reader cannot tell which sentence was
+# overturned or qualified, and a command cannot check anything at all. The marker therefore
+# belongs to the PANEL locator — the evidence that makes the assertion — and the pointer
+# resolves to the text locator it bears on.
+POINTER_RE = re.compile(r"^entries\[(\d+)\]$")
+# Which pointer and needle each coupled relation carries. One table, because the alternative
+# is the shape this repository keeps finding in itself: the same rule written twice and
+# maintained once.
+#
+# `qualifies_needle` rather than the bare `needle` the field was first emitted with. That is a
+# deliberate divergence from the coining manifest and it is the smaller vocabulary, not the
+# larger: `contradicts`/`contradicts_needle` already fixes the grammar as
+# `<pointer>`/`<pointer>_needle`, so a bare `needle` would be a SECOND naming convention
+# living beside the first. Same pointer name, same needle rule, one suffix law.
+COUPLED_RELATIONS = {
+    "text_contradicted_by_panel": (
+        "contradicts", "contradicts_needle", "contradict", "overturns"),
+    "panel_qualifies_text": ("qualifies", "qualifies_needle", "qualify", "qualifies"),
+}
+POINTER_FIELDS = {spec[0] for spec in COUPLED_RELATIONS.values()}
+NEEDLE_FIELDS = {spec[1] for spec in COUPLED_RELATIONS.values()}
 ARTIFACT_KINDS = {"article_binary", "article_text", "supplement_text", "figure", "table"}
 SHA256_RE = re.compile(r"[a-f0-9]{64}")
 # An elided quote is verbatim in each half and not verbatim as a whole. LEGEND reads it fine;
@@ -481,10 +516,10 @@ def _artifact_text(path: Path, kind: str) -> tuple[str, str]:
     return "", ""
 
 
-def _contradiction_needle_errors(
-    entry: dict, entries: list, target: int, position: int
+def _pointer_needle_errors(
+    entry: dict, entries: list, target: int, position: int, relation: str
 ) -> list[str]:
-    """Does the contradiction address its target by CONTENT as well as by position?
+    """Does a coupled relation address its target by CONTENT as well as by position?
 
     🔴 `contradicts: "entries[N]"` is a positional pointer into a reorderable array, and the
     three checks around it — the target exists, it is a text surface, it is not this one —
@@ -507,13 +542,14 @@ def _contradiction_needle_errors(
     Folding to alphanumerics is the right strength: this asks whether the needle belongs to
     that locator, not whether the page says what the snippet says. The artifact answers that.
     """
-    needle = str(entry.get("contradicts_needle") or "").strip()
-    prefix = f"verbatim_locators.entries[{position}].contradicts_needle"
+    pointer, needle_field, _bare, verb = COUPLED_RELATIONS[relation]
+    needle = str(entry.get(needle_field) or "").strip()
+    prefix = f"verbatim_locators.entries[{position}].{needle_field}"
     if not needle:
         return [
-            f"{prefix}: `contradicts` is a position in a list that can be reordered, so it "
-            f"must be accompanied by a fragment of the snippet it overturns. Without it an "
-            f"inserted locator silently redirects the contradiction at a different sentence, "
+            f"{prefix}: `{pointer}` is a position in a list that can be reordered, so it "
+            f"must be accompanied by a fragment of the snippet it {verb}. Without it an "
+            f"inserted locator silently redirects the relation at a different sentence, "
             f"and every other check still passes"
         ]
     key = _match_key(needle)
@@ -522,7 +558,7 @@ def _contradiction_needle_errors(
     if key not in _match_key(str(entries[target].get("snippet", ""))):
         return [
             f"{prefix}: {needle!r} is not a fragment of the snippet of entries[{target}], "
-            f"which is what `contradicts` names. Either the index has slipped or the "
+            f"which is what `{pointer}` names. Either the index has slipped or the "
             f"fragment was taken from the wrong sentence"
         ]
     also = [index for index, other in enumerate(entries)
@@ -785,16 +821,23 @@ def validate(
                     errors.append(
                         f"verbatim_locators.entries[{position}].panel_text_relation: must be "
                         f"one of {sorted(PANEL_TEXT_RELATIONS)}")
-                contradicts = entry.get("contradicts")
-                if relation == "text_contradicted_by_panel":
-                    match = CONTRADICTS_RE.match(str(contradicts or ""))
+                # Both coupled relations are checked by one block, because they differ only in
+                # the words: each asserts something about another locator, so each must name
+                # it, and each owes the same needle for the same reason. Two copies of this
+                # would be the fourth-site failure in the module that documents it.
+                coupled = COUPLED_RELATIONS.get(str(relation))
+                pointer_field = coupled[0] if coupled else None
+                pointed = entry.get(pointer_field) if coupled else None
+                if coupled:
+                    _pointer, _needle_field, bare, verb = coupled
+                    match = POINTER_RE.match(str(pointed or ""))
                     if match is None:
                         errors.append(
-                            f"verbatim_locators.entries[{position}].contradicts: "
-                            "`text_contradicted_by_panel` asserts that another locator is "
-                            "wrong, so it must name it as `entries[N]`. Unpointed, the "
-                            "contradiction is prose in a JSON field: no reader can tell which "
-                            "sentence was overturned and no command can check it")
+                            f"verbatim_locators.entries[{position}].{pointer_field}: "
+                            f"`{relation}` asserts something about another locator, so it "
+                            "must name it as `entries[N]`. Unpointed, the claim is prose in a "
+                            "JSON field: no reader can tell which sentence it bears on and no "
+                            "command can check it")
                     else:
                         # 🔴 ZERO-BASED, and that is a deliberate choice between two
                         # conventions this repository already uses for the same thing.
@@ -808,30 +851,31 @@ def validate(
                         target = int(match.group(1))
                         if target == position - 1:
                             errors.append(
-                                f"verbatim_locators.entries[{position}].contradicts: a locator "
-                                "cannot contradict itself")
+                                f"verbatim_locators.entries[{position}].{pointer_field}: a "
+                                f"locator cannot {bare} itself")
                         elif target >= len(entries):
                             errors.append(
-                                f"verbatim_locators.entries[{position}].contradicts: no "
+                                f"verbatim_locators.entries[{position}].{pointer_field}: no "
                                 f"entries[{target}] in this manifest")
                         elif entries[target].get("surface") not in TEXT_SURFACES:
                             errors.append(
-                                f"verbatim_locators.entries[{position}].contradicts: "
+                                f"verbatim_locators.entries[{position}].{pointer_field}: "
                                 f"entries[{target}] is not a text surface. What a panel "
-                                "contradicts is something the text said; pointing at another "
-                                "panel records a disagreement between images, which is a "
+                                f"{verb} is something the text said; pointing at another "
+                                "panel records a relation between images, which is a "
                                 "different finding and needs its own words")
                         else:
-                            errors.extend(_contradiction_needle_errors(
-                                entry, entries, target, position))
-                elif contradicts is not None:
-                    errors.append(
-                        f"verbatim_locators.entries[{position}].contradicts: only "
-                        "`text_contradicted_by_panel` may name a contradicted locator")
-                elif entry.get("contradicts_needle") is not None:
-                    errors.append(
-                        f"verbatim_locators.entries[{position}].contradicts_needle: only a "
-                        "`text_contradicted_by_panel` locator may carry one")
+                            errors.extend(_pointer_needle_errors(
+                                entry, entries, target, position, str(relation)))
+                for field in sorted(POINTER_FIELDS | NEEDLE_FIELDS):
+                    if entry.get(field) is None:
+                        continue
+                    owner = next(name for name, spec in COUPLED_RELATIONS.items()
+                                 if field in spec[:2])
+                    if relation != owner:
+                        errors.append(
+                            f"verbatim_locators.entries[{position}].{field}: only a "
+                            f"`{owner}` locator may carry one")
 
                 artifact_values = entry.get("artifact")
                 if isinstance(artifact_values, str):

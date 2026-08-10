@@ -8,7 +8,7 @@
 
 ## ▶ Start here
 
-**415 records have not been processed.** **248** of them have a free full text and can be worked immediately.
+**415 records have not been processed.** **247** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
@@ -83,10 +83,10 @@ time; it does not redistribute or license the article text.
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 326 | 46% |
 | **Catalogued, never processed** — the reading debt | 168 | 24% |
-| Known to the tracking log only | 157 | 22% |
-| Processed from the abstract | 11 | 2% |
-| Partial full text read | 2 | 0% |
-| Full text read | 42 | 6% |
+| Known to the tracking log only | 155 | 22% |
+| Processed from the abstract | 10 | 1% |
+| Partial full text read | 4 | 1% |
+| Full text read | 43 | 6% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
 `fulltext_read_receipts.jsonl`. Historical registry-only full-text declarations remain
@@ -358,8 +358,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [39416860](https://pubmed.ncbi.nlm.nih.gov/39416860/) | 2024 | ✅ | Case Reports; Journal Article | screened | WWOX-related epileptic encephalopathy caused by a novel mutation in the WWOX gene: a case report. |
 | [38563965](https://pubmed.ncbi.nlm.nih.gov/38563965/) | 2024 | ✅ | Journal Article; Research Support, N.I.H., Extramural | screened | Endothelial knockdown of the tumor suppressor, WWOX, increases inflammation in ventilator-induced lung injury. |
 | [38542478](https://pubmed.ncbi.nlm.nih.gov/38542478/) | 2024 | ✅ | Journal Article; Review | screened | Zfra Overrides WWOX in Suppressing the Progression of Neurodegeneration. |
-| [38499540](https://pubmed.ncbi.nlm.nih.gov/38499540/) | 2024 | ✅ | Journal Article | screened | Unveiling the relationship between WWOX and BRCA1 in mammary tumorigenicity and in DNA repair pathway selection. |
-| [38182577](https://pubmed.ncbi.nlm.nih.gov/38182577/) | 2024 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | ✎ corrected — WWOX promotes osteosarcoma development via upregulation of Myc. |
 | [38203337](https://pubmed.ncbi.nlm.nih.gov/38203337/) | 2023 | ✅ | Journal Article | screened | Mechanistic Investigation of WWOX Function in NF-kB-Induced Skin Inflammation in Psoriasis. |
 | [37974179](https://pubmed.ncbi.nlm.nih.gov/37974179/) | 2023 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | Identification of compound heterozygous deletion of the WWOX gene in WOREE syndrome. |
 | [37897534](https://pubmed.ncbi.nlm.nih.gov/37897534/) | 2023 | ✅ | Journal Article | screened | Loss of fragile WWOX gene leads to senescence escape and genome instability. |
@@ -756,7 +754,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41661231](https://pubmed.ncbi.nlm.nih.gov/41661231/) | 2026 | — | Journal Article | screened | RNAseq-based meta-analyses revealed tumor suppressor-inducer fusion events in liver, oral, and ovarian cancer in the Indian population: a cancer cell surviving mechanism. |
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 
-*(showing all 651 outstanding records)*
+*(showing all 649 outstanding records)*
 
 ## Already processed from this seed
 
@@ -767,6 +765,8 @@ for an entirely unprocessed record.
 | PMID | Year | FT | Evidence depth | Registry record | Title |
 |---|---:|:---:|---|---|---|
 | [29808465](https://pubmed.ncbi.nlm.nih.gov/29808465/) | 2018 | — | abstract only | PAPER 041 | A novel missense variant in the SDR domain of the WWOX gene leads to complete loss of WWOX protein with early-onset epileptic encephalopathy and severe developmental delay. |
+| [38499540](https://pubmed.ncbi.nlm.nih.gov/38499540/) | 2024 | ✅ | partial full text | receipt FTR-20260810-38499540-01 | Unveiling the relationship between WWOX and BRCA1 in mammary tumorigenicity and in DNA repair pathway selection. |
+| [38182577](https://pubmed.ncbi.nlm.nih.gov/38182577/) | 2024 | ✅ | full text | receipt FTR-20260810-38182577-02 | ✎ corrected — WWOX promotes osteosarcoma development via upregulation of Myc. |
 | [38161429](https://pubmed.ncbi.nlm.nih.gov/38161429/) | 2023 | ✅ | full text | PAPER 046 | Neuroimaging features of WOREE syndrome: a mini-review of the literature. |
 | [37519886](https://pubmed.ncbi.nlm.nih.gov/37519886/) | 2023 | ✅ | full text | PAPER 060 | LINC01137/miR-186-5p/WWOX: a novel axis identified from WWOX-related RNA interactome in bladder cancer. |
 | [36572673](https://pubmed.ncbi.nlm.nih.gov/36572673/) | 2022 | ✅ | full text | receipt FTR-20260810-36572673-01 | Loss of tumor suppressor WWOX accelerates pancreatic cancer development through promotion of TGFβ/BMP2 signaling. |
@@ -798,11 +798,11 @@ for an entirely unprocessed record.
 | [33914858](https://pubmed.ncbi.nlm.nih.gov/33914858/) | 2021 | ✅ | abstract only | PAPER 004 | Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects. |
 | [32581702](https://pubmed.ncbi.nlm.nih.gov/32581702/) | 2020 | ✅ | abstract only | PAPER 020 | Loss of Wwox Perturbs Neuronal Migration and Impairs Early Cortical Development. |
 | [31543760](https://pubmed.ncbi.nlm.nih.gov/31543760/) | 2019 | ✅ | abstract only | PAPER 022 | The WWOX Gene Influences Cellular Pathways in the Neuronal Differentiation of Human Neural Progenitor Cells. |
-| [25331887](https://pubmed.ncbi.nlm.nih.gov/25331887/) | 2014 | ✅ | abstract only | PAPER 027 | WWOX, the common fragile site FRA16D gene product, regulates ATM activation and the DNA damage response. |
 | [25012504](https://pubmed.ncbi.nlm.nih.gov/25012504/) | 2014 | ✅ | abstract only | PAPER 024 | Tumor suppressor WWOX regulates glucose metabolism via HIF1α modulation. |
 | [41442931](https://pubmed.ncbi.nlm.nih.gov/41442931/) | 2026 | — | abstract only | PAPER 003 | Vigabatrin-Associated Brain Magnetic Resonance Imaging Abnormalities in Two Children With WW domain-containing oxidoreductase-Related Epileptic Encephalopathy Syndrome. |
 | [32185845](https://pubmed.ncbi.nlm.nih.gov/32185845/) | 2020 | — | abstract only | PAPER 026 | Phosphorylation of the WWOX Protein Regulates Its Interaction with p73. |
 | [30853297](https://pubmed.ncbi.nlm.nih.gov/30853297/) | 2019 | — | abstract only | PAPER 025 | Novel WWOX deleterious variants cause early infantile epileptic encephalopathy, severe developmental delay and dysmorphism among Yemenite Jews. |
+| [25331887](https://pubmed.ncbi.nlm.nih.gov/25331887/) | 2014 | ✅ | partial full text | receipt FTR-20260810-25331887-01 | WWOX, the common fragile site FRA16D gene product, regulates ATM activation and the DNA damage response. |
 | [36537114](https://pubmed.ncbi.nlm.nih.gov/36537114/) | 2023 | — | partial full text | PAPER 017 | Expansion of the clinical and molecular spectrum of WWOX-related epileptic encephalopathy. |
 | [42193054](https://pubmed.ncbi.nlm.nih.gov/42193054/) | 2026 | ✅ | full text | PAPER 012 | WWOX-Related Epileptic Encephalopathy (WOREE Syndrome): Clinical Case Study and Literature Review. |
 | [42128308](https://pubmed.ncbi.nlm.nih.gov/42128308/) | 2026 | ✅ | full text | PAPER 029 | WWOX in brain development and disease: Molecular mechanisms and therapeutic opportunities. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [22193544](https://pubmed.ncbi.nlm.nih.gov/22193544/) | 2012 | ✅ | full text | PAPER 056 | WW domain-containing oxidoreductase promotes neuronal differentiation via negative regulation of glycogen synthase kinase 3β. |
 | [40875931](https://pubmed.ncbi.nlm.nih.gov/40875931/) | 2025 | — | full text | PAPER 014 | WWOX-Related Developmental and Epileptic Encephalopathy: Expanding the Clinical Spectrum and Deciphering the Genotype-Phenotype. |
 
-*(showing all 55 processed records from the seed)*
+*(showing all 57 processed records from the seed)*
 
 ## How to work one
 

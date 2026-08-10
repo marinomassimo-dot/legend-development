@@ -233,8 +233,8 @@
     "anchor": "Figure 6, panel G, lane quantification numbers read at original resolution",
     "panel_text_relation": "panel_qualifies_text",
     "qualifies": "entries[2]",
-    "needle": "reduction in Myc levels upon WWOX restoration",
-    "cited_panel_check": "MISMATCH. The sentence cites (Fig. 6D ); this locator reads Fig 6G. Reclassified rather than re-pointed: re-pointing would have hidden the mismatch, and the mismatch is itself the finding. FIELD COINED AHEAD OF THE SPEC: panel_qualifies_text and its pointer qualifies are emitted here for the first time, on the same basis panel_text_relation was emitted before the validator required it. The pointer grammar and the needle rule are unchanged from contradicts."
+    "cited_panel_check": "MISMATCH. The sentence cites (Fig. 6D ); this locator reads Fig 6G. Reclassified rather than re-pointed: re-pointing would have hidden the mismatch, and the mismatch is itself the finding. FIELD COINED AHEAD OF THE SPEC: panel_qualifies_text and its pointer qualifies are emitted here for the first time, on the same basis panel_text_relation was emitted before the validator required it. The pointer grammar and the needle rule are unchanged from contradicts.",
+    "qualifies_needle": "reduction in Myc levels upon WWOX restoration"
    },
    {
     "proposition": "QUALIFIED PAIR, BODY SIDE — AND A CORRECTION OF THIS MANIFEST'S OWN QUOTING. The text describes Myc as lowly expressed in the p53-only knockout, which is what makes the Myc programme 'unique' to the double knockout. The first version of this locator stopped the quote at 'in SKO yBM' and so removed the author's own comparator, 'as compared to those in DKO cells'. With the comparator restored the sentence is RELATIVE and it is true; clipping it made it look absolute, and the pair that rested on the clipped form was my construction rather than the paper's error. The snippet now runs to the citation the passage gives, (Fig. 6A, B ).",
@@ -252,8 +252,8 @@
     "anchor": "Figure 6, panel C, Myc and Mcm7 bar charts with their significance brackets, read at original resolution",
     "panel_text_relation": "panel_qualifies_text",
     "qualifies": "entries[4]",
-    "needle": "low expression of Myc and its targets in SKO yBM",
-    "cited_panel_check": "MISMATCH. The sentence cites (Fig. 6A, B ); this locator reads Fig 6C. 6C is cited in the same paragraph, but by the following sentence and for a different assertion — proximity in a paragraph is not a citation."
+    "cited_panel_check": "MISMATCH. The sentence cites (Fig. 6A, B ); this locator reads Fig 6C. 6C is cited in the same paragraph, but by the following sentence and for a different assertion — proximity in a paragraph is not a citation.",
+    "qualifies_needle": "low expression of Myc and its targets in SKO yBM"
    },
    {
     "proposition": "PAIR, BODY SIDE. The selectivity claim that makes simvastatin look like a targeted option: the drug spares normal bone marrow.",
