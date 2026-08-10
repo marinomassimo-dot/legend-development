@@ -1117,6 +1117,35 @@ stesura del manifest dichiarava "Coverage: complete"; è stata corretta.
 **Next action:** ~~adjudicare S1–S5 come immagini a risoluzione originale, poi ri-registrare a
 profondità completa con `reread_reason: inadequate_prior_coverage`.~~ **Fatto.**
 **Current status:** ✅ **CHIUSO** — `FTR-20260810-38182577-02`, `complete_fulltext_read`.
+
+---
+
+## FT-047 — Supplementari di PMID 38499540, e la lezione applicata invece che ripetuta
+**Paper:** Bidany-Mizrahi 2024 — *Unveiling the relationship between WWOX and BRCA1…*
+(⚠️ tre didascalie su sei invertite rispetto ai propri pannelli — vedi `DL-METH-081`).
+**Priority:** MEDIUM
+**Da recuperare:** `MOESM1-4` (tre `.pptx`, un `.docx`) — **non ancora scaricati**.
+**Perché è debito dichiarato e non una svista:** `Supplementary Fig. 1` è citata nel corpo per
+il confronto foci tumore-contro-normale, e non è stata adjudicata. La lettura è quindi
+`partial_fulltext_read` (`FTR-20260810-38499540-01`) **per dichiarazione, non per omissione** —
+la stessa forma che oggi, su `FT-046`, ha corretto due mie coppie di contraddizione. Registrarlo
+subito costa una riga; scoprirlo dopo costa la lettura due volte.
+**Next action:** recuperare i quattro supplementari, adjudicare S1, ri-registrare a profondità
+completa con `reread_reason: inadequate_prior_coverage`.
+**Current status:** ⬜ aperto.
+
+---
+
+## FT-048 — PMID 25331887, la fonte in vitro su cui poggia la direzione in vivo di 38499540
+**Paper:** Abu-Odeh 2014 *PNAS* — *WWOX regulates ATM activation and the DNA damage response*
+**Priority:** HIGH
+**Perché:** 38499540 conclude che i suoi risultati in vivo *«correspond with previous in vitro
+findings»* citando questo lavoro. La direzione WWOX→NHEJ nel modello murino è quindi ancorata a
+una fonte **non letta**: è precisamente la forma della premessa importata che
+`IMPORTED_PREMISE_ATTRIBUTION_GATE` esiste per intercettare.
+**Artefatto:** superficie strutturata **già acquisita** dalla sweep del 2026-08-10
+(`PMID25331887_AbuOdeh2014_PMC.html`) — non serve recuperare nulla.
+**Current status:** ⬜ aperto, artefatto in casa.
 S1–S5 resi dal PDF sorgente a 220 dpi e ispezionati come immagini; la ricetta di rendering
 (digest sorgente · pagina · dpi · digest immagine) è nel manifest sotto
 `supplement_page_renders`, così un lettore con la propria copia rigenera byte identici senza
