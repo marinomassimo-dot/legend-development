@@ -652,6 +652,20 @@ def _adjudication_recipe_errors(
       battery. Delegation, not a waiver: the byte check moves to the tool that can perform it,
       and neither tool is left asserting something it cannot see.
 
+    🔴 And the delegation stops exactly there, because half of that tool is an echo of this
+    one. `regenerate_adjudications.py` imports `_match_key` and `crop_contains_span` FROM this
+    module, so its verdict *«the locators resolve to a span inside the crop»* is produced by
+    the same code a validator would be trusting it to corroborate — a defect in the matching
+    would be invisible to the check built to confirm it. What survives as genuinely independent
+    is the DIGEST: it renders the page with `fitz`, crops, hashes, and compares, and that path
+    touches nothing here.
+
+    So this function delegates artifact identity and nothing else. Span containment is left
+    where it is rather than referred to a tool that would be quoting us back to ourselves.
+    Deferred deliberately: a second implementation of a geometric predicate is cheap, and worth
+    writing only when something actually leans on it — today seven entries on `PMID 17803050`
+    and eleven on `PMID 21212533` do, which is a reason to write it down, not yet to build it.
+
     Anything outside `page_adjudications/` is untouched: a missing artifact is still a BLOCK.
     """
     parts = Path(relative).parts
