@@ -146,7 +146,7 @@
     "anchor": "Figure 1, panel A, bar heights per gene per timepoint, read at deposited resolution 682 px",
     "panel_text_relation": "text_contradicted_by_panel",
     "contradicts": "entries[3]",
-    "needle": "no altered expressions of the fragile site gene FHIT and the WWOX neighboring gene MAF",
+    "contradicts_needle": "no altered expressions of the fragile site gene FHIT and the WWOX neighboring gene MAF",
     "cited_panel_check": "PASS. The sentence cites ( Fig. 1 A ) and this locator reads Fig 1A. Cited panel and falsifying panel are the same."
    },
    {
@@ -285,7 +285,7 @@
     "anchor": "Figure 5, panel B, nuclear and cytoplasmic pull-down anti-HA rows, read at deposited resolution 682 px",
     "panel_text_relation": "text_contradicted_by_panel",
     "contradicts": "entries[20]",
-    "needle": "but not WWOX-WFPA, was found to be polyubiquitinated",
+    "contradicts_needle": "but not WWOX-WFPA, was found to be polyubiquitinated",
     "cited_panel_check": "PASS. The sentence cites ( Fig. 5 B ) and this locator reads Fig 5B. Cited panel and falsifying panel are the same."
    },
    {
@@ -304,7 +304,7 @@
     "anchor": "Figure 7, panel A, pull-down anti-HA lanes 1-8, read at deposited resolution 682 px",
     "panel_text_relation": "text_contradicted_by_panel",
     "contradicts": "entries[22]",
-    "needle": "ITCH but not a catalytic mutant mediated WWOX ubiquitination",
+    "contradicts_needle": "ITCH but not a catalytic mutant mediated WWOX ubiquitination",
     "cited_panel_check": "PASS. The sentence cites ( Fig. 7 A , lane 3 vs. lane 5) and this locator reads exactly those lanes of Fig 7A. The citation even names the lanes, which is the strongest form this check can take."
    },
    {

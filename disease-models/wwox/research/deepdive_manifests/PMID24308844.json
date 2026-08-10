@@ -149,7 +149,7 @@
     "anchor": "Figure 3, panels a and b, read at the resolution PMC serves, 604x908 px at 150 dpi. RESOLUTION RECORDED WITH THE SURFACE: no higher-resolution deposit was sought in this pass, so a label finer than the side-chain annotations could have been missed.",
     "panel_text_relation": "panel_qualifies_text",
     "qualifies": "entries[0]",
-    "needle": "no binding was observed for the WW2 domain to any of the PPXY motif",
+    "qualifies_needle": "no binding was observed for the WW2 domain to any of the PPXY motif",
     "cited_panel_check": "MISMATCH BY CONSTRUCTION, and it is the interesting kind. The sentence about non-binding cites the ITC, not Figure 3; Figure 3 is cited two paragraphs later as the structural rationale for it. So the panel does not falsify the sentence — it cannot, because a homology model of a complex is incapable of representing its absence. Recorded as panel_qualifies_text rather than as a contradiction: what the panel qualifies is the weight the figure can bear, not the truth of the claim."
    },
    {
@@ -184,7 +184,7 @@
     "anchor": "Figure 6, panels a, b and c, read at 400x646 px, 150 dpi — the resolution PMC serves.",
     "panel_text_relation": "text_contradicted_by_panel",
     "contradicts": "entries[16]",
-    "needle": "the WW1 domain appears to be somewhat less stable compared to WW2 domain",
+    "contradicts_needle": "the WW1 domain appears to be somewhat less stable compared to WW2 domain",
     "cited_panel_check": "🔴 PARTIAL, AND DECLARED AS SUCH RATHER THAN CLAIMED WHOLE. The contradicted sentence cites Figure 6b and this locator reads Figure 6 including 6b, so the cited-panel invariant is satisfied. But what 6b shows AGREES with that sentence — WW1 does fluctuate more than WW2. What the panel contradicts is a DIFFERENT sentence of the same paragraph, 'slowly reaches structural equilibrium', which cites Figure 6a. The pointer is aimed at the locator this manifest holds; the strictly correct target is not captured as a locator, and rather than manufacture one to make the pairing tidy, the mismatch is written here. This is the same class the citation audit found earlier today, produced by me a second time, and the honest record is the fix.",
     "note_on_relation": "If the grammar allowed a pointer at a sentence not held as a locator, this would be text_contradicted_by_panel against 'slowly reaches structural equilibrium' and text_confirmed_by_panel against the stability comparison. It cannot express both, which is the gap."
    },

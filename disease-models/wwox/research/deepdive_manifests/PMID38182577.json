@@ -159,7 +159,7 @@
     "anchor": "Figure 6, panel G, lane quantification numbers read at original resolution",
     "panel_text_relation": "panel_qualifies_text",
     "qualifies": "entries[2]",
-    "needle": "reduction in Myc levels upon WWOX restoration",
+    "qualifies_needle": "reduction in Myc levels upon WWOX restoration",
     "cited_panel_check": "MISMATCH. The sentence cites (Fig. 6D ); this locator reads Fig 6G. Reclassified rather than re-pointed: re-pointing would have hidden the mismatch, and the mismatch is itself the finding. FIELD COINED AHEAD OF THE SPEC: panel_qualifies_text and its pointer qualifies are emitted here for the first time, on the same basis panel_text_relation was emitted before the validator required it. The pointer grammar and the needle rule are unchanged from contradicts."
    },
    {
@@ -178,7 +178,7 @@
     "anchor": "Figure 6, panel C, Myc and Mcm7 bar charts with their significance brackets, read at original resolution",
     "panel_text_relation": "panel_qualifies_text",
     "qualifies": "entries[4]",
-    "needle": "low expression of Myc and its targets in SKO yBM",
+    "qualifies_needle": "low expression of Myc and its targets in SKO yBM",
     "cited_panel_check": "MISMATCH. The sentence cites (Fig. 6A, B ); this locator reads Fig 6C. 6C is cited in the same paragraph, but by the following sentence and for a different assertion — proximity in a paragraph is not a citation."
    },
    {
@@ -197,7 +197,7 @@
     "anchor": "Figure 7, panel C, control curve endpoint read at original resolution 1975 px wide",
     "panel_text_relation": "text_contradicted_by_panel",
     "contradicts": "entries[6]",
-    "needle": "did not affect control BM cells",
+    "contradicts_needle": "did not affect control BM cells",
     "cited_panel_check": "PASS. The sentence cites (Fig. 7C ) and this locator reads Fig 7C. Cited panel and falsifying panel are the same, so the selectivity claim is overturned by its own evidence. This is one of the two pairs in this manifest that survived the 2026-08-10 citation audit unchanged."
    },
    {
@@ -328,7 +328,7 @@
     "anchor": "Supplementary Figure 5, panel F, lane quantifications read from the source PDF page 8 rendered at 220 dpi",
     "panel_text_relation": "text_contradicted_by_panel",
     "contradicts": "entries[22]",
-    "needle": "higher level of Myc and MCM7 in DKO yBM cells",
+    "contradicts_needle": "higher level of Myc and MCM7 in DKO yBM cells",
     "cited_panel_check": "PASS. The sentence cites (Fig. S5F ) and this locator reads Supplementary Figure 5, panel F, rendered from the supplement PDF. Cited panel and falsifying panel are the same. The second of the two pairs that survived the 2026-08-10 audit — and the stronger of the two, because the failing protein is MCM7, the target the whole simvastatin arm is built on."
    },
    {
