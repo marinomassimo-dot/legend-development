@@ -158,6 +158,16 @@
       "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p16_170dpi.png",
       "sha256": "784dbc8339b84da8121062be0cc40e69e4a5305448edc83d1329fbd1389008a3",
       "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p02_170dpi.png",
+      "sha256": "8125ffc93946db4e7ccc076f678ad61ffcbb5354180a05bb9a604b3884eb5ea2",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p05_170dpi.png",
+      "sha256": "da4ec6d1a4c0766abf3ab78b1b0887f3421930f77a1cdffeb9637f8d219fc24e",
+      "kind": "figure"
     }
   ],
   "verbatim_locators": {
@@ -410,6 +420,33 @@
         "anchor": "Supplementary figures volume page 16, rendered at 170 effective ppi from brain-2025-03809-File010.pdf",
         "panel_text_relation": "panel_only",
         "found_or_sought": "sought — I opened the page for the rescue evidence; that the functional demonstration is qualitative while its quantified counterpart omits the WT bracket is the part I did not expect"
+      },
+      {
+        "proposition": "🔴 THE PATIENT GENOTYPES, AND ONE OF THEM IS A SPLICE-ACCEPTOR ALLELE THIS CORPUS CARES ABOUT. Five patient lines are tabulated with their variants: WOREE — WSM S is NM_016373.4:c.517-2A>G homozygous, LM-iPS is c.864G>A over a 16q23.1 deletion of about 93 kb, WCH S is compound heterozygous c.410G>T p.Gly137Val with c.517-2A>G; SCAR12 — WPM S and WPM D both c.1114G>C homozygous. c.517-2A>G is a canonical splice-acceptor variant carried by two independent WOREE lines, one homozygous and one in trans. That makes characterised, AAV-transducible human neural material available for a splice-acceptor allele class, which is the class the ASO track in this repository is built around.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure 1, panel E, table of Disease / Line / Mutation: WOREE WSM S NM_016373.4:c.517-2A>G (homozygous); WOREE LM-iPS NM_016373.4:c.864G>A / arr[GRCh37] 16q23.1(78,356,662_78,450,052)del; WOREE WCH S NM_016373.4: c.410G>T p.Gly137Val, c.517-2A>G (Compound Heterozygous); SCAR12 WPM S NM_016373.4:c.1114G>C (homozygous); SCAR12 WPM D NM_016373.4:c.1114G>C (homozygous).",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p02_170dpi.png",
+        "anchor": "Supplementary figures volume page 2, rendered at 170 effective ppi from brain-2025-03809-File010.pdf",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found — I opened the last unread page to finish the volume; the genotype table is the single most reusable fact in the supplement and appears nowhere in the article body"
+      },
+      {
+        "proposition": "🔴 THE RESCUE DOES NOT CONTROL ITS OWN EXPRESSION LEVEL, AND THIS QUANTIFIES THE OVERSHOOT PATTERN. WWOX protein after AAV9 rescue, relative to wild type = 1, ranges from 0.4 to 7 depending on the line: SCAR12 WPM S1 goes from 0.1 untreated to 7 after AAV9; WOREE lines reach 0.4 to 0.9; the engineered knockouts reach 0.8 and 1.4. A seventeen-fold spread across lines treated with the same vector. Together with SATB2 at about ten-fold above wild type and TCF-4 at 0.3, the pattern recorded across this paper is not that the rescue overshoots in one direction but that it does not set a level at all.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure 1: panel M, WWOX over HSP-90 relative to JH WT = 1 — WPM S1 0.1, WPM D1 0.1, WPM D3 0.3, WPM S1 AAV9 7. Panel L — JH WT 1, LM-iPS 0.2, WSM S2 AAV9 0.4, WSM S5 AAV9 0.4, LM-iPS AAV9 0.9. Panel K — JH WT 1, JH WKO-1C AAV9 0.8, JH WKO-2C AAV9 1.4.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p02_170dpi.png",
+        "anchor": "Supplementary figures volume page 2, panels K, L and M, rendered at 170 effective ppi",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found — the value 7 is printed under a lane and is visible before reading the panel label"
+      },
+      {
+        "proposition": "Platform validation, recorded because it bounds every single-cell claim in the paper: 28,208 cells sequenced, 26,352 retained after quality control, resolved into 12 clusters and annotated both by manually curated markers and by correlation against four independent human fetal references — early, two mid and late. Canonical markers confirm the assignments. The annotation is anchored rather than asserted, which is the strongest methodological element of this study.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure 3, panel A: 28,208 cells, 26,352 after quality control, 12 clusters. Panel B: RG n=9,626, Neu n=9,128, NP n=4,792, other n=2,806. Panel D: correlation matrices against early-fetal, mid-fetal reference 1, mid-fetal reference 2 and late-fetal references. Panel E: VIM/SOX2/GFAP for RG, CENPF/MKI67/TOP2A for cycling RG, FAM107A/HOPX/LIFR for outer RG, NEUROD6/MEF2C/SYN1 for neurons.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p05_170dpi.png",
+        "anchor": "Supplementary figures volume page 5, rendered at 170 effective ppi",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "sought — I opened the page expecting characterisation and found characterisation; the four independent fetal references are more than I expected"
       }
     ]
   }
