@@ -1143,3 +1143,93 @@ nell'elenco di reclamo di questa voce, `30370248` non compariva da nessuna parte
 e `34747138` — l'unico con debito già *misurato*, tre receipt `partial_fulltext_read` — non
 ha una voce di coda affatto. Il triage resta interamente da fare, e il numero da citare
 quando si dice "quanti sono classificati" è **0 su 21**, non 19.
+
+---
+
+## FT-055 — ✅ APERTA E CHIUSA il 2026-08-10
+
+> **Numerazione:** `048`–`052` sono in uso o in rinumerazione da altri attori, `053`–`054`
+> lasciati liberi come stacco. Stessa disciplina dichiarata per `DL-*-085`: l'allocazione qui è
+> concorrente e non guardata, uno stacco costa nulla e una collisione costa un
+> `BLOCK_BATCH_COMMIT` a chi mergia per secondo.
+
+**Paper:** PMID 39416860 / DOI 10.3389/fped.2024.1453778 — Feng et al. 2024, *Front Pediatr* 12:1453778
+**Title:** WWOX-related epileptic encephalopathy caused by a novel mutation in the WWOX gene: a case report
+**Surface:** PMID 39416860 · `structured` · PMC11479972, JATS XML, CC BY 4.0 · più il PDF
+dell'editore come contenitore della figura.
+**Priority:** **ALTA** — non per il paper, per **la premessa che si diceva falsificasse**.
+
+**Perché è stata aperta:** `PMID 42128308` §9 la offre come uno dei tre controesempi che
+falsificano il framework genotipo-fenotipo a tre classi — *«a homozygous missense WWOX mutation
+(p.Ser304Tyr), in which the patient exhibited rapid clinical deterioration and died in early
+infancy, despite the mutation type typically being associated with milder phenotypes»*.
+**«Missenso ⇒ funzione residua ⇒ più lieve» è la premessa sotto il ragionamento su ipomorfi e
+ASO in questo repository**, quindi un controesempio pubblicato che la uccide vale più di
+qualunque paper nuovo.
+
+**Lettura completa**, receipt `FTR-20260810-39416860-01`, manifest
+[`PMID39416860.json`](deepdive_manifests/PMID39416860.json) — 11 locator, `MANIFEST STRICT
+PASS`. Copertura: testo, Tabella 1 e Figura 1 `read`; **supplementary `unavailable`** (checklist
+CARE; PMC 404 sul percorso `bin`, pacchetto OA offerto solo su `ftp://`).
+
+### 🔴 Il verdetto: la premessa NON è falsificata, e la review l'ha presentata come se lo fosse
+
+La zigosità che la review riporta è **accurata**. Quattro cose che la review non porta:
+
+| | |
+|---|---|
+| **ACMG** | la variante è **«Unclear clinical significance»**, dichiarato **due volte** — prima frase dell'analisi genetica e Tabella 1 |
+| **gli autori stessi** | ultima frase: la patogenicità *«require[s] validation through animal experiments and additional cases»* |
+| **secondo gene** | `CACNA1A c.4646A>G` p.Gln1549Arg, paterna, eterozigote, contro **DEE-42 autosomica dominante**, anch'essa VUS |
+| **coerenza interna** | il paper scrive **c.991C>A** nel testo e in conclusione, **c.911C>A** in Tabella 1 e in discussione |
+
+Sull'ultima, **l'aritmetica decide contro il testo corrente**: il codone 304 copre i nucleotidi
+910–912, quindi `c.911` cade nel codone 304 e `c.991` nel codone **331**. Solo `c.911C>A` è
+compatibile con `p.Ser304Tyr`. **E la stessa frase sbaglia anche l'amminoacido** — dice *«from
+glycine to serine»* stampando `p.Ser304Tyr`, serina→tirosina, nella propria parentesi. Due
+errori in una frase, e la metà che propaga a valle è la notazione proteica, cioè quella giusta.
+
+Gli autori argomentano contro il contributo di CACNA1A — il fenotipo DEE-42 non corrisponde
+bene, il padre lo porta senza fenotipo — e **l'argomento è ragionevole**. Ma è un argomento, non
+una dimostrazione, e un controesempio usato per rovesciare una regola genotipo-fenotipo non può
+lasciar cadere in silenzio un candidato concorrente in un gene epilettico dominante.
+
+**Cosa sopravvive, e non è poco:** un bambino omozigote per un missenso WWOX, da genitori
+consanguinei (cugini) entrambi portatori eterozigoti, esordio a un mese, nessun inseguimento
+oculare, nessun controllo del capo, ipoacusia bilaterale, corpo calloso sottile, EEG
+epilettiforme con asincronia interemisferica, **morto a sei mesi**. Come **osservazione
+fenotipica** regge qualunque sia la classificazione formale della variante. Ciò che il paper non
+può stabilire è che il missenso l'abbia **causata** — ed è il passo che la review compie.
+
+### 🔴 Terza istanza in una sola review della stessa compressione, ora sul lato clinico
+
+`PMID 42128308` dice *«restored»* dove il suo stesso primario mostra dieci volte il wild type;
+presenta la rimozione di WPRE come scelta di sicurezza dove il primario mostra un costo di sei
+volte la dose; e qui comprime **una VUS con un candidato concorrente** in *«despite the mutation
+type typically being associated with milder phenotypes»*. **Tre volte la review enuncia la metà
+semplice.** È una proprietà della review, visibile solo leggendo ciò che cita.
+
+### Cosa la figura ha risolto e cosa ha rifiutato di risolvere
+
+Il **trio è interamente nel pannello e solo asserito nel testo**: probando omozigote su lettura
+**forward e reverse**, entrambi i genitori eterozigoti per WWOX, **madre wild-type** per
+CACNA1A — che è ciò che rende quell'allele esclusivamente paterno.
+
+🔴 **L'aggiudicazione per cui avevo aperto il pannello è fallita, e registrarlo è il risultato.**
+Le tracce mostrano che la sostituzione è **C→A**, compatibile con **entrambe** le posizioni
+candidate perché entrambe sono C>A: **un cromatogramma non porta una coordinata**. Ho anche
+**rifiutato di aggiudicare l'EEG** — una singola epoca rappresentativa non stabilisce la
+distribuzione regionale che la didascalia rivendica.
+
+**La rotta della figura è essa stessa un reperto:** PMC dà 404 sul percorso `bin`, il pacchetto
+OA è offerto solo su `ftp://`, l'HTML di Frontiers serve `image_m` a **1056×604**. Il PDF
+dell'editore porta la stessa figura a **1955×1118, 300 ppi effettivi, `smask = 0`** — 1,85× più
+pixel per dimensione. Misurato prima di estrarre, secondo la regola corretta stasera. Leggere
+una base Sanger dalla copia servita avrebbe significato leggerla con un terzo dei pixel che
+l'editore ha spedito.
+
+**Debito residuo, ed è dove va guardato adesso:** i due controesempi che deciderebbero davvero
+la questione — **l'delezione dell'introne 4 di Oliver 2023** (categoria 2 per genotipo,
+categoria 1 per gravità) e i **sei pazienti prevalentemente missenso di Havali 2021** — restano
+non letti. Dopo questa lettura sono loro, e non questo paper, gli elementi di coda di maggior
+valore per la premessa ipomorfi/ASO.
