@@ -201,168 +201,192 @@
         "snippet": "[figure attestation — pixels cannot be quote-matched] Panel 4D velocity WT ~9.5 vs KO+W HD ~11.5 with bracket labelled *; panel 4E total distance WT ~3400 vs ~4300 with bracket labelled *; panels 4F, 4G, 4H, 4I, 4J each labelled ns.",
         "surface": "figure",
         "artifact": "files/fulltext/figures/PMID42422765/gr4.jpg",
-        "anchor": "Figure 4, panels D-K, read at 104 effective ppi from the PMC CDN image"
+        "anchor": "Figure 4, panels D-K, read at 104 effective ppi from the PMC CDN image",
+        "evidence_relation": "text_contradicted_by_panel"
       },
       {
         "proposition": "The sentence the panel contradicts, quoted verbatim from the article text.",
         "snippet": "Locomotor activity parameters, including movement velocity and total distance traveled, as well as spatial exploration of center and periphery zones, showed no significant differences between groups",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Results, 'Neuronal WWOX restoration normalizes neurobehavioral function'"
+        "anchor": "Results, 'Neuronal WWOX restoration normalizes neurobehavioral function'",
+        "evidence_relation": "text_contradicted_by_panel"
       },
       {
         "proposition": "The caption that fixes what the asterisk means, removing any reading in which the panels and the sentence could both be right.",
         "snippet": "Statistical analysis was performed using Student’s t test (∗p < 0.05; ns, not significant), Error bars represent mean ± SD",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Figure 4 caption, final sentence"
+        "anchor": "Figure 4 caption, final sentence",
+        "evidence_relation": "text_only"
       },
       {
         "proposition": "SECOND TEXT-VERSUS-PANEL CONTRADICTION, on the epilepsy claim. Panel 7C prints 0.2000 above the WT-versus-KO bracket for average spikes per day, with no asterisk and no ns, at n = 5 per group; the running text calls the same comparison a significant elevation. The SWD panel 7E is unaffected and solid: **** for WT-vs-KO and KO-vs-HD, ns for WT-vs-HD. Read from a fingerprinted raster image, never from a text layer — the 0.2000 is printed pixels, not extracted characters.",
         "snippet": "[figure attestation — pixels cannot be quote-matched] Panel 7C: '0.2000' printed above the bracket joining WT and KO. Panel 7E: brackets labelled **** (WT-KO), **** (KO-HD) and ns (WT-HD).",
         "surface": "figure",
         "artifact": "files/fulltext/figures/PMID42422765/gr7.jpg",
-        "anchor": "Figure 7, panels C and E, read at 104 effective ppi. A second independent raster surface exists for re-verification: the article body of mmc2.pdf, which can be rendered and compared without touching any text layer."
+        "anchor": "Figure 7, panels C and E, read at 104 effective ppi. A second independent raster surface exists for re-verification: the article body of mmc2.pdf, which can be rendered and compared without touching any text layer.",
+        "evidence_relation": "text_contradicted_by_panel"
       },
       {
         "proposition": "The sentence panel 7C contradicts.",
         "snippet": "Averaged spike counts further confirmed a significant elevation in spike activity in KO animals",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Results, epileptiform-activity section"
+        "anchor": "Results, epileptiform-activity section",
+        "evidence_relation": "text_contradicted_by_panel"
       },
       {
         "proposition": "The Figure 7 caption, which fixes the significance scale and also corrects the cohort size I had estimated from the plotted points as about 3.",
         "snippet": "n = 5 littermates per group. Statistical significance was determined using Student’s t test. ∗p < 0.05; ns, non-significant",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Figure 7 caption, panel C description"
+        "anchor": "Figure 7 caption, panel C description",
+        "evidence_relation": "text_only"
       },
       {
         "proposition": "THE DOSE-DEPENDENCE OF MYELINATION IS NEVER QUANTIFIED. Three separate panels show treated-animal myelination and none measures it: Figure 6F, Supplementary S7I and Supplementary S8G are all representative images without graphs or statistics. The only MBP quantification in the paper, Figure 6E, compares WT against KO with no treated arm. This claim was withdrawn earlier today on the false premise that S7I held the quantification, and is reinstated on what the panel shows.",
         "snippet": "[figure attestation — pixels cannot be quote-matched] S7 panel I: three MBP images labelled WT-RI, KO+W-LD, KO+W-HD, with no axis, no bar and no significance marker; its caption reads 'Representative MBP immunostaining at ~P90'.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p09_200dpi.png",
-        "anchor": "Supplementary Figure S7, panel I and caption, rendered from mmc1.pdf page 9 at 200 effective ppi"
+        "anchor": "Supplementary Figure S7, panel I and caption, rendered from mmc1.pdf page 9 at 200 effective ppi",
+        "evidence_relation": "panel_only"
       },
       {
         "proposition": "The sentence that cites S7I as if it carried the quantification — the sentence that caused the mistaken withdrawal.",
         "snippet": "HD treatment achieved near-complete rescue across affected regions, whereas LD treatment produced only partial recovery relative to HD",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Results, myelination section, citing Figures 6F and S7I"
+        "anchor": "Results, myelination section, citing Figures 6F and S7I",
+        "evidence_relation": "text_only"
       },
       {
         "proposition": "Neuroinflammation IS quantified, and the low dose is significantly worse than wild type on astrogliosis while the high dose is not — one more instance of LD failing where HD succeeds. S7F and S7H contain no untreated-KO arm, so within S7 the claimed reduction has no baseline; S8I supplies it.",
         "snippet": "[figure attestation — pixels cannot be quote-matched] S7F % Iba1 area: WT ~9.3, LD ~16.2, HD ~10.9, brackets ns (WT-LD) and ns (WT-HD). S7H % GFAP area: WT ~1.75, LD ~3.05, HD ~1.9, brackets ** (WT-LD) and ns (WT-HD).",
         "surface": "figure",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p09_200dpi.png",
-        "anchor": "Supplementary Figure S7, panels F and H, rendered from mmc1.pdf page 9 at 200 effective ppi"
+        "anchor": "Supplementary Figure S7, panels F and H, rendered from mmc1.pdf page 9 at 200 effective ppi",
+        "evidence_relation": "panel_only"
       },
       {
         "proposition": "The untreated-KO baseline missing from S7 exists in S8I, and it supports the paper's astrogliosis claim: GFAP-positive cells WT about 5, KO about 44, treated at P5 back to about 5, with *** for WT-vs-KO and ns for WT-vs-treated.",
         "snippet": "[figure attestation — pixels cannot be quote-matched] S8 panel I: three bars, WT ~5, KO ~44, KO+W (P5) ~5; brackets labelled *** (WT-KO) and ns (WT-treated).",
         "surface": "figure",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p10_200dpi.png",
-        "anchor": "Supplementary Figure S8, panel I, rendered from mmc1.pdf page 10 at 200 effective ppi"
+        "anchor": "Supplementary Figure S8, panel I, rendered from mmc1.pdf page 10 at 200 effective ppi",
+        "evidence_relation": "panel_only"
       },
       {
         "proposition": "THE P0-P5 WINDOW, VERIFIED AGAINST ITS PANEL rather than taken from running text. Treatment at any point P1-P5 gives survival to 300 days, and weight and glucose at P14 are ns against wild type across all five timepoints. What the panels add: the 300-day plot shows only P1 and P5; P2, P3 and P4 appear solely in the 40-day panel, and P3 is an n=3 arm that lost animals.",
         "snippet": "[figure attestation — pixels cannot be quote-matched] S8A: KO+WWOX arms at P1 (n=6), P2 (n=6), P3 (n=3), P5 (n=7) against KO+RI (n=6) dead by ~15 days; only P3 falls, to ~67% at ~24 days. S8B: P1 and P5 plateau near 75% to 300 days. S8C and S8D: brackets *** and ** for WT-vs-KO, and a single ns spanning all five treated timepoints against WT.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p10_200dpi.png",
-        "anchor": "Supplementary Figure S8, panels A-D, rendered from mmc1.pdf page 10 at 200 effective ppi"
+        "anchor": "Supplementary Figure S8, panels A-D, rendered from mmc1.pdf page 10 at 200 effective ppi",
+        "evidence_relation": "text_and_panel_agree"
       },
       {
         "proposition": "The survival threshold, stated in plain text and no longer read off a curve: the low dose does not produce animals that reach three months.",
         "snippet": "LD-treated mice did not survive to P90",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Results, behaviour section, explaining why testing was limited to WT and HD groups"
+        "anchor": "Results, behaviour section, explaining why testing was limited to WT and HD groups",
+        "evidence_relation": "text_and_panel_agree"
       },
       {
         "proposition": "THE SURVIVAL THRESHOLD HAS NO MEASURED EXPRESSION DIFFERENCE BEHIND IT. Two doses differing 2.1-fold are statistically indistinguishable in vector genomes and mRNA across four brain regions — seven of eight comparisons ns, the exception being hippocampal DNA — while producing opposite survival outcomes. Cerebellum stays below wild type at both doses; the hippocampal KO lane reads 1.1 where the other three blots read 0.02, 0.03 and 0.08.",
         "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5 panels A-D and E-H: ns on cortex, midbrain and cerebellum for both DNA and mRNA, * on hippocampal DNA only. Panels I-L lane values relative to WT: cortex KO 0.02, hippocampus KO 1.1, midbrain KO 0.03, cerebellum KO 0.08; cerebellum LD 0.7/0.5/0.7 and HD 0.7/0.5/0.2.",
         "surface": "figure",
         "artifact": "files/fulltext/figures/PMID42422765/gr5.jpg",
-        "anchor": "Figure 5, all twelve panels at P30, read at 104 effective ppi"
+        "anchor": "Figure 5, all twelve panels at P30, read at 104 effective ppi",
+        "evidence_relation": "panel_only"
       },
       {
         "proposition": "The paper's own explanation for that mismatch, credited and unverifiable here: expression predicts survival within each dose group, which lets group means overlap while outcomes diverge. It is a post-hoc comparison of survivors against non-survivors, i.e. selection-conditioned, and it rests on supplementary panels S5A-S5D.",
         "snippet": "mice from either treatment group that failed to survive exhibited reduced WWOX expression",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Results, expression section, citing Figures S5A-S5D"
+        "anchor": "Results, expression section, citing Figures S5A-S5D",
+        "evidence_relation": "text_only"
       },
       {
         "proposition": "Four survival doses exist across two figures and no single figure displays them: at 4E10 and 8E10 no treated arm survives, at 1.23E11 death by about 90 days, at 2.63E11 a plateau. The threshold is therefore not an artefact of comparing two doses.",
         "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2B: KO+AAV-hWWOX 4E10 (n=3) dead ~18-20 days, 8E10 (n=5) dead ~17 days, KO+AAV-WWOX-WPRE 4E10 (n=3) ~33% at ~25 days, against KO (n=4) dead ~17-18 days.",
         "surface": "figure",
         "artifact": "files/fulltext/figures/PMID42422765/gr2.jpg",
-        "anchor": "Figure 2, panel B, read at 104 effective ppi. NOTE: the running text states that 8E10 without WPRE rescued lethality, which my panel reading does not support; recorded as a discrepancy to re-verify, with the presumption in favour of the text."
+        "anchor": "Figure 2, panel B, read at 104 effective ppi. NOTE: the running text states that 8E10 without WPRE rescued lethality, which my panel reading does not support; recorded as a discrepancy to re-verify, with the presumption in favour of the text.",
+        "evidence_relation": "panel_only"
       },
       {
         "proposition": "WPRE removal did not lower transgene burden — it made it predictable and required a six-fold dose increase to recover efficacy. Protein without WPRE at 2E10 sits at or below wild type.",
         "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2E lane values relative to WT=1, cortex/hippocampus/midbrain/cerebellum: WWOX without WPRE 0.8/0.9/0.3/0.1 at 2E10 and 4.7/5.9/1.5/0.4 at 4E10; WWOX+WPRE 11.6/11.9/4/2.4 at 2E10 and 25.6/22.3/11.6/6.2 at 4E10.",
         "surface": "figure",
         "artifact": "files/fulltext/figures/PMID42422765/gr2.jpg",
-        "anchor": "Figure 2, panel E, read at 104 effective ppi"
+        "anchor": "Figure 2, panel E, read at 104 effective ppi",
+        "evidence_relation": "panel_only"
       },
       {
         "proposition": "The Methods settle from their own side the correction I had to make to my Figure 1 criticism: the promoter comparison used WPRE-bearing constructs throughout, so its 4E10 is not the 4E10 of Figures 2 and 3.",
         "snippet": "Constructs driven by EF1α, CMV, and MBP included WPRE, whereas the hSynI-driven vector was generated both with and without WPRE",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Materials and methods, 'Plasmid vectors'"
+        "anchor": "Materials and methods, 'Plasmid vectors'",
+        "evidence_relation": "text_only"
       },
       {
         "proposition": "The MBP vector produced essentially no detectable WWOX, so the oligodendrocyte question raised by PMID 34747138 is unanswered by this experiment rather than answered negatively.",
         "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1 panel M, WWOX immunohistochemistry in cortex, one column per promoter: EF1-Alpha weak and diffuse, CMV moderate, MBP essentially blank, SynI strong and cellular.",
         "surface": "figure",
         "artifact": "files/fulltext/figures/PMID42422765/gr1.jpg",
-        "anchor": "Figure 1, panel M, read at 104 effective ppi. Qualification: the panel shows cortex, where oligodendrocyte density is lower than in white matter; no corpus-callosum column is shown."
+        "anchor": "Figure 1, panel M, read at 104 effective ppi. Qualification: the panel shows cortex, where oligodendrocyte density is lower than in white matter; no corpus-callosum column is shown.",
+        "evidence_relation": "panel_only"
       },
       {
         "proposition": "The construct is neuron-specific but not CNS-confined: after neonatal ICV, WWOX protein reaches the sciatic nerve of high-dose animals while the liver stays negative. A biodistribution fact any safety assessment needs, obtained by the sciatic-nerve and spinal-cord dissection the Methods describe.",
         "snippet": "WWOX protein was also detected in the sciatic nerve of HD-treated mice",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Results, expression section, citing Figures S6E-S6G; paired with 'no WWOX expression was detected in the liver following either LD or HD treatment'"
+        "anchor": "Results, expression section, citing Figures S6E-S6G; paired with 'no WWOX expression was detected in the liver following either LD or HD treatment'",
+        "evidence_relation": "text_and_panel_agree"
       },
       {
         "proposition": "S6 QUALIFIES THE PNS LOCATOR ABOVE RATHER THAN CONFIRMING IT CLEANLY. The sciatic-nerve result is a blot with no quantification and visibly variable band intensity across seven high-dose animals; the panel the caption pairs it with contains four wild-type lanes rather than a WT-versus-treated comparison. The liver result is clean: treated lanes sit in the same 0.03-0.1 range as untreated Wwox-null lanes, i.e. at background for an animal with no WWOX. Cerebellum remains below wild type at P300, confirming from a second timepoint what Figure 5L showed at P30.",
         "snippet": "[figure attestation — pixels cannot be quote-matched] S6E: four lanes all labelled WT, values 1 / 0.9 / 0.3 / 0.6. S6F: lanes KO then seven HD, no numeric quantification, band intensity ranging from strong to barely detectable. S6H liver: WT 1, KO 0.2, KO 0.1, LD 0.03, LD 0.1, HD 0.05, HD 0.1. S6A spinal cord: WT 1, WT 1.3, KO 0.01, LD 0.8, LD 0.3, HD 1.2, HD 1.3. S6D at P300: WT 1, KO 0.1, cortex 4.6, hippocampus 4.7, midbrain 3.1, cerebellum 0.6.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p08_200dpi.png",
-        "anchor": "Supplementary Figure S6, panels A, D, E, F, H, rendered from mmc1.pdf page 8 at 200 effective ppi"
+        "anchor": "Supplementary Figure S6, panels A, D, E, F, H, rendered from mmc1.pdf page 8 at 200 effective ppi",
+        "evidence_relation": "panel_only"
       },
       {
         "proposition": "Injection technique changed between the two papers, a declared methodological upgrade: stereotaxic here, free-hand in PMID 34747138.",
         "snippet": "conducted using stereotactic technique to ensure consistency",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Materials and methods, 'ICV injection of AAV particles into P0-P5 Wwox-null mice'"
+        "anchor": "Materials and methods, 'ICV injection of AAV particles into P0-P5 Wwox-null mice'",
+        "evidence_relation": "text_only"
       },
       {
         "proposition": "Blinding is declared more weakly than in the 2021 paper, which stated it unconditionally.",
         "snippet": "Data were analyzed in a blinded manner when feasible",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Materials and methods, 'Statistical analysis'"
+        "anchor": "Materials and methods, 'Statistical analysis'",
+        "evidence_relation": "text_only"
       },
       {
         "proposition": "Declared commercial interest, absent from the 2021 paper, which stated no conflict of interest. Recorded as context for the two text-versus-panel contradictions above, not as an argument against the data.",
         "snippet": "R.I.A. is a consultant for Mahzi Therapeutics. A.B., T.B., and Y.W. are employed by Mahzi Therapeutics",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Declaration of interests; the work is also declared as supported by Mahzi Therapeutics in the Acknowledgments"
+        "anchor": "Declaration of interests; the work is also declared as supported by Mahzi Therapeutics in the Acknowledgments",
+        "evidence_relation": "text_only"
       },
       {
         "proposition": "Transduction efficiency, correcting a number I had carried over from the 2021 paper.",
         "snippet": "rising from ∼40% to ∼55%–60% following treatment",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
-        "anchor": "Results, WPRE section, citing Figure S3C"
+        "anchor": "Results, WPRE section, citing Figure S3C",
+        "evidence_relation": "text_only"
       }
     ]
   }
