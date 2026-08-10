@@ -105,14 +105,64 @@ efficacy was then recovered by dose.
 | 34747138: residual myelin deficit attributed to possible oligodendrocyte-autonomous function | **tested and failed — but by a vector with poor tropism for that cell, so the question is open, not closed** |
 | 34747138: reviewer objection "no evidence for absence in the PNS", unquotable | this paper has sciatic-nerve and spinal-cord sections in its Methods — **unread here**, and the obvious place to look |
 
+## Figures: retrieved, ceiling measured, one inspected (2026-08-10, same session)
+
+Part of the debt below was paid immediately rather than deferred. All seven main figures were
+retrieved and fingerprinted; **the ceiling is 104 effective ppi and there is no better copy.**
+
+| route | result |
+|---|---|
+| PMC CDN blobs (`gr1`–`gr7`) | ✅ 726–738 px wide → **104 ppi** |
+| `pmc…/articles/PMC13343157/pdf/main.pdf` | JS "Preparing to download" interstitial |
+| `pmc…/articles/instance/13343157/bin/mmc1.pdf`, `mmc2.pdf` | same interstitial |
+| `ftp.ncbi…/oa_pdf/24/2a/main.PMC13343157.pdf` | 404 |
+| Europe PMC `?pdf=render` · `supplementaryFiles` | 500 · 404 |
+
+**This inverts the lesson learned four hours ago on `PMID 34747138`, and that is the point.**
+There the OA bundle served 100 ppi while the article PDF held 200, so the canonical route was
+the worse one. Here the CDN copy at 104 ppi is the *only* one: every PDF route is closed. The
+generalisable rule is not "prefer the PDF" — it is **measure every available route and take
+the best, because which route wins is not stable across papers.** The licence differs too:
+`CC BY-NC-ND` here against `CC BY` for 34747138.
+
+🔴 **Supplementary Figure S8 — which carries the entire P0–P5 window result — is not
+retrievable.** Every route above fails for `mmc1.pdf` and `mmc2.pdf`. The window finding
+therefore rests on running text alone, and that is now a measured fact rather than an
+omission.
+
+### Figure 6 (`gr6.jpg`, sha256 `a7c90344223caf323cfb92aea250d3753c12ae057594239dc406b0865ba959f4`) — inspected
+
+`surface: figure`. Read at 104 ppi. What the panels carry:
+
+- **C** — brain weight WT ≈465 mg vs KO ≈245 mg, `****`. A ~47% reduction.
+- **D** — corpus callosum thickness WT ≈325 vs KO ≈230, `**`.
+- **E** — MBP intensity, WT/KO pairs for four regions, each annotated with its **reduction**:
+  **corpus callosum 48% · cortex 30% · striatum 50% · anterior commissure 70%.** The myelin
+  deficit is strongly **region-dependent**, worst in the anterior commissure and mildest in
+  cortex — a gradient the running text does not give.
+- **F** — WT / LD / HD image grid for corpus callosum, striatum and cortex.
+
+🔴 **The same shape as the previous three readings, in a new form.** Panels C, D and E carry
+the quantification and contain **only WT and KO — the treated animals are absent**. Panel F
+contains the treated animals at both doses and carries **no quantification and no statistics
+at all**: it is an image grid. So in this figure the dose-dependence of myelination is
+*shown* and never *measured*.
+
+That is now four consecutive papers where the comparison a reader most needs is the one the
+figure does not draw. It is no longer an observation about a paper; it is a property of this
+literature, and it is the strongest argument yet for inspecting panels rather than trusting
+the sentence that cites them.
+
 ## Reading debt this leaves — explicit and large
 
-- **Introduction, all seven results sections, Materials and Methods, and every figure: not
-  read.** The dose-response curves, the P0–P5 survival data (Figure S8), the
-  electrophysiology (Figure 7) and the myelination quantification (Figure 6) are all
-  *reported* above from the running text and **not verified against their panels**. Given that
-  three papers in a row have carried a finding visible only in a panel, this debt is the
-  largest single risk in the current state.
-- **Supplementary Figure S8 carries the entire window result** and has not been seen.
+- **Introduction, all seven results sections and Materials and Methods: not read.**
+- **Six of the seven figures: retrieved and fingerprinted, not inspected.** `gr1`–`gr5` and
+  `gr7` — including Figure 7, the electrophysiology — are on disk at the measured ceiling and
+  await eyes. Figure 6 is done.
+- 🔴 **Supplementary Figure S8 is unreachable, not merely unread.** Five routes fail. The
+  entire P0–P5 window result — the finding that fires the previous paper's REVIVAL_TRIGGER —
+  therefore rests on running text with no panel behind it. This is the single most important
+  unverified claim in the current state, and it may stay unverifiable until the publisher
+  route opens.
 - The **PNS question** from yesterday's refused review file has a candidate answer in this
   paper's Methods. Unread.
