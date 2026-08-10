@@ -193,17 +193,100 @@ reading dose-response as a continuum. **Panel B refutes it for survival in this 
 `REVIVAL_TRIGGER`: an intermediate dose arm between 1.23 and 2.63 × 10¹¹ vg would locate the
 threshold and is the single most informative experiment this paper implies.
 
+### 🔴 Correction to the Figure 3 entry above — I read the panel without its caption
+
+The threshold finding stands and is strengthened. The *secondary* claim I attached to it —
+that Figure 3B continues the "WT-versus-treated comparison is never drawn" pattern — **is
+wrong, and the correction matters more than the original observation.**
+
+The caption of Figure 3 carries the statistics the panel does not print:
+
+> "HD produced survival comparable to WT animals (p = 0.78), and significantly extended survival relative to the LD group (p < 0.0001) and the KO + RI controls (p < 0.0001). LD also significantly improved survival compared with the KO + RI controls (p < 0.0001)."
+
+`surface: body` · Figure 3 caption. So the authors **do** draw WT-versus-treated — `p = 0.78`,
+high dose indistinguishable from wild type — and they **do** test LD against HD, `p < 0.0001`.
+
+Two consequences, opposite in direction:
+
+- **The threshold reading is now quantitative, not inferred from a curve.** LD versus HD is
+  significant at `p < 0.0001`, and LD versus untreated is *also* `p < 0.0001`. The low dose
+  genuinely improves survival and genuinely fails to rescue it. That is the threshold, stated
+  by the paper's own tests.
+- **My pattern claim did not apply here and I should have checked before extending it.** After
+  three papers where the comparison was genuinely missing, I found the fourth instance by
+  looking for it — in a panel whose caption, two lines away in the same layout I had already
+  generated, contained the answer. **A pattern that has held three times is exactly when the
+  fourth case stops being examined and starts being assumed.** The `DEFAULTS THAT BIT US`
+  entry this earns is my own: *"the figure does not draw the comparison" needs the caption
+  read before it is asserted.*
+
+The pattern claim still stands for Figure 6, where panels C/D/E contain only WT and KO and
+the caption adds no statistics for panel F.
+
+### 🔴 Figure 7 (`gr7.jpg`, sha256 `3a01e962c0cb5d6986f4c0cd5d57aeaaf1107d36679cc6828bcf67e11425ce7c`) — one claim is `****`, the neighbouring one is `p = 0.2`
+
+`surface: figure`, 104 ppi. The paper states early hyperexcitability as a single finding with
+two markers. The panels support the two very differently.
+
+| panel | measure | result |
+|---|---|---|
+| **C** | average spikes/day, WT vs KO | **`0.2000` printed above the bracket — n≈3 per group** |
+| B | spikes/hour/day over 7 days | KO visibly above WT, **no significance marker on any day** |
+| **E** | spike-wave discharges/hour | **`****` WT-vs-KO · `****` KO-vs-HD · `ns` WT-vs-HD** |
+
+🔴 **Panel C prints `0.2000` — a P value of 0.2 — with no asterisk and, crucially, without the
+word `ns` beside it.** A number floating above a bracket reads as a result; this one is a
+non-result. The interictal-spike half of "early-onset neuronal hyperexcitability,
+characterized by frequent interictal-like spikes and SWDs" is **not statistically supported**
+in this figure, at n≈3.
+
+The spike-wave discharge half is strongly supported, and panel E is the paper at its best:
+the WT-versus-treated comparison **is** drawn, and it is `ns` — the high dose returns SWD rate
+to wild-type. That is the cleanest efficacy result in the paper.
+
+This is what the Discussion's own hedge refers to — *"Although conducted in a limited
+cohort"* — and the figure lets us put a number on "limited": three animals.
+
+### The PNS question from yesterday has an answer, and it is not the expected one
+
+> "WWOX protein was also detected in the sciatic nerve of HD-treated mice (Figures S6E–S6G), thus supporting functional relevance in the peripheral nervous system. In contrast, no WWOX expression was detected in the liver following either LD or HD treatment"
+
+`surface: body` · Results. The reviewer of `PMID 34747138` objected that there was **no
+evidence for absence in the PNS**. This paper answers by finding the opposite of absence:
+after neonatal ICV of a *neuron-restricted* vector, **WWOX protein reaches the sciatic
+nerve**, while the liver stays negative.
+
+So the construct is neuron-specific but **not CNS-confined**. The authors read this as
+functional relevance; it is equally a **biodistribution fact** that any safety assessment
+needs, and it was obtained by the sciatic-nerve and spinal-cord dissection whose protocol the
+Methods describe. Expression is also sustained in cortex, hippocampus, midbrain, cerebellum
+and spinal cord at **P240 and P300 after a single neonatal injection**.
+
+### A vocabulary note worth keeping
+
+Figure 5 caption:
+> "in G and H it is near significant, p value = 0.08 and 0.06, respectively"
+
+`surface: body`. **"Near significant" is not a state.** Recorded because this reading has now
+seen three distinct ways a non-significant result can be presented as almost-something: an
+unmarked printed P (Fig. 7C), a comparison not drawn (Fig. 6), and an explicit softening
+(Fig. 5 caption). All three are legitimate authorial choices; none of them may be carried into
+this state as support.
+
 ## Reading debt this leaves — explicit and large
 
 - **Introduction, all seven results sections and Materials and Methods: not read.**
-- **Five of the seven figures: retrieved and fingerprinted, not inspected.** `gr1`, `gr2`,
-  `gr4`, `gr5` and `gr7` — including **Figure 7, the electrophysiology**, which is where the
-  early-hyperexcitability claim and its suppression must be checked. On disk at the measured
-  ceiling, awaiting eyes. Figures 3 and 6 are done, and both carried something the running
-  text did not.
-- **Materials and methods: not read.** It contains the sciatic-nerve and spinal-cord
-  extraction that is the candidate answer to the PNS objection raised against
-  `PMID 34747138`.
+- **Four of the seven figures: retrieved and fingerprinted, not inspected** — `gr1`, `gr2`,
+  `gr4`, `gr5`. Figures 3, 6 and 7 are done, and all three carried something the running text
+  did not. `gr5` is the vector-genome / mRNA / protein dose series and is the one that would
+  show whether expression scales the way the survival threshold implies.
+- **Materials and methods: read for the sciatic-nerve and spinal-cord protocol and for the
+  statistics; the rest not read.**
+- 🔴 **Every supplementary figure remains unreachable.** S5 and S6 now carry more weight than
+  when this file was first written: S6E–S6G hold the sciatic-nerve result, S6H–S6I the
+  negative liver, S5J–S5K the P240/P300 persistence, and **S8 the entire P0–P5 window**. Five
+  retrieval routes fail. Everything this reading says about them comes from running text with
+  no panel behind it.
 - 🔴 **A rule this session derived and did not yet apply.** Measure *every* available
   retrieval route and take the best, because **which route wins is not stable between
   papers**: on `34747138` the article PDF held 200 ppi against the OA bundle's 100, and here
