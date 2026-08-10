@@ -8,6 +8,8 @@
 ## Scope
 Queue of priority full texts to retrieve or deep-dive to consolidate the operational dataset.
 
+**Before choosing what to read, consult [[surface_census]]** — a derived page saying, per paper, whether a structured (XML/HTML) surface exists locally, whether only a PDF does, whether nothing does, and which PDF text layers carry a known corruption signature. It answers *"what can I read right now, and can I quote it?"* before a session spends a retrieval on the wrong format. It is generated and never hand-edited, and it is deliberately **not** part of this file: a PMID here is a declaration of reading debt, and a derived table listing the whole corpus is not one.
+
 ---
 
 ## FT-001

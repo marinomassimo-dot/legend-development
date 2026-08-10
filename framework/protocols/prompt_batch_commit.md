@@ -196,6 +196,21 @@ was doing its job at the wrong moment — it announced a defect the protocol had
 allowed to create. Regenerating inside Phase 4 means the drift cannot outlive the batch that
 caused it.
 
+**One surface is regenerated only when its input is present.** The surface census reads
+`files/fulltext/`, which is gitignored and exists in one checkout while sessions run in
+worktrees. Regenerate it when that directory is there, and skip it — without failing the
+batch — when it is not:
+
+```bash
+test -d files/fulltext && python3 framework/scripts/surface_census.py --disease wwox \
+    --out disease-models/wwox/research/surface_census.md
+```
+
+🔴 **Skipping is correct here, and is not a hole.** The census is a dated photograph of a
+directory BATCH_COMMIT never modifies, so a stale one misleads nobody who reads its date and
+listing digest — while aborting a propagation because a gitignored directory is absent would
+be a gate over something the batch did not touch and cannot fix.
+
 **Derived surfaces that are computed on demand need nothing here.** `trace_claim_foundation`
 and `build_evidence_index` write no file and are rebuilt from the registries on every call,
 which is why they were designed that way: a derived artifact that is never stored cannot go
