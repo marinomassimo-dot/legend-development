@@ -1310,5 +1310,82 @@ per trovare.
 
 **Cosa resta da leggere davvero:** il caso dell'introne 4 di Oliver 2023 — categoria 2 per
 genotipo, categoria 1 per gravità — **non è fra i 20 locator esistenti**, verificato. Quindi il
-paper è letto ma il reperto che serve alla premessa non è catturato, ed è materiale per una
-lettura mirata con `reread_reason: inadequate_prior_coverage`, non per una rilettura completa.
+paper è letto ma il reperto che serve alla premessa non è catturato. **Fatta la sera stessa:
+vedi sotto.**
+
+### ✅ Lettura mirata di Oliver 2023 — `FTR-20260810-36779245-03`, `partial_fulltext_read`
+
+`reread_reason: inadequate_prior_coverage`. Lette: metodi 2.4, risultati 3.6 e 3.7, Tabella 3 e
+la discussione corrispondente. **Le sezioni non toccate sono dichiarate `not_read`**, non
+ereditate dal receipt precedente. Nove citazioni verificate uniche contro il corpo estratto, e
+**sette di nove anche nel markup grezzo** — scelte deliberatamente per non attraversare un
+confine di corsivo, così sono verbatim in entrambi i sensi e non solo rispetto all'artefatto
+dell'estrattore.
+
+#### 🔴 La risposta è più grande della domanda: la classe centrale del framework non esiste nei dati della fonte che l'ha costruita
+
+Lo schema a tre classi **è di Oliver**: *«classified into three genotypic classes based on
+variant types: (1) null/null, (2) null/missense, (3) missense/missense»*. E la conclusione di
+Oliver è:
+
+> *«We found no difference between individuals with one or two missense variants and therefore
+> no evidence to support an "intermediate" phenotype»*
+
+La review `PMID 42128308` presenta la classe 2 come *«associated with intermediate phenotypes»*
+e poi offre controesempi a un framework **la cui stessa fonte nega quella classe**. Non è un
+controesempio dentro il framework: è **la fonte del framework che ne smentisce un terzo**.
+
+#### Ciò che i dati sostengono è binario, non ternario, e su un asse solo
+
+75 casi: null/null n=45 · null/missense n=15 · missense/missense n=15.
+
+| asse | risultato |
+|---|---|
+| **tempo alla morte** | *«survival was much poorer for the double null group compared with the patients who had at least one missense pathogenic variant»* — **p = .0085** log-rank; sopravvivenza a 5 anni **<50%** contro **>75%**; a 10 anni **25%** contro **>60%** |
+| **tempo all'esordio delle crisi** | *«we found no difference in time to seizure onset between the three genetic groups»* — **p = .65** |
+
+Il paper stesso raggruppa le due classi missenso come *«the other two, presumably less severe,
+genetic groups»*: **una divisione binaria, scritta come tale.**
+
+#### 🔴 Il caso introne 4 — ed è la review a sbagliarne la classe
+
+Paziente 6 è tabulato `c.49G > A, p.Glu17Lys (mat)/intron 4 deletion (pat)` con combinazione
+genetica **`Missense/null`**: Oliver classifica la delezione dell'introne 4 **come null**,
+perché *«the intron 3 deletion was a benign variant, whereas the intron 4 variant resulted in
+exon 5 skipping»*. È dunque **un ordinario caso di classe 2 secondo la codifica di Oliver**, non
+un'anomalia. La review lo descrive come un caso che *«technically falls under category 2 … with
+one allele lacking a canonical deletion mutation»* la cui gravità eguagliava la categoria 1 —
+ma in uno schema dove la classe 2 **non mostra alcun fenotipo intermedio**, un paziente di
+classe 2 grave quanto la classe 1 è **il risultato atteso, non un controesempio**.
+
+#### 🔴 E «missenso» non è affatto una classe di gravità — la risposta profonda alla premessa
+
+> *«p.Pro47 has been associated with two pathogenic variants; the more conservative change to
+> threonine was found in SCAR12»* — contro la sostituzione ad arginina trovata in WWOX-DEE.
+
+**Lo stesso residuo, due sostituzioni, due malattie.** E *«no region of the gene emerged as
+specific»* per DEE contro SCAR12: le due varianti missenso SCAR12 stanno **vicine** a varianti
+DEE. La gravità è **specifica della sostituzione**, non del residuo e non della regione: quindi
+*«missenso ⇒ funzione residua ⇒ più lieve»* fallisce **al livello della propria categoria**.
+
+Chiude un anello con `FT-045`: **P47T** è l'allele del modello murino SCAR12 che tiene la
+proteina WWOX **a livello wild type** disattivando il motivo PPXY della WW1.
+
+#### Due dati che atterrano qui dentro
+
+- **`p.Gln230Pro` è l'allele missenso WWOX-DEE più ricorrente della letteratura**: tre dei dodici
+  pazienti non imparentati di Oliver — omozigote in due, eterozigote composto in uno — più **sei
+  famiglie già riportate** da Iran, Afghanistan, Francia e Marocco. È l'allele attorno a cui è
+  costruito il lavoro di proteostasi di questo repository.
+- **Ascertainment, dichiarato dal paper:** la loro coorte è più anziana (media 8a 2m contro 3a
+  4m) e meno letale (23% contro 38%) della letteratura con cui è messa in pool, con null/null al
+  50% contro 60%. È una ragione per leggere la curva di sopravvivenza **come confronto fra
+  gruppi**, non come prognosi assoluta.
+
+#### 🔴 Perché queste nove citazioni non sono nel manifest
+
+`PMID36779245.json` è schema `None` con zero artefatti, e 13 dei suoi 20 locator falliscono per
+la causa misurata sopra. **Dichiarare l'artefatto e alzare lo schema porterebbe quei 13 da
+"non verificati" a FAIL duro** — è lavoro di un altro attore e non sta a me romperlo. Le
+citazioni stanno nel receipt, verificate, **pronte ad atterrare quando il normalizzatore sarà
+riparato**, che è di Plan.
