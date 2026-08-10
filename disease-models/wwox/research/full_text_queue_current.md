@@ -960,9 +960,57 @@ documento e costa zero: la didascalia dichiara il generatore** — FigureLabs (F
   maladattivo: nodo prossimale, firmato e farmacologicamente maturo che **nessuno qui ha ancora
   guardato**.
 
-**Debito residuo:** la **lista di riferimenti non è stata enumerata** — letta per attribuzione,
-non harvestata. Dichiarato in `multihop.performed: false`. La bibliografia di una review del
-gruppo leader è il bersaglio multi-hop di maggior valore nel corpus.
+### ✅ Debito multi-hop chiuso lo stesso giorno — 103 riferimenti, 35 WWOX-diretti, 4 preprint
+
+**Il verdetto sul delimitatore è calcolato, non affermato:** 100% delle voci accettate inizia
+con il cognome del primo autore, 87,4% porta un DOI, e il controllo stampa un rigetto se una
+delle due scende sotto soglia. 🔴 **Due tentativi precedenti hanno fallito e sono il punto.**
+Spezzare su `Cognome, X.,` dava **237** — sovrastima, perché il pattern cattura anche autori a
+metà lista. Filtrare per ordine alfabetico dava **4** — sottostima catastrofica, perché il primo
+candidato era un autore di metà lista che ordina a `v` e ha avvelenato la catena. E quel
+tentativo **stampava «piccolo, quindi l'assunzione regge» accanto a un tasso di rigetto del
+98%**, perché la frase era hardcoded invece che calcolata. **Un verdetto che non può fallire non
+è un verdetto.**
+
+### 🔴 La claim di autonomia cellulare della mielina poggia su un preprint mai dichiarato tale
+
+`Abudiab et al. 2025` è **bioRxiv `10.1101/2025.11.22.689900`**. È citato **sette volte in
+modo sostanziale** — due in sezione 6 (WWOX fra i geni oligodendrogliali più disregolati; il
+risultato cuprizone e SOX10) e in **quattro righe distinte della Tabella 1**: Olig2-Cre O-KO,
+la sfida cuprizone su quella linea, la coltura OPC ex vivo, e lo snRNA-seq delle lesioni MS.
+La Tabella 2 chiama il concetto cell-autonomo *«a particularly important emerging concept»* e i
+meccanismi SOX10 *«a major new direction»*.
+
+**Mai una volta è descritto come preprint.** Due pagine prima la review scrive *«A recent
+preprint by (Lucas-Clarke et al., 2025)»* dell'altra fonte non referata che usa. **L'asimmetria
+di dichiarazione è dentro lo stesso documento.**
+
+🔴 **Correzione a una mia affermazione di due ore prima.** Avevo registrato il contrasto
+basale-contro-cuprizone come *requisito condizionale* e chiamato un readout oligodendrogliale
+non sfidato *un falso negativo per costruzione*. Resta **IPOTESI e non DATO**: la sua unica
+fonte non è referata. La forma del reperto non cambia, il suo supporto sì — **e non avevo
+controllato quale**.
+
+### Due dei quattro preprint sono citazioni scadute, e una tocca lavoro già qui dentro
+
+La review cita `Steinberg et al. 2024` a `10.1101/2024.12.22.630016` e `Obeid et al. 2026` a
+`10.64898/2026.03.11.710995` — entrambi DOI di preprint. **Entrambi sono pubblicati**: come
+`PMID 42397075` (*Brain*) e `PMID 42422765` (*Mol Ther Nucleic Acids*), letti oggi nella loro
+forma pubblicata.
+
+🔴 **La conseguenza non è cosmetica:** il preprint di `42397075` può differire dal manoscritto
+accettato che ho aggiudicato, **inclusi i pannelli supplementari letti a 258 ppi**. Ogni
+affermazione di questa review attribuita a *«Steinberg et al. 2024»* riguarda una versione che
+non ho controllato — quindi la contraddizione sul *«restored»* è fra **la lettura che la review
+fa del preprint** e **la mia lettura del manoscritto accettato**. Non la dissolve, perché la
+versione accettata è quella che il campo citerà: ma nomina un passaggio che avevo dato per
+scontato.
+
+**Debito residuo:** i 31 riferimenti WWOX-diretti che non sono né preprint né già in registro
+**non sono triageati in coda**. È lavoro di coda e questa era una sessione di lettura;
+l'enumerazione esiste perché il triage si possa fare **senza riaprire il paper**. La lista è
+DOI-keyed con **un solo PMID su 103**, quindi il dedup contro un registro PMID-keyed richiede
+prima la risoluzione dei DOI.
 
 ---
 

@@ -37,11 +37,15 @@
     "note": "Maximum density: a review of WWOX neurobiology written by the gene's primary laboratory. Every section is WWOX-directed by construction."
   },
   "multihop": {
-    "performed": false,
-    "references_enumerated": 0,
+    "performed": true,
+    "references_enumerated": 103,
+    "enumeration_method": "Reference list split on a newline NOT preceded by a space — the delimiter this extraction actually uses, because fitz keeps the trailing space on a wrapped line. The verdict is COMPUTED, not asserted: 100% of accepted entries begin with a first-author surname and 87.4% carry a DOI, and the check prints a rejection if either falls below threshold. 🔴 TWO EARLIER ATTEMPTS FAILED AND BOTH ARE THE POINT. Splitting on 'Surname, X.,' returned 237, an overcount, because the pattern also matches authors mid-list. Filtering that by alphabetical order returned 4, a catastrophic undercount, because the first candidate captured was a mid-list author sorting at 'v' and it poisoned the chain — and that attempt PRINTED 'small, so the alphabetical assumption holds' beside a 98% rejection rate, because the sentence was hardcoded rather than computed. A verdict that cannot fail is not a verdict.",
     "gene_direct_refs_in_source": [],
-    "enumeration_method": "NOT PERFORMED, and declared rather than left blank. The reference list runs from character 89500 to the end of the extracted text and was read for attribution while reading each section — every citation quoted in a proposition above was checked against it — but it was not enumerated into a countable list. A review's reference list is the highest-value multi-hop target in the corpus and this one is unharvested. Recorded as debt rather than as a completed step.",
-    "debt": "Full reference enumeration of PMID 42128308 outstanding."
+    "gene_direct_count": 35,
+    "gene_direct_note": "🔴 THE LIST IS EMPTY AND THE COUNT IS 35, AND THE DIFFERENCE IS DELIBERATE. 35 of 103 references name WWOX, Wwox, FRA16D, WOREE or SCAR12 in their citation text — 34% of the list. Not expanded into {ref, pmid} pairs: this list is DOI-keyed with exactly one PMID in 103 entries, so dedup against a PMID-keyed registry needs DOI resolution first, and cited_reference_check has no exposure here because no reference NUMBER is claimed for any paper.",
+    "preprints_cited": 4,
+    "preprint_finding": "All four preprints are WWOX-direct, and they are two different problems. Abudiab 2025 (10.1101/2025.11.22.689900) and Lucas-Clarke 2025 (10.1101/2025.05.01.651195) are genuinely unpublished, and only the second is labelled as a preprint in the text. Steinberg 2024 (10.1101/2024.12.22.630016) and Obeid 2026 (10.64898/2026.03.11.710995) are cited at preprint DOIs although both are published — as PMID 42397075 and PMID 42422765, both read in their published form on 2026-08-10.",
+    "debt_remaining": "The 31 WWOX-direct references that are neither preprints nor already in the registry are not triaged into the queue here. That is queue work and this was a reading session; the enumeration exists so the triage can be done without reopening the paper."
   },
   "corpus_crossquery": {
     "performed": true,
@@ -162,7 +166,7 @@
         "found_or_sought": "found — I was reading 10.4 for the description of a primary I had already read, and the rationale did not match the data I had recorded from it"
       },
       {
-        "proposition": "🔴 WWOX PROTEIN ABUNDANCE IS NOT A READOUT OF WWOX FUNCTION, AND THE P47T MOUSE IS THE PROOF. In the SCAR12 knock-in, WWOX protein levels remained comparable to wild-type controls while the mutation disrupted the WW1 domain's PPXY-binding motif, producing partial loss of function through failed interaction rather than through loss of protein. A Tier 1/2 biomarker built on WWOX abundance would score this allele as normal in an animal with adult-onset seizures, cerebellar neurodegeneration and ataxia. This is the 'function' axis failing while 'synthesis' and 'solubility' pass — the same five-way separation the 2026-07-12 thyroid-cancer case forced onto this repository, now demonstrated in vivo for a disease allele rather than in a cancer line.",
+        "proposition": "🔴 WWOX PROTEIN ABUNDANCE IS NOT A READOUT OF WWOX FUNCTION, AND THE P47T MOUSE IS THE PROOF. In the SCAR12 knock-in, WWOX protein levels remained comparable to wild-type controls while the mutation disrupted the WW1 domain's PPXY-binding motif, producing partial loss of function through failed interaction rather than through loss of protein. A Tier 1/2 biomarker built on WWOX abundance would score this allele as normal in an animal with adult-onset seizures, cerebellar neurodegeneration and ataxia. This is the 'function' axis failing while 'synthesis' and 'solubility' pass — the same five-way separation the 2026-07-12 thyroid-cancer case forced onto this repository, now demonstrated in vivo for a disease allele rather than in a cancer line. 🔴 QUALIFIED THE SAME DAY BY THE BIBLIOGRAPHY: both Table 1 rows cite Abudiab et al. 2025, which the reference list gives as bioRxiv 10.1101/2025.11.22.689900 and which the review never labels as a preprint. This entry is therefore IPOTESI, not DATO. The shape of the finding is unchanged and its support is not refereed — see entries[23].",
         "snippet": "WWOX protein levels in P47T mice remained comparable to wild-type ",
         "surface": "body",
         "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
@@ -304,6 +308,24 @@
         "anchor": "Section 11, the translational-hurdles paragraph",
         "panel_text_relation": "text_only",
         "found_or_sought": "found — recognised against a locator recorded hours earlier from PMID 42422765"
+      },
+      {
+        "proposition": "🔴 THE MYELIN CELL-AUTONOMY CLAIM RESTS ENTIRELY ON AN UNREFEREED PREPRINT THAT THE REVIEW NEVER LABELS AS ONE — AND THE REVIEW LABELS THE OTHER PREPRINT IT USES. Abudiab et al. 2025 is bioRxiv 10.1101/2025.11.22.689900. It is cited seven substantive times: twice in section 6 for WWOX as one of the most dysregulated oligodendroglial genes and for the cuprizone result, and in FOUR separate rows of Table 1 — the Olig2-Cre conditional knockout, the cuprizone challenge on it, the ex vivo OPC culture and the MS-lesion snRNA-seq. Table 2 calls the cell-autonomous concept 'a particularly important emerging concept' and SOX10-linked mechanisms 'a major new direction'. Not once is it described as a preprint. Two pages earlier the review writes 'A recent preprint by (Lucas-Clarke et al., 2025)' about the other unrefereed source it uses. 🔴 THE CORRECTION IS TO MY OWN READING OF TWO HOURS AGO: I recorded the baseline-versus-cuprizone contrast as a conditional requirement and called an unchallenged oligodendroglial readout a designed false negative. That stands as IPOTESI and not as DATO, because its sole source has not been refereed. The finding is not weaker in shape; it is weaker in support, and I had not checked which.",
+        "snippet": "at least in \npart through regulation of the key oligodendrocyte transcription factor \nSOX10 (Abudiab et al., 2025)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+        "anchor": "Section 6, the cuprizone paragraph; compare Section 4, 'A recent preprint by (Lucas-Clarke et al., 2025)', and Table 1 rows 4, 5, 6 and 11",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found by enumerating the reference list — the debt I had declared and left open. Reading the sections gave me the claim; only the bibliography gave me what it rests on."
+      },
+      {
+        "proposition": "TWO OF THE FOUR PREPRINT CITATIONS ARE STALE, AND ONE OF THEM MATTERS TO WORK ALREADY IN THIS REPOSITORY. The review cites Steinberg et al. 2024 at 10.1101/2024.12.22.630016 and Obeid et al. 2026 at 10.64898/2026.03.11.710995 — both preprint DOIs. Both are published: as PMID 42397075 in Brain, and as PMID 42422765 in Molecular Therapy Nucleic Acids, and I read both in their published form today. A reader following the review's DOIs lands on preprint versions of papers whose refereed versions exist. 🔴 THE CONSEQUENCE THAT IS NOT COSMETIC: the preprint of 42397075 may differ from the accepted manuscript I adjudicated, including in the supplementary panels I read at 258 ppi. Any statement in this review attributed to 'Steinberg et al. 2024' is a statement about a version I have not checked, and the 'restored deep-layer neuronal markers' contradiction recorded in entries[5] is therefore between the review's reading of the PREPRINT and my reading of the ACCEPTED MANUSCRIPT. That does not dissolve the contradiction — the accepted version is what the field will cite — but it names a step I had assumed away.",
+        "snippet": "Extending these observations to a patient-relevant context, a follow- \nup study employed AAV9-WWOX gene therapy in human WWOX- \ndeficient organoids (Steinberg et al., 2024)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+        "anchor": "Section 10.4; the DOIs are in the reference list entries for Steinberg et al. 2024 and Obeid et al. 2026",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I enumerated the bibliography expecting a harvest of new targets and found instead that two of its citations point at earlier versions of papers I had just closed"
       }
     ]
   }
