@@ -238,8 +238,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 13
-growth_anchor_head: 07afcc25525da93217242343d23373424c9a4cb96b1cba6a95a9087a2b0aa9af
+growth_anchor_events: 14
+growth_anchor_head: 5cfaa6bbae83fdb322128deda9a47c136d15eba9ed47853cecbeb2d8d393bd6c
 ```
 
 ```bash
@@ -362,8 +362,8 @@ than the matcher loosened** — a matcher that guessed at ranges would eventuall
 the quiet direction, reporting as done work that nobody did.
 
 ```yaml
-panel_relation_legacy_baseline: 15
-panel_relation_legacy_ids: ["PMID17803050", "PMID19500159", "PMID19936220", "PMID22193544", "PMID24871327", "PMID30290271", "PMID30755385", "PMID31340538", "PMID32000863", "PMID33255508", "PMID34747138", "PMID34831305", "PMID35716775", "PMID37519886", "PMID40875931"]
+panel_relation_legacy_baseline: 14
+panel_relation_legacy_ids: ["PMID17803050", "PMID19500159", "PMID19936220", "PMID22193544", "PMID24871327", "PMID30290271", "PMID30755385", "PMID31340538", "PMID33255508", "PMID34747138", "PMID34831305", "PMID35716775", "PMID37519886", "PMID40875931"]
 ```
 
 🔴 **The eighteen are `unknown_legacy`, and the field is NOT backfilled by inference.** A
