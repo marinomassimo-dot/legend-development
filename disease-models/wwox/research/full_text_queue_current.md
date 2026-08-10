@@ -1210,3 +1210,42 @@ e le due cose non coincidono. Il corpo si legge, il supplementary no. Un lettore
 **Next action:** richiesta agli autori, oppure copia via biblioteca istituzionale. È materiale
 per la Fondazione allo stesso titolo dei dodici senza link libero del 2026-08-07.
 **Current status:** ⬜ aperto — **bloccato su accesso, non su tempo.**
+
+---
+
+## FT-054 — PMID 24550385, la fonte da cui `25331887` importa K274 e ITCH senza dimostrarli
+**Paper:** PMID 24550385 / DOI 10.1074/jbc.M113.506790 — Abu-Odeh 2014 *J Biol Chem*
+289(13):8865–8880 — *Characterizing WW Domain Interactions of Tumor Suppressor WWOX Reveals Its
+Association with Multiprotein Networks*
+**Priority:** **ALTA**
+**Surface:** `structured` · `PMID24550385_AbuOdeh2014_PMC.html` (corpo 85 983 caratteri,
+abstract 2 186 separato dal validator) · più `PMID24550385_AbuOdeh2014.pdf` locale
+**Identità verificata dall'artefatto, non assunta:** l'intestazione PMC stampa
+`J Biol Chem . 2014 Feb 18;289(13):8865–8880. doi: 10.1074/jbc.M113.506790`, che coincide
+carattere per carattere con la citazione del **rif. 3** di `25331887`. Verificata prima di
+spendere, perché due volte oggi ho attribuito una citazione senza controllare il numero che la
+frase porta.
+**Perché è il prossimo:** `25331887` scrive *«Our recent data revealed that ITCH mediates WWOX
+ubiquitination at K274 (3)»* e *«ITCH … mediates K63-linked polyubiquitination of WWOX, leading
+to its stabilization and nuclear translocation (3)»*. **L'identificazione del residuo e della
+ligasi non è un risultato di `25331887`**: arriva già fatta da qui, e tutto ciò che ne discende
+— il mutante `K274R`, l'import nucleare ubiquitina-dipendente, il modello di Fig 7D, e
+`DL-MECH-083` — vi poggia sopra. È `IMPORTED_PREMISE_ATTRIBUTION_GATE` nella forma più pura
+che questo corpus abbia prodotto finora.
+**🔴 Le due domande che la lettura deve chiudere** — *poste come domande, non come reperti*: il
+solo materiale ispezionato finora è **l'abstract**, che è `NOT_EVIDENCE` e non chiude nulla.
+Sono scritte qui perché il prossimo giro parta già puntato, non perché siano una risposta.
+1. **Questo paper nomina `K274`?** L'abstract non lo fa: parla di poliubiquitinazione K63 su
+   WWOX mediata da ITCH e dei due motivi `LPXY` di ITCH, mai di un residuo accettore. Se il
+   residuo non è identificato qui, `25331887` lo attribuisce a una fonte che non lo contiene, e
+   la catena di premesse va riaperta di un anello.
+2. **Questo paper riporta una `stabilizzazione`?** L'abstract dice che la ubiquitinazione K63
+   porta a *«nuclear localization and increased cell death»*. `25331887` cita la stessa fonte
+   per *«stabilization and nuclear translocation»*. **Localizzazione e stabilizzazione non sono
+   la stessa affermazione**, e `DL-MECH-083` — la voce che rovescia il default *polyUb →
+   proteasoma* — poggia sulla seconda.
+**Come è emersa:** dalla lettura di `25331887` (`FTR-20260810-25331887-01`), enumerando le
+premesse importate invece dei risultati.
+**Current status:** ⬜ aperto, artefatto in casa, **identità verificata**. Non iniziato:
+interrotto prima di aprire il corpo per contesto residuo insufficiente a chiuderlo bene, che è
+una condizione d'interruzione dichiarata e non un rinvio.
