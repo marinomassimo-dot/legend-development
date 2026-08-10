@@ -175,11 +175,11 @@
     "source_fulltext_indexed": false,
     "source_fulltext_indexed_evidence": "No PMC deposit: esummary returns only pubmed, doi and pii, and elink to pmc returns nothing. Recorded per rule 5d rather than assumed. The paper is an accepted manuscript, so the PDF plus its fingerprinted derived text is the correct artifact pairing.",
     "abstract_anchoring_waived": "The accepted-manuscript surface carries no separately delimited abstract, and every proposition below is a methodological bound, a panel reading or a qualification of the central thesis — none of which an abstract would carry.",
-    "surface_note": "🔴 The extracted text interpolates LINE NUMBERS into the flow, because the source is a line-numbered accepted manuscript. A quote spanning a line break therefore contains a stray digit and fails verification. Nine of fifteen candidate snippets failed for exactly this reason and were shortened to fragments lying within one line, rather than the surface being normalised — cleaning it would launder the defect into every quote drawn from it, which is the standing rule for suspect surfaces applied to a benign but real one. Each snippet below is the longest fragment that verifies.",
+    "surface_note": "🔴 The extracted text interpolates LINE NUMBERS into the flow, because the source is a line-numbered accepted manuscript. A quote spanning a line break therefore contains a stray digit and fails verification. Nine of fifteen candidate snippets failed for exactly this reason and were shortened to fragments lying within one line, rather than the surface being normalised — cleaning it would launder the defect into every quote drawn from it, which is the standing rule for suspect surfaces applied to a benign but real one. Each snippet below is the longest fragment that verifies. 🔴 CORRECTED THE SAME DAY, AND THE CORRECTION IS THE REUSABLE PART. The sentence above states a dichotomy that is false: shorten the snippet, or normalise the surface. There is a third option and it is the right one — QUOTE ACROSS THE BREAK, carrying the break characters and any interpolated line number verbatim. That verifies, and it was never tried. The consequence of not trying it is not cosmetic: taking 'the longest fragment that verifies within one line' means THE PAGE LAYOUT CHOOSES THE CUT POINT, and the layout does not know where the qualifier is. In this corpus the qualifying clause sits at the END of the sentence — the comparator, the figure citation, the hedge, the scope — so a layout-chosen cut drops it at a rate far above chance. Ten snippets across three manifests were extended on 2026-08-10 for exactly this reason, found by auditing the dropped sentence-tail of every text locator rather than the ones anyone had flagged. Normalising the surface remains forbidden; quoting the break is not normalising, it is quoting.",
     "entries": [
       {
         "proposition": "MYC is the top significantly upregulated gene in WWOX-deficient radial glia — the observation the paper's title rests on.",
-        "snippet": "the proto-oncogene MYC (also known as c-Myc) as the top significantly upregulated gene",
+        "snippet": "the proto-oncogene MYC (also known as c-Myc) as the top significantly upregulated gene in \n2 \nWWOX-deficient RGs (Fig. 3F).",
         "surface": "body",
         "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
         "anchor": "Results, 'Inverse relationship between MYC and WWOX', p. 8",
@@ -242,7 +242,7 @@
       },
       {
         "proposition": "The Figure 4 caption confirms the overrepresentation direction the panels show.",
-        "snippet": "overrepresented in WWOX-KO condition and in S - G2M phases",
+        "snippet": "overrepresented in WWOX-KO condition and in S - G2M phases, while Low potency in WT and \n21 \nG1/G0 - M phases.",
         "surface": "body",
         "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
         "anchor": "Figure 4 caption, panel H",
@@ -269,7 +269,7 @@
       },
       {
         "proposition": "🔴 TEXT CONTRADICTED BY PANEL — the rescue is described as reaching wild-type level, and the figure never tests that comparison. Body half of the pair.",
-        "snippet": "hyperexcitability to a level similar to the WT organoids",
+        "snippet": "hyperexcitability to a level similar to the WT organoids [Fig. 6A(ii)].",
         "surface": "body",
         "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
         "anchor": "Results, p. 13, describing Figure 6A(ii)",
@@ -297,7 +297,7 @@
       },
       {
         "proposition": "The absence of an effect on radial glia is offered as a safety signal for the AAV approach.",
-        "snippet": "the RGs, as appreciated by the absence of differentially expressed genes",
+        "snippet": "the RGs, as appreciated by the absence of differentially expressed genes and cell-cycle \n22 \nabnormalities (Supplementary Fig. 10C-F), potentially pointing to the safety profile of this \n23 \napproach.",
         "surface": "body",
         "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
         "anchor": "Results, p. 13, on AAV9-WWOX infection of WOREE organoids",

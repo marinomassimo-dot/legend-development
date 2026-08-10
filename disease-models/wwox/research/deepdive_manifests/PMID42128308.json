@@ -92,7 +92,7 @@
     "waived": false,
     "source_fulltext_indexed": false,
     "source_fulltext_indexed_evidence": "No PMC deposit: esummary returns only pubmed, doi and pii, and elink to pmc returns no linkset. Recorded per rule 5d rather than assumed. The paper enters the class that has no structured surface, so the PDF plus a fingerprinted derived text is the only pairing available.",
-    "surface_note": "Extraction recipe, stated so it regenerates: PyMuPDF 1.26.5, page.get_text() default mode, ''.join(pages), no separator and no trailing newline, 17 pages, 131033 bytes. Sentinel PASS: two '<' and seven '>' against fifteen occurrences of significan*, which for a review carrying no primary statistics is the expected ratio, and suspicion-by-absence does not fire because comparators are present. The two-column layout breaks lines mid-word with soft hyphens, so several snippets below are the longest fragment lying within one line rather than the whole sentence.",
+    "surface_note": "Extraction recipe, stated so it regenerates: PyMuPDF 1.26.5, page.get_text() default mode, ''.join(pages), no separator and no trailing newline, 17 pages, 131033 bytes. Sentinel PASS: two '<' and seven '>' against fifteen occurrences of significan*, which for a review carrying no primary statistics is the expected ratio, and suspicion-by-absence does not fire because comparators are present. The two-column layout breaks lines mid-word with soft hyphens, so several snippets below are the longest fragment lying within one line rather than the whole sentence. 🔴 CORRECTED THE SAME DAY, AND THE CORRECTION IS THE REUSABLE PART. The sentence above states a dichotomy that is false: shorten the snippet, or normalise the surface. There is a third option and it is the right one — QUOTE ACROSS THE BREAK, carrying the break characters and any interpolated line number verbatim. That verifies, and it was never tried. The consequence of not trying it is not cosmetic: taking 'the longest fragment that verifies within one line' means THE PAGE LAYOUT CHOOSES THE CUT POINT, and the layout does not know where the qualifier is. In this corpus the qualifying clause sits at the END of the sentence — the comparator, the figure citation, the hedge, the scope — so a layout-chosen cut drops it at a rate far above chance. Ten snippets across three manifests were extended on 2026-08-10 for exactly this reason, found by auditing the dropped sentence-tail of every text locator rather than the ones anyone had flagged. Normalising the surface remains forbidden; quoting the break is not normalising, it is quoting.",
     "figure_provenance_note": "🔴 All four figures declare a generation tool in their captions: FigureLabs (Fig. 1), Gemini (Fig. 2), Biorender (Fig. 3), Biorender and Figure Labs (Fig. 4). They are schematics, not data panels. They were inspected at native 300 effective ppi because rule 5c requires it, and the inspection paid: Figure 2 drops a category and reassigns a gene relative to the running text. But no proposition here rests on a figure AS EVIDENCE — the figure entries are evidence about the figures.",
     "abstract_anchoring_waived": "Every proposition below is a cross-section tension, a cross-paper disagreement, a table reading or a figure reading; none is the kind of summary statement an abstract carries.",
     "entries": [
@@ -154,7 +154,7 @@
       },
       {
         "proposition": "🔴 THE REVIEW FRAMES WPRE REMOVAL AS A SAFETY CHOICE AND ITS OWN SECTION 11 NAMES THE PRICE. Section 10.4 presents removing WPRE as 'an important design consideration aimed at avoiding excessive or poorly controlled transgene expression while preserving sufficient therapeutic efficacy'. PMID 42422765, the primary being described, shows that removal required a SIX-FOLD dose increase to recover efficacy, with protein at 2E10 without WPRE sitting at or below wild type — recorded in PMID42422765.json entries[15]. Efficacy was not preserved at dose; it was repurchased with vector. And section 11 of this same review names 'high-dose AAV administration' as the driver of DRG pathology and 'a key regulatory concern in pediatric CNS gene therapy programs'. So the review celebrates a design change in one section and, two sections later, names the cost of that change as the field's principal safety problem — without connecting them. The loop closes inside a single document and neither end mentions the other.",
-        "snippet": "aimed at avoiding excessive or poorly controlled trans",
+        "snippet": "aimed at avoiding excessive or poorly controlled trans­\ngene expression while preserving sufficient therapeutic efficacy.",
         "surface": "body",
         "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
         "anchor": "Section 10.4, the paragraph on Obeid et al. 2026 vector optimisation",
@@ -181,7 +181,7 @@
       },
       {
         "proposition": "The neuronal side of the same axis is non-cell-autonomous and stated as such: hypomyelination across cortex, hippocampus and cerebellum with reduced myelin thickness in corpus callosum and optic nerve arises in neuronal Wwox knockouts although WWOX is intact in oligodendrocytes. Taken with the entry above, WWOX acts on myelination through BOTH routes and each is invisible in the assay that isolates the other — neuronal deletion hides the cell-autonomous arm, unchallenged oligodendroglial deletion hides the neuronal-support arm.",
-        "snippet": "these deficits arise even though WWOX remains intact ",
+        "snippet": "these deficits arise even though WWOX remains intact \nin oligodendrocytes, suggesting a non-cell-autonomous mechanism \nthrough which neuronal WWOX supports oligodendrocyte maturation \nand myelin production.",
         "surface": "body",
         "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
         "anchor": "Section 10.1, closing sentence on Repudi et al. 2021a transcriptomics and electron microscopy",
@@ -190,7 +190,7 @@
       },
       {
         "proposition": "THE MOST COMPLETE FUNCTIONAL READOUT SET IN THE REVIEW, AND IT CONTAINS AN UNEXAMINED PHARMACOLOGICAL HANDLE. Breton et al. 2021, neocortical slices from neuronal Wwox knockouts: large-amplitude spontaneous bursts in layers II/III absent in controls; increased delta and theta power; sEPSCs up in both frequency and amplitude; sIPSCs reduced, principally in frequency; depolarised resting membrane potential; reduced action-potential threshold; increased firing probability. 🔴 And ELEVATED POTASSIUM CURRENTS, which the review reads as a maladaptive compensatory response to persistent hyperactivity. That is a signed, proximal, druggable node that nothing in this repository has looked at — potassium-channel pharmacology is a mature field with paediatric-CNS precedent. IPOTESI, and the sign is the whole question: if the elevation is compensatory, opposing it is harmful and reinforcing it may be therapeutic.",
-        "snippet": "elevated potassium currents were observed",
+        "snippet": "elevated potassium currents were observed, \nwhich may reflect a maladaptive compensatory response to persistent \nneuronal hyperactivity.",
         "surface": "body",
         "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
         "anchor": "Section 10.2, the paragraph on intrinsic properties of pyramidal neurons",
@@ -262,7 +262,7 @@
       },
       {
         "proposition": "TWO NEGATIVES THE REVIEW REPORTS AGAINST ITS OWN THESIS, AND THEY ARE WORTH MORE THAN THE POSITIVES AROUND THEM. First, in AD brain transcriptomics WWOX itself is not significantly differentially expressed, and the vascular claim rests on its CO-EXPRESSION network in perivascular fibroblasts (Notch, collagen synthesis, Rac1; Tsartsalis et al. 2024) — which sits beside the review's own statement that WWOX PROTEIN is decreased in AD, a protein-versus-transcript distinction the review does not draw. Second, in two large ASD cortical transcriptomic studies WWOX did not emerge as differentially expressed either (Gupta et al. 2014; Parikshak et al. 2013). A review from the gene's primary laboratory printing two null results on its own gene is a mark of calibration and is recorded as such.",
-        "snippet": "WWOX itself is not significantly differ",
+        "snippet": "WWOX itself is not significantly differ­\nentially expressed in AD pathology",
         "surface": "body",
         "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
         "anchor": "Section 4, the paragraph on Tsartsalis et al. 2024",

@@ -256,7 +256,7 @@
       },
       {
         "proposition": "The sentence that cites S7I as if it carried the quantification — the sentence that caused the mistaken withdrawal.",
-        "snippet": "HD treatment achieved near-complete rescue across affected regions, whereas LD treatment produced only partial recovery relative to HD",
+        "snippet": "HD treatment achieved near-complete rescue across affected regions, whereas LD treatment produced only partial recovery relative to HD (Figures 6F; S7I)",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
         "anchor": "Results, myelination section, citing Figures 6F and S7I",
@@ -288,7 +288,7 @@
       },
       {
         "proposition": "The survival threshold, stated in plain text and no longer read off a curve: the low dose does not produce animals that reach three months.",
-        "snippet": "LD-treated mice did not survive to P90",
+        "snippet": "LD-treated mice did not survive to P90; therefore, analyses were limited to WT and HD-treated groups",
         "surface": "body",
         "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
         "anchor": "Results, behaviour section, explaining why testing was limited to WT and HD groups",
