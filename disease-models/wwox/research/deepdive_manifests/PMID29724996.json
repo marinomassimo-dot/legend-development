@@ -107,7 +107,7 @@
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "PMCID PMC5940843, JATS XML served by PMC. NOT in the PMC open-access subset: oa.fcgi returns idIsNotOpenAccess, so the OA package is unavailable and the seven figures plus the supplementary PDF were fetched from the Springer Nature static CDN instead. All artifacts are fingerprinted above. The seven figure digests were checked to be distinct, because an earlier attempt in this session silently produced seven byte-identical files that were an HTML error page rather than images.",
   "abstract_anchoring_waived": "No locator is abstract-anchored and none could be. The abstract states only that WWOX loss accelerates HCC through HIF1alpha; it contains none of the timing, none of the gene-panel asymmetry and none of the panel disagreements this reading turns on.",
-  "evidence_relation_note": "Every entry carries evidence_relation, emitted ahead of the validator requiring it. The six text_contradicted_by_panel findings are recorded as PAIRED entries — the body sentence and the panel reading, each with its own surface and its own artifact — because half a contradiction is not a contradiction.",
+  "panel_text_relation_note": "Every entry carries panel_text_relation. Six findings are contradictions, and in each the assertion that another locator is false is made by the PANEL: the figure entry carries text_contradicted_by_panel plus contradicts: entries[N], and the sentence it overturns is an ordinary text_only locator. This manifest was first written with the marker on both members and a symmetric evidence_pair key; that was wrong on both counts — the claim is one-directional, and entries[N] is the indexing grammar adjudications.json already uses, so it should have been reused rather than coined.",
   "entries": [
    {
     "proposition": "The central positive result: hepatocyte-specific Wwox deletion raises HIF1alpha occupancy on its own glycolytic target promoters. This is the third side of the hepatic triangle and it holds.",
@@ -115,17 +115,15 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Enhanced expression of glycolytic genes in livers of DEN-WwoxDeltaHep mice', ChIP paragraph",
-    "evidence_relation": "text_and_panel_agree",
-    "evidence_pair":"fig4F-chip-panel"
+    "panel_text_relation": "text_only"
    },
    {
-    "evidence_pair":"fig4F-chip-panel",
     "proposition": "Fig 4F confirms the ChIP text: all five targets enriched in cKO. Recorded also because every Control bar is pinned at exactly 1.0 with no error bar, so the test is against a normalisation constant rather than a measured distribution.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4F 'ChIP HIF1a': PKM2 ~6.3x (*), GAPDH ~4.9x (***), HK2 ~3.6x (***), GLUT1 ~4.3x (***), ALDOA ~5.5x (***); every Control bar sits at exactly 1.0 with no error bar.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig4_HTML.jpg",
     "anchor": "Figure 4, panel F, inspected at original resolution",
-    "evidence_relation": "text_and_panel_agree"
+    "panel_text_relation": "text_confirmed_by_panel"
    },
    {
     "proposition": "PAIR 1, BODY SIDE. The text claims tumour load was measured relative to body weight.",
@@ -133,17 +131,16 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Hepatocyte-specific WWOX ablation accelerates HCC development'",
-    "evidence_relation": "text_contradicted_by_panel",
-    "evidence_pair":"fig2E-absolute-grams"
+    "panel_text_relation": "text_only"
    },
    {
-    "evidence_pair":"fig2E-absolute-grams",
+    "contradicts": "entries[2]",
     "proposition": "PAIR 1, PANEL SIDE. Fig 2E plots absolute grams, not a body-weight ratio. Without normalisation the measurement cannot separate tumour burden from a larger animal.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2E y-axis reads 'Liver Weight (g)', scale 0 to 4; Control ~1.53 g, cKO ~3.45 g, marked ***. No body-weight normalisation appears anywhere in the panel.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig2_HTML.jpg",
     "anchor": "Figure 2, panel E, axis label read at original resolution",
-    "evidence_relation": "text_contradicted_by_panel"
+    "panel_text_relation":"text_contradicted_by_panel"
    },
    {
     "proposition": "PAIR 2, BODY SIDE. The text asserts the glycolytic targets did not change at the early timepoints — an assertion of measured absence.",
@@ -151,17 +148,16 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Enhanced expression of glycolytic genes in livers of DEN-WwoxDeltaHep mice', first paragraph",
-    "evidence_relation": "text_contradicted_by_panel",
-    "evidence_pair":"fig4AB-panel-asymmetry"
+    "panel_text_relation": "text_only"
    },
    {
-    "evidence_pair":"fig4AB-panel-asymmetry",
+    "contradicts": "entries[4]",
     "proposition": "PAIR 2, PANEL SIDE. The early and late gene panels are not the same panel. Four genes were never measured at 1 and 3 months, so for those four 'no change' is not a negative result — it is an untested condition. This is the not-significant versus not-tested distinction.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4A (1 Month) and 4B (3 Months) each plot exactly five genes: HK2, GLUT1, PKM2, LDHA1, GAPDH. Fig 4C (6 Months) plots eight: HK2, GLUT1, PKM2, LDHA1, PDK1, ENO1, ALDOA2, PGK1. PDK1, ENO1, ALDOA2 and PGK1 appear in no early panel.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig4_HTML.jpg",
     "anchor": "Figure 4, panels A, B and C, x-axis category labels read at original resolution",
-    "evidence_relation": "text_contradicted_by_panel"
+    "panel_text_relation":"text_contradicted_by_panel"
    },
    {
     "proposition": "PAIR 3, BODY SIDE. The text puts all four proliferation genes, Axin included, up from one month.",
@@ -169,17 +165,16 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Hepatocyte-specific WWOX ablation is associated with increased proliferation'",
-    "evidence_relation": "text_contradicted_by_panel",
-    "evidence_pair":"fig3F-axin2-not-early"
+    "panel_text_relation": "text_only"
    },
    {
-    "evidence_pair":"fig3F-axin2-not-early",
+    "contradicts": "entries[6]",
     "proposition": "PAIR 3, PANEL SIDE. AXIN2 is not raised at 1 month — it is marginally lower in cKO and carries no significance mark, reaching significance only at 6 months. c-Jun also fails significance at 3 and 6 months, so the continual pattern the Discussion asserts holds for MYC alone.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3F, 1M block: MYC *, JUN *, FOS *, AXIN2 unmarked with cKO ~0.89 against Control ~0.87. 3M block: MYC *, FOS *, JUN and AXIN2 unmarked. 6M block: MYC *, FOS *, AXIN2 *, JUN unmarked. The panel labels read AXIN2, not Axin.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig3_HTML.jpg",
     "anchor": "Figure 3, panel F, significance marks and bar heights read at original resolution",
-    "evidence_relation": "text_contradicted_by_panel"
+    "panel_text_relation":"text_contradicted_by_panel"
    },
    {
     "proposition": "PAIR 4, BODY SIDE. The therapeutic claim: digoxin downregulates the HIF1alpha targets in the knockout.",
@@ -187,17 +182,16 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Inhibition of HIF1alpha rescued the effect of WWOX loss'",
-    "evidence_relation": "text_contradicted_by_panel",
-    "evidence_pair":"fig5D-pdk1-rises"
+    "panel_text_relation": "text_only"
    },
    {
-    "evidence_pair":"fig5D-pdk1-rises",
+    "contradicts": "entries[8]",
     "proposition": "PAIR 4, PANEL SIDE. Three of four targets fall under digoxin; PDK1 RISES and carries no significance mark, in the knockout and again in wild-type. The rescue is not uniform across the targets it is claimed for.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 5D: LDHA1 falls ~0.72 to ~0.36 (*), GLUT1 ~0.67 to ~0.26 (*), GAPDH ~1.05 to ~0.57 (**), PDK1 RISES ~1.50 to ~1.92 and is unmarked. Fig 5F repeats the PDK1 rise in WT saline versus WT digoxin.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig5_HTML.jpg",
     "anchor": "Figure 5, panels D and F, bar directions and significance marks read at original resolution",
-    "evidence_relation": "text_contradicted_by_panel"
+    "panel_text_relation":"text_contradicted_by_panel"
    },
    {
     "proposition": "PAIR 5, BODY SIDE. The text places the c-Myc elevation after hepatectomy on days 2, 3 and 4.",
@@ -205,17 +199,16 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Wwox ablation is associated with increased proliferation upon partial hepatectomy'",
-    "evidence_relation": "text_contradicted_by_panel",
-    "evidence_pair":"fig7D-day2-unmarked"
+    "panel_text_relation": "text_only"
    },
    {
-    "evidence_pair":"fig7D-day2-unmarked",
+    "contradicts": "entries[10]",
     "proposition": "PAIR 5, PANEL SIDE. Day 2 carries no significance mark; only days 3 and 4 are marked. The day-2 point also has the largest error bar in the series.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7D: 1 Day unmarked, 2 Days unmarked with cKO ~2.85 and an error bar reaching ~3.6, 3 Days *, 4 Days *, 7 Days unmarked with the cKO point falling below the control.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig7_HTML.jpg",
     "anchor": "Figure 7, panel D, significance marks per timepoint read at original resolution",
-    "evidence_relation": "text_contradicted_by_panel"
+    "panel_text_relation":"text_contradicted_by_panel"
    },
    {
     "proposition": "PAIR 6, BODY SIDE. The text says the knockout proliferation index kept rising while the control fell — the basis for the claim that WWOX loss removes the termination phase of liver regeneration.",
@@ -223,17 +216,16 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Wwox ablation is associated with increased proliferation upon partial hepatectomy', sentence beginning 'Intriguingly, whereas the proliferation index was reduced 4 and 7 days post hepatectomy in control mice'",
-    "evidence_relation": "text_contradicted_by_panel",
-    "evidence_pair":"fig7B-day4-dip"
+    "panel_text_relation": "text_only"
    },
    {
-    "evidence_pair":"fig7B-day4-dip",
+    "contradicts": "entries[12]",
     "proposition": "PAIR 6, PANEL SIDE. The knockout curve does not rise monotonically: it falls at day 4 before rising again at day 7.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7B cKO series: 3 Days ~0.44, 4 Days ~0.38, 7 Days ~0.48, so day 4 is a decrease from day 3. Marks are *** at 3, 4 and 7 days and absent at 1 and 2 days.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig7_HTML.jpg",
     "anchor": "Figure 7, panel B, cKO series values at days 3, 4 and 7 read at original resolution",
-    "evidence_relation": "text_contradicted_by_panel"
+    "panel_text_relation":"text_contradicted_by_panel"
    },
    {
     "proposition": "The finding that lives only in a panel: florid hepatic steatosis in the knockout on NORMAL chow at 10 months. The running text describes these livers only as poorly differentiated tumours and reports steatosis solely for the high-fat arm. A lipid phenotype on standard diet is the currency of the Iatan lipid question and is invisible to a text-only reader.",
@@ -241,7 +233,7 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig2_HTML.jpg",
     "anchor": "Figure 2, panel H, right-hand column, x20 and x40 rows, read at original resolution",
-    "evidence_relation": "panel_only"
+    "panel_text_relation":"panel_only"
    },
    {
     "proposition": "PDK1 — the target carrying the muscle-knockout bridge — is measured at exactly one timepoint in this paper, is not significant there, and is then dropped from the later panel. The liver does not reproduce the muscle PDK1 result, and the paper never says so.",
@@ -249,7 +241,7 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig4_HTML.jpg",
     "anchor": "Figure 4, panels C and D, gene rosters and significance marks read at original resolution",
-    "evidence_relation": "panel_only"
+    "panel_text_relation":"panel_only"
    },
    {
     "proposition": "The digoxin rescue is demonstrated on a gene subset that excludes the two strongest hits of the experiment it is meant to rescue.",
@@ -257,7 +249,7 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig5_HTML.jpg",
     "anchor": "Figure 5, panels D and F, x-axis category labels read at original resolution",
-    "evidence_relation": "panel_only"
+    "panel_text_relation":"panel_only"
    },
    {
     "proposition": "The tumour-incidence chi-square for the digoxin experiment was performed on the CONTROL arm only, where n is 4 in the treated group and the result is not significant. No incidence analysis exists for the knockout arm, whose rescue rests on liver weight and representative images.",
@@ -265,7 +257,7 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig5_HTML.jpg",
     "anchor": "Figure 5, panel E, title, printed p-value and stacked bar segments read at original resolution",
-    "evidence_relation": "panel_only"
+    "panel_text_relation":"panel_only"
    },
    {
     "proposition": "The TCGA cohort size is stated three different ways across the paper, and the survival split visible in the figure legend matches neither written number.",
@@ -273,7 +265,7 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig1_HTML.jpg",
     "anchor": "Figure 1, panel B, in-plot legend and printed p-value read at original resolution",
-    "evidence_relation": "panel_only"
+    "panel_text_relation":"panel_only"
    },
    {
     "proposition": "The knockout is about 90 percent, not complete, and the paper does not say so in words — expected for an Alb-Cre model measured in whole-liver lysate containing non-parenchymal cells, but it bounds every downstream effect size.",
@@ -281,7 +273,7 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig2_HTML.jpg",
     "anchor": "Figure 2, panel A, cKO WWOX bar height read at original resolution",
-    "evidence_relation": "panel_only"
+    "panel_text_relation":"panel_only"
    },
    {
     "proposition": "Within one figure the Control/cKO colour mapping inverts between panels — a legibility hazard rather than a data error, since the bars stay labelled.",
@@ -289,7 +281,7 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig6_HTML.jpg",
     "anchor": "Figure 6, legends of panels A, E and F compared at original resolution",
-    "evidence_relation": "panel_only"
+    "panel_text_relation":"panel_only"
    },
    {
     "proposition": "The high-fat-diet result is solid and its numbers are legible in the panel: incidence 11 of 12 in the knockout against 4 of 18 in control.",
@@ -297,7 +289,7 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig6_HTML.jpg",
     "anchor": "Figure 6, panel A, stacked bar segments read at original resolution",
-    "evidence_relation": "text_and_panel_agree"
+    "panel_text_relation": "text_confirmed_by_panel"
    },
    {
     "proposition": "CROSS-PAPER OVER-EXTENSION BY LOST QUALIFIER — not a contradiction, and the distinction is the finding. Reference 24 is Iatan 2014, PMID 24871327, which reports lowered HDL-C in the TOTAL-BODY null and separately reports that the sole deletion of Wwox in hepatocytes did NOT change HDL-C in either sex. This Discussion drops the genotype qualifier, writing 'Wwox knockout mouse models' without restriction, inside a paragraph whose entire subject is the liver. The cited result is real; the scope it is carried at is not. That is the failure mode to tag, because a reader checking whether the source says something about HDL will find that it does.",
@@ -305,7 +297,7 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Discussion, paragraph beginning 'WWOX anti-proliferative function in HCC might also involve modulation of fatty acid/lipid metabolism'",
-    "evidence_relation": "text_only"
+    "panel_text_relation":"text_only"
    },
    {
     "proposition": "The extent of the hepatectomy is stated as 30 percent in the Methods and Results and as 50 percent in the Figure 7a caption. Both are text and the panel shows no resection extent, so this is an internal textual inconsistency rather than a panel disagreement.",
@@ -313,7 +305,7 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Materials and Methods, 'Mice and related experiments'; contradicted by the Figure 7 caption phrase '3-days post 50% partial hepatectomy'",
-    "evidence_relation": "text_only"
+    "panel_text_relation":"text_only"
    },
    {
     "proposition": "Timing, and the reason the paper's causal direction does not follow from its own data: the proliferation programme moves at 1 month and the glycolytic programme only at 6. The paper nonetheless argues the metabolic change fuels and drives tumour development.",
@@ -321,7 +313,7 @@
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Discussion, paragraph beginning 'Our data further present a critical metabolic and anti-proliferative role'",
-    "evidence_relation": "text_only"
+    "panel_text_relation":"text_only"
    }
   ],
   "note": "Coverage: complete. Introduction, Results, Discussion, Materials and Methods and the reference list read in the JATS body; all seven figures inspected as images at original resolution from fingerprinted artifacts, never through a text conversion; supplementary PDF retrieved and fingerprinted. The supplementary panels S1 to S4 are cited by the running text and were not individually adjudicated in this pass — declared as a bounded gap, not as absence."
