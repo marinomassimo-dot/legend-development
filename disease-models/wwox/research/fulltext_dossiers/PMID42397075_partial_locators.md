@@ -10,7 +10,69 @@ in one day.
 | Role | Path | SHA-256 |
 |---|---|---|
 | `article_binary` | `files/fulltext/PMID42397075_Aqeilan2026.pdf` | `b6b44816bb5a029ad6dd3760dbf02ae94c5fcb69f8a9b5721f45c128bbf189a0` |
-| `article_text` | `staging/fulltext_text_20260809/PMID42397075.fitz.txt` | `9c48aa0934648f58f8f5d3b39fa73b0f31e0b0d8d284914b32bd5e3f9b34bb17` |
+| `article_text` | `files/fulltext/PMID42397075_Aqeilan2026_fitz.txt` *(was `staging/fulltext_text_20260809/…`)* | `9c48aa0934648f58f8f5d3b39fa73b0f31e0b0d8d284914b32bd5e3f9b34bb17` |
+
+### 🔴 Preflight of 2026-08-10 — the declared surface is intact and NOT reproducible from its declared method
+
+Before completing this reading the surface was re-checked, and three things came out.
+
+**1. The artifact is real and unaltered.** `staging/fulltext_text_20260809/PMID42397075.fitz.txt`
+still exists, 91 848 bytes, and hashes to exactly the declared
+`9c48aa09346…`. The 9 August receipt was accurate. It has now been **copied to
+`files/fulltext/PMID42397075_Aqeilan2026_fitz.txt` with the digest preserved**, because
+`staging/` is not where evidentiary artifacts live and a per-worktree `files/` is what the
+merge-time validation reads.
+
+**2. 🔴 But the declared extraction method does not regenerate it.** The receipt records
+*"PyMuPDF 1.26.5 page.get_text() default mode, pages joined in order"*. Re-running exactly
+that today, on a PDF whose digest still matches (`b6b44816…`), against the same PyMuPDF
+1.26.5:
+
+| join | sha256 |
+|---|---|
+| `''.join(pages)` | `bab5bc5d9605…` |
+| `'\n'.join(pages)` | `f2f053fd7326…` |
+| `'\f'.join(pages)` | `76943b7b9122…` |
+| **declared** | **`9c48aa0934…`** |
+
+None matches, and the byte counts differ by 942. **"Pages joined in order" is not a
+reproducible specification** — it leaves the separator, and anything else the extractor did,
+unstated. The artifact is fine; the *recipe* for it is not runnable, which is exactly the
+failure the page-adjudication work fixed for crops in `adjudications.json` and which the same
+argument covers here: **a derivation recorded only in prose decays silently; one a command
+runs cannot.**
+
+Nothing is retracted by this. The twelve locators of 9 August were verified against the file
+that exists, and that file is unchanged. What is lost is the ability of a third party to
+rebuild the surface from the record — which is the whole point of declaring an extraction
+method.
+
+**3. The surface itself is sound, and the first screen nearly said otherwise.** My initial
+probe found zero occurrences of `P\s*[<>=]\s*0?\.\d+` in 90 000 characters of an experimental
+paper — the classic *suspicion by absence* signature — plus two `q`-between-digits hits. Both
+were artefacts of my own probe: the paper writes thresholds with **`≤` (16 occurrences)**, and
+the two `q` hits are `16q21-q23`, a cytogenetic locus. `_refuse_suspect_surface` passed the
+text and was right to. **My regex was incomplete, not the PDF** — and a screen that reports
+absence needs its own pattern audited before the absence is believed.
+
+### Surface decision for the completion
+
+Continue on the **existing** `9c48aa09…` artifact rather than a freshly derived one, so the
+twelve captured locators and the ones still to come share a single text surface. The
+newly-derived `bab5bc5d…` file was discarded for that reason.
+
+### What remains, with the artifacts now in place
+
+- **Figures 2, 4, 5** — never opened. Figures 1, 3 and 6 were inspected on 9 August and
+  changed the reading three times.
+- **Five supplementary PDFs** in `files/fulltext/PMID42397075_Aqeilan2026_assets/`
+  (`brain-2025-03809-File008` … `File012`), present since 1 July and **never opened**. The
+  article states the detailed Materials and methods live there, which is why `methods` is
+  conservatively `not_read`.
+- **References** — not enumerated.
+- No PMC deposit: `esummary` returns only `pubmed`, `doi` and `pii`, so per rule 5d the
+  absence of a structured surface is recorded rather than assumed, and the PDF plus its
+  fingerprinted derived text is the correct pairing.
 | figure (Fig. 1) | `staging/figures_20260809/PMID42397075/PMID42397075_p32_x243.jpeg` | `7672818f61351ada7bf536d1ccc373e0769d1e5d8b3d93a5b83124f0e191c154` |
 | figure (Fig. 3) | `staging/figures_20260809/PMID42397075/PMID42397075_p34_x247.png` | `e072368ea710687ffcd422532b160a687ad02f162cf5e3f78e5b603f59acbc56` |
 | figure (Fig. 6) | `staging/figures_20260809/PMID42397075/PMID42397075_p36_x252.jpeg` | `23a4ecd347184d9bbe5ef1e59c818bc732486d77da3913b58ee4ae134cad8f4a` |
