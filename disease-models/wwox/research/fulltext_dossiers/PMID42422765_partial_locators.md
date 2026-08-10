@@ -384,6 +384,65 @@ same risk profile as an enhancer element with a steep response. But it is **not*
 "we reduced expression for safety", and a reader taking the WPRE removal as evidence of lower
 transgene burden would be wrong about the final construct.
 
+### Figure 1 (`gr1.jpg`, sha256 `9956521d22c3787ba10551dd7a4284faca01e569a0bdb20ba852064cf5be6c51`) — the promoter comparison, and what panel M shows
+
+`surface: figure`, 104 ppi. Four promoters, all at **4 × 10¹⁰ vg**. Blood glucose at P14:
+
+| promoter | target | glucose vs WT | vs KO |
+|---|---|---|---|
+| EF1α | neurons + glia | improved to ≈100 (WT ≈137), **still `***` below WT** | `***` |
+| CMV | ubiquitous | ≈132, **`ns` vs WT** | `***` |
+| **MBP** | oligodendrocytes | ≈60, **`ns` vs KO — no effect at all** | **`ns`** |
+| Synapsin | neurons | ≈130, **`ns` vs WT** | `****` |
+
+Survival tracks the same ordering: MBP no benefit, EF1α marginal, CMV extended to ~30–35 days
+then lost, Synapsin best.
+
+🔴 **Panel M is the one that matters, and it supports the authors' own caution rather than
+their headline.** WWOX immunofluorescence in cortex, one column per promoter: EF1α weak and
+diffuse, CMV moderate, **MBP essentially blank**, SynI strong and clearly cellular. The MBP
+vector did not fail to help — **it barely produced detectable WWOX at all**.
+
+That is the visible form of the Discussion's hedge, already recorded as locator 4: the failure
+"may reflect the limited oligodendrocyte tropism of AAV9 … rather than a lack of relevance for
+oligodendrocyte WWOX expression". The panel converts that from a polite caveat into an
+observation. **The oligodendrocyte question raised by `PMID 34747138` is not answered by this
+experiment, and panel M is why.** (One qualification the panel invites: M shows *cortex*,
+where oligodendrocyte density is lower than in white matter — a corpus-callosum column would
+test the tropism explanation more directly, and is not shown.)
+
+### 🟡 A tension between Figure 1 and Figure 2 that this reading cannot resolve
+
+Figure 1J shows Synapsin-driven WWOX at 4 × 10¹⁰ holding at 100% survival out to ~25 days.
+Figure 2B shows `KO + AAV-hWWOX (4E10)` — apparently the same promoter, construct and dose —
+**dead at ~18–20 days**.
+
+The two may be reconcilable: the plotted windows differ, Figure 1's curves are drawn to ~25–45
+days while Figure 2's run to ~50, and n is 6 against 3. A curve that has not yet fallen is not
+a curve that will not fall. **Recorded as an open discrepancy, not as a contradiction**, and
+flagged because anyone citing "Synapsin rescues survival at 4E10" from Figure 1 would be
+contradicted by Figure 2 of the same paper.
+
+### 🔴 The promoter hierarchy was established below the therapeutic threshold
+
+The single most consequential thing about Figure 1 is its dose. **Every promoter was compared
+at 4 × 10¹⁰ vg** — and Figure 2, in the same paper, shows that at 4 × 10¹⁰ *no* construct
+produces durable survival, while Figure 3 puts the effective dose at 2.63 × 10¹¹, **6.6-fold
+higher**.
+
+So the conclusion that neuron-restricted expression beats ubiquitous and oligodendrocyte-
+directed strategies rests on a comparison run entirely **beneath the dose at which the winning
+construct itself works**. The authors state the premise plainly — *"all vectors were tested at
+the same titer (4E10)"* — and state its consequence for MBP; the consequence for the whole
+ranking is left implicit.
+
+🔴 `PREMISE_TAG` · `PREMISE: INFERENZA`. The claim "neuronal WWOX expression is both necessary
+and sufficient … whereas expression in oligodendrocytes alone is insufficient" is supported
+here by (a) a sub-threshold promoter comparison and (b) prior conditional-KO genetics
+(Nestin-Cre and SynI-Cre recapitulate, GFAP-Cre and Olig2-Cre do not, reference 42). **(b) is
+the load-bearing evidence; (a) is consistent with it and cannot establish it.** A promoter
+comparison repeated at 2.63 × 10¹¹ is the experiment that would.
+
 ## Reading debt this leaves — explicit and large
 
 - **Introduction, all seven results sections and Materials and Methods: not read.**
