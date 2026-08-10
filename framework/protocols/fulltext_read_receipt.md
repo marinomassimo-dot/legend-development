@@ -77,20 +77,6 @@ v1 manifests remain visible as migration debt and are not rewritten. For a PDF, 
 fingerprinted PDF as `article_binary` and a deterministic extracted TXT as `article_text`;
 text locators point to the latter while the receipt remains bound to the former.
 
-Every newly captured locator also declares `evidence_relation`, chosen while both surfaces
-are still open:
-
-- `text_only`: the assertion rests on text and no panel bears on it;
-- `text_and_panel_agree`: an inspected panel confirms the text;
-- `panel_only`: the inspected panel shows it and the text does not state it;
-- `text_contradicted_by_panel`: the text and inspected panel disagree.
-
-`text_contradicted_by_panel` is never a one-sided locator. It requires exactly two entries
-sharing an `evidence_pair`: one text entry carrying the authored statement and one `figure`
-entry carrying the pixel reading, each with its own surface and artifact. Half a contradiction
-is an unsupported interpretation. Historical manifests without `evidence_relation` remain
-migration debt; new captures emit it even before the field becomes universally mandatory.
-
 ### 🔴 Evidence locality across branches
 
 `files/` is gitignored for copyright reasons. A branch therefore transports a manifest but

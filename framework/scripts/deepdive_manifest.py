@@ -72,12 +72,6 @@ CORPUS_ARTEFACT = firewall.CORPUS_ARTEFACT
 # artefact; `figure` is pixels and can only be attested; `abstract` is honest but weak.
 LOCATOR_SURFACES = {"body", "figure", "table", "supplement", "abstract"}
 TEXT_SURFACES = {"body", "table", "supplement"}
-EVIDENCE_RELATIONS = {
-    "text_only",
-    "text_and_panel_agree",
-    "panel_only",
-    "text_contradicted_by_panel",
-}
 ARTIFACT_KINDS = {"article_binary", "article_text", "supplement_text", "figure", "table"}
 SHA256_RE = re.compile(r"[a-f0-9]{64}")
 # An elided quote is verbatim in each half and not verbatim as a whole. LEGEND reads it fine;
@@ -695,26 +689,6 @@ def validate(
                         "be recorded as triage context, but cannot be an evidentiary locator "
                         "for a complete read")
 
-                relation = entry.get("evidence_relation")
-                if relation is not None and relation not in EVIDENCE_RELATIONS:
-                    errors.append(
-                        f"verbatim_locators.entries[{position}].evidence_relation: must be "
-                        f"one of {sorted(EVIDENCE_RELATIONS)}")
-                if relation == "panel_only" and surface != "figure":
-                    errors.append(
-                        f"verbatim_locators.entries[{position}].evidence_relation: "
-                        "panel_only requires surface=figure")
-                if relation == "text_only" and surface == "figure":
-                    errors.append(
-                        f"verbatim_locators.entries[{position}].evidence_relation: "
-                        "text_only cannot use surface=figure")
-                if relation == "text_contradicted_by_panel" and not str(
-                    entry.get("evidence_pair", "")
-                ).strip():
-                    errors.append(
-                        f"verbatim_locators.entries[{position}].evidence_pair: a text/panel "
-                        "contradiction requires a shared pair identifier")
-
                 artifact_values = entry.get("artifact")
                 if isinstance(artifact_values, str):
                     artifact_paths = [artifact_values]
@@ -829,26 +803,6 @@ def validate(
                             f"verbatim_locators.entries[{position}].abstract_snippet: not "
                             f"found in the abstract of any declared artifact ({detail}). An "
                             "abstract anchor that is not in the abstract verifies nothing")
-
-            contradiction_pairs: dict[str, list[tuple[int, dict[str, Any]]]] = {}
-            for position, entry in enumerate(entries, 1):
-                if not isinstance(entry, dict):
-                    continue
-                if entry.get("evidence_relation") != "text_contradicted_by_panel":
-                    continue
-                pair = str(entry.get("evidence_pair", "")).strip()
-                if pair:
-                    contradiction_pairs.setdefault(pair, []).append((position, entry))
-            for pair, members in contradiction_pairs.items():
-                surfaces = {str(entry.get("surface")) for _, entry in members}
-                if len(members) != 2 or "figure" not in surfaces or not (
-                    surfaces & TEXT_SURFACES
-                ):
-                    positions = [position for position, _ in members]
-                    errors.append(
-                        f"verbatim_locators.evidence_pair[{pair}]: contradiction must have "
-                        "exactly two entries, one text surface and one figure surface; "
-                        f"found entries {positions} with surfaces {sorted(surfaces)}")
 
         # A snippet is verified by matching it against a cached copy of the source. When the
         # source is not full-text indexed, the only text an external validator can hold is the

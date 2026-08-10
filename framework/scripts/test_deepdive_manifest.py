@@ -153,40 +153,6 @@ class EntriesMustBeUsable(unittest.TestCase):
         errors, _ = gate.validate(minimal(), require_current_schema=True)
         self.assertTrue(any("new complete reads require" in error for error in errors))
 
-    def test_evidence_relation_is_optional_but_invalid_values_are_refused(self) -> None:
-        manifest = schema_v2()
-        manifest["verbatim_locators"]["entries"][0]["evidence_relation"] = "caption_only"
-        errors, _ = gate.validate(manifest)
-        self.assertTrue(any("evidence_relation" in error for error in errors))
-
-    def test_text_contradiction_requires_a_paired_text_and_figure_entry(self) -> None:
-        manifest = schema_v2()
-        entry = manifest["verbatim_locators"]["entries"][0]
-        entry["evidence_relation"] = "text_contradicted_by_panel"
-        entry["evidence_pair"] = "PAIR-1"
-        errors, _ = gate.validate(manifest)
-        self.assertTrue(any("exactly two entries" in error for error in errors))
-
-    def test_text_contradiction_pair_accepts_one_text_and_one_panel(self) -> None:
-        manifest = schema_v2()
-        text_entry = manifest["verbatim_locators"]["entries"][0]
-        text_entry["evidence_relation"] = "text_contradicted_by_panel"
-        text_entry["evidence_pair"] = "PAIR-1"
-        panel_entry = dict(text_entry)
-        panel_entry.update({
-            "surface": "figure",
-            "artifact": "files/fulltext/panel.png",
-            "snippet": "The inspected panel prints the opposite result in the labelled comparison.",
-        })
-        manifest["source_artifacts"].append({
-            "path": "files/fulltext/panel.png",
-            "sha256": "b" * 64,
-            "kind": "figure",
-        })
-        manifest["verbatim_locators"]["entries"].append(panel_entry)
-        errors, _ = gate.validate(manifest)
-        self.assertEqual(errors, [])
-
     def test_strict_verification_distinguishes_abstract_from_body(self) -> None:
         with TemporaryDirectory() as temporary:
             root = Path(temporary)
