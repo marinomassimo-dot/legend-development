@@ -61,7 +61,89 @@ Continue on the **existing** `9c48aa09…` artifact rather than a freshly derive
 twelve captured locators and the ones still to come share a single text surface. The
 newly-derived `bab5bc5d…` file was discarded for that reason.
 
-### What remains, with the artifacts now in place
+## 2026-08-10, second run — the detailed Methods, the statistics, and Figure 5
+
+`methods: not_read` existed because the article says the detailed Materials and methods live
+in the supplement. They do: **`brain-2025-03809-File009.pdf`**, 14 pages, sha256
+`19d1b1d7305315159f4319ece8e7da745015564cc94932058f1eeccd45aa6771`, sentinel PASS, 32 217
+characters. Read in full. The other four supplements are now mapped: `File008` author
+contributions (1 p.), `File010` supplementary figures (19 pp.), `File011` resource table
+(5 pp.), `File012` uncropped western blots (10 pp.).
+
+### 🔴 The MYC-inhibition experiment uses a multi-kinase inhibitor that also suppresses Wnt
+
+> "we performed a MYC inhibition experiment, using a multi-kinase inhibitor (A51) established to suppress Wnt and MYC expression"
+
+`surface: body` · Results. Dose 125 nM, weeks 8→15, compound provided by the Ben-Neriah
+group. `evidence_relation: text_only`.
+
+**The paper's functional pillar for the WWOX–MYC axis is a compound the paper itself
+describes as suppressing two pathways.** Any causal attribution to MYC inherits that
+ambiguity, and the authors state it plainly rather than hiding it. `PREMISE_TAG` ·
+`PREMISE: INFERENZA` — "MYC inhibition rescues the phenotype" is supported here by an
+intervention that is not MYC-selective.
+
+For LEGEND this cuts two ways and both belong in the record: it weakens the causal claim, and
+it is the first **pharmacological** intervention in a human WWOX-deficient neural model that
+this corpus has seen — material for the therapeutic track, at hypothesis level only.
+
+### 🔴 The three experiments carrying the central thesis are the three without independent differentiations
+
+> "Experiments were performed in independent differentiations, except for single-cell RNA-seq, MYC inhibition and NSCs CHIP-Seq, using multiple biological replicates"
+
+`surface: body` · Statistical analysis, supplement. `evidence_relation: text_only`.
+
+The exception list is not incidental: **scRNA-seq, MYC inhibition and ChIP-seq are precisely
+the three experiments the WWOX–MYC interplay rests on.** Read the sentence twice — everything
+else was replicated across independent differentiations; these were not.
+
+### 🔴 "No randomization or blinding was applied in this study"
+
+`surface: body` · Statistical analysis. `evidence_relation: text_only`. Quoted verbatim and
+without qualification.
+
+Put beside the two papers read earlier today, from the same laboratory, this is a gradient:
+
+| paper | blinding declared |
+|---|---|
+| `34747138` Repudi 2021 | *"Data analysis was performed while blinded to the genotype"* — unconditional |
+| `42422765` Obeid 2026 | *"Data were analyzed in a blinded manner when feasible"* |
+| **`42397075` Aqeilan 2026** | **none applied** |
+
+Found rather than looked for: I read the statistics section to interpret the panels, and
+recognised the sentence because I had read the other two today.
+
+**What the statistics do well**, and it is more than the other two papers: normality tested
+with Shapiro-Wilk, one-way ANOVA with Tukey or Dunnett, or multiple t-tests with
+Benjamini-Hochberg FDR. Multiplicity correction is declared and named — neither of the other
+two papers did that.
+
+### Figure 5 (`fig_p35_1430x795.jpeg`, sha256 `103412d12ef433931b97cae6d946727d476f417398aa579c06b16fb4a1268b55`, 204 ppi)
+
+`surface: figure`. Panels F and G: WT sits near 35% early / 65% late neurons, while WOREE and
+SCAR12 both invert to roughly 65% early / 35% late, with log2FC against WT positive for early
+and negative for late in both patient lines. **The shift toward early-born neuronal identity
+is reproduced in two independent patient genotypes.** `evidence_relation: panel_only`.
+n = 9094 cells.
+
+#### 🟢 An error this session's own rule prevented
+
+Panel E lists `canonical Wnt signaling pathway` among negatively-enriched GO processes. Given
+that A51 suppresses Wnt, I was about to record that the rescue experiment inhibits a pathway
+already down in the mutants. **I read the caption first, and it says the opposite of what I
+assumed:**
+> "(E) Representative Gene Ontology (GO) terms enriched in “late” cells compared to “early” cells, plotted as normalized enrichment score (NES)."
+
+The contrast is **developmental stage, not genotype**. A negative NES for Wnt means it is
+higher in *early* cells — ordinary developmental biology, and nothing to do with WWOX. The
+inference would have been false, and it would have been my fourth cross-figure invention
+today.
+
+This is the rule written two commits ago — *a figure is not read until its caption is read* —
+holding on its first test, and the difference from the earlier failures is only in ordering:
+I looked before asserting rather than after being corrected.
+
+## What remains, with the artifacts now in place
 
 - **Figures 2, 4, 5** — never opened. Figures 1, 3 and 6 were inspected on 9 August and
   changed the reading three times.
