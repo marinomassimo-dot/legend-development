@@ -1,787 +1,787 @@
 {
-  "schema_version": 2,
-  "pmid": "17803050",
-  "doi": null,
-  "receipt": "FTR-20260806-17803050-01",
-  "landing": [
-    "disease-models/wwox/research/fulltext_dossiers/PMID17803050.md",
-    "discovery_ledger_current#DL-MECH-077",
-    "discovery_ledger_current#DL-MECH-078",
-    "full_text_queue_current#FT-041",
-    "staging/commit_candidate_20260806_17803050.md"
-  ],
-  "skills_considered": [
-    {
-      "skill": "find-fulltext",
-      "used": true
-    },
-    {
-      "skill": "legend-deepdive",
-      "used": true
-    },
-    {
-      "skill": "legend-discovery",
-      "used": true
-    },
-    {
-      "skill": "legend-session-self-eval",
-      "used": true
-    },
-    {
-      "skill": "legend-capability-scout",
-      "used": true
-    },
-    {
-      "skill": "legend-session-takeaways",
-      "used": true
-    },
-    {
-      "skill": "legend-study-intake-triage",
-      "used": false,
-      "reason": "No study list arrived. The cursor was the single queue entry FT-041, deduplicated against the registries when it was created; re-triaging one known record adds no disambiguation."
-    },
-    {
-      "skill": "legend-batch-inferential-sweep",
-      "used": false,
-      "reason": "There is no batch. FT-041 was an approved single-paper cursor whose reason had just been strengthened by the FT-042 read; a batch ranking could not change which source was opened."
-    },
-    {
-      "skill": "legend-proband-priority-matrix",
-      "used": false,
-      "reason": "Ranking a single already-selected paper is vacuous, and no person-level prioritisation is permitted in the public edition."
-    },
-    {
-      "skill": "legend-hypothesis-forge",
-      "used": false,
-      "reason": "The read resolves a provenance question and replaces one mechanistic hypothesis with a competing one. It matures no therapeutic hypothesis, and forging candidates on a newly opened question would manufacture apparent progress."
-    },
-    {
-      "skill": "legend-safety-triage",
-      "used": false,
-      "reason": "No compound is administered and no molecule is proposed; there is nothing for the BLOCK-1 ADMET gate to evaluate."
-    },
-    {
-      "skill": "legend-aso-designer",
-      "used": false,
-      "reason": "This paper predates the identification of the gene entirely — it names a hypothetical locus, lde, with no molecular lesion. There is no allele of any kind to target."
-    },
-    {
-      "skill": "legend-commit",
-      "used": false,
-      "reason": "Corrections are isolated in a commit candidate. No BATCH_COMMIT was authorised in this session and the four scientific current files remain unchanged."
-    },
-    {
-      "skill": "legend-paperqa",
-      "used": false,
-      "reason": "The source was read in full and sequentially from a local fingerprinted artifact. A retrieval-augmented query would be strictly weaker than the reading performed, and would send text to an external API."
-    }
-  ],
-  "group_assessment": {
-    "total_publications": 43,
-    "publications_on_gene": 2,
-    "research_type": "experimental_lab",
-    "is_primary_group_for_disease": false,
-    "weighting": "Same laboratory as PMID 19500159 (Suzuki H, Nippon Veterinary and Life Science University; 43 PubMed records, 2 on Wwox). This is the earlier of the pair and the more consequential for credibility: it was written before the gene was known. The paper names a hypothetical locus, lde, characterises it phenotypically, and states plainly that the responsible gene is unidentified. Whatever else that costs the work in molecular depth, it makes the seizure, dwarfism and hippocampal-vacuolation phenotypes immune to the objection that a WWOX-motivated group found a WWOX-shaped result — they could not have been looking for Wwox, because nobody yet knew it was Wwox. The laboratory's declared speciality is deriving spontaneous rat mutants from a Wistar-Imamichi closed colony, with four prior strains cited, and its renal-physiology publications are directly relevant to the BUN/creatinine question this paper raises."
+ "schema_version": 2,
+ "pmid": "17803050",
+ "doi": null,
+ "receipt": "FTR-20260806-17803050-01",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID17803050.md",
+  "discovery_ledger_current#DL-MECH-077",
+  "discovery_ledger_current#DL-MECH-078",
+  "full_text_queue_current#FT-041",
+  "staging/commit_candidate_20260806_17803050.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
   },
-  "field_density": {
-    "queries": [
-      {
-        "query": "WWOX AND (\"blood urea nitrogen\" OR creatinine)",
-        "count": 1,
-        "source": "PubMed ESearch, 2026-08-06"
-      },
-      {
-        "query": "WWOX AND \"growth hormone\"",
-        "count": 0,
-        "source": "PubMed ESearch, 2026-08-06"
-      },
-      {
-        "query": "WWOX AND (hypercatabolism OR \"muscle disruption\")",
-        "count": 0,
-        "source": "PubMed ESearch, 2026-08-06"
-      },
-      {
-        "query": "epilepsy AND \"blood urea nitrogen\" AND rats[mh]",
-        "count": 3,
-        "source": "PubMed ESearch, 2026-08-06"
-      }
-    ],
-    "note": "The renal-marker question is a near-total void. One PubMed record links WWOX to blood urea nitrogen or creatinine, zero link it to growth hormone, and zero to hypercatabolism. Yet elevated BUN is now documented first-hand in three independent places — the mouse null (PMID 19936220, BUN 37.25 vs 17.67), this rat (BUN roughly 3.2-3.5x normal in both sexes, plus creatinine), and by explicit cross-citation between the two. Three papers measured it, each proposed or implied a different explanation, and nobody has ever followed it up. The competing-explanation query is the more striking one: this paper's own alternative hypothesis, that raised BUN and creatinine reflect hypercatabolism and muscle disruption from repeated seizures rather than renal failure, returns zero records when paired with WWOX and has never been tested in any WWOX model."
+  {
+   "skill": "legend-deepdive",
+   "used": true
   },
-  "multihop": {
-    "references_enumerated": 35,
-    "gene_direct_refs_in_source": [],
-    "resolved": [],
-    "queued": [],
-    "note": "All 35 references were read. NONE is WWOX-direct, and that is a fact about the paper rather than an omission: it was accepted in April 2007, two years before the same group mapped lde to Wwox, so no WWOX citation could exist. The reference list is instead rat-genetics, dwarfism-model, epilepsy-model and endocrine literature. Two references matter for interpretation and are recorded rather than queued. Reference 3 (Asano 1998, Lab Anim 32:214-218) is the SER-strain precedent for elevated BUN alongside growth retardation and motile seizures, on which this paper's alternative hypercatabolic explanation rests. Reference 28 (Takenaka 2004, Exp Anim 53(3) Suppl:S6) is a conference abstract carrying the preliminary audiogenic result of 90 percent, which means the audiogenic phenotype was known in 2004 and formally published only in 2009. Neither is opened as a new full-text debt: the SER paper is background for a hypothesis this reading records as untested rather than adopts, and a one-page meeting abstract is superseded by the full audiogenic study already read as FT-042."
+  {
+   "skill": "legend-discovery",
+   "used": true
   },
-  "corpus_crossquery": {
-    "query": "Does this paper support PMID 19500159's claim that normal serum constituents 'clearly excluded' a systemic metabolic cause for the rat's hyperexcitability, and its attribution of the dwarfism to low pituitary growth hormone?",
-    "hits": 2,
-    "note": "Split verdict, and the second half fails. On serum: the specific mouse-versus-rat contrast is CONFIRMED — glucose, calcium, sodium, potassium, chloride and triglycerides are all comparable between normal and mutant rats, so the rat genuinely lacks the mouse null's hypoglycaemia, hypocalcaemia and electrolyte derangement. But BUN is roughly 3.2-3.5x normal in both sexes and creatinine is significantly raised, so the blanket phrase 'normal levels of serum constituents' is false as written and 'clearly excluded' overstates what this source licenses. On growth hormone: PMID 19500159 states the dwarfism 'may be related, at least in part, to lower levels of pituitary growth hormone (Suzuki et al. 2007)'. This paper says the opposite — the GH difference was NOT statistically significant, GH-producing cells were present, and the dwarfism 'cannot be explained solely by low levels of plasma GH'. The unqualified phrase 'decreased concentrations of plasma growth hormone' occurs only in this paper's own ABSTRACT, which overstates its own body text. That is the third instance today of a citation firming up its source, and the first in which the overstatement originates in the source's abstract rather than in the citing paper."
+  {
+   "skill": "legend-session-self-eval",
+   "used": true
   },
-  "retraction_check": {
-    "checked": true,
-    "result": "Checked 2026-08-06 on PubMed EFetch. PublicationType is Journal Article; the CommentsCorrections RefType list is empty; there is no RetractionIn, RetractionOf or expression-of-concern link. Europe PMC holds metadata only. The record is clean and admissible. No DOI has ever been registered for this article."
+  {
+   "skill": "legend-capability-scout",
+   "used": true
   },
-  "source_artifacts": [
-    {
-      "path": "files/fulltext/PMID17803050_Suzuki2007.pdf",
-      "sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69",
-      "kind": "article_binary"
-    },
-    {
-      "path": "disease-models/wwox/research/page_adjudications/PMID17803050/p03_electrolytes_and_BUN_significance.png",
-      "sha256": "cdaf28ae2e6eb78e95d467085e6dc1a21859f33f0dacf7c0b3b890e7852a2a74",
-      "kind": "figure",
-      "note": "page 3 crop at 500 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
-    },
-    {
-      "path": "disease-models/wwox/research/page_adjudications/PMID17803050/p04_table2_BUN_CRE_GLU.png",
-      "sha256": "9b2268e2d64658b113b3a45e09e93d308ec0d2639004d138012eba46f62fe90b",
-      "kind": "figure",
-      "note": "page 4 crop at 500 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
-    },
-    {
-      "path": "disease-models/wwox/research/page_adjudications/PMID17803050/p04_table1_organ_weights.png",
-      "sha256": "98ebfb5061b258104c56687279b10f0c4b9220a143b3ccba3f50f5a4a2ba031e",
-      "kind": "figure",
-      "note": "page 4 crop at 400 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
-    },
-    {
-      "path": "disease-models/wwox/research/page_adjudications/PMID17803050/p02_reanchor_6_locators.png",
-      "sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
-      "kind": "figure",
-      "note": "page 2 crop at 300 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
-    },
-    {
-      "path": "disease-models/wwox/research/page_adjudications/PMID17803050/p05_reanchor_3_locators.png",
-      "sha256": "d4d6712ac2b290398660aa711aa4f2d3e8433bfef1c56f9d221a4e3681238540",
-      "kind": "figure",
-      "note": "page 5 crop at 300 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
-    },
-    {
-      "path": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-      "sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-      "kind": "figure",
-      "note": "page 8 crop at 300 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
-    },
-    {
-      "path": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_table3_chi_squared.png",
-      "sha256": "56cb858e4b1e25bb8a0f5fb0a5fadd27094f1499724d16e95e6f7912f2f57c64",
-      "kind": "figure",
-      "note": "page 8 crop at 500 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
-    }
-  ],
-  "verbatim_locators": {
-    "waived": false,
-    "source_fulltext_indexed": false,
-    "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:17803050 on 2026-08-07: inEPMC=N, no PMCID, hasPDF=N — no full text indexed, so an external validator sees only the abstract.",
-    "abstract_anchoring_waived": "Three locators are abstract-anchored where the abstract genuinely carries the proposition. The remaining twenty-nine cannot be, and one of them is the reason: this paper's abstract states 'decreased concentrations of plasma growth hormone' without qualification, while its body reports the difference as NOT statistically significant and concludes the dwarfism cannot be explained by low GH. Anchoring the GH proposition to the abstract would anchor it to the very sentence the full text refutes. The same holds structurally for the rest — the authors' alternative hypercatabolic explanation for raised BUN, the normal kidney histology, the absent proteinuria and anaemia, the seizure-detection limitation, the survivor-selected litter subset and every table value are precisely the qualifications an abstract drops. Their verifiability rests instead on the two fingerprinted local artifacts declared above, both reproducible from the operator's PDF.",
-    "unverifiable_reason": "The declared text surface files/fulltext/PMID17803050_Suzuki2007.html is SUSPECT and is refused by deepdive_manifest, correctly and still. Road 3 was taken instead: the 29 body/table locators are anchored to the printed page, each through a needle unique on its page and inside a crop that regenerates to its declared digest from the source PDF. Six carried corruption inside what they assert; none changes a value, a direction or a significance verdict. DEBT NOT CLEARED: the text surface is still refused, so this paper cannot back a NEW text locator until road 2 is done — the surface rebuilt from the rendering and declared as its own artifact. FT-041 carries it.",
-    "entries": [
-      {
-        "proposition": "Only three plasma markers differ significantly: BUN, creatinine, and inorganic phosphate in females. This is the measurement PMID 19500159's 'clearly excluded' rests on.",
-        "snippet": "the levels of BUN, CRE, and female IP were significantly (P  0.05) higher in mutant than in normal rats",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p03_electrolytes_and_BUN_significance.png",
-        "anchor": "Results, 'Blood examination and urinalysis', page 3, referring to Table 2",
-        "abstract_snippet": "Mutant rats had significantly increased concentrations of plasma urea nitrogen, creatinine, and inorganic phosphate",
-        "page_anchor": {
-          "page": 3,
-          "crop_pdf_points": [
-            300,
-            630,
-            580,
-            690
-          ],
-          "dpi": 500,
-          "needle": "the levels of BUN,",
-          "image_sha256": "cdaf28ae2e6eb78e95d467085e6dc1a21859f33f0dacf7c0b3b890e7852a2a74",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "Glucose, calcium and the electrolytes ARE normal, so the specific contrast PMID 19500159 draws with the mouse null is confirmed — the rat lacks the mouse's hypoglycaemia, hypocalcaemia and electrolyte derangement.",
-        "snippet": "The concentrations of electrolytes (Ca2, Na, K, and Cl–), aberration enzymes (CPK, ALP, GPT, GOT), GLU, and TG were comparable in the normal and mutant rats",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p03_electrolytes_and_BUN_significance.png",
-        "anchor": "Results, 'Blood examination and urinalysis', page 3, first sentence",
-        "page_anchor": {
-          "page": 3,
-          "crop_pdf_points": [
-            300,
-            630,
-            580,
-            690
-          ],
-          "dpi": 500,
-          "needle": "aberration enzymes (CPK, ALP,",
-          "image_sha256": "cdaf28ae2e6eb78e95d467085e6dc1a21859f33f0dacf7c0b3b890e7852a2a74",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "Raised BUN and creatinine occur WITHOUT renal pathology, which is what stops the renal reading from being straightforward.",
-        "snippet": "although mutant rats had elevated levels of BUN and CRE, we could not find any pathologic alteration in their kidneys",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p05_reanchor_3_locators.png",
-        "anchor": "Results, 'Histologic examinations', page 5, final sentence",
-        "page_anchor": {
-          "page": 5,
-          "crop_pdf_points": [
-            170,
-            549,
-            522,
-            721
-          ],
-          "dpi": 300,
-          "needle": "although mutant rats had",
-          "image_sha256": "d4d6712ac2b290398660aa711aa4f2d3e8433bfef1c56f9d221a4e3681238540",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "Two further negatives constrain the renal interpretation: no proteinuria and no anaemia.",
-        "snippet": "urostick tests and blood examinations did not identify any manifestations of proteinuria and anemia",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-        "anchor": "Discussion, page 8, renal paragraph. Contrast with the mouse null, where PMID 19936220 found 3 percent nucleated red blood cells in one of two animals examined.",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            43,
-            160,
-            558,
-            689
-          ],
-          "dpi": 300,
-          "needle": "urostick tests and blood",
-          "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "🔴 The authors offer a competing explanation for raised BUN and creatinine that has never been tested in any WWOX model: hypercatabolism and muscle breakdown from repeated seizures rather than renal failure.",
-        "snippet": "the production of urea-nitrogen and creatinine may be increased due to hypercatabolism and muscle disruption",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-        "anchor": "Discussion, page 8, renal paragraph. This directly competes with the renal-tubular-acidosis hypothesis PMID 19936220 proposed for the mouse null on the strength of the same marker, and that paper never considered it.",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            43,
-            160,
-            558,
-            689
-          ],
-          "dpi": 300,
-          "needle": "production of urea-nitrogen and",
-          "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The competing explanation is not invented for this paper — it has a named precedent in another epileptic rat strain with the same triad.",
-        "snippet": "The spontaneously epileptic rat (SER) strain has elevated levels of BUN, combined with growth retardation and motile epileptic seizures",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-        "anchor": "Discussion, page 8, citing reference 3 (Asano 1998, Lab Anim 32:214-218)",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            43,
-            160,
-            558,
-            689
-          ],
-          "dpi": 300,
-          "needle": "The spontaneously epileptic rat",
-          "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The authors themselves grade the renal claim as weak and state what would settle it, which is the opposite of the certainty PMID 19500159 later expressed.",
-        "snippet": "if renal excretive function is reduced in the mutant rats, the degree of dysfunction may not be severe",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-        "anchor": "Discussion, page 8. The same paragraph names renal clearance testing as the discriminating experiment and explains why it was not done: the dwarfism and lethality make urine collection impractical.",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            43,
-            160,
-            558,
-            689
-          ],
-          "dpi": 300,
-          "needle": "if renal excretive function",
-          "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "🔴 The growth-hormone difference is NOT statistically significant — refuting the claim PMID 19500159 attributes to this very paper.",
-        "snippet": "although the plasma GH level was slightly lower in mutant than in normal rats, the difference was not significant",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-        "anchor": "Discussion, page 8. PMID 19500159 states the dwarfism 'may be related, at least in part, to lower levels of pituitary growth hormone (Suzuki et al. 2007)' — citing this paper for a result this paper declines to claim.",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            43,
-            160,
-            558,
-            689
-          ],
-          "dpi": 300,
-          "needle": "GH level was slightly",
-          "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The authors state the negative conclusion explicitly, so the misattribution cannot be read as a defensible paraphrase.",
-        "snippet": "suggesting that the severe type of dwarfism observed in lde/lde rats cannot be explained solely by low levels of plasma GH",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-        "anchor": "Discussion, page 8, immediately following the non-significance sentence",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            43,
-            160,
-            558,
-            689
-          ],
-          "dpi": 300,
-          "needle": "suggesting that the severe",
-          "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "Pituitary GH-producing cells are present, so the dwarfism is not a failure of GH cell development either.",
-        "snippet": "we detected GH-producing cells in the anterior lobe of their pituitary glands",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-        "anchor": "Discussion, page 8; the same sentence reports preliminary immunoblotting showing GH of normal molecular weight, cited to reference 27, a personal communication",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            43,
-            160,
-            558,
-            689
-          ],
-          "dpi": 300,
-          "needle": "cells in the anterior",
-          "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "Spontaneous seizure incidence is measured first-hand and is nearly identical in the two sexes — the 33 percent figure PMID 19500159 imports.",
-        "snippet": "We detected epileptic seizures in 33.8% (22 of 65) of mutant male rats and 33.9% (19 of 56) of mutant female rats",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p02_reanchor_6_locators.png",
-        "anchor": "Results, 'Observation of epilepsy', page 2. Each rat was observed more than 6 h per day until death.",
-        "page_anchor": {
-          "page": 2,
-          "crop_pdf_points": [
-            86,
-            309,
-            583,
-            605
-          ],
-          "dpi": 300,
-          "needle": "We detected epileptic seizures",
-          "image_sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "Seizure onset spans a wide postnatal window, which matters for any argument about whether a shorter-lived model could express the phenotype.",
-        "snippet": "with seizures first detected between 16 to 63 d of age",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p02_reanchor_6_locators.png",
-        "anchor": "Results, 'Observation of epilepsy', page 2. The earliest onset, day 16, is already beyond the entire lifespan of the Wwox-null mouse (2-3 weeks).",
-        "page_anchor": {
-          "page": 2,
-          "crop_pdf_points": [
-            86,
-            309,
-            583,
-            605
-          ],
-          "dpi": 300,
-          "needle": "with seizures first detected",
-          "image_sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "Ataxic gait is near-fully penetrant and is a cleaner phenotype than the seizures, yet it is the one the downstream literature does not carry.",
-        "snippet": "95% of the mutant rats but none of the normal rats had ataxic gait",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p02_reanchor_6_locators.png",
-        "anchor": "Results, 'Observation of epilepsy', page 2; assessed in 19 female and 20 male mutants against 14 female and 12 male normals at 21 days",
-        "page_anchor": {
-          "page": 2,
-          "crop_pdf_points": [
-            86,
-            309,
-            583,
-            605
-          ],
-          "dpi": 300,
-          "needle": "95% of the mutant",
-          "image_sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "🔴 The authors state that 33 percent is a floor and not a rate: undetected seizures and early death both bias it downward. The same argument PMID 19500159 later applies to the mouse is made here about the rat itself.",
-        "snippet": "A limitation in our ability to detect spontaneous seizures and the early death of the mutant rats before seizure detection may reduce the apparent incidence of seizures in these rats",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-        "anchor": "Discussion, page 8, opening of the epilepsy paragraph",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            43,
-            160,
-            558,
-            689
-          ],
-          "dpi": 300,
-          "needle": "A limitation in our",
-          "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The audiogenic phenotype was already known in 2004, three years before this paper and five before its formal publication.",
-        "snippet": "an audio sound at 15 KHz (88 dB) induced convulsions in 90% of mutant dwarf rats and 0% of normal rats",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-        "anchor": "Discussion, page 8, cited to reference 28 (Takenaka 2004, Exp Anim 53(3) Suppl:S6), a conference abstract. The 90 percent here versus 95 percent in the published PMID 19500159 study is a preliminary-versus-final difference, not a discrepancy.",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            43,
-            160,
-            558,
-            689
-          ],
-          "dpi": 300,
-          "needle": "at 15 KHz (88",
-          "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "Survival is far longer than in the Wwox-null mouse, and is measured here rather than summarised.",
-        "snippet": "All male mutant rats died before 77 d of age, and mutant females died before 84 d of age",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p02_reanchor_6_locators.png",
-        "anchor": "Results, 'Growth and survival', page 2; cohort 45 female and 44 male mutants against 144 female and 122 male normals",
-        "page_anchor": {
-          "page": 2,
-          "crop_pdf_points": [
-            86,
-            309,
-            583,
-            605
-          ],
-          "dpi": 300,
-          "needle": "All male mutant rats",
-          "image_sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The control cohort is essentially unaffected, which bounds the phenotype to genotype rather than to husbandry.",
-        "snippet": "most of the phenotypically normal rats grew normally and survived (mortality rate, 1.5%)",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p02_reanchor_6_locators.png",
-        "anchor": "Results, 'Growth and survival', page 2",
-        "page_anchor": {
-          "page": 2,
-          "crop_pdf_points": [
-            86,
-            309,
-            583,
-            605
-          ],
-          "dpi": 300,
-          "needle": "most of the phenotypically",
-          "image_sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The rat reproduces the mouse's brain-sparing pattern and the authors state the ratio explicitly, so the relative-weight effect cannot be misread as brain overgrowth.",
-        "snippet": "the absolute weight of mutant brain was greater than 90% that of normal brain, and the relative weight of mutant brain was about twice that of normal brain",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-        "anchor": "Discussion, page 8. The same paragraph notes that two other dwarf rat strains show the same disproportional brain growth and argues it is independent of growth hormone.",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            43,
-            160,
-            558,
-            689
-          ],
-          "dpi": 300,
-          "needle": "absolute weight of mutant",
-          "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The anatomical lesion is regionally restricted to CA1 and the amygdala, matching what PMID 19500159 later reports in backcross progeny.",
-        "snippet": "the CA1 region of the hippocampus had many extracellular vacuoles",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p05_reanchor_3_locators.png",
-        "anchor": "Results, 'Histologic examinations', page 5, referring to Figure 5",
-        "page_anchor": {
-          "page": 5,
-          "crop_pdf_points": [
-            170,
-            549,
-            522,
-            721
-          ],
-          "dpi": 300,
-          "needle": "the CA1 region of",
-          "image_sha256": "d4d6712ac2b290398660aa711aa4f2d3e8433bfef1c56f9d221a4e3681238540",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "Controls are clean, so the vacuolation is not an artefact of fixation or of small tissue size.",
-        "snippet": "In contrast no vacuoles were found in the hippocampus and amygdaloid body of normal rats",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p05_reanchor_3_locators.png",
-        "anchor": "Results, 'Histologic examinations', page 5",
-        "page_anchor": {
-          "page": 5,
-          "crop_pdf_points": [
-            170,
-            549,
-            522,
-            721
-          ],
-          "dpi": 300,
-          "needle": "In contrast no vacuoles",
-          "image_sha256": "d4d6712ac2b290398660aa711aa4f2d3e8433bfef1c56f9d221a4e3681238540",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The lesion has no counterpart in human epilepsy or in other animal models, which bounds how far it can be transferred toward a human genotype.",
-        "snippet": "although similar vacuoles in hippocampus and amygdala have not been reported in human epileptic disease and other animal models of epilepsy",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-        "anchor": "Discussion, page 8, hippocampus paragraph",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            43,
-            160,
-            558,
-            689
-          ],
-          "dpi": 300,
-          "needle": "although similar vacuoles in",
-          "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The Mendelian analysis rests on a survivor-selected subset of litters, the same structural caveat found in the mouse paper's day-3 chi-square.",
-        "snippet": "Because some rats with low body weights in 50 of the litters died before weaning, we used the remaining 33 litters",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p02_reanchor_6_locators.png",
-        "anchor": "Materials and methods, 'Determination of the mode of inheritance', page 2. Mutants were detected in 83 of 254 litters; only the 33 in which every low-weight pup survived to 21 days entered the test.",
-        "page_anchor": {
-          "page": 2,
-          "crop_pdf_points": [
-            86,
-            309,
-            583,
-            605
-          ],
-          "dpi": 300,
-          "needle": "Because some rats with",
-          "image_sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The authors propose the strain as a paediatric epilepsy model on the basis of onset timing, which is the most disease-relevant framing in either rat paper.",
-        "snippet": "seizures began during the early postnatal period, making lde/lde rats a potential animal model for pediatric epileptic disease",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-        "anchor": "Discussion, page 8, epilepsy paragraph",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            43,
-            160,
-            558,
-            689
-          ],
-          "dpi": 300,
-          "needle": "seizures began during the",
-          "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The ataxia is not cerebellar, which removes the most obvious structural explanation and leaves it unexplained.",
-        "snippet": "in contrast with the ataxia and male sterility (AMS) mouse,10 we did not detect any marked pathologic changes in the cerebella of lde/lde rats",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-        "anchor": "Discussion, page 8",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            43,
-            160,
-            558,
-            689
-          ],
-          "dpi": 300,
-          "needle": "in contrast with the",
-          "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The cause of death is explicitly unknown in the rat, so no canonical text may state a mechanism for lde lethality.",
-        "snippet": "Although the cause of postnatal death in lde/lde rats is unknown, repeated seizures, small body size, and ataxia may be disadvantageous for their survival",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
-        "anchor": "Discussion, page 8",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            43,
-            160,
-            558,
-            689
-          ],
-          "dpi": 300,
-          "needle": "Although the cause of",
-          "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "Table 2 quantifies the renal markers: BUN is roughly 3.2-fold higher in females and 3.5-fold in males, both significant.",
-        "snippet": "BUN (mg/ml) 12.6 q 4.3 40.3 q 3.7c 10.1 q 2.7 35.6 q 12.8d",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p04_table2_BUN_CRE_GLU.png",
-        "anchor": "Table 2, 'Plasma concentrations of biochemical markers in 28-d-old rats', BUN row, page 4. n = 4 normal and 5 mutant per sex. Footnote c is P<0.05 greater, d is P<0.01 greater.",
-        "page_anchor": {
-          "page": 4,
-          "crop_pdf_points": [
-            40,
-            480,
-            570,
-            562
-          ],
-          "dpi": 500,
-          "needle": "BUN (mg/ml)",
-          "image_sha256": "9b2268e2d64658b113b3a45e09e93d308ec0d2639004d138012eba46f62fe90b",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The same table shows glucose is unchanged in both sexes, which is the single value that most cleanly separates this rat from the hypoglycaemic mouse null.",
-        "snippet": "GLU (mg/ml) 169.0 q 26.7 145.4 q 26.5 155.0 q 30.1 157.4 q 38.9",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p04_table2_BUN_CRE_GLU.png",
-        "anchor": "Table 2, GLU row, page 4, carrying no significance footnote in either sex. Compare PMID 19936220 Table 3, where mouse glucose falls from 250.6 to 143.5 mg/dL at P = 0.000131.",
-        "page_anchor": {
-          "page": 4,
-          "crop_pdf_points": [
-            40,
-            480,
-            570,
-            562
-          ],
-          "dpi": 500,
-          "needle": "GLU (mg/ml)",
-          "image_sha256": "9b2268e2d64658b113b3a45e09e93d308ec0d2639004d138012eba46f62fe90b",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "Table 1 shows the brain-sparing arithmetic directly: a small absolute reduction against a doubled relative weight.",
-        "snippet": "Brain 1426.4 q 45.6 1338.3 q 107.2c 2254.2 q 274.7 4542.0 q 1375.3e",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p04_table1_organ_weights.png",
-        "anchor": "Table 1, 'Organ weights in 28-d-old rats', female Brain row, page 4. Absolute falls 6.2 percent while relative rises from 2254 to 4542. In males the absolute brain weight carries no significance footnote at all, so it is not significantly reduced.",
-        "page_anchor": {
-          "page": 4,
-          "crop_pdf_points": [
-            40,
-            62,
-            570,
-            250
-          ],
-          "dpi": 400,
-          "needle": "1426.4",
-          "image_sha256": "98ebfb5061b258104c56687279b10f0c4b9220a143b3ccba3f50f5a4a2ba031e",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The segregation fits a single autosomal recessive trait, with the observed mutant count slightly above expectation rather than below.",
-        "snippet": "Total rats 228 83 233.3 77.8 0.47",
-        "surface": "figure",
-        "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_table3_chi_squared.png",
-        "anchor": "Table 3, 'Fitness to the hypothesis for the genetic mode of transmission', Total rats row, page 8; chi-square 0.47, P > 0.50",
-        "page_anchor": {
-          "page": 8,
-          "crop_pdf_points": [
-            40,
-            62,
-            570,
-            150
-          ],
-          "dpi": 500,
-          "needle": "Total rats",
-          "image_sha256": "56cb858e4b1e25bb8a0f5fb0a5fadd27094f1499724d16e95e6f7912f2f57c64",
-          "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
-        }
-      },
-      {
-        "proposition": "The figure states the GH negative in its own caption, so the non-significance is visible without reading the Discussion.",
-        "snippet": "Plasma GH levels (ng/ml) were slightly lower in mutant than in normal rats of both sexes, but the differences were not statistically significant",
-        "surface": "figure",
-        "artifact": "files/fulltext/PMID17803050_Suzuki2007.pdf",
-        "anchor": "Figure 6C image inspected on the rendered page 7: paired bar chart, normal versus mutant, for females (about 46 versus 30 ng/ml) and males (about 36 versus 27), with standard-deviation bars that overlap substantially in both sexes. Panels A and B show GH immunostaining with comparable numbers of positive cells in both genotypes."
-      },
-      {
-        "proposition": "The survival curve shows a steep early attrition rather than a single terminal event, which is what makes seizure detection incomplete.",
-        "snippet": "All mutant male rats died by 77 d of age, and all mutant female rats by 84 d of age",
-        "surface": "figure",
-        "artifact": "files/fulltext/PMID17803050_Suzuki2007.pdf",
-        "anchor": "Figure 3 image inspected on the rendered page 3: two curves from 21 to 84 days, males falling from about 44 to 13 by day 28 and reaching zero by 77; females declining more gradually and reaching zero by 84. Most of the loss occurs in the first fortnight after weaning."
-      },
-      {
-        "proposition": "The vacuolation is unambiguous at the image level and confined to CA1 and the amygdala, with the rest of the hippocampal architecture preserved.",
-        "snippet": "No vacuoles were detected in the hippocampus and amygdaloid body of normal rats",
-        "surface": "figure",
-        "artifact": "files/fulltext/PMID17803050_Suzuki2007.pdf",
-        "anchor": "Figure 5 image inspected on the rendered page 6: eight panels at three magnifications. Normal panels A, C, E and G are uniform; mutant panels B, D, F and H show clusters of round clear vacuoles around the CA1 pyramidal layer and in the amygdaloid body, while dentate gyrus and CA3 appear spared. Unlike Figure 1 of PMID 19500159, this caption assigns its panels correctly."
-      }
-    ]
+  {
+   "skill": "legend-session-takeaways",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "No study list arrived. The cursor was the single queue entry FT-041, deduplicated against the registries when it was created; re-triaging one known record adds no disambiguation."
+  },
+  {
+   "skill": "legend-batch-inferential-sweep",
+   "used": false,
+   "reason": "There is no batch. FT-041 was an approved single-paper cursor whose reason had just been strengthened by the FT-042 read; a batch ranking could not change which source was opened."
+  },
+  {
+   "skill": "legend-proband-priority-matrix",
+   "used": false,
+   "reason": "Ranking a single already-selected paper is vacuous, and no person-level prioritisation is permitted in the public edition."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "The read resolves a provenance question and replaces one mechanistic hypothesis with a competing one. It matures no therapeutic hypothesis, and forging candidates on a newly opened question would manufacture apparent progress."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is administered and no molecule is proposed; there is nothing for the BLOCK-1 ADMET gate to evaluate."
+  },
+  {
+   "skill": "legend-aso-designer",
+   "used": false,
+   "reason": "This paper predates the identification of the gene entirely — it names a hypothetical locus, lde, with no molecular lesion. There is no allele of any kind to target."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Corrections are isolated in a commit candidate. No BATCH_COMMIT was authorised in this session and the four scientific current files remain unchanged."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "The source was read in full and sequentially from a local fingerprinted artifact. A retrieval-augmented query would be strictly weaker than the reading performed, and would send text to an external API."
   }
+ ],
+ "group_assessment": {
+  "total_publications": 43,
+  "publications_on_gene": 2,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "Same laboratory as PMID 19500159 (Suzuki H, Nippon Veterinary and Life Science University; 43 PubMed records, 2 on Wwox). This is the earlier of the pair and the more consequential for credibility: it was written before the gene was known. The paper names a hypothetical locus, lde, characterises it phenotypically, and states plainly that the responsible gene is unidentified. Whatever else that costs the work in molecular depth, it makes the seizure, dwarfism and hippocampal-vacuolation phenotypes immune to the objection that a WWOX-motivated group found a WWOX-shaped result — they could not have been looking for Wwox, because nobody yet knew it was Wwox. The laboratory's declared speciality is deriving spontaneous rat mutants from a Wistar-Imamichi closed colony, with four prior strains cited, and its renal-physiology publications are directly relevant to the BUN/creatinine question this paper raises."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND (\"blood urea nitrogen\" OR creatinine)",
+    "count": 1,
+    "source": "PubMed ESearch, 2026-08-06"
+   },
+   {
+    "query": "WWOX AND \"growth hormone\"",
+    "count": 0,
+    "source": "PubMed ESearch, 2026-08-06"
+   },
+   {
+    "query": "WWOX AND (hypercatabolism OR \"muscle disruption\")",
+    "count": 0,
+    "source": "PubMed ESearch, 2026-08-06"
+   },
+   {
+    "query": "epilepsy AND \"blood urea nitrogen\" AND rats[mh]",
+    "count": 3,
+    "source": "PubMed ESearch, 2026-08-06"
+   }
+  ],
+  "note": "The renal-marker question is a near-total void. One PubMed record links WWOX to blood urea nitrogen or creatinine, zero link it to growth hormone, and zero to hypercatabolism. Yet elevated BUN is now documented first-hand in three independent places — the mouse null (PMID 19936220, BUN 37.25 vs 17.67), this rat (BUN roughly 3.2-3.5x normal in both sexes, plus creatinine), and by explicit cross-citation between the two. Three papers measured it, each proposed or implied a different explanation, and nobody has ever followed it up. The competing-explanation query is the more striking one: this paper's own alternative hypothesis, that raised BUN and creatinine reflect hypercatabolism and muscle disruption from repeated seizures rather than renal failure, returns zero records when paired with WWOX and has never been tested in any WWOX model."
+ },
+ "multihop": {
+  "references_enumerated": 35,
+  "gene_direct_refs_in_source": [],
+  "resolved": [],
+  "queued": [],
+  "note": "All 35 references were read. NONE is WWOX-direct, and that is a fact about the paper rather than an omission: it was accepted in April 2007, two years before the same group mapped lde to Wwox, so no WWOX citation could exist. The reference list is instead rat-genetics, dwarfism-model, epilepsy-model and endocrine literature. Two references matter for interpretation and are recorded rather than queued. Reference 3 (Asano 1998, Lab Anim 32:214-218) is the SER-strain precedent for elevated BUN alongside growth retardation and motile seizures, on which this paper's alternative hypercatabolic explanation rests. Reference 28 (Takenaka 2004, Exp Anim 53(3) Suppl:S6) is a conference abstract carrying the preliminary audiogenic result of 90 percent, which means the audiogenic phenotype was known in 2004 and formally published only in 2009. Neither is opened as a new full-text debt: the SER paper is background for a hypothesis this reading records as untested rather than adopts, and a one-page meeting abstract is superseded by the full audiogenic study already read as FT-042."
+ },
+ "corpus_crossquery": {
+  "query": "Does this paper support PMID 19500159's claim that normal serum constituents 'clearly excluded' a systemic metabolic cause for the rat's hyperexcitability, and its attribution of the dwarfism to low pituitary growth hormone?",
+  "hits": 2,
+  "note": "Split verdict, and the second half fails. On serum: the specific mouse-versus-rat contrast is CONFIRMED — glucose, calcium, sodium, potassium, chloride and triglycerides are all comparable between normal and mutant rats, so the rat genuinely lacks the mouse null's hypoglycaemia, hypocalcaemia and electrolyte derangement. But BUN is roughly 3.2-3.5x normal in both sexes and creatinine is significantly raised, so the blanket phrase 'normal levels of serum constituents' is false as written and 'clearly excluded' overstates what this source licenses. On growth hormone: PMID 19500159 states the dwarfism 'may be related, at least in part, to lower levels of pituitary growth hormone (Suzuki et al. 2007)'. This paper says the opposite — the GH difference was NOT statistically significant, GH-producing cells were present, and the dwarfism 'cannot be explained solely by low levels of plasma GH'. The unqualified phrase 'decreased concentrations of plasma growth hormone' occurs only in this paper's own ABSTRACT, which overstates its own body text. That is the third instance today of a citation firming up its source, and the first in which the overstatement originates in the source's abstract rather than in the citing paper."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Checked 2026-08-06 on PubMed EFetch. PublicationType is Journal Article; the CommentsCorrections RefType list is empty; there is no RetractionIn, RetractionOf or expression-of-concern link. Europe PMC holds metadata only. The record is clean and admissible. No DOI has ever been registered for this article."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID17803050_Suzuki2007.pdf",
+   "sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69",
+   "kind": "article_binary"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID17803050/p03_electrolytes_and_BUN_significance.png",
+   "sha256": "cdaf28ae2e6eb78e95d467085e6dc1a21859f33f0dacf7c0b3b890e7852a2a74",
+   "kind": "figure",
+   "note": "page 3 crop at 500 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID17803050/p04_table2_BUN_CRE_GLU.png",
+   "sha256": "9b2268e2d64658b113b3a45e09e93d308ec0d2639004d138012eba46f62fe90b",
+   "kind": "figure",
+   "note": "page 4 crop at 500 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID17803050/p04_table1_organ_weights.png",
+   "sha256": "98ebfb5061b258104c56687279b10f0c4b9220a143b3ccba3f50f5a4a2ba031e",
+   "kind": "figure",
+   "note": "page 4 crop at 400 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID17803050/p02_reanchor_6_locators.png",
+   "sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
+   "kind": "figure",
+   "note": "page 2 crop at 300 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID17803050/p05_reanchor_3_locators.png",
+   "sha256": "d4d6712ac2b290398660aa711aa4f2d3e8433bfef1c56f9d221a4e3681238540",
+   "kind": "figure",
+   "note": "page 5 crop at 300 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+   "sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+   "kind": "figure",
+   "note": "page 8 crop at 300 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_table3_chi_squared.png",
+   "sha256": "56cb858e4b1e25bb8a0f5fb0a5fadd27094f1499724d16e95e6f7912f2f57c64",
+   "kind": "figure",
+   "note": "page 8 crop at 500 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:17803050 on 2026-08-07: inEPMC=N, no PMCID, hasPDF=N — no full text indexed, so an external validator sees only the abstract.",
+  "abstract_anchoring_waived": "Three locators are abstract-anchored where the abstract genuinely carries the proposition. The remaining twenty-nine cannot be, and one of them is the reason: this paper's abstract states 'decreased concentrations of plasma growth hormone' without qualification, while its body reports the difference as NOT statistically significant and concludes the dwarfism cannot be explained by low GH. Anchoring the GH proposition to the abstract would anchor it to the very sentence the full text refutes. The same holds structurally for the rest — the authors' alternative hypercatabolic explanation for raised BUN, the normal kidney histology, the absent proteinuria and anaemia, the seizure-detection limitation, the survivor-selected litter subset and every table value are precisely the qualifications an abstract drops. Their verifiability rests instead on the two fingerprinted local artifacts declared above, both reproducible from the operator's PDF.",
+  "unverifiable_reason": "The declared text surface files/fulltext/PMID17803050_Suzuki2007.html is SUSPECT and is refused by deepdive_manifest, correctly and still. Road 3 was taken instead: the 29 body/table locators are anchored to the printed page, each through a needle unique on its page and inside a crop that regenerates to its declared digest from the source PDF. Six carried corruption inside what they assert; none changes a value, a direction or a significance verdict. DEBT NOT CLEARED: the text surface is still refused, so this paper cannot back a NEW text locator until road 2 is done — the surface rebuilt from the rendering and declared as its own artifact. FT-041 carries it.",
+  "entries": [
+   {
+    "proposition": "Only three plasma markers differ significantly: BUN, creatinine, and inorganic phosphate in females. This is the measurement PMID 19500159's 'clearly excluded' rests on.",
+    "snippet": "the levels of BUN, CRE, and female IP were significantly (P  0.05) higher in mutant than in normal rats",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p03_electrolytes_and_BUN_significance.png",
+    "anchor": "Results, 'Blood examination and urinalysis', page 3, referring to Table 2",
+    "page_anchor": {
+     "page": 3,
+     "crop_pdf_points": [
+      300,
+      630,
+      580,
+      690
+     ],
+     "dpi": 500,
+     "needle": "the levels of BUN,",
+     "image_sha256": "cdaf28ae2e6eb78e95d467085e6dc1a21859f33f0dacf7c0b3b890e7852a2a74",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "Glucose, calcium and the electrolytes ARE normal, so the specific contrast PMID 19500159 draws with the mouse null is confirmed — the rat lacks the mouse's hypoglycaemia, hypocalcaemia and electrolyte derangement.",
+    "snippet": "The concentrations of electrolytes (Ca2, Na, K, and Cl–), aberration enzymes (CPK, ALP, GPT, GOT), GLU, and TG were comparable in the normal and mutant rats",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p03_electrolytes_and_BUN_significance.png",
+    "anchor": "Results, 'Blood examination and urinalysis', page 3, first sentence",
+    "page_anchor": {
+     "page": 3,
+     "crop_pdf_points": [
+      300,
+      630,
+      580,
+      690
+     ],
+     "dpi": 500,
+     "needle": "aberration enzymes (CPK, ALP,",
+     "image_sha256": "cdaf28ae2e6eb78e95d467085e6dc1a21859f33f0dacf7c0b3b890e7852a2a74",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "Raised BUN and creatinine occur WITHOUT renal pathology, which is what stops the renal reading from being straightforward.",
+    "snippet": "although mutant rats had elevated levels of BUN and CRE, we could not find any pathologic alteration in their kidneys",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p05_reanchor_3_locators.png",
+    "anchor": "Results, 'Histologic examinations', page 5, final sentence",
+    "page_anchor": {
+     "page": 5,
+     "crop_pdf_points": [
+      170,
+      549,
+      522,
+      721
+     ],
+     "dpi": 300,
+     "needle": "although mutant rats had",
+     "image_sha256": "d4d6712ac2b290398660aa711aa4f2d3e8433bfef1c56f9d221a4e3681238540",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "Two further negatives constrain the renal interpretation: no proteinuria and no anaemia.",
+    "snippet": "urostick tests and blood examinations did not identify any manifestations of proteinuria and anemia",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+    "anchor": "Discussion, page 8, renal paragraph. Contrast with the mouse null, where PMID 19936220 found 3 percent nucleated red blood cells in one of two animals examined.",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      43,
+      160,
+      558,
+      689
+     ],
+     "dpi": 300,
+     "needle": "urostick tests and blood",
+     "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "🔴 The authors offer a competing explanation for raised BUN and creatinine that has never been tested in any WWOX model: hypercatabolism and muscle breakdown from repeated seizures rather than renal failure.",
+    "snippet": "the production of urea-nitrogen and creatinine may be increased due to hypercatabolism and muscle disruption",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+    "anchor": "Discussion, page 8, renal paragraph. This directly competes with the renal-tubular-acidosis hypothesis PMID 19936220 proposed for the mouse null on the strength of the same marker, and that paper never considered it.",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      43,
+      160,
+      558,
+      689
+     ],
+     "dpi": 300,
+     "needle": "production of urea-nitrogen and",
+     "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The competing explanation is not invented for this paper — it has a named precedent in another epileptic rat strain with the same triad.",
+    "snippet": "The spontaneously epileptic rat (SER) strain has elevated levels of BUN, combined with growth retardation and motile epileptic seizures",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+    "anchor": "Discussion, page 8, citing reference 3 (Asano 1998, Lab Anim 32:214-218)",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      43,
+      160,
+      558,
+      689
+     ],
+     "dpi": 300,
+     "needle": "The spontaneously epileptic rat",
+     "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The authors themselves grade the renal claim as weak and state what would settle it, which is the opposite of the certainty PMID 19500159 later expressed.",
+    "snippet": "if renal excretive function is reduced in the mutant rats, the degree of dysfunction may not be severe",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+    "anchor": "Discussion, page 8. The same paragraph names renal clearance testing as the discriminating experiment and explains why it was not done: the dwarfism and lethality make urine collection impractical.",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      43,
+      160,
+      558,
+      689
+     ],
+     "dpi": 300,
+     "needle": "if renal excretive function",
+     "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "🔴 The growth-hormone difference is NOT statistically significant — refuting the claim PMID 19500159 attributes to this very paper.",
+    "snippet": "although the plasma GH level was slightly lower in mutant than in normal rats, the difference was not significant",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+    "anchor": "Discussion, page 8. PMID 19500159 states the dwarfism 'may be related, at least in part, to lower levels of pituitary growth hormone (Suzuki et al. 2007)' — citing this paper for a result this paper declines to claim.",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      43,
+      160,
+      558,
+      689
+     ],
+     "dpi": 300,
+     "needle": "GH level was slightly",
+     "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The authors state the negative conclusion explicitly, so the misattribution cannot be read as a defensible paraphrase.",
+    "snippet": "suggesting that the severe type of dwarfism observed in lde/lde rats cannot be explained solely by low levels of plasma GH",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+    "anchor": "Discussion, page 8, immediately following the non-significance sentence",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      43,
+      160,
+      558,
+      689
+     ],
+     "dpi": 300,
+     "needle": "suggesting that the severe",
+     "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "Pituitary GH-producing cells are present, so the dwarfism is not a failure of GH cell development either.",
+    "snippet": "we detected GH-producing cells in the anterior lobe of their pituitary glands",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+    "anchor": "Discussion, page 8; the same sentence reports preliminary immunoblotting showing GH of normal molecular weight, cited to reference 27, a personal communication",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      43,
+      160,
+      558,
+      689
+     ],
+     "dpi": 300,
+     "needle": "cells in the anterior",
+     "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "Spontaneous seizure incidence is measured first-hand and is nearly identical in the two sexes — the 33 percent figure PMID 19500159 imports.",
+    "snippet": "We detected epileptic seizures in 33.8% (22 of 65) of mutant male rats and 33.9% (19 of 56) of mutant female rats",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p02_reanchor_6_locators.png",
+    "anchor": "Results, 'Observation of epilepsy', page 2. Each rat was observed more than 6 h per day until death.",
+    "page_anchor": {
+     "page": 2,
+     "crop_pdf_points": [
+      86,
+      309,
+      583,
+      605
+     ],
+     "dpi": 300,
+     "needle": "We detected epileptic seizures",
+     "image_sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "Seizure onset spans a wide postnatal window, which matters for any argument about whether a shorter-lived model could express the phenotype.",
+    "snippet": "with seizures first detected between 16 to 63 d of age",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p02_reanchor_6_locators.png",
+    "anchor": "Results, 'Observation of epilepsy', page 2. The earliest onset, day 16, is already beyond the entire lifespan of the Wwox-null mouse (2-3 weeks).",
+    "page_anchor": {
+     "page": 2,
+     "crop_pdf_points": [
+      86,
+      309,
+      583,
+      605
+     ],
+     "dpi": 300,
+     "needle": "with seizures first detected",
+     "image_sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "Ataxic gait is near-fully penetrant and is a cleaner phenotype than the seizures, yet it is the one the downstream literature does not carry.",
+    "snippet": "95% of the mutant rats but none of the normal rats had ataxic gait",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p02_reanchor_6_locators.png",
+    "anchor": "Results, 'Observation of epilepsy', page 2; assessed in 19 female and 20 male mutants against 14 female and 12 male normals at 21 days",
+    "page_anchor": {
+     "page": 2,
+     "crop_pdf_points": [
+      86,
+      309,
+      583,
+      605
+     ],
+     "dpi": 300,
+     "needle": "95% of the mutant",
+     "image_sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "🔴 The authors state that 33 percent is a floor and not a rate: undetected seizures and early death both bias it downward. The same argument PMID 19500159 later applies to the mouse is made here about the rat itself.",
+    "snippet": "A limitation in our ability to detect spontaneous seizures and the early death of the mutant rats before seizure detection may reduce the apparent incidence of seizures in these rats",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+    "anchor": "Discussion, page 8, opening of the epilepsy paragraph",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      43,
+      160,
+      558,
+      689
+     ],
+     "dpi": 300,
+     "needle": "A limitation in our",
+     "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The audiogenic phenotype was already known in 2004, three years before this paper and five before its formal publication.",
+    "snippet": "an audio sound at 15 KHz (88 dB) induced convulsions in 90% of mutant dwarf rats and 0% of normal rats",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+    "anchor": "Discussion, page 8, cited to reference 28 (Takenaka 2004, Exp Anim 53(3) Suppl:S6), a conference abstract. The 90 percent here versus 95 percent in the published PMID 19500159 study is a preliminary-versus-final difference, not a discrepancy.",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      43,
+      160,
+      558,
+      689
+     ],
+     "dpi": 300,
+     "needle": "at 15 KHz (88",
+     "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "Survival is far longer than in the Wwox-null mouse, and is measured here rather than summarised.",
+    "snippet": "All male mutant rats died before 77 d of age, and mutant females died before 84 d of age",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p02_reanchor_6_locators.png",
+    "anchor": "Results, 'Growth and survival', page 2; cohort 45 female and 44 male mutants against 144 female and 122 male normals",
+    "page_anchor": {
+     "page": 2,
+     "crop_pdf_points": [
+      86,
+      309,
+      583,
+      605
+     ],
+     "dpi": 300,
+     "needle": "All male mutant rats",
+     "image_sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The control cohort is essentially unaffected, which bounds the phenotype to genotype rather than to husbandry.",
+    "snippet": "most of the phenotypically normal rats grew normally and survived (mortality rate, 1.5%)",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p02_reanchor_6_locators.png",
+    "anchor": "Results, 'Growth and survival', page 2",
+    "page_anchor": {
+     "page": 2,
+     "crop_pdf_points": [
+      86,
+      309,
+      583,
+      605
+     ],
+     "dpi": 300,
+     "needle": "most of the phenotypically",
+     "image_sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The rat reproduces the mouse's brain-sparing pattern and the authors state the ratio explicitly, so the relative-weight effect cannot be misread as brain overgrowth.",
+    "snippet": "the absolute weight of mutant brain was greater than 90% that of normal brain, and the relative weight of mutant brain was about twice that of normal brain",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+    "anchor": "Discussion, page 8. The same paragraph notes that two other dwarf rat strains show the same disproportional brain growth and argues it is independent of growth hormone.",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      43,
+      160,
+      558,
+      689
+     ],
+     "dpi": 300,
+     "needle": "absolute weight of mutant",
+     "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The anatomical lesion is regionally restricted to CA1 and the amygdala, matching what PMID 19500159 later reports in backcross progeny.",
+    "snippet": "the CA1 region of the hippocampus had many extracellular vacuoles",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p05_reanchor_3_locators.png",
+    "anchor": "Results, 'Histologic examinations', page 5, referring to Figure 5",
+    "page_anchor": {
+     "page": 5,
+     "crop_pdf_points": [
+      170,
+      549,
+      522,
+      721
+     ],
+     "dpi": 300,
+     "needle": "the CA1 region of",
+     "image_sha256": "d4d6712ac2b290398660aa711aa4f2d3e8433bfef1c56f9d221a4e3681238540",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "Controls are clean, so the vacuolation is not an artefact of fixation or of small tissue size.",
+    "snippet": "In contrast no vacuoles were found in the hippocampus and amygdaloid body of normal rats",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p05_reanchor_3_locators.png",
+    "anchor": "Results, 'Histologic examinations', page 5",
+    "page_anchor": {
+     "page": 5,
+     "crop_pdf_points": [
+      170,
+      549,
+      522,
+      721
+     ],
+     "dpi": 300,
+     "needle": "In contrast no vacuoles",
+     "image_sha256": "d4d6712ac2b290398660aa711aa4f2d3e8433bfef1c56f9d221a4e3681238540",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The lesion has no counterpart in human epilepsy or in other animal models, which bounds how far it can be transferred toward a human genotype.",
+    "snippet": "although similar vacuoles in hippocampus and amygdala have not been reported in human epileptic disease and other animal models of epilepsy",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+    "anchor": "Discussion, page 8, hippocampus paragraph",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      43,
+      160,
+      558,
+      689
+     ],
+     "dpi": 300,
+     "needle": "although similar vacuoles in",
+     "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The Mendelian analysis rests on a survivor-selected subset of litters, the same structural caveat found in the mouse paper's day-3 chi-square.",
+    "snippet": "Because some rats with low body weights in 50 of the litters died before weaning, we used the remaining 33 litters",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p02_reanchor_6_locators.png",
+    "anchor": "Materials and methods, 'Determination of the mode of inheritance', page 2. Mutants were detected in 83 of 254 litters; only the 33 in which every low-weight pup survived to 21 days entered the test.",
+    "page_anchor": {
+     "page": 2,
+     "crop_pdf_points": [
+      86,
+      309,
+      583,
+      605
+     ],
+     "dpi": 300,
+     "needle": "Because some rats with",
+     "image_sha256": "e76c20cbcff36fa319d3482e1b25b0eb0fad5e5ac337b48aa7232e899a3d0281",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The authors propose the strain as a paediatric epilepsy model on the basis of onset timing, which is the most disease-relevant framing in either rat paper.",
+    "snippet": "seizures began during the early postnatal period, making lde/lde rats a potential animal model for pediatric epileptic disease",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+    "anchor": "Discussion, page 8, epilepsy paragraph",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      43,
+      160,
+      558,
+      689
+     ],
+     "dpi": 300,
+     "needle": "seizures began during the",
+     "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The ataxia is not cerebellar, which removes the most obvious structural explanation and leaves it unexplained.",
+    "snippet": "in contrast with the ataxia and male sterility (AMS) mouse,10 we did not detect any marked pathologic changes in the cerebella of lde/lde rats",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+    "anchor": "Discussion, page 8",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      43,
+      160,
+      558,
+      689
+     ],
+     "dpi": 300,
+     "needle": "in contrast with the",
+     "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The cause of death is explicitly unknown in the rat, so no canonical text may state a mechanism for lde lethality.",
+    "snippet": "Although the cause of postnatal death in lde/lde rats is unknown, repeated seizures, small body size, and ataxia may be disadvantageous for their survival",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_reanchor_14_locators.png",
+    "anchor": "Discussion, page 8",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      43,
+      160,
+      558,
+      689
+     ],
+     "dpi": 300,
+     "needle": "Although the cause of",
+     "image_sha256": "fbea6333d3d42ec1215d01a4585f043b2e87abb25fd9c4822d44421df8681d62",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "Table 2 quantifies the renal markers: BUN is roughly 3.2-fold higher in females and 3.5-fold in males, both significant.",
+    "snippet": "BUN (mg/ml) 12.6 q 4.3 40.3 q 3.7c 10.1 q 2.7 35.6 q 12.8d",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p04_table2_BUN_CRE_GLU.png",
+    "anchor": "Table 2, 'Plasma concentrations of biochemical markers in 28-d-old rats', BUN row, page 4. n = 4 normal and 5 mutant per sex. Footnote c is P<0.05 greater, d is P<0.01 greater.",
+    "page_anchor": {
+     "page": 4,
+     "crop_pdf_points": [
+      40,
+      480,
+      570,
+      562
+     ],
+     "dpi": 500,
+     "needle": "BUN (mg/ml)",
+     "image_sha256": "9b2268e2d64658b113b3a45e09e93d308ec0d2639004d138012eba46f62fe90b",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The same table shows glucose is unchanged in both sexes, which is the single value that most cleanly separates this rat from the hypoglycaemic mouse null.",
+    "snippet": "GLU (mg/ml) 169.0 q 26.7 145.4 q 26.5 155.0 q 30.1 157.4 q 38.9",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p04_table2_BUN_CRE_GLU.png",
+    "anchor": "Table 2, GLU row, page 4, carrying no significance footnote in either sex. Compare PMID 19936220 Table 3, where mouse glucose falls from 250.6 to 143.5 mg/dL at P = 0.000131.",
+    "page_anchor": {
+     "page": 4,
+     "crop_pdf_points": [
+      40,
+      480,
+      570,
+      562
+     ],
+     "dpi": 500,
+     "needle": "GLU (mg/ml)",
+     "image_sha256": "9b2268e2d64658b113b3a45e09e93d308ec0d2639004d138012eba46f62fe90b",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "Table 1 shows the brain-sparing arithmetic directly: a small absolute reduction against a doubled relative weight.",
+    "snippet": "Brain 1426.4 q 45.6 1338.3 q 107.2c 2254.2 q 274.7 4542.0 q 1375.3e",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p04_table1_organ_weights.png",
+    "anchor": "Table 1, 'Organ weights in 28-d-old rats', female Brain row, page 4. Absolute falls 6.2 percent while relative rises from 2254 to 4542. In males the absolute brain weight carries no significance footnote at all, so it is not significantly reduced.",
+    "page_anchor": {
+     "page": 4,
+     "crop_pdf_points": [
+      40,
+      62,
+      570,
+      250
+     ],
+     "dpi": 400,
+     "needle": "1426.4",
+     "image_sha256": "98ebfb5061b258104c56687279b10f0c4b9220a143b3ccba3f50f5a4a2ba031e",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The segregation fits a single autosomal recessive trait, with the observed mutant count slightly above expectation rather than below.",
+    "snippet": "Total rats 228 83 233.3 77.8 0.47",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID17803050/p08_table3_chi_squared.png",
+    "anchor": "Table 3, 'Fitness to the hypothesis for the genetic mode of transmission', Total rats row, page 8; chi-square 0.47, P > 0.50",
+    "page_anchor": {
+     "page": 8,
+     "crop_pdf_points": [
+      40,
+      62,
+      570,
+      150
+     ],
+     "dpi": 500,
+     "needle": "Total rats",
+     "image_sha256": "56cb858e4b1e25bb8a0f5fb0a5fadd27094f1499724d16e95e6f7912f2f57c64",
+     "source_pdf_sha256": "32c12dbdec988fc2071ac9a493c5be49d16757e89b334a5a80b6f0400e904b69"
+    }
+   },
+   {
+    "proposition": "The figure states the GH negative in its own caption, so the non-significance is visible without reading the Discussion.",
+    "snippet": "Plasma GH levels (ng/ml) were slightly lower in mutant than in normal rats of both sexes, but the differences were not statistically significant",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID17803050_Suzuki2007.pdf",
+    "anchor": "Figure 6C image inspected on the rendered page 7: paired bar chart, normal versus mutant, for females (about 46 versus 30 ng/ml) and males (about 36 versus 27), with standard-deviation bars that overlap substantially in both sexes. Panels A and B show GH immunostaining with comparable numbers of positive cells in both genotypes."
+   },
+   {
+    "proposition": "The survival curve shows a steep early attrition rather than a single terminal event, which is what makes seizure detection incomplete.",
+    "snippet": "All mutant male rats died by 77 d of age, and all mutant female rats by 84 d of age",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID17803050_Suzuki2007.pdf",
+    "anchor": "Figure 3 image inspected on the rendered page 3: two curves from 21 to 84 days, males falling from about 44 to 13 by day 28 and reaching zero by 77; females declining more gradually and reaching zero by 84. Most of the loss occurs in the first fortnight after weaning."
+   },
+   {
+    "proposition": "The vacuolation is unambiguous at the image level and confined to CA1 and the amygdala, with the rest of the hippocampal architecture preserved.",
+    "snippet": "No vacuoles were detected in the hippocampus and amygdaloid body of normal rats",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID17803050_Suzuki2007.pdf",
+    "anchor": "Figure 5 image inspected on the rendered page 6: eight panels at three magnifications. Normal panels A, C, E and G are uniform; mutant panels B, D, F and H show clusters of round clear vacuoles around the CA1 pyramidal layer and in the amygdaloid body, while dentate gyrus and CA3 appear spared. Unlike Figure 1 of PMID 19500159, this caption assigns its panels correctly."
+   }
+  ],
+  "note": "🔴 ABSTRACT ANCHOR WITHDRAWN 2026-08-10, and the reason is this paper's whole significance. Entry 0 carried `abstract_snippet: \"Mutant rats had significantly increased concentrations of plasma urea nitrogen, creatinine, and inorganic phosphate\"`. The sentence is real and verbatim — `dossier_quote_audit.py` located it independently in the local HTML the same day — but NOTHING THIS MANIFEST MAY LEGITIMATELY DECLARE CAN VERIFY IT. Rule 5d names PMID 17803050 as the paper with no structured deposit: no DOI, no PMCID, no open deposit. Its HTML is a text dump the 5d sentinel refuses; its PDF cannot be a text surface under 5c; its remaining artifacts are page adjudications, which are images. The field exists so that a locator on an unindexable source stays verifiable through the one surface an external validator does hold — and for THIS source there is no such surface. An anchor that can never be checked certifies only that someone typed it, which is the defect the field was hardened against on 2026-08-06. Recorded here instead, where it reads as a record rather than as a verification."
+ }
 }

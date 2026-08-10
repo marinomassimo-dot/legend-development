@@ -621,6 +621,63 @@ def _pointer_needle_errors(
     return []
 
 
+ADJUDICATION_DIR = "page_adjudications"
+ADJUDICATION_RECIPE = "adjudications.json"
+
+
+def _adjudication_recipe_errors(
+    root: Path, relative: str, digest: str, prefix: str
+) -> list[str]:
+    """A page adjudication is absent BY POLICY, so absence is not the question to ask.
+
+    🔴 Two tools encoded two policies and the generalist was the one that was wrong. Rule 5e
+    says a crop proving what an author printed *is* a reproduction of what the author printed,
+    so the state ships **the derivation and never the derived**: source digest, page, rectangle
+    in PDF points, dpi and the SHA-256 of the image, in an `adjudications.json` beside the
+    reading. `regenerate_adjudications.py` turns that back into the identical bytes from a
+    reader's own copy.
+
+    Meanwhile `--verify-artifacts` looked for the file on disk and called its absence a defect
+    — so `PMID 21212533` was unvalidatable anywhere while its own recipe reported
+    *«11 adjudication artifacts regenerate to their declared digest, and 8 locators resolve to
+    a span inside the crop that shows them»*. The manifest was right, the recipe was right, and
+    the check between them was asking a question the policy had already answered.
+
+    What this function does and does not certify, because the difference matters:
+
+    - it verifies that the recipe **declares this artifact with this digest**, which is the
+      only half a validator holding no source PDF can honestly check;
+    - it does **not** verify that the recipe regenerates. That needs the article, and it is
+      `regenerate_adjudications.py`'s job — run separately, with its own suite in the release
+      battery. Delegation, not a waiver: the byte check moves to the tool that can perform it,
+      and neither tool is left asserting something it cannot see.
+
+    Anything outside `page_adjudications/` is untouched: a missing artifact is still a BLOCK.
+    """
+    parts = Path(relative).parts
+    if ADJUDICATION_DIR not in parts:
+        return [f"{prefix}.path: artifact does not exist: {relative}"]
+    recipe = root / Path(*parts[: parts.index(ADJUDICATION_DIR) + 2]) / ADJUDICATION_RECIPE
+    if not recipe.is_file():
+        return [f"{prefix}.path: {relative} is absent and no {ADJUDICATION_RECIPE} sits beside "
+                f"it. A page adjudication is published as a recipe; without one there is "
+                f"neither the image nor the means to rebuild it"]
+    try:
+        entries = json.loads(recipe.read_text(encoding="utf-8")).get("artifacts", [])
+    except (OSError, json.JSONDecodeError) as exc:
+        return [f"{prefix}.path: {recipe.name} cannot be read ({exc})"]
+    name = Path(relative).name
+    declared = [entry for entry in entries if Path(str(entry.get("file", ""))).name == name]
+    if not declared:
+        return [f"{prefix}.path: {name} is absent from disk and its {ADJUDICATION_RECIPE} does "
+                f"not declare it either, so nothing can rebuild it"]
+    recorded = str(declared[0].get("sha256", ""))
+    if recorded != digest:
+        return [f"{prefix}.sha256: the manifest and {ADJUDICATION_RECIPE} disagree on "
+                f"{name} — manifest {digest[:12]}…, recipe {recorded[:12]}…"]
+    return []
+
+
 def _safe_repo_path(root: Path, relative: str) -> Path:
     candidate = (root / relative).resolve()
     try:
@@ -793,7 +850,8 @@ def validate(
                         errors.append(f"{prefix}.path: {exc}")
                         continue
                     if not resolved.is_file():
-                        errors.append(f"{prefix}.path: artifact does not exist: {path_value}")
+                        errors.extend(_adjudication_recipe_errors(
+                            root, path_value, digest, prefix))
                     elif SHA256_RE.fullmatch(digest):
                         actual = hashlib.sha256(resolved.read_bytes()).hexdigest()
                         if actual != digest:
@@ -817,7 +875,23 @@ def validate(
                 "reading supports no proposition at all"
             )
         else:
-            for position, entry in enumerate(entries, 1):
+            # 🔴 ZERO-BASED, changed 2026-08-10, and the discrepancy it removes was documented
+            # as harmless for weeks. It was not. This loop counted from ONE while `contradicts`
+            # and `adjudications.json` count from zero, so a SINGLE error line could carry two
+            # `entries[N]` with opposite meanings — the notation collision inside the message
+            # whose job is to disambiguate.
+            #
+            # It cost twice in one evening. Five needles on three branches would each have been
+            # attached to the wrong locator by anyone who trusted the printed index; they were
+            # right only because they were derived from the JSON. And a peer reading
+            # `entries[1].abstract_snippet` went to entry 1, which has no such field, while the
+            # defect was in entry 0.
+            #
+            # Zero wins because the published formats already use it: `adjudications.json`
+            # writes `entries[N]` counting from zero and `regenerate_adjudications.py` indexes
+            # the list directly. A reader copies the reference grammar, not the diagnostic
+            # text, so the diagnostic is what moves.
+            for position, entry in enumerate(entries):
                 if not isinstance(entry, dict):
                     errors.append(f"verbatim_locators.entries[{position}]: must be an object")
                     continue
@@ -898,7 +972,9 @@ def validate(
                         # at the next touch of the message strings; it is not worth a rename of
                         # a published recipe format today.
                         target = int(match.group(1))
-                        if target == position - 1:
+                        # Both sides are zero-based now; the `- 1` this used to carry was the
+                        # only place the two conventions were reconciled, silently.
+                        if target == position:
                             errors.append(
                                 f"verbatim_locators.entries[{position}].{pointer_field}: a "
                                 f"locator cannot {bare} itself")
@@ -1010,7 +1086,20 @@ def validate(
                 ):
                     abstract_matched = False
                     abstract_failures: list[str] = []
-                    for artifact_path in artifact_paths:
+                    # 🔴 Searched across every declared TEXT artifact, not only the one this
+                    # locator names. `abstract_snippet` is a claim about the paper's abstract;
+                    # it is not a claim about the surface this particular quote came from. The
+                    # narrower reading blocked `PMID 17803050` entry 0, whose locator is a page
+                    # adjudication: the check demanded an abstract from a PNG, which no image
+                    # can offer, and reported the reading as defective for it.
+                    #
+                    # The locator's own artifact still goes first, so a manifest that does
+                    # declare a matching text surface behaves exactly as before.
+                    searchable = list(dict.fromkeys(
+                        artifact_paths
+                        + [path for path, meta in artifacts.items()
+                           if meta.get("kind") in {"article_text", "supplement_text"}]))
+                    for artifact_path in searchable:
                         metadata = artifacts[artifact_path]
                         try:
                             resolved = _safe_repo_path(root, artifact_path)
@@ -1161,16 +1250,28 @@ def verification_scope(*, verify_artifacts: bool, require_current_schema: bool) 
     Structural validation is useful for auditing legacy manifests, but it is not the
     persistence boundary. Keep that distinction in the verdict itself so a bare ``PASS``
     cannot be mistaken for hash- and quote-level verification.
+
+    🔴 The adjudication clause states the POLICY, not whether it fired on this run. A page
+    adjudication is absent by rule 5e — the state publishes the derivation and never the
+    derived — so its bytes are checked against `adjudications.json` here and regenerated by
+    `regenerate_adjudications.py` there. A verdict that said "artifact existence verified" flat
+    would be claiming a check the policy forbids it from performing, on every run, whether or
+    not any adjudication was involved. Describing the contract cannot drift; describing the
+    incident would need a channel this function does not have.
     """
+    delegated = (
+        "; page adjudications are checked against their recipe rather than on disk (rule 5e), "
+        "and regeneration is verified by regenerate_adjudications.py"
+    )
     if verify_artifacts and require_current_schema:
         return (
             "MANIFEST STRICT: current schema required; local artifact existence, SHA-256 "
-            "and exact text locators verified"
+            "and exact text locators verified" + delegated
         )
     if verify_artifacts:
         return (
             "ARTIFACT CHECKS: local artifact existence, SHA-256 and exact text locators "
-            "verified where declared; legacy schema still allowed"
+            "verified where declared; legacy schema still allowed" + delegated
         )
     if require_current_schema:
         return (

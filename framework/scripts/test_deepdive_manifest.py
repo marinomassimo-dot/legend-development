@@ -841,6 +841,32 @@ class PanelTextRelationBites(unittest.TestCase):
             "contradicts: only a `text_contradicted_by_panel` locator may carry one" in item
             for item in errors))
 
+    def test_the_diagnostic_index_is_zero_based_like_the_pointer(self) -> None:
+        """🔴 One error line used to carry two `entries[N]` with opposite meanings.
+
+        The loop counted from ONE while `contradicts` and `adjudications.json` count from
+        zero — the notation collision inside the message whose job is to disambiguate. It cost
+        twice on 2026-08-10: five needles across three branches would each have been attached
+        to the wrong locator by anyone trusting the printed index, and a reader sent to
+        `entries[1].abstract_snippet` found no such field because the defect was in entry 0.
+        """
+        manifest = self._two_entries()
+        del manifest["verbatim_locators"]["entries"][1]["anchor"]
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        anchor_errors = [item for item in errors if ".anchor:" in item]
+        self.assertEqual(len(anchor_errors), 1, errors)
+        self.assertIn("entries[1].anchor", anchor_errors[0])
+
+    def test_the_pointer_and_the_diagnostic_agree_on_the_same_entry(self) -> None:
+        """The property that makes the two indices interchangeable for a reader."""
+        manifest = self._two_entries(contradicts_needle="not in the target at all")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        needle_errors = [item for item in errors if "contradicts_needle" in item]
+        self.assertEqual(len(needle_errors), 1, errors)
+        # The panel locator is at index 1 and names entries[0]; both appear as written.
+        self.assertIn("entries[1].contradicts_needle", needle_errors[0])
+        self.assertIn("entries[0]", needle_errors[0])
+
     @staticmethod
     def _qualifying_pair(**entry_overrides) -> dict:
         """The same fixture for the second coupled relation, so both are exercised alike."""
