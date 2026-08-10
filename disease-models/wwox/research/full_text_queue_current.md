@@ -1235,15 +1235,46 @@ che questo corpus abbia prodotto finora.
 **🔴 Le due domande che la lettura deve chiudere** — *poste come domande, non come reperti*: il
 solo materiale ispezionato finora è **l'abstract**, che è `NOT_EVIDENCE` e non chiude nulla.
 Sono scritte qui perché il prossimo giro parta già puntato, non perché siano una risposta.
-1. **Questo paper nomina `K274`?** L'abstract non lo fa: parla di poliubiquitinazione K63 su
-   WWOX mediata da ITCH e dei due motivi `LPXY` di ITCH, mai di un residuo accettore. Se il
-   residuo non è identificato qui, `25331887` lo attribuisce a una fonte che non lo contiene, e
-   la catena di premesse va riaperta di un anello.
+1. ~~**Questo paper nomina `K274`?**~~ → **RISTRETTA il 2026-08-10, non chiusa.** Ricerca
+   d'esistenza a pattern dichiarato (`K\s*-?\s*274|Lys\s*-?\s*274|lysine\s+274`, case-insensitive)
+   sul corpo estratto: **10 occorrenze**, nelle forme `K274`, `K 274`, `Lys-274`. Il residuo
+   **è nominato nel corpo** — l'abstract non lo diceva, e il mio sospetto nasceva dall'unica
+   superficie che avevo guardato, che è `NOT_EVIDENCE` per costruzione. Cade quindi l'ipotesi
+   peggiore, cioè che `25331887` attribuisca il residuo a una fonte che non lo contiene.
+   ⚠️ Il conteggio non stabiliva che il residuo fosse **identificato per esperimento qui**,
+   invece che citato, elencato fra i mutanti dei Metodi o importato a sua volta. Dieci
+   occorrenze sono un fatto d'esistenza; *«è identificato in questa fonte»* è un fatto di
+   contenuto. **Risolta ispezionando i dieci contesti** — non il conteggio — e l'esperimento
+   c'è: spettrometria di massa che identifica il peptide ubiquitinato `FTDINDSLGK274LDFSR`
+   (Xcorr 2,11) accanto a `LAFTVDDNPTK100PTTR` (Xcorr 1,54), poi mutagenesi sito-diretta con
+   `K274R` non ubiquitinato da ITCH, in Fig 5 E–G, e la conclusione degli autori *«ITCH
+   predominantly mediates polyubiquitination of WWOX at Lys-274»*. **Domanda 1 chiusa:
+   l'attribuzione di `25331887` regge.**
+   *(Osservazione di triage, non un locator: le citazioni qui sopra vanno riverificate contro
+   l'artefatto in sede di lettura completa, e non sostituiscono la lettura del corpo.)*
 2. **Questo paper riporta una `stabilizzazione`?** L'abstract dice che la ubiquitinazione K63
    porta a *«nuclear localization and increased cell death»*. `25331887` cita la stessa fonte
    per *«stabilization and nuclear translocation»*. **Localizzazione e stabilizzazione non sono
    la stessa affermazione**, e `DL-MECH-083` — la voce che rovescia il default *polyUb →
    proteasoma* — poggia sulla seconda.
+   ⚠️ **I conteggi non chiudono questa domanda e non vanno usati come se lo facessero.** Sul
+   corpo ricorrono `stabil` 12 volte, `degrad` 14, `half-life` 7, `proteasom` 2. Dicono che il
+   paper **discute** la stabilità; non dicono che riporti che la catena K63 **stabilizzi** WWOX.
+   🔴 **Il termine ricorre: se la lettura riporta la stabilizzazione, deve venire da un
+   esperimento nominato, non dalla frequenza della parola.** Una ricerca tecnica risponde a una
+   domanda d'esistenza, mai a una domanda di contenuto — è la regola 4 applicata al proprio
+   strumento di triage.
+   🔴 **E l'ispezione dei contesti di `K274` ha fatto emergere di passaggio qualcosa che rende
+   questa domanda più urgente, non meno.** Uno dei dieci contesti è la Discussione di questo
+   stesso paper: *«exons 5–8 contain the SDR domain, which harbors Lys-274 that is
+   Lys-63-linked polyubiquitinated by ITCH. Whether Lys-274 is the same lysine in the WWOX C
+   terminus that also targets WWOX for degradation is not known.»* Se regge alla lettura, **la
+   fonte lascia aperto se quel residuo sia anche un bersaglio di degradazione** — cioè non
+   afferma la stabilizzazione, e per di più segnala l'ipotesi opposta come non risolta. Sarebbe
+   la differenza fra `DL-MECH-083` come `DATO` e `DL-MECH-083` come inferenza che ha guadagnato
+   una parola attraversando una citazione. **Non lo registro come reperto:** viene da un
+   contesto restituito da un pattern, non da una lettura, ed è esattamente il tipo di frase che
+   va letta nel suo paragrafo prima di pesarla.
 **Come è emersa:** dalla lettura di `25331887` (`FTR-20260810-25331887-01`), enumerando le
 premesse importate invece dei risultati.
 **Current status:** ⬜ aperto, artefatto in casa, **identità verificata**. Non iniziato:
