@@ -1114,6 +1114,18 @@ contrasto DKO-vs-SKO è sostenuto dal testo e non dalla figura.
 **Perché la lettura è `partial_fulltext_read`:** lo scrittore del receipt ha **rifiutato**
 `complete_fulltext_read` con `coverage.supplementary: not_read`, e ha fatto bene. Una prima
 stesura del manifest dichiarava "Coverage: complete"; è stata corretta.
-**Next action:** adjudicare S1–S5 come immagini a risoluzione originale, poi ri-registrare a
-profondità completa con `reread_reason: inadequate_prior_coverage`.
-**Current status:** ⬜ debito dichiarato, artefatto già in casa — non serve recuperare nulla.
+**Next action:** ~~adjudicare S1–S5 come immagini a risoluzione originale, poi ri-registrare a
+profondità completa con `reread_reason: inadequate_prior_coverage`.~~ **Fatto.**
+**Current status:** ✅ **CHIUSO** — `FTR-20260810-38182577-02`, `complete_fulltext_read`.
+S1–S5 resi dal PDF sorgente a 220 dpi e ispezionati come immagini; la ricetta di rendering
+(digest sorgente · pagina · dpi · digest immagine) è nel manifest sotto
+`supplement_page_renders`, così un lettore con la propria copia rigenera byte identici senza
+che il repository ridistribuisca le figure dell'editore.
+🔴 **Il debito non era formale, e vale registrarlo perché la prossima volta si creda al gate:**
+il supplementary ha **corretto due coppie di contraddizione di questo stesso manifest**, in
+entrambi i casi perché avevo confrontato una frase con una figura principale che la frase
+**non cita** — `Fig 4D` invece di `S5B`, `Fig 4A` invece di `S4D`. E ha prodotto quattro
+reperti che esistono solo lì, fra cui **due conteggi di tumorigenicità incompatibili per lo
+stesso genotipo** (12/28 in Fig 4D contro 11/21 in S5B) e **MCM7 che non è più alto** nel
+pannello che il testo cita per dirlo. Lo scrittore della receipt aveva ragione a rifiutare
+`complete` al primo passaggio.
