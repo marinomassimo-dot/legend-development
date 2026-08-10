@@ -837,3 +837,77 @@ e fingerprintato (`PMID42128308_Aqeilan2026.pdf`, 17 pp., 7 immagini, SHA-256
 **Debito:** interamente aperto. È un PDF, quindi al momento della lettura va prima cercata una
 superficie XML/HTML PMC e, se non esiste, applicato il sentinella sulla superficie testuale
 prima che qualunque locator vi poggi.
+
+---
+
+## FT-039 — ✅ CHIUSA il 2026-08-10
+
+**Paper:** PMID 24871327 — Iatan et al. 2014, *Circ Cardiovasc Genet* 7:491–504
+**Lettura completa**, receipt `FTR-20260810-24871327-01`, manifest
+[`PMID24871327.json`](deepdive_manifests/PMID24871327.json), 22 locator verbatim in
+[`PMID24871327_locators.md`](fulltext_dossiers/PMID24871327_locators.md). Superficie: PMC
+HTML (nessun PDF usato). Copertura: testo, Tabelle 1–2 e tutte e 6 le immagini di figura
+`read`; **supplementary `unavailable`** — author manuscript fuori dal subset open access,
+cascata di cinque rotte documentata nel file dei locator.
+
+**La domanda che FT-039 poneva era se "strong evidence" si trasferisse al nodo lipidico. La
+risposta è no, e la ragione è il paper stesso:** il knockout epatico **non** abbassa l'HDL-C
+circolante in nessuno dei due sessi. L'unico modello che mostra il fenotipo HDL è il null
+totale, misurato in cuccioli di due giorni di una linea che muore entro quattro settimane.
+Il passo che il primario autorizza davvero è `WWOX → ApoA-I/ABCA1 → biogenesi HDL`, **non
+epatocita-autonomo**; la seconda gamba del ponte, `omeostasi lipidica → mielina`, **non
+riceve nulla da qui — il paper non misura alcun endpoint neurale.**
+
+**Tre reperti leggibili solo dai pannelli**, non dal testo né dalle didascalie:
+- **Fig. 4F** stampa `*P = 0.0229` (maschi) e `P = 0.0877` (femmine): l'aumento di ANGPTL4 è
+  significativo nei **maschi**, e la discussione costruisce il meccanismo TG **femmina**-specifico
+  proprio su ANGPTL4 nelle femmine. I due P non compaiono altrove nel documento.
+- **Fig. 5E**: la parentesi `***P<0.00058` copre **solo Abca1**; ApoAI non ha marcatore, mentre
+  il testo afferma che *entrambi* gli mRNA sono diminuiti. È di nuovo la distinzione di
+  [[claim_registry_current#CLAIM 005]].
+- **Fig. 5H/J** arbitrano due P discordanti fra testo e didascalia, **uno per parte**
+  (`0.0015` corretto in didascalia, `0.0007` corretto nel testo).
+- **Fig. 1A**: l'aplotipo non è né necessario (l'affetta 401 non lo porta) né sufficiente (la
+  fondatrice 102 lo porta e non è affetta). Il testo dice "perfectly co-segregated".
+
+---
+
+## FT-046
+**Papers:** i riferimenti gene-diretti di PMID 24871327 ignoti a LEGEND, più due premesse
+esterne portanti.
+**Priority:** **MEDIA-ALTA** sui primi due; **ALTA** su `18974271`.
+
+| PMID / rif. | Anno | Titolo | Perché |
+|---|---|---|---|
+| 18974271 (rif. 20) | 2008 | Aqeilan et al. — Targeted ablation of *Wwox* … | 🔴 **ignoto a LEGEND.** È la fonte primaria citata in introduzione per "Wwox KO mice exhibit marked reductions in serum lipid levels and display impaired gene expression of key steroidogenic enzymes": cioè la premessa su cui poggia l'intero fenotipo lipidico del null totale, che 24871327 estende ma non stabilisce |
+| 15070730 (rif. 17) | 2004 | Aqeilan et al. — Functional association … | 🔴 **ignoto a LEGEND.** Partner/funzione, serie fondativa del gruppo primario del gene |
+| rif. 44 — Lichtenstein et al. | — | ANGPTL4 inattiva LPL convertendo il dimero in monomero | premessa **esterna portante** del meccanismo TG proposto. Non gene-diretta, quindi invisibile a un audit di bibliografia che filtri per WWOX — e proprio per questo va accodata a mano |
+| rif. 53 — Timmins et al. | — | Il KO epatico di *Abca1* abbassa HDL plasmatico di ~80% | è il comparatore che gli autori invocano **contro** il proprio risultato negativo. Serve per sapere se il null epatico di Wwox differisce da quello di Abca1 per grado o per natura |
+
+**Come sono emersi:** enumerazione dei **53** riferimenti di PMID 24871327 — 14 gene-diretti,
+di cui **12 già noti** (uno letto integralmente, `19936220`) e **2 no**. I due non gene-diretti
+sono stati aggiunti a mano perché portano premesse su cui il paper appoggia conclusioni.
+**Current status:** ⬜ nessuno recuperato, nessuno letto.
+
+---
+
+## FT-047 — un difetto della coda, non di un paper
+**Priority:** **ALTA** (è una perdita sistematica, non un singolo studio)
+
+**Ventidue full text locali con superficie strutturata XML/HTML non hanno una lettura
+completa, e ventuno di essi non compaiono affatto in questa coda.** Non sono stati
+deprioritizzati: non sono mai stati classificati. Fra questi c'è l'intera serie Aqeilan
+locale — `27308416`, `27308504`, `27551470`, `29724996`, `30082886`, `30755385`, `32300104`,
+`34831305`, `26256646`, `27550453` — più `21318118`, `22634283`, `23254685`, `31428585`,
+`34634460`, `17575124`, `20530675`, `42395553`, `42422765`.
+
+**Perché conta più dei singoli titoli:** la coda ordina ciò che qualcuno ha pensato di
+accodare, non ciò che è in casa. Un paper può stare sul disco in una superficie pulita e
+strutturata — cioè nella condizione *migliore* per essere letto, senza sentinella e senza
+aggiudicazione — ed essere invisibile alla lista che decide cosa si legge. Oggi
+l'intersezione fra "ha una priorità dichiarata" e "ha una superficie strutturata locale"
+conteneva **un solo elemento**, ed è il motivo per cui è stato letto 24871327.
+
+**Come è emerso:** cross-query del corpus durante la lettura di FT-039.
+**Next action:** classificare i 21, non leggerli — è lavoro di triage, non di lettura.
+**Current status:** ⬜ aperto.
