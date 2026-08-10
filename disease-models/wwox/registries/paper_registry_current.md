@@ -258,7 +258,8 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **clinical relevance:** HIGH
 **Claim links:** 011
 **Role:** P7 design-principle paper
-**Note:** AAV9-hSynI-hWWOX ICV neonatale; rescue dose-dependent durable su survival, ECoG/SWD, myelination, gliosis; neuron-specific targeting; full KO ≠ the reference genotype ma design principles sono trasferibili alla logica di trial-readiness. — Versione published (peer-reviewed, OMTA vol 34) del preprint bioRxiv; riferimento preprint conservato per tracciabilità. Design-principle quantitativi dai supplementari S1–S8 (BATCH_20260703 discovery): promotore SynI neuronale ottimale vs MBP/CMV; WPRE aumenta WWOX 3–16.7×/regione (trade-off dose↔sicurezza; la review PAPER 029 lo sintetizza come "WPRE removed to avoid overexpression"); espressione durevole fino a P300; finestra terapeutica P1–P5; neuron-specific (fegato negativo). Gap traslazionale per il genotipo di riferimento: nessun dato post-onset/età avanzata. Main-text OMTA full da recuperare (NS-019).
+**Note:** AAV9-hSynI-hWWOX ICV neonatale; rescue dose-dependent durable su survival, ECoG/SWD, myelination, gliosis; neuron-specific targeting; full KO ≠ the reference genotype ma design principles sono trasferibili alla logica di trial-readiness. — Versione published (peer-reviewed, OMTA vol 34) del preprint bioRxiv; riferimento preprint conservato per tracciabilità. Design-principle quantitativi dai supplementari S1–S8 (BATCH_20260703 discovery): promotore SynI neuronale ottimale vs MBP/CMV; WPRE aumenta WWOX 3–16.7×/regione (trade-off dose↔sicurezza; la review PAPER 029 lo sintetizza come "WPRE removed to avoid overexpression"); espressione durevole fino a P300; neuron-specific (fegato negativo). Gap traslazionale per il genotipo di riferimento: nessun dato post-onset/età avanzata. Main-text OMTA full da recuperare (NS-019).
+🔴 **Corretto 2026-08-10 (`CC-20260810-42422765-S8`, BATCH_20260810_002) — la scorciatoia «finestra terapeutica P1–P5» è stata rimossa perché la Figura S8 non la sostiene.** Al suo posto, ciò che S8 mostra davvero: **efficacia dimostrata a più dosi postnatali precoci, P5 incluso; l'intervallo è campionato in modo incompleto per ciascun endpoint e il limite superiore oltre P5 non è stato testato.** In dettaglio, e ogni punto è una precisazione che la scorciatoia cancellava: (1) **nessuna evidenza P0 va attribuita a S8** — S8 non contiene alcun gruppo trattato a P0; (2) la sopravvivenza a **P40** include P1/P2/P3/P5 ma **non P4**; la sopravvivenza a **P300** include **solo P1 e P5**; (3) peso e glicemia a **P14** includono P1–P5, ma i test disegnati sono WT-vs-KO e WT-vs-P5 — **non esiste un confronto trattato-vs-KO**, e `ns` non è equivalenza; (4) i pannelli istologici/molecolari **E–I testano solo P5**; MBP è rappresentativa e non quantificata, e le statistiche GFAP confrontano WT-vs-KO e WT-vs-P5, non KO-vs-P5. *«P1–P5» leggeva come un intervallo continuo e validato ciò che è un insieme di punti campionati a maglie larghe, con il confronto che conta — trattato contro non trattato — mai disegnato.*
 
 ---
 
@@ -1614,10 +1615,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 95
 **Full title:** LINC01137/miR-186-5p/WWOX: a novel axis identified from WWOX-related RNA interactome in bladder cancer
 **Identifier:** PMID 37519886 / DOI 10.3389/fgene.2023.1214968
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 060]] (BATCH_20260810_002, `CC-20260805-001`)
+**Registry role:** corpus placeholder only — **conservato append-only come storia di audit, mai cancellato**
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — risolto per promozione
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-096
@@ -6537,3 +6538,24 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Role:** fenotipo originario del ratto `lde`, **antecedente all'identificazione del gene**
 **Note:** 🔴 **Credibilità strutturale:** accettato in **aprile 2007, due anni prima** che lo stesso gruppo mappasse `lde` su `Wwox`, e **nessuna** delle 35 referenze è WWOX-correlata perché nessuna poteva esserlo. I fenotipi non possono essere un gruppo WWOX-motivato che trova un risultato WWOX-forma. **Chimica ematica (Table 2, `n=4` normali / `5` mutanti per sesso):** BUN 12.6 → **40.3** ♀ e 10.1 → **35.6** ♂; creatinina 0.48 → **0.64** ♀ e 0.45 → **0.58** ♂; fosfato significativo solo ♀. **Glucosio, calcio, Na⁺, K⁺, Cl⁻ e trigliceridi tutti non significativi** — il ratto è **uremico senza essere ipoglicemico**. 🔴 **Spiegazione concorrente mai testata:** reni **istologicamente normali**, niente proteinuria, niente anemia, e gli autori propongono *"the production of urea-nitrogen and creatinine may be increased due to **hypercatabolism and muscle disruption**"* con precedente nel ceppo SER — ipotesi che compete direttamente con l'acidosi tubulare renale proposta per il topo in [[paper_registry_current#PAPER 057]]. 🔴 **Refuta una citazione che poggia su di esso:** [[paper_registry_current#PAPER 058]] attribuisce il nanismo al GH ipofisario basso citando questo paper, ma qui la differenza **non è significativa**, le cellule GH-positive sono presenti, e il paper conclude che il nanismo *"cannot be explained solely by low levels of plasma GH"*. La frase non qualificata esiste **solo nell'abstract** di questo paper: l'abstract sovradichiara il proprio corpo. **Fenotipo:** crisi 33.8% (22/65) ♂ e 33.9% (19/56) ♀, esordio 16–63 d, tre pattern, osservazione >6 h/giorno — **un pavimento, non un tasso**, per dichiarazione degli autori; atassia **95%** contro 0%, **non cerebellare**; sopravvivenza fino a 77 d ♂ e 84 d ♀ contro 1.5% di mortalità nei normali; vacuoli in CA1 e amigdala, assenti nei normali, senza corrispettivo in epilessia umana. ⚠️ Il χ² mendeliano poggia su **33 di 254 figliate**, selezionate per sopravvivenza. ⚠️ CPK, ALP, GPT e GOT portano note di **numerosità, non di significatività**: il CPK femminile è ~8.5× più alto **senza marcatore**. ⚠️ Brain sparing anche qui, con peso cerebrale assoluto **non** significativamente ridotto nei maschi. **Causa di morte: esplicitamente ignota.**
 **Wikilinks:** [[claim_registry_current#CLAIM 037]] · [[claim_registry_current#CLAIM 038]] · [[claim_registry_current#CLAIM 039]] · [[paper_registry_current#PAPER 058]] · [[paper_registry_current#PAPER 057]]
+
+## PAPER 060
+**Short title:** Kołat 2023 — asse LINC01137/miR-186-5p/WWOX in carcinoma vescicale
+**Full title:** LINC01137/miR-186-5p/WWOX: a novel axis identified from WWOX-related RNA interactome in bladder cancer
+**Authors:** Kołat D, Kałuzińska-Kołat Ż, Kośla K, Orzechowska M, Płuciennik E, Bednarek AK
+**Year:** 2023
+**Source type:** primario in vitro + in silico — rianalisi CAGE-seq e coorti pubbliche
+**Journal/source:** *Frontiers in Genetics* 2023;14:1214968
+**Identifier:** PMID 37519886 / PMCID PMC10373930 / DOI 10.3389/fgene.2023.1214968
+**Status:** processed
+**Evidence depth:** full text reviewed (coverage_status: complete_fulltext_read) — receipt `FTR-20260805-37519886-01`; manifest `deepdive_manifests/PMID37519886.json`
+**Integrity status:** clean
+**Primary pathway:** regolazione a RNA / ncRNA — contesto oncologico
+**Model/species:** linee cellulari umane di carcinoma vescicale, sovraespressione di WWOX wild-type
+**Genotype/model:** WWOX wild-type; **nessun allele WWOX-DEE, nessun contesto neuronale o dello sviluppo**
+**Transferability:** **T3 — indiretta**
+**clinical relevance:** LOW
+**Claim links:** none — **nessuna nuova claim, nessun cambiamento al working model**
+**Role:** promosso da `CORPUS-STUB-095` (BATCH_20260810_002, `CC-20260805-001`); il placeholder è conservato append-only
+**Note:** Promozione **di registro e di provenienza, non di portata**: la lettura completa è avvenuta il 2026-08-05 e il record ne prende atto, ma il paper resta oncologia/immunologia adulta e va letto come `DISCOVERY_ONLY`. È la fonte da cui è emerso [[full_text_queue_current#FT-037]] (PMID 36499501), l'unico dei 29 riferimenti gene-/asse-diretti assente da ogni file LEGEND, e dà a miR-186-5p un ruolo **predetto** in una rete ceRNA — non misurato. Il valore per il modello di malattia sta nel metodo di enumerazione della bibliografia, non nella biologia vescicale.
+**Wikilinks:** [[paper_registry_current#CORPUS-STUB-095]] · [[full_text_queue_current#FT-037]] · [[literature_tracking_log_current#LIT-0117]]

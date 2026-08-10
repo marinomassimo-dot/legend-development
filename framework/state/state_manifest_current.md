@@ -102,12 +102,13 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260810_001
+last_batch_commit_id: BATCH_20260810_002
 last_batch_commit_date: 2026-08-10
 last_batch_commit_type: MINOR
-commit_candidates_propagated: 3
+commit_candidates_propagated: 2
 commit_candidates_superseded: 0
-commit_candidates_deferred: 3
+commit_candidates_deferred: 1
+batch_20260810_002_scope: "PROPAGATED 2. CC-20260810-42422765-S8: the shorthand 'finestra terapeutica P1-P5' is removed from the PAPER record for PMID 42422765 and replaced with what Figure S8 shows — efficacy at several early postnatal doses including P5, the interval incompletely sampled per endpoint, the upper boundary beyond P5 untested. S8 has no P0 group; survival to P40 omits P4 and to P300 keeps only P1 and P5; weight and glucose at P14 draw WT-vs-KO and WT-vs-P5 with no treated-vs-KO comparison, and ns is not equivalence; panels E-I test P5 only. 'P1-P5' read as a validated continuous window what is a sparse set of sampled points with the comparison that matters never drawn. CC-20260805-001: CORPUS-STUB-095 promoted to PAPER 060 (PMID 37519886, Kolat 2023), placeholder preserved append-only, LIT-0117 completed from 'corpus paper 95' to full metadata with its complete_fulltext_read receipt. Promotion of provenance, not of scope: T3, clinical relevance LOW, no claim link, DISCOVERY_ONLY. STILL DEFERRED 1: CC-20260810-30755385, whose registry promotion is mechanical but which also asks for a meta_metabolism rewrite separating direct measurement from inferred mitochondrial glucose oxidation, and a CLAIM 009 link. Half-applying it would leave the registry claiming a reading the meta does not carry. Its two most transferable products are already recorded outside the canonical layer and are not waiting on it: FT-048 (the ITT age discrepancy) and FT-049 (tissue of measurement is not tissue of necessity, as INFERENZA with its three sources)."
 target_wm_version: WM_v4.1
 last_wm_update: 2026-08-06
 last_wm_batch_commit_id: BATCH_20260806_002
@@ -234,8 +235,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 5
-growth_anchor_head: d142a0c7802217cf0e9170b67af3337794a43348eb582c1a271ee4d293d6c84b
+growth_anchor_events: 6
+growth_anchor_head: b98faa747a08564da46f36d8a08e6e71b5807d2b04a5fefa59a8aa1c5c640af3
 ```
 
 ```bash

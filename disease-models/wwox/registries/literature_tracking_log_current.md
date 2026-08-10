@@ -3547,21 +3547,25 @@ Serves to:
 ---
 
 ## LIT-0117
-**Short title:** corpus paper 95
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Kołat 2023 — LINC01137/miR-186-5p/WWOX in carcinoma vescicale
+**Authors:** Kołat D, Kałuzińska-Kołat Ż, Kośla K, Orzechowska M, Płuciennik E, Bednarek AK
+**Year:** 2023
+**Source type:** primario in vitro + in silico (rianalisi CAGE-seq + coorti pubbliche)
+**Journal/source:** *Frontiers in Genetics* 14:1214968
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 37519886 / DOI 10.3389/fgene.2023.1214968
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-05
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 95
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260805-37519886-01`
+**Registry record:** [[paper_registry_current#PAPER 060]] (promosso da `CORPUS-STUB-095`, BATCH_20260810_002)
+**Primary pathway:** regolazione a RNA / ncRNA — contesto oncologico
+**Genotype/model tag:** WWOX wild-type, linee di carcinoma vescicale umano
+**Transferability:** T3 — indiretta; nessun contenuto neuronale, dello sviluppo o di variante
+**clinical relevance:** LOW
 **Transferability:** unassigned
 **clinical relevance:** LOW
 **Claim links:** none

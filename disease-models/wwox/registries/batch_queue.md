@@ -776,7 +776,7 @@ for an entirely unprocessed record.
 |---|---:|:---:|---|---|---|
 | [29808465](https://pubmed.ncbi.nlm.nih.gov/29808465/) | 2018 | — | abstract only | PAPER 041 | A novel missense variant in the SDR domain of the WWOX gene leads to complete loss of WWOX protein with early-onset epileptic encephalopathy and severe developmental delay. |
 | [38161429](https://pubmed.ncbi.nlm.nih.gov/38161429/) | 2023 | ✅ | full text | PAPER 046 | Neuroimaging features of WOREE syndrome: a mini-review of the literature. |
-| [37519886](https://pubmed.ncbi.nlm.nih.gov/37519886/) | 2023 | ✅ | full text | receipt FTR-20260805-37519886-01 | LINC01137/miR-186-5p/WWOX: a novel axis identified from WWOX-related RNA interactome in bladder cancer. |
+| [37519886](https://pubmed.ncbi.nlm.nih.gov/37519886/) | 2023 | ✅ | full text | PAPER 060 | LINC01137/miR-186-5p/WWOX: a novel axis identified from WWOX-related RNA interactome in bladder cancer. |
 | [34268881](https://pubmed.ncbi.nlm.nih.gov/34268881/) | 2021 | ✅ | full text | PAPER 039 | Modeling genetic epileptic encephalopathies using brain organoids. |
 | [33916893](https://pubmed.ncbi.nlm.nih.gov/33916893/) | 2021 | ✅ | full text | PAPER 040 | Neurological Disorders Associated with WWOX Germline Mutations-A Comprehensive Overview. |
 | [33255508](https://pubmed.ncbi.nlm.nih.gov/33255508/) | 2020 | ✅ | full text | receipt FTR-20260806-33255508-01 | WWOX Loss of Function in Neurodevelopmental and Neurodegenerative Disorders. |

@@ -24,12 +24,12 @@ the whole known corpus, not the part already processed.
 | **Full text depth** | 35 | 9% | complete receipt or legacy registry declaration; trace split below |
 | Partial full text | 1 | 0% | some sections read; explicitly declared incomplete |
 | Abstract / screened | 17 | 4% | classified from metadata and abstract; no full text read |
-| Catalogued only | 349 | 86% | known, deduplicated, never analytically processed — **the debt** |
+| Catalogued only | 350 | 86% | known, deduplicated, never analytically processed — **the debt** |
 | Filtered / superseded | 3 | 1% | explicitly set aside, with the reason preserved |
 
-- **49** promoted `PAPER` records · **356** `CORPUS` placeholders
+- **50** promoted `PAPER` records · **356** `CORPUS` placeholders
 - **386** lifecycle entries in the literature tracking log
-- **377** unique PMIDs known across the registries
+- **378** unique PMIDs known across the registries
 
 ## Receipt trace
 
