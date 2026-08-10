@@ -904,3 +904,135 @@ e fingerprintato (`PMID42128308_Aqeilan2026.pdf`, 17 pp., 7 immagini, SHA-256
 **Debito:** interamente aperto. È un PDF, quindi al momento della lettura va prima cercata una
 superficie XML/HTML PMC e, se non esiste, applicato il sentinella sulla superficie testuale
 prima che qualunque locator vi poggi.
+
+---
+
+## FT-039 — ✅ CHIUSA il 2026-08-10
+
+**Paper:** PMID 24871327 — Iatan et al. 2014, *Circ Cardiovasc Genet* 7:491–504
+**Surface:** PMID 24871327 · `structured` · sentinella `clean` · PMID24871327_Iatan2014_PMC.html
+**Lettura completa**, receipt `FTR-20260810-24871327-01`, manifest
+[`PMID24871327.json`](deepdive_manifests/PMID24871327.json), 22 locator verbatim in
+[`PMID24871327_locators.md`](fulltext_dossiers/PMID24871327_locators.md). Superficie: PMC
+HTML (nessun PDF usato). Copertura: testo, Tabelle 1–2 e tutte e 6 le immagini di figura
+`read`; **supplementary `unavailable`** — author manuscript fuori dal subset open access,
+cascata di cinque rotte documentata nel file dei locator.
+
+**La domanda che FT-039 poneva era se "strong evidence" si trasferisse al nodo lipidico. La
+risposta è no, e la ragione è il paper stesso:** il knockout epatico **non** abbassa l'HDL-C
+circolante in nessuno dei due sessi. L'unico modello che mostra il fenotipo HDL è il null
+totale, misurato in cuccioli di due giorni di una linea che muore entro quattro settimane.
+Il passo che il primario autorizza davvero è `WWOX → ApoA-I/ABCA1 → biogenesi HDL`, **non
+epatocita-autonomo**; la seconda gamba del ponte, `omeostasi lipidica → mielina`, **non
+riceve nulla da qui — il paper non misura alcun endpoint neurale.**
+
+**Tre reperti leggibili solo dai pannelli**, non dal testo né dalle didascalie:
+- **Fig. 4F** stampa `*P = 0.0229` (maschi) e `P = 0.0877` (femmine): l'aumento di ANGPTL4 è
+  significativo nei **maschi**, e la discussione costruisce il meccanismo TG **femmina**-specifico
+  proprio su ANGPTL4 nelle femmine. I due P non compaiono altrove nel documento.
+- **Fig. 5E**: la parentesi `***P<0.00058` copre **solo Abca1**; ApoAI non ha marcatore, mentre
+  il testo afferma che *entrambi* gli mRNA sono diminuiti. È di nuovo la distinzione di
+  [[claim_registry_current#CLAIM 005]].
+- **Fig. 5H/J** arbitrano due P discordanti fra testo e didascalia, **uno per parte**
+  (`0.0015` corretto in didascalia, `0.0007` corretto nel testo).
+- **Fig. 1A**: l'aplotipo non è né necessario (l'affetta 401 non lo porta) né sufficiente (la
+  fondatrice 102 lo porta e non è affetta). Il testo dice "perfectly co-segregated".
+
+---
+
+## FT-046
+**Papers:** PMID 18974271 · PMID 15070730 — i riferimenti gene-diretti di PMID 24871327 ignoti
+a LEGEND, più due premesse esterne portanti non risolte a PMID (rif. 44 Lichtenstein, rif. 53
+Timmins), elencate nella tabella qui sotto.
+*(Riga di identità riaperta il 2026-08-10: apriva con «i riferimenti gene-diretti di PMID
+24871327», e quel PMID è il paper **citante**, non un paper di questa voce.)*
+**Surface:** PMID 18974271 · `pdf_only` · sentinella `SUSPECT` · PMID18974271_Aqeilan2009.pdf  ·  PMID 15070730 · `pdf_only` · sentinella `SUSPECT` · PMID15070730_Aqeilan2004.pdf  ·  PMID 24871327 · `structured` · sentinella `clean` · PMID24871327_Iatan2014_PMC.html
+**Priority:** **MEDIA-ALTA** sui primi due; **ALTA** su `18974271`.
+
+| PMID / rif. | Anno | Titolo | Perché |
+|---|---|---|---|
+| 18974271 (rif. 20) | 2008 | Aqeilan et al. — Targeted ablation of *Wwox* … | 🔴 **ignoto a LEGEND.** È la fonte primaria citata in introduzione per "Wwox KO mice exhibit marked reductions in serum lipid levels and display impaired gene expression of key steroidogenic enzymes": cioè la premessa su cui poggia l'intero fenotipo lipidico del null totale, che 24871327 estende ma non stabilisce |
+| 15070730 (rif. 17) | 2004 | Aqeilan et al. — Functional association … | 🔴 **ignoto a LEGEND.** Partner/funzione, serie fondativa del gruppo primario del gene |
+| rif. 44 — Lichtenstein et al. | — | ANGPTL4 inattiva LPL convertendo il dimero in monomero | premessa **esterna portante** del meccanismo TG proposto. Non gene-diretta, quindi invisibile a un audit di bibliografia che filtri per WWOX — e proprio per questo va accodata a mano |
+| rif. 53 — Timmins et al. | — | Il KO epatico di *Abca1* abbassa HDL plasmatico di ~80% | è il comparatore che gli autori invocano **contro** il proprio risultato negativo. Serve per sapere se il null epatico di Wwox differisce da quello di Abca1 per grado o per natura |
+
+**Come sono emersi:** enumerazione dei **53** riferimenti di PMID 24871327 — 14 gene-diretti,
+di cui **12 già noti** (uno letto integralmente, `19936220`) e **2 no**. I due non gene-diretti
+sono stati aggiunti a mano perché portano premesse su cui il paper appoggia conclusioni.
+**Current status:** ⬜ nessuno recuperato, nessuno letto.
+
+---
+
+## FT-047 — un difetto della coda, non di un paper
+**Papers:** PMID 17575124 · PMID 20530675 · PMID 21318118 · PMID 22634283 · PMID 23254685 · PMID 26256646 · PMID 27308416 · PMID 27308504 · PMID 27550453 · PMID 27551470 · PMID 29724996 · PMID 30082886 · PMID 30370248 · PMID 30755385 · PMID 31428585 · PMID 32300104 · PMID 34634460 · PMID 34831305 · PMID 42395553 · PMID 42422765
+*(Riga di identità aggiunta il 2026-08-10. La voce non ne aveva alcuna, e il `LINT` l'ha
+segnalata al primo passaggio. Gli ID erano già nel corpo — qui salgono dove un dedup, e
+l'annotazione `**Surface:**`, possono leggerli. **La voce denuncia che questi paper non sono
+classificati: darle una riga di identità non li classifica, ma smette di renderli invisibili
+anche alla propria denuncia.**)*
+**Surface:** PMID 17575124 · `structured` · sentinella `clean` · PMID17575124_Aqeilan2007_PMC.html  ·  PMID 20530675 · `structured` · sentinella `clean` · PMID20530675_Kurek2010_PMC.html  ·  PMID 21318118 · `structured` · sentinella `clean` · PMID21318118_Drusco2011_PMC.xml  ·  PMID 22634283 · `structured` · sentinella `clean` · PMID22634283_McDonald2012_PMC.html  ·  PMID 23254685 · `structured` · sentinella `clean` · PMID23254685_Abdeen2013_PMC.html  ·  PMID 26256646 · `structured` · sentinella `clean` · PMID26256646_DelMare2015_PMC.xml  ·  PMID 27308416 · `structured` · sentinella `clean` · PMID27308416_AbuRemaileh2015_PMC.xml  ·  PMID 27308504 · `structured` · sentinella `clean` · PMID27308504_Hazan2015_PMC.xml  ·  PMID 27550453 · `structured` · sentinella `clean` · PMID27550453_DelMare2016_PMC.html  ·  PMID 27551470 · `structured` · sentinella `clean` · PMID27551470_Hazan2015_PMC.xml  ·  PMID 29724996 · `structured` · sentinella `clean` · PMID29724996_AbuRemaileh2018_PMC.xml  ·  PMID 30082886 · `structured` · sentinella `clean` · PMID30082886_Abdeen2018_PMC.xml  ·  PMID 30370248 · `structured` · sentinella `clean` · PMID30370248_Tanna2018_PMC.xml  ·  PMID 30755385 · `structured` · sentinella `clean` · PMID30755385_AbuRemaileh2019.pdf, PMID30755385_AbuRemaileh2019_PMC.xml  ·  PMID 31428585 · `structured` · sentinella `clean` · PMID31428585_Chang2019_PMC.xml  ·  PMID 32300104 · `structured` · sentinella `clean` · PMID32300104_Khawaled2020_PMC.xml  ·  PMID 34634460 · `structured` · sentinella `clean` · PMID34634460_Breton2021_PMC.xml  ·  PMID 34831305 · `structured` · sentinella `clean` · PMID34831305_Steinberg2021_PMC.xml  ·  PMID 42395553 · `structured` · sentinella `clean` · PMID42395553_PMC.xml  ·  PMID 42422765 · `structured` · sentinella `clean` · PMID42422765_Obeid2026_PMC.html
+**Priority:** **ALTA** (è una perdita sistematica, non un singolo studio)
+
+**Ventidue full text locali con superficie strutturata XML/HTML non hanno una lettura
+completa, e ventuno di essi non compaiono affatto in questa coda.** Non sono stati
+deprioritizzati: non sono mai stati classificati. Fra questi c'è l'intera serie Aqeilan
+locale — `27308416`, `27308504`, `27551470`, `29724996`, `30082886`, `30755385`, `32300104`,
+`34831305`, `26256646`, `27550453` — più `21318118`, `22634283`, `23254685`, `31428585`,
+`34634460`, `17575124`, `20530675`, `42395553`, `42422765`, `30370248` *(aggiunto il
+2026-08-10: mancava da questa lista, vedi la riconciliazione sotto)*.
+
+**Perché conta più dei singoli titoli:** la coda ordina ciò che qualcuno ha pensato di
+accodare, non ciò che è in casa. Un paper può stare sul disco in una superficie pulita e
+strutturata — cioè nella condizione *migliore* per essere letto, senza sentinella e senza
+aggiudicazione — ed essere invisibile alla lista che decide cosa si legge. Oggi
+l'intersezione fra "ha una priorità dichiarata" e "ha una superficie strutturata locale"
+conteneva **un solo elemento**, ed è il motivo per cui è stato letto 24871327.
+
+**Come è emerso:** cross-query del corpus durante la lettura di FT-039.
+**Next action:** classificare i 21, non leggerli — è lavoro di triage, non di lettura.
+**Current status:** ⬜ aperto.
+
+### 🔴 Come ho contato — e perché il numero va letto con la definizione accanto (2026-08-10)
+
+Riconciliazione richiesta dopo che due conteggi diversi sullo stesso corpus hanno dato 21 e
+19. Non erano in disaccordo sui fatti: erano due domande diverse, e una terza risposta era
+sbagliata. Tutte e tre servono a chi legge questa voce dopo.
+
+**Il criterio usato qui è: il PMID compare letteralmente in un blocco `## FT-`.** Stretto,
+verificabile con un comando, e insensibile a come un record nomina il suo paper.
+
+| criterio | classificati | non classificati |
+|---|---|---|
+| PMID letterale in un blocco FT | 19 / 21 | 2 |
+| PMID **oppure** cognome+anno del nome file | 20 / 21 | 1 |
+
+**Il 19 è un artefatto di questa voce, e va detto.** Quei 19 PMID hanno un record `FT-`
+**perché FT-047 li elenca** — cioè perché li ha elencati la voce che denuncia che non erano
+classificati. Prima che FT-047 esistesse il conteggio era **zero su 21**. Un conteggio che si
+soddisfa da sé non misura nulla: se qualcuno rilancia la query domani troverà 19 "in coda" e
+concluderà che il problema è quasi risolto. Non lo è — sono 19 righe in una tabella di
+reclamo, non 19 triage.
+
+**Il criterio largo è peggiore, non migliore: entrambi i suoi due match in più sono falsi.**
+- `34747138` → `FT-044`: FT-044 è **PMID 33914858**, Repudi et al. 2021 su *Brain*. `34747138`
+  è Repudi et al. 2021 su *EMBO Mol Med*. **Stesso primo autore, stesso anno, due paper
+  diversi** — e il secondo ha un record proprio altrove. Cognome+anno non è una chiave.
+- `42422765` → `FT-007`: FT-007 è Abudiab et al. 2025, e nomina "Obeid 2026" solo come la
+  review che l'ha fatto emergere. Il match cade sulla **citazione della fonte**, non sul paper.
+
+Questo replica esattamente la lezione già scritta in FT-034 — *"un audit di bibliografia con
+una sola chiave sovrastima i propri risultati, e li sovrastima nella direzione che lo
+lusinga"* — con l'aggravante che qui la seconda chiave non aggiunge copertura: **aggiunge due
+falsi positivi**, e li aggiunge nella direzione che fa sembrare la coda più completa.
+
+**E la lista sopra ne aveva persa una.** `PMID 30370248` (Tanna 2018, XML PMC locale) non
+compariva né in FT-047 né altrove: l'omissione è stata commessa **dentro la voce che denuncia
+le omissioni**, il che è la prova più diretta possibile che l'enumerazione a mano non è
+affidabile a questa scala. È aggiunta qui: `30370248`.
+
+**Il conteggio corretto, con la definizione attaccata:** 21 superfici strutturate senza
+lettura completa. **Zero hanno una voce `FT-` dedicata al paper**: i 19 compaiono soltanto
+nell'elenco di reclamo di questa voce, `30370248` non compariva da nessuna parte fino a oggi,
+e `34747138` — l'unico con debito già *misurato*, tre receipt `partial_fulltext_read` — non
+ha una voce di coda affatto. Il triage resta interamente da fare, e il numero da citare
+quando si dice "quanti sono classificati" è **0 su 21**, non 19.

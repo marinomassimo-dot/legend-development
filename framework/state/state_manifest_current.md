@@ -174,8 +174,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 56
-fulltext_ledger_head: c0e06309a200ec0aa064b0e12698868d3fdce302c82f5fd5634dccbf61bb7d32
+fulltext_ledger_events: 59
+fulltext_ledger_head: 56a941ac42b14f9822c2273df6bb6d7386155dee9fa53266505ebbe69c2340ec
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -197,8 +197,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 3
-growth_anchor_head: 2d885421e2589ccf32804f26375307511a18ddb30768f2045b6ec6f1be3f1ff2
+growth_anchor_events: 5
+growth_anchor_head: d142a0c7802217cf0e9170b67af3337794a43348eb582c1a271ee4d293d6c84b
 ```
 
 ```bash
@@ -225,8 +225,8 @@ must be backed by a persisted `complete_fulltext_read` receipt, or `LINT_AUTOMAT
 `BLOCK_BATCH_COMMIT`.
 
 ```yaml
-registry_only_fulltext_declarations_baseline: 20
-registry_only_fulltext_declaration_ids: ["PAPER 005", "PAPER 010", "PAPER 011", "PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 029", "PAPER 031", "PAPER 032", "PAPER 039", "PAPER 040", "PAPER 042", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050", "PAPER 053"]
+registry_only_fulltext_declarations_baseline: 19
+registry_only_fulltext_declaration_ids: ["PAPER 010", "PAPER 011", "PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 029", "PAPER 031", "PAPER 032", "PAPER 039", "PAPER 040", "PAPER 042", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050", "PAPER 053"]
 ```
 
 Lowering the baseline is the intended direction of travel: back-fill a record with real
@@ -247,7 +247,7 @@ with every existing check passing. It is invisible by construction, because lean
 writes nothing anywhere. So it is measured instead of assumed.
 
 ```yaml
-unread_premise_baseline: 10
+unread_premise_baseline: 7
 unread_premise_measured_on: 2026-08-10
 ```
 
