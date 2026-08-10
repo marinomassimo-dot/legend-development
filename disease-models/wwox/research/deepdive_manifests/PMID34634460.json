@@ -1,0 +1,346 @@
+{
+  "schema_version": 2,
+  "pmid": "34634460",
+  "doi": "10.1016/j.nbd.2021.105529",
+  "receipt": "FTR-20260810-34634460-02",
+  "landing": [
+    "FTR-20260810-34634460-02",
+    "full_text_queue_current.md#FT-058"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline. The prior record was a legacy reconstruction with no fingerprint and every coverage slot unknown_legacy, so this had to be a first real read against the structured surface rather than a dossier hand-off."
+    }
+  ],
+  "reading_budget": {
+    "declared_before_reading": true,
+    "figures_present": 6,
+    "panels_present": 29,
+    "tables_present": 1,
+    "supplementary_elements_present": 2,
+    "panels_inspected": 29,
+    "panel_coverage": "29/29",
+    "method": "Counted from the JATS <fig> captions, which enumerate their own panels (Fig 1 A-E, Fig 2 A-E, Fig 3 A-D, Fig 4 A-H, Fig 5 A-D, Fig 6 A-C), before any of the body was read.",
+    "resolution_caveat": "🔴 THE PPI IS A THIRD OF THE PREVIOUS PAPER'S AND THAT CHANGED WHAT COULD BE CLAIMED. PMC serves these figures at 708-757 px wide, i.e. 101-108 effective ppi across a 7-inch page — against 209-279 ppi for PMID 32581702. At full-figure scale I first misread which bar of panel 3D was which and nearly recorded that CBX increased burst frequency, which is the opposite of the finding. Six panels were re-cropped at native resolution and upscaled 6x-10x before any call was made. Where a call still could not be supported the entry says so."
+  },
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_measured": "Not measured, declared as not measured. Two groups: the Carlen/Bardakjian electrophysiology and signal-processing laboratory in Toronto, which owns the methods, and the Aqeilan laboratory in Jerusalem, which owns the Synapsin-Cre Wwox mouse and is the primary WWOX group in this corpus.",
+    "research_type": "experimental_lab",
+    "output_kind": "primary_research",
+    "is_primary_group_for_disease": true,
+    "is_primary_group_for_gene": true,
+    "weighting": "Primary electrophysiology on the neuron-specific knockout, and the only cellular-level characterisation of excitability in any Wwox model. It is the mechanistic layer between the gene and the seizure phenotype, which is why the panels rather than the prose carry the weight."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "gene-direct references of this paper resolved DOI->PMID and set against receipts on all six branches",
+        "route": "Europe PMC DOI batch resolution, 2026-08-10",
+        "count": 14
+      }
+    ],
+    "note": "🔴 THE FIRST ENUMERATION RETURNED ZERO AND DID NOT SAY IT HAD FAILED. This Elsevier deposit carries no <pub-id> elements at all: 70 references, 0 with a structured PMID or DOI. My reference cross-check read <pub-id>, found nothing, and printed three empty categories — 'already read 0, queued 0, no receipt 0' — and exited successfully. A verdict that cannot fail is not a verdict, and this is the second time in two days that shape has appeared in my own tooling. The corrected version scrapes the DOI from the citation text, resolves it, and refuses loudly if the gene-direct set comes back empty. It then resolved 14 of 14."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 70,
+    "gene_direct_count": 14,
+    "gene_direct_refs_in_source": [
+      "23254685",
+      "26499798",
+      "17360458",
+      "32000863",
+      "30290271",
+      "32581702",
+      "24369382",
+      "25411445",
+      "30356099",
+      "33914858",
+      "19500159",
+      "30370248",
+      "31340538",
+      "25716914"
+    ],
+    "resolved": [
+      "32000863",
+      "30290271",
+      "32581702",
+      "19500159",
+      "30370248",
+      "31340538",
+      "24369382"
+    ],
+    "queued": [
+      "23254685",
+      "17360458",
+      "25411445",
+      "30356099",
+      "33914858",
+      "25716914",
+      "26499798"
+    ],
+    "enumeration_method": "70 references enumerated from the JATS ref-list; 14 name the gene; all 14 resolved DOI->PMID through Europe PMC and set against every receipt on all six branches and against the full-text queue.",
+    "cross_check_result": "Six are already read complete (32000863 Cheng 2020, 30290271 Hussain 2019, 32581702 Iacomino 2020 — read by me ninety minutes before this one, 19500159 Suzuki 2009, 30370248 Tanna & Aqeilan 2018, 31340538 Tochigi 2019); one carries a partial receipt (24369382 Mallaret 2014); six sit queued unread, including 33914858 Repudi 2021, which is this paper's companion and the suspended primary source of CLAIM 003. ONLY ONE IS NEITHER READ NOR QUEUED: 26499798, Abu-Remaileh 2015, 'Pleiotropic functions of tumor suppressor WWOX in normal and cancer cells', J Biol Chem — added to the queue by this reading. That the number is one rather than nine is itself informative: FT-057, opened ninety minutes earlier from the reference list of 32581702, had already absorbed Mignot 2015 and Piard 2018, which this paper also cites."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Prior receipts and prior manifest for 34634460; what does the existing partial receipt actually attest?",
+    "hits": 1,
+    "finding": "🔴 THE PRIOR RECEIPT IS NOT A READING AND SAYS SO IF YOU OPEN IT. FTR-20260726-34634460-01, partial_fulltext_read, has record source_locator pointing at the PAPER REGISTRY rather than a document, NO source_fingerprint, and every one of its nine coverage slots set to unknown_legacy. Its evidence_basis reads 'PAPER 031 declares Evidence depth: full text verificato (files/fulltext/PMID34634460_Breton2021.md, PMC MCP)' and 'section-by-section coverage map did not survive in the public fixture'. So the artifact it inherits its authority from is a MARKDOWN FILE PRODUCED BY AN ML CONVERTER — exactly the surface class rule 5c forbids as the artifact behind a locator — and that file is not present on disk today. Reading the receipt before opening the document, as instructed, is what surfaced this: the queue entry said 'partial since 26 July', which reads as a reading that stopped, and it was a registry reconstruction that never started."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-10",
+    "route": "PMC OA service record for PMC8609180",
+    "result": "retracted=\"no\" in the OA service record; no correction or expression-of-concern link in the Europe PMC core record.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+      "sha256": "934b4e1a42ac19f5cd8912994fb171beabdeb94a6631b23d9a383dab1db906aa",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/figures/PMID34634460/PMID34634460_fig1.jpg",
+      "sha256": "9a2cd2e9e36bd18f37df68c4d0db5571e7a2c37f2a53944386817270accd4816",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID34634460/PMID34634460_fig2.jpg",
+      "sha256": "276ca93c02236d1feec133b8028a9c11e3a516cdf413a719201162aac193fd32",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID34634460/PMID34634460_fig3.jpg",
+      "sha256": "8deeed0893879dc55eaf0be780085d707f6e238ddcfaed672af902b84a534d9e",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID34634460/PMID34634460_fig4.jpg",
+      "sha256": "384ee6a8f13cc04a1f60bd243abecf7d90065ebeb5d5dbc4f7bddd3aec99f1b5",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID34634460/PMID34634460_fig5.jpg",
+      "sha256": "8a533cf808ea7fc3fc663c96b43f1b250de79314e4015d1babebf0489bbe3cef",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID34634460/PMID34634460_fig6.jpg",
+      "sha256": "d02368a4513f6f748c9c7e2fb1ebf8a223caacce1386379cd4ba8e504a87ac15",
+      "kind": "figure"
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC8609180, JATS XML already present in the shared files/ tree. Neurobiology of Disease, CC BY per the PMC OA service record. Structured surface, rule 5d's preferred class.",
+    "abstract_anchoring_waived": "No evidentiary locator uses the abstract surface. The abstract is the SUBJECT of entry 8 — where the order in which it lists two findings is the finding — and that entry is anchored on the Results sentence and the panel, never on the abstract itself.",
+    "surface_note": "🔴 ON THIS ARTIFACT THE JOIN DEFECT BITES, MEASURED BEFORE ANY SPAN WAS CHOSEN. My branch (80e6f03) lacks Plan's inline-join fix (2e6fd6a, on evidence-index only, NOT on main): here `(Fig` appears 0 times under my extractor and 30 times under Plan's. Spans were therefore built against Plan's surface, the author's characters. Seventeen of eighteen then verified under BOTH extractors unchanged; the eighteenth failed under mine only because of the inline markup around a drug name, and trimming the two-word prefix — not altering the quoted claim — brought it to both. So all eighteen verify under both contracts and this manifest is immune to merge order. Contrast with PMID 32581702, an XML on which the same defect cost nothing: the test is per artifact, and it takes thirty seconds.",
+    "entries": [
+      {
+        "proposition": "🔴 THE HETEROZYGOTE INCIDENCE IS A SIXTH OF THE KNOCKOUT'S, AND THE DISCUSSION DESCRIBES THEM AS SIMILAR. This is the paper's founding observation and it is stated slice by slice. Wild type never bursts. Heterozygotes burst in 4 of 23 slices — 17%. Knockouts burst in 36 of 42 — 86%. Read against entry 1, which is how the Discussion characterises the same fact.",
+        "snippet": "0 of n = 11 slices from 7 S-WT mice; 4 of n = 23 slices from 14 S-HT mice; 36 of n = 42 slices from 24 S-KO mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Results 2.1, the sentence establishing the neocortical bursting phenotype",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence, and the three fractions were what made the Discussion sentence stand out later"
+      },
+      {
+        "proposition": "🔴 THE CHARACTERISATION THAT DOES NOT CARRY ITS OWN NUMBERS. 'Manifested similarly' spans 17% of slices against 86%. The Discussion then reasons from that similarity toward 'a negative correlation between WWOX protein expression and hyperexcitable bursting activity' — which is a dose-response reading, and a dose-response is exactly what the two incidences show, so the conclusion survives. What does not survive is the word similarly. THIS MATTERS BEYOND THE MOUSE: heterozygous WWOX carriers are the consanguineous parents in every published human family, and they are clinically well. A model in which the heterozygote is 'similar' to the knockout would predict otherwise; a model in which it bursts at a sixth the rate would not.",
+        "snippet": "the spontaneous bursts resulting from WWOX deletion were also observed in heterozygote mice, and manifested similarly as those observed in the knockouts",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Discussion 3.1, second paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I went back to the incidence numbers after this sentence, not before"
+      },
+      {
+        "proposition": "🔴 THE PANNEXIN BLOCKER RAISED BURST FREQUENCY TWO AND A HALF FOLD, AND BOTH THE RESULTS AND THE DISCUSSION DESCRIBE THAT AS AN ABSENCE OF EFFECT. Panel 3D-d1, read at 6x from native pixels after the full-figure view misled me: normalised burst frequency is 1.0 at baseline, ZERO under d-APV, about 0.15 under CBX — carrying the single asterisk, matching the text's 87% decrease — and about 2.55 under BB-FCF, which carries no marker and rises again to about 2.6 at washout. A 2.5-fold point estimate with wide error and no significance test reported is not the same thing as no effect, and the direction is opposite to the one the sentence implies.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3, panel D. Three stacked bar charts d1 (Normalized Frequency, y 0 to 4), d2 (Normalized Duration, y 0 to 1.5) and d3 (Normalized Amplitude, y 0 to 2), sharing one x axis with seven positions labelled Base, dAPV, CBX, BB-FCF under 'treatment' and dAPV, CBX, BB-FCF under 'washout'. In d1 the dAPV treatment position has no bar; heights are approximately Base 1.0, CBX 0.15, BB-FCF 2.55, dAPV-washout 1.85, CBX-washout 0.25, BB-FCF-washout 2.6. A single bracket marked * spans Base to CBX. In d2 a bracket marked ** spans Base to CBX-treatment and a bracket marked * spans Base to CBX-washout. d3 carries no significance marker.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID34634460/PMID34634460_fig3.jpg",
+        "anchor": "Figure 3 panel D, cropped from the native 757x759 JPEG and upscaled 6x; the x-axis mapping was confirmed on a second crop of d3 where the labels sit",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[3]",
+        "contradicts_needle": "had minimal effect on the network excitability",
+        "found_or_sought": "sought — the text's phrase 'not recapitulated' describes an absent suppression and says nothing about direction, so I went to see what direction there was"
+      },
+      {
+        "proposition": "THE DISCUSSION'S OWN WORDING, WHICH IS THE ONE THE PANEL OVERTURNS, AND THE THERAPEUTIC SENTENCE THAT FOLLOWS IT. The paragraph closes by keeping the pannexin option open for earlier development — 'we cannot rule out the possibility that a pannexin 1 blocker could be an anti-epileptic treatment at earlier developmental stages'. That may well be right; the point is that at the stage actually tested the blocker's point estimate went the wrong way, and a reader of the prose alone would not know there was a direction to worry about.",
+        "snippet": "had minimal effect on the network excitability in the Wwox S-KO model",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Discussion 3.4, the carbenoxolone-specificity paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I read the therapeutic paragraph closely because gap junctions are named there as a candidate anti-epileptic target"
+      },
+      {
+        "proposition": "🔴 THE ASTERISK CONVENTION IS INVERTED IN FIGURE 3 AND CORRECT IN FIGURE 6, INSIDE ONE PAPER. Figure 3's caption states 'd2: * p = 0.0036, ** p = 0.0274' — one star on the SMALLER p and two on the larger. The panel agrees with its caption: ** sits on the Base-to-CBX-treatment bracket, which the running text gives as the 18% duration decrease at p = 0.0274, and * on the Base-to-CBX-washout bracket. Figure 6's caption meanwhile reads '* p = 0.04761; ** p = 0.00322' for sag — the ordinary direction. So the same two symbols rank significance one way on one figure and the opposite way on another. A reader who reads ** as 'stronger' inverts the two comparisons in Figure 3D. This is the class of defect this repository already paid for on 2026-08-06, when an unmarked asterisk was the difference between 'not significant' and 'not tested'.",
+        "snippet": "CBX (100 μM) decreased the frequency of the events by 87%",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Results 2.2; read against the caption of Figure 3 panel D and the caption of Figure 6 panel B",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I was matching each printed p-value to its bracket in the panel and the ordering did not come out"
+      },
+      {
+        "proposition": "THE GAP-JUNCTION EFFECT DOES NOT REVERSE, AND THE PAPER SAYS SO — RECORDED BECAUSE IT QUALIFIES THE THERAPEUTIC READING. A blocker whose effect persists through washout is not cleanly pharmacological at that concentration, and the Discussion itself lists two off-target actions for carbenoxolone: NMDA receptor block and pannexin block. The panel agrees: CBX frequency is about 0.25 at washout against 1.0 at baseline, and CBX duration carries a significance marker against baseline AT washout.",
+        "snippet": "This did not return to normal levels after washout",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Results 2.2, immediately after the CBX numbers; verified against panel 3D-d1 and d2 at 6x",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 THE EXCITATORY EFFECT IS SIX PER CENT AND THE INHIBITORY EFFECT IS FIFTY-TWO. Spontaneous excitatory currents: control 23.3 pA against knockout 24.7 pA, with standard deviations of 12.0 and 13.6 — a 1.4 pA separation inside a twelve-point spread. This is the number behind the abstract's leading clause about elevated excitatory amplitude.",
+        "snippet": "S-CTL 23.3 ± 12.0pA; S-KO 24.7 ± 13.6 pA",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Results 2.5, sEPSC amplitudes",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence, and the standard deviations were what sent me to the panel"
+      },
+      {
+        "proposition": "🔴 AND THE OTHER HALF OF THE COMPARISON. Spontaneous inhibitory currents: control 57.3 pA against knockout 27.5 pA — the amplitude is more than halved. Figure 4 makes the asymmetry visible at a glance and settles which finding is load-bearing: in panels B and F-f1 the excitatory cumulative distributions of the three genotypes lie almost on top of one another, while in panel H-h1 the knockout curve is displaced from the control by most of the width of the plot. The abstract lists the excitatory finding first — 'Wwox knockout mice demonstrated elevated amplitude of excitatory post-synaptic currents, whereas the frequency and amplitude of inhibitory post-synaptic currents were reduced'. The Results get it right and say the shift operates 'primarily through an impairment in the amplitude of the inhibitory currents'; the abstract's ordering does not carry that.",
+        "snippet": "S-CTLs 57.3 ± 31.0pA; S-KOs 27.5 ± 19.4 pA",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Results 2.5, sIPSC amplitudes; read against panels 4B, 4F-f1, 4H-h1 and 4H-h2",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — I compared the excitatory and inhibitory panels against each other before trusting either set of numbers"
+      },
+      {
+        "proposition": "THE RESULTS SENTENCE THAT GETS THE EMPHASIS RIGHT, RECORDED SO THE CRITICISM LANDS ON THE ABSTRACT AND NOT ON THE PAPER. This is what the experiment supports and it is stated plainly two hundred words before the Discussion begins. The gap is between the paper's own summary and the paper's own result section, not between the authors and their data.",
+        "snippet": "favors excitation over inhibition, primarily through an impairment in the amplitude of the inhibitory currents",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Results 2.5, final sentence",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 HETEROZYGOTES ARE POOLED INTO THE CONTROL GROUP UNDER A CONDITION THE PAPER NEVER SHOWS FOR THE MEASURES IT POOLS. The rule is declared and it is conditional. But Table 1 marks the heterozygote as significantly different from wild type on FOUR intrinsic properties — action-potential amplitude, input resistance, resting membrane potential and sag — and the S-CTL pooling is nonetheless used for the entire spontaneous-current analysis of Figure 4E-H. The captions report knockout against wild type and knockout against heterozygote separately, but never wild type against heterozygote for those measures, so the stated precondition cannot be checked by a reader. The direction of the resulting bias is conservative — pooling an already-abnormal genotype into the control moves the control toward the knockout and UNDERSTATES the effect — which is why this is a qualification and not a refutation.",
+        "snippet": "Where no significant difference exists between S-HT and S-WT groups, they are occasionally represented as a clustered group (S-CTL) for clarity",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Methods 5.1 Animals, final clause of the genotype paragraph; read against Table 1 and the captions of Figure 4E-H",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I went to the Methods for the definition of S-CTL after noticing the term appears only in the panels where the effect is largest"
+      },
+      {
+        "proposition": "🔴 A PLACEHOLDER SURVIVED INTO THE PUBLISHED FIGURE, IN THE PANEL THAT CARRIES ONE OF THE PAPER'S TWO MAIN CLAIMS. Figure 1B is the hippocampal recording that establishes the neocortex-versus-hippocampus dissociation. Its heterozygote row labels the second channel 'ch?' where every other row in both panels reads ch1 and ch2. Adjudicated at 10x on the native pixels: it is a question mark with its dot, unambiguous against the clean digit 1 directly above it. I could not have called this at the 101 ppi the figure is served at, and did not try to.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1, panel B. Hippocampal local field potentials, three genotype rows WT, HT and KO, each with two channel traces. Channel labels top to bottom: WT 'ch1' and 'ch2'; HT 'ch1' and 'ch?'; KO 'ch1' and 'ch2'. All six traces are flat, with no bursting events in any genotype.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID34634460/PMID34634460_fig1.jpg",
+        "anchor": "Figure 1 panel B, heterozygote row, second channel label; cropped at native resolution and upscaled 10x",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found — inspecting panel B to confirm the hippocampal negative, which the traces do support"
+      },
+      {
+        "proposition": "🔴 THE AXIS THAT DEFINES THE SIGN OF THE LAG IS MISSING ITS MINUS. Figure 2's whole directional claim is that layer II/III leads layer V, and the sign of that lag is read off panel C's expanded cross-correlation. Its x-axis ticks read 100, 0, 100, 200 from left to right — the leftmost must be -100. The same figure prints -0.5 correctly on the y-axis directly beside it, so this is a missing character rather than a style. The claim itself survives, because panel E's boxplots and panel D's histogram both carry the sign independently and agree with the text.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, panel C, lower expanded plot. Y-axis 'Cross correlation' with ticks -0.5, 0, 0.5. X-axis 'time (ms)' with four ticks reading, left to right, 100, 0, 100, 200. A vertical grey line at the 0 tick and a horizontal dashed segment labelled 'lag' running from that line to the peak of the waveform, which sits to the right of zero.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID34634460/PMID34634460_fig2.jpg",
+        "anchor": "Figure 2 panel C, lower plot x-axis; cropped at native resolution and upscaled 8x",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "sought — the tick sequence looked non-monotonic at full-figure scale and that is exactly the case where the resolution rule says crop rather than guess"
+      },
+      {
+        "proposition": "🔴 THE CAPTION OF FIGURE 5 PANEL D SAYS 'NO SIGNIFICANCE' AND THE PANEL PRINTS A SIGNIFICANT RESULT. This is the paper's only positive hippocampal finding and the Results state it correctly. Panel D displays the p-values on its own face: max PS amplitude CA1 to CA3 p = 0.0312 with an asterisk, CA3 to CA1 p = 0.7164; max fEPSP CA1 to CA3 p = 0.9967, CA3 to CA1 p = 0.7917. The caption for that same panel reads 'No significance (* p indicated as significant, unpaired t-test; ...)'. Text and panel agree with each other; the caption between them does not.",
+        "snippet": "there was an elevated PS amplitude in the S-KOs as compared to S-WTs",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Results 2.4; read against panel 5D, which prints its own p-values, and against the caption of Figure 5 panel D",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — I read the caption after the panel, which is the order that makes this visible"
+      },
+      {
+        "proposition": "THE EXEMPLAR TRACES SHOW A DOSE-RESPONSE THE PAPER'S OWN ANALYSIS ATTRIBUTES TO SOMETHING ELSE. Panel 6A shows a pyramidal neuron firing roughly four action potentials in wild type, nine in heterozygote and thirteen in knockout at the same injection — a clean genotype gradient. The analysis then removes it: once the current axis is shifted to rheobase there is no difference in the frequency-current slope, and the paper concludes the hyperexcitability is not action-potential-frequency-dependent but follows from a depolarised resting potential. Both statements are defensible; a reader who takes the exemplars at face value takes away the interpretation the analysis specifically rejects.",
+        "snippet": "there was no significant difference in the slope of the curve in the S-KOs as compared to the S-WTs and S-HTs",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Results 2.6; read against panel 6A",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — the exemplar traces and the conclusion pointed opposite ways and I went back for the shifted-slope analysis"
+      },
+      {
+        "proposition": "THE MECHANISM THE PAPER SETTLES ON, STATED AS ITS OWN NEGATIVE. Recorded because a negative that is load-bearing deserves the same treatment as a positive: the claim is not that knockout neurons fire more readily for a given depolarisation, but that they sit closer to threshold to begin with. Table 1 carries the gradient — resting potential -79.25 mV in wild type, -75.51 in heterozygote, -73.62 in knockout, both mutants marked significant against wild type.",
+        "snippet": "the hyperexcitability of the network was not due to action-potential dependent frequency changes",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Results 2.6, opening of the final paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 INPUT RESISTANCE SATURATES AT ONE ALLELE WHILE THE MEMBRANE POTENTIAL KEEPS GRADING — A DOSE-RESPONSE THAT IS NOT UNIFORM ACROSS PROPERTIES. Table 1, pyramidal neurons: input resistance 102.88 in wild type, 143.26 in heterozygote, 143.03 in knockout — the two mutants are indistinguishable from each other and both differ from wild type. Resting potential and sag instead grade monotonically across all three genotypes (-79.25 / -75.51 / -73.62 mV; 1.18 / 2.04 / 2.57 mV). INFERENZA: one Wwox allele is already insufficient for whatever sets input resistance, while the properties that track dose are the ones the paper ties to hyperexcitability. If it holds, it means a cellular readout can be abnormal in a carrier and still not predict the phenotype — which is a direct constraint on any Tier 1/2 biomarker drawn from intrinsic membrane properties, since human heterozygotes are the healthy consanguineous parents.",
+        "snippet": "the resting membrane potential was depolarized",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Results 2.6, the key-observations sentence; the numbers themselves are in Table 1, rows 'Input resistance (Mohm)', 'Resting membrane potential' and 'Sag (at -200 pA)'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I read Table 1 column by column looking for which properties grade with dose and which do not"
+      },
+      {
+        "proposition": "THE AGE WINDOW IS A LIMIT THE AUTHORS NAME THEMSELVES, AND IT BEARS ON THE ONE THERAPEUTIC SUGGESTION THE PAPER MAKES. Recordings are at postnatal day 13 to 17 in animals that die between three and four weeks. Everything in this paper therefore describes a late stage of the mouse disease, and the pannexin result of entry 2 was measured in that window.",
+        "snippet": "the chosen age group may mimic a late-stage disorder of WWOX",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Discussion 3.4, final sentences",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "THE n THAT EVERY ASTERISK IN FIGURE 5 RESTS ON, RECORDED SO IT TRAVELS WITH THE RESULT. Six slices from five animals against eight slices from four. The cumulative-distribution comparisons elsewhere in the paper report p-values as extreme as 1.8e-100 from fourteen against nine cells; those tests are run over pooled synaptic EVENTS rather than over cells or animals, so the exponent describes the number of events detected and not the number of mice. The effect in panel 4H is large enough on its face that this does not overturn it; the exponents should nonetheless never be quoted as if they were animal-level evidence.",
+        "snippet": "S-WT n = 6 slices, 5 animals; S-KO n = 8 slices, 4 animals",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34634460_Breton2021_PMC.xml",
+        "anchor": "Caption of Figure 5 panel D; the Kolmogorov-Smirnov comparisons are in the captions of Figure 4 panels F and H",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I looked for the unit of replication behind the very small p-values"
+      },
+      {
+        "proposition": "🔴 FIGURE 4 MAKES THE ASYMMETRY VISIBLE WITHOUT A SINGLE NUMBER, WHICH IS WHY IT IS THE ANSWER TO ENTRY 8. Four cumulative-probability panels carry the excitatory comparisons and two the inhibitory. In B (mEPSC amplitude, three genotypes) and F-f1 (sEPSC amplitude, control against knockout) the curves run almost on top of one another and separate by a sliver, each marked with a single asterisk. In H-h1 (sIPSC amplitude) the knockout curve is displaced from the control across most of the width of the plot, marked with two. The frequency panels C and f2 are superimposed. So the panel that the abstract's leading clause rests on is the one where the curves overlap, and the panel where the effect is unmistakable is the one the abstract puts second.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4, panels B, C, D, F and H. B: cumulative probability against Amplitude (pA) from -50 to 0, three near-coincident curves labelled S-WT black, S-HT blue, S-KO red, one asterisk. C: cumulative probability against Frequency (Hz) 0 to 80, three coincident curves. D: the same two axes for three 50-second windows of the knockout recordings, curves coincident. F: f1 amplitude -60 to 0 with S-CTL black and S-KO red nearly coincident and one asterisk, f2 frequency with no marker. H: h1 amplitude -150 to 0 with the S-KO curve displaced far right of S-CTL and two asterisks, h2 frequency 0 to 50 with one asterisk.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID34634460/PMID34634460_fig4.jpg",
+        "anchor": "Figure 4, all eight panels, inspected at the served 708x675 and cropped where a marker had to be read",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — I opened Figure 4 to see whether a 1.4 pA difference could look like a finding, and the inhibitory panel beside it answered a different and better question"
+      },
+      {
+        "proposition": "🔴 FIGURE 5 PANEL D PRINTS ITS OWN p-VALUES AND ITS CAPTION SAYS THERE ARE NONE. The panel carries four numbers on its face. One of them is significant and marked. The caption for that panel reads 'No significance'. Text and panel agree that the CA1-to-CA3 population spike is elevated in the knockout; the caption between them contradicts both, on the paper's only positive hippocampal result.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5, panel D. Two bar charts, S-WT black and S-KO red. Left, 'max PS amplitude (mV)': CA1 to CA3 annotated 'p = 0.0312' with an asterisk, CA3 to CA1 annotated 'p = 0.7164'. Right, 'max fEPSP amplitude (mV)': CA1 to CA3 annotated 'p = 0.9967', CA3 to CA1 annotated 'p = 0.7917'. Panel C shows fEPSP and PS amplitude against stimulus strength 0 to 100 microamps for both pathways, with a bracketed asterisk on the PS panel.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID34634460/PMID34634460_fig5.jpg",
+        "anchor": "Figure 5 panels C and D, inspected at the served 708x412",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found — inspected to close the hippocampal negative, and the printed p-values were more informative than the caption"
+      },
+      {
+        "proposition": "🔴 FIGURE 6 SHOWS A GENOTYPE GRADIENT IN ITS EXEMPLARS THAT ITS OWN ANALYSIS REMOVES — AND USES THE ASTERISK CONVENTION THE OPPOSITE WAY ROUND FROM FIGURE 3. Panel A: at the same current injection the exemplar pyramidal neuron fires roughly four action potentials in wild type, nine in heterozygote and thirteen in knockout, a clean dose-response; the interneuron exemplars look alike across genotypes. The paper's analysis then attributes the hyperexcitability to a depolarised resting potential rather than to intrinsic excitability, because the frequency-current slope does not differ once shifted to rheobase. Panels B and C carry the sag and rebound bars with * on wild-type-versus-heterozygote and ** on wild-type-versus-knockout for sag — two stars on the SMALLER p, which is the ordinary convention and the reverse of Figure 3D-d2. A SUSPICION THAT DID NOT SURVIVE, RECORDED BECAUSE CHECKING IT WAS THE POINT: I thought panel C's rebound axis was truncated above zero, which would have exaggerated the difference. Cropped at 8x, the axis runs 0, 0.5, 1, 1.5, 2, 2.5 from a true zero. It is not truncated.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6. Panel A: five voltage traces to a 500 ms depolarising step, labelled PY - S-WT, PY - S-HT, PY - S-KO, then Interneurons S-WT and S-KO, y-axis Voltage (mV) -100 to 20, x-axis time (s) 0 to about 0.75. Panel B: overlaid averaged sag responses for the three genotypes with an arrow marking 'sag', beside a bar chart S-WT, S-HT, S-KO with brackets marked * and **. Panel C: pre-stimulus and post-stimulus rebound traces with an arrow marking 'R.D.', beside a bar chart S-WT, S-HT, S-KO whose y-axis ticks read 0, 0.5, 1, 1.5, 2, 2.5, with one bracket marked *.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID34634460/PMID34634460_fig6.jpg",
+        "anchor": "Figure 6, all three panels; panel C's bar chart cropped at native resolution and upscaled 8x to check the axis origin",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[13]",
+        "contradicts_needle": "no significant difference in the slope of the curve",
+        "found_or_sought": "sought — the exemplars and the conclusion pointed opposite ways, and the axis suspicion came from the same look"
+      }
+    ],
+    "figure_provenance_note": "PMC's bin path 404s and the OA package is offered only over ftp:// whose https mirror 404s — the same two failures as PMID 32581702, now seen twice, so this is the route's normal behaviour rather than an accident. The figures were recovered by reading the PMC article page and extracting the CDN URLs it embeds (cdn.ncbi.nlm.nih.gov/pmc/blobs/079f/8609180/<opaque>/grN.jpg); the path segment is opaque and cannot be constructed, only read. ScienceDirect returns a bot shell with no figure URLs at all. The six JPEGs are 708-757 px wide, 101-108 effective ppi, which is the largest copy available and a third of what the previous paper's publisher served.",
+    "artifact_note": "All six figures are fingerprinted individually and every figure locator names the file that actually contains its panel. This was first written with one artifact and three locators pointing at it; the defect was caught by re-reading what had just been declared, and fixing it cost less than the paragraph explaining it would have.",
+    "supplementary_gap": "SUPPLEMENTARY DECLARED unavailable WITH ROUTES NAMED. The article carries mmc1.docx holding Supplementary Figures S1-S4 and Supplementary Table S1. The PMC bin path returns HTML rather than the document. This gap is material: Supplementary Figure S1 is the phase-amplitude coupling validation including the surrogate analysis, S3 is the NMDA-receptor-dependent delayed response, and S4 is the frequency-current curve whose slope analysis is the basis of entry 14. Three of this reading's statements therefore rest on the running text where a supplementary panel exists and was not seen."
+  }
+}

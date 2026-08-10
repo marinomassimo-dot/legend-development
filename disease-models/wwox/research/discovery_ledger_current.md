@@ -2308,7 +2308,7 @@ Ho verificato invece di assumere, e il modello **porta già** ogni qualificazion
 | ciò che temevo | ciò che lo stato dice davvero |
 |---|---|
 | che «proteina assente» fosse letta come degradazione | `disease_model.md`: **inversione MAJOR `WM v2.1 → v3.0`** che *ritira* l'equazione `mRNA normale + proteina assente = degradazione post-traduzionale`, citando le due alternative di Johannsen |
-| che il meccanismo fosse dato per risolto | `DL-MECH-034`: *«cause ∈ {impaired_translation, insolubility, premature_degradation} non discriminata»* |
+| che il meccanismo fosse dato per risolto | **`DL-MECH-029`**, il cui titolo stesso è *«Q230P: trascritto normale, **proteina non rilevata**; causa traduttiva versus degradativa non risolta»*, e che porta *«cause ∈ {impaired_translation, insolubility, premature_degradation} non discriminata»* |
 | che «assente» fosse letto come zero | *«"assenza" al Western blot è un limite di sensibilità, non uno zero assoluto»* |
 | che il fibroblasto fosse letto come neurone | *«la stabilità proteica può essere tessuto-specifica (un fibroblasto non è un neurone)»* |
 | che si assumesse funzione dopo ristabilizzazione | *«⚠️ Assunzione critica ancora aperta … Johannsen non lo testa»* |
@@ -2351,6 +2351,26 @@ l'altra**, e l'unico modo di saperlo è la figura che nessuno ha visto.
   spetta a chi possiede il gate): `DIS-003` da `PREMISE: DATO (direct measurement)` a
   **`PREMISE: DATO — abstract-only, primary source never retrieved`**, con il rifiuto che
   *resta valido* e la sua etichetta che smette di affermare un atto non avvenuto.
+
+- 🔴 **`REVIVAL_TRIGGER` proposto per `DIS-003`, che oggi non ne dichiara uno sul meccanismo:**
+  > *«Un western che discrimini traduzione da degradazione su fibroblasti Q230P — pulse-labeling
+  > della sintesi nascente, o inibizione del proteasoma/lisosoma con recupero del segnale —
+  > riapre `DIS-003`. Se il collo di bottiglia è la sintesi, "boosting expression" non è
+  > rifiutato dalla stessa ragione con cui è rifiutato oggi.»*
+
+  Il rifiuto attuale poggia su *«il collo di bottiglia è a valle»*: vero, ma **copre due
+  meccanismi con conseguenze terapeutiche opposte.** Può essere giusto per uno e sbagliato per
+  l'altro, e finché il trigger non lo nomina la distinzione non ha modo di risvegliarlo.
+  L'attuale `REVIVAL_TRIGGER` di `DIS-003` riguarda solo il caso composto-eterozigote, cioè la
+  *generalizzabilità* del dato, non il **meccanismo** che il dato lascia aperto.
+
+- **Nota di attribuzione, corretta due volte in dieci minuti e vale la pena registrarlo.** Avevo
+  scritto che la disgiunzione stava su `DL-MECH-034`: sbagliato, quella è il Warburg negli
+  organoidi. L'Orchestratore ha corretto in `CLAIM 019`: **sbagliato anche quello.** È
+  **`DL-MECH-029`**, il cui titolo *enuncia* la disgiunzione. Due attori hanno sbagliato lo
+  stesso puntatore in direzioni diverse, e solo il terzo controllo — `awk` sull'intestazione che
+  precede la riga — ha dato la risposta. *Citare un identificatore a memoria è la stessa classe
+  di errore del locator non verificato, applicata alla nostra stessa scrittura.*
 
 ---
 

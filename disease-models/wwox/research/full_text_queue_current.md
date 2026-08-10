@@ -1483,9 +1483,64 @@ abstract è stata qualificata meglio di molte importate da letture complete.**
 nessuno qui ha visto. Dettaglio completo e riclassificazione proposta (non applicata) in
 `DL-META-091`, correzione append-only.
 
-**Il recupero a più alto rendimento di questa coda.** Chi ha accesso Springer prenda il PDF e
+**Il recupero a più alto rendimento di questa coda** *(vedi anche `FT-058`)*. Chi ha accesso Springer prenda il PDF e
 guardi **il western**: quante corsie, quale controllo di caricamento, quale esposizione, se il
 segnale è assente o sotto soglia, e se la qRT-PCR è su un solo amplicone. Dalla risposta dipende
 se il collo di bottiglia sia **traduzione** o **degradazione** — e se fosse traduzione, *non c'è
 niente da stabilizzare*, cioè la traccia proteostasi indirizzerebbe uno solo dei due rami che
 l'autore stesso lascia aperti.
+
+---
+
+## FT-058 — Breton 2021, elettrofisiologia della neocorteccia: ✅ LETTO, e la ricevuta del 26 luglio non era una lettura
+
+**Paper:** PMID 34634460 / DOI 10.1016/j.nbd.2021.105529 — Breton et al. 2021, *Neurobiol Dis*
+160:105529 ([[paper_registry_current#PAPER 031]])
+**Title:** Altered neocortical oscillations and cellular excitability in an in vitro Wwox
+knockout mouse model of epileptic encephalopathy
+**Surface:** `structured` · PMCID `PMC8609180`, JATS XML, CC BY ·
+`PMID34634460_Breton2021_PMC.xml` · sei figure in `files/figures/PMID34634460/`
+**Priority:** **ALTA** — è la fonte di `CLAIM 021` e l'unico strato cellulare fra il gene e la
+fenomenologia epilettica.
+
+**Current status:** ✅ **LETTO INTEGRALMENTE il 2026-08-10** — receipt `FTR-20260810-34634460-02`,
+`complete_fulltext_read`; manifest `PMID34634460.json`, **21 locator**, `MANIFEST STRICT PASS`
+sotto entrambi i validatori. Copertura pannelli **29/29**, budget dichiarato prima.
+
+### 🔴 La ricevuta precedente diceva `partial_fulltext_read`. Non era una lettura parziale
+
+`FTR-20260726-34634460-01` ha `source_locator` che punta al **paper registry**, non a un
+documento; **nessuna impronta**; tutti e nove gli slot di copertura a `unknown_legacy`. La sua
+base dichiara: *«PAPER 031 declares Evidence depth: full text verificato
+(`files/fulltext/PMID34634460_Breton2021.md`, PMC MCP)»* — l'autorità viene da un **markdown
+prodotto da un convertitore ML**, cioè la classe di superficie che la regola 5c vieta come
+artefatto dietro un locator, e quel file oggi non è su disco.
+
+🔴 **Leggere la ricevuta prima del documento è ciò che l'ha fatto emergere.** «Parziale dal 26
+luglio» si legge come una lettura che si è fermata; era una ricostruzione che non era mai
+cominciata. `reread_reason: inadequate_prior_coverage` — non c'era copertura da giudicare.
+
+### Cosa hanno dato i 29 pannelli
+
+| reperto | dove |
+|---|---|
+| 🔴 il bloccante della pannessina **alza la frequenza dei burst ~2,5×**; Results dice *«not recapitulated»*, Discussione *«minimal effect»* | entries[2], [3] |
+| 🔴 convenzione degli asterischi **invertita in Fig 3** (`*`=0.0036, `**`=0.0274) e ordinaria in Fig 6 — stesso paper | entries[4], [20] |
+| 🔴 effetto eccitatorio **+6%** (23,3→24,7 pA) contro inibitorio **−52%** (57,3→27,5); l'abstract li elenca al contrario | entries[6], [7], [18] |
+| 🔴 eterozigoti al **17%** delle slice contro **86%**; la Discussione dice *«manifested similarly»* | entries[0], [1] |
+| 🔴 `ch?` — segnaposto pubblicato, nel pannello della dissociazione ippocampo/neocorteccia | entries[10] |
+| 🔴 asse di Fig 2C: `100, 0, 100, 200` — manca il meno, ed è il pannello che definisce il **segno del lag** | entries[11] |
+| 🔴 didascalia di Fig 5D dice *«No significance»*, il pannello stampa `p = 0.0312` con asterisco | entries[19] |
+| resistenza d'ingresso **satura a un allele** (143,26 HT vs 143,03 KO) mentre RMP e sag graduano | entries[15] |
+
+**A 101 ppi ho letto male il pannello 3D e il ritaglio l'ha corretto** — avevo attribuito al CBX
+un aumento di frequenza che è l'opposto del risultato. Le figure sono servite a un terzo dei ppi
+del paper precedente; sei pannelli ritagliati a risoluzione nativa e ingranditi 6×–10×.
+
+**Supplementari:** `unavailable` — `mmc1.docx` non recuperabile dalla rotta PMC. Pesa: `S4` è la
+curva frequenza-corrente su cui poggia il negativo centrale del paper.
+
+**Debito generato:** una sola referenza gene-diretta né letta né in coda — **`PMID 26499798`**,
+Abu-Remaileh 2015, *Pleiotropic functions of tumor suppressor WWOX*, JBC. Che sia una e non nove
+è la misura di `FT-057`: novanta minuti prima aveva già assorbito Mignot 2015 e Piard 2018, che
+anche questo paper cita.

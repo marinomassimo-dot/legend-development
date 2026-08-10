@@ -174,8 +174,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 69
-fulltext_ledger_head: 530a6e9af289ca71c49b1ba683727e63bb3feee8eb122b6b82effd8f95d3a462
+fulltext_ledger_events: 70
+fulltext_ledger_head: c0a19c4ef9be8e67710c2c7ab3d7fb79691f06a0ad8a04b4c9437d421a9dd308
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -197,8 +197,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 6
-growth_anchor_head: 50396c01546461838d6244fb62efafb4c80290d18fce98eb7c0c1799c9b2238a
+growth_anchor_events: 7
+growth_anchor_head: bf6b09891e9aec1ad445caabf7be5fa5134a93da18c73b7d60bd8fd03d9ea8fa
 ```
 
 ```bash
@@ -225,8 +225,8 @@ must be backed by a persisted `complete_fulltext_read` receipt, or `LINT_AUTOMAT
 `BLOCK_BATCH_COMMIT`.
 
 ```yaml
-registry_only_fulltext_declarations_baseline: 18
-registry_only_fulltext_declaration_ids: ["PAPER 010", "PAPER 011", "PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 031", "PAPER 032", "PAPER 039", "PAPER 040", "PAPER 042", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050", "PAPER 053"]
+registry_only_fulltext_declarations_baseline: 17
+registry_only_fulltext_declaration_ids: ["PAPER 010", "PAPER 011", "PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 032", "PAPER 039", "PAPER 040", "PAPER 042", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050", "PAPER 053"]
 ```
 
 Lowering the baseline is the intended direction of travel: back-fill a record with real
