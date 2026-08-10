@@ -1099,8 +1099,14 @@ promossa — `batch_commit_gate` è chiuso.
 
 ---
 
-## FT-046 — Supplementary di PMID 38182577: il debito che tiene la lettura a `partial`
-**Paper:** Akkawi 2024 — *WWOX promotes osteosarcoma development via upregulation of Myc*
+## FT-050 — Supplementary di PMID 38182577: il debito che tiene la lettura a `partial`
+*(🔴 **Rinumerata da FT-046 il 2026-08-10.** Aperta su `lettore-b` con un ID che `main` aveva
+già assegnato a un'altra voce: due rami hanno preso lo stesso numero libero perché entrambi
+avevano contato, non letto, la coda. Il receipt `FTR-20260810-38182577-02`, già nel ledger a
+catena hash, cita questa voce come **FT-046**: il ledger non si riscrive, quindi il collegamento
+è dichiarato qui.)*
+**Paper:** PMID 38182577 / DOI 10.1038/s41419-023-06378-8 — Akkawi 2024 — *WWOX promotes
+osteosarcoma development via upregulation of Myc*
 (⚠️ titolo invertito rispetto al proprio contenuto — vedi `DL-METH-079`).
 **Priority:** MEDIUM-HIGH
 **Artefatto:** già in locale e fingerprintato —
@@ -1120,15 +1126,18 @@ profondità completa con `reread_reason: inadequate_prior_coverage`.~~ **Fatto.*
 
 ---
 
-## FT-047 — Supplementari di PMID 38499540, e la lezione applicata invece che ripetuta
-**Paper:** Bidany-Mizrahi 2024 — *Unveiling the relationship between WWOX and BRCA1…*
+## FT-051 — Supplementari di PMID 38499540, e la lezione applicata invece che ripetuta
+*(Rinumerata da FT-047 il 2026-08-10, stessa collisione di `FT-050`. Il receipt
+`FTR-20260810-38499540-01` la cita come **FT-047**.)*
+**Paper:** PMID 38499540 / DOI 10.1038/s41420-024-01878-8 — Bidany-Mizrahi 2024 — *Unveiling
+the relationship between WWOX and BRCA1…*
 (⚠️ tre didascalie su sei invertite rispetto ai propri pannelli — vedi `DL-METH-081`).
 **Priority:** MEDIUM
 **Da recuperare:** `MOESM1-4` (tre `.pptx`, un `.docx`) — **non ancora scaricati**.
 **Perché è debito dichiarato e non una svista:** `Supplementary Fig. 1` è citata nel corpo per
 il confronto foci tumore-contro-normale, e non è stata adjudicata. La lettura è quindi
 `partial_fulltext_read` (`FTR-20260810-38499540-01`) **per dichiarazione, non per omissione** —
-la stessa forma che oggi, su `FT-046`, ha corretto due mie coppie di contraddizione. Registrarlo
+la stessa forma che oggi, su `FT-050`, ha corretto due mie coppie di contraddizione. Registrarlo
 subito costa una riga; scoprirlo dopo costa la lettura due volte.
 **Next action:** recuperare i quattro supplementari, adjudicare S1, ri-registrare a profondità
 completa con `reread_reason: inadequate_prior_coverage`.
@@ -1136,8 +1145,10 @@ completa con `reread_reason: inadequate_prior_coverage`.
 
 ---
 
-## FT-048 — PMID 25331887, la fonte in vitro su cui poggia la direzione in vivo di 38499540
-**Paper:** Abu-Odeh 2014 *PNAS* — *WWOX regulates ATM activation and the DNA damage response*
+## FT-052 — PMID 25331887, la fonte in vitro su cui poggia la direzione in vivo di 38499540
+*(Rinumerata da FT-048 il 2026-08-10, stessa collisione di `FT-050`.)*
+**Paper:** PMID 25331887 / DOI 10.1073/pnas.1409753111 — Abu-Odeh 2014 *PNAS* — *WWOX regulates
+ATM activation and the DNA damage response*
 **Priority:** HIGH
 **Perché:** 38499540 conclude che i suoi risultati in vivo *«correspond with previous in vitro
 findings»* citando questo lavoro. La direzione WWOX→NHEJ nel modello murino è quindi ancorata a

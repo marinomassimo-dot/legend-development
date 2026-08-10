@@ -125,7 +125,7 @@
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "PMCID PMC10770339, JATS XML served by PMC, CC BY, in the PMC open-access subset. The OA package FTP path advertised by oa.fcgi returned HTTP 404 over the HTTPS mirror. Figures were obtained at original resolution (1835-1975 px wide) from the Springer Nature static CDN as PNG; the XML declares the same figures as .jpg, and requesting .jpg yielded seven byte-identical 4 KB HTML error pages. The distinct-digest check caught that before any of them could be declared a figure. The Europe PMC supplementaryFiles endpoint additionally delivered both supplements and a 790 px display copy of each figure, which was discarded in favour of the originals.",
   "abstract_anchoring_waived": "No locator is abstract-anchored. The abstract is used once, as the OBJECT of a locator rather than as its evidence: it is quoted nowhere, but its agreement with the body is the fact that isolates the title as the sole inverted surface.",
-  "panel_text_relation_note": "Every entry carries panel_text_relation. The five contradictions are one-directional: the figure entry carries text_contradicted_by_panel plus contradicts: entries[N] pointing at the text locator it overturns, and that text locator is an ordinary text_only entry. The single confirmation carries text_confirmed_by_panel on the figure side. NOTE FOR THE SPEC: a pointer field is defined for contradiction but not for confirmation, so the link between a confirming panel and the sentence it confirms is currently expressed only in the propositions. No field was coined for it here.",
+  "panel_text_relation_note": "Every entry carries panel_text_relation. The five contradictions are one-directional: the figure entry carries text_contradicted_by_panel plus contradicts: entries[N] pointing at the text locator it overturns, and that text locator is an ordinary text_only entry. The single confirmation carries text_confirmed_by_panel on the figure side. NOTE FOR THE SPEC: a pointer field is defined for contradiction but not for confirmation, so the link between a confirming panel and the sentence it confirms is currently expressed only in the propositions. No field was coined for it here. RETROFIT 2026-08-10, citation audit — the count above is now wrong and is left standing so the change is visible: FOUR pairs remained after the supplement pass, and the audit leaves TWO. Every contradicted sentence now carries the author's own figure citation inside its snippet, and every paired panel entry carries a cited_panel_check saying whether the panel it reads is the panel the sentence cites. 7C and S5F pass. 6G and 6C do not: the sentences cite 6D and 6A-B. Those two are DOWNGRADED to panel_qualifies_text with a qualifies pointer, not re-pointed — re-pointing would have made the pairs look sound and erased the mismatch, which is itself a finding. panel_qualifies_text and qualifies are coined here ahead of the spec, on the same footing as panel_text_relation before the validator required it; the pointer grammar and the needle rule are inherited unchanged. The rule the audit encodes: a pair is a contradiction only when the falsifying panel is the panel the sentence itself cites — otherwise the reader chose the panel, and a reader-chosen panel can qualify a claim but cannot make the paper contradict itself.",
   "entries": [
    {
     "proposition": "THE HEADLINE FINDING, AND IT IS NOT BIOLOGY. The paper's own body states the direction plainly: WWOX loss RAISES Myc. This is the same direction measured in liver by PMID 29724996. There is no cross-tissue conflict.",
@@ -144,44 +144,46 @@
     "panel_text_relation": "text_confirmed_by_panel"
    },
    {
-    "proposition": "PAIR, BODY SIDE. The text calls the WWOX add-back a restoration and its effect on Myc a significant reduction.",
-    "snippet": "significant reduction in Myc levels upon WWOX restoration",
+    "proposition": "QUALIFIED PAIR, BODY SIDE. The text calls the WWOX add-back a restoration and its effect on Myc a significant reduction, and cites Fig 6D for it. Fig 6D contains no WWOX re-expression arm at all — see entries[28] for its own caption and entries[29] for its panels — so the citation does not point at the experiment the sentence reports.",
+    "snippet": "significant reduction in Myc levels upon WWOX restoration (Fig. 6D )",
     "surface": "body",
     "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
     "anchor": "Results, 'WWOX loss results in Myc alteration in yBM cells', ChIP-Seq paragraph",
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "PAIR, PANEL SIDE. It is not a restoration. The blot's own quantification puts WWOX at 9x the SKO baseline, and the Myc level it produces is 0.4, well BELOW the baseline of 1. A supraphysiological dose that overshoots the reference cannot establish what physiological WWOX sets Myc to. The panel also carries no replicates and no error, while the text calls the reduction significant.",
+    "proposition": "QUALIFIED PAIR, PANEL SIDE — DOWNGRADED FROM CONTRADICTION 2026-08-10. Fig 6G is the only panel in the article that carries a WWOX overexpression lane, so it is where the sentence's experiment actually lives; but it is NOT the panel the sentence cites, and a panel the sentence does not cite cannot be that sentence's own evidence turning against it. What it can do is qualify: the blot's quantification puts WWOX at 9x the SKO baseline while the Myc level it produces is 0.4, well BELOW the baseline of 1, so a supraphysiological dose that overshoots the reference cannot establish what physiological WWOX sets Myc to; and the panel carries no replicates and no error while the text calls the reduction significant. Both remain true. What changes is the strength of the claim: this is a qualification plus a mis-citation, not a self-falsification.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6G lane quantifications, printed under the bands: WWOX 1 (SKO-yBM parental), 0.05 (DKO-yBM parental), 9 (DKO-yBM OE); c-Myc 1, 1.4, 0.4 across the same three lanes. No n, no error bars and no significance marks appear anywhere in the panel.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig6_HTML.png",
     "anchor": "Figure 6, panel G, lane quantification numbers read at original resolution",
-    "panel_text_relation": "text_contradicted_by_panel",
-    "contradicts": "entries[2]",
-    "needle": "reduction in Myc levels upon WWOX restoration"
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[2]",
+    "needle": "reduction in Myc levels upon WWOX restoration",
+    "cited_panel_check": "MISMATCH. The sentence cites (Fig. 6D ); this locator reads Fig 6G. Reclassified rather than re-pointed: re-pointing would have hidden the mismatch, and the mismatch is itself the finding. FIELD COINED AHEAD OF THE SPEC: panel_qualifies_text and its pointer qualifies are emitted here for the first time, on the same basis panel_text_relation was emitted before the validator required it. The pointer grammar and the needle rule are unchanged from contradicts."
    },
    {
-    "proposition": "PAIR, BODY SIDE. The text describes Myc as lowly expressed in the p53-only knockout, which is what makes the Myc programme 'unique' to the double knockout.",
-    "snippet": "We found low expression of Myc and its targets in SKO yBM",
+    "proposition": "QUALIFIED PAIR, BODY SIDE — AND A CORRECTION OF THIS MANIFEST'S OWN QUOTING. The text describes Myc as lowly expressed in the p53-only knockout, which is what makes the Myc programme 'unique' to the double knockout. The first version of this locator stopped the quote at 'in SKO yBM' and so removed the author's own comparator, 'as compared to those in DKO cells'. With the comparator restored the sentence is RELATIVE and it is true; clipping it made it look absolute, and the pair that rested on the clipped form was my construction rather than the paper's error. The snippet now runs to the citation the passage gives, (Fig. 6A, B ).",
+    "snippet": "low expression of Myc and its targets in SKO yBM as compared to those in DKO cells. In fact, the Myc target pathway was unique to yBM DKO cells (Fig. 6A, B )",
     "surface": "body",
     "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
     "anchor": "Results, 'WWOX loss results in Myc alteration in yBM cells', opening sentence",
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "PAIR, PANEL SIDE. Against the true control, SKO Myc is not low: it is 2.6-fold up and significant. The double knockout adds on top of that rather than creating the programme. 'Unique to DKO' holds for the pathway-enrichment comparison against SKO, not for the level of Myc itself.",
+    "proposition": "QUALIFIED PAIR, PANEL SIDE — DOWNGRADED FROM CONTRADICTION 2026-08-10. Two reasons, and either alone is sufficient. First, the sentence cites Fig 6A, B — the Venn and the pathway bar graph — while this locator reads Fig 6C, which the NEXT sentence cites for a different proposition. Second, with the author's comparator restored the sentence claims low expression relative to DKO, which Fig 6C confirms rather than denies. What survives is a qualification, and it is worth keeping: against the true Control, SKO Myc is not low in absolute terms — it is 2.6-fold up and significant — so the double knockout adds to a programme already running rather than creating it. 'Unique to DKO' holds for the pathway-enrichment comparison against SKO, not for the level of Myc itself.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6C, Myc panel: Control 1.0, yBM-SKO ~2.6 marked ** against Control, yBM-DKO ~4.15 marked *** against Control and * against SKO. In the adjacent Mcm7 panel the Control-to-SKO comparison is marked ns.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig6_HTML.png",
     "anchor": "Figure 6, panel C, Myc and Mcm7 bar charts with their significance brackets, read at original resolution",
-    "panel_text_relation": "text_contradicted_by_panel",
-    "contradicts": "entries[4]",
-    "needle": "low expression of Myc and its targets in SKO yBM"
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[4]",
+    "needle": "low expression of Myc and its targets in SKO yBM",
+    "cited_panel_check": "MISMATCH. The sentence cites (Fig. 6A, B ); this locator reads Fig 6C. 6C is cited in the same paragraph, but by the following sentence and for a different assertion — proximity in a paragraph is not a citation."
    },
    {
     "proposition": "PAIR, BODY SIDE. The selectivity claim that makes simvastatin look like a targeted option: the drug spares normal bone marrow.",
-    "snippet": "did not affect control BM cells",
+    "snippet": "did not affect control BM cells (Fig. 7C )",
     "surface": "body",
     "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
     "anchor": "Results, 'MCM7 upregulation in DKO yBM cells contributes to their tumorigenic ability', simvastatin dose-response sentence",
@@ -195,7 +197,8 @@
     "anchor": "Figure 7, panel C, control curve endpoint read at original resolution 1975 px wide",
     "panel_text_relation": "text_contradicted_by_panel",
     "contradicts": "entries[6]",
-    "needle": "did not affect control BM cells"
+    "needle": "did not affect control BM cells",
+    "cited_panel_check": "PASS. The sentence cites (Fig. 7C ) and this locator reads Fig 7C. Cited panel and falsifying panel are the same, so the selectivity claim is overturned by its own evidence. This is one of the two pairs in this manifest that survived the 2026-08-10 citation audit unchanged."
    },
    {
     "proposition": "The text reports the double knockout as roughly half-penetrant for tumour formation, against a p53-only arm that forms none. Verified against the panel it actually cites, Fig S5B: 0/13 versus 11/21 (52.4%). The sentence is accurate; it was my earlier pairing to Fig 4D that was not.",
@@ -311,7 +314,7 @@
    },
    {
     "proposition": "SUPPLEMENT PAIR, BODY SIDE. The text reports both Myc AND MCM7 as higher in the double knockout, citing Fig S5F. MCM7 is the whole basis of the simvastatin arm, so the protein-level claim matters.",
-    "snippet": "We further detected a higher level of Myc and MCM7 in DKO yBM cells relative to that in SKO yBM cells",
+    "snippet": "higher level of Myc and MCM7 in DKO yBM cells relative to that in SKO yBM cells (Fig. S5F )",
     "surface": "body",
     "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
     "anchor": "Results, 'MCM7 upregulation in DKO yBM cells contributes to their tumorigenic ability', sentence citing Fig S5F",
@@ -325,7 +328,8 @@
     "anchor": "Supplementary Figure 5, panel F, lane quantifications read from the source PDF page 8 rendered at 220 dpi",
     "panel_text_relation": "text_contradicted_by_panel",
     "contradicts": "entries[22]",
-    "needle": "higher level of Myc and MCM7 in DKO yBM cells"
+    "needle": "higher level of Myc and MCM7 in DKO yBM cells",
+    "cited_panel_check": "PASS. The sentence cites (Fig. S5F ) and this locator reads Supplementary Figure 5, panel F, rendered from the supplement PDF. Cited panel and falsifying panel are the same. The second of the two pairs that survived the 2026-08-10 audit — and the stronger of the two, because the failing protein is MCM7, the target the whole simvastatin arm is built on."
    },
    {
     "proposition": "A third value for the same comparison. c-Myc protein in DKO versus SKO young marrow is about 2.1-2.5 against 1-1.2 in Fig S5F, but 1.4 against 1 in Fig 6G of the main article, while the transcript in Fig 6D is 4.7-fold. Three panels, three magnitudes, no reconciliation anywhere in the text.",
@@ -357,6 +361,22 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/supplement_pages/S1_p4_220dpi.png",
     "anchor": "Supplementary Figure 1, panel C, read from the source PDF page 4 rendered at 220 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "ADDED 2026-08-10 TO EVIDENCE THE MIS-CITATION ITSELF. The caption of the panel cited for the WWOX re-expression result describes two genotypes and no re-expression arm. The article's own legend is therefore sufficient, without opening the image, to establish that entries[2] cites a panel that cannot carry its claim.",
+    "snippet": "D mRNA levels of Myc target genes in DKO and SKO yBM cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
+    "anchor": "Figure 6 caption, item D. Declared surface body, not figure: this is authored prose that the JATS carries inside the body container and it is verified character-for-character against the artifact. Labelling a caption quote 'figure' would exempt it from that check — the silent exemption found on PMID30290271 entries[8] and reproduced by me on PMID38499540 before the validator refused it.",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Panel-side confirmation of the same mis-citation, read from the pixels rather than from the legend. Fig 6D has two bars per gene and no overexpression arm anywhere in it, and its c-Myc bar moves in the direction OPPOSITE to the sentence that cites it: 4.7-fold UP in the double knockout, where the sentence reports a reduction. The panel that does carry a WWOX OE lane is 6G, which the sentence does not cite. Recorded as panel_only because the observation is not a rebuttal of what the panel shows — the panel is fine — but of the pointer aimed at it.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6D, five bar charts (c-Myc, MCM7, Supv3l1, Mrto4, Cad), each with exactly two categories on the x-axis, labelled SKO-yBM and DKO-yBM. No third bar, no EV/OE labelling and no WWOX axis appear in the panel. The c-Myc chart reads SKO-yBM 1.0 against DKO-yBM ~4.7, marked ****.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig6_HTML.png",
+    "anchor": "Figure 6, panel D, x-axis category labels and c-Myc bar heights read at original resolution 1956 px wide",
     "panel_text_relation": "panel_only"
    }
   ],

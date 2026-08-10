@@ -107,7 +107,7 @@
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "PMCID PMC5940843, JATS XML served by PMC. NOT in the PMC open-access subset: oa.fcgi returns idIsNotOpenAccess, so the OA package is unavailable and the seven figures plus the supplementary PDF were fetched from the Springer Nature static CDN instead. All artifacts are fingerprinted above. The seven figure digests were checked to be distinct, because an earlier attempt in this session silently produced seven byte-identical files that were an HTML error page rather than images.",
   "abstract_anchoring_waived": "No locator is abstract-anchored and none could be. The abstract states only that WWOX loss accelerates HCC through HIF1alpha; it contains none of the timing, none of the gene-panel asymmetry and none of the panel disagreements this reading turns on.",
-  "panel_text_relation_note": "Every entry carries panel_text_relation. Six findings are contradictions, and in each the assertion that another locator is false is made by the PANEL: the figure entry carries text_contradicted_by_panel plus contradicts: entries[N], and the sentence it overturns is an ordinary text_only locator. This manifest was first written with the marker on both members and a symmetric evidence_pair key; that was wrong on both counts — the claim is one-directional, and entries[N] is the indexing grammar adjudications.json already uses, so it should have been reused rather than coined.",
+  "panel_text_relation_note": "Every entry carries panel_text_relation. Six findings are contradictions, and in each the assertion that another locator is false is made by the PANEL: the figure entry carries text_contradicted_by_panel plus contradicts: entries[N], and the sentence it overturns is an ordinary text_only locator. This manifest was first written with the marker on both members and a symmetric evidence_pair key; that was wrong on both counts — the claim is one-directional, and entries[N] is the indexing grammar adjudications.json already uses, so it should have been reused rather than coined. RETROFIT 2026-08-10, citation audit: every contradicted sentence now carries the author's own figure citation inside its snippet, and every panel entry carries a needle drawn from that snippet plus a cited_panel_check stating whether the panel it reads is the panel the sentence cites. Five of six pairs pass — 2e, 4a-b, 3f, 5d-f, 7d are each cited by the sentence they falsify. The sixth does not: 'it continued rising' names no figure, and its citation is inherited from the sentence before it. That inheritance is now declared on both members instead of being invisible. Nothing was re-pointed to make a pair work; the one weak pair is labelled weak and kept.",
   "entries": [
    {
     "proposition": "The central positive result: hepatocyte-specific Wwox deletion raises HIF1alpha occupancy on its own glycolytic target promoters. This is the third side of the hepatic triangle and it holds.",
@@ -127,7 +127,7 @@
    },
    {
     "proposition": "PAIR 1, BODY SIDE. The text claims tumour load was measured relative to body weight.",
-    "snippet": "tumor load, as assessed by liver weight relative to body weight, was significantly higher",
+    "snippet": "tumor load, as assessed by liver weight relative to body weight, was significantly higher in Wwox ΔHep mice as compared with control mice (Fig. 2e )",
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Hepatocyte-specific WWOX ablation accelerates HCC development'",
@@ -135,6 +135,8 @@
    },
    {
     "contradicts": "entries[2]",
+    "needle": "liver weight relative to body weight",
+    "cited_panel_check": "The sentence cites (Fig. 2e ) and this locator reads Fig 2E. Cited panel and falsifying panel are the same, so the contradiction is between the sentence and its own evidence.",
     "proposition": "PAIR 1, PANEL SIDE. Fig 2E plots absolute grams, not a body-weight ratio. Without normalisation the measurement cannot separate tumour burden from a larger animal.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2E y-axis reads 'Liver Weight (g)', scale 0 to 4; Control ~1.53 g, cKO ~3.45 g, marked ***. No body-weight normalisation appears anywhere in the panel.",
     "surface": "figure",
@@ -144,7 +146,7 @@
    },
    {
     "proposition": "PAIR 2, BODY SIDE. The text asserts the glycolytic targets did not change at the early timepoints — an assertion of measured absence.",
-    "snippet": "demonstrated no change at 1 and 3-months post treatment",
+    "snippet": "demonstrated no change at 1 and 3-months post treatment (Fig. 4a, b )",
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Enhanced expression of glycolytic genes in livers of DEN-WwoxDeltaHep mice', first paragraph",
@@ -152,6 +154,8 @@
    },
    {
     "contradicts": "entries[4]",
+    "needle": "no change at 1 and 3-months post treatment",
+    "cited_panel_check": "The sentence cites (Fig. 4a, b ) and the falsifying observation is read in those two panels: they plot five genes. Fig 4C is read only to enumerate the eight genes of the later timepoint, which is what makes four of them untested early; the next sentence of the paper cites 4c, d for that panel.",
     "proposition": "PAIR 2, PANEL SIDE. The early and late gene panels are not the same panel. Four genes were never measured at 1 and 3 months, so for those four 'no change' is not a negative result — it is an untested condition. This is the not-significant versus not-tested distinction.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4A (1 Month) and 4B (3 Months) each plot exactly five genes: HK2, GLUT1, PKM2, LDHA1, GAPDH. Fig 4C (6 Months) plots eight: HK2, GLUT1, PKM2, LDHA1, PDK1, ENO1, ALDOA2, PGK1. PDK1, ENO1, ALDOA2 and PGK1 appear in no early panel.",
     "surface": "figure",
@@ -161,7 +165,7 @@
    },
    {
     "proposition": "PAIR 3, BODY SIDE. The text puts all four proliferation genes, Axin included, up from one month.",
-    "snippet": "display higher levels in the Wwox ΔHep mouse groups from as early as 1-month post DEN treatment",
+    "snippet": "display higher levels in the Wwox ΔHep mouse groups from as early as 1-month post DEN treatment (Fig. 3f )",
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Hepatocyte-specific WWOX ablation is associated with increased proliferation'",
@@ -169,6 +173,8 @@
    },
    {
     "contradicts": "entries[6]",
+    "needle": "from as early as 1-month post DEN treatment",
+    "cited_panel_check": "The sentence cites (Fig. 3f ) and this locator reads Fig 3F. Same panel.",
     "proposition": "PAIR 3, PANEL SIDE. AXIN2 is not raised at 1 month — it is marginally lower in cKO and carries no significance mark, reaching significance only at 6 months. c-Jun also fails significance at 3 and 6 months, so the continual pattern the Discussion asserts holds for MYC alone.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3F, 1M block: MYC *, JUN *, FOS *, AXIN2 unmarked with cKO ~0.89 against Control ~0.87. 3M block: MYC *, FOS *, JUN and AXIN2 unmarked. 6M block: MYC *, FOS *, AXIN2 *, JUN unmarked. The panel labels read AXIN2, not Axin.",
     "surface": "figure",
@@ -178,7 +184,7 @@
    },
    {
     "proposition": "PAIR 4, BODY SIDE. The therapeutic claim: digoxin downregulates the HIF1alpha targets in the knockout.",
-    "snippet": "showed downregulations of HIF1α targets, whereas no significant changes were observed",
+    "snippet": "showed downregulations of HIF1α targets, whereas no significant changes were observed in digoxin-treated DEN control mice (Fig. 5d, f )",
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Inhibition of HIF1alpha rescued the effect of WWOX loss'",
@@ -186,6 +192,8 @@
    },
    {
     "contradicts": "entries[8]",
+    "needle": "showed downregulations of HIF1α targets",
+    "cited_panel_check": "The sentence cites (Fig. 5d, f ) and this locator reads Fig 5D and 5F. Same panels.",
     "proposition": "PAIR 4, PANEL SIDE. Three of four targets fall under digoxin; PDK1 RISES and carries no significance mark, in the knockout and again in wild-type. The rescue is not uniform across the targets it is claimed for.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 5D: LDHA1 falls ~0.72 to ~0.36 (*), GLUT1 ~0.67 to ~0.26 (*), GAPDH ~1.05 to ~0.57 (**), PDK1 RISES ~1.50 to ~1.92 and is unmarked. Fig 5F repeats the PDK1 rise in WT saline versus WT digoxin.",
     "surface": "figure",
@@ -195,7 +203,7 @@
    },
    {
     "proposition": "PAIR 5, BODY SIDE. The text places the c-Myc elevation after hepatectomy on days 2, 3 and 4.",
-    "snippet": "displayed higher levels in Wwox ΔHep mice group on day 2, 3, and 4 as compared with control mice",
+    "snippet": "displayed higher levels in Wwox ΔHep mice group on day 2, 3, and 4 as compared with control mice (Fig. 7d )",
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Wwox ablation is associated with increased proliferation upon partial hepatectomy'",
@@ -203,6 +211,8 @@
    },
    {
     "contradicts": "entries[10]",
+    "needle": "on day 2, 3, and 4 as compared with control mice",
+    "cited_panel_check": "The sentence cites (Fig. 7d ) and this locator reads Fig 7D. Same panel.",
     "proposition": "PAIR 5, PANEL SIDE. Day 2 carries no significance mark; only days 3 and 4 are marked. The day-2 point also has the largest error bar in the series.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7D: 1 Day unmarked, 2 Days unmarked with cKO ~2.85 and an error bar reaching ~3.6, 3 Days *, 4 Days *, 7 Days unmarked with the cKO point falling below the control.",
     "surface": "figure",
@@ -211,8 +221,8 @@
     "panel_text_relation":"text_contradicted_by_panel"
    },
    {
-    "proposition": "PAIR 6, BODY SIDE. The text says the knockout proliferation index kept rising while the control fell — the basis for the claim that WWOX loss removes the termination phase of liver regeneration.",
-    "snippet": "it continued rising in Wwox ΔHep mice",
+    "proposition": "PAIR 6, BODY SIDE. The text says the knockout proliferation index kept rising while the control fell — the basis for the claim that WWOX loss removes the termination phase of liver regeneration. THE CITATION IS INHERITED, NOT THE SENTENCE'S OWN: this sentence names no figure, so the snippet is extended backwards to carry the citation of the sentence immediately before it, which is the panel the passage is reading. That inheritance is a reader's inference and is declared as one here rather than presented as the author's pointer.",
+    "snippet": "(Fig. 7a, b ). Intriguingly, whereas the proliferation index was reduced 4 and 7 days post hepatectomy in control mice, it continued rising in Wwox ΔHep mice",
     "surface": "body",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Results, 'Wwox ablation is associated with increased proliferation upon partial hepatectomy', sentence beginning 'Intriguingly, whereas the proliferation index was reduced 4 and 7 days post hepatectomy in control mice'",
@@ -220,6 +230,8 @@
    },
    {
     "contradicts": "entries[12]",
+    "needle": "it continued rising in Wwox ΔHep mice",
+    "cited_panel_check": "WEAKEST OF THE SIX PAIRS. The contradicted sentence carries no figure citation of its own; the citation in its snippet, (Fig. 7a, b ), belongs to the preceding sentence. This locator reads Fig 7B, which is inside that inherited citation, but the link from sentence to panel is the reader's and not the author's.",
     "proposition": "PAIR 6, PANEL SIDE. The knockout curve does not rise monotonically: it falls at day 4 before rising again at day 7.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7B cKO series: 3 Days ~0.44, 4 Days ~0.38, 7 Days ~0.48, so day 4 is a decrease from day 3. Marks are *** at 3, 4 and 7 days and absent at 1 and 2 days.",
     "surface": "figure",

@@ -121,7 +121,8 @@
     "anchor": "Figure 2, panels A and B, bar heights and significance brackets read at original resolution 1977 px wide",
     "panel_text_relation": "text_contradicted_by_panel",
     "contradicts": "entries[1]",
-    "needle": "redirects the DSB repair to NHEJ"
+    "needle": "redirects the DSB repair to NHEJ",
+    "cited_panel_check": "PASS BY CONSTRUCTION. The contradicted text is the caption title of Figure 2 and this locator reads panels of Figure 2, so the falsified sentence and the falsifying panel belong to the same figure — a caption cannot cite a figure other than its own. Recorded explicitly rather than left implicit: the same check downgraded two pairs on PMID38182577 the same day, and an invariant applied at one site and not the next is the failure mode this repository keeps repeating."
    },
    {
     "proposition": "PAIR 2, TEXT SIDE — figure caption title again. The caption of Figure 4 attributes the reduction in HDR to LOSS of WWOX.",
@@ -139,7 +140,8 @@
     "anchor": "Figure 4, panel headers and panel C, read at original resolution 1500 px wide",
     "panel_text_relation": "text_contradicted_by_panel",
     "contradicts": "entries[3]",
-    "needle": "Loss of WWOX significantly reduces HDR repair"
+    "needle": "Loss of WWOX significantly reduces HDR repair",
+    "cited_panel_check": "PASS BY CONSTRUCTION. Caption title of Figure 4 against panels of Figure 4."
    },
    {
     "proposition": "PAIR 3, TEXT SIDE — figure caption title, third instance. The caption of Figure 5 attributes an INCREASE in NHEJ to LOSS of WWOX, which is doubly wrong: the experiment is overexpression, and the paper's model says loss COMPROMISES NHEJ.",
@@ -157,7 +159,8 @@
     "anchor": "Figure 5, panel headers and panel E, read at original resolution 1505 px wide",
     "panel_text_relation": "text_contradicted_by_panel",
     "contradicts": "entries[5]",
-    "needle": "does increase NHEJ"
+    "needle": "does increase NHEJ",
+    "cited_panel_check": "PASS BY CONSTRUCTION. Caption title of Figure 5 against panels of Figure 5."
    },
    {
     "proposition": "PAIR 4, BODY SIDE — this one is the running text, not a caption, and it carries the author's own citation to the panel. The claim that DNA damage does not differ is what licenses the inference that the repair-marker differences are not simply a damage effect.",
@@ -175,7 +178,8 @@
     "anchor": "Figure 5, panel C, significance marks read at original resolution 1505 px wide",
     "panel_text_relation": "text_contradicted_by_panel",
     "contradicts": "entries[7]",
-    "needle": "did not detect any notable variations in the levels of damage"
+    "needle": "did not detect any notable variations in the levels of damage",
+    "cited_panel_check": "PASS. The sentence cites (Fig. 5A–D ) and this locator reads Fig 5C, which is inside that range. The only pair in this manifest whose target is running text rather than a caption, and the citation covers the panel that falsifies it."
    },
    {
     "proposition": "The reporter designed to show a see-saw does not see-saw, and the paper's own null on HDR rests on a measurement pinned near zero. This is a limit on the in vitro half of the title claim about repair pathway SELECTION.",
