@@ -1435,7 +1435,7 @@ al piano di lettura.
 |---|---|---|
 | **30356099** | Piard 2018 — *The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome* | **la coorte WOREE più grande del campo.** `FT-002` la cita per il dato «segni antenatali fino al 25% dei casi» |
 | **25411445** | Mignot 2015 — *WWOX-related encephalopathies: delineation of the phenotypical spectrum* | il lavoro che **ha definito lo spettro**. Citato come fonte delle varianti nonsenso/frameshift severe |
-| **29808465** | Johannsen 2018 — *A novel missense variant in the SDR domain leads to complete [loss of WWOX]* | 🔴 **decide la domanda che `FT-002` lascia aperta**: un missenso nel dominio SDR che abolisce la proteina. È il caso in cui «missenso» non implica prodotto presente |
+| **29808465** | Johannsen 2018 — *A novel missense variant in the SDR domain leads to complete loss of WWOX protein* | 🔴 **CHIUSO COME NON RECUPERABILE PER QUESTE ROTTE — vedi sotto.** Regge **47 citazioni in 7 file canonici** |
 | 30158849 | Liu 2018 — *WWOX phosphorylation, signaling, and role in neurodegeneration* | asse neurodegenerazione, *Front Neurosci* |
 | 17823927 | Ludes-Meyers 2007 — topi ipomorfi per WWOX | modello ipomorfo, non nullo — la classe che manca al confronto |
 | 16941225 | Nunez 2006 — *WWOX protein expression in normal human tissues* | la mappa di espressione basale su cui poggiano gli argomenti tissutali |
@@ -1453,3 +1453,39 @@ prima di aprire qualunque PDF, e l'esito va registrato in entrambi i casi.
 
 **Next action:** preflight strutturale sulle nove → poi `30356099` e `25411445` per prime, perché
 sono le coorti su cui ogni ragionamento genotipo-fenotipo di questo modello si appoggia.
+
+### 🔴 29808465 — tentato per primo, la sera stessa. Chiuso, e il reperto non è quello atteso
+
+Ricevuta `FTR-20260810-29808465-01`, `abstract_only` — **non salda alcun debito di lettura**, ed
+è depositata esattamente perché nessuno la scambi per una lettura.
+
+**Rotte esaurite** (*non l'ho potuto recuperare per queste rotte*, **non** «è irrecuperabile»):
+
+| rotta | risposta letterale |
+|---|---|
+| Europe PMC | `pmcid: null` · `inPMC: N` · `inEPMC: N` · `isOpenAccess: N` · `hasPDF: N` · solo link DOI *«Subscription required»* |
+| NCBI idconv | *«Identifier not found in PMC»* |
+| Unpaywall `10.1007/s10048-018-0549-5` | `is_oa: false` · `oa_status: closed` · `has_repository_copy: false` · `oa_locations: []` |
+| `files/fulltext/` locale | assente |
+
+🔴 **Quindi le 47 citazioni non sono la disattenzione di nessuno: il paper non è mai stato
+disponibile a chi lo citava.** Il dato è entrato dall'abstract, che è dove sta.
+
+🔴 **E lo stato canonico lo ha trattato meglio dell'allarme che avevo suonato.** Verificato, non
+assunto: `disease_model.md` registra un'**inversione MAJOR `WM v2.1 → v3.0`** che *ritira*
+l'equazione `mRNA normale + proteina assente = degradazione`; `DL-MECH-034` porta la causa come
+**non discriminata**; è annotato che l'assenza al western è *«un limite di sensibilità, non uno
+zero assoluto»* e che *«un fibroblasto non è un neurone»*. **Una premessa importata da un
+abstract è stata qualificata meglio di molte importate da letture complete.**
+
+**Il difetto che resta è la classe di evidenza, e siede su un rifiuto:** `DIS-003` dichiara
+`PREMISE: DATO (direct measurement, exact variant)` — *direct measurement* di una misura che
+nessuno qui ha visto. Dettaglio completo e riclassificazione proposta (non applicata) in
+`DL-META-091`, correzione append-only.
+
+**Il recupero a più alto rendimento di questa coda.** Chi ha accesso Springer prenda il PDF e
+guardi **il western**: quante corsie, quale controllo di caricamento, quale esposizione, se il
+segnale è assente o sotto soglia, e se la qRT-PCR è su un solo amplicone. Dalla risposta dipende
+se il collo di bottiglia sia **traduzione** o **degradazione** — e se fosse traduzione, *non c'è
+niente da stabilizzare*, cioè la traccia proteostasi indirizzerebbe uno solo dei due rami che
+l'autore stesso lascia aperti.

@@ -2290,6 +2290,68 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
 - **Destinazione dichiarata:** **priorità di lettura**, non commit candidate. Non c'è nulla da
   promuovere finché il paper non è letto; c'è da leggere.
 
+#### 🔴 CORREZIONE APPEND-ONLY, stessa sera, dopo aver provato a leggerlo — **la metà allarmistica di questa voce era sbagliata**
+
+Ho tentato la lettura un'ora dopo aver scritto quanto sopra. Due risultati, e il secondo
+ribalta il primo.
+
+**(a) Non è leggibile, e non da oggi.** `PMID 29808465` — *Neurogenetics* 19(3):151-156,
+Springer. `pmcid: null` · `inPMC: N` · `isOpenAccess: N` · Unpaywall `is_oa: false`,
+`oa_status: closed`, `has_repository_copy: false`, `oa_locations: []` · nessun artefatto locale.
+🔴 **Formulazione deliberata: non l'ho potuto recuperare per queste rotte, non «è
+irrecuperabile».** Quindi le 47 citazioni non sono una svista di nessuno: **il paper non è mai
+stato disponibile a chi lo citava.** Il dato è entrato dall'abstract, che è dove sta.
+
+**(b) 🔴 E lo stato canonico lo ha trattato meglio di come questa voce lasciava intendere.**
+Ho verificato invece di assumere, e il modello **porta già** ogni qualificazione che conta:
+
+| ciò che temevo | ciò che lo stato dice davvero |
+|---|---|
+| che «proteina assente» fosse letta come degradazione | `disease_model.md`: **inversione MAJOR `WM v2.1 → v3.0`** che *ritira* l'equazione `mRNA normale + proteina assente = degradazione post-traduzionale`, citando le due alternative di Johannsen |
+| che il meccanismo fosse dato per risolto | `DL-MECH-034`: *«cause ∈ {impaired_translation, insolubility, premature_degradation} non discriminata»* |
+| che «assente» fosse letto come zero | *«"assenza" al Western blot è un limite di sensibilità, non uno zero assoluto»* |
+| che il fibroblasto fosse letto come neurone | *«la stabilità proteica può essere tessuto-specifica (un fibroblasto non è un neurone)»* |
+| che si assumesse funzione dopo ristabilizzazione | *«⚠️ Assunzione critica ancora aperta … Johannsen non lo testa»* |
+
+**Questo è il sistema che funziona**, e va detto con la stessa forza con cui ho suonato
+l'allarme. Una premessa importata da un abstract è stata qualificata meglio di molte importate
+da letture complete.
+
+**(c) Il difetto che RESTA non è il contenuto: è la classe di evidenza, e vive su un rifiuto.**
+`dismissal_ledger_current.md` `DIS-003` — *«Boosting WWOX expression» → ✅ REJECTION THAT
+HOLDS* — dichiara come premessa portante: *«Johannsen 2018 — normal transcript, protein absent
+in fibroblasts homozygous for Gln230. ✅ `PREMISE: DATO` (direct measurement, exact variant)»*.
+🔴 **`direct measurement` di una misura che nessuno qui ha mai visto.** Il contenuto è giusto;
+l'etichetta afferma un atto — aver consultato la fonte primaria — che non è avvenuto. E lo fa
+sotto un **rifiuto**, che è la classe asimmetrica: un falso positivo viene testato e muore, un
+falso negativo è silenzioso, permanente e auto-rinforzante.
+
+**(d) Due scarti che solo l'abstract rende visibili**, entrambi piccoli e entrambi del tipo che
+un'etichetta `DATO` nasconde:
+- l'abstract dice *«Functional WWOX analysis was performed in fibroblasts of **one patient**»* —
+  su **due** sorelle. Lo stato scrive «in fibroblasts homozygous for Gln230» **senza l'n**;
+- l'abstract offre **due** alternative — *«impaired translation **or** premature degradation»* —
+  mentre il ledger ne scrive **tre**, aggiungendo `insolubility`. È un'aggiunta difendibile (un
+  insolubile scompare dalla frazione solubile di un western) ma **non è ciò che dice l'autore**,
+  e siede in uno `Statement causale` accanto alla citazione.
+
+🔴 **E la conseguenza terapeutica che il ramo «impaired translation» porta con sé, che non
+trovo enunciata da nessuna parte:** se la proteina non viene **mai sintetizzata**, non c'è
+niente da stabilizzare. Una strategia proteostatica indirizza uno solo dei due rami autoriali.
+`DIS-003` rifiuta il boost dell'espressione *perché* il collo di bottiglia è a valle — ma se il
+collo di bottiglia fosse la traduzione, «a valle della trascrizione» e «stabilizzabile» non
+sono la stessa cosa. **Il rifiuto potrebbe essere giusto per una ragione e sbagliato per
+l'altra**, e l'unico modo di saperlo è la figura che nessuno ha visto.
+
+- **`REVIVAL_TRIGGER` aggiornato:** ottenere il PDF per via istituzionale e guardare **il
+  western**: quante corsie, quale controllo di caricamento, quale esposizione, se il segnale è
+  assente o sotto soglia, e se la qRT-PCR è su un solo amplicone. Chi ha accesso a Springer lo
+  prenda — è il singolo recupero a più alto rendimento di questa coda.
+- **Riclassificazione proposta, non applicata** (tocca un rifiuto in stato canonico, quindi
+  spetta a chi possiede il gate): `DIS-003` da `PREMISE: DATO (direct measurement)` a
+  **`PREMISE: DATO — abstract-only, primary source never retrieved`**, con il rifiuto che
+  *resta valido* e la sua etichetta che smette di affermare un atto non avvenuto.
+
 ---
 
 ### 🔴 DL-MECH-092 — `p.R264Ter` non è un null finché qualcuno non misura: tronca **dopo** l'MTS e **prima** del sito catalitico
