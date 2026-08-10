@@ -72,6 +72,35 @@ CORPUS_ARTEFACT = firewall.CORPUS_ARTEFACT
 # artefact; `figure` is pixels and can only be attested; `abstract` is honest but weak.
 LOCATOR_SURFACES = {"body", "figure", "table", "supplement", "abstract"}
 TEXT_SURFACES = {"body", "table", "supplement"}
+# 🔴 How the running text and the printed panel stand to each other, per locator.
+#
+# `surface` above records which surface a quote came FROM. It cannot record what this field
+# records: whether anyone looked at the other one. A `body` locator is not `text_only` by
+# construction — it may be contradicted by a panel nobody has opened yet — so the two facts
+# are independent and only the first was ever captured.
+#
+# The reason this is a field and not a convention: on 2026-08-04 a figure panel reversed a
+# conclusion the running text did not contain, on 2026-08-06 an unmarked asterisk was the
+# difference between "not significant" and "not tested", and on 2026-08-10 Figure 3B of
+# PMID 42422765 turned a "dose-dependent" continuum into a threshold. In all three the text
+# was accurate and incomplete, which is the failure mode a text-only pipeline cannot see.
+#
+# Deliberately NOT named `evidence_relation`: that key already exists in the DisMech sidecar
+# layer carrying `SUPPORT | PARTIAL | REFUTE`, which answers a different question — does this
+# evidence support the claim. This one answers: does the panel agree with the text.
+PANEL_TEXT_RELATIONS = {
+    "text_only",                    # the statement rests on the running text; no panel bears on it
+    "panel_only",                   # read from the image; the text carries no equivalent
+    "text_confirmed_by_panel",      # both were looked at and they agree
+    "text_contradicted_by_panel",   # both were looked at and they do not — see COUPLING below
+    "unknown_legacy",               # captured before this field existed; owed a re-read, not a guess
+}
+# 🔴 COUPLING. `text_contradicted_by_panel` is an assertion about ANOTHER locator, so it has to
+# name it. Without the pointer the claim is unfalsifiable prose sitting in a JSON field: a
+# reader cannot tell which sentence was contradicted, and a command cannot check anything at
+# all. The marker therefore belongs to the PANEL locator — the evidence that makes the
+# assertion — and `contradicts` resolves to the text locator it overturns.
+CONTRADICTS_RE = re.compile(r"^entries\[(\d+)\]$")
 ARTIFACT_KINDS = {"article_binary", "article_text", "supplement_text", "figure", "table"}
 SHA256_RE = re.compile(r"[a-f0-9]{64}")
 # An elided quote is verbatim in each half and not verbatim as a whole. LEGEND reads it fine;
@@ -688,6 +717,59 @@ def validate(
                         f"verbatim_locators.entries[{position}].surface: abstract material may "
                         "be recorded as triage context, but cannot be an evidentiary locator "
                         "for a complete read")
+
+                # `panel_text_relation` is OPTIONAL here on purpose. Whether a manifest is
+                # allowed to omit it is a question about the corpus — which readings predate
+                # the field — and this function sees one manifest with no way to know that.
+                # The coverage obligation therefore lives in `growth_anchors.py`, where the
+                # grandfathered set is recorded and a NEW omission shows up as a new member of
+                # a ratcheted list. What is checkable from inside a single manifest is checked
+                # here, and fails closed: the value, and the pointer the contradiction owes.
+                relation = entry.get("panel_text_relation")
+                if relation is not None and relation not in PANEL_TEXT_RELATIONS:
+                    errors.append(
+                        f"verbatim_locators.entries[{position}].panel_text_relation: must be "
+                        f"one of {sorted(PANEL_TEXT_RELATIONS)}")
+                contradicts = entry.get("contradicts")
+                if relation == "text_contradicted_by_panel":
+                    match = CONTRADICTS_RE.match(str(contradicts or ""))
+                    if match is None:
+                        errors.append(
+                            f"verbatim_locators.entries[{position}].contradicts: "
+                            "`text_contradicted_by_panel` asserts that another locator is "
+                            "wrong, so it must name it as `entries[N]`. Unpointed, the "
+                            "contradiction is prose in a JSON field: no reader can tell which "
+                            "sentence was overturned and no command can check it")
+                    else:
+                        # 🔴 ZERO-BASED, and that is a deliberate choice between two
+                        # conventions this repository already uses for the same thing.
+                        # `adjudications.json` refers to locators as `entries[N]` counting from
+                        # zero, and `regenerate_adjudications.py` indexes the list directly.
+                        # The error messages in THIS function count from one. A reader will
+                        # copy the reference grammar, not the diagnostic text, so `contradicts`
+                        # follows the recipe files. The mismatch is real and is worth removing
+                        # at the next touch of the message strings; it is not worth a rename of
+                        # a published recipe format today.
+                        target = int(match.group(1))
+                        if target == position - 1:
+                            errors.append(
+                                f"verbatim_locators.entries[{position}].contradicts: a locator "
+                                "cannot contradict itself")
+                        elif target >= len(entries):
+                            errors.append(
+                                f"verbatim_locators.entries[{position}].contradicts: no "
+                                f"entries[{target}] in this manifest")
+                        elif entries[target].get("surface") not in TEXT_SURFACES:
+                            errors.append(
+                                f"verbatim_locators.entries[{position}].contradicts: "
+                                f"entries[{target}] is not a text surface. What a panel "
+                                "contradicts is something the text said; pointing at another "
+                                "panel records a disagreement between images, which is a "
+                                "different finding and needs its own words")
+                elif contradicts is not None:
+                    errors.append(
+                        f"verbatim_locators.entries[{position}].contradicts: only "
+                        "`text_contradicted_by_panel` may name a contradicted locator")
 
                 artifact_values = entry.get("artifact")
                 if isinstance(artifact_values, str):

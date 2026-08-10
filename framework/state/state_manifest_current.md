@@ -238,8 +238,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 9
-growth_anchor_head: 9cac12b4cf9b84f815d72977ca2c42c2f2d45b9f099b24483c36f2e266780128
+growth_anchor_events: 11
+growth_anchor_head: 618fc1ecd32ecd227a5af5bc22079bb44a7347d83a875df6f210d2024f62a8c1
 ```
 
 ```bash
@@ -298,6 +298,53 @@ to route around the check; capping it makes every *new* unread premise a visible
 persisted `complete_fulltext_read` receipt, a registry record declaring the full text reviewed,
 or an explicit `full_text_queue_current.md` entry. The third is what keeps the check honest
 rather than punitive — **declared reading debt is legitimate work in progress; silence is not.**
+
+### 6.4 — `panel_text_relation`: manifests that do not say whether anyone looked at the panel
+
+A locator's `surface` records which surface a quote came **from**. It cannot record whether the
+*other* surface was ever opened, and that is a different fact with its own failure mode. On
+**2026-08-04** a figure panel reversed a conclusion the running text did not contain; on
+**2026-08-06** an unmarked asterisk was the difference between *«not significant»* and *«not
+tested»*; on **2026-08-10** Figure 3B turned a *«dose-dependent»* continuum into a threshold,
+and a second panel showed that the comparison a rescue claim rested on had never been drawn.
+In every case the text was **accurate and incomplete** — the one thing a text-only pipeline
+cannot see.
+
+So each schema-v2 locator declares `panel_text_relation`: `text_only` · `panel_only` ·
+`text_confirmed_by_panel` · `text_contradicted_by_panel` · `unknown_legacy`.
+`text_contradicted_by_panel` must name the locator it overturns, as `contradicts:
+"entries[N]"`, and that pointer is a `BLOCK` when missing — an unpointed contradiction is
+prose in a JSON field that no reader can trace and no command can check.
+
+```yaml
+panel_relation_legacy_baseline: 17
+panel_relation_legacy_ids: ["PMID17803050", "PMID19500159", "PMID19936220", "PMID22193544", "PMID24871327", "PMID30290271", "PMID30755385", "PMID31340538", "PMID32000863", "PMID33255508", "PMID34747138", "PMID34831305", "PMID35716775", "PMID36779245", "PMID37519886", "PMID39507621", "PMID40875931"]
+```
+
+🔴 **The eighteen are `unknown_legacy`, and the field is NOT backfilled by inference.** A
+`surface: body` locator is not `text_only` by construction — it may be contradicted by a panel
+nobody has opened. **The absence of a recorded contradiction is not evidence of its absence**,
+so deriving the relation from the surface would manufacture eighteen manifests' worth of
+reassurance out of no observation at all. `unknown_legacy` is the honest answer, and it is
+paid down by re-reading, not by deducing.
+
+**The split, and why it is a split.** `deepdive_manifest.validate` checks what one manifest can
+answer about itself — that the value is in the enum, and that a contradiction names a text
+locator that exists and is not itself. Whether a manifest is *allowed* to omit the field is a
+fact about the corpus, not about the file, so it lives here: a manifest already in
+`panel_relation_legacy_ids` is grandfathered, and one that is **not** appears as a new member
+of a ratchet that may only fall (`RATCHET_VIOLATION` → `BLOCK`). That is "the validator refuses
+new work without it", enforced where the information actually is.
+
+**Why the ID list and not just the count.** Same reason as §6.3: a number is something a hand
+can edit to make a suite green, and this repository has watched that happen, diligent comment
+and all. The list is a claim the tool re-derives — lowering the baseline means naming which
+manifest left the set, and `growth_anchors.py evaluate` goes and looks. Both fields are written
+only by `growth_anchors.py record` / `tighten`; neither is typed by a human.
+
+Membership is per manifest and one bare locator is enough. A reading that classified nineteen
+locators and left one unclassified **has an unclassified locator** — the way out of the set is
+to finish, not to average.
 
 ---
 

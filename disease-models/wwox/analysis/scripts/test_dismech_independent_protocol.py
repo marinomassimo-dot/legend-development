@@ -174,8 +174,14 @@ class BaselineTests(unittest.TestCase):
                     target.write_bytes(
                         protocol._git_blob(original_root, baseline["git_head_at_freeze"],
                                            record["path"]))
-                except (ValueError, OSError):  # pragma: no cover — freeze commit unavailable
-                    shutil.copyfile(original_root / record["path"], target)
+                except (ValueError, OSError) as exc:
+                    # No fallback to the working tree. The archive runner has no git object
+                    # database, and quietly substituting live bytes is precisely the failure
+                    # this fixture now exists to avoid — it would rebuild the "frozen" tree
+                    # out of whatever happens to be on disk and call the result sealed. If the
+                    # sealed bytes cannot be fetched, the fixture cannot be built, and a test
+                    # that cannot be built must say so rather than test something else.
+                    self.skipTest(f"sealed blob for {record['path']} unavailable: {exc}")
             output = root / baseline["output"]["path"]
             output.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(original_root / baseline["output"]["path"], output)

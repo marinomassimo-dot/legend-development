@@ -66,6 +66,24 @@ RATCHET_BASELINE = re.compile(
     r"(?m)^(registry_only_fulltext_declarations_baseline:\s*)(\d+)\s*$")
 RATCHET_IDS = re.compile(r"(?m)^(registry_only_fulltext_declaration_ids:\s*)(\[[^\n]*\])\s*$")
 UNREAD_BASELINE = re.compile(r"(?m)^(unread_premise_baseline:\s*)(\d+)\s*$")
+# The same two-field shape as the ratchet above, and for the same reason: the count alone is
+# a number a human can edit, the ID list is a claim the tool re-derives. Lowering the baseline
+# by hand means naming which manifest left the set, and `evaluate` goes and looks.
+PANEL_LEGACY_BASELINE = re.compile(
+    r"(?m)^(panel_relation_legacy_baseline:\s*)(\d+)\s*$")
+PANEL_LEGACY_IDS = re.compile(r"(?m)^(panel_relation_legacy_ids:\s*)(\[[^\n]*\])\s*$")
+# 🔴 The single definition of which measurements are ratchets. It exists because adding the
+# third one found the same tuple written out in FOUR places — `evaluate`, `cmd_record`,
+# `cmd_tighten` and a message that said "both ratchets" — so a key added to one and forgotten
+# in another would anchor in `check` and never anchor in `record`, and the ratchet would
+# report the same violation forever while looking like it was being maintained. That is the
+# uneven-application failure this repository keeps finding in itself; here it is again, in the
+# module that exists to prevent it.
+RATCHET_KEYS: tuple[tuple[str, str], ...] = (
+    ("registry_only_fulltext", "registry-only full-text declarations"),
+    ("unread_premises", "unread premises"),
+    ("panel_relation_legacy", "manifests without a panel/text relation"),
+)
 UNREAD_MEASURED = re.compile(r"(?m)^(unread_premise_measured_on:\s*)(\S+)\s*$")
 
 STRUCTURAL_KEYS = ("claims", "papers", "corpus", "literature")
@@ -298,11 +316,47 @@ def measure_unread_premises(root: Path, disease: str) -> list[str]:
     return sorted(session_self_eval.unread_premises(root, disease, receipts))
 
 
+def measure_panel_relation_legacy(root: Path, disease: str) -> list[str]:
+    """Manifests with at least one locator that does not say how panel and text stand.
+
+    🔴 This is the coverage half of `panel_text_relation`, and it lives here rather than in
+    `deepdive_manifest.validate` for one reason: whether a manifest is *allowed* to omit the
+    field is a fact about the corpus, not about the manifest. The validator sees one file and
+    cannot know which readings predate the field. This function sees all of them, and the
+    ratchet in `evaluate` does the rest — a manifest already in the anchored set is
+    grandfathered, a manifest that is NOT is a `RATCHET_VIOLATION`, which is exactly "the
+    validator refuses new work without it" expressed where the information actually is.
+
+    Membership is per manifest and triggered by a single bare entry, deliberately. A reading
+    that classified nineteen locators and left one unclassified has an unclassified locator,
+    and the honest way to leave the set is to finish, not to average.
+    """
+    directory = root / "disease-models" / disease / "research" / "deepdive_manifests"
+    if not directory.is_dir():
+        return []
+    legacy: list[str] = []
+    for path in sorted(directory.glob("PMID*.json")):
+        try:
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            legacy.append(path.stem)  # unreadable is not clean; it is unknown
+            continue
+        locators = manifest.get("verbatim_locators")
+        entries = locators.get("entries") if isinstance(locators, dict) else None
+        if not isinstance(entries, list) or not entries:
+            continue  # a waived or empty locator block owes nothing; the waiver is checked elsewhere
+        if any(not isinstance(entry, dict) or entry.get("panel_text_relation") is None
+               for entry in entries):
+            legacy.append(path.stem)
+    return legacy
+
+
 def measure_all(root: Path, disease: str) -> dict[str, Any]:
     return {
         "structural": measure_structural(root, disease),
         "registry_only_fulltext": measure_registry_only(root, disease),
         "unread_premises": measure_unread_premises(root, disease),
+        "panel_relation_legacy": measure_panel_relation_legacy(root, disease),
         # Measured on every call like everything else here, and deliberately *not* an
         # anchored value: sizes are expected to move constantly, so anchoring them would
         # produce a violation on every batch. Only the acknowledgement is anchored.
@@ -424,6 +478,14 @@ def reanchor_manifest(root: Path, disease: str) -> list[str]:
             text = UNREAD_MEASURED.sub(lambda m: f"{m.group(1)}{today}", text, count=1)
         changed.append(f"unread_premise_baseline={len(unread)}")
 
+    panel_legacy = state.get("panel_relation_legacy")
+    if panel_legacy is not None and PANEL_LEGACY_BASELINE.search(text):
+        text = PANEL_LEGACY_BASELINE.sub(lambda m: f"{m.group(1)}{len(panel_legacy)}", text,
+                                         count=1)
+        serialised = json.dumps(sorted(panel_legacy), ensure_ascii=False)
+        text = PANEL_LEGACY_IDS.sub(lambda m: f"{m.group(1)}{serialised}", text, count=1)
+        changed.append(f"panel_relation_legacy_baseline={len(panel_legacy)}")
+
     path.write_text(text, encoding="utf-8")
     return changed
 
@@ -470,11 +532,28 @@ def evaluate(root: Path, disease: str) -> tuple[list[str], list[str], dict[str, 
                 f"`growth_anchors.py record --batch <ID> --{key} "
                 f"{live_value - anchored_value:+d}`")
 
-    for key, label in (("registry_only_fulltext", "registry-only full-text declarations"),
-                       ("unread_premises", "unread premises")):
+    for key, label in RATCHET_KEYS:
         live_set = set(live[key])
+        # 🔴 Introducing a ratchet is not the same event as breaching one, and until this
+        # existed the tool could not tell them apart: `state.get(key) or []` read a key that
+        # had NEVER been anchored as a baseline of zero, so a new ratchet's whole legacy
+        # backlog arrived as a violation — and there was no way out. `tighten` refuses on a
+        # violation, `record` refuses when a ratchet grew, `--bootstrap` refuses once any
+        # anchor exists. A ratchet that cannot be introduced is a ratchet nobody adds.
+        #
+        # This is not a loophole, and the reason is structural rather than promised: the
+        # ledger is hash-chained and append-only, so a key that has EVER been anchored is in
+        # force forever — it cannot be removed from history to reset a baseline, only appended
+        # over, and an append that dropped it would be a visible event. So the question
+        # "has this key ever been anchored?" is asked of the whole ledger, not of the tail.
+        ever_anchored = any(key in event.get("anchors", {}) for event in events)
         anchored_set = set(state.get(key) or [])
         new = live_set - anchored_set
+        if not ever_anchored:
+            improvements.append(
+                f"RATCHET_INTRODUCED: {label} measured for the first time at {len(live_set)}; "
+                f"run `growth_anchors.py tighten` to set the baseline")
+            continue
         if new:
             violations.append(
                 f"RATCHET_VIOLATION: {len(new)} new {label} ({', '.join(sorted(new))}). "
@@ -573,7 +652,7 @@ def cmd_record(root: Path, disease: str, args) -> int:
     anchors = {"structural": live["structural"]}
     # Ratchets ride along so history stays complete, but only when they did not worsen;
     # a worsening ratchet is a violation and must not be laundered through a counts record.
-    for key in ("registry_only_fulltext", "unread_premises"):
+    for key, _label in RATCHET_KEYS:
         if set(live[key]) - set(state.get(key) or []):
             print(f"REFUSED: {key} grew. Resolve the ratchet violation before recording "
                   f"structural growth — see `growth_anchors.py check`.")
@@ -654,11 +733,12 @@ def cmd_tighten(root: Path, disease: str, args) -> int:
         print("REFUSED: a ratchet grew. Tightening cannot paper over a violation.")
         return 1
     if not improvements:
-        print("NOTHING TO TIGHTEN: both ratchets already match the live measurement")
+        print(f"NOTHING TO TIGHTEN: all {len(RATCHET_KEYS)} ratchets already match the live "
+              "measurement")
         return 0
     events = load_ledger(root / LEDGER_REL)
     state = tail_state(events) or {}
-    anchors = {key: live[key] for key in ("registry_only_fulltext", "unread_premises")}
+    anchors = {key: live[key] for key, _label in RATCHET_KEYS}
     if state.get("structural"):
         anchors["structural"] = state["structural"]
     event = append_event(root, disease, "tighten", anchors,
