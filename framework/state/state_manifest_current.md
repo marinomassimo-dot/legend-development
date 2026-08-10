@@ -102,16 +102,17 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260806_002
-last_batch_commit_date: 2026-08-06
+last_batch_commit_id: BATCH_20260810_001
+last_batch_commit_date: 2026-08-10
 last_batch_commit_type: MINOR
-commit_candidates_propagated: 4
-commit_candidates_superseded: 1
-commit_candidates_deferred: 0
+commit_candidates_propagated: 3
+commit_candidates_superseded: 0
+commit_candidates_deferred: 3
 target_wm_version: WM_v4.1
 last_wm_update: 2026-08-06
 last_wm_batch_commit_id: BATCH_20260806_002
-trigger: "explicit operator authorization; threshold also met (4 pending candidates)"
+trigger: "explicit operator authorization 2026-08-10; threshold also met (6 pending candidates)"
+batch_20260810_001_scope: "PROPAGATED 3: step 0 (batch_commit_gate BLOCK_BATCH_COMMIT -> OPEN, with the reopening recorded as road 3 and not the condition originally written); CC-20260810-CLAIM004-REVIEW (CLAIM 004 -> flagged for review, comparator missing); CC-20260810-CLAIM011-REVIEW (CLAIM 011 -> flagged for review, dose-response continuum concealing a threshold; the instruction named CLAIM 020, which is Teplyshova natural history and unrelated — flagging it would have marked an innocent claim and left the defect standing). Coupled with step 0 and applied in the same window: deepdive_manifests/PMID17803050.json re-anchored, 29 body/table locators moved off the refused .html onto page crops with needle, crop, dpi and image digest; validator PASS, 0 gaps. DEFERRED 3, declared not forgotten: CC-20260805-001 (PMID 37519886 registry promotion), CC-20260810-30755385 (CORPUS-STUB-039/LIT-0063 promotion + meta_metabolism + CLAIM 009 link), CC-20260810-42422765-S8 (the 'finestra terapeutica P1-P5' shorthand in paper_registry line 261 is wrong: S8 contains no P0 group, survival to P40 omits P4, and the drawn tests are WT-vs-KO and WT-vs-P5 with no treated-vs-KO comparison). Each deferred candidate is a registry rewrite needing its source open, and a batch that half-applies one is worse than a batch that declares it. Full-text queue entries FT-048 and FT-049 were added ahead of this batch, outside it: the queue is not a canonical scientific file."
 notes: "BATCH_20260806_002 (MINOR, WM_v4.0 → WM_v4.1). Four candidates propagated: CC-20260806-19936220, CC-20260806-19500159, CC-20260806-17803050 and CC-20260806-31340538. CC-20260806-19936220 item 1 was SUPERSEDED by CC-20260806-19500159 item 1 before propagation — the verdict moved from 'unsupported' to 'contradicted' once the terminus was read — so the superseded count is 1. THE IMPORTED-PREMISE CHAIN UNDER CLAIM 005 IS NOW TRACED END TO END, EVERY LINK READ IN FULL: early death is first-hand in PMID 19936220, but epileptogenesis is not measured there in any form, and the terminal source PMID 19500159 states in three places, plus a Table 2 whose Epilepsy row is empty for both mouse models, that Wwox-null MICE SHOW NO EPILEPSY. Two citation hops had converted an explicit negative about a rat into a positive assertion about a mouse; the co-cited premise in the same sentence was true, which is why it read as verified. New claims 036 (systemic metabolic decompensation of the P18 mouse null as a quantified confounder, with PREMISE: DEFAULT_FROM_TEXTBOOK on brain ablation never shown), 037 (the seizure phenotype as a rat lde/lde phenotype, EEG-documented, allele corrected to structurally frameshift and functionally protein-null), 038 (recurring BUN/creatinine with two competing untested explanations, renal insufficiency versus seizure-driven hypercatabolism, the second competing directly with the renal-tubular-acidosis hypothesis PMID 19936220 never tested), 039 (ataxia 95 percent versus 0 percent, non-cerebellar, the most penetrant lde phenotype and one the downstream literature dropped). PAPER 057/058/059 and LIT-0405 created; CORPUS P295 and P363 marked promoted append-only. PAPER 021 metadata corrected: the author is Tochigi, not Kumada, and the record carried an INVENTED TITLE naming lissencephaly, a word absent from the paper, which had been steering it toward a migration/layering reading the study does not make; CLAIM 014/015 now bound it to early postnatal maturation (PND5-21) and meta_prenatal_structure reclassifies it as the postnatal bridge. DIS-011 and DIS-012 entered in the dismissal ledger with revival triggers. meta_gaba_paradox given a provenance correction and the competing systemic-confounder explanation. Integrity status fields added to the held records PMID 16223882 (expression of concern) and PMID 23446842 (retracted), closing a debt declared at session start; no canonical claim rests on either. Pre-flight and post-propagation LINT PASS; release gate PASS/0; receipts 52 chained and tail-anchored; self-eval PASS with active complete reads 15. Snapshot backup/snap_20260806_batch_wm41. Prev: CC-20260806-30290271 → CLAIM 005 narrowed to what PMID 30290271 measures and its medication caution DELETED (the source tests no drug, no GABA concentration, no inhibitory function); PAPER 006 / LIT-006 identifiers normalized; CORPUS-STUB-085 resolved as duplicate, preserved append-only; meta_gaba_paradox corrected from interneuron loss to marker-positive abundance, NPY marked DG-only, Il6-not-Tnf-a recorded. MAJOR because removing safety language from a consolidated baseline claim is a policy change even when it removes rather than adds; the experimental datum is NOT demoted. Publication-integrity audit of the 7 held records run first (staging/audit_publication_integrity_20260806.md): no canonical claim rests on any of them. Pre-flight and post-propagation LINT PASS; snapshot backup/snap_20260806_batch_wm40. Prev: BATCH_20260726_001 (MINOR, WM_v3.2) — CC-20260726-001/002/003 → PAPER 054/055/056, CLAIM 034/035 new, CLAIM 009/016/024 modified; snapshot backup/snap_20260726_1600."
 ```
 
@@ -135,7 +136,7 @@ notes: "PMID 30290271 read completely from article HTML/PDF with all six figures
 current_state: READY
 deep_dive_gate: OPEN
 ingest_gate: OPEN
-batch_commit_gate: BLOCK_BATCH_COMMIT
+batch_commit_gate: OPEN
 active_parallel_branches: none
 ```
 
@@ -161,6 +162,42 @@ locators re-verified against the new artifact, and any that fail re-captured fro
 
 The conclusions of `CLAIM 038` and `CLAIM 039` are **not** in question here. A human read them
 off the paper. What is in question is whether the repository can still *prove* it.
+
+### Reopened 2026-08-10 — by a different route than the one written above
+
+🔴 **The condition as written was not met, and the gate is opened anyway.** Recorded, because
+a gate lifted on a condition nobody re-read is how a gate stops meaning anything.
+
+The surface was **not** re-derived. `PMID17803050_Suzuki2007.html` is still `SUSPECT` and the
+validator still refuses it — correctly, and that has not changed. What was done instead is
+road 3 of the three the reading laid out: the 29 locators were **re-anchored to the printed
+page**, the surface the corruption cannot reach because the drawn glyph is the author's.
+
+What stands behind them, each machine-checked rather than argued:
+
+- every locator resolves through a **needle unique on its page**, verified to be a fragment of
+  the snippet of the locator it names — so a crop cannot adjudicate the right character for
+  the wrong sentence;
+- every span sits **inside the crop that claims to show it** (`crop_contains_span`),
+  re-checked after the crop rectangles were rounded to integers;
+- the seven crops **regenerate to their declared digest** from the source PDF
+  (`regenerate_adjudications.py verify`), so the evidence is reproducible without the images
+  being redistributed — the article is all-rights-reserved.
+
+Six of the 29 carried corruption inside what they assert; all six were read off the page and
+**not one changes a value, a direction or a significance verdict**. `CLAIM 038` and `CLAIM 039`
+stand as written. What had been lost was the repository's ability to prove them.
+
+**Applied in this batch:** `deepdive_manifests/PMID17803050.json` no longer declares the
+refused `.html` as a source artifact. Its 29 body/table locators now carry `surface: figure`
+and name the page crop that attests them, each with page, crop rectangle in PDF points, dpi,
+needle and image digest. The three figure locators were already anchored to the PDF and are
+untouched. `deepdive_manifest.py --pmid 17803050` returns PASS with 0 gaps.
+
+**The debt that remains, and is not cleared by this:** the text surface is still refused, so
+`PMID 17803050` cannot back a *new* text locator. Anyone reopening that paper in full owes
+road 2 — the surface rebuilt from the rendering, declared as a new artifact with its own
+extraction method. `FT-041` carries it.
 
 ---
 

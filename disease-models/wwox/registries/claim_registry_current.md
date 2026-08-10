@@ -80,7 +80,8 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 
 ## CLAIM 004
 **Title:** AAV9-WWOX neuron-targeted rescue shows multi-domain in vivo improvement
-**Status:** consolidated baseline
+**Status:** flagged for review
+🔴 **Flagged 2026-08-10 (`CC-20260810-CLAIM004-REVIEW`) — the comparator is missing, not the finding.** La claim elenca i domini recuperati senza dire *contro cosa*. La lettura del 2026-08-10 della sua stessa fonte (PMID 34747138) riporta che **dove il rescue è confrontato con il wild type e non con il null non trattato, è significativamente incompleto**. Non è falsa: è non qualificata, e in `P7 — gene therapy readiness` la differenza fra *migliora* e *normalizza* è la differenza fra un principio di design e un esito atteso. La riscrittura è deliberatamente **rinviata** a una propagazione che abbia davanti i locator di `deepdive_manifests/PMID34747138.json`; sceglierla ora significherebbe decidere, senza la lettura, quali domini raggiungono il WT e di quanto.
 **Type:** DATO
 **Pathway:** P7 — gene therapy readiness
 **Genotype/model relevance:** murino / Wwox-null full KO; genotipo caution alta: null/null sistemico ≠ the reference genotype compound het; design principles trasferibili, non il modello in toto
@@ -193,7 +194,8 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 
 ## CLAIM 011
 **Title:** AAV9-hSynI-hWWOX: dose-dependent durable rescue in Wwox-null murine model su domini multipli inclusi ECoG/SWD, mielinizzazione e gliosi
-**Status:** consolidated baseline
+**Status:** flagged for review
+🔴 **Flagged 2026-08-10 (`CC-20260810-CLAIM011-REVIEW`) — «dose-dependent» descrive un continuo dove il pannello mostra una soglia.** La Figura 3B di PMID 42422765, letta all'immagine (`gr3.jpg`, sha256 `c63f930c…4997d`): **LD = 1.23 × 10¹¹ vg**, **HD = 2.63 × 10¹¹ vg**; il braccio a dose bassa **non recupera la sopravvivenza** — sposta la morte da ~20 a ~90 giorni e poi la curva raggiunge lo zero, mentre l'alta dose plateau a ~80% fino a 300 giorni. A **P20** la dose bassa non ha corretto l'ipoglicemia, l'alta sì. Non è una differenza graduata su un asse: è qualitativa, e colloca una **soglia** fra 1.23 e 2.63 × 10¹¹ vg. Le parole del paper — *«dose-dependent»*, *«graded improvement»*, *«a clear dose-response relationship»* — sono tutte vere dei dati e tutte descrivono un continuo; la claim ne ha ereditato il lessico. Chi non apre il pannello B porta con sé *«più dose, più beneficio»* invece di *«sotto soglia, nessuna sopravvivenza»*, e le due credenze raccomandano trial diversi. 🔴 `PREMISE_TAG`: ogni inferenza del tipo *«una dose più bassa e più sicura aiuterebbe comunque»* legge la dose-risposta come continuo, e il pannello B la **rifiuta** per la sopravvivenza in questo modello. `REVIVAL_TRIGGER`: un braccio a dose intermedia fra 1.23 e 2.63 × 10¹¹ vg localizzerebbe la soglia — l'esperimento più informativo che questo paper implica. Riscrittura rinviata: la Figura 3B risolve sopravvivenza e glicemia, **non** gli altri domini della claim (ECoG/SWD, mielinizzazione, gliosi), e la lettura che li risolverebbe è `partial_fulltext_read`.
 **Type:** DATO preclinico (full text reviewed)
 **Pathway:** P7 — gene therapy readiness; P4 — myelination; P6 indiretto
 **Genotype/model relevance:** murino / Wwox-null full KO severo; genotipo caution alta: full KO ≠ the reference genotype N/M compound het; i design principles (neuron targeting, dose, early window) sono trasferibili alla logica di trial-readiness; il livello di rescue atteso nel genotipo di riferimento è potenzialmente superiore (funzione residua parziale)

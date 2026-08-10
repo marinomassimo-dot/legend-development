@@ -8,7 +8,7 @@
 
 ## ▶ Start here
 
-**416 records have not been processed.** **256** of them have a free full text and can be worked immediately.
+**416 records have not been processed.** **255** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
@@ -83,10 +83,10 @@ time; it does not redistribute or license the article text.
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 328 | 46% |
 | **Catalogued, never processed** — the reading debt | 168 | 24% |
-| Known to the tracking log only | 164 | 23% |
+| Known to the tracking log only | 163 | 23% |
 | Processed from the abstract | 11 | 2% |
 | Partial full text read | 2 | 0% |
-| Full text read | 33 | 5% |
+| Full text read | 34 | 5% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
 `fulltext_read_receipts.jsonl`. Historical registry-only full-text declarations remain
@@ -401,7 +401,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [31752354](https://pubmed.ncbi.nlm.nih.gov/31752354/) | 2019 | ✅ | Journal Article | screened | WWOX Possesses N-Terminal Cell Surface-Exposed Epitopes WWOX7-21 and WWOX7-11 for Signaling Cancer Growth Suppression and Prevention In Vivo. |
 | [31275852](https://pubmed.ncbi.nlm.nih.gov/31275852/) | 2019 | ✅ | Journal Article | screened | Wwox Deletion in Mouse B Cells Leads to Genomic Instability, Neoplastic Transformation, and Monoclonal Gammopathies. |
 | [31075076](https://pubmed.ncbi.nlm.nih.gov/31075076/) | 2019 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | screened | Decoding the link between WWOX and p53 in aggressive breast cancer. |
-| [30755385](https://pubmed.ncbi.nlm.nih.gov/30755385/) | 2019 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | WWOX somatic ablation in skeletal muscles alters glucose metabolism. |
 | [30356099](https://pubmed.ncbi.nlm.nih.gov/30356099/) | 2019 | ✅ | Case Reports; Journal Article; Research Support, Non-U.S. Gov't; Review | screened | ✎ corrected — The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature. |
 | [30370248](https://pubmed.ncbi.nlm.nih.gov/30370248/) | 2018 | ✅ | Journal Article; Review | screened | Modeling WWOX Loss of Function in vivo: What Have We Learned? |
 | [30285739](https://pubmed.ncbi.nlm.nih.gov/30285739/) | 2018 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | VOPP1 promotes breast tumorigenesis by interacting with the tumor suppressor WWOX. |
@@ -765,7 +764,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41661231](https://pubmed.ncbi.nlm.nih.gov/41661231/) | 2026 | — | Journal Article | screened | RNAseq-based meta-analyses revealed tumor suppressor-inducer fusion events in liver, oral, and ovarian cancer in the Indian population: a cancer cell surviving mechanism. |
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 
-*(showing all 660 outstanding records)*
+*(showing all 659 outstanding records)*
 
 ## Already processed from this seed
 
@@ -781,6 +780,7 @@ for an entirely unprocessed record.
 | [34268881](https://pubmed.ncbi.nlm.nih.gov/34268881/) | 2021 | ✅ | full text | PAPER 039 | Modeling genetic epileptic encephalopathies using brain organoids. |
 | [33916893](https://pubmed.ncbi.nlm.nih.gov/33916893/) | 2021 | ✅ | full text | PAPER 040 | Neurological Disorders Associated with WWOX Germline Mutations-A Comprehensive Overview. |
 | [33255508](https://pubmed.ncbi.nlm.nih.gov/33255508/) | 2020 | ✅ | full text | receipt FTR-20260806-33255508-01 | WWOX Loss of Function in Neurodevelopmental and Neurodegenerative Disorders. |
+| [30755385](https://pubmed.ncbi.nlm.nih.gov/30755385/) | 2019 | ✅ | full text | receipt FTR-20260810-30755385-01 | WWOX somatic ablation in skeletal muscles alters glucose metabolism. |
 | [30362252](https://pubmed.ncbi.nlm.nih.gov/30362252/) | 2019 | ✅ | full text | PAPER 044 | Early infantile-onset epileptic encephalopathy 28 due to a homozygous microdeletion involving the WWOX gene in a region of uniparental disomy. |
 | [30619736](https://pubmed.ncbi.nlm.nih.gov/30619736/) | 2018 | ✅ | full text | PAPER 032 | Delineating WWOX Protein Interactome by Tandem Affinity Purification-Mass Spectrometry: Identification of Top Interactors and Key Metabolic Pathways Involved. |
 | [27495153](https://pubmed.ncbi.nlm.nih.gov/27495153/) | 2016 | ✅ | full text | PAPER 049 | W44X mutation in the WWOX gene causes intractable seizures and developmental delay: a case report. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [22193544](https://pubmed.ncbi.nlm.nih.gov/22193544/) | 2012 | ✅ | full text | PAPER 056 | WW domain-containing oxidoreductase promotes neuronal differentiation via negative regulation of glycogen synthase kinase 3β. |
 | [40875931](https://pubmed.ncbi.nlm.nih.gov/40875931/) | 2025 | — | full text | PAPER 014 | WWOX-Related Developmental and Epileptic Encephalopathy: Expanding the Clinical Spectrum and Deciphering the Genotype-Phenotype. |
 
-*(showing all 46 processed records from the seed)*
+*(showing all 47 processed records from the seed)*
 
 ## How to work one
 
