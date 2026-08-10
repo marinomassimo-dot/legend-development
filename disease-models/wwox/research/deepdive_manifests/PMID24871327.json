@@ -1,0 +1,321 @@
+{
+  "schema_version": 2,
+  "pmid": "24871327",
+  "doi": "10.1161/CIRCGENETICS.113.000248",
+  "receipt": "FTR-20260810-24871327-01",
+  "landing": [
+    "FTR-20260810-24871327-01",
+    "full_text_queue_current#FT-039",
+    "PMID24871327_locators.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline. The figure inspection and the locator capture had to come from the same open document, and delegating would have split them — the contract requires the quote to be recorded while the document is open."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "The PMC HTML was already local. Its figures and the supplementary were fetched directly from PMC by documented routes, recorded in the locator file including the five that failed."
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": false,
+      "reason": "No study list arrived; a single queued paper was opened from FT-039."
+    },
+    {
+      "skill": "legend-batch-inferential-sweep",
+      "used": false,
+      "reason": "A single paper, not a batch."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "The reading narrows an existing bridge rather than opening a lead. Nothing here is promoted to the discovery ledger, and no ledger entry is claimed as written."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "No molecule or intervention emerged. ApoA-I/ABCA1 are readouts here, not levers, and the paper offers no CNS endpoint."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "OWED, not waived. This reading narrows how PMID 33255508's 'strong evidence' label may be used, which is the trigger condition. It is recorded as owed before any claim edit rests on locators 11, 13 or 14."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 977,
+    "publications_on_gene": 2,
+    "counts_measured": "PubMed esearch, 2026-08-10. Corresponding lipid group: 'Genest J[au]' 977, 'Genest J[au] AND WWOX' 2. Co-lead human-genetics group: 'Pajukanta P[au]' 174, with WWOX 2. Collaborating gene groups, counted separately because they are not the authors of record here: 'Aqeilan RI[au] AND WWOX' 65 of 137 total, 'Aldaz CM[au] AND WWOX' 38.",
+    "research_type": "mixed",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "The observation and the interpretation do not carry the same weight here, and the counts show why. The lipid phenotyping — HPLC lipoprotein profiles, 2D-PAGGE ApoA-I subspecies, family segregation — comes from a group with 977 publications in exactly that domain and should be weighted as expert measurement. The WWOX interpretation comes from those same authors on their second WWOX paper; the gene expertise sits with the collaborators who supplied the mouse models (Aqeilan 65, Aldaz 38) and appears in the author list rather than in the framing. So: high confidence in the lipid measurements as measurements, ordinary confidence in what the paper concludes WWOX is doing. This is the mirror image of the WOREE literature, where gene expertise is high and the phenotype measurement is descriptive — and it is a reason to read this paper for its numbers rather than for its conclusions.",
+    "note": "The research-group knowledge base is excluded from the public edition; this assessment rests only on the measured counts above and on the Methods."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {"query": "Genest J[au] AND WWOX", "route": "PubMed esearch 2026-08-10", "count": 2},
+      {"query": "Aqeilan RI[au] AND WWOX", "route": "PubMed esearch 2026-08-10", "count": 65},
+      {"query": "Aldaz CM[au] AND WWOX", "route": "PubMed esearch 2026-08-10", "count": 38}
+    ],
+    "note": "A cardiovascular-genetics paper carrying primary WWOX molecular biology. Parity of sources applies in its usual direction: the functional characterisation of Wwox-null lipid handling exists here and not in the WOREE literature."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 53,
+    "gene_direct_refs_in_source": [
+      {"ref": 6, "pmid": "20942981"}, {"ref": 8, "pmid": "10786676"},
+      {"ref": 9, "pmid": "10861292"}, {"ref": 10, "pmid": "17360458"},
+      {"ref": 11, "pmid": "19936220"}, {"ref": 12, "pmid": "21731849"},
+      {"ref": 13, "pmid": "18487609"}, {"ref": 14, "pmid": "19708029"},
+      {"ref": 17, "pmid": "15070730"}, {"ref": 18, "pmid": "15064722"},
+      {"ref": 19, "pmid": "20146584"}, {"ref": 20, "pmid": "18974271"},
+      {"ref": 49, "pmid": "16061658"}, {"ref": 50, "pmid": "17458891"}
+    ],
+    "enumeration_method": "All 53 reference blocks parsed from the PMC HTML; 14 mention WWOX/Wwox/FRA16D in the citation text. Enumerated, not sampled — declaring debt is not the same as counting it.",
+    "resolved": [
+      {"pmid": "19936220", "state": "complete_fulltext_read"},
+      {"pmid": "20942981", "state": "in paper_registry"},
+      {"pmid": "10786676", "state": "in paper_registry"},
+      {"pmid": "10861292", "state": "in full_text_queue"},
+      {"pmid": "17360458", "state": "in paper_registry and full_text_queue (FT-032)"},
+      {"pmid": "21731849", "state": "in paper_registry"},
+      {"pmid": "18487609", "state": "in paper_registry"},
+      {"pmid": "19708029", "state": "in paper_registry"},
+      {"pmid": "15064722", "state": "in paper_registry"},
+      {"pmid": "20146584", "state": "in paper_registry"},
+      {"pmid": "16061658", "state": "in paper_registry"},
+      {"pmid": "17458891", "state": "in paper_registry"}
+    ],
+    "queued": [
+      {"pmid": "18974271", "queue": "full_text_queue_current#FT-046", "why": "UNKNOWN to LEGEND before today. Cited in the Introduction as the primary source for 'Wwox KO mice exhibit marked reductions in serum lipid levels' — the premise this paper's whole-body lipid phenotype extends but does not establish."},
+      {"pmid": "15070730", "queue": "full_text_queue_current#FT-046", "why": "UNKNOWN to LEGEND before today. Aqeilan 2004 functional association, founding series of the gene's primary group."},
+      {"ref": 44, "pmid": null, "queue": "full_text_queue_current#FT-046", "why": "Lichtenstein et al., ANGPTL4 inactivates LPL — the load-bearing EXTERNAL premise of the proposed female triglyceride mechanism. Not gene-directed, so a bibliography audit filtered on WWOX would never surface it; queued by hand."},
+      {"ref": 53, "pmid": null, "queue": "full_text_queue_current#FT-046", "why": "Timmins et al., hepatic Abca1 KO lowers plasma HDL by ~80% — the comparator the authors invoke against their own negative result."}
+    ],
+    "dedup_performed": "All 14 gene-directed references checked against paper_registry_current, full_text_queue_current and the receipt ledger on 2026-08-10: 12 already known, 1 of those read completely, 2 unknown and now queued as FT-046.",
+    "owed": [
+      "reference 44 (Lichtenstein et al., ANGPTL4 inactivates LPL) — the external premise carrying the proposed female triglyceride mechanism, unread, and NOT gene-directed, which is why it is absent from the list above",
+      "reference 53 (Timmins et al., hepatic Abca1 KO, ~80% plasma HDL decrease) — the comparator the authors invoke against their own negative result",
+      "of the 14 gene-directed references, dedup against the paper registry is not performed in this session"
+    ],
+    "reason": "Enumerated and declared, not pursued. Today was a reading session; the multi-hop is recorded as debt in the locator file."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Which local full texts carry a structured XML/HTML surface, which of those already have a complete_fulltext_read receipt, and which of the remainder are ranked in the full-text queue? Asked to choose today's paper by queue priority rather than by convenience, and to size the unread structured corpus.",
+    "hits": 33,
+    "finding": "33 of 101 local full texts carry a structured XML/HTML surface; 14 PMIDs have a complete read; 22 structured surfaces do not. Twenty-one of those 22 have no entry in the full-text queue, so they are unranked rather than deprioritised. This paper was the single crossing of 'ranked' and 'structured surface in hand'."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-10",
+    "route": "PubMed esummary for 24871327",
+    "result": "No retraction, no expression of concern, no erratum. Publication types are Journal Article and research support only; no comment/correction references are attached.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+      "sha256": "b3a7c087c9d45f13919338e658f248fe9483643c97f2cea479586a3133ff4562",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/figures/PMID24871327/nihms626914f1a.jpg",
+      "sha256": "3215f9d4206fead25127326054bc4ef9e5a14fb2aa0d26907ffa42b5b05af777",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/figures/PMID24871327/nihms626914f1b.jpg",
+      "sha256": "e1ab81a487bdc539c06cc6a229b28362ecb1a71da120c0e1dddad283f64132f5",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/figures/PMID24871327/nihms626914f2.jpg",
+      "sha256": "d309e3d03018c510e3489773cb47e8bdc1a196c312e8b590555b358eaeede5d3",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/figures/PMID24871327/nihms626914f3.jpg",
+      "sha256": "205d21c0da70ce4afac4c50c698d9544e44bf8711339c88922dc3a962edd4c63",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/figures/PMID24871327/nihms626914f4.jpg",
+      "sha256": "9824297d9255a0f05cb2d1474b36286c2d487cf27499359044d304cba2c6248f",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/figures/PMID24871327/nihms626914f5.jpg",
+      "sha256": "f53566df132ad65541292de8b2231c94cc02b7a35103de4afacd78fb2f1fee80",
+      "kind": "figure"
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMCID PMC4315188 (NIH author manuscript NIHMS626914), full text served by PMC as HTML. Not in the PMC open-access subset: oa.fcgi returns idIsNotOpenAccess and Europe PMC returns 'not open access one', which is why the supplementary PDF could not be retrieved.",
+    "abstract_anchoring_waived": "No locator is abstract-anchored, and none could be. The abstract states the conclusion 'WWOX disruption alters HDL and lipoprotein metabolism' without the distinction the whole reading turns on — that the liver-specific knockout does NOT lower circulating HDL. Every proposition below is either that distinction, a figure panel, a statistical qualification, or an author-declared limitation: precisely the material an abstract drops. Verified mechanically: all sixteen text and table snippets match the body and none matches the abstract.",
+    "entries": [
+      {
+        "proposition": "Deleting Wwox in hepatocytes does NOT lower circulating HDL-C in either sex — the central negative, and the reason 'strong evidence' does not transfer intact.",
+        "snippet": "sole deletion of Wwox in hepatocytes did not result in significant differences in HDL-C plasma concentrations in mice of both genders",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Results, 'Validation of gene expression changes on HDL- and TG-regulators in Wwoxhep−/− mice', closing paragraph"
+      },
+      {
+        "proposition": "The whole-body knockout does show the HDL phenotype, with reduced circulating ApoA-I.",
+        "snippet": "HPLC serum characterization revealed a marked reduction in HDL-C (Figure 5A), concomitant with a significant decrease in circulating ApoA-I levels",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Results, 'Impaired HDL biogenesis in Wwox null mice'"
+      },
+      {
+        "proposition": "The authors' first explanation for the gap between models is incomplete knockdown, not biology — which makes the liver-specific negative weaker evidence than it appears.",
+        "snippet": "Wwox levels were only reduced by 2.85 fold in female and 2.34 fold in male Wwoxhep−/− mice, which might be insufficient to decrease whole-body circulating HDL-C levels",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Discussion, paragraph on why Wwoxhep−/− mice keep normal HDL"
+      },
+      {
+        "proposition": "Their second explanation is that non-hepatocyte liver cells still express Wwox, diluting the knockout.",
+        "snippet": "livers contain other cells including stellate, sinusoidal endothelial and Kupffer cells, which may express Wwox in the livers that were isolated",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Discussion, same paragraph"
+      },
+      {
+        "proposition": "The compensating tissue they propose is the intestine, and they declare it untested. PREMISE: IPOTESI.",
+        "snippet": "The intestine may thus compensate for plasma HDL biosynthesis in this mouse model, warranting additional investigations",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Discussion, same paragraph"
+      },
+      {
+        "proposition": "The whole-body HDL result is measured in two-day-old pups of a strain that dies by four weeks — the systemic state of the animal is a confounder for any lipid readout.",
+        "snippet": "we thus assessed the effect of Wwox deletion in hepatic tissues from two days old Wwox KO mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Discussion, paragraph extending the analysis to the total knockout"
+      },
+      {
+        "proposition": "The haplotype is not necessary for the trait: one of sixteen affected family members does not carry it.",
+        "snippet": "All 16 affected family members except one shared the variant allele haplotype",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Results, 'Resequencing of WWOX in low HDL-C families'"
+      },
+      {
+        "proposition": "The figure caption states the same count independently.",
+        "snippet": "Fifteen of the 16 affected subjects with HDL-C<5th age-sex specific population percentile have the risk alleles",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Figure 1 caption"
+      },
+      {
+        "proposition": "READ FROM THE PANEL, NOT THE TEXT — the pedigree shows the haplotype is neither necessary nor sufficient: affected individual 401 (generation IV) carries no boxed haplotype, and founder 102 carries it while being an unfilled symbol, i.e. HDL-C above the 10th percentile by the figure's own key. The running text names neither.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Family-1 pedigree: filled symbol 401 without a boxed haplotype; unfilled symbol 102 with the boxed risk haplotype.",
+        "surface": "figure",
+        "artifact": "files/fulltext/figures/PMID24871327/nihms626914f1a.jpg",
+        "anchor": "Figure 1A, family 1 pedigree, read at 150 effective ppi with a x3 LANCZOS crop; key from the Figure 1 caption: 'Completely filled symbols <5% HDL-C; Unfilled symbols >10% HDL-C'"
+      },
+      {
+        "proposition": "No coding change in WWOX is implicated: the only nonsynonymous variant among the eight is in a different gene and fails to co-segregate.",
+        "snippet": "among the 8 variants, there is only one nonsynonymous variant (rs289723) in the NLRC5 gene which did not co-segregate with low HDL-C in these families",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Results, 'Resequencing of WWOX in low HDL-C families'"
+      },
+      {
+        "proposition": "Table 2 quantifies that failure and the contrast with the intronic WWOX variants.",
+        "snippet": "rs289723 Chr16:57080528 C (=2) A (=1) 0.267 NLRC5 Exon21 −0.1973 0.1956 0.3131",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Table 2, NLRC5 Exon21 row: Effect −0.1973, SE 0.1956, P-value 0.3131 — against P=0.0005 for rs72790052 and rs4462603 in WWOX Intron5. Every co-segregating variant in the table is intronic."
+      },
+      {
+        "proposition": "The human evidence is positional and no functional assay for the intronic haplotype is offered — yet the Discussion describes co-segregation as perfect.",
+        "snippet": "the minor allele haplotype ‘ATT’ (rs72790052, rs4462603 and rs5818121) perfectly co-segregated with the low HDL-C in families",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Discussion, opening genetics paragraph. Read against the two pedigree exceptions above."
+      },
+      {
+        "proposition": "The text asserts two mRNA reductions in the total knockout while citing a single P-value.",
+        "snippet": "Levels of both AbcA1 and ApoA-I mRNA were decreased in Wwox−/− compared to WT, as assessed by RT-PCR (AbcA1 ***P<0.00058, Figure 5E)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Results, 'Impaired HDL biogenesis in Wwox null mice'"
+      },
+      {
+        "proposition": "READ FROM THE PANEL — Figure 5E marks Abca1 only. ApoAI carries no bracket and no asterisk, with visibly overlapping error bars (WT 1.0, KO about 0.72). ApoA-I mRNA reaches significance only in the separate pure-FVB model of panel F. The panel does not say ApoA-I mRNA is unchanged; it says the paper does not mark it significant there — the CLAIM 005 distinction.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Panel E: the '***P<0.00058' bracket spans the Abca1 pair only; the ApoAI pair is unmarked.",
+        "surface": "figure",
+        "artifact": "files/fulltext/figures/PMID24871327/nihms626914f5.jpg",
+        "anchor": "Figure 5E, read at 150 effective ppi on a x3 LANCZOS crop of the panel"
+      },
+      {
+        "proposition": "The text and the caption of Figure 5 report two different pairs of P-values for the same protein result.",
+        "snippet": "Hepatic ABCA1 and ApoA-I protein levels were also significantly reduced, by 40% and 80%, respectively (Abca1 **P=0.015, ApoA-I ***P=0.0007, Figure 5G–J)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Results, 'Impaired HDL biogenesis in Wwox null mice'. The Figure 5 caption instead prints '**P=0.0015 and ***P=0.007'."
+      },
+      {
+        "proposition": "READ FROM THE PANELS — the figure arbitrates the disagreement one way each: panel H prints **P = 0.0015 (caption right, text mistyped) and panel J prints ***P = 0.0007 (text right, caption mistyped). Neither could be settled from text or captions alone.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Panel H: '**P = 0.0015'. Panel J: '***P = 0.0007'.",
+        "surface": "figure",
+        "artifact": "files/fulltext/figures/PMID24871327/nihms626914f5.jpg",
+        "anchor": "Figure 5, panels H and J, read at 150 effective ppi on a x3 LANCZOS crop"
+      },
+      {
+        "proposition": "The Discussion builds the female-specific triglyceride mechanism on hepatic Angptl4 in females.",
+        "snippet": "the increased production of hepatic Angptl4 in Wwoxhep−/− females (Suppl. Table 2A, Figure 4C, F) was concomitant with the observed elevated serum TG levels",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Discussion, 'Gender was an important factor' paragraph"
+      },
+      {
+        "proposition": "READ FROM THE PANEL — Figure 4F prints *P = 0.0229 for males and P = 0.0877 for females. The ANGPTL4 protein increase is significant in males and NOT in females, so the female-specific mechanism rests on the group where its proposed mediator does not rise significantly. Neither number appears in the Results text or the caption; the panel is their only source. The female TG phenotype itself is real and visible in panel J.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Panel F: bracket over Males labelled '*P = 0.0229'; bracket over Females labelled 'P = 0.0877', without an asterisk.",
+        "surface": "figure",
+        "artifact": "files/fulltext/figures/PMID24871327/nihms626914f4.jpg",
+        "anchor": "Figure 4F, read at 150 effective ppi on a x3 LANCZOS crop"
+      },
+      {
+        "proposition": "The paper's summary judgement on sex, which locator 14 qualifies rather than refutes.",
+        "snippet": "These data support the observation that Wwox seems to play a more prominent role in female HDL, TG and FA metabolisms",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Discussion, 'Gender was an important factor' paragraph"
+      },
+      {
+        "proposition": "READ FROM THE PANELS — the female-dominant reading holds for the function ranking and inverts for the canonical pathways: Figure 2B tops out at about 2.0 in −log10(p) for females while Figure 2D reaches about 5.3 for males. Every female canonical pathway the text lists sits between P about 0.013 and 0.048, and no FDR is reported for that panel; the Benjamini-Hochberg values quoted in the text belong to the functions of panel A.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Panel B x-axis maximum about 2.0; panel D x-axis maximum about 5.5 with acute-phase response signalling at about 5.3. Threshold line at 1.3.",
+        "surface": "figure",
+        "artifact": "files/fulltext/figures/PMID24871327/nihms626914f2.jpg",
+        "anchor": "Figure 2, panels B and D, read at 150 effective ppi"
+      },
+      {
+        "proposition": "READ FROM THE PANEL — the male 'lipid metabolism' gene set is dominated by acute-phase and immune genes, so the IPA label carries a broader set than the phrase implies.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Panel B row labels include Saa1, Saa3, Apcs, Socs3, Stat3, Hpx, Cp alongside the lipid genes.",
+        "surface": "figure",
+        "artifact": "files/fulltext/figures/PMID24871327/nihms626914f3.jpg",
+        "anchor": "Figure 3B, read at 149 effective ppi"
+      },
+      {
+        "proposition": "All two-group comparisons are unadjusted t-tests; no multiplicity correction is declared for the protein and serum panels.",
+        "snippet": "Two-tailed Student’s t-test was used for comparisons between two groups as applicable",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24871327_Iatan2014_PMC.html",
+        "anchor": "Materials and Methods, 'Statistical analysis'"
+      }
+    ]
+  }
+}
