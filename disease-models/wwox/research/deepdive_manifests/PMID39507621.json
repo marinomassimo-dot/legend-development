@@ -1,4 +1,5 @@
 {
+ "schema_version": 2,
  "pmid": "39507621",
  "doi": "10.3389/fgene.2024.1477466",
  "receipt": "FTR-20260804-39507621-01",
@@ -109,87 +110,178 @@
    {
     "proposition": "The WWOX genotype-phenotype relation is a graded spectrum: biallelic null produces the severe DEE pole, biallelic missense the ataxia pole, and null/missense an intermediate range.",
     "snippet": "The phenotype of patients depends on the following combination: premature translation termination due to biallelic null (i.e., frameshift, nonsense, donor/acceptor, splice site, and deletion) variants lead to more severe phenotypes of early epileptic encephalopathy, while biallelic missense variants lead to a predominantly spinocerebellar ataxia phenotype. The phenotype of patients carrying null and missense variants falls in an intermediate range",
-    "anchor": "Discussion, genotype-phenotype paragraph"
+    "anchor": "Discussion, genotype-phenotype paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Carrying at least one missense allele is associated with higher 5-year survival than biallelic null.",
     "snippet": "It has been shown that the risk of mortality correlates with the WWOX genotype, with the presence of at least one missense variant increasing the probability of 5-year survival from <50% to >75%",
-    "anchor": "Discussion, mortality paragraph"
+    "anchor": "Discussion, mortality paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "No region of WWOX has been established as specifically associated with the DEE phenotype.",
     "snippet": "Notably, no specific region within the gene has been conclusively linked to WWOX-DEE.",
-    "anchor": "Introduction, ClinVar variant-count paragraph"
+    "anchor": "Introduction, ClinVar variant-count paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Before this report the oldest published WWOX-DEE patient was under 24 years old, in a literature of roughly 80 patients.",
     "snippet": "Approximately 80 patients with WWOX-DEE have been described in the literature, with the oldest being 23 years and 11 months old at date",
-    "anchor": "Discussion, opening sentence"
+    "anchor": "Discussion, opening sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "A homozygous WWOX missense genotype is compatible with acquisition of sitting, crawling and supported walking in early childhood.",
     "snippet": "The child could sit independently after 1 year, crawl from 1.5 years, and walk with support from 3 years of age.",
-    "anchor": "Clinical features, first paragraph"
+    "anchor": "Clinical features, first paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Motor skills acquired in childhood were subsequently lost, with regression beginning in adolescence and progressing to loss of independent sitting.",
     "snippet": "After 12 years of life, a regression of acquired skills and a reduction of independent motor activity were noted; he ceased to walk and then sit on his own.",
-    "anchor": "Clinical features, third paragraph"
+    "anchor": "Clinical features, third paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Respiratory decline, not seizures, drove the late-stage trajectory, with bulbar failure from the mid-thirties.",
     "snippet": "From 36 years of age, the frequency of pneumonia has increased to four times a year, often requiring inpatient treatment, and bulbar palsy has appeared, leading to tube feeding.",
-    "anchor": "Clinical features, fourth paragraph"
+    "anchor": "Clinical features, fourth paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Seizures were resistant to seven antiseizure medications spanning distinct mechanisms, over four decades.",
     "snippet": "Various antiseizure medications have been prescribed: phenobarbital, valproic acid, carbamazepine, topiramate, levetiracetam, ethosuximide, and perampanel. No sustained positive effect of treatment was detected.",
-    "anchor": "History of epilepsy"
+    "anchor": "History of epilepsy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The p.Thr12Met residue lies outside the WW and SDR domains, in the N-terminal segment.",
     "snippet": "The variant p. Thr12Met is located in the N-terminal domain and does not fall within any known domains. However, it is predicted as a tyrosine phosphorylation site by NetPhos 2.0 Server",
-    "anchor": "Introduction, penultimate paragraph"
+    "anchor": "Introduction, penultimate paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "The variant is homozygous in exon 1, absent from HGMD and ClinVar at the time, and classified likely pathogenic under ACMG PM2/PM5/PP3/PP4.",
     "snippet": "A homozygous variant in exon 1 of the WWOX gene (hg19, chr16:78133710C>T) NM_016373.4:c.35C>T was identified, leading to the replacement of an amino acid at position 12 (p.Thr12Met).",
-    "anchor": "Exome sequencing, second paragraph"
+    "anchor": "Exome sequencing, second paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Neuron-restricted WWOX re-expression by AAV9 rescued seizures, hypoglycaemia, myelination deficits and lethality in Wwox-null mice, per the report's summary of the cited study.",
     "snippet": "Testing the efficacy of AAV-SynI-WWOX delivery in Wwox-null mice demonstrated that specific neuronal restoration of WWOX expression rescued brain hyperexcitability and seizures, hypoglycemia, myelination deficits, and the premature lethality and behavioural deficits of Wwox-null mice.",
-    "anchor": "Discussion, gene-therapy paragraph"
+    "anchor": "Discussion, gene-therapy paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The interictal EEG at 36 years was recorded with simultaneous ECG and EMG polygraphy on an 18-channel longitudinal bipolar montage, so myoclonic and non-motor discharges are separable in the record.",
-    "snippet": "EEG longitudinal bipolar montage. Sweep: 30 mm/s; sensitivity: 100 mV/mm; bandpass: 1-70 Hz.",
-    "anchor": "Figure 2 and Figure 3, images inspected: channel labels Fp1-F3 through Cz-Pz plus dedicated ECG (250 uV/mm) and EMG (200 uV/mm) traces, timestamps 21/4/2019. The polygraphy is visible only in the images; neither caption nor text mentions the ECG/EMG channels."
+    "proposition": "The published caption states the recording parameters, and states the sensitivity in millivolts per millimetre.",
+    "snippet": "EEG longitudinal bipolar montage. Sweep: 30 mm/s; sensitivity: 100 mV/mm; bandpass: 1–70 Hz.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "anchor": "Caption of Figure 2, printed identically as the caption of Figure 3 — which is why no fragment of it occurs exactly once in the article",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Background organisation was preserved at 36 years: a posterior dominant rhythm was present and sleep retained stages and physiological patterns, despite four decades of daily seizures.",
     "snippet": "shows a background posterior dominant rhythm of 7–8 Hz. Sleep was divided into stages and phases; physiological patterns were well represented.",
-    "anchor": "Clinical features, EEG paragraph"
+    "anchor": "Clinical features, EEG paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Epileptiform activity was sleep-activated, reaching 70-80% of some epochs while staying below 20-25% overall.",
     "snippet": "The prevalence of epileptiform activity increased in sleep, reaching 70%–80% on some epochs, but overall remaining below 20%–25%.",
-    "anchor": "Clinical features, EEG paragraph"
+    "anchor": "Clinical features, EEG paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
     "proposition": "Structural brain imaging was non-contributory in this patient, and MRI was never performed.",
     "snippet": "Brain computed tomography at the age of 35 years did not show any significant pathological lesions. No magnetic resonance imaging of the brain was performed.",
-    "anchor": "Clinical features, final paragraph"
+    "anchor": "Clinical features, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The genetic diagnosis arrived 38 years after onset, the patient having carried a cerebral palsy label for most of his life.",
-    "snippet": "For many years, the patient was given a diagnosis of cerebral palsy; 38 years after the onset of the disease, he was given a molecular genetic diagnosis of WWOX-associated developmental and epileptic encephalopathy.",
-    "anchor": "Abstract"
+    "proposition": "The molecular genetic diagnosis arrived 38 years after the onset of the disease.",
+    "snippet": "Thus, the patient was given a molecular genetic diagnosis of WWOX -associated developmental and epileptic encephalopathy 38 years after the onset of the disease.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+    "anchor": "Exome sequencing, closing sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The figure contradicts its own caption on the amplitude scale: the caption says 100 mV/mm and the calibration bar on the trace reads 100 microvolts, which is the only physiologically possible EEG sensitivity of the two.",
+    "snippet": "The calibration bar drawn between the Cz-Pz trace and the polygraphy channels is labelled \"100 мкВ\" with a \"1 с\" time bar beside it — 100 microvolts and 1 second in Cyrillic, not 100 millivolts.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_assets/fgene-15-1477466-g002.jpg",
+    "anchor": "Figure 2, image inspected at the returned native 708×529 pixels — calibration bar at the lower left of the trace block",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[11]",
+    "contradicts_needle": "100 mV/mm"
+   },
+   {
+    "proposition": "The record is an 18-channel longitudinal bipolar montage with simultaneous ECG and EMG polygraphy, so myoclonic and non-motor discharges are separable in it. None of this is in the caption or the running text.",
+    "snippet": "Eighteen bipolar derivations are labelled down the left margin from Fp1-F3 to Cz-Pz, and beneath them run two further traces labelled in Cyrillic: ЭКГ 250 мкВ/мм and ЭМГ 200 мкВ/мм — ECG and EMG at 250 and 200 microvolts per millimetre. The epoch timestamps read 21/4/2019.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_assets/fgene-15-1477466-g002.jpg",
+    "anchor": "Figure 2, image inspected at the returned native 708×529 pixels — channel labels down the left margin, polygraphy traces along the bottom",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Figure 3 is the same montage and the same polygraphy at a later epoch of the same day, so the polygraphy is a property of the recording and not of one selected epoch.",
+    "snippet": "The same eighteen derivations from Fp1-F3 to Cz-Pz with the same ЭКГ 250 мкВ/мм and ЭМГ 200 мкВ/мм traces beneath them, and the same \"100 мкВ\" calibration bar; the epoch timestamps read 21/4/2019 18:06 against 15:52 in Figure 2.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID39507621_Teplyshova2024_assets/fgene-15-1477466-g003.jpg",
+    "anchor": "Figure 3, image inspected at the returned native 708×530 pixels — timestamps along the polygraphy channels",
+    "panel_text_relation": "panel_only"
    }
   ],
   "waived": false,
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:39507621 on 2026-08-07: inEPMC=Y, PMCID PMC11537890, hasPDF=Y — full text is indexed, so an external validator can re-verify body quotes.",
-  "note": "Sixteen locators captured during the reading, not reconstructed afterwards. One (the EEG polygraphy) is anchored to an inspected image rather than to text, and is recorded precisely because neither the caption nor the body states it. All three figures were inspected, including Figure 1, a clinical photograph. The first pass abstained from that image on privacy grounds and was wrong to: the privacy risk lives in what LEGEND records, not in what it looks at, so abstaining protected nothing and left the D-14 failure mode — a caption that misdescribes its own image — unchecked. The non-identifying finding is recorded and no description of the individual is: the image is publisher-redacted across the lower face, the three dysmorphic features named in the caption lie in the visible region and are not contradicted by it, and no feature is visible that the text omits. The image resolution does not support independent grading of palpebral-fissure slant, so the caption is uncontradicted rather than confirmed.\n\n🔴 LOCATOR AUDIT AND PARTIAL REPAIR 2026-08-10. Four of sixteen text snippets did not occur in the local XML. TWO were the transcription class and are repaired — en dashes written as hyphens in `7–8 Hz`, `70%–80%`, `20%–25%` — each re-taken from the artifact and verified to begin and end where the recorded quote did. TWO ARE REFUSED AND LEFT ALONE, which is the point of a mechanical repair having refusals at all: entry 11 contains no fragment of sixteen characters that occurs exactly once in the source, so no anchor can be trusted; entry 15 aligns onto a LATER CLAUSE and would come back 215 characters shortened to 117 — a `strict` match to a DIFFERENT sentence, which is the failure mode that looks most like success. Both need a reader with the paper open, not an algorithm. Declared here rather than repaired."
- }
+  "note": "Sixteen locators captured during the reading, not reconstructed afterwards. One (the EEG polygraphy) is anchored to an inspected image rather than to text, and is recorded precisely because neither the caption nor the body states it. All three figures were inspected, including Figure 1, a clinical photograph. The first pass abstained from that image on privacy grounds and was wrong to: the privacy risk lives in what LEGEND records, not in what it looks at, so abstaining protected nothing and left the D-14 failure mode — a caption that misdescribes its own image — unchecked. The non-identifying finding is recorded and no description of the individual is: the image is publisher-redacted across the lower face, the three dysmorphic features named in the caption lie in the visible region and are not contradicted by it, and no feature is visible that the text omits. The image resolution does not support independent grading of palpebral-fissure slant, so the caption is uncontradicted rather than confirmed.\n\n🔴 LOCATOR AUDIT AND PARTIAL REPAIR 2026-08-10. Four of sixteen text snippets did not occur in the local XML. TWO were the transcription class and are repaired — en dashes written as hyphens in `7–8 Hz`, `70%–80%`, `20%–25%` — each re-taken from the artifact and verified to begin and end where the recorded quote did. TWO ARE REFUSED AND LEFT ALONE, which is the point of a mechanical repair having refusals at all: entry 11 contains no fragment of sixteen characters that occurs exactly once in the source, so no anchor can be trusted; entry 15 aligns onto a LATER CLAUSE and would come back 215 characters shortened to 117 — a `strict` match to a DIFFERENT sentence, which is the failure mode that looks most like success. Both need a reader with the paper open, not an algorithm. Declared here rather than repaired.\n\n🔴 SCHEMA v2 UPGRADE AND REFUSAL RESOLUTION 2026-08-10. The two quotes the mechanical re-capture refused on 2026-08-10 are resolved here, and the refusals were right for two different reasons no algorithm could have separated.\n\nENTRY 11 was a figure caption printed IDENTICALLY under Figure 2 and Figure 3, so no fragment of it occurs exactly once in the article and the tool correctly declined to anchor on an ambiguous match. Its only defect was an en dash written as a hyphen in `1–70 Hz`. It also carried the same shape of defect this corpus keeps finding: a proposition about the montage and the ECG/EMG polygraphy, evidenced by a snippet that is the caption and says nothing about either. The caption is now its own text locator, and what the images show is in locators of their own.\n\nENTRY 15 was never in the body: it is in the ABSTRACT, which `_artifact_text` separates deliberately, so no re-capture could have found it and none should have. Under schema v2 abstract material cannot carry an evidentiary locator, so the locator now quotes the body sentence that states the 38-year diagnostic delay. The other half of the old proposition does not survive the move, and that is a fact about the paper worth recording: the phrase \"cerebral palsy\" appears NOWHERE in the article body. It exists only in the abstract — \"For many years, the patient was given a diagnosis of cerebral palsy; 38 years after the onset of the disease, he was given a molecular genetic diagnosis of WWOX -associated developmental and epileptic encephalopathy.\" — and is preserved here verbatim rather than carried by a locator the schema forbids.\n\nOPENING THE IMAGES TO SETTLE ENTRY 11 PRODUCED THE FINDING OF THE RUN. Both captions print `sensitivity: 100 mV/mm`; both figures carry a calibration bar reading `100 мкВ` — 100 microvolts. Millivolts per millimetre is not a possible EEG sensitivity, so the published caption is wrong and the panel it describes says so. It is recorded through `text_contradicted_by_panel` with `contradicts: entries[11]` and the needle `100 mV/mm`, which is what that grammar was built for, instead of a sentence in this note that no command can check. The polygraphy channels themselves are visible only in the images: ЭКГ and ЭМГ traces, labelled in Cyrillic, mentioned by neither caption nor running text.\n\nThree artifacts declared and fingerprinted: the JATS XML and the two EEG figures, retrieved from pmc.ncbi.nlm.nih.gov/articles/instance/11537890/bin/ and written into the shared checkout's `files/`. Panel/text relation is declared on all nineteen locators."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID39507621_Teplyshova2024_PMC.xml",
+   "sha256": "e9330a4084654d6beba81cd523d5d52ef9f8d34a3a720301d085d4f6457d79c9",
+   "kind": "article_text"
+  },
+  {
+   "path": "files/fulltext/PMID39507621_Teplyshova2024_assets/fgene-15-1477466-g002.jpg",
+   "sha256": "351ceafc9616a2df7ef638e76cd70ce2209c10e3c5573cba53b1912467247fdb",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID39507621_Teplyshova2024_assets/fgene-15-1477466-g003.jpg",
+   "sha256": "9fcb0abebd29907dec2c7eb16f4f551423e8f474205c96eae2698d631d45ca91",
+   "kind": "figure"
+  }
+ ]
 }
