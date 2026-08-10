@@ -67,7 +67,14 @@ class ArchiveVerdictIntegrationTests(unittest.TestCase):
                 capture_output=True, text=True)
         combined = result.stdout + result.stderr
         self.assertEqual(result.returncode, 0, combined)
-        self.assertIn("REGRESSION VERDICT: PASS WITH SKIPS (1 targets, 1 skipped)", combined)
+        # The property under test is that a git-anchored verification which cannot run is
+        # REPORTED as unrun, not folded into a clean PASS. How MANY such tests exist is
+        # incidental and grows every time another check learns to fail closed without a git
+        # object database — which is the desirable direction. Pinning "1 skipped" made that
+        # improvement look like a regression: adding the sealed-blob skip to
+        # `test_two_file_reseal_disagrees_with_pinned_git_tree` turned this red while the
+        # runner was doing exactly what it should.
+        self.assertIn("REGRESSION VERDICT: PASS WITH SKIPS (1 targets,", combined)
         self.assertIn("Git object database absent", combined)
         self.assertNotIn("REGRESSION VERDICT: PASS (1 targets)", combined)
 
