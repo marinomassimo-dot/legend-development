@@ -1264,17 +1264,23 @@ Sono scritte qui perché il prossimo giro parta già puntato, non perché siano 
    esperimento nominato, non dalla frequenza della parola.** Una ricerca tecnica risponde a una
    domanda d'esistenza, mai a una domanda di contenuto — è la regola 4 applicata al proprio
    strumento di triage.
-   🔴 **E l'ispezione dei contesti di `K274` ha fatto emergere di passaggio qualcosa che rende
-   questa domanda più urgente, non meno.** Uno dei dieci contesti è la Discussione di questo
-   stesso paper: *«exons 5–8 contain the SDR domain, which harbors Lys-274 that is
-   Lys-63-linked polyubiquitinated by ITCH. Whether Lys-274 is the same lysine in the WWOX C
-   terminus that also targets WWOX for degradation is not known.»* Se regge alla lettura, **la
-   fonte lascia aperto se quel residuo sia anche un bersaglio di degradazione** — cioè non
-   afferma la stabilizzazione, e per di più segnala l'ipotesi opposta come non risolta. Sarebbe
-   la differenza fra `DL-MECH-083` come `DATO` e `DL-MECH-083` come inferenza che ha guadagnato
-   una parola attraversando una citazione. **Non lo registro come reperto:** viene da un
-   contesto restituito da un pattern, non da una lettura, ed è esattamente il tipo di frase che
-   va letta nel suo paragrafo prima di pesarla.
+   ⚠️ **Una frase della Discussione sembrava chiuderla e NON la chiude — correzione registrata
+   perché il quasi-reperto era persuasivo.** Avevo isolato *«Whether Lys-274 is the same lysine
+   in the WWOX C terminus that also targets WWOX for degradation is not known»* e ne avevo
+   tratto che la fonte non afferma la stabilizzazione. **Non segue.** Letto il paragrafo intero
+   e verificato verbatim contro l'artefatto, quel *«non è noto»* riguarda **se K274 sia anche
+   il sito di degradazione**, non se la catena K63 stabilizzi: sono domande imparentate e
+   distinte. Se avessi pesato la frase fuori dal suo paragrafo avrei avuto un reperto forte e
+   sbagliato. **La domanda 2 resta aperta esattamente dov'era.**
+   🔴 **Il paragrafo però serve alla lettura vera, per un'altra ragione:** introduce
+   **Mahajan et al. (rif. 62)** — *«full-length WWOX but not a truncated form of WWOX that
+   lacks the C terminus, WWOXΔ5–8, is polyubiquitinated **and degraded**»* — cioè una
+   **seconda via di ubiquitinazione su WWOX, con esito degradativo**, accanto a quella
+   ITCH/K63/K274. Il rif. 62 è **PMID 16288044**, Mahajan 2005 *Cancer Res* 65:10514–10523,
+   *«Role of Ack1 in polyubiquitination of tumor suppressor Wwox»*, **già presente in LEGEND
+   come `corpus placeholder`** e già trattato in `DL-MECH-048` e `DIS-001`. La lettura deve
+   quindi pesare la stabilizzazione **sapendo che la via alternativa è documentata**, non come
+   se il default fosse semplicemente invertito. Vedi la calibrazione in coda a `DL-MECH-083`.
 **Come è emersa:** dalla lettura di `25331887` (`FTR-20260810-25331887-01`), enumerando le
 premesse importate invece dei risultati.
 **Current status:** ⬜ aperto, artefatto in casa, **identità verificata**. Non iniziato:

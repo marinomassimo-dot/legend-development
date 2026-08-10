@@ -2161,6 +2161,18 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
 - **REVIVAL_TRIGGER:** se il supplementary o il rif. 3 diventano leggibili, riverificare S6C e la mappatura ITCH→K274 e promuovere o declassare di conseguenza.
 - **Interconnessioni:** `DEFAULTS THAT BIT US` in [[dismissal_ledger_current]] · `DL-METH-084` · [[epistemic_discipline]].
 
+#### 🔴 CALIBRAZIONE 2026-08-10 — questa voce era scritta come se fosse nuova, e il modello sapeva già più di lei
+Aperto il rif. 3 (`PMID 24550385`, `FT-054`) sono emerse tre cose che riscrivono la voce sopra. Registrate qui invece che riscrivendola, perché la differenza fra ciò che avevo concluso e ciò che il modello già conteneva è essa stessa il reperto.
+
+1. **`DL-MECH-083` non si aggancia a niente, e doveva.** `DL-MECH-048` (superseded), `DIS-001` (**riaperta**) e la riga **`D-01`** della tabella `DEFAULTS THAT BIT US` trattano già ACK1/ITCH e il default *polyUb → proteasoma*, con più sfumature di quante ne avessi io. **Mahajan 2005 è già in casa come `corpus placeholder`, PMID 16288044.** Ho scritto una voce parallela a un ragionamento esistente: è la stessa **applicazione disomogenea** che ho contestato altrove oggi, commessa da me.
+
+2. **La formulazione giusta non è «il default è invertito», è «su WWOX la via è biforcata».** Il rif. 3 nomina **due** vie di ubiquitinazione con esiti opposti sulla stessa proteina: la propria — ITCH, catena **K63**, **Lys-274**, esito localizzazione nucleare — e quella di Mahajan, dove **WWOX full-length è poliubiquitinato *e degradato*** mentre `WWOXΔ5–8` non lo è. Gli autori notano che gli esoni 5–8 contengono proprio il residuo K274 e dichiarano aperto se sia lo stesso: *«Whether Lys-274 is the same lysine in the WWOX C terminus that also targets WWOX for degradation is not known and would be of great interest to determine»* — verificato verbatim contro l'artefatto. Quindi il default non va sostituito con il suo inverso: **va sostituito con l'obbligo di misurare la via**, che è ciò che `D-01` diceva già.
+
+3. ✅ **E qui il ri-audit produce compounding invece di sola correzione.** `DIS-001` porta, come cautela argomentata e senza fonte, *«inhibiting ITCH would strip WWOX of its DDR function via ATM»*. Era un ragionamento scritto **prima** che qualcuno leggesse `25331887`. Adesso ha una misura sotto: `25331887` mostra che la deplezione di WWOX smorza il checkpoint ATM, e in **Fig 7C** che i MEF `Itch`-KO hanno p-KAP1 ridotto **e** accumulo di WWOX ridotto. **La cautela di `DIS-001` passa da inferenza a inferenza sostenuta**, e la sua conclusione operativa — ITCH come *sonda sperimentale*, mai come bersaglio terapeutico — si rafforza.
+
+- **PREMISE_TAG aggiornato:** `PREMISE: DATO` per l'identificazione ITCH/K63/Lys-274 (spettrometria sul peptide `FTDINDSLGK274LDFSR` più mutagenesi `K274R`, rif. 3 Fig 5 E–G — da riverificare come locator alla lettura completa); 🔴 `PREMISE: NON RISOLTA` per la **stabilizzazione**, che poggia sulla sola asserzione di `25331887` con l'evidenza in `Fig S7B`, cioè in un supplementary **irrecuperabile** (`FT-053`).
+- **Interconnessioni aggiunte:** `DL-MECH-048` · `DIS-001` · `D-01` · `FT-053` · `FT-054` · PMID **16288044**.
+
 ### DL-METH-084 — **Due paper dello stesso laboratorio si contraddicono sulla direzione dell'HDR, lo dicono in stampa, e la spiegazione pubblicata è incompleta**
 - **Status:** open · **Tag epistemico:** `DATO` per entrambe le misure; `INFERENZA` per la riconciliazione.
 - **Fonti:** PMID **25331887** (2014) e PMID **38499540** (2024), entrambi con Aqeilan autore senior, entrambi letti il 2026-08-10.
