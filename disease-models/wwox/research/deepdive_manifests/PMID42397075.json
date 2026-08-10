@@ -1,0 +1,333 @@
+{
+  "schema_version": 2,
+  "pmid": "42397075",
+  "doi": "10.1093/brain/awag239",
+  "receipt": "FTR-20260810-42397075-03",
+  "landing": [
+    "FTR-20260810-42397075-03",
+    "PMID42397075_partial_locators.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline; figure inspection and locator capture had to come from the same open document."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "PDF and all five supplements were already in the shared files/ tree. Checked there first — the lesson from PMID 42422765, where I declared a supplementary unavailable that another actor had already fetched."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "OWED and specific. A51, a multi-kinase inhibitor suppressing Wnt and MYC, is the first pharmacological intervention in a human WWOX-deficient neural model in this corpus. It belongs in the hypothesis ledger at IPOTESI level; forging is separate work and is not claimed as done."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "OWED for A51 if it is ever promoted: a multi-kinase Wnt/MYC suppressor in a paediatric CNS context is a BLOCK-1 question, not a footnote."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "OWED. The reading qualifies the paper's central thesis on a panel the running text does not quantify, which is the trigger condition."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 137,
+    "publications_on_gene": 65,
+    "counts_measured": "PubMed esearch 2026-08-10: 'Aqeilan RI[au]' 137, 'Aqeilan RI[au] AND WWOX' 65.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": true,
+    "is_primary_group_for_gene": true,
+    "weighting": "Primary group for gene and disease, co-led here with a computational group (Davila-Velderrain). The observation and the interpretation separate cleanly in this paper and should be weighted apart: the organoid derivation, patient-line reprogramming and electrophysiology are the laboratory's own and carry its full weight; the single-cell inference, potency and cell-cycle analyses are the collaborator's and are the parts on which the WWOX-MYC thesis rests. Three of the paper's own statistics — no randomization or blinding, and scRNA-seq / MYC inhibition / ChIP-seq performed without independent differentiations — apply precisely to that second half.",
+    "note": "Research-group knowledge base excluded from the public edition; this rests on measured counts, the Methods, the author contributions supplement and the statistics section."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "Aqeilan RI[au] AND WWOX",
+        "route": "PubMed esearch 2026-08-10",
+        "count": 65
+      }
+    ],
+    "note": "Maximum density: human WWOX-deficient and patient-derived cerebral organoids from the gene's primary laboratory."
+  },
+  "multihop": {
+    "performed": false,
+    "references_enumerated": 104,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "Reference list parsed from the extracted text: 104 numbered entries, 86 carrying a DOI and none carrying a PMID in the accepted-manuscript format. Because the list is DOI-keyed rather than PMID-keyed, deduplication against the registry needs DOI resolution first — and FT-034 already recorded that a bibliography audit on a single key overstates its results in the direction that flatters it. Not attempted on one key here.",
+    "resolved": [],
+    "queued": [],
+    "reason": "Enumerated and explicitly not deduplicated. Recording the count and the reason the usual method does not apply is the honest state; running a PMID-keyed dedup against a DOI-keyed list would have produced a reassuring and meaningless number."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Which artifacts for this paper already exist in the shared files/ tree, before I fetch or derive anything?",
+    "hits": 7,
+    "finding": "The PDF, the derived text surface from 9 August, and five supplementary PDFs — all present, the supplements since 1 July. The detailed Materials and methods live in File009, which is the sole reason methods was not_read across two prior receipts. Nothing needed fetching."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-10",
+    "route": "PubMed esummary for 42397075",
+    "result": "No retraction, no expression of concern, no erratum. Accepted manuscript, Brain, 2026 Jul 3.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+      "sha256": "b6b44816bb5a029ad6dd3760dbf02ae94c5fcb69f8a9b5721f45c128bbf189a0",
+      "kind": "article_binary"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+      "sha256": "9c48aa0934648f58f8f5d3b39fa73b0f31e0b0d8d284914b32bd5e3f9b34bb17",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "sha256": "19d1b1d7305315159f4319ece8e7da745015564cc94932058f1eeccd45aa6771",
+      "kind": "article_binary"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p32_1430x1348.jpeg",
+      "sha256": "7672818f61351ada7bf536d1ccc373e0769d1e5d8b3d93a5b83124f0e191c154",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p33_1217x776.jpeg",
+      "sha256": "b4867ea83ed22f75261f873677f923c0b87788c80ac2381da1faba24847689d2",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p34_1430x1589.png",
+      "sha256": "e072368ea710687ffcd422532b160a687ad02f162cf5e3f78e5b603f59acbc56",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p35_1430x749.png",
+      "sha256": "7266ce17be1e67734f765b57318319d35d5b8ef89a0bb9b9ef6767bcd5e08647",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p35_1430x795.jpeg",
+      "sha256": "103412d12ef433931b97cae6d946727d476f417398aa579c06b16fb4a1268b55",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p36_1430x1754.jpeg",
+      "sha256": "23a4ecd347184d9bbe5ef1e59c818bc732486d77da3913b58ee4ae134cad8f4a",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/S10_caption_p19_200dpi.png",
+      "sha256": "46851bc8a546a1d65c9bd72186c1542b2a569cc45199a384633e80066f98d3b3",
+      "kind": "figure"
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": false,
+    "source_fulltext_indexed_evidence": "No PMC deposit: esummary returns only pubmed, doi and pii, and elink to pmc returns nothing. Recorded per rule 5d rather than assumed. The paper is an accepted manuscript, so the PDF plus its fingerprinted derived text is the correct artifact pairing.",
+    "abstract_anchoring_waived": "The accepted-manuscript surface carries no separately delimited abstract, and every proposition below is a methodological bound, a panel reading or a qualification of the central thesis — none of which an abstract would carry.",
+    "surface_note": "🔴 The extracted text interpolates LINE NUMBERS into the flow, because the source is a line-numbered accepted manuscript. A quote spanning a line break therefore contains a stray digit and fails verification. Nine of fifteen candidate snippets failed for exactly this reason and were shortened to fragments lying within one line, rather than the surface being normalised — cleaning it would launder the defect into every quote drawn from it, which is the standing rule for suspect surfaces applied to a benign but real one. Each snippet below is the longest fragment that verifies.",
+    "entries": [
+      {
+        "proposition": "MYC is the top significantly upregulated gene in WWOX-deficient radial glia — the observation the paper's title rests on.",
+        "snippet": "the proto-oncogene MYC (also known as c-Myc) as the top significantly upregulated gene",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Results, 'Inverse relationship between MYC and WWOX', p. 8",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — captured 2026-08-09 while looking for the paper's central claim"
+      },
+      {
+        "proposition": "The inverse WWOX-MYC relationship is claimed as a first in non-neoplastic tissue.",
+        "snippet": "first time that an inverse relationship between WWOX and MYC has been observed in",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Results, p. 8. Fragment ends at a line break; the sentence continues 'non-neoplastic tissue.'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — 2026-08-09"
+      },
+      {
+        "proposition": "🔴 THE CENTRAL PHENOTYPE IS ALMOST ENTIRELY IN THE ENGINEERED KNOCKOUT, NOT IN THE PATIENT LINES. Figure 2F plots cell-fraction log2FC against WT: the WWOX-KO loses neurons at about -2.6 log2FC with radial glia up about +0.55, while SCAR12 and WOREE both sit within roughly ±0.2 of WT on both populations. Panel E shows the same: WT and both patient lines carry a comparable neuronal fraction, and only the KO is depleted. The paper is titled 'impairs neurogenesis in human brain organoids'; on composition, the two patient-derived genotypes are close to wild type.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2F, 'RGs and Neu cell fraction changes', log2FC versus WT: WWOX-KO Neu about -2.6 and RGs about +0.55; SCAR12 Neu about -0.2 and RGs about -0.15; WOREE both within about 0.05. Panel D cell counts: WT 5649, WWOX-KO 3020, SCAR12 3422, WOREE 5916.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p33_1217x776.jpeg",
+        "anchor": "Figure 2, panels D, E and F, read at 174 effective ppi from the image embedded in the PDF at native resolution",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found — opening Figure 2 for the first time; the asymmetry is the first thing panel F shows"
+      },
+      {
+        "proposition": "The Figure 2 caption fixes what panel F plots, so the comparison above is the one the authors drew.",
+        "snippet": "populations fraction changes in WWOX-mutated organoids, calculated relative to the WT",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Figure 2 caption, panel F",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read before interpreting the panel, per the rule adopted earlier today"
+      },
+      {
+        "proposition": "The patient lines DO carry a maturation phenotype even though composition is near-normal: both invert the early/late neuronal balance relative to WT. Composition and maturation are separable, and the paper's phenotype in patient cells is the second.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5F: WT near 35 percent early / 65 percent late; WOREE and SCAR12 both near 65 / 35. Figure 5G: log2FC versus WT positive for early and negative for late in both patient lines. n = 9094 cells.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p35_1430x795.jpeg",
+        "anchor": "Figure 5, panels F and G, read at 204 effective ppi",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found — reading Figure 5 panels F and G"
+      },
+      {
+        "proposition": "GUARD AGAINST A FALSE INFERENCE, recorded because the inference was one step away. Figure 5E shows canonical Wnt signalling among negatively-enriched GO processes, and A51 suppresses Wnt — but the caption states the contrast is developmental stage, not genotype, so a negative NES means Wnt is higher in early cells. Nothing about WWOX follows from that panel.",
+        "snippet": "Representative Gene Ontology (GO) terms enriched in “late” cells compared to “early” cells",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Figure 5 caption, panel E",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — I read the caption before asserting, which is the only reason the false inference was not written"
+      },
+      {
+        "proposition": "WWOX-KO radial glia shift toward S and G2M with M depleted, and MYC expression correlates with S/G2M in the KO where it correlates with G1/G0 in WT. This is the mechanistic core of the cell-cycle argument.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 4C, cell proportion log2FC KO/WT: S about +0.78, G2M about +0.5, G1/G0 about -0.2, M about -0.35, with no error bars and no significance markers. Figure 4A: the KO and WT density curves along cell-cycle pseudotime are near-superimposed. Figure 4D: MYC-phase correlation about +0.2 for S in KO, negative for M, and near zero across all phases in WT.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p35_1430x749.png",
+        "anchor": "Figure 4, panels A, C and D, read at 204 effective ppi. n = 2396 KO and 2152 WT radial glia per the caption.",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found — the absence of error bars on panel C is visible on opening it"
+      },
+      {
+        "proposition": "The Figure 4 caption confirms the overrepresentation direction the panels show.",
+        "snippet": "overrepresented in WWOX-KO condition and in S - G2M phases",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Figure 4 caption, panel H",
+        "panel_text_relation": "text_and_panel_agree",
+        "found_or_sought": "found — caption read alongside the panel"
+      },
+      {
+        "proposition": "🔴 ASYMMETRIC SIGNIFICANCE IN THE ChIP-seq PANEL. Figure 4J tests MYC promoter binding at immature-neuron genes against a null of 1000 random gene sets. The caption reports a P value for the wild type only. The panel places WT far outside the null distribution and the KO inside it — i.e. MYC binds those promoters significantly in WT and not detectably in the knockout. No P is given for the KO, so 'not significant' is the reading the panel supports and not a statement the paper makes. Same structure as CLAIM 005: an unmarked comparison is not a declared negative.",
+        "snippet": "1000 iterations with randomly selected gene sets of equal size (WT P-val < 0.0001)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Figure 4 caption, panel J",
+        "panel_text_relation": "text_and_panel_agree",
+        "found_or_sought": "found — the caption gives one P value where the panel shows two conditions"
+      },
+      {
+        "proposition": "The panel reading paired with that caption.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 4J: null histogram of mean MYC promoter binding density centred near 1.25; the WT marker sits at about 1.85, outside the distribution, and the KO marker at about 1.1, inside it.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p35_1430x749.png",
+        "anchor": "Figure 4, panel J, read at 204 effective ppi",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found — opening Figure 4"
+      },
+      {
+        "proposition": "🔴 TEXT CONTRADICTED BY PANEL — the rescue is described as reaching wild-type level, and the figure never tests that comparison. Body half of the pair.",
+        "snippet": "hyperexcitability to a level similar to the WT organoids",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Results, p. 13, describing Figure 6A(ii)",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "evidence_pair": "fig6aii_rescue_similar_to_wt",
+        "found_or_sought": "sought — 2026-08-09, looking for how the rescue was characterised"
+      },
+      {
+        "proposition": "🔴 Panel half of the same pair: Figure 6A(ii) carries significance brackets for WT-versus-EGFP and EGFP-versus-treated only. There is no WT-versus-treated bracket, so 'a level similar to the WT organoids' describes a comparison the figure does not draw.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 6A(ii): brackets present for WT vs EGFP and for EGFP vs AAV9-hSynI-WWOX; no bracket joining WT and the treated condition.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p36_1430x1754.jpeg",
+        "anchor": "Figure 6, panel A(ii), inspected at native resolution 2026-08-09",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "evidence_pair": "fig6aii_rescue_similar_to_wt",
+        "found_or_sought": "found — 2026-08-09, on opening the panel; the missing bracket is what prompted checking the sentence"
+      },
+      {
+        "proposition": "The rescue corrects neuronal function without correcting radial-glia abnormalities — the authors' own statement of what the therapy does and does not reach.",
+        "snippet": "rescued neuronal functional phenotypes without correcting RG abnormalities",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Discussion, p. 16",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — 2026-08-09"
+      },
+      {
+        "proposition": "The absence of an effect on radial glia is offered as a safety signal for the AAV approach.",
+        "snippet": "the RGs, as appreciated by the absence of differentially expressed genes",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Results, p. 13, on AAV9-WWOX infection of WOREE organoids",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — 2026-08-09"
+      },
+      {
+        "proposition": "The authors name the limits of the AAV approach, including a time-limited intervention window — the organoid counterpart of the P0-P5 ceiling recorded for PMID 42422765.",
+        "snippet": "promoter specificity, vector targeting efficiency, and the time-limited nature",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Discussion, p. 16. Fragment lies within one line of the line-numbered surface.",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — 2026-08-09"
+      },
+      {
+        "proposition": "🔴 THE SAFETY READING IS HALF THE FIGURE'S OWN TITLE. The article cites Supplementary Fig. 10C-F for the absence of radial-glia effects and calls it a safety profile. That figure is titled 'Neuron-targeted gene therapy affects cortical layer marker expression, with no effect on radial glia transcriptome' — the radial-glia half is quoted, the cortical-layer half is not. The layer change is presumably the intended therapeutic effect, since panels B and C measure SATB2 and CTIP2, but it is a vector-induced change in layer-marker identity and the sentence citing this figure for safety does not mention it.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure 10 title as printed: 'Neuron-targeted gene therapy affects cortical layer marker expression, with no effect on radial glia transcriptome'. Panels B and C are qPCR for SATB2 and CTIP2 at week 16.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/S10_caption_p19_200dpi.png",
+        "anchor": "Supplementary figures volume page 19, rendered at 200 effective ppi from brain-2025-03809-File010.pdf. n = 4 WT organoids and n = 6-8 per patient-line condition; one-way ANOVA with Benjamini-Hochberg correction.",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found — mapping the supplementary figures volume; the title states it in its own words and I was not looking for it"
+      },
+      {
+        "proposition": "SCAR12 patient organoids show hyperexcitability, reported as a novel finding consistent with patient seizures.",
+        "snippet": "SCAR12 patient-derived organoid recordings also showed",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Results, p. 6. Fragment ends at a line break; the sentence continues 'hyperexcitability, a novel finding'.",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — 2026-08-09"
+      },
+      {
+        "proposition": "🔴 THE FUNCTIONAL PILLAR IS NOT MYC-SELECTIVE. The MYC-inhibition experiment uses A51, which the paper itself describes as a multi-kinase inhibitor suppressing both Wnt and MYC, at 125 nM from week 8 to week 15. Any causal attribution to MYC inherits that ambiguity. It is also the first pharmacological intervention in a human WWOX-deficient neural model in this corpus — IPOTESI-level material for the therapeutic track, and a BLOCK-1 question if ever promoted.",
+        "snippet": "established to suppress Wnt and MYC expression",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Results, p. 11, describing the A51 compound; dose and schedule in supplementary File009, 'MYC inhibition'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — reading the supplementary Methods for the dose, the descriptor 'multi-kinase' was in the article sentence I then went back to"
+      },
+      {
+        "proposition": "🔴 THE THREE EXPERIMENTS CARRYING THE THESIS ARE THE THREE WITHOUT INDEPENDENT DIFFERENTIATIONS. The statistics section lists single-cell RNA-seq, MYC inhibition and NSCs ChIP-seq as the exceptions — precisely the three the WWOX-MYC interplay rests on. Everything else was replicated across independent differentiations.",
+        "snippet": "Experiments were performed in independent differentiations, except for single-cell RNA-",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Statistical analysis, supplementary File009 and article. Fragment ends at a line break.",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — reading the statistics section to interpret the panels"
+      },
+      {
+        "proposition": "No blinding and no randomization, stated without qualification. Against the same laboratory's two other 2026/2021 papers read the same day this is a gradient: unconditional blinding in PMID 34747138, 'when feasible' in PMID 42422765, none here.",
+        "snippet": "No randomization or blinding was applied in this study",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Statistical analysis",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — recognised while reading the statistics because the other two papers were in mind, not because a gradient was being looked for"
+      },
+      {
+        "proposition": "What the statistics do better than either sibling paper: normality tested, ANOVA with Tukey or Dunnett, or multiple t-tests with Benjamini-Hochberg FDR — multiplicity correction named, which neither PMID 34747138 nor PMID 42422765 declared.",
+        "snippet": "multiple t-tests correcting for multiple comparisons by controlling the False Discovery Rate",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "anchor": "Statistical analysis",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — same reading pass as the blinding sentence"
+      }
+    ]
+  }
+}
