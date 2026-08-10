@@ -1,0 +1,180 @@
+{
+ "schema_version": 2,
+ "pmid": "24308844",
+ "doi": "10.1021/bi400987k",
+ "receipt": "FTR-20260810-24308844-01",
+ "landing": ["FTR-20260810-24308844-01", "full_text_queue_current"],
+ "skills_considered": [
+  {"skill": "legend-study-intake-triage", "used": true},
+  {"skill": "find-fulltext", "used": true, "reason": "SURFACE PREFLIGHT, and the three routes disagreed. oa.fcgi answered idIsNotOpenAccess and Europe PMC fullTextXML answered 404, but E-utilities efetch db=pmc returned 174 KB of complete JATS. 'Not open access' does not imply 'no structured surface': the article is an NIHPA author manuscript, deposited and readable, while the OA package is what is withheld. Recorded because two of the three sanctioned routes would have sent a reader to the PDF."},
+  {"skill": "legend-capability-scout", "used": true}
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 1201,
+  "publications_on_gene": 5,
+  "counts_measured": "PubMed esearch, 2026-08-10: 'Farooq A[au]' 1201, 'Farooq A[au] AND WWOX' 5. ⚠️ The surname is common, so 1201 certainly aggregates homonyms and the ratio is NOT interpretable — recorded as measured rather than as a property of this group. What the counts do establish is the only thing they are used for here: this is not the Aqeilan laboratory (137 and 65). Farooq laboratory, University of Miami, biophysics — a different journal (Biochemistry, ACS) and a different discipline (calorimetry, light scattering, molecular dynamics).",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": false,
+  "weighting": "🔴 THE RHETORICAL HOUSE IS THE OPPOSITE ONE, and that is the point of reading it. The previous four papers, three of them from one laboratory, repeatedly turned a quantitative reduction into an absolute negative — 'did not affect', 'but not WFPA', 'but not a catalytic mutant'. This paper does the reverse: it states limits the text could have hidden. It calls its own peptides possibly unphysiological, calls the relevance of two of its three binding sites 'questionable', calls its own light-scattering concentration a practical necessity and the dimerisation it sees probably irrelevant, and says outright that its simulations cannot settle the question they were run for. Observations and interpretive sentences here are weighted the same, because the interpretive sentences declare their own weakness."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {"query": "Farooq A[au] AND WWOX", "route": "PubMed esearch 2026-08-10", "count": 5},
+   {"query": "Farooq A[au]", "route": "PubMed esearch 2026-08-10", "count": 1201, "caveat": "Common surname; aggregates homonyms. Recorded because it was run, not because it characterises this laboratory."}
+  ],
+  "note": "Entirely WWOX-directed at the domain level. No cell biology, no animals, no disease model — and that is why it transfers: residue-level facts about WW1 and WW2 hold for any genotype."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 86,
+  "gene_direct_refs_in_source": [
+   {"ref": 43, "note": "Farooq laboratory's own prior study: WW1 is disordered and folds on ligand binding, WW2 is structured and aids it. The chaperone claim here rests on it."},
+   {"ref": 18, "note": "Aqeilan et al., the in vivo WWOX-ErbB4 interaction this paper provides the molecular basis for."}
+  ],
+  "resolved": [],
+  "queued": [
+   {"ref": 43, "pmid": null, "note": "The load-bearing import: 'WW1 is structurally disordered and folds upon ligand binding, WW2 adopts a fully structured conformation and aids stabilization' is cited, not shown here. The whole chaperone model stands on it. IMPORTED_PREMISE_ATTRIBUTION_GATE."}
+  ],
+  "note": "Two imports carry this paper. Neither is resolved to a PMID in this pass; declared rather than assumed."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does this explain a reagent the readings already in this repository depend on?",
+  "hits": 1,
+  "finding": "🔴 YES, and it is the reason this paper matters beyond its own subject. PMID 25331887 and PMID 38499540 both use the WWOX-WFPA mutant — tryptophan 44 to phenylalanine, proline 47 to alanine — as the negative control that establishes WW1-dependence for ATM binding and for the DDR function. Neither paper explains why that substitution abolishes binding. This one does, structurally: W44 is one of the two signature tryptophans, and its indole sidechain stacks against P0 of the PPXY motif. So a control reagent used across the corpus gets its mechanism here, from a different laboratory that never mentions ATM."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-08-10",
+  "route": "PMC record header for PMC3906126",
+  "result": "No retraction, no expression of concern, no erratum. NIHPA author manuscript of a Biochemistry research article.",
+  "hold": false
+ },
+ "source_artifacts": [
+  {"path": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml", "sha256": "00da56df985d59b873d8ceea546fdb870138201aaa8c3e22badec660c30581ce", "kind": "article_text"}
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "JATS from E-utilities efetch, body 68617 characters, abstract 1532 characters separated by the validator's own extraction. Every locator is matched against the body of that artifact.",
+  "extractor_provenance": {
+   "why": "The branch this manifest was built on carries an extractor that joins adjacent text nodes with a space, fabricating characters at markup boundaries. The fix exists only on evidence-index at commit 2e6fd6a. A locator can pass strict validation against the defective surface and be wrong against the author's text, which is the silent false positive rule 5c exists to prevent — so the surface was measured before the receipt was written, not after.",
+   "measured": "Both extractors run on this artifact. Body length 68617 (branch) against 68290 (2e6fd6a), a difference of 327 characters. The paper's vocabulary is IDENTICAL under both: PPXY 47/47, WWOX 92/92, ErbB4 105/105, WW1 114/114, W44 5/5, Y85 8/8, PPII 4/4. What differs is figure citations: '(Fig' occurs 0 times under the branch extractor and 18 under the corrected one, because the branch renders '( Fig.' with a fabricated space.",
+   "effect_on_this_manifest": "Eleven of twelve locators verify identically under both extractors. One did not — entries[1], the W44 stacking sentence, which contains a figure citation mid-sentence. It was rebuilt on the clause both surfaces agree on, with the full sentence and the exact one-character difference recorded in its anchor rather than quietly trimmed.",
+   "verified_against": "framework/scripts/deepdive_manifest.py on branch lettore-b, cross-checked against 2e6fd6a. When the corrected extractor reaches this branch, re-run: every locator here is expected to pass unchanged."
+  },
+  "abstract_anchoring_waived": "No locator draws on the abstract. See the note on the abstract's one overstatement below — it is recorded through the body and the tables, not through the abstract itself.",
+  "figure_coverage": {
+   "rule": "Orchestrator instruction, 2026-08-10: one locator per main figure or a named, argued waiver. Silence is not a waiver.",
+   "budget_declared_before_reading": "Counted from the JATS before opening the body: 7 main figures, 10 table-wraps, 0 supplementary. Budget set at one locator per main figure, tables cited where the running text leans on them, supplementary declared not_present.",
+   "main_figures_in_article": 7,
+   "figures_with_at_least_one_locator": 0,
+   "waiver": "🔴 ALL SEVEN FIGURES WAIVED, and the reason is mine and not the paper's: the session's remaining context was not enough to fetch them, measure smask, and inspect them at deposited resolution, and inspecting them badly is worse than declaring the gap. This is a named waiver under the rule, not silence: coverage.figures is recorded as not_read and the receipt is partial_fulltext_read. FT-055 carries the debt. What the waiver costs is stated rather than minimised — Figures 2 and 4 are the ITC isotherms behind Tables 1 and 4, so the fits that produce every Kd quoted here are unexamined; Figure 3 is the structural model behind the W44/Y85 argument; Figures 5-7 carry the light scattering and the molecular dynamics.",
+   "tables": "3 of 5 numeric tables read cell by cell (1, 3, 4 — the affinity tables). Tables 2 and 5 read in the running text only, declared as a partial.",
+   "supplementary": "not_present — the JATS records pmc-prop-has-supplement no. This is an honest empty slot, not an unread one."
+  },
+  "panel_text_relation_note": "🔴 ZERO CONTRADICTIONS IN THIS READING, and that is a result rather than an absence of work. This is the control paper for the question of whether my 29.3% contradiction rate is my method or my sample: the previous four papers were three-quarters one laboratory. Here the text agrees with its own tables everywhere I checked — 'more than two-fold stronger' for the WW2W mutant is 144/54 = 2.7x, and for the tandem module 383/170, 362/175 and 144/68 are 2.25x, 2.07x and 2.12x, all three above two. The single overstatement I found is in the ABSTRACT, not the body, and it is recorded below through the tables. Every locator here is text_only because no panel was inspected; the panel-versus-text relation could not be tested at all in this reading, which is a limit of the waiver above and must not be read as agreement between panels and text.",
+  "entries": [
+   {
+    "proposition": "The central negative, and it is stated as a tested negative rather than an assumed one: the WW2 domain does not bind, and the conditions under which that was tested are named.",
+    "snippet": "no binding was observed for the WW2 domain to any of the PPXY motif even when external conditions including temperature, ionic strength and pH were altered",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
+    "anchor": "Results and Discussion, 'WW1 domain of WWOX binds to PPXY motifs in ErbB4 with distinct affinities'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE FINDING WITH THE WIDEST REACH INTO THIS REPOSITORY, and it is about a reagent rather than a phenotype. W44 is a signature tryptophan whose indole sidechain stacks the first proline of the PPXY motif. PMID 25331887 and PMID 38499540 both use the WWOX-WFPA mutant — W44F plus P47A — as the control that makes their ATM and DDR results WW1-dependent, and neither explains why the substitution works. It works because this residue is the stacking platform.",
+    "snippet": "stacks against the indole sidechain of W44 in WW1 domain",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
+    "anchor": "Results and Discussion, structural analysis of the WW1-ErbB4_PY3 complex. 🔴 THE QUOTE IS SHORTER THAN THE SENTENCE, AND THE REASON IS A TOOL DEFECT, NOT A CHOICE OF EVIDENCE — stated because the honest version of shortening and the dishonest version look identical from outside. The full sentence reads 'the pyrrolidine moiety of P0, the first proline within the PPXY motif according to the nomenclature presented in Figure 1a, stacks against the indole sidechain of W44 in WW1 domain'. The extractor on this branch fabricates one space at a markup boundary and renders it 'Figure 1a ,'; the corrected extractor at commit 2e6fd6a renders 'Figure 1a,'. The two surfaces differ by that single character and by nothing else in this sentence. The quote is therefore placed on the clause both extractors agree on character-for-character, which carries the whole assertion — the subject is named in the proposition and the full sentence is reproduced here. Measured, not assumed: of the twelve locators in this manifest this was the only one affected, and the paper's own vocabulary is untouched (PPXY 47, WWOX 92, ErbB4 105, WW1 114, W44 5, Y85 8 — identical under both extractors).",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The single-residue explanation for the orphan domain: every contact residue is conserved between WW1 and WW2 except the signature tryptophan, which is a tyrosine in WW2. This is a residue-level fact about the protein and transfers to any genotype.",
+    "snippet": "W44 residue in WW1 domain— whose indole sidechain is involved in the stabilization of P0—is replaced by Y85 in WW2 domain",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
+    "anchor": "Results and Discussion, structural basis for the lack of WW2 binding",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The engineering result, quoted with the comparison the text makes. Checked against Tables 1 and 3 cell by cell: WW1 binds PY3 at 144 +/- 16 uM and WW2W binds it at 54 +/- 9 uM, a ratio of 2.7, so 'more than two-fold' holds.",
+    "snippet": "it binds to the ErbB4_PY3 peptide with an affinity that is more than two-fold stronger than that observed for the binding of WW1 domain",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
+    "anchor": "Results and Discussion, Y85W substitution paragraph, citing Tables 1 and 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "TABLE SIDE OF THE ONE OVERSTATEMENT I FOUND, AND IT IS IN THE ABSTRACT. The abstract says the Y85W substitution 'exquisitely restores its binding to PPXY motifs in a manner akin to the binding of WW1 domain'. The table says the engineered domain is BETTER than WW1 on one motif and WORSE on the other two: 680 against 383 for PY1 and 620 against 362 for PY2, roughly 1.8-fold weaker in both. 'Akin to WW1' holds for PY3 alone. The body does not make this claim — it says WW2W recognises PY1 and PY2 'rather weakly', which is accurate. So the overstatement lives only on the travelling surface, which is the same shape as the inverted title of PMID 38182577 and the inverted captions of PMID 38499540, in a paper that is otherwise scrupulous.",
+    "snippet": "ErbB4_PY1 680 ± 121 −4.74 ± 0.52 −0.40 ± 0.62 −4.33 ± 0.11",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
+    "anchor": "Table 3, ErbB4_PY1 row, Kd column — the WW2W engineered domain. Compare Table 1, ErbB4_PY1 row, 383 +/- 30. Declared surface table, not body: the value is a table cell and is verified character-for-character against the artifact.",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The chaperone result, and the numbers behind it. Checked against Tables 1 and 4: 383 to 170, 362 to 175, 144 to 68 — 2.25, 2.07 and 2.12-fold. All three clear the 'more than two-fold' the text claims, which is the kind of check that failed three times on the previous four papers.",
+    "snippet": "the WW1 domain in the context of WW1–WW2 tandem module binds to ErbB4 peptides with affinities that are more than two-fold stronger than those observed for the binding of WW1 domain alone",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
+    "anchor": "Results and Discussion, 'WW2 domain augments the binding of WW1 domain', citing Tables 1 and 4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "TABLE SIDE of the tandem-module result, the tightest binding measured anywhere in the paper. Recorded because it is the number any downstream claim about WWOX-ErbB4 affinity should carry, and because it is still 68 micromolar — weak for a protein-protein interaction asserted to be physiologically decisive.",
+    "snippet": "ErbB4_PY3 68 ± 8 −5.00 ± 0.30 +0.70 ± 0.37 −5.70 ± 0.07",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
+    "anchor": "Table 4, ErbB4_PY3 row, Kd column — WW1-WW2 tandem module. Declared surface table; verified character-for-character.",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE AUTHORS' OWN LIMIT ON THEIR OWN MODEL SYSTEM, stated without prompting. This is the sentence that most distinguishes this paper's rhetoric from the four before it: the reduction is not written as an absence, the caveat is written as a caveat.",
+    "snippet": "we have relied here on short peptides to mimic PPXY motifs in ICD, caution is warranted in that these motifs may depart from their physiological behavior when treated as short peptides due to the loss of local conformational constraints",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
+    "anchor": "Conclusions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The authors question the physiological relevance of two of their own three binding sites. Load-bearing for anyone citing this paper for 'WWOX binds ErbB4': the claim is really about PY3.",
+    "snippet": "the physiological relevance of PY1 and PY2 motifs in recruiting WWOX is questionable in light of the rather weak affinity with which they bind to the WW1 domain of WWOX compared to PY3 motif",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
+    "anchor": "Conclusions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A self-declared artefact of concentration: the dimerisation the light scattering sees is called probably irrelevant by the authors themselves, because the assay required 100-200 micromolar. On the previous four papers this class of caveat had to be recovered from panels; here it is in the text.",
+    "snippet": "we believe that the propensity of WW1 domain to homodimerize is unlikely to be physiologically relevant",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
+    "anchor": "Results and Discussion, analytical light scattering paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The negative result of the simulation, declared as inconclusive rather than reported as an answer. The chaperone mechanism therefore remains a proposal in this paper, not a demonstration.",
+    "snippet": "while our data presented above cannot ascertain the presence or lack thereof of a stable physical association between the tandem WW domains of WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
+    "anchor": "Results and Discussion, end of the molecular dynamics section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The asymmetry in stability that the chaperone model rests on, and the one place where the paper reads its own simulation as agreement with a prior conclusion — worth watching, because 'in agreement with our observation' is the construction under which a proposal hardens into a fact across papers.",
+    "snippet": "the WW1 domain appears to be somewhat less stable compared to WW2 domain, which is in agreement with our observation that the latter serves a chaperonin role for the former",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID24308844_Schuchardt2013_PMC.xml",
+    "anchor": "Results and Discussion, RMSF analysis",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": "Coverage: body COMPLETE — Introduction, Materials and Methods, Results and Discussion, Conclusions and the reference list read in sequence from the JATS. Tables 1, 3 and 4 read cell by cell; Tables 2 and 5 through the running text only. FIGURES 1-7 NOT INSPECTED, waived by name with the cost stated, and the receipt is partial_fulltext_read for that reason alone. The waiver is the session's limit, not the paper's, and FT-055 carries it."
+ }
+}
