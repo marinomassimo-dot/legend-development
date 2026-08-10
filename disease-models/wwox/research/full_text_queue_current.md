@@ -1293,3 +1293,48 @@ premesse importate invece dei risultati.
 **Current status:** ⬜ aperto, artefatto in casa, **identità verificata**. Non iniziato:
 interrotto prima di aprire il corpo per contesto residuo insufficiente a chiuderlo bene, che è
 una condizione d'interruzione dichiarata e non un rinvio.
+
+---
+
+## FT-055 — Le sette figure di PMID 24308844, e l'esperimento che **non** è stato eseguito
+**Paper:** PMID 24308844 / DOI 10.1021/bi400987k — Schuchardt 2013, *Biochemistry* 52(51) —
+*Molecular Origin of the Binding of WWOX Tumor Suppressor to ErbB4 Receptor Tyrosine Kinase*
+**Priority:** **ALTA**
+**Surface:** `structured` · `PMID24308844_Schuchardt2013_PMC.xml` (JATS da `efetch`,
+sha256 `00da56df…`) · corpo letto integralmente, `FTR-20260810-24308844-01`
+*(Voce creata il 2026-08-10 **dopo** che tre riferimenti la citavano già — manifest, ricevuta e
+rapporto — senza che esistesse. Uno dei tre è dentro la catena hash e non si riscrive. Un debito
+citato e mai aperto è un debito che evapora: è la stessa forma delle collisioni di ID, vista dal
+lato opposto — non due voci con un nome, ma un nome senza voce.)*
+
+### 🔴 Il punto non è la copertura: è che l'esperimento non è stato eseguito
+Questo paper era stato assegnato come **controllo** su una domanda precisa: il mio tasso di
+contraddizione del **29,3%** contro il 12–18% degli altri lettori è il metodo o il campione? Quel
+tasso è definito come **contraddizioni per locator su figura ispezionato**.
+
+**Ho ispezionato zero figure.** Quindi lo «zero contraddizioni» che la lettura ha prodotto è
+testo-contro-tabelle — **una quantità diversa, su un altro asse**, con numeratore e denominatore
+entrambi assenti. Non falsifica nulla e non conferma nulla. **L'esperimento resta aperto, non
+fallito**, e si esegue qui.
+
+⚠️ **E la lezione di metodo va con la voce, perché è la stessa che il paper insegna:** il titolo
+del mio rapporto diceva *«zero contraddizioni»* mentre l'ultimo paragrafo diceva che non è sullo
+stesso asse. **A viaggiare è il titolo.** È letteralmente la forma trovata nell'abstract di
+questo stesso articolo — *«akin to the binding of WW1»* smentito dalla sua Tabella 3 — applicata
+al mio rapporto su di esso.
+
+### Che cosa manca, con il costo di ciascuna
+| figura | che cosa porta | perché pesa |
+|---|---|---|
+| **2** e **4** | isoterme ITC | **ogni Kd citato** (144 · 383 · 362 · 68 µM) esce da questi fit, mai ispezionati |
+| **3** | modello strutturale WW1/WW2–ErbB4_PY3 | è l'evidenza dell'argomento **W44/Y85**, il reperto di raggio maggiore della lettura |
+| **5** | light scattering, profili di eluizione | la spalla di omodimerizzazione che gli autori dichiarano irrilevante |
+| **6** e **7** | RMSD/RMSF/Rg e istantanee MD | il modello «chaperone», che gli autori stessi dichiarano non dimostrato |
+| **1** | architettura ErbB4 e sequenze dei peptidi | la nomenclatura P0/P+1/Y+3 su cui poggia tutto il resto |
+
+**Next action:** recuperare le sette figure — `smask` misurato prima di scegliere fra estrazione
+e render, e **registrare la risoluzione oltre alla superficie** — un locator per figura o
+rinuncia nominata, poi ri-registrare a profondità completa con
+`reread_reason: inadequate_prior_coverage`. Solo allora il tasso è calcolabile su questo paper.
+**Current status:** ⬜ aperto. Debito **di sessione, non del paper**: la rinuncia è nominata nel
+manifest sotto `figure_coverage.waiver`, con il costo di ciascuna figura scritto.
