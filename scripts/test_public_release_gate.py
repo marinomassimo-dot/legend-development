@@ -173,6 +173,92 @@ class GateTests(unittest.TestCase):
             {item.code for item in findings},
         )
 
+    def _codes(self, root: Path) -> set[str]:
+        findings: list = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        return {item.code for item in findings}
+
+    def test_pairing_attributed_to_a_published_study_is_reviewed_not_blocked(self) -> None:
+        """🔴 The net's population is every paragraph naming both parents; its target is the
+        private individual. A repository built on trio literature lives in the complement."""
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "## FT-099\n**Paper:** PMID 39416860 — a published case report\n\n"
+            "Both parents were heterozygous; the maternal allele was wild type for the "
+            "second gene, which is what makes that allele paternal.\n",
+            encoding="utf-8")
+        codes = self._codes(root)
+        self.assertIn("PARENT_OF_ORIGIN_ATTRIBUTED", codes)
+        self.assertNotIn("PARENT_OF_ORIGIN_PAIRING", codes)
+
+    def test_the_suppression_is_reported_and_not_silent(self) -> None:
+        """A privacy exemption nobody can see in the output stops being reviewed."""
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "## FT-099\n**Paper:** PMID 39416860\n\n"
+            "maternal and paternal alleles both measured\n", encoding="utf-8")
+        findings: list = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        reviewed = [item for item in findings if item.code == "PARENT_OF_ORIGIN_ATTRIBUTED"]
+        self.assertEqual(len(reviewed), 1)
+        self.assertEqual(reviewed[0].severity, "REVIEW")
+
+    def test_pairing_with_no_published_study_still_blocks(self) -> None:
+        """The net is narrowed, not removed."""
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "A bypass would avoid both maternal splicing and paternal misfolding.",
+            encoding="utf-8")
+        self.assertIn("PARENT_OF_ORIGIN_PAIRING", self._codes(root))
+
+    def test_attribution_cannot_release_the_reference_genotype(self) -> None:
+        """🔴 The safeguard that makes the narrowing safe: citing a paper must never be a way
+        to publish the private individual's parents."""
+        for marker in ("p.(Gln230Pro)", "c.1057-2 A>G", "the reference genotype"):
+            with self.subTest(marker=marker):
+                root = self.make_repo()
+                (root / "note.md").write_text(
+                    "## FT-099\n**Paper:** PMID 39416860\n\n"
+                    f"maternal and paternal transmission of {marker} was recorded\n",
+                    encoding="utf-8")
+                codes = self._codes(root)
+                self.assertIn("PARENT_OF_ORIGIN_PAIRING", codes)
+                self.assertNotIn("PARENT_OF_ORIGIN_ATTRIBUTED", codes)
+
+    def test_a_reference_variant_in_the_heading_still_blocks(self) -> None:
+        """🔴 The fifth case, and the one that separates a safeguard from something that looks
+        like one.
+
+        The first version evaluated attribution on the WIDE window and the safeguard on the
+        narrow block, so a heading naming `Q230P` widened what could suspend the rule without
+        widening the rule's protection. A safeguard must be at least as wide as whatever can
+        suspend it. Found by trying the neighbour of the declared test rather than the test.
+        """
+        root = self.make_repo()
+        (root / "note.md").write_text(
+            "## FT-099 p.(Gln230Pro) — PMID 39416860\n\n"
+            "maternal and paternal transmission was recorded\n", encoding="utf-8")
+        codes = self._codes(root)
+        self.assertIn("PARENT_OF_ORIGIN_PAIRING", codes)
+        self.assertNotIn("PARENT_OF_ORIGIN_ATTRIBUTED", codes)
+
+    def test_a_json_record_is_scoped_to_the_file_and_that_is_deliberate(self) -> None:
+        """🔴 JSON has no blank lines, so `semantic_blocks` yields a manifest WHOLE and every
+        block-scoped rule silently becomes file-scoped — measured at 19 680 characters on
+        `PMID39416860.json`. For a per-paper record the file is the record, so the attribution
+        window says so instead of depending on where a formatter put its newlines."""
+        text = '{\n "pmid": "39416860",\n "note": "maternal and paternal"\n}\n'
+        window = GATE.attribution_window(text, 0, text, "x/PMID39416860.json")
+        self.assertEqual(window, text)
+
+    def test_a_markdown_window_reaches_back_to_its_heading_and_no_further(self) -> None:
+        text = ("## FT-001\n**Paper:** PMID 11111111\n\nfirst para\n\n"
+                "## FT-002\n\nmaternal and paternal here\n")
+        offset = text.index("maternal")
+        window = GATE.attribution_window(text, offset, "maternal and paternal here", "q.md")
+        self.assertIn("FT-002", window)
+        self.assertNotIn("PMID 11111111", window)
+
     def test_compound_genotype_blocks_without_proband_word(self) -> None:
         root = self.make_repo()
         (root / "note.md").write_text(
