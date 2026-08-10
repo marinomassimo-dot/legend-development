@@ -60,8 +60,7 @@ WWOX loss
 lesione causale** — `INFERENZA`, non `DATO`, registrata qui il 2026-08-10 perché vincola
 direttamente questo modello e la scelta dei biomarcatori. Tre letture indipendenti la
 sostengono e nessuna la afferma da sola: il KO **epatico** di *Wwox* **non** abbassa l'HDL
-plasmatico (PMID 24871327, letto il 2026-08-10 ma ancora
-[[paper_registry_current#CORPUS-STUB-108]] — promozione dovuta, non ancora fatta); il restauro **neuronale-only**
+plasmatico ([[paper_registry_current#PAPER 062]], PMID 24871327); il restauro **neuronale-only**
 recupera fenotipi **periferici**, ipoglicemia inclusa ([[claim_registry_current#CLAIM 004]],
 PMID 34747138); il KO **muscolare** produce un fenotipo **sistemico**
 ([[paper_registry_current#PAPER 061]], PMID 30755385). Conseguenza operativa: un marcatore

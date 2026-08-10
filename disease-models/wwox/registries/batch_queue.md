@@ -786,7 +786,7 @@ for an entirely unprocessed record.
 | [27495153](https://pubmed.ncbi.nlm.nih.gov/27495153/) | 2016 | ✅ | full text | PAPER 049 | W44X mutation in the WWOX gene causes intractable seizures and developmental delay: a case report. |
 | [26857392](https://pubmed.ncbi.nlm.nih.gov/26857392/) | 2016 | ✅ | full text | PAPER 050 | ✎ corrected — Relevance of Sp Binding Site Polymorphism in WWOX for Treatment Outcome in Pancreatic Cancer. |
 | [24932569](https://pubmed.ncbi.nlm.nih.gov/24932569/) | 2014 | ✅ | full text | PAPER 053 | WWOX at the crossroads of cancer, metabolic syndrome related traits and CNS pathologies. |
-| [24871327](https://pubmed.ncbi.nlm.nih.gov/24871327/) | 2014 | ✅ | full text | receipt FTR-20260810-24871327-01 | The WWOX gene modulates high-density lipoprotein and lipid metabolism. |
+| [24871327](https://pubmed.ncbi.nlm.nih.gov/24871327/) | 2014 | ✅ | full text | PAPER 062 | The WWOX gene modulates high-density lipoprotein and lipid metabolism. |
 | [24456803](https://pubmed.ncbi.nlm.nih.gov/24456803/) | 2014 | ✅ | full text | PAPER 043 | The supposed tumor suppressor gene WWOX is mutated in an early lethal microcephaly syndrome with epilepsy, growth retardation and retinal degeneration. |
 | [24369382](https://pubmed.ncbi.nlm.nih.gov/24369382/) | 2014 | ✅ | full text | PAPER 042 | The tumour suppressor gene WWOX is mutated in autosomal recessive cerebellar ataxia with epilepsy and mental retardation. |
 | [19936220](https://pubmed.ncbi.nlm.nih.gov/19936220/) | 2009 | ✅ | full text | PAPER 057 | Generation and characterization of mice carrying a conditional allele of the Wwox tumor suppressor gene. |

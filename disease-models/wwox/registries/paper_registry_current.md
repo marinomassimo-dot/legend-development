@@ -1725,10 +1725,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 108
 **Full title:** The WWOX gene modulates high-density lipoprotein and lipid metabolism
 **Identifier:** PMID 24871327 / DOI 10.1161/CIRCGENETICS.113.000248
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 062]] (BATCH_20260810_004)
+**Registry role:** corpus placeholder only — **conservato append-only come storia di audit, mai cancellato**
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — risolto per promozione
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-109
@@ -6580,3 +6580,24 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Role:** promosso da `CORPUS-STUB-039` (BATCH_20260810_003, `CC-20260810-30755385`); il placeholder è conservato append-only
 **Note:** 🔴 **Confine di misura, da tenere.** **Misurato:** captazione muscolare di FDG, mtDNA, trascritti, p-AMPK/p-ACC, lattato sierico, fibra slow-twitch. **Non misurato:** l'ossidazione mitocondriale del glucosio — nessuna respirometria muscolare, nessun saggio di flusso. Prima del 2026-08-10 [[meta_metabolism_current]] la elencava fra i `Core Findings (DATO)`: era un'inferenza dai marcatori a monte, e ora è etichettata come tale. 🔴 **Confine causale:** delezione tessuto-specifica + FDG locale + knock-down acuto sostengono una componente **muscolo-intrinseca**; **non** provano che l'intero fenotipo in vivo sia autonomo di tessuto. Promozione condizionata a flusso ex-vivo su fibre primarie o rescue muscolo-specifico. ⚠️ **Discrepanza interna non risolta:** la didascalia della Figura 2 data l'ITT a **10 mesi**, Methods 4.4 a **6 mesi** — quattro mesi sono una finestra di malattia diversa in un topo; chi cita quella figura dichiara entrambe le età finché non è risolta alla fonte ([[full_text_queue_current#FT-048]]). Disegno statistico limitato. 🔑 **Il contributo che va oltre il paper:** è una delle tre fonti dell'inferenza *«il tessuto di misura non è il tessuto di necessità»* ([[full_text_queue_current#FT-049]]) — un KO muscolare che produce un fenotipo sistemico, accanto a un KO epatico che non abbassa l'HDL e a un restauro neuronale che recupera la periferia.
 **Wikilinks:** [[paper_registry_current#CORPUS-STUB-039]] · [[claim_registry_current#CLAIM 009]] · [[meta_metabolism_current]] · [[full_text_queue_current#FT-048]] · [[full_text_queue_current#FT-049]] · [[literature_tracking_log_current#LIT-0063]]
+
+## PAPER 062
+**Short title:** Iatan 2014 — WWOX, HDL e metabolismo lipidico
+**Full title:** The WWOX gene modulates high-density lipoprotein and lipid metabolism
+**Authors:** Iatan I, Choi HY, Ruel I, et al.
+**Year:** 2014
+**Source type:** primario sperimentale + genetica umana — KO murino epatocita-specifico e total-body, più aplotipo intronico in coorti umane
+**Journal/source:** *Circulation: Cardiovascular Genetics* 2014;7:491–504
+**Identifier:** PMID 24871327 / DOI 10.1161/CIRCGENETICS.113.000248
+**Status:** processed
+**Evidence depth:** full text reviewed (coverage_status: complete_fulltext_read) — receipt del 2026-08-10; manifest `deepdive_manifests/PMID24871327.json`; locator in `fulltext_dossiers/PMID24871327_locators.md`
+**Integrity status:** clean
+**Primary pathway:** P5 — metabolismo lipidico
+**Model/species:** topo (KO epatocita-specifico e total-body); coorti umane
+**Genotype/model:** ablazione completa di *Wwox* nel topo; nell'uomo un **aplotipo intronico**, senza cambiamento codificante e **senza saggio funzionale**
+**Transferability:** T3 — endpoint periferici, nessun endpoint neurale
+**clinical relevance:** INDIRECT
+**Claim links:** none — **nessuna claim canonica ne dipende**, e la lettura è la ragione per cui non ne nasce una
+**Role:** promosso da `CORPUS-STUB-108` (BATCH_20260810_004); il placeholder è conservato append-only. Chiude [[full_text_queue_current#FT-039]].
+**Note:** 🔴 **È il primario che [[paper_registry_current#PAPER 055]] descriveva come *«strong evidence»* per il ponte `WWOX → omeostasi lipidica → mielina`, e la lettura mostra che l'etichetta non si trasferisce.** Il negativo centrale del paper è che **rimuovere *Wwox* dagli epatociti NON abbassa l'HDL circolante**: l'effetto HDL compare solo nel null total-body, misurato in cuccioli di 2 giorni che muoiono entro 4 settimane. Il passo che il primario licenzia davvero è `WWOX → ApoA-I/ABCA1 → biogenesi HDL`, **whole-body e non epatocita-autonomo**. Effect size: ApoA-I proteina −55%/−50% (KO epatico), −80% (KO totale); ABCA1 −50% nei maschi, invariato nelle femmine. 🔴 **La seconda gamba del ponte — `omeostasi lipidica → mielina` — non riceve nulla da qui: il paper non misura alcun endpoint neurale.** `PREMISE_TAG`: ogni inferenza che sia passata da questo nodo alla mielina poggiava su una premessa che questo primario **non contiene**. L'`ESPANSIONE` che resta è più stretta e reale — ApoA-I e ABCA1 sono indipendentemente rilevanti per la gestione lipidica del CNS, quindi il nodo **resta aperto come espansione da testare, non come inferenza sostenuta**. ⚠️ Debito dichiarato: il Supplementary è `unavailable` (cascata documentata; AHA all-rights-reserved) e porta il dato trigliceridi `P=0.0025` da cui parte la storia sesso-specifica; il multi-hop non è stato svolto ([[full_text_queue_current#FT-046]]).
+**Wikilinks:** [[paper_registry_current#CORPUS-STUB-108]] · [[paper_registry_current#PAPER 055]] · [[full_text_queue_current#FT-039]] · [[full_text_queue_current#FT-046]] · [[full_text_queue_current#FT-049]] · [[literature_tracking_log_current#LIT-0128]]

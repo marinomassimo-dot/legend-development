@@ -3854,22 +3854,24 @@ Serves to:
 ---
 
 ## LIT-0128
-**Short title:** corpus paper 108
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Iatan 2014 — WWOX, HDL e metabolismo lipidico
+**Authors:** Iatan I, Choi HY, Ruel I, et al.
+**Year:** 2014
+**Source type:** primario sperimentale + genetica umana (KO murino epatico e total-body; aplotipo intronico umano)
+**Journal/source:** *Circulation: Cardiovascular Genetics* 7:491–504
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 24871327 / DOI 10.1161/CIRCGENETICS.113.000248
+**Evidence depth:** complete_fulltext_read (2026-08-10) — manifest `deepdive_manifests/PMID24871327.json`
+**Registry record:** [[paper_registry_current#PAPER 062]] (promosso da `CORPUS-STUB-108`, BATCH_20260810_004)
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-10
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 108
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
+**Status:** processed
+**Primary pathway:** P5 — metabolismo lipidico
+**Genotype/model tag:** KO murino epatocita-specifico e total-body; aplotipo intronico umano senza saggio funzionale
+**Transferability:** T3 — endpoint periferici, nessun endpoint neurale
 **clinical relevance:** MED
 **Claim links:** none
 **Working Model impact:** none yet
