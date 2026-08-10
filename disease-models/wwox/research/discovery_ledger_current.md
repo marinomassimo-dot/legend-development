@@ -2429,3 +2429,76 @@ l'altra**, e l'unico modo di saperlo è la figura che nessuno ha visto.
   [10], [11], [20] · l'istruzione permanente dell'Orchestratore del 2026-08-10 sulla copertura.
 - **Destinazione dichiarata:** **materiale per un commit candidate** e argomento a favore della
   regola di copertura, misurato invece che asserito.
+
+---
+
+### 🔴 DL-MECH-094 — La firma «Warburg» degli organoidi è confusa con il difetto di differenziamento che il paper stesso dichiara nel titolo della figura
+
+> **Allocazione:** 094 è mio (sessione A, 2026-08-10 sera). Vedi `DL-META-091` per l'allocazione
+> 091–093.
+
+- **Status:** open · **Tag epistemico:** `DATO` sulle due citazioni, `INFERENZA` sul confondimento.
+- **Cosa qualifica:** `DL-MECH-034`, che porta la firma OXPHOS↓/glicolisi↑ di `PMID 34268881`
+  come chiusura del caveat *«il fenotipo Warburg è documentato in MEF e in cancro, mai nel
+  neurone WWOX-carente»*, e con essa il razionale WWOX-specifico della dieta chetogenica.
+
+- ✅ **Prima, ciò che NON contesto, perché lo stato lo dice già e lo dice bene.** `DL-MECH-034`
+  dichiara esplicitamente **`Belief: medio sul salto trascrittoma→flusso metabolico
+  («l'espressione genica non è il flusso: servirebbe Seahorse/fluxomica»)`**, dichiara l'n basso
+  (WT n=2, KO n=4), nomina la tecnica come trascrittomica e rimanda a `DL-BIO-008`, la
+  contraddizione sul lattato. **Il salto trascrittoma→flusso era già sotto controllo.** Arrivavo
+  per segnalarlo e l'ho trovato scritto meglio di come lo stavo scrivendo io.
+
+- 🔴 **Ciò che invece non trovo da nessuna parte: la spiegazione alternativa sta nel titolo della
+  figura da cui il dato proviene.** La sezione che produce la firma metabolica si intitola —
+  verbatim — *«Cerebral organoid RNA sequencing revealed **major differentiation defects**»*, e
+  l'arricchimento glicolitico compare dentro un elenco di vie **dello sviluppo**:
+
+  > *«marked enrichment was seen in pathways related to regionalization, neuron fate commitment
+  > and specification, axis specification (ventral–dorsal and anterior–posterior), and
+  > **glycolysis and gluconeogenesis**»*
+
+  mentre l'altro braccio della firma è:
+
+  > *«inhibition of processes related to ATP synthesis‐coupled electron transport and
+  > **oxidative phosphorylation**»*
+
+- **L'inferenza, e perché non è una pignoleria.** I progenitori neurali sono **glicolitici**; la
+  maturazione neuronale comporta uno **switch verso la fosforilazione ossidativa**. È biologia
+  dello sviluppo di base. Un tessuto che il paper stesso descrive come **immaturo e con
+  differenziamento difettoso** produrrà per *quella* ragione un trascrittoma con OXPHOS↓ e
+  glicolisi↑. **La firma metabolica è quindi il fenotipo atteso dell'immaturità, e non è
+  separabile — con questi dati — da un ruolo metabolico di WWOX.**
+
+- **`PREMISE_TAG`:** 🔴 `PREMISE: DEFAULT_FROM_TEXTBOOK` sulla premessa non scritta *«un
+  trascrittoma OXPHOS↓/glicolisi↑ in questo tessuto riflette un assetto metabolico
+  WWOX-dipendente»*. La spiegazione concorrente non è esotica: è la tesi principale del paper.
+
+- 🔴 **Conseguenza sull'esperimento discriminante, che è la parte operativa.** `DL-MECH-034`
+  propone giustamente **Seahorse OCR/ECAR sugli organoidi WWOX-KO**. Ma un Seahorse su organoidi
+  KO contro WT alla stessa settimana di coltura **riprodurrebbe lo stesso confondimento**: se i
+  KO sono developmentally più giovani, misurerei l'immaturità e la chiamerei metabolismo.
+  L'esperimento deve essere **appaiato per stadio di differenziamento**, non per età di coltura —
+  per esempio normalizzando su marcatori di maturazione, o confrontando popolazioni cellulari
+  ordinate anziché organoidi interi. Senza quel controllo, un risultato positivo non
+  discriminerebbe le due ipotesi.
+
+- **Che cosa lo falsificherebbe (a favore di `DL-MECH-034`):** una firma OXPHOS↓/glicolisi↑ che
+  persista **dopo** appaiamento per stadio; oppure la stessa firma in un sistema WWOX-carente
+  *senza* difetto di differenziamento — che è precisamente ciò che i MEF e i modelli oncologici
+  di `DL-MECH-020` offrono, e che rende quel corpus più probante di quanto la voce attuale lasci
+  intendere, non meno.
+
+- 🔴 **Nota di provenienza, e non è secondaria.** `DL-MECH-034` dichiara *«full text letto
+  integralmente»*. **Il ledger delle ricevute non lo sostiene:** l'unica ricevuta per
+  `PMID 34268881` è `FTR-20260726-34268881-01`, `partial_fulltext_read`, con `source_locator`
+  che punta al **paper registry**, **nessuna impronta** e tutti gli slot a `unknown_legacy` —
+  una delle ventitré ricostruzioni del 26 luglio. La superficie strutturata (`PMC8350905`, CC BY)
+  **esisteva e non era stata recuperata**; l'ho recuperata in questa sessione. Le due citazioni
+  qui sopra sono le prime di questo paper verificate contro un artefatto impronta-to.
+
+- **Interconnessioni:** `DL-MECH-034` · `DL-MECH-020` · `DL-BIO-008` · `DL-BIO-085` · `FT-059` ·
+  [[therapeutic_hypotheses_ledger_current#HYP-20260709-01]] · [[meta_metabolism_current]].
+- **Destinazione dichiarata:** **materiale per un commit candidate**, come qualificazione di
+  `DL-MECH-034` e come **correzione dell'esperimento discriminante**. Non tocca il verso della
+  conclusione: tocca ciò che serve per stabilirlo.

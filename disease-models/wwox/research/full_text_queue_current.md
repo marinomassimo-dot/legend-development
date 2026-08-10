@@ -1544,3 +1544,61 @@ curva frequenza-corrente su cui poggia il negativo centrale del paper.
 Abu-Remaileh 2015, *Pleiotropic functions of tumor suppressor WWOX*, JBC. Che sia una e non nove
 è la misura di `FT-057`: novanta minuti prima aveva già assorbito Mignot 2015 e Piard 2018, che
 anche questo paper cita.
+
+---
+
+## FT-059 — Steinberg 2021, organoidi: 🟡 superficie recuperata, **69 pannelli da leggere**, lettura NON iniziata
+
+**Paper:** PMID 34268881 / DOI 10.15252/emmm.202013610 — Steinberg et al. 2021, *EMBO Mol Med*
+([[paper_registry_current#PAPER 039]])
+**Title:** Modeling genetic epileptic encephalopathies using brain organoids
+**Surface:** `structured` — 🔴 **esisteva e non era stata recuperata.** `PMC8350905`, CC BY,
+`isOpenAccess: Y`, mentre sul disco c'era solo `PMID34268881_Steinberg2021.pdf`. Recuperata il
+2026-08-10: `PMID34268881_Steinberg2021_PMC.xml`, 265 997 byte,
+`sha256 de340289bc6704c9…`. *Il preflight non è «cercare e non trovare»: qui era «esiste, non
+ce l'abbiamo», che è un'azione.*
+**Priority:** **ALTA** — sostiene `DL-MECH-034` a `DATO`, cioè il razionale WWOX-specifico
+della dieta chetogenica.
+
+**Current status:** 🟡 **LETTURA MIRATA E DICHIARATA PARZIALE il 2026-08-10** — receipt
+`FTR-20260810-34268881-02`, `partial_fulltext_read`, `reread_reason:
+new_question_outside_prior_coverage`. Letta **solo** la sottosezione RNA-sequencing dei Results.
+Abstract, introduzione, metodi, discussione, referenze **non letti**; figure `captions_only`;
+nove elementi supplementari **non recuperati**.
+
+🔴 **La lettura completa non è stata iniziata, deliberatamente.** Il budget è **11 figure e 69
+pannelli** — il più grande di questo corpus. Cominciarla in coda a una sessione lunga e
+abbandonarla è il costo che questo repository ha già pagato quattro volte. È specificata qui
+invece che lasciata a metà.
+
+### 🔴 Il conteggio dei pannelli: 69, non 17
+
+Il mio contatore aveva detto **17** e non aveva segnalato nulla. EMBO marca i pannelli come
+`<list-item>` nella didascalia, non con lettere nel testo: un contatore che cerca lettere ne
+trova quasi nessuna e restituisce un numero piccolo e plausibile. Contando i `list-item`:
+
+    EV1 10 · Fig 1 6 · Fig 2 6 · Fig 3 6 · EV2 8 · EV3 6 · Fig 4 8 · Fig 5 5 · Fig 6 6 · EV4 4 · EV5 4  =  69
+
+**Terza volta oggi della stessa forma nel mio strumentario** — dopo l'incrocio referenze che
+stampava tre categorie vuote uscendo con 0. *Un conteggio che non può sembrare sbagliato non è
+un conteggio.* Chi fa la lettura completa parta da 69.
+
+### La ricevuta precedente è un'altra delle ventitré del 26 luglio
+
+`FTR-20260726-34268881-01`: `source_locator` sul **paper registry**, nessuna impronta, tutti gli
+slot `unknown_legacy`, `workflow: public-registry-legacy-reconstruction`. La sua base registra
+che **PAPER 039 dichiara `coverage_status: complete_fulltext_read`** — quindi il registry
+rivendica una lettura completa e il ledger contiene una ricostruzione. È il disallineamento che
+il ratchet `registry_only_fulltext_declarations` conta, visto dall'interno.
+
+### Cosa ha prodotto la lettura mirata
+
+`DL-MECH-094` — la firma OXPHOS↓/glicolisi↑ è **confusa con il difetto di differenziamento** che
+il paper dichiara nel titolo della sezione da cui il dato proviene. Conseguenza operativa: un
+Seahorse su KO contro WT alla stessa settimana **riprodurrebbe il confondimento**; l'esperimento
+va appaiato per **stadio di differenziamento**, non per età di coltura.
+
+**Next action:** lettura completa, 69 pannelli, partendo da Fig 4 ed EV3 (RNA-seq) e da Fig 2
+(iperreccitabilità, confrontabile con `FT-058`). Recuperare prima i nove supplementari: la
+`Appendix Fig S3A/B` **è** l'output GSEA/GO, e anche il reperto metabolico qui sopra poggia sulla
+descrizione testuale di un pannello che nessuno ha visto.
