@@ -1,196 +1,196 @@
 {
-  "pmid": "36779245",
-  "doi": "10.1111/epi.17542",
-  "receipt": "FTR-20260804-36779245-02",
-  "landing": [
-    "FTR-20260804-36779245-02",
-    "PAPER 018",
-    "CLAIM 017",
-    "CLAIM 030",
-    "CLAIM 033",
-    "full_text_queue_current#FT-029",
-    "full_text_queue_current#FT-032"
-  ],
-  "skills_considered": [
-    {
-      "skill": "legend-deepdive",
-      "used": false,
-      "reason": "Run inline in the main session, continuing the reading opened by FT-029. Delegating would have split the figure inspection already performed here from the locator capture, and the contract requires both to come from the same open document."
-    },
-    {
-      "skill": "find-fulltext",
-      "used": true
-    },
-    {
-      "skill": "legend-study-intake-triage",
-      "used": false,
-      "reason": "No study list arrived; the paper is already PAPER 018 in the registry and this run upgrades an existing partial receipt."
-    },
-    {
-      "skill": "legend-batch-inferential-sweep",
-      "used": false,
-      "reason": "A single paper, not a batch."
-    },
-    {
-      "skill": "legend-discovery",
-      "used": false,
-      "reason": "The discovery leads this reading surfaces (WWOX as a candidate gene for undiagnosed PEHO-like syndrome; hypomyelination reproduced in human WWOX-deficient brain organoids) are recorded as locators here. Promoting them to ledger entries is separate work and is not claimed as done."
-    },
-    {
-      "skill": "legend-hypothesis-forge",
-      "used": false,
-      "reason": "No molecule or intervention emerged. The paper is descriptive and prognostic; forcing a therapeutic hypothesis onto a survival analysis would overstate it."
-    },
-    {
-      "skill": "legend-commit",
-      "used": false,
-      "reason": "Commit candidates recorded, not applied. CLAIM 017 and CLAIM 033 both need revision on this evidence, and the four canonical current files change only under an operator-authorized BATCH_COMMIT."
-    }
-  ],
-  "group_assessment": {
-    "waived": "The two publication counts cannot be measured: the PubMed connector is unauthorized in this session, and an estimate in an integer slot is indistinguishable from a measurement. What the paper itself establishes is recorded here so the waiver loses nothing. research_type is descriptive_clinical: a 13-patient, 12-family, five-centre international cohort with source EEG and MRI reviewed centrally, ACMG re-classification of all literature variants, and Kaplan-Meier survival analysis; RNA/RT-PCR work was performed but only to resolve the pathogenicity of two CNVs, so it is confirmatory rather than mechanistic. is_primary_group_for_disease is false in the strict sense — this is a leading epilepsy-genetics network (Scheffer, Bahlo, Hildebrand, Mefford, Specchio), not a WWOX laboratory — but it is as close to a primary group as WWOX-DEE currently has, because the disease's evidence base is clinical cohorts and this is the largest. Weighting: the observations carry high weight (centralised re-review of primary EEG and MRI, not abstracted from reports; variants re-classified rather than accepted). The survival analysis is the weakest link and the paper does not flag it: n = 75 split three ways, and the p-value is a three-group log-rank presented alongside a pairwise conclusion. NOTE: the waiver is per-section but the impediment is per-field — declining two unmeasurable integers also discards three fields determined from the Methods."
+ "pmid": "36779245",
+ "doi": "10.1111/epi.17542",
+ "receipt": "FTR-20260804-36779245-02",
+ "landing": [
+  "FTR-20260804-36779245-02",
+  "PAPER 018",
+  "CLAIM 017",
+  "CLAIM 030",
+  "CLAIM 033",
+  "full_text_queue_current#FT-029",
+  "full_text_queue_current#FT-032"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline in the main session, continuing the reading opened by FT-029. Delegating would have split the figure inspection already performed here from the locator capture, and the contract requires both to come from the same open document."
   },
-  "field_density": {
-    "waived": "Field density requires a live PubMed query and the connector is unauthorized in this session. It was also not the gating question: the paper is already PAPER 018, and this run upgrades a partial receipt rather than deciding an intake."
+  {
+   "skill": "find-fulltext",
+   "used": true
   },
-  "multihop": {
-    "references_enumerated": 50,
-    "gene_direct_refs_in_source": [
-      "35573960",
-      "30094525",
-      "26345274",
-      "17360458",
-      "11719429",
-      "32051108",
-      "25716914"
-    ],
-    "resolved": [],
-    "queued": [
-      "35573960",
-      "30094525",
-      "26345274",
-      "17360458",
-      "11719429",
-      "32051108",
-      "25716914"
-    ],
-    "note": "50 references; 26 are WWOX-direct with a PMID, of which 19 are already in paper_registry_current.md. Seven are not. Two of those seven — PMID 32051108 and 25716914 — were queued hours earlier as FT-031 and FT-030 from the reference list of PMID 39507621: two independent papers cite them and LEGEND had seen neither, which raises their priority rather than duplicating it. The remaining five are queued as FT-032. The listed gene_direct_refs_in_source are the unresolved ones only; the 19 already in the registry are counted in corpus_crossquery.hits and are not repeated here."
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "No study list arrived; the paper is already PAPER 018 in the registry and this run upgrades an existing partial receipt."
   },
-  "corpus_crossquery": {
-    "query": "Which of this paper's 26 gene-direct references (those carrying a PMID) are already recorded in paper_registry_current.md, and which are absent from the registry, the full-text queue and the literature tracking log?",
-    "hits": 19,
-    "note": "Run mechanically over the canonical registries. 19 present, 7 absent — a 27% miss rate on the reference list of a paper already in the registry as a source of three claims."
+  {
+   "skill": "legend-batch-inferential-sweep",
+   "used": false,
+   "reason": "A single paper, not a batch."
   },
-  "retraction_check": {
-    "result": "No retraction or expression of concern. The article does carry a published correction, dated 24 March 2023, which the text records inline: 'The entries in column 9 of Table 1 for the WWOX and Genetic combination rows of the Genetics section have been updated.' Column 9 is Patient 9. Any reading of Table 1 must use the corrected values, and this reading did. Verified against the local PMC XML; not re-checked against a live PubMed query, because the connector is unauthorized.",
-    "checked": true
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The discovery leads this reading surfaces (WWOX as a candidate gene for undiagnosed PEHO-like syndrome; hypomyelination reproduced in human WWOX-deficient brain organoids) are recorded as locators here. Promoting them to ledger entries is separate work and is not claimed as done."
   },
-  "verbatim_locators": {
-    "waived": false,
-    "source_fulltext_indexed": true,
-    "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:36779245 on 2026-08-07: inEPMC=Y, PMCID PMC10952634, hasPDF=Y — full text is indexed, so an external validator can re-verify body quotes.",
-    "entries": [
-      {
-        "proposition": "The paper explicitly finds NO evidence for an intermediate genotype class: carrying one versus two missense variants made no difference, and missense-carrying WWOX-DEE patients were as severe as null/null patients.",
-        "snippet": "We found no difference between individuals with one or two missense variants and therefore no evidence to support an \"intermediate\" phenotype, as our WWOX-DEE patients were as severe as those with two loss-of-function null alleles.",
-        "anchor": "Discussion, gene-dosage paragraph"
-      },
-      {
-        "proposition": "Survival separates null/null from anything carrying a missense allele; the statistic is a three-group log-rank.",
-        "snippet": "Using the Kaplan-Meier method to analyze time to death, we found that survival was much poorer for the double null group compared with the patients who had at least one missense pathogenic variant (p-value = .0085, log-rank test).",
-        "anchor": "Results, Genotype-phenotype correlation"
-      },
-      {
-        "proposition": "The 5-year survival figures cited downstream as a genotype effect.",
-        "snippet": "Probability of survival to the age of 5 years for the double null group was <50%; by comparison, it was >75% for the other two, presumably less severe, genetic groups",
-        "anchor": "Results, Genotype-phenotype correlation"
-      },
-      {
-        "proposition": "Genotype class does not predict age at seizure onset — a negative result on a different axis from survival.",
-        "snippet": "we found no difference in time to seizure onset between the three genetic groups (p-value = .65, log-rank test)",
-        "anchor": "Results, Genotype-phenotype correlation"
-      },
-      {
-        "proposition": "No region of WWOX is specific to the DEE phenotype, and the two SCAR12 missense variants sit close to DEE variants rather than in a separate domain.",
-        "snippet": "no region of the gene emerged as specific for being associated with WWOX-DEE. Furthermore, the two missense variants associated with the rarer, milder SCAR12 phenotype are situated in close proximity to WWOX-DEE variants: p.Gly372Arg in exon 9 and p.Pro47Thr in exon 2.",
-        "anchor": "Results, Genetic variants, final paragraph"
-      },
-      {
-        "proposition": "The same codon produces both disease poles depending on the substitution: Pro47Thr in SCAR12, Pro47Arg in WWOX-DEE.",
-        "snippet": "p.Pro47 has been associated with two pathogenic variants; the more conservative change to threonine was found in SCAR12 compared with the arginine substitution found in WWOX-DEE",
-        "anchor": "Results, Genetic variants, final paragraph"
-      },
-      {
-        "proposition": "Lennox-Gastaut syndrome was excluded in this cohort on the EEG hallmark, and the authors note the hallmark was never reported in the cases previously labelled LGS.",
-        "snippet": "Although our patients had multiple seizure types, they did not show the mandatory EEG hallmark of LGS of <2.5 Hz slow spike-wave, excluding this syndromic diagnosis. It is notable that this EEG feature was not reported for patients previously classified as LGS.",
-        "anchor": "Discussion, epilepsy-syndrome paragraph"
-      },
-      {
-        "proposition": "Mortality is 35% across the combined series, driven by respiratory complications.",
-        "snippet": "WWOX-DEE has a high mortality rate of 35%, with 23 of 62 individuals deceased in the literature and 3 of 13 patients here.",
-        "anchor": "Discussion, mortality paragraph"
-      },
-      {
-        "proposition": "A distinctive MRI pattern is present and is detectable within days of birth, not only after seizure burden accumulates.",
-        "snippet": "We identified a WWOX-DEE pattern of severe frontotemporal atrophy, hippocampal atrophy, very thin corpus callosum, optic atrophy, and white matter signal abnormalities. These findings were evident from as early as 15 days of life, with repeat MRI revealing increased cerebral atrophy over time.",
-        "anchor": "Discussion, imaging paragraph"
-      },
-      {
-        "proposition": "Optic atrophy was universal and age-independent in the cohort.",
-        "snippet": "All cases demonstrated severe optic atrophy, irrespective of age, and some patients showed brainstem changes, which were mainly dorsal",
-        "anchor": "Results, Brain imaging"
-      },
-      {
-        "proposition": "No patient developed a tumour despite WWOX being an established tumour suppressor; the authors attribute this to early mortality rather than to absence of risk.",
-        "snippet": "there are no reports of WWOX-DEE or SCAR12 patients with tumors; however, this could simply be due to the high early mortality rate of WWOX-DEE",
-        "anchor": "Discussion, tumour-suppressor paragraph"
-      },
-      {
-        "proposition": "Severe hypomyelination is reproduced across rodent models and in human WWOX-deficient brain organoids, giving a human in-vitro system for the myelin axis.",
-        "snippet": "the brains of Wwox-mutant rodents demonstrate severe hypomyelination, a finding more recently observed in human WWOX-deficient brain organoids.",
-        "anchor": "Discussion, models paragraph"
-      },
-      {
-        "proposition": "WWOX is proposed as a candidate gene for genetically undiagnosed PEHO and PEHO-like syndrome.",
-        "snippet": "this makes WWOX a plausible candidate gene for patients with PEHO or PEHO-like syndrome that remain without a genetic diagnosis.",
-        "anchor": "Discussion, differential-diagnosis paragraph"
-      },
-      {
-        "proposition": "One third of cases required chromosomal microarray alongside sequencing; sequencing alone would have missed them.",
-        "snippet": "Without this dual approach, one third of our WWOX-DEE cases would have been missed.",
-        "anchor": "Discussion, diagnostic-workup paragraph"
-      },
-      {
-        "proposition": "No patient in the cohort achieved independent walking, irrespective of genotype class.",
-        "snippet": "None achieved independent walking, and only two had a single word, whereas 11 were nonverbal.",
-        "anchor": "Results, Patients"
-      },
-      {
-        "proposition": "The oldest living WWOX-DEE patient reported at the time of publication was 23 years 11 months.",
-        "snippet": "We report the oldest living patient, aged 23 years 11 months.",
-        "anchor": "Results, Genotype-phenotype correlation, opening"
-      },
-      {
-        "proposition": "In the longest-followed patient the EEG evolved over two decades from multifocal epileptiform activity to a diffuse low-voltage background with no epileptiform abnormalities at all.",
-        "snippet": "Patient 2, with the longest follow-up (21 years), showed progression to a diffuse low-voltage background without epileptiform abnormalities",
-        "anchor": "Results, Electroencephalography"
-      },
-      {
-        "proposition": "That longest-followed, oldest-living patient is homozygous for the missense p.Gln230Pro, i.e. missense/missense.",
-        "snippet": "c.689A > C, p.Gln230Pro (homozygous)",
-        "anchor": "Table 1, Patient 2 — read together with the same column's 'Age, sex: 23 y 11 m, M' and 'Genetic combination: Missense/missense'"
-      },
-      {
-        "proposition": "Read from the figure image rather than its caption: survival curves order null/missense above missense/missense above null/null, with the top two heavily overlapping in their 95% bands — consistent with the text's own statement that one versus two missense variants made no difference, and inconsistent with reading p = .0085 as a graded three-step ranking.",
-        "snippet": "Survival analysis for 75 individuals with WWOX developmental and epileptic encephalopathy stratified by genetic variant group. (A) Time to death. (B) Time to seizure onset.",
-        "anchor": "Figure 4, image inspected — panel A curves, censoring ticks and shaded 95% CI bands; panel B carries p = .65 on its face"
-      },
-      {
-        "proposition": "Read from the figure image: the two SCAR12-associated missense variants are marked at opposite ends of the protein, exon 2 and exon 9, interleaved with DEE variants rather than clustered.",
-        "snippet": "Location and type of pathogenic WWOX variants in our cohort (top) of 13 patients and those from the literature (bottom).",
-        "anchor": "Figure 3, image inspected — yellow SCAR12 markers at p.Pro47Thr (exon 2) and p.Gly372Arg (exon 9); p.Pro47Arg carries no SCAR12 marker"
-      }
-    ],
-    "note": "Twenty locators. Two are anchored to inspected figure images and one to a table cell read against its neighbours; the rest to text. The figures were retrieved and inspected earlier the same day via the pmc.ncbi.nlm.nih.gov/articles/instance/<PMCID>/bin/ route, after four earlier routes had failed and the figures had been recorded as unobtainable."
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No molecule or intervention emerged. The paper is descriptive and prognostic; forcing a therapeutic hypothesis onto a survival analysis would overstate it."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Commit candidates recorded, not applied. CLAIM 017 and CLAIM 033 both need revision on this evidence, and the four canonical current files change only under an operator-authorized BATCH_COMMIT."
   }
+ ],
+ "group_assessment": {
+  "waived": "The two publication counts cannot be measured: the PubMed connector is unauthorized in this session, and an estimate in an integer slot is indistinguishable from a measurement. What the paper itself establishes is recorded here so the waiver loses nothing. research_type is descriptive_clinical: a 13-patient, 12-family, five-centre international cohort with source EEG and MRI reviewed centrally, ACMG re-classification of all literature variants, and Kaplan-Meier survival analysis; RNA/RT-PCR work was performed but only to resolve the pathogenicity of two CNVs, so it is confirmatory rather than mechanistic. is_primary_group_for_disease is false in the strict sense — this is a leading epilepsy-genetics network (Scheffer, Bahlo, Hildebrand, Mefford, Specchio), not a WWOX laboratory — but it is as close to a primary group as WWOX-DEE currently has, because the disease's evidence base is clinical cohorts and this is the largest. Weighting: the observations carry high weight (centralised re-review of primary EEG and MRI, not abstracted from reports; variants re-classified rather than accepted). The survival analysis is the weakest link and the paper does not flag it: n = 75 split three ways, and the p-value is a three-group log-rank presented alongside a pairwise conclusion. NOTE: the waiver is per-section but the impediment is per-field — declining two unmeasurable integers also discards three fields determined from the Methods."
+ },
+ "field_density": {
+  "waived": "Field density requires a live PubMed query and the connector is unauthorized in this session. It was also not the gating question: the paper is already PAPER 018, and this run upgrades a partial receipt rather than deciding an intake."
+ },
+ "multihop": {
+  "references_enumerated": 50,
+  "gene_direct_refs_in_source": [
+   "35573960",
+   "30094525",
+   "26345274",
+   "17360458",
+   "11719429",
+   "32051108",
+   "25716914"
+  ],
+  "resolved": [],
+  "queued": [
+   "35573960",
+   "30094525",
+   "26345274",
+   "17360458",
+   "11719429",
+   "32051108",
+   "25716914"
+  ],
+  "note": "50 references; 26 are WWOX-direct with a PMID, of which 19 are already in paper_registry_current.md. Seven are not. Two of those seven — PMID 32051108 and 25716914 — were queued hours earlier as FT-031 and FT-030 from the reference list of PMID 39507621: two independent papers cite them and LEGEND had seen neither, which raises their priority rather than duplicating it. The remaining five are queued as FT-032. The listed gene_direct_refs_in_source are the unresolved ones only; the 19 already in the registry are counted in corpus_crossquery.hits and are not repeated here."
+ },
+ "corpus_crossquery": {
+  "query": "Which of this paper's 26 gene-direct references (those carrying a PMID) are already recorded in paper_registry_current.md, and which are absent from the registry, the full-text queue and the literature tracking log?",
+  "hits": 19,
+  "note": "Run mechanically over the canonical registries. 19 present, 7 absent — a 27% miss rate on the reference list of a paper already in the registry as a source of three claims."
+ },
+ "retraction_check": {
+  "result": "No retraction or expression of concern. The article does carry a published correction, dated 24 March 2023, which the text records inline: 'The entries in column 9 of Table 1 for the WWOX and Genetic combination rows of the Genetics section have been updated.' Column 9 is Patient 9. Any reading of Table 1 must use the corrected values, and this reading did. Verified against the local PMC XML; not re-checked against a live PubMed query, because the connector is unauthorized.",
+  "checked": true
+ },
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:36779245 on 2026-08-07: inEPMC=Y, PMCID PMC10952634, hasPDF=Y — full text is indexed, so an external validator can re-verify body quotes.",
+  "entries": [
+   {
+    "proposition": "The paper explicitly finds NO evidence for an intermediate genotype class: carrying one versus two missense variants made no difference, and missense-carrying WWOX-DEE patients were as severe as null/null patients.",
+    "snippet": "We found no difference between individuals with one or two missense variants and therefore no evidence to support an “intermediate” phenotype, as our WWOX ‐DEE patients were as severe as those with two loss‐of‐function null alleles.",
+    "anchor": "Discussion, gene-dosage paragraph"
+   },
+   {
+    "proposition": "Survival separates null/null from anything carrying a missense allele; the statistic is a three-group log-rank.",
+    "snippet": "Using the Kaplan–Meier method to analyze time to death, we found that survival was much poorer for the double null group compared with the patients who had at least one missense pathogenic variant ( p ‐value = .0085, log‐rank test).",
+    "anchor": "Results, Genotype-phenotype correlation"
+   },
+   {
+    "proposition": "The 5-year survival figures cited downstream as a genotype effect.",
+    "snippet": "Probability of survival to the age of 5 years for the double null group was <50%; by comparison, it was >75% for the other two, presumably less severe, genetic groups",
+    "anchor": "Results, Genotype-phenotype correlation"
+   },
+   {
+    "proposition": "Genotype class does not predict age at seizure onset — a negative result on a different axis from survival.",
+    "snippet": "we found no difference in time to seizure onset between the three genetic groups ( p ‐value = .65, log‐rank test",
+    "anchor": "Results, Genotype-phenotype correlation"
+   },
+   {
+    "proposition": "No region of WWOX is specific to the DEE phenotype, and the two SCAR12 missense variants sit close to DEE variants rather than in a separate domain.",
+    "snippet": "no region of the gene emerged as specific for being associated with WWOX ‐DEE. Furthermore, the two missense variants associated with the rarer, milder SCAR12 phenotype are situated in close proximity to WWOX ‐DEE variants: p.Gly372Arg in exon 9 and p.Pro47Thr in exon 2.",
+    "anchor": "Results, Genetic variants, final paragraph"
+   },
+   {
+    "proposition": "The same codon produces both disease poles depending on the substitution: Pro47Thr in SCAR12, Pro47Arg in WWOX-DEE.",
+    "snippet": "p.Pro47 has been associated with two pathogenic variants; the more conservative change to threonine was found in SCAR12 26 compared with the arginine substitution found in WWOX ‐DEE",
+    "anchor": "Results, Genetic variants, final paragraph"
+   },
+   {
+    "proposition": "Lennox-Gastaut syndrome was excluded in this cohort on the EEG hallmark, and the authors note the hallmark was never reported in the cases previously labelled LGS.",
+    "snippet": "Although our patients had multiple seizure types, they did not show the mandatory EEG hallmark of LGS of <2.5 Hz slow spike–wave, 39 excluding this syndromic diagnosis. It is notable that this EEG feature was not reported for patients previously classified as LGS.",
+    "anchor": "Discussion, epilepsy-syndrome paragraph"
+   },
+   {
+    "proposition": "Mortality is 35% across the combined series, driven by respiratory complications.",
+    "snippet": "WWOX ‐DEE has a high mortality rate of 35%, with 23 of 62 individuals deceased in the literature and 3 of 13 patients here.",
+    "anchor": "Discussion, mortality paragraph"
+   },
+   {
+    "proposition": "A distinctive MRI pattern is present and is detectable within days of birth, not only after seizure burden accumulates.",
+    "snippet": "We identified a WWOX ‐DEE pattern of severe frontotemporal atrophy, hippocampal atrophy, very thin corpus callosum, optic atrophy, and white matter signal abnormalities. These findings were evident from as early as 15 days of life, with repeat MRI revealing increased cerebral atrophy over time.",
+    "anchor": "Discussion, imaging paragraph"
+   },
+   {
+    "proposition": "Optic atrophy was universal and age-independent in the cohort.",
+    "snippet": "All cases demonstrated severe optic atrophy, irrespective of age, and some patients showed brainstem changes, which were mainly dorsal",
+    "anchor": "Results, Brain imaging"
+   },
+   {
+    "proposition": "No patient developed a tumour despite WWOX being an established tumour suppressor; the authors attribute this to early mortality rather than to absence of risk.",
+    "snippet": "there are no reports of WWOX ‐DEE or SCAR12 patients with tumors; however, this could simply be due to the high early mortality rate of WWOX‐ DEE",
+    "anchor": "Discussion, tumour-suppressor paragraph"
+   },
+   {
+    "proposition": "Severe hypomyelination is reproduced across rodent models and in human WWOX-deficient brain organoids, giving a human in-vitro system for the myelin axis.",
+    "snippet": "the brains of Wwox‐ mutant rodents demonstrate severe hypomyelination, 13 , 46 , 47 , 48 a finding more recently observed in human WWOX‐deficient brain organoids.",
+    "anchor": "Discussion, models paragraph"
+   },
+   {
+    "proposition": "WWOX is proposed as a candidate gene for genetically undiagnosed PEHO and PEHO-like syndrome.",
+    "snippet": "this makes WWOX a plausible candidate gene for patients with PEHO or PEHO‐like syndrome that remain without a genetic diagnosis.",
+    "anchor": "Discussion, differential-diagnosis paragraph"
+   },
+   {
+    "proposition": "One third of cases required chromosomal microarray alongside sequencing; sequencing alone would have missed them.",
+    "snippet": "Without this dual approach, one third of our WWOX‐ DEE cases would have been missed.",
+    "anchor": "Discussion, diagnostic-workup paragraph"
+   },
+   {
+    "proposition": "No patient in the cohort achieved independent walking, irrespective of genotype class.",
+    "snippet": "None achieved independent walking, and only two had a single word, whereas 11 were nonverbal.",
+    "anchor": "Results, Patients"
+   },
+   {
+    "proposition": "The oldest living WWOX-DEE patient reported at the time of publication was 23 years 11 months.",
+    "snippet": "We report the oldest living patient, aged 23 years 11 months.",
+    "anchor": "Results, Genotype-phenotype correlation, opening"
+   },
+   {
+    "proposition": "In the longest-followed patient the EEG evolved over two decades from multifocal epileptiform activity to a diffuse low-voltage background with no epileptiform abnormalities at all.",
+    "snippet": "Patient 2, with the longest follow‐up (21 years), showed progression to a diffuse low‐voltage background without epileptiform abnormalities",
+    "anchor": "Results, Electroencephalography"
+   },
+   {
+    "proposition": "That longest-followed, oldest-living patient is homozygous for the missense p.Gln230Pro, i.e. missense/missense.",
+    "snippet": "c.689A > C, p.Gln230Pro (homozygous)",
+    "anchor": "Table 1, Patient 2 — read together with the same column's 'Age, sex: 23 y 11 m, M' and 'Genetic combination: Missense/missense'"
+   },
+   {
+    "proposition": "Read from the figure image rather than its caption: survival curves order null/missense above missense/missense above null/null, with the top two heavily overlapping in their 95% bands — consistent with the text's own statement that one versus two missense variants made no difference, and inconsistent with reading p = .0085 as a graded three-step ranking.",
+    "snippet": "Survival analysis for 75 individuals with WWOX developmental and epileptic encephalopathy stratified by genetic variant group. (A) Time to death. (B) Time to seizure onset.",
+    "anchor": "Figure 4, image inspected — panel A curves, censoring ticks and shaded 95% CI bands; panel B carries p = .65 on its face"
+   },
+   {
+    "proposition": "Read from the figure image: the two SCAR12-associated missense variants are marked at opposite ends of the protein, exon 2 and exon 9, interleaved with DEE variants rather than clustered.",
+    "snippet": "Location and type of pathogenic WWOX variants in our cohort (top) of 13 patients and those from the literature (bottom).",
+    "anchor": "Figure 3, image inspected — yellow SCAR12 markers at p.Pro47Thr (exon 2) and p.Gly372Arg (exon 9); p.Pro47Arg carries no SCAR12 marker"
+   }
+  ],
+  "note": "Twenty locators. Two are anchored to inspected figure images and one to a table cell read against its neighbours; the rest to text. The figures were retrieved and inspected earlier the same day via the pmc.ncbi.nlm.nih.gov/articles/instance/<PMCID>/bin/ route, after four earlier routes had failed and the figures had been recorded as unobtainable.\n\n🔴 LOCATOR AUDIT AND REPAIR 2026-08-10. All twenty text snippets were matched against the local XML; THIRTEEN did not occur in it. Every one was the transcription class — the quote written as the page reads rather than extracted as the artifact contains — and this journal's markup is the worst case in the corpus: non-breaking hyphens (`WWOX‐DEE` written `WWOX-DEE`), en dashes (`Kaplan–Meier`, `spike–wave`, `7–8 Hz`), curly quotation marks, and superscript reference numbers interleaved in the running text (`hypomyelination, 13 , 46 , 47 , 48 a finding`). NOTHING WAS REWORDED: each snippet is the same span re-taken from the extracted text, and both ends were verified to land where the recorded quote landed, folded to alphanumerics so the comparison survives exactly the characters the transcription mangled. All thirteen now match in STRICT mode. No quote here was ever absent from the paper — the defect was fidelity, not integrity."
+ }
 }
