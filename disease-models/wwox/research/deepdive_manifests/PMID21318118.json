@@ -1,0 +1,143 @@
+{
+  "schema_version": 2,
+  "pmid": "21318118",
+  "doi": "10.1155/2011/984505",
+  "receipt": "FTR-20260810-21318118-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID21318118.md",
+    "full_text_queue_current#FT-047",
+    "disease-models/wwox/research/commit_candidates/CC-20260810-21318118-01.md"
+  ],
+  "skills_considered": [
+    {"skill": "legend", "used": true},
+    {"skill": "legend-study-intake-triage", "used": true},
+    {"skill": "legend-batch-inferential-sweep", "used": true},
+    {"skill": "legend-deepdive", "used": true},
+    {"skill": "legend-capability-scout", "used": true},
+    {"skill": "legend-session-self-eval", "used": true},
+    {"skill": "legend-session-takeaways", "used": true},
+    {"skill": "pdf", "used": true},
+    {"skill": "find-fulltext", "used": false, "reason": "A complete local PMC XML was present; only a PDF visual surface was retrieved after the standalone figure route failed."},
+    {"skill": "legend-proband-priority-matrix", "used": false, "reason": "The operator fixed the sequential reading order."},
+    {"skill": "legend-discovery", "used": false, "reason": "Canonical scientific files are BATCH_COMMIT-only; this review lands as a dossier and candidate."},
+    {"skill": "legend-hypothesis-forge", "used": false, "reason": "The compound-mouse idea is explicitly future work and is not upgraded into a therapeutic hypothesis."},
+    {"skill": "legend-safety-triage", "used": false, "reason": "No treatment, dose, timing or clinical action is tested."},
+    {"skill": "legend-commit", "used": false, "reason": "BLOCK_BATCH_COMMIT remains explicit and canonical scientific files were not edited."}
+  ],
+  "group_assessment": {
+    "total_publications": 149,
+    "publications_on_gene": 79,
+    "research_type": "mixed",
+    "is_primary_group_for_disease": true,
+    "weighting": "The multi-author review includes investigators who generated several summarized fragile-site models, including Wwox models. First-person phrasing reflects that provenance but does not make this review a new experiment. Claims are weighted as synthesis and do not inherit independent-replication status."
+  },
+  "field_density": {
+    "queries": [
+      {"query": "common fragile site AND mouse model", "count": 14232, "source": "Europe PMC broad query, 2026-08-10"},
+      {"query": "WWOX AND animal model", "count": 741, "source": "Europe PMC broad query, 2026-08-10"},
+      {"query": "WWOX AND knockout mouse", "count": 468, "source": "Europe PMC broad query, 2026-08-10"}
+    ],
+    "note": "The broad common-fragile-site literature is dense and heterogeneous. The paper's value is historical comparison across genes, not novelty or an exhaustive modern WWOX census."
+  },
+  "multihop": {
+    "references_enumerated": 95,
+    "gene_direct_refs_in_source": ["17360458", "17575124", "17803050", "18650488", "19936220"],
+    "resolved": ["17360458", "17575124", "17803050", "18650488", "19936220"],
+    "queued": ["FT-047"],
+    "note": "All 95 references were enumerated sequentially. The listed WWOX model anchors resolve locally; their primary evidence status is not inherited by this narrative review."
+  },
+  "corpus_crossquery": {
+    "query": "What 2011 baseline does this review establish for Wwox mouse behaviour, tumour context and the maturity of conditional models?",
+    "hits": 6,
+    "note": "Post-reading audit found FT-047, the Tanna 2018 and Steinberg 2021 dossiers, PMID 19500159, PMID 19936220 and the existing mouse-epilepsy correction surfaces. The review is consistent with the early primary chain on absent observed abnormal behaviour and predates later cell-targeted CNS models."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "The corrected comma-separated repository retraction check returned no retraction, expression of concern or correction for PMID 21318118 on 2026-08-10."
+  },
+  "source_artifacts": [
+    {"path": "files/fulltext/PMID21318118_Drusco2011_PMC.xml", "sha256": "61c05fb51f67e4f69d53fe9c535defe6715fa9189219e9a49c0c42c314cbb580", "kind": "article_text"},
+    {"path": "files/fulltext/PMID21318118_Drusco2011_assets/source.pdf", "sha256": "12e9221bb1150c62311353c7fbda2be59eb6fe09904a59578db82d48cd156407", "kind": "article_binary"},
+    {"path": "files/fulltext/PMID21318118_Drusco2011_assets/ppi_preflight.json", "sha256": "9960d2cc41baad88106638ce1f09a5f1e3076222cc294d01b60bfd10010d40b3", "kind": "article_binary"},
+    {"path": "files/fulltext/PMID21318118_Drusco2011_assets/figure1_page4.png", "sha256": "5677af3082946fbc061a9ac474005306ab1f19f0c040c1efe807a1ef5cdfc510", "kind": "figure"}
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "The fingerprinted local JATS artifact identifies PMCID PMC3035048, PMID 21318118 and DOI 10.1155/2011/984505; it contains a complete body, one figure, one table and 95 references.",
+    "entries": [
+      {
+        "proposition": "The review interprets retained second alleles in heterozygous tumours as haploinsufficiency.",
+        "snippet": "in some tumors the second Wwox allele remained intact, suggesting haploinsufficiency for tumor suppression.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21318118_Drusco2011_PMC.xml",
+        "anchor": "Section 3 Wwox, heterozygous-model paragraph",
+        "evidence_relation": "text_only"
+      },
+      {
+        "proposition": "The ENU comparison summarized 80% versus 40% tumour incidence.",
+        "snippet": "incidence of tumor formation in Wwox+/− mice was 80% compared to 40% in Wwox+/+ animals.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21318118_Drusco2011_PMC.xml",
+        "anchor": "Section 3 Wwox, heterozygous-model paragraph",
+        "evidence_relation": "text_only"
+      },
+      {
+        "proposition": "The NMBA comparison summarized almost 100% versus 29% forestomach tumours.",
+        "snippet": "almost 100% of Wwox+/−mice had developed forestomach tumors ranging from adenomas to invasive carcinomas, whereas tumors were present only in 29% of Wwox+/+ animals.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21318118_Drusco2011_PMC.xml",
+        "anchor": "Section 3 Wwox, heterozygous-model paragraph",
+        "evidence_relation": "text_only"
+      },
+      {
+        "proposition": "The global-null model is summarized as metabolic disease with death at 3–4 weeks.",
+        "snippet": "these mice exhibit a metabolic disorder characterized by hypoglycemia and hypocalcaemia and die at 3-4 weeks of age",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21318118_Drusco2011_PMC.xml",
+        "anchor": "Section 3 Wwox, homozygous-model paragraph",
+        "evidence_relation": "text_only"
+      },
+      {
+        "proposition": "The 2011 review says the small global-null mice lacked observed abnormal behaviour or impaired motor skills.",
+        "snippet": "Though smaller in size, they did not display abnormal behavior or impaired motor skills",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21318118_Drusco2011_PMC.xml",
+        "anchor": "Section 3 Wwox, homozygous-model paragraph",
+        "evidence_relation": "text_only"
+      },
+      {
+        "proposition": "The Runx2 causal chain is explicitly labelled speculation requiring further work.",
+        "snippet": "we speculated that absence of Wwox stimulates Runx2 transactivation function and hence upregulates its expression. Further investigations are however necessary",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21318118_Drusco2011_PMC.xml",
+        "anchor": "Section 3 Wwox, osteoblast/Runx2 paragraph",
+        "evidence_relation": "text_only"
+      },
+      {
+        "proposition": "Conditional Wwox models were presented as tools for future adult and tissue-specific work.",
+        "snippet": "This new model will greatly facilitate the functional analysis of Wwox in adult mice and will allow more refined investigations of neoplastic transformation in specific target tissues",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21318118_Drusco2011_PMC.xml",
+        "anchor": "Section 3 Wwox, conditional-model paragraph",
+        "evidence_relation": "text_only"
+      },
+      {
+        "proposition": "The proposed Fhit/Wwox compound comparison was a future experiment, not an observed result.",
+        "snippet": "we can ask what might be the outcome of exposing a potential FHIT−/−Wwox+/− mouse to such chemical insults when compared to single knockout animals.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21318118_Drusco2011_PMC.xml",
+        "anchor": "Conclusions, compound-model paragraph",
+        "evidence_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 1 provides no visual evidence about WWOX.",
+        "snippet": "The three drawn schemes show Fhit−/− with Vhl+/−, Fhit+/− with MMTV-HER2, and Fhit+/− with Nit1−/−; no Wwox genotype or phenotype appears.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID21318118_Drusco2011_assets/figure1_page4.png",
+        "anchor": "Figure 1 panels a-c, inspected at page pixels after a measured 344.8-effective-PPI limiting ceiling",
+        "evidence_relation": "panel_only"
+      }
+    ]
+  }
+}
