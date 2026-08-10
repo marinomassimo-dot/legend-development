@@ -1145,18 +1145,32 @@ completa con `reread_reason: inadequate_prior_coverage`.
 
 ---
 
-## FT-052 — PMID 25331887, la fonte in vitro su cui poggia la direzione in vivo di 38499540
+## FT-052 — PMID 25331887, e la premessa con cui l'ho accodato era sbagliata
 *(Rinumerata da FT-048 il 2026-08-10, stessa collisione di `FT-050`.)*
-**Paper:** PMID 25331887 / DOI 10.1073/pnas.1409753111 — Abu-Odeh 2014 *PNAS* — *WWOX regulates
-ATM activation and the DNA damage response*
+**Paper:** PMID 25331887 / DOI 10.1073/pnas.1409252111 — Abu-Odeh 2014 *PNAS* — *WWOX, the
+common fragile site FRA16D gene product, regulates ATM activation and the DNA damage response*
 **Priority:** HIGH
-**Perché:** 38499540 conclude che i suoi risultati in vivo *«correspond with previous in vitro
-findings»* citando questo lavoro. La direzione WWOX→NHEJ nel modello murino è quindi ancorata a
-una fonte **non letta**: è precisamente la forma della premessa importata che
-`IMPORTED_PREMISE_ATTRIBUTION_GATE` esiste per intercettare.
-**Artefatto:** superficie strutturata **già acquisita** dalla sweep del 2026-08-10
-(`PMID25331887_AbuOdeh2014_PMC.html`) — non serve recuperare nulla.
-**Current status:** ⬜ aperto, artefatto in casa.
+**Perché — versione originale, conservata perché è l'errore:** *«38499540 conclude che i suoi
+risultati in vivo "correspond with previous in vitro findings" citando questo lavoro. La
+direzione WWOX→NHEJ nel modello murino è quindi ancorata a una fonte non letta.»*
+🔴 **Falso, e la lettura lo ha dimostrato.** La frase *«correspond with previous in vitro
+findings»* cita **[17], [38], [39]** — nessuno dei quali è questo paper. `25331887` è il
+riferimento **[36]**, citato per l'asse ATM insieme a [35], e nella Discussione è nominato
+**come conflitto**: *«In contrast, a previous paper by Abu-Odeh and colleagues, has shown that
+WWOX enhances HDR in U2OS cells [36]»*. Il DOI che avevo scritto era inventato
+(`1409753111`); quello vero è `1409252111`. Il `multihop` del manifest di 38499540 mappava
+questo PMID ai rif. 17 e 34: entrambi corretti nello stesso commit.
+**La forma dell'errore è quella di tutta la giornata, un piano più su:** avevo attribuito una
+citazione a una frase senza leggere il numero che la frase porta. È lo stesso difetto che
+l'audit `cited_panel_check` cerca fra testo e pannello, qui fra testo e bibliografia.
+**Perché valeva leggerlo lo stesso, e di più:** il conflitto è reale, è **dichiarato dagli
+autori**, e i due lavori hanno lo stesso autore senior. E il pannello aggiunge ciò che la
+spiegazione pubblicata non dice — vedi `DL-METH-084`.
+**Artefatto:** superficie strutturata acquisita dalla sweep del 2026-08-10
+(`PMID25331887_AbuOdeh2014_PMC.html`), più il PDF locale usato **solo** come contenitore di
+immagini per estrarre le sette figure alla risoluzione depositata.
+**Current status:** ✅ **CHIUSO** — `FTR-20260810-25331887-01`, `partial_fulltext_read`
+(supplementary irrecuperabile, vedi `FT-053`). Manifest strict PASS, 29 locator.
 S1–S5 resi dal PDF sorgente a 220 dpi e ispezionati come immagini; la ricetta di rendering
 (digest sorgente · pagina · dpi · digest immagine) è nel manifest sotto
 `supplement_page_renders`, così un lettore con la propria copia rigenera byte identici senza
@@ -1169,3 +1183,30 @@ reperti che esistono solo lì, fra cui **due conteggi di tumorigenicità incompa
 stesso genotipo** (12/28 in Fig 4D contro 11/21 in S5B) e **MCM7 che non è più alto** nel
 pannello che il testo cita per dirlo. Lo scrittore della receipt aveva ragione a rifiutare
 `complete` al primo passaggio.
+
+---
+
+## FT-053 — Il supplementary di PMID 25331887 non è irrecuperato: è **irrecuperabile** dalle vie sancite
+**Paper:** PMID 25331887 / DOI 10.1073/pnas.1409252111 — Abu-Odeh 2014 *PNAS*
+**Priority:** MEDIA-ALTA
+**Che cosa manca:** `pnas.201409252SI.pdf`, figure **S1–S7**. Non è rifinitura: **S2B** porta
+l'unico confronto `WWOX+/+ / +/− / −/−` in MEF — cioè il solo dato genetico a dosaggio del
+paper — **S6C** è la discriminazione K63-contro-K48 su cui poggia l'intera lettura della catena
+ubiquitinica, e **S7B** è la misura di emivita citata nel corpo per dire che K274R è meno
+stabile. Tre affermazioni portanti del manifest hanno la loro evidenza lì dentro.
+**🔴 Le vie tentate, con la risposta letterale — questa voce esiste per non farle ritentare a
+qualcun altro fra un mese:**
+
+| Via | Risposta |
+|---|---|
+| OA package service (`oa.fcgi?id=PMC4226089`) | `error code="idIsNotOpenAccess"` |
+| Europe PMC `supplementaryFiles` per `PMC4226089` | `errCode 0` — *«Article with id PMC4226089 is not open access one»* |
+| CDN dell'editore, `pnas.org/lookup/suppl/doi:.../DCSupplemental/` | serve una **pagina HTML**, non il PDF (5 701 byte, `HTML document text`) — la stessa trappola già documentata nel manuale deep-dive |
+| PDF locale (`PMID25331887_AbuOdeh2014.pdf`) | dieci pagine, **solo l'articolo principale**; il SI non è allegato |
+
+**La distinzione che conta:** il paper ha un full text libero su PMC ma **non è open access**,
+e le due cose non coincidono. Il corpo si legge, il supplementary no. Un lettore che assume
+«è su PMC quindi il pacchetto OA esiste» tenta le tre vie e conclude che ha sbagliato comando.
+**Next action:** richiesta agli autori, oppure copia via biblioteca istituzionale. È materiale
+per la Fondazione allo stesso titolo dei dodici senza link libero del 2026-08-07.
+**Current status:** ⬜ aperto — **bloccato su accesso, non su tempo.**

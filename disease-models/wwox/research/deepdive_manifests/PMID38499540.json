@@ -41,18 +41,19 @@
   "performed": false,
   "references_enumerated": 55,
   "gene_direct_refs_in_source": [
-   {"ref": 17, "pmid": "25331887"},
-   {"ref": 34, "pmid": "25331887"}
+   {"ref": 36, "pmid": "25331887"},
+   {"ref": 17, "pmid": null, "author": "Park et al."}
   ],
   "resolved": [
-   {"ref": 17, "pmid": "25331887",
-    "why": "Abu-Odeh 2014 PNAS, WWOX regulates ATM activation and the DNA damage response. Identity and role resolved: it is the in vitro basis the in vivo claims here are explicitly said to correspond with. A structured surface for it was acquired by this session's sweep; it is not yet read, and that reading debt is stated rather than implied."}
+   {"ref": 36, "pmid": "25331887",
+    "why": "Abu-Odeh 2014 PNAS, WWOX regulates ATM activation and the DNA damage response. Read 2026-08-10; its manifest is PMID25331887.json.",
+    "correction_20260810": "🔴 THE FIRST VERSION OF THIS BLOCK WAS WRONG, and the error was mine rather than the paper's. It recorded 25331887 as ref 17 and ref 34, and built a queue entry on the claim that this paper's in vivo direction is anchored to it as a supporting in vitro source. Reading 25331887 falsified both halves. This paper's own Discussion says: 'In contrast, a previous paper by Abu-Odeh and colleagues, has shown that WWOX enhances HDR in U2OS cells [36]' — so 25331887 is ref 36, it is cited as an acknowledged CONFLICT and not as support, and the authors name the conflict themselves and offer an explanation for it. Ref 17 is Park et al., the study this paper says it IS in alignment with. Identical in shape to the panel audit run the same day, one level up: I attributed a citation to a sentence without reading the number the sentence actually carries."}
   ],
   "queued": [
-   {"ref": 17, "pmid": "25331887",
-    "note": "Queued for reading. Highest-value hop for this paper: the sentence 'These results correspond with previous in vitro findings' rests on it, so the in vivo direction is currently anchored to an unread in vitro source."}
+   {"ref": 17, "pmid": null,
+    "note": "Park et al. — heightened RAD51 in WWOX-negative cells, and a link between absent WWOX and enhanced end resection. This is the study the paper claims alignment with, so it is now the highest-value unread hop. Not resolved to a PMID here."}
   ],
-  "note": "The reference list holds 55 entries. The in vivo conclusion is explicitly said to 'correspond with previous in vitro findings [17,38,39]', so those three are the load-bearing hops; one is identified and queued, the other two are not resolved to PMIDs here. Declared debt."
+  "note": "The reference list holds 55 entries. The in vivo conclusion is said to 'correspond with previous in vitro findings [17,38,39]', so those three are the load-bearing hops and NONE of them is 25331887. 25331887 is cited separately at [35] and [36] for the ATM axis, and again in the Discussion as an explicit conflict on the direction of HDR. Corrected 2026-08-10 after reading it — see correction_20260810 above."
  },
  "corpus_crossquery": {
   "performed": true,
