@@ -2103,3 +2103,24 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
   penetrante dell'intero modello *lde*, più delle crisi (34%), e la letteratura a valle non lo
   porta affatto.
 - **Interconnessioni:** `DL-MECH-075` · `DL-MECH-076` · `DL-MECH-077` · `FT-041` · `FT-042`.
+
+### DL-METH-079 — Un **titolo** che afferma il contrario del proprio paper, e viaggia più lontano di qualunque altra superficie
+- **Status:** open · **Tag epistemico:** `CORREZIONE` di attribuzione a livello di **titolo**, non di claim.
+- **Fonte:** PMID **38182577** (Akkawi 2024, *Cell Death Dis*; letto integralmente, `FTR-20260810-38182577-01`, manifest strict PASS 22 locator).
+- 🔴 **Il fatto:** il titolo pubblicato è *"WWOX **promotes** osteosarcoma development via **upregulation** of Myc"*. Letto alla lettera afferma che WWOX promuove il tumore e alza MYC. Il paper dimostra l'opposto su **tre** superfici concordi: il corpo (*"depletion of WWOX results in Myc upregulation as an early event"*), la didascalia della propria Figura 6 (*"WWOX expression is inversely correlated with c-Myc in OS"*) e l'**abstract**, che è corretto e coerente. La lettura intesa è *"WWOX **[loss]** promotes…"*. L'errata PMID 38355659 corregge un nome d'autore e **non tocca il titolo**.
+- 🔴 **Perché è un reperto di metodo e non di biologia:** il titolo è l'artefatto che viaggia più lontano. Sta in PubMed, nel TSV `NOT_EVIDENCE` del corpus, nelle liste di citazione, e **stava nella tabella di triage consegnata dalla sessione fornitore il 2026-08-10** come "WWOX promuove l'osteosarcoma via Myc". Un modello costruito leggendo titoli registra **WWOX come oncogene nell'osso** — cioè l'inverso della sua funzione. È la dimostrazione concreta della **regola 4** (`grep`/keyword vietati come metodo d'analisi) e del perché il corpus di abstract è `NOT_EVIDENCE`: qui nemmeno l'abstract sbaglia, sbaglia solo il titolo, e nessuna quantità di triage sui metadati poteva accorgersene.
+- **DATO — la direzione, che è quella giusta:** WWOX↓ → MYC↑, misurata in quattro modi indipendenti nel paper (RNA-seq DKO vs SKO; qPCR; ChIP-Seq di MYC sui promotori; e correlazione inversa WWOX/MYC in osteosarcoma umano TCGA TARGET GTEx, P<0,001). **Stessa direzione** di PMID 29724996 nel fegato, letto lo stesso giorno. **Nessun conflitto cross-tissue: WWOX sopprime MYC in entrambi i tessuti.**
+- ⚠️ **Limite da portare con il dato:** la "restoration" di WWOX in Fig 6G è una **sovraespressione 9×** che porta MYC a 0,4, cioè *sotto* la baseline SKO; e il divario proteico DKO/SKO è **1,4×** contro **4,7×** di mRNA, non riconciliato dal paper. Il livello fisiologico di WWOX non è stato testato.
+- **REVIVAL_TRIGGER per la classe di errore:** ogni volta che una sessione ordina o cita un paper del corpus **a partire dal titolo**, quel titolo va considerato non verificato finché il corpo non è aperto. Un titolo non è un abstract e non è una lettura.
+- **Interconnessioni:** `DL-MECH-078` · `IMPORTED_PREMISE_ATTRIBUTION_GATE` · regola 4 in [[gold_is_in_the_details]].
+
+### DL-THER-080 — Simvastatina→MCM7 in osteosarcoma *Wwox/Trp53*-null: seme di repurposing, con i suoi limiti attaccati
+- **Status:** open · **Tag epistemico:** `IPOTESI` / seme di repurposing. **Non** un candidato terapeutico.
+- **Fonte:** PMID **38182577**, Figura 7 (ispezionata a 1975 px).
+- **DATO in vivo:** simvastatina 60 mg/kg per gavage, 10 giorni, su tumori da iniezione di yBM DKO in NOD/SCID: dimensione da ~0,42 a ~0,21 cm³ (`****`), peso da ~0,71 a ~0,55 g (`***`), MCM7 all'IHC da ~0,43 a ~0,30 (`**`).
+- ⚠️ **Tre limiti che il testo non porta, e che il pannello sì:**
+  1. la selettività dichiarata è smentita dalla figura stessa — il testo scrive *"did not affect control BM cells"*, ma in Fig 7C la vitalità del midollo di controllo scende da ~1,05 a ~0,73 a 40 µM: **effetto ridotto, non assente**;
+  2. il trattamento abbassa **sia MCM7 sia c-Myc** (Fig 7B), quindi l'esperimento non separa i due bersagli;
+  3. la maggiore sensibilità del DKO rispetto al SKO (Fig 7E) è affermata **senza alcun test statistico nel pannello** e su due repliche biologiche per gruppo.
+- 🔴 **Perché NON entra in BLOCK-1 oggi:** il bersaglio è MCM7 nell'osso; non esiste in questo paper alcun razionale CNS, nessuna misura di penetrazione della barriera, nessun legame con un genotipo WWOX-DEE. Promuoverlo richiederebbe che la direzione WWOX→MYC sia stabilita *nel cervello* e che il MYC neuronale sia un bersaglio con un readout prossimale — nessuna delle due condizioni è soddisfatta.
+- **Interconnessioni:** `DL-METH-079` · PMID **29724996** (asse WWOX–proliferazione, `c-Myc` soppresso nel fegato).

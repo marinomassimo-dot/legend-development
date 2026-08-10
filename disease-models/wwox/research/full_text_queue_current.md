@@ -1096,3 +1096,24 @@ salire a `DATO`** senza un esperimento che testi la dissociazione compartimento/
 modo diretto.
 **Current status:** ⬜ registrata qui perché interrogabile subito; canonicamente **non**
 promossa — `batch_commit_gate` è chiuso.
+
+---
+
+## FT-046 — Supplementary di PMID 38182577: il debito che tiene la lettura a `partial`
+**Paper:** Akkawi 2024 — *WWOX promotes osteosarcoma development via upregulation of Myc*
+(⚠️ titolo invertito rispetto al proprio contenuto — vedi `DL-METH-079`).
+**Priority:** MEDIUM-HIGH
+**Artefatto:** già in locale e fingerprintato —
+`files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_MOESM1_ESM.pdf`
+(SHA-256 `bf64e0e7133a…`), più `MOESM2_ESM.pptx` non aperto.
+**Perché è debito e non rifinitura:** il corpo e le sette figure principali sono letti
+(`FTR-20260810-38182577-01`), ma i pannelli **S1–S5 non sono stati adjudicati**, e uno di essi
+è portante: la claim *"Trp53 SKO yBM is not tumorigenic"* — cioè il contrasto che regge
+l'intero modello a due colpi — poggia su **Fig S5A,B**. Finché quel pannello non è letto, il
+contrasto DKO-vs-SKO è sostenuto dal testo e non dalla figura.
+**Perché la lettura è `partial_fulltext_read`:** lo scrittore del receipt ha **rifiutato**
+`complete_fulltext_read` con `coverage.supplementary: not_read`, e ha fatto bene. Una prima
+stesura del manifest dichiarava "Coverage: complete"; è stata corretta.
+**Next action:** adjudicare S1–S5 come immagini a risoluzione originale, poi ri-registrare a
+profondità completa con `reread_reason: inadequate_prior_coverage`.
+**Current status:** ⬜ debito dichiarato, artefatto già in casa — non serve recuperare nulla.

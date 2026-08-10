@@ -1,0 +1,297 @@
+{
+ "schema_version": 2,
+ "pmid": "38182577",
+ "doi": "10.1038/s41419-023-06378-8",
+ "receipt": "FTR-20260810-38182577-01",
+ "landing": [
+  "FTR-20260810-38182577-01",
+  "discovery_ledger_current",
+  "full_text_queue_current"
+ ],
+ "skills_considered": [
+  {"skill": "legend-study-intake-triage", "used": true},
+  {"skill": "find-fulltext", "used": true,
+   "reason": "The XML came from this supplier session's sweep. The figures needed three routes: the PMC OA package FTP path returned 404 despite oa.fcgi advertising it, the Springer CDN refused the .jpg names the XML declares, and the working route was europepmc.org/webservices/rest/PMC10770339/supplementaryFiles for the supplements plus the Springer CDN with .png for the original-resolution figures."},
+  {"skill": "legend-deepdive", "used": false,
+   "reason": "Run inline. Every load-bearing finding here is a panel reading, and a read-only sub-agent cannot open a PNG at original resolution."},
+  {"skill": "legend-discovery", "used": true,
+   "reason": "Two discovery-grade items land in the discovery ledger from this reading: the inverted title as a triage hazard, and simvastatin/MCM7 as a repurposing seed with its caveats attached."},
+  {"skill": "legend-safety-triage", "used": false,
+   "reason": "Simvastatin is a repurposing seed here, not a candidate. BLOCK-1 triage would be premature: the target is MCM7 in bone, the CNS rationale for a WWOX-DEE genotype is absent, and the paper's own control cells are affected by the drug (Fig 7C) contrary to its text."}
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 137,
+  "publications_on_gene": 65,
+  "counts_measured": "PubMed esearch, 2026-08-10. 'Aqeilan RI[au]' 137 total, 'Aqeilan RI[au] AND WWOX' 65. Primary laboratory for the gene worldwide.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "High weight on the mouse genetics and the RNA-seq. Lower weight on the immunoblot quantifications, which recur across Figs 1F, 6G and 7B as single fold-change numbers under lanes with no replicates and no statistics, while the running text calls their differences significant."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {"query": "Aqeilan RI[au] AND WWOX", "route": "PubMed esearch 2026-08-10", "count": 65},
+   {"query": "Aqeilan RI[au]", "route": "PubMed esearch 2026-08-10", "count": 137}
+  ],
+  "note": "Primary WWOX in vivo biology in bone. The MYC direction established here is the same as in the hepatic paper 29724996 read immediately before it, which is what made the title anomaly visible."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 62,
+  "gene_direct_refs_in_source": [
+   {"ref": 11, "pmid": "27550453"},
+   {"ref": 15, "pmid": "20530675"}
+  ],
+  "resolved": [
+   {"ref": 11, "pmid": "27550453",
+    "why": "The prior Wwox/Trp53 Osterix-Cre osteosarcoma model this paper builds on. A structured surface was acquired by this session's sweep; not yet read, but its identity and role are resolved rather than left implicit."}
+  ],
+  "queued": [
+   {"ref": 15, "pmid": "20530675",
+    "note": "WWOX attenuation in osteosarcoma with increased tumorigenicity. Structured surface acquired by this session's sweep; unread."}
+  ],
+  "note": "The reference list holds 62 entries. Two gene-direct hops are named; the remainder are not enumerated one by one and that is declared debt rather than silence."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does any WWOX surface in this repository record a direction for WWOX on MYC, and does it agree with what this paper measures?",
+  "hits": 1,
+  "finding": "PMID 29724996, read and closed earlier today, concludes that WWOX negatively modulates c-Myc in liver. This paper measures the same direction in bone: WWOX loss raises Myc, WWOX re-expression lowers it, and human OS with low WWOX has higher MYC. There is no directional conflict in the biology. The conflict is between this paper's findings and this paper's own title."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-08-10",
+  "route": "PubMed esummary for 38182577",
+  "result": "No retraction and no expression of concern. One ORDINARY ERRATUM is attached: PMID 38355659, Cell Death Dis 2024, which corrects a single author name from 'Ameen Haji Yehya' to 'Ameen Haj-Yahia'. It corrects no datum, no figure and no conclusion. Per the corpus rule this is annotated and does NOT create a PUBLICATION_INTEGRITY_HOLD. The erratum was retrieved as a structured surface during this session's sweep and read in full; it is one page and its whole content is the name correction. It does NOT correct the title.",
+  "hold": false
+ },
+ "source_artifacts": [
+  {"path": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
+   "sha256": "3614bb7ec6c1a2c0e98afa721a891117cc3a28311f3444f5016c3fb59a8e44b9",
+   "kind": "article_text"},
+  {"path": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_MOESM1_ESM.pdf",
+   "sha256": "bf64e0e7133a2f6b570d34b5cf31466d239764b811e2aac02aee8c9c1581d8fb",
+   "kind": "article_binary"},
+  {"path": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig1_HTML.png",
+   "sha256": "637cbcd96dd3c1ff3b766e687335fbb05b3e2761389a834f2ea484a732c171ef",
+   "kind": "figure"},
+  {"path": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig2_HTML.png",
+   "sha256": "f74beee54b19793e619d49c466ef36107b1c4e07e44d37066a45277a61ea04ba",
+   "kind": "figure"},
+  {"path": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig3_HTML.png",
+   "sha256": "fd290b9ab65d910582cf9adc41878b47156d1af38d20f70415069652b8bb9088",
+   "kind": "figure"},
+  {"path": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig4_HTML.png",
+   "sha256": "fee3c88b3480b1af3cec42489f243ddd1e5fef141eca78c268ca16910cd674fa",
+   "kind": "figure"},
+  {"path": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig5_HTML.png",
+   "sha256": "6fe6e0598280be3f64ec689511b949e07cd4f91cda406631ec24a25bf09cb7c0",
+   "kind": "figure"},
+  {"path": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig6_HTML.png",
+   "sha256": "b15bcc55cf900d4341d5d18bf8c78f7911eeb9f9193d684f902f491c8de68537",
+   "kind": "figure"},
+  {"path": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig7_HTML.png",
+   "sha256": "edc68599eee16435c1575b595c843f2c187279959cfaafc9d28c3d69ade64824",
+   "kind": "figure"}
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMCID PMC10770339, JATS XML served by PMC, CC BY, in the PMC open-access subset. The OA package FTP path advertised by oa.fcgi returned HTTP 404 over the HTTPS mirror. Figures were obtained at original resolution (1835-1975 px wide) from the Springer Nature static CDN as PNG; the XML declares the same figures as .jpg, and requesting .jpg yielded seven byte-identical 4 KB HTML error pages. The distinct-digest check caught that before any of them could be declared a figure. The Europe PMC supplementaryFiles endpoint additionally delivered both supplements and a 790 px display copy of each figure, which was discarded in favour of the originals.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored. The abstract is used once, as the OBJECT of a locator rather than as its evidence: it is quoted nowhere, but its agreement with the body is the fact that isolates the title as the sole inverted surface.",
+  "panel_text_relation_note": "Every entry carries panel_text_relation. Paired entries share an evidence_pair key, two members each, one text surface and one figure.",
+  "entries": [
+   {
+    "proposition": "THE HEADLINE FINDING, AND IT IS NOT BIOLOGY. The paper's own body states the direction plainly: WWOX loss RAISES Myc. This is the same direction measured in liver by PMID 29724996. There is no cross-tissue conflict.",
+    "snippet": "depletion of WWOX results in Myc upregulation as an early event",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
+    "anchor": "Results, 'WWOX loss results in Myc alteration in yBM cells', closing sentence of the ChIP-Seq paragraph",
+    "panel_text_relation": "text_and_panel_agree",
+    "evidence_pair": "myc-direction"
+   },
+   {
+    "proposition": "Panel side of the direction: the figure legend itself states the inverse correlation, and panel H shows it in human tumours. The TITLE of this paper asserts the opposite of this caption — 'WWOX promotes osteosarcoma development via upregulation of Myc' says WWOX promotes the tumour and raises MYC, when the paper shows WWOX LOSS does both. The title is the artifact that travels: it is what PubMed carries, what the NOT_EVIDENCE abstract corpus TSV carries, and what a title-level triage records. A model built from titles files WWOX as a bone oncogene.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 6 caption reads 'WWOX expression is inversely correlated with c-Myc in OS.' Panel H, TCGA TARGET GTEx box plot: High WWOX median Log2(norm_count+1) ~11.0, Low WWOX median ~11.4, P-value <0.001 printed in-plot, with the two interquartile ranges overlapping across most of their span.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig6_HTML.png",
+    "anchor": "Figure 6, caption title and panel H, read at original resolution 1956 px wide",
+    "panel_text_relation": "text_and_panel_agree",
+    "evidence_pair": "myc-direction"
+   },
+   {
+    "proposition": "PAIR, BODY SIDE. The text calls the WWOX add-back a restoration and its effect on Myc a significant reduction.",
+    "snippet": "significant reduction in Myc levels upon WWOX restoration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
+    "anchor": "Results, 'WWOX loss results in Myc alteration in yBM cells', ChIP-Seq paragraph",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "evidence_pair": "wwox-oe-not-restoration"
+   },
+   {
+    "proposition": "PAIR, PANEL SIDE. It is not a restoration. The blot's own quantification puts WWOX at 9x the SKO baseline, and the Myc level it produces is 0.4, well BELOW the baseline of 1. A supraphysiological dose that overshoots the reference cannot establish what physiological WWOX sets Myc to. The panel also carries no replicates and no error, while the text calls the reduction significant.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6G lane quantifications, printed under the bands: WWOX 1 (SKO-yBM parental), 0.05 (DKO-yBM parental), 9 (DKO-yBM OE); c-Myc 1, 1.4, 0.4 across the same three lanes. No n, no error bars and no significance marks appear anywhere in the panel.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig6_HTML.png",
+    "anchor": "Figure 6, panel G, lane quantification numbers read at original resolution",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "evidence_pair": "wwox-oe-not-restoration"
+   },
+   {
+    "proposition": "PAIR, BODY SIDE. The text describes Myc as lowly expressed in the p53-only knockout, which is what makes the Myc programme 'unique' to the double knockout.",
+    "snippet": "We found low expression of Myc and its targets in SKO yBM",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
+    "anchor": "Results, 'WWOX loss results in Myc alteration in yBM cells', opening sentence",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "evidence_pair": "sko-myc-not-low"
+   },
+   {
+    "proposition": "PAIR, PANEL SIDE. Against the true control, SKO Myc is not low: it is 2.6-fold up and significant. The double knockout adds on top of that rather than creating the programme. 'Unique to DKO' holds for the pathway-enrichment comparison against SKO, not for the level of Myc itself.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6C, Myc panel: Control 1.0, yBM-SKO ~2.6 marked ** against Control, yBM-DKO ~4.15 marked *** against Control and * against SKO. In the adjacent Mcm7 panel the Control-to-SKO comparison is marked ns.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig6_HTML.png",
+    "anchor": "Figure 6, panel C, Myc and Mcm7 bar charts with their significance brackets, read at original resolution",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "evidence_pair": "sko-myc-not-low"
+   },
+   {
+    "proposition": "PAIR, BODY SIDE. The selectivity claim that makes simvastatin look like a targeted option: the drug spares normal bone marrow.",
+    "snippet": "did not affect control BM cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
+    "anchor": "Results, 'MCM7 upregulation in DKO yBM cells contributes to their tumorigenic ability', simvastatin dose-response sentence",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "evidence_pair": "sva-control-is-affected"
+   },
+   {
+    "proposition": "PAIR, PANEL SIDE. Control bone marrow IS affected: its viability falls by roughly a quarter across the dose range. The difference from tumour cells is one of degree, not of presence, and that distinction is the whole selectivity argument.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7C: the Cre+WT BM curve descends from ~1.05 at 0 uM to ~0.73 at 40 uM, while DKOT, DKO BMT and yBM descend to ~0.25-0.32. A single ** bracket marks the separation between the control curve and the three others.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig7_HTML.png",
+    "anchor": "Figure 7, panel C, control curve endpoint read at original resolution 1975 px wide",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "evidence_pair": "sva-control-is-affected"
+   },
+   {
+    "proposition": "PAIR, BODY SIDE. The text reports the double knockout as roughly half-penetrant for tumour formation, the number that separates it from the non-tumorigenic p53-only cells.",
+    "snippet": "about 50% of the mice developed OS tumors",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
+    "anchor": "Results, 'Trp53 SKO yBM is not tumorigenic', closing sentence",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "evidence_pair": "ybm-penetrance-rounded"
+   },
+   {
+    "proposition": "PAIR, PANEL SIDE. The figure prints 42.9 percent, not about 50. The rounding runs upward, and it runs upward on the number that carries the model's central contrast. Small in itself; it is the same firming-up direction found three times in this corpus.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4D prints the yBM bar as '12/28 (42.9)' at 3 months, beside Tumor '8/8 (100%)' at 1 month and Cre-BM '0/2'.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig4_HTML.png",
+    "anchor": "Figure 4, panel D, printed fractions read at original resolution 1959 px wide",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "evidence_pair": "ybm-penetrance-rounded"
+   },
+   {
+    "proposition": "PAIR, BODY SIDE. The text describes the accumulation of reporter-positive marrow cells as age-dependent, which is the basis for treating young marrow as a pre-tumour stage.",
+    "snippet": "an age-dependent increase in the percentage of tomato-positive cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
+    "anchor": "Results, 'Trp53 SKO yBM is not tumorigenic', second paragraph, describing the SKOTOM model",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "evidence_pair": "age-dependence-non-monotonic"
+   },
+   {
+    "proposition": "PAIR, PANEL SIDE. The equivalent panel for the double knockout shows the genotype difference appearing at 2.5 months, DISAPPEARING at 3.5 and 4 months, and returning from 5 months on. A trend that is significant, then not, then significant again is not a monotonic age dependence, and the text does not mention the gap.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4A, Cre+WT BM versus DKO-BM by month: 2 ns, 2.5 *, 3.5 ns, 4 ns, 5 *, 6 **, 7 *. At 3.5 and 4 months the two genotypes are visually superimposed at ~22-25 percent.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig4_HTML.png",
+    "anchor": "Figure 4, panel A, per-timepoint significance brackets read at original resolution",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "evidence_pair": "age-dependence-non-monotonic"
+   },
+   {
+    "proposition": "REPURPOSING SEED, recorded with its limits attached rather than promoted. Simvastatin reduced tumour size and weight in vivo and lowered MCM7 by IHC. It is a seed and not a candidate: the target is MCM7 in bone, the route to a CNS-relevant WWOX genotype is not addressed anywhere in this paper, and the in vitro selectivity claim is contradicted by the paper's own Fig 7C.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7F: tumour size falls from ~0.42 to ~0.21 cm3 marked ****, tumour weight from ~0.71 to ~0.55 g marked ***, vehicle n~11 and simvastatin n~15 points plotted. Fig 7G: MCM7/nucleus falls from ~0.43 (4 points) to ~0.30 (6 points), marked **.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig7_HTML.png",
+    "anchor": "Figure 7, panels F and G, read at original resolution",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The significance legend contradicts itself inside a single caption: two asterisks are defined as p<0.01 for panel F and as p<0.001 for panel G, and the panels additionally use three and four asterisks which the caption never defines.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 7 caption defines '(* p value < 0.05, ** p value < 0.01)' for panel F and '(** p value < 0.001)' for panel G, while panel F displays **** on tumour size and *** on tumour weight.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig7_HTML.png",
+    "anchor": "Figure 7, caption text for panels F and G against the marks printed in those panels",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The claim that the double knockout is more simvastatin-sensitive than the p53-only knockout carries no statistical test in its panel, and rests on two biological repeats per group.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7E plots four curves, two SKO-yBM and two DKO-yBM, with the DKO pair plateauing near 0.27-0.30 and the SKO pair near 0.48-0.50. No significance mark of any kind appears in the panel.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig7_HTML.png",
+    "anchor": "Figure 7, panel E, absence of significance marks read at original resolution",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Neither deletion is complete, which bounds every effect size in the paper. Osterix-Cre acts in a subset of marrow, so whole-marrow lysate retains both proteins.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 1F lane quantifications: WWOX 1 / 1.5 / 0.7 in Cre+WT BM at 0, 30 and 120 min after 10 Gy, against 0.2 / 0.1 / 0.1 in DKO-BM; p53 1 / 4.7 / 7.9 against 0.5 / 0.2 / 0.2. The knockout floors are 0.2 and 0.5, not zero.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig1_HTML.png",
+    "anchor": "Figure 1, panel F, lane quantifications read at original resolution 1975 px wide",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The tumorigenicity comparisons are drawn between arms scored at different times and against a control arm of two animals, which the bar chart presents side by side as if concurrent.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2D labels its bars with their own timepoints: Control '0/2', BMT '7/9 (78%)' at 2-Months, Tumor '8/8 (100%)' at 1-Month. Fig 4D repeats the pattern with Tumor at 1-Month and yBM at 3-Months.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig2_HTML.png",
+    "anchor": "Figure 2, panel D, bar labels and timepoint annotations read at original resolution 1975 px wide",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The molecular-similarity claim rests on PCA groupings enclosed by hand-drawn ellipses rather than statistical confidence regions, on low explained variance, and on small groups. The pathway enrichment underneath it is nonetheless strong and is what actually carries the claim.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 5A PC1 30% and PC2 16%; Fig 5D PC1 20% and PC2 17%; Fig 3A PC1 34% and PC2 18%. Each carries a freehand ellipse around the non-control groups. In the same figures Myc Targets V2 and V1 are the top two enriched pathways, reaching adjusted p -log10 of ~22 in Fig 5C and ~18 in Fig 5F.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig5_HTML.png",
+    "anchor": "Figure 5, panels A, C, D and F, read at original resolution 1835 px wide",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The GSEA panels display enrichment profiles without any normalised enrichment score or FDR printed, so the strength of each individual plot cannot be read from the figure.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 5G and 5H, and Fig 3E, each show six enrichment plots with peak enrichment scores between ~0.65 and ~0.8. No NES and no FDR or q-value appears in any of them; the only printed statistic is the zero-cross rank.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig3_HTML.png",
+    "anchor": "Figure 3, panel E enrichment plots, read at original resolution 1975 px wide",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The protein-level difference in Myc between the two genotypes is far smaller than the transcript difference, and the paper reconciles the two nowhere.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6D shows c-Myc mRNA at ~4.7-fold in DKO-yBM over SKO-yBM, marked ****. Fig 6G shows c-Myc protein in the same comparison at 1.4 against 1.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_Fig6_HTML.png",
+    "anchor": "Figure 6, panels D and G compared, read at original resolution",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The Discussion states the direction as the study's own claim of clear evidence, which is what isolates the fault to the title alone: body, figure caption and abstract all say WWOX LOSS raises Myc, and only the title says WWOX raises Myc. Recorded here from the BODY. The abstract's agreeing sentence — 'Restoration of WWOX in double-knockout young BM cells reduced Myc protein levels' — is deliberately NOT quoted as a locator: it exists only in the abstract, and this manifest's first attempt did declare it as body text until the abstract/body separation refused it. That refusal is itself the reason the claim can be trusted now.",
+    "snippet": "our study provides clear evidence that combined deletion of WWOX and p53 resulted in increased Myc levels",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
+    "anchor": "Discussion, paragraph beginning 'Remarkably, our DKO yBM cells expressed high levels of Myc in comparison to SKO-yBM cells'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The simvastatin route to MCM7 is carried from one prior report, and the drug's effect on Myc as well as MCM7 means the experiment does not separate the two targets.",
+    "snippet": "the DKO yBM was more sensitive to SVA than the SKO yBM",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38182577_Akkawi2024_PMC.xml",
+    "anchor": "Results, 'MCM7 upregulation in DKO yBM cells contributes to their tumorigenic ability', final paragraph",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": "Coverage: MAIN TEXT AND MAIN FIGURES COMPLETE, SUPPLEMENTARY NOT READ. Introduction, Materials and methods, Results, Discussion, Conclusions and the reference list read in the JATS body; all seven main figures inspected as images at original resolution (1835-1975 px) from fingerprinted artifacts, never through a text conversion; the erratum PMID 38355659 read in full as a structured surface. Supplementary MOESM1 was retrieved and fingerprinted but NOT read, and MOESM2 was retrieved and not opened. This is not a cosmetic gap: the claim 'Trp53 SKO yBM is not tumorigenic' rests on Fig S5A,B, unadjudicated here. The receipt for this reading is therefore partial_fulltext_read, not complete — an earlier draft of this note claimed complete coverage and the receipt writer refused it on exactly this ground."
+ }
+}
