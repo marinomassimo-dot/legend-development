@@ -751,6 +751,7 @@ class PanelTextRelationBites(unittest.TestCase):
             "artifact": manifest["source_artifacts"][0]["path"],
             "panel_text_relation": "text_contradicted_by_panel",
             "contradicts": "entries[0]",
+            "contradicts_needle": "amino acids 388-407",
         }
         panel.update(entry_overrides)
         manifest["verbatim_locators"]["entries"].append(panel)
@@ -825,6 +826,64 @@ class PanelTextRelationBites(unittest.TestCase):
         manifest = self._two_entries(contradicts="entries[0]")
         errors, _ = gate.validate(manifest, require_current_schema=True)
         self.assertEqual([item for item in errors if "contradicts" in item], [])
+
+    def test_a_contradiction_must_address_its_target_by_content_too(self) -> None:
+        """🔴 `entries[N]` is a position in a reorderable array; the index can slip.
+
+        Caught in review before the field had a second user. The three checks around the
+        pointer — target exists, is a text surface, is not this one — are all blind to a slip
+        onto a DIFFERENT text locator. `adjudications.json` never writes `entries[N]` alone;
+        the half that makes the address safe had not been copied over with the half that
+        makes it an address.
+        """
+        manifest = self._two_entries()
+        del manifest["verbatim_locators"]["entries"][1]["contradicts_needle"]
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("must be accompanied by a fragment" in item for item in errors))
+
+    def test_a_fragment_from_the_wrong_sentence_is_refused(self) -> None:
+        manifest = self._two_entries(contradicts_needle="a phrase from nowhere")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("is not a fragment of the snippet of entries[0]" in item
+                            for item in errors))
+
+    def test_a_slipped_index_is_caught_by_the_fragment(self) -> None:
+        """The failure the needle exists for, staged end to end.
+
+        A third locator is inserted ahead of the target, exactly as a later reading would add
+        one. `contradicts: entries[0]` now resolves to the new sentence; every structural
+        check still passes, and only the content anchor notices.
+        """
+        manifest = self._two_entries()
+        entries = manifest["verbatim_locators"]["entries"]
+        intruder = dict(entries[0])
+        intruder["snippet"] = ("A different sentence entirely, long enough to satisfy the "
+                               "minimum snippet length imposed by the schema.")
+        entries.insert(0, intruder)
+        structural = [item for item in gate.validate(manifest, require_current_schema=True)[0]
+                      if "contradicts:" in item]
+        self.assertEqual([], structural, "the positional checks cannot see a slip")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("contradicts_needle" in item for item in errors),
+                        "only the content anchor catches it")
+
+    def test_a_fragment_matching_two_locators_does_not_identify_one(self) -> None:
+        """Uniqueness is the other half of `check_needles`, in this array's terms."""
+        manifest = self._two_entries()
+        entries = manifest["verbatim_locators"]["entries"]
+        twin = dict(entries[0])
+        twin["snippet"] = entries[0]["snippet"] + " Repeated: amino acids 388-407 again."
+        entries.append(twin)
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("does not identify one" in item for item in errors))
+
+    def test_only_a_contradiction_may_carry_a_fragment(self) -> None:
+        manifest = self._two_entries(panel_text_relation="text_only")
+        del manifest["verbatim_locators"]["entries"][1]["contradicts"]
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any(
+            "only a `text_contradicted_by_panel` locator may carry one" in item
+            for item in errors))
 
 
 if __name__ == "__main__":

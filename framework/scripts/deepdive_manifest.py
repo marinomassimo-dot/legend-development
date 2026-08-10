@@ -481,6 +481,61 @@ def _artifact_text(path: Path, kind: str) -> tuple[str, str]:
     return "", ""
 
 
+def _contradiction_needle_errors(
+    entry: dict, entries: list, target: int, position: int
+) -> list[str]:
+    """Does the contradiction address its target by CONTENT as well as by position?
+
+    🔴 `contradicts: "entries[N]"` is a positional pointer into a reorderable array, and the
+    three checks around it — the target exists, it is a text surface, it is not this one —
+    cannot see a **slip**. Insert a locator above the target and the index silently resolves
+    to a different sentence: every field still well formed, the pairing now wrong, the
+    validator silent. That is the same shape as a name collision and a field collision, and
+    it is the one this repository already knew how to prevent.
+
+    The prevention was half-copied. `adjudications.json` never writes `entries[N]` alone: it
+    writes it beside a **needle**, and `check_needles` asks two arithmetic questions — does
+    the needle occur exactly once, and is it a fragment of the snippet of the locator it
+    names. `contradicts` took the addressing grammar and left behind the half that makes the
+    address safe.
+
+    So the needle here answers the same two questions in this array's terms: the fragment must
+    belong to the snippet the index resolves to, and to **no other entry's**, because a
+    fragment that matches two entries does not identify one. If the index slips, the fragment
+    stops being found where the index points, and the check says so.
+
+    Folding to alphanumerics is the right strength: this asks whether the needle belongs to
+    that locator, not whether the page says what the snippet says. The artifact answers that.
+    """
+    needle = str(entry.get("contradicts_needle") or "").strip()
+    prefix = f"verbatim_locators.entries[{position}].contradicts_needle"
+    if not needle:
+        return [
+            f"{prefix}: `contradicts` is a position in a list that can be reordered, so it "
+            f"must be accompanied by a fragment of the snippet it overturns. Without it an "
+            f"inserted locator silently redirects the contradiction at a different sentence, "
+            f"and every other check still passes"
+        ]
+    key = _match_key(needle)
+    if not key:
+        return [f"{prefix}: the fragment carries no alphanumeric content to match on"]
+    if key not in _match_key(str(entries[target].get("snippet", ""))):
+        return [
+            f"{prefix}: {needle!r} is not a fragment of the snippet of entries[{target}], "
+            f"which is what `contradicts` names. Either the index has slipped or the "
+            f"fragment was taken from the wrong sentence"
+        ]
+    also = [index for index, other in enumerate(entries)
+            if index != target and key in _match_key(str(other.get("snippet", "")))]
+    if also:
+        return [
+            f"{prefix}: {needle!r} also occurs in entries{also}. A fragment that matches more "
+            f"than one locator does not identify one, so it cannot protect the index it "
+            f"accompanies — quote a longer or more distinctive span"
+        ]
+    return []
+
+
 def _safe_repo_path(root: Path, relative: str) -> Path:
     candidate = (root / relative).resolve()
     try:
@@ -766,10 +821,17 @@ def validate(
                                 "contradicts is something the text said; pointing at another "
                                 "panel records a disagreement between images, which is a "
                                 "different finding and needs its own words")
+                        else:
+                            errors.extend(_contradiction_needle_errors(
+                                entry, entries, target, position))
                 elif contradicts is not None:
                     errors.append(
                         f"verbatim_locators.entries[{position}].contradicts: only "
                         "`text_contradicted_by_panel` may name a contradicted locator")
+                elif entry.get("contradicts_needle") is not None:
+                    errors.append(
+                        f"verbatim_locators.entries[{position}].contradicts_needle: only a "
+                        "`text_contradicted_by_panel` locator may carry one")
 
                 artifact_values = entry.get("artifact")
                 if isinstance(artifact_values, str):

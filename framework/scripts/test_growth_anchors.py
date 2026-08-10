@@ -392,5 +392,103 @@ class PanelRelationRatchetBites(unittest.TestCase):
         self.assertEqual(["PMID444"], ga.measure_panel_relation_legacy(root, "wwox"))
 
 
+class CandidateBacklogIsDerivedNotDeclared(unittest.TestCase):
+    """Read-and-not-promoted, measured the only way it can be measured without a new field."""
+
+    def setUp(self) -> None:
+        self.stack = TemporaryDirectory()
+        self.root = Path(self.stack.name)
+        self.addCleanup(self.stack.cleanup)
+        (self.root / "framework/state").mkdir(parents=True)
+        (self.root / "staging").mkdir()
+
+    def _manifest(self, scope: str) -> None:
+        (self.root / ga.MANIFEST_REL).write_text(
+            f'batch_20260810_001_scope: "{scope}"\n', encoding="utf-8")
+
+    def _candidate(self, name: str, body: str = "") -> None:
+        (self.root / "staging" / name).write_text(body or "# candidate\n", encoding="utf-8")
+
+    def test_a_candidate_named_in_a_scope_is_consumed(self) -> None:
+        self._manifest("PROPAGATED 1: CC-20260806-19936220 landed.")
+        self._candidate("commit_candidate_20260806_19936220.md")
+        self.assertEqual([], ga.measure_candidate_backlog(self.root, "wwox"))
+
+    def test_a_candidate_named_nowhere_is_pending(self) -> None:
+        self._manifest("PROPAGATED 0.")
+        self._candidate("commit_candidate_20260806_19936220.md")
+        self.assertEqual(["CC-20260806-19936220"],
+                         ga.measure_candidate_backlog(self.root, "wwox"))
+
+    def test_two_punctuations_of_one_identifier_meet(self) -> None:
+        """`CC-2026-07-05-001` and `CC-20260705-001` are the same candidate.
+
+        Comparing raw strings would report every candidate as pending — a number always wrong
+        in the alarming direction, which trains people to ignore it.
+        """
+        self._manifest("PROPAGATED 1: CC-2026-07-05-001 landed.")
+        self._candidate("commit_candidate_20260705_001.md")
+        self.assertEqual([], ga.measure_candidate_backlog(self.root, "wwox"))
+
+    def test_a_compressed_range_names_exactly_one_candidate(self) -> None:
+        """🔴 The live corpus produced this on the counter's first run.
+
+        `CC-20260726-001/002/003` reads fine to a person and names one candidate to a machine,
+        so 002 and 003 read as pending forever. The counter is right and the record was
+        unreadable; the manifest note has been expanded rather than the matcher loosened,
+        because a matcher that guessed at ranges would eventually guess wrong in the quiet
+        direction — reporting work as done that nobody did.
+        """
+        self._manifest("PROPAGATED 3: CC-20260726-001/002/003 landed.")
+        for suffix in ("001", "002", "003"):
+            self._candidate(f"commit_candidate_20260726_{suffix}.md")
+        self.assertEqual(["CC-20260726-002", "CC-20260726-003"],
+                         ga.measure_candidate_backlog(self.root, "wwox"))
+
+    def test_the_declared_identifier_wins_over_the_file_name(self) -> None:
+        """The file name is a convention; the ID is what a batch scope will name."""
+        self._manifest("PROPAGATED 1: CC-20260810-CLAIM004-REVIEW landed.")
+        self._candidate("commit_candidate_something_else.md",
+                        "**Candidate ID:** CC-20260810-CLAIM004-REVIEW\n")
+        self.assertEqual([], ga.measure_candidate_backlog(self.root, "wwox"))
+
+    def test_a_non_candidate_markdown_file_is_not_counted(self) -> None:
+        self._manifest("PROPAGATED 0.")
+        self._candidate("batch_inferential_sweep_20260726.md")
+        self.assertEqual([], ga.measure_candidate_backlog(self.root, "wwox"))
+
+    def test_an_absent_staging_directory_is_not_a_backlog_of_zero_by_accident(self) -> None:
+        """`staging/` is gitignored, so worktrees do not have it — the surface-census case.
+
+        The honest reading of an absent directory is 'not visible from here', and the honest
+        behaviour is to contribute nothing without failing. What this test pins is that the
+        absence is not an exception: a check that raised here would be red in every worktree.
+        """
+        self._manifest("PROPAGATED 0.")
+        (self.root / "staging").rmdir()
+        self.assertEqual([], ga.measure_candidate_backlog(self.root, "wwox"))
+
+    def test_the_trigger_fires_at_five_and_not_at_four(self) -> None:
+        four = {"candidate_backlog": [f"CC-{n}" for n in range(4)]}
+        five = {"candidate_backlog": [f"CC-{n}" for n in range(5)]}
+        self.assertEqual([], ga.candidate_backlog_trigger(four))
+        self.assertTrue(ga.candidate_backlog_trigger(five)[0].startswith("CANDIDATE_BACKLOG"))
+
+    def test_the_trigger_names_the_candidates_not_only_the_count(self) -> None:
+        """A number says something is due; the names say what. The next batch needs both."""
+        live = {"candidate_backlog": [f"CC-2026081{n}-001" for n in range(5)]}
+        line = ga.candidate_backlog_trigger(live)[0]
+        for identifier in live["candidate_backlog"]:
+            self.assertIn(identifier, line)
+
+    def test_it_is_a_trigger_and_not_a_ratchet(self) -> None:
+        """A ratchet would make accumulating candidates an offence, and it is not one.
+
+        Between batches the backlog is supposed to grow: the system reads faster than it
+        propagates. What must not happen is that it grows silently.
+        """
+        self.assertNotIn("candidate_backlog", dict(ga.RATCHET_KEYS))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
