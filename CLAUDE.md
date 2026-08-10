@@ -258,6 +258,42 @@ LEGEND runs in a single session with explicitly declared modes:
 - `MODE: PARALLEL_BRANCH` / `PARALLEL_MERGE` — parallel deep dives on disjoint scopes; merge before commit. *Parallel deep dive yes, parallel commit no.*
 - `MODE: Q&A` — consultation layer, **non-canonical and READ-ONLY** toward the 4 currents. A Q&A answer is not a claim. Always carries the "not medical advice / discuss with the treating clinical team" disclaimer.
 
+### 🔴 One actor, one worktree, one branch — and one integrator
+
+`PARALLEL_BRANCH` above governs parallelism **logically**: disjoint scopes, merge before
+commit. It says nothing about where the work physically lives, because it was written for a
+system with one actor at a time. On **2026-08-09/10** several sessions ran against a single
+checkout — one HEAD, one index, one working tree — and it broke four times in two days, three
+different ways:
+
+- a branch created by one session **silently redirected another session's commit**: the author
+  reported work "on `main`" that was on a branch it had never chosen, twice;
+- `git checkout -- <path>` **destroyed another actor's uncommitted work** — specifically the
+  receipt-ledger tail anchor written moments earlier by `fulltext_receipts.py record`, turning
+  a healthy ledger into `BLOCK_SYSTEM`. The reverting actor had read the first twenty lines of
+  the diff and concluded the file held only its own change;
+- one session **committed another's in-flight files** because they looked finished.
+
+Nothing was lost, and that is luck rather than design. The binding rules:
+
+1. **Every actor works in its own `git worktree`, on its own branch.** Not a convention — the
+   shared checkout is what makes the other three failures possible.
+2. **Only the integrating session merges to `main`**, and only from the shared checkout. Other
+   actors publish by pushing their branch, never by checking `main` out.
+3. **Never commit, revert or stage a file another actor is holding** unless that actor has
+   declared it finished. If you do it anyway because the work would otherwise be lost, say so
+   in the commit message and name the author.
+4. **Read the whole diff before reverting.** `git checkout -- <path>` is a destructive write
+   with no confirmation, and — unlike blanket staging and heredoc writes — the `PreToolUse`
+   Bash guard does not cover it. `git diff <path>` in full, or not at all.
+5. **A `BATCH_COMMIT` owns the shared checkout for its duration.** It snapshots, propagates and
+   restores on failure; a foreign commit inside that window corrupts the snapshot it would
+   restore from.
+
+The private working material that a `BATCH_COMMIT` consumes — the commit candidates in
+`staging/` — is gitignored, so it exists in **exactly one checkout** and does not propagate to
+worktrees. That is why the integrator's step is not interchangeable with anyone else's.
+
 ### Operational gates
 `current_state: READY` means analytical work can proceed. Commit permission is gated separately in the state manifest:
 - `deep_dive_gate` / `ingest_gate` control read-only and new-source work;
