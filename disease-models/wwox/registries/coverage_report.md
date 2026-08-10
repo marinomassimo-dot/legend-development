@@ -34,7 +34,7 @@ the whole known corpus, not the part already processed.
 ## Receipt trace
 
 - Authoritative ledger: `disease-models/wwox/registries/fulltext_read_receipts.jsonl`
-- **75** append-only events: **52** contemporaneous · **22** conservative legacy reconstructions
+- **76** append-only events: **53** contemporaneous · **22** conservative legacy reconstructions
 - **23** registry records have a persisted `complete_fulltext_read` receipt
 - **19** records still rely on a historical registry full-text declaration without a surviving complete coverage receipt
 - **7** receipt event(s) do not yet map to a registry record
