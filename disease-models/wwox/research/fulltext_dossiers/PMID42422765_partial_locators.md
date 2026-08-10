@@ -543,6 +543,151 @@ expression/survival mismatch, the `0.2000`, the behavioural overshoot — all su
 each rests on a single figure with its caption. **Every claim that died was a cross-figure
 inference.**
 
+### 🔴🔴 The running text contradicts its own Figure 4 panels
+
+This one is not an interpretation and not a cross-figure inference. One figure, its caption,
+and the paragraph that describes it.
+
+The text:
+> "Locomotor activity parameters, including movement velocity and total distance traveled, as well as spatial exploration of center and periphery zones, showed no significant differences between groups (Figures 4B, 4D–4G)."
+
+`surface: body` · Results, behaviour section. **Panels 4D and 4E each carry `*`.** The caption
+fixes the meaning beyond doubt:
+> "Statistical analysis was performed using Student’s t test (∗p < 0.05; ns, not significant), Error bars represent mean ± SD."
+
+So `*` means `p < 0.05` and `ns` is available and used elsewhere in the same figure — panels
+F, G, H, I, J all carry `ns`. **The authors marked D and E as significant and then wrote that
+they showed no significant differences.**
+
+The same paragraph does report the rotarod result:
+> "Treated KO mice exhibited significantly higher motor coordination and learning compared with WT mice (Figure 4K)"
+
+and then concludes:
+> "these findings indicate that early, high-dose neuronal WWOX gene therapy yielded neurobehavioral and motor outcomes indistinguishable from those of WT controls, encompassing locomotor activity, anxiety-related behavior, and motor coordination."
+
+🔴 **"Indistinguishable" is asserted for three domains, and the figure marks a significant
+difference in two of them** — locomotor velocity and distance — while the third, motor
+coordination, is acknowledged as significantly *higher* two sentences earlier. Only the
+anxiety measures are genuinely `ns`.
+
+This supersedes the softer reading I recorded from the panels alone. It is not a vocabulary
+problem: **the text states the opposite of what its own figure marks**, and it does so for the
+locomotor panels while correctly reporting the rotarod. Whether the asterisks or the sentence
+are in error cannot be settled from here; both cannot stand.
+
+`PREMISE_TAG` — anything downstream that cites "behaviour normalised to WT" from this paper
+inherits an unresolved internal contradiction. The defensible statement is: **anxiety-related
+behaviour is indistinguishable from WT on four measures; locomotor and rotarod measures are
+marked significant, in the direction of more activity and better performance.**
+
+### The survival threshold, confirmed in the text
+
+> "Behavioral testing could not be performed in untreated Wwox-null mice due to severe morbidity and early lethality, and LD-treated mice did not survive to P90"
+
+`surface: body` · Results, behaviour section. This is the plain-text confirmation of what
+Figure 3B's curve shows: **the low dose does not produce animals that reach three months.**
+The threshold reading no longer rests on reading a curve.
+
+### 🟡 An apparent conflict at 8 × 10¹⁰ that I am NOT asserting
+
+The text says:
+> "Increasing the dose of the WPRE-lacking vector to 8 × 1010 vg was associated with improved outcomes, including rescue of lethality and normalization of growth and glucose levels."
+
+My reading of Figure 2B recorded the `8E10` arm as dying at ~17 days. **These cannot both be
+right, and I am not confident in my panel reading**: the 2B legend has five arms in similar
+colours at 104 ppi, and I have already made two colour-and-label errors on this paper. Logged
+as **to re-verify against the panel**, with the presumption in favour of the text until
+someone looks again. Recorded because a later reader must not take my earlier line as settled.
+
+### Numbers worth carrying
+
+- **Transduction**: WWOX⁺/NeuN⁺ neurons rise from **~40% to ~55–60%** after treatment
+  (`p < 0.05`, Figure S3C) — lower than the "60–70%" of the 2021 paper.
+- **WPRE, from the literature**: the authors cite a **5- to 8-fold** typical increase; the
+  blots here show 10–15-fold.
+- **S3F**: *"increasing the vector dose in the absence of WPRE failed to recapitulate the
+  expression levels achieved with lower dose containing WPRE"* — the WPRE loop, in the
+  authors' own words.
+- **Fertility**: 20 breeding cages per group — the most robustly powered assay in the paper.
+
+### Multi-hop debt: 35 unknown references
+
+Of **73 references carrying a PMID**, **35 are absent from the paper registry, the full-text
+queue and the tracking log.** That is a 48% miss rate on the bibliography of a paper already
+in the registry as `PAPER 011`, and by far the largest single-paper multi-hop debt this corpus
+has recorded:
+
+`8093806` `8790426` `9560156` `9801369` `10821275` `15924863` `16372011` `16543131`
+`17293857` `17597793` `18650338` `20219994` `20493923` `21802995` `21817014` `24076602`
+`25286085` `27569545` `27798114` `28721938` `29967406` `30747918` `30949922` `31297130`
+`32561861` `32940068` `34977274` `37481701` `38277269` `39022742` `39237642` `39589822`
+`39847501` `40106582` `40349107`
+
+Not triaged here — enumeration is not classification, and classifying 35 records is queue work
+rather than reading work.
+
+### 🔴🔴 A second text-versus-panel contradiction, in Figure 7
+
+Same shape as the Figure 4 one, and this time it lands on the paper's epilepsy claim.
+
+Text:
+> "Averaged spike counts further confirmed a significant elevation in spike activity in KO animals (Figure 7C), indicating that WWOX deficiency leads to early-onset neuronal hyperexcitability during postnatal development."
+
+Panel 7C prints **`0.2000`**. The caption defines the scale:
+> "Data are shown as mean ± SEM; n = 5 littermates per group. Statistical significance was determined using Student’s t test. ∗p < 0.05; ns, non-significant."
+
+`surface: body` · Figure 7 caption. **`0.2000` is not `< 0.05`.** The text calls the result
+significant; the panel prints a P value four times the threshold the caption declares. The
+caption also corrects my own estimate — **n = 5 per group, not ~3**.
+
+The SWD half is unaffected and solid: `∗∗∗∗p < 0.0001`, n = 5, with the WT-versus-treated
+comparison drawn and `ns`. So the paper's epilepsy claim has one leg on `p < 0.0001` and one
+on `p = 0.2` described as significant, and the sentence that introduces both — *"frequent
+interictal-like spikes and SWDs"* — gives them equal footing.
+
+**Two independent text-versus-panel contradictions in one paper** (Figure 4D/4E and Figure 7C)
+is no longer a slip to note in passing. Anything this corpus takes from `PAPER 011` must be
+traced to a panel, not to a sentence.
+
+### 🟢 The Figure 5 tension has an explanation, offered by the paper and not verifiable here
+
+I recorded that the survival threshold had no measured expression difference behind it. The
+paper answers, in the sentence immediately after the blots:
+
+> "Notably, mice from either treatment group that failed to survive exhibited reduced WWOX expression, reinforcing the link between effective protein restoration and survival (Figures S5A–S5D)."
+
+`surface: body` · Results. **That is the right shape of answer**: if expression predicts
+survival *within* each dose group, then group means can overlap while outcomes diverge, and
+the `ns` comparisons of Figure 5 stop being paradoxical. It also reframes dose as shifting a
+distribution rather than setting a level — which is exactly what a threshold effect on a noisy
+delivery process looks like.
+
+Two things keep this from closing the entry. It rests on **S5A–S5D, which is unreachable**
+from every route tried; and it is a **post-hoc comparison of survivors against non-survivors**,
+which is a selection-conditioned analysis and not the same evidence as a dose-controlled one.
+Recorded as **the paper's explanation, credited and unverified** — the earlier tension is
+softened, not resolved, and the intermediate-dose `REVIVAL_TRIGGER` still stands as the
+experiment that would settle it.
+
+### Where the myelin dose-response actually lives
+
+The quantification I noted as absent from Figure 6F is not missing from the paper — it is in
+**Figure S7I**, cited for exactly that purpose:
+> "HD treatment achieved near-complete rescue across affected regions, whereas LD treatment produced only partial recovery relative to HD (Figures 6F; S7I)"
+
+S7I is supplementary and unreachable. So the correct statement is **not** "the dose-dependence
+of myelination is shown and never measured" — it is measured, in a panel this reading cannot
+see. Corrected accordingly. The same holds for the neuroinflammation dose-response, which
+lives entirely in S7A–S7H.
+
+### Method note: the electrophysiology changed between papers
+
+This study uses **continuous ECoG** from ~P14 over a 7-day window. `PMID 34747138` used
+**in vivo cell-attached recordings under ketamine/medetomidine**. Different technique,
+different anaesthetic status, different developmental window — the two papers' excitability
+results are complementary rather than replicate, and the ketamine caveat recorded against the
+2021 paper does not transfer here.
+
 ## Reading debt this leaves — explicit and large
 
 - **Introduction, all seven results sections and Materials and Methods: not read.**
