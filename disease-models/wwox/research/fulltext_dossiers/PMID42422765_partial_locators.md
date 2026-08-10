@@ -153,12 +153,64 @@ figure does not draw. It is no longer an observation about a paper; it is a prop
 literature, and it is the strongest argument yet for inspecting panels rather than trusting
 the sentence that cites them.
 
+### 🔴 Figure 3 (`gr3.jpg`, sha256 `c63f930cf5c558aea1d5c1bf90bd1d3dbf72e94ec378bd9f499748c768b4997d`) — the dose-response hides a threshold
+
+`surface: figure`, read at 104 ppi. **This is the most decision-relevant panel in the paper,
+and the running text's vocabulary does not convey it.**
+
+**Panel A** gives the two doses in vector genomes: **LD = 1.23 × 10¹¹ vg**, **HD = 2.63 ×
+10¹¹ vg** — a 2.1-fold separation.
+
+**Panel B, Kaplan–Meier** (WT+RI n=20 · KO+RI n=10 · KO+LD n=20 · KO+HD n=30):
+
+| arm | outcome read from the curve |
+|---|---|
+| KO + reporter | all dead by ~20 days |
+| **KO + LD** | **all dead by ~90 days — the curve reaches zero** |
+| KO + HD | plateau at ~80% out to 300 days |
+| WT + reporter | plateau at ~90% |
+
+**The low dose does not rescue survival. It buys time.** From ~20 days to ~90, and then every
+animal dies. The high dose plateaus. That is not a graded difference along one axis — it is
+**qualitative**, and it means there is a threshold between 1.23 and 2.63 × 10¹¹ vg below which
+the treatment converts a rapidly lethal phenotype into a slowly lethal one.
+
+The paper's own words for this are *"dose-dependent"*, *"graded improvement"* and *"a clear
+dose-response relationship"*. All three are true of the data and all three describe a
+continuum. A reader who never opens panel B will carry "more dose, more benefit" instead of
+**"below threshold, no survival at all"** — and those two beliefs recommend different trials.
+
+**Panels E–H, blood glucose**, sharpen the same point:
+- **P10** — everything `ns` except WT+RI vs KO+RI;
+- **P20** — `*` WT vs **KO+LD**, `**` KO+LD vs KO+HD, and `ns` WT vs KO+HD. At P20 **the low
+  dose has NOT corrected the hypoglycaemia** while the high dose has;
+- **P30** — all `ns`;
+- **P180** — only WT+RI and KO+HD are present, `ns`. **KO+LD is absent from the P180 panel**,
+  which panel B explains: by then there are none left.
+
+🔴 `PREMISE_TAG` — any inference of the form "a lower, safer dose would still help" rests on
+reading dose-response as a continuum. **Panel B refutes it for survival in this model.**
+`REVIVAL_TRIGGER`: an intermediate dose arm between 1.23 and 2.63 × 10¹¹ vg would locate the
+threshold and is the single most informative experiment this paper implies.
+
 ## Reading debt this leaves — explicit and large
 
 - **Introduction, all seven results sections and Materials and Methods: not read.**
-- **Six of the seven figures: retrieved and fingerprinted, not inspected.** `gr1`–`gr5` and
-  `gr7` — including Figure 7, the electrophysiology — are on disk at the measured ceiling and
-  await eyes. Figure 6 is done.
+- **Five of the seven figures: retrieved and fingerprinted, not inspected.** `gr1`, `gr2`,
+  `gr4`, `gr5` and `gr7` — including **Figure 7, the electrophysiology**, which is where the
+  early-hyperexcitability claim and its suppression must be checked. On disk at the measured
+  ceiling, awaiting eyes. Figures 3 and 6 are done, and both carried something the running
+  text did not.
+- **Materials and methods: not read.** It contains the sciatic-nerve and spinal-cord
+  extraction that is the candidate answer to the PNS objection raised against
+  `PMID 34747138`.
+- 🔴 **A rule this session derived and did not yet apply.** Measure *every* available
+  retrieval route and take the best, because **which route wins is not stable between
+  papers**: on `34747138` the article PDF held 200 ppi against the OA bundle's 100, and here
+  every PDF route is closed and the 104 ppi CDN copy is all there is. This belongs in
+  `CLAUDE.md` beside rule 5d, which currently says only "prefer XML/HTML over PDF" — true for
+  *text*, and silent about *figures*, where the ranking inverts. **Noted, deliberately not
+  written today.**
 - 🔴 **Supplementary Figure S8 is unreachable, not merely unread.** Five routes fail. The
   entire P0–P5 window result — the finding that fires the previous paper's REVIVAL_TRIGGER —
   therefore rests on running text with no panel behind it. This is the single most important
