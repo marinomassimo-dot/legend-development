@@ -1338,3 +1338,98 @@ rinuncia nominata, poi ri-registrare a profondità completa con
 `reread_reason: inadequate_prior_coverage`. Solo allora il tasso è calcolabile su questo paper.
 **Current status:** ⬜ aperto. Debito **di sessione, non del paper**: la rinuncia è nominata nel
 manifest sotto `figure_coverage.waiver`, con il costo di ciascuna figura scritto.
+
+---
+
+## FT-056 — Santini et al., *Oncogene* 2014: la freccia ATM→ITCH non è di questo laboratorio, e dal commentary non è raggiungibile
+
+**Paper:** DOI 10.1038/onc.2013.52 — Santini S *et al.*, *Oncogene* 2014;33(9):1113–1123 —
+*ATM kinase activity modulates ITCH E3-ubiquitin ligase activity*
+**PMID:** non risolto in lettura — la
+citazione è stata letta dalla reference list di `PMID 25331887` (voce 42), verificata
+carattere-per-carattere contro `files/fulltext/PMID25331887_AbuOdeh2014_PMC.html`
+(`sha256 8c629a54…`). **Primo passo del prossimo run: risolvere PMID e PMCID**, non fidarsi di
+questa riga.
+
+**Perché è in coda, e non è una questione bibliografica.** `PMID 25331887` scrive nella Discussion
+*«After DNA damage, ATM positively regulates the ligase activity of ITCH (42)»* — con il numero.
+Il suo Author's View `PMID 27308504` scrive nella didascalia della propria unica figura *«Activated
+ATM phosphorylates and positively regulates the ligase activity of ITCH»* — **senza numero**, dentro
+un modello presentato come proprio, e **il riferimento 42 non compare fra le dieci voci del
+commentary**. Un lettore che partisse dall'Author's View per risalire a quella freccia non
+troverebbe alcun percorso.
+
+🔴 **È la freccia che chiude l'anello.** Senza ATM→ITCH il *feed-forward loop* del modello è aperto:
+resta ITCH→WWOX→ATM, una catena lineare. L'anello — la proprietà che rende il modello
+interessante — poggia interamente su un lavoro di terzi che questo corpus non ha letto.
+`IMPORTED_PREMISE_ATTRIBUTION_GATE`, su una premessa che porta peso.
+
+**Next action (sessione fredda):** risolvere `10.1038/onc.2013.52` → PMID/PMCID via `idconv` o
+`esearch`; preflight a tre vie; se `Oncogene` 2014 non è open access, dichiararlo e accodare come
+`PREMISE: NON RISOLTA` invece di assumere il segno. **La domanda precisa da porre al paper:** ATM
+fosforila ITCH *direttamente*, e l'effetto sull'attività ligasica è misurato o inferito? La
+direzione conta: se ATM *attiva* ITCH e ITCH *stabilizza* WWOX, l'anello è positivo; se in quel
+paper l'effetto fosse inibitorio, il modello di `27308504` si rovescia.
+**Current status:** ⬜ aperto. **Priorità: ALTA** — è l'unica premessa non risolta di una catena
+che questo corpus cita in tre letture.
+
+---
+
+## FT-057 — I due paper fondativi del KO che il commentary invoca e questo corpus non ha letto
+
+**Papers:** PMID 18487609 / DOI 10.1074/jbc.M800855200 — Aqeilan RI *et al.*, *JBC*
+2008;283:21629–39, PMC2490770 — *The WWOX tumor suppressor is essential for post-natal survival
+and normal bone metabolism* · PMID 17360458 / DOI 10.1073/pnas.0609783104 — Aqeilan RI *et al.*,
+*PNAS* 2007;104:3949–54, PMC1820689 — *Targeted deletion of Wwox reveals a tumor suppressor
+function*. Entrambi PMC, quindi **superficie strutturata attesa** — da verificare, non da
+presumere. Ordinati per priorità di lettura, non per data: vedi sotto.
+
+**Perché pesano più di quanto suggerisca il titolo.** `PMID 27308504` li cita insieme per una
+sola frase — *«Wwox knockout (KO) mice exhibit post-natal lethality and die by 4 weeks of age»* —
+e quella frase è il fondamento fenotipico di ogni trasferimento dal modello murino alla malattia.
+**`PMID 18487609` è il paper meno oncologico dei due**: sopravvivenza post-natale e metabolismo
+osseo, cioè esattamente il registro non tumorale in cui vive il genotipo di riferimento. Sta in
+coda da tempo per il titolo che promette osso; è la forma classica descritta in
+`gold_is_in_the_details`.
+
+**Next action (sessione fredda):** preflight a tre vie su entrambi i PMCID, **e preflight separato
+sulla superficie figure** — «superficie strutturata trovata» non implica «migliore superficie
+figure trovata», e su `27308504` la copia dentro il PDF aveva 3,1× i pixel del deposito PMC.
+Leggere `18487609` per primo. Budget figure dichiarato *prima* di aprire.
+**Current status:** ⬜ aperto. Priorità: media-alta.
+
+---
+
+## FT-058 — Il campo che ho coniato non è controllato da nulla, e lo dico prima che sembri verificato
+
+**Source:** `NOT_AN_ARTICLE` — un contratto, non un paper: `framework/scripts/deepdive_manifest.py` su `main`,
+`COUPLED_RELATIONS` e `_pointer_needle_errors`; l'istanza vive in
+`disease-models/wwox/research/deepdive_manifests/PMID27308504.json`, `entries[2]`.
+
+**Che cosa esiste.** `PMID27308504.json` `entries[2]` porta tre campi nuovi:
+`cross_document_relation: "hedge_deleted_by"`, `restates: "entries[1]"`, `restates_needle`.
+Seguono la grammatica che `main` ha fissato — puntatore più frammento, con la *suffix law*
+`<pointer>_needle`.
+
+**Perché non è dentro `panel_text_relation`.** Quell'enum è delimitato dal proprio nome: dice come
+un **pannello** sta rispetto a un **testo**. Questa relazione sta fra **due documenti**. Allargare
+l'enum sarebbe stato lo stesso ragionamento che ha prodotto `panel_qualifies_text` applicato al
+contrario per arrivare alla conclusione opposta: là nessun valore ammesso era vero e il difetto
+era l'enum; qui il difetto sarebbe stato usarlo.
+
+🔴 **E qui sta il debito.** Il validatore di `main` **ignora del tutto** questi tre campi: il
+manifest passa `MANIFEST STRICT PASS, 0 gaps` **senza che siano stati controllati**. È esattamente
+la forma «verde silenzioso» che questo repository esiste per impedire — un campo che *sembra*
+verificato perché sta accanto a campi che lo sono. La regola dell'ago è stata quindi eseguita **a
+mano** contro `_match_key` di `main` (il frammento appartiene allo snippet del bersaglio e a
+nessun altro), e il risultato è scritto nel manifest sotto
+`cross_document_relation_selfcheck`. **Un controllo eseguito a mano è più debole di un gate**, ed è
+offerto come argomento per costruirlo, non come sostituto.
+
+**Next action:** proporre a chi possiede `framework/scripts` di estendere `COUPLED_RELATIONS` con
+una tabella gemella per le relazioni cross-documento — il codice esiste già, `_pointer_needle_errors`
+è agnostico rispetto al nome della relazione e servirebbe solo una seconda mappa. **Non è mio da
+scrivere**: è lo stesso confine per cui `24308844` e `38182577` falliranno alla fusione finché il
+mio ramo porta un validatore più vecchio della regola.
+**Current status:** ⬜ aperto. Priorità: media — nessuna lettura ne dipende oggi, ma la seconda
+istanza del campo arriverà prima del gate se nessuno lo costruisce.

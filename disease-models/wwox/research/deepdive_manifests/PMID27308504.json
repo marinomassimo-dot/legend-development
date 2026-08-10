@@ -1,0 +1,244 @@
+{
+  "schema_version": 2,
+  "pmid": "27308504",
+  "doi": "10.1080/23723556.2015.1008288",
+  "receipt": "FTR-20260810-27308504-01",
+  "landing": ["FTR-20260810-27308504-01", "full_text_queue_current", "discovery_ledger_current"],
+  "skills_considered": [
+    {"skill": "legend-study-intake-triage", "used": true, "reason": "No prior manifest, no prior receipt at any depth. New to the corpus."},
+    {"skill": "find-fulltext", "used": true, "reason": "SURFACE PREFLIGHT, three routes, and they did not fully agree. oa.fcgi answered with a CC BY-NC record and two links; Europe PMC fullTextXML returned 25,267 bytes; E-utilities efetch db=pmc returned 27,288 bytes. Both XML routes carry article-type=\"article-commentary\" and the same ten reference IDs cit0001-cit0010, so they agree on WHAT this is. They disagree on whether the reference list is machine-readable: efetch carries structured element-citation with pub-id pmid on every reference, Europe PMC carries the same ten refs with no pmid extractable from the ref elements at all. For a reading whose entire question is WHICH PAPER THIS RESTS ON, that is not a cosmetic difference — one route can answer it and the other cannot. efetch declared as the text artifact for that reason, and the reason is recorded because next time the choice should not have to be rediscovered. Third disagreement, minor and unresolved: esummary prints the date as 2015 Oct-Dec, oa.fcgi prints 2015 Feb 23; 2(4). Not adjudicated; nothing here depends on it."},
+    {"skill": "legend-batch-inferential-sweep", "used": false, "reason": "Single assigned paper, not a batch."}
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 137,
+    "publications_on_gene": 65,
+    "counts_measured": "PubMed esearch, 2026-08-11: 'Aqeilan RI[au]' 137, 'Aqeilan RI[au] AND WWOX' 65. An unusually clean surname — 47% of the senior author's entire output is on this gene, and unlike the homonym-inflated ratios recorded elsewhere in this corpus this one is interpretable. First author measured separately: 'Hazan I[au]' 68, 'Hazan I[au] AND WWOX' 2, a common surname that certainly aggregates homonyms; recorded because it was run, not because it characterises anyone.",
+    "research_type": "primary_disease_group",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "primary_group_note": "🔴 The two questions come apart sharply here and the distinction is the reason the field exists. For the GENE this is the primary group in the world — 65 WWOX papers, and this repository's mechanistic backbone is theirs. For the DISEASE this model is about, WWOX-DEE, they are not the primary clinical group: the work read here is cancer biology and mouse genetics, which is exactly the inversion CLAUDE.md's parity principle describes, and it is why their oncology output is load-bearing for a neurodevelopmental model.",
+    "weighting": "🔴 THE OBSERVATION AND THE INTERPRETATION GET OPPOSITE WEIGHTS HERE, and this paper is the clearest case in the corpus for why they must be separated. The OBSERVATIONS this commentary restates carry the group's full authority — they made the measurements, this corpus has read the primary paper completely and checked seven of its panels, and PMID25331887 entries[26] independently confirms the monomerization result on the panel itself. The INTERPRETATION carries LESS weight than an outsider's would, not more: authorship of a result is a systematic reason to restate it more confidently than one restated it the first time, and that is measurably what happened — four hedges present in their own primary paper are absent from their own commentary on it. Group expertise raises confidence in what was seen and lowers confidence in how firmly it is being reported. Treating them as one weight would have made this reading impossible to write down.",
+    "self_citation": "Seven of the ten references are the authors' own. Ref 5 is the paper being commented on."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {"query": "Aqeilan RI[au] AND WWOX", "route": "PubMed esearch 2026-08-11", "count": 65},
+      {"query": "Aqeilan RI[au]", "route": "PubMed esearch 2026-08-11", "count": 137},
+      {"query": "Hazan I[au] AND WWOX", "route": "PubMed esearch 2026-08-11", "count": 2},
+      {"query": "Hazan I[au]", "route": "PubMed esearch 2026-08-11", "count": 68, "caveat": "Common surname; aggregates homonyms and is not interpretable as a denominator."}
+    ],
+    "note": "Entirely WWOX-directed. This is an Author's View: a solicited commentary on one recent paper by its own authors."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 10,
+    "gene_direct_refs_in_source": [
+      {"ref": 5, "pmid": "25331887", "note": "THE PAPER THIS COMMENTS ON. Abu-Odeh 2014 PNAS. Already read completely in this corpus — 30 locators, all seven main figures at deposited resolution. That is what made this reading possible at all: every assertion here could be checked against the primary rather than believed."},
+      {"ref": 9, "pmid": "24550385", "note": "Abu-Odeh 2014 JBC, cited here ONLY for the WW1/PY-motif interaction statement. Read by reader A in this same session. It matters that the commentary does not cite it for stabilisation — see entries[9] and entries[10]."},
+      {"ref": 10, "pmid": "25012504", "note": "Abu-Remaileh & Aqeilan, HIF1alpha/glucose metabolism. Adjacent to the hepatic axis read here earlier (PMID 29724996)."},
+      {"ref": 7, "pmid": "17360458", "note": "Wwox KO mice, tumour suppressor function."},
+      {"ref": 8, "pmid": "18487609", "note": "Wwox KO post-natal lethality and bone metabolism."}
+    ],
+    "resolved": [
+      {"ref": 5, "pmid": "25331887", "status": "read completely in this corpus, 30 locators, all seven main figures at deposited resolution; declared here as a second article_text artifact and quoted verbatim on both sides of every comparison"},
+      {"ref": 9, "pmid": "24550385", "status": "read by reader A in this session; it is what closes the ITCH arm of the stabilisation question, see entries[11]"},
+      {"ref": 10, "pmid": "25012504", "status": "adjacent to the hepatic HIF1alpha axis; not read as full text, but the axis itself was read completely in this corpus through PMID 29724996, which measures HIF1alpha occupancy on its own glycolytic targets"}
+    ],
+    "queued": [
+      {"ref": 7, "pmid": "17360458", "queue": "FT-057", "reason": "Targeted deletion of Wwox reveals a tumour suppressor function. Foundational for the KO phenotype this commentary invokes; not read."},
+      {"ref": 8, "pmid": "18487609", "queue": "FT-057", "reason": "Wwox KO post-natal lethality and bone metabolism. Directly relevant to the reference genotype's non-cancer phenotype, and unread."},
+      {"ref": "42 of PMID 25331887", "pmid": "unresolved at read time", "queue": "FT-056", "reason": "Santini et al., Oncogene 2014. The load-bearing source for the ATM->ITCH arrow, absent from this commentary's own reference list."}
+    ],
+    "gap": "Ref 42 OF THE PRIMARY PAPER — Santini et al., Oncogene 2014, ATM kinase activity modulates ITCH E3-ubiquitin ligase activity — is not read. It is the load-bearing source for the ATM->ITCH arrow that entries[6] shows this commentary asserts without citation. It is not in this commentary's reference list at all, which is precisely the finding; queued rather than silently absorbed."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does a commentary written by the authors of a paper this corpus has already read completely preserve that paper's own epistemic marking?",
+    "hits": 4,
+    "finding": "NO, and the pattern is consistent enough to be a method finding rather than an anecdote. Four hedges present in PMID 25331887 are absent from its own Author's View: the word 'Hypothetical' that captions the primary's model figure, the modal 'might' in the sentence that maps depletion onto a genotype, the citation to a third party for the ATM->ITCH step, and the attribution of stabilisation to the paper that actually measured it. The single surviving 'might' in the whole commentary sits on the introductory hypothesis the authors then report confirming — the one place a hedge costs nothing. Hedging vocabulary here is not lost, it is REDISTRIBUTED: retained on the superseded hypothesis, removed from the live conclusions. This is directly actionable for LEGEND because a commentary is exactly the surface a fast reader treats as a summary of what is established."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-11",
+    "route": "PMC record header for PMC4905350 and oa.fcgi record attribute",
+    "result": "oa.fcgi returns retracted=\"no\". No erratum, no expression of concern.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID27308504_Hazan2015_PMC.xml",
+      "sha256": "4124af2c465e2e565daa18ea83935174472c15bdf45e8d8e4e6f701db6f0ec1b",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID27308504_Hazan2015.pdf",
+      "sha256": "20d80aa0e6ce81c6a259c6a470318e7207f0b4baf2e6753deb9abcdfe32669c8",
+      "kind": "article_binary"
+    },
+    {
+      "path": "files/fulltext/PMID27308504_Hazan2015_assets/p2_x4.jpeg",
+      "sha256": "a979aad06a9b8d2804baf0b2b289559d13900381e63306a7203f12fdce1a84d9",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+      "sha256": "8c629a545f7cc6961dfe349148a2878709f046e6892d33328eda7dbbf3c008f2",
+      "kind": "article_text"
+    }
+  ],
+  "figure_extractions": {
+    "rule": "Figure 1 is the only figure in the paper. It was read from the copy embedded in the PDF, not from the copy PMC deposits, and the reason is measured rather than assumed.",
+    "figures": [
+      {
+        "label": "Figure 1",
+        "artifact": "files/fulltext/PMID27308504_Hazan2015_assets/p2_x4.jpeg",
+        "route": "fitz extract_image, PDF page 2, xref 4",
+        "dimensions": "1302x1051",
+        "smask": 0,
+        "smask_note": "No soft mask on this image, so the extract_image/Pixmap trap that governs the rest of this corpus does not arise here. Checked, not assumed.",
+        "cdn_cross_check": "The PMC-deposited copy at pmc.ncbi.nlm.nih.gov/articles/instance/4905350/bin/kmco-02-04-1008288-g001.jpg is 730x597 — 3.1x fewer pixels than the copy inside the publisher PDF. 🔴 THIS INVERTS THE ASSUMPTION CARRIED FROM PMID 25331887, where the PDF was preferred because the CDN copies were downsampled. Same conclusion, opposite reasoning: there the deposit was the lossy one by policy, here it happens to be too, but nothing guarantees the direction. The rule that survives is not 'prefer the PDF' — it is MEASURE BOTH AND RECORD THE NUMBERS, because the higher-resolution surface is a fact about one article, not about a route. The 730x597 copy is retained beside it as orig_g001.jpg for that comparison and is not the surface any locator here was read from.",
+        "old_ncbi_route_404": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4905350/bin/... returned 404 with a 48 KB HTML error body. Recorded because a 404 that ships 48 KB of HTML will be saved as an image by any pipeline that checks only the status code or only the file size."
+      }
+    ]
+  },
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "efetch JATS, body 11,944 characters and abstract 399 characters separated by main's own extractor. The body is genuinely short — this is a three-page commentary with four paragraphs of running text, and the completeness of the read is a property of the document, not a claim about effort.",
+    "extractor_provenance": "All text locators verified with git show main:framework/scripts/deepdive_manifest.py, imported and run directly, NOT with this branch's copy. Both text artifacts pass _refuse_suspect_surface. Every quote below matched at mode=strict; none needed the tolerant path.",
+    "abstract_anchoring_waived": "No locator draws on the abstract.",
+    "second_article_text_artifact": "🔴 PMID 25331887's PMC HTML is declared as a SECOND article_text artifact, and that is the design decision this manifest turns on. The finding here is a COMPARISON between two documents, so recording only the commentary's side would leave the load-bearing half — what the primary paper actually wrote — as unverifiable prose in a proposition field. Both sides are quoted verbatim and both are machine-checked against fingerprinted artifacts. A claim that an author removed a hedge is worth nothing unless the hedge itself is quotable.",
+    "figure_coverage": {
+      "figures_present": 1,
+      "figures_with_locators": 1,
+      "coverage": "1/1",
+      "budget_declared_before_reading": "One figure present, therefore one figure to cover; the depth dial is trivial on this paper and is recorded anyway, because a coverage number that is only written down when it is flattering is not a measurement. Two locators drawn from it, entries[3] and entries[13], both read from the 1302x1051 extraction."
+    },
+    "panel_text_relation_note": "One panel/text pair, entries[3] qualifying entries[1], carrying qualifies and qualifies_needle per main's suffix law. No contradictions: the panel does not falsify the caption, it prints something stronger than the caption says.",
+    "cross_document_relation_note": "🔴 A COINED FIELD, AND IT IS NOT MACHINE-CHECKED — said here rather than left to be discovered. entries[2] carries cross_document_relation: hedge_deleted_by, with restates and restates_needle following the pointer/needle grammar main fixed. It is NOT in main's schema: PANEL_TEXT_RELATIONS is scoped by its own name to how a panel stands to a text, and this relation holds between two documents, so widening that enum would have been the wrong repair — the same reasoning that produced panel_qualifies_text, applied in the opposite direction to reach the opposite conclusion. main's validator therefore ignores these three fields entirely and the manifest passes without them being checked at all. That is exactly the silent-green shape this repository fears, so the needle rule was run by hand against main's own _match_key and the result recorded in cross_document_relation_selfcheck below. A hand-run check is weaker than a gate and is offered as the argument for building one, not as a substitute."
+    ,
+    "cross_document_relation_selfcheck": "Run 2026-08-11 with main's _match_key imported: the needle of entries[2] folds to a fragment present in the snippet of entries[1] and in no other entry's snippet. Both halves of the rule hold. Proposed as a gate in the queue entry rather than added to the validator here, because this branch does not own framework/scripts.",
+    "entries": [
+      {
+        "proposition": "THE CONTROL CASE, and it is recorded first on purpose. Not everything this commentary asserts is inflated: WWOX-dependent ATM monomerization is a real measurement in the primary paper. It sits in Fig 4D, a Flag-ATM/YFP-ATM co-immunoprecipitation in HEK293-Sh-EV against HEK293-Sh-WWOX cells, and this corpus already holds a locator on that exact panel — PMID25331887 entries[26], added under the figure-coverage rule. So the commentary's strongest verb, 'revealed', is earned here. The three findings below are not a claim that the commentary is unreliable; they are the delta against a document that is mostly accurate, which is the only kind of delta worth reporting.",
+        "snippet": "Our results revealed that WWOX is required for proper monomerization of ATM, and hence its activation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27308504_Hazan2015_PMC.xml",
+        "anchor": "Fourth paragraph, final sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE SENTENCE THAT MATTERS MOST TO THIS DISEASE MODEL, because it is the one that maps a laboratory manipulation onto a GENOTYPE. Stated flatly, in the caption of the paper's only figure, with no modal and no citation.",
+        "snippet": "WWOX depletion (hemizygous mutation) or loss (homozygous mutation) results in reduced activation of ATM",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27308504_Hazan2015_PMC.xml",
+        "anchor": "Figure 1 caption, item B. Declared surface body rather than figure: this is authored prose carried in the body container and it is verified character-for-character. Calling a caption quote 'figure' would exempt it from that check.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "🔴 THE SAME SENTENCE IN THE PRIMARY PAPER, ONE YEAR EARLIER, WITH A MODAL. Word for word identical through 'reduced activation of ATM' — except that the primary writes MIGHT RESULT IN and the commentary writes RESULTS IN. That is not a paraphrase drifting: it is the same construction with the epistemic operator deleted, by the same authors, and it converts a stated inference into a stated fact. What is deleted is precisely what LEGEND classifies: the primary marks this as IPOTESI and the commentary presents it as DATO. And the inference is the load-bearing one for this repository's actual subject — the experiments behind the right-hand arm are HEK293-Sh-WWOX, MCF7-shWWOX and Wwox-KO MEFs, which are a knockdown and a null. THERE IS NO HETEROZYGOUS SYSTEM ANYWHERE IN THE PRIMARY PAPER. The primary knew that, which is why it wrote 'might'.",
+        "snippet": "WWOX depletion (hemizygous mutation) or loss (homozygous mutation) might result in reduced activation of ATM and substrate phosphorylation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+        "anchor": "PMID 25331887, Discussion, paragraph on WWOX as an adaptor for ATM activation",
+        "panel_text_relation": "text_only",
+        "cross_document_relation": "hedge_deleted_by",
+        "restates": "entries[1]",
+        "restates_needle": "results in reduced activation of ATM"
+      },
+      {
+        "proposition": "PANEL SIDE, QUALIFYING RATHER THAN CONTRADICTING — the drawing does not falsify the caption, it says something the caption does not say and cannot be read as saying. The schematic labels its two arms with GENOTYPE SYMBOLS, and the mutant arm terminates in a causal arrow to disease. A caption sentence can be read as loose shorthand for 'cells with less WWOX'; a printed WWOX(+/-) cannot. This is the most transferable form a claim can take — a reader who never opens the primary paper carries away a figure asserting that heterozygous cells have reduced ATM activation, impaired repair and a route to cancer, on evidence that is entirely knockdown and null. For a disease model whose carriers' parents are heterozygotes, that is the specific transfer this system exists to catch, and it is caught here by looking at the pixels rather than by reading the caption.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 1 at 1302x1051. Left arm headed WWOX(+/+) in bold; right arm headed by TWO stacked labels, WWOX(+/-) above WWOX(-/-), both bold, sharing one column and one set of drawn consequences. Left arm: WWOX bearing two red U spheres bound to a purple ATM ellipse carrying a yellow P, curved arrows through a crimson 'ITCH Ligase' sphere itself carrying a yellow P, down to CHK2 and gammaH2AX each carrying a yellow P on the DNA duplex, terminating in the text 'Efficient and Accurate DSB repair'. Right arm: a single unbound ATM ellipse with NO P, CHK2 and gammaH2AX drawn separately with NO P and not on the duplex, the incoming arrow drawn DASHED where the left arm's is solid, terminating in 'Inefficient repair' and 'Genomic Instability' followed by a drawn arrow to 'Cancer'. No WWOX species appears in the right arm at all.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID27308504_Hazan2015_assets/p2_x4.jpeg",
+        "anchor": "Figure 1, both arms, genotype headings and terminal nodes, read at 1302x1051 from the PDF-embedded copy",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[1]",
+        "qualifies_needle": "results in reduced activation of ATM"
+      },
+      {
+        "proposition": "🔴 THE WORD THE PRIMARY PAPER USED TO CAPTION ITS OWN MODEL. Fig 7D of PMID 25331887 is labelled Hypothetical — the authors classifying their own diagram correctly, and this corpus already recorded that at PMID25331887 entries[25], flagged there because a schematic inherits the authority of a measurement when nothing marks it. The label is the thing that was doing the marking.",
+        "snippet": "Hypothetical model of WWOX action in DDR",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+        "anchor": "PMID 25331887, Figure 7 caption, item D",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND IT IS GONE. The commentary redraws substantially the same model as its Figure 1 and the word does not appear: 'hypothetic' occurs ZERO times in the entire commentary — title, abstract, four paragraphs of body and the figure caption. The caption is declarative from first sentence to last. Recorded as a panel_only observation about the figure's own markings rather than as an inference, because the presence or absence of a hedge ON a diagram is something you read off the diagram and its caption, and the count is reproducible. Note what the figure DOES still hedge, in entries[13]: the one element it marks as uncertain is the one that is not the authors' own claim.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 1 at 1302x1051 carries no hedging mark of any kind on the WWOX-ITCH-ATM chain: no dashed outline, no question mark, no 'proposed' or 'model' or 'hypothetical' in the figure's own lettering. The only lettering-level hedge anywhere in the image is a single bold '?' beside the MRE11/RAD50/NBS1 spheres in the right arm.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID27308504_Hazan2015_assets/p2_x4.jpeg",
+        "anchor": "Figure 1, whole image, hedging marks, read at 1302x1051",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "THIRD DELETION, AND THIS ONE IS AN ATTRIBUTION RATHER THAN A MODALITY. The commentary's figure caption states the ATM-to-ITCH step as part of the authors' own model, with no citation anywhere in the caption.",
+        "snippet": "Activated ATM phosphorylates and positively regulates the ligase activity of ITCH",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27308504_Hazan2015_PMC.xml",
+        "anchor": "Figure 1 caption, item A",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE PRIMARY PAPER SAYS THE SAME THING AND CITES SOMEBODY ELSE FOR IT. Near-identical wording, with a reference number attached. The commentary keeps the sentence and drops the number, so a step imported from a third party's work reads as one of this lab's own findings. IMPORTED_PREMISE_ATTRIBUTION_GATE, on a premise that is doing real work: it is the arrow that closes the feed-forward loop, and without it the loop is open.",
+        "snippet": "After DNA damage, ATM positively regulates the ligase activity of ITCH",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+        "anchor": "PMID 25331887, Discussion, opening paragraph. The citation marker (42) follows immediately.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND HERE IS WHO REF 42 IS: a third-party Oncogene paper, not an Aqeilan publication, and not present in this commentary's ten references. It is therefore unread in this corpus and unreachable from the commentary alone — a reader who tried to follow the ATM-to-ITCH arrow back from the Author's View would find no path at all. Queued as FT-056 rather than absorbed.",
+        "snippet": "Santini S, et al. ATM kinase activity modulates ITCH E3-ubiquitin ligase activity",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+        "anchor": "PMID 25331887, reference list, entry 42",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "FOURTH DELETION — a citation that moved one link and landed on the wrong paper. The commentary attributes ITCH/K63/K274-mediated STABILISATION to reference 5, which is PMID 25331887, the paper it is commenting on.",
+        "snippet": "mediates K63-linked polyubiquitination of WWOX at lysine (K) 274, facilitating its stabilization and nuclear accumulation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27308504_Hazan2015_PMC.xml",
+        "anchor": "Third paragraph, subcellular fractionation sentence. The superscript 5 follows.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "🔴 BUT PMID 25331887 ITSELF ATTRIBUTES STABILISATION TO ANOTHER PAPER — its own reference 3, which is PMID 24550385, Abu-Odeh 2014 JBC. The primary is scrupulous here; the commentary is not. And the consequence is not bookkeeping: reader A read 24550385 in this same session and found the measurement — ITCH lengthens WWOX half-life under cycloheximide with overexpression, and Itch-null MEFs carry less WWOX with a shorter half-life at p<0.001, gain and loss of function, half of it in untransfected cells. So the evidence for stabilisation is REAL and it is STRONG and it is IN A DIFFERENT PAPER. A reader following the commentary's citation lands on 25331887, where the same claim is itself a citation. This is the shape that makes a premise look supported at every hop while nobody has met the data.",
+        "snippet": "Our recent work has identified ITCH as an E3 ligase that associates and mediates K63-linked polyubiquitination of WWOX, leading to its stabilization and nuclear translocation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+        "anchor": "PMID 25331887, Results, 'Ub E3 Ligase ITCH Ubiquitinates WWOX After DNA Damage', opening. The citation marker (3) follows.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "WHAT IS STILL NOT DISCHARGED, stated precisely so the queue entry is not a repeat of itself. Reader A's finding closes the ITCH arm of the stabilisation question — ITCH does stabilise WWOX, measured both ways. It does NOT close the K274 arm: the claim that removing the acceptor lysine shortens the half-life rests on Fig. S7B, which lives in the supplement of 25331887 that four retrieval routes failed to reach. So FT-053 narrows rather than closes: ITCH->stabilisation is now evidenced, K274->stabilisation remains an authors' assertion with its panel unreachable. The narrowing is the point — a debt that is never re-specified is a debt nobody can ever finish paying.",
+        "snippet": "half-life of WWOX-K274R is shorter compared with WWOX",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+        "anchor": "PMID 25331887, Results, 'WWOX Is Ubiquitinated at Lysine 274 on DNA Damage'. The panel cited is Fig. S7B.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE THIRD PAPER TO USE WFPA AS THE WW1-DEAD CONTROL WITHOUT SAYING WHY IT IS ONE, after PMID 25331887 and PMID 38499540. Here it is glossed only as 'a defect in the WW1 domain': no residue is named, and 'W44' and 'tryptophan' each occur zero times in the whole commentary. This corpus now holds the explanation from PMID 24308844 — W44 is the signature tryptophan whose indole forms the stacking platform for the ligand's P0, so WFPA removes the binding surface itself rather than perturbing it. The reagent has been load-bearing in three papers across eleven years and is explained in none of them. That is a reusable observation about this literature, not a criticism of this commentary: a control whose mechanism nobody restates is a control whose failure mode nobody can predict.",
+        "snippet": "WWOX mutants harboring a defect in the WW1 domain (WWOX-WFPA) or in K274 (K274R), rescued the ATM activating function",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27308504_Hazan2015_PMC.xml",
+        "anchor": "Third paragraph, reconstitution sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE ONE HEDGE THE FIGURE KEEPS, AND IT IS ON THE ELEMENT THAT IS NOT THEIRS. The MRN complex is drawn as three labelled spheres under the DNA in both arms, with a bold '?' beside it in the mutant arm — the only uncertainty mark in the image. MRE11, RAD50 and NBS1 are named NOWHERE in this commentary's text, and nowhere in the running prose of PMID 25331887 either: the complex enters this literature as drawn spheres and never as a measurement. So the figure marks as uncertain precisely the thing the authors are not claiming, while stating without hedge the chain they are. That is not dishonesty, it is the ordinary asymmetry of confidence in one's own results — which is exactly why a commentary cannot be read as a summary of what is established, and why the hedge count in entries[5] is worth more than any impression of tone.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 1 at 1302x1051, right arm, beneath the DNA duplex: three grey spheres labelled MRE11, RAD50 and NBS1, with a bold '?' immediately to their right. The left arm carries the identical three spheres with no question mark. No arrow connects the MRN spheres to WWOX, ATM or the duplex in either arm.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID27308504_Hazan2015_assets/p2_x4.jpeg",
+        "anchor": "Figure 1, both arms, MRN spheres, read at 1302x1051",
+        "panel_text_relation": "panel_only"
+      }
+    ],
+    "note": "COVERAGE IS COMPLETE AND THE DOCUMENT IS SHORT. Abstract, four body paragraphs, figure caption and all ten references read in sequence from the efetch JATS; the single figure inspected at 1302x1051 in two halves. There are no tables and no supplement — checked, not assumed: table-wrap count is zero in both XML routes and neither oa.fcgi nor the PDF carries a supplementary file. 🔴 WHAT THIS READING IS NOT: this is an article-commentary, an Author's View. It contains no primary data, no methods and no statistics, and every empirical assertion in it is a restatement of PMID 25331887. So the honest answer to 'which figure does the WW1/W44 chain rest on' is that it rests on NO FIGURE OF ITS OWN — the assignment's question has a negative answer, and the negative answer is what made the comparison possible. Reading it was worth a run anyway, but not for its evidence: for what it reveals about how this lab's own evidence degrades when it is restated by the people who produced it."
+  }
+}
