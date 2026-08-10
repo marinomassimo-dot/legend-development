@@ -273,13 +273,69 @@ unmarked printed P (Fig. 7C), a comparison not drawn (Fig. 6), and an explicit s
 (Fig. 5 caption). All three are legitimate authorial choices; none of them may be carried into
 this state as support.
 
+### 🔴🔴 Figure 5 (`gr5.jpg`, sha256 `9510b8511d31db8ad31654b64aa3744142e19c1af88024290a39c3dc863df8a8`) — the survival threshold has no measured expression difference behind it
+
+`surface: figure`, 104 ppi, all twelve panels at P30. **This is the most consequential panel
+set in the paper and it cuts against the paper's own framing.**
+
+**Vector genome copies (A–D)** and **hWWOX mRNA (E–H)**, low dose versus high dose:
+
+| region | AAV DNA LD → HD | mRNA LD → HD |
+|---|---|---|
+| cortex | ≈2 800 → ≈8 800 · **`ns`** | ≈520 → ≈700 · `ns` |
+| hippocampus | ≈2 000 → ≈3 800 · **`*`** | ≈540 → ≈650 · `ns` |
+| midbrain | ≈2 200 → ≈7 300 · **`ns`** | ≈65 → ≈145 · `ns` |
+| cerebellum | ≈320 → ≈730 · **`ns`** | ≈37 → ≈95 · `ns` |
+
+**Seven of eight comparisons are `ns`.** The one significant difference is viral DNA in the
+hippocampus. The error bars are enormous — in panel C the high-dose interval runs from about
+2 000 to 15 000.
+
+🔴 **So the two doses differ 2.1-fold in what was injected, are statistically
+indistinguishable in what arrives and what is transcribed across four brain regions, and
+produce opposite survival outcomes — every low-dose animal dead by ~90 days against a plateau
+at ~80% (Figure 3B, `p < 0.0001`).**
+
+That is a real tension inside one paper, and it is invisible from the running text, which says
+the vector "restores WWOX DNA, mRNA, and protein expression in a **dose-dependent** manner".
+Dose-dependence is visible in the *means* and absent from the *statistics*. Three readings are
+open and the reading cannot choose between them:
+- the true difference lies where nobody measured — other regions, other timepoints, or cell-
+  level rather than tissue-level expression;
+- the difference is real and the study is **underpowered to detect it**, which the variance
+  makes plausible and which the survival curve — n=20 and n=30, `p < 0.0001` — detects easily;
+- survival depends on something other than mean transgene level.
+
+`PREMISE_TAG` · 🔴 **Any dose recommendation drawn from this paper rests on the survival curve
+alone, not on a measured expression difference.** Recorded as `INFERENZA`, and the
+`REVIVAL_TRIGGER` from the Figure 3 entry — an intermediate dose arm — gains a second reason:
+it would also test whether expression tracks dose at all.
+
+### Three more things the blots carry
+
+**Protein (I–L)**, values printed under each lane, relative to WT = 1:
+
+- **cerebellum (L)** — LD `0.7 / 0.5 / 0.7`, HD `0.7 / 0.5 / 0.2`. **Both doses stay *below*
+  wild type, and the high dose is not above the low.** The cerebellum is not reconstituted at
+  all, in a paper whose title says "rescue" and whose text says "restores".
+- **hippocampus (J)** — LD `14.2 / 19.5 / 9.2`, HD `14.7 / 9.1 / 18.3`: 9- to 19-fold **over**
+  wild type, with the two doses interleaved. This is not restoration to physiological level,
+  it is an order-of-magnitude overexpression — worth holding beside the authors' stated reason
+  for removing WPRE, which was to keep expression closer to endogenous.
+- 🔴 **hippocampus KO lane reads `1.1`** — the same as wild type — while the KO lane reads
+  `0.02` in cortex, `0.03` in midbrain and `0.08` in cerebellum. In a *Wwox*-null animal a
+  WWOX band at wild-type intensity is not a biological result; it is most likely a
+  non-specific band or a normalisation artefact in that blot. **It is not flagged in the
+  figure and not mentioned in the text.** It does not change the paper's conclusions, but it
+  is the kind of internal inconsistency that a reader quoting hippocampal fold-change would
+  carry forward unknowingly.
+
 ## Reading debt this leaves — explicit and large
 
 - **Introduction, all seven results sections and Materials and Methods: not read.**
-- **Four of the seven figures: retrieved and fingerprinted, not inspected** — `gr1`, `gr2`,
-  `gr4`, `gr5`. Figures 3, 6 and 7 are done, and all three carried something the running text
-  did not. `gr5` is the vector-genome / mRNA / protein dose series and is the one that would
-  show whether expression scales the way the survival threshold implies.
+- **Three of the seven figures: retrieved and fingerprinted, not inspected** — `gr1`
+  (promoter comparison), `gr2` (WPRE removal) and `gr4` (behaviour). Figures 3, 5, 6 and 7 are
+  done, and every one of them carried something the running text did not.
 - **Materials and methods: read for the sciatic-nerve and spinal-cord protocol and for the
   statistics; the rest not read.**
 - 🔴 **Every supplementary figure remains unreachable.** S5 and S6 now carry more weight than
