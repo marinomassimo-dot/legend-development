@@ -1229,7 +1229,86 @@ una base Sanger dalla copia servita avrebbe significato leggerla con un terzo de
 l'editore ha spedito.
 
 **Debito residuo, ed è dove va guardato adesso:** i due controesempi che deciderebbero davvero
-la questione — **l'delezione dell'introne 4 di Oliver 2023** (categoria 2 per genotipo,
+la questione — **la delezione dell'introne 4 di Oliver 2023** (categoria 2 per genotipo,
 categoria 1 per gravità) e i **sei pazienti prevalentemente missenso di Havali 2021** — restano
 non letti. Dopo questa lettura sono loro, e non questo paper, gli elementi di coda di maggior
-valore per la premessa ipomorfi/ASO.
+valore per la premessa ipomorfi/ASO. **Entrambi triageati la sera stessa: vedi `FT-056`.**
+
+---
+
+## FT-056 — 🟡 TRIAGE, NON LETTURA — i due controesempi che decidono la premessa
+
+**Papers:** PMID 34034642 / DOI 10.1080/01616412.2021.1932173 — Havali et al. 2021, *Neurol Res*
+· PMID 36779245 / DOI 10.1111/epi.17542 — Oliver et al. 2023, *Epilepsia*
+**Priority:** **ALTA** — sono i due che decidono *«missenso ⇒ funzione residua ⇒ più lieve»*,
+dopo che `FT-055` ha stabilito che il terzo controesempio non la falsifica.
+
+### 🔴 Havali 2021 — closed access, e lo dichiaro come rotta, non come proprietà
+
+| rotta | risposta letterale |
+|---|---|
+| `elink pubmed→pmc` | **nessun linkset `pubmed_pmc`** — solo `pubmed_pmc_refs`, che sono articoli *che citano* questo |
+| `esummary articleids` | solo `pubmed` e `doi`; **nessun `pmc`** |
+| Europe PMC | `isOpenAccess: N` · `inPMC: N` · `hasPDF: N` · *«Subscription required»* |
+| Unpaywall | `is_oa: false` · `oa_status: closed` · nessuna `oa_location` |
+
+🔴 **Formulazione deliberata:** *non l'ho potuto recuperare per queste rotte*, **non** *«è
+irrecuperabile»*. La lezione del 2026-08-10 mattina è che ho già testato una volta la mia
+capacità di recuperare un artefatto e registrato la risposta come proprietà dell'artefatto —
+due ritrattazioni poggiavano su quella premessa falsa. Chi ha accesso istituzionale lo prenda.
+
+🔴 **E una trappola nella rotta stessa, che vale oltre questo paper:** `elink` ha restituito tre
+`<Id>` e leggerli senza il `LinkName` avrebbe fatto concludere che un deposito PMC esisteva.
+Erano `pubmed_pmc_refs`. **Un `<Id>` nella risposta non è un `<Id>` alla domanda che hai fatto.**
+
+### 🔴 Oliver 2023 — già letto il 2026-08-04, e i suoi locator non sono verificabili
+
+`FTR-20260804-36779245-02`, `complete_fulltext_read`. Manifest `PMID36779245.json`: **schema
+`None`, 20 locator, ZERO `source_artifacts`**. L'artefatto però **esiste**
+(`PMID36779245_Oliver2023_PMC.xml`, 183 753 byte, CC BY-NC-ND). Nessuna rilettura: la regola 7
+la ammette solo con `reread_reason`, e qui non serve una rilettura — serve una misura.
+
+**Misurata. E la causa non sono le letture: è la normalizzazione del validatore.**
+
+| variante | verificati |
+|---|---|
+| il validatore com'è oggi | **7 / 20** |
+| + punteggiatura Unicode ripiegata | 9 / 20 |
+| elementi inline uniti **senza** spazio | 7 / 20 |
+| **entrambe insieme** | **16 / 20** |
+
+Il meccanismo, misurato e non supposto: l'XML contiene `<italic>WWOX</italic>‐DEE` **30 volte**,
+e `_xml_surfaces` unisce **ogni** nodo di testo con uno spazio. La superficie estratta legge
+quindi `WWOX ‐DEE` (27 occorrenze) e `WWOX‐ DEE` (8) — **uno spazio che l'autore non ha mai
+scritto**, fabbricato al confine del markup. Unendo gli elementi inline senza separatore,
+`WWOX ‐DEE` passa da 27 a **0** e `WWOX‐DEE` da 0 a **35**.
+
+**Nessuna delle due correzioni basta da sola** — 7 e 7 — e insieme fanno 16. I **4 residui**
+falliscono tutti in posizione tarda e su un marcatore di citazione: è una **terza causa
+distinta**, probabilmente il contenuto di `<xref>` che la citazione omette e l'estrattore
+conserva.
+
+🔴 **Una prima ipotesi era sbagliata e la misura l'ha colta:** avevo attribuito tutto alla
+punteggiatura Unicode, che da sola ne recupera **2 su 13**. Registrato perché è il motivo per
+cui la seconda ipotesi è stata *testata* invece che asserita.
+
+**Perché conta oltre questo paper:** il nome del gene è in corsivo in ogni rivista, quindi
+**ogni citazione che contiene `WWOX-DEE` fallisce, in tutto il corpus** — e il gene attorno a
+cui ruota questo repository è il token che più probabilmente rompe un locator. I conteggi
+*«not found»* di chi misura la salute del corpus vanno riletti alla luce di questo: **le letture
+sono in larga parte sane e il difetto è nel normalizzatore.**
+
+**Controllo sui miei:** 90 locator testuali su sei manifest, **0 portano uno spazio fabbricato**.
+Non per merito — le mie catture verificavano contro l'estrattore stesso, quindi uno spazio
+fabbricato sarebbe entrato nello snippet e avrebbe *superato* il controllo. Non è successo, ma
+la protezione era accidentale.
+
+**Non riparato qui:** è infrastruttura e oggi si legge. La correzione tocca `_xml_surfaces` e
+va con la sua batteria di mutazione, perché una normalizzazione troppo aggressiva
+nasconderebbe esattamente le sostituzioni stampabili che il sentinella della regola 5d esiste
+per trovare.
+
+**Cosa resta da leggere davvero:** il caso dell'introne 4 di Oliver 2023 — categoria 2 per
+genotipo, categoria 1 per gravità — **non è fra i 20 locator esistenti**, verificato. Quindi il
+paper è letto ma il reperto che serve alla premessa non è catturato, ed è materiale per una
+lettura mirata con `reread_reason: inadequate_prior_coverage`, non per una rilettura completa.
