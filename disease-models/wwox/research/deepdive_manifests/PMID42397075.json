@@ -206,7 +206,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
         "anchor": "Figure 4 caption, panel H",
-        "panel_text_relation": "text_and_panel_agree",
+        "panel_text_relation": "text_confirmed_by_panel",
         "found_or_sought": "found — caption read alongside the panel"
       },
       {
@@ -215,7 +215,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
         "anchor": "Figure 4 caption, panel J",
-        "panel_text_relation": "text_and_panel_agree",
+        "panel_text_relation": "text_confirmed_by_panel",
         "found_or_sought": "found — the caption gives one P value where the panel shows two conditions"
       },
       {
@@ -233,8 +233,7 @@
         "surface": "body",
         "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
         "anchor": "Results, p. 13, describing Figure 6A(ii)",
-        "panel_text_relation": "text_contradicted_by_panel",
-        "evidence_pair": "fig6aii_rescue_similar_to_wt",
+        "panel_text_relation": "text_only",
         "found_or_sought": "sought — 2026-08-09, looking for how the rescue was characterised"
       },
       {
@@ -244,8 +243,8 @@
         "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/figs/fig_p36_1430x1754.jpeg",
         "anchor": "Figure 6, panel A(ii), inspected at native resolution 2026-08-09",
         "panel_text_relation": "text_contradicted_by_panel",
-        "evidence_pair": "fig6aii_rescue_similar_to_wt",
-        "found_or_sought": "found — 2026-08-09, on opening the panel; the missing bracket is what prompted checking the sentence"
+        "found_or_sought": "found — 2026-08-09, on opening the panel; the missing bracket is what prompted checking the sentence",
+        "contradicts": "entries[10]"
       },
       {
         "proposition": "The rescue corrects neuronal function without correcting radial-glia abnormalities — the authors' own statement of what the therapy does and does not reach.",
