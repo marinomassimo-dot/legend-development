@@ -688,6 +688,93 @@ different anaesthetic status, different developmental window — the two papers'
 results are complementary rather than replicate, and the ketamine caveat recorded against the
 2021 paper does not transfer here.
 
+### 🔴🔴 The supplementary was never unavailable — I declared it so without looking where it was
+
+`mmc1.pdf` (10 pp.) and `mmc2.pdf` (27 pp.) were in
+`files/fulltext/PMID42422765_Obeid2026_assets/` **at 12:13**, fetched by another actor. I
+declared `unavailable` at 13:26, after five failed retrieval routes **of my own**.
+
+My worktree does not have that directory: `files/` is gitignored, so every worktree carries its
+own evidence tree and branches never exchange it. From where I stood it was genuinely
+invisible — **which is exactly the shape of a premise too obvious to write down.** I checked
+whether *I* could fetch it and recorded the answer as a property of the artifact. The
+operative rule now: **before declaring anything unavailable, look in the shared
+`files/`, because another actor may already hold it** — and every evidentiary artifact I
+fetch goes there, not into my worktree.
+
+Digests: `mmc1.pdf` `dd4919a80af93703…`, `mmc2.pdf` `523b09e47b52620c…`.
+
+### Retraction 1 REOPENED — and it was wrong. The original claim stands.
+
+I had withdrawn *"the dose-dependence of myelination is shown and never measured"* because the
+text cites `S7I` for the quantification. **`S7I` quantifies nothing.** Its own caption:
+> "(I) Representative MBP immunostaining at ∼P90 in KO+W LD (1.23x1011vg) and KO+W HD (2.63x1011vg) mice relative to WT-RI."
+
+`surface: figure` · `S_p09_200dpi.png`. Panel I is three images, no graph, no statistics.
+`S8G` is the same: five brain regions, WT / KO / KO+W P5, **representative images only**.
+
+So the paper shows treated-animal myelination in **three separate panels — Figure 6F, S7I and
+S8G — and quantifies it in none of them.** The only MBP quantification anywhere is Figure 6E,
+which compares **WT against KO only**, with no treated arm.
+
+**The withdrawal is withdrawn. The original claim was right, and it is now grounded in what
+three panels show rather than in what I could not reach.** This is the failure mode the
+operator predicted: I had retracted a true statement because I mistook my own inability to
+retrieve for the absence of evidence.
+
+### Retraction 2 REOPENED — and here the retraction was correct, with a caveat the panels add
+
+Neuroinflammation **is** quantified — `S7F` (Iba1) and `S7H` (GFAP), plus `S8I`:
+
+| panel | measure | values | brackets |
+|---|---|---|---|
+| S7F | % Iba1 area | WT ≈9.3 · LD ≈16.2 · HD ≈10.9 | `ns` WT-LD · `ns` WT-HD |
+| S7H | % GFAP area | WT ≈1.75 · LD ≈3.05 · HD ≈1.9 | **`**` WT-LD** · `ns` WT-HD |
+| **S8I** | GFAP⁺ cells | **WT ≈5 · KO ≈44 · KO+W(P5) ≈5** | **`***` WT-KO** · **`ns` WT-treated** |
+
+So my retraction was right on the facts: the quantification exists. Two things the panels add:
+- **S7F and S7H contain no untreated-KO arm**, so *within S7* the sentence "restoration
+  significantly reduced astrocyte reactivity and microglial density" has no baseline to reduce
+  from. **S8I supplies it** — KO ≈44 against WT ≈5, treated back to ≈5, `ns` versus WT. The
+  claim is supported, in a different figure from the one the text cites;
+- **the low dose is significantly *above* wild type on GFAP** (`**`) while the high dose is
+  `ns` — a real dose effect, and one more instance of LD failing where HD succeeds.
+
+### S8 — the P0–P5 window, seen at last
+
+`surface: figure` · `S_p10_200dpi.png`, 200 ppi, rendered from `mmc1.pdf` p10.
+
+- **A** (to P40): `KO+WWOX` at P1 (n=6), P2 (n=6), P3 (n=3), P5 (n=7) against `KO+RI` (n=6)
+  dead by ~15 days. Only the P3 arm loses animals (~67% at ~24 days).
+- **B** (to P300): P1 (n=6) and P5 (n=7) plateau at ~75% out to **300 days**. `**p<0.001`,
+  log-rank.
+- **C / D**: weight and glucose at P14 — `***` and `**` WT-versus-KO, and **`ns` spanning all
+  five treated timepoints against WT**.
+
+**The window result is real and now verified against its panel**, not taken from running text.
+One thing the panels show that the text does not: **B plots only P1 and P5**; P2, P3 and P4
+appear solely in the 40-day panel, and P3 is the arm with n=3 that lost animals.
+
+### Methods, read rather than inferred
+
+- **Injection is stereotaxic here** — *"conducted using stereotactic technique to ensure
+  consistency"* — where `PMID 34747138` used *"Free-hand intracranial injections"*. A declared
+  methodological upgrade between the two papers.
+- **Construct confirmation, which settles my earlier correction from the Methods side:**
+  *"Constructs driven by EF1α, CMV, and MBP included WPRE, whereas the hSynI-driven vector was
+  generated both with and without WPRE."*
+- **ECoG**: isoflurane for implantation at P14, then telemetric recording — **not** continuous
+  anaesthesia. The ketamine caveat from the 2021 paper does not transfer.
+- **Blinding is weaker than in 2021**: *"Data were analyzed in a blinded manner when
+  feasible"*, against the 2021 paper's unconditional *"Data analysis was performed while
+  blinded to the genotype"*.
+- 🔴 **Declared interests, which the 2021 paper did not have:** *"R.I.A. is a consultant for
+  Mahzi Therapeutics. A.B., T.B., and Y.W. are employed by Mahzi Therapeutics"*, and the work
+  *"was supported by Mahzi Therapeutics"*. In 2021: *"The authors declare that they have no
+  conflict of interest."* This invalidates nothing and is recorded because a gene-therapy
+  efficacy paper with three sponsor-employed authors is a fact a reader is entitled to have
+  alongside the two text-versus-panel contradictions above.
+
 ## Reading debt this leaves — explicit and large
 
 - **Introduction, all seven results sections and Materials and Methods: not read.**
