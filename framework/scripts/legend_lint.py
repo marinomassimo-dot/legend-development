@@ -270,6 +270,44 @@ def queue_entry_identity(body):
     return pmids, dois, "resolved"
 
 
+def _check_queue_ids(findings, text):
+    """No two full-text queue entries may carry the same `FT-` number.
+
+    The identifier check below asks whether an entry names its paper. This one asks the prior
+    question: whether the entry can be named at all. `FT-047` appearing twice means every
+    reference to `FT-047` — in a receipt, in a discovery entry, in another queue entry's
+    cross-link — points at two places, and the reader cannot tell which.
+
+    PATTERN_ALREADY_SOLVED_GATE, fourth site. The identical guard already exists three times
+    in this file: `DUPLICATE_ID` for claims and papers, `DUPLICATE_DISCOVERY_ID` for the
+    discovery ledger, `DUPLICATE_COMMIT_CANDIDATE_ID` for the commit log. The discovery one
+    even names the hazard in its docstring — "ambiguous anchors created by parallel appends" —
+    and the full-text queue, the file three concurrent readers append to most, had no
+    equivalent. The defence was written once and carried to three of four sites.
+
+    Measured, not assumed: on 2026-08-10 the queue carried four collisions — `FT-039`,
+    `FT-046`, `FT-047`, `FT-048` — and the LINT was green on all four while warning about a
+    missing identity line three lines below one of them. Three were mine, opened on a branch
+    whose author had counted the tail of the queue instead of reading `main`'s. Two branches
+    allocating "the next free number" against different snapshots produce the same number,
+    which is why this belongs to the LINT and not to anyone's diligence.
+
+    `BLOCK_BATCH_COMMIT`, matching its three siblings: an ambiguous anchor must not propagate
+    into canonical state. It does not block analytical work, and the fix is a renumber.
+    """
+    ids = QUEUE_ENTRY_RE.findall(text)
+    for entry_id in sorted(set(ids)):
+        count = ids.count(entry_id)
+        if count > 1:
+            findings.append(Finding(
+                "BLOCK_BATCH_COMMIT",
+                "DUPLICATE_QUEUE_ID",
+                f"{entry_id} duplicated in the full-text queue ({count} times) — every "
+                f"reference to it is ambiguous; renumber the later entry and record the "
+                f"old number in it, because receipts already written cannot be rewritten",
+            ))
+
+
 def _check_queue_identifiers(findings, text):
     """Every full-text queue entry must say, on its identity line, which paper it is.
 
@@ -679,7 +717,9 @@ def lint(repo_root):
             _check_dismissals(findings, _read(dismissal_path))
         queue_path = os.path.join(repo_root, FULL_TEXT_QUEUE)
         if os.path.isfile(queue_path):
-            _check_queue_identifiers(findings, _read(queue_path))
+            queue_text = _read(queue_path)
+            _check_queue_ids(findings, queue_text)
+            _check_queue_identifiers(findings, queue_text)
         _check_fulltext_receipts(findings, repo_root)
         if not any(item.severity == "BLOCK_SYSTEM" for item in findings):
             _check_session_self_evaluation(findings, repo_root)

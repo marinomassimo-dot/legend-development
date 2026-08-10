@@ -21,6 +21,7 @@ from legend_lint import (  # noqa: E402
     _check_discovery_ids,
     _check_dismissals,
     _check_queue_identifiers,
+    _check_queue_ids,
     _check_publication_integrity_claims,
     claim_paper_findings,
     lint,
@@ -257,6 +258,17 @@ class PublicLintTests(unittest.TestCase):
         self.assertTrue(
             any(item.code == "DUPLICATE_COMMIT_CANDIDATE_ID" for item in findings)
         )
+
+        # Fourth site of the same guard, added 2026-08-10 after the full-text queue carried
+        # four collisions unnoticed. The negative case matters as much as the positive one:
+        # a check that fired on distinct ids would make every queue append look like a defect.
+        findings = []
+        _check_queue_ids(findings, "## FT-046 — first claimant\n## FT-046 — second, on a branch\n")
+        self.assertTrue(any(item.code == "DUPLICATE_QUEUE_ID" for item in findings))
+
+        findings = []
+        _check_queue_ids(findings, "## FT-046 — first\n## FT-047 — second\n## FT-048 — third\n")
+        self.assertEqual([], findings)
 
     def _receipt_repository(self, root: Path, papers: str, receipts_list: list[dict]) -> Path:
         """A fixture repository whose state manifest declares and anchors a receipt ledger."""

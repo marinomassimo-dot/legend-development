@@ -1,0 +1,298 @@
+{
+ "schema_version": 2,
+ "pmid": "38499540",
+ "doi": "10.1038/s41420-024-01878-8",
+ "receipt": "FTR-20260810-38499540-01",
+ "landing": [
+  "FTR-20260810-38499540-01",
+  "discovery_ledger_current",
+  "full_text_queue_current"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "XML from this session's structured-surface sweep. Figures fetched at original resolution from the Springer CDN as PNG after .jpg returned 404 — the third article in two days where the JATS declares an extension the CDN does not serve."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The central finding is a disagreement between figure captions and their own panels, which a read-only sub-agent cannot see."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": true,
+   "reason": "The caption-inversion class is landed in the discovery ledger alongside DL-METH-079, because this is the second paper from the same laboratory showing it and one instance is an accident while two are a class."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No compound is proposed as therapy here. Cisplatin and the ATM inhibitor are used as damage-induction tools."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 137,
+  "publications_on_gene": 65,
+  "counts_measured": "PubMed esearch, 2026-08-10. 'Aqeilan RI[au]' 137 total, 'Aqeilan RI[au] AND WWOX' 65. Primary laboratory for the gene.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "High weight on the mouse genetics and the foci quantifications, which are internally consistent and match the running text. The figure CAPTION TITLES are the surface that fails here, three of six, and they fail in the direction that inverts the paper's own model."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Aqeilan RI[au] AND WWOX",
+    "route": "PubMed esearch 2026-08-10",
+    "count": 65
+   },
+   {
+    "query": "Aqeilan RI[au]",
+    "route": "PubMed esearch 2026-08-10",
+    "count": 137
+   }
+  ],
+  "note": "Breast-cancer paper carrying primary WWOX DNA-repair biology. Parity of sources: the WWOX-BRCA1 repair-choice axis exists here, not in the WOREE literature."
+ },
+ "multihop": {
+  "performed": false,
+  "references_enumerated": 55,
+  "gene_direct_refs_in_source": [
+   {
+    "ref": 36,
+    "pmid": "25331887"
+   },
+   {
+    "ref": 17,
+    "pmid": null,
+    "author": "Park et al."
+   }
+  ],
+  "resolved": [
+   {
+    "ref": 36,
+    "pmid": "25331887",
+    "why": "Abu-Odeh 2014 PNAS, WWOX regulates ATM activation and the DNA damage response. Read 2026-08-10; its manifest is PMID25331887.json.",
+    "correction_20260810": "🔴 THE FIRST VERSION OF THIS BLOCK WAS WRONG, and the error was mine rather than the paper's. It recorded 25331887 as ref 17 and ref 34, and built a queue entry on the claim that this paper's in vivo direction is anchored to it as a supporting in vitro source. Reading 25331887 falsified both halves. This paper's own Discussion says: 'In contrast, a previous paper by Abu-Odeh and colleagues, has shown that WWOX enhances HDR in U2OS cells [36]' — so 25331887 is ref 36, it is cited as an acknowledged CONFLICT and not as support, and the authors name the conflict themselves and offer an explanation for it. Ref 17 is Park et al., the study this paper says it IS in alignment with. Identical in shape to the panel audit run the same day, one level up: I attributed a citation to a sentence without reading the number the sentence actually carries."
+   }
+  ],
+  "queued": [
+   {
+    "ref": 17,
+    "pmid": null,
+    "note": "Park et al. — heightened RAD51 in WWOX-negative cells, and a link between absent WWOX and enhanced end resection. This is the study the paper claims alignment with, so it is now the highest-value unread hop. Not resolved to a PMID here."
+   }
+  ],
+  "note": "The reference list holds 55 entries. The in vivo conclusion is said to 'correspond with previous in vitro findings [17,38,39]', so those three are the load-bearing hops and NONE of them is 25331887. 25331887 is cited separately at [35] and [36] for the ATM axis, and again in the Discussion as an explicit conflict on the direction of HDR. Corrected 2026-08-10 after reading it — see correction_20260810 above."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Has any paper already read in this repository shown a mismatch between a headline surface and its own body, and does this one repeat it?",
+  "hits": 1,
+  "finding": "PMID 38182577, read the same day, carries a published TITLE that asserts the opposite of its body, abstract and figure caption. This paper carries the same defect displaced one level down: three of six FIGURE CAPTION TITLES assert the opposite of their own panels and of the running text, while body, section headings and the graphical abstract are all correct. Same laboratory, consecutive papers."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-08-10",
+  "route": "PubMed esummary for 38499540",
+  "result": "No retraction, no expression of concern, no erratum attached. Publication types are Journal Article and research support only.",
+  "hold": false
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml",
+   "sha256": "27ebcb4546f19b1199aa9b0549b2156d794cc32a8a324e181f8bd0be6560d54b",
+   "kind": "article_text"
+  },
+  {
+   "path": "files/fulltext/PMID38499540_BidanyMizrahi2024_assets/41420_2024_1878_Fig1_HTML.png",
+   "sha256": "94c31b78e85da086da9b7f390801126f6c9a1c9d1f89a602be9a5fd440854155",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID38499540_BidanyMizrahi2024_assets/41420_2024_1878_Fig2_HTML.png",
+   "sha256": "3873f4b47bbcf0ab8866b32dd966865bfa7714a548313ed5cedac0b36ae83301",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID38499540_BidanyMizrahi2024_assets/41420_2024_1878_Fig3_HTML.png",
+   "sha256": "9a0ccba24c50d9432d865989b4b87c4e07f7851e2778760489f734b69def7b1c",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID38499540_BidanyMizrahi2024_assets/41420_2024_1878_Fig4_HTML.png",
+   "sha256": "535c2e111a1b27414687498264128123c5e5df5804583ce4e7ffd9280f2e24f6",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID38499540_BidanyMizrahi2024_assets/41420_2024_1878_Fig5_HTML.png",
+   "sha256": "42d741dd21d1d84d855c89ebb9a49fe0fed588b1298d660cddef532c42039890",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID38499540_BidanyMizrahi2024_assets/41420_2024_1878_Fig6_HTML.png",
+   "sha256": "fca4a932c4d684559d18cb8804925ad7984148b17302924d5675a2776ac2f0ce",
+   "kind": "figure"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMCID PMC10948869, JATS XML served by PMC. All six figures fetched at original resolution (952-1977 px) from the Springer Nature CDN as PNG; requesting the .jpg names the JATS declares returned HTTP 404. Six distinct digests verified before any file was treated as a figure.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored. The abstract states the conclusion in the correct direction and carries none of the caption inversions this reading turns on.",
+  "panel_text_relation_note": "Every entry carries panel_text_relation. Contradictions are one-directional: the figure entry carries the marker plus contradicts: entries[N] and a needle drawn from the target's snippet. FOLLOWING THE RULE A ESTABLISHED TODAY, every target snippet is extended to include the author's own figure citation, so the identification of which panel the sentence concerns is the source's assertion and not the reader's. Where the contradicted surface is itself a figure caption, the target's surface is 'figure' rather than 'body' — a caption is part of the article text but lives in the figure's own JATS container.",
+  "entries": [
+   {
+    "proposition": "THE PAPER'S MODEL, STATED IN ITS OWN BODY AND CORRECT: WWOX presence directs repair to NHEJ; WWOX loss compromises NHEJ and raises HDR. Everything below is measured against this, because the body, the Results section headings and the graphical abstract all agree on it.",
+    "snippet": "demonstrating that WWOX’s presence directs the DSB repair towards NHEJ, while its depletion results in compromised NHEJ repair and more HDR, even in the absence of BRCA1",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml",
+    "anchor": "Results, section on in vivo 53BP1/RAD51 immunostaining, closing sentence of the paragraph comparing genotypes",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PAIR 1, TEXT SIDE — and the text here is a FIGURE CAPTION TITLE. The caption of Figure 2 states that the combined loss redirects repair to NHEJ.",
+    "snippet": "Combined loss of Wwox and Brca1 redirects the DSB repair to NHEJ in vivo.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml",
+    "anchor": "Figure 2 caption title. Declared surface body, not figure: this is authored prose that the JATS carries inside the body container, and it is verified character-for-character against the artifact. Labelling a caption quote as 'figure' would exempt it from that check, which is the silent exemption found on PMID30290271 entries[8].",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PAIR 1, PANEL SIDE. The panel shows the opposite direction, and by a wide margin: losing WWOX drops the NHEJ marker about four-fold and raises the HDR marker about six-fold. The Results section heading covering these same data — 'express less NHEJ and more HDR markers' — is correct, so the caption title contradicts both its own panel and the heading two paragraphs above it.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2A, 53BP1 foci per nuclei in normal mammary: K14-Cre;WT ~0.123, K14-Cre;Brca1fl/fl ~0.115 (ns against WT), K14-Cre;Brca1fl/fl Wwoxfl/fl ~0.027 (*** against WT, ** against Brca1fl/fl). Fig 2B, RAD51 foci per nuclei in the same genotypes: ~0.008, ~0.014 (*), ~0.052 (*** against WT and *** against Brca1fl/fl).",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_assets/41420_2024_1878_Fig2_HTML.png",
+    "anchor": "Figure 2, panels A and B, bar heights and significance brackets read at original resolution 1977 px wide",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[1]",
+    "needle": "redirects the DSB repair to NHEJ",
+    "cited_panel_check": "PASS BY CONSTRUCTION. The contradicted text is the caption title of Figure 2 and this locator reads panels of Figure 2, so the falsified sentence and the falsifying panel belong to the same figure — a caption cannot cite a figure other than its own. Recorded explicitly rather than left implicit: the same check downgraded two pairs on PMID38182577 the same day, and an invariant applied at one site and not the next is the failure mode this repository keeps repeating.",
+    "contradicts_needle": "Combined loss of Wwox and Brca1 redirects the DSB repair to NHEJ in vivo"
+   },
+   {
+    "proposition": "PAIR 2, TEXT SIDE — figure caption title again. The caption of Figure 4 attributes the reduction in HDR to LOSS of WWOX.",
+    "snippet": "Loss of WWOX significantly reduces HDR repair, especially when BRCA1 is present.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml",
+    "anchor": "Figure 4 caption title, carried in the JATS body container and verified against the artifact. Its own caption body, eleven words later, reads 'with EV (left) or WWOX OE (right)'.",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PAIR 2, PANEL SIDE. The experiment is OVEREXPRESSION, not loss. The panels are labelled EV against WWOX OE, the caption's own body says so two lines below its title, and RAD51 falls in the overexpressing arm. The caption title names the opposite manipulation from the one performed.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4 panel headers read '231 EV' / '231 WWOX OE' and '436 EV' / '436 WWOX OE'. Fig 4C, RAD51 foci per nuclei in MDA-MB-231 with cisplatin 2 uM: EV ~7.3 against OE ~1.5, marked ****; with ATMi 15 uM: EV ~5.8 against OE ~0.8, marked *. NT and DMSO are marked ns in both cell lines.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_assets/41420_2024_1878_Fig4_HTML.png",
+    "anchor": "Figure 4, panel headers and panel C, read at original resolution 1500 px wide",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[3]",
+    "needle": "Loss of WWOX significantly reduces HDR repair",
+    "cited_panel_check": "PASS BY CONSTRUCTION. Caption title of Figure 4 against panels of Figure 4.",
+    "contradicts_needle": "Loss of WWOX significantly reduces HDR repair, especially when BRCA1 is present"
+   },
+   {
+    "proposition": "PAIR 3, TEXT SIDE — figure caption title, third instance. The caption of Figure 5 attributes an INCREASE in NHEJ to LOSS of WWOX, which is doubly wrong: the experiment is overexpression, and the paper's model says loss COMPROMISES NHEJ.",
+    "snippet": "Loss of WWOX doesn’t lead to more DNA damage but does increase NHEJ.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml",
+    "anchor": "Figure 5 caption title, carried in the JATS body container and verified against the artifact. Its own caption body describes 'EV (left) or WWOX OE (right)'.",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PAIR 3, PANEL SIDE. The panels are again EV against WWOX OE, and 53BP1 rises in the overexpressing arm — so it is WWOX presence, not loss, that raises NHEJ, exactly as the body says.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 5 panel headers read '231 EV' / '231 WWOX OE' and '436 EV' / '436 WWOX OE'. Fig 5E, 53BP1 foci per nuclei in MDA-MB-231 with ATMi 15 uM: EV ~2.1 against OE ~10.0, marked ****; with ATMi plus cisplatin: EV ~4.0 against OE ~7.5, marked **.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_assets/41420_2024_1878_Fig5_HTML.png",
+    "anchor": "Figure 5, panel headers and panel E, read at original resolution 1505 px wide",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[5]",
+    "needle": "does increase NHEJ",
+    "cited_panel_check": "PASS BY CONSTRUCTION. Caption title of Figure 5 against panels of Figure 5.",
+    "contradicts_needle": "Loss of WWOX doesn’t lead to more DNA damage but does increase NHEJ"
+   },
+   {
+    "proposition": "PAIR 4, BODY SIDE — this one is the running text, not a caption, and it carries the author's own citation to the panel. The claim that DNA damage does not differ is what licenses the inference that the repair-marker differences are not simply a damage effect.",
+    "snippet": "we did not detect any notable variations in the levels of damage among the distinct cell lines or genotypes (Fig. 5A–D )",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml",
+    "anchor": "Results, final paragraph, sentence citing Fig 5A–D",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PAIR 4, PANEL SIDE. Damage DOES differ, and it differs in the very cell line where the repair-marker effects are strongest. Two significance marks sit in the panel the sentence cites, so the inference that the RAD51 and 53BP1 differences cannot be a damage effect does not hold for MDA-MB-231.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 5C, gammaH2AX foci per nuclei in MDA-MB-231: cisplatin 2 uM EV ~3.2 against OE ~5.8 marked **, and ATMi plus cisplatin EV ~3.6 against OE ~5.5 marked **. NT, DMSO and ATMi alone are ns, and every MDA-MB-436 comparison in the same panel is ns.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_assets/41420_2024_1878_Fig5_HTML.png",
+    "anchor": "Figure 5, panel C, significance marks read at original resolution 1505 px wide",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[7]",
+    "needle": "did not detect any notable variations in the levels of damage",
+    "cited_panel_check": "PASS. The sentence cites (Fig. 5A–D ) and this locator reads Fig 5C, which is inside that range. The only pair in this manifest whose target is running text rather than a caption, and the citation covers the panel that falsifies it.",
+    "contradicts_needle": "we did not detect any notable variations in the levels of damage among the distinct cell lines or genotypes"
+   },
+   {
+    "proposition": "The reporter designed to show a see-saw does not see-saw, and the paper's own null on HDR rests on a measurement pinned near zero. This is a limit on the in vitro half of the title claim about repair pathway SELECTION.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3C scatter plots print RFP(HR) gates at 0.57% and 0.83% for MDA-MB-231 EV and WWOX OE, and 0.03% and 0.08% for MDA-MB-436. Fig 3D: NHEJ in 231 rises from ~6.0% to ~10.7% marked **, while HDR sits at ~0.5% in both arms and is ns; every MDA-MB-436 comparison is ns.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_assets/41420_2024_1878_Fig3_HTML.png",
+    "anchor": "Figure 3, panels C and D, gate percentages and significance marks read at original resolution 1948 px wide",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The control arm that carries the whole in vivo contrast — the genotype that develops no tumours — shows only two censoring marks and the panel prints no n anywhere. The three pairwise comparisons are nonetheless marked ***.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 1B, tumour-free survival: the K14-Cre;Brca1fl/fl curve stays at 100% and carries two censoring marks, at roughly 540 and 575 days. The Brca1fl/fl Wwoxfl/fl curve falls from 100% at ~350 days to 0% at ~575; adding Trp53+/fl moves the fall to ~190-310 days. No group size is printed in the panel.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_assets/41420_2024_1878_Fig1_HTML.png",
+    "anchor": "Figure 1, panel B, curve shape and censoring marks read at original resolution 1975 px wide",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The graphical abstract is CORRECT, and that is what isolates the fault to the caption titles. It renders WWOX loss as the HDR route leading to tumours and WWOX presence as the NHEJ route leading to none — the paper's model, drawn right. Recorded because a systematic direction error would have reached it too, and it did not.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6 upper panel: 'K14-Cre; Brca1fl/fl Wwoxfl/fl' with 'impaired HDR ?' leading to tumours, against 'K14-Cre; Brca1fl/fl' with 'NHEJ' leading to 'No Tumors'. Lower panels are headed 'WWOX expression in TNBC cells elevates NHEJ' for both cell lines.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_assets/41420_2024_1878_Fig6_HTML.png",
+    "anchor": "Figure 6, graphical abstract, read at original resolution 952 px wide",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The in vivo direction, stated by the body with the author's own citations to the two panels. Confirmed on both: NHEJ marker down, HDR marker up, on WWOX loss.",
+    "snippet": "substantial decrease in foci of the NHEJ marker 53BP1, in the normal mammary tissue lacking Wwox (Fig. 2A )",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml",
+    "anchor": "Results, paragraph comparing normal mammary tissue between genotypes",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The other half of the same in vivo comparison, again with the author's citation. Confirmed on Fig 2B.",
+    "snippet": "loss of WWOX led to more abundant foci in the normal mammary cells (Fig. 2B )",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml",
+    "anchor": "Results, paragraph comparing normal mammary tissue between genotypes",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The in vitro effect is one-sided and the paper says so plainly in the body: overexpressing WWOX moves NHEJ and leaves HDR unchanged. Read together with the floor-level HDR gates of Fig 3, this is why 'pathway selection' overstates what the reporter measured.",
+    "snippet": "no significant difference in the HDR levels was found between the WWOX overexpressing cells and their control",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml",
+    "anchor": "Results, paragraph following the SeeSaw reporter experiment",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The BRCA1-mutant line does not reproduce the effect, and the paper reports it as a surprise rather than burying it. Worth recording because it bounds the generality of the WWOX-BRCA1 model the title asserts.",
+    "snippet": "Surprisingly, MDA-MB-436 cells expressing WWOX didn’t display any significant change in the DSB repair pathways as compared to control",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID38499540_BidanyMizrahi2024_PMC.xml",
+    "anchor": "Results, paragraph following the SeeSaw reporter experiment",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ],
+  "note": "Coverage: COMPLETE for main text and main figures. Introduction, Results, Discussion, Methods and the reference list read in the JATS body; all six figures inspected as images at original resolution from fingerprinted artifacts. FOUR SUPPLEMENTARY FILES (MOESM1-4, three .pptx and one .docx) are cited by the text and were NOT retrieved or read — declared as an open gap, and the receipt for this reading is partial_fulltext_read for that reason. The lesson of PMID 38182577 earlier today is not repeated by accident here: it is repeated deliberately and declared, because Supplementary Fig 1 is cited for the tumour-versus-normal foci comparison and has not been adjudicated."
+ }
+}

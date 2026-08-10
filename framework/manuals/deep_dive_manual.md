@@ -649,6 +649,50 @@ Ma:
 
 ---
 
+## 10bis. RECUPERO DELLE FIGURE — rotte e trabocchetti
+
+> Le figure vanno ispezionate **come immagini a risoluzione originale**, mai attraverso una
+> conversione di testo. Questa sezione esiste perché ottenere quel file è più fragile di
+> quanto sembri, e ogni modo di sbagliare qui produce un artefatto che *sembra* una figura.
+
+### La cascata, in ordine
+
+1. **OA package service** — `https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=<PMCID>`.
+   Se risponde `idIsNotOpenAccess` il pacchetto non esiste: passa oltre, non insistere.
+   ⚠️ Se invece annuncia un `href` **il percorso può comunque dare 404** sul mirror HTTPS —
+   accaduto il 2026-08-10 su `PMC10770339`, che è CC BY e nel subset OA. Un annuncio non è
+   una consegna.
+2. 🔴 **`https://www.ebi.ac.uk/europepmc/webservices/rest/<PMCID>/supplementaryFiles`** — la
+   rotta che ha funzionato quando le altre due hanno rifiutato. Restituisce uno **zip** con
+   figure *e* supplementari insieme. È la prima cosa da provare quando il pacchetto OA fallisce
+   e il CDN dell'editore rifiuta.
+3. **CDN dell'editore** — per Springer Nature:
+   `https://media.springernature.com/full/springer-static/image/art%3A<DOI-encoded>/MediaObjects/<nome_file>`.
+   Dà l'originale a piena risoluzione (~2000 px) là dove PMC serve una copia di display.
+
+### I tre trabocchetti, tutti visti in produzione
+
+- 🔴 **L'estensione dichiarata nell'XML può essere sbagliata.** Su `PMID 38182577` il JATS
+  dichiara `Fig1_HTML.jpg`, ma il CDN serve **`.png`**; richiedere `.jpg` restituisce sette
+  pagine d'errore HTML. Su `PMID 29724996`, stesso editore e stessa rivista, erano davvero
+  `.jpg`. **L'estensione va provata, non dedotta.**
+- 🔴 **Le pagine d'errore si salvano come figure.** Due volte lo stesso giorno un ciclo di
+  download ha prodotto **sette file di dimensione identica** che erano HTML, non immagini, e
+  che sarebbero stati fingerprintati e dichiarati come figure.
+  **Controllo obbligatorio dopo ogni download di un set di figure:**
+  ```bash
+  md5 -q <dir>/*.png | sort -u | wc -l      # deve uguagliare il numero di figure
+  file -b <dir>/*.png                        # deve dire PNG/JPEG, mai "HTML document"
+  ```
+  Digest tutti uguali = nessuna figura scaricata. È il controllo più economico del sistema e
+  ha già evitato due letture false.
+- ⚠️ **La copia di PMC è ridimensionata.** L'endpoint `supplementaryFiles` consegna anche
+  versioni a ~790 px: sufficienti a vedere un pannello, **insufficienti a leggere un
+  asterisco o un'etichetta d'asse**. Se il numero che serve è una marcatura di significatività,
+  serve l'originale. Dichiara sempre la risoluzione a cui hai letto, nell'`anchor` del locator.
+
+---
+
 ## 11. FAILURE CONDITIONS
 
 L'analisi è automaticamente considerata fallita se:
