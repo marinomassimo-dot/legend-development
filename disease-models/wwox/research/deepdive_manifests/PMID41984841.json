@@ -1,289 +1,291 @@
 {
-  "schema_version": 2,
-  "pmid": "41984841",
-  "doi": "10.1073/pnas.2534844123",
-  "receipt": "FTR-20260810-41984841-01",
-  "landing": [
-    "disease-models/wwox/research/fulltext_dossiers/PMID41984841.md",
-    "full_text_queue_current#FT-014",
-    "disease-models/wwox/research/commit_candidates/CC-20260810-41984841-01.md"
-  ],
-  "skills_considered": [
-    {
-      "skill": "legend",
-      "used": true
-    },
-    {
-      "skill": "legend-study-intake-triage",
-      "used": true
-    },
-    {
-      "skill": "legend-batch-inferential-sweep",
-      "used": true
-    },
-    {
-      "skill": "legend-deepdive",
-      "used": true
-    },
-    {
-      "skill": "legend-capability-scout",
-      "used": true
-    },
-    {
-      "skill": "legend-session-self-eval",
-      "used": true
-    },
-    {
-      "skill": "legend-session-takeaways",
-      "used": true
-    },
-    {
-      "skill": "find-fulltext",
-      "used": true
-    },
-    {
-      "skill": "pdf",
-      "used": true
-    },
-    {
-      "skill": "spreadsheets",
-      "used": true
-    },
-    {
-      "skill": "legend-proband-priority-matrix",
-      "used": false,
-      "reason": "The operator fixed the reading order explicitly, so reprioritising the queue could not change the study cursor."
-    },
-    {
-      "skill": "legend-discovery",
-      "used": false,
-      "reason": "Canonical scientific ledgers may change only at BATCH_COMMIT; findings land in a dossier and commit candidate."
-    },
-    {
-      "skill": "legend-hypothesis-forge",
-      "used": false,
-      "reason": "The cancer mechanism does not support a new intervention hypothesis for the reference neurodevelopmental genotype."
-    },
-    {
-      "skill": "legend-safety-triage",
-      "used": false,
-      "reason": "The study tests no drug, dose or clinical treatment and its therapeutic-target wording remains prospective."
-    },
-    {
-      "skill": "legend-commit",
-      "used": false,
-      "reason": "The operator set BLOCK_BATCH_COMMIT and prohibited edits to the four canonical scientific current files."
-    }
-  ],
-  "group_assessment": {
-    "total_publications": 149,
-    "publications_on_gene": 79,
-    "research_type": "experimental_lab",
-    "is_primary_group_for_disease": true,
-    "weighting": "Europe PMC author counts measured 2026-08-10 returned 149 publications for Aqeilan RI and 79 intersecting WWOX. This is a primary mechanistic WWOX laboratory with deep conditional-model expertise. That strengthens confidence in execution and model context but does not turn same-lab prior ITCH work into an independently replicated mechanism; the present paper is weighted on its own genetic, imaging and molecular assays."
+ "schema_version": 2,
+ "pmid": "41984841",
+ "doi": "10.1073/pnas.2534844123",
+ "receipt": "FTR-20260810-41984841-01",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID41984841.md",
+  "full_text_queue_current#FT-014",
+  "disease-models/wwox/research/commit_candidates/CC-20260810-41984841-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend",
+   "used": true
   },
-  "field_density": {
-    "queries": [
-      {
-        "query": "WWOX AND cSCC",
-        "count": 20,
-        "source": "Europe PMC broad query, 2026-08-10"
-      },
-      {
-        "query": "WWOX AND p63",
-        "count": 82,
-        "source": "Europe PMC broad query, 2026-08-10"
-      },
-      {
-        "query": "WWOX AND EMT",
-        "count": 377,
-        "source": "Europe PMC broad query, 2026-08-10"
-      }
-    ],
-    "note": "The cSCC intersection is sparse relative to broader p63 and EMT literatures. This study is unusually direct for conditional epidermal genetics, while the large broad full-text counts include secondary mentions and do not imply independent replication."
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
   },
-  "multihop": {
-    "references_enumerated": 77,
-    "gene_direct_refs_in_source": [
-      "23370280",
-      "32300104",
-      "19465938"
-    ],
-    "resolved": [
-      "23370280",
-      "32300104",
-      "19465938"
-    ],
-    "queued": [
-      "FT-014"
-    ],
-    "note": "All 77 references were enumerated sequentially. PMID 23370280 is the load-bearing prior source for ITCH competition; PMID 32300104 and PMID 19465938 anchor related WWOX/EMT/Wnt context. The present read does not inherit their evidence status."
+  {
+   "skill": "legend-batch-inferential-sweep",
+   "used": true
   },
-  "corpus_crossquery": {
-    "query": "Which current records are touched by conditional epidermal Wwox/p53 loss, EMT and the WWOX-p63 stabilization claim?",
-    "hits": 4,
-    "note": "Post-reading audit found FT-014 and existing WWOX cancer/mechanism surfaces. The queue's pdf_only label is obsolete because a complete structured PMC XML now exists. The paper adds primary context-dependent cSCC evidence, but direct ITCH competition remains prior-paper evidence."
+  {
+   "skill": "legend-deepdive",
+   "used": true
   },
-  "retraction_check": {
-    "checked": true,
-    "result": "Repository and Europe PMC checks on 2026-08-10 returned no retraction, expression of concern or correction for PMID 41984841."
+  {
+   "skill": "legend-capability-scout",
+   "used": true
   },
-  "source_artifacts": [
-    {
-      "path": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
-      "sha256": "b357066e3d51b3af01c7518003b0e1d1f1f660e1ddb07d237d7824df9bef81d1",
-      "kind": "article_text"
-    },
-    {
-      "path": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig01.jpg",
-      "sha256": "d595ad48adc78c96995b94eddd0838d2f5c1786842db7c67198d92c7218b0ada",
-      "kind": "figure"
-    },
-    {
-      "path": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig02.jpg",
-      "sha256": "49ce6d4cd3bf899b0cb032b2ad1cad8042792c87b928d1ebe9450a1c66e84f16",
-      "kind": "figure"
-    },
-    {
-      "path": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig03.jpg",
-      "sha256": "582bdb423824a04db638e22d157d96be88a986e83392375fa70aa438c89dae1c",
-      "kind": "figure"
-    },
-    {
-      "path": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig04.jpg",
-      "sha256": "0cc8435c9906884066af95de4b9322cf1cade468361cd71ba9d3a5212144a792",
-      "kind": "figure"
-    },
-    {
-      "path": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig05.jpg",
-      "sha256": "d213802262bcf0fe36183dbf708e863cb49f96775139d39235165a9609985740",
-      "kind": "figure"
-    },
-    {
-      "path": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/supp-page-02.png",
-      "sha256": "623ddf6c8b88cd6edc68d87eb1f4ba0cb5dafabe66d8c0b67e5b5ae1ce57b936",
-      "kind": "figure"
-    }
-  ],
-  "verbatim_locators": {
-    "waived": false,
-    "source_fulltext_indexed": true,
-    "source_fulltext_indexed_evidence": "Europe PMC resolves PMID 41984841 to PMCID PMC13099603 and supplied a complete JATS body, six main figures and a supplementary archive; all cited local artifacts are fingerprinted.",
-    "entries": [
-      {
-        "proposition": "Wwox loss alone was insufficient for spontaneous tumour formation in the conditional model.",
-        "snippet": "Consistent with previous observations, somatic loss of WWOX alone was insufficient to drive tumor formation",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
-        "anchor": "Results, conditional cSCC penetrance paragraph",
-        "panel_text_relation": "text_confirmed_by_panel"
-      },
-      {
-        "proposition": "Wwox loss accelerated tumour incidence and onset in a p53-null background.",
-        "snippet": "100% of mice developed tumors, with a median onset of 225 and 251 d, respectively, compared to 65% incidence and a median onset of 371 d in p53fl/fl group",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
-        "anchor": "Results, conditional cSCC penetrance paragraph",
-        "panel_text_relation": "text_confirmed_by_panel"
-      },
-      {
-        "proposition": "Chemical carcinogenesis exposed a tumour-promoting Wwox phenotype without engineered p53 loss.",
-        "snippet": "Wwoxfl/fl mice developed lesions earlier and in greater quantities compared to WT mice",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
-        "anchor": "Results, DMBA-TPA paragraph",
-        "panel_text_relation": "text_confirmed_by_panel"
-      },
-      {
-        "proposition": "The DKO tumours contained epithelial, hybrid and mesenchymal states.",
-        "snippet": "tumors from DKO displayed marked heterogeneity, including epithelial and mesenchymal subpopulations, hybrid epithelial–mesenchymal cells",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
-        "anchor": "Results, EMT validation paragraph",
-        "panel_text_relation": "text_confirmed_by_panel"
-      },
-      {
-        "proposition": "Endogenous WWOX and p63 are proximal and occur in the same complex in the tested keratinocyte systems.",
-        "snippet": "These results indicate that WWOX and p63 are present within the same protein complex in cSCC cells.",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
-        "anchor": "Results, PLA and coimmunoprecipitation paragraph",
-        "panel_text_relation": "text_confirmed_by_panel"
-      },
-      {
-        "proposition": "WWOX loss reduced p63 occupancy at epithelial target loci.",
-        "snippet": "WWOX deficiency led to a striking decrease in p63 occupancy at its major target loci, including promoters of epithelial identity genes such as KRT14, KRT5, KRT1, ITGB4, COL17A1, and FZD6",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
-        "anchor": "Results, p63 ChIP-seq paragraph",
-        "panel_text_relation": "text_confirmed_by_panel"
-      },
-      {
-        "proposition": "The human tissue surface showed parallel reductions but does not itself establish prognosis or causality.",
-        "snippet": "IHC on tissue microarrays revealed that WWOX expression was strongly decreased in cSCC compared with normal epidermis",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
-        "anchor": "Results, human tissue microarray paragraph",
-        "panel_text_relation": "text_confirmed_by_panel"
-      },
-      {
-        "proposition": "Figure 1 visually shows context dependence and no clear Wwox allele-dose separation in the p53-null stratum.",
-        "snippet": "The p53fl/fl survival panel separates both Wwox-loss curves from Wwox-intact controls, while the heterozygous and homozygous Wwox-loss curves substantially overlap.",
-        "surface": "figure",
-        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig01.jpg",
-        "anchor": "Figure 1C-D, inspected at native pixels after 96-effective-PPI preflight",
-        "panel_text_relation": "text_confirmed_by_panel"
-      },
-      {
-        "proposition": "The Figure 2 caption states that the figure contains EMT immunostaining and category quantification.",
-        "snippet": "Immunostaining of epithelial (E-cadherin) and mesenchymal (Vimentin) markers with the Tomato lineage reporter in cSCCs from three p53fl/fl genotypes. Representative images highlight epithelial (magenta), mesenchymal (yellow), and hybrid (cyan) tumor cells.",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
-        "anchor": "Figure 2 caption, text half of the caption/pixel contradiction",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "Figure 2 pixels do not contain the EMT panels appended to its caption.",
-        "snippet": "The downloaded Figure 2 contains the sorting workflow, volcano plots, heatmaps and pathway bars, but no E-cadherin/Vimentin tumour images or EMT-category graph.",
-        "surface": "figure",
-        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig02.jpg",
-        "anchor": "Figure 2, full pixel inspection after 96-effective-PPI preflight",
-        "panel_text_relation": "text_contradicted_by_panel",
-        "contradicts": "entries[8]"
-      },
-      {
-        "proposition": "The Figure 5A caption states that a p63/β-tubulin PLA negative-control panel is present.",
-        "snippet": "(Right) PLA between p63 and b-tubulin used as negative control and Quantification (%) of PLA positive cells.",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
-        "anchor": "Figure 5A caption, text half of the caption/pixel contradiction",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The downloaded Figure 5A pixels omit the caption-declared p63/β-tubulin PLA negative control.",
-        "snippet": "Panel A shows p63/WWOX PLA for siCR and siP63 plus the p63/WWOX western blot, but no separately labelled p63/β-tubulin PLA image or quantification.",
-        "surface": "figure",
-        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig05.jpg",
-        "anchor": "Figure 5A, panel half of the caption/pixel contradiction, inspected after 96-effective-PPI preflight",
-        "panel_text_relation": "text_contradicted_by_panel",
-        "contradicts": "entries[10]"
-      },
-      {
-        "proposition": "The ChIP-seq visual is discovery-level because the figure declares one replicate.",
-        "snippet": "Panel C displays p63-target heatmaps and peak profiles and prints n = 1 beside the ChIP-seq panel.",
-        "surface": "figure",
-        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig05.jpg",
-        "anchor": "Figure 5C, inspected at native pixels after 96-effective-PPI preflight",
-        "panel_text_relation": "text_confirmed_by_panel"
-      },
-      {
-        "proposition": "The supplementary carcinogenesis image supports a p53-proficient sensitisation phenotype.",
-        "snippet": "Supplementary Figure S2 displays more numerous and earlier DMBA–TPA skin lesions in Wwoxfl/fl mice than WT controls, with the group curves and lesion counts drawn explicitly.",
-        "surface": "figure",
-        "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/supp-page-02.png",
-        "anchor": "Supplement page 2, rendered only after measuring a 381.1-effective-PPI minimum ceiling",
-        "panel_text_relation": "text_confirmed_by_panel"
-      }
-    ]
+  {
+   "skill": "legend-session-self-eval",
+   "used": true
+  },
+  {
+   "skill": "legend-session-takeaways",
+   "used": true
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true
+  },
+  {
+   "skill": "pdf",
+   "used": true
+  },
+  {
+   "skill": "spreadsheets",
+   "used": true
+  },
+  {
+   "skill": "legend-proband-priority-matrix",
+   "used": false,
+   "reason": "The operator fixed the reading order explicitly, so reprioritising the queue could not change the study cursor."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Canonical scientific ledgers may change only at BATCH_COMMIT; findings land in a dossier and commit candidate."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "The cancer mechanism does not support a new intervention hypothesis for the reference neurodevelopmental genotype."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "The study tests no drug, dose or clinical treatment and its therapeutic-target wording remains prospective."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "The operator set BLOCK_BATCH_COMMIT and prohibited edits to the four canonical scientific current files."
   }
+ ],
+ "group_assessment": {
+  "total_publications": 149,
+  "publications_on_gene": 79,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": true,
+  "weighting": "Europe PMC author counts measured 2026-08-10 returned 149 publications for Aqeilan RI and 79 intersecting WWOX. This is a primary mechanistic WWOX laboratory with deep conditional-model expertise. That strengthens confidence in execution and model context but does not turn same-lab prior ITCH work into an independently replicated mechanism; the present paper is weighted on its own genetic, imaging and molecular assays."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND cSCC",
+    "count": 20,
+    "source": "Europe PMC broad query, 2026-08-10"
+   },
+   {
+    "query": "WWOX AND p63",
+    "count": 82,
+    "source": "Europe PMC broad query, 2026-08-10"
+   },
+   {
+    "query": "WWOX AND EMT",
+    "count": 377,
+    "source": "Europe PMC broad query, 2026-08-10"
+   }
+  ],
+  "note": "The cSCC intersection is sparse relative to broader p63 and EMT literatures. This study is unusually direct for conditional epidermal genetics, while the large broad full-text counts include secondary mentions and do not imply independent replication."
+ },
+ "multihop": {
+  "references_enumerated": 77,
+  "gene_direct_refs_in_source": [
+   "23370280",
+   "32300104",
+   "19465938"
+  ],
+  "resolved": [
+   "23370280",
+   "32300104",
+   "19465938"
+  ],
+  "queued": [
+   "FT-014"
+  ],
+  "note": "All 77 references were enumerated sequentially. PMID 23370280 is the load-bearing prior source for ITCH competition; PMID 32300104 and PMID 19465938 anchor related WWOX/EMT/Wnt context. The present read does not inherit their evidence status."
+ },
+ "corpus_crossquery": {
+  "query": "Which current records are touched by conditional epidermal Wwox/p53 loss, EMT and the WWOX-p63 stabilization claim?",
+  "hits": 4,
+  "note": "Post-reading audit found FT-014 and existing WWOX cancer/mechanism surfaces. The queue's pdf_only label is obsolete because a complete structured PMC XML now exists. The paper adds primary context-dependent cSCC evidence, but direct ITCH competition remains prior-paper evidence."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Repository and Europe PMC checks on 2026-08-10 returned no retraction, expression of concern or correction for PMID 41984841."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
+   "sha256": "b357066e3d51b3af01c7518003b0e1d1f1f660e1ddb07d237d7824df9bef81d1",
+   "kind": "article_text"
+  },
+  {
+   "path": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig01.jpg",
+   "sha256": "d595ad48adc78c96995b94eddd0838d2f5c1786842db7c67198d92c7218b0ada",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig02.jpg",
+   "sha256": "49ce6d4cd3bf899b0cb032b2ad1cad8042792c87b928d1ebe9450a1c66e84f16",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig03.jpg",
+   "sha256": "582bdb423824a04db638e22d157d96be88a986e83392375fa70aa438c89dae1c",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig04.jpg",
+   "sha256": "0cc8435c9906884066af95de4b9322cf1cade468361cd71ba9d3a5212144a792",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig05.jpg",
+   "sha256": "d213802262bcf0fe36183dbf708e863cb49f96775139d39235165a9609985740",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/supp-page-02.png",
+   "sha256": "623ddf6c8b88cd6edc68d87eb1f4ba0cb5dafabe66d8c0b67e5b5ae1ce57b936",
+   "kind": "figure"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC resolves PMID 41984841 to PMCID PMC13099603 and supplied a complete JATS body, six main figures and a supplementary archive; all cited local artifacts are fingerprinted.",
+  "entries": [
+   {
+    "proposition": "Wwox loss alone was insufficient for spontaneous tumour formation in the conditional model.",
+    "snippet": "Consistent with previous observations, somatic loss of WWOX alone was insufficient to drive tumor formation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
+    "anchor": "Results, conditional cSCC penetrance paragraph",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Wwox loss accelerated tumour incidence and onset in a p53-null background.",
+    "snippet": "100% of mice developed tumors, with a median onset of 225 and 251 d, respectively, compared to 65% incidence and a median onset of 371 d in p53fl/fl group",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
+    "anchor": "Results, conditional cSCC penetrance paragraph",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Chemical carcinogenesis exposed a tumour-promoting Wwox phenotype without engineered p53 loss.",
+    "snippet": "Wwoxfl/fl mice developed lesions earlier and in greater quantities compared to WT mice",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
+    "anchor": "Results, DMBA-TPA paragraph",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The DKO tumours contained epithelial, hybrid and mesenchymal states.",
+    "snippet": "tumors from DKO displayed marked heterogeneity, including epithelial and mesenchymal subpopulations, hybrid epithelial–mesenchymal cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
+    "anchor": "Results, EMT validation paragraph",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Endogenous WWOX and p63 are proximal and occur in the same complex in the tested keratinocyte systems.",
+    "snippet": "These results indicate that WWOX and p63 are present within the same protein complex in cSCC cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
+    "anchor": "Results, PLA and coimmunoprecipitation paragraph",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "WWOX loss reduced p63 occupancy at epithelial target loci.",
+    "snippet": "WWOX deficiency led to a striking decrease in p63 occupancy at its major target loci, including promoters of epithelial identity genes such as KRT14, KRT5, KRT1, ITGB4, COL17A1, and FZD6",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
+    "anchor": "Results, p63 ChIP-seq paragraph",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The human tissue surface showed parallel reductions but does not itself establish prognosis or causality.",
+    "snippet": "IHC on tissue microarrays revealed that WWOX expression was strongly decreased in cSCC compared with normal epidermis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
+    "anchor": "Results, human tissue microarray paragraph",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Figure 1 visually shows context dependence and no clear Wwox allele-dose separation in the p53-null stratum.",
+    "snippet": "The p53fl/fl survival panel separates both Wwox-loss curves from Wwox-intact controls, while the heterozygous and homozygous Wwox-loss curves substantially overlap.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig01.jpg",
+    "anchor": "Figure 1C-D, inspected at native pixels after 96-effective-PPI preflight",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The Figure 2 caption states that the figure contains EMT immunostaining and category quantification.",
+    "snippet": "Immunostaining of epithelial (E-cadherin) and mesenchymal (Vimentin) markers with the Tomato lineage reporter in cSCCs from three p53fl/fl genotypes. Representative images highlight epithelial (magenta), mesenchymal (yellow), and hybrid (cyan) tumor cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
+    "anchor": "Figure 2 caption, text half of the caption/pixel contradiction",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2 pixels do not contain the EMT panels appended to its caption.",
+    "snippet": "The downloaded Figure 2 contains the sorting workflow, volcano plots, heatmaps and pathway bars, but no E-cadherin/Vimentin tumour images or EMT-category graph.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig02.jpg",
+    "anchor": "Figure 2, full pixel inspection after 96-effective-PPI preflight",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[8]",
+    "contradicts_needle": "Immunostaining of epithelial (E-cadherin) and mesenchymal (Vimentin)"
+   },
+   {
+    "proposition": "The Figure 5A caption states that a p63/β-tubulin PLA negative-control panel is present.",
+    "snippet": "(Right) PLA between p63 and b-tubulin used as negative control and Quantification (%) of PLA positive cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_PMC.xml",
+    "anchor": "Figure 5A caption, text half of the caption/pixel contradiction",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The downloaded Figure 5A pixels omit the caption-declared p63/β-tubulin PLA negative control.",
+    "snippet": "Panel A shows p63/WWOX PLA for siCR and siP63 plus the p63/WWOX western blot, but no separately labelled p63/β-tubulin PLA image or quantification.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig05.jpg",
+    "anchor": "Figure 5A, panel half of the caption/pixel contradiction, inspected after 96-effective-PPI preflight",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[10]",
+    "contradicts_needle": "PLA between p63 and b-tubulin used as negative control"
+   },
+   {
+    "proposition": "The ChIP-seq visual is discovery-level because the figure declares one replicate.",
+    "snippet": "Panel C displays p63-target heatmaps and peak profiles and prints n = 1 beside the ChIP-seq panel.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/pnas.2534844123fig05.jpg",
+    "anchor": "Figure 5C, inspected at native pixels after 96-effective-PPI preflight",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The supplementary carcinogenesis image supports a p53-proficient sensitisation phenotype.",
+    "snippet": "Supplementary Figure S2 displays more numerous and earlier DMBA–TPA skin lesions in Wwoxfl/fl mice than WT controls, with the group curves and lesion counts drawn explicitly.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID41984841_BidanyMizrahi2026_assets/supp-page-02.png",
+    "anchor": "Supplement page 2, rendered only after measuring a 381.1-effective-PPI minimum ceiling",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ]
+ }
 }
