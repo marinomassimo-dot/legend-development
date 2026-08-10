@@ -2208,5 +2208,38 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
   | **clinico** | *«a homozygous missense WWOX mutation (p.Ser304Tyr) … despite the mutation type typically being associated with milder phenotypes»* | la variante è **ACMG «Unclear clinical significance»**, gli autori scrivono che la patogenicità *«require[s] validation»*, e c'è un **secondo candidato in `CACNA1A`** contro una DEE **autosomica dominante** (`PMID 39416860`) |
 
   **Tre volte la metà semplice**, e ogni volta la metà che cade è quella che introdurrebbe una qualificazione. Nessuna delle tre è visibile leggendo la review; tutte e tre lo sono leggendo **ciò che la review cita**. Fonti: `FT-045` · `FT-055` · manifest `PMID42128308.json` entries[5], entries[6], entries[23], entries[24].
+- 🔴 **QUARTA, TROVATA DOPO LE ALTRE TRE, E DI UNA SPECIE DIVERSA: le prime tre RIDUCONO un risultato, questa ne INVERTE il senso.** La review presenta il caso dell'introne 4 di Oliver 2023 come una crepa nel framework — *«technically falls under category 2 … However, the observed clinical severity was comparable to that of patients with category 1 genotypes»*. Ma Oliver **codifica quella delezione come null**, perché causa lo skipping dell'esone 5 mentre quella dell'introne 3 è benigna, e tabula il paziente 6 come **`Missense/null`**: un ordinario caso di classe 2. E in uno schema dove la classe 2 **non mostra alcun fenotipo intermedio**, un classe-2 grave quanto un classe-1 è **il risultato atteso**. La review lo offre come anomalia; è il framework che funziona come la sua fonte dice che funziona. Fonte: `FT-056`, `FTR-20260810-36779245-03`.
+
+---
+
+> ## 🔢 Nota di allocazione — `089` lasciato libero
+> Il blocco `085`–`088` era il mio, dichiarato. Questa voce arriva dopo ed è indipendente, quindi
+> prendo **`090`** lasciando `089` come stacco, per la ragione già scritta sopra: l'allocazione
+> è concorrente e non guardata, e nel frattempo altri attori hanno allocato.
+
+### DL-BIO-090 — «Missenso» non è una classe funzionale: la premessa sotto la traccia ipomorfi/ASO va riscritta, non difesa con un controesempio
+- **Status:** open · **Tag epistemico:** `DATO` sulle tre osservazioni, `INFERENZA` sulla riscrittura.
+- **Perché esiste questa voce:** oggi la premessa *«missenso ⇒ funzione residua ⇒ più lieve»* è stata attaccata due volte cercando un **controesempio** — Feng 2024, poi Oliver 2023. **Era il modo sbagliato di affrontarla.** Un controesempio presuppone che la categoria sia ben formata e che qualche membro si comporti male. Qui è la **categoria** a non esistere.
+
+- 🔴 **Le tre osservazioni, tutte dalla stessa fonte e tutte verbatim:**
+
+  | osservazione | citazione |
+  |---|---|
+  | **stesso residuo, due malattie** | *«p.Pro47 has been associated with two pathogenic variants; the more conservative change to threonine was found in SCAR12»* — contro l'arginina in WWOX-DEE |
+  | **nessuna via di scampo regionale** | *«no region of the gene emerged as specific for being associated with WWOX-DEE»*; le due missenso SCAR12 stanno **vicine** a varianti DEE |
+  | **nessun intermedio, dalla fonte dello schema** | *«We found no difference between individuals with one or two missense variants and therefore no evidence to support an "intermediate" phenotype»* |
+
+- **La riscrittura, e va usata al posto della premessa vecchia:** la gravità in WWOX è **specifica della sostituzione**, non del tipo di variante, non del residuo e non della regione. `p.Pro47Thr` e `p.Pro47Arg` sono entrambi missensi sullo **stesso residuo** e danno malattie diverse. Quindi:
+  - **`missense` è una categoria di annotazione, non una categoria funzionale.** Usarla per predire la gravità, la funzione residua o l'idoneità a un approccio terapeutico è una **inferenza non supportata**, e ogni volta che compare in questo repository va sostituita con la domanda *«questa sostituzione, misurata come?»*.
+  - **La sola stratificazione che i dati sostengono è binaria e su un asse solo:** null/null contro *almeno un missenso*, sulla **sopravvivenza** (p = .0085). Sull'esordio delle crisi **nessuna differenza fra i tre gruppi** (p = .65).
+  - 🔴 **Conseguenza per la traccia ASO/ipomorfi:** un allele non è un bersaglio ASO perché è missenso. Lo è se **quella sostituzione** lascia proteina misurabilmente funzionale — che è la domanda di `DL-BIO-085`, dove `P47T` mostra proteina a livello wild type e funzione persa per fallimento di interazione. **Le due voci sono la stessa domanda vista dalle due estremità:** 085 dice che l'abbondanza non misura la funzione, 090 dice che l'annotazione non la predice. **Fra le due non resta nessuna scorciatoia: la funzione va misurata.**
+
+- 🔴 **E la ricorrenza cambia quanto vale rispondere.** `p.Gln230Pro` compare in **tre dei dodici pazienti non imparentati** di Oliver — omozigote in due — **più sei famiglie già riportate** da Iran, Afghanistan, Francia e Marocco. È **l'allele missenso WWOX-DEE più ricorrente della letteratura**, ed è quello attorno a cui è costruito l'intero lavoro di proteostasi di questo repository. La domanda su Q230P non è uno studio di caso: **riguarda l'allele più frequente del campo.**
+
+- **Cautela sull'unico numero che qualcuno sarà tentato di citare come prognosi:** la coorte di Oliver è dichiaratamente **più anziana** (media 8a 2m contro 3a 4m) e **meno letale** (23% contro 38%) della letteratura con cui è messa in pool, con null/null al 50% contro 60%. La curva di sopravvivenza è un **confronto fra gruppi**, non una prognosi. Chi la citasse come prognosi userebbe un dato di ascertainment come dato clinico.
+
+- **Cosa serve per muoverlo di un gradino:** un saggio funzionale per singola sostituzione — non abbondanza, non solubilità, ma **occupazione di un partner di interazione** — applicato per primo a `Q230P` per ricorrenza e a `P47T`/`P47R` perché sono la coppia che dimostra il punto sullo stesso residuo.
+- **Interconnessioni:** `DL-BIO-085` · `DL-META-088` · `FT-055` · `FT-056` · [[dismissal_ledger_current#DEFAULTS THAT BIT US]] · [[claim_registry_current]].
+- **Destinazione dichiarata:** **materiale per un commit candidate.** È una *sostituzione* di premessa, non un'aggiunta, quindi tocca affermazioni già in stato canonico e la promozione va fatta da chi possiede il gate, non da me.
 - **Interconnessioni:** `FT-045` · `DL-MECH-086` · manifest `PMID42128308.json` entries[7], entries[23], entries[24].
 - **Destinazione dichiarata:** **materiale per un commit candidate**.
