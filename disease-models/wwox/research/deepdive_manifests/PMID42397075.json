@@ -148,6 +148,16 @@
       "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p10_170dpi.png",
       "sha256": "6917bbd4bb98088758452291623cd8aa72e17e5a66678765bce125f64d61f68b",
       "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p07_170dpi.png",
+      "sha256": "50c26711118e7a9e601cc94c7151b2b99515424288b2ccf30e193fd650b45be8",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p16_170dpi.png",
+      "sha256": "784dbc8339b84da8121062be0cc40e69e4a5305448edc83d1329fbd1389008a3",
+      "kind": "figure"
     }
   ],
   "verbatim_locators": {
@@ -382,6 +392,24 @@
         "anchor": "Supplementary figures volume page 10, rendered at 170 effective ppi from brain-2025-03809-File010.pdf",
         "panel_text_relation": "panel_only",
         "found_or_sought": "sought — I opened the page for the MYC-activation evidence in radial glia; the TCF-4 value at 0.3 in the rescued line was not what I was looking at, and it is the second overshoot"
+      },
+      {
+        "proposition": "🔴 QUALIFIES MY OWN CLAIM, WHICH WAS TOO FLAT. I recorded three times that the phenotype is almost entirely the engineered knockout's, from composition, from the WOREE-versus-SCAR12 transcriptome and from proliferation. In RADIAL GLIA that is wrong: MYC is up in all three lines at comparable magnitude — pseudobulk logFC on WT of about 1.8 for the knockout, 1.65 for WOREE and 1.6 for SCAR12 — and both patient volcanoes carry MYC past threshold alongside SFRP1 and H4C3, with PTN, VIM, NR2F2 and EDNRB down in both. So the molecular lesion in the progenitor compartment IS shared by the patient lines. What the knockout carries disproportionately is the downstream consequence — cell composition and neuronal output — not the MYC activation itself. The correct statement is narrower than the one I committed: MYC activation in radial glia is shared; its impact on neuron production is not.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure 4: panel B, WOREE versus WT radial glia, MYC up at about logFC 1.0 with SFRP1, NME2, H4C3, and PTN, VIM, EDNRB, NR2F2, TUBB2B, QKI down. Panel D, SCAR12 versus WT radial glia, MYC up at about logFC 0.9 with SFRP1, MTRNR2L8, ATP5ME, H4C3, MEIS2. Inset bar chart 'MYC in RG pseudobulk', MYC logFC on WT: KO about 1.8, WOREE about 1.65, SCAR12 about 1.6. Panel H, SOX2+MYC+/SOX2+: WT about 20 percent, KO-A2 about 43, KO-1B about 54, brackets **** , **** and * between the two knockout clones. Panel F, NKX2.2:PAX6 ratio: all ns. Panel J, SATB2+ per nuclei: WT about 2.3 percent, KO-A2 and KO-1B about 0.5, brackets ** and ***; SOX2+ per nuclei: WT about 15, KO-A2 about 21.5, KO-1B about 33.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p07_170dpi.png",
+        "anchor": "Supplementary figures volume page 7, rendered at 170 effective ppi from brain-2025-03809-File010.pdf",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found — I opened this page to finish the supplementary volume, not to test my own claim, and the pseudobulk inset contradicts the flat version of it"
+      },
+      {
+        "proposition": "The AAV9 rescue transduces neurons comparably across all three deficient lines, and the calcium traces show the functional rescue qualitatively: rhythmic oscillations present in untreated WOREE and SCAR12 organoids are absent after treatment, as in wild type. The traces are representative and carry no quantification — the quantified version is Figure 6A(ii), which is the panel that omits the WT-versus-treated bracket.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure 9, panel B, NEUN+WWOX+ percentage: JH-iPS11 WKO AAV9-EGFP about 1 versus AAV9-WWOX about 24 with ****; SCAR12 about 4 versus about 21 with ***; WOREE about 2 versus about 31 with ****. Panel C, calcium fluorescence traces over 120 s: JH-iPS11 WT flat; WOREE AAV9-EGFP with regular high-amplitude oscillations; WOREE AAV9-WWOX flat; SCAR12 AAV9-EGFP with large irregular oscillations; SCAR12 AAV9-WWOX flat. No axis quantification or statistics in panel C.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p16_170dpi.png",
+        "anchor": "Supplementary figures volume page 16, rendered at 170 effective ppi from brain-2025-03809-File010.pdf",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "sought — I opened the page for the rescue evidence; that the functional demonstration is qualitative while its quantified counterpart omits the WT bracket is the part I did not expect"
       }
     ]
   }
