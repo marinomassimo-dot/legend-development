@@ -95,6 +95,15 @@
   "source_fulltext_indexed": true,
   "source_fulltext_indexed_evidence": "PMC HTML, body 62342 characters, abstract 1933 characters separated by the validator's own extraction. Every text locator below is matched against the body of that artifact.",
   "abstract_anchoring_waived": "No locator draws on the abstract. The abstract of this paper is accurate and is not the finding.",
+  "figure_coverage": {
+   "rule": "Orchestrator instruction, 2026-08-10: every main figure receives at least one locator, or a named and argued waiver. Silence is not a waiver, and coverage.figures: read without a single figure locator is a declaration that does not hold. The point is not to raise the number but to make the depth setting VISIBLE — it drifted to 2.9, 7.0 and 19.0 panels per paper across three readers because nobody had declared it.",
+   "main_figures_in_article": 7,
+   "figures_with_at_least_one_locator": 7,
+   "waivers": [],
+   "supplementary": "NOT inspected and NOT declared read: the supplement is unreachable, four routes recorded in FT-053 with their literal replies. coverage.supplementary is 'unavailable', which is the honest slot — S2B, S6C and S7B are named as the load-bearing panels behind it.",
+   "budget_declared": "One locator minimum per main figure, more where a panel carries something the running text does not. Reached 13 figure locators over 7 figures.",
+   "applied_retroactively": "🔴 This block is the rule biting its author. The first version of this manifest declared seven figure artifacts and drew locators from six — Figure 4 had none while the receipt said coverage.figures: read. I had looked at the figure and written nothing, which is exactly the silence the rule forbids. Fixed by reading it again at deposited resolution and writing what was there, not by lowering the claim. The receipt FTR-20260810-25331887-01 predates the instruction and is hash-chained, so it cannot carry this block; the correction lives here and is named rather than quietly absorbed."
+  },
   "panel_text_relation_note": "Every entry carries panel_text_relation. Three contradictions, one-directional: the figure entry carries text_contradicted_by_panel plus contradicts: entries[N] and a needle drawn from the target's snippet, and the sentence it overturns is an ordinary text_only entry. Each paired panel entry also carries cited_panel_check, the invariant added on 2026-08-10: a pair is a contradiction only when the falsifying panel is the panel the sentence itself cites. All three pass — 1A, 5B and 7A are each cited by the sentence they falsify, and none needed re-pointing. 🔴 A GAP IN THE GRAMMAR, FOUND HERE: entries[7] and entries[8] are a contradiction between the running text and a FIGURE CAPTION — the text says NCS, the caption of the panel it cites says ionizing radiation. Both are text surfaces, so neither is 'the panel contradicting the text', and contradicts is defined only on a figure entry. The pair is recorded through the propositions with no pointer. This is the same missing box A reported for cross-manifest links, seen from another side: the grammar assumes the contradicting party is always a panel.",
   "entries": [
    {
@@ -313,6 +322,14 @@
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
     "anchor": "Figure 7 caption, item D. The caption's own first word is 'Hypothetical', which is the paper doing the labelling correctly; the drawing itself carries an arrow from p-ATM to ITCH to WWOX-K274 to 'Efficient DDR' and a return arrow labelled 'Enhance ATM monomerization and activation'. Declared surface body because this is the caption text, verified character-for-character; the panel is a generated diagram and is NOT declared as a figure locator, since a figure surface in this schema means an observation read from pixels.",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ADDED 2026-08-10 UNDER THE FIGURE-COVERAGE RULE, AND IT CAUGHT ME. This manifest declared seven figure artifacts and drew locators from six: Figure 4 had none, and the receipt nonetheless said coverage.figures: read. I had inspected the figure and written nothing from it, which under the new rule is not a waiver but silence. The panel does carry something the text does not. The ATM monomerization assay is a co-immunoprecipitation whose readout is how much YFP-ATM comes down with Flag-ATM — so it depends on the bait being comparable between conditions, and in the lysate it is not: Flag-ATM falls steadily from lane 1 to lane 4 while KAP1 is even, and total ATM is highest in exactly the lane where the least bait was transfected. Here the imbalance runs AGAINST the authors' conclusion rather than for it — less bait in the depleted cells, more partner co-precipitated — so the reported failure to dissociate is conservative. That is worth recording precisely because it strengthens the paper: an unremarked loading disparity is a defect whether it helps or hurts, and which way it points can only be established by looking.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4D, Whole cell lysate block: the FLAG row descends monotonically from a heavy band in lane 1 (293T-Sh-EV, NCS -) to a faint one in lane 4 (293T-Sh-WWOX, NCS +), while the KAP1 loading row is even across all four lanes; the ATM row is heaviest in lane 4. In the Immunoprecipitation block the YFP row reads lane 1 (IgG) blank, lane 2 strong, lane 3 weaker, and lanes 5 and 6 both strong with lane 6 no weaker than lane 5; the FLAG row confirms comparable pull-down in lanes 2, 3, 5 and 6.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig4_p5_xref9.png",
+    "anchor": "Figure 4, panel D, lysate FLAG/ATM/KAP1 rows against the immunoprecipitation YFP/FLAG rows, read at deposited resolution 1397 px",
+    "panel_text_relation": "panel_only"
    },
    {
     "proposition": "The p53-independence claim, kept because it is what allows any of this to transfer to a non-cancer context: the DDR effect does not run through p53 status.",
