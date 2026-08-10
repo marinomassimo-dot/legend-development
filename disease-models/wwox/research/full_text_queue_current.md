@@ -881,29 +881,88 @@ scelta. Riaprire **solo dopo** il gate sulla superficie testuale.
 affetto (PMID 17803050), non citano soglie e sono intatte. Il difetto esiste nella pipeline e
 **non ha raggiunto lo stato canonico**.
 
-## FT-045
-**Paper:** PMID 42128308 — Aqeilan 2026, *Neurobiol Dis*
+## FT-045 — ✅ CHIUSA il 2026-08-10
+
+**Paper:** PMID 42128308 — Obeid, Wang, Abudiab, Akkawi & Aqeilan 2026, *Neurobiol Dis* 107446
 **Title:** WWOX in brain development and disease: Molecular mechanisms and therapeutic opportunities
-**Surface:** PMID 42128308 · `pdf_only` · sentinella `clean` · PMID42128308_Aqeilan2026.pdf
-**Priority:** **MEDIA**
-**Why:** review di sintesi del leader del campo sull'asse cervello; utile come mappa delle
-posizioni correnti del gruppo, non come fonte primaria di dati.
-**Come è emerso:** corpus Aqeilan RI, coda 2026-08-08 (posizione 3, il più recente dopo i due
-2026 primari).
-**Current status:** ⬜ **MAI APERTO — NESSUNA LETTURA È AVVENUTA.** Va detto con precisione,
-🔴 **e va detto anche che il ledger sembra dire il contrario:** esiste
-`FTR-20260726-42128308-01`, `partial_fulltext_read`, del 2026-07-26. Non è una contraddizione,
-è un `record_kind: legacy_reconstruction` — un receipt costruito da una dichiarazione di
-registry, non da una lettura. Il ledger e questa voce dicono la stessa cosa in due vocabolari,
-e senza questa riga la prossima sessione avrebbe dovuto scoprirlo da sola.
-perché è diverso da una lettura che non produce affermazioni: il documento non è mai stato
-aperto in alcuna sessione, non esiste testo estratto, non esiste receipt e non esiste
-rinuncia argomentata da scrivere — non c'è lettura su cui argomentare. L'artefatto è presente
-e fingerprintato (`PMID42128308_Aqeilan2026.pdf`, 17 pp., 7 immagini, SHA-256
-`520c2743630b86e5e6c2af7a3e2f527d7a31ab7810839ed275c87b0d804d6be7`).
-**Debito:** interamente aperto. È un PDF, quindi al momento della lettura va prima cercata una
-superficie XML/HTML PMC e, se non esiste, applicato il sentinella sulla superficie testuale
-prima che qualunque locator vi poggi.
+**Surface:** PMID 42128308 · `pdf_only` — **nessun deposito PMC**, verificato (`esummary`
+restituisce solo `pubmed`/`doi`/`pii`, `elink` a `pmc` nessun linkset) · sentinella `clean` ·
+`PMID42128308_Aqeilan2026.pdf` + `_fitz.txt` con ricetta di estrazione dichiarata.
+
+**Lettura completa**, receipt `FTR-20260810-42128308-02`, manifest
+[`PMID42128308.json`](deepdive_manifests/PMID42128308.json) — 23 locator, `MANIFEST STRICT
+PASS`, 0 gap, ricontrollato in modo indipendente da `locator_audit.py` a 20/20 testo, 3
+immagine, zero citazioni non trovate. Dossier:
+[`PMID42128308_partial_locators.md`](fulltext_dossiers/PMID42128308_partial_locators.md).
+Copertura: tutte e dodici le sezioni, entrambe le tabelle, tutte e quattro le figure `read`;
+`methods`/`results`/`supplementary` **`not_present`** — è una review narrativa senza dati
+primari.
+
+**Il receipt precedente non era una lettura.** `FTR-20260726-42128308-01` è un
+`record_kind: legacy_reconstruction`, costruito da una dichiarazione di registry. Il nuovo lo
+cita come `prior_receipt` con `reread_reason: inadequate_prior_coverage`.
+
+### 🔴 Il reperto: una figura generata da un modello linguistico contraddice il testo, e la regola 5c punta dalla parte sbagliata
+
+La sezione 1 elenca **sei** categorie di gene neuroevolutivo ai siti fragili, fra cui
+*glutamate receptor signaling pathways (GRID1, GRM5)*. **La Figura 2 ne mostra cinque:** la
+categoria sparisce, **GRID1 non compare da nessuna parte** e **GRM5 è spostato sotto
+*neuron projection development***. Anche la didascalia ne elenca cinque — didascalia e pannello
+concordano fra loro e **divergono entrambi dal corpo del testo**. L'ultima frase della
+didascalia è: *«This figure was prepared using Gemini.»*
+
+La 5c privilegia il pannello sulla prosa, e se l'è guadagnato — il 2026-08-04 un pannello
+rovesciò una conclusione che il testo non conteneva. **Ma quella regola è scritta per i
+pannelli di DATI**, dove il pannello è l'osservazione. Questo pannello è un *rendering a valle
+della prosa*, e la sua didascalia lo dichiara. Chi applicasse qui il default della 5c
+porterebbe via che GRM5 è un gene di *neuron projection development* e che GRID1 non è affatto
+un gene neuroevolutivo ai CFS. **Sbagliato due volte, e il testo aveva ragione.**
+
+🔴 `PREMISE_TAG` — la premessa portante della 5c è *una figura è un'osservazione*.
+`PREMISE: DEFAULT_FROM_TEXTBOOK`, falsa per questa classe. **Il discriminante è già nel
+documento e costa zero: la didascalia dichiara il generatore** — FigureLabs (Fig. 1), Gemini
+(Fig. 2), Biorender (Fig. 3), Biorender + Figure Labs (Fig. 4).
+
+### Tre difetti di infrastruttura, annotati e non riparati qui
+
+1. **`contradicts` è un puntatore intra-manifest** (`entries[N]`). Due dei reperti più forti di
+   questa lettura legano un locator di questo manifest a un locator di un *altro*
+   (`PMID 42397075 entries[22]`, `PMID 42422765 entries[15]`). La grammatica non ha una casella
+   per il legame cross-paper: vive solo nella prosa e **nessuno strumento lo vede**.
+2. **`text_contradicted_by_panel` presuppone che il pannello sia un dato.** Entrambe le voci
+   `figure` di questa lettura puntano a **schemi**. La relazione è reale come discrepanza e
+   priva di senso come evidenza, e il valore non ha modo di dire quale delle due.
+3. **I dossier in prosa portano citazioni che nessun validatore vede.** La citazione della
+   sezione 11 scritta stamattina in questo stesso dossier era **unita attraverso un a capo** e
+   **non verifica** contro la superficie; gli snippet di manifest sono confrontati carattere per
+   carattere, quelli dei dossier no. Ri-ancorata nel manifest.
+
+### Cosa cambia una decisione
+
+- 🔴 **La review dice «restored» dove il suo stesso primario mostra dieci volte il wild type**
+  (§10.4 su Steinberg 2024 = `PMID 42397075`, chiuso lo stesso giorno; SATB2 ≈ 10×, CTIP2 ≈ 3×).
+  La parola sopravvive perché **la parentesi WT-vs-trattato non è disegnata**.
+- 🔴 **L'anello WPRE si chiude dentro un solo documento e nessuno dei due capi cita l'altro:**
+  §10.4 presenta la rimozione come scelta di sicurezza, `PMID 42422765` mostra che è costata
+  **sei volte la dose**, §11 nomina l'alta dose come la principale preoccupazione regolatoria
+  pediatrica.
+- 🔴 **L'abbondanza di proteina WWOX non è una lettura della funzione di WWOX**, dimostrato dai
+  due lati: P47T ha proteina pari al wild type e fenotipo grave; gli organoidi SCAR12 hanno
+  proteina minima e fenotipo quasi normale.
+- 🔴 **Il framework genotipo-fenotipo a tre classi è pubblicato e falsificato nella stessa
+  sezione** — e il controesempio decisivo è un **missenso omozigote (p.Ser304Tyr) che uccide
+  nella prima infanzia**. «Missenso ⇒ funzione residua ⇒ più lieve» è la premessa sotto buona
+  parte del ragionamento su ipomorfi e ASO in questo repository.
+- **Un requisito che solo una sfida rivela:** `Olig2-Cre; O-KO` è *«No major defects»* al
+  basale e difettoso sotto cuprizone. **Un readout oligodendrogliale non sfidato è un falso
+  negativo per costruzione.**
+- **Correnti di potassio elevate** nei neuroni piramidali Wwox-KO, lette come compenso
+  maladattivo: nodo prossimale, firmato e farmacologicamente maturo che **nessuno qui ha ancora
+  guardato**.
+
+**Debito residuo:** la **lista di riferimenti non è stata enumerata** — letta per attribuzione,
+non harvestata. Dichiarato in `multihop.performed: false`. La bibliografia di una review del
+gruppo leader è il bersaglio multi-hop di maggior valore nel corpus.
 
 ---
 
