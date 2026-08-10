@@ -1188,7 +1188,14 @@ pannello che il testo cita per dirlo. Lo scrittore della receipt aveva ragione a
 
 ## FT-053 — Il supplementary di PMID 25331887 non è irrecuperato: è **irrecuperabile** dalle vie sancite
 **Paper:** PMID 25331887 / DOI 10.1073/pnas.1409252111 — Abu-Odeh 2014 *PNAS*
-**Priority:** MEDIA-ALTA
+**Priority:** ~~MEDIA-ALTA~~ → **ALTA**, elevata il 2026-08-10 a fine sessione.
+🔴 **Perché è salita, e non per rifinitura:** dopo il ri-audit in coda a `DL-MECH-083`, la
+**stabilizzazione** di WWOX da parte della catena K63 è ritaggata `PREMISE: NON RISOLTA` — e la
+sua unica evidenza è **`Fig S7B`**, che sta esattamente in questo supplementary. È la premessa
+più consequenziale della catena K63/ITCH/K274, quella che decide se `DL-MECH-083` sia un `DATO`
+o un'inferenza, e il repository **non può raggiungerla** per le quattro vie documentate sotto.
+Non è un fallimento: è un debito localizzato al pannello, che è il massimo ottenibile quando
+manca l'accesso. Ma vale ora quanto una lettura mancante, non quanto una figura non adjudicata.
 **Che cosa manca:** `pnas.201409252SI.pdf`, figure **S1–S7**. Non è rifinitura: **S2B** porta
 l'unico confronto `WWOX+/+ / +/− / −/−` in MEF — cioè il solo dato genetico a dosaggio del
 paper — **S6C** è la discriminazione K63-contro-K48 su cui poggia l'intera lettura della catena
