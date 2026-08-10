@@ -138,6 +138,11 @@
       "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p18_170dpi.png",
       "sha256": "bb8f6168a4bca230c470b93d713566cceeb0fa4657f4b05fb48b548a1e3f63ce",
       "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p12_170dpi.png",
+      "sha256": "4c5ca043b3043a7f01788fdc30036e2af4870b19b4bfb42b4c07ad1094da966a",
+      "kind": "figure"
     }
   ],
   "verbatim_locators": {
@@ -354,6 +359,15 @@
         "anchor": "Supplementary figures volume page 18, rendered at 170 effective ppi from brain-2025-03809-File010.pdf. Caption on page 19, already recorded as a separate locator.",
         "panel_text_relation": "panel_only",
         "found_or_sought": "sought — I opened this page because its caption title had already told me the cortical-layer half existed; what I did not expect was the direction, ten-fold above wild type rather than toward it"
+      },
+      {
+        "proposition": "🔴 THE MYC-INHIBITION RESCUE IS PARTIAL AND SELECTIVE, AND THE PANEL SEPARATES WHAT THE TEXT JOINS. A51 normalises the progenitor compartment and the pan-neuronal marker but does nothing for either layer marker. SOX2+ cells fall from about 60 percent in the knockout to about 33 with A51, ns against wild type; SOX2+MYC+ double positives from about 72 to about 50, ns against wild type; NEUN+ neurons recover from about 6 percent to about 18, significant against the untreated knockout and ns against wild type. But SATB2+ shows ns between knockout and A51, and CTIP2+ shows ns between knockout and A51 while remaining **** below wild type. So inhibiting MYC restores progenitor identity and pan-neuronal marking, and leaves deep- and superficial-layer neuron production where it was. Any claim that MYC inhibition rescues neurogenesis has to carry that split — and the compound is in any case not MYC-selective.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure 7, panels F and G, percentage of cells, groups WT NT / WT DMSO / KO-1B / KO-1B A51. SOX2+: about 27 / 28 / 60 / 33, brackets ** for WT NT vs KO-1B, ** for KO-1B vs KO-1B A51, ns for WT NT vs KO-1B A51. SOX2+MYC+: about 48 / 45 / 72 / 50, brackets *** and ** and ns. SATB2+: about 1.4 / 1.45 / 0.35 / 0.7, bracket * for WT NT vs KO-1B and ns for KO-1B vs KO-1B A51. NEUN+: about 30 / 22 / 6 / 18, brackets **** and ** and * for KO-1B vs A51, ns for WT NT vs A51. CTIP2+: about 12.5 / 5.5 / 0.2 / 0.3, brackets **** for WT NT vs KO-1B and **** for WT NT vs A51, ns for KO-1B vs A51.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p12_170dpi.png",
+        "anchor": "Supplementary figures volume page 12, rendered at 170 effective ppi from brain-2025-03809-File010.pdf. Same page carries panel C, an AP2gamma immunoblot reading 1 for JH-WT against 2.02, 2.76, 2.56 and 3.99 for the mutant lines and 1.87 for the AAV9-rescued knockout.",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "sought — I opened this page looking for the A51 validation the Results cite as Supplementary Fig. 7F; the selectivity of the rescue, normalising progenitors while leaving both layer markers untouched, was not what I went looking for"
       }
     ]
   }
