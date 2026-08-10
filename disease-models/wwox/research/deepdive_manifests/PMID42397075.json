@@ -128,6 +128,16 @@
       "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/S10_caption_p19_200dpi.png",
       "sha256": "46851bc8a546a1d65c9bd72186c1542b2a569cc45199a384633e80066f98d3b3",
       "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p14_170dpi.png",
+      "sha256": "e040105f3ecea66b03206bc9395e8adacb445dc208deabd0691c1f80550effba",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p18_170dpi.png",
+      "sha256": "bb8f6168a4bca230c470b93d713566cceeb0fa4657f4b05fb48b548a1e3f63ce",
+      "kind": "figure"
     }
   ],
   "verbatim_locators": {
@@ -326,6 +336,24 @@
         "anchor": "Statistical analysis",
         "panel_text_relation": "text_only",
         "found_or_sought": "found — same reading pass as the blinding sentence"
+      },
+      {
+        "proposition": "🔴 WOREE AND SCAR12 ARE TRANSCRIPTIONALLY NEAR-INDISTINGUISHABLE IN NEURONAL CELLS. The direct WOREE-versus-SCAR12 volcano carries essentially nothing past the |logFC| 0.5 threshold — two ribosomal genes on the down side and no up-regulated gene at all — while each line against WT yields a dozen or more. The clinical gradient between the severe and the mild syndrome does not appear as a transcriptional difference in this model. That is a limit of the organoid platform for severity work, and it converges with PMID 36779245's finding of no evidence for an intermediate phenotype.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure 8, panel F, 'Differential expression of WOREE vs SCAR12 neuronal cells (NP+Neu)': only RPS29 and RPL36 pass the left-hand threshold, and the plotted range stops at logFC 0.5 with no gene beyond it. Panels D and E, the same lines against WT, each label a dozen or more genes past the same threshold.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p14_170dpi.png",
+        "anchor": "Supplementary figures volume page 14, rendered at 170 effective ppi from brain-2025-03809-File010.pdf",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found — opening the page; panel F is empty where D and E are crowded, which is visible before reading anything"
+      },
+      {
+        "proposition": "🔴 THE THERAPY DOES NOT RETURN LAYER MARKERS TO WILD TYPE — IT OVERSHOOTS THEM. In treated WOREE organoids SATB2 mRNA sits about ten-fold above wild type and BCL11B/CTIP2 about three-fold, with the untreated WOREE line below wild type on both. The brackets run WT-versus-EGFP and EGFP-versus-WWOX; the WT-versus-treated comparison is not drawn, for the third time in this paper. This is what the figure's title means by 'affects cortical layer marker expression', and it is the half the safety sentence omits. The radial-glia half is confirmed by the same figure: the untreated-versus-treated volcano in radial glia shows no gene passing threshold, and the cell-cycle densities superimpose.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure 10, panel B, SATB2 mRNA relative expression: WT about 1, SCAR12 AAV9-EGFP about 4, SCAR12 AAV9-WWOX about 3.7, WOREE AAV9-EGFP about 0.6, WOREE AAV9-WWOX about 10, with asterisks over WT-vs-SCAR12-EGFP and WOREE-EGFP-vs-WOREE-WWOX. Panel C, BCL11B: WT 1, WOREE AAV9-EGFP about 0.3, WOREE AAV9-WWOX about 3.0. Panel E: volcano of untreated over treated radial glia, every point labelled no change. Panel F: cell-cycle densities for WOREE n=2560 and WOREE-wwox n=2003, superimposed.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/S_fig_p18_170dpi.png",
+        "anchor": "Supplementary figures volume page 18, rendered at 170 effective ppi from brain-2025-03809-File010.pdf. Caption on page 19, already recorded as a separate locator.",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "sought — I opened this page because its caption title had already told me the cortical-layer half existed; what I did not expect was the direction, ten-fold above wild type rather than toward it"
       }
     ]
   }
