@@ -135,7 +135,7 @@
    },
    {
     "contradicts": "entries[2]",
-    "needle": "liver weight relative to body weight",
+    "contradicts_needle": "liver weight relative to body weight",
     "cited_panel_check": "The sentence cites (Fig. 2e ) and this locator reads Fig 2E. Cited panel and falsifying panel are the same, so the contradiction is between the sentence and its own evidence.",
     "proposition": "PAIR 1, PANEL SIDE. Fig 2E plots absolute grams, not a body-weight ratio. Without normalisation the measurement cannot separate tumour burden from a larger animal.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2E y-axis reads 'Liver Weight (g)', scale 0 to 4; Control ~1.53 g, cKO ~3.45 g, marked ***. No body-weight normalisation appears anywhere in the panel.",
@@ -154,7 +154,7 @@
    },
    {
     "contradicts": "entries[4]",
-    "needle": "no change at 1 and 3-months post treatment",
+    "contradicts_needle": "no change at 1 and 3-months post treatment",
     "cited_panel_check": "The sentence cites (Fig. 4a, b ) and the falsifying observation is read in those two panels: they plot five genes. Fig 4C is read only to enumerate the eight genes of the later timepoint, which is what makes four of them untested early; the next sentence of the paper cites 4c, d for that panel.",
     "proposition": "PAIR 2, PANEL SIDE. The early and late gene panels are not the same panel. Four genes were never measured at 1 and 3 months, so for those four 'no change' is not a negative result — it is an untested condition. This is the not-significant versus not-tested distinction.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4A (1 Month) and 4B (3 Months) each plot exactly five genes: HK2, GLUT1, PKM2, LDHA1, GAPDH. Fig 4C (6 Months) plots eight: HK2, GLUT1, PKM2, LDHA1, PDK1, ENO1, ALDOA2, PGK1. PDK1, ENO1, ALDOA2 and PGK1 appear in no early panel.",
@@ -173,7 +173,7 @@
    },
    {
     "contradicts": "entries[6]",
-    "needle": "from as early as 1-month post DEN treatment",
+    "contradicts_needle": "from as early as 1-month post DEN treatment",
     "cited_panel_check": "The sentence cites (Fig. 3f ) and this locator reads Fig 3F. Same panel.",
     "proposition": "PAIR 3, PANEL SIDE. AXIN2 is not raised at 1 month — it is marginally lower in cKO and carries no significance mark, reaching significance only at 6 months. c-Jun also fails significance at 3 and 6 months, so the continual pattern the Discussion asserts holds for MYC alone.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3F, 1M block: MYC *, JUN *, FOS *, AXIN2 unmarked with cKO ~0.89 against Control ~0.87. 3M block: MYC *, FOS *, JUN and AXIN2 unmarked. 6M block: MYC *, FOS *, AXIN2 *, JUN unmarked. The panel labels read AXIN2, not Axin.",
@@ -192,7 +192,7 @@
    },
    {
     "contradicts": "entries[8]",
-    "needle": "showed downregulations of HIF1α targets",
+    "contradicts_needle": "showed downregulations of HIF1α targets",
     "cited_panel_check": "The sentence cites (Fig. 5d, f ) and this locator reads Fig 5D and 5F. Same panels.",
     "proposition": "PAIR 4, PANEL SIDE. Three of four targets fall under digoxin; PDK1 RISES and carries no significance mark, in the knockout and again in wild-type. The rescue is not uniform across the targets it is claimed for.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 5D: LDHA1 falls ~0.72 to ~0.36 (*), GLUT1 ~0.67 to ~0.26 (*), GAPDH ~1.05 to ~0.57 (**), PDK1 RISES ~1.50 to ~1.92 and is unmarked. Fig 5F repeats the PDK1 rise in WT saline versus WT digoxin.",
@@ -211,7 +211,7 @@
    },
    {
     "contradicts": "entries[10]",
-    "needle": "on day 2, 3, and 4 as compared with control mice",
+    "contradicts_needle": "on day 2, 3, and 4 as compared with control mice",
     "cited_panel_check": "The sentence cites (Fig. 7d ) and this locator reads Fig 7D. Same panel.",
     "proposition": "PAIR 5, PANEL SIDE. Day 2 carries no significance mark; only days 3 and 4 are marked. The day-2 point also has the largest error bar in the series.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7D: 1 Day unmarked, 2 Days unmarked with cKO ~2.85 and an error bar reaching ~3.6, 3 Days *, 4 Days *, 7 Days unmarked with the cKO point falling below the control.",
@@ -230,7 +230,7 @@
    },
    {
     "contradicts": "entries[12]",
-    "needle": "it continued rising in Wwox ΔHep mice",
+    "contradicts_needle": "it continued rising in Wwox ΔHep mice",
     "cited_panel_check": "WEAKEST OF THE SIX PAIRS. The contradicted sentence carries no figure citation of its own; the citation in its snippet, (Fig. 7a, b ), belongs to the preceding sentence. This locator reads Fig 7B, which is inside that inherited citation, but the link from sentence to panel is the reader's and not the author's.",
     "proposition": "PAIR 6, PANEL SIDE. The knockout curve does not rise monotonically: it falls at day 4 before rising again at day 7.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7B cKO series: 3 Days ~0.44, 4 Days ~0.38, 7 Days ~0.48, so day 4 is a decrease from day 3. Marks are *** at 3, 4 and 7 days and absent at 1 and 2 days.",
