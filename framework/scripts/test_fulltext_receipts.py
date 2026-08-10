@@ -755,5 +755,153 @@ class InvalidationScope(unittest.TestCase):
                          "the depth index is backed by a withdrawn receipt")
 
 
+class RechainMovesAnEventWithoutChangingIt(unittest.TestCase):
+    """A hash chain refuses two parents. `rechain` is the only lawful way to keep both lines.
+
+    Measured on 2026-08-10: three of five branches had forked the receipt ledger — `lettore`
+    at event 60, `lettore-b` and `codex/pmid-42422765-s8` at event 61 — and naive
+    concatenation produced `line 61: broken hash chain`. The chain catching it is the design
+    working; the absence of any way to resolve it was the blocker.
+    """
+
+    @staticmethod
+    def _event(event_id: str, pmid: str) -> dict:
+        """One receipt per study, so the fixture exercises rechaining and not the sequence
+        rules for repeated studies — those have their own tests, and a fixture that trips
+        them tests the wrong thing."""
+        record = example(event_id, "partial_fulltext_read")
+        record["study_id"] = {"pmid": pmid, "doi": None}
+        return record
+
+    @staticmethod
+    def _chained(events: list[dict]) -> list[dict]:
+        out: list[dict] = []
+        for event in events:
+            record = dict(event)
+            record[receipts.CHAIN_FIELD] = receipts.ledger_head(out)
+            out.append(record)
+        return out
+
+    def _fork(self):
+        """A shared history of two events, then one event on each side."""
+        shared = self._chained([self._event("FTR-20260725-11111111-01", "11111111"),
+                                self._event("FTR-20260725-22222222-01", "22222222")])
+        base = self._chained([*shared, self._event("FTR-20260725-33333333-01", "33333333")])
+        branch = self._chained([*shared, self._event("FTR-20260725-44444444-01", "44444444")])
+        return base, branch
+
+    def test_only_the_divergent_suffix_moves(self) -> None:
+        base, branch = self._fork()
+        merged, moved, shared = receipts.rechain(base, branch)
+        self.assertEqual(2, shared)
+        self.assertEqual(["FTR-20260725-44444444-01"], [e["event_id"] for e in moved])
+        self.assertEqual(4, len(merged))
+        self.assertEqual([], receipts.validate_ledger_chain(merged))
+
+    def test_a_moved_event_differs_in_the_chain_field_and_nothing_else(self) -> None:
+        """🔴 The contract. A rechain moves an event in history; it does not modify it."""
+        base, branch = self._fork()
+        merged, moved, _ = receipts.rechain(base, branch)
+        original = branch[-1]
+        self.assertEqual(receipts.event_body(original), receipts.event_body(moved[0]))
+        self.assertNotEqual(original[receipts.CHAIN_FIELD], moved[0][receipts.CHAIN_FIELD])
+
+    def test_the_inputs_are_not_mutated(self) -> None:
+        """Otherwise a failed rechain leaves the caller holding a half-rebased branch."""
+        base, branch = self._fork()
+        before = json.dumps(branch, sort_keys=True)
+        receipts.rechain(base, branch)
+        self.assertEqual(before, json.dumps(branch, sort_keys=True))
+
+    def test_a_prefix_of_the_base_rebases_to_nothing(self) -> None:
+        base, _ = self._fork()
+        merged, moved, shared = receipts.rechain(base, base[:2])
+        self.assertEqual([], moved)
+        self.assertEqual(2, shared)
+        self.assertEqual(base, merged)
+
+    def test_it_refuses_to_rebase_onto_a_broken_base(self) -> None:
+        """Extending a corrupted history with fresh, honest-looking links is the worst case."""
+        base, branch = self._fork()
+        base[1]["evidence_basis"] = ["tampered"]
+        with self.assertRaisesRegex(ValueError, "base ledger is not chained"):
+            receipts.rechain(base, branch)
+
+    def test_it_refuses_to_move_events_off_a_broken_branch(self) -> None:
+        base, branch = self._fork()
+        branch[1]["evidence_basis"] = ["tampered"]
+        with self.assertRaisesRegex(ValueError, "incoming ledger is not chained"):
+            receipts.rechain(base, branch)
+
+    def test_two_branches_that_minted_the_same_event_id_are_refused(self) -> None:
+        """🔴 The real case, and the reason the sequence check runs over the merged whole.
+
+        `lettore` and `codex/pmid-42422765-s8` both recorded a second receipt for PMID
+        42422765 and both called it `FTR-20260810-42422765-02` — one for the figures, one for
+        Supplementary S8. Each branch is internally valid; the collision exists only once the
+        lines are in one file, which is exactly what no per-branch check can see.
+        """
+        base, branch = self._fork()
+        clash = self._event("FTR-20260725-33333333-01", "44444444")
+        clash["source_locator"] = "PMC999"
+        clash["analysis_at"] = "2026-07-25T19:45:00Z"
+        collision = self._chained([*base[:2], clash])
+        with self.assertRaisesRegex(ValueError, "duplicate event_id"):
+            receipts.rechain(base, collision)
+
+    def test_a_body_edit_smuggled_into_the_base_is_caught(self) -> None:
+        """🔴 Mutation, and it found a real gap rather than confirming one.
+
+        The body guard inside `rechain` watches the events that MOVE. Nothing was watching
+        the base — and a mutation applied to a base event *before* its digest is taken yields
+        a chain that verifies against the mutated event, so neither the chain check nor the
+        sequence check would have said a word. The base is now deep-copied and re-compared.
+        """
+        base, branch = self._fork()
+        original_head = receipts.ledger_head
+
+        def poisoned(events):
+            if events and len(events) == 3:
+                events[-1]["outputs"] = ["smuggled.md"]
+            return original_head(events)
+
+        receipts.ledger_head = poisoned
+        try:
+            with self.assertRaises(ValueError):
+                receipts.rechain(base, branch)
+        finally:
+            receipts.ledger_head = original_head
+
+    def test_the_writer_restores_the_original_when_anchoring_fails(self) -> None:
+        base, branch = self._fork()
+        merged, _, _ = receipts.rechain(base, branch)
+        with tempfile.TemporaryDirectory() as tmp:
+            ledger = Path(tmp) / "ledger.jsonl"
+            ledger.write_text(
+                "".join(receipts.canonical_line(e) + "\n" for e in branch), encoding="utf-8")
+            before = ledger.read_text(encoding="utf-8")
+            manifest = Path(tmp) / "manifest.md"
+            manifest.write_text("no anchor fields here\n", encoding="utf-8")
+            with self.assertRaises(ValueError):
+                receipts.write_rechained_ledger(ledger, merged, manifest=manifest)
+            self.assertEqual(before, ledger.read_text(encoding="utf-8"),
+                             "a failed rechain must leave the ledger exactly as it was")
+
+    def test_the_writer_persists_and_reanchors_on_success(self) -> None:
+        base, branch = self._fork()
+        merged, _, _ = receipts.rechain(base, branch)
+        with tempfile.TemporaryDirectory() as tmp:
+            ledger = Path(tmp) / "ledger.jsonl"
+            ledger.write_text(
+                "".join(receipts.canonical_line(e) + "\n" for e in branch), encoding="utf-8")
+            manifest = Path(tmp) / "manifest.md"
+            manifest.write_text(
+                "fulltext_ledger_events: 3\nfulltext_ledger_head: deadbeef\n", encoding="utf-8")
+            receipts.write_rechained_ledger(ledger, merged, manifest=manifest)
+            self.assertEqual([], receipts.validate_ledger_chain(receipts.load_ledger(ledger)))
+            self.assertIn(f"fulltext_ledger_events: {len(merged)}",
+                          manifest.read_text(encoding="utf-8"))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

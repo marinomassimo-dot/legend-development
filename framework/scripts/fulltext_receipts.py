@@ -19,6 +19,7 @@ integrity claim degrades to "visible in review", never to "invisible".
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import os
@@ -735,6 +736,107 @@ def append_receipt(
     return record
 
 
+def event_body(receipt: dict[str, Any]) -> dict[str, Any]:
+    """The event minus its position in history.
+
+    `ledger_prev_hash` records WHERE an event sits, not WHAT it says. Two ledgers that
+    recorded the same reading and then diverged hold events with identical bodies and
+    different chain fields — so the body is the identity a rechain must preserve, and the
+    chain field is the only thing it is allowed to touch.
+    """
+    return {key: value for key, value in receipt.items() if key != CHAIN_FIELD}
+
+
+def common_prefix_length(base: list[dict[str, Any]], incoming: list[dict[str, Any]]) -> int:
+    """How many leading events the two ledgers agree on, compared by body.
+
+    Deliberately not by line or by digest: a digest commits to `ledger_prev_hash`, so the
+    first re-chained event would make every later comparison false and the whole ledger would
+    read as divergent. The `append_only_prefix` freeze policy asks the same question of a
+    single file over time — is my prefix still my prefix — and this asks it of two files at
+    one moment. Same vocabulary, different object; the freeze verifies a prefix, it does not
+    rebuild a suffix, so there was nothing here to adopt beyond the wording.
+    """
+    length = 0
+    for left, right in zip(base, incoming):
+        if event_body(left) != event_body(right):
+            break
+        length += 1
+    return length
+
+
+def rechain(
+    base: list[dict[str, Any]], incoming: list[dict[str, Any]]
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], int]:
+    """Rebase `incoming`'s divergent suffix onto `base`, touching only the chain field.
+
+    Returns ``(merged ledger, the events that moved, common prefix length)``.
+
+    🔴 **A hash chain refuses two parents, and that refusal is the design working.** When two
+    branches append different events onto the same predecessor, neither line is wrong and the
+    concatenation of both is: the second event's `ledger_prev_hash` names a predecessor that
+    is no longer its predecessor. There is no way to keep both by editing the file, and that
+    is the point — so the only lawful resolution is to move one line to the end of the other
+    and recompute nothing but its position.
+
+    Every refusal below exists because the alternative is silent:
+
+    - the base's own chain must verify, or a rebase would extend a corrupted history with
+      fresh, honest-looking links — the same reason `append_receipt` re-reads inside its lock;
+    - the incoming chain must verify, or the events being moved were already untrustworthy;
+    - the moved events must differ from their originals in `ledger_prev_hash` **and nothing
+      else**, checked after the fact rather than promised. A rechain that also rewrote a
+      coverage map or a fingerprint would be a rewrite wearing a merge's clothes;
+    - `validate_ledger_sequence` runs over the merged whole, because ordering is not the only
+      thing a merge can break: two branches can mint the same `event_id`, or record
+      conflicting identities for one study, and both are invisible until the lines are in one
+      file.
+    """
+    errors = validate_ledger_chain(base)
+    if errors:
+        raise ValueError("base ledger is not chained; refusing to rebase onto it: "
+                         + "; ".join(errors))
+    errors = validate_ledger_chain(incoming)
+    if errors:
+        raise ValueError("incoming ledger is not chained; refusing to move its events: "
+                         + "; ".join(errors))
+
+    shared = common_prefix_length(base, incoming)
+    suffix = [copy.deepcopy(event) for event in incoming[shared:]]
+
+    # Deep-copied, and the base is re-compared at the end. Sharing references with the caller
+    # would make `rechain` able to alter the history it is rebasing onto without any of the
+    # checks below noticing: a mutation applied before the digest is taken produces a chain
+    # that verifies against the mutated event. Found by mutation-testing this function rather
+    # than by reading it — the body guard only watches the events that MOVE, and the base was
+    # the half nothing was watching.
+    base_bodies = [event_body(event) for event in base]
+    merged = [copy.deepcopy(event) for event in base]
+    moved: list[dict[str, Any]] = []
+    for original, event in zip(incoming[shared:], suffix):
+        event[CHAIN_FIELD] = ledger_head(merged)
+        if event_body(event) != event_body(original):
+            raise ValueError(
+                f"rechain altered {original.get('event_id')} beyond {CHAIN_FIELD}; "
+                "a rechain moves an event in history, it does not modify it")
+        merged.append(event)
+        moved.append(event)
+
+    if [event_body(event) for event in merged[:len(base)]] != base_bodies:
+        raise ValueError(
+            "rechain altered the base history it was rebasing onto; a rebase adds to a "
+            "history, it does not touch it")
+    chain_errors = validate_ledger_chain(merged)
+    if chain_errors:
+        raise ValueError("rechained ledger does not verify: " + "; ".join(chain_errors))
+    sequence_errors = validate_ledger_sequence(merged)
+    if sequence_errors:
+        raise ValueError(
+            "rechained ledger breaks a sequence rule — the events are individually valid and "
+            "cannot coexist in one history: " + "; ".join(sequence_errors))
+    return merged, moved, shared
+
+
 ANCHOR_EVENTS = re.compile(r"(?m)^(fulltext_ledger_events:\s*)(\S+)\s*$")
 ANCHOR_HEAD = re.compile(r"(?m)^(fulltext_ledger_head:\s*)(\S+)\s*$")
 
@@ -818,6 +920,48 @@ def write_state_anchor(manifest_path: Path, receipts: list[dict[str, Any]]) -> b
             pass
         raise
     return True
+
+
+def write_rechained_ledger(
+    path: Path, merged: list[dict[str, Any]], *, manifest: Optional[Path] = None
+) -> None:
+    """Replace the ledger with a rebased history, under the same lock `append_receipt` uses.
+
+    This is the one writer in this module that does not append, and it says so in its name.
+    It is still not a hand edit: every line it writes came out of `rechain`, which refused to
+    change anything but the chain field, and the whole file is re-verified from disk after the
+    write. If that re-read disagrees, the original bytes go back.
+    """
+    if fcntl is None:
+        raise RuntimeError("POSIX file locking unavailable; refusing unlocked ledger rewrite")
+    payload = "".join(canonical_line(event) + "\n" for event in merged)
+    with path.open("r+", encoding="utf-8") as handle:
+        fcntl.flock(handle.fileno(), fcntl.LOCK_EX)
+        try:
+            handle.seek(0)
+            original = handle.read()
+            handle.seek(0)
+            handle.write(payload)
+            handle.truncate()
+            handle.flush()
+            os.fsync(handle.fileno())
+            try:
+                persisted = load_ledger(path)
+                if [event_body(item) for item in persisted] != [
+                        event_body(item) for item in merged]:
+                    raise ValueError("the ledger on disk is not what rechain produced")
+                if manifest is not None and not write_state_anchor(manifest, persisted):
+                    raise ValueError(
+                        f"{manifest} declares no unique full-text ledger anchor")
+            except Exception:
+                handle.seek(0)
+                handle.write(original)
+                handle.truncate()
+                handle.flush()
+                os.fsync(handle.fileno())
+                raise
+        finally:
+            fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
 
 
 def default_manifest_path(root: Path) -> Path:
@@ -917,6 +1061,15 @@ def main() -> int:
     status.add_argument("--doi", default="")
     record = subparsers.add_parser("record")
     record.add_argument("--receipt", required=True, help="one receipt JSON file")
+    rechain_cmd = subparsers.add_parser(
+        "rechain",
+        help="rebase this ledger's divergent events onto another ledger's history")
+    rechain_cmd.add_argument(
+        "--onto", required=True,
+        help="the base ledger to rebase onto — e.g. `git show main:<ledger> > base.jsonl`")
+    rechain_cmd.add_argument(
+        "--dry-run", action="store_true",
+        help="report the plan and write nothing")
     args = parser.parse_args()
     ledger = (
         Path(args.ledger)
@@ -953,6 +1106,32 @@ def main() -> int:
             receipt = json.loads(Path(args.receipt).read_text(encoding="utf-8"))
             persisted = append_receipt(ledger, receipt, manifest=manifest)
             print(f"RECORDED: {persisted['event_id']}")
+            return 0
+        if args.command == "rechain":
+            base_path = Path(args.onto)
+            if not base_path.is_file():
+                raise ValueError(f"base ledger does not exist: {base_path}")
+            base = load_ledger(base_path)
+            incoming = load_ledger(ledger)
+            merged, moved, shared = rechain(base, incoming)
+            print(f"BASE:     {len(base)} event(s) from {base_path}")
+            print(f"INCOMING: {len(incoming)} event(s) from {ledger}")
+            print(f"SHARED:   {shared} event(s) — the two histories agree up to here")
+            if not moved:
+                print("NOTHING TO REBASE: this ledger adds no event the base does not have")
+                return 0
+            for event in moved:
+                print(f"  MOVE {event.get('event_id')}  "
+                      f"{event.get('evidence_depth', '?')}  "
+                      f"pmid {event.get('study_id', {}).get('pmid', '?')}")
+            if args.dry_run:
+                print(f"DRY RUN: {len(moved)} event(s) would move; "
+                      f"the ledger would hold {len(merged)}. Nothing written.")
+                return 0
+            write_rechained_ledger(ledger, merged, manifest=manifest)
+            print(f"REBASED: {len(moved)} event(s) moved onto {len(base)}; "
+                  f"{len(merged)} chained, head {ledger_head(merged)}")
+            print(f"ANCHORED: {manifest}")
             return 0
 
         pmid = args.pmid.strip()
