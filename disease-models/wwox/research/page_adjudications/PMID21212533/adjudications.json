@@ -1,0 +1,206 @@
+{
+  "schema_version": 2,
+  "pmid": "21212533",
+  "citation": "Saeki K, Machida M, Kinoshita Y, Takasawa R, Tanuma S 2011, Biol Pharm Bull 34(1):146-149",
+  "rights": {
+    "notice": "© 2011 Pharmaceutical Society of Japan",
+    "open_licence": null,
+    "pmc_deposit": false,
+    "redistribution": "NOT_REDISTRIBUTED",
+    "why": "Free to read on J-STAGE is not a licence to redistribute. The article carries a bare copyright notice, has no PMCID and no open deposit, and the crops reproduce the author's printed characters — panels, a table and four sentences. This file is the recipe that regenerates them from a copy of the PDF the reader already holds; the images are not published with this repository."
+  },
+  "source_pdf": {
+    "path": "files/fulltext/PMID21212533_Saeki2011.pdf",
+    "sha256": "790f602006a341c043357c6931be5b7c47a82f39851a30b980ae3dd8d592dca7"
+  },
+  "manifest": "disease-models/wwox/research/deepdive_manifests/PMID21212533.json",
+  "needles": {
+    "why": "A locator identifier alone is a promise. The needle is the search string that resolves the locator to a span on the printed page, so the chain — needle to span, span inside crop, crop to digest — can be checked by a command rather than by eye. Each needle occurs exactly once on its page and is a fragment of the snippet of the locator it names.",
+    "table_rows": "Where a locator quotes a table row, the row is not contiguous in the text layer — the columns are separate runs — so the needle is the one cell value that is unique on the page.",
+    "why_a_corrupt_layer_can_still_carry_a_needle": "This article's text layer is SUSPECT and is refused as an evidence surface: it renders × as U+0002, ± as U+0003, and drops µ outright. The needles are nevertheless searched in that layer, deliberately. A needle is a coordinate, not a quotation — it only has to land on the right span — so every needle here is chosen from a stretch the corruption did not touch. The evidence is the crop.",
+    "why_some_crops_adjudicate_nothing": "Five crops carry an empty `adjudicates` list. They are figure surfaces — Fig. 1, 2, 3, 4, 5 — whose content is raster, so there is no text span for a needle to resolve to. They are still pinned by digest, and the manifest locators that name them declare `surface: figure`. An empty list is the honest encoding of 'this crop IS the evidence', not of a missing needle."
+  },
+  "artifacts": [
+    {
+      "file": "p02_fig1_tau_ser396.png",
+      "page": 2,
+      "crop": [
+        300,
+        60,
+        552,
+        238
+      ],
+      "dpi": 500,
+      "sha256": "49f60ddb61b52012d5dacefb209a4f649b36fd96ab37f698b837277b825652a4",
+      "adjudicates": []
+    },
+    {
+      "file": "p02_fig2_app_thr668.png",
+      "page": 2,
+      "crop": [
+        300,
+        247,
+        552,
+        424
+      ],
+      "dpi": 500,
+      "sha256": "ecb7ae02a00bf6411ba4945bc24b9e56b778733ff46d48663a712d720b0a0677",
+      "adjudicates": []
+    },
+    {
+      "file": "p02_methods_volume_and_2x.png",
+      "page": 2,
+      "crop": [
+        45,
+        540,
+        295,
+        572
+      ],
+      "dpi": 500,
+      "sha256": "417de0a62b841e38fcf30de114064f52b942fd92986a7e1f2d25e7efea110a6f",
+      "adjudicates": [
+        {
+          "locator": "entries[3]",
+          "needle": "SDS-PAGE sample buffer to each"
+        }
+      ]
+    },
+    {
+      "file": "p02_unfavorable_substrate.png",
+      "page": 2,
+      "crop": [
+        300,
+        550,
+        552,
+        580
+      ],
+      "dpi": 500,
+      "sha256": "dce965210972ba4c1feab2752e86b71f169c2b51ce3d0645c218f9a345ccf49e",
+      "adjudicates": [
+        {
+          "locator": "entries[4]",
+          "needle": "were similar each other (Fig. 2)"
+        }
+      ]
+    },
+    {
+      "file": "p03_table1_pGS2_kinase_activity.png",
+      "page": 3,
+      "crop": [
+        42,
+        58,
+        295,
+        165
+      ],
+      "dpi": 500,
+      "sha256": "51d7d56c6571b5f3d14eb050eaae8b4d3238feb9943ff1a8328d13ba172f4abd",
+      "adjudicates": [
+        {
+          "locator": "entries[5]",
+          "needle": "234.5"
+        },
+        {
+          "locator": "entries[5]",
+          "needle": "246.5"
+        }
+      ]
+    },
+    {
+      "file": "p03_fig3_invitro_titration.png",
+      "page": 3,
+      "crop": [
+        42,
+        174,
+        295,
+        328
+      ],
+      "dpi": 500,
+      "sha256": "30070898153594d1ff71bb91028a25dceb7acc3d144ad1b6b4ec5e6d5fed24bd",
+      "adjudicates": []
+    },
+    {
+      "file": "p03_fig4_schematic_insert.png",
+      "page": 3,
+      "crop": [
+        300,
+        60,
+        552,
+        161
+      ],
+      "dpi": 600,
+      "sha256": "776e274f0dd158329928846b83fbd392e78c23fd6c90e4f690dad47bf46419d4",
+      "adjudicates": []
+    },
+    {
+      "file": "p03_fig5_deltaCT.png",
+      "page": 3,
+      "crop": [
+        300,
+        169,
+        552,
+        328
+      ],
+      "dpi": 500,
+      "sha256": "3c9dc5a113c41b3786113e2fd759986d6564df6cbed0123c8022538a6d76ba40",
+      "adjudicates": []
+    },
+    {
+      "file": "p03_CT_invisible_in_crystal_structures.png",
+      "page": 3,
+      "crop": [
+        42,
+        483,
+        295,
+        524
+      ],
+      "dpi": 500,
+      "sha256": "158d56a22dd1c5baaecc415700eb157437c8b85bfa1db4901a2596d69aaa0701",
+      "adjudicates": [
+        {
+          "locator": "entries[10]",
+          "needle": "has been invisible in all crystal structures"
+        }
+      ]
+    },
+    {
+      "file": "p03_deltaCT_results.png",
+      "page": 3,
+      "crop": [
+        42,
+        594,
+        295,
+        640
+      ],
+      "dpi": 500,
+      "sha256": "ab97b138b613694096534e4a3ed3d3f5cbc98bca5f2648befbad4d8118f59620",
+      "adjudicates": [
+        {
+          "locator": "entries[11]",
+          "needle": "activity to tau. In contrast, the deletion"
+        }
+      ]
+    },
+    {
+      "file": "p03_CT_indispensable_no_structure.png",
+      "page": 3,
+      "crop": [
+        300,
+        528,
+        552,
+        674
+      ],
+      "dpi": 500,
+      "sha256": "b9a98f298be42603d18e6a91ef2e21a957d0cd2f593cb79f152501653d1fb149",
+      "adjudicates": [
+        {
+          "locator": "entries[12]",
+          "needle": "CT is indispensable for the tau"
+        },
+        {
+          "locator": "entries[13]",
+          "needle": "whose structure has not yet been dissolved"
+        }
+      ]
+    }
+  ]
+}

@@ -1625,6 +1625,54 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
   🟢 **(b) Ligandi del sito Axin/GID, inclusa la logica WWOX-mimetica**: agiscono su una superficie **adiacente all'inserto**, quindi hanno una base strutturale per discriminare. Rafforza `DL-MECH-067`.
   🧩 **(c) Coerenza ritrovata**: β2 promuove la crescita assonale **pur essendo una cattiva chinasi di tau** ⇒ il suo ruolo sulla crescita passa per **altri substrati** (CRMP-2, MAP1B — non testati qui). Il profilo ideale diventa quindi esplicito: **inibire β1, risparmiare β2.**
 - 🔴 **Premesse portanti da non perdere di vista**: (i) che il legame al sito di Axin conferisca preferenza per **β1** resta `PREMISE: INFERENZA` — deriva dall'affinità differenziale di **Axin** (Castaño, `abstract_only`), **mai misurata su WWOX**; (ii) Saeki usa **HEK293T**, non neuroni; (iii) **Ser404 non è stato testato** da nessuno per isoforma.
+#### 🔴 AGGIUNTA 2026-08-10 — l'aggiudicazione di pagina chiude il debito di locator e corregge tre punti di questa voce
+
+La lettura del 2026-07-26 era completa ma **senza locator**: il debito era dichiarato nel
+manifest e non colmato. Colmarlo ha richiesto la strada lunga, perché il **text layer di questo
+PDF è `SUSPECT`** — `×` diventa `U+0002`, `±` diventa `U+0003`, e **`µ` viene semplicemente
+perso**, così che *«10 μl di tampone 2×»* si estrae come *«10 ml of 2\x02»*: un volume sbagliato
+di mille volte, in una frase che continua a leggersi come inglese corretto. Non esiste superficie
+XML/HTML per questo articolo. I 14 locator sono quindi ancorati alla **pagina stampata**, ognuno
+dentro un ritaglio che si rigenera al proprio digest dal PDF sorgente
+([`page_adjudications/PMID21212533/adjudications.json`](page_adjudications/PMID21212533/adjudications.json),
+11 ritagli, `regenerate_adjudications.py verify` PASS). Aprire le figure ha cambiato tre cose.
+
+1. 🔴 **Il fattore «~3–10×» sopra non è una misura, ed è sbagliato per difetto.** Le due
+   titolazioni di Figura 3 **non sono appaiate**: β1 corre 0–0.1–0.3–1–3 µg/mL, β2 corre
+   0–0.3–1–3–10. **Non esiste una concentrazione massima comune** e β1 non è mai stata testata a
+   10. Il pannello inferiore αGSK-3β mostra enzima **solo nelle corsie più alte** di ciascuna
+   serie: è un controllo di presenza, non di input equivalente. Nessuna densitometria, figura
+   *«representative of three independent experiments»*. Ciò che il pannello sostiene è
+   **β1-a-1 contro β2-a-10**, cioè **dell'ordine di 10× e plausibilmente più**; ciò che non può
+   sostenere è un rapporto misurato. *Sostituire «~3–10×» con «≥10× a ispezione, non
+   quantificato».*
+2. 🔴 **La posizione dell'inserto: la figura degli autori e UniProt non concordano di un
+   residuo.** Figura 4 marca l'inserto **fra V303 e K304**, e dà CT = **380–420** in β1 e
+   **393–433** in β2, con didascalia *«The sequence of CT is identical between GSK-3β1 and
+   GSK-3β2»*. Questa voce cita `UniProt P49841` / `VSP_004790` come **`K303`**. Nulla di portante
+   si muove — su entrambe le numerazioni l'inserto cade **4–5 residui a valle di H299**, adiacente
+   alla superficie di docking Axin/GID (`G262-L273` + `N285-H299`) che WWOX lega, e lontano dal
+   sito ATP identico — ma il numero **non va citato come se le due fonti coincidessero**.
+3. 🟢 **Figura 5 dice più di quanto dicesse questa voce, nella direzione giusta.** Nel pannello
+   β1 la banda `αptau(Ser396)` di `ΔCT` è **comparabile al WT** mentre la sua banda `αGSK-3β` è
+   **visibilmente più debole** del WT: fosforilazione piena con **meno enzima**. Nel pannello β2
+   `ΔCT` scende **al livello del mock** con banda `αGSK-3β` forte. Quindi la perdita in β2 non è
+   perdita di espressione *e* la tenuta in β1 non è un vantaggio di espressione. 🔴 **Confine:**
+   i due pannelli sono **blot separati** — la figura confronta WT contro ΔCT *dentro* un'isoforma
+   e non autorizza alcun confronto di ampiezza β1-contro-β2.
+4. ⚠️ **Figura 1 non è normalizzata, e conviene saperlo.** Il controllo `αtau` **non è uguale fra
+   le corsie**: nella corsia β1 domina la banda superiore (ritardata) e quella inferiore è
+   impoverita — lo shift di mobilità atteso da tau fortemente fosforilata — mentre mock e β2
+   mostrano entrambe le bande. Nessuna densitometria. La direzione dell'asimmetria corre **contro**
+   la conclusione del paper, non a favore: β1 raggiunge più fosfo-tau su meno substrato non
+   spostato. La conclusione regge; un numero preso da quel pannello no.
+5. ⚠️ **Il controllo APP è «equivalente per segnale totale», non per unità di enzima**: nel
+   pannello inferiore di Figura 2 β2 è espressa almeno quanto β1.
+
+Nessuna di queste sposta lo `statement causale` né l'argomento del sito ATP. Tre spostano un
+numero che era presentato come misura, e uno rafforza il meccanismo. Locator:
+`deepdive_manifests/PMID21212533.json`, voci 5–11.
+
 - **Belief**: **alto** sul dato biochimico (controlli interni di specificità APP e pGS-2, doppio sistema cellule + ricombinante, figure coerenti col testo); **alto** sull'argomento del sito ATP (identità di sequenza); **medio-basso** sulla preferenza di isoforma di WWOX (non misurata).
 - **Esperimento**: invariato e decisivo — **WWOX e WWOXtide³⁸⁸⁻⁴⁰⁷ contro β1 vs β2 in parallelo**, con lettura di pTau S396 **e S404**. Aggiungere `β2ΔCT` come controllo: se WWOX inibisce β1 ≫ β2 e l'effetto su β2 non cambia rimuovendo la CT, la discriminazione è nella tasca di docking e non nella coda.
 - **Interconnessioni**: `DL-MECH-064` · `DL-MECH-066` · `DL-MECH-067` · `DL-BIO-013` · `DIS-009` · [[therapeutic_strategies_current#TX-005 — Repurposing: lithium / GSK3β (and other nodes)|TX-005]] · [[claim_registry_current#CLAIM 016]] · [[full_text_queue_current#FT-027]] · [[full_text_queue_current#FT-028]]

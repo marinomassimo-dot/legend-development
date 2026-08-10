@@ -258,6 +258,31 @@ LEGEND runs in a single session with explicitly declared modes:
 - `MODE: PARALLEL_BRANCH` / `PARALLEL_MERGE` — parallel deep dives on disjoint scopes; merge before commit. *Parallel deep dive yes, parallel commit no.*
 - `MODE: Q&A` — consultation layer, **non-canonical and READ-ONLY** toward the 4 currents. A Q&A answer is not a claim. Always carries the "not medical advice / discuss with the treating clinical team" disclaimer.
 
+### 🔴 A branch carries the manifest; it does not carry the evidence
+
+`files/` is **gitignored for copyright** — the corpus is other people's articles, and this
+repository publishes the derivation and never the derived. One consequence follows and it is
+not obvious: a branch, a worktree, a temporary workspace all carry the *manifest*, and none of
+them carries the artifacts the manifest names. Two actors on two worktrees see the same
+`source_artifacts` block and two different filesystems, only one of which has the file in it.
+
+So: **every evidentiary artifact is written into the `files/` of the shared checkout**, and
+**the validation that counts is the one re-run there** — against that tree, not against
+whatever directory the reading happened to be sitting in. `_safe_repo_path` already refuses to
+resolve an artifact outside its workspace, which is the right refusal: it is what stops a
+reading from being certified against a copy that will not exist tomorrow. Where the manifest is
+authored elsewhere, validate it *with the shared checkout as artifact root* and say so.
+
+This is not hypothetical. `PMID 34831305` was validated `MANIFEST STRICT PASS` in a temporary
+workspace that then evaporated; the manifest survived on its branch, the two figure files did
+not travel with it, and two visual locators spent a day being unverifiable by anyone —
+including the actor that had verified them. A green verdict whose inputs are gone is not a
+verification, it is a memory of one.
+
+> Placement note: when `codex/pmid-42422765-s8` lands, this belongs as the sixth rule of its
+> *One actor, one worktree, one branch* section, which is the same hazard seen from the other
+> side — that section is about who may write, this is about what a write can still not reach.
+
 ### Operational gates
 `current_state: READY` means analytical work can proceed. Commit permission is gated separately in the state manifest:
 - `deep_dive_gate` / `ingest_gate` control read-only and new-source work;

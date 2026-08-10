@@ -306,6 +306,24 @@ razionale di sicurezza di `DL-MECH-067`.
 che gli avevamo attribuito**: misura **un solo sito, Ser396**, e non affronta la selettività di
 sito. Il claim sui *«residui diversi»* è di **Mukai 2002** → `FT-027`. **`Ser404` resta non testato
 per isoforma da chiunque.**
+**Debito di locator — ✅ CHIUSO il 2026-08-10 (`BATCH_20260810_005`).** La lettura del 2026-07-26
+precedeva l'obbligo di locator e il manifest portava una rinuncia dichiarata. Colmarla ha
+richiesto la strada lunga: **il text layer di questo PDF è `SUSPECT` e non esiste alcuna
+superficie XML/HTML** per l'articolo, quindi i **14 locator sono ancorati alla pagina stampata**
+via [`page_adjudications/PMID21212533/adjudications.json`](page_adjudications/PMID21212533/adjudications.json)
+— 11 ritagli, ognuno rigenerabile al proprio digest dal PDF sorgente, otto risolti da un needle
+unico sulla pagina. `regenerate_adjudications.py verify` PASS; manifest schema-2, validatore
+strict PASS, 0 gap. **Perché la superficie è rifiutata invece che riparata:** *«10 μl di tampone
+2×»* si estrae come *«10 ml of 2\x02»* — il segno di moltiplicazione diventa un controllo C0, che
+un sentinella vede, e il micro **sparisce**, che nessun sentinella vede. Un volume sbagliato di
+mille volte in una frase che resta inglese corretto.
+**Cosa ha cambiato aprire le figure** (dettaglio in `discovery_ledger_current#DL-MECH-068`):
+il fattore *«~3–10×»* di Figura 3 **non è una misura** — le due titolazioni non sono appaiate
+(β1 0–3 µg/mL, β2 0–10, nessun massimo comune) e non c'è densitometria: il pannello sostiene
+**≥10× a ispezione**, non un rapporto; Figura 4 marca l'inserto fra **V303 e K304**, contro il
+`K303` di UniProt che questa voce citava (un residuo di differenza, argomento invariato); e
+Figura 5 dice **più** di quanto dicesse il testo — β1ΔCT fosforila tau quanto il WT **con meno
+enzima**, β2ΔCT crolla al livello mock **con banda forte**.
 
 ---
 

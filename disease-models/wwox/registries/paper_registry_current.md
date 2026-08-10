@@ -122,7 +122,7 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **Journal/source:** *EMBO Molecular Medicine* 2021;13(12):e14599
 **Identifier:** PMID 34747138 / PMCID PMC8649866 / DOI 10.15252/emmm.202114599
 **Status:** integrated
-**Evidence depth:** full text reviewed (verified 2026-07-05, retrieved via Europe PMC)
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260810-34747138-01`, JATS XML PMC8649866 (`structured`, sentinella `clean`), 20 locator verificati in `deepdive_manifests/PMID34747138.json` (validatore PASS, 0 gap). Chiude il debito misurato di `FTR-20260809-34747138-02`, che dichiarava discussion/methods/references `not_read` e figures `captions_only`. Prima del 2026-08-10 questo campo diceva *«full text reviewed (verified 2026-07-05, retrieved via Europe PMC)»* — una verifica di metadati e contenuti-chiave, non una lettura integrale con locator.
 **Primary pathway:** P7 — gene therapy readiness
 **Secondary pathway:** P1 / P4
 **Model/species:** mouse
@@ -131,7 +131,18 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **clinical relevance:** HIGH
 **Claim links:** 004
 **Role:** causal strategy anchor
-**Note:** preclinical, but central for trial-readiness logic; now complemented by Obeid 2026. Full text verified 2026-07-05 (retrieved via Europe PMC/PMC MCP; According to PubMed, [DOI](https://doi.org/10.15252/emmm.202114599)) — CC-2026-07-05-001; CLAIM 004 finora derivato da review, ora ancorato a fonte primaria. Dettagli verificati: singola ICV neonatale (P0) AAV9-hSynI-WWOX (murino o umano, equivalenti) recupera sopravvivenza, crescita, ipoglicemia, crisi, atassia, mielinizzazione (OPC→oligodendrociti maturi, g-ratio, corpo calloso+nervo ottico), comportamento e neuroinfiammazione (GFAP/Iba1); restauro neuronale-only → mielinizzazione non-cell-autonoma; gliosi downstream della disfunzione neuronale; ipoglicemia reversibile da restauro CNS-only; durata ≥9 mesi, nessuna leakage periferica. ⚠️ Modello Wwox-null sistemico + P0 → design-principle trasferibili, non dose/timing (genotype caution "alta", the reference genotype compound het N/M). ⚠️ Duplicato corpus **CORPUS-STUB-042/048** (stesso DOI) → mergiare in un prossimo BATCH_COMMIT.
+**Note:** preclinical, but central for trial-readiness logic; now complemented by Obeid 2026. Full text verified 2026-07-05 (retrieved via Europe PMC/PMC MCP; According to PubMed, [DOI](https://doi.org/10.15252/emmm.202114599)) — CC-2026-07-05-001; CLAIM 004 finora derivato da review, ora ancorato a fonte primaria. Dettagli verificati: singola ICV neonatale (P0) AAV9-hSynI-WWOX (murino o umano, equivalenti) recupera sopravvivenza, crescita, ipoglicemia, crisi, atassia, mielinizzazione (OPC→oligodendrociti maturi, g-ratio, corpo calloso+nervo ottico), comportamento e neuroinfiammazione (GFAP/Iba1); restauro neuronale-only → mielinizzazione non-cell-autonoma; gliosi downstream della disfunzione neuronale; ipoglicemia reversibile da restauro CNS-only; durata ≥9 mesi, nessuna leakage periferica. ⚠️ Modello Wwox-null sistemico + P0 → design-principle trasferibili, non dose/timing (genotype caution "alta", the reference genotype compound het N/M).
+**Confini della lettura integrale (2026-08-10, `BATCH_20260810_005`) — tutti dai locator, nessuno inferito:**
+- 🔴 **Il comparatore che manca.** Dove il rescue è confrontato con il **wild type** e non con il null non trattato, gli autori stessi lo dichiarano incompleto: *«there are still some differences between rescued and WT mice which could be attributed to an oligodendrocyte-specific WWOX function in regulating the myelination process»* (Discussion). Nei pannelli di microscopia elettronica **l'unico confronto WT-contro-rescued effettivamente tracciato è il conteggio di assoni non mielinizzati, ed è significativo CONTRO il rescue** (~26 per campo in WT contro ~52 nei trattati, `**`). Nei pannelli dove il rescue appare più forte — assoni mielinizzati per campo, corpo calloso ~130/46/105 e nervo ottico ~140/68/124 — le parentesi corrono **WT-vs-KO** e **KO-vs-rescued**, **mai WT-vs-rescued**: il divario residuo visibile non è testato. Stesso schema nella figura mielinizzazione/OPC: CC1⁺ WT ~170 / KO+GFP ~77 / rescued ~135, PDGFRα⁺ WT ~53 / KO+GFP ~87 / rescued ~70, entrambi i valori trattati **fra** KO e WT e **nessuno dei due testato contro WT**. Il g-ratio, invece, **normalizza**: la nuvola trattata si sovrappone al WT mentre quella KO resta piatta a 0.8–0.95.
+- **Finestra P0, e la ragione dichiarata:** *«The limited life span and poor conditions of Wwox-null mice prompted us to treat these mice very early on in their life (P0)»*; il dosaggio post-natale è **lavoro futuro dichiarato**, non fatto. `REVIVAL_TRIGGER`: un risultato post-natale cambierebbe la lettura dell'intero lavoro. In WOREE la diagnosi segue l'esordio delle crisi di mesi.
+- **Trasduzione 60–70% dei neuroni**, non quasi-totale: l'efficacia è ottenuta con un cervello **parzialmente** trasdotto. **Gli oligodendrociti non sono mai trasdotti** (co-staining CC1/anti-WWOX) — è questo che rende il recupero della mielina **non-cell-autonomo** e non un effetto diretto.
+- **Dose e via, esatte:** ICV neonatale singola, *«Approximately 1 μl (2 × 10¹⁰ GC/hemisphere) virus was dispensed»*, con *«Free-hand intracranial injections»* — a mano libera, non stereotassiche.
+- **n = 3 per genotipo** nella quantificazione EM (*«100 axons per mouse, n = 3 per genotype»*); elettrofisiologia **sotto ketamina/medetomidina** — il contrasto fra gruppi regge, i tassi di scarica assoluti non sono quelli di un cervello sveglio; analisi **in cieco** sul genotipo, dichiarata.
+- **Il rilievo oncologico è un non-segnale in una casistica piccola, e i tre qualificatori SONO il reperto:** *«we did not detect gross tumor formation in the limited number of adult Wwox-null mice treated with AAV9-hSynI-WWOX that we examined (age 8–11 months)»*. WWOX è oncosoppressore e il restauro è solo cerebrale: i tessuti periferici restano null.
+- 🟢 **Controllo positivo per la regola 5d.** Su questa superficie JATS il comparatore sopravvive intatto (*«Results were considered significant when the P < 0.05»*). La stessa frase nel PDF di **PMID 33914858** — stesso primo autore, stesso anno, stesso laboratorio — si estrae come `P 5 0.05`, comparatore distrutto, ed è la ragione per cui [[full_text_queue_current#FT-044]] è sospesa. **La politica riguarda la superficie, non il paper.**
+- **Multi-hop chiuso senza debito:** 62 riferimenti enumerati, 36 gene-directed, **36 su 36 già noti** — la prima volta che accade in questo corpus.
+- **Debito dichiarato:** figure dell'Appendix e review-process file non aggiudicati; `legend-locator-audit` e `legend-hypothesis-forge` sono **dovuti**, non declinati.
+⚠️ Duplicato corpus **CORPUS-STUB-048** (stesso DOI) → risolto in `BATCH_20260810_005`, placeholder conservato append-only. 🔴 **Correzione:** questa nota indicava anche `CORPUS-STUB-042` come duplicato dello stesso DOI. **Non lo è** — `CORPUS-STUB-042` è PMID 35107375 (*WWOX-Mediated Degradation of AMOTp130…*, filovirus VP40), un lavoro diverso. Un placeholder innocente stava per essere assorbito in un altro record.
 
 ---
 
@@ -734,10 +745,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 3
 **Full title:** WWOX-Related Neurodevelopmental Disorders: Models and Future Perspectives
 **Identifier:** PMID 34831305 / DOI 10.3390/cells10113082
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 063]] (BATCH_20260810_005)
+**Registry role:** corpus placeholder only — **conservato append-only come storia di audit, mai cancellato**
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — risolto per promozione
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-004
@@ -1164,10 +1175,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 48
 **Full title:** Neonatal neuronal WWOX gene therapy rescues Wwox null phenotypes
 **Identifier:** PMID 34747138 / DOI 10.15252/emmm.202114599
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — duplicato di [[paper_registry_current#PAPER 005]], che esiste dal 2026-07-05 e ha ricevuto la lettura integrale il 2026-08-10 (BATCH_20260810_005)
+**Registry role:** corpus placeholder only — **conservato append-only come storia di audit, mai cancellato**
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — risolto per promozione
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-049
@@ -6601,3 +6612,26 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Role:** promosso da `CORPUS-STUB-108` (BATCH_20260810_004); il placeholder è conservato append-only. Chiude [[full_text_queue_current#FT-039]].
 **Note:** 🔴 **È il primario che [[paper_registry_current#PAPER 055]] descriveva come *«strong evidence»* per il ponte `WWOX → omeostasi lipidica → mielina`, e la lettura mostra che l'etichetta non si trasferisce.** Il negativo centrale del paper è che **rimuovere *Wwox* dagli epatociti NON abbassa l'HDL circolante**: l'effetto HDL compare solo nel null total-body, misurato in cuccioli di 2 giorni che muoiono entro 4 settimane. Il passo che il primario licenzia davvero è `WWOX → ApoA-I/ABCA1 → biogenesi HDL`, **whole-body e non epatocita-autonomo**. Effect size: ApoA-I proteina −55%/−50% (KO epatico), −80% (KO totale); ABCA1 −50% nei maschi, invariato nelle femmine. 🔴 **La seconda gamba del ponte — `omeostasi lipidica → mielina` — non riceve nulla da qui: il paper non misura alcun endpoint neurale.** `PREMISE_TAG`: ogni inferenza che sia passata da questo nodo alla mielina poggiava su una premessa che questo primario **non contiene**. L'`ESPANSIONE` che resta è più stretta e reale — ApoA-I e ABCA1 sono indipendentemente rilevanti per la gestione lipidica del CNS, quindi il nodo **resta aperto come espansione da testare, non come inferenza sostenuta**. ⚠️ Debito dichiarato: il Supplementary è `unavailable` (cascata documentata; AHA all-rights-reserved) e porta il dato trigliceridi `P=0.0025` da cui parte la storia sesso-specifica; il multi-hop non è stato svolto ([[full_text_queue_current#FT-046]]).
 **Wikilinks:** [[paper_registry_current#CORPUS-STUB-108]] · [[paper_registry_current#PAPER 055]] · [[full_text_queue_current#FT-039]] · [[full_text_queue_current#FT-046]] · [[full_text_queue_current#FT-049]] · [[literature_tracking_log_current#LIT-0128]]
+
+---
+
+## PAPER 063
+**Short title:** Steinberg 2021 — atlante dei modelli WWOX
+**Full title:** WWOX-Related Neurodevelopmental Disorders: Models and Future Perspectives
+**Authors:** Steinberg DJ, Aqeilan RI
+**Year:** 2021
+**Source type:** review narrativa / atlante di modelli — **nessuna coorte sperimentale nuova**
+**Journal/source:** *Cells* 2021;10(11):3082
+**Identifier:** PMID 34831305 / PMCID PMC8623516 / DOI 10.3390/cells10113082
+**Status:** processed
+**Evidence depth:** `complete_fulltext_read` — receipt `FTR-20260810-34831305-03`, JATS XML PMC8623516; manifest `deepdive_manifests/PMID34831305.json` (13 locator, validatore PASS con root sul checkout condiviso); dossier `fulltext_dossiers/PMID34831305.md`. Le 224 citazioni sono state enumerate.
+**Integrity status:** clean
+**Primary pathway:** P3 / P4 / P7 — architettura causale fra modelli
+**Model/species:** ratto; topo globale, ipomorfo, condizionale e cell-targeted; tessuto umano; hNPC/neuroblastoma; organoidi cerebrali, di proencefalo e oligocorticali
+**Genotype/model:** trasversale — nessun allele proprio
+**Transferability:** MODERATE per l'architettura causale, LOW per la traduzione quantitativa
+**clinical relevance:** HIGH come mappa di ricerca; **BACKGROUND come evidenza di claim**
+**Claim links:** none — **è una sintesi, non una replica indipendente dei primari che elenca**
+**Role:** promosso da `CORPUS-STUB-003` (BATCH_20260810_005) via `CC-20260810-34831305-01`; il placeholder è conservato append-only.
+**Note:** 🔴 **Il valore è che il gruppo primario del gene mette più sistemi-modello su una sola mappa causale; il limite è che la lettura non può ereditare lo statuto `DATO` dei primari solo perché li enumera.** Reperti di superficie: sono nominate quattro delezioni cell-targeted (Nestin-Cre, Synapsin-I-Cre, GFAP-Cre, Olig2-Cre) e **solo Nestin e Synapsin ricapitolano il fenotipo null** nell'intervallo riportato; l'accoppiamento neurone→oligodendrocita è riassunto come **difetto di maturazione** (OL maturi ↓, OPC ↑, mielinizzazione ↓); è distinto un compartimento umano **assente o poco sviluppato nei roditori** (glia radiale esterna / oSVZ) mentre WWOX precoce negli organoidi si concentra nella glia radiale ventricolare; l'arricchimento trascrizionale negli organoidi WWOX-KO (trasporto elettronico ATP-linked, OXPHOS, glicolisi/gluconeogenesi, ciclo cellulare, regionalizzazione Wnt) è **programma di espressione, non misura di flusso**. 🔴 **Tre tensioni registrate, non appianate.** (1) *Inflazione di sintesi:* la review descrive il litio come soppressore delle crisi da PTZ **nel contesto KO**; l'audit d'immagine già persistito del primario PMID 32000863 mostra la soppressione nei pannelli **WT, eterozigote e KO** — quindi **non può sostenere un rescue farmacologico WWOX-specifico** (vedi [[claim_registry_current#CLAIM 016]]). (2) *«Efficient and safe» eccede l'evidenza:* non ci sono dati umani né esperimenti formali di sicurezza in questa fonte; è un'ipotesi di design preclinico. (3) *Compressione dei modelli:* Tabella 1 e Figura 2 collassano ceppi distinti, modelli cell-targeted e bracci negativi, il che migliora la leggibilità e oscura **quale modello sostenga quale affermazione causale**. ⚠️ Debito: figure servite dalla CDN PMC a 757×434 e 772×550 contro originali dichiarati nell'XML di 4542×2601 e 4248×3026 — **artefatti scalati**, ispezionati ai pixel nativi perché leggibili; le rotte `/bin/` e il pacchetto OA hanno restituito HTTP 404. **Assenza del supplementary dedotta** dalla struttura XML completa, non da una dichiarazione dell'editore.
+**Wikilinks:** [[paper_registry_current#CORPUS-STUB-003]] · [[paper_registry_current#PAPER 004]] · [[paper_registry_current#PAPER 005]] · [[claim_registry_current#CLAIM 003]] · [[claim_registry_current#CLAIM 004]] · [[claim_registry_current#CLAIM 016]] · [[full_text_queue_current#FT-049]] · [[literature_tracking_log_current#LIT-0030]]

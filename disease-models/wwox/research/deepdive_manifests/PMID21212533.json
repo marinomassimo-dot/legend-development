@@ -1,135 +1,393 @@
 {
-  "pmid": "21212533",
-  "doi": "10.1248/bpb.34.146",
-  "receipt": "FTR-20260726-21212533-01",
-  "group_assessment": {
-    "total_publications": 259,
-    "publications_on_gene": 0,
-    "research_type": "adjacent_method_expert",
-    "research_type_basis": "Senior author Tanuma S (Dept of Biochemistry + Genome & Drug Research Center, Tokyo University of Science) has 259 PubMed records and exactly ONE on GSK (this paper), ZERO on WWOX. First author Saeki K has 2 on GSK. Methods are wet-lab and competent but standard: HEK293T co-expression, SDS-PAGE/Western, luminescent ATP-depletion kinase assay (Kinase-Glo), radiometric [gamma-32P]ATP in-vitro phosphorylation, deletion-mutant construction. No structural work, no neuronal model, no in-vivo work. This is a biochemistry lab making a single, well-controlled excursion into GSK-3 isoform biology.",
-    "is_primary_group_for_disease": false,
-    "method": "NCBI eutils esearch counts, 2026-07-26: 'Tanuma S[au]' 259; 'Tanuma S[au] AND GSK' 1; 'Tanuma S[au] AND WWOX' 0; 'Saeki K[au] AND GSK' 2. Initial-form Japanese author names carry HIGH ambiguity; counts bound magnitude, they do not identify individuals.",
-    "performed_during_run": true,
-    "weighting": "The Saadane asymmetry applies in its favourable direction, and more cleanly than in either prior case. A laboratory with ZERO prior investment in GSK-3 isoform biology has no position to defend, so the OBSERVATION is strong as independent evidence. Normally the INTERPRETATION would be correspondingly weak from domain inexperience — but here it is unusually well protected, because the authors built two internal specificity controls into the design rather than asserting specificity: APP-Thr668 phosphorylation in cells (equivalent between isoforms) and pGS-2 peptide kinase activity in vitro (equivalent, and quantified: 234.5+-7.8 vs 246.5+-2.4 nmol/min/mg). Those controls convert 'beta2 is a weaker kinase' into 'tau specifically is an unfavourable substrate for beta2', which is a much stronger and much harder claim to reach by accident. Contrast with PMID 22193544, where the WWOX framing came from the field's founder and the interpretation was the stronger half: here the reverse holds — the data carry the weight, and the authors' own mechanistic proposal (CT higher-order structure) is explicitly offered as a hypothesis requiring a structure that does not exist."
-  },
-  "field_density": {
-    "queries": [
-      {
-        "query": "\"GSK-3beta2\" OR \"GSK3B2\" OR \"GSK-3β2\"",
-        "count": 6
-      },
-      {
-        "query": "GSK3B AND \"splice variant\" AND tau",
-        "count": 1
-      },
-      {
-        "query": "WWOX AND GSK3B",
-        "count": 4
-      },
-      {
-        "query": "WWOX AND (\"splice variant\" OR isoform) AND GSK3",
-        "count": 0
-      }
-    ],
-    "verdict": "Six records in all of PubMed on the neuron-specific isoform itself. The isoform that Castano 2010 reports is REQUIRED for axon growth, that is enriched in growth cones, and that peaks in the developing brain, has been studied by essentially nobody. And the intersection this deep dive actually proposes — WWOX x GSK3 isoform — returns ZERO. That is the strongest emptiness measured in this model so far: not a contested question, an unasked one. Practical consequence: the decisive experiment (WWOX and WWOXtide against beta1 vs beta2 in parallel) has no competitor and no prior art to reconcile with.",
-    "performed_during_run": true
-  },
-  "multihop": {
-    "gene_direct_refs_in_source": [
-      "ref 4 — Mukai F, Ishiguro K, Sano Y, Fujita SC 2002, J Neurochem 81:1073-1083 — the source of the CNS distribution of beta2 AND, per the PMC3139124 review's citation, the source of the DIFFERENT-SITES claim that this session had wrongly attributed to Saeki",
-      "ref 5 — Wood-Kaczmar A, Kraus M, Ishiguro K, Philpott KL, Gordon-Weeks PR 2009, Mol Cell Neurosci 42:184-194 — beta2 targeted to growing neurites and growth cones; SAME LAB as Castano 2010 (Gordon-Weeks)",
-      "refs 13-24 — the twelve GSK-3beta crystal structures in which the C-terminal tail is INVISIBLE due to flexibility; load-bearing for why no beta2 structure exists",
-      "ref 10 — Aplin et al. 1996 — APP Thr668 as a GSK-3beta site, basis of the specificity control"
-    ],
-    "resolved": [
-      "ref 4 — PMID 12065620 — queued FT-027 (HIGH: corrects a misattribution made by this session)",
-      "ref 5 — PMID 19607922 — queued FT-028 (HIGH: growth-cone localisation, same lab as FT-022)"
-    ],
-    "queued": [
-      "FT-027",
-      "FT-028"
-    ],
-    "references_enumerated": 24,
-    "note": "Reference list enumerated during the run (24 numbered references, verified against the extracted text). Two gene-adjacent sources resolved to PMID, deduplicated against registries and queued. Both were unknown to the model. Refs 13-24 are structural papers not queued individually: their load-bearing content (the CT is unresolved in every published GSK-3beta crystal) is already extracted and recorded, and queueing twelve structures to re-derive one negative fact would be ceremony. That is a declared choice, not an oversight."
-  },
-  "corpus_crossquery": {
-    "query": "GSK3B2 / GSK-3β2 / GSK3 isoform / K303 / β1:β2 across disease-models/wwox/ excluding the ledgers written earlier today",
-    "hits": 0,
-    "verdict": "ZERO. Five files reason about GSK3beta — meta_index, meta_prenatal_structure, meta_network_myelin_glia, therapeutic_strategies (TX-005), claim_registry (CLAIM 016) — and every one of them treats it as a SINGLE enzyme. The distinction between a tau-phosphorylating, differentiation-blocking isoform and a growth-cone-enriched, axon-growth-promoting one is absent from the model, including from the file that scores lithium. This is not a gap in coverage, it is a category error propagated across the reasoning layer, and it was invisible until the reference list of PMID 22193544 was finally enumerated."
-  },
-  "retraction_check": {
-    "method": "python3 .claude/skills/legend-study-intake-triage/scripts/retraction_check.py --pmids 21212533,12065620,19607922 --all --json — EXECUTED this run, covering the source and both newly queued multi-hop targets",
-    "result": "all three OK — no retraction, no Expression of Concern, no correction notice",
-    "honesty_note": "Checked pre-emptively for the two queued papers as well, so a future session inherits the check instead of repeating it."
-  },
-  "landing": [
-    "DL-MECH-066",
-    "DL-MECH-067",
-    "DL-MECH-068",
-    "DL-BIO-013",
-    "FT-026",
-    "FT-027",
-    "FT-028"
+ "pmid": "21212533",
+ "doi": "10.1248/bpb.34.146",
+ "receipt": "FTR-20260726-21212533-01",
+ "group_assessment": {
+  "total_publications": 259,
+  "publications_on_gene": 0,
+  "research_type": "adjacent_method_expert",
+  "research_type_basis": "Senior author Tanuma S (Dept of Biochemistry + Genome & Drug Research Center, Tokyo University of Science) has 259 PubMed records and exactly ONE on GSK (this paper), ZERO on WWOX. First author Saeki K has 2 on GSK. Methods are wet-lab and competent but standard: HEK293T co-expression, SDS-PAGE/Western, luminescent ATP-depletion kinase assay (Kinase-Glo), radiometric [gamma-32P]ATP in-vitro phosphorylation, deletion-mutant construction. No structural work, no neuronal model, no in-vivo work. This is a biochemistry lab making a single, well-controlled excursion into GSK-3 isoform biology.",
+  "is_primary_group_for_disease": false,
+  "method": "NCBI eutils esearch counts, 2026-07-26: 'Tanuma S[au]' 259; 'Tanuma S[au] AND GSK' 1; 'Tanuma S[au] AND WWOX' 0; 'Saeki K[au] AND GSK' 2. Initial-form Japanese author names carry HIGH ambiguity; counts bound magnitude, they do not identify individuals.",
+  "performed_during_run": true,
+  "weighting": "The Saadane asymmetry applies in its favourable direction, and more cleanly than in either prior case. A laboratory with ZERO prior investment in GSK-3 isoform biology has no position to defend, so the OBSERVATION is strong as independent evidence. Normally the INTERPRETATION would be correspondingly weak from domain inexperience — but here it is unusually well protected, because the authors built two internal specificity controls into the design rather than asserting specificity: APP-Thr668 phosphorylation in cells (equivalent between isoforms) and pGS-2 peptide kinase activity in vitro (equivalent, and quantified: 234.5+-7.8 vs 246.5+-2.4 nmol/min/mg). Those controls convert 'beta2 is a weaker kinase' into 'tau specifically is an unfavourable substrate for beta2', which is a much stronger and much harder claim to reach by accident. Contrast with PMID 22193544, where the WWOX framing came from the field's founder and the interpretation was the stronger half: here the reverse holds — the data carry the weight, and the authors' own mechanistic proposal (CT higher-order structure) is explicitly offered as a hypothesis requiring a structure that does not exist."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "\"GSK-3beta2\" OR \"GSK3B2\" OR \"GSK-3β2\"",
+    "count": 6
+   },
+   {
+    "query": "GSK3B AND \"splice variant\" AND tau",
+    "count": 1
+   },
+   {
+    "query": "WWOX AND GSK3B",
+    "count": 4
+   },
+   {
+    "query": "WWOX AND (\"splice variant\" OR isoform) AND GSK3",
+    "count": 0
+   }
   ],
-  "skills_considered": [
-    {
-      "skill": "legend-session-self-eval",
-      "used": true,
-      "reason": "Part 1 executed before writing anything, per the order the protocol mandates."
-    },
-    {
-      "skill": "legend-study-intake-triage",
-      "used": true,
-      "reason": "Receipt preflight (status --pmid 21212533, exit 1) plus queue match: the paper was already tracked as FT-026, so no duplicate intake was created."
-    },
-    {
-      "skill": "find-fulltext",
-      "used": false,
-      "reason": "Not invoked as a skill, but its tier logic was followed and the outcome recorded: Europe PMC fullTextUrlList flagged a Free PDF on J-STAGE, downloaded and validated by magic bytes (%PDF-1.3, 4 pages, matching pages 146-149). The 'no text layer' first impression was a false alarm from reading raw compressed streams; pypdf extracted 21234 characters."
-    },
-    {
-      "skill": "legend-discovery",
-      "used": false,
-      "reason": "Not invoked as a skill, but its OUTPUT contract was honoured this time: findings were appended directly to discovery_ledger_current.md rather than parked in staging, which is the defect the PMID 22193544 self-evaluation identified and this run was explicitly meant not to repeat."
-    },
-    {
-      "skill": "legend-batch-inferential-sweep",
-      "used": false,
-      "reason": "One paper is not a batch; the sweep is a whole-batch obligation and would produce a single degenerate row."
-    },
-    {
-      "skill": "legend-proband-priority-matrix",
-      "used": false,
-      "reason": "The paper's priority was already fixed as HIGH when it was queued as FT-026 by the preceding deep dive; re-ranking a single pre-prioritised item adds no information."
-    },
-    {
-      "skill": "legend-hypothesis-forge",
-      "used": false,
-      "reason": "Deliberately deferred. The decisive measurement (WWOX vs beta1/beta2) does not exist, so forging a hypothesis portfolio on top of an unmeasured premise would manufacture depth. One mechanistic lead (DL-MECH-068) is recorded with its premise exposed instead."
-    },
-    {
-      "skill": "legend-safety-triage",
-      "used": false,
-      "reason": "No molecule is promoted. The finding CONSTRAINS an existing candidate (TX-005 lithium) rather than proposing a new compound, so an ADMET profile would answer a question nobody asked."
-    },
-    {
-      "skill": "legend-paperqa",
-      "used": false,
-      "reason": "External API traffic requires operator authorisation; the targeted open-access substitution was done with direct retrieval and sentence-level extraction, recorded as its own queried_not_full_read receipt."
-    },
-    {
-      "skill": "legend-commit",
-      "used": false,
-      "reason": "Correctly not invoked: still below the five-candidate threshold, no weekly trigger, no urgent category. Canonical propagation of CLAIM 016 remains a separate BATCH_COMMIT decision."
-    },
-    {
-      "skill": "legend-session-takeaways",
-      "used": true,
-      "reason": "Closing synthesis, after the self-evaluation rather than before it."
-    }
+  "verdict": "Six records in all of PubMed on the neuron-specific isoform itself. The isoform that Castano 2010 reports is REQUIRED for axon growth, that is enriched in growth cones, and that peaks in the developing brain, has been studied by essentially nobody. And the intersection this deep dive actually proposes — WWOX x GSK3 isoform — returns ZERO. That is the strongest emptiness measured in this model so far: not a contested question, an unasked one. Practical consequence: the decisive experiment (WWOX and WWOXtide against beta1 vs beta2 in parallel) has no competitor and no prior art to reconcile with.",
+  "performed_during_run": true
+ },
+ "multihop": {
+  "gene_direct_refs_in_source": [
+   "ref 4 — Mukai F, Ishiguro K, Sano Y, Fujita SC 2002, J Neurochem 81:1073-1083 — the source of the CNS distribution of beta2 AND, per the PMC3139124 review's citation, the source of the DIFFERENT-SITES claim that this session had wrongly attributed to Saeki",
+   "ref 5 — Wood-Kaczmar A, Kraus M, Ishiguro K, Philpott KL, Gordon-Weeks PR 2009, Mol Cell Neurosci 42:184-194 — beta2 targeted to growing neurites and growth cones; SAME LAB as Castano 2010 (Gordon-Weeks)",
+   "refs 13-24 — the twelve GSK-3beta crystal structures in which the C-terminal tail is INVISIBLE due to flexibility; load-bearing for why no beta2 structure exists",
+   "ref 10 — Aplin et al. 1996 — APP Thr668 as a GSK-3beta site, basis of the specificity control"
   ],
-  "correction_made_this_run": "This run CORRECTED an attribution error made by the preceding one. The PMID 22193544 session recorded, from the secondary review PMC3139124, that beta2 phosphorylates tau 'on different, partly overlapping residues' and treated Saeki 2011 as the primary source for it. Reading Saeki 2011 in full shows it tested ONE site only — Ser396 — and never addressed site selectivity. The different-sites claim traces to Mukai 2002 (PMID 12065620), still unread and now queued as FT-027. Verifying a secondary source at the primary is exactly what surfaced this, and Ser404 — the other site that matters in PMID 22193544 — remains untested by anyone.",
-  "verbatim_locators": {
-    "waived": "locators were not captured at reading time: this reading predates the requirement, introduced 2026-08-04 after an external export found that no verbatim locator existed anywhere in the canonical state. Extraction from the retained artefact is queued and does not require re-reading; the debt is declared here rather than left silent."
+  "resolved": [
+   "ref 4 — PMID 12065620 — queued FT-027 (HIGH: corrects a misattribution made by this session)",
+   "ref 5 — PMID 19607922 — queued FT-028 (HIGH: growth-cone localisation, same lab as FT-022)"
+  ],
+  "queued": [
+   "FT-027",
+   "FT-028"
+  ],
+  "references_enumerated": 24,
+  "note": "Reference list enumerated during the run (24 numbered references, verified against the extracted text). Two gene-adjacent sources resolved to PMID, deduplicated against registries and queued. Both were unknown to the model. Refs 13-24 are structural papers not queued individually: their load-bearing content (the CT is unresolved in every published GSK-3beta crystal) is already extracted and recorded, and queueing twelve structures to re-derive one negative fact would be ceremony. That is a declared choice, not an oversight."
+ },
+ "corpus_crossquery": {
+  "query": "GSK3B2 / GSK-3β2 / GSK3 isoform / K303 / β1:β2 across disease-models/wwox/ excluding the ledgers written earlier today",
+  "hits": 0,
+  "verdict": "ZERO. Five files reason about GSK3beta — meta_index, meta_prenatal_structure, meta_network_myelin_glia, therapeutic_strategies (TX-005), claim_registry (CLAIM 016) — and every one of them treats it as a SINGLE enzyme. The distinction between a tau-phosphorylating, differentiation-blocking isoform and a growth-cone-enriched, axon-growth-promoting one is absent from the model, including from the file that scores lithium. This is not a gap in coverage, it is a category error propagated across the reasoning layer, and it was invisible until the reference list of PMID 22193544 was finally enumerated."
+ },
+ "retraction_check": {
+  "method": "python3 .claude/skills/legend-study-intake-triage/scripts/retraction_check.py --pmids 21212533,12065620,19607922 --all --json — EXECUTED this run, covering the source and both newly queued multi-hop targets",
+  "result": "all three OK — no retraction, no Expression of Concern, no correction notice",
+  "honesty_note": "Checked pre-emptively for the two queued papers as well, so a future session inherits the check instead of repeating it."
+ },
+ "landing": [
+  "DL-MECH-066",
+  "DL-MECH-067",
+  "DL-MECH-068",
+  "DL-BIO-013",
+  "FT-026",
+  "FT-027",
+  "FT-028"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-session-self-eval",
+   "used": true,
+   "reason": "Part 1 executed before writing anything, per the order the protocol mandates."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "Receipt preflight (status --pmid 21212533, exit 1) plus queue match: the paper was already tracked as FT-026, so no duplicate intake was created."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not invoked as a skill, but its tier logic was followed and the outcome recorded: Europe PMC fullTextUrlList flagged a Free PDF on J-STAGE, downloaded and validated by magic bytes (%PDF-1.3, 4 pages, matching pages 146-149). The 'no text layer' first impression was a false alarm from reading raw compressed streams; pypdf extracted 21234 characters."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Not invoked as a skill, but its OUTPUT contract was honoured this time: findings were appended directly to discovery_ledger_current.md rather than parked in staging, which is the defect the PMID 22193544 self-evaluation identified and this run was explicitly meant not to repeat."
+  },
+  {
+   "skill": "legend-batch-inferential-sweep",
+   "used": false,
+   "reason": "One paper is not a batch; the sweep is a whole-batch obligation and would produce a single degenerate row."
+  },
+  {
+   "skill": "legend-proband-priority-matrix",
+   "used": false,
+   "reason": "The paper's priority was already fixed as HIGH when it was queued as FT-026 by the preceding deep dive; re-ranking a single pre-prioritised item adds no information."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Deliberately deferred. The decisive measurement (WWOX vs beta1/beta2) does not exist, so forging a hypothesis portfolio on top of an unmeasured premise would manufacture depth. One mechanistic lead (DL-MECH-068) is recorded with its premise exposed instead."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is promoted. The finding CONSTRAINS an existing candidate (TX-005 lithium) rather than proposing a new compound, so an ADMET profile would answer a question nobody asked."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "External API traffic requires operator authorisation; the targeted open-access substitution was done with direct retrieval and sentence-level extraction, recorded as its own queried_not_full_read receipt."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Correctly not invoked: still below the five-candidate threshold, no weekly trigger, no urgent category. Canonical propagation of CLAIM 016 remains a separate BATCH_COMMIT decision."
+  },
+  {
+   "skill": "legend-session-takeaways",
+   "used": true,
+   "reason": "Closing synthesis, after the self-evaluation rather than before it."
   }
+ ],
+ "correction_made_this_run": "This run CORRECTED an attribution error made by the preceding one. The PMID 22193544 session recorded, from the secondary review PMC3139124, that beta2 phosphorylates tau 'on different, partly overlapping residues' and treated Saeki 2011 as the primary source for it. Reading Saeki 2011 in full shows it tested ONE site only — Ser396 — and never addressed site selectivity. The different-sites claim traces to Mukai 2002 (PMID 12065620), still unread and now queued as FT-027. Verifying a secondary source at the primary is exactly what surfaced this, and Ser404 — the other site that matters in PMID 22193544 — remains untested by anyone.",
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "source_fulltext_indexed_evidence": "No PMCID and no open structured deposit. Europe PMC lists a Free PDF on J-STAGE and nothing else; there is no XML or HTML surface for this article anywhere, which under rule 5d puts it in the different class the rule requires to be declared rather than discovered a third time.",
+  "abstract_anchoring_waived": "No locator is abstract-anchored and none could be. Every proposition below is either a panel reading or a bound on one — the unequal total-tau control, the unmatched titration series, the residue labels, the within-panel scope of the deletion experiment, the authors' own hypothesis marker. An abstract carries none of that.",
+  "unverifiable_reason": "The text layer of files/fulltext/PMID21212533_Saeki2011.pdf is SUSPECT and is refused, correctly. It carries U+0002 for the multiplication sign and U+0003 for plus-minus, and it silently drops the micro sign, so 'means ± S.E.' extracts as 'means\\x03S.E.' and '10 μl' extracts as '10 ml'. Roughly the same split rule 5d measured across the corpus: the visible half a sentinel catches, the printable half it never will. There is no structured surface to fall back to, so all fifteen locators are anchored to the printed page — each inside a crop that regenerates to its declared digest from the source PDF, and each text locator through a needle unique on its page. The needles are searched in the corrupt text layer on purpose: a needle is a coordinate, not a quotation, and the evidence is the crop.",
+  "entries": [
+   {
+    "proposition": "The core measurement, read from the panel: in HEK293T cells co-expressing tau, GSK-3beta1 produces a strong ptau-Ser396 band and GSK-3beta2 produces one barely above mock, while the lower panel shows both variants abundantly expressed and beta2 if anything the more abundant of the two.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 1, three panels (aptau Ser396 / atau / aGSK-3b), lanes mock | GSK-3b1 | GSK-3b2.",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID21212533/p02_fig1_tau_ser396.png",
+    "anchor": "Figure 1 and its caption, page 147, adjudicated at 500 dpi from the rendered page"
+   },
+   {
+    "proposition": "READ FROM THE PANEL, and it matters for how far the figure can be pushed: the total-tau control is NOT equal across lanes. In the beta1 lane the upper (retarded) tau band dominates and the lower band is depleted, the mobility shift expected of heavily phosphorylated tau, while mock and beta2 show both bands. There is no densitometry and no normalisation anywhere in this figure. The asymmetry runs AGAINST the paper's conclusion rather than with it — beta1 reaches more phospho-tau on less unshifted substrate — so the direction is safe; a fold-figure taken off this panel is not.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 1 middle panel (atau): mock and GSK-3b2 lanes show two bands of comparable intensity; the GSK-3b1 lane shows the upper band dominant and the lower band faint.",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID21212533/p02_fig1_tau_ser396.png",
+    "anchor": "Figure 1, middle panel, page 147, adjudicated at 500 dpi"
+   },
+   {
+    "proposition": "The internal specificity control, and the reason 'beta2 is a weak kinase' is refused: both variants phosphorylate APP at Thr668 to a similar level, with total APP equal across lanes. One qualification the panel adds and the sentence does not: the aGSK-3b panel shows beta2 expressed at least as strongly as beta1, so 'similar' is similar by total signal, not per unit of enzyme.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 2, three panels (apAPP Thr668 / aAPP / aGSK-3b), lanes mock | GSK-3b1 | GSK-3b2.",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID21212533/p02_fig2_app_thr668.png",
+    "anchor": "Figure 2 and its caption, page 147, adjudicated at 500 dpi"
+   },
+   {
+    "proposition": "POSITIVE CONTROL FOR RULE 5d, in the one class of damage no control character can catch. The printed page reads '10 microlitres of 2x SDS-PAGE sample buffer'. The extracted text layer of this PDF reads '10 ml of 2\\x02 SDS-PAGE sample buffer': the multiplication sign became a C0 control, which a sentinel can see, and the micro sign was dropped outright, which no sentinel can see — leaving a volume wrong by a factor of a thousand in a sentence that still parses as English. This is why the surface is refused rather than repaired.",
+    "snippet": "The reaction was stopped by adding 10 μl of 2× SDS-PAGE sample buffer to each sample.",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID21212533/p02_methods_volume_and_2x.png",
+    "anchor": "Materials and Methods, 'In Vitro Phosphorylation of Tau', page 147, left column",
+    "page_anchor": {
+     "page": 2,
+     "crop_pdf_points": [
+      45,
+      540,
+      295,
+      572
+     ],
+     "dpi": 500,
+     "needle": "SDS-PAGE sample buffer to each",
+     "image_sha256": "417de0a62b841e38fcf30de114064f52b942fd92986a7e1f2d25e7efea110a6f",
+     "source_pdf_sha256": "790f602006a341c043357c6931be5b7c47a82f39851a30b980ae3dd8d592dca7"
+    }
+   },
+   {
+    "proposition": "The authors' own formulation of the discrimination, and the one this model carries forward: not that beta2 is a poor kinase, but that tau is a poor substrate FOR beta2.",
+    "snippet": "showed that both GSK-3β1 and -3β2 phosphorylated APP at Thr668, and that the phosphorylation levels were similar each other (Fig. 2). These results reveal that tau is an unfavorable substrate of GSK-3β2.",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID21212533/p02_unfavorable_substrate.png",
+    "anchor": "Results, 'The Phosphorylation Activities of GSK-3β1 and -3β2 to Tau and APP in Cells', page 147, right column",
+    "page_anchor": {
+     "page": 2,
+     "crop_pdf_points": [
+      300,
+      550,
+      552,
+      580
+     ],
+     "dpi": 500,
+     "needle": "were similar each other (Fig. 2)",
+     "image_sha256": "dce965210972ba4c1feab2752e86b71f169c2b51ce3d0645c218f9a345ccf49e",
+     "source_pdf_sha256": "790f602006a341c043357c6931be5b7c47a82f39851a30b980ae3dd8d592dca7"
+    }
+   },
+   {
+    "proposition": "The quantified half of the specificity argument, and the reason 'beta2 is a weak kinase' cannot stand: on the synthetic peptide pGS-2 the two isoforms are equally active, and beta2 is marginally the HIGHER of the two — 246.5 against 234.5 nmol/min/mg. Means +/- S.E. of three independent experiments; the table states no test and reports no p-value, so 'equivalent' here means overlapping, not tested. Both plus-minus signs are C0 control characters in the extracted text layer, which is why this is adjudicated on the page and not quoted from it.",
+    "snippet": "Kinase activity (nmol/min/mg)\nGSK-3β1 234.5±7.8\nGSK-3β2 246.5±2.4",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_table1_pGS2_kinase_activity.png",
+    "anchor": "Table 1, page 148, both rows and the column header, with the footnote 'The results are shown by means±S.E. of three independent experiments'",
+    "page_anchor": {
+     "page": 3,
+     "crop_pdf_points": [
+      42,
+      58,
+      295,
+      165
+     ],
+     "dpi": 500,
+     "needle": "234.5",
+     "image_sha256": "51d7d56c6571b5f3d14eb050eaae8b4d3238feb9943ff1a8328d13ba172f4abd",
+     "source_pdf_sha256": "790f602006a341c043357c6931be5b7c47a82f39851a30b980ae3dd8d592dca7"
+    }
+   },
+   {
+    "proposition": "READ FROM THE PANEL — the in-vitro titration. Recombinant beta1 gives a detectable 32P-tau band at 1 microgram/mL and a strong one at 3; recombinant beta2 gives nothing at 0.3, 1 or 3 and a moderate band only at 10.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 3 upper panel (32P-tau autoradiograph): GSK-3b1 lanes 0 / 0.1 / 0.3 / 1 / 3 microgram/mL, signal from 1; GSK-3b2 lanes 0 / 0.3 / 1 / 3 / 10, signal at 10.",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_fig3_invitro_titration.png",
+    "anchor": "Figure 3, upper panel, page 148, adjudicated at 500 dpi"
+   },
+   {
+    "proposition": "🔴 BOUNDARY ON ANY FOLD-FIGURE TAKEN FROM FIGURE 3, and it corrects a number this model already carries. The two titration series are NOT matched: beta1 runs 0-0.1-0.3-1-3 and beta2 runs 0-0.3-1-3-10, so there is no shared top concentration and beta1 was never tested at 10. The lower aGSK-3b panel confirms enzyme only in the top lane or two of each series, so it is a presence check, not an equal-input control. There is no densitometry and the figure is 'representative of three independent experiments'. What the panel supports is beta1-at-1 versus beta2-at-10, i.e. of the order of ten-fold and plausibly more; what it cannot support is a measured ratio. DL-MECH-068 records '~3-10x', which reads as a measurement and is a visual estimate whose lower bound is wrong.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 3: the two concentration rows differ (GSK-3b1 tops out at 3 microgram/mL, GSK-3b2 at 10); lower panel shows aGSK-3b signal only in the highest lanes.",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_fig3_invitro_titration.png",
+    "anchor": "Figure 3, both panels and the concentration row, page 148, adjudicated at 500 dpi"
+   },
+   {
+    "proposition": "🔴 THE POSITION OF THE INSERT, READ FROM THE AUTHORS' OWN SCHEMATIC, and it disagrees with the third-party number this model recorded. Figure 4 marks the 13-amino-acid insert between residues labelled V303 and K304, gives the beta1 CT as 380-420 and the beta2 CT as 393-433, and the caption states the CT sequence is identical between the two. DL-MECH-068 cites UniProt P49841 VSP_004790 as 'K303', i.e. the lysine at 303 rather than at 304 — a one-residue disagreement in numbering convention between the primary figure and the database entry. Nothing load-bearing moves: on either numbering the insert sits four to five residues downstream of H299, immediately adjacent to the Axin/GID docking surface (G262-L273 + N285-H299) that WWOX binds, and far from the identical ATP site. The number should not be quoted as though the two sources agreed.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 4: two domain bars. The GSK-3b1 bar ends 380 | 420 with a CT box; the GSK-3b2 bar ends 393 | 433 with a CT box and a black insert; the insertion point carries the labels V303 and K304; caption: 'The sequence of CT is identical between GSK-3b1 and GSK-3b2.'",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_fig4_schematic_insert.png",
+    "anchor": "Figure 4 and its caption, page 148, adjudicated at 600 dpi (embedded raster is 4042 px over 242.5 pt, ~1200 ppi native; the residue labels are legible well below that)"
+   },
+   {
+    "proposition": "READ FROM THE PANEL — the deletion experiment, and the expression control makes it stronger than the sentence does. Left panel (beta1): ptau-Ser396 in the deltaCT lane is comparable to WT, while its aGSK-3b band is visibly WEAKER than WT — full tau phosphorylation at lower enzyme. Right panel (beta2): ptau-Ser396 in the deltaCT lane falls to about the mock level while its aGSK-3b band is strong. So the loss in beta2 is not loss of expression, and the retention in beta1 is not an expression advantage. 🔴 The two panels are separate blots: this figure compares WT with deltaCT WITHIN an isoform and licenses no beta1-versus-beta2 magnitude.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. 5: two boxed panel pairs, GSK-3b1 (Mock | WT | dCT) and GSK-3b2 (Mock | WT | dCT), each with aptau(Ser396) above and aGSK-3b below; * marks endogenous GSK-3b.",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_fig5_deltaCT.png",
+    "anchor": "Figure 5 and its caption, page 148, adjudicated at 500 dpi"
+   },
+   {
+    "proposition": "Why no structure can settle the mechanism: the C-terminal tail is unresolved in every published GSK-3beta crystal structure, refs 13-24. This is the load-bearing negative behind 'no beta2 structure exists'.",
+    "snippet": "we focused on the C-terminal tail (CT) consisting of 40 amino acid residues, whose structure in GSK-3β1 has been invisible in all crystal structures because of its flexibility.",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_CT_invisible_in_crystal_structures.png",
+    "anchor": "Results, 'The Lower Tau Phosphorylation Activity of GSK-3β2 Is Due to Its Weak Interaction of C-Terminal Tail with Tau', page 148, left column",
+    "page_anchor": {
+     "page": 3,
+     "crop_pdf_points": [
+      42,
+      483,
+      295,
+      524
+     ],
+     "dpi": 500,
+     "needle": "has been invisible in all crystal structures",
+     "image_sha256": "158d56a22dd1c5baaecc415700eb157437c8b85bfa1db4901a2596d69aaa0701",
+     "source_pdf_sha256": "790f602006a341c043357c6931be5b7c47a82f39851a30b980ae3dd8d592dca7"
+    }
+   },
+   {
+    "proposition": "The deletion result in the authors' own words, and the asymmetry stated plainly.",
+    "snippet": "Importantly, GSK-3β2ΔCT almost lost the phosphorylation activity to tau. In contrast, the deletion of CT from GSK-3β1 slightly reduced the tau phosphorylation activity.",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_deltaCT_results.png",
+    "anchor": "Results, same section, page 148, left column",
+    "page_anchor": {
+     "page": 3,
+     "crop_pdf_points": [
+      42,
+      594,
+      295,
+      640
+     ],
+     "dpi": 500,
+     "needle": "activity to tau. In contrast, the deletion",
+     "image_sha256": "ab97b138b613694096534e4a3ed3d3f5cbc98bca5f2648befbad4d8118f59620",
+     "source_pdf_sha256": "790f602006a341c043357c6931be5b7c47a82f39851a30b980ae3dd8d592dca7"
+    }
+   },
+   {
+    "proposition": "The conclusion this model carries into DL-MECH-068: the same 40-residue tail is indispensable to one isoform and dispensable to the other.",
+    "snippet": "These results suggest that CT is indispensable for the tau phosphorylation activity of GSK-3β2, although CT is not essential for that of GSK-3β1.",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_CT_indispensable_no_structure.png",
+    "anchor": "Discussion, page 148, right column",
+    "page_anchor": {
+     "page": 3,
+     "crop_pdf_points": [
+      300,
+      528,
+      552,
+      674
+     ],
+     "dpi": 500,
+     "needle": "CT is indispensable for the tau",
+     "image_sha256": "b9a98f298be42603d18e6a91ef2e21a957d0cd2f593cb79f152501653d1fb149",
+     "source_pdf_sha256": "790f602006a341c043357c6931be5b7c47a82f39851a30b980ae3dd8d592dca7"
+    }
+   },
+   {
+    "proposition": "PREMISE_TAG on the structural mechanism. The higher-order-structure explanation is the authors' hypothesis and they say so, naming the experiment that would settle it and recording that it cannot be done: no GSK-3beta2 structure exists.",
+    "snippet": "To elucidate the precise molecular mechanism of the interaction of CT in GSK-3β2 with tau, the structural analysis of GSK-3β2, whose structure has not yet been dissolved, is needed.",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_CT_indispensable_no_structure.png",
+    "anchor": "Discussion, page 148, right column, closing sentence of the mechanism paragraph",
+    "page_anchor": {
+     "page": 3,
+     "crop_pdf_points": [
+      300,
+      528,
+      552,
+      674
+     ],
+     "dpi": 500,
+     "needle": "whose structure has not yet been dissolved",
+     "image_sha256": "b9a98f298be42603d18e6a91ef2e21a957d0cd2f593cb79f152501653d1fb149",
+     "source_pdf_sha256": "790f602006a341c043357c6931be5b7c47a82f39851a30b980ae3dd8d592dca7"
+    }
+   }
+  ]
+ },
+ "schema_version": 2,
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID21212533_Saeki2011.pdf",
+   "sha256": "790f602006a341c043357c6931be5b7c47a82f39851a30b980ae3dd8d592dca7",
+   "kind": "article_binary"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID21212533/p02_fig1_tau_ser396.png",
+   "sha256": "49f60ddb61b52012d5dacefb209a4f649b36fd96ab37f698b837277b825652a4",
+   "kind": "figure"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID21212533/p02_fig2_app_thr668.png",
+   "sha256": "ecb7ae02a00bf6411ba4945bc24b9e56b778733ff46d48663a712d720b0a0677",
+   "kind": "figure"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID21212533/p02_methods_volume_and_2x.png",
+   "sha256": "417de0a62b841e38fcf30de114064f52b942fd92986a7e1f2d25e7efea110a6f",
+   "kind": "figure"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID21212533/p02_unfavorable_substrate.png",
+   "sha256": "dce965210972ba4c1feab2752e86b71f169c2b51ce3d0645c218f9a345ccf49e",
+   "kind": "figure"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_table1_pGS2_kinase_activity.png",
+   "sha256": "51d7d56c6571b5f3d14eb050eaae8b4d3238feb9943ff1a8328d13ba172f4abd",
+   "kind": "figure"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_fig3_invitro_titration.png",
+   "sha256": "30070898153594d1ff71bb91028a25dceb7acc3d144ad1b6b4ec5e6d5fed24bd",
+   "kind": "figure"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_fig4_schematic_insert.png",
+   "sha256": "776e274f0dd158329928846b83fbd392e78c23fd6c90e4f690dad47bf46419d4",
+   "kind": "figure"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_fig5_deltaCT.png",
+   "sha256": "3c9dc5a113c41b3786113e2fd759986d6564df6cbed0123c8022538a6d76ba40",
+   "kind": "figure"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_CT_invisible_in_crystal_structures.png",
+   "sha256": "158d56a22dd1c5baaecc415700eb157437c8b85bfa1db4901a2596d69aaa0701",
+   "kind": "figure"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_deltaCT_results.png",
+   "sha256": "ab97b138b613694096534e4a3ed3d3f5cbc98bca5f2648befbad4d8118f59620",
+   "kind": "figure"
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID21212533/p03_CT_indispensable_no_structure.png",
+   "sha256": "b9a98f298be42603d18e6a91ef2e21a957d0cd2f593cb79f152501653d1fb149",
+   "kind": "figure"
+  }
+ ]
 }
