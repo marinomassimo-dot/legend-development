@@ -1,0 +1,264 @@
+{
+  "schema_version": 2,
+  "pmid": "30370248",
+  "doi": "10.3389/fonc.2018.00420",
+  "receipt": "FTR-20260810-30370248-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID30370248.md",
+    "CORPUS-STUB-011",
+    "disease-models/wwox/research/commit_candidates/CC-20260810-30370248-01.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend",
+      "used": true
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "legend-batch-inferential-sweep",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-capability-scout",
+      "used": true
+    },
+    {
+      "skill": "legend-session-self-eval",
+      "used": true
+    },
+    {
+      "skill": "legend-session-takeaways",
+      "used": true
+    },
+    {
+      "skill": "pdf",
+      "used": true
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "A complete local PMC XML was already present; retrieval was limited to a visual PDF after standalone image routes failed."
+    },
+    {
+      "skill": "legend-proband-priority-matrix",
+      "used": false,
+      "reason": "The operator fixed the sequential paper list, so reprioritisation could not alter the cursor."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "Canonical ledgers are BATCH_COMMIT-only; findings land in a dossier and commit candidate."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "This review maps models and exposes a citation error but does not justify a new therapeutic hypothesis."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No intervention, dose, safety experiment or treatment window is tested."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "BLOCK_BATCH_COMMIT remains explicit and no canonical scientific current file was edited."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 149,
+    "publications_on_gene": 79,
+    "research_type": "primary_disease_group",
+    "is_primary_group_for_disease": true,
+    "weighting": "The Aqeilan group is a high-volume primary WWOX laboratory and authored several models synthesized here. That improves model-context knowledge but creates same-group dependence. The paper is weighted as informed synthesis, not independent replication, and every experimental result remains attached to its cited primary."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX AND animal model",
+        "count": 741,
+        "source": "Europe PMC broad query, 2026-08-10"
+      },
+      {
+        "query": "WWOX AND knockout mouse",
+        "count": 468,
+        "source": "Europe PMC broad query, 2026-08-10"
+      },
+      {
+        "query": "WWOX AND epilepsy mouse",
+        "count": 162,
+        "source": "Europe PMC broad query, 2026-08-10"
+      }
+    ],
+    "note": "Broad full-text intersections are dense and include secondary mentions. This review is useful as a historical atlas, but density does not repair species attribution or convert cited work into independent evidence."
+  },
+  "multihop": {
+    "references_enumerated": 111,
+    "gene_direct_refs_in_source": [
+      "17360458",
+      "17575124",
+      "17803050",
+      "18650488",
+      "19500159",
+      "19936220",
+      "23254685",
+      "30082886"
+    ],
+    "resolved": [
+      "17360458",
+      "17575124",
+      "17803050",
+      "18650488",
+      "19500159",
+      "19936220",
+      "23254685",
+      "30082886"
+    ],
+    "queued": [
+      "CORPUS-STUB-011",
+      "FT-047"
+    ],
+    "note": "All 111 references were read sequentially. Reference 53 is the human Mallaret SCAR12 paper, not a mouse seizure experiment; reference 104 is the rat lde/lde seizure paper PMID 19500159. The listed load-bearing WWOX sources resolve in the local registry or read queue; this review inherits none of their DATO status."
+  },
+  "corpus_crossquery": {
+    "query": "How does the 2018 animal-model atlas compare with Steinberg 2021, and does its mouse-seizure statement survive the completed primary citation chain?",
+    "hits": 7,
+    "note": "Post-reading audit found CORPUS-STUB-011, FT-047, the Steinberg 2021 dossier, PMID 19500159, PMID 19936220, CLAIM 005 and the existing dismissal record for the mouse-epilepsy attribution. The review predates cell-targeted CNS models and propagates a species/source error rather than repairing it."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "The corrected comma-separated repository retraction check returned no retraction, expression of concern or correction for PMID 30370248 on 2026-08-10."
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID30370248_Tanna2018_PMC.xml",
+      "sha256": "7d49873317e5e702640d0fe8441e3ddc40a3006a081c40e8051065121063be53",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID30370248_Tanna2018_assets/source.pdf",
+      "sha256": "03430715d1f987ac6257a12637fe09ac28b81a4718566a53fd1492a4f2dfaf8b",
+      "kind": "article_binary"
+    },
+    {
+      "path": "files/fulltext/PMID30370248_Tanna2018_assets/ppi_preflight.json",
+      "sha256": "7a686affd09096f2f314eef97d0af5cde2261b4cd1195bfdc81e0dd874f49194",
+      "kind": "article_binary"
+    },
+    {
+      "path": "files/fulltext/PMID30370248_Tanna2018_assets/figure1_page7.png",
+      "sha256": "f2205d7f2d4a0aea3ebb74ae53e43efb3afc909672827507db9c35d5fdd85e0d",
+      "kind": "figure"
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "The fingerprinted local JATS artifact identifies PMCID PMC6194312, PMID 30370248 and DOI 10.3389/fonc.2018.00420; it contains a complete body, one figure, one table and 111 references.",
+    "entries": [
+      {
+        "proposition": "The review calls the mineralisation-stage osteoblast defect cell-autonomous.",
+        "snippet": "This delay in bone formation was the result of cell–autonomous defect in osteoblast differentiation beginning at the mineralisation stage.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30370248_Tanna2018_PMC.xml",
+        "anchor": "Bone phenotype of Wwox null mice, paragraph 1",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The hypomorph-survival mechanism is explicitly presumed rather than tested.",
+        "snippet": "This increased viability phenotype was presumed to be a result of low expression of WWOX in some tissues, which might have been sufficient for postnatal survival of Wwoxgt/gt mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30370248_Tanna2018_PMC.xml",
+        "anchor": "Wwox hypomorphic mice, paragraph 1",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors acknowledge unresolved phenotyping inconsistencies among conditional models.",
+        "snippet": "Nevertheless, there have been also some inconsistencies in phenotyping these models that shall be further investigated in future studies.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30370248_Tanna2018_PMC.xml",
+        "anchor": "Conditional Wwox–knockout models, second paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Several mammary-specific Wwox-deletion models had developmental defects without mammary tumours.",
+        "snippet": "Surprisingly, none of these models developed mammary tumors",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30370248_Tanna2018_PMC.xml",
+        "anchor": "Conditional Wwox ablation in mammary tissue, paragraph 1",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The review itself names cell of origin, cooperating changes and genetic background as determinants of tumour outcome.",
+        "snippet": "it depends on various factors, among which is dependency on cell of origin, combination with other genetic changes or even genetic background of the mouse model utilized",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30370248_Tanna2018_PMC.xml",
+        "anchor": "Conditional Wwox ablation in mammary tissue, paragraph 1",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The body misattributes spontaneous and audiogenic seizures to a Wwox-KO mouse and to Mallaret reference 53.",
+        "snippet": "Mallaret et al. showed that the short–lived Wwox KO mouse displays spontaneous and audiogenic seizures (53).",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30370248_Tanna2018_PMC.xml",
+        "anchor": "Significance of WWOX in neurological disorders, paragraph 2",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Reference 53 is a human recessive cerebellar-ataxia paper, not a mouse seizure experiment.",
+        "snippet": "The tumour suppressor gene WWOX is mutated in autosomal recessive cerebellar ataxia with epilepsy and mental retardation.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30370248_Tanna2018_PMC.xml",
+        "anchor": "Reference 53, Mallaret et al. 2014",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The actual spontaneous-mutation animal seizure citation in this review is a rat study.",
+        "snippet": "A spontaneous mutation of the Wwox gene and audiogenic seizures in rats with lethal dwarfism and epilepsy.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30370248_Tanna2018_PMC.xml",
+        "anchor": "Reference 104, Suzuki et al. 2009",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The review acknowledges that phenotypes differ between mouse and rat models.",
+        "snippet": "some of the phenotypes reported in the mouse models were not reported or observed in the rat model. This could be related to the approach used in genetic manipulation and/or genetic background.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30370248_Tanna2018_PMC.xml",
+        "anchor": "Rats, concluding paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The review records that a reported fly irradiation phenotype was caused by a background insertion.",
+        "snippet": "Later on, it was reported that background mutation as a result of insertion of piggyBag transposon into the second intron of DmWwox was responsible for this phenotype.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30370248_Tanna2018_PMC.xml",
+        "anchor": "Drosophila melanogaster, paragraph 1",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 1 visually compresses mouse and rat phenotypes into one rodent category.",
+        "snippet": "The single box labelled Rodents lists post-natal lethality, metabolic defects, tumour phenotypes and 'Seizures, epilepsy, & ataxia' without species, genotype, strain, age or assay separation.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID30370248_Tanna2018_assets/figure1_page7.png",
+        "anchor": "Figure 1, inspected at page pixels after a measured 300-effective-PPI ceiling",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "The summary repeats the mouse seizure attribution.",
+        "snippet": "Wwox null mice also displayed spontaneous and audiogenic seizures",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30370248_Tanna2018_PMC.xml",
+        "anchor": "Summary and future perspective, paragraph 2",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

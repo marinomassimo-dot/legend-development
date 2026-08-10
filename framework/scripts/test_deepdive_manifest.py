@@ -74,6 +74,31 @@ class SectionIsRequired(unittest.TestCase):
         self.assertEqual(errors, [])
         self.assertEqual(incomplete, [])
 
+    def test_manifest_and_artifacts_may_use_separate_explicit_workspaces(self) -> None:
+        """A branch carries the manifest while ignored evidence remains in shared files/."""
+        with TemporaryDirectory() as manifest_tmp, TemporaryDirectory() as evidence_tmp:
+            manifest_root = Path(manifest_tmp)
+            evidence_root = Path(evidence_tmp)
+            relative = "files/fulltext/paper.xml"
+            artifact = evidence_root / relative
+            artifact.parent.mkdir(parents=True)
+            sentence = "This body sentence is long enough to act as exact evidentiary text."
+            artifact.write_text(
+                f"<article><body><p>{sentence}</p></body></article>", encoding="utf-8")
+            manifest = schema_v2(relative)
+            manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+                artifact.read_bytes()).hexdigest()
+            manifest["verbatim_locators"]["entries"][0]["snippet"] = sentence
+            work = gate.manifest_path(manifest_root, "wwox", "12345678")
+            work.parent.mkdir(parents=True)
+            work.write_text(json.dumps(manifest), encoding="utf-8")
+
+            errors, incomplete = gate.load_and_validate(
+                manifest_root, "wwox", "12345678", artifact_root=evidence_root,
+                verify_artifacts=True, require_current_schema=True)
+            self.assertEqual(errors, [])
+            self.assertEqual(incomplete, [])
+
 
 class EntriesMustBeUsable(unittest.TestCase):
     def test_empty_entries_are_rejected(self) -> None:

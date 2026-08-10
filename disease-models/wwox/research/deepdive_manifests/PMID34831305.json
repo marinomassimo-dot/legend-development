@@ -2,26 +2,70 @@
   "schema_version": 2,
   "pmid": "34831305",
   "doi": "10.3390/cells10113082",
-  "receipt": "FTR-20260810-34831305-03",
+  "receipt": "FTR-20260810-34831305-04",
   "landing": [
     "disease-models/wwox/research/fulltext_dossiers/PMID34831305.md",
     "full_text_queue_current#FT-047",
     "disease-models/wwox/research/commit_candidates/CC-20260810-34831305-01.md"
   ],
   "skills_considered": [
-    {"skill": "legend", "used": true},
-    {"skill": "legend-study-intake-triage", "used": true},
-    {"skill": "legend-batch-inferential-sweep", "used": true},
-    {"skill": "legend-proband-priority-matrix", "used": true},
-    {"skill": "legend-deepdive", "used": true},
-    {"skill": "legend-session-self-eval", "used": true},
-    {"skill": "legend-capability-scout", "used": true},
-    {"skill": "legend-session-takeaways", "used": true},
-    {"skill": "find-fulltext", "used": false, "reason": "The operator supplied a local structured PMC XML; retrieval was needed only for the two visual figure artifacts."},
-    {"skill": "legend-discovery", "used": false, "reason": "Manual editing of the scientific ledger was forbidden; the scientific trace lands in a durable dossier and a queued commit candidate."},
-    {"skill": "legend-hypothesis-forge", "used": false, "reason": "This narrative review yields causal distinctions and evidence-boundary corrections, not a sufficiently supported new intervention hypothesis."},
-    {"skill": "legend-safety-triage", "used": false, "reason": "No new molecule or dosing proposal is advanced; lithium and gene therapy remain secondary summaries of cited studies."},
-    {"skill": "legend-commit", "used": false, "reason": "Canonical promotion is reserved for BATCH_COMMIT; the four canonical scientific current files were not edited."}
+    {
+      "skill": "legend",
+      "used": true
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": true
+    },
+    {
+      "skill": "legend-batch-inferential-sweep",
+      "used": true
+    },
+    {
+      "skill": "legend-proband-priority-matrix",
+      "used": true
+    },
+    {
+      "skill": "legend-deepdive",
+      "used": true
+    },
+    {
+      "skill": "legend-session-self-eval",
+      "used": true
+    },
+    {
+      "skill": "legend-capability-scout",
+      "used": true
+    },
+    {
+      "skill": "legend-session-takeaways",
+      "used": true
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "The operator supplied a local structured PMC XML; retrieval was needed only for the two visual figure artifacts."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "Manual editing of the scientific ledger was forbidden; the scientific trace lands in a durable dossier and a queued commit candidate."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "This narrative review yields causal distinctions and evidence-boundary corrections, not a sufficiently supported new intervention hypothesis."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No new molecule or dosing proposal is advanced; lithium and gene therapy remain secondary summaries of cited studies."
+    },
+    {
+      "skill": "legend-commit",
+      "used": false,
+      "reason": "Canonical promotion is reserved for BATCH_COMMIT; the four canonical scientific current files were not edited."
+    }
   ],
   "group_assessment": {
     "total_publications": 149,
@@ -32,28 +76,79 @@
   },
   "field_density": {
     "queries": [
-      {"query": "WWOX[Title/Abstract] AND neuron-specific[Title/Abstract]", "count": 1, "source": "PubMed ESearch, 2026-08-10"},
-      {"query": "WWOX[Title/Abstract] AND organoid*[Title/Abstract]", "count": 5, "source": "PubMed ESearch, 2026-08-10"},
-      {"query": "WWOX[Title/Abstract] AND (myelin[Title/Abstract] OR oligodendrocyte*[Title/Abstract])", "count": 4, "source": "PubMed ESearch, 2026-08-10"},
-      {"query": "WWOX[Title/Abstract] AND gene therapy[Title/Abstract]", "count": 14, "source": "PubMed ESearch, 2026-08-10"}
+      {
+        "query": "WWOX[Title/Abstract] AND neuron-specific[Title/Abstract]",
+        "count": 1,
+        "source": "PubMed ESearch, 2026-08-10"
+      },
+      {
+        "query": "WWOX[Title/Abstract] AND organoid*[Title/Abstract]",
+        "count": 5,
+        "source": "PubMed ESearch, 2026-08-10"
+      },
+      {
+        "query": "WWOX[Title/Abstract] AND (myelin[Title/Abstract] OR oligodendrocyte*[Title/Abstract])",
+        "count": 4,
+        "source": "PubMed ESearch, 2026-08-10"
+      },
+      {
+        "query": "WWOX[Title/Abstract] AND gene therapy[Title/Abstract]",
+        "count": 14,
+        "source": "PubMed ESearch, 2026-08-10"
+      }
     ],
     "note": "The exact neuron-specific, organoid and myelin intersections are sparse. The review is therefore valuable as a map, but the small field and same-group dependence make primary-source boundaries and independent replication especially important. A fourth sequential ESearch request for a metabolic intersection returned HTTP 429 and was not substituted with a guessed count."
   },
   "multihop": {
     "references_enumerated": 224,
     "gene_direct_refs_in_source": [
-      "33916893", "33255508", "10786676", "17360458", "25331887", "25012504",
-      "24550385", "31340538", "32581702", "19936220", "23254685", "33914858",
-      "24369382", "30290271", "32000863", "34634460", "31543760", "19465938",
-      "34747138", "24871327"
+      "33916893",
+      "33255508",
+      "10786676",
+      "17360458",
+      "25331887",
+      "25012504",
+      "24550385",
+      "31340538",
+      "32581702",
+      "19936220",
+      "23254685",
+      "33914858",
+      "24369382",
+      "30290271",
+      "32000863",
+      "34634460",
+      "31543760",
+      "19465938",
+      "34747138",
+      "24871327"
     ],
     "resolved": [
-      "33916893", "33255508", "10786676", "17360458", "25331887", "25012504",
-      "24550385", "31340538", "32581702", "19936220", "23254685", "33914858",
-      "24369382", "30290271", "32000863", "34634460", "31543760", "19465938",
-      "34747138", "24871327"
+      "33916893",
+      "33255508",
+      "10786676",
+      "17360458",
+      "25331887",
+      "25012504",
+      "24550385",
+      "31340538",
+      "32581702",
+      "19936220",
+      "23254685",
+      "33914858",
+      "24369382",
+      "30290271",
+      "32000863",
+      "34634460",
+      "31543760",
+      "19465938",
+      "34747138",
+      "24871327"
     ],
-    "queued": ["FT-047", "FT-049"],
+    "queued": [
+      "FT-047",
+      "FT-049"
+    ],
     "note": "All 224 references were enumerated sequentially. The listed twenty are the load-bearing WWOX/disease/model/mechanism subset used in this dossier and all resolve in the paper registry, tracking log, full-text queue, receipt ledger or existing manifests. The review does not inherit full-read status for any citation. FT-047 carries the source-surface census; FT-049 carries the cross-paper tissue-measurement/necessity inference."
   },
   "corpus_crossquery": {
@@ -66,9 +161,21 @@
     "result": "The repository retraction gate returned no retraction, expression of concern or correction for PMID 34831305 on 2026-08-10; the XML itself declares is-retracted=no."
   },
   "source_artifacts": [
-    {"path": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml", "sha256": "1c649c36d1604485577554d0ee74c9c755b8455ac3f72e75284c3bafd6e36f8c", "kind": "article_text"},
-    {"path": "files/fulltext/PMID34831305_Steinberg2021_assets/cells-10-03082-g001.jpg", "sha256": "82a9e39c29b09ee828b5114aa6e57f5b6efa653e77f7ffb81dfacfd50c15ef5f", "kind": "figure"},
-    {"path": "files/fulltext/PMID34831305_Steinberg2021_assets/cells-10-03082-g002.jpg", "sha256": "35409588c090f95b1dfb630391aa2eb382538c9de8e3e4d7cf51338eaf67d32c", "kind": "figure"}
+    {
+      "path": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
+      "sha256": "1c649c36d1604485577554d0ee74c9c755b8455ac3f72e75284c3bafd6e36f8c",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID34831305_Steinberg2021_assets/cells-10-03082-g001.jpg",
+      "sha256": "82a9e39c29b09ee828b5114aa6e57f5b6efa653e77f7ffb81dfacfd50c15ef5f",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID34831305_Steinberg2021_assets/cells-10-03082-g002.jpg",
+      "sha256": "35409588c090f95b1dfb630391aa2eb382538c9de8e3e4d7cf51338eaf67d32c",
+      "kind": "figure"
+    }
   ],
   "verbatim_locators": {
     "waived": false,
@@ -80,91 +187,104 @@
         "snippet": "The targeted populations were neural stem cells (NSCs; Nestin-Cre; referred to as N-KO), neurons (Synapsin-I-Cre; S-KO), astrocytes (GFAP-Cre; G-KO), and oligodendrocytes and oligodendrocyte progenitors (Olig2-Cre; O-KO).",
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
-        "anchor": "Section 2.2, cell-targeted Wwox-KO paragraph"
+        "anchor": "Section 2.2, cell-targeted Wwox-KO paragraph",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "Only Nestin- and Synapsin-targeted deletion were reported to recapitulate the null phenotype in the stated interval.",
         "snippet": "Remarkably, at the reported time frame, only two models recapitulated the phenotype of the Wwox-null mice: the N-KO, in which WWOX was deleted in NSCs and its progenies, effectively knocking it out in all the cellular populations of the CNS. The second model was the S-KO in which WWOX is mutated only in mature neurons.",
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
-        "anchor": "Section 2.2, cell-targeted Wwox-KO paragraph"
+        "anchor": "Section 2.2, cell-targeted Wwox-KO paragraph",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The review attributes neurological and systemic null-like phenotypes to Nestin and mature-neuron deletion.",
         "snippet": "It is important to emphasize that N-KO and S-KO recapitulated both neurological phenotypes (such as ataxia and seizures), but also systemic phenotypes such as growth retardation, metabolic abnormalities, and premature death by about 4-weeks of age.",
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
-        "anchor": "Section 2.2, cell-targeted Wwox-KO paragraph"
+        "anchor": "Section 2.2, cell-targeted Wwox-KO paragraph",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The review labels the neuron-to-oligodendrocyte myelin phenotype non-cell-autonomous.",
         "snippet": "All the methods mentioned above led to the conclusion that ablation of neuronal-WWOX causes severe hypomyelination and decreased numbers of mature OLs in a noncell autonomous manner.",
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
-        "anchor": "Section 2.2, RNA-seq and oligodendrocyte validation paragraph"
+        "anchor": "Section 2.2, RNA-seq and oligodendrocyte validation paragraph",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The authors explicitly contrast a normal metabolic screen in one severe human case with rodent findings.",
         "snippet": "Some very important observations were made – first, in contrast to the rodent data, the metabolic screen appeared normal.",
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
-        "anchor": "Section 3.1, Abdel-Salam human case paragraph"
+        "anchor": "Section 3.1, Abdel-Salam human case paragraph",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "Early organoid WWOX expression was localized mainly to ventricular radial glia before broadening later.",
         "snippet": "First, we stained for WWOX and were surprised to discover that during the early stages of organoids culture WWOX expression was limited to the vRGs.",
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
-        "anchor": "Section 3.3.2, early organoid expression paragraph"
+        "anchor": "Section 3.3.2, early organoid expression paragraph",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The organoid metabolic signal is transcriptomic pathway enrichment, not a flux measurement.",
         "snippet": "GESA and GO terms analysis revealed many affected pathways, such as processes related to ATP synthesis coupled electron transport, oxidative phosphorylation, glycolysis and gluconeogenesis, and negative regulation of cell cycle.",
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
-        "anchor": "Section 3.3.2, bulk RNA-seq paragraph"
+        "anchor": "Section 3.3.2, bulk RNA-seq paragraph",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "Diffuse organoid restoration was incomplete and motivated a cell-type-specific strategy.",
         "snippet": "That being said, the phenotype was not rescued completely and included the uncontrolled expression of WWOX in all cellular populations, which made us speculate that a cell-type-specific approach would be more appropriate.",
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
-        "anchor": "Section 5, organoid restoration paragraph"
+        "anchor": "Section 5, organoid restoration paragraph",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The review reports that neuron-specific WWOX restoration rescues phenotypes measured outside the CNS.",
         "snippet": "Furthermore, CNS neuronal-specific restoration of WWOX also rescued abnormalities in other tissues (bone and testis), as well as systemic symptoms such as hypoglycemia, growth retardation, and premature lethality.",
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
-        "anchor": "Section 5, AAV9-hSynI-WWOX paragraph"
+        "anchor": "Section 5, AAV9-hSynI-WWOX paragraph",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "The authors acknowledge that no available model is complete and advocate model combination.",
         "snippet": "Despite this, no model is currently perfect and major drawbacks can be found in all of them. Therefore, we believe the combination of these models can benefit both the scientific community in the mechanistic understanding of the disease, and patients in the development of new and safe treatments.",
         "surface": "body",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
-        "anchor": "Section 6, concluding paragraph"
+        "anchor": "Section 6, concluding paragraph",
+        "panel_text_relation": "text_only"
       },
       {
         "proposition": "Figure 1 is a qualitative expression schematic rather than a quantitative comparison.",
         "snippet": "The image is an annotated anatomical schematic of adult human brain, adult mouse brain and an organoid cross-section; it contains no plotted samples, uncertainty or statistical comparison.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_assets/cells-10-03082-g001.jpg",
-        "anchor": "Figure 1, inspected at the returned native 757×434 pixels after 600-effective-PPI preflight"
+        "anchor": "Figure 1, inspected at the returned native 757×434 pixels after 600-effective-PPI preflight",
+        "panel_text_relation": "panel_only"
       },
       {
         "proposition": "Figure 2 does not draw the four cell-targeted deletion groups or their negative arms.",
         "snippet": "The infographic collapses conventional, conditional and cell-targeted Wwox-KO mice into one model branch and displays phenotype bullets without separate Nestin, Synapsin, GFAP or Olig2 comparison groups.",
         "surface": "figure",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_assets/cells-10-03082-g002.jpg",
-        "anchor": "Figure 2, inspected at the returned native 772×550 pixels after 600-effective-PPI preflight"
+        "anchor": "Figure 2, inspected at the returned native 772×550 pixels after 600-effective-PPI preflight",
+        "panel_text_relation": "panel_only"
       },
       {
         "proposition": "Table 1's visual model comparison represents only the Nestin and Synapsin cell-targeted models.",
         "snippet": "Cell-Targeted Wwox-KO Mice (Synapsin-cre (S), Nestin-cre (N))",
         "surface": "table",
         "artifact": "files/fulltext/PMID34831305_Steinberg2021_PMC.xml",
-        "anchor": "Table 1, cell-targeted model column header"
+        "anchor": "Table 1, cell-targeted model column header",
+        "panel_text_relation": "text_only"
       }
     ]
   }

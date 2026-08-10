@@ -132,6 +132,20 @@ class FulltextReceiptTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "declared gap"):
                 receipts.require_work_manifest(receipt, root, "test", strict=True)
 
+    def test_work_manifest_forwards_explicit_artifact_workspace(self) -> None:
+        receipt = example("FTR-20260725-42193054-01")
+        root = Path(self.temporary.name) / "branch"
+        evidence = Path(self.temporary.name) / "shared"
+        work = root / "disease-models/test/research/deepdive_manifests/PMID42193054.json"
+        work.parent.mkdir(parents=True)
+        work.write_text(json.dumps({
+            "source_artifacts": [{"path": "PMC123", "sha256": ""}]
+        }), encoding="utf-8")
+        with mock.patch("deepdive_manifest.load_and_validate", return_value=([], [])) as gate:
+            receipts.require_work_manifest(
+                receipt, root, "test", strict=True, artifact_root=evidence)
+        self.assertEqual(gate.call_args.kwargs["artifact_root"], evidence.resolve())
+
     def test_missing_manifest_validator_fails_closed(self) -> None:
         receipt = example("FTR-20260725-42193054-01")
         real_import = __import__
