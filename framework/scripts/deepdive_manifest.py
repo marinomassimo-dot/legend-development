@@ -891,6 +891,7 @@ def load_and_validate(
     disease: str,
     pmid: str,
     *,
+    artifact_root: Path | None = None,
     verify_artifacts: bool = False,
     require_current_schema: bool = False,
 ) -> tuple[list[str], list[str]]:
@@ -906,7 +907,12 @@ def load_and_validate(
         return [f"{path.name}: invalid JSON ({exc})"], []
     return validate(
         manifest,
-        root=root,
+        # A branch transports the manifest, while copyright-controlled evidence may
+        # intentionally live only in the shared checkout's gitignored files/.  Keep
+        # manifest discovery and evidence resolution separate without weakening the
+        # existing containment check.  Omitting artifact_root preserves the original
+        # fail-closed single-workspace behaviour.
+        root=artifact_root or root,
         verify_artifacts=verify_artifacts,
         require_current_schema=require_current_schema,
     )
@@ -943,6 +949,13 @@ def verification_scope(*, verify_artifacts: bool, require_current_schema: bool) 
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--workspace", default=".")
+    parser.add_argument(
+        "--artifact-workspace",
+        help=(
+            "optional workspace root used only to resolve and verify source artifacts; "
+            "the manifest is still loaded from --workspace"
+        ),
+    )
     parser.add_argument("--disease", default="wwox")
     parser.add_argument("--pmid", required=True)
     parser.add_argument(
@@ -956,6 +969,10 @@ def main() -> int:
     args = parser.parse_args()
     errors, incomplete = load_and_validate(
         Path(args.workspace).resolve(), args.disease, args.pmid,
+        artifact_root=(
+            Path(args.artifact_workspace).resolve()
+            if args.artifact_workspace is not None else None
+        ),
         verify_artifacts=args.verify_artifacts,
         require_current_schema=args.require_current_schema,
     )

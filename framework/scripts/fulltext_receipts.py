@@ -654,7 +654,8 @@ def receipt_depth_index(path: Path) -> dict[str, dict[str, Any]]:
 
 
 def append_receipt(
-    path: Path, receipt: dict[str, Any], *, manifest: Optional[Path] = None
+    path: Path, receipt: dict[str, Any], *, manifest: Optional[Path] = None,
+    artifact_root: Optional[Path] = None,
 ) -> dict[str, Any]:
     """Append one event under an exclusive lock and return the persisted record.
 
@@ -685,8 +686,11 @@ def append_receipt(
         if record.get("record_kind") == "contemporaneous_receipt":
             record["event_at"] = datetime.now(timezone.utc).isoformat(
                 timespec="seconds").replace("+00:00", "Z")
-        require_work_manifest(record, root, disease, strict=True)
-        strict_errors = _strict_local_source(record, root)
+        evidence_root = artifact_root.resolve() if artifact_root is not None else root
+        require_work_manifest(
+            record, root, disease, strict=True, artifact_root=evidence_root
+        )
+        strict_errors = _strict_local_source(record, evidence_root)
     else:
         root, strict_errors = None, []
     # `root` matters: without it the corpus content check resolves against the process CWD.
@@ -825,7 +829,8 @@ def default_manifest_path(root: Path) -> Path:
 
 
 def require_work_manifest(
-    receipt: Any, root: Path, disease: str, *, strict: bool = True
+    receipt: Any, root: Path, disease: str, *, strict: bool = True,
+    artifact_root: Path | None = None,
 ) -> None:
     """Refuse the strongest claim until the work behind it exists.
 
@@ -857,6 +862,7 @@ def require_work_manifest(
         ) from exc
     errors, incomplete = deepdive_manifest.load_and_validate(
         root.resolve(), disease, str(pmid),
+        artifact_root=(artifact_root.resolve() if artifact_root is not None else None),
         verify_artifacts=strict,
         require_current_schema=strict,
     )
@@ -898,6 +904,14 @@ def main() -> int:
     )
     parser.add_argument("--ledger", default="", help="append-only receipt JSONL; defaults to the disease workspace sink")
     parser.add_argument("--root", default=".", help="repository root used for the default sink")
+    parser.add_argument(
+        "--artifact-workspace",
+        default="",
+        help=(
+            "optional persistent workspace root used only for source-artifact and strict "
+            "work-manifest verification"
+        ),
+    )
     parser.add_argument("--disease", default="wwox", help="disease model used for the default sink")
     parser.add_argument(
         "--manifest",
@@ -951,7 +965,12 @@ def main() -> int:
             return 0
         if args.command == "record":
             receipt = json.loads(Path(args.receipt).read_text(encoding="utf-8"))
-            persisted = append_receipt(ledger, receipt, manifest=manifest)
+            persisted = append_receipt(
+                ledger,
+                receipt,
+                manifest=manifest,
+                artifact_root=(Path(args.artifact_workspace) if args.artifact_workspace else None),
+            )
             print(f"RECORDED: {persisted['event_id']}")
             return 0
 

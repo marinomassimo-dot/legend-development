@@ -77,6 +77,34 @@ v1 manifests remain visible as migration debt and are not rewritten. For a PDF, 
 fingerprinted PDF as `article_binary` and a deterministic extracted TXT as `article_text`;
 text locators point to the latter while the receipt remains bound to the former.
 
+### 🔴 Evidence locality across branches
+
+`files/` is gitignored for copyright reasons. A branch therefore transports a manifest but
+does **not** transport the evidence bytes named by that manifest. Every probatory artifact
+must be written to the persistent `files/` tree of the shared checkout, never only to an
+ephemeral worktree or `/private/tmp`. A PASS obtained before that temporary workspace
+disappears is historically true but operationally unverifiable and does not close the read.
+
+When manifest work is isolated on a branch, keep the two roots explicit. `--workspace` is
+where the versioned manifest and receipt ledger live; `--artifact-workspace` is the shared
+checkout whose `files/` tree contains the fingerprinted evidence. Both validators retain
+their containment checks within the selected evidence root:
+
+```bash
+python3 <branch>/framework/scripts/deepdive_manifest.py \
+  --workspace <branch> --artifact-workspace <shared-checkout> \
+  --disease wwox --pmid <PMID> --verify-artifacts --require-current-schema
+
+python3 <branch>/framework/scripts/fulltext_receipts.py \
+  --root <branch> --artifact-workspace <shared-checkout> \
+  record --receipt <event.json>
+```
+
+The strict manifest command that counts is launched with the shared checkout as the current
+directory and must resolve the evidence there. Omitting `--artifact-workspace` preserves the
+single-workspace fail-closed default; a symlink that escapes the selected workspace remains
+an error rather than a hidden bypass.
+
 ### 🔴 A text layer is not its page
 
 **Seek XML/HTML PMC first, every time, and record its absence.** A PDF text layer is a

@@ -1,0 +1,158 @@
+{
+  "schema_version": 2,
+  "pmid": "32300104",
+  "doi": "10.1038/s41392-020-0136-8",
+  "receipt": "FTR-20260810-32300104-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID32300104.md",
+    "full_text_queue_current#FT-049",
+    "disease-models/wwox/research/commit_candidates/CC-20260810-32300104-01.md"
+  ],
+  "skills_considered": [
+    {"skill": "legend", "used": true},
+    {"skill": "legend-study-intake-triage", "used": true},
+    {"skill": "legend-batch-inferential-sweep", "used": true},
+    {"skill": "legend-deepdive", "used": true},
+    {"skill": "legend-capability-scout", "used": true},
+    {"skill": "legend-session-self-eval", "used": true},
+    {"skill": "legend-session-takeaways", "used": true},
+    {"skill": "pdf", "used": true},
+    {"skill": "spreadsheets", "used": true},
+    {"skill": "find-fulltext", "used": false, "reason": "The operator supplied a complete local PMC XML; retrieval was needed only for linked figure and supplementary surfaces."},
+    {"skill": "legend-proband-priority-matrix", "used": false, "reason": "The operator fixed this paper as the second sequential read, so queue reprioritisation could not change the cursor."},
+    {"skill": "legend-discovery", "used": false, "reason": "Scientific ledgers are canonical and append-only; without BATCH_COMMIT the result lands in a dossier and commit candidate."},
+    {"skill": "legend-hypothesis-forge", "used": false, "reason": "The overexpression cancer study bounds mechanisms but does not justify a new disease intervention hypothesis."},
+    {"skill": "legend-safety-triage", "used": false, "reason": "No compound, dose, treatment window or patient-facing intervention is evaluated in this paper."},
+    {"skill": "legend-commit", "used": false, "reason": "BLOCK_BATCH_COMMIT remains explicit and the four canonical scientific current files were not edited."}
+  ],
+  "group_assessment": {
+    "total_publications": 149,
+    "publications_on_gene": 79,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": true,
+    "weighting": "The Aqeilan laboratory is a high-volume primary WWOX group. This increases confidence in construct and pathway context but not external replication. Same-group continuity is useful for the WWOX–DVL2 and miR-146a programs, while forced-expression designs, model identity and supplementary inconsistencies are weighted directly rather than uplifted by authorship."
+  },
+  "field_density": {
+    "queries": [
+      {"query": "WWOX AND metastasis", "count": 967, "source": "Europe PMC broad query, 2026-08-10"},
+      {"query": "WWOX AND miR-146a", "count": 93, "source": "Europe PMC broad query, 2026-08-10"},
+      {"query": "WWOX AND DVL2", "count": 79, "source": "Europe PMC broad query, 2026-08-10"},
+      {"query": "WWOX AND Wnt", "count": 608, "source": "Europe PMC broad query, 2026-08-10"}
+    ],
+    "note": "Broad full-text counts are dense for metastasis and Wnt but include secondary mentions. Direct miR-146a and DVL2 intersections are smaller; this study is mechanistically relevant but remains largely same-lab and cell-line based."
+  },
+  "multihop": {
+    "references_enumerated": 62,
+    "gene_direct_refs_in_source": ["19465938", "23370280"],
+    "resolved": ["19465938", "23370280"],
+    "queued": ["CORPUS-STUB-050"],
+    "note": "All 62 references were enumerated sequentially. PMID 19465938 is the prior WWOX-DVL interaction anchor; other cited pathway work supplies context but is not upgraded by this read."
+  },
+  "corpus_crossquery": {
+    "query": "Where do WWOX-DVL2/Wnt and miR-146a mechanisms already occur, and what new evidence or boundary does PMID 32300104 add?",
+    "hits": 4,
+    "note": "Post-reading audit found CORPUS-STUB-050 plus existing DVL2/Wnt and interactome discovery records. This paper adds SMAD3 3'UTR evidence and same-lab contextual support for DVL2, while its supplementary β-catenin ratio and cross-model transfer limit promotion strength."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Repository and indexed-record checks on 2026-08-10 returned no retraction, expression of concern or correction for PMID 32300104."
+  },
+  "source_artifacts": [
+    {"path": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml", "sha256": "61d52a2854288aae2029df60629bc77d0090fcee1db99d601407fccbf190401f", "kind": "article_text"},
+    {"path": "files/fulltext/PMID32300104_Khawaled2020_assets/41392_2020_136_Fig1_HTML.jpg", "sha256": "fbe65a13245e53672a08ba4eda6415ddc42298940a7f814e687785a98a077fe3", "kind": "figure"},
+    {"path": "files/fulltext/PMID32300104_Khawaled2020_assets/41392_2020_136_Fig4_HTML.jpg", "sha256": "7a229eae50623e3d33538c4e3d60b0ee6b7d4fedfb5076e6c4bd1e74cc6d2b09", "kind": "figure"},
+    {"path": "files/fulltext/PMID32300104_Khawaled2020_assets/41392_2020_136_Fig5_HTML.jpg", "sha256": "acfef28f21ceb0cd366802da9eead99890910d0e3024229e24cf8c289a12d510", "kind": "figure"},
+    {"path": "files/fulltext/PMID32300104_Khawaled2020_assets/supp-page-03.png", "sha256": "e07b0e7e5c3bea296414b1edc5bbae0e969760d15de29b4ec687576d4aa1b767", "kind": "figure"}
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "The local PMC JATS artifact identifies PMCID PMC7162874, PMID 32300104 and a complete body, figures, methods and 62-reference list; all cited surfaces are fingerprinted.",
+    "entries": [
+      {
+        "proposition": "The discovery transcriptome used MDA-MB435S metastatic melanoma cells, not a breast-cancer line.",
+        "snippet": "we performed mRNA profiling of MDA-MB435S metastatic melanoma cells expressing an empty-vector (EV), WWOX and a WWOX-WFPA mutant",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
+        "anchor": "Results, mRNA profiling paragraph"
+      },
+      {
+        "proposition": "The Results report 833 downregulated and 724 upregulated genes.",
+        "snippet": "we found 833 downregulated genes and 724 upregulated genes",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
+        "anchor": "Results, mRNA profiling paragraph"
+      },
+      {
+        "proposition": "The stated transcriptomic significance rule required fourfold change and FDR below 0.05.",
+        "snippet": "Genes with a four-fold expression difference and cutoff FDR < 0.05 (by the Beonferroni method) were designated as significant.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
+        "anchor": "Methods, mRNA profiling"
+      },
+      {
+        "proposition": "The integrated miRNA targets were computational predictions rather than generally validated targets.",
+        "snippet": "we performed miRNA consensus target prediction analysis by employing miRWalk (v.2.0) tool",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
+        "anchor": "Methods, miRNA target prediction"
+      },
+      {
+        "proposition": "Mutation of the SMAD3 3'UTR abolished miR-146a repression.",
+        "snippet": "This repression was abolished upon mutating the 3′UTR",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
+        "anchor": "Results, miR-146a/SMAD3 paragraph"
+      },
+      {
+        "proposition": "The WWOX IP-MS experiment used three biological replicates.",
+        "snippet": "IP-MS was preformed using three biological replicates.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
+        "anchor": "Methods, mass spectrometry"
+      },
+      {
+        "proposition": "WWOX-DVL2 association was validated by exogenous co-IP and increased with Wnt ligand.",
+        "snippet": "physical interaction between WWOX and DVL2 was evident even without Wnt ligands. Addition of Wnt ligands to the cells further enhanced the binding between WWOX and DVL2",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
+        "anchor": "Results, WWOX interactome paragraph"
+      },
+      {
+        "proposition": "The therapeutic conclusion is prospective rather than experimentally tested.",
+        "snippet": "We conclude that therapeutic introduction of WWOX expression in early and late stages of carcinogenesis could have beneficial outcomes for cancer intervention.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32300104_Khawaled2020_PMC.xml",
+        "anchor": "Discussion, concluding sentence"
+      },
+      {
+        "proposition": "Figure 1's caption swaps the plotted WWOX and WFPA colour identities.",
+        "snippet": "The PCA pixels label EV red, WWOX green and WFPA blue; the caption instead assigns WWOX blue and WFPA green.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID32300104_Khawaled2020_assets/41392_2020_136_Fig1_HTML.jpg",
+        "anchor": "Figure 1B, inspected at native pixels after 96-effective-PPI preflight"
+      },
+      {
+        "proposition": "The anti-miR-146a experiment gives partial rather than full SMAD3 rescue.",
+        "snippet": "Panel D densitometry shows SMAD3 near 1.00 in EV, 0.40 in WWOX plus control anti-miR, and 0.66 after anti-miR-146a.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID32300104_Khawaled2020_assets/41392_2020_136_Fig4_HTML.jpg",
+        "anchor": "Figure 4D, inspected at native pixels after 96-effective-PPI preflight"
+      },
+      {
+        "proposition": "Wild-type WWOX lowers the Wnt target AXIN2 whereas the WW1 mutant does not reproduce that effect.",
+        "snippet": "Panels C and E show lower AXIN2 with wild-type WWOX in MDA-MB231 and SUM149 cells, while the WFPA arm in SUM149 remains near EV.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID32300104_Khawaled2020_assets/41392_2020_136_Fig5_HTML.jpg",
+        "anchor": "Figure 5C,E, inspected at native pixels after 96-effective-PPI preflight"
+      },
+      {
+        "proposition": "The supplementary nuclear beta-catenin metric is coupled to the WWOX intervention through its denominator.",
+        "snippet": "Supplementary Figure S2 labels the reported densitometry β-catenin/WWOX ratio even though WWOX is the manipulated protein; Lamin is displayed but not used as the denominator.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID32300104_Khawaled2020_assets/supp-page-03.png",
+        "anchor": "Supplementary Figure S2, page 3, rendered after measuring a 150-effective-PPI minimum ceiling"
+      }
+    ]
+  }
+}
