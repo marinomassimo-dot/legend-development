@@ -1,0 +1,80 @@
+{
+  "schema_version": 2,
+  "pmid": "27550453",
+  "doi": "10.1158/0008-5472.CAN-16-0621",
+  "receipt": "FTR-20260810-27550453-01",
+  "landing": ["disease-models/wwox/research/fulltext_dossiers/PMID27550453.md", "full_text_queue_current#CORPUS-STUB-102", "disease-models/wwox/research/commit_candidates/CC-20260810-27550453-01.md"],
+  "skills_considered": [
+    {"skill": "legend", "used": true}, {"skill": "legend-study-intake-triage", "used": true}, {"skill": "legend-batch-inferential-sweep", "used": true}, {"skill": "legend-deepdive", "used": true}, {"skill": "legend-capability-scout", "used": true}, {"skill": "legend-session-self-eval", "used": true}, {"skill": "legend-session-takeaways", "used": true}, {"skill": "pdf", "used": true}, {"skill": "browser", "used": true},
+    {"skill": "find-fulltext", "used": false, "reason": "A complete local PMC HTML was supplied; a retrieval route was required only for the supplement."},
+    {"skill": "legend-proband-priority-matrix", "used": false, "reason": "The paper was direct context for the preceding PMID and remained within the fixed run."},
+    {"skill": "legend-discovery", "used": false, "reason": "BLOCK_BATCH_COMMIT requires noncanonical landing."},
+    {"skill": "legend-safety-triage", "used": false, "reason": "No treatment, dose or therapeutic window was evaluated."},
+    {"skill": "legend-commit", "used": false, "reason": "The four canonical scientific files were intentionally untouched."}
+  ],
+  "group_assessment": {"total_publications": 149, "publications_on_gene": 79, "research_type": "experimental_lab", "is_primary_group_for_disease": true, "weighting": "The Aqeilan laboratory is a high-volume primary WWOX group. The paired Osx1 and Oc lineage experiments are strong internal evidence, but same-group continuity is not external replication and cytogenetic/IHC limitations remain explicit."},
+  "field_density": {
+    "queries": [
+      {"query": "WWOX AND osteosarcoma", "count": 322, "source": "Europe PMC broad query, 2026-08-10"},
+      {"query": "WWOX AND RUNX2", "count": 179, "source": "Europe PMC broad query, 2026-08-10"},
+      {"query": "WWOX AND osteoblast", "count": 135, "source": "Europe PMC broad query, 2026-08-10"}
+    ],
+    "note": "The osteosarcoma intersection is established but smaller than broad cancer fields; direct stage-specific genetic evidence remains unusual."
+  },
+  "multihop": {"references_enumerated": 39, "gene_direct_refs_in_source": [], "resolved": ["30082886"], "queued": [], "note": "All 39 references were enumerated sequentially. The direct linkage to PMID 30082886 is reverse-citation context: the later breast paper cites this osteosarcoma study."},
+  "corpus_crossquery": {"query": "Where do osteosarcoma, RUNX2 and osteoblast lineage effects already occur, and what boundary does PMID 27550453 add?", "hits": 19, "note": "Post-reading audit found 19 file hits. The new reusable boundary is explicit early-versus-mature lineage dependence of Wwox/p53 cooperation."},
+  "retraction_check": {"checked": true, "result": "Repository and indexed-record checks on 2026-08-10 found no retraction, expression of concern or correction."},
+  "source_artifacts": [
+    {"path": "files/fulltext/PMID27550453_DelMare2016_PMC.html", "sha256": "ca390308daae7ebe34987b6503a70079dd5113c4f24f05dcc77e7d651cf13938", "kind": "article_text"},
+    {"path": "files/fulltext/PMID27550453_DelMare2016_assets/nihms814192f3.jpg", "sha256": "f65dbe3e8ad2686b9250479b169c34f7aa4ed06d8a51795b9df9cace863cd66f", "kind": "figure"},
+    {"path": "files/fulltext/PMID27550453_DelMare2016_assets/nihms814192f6.jpg", "sha256": "8e24cf91ce0db5c3f13b08d10fe59edb6b44391cb0266026e6121b3add512477", "kind": "figure"},
+    {"path": "files/fulltext/PMID27550453_DelMare2016_assets/supp_rendered/page-15_220ppi.png", "sha256": "a27f0899ef962d857a26889c14ae87e01d61ea0ed7e68c9aa31e7cadf50b3c86", "kind": "figure"}
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "The local PMC HTML identifies PMCID PMC5146760 and includes complete body, methods, captions and 39 references; the 36-page supplement and all used image surfaces are fingerprinted in the persistent evidence tree.",
+    "entries": [
+      {
+        "proposition": "Wwox loss alone impaired osteoblast differentiation but did not cause observed osteosarcoma.",
+        "snippet": "While ablation of WWOX in osteoblast lineage cells resulted in reduced bone mass due to impaired differentiation similar to that observed in Wwox null mice, we did not observe OS formation in WwoxΔOB mice.",
+        "surface": "body", "artifact": "files/fulltext/PMID27550453_DelMare2016_PMC.html", "anchor": "Results, Wwox-deficient osteoblast differentiation", "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The differentiation assay was explicitly designed as a cell-autonomy test.",
+        "snippet": "We next determined whether the impairment in bone formation is due to a cell-autonomous defect in osteoblast differentiation.",
+        "surface": "body", "artifact": "files/fulltext/PMID27550453_DelMare2016_PMC.html", "anchor": "Results, ex-vivo calvarial cultures", "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Early osteoprogenitor double loss accelerated osteosarcoma relative to p53 loss alone.",
+        "snippet": "DKOΔOsx1 mice exhibited complete tumor penetrance starting at 4 months, while p53ΔOsx1 mice developed OS 4–6 months later",
+        "surface": "body", "artifact": "files/fulltext/PMID27550453_DelMare2016_PMC.html", "anchor": "Results, Osx1-lineage tumour formation", "panel_text_relation": "text_and_panel_agree"
+      },
+      {
+        "proposition": "The same double loss did not accelerate osteosarcoma in mature osteoblasts.",
+        "snippet": "In contrast to this combinatorial effect of the double knockout in pre-osteoblasts, the development and progression of OS in mice lacking both WWOX and p53 in mature osteoblasts (DKOΔOc; Oc-Cre+;Wwoxfl/flp53fl/fl) was not significantly different from single p53 knockout mice (p53ΔOc)",
+        "surface": "body", "artifact": "files/fulltext/PMID27550453_DelMare2016_PMC.html", "anchor": "Results, Oc-lineage tumour formation", "panel_text_relation": "text_and_panel_agree"
+      },
+      {
+        "proposition": "Figure 3 explicitly draws both the positive early-lineage and negative mature-lineage comparisons.",
+        "snippet": "Figure 3A separates early-lineage DKO and p53-only survival curves, whereas Figure 3C shows mature-lineage DKO and p53-only curves nearly overlapping with no significant difference.",
+        "surface": "figure", "artifact": "files/fulltext/PMID27550453_DelMare2016_assets/nihms814192f3.jpg", "anchor": "Figure 3A and 3C, native-pixel inspection after effective-PPI preflight", "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "The main cytogenetic prose claims twenty metaphases per cell type.",
+        "snippet": "Twenty metaphases of each cell type were examined, revealing a higher number of spontaneous chromosomal breaks in DKOΔOsx1 or HET cells (6 breaks per cell out of 20 cells; 6/20) compared to p53ΔOsx1 cells (3/20)",
+        "surface": "body", "artifact": "files/fulltext/PMID27550453_DelMare2016_PMC.html", "anchor": "Results, cytogenetic analysis", "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The human IHC panel shows association between p53-positive status and low WWOX, not causality.",
+        "snippet": "Figure 6A-B displays 57 human osteosarcomas grouped by p53 immunostaining, with WWOX low or absent more frequently in the p53-positive group.",
+        "surface": "figure", "artifact": "files/fulltext/PMID27550453_DelMare2016_assets/nihms814192f6.jpg", "anchor": "Figure 6A-B, native-pixel inspection after effective-PPI preflight", "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Supplementary Figure S7 visually documents altered damage-response readouts in tumour cells.",
+        "snippet": "Supplementary Figure S7 shows genotype-labelled immunoblots and quantification after irradiation, supporting altered DNA-damage-response signalling in DKO-derived cells.",
+        "surface": "figure", "artifact": "files/fulltext/PMID27550453_DelMare2016_assets/supp_rendered/page-15_220ppi.png", "anchor": "Supplement page 15, rendered at measured 220-effective-PPI ceiling", "panel_text_relation": "panel_only"
+      }
+    ]
+  }
+}
