@@ -2103,3 +2103,24 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
   penetrante dell'intero modello *lde*, più delle crisi (34%), e la letteratura a valle non lo
   porta affatto.
 - **Interconnessioni:** `DL-MECH-075` · `DL-MECH-076` · `DL-MECH-077` · `FT-041` · `FT-042`.
+
+### DL-THER-081 — A51, primo intervento farmacologico su un modello neurale umano WWOX-deficiente: recupera i progenitori e non i neuroni di strato
+- **Status:** open · **Tag epistemico:** `IPOTESI`. **Non è un candidato terapeutico** e non va descritto come tale: nessuno dei quattro requisiti di Track C è soddisfatto — la direzione di pathway non è firmata, il readout prossimale non è Tier 1/2, la sicurezza CNS pediatrica non è valutata, e il composto non è selettivo per il bersaglio nominato.
+- **Fonti:** PMID **42397075** (letto, `FTR-20260810-42397075-03`, manifest `PMID42397075.json`, 25 locator, `MANIFEST STRICT PASS`).
+- **Cosa è A51:** un inibitore **multi-chinasi**, non un inibitore di MYC. Il paper stesso lo definisce *"a multi-kinase inhibitor (A51) established to suppress Wnt and MYC expression"*. Dose submassimale 125 nM, dalla settimana 8 alla 15 in vitro, composto fornito dal gruppo Ben-Neriah. 🔴 `PREMISE_TAG` · `PREMISE: INFERENZA` — «l'inibizione di MYC recupera la neurogenesi» poggia su un intervento che sopprime **due** vie, e l'attribuzione causale a MYC eredita l'ambiguità. Gli autori la dichiarano, non la nascondono.
+- 🔴 **DATO dai pannelli — il recupero è parziale e selettivo, e il pannello separa ciò che la frase unisce** (Suppl. Fig. 7F–G, letta a 170 ppi, artefatto fingerprintato):
+
+  | misura | WT | KO | KO + A51 | verdetto |
+  |---|---:|---:|---:|---|
+  | SOX2⁺ | ≈27% | ≈60% | ≈33% | normalizzato (`ns` vs WT) |
+  | SOX2⁺MYC⁺ | ≈48% | ≈72% | ≈50% | normalizzato (`ns` vs WT) |
+  | NEUN⁺ | ≈30% | ≈6% | ≈18% | recuperato (`*` vs KO) |
+  | **SATB2⁺** | ≈1,4% | ≈0,35% | ≈0,7% | **`ns` KO-vs-A51 — nessun recupero** |
+  | **CTIP2⁺** | ≈12,5% | ≈0,2% | ≈0,3% | **`ns` KO-vs-A51**, resta `****` sotto WT |
+
+  Inibire MYC ripristina **identità progenitrice e marcatura pan-neuronale** e lascia dove stava la **produzione di neuroni di strato**, profondi e superficiali. Qualunque riformulazione a valle deve portarsi dietro questa scissione.
+- 🔴 **BLOCK-1 — la domanda di sicurezza, aperta e non risolta:** un inibitore multi-chinasi che sopprime **Wnt** in un contesto **neurologico pediatrico in sviluppo**. Wnt canonico è richiesto per la proliferazione dei progenitori neurali e la patterning corticale; sopprimerlo durante la corticogenesi non è un effetto collaterale ipotetico ma il meccanismo stesso per cui il composto riduce i progenitori — che in questo esperimento è l'esito desiderato. **La finestra terapeutica fra «riduce i progenitori in eccesso» e «impedisce la corticogenesi normale» non è misurata da nessuna parte in questo lavoro**, che testa una dose sola su un genotipo solo. Nessuna promozione oltre `IPOTESI` finché non esiste una curva dose-risposta con un braccio WT trattato.
+- **Vincoli metodologici ereditati, tutti dichiarati dal paper:** l'esperimento di inibizione MYC è uno dei **tre** che il paper esclude dalle differenziazioni indipendenti (con scRNA-seq e ChIP-seq NSC) — cioè i tre su cui poggia la tesi WWOX–MYC; e *"No randomization or blinding was applied in this study"*.
+- **Cosa serve per muoverlo di un gradino:** (a) un inibitore MYC selettivo, per separare Wnt da MYC; (b) una dose-risposta con braccio WT trattato, per la finestra; (c) un readout prossimale Tier 1/2 legato al gene, che oggi non esiste — SOX2 e NEUN sono marcatori di identità cellulare, non biomarcatori di funzione WWOX.
+- **Interconnessioni:** `FT-039` · `DL-MECH-078` · [[claim_registry_current#CLAIM 003]] · [[therapeutic_hypotheses_ledger_current]] · manifest `PMID42397075.json` entries A51.
+- **Destinazione dichiarata:** questa voce **è materiale per un commit candidate**, non un commit candidate. La distinzione è quella che l'orchestratore ha isolato oggi: né il nome di un file né una stringa contenuta identificano un candidato, quindi lo dichiaro qui in prosa e la promozione resta di chi possiede il gate.
