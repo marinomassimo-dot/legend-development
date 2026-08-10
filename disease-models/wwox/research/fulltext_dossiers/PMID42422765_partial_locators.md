@@ -443,12 +443,56 @@ here by (a) a sub-threshold promoter comparison and (b) prior conditional-KO gen
 the load-bearing evidence; (a) is consistent with it and cannot establish it.** A promoter
 comparison repeated at 2.63 × 10¹¹ is the experiment that would.
 
+### 🔴 Figure 4 (`gr4.jpg`, sha256 `4bfa9eefa0e9eae4ccc12c97894c7044419785e63b8128952377a97d4d566d6d`) — "normalizes" is the wrong word for these panels
+
+`surface: figure`, 104 ppi. Behaviour at 3 months, WT+RI (n=9) against KO+W HD (n=10). Eight
+quantified panels, and **the WT-versus-treated comparison is drawn in every one** — this
+figure does the thing the others did not.
+
+| test | measure | result |
+|---|---|---|
+| open field | **velocity** | WT ≈9.5 → HD ≈11.5 · **`*`** |
+| open field | **total distance** | WT ≈3 400 → HD ≈4 300 · **`*`** |
+| open field | centre-zone frequency | `ns` |
+| open field | periphery frequency | `ns` |
+| elevated plus maze | velocity · open-arm · closed-arm duration | `ns` · `ns` · `ns` |
+| **rotarod** | **latency to fall** | WT ≈85 s → HD ≈145 s · **`*`** |
+
+🔴 **In all three significant panels the treated animals do not match wild type — they exceed
+it.** They move faster, cover more ground, and stay on the rotarod nearly twice as long. The
+section is titled *"Neuronal WWOX restoration normalizes neurobehavioral function"*.
+
+**A significant difference from wild type is not normalisation, and its direction does not
+change that.** Three readings are open and this reading does not choose:
+- **hyperactivity** — increased velocity and distance in an open field, with anxiety measures
+  (`centre/periphery`, `open/closed arm`) all `ns`, is the classic locomotor signature, not a
+  sign of restored normality;
+- **overshoot from overexpression** — consistent with the 9- to 19-fold hippocampal protein of
+  Figure 5J;
+- **marginal statistics** — three `*` at n≈10, unadjusted across eight comparisons in one
+  figure and many more across the paper.
+
+The third deserves weight: **eight comparisons in this figure alone, no multiplicity
+correction declared**, and the three positives are all at the weakest significance level.
+
+What is genuinely reassuring, and worth stating because it is the actual result: **anxiety-
+related behaviour is indistinguishable from wild type** on four independent measures, and
+motor coordination is at least as good. The therapy does not produce an anxious or
+motor-impaired animal. That is a real and useful finding; it is not what "normalizes" claims.
+
+### The pattern, resolved
+
+Across seven figures the shape recorded through four papers now has a precise form. It is not
+that this laboratory avoids the WT-versus-treated comparison — **Figure 3's caption, Figure
+7E and all eight panels of Figure 4 draw it**. It is that when the comparison is drawn and
+comes out significant, the surrounding prose still reports normalisation. The comparison is
+present in the data and absent from the vocabulary.
+
 ## Reading debt this leaves — explicit and large
 
 - **Introduction, all seven results sections and Materials and Methods: not read.**
-- **Three of the seven figures: retrieved and fingerprinted, not inspected** — `gr1`
-  (promoter comparison), `gr2` (WPRE removal) and `gr4` (behaviour). Figures 3, 5, 6 and 7 are
-  done, and every one of them carried something the running text did not.
+- ✅ **All seven main figures inspected.** Every one carried something the running text did
+  not. Coverage for `figures` is upgraded from `not_read` to `read` in a superseding receipt.
 - **Materials and methods: read for the sciatic-nerve and spinal-cord protocol and for the
   statistics; the rest not read.**
 - 🔴 **Every supplementary figure remains unreachable.** S5 and S6 now carry more weight than
