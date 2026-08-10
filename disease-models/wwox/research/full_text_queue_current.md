@@ -605,22 +605,6 @@ complesso EJC/NMD.
 
 ---
 
-## FT-039
-**Paper:** PMID 24871327 — Iatan et al. 2014, *Circ Cardiovasc Genet* 7:491-504
-**Title:** The WWOX gene modulates high-density lipoprotein and lipid metabolism
-**Surface:** PMID 24871327 · `structured` · sentinella `clean` · PMID24871327_Iatan2014_PMC.html
-**Priority:** **ALTA**
-**Why:** è il primario citato da PMID 33255508 per il primo dei due passaggi del ponte
-`WWOX -> lipid homeostasis -> myelin`. La review lo descrive come “strong evidence”, ma la
-lettura corrente non trasferisce quell'etichetta: servono modello, perturbazione, endpoint e
-dimensioni d'effetto del primario prima che il nodo lipidico possa sostenere un'inferenza
-neurale o un biomarcatore.
-**Come è emerso:** multi-hop della lettura completa di PMID 33255508, receipt
-`FTR-20260806-33255508-01`, `DL-MECH-070`.
-**Current status:** ⬜ presente nel corpus, non letto integralmente.
-
----
-
 ## FT-040
 **Paper:** PMID 31340538 — Tochigi et al. 2019, *Int J Mol Sci* 20:3596
 **Title:** Loss of Wwox Causes Defective Development of Cerebral Cortex with Hypomyelination
@@ -925,7 +909,29 @@ prima che qualunque locator vi poggi.
 
 ---
 
-## FT-039 — ✅ CHIUSA il 2026-08-10
+## FT-039
+
+**Stato:** ✅ **CHIUSA il 2026-08-10.** Il marcatore vive qui e non nell'intestazione: tre
+wikilink puntano a `full_text_queue_current#FT-039` e un frammento Obsidian richiede il testo
+completo dell'intestazione, quindi decorarla la spezza. Trovato eseguendo
+[`test_link_targets.py`](../../../scripts/test_link_targets.py), non ragionandoci sopra.
+
+> **Perché era in coda** — testo integrale della voce aperta, che fino al 2026-08-10 viveva
+> come un **secondo blocco `## FT-039`** più in alto in questo stesso file. Due intestazioni
+> con lo stesso identificatore sono un identificatore che non identifica: la voce aperta e la
+> sua chiusura si contraddicevano a 320 righe di distanza e nessuna delle due sapeva
+> dell'altra. Rimossa la duplicazione, conservato il contenuto — la coda perde un'ambiguità,
+> non una riga.
+>
+> **Title:** The WWOX gene modulates high-density lipoprotein and lipid metabolism
+> **Priority:** **ALTA**
+> **Why:** è il primario citato da PMID 33255508 per il primo dei due passaggi del ponte
+> `WWOX -> lipid homeostasis -> myelin`. La review lo descrive come “strong evidence”, ma la
+> lettura corrente non trasferisce quell'etichetta: servono modello, perturbazione, endpoint e
+> dimensioni d'effetto del primario prima che il nodo lipidico possa sostenere un'inferenza
+> neurale o un biomarcatore.
+> **Come è emerso:** multi-hop della lettura completa di PMID 33255508, receipt
+> `FTR-20260806-33255508-01`, `DL-MECH-070`.
 
 **Paper:** PMID 24871327 — Iatan et al. 2014, *Circ Cardiovasc Genet* 7:491–504
 **Surface:** PMID 24871327 · `structured` · sentinella `clean` · PMID24871327_Iatan2014_PMC.html
