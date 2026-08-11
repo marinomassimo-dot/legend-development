@@ -198,14 +198,26 @@ DEFECTS = {
             'MATERNAL_WORDS = r"maternal(?:ly)?|mothers?(?:\'s?)?|materno|materna|madre"',
             'MATERNAL_WORDS = r"maternal(?:ly)?|mother\'?s|materno|materna|madre"')),
     # The regression this one pins is not a typo, it is a habit: editing one of two lists that
-    # say the same thing. That is how the escape hatch came to recognise more parental
+    # say the same thing. That is how the suppression clause came to recognise more family
     # language than the net it suppresses.
+    #
+    # 🔴 The mutation deliberately drops the two names from the expression instead of writing
+    # the words out. Spelling them would put both sides of a family pairing in this file, and
+    # the publication gate would block on its own mutation probe — which it did, on the first
+    # run after the net was widened. The reflex at that moment is to add this file to
+    # GATE_INTERNAL_FILES, and it is the wrong one: that list exempts files for what they ARE,
+    # the gate and its fixtures, and this battery is a general tool that happens to hold two
+    # gate entries out of twenty-one. Exempting it would be exempting a file for what it
+    # CONTAINS, silently, and the exemption would still be there the day the file becomes
+    # something else. A substitution that never spells the words needs no exemption at all.
+    # Constant NAMES are safe: `\bmaternal\b` cannot match inside `MATERNAL_WORDS`, because
+    # the underscore is a word character and there is no boundary after the name.
     "escape hatch given its own vocabulary again": (
         "scripts.test_public_release_gate.GateTests"
         ".test_the_escape_hatch_is_never_wider_than_the_net",
         sub("scripts/public_release_gate.py",
-            'subject = rf"(?:{PARENT_OF_ORIGIN_WORDS}|{MATERNAL_WORDS}|{PATERNAL_WORDS})"',
-            'subject = r"(?:parent[- ]of[- ]origin|maternal|paternal)"')),
+            "|{MATERNAL_WORDS}|{PATERNAL_WORDS})\"",
+            ")\"")),
 }
 
 
