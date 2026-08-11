@@ -2020,3 +2020,68 @@ ne portano). Figura unica ispezionata a 1302×1051 in due metà. `FTR-20260810-2
   3,1× i pixel del deposito PMC, l'inverso dell'assunzione portata da `25331887`. E la vecchia via
   `www.ncbi.nlm.nih.gov/pmc/articles/…/bin/` risponde **404 con 48 KB di HTML**: chi controlla solo
   lo status code o solo la dimensione salva quel file come immagine.
+
+---
+
+# 📎 APPENDICE — Preflight di superficie sulle nove, eseguito 2026-08-11
+
+🔴 **PERCHÉ È UN'APPENDICE E NON STA DENTRO LA SUA VOCE.** Il compito indicava la voce delle nove
+a `full_text_queue_current.md:2034`. **Quella riga non esiste in questo ramo:** qui il file ha
+2022 righe, su `main` ne ha 2459, e la voce vive su un `main` più recente del punto in cui
+`lettore-b` è stato allineato. È la regola di ieri applicata a un numero di riga: *una misura è di
+un oggetto*, e un numero di riga è una misura del file di chi lo cita. **Non ho fuso `main`**:
+il merge toccherebbe `fulltext_read_receipts.jsonl`, che è a catena di hash e append-only, e la
+riconciliazione dei ledger divergenti (`88` qui contro `93` su `main`) è un `rechain --onto` che
+appartiene a Plan e all'operatore. Fondere per comodità avrebbe eseguito implicitamente proprio
+l'operazione che mi è stato detto di non fare.
+
+**Nessun numero `FT-` nuovo**, deliberatamente: due collisioni di numerazione in due giorni sono
+bastate. Questo blocco va **ripiegato dentro la voce delle nove** da chi integra.
+
+## Esito, registrato in entrambi i casi
+
+| PMID | PMCID | DOI | licenza (letterale) | classe |
+|---|---|---|---|---|
+| **30356099** Piard 2019 | `PMC6752669` | `10.1038/s41436-018-0339-3` | **`CC BY`** | 🟢 **`structured`** |
+| **30158849** Liu 2018 | `PMC6104168` | `10.3389/fnins.2018.00563` | **`CC BY`** | 🟢 **`structured`** |
+| **17823927** | `PMC4143238` | `10.1002/gcc.20497` | `idIsNotOpenAccess` | 🟠 **`pdf_only`** |
+| **16941225** | `PMC4144810` | `10.1007/s10735-006-9046-5` | `idIsNotOpenAccess` | 🟠 **`pdf_only`** |
+| **25416187** | `PMC4935222` | `10.1177/1535370214561952` | `idIsNotOpenAccess` | 🟠 **`pdf_only`** |
+| **25411445** Mignot 2015 | **`null`** | `10.1136/jmedgenet-2014-102748` | non interrogabile senza PMCID | 🔴 **`unrecoverable_by_these_routes`** |
+| **29808465** | **`null`** | `10.1007/s10048-018-0549-5` | idem | 🔴 **`unrecoverable_by_these_routes`** |
+| **25403906** | **`null`** | `10.1007/s12031-014-0463-8` | idem | 🔴 **`unrecoverable_by_these_routes`** |
+| **17163164** | **`null`** | `10.1007/978-1-4020-5133-3_14` | idem | 🔴 **`unrecoverable_by_these_routes`** |
+
+**Rotte interrogate, con la risposta letterale.** `route:esummary` per identità · `route:oa.fcgi`
+per licenza · `route:europepmc` `…/{PMCID}/fullTextXML` · `route:efetch` `db=pmc&retmode=xml`.
+Per i quattro senza PMCID **nessuna rotta strutturata è indirizzabile**: non è un fallimento di
+recupero, è che l'indirizzo non esiste. **`unrecoverable_by_these_routes`, mai «irrecuperabile»** —
+restano aperte la via editore, l'ILL e il deposito d'autore.
+
+## Le due superfici acquisite, nel `files/` del checkout condiviso
+
+    file:files/fulltext/PMID30356099_Piard2019_EPMC.xml @ 885c00f9…
+    file:files/fulltext/PMID30158849_Liu2018_EPMC.xml    @ 2602bc80…
+
+**`caption_census.py` rieseguito dopo la cattura:** entrambe cadono nella classe sana — 3/3 e 5/5
+`<fig>` dentro `<body>`. Il corpus passa da 23 a **25 superfici con le didascalie nel corpo** su
+37 analizzabili; le sette pure restano sette.
+
+🔴 **Disaccordo fra rotte su `30356099`, da registrare prima che qualcuno lo scopra leggendo:**
+corpo Europe PMC **45 559** caratteri contro **35 239** di `efetch`. Le figure stanno dentro il
+corpo in **entrambe** (3/3), quindi stavolta non sono le didascalie: sono ~10 000 caratteri di
+altro. **Dichiarata Europe PMC** perché è la più capiente, ma *quali* siano quei caratteri non è
+stato adjudicato — **domanda aperta, non risolta**, e il primo gesto di chi la leggerà.
+
+## La classe `pdf_only`, e la trappola che ha già morso
+
+Le tre `pdf_only` hanno un PMCID **e** rispondono `200` a `efetch` — con **8 781**, **7 406** e
+**7 159** byte e **nessun elemento `<body>`**. È la stessa forma di `18487609` e `42395553`:
+**metadati travestiti da full text.** Una pipeline che controlli solo lo status code, o solo che
+il file non sia vuoto, li archivia come «full text recuperato». **Un PMCID non è una superficie, e
+un `200` non è un corpo.**
+
+**Next action:** per le due strutturate si può leggere subito — `30356099` è la coorte WOREE più
+grande del campo e nulla la blocca più. Per le tre `pdf_only`, **prima lo screen `ToUnicode`**, poi
+la via editore. Per le quattro senza PMCID, risolvere il DOI presso l'editore prima di dichiarare
+qualunque cosa.
