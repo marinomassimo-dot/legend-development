@@ -2143,3 +2143,65 @@ riscoperta a ogni preflight.**
 **Next action:** `31543760` (11 figure, `CC BY`) e `21075834` sono pronte alla lettura. Per
 `FT-007` e `FT-009` serve la rotta bioRxiv, che **non ho eseguito**. Per le due `pdf_only`, screen
 `ToUnicode` prima di qualunque locator. Per le sei senza PMCID, via editore.
+
+---
+
+# 📎 APPENDICE 3 — «Metadati travestiti da full text»: la classe ha tre forme, non una
+
+Il preflight di oggi ha trovato la forma grossolana. Un censimento successivo ne ha aggiunta una
+**più sottile**, e messe in fila si vede che è una sola famiglia con tre gradi di travestimento.
+Nessun nuovo `FT-`; **nessuna ricevuta emessa** — il ramo è divergente e la riconciliazione è di
+Plan e dell'operatore.
+
+| forma | come si presenta | esempi misurati |
+|---|---|---|
+| **1 — nessun corpo** | `200`, kilobyte plausibili, **nessun elemento `<body>`** | `PMID42395553_PMC.xml` (9 586 B) · `18487609` sulla rotta `efetch` (11 699 B) · le cinque `pdf_only` di oggi (7–9 KB) |
+| **2 — corpo presente ma vuoto** | `<body>` **c'è**, quindi ogni controllo di esistenza passa — e contiene poche centinaia di caratteri | `PMID38355659_Akkawi2024_PMC.xml` **258 car.** · `PMID30470736_AbuRemaileh2018_PMC.xml` **308 car.** |
+| **3 — corpo pieno, figure fuori** | corpo completo, ma **ogni `<fig>` fuori dal `<body>`**: chi legge col corpo non vede una didascalia | le sette di `DL-METH-092` |
+
+🔴 **La forma 2 è la più pericolosa delle tre, ed è quella che nessuna guardia attuale vede.**
+La forma 1 la ferma qualunque controllo che chieda *«esiste `<body>`?»*. La forma 3 la ferma
+`caption_census.py`. La forma 2 **passa entrambi**: il corpo esiste, le figure — zero — sono
+coerentemente «tutte dentro», e il censimento delle didascalie la classifica come **sana**.
+Un manifest che dichiarasse una di queste due come `article_text` validerebbe senza obiezioni
+finché nessun locator prova a citarne una frase che non c'è.
+
+## La regola, e deliberatamente senza una soglia
+
+La tentazione è *«corpo < N caratteri ⇒ sospetto»*. **Sbagliata per costruzione**: sarebbe un
+numero che un umano deve ricordarsi di aggiornare, e a mille batch qualcuno lo alzerebbe per far
+passare un caso. La forma giusta è **relazionale e si autoscala**:
+
+> **Un corpo che non è sostanzialmente più grande del proprio abstract non è un corpo.**
+
+Ed è **gratis da calcolare**, il che è metà dell'argomento: `deepdive_manifest._xml_surfaces`
+restituisce già la coppia `(body, abstract)` — la separa per il gate sull'abstract, e il confronto
+fra le due lunghezze non richiede una riga di rete né una costante. `PATTERN_ALREADY_SOLVED_GATE`:
+il predicato esiste già, applicato a un solo scopo.
+
+## E i numeri non coincidono con quelli che mi sono stati passati — è il punto, non un dettaglio
+
+Mi sono stati riferiti **261** e **314**; la mia misura dà **258** e **308**. Scarto di 3 e 6
+caratteri, cioè normalizzazione degli spazi diversa. **Non è un disaccordo: le due misure non sono
+confrontabili finché non viaggia il predicato.** Il mio: `len("".join(body.itertext()))`
+sull'elemento `<body>`, senza normalizzare. Terza volta in tre giorni che questa forma si presenta
+— i due censimenti delle didascalie, `18487609` rotta contro file, e adesso questo — e le prime
+due volte è costata una direzione sbagliata. **Qui non cambia nulla nella classificazione**, ed è
+esattamente perché non cambia nulla che vale scriverlo: la regola si applica anche quando l'esito
+è lo stesso, altrimenti la si applica solo quando fa comodo.
+
+## `PMID 31075076` — Abdeen 2019, perimetro dichiarato e non aperto
+
+`file:files/fulltext/PMID31075076_Abdeen2019_PMC.html` · 251 034 B · **corpo ≈ 54 147 caratteri**
+(misurato qui strippando i tag; la cifra che mi è stata data era 54 158 — stessa storia di sopra).
+**Non è di nessuna delle tre forme: è una superficie piena.** È il più recente non-stub mai letto
+del corpus presente sul disco.
+
+⚠️ **Il denominatore delle figure va contato leggendo le didascalie, non con `caption_census.py`:**
+su HTML la domanda «figure fuori dal corpo» è **indefinita**, perché una pagina ha un solo `<body>`
+e tutto ci sta dentro per costruzione. Lo script risponde *non applicabile*, **mai** *pulito* —
+ed è il limite già scritto nel suo docstring.
+
+**Next action:** è una **lettura intera**, non un preflight. Non aperta qui per contesto
+insufficiente: mezza lettura è peggio di nessuna, perché sembrerebbe fatta. Va a un attore fresco,
+che conti le didascalie come primo gesto per avere il denominatore prima di scegliere il budget.
