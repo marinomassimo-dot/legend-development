@@ -1,0 +1,229 @@
+{
+  "schema_version": 2,
+  "pmid": "31543760",
+  "doi": "10.3389/fncel.2019.00391",
+  "pmcid": "PMC6730490",
+  "receipt": "FTR-20260811-31543760-01",
+  "landing": [
+    "FTR-20260811-31543760-01",
+    "full_text_queue_current.md#FT-006"
+  ],
+  "landing_note": "Kośla et al. 2019, Front Cell Neurosci 13:391 — WWOX silenced in human neural progenitor cells, with phenotype assays and CAGE transcriptomics. Assigned deliberately out of newest-first order because it is the richest panel surface available under CC BY: eleven figures against Piard's three, and Piard rendered zero inspected panels for want of images.",
+
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline. The finding that matters is a comparison between two figures the paper does not put side by side, which is not a delegable read."
+    }
+  ],
+
+  "reading_budget": {
+    "declared_before_reading": true,
+    "figures_present": 11,
+    "panels_present": 23,
+    "tables_present": 1,
+    "supplementary_elements_present": 8,
+    "panels_inspected": 17,
+    "panel_coverage": "17/23",
+    "🔴 the_first_number_i_wrote_here_was_23_and_it_was_false": "I DECLARED 23/23 BEFORE INSPECTING 23 PANELS. At the moment of writing I had opened three figures. The budget is the one field in this manifest that describes MY work rather than the paper's, and it is the one I filled in from intention instead of measurement — which is the same gesture I spent the last two readings documenting in other people's abstracts. Corrected to the count actually inspected, with the four waived figures named below rather than quietly folded into a denominator.",
+    "inspected": "Figures 1, 2, 3, 4, 5, 6 and 7 — 1+1+2+1+4+4+4 = 17 panels, each opened as an image at native resolution.",
+    "named_waivers": {
+      "figure_9": "WAIVED ON THE AUTHORS' OWN STATEMENT. The caption reads 'High resolution figure with legible gene names available in Supplementary Figure S3' — the published panel is a protein-interaction hairball whose node labels are not readable at the resolution distributed. Inspecting it would produce an attestation of coloured clusters and no gene identity. The legible form is in Data_Sheet_*.pdf, which is on disk, fingerprinted, and declared `supplementary: not_read`. The route to close this is named, not lost.",
+      "figure_10": "WAIVED for the same reason and by the same sentence — 'legible gene names available in Supplementary Figures S4, S5'. Panels A and B differ only in which comparison is colour-mapped onto the same network.",
+      "figure_8": "WAIVED FOR PROPORTIONALITY, WHICH IS A WEAKER REASON AND IS LABELLED AS SUCH. GSEA enrichment plots depict enrichment scores that the Results and Table 1 already state numerically, and entries[6] is anchored on those numbers rather than on the curves. Opening it would confirm a shape, not a value.",
+      "figure_11": "WAIVED FOR PROPORTIONALITY. The PCA variances (77.7% on dim1, 14.6% on dim2) and the gene list are stated in the Results and quoted there; the plot shows the separation those numbers describe."
+    },
+    "method": "Counted by READING the captions: Fig 1 (1), Fig 2 (1), Fig 3 a-b (2), Fig 4 (1), Fig 5 a-d (4), Fig 6 a-d (4), Fig 7 a-d (4), Fig 8 a-b (2), Fig 9 (1), Fig 10 a-b (2), Fig 11 (1) = 23. The automatic matcher agreed at 23 this time, which is recorded because it has disagreed on four of the last five deposits and a matcher that only gets reported when it fails is not being measured.",
+    "🔴 image_surface_acquired_and_the_route_is_the_point": "THE FIRST GESTURE WAS TO GET THE IMAGES, AND IT SUCCEEDED. Piard rendered 0/26 panels because no image existed on disk, and the preflight protocol that produced these surfaces asked for PMCID, structured surface, licence and class but NOT for a figure surface — so four 'structured' papers are readable and blind to their panels, and it would have looked like a property of the deposits rather than a gap in the specification. Route that worked: the Europe PMC REST endpoint `/{PMCID}/supplementaryFiles`, which returns a ZIP containing ALL ELEVEN figure JPEGs plus three supplementary Data Sheets — 13.4 MB, HTTP 200. Two routes that did NOT work and are recorded so nobody re-pays for them: `ncbi.nlm.nih.gov/pmc/articles/{PMCID}/bin/{file}` returns 404 (the path moved), and `europepmc.org/articles/{PMCID}/bin/{file}` 301s to HTML. NOT a proof-of-work challenge in either case — an ordinary dead path. The article is CC BY, so the images are lawfully redistributable, and all eleven are fingerprinted below.",
+    "supplementary_note": "The same ZIP carries Data_Sheet_1.pdf, Data_Sheet_2.PDF and Data_Sheet_3.pdf, which hold Supplementary Figures S1-S5 and Tables S1-S3. Figures 9 and 10 explicitly refer the reader to S3/S4/S5 for legible gene names, so those sheets are the readable form of two of the eleven figures. They are on disk and fingerprinted; they are NOT read in this pass, and that is declared as coverage `supplementary: not_read` rather than passed over."
+  },
+
+  "surface_preflight": {
+    "structured_surface_preferred": true,
+    "text_surface": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml",
+    "route": "Europe PMC, CC BY (Kośla, Płuciennik, Styczeń-Binkowska, Nowakowska, Orzechowska, Bednarek 2019).",
+    "🔴 ref_list_position_checked_before_building_spans": "CHECKED RATHER THAN ASSUMED, AND THE ANSWER IS THE SAME AS PIARD'S: the <ref-list> is INSIDE <body>, 15,000 characters, and its text IS present in what `_xml_surfaces` returns as the body surface (verified by probing a string from the middle of it). Second Europe PMC artifact, second confirmation — this is a property of the ROUTE, not of an article. A locator quoting a reference title would verify as the authors' prose and pass. No locator in this manifest is drawn from it; every snippet below was taken from a named prose section and its position confirmed. The corpus-wide audit run earlier today — 6 XML artifacts with a ref-list, 73 body locators, zero inside one — stands, and this artifact makes it 7 and 82.",
+    "surface_measurement": {
+      "in_tree_surface_chars": 58533,
+      "body_element_only_chars": 56718,
+      "abstract_chars": 1534,
+      "of_which_ref_list": 15000,
+      "note": "So roughly a quarter of what the body surface offers on this route is bibliography. Both numbers recorded because the pair is the measurement."
+    }
+  },
+
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_measured": "Not measured, declared as not measured. Bednarek's group, Lodz — and Andrzej K. Bednarek is the first author of the 2000 Cancer Research paper that NAMED WWOX. This is the founding laboratory returning to the gene twenty years later in a neural system.",
+    "research_type": "experimental_lab",
+    "output_kind": "primary_research",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "weighting": "The observation is a competent cell-biology and transcriptomics package in a disease-relevant cell type — human neural progenitors, which is closer to WOREE than any oncology model. The interpretation is where care is owed and the care is specific: this is shRNA knockdown in an immortalised progenitor line, not a patient allele, and the paper's own strongest phenotype appears in ONE culture geometry. Where its abstract compresses two results into one clause, the figure it compresses is in this manifest."
+  },
+
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "does the central 3D phenotype have a matched control in another culture geometry, and do they agree?",
+        "route": "read Figures 5, 6 and 7 as images against the Results text",
+        "count": 2,
+        "detail": "Two geometries, one readout, and the paper reports the effect as present in one and absent in the other. See entries[0] through entries[3] — this is the FT-064 predicate meeting its third instance."
+      },
+      {
+        "query": "do the partners of the other two WWOX papers read today appear in this neural transcriptome?",
+        "route": "read the GSEA leading-edge subset in the Results",
+        "count": 3,
+        "detail": "ERBB4, WWTR1 (TAZ) and RUNX2 all appear in the WWOX-dependent leading edge in human neural progenitors. See entries[7]."
+      }
+    ]
+  },
+
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 0,
+    "gene_direct_count": 0,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "enumeration_method": "🔴 NOT PERFORMED, AND DECLARED AS NOT PERFORMED RATHER THAN PADDED. This deposit cites by author-year in the running text and its in-body reference list carries no PMIDs; resolving 100+ citations to PMIDs would require either a network round-trip per citation or offline matching that I have already been burned by today. Recording an empty enumeration with the reason is the honest value. The named WWOX-relevant citations visible in the prose — Aqeilan 2004a/2004b/2005, Gaudio 2006, Abu-Odeh 2014, Suzuki 2009, Mallaret 2014, Hussain 2019, Piard 2018, Johannsen 2018 — overlap substantially with papers this corpus has read or queued, and several were read TODAY, which is why the convergence at entries[7] could be seen at all.",
+    "cross_check_result": "Not applicable — no enumeration to cross-check. The gap is declared."
+  },
+
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "prior receipts and manifests for 31543760; identifiers against the artifact",
+    "hits": 0,
+    "finding": "No prior receipt, no prior manifest. Identifiers read from the artifact's own <article-id> block — pmid 31543760, pmcid PMC6730490, doi 10.3389/fncel.2019.00391 — before being written anywhere, which is the discipline today's PMID 23370280 identifier correction earned."
+  },
+
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-11",
+    "route": "local PubMed corpus record for PMID 31543760 — offline and re-runnable",
+    "result": "no retraction, no expression of concern, no erratum"
+  },
+
+  "source_artifacts": [
+    { "path": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml", "sha256": "9deafe306e891ec7eae9e4e6d46a8238f0e4233a85ae6e5af9091d7c22301647", "kind": "article_text" },
+    { "path": "files/figures/PMID31543760/fncel-13-00391-g001.jpg", "sha256": "4a48e1664c6ae6ddb86c8d3a7c0c3cdbec83abb5565e4b53528ccf63904f3a88", "kind": "figure" },
+    { "path": "files/figures/PMID31543760/fncel-13-00391-g002.jpg", "sha256": "28935c2de8816e8da129370aa87a0cab881b77bd2293932ccbb28d75727cd074", "kind": "figure" },
+    { "path": "files/figures/PMID31543760/fncel-13-00391-g003.jpg", "sha256": "2c389f9594ea6134ede5b7b2924cd97b3a277eb08383cb69d2a4b8281efab31d", "kind": "figure" },
+    { "path": "files/figures/PMID31543760/fncel-13-00391-g004.jpg", "sha256": "12ab5d4b3e1f423eda04207e3aeb0b07cf6c5003d5b751292f07a12462669054", "kind": "figure" },
+    { "path": "files/figures/PMID31543760/fncel-13-00391-g005.jpg", "sha256": "a9bcf31c49db2f492fa9a0d246defdad1ebfc3cff0653d149ebf55e7f3f4d462", "kind": "figure" },
+    { "path": "files/figures/PMID31543760/fncel-13-00391-g006.jpg", "sha256": "c9641bd8ce07acb2075328d0ad14f16975e17a46342bb8ac10528ef6677d6392", "kind": "figure" },
+    { "path": "files/figures/PMID31543760/fncel-13-00391-g007.jpg", "sha256": "2800503ad2d8e9498bf2ff7f8cfe3c0bb2678fc2c1cd4c730891e8898d696070", "kind": "figure" },
+    { "path": "files/figures/PMID31543760/fncel-13-00391-g008.jpg", "sha256": "415b8de70129f10e4edb5b48ac9e16a4924f5a6f09e6c805d2ca877422a35074", "kind": "figure" },
+    { "path": "files/figures/PMID31543760/fncel-13-00391-g009.jpg", "sha256": "e978872740436b2ace49a9ec2feeef82d48678353b7ddfd06a4940071345d040", "kind": "figure" },
+    { "path": "files/figures/PMID31543760/fncel-13-00391-g010.jpg", "sha256": "d66c4d115eab524cef8846a2ada2ee2d753e8e90416eb54d6cf7651ccb377488", "kind": "figure" },
+    { "path": "files/figures/PMID31543760/fncel-13-00391-g011.jpg", "sha256": "714b42cab66b73054c67b51161e980e72a3c14f7d70834e7f15886fd1b7649a0", "kind": "figure" }
+  ],
+
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC XML, CC BY, digest re-verified in this worktree after copying from the shared checkout. Eleven figure images acquired lawfully via the Europe PMC REST supplementaryFiles endpoint and written into the shared files/ tree, each fingerprinted above.",
+    "abstract_anchoring_waived": "No evidentiary locator uses the abstract, and one candidate was REJECTED for that reason: the abstract's clause 'enhanced adhesion to fibronectin and extracellular matrix protein mixture' occurs ONLY in the abstract surface. Where the abstract's own wording is the subject of a proposition — entries[4] — the locator is anchored on the figure caption in the body instead, and the abstract's phrasing is described rather than quoted as evidence.",
+    "entries": [
+      {
+        "proposition": "🔴 THE CENTRAL PHENOTYPE, AND IT IS DRAMATIC. In a thick 3D extracellular-matrix scaffold, WWOX-silenced human neural progenitors stay as isolated single cells that neither proliferate nor differentiate, while controls build extensive networks. This is the closest thing in the corpus to a WOREE-relevant cellular phenotype in a human neural cell.",
+        "snippet": "the hNPC with silenced WWOX remained as isolated, single cells that did not proliferate nor differentiate, while cells with unaltered WWOX expression differentiated and exhibited extensive network formation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml",
+        "anchor": "Results, 'WWOX Depletion Alters the Main Biological Functions of hNPC', describing Figures 5 and 6",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 AND THE SAME KNOCKDOWN IN THE SAME CELLS SHOWS NOTHING IN TWO DIMENSIONS. The paper states it plainly and moves on. THIS IS THE THIRD INSTANCE OF THE CLASS FT-064 WAS QUEUED THIS MORNING TO FIND — one readout, two preparations, opposite answers, and the conclusion carries one of them. In DL-MECH-096 the axis was tissue versus isolated osteoblast and RUNX2 changed sign; in DL-MECH-094 it was organoid metabolic signature versus differentiation defect; HERE THE AXIS IS CULTURE DIMENSIONALITY, which is a widening of the predicate rather than a literal match, and the widening is the finding: what varies is not only 'tissue versus cell' but ANY preparation variable that restores or removes the mechanical and matrix context. Found on the day the predicate was written, by looking forward.",
+        "snippet": "No such phenomenon was observed when the cells were cultured in 2D as a monolayer",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml",
+        "anchor": "Results, the sentence immediately following entries[0], referring to Figure 7",
+        "panel_text_relation": "text_only",
+        "note_on_relation": "Written first as `text_contradicted_by_panel` and refused by the validator, correctly: a relation asserts something about ANOTHER locator and must point at it, and what a panel overturns is something the text said — so the pointer belongs on the panel entry, not here. entries[2] carries it as `qualifies: entries[1]`. Same correction I had to make on PMID 26675548; recorded because making it twice is the signal that the direction is not yet automatic for me.",
+        "found_or_sought": "sought — FT-064's predicate was in my head from this morning and this is the sentence it fires on"
+      },
+      {
+        "proposition": "AND THE 2D PANEL IS NOT QUITE 'NO PHENOMENON'. Figure 7 shows both genotypes forming MAP2-positive networks in two dimensions, which is the paper's point and it is fair. But the silenced panel is visibly sparser than its control — fewer processes, more clustering, less green coverage. INFERENZA, stated with its own caveat: micrograph field selection can produce exactly this appearance and no quantification of 2D network density is offered, so the honest reading is that the effect is DIMENSIONALITY-DEPENDENT IN MAGNITUDE rather than present-or-absent. That strengthens entries[1] rather than weakening it: a phenotype that is large in 3D and small in 2D is a phenotype whose size is set by the preparation, which is precisely what a repurposing endpoint would have to be chosen against.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 7, four panels of hNPC after 18 days in 2D on ECM-coated vessels at 200×. A and C are phase contrast, B and D are MAP2 immunofluorescence in green with DAPI nuclei in blue. A (shScrambled) and C (shWWOX) both show adherent cells with visible neurite processes across the field. B (shScrambled) shows a dense, evenly distributed green network spanning the whole field with nuclei embedded throughout. D (shWWOX) shows green processes radiating from a small number of dense cell clusters, with large areas of the field carrying isolated nuclei and no process network.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID31543760/fncel-13-00391-g007.jpg",
+        "anchor": "Figure 7, all four panels, acquired via the Europe PMC supplementaryFiles endpoint",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[1]",
+        "qualifies_needle": "No such phenomenon was observed when the cells were cultured in 2D as a monolayer",
+        "found_or_sought": "sought — opened the 2D control specifically because the claim of absence is what makes entries[1] a dimensionality effect, and a claimed absence is the thing to check"
+      },
+      {
+        "proposition": "AND THE ONE CONTROL THAT WOULD RULE OUT THE OBVIOUS ARTEFACT IS 'DATA NOT SHOWN'. Cells that stay as isolated single cells in a 3D scaffold is also what too-sparse seeding looks like. The authors say seeding density made no difference and that the result held across three experiments — and neither the density series nor the replicate variation is shown anywhere in the paper or its supplements. PREMISE_TAG: PREMISE: INFERENZA. The claim is probably right and it is not evidenced here. REVIVAL_TRIGGER: any 3D density series, or a quantified network measure.",
+        "snippet": "This observation was confirmed in three separate experiments and was not influenced by the seeding density (data not shown)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml",
+        "anchor": "Results, the same paragraph as entries[0]",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — asked what would have to be true for the 3D phenotype to be an artefact, and found the answer marked not shown"
+      },
+      {
+        "proposition": "🔴 THE ABSTRACT MERGES A SIGNIFICANT RESULT WITH A NON-SIGNIFICANT ONE, AND THE FIGURE CAPTION IS WHERE THE PAPER SAYS SO. The caption of Figure 3 states outright that the Geltrex arm is a tendency NOT reaching significance at p = 0.0626. The abstract reports 'enhanced adhesion to fibronectin and extracellular matrix protein mixture' as a single finding, and the Discussion repeats both with their p-values. So the paper is honest everywhere except the one place most readers stop. Recorded with the caption as the locator, because the abstract sentence exists only in the abstract surface and is not admissible as evidence here — which is itself the right constraint, since an abstract is the authors' summary and not their data.",
+        "snippet": "the tendency not reaching the statistical significance (0.0626)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml",
+        "anchor": "Figure 3 caption, panel A",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — checked whether the abstract's two adhesion claims carry the same support, and they do not"
+      },
+      {
+        "proposition": "PANEL 3 CONFIRMS THE CAPTION AND SHOWS THE ASYMMETRY AT A GLANCE. Two bar pairs; only the fibronectin pair carries a significance bracket. The Geltrex pair shows a large apparent difference with error bars that overlap the control's range — which is exactly what p = 0.0626 looks like, and exactly what an abstract clause flattens.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3. Panel A, labelled Geltrex, y-axis OD 570 nm from 0 to 0.4: a black hatched control bar at approximately 0.08 with error bar to about 0.11, and a red hatched shWWOX bar at approximately 0.21 with error bar spanning roughly 0.13 to 0.29. NO significance bracket and no asterisk. Panel B, labelled Fibronectin, y-axis 0 to 2.0: control at approximately 1.10 and shWWOX at approximately 1.57, joined by a horizontal bracket carrying a single asterisk. Legend: hNPC/shScrambled black hatched, hNPC/shWWOX red hatched.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID31543760/fncel-13-00391-g003.jpg",
+        "anchor": "Figure 3 panels A and B",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — went to the panel to see whether the bracket was where the caption said it was, and it is"
+      },
+      {
+        "proposition": "🔴 THE MMP9 HALF OF A PAIRED CLAIM RESTS ON A BAND THAT IS NOT VISIBLE IN THE GEL SHOWN. The Results say WWOX downregulation 'lowered pro-MMP2 and pro-MMP9 metalloproteinase secretion' and the abstract compresses it to 'downregulation of MMP2/9', treating the two as one finding. The panel does not support that symmetry: pro-MMP2 falls from roughly 16,800 to 7,500 arbitrary units and the difference is obvious, while pro-MMP9 sits at roughly 900 against a control of the same order — about 5% of the MMP2 signal — and in the zymogram inset beside the bars THE 92 kDa proMMP9 POSITION SHOWS NO VISIBLE BAND IN EITHER LANE, while the 72 kDa proMMP2 band is clear in both. Both comparisons carry an asterisk. INFERENZA: the MMP9 result is densitometry of a signal at or below the visible threshold of the gel presented, so it is a much weaker claim than the MMP2 result standing beside it, and the abstract's 'MMP2/9' hides that entirely. Not an error — a compression, and the third one in this paper after entries[4] and entries[1].",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4. A bar chart, y-axis 'MMPs levels [arbitrary units] Mean ±SD' from 0 to 20000, two groups. At pro-MMP2 a black hatched shScrambled bar reaches approximately 16,800 with an error bar of roughly ±1,000 and a red hatched shWWOX bar approximately 7,500 with a larger error bar, joined by a bracket with one asterisk. At pro-MMP9 both bars are close to the axis, the control at roughly 900 and the silenced bar visibly lower, also bracketed with an asterisk. Top right, a zymogram inset of two lanes annotated '92kDa proMMP9' and '72kDa proMMP2': a single bright band appears in both lanes at the 72 kDa annotation and no band is discernible at the 92 kDa annotation in either lane.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID31543760/fncel-13-00391-g004.jpg",
+        "anchor": "Figure 4, bar chart and zymogram inset",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[4]",
+        "qualifies_needle": "the tendency not reaching the statistical significance (0.0626)",
+        "found_or_sought": "sought — after entries[4] showed the abstract compressing a significant and a non-significant adhesion result, I checked whether the other paired claim in the same abstract clause was symmetric, and it is not"
+      },
+      {
+        "proposition": "🔴 A TRANSCRIPTOMIC ASYMMETRY THAT POINTS THE OTHER WAY FROM THE GENE COUNTS, AND THE PAPER DOES NOT RECONCILE THEM. Differentiated neurons show 7,392 differentially expressed genes against 2,282 in progenitors — three times as many — yet the enrichment analysis finds 44 and 109 gene sets in the progenitor comparison and only FOUR in the neuronal one, with NONE on the control side. INFERENZA: more differentially expressed genes with fewer coherent gene sets is the signature of a diffuse, less organised change, so the paper's conclusion that WWOX loss chiefly disrupts the PROGENITOR state is supported by the enrichment and not by the raw counts. Recorded because a reader taking either number alone reaches a different conclusion about where WWOX matters most.",
+        "snippet": "Significantly greater numbers of enriched gene sets was found for undifferentiated cells (44 for hNPC/shScrambled and 109 for hNPC/shWWOX, FDR < 0.25) than for differentiated neurons (no gene sets for neurons/shScrambled and four sets in neurons/shWWOX)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml",
+        "anchor": "Results, 'Functional Enrichment Analysis'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — put the two numbers side by side because they were three paragraphs apart and pointed different ways"
+      },
+      {
+        "proposition": "🔴 THE CONVERGENCE THAT ONLY READING THREE PAPERS IN ONE DAY COULD PRODUCE. The WWOX-dependent leading-edge gene set in human neural progenitors contains ERBB4, WWTR1 and RUNX2 — and those are, in order, the competed-for partner of PMID 16061658 adjudicated this morning, TAZ which PMID 18487609 names as the WW-domain protein that ACTIVATES RUNX2 where WWOX represses it, and RUNX2 itself, whose sign inversion between tissue and isolated osteoblast is DL-MECH-096. Three partners established in bone and in breast cancer, appearing together in a WWOX-dependent programme in human NEURAL progenitors. INFERENZA, and the limits are real: a leading-edge subset is a ranked-list artefact, not a measurement of any one gene, and nothing here shows WWOX binding any of them in this cell type. What it does show is that the WW/PPxY competition network is transcriptionally live in the tissue the disease is about — which is the first place in this corpus where the oncology mechanism and the neural phenotype touch the same gene names.",
+        "snippet": "ERBB4, KITLG, GPM6A, EFNB1, FGF10, NRG1, WWTR1, RUNX2",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml",
+        "anchor": "Results, 'Functional Enrichment Analysis', the hNPC/shScrambled leading-edge subset of GO_Stem_Cell_Differentiation",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — read the leading edge looking for names from this morning, and found three"
+      },
+      {
+        "proposition": "AND A DEVELOPMENTAL EXPRESSION FACT WORTH HOLDING AGAINST A DEVELOPMENTAL DISEASE. WWOX expression in whole human brain is HIGHER in adults than in 20-33 week fetuses — 17.7 against 9.2 TPM RLE — and varies strongly by compartment, highest in corpus callosum and medulla oblongata. INFERENZA with a caveat the paper does not state: WOREE's most consistent structural finding is corpus callosum hypoplasia, in 75% of Piard's cohort read this afternoon, and the corpus callosum is where this dataset puts WWOX's highest expression. That is a correlation between two public datasets and nothing more — but it is the kind of correlation that decides which region a future measurement is taken in.",
+        "snippet": "adults display greater WWOX expression in the brain as a whole than 20–33 weeks fetuses, 17.7 TPM RLE (tags per million, relative log expression) vs. 9.2 TPM RLE",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31543760_Kosla2019_EPMC.xml",
+        "anchor": "Results, opening paragraph, describing Figure 1",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found — read in sequence, and the corpus callosum link came from having read Piard an hour earlier"
+      }
+    ]
+  }
+}
