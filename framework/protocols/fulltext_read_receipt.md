@@ -390,6 +390,140 @@ evidence depth, source locator/fingerprint and the complete coverage map; only e
 evidence basis and outputs may change. Consumers use the latest equal-depth event, while the
 incorrect historical event remains visible in the hash chain.
 
+## Named open schema items — registered, not designed
+
+Three defects in this contract are **known, measured and deliberately unfixed**. They are
+schema, so they belong to the operator; and none of them breaks anything while nothing
+changes, which is why registering them is the whole of the right action today.
+
+🔴 **Registering is not deferring.** A proposal that lives in a cross-session message dies with
+the session, and the loss is invisible because nobody misses what they never saw written. Each
+item below therefore carries **its own measurement, reproduced here rather than reported** —
+so that whoever eventually designs the fix inherits the evidence and not a recollection of it.
+The commands are in this repository; the numbers are dated because they will move.
+
+Two rules bind any of these if it is ever built. **Prospective only** — a new key is declared
+by new records and marked `unknown_legacy` on every existing one. **Never backfilled**: a
+reconstructed value in a field that looks like a measurement is worse than an absent one,
+which is the same principle as `record_kind: legacy_reconstruction` and the `references`
+ratchet above.
+
+### 1. The figure denominator has no basis, and today it has no schema either
+
+`panel_coverage` reports a fraction. Nothing anywhere says **what the denominator counted**,
+and the surfaces disagree: a published figure, a PMC rendering and a supplementary sheet split
+panels differently, so a count without its surface is a number without an object.
+
+Measured 2026-08-11 across the 50 manifests in `deepdive_manifests/`:
+
+| key | manifests | container | type |
+|---|---|---|---|
+| `panel_coverage` | 12 | `/reading_budget/` | free-text string — `5/17`, `0/26`, `39/39 panels inspected as images` |
+| `figure_coverage` | 3 | `/verbatim_locators/` | dict |
+| neither | 35 | — | — |
+
+No manifest carries both, and `grep -rn "panel_coverage\|figure_coverage" framework/scripts
+scripts .claude` returns **nothing**: neither key is read by any code. Two names, two
+containers, two types, one validator that has never seen either.
+
+The proposal, recorded as received: one authoritative place in the **manifest**, beside the
+figure inventory — `panels_present`, `panels_inspected`, `denominator_basis`,
+`denominator_status` — which the receipt **summarises or references and never duplicates**.
+`denominator_status` is what lets `unknown` be said honestly instead of a figure being forced.
+This is the slot `SURFACE_CONTAINMENT_PRECHECK_GATE` names as contract territory.
+
+🔴 **Counted per artifact and per surface, never as one global scalar.** This follows directly
+from the reason the field is needed at all: if the published figure, the PMC rendering and the
+supplementary sheet do not agree on what a panel is, a single number averages surfaces that
+are not the same object — and it would report a clean fraction while doing it. The twelve
+free-text values above are already global scalars, which is why none of them can say what it
+counted.
+
+### 2. A receipt changes author when it is merged
+
+The ledger has **no `actor` field** — 19 distinct keys, none of them naming who read the paper.
+Attribution is therefore reconstructed from *which branch holds the record*, and that method
+decays with exactly the operation this repository runs to make progress.
+
+Reproduced 2026-08-11 over 20 local and remote refs: **114 distinct `event_id`, 106 present on
+more than one ref, 8 on exactly one.** `FTR-20260810-34831305-01…04` live on 10, 10, 10 and 9
+refs respectively. For 93% of the ledger, "the branch that has it" reports the precedence order
+of whoever wrote last, not an actor.
+
+🔴 **And the single-branch class is a queue, not a population.** All 8 singletons are today's
+unmerged tail, timestamped 17:57–20:50 UTC on `lettore`, `lettore-b` and one `codex/` branch.
+The same count was **6** four hours earlier: new reading pushes records in, propagation pushes
+them out.
+
+🔴 **But the mechanism is propagation, not merging, and the difference is not pedantic.** The
+statement to keep is: *propagating a history that contains receipts to a **new** ref may
+increase the apparent holders; a merge that carries no new receipts, or one into a branch that
+already holds them, changes nothing.* Measured over the three merges of 2026-08-11 —
+`git rev-list --parents -n1 <merge>`, then the `event_id` sets of each parent:
+
+| merge | target | incoming | new to target | result |
+|---|---|---|---|---|
+| `4c458d1` | 94 | 63 | **0** | 94 |
+| `2629cff` | 94 | 94 | 1 | 95 |
+| `8030d20` | 95 | 101 | 11 | 106 |
+
+One merge in three moved nothing, and it was the largest-looking one by branch age. "Every
+merge dilutes attribution" reads like a tax on integration and would make an integrator
+hesitate over an operation that is, a third of the time, provably free. The honest consequence
+is not to merge less — it is to **never promise anyone that attribution is recoverable after
+the fact.** Provenance identifies an author at the moment of writing and stops meaning that
+afterwards.
+
+Hence the second half of the proposal: an eventual `actor_id` is **separate from the runtime
+endpoint** — an endpoint is where a session could be reached today, an actor is who did the
+work — and, like every item here, is **never reconstructed retrospectively**, least of all from
+branch membership, which the table above shows is not the quantity anyone thinks it is.
+
+### 3. Back matter is inside the evidential surface, and the obvious fix breaks two real locators
+
+`_xml_surfaces` separates the abstract and nothing else, so where a deposit folds the
+bibliography into `<body>` — Europe PMC does; `efetch` files it under `<back>` — reference
+titles sit in the surface a locator is verified against. On `PMID 30158849`, 122 of 127
+`<article-title>` elements are verbatim in the surface, and a review's reference titles read
+exactly like its own findings.
+
+The obvious repair is to drop `ref-list`, `ack`, `fn-group` and `back` from the body surface.
+Measured 2026-08-11 across **355 text locators on XML artifacts**, that repair would lose
+**2** — both in `PMID30370248`, and both legitimate:
+
+> `entries[6]` — *"Reference 53 is a human recessive cerebellar-ataxia paper, not a mouse
+> seizure experiment"*, quoting that reference's title, anchored `Reference 53, Mallaret et al.
+> 2014`. `entries[7]` is the same shape on `Reference 104`.
+
+Their proposition **is about the bibliography**; the reference title is the object of the
+claim, not a sentence smuggled in as the authors' prose. So the fix is not exclusion but a
+**third declarable surface** — a locator says it is quoting back matter, and one that does not
+may not land there. That is a schema change to `surface`, hence this list.
+
+Worth recording beside it: at 355 locators the contamination hazard **has still not bitten**.
+The only two hits are deliberate, which is why the repair must not be built as if they were
+defects — `ADJUDICATE_THE_DEFECT_LIST_BEFORE_BUILDING_THE_GUARD`.
+
+### Four fixtures to write before any of this is built
+
+Kept here because they are the cheap part and they age well: each names a confusion that has
+already occurred at least once, and a fixture written now costs nothing while a fixture
+written after the implementation tends to describe whatever the implementation does.
+
+1. **A receipt propagated to several branches does not change author.** The property under
+   test is invariance, not the value — see the table in item 2.
+2. **A historical receipt does not receive a future manifest.** No key introduced later may
+   appear on a record written before it existed, by any route including regeneration of a
+   derived view.
+3. **A partial and a complete read of the same episode are one paper, not two.** The coverage
+   and queue joins consume depth per study; two depths of one reading must not double a
+   denominator.
+4. **`abstract_anchoring_waived` is not a figure waiver.** Two independent waivers over two
+   different surfaces; a locator waiving one must never be read as having waived the other.
+
+None of the four is implemented. They are conserved with the proposal because they are what
+would make it checkable rather than merely written down.
+
 ### Invalidating a receipt whose study identity is unsupported
 
 A metadata correction cannot repair a receipt whose reading evidence belongs to a different
