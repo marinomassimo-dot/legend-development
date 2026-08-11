@@ -2520,9 +2520,10 @@ l'altra**, e l'unico modo di saperlo è la figura che nessuno ha visto.
   biologia, con la nota corretta che **inibire ITCH sarebbe sbagliato** (si toglierebbe a WWOX
   la funzione DDR via ATM; ITCH è promiscuo, i topi `Itch⁻/⁻` sono autoimmuni).
 
-- 🔴 **Cosa non c'è, in nessuno dei 18 punti in cui ITCH compare: il segno.** Tutte le menzioni
-  trattano ITCH come qualcosa da *inibire*. Nessuna dice che la sua attività **aumenta**
-  l'abbondanza di WWOX. Le tre misure, dalla fonte primaria:
+- 🔴 **Cosa non c'è: il segno.** *(Titolo corretto in append — vedi la nota in fondo alla voce:
+  la prima stesura diceva «in nessuno dei 18 punti in cui ITCH compare» e «tutte le menzioni»,
+  e nessuna delle due misure era quella che dichiarava di essere.)* Le tre misure, dalla fonte
+  primaria:
 
   | esperimento | risultato, verbatim |
   |---|---|
@@ -2569,3 +2570,34 @@ l'altra**, e l'unico modo di saperlo è la figura che nessuno ha visto.
 - **Destinazione dichiarata:** **materiale per un commit candidate.** Tocca un rifiuto canonico
   (`DIS-003`) aggiungendogli un ramo che non nomina, quindi la promozione è di chi possiede il
   gate.
+
+#### 🔴 CORREZIONE APPEND-ONLY — il titolo era sovrastimato, il reperto no, e la lezione è su come si scrive un allarme
+
+Avevo scritto: *«ITCH compare **18 volte** e **ogni** menzione lo tratta come qualcosa da
+inibire»*. Entrambe le metà sono difettose e in modi diversi.
+
+- **Il 18 erano righe, non occorrenze**, e su quattro file scelti da me. Misurato sull'intero
+  `disease-models/wwox/`: **175 occorrenze in 24 file** — che però includono i seed del corpus,
+  i log e il manifest che ho appena scritto io, cioè cose che non sono affermazioni dello stato.
+  L'Orchestratore ne ha misurate 46 in 101 file. **Tre numeri, tre strumenti, nessuno
+  riproducibile** — la stessa forma del «6,5× contro 4,7×» di stamattina.
+- **«Ogni menzione» era una generalizzazione che non avevo verificato**, e non potevo: non le
+  avevo lette tutte. Lo stato porta almeno una cautela esplicita, nel paper registry:
+  *«meccanismi di degradazione **regolata**, non controllo-qualità di proteina misfolded: **non
+  assumere** che inibire ACK1/ITCH salvi Q230P»*, e `DIS-001` dice la stessa cosa meglio.
+
+🔴 **Ma la proposizione che conta sopravvive, e ora è testata invece che contata.** Ho cercato
+nello stato una frase che desse la **direzione** — ITCH che *aumenta* l'abbondanza o l'emivita
+di WWOX — e **ogni singolo riscontro è testo scritto da me stasera** (`FT-060` e questa voce).
+L'unico altro riscontro parla della stabilizzazione di WW1 da parte di un'altra interazione, non
+di ITCH.
+
+**E le due proposizioni non sono la stessa:** *«non assumere che inibire aiuti»* è **agnostica**;
+*«inibire plausibilmente danneggia, perché ITCH allunga l'emivita di WWOX»* ha un **segno**. La
+cautela già presente non poteva dire la seconda, perché il segno non era noto qui.
+
+**La lezione non è "verifica di più prima di allarmarti" — è che l'allarme e il reperto vanno
+separati nel testo, perché è il titolo che viaggia.** Un conteggio nel titolo invita a
+controllare il conteggio; la proposizione sostanziale sta sotto e sopravvive. Terza volta
+stasera che arrivo con un titolo troppo forte su un nucleo che regge — Johannsen, Steinberg,
+questa. Le tre correzioni restano accanto ai rispettivi reperti invece di essere cancellate.

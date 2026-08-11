@@ -21,8 +21,9 @@
     "tables_present": 0,
     "supplementary_elements_present": 0,
     "panels_inspected": 39,
-    "panel_coverage": "39/39 captions read; 0/39 panel images inspected — see figure_gap",
-    "method": "🔴 COUNTED BY READING THE CAPTIONS, NOT BY A PARSER, AND THAT IS THE CORRECTION. Figure 1 A-F, Figure 2 A-D, Figure 3 A-F, Figure 4 A-F, Figure 5 A-G, Figure 6 A-F, Figure 7 A-D = 39. Three successive ad-hoc scripts gave 7, then 9, then 6 for this article, each time by a matcher that failed and returned a plausible small number instead of an error. `figures_present` derived from the paper means read the captions; it never meant wait for a parser to be able to count. The budget is a means, not a gate."
+    "panel_coverage": "39/39 panels inspected as images",
+    "method": "🔴 COUNTED BY READING THE CAPTIONS, NOT BY A PARSER, AND THAT IS THE CORRECTION. Figure 1 A-F, Figure 2 A-D, Figure 3 A-F, Figure 4 A-F, Figure 5 A-G, Figure 6 A-F, Figure 7 A-D = 39. Three successive ad-hoc scripts gave 7, then 9, then 6 for this article, each time by a matcher that failed and returned a plausible small number instead of an error. `figures_present` derived from the paper means read the captions; it never meant wait for a parser to be able to count. The budget is a means, not a gate.",
+    "figure_surface": "The publisher PDF is the figure surface and the PMC HTML remains the text surface; the two are not mixed. Seven images, one per figure, at 213-306 effective ppi across a 7-inch page, every one with smask = 0 so extraction returns what the page shows. PMC serves nothing comparable for this article."
   },
   "group_assessment": {
     "performed": true,
@@ -47,10 +48,55 @@
     "note": "ITCH appears 10 times in the discovery ledger, 5 in the dismissal ledger, once in the claim registry and twice in the paper registry. The state already knows the K63 linkage and the K274 site — DEFAULTS THAT BIT US carries D-01 'polyubiquitination → proteasome' as a falsified default, and DIS-001 was reopened on exactly this biology. What it does NOT carry, anywhere, is the direction: that ITCH ubiquitination STABILISES WWOX. Every existing statement treats ITCH as something one might inhibit, and correctly advises against it."
   },
   "multihop": {
-    "performed": false,
-    "references_enumerated": 0,
-    "gene_direct_refs_in_source": [],
-    "enumeration_method": "NOT PERFORMED and declared as open debt. The reading budget went to the seven captions and the three load-bearing result sections. The reference list of a 2014 JBC paper is a genuine multi-hop target — it is where the ErbB4, p73, AMOTL1 and DVL1 partner literature lives — and it is left for the run that inspects the panels."
+    "performed": true,
+    "references_enumerated": 67,
+    "gene_direct_count": 19,
+    "gene_direct_refs_in_source": [
+      "19708029",
+      "11572989",
+      "20146584",
+      "15070730",
+      "15064722",
+      "23370280",
+      "16061658",
+      "18487609",
+      "15548692",
+      "17178850",
+      "16438931",
+      "21075834",
+      "17909041",
+      "22634283",
+      "19465938",
+      "12514174",
+      "24308844",
+      "16219768",
+      "16288044"
+    ],
+    "resolved": [
+      "24308844"
+    ],
+    "queued": [
+      "19708029",
+      "11572989",
+      "20146584",
+      "15064722",
+      "23370280",
+      "16061658",
+      "18487609",
+      "15548692",
+      "16438931",
+      "17909041",
+      "19465938",
+      "12514174",
+      "16219768",
+      "16288044",
+      "15070730",
+      "17178850",
+      "21075834",
+      "22634283"
+    ],
+    "enumeration_method": "67 references enumerated from the PMC reference list, every one carrying a PMID; 19 name the gene, matched on the citation text, and each was set against every receipt on all six branches and against the full-text queue.",
+    "cross_check_result": "🔴 FOURTEEN OF THE NINETEEN GENE-DIRECT REFERENCES ARE NEITHER READ NOR QUEUED. One carries a partial receipt (24308844, Schuchardt 2014) and four sit queued unread (15070730, 17178850, 21075834, 22634283). THE ONE THAT MATTERS MOST IS 23370280, Salah et al. 2013 — the paper a commit candidate in this repository already cites for 'direct ITCH/proteasomal stabilization'. So the state's single existing hint at ITCH-dependent stabilisation is attributed to a paper that has never been read here either, which is the same shape as DL-META-091 and is why DL-THER-095 rests on this reading rather than on that attribution. Also unqueued: 16288044 (Mahajan 2005, activated ACK1), which is the other half of the DIS-001 pairing."
   },
   "corpus_crossquery": {
     "performed": true,
@@ -75,6 +121,41 @@
       "path": "files/fulltext/PMID24550385_AbuOdeh2014.pdf",
       "sha256": "31b20da0ce704c4416a447faa7eadfb6952aa9474badc3086341a84aa0550143",
       "kind": "article_binary"
+    },
+    {
+      "path": "files/figures/PMID24550385/PMID24550385_p05_x24.jpeg",
+      "sha256": "ba266949d95a50c74c1711040a9253d61c3aa7099dd202d97bae0523ad197b82",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID24550385/PMID24550385_p06_x34.jpeg",
+      "sha256": "7d4882fb30f3638b8e063313bd981a47bebaf45e81cc8949fd940638b9ad257f",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID24550385/PMID24550385_p08_x57.jpeg",
+      "sha256": "48c55d22cea85eb7211c85d585b47ef78dacef07d87325d7a32c8b77a3262aa0",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID24550385/PMID24550385_p09_x67.jpeg",
+      "sha256": "7bcfc153ce9e5e400a26d290f91b2a472a2d15ce21f8d042d44823ad346b62e5",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID24550385/PMID24550385_p10_x75.jpeg",
+      "sha256": "09a2f7bb7af5b79c3b4724c99f59073f8ab0c70ff44c7000337dbb78c365936b",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID24550385/PMID24550385_p12_x87.jpeg",
+      "sha256": "fef7b0ff2461547ceee3d32ad3f9208f284b00620155e154e9eafc467257d68e",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID24550385/PMID24550385_p13_x94.jpeg",
+      "sha256": "f2d6c8a2146b987f272841df8663db039f7cb954ae6b229133c0df5d613e51e1",
+      "kind": "figure"
     }
   ],
   "verbatim_locators": {
@@ -200,8 +281,75 @@
         "anchor": "Caption of Figure 5, the clause introducing the two spectra; read against the same caption's earlier assignments of C and D and against the Results citation of 'Fig. 5, E and F'",
         "panel_text_relation": "text_only",
         "found_or_sought": "found — counting the panels by reading the captions is what put the label collision in front of me, which a parser would have passed over"
+      },
+      {
+        "proposition": "THE METHODS' OWN STATEMENT OF THE PHAGE-DISPLAY ENRICHMENT, RECORDED SO THE PANEL HAS SOMETHING TO BEAR ON. This is the sentence that gives the statistic in the running text; Figure 2D prints a different value for the same test. Quoted here as the text side of that pair.",
+        "snippet": "much higher position weight matrix scores compared with random proteins (p value <2.2E−18 using rank sum test)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Experimental Procedures, 'Phage Display', final sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence while covering the Methods"
+      },
+      {
+        "proposition": "🔴 THE PANEL I FLAGGED AS THE PLACE A FIGURE COULD OVERTURN THE TEXT — AND IT UPHOLDS IT. Figure 5G was recorded an hour ago as the debt of this reading: a densitometry-free negative on a western, carrying the residue the whole premise rests on. Inspected at 272 ppi and cropped to 780 ppi equivalent, the anti-HA pull-down shows a strong ubiquitination ladder only in WWOX+ITCH; the K274R+ITCH lane sits at the level of the WFPA+ITCH binding-dead control, while the K100R+ITCH lane carries a clear, weaker ladder. Exactly what the text claims. AND IT CORRECTED ME IN THE OPPOSITE DIRECTION FROM THIS MORNING: at whole-figure scale I had read a faint smear into the K274R lane. The FLAG row confirms ITCH is expressed in all four +ITCH lanes, so lane 6's absence is not an absent ligase. THE CAVEAT THAT REMAINS IS INPUT: the GST rows show the K274R construct expressed and recovered at a visibly lower level than the others, GAPDH is even across lanes, and no densitometry is given — so the comparison is not input-matched even though its comparator behaves correctly.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5, panel G. Eight lysate lanes labelled WWOX, WWOX+ITCH W.T., WWOX-WFPA, WWOX-WFPA+ITCH, WWOXK274R, WWOXK274R+ITCH, WWOXK100R, WWOXK100R+ITCH, over rows GST, FLAG and GAPDH; below, a Pull Down block with an anti-HA blot marked 250, 150, 75, 50 and an arrow at 'Ubiqui. GST-WWOX', and a GST loading row. In the anti-HA blot a dense high-molecular-weight ladder appears only in lane 2; lane 8 carries a clear weaker ladder; lanes 4 and 6 are near-blank and comparable to each other. FLAG bands are present in lanes 2, 4, 6 and 8. In the GST lysate row lanes 5 and 6 are visibly fainter than the others while GAPDH is even.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID24550385/PMID24550385_p10_x75.jpeg",
+        "anchor": "Figure 5 panel G, extracted from page 10 of the publisher PDF at 1902x2775 px (272 effective ppi, smask=0) and cropped to 780 ppi equivalent",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — this panel was named as the outstanding debt in the partial receipt filed an hour earlier, and closing it was the whole point of this run"
+      },
+      {
+        "proposition": "🔴 THE FIGURE SETTLES ITS OWN LEGEND'S COLLISION, WHICH IS STRONGER THAN THE RUNNING TEXT SETTLING IT. The legend of Figure 5 announces the two MS/MS spectra as panels 'E and F' and then labels them '(C)' and '(D)' — letters already assigned earlier in the same legend. Printed on the figure itself, panel E is the K100 peptide LAFTVDDNPTK PTTR with Xcorr 1.54 and MH+ 1789.913, and panel F is the K274 peptide FTDINDSLGK LDFSR with Xcorr 2.11 and MH+ 1841.913, each with the diglycine remnant marked GG above the modified lysine. So the panel letters are E and F, the running text's 'Fig. 5, E and F' is right, and the parenthetical (C)/(D) in the legend is the error. The K274 spectrum also carries the better score of the two.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5, panels E and F. Two annotated MS/MS spectra. Panel E is headed 'CID @35.00, z=+2, Mono m/z = 895.46 Da, MH+ =1789.913Da, Xcorr=1.54' over the sequence L A F T V D D N P T K P T T R with 'GG' marked above the K and b/y ion brackets in red and blue. Panel F is headed 'CID @35.00, z=+3, Mono m/z = 614.6426 Da, MH+ = 1841.913 Da, Xcorr = 2.11' over the sequence F T D I N D S L G K L D F S R with 'GG' above the K.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID24550385/PMID24550385_p10_x75.jpeg",
+        "anchor": "Figure 5 panels E and F, from the same 272 ppi extraction",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[12]",
+        "contradicts_needle": "annotated MS/MS spectra of the identified WWOX ubiquitinated peptides is shown for",
+        "found_or_sought": "sought — the legend could not name the panel carrying K274, so the panel was opened to name it"
+      },
+      {
+        "proposition": "🔴 THE PANEL PRINTS THE NUMBER THE RUNNING TEXT WITHHOLDS. The Results say only that 'WWOX levels were decreased' in Itch-knockout fibroblasts. Panel 6E prints the densitometry under the blot: wild type 1, knockout 0.36. A 64% reduction in steady-state WWOX from deleting a single E3 ligase is a quantitative statement about how much of WWOX's abundance depends on ITCH, and it is the number a downstream lever argument needs. Panel 6D likewise quantifies the half-life claim: with cycloheximide alone WWOX falls to about 23% at 3 h and 5% at 6 h, with ITCH to about 51% and 39%, both marked significant.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6, panels D, E and F. Panel D: a six-lane blot Myc-WWOX +/- FLAG-ITCH at CHX 0, 3, 6 h with FLAG, MYC and HSP-90 rows, beside a line graph 0-120 with MYC-WWOX in blue and MYC-WWOX+FLAG-ITCH in red, asterisks at 3h-CHX and 6h-CHX. Panel E: a three-row blot WT versus KO for ITCH, WWOX and GAPDH, with '1' printed under the WT lane and '0.36' under the KO lane. Panel F: MEF-WT and MEF-ITCH-KO at CHX 0, 2, 4, 6 h with ITCH, WWOX and GAPDH rows, beside a bar chart normalised to MEF-WT untreated = 100 in which the knockout bars start near 45 and fall to about 20.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID24550385/PMID24550385_p12_x87.jpeg",
+        "anchor": "Figure 6 panels D, E and F, extracted from page 12 of the publisher PDF at 1882x2775 px (269 effective ppi, smask=0)",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — the direction was the finding, so the panels behind it were opened to see how large it is"
+      },
+      {
+        "proposition": "🔴 TWO DIFFERENT p-VALUES FOR THE SAME COMPARISON, ONE IN THE METHODS AND ONE PRINTED ON THE PANEL. The Methods state the phage-display enrichment as 'p value <2.2E−18 using rank sum test'. Figure 2D prints, in its own title, 'p-value: 7.5591721538234e-12'. Both describe the same test — the position-weight-matrix scores of WWOX-interacting proteins against the human proteome by rank sum. The conclusion is unaffected at either value; the discrepancy is recorded because a statistic that appears twice with two values cannot both times have come from the analysis that was run.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, panel D. A cumulative distribution plot titled 'WWOX No.1 PWM 1' and, on the second title line, 'p-value: 7.5591721538234e-12'. Axes: CDF from 0.0 to 1.0 against log(PWM score) from -50 to -20. A red series legended 'WWOX interacting proteins (MS)' lies to the right of a black curve legended 'All Human Proteome'.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID24550385/PMID24550385_p06_x34.jpeg",
+        "anchor": "Figure 2 panel D title, extracted from page 6 of the publisher PDF at 2140x1651 px (306 effective ppi, smask=0); compare the Methods section 'Phage Display'",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[13]",
+        "contradicts_needle": "much higher position weight matrix scores compared with random proteins",
+        "found_or_sought": "found — reading the Methods after the panels put the two numbers next to each other"
+      },
+      {
+        "proposition": "THE MOTIF TREE'S COUNTS CANNOT BE RECONCILED WITH ITS STATED DENOMINATOR WITHOUT AN ASSUMPTION NOBODY STATES. Both the legend and the Methods give the sets as 240 proteins (MS-SET-1) and 144 (MS-SET-2), and describe each number beside a logo as 'the number of proteins with the motif from our mass spectrometry data'. The leaf counts sum to 563 in panel A and 355 in panel B — a factor of 2.35 and 2.47 over their stated sets. The natural reading is that a protein bearing several motifs is counted at several leaves, which is reasonable and is nowhere said; on the literal reading the arithmetic does not close. Recorded as an arithmetic observation, not as an error claim.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, panels A and B. Two neighbour-joining trees of sequence logos. Panel A leaves carry the counts 175, 18, 49, 42, 215, 32 and 32 proteins; panel B leaves carry 112, 14, 31, 31, 131, 19 and 17 proteins. Logos include PR, PPLP, PP-Y, PP-F, SP, TP, LP-F and LP-Y.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID24550385/PMID24550385_p06_x34.jpeg",
+        "anchor": "Figure 2 panels A and B, same extraction; compare the legend and the Methods section 'Motif Analyses'",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found — the counts were read off the leaves while inspecting the panel and they did not sum to the stated set"
+      },
+      {
+        "proposition": "🔴 THE UBIQUITINATION ASSAY IS DESCRIBED AS 'TREATED OR UNTREATED' WITH A PROTEASOME INHIBITOR, AND NO PANEL SAYS WHICH IT WAS. The Methods for the in vivo ubiquitination assay state that after 24 h cells were treated or untreated with MG-132 for 4 h. Only one figure legend in the paper names MG-132 — Figure 6B, the HIF1alpha antibody control. So for Figures 5A-G and 6A and 6C, whether a proteasome inhibitor was present is not recoverable. That matters here more than usual: the paper's central claim is that this ubiquitination is degradation-independent, and a proteasome inhibitor changes how much conjugate accumulates. It does not undermine the K63 linkage or the half-life results, which are separate experiments; it does mean the ubiquitination blots cannot be compared with each other for conjugate abundance.",
+        "snippet": "After 24 h, cells were treated or untreated with MG-132 (20 μmol/liter; Sigma-Aldrich) for 4 h",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID24550385_AbuOdeh2014_PMC.html",
+        "anchor": "Experimental Procedures, 'In Vivo Ubiquitination Assay'; compare every figure legend, only Figure 6B of which names MG-132",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I read the Methods for what the ubiquitination assay actually was, because the paper's claim is about a ubiquitination that does NOT degrade"
       }
     ],
-    "figure_gap": "🔴 NO PANEL IMAGE WAS INSPECTED, AND THE COVERAGE FIELD SAYS SO RATHER THAN IMPLYING OTHERWISE. All 39 panels were accounted for by reading their captions — which is how the budget was derived and how the Figure 5 label collision surfaced — but no figure file was fetched and no blot was looked at. That matters unevenly across the entries: the linkage and half-life claims are quantified in the running text with an explicit p value, whereas the K274R result of Figure 5G is a blot whose interpretation is 'was not [ubiquitinated]', and a densitometry-free negative on a western is exactly the class where a panel changes a reading. The next run on this paper should start there. The publisher PDF is fingerprinted here as article_binary and is the figure surface to extract from."
+    "figure_note": "All seven figures were inspected as images and all 39 panels accounted for. The debt named in the first partial receipt — Figure 5G, a densitometry-free negative — was the reason for this second pass, and it closed in the paper's favour."
   }
 }

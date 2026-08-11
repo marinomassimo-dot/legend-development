@@ -1633,11 +1633,46 @@ come completa.
 
 **Vedi anche `FT-060`**, letto la stessa sera.
 
-**Next action:** ① procurarsi `s001.pdf` e `s004.docx` per via manuale — la `Appendix Fig S3A/B`
-**è** l'output GSEA/GO su cui poggia `DL-MECH-034` e anche `DL-MECH-094`; ② estrarre le sei
-figure principali dal PDF locale a 173–203 ppi; ③ lettura completa partendo da Fig 4 ed EV3
-(RNA-seq) e da Fig 2 (iperreccitabilità, confrontabile con `FT-058`). **Se ② e ③ partono senza
-①, dichiarare `figures: read` su 37/69 e `supplementary: unavailable` con questa rotta citata.**
+**Next action — scritta per una sessione fredda. Non serve nulla della conversazione del
+2026-08-10: tutto ciò che segue è verificabile dal disco.**
+
+**Stato degli artefatti, già sul disco, da NON ri-derivare:**
+
+| cosa | dove | impronta / nota |
+|---|---|---|
+| superficie **testo** | `files/fulltext/PMID34268881_Steinberg2021_PMC.xml` | `sha256 de340289bc6704c9b9ec752f81afed64a02211a83d95d675a1d46f40be6304f6` · 265 997 byte · recuperata da PMC efetch il 2026-08-10 |
+| superficie **figure** | `files/fulltext/PMID34268881_Steinberg2021.pdf` | **sei** immagini >40 kpx, 1213–1419 px, **173–203 ppi**, `smask = 0` su tutte → estraibili fedelmente |
+| copie CDN | `files/figures/PMID34268881/` (11 file) | 585–712 px, **84–102 ppi** — 🔴 **inutilizzabili per 69 pannelli**, tenute solo come riferimento |
+
+**Cosa è stato letto:** *solo* la sottosezione RNA-sequencing dei Results
+(`FTR-20260810-34268881-02`, `partial_fulltext_read`). Abstract, introduzione, metodi,
+discussione e referenze **non letti**; figure `captions_only`; supplementari **non recuperati**.
+
+**Il debito preciso, in ordine:**
+
+① 🔴 **Gli otto supplementari vanno scaricati A MANO da un browser.** Non è un problema tecnico:
+`/articles/instance/8350905/bin/…` risponde `200` con un **challenge proof-of-work**
+(`cloudpmc-viewer-pow`, `POW_DIFFICULTY 4`). **Non va aggirato.** I file sono `s001.pdf`
+(Expanded View Figures), `s004.docx` (Appendix), `s002/003/005/006/008.xlsx` (Table EV1–EV5),
+`s007.pdf` (Review Process File). Metterli in `files/fulltext/PMID34268881_Steinberg2021_assets/`.
+
+② **Senza `s001.pdf` la copertura massima è 37/69** — le cinque figure EV valgono **32 pannelli**
+(`EV1 10 · EV2 8 · EV3 6 · EV4 4 · EV5 4`) e vivono solo lì. Le sei figure principali (37
+pannelli) sono nel PDF locale. Se si parte senza ①, **dichiarare `figures: read` su 37/69** e
+`supplementary: unavailable` citando la rotta di ①.
+
+③ **Il budget è 11 figure e 69 pannelli, non 17.** EMBO marca ogni pannello come `<list-item>`
+nella didascalia: un contatore che cerca lettere ne trova quasi nessuna e restituisce un numero
+piccolo e plausibile. **Partire da 69.**
+
+④ Lettura completa da **Fig 4 ed EV3** (RNA-seq, dove poggia `DL-MECH-034`) e da **Fig 2**
+(iperreccitabilità, confrontabile con `FT-058`). La `Appendix Fig S3A/B` **è** l'output GSEA/GO
+su cui poggiano `DL-MECH-034` e `DL-MECH-094`: finché non è vista, entrambi poggiano sulla
+descrizione testuale di un pannello che nessuno ha ispezionato.
+
+⑤ Test dell'estrattore **per artefatto** prima di scegliere le span: su questo XML mio ramo e
+`2e6fd6a` danno entrambi 67 citazioni di figura — **qui il difetto del join non morde**, ma va
+misurato e non assunto.
 
 ---
 
@@ -1704,6 +1739,87 @@ regge; ma chi segue la legenda per lo spettro di **K274** finisce su un blot di 
 **Contare i pannelli leggendo è ciò che l'ha messo davanti; un parser avrebbe contato sette
 lettere e tirato dritto.**
 
-**Next action:** ispezionare i pannelli dal PDF editore — in particolare **Fig 5G**, dove il
-risultato `K274R` è un blot letto come *«was not [ubiquitinated]»* senza densitometria, cioè la
-classe in cui un pannello cambia una conclusione. Poi metodi e referenze (multi-hop non svolto).
+### ✅ CHIUSO la stessa sera — seconda passata sui pannelli, metodi e referenze
+
+Receipt **`FTR-20260810-24550385-02`**, `complete_fulltext_read`, che chiude la parziale `-01`.
+Manifest **20 locator, 9 artefatti**, `MANIFEST STRICT PASS` sotto entrambi i validatori.
+Copertura: **39/39 pannelli ispezionati come immagini**, metodi letti, **67 referenze** enumerate.
+
+**Superficie figure:** il **PDF editore**, sette immagini a **213–306 ppi**, tutte con `smask = 0`.
+Il testo resta l'HTML PMC — le due superfici non si mescolano.
+
+| esito della seconda passata | |
+|---|---|
+| 🔴 **Fig 5G regge** | a 780 ppi equivalenti: `K274R+ITCH` è al livello del controllo `WFPA`, `K100R+ITCH` ha uno smear chiaro. **A figura intera avevo letto uno smear che non c'è** — il ritaglio mi ha corretto nella direzione opposta rispetto al mattino. FLAG presente in tutte e quattro le corsie `+ITCH`: la ligasi c'era. **Caveat residuo:** il costrutto `K274R` è espresso e recuperato meno degli altri, GAPDH pari, nessuna densitometria — il confronto non è appaiato per input |
+| 🔴 **la figura risolve la propria legenda** | i pannelli stampano **E** (K100, Xcorr 1.54) e **F** (K274, Xcorr 2.11): il `(C)`/`(D)` della didascalia è l'errore |
+| 🔴 **i pannelli danno numeri che il testo tace** | Fig 6E stampa `1` vs **`0.36`** — 64% di WWOX in meno cancellando una sola E3. Fig 6D: 23%→51% a 3 h, 5%→39% a 6 h |
+| 🔴 **due p-value per un confronto** | metodi `<2.2E−18`, pannello 2D `7.5591721538234e-12` |
+| 🔴 **MG-132 «treated or untreated»** | solo Fig 6B lo nomina: per 5A–G, 6A e 6C non è ricostruibile se l'inibitore del proteasoma c'era |
+| l'albero dei motivi | le foglie sommano **563** e **355** su insiemi dichiarati di **240** e **144** |
+| ciò che **non** è cambiato | K63≫K48 in 6A, controllo HIF1α corretto in 6B, ubiquitine a lisina singola concordi in 6C; figure 1, 3, 4, 7 coerenti con le didascalie |
+
+**Multi-hop:** 67 referenze, tutte con PMID, **19 gene-dirette, 14 né lette né in coda**. La più
+importante è 🔴 **`PMID 23370280`** (Salah 2013): è il paper da cui un commit candidate di questo
+repository attribuisce già *«direct ITCH/proteasomal stabilization»* — **mai letto qui.** Stessa
+forma di `DL-META-091`, ed è il motivo per cui `DL-THER-095` poggia su questa lettura e non su
+quell'attribuzione. Non in coda anche `16288044` (Mahajan 2005, ACK1 attivata), l'altra metà
+della coppia di `DIS-001`.
+
+**Next action (scritta per una sessione fredda — non serve nulla di questa conversazione):**
+niente sul paper, è chiuso. Il debito che genera è **`PMID 23370280`**, da accodare e leggere:
+verificare se attesti davvero una stabilizzazione ITCH-dipendente e con quale misura, perché è
+la sola altra fonte che lo stato cita per quel fatto.
+
+- superficie testo: `files/fulltext/PMID24550385_AbuOdeh2014_PMC.html` ·
+  `sha256 9fe41a3e3a55b0bdf329aef4c471c14e1b638cc49f3807808e07a17c3fe9c559` — **già sul disco,
+  non va ri-derivata**
+- superficie figure: `files/fulltext/PMID24550385_AbuOdeh2014.pdf` → sette JPEG già estratti in
+  `files/figures/PMID24550385/`, impronta-ti nel manifest
+- 🔴 **l'estrattore del ramo `lettore` (`80e6f03`) rende inutilizzabile questa superficie**: 0 su
+  32 citazioni di figura, 2 su 31 `PPXY`. Le span vanno costruite contro `2e6fd6a`, estratto in
+  sola lettura con `git show`. Le 20 attuali verificano sotto entrambi
+
+---
+
+## FT-061 — Abu-Odeh 2016, checkpoint ATR: ⬜ NON LETTO, preflight completo, pronto ad aprire
+
+**Paper:** PMID 26675548 / DOI 10.18632/oncotarget.6571 — Abu-Odeh et al. 2016, *Oncotarget*
+7(4)
+**Title:** WWOX modulates the ATR-mediated DNA damage checkpoint response
+**Priority:** **ALTA** — prosegue il filone DDR aperto da `FT-060` (ITCH/K63/`DIS-001`, dove la
+funzione DDR di WWOX via ATM è la ragione per NON inibire ITCH), **senza collidere con B**, che
+ha `27308504` sull'ATM.
+**Current status:** ⬜ **non letto. Zero ricevute su tutti e sei i rami.**
+
+**Preflight fatto il 2026-08-10 — nulla da rifare, tutto verificabile dal disco:**
+
+| | |
+|---|---|
+| superficie **testo** | `files/fulltext/PMID26675548_AbuOdeh2016_PMC.xml` · `sha256 8bf84348ebe881daf153987b4197addb41a944a19ada0390d9e6d1dbf9a4a584` · PMCID `PMC4826209`, **CC BY**, `isOpenAccess: Y` |
+| superficie **figure** | `files/fulltext/PMID26675548_AbuOdeh2016.pdf` · `sha256 2416bec74c23df517bfc8b7484dfef78206778a8e61a28b0258a59ac551eb500` · da usare **solo** per le figure, come su `FT-060` |
+| estrattore, misurato **su questo artefatto** | 🔴 il difetto del join **morde**: `(Fig` dà **19** sul ramo `lettore` (`80e6f03`) contro **26** su `2e6fd6a`. Costruire le span contro `2e6fd6a`, estratto in sola lettura con `git show` |
+| vocabolario | `WWOX` 198 · `checkpoint` 37 · `ATM` 61 · `ATR` 36 · `Chk1` 2 |
+
+### 🔴 Il budget: NON usare il censimento automatico. Contare leggendo
+
+`panel_census.py` **rifiuta** su questo articolo (Figura 6 senza pannelli). Ma il difetto è più
+sottile del rifiuto: riporta `B,C` per la Fig 1, `B,C` per la 2, `B,C,D` per la 3 — **perde il
+pannello A in tutte e cinque le figure che "passano"**, e su quelle non protesta.
+
+> **Un censimento che riporta `B,C` senza `A` è sbagliato e sembra a posto.** Il rifiuto cattura
+> lo zero, non la perdita sistematica del primo pannello.
+
+`figures_present` **si ricava leggendo le didascalie**, come su `FT-060` — è il metodo, non un
+ripiego. Il numero indicativo del parser (6 figure, ≥10 pannelli) va trattato come **limite
+inferiore**, mai come denominatore.
+
+### Da verificare durante la lettura, non prima
+
+- **Oncotarget 2016**: la rivista ha avuto un periodo di de-indicizzazione da MEDLINE. Non lo
+  affermo — **va controllato** e, se confermato, annotato come nota di provenienza che pesa sul
+  `weighting`, non sul contenuto.
+- Il legame con `DIS-001`: se WWOX modula il checkpoint ATR oltre che ATM, l'argomento
+  *«inibire ITCH toglierebbe a WWOX la funzione DDR»* si allarga o si precisa.
+
+**Next action:** aprire il documento. Preflight, superfici, impronte e misura dell'estrattore
+sono già qui sopra.
