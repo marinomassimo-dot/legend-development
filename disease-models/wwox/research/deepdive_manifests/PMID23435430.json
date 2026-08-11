@@ -1,0 +1,251 @@
+{
+  "schema_version": 2,
+  "pmid": "23435430",
+  "doi": "10.1038/onc.2013.52",
+  "receipt": "FTR-20260811-23435430-01",
+  "landing": ["FTR-20260811-23435430-01", "full_text_queue_current", "discovery_ledger_current"],
+  "skills_considered": [
+    {"skill": "legend-study-intake-triage", "used": true, "reason": "No prior manifest, no prior receipt at any depth. New to the corpus. Reached only through the reference list of PMID 25331887, entry 42 — it is in no WWOX query and in no citing paper's bibliography that this corpus holds."},
+    {"skill": "find-fulltext", "used": true, "reason": "SURFACE PREFLIGHT, three routes, and they disagreed on the thing this reading needed. oa.fcgi returns a record with license=\"none\" and retracted=\"no\" — an author manuscript deposited in PMC without an open licence. Europe PMC fullTextXML: 200, 96,812 bytes. efetch db=pmc: 200, 92,519 bytes. Both carry a body and the same eight figures and 38 references. THE DISAGREEMENT IS STRUCTURAL: efetch places all eight <fig> elements OUTSIDE <body> (body 29,341 chars) while Europe PMC places all eight INSIDE (body 46,114 chars). The difference is eight declarative caption sentences. Europe PMC declared for that reason, per the instruction written into FT-060 before this run began."},
+    {"skill": "caption-census", "used": true, "reason": "framework/scripts/caption_census.py run BEFORE opening the paper, which is the point of it. This artifact lands in the healthy class — 8 figs in body, 8 in article — so the captions are in the surface the reading actually parses. On PMID 24308844 the same check would have said 0 of 7 and would have prevented a manifest with zero caption locators."}
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 41,
+    "publications_on_gene": 0,
+    "counts_measured": "PubMed esearch, 2026-08-11: 'Santini S[au] AND ITCH' 6, 'Santini S[au] AND ATM' 9, 'Santini S[au] AND WWOX' 0. Corresponding author Cesareni/Melino-adjacent Rome group (Tor Vergata); the ITCH constructs are credited to M. Rossi and G. Melino. total_publications recorded as 41 for 'Santini S[au] AND (ubiquitin OR ATM OR ITCH)' rather than the bare surname, which is common and would aggregate homonyms into an uninterpretable denominator — the bare-surname count is deliberately not used as a ratio here.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "primary_group_note": "🔴 ZERO WWOX PAPERS, and that is exactly why this reading matters. This group works on ATM, ITCH and c-FLIP in Ataxia Telangiectasia and liver injury. It has never written about WWOX. Yet its single result is the load-bearing arrow in a WWOX model drawn two papers downstream — the parity-of-sources principle in its purest form: the premise under a WWOX schematic comes from a laboratory that has never studied the gene.",
+    "weighting": "The OBSERVATIONS carry ordinary experimental weight: eight figures of transfection, immunoprecipitation, pull-down and mouse work, with catalytically dead and off-target controls (ITCH-C830A, NEDD4, S430A, ΔMEK) that are genuinely well chosen. The INTERPRETATION is weighted UP rather than down here, uniquely among the readings in this corpus this week, because the authors hedge their own mechanism in print — 'putative', 'allow to speculate', 'may not modulate ... all ITCH substrates'. A group that marks its own uncertainty is a group whose unmarked statements can be read more literally. The distortion in this chain was introduced downstream, not here."
+  },
+  "field_density": {
+    "wwox_directed": false,
+    "queries": [
+      {"query": "Santini S[au] AND WWOX", "route": "PubMed esearch 2026-08-11", "count": 0},
+      {"query": "Santini S[au] AND ITCH", "route": "PubMed esearch 2026-08-11", "count": 6},
+      {"query": "Santini S[au] AND ATM", "route": "PubMed esearch 2026-08-11", "count": 9}
+    ],
+    "note": "WWOX appears nowhere in this paper. It is read because a WWOX model cites it — indirectly, through PMID 25331887's reference 42 — and because CLAUDE.md rule 3 forbids downgrading a paper for its disease context."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 38,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [
+      {"ref": 14, "queue": "FT-061", "reason": "The Itch-null / ConA liver-failure paper this one's in vivo arm is modelled on, and the source of the claim that c-FLIP-L turnover is ITCH-dependent. Not read; the in vivo comparison rests on it."},
+      {"ref": 21, "queue": "FT-061", "reason": "Rossi/Melino, ITCH and p73 stability. It is the paper behind the ONE substrate ATM fails to modulate here, which is the boundary of the whole result."},
+      {"ref": "12, 13", "queue": "FT-061", "reason": "The HECT/WW intramolecular autoinhibition and its release by JNK1 phosphorylation. Everything mechanistic in this paper is an argument by analogy to those two, including the sentence the authors label speculation."}
+    ],
+    "gap": "🔴 THE REFERENCE LIST CONTAINS NO WWOX PAPER AND NO GENE-DIRECT REFERENCE, so gene_direct_refs_in_source is empty and that emptiness is the finding rather than an omission. The multi-hop that matters here runs the other way — this paper is itself the unresolved hop of PMID 25331887 and PMID 27308504 — and it is now resolved. The four references queued above are the hops THIS paper leaves open, and none of them is WWOX-directed."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does the source of the ATM->ITCH arrow support the form in which the WWOX papers state it?",
+    "hits": 3,
+    "finding": "🔴 IT SUPPORTS THE DIRECTION AND NOT THE FIRMNESS, AND THE FIRMNESS GROWS AT EVERY HOP. Three papers, three artifacts, each quoted verbatim here or in a manifest this corpus already holds. Santini 2014, the source: 'Point mutagenesis identified Ser161 as a PUTATIVE ATM-target site', and for the mechanism 'Pull down experiments ALLOW TO SPECULATE that S161 phosphorylation destabilizes the inhibitory intramolecular interaction'. Abu-Odeh 2014 (PMID 25331887): 'After DNA damage, ATM positively REGULATES the ligase activity of ITCH (42)' — a neutral verb, hedge dropped, citation kept. Hazan 2015 (PMID 27308504), the Author's View: 'Activated ATM PHOSPHORYLATES and positively regulates the ligase activity of ITCH' — the specific molecular verb appears for the first time, inside a model figure, AND THE CITATION DISAPPEARS. The claim is firmest exactly where its provenance is thinnest. This extends DL-METH-085 from a two-document observation to a three-document chain, and the chain crosses laboratories rather than staying inside one."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-11",
+    "route": "oa.fcgi record attribute for PMC3938399 and the PMC record header",
+    "result": "retracted=\"no\". No erratum, no expression of concern. NIHMS author manuscript of an Oncogene research article, license=\"none\".",
+    "hold": false
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID23435430_Santini2014_EPMC.xml",
+      "sha256": "cd0b414ad9604e93aa7b6f2c27848aa53608861d749118b2517ef3cf61e512bf",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID23435430_Santini2014.pdf",
+      "sha256": "b9ec322d9432ae6378a389b355721cb18552ac411f566d900c4f7771939b82e7",
+      "kind": "article_binary"
+    },
+    {
+      "path": "files/fulltext/PMID23435430_Santini2014_assets/p14_x59.jpeg",
+      "sha256": "68b1169a9e3b85a1d18ebd477dd098a76574090e41d406db19e84eaa5a2aca90",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID23435430_Santini2014_assets/p15_x64.jpeg",
+      "sha256": "17d91bcc7eaab220b213f392a4f5cdf746378c79689b8f473541fc57373e30c8",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID23435430_Santini2014_assets/p17_x74.jpeg",
+      "sha256": "b226fc9209b4e68ab68a0b7b93a2a898f48d5d02440508805b75a623dde652c5",
+      "kind": "figure"
+    }
+  ],
+  "figure_extractions": {
+    "rule": "All eight figures extracted from the publisher PDF with the soft-mask control; three carry locators, five are waived by name with their cost written down.",
+    "route": "framework-external named script (scratchpad extract_figs.py), fitz extract_image with fitz.Pixmap compositing where a soft mask exists. Measured: smask=0 on all eight, so no compositing was needed here — checked, not assumed.",
+    "figures": [
+      {"label": "Figure 3", "artifact": "files/fulltext/PMID23435430_Santini2014_assets/p14_x59.jpeg", "page": 14, "xref": 59, "dimensions": "2417x2682", "smask": 0, "inspected_at": "1150 px wide navigation render from the original pixels; band presence, lane labels and row identities are legible at that scale and no claim below rests on densitometry"},
+      {"label": "Figure 4", "artifact": "files/fulltext/PMID23435430_Santini2014_assets/p15_x64.jpeg", "page": 15, "xref": 64, "dimensions": "2423x2772", "smask": 0, "inspected_at": "1150 px wide navigation render from the original pixels"},
+      {"label": "Figure 6", "artifact": "files/fulltext/PMID23435430_Santini2014_assets/p17_x74.jpeg", "page": 17, "xref": 74, "dimensions": "2072x3314", "smask": 0, "inspected_at": "1150 px wide navigation render from the original pixels"}
+    ],
+    "extracted_but_not_inspected": [
+      {"label": "Figure 1", "artifact": "p12_x49.jpeg", "dimensions": "2376x2804"},
+      {"label": "Figure 2", "artifact": "p13_x54.jpeg", "dimensions": "2408x3262"},
+      {"label": "Figure 5", "artifact": "p16_x69.jpeg", "dimensions": "2438x3124"},
+      {"label": "Figure 7", "artifact": "p18_x79.jpeg", "dimensions": "2366x2925"},
+      {"label": "Figure 8", "artifact": "p20_x87.jpeg", "dimensions": "720x1664"}
+    ]
+  },
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC JATS, body 47,735 characters and abstract 1,420 characters separated by main's own extractor. Every text locator below matched at mode=strict against that body; none needed the tolerant path. One candidate quote was REFUSED by the separation and dropped rather than re-anchored: the S161 sentence I first chose sits in the abstract, and the validator was right to keep it out.",
+    "extractor_provenance": "Verified with the worktree copy of framework/scripts/deepdive_manifest.py after confirming `git diff main` on that file is empty — this branch is fast-forwarded to main, so the validator run is main's. The suspect-surface screen passes.",
+    "abstract_anchoring_waived": "No locator draws on the abstract.",
+    "figure_coverage": {
+      "figures_present": 8,
+      "figures_with_locators": 3,
+      "coverage": "3/8",
+      "budget_declared_before_reading": "🔴 DECLARED BEFORE OPENING THE PAPER, which is the only time a budget means anything: 8 figures present, target one locator per figure or a named waiver with its cost. The target was NOT met — three figures carry locators and five are waived. Written as a shortfall rather than presented as a plan, because a budget revised after the fact to match what was done is not a budget.",
+      "waivers": [
+        {"figure": "Figure 1", "cost": "The dose-response that establishes the whole paper: increasing ATM against ITCH autoubiquitination, with the kinase-dead ATM and the NEDD4 selectivity control. Not inspected, so the claim 'ATM but not its catalytically inactive mutant' is carried on the authors' text. This is the single most expensive waiver here."},
+        {"figure": "Figure 2", "cost": "Substrate ubiquitination of c-FLIP-L and c-Jun, and the NEDD4 comparison. The degradative direction of every measured ITCH output rests on these panels and is carried on text alone."},
+        {"figure": "Figure 5", "cost": "S161A against S430A on substrate ubiquitination — the specificity of the residue transferred from autoubiquitination to substrates. Fig 4 was inspected and covers the autoubiquitination half of the same argument, which is why this one was the third to be dropped rather than the first."},
+        {"figure": "Figure 7", "cost": "The HepG2 rescue: shITCH plus ITCH-wt or ITCH-S161A, and the cyclin D1 / p53-pS15 / p53-pS46 readouts. It is the only place the cell-cycle interpretation is measured, and that interpretation is not what this reading was for."},
+        {"figure": "Figure 8", "cost": "🔴 THE MOST UNCOMFORTABLE WAIVER, because Fig 8A is where the mis-cited liver result actually lives — see entries[8]. The mis-citation is established from the CAPTIONS, which are authored prose in the declared surface and are verified character-for-character, so the finding does not depend on the pixels. What is NOT established without them is whether Fig 8A shows what the sentence claims. Recorded as an open question, not as a closed one. Also the lowest-resolution extraction of the eight, 720x1664 against ~2400x2800 for the others, which is itself worth re-deriving."}
+      ]
+    },
+    "panel_text_relation_note": "One contradiction, entries[8] overturning entries[7], carrying contradicts, contradicts_needle and cited_panel_check. Two panel qualifications, entries[3] and entries[5]. The contradiction is a CITATION defect rather than a data defect: the panel named by the sentence contains no experiment of the kind the sentence describes.",
+    "entries": [
+      {
+        "proposition": "THE RESULT THE WHOLE DOWNSTREAM CHAIN RESTS ON, and the authors' own word for it is 'putative'. This is the sentence in which the paper states its central mechanistic claim in its own voice, in the Introduction, before any figure.",
+        "snippet": "Point mutagenesis identified Ser161 as a putative ATM-target site required for the ATM-dependent modulation of ITCH catalytic activity",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_EPMC.xml",
+        "anchor": "INTRODUCTION, final paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "🔴 AND THE MECHANISM IS SELF-LABELLED SPECULATION, IN THE DISCUSSION, BY THE AUTHORS. There is no phospho-S161 antibody anywhere in this paper, no in vitro kinase assay with recombinant ATM, and no mass spectrometry. The evidence that ATM phosphorylates ITCH at S161 is: a pan-phosphoserine blot that an ATM inhibitor reduces, plus a serine-to-alanine mutant that stops responding to ATM. That is a strong genetic argument and it is not a measured phosphorylation event at that residue — which is exactly what the authors say by choosing this verb.",
+        "snippet": "Pull down experiments allow to speculate that S161 phosphorylation destabilizes the inhibitory intramolecular interaction mediated by the HECT domain",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_EPMC.xml",
+        "anchor": "DISCUSSION, first paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Results-voice version of the same mechanism, stated more firmly than the Discussion states it — the hedge erosion begins inside this paper, between its own sections.",
+        "snippet": "ATM cotransfection, significantly reduced the pull down efficiency",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_EPMC.xml",
+        "anchor": "RESULTS, paragraph on the HECT-domain pull down, describing Fig 6B",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "PANEL SIDE, QUALIFYING. The panel bears on the sentence and neither confirms nor overturns it. Fig 6B carries no quantification, no densitometry and no replicate statistics — nothing in the figure supports the word 'significantly', which in this panel can only mean 'visibly'. And the direction of the input works against the claim: the ATM-positive lane shows MORE ITCH in the Input row than the ATM-negative lane, while the Pull-down row shows a band that is at best modestly weaker. More input with similar recovery is a smaller effect than the sentence describes, not a larger one. This is the panel that supplies the molecular explanation for everything the two downstream WWOX papers assert, and it is the least quantified panel in the paper.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6B at 2072x3314: an Input/ITCH row of four lanes all positive for Myc-ITCH-wt with ATM −,+,−,+, in which lane 4 is visibly the strongest; below it a Pull-down/ITCH row in which lanes 1-2 (GST control) are blank and lanes 3-4 (GST-HECT) both carry a band of comparable intensity; below that an anti-GST loading panel showing GST in lanes 1-2 and GST-HECT in lanes 3-4. No error bars, no numbers, no n, and no densitometry anywhere in the figure.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_assets/p17_x74.jpeg",
+        "anchor": "Figure 6, panel B, Input and Pull-down ITCH rows, read from the 2072x3314 extraction",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[2]",
+        "qualifies_needle": "significantly reduced the pull down efficiency"
+      },
+      {
+        "proposition": "🔴 THE QUALIFICATION THE WWOX MODEL IMPORTS NONE OF: THE ACTIVATION IS A PULSE, AND THEN IT REVERSES. ATM does not hold ITCH on; it turns it up early after damage and the activity then falls below where it started. A model figure that draws ATM→ITCH as a standing arrow inside a positive feed-forward loop is drawing a transient as a steady state.",
+        "snippet": "which positively correlates with an early and transient induction of ITCH autoubiquitination. Later on ITCH activity is down-regulated",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_EPMC.xml",
+        "anchor": "RESULTS, 'Endogenous ATM activity may transiently promote ITCH activity in response to DNA damage', describing Fig 3A",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "PANEL SIDE, QUALIFYING — the transience is real in the panel and it comes with a confound the text does not mention. Confirming half: the autoubiquitination smear peaks at 3 h and is visibly weaker at 6, 9, 12 and 24 h, so 'transient' is not an overstatement. Qualifying half: the anti-Myc row directly beneath, which is the immunoprecipitated ITCH itself, is ALSO strongest in the 3 h lane. The lane with the most ubiquitin signal is the lane with the most ITCH pulled down, so part of what the panel shows is input rather than activity. The paper does address this concern — but for a different experiment, ATM overexpression in Supplementary Fig S1, not for this timecourse.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3A at 2417x2682: anti-HA smear across NCS 0, 3, 6, 9, 12, 24 h with the 3 h lane the darkest and the signal declining monotonically thereafter; the anti-Myc row below shows its heaviest band in the same 3 h lane; anti-pS1981ATM in the total lysate rises by 3 h; anti-Tubulin is even across all six lanes.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_assets/p14_x59.jpeg",
+        "anchor": "Figure 3, panel A, anti-HA and anti-Myc rows across the six NCS timepoints, read from the 2417x2682 extraction",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[4]",
+        "qualifies_needle": "early and transient induction of ITCH autoubiquitination"
+      },
+      {
+        "proposition": "🔴 THE BOUNDARY THE AUTHORS DRAW THEMSELVES, AND IT IS THE ONE THE WWOX TRANSFER WALKS STRAIGHT THROUGH. ATM modulates ITCH activity but not ITCH's action on every substrate — p73 ubiquitination is unchanged by ATM in this paper. WWOX IS NOT AMONG THE SUBSTRATES TESTED HERE. So carrying ATM→ITCH into a WWOX model requires assuming WWOX behaves like c-FLIP-L and c-Jun rather than like p73, and this sentence is the source paper stating that the assumption is not free.",
+        "snippet": "although ATM modulates ITCH activity it may not modulate the ubiquitination and therefore the stability of all ITCH substrates",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_EPMC.xml",
+        "anchor": "RESULTS, 'ATM enhances the ubiquitination of ITCH Ubiquitin-E3-Ligase target proteins', final sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The same boundary restated in the Discussion, with a mechanism proposed for it: the selection is by substrate class and by timing, not global.",
+        "snippet": "ATM activity at early time points may direct ITCH activity selectively on a subset of its substrates",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_EPMC.xml",
+        "anchor": "DISCUSSION, second paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A FIGURE MIS-CITATION IN THE RUNNING TEXT, TEXT SIDE. The in vivo result — c-FLIP-L fails to fall in Atm-null livers after ConA — is attributed to Figure 6A. The very next sentence of the same paragraph cites Fig 8A for the companion result, which is where this one belongs.",
+        "snippet": "the decrease of c-FLIP-L protein levels is significantly compromised in Atm",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_EPMC.xml",
+        "anchor": "RESULTS, 'ATM activity modulates ConA induced hepatocyte cell death'. The citation marker (Fig. 6A) follows.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "PANEL SIDE, CONTRADICTING, AND THE CITED PANEL IS THE ONE THE SENTENCE NAMES — cited_panel_check satisfied. Figure 6A is a HEK-293T transfection blot: ATM ±, ITCH wt or S161A, probed for pS1981-ATM, ATM, ITCH and Tubulin. There is no mouse in it, no liver, no ConA and no c-FLIP antibody. The sentence's result cannot be read from the panel it cites under any interpretation. The caption quoted below is authored prose in the declared surface and is verified character-for-character, which is what makes this checkable without the pixels; the pixels were inspected as well and show exactly the four rows the caption names.",
+        "snippet": "HEK 293 T cells were transiently transfected with Myc-ITCH wt, Myc-ITCH S161A in the presence or in the absence of Flag-ATM. Protein expression was revealed by immunoblotting",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_EPMC.xml",
+        "anchor": "Figure 6 caption, item A. Declared surface body, not figure: this is authored prose carried in the body container and verified character-for-character. Labelling a caption quote 'figure' would exempt it from that check.",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[8]",
+        "contradicts_needle": "significantly compromised in Atm",
+        "cited_panel_check": "SATISFIED. The falsifying panel is Figure 6A, which is the panel the sentence itself cites. This is not a case of pairing a statement with a panel it never named."
+      },
+      {
+        "proposition": "🔴 EVERY UBIQUITINATION MEASUREMENT IN THIS PAPER IS MADE UNDER PROTEASOME INHIBITION, and it is stated plainly rather than buried in Methods. It is the correct design for visualising ubiquitin conjugates and it means something specific for this corpus: the chain type is never determined here. There is no K48 or K63 linkage-specific antibody, no single-lysine ubiquitin mutant, and no linkage mapping anywhere in the eight figures. So this paper establishes that ATM raises ITCH's ligase output, and it does not establish which chain ITCH builds. On WWOX the claim is K63 and stabilisation; here the two measured outcomes are degradation. That is not a contradiction, because the substrates differ — it is the reason the arrow cannot be imported with its outcome attached.",
+        "snippet": "In all the experiments cells were treated with the proteasome inhibitor MG132 for 2 hrs before the preparation of protein extracts",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_EPMC.xml",
+        "anchor": "RESULTS, 'ATM modulates ITCH activity', first paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The control the authors offer against the input confound, recorded because entries[5] and entries[3] both turn on it. Note what it covers and what it does not: it is about ATM overexpression not changing ITCH levels, in Supplementary Figure S1. It says nothing about the NCS timecourse of Fig 3A, where the anti-Myc row visibly co-varies with the signal.",
+        "snippet": "ATM did not significantly modulate ITCH protein levels",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_EPMC.xml",
+        "anchor": "RESULTS, 'ATM modulates ITCH activity', citing Supplementary Figure S1",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "PANEL SIDE, CONFIRMING — the specificity architecture of the S161 claim, which is the strongest thing in the paper and deserves to be recorded as such rather than only qualified. Three controls in one figure: the catalytically dead ITCH-C830A produces no signal under any condition; ITCH-S430A, a serine mutated as a decoy, still responds to ATM; and S161A still responds to ΔMEK, so the mutant is not simply dead. A residue that loses ATM-responsiveness while keeping JNK-responsiveness is a genuinely discriminating result. The same input co-variation as Fig 3A is visible in the anti-Myc rows and is recorded here for completeness rather than as a separate finding.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4 at 2423x2772. Panel B: ITCH-Myc wt / CA / S161A against ATM −,+; the anti-HA row shows a strong smear only in wt+ATM, nothing in either CA lane, and two bands of comparable intensity in S161A− and S161A+. Panel C: the same layout with S430A, where both wt and S430A show more anti-HA signal with ATM than without. Panel D: wt / CA / S161A against ΔMEK −,+; anti-HA is blank in all minus lanes and in both CA lanes, and strong in wt+ΔMEK AND in S161A+ΔMEK. Panel A: anti-pSer on immunoprecipitated ITCH, two lanes only, ATM present in both, differing in KU-55933 — there is no ATM-minus lane in panel A.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_assets/p15_x64.jpeg",
+        "anchor": "Figure 4, panels A-D, read from the 2423x2772 extraction",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "WHY THIS PAPER IS NOT ONLY A CITATION REPAIR, and the reason it belongs in this corpus on its own merits. Ataxia Telangiectasia is a cerebellar neurodegeneration, and the authors close by proposing that ATM deficiency may deregulate Gli-1 — an ITCH substrate, a Hedgehog effector, and a factor downregulated during cerebellar differentiation. WWOX-related disorder includes SCAR12, a spinocerebellar ataxia. So ITCH sits at a junction between the WWOX-DDR axis this corpus has been reading and a cerebellar axis it has not, and the junction was found in a paper that never mentions WWOX. Recorded as ESPANSIONE, not as an inference: nothing here measures WWOX, Gli-1 or cerebellum together.",
+        "snippet": "As cerebellar neurodegeneration is a major feature of A-T",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_EPMC.xml",
+        "anchor": "DISCUSSION, final paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A REVERSE ARROW THE DOWNSTREAM MODELS DO NOT DRAW, and it is declared as unpublished. If ITCH lowers ATM protein levels, the 'positive feed-forward loop' of the WWOX schematic has a negative limb nobody has drawn. Recorded as IPOTESI with its evidential status attached — 'data not shown' is not a result, and the point of recording it is that a future reading should ask whether it was ever published.",
+        "snippet": "ITCH overexpression may down-regulate endogenous ATM protein levels independently on proteasome activity",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23435430_Santini2014_EPMC.xml",
+        "anchor": "DISCUSSION, third paragraph. The parenthetical '(data not shown)' follows.",
+        "panel_text_relation": "text_only"
+      }
+    ],
+    "note": "COVERAGE: abstract, Introduction, all seven Results subsections, Discussion, Methods and the 38-item reference list read in sequence from the Europe PMC JATS; all eight figure captions read in the same surface; three of eight figures inspected as images from the publisher PDF; five figures extracted and NOT inspected, each waived by name with its cost. FIVE SUPPLEMENTARY FIGURES (S1-S5) ARE CITED AND NOT RETRIEVED — S1 carries the ITCH-level control that entries[11] depends on, S3 carries the p73 negative that entries[6] depends on, and S4 carries the short kinetic that puts the ITCH peak at 1 h rather than the 3 h visible in Fig 3A. That is a bounded, named gap and it is why this reading is recorded as partial."
+  }
+}

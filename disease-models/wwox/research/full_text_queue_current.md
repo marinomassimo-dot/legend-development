@@ -1832,8 +1832,66 @@ interessante — poggia interamente su un lavoro di terzi che questo corpus non 
 fosforila ITCH *direttamente*, e l'effetto sull'attività ligasica è misurato o inferito? La
 direzione conta: se ATM *attiva* ITCH e ITCH *stabilizza* WWOX, l'anello è positivo; se in quel
 paper l'effetto fosse inibitorio, il modello di `27308504` si rovescia.
-**Current status:** ⬜ aperto. **Priorità: ALTA** — è l'unica premessa non risolta di una catena
-che questo corpus cita in tre letture.
+**Current status:** ✅ **CHIUSA il 2026-08-11.** `FTR-20260811-23435430-01`, manifest
+`PMID23435430.json`, `MANIFEST STRICT PASS 0 gaps` al primo tentativo. Lettura **parziale**:
+corpo integrale, tutte e otto le didascalie, **3 figure su 8** ispezionate, **5 supplementari
+non recuperate**.
+
+### La risposta, e la direzione regge mentre la fermezza no
+
+**Il segno è positivo**, quindi il modello di `27308504` non si rovescia. Ma la catena
+dell'affermazione, tre paper e tre artefatti impronta-verificati, si legge così:
+
+| paper | come lo dice |
+|---|---|
+| Santini 2014 (`23435430`) | Ser161 è un sito bersaglio **`putative`**; il meccanismo *«pull down experiments **allow to speculate**»* |
+| Abu-Odeh 2014 (`25331887`) | «ATM positively **regulates** the ligase activity of ITCH **(42)**» — verbo neutro, attenuazione caduta, **citazione tenuta** |
+| Hazan 2015 (`27308504`) | «Activated ATM **phosphorylates** and positively regulates…» — verbo molecolare specifico, **citazione sparita** |
+
+🔴 **L'affermazione è più ferma esattamente dove la provenienza è più sottile.** `DL-METH-085`
+era un'osservazione su due documenti dentro un laboratorio: adesso è una **catena a tre che
+attraversa laboratori diversi**. Voce nuova `DL-METH-087`.
+
+**Tre qualificazioni che il modello WWOX non importa**, tutte scritte dagli autori: l'attivazione
+è **un impulso che poi si inverte** (*«Later on ITCH activity is down-regulated»*); **non
+raggiunge tutti i substrati** (*«may not modulate … all ITCH substrates»* — p73 non cambia, e
+**WWOX non è fra i substrati testati**); e **il tipo di catena non è mai determinato** — nessun
+anticorpo linkage-specifico in otto figure, e ogni esito misurato qui è **degradativo**, mentre
+su WWOX la rivendicazione è K63 e stabilizzazione.
+
+**Debito residuo:** cinque supplementari (S1 il controllo sui livelli di ITCH, S3 il negativo
+p73, S4 la cinetica breve) e cinque figure — vedi `FT-061`.
+
+---
+
+## FT-061 — I quattro hop che Santini lascia aperti, e le cinque figure che non ho ispezionato
+
+**Papers:** PMID 23435430 / DOI 10.1038/onc.2013.52 — Santini 2014, *Oncogene* 33(9) — questa voce
+è il **debito residuo** di quella lettura, e i suoi hop non risolti: rif. 14 (ITCH-null / ConA,
+insufficienza epatica) · rif. 21 (Rossi/Melino, ITCH e stabilità di p73) · rif. 12 e 13
+(autoinibizione intramolecolare HECT/WW e suo rilascio per fosforilazione JNK1). **I PMID dei
+quattro rif. non sono risolti** — primo passo del prossimo run: risolverli, non fidarsi di questa
+riga.
+
+**Perché pesano.** Tutto ciò che è meccanicistico in `23435430` è un **argomento per analogia** ai
+rif. 12 e 13: la frase che gli autori stessi etichettano come speculazione dice *«similarly to
+what described for the S/T residues targeted by JNK activity»*. Il rif. 21 è il paper dietro
+**l'unico substrato che ATM non modula**, cioè il confine dell'intero risultato. Il rif. 14 è il
+modello in vivo su cui è ricalcato il braccio murino.
+
+**Il debito figure, con il costo di ciascuna** — budget dichiarato 8, raggiunto 3:
+
+| figura | che cosa porta | perché pesa |
+|---|---|---|
+| **1** | dose-risposta ATM, mutante kinase-dead, controllo NEDD4 | è la figura che **fonda il paper**, e la porto sul testo degli autori |
+| **2** | ubiquitinazione di c-FLIP-L e c-Jun | **la direzione degradativa** di ogni esito misurato poggia qui |
+| **5** | S161A contro S430A **sui substrati** | Fig 4 copre la metà autoubiquitinazione dello stesso argomento |
+| **7** | rescue HepG2, ciclina D1, p53-pS15/pS46 | l'unica misura dell'interpretazione sul ciclo cellulare |
+| **8** | 🔴 il braccio in vivo | **è dove vive davvero il risultato mal citato** — la mis-citazione è provata dalle didascalie, ma *se* Fig 8A mostri ciò che la frase afferma resta **aperto**. È anche l'estrazione a risoluzione più bassa delle otto (720×1664 contro ~2400×2800): **da ri-derivare prima di ispezionare.** |
+
+**Next action (sessione fredda):** i supplementari S1–S5 di `23435430` per primi — S1 e S4
+toccano direttamente due locator già scritti — poi Fig 8 ri-derivata, poi i quattro rif.
+**Current status:** ⬜ aperto. Priorità: media-alta.
 
 ---
 
@@ -1861,6 +1919,45 @@ archivierebbe quel file come «full text recuperato». La copia locale
 corpo o soltanto il landing.
 
 Ordinati per priorità di lettura, non per data: vedi sotto.
+
+🔴 **CORREZIONE 2026-08-11 — la mia misura era di un OGGETTO diverso, non era sbagliata.**
+Sopra ho scritto che `efetch` risponde *«200 e nessun `<body>`»*. Il lettore A ha misurato
+`PMID18487609_Aqeilan2008_PMC.html` **sul disco** e ha trovato `<body>` presente, 8 figure,
+`PMC2490770`, superficie **pulita**. Le due misure non sono in conflitto: **io ho interrogato una
+rotta** — un fetch, plausibilmente l'interstiziale — **e lui un artefatto già catturato.** Stesso
+PMID, due oggetti diversi.
+
+> **Una misura è di un oggetto, e l'oggetto deve viaggiare col numero.**
+
+Da qui in avanti ogni riga di preflight in questa coda dichiara **che cosa** è stato interrogato:
+`rotta:<url>` oppure `file:<path>@<sha256>`. Due numeri senza il loro oggetto non sono in
+disaccordo — non sono confrontabili, esattamente come i due censimenti delle didascalie di ieri.
+**La superficie buona di `18487609` esiste già nel `files/` condiviso: si legge quella.**
+
+### 🔴 Un test negativo da eseguire PRIMA di aprire, e uno degli undici tocca una mia lettura
+
+Un PDF può essere **ben formato e dichiarare il falso**: font sottoinsieme con
+`WinAnsiEncoding` e **nessuna `ToUnicode`**, cosicché il glifo di `β` cade nello slot che in
+Latin-1 è `h` e l'estrattore obbedisce scrivendo `p73h`. È la regola 5d al livello del **font**, e
+per questo **confrontare estrattori non rileva nulla**. `ToUnicode == nessuna` è una proprietà del
+**file**, verificabile in un secondo senza estrarre.
+
+**Rimisurato in proprio, non accettato:** 55 PDF locali, **11 con zero `ToUnicode` su tutti i
+font** — `15070730` · `15073125` · `15131042` · `15548692` · `16061658` · `16223882` · `17360458`
+· `18974271` · `21115974` · **`27308504`** · `38355659`.
+
+**`17360458` è in questa lista ed è in questa stessa voce di coda**: il PDF di *Targeted deletion
+of Wwox* non può portare un locator testuale. Si legge la superficie strutturata, o non si cita.
+
+🔴 **E `27308504` è la lettura che ho chiuso ieri.** Esposizione verificata, non assunta: quel
+manifest dichiara `article_text` = **l'XML** `efetch`, il PDF solo come `article_binary`, e la
+figura come **pixel**. Nessun carattere di alcun locator viene da quel PDF, e i pixel non
+risentono della codifica dei font. **Zero esposizione — ma per come è stata dichiarata la
+superficie, non per fortuna.** Se avessi dichiarato il PDF come superficie di testo, quattordici
+locator sarebbero stati verificati contro caratteri che nessuno ha scritto.
+
+**Due limiti, da tenere:** è un **test negativo** — averla non garantisce nulla — e **non ha senso
+su XML/HTML**, che non hanno font: lì la risposta è *«non applicabile»*, mai *«pulito»*.
 
 **Perché pesano più di quanto suggerisca il titolo.** `PMID 27308504` li cita insieme per una
 sola frase — *«Wwox knockout (KO) mice exhibit post-natal lethality and die by 4 weeks of age»* —
@@ -2364,7 +2461,14 @@ la sola altra fonte che lo stato cita per quel fatto.
 
 ---
 
-## FT-061 — Abu-Odeh 2016, checkpoint ATR: ⬜ NON LETTO, preflight completo, pronto ad aprire
+## FT-067 — Abu-Odeh 2016, checkpoint ATR: ⬜ NON LETTO, preflight completo, pronto ad aprire
+
+> **Rinumerata da `FT-061` alla fusione del 2026-08-11.** Collideva con una voce in arrivo, e
+> nessuna delle due è nominata da una ricevuta incatenata — quindi la catena non decideva.
+> Ha deciso il **conteggio dei riferimenti mobili**: la voce in arrivo ne aveva **cinque**
+> (coda, ledger delle scoperte, e tre in `PMID23435430.json`), questa **zero**. Si muove chi
+> costa meno da ri-puntare, e stavolta è la voce già atterrata — il verso opposto alle
+> rinumerazioni di stamattina, per lo stesso principio.
 
 **Paper:** PMID 26675548 / DOI 10.18632/oncotarget.6571 — Abu-Odeh et al. 2016, *Oncotarget*
 7(4)
@@ -2457,3 +2561,139 @@ del commit candidate non è la stessa parola di «K63, degradation-independent»
 l'attribuzione va corretta e `DL-THER-095` con essa.
 
 **Next action:** aprire il documento **raccogliendo le didascalie da fuori il `<body>`**.
+
+---
+
+> **Nota di merge, 2026-08-11.** L'appendice che segue arriva da un altro ramo e **non collide
+> con nulla**: non alloca voci `FT-`, è una sezione nuova appesa nello stesso punto del file.
+> Tenuta intatta.
+>
+> La sua premessa merita di sopravvivere alla fusione: l'autore si è rifiutato di fondere
+> `main` nel proprio ramo perché il merge avrebbe toccato `fulltext_read_receipts.jsonl`, a
+> catena di hash, e la riconciliazione di due ledger divergenti è un `rechain --onto` che
+> appartiene all'integratore. **Fondere per comodità avrebbe eseguito implicitamente proprio
+> l'operazione che gli era stato detto di non fare** — ed è la ragione per cui quel `rechain`
+> l'ho eseguito io qui, da 93 a 94.
+
+---
+
+# 📎 APPENDICE — Preflight di superficie sulle nove, eseguito 2026-08-11
+
+🔴 **PERCHÉ È UN'APPENDICE E NON STA DENTRO LA SUA VOCE.** Il compito indicava la voce delle nove
+a `full_text_queue_current.md:2034`. **Quella riga non esiste in questo ramo:** qui il file ha
+2022 righe, su `main` ne ha 2459, e la voce vive su un `main` più recente del punto in cui
+`lettore-b` è stato allineato. È la regola di ieri applicata a un numero di riga: *una misura è di
+un oggetto*, e un numero di riga è una misura del file di chi lo cita. **Non ho fuso `main`**:
+il merge toccherebbe `fulltext_read_receipts.jsonl`, che è a catena di hash e append-only, e la
+riconciliazione dei ledger divergenti (`88` qui contro `93` su `main`) è un `rechain --onto` che
+appartiene a Plan e all'operatore. Fondere per comodità avrebbe eseguito implicitamente proprio
+l'operazione che mi è stato detto di non fare.
+
+**Nessun numero `FT-` nuovo**, deliberatamente: due collisioni di numerazione in due giorni sono
+bastate. Questo blocco va **ripiegato dentro la voce delle nove** da chi integra.
+
+## Esito, registrato in entrambi i casi
+
+| PMID | PMCID | DOI | licenza (letterale) | classe |
+|---|---|---|---|---|
+| **30356099** Piard 2019 | `PMC6752669` | `10.1038/s41436-018-0339-3` | **`CC BY`** | 🟢 **`structured`** |
+| **30158849** Liu 2018 | `PMC6104168` | `10.3389/fnins.2018.00563` | **`CC BY`** | 🟢 **`structured`** |
+| **17823927** | `PMC4143238` | `10.1002/gcc.20497` | `idIsNotOpenAccess` | 🟠 **`pdf_only`** |
+| **16941225** | `PMC4144810` | `10.1007/s10735-006-9046-5` | `idIsNotOpenAccess` | 🟠 **`pdf_only`** |
+| **25416187** | `PMC4935222` | `10.1177/1535370214561952` | `idIsNotOpenAccess` | 🟠 **`pdf_only`** |
+| **25411445** Mignot 2015 | **`null`** | `10.1136/jmedgenet-2014-102748` | non interrogabile senza PMCID | 🔴 **`unrecoverable_by_these_routes`** |
+| **29808465** | **`null`** | `10.1007/s10048-018-0549-5` | idem | 🔴 **`unrecoverable_by_these_routes`** |
+| **25403906** | **`null`** | `10.1007/s12031-014-0463-8` | idem | 🔴 **`unrecoverable_by_these_routes`** |
+| **17163164** | **`null`** | `10.1007/978-1-4020-5133-3_14` | idem | 🔴 **`unrecoverable_by_these_routes`** |
+
+**Rotte interrogate, con la risposta letterale.** `route:esummary` per identità · `route:oa.fcgi`
+per licenza · `route:europepmc` `…/{PMCID}/fullTextXML` · `route:efetch` `db=pmc&retmode=xml`.
+Per i quattro senza PMCID **nessuna rotta strutturata è indirizzabile**: non è un fallimento di
+recupero, è che l'indirizzo non esiste. **`unrecoverable_by_these_routes`, mai «irrecuperabile»** —
+restano aperte la via editore, l'ILL e il deposito d'autore.
+
+## Le due superfici acquisite, nel `files/` del checkout condiviso
+
+    file:files/fulltext/PMID30356099_Piard2019_EPMC.xml @ 885c00f9…
+    file:files/fulltext/PMID30158849_Liu2018_EPMC.xml    @ 2602bc80…
+
+**`caption_census.py` rieseguito dopo la cattura:** entrambe cadono nella classe sana — 3/3 e 5/5
+`<fig>` dentro `<body>`. Il corpus passa da 23 a **25 superfici con le didascalie nel corpo** su
+37 analizzabili; le sette pure restano sette.
+
+🔴 **Disaccordo fra rotte su `30356099`, da registrare prima che qualcuno lo scopra leggendo:**
+corpo Europe PMC **45 559** caratteri contro **35 239** di `efetch`. Le figure stanno dentro il
+corpo in **entrambe** (3/3), quindi stavolta non sono le didascalie: sono ~10 000 caratteri di
+altro. **Dichiarata Europe PMC** perché è la più capiente, ma *quali* siano quei caratteri non è
+stato adjudicato — **domanda aperta, non risolta**, e il primo gesto di chi la leggerà.
+
+## La classe `pdf_only`, e la trappola che ha già morso
+
+Le tre `pdf_only` hanno un PMCID **e** rispondono `200` a `efetch` — con **8 781**, **7 406** e
+**7 159** byte e **nessun elemento `<body>`**. È la stessa forma di `18487609` e `42395553`:
+**metadati travestiti da full text.** Una pipeline che controlli solo lo status code, o solo che
+il file non sia vuoto, li archivia come «full text recuperato». **Un PMCID non è una superficie, e
+un `200` non è un corpo.**
+
+**Next action:** per le due strutturate si può leggere subito — `30356099` è la coorte WOREE più
+grande del campo e nulla la blocca più. Per le tre `pdf_only`, **prima lo screen `ToUnicode`**, poi
+la via editore. Per le quattro senza PMCID, risolvere il DOI presso l'editore prima di dichiarare
+qualunque cosa.
+
+---
+
+# 📎 APPENDICE 2 — Preflight sulle tredici voci senza superficie, 2026-08-11
+
+Stesse regole dell'appendice precedente, e stesso motivo per cui è un'appendice: **le voci vivono
+qui, ma la numerazione e l'integrazione appartengono a chi fonde.** Nessun nuovo `FT-`.
+
+🔴 **Le identità sono state lette dalle voci, non accettate da un elenco.** La sonda che me le ha
+passate restituiva lo stesso `42082822` per `FT-013` **e** `FT-014`. Leggendo il file:
+**`FT-013` = `42082822`, `FT-014` = `41984841`.** Collisione della sonda, non del file — chi l'ha
+scritta lo sospettava e l'ha dichiarato, ed è per questo che ha passato gli `FT-`, che sono
+indirizzi di contenuto, invece dei PMID.
+
+## Esito
+
+| voce | PMID | PMCID | licenza (letterale) | classe |
+|---|---|---|---|---|
+| `FT-005` | **31543760** Kośla 2019 | `PMC6730490` | **`CC BY`** | 🟢 `structured` · 11 figure |
+| `FT-013` | **42082822** Denkboy 2026 | `PMC13230315` | **`CC BY`** | 🟢 `structured` · 1 figura |
+| `FT-014` | **41984841** | `PMC13099603` | **`CC BY-NC-ND`** | 🟢 `structured` · **già acquisita** |
+| `FT-016` | **39952983** Kim 2025 | `PMC11828923` | **`CC BY-NC-ND`** | 🟢 `structured` · 2 figure |
+| `FT-020` | **21075834** O'Keefe 2011 | `PMC3016910` | **`CC BY-NC`** | 🟢 `structured` · 5 figure |
+| `FT-018` | **28123895** | `PMC5214935` | `idIsNotOpenAccess` | 🟠 `pdf_only` |
+| `FT-019` | **21444760** | `PMC3090235` | `idIsNotOpenAccess` | 🟠 `pdf_only` |
+| `FT-003` | **30853297** | `null` | — | 🔴 `unrecoverable_by_these_routes` |
+| `FT-006` | **26390919** | `null` | — | 🔴 `unrecoverable_by_these_routes` |
+| `FT-015` | **40198927** · **40263068** | `null` (entrambi) | — | 🔴 `unrecoverable_by_these_routes` |
+| `FT-017` | **39933386** | `null` | — | 🔴 `unrecoverable_by_these_routes` |
+| `FT-020` | **15664696** | `null` | — | 🔴 `unrecoverable_by_these_routes` |
+| `FT-007` · `FT-009` | *nessun PMID* — preprint bioRxiv `10.1101/2025.11.22.689900` e `10.1101/2025.05.01.651195` | non applicabile | — | ⚪ **non interrogato**: `oa.fcgi`/`efetch` non indirizzano bioRxiv. Serve la rotta bioRxiv API, **non eseguita** |
+
+## Le quattro superfici acquisite, nel `files/` del checkout condiviso
+
+    file:files/fulltext/PMID31543760_Kosla2019_EPMC.xml    @ 9deafe30…
+    file:files/fulltext/PMID42082822_Denkboy2026_EPMC.xml  @ 7dba7f1d…
+    file:files/fulltext/PMID39952983_Kim2025_EPMC.xml      @ 752c9661…
+    file:files/fulltext/PMID21075834_OKeefe2011_EPMC.xml   @ d8ff045d…
+
+`caption_census.py` rieseguito dopo la cattura: **tutte e quattro nella classe sana.** Il corpus
+passa da 25 a **29 superfici con le didascalie nel corpo** su 41 analizzabili; **le sette pure
+restano sette** — nessuna delle nuove le ingrossa.
+
+**Primi autori risolti via `esummary` prima di nominare i file**, non dedotti dal titolo: ieri ho
+inventato un cognome e l'ho corretto prima che viaggiasse. Ora è un passo del protocollo.
+
+🔴 **Disaccordo fra rotte, due volte, e in entrambe le figure stanno dentro il corpo in ENTRAMBE
+le vie** — quindi, come su `30356099`, **non sono le didascalie**: `31543760` corpo Europe PMC
+**56 746** contro **40 700** di `efetch`; `39952983` **40 456** contro **26 299**, e qui `efetch`
+restituisce *più byte* totali (137 703 contro 116 460) con *meno* corpo. **Dichiarata Europe PMC
+in entrambi i casi perché più capiente; che cosa contengano quei caratteri non è aggiudicato.**
+Tre casi su cinque strutturate mostrano lo stesso scarto: **non è un'anomalia di un articolo, è
+una proprietà delle due rotte, e merita di essere misurata una volta per tutte invece che
+riscoperta a ogni preflight.**
+
+**Next action:** `31543760` (11 figure, `CC BY`) e `21075834` sono pronte alla lettura. Per
+`FT-007` e `FT-009` serve la rotta bioRxiv, che **non ho eseguito**. Per le due `pdf_only`, screen
+`ToUnicode` prima di qualunque locator. Per le sei senza PMCID, via editore.
