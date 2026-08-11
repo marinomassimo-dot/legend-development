@@ -179,6 +179,17 @@ DEFECTS = {
         "framework/scripts/test_pubmed_corpus_harvest.py",
         sub("framework/scripts/pubmed_corpus_harvest.py",
             "    if len(seen) + len(deleted) != count:", "    if False:")),
+    # Rule 5d at the level of the font: a PDF whose fonts declare no ToUnicode CMap states
+    # where its glyphs sit and never what they mean, so every extractor produces the same
+    # wrong characters. Scoped to the one case where that can carry a quote — a derived `.txt`
+    # declared beside it — because refusing a PDF that merely sits next to a PMC XML would
+    # punish the discipline that already routes around the file.
+    "font-encoding screen removed": (
+        "framework.scripts.test_deepdive_manifest.AFileCanBeWellFormedAndDeclareTheFalse"
+        ".test_a_derived_text_surface_beside_an_untrustworthy_pdf_is_refused",
+        sub("framework/scripts/deepdive_manifest.py",
+            '                    if verdict == "UNTRUSTWORTHY":',
+            "                    if False:")),
     # 🔴 This entry reported ESCAPED for as long as it has existed, and it was never a guard
     # gap. Its target derives its population from `git ls-files`, and the throwaway export
     # this docstring prescribes — `git archive HEAD | tar -x` — has no index, so the check ran

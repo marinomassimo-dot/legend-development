@@ -530,6 +530,146 @@ def _refuse_suspect_surface(path: Path, *parts: str) -> None:
             )
 
 
+# A subset name that says the font carries mathematics or Greek. These are where `α β × ± µ Δ`
+# live, and in this corpus they are precisely the fonts a typesetter leaves without a mapping
+# while mapping the running text.
+#
+# 🔴 Matched on the base name AFTER the six-letter subset prefix, and that is not cosmetic.
+# PDF subset tags are arbitrary uppercase letters, so `POTJPI+TimesNewRomanPS-ItalicMT` — an
+# ordinary italic serif — contains `PI` in its tag, and `(?i)Pi\b` matched it because the `+`
+# is a word boundary. A hand-written list of the real font names in this corpus caught it;
+# the pattern tested against itself would not have.
+SUBSET_PREFIX = re.compile(r"^[A-Z]{6}\+")
+SYMBOLIC_FONT = re.compile(r"(?i)(Math|Greek|Pi\b|Symbol|Universal)")
+
+
+def font_is_symbolic(name: str) -> bool:
+    """Does this font name say it carries mathematics or Greek, ignoring its subset tag?"""
+    return bool(SYMBOLIC_FONT.search(SUBSET_PREFIX.sub("", str(name or ""))))
+# The characters whose absence from an extracted scientific text is itself the evidence.
+ENCODING_SENTINELS = "αβγδΔµ×±≤≥−"
+
+
+def font_encoding_verdict(path: Path) -> tuple[str, str]:
+    """Can this PDF's text layer be trusted to spell what the page prints? Asked of the FILE.
+
+    Returns ``(verdict, detail)`` where verdict is ``"UNTRUSTWORTHY"``, ``"SUSPECT_FONTS"``,
+    ``"UNDECIDED"`` or ``"NOT_APPLICABLE"``. There is deliberately no ``"CLEAN"``.
+
+    🔴 **Rule 5d proved at the level of the font instead of the text.** `PMID 16061658`
+    extracts `p73β` as `p73h` and `µg` as `Ag`, and every extractor agrees, because the file
+    is not corrupt — **it is well formed and declares something false**. Its 19 fonts are
+    embedded subsets from a typesetter, every one declares `WinAnsiEncoding`, and not one
+    carries a `ToUnicode` CMap. The Greek lives in a bespoke subset whose `β` glyph occupies
+    the slot Latin-1 calls `h`, so an extractor that obeys the declared encoding produces `h`.
+    Comparing extractors detects nothing: they are all obeying the same lie.
+
+    Absent `ToUnicode`, a PDF has no statement of what its glyphs MEAN, only of where they
+    sit. That is a property of the file, checkable in a second and **before any extraction** —
+    unlike suspicion-by-absence, which needs the text already extracted and a judgement about
+    it.
+
+    🔴 **The question is per-FONT, and asking it per-file was wrong.** The first version of
+    this check asked *does this file have at least one font with a CMap*, and that answers a
+    different question from the one that matters: **does the font composing the character that
+    counts have one?** Measured over the same 55 PDFs, 10 files carry a CMap on their running
+    text and none on their symbol subsets — `MathematicalPi-One`, `Universal-GreekwithMathPi`,
+    `AdvGreek_B`, `SymbolStd` — which is exactly where `α β × ± µ Δ` live. The per-file version
+    passed all ten. `PMID 18487609` extracts **zero** sentinel characters and 126 C0 controls
+    while the PMC HTML of the same article gives `× 10 · α 3 · β 5` and no controls, and the
+    per-file check called it fine. So 11 becomes **21**, and one of the ten, `24550385`, backs
+    a complete read.
+
+    Four limits, all measured rather than assumed:
+
+    ① 🔴 **Necessary, never sufficient, and this is what makes it a triage signal rather than
+       an arbiter.** Of the 10 files with an unmapped symbol font, **6 extract sentinel
+       characters perfectly well** — `17803050` (`SymbolStd`, 2 sentinels), `33916893`
+       (`PazoMath`, 22), `25012504` (34). A font can be unmapped and never used for anything
+       that matters. **The arbiter is the sentinel evidence in the extracted text; the fonts
+       only say where to look first**, and that is worth having because it costs a second and
+       needs no extraction. Anyone who reads a non-`UNTRUSTWORTHY` verdict as "clean" has
+       inverted the tool.
+
+    ② **A NEGATIVE test and never a pass.** A present CMap guarantees nothing — it can be
+       wrong, and most damaged files in this corpus have one.
+
+    ③ **PDFs only.** XML and HTML have no fonts, so the question is meaningless there and the
+       answer is `NOT_APPLICABLE`, never a clean bill. The difference between "not applicable"
+       and "clean" is the difference between a metadata-only stub and a real paper.
+
+    ④ `27308504` and `24550385` are safe **in fact**: their readings are anchored to PMC
+       XML/HTML with the PDF declared only as `article_binary`. Rule 5d routed around both
+       before this check existed — which is a reason to add it, not to skip it, because
+       exactly one derived `.txt` exists in the corpus today and the next one is a download
+       away.
+
+    No count is pinned anywhere: the corpus grows with every download, and a number a human
+    must remember to update is a guard already lost.
+    """
+    if path.suffix.lower() != ".pdf":
+        return "NOT_APPLICABLE", f"{path.name} is not a PDF; fonts are not its surface"
+    try:
+        import fitz  # noqa: PLC0415 — optional, only needed to inspect a PDF
+    except ImportError:
+        return "UNDECIDED", ("PyMuPDF unavailable, so the font encoding was not inspected. "
+                             "This is not a clean verdict")
+    try:
+        document = fitz.open(path)
+    except Exception as exc:  # noqa: BLE001 — any open failure is undecided, never clean
+        return "UNDECIDED", f"{path.name} could not be opened for font inspection: {exc}"
+    try:
+        seen: dict[tuple[int, str], bool] = {}
+        for number in range(document.page_count):
+            for font in document.get_page_fonts(number, full=False):
+                xref, name = font[0], str(font[3] or "")
+                try:
+                    seen[(xref, name)] = (
+                        document.xref_get_key(xref, "ToUnicode")[0] != "null")
+                except Exception:  # noqa: BLE001 — an unreadable key is not a mapping
+                    seen[(xref, name)] = False
+        text = "".join(document[number].get_text()
+                       for number in range(document.page_count))
+    finally:
+        document.close()
+    if not seen:
+        return "UNDECIDED", f"{path.name} declares no fonts; nothing to inspect"
+
+    unmapped = [name for (_xref, name), ok in seen.items() if not ok]
+    symbolic = sorted({name for name in unmapped if font_is_symbolic(name)})
+    sentinels = sum(text.count(character) for character in ENCODING_SENTINELS)
+
+    if len(unmapped) == len(seen):
+        return "UNTRUSTWORTHY", (
+            f"{path.name}: none of its {len(seen)} fonts carries a ToUnicode CMap, so the file "
+            f"states where its glyphs sit and never what they mean. Extractors fall back to "
+            f"the declared encoding — typically WinAnsi — and a bespoke subset silently yields "
+            f"the Latin-1 letter sharing each slot, which is how a Greek beta becomes 'h'. "
+            f"Every extractor agrees because all of them obey the same false declaration. "
+            f"Prefer the PMC XML/HTML, or anchor to the rendered page; do not repair the text")
+
+    if symbolic and sentinels == 0:
+        return "UNTRUSTWORTHY", (
+            f"{path.name}: the running text is mapped but {len(symbolic)} SYMBOL font(s) are "
+            f"not ({', '.join(symbolic[:3])}), and the extracted text contains none of "
+            f"{ENCODING_SENTINELS}. Those subsets are where the Greek and the operators live, "
+            f"so an absent sentinel is not a paper without mathematics — it is mathematics "
+            f"that did not survive. Adjudicate against the rendered page or use a structured "
+            f"surface")
+
+    if symbolic:
+        return "SUSPECT_FONTS", (
+            f"{path.name}: {len(symbolic)} symbol font(s) carry no ToUnicode CMap "
+            f"({', '.join(symbolic[:3])}), but the extracted text still shows {sentinels} "
+            f"sentinel character(s), so those subsets are evidently not carrying what matters "
+            f"here. NOT a clearance: look first at any quote containing Greek or an operator")
+
+    return "UNDECIDED", (
+        f"{path.name}: {len(seen) - len(unmapped)} of {len(seen)} fonts carry a ToUnicode "
+        f"CMap and no unmapped font is symbolic. This is NOT a clearance — a present CMap can "
+        f"still be wrong, and most damaged files in this corpus have one")
+
+
 def _artifact_text(path: Path, kind: str) -> tuple[str, str]:
     """Return (body/supplement text, abstract text) for strict write-time verification.
 
@@ -879,6 +1019,41 @@ def validate(
                         if actual != digest:
                             errors.append(
                                 f"{prefix}.sha256: fingerprint mismatch for {path_value}")
+
+        # 🔴 Font-encoding screen, scoped as narrowly as the hazard actually is.
+        #
+        # A PDF whose fonts carry no `ToUnicode` cannot be trusted to spell what its page
+        # prints. That alone is not a reason to refuse a manifest: `PMID27308504` declares such
+        # a PDF as `article_binary` beside a PMC XML, and its complete read is anchored to the
+        # XML — the 5d discipline already routed around the file. Blocking there would punish
+        # the correct practice.
+        #
+        # The hazard is a derived `.txt` text surface, which is the one way that false text can
+        # carry a quote: `_artifact_text` refuses `.pdf` for a text kind, so a PDF cannot be a
+        # text surface itself, and the half it cannot see is how a `.txt` was produced. When a
+        # manifest declares both, the quotes may be resting on the lie and the manifest is
+        # refused — refused, never normalised, exactly like the C0 and printable screens.
+        if schema_version >= 2 and verify_artifacts and root is not None:
+            derived_text = [path for path, meta in artifacts.items()
+                            if meta.get("kind") in {"article_text", "supplement_text"}
+                            and path.lower().endswith(".txt")]
+            if derived_text:
+                for path_value, meta in artifacts.items():
+                    if not path_value.lower().endswith(".pdf"):
+                        continue
+                    try:
+                        resolved = _safe_repo_path(root, path_value)
+                    except ValueError:
+                        continue
+                    if not resolved.is_file():
+                        continue
+                    verdict, detail = font_encoding_verdict(resolved)
+                    if verdict == "UNTRUSTWORTHY":
+                        errors.append(
+                            f"source_artifacts: {detail} This manifest also declares a derived "
+                            f"text surface ({', '.join(sorted(derived_text))}), so its quotes "
+                            f"may rest on that false declaration. Re-derive from a structured "
+                            f"surface or anchor the affected locators to the rendered page")
 
     # A receipt attests that a document was read in full. It does not attest which sentence
     # supports which statement, and those are different facts. On 2026-08-04 an export to an
@@ -1317,7 +1492,15 @@ def main() -> int:
         ),
     )
     parser.add_argument("--disease", default="wwox")
-    parser.add_argument("--pmid", required=True)
+    parser.add_argument(
+        "--font-screen", metavar="DIR",
+        help=(
+            "inspect every PDF in DIR for a ToUnicode CMap and exit; a file whose fonts "
+            "declare none cannot be trusted to spell what its page prints. Says nothing "
+            "about files that have one"
+        ),
+    )
+    parser.add_argument("--pmid", required=False)
     parser.add_argument(
         "--verify-artifacts", action="store_true",
         help="verify local existence, SHA-256 and exact text locators",
@@ -1327,6 +1510,23 @@ def main() -> int:
         help="refuse legacy manifest schemas",
     )
     args = parser.parse_args()
+    if args.font_screen:
+        counts = {"UNTRUSTWORTHY": 0, "SUSPECT_FONTS": 0, "UNDECIDED": 0}
+        inspected = 0
+        for pdf in sorted(Path(args.font_screen).glob("*.pdf")):
+            verdict, detail = font_encoding_verdict(pdf)
+            inspected += 1
+            counts[verdict] = counts.get(verdict, 0) + 1
+            if verdict in {"UNTRUSTWORTHY", "SUSPECT_FONTS"}:
+                print(f"  [{verdict}] {detail}")
+        print(f"\n{counts['UNTRUSTWORTHY']} UNTRUSTWORTHY · {counts['SUSPECT_FONTS']} "
+              f"SUSPECT_FONTS · {counts['UNDECIDED']} UNDECIDED, of {inspected} PDF(s).")
+        print("No verdict here means clean. The arbiter is the sentinel evidence in the "
+              "extracted text; this says where to look first, in a second, without "
+              "extracting.")
+        return 1 if counts["UNTRUSTWORTHY"] else 0
+    if not args.pmid:
+        parser.error("--pmid is required unless --font-screen is given")
     errors, incomplete = load_and_validate(
         Path(args.workspace).resolve(), args.disease, args.pmid,
         artifact_root=(

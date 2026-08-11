@@ -1007,5 +1007,190 @@ class PanelTextRelationBites(unittest.TestCase):
             for item in errors))
 
 
+class AFileCanBeWellFormedAndDeclareTheFalse(unittest.TestCase):
+    """🔴 Rule 5d proved at the level of the font rather than the text.
+
+    `PMID 16061658` extracts `p73β` as `p73h` and `µg` as `Ag`, and every extractor agrees,
+    because the file is not corrupt — it is well formed and states something false. Its fonts
+    are embedded subsets declaring `WinAnsiEncoding` with no `ToUnicode` CMap, so an extractor
+    obeying the declaration yields the Latin-1 letter that shares each glyph slot. Comparing
+    extractors detects nothing: they are all obeying the same lie.
+
+    Measured over the 55 local PDFs on 2026-08-11: **11 declare no `ToUnicode` anywhere**, and
+    9 of those the existing text screen already refuses. The two it adds — `27308504` and
+    `38355659` — are the valuable ones, because the text screen calls them clean.
+    """
+
+    def setUp(self) -> None:
+        try:
+            import fitz  # noqa: F401,PLC0415
+        except ImportError:  # pragma: no cover - environment without PyMuPDF
+            self.skipTest("PyMuPDF unavailable")
+        self.temp = TemporaryDirectory()
+        self.addCleanup(self.temp.cleanup)
+        self.root = Path(self.temp.name)
+
+    def _pdf(self, name: str, *, embedded: bool) -> Path:
+        import fitz  # noqa: PLC0415
+
+        path = self.root / name
+        document = fitz.open()
+        page = document.new_page()
+        if embedded:
+            page.insert_text((72, 72), "P < 0.05",
+                             fontfile="/System/Library/Fonts/Supplemental/Arial.ttf",
+                             fontname="ari")
+        else:
+            page.insert_text((72, 72), "P < 0.05", fontname="helv")
+        document.save(path)
+        document.close()
+        return path
+
+    def test_a_pdf_with_no_tounicode_anywhere_is_untrustworthy(self) -> None:
+        verdict, detail = gate.font_encoding_verdict(self._pdf("bare.pdf", embedded=False))
+        self.assertEqual(verdict, "UNTRUSTWORTHY")
+        self.assertIn("ToUnicode", detail)
+
+    def test_having_a_tounicode_is_never_a_clearance(self) -> None:
+        """🔴 The limit that keeps this from becoming the inverse defect — a guard that CLEARS
+        incorrect practice. 26 of the 55 local PDFs carry a CMap and still fail the text
+        screen, so a present CMap answers nothing."""
+        try:
+            path = self._pdf("embedded.pdf", embedded=True)
+        except Exception:  # pragma: no cover - no system font to embed
+            self.skipTest("no embeddable system font available")
+        verdict, detail = gate.font_encoding_verdict(path)
+        self.assertEqual(verdict, "UNDECIDED")
+        self.assertIn("NOT a clearance", detail)
+
+    def test_a_structured_surface_abstains_rather_than_passing(self) -> None:
+        """XML and HTML have no fonts, so the question is meaningless — and the difference
+        between 'not applicable' and 'clean' is the difference between a metadata-only stub
+        and a real paper."""
+        for name in ("paper.xml", "paper.html", "notes.txt"):
+            with self.subTest(name=name):
+                verdict, _ = gate.font_encoding_verdict(self.root / name)
+                self.assertEqual(verdict, "NOT_APPLICABLE")
+
+    def test_an_unreadable_pdf_is_undecided_and_not_clean(self) -> None:
+        """Fail-open here would be worse than useless: it would report a verdict on a file
+        nobody inspected."""
+        broken = self.root / "broken.pdf"
+        broken.write_bytes(b"not a pdf at all")
+        verdict, _ = gate.font_encoding_verdict(broken)
+        self.assertEqual(verdict, "UNDECIDED")
+
+    def _workspace(self, *, with_derived_text: bool) -> tuple[Path, dict]:
+        """A manifest declaring an untrustworthy PDF, with or without a derived `.txt`."""
+        workspace = self.root / ("with_txt" if with_derived_text else "xml_only")
+        fulltext = workspace / "files" / "fulltext"
+        fulltext.mkdir(parents=True)
+        pdf = self._pdf("scratch.pdf", embedded=False)
+        (fulltext / "paper.pdf").write_bytes(pdf.read_bytes())
+        artifacts = [{
+            "path": "files/fulltext/paper.pdf",
+            "sha256": hashlib.sha256(pdf.read_bytes()).hexdigest(),
+            "kind": "article_binary",
+        }]
+        quote = ("This indicates that WWOX amino acids 388-407 are required for its "
+                 "interaction with GSK3b.")
+        name = "paper.txt" if with_derived_text else "paper.xml"
+        body = quote if with_derived_text else f"<article><body><p>{quote}</p></body></article>"
+        (fulltext / name).write_text(body, encoding="utf-8")
+        artifacts.append({
+            "path": f"files/fulltext/{name}",
+            "sha256": hashlib.sha256(body.encode("utf-8")).hexdigest(),
+            "kind": "article_text",
+        })
+        manifest = schema_v2(artifact_path=f"files/fulltext/{name}")
+        manifest["source_artifacts"] = artifacts
+        return workspace, manifest
+
+    def test_a_derived_text_surface_beside_an_untrustworthy_pdf_is_refused(self) -> None:
+        """🔴 The narrow case where the false declaration can actually carry a quote."""
+        workspace, manifest = self._workspace(with_derived_text=True)
+        errors, _ = gate.validate(manifest, root=workspace, verify_artifacts=True,
+                                  require_current_schema=True)
+        self.assertTrue(any("ToUnicode" in item for item in errors), errors)
+
+    def test_the_same_pdf_beside_a_structured_surface_does_not_block(self) -> None:
+        """🔴 And the case that must NOT block, which is why the check is scoped this way.
+
+        `PMID27308504` declares exactly such a PDF as `article_binary` next to a PMC XML, and
+        its complete read is anchored to the XML — rule 5d already routed around the file.
+        Refusing there would punish the correct practice, which is the failure mode this
+        repository catalogued four times on 2026-08-11.
+        """
+        workspace, manifest = self._workspace(with_derived_text=False)
+        errors, _ = gate.validate(manifest, root=workspace, verify_artifacts=True,
+                                  require_current_schema=True)
+        self.assertFalse([item for item in errors if "ToUnicode" in item], errors)
+
+    def test_no_input_ever_produces_a_passing_verdict(self) -> None:
+        """The vocabulary carries the negative-test design: there is no value meaning "this
+        file is fine", because one would be read as a clearance whatever the docstring said.
+
+        🔴 Pinned on returned VALUES, not on the source text. The first version grepped the
+        module for `"CLEAN"` and failed on the sentence in the docstring saying that no such
+        verdict exists — a predicate that cannot tell a value from a sentence about the value,
+        which is the third instance of that shape found in this repository on 2026-08-11
+        alone.
+        """
+        broken = self.root / "broken.pdf"
+        broken.write_bytes(b"not a pdf at all")
+        inputs = [self._pdf("bare2.pdf", embedded=False), broken,
+                  self.root / "paper.xml", self.root / "missing.pdf"]
+        verdicts = {gate.font_encoding_verdict(path)[0] for path in inputs}
+        self.assertTrue(verdicts)
+        self.assertLessEqual(
+            verdicts,
+            {"UNTRUSTWORTHY", "SUSPECT_FONTS", "UNDECIDED", "NOT_APPLICABLE"})
+
+    def test_the_symbol_font_names_that_actually_carry_the_defect_are_matched(self) -> None:
+        """🔴 The per-file question was the wrong one, and this is the predicate that replaced
+        it.
+
+        Asking *does this file have at least one mapped font* passes 10 of the 55 local PDFs
+        whose running text is mapped and whose SYMBOL subsets are not — and those subsets are
+        where `α β × ± µ Δ` live. The names below are the real ones observed in this corpus,
+        written out rather than derived from the pattern, so the pattern is checked against
+        the world instead of against itself.
+        """
+        carriers = ["GIJFJH+MathematicalPi-One", "IAAMID+Universal-GreekwithMathPi",
+                    "ILLLOP+AdvGreek_B", "OCBFJF+AdvItcSymbol-M", "DIPGNL+Symbol",
+                    "MPUDFL+PazoMath", "SymbolStd-Identity-H"]
+        for name in carriers:
+            with self.subTest(name=name):
+                self.assertTrue(gate.font_is_symbolic(name))
+        # 🔴 `POTJPI+TimesNewRomanPS-ItalicMT` is an ordinary italic serif whose arbitrary
+        # six-letter SUBSET TAG happens to end in `PI`, and `(?i)Pi\b` matched it because the
+        # `+` is a word boundary. Found by this hand-written list of real names; a list
+        # generated from the pattern would have agreed with the bug.
+        for ordinary in ["POTJPI+TimesNewRomanPS-ItalicMT", "AdvTT3713a231",
+                         "WarnockPro-It", "ABCDEF+Helvetica", "MATHXX+Garamond"]:
+            with self.subTest(name=ordinary):
+                self.assertFalse(gate.font_is_symbolic(ordinary))
+
+    def test_an_unmapped_symbol_font_alone_is_not_enough_to_refuse(self) -> None:
+        """🔴 Necessary, never sufficient — the limit that keeps this a triage signal.
+
+        6 of the 10 files with an unmapped symbol font extract sentinel characters perfectly
+        well: `17803050` (SymbolStd, 2 sentinels), `33916893` (PazoMath, 22), `25012504` (34).
+        A font can be unmapped and never used for anything that matters. Refusing on the font
+        alone would flag six healthy files, which is the shape of a guard that punishes the
+        practice it exists to protect.
+        """
+        workspace, manifest = self._workspace(with_derived_text=True)
+        original = gate.font_encoding_verdict
+        gate.font_encoding_verdict = lambda path: (
+            "SUSPECT_FONTS", f"{path.name}: symbol fonts unmapped, sentinels still present")
+        try:
+            errors, _ = gate.validate(manifest, root=workspace, verify_artifacts=True,
+                                      require_current_schema=True)
+        finally:
+            gate.font_encoding_verdict = original
+        self.assertFalse([item for item in errors if "symbol fonts unmapped" in item], errors)
+
+
 if __name__ == "__main__":
     sys.exit(0 if unittest.main(exit=False, verbosity=2).result.wasSuccessful() else 1)
