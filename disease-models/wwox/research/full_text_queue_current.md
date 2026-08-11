@@ -2109,8 +2109,54 @@ inferiore**, mai come denominatore.
 - Il legame con `DIS-001`: se WWOX modula il checkpoint ATR oltre che ATM, l'argomento
   *«inibire ITCH toglierebbe a WWOX la funzione DDR»* si allarga o si precisa.
 
-**Next action:** aprire il documento. Preflight, superfici, impronte e misura dell'estrattore
-sono già qui sopra.
+### ✅ LETTO INTEGRALMENTE il 2026-08-11
+
+Receipt **`FTR-20260811-26675548-01`**, `complete_fulltext_read`. Manifest `PMID26675548.json`,
+**16 locator, 8 artefatti**, `MANIFEST STRICT PASS`. Copertura **16/16 pannelli**, contati
+**leggendo** le didascalie (il censimento ne dava 10 e rifiutava: perde il pannello A di ognuna).
+
+**Superficie figure: rotta scelta per immagine.** Quattro stream su sei hanno `smask ≠ 0` →
+**renderizzati** dalla pagina a 300 dpi; due con `smask = 0` → estratti. 193–286 ppi.
+
+🔴 **La nota ⑤ di questa voce era già obsoleta quando l'ho aperta**: la fusione di `main` ha
+portato il fix del join, `(Fig` dà **26** e non 19. Trovato perché ho rimisurato sull'artefatto
+invece di fidarmi della mia stessa nota di ieri.
+
+### 🔴 La domanda dell'assegnazione: ATR non è mai misurato
+
+Lista anticorpi: CHK1, p-CHK1(S296), p-H2AX, ATM, p-ATM(S1981), KAP1, p-KAP1, p-H3, WWOX,
+GAPDH, HSP90, lamin. **Nessun anticorpo anti-ATR.** Zero occorrenze di `p-ATR`, inibitore di
+ATR, knockdown di ATR. **L'unico inibitore usato è KU-55933, che è di ATM.** Ogni affermazione
+su «ATR checkpoint» è **p-CHK1 come proxy**.
+
+| reperto | dove |
+|---|---|
+| 🔴 l'unico esperimento di perturbazione **impoverisce ciò che dovrebbe separare**: 48 h di inibitore ATM azzerano p-ATM e p-KAP1, quasi azzerano **ITCH** e riducono **WWOX** — «segnalazione ATM-dipendente» e «l'inibizione cronica ha depauperato il modulo» predicono lo stesso blot | entries[1]–[4] |
+| 🔴 **lo schema di Fig 6 marca con un `?`** proprio la freccia WWOX→CHK1 che il titolo afferma | entries[5] |
+| 🔴 `K274R` non fa rescue — ma nel pannello 2C è **espresso meno** del WT; il controllo che toglie il confondimento è la **Figure S4**, dietro il proof-of-work | entries[6], [7] |
+| 🔴 pannello 4C: `K274R` **è** ubiquitinato (ladder chiaro), il testo dice *«but not»*. Coerente con `24550385` (predominante ≠ esclusivo) — e **meglio controllato**: input anti-GST pari su 12 corsie | entries[9], [10] |
+| 🔴 *«comparable levels of WWOX in WT e KO-Ad-WWOX»* — il blot 3C mostra il ricostituito **nettamente più alto**: il rescue è supra-fisiologico | entries[11], [12] |
+| l'induzione è **1,5–3,4×** e transitoria: due pannelli finiscono **sotto** il basale (0,6 a 24 h; 0,3 a 6 h) | entries[14] |
+| il risultato più pulito, senza proxy: **2,8 ± 1 contro 5,7 ± 1,7** rotture per cellula | entries[13] |
+
+### La domanda di `FT-062`, risposta
+
+Questo paper riassume `24550385` come *«K63-linked ubiquitination resulting in its
+**stabilization**»*. **K63, stabilizzazione — non «proteasomal».** Quindi la formula *«direct
+ITCH/proteasomal stabilization»* del commit candidate **non viene né da qui né da `24550385`**.
+
+### 🔴 Supplementari: `unavailable`, e il buco è portante
+
+`oncotarget-07-4344-s001.pdf` (Figure S1–S6 + Table S1) sta a `/articles/instance/4826209/bin/`
+dietro lo **stesso challenge proof-of-work** di `FT-059`. **Non aggirato.** Dentro c'è la
+**Figure S4**, unico sostegno alla claim che K274 porti una funzione di segnalazione oltre la
+stabilità — cioè ciò che decide se la leva di `DL-THER-095` sia *«più proteina»* o *«ripristinare
+una modificazione specifica`*.
+
+**Next action:** procurarsi `s001.pdf` da browser e **riaprire `entries[7]` per primo**. Debito
+multi-hop: 5 referenze gene-dirette né lette né in coda — `16187332` · `15798093` · `23254778` ·
+`25891642` · `25245215`. E resta aperta la domanda di provenienza su Oncotarget 2016, che
+**non ho verificato** e che non ho asserito.
 
 ---
 

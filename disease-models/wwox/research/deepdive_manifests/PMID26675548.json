@@ -1,0 +1,283 @@
+{
+  "schema_version": 2,
+  "pmid": "26675548",
+  "doi": "10.18632/oncotarget.6571",
+  "receipt": "FTR-20260811-26675548-01",
+  "landing": [
+    "FTR-20260811-26675548-01",
+    "full_text_queue_current.md#FT-061"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline. The paper was assigned as the DDR link neither of the other readers covers, and the question — whether ATR is measured or imported — had to be answered against the antibody list and the panels together."
+    }
+  ],
+  "reading_budget": {
+    "declared_before_reading": true,
+    "figures_present": 6,
+    "panels_present": 16,
+    "tables_present": 0,
+    "supplementary_elements_present": 2,
+    "panels_inspected": 16,
+    "panel_coverage": "16/16",
+    "method": "Counted by READING the captions: Figure 1 A-C, Figure 2 A-C, Figure 3 A-D, Figure 4 A-C, Figure 5 A-B, Figure 6 (summary schematic, unlettered) = 16. The automatic census reported 10 and refused; it drops panel A of every figure on this deposit without protesting, so its number is a lower bound and never a denominator. That was written into FT-061 before this run and held.",
+    "figure_surface": "🔴 THE ROUTE WAS CHOSEN PER IMAGE BY smask, WHICH IS THE CONDITION ESTABLISHED ON 2026-08-10. Four of the six streams carry smask 11, 18, 25 and 32; `extract_image()` returns the base image and DROPS its soft mask, so those were RENDERED from their page rectangles at 300 dpi instead. Two carry smask = 0 and were extracted. All six land at 193-286 effective ppi. Extracting the four would have discarded transparency silently on blots.",
+    "surface_correction": "🔴 FT-061 WARNED THAT THE JOIN DEFECT BITES HERE — 19 figure citations against 26 — AND THAT NOTE IS NOW OBSOLETE. Merging main into lettore brought the fix in: the in-tree extractor now yields 26, byte-identical to the surface from 2e6fd6a. Measured again on this artifact before choosing a single span, which is the only reason the staleness was caught rather than inherited."
+  },
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_measured": "Not measured, declared as not measured. Aqeilan laboratory (Hebrew University) with a cytogenetics contribution from Ohio State. Same first author as PMID 24550385, read the day before, and the two papers share the K274 construct.",
+    "research_type": "experimental_lab",
+    "output_kind": "primary_research",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "weighting": "Primary biochemistry and cytogenetics. It is the DDR link between the K63/K274 chemistry of PMID 24550385 and the ATM work of PMID 25331887, and neither of the other readers covers it. Journal: Oncotarget, 2016 — see provenance_note."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "is ATR ever measured in this paper? searched the body for any ATR reagent — anti-ATR, p-ATR, ATR inhibitor, ATR knockdown, siATR, shATR",
+        "route": "string search over the extracted body surface, 2026-08-11",
+        "count": 0
+      }
+    ],
+    "note": "Zero hits for every ATR reagent. The only kinase inhibitor in the paper is KU-55933, which inhibits ATM. This is the measurement behind entry 0 and it is the answer to the question the paper was opened with."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 54,
+    "gene_direct_count": 14,
+    "gene_direct_refs_in_source": [
+      "25331887", "24550385", "26499798", "16187332", "15798093", "23254778",
+      "25891642", "20530675", "17575124", "17360458", "25245215", "15070730",
+      "25416187"
+    ],
+    "resolved": ["24550385", "25331887"],
+    "queued": [
+      "26499798", "20530675", "17575124", "17360458", "15070730", "25416187",
+      "16187332", "15798093", "23254778", "25891642", "25245215"
+    ],
+    "enumeration_method": "54 references enumerated from the JATS ref-list, every one carrying a PMID; 14 name the gene and each was set against every receipt on all six branches and against the full-text queue.",
+    "cross_check_result": "One is read complete (24550385, read 2026-08-10 — cited here TWICE, as refs 17 and 44, the same paper duplicated in the reference list) and one carries a partial receipt (25331887, the ATM companion). FIVE ARE NEITHER READ NOR QUEUED: 16187332 (Thavathiru 2005, fragile-site gene expression under carcinogens), 15798093 (Ishii 2005, DNA-damage checkpoint regulation of FHIT and WWOX), 23254778 (Abdeen 2013, WWOX in mammary development), 25891642 (Yan 2015, ovarian cancer stem cells) and 25245215 (Aqeilan 2014 review, FRA16D roles in tumour suppression and genomic stability)."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Prior receipts and manifest for 26675548 across all six branches",
+    "hits": 0,
+    "finding": "Zero receipts on main, lettore, lettore-b, mirror, evidence-index and codex. No manifest. Both artifacts were already in the shared files/ tree with digests recorded in FT-061 the previous evening."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-11",
+    "route": "Europe PMC core record for EXT_ID:26675548",
+    "result": "No retraction, no expression of concern, no erratum.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID26675548_AbuOdeh2016_PMC.xml",
+      "sha256": "8bf84348ebe881daf153987b4197addb41a944a19ada0390d9e6d1dbf9a4a584",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID26675548_AbuOdeh2016.pdf",
+      "sha256": "2416bec74c23df517bfc8b7484dfef78206778a8e61a28b0258a59ac551eb500",
+      "kind": "article_binary"
+    },
+    {
+      "path": "files/figures/PMID26675548/PMID26675548_p03_x12.png",
+      "sha256": "942281d43a829f0d89d0dee1dbed9a554c2eca5e095e52ca15d431a3e8d2cf25",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID26675548/PMID26675548_p04_x19.png",
+      "sha256": "512295497871a0d88d1fd82c110c3fe38568555b3d4ef936f03f9ab2c4a9088e",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID26675548/PMID26675548_p05_x26.png",
+      "sha256": "544a9f493c1feb36911d42854519a79b53945599eb8dc93539caac4b9d4cdffe",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID26675548/PMID26675548_p06_x33.png",
+      "sha256": "175140ecb442f932ac18c62716342ebe0a3c5e13545f2eabb2a152074578693e",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID26675548/PMID26675548_p07_x38.png",
+      "sha256": "ade8a60f78d5f30a222775a05be11c0d679c267678c283c397d5bd4a99bbeef1",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID26675548/PMID26675548_p09_x46.png",
+      "sha256": "c5cf37784de7f3930eee66531bb77b4de69126b7b9a5f173b5f4d10d3e9b85f2",
+      "kind": "figure"
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC4826209, JATS XML already in the shared files/ tree. Oncotarget 7(4):4344-4355, CC BY per the article's own license block. Structured surface; the PDF is fingerprinted as article_binary and used only as the figure surface.",
+    "abstract_anchoring_waived": "No evidentiary locator uses the abstract. The abstract is the SUBJECT of entry 0 — it asserts ATR checkpoint activation as a finding — and that entry is anchored on the Introduction's own definition and on the measured absence of any ATR reagent.",
+    "entries": [
+      {
+        "proposition": "🔴 ATR IS NEVER MEASURED IN THIS PAPER. The title, the abstract and every conclusion speak of ATR checkpoint activation; the antibody list contains CHK1, p-CHK1(S296), p-H2AX, ATM, p-ATM(S1981), KAP1, p-KAP1, p-histone H3, WWOX, GAPDH, HSP90 and lamin A/C — and NO ATR ANTIBODY. Searched over the whole body: zero occurrences of anti-ATR, p-ATR, ATR inhibitor, ATR knockdown, siATR or shATR. The single kinase inhibitor used is KU-55933, which inhibits ATM. Every 'ATR checkpoint activation' in this paper is p-CHK1 phosphorylation standing in for ATR, on the authority of the sentence quoted here. That is a legitimate and common proxy; what is not legitimate is reading the title as if ATR had been assayed.",
+        "snippet": "the Serine/threonine-protein kinase Ataxia Telangiectasia and Rad3-related protein (ATR) senses the damage and activates its downstream target checkpoint kinase 1 (CHK1)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26675548_AbuOdeh2016_PMC.xml",
+        "anchor": "Introduction, the sentence establishing the ATR-CHK1 axis; read against the Materials and Methods antibody list",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — this is the question the paper was opened with, and the antibody list answers it before any panel does"
+      },
+      {
+        "proposition": "🔴 AND THE ONE PERTURBATION EXPERIMENT DEPLETES THE THINGS IT IS MEANT TO SEPARATE. This is the paper's central mechanistic claim and it rests on a single figure. The text reports it honestly, in the same sentence: ATM inhibition reduced not only p-CHK1 but ALSO ATM, KAP1, ITCH — and, the preceding sentence adds, WWOX itself.",
+        "snippet": "ATR downstream target p-CHK1 levels as well as ATM and its targets KAP1 and ITCH, were also reduced following ATM inhibition",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26675548_AbuOdeh2016_PMC.xml",
+        "anchor": "Results, 'WWOX modulates ATR checkpoint is ATM-dependent', describing Figure 5B",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found — read in sequence, and the list of what else fell is what sent me to the panel"
+      },
+      {
+        "proposition": "THE HALF THE AUTHORS CALL SURPRISING, AND IT IS THE HALF THAT MAKES THE INFERENCE HARD. Under a 48-hour ATM inhibitor, WWOX levels themselves fall. So the experiment removes the kinase, its substrate KAP1, the E3 ligase ITCH and the protein under study, and then observes that the readout falls too.",
+        "snippet": "Surprisingly, following ATM inhibition WWOX levels were significantly reduced",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26675548_AbuOdeh2016_PMC.xml",
+        "anchor": "Results, the sentence immediately preceding entry 1",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 WHAT PANEL 5B ACTUALLY SHOWS, AND IT IS MORE THAN THE TEXT SAYS. Under the inhibitor: p-ATM is abolished, p-KAP1 abolished, ITCH nearly abolished, WWOX markedly reduced — while total ATM, total KAP1, total CHK1 and GAPDH are unchanged. p-CHK1 is REDUCED BUT CLEARLY PRESENT, and its induction across the damage conditions is flattened rather than erased. So the panel supports 'ATM inhibition reduces the ATR readout' and simultaneously shows that the module through which the paper routes that effect — ITCH and WWOX — is itself depleted. INFERENZA: with a 48-hour pretreatment, 'ATM-dependent ATR signalling' and 'chronic ATM inhibition depleted ITCH and WWOX' predict the same blot, and this design cannot separate them. The paper reaches for the same caution one paragraph later (entry 4) without naming the duration.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5, panel B. Eight lanes: MCF7-cont, MCF7-1h/1000rad, MCF7-2h/70UV, MCF7-2h/2nm HU, then the same four under a bracket labelled '48h ATM inhibitor'. Rows top to bottom: ATM, p-ATM, KAP1, p-KAP1, ITCH, CHK1, p-CHK1, WWOX, GAPDH. In the inhibitor half p-ATM and p-KAP1 are blank, the ITCH row is nearly blank, the WWOX row is markedly fainter than its left-hand counterpart, and p-CHK1 shows faint bands in all four lanes. ATM, KAP1, CHK1 and GAPDH are comparable across both halves.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID26675548/PMID26675548_p07_x38.png",
+        "anchor": "Figure 5 panel B, extracted at smask=0 from page 7 of the publisher PDF, 1884x1805 px, 269 effective ppi",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — the text listed four proteins falling together and I went to see whether the readout fell further than its inputs"
+      },
+      {
+        "proposition": "THE AUTHORS' OWN CAUTION, RECORDED BECAUSE IT IS THE RIGHT ONE AND BECAUSE IT DOES NOT REACH THE ABSTRACT. The Discussion concedes that ATM inhibition produces pan changes across DDR signalling. The abstract says instead that 'ATM inhibition was associated with reduced activation of ATR checkpoint proteins suggesting that WWOX manipulation of ATR checkpoint proteins is ATM-dependent' — the same observation without the caveat that the paper itself supplies.",
+        "snippet": "ATM inhibition results in pan changes that could affect DDR signalling",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26675548_AbuOdeh2016_PMC.xml",
+        "anchor": "Discussion, final paragraph of the ATM-dependence argument",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I read the Discussion for whether the confound is acknowledged, and it is"
+      },
+      {
+        "proposition": "🔴 THE SUMMARY FIGURE MARKS THE ARM THE TITLE ASSERTS WITH A QUESTION MARK. Figure 6 draws SSB to ATR to ATM to ITCH to WWOX with K63-UB, and two feedback arrows: the one from WWOX to KAP1/CHK2 is drawn plain, the one from WWOX to CHK1/gamma-H2AX carries a literal '?'. The paper's own schematic therefore rates the WWOX-to-ATR-effector link as uncertain, while the title states it as a finding. Recorded because the schematic is the most-copied part of any paper and this one is more honest than the sentence above it.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6, summary schematic. A lightning bolt over a DNA duplex labelled SSB; a black arrow down to 'ATR' in red; from ATR one arrow left to 'CHK1, gamma-H2AX' in red and one arrow down to 'ATM' in blue; from ATM one arrow right to 'KAP1, CHK2, gamma-H2AX' in blue and one arrow down to 'ITCH' in blue; from ITCH an arrow down to 'WWOX' in purple, flanked left and right by the label 'K63-UB'. Two curved blue feedback arrows rise from WWOX: the right-hand one to ATM is unlabelled, the left-hand one toward CHK1/gamma-H2AX carries a '?' beside it. A brace under WWOX leads to 'Genome Stability'.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID26675548/PMID26675548_p09_x46.png",
+        "anchor": "Figure 6, extracted at smask=0 from page 9 of the publisher PDF, 1351x1583 px, 193 effective ppi",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[0]",
+        "qualifies_needle": "activates its downstream target checkpoint kinase 1",
+        "found_or_sought": "sought — I opened the schematic expecting a restatement and found a hedge the prose does not carry"
+      },
+      {
+        "proposition": "🔴 THE K274 RESULT THAT MATTERS TO DL-THER-095, AND THE CONTROL THAT CARRIES IT IS IN A SUPPLEMENTARY I COULD NOT GET. Restoring wild-type WWOX into WWOX-depleted cells rescues checkpoint activation; restoring the K274R mutant does not. Panel 2C shows exactly that — p-CHK1 returns in the Sh+WWOX group and stays blank in sh-K274R across untreated, IR and UV. But the same panel shows the K274R construct expressed BELOW the wild-type rescue, so on this panel alone the failure is confounded with the level. The paper says it controlled for that with higher-expressing K274R clones in Figure S4 — and S4 is behind the retrieval gate described in supplementary_gap. So the claim of entry 7 rests on a figure that was not seen.",
+        "snippet": "Restoration of WT form of WWOX, but not WWOXK274R, into MCF7-shWWOX could rescue the defect in ATR checkpoint activation upon DNA damage",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26675548_AbuOdeh2016_PMC.xml",
+        "anchor": "Results, the rescue experiment; the panel is Figure 2C",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — K274R is the construct from PMID 24550385 read the day before, so this is where the two papers meet"
+      },
+      {
+        "proposition": "🔴 AND THE CONCLUSION THAT REFINES DL-THER-095 MATERIALLY, IF S4 HOLDS. If lysine 274 carries a signalling function on top of its role in stability, then an ITCH-mediated stabilising lever is not 'add more WWOX protein' but 'restore a specific modification' — and raising abundance by another route would not substitute for it. That distinction is the difference between a plausible therapeutic direction and a misdirected one, and it currently rests on a supplementary panel nobody in this corpus has seen. PREMISE: the claim is DATO in the paper's own words and INFERENZA for us until S4 is inspected.",
+        "snippet": "lysine 274 is not only important for WWOX stability but also necessary for WWOX signalling upon DNA damage",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26675548_AbuOdeh2016_PMC.xml",
+        "anchor": "Results, immediately after the Figure S4 control",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — this is the sentence that decides whether DL-THER-095's lever is about quantity or about a modification"
+      },
+      {
+        "proposition": "🔴 THE WORD CHECK FT-062 ASKED FOR, ANSWERED HERE. This paper's own summary of PMID 24550385 uses K63-linked and stabilization — not 'proteasomal'. So the phrasing 'direct ITCH/proteasomal stabilization' that a commit candidate in this repository attributes to PMID 23370280 does NOT come from this paper and does not come from 24550385, whose language this sentence reproduces. Whatever 23370280 says, it is saying it in different words from the two papers that established the mechanism.",
+        "snippet": "we recently demonstrated that WWOX is a target of K63-linked ubiquitination resulting in its stabilization and nuclear accumulation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26675548_AbuOdeh2016_PMC.xml",
+        "anchor": "Results, the ubiquitination section, citing reference 17 which is PMID 24550385",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I carried the question from FT-062 into this reading deliberately"
+      },
+      {
+        "proposition": "🔴 PANEL 4C SHOWS THE K274R MUTANT IS UBIQUITINATED, WHERE THE TEXT SAYS IT IS NOT. The running text reports that IR induced wild-type WWOX ubiquitination 'but not the mutated form WWOXK274R (line 5 vs. 6)'. The blot shows a clear polyubiquitin ladder in every K274R lane, weaker than wild type and less induced, but plainly present — while the WFPA lanes are much fainter. That is consistent with PMID 24550385, which found K274 PREDOMINANT and not exclusive, with K100 still ubiquitinated at reduced efficiency. 'Not' overstates what this panel shows, and the earlier paper's own word was the accurate one. AND THE PANEL IS BETTER CONTROLLED THAN ITS PREDECESSOR: the input anti-GST row is even across all twelve lanes, which is precisely the caveat left open on Figure 5G of PMID 24550385.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4, panel C. Twelve lanes under a construct table: GST-WWOX in lanes 1-4, GST-K274R in 5-8, GST-WFPA in 9-12, each set untreated, 1000rad/1h, 70UV/2h, 2mM HU/2h, all with HA-Ub. Upper blot anti-HA with arrows at 'Ub-GST-WWOX' and 'GST-WWOX': a dense ladder in lanes 1-4, a weaker but clearly present ladder in lanes 5-8, faint signal in 9-12. Below it an 'Input: anti-GST' row that is even across all twelve lanes. Lower lysate rows: ATM, p-ATM, KAP1, p-KAP1, CHK1, p-CHK1, GST, GAPDH.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID26675548/PMID26675548_p06_x33.png",
+        "anchor": "Figure 4 panel C, rendered at 300 dpi from page 6 because the stream carries smask=32; 2001x1520 px, 286 effective ppi",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[10]",
+        "contradicts_needle": "but not the mutated form WWOXK274R",
+        "found_or_sought": "sought — I went to this panel to see how absolute the K274R negative is, because PMID 24550385 had called the site predominant rather than exclusive"
+      },
+      {
+        "proposition": "THE TEXT SIDE OF THE PREVIOUS ENTRY, QUOTED SO THE PANEL HAS SOMETHING TO BEAR ON.",
+        "snippet": "but not the mutated form WWOXK274R",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26675548_AbuOdeh2016_PMC.xml",
+        "anchor": "Results, the DNA-damage-enhanced ubiquitination paragraph, describing Figure 4C",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 A LOAD-BEARING CONTROL THE PANEL CONTRADICTS. The rescue of chromosomal stability in Figure 3D is only interpretable if the reconstituted WWOX is at a physiological level, and the text asserts it is. The blot shows otherwise: the adenoviral WWOX at day 2 is far stronger than the wild-type MEF lane and remains stronger at days 5 and 7. So the rescue was achieved with supraphysiological WWOX and the equivalence claim is not what the panel shows. The rescue itself is real — breaks fall from 5.7 in KO-AdGFP+APH to 1.9 in KO-AdWWOX+APH — but 'comparable levels' is the sentence a reader would rely on to call it physiological.",
+        "snippet": "Immunoblot analysis revealed comparable levels of WWOX expression in WT MEFs and KO-Ad-WWOX-infected MEFs",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26675548_AbuOdeh2016_PMC.xml",
+        "anchor": "Results, the reconstitution experiment; the panel is Figure 3C",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — an expression-level claim in a rescue experiment is exactly where a panel decides, so I looked"
+      },
+      {
+        "proposition": "WHAT PANEL 3C AND 3D SHOW, INCLUDING THE NUMBERS THE TEXT DOES GIVE. Recorded together because the cytogenetic result is the paper's cleanest and should not be lost in the qualification above: WWOX loss roughly doubles aphidicolin-induced breaks, and restoring WWOX takes them below the wild-type level, with the empty-vector control unchanged.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3. Panel A, two karyotypes headed WT-MEFs+APH and KO-MEFs+APH with red arrows and band labels marking gaps. Panel B, bar chart 'Chromosomal Break/Cell' 0 to 8 with bars WT about 0.25, WT+APH about 2.8, KO about 0.25, KO+APH about 5.65, and a bracket marked P<0.05 between WT+APH and KO+APH. Panel C, an immunoblot with lanes WT, KO, KO-AdWWOX D2/D5/D7, KO-AdGFP D2/D5/D7, rows WWOX and GAPDH: the WT lane carries a moderate band while KO-AdWWOX D2 is far stronger and D5 and D7 remain stronger than WT. Panel D, bar chart 0 to 7 with KO about 0.5, KO+APH about 4.6, KO+AdGFP about 0.4, KO-AdGFP+APH about 5.7, KO-AdWWOX about 0.2, KO-AdWWOX+APH about 1.9, with two brackets marked P<0.05.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID26675548/PMID26675548_p05_x26.png",
+        "anchor": "Figure 3, all four panels, rendered at 300 dpi from page 5 because the stream carries smask=25; 2001x1688 px, 286 effective ppi",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[11]",
+        "contradicts_needle": "comparable levels of WWOX expression in WT MEFs",
+        "found_or_sought": "sought — the expression control and the rescue sit in the same figure and had to be read together"
+      },
+      {
+        "proposition": "THE CYTOGENETIC NUMBERS IN THE AUTHORS' OWN WORDS, WHICH THE PANEL CONFIRMS. This is the paper's most direct phenotype and it does not depend on any proxy.",
+        "snippet": "induced an average of ∼2.8 ± 1 chromosomal breaks whereas 5.7 ± 1.7 breaks were detectable in KO-MEFs",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26675548_AbuOdeh2016_PMC.xml",
+        "anchor": "Results, the aphidicolin experiment; the panel is Figure 3B",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "THE INDUCTION IS MODEST AND TRANSIENT, AND THE PANELS PRINT BOTH FACTS WHILE THE ABSTRACT PRINTS NEITHER. Figure 1 carries densitometry under every blot: fold changes peak between 1.5 and 3.4 depending on cell type and agent, and in two panels the last timepoint falls BELOW baseline — 0.6 at 24 h for UVR in MEFs, 0.3 at 6 h for aphidicolin in HEK293T. The abstract says only that 'WWOX levels are induced following SSBs'. A two-to-threefold transient rise that reverses is a different claim from an induction, and the numbers to say so are printed on the figure.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1. Panel A, MEF-WT: three blot sets under 1 uM APH with fold change 1.0 1.3 1.5 1.7 1.4 1.5; 2 mM HU with 1.0 1.8 2.0 1.9 1.4 1.1; UVR 40 Jm-2 with 1.0 1.6 1.9 1.5 2.0 0.6 at 24 h. Panel B, HEK293T: APH with 1.0 3.4 3.4 2.7 1.2 0.3; HU with 1.0 1.5 2.1 1.7 1.5 1.7. Panel C, MCF7 UVR 50 Jm-2 with 1.0 2.3 2.1 2.3 2.3 2.7. Loading rows GAPDH or HSP-90 throughout.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID26675548/PMID26675548_p03_x12.png",
+        "anchor": "Figure 1, all three panels, rendered at 300 dpi from page 3 because the stream carries smask=11; 2001x934 px, 286 effective ppi",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "found — the densitometry is printed on the figure and appears nowhere in the running text"
+      },
+      {
+        "proposition": "THE KNOCKDOWN AND OVEREXPRESSION ARMS, INSPECTED AND CONSISTENT. Recorded because an audit that reports only what fails is not an audit. Panel 2A shows p-CHK1 and gamma-H2AX rising with UV in control MCF7 and blunted in shWWOX, with the WWOX row confirming the knockdown; panel 2B shows p-CHK1 higher and earlier in HeLa-WWOX than HeLa-EV under hydroxyurea, with WWOX absent from the EV lanes as expected for a WWOX-negative line. Both support the text.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, panels A and B. Panel A: twelve lanes, MCF7-shEV and MCF7-shWWOX at UV 40 Jm-2 for 0, 5, 10, 30, 60, 120 min, rows CHK1, p-CHK1, WWOX, gamma-H2AX, GAPDH; the p-CHK1 and gamma-H2AX rows show clear induction in the shEV half and much weaker signal in the shWWOX half, and the WWOX row is faint throughout the shWWOX half. Panel B: ten lanes, HeLa-EV and HeLa-WWOX at 2 mM HU for 0 to 4 h, rows CHK1, p-CHK1, WWOX, GAPDH; the WWOX row is blank across the EV lanes and strong across the WWOX lanes, and p-CHK1 is stronger and earlier in the WWOX half.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID26675548/PMID26675548_p04_x19.png",
+        "anchor": "Figure 2 panels A and B, rendered at 300 dpi from page 4 because the stream carries smask=18; 2001x1343 px, 286 effective ppi",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found — inspected as part of closing the figure surface"
+      }
+    ],
+    "provenance_note": "🔴 A PROVENANCE QUESTION RAISED IN FT-061 AND DELIBERATELY LEFT OPEN. The journal is Oncotarget, 2016. FT-061 flagged that the journal is reported to have had a period of removal from MEDLINE indexing and said it must be CHECKED rather than asserted. It was not checked in this run — no route was available that would settle it — so it is recorded here as an open question about weighting, not as a fact. The paper's PubMed record exists and is indexed; that is all this reading establishes.",
+    "supplementary_gap": "🔴 SUPPLEMENTARY unavailable, AND THE GAP IS LOAD-BEARING RATHER THAN FORMAL. Two supplementary files exist: oncotarget-07-4344-s001.pdf (Supplementary Figures S1-S6 and Table S1) and s002.pptx. Both sit at /articles/instance/4826209/bin/, which returns 200 with a 'Preparing to download' interstitial carrying a proof-of-work challenge (cloudpmc-viewer-pow). That is an anti-automation control the service operator placed deliberately and it was NOT circumvented — the same decision taken on PMID 34268881 the previous evening. What is behind it matters: FIGURE S4 is the control showing that higher-expressing K274R clones still fail to restore checkpoint activation, and it is the sole support for the claim in entry 7 that K274 carries a signalling role beyond stability — the claim that decides whether DL-THER-095's lever is about protein quantity or about a specific modification. Also unseen: S1 and S2 (WWOX induction in further lines), S3 (KHOS overexpression), S5 (G2/M by phospho-H3), S6 (breaks in knockdown, reconstitution and the WFPA and K274R mutants) and Table S1 (which chromosomal breaks fall in common fragile sites). Anyone with browser access should fetch s001.pdf and reopen entry 7 first."
+  }
+}
