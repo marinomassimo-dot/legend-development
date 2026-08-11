@@ -42,7 +42,15 @@ LANDING_FILES = (
 
 # An `outputs` entry may name a record ID. If it also names a file, the ID must be
 # in that file; a bare ID is checked against every landing file.
-ID_PATTERN = re.compile(r"\b(DL-[A-Z]+-\d+|DIS-\d+|FT-\d+|CLAIM \d+|PAPER \d+|HYP-[\w-]+)\b")
+# Every identifier family used by LANDING_FILES belongs here.  The registry paths were
+# already searched, but their triage records (`CORPUS P333` / `LIT-0333`) were invisible to
+# this predicate, so a complete read could be correctly attached to both registries and still
+# be called an orphan.  One shared predicate keeps "which files count" and "which records in
+# those files count" from silently describing different populations.
+ID_PATTERN = re.compile(
+    r"\b(DL-[A-Z]+-\d+|DIS-\d+|FT-\d+|CLAIM \d+|PAPER \d+|"
+    r"CORPUS(?:-STUB-\d+| P\d+)|LIT-\d+|HYP-[\w-]+)\b"
+)
 MD_PATTERN = re.compile(r"([\w/.-]+\.md)")
 HEADING_PATTERN = re.compile(r"(?m)^#{1,6}\s+")
 
