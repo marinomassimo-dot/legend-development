@@ -58,6 +58,30 @@ def tracked_paths() -> frozenset[str]:
     return frozenset(entry for entry in completed.stdout.split("\0") if entry)
 
 
+class TheIndexIsThePopulation(unittest.TestCase):
+    """🔴 Five checks in this file take `tracked_paths()` as their population, and an empty
+    population makes all five pass without examining anything.
+
+    `check=False` means a git failure returns no output rather than raising, so outside a
+    checkout every one of them is vacuous. Found on 2026-08-11 by the mutation battery: the
+    "executable bit stripped" defect ESCAPED in the throwaway export the battery's own
+    docstring tells you to use, because `git archive | tar -x` produces a directory with no
+    index. The guard was never weak — it was never run.
+
+    The same primitive in `public_release_gate.unpublishable_paths` returns empty outside a
+    checkout deliberately, and is tested for it. That is correct THERE: an empty exemption
+    list scans more, so its failure direction is strict. Here an empty population checks
+    less. Same call, opposite safety direction, which is why this is a refusal rather than a
+    copied behaviour.
+    """
+
+    def test_an_empty_index_is_a_refusal_not_a_pass(self) -> None:
+        self.assertTrue(
+            tracked_paths(),
+            "git listed no tracked files, so every index-derived check in this file would "
+            "pass without examining anything. Run this suite in a real checkout.")
+
+
 def tracked_public_content_roots() -> frozenset[str]:
     """Top-level directories that hold at least one tracked (published) file.
 

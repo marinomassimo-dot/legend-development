@@ -200,6 +200,33 @@ STUDY_IDENTIFIER = re.compile(
     r"(?i)\bPMID[\s:_-]*\d{6,9}\b|\bPMC\d{5,9}\b|\b10\.\d{4,9}/\S{3,}"
 )
 
+# One definition of "this text names a maternal side", and one of the paternal side.
+#
+# 🔴 There used to be three hand-written copies of this vocabulary and they had drifted
+# apart, which is a sharper defect than the missing word that exposed it. The detector
+# required a possessive in English (`mother'?s`) while accepting the bare noun in Italian
+# (`madre`); the negation recogniser — the clause that SUPPRESSES these rules — listed the
+# bare English nouns. So the escape hatch recognised more parental language than the net it
+# was allowed to open. Nobody chose that; two lists were written at different times from the
+# same idea. `PATTERN_ALREADY_SOLVED_GATE`: the failure mode of this repository is uneven
+# application, so the fix is one definition every rule composes from, not a fourth list.
+#
+# Measured before widening, over exactly the surface the gate walks: 20 bare-noun occurrences
+# in 3 files. 8 are this file's own patterns (exempt via GATE_INTERNAL_FILES), 11 are in
+# `PMID39416860.json`, a manifest the narrow net already flags, and 1 is the heading "The
+# mother rule" in a skill — a metaphor, and unpairable because no paternal word follows it.
+# So the widening changes no verdict today, which is the only safe moment to install it: the
+# corpus is 15 complete reads on its way to hundreds of thousands, and trio papers are the
+# normal case in this field, not the exception.
+MATERNAL_WORDS = r"maternal(?:ly)?|mothers?(?:'s?)?|materno|materna|madre"
+PATERNAL_WORDS = r"paternal(?:ly)?|fathers?(?:'s?)?|paterno|paterna|padre"
+PARENT_OF_ORIGIN_WORDS = r"parent[- ]of[- ]origin"
+MATERNAL_ORIGIN = re.compile(rf"(?i)\b(?:{MATERNAL_WORDS})\b")
+PATERNAL_ORIGIN = re.compile(rf"(?i)\b(?:{PATERNAL_WORDS})\b")
+PARENT_ORIGIN = re.compile(
+    rf"(?i)\b(?:{MATERNAL_WORDS}|{PATERNAL_WORDS}|{PARENT_OF_ORIGIN_WORDS})\b"
+)
+
 
 def attribution_window(text: str, block_offset: int, block: str, rel: str) -> str:
     """The text a block's parental claim may be attributed to.
@@ -224,10 +251,9 @@ def attribution_window(text: str, block_offset: int, block: str, rel: str) -> st
 
 def parent_origin_is_explicitly_negated(window: str) -> bool:
     """Allow policy statements that explicitly remove/decouple this linkage."""
-    subject = (
-        r"(?:parent[- ]of[- ]origin|maternal|paternal|mother|father|"
-        r"allele materno|allele paterno|materno|paterno|madre|padre)"
-    )
+    # Composed from the same vocabulary the detector uses, so this clause can never again
+    # recognise parental language that the rules it suppresses do not.
+    subject = rf"(?:{PARENT_OF_ORIGIN_WORDS}|{MATERNAL_WORDS}|{PATERNAL_WORDS})"
     before = (
         r"(?:no|without|removed|redacted|decoupled|de[- ]identified|"
         r"neutralized|excluded)"
@@ -312,23 +338,12 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         r"index case|case subject|affected child|affected individual|"
         r"study participant)\b"
     )
-    parent_origin = re.compile(
-        r"(?i)\b(?:maternal(?:ly)?|paternal(?:ly)?|mother'?s|father'?s|"
-        r"parent[- ]of[- ]origin|inherited from (?:the )?(?:mother|father)|"
-        r"allele materno|allele paterno|materno|paterno|madre|padre)\b"
-    )
-    # 🔴 KNOWN GAP, pre-existing and deliberately not widened on 2026-08-10: `mother'?s` matches
-    # *mother's* and *mothers*, NOT bare *mother*. Measured: "The mother is heterozygous and the
-    # father carries the missense" produces no finding at all. Recorded here rather than fixed
-    # in the same commit that narrowed `PARENT_OF_ORIGIN_PAIRING`, because widening a privacy
-    # net and narrowing one in a single change makes neither reviewable — and because widening
-    # it needs its own measurement of what it would newly catch across the corpus.
-    maternal_origin = re.compile(
-        r"(?i)\b(?:maternal(?:ly)?|mother'?s|materno|materna|madre)\b"
-    )
-    paternal_origin = re.compile(
-        r"(?i)\b(?:paternal(?:ly)?|father'?s|paterno|paterna|padre)\b"
-    )
+    # The gap recorded here on 2026-08-10 — `mother'?s` matched *mother's* but not bare
+    # *mother* — is closed at the module-level vocabulary, with the measurement that the
+    # deferral demanded written beside it.
+    parent_origin = PARENT_ORIGIN
+    maternal_origin = MATERNAL_ORIGIN
+    paternal_origin = PATERNAL_ORIGIN
     compound_linkage = re.compile(
         r"(?i)\b(?:compound[- ]het(?:erozyg(?:ous|osity)?)?|"
         r"biallelic(?: genotype)?|"

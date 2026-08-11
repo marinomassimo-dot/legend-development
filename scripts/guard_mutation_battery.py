@@ -43,6 +43,7 @@ TOUCHED = [
     "disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py",
     "AGENTS.md",
     "framework/scripts/pubmed_corpus_harvest.py",
+    "scripts/public_release_gate.py",
 ]
 SNAPSHOT: dict[str, bytes] = {}
 MODES: dict[str, int] = {}
@@ -108,7 +109,7 @@ DEFECTS = {
     "abstract-anchor requirement removed": (
         "framework/scripts/test_deepdive_manifest.py",
         sub("framework/scripts/deepdive_manifest.py",
-            "        elif indexed is False:", "        elif False:")),
+            "        if indexed is False:", "        if False:")),
     "PubMed abstract accepted as complete source": (
         "framework.scripts.test_fulltext_receipts.FulltextReceiptTests.test_new_complete_receipt_refuses_pubmed_abstract_url",
         sub("framework/scripts/fulltext_receipts.py",
@@ -120,9 +121,15 @@ DEFECTS = {
             'if receipt.get("source_kind") != "fulltext_local":', "if False:")),
     "authoritative append skips the work manifest": (
         "framework.scripts.test_fulltext_receipts.FulltextReceiptTests.test_direct_append_to_authoritative_sink_cannot_skip_work_manifest",
+        # 🔴 Re-anchored 2026-08-11, and the first attempt was too weak to mean anything:
+        # flipping `strict=True` to `False` was ESCAPED, because `load_and_validate` still
+        # runs and a missing manifest still errors. `strict` governs how hard the manifest is
+        # checked, not whether it is required — so the defect this entry names is the call not
+        # happening at all. A mutation that the guard survives is not evidence the guard
+        # works; it is evidence the mutation was not the defect.
         sub("framework/scripts/fulltext_receipts.py",
-            "        require_work_manifest(record, root, disease, strict=True)",
-            "        if False: require_work_manifest(record, root, disease, strict=True)")),
+            "        require_work_manifest(",
+            "        (lambda *a, **k: None)(")),
     "declared manifest gaps accepted before append": (
         "framework.scripts.test_fulltext_receipts.FulltextReceiptTests.test_declared_manifest_gap_blocks_a_new_complete_read",
         sub("framework/scripts/fulltext_receipts.py",
@@ -140,8 +147,9 @@ DEFECTS = {
     "text locator no longer checked against artifact": (
         "framework.scripts.test_deepdive_manifest.EntriesMustBeUsable.test_strict_verification_distinguishes_abstract_from_body",
         sub("framework/scripts/deepdive_manifest.py",
-            "                        if snippet_key in body_key:",
-            "                        if True:")),
+            "                        matched, mode = _quote_matches(snippet, body_text)",
+            "                        matched, mode = _quote_matches(\n"
+            "                            snippet, body_text + abstract_text)")),
     "routing basis hardcoded again": (
         "disease-models/wwox/analysis/scripts/test_export_dismech_dryrun.py",
         sub("disease-models/wwox/analysis/scripts/export_dismech_dryrun.py",
@@ -170,10 +178,34 @@ DEFECTS = {
     "completeness invariant removed": (
         "framework/scripts/test_pubmed_corpus_harvest.py",
         sub("framework/scripts/pubmed_corpus_harvest.py",
-            "    if len(seen) != count:", "    if False:")),
+            "    if len(seen) + len(deleted) != count:", "    if False:")),
+    # 🔴 This entry reported ESCAPED for as long as it has existed, and it was never a guard
+    # gap. Its target derives its population from `git ls-files`, and the throwaway export
+    # this docstring prescribes — `git archive HEAD | tar -x` — has no index, so the check ran
+    # over nothing and passed. The target now refuses an empty index, which turns this into an
+    # honest BASELINE RED here and a real check in a checkout. Testing it inside the battery
+    # would mean making the throwaway a git repository, which is a change to the battery's
+    # contract and not something to smuggle in beside a mutation.
     "executable bit stripped": (
         "scripts/test_release_surface.py",
         chmod_off("framework/scripts/pubmed_corpus_harvest.py")),
+    # 🔴 The publication gate had no entry here at all until 2026-08-11 — the one guard whose
+    # failure ships something irreversible was the one whose tests were never mutated.
+    "parental vocabulary narrowed back to the possessive": (
+        "scripts.test_public_release_gate.GateTests"
+        ".test_the_bare_parental_nouns_are_detected",
+        sub("scripts/public_release_gate.py",
+            'MATERNAL_WORDS = r"maternal(?:ly)?|mothers?(?:\'s?)?|materno|materna|madre"',
+            'MATERNAL_WORDS = r"maternal(?:ly)?|mother\'?s|materno|materna|madre"')),
+    # The regression this one pins is not a typo, it is a habit: editing one of two lists that
+    # say the same thing. That is how the escape hatch came to recognise more parental
+    # language than the net it suppresses.
+    "escape hatch given its own vocabulary again": (
+        "scripts.test_public_release_gate.GateTests"
+        ".test_the_escape_hatch_is_never_wider_than_the_net",
+        sub("scripts/public_release_gate.py",
+            'subject = rf"(?:{PARENT_OF_ORIGIN_WORDS}|{MATERNAL_WORDS}|{PATERNAL_WORDS})"',
+            'subject = r"(?:parent[- ]of[- ]origin|maternal|paternal)"')),
 }
 
 

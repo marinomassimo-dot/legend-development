@@ -242,6 +242,63 @@ class GateTests(unittest.TestCase):
         self.assertIn("PARENT_OF_ORIGIN_PAIRING", codes)
         self.assertNotIn("PARENT_OF_ORIGIN_ATTRIBUTED", codes)
 
+    def test_the_bare_parental_nouns_are_detected(self) -> None:
+        """The sentence the 2026-08-10 deferral recorded as producing no finding at all.
+
+        `mother'?s` matched *mother's* and *mothers* but not bare *mother*, while the Italian
+        half of the same pattern accepted bare *madre*. The net caught `madre` and missed
+        `mother`, which nobody designed.
+        """
+        for sentence in (
+            "The mother is heterozygous and the father carries the missense.",
+            "La madre e il padre sono stati sequenziati.",
+            "Both mothers and fathers were genotyped.",
+        ):
+            with self.subTest(sentence=sentence):
+                root = self.make_repo()
+                (root / "note.md").write_text(sentence, encoding="utf-8")
+                self.assertIn("PARENT_OF_ORIGIN_PAIRING", self._codes(root))
+
+    def test_the_widening_changes_no_verdict_on_this_corpus(self) -> None:
+        """🔴 A privacy net is widened before it is needed or not at all.
+
+        Measured over exactly the surface the gate walks: 20 bare-noun occurrences in 3
+        files — 8 in this gate's own patterns (exempt), 11 in a manifest the narrow net
+        already flags, 1 in the heading "The mother rule", a metaphor with no paternal word
+        to pair with. So the widening is installed while it is free, not after a trio paper
+        arrives and makes it a change of verdict someone has to argue about.
+        """
+        root = self.make_repo()
+        (root / "skill.md").write_text("## The mother rule\n\nAlways read the details.\n",
+                                       encoding="utf-8")
+        self.assertEqual(self._codes(root), set())
+
+    def test_the_escape_hatch_is_never_wider_than_the_net(self) -> None:
+        """🔴 The defect underneath the missing word, and the reason for one vocabulary.
+
+        `parent_origin_is_explicitly_negated` SUPPRESSES these rules, and its subject list
+        was written separately from the detector's. It accepted bare *mother* and *father*;
+        the detector did not. A suppression clause that recognises more parental language
+        than the net it opens is a hole waiting for the detector to catch up.
+
+        The table below is written by hand rather than derived from the constants: a list
+        generated from the pattern it checks would agree with itself no matter what the
+        pattern said.
+        """
+        forms = (
+            "mother", "mothers", "mother's", "maternal", "maternally", "madre", "materna",
+            "father", "fathers", "father's", "paternal", "paternally", "padre", "paterna",
+            "parent-of-origin", "parent of origin",
+        )
+        for form in forms:
+            with self.subTest(form=form):
+                self.assertTrue(
+                    GATE.PARENT_ORIGIN.search(f"the {form} allele"),
+                    f"the negation clause treats {form!r} as parental; the detector must too")
+                self.assertTrue(
+                    GATE.parent_origin_is_explicitly_negated(f"the {form} link was removed"),
+                    f"{form!r} is detected but cannot be explicitly decoupled")
+
     def test_a_json_record_is_scoped_to_the_file_and_that_is_deliberate(self) -> None:
         """🔴 JSON has no blank lines, so `semantic_blocks` yields a manifest WHOLE and every
         block-scoped rule silently becomes file-scoped — measured at 19 680 characters on
