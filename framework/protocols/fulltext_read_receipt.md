@@ -392,7 +392,7 @@ incorrect historical event remains visible in the hash chain.
 
 ## Named open schema items — registered, not designed
 
-Three defects in this contract are **known, measured and deliberately unfixed**. They are
+Four defects in this contract are **known, measured and deliberately unfixed**. They are
 schema, so they belong to the operator; and none of them breaks anything while nothing
 changes, which is why registering them is the whole of the right action today.
 
@@ -503,6 +503,37 @@ may not land there. That is a schema change to `surface`, hence this list.
 Worth recording beside it: at 355 locators the contamination hazard **has still not bitten**.
 The only two hits are deliberate, which is why the repair must not be built as if they were
 defects — `ADJUDICATE_THE_DEFECT_LIST_BEFORE_BUILDING_THE_GUARD`.
+
+### 4. `surface` says where a quote lives, and is read as what the evidence is
+
+`text_contradicted_by_panel` and `panel_qualifies_text` are assertions made **by the panel
+about the text**, and the module says so: *"the marker belongs to the PANEL locator — the
+evidence that makes the assertion."* Nothing checks it. A text locator may carry either marker
+and point at another text locator, and the validator will accept text contradicting text
+wearing the word "panel".
+
+The small fix writes itself: require the asserting entry's `surface` to be `figure`. Measured
+across the corpus before writing it — 59 coupled locators, 58 on `figure` and **1 on `body`**
+— that fix would flag `PMID23435430.json` `entries[9]`, and that entry is **the best-reasoned
+one of the 59**. Its quote is a figure *caption*, which lives in the body container, and it
+says why in its own anchor:
+
+> *"Declared surface body, not figure: this is authored prose carried in the body container and
+> verified character-for-character. Labelling a caption quote 'figure' would exempt it from
+> that check."*
+
+The locator is about Figure 6A, was checked against the pixels, and declares `body` precisely
+so its quote stays machine-verifiable. So the gap is not a missing constraint on `surface` —
+it is that **`surface` is carrying two orthogonal facts**: where the characters live, and what
+kind of evidence the assertion rests on. A guard on the first punishes anyone who gets the
+second right.
+
+That is the same finding as `O7b` in the 2026-08-10 orchestration review, from a different
+direction, and `O7b` already asks for it to be decided together with `panel_qualifies_text`
+and `schematic` — **four pressures on the locator vocabulary found by four uncoordinated
+actors in one day.** Which is why this item is here and not in a commit: I was assigned it as a
+minor repair, and it is a vocabulary change. `ADJUDICATE_THE_DEFECT_LIST_BEFORE_BUILDING_THE_GUARD`
+caught it at the last step, on a list of one.
 
 ### Four fixtures to write before any of this is built
 

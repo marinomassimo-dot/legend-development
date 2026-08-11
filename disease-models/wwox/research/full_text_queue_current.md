@@ -349,11 +349,29 @@ essere ispezionato come figure ma **non può portare locator testuali** (regola 
 ## FT-021
 **Paper:** PMID 24308844 — Schuchardt et al. 2013
 **Title:** Molecular origin of the binding of WWOX tumor suppressor to ErbB4 receptor tyrosine kinase
-**Surface:** PMID 24308844 · `absent`
+**Surface:** ~~PMID 24308844 · `absent`~~ → `structured` · `PMID24308844_Schuchardt2013_PMC.xml`
+(JATS `efetch`, sha256 `00da56df…`) — vedi `FT-055`
 **Priority:** HIGH
 **Why:** fonte primaria WWOX–ErbB4 direttamente a monte di PMID 35716775; serve a verificare quali determinanti di sequenza/affinità precedenti sopravvivono oltre il nuovo modello topology-dependent e a evitare che peptidi ingegnerizzati vengano generalizzati ai partner naturali.
-**Current status:** già catalogato in paper/tracking registry; nessuna `complete_fulltext_read` receipt trovata al 2026-07-26. Debito multi-hop esplicitamente aperto.
-**Next action:** receipt preflight → full text; confrontare costrutti, buffer, PY1/PY2/PY3, full-length/cell context e qualsiasi tensione con il pose parallelo di PMID 35716775.
+**Current status:** ✅ **CORPO LETTO il 2026-08-10** — ricevuta `FTR-20260810-24308844-01`,
+`partial_fulltext_read`. **La voce viva per questo paper è
+[[full_text_queue_current#FT-055]]**,
+che porta il debito residuo: le sette figure, mai ispezionate. Il testo sotto **resta com'era
+al 2026-07-26** ed è superato da qui in avanti.
+
+> 🔴 **Due voci per un paper hanno detto cose incompatibili per un giorno, e la più vecchia
+> diceva `absent`.** Non è un duplicato di identificatore — `FT-021` e `FT-055` sono numeri
+> distinti su lo stesso PMID — quindi nessun controllo di unicità poteva vederlo, e la coda
+> presentava contemporaneamente *«nessuna receipt trovata»* e una superficie strutturata con
+> il corpo letto. **La forma è quella già registrata a `FT-029`/`FT-030`, dal lato peggiore:
+> lì il duplicato era invisibile perché un identificatore non si risolveva; qui è invisibile
+> perché entrambi si risolvono, a voci diverse.** Chi avesse letto solo `FT-021` avrebbe
+> ri-scaricato un articolo già a disco e riaperto un debito già pagato per metà.
+> Riconciliato il 2026-08-11 in fase di integrazione, senza toccare `FT-055`.
+
+**Next action:** ~~receipt preflight → full text~~ — **fatto.** Le domande sotto restano aperte e
+si eseguono in `FT-055`: confrontare costrutti, buffer, PY1/PY2/PY3, full-length/cell context e
+qualsiasi tensione con il pose parallelo di PMID 35716775.
 
 ---
 
