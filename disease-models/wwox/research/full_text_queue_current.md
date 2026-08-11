@@ -2085,3 +2085,61 @@ un `200` non è un corpo.**
 grande del campo e nulla la blocca più. Per le tre `pdf_only`, **prima lo screen `ToUnicode`**, poi
 la via editore. Per le quattro senza PMCID, risolvere il DOI presso l'editore prima di dichiarare
 qualunque cosa.
+
+---
+
+# 📎 APPENDICE 2 — Preflight sulle tredici voci senza superficie, 2026-08-11
+
+Stesse regole dell'appendice precedente, e stesso motivo per cui è un'appendice: **le voci vivono
+qui, ma la numerazione e l'integrazione appartengono a chi fonde.** Nessun nuovo `FT-`.
+
+🔴 **Le identità sono state lette dalle voci, non accettate da un elenco.** La sonda che me le ha
+passate restituiva lo stesso `42082822` per `FT-013` **e** `FT-014`. Leggendo il file:
+**`FT-013` = `42082822`, `FT-014` = `41984841`.** Collisione della sonda, non del file — chi l'ha
+scritta lo sospettava e l'ha dichiarato, ed è per questo che ha passato gli `FT-`, che sono
+indirizzi di contenuto, invece dei PMID.
+
+## Esito
+
+| voce | PMID | PMCID | licenza (letterale) | classe |
+|---|---|---|---|---|
+| `FT-005` | **31543760** Kośla 2019 | `PMC6730490` | **`CC BY`** | 🟢 `structured` · 11 figure |
+| `FT-013` | **42082822** Denkboy 2026 | `PMC13230315` | **`CC BY`** | 🟢 `structured` · 1 figura |
+| `FT-014` | **41984841** | `PMC13099603` | **`CC BY-NC-ND`** | 🟢 `structured` · **già acquisita** |
+| `FT-016` | **39952983** Kim 2025 | `PMC11828923` | **`CC BY-NC-ND`** | 🟢 `structured` · 2 figure |
+| `FT-020` | **21075834** O'Keefe 2011 | `PMC3016910` | **`CC BY-NC`** | 🟢 `structured` · 5 figure |
+| `FT-018` | **28123895** | `PMC5214935` | `idIsNotOpenAccess` | 🟠 `pdf_only` |
+| `FT-019` | **21444760** | `PMC3090235` | `idIsNotOpenAccess` | 🟠 `pdf_only` |
+| `FT-003` | **30853297** | `null` | — | 🔴 `unrecoverable_by_these_routes` |
+| `FT-006` | **26390919** | `null` | — | 🔴 `unrecoverable_by_these_routes` |
+| `FT-015` | **40198927** · **40263068** | `null` (entrambi) | — | 🔴 `unrecoverable_by_these_routes` |
+| `FT-017` | **39933386** | `null` | — | 🔴 `unrecoverable_by_these_routes` |
+| `FT-020` | **15664696** | `null` | — | 🔴 `unrecoverable_by_these_routes` |
+| `FT-007` · `FT-009` | *nessun PMID* — preprint bioRxiv `10.1101/2025.11.22.689900` e `10.1101/2025.05.01.651195` | non applicabile | — | ⚪ **non interrogato**: `oa.fcgi`/`efetch` non indirizzano bioRxiv. Serve la rotta bioRxiv API, **non eseguita** |
+
+## Le quattro superfici acquisite, nel `files/` del checkout condiviso
+
+    file:files/fulltext/PMID31543760_Kosla2019_EPMC.xml    @ 9deafe30…
+    file:files/fulltext/PMID42082822_Denkboy2026_EPMC.xml  @ 7dba7f1d…
+    file:files/fulltext/PMID39952983_Kim2025_EPMC.xml      @ 752c9661…
+    file:files/fulltext/PMID21075834_OKeefe2011_EPMC.xml   @ d8ff045d…
+
+`caption_census.py` rieseguito dopo la cattura: **tutte e quattro nella classe sana.** Il corpus
+passa da 25 a **29 superfici con le didascalie nel corpo** su 41 analizzabili; **le sette pure
+restano sette** — nessuna delle nuove le ingrossa.
+
+**Primi autori risolti via `esummary` prima di nominare i file**, non dedotti dal titolo: ieri ho
+inventato un cognome e l'ho corretto prima che viaggiasse. Ora è un passo del protocollo.
+
+🔴 **Disaccordo fra rotte, due volte, e in entrambe le figure stanno dentro il corpo in ENTRAMBE
+le vie** — quindi, come su `30356099`, **non sono le didascalie**: `31543760` corpo Europe PMC
+**56 746** contro **40 700** di `efetch`; `39952983` **40 456** contro **26 299**, e qui `efetch`
+restituisce *più byte* totali (137 703 contro 116 460) con *meno* corpo. **Dichiarata Europe PMC
+in entrambi i casi perché più capiente; che cosa contengano quei caratteri non è aggiudicato.**
+Tre casi su cinque strutturate mostrano lo stesso scarto: **non è un'anomalia di un articolo, è
+una proprietà delle due rotte, e merita di essere misurata una volta per tutte invece che
+riscoperta a ogni preflight.**
+
+**Next action:** `31543760` (11 figure, `CC BY`) e `21075834` sono pronte alla lettura. Per
+`FT-007` e `FT-009` serve la rotta bioRxiv, che **non ho eseguito**. Per le due `pdf_only`, screen
+`ToUnicode` prima di qualunque locator. Per le sei senza PMCID, via editore.
