@@ -1882,6 +1882,45 @@ corpo o soltanto il landing.
 
 Ordinati per priorità di lettura, non per data: vedi sotto.
 
+🔴 **CORREZIONE 2026-08-11 — la mia misura era di un OGGETTO diverso, non era sbagliata.**
+Sopra ho scritto che `efetch` risponde *«200 e nessun `<body>`»*. Il lettore A ha misurato
+`PMID18487609_Aqeilan2008_PMC.html` **sul disco** e ha trovato `<body>` presente, 8 figure,
+`PMC2490770`, superficie **pulita**. Le due misure non sono in conflitto: **io ho interrogato una
+rotta** — un fetch, plausibilmente l'interstiziale — **e lui un artefatto già catturato.** Stesso
+PMID, due oggetti diversi.
+
+> **Una misura è di un oggetto, e l'oggetto deve viaggiare col numero.**
+
+Da qui in avanti ogni riga di preflight in questa coda dichiara **che cosa** è stato interrogato:
+`rotta:<url>` oppure `file:<path>@<sha256>`. Due numeri senza il loro oggetto non sono in
+disaccordo — non sono confrontabili, esattamente come i due censimenti delle didascalie di ieri.
+**La superficie buona di `18487609` esiste già nel `files/` condiviso: si legge quella.**
+
+### 🔴 Un test negativo da eseguire PRIMA di aprire, e uno degli undici tocca una mia lettura
+
+Un PDF può essere **ben formato e dichiarare il falso**: font sottoinsieme con
+`WinAnsiEncoding` e **nessuna `ToUnicode`**, cosicché il glifo di `β` cade nello slot che in
+Latin-1 è `h` e l'estrattore obbedisce scrivendo `p73h`. È la regola 5d al livello del **font**, e
+per questo **confrontare estrattori non rileva nulla**. `ToUnicode == nessuna` è una proprietà del
+**file**, verificabile in un secondo senza estrarre.
+
+**Rimisurato in proprio, non accettato:** 55 PDF locali, **11 con zero `ToUnicode` su tutti i
+font** — `15070730` · `15073125` · `15131042` · `15548692` · `16061658` · `16223882` · `17360458`
+· `18974271` · `21115974` · **`27308504`** · `38355659`.
+
+**`17360458` è in questa lista ed è in questa stessa voce di coda**: il PDF di *Targeted deletion
+of Wwox* non può portare un locator testuale. Si legge la superficie strutturata, o non si cita.
+
+🔴 **E `27308504` è la lettura che ho chiuso ieri.** Esposizione verificata, non assunta: quel
+manifest dichiara `article_text` = **l'XML** `efetch`, il PDF solo come `article_binary`, e la
+figura come **pixel**. Nessun carattere di alcun locator viene da quel PDF, e i pixel non
+risentono della codifica dei font. **Zero esposizione — ma per come è stata dichiarata la
+superficie, non per fortuna.** Se avessi dichiarato il PDF come superficie di testo, quattordici
+locator sarebbero stati verificati contro caratteri che nessuno ha scritto.
+
+**Due limiti, da tenere:** è un **test negativo** — averla non garantisce nulla — e **non ha senso
+su XML/HTML**, che non hanno font: lì la risposta è *«non applicabile»*, mai *«pulito»*.
+
 **Perché pesano più di quanto suggerisca il titolo.** `PMID 27308504` li cita insieme per una
 sola frase — *«Wwox knockout (KO) mice exhibit post-natal lethality and die by 4 weeks of age»* —
 e quella frase è il fondamento fenotipico di ogni trasferimento dal modello murino alla malattia.
