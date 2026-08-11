@@ -1095,5 +1095,64 @@ class ARenameIsTheOneDeclaredExceptionAndItIsNarrow(unittest.TestCase):
         self.assertEqual(before, json.dumps(branch, sort_keys=True))
 
 
+class ARenameReachesReferencesOutsideTheLedger(unittest.TestCase):
+    """🔴 A rename repairs the ledger and re-points every citation held outside it in silence.
+
+    Observed 2026-08-11, on a renumbering that was itself correct: `02→03→04→05` on
+    `PMID 42422765` left the ledger right and `PMID42422765.json` still naming `...-04`, an
+    identifier that EXISTS and belongs to a different reading. Nothing was dangling, which is
+    exactly why nothing caught it — a pointer that quietly changed meaning survives every
+    check written for pointers that break.
+    """
+
+    def workspace(self) -> Path:
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        root = Path(temp.name)
+        directory = root / "disease-models/wwox/research/deepdive_manifests"
+        directory.mkdir(parents=True)
+        (directory / "PMID42422765.json").write_text(
+            json.dumps({"pmid": "42422765", "receipt": "FTR-20260810-42422765-04",
+                        "schema_version": 2}, indent=2),
+            encoding="utf-8")
+        (directory / "PMID19936220.json").write_text(
+            json.dumps({"pmid": "19936220", "receipt": "FTR-20260806-19936220-01",
+                        "schema_version": 2}, indent=2),
+            encoding="utf-8")
+        return root
+
+    def test_a_manifest_citing_a_renamed_identifier_is_found(self) -> None:
+        root = self.workspace()
+        hits = receipts.manifests_naming(
+            {"FTR-20260810-42422765-04": "FTR-20260810-42422765-05"}, root, "wwox")
+        self.assertEqual([path.name for path in hits],
+                         ["PMID42422765.json"])
+
+    def test_a_manifest_citing_an_untouched_identifier_is_left_alone(self) -> None:
+        """The check must not sweep in every manifest that happens to hold a receipt."""
+        root = self.workspace()
+        hits = receipts.manifests_naming(
+            {"FTR-20260810-99999999-01": "FTR-20260810-99999999-02"}, root, "wwox")
+        self.assertEqual(hits, {})
+
+    def test_repointing_changes_the_receipt_and_nothing_else(self) -> None:
+        root = self.workspace()
+        path = root / "disease-models/wwox/research/deepdive_manifests/PMID42422765.json"
+        renames = {"FTR-20260810-42422765-04": "FTR-20260810-42422765-05"}
+        before = json.loads(path.read_text(encoding="utf-8"))
+        receipts.repoint_manifests(receipts.manifests_naming(renames, root, "wwox"), renames)
+        after = json.loads(path.read_text(encoding="utf-8"))
+        self.assertEqual(after.pop("receipt"), "FTR-20260810-42422765-05")
+        before.pop("receipt")
+        self.assertEqual(before, after)
+
+    def test_an_absent_manifest_directory_is_not_an_error(self) -> None:
+        """A ledger can legitimately be rechained in a workspace holding no manifests."""
+        temp = tempfile.TemporaryDirectory()
+        self.addCleanup(temp.cleanup)
+        self.assertEqual(
+            receipts.manifests_naming({"A": "B"}, Path(temp.name), "wwox"), {})
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

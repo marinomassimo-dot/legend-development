@@ -847,6 +847,50 @@ def _rename_errors(renames: dict[str, str], base: list[dict[str, Any]],
     return errors
 
 
+def manifests_naming(renames: dict[str, str], root: Path, disease: str) -> dict[Path, str]:
+    """Work manifests whose `receipt` field names an identifier this rename is about to move.
+
+    🔴 A rename repairs the ledger and re-points, in silence, every reference held outside it.
+    `RENAMEABLE` is deliberately two ledger-internal fields, which makes the ledger correct and
+    says nothing about the manifests that cite it. Measured on 2026-08-11: after a legitimate
+    `02→03→04→05` renumbering on `PMID 42422765`, the ledger was right and
+    `PMID42422765.json` still said `receipt: ...-04` — an identifier that exists and belongs to
+    a different reading. Not dangling, which is why nothing caught it: a pointer that has
+    quietly changed meaning is worse than one that broke.
+
+    This lives beside the CLI rather than inside `rechain` on purpose. `rechain` is pure over
+    two lists and stays that way; the filesystem question needs a root and a disease, and the
+    CLI is the only place both exist.
+    """
+    directory = root / f"disease-models/{disease}/research/deepdive_manifests"
+    if not directory.is_dir():
+        return {}
+    hits: dict[Path, str] = {}
+    for path in sorted(directory.glob("PMID*.json")):
+        try:
+            declared = json.loads(path.read_text(encoding="utf-8")).get("receipt")
+        except (OSError, json.JSONDecodeError):
+            continue
+        if isinstance(declared, str) and declared in renames:
+            hits[path] = declared
+    return hits
+
+
+def repoint_manifests(hits: dict[Path, str], renames: dict[str, str]) -> list[str]:
+    """Rewrite only the `receipt` field, in place, preserving everything else byte-for-byte."""
+    touched: list[str] = []
+    for path, old in sorted(hits.items()):
+        text = path.read_text(encoding="utf-8")
+        needle = f'"receipt": "{old}"'
+        if text.count(needle) != 1:
+            raise ValueError(
+                f"{path.name}: expected exactly one {needle}, found {text.count(needle)}; "
+                "refusing to guess which occurrence names the reading")
+        path.write_text(text.replace(needle, f'"receipt": "{renames[old]}"'), encoding="utf-8")
+        touched.append(f"{path.name}: {old} -> {renames[old]}")
+    return touched
+
+
 def rechain(
     base: list[dict[str, Any]], incoming: list[dict[str, Any]],
     renames: dict[str, str] | None = None,
@@ -1194,6 +1238,10 @@ def main() -> int:
         help=("renumber an event being moved, e.g. FTR-...-02=FTR-...-03. Repeatable, and a "
               "slide must be declared whole: all renames apply at once"))
     rechain_cmd.add_argument(
+        "--repoint-manifests", action="store_true",
+        help=("also rewrite the `receipt` field of every work manifest citing a renamed "
+              "identifier. Without it a rename that would orphan such a citation is refused"))
+    rechain_cmd.add_argument(
         "--dry-run", action="store_true",
         help="report the plan and write nothing")
     args = parser.parse_args()
@@ -1252,6 +1300,19 @@ def main() -> int:
                 if old in renames:
                     raise ValueError(f"--rename {old} declared twice")
                 renames[old] = new
+            # Fail closed BEFORE the ledger is touched: a rename that leaves a manifest
+            # citing the vacated identifier is the defect this check exists for, and
+            # discovering it after the write means two commits for one change.
+            outside = manifests_naming(renames, Path(args.root), args.disease)
+            if outside and not args.repoint_manifests:
+                listing = "; ".join(f"{path.name} cites {old}"
+                                    for path, old in sorted(outside.items()))
+                raise ValueError(
+                    f"--rename would move {len(outside)} identifier(s) that work manifests "
+                    f"still cite: {listing}. A rename repairs the ledger and re-points every "
+                    "reference held outside it in silence. Re-run with --repoint-manifests to "
+                    "move both in one operation, so the ledger and the manifests land in the "
+                    "same commit.")
             merged, moved, shared = rechain(base, incoming, renames)
             print(f"BASE:     {len(base)} event(s) from {base_path}")
             print(f"INCOMING: {len(incoming)} event(s) from {ledger}")
@@ -1267,11 +1328,17 @@ def main() -> int:
                       + (f"  (was {was})" if was else "")
                       + f"  {event.get('evidence_depth', '?')}  "
                       f"pmid {event.get('study_id', {}).get('pmid', '?')}")
+            for path, old in sorted(outside.items()):
+                print(f"  REPOINT {path.name}  {old} -> {renames[old]}")
             if args.dry_run:
                 print(f"DRY RUN: {len(moved)} event(s) would move; "
                       f"the ledger would hold {len(merged)}. Nothing written.")
                 return 0
             write_rechained_ledger(ledger, merged, manifest=manifest)
+            # After the ledger, never before: if the write fails, the manifests still cite
+            # identifiers that still exist, which is a state someone can re-run from.
+            for line in repoint_manifests(outside, renames):
+                print(f"REPOINTED: {line}")
             print(f"REBASED: {len(moved)} event(s) moved onto {len(base)}; "
                   f"{len(merged)} chained, head {ledger_head(merged)}")
             print(f"ANCHORED: {manifest}")
