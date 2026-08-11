@@ -4,7 +4,10 @@
 > report ([`actor_identity_feasibility.md`](actor_identity_feasibility.md)) and two rounds of
 > adversarial review. Commit `559aa4b` remains in history as the superseded first version.
 >
-> Recommendation carried from Phase -1: **`BUILD_MINIMAL_DIRECTORY`**.
+> Recommendation carried from Phase -1: **`BUILD_MINIMAL_DIRECTORY`** — 🔴 **provisional,
+> pending operator acceptance.** It rests on the registry's value for **recipient
+> self-identification**, not on any delivery guarantee: the guarantee an earlier draft drew
+> from E0 has been withdrawn.
 
 ---
 
@@ -15,7 +18,7 @@ failure, and the conflation was the central defect adversarial review found.
 
 | problem | example, 2026-08-10/11 | does a directory solve it |
 |---|---|---|
-| **routing** — message delivered to the wrong session | endpoint `1944` → `92030`; a directive headed `RECIPIENT: PLAN` reaching an actor that could not tell whether it was Plan | **detectable and refusable by the recipient** — not prevented |
+| **routing** — message delivered to the wrong session | endpoint `1944` → `92030`; a directive headed `RECIPIENT: PLAN` reaching an actor that could not tell whether it was Plan | **the mismatch becomes detectable under the declared discipline**, and refusable by the recipient — delivery is not prevented, and detection holds only where actors state their coordinates as the discipline requires |
 | **attribution** — a statement assigned to the wrong actor | nine `checkout --detach` reported as another actor's | **no.** Coordinates make a claim checkable; they do not authenticate content |
 | **authority / provenance** — an operator directive relayed by another actor | three directives forwarded verbatim | **no.** Structural only with a channel enforcement that Phase -1 could not demonstrate |
 
@@ -36,12 +39,15 @@ live coordinates** and is **not introduced here**.
 
 ## 3. What Phase -1 measured that changed this document
 
-- **a send to a dead endpoint fails loudly**, with a diagnosis and a named remedy. The routing
-  failure the first version was built to prevent is already reported by the transport;
-- **no automatic challenge/response exists** — delivery is automatic, answering is an agent
-  action, per the tool's documented contract;
-- **hook enforcement is unproven**: settings are not re-read mid-session, so the experiment
-  could not run, and **no cause is assigned**;
+- **a connect to a non-existent socket pathname is refused loudly**, with a diagnosis and a
+  named remedy. 🔴 **That is one failure mode and not a delivery guarantee**: a socket that
+  exists with a dead or different owner, and everything after a successful connect, are
+  untested. An earlier draft generalised this into "messages never vanish silently" and used it
+  to argue an adapter is unnecessary — **both claims are withdrawn**;
+- **the documented `SendMessage` interface offers no automatic challenge/response** — delivery
+  automatic, answering an agent action. Not a universal refutation of the mechanism;
+- **hook enforcement is unproven**: a matcher added mid-session was not observed to fire, and
+  **the cause is not established** — `HOT_RELOAD_NOT_OBSERVED`, no cause assigned;
 - **socket ownership is confirmed** by `lsof`, and an actor can derive its own address —
   corroborated three ways, by two actors and two instruments;
 - **a bare name is not an address**; the ref lives only inside another session's private
@@ -51,7 +57,7 @@ live coordinates** and is **not introduced here**.
 
 🔴 The first version asserted that *"stale endpoints are the normal state of that directory"*.
 **Measured false**: every socket present was `OWNED`. The real hazard is narrower — a
-*remembered* endpoint can vanish — and the transport already reports it.
+*remembered* endpoint can vanish — and the transport reports that particular case.
 
 ## 4. The versioned registry — `framework/state/actors.yaml`
 
@@ -122,7 +128,9 @@ move.
 ## 7. Migration
 
 **Phase 0 — describe what is true.** Write `actors.yaml` from measured worktrees and branches.
-No behaviour change. It closes the one failure that recurred: an actor can read what it is.
+No behaviour change. Its value is **recipient self-identification**: an actor can read what it
+is instead of asking the operator, which is the failure that actually recurred. This needs no
+transport and survives any change of transport.
 
 **Phase 1 — discipline.** Actors state their coordinates in what they write and what they
 send. Still no enforcement, still no resolver.
