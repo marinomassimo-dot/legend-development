@@ -652,19 +652,27 @@ def _adjudication_recipe_errors(
       battery. Delegation, not a waiver: the byte check moves to the tool that can perform it,
       and neither tool is left asserting something it cannot see.
 
-    🔴 And the delegation stops exactly there, because half of that tool is an echo of this
-    one. `regenerate_adjudications.py` imports `_match_key` and `crop_contains_span` FROM this
-    module, so its verdict *«the locators resolve to a span inside the crop»* is produced by
-    the same code a validator would be trusting it to corroborate — a defect in the matching
-    would be invisible to the check built to confirm it. What survives as genuinely independent
-    is the DIGEST: it renders the page with `fitz`, crops, hashes, and compares, and that path
-    touches nothing here.
+    🔴 And the delegation stops exactly there, because half of that tool WAS an echo of this
+    one. `regenerate_adjudications.py` imported `crop_contains_span` FROM this module, so its
+    verdict *«the locators resolve to a span inside the crop»* was produced by the same code a
+    validator would be trusting it to corroborate — a defect in the matching would have been
+    invisible to the check built to confirm it. Only the DIGEST was genuinely independent: it
+    renders the page with `fitz`, crops, hashes and compares, and that path touches nothing
+    here.
 
-    So this function delegates artifact identity and nothing else. Span containment is left
-    where it is rather than referred to a tool that would be quoting us back to ourselves.
-    Deferred deliberately: a second implementation of a geometric predicate is cheap, and worth
-    writing only when something actually leans on it — today seven entries on `PMID 17803050`
-    and eleven on `PMID 21212533` do, which is a reason to write it down, not yet to build it.
+    Closed 2026-08-11. `regenerate_adjudications.span_is_fully_shown` answers the same
+    question in a different arithmetic — clip the span to the crop, require the clipped area
+    to equal the span's area — rather than copying four comparisons, which would have been an
+    echo spelled differently. The two are compared against each other over a dense grid of
+    boundary cases in `test_regenerate_adjudications.py`, so a future edit to one and not the
+    other fails rather than passes quietly.
+
+    `_match_key` is still shared, and deliberately: it decides whether a needle is a fragment
+    of the snippet it names, which is a question about THIS module's own bookkeeping, not a
+    corroboration of it.
+
+    So this function still delegates artifact identity and nothing else. Span containment
+    stays here as well, now genuinely checked twice instead of once.
 
     Anything outside `page_adjudications/` is untouched: a missing artifact is still a BLOCK.
     """

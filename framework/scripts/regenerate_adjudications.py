@@ -51,11 +51,51 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from deepdive_manifest import _match_key, crop_contains_span  # noqa: E402
+from deepdive_manifest import _match_key  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[2]
 ADJUDICATIONS = ROOT / "disease-models/wwox/research/page_adjudications"
 LOCATOR = re.compile(r"^entries\[(\d+)\]$")
+
+
+def span_is_fully_shown(
+    crop: tuple[float, float, float, float],
+    span: tuple[float, float, float, float],
+) -> bool:
+    """Is the whole span visible inside the crop? Answered by area, not by edges.
+
+    🔴 This is `deepdive_manifest.crop_contains_span` answered a second time, on purpose.
+    Until 2026-08-11 this module IMPORTED that function, so its verdict — *«the locators
+    resolve to spans the crop actually shows»* — was produced by the code a validator was
+    trusting it to corroborate. A guard sharing a code path with its subject is not a guard,
+    it is an echo, and a defect in the matching would have been invisible to the check built
+    to confirm it. The digest half was always genuinely independent; this half was not.
+
+    A second copy of the same four comparisons would be an echo too, just spelled differently.
+    So the question is asked in a different shape: **clip the span to the crop and require the
+    clipped area to equal the span's area.** Same predicate, different arithmetic — comparison
+    of coordinates versus multiplication of overlaps — so the two disagree when either is
+    wrong rather than agreeing because they are the same sentence twice.
+
+    Edges count as shown, matching the other implementation: a span flush against the boundary
+    is fully rendered, and being strict by a hair would reject correct artifacts and teach
+    people to pad crops until the check stops complaining.
+
+    A zero-area span — a needle resolving to an empty rectangle — is contained by this
+    formulation whenever it lies inside, which is what the other implementation says too.
+    """
+    crop_x0, crop_y0, crop_x1, crop_y1 = crop
+    span_x0, span_y0, span_x1, span_y1 = span
+    span_area = max(0.0, span_x1 - span_x0) * max(0.0, span_y1 - span_y0)
+    clipped_area = (
+        max(0.0, min(crop_x1, span_x1) - max(crop_x0, span_x0))
+        * max(0.0, min(crop_y1, span_y1) - max(crop_y0, span_y0))
+    )
+    if span_area == 0.0:
+        # Degenerate span: area says nothing, so fall back to the point being inside.
+        return (crop_x0 <= span_x0 and span_x1 <= crop_x1
+                and crop_y0 <= span_y0 and span_y1 <= crop_y1)
+    return clipped_area == span_area
 
 
 def digest(data: bytes) -> str:
@@ -101,7 +141,7 @@ def check_needles(page, artifact: dict, quoted: list[str] | None, label: str) ->
             continue
 
         span = (hits[0].x0, hits[0].y0, hits[0].x1, hits[0].y1)
-        if not crop_contains_span(crop, span):
+        if not span_is_fully_shown(crop, span):
             problems.append(
                 f"{label} {locator}: crop {crop} does not contain the span "
                 f"({span[0]:.0f},{span[1]:.0f},{span[2]:.0f},{span[3]:.0f}) it adjudicates")
