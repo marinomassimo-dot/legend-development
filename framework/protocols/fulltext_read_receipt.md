@@ -196,6 +196,32 @@ FULLTEXT_READ_RECEIPT:
   reread_reason: first_read
 ```
 
+🔴 **`outputs` is what the run TOUCHED, not what the receipt ATTESTS, and reading it the
+other way is a trap that survives inspection.** On 2026-08-11 an inverse index built from
+`outputs` produced a plausible, well-formed and entirely false picture: five "stale or
+unclaimed" manifest→receipt pointers and one "cross-claimed" manifest. The authoritative link
+is the manifest's own `receipt` field, and measured directly it is correct on all 36 manifests
+— zero absent, zero pointing at another paper's receipt.
+
+The false positive is worth keeping because of its shape: `PMID38499540.json` appeared in the
+`outputs` of `FTR-20260810-25331887-01` because **that reading really did write into that
+file** — legitimate multihop work. A guard built on this field would have flagged exactly the
+cross-paper reading we want, and its count would have risen with the quality of the reading.
+No consumer in this repository derives attestation from `outputs`; the only thing that did was
+a reviewer's inference. Same class as `<fig\b` matching `<fig-count>`: **a plausible predicate
+that answers a different question from the one you asked**, invisible to any check that only
+verifies the result is well-formed, because the result is well-formed.
+
+🟡 **OPEN, deliberately not decided in a merge: what does a manifest's `receipt` point at —
+the reading that PRODUCED the manifest, or the most recent reading of that paper?** The
+validator requires the field and checks nothing about its target, so the tooling has no
+opinion. `PMID42422765.json` declares `…-04` while `…-05` is a later receipt for the same
+paper whose `outputs` name the manifest file. Under one reading `-04` is right, under the
+other `-05` is; both are internally consistent, and neither is a referential defect. Changing
+it swaps one truth for another, which is why `rechain --repoint-manifests` must never be
+pointed at this case: it exists to follow a **renamed identifier**, not to re-decide which
+reading a manifest documents.
+
 `source_fingerprint` is mandatory whenever a **contemporaneous** receipt names a local
 artifact. A receipt over a file that carries no digest claims "I read *this* document"
 about something that can be replaced, truncated or regenerated afterwards while the receipt
