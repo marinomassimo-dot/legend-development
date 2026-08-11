@@ -2218,3 +2218,57 @@ Aperto il rif. 3 (`PMID 24550385`, `FT-054`) sono emerse tre cose che riscrivono
 - **Conseguenza operativa, e costa cinque righe:** prima di dichiarare un `article_text`, contare `<fig>` dentro `<body>` contro `<fig>` nell'articolo. Se differiscono, o si sceglie la via che le include, o si dichiara esplicitamente che le didascalie vanno lette a parte. Il conteggio va nel manifest accanto a `figure_coverage`, che oggi misura quante figure hanno un locator e **non** se le loro didascalie erano leggibili.
 - **REVIVAL_TRIGGER:** se una futura versione di `_xml_surfaces` restringesse l'estrazione al `<body>` — ottimizzazione plausibile e apparentemente innocua — il difetto di lettura diventerebbe **anche** un difetto di verifica, e dieci manifest esistenti cambierebbero verdetto in silenzio. Da rileggere prima di qualunque modifica a quella funzione.
 - **Interconnessioni:** `FT-055` · `FT-056` · `FT-057` · `DL-METH-085` · `PATTERN_ALREADY_SOLVED_GATE` · [[gold_is_in_the_details]].
+
+#### Append 2026-08-10 — rimisurato dopo una contestazione, e il predicato adesso è scritto
+
+L'Orchestrator ha rimisurato questa classe e riportato **14 su 62, di cui 8 pure**, contro il mio
+10 su 35. Ho **rieseguito invece di accettare**, con uno script che pretende una radice assoluta e
+la stampa — la loro prima misura di questa stessa classe era sbagliata perché la shell aveva
+ereditato la cwd di un worktree, e la mia era stata scritta senza dichiarare il predicato.
+[`caption_census.py`](../../../framework/scripts/caption_census.py), predicato esplicito:
+`inbody = |{fig : fig ∈ descendants(body)}|` contro `tot = |{fig : fig ∈ descendants(article)}|`.
+
+**Misura stabile su due esecuzioni, radice `/Users/massimo/Desktop/legend-public`:**
+
+| | |
+|---|---|
+| superfici XML analizzabili | **34** (35 file, 1 non analizzabile) |
+| tutte le didascalie dentro `<body>` | 22 |
+| **tutte fuori — la classe pura** | **7** |
+| alcune fuori | 2 |
+| nessuna figura | 3 |
+
+**Su ciò che conta siamo identici.** La classe pura dell'Orchestrator elenca esattamente i miei
+sette nomi: `21318118` · `22193544` · **`23370280`** · `24308844` · `27551470` · `31340538` ·
+`33255508`. Nessuna divergenza dove il difetto morde.
+
+🔴 **E il loro puntamento è il contributo più utile del messaggio:** `PMID23370280_Salah2013_PMC.xml`,
+**6 figure su 6 fuori dal corpo**, è il paper a cui lo stato attribuisce la stabilizzazione ITCH e
+che nessuno ha letto. Chi lo aprirà con un estrattore delimitato non vedrà una sola didascalia —
+sullo stesso filone dove stanotte una didascalia («Hypothetical») è diventata il reperto centrale.
+
+**Dove le due misure divergono, e resta irrisolto.** La loro riga «parziali» contiene `27308504`,
+`32581702`, `34268881`, `36779245`, `39416860`, che il predicato sopra dà **interamente dentro il
+corpo** (1/1, 4/4, 11/11, 4/4, 1/1). Ho cercato di ricostruire la loro definizione e ne ho
+falsificata una: su `34268881` i `<graphic>` sono **12** contro 11 `<fig>`, quindi contare le
+grafiche spiegherebbe quel caso — **ma non `36779245`, dove `<graphic>` e `<fig>` sono entrambi 4.**
+Non so quale predicato produca 14, e **non lo assumo**: chi ha misurato pubblichi il predicato,
+come io ho dovuto pubblicare il mio. *Due conteggi che non nominano la propria definizione non
+sono in disaccordo — non sono ancora confrontabili.*
+
+**Sulla popolazione, il disaccordo è invece di categoria e si chiude qui.** Loro contano 62 =
+35 XML + 27 HTML. **A un HTML questa domanda non si può porre:** una pagina ha esattamente un
+`<body>` e tutto ci sta dentro per costruzione, quindi «figure fuori dal corpo» non è né vero né
+falso — è indefinito. Le 27 superfici HTML vanno contate a parte e con un'altra domanda (*la
+didascalia è raggiungibile?*), mai sommate al denominatore di questa. Sommandole si abbassa la
+percentuale di una classe di rischio diluendola con casi che non possono appartenervi.
+
+**Correzione al mio numero originale, e non è un arrotondamento.** Avevo scritto «10 su 35».
+Sono **9 su 34**: il decimo era `23435430`, che sta in `/tmp` e **non nel `files/` condiviso**, e
+il denominatore includeva un file non analizzabile. Ho contato insieme un artefatto del corpus e
+un artefatto di lavoro — esattamente il confine che [[CLAUDE]] impone di non attraversare, sbagliato
+da me nella riga che quel confine lo stava insegnando.
+
+- **Conseguenza operativa aggiuntiva:** `PMID42395553_PMC.xml` non è di questa classe ed è peggio —
+  9 586 byte, **nessun `<body>` e nessuna `<fig>`**: metadati soltanto, come `18487609`. È una
+  classe distinta, *«superficie assente travestita da superficie»*, e va censita da sé.
