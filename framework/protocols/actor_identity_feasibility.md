@@ -180,21 +180,37 @@ own listing. The field is dropped from the schema.
 
 Concurrent append concerns a runtime store not approved to exist.
 
-## Namespace correlation, weak and bounded
+## `START-TIME CORRELATION` — corroborative only
+
+> **Corroborative only; not identity resolution and not routing evidence.**
 
 R0 (evidence from the orchestrator, attributed to them) concluded the outbound name space and
-the inbound socket space are disjoint and cannot be composed. Measured here that is too strong.
+the inbound socket space cannot be joined. One observation qualifies that.
 
 At `18:34:35` the five socket owners started at `10:51:00`, `10:51:15`, `10:51:40`, `19:47:08`,
 `09:03:57`; `ListAgents` reports elapsed times.
 
-    "9h ago"    -> unique   -> resolved
-    "22h ago"   -> unique   -> resolved
+    "9h ago"    -> one candidate
+    "22h ago"   -> one candidate
     "1d ago" x2 -> two candidates -> AMBIGUOUS
 
-Composition exists and is bounded by the listing's granularity. Three of five sessions started
-within 40 seconds of each other and are indistinguishable by this method. **Enough to check a
-claimed endpoint, not to resolve one.**
+Three of five sessions started within 40 seconds of each other and are indistinguishable by
+this comparison. Where a listing entry has exactly one candidate, the comparison can
+**corroborate an endpoint an actor has independently claimed**.
+
+🔴 **It does nothing else, and the earlier wording overreached in the one direction that
+matters.** A previous version of this section was titled *"Namespace correlation, weak and
+bounded"* and said *"composition exists"*. The verb invites a reader to treat the comparison as
+a route, and the operator rejected exactly that formulation when it was used elsewhere. So,
+stated as prohibitions rather than as limits:
+
+- it is **not identity resolution** — a unique candidate is not an identification;
+- it is **never an authorised routing method**, under any circumstances, including the cases
+  where it happens to be unambiguous;
+- it corroborates a claim **made independently**; it originates nothing.
+
+The finding is unchanged. Only the verb is, because the verb was the part someone would have
+built on.
 
 ## Protocol deviation, declared
 

@@ -54,8 +54,10 @@ live coordinates** and is **not introduced here**.
   corroborated three ways, by two actors and two instruments;
 - **a bare name is not an address**; the ref lives only inside another session's private
   listing, and a session cannot learn its own name at all;
-- **the two namespaces compose weakly by start time** — enough to *check* a claimed endpoint,
-  not to *resolve* one.
+- **`START-TIME CORRELATION` is corroborative only** — it can support an endpoint an actor has
+  independently claimed, and it is **not identity resolution and never an authorised routing
+  method**. An earlier draft said the two namespaces "compose weakly", which invites a reader
+  to treat it as a route.
 
 🔴 The first version asserted that *"stale endpoints are the normal state of that directory"*.
 **Measured false**: every socket present was `OWNED`. The real hazard is narrower — a
