@@ -2207,4 +2207,93 @@ la voce guadagna una fonte indipendente; se mostra qualcosa di diverso — «pro
 del commit candidate non è la stessa parola di «K63, degradation-independent» — allora
 l'attribuzione va corretta e `DL-THER-095` con essa.
 
-**Next action:** aprire il documento **raccogliendo le didascalie da fuori il `<body>`**.
+### 🔴 LETTO il 2026-08-11 — e **l'attribuzione dello stato è invertita nei ruoli**
+
+Receipt `FTR-20260811-23370280-01`. Manifest `PMID23370280.json`, **12 locator**, `MANIFEST
+STRICT PASS`. Copertura: abstract, introduzione, metodi, risultati, discussione, **23/23
+pannelli**, 66 referenze enumerate.
+
+**In questo paper WWOX non è il substrato di ITCH: ne è l'ANTAGONISTA**, e la proteina
+stabilizzata è **ΔNp63α**.
+
+> *«Altogether, these results suggest that **WWOX antagonizes ITCH** effect on ΔNp63α and
+> **stabilizes its protein levels**»*
+>
+> *«we show that **WWOX competes with ITCH** on binding to ΔNp63α and inhibits ΔNp63α
+> ubiquitination mediated by ITCH»*
+
+Il commit candidate che cita questo paper per *«direct ITCH/proteasomal stabilization»* legge un
+risultato su **WWOX che impedisce a ITCH di degradare una terza proteina** come se fosse su ITCH
+che stabilizza WWOX. **Substrato, stabilizzatore e direzione: tutti e tre invertiti.**
+
+**Le assenze misurate lo rendono certo, non probabile:** `K63` **zero** occorrenze · `Lys-63`
+**zero** · nessuna frase descrive WWOX come ubiquitinato. Ciò che c'è: `ITCH` 26, `stabilization`
+8, `proteasome` 6 — **e tutte riguardano ΔNp63α**.
+
+### La domanda di questa voce, risposta: le due parole non sono lo stesso meccanismo
+
+| | substrato | catena | esito |
+|---|---|---|---|
+| `24550385` · `26675548` | **WWOX** | **K63** | stabilizzazione, **indipendente dalla degradazione** |
+| **`23370280`** (questo) | **ΔNp63α** | proteasoma | degradazione, **bloccata da WWOX** |
+
+**`DL-THER-095` non si muove**: poggia su `24550385` (CHX chase, MEF `Itch⁻/⁻`, `0.36`), non su
+questo paper. A muoversi è l'attribuzione nel commit candidate — di un altro attore.
+
+### 🔴 E il frame che riconcilia i due, che è degli autori
+
+> *«WWOX can **compete** with other WW domain-containing proteins, like YAP and ITCH, for binding
+> common target proteins, such as ErbB4 and p73»*
+
+WWOX è **insieme** substrato di ITCH (K63, stabilizzante) **e** competitore di ITCH per i suoi
+altri substrati. Entrambi passano da WW1/PY, quindi entrambi possono valere.
+
+🔴 **`INFERENZA` con conseguenza terapeutica, che nessuno dei due paper dà da solo:** alzare
+l'attività di ITCH per stabilizzare WWOX **aumenterebbe insieme** la degradazione ITCH-mediata
+dei suoi altri bersagli — ΔNp63α qui, p73 nella Fig 7 di `24550385`. **Una leva su ITCH non è
+selettiva per WWOX.**
+
+### Altri reperti
+
+- 🔴 **zero statistica in tutto il paper**: nessuna sezione, nessun p-value, nessun test, nessun
+  `n`. Barre con `STDV`, il pannello 6d senza barre — e il testo usa *«significantly»* quattro
+  volte per confronti mai testati;
+- *«**exclusive** presence of GAPDH and lamin»*: nel pannello 4a **GAPDH è in tutte e tre le
+  corsie nucleari**;
+- la trappola annunciata da questa voce ha retto: **6 figure, 0 dentro il `<body>`**;
+- 🔴 il censimento rifiutava su tutte e sei perché **questo deposito usa lettere minuscole** e il
+  matcher cerca `[A-J]`. Quinta istanza della stessa classe;
+- **superficie figure: la pagina, non lo stream.** Il PDF ha **dieci frammenti** a 82–252 ppi:
+  estrarli darebbe pezzi senza etichette. Sei pagine renderizzate a 300 dpi. Tutti i frammenti
+  hanno `smask = 0`, quindi l'estrazione sarebbe stata *fedele* — sarebbe stata l'**unità
+  sbagliata**. Fedeltà e oggetto giusto qui divergono.
+
+**Perché la ricevuta dice `partial` mentre ogni sezione dice `read`:** il ledger ha rifiutato
+`complete` per `multihop: references queued but not resolved` — **nessuna** delle sei referenze
+gene-dirette ha una ricevuta su alcun ramo. Il gate ha ragione e non l'ho aggirato: un paper il
+cui intero vicinato gene-diretto è non letto ha un buco reale nel multi-hop. Si chiude leggendone
+una, non rietichettando questa.
+
+**Next action:** il debito è `FT-063` — le tre referenze gene-dirette né lette né in coda.
+
+---
+
+## FT-063 — Le tre referenze che chiudono il gate del multi-hop di `FT-062`
+
+**Papers:** PMID 18487609 · PMID 16061658 · PMID 12514174
+**Origine:** multi-hop di `FT-062` (`PMID 23370280`), 2026-08-11.
+**Priority:** **MEDIA-ALTA** — non per il contenuto in sé, ma perché **una sola di queste,
+letta, converte `FTR-20260811-23370280-01` da `partial` a `complete`**: il gate chiede almeno
+una referenza gene-diretta *risolta* e oggi nessuna delle sei ne ha una.
+
+| PMID | lavoro | perché |
+|---|---|---|
+| **16061658** | Aqeilan 2005 — *WW domain-containing proteins, WWOX and YAP, compete for interaction with ErbB4* | 🔴 **è l'istanza originale del frame di competizione WW1** che `23370280` generalizza e su cui poggia l'`INFERENZA` di `DL-THER-095` sulla non-selettività di una leva ITCH |
+| **12514174** | Chang 2003 — *JNK1 physically interacts with WW domain-containing oxidoreductase* | seconda istanza precoce della competizione al WW1 |
+| **18487609** | Aqeilan 2008 — *WWOX is essential for postnatal survival and normal bone metabolism* | fenotipo del knockout murino; tocca la sopravvivenza postnatale, asse rilevante per WOREE |
+
+Le altre tre gene-dirette di `23370280` sono già in coda ma non lette: `17360458` · `17575124` ·
+`15070730`.
+
+**Next action:** `16061658` per primo — è quello che regge un'inferenza che ho appena scritto,
+ed è il caso in cui leggere la fonte del *frame* vale più che leggere un altro risultato.
