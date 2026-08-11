@@ -2347,6 +2347,32 @@ cita un frame la cui fonte primaria **oggi non può portare una citazione verifi
 per questo sbagliata: è **non ancorata**, e dirlo è lo scopo di questa voce.
 
 **Next action:** decidere se spendere una corsa sull'aggiudicazione di pagina per `16061658`. È
-un meccanismo sostanziale e non lo apro di mia iniziativa. In alternativa, il gate multi-hop di
-`FT-062` si chiude leggendo `18487609` o `12514174` — **ma il loro preflight non è stato fatto**,
-e questa voce è la ragione per cui va fatto prima di aprirli.
+un meccanismo sostanziale, l'operatore l'ha messa fuori mandato e **non l'ha revocata**: non la
+apro.
+
+### Preflight delle altre due, fatto il 2026-08-11 **prima** di aprirle
+
+| | `18487609` Aqeilan 2008 | `12514174` Chang 2003 |
+|---|---|---|
+| PMC | 🟢 **`PMC2490770`, `inPMC: Y`** | 🔴 `pmcid: null`, non depositato |
+| sul disco | 🟢 `_PMC.html` **e** PDF | ⬜ assente |
+| Unpaywall | — | 🟢 `is_oa: true`, ibrido, PDF all'editore JBC |
+| superficie | 🟢 **PULITA**: 67 363 car., `×` 10 · `α` 3 · `β` 5, **zero** controlli C0, **zero** `Ag` | ⬜ da recuperare, poi **da schermare** |
+| porta il frame WW1? | 🔴 **NO** — `WW1` 0 · `ITCH` 0 · `competition` 0 · `ErbB` 2 | probabile (JNK1/WOX1, stessa era) |
+
+🔴 **Correzione a un instradamento.** Era stato riferito che `18487609` *«risponde 200 e non ha
+alcun `<body>`, metadati travestiti da full text»*. **Il file che abbiamo non è quello**: ha
+`<body>`, **otto blocchi `<figure class="fig">`**, EXPERIMENTAL/RESULTS/DISCUSSION, e supera la
+sentinella 5d. Chi l'ha misurato ha misurato un altro oggetto — probabilmente un fetch diverso o
+l'interstiziale proof-of-work. **Una risposta `200` non è una superficie, e nemmeno lo è una
+misura su un fetch che non è il file sul disco.**
+
+🔴 **E la distinzione che conta, perché le due cose sono state confuse una volta:**
+
+- **`18487609` chiude il gate multi-hop di `FT-062`** — è leggibile adesso, superficie pulita,
+  otto figure. Ma **non ancora** l'inferenza sulla non-selettività: non contiene il frame.
+- **Solo `16061658` (rifiutato) o `12514174` (da recuperare e schermare) possono ancorare quel
+  frame.**
+
+**Next action:** `18487609` per chiudere il gate — è pronto e non richiede decisioni. Il frame
+resta `NON ANCORATO` e lo dice `DL-THER-095`.

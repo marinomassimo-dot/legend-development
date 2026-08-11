@@ -2719,7 +2719,50 @@ l'altra**, e l'unico modo di saperlo è la figura che nessuno ha visto.
   (`DIS-003`) aggiungendogli un ramo che non nomina, quindi la promozione è di chi possiede il
   gate.
 
-#### 🔴 CORREZIONE APPEND-ONLY — il titolo era sovrastimato, il reperto no, e la lezione è su come si scrive un allarme
+#### 🔴 AGGIUNTA 2026-08-11 — il corollario sulla NON-SELETTIVITÀ è `NON ANCORATO`, e lo dichiaro io prima che lo trovi qualcun altro
+
+Da `PMID 23370280`, letto l'11 agosto, era emerso il corollario:
+
+> **alzare l'attività di ITCH per stabilizzare WWOX aumenterebbe insieme la degradazione
+> ITCH-mediata dei suoi altri bersagli — ΔNp63α e p73. Una leva su ITCH non è selettiva per
+> WWOX.**
+
+Poggia sul **frame di competizione WW1** — WWOX che compete con altre proteine WW per bersagli
+PY comuni — che `23370280` cita come già stabilito e la cui **fonte primaria è `PMID 16061658`**
+(Aqeilan 2005, WWOX e YAP competono per ErbB-4).
+
+🔴 **Quella fonte oggi non può portare una citazione verificabile.** Screening dell'11 agosto,
+receipt `FTR-20260811-16061658-01`, `retrieved_not_read`: nessun deposito PMC, nessuna copia in
+repository, e il text layer del PDF locale è **`SUSPECT`** — `µ` diventa `A` sedici volte,
+**`p73β` diventa `p73h` sette volte**, `×` è un byte di controllo. Superficie **rifiutata**, non
+riparata.
+
+**La classificazione esatta è `NON ANCORATO`, e non è né `rifiutato` né `confermato`:**
+
+| stato | significato |
+|---|---|
+| confermato | esiste un locator verificato che lo sostiene |
+| **non ancorato** | **la proposizione resta plausibile e non esiste oggi un locator che possa sostenerla** |
+| rifiutato | esiste evidenza contraria |
+
+Il corollario **non è sbagliato**: `23370280` lo enuncia in proprio (*«WWOX can compete with
+other WW domain-containing proteins, like YAP and ITCH, for binding common target proteins, such
+as ErbB4 and p73»*, verificato contro artefatto impronta-to) e quella citazione **è** ancorata.
+Ciò che non è ancorato è la **fonte del frame**, cioè la dimostrazione originale che la
+competizione avviene davvero al WW1. Chi userà il corollario deve sapere che poggia su una
+citazione secondaria.
+
+- **Cosa lo ancorerebbe:** ① aggiudicazione di pagina su `16061658` secondo la 5e — decisione
+  dell'operatore, oggi **fuori mandato e non revocata**, e quindi non presa; oppure ②
+  `PMID 12514174` (Chang 2003, JNK1/WOX1), che il preflight dell'11 agosto trova **open access
+  ibrido con PDF all'editore** — ma è un PDF JBC del 2003, coetaneo di quello appena rifiutato, e
+  va **schermato prima** di essere considerato una lettura.
+- 🔴 **Cosa NON lo ancorerebbe, e va detto perché era il candidato indicato:** `PMID 18487609`
+  (Aqeilan 2008, sopravvivenza postnatale e metabolismo osseo). Il suo HTML PMC locale è una
+  superficie **pulita e leggibile** — 67 363 caratteri, `×` 10 · `α` 3 · `β` 5, zero controlli
+  C0 — ma il paper **non contiene il frame**: `WW1` 0 · `ITCH` 0 · `competition` 0 · `ErbB` 2.
+  **Chiude il gate multi-hop di `FT-062`; non ancora questa inferenza.** Le due cose sono state
+  confuse una volta e non devono esserlo di nuovo.
 
 Avevo scritto: *«ITCH compare **18 volte** e **ogni** menzione lo tratta come qualcosa da
 inibire»*. Entrambe le metà sono difettose e in modi diversi.
