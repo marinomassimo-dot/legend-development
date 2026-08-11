@@ -1096,14 +1096,38 @@ def validate_state_anchor(
     return errors
 
 
-def write_state_anchor(manifest_path: Path, receipts: list[dict[str, Any]]) -> bool:
-    """Atomically re-anchor the manifest; refuse missing or ambiguous anchor fields."""
+def anchor_patterns(prefix: str) -> tuple[re.Pattern[str], re.Pattern[str]]:
+    """The `(events, head)` anchor field patterns for a ledger family.
+
+    A second append-only ledger needs the same external tail anchor for the same reason the
+    first one does — a hash chain cannot see truncation — and it needs the same atomic,
+    fsynced, mode-preserving write. Parameterising the field prefix is what stops that from
+    becoming a second implementation of both. `PATTERN_ALREADY_SOLVED_GATE`.
+    """
+    return (
+        re.compile(rf"(?m)^({re.escape(prefix)}_events:\s*)(\S+)\s*$"),
+        re.compile(rf"(?m)^({re.escape(prefix)}_head:\s*)(\S+)\s*$"),
+    )
+
+
+def write_state_anchor(
+    manifest_path: Path, receipts: list[dict[str, Any]], *,
+    events_pattern: Optional[re.Pattern[str]] = None,
+    head_pattern: Optional[re.Pattern[str]] = None,
+) -> bool:
+    """Atomically re-anchor the manifest; refuse missing or ambiguous anchor fields.
+
+    The patterns default to this module's own ledger, so every existing caller is unchanged;
+    another ledger family passes its own from `anchor_patterns`.
+    """
+    events_pattern = events_pattern or ANCHOR_EVENTS
+    head_pattern = head_pattern or ANCHOR_HEAD
     text = manifest_path.read_text(encoding="utf-8")
-    if len(ANCHOR_EVENTS.findall(text)) != 1 or len(ANCHOR_HEAD.findall(text)) != 1:
+    if len(events_pattern.findall(text)) != 1 or len(head_pattern.findall(text)) != 1:
         return False
     head = ledger_head(receipts)
-    text = ANCHOR_EVENTS.sub(lambda m: f"{m.group(1)}{len(receipts)}", text, count=1)
-    text = ANCHOR_HEAD.sub(lambda m: f"{m.group(1)}{head or 'null'}", text, count=1)
+    text = events_pattern.sub(lambda m: f"{m.group(1)}{len(receipts)}", text, count=1)
+    text = head_pattern.sub(lambda m: f"{m.group(1)}{head or 'null'}", text, count=1)
     mode = stat.S_IMODE(manifest_path.stat().st_mode)
     descriptor, temporary_name = tempfile.mkstemp(
         prefix=f".{manifest_path.name}.", dir=manifest_path.parent

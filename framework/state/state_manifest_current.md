@@ -227,6 +227,32 @@ python3 framework/scripts/fulltext_receipts.py anchor
 python3 framework/scripts/fulltext_receipts.py verify
 ```
 
+## 6.1bis SYNC EPOCH LEDGER ANCHOR
+
+Several actors work in their own worktrees against one shared checkout. Realigning that
+checkout is what turns a landed state into a **dependency** other actors must consume, so the
+decision to move it — **and the decision not to move it** — is operational state. Announced in
+a message it survives until the session ends; recorded in the ledger it survives the session.
+
+The full history lives in the JSONL and is **not** duplicated in these notes. Only the anchor
+is here, for the same reason as §6.1: a hash chain cannot see a truncated tail.
+
+```yaml
+sync_epoch_ledger_path: framework/state/sync_epochs.jsonl
+sync_epoch_ledger_events: 1
+sync_epoch_ledger_head: 53ec0cdb2f1b3caade02f01b392427bb8aa83193221efd9a7de1994008f779f5
+```
+
+Plan is the only writer. Other actors read the ledger, measure state with allowlisted
+read-only commands, supply **attributed** observations and may propose a trigger; they do not
+append, re-anchor or move the shared checkout.
+
+```bash
+python3 framework/scripts/sync_epochs.py record --event event.json
+python3 framework/scripts/sync_epochs.py verify
+python3 framework/scripts/sync_epochs.py status
+```
+
 ## 6.2 GROWTH ANCHORS
 
 Every constant below that says *"how big the system is right now"* is written by

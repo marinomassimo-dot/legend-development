@@ -445,6 +445,48 @@ def _check_fulltext_receipts(findings, repo_root):
     _check_fulltext_declaration_ratchet(findings, repo_root, manifest_text, engine)
 
 
+SYNC_EPOCH_LEDGER = "framework/state/sync_epochs.jsonl"
+
+
+def _check_sync_epochs(findings, repo_root):
+    """Structural integrity of the SYNC_EPOCH ledger, and nothing beyond it.
+
+    Deliberately proportionate: JSONL well-formedness, an unbroken chain, an anchor that
+    matches, valid enums, the MOVE/NO_MOVE commit invariant, an attributed observation and an
+    explicit consumer list. **No policy about when a checkout ought to move.** That judgement
+    is Plan's and the operator's; a linter that started scoring it would be enforcing a
+    process opinion under the authority of an integrity check.
+
+    Absent ledger is not a finding: a checkout that has never been realigned has nothing to
+    record, and inventing a floor would make a legitimate empty state look like damage.
+    """
+    ledger_path = os.path.join(repo_root, SYNC_EPOCH_LEDGER)
+    manifest_path = os.path.join(repo_root, STATE_MANIFEST)
+    manifest_text = _read(manifest_path) if os.path.isfile(manifest_path) else ""
+    if not os.path.isfile(ledger_path) and "sync_epoch_ledger_" not in manifest_text:
+        return
+
+    here = os.path.dirname(os.path.abspath(__file__))
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    try:
+        import sync_epochs  # noqa: PLC0415 - lazy, so absence is itself a finding
+    except Exception as error:  # noqa: BLE001
+        findings.append(Finding(
+            "BLOCK_SYSTEM", "SYNC_EPOCH_ENGINE_MISSING",
+            f"Sync epoch ledger is declared but its writer cannot be loaded ({error}): "
+            f"the append-only guarantee is unverifiable",
+        ))
+        return
+
+    from pathlib import Path
+    for message in sync_epochs.verify(Path(repo_root)):
+        findings.append(Finding(
+            "BLOCK_SYSTEM", "SYNC_EPOCH_LEDGER_UNTRUSTED",
+            f"Sync epoch ledger: {message}",
+        ))
+
+
 def _check_session_self_evaluation(findings, repo_root):
     """Route reading-landed/output-identity failures into the blocking authority."""
     script = os.path.join(
@@ -721,6 +763,7 @@ def lint(repo_root):
             _check_queue_ids(findings, queue_text)
             _check_queue_identifiers(findings, queue_text)
         _check_fulltext_receipts(findings, repo_root)
+        _check_sync_epochs(findings, repo_root)
         if not any(item.severity == "BLOCK_SYSTEM" for item in findings):
             _check_session_self_evaluation(findings, repo_root)
     return LintResult(findings)

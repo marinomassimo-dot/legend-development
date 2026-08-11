@@ -60,6 +60,7 @@ TESTS = (
     "framework/scripts/test_locator_audit.py",
     "framework/scripts/test_dossier_quote_audit.py",
     "framework/scripts/test_reading_state.py",
+    "framework/scripts/test_sync_epochs.py",
     "framework/scripts/test_figure_ppi_preflight.py",
     "framework/scripts/test_pmc_pow_fetch.py",
     "framework/scripts/test_recapture_snippets.py",
