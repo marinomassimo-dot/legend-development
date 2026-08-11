@@ -125,10 +125,11 @@ generalisable rule is not "prefer the PDF" — it is **measure every available r
 the best, because which route wins is not stable across papers.** The licence differs too:
 `CC BY-NC-ND` here against `CC BY` for 34747138.
 
-🔴 **Supplementary Figure S8 — which carries the entire P0–P5 window result — is not
-retrievable.** Every route above fails for `mmc1.pdf` and `mmc2.pdf`. The window finding
-therefore rests on running text alone, and that is now a measured fact rather than an
-omission.
+🟠 **Initial retrieval result, superseded later on 2026-08-10:** Supplementary Figure S8 was
+not retrievable through the five ordinary routes above. A later targeted recovery solved the
+proof-of-work protocol declared by PMC's own JavaScript interstitial and obtained both
+original PDFs. The historical failures remain useful route measurements; the evidentiary
+debt is closed by the visual audit below.
 
 ### Figure 6 (`gr6.jpg`, sha256 `a7c90344223caf323cfb92aea250d3753c12ae057594239dc406b0865ba959f4`) — inspected
 
@@ -781,12 +782,26 @@ appear solely in the 40-day panel, and P3 is the arm with n=3 that lost animals.
 - ✅ **All seven main figures inspected.** Every one carried something the running text did
   not. Coverage for `figures` is upgraded from `not_read` to `read` in a superseding receipt.
 - **Materials and methods: read for the sciatic-nerve and spinal-cord protocol and for the
-  statistics; the rest not read.**
-- 🔴 **Every supplementary figure remains unreachable.** S5 and S6 now carry more weight than
-  when this file was first written: S6E–S6G hold the sciatic-nerve result, S6H–S6I the
-  negative liver, S5J–S5K the P240/P300 persistence, and **S8 the entire P0–P5 window**. Five
-  retrieval routes fail. Everything this reading says about them comes from running text with
-  no panel behind it.
+  statistics; the rest not read.** It is the candidate answer to the PNS objection raised
+  against `PMID 34747138`.
+- 🔴 **The supplementary figures remain unreachable, except S8.** S5 and S6 carry more weight
+  than when this file was first written: S6E–S6G hold the sciatic-nerve result, S6H–S6I the
+  negative liver, S5J–S5K the P240/P300 persistence. Five retrieval routes fail for those.
+  **S8 — the entire P0–P5 window — was reached and audited by a different actor**, on a branch
+  neither of the readings above could see; see the struck entry below.
+
+  > 🔴 **Merge note, 2026-08-10 — the third time in one evening, and the same answer.** Three
+  > branches described this one list at three different moments and **none of them was wrong
+  > when written**. One had inspected Figures 3 and 6 and still had S8 open; one had closed S8
+  > and had only Figure 6 done; one had inspected all seven and could not reach any
+  > supplementary at all. Taking any single side would have silently un-done another actor's
+  > reading, **in the list that exists to record what has not been read yet** — where an
+  > erasure survives longest, because nobody re-checks a debt that no longer appears.
+  >
+  > The union is the state: seven main figures inspected, Methods partly read, S8 closed, the
+  > rest of the supplementary still out of reach. **Sum, never choose** — and this file is why
+  > the rule now has a derived view behind it (`reading_state.md`) instead of relying on
+  > whoever resolves the conflict noticing.
 - 🔴 **A rule this session derived and did not yet apply.** Measure *every* available
   retrieval route and take the best, because **which route wins is not stable between
   papers**: on `34747138` the article PDF held 200 ppi against the OA bundle's 100, and here
@@ -794,10 +809,81 @@ appear solely in the 40-day panel, and P3 is the arm with n=3 that lost animals.
   `CLAUDE.md` beside rule 5d, which currently says only "prefer XML/HTML over PDF" — true for
   *text*, and silent about *figures*, where the ranking inverts. **Noted, deliberately not
   written today.**
-- 🔴 **Supplementary Figure S8 is unreachable, not merely unread.** Five routes fail. The
+- ~~🔴 **Supplementary Figure S8 is unreachable, not merely unread.** Five routes fail. The
   entire P0–P5 window result — the finding that fires the previous paper's REVIVAL_TRIGGER —
-  therefore rests on running text with no panel behind it. This is the single most important
-  unverified claim in the current state, and it may stay unverifiable until the publisher
-  route opens.
+  therefore rests on running text with no panel behind it.~~ — **closed later on 2026-08-10**
+  by the targeted recovery and visual audit below. Struck rather than deleted: what it cost to
+  reach is the reason the retrieval rule above exists.
 - The **PNS question** from yesterday's refused review file has a candidate answer in this
   paper's Methods. Unread.
+
+## Targeted recovery and visual audit of Supplementary Figure S8 — 2026-08-10
+
+This is a targeted supplement read, not a promotion of the paper to complete full-text
+coverage. The new receipt remains `partial_fulltext_read` and conservatively leaves the
+paper-level `figures` and `supplementary` coverage slots as `not_read`: one supplementary
+figure out of the full paper/supplement set has now been inspected.
+
+### Recovered artifacts
+
+| artifact | role | SHA-256 |
+|---|---|---|
+| `files/fulltext/PMID42422765_Obeid2026_assets/mmc1.pdf` | supplement only, 10 PDF pages; S8 is PDF page 10 / printed page 9 | `dd4919a80af937037309eddd2939db4f11af230e00849bf4b362832bcb5572e9` |
+| `files/fulltext/PMID42422765_Obeid2026_assets/mmc2.pdf` | article plus the same supplement; S8 duplicated on PDF page 27 | `523b09e47b52620cacda9826bce88ac77dd8de65626f5148e2c8630383869cb4` |
+
+PMC first returned HTTP 200 with `text/html` and a 1,817-byte “Preparing to download” page.
+That page declares a SHA-256 proof-of-work challenge, difficulty 4 and cookie name
+`cloudpmc-viewer-pow`. Solving the declared challenge and retrying the same public URL with
+that cookie returned HTTP 200 `application/pdf` for both files. No login, account or private
+token was used. The reusable implementation and regression are
+`framework/scripts/pmc_pow_fetch.py` and `test_pmc_pow_fetch.py`.
+
+### Effective-PPI preflight before rendering
+
+Measured on S8 in `mmc1.pdf` before rendering:
+
+- whole page: 32 raster placements, effective-PPI min/median/max
+  **91.0 / 199.1 / 270.5**;
+- survival panels A/B: vector plots, so no raster-PPI ceiling;
+- weight/glucose panels C/D: **263.2 / 270.5 PPI**;
+- microscopy panels E/G/H and quantification I: approximately **199 PPI**;
+- Western blot F: only **91.0–94.7 PPI**.
+
+The full page was inspected at 271 dpi. A 600-dpi crop was used only for vector text,
+brackets and survival curves; it does not add information to the low-resolution raster
+panels.
+
+### What S8 actually shows about timing
+
+**It does not contain a P0-treated group.** Therefore S8 alone cannot establish a “P0–P5
+window”; P0 comes from another experiment/study. Its actual timing evidence is narrower:
+
+- **Panel A, survival to P40:** `WT+RI n=6`, `KO+RI n=6`, treatment at `P1 n=6`, `P2 n=6`,
+  `P3 n=3`, `P5 n=7`. **P4 is absent.** P1/P2 visually remain at 100%; the P3/P5 curves
+  include losses/overlap. No pairwise brackets identify which survival groups the caption's
+  `p<0.001` log-rank result compares.
+- **Panel B, survival to P300:** only `WT+RI n=6`, `KO+RI n=6`, `P1 n=6` and `P5 n=7`.
+  **P2, P3 and P4 are absent.** The endpoints are visually consistent with about `5/6`
+  surviving after P1 and `5/7` after P5, versus `0/6` KO; neither treated curve is 100%.
+- **Panels C/D, weight and glucose at P14:** bars include WT, KO and every treatment day
+  `P1–P5` (`n=3–7`). The drawn tests are **WT vs KO** (`***` for weight, `**` for glucose)
+  and **WT vs P5** (`ns`). There is **no drawn treated-vs-KO comparison**, no test for P1–P4
+  against either control and no pairwise comparison among treatment days. `ns` is absence of
+  detected difference, not an equivalence test.
+- **Panels E–I:** only the **P5** cohort is examined. E/F establish neuronal WWOX expression;
+  G shows representative MBP images; H/I show GFAP images and quantification. Panel I draws
+  WT vs KO (`***`) and WT vs P5 (`ns`), **not KO vs P5**. MBP is not quantified in S8.
+
+### Corrected inference
+
+`DATO`: treatment as late as P5 can produce WWOX expression, systemic/CNS improvement and
+long survival in some animals. P1 and P5 have long-term survival curves; P1–P5 have P14
+weight/glucose bars.
+
+`NON DIMOSTRATO DA S8`: a continuously sampled P0–P5 therapeutic window; equal efficacy at
+every day; equivalence to WT; a direct treated-vs-KO statistical rescue for weight, glucose
+or GFAP; long-term survival after P2, P3 or P4; quantitative myelin rescue.
+
+The defensible statement is: **efficacy is demonstrated at several early postnatal dosing
+times, including P5, but S8 does not map a complete P0–P5 window or establish uniform/full
+rescue across that interval.** The upper boundary beyond P5 remains untested.

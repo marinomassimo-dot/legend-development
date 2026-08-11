@@ -132,6 +132,20 @@ class FulltextReceiptTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "declared gap"):
                 receipts.require_work_manifest(receipt, root, "test", strict=True)
 
+    def test_work_manifest_forwards_explicit_artifact_workspace(self) -> None:
+        receipt = example("FTR-20260725-42193054-01")
+        root = Path(self.temporary.name) / "branch"
+        evidence = Path(self.temporary.name) / "shared"
+        work = root / "disease-models/test/research/deepdive_manifests/PMID42193054.json"
+        work.parent.mkdir(parents=True)
+        work.write_text(json.dumps({
+            "source_artifacts": [{"path": "PMC123", "sha256": ""}]
+        }), encoding="utf-8")
+        with mock.patch("deepdive_manifest.load_and_validate", return_value=([], [])) as gate:
+            receipts.require_work_manifest(
+                receipt, root, "test", strict=True, artifact_root=evidence)
+        self.assertEqual(gate.call_args.kwargs["artifact_root"], evidence.resolve())
+
     def test_missing_manifest_validator_fails_closed(self) -> None:
         receipt = example("FTR-20260725-42193054-01")
         real_import = __import__
@@ -574,7 +588,15 @@ class FulltextReceiptTests(unittest.TestCase):
         legacy["evidence_basis"] = ["surviving dossier with partial coverage"]
         self.assertFalse(receipts.validate_receipt(legacy))
 
-    def test_repeated_study_lineage_must_link_the_latest_event(self) -> None:
+    def test_two_readings_of_one_study_may_share_a_parent(self) -> None:
+        """🔴 The rule this replaced demanded the LATEST prior, and that is a positional proxy
+        for a lineage question. It held only while history was linear.
+
+        Measured on 2026-08-10: two actors read PMID 42422765 in parallel, at 10:17 and 12:19,
+        and both legitimately continued the same earlier receipt. Neither had seen the other.
+        The old rule would have forced the ledger to assert that one built on a reading its
+        author never saw — a known falsehood written to satisfy a positional invariant.
+        """
         first = receipts.append_receipt(self.ledger, example("FTR-20260725-42193054-01"))
         second = example("FTR-20260725-42193054-02", "partial_fulltext_read")
         second["coverage"]["supplementary"] = "not_read"
@@ -582,11 +604,36 @@ class FulltextReceiptTests(unittest.TestCase):
         second["reread_reason"] = "new_question_outside_prior_coverage"
         receipts.append_receipt(self.ledger, second)
 
-        third = example("FTR-20260725-42193054-03")
-        third["prior_receipt"] = first["event_id"]
-        third["reread_reason"] = "adversarial_reanalysis"
-        with self.assertRaisesRegex(ValueError, "latest prior_receipt"):
-            receipts.append_receipt(self.ledger, third)
+        sibling = example("FTR-20260725-42193054-03")
+        sibling["prior_receipt"] = first["event_id"]
+        sibling["reread_reason"] = "adversarial_reanalysis"
+        receipts.append_receipt(self.ledger, sibling)
+        self.assertEqual(len(receipts.load_ledger(self.ledger)), 3)
+
+    def test_a_repeated_reading_may_still_not_declare_no_parent_at_all(self) -> None:
+        """Membership replaced recency; it did not replace the duty to say what came before.
+
+        Deliberately declared `first_read`, because that is the gap the LEDGER-level check
+        covers and the per-record one does not: "continued or repeated work requires
+        prior_receipt" is keyed on the reason the author gave, and an author who believes they
+        are reading a paper for the first time gives `first_read` honestly. Only the ledger
+        knows the study already has a receipt.
+        """
+        receipts.append_receipt(self.ledger, example("FTR-20260725-42193054-01"))
+        orphan = example("FTR-20260725-42193054-02")
+        orphan["prior_receipt"] = None
+        orphan["reread_reason"] = "first_read"
+        with self.assertRaisesRegex(ValueError, "prior_receipt is null"):
+            receipts.append_receipt(self.ledger, orphan)
+
+    def test_a_parent_from_another_study_is_still_refused(self) -> None:
+        """The membership check is what remains load-bearing once recency is gone."""
+        receipts.append_receipt(self.ledger, example("FTR-20260725-42193054-01"))
+        stray = example("FTR-20260725-42193054-02")
+        stray["prior_receipt"] = "FTR-20260725-11111111-01"
+        stray["reread_reason"] = "adversarial_reanalysis"
+        with self.assertRaisesRegex(ValueError, "not an earlier event for this study"):
+            receipts.append_receipt(self.ledger, stray)
 
 
 class CorpusCheckScope(unittest.TestCase):
@@ -753,6 +800,299 @@ class InvalidationScope(unittest.TestCase):
         backing = {entry["event_id"] for entry in receipts.receipt_depth_index(ledger).values()}
         self.assertFalse(backing & withdrawn,
                          "the depth index is backed by a withdrawn receipt")
+
+
+class RechainMovesAnEventWithoutChangingIt(unittest.TestCase):
+    """A hash chain refuses two parents. `rechain` is the only lawful way to keep both lines.
+
+    Measured on 2026-08-10: three of five branches had forked the receipt ledger — `lettore`
+    at event 60, `lettore-b` and `codex/pmid-42422765-s8` at event 61 — and naive
+    concatenation produced `line 61: broken hash chain`. The chain catching it is the design
+    working; the absence of any way to resolve it was the blocker.
+    """
+
+    @staticmethod
+    def _event(event_id: str, pmid: str) -> dict:
+        """One receipt per study, so the fixture exercises rechaining and not the sequence
+        rules for repeated studies — those have their own tests, and a fixture that trips
+        them tests the wrong thing."""
+        record = example(event_id, "partial_fulltext_read")
+        record["study_id"] = {"pmid": pmid, "doi": None}
+        return record
+
+    @staticmethod
+    def _chained(events: list[dict]) -> list[dict]:
+        out: list[dict] = []
+        for event in events:
+            record = dict(event)
+            record[receipts.CHAIN_FIELD] = receipts.ledger_head(out)
+            out.append(record)
+        return out
+
+    def _fork(self):
+        """A shared history of two events, then one event on each side."""
+        shared = self._chained([self._event("FTR-20260725-11111111-01", "11111111"),
+                                self._event("FTR-20260725-22222222-01", "22222222")])
+        base = self._chained([*shared, self._event("FTR-20260725-33333333-01", "33333333")])
+        branch = self._chained([*shared, self._event("FTR-20260725-44444444-01", "44444444")])
+        return base, branch
+
+    def test_only_the_divergent_suffix_moves(self) -> None:
+        base, branch = self._fork()
+        merged, moved, shared = receipts.rechain(base, branch)
+        self.assertEqual(2, shared)
+        self.assertEqual(["FTR-20260725-44444444-01"], [e["event_id"] for e in moved])
+        self.assertEqual(4, len(merged))
+        self.assertEqual([], receipts.validate_ledger_chain(merged))
+
+    def test_a_moved_event_differs_in_the_chain_field_and_nothing_else(self) -> None:
+        """🔴 The contract. A rechain moves an event in history; it does not modify it."""
+        base, branch = self._fork()
+        merged, moved, _ = receipts.rechain(base, branch)
+        original = branch[-1]
+        self.assertEqual(receipts.event_body(original), receipts.event_body(moved[0]))
+        self.assertNotEqual(original[receipts.CHAIN_FIELD], moved[0][receipts.CHAIN_FIELD])
+
+    def test_the_inputs_are_not_mutated(self) -> None:
+        """Otherwise a failed rechain leaves the caller holding a half-rebased branch."""
+        base, branch = self._fork()
+        before = json.dumps(branch, sort_keys=True)
+        receipts.rechain(base, branch)
+        self.assertEqual(before, json.dumps(branch, sort_keys=True))
+
+    def test_a_prefix_of_the_base_rebases_to_nothing(self) -> None:
+        base, _ = self._fork()
+        merged, moved, shared = receipts.rechain(base, base[:2])
+        self.assertEqual([], moved)
+        self.assertEqual(2, shared)
+        self.assertEqual(base, merged)
+
+    def test_it_refuses_to_rebase_onto_a_broken_base(self) -> None:
+        """Extending a corrupted history with fresh, honest-looking links is the worst case."""
+        base, branch = self._fork()
+        base[1]["evidence_basis"] = ["tampered"]
+        with self.assertRaisesRegex(ValueError, "base ledger is not chained"):
+            receipts.rechain(base, branch)
+
+    def test_it_refuses_to_move_events_off_a_broken_branch(self) -> None:
+        base, branch = self._fork()
+        branch[1]["evidence_basis"] = ["tampered"]
+        with self.assertRaisesRegex(ValueError, "incoming ledger is not chained"):
+            receipts.rechain(base, branch)
+
+    def test_two_branches_that_minted_the_same_event_id_are_refused(self) -> None:
+        """🔴 The real case, and the reason the sequence check runs over the merged whole.
+
+        `lettore` and `codex/pmid-42422765-s8` both recorded a second receipt for PMID
+        42422765 and both called it `FTR-20260810-42422765-02` — one for the figures, one for
+        Supplementary S8. Each branch is internally valid; the collision exists only once the
+        lines are in one file, which is exactly what no per-branch check can see.
+        """
+        base, branch = self._fork()
+        clash = self._event("FTR-20260725-33333333-01", "44444444")
+        clash["source_locator"] = "PMC999"
+        clash["analysis_at"] = "2026-07-25T19:45:00Z"
+        collision = self._chained([*base[:2], clash])
+        with self.assertRaisesRegex(ValueError, "duplicate event_id"):
+            receipts.rechain(base, collision)
+
+    def test_a_body_edit_smuggled_into_the_base_is_caught(self) -> None:
+        """🔴 Mutation, and it found a real gap rather than confirming one.
+
+        The body guard inside `rechain` watches the events that MOVE. Nothing was watching
+        the base — and a mutation applied to a base event *before* its digest is taken yields
+        a chain that verifies against the mutated event, so neither the chain check nor the
+        sequence check would have said a word. The base is now deep-copied and re-compared.
+        """
+        base, branch = self._fork()
+        original_head = receipts.ledger_head
+
+        def poisoned(events):
+            if events and len(events) == 3:
+                events[-1]["outputs"] = ["smuggled.md"]
+            return original_head(events)
+
+        receipts.ledger_head = poisoned
+        try:
+            with self.assertRaises(ValueError):
+                receipts.rechain(base, branch)
+        finally:
+            receipts.ledger_head = original_head
+
+    def test_the_writer_restores_the_original_when_anchoring_fails(self) -> None:
+        base, branch = self._fork()
+        merged, _, _ = receipts.rechain(base, branch)
+        with tempfile.TemporaryDirectory() as tmp:
+            ledger = Path(tmp) / "ledger.jsonl"
+            ledger.write_text(
+                "".join(receipts.canonical_line(e) + "\n" for e in branch), encoding="utf-8")
+            before = ledger.read_text(encoding="utf-8")
+            manifest = Path(tmp) / "manifest.md"
+            manifest.write_text("no anchor fields here\n", encoding="utf-8")
+            with self.assertRaises(ValueError):
+                receipts.write_rechained_ledger(ledger, merged, manifest=manifest)
+            self.assertEqual(before, ledger.read_text(encoding="utf-8"),
+                             "a failed rechain must leave the ledger exactly as it was")
+
+    def test_the_writer_persists_and_reanchors_on_success(self) -> None:
+        base, branch = self._fork()
+        merged, _, _ = receipts.rechain(base, branch)
+        with tempfile.TemporaryDirectory() as tmp:
+            ledger = Path(tmp) / "ledger.jsonl"
+            ledger.write_text(
+                "".join(receipts.canonical_line(e) + "\n" for e in branch), encoding="utf-8")
+            manifest = Path(tmp) / "manifest.md"
+            manifest.write_text(
+                "fulltext_ledger_events: 3\nfulltext_ledger_head: deadbeef\n", encoding="utf-8")
+            receipts.write_rechained_ledger(ledger, merged, manifest=manifest)
+            self.assertEqual([], receipts.validate_ledger_chain(receipts.load_ledger(ledger)))
+            self.assertIn(f"fulltext_ledger_events: {len(merged)}",
+                          manifest.read_text(encoding="utf-8"))
+
+
+class ARenameIsTheOneDeclaredExceptionAndItIsNarrow(unittest.TestCase):
+    """🔴 Two branches minted `FTR-20260810-42422765-02` on different work.
+
+    No ordering resolves that: the sequence check refuses the merged whole whatever the order,
+    because one identifier cannot name two events. Renumbering is the only lawful resolution,
+    and the only lawful PLACE for it is a declared input to the rechain — in an editor nothing
+    would check it, which is the state the whole ledger exists to escape.
+    """
+
+    @staticmethod
+    def _event(event_id: str, pmid: str, prior: str | None = None) -> dict:
+        record = example(event_id, "partial_fulltext_read")
+        record["study_id"] = {"pmid": pmid, "doi": None}
+        record["prior_receipt"] = prior
+        return record
+
+    def _chained(self, events: list[dict]) -> list[dict]:
+        out: list[dict] = []
+        for event in events:
+            record = dict(event)
+            record[receipts.CHAIN_FIELD] = receipts.ledger_head(out)
+            out.append(record)
+        return out
+
+    def _collision(self):
+        """The real shape: base holds `-02`, and the branch minted its own `-02` plus a slide."""
+        shared = self._chained([self._event("FTR-20260725-11111111-01", "11111111")])
+        base = self._chained([*shared, self._event("FTR-20260810-42422765-02", "42422765")])
+        # The `prior_receipt` pair shares a study on purpose: a provenance pointer is only
+        # valid between two receipts for the same paper, so a fixture that crosses studies
+        # would fail the sequence rules and prove nothing about renaming.
+        branch = self._chained([
+            *shared,
+            self._event("FTR-20260810-42422765-02", "33333333"),
+            self._event("FTR-20260810-42422765-03", "33333333",
+                        prior="FTR-20260810-42422765-02"),
+            self._event("FTR-20260810-42422765-04", "44444444"),
+        ])
+        return base, branch
+
+    def test_without_a_rename_the_merged_whole_is_refused(self) -> None:
+        base, branch = self._collision()
+        with self.assertRaises(ValueError) as caught:
+            receipts.rechain(base, branch)
+        self.assertIn("cannot coexist in one history", str(caught.exception))
+
+    def test_the_declared_slide_resolves_it(self) -> None:
+        base, branch = self._collision()
+        merged, moved, shared = receipts.rechain(base, branch, {
+            "FTR-20260810-42422765-02": "FTR-20260810-42422765-03",
+            "FTR-20260810-42422765-03": "FTR-20260810-42422765-04",
+            "FTR-20260810-42422765-04": "FTR-20260810-42422765-05",
+        })
+        self.assertEqual(1, shared)
+        self.assertEqual(["FTR-20260810-42422765-03", "FTR-20260810-42422765-04",
+                          "FTR-20260810-42422765-05"], [e["event_id"] for e in moved])
+        self.assertEqual([], receipts.validate_ledger_chain(merged))
+        self.assertEqual([], receipts.validate_ledger_sequence(merged))
+
+    def test_the_slide_is_simultaneous_not_sequential(self) -> None:
+        """🔴 Applied one after another, `-02` walks to `-05` and three events share a name."""
+        base, branch = self._collision()
+        _merged, moved, _ = receipts.rechain(base, branch, {
+            "FTR-20260810-42422765-02": "FTR-20260810-42422765-03",
+            "FTR-20260810-42422765-03": "FTR-20260810-42422765-04",
+            "FTR-20260810-42422765-04": "FTR-20260810-42422765-05",
+        })
+        self.assertEqual(3, len({e["event_id"] for e in moved}))
+
+    def test_a_provenance_pointer_follows_the_event_it_names(self) -> None:
+        """A `prior_receipt` left behind points at an identifier that no longer exists."""
+        base, branch = self._collision()
+        _merged, moved, _ = receipts.rechain(base, branch, {
+            "FTR-20260810-42422765-02": "FTR-20260810-42422765-03",
+            "FTR-20260810-42422765-03": "FTR-20260810-42422765-04",
+            "FTR-20260810-42422765-04": "FTR-20260810-42422765-05",
+        })
+        self.assertEqual("FTR-20260810-42422765-03", moved[1]["prior_receipt"])
+
+    def test_half_a_slide_is_refused(self) -> None:
+        base, branch = self._collision()
+        with self.assertRaises(ValueError) as caught:
+            receipts.rechain(base, branch,
+                             {"FTR-20260810-42422765-02": "FTR-20260810-42422765-03"})
+        self.assertIn("declare the whole slide", str(caught.exception))
+
+    def test_a_rename_onto_an_occupied_identifier_is_refused(self) -> None:
+        """Landing on a base identifier creates the collision the rename was resolving."""
+        base, branch = self._collision()
+        with self.assertRaises(ValueError) as caught:
+            receipts.rechain(base, branch,
+                             {"FTR-20260810-42422765-04": "FTR-20260810-42422765-02"})
+        self.assertIn("already exists in the base ledger", str(caught.exception))
+
+    def test_a_rename_that_names_nothing_is_refused(self) -> None:
+        """Silently succeeding would report a collision resolved while leaving it in place."""
+        base, branch = self._collision()
+        with self.assertRaises(ValueError) as caught:
+            receipts.rechain(base, branch, {"FTR-20260725-99999999-01": "FTR-X"})
+        self.assertIn("no event FTR-20260725-99999999-01", str(caught.exception))
+
+    def test_a_rename_of_a_shared_event_is_refused_and_says_why(self) -> None:
+        """The prefix is history both sides already agree on; a rebase does not touch it."""
+        base, branch = self._collision()
+        with self.assertRaises(ValueError) as caught:
+            receipts.rechain(base, branch, {"FTR-20260725-11111111-01": "FTR-X"})
+        self.assertIn("SHARED prefix", str(caught.exception))
+
+    def test_a_rename_may_not_be_cover_for_an_edit(self) -> None:
+        """🔴 The mutation that proved the first guard worthless.
+
+        The obvious shape compared the renamed event against a renamed copy of its original —
+        and a corruption injected into `_renamed` then applied to BOTH sides and cancelled, so
+        the guard certified the code it was meant to check. The expectation is now recomputed
+        from the declared map instead, which is why this mutation is caught.
+        """
+        base, branch = self._collision()
+        renames = {"FTR-20260810-42422765-02": "FTR-20260810-42422765-03",
+                   "FTR-20260810-42422765-03": "FTR-20260810-42422765-04",
+                   "FTR-20260810-42422765-04": "FTR-20260810-42422765-05"}
+        original = receipts._renamed
+        try:
+            def sneak(event, mapping):
+                event = original(event, mapping)
+                if event.get("event_id") == "FTR-20260810-42422765-05":
+                    event["evidence_depth"] = "complete_fulltext_read"
+                return event
+            receipts._renamed = sneak
+            with self.assertRaises(ValueError) as caught:
+                receipts.rechain(base, branch, renames)
+        finally:
+            receipts._renamed = original
+        self.assertIn("does not modify it", str(caught.exception))
+
+    def test_the_inputs_are_not_mutated_by_a_rename(self) -> None:
+        base, branch = self._collision()
+        before = json.dumps(branch, sort_keys=True)
+        receipts.rechain(base, branch, {
+            "FTR-20260810-42422765-02": "FTR-20260810-42422765-03",
+            "FTR-20260810-42422765-03": "FTR-20260810-42422765-04",
+            "FTR-20260810-42422765-04": "FTR-20260810-42422765-05",
+        })
+        self.assertEqual(before, json.dumps(branch, sort_keys=True))
 
 
 if __name__ == "__main__":

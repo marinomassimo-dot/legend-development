@@ -154,6 +154,76 @@ atterrata solo nel discovery ledger — si usa il waiver, che richiede un argome
 
 ---
 
+## 4bis. PREFLIGHT DI SUPERFICIE — il primo gesto, prima di aprire qualunque cosa
+
+> La regola 5d dice **preferisci XML/HTML PMC al PDF, e registra l'assenza**. Questa sezione
+> esiste perché quella regola descrive una preferenza e non un gesto: nessuno sapeva *quando*
+> guardare, quindi si guardava dopo aver già aperto il PDF — cioè mai.
+
+**Prima di leggere una riga**, cerca la superficie strutturata, e **registra l'esito in
+entrambi i casi**. «Non esiste» è un risultato che va scritto, non un silenzio: `PMID 17803050`
+non ha DOI, non ha PMCID e non ha deposito aperto, e il fatto che ciò sia *dichiarato* è ciò
+che rende quel paper una classe diversa invece di una lettura scadente.
+
+### 🔴 Nessuna singola via è autorevole. Interrogale tutte e tre e registra il disaccordo.
+
+Questo non è zelo. È misurato, il 2026-08-10, da due attori in due direzioni opposte:
+
+- su `PMID 24308844` l'`oa.fcgi` risponde **non-OA**, Europe PMC risponde **404**, e `efetch`
+  restituisce **174 KB di JATS completo**. Due vie sancite su tre l'avrebbero mandato al PDF;
+- cinque voci del corpus portano `inPMC: Y` insieme a `isOpenAccess: N` — manoscritti d'autore
+  depositati. **La superficie strutturata esiste e il paper non è open access**, che sono due
+  fatti diversi e vengono confusi da qualunque controllo che ne legga uno solo.
+
+Le tre vie:
+
+```
+oa.fcgi        https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=<PMCID>
+Europe PMC     https://www.ebi.ac.uk/europepmc/webservices/rest/<PMCID>/fullTextXML
+efetch         https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=<PMCID>
+```
+
+**Un annuncio non è una consegna e un rifiuto non è un'assenza.** Registra quale via ha
+risposto e quali hanno negato: il disaccordo fra loro è il dato, e senza registrarlo il
+prossimo lettore ripete la stessa cascata e arriva alla stessa conclusione sbagliata.
+
+### Perché è il primo gesto e non il secondo
+
+Un manifest costruito contro la superficie sbagliata **non sembra sbagliato**. Il 2026-08-10
+l'estrattore fabbricava uno spazio a ogni confine di markup: su `PMID 24550385` questo
+produceva `2` occorrenze di `PPXY` invece di `31` e **zero** citazioni di figura invece di
+`32`. Un lettore su quella superficie non fallisce — **sceglie le citazioni che il difetto
+lascia passare**, cioè adatta le prove allo strumento. È la regola 5c al contrario, ed è
+invisibile a chi la sta facendo.
+
+---
+
+## 4ter. BUDGET DI FIGURE DICHIARATO — la manopola che nessuno aveva impostato
+
+`coverage.figures: read` senza un solo locator su una figura **non regge**. È la casella più
+facile da spuntare e la più difficile da contestare a posteriori, perché nulla nel record dice
+quante figure c'erano.
+
+**Ogni figura principale riceve un locator oppure una rinuncia nominata.** Non un numero fisso
+— sarebbe la costante piantata a mano che `CLAUDE.md` vieta, e la vieta perché una soglia
+ricordata da una persona è una soglia che si aggiorna per far tornare il verde.
+
+**Il denominatore è dei pannelli, non del lettore.** *Pannelli coperti su pannelli presenti*,
+con `figures_present` derivato dalle didascalie — un rapporto `figure per paper` misura quanto
+è stato letto **diviso quanto quel lettore ha deciso di guardare**, che è una misura di sé
+stessi. Il criterio eseguibile vive nel comando che lo calcola e viene **ri-misurato a ogni
+corsa**: quello che sta scritto qui è la regola, mai la soglia.
+
+### Registra anche la risoluzione, non solo la superficie
+
+Il CDN serve 760 px dove gli autori ne hanno depositati 1397. Su un pannello di statistiche è
+la differenza fra **leggere un asterisco e indovinarlo** — e un asterisco indovinato è
+esattamente la classe di errore che il 2026-08-06 stava fra «non significativo» e «non
+testato». La risoluzione a cui hai letto va nell'`anchor` del locator, con le dimensioni
+native.
+
+---
+
 ## 5. LETTURA PROFONDA OBBLIGATORIA
 
 Non è consentito limitarsi a: abstract, conclusion.
@@ -646,6 +716,50 @@ Se la tracciabilità si perde, l'espansione non è valida.
 
 Ma:
 → etichettare sempre il livello epistemico
+
+---
+
+## 10bis. RECUPERO DELLE FIGURE — rotte e trabocchetti
+
+> Le figure vanno ispezionate **come immagini a risoluzione originale**, mai attraverso una
+> conversione di testo. Questa sezione esiste perché ottenere quel file è più fragile di
+> quanto sembri, e ogni modo di sbagliare qui produce un artefatto che *sembra* una figura.
+
+### La cascata, in ordine
+
+1. **OA package service** — `https://www.ncbi.nlm.nih.gov/pmc/utils/oa/oa.fcgi?id=<PMCID>`.
+   Se risponde `idIsNotOpenAccess` il pacchetto non esiste: passa oltre, non insistere.
+   ⚠️ Se invece annuncia un `href` **il percorso può comunque dare 404** sul mirror HTTPS —
+   accaduto il 2026-08-10 su `PMC10770339`, che è CC BY e nel subset OA. Un annuncio non è
+   una consegna.
+2. 🔴 **`https://www.ebi.ac.uk/europepmc/webservices/rest/<PMCID>/supplementaryFiles`** — la
+   rotta che ha funzionato quando le altre due hanno rifiutato. Restituisce uno **zip** con
+   figure *e* supplementari insieme. È la prima cosa da provare quando il pacchetto OA fallisce
+   e il CDN dell'editore rifiuta.
+3. **CDN dell'editore** — per Springer Nature:
+   `https://media.springernature.com/full/springer-static/image/art%3A<DOI-encoded>/MediaObjects/<nome_file>`.
+   Dà l'originale a piena risoluzione (~2000 px) là dove PMC serve una copia di display.
+
+### I tre trabocchetti, tutti visti in produzione
+
+- 🔴 **L'estensione dichiarata nell'XML può essere sbagliata.** Su `PMID 38182577` il JATS
+  dichiara `Fig1_HTML.jpg`, ma il CDN serve **`.png`**; richiedere `.jpg` restituisce sette
+  pagine d'errore HTML. Su `PMID 29724996`, stesso editore e stessa rivista, erano davvero
+  `.jpg`. **L'estensione va provata, non dedotta.**
+- 🔴 **Le pagine d'errore si salvano come figure.** Due volte lo stesso giorno un ciclo di
+  download ha prodotto **sette file di dimensione identica** che erano HTML, non immagini, e
+  che sarebbero stati fingerprintati e dichiarati come figure.
+  **Controllo obbligatorio dopo ogni download di un set di figure:**
+  ```bash
+  md5 -q <dir>/*.png | sort -u | wc -l      # deve uguagliare il numero di figure
+  file -b <dir>/*.png                        # deve dire PNG/JPEG, mai "HTML document"
+  ```
+  Digest tutti uguali = nessuna figura scaricata. È il controllo più economico del sistema e
+  ha già evitato due letture false.
+- ⚠️ **La copia di PMC è ridimensionata.** L'endpoint `supplementaryFiles` consegna anche
+  versioni a ~790 px: sufficienti a vedere un pannello, **insufficienti a leggere un
+  asterisco o un'etichetta d'asse**. Se il numero che serve è una marcatura di significatività,
+  serve l'originale. Dichiara sempre la risoluzione a cui hai letto, nell'`anchor` del locator.
 
 ---
 

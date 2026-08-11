@@ -52,6 +52,13 @@ class Harness:
             # they were written for. The scale tests raise these deliberately.
             "registry_bytes": {"claims": 1_000, "literature": 2_000, "papers": 3_000},
         }
+        # Every ratchet the module declares must be present in an injected measurement, or
+        # `evaluate` raises instead of judging. Derived from `RATCHET_KEYS` rather than listed,
+        # so the next ratchet added does not break ten unrelated policy tests and tempt whoever
+        # adds it to make `evaluate` tolerant of a missing key — which would turn a broken
+        # measurement into a clean bill of health, the one reading this module must never give.
+        for key, _label in ga.RATCHET_KEYS:
+            self.live.setdefault(key, [])
         self._original = ga.measure_all
         ga.measure_all = lambda root, disease: json.loads(json.dumps(self.live))
 
@@ -282,6 +289,205 @@ class MeasurementIsSingleSourced(unittest.TestCase):
     def test_headings_do_not_match_prose_mentioning_a_record(self) -> None:
         for pattern in ga.HEADINGS.values():
             self.assertEqual([], pattern.findall("see ## CLAIM 005 in passing\n"))
+
+
+class PanelRelationRatchetBites(unittest.TestCase):
+    """The coverage half of `panel_text_relation`, and the property that makes it a ratchet."""
+
+    def setUp(self) -> None:
+        self.stack = TemporaryDirectory()
+        self.harness = Harness(self.stack)
+        self.addCleanup(self.stack.cleanup)
+        self.addCleanup(self.harness.restore)
+
+    def test_it_is_declared_as_a_ratchet_and_not_reimplemented(self) -> None:
+        """PATTERN_ALREADY_SOLVED_GATE: one definition, used by every site that ratchets."""
+        self.assertIn("panel_relation_legacy", dict(ga.RATCHET_KEYS))
+
+    def test_a_first_measurement_is_an_introduction_not_a_violation(self) -> None:
+        """A ratchet that cannot be introduced is a ratchet nobody adds.
+
+        `tighten` refuses on a violation, `record` refuses when a ratchet grew, `--bootstrap`
+        refuses once any anchor exists — so before this distinction existed there was no path
+        from "new measurement" to "anchored baseline" at all.
+        """
+        # Anchor a ledger that predates the ratchet — the key is absent from the measurement,
+        # so `record --bootstrap` cannot write it into history. That is the real situation:
+        # ten events already on the chain, none of which knows this key exists.
+        del self.harness.live["panel_relation_legacy"]
+        self.assertEqual(0, self.harness.run("record", "--bootstrap", "--batch", "B0"))
+        self.assertNotIn("panel_relation_legacy", self.harness.events()[-1]["anchors"],
+                         "fixture is not reproducing a pre-ratchet ledger")
+
+        self.harness.live["panel_relation_legacy"] = ["PMID1", "PMID2"]
+        violations, improvements, _ = ga.evaluate(self.harness.root, "wwox")
+        self.assertEqual([], [item for item in violations if "panel_relation" in item])
+        self.assertTrue(any("RATCHET_INTRODUCED" in item for item in improvements))
+        # And the way out is the ordinary one, with no command that can also lower a baseline.
+        self.assertEqual(0, self.harness.run("tighten", "--batch", "B1"))
+        self.assertEqual(["PMID1", "PMID2"],
+                         self.harness.events()[-1]["anchors"]["panel_relation_legacy"])
+
+    def test_a_manifest_that_omits_the_field_after_the_baseline_is_a_violation(self) -> None:
+        """This is 'the validator refuses new work without it', expressed as coverage."""
+        self.harness.live["panel_relation_legacy"] = ["PMID1"]
+        self.assertEqual(0, self.harness.run("record", "--bootstrap", "--batch", "B0"))
+        self.harness.live["panel_relation_legacy"] = ["PMID1", "PMID_NEW"]
+        violations, _, _ = ga.evaluate(self.harness.root, "wwox")
+        self.assertTrue(any("RATCHET_VIOLATION" in item and "PMID_NEW" in item
+                            for item in violations))
+
+    def test_a_swap_at_equal_count_is_still_a_violation(self) -> None:
+        """The count is not the constraint. A number would have said 'unchanged'."""
+        self.harness.live["panel_relation_legacy"] = ["PMID1"]
+        self.assertEqual(0, self.harness.run("record", "--bootstrap", "--batch", "B0"))
+        self.harness.live["panel_relation_legacy"] = ["PMID_OTHER"]
+        violations, _, _ = ga.evaluate(self.harness.root, "wwox")
+        self.assertTrue(any("RATCHET_VIOLATION" in item for item in violations))
+
+    def test_lowering_the_baseline_by_hand_does_not_lower_the_ratchet(self) -> None:
+        """🔴 The constraint that holds the whole thing up.
+
+        Updating a baseline must cost at least as much as complying with it. Editing the
+        manifest — the gesture that has already happened here once, diligent comment and all —
+        must not move the constraint, because the constraint lives in the hash-chained ledger
+        and the manifest is only its readout. If this test ever passes trivially, the ratchet
+        has become a number again.
+        """
+        self.harness.live["panel_relation_legacy"] = ["PMID1", "PMID2"]
+        self.assertEqual(0, self.harness.run("record", "--bootstrap", "--batch", "B0"))
+        manifest_path = self.harness.root / ga.MANIFEST_REL
+        manifest_path.write_text(
+            manifest_path.read_text(encoding="utf-8")
+            .replace("panel_relation_legacy_baseline: 2", "panel_relation_legacy_baseline: 99")
+            .replace('panel_relation_legacy_ids: ["PMID1", "PMID2"]',
+                     'panel_relation_legacy_ids: []'),
+            encoding="utf-8")
+        self.harness.live["panel_relation_legacy"] = ["PMID1", "PMID2", "PMID3"]
+        violations, _, _ = ga.evaluate(self.harness.root, "wwox")
+        self.assertTrue(any("RATCHET_VIOLATION" in item and "PMID3" in item
+                            for item in violations),
+                        "a hand-edited manifest moved the constraint; the ledger is the anchor")
+
+    def test_the_measurement_reads_manifests_and_one_bare_locator_is_enough(self) -> None:
+        """Membership is per manifest: nineteen classified and one bare is one bare."""
+        root = self.harness.root
+        directory = root / "disease-models/wwox/research/deepdive_manifests"
+        directory.mkdir(parents=True)
+        def write(name, relations):
+            (directory / name).write_text(json.dumps({
+                "verbatim_locators": {"entries": [
+                    {"panel_text_relation": rel} if rel else {} for rel in relations]}}),
+                encoding="utf-8")
+        write("PMID111.json", ["text_only", "panel_only"])
+        write("PMID222.json", ["text_only", None])
+        write("PMID333.json", [])
+        self.assertEqual(["PMID222"], ga.measure_panel_relation_legacy(root, "wwox"))
+
+    def test_an_unreadable_manifest_counts_as_unknown_not_as_clean(self) -> None:
+        root = self.harness.root
+        directory = root / "disease-models/wwox/research/deepdive_manifests"
+        directory.mkdir(parents=True)
+        (directory / "PMID444.json").write_text("{ truncated", encoding="utf-8")
+        self.assertEqual(["PMID444"], ga.measure_panel_relation_legacy(root, "wwox"))
+
+
+class CandidateBacklogIsDerivedNotDeclared(unittest.TestCase):
+    """Read-and-not-promoted, measured the only way it can be measured without a new field."""
+
+    def setUp(self) -> None:
+        self.stack = TemporaryDirectory()
+        self.root = Path(self.stack.name)
+        self.addCleanup(self.stack.cleanup)
+        (self.root / "framework/state").mkdir(parents=True)
+        (self.root / "staging").mkdir()
+
+    def _manifest(self, scope: str) -> None:
+        (self.root / ga.MANIFEST_REL).write_text(
+            f'batch_20260810_001_scope: "{scope}"\n', encoding="utf-8")
+
+    def _candidate(self, name: str, body: str = "") -> None:
+        (self.root / "staging" / name).write_text(body or "# candidate\n", encoding="utf-8")
+
+    def test_a_candidate_named_in_a_scope_is_consumed(self) -> None:
+        self._manifest("PROPAGATED 1: CC-20260806-19936220 landed.")
+        self._candidate("commit_candidate_20260806_19936220.md")
+        self.assertEqual([], ga.measure_candidate_backlog(self.root, "wwox"))
+
+    def test_a_candidate_named_nowhere_is_pending(self) -> None:
+        self._manifest("PROPAGATED 0.")
+        self._candidate("commit_candidate_20260806_19936220.md")
+        self.assertEqual(["CC-20260806-19936220"],
+                         ga.measure_candidate_backlog(self.root, "wwox"))
+
+    def test_two_punctuations_of_one_identifier_meet(self) -> None:
+        """`CC-2026-07-05-001` and `CC-20260705-001` are the same candidate.
+
+        Comparing raw strings would report every candidate as pending — a number always wrong
+        in the alarming direction, which trains people to ignore it.
+        """
+        self._manifest("PROPAGATED 1: CC-2026-07-05-001 landed.")
+        self._candidate("commit_candidate_20260705_001.md")
+        self.assertEqual([], ga.measure_candidate_backlog(self.root, "wwox"))
+
+    def test_a_compressed_range_names_exactly_one_candidate(self) -> None:
+        """🔴 The live corpus produced this on the counter's first run.
+
+        `CC-20260726-001/002/003` reads fine to a person and names one candidate to a machine,
+        so 002 and 003 read as pending forever. The counter is right and the record was
+        unreadable; the manifest note has been expanded rather than the matcher loosened,
+        because a matcher that guessed at ranges would eventually guess wrong in the quiet
+        direction — reporting work as done that nobody did.
+        """
+        self._manifest("PROPAGATED 3: CC-20260726-001/002/003 landed.")
+        for suffix in ("001", "002", "003"):
+            self._candidate(f"commit_candidate_20260726_{suffix}.md")
+        self.assertEqual(["CC-20260726-002", "CC-20260726-003"],
+                         ga.measure_candidate_backlog(self.root, "wwox"))
+
+    def test_the_declared_identifier_wins_over_the_file_name(self) -> None:
+        """The file name is a convention; the ID is what a batch scope will name."""
+        self._manifest("PROPAGATED 1: CC-20260810-CLAIM004-REVIEW landed.")
+        self._candidate("commit_candidate_something_else.md",
+                        "**Candidate ID:** CC-20260810-CLAIM004-REVIEW\n")
+        self.assertEqual([], ga.measure_candidate_backlog(self.root, "wwox"))
+
+    def test_a_non_candidate_markdown_file_is_not_counted(self) -> None:
+        self._manifest("PROPAGATED 0.")
+        self._candidate("batch_inferential_sweep_20260726.md")
+        self.assertEqual([], ga.measure_candidate_backlog(self.root, "wwox"))
+
+    def test_an_absent_staging_directory_is_not_a_backlog_of_zero_by_accident(self) -> None:
+        """`staging/` is gitignored, so worktrees do not have it — the surface-census case.
+
+        The honest reading of an absent directory is 'not visible from here', and the honest
+        behaviour is to contribute nothing without failing. What this test pins is that the
+        absence is not an exception: a check that raised here would be red in every worktree.
+        """
+        self._manifest("PROPAGATED 0.")
+        (self.root / "staging").rmdir()
+        self.assertEqual([], ga.measure_candidate_backlog(self.root, "wwox"))
+
+    def test_the_trigger_fires_at_five_and_not_at_four(self) -> None:
+        four = {"candidate_backlog": [f"CC-{n}" for n in range(4)]}
+        five = {"candidate_backlog": [f"CC-{n}" for n in range(5)]}
+        self.assertEqual([], ga.candidate_backlog_trigger(four))
+        self.assertTrue(ga.candidate_backlog_trigger(five)[0].startswith("CANDIDATE_BACKLOG"))
+
+    def test_the_trigger_names_the_candidates_not_only_the_count(self) -> None:
+        """A number says something is due; the names say what. The next batch needs both."""
+        live = {"candidate_backlog": [f"CC-2026081{n}-001" for n in range(5)]}
+        line = ga.candidate_backlog_trigger(live)[0]
+        for identifier in live["candidate_backlog"]:
+            self.assertIn(identifier, line)
+
+    def test_it_is_a_trigger_and_not_a_ratchet(self) -> None:
+        """A ratchet would make accumulating candidates an offence, and it is not one.
+
+        Between batches the backlog is supposed to grow: the system reads faster than it
+        propagates. What must not happen is that it grows silently.
+        """
+        self.assertNotIn("candidate_backlog", dict(ga.RATCHET_KEYS))
 
 
 if __name__ == "__main__":

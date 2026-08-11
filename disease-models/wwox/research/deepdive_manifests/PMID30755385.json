@@ -1,0 +1,189 @@
+{
+  "schema_version": 2,
+  "pmid": "30755385",
+  "doi": "10.1016/j.molmet.2019.01.010",
+  "receipt": "FTR-20260810-30755385-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID30755385.md",
+    "full_text_queue_current#FT-047",
+    "staging/commit_candidate_20260810_30755385.md"
+  ],
+  "skills_considered": [
+    {"skill": "legend", "used": true},
+    {"skill": "legend-study-intake-triage", "used": true},
+    {"skill": "legend-batch-inferential-sweep", "used": true},
+    {"skill": "legend-deepdive", "used": true},
+    {"skill": "legend-capability-scout", "used": true},
+    {"skill": "legend-session-self-eval", "used": true},
+    {"skill": "legend-session-takeaways", "used": true},
+    {"skill": "find-fulltext", "used": false, "reason": "The operator supplied a local structured full-text artifact, so retrieval was used only for visual figure and supplement surfaces."},
+    {"skill": "legend-proband-priority-matrix", "used": false, "reason": "The operator selected a single study explicitly; reprioritising the disease queue could not change the cursor."},
+    {"skill": "legend-discovery", "used": false, "reason": "The new inference is preserved in a dossier and commit candidate because the append-only scientific ledger has no writer primitive and manual editing was forbidden."},
+    {"skill": "legend-hypothesis-forge", "used": false, "reason": "The study tests tissue autonomy and metabolic mechanism but does not justify a new intervention hypothesis."},
+    {"skill": "legend-safety-triage", "used": false, "reason": "No drug, compound, dose or treatment candidate is introduced by this study."},
+    {"skill": "legend-commit", "used": false, "reason": "The state explicitly blocks BATCH_COMMIT; canonical changes remain isolated in a commit candidate."}
+  ],
+  "group_assessment": {
+    "total_publications": 137,
+    "publications_on_gene": 64,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "PubMed ESearch on 2026-08-10 for exact senior author Aqeilan RI returned 137 records total and 64 with WWOX in title/abstract; exact first author Abu-Remaileh M returned 81 total and 11 with WWOX. This is an experienced WWOX experimental group, so execution and target knowledge receive high weight. It is not a primary WOREE clinical group, and the paper's word 'autonomous' still receives no uplift beyond the conditional-deletion, local-uptake and C2C12 evidence actually shown. Group investment strengthens technical familiarity but makes independent replication especially important for interpretation."
+  },
+  "field_density": {
+    "queries": [
+      {"query": "WWOX[Title/Abstract] AND metaboli*[Title/Abstract]", "count": 75, "source": "PubMed ESearch, 2026-08-10"},
+      {"query": "WWOX[Title/Abstract] AND skeletal muscle[Title/Abstract]", "count": 2, "source": "PubMed ESearch, 2026-08-10"},
+      {"query": "WWOX[Title/Abstract] AND AMPK[Title/Abstract]", "count": 1, "source": "PubMed ESearch, 2026-08-10"}
+    ],
+    "note": "WWOX-metabolism is now a visible field, but the exact skeletal-muscle intersection is two records and the exact AMPK intersection one. This paper is therefore unusually load-bearing for muscle autonomy and needs stronger-than-usual boundary discipline."
+  },
+  "multihop": {
+    "references_enumerated": 54,
+    "gene_direct_refs_in_source": [
+      "10.1002/jcp.21099",
+      "10.1016/j.molmed.2006.11.006",
+      "10.1002/jcb.22298",
+      "10.1007/s00018-014-1724-y",
+      "10.1002/gcc.22078",
+      "10.1161/CIRCGENETICS.113.000248",
+      "10.1093/hmg/ddq495",
+      "10.1038/cdd.2014.95",
+      "10.4161/23723548.2014.965640",
+      "10.1074/jbc.M800855200",
+      "10.1002/jcp.24308",
+      "10.1038/s41419-018-0896-z",
+      "10.1038/s41419-018-0510-4",
+      "10.1074/jbc.M113.506790",
+      "10.1073/pnas.0400805101"
+    ],
+    "resolved": [
+      "10.1002/jcp.21099",
+      "10.1002/jcb.22298",
+      "10.1007/s00018-014-1724-y",
+      "10.1002/gcc.22078",
+      "10.1161/CIRCGENETICS.113.000248",
+      "10.1093/hmg/ddq495",
+      "10.1038/cdd.2014.95",
+      "10.4161/23723548.2014.965640",
+      "10.1074/jbc.M800855200",
+      "10.1002/jcp.24308",
+      "10.1038/s41419-018-0896-z",
+      "10.1038/s41419-018-0510-4",
+      "10.1074/jbc.M113.506790"
+    ],
+    "queued": [],
+    "note": "All 54 references were enumerated. Fifteen are WWOX-direct. Thirteen resolve in a structured registry or research surface. The Chang 2007 review (10.1016/j.molmed.2006.11.006) and the original WWOX-p73 paper (10.1073/pnas.0400805101) occur only in the non-evidentiary seed corpus and are not load-bearing for the tissue-autonomy conclusion, so they were declared but not turned into new full-text debt. References 15 and 32 are the load-bearing mechanistic sources; this reading does not substitute for reading them."
+  },
+  "corpus_crossquery": {
+    "query": "Where does PMID 30755385 already occur, which current claim does its muscle-specific evidence touch, and does the repository already state the tissue-of-measurement versus tissue-of-necessity inference verbatim?",
+    "hits": 4,
+    "note": "The PMID occurs in CORPUS-STUB-039, LIT-0063, meta_metabolism_current and FT-047. It was already labelled a core metabolic paper despite remaining a placeholder without a receipt. Horizontal comparison touches CLAIM 009 and DL-MECH-020, but no tracked markdown file contains the operator's exact inference wording. The paper supplies a direct example: muscle perturbation produces blood and whole-body endpoints, while the local FDG and C2C12 results prevent the causal tissue from being inferred solely from the measurement compartment."
+  },
+  "retraction_check": {
+    "checked": true,
+    "result": "Repository retraction check on 2026-08-10 returned zero retraction, expression-of-concern or correction flags for PMID 30755385; PMCID PMC6437662 is the indexed open full-text record."
+  },
+  "source_artifacts": [
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_PMC.xml", "sha256": "bb6853dfff0b967e42c41cd0669cbaba2f0327df89700fb8b18fcb7902899d88", "kind": "article_text"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019.pdf", "sha256": "59e2534ea7a1e8f958129cea92e395fe3d6441da1c9a00ec50ff7869764ea0d9", "kind": "article_binary"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/fx1.jpg", "sha256": "7b75e4a59ab1ac3fb9a9ebb66cca2668bb9e9f810ab4889ba97cb0ba6f63436f", "kind": "figure"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/gr1.jpg", "sha256": "24b20750240426589c03d50717bb31ab6afe66b69ac63bfa43c664eeb0c730c6", "kind": "figure"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/gr2.jpg", "sha256": "1b7241f88d1f17e1346841c03e0d39c89b1b49a30ea98ad1bcd9fb97bd06c995", "kind": "figure"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/gr3.jpg", "sha256": "895fc1d9fa350e7221594ce43a6b51e298808abe5b91a03f5c8e760084a313e9", "kind": "figure"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/gr4.jpg", "sha256": "8f672589e20d8b78121bcbeaacb325dc937222baadf183f326aa2444aa3c9968", "kind": "figure"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/mmc1.pdf", "sha256": "d9bbea7c3f33b2fba86092ee3a9b9330470bf83dec4c6d4a6f7ce8374e8c4e9b", "kind": "article_binary"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/supplement_rendered/page_01_225dpi.png", "sha256": "17f430daeeac122f6b44a994ab6d2198af17b0c6c8b89e4bddb4fe0b2c8eeaf4", "kind": "figure"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/supplement_rendered/page_02_220dpi.png", "sha256": "e3d89b2a5ec38bb702e41d85415609e10b9798cf13d8339debb98ffe02ff398d", "kind": "figure"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/supplement_rendered/page_03_300dpi.png", "sha256": "6cfb989ea17e3b23c1827082f7fdf678b7820d3179700628057df5f3470545b3", "kind": "figure"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/supplement_rendered/page_04_512dpi.png", "sha256": "a1bb41355416282526a6733d63b8cf257aa55638563b2399061f49309a09d5c9", "kind": "figure"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/supplement_rendered/page_05_128dpi.png", "sha256": "fee8652b362d250ec0aa1f03e05c5053ccc4bb23cf2b7262c7982044f35ec9e5", "kind": "figure"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/supplement_rendered/page_06_72dpi.png", "sha256": "244388fc4dbf9e5bef720524596ce51f401f4b757a7c77cfe657d88c5b392e0a", "kind": "figure"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/supplement_rendered/page_07_300dpi.png", "sha256": "f1030a3c43054c0d9e0ac30a7b530c4733de7290679554971b51fd0aceea6793", "kind": "figure"},
+    {"path": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/supplement_rendered/page_08_300dpi.png", "sha256": "1f4dc6649a7493300ff062547e00063cb1078818724c77893e3cc3a17862559e", "kind": "figure"}
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC supplementary/full-text endpoints checked on 2026-08-10: EXT_ID 30755385 resolves to PMCID PMC6437662 and exposes indexed XML, PDF and supplementary files.",
+    "entries": [
+      {
+        "proposition": "Only skeletal-muscle Wwox deletion among the three tested tissue deletions impaired glucose clearance.",
+        "snippet": "Likewise, only mice that lost WWOX in the muscle were defective in their ability to clear glucose, as determined by the glucose tolerance test (GTT)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30755385_AbuRemaileh2019_PMC.xml",
+        "anchor": "Results 2.1, final comparison sentence before Figure 1I"
+      },
+      {
+        "proposition": "The authors interpret the muscle result as essential for whole-organism glucose homeostasis.",
+        "snippet": "These data indicate that WWOX expression in SKM is essential for organismal glucose homeostasis.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30755385_AbuRemaileh2019_PMC.xml",
+        "anchor": "Results 2.1, closing sentence"
+      },
+      {
+        "proposition": "The paper explicitly claims a local autonomous defect in skeletal-muscle glucose uptake.",
+        "snippet": "These data suggest an autonomous defect in glucose uptake in SKM in the absence of WWOX.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30755385_AbuRemaileh2019_PMC.xml",
+        "anchor": "Results 2.2, final sentence after gastrocnemius and hamstring FDG results"
+      },
+      {
+        "proposition": "Acute Wwox depletion in a muscle cell line reproduces reduced AMPK phosphorylation.",
+        "snippet": "p-AMPK is decreased upon acute WWOX depletion, consistent with a possible role of WWOX in directly regulating AMPK activation.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30755385_AbuRemaileh2019_PMC.xml",
+        "anchor": "Results 2.5, C2C12 siRNA experiment"
+      },
+      {
+        "proposition": "Endogenous WWOX and phosphorylated AMPK associate in C2C12 cells.",
+        "snippet": "Moreover, we detected specific endogenous WWOX and p-AMPK protein interaction in C2C12 muscle cells",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30755385_AbuRemaileh2019_PMC.xml",
+        "anchor": "Results 2.5, final co-immunoprecipitation paragraph"
+      },
+      {
+        "proposition": "Negative liver and adipocyte findings do not exclude functions in untested pathways or nutrient states.",
+        "snippet": "Although WWOX inactivation in liver and adipocytes did not reveal a defect in glucose homeostasis and body weight regulation, this does not exclude a function of WWOX in other metabolic pathways or nutrient states, which were not addressed in this study.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30755385_AbuRemaileh2019_PMC.xml",
+        "anchor": "Discussion, first paragraph"
+      },
+      {
+        "proposition": "The reported inferential test was a Student t-test with a conventional significance threshold.",
+        "snippet": "Student's t-test was used to compare the values of the test and control samples. P < 0.05 indicates a significant difference.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30755385_AbuRemaileh2019_PMC.xml",
+        "anchor": "Methods 4.10, Statistical analysis"
+      },
+      {
+        "proposition": "The main visual evidence shows reduced FDG uptake in two skeletal muscles of WwoxΔSKM animals.",
+        "snippet": "Panels I and J show lower knockout FDG curves in gastrocnemius and hamstring with displayed significance brackets.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/gr2.jpg",
+        "anchor": "Figure 2, panels I and J, inspected at original downloaded pixel dimensions"
+      },
+      {
+        "proposition": "The cell-line experiment visually supports an acute cell-intrinsic AMPK/ACC phosphorylation component.",
+        "snippet": "Panels C and D show WWOX knockdown accompanied by lower pAMPK-to-AMPK and pACC-to-ACC quantification.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/gr4.jpg",
+        "anchor": "Figure 4, panels C and D, inspected at original downloaded pixel dimensions"
+      },
+      {
+        "proposition": "The supplementary brain and liver FDG negatives are visual non-detections, not equivalence tests.",
+        "snippet": "Brain and liver FDG time-course curves overlap visually and the page displays no significance annotation or equivalence bound.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/supplement_rendered/page_02_220dpi.png",
+        "anchor": "Supplementary Figure S2, page 2, rendered at the measured 220 effective-PPI ceiling"
+      },
+      {
+        "proposition": "The adipose-tissue negative is weak visual evidence because it is an unquantified low-resolution representative blot.",
+        "snippet": "The WAT and BAT blot page contains three lanes per group but no densitometry, uncertainty display or significance marker.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID30755385_AbuRemaileh2019_assets/supplement_rendered/page_05_128dpi.png",
+        "anchor": "Supplementary Figure S5, page 5, rendered at 128 dpi after measuring a 45.2–125.5 effective-PPI raster ceiling"
+      }
+    ]
+  }
+}

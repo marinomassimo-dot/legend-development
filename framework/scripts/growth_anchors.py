@@ -66,6 +66,24 @@ RATCHET_BASELINE = re.compile(
     r"(?m)^(registry_only_fulltext_declarations_baseline:\s*)(\d+)\s*$")
 RATCHET_IDS = re.compile(r"(?m)^(registry_only_fulltext_declaration_ids:\s*)(\[[^\n]*\])\s*$")
 UNREAD_BASELINE = re.compile(r"(?m)^(unread_premise_baseline:\s*)(\d+)\s*$")
+# The same two-field shape as the ratchet above, and for the same reason: the count alone is
+# a number a human can edit, the ID list is a claim the tool re-derives. Lowering the baseline
+# by hand means naming which manifest left the set, and `evaluate` goes and looks.
+PANEL_LEGACY_BASELINE = re.compile(
+    r"(?m)^(panel_relation_legacy_baseline:\s*)(\d+)\s*$")
+PANEL_LEGACY_IDS = re.compile(r"(?m)^(panel_relation_legacy_ids:\s*)(\[[^\n]*\])\s*$")
+# 🔴 The single definition of which measurements are ratchets. It exists because adding the
+# third one found the same tuple written out in FOUR places — `evaluate`, `cmd_record`,
+# `cmd_tighten` and a message that said "both ratchets" — so a key added to one and forgotten
+# in another would anchor in `check` and never anchor in `record`, and the ratchet would
+# report the same violation forever while looking like it was being maintained. That is the
+# uneven-application failure this repository keeps finding in itself; here it is again, in the
+# module that exists to prevent it.
+RATCHET_KEYS: tuple[tuple[str, str], ...] = (
+    ("registry_only_fulltext", "registry-only full-text declarations"),
+    ("unread_premises", "unread premises"),
+    ("panel_relation_legacy", "manifests without a panel/text relation"),
+)
 UNREAD_MEASURED = re.compile(r"(?m)^(unread_premise_measured_on:\s*)(\S+)\s*$")
 
 STRUCTURAL_KEYS = ("claims", "papers", "corpus", "literature")
@@ -248,6 +266,114 @@ def scale_triggers(live: dict[str, Any], state: dict[str, Any]) -> list[str]:
     return lines
 
 
+# --------------------------------------------------------- the commit-candidate backlog
+#
+# 🔴 The mirror of the unread-premise ratchet, and it was missing for the same reason that one
+# was: leaning on a paper writes nothing anywhere, and neither does *finishing a reading and
+# not promoting it*. The system measured what had not been READ and never what had been read
+# and not PROPAGATED.
+#
+# Measured 2026-08-10, and the defect turned out to be one level earlier than "nobody counts
+# them". `staging/` held 12 `commit_candidate_*.md`, of which most were long since propagated
+# — three in BATCH_20260726_001, five in BATCH_20260806_002, four in the batches of that
+# morning. Only 5 of the 12 carried a `Status:` line at all, and in every case it was a claim
+# or paper status copied into the body, never the candidate's own lifecycle. So the population
+# a counter would count HAD NO STATE, and a "≥ 5 candidates" trigger reading that directory
+# would have fired permanently and meant nothing — an alarm nobody looks at, which is the one
+# thing the growth section asks us not to build.
+#
+# The state is therefore DERIVED, not added. A `candidate_status:` field would be a value
+# someone must remember to flip, and flipping it costs less than propagating — so on the day
+# the queue is inconvenient, the field moves instead of the work. Updating a constraint must
+# cost at least as much as complying with it. The signal already exists, written for another
+# purpose: every `batch_*_scope` in the state manifest names the candidates that batch
+# propagated. Consumed = named in a scope. Pending = on disk and named nowhere. The only way
+# to lower the number is to actually propagate, because the scope is what records it.
+CANDIDATE_STEM = re.compile(r"^commit[_-]candidate[_-](.+)$", re.I)
+CANDIDATE_ID_LINE = re.compile(r"(?m)^\*\*Candidate ID:\*\*\s*(\S+)")
+CANDIDATE_BACKLOG_TRIGGER = 5
+
+
+def candidate_key(value: str) -> str:
+    """Fold a candidate identifier to what two spellings of it have in common.
+
+    The corpus holds `CC-2026-07-05-001` and `CC-20260726-001` — the same scheme punctuated
+    two ways — and file names that carry neither prefix nor dashes
+    (`commit_candidate_20260810_42422765_S8.md` for `CC-20260810-42422765-S8`). Comparing raw
+    strings would report every candidate as pending, which is worse than not counting: a
+    number that is always wrong in the alarming direction trains people to ignore it.
+    """
+    return re.sub(r"[^0-9A-Z]", "", value.upper())
+
+
+def candidate_identity(path: Path) -> str:
+    """The candidate's own ID where it declares one, else derived from the file name.
+
+    Preferring the declared line matters: the file name is a convention and the ID is what the
+    batch scope will name. Where a candidate declares neither, the derivation is still
+    deterministic, and `candidate_key` makes the two spellings meet.
+    """
+    try:
+        declared = CANDIDATE_ID_LINE.search(path.read_text(encoding="utf-8"))
+    except OSError:
+        declared = None
+    if declared:
+        return declared.group(1).strip()
+    stem = CANDIDATE_STEM.match(path.stem)
+    return "CC-" + (stem.group(1) if stem else path.stem).replace("_", "-").upper()
+
+
+def candidate_directories(root: Path, disease: str) -> list[Path]:
+    return [
+        root / "staging",
+        root / "disease-models" / disease / "research" / "commit_candidates",
+    ]
+
+
+def measure_candidate_backlog(root: Path, disease: str) -> list[str]:
+    """Candidate files present on disk that no batch scope claims to have propagated.
+
+    `staging/` is gitignored, so it exists in one checkout and not in the worktrees — the same
+    condition the surface census handles by skipping rather than failing. An absent directory
+    contributes nothing here and is not an error: a backlog that cannot be seen from this
+    checkout is not a backlog of zero, and the caller is told which directories were readable.
+    """
+    manifest_path = root / MANIFEST_REL
+    scope_text = manifest_path.read_text(encoding="utf-8") if manifest_path.is_file() else ""
+    consumed_blob = candidate_key(scope_text)
+
+    pending: list[str] = []
+    for directory in candidate_directories(root, disease):
+        if not directory.is_dir():
+            continue
+        for path in sorted(directory.glob("*.md")):
+            if not CANDIDATE_STEM.match(path.stem):
+                continue
+            identity = candidate_identity(path)
+            if candidate_key(identity) not in consumed_blob:
+                pending.append(identity)
+    return sorted(set(pending))
+
+
+def candidate_backlog_trigger(live: dict[str, Any]) -> list[str]:
+    """The backlog past its trigger. Like `scale_triggers`, this never reports a violation.
+
+    🔴 A trigger and deliberately **not** a ratchet. A ratchet says the population may only
+    fall, which would make accumulating candidates between batches an offence — and it is not,
+    it is the normal state of a system that reads faster than it propagates. What must not
+    happen is that it accumulates *silently*. So: above the trigger, the next batch either
+    propagates or says why not.
+    """
+    pending = live.get("candidate_backlog") or []
+    if len(pending) < CANDIDATE_BACKLOG_TRIGGER:
+        return []
+    return [
+        f"CANDIDATE_BACKLOG: {len(pending)} commit candidate(s) on disk that no batch scope "
+        f"claims to have propagated, at or past the trigger of {CANDIDATE_BACKLOG_TRIGGER}: "
+        f"{', '.join(pending)}. The next BATCH_COMMIT propagates them or records why not."
+    ]
+
+
 def structural_identifiers(claims_text: str, papers_text: str,
                            literature_text: str) -> dict[str, list[str]]:
     """The record identifiers themselves, so callers can check uniqueness as well as count."""
@@ -298,11 +424,51 @@ def measure_unread_premises(root: Path, disease: str) -> list[str]:
     return sorted(session_self_eval.unread_premises(root, disease, receipts))
 
 
+def measure_panel_relation_legacy(root: Path, disease: str) -> list[str]:
+    """Manifests with at least one locator that does not say how panel and text stand.
+
+    🔴 This is the coverage half of `panel_text_relation`, and it lives here rather than in
+    `deepdive_manifest.validate` for one reason: whether a manifest is *allowed* to omit the
+    field is a fact about the corpus, not about the manifest. The validator sees one file and
+    cannot know which readings predate the field. This function sees all of them, and the
+    ratchet in `evaluate` does the rest — a manifest already in the anchored set is
+    grandfathered, a manifest that is NOT is a `RATCHET_VIOLATION`, which is exactly "the
+    validator refuses new work without it" expressed where the information actually is.
+
+    Membership is per manifest and triggered by a single bare entry, deliberately. A reading
+    that classified nineteen locators and left one unclassified has an unclassified locator,
+    and the honest way to leave the set is to finish, not to average.
+    """
+    directory = root / "disease-models" / disease / "research" / "deepdive_manifests"
+    if not directory.is_dir():
+        return []
+    legacy: list[str] = []
+    for path in sorted(directory.glob("PMID*.json")):
+        try:
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            legacy.append(path.stem)  # unreadable is not clean; it is unknown
+            continue
+        locators = manifest.get("verbatim_locators")
+        entries = locators.get("entries") if isinstance(locators, dict) else None
+        if not isinstance(entries, list) or not entries:
+            continue  # a waived or empty locator block owes nothing; the waiver is checked elsewhere
+        if any(not isinstance(entry, dict) or entry.get("panel_text_relation") is None
+               for entry in entries):
+            legacy.append(path.stem)
+    return legacy
+
+
 def measure_all(root: Path, disease: str) -> dict[str, Any]:
     return {
         "structural": measure_structural(root, disease),
         "registry_only_fulltext": measure_registry_only(root, disease),
         "unread_premises": measure_unread_premises(root, disease),
+        "panel_relation_legacy": measure_panel_relation_legacy(root, disease),
+        # Measured like `registry_bytes` and, like it, deliberately NOT anchored: a backlog
+        # is supposed to move in both directions, so anchoring it would manufacture a
+        # violation on every batch and train sessions to ignore this module.
+        "candidate_backlog": measure_candidate_backlog(root, disease),
         # Measured on every call like everything else here, and deliberately *not* an
         # anchored value: sizes are expected to move constantly, so anchoring them would
         # produce a violation on every batch. Only the acknowledgement is anchored.
@@ -424,6 +590,14 @@ def reanchor_manifest(root: Path, disease: str) -> list[str]:
             text = UNREAD_MEASURED.sub(lambda m: f"{m.group(1)}{today}", text, count=1)
         changed.append(f"unread_premise_baseline={len(unread)}")
 
+    panel_legacy = state.get("panel_relation_legacy")
+    if panel_legacy is not None and PANEL_LEGACY_BASELINE.search(text):
+        text = PANEL_LEGACY_BASELINE.sub(lambda m: f"{m.group(1)}{len(panel_legacy)}", text,
+                                         count=1)
+        serialised = json.dumps(sorted(panel_legacy), ensure_ascii=False)
+        text = PANEL_LEGACY_IDS.sub(lambda m: f"{m.group(1)}{serialised}", text, count=1)
+        changed.append(f"panel_relation_legacy_baseline={len(panel_legacy)}")
+
     path.write_text(text, encoding="utf-8")
     return changed
 
@@ -470,11 +644,28 @@ def evaluate(root: Path, disease: str) -> tuple[list[str], list[str], dict[str, 
                 f"`growth_anchors.py record --batch <ID> --{key} "
                 f"{live_value - anchored_value:+d}`")
 
-    for key, label in (("registry_only_fulltext", "registry-only full-text declarations"),
-                       ("unread_premises", "unread premises")):
+    for key, label in RATCHET_KEYS:
         live_set = set(live[key])
+        # 🔴 Introducing a ratchet is not the same event as breaching one, and until this
+        # existed the tool could not tell them apart: `state.get(key) or []` read a key that
+        # had NEVER been anchored as a baseline of zero, so a new ratchet's whole legacy
+        # backlog arrived as a violation — and there was no way out. `tighten` refuses on a
+        # violation, `record` refuses when a ratchet grew, `--bootstrap` refuses once any
+        # anchor exists. A ratchet that cannot be introduced is a ratchet nobody adds.
+        #
+        # This is not a loophole, and the reason is structural rather than promised: the
+        # ledger is hash-chained and append-only, so a key that has EVER been anchored is in
+        # force forever — it cannot be removed from history to reset a baseline, only appended
+        # over, and an append that dropped it would be a visible event. So the question
+        # "has this key ever been anchored?" is asked of the whole ledger, not of the tail.
+        ever_anchored = any(key in event.get("anchors", {}) for event in events)
         anchored_set = set(state.get(key) or [])
         new = live_set - anchored_set
+        if not ever_anchored:
+            improvements.append(
+                f"RATCHET_INTRODUCED: {label} measured for the first time at {len(live_set)}; "
+                f"run `growth_anchors.py tighten` to set the baseline")
+            continue
         if new:
             violations.append(
                 f"RATCHET_VIOLATION: {len(new)} new {label} ({', '.join(sorted(new))}). "
@@ -512,11 +703,17 @@ def cmd_check(root: Path, disease: str, _args) -> int:
     triggers = scale_triggers(live, tail_state(load_ledger(root / LEDGER_REL)) or {})
     for item in triggers:
         print(f"  [SCALE] {item}")
+    # Same contract, different question: `SCALE` asks whether the model has outgrown its
+    # storage, `BACKLOG` asks whether reading has outrun propagation. Both report something
+    # DUE rather than something wrong, so neither fails `check`.
+    backlog = candidate_backlog_trigger(live)
+    for item in backlog:
+        print(f"  [BACKLOG] {item}")
     if violations:
         print("VERDICT: BLOCK — growth anchors disagree with the live model")
         return 1
-    if triggers:
-        print("VERDICT: PASS — anchors match; a scale decision is due (see [SCALE] above)")
+    if triggers or backlog:
+        print("VERDICT: PASS — anchors match; a decision is due (see above)")
         return 0
     print("VERDICT: PASS — every growth anchor matches what the tool measured")
     return 0
@@ -573,7 +770,7 @@ def cmd_record(root: Path, disease: str, args) -> int:
     anchors = {"structural": live["structural"]}
     # Ratchets ride along so history stays complete, but only when they did not worsen;
     # a worsening ratchet is a violation and must not be laundered through a counts record.
-    for key in ("registry_only_fulltext", "unread_premises"):
+    for key, _label in RATCHET_KEYS:
         if set(live[key]) - set(state.get(key) or []):
             print(f"REFUSED: {key} grew. Resolve the ratchet violation before recording "
                   f"structural growth — see `growth_anchors.py check`.")
@@ -654,11 +851,12 @@ def cmd_tighten(root: Path, disease: str, args) -> int:
         print("REFUSED: a ratchet grew. Tightening cannot paper over a violation.")
         return 1
     if not improvements:
-        print("NOTHING TO TIGHTEN: both ratchets already match the live measurement")
+        print(f"NOTHING TO TIGHTEN: all {len(RATCHET_KEYS)} ratchets already match the live "
+              "measurement")
         return 0
     events = load_ledger(root / LEDGER_REL)
     state = tail_state(events) or {}
-    anchors = {key: live[key] for key in ("registry_only_fulltext", "unread_premises")}
+    anchors = {key: live[key] for key, _label in RATCHET_KEYS}
     if state.get("structural"):
         anchors["structural"] = state["structural"]
     event = append_event(root, disease, "tighten", anchors,

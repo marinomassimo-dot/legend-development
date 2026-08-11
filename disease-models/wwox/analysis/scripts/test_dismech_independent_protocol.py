@@ -156,11 +156,32 @@ class BaselineTests(unittest.TestCase):
         original_root = protocol.REPO_ROOT
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)
+            # Populate the temp repo from the SEALED commit, not from the live tree.
+            #
+            # This fixture builds its own "frozen" commit and re-anchors the baseline to it,
+            # so whatever bytes land here become the frozen tree the assertions below reason
+            # about. Copying them from the working tree quietly asserted that no sealed scope
+            # had drifted — true on the day it was written, and false the first time a target
+            # claim is legitimately corrected. `CLAIM 016` is one of the three target claims,
+            # and BATCH_20260810_005 wrote a boundary into it, which is the product and not an
+            # exception. Production was never affected: `git_head_at_freeze` there points at a
+            # real past commit whose bytes cannot move, which is exactly why the frozen-blob
+            # half of `verify_phase2_baseline` is strict. Only the fixture confused the two.
             for record in baseline["inputs"].values():
-                source = original_root / record["path"]
                 target = root / record["path"]
                 target.parent.mkdir(parents=True, exist_ok=True)
-                shutil.copyfile(source, target)
+                try:
+                    target.write_bytes(
+                        protocol._git_blob(original_root, baseline["git_head_at_freeze"],
+                                           record["path"]))
+                except (ValueError, OSError) as exc:
+                    # No fallback to the working tree. The archive runner has no git object
+                    # database, and quietly substituting live bytes is precisely the failure
+                    # this fixture now exists to avoid — it would rebuild the "frozen" tree
+                    # out of whatever happens to be on disk and call the result sealed. If the
+                    # sealed bytes cannot be fetched, the fixture cannot be built, and a test
+                    # that cannot be built must say so rather than test something else.
+                    self.skipTest(f"sealed blob for {record['path']} unavailable: {exc}")
             output = root / baseline["output"]["path"]
             output.parent.mkdir(parents=True, exist_ok=True)
             shutil.copyfile(original_root / baseline["output"]["path"], output)

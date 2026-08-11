@@ -292,6 +292,26 @@ For each file:
 - Never use relative wikilinks with path segments such as `../folder/file` — always a flat basename
 - Never link branch commit logs during standard operations (they are for merge only)
 - Never put wikilinks inside code blocks (they are not rendered)
+- 🔴 Never decorate a heading that wikilinks point into — an emoji, a `— ✅ CLOSED`, a status
+  marker. A fragment must match the **complete** heading text, so decorating one breaks every
+  link into it, and it breaks them by reporting "not found" rather than by failing loudly.
+  Put the marker on the line below.
+
+> 🔴 **DEFERRED WORK, written down so it is a line of work tomorrow rather than a fourth
+> rediscovery.** Three occurrences on 2026-08-10, two actors, one cause. Two wikilinks aimed at
+> `#DEFAULTS THAT BIT US` never resolved, because the heading is `## 🩸 DEFAULTS THAT BIT US`.
+> A queue entry decorated as `## FT-039 — ✅ CHIUSA` broke the three links into `#FT-039` and
+> had to be undecorated. And a dangling-reference probe reported twelve missing `DL-` records
+> that all exist, because its pattern did not cross the emoji in `### 🔴 DL-MECH-029`.
+>
+> The repair is not a new guard. The LINT already walks headings and already resolves
+> fragments: it needs to **normalise away emoji and decoration before comparing, in both
+> directions** — when it collects anchors and when it resolves fragments. One site, no new
+> mechanism. The anti-pattern above stands whether or not that lands, because a rule a person
+> follows is cheaper than a rule a tool repairs.
+>
+> Priority argument: a decoration added tomorrow silently breaks yesterday's links. It does not
+> fail loudly — it says "not found", which is the compounding-loss class.
 
 ---
 

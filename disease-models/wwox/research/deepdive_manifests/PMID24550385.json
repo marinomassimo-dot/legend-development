@@ -2,11 +2,14 @@
   "schema_version": 2,
   "pmid": "24550385",
   "doi": "10.1074/jbc.M113.526137",
-  "receipt": "FTR-20260810-24550385-01",
+  "receipt": "FTR-20260810-24550385-02",
   "landing": [
+    "FTR-20260810-24550385-02",
     "FTR-20260810-24550385-01",
-    "full_text_queue_current.md#FT-060"
+    "full_text_queue_current.md#FT-060",
+    "discovery_ledger_current.md#DL-THER-095"
   ],
+  "receipt_pointer_note": "🔴 THIS FIELD WAS STALE FOR AN HOUR AND I MADE IT SO. The manifest was written under the partial receipt -01 and never repointed when -02, the complete read, landed and claimed it in its outputs. Found by auditing every manifest against the ledger during the merge, not by noticing. IT IS A CLASS, NOT MY SLIP: five manifests declare a receipt that a later event has superseded (24550385, 38182577, 38499540, 42397075, 42422765) and four are claimed by no event at all (22193544, 29724996, 34214506, 35716775), across four actors. The reason is structural — `require_work_manifest` enforces receipt -> manifest and nothing enforces manifest -> receipt, so the pointer can go stale in complete silence while every existing check stays green. Only this one is repaired here; the rest belong to their authors and to the integrator.",
   "skills_considered": [
     {
       "skill": "legend-deepdive",

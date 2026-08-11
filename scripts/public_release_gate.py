@@ -196,6 +196,32 @@ def semantic_blocks(text: str) -> Iterable[tuple[int, str]]:
         yield start, block
 
 
+STUDY_IDENTIFIER = re.compile(
+    r"(?i)\bPMID[\s:_-]*\d{6,9}\b|\bPMC\d{5,9}\b|\b10\.\d{4,9}/\S{3,}"
+)
+
+
+def attribution_window(text: str, block_offset: int, block: str, rel: str) -> str:
+    """The text a block's parental claim may be attributed to.
+
+    🔴 A JSON file has no blank lines, so `semantic_blocks` yields it whole and every
+    block-scoped rule silently becomes file-scoped. Measured: `PMID39416860.json` is ONE block
+    of 19 680 characters, so "maternal and paternal in the same block" degenerates to "both
+    words appear somewhere in this manifest" — guaranteed for any manifest about a trio paper.
+    That is not the rule anyone wrote. For a per-paper record the file IS the record, and its
+    `pmid` field is the attribution, so the window is the file and the scoping question is
+    answered honestly rather than by accident.
+
+    For prose the window reaches back to the enclosing `##` heading, because a queue entry
+    names its paper in the heading block and argues about it three paragraphs later. Without
+    that reach, attribution would depend on how the author happened to break paragraphs.
+    """
+    if rel.endswith(".json"):
+        return text
+    start = text.rfind("\n## ", 0, block_offset)
+    return text[start if start >= 0 else 0: block_offset + len(block)]
+
+
 def parent_origin_is_explicitly_negated(window: str) -> bool:
     """Allow policy statements that explicitly remove/decouple this linkage."""
     subject = (
@@ -291,6 +317,12 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         r"parent[- ]of[- ]origin|inherited from (?:the )?(?:mother|father)|"
         r"allele materno|allele paterno|materno|paterno|madre|padre)\b"
     )
+    # 🔴 KNOWN GAP, pre-existing and deliberately not widened on 2026-08-10: `mother'?s` matches
+    # *mother's* and *mothers*, NOT bare *mother*. Measured: "The mother is heterozygous and the
+    # father carries the missense" produces no finding at all. Recorded here rather than fixed
+    # in the same commit that narrowed `PARENT_OF_ORIGIN_PAIRING`, because widening a privacy
+    # net and narrowing one in a single change makes neither reviewable — and because widening
+    # it needs its own measurement of what it would newly catch across the corpus.
     maternal_origin = re.compile(
         r"(?i)\b(?:maternal(?:ly)?|mother'?s|materno|materna|madre)\b"
     )
@@ -428,18 +460,75 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
                 and paternal
                 and not parent_origin_is_explicitly_negated(block)
             ):
-                findings.append(
-                    Finding(
-                        "BLOCK",
-                        "PARENT_OF_ORIGIN_PAIRING",
-                        rel,
-                        line_number(
-                            text,
-                            block_offset + min(maternal.start(), paternal.start()),
-                        ),
-                        "Maternal and paternal disease-model sides are paired in one record.",
-                    )
+                # 🔴 ATTRIBUTION, added 2026-08-10 after this rule blocked a published case
+                # report and the two sharp rules stayed silent — correctly, because the
+                # variants involved are not the reference genotype's.
+                #
+                # This is the broad net of the three: a maternal word and a paternal word in
+                # one block, no variant, no person noun, no reference genotype. Its POPULATION
+                # is "every paragraph naming both parents"; its TARGET is "paragraphs about the
+                # private individual". A repository built on trio literature lives in the
+                # complement, and the corpus had only avoided it by accident — no earlier paper
+                # happened to mention both parents in one paragraph.
+                #
+                # What the line actually is, measured against what already passes: this state
+                # carries published individual-level readings throughout — a single-patient case
+                # report with age, sex and a ClinVar accession; a thirteen-patient cohort with
+                # per-patient variants. All on `main`, all through this gate. So the boundary
+                # the repository enforces is not "no individual data", it is "not the private
+                # overlay's individual", which is exactly what `CLAUDE.md` says the layering is.
+                #
+                # So the net now asks whose parents these are, by the only mechanical proxy
+                # that separates the two: is this record ATTRIBUTED to a published study. The
+                # reference genotype is never suppressed — its variants below force the BLOCK
+                # whatever the attribution says, and the two sharp rules fire independently.
+                #
+                # And a suppression is REPORTED, not silent. A privacy exemption nobody can see
+                # in the output is the one that stops being reviewed.
+                window = attribution_window(text, block_offset, block, rel)
+                # 🔴 THE SAME WINDOW FOR BOTH QUESTIONS, and the first version got this wrong
+                # in the dangerous direction: attribution was evaluated on the wide window and
+                # the safeguard on the narrow block. A heading naming `Q230P` then WIDENED the
+                # attribution without widening the protection, so the reference genotype
+                # stopped being unsuppressable exactly when its variant sat in a section title
+                # instead of a paragraph — which is the realistic shape, a queue entry titled
+                # with its paper and arguing three paragraphs below.
+                #
+                # A safeguard must be at least as wide as whatever can suspend it. Widening it
+                # is conservative in one direction only: it can produce more BLOCKs, never
+                # fewer. Found by a reader who tried the neighbouring case instead of the one
+                # the test declared.
+                reference_present = bool(
+                    variant_a.search(window)
+                    or variant_b.search(window)
+                    or reference_genotype.search(window)
                 )
+                attributed = bool(STUDY_IDENTIFIER.search(window))
+                line = line_number(
+                    text, block_offset + min(maternal.start(), paternal.start()))
+                if attributed and not reference_present:
+                    findings.append(
+                        Finding(
+                            "REVIEW",
+                            "PARENT_OF_ORIGIN_ATTRIBUTED",
+                            rel,
+                            line,
+                            "Maternal and paternal sides are paired, and the record is "
+                            "attributed to a published study whose variants are not the "
+                            "reference genotype's. Not blocked; read it before publishing.",
+                        )
+                    )
+                else:
+                    findings.append(
+                        Finding(
+                            "BLOCK",
+                            "PARENT_OF_ORIGIN_PAIRING",
+                            rel,
+                            line,
+                            "Maternal and paternal disease-model sides are paired in one "
+                            "record, with no published study to attribute them to.",
+                        )
+                    )
         # Catch a concluding cross-paragraph reassembly only when it uses
         # explicit pairing language such as "these two variants" or "together".
         for pairing in cross_paragraph_pairing.finditer(text):

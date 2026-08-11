@@ -1625,6 +1625,54 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
   🟢 **(b) Ligandi del sito Axin/GID, inclusa la logica WWOX-mimetica**: agiscono su una superficie **adiacente all'inserto**, quindi hanno una base strutturale per discriminare. Rafforza `DL-MECH-067`.
   🧩 **(c) Coerenza ritrovata**: β2 promuove la crescita assonale **pur essendo una cattiva chinasi di tau** ⇒ il suo ruolo sulla crescita passa per **altri substrati** (CRMP-2, MAP1B — non testati qui). Il profilo ideale diventa quindi esplicito: **inibire β1, risparmiare β2.**
 - 🔴 **Premesse portanti da non perdere di vista**: (i) che il legame al sito di Axin conferisca preferenza per **β1** resta `PREMISE: INFERENZA` — deriva dall'affinità differenziale di **Axin** (Castaño, `abstract_only`), **mai misurata su WWOX**; (ii) Saeki usa **HEK293T**, non neuroni; (iii) **Ser404 non è stato testato** da nessuno per isoforma.
+#### 🔴 AGGIUNTA 2026-08-10 — l'aggiudicazione di pagina chiude il debito di locator e corregge tre punti di questa voce
+
+La lettura del 2026-07-26 era completa ma **senza locator**: il debito era dichiarato nel
+manifest e non colmato. Colmarlo ha richiesto la strada lunga, perché il **text layer di questo
+PDF è `SUSPECT`** — `×` diventa `U+0002`, `±` diventa `U+0003`, e **`µ` viene semplicemente
+perso**, così che *«10 μl di tampone 2×»* si estrae come *«10 ml of 2\x02»*: un volume sbagliato
+di mille volte, in una frase che continua a leggersi come inglese corretto. Non esiste superficie
+XML/HTML per questo articolo. I 14 locator sono quindi ancorati alla **pagina stampata**, ognuno
+dentro un ritaglio che si rigenera al proprio digest dal PDF sorgente
+([`page_adjudications/PMID21212533/adjudications.json`](page_adjudications/PMID21212533/adjudications.json),
+11 ritagli, `regenerate_adjudications.py verify` PASS). Aprire le figure ha cambiato tre cose.
+
+1. 🔴 **Il fattore «~3–10×» sopra non è una misura, ed è sbagliato per difetto.** Le due
+   titolazioni di Figura 3 **non sono appaiate**: β1 corre 0–0.1–0.3–1–3 µg/mL, β2 corre
+   0–0.3–1–3–10. **Non esiste una concentrazione massima comune** e β1 non è mai stata testata a
+   10. Il pannello inferiore αGSK-3β mostra enzima **solo nelle corsie più alte** di ciascuna
+   serie: è un controllo di presenza, non di input equivalente. Nessuna densitometria, figura
+   *«representative of three independent experiments»*. Ciò che il pannello sostiene è
+   **β1-a-1 contro β2-a-10**, cioè **dell'ordine di 10× e plausibilmente più**; ciò che non può
+   sostenere è un rapporto misurato. *Sostituire «~3–10×» con «≥10× a ispezione, non
+   quantificato».*
+2. 🔴 **La posizione dell'inserto: la figura degli autori e UniProt non concordano di un
+   residuo.** Figura 4 marca l'inserto **fra V303 e K304**, e dà CT = **380–420** in β1 e
+   **393–433** in β2, con didascalia *«The sequence of CT is identical between GSK-3β1 and
+   GSK-3β2»*. Questa voce cita `UniProt P49841` / `VSP_004790` come **`K303`**. Nulla di portante
+   si muove — su entrambe le numerazioni l'inserto cade **4–5 residui a valle di H299**, adiacente
+   alla superficie di docking Axin/GID (`G262-L273` + `N285-H299`) che WWOX lega, e lontano dal
+   sito ATP identico — ma il numero **non va citato come se le due fonti coincidessero**.
+3. 🟢 **Figura 5 dice più di quanto dicesse questa voce, nella direzione giusta.** Nel pannello
+   β1 la banda `αptau(Ser396)` di `ΔCT` è **comparabile al WT** mentre la sua banda `αGSK-3β` è
+   **visibilmente più debole** del WT: fosforilazione piena con **meno enzima**. Nel pannello β2
+   `ΔCT` scende **al livello del mock** con banda `αGSK-3β` forte. Quindi la perdita in β2 non è
+   perdita di espressione *e* la tenuta in β1 non è un vantaggio di espressione. 🔴 **Confine:**
+   i due pannelli sono **blot separati** — la figura confronta WT contro ΔCT *dentro* un'isoforma
+   e non autorizza alcun confronto di ampiezza β1-contro-β2.
+4. ⚠️ **Figura 1 non è normalizzata, e conviene saperlo.** Il controllo `αtau` **non è uguale fra
+   le corsie**: nella corsia β1 domina la banda superiore (ritardata) e quella inferiore è
+   impoverita — lo shift di mobilità atteso da tau fortemente fosforilata — mentre mock e β2
+   mostrano entrambe le bande. Nessuna densitometria. La direzione dell'asimmetria corre **contro**
+   la conclusione del paper, non a favore: β1 raggiunge più fosfo-tau su meno substrato non
+   spostato. La conclusione regge; un numero preso da quel pannello no.
+5. ⚠️ **Il controllo APP è «equivalente per segnale totale», non per unità di enzima**: nel
+   pannello inferiore di Figura 2 β2 è espressa almeno quanto β1.
+
+Nessuna di queste sposta lo `statement causale` né l'argomento del sito ATP. Tre spostano un
+numero che era presentato come misura, e uno rafforza il meccanismo. Locator:
+`deepdive_manifests/PMID21212533.json`, voci 5–11.
+
 - **Belief**: **alto** sul dato biochimico (controlli interni di specificità APP e pGS-2, doppio sistema cellule + ricombinante, figure coerenti col testo); **alto** sull'argomento del sito ATP (identità di sequenza); **medio-basso** sulla preferenza di isoforma di WWOX (non misurata).
 - **Esperimento**: invariato e decisivo — **WWOX e WWOXtide³⁸⁸⁻⁴⁰⁷ contro β1 vs β2 in parallelo**, con lettura di pTau S396 **e S404**. Aggiungere `β2ΔCT` come controllo: se WWOX inibisce β1 ≫ β2 e l'effetto su β2 non cambia rimuovendo la CT, la discriminazione è nella tasca di docking e non nella coda.
 - **Interconnessioni**: `DL-MECH-064` · `DL-MECH-066` · `DL-MECH-067` · `DL-BIO-013` · `DIS-009` · [[therapeutic_strategies_current#TX-005 — Repurposing: lithium / GSK3β (and other nodes)|TX-005]] · [[claim_registry_current#CLAIM 016]] · [[full_text_queue_current#FT-027]] · [[full_text_queue_current#FT-028]]
@@ -2104,7 +2152,107 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
   porta affatto.
 - **Interconnessioni:** `DL-MECH-075` · `DL-MECH-076` · `DL-MECH-077` · `FT-041` · `FT-042`.
 
-### DL-THER-081 — A51, primo intervento farmacologico su un modello neurale umano WWOX-deficiente: recupera i progenitori e non i neuroni di strato
+### DL-METH-079 — Un **titolo** che afferma il contrario del proprio paper, e viaggia più lontano di qualunque altra superficie
+- **Status:** open · **Tag epistemico:** `CORREZIONE` di attribuzione a livello di **titolo**, non di claim.
+- **Fonte:** PMID **38182577** (Akkawi 2024, *Cell Death Dis*; letto integralmente, `FTR-20260810-38182577-01`, manifest strict PASS 22 locator).
+- 🔴 **Il fatto:** il titolo pubblicato è *"WWOX **promotes** osteosarcoma development via **upregulation** of Myc"*. Letto alla lettera afferma che WWOX promuove il tumore e alza MYC. Il paper dimostra l'opposto su **tre** superfici concordi: il corpo (*"depletion of WWOX results in Myc upregulation as an early event"*), la didascalia della propria Figura 6 (*"WWOX expression is inversely correlated with c-Myc in OS"*) e l'**abstract**, che è corretto e coerente. La lettura intesa è *"WWOX **[loss]** promotes…"*. L'errata PMID 38355659 corregge un nome d'autore e **non tocca il titolo**.
+- 🔴 **Perché è un reperto di metodo e non di biologia:** il titolo è l'artefatto che viaggia più lontano. Sta in PubMed, nel TSV `NOT_EVIDENCE` del corpus, nelle liste di citazione, e **stava nella tabella di triage consegnata dalla sessione fornitore il 2026-08-10** come "WWOX promuove l'osteosarcoma via Myc". Un modello costruito leggendo titoli registra **WWOX come oncogene nell'osso** — cioè l'inverso della sua funzione. È la dimostrazione concreta della **regola 4** (`grep`/keyword vietati come metodo d'analisi) e del perché il corpus di abstract è `NOT_EVIDENCE`: qui nemmeno l'abstract sbaglia, sbaglia solo il titolo, e nessuna quantità di triage sui metadati poteva accorgersene.
+- **DATO — la direzione, che è quella giusta:** WWOX↓ → MYC↑, misurata in quattro modi indipendenti nel paper (RNA-seq DKO vs SKO; qPCR; ChIP-Seq di MYC sui promotori; e correlazione inversa WWOX/MYC in osteosarcoma umano TCGA TARGET GTEx, P<0,001). **Stessa direzione** di PMID 29724996 nel fegato, letto lo stesso giorno. **Nessun conflitto cross-tissue: WWOX sopprime MYC in entrambi i tessuti.**
+- ⚠️ **Limite da portare con il dato:** la "restoration" di WWOX in Fig 6G è una **sovraespressione 9×** che porta MYC a 0,4, cioè *sotto* la baseline SKO; e il divario proteico DKO/SKO è **1,4×** contro **4,7×** di mRNA, non riconciliato dal paper. Il livello fisiologico di WWOX non è stato testato.
+- **REVIVAL_TRIGGER per la classe di errore:** ogni volta che una sessione ordina o cita un paper del corpus **a partire dal titolo**, quel titolo va considerato non verificato finché il corpo non è aperto. Un titolo non è un abstract e non è una lettura.
+- **Interconnessioni:** `DL-MECH-078` · `IMPORTED_PREMISE_ATTRIBUTION_GATE` · regola 4 in [[gold_is_in_the_details]].
+
+### DL-THER-080 — Simvastatina→MCM7 in osteosarcoma *Wwox/Trp53*-null: seme di repurposing, con i suoi limiti attaccati
+- **Status:** open · **Tag epistemico:** `IPOTESI` / seme di repurposing. **Non** un candidato terapeutico.
+- **Fonte:** PMID **38182577**, Figura 7 (ispezionata a 1975 px).
+- **DATO in vivo:** simvastatina 60 mg/kg per gavage, 10 giorni, su tumori da iniezione di yBM DKO in NOD/SCID: dimensione da ~0,42 a ~0,21 cm³ (`****`), peso da ~0,71 a ~0,55 g (`***`), MCM7 all'IHC da ~0,43 a ~0,30 (`**`).
+- ⚠️ **Tre limiti che il testo non porta, e che il pannello sì:**
+  1. la selettività dichiarata è smentita dalla figura stessa — il testo scrive *"did not affect control BM cells"*, ma in Fig 7C la vitalità del midollo di controllo scende da ~1,05 a ~0,73 a 40 µM: **effetto ridotto, non assente**;
+  2. il trattamento abbassa **sia MCM7 sia c-Myc** (Fig 7B), quindi l'esperimento non separa i due bersagli;
+  3. la maggiore sensibilità del DKO rispetto al SKO (Fig 7E) è affermata **senza alcun test statistico nel pannello** e su due repliche biologiche per gruppo.
+- 🔴 **Perché NON entra in BLOCK-1 oggi:** il bersaglio è MCM7 nell'osso; non esiste in questo paper alcun razionale CNS, nessuna misura di penetrazione della barriera, nessun legame con un genotipo WWOX-DEE. Promuoverlo richiederebbe che la direzione WWOX→MYC sia stabilita *nel cervello* e che il MYC neuronale sia un bersaglio con un readout prossimale — nessuna delle due condizioni è soddisfatta.
+- **Interconnessioni:** `DL-METH-079` · PMID **29724996** (asse WWOX–proliferazione, `c-Myc` soppresso nel fegato).
+
+### DL-METH-081 — **Le superfici-titolo si invertono, la scienza no**: seconda occorrenza consecutiva, e adesso è una classe
+- **Status:** open · **Tag epistemico:** `CORREZIONE` di attribuzione a livello di **superficie**, mai di dato.
+- **Fonti:** PMID **38182577** (`DL-METH-079`) e PMID **38499540** (letto, `FTR-20260810-38499540-01`), stesso laboratorio, consecutivi.
+- 🔴 **Il pattern:** in entrambi i paper il **corpo**, i titoli di sezione dei Risultati e — dove esiste — l'**abstract grafico** sono corretti e concordi. A invertirsi è la superficie che fa da titolo:
+  - `38182577`: il **titolo dell'articolo** dice *«WWOX promotes osteosarcoma development via upregulation of Myc»* mentre il paper dimostra che è la **perdita** di WWOX ad alzare MYC;
+  - `38499540`: **tre didascalie di figura su sei**. Fig 2 dice *«redirects the DSB repair to NHEJ»* e il pannello mostra 53BP1 (NHEJ) che **scende** da ~0,123 a ~0,027 (`***`) e RAD51 (HDR) che **sale** da ~0,008 a ~0,052 (`***`). Fig 4 e Fig 5 dicono *«Loss of WWOX…»* su esperimenti di **sovraespressione**, con i pannelli etichettati `EV` vs `WWOX OE` — e la didascalia della Fig 4 si smentisce da sola **undici parole dopo**, scrivendo *«with EV (left) or WWOX OE (right)»*.
+- 🔴 **Perché è un reperto di sistema e non di due paper:** un curatore automatico che ingerisce **titoli e didascalie prima del corpo** — cioè il comportamento normale di un estrattore — registrerebbe su questi due lavori **l'esatto contrario di ciò che dimostrano**. È la dimostrazione più concreta disponibile del perché serve il source-lock verso DisMech, e del perché la **regola 4** vieta grep e keyword come metodo d'analisi. Nessuna quantità di triage sui metadati poteva accorgersene: qui nemmeno gli abstract sbagliano.
+- **DATO di 38499540, direzione corretta:** WWOX presente → NHEJ; WWOX perso → NHEJ compromesso e più HDR. Misurato in vivo (Fig 2A/B) e in vitro (Fig 5E: 53BP1 sale nell'OE, `****`).
+- ⚠️ **Tre limiti che il testo non dichiara:** il reporter SeeSaw **non fa see-saw** — l'HDR sta allo 0,03–0,83% degli eventi, quindi il nullo sull'HDR poggia su una misura al pavimento e solo il NHEJ si muove; il braccio di controllo della sopravvivenza (Fig 1B) porta **due sole marche di censura** e nessun *n* stampato; e il corpo afferma che il danno al DNA non varia mentre Fig 5C stampa `**` **due volte** proprio nella linea dove gli effetti sono massimi.
+- **REVIVAL_TRIGGER:** se un terzo paper dello stesso gruppo mostra la stessa inversione, non è più una classe di errore editoriale ma un problema di produzione da segnalare alla Fondazione, che finanzia il laboratorio.
+- **Interconnessioni:** `DL-METH-079` · regola 4 in [[gold_is_in_the_details]] · spec di export/source-lock.
+
+### DL-METH-082 — **Una coppia è una contraddizione solo se il pannello che falsifica è quello che la frase cita**
+- **Status:** open · **Tag epistemico:** `CORREZIONE` di metodo, applicata retroattivamente a tre manifest già validati.
+- **Origine:** regola proposta da A e verificata dall'orchestratore nell'XML; audit eseguito il 2026-08-10 su tutte le **14 coppie** `text_contradicted_by_panel` esistenti nei manifest di questa sessione (`PMID29724996` 6, `PMID38182577` 4, `PMID38499540` 4).
+- 🔴 **La regola:** una coppia testo↔pannello afferma che *il paper si contraddice*. Quell'affermazione regge solo se il pannello che falsifica è **quello che la frase stessa cita**. Se il lettore ha scelto un altro pannello, l'asimmetria si rovescia: non è la frase smentita dalla propria evidenza, è **un'altra evidenza che la qualifica** — relazione più debole, e da dichiarare come tale. Operativamente: lo snippet del bersaglio è **esteso fino a contenere la citazione dell'autore**, così il collegamento frase→pannello diventa un'asserzione della fonte e non del lettore; ogni entry-pannello porta un `cited_panel_check` che dice se il pannello letto è quello citato.
+- **Esito dell'audit — 12 su 14 passano, 2 declassate.** Le due che non passano sono entrambe in `38182577`, ed è la seconda volta in due giorni che il supplement e poi l'audit correggono le mie coppie sullo stesso paper:
+  - la frase *«significant reduction in Myc levels upon WWOX restoration»* cita **Fig 6D**, io avevo usato **Fig 6G**;
+  - la frase *«low expression of Myc and its targets in SKO yBM»* cita **Fig 6A, B**, io avevo usato **Fig 6C**.
+  Nessuna delle due è stata **ri-puntata**: ri-puntare avrebbe fatto sembrare sane le coppie e cancellato il disallineamento, che è esso stesso il reperto. Sono state declassate a `panel_qualifies_text` con puntatore `qualifies`, campo coniato in anticipo sulla spec esattamente come `panel_text_relation`.
+- 🔴 **Reperto nuovo emerso dall'audit — la citazione di `38182577` punta a un pannello che non contiene l'esperimento.** La frase riporta l'effetto della **ri-espressione di WWOX** su Myc e cita Fig 6D. Fig 6D, per **propria didascalia** (*«D mRNA levels of Myc target genes in DKO and SKO yBM cells»*) e per **propri pixel** (cinque grafici, due sole categorie sull'asse x, `SKO-yBM` e `DKO-yBM`, nessuna corsia `EV`/`OE`), **non contiene alcun braccio di sovraespressione** — e il suo c-Myc va nella direzione **opposta** alla frase, `~4,7×` in **salita** nel doppio knockout (`****`). L'unico pannello con una corsia WWOX OE è **6G**, che la frase non cita. Terza superficie difettosa nello stesso articolo dopo il titolo invertito (`DL-METH-079`): **titolo, e ora puntatore interno**. Il corpo, di nuovo, resta corretto.
+- ⚠️ **Errore mio, dichiarato:** sulla frase *«low expression of Myc… in SKO yBM»* il mio snippet si fermava **prima del comparatore dell'autore** — *«as compared to those in DKO cells»*. Tolto il comparatore, una frase **relativa** sembra assoluta, e la coppia che ci poggiava sopra era una mia costruzione, non un errore del paper. È la stessa forma della calibrazione Iatan segnalata dall'operatore: **una citazione che perde il qualificatore diventa un'affermazione diversa.** Lo snippet ora arriva fino alla citazione.
+- **Sesta coppia di `29724996`, tenuta ma etichettata debole:** *«it continued rising in Wwox ΔHep mice»* **non cita alcuna figura**; la citazione `(Fig. 7a, b )` appartiene alla frase precedente. L'eredità è dichiarata su entrambi i membri invece di restare invisibile. Debole e dichiarata, non scartata.
+- **REVIVAL_TRIGGER:** se il validator adotta `panel_qualifies_text`, le due coppie declassate vanno rilette per stabilire se il disallineamento è un errore di citazione dell'autore (`6D`: dimostrato) o una scelta del lettore (`6C`: sì).
+- **Interconnessioni:** `DL-METH-079` · `DL-METH-081` · `PATTERN_ALREADY_SOLVED_GATE` — l'invariante `surface: figure`/`article_text` e questo `cited_panel_check` sono la stessa disciplina applicata a due livelli, e in entrambi i casi il secondo livello è stato scoperto **dopo** aver applicato il primo.
+
+### DL-MECH-083 — **La catena K63 su WWOX-K274 lo stabilizza: il default che ci aveva morso, misurato al contrario sul gene stesso**
+- **Status:** open · **Tag epistemico:** `DATO` sul meccanismo in cellule tumorali e MEF; `INFERENZA` per qualunque trasferimento a un genotipo WWOX-DEE.
+- **Fonte:** PMID **25331887** (Abu-Odeh 2014, *PNAS*; letto, `FTR-20260810-25331887-01`, manifest strict PASS 29 locator).
+- 🔴 **Il fatto:** WWOX porta poliubiquitinazione **K63-linked** sulla lisina **K274**, mediata dall'E3 ligasi **ITCH**, e quella catena **non lo degrada — lo conserva e lo sposta**. Il mutante `K274R` ha **emivita più corta** del wild type e non accumula nel nucleo. La ubiquitinazione è qui il segnale di *ingresso nel nucleo* e di *stabilizzazione*, non di distruzione.
+- 🔴 **Perché è un reperto per il sistema e non solo per il paper:** la tabella `DEFAULTS THAT BIT US` del dismissal ledger apre con *polyUb → proteasoma*, il default che il 2026-07-12 aveva prodotto un falso negativo. Qui lo stesso default è misurato al contrario **sulla proteina di cui ci occupiamo**, non su un substrato analogo. **Regola di ri-audit:** ogni rigetto che poggia su «è ubiquitinato, quindi è degradato» va rivisto contro questo dato — e in particolare qualunque ragionamento su turnover, stabilizzazione o rescue di un allele WWOX deve partire dal fatto che almeno una delle sue catene fa il contrario.
+- ⚠️ **Limiti attaccati al dato, tutti dal pannello e non dal testo:** in Fig 6A l'**input** di `K274R` è molto più debole del wild type, quindi il pull-down confronta un'esca abbondante con una scarsa e «lacked ubiquitination» non è separabile da «ce n'era meno» — e il paper stesso dichiara `K274R` meno stabile, il che **peggiora** il confondimento invece di spiegarlo. La discriminazione K63-contro-K48 vive in **Fig S6C**, e il supplementary è **irrecuperabile** (`FT-053`). L'identificazione di K274 e di ITCH **non è un risultato di questo paper**: è importata dal rif. 3 (Abu-Odeh 2014 *JBC*), non letto e accodato — `IMPORTED_PREMISE_ATTRIBUTION_GATE`.
+- **PREMISE_TAG:** `PREMISE: DATO` per la direzione (emivita più corta senza la lisina); `PREMISE: INFERENZA` per il ruolo di K274 come accettore principale, che è misurato con un confondimento di input dichiarato.
+- **REVIVAL_TRIGGER:** se il supplementary o il rif. 3 diventano leggibili, riverificare S6C e la mappatura ITCH→K274 e promuovere o declassare di conseguenza.
+- **Interconnessioni:** `DEFAULTS THAT BIT US` in [[dismissal_ledger_current]] · `DL-METH-084` · [[epistemic_discipline]].
+
+#### 🔴 CALIBRAZIONE 2026-08-10 — questa voce era scritta come se fosse nuova, e il modello sapeva già più di lei
+Aperto il rif. 3 (`PMID 24550385`, `FT-054`) sono emerse tre cose che riscrivono la voce sopra. Registrate qui invece che riscrivendola, perché la differenza fra ciò che avevo concluso e ciò che il modello già conteneva è essa stessa il reperto.
+
+1. **`DL-MECH-083` non si aggancia a niente, e doveva.** `DL-MECH-048` (superseded), `DIS-001` (**riaperta**) e la riga **`D-01`** della tabella `DEFAULTS THAT BIT US` trattano già ACK1/ITCH e il default *polyUb → proteasoma*, con più sfumature di quante ne avessi io. **Mahajan 2005 è già in casa come `corpus placeholder`, PMID 16288044.** Ho scritto una voce parallela a un ragionamento esistente: è la stessa **applicazione disomogenea** che ho contestato altrove oggi, commessa da me.
+
+2. **La formulazione giusta non è «il default è invertito», è «su WWOX la via è biforcata».** Il rif. 3 nomina **due** vie di ubiquitinazione con esiti opposti sulla stessa proteina: la propria — ITCH, catena **K63**, **Lys-274**, esito localizzazione nucleare — e quella di Mahajan, dove **WWOX full-length è poliubiquitinato *e degradato*** mentre `WWOXΔ5–8` non lo è. Gli autori notano che gli esoni 5–8 contengono proprio il residuo K274 e dichiarano aperto se sia lo stesso: *«Whether Lys-274 is the same lysine in the WWOX C terminus that also targets WWOX for degradation is not known and would be of great interest to determine»* — verificato verbatim contro l'artefatto. Quindi il default non va sostituito con il suo inverso: **va sostituito con l'obbligo di misurare la via**, che è ciò che `D-01` diceva già.
+
+3. ✅ **E qui il ri-audit produce compounding invece di sola correzione.** `DIS-001` porta, come cautela argomentata e senza fonte, *«inhibiting ITCH would strip WWOX of its DDR function via ATM»*. Era un ragionamento scritto **prima** che qualcuno leggesse `25331887`. Adesso ha una misura sotto: `25331887` mostra che la deplezione di WWOX smorza il checkpoint ATM, e in **Fig 7C** che i MEF `Itch`-KO hanno p-KAP1 ridotto **e** accumulo di WWOX ridotto. **La cautela di `DIS-001` passa da inferenza a inferenza sostenuta**, e la sua conclusione operativa — ITCH come *sonda sperimentale*, mai come bersaglio terapeutico — si rafforza.
+
+- **PREMISE_TAG aggiornato:** `PREMISE: DATO` per l'identificazione ITCH/K63/Lys-274 (spettrometria sul peptide `FTDINDSLGK274LDFSR` più mutagenesi `K274R`, rif. 3 Fig 5 E–G — da riverificare come locator alla lettura completa); 🔴 `PREMISE: NON RISOLTA` per la **stabilizzazione**, che poggia sulla sola asserzione di `25331887` con l'evidenza in `Fig S7B`, cioè in un supplementary **irrecuperabile** (`FT-053`).
+- **Interconnessioni aggiunte:** `DL-MECH-048` · `DIS-001` · `D-01` · `FT-053` · `FT-054` · PMID **16288044**.
+
+### DL-METH-084 — **Due paper dello stesso laboratorio si contraddicono sulla direzione dell'HDR, lo dicono in stampa, e la spiegazione pubblicata è incompleta**
+- **Status:** open · **Tag epistemico:** `DATO` per entrambe le misure; `INFERENZA` per la riconciliazione.
+- **Fonti:** PMID **25331887** (2014) e PMID **38499540** (2024), entrambi con Aqeilan autore senior, entrambi letti il 2026-08-10.
+- **Il conflitto, misurato:**
+
+| | manipolazione | sistema | esito su HDR |
+|---|---|---|---|
+| `25331887` Fig 3E | **sovraespressione** di WWOX | U2OS, reporter DR-GFP, I-SceI | GFP⁺ da **10,0% a 20,8%** (`P<0,01`) — WWOX **alza** l'HDR |
+| `38499540` Fig 2A/B | **perdita** di *Wwox* | epitelio mammario murino, foci | **più** RAD51 e **meno** 53BP1 — la perdita **alza** l'HDR |
+
+- ✅ **Gli autori lo dichiarano**, e questo va detto a loro credito: *«In contrast, a previous paper by Abu-Odeh and colleagues, has shown that WWOX enhances HDR in U2OS cells [36]»*, attribuendolo a linee cellulari e sistemi reporter diversi.
+- 🔴 **Ciò che la spiegazione pubblicata omette, e che si vede solo aprendo il pannello:** in Fig 3E di `25331887` **non esiste alcun braccio di perdita di funzione**. Tutte e quattro le barre sono costrutti *aggiunti* a U2OS — `EV`, `WWOX`, `WFPA`, `K274R`. Quindi un paper misura il **guadagno** e l'altro la **perdita**, e i due risultati **non sono opposti simmetrici**: non è escluso che WWOX alzi l'HDR in sovraespressione *e* che la sua assenza la alzi per un'altra via (resezione precoce, come sostiene Park et al., rif. 17). «Linee diverse» è vero e insufficiente: la differenza di **direzione della manipolazione** è la variabile non nominata.
+- ⚠️ **Nota sulla barra `K274R`:** sta a **~8,3%**, cioè **sotto** l'`EV` a 10,0%. Il testo la rende come *«was not associated with improved HR»*. Un mutante che scende sotto la linea di base non è semplicemente inattivo, e il paper non lo commenta.
+- 🔴 **E l'errore che ha portato qui era mio:** avevo accodato `25331887` (`FT-052`) sostenendo che `38499540` vi ancorasse la propria direzione in vivo. La frase *«correspond with previous in vitro findings»* cita **[17], [38], [39]**; `25331887` è il **[36]**. Avevo attribuito una citazione senza leggere il numero — la stessa forma dell'audit `cited_panel_check`, spostata dal pannello alla bibliografia. Corretto nel `multihop` di `PMID38499540.json` e in `FT-052`.
+- **Conseguenza operativa:** qualunque claim canonico su «WWOX e scelta della via di riparazione» deve portare il conflitto attaccato e **dichiarare la direzione della manipolazione**, non solo il sistema. Un claim che dica soltanto «WWOX favorisce il NHEJ» o «WWOX favorisce l'HDR» è sottospecificato rispetto a ciò che la letteratura contiene oggi.
+- **REVIVAL_TRIGGER:** la lettura di Park et al. (rif. 17 di `38499540`, PMID non risolto) è ora l'hop di massimo valore: è lo studio con cui `38499540` dichiara allineamento, e definirebbe se la via «resezione precoce» riconcilia le due misure.
+- **Interconnessioni:** `DL-MECH-083` · `IMPORTED_PREMISE_ATTRIBUTION_GATE` · `DL-METH-082`.
+
+> 🔴 **Nota di merge, 2026-08-10.** Le voci che seguono arrivano da un secondo ramo che ha
+> appeso al ledger nello stesso momento del precedente. **Tenute entrambe**: un ledger
+> append-only si somma, non si sceglie, e scartare un lato avrebbe cancellato la lettura di un
+> attore nel file che esiste per accumularla.
+>
+> Una collisione di numerazione va dichiarata invece che nascosta: i due rami hanno allocato
+> «il prossimo numero libero» contro istantanee diverse, ed entrambi sono arrivati a **081**.
+> La voce di questo secondo blocco è stata rinumerata da `DL-THER-081` a **`DL-THER-089`**,
+> che era il buco lasciato dalla stessa collisione — verificato prima di toccarla che nessun
+> file la citasse, mentre `DL-METH-081` è citata dalla coda dei full text e quindi non si
+> muove. È la stessa forma dei quattro `FT-` duplicati trovati oggi, e la stessa ragione:
+> **due rami che contano l'ultimo numero di due code diverse producono lo stesso numero.**
+
+### DL-THER-089 — A51, primo intervento farmacologico su un modello neurale umano WWOX-deficiente: recupera i progenitori e non i neuroni di strato
 - **Status:** open · **Tag epistemico:** `IPOTESI`. **Non è un candidato terapeutico** e non va descritto come tale: nessuno dei quattro requisiti di Track C è soddisfatto — la direzione di pathway non è firmata, il readout prossimale non è Tier 1/2, la sicurezza CNS pediatrica non è valutata, e il composto non è selettivo per il bersaglio nominato.
 - **Fonti:** PMID **42397075** (letto, `FTR-20260810-42397075-04`, manifest `PMID42397075.json`, **30 locator**, `MANIFEST STRICT PASS`). *Conteggio e receipt aggiornati il 2026-08-10 sera: la voce era stata scritta a 25 locator e sul receipt `-03`, entrambi veri quando scritti e superati dalla chiusura della lettura.*
 - **Cosa è A51:** un inibitore **multi-chinasi**, non un inibitore di MYC. Il paper stesso lo definisce *"a multi-kinase inhibitor (A51) established to suppress Wnt and MYC expression"*. Dose submassimale 125 nM, dalla settimana 8 alla 15 in vitro, composto fornito dal gruppo Ben-Neriah. 🔴 `PREMISE_TAG` · `PREMISE: INFERENZA` — «l'inibizione di MYC recupera la neurogenesi» poggia su un intervento che sopprime **due** vie, e l'attribuzione causale a MYC eredita l'ambiguità. Gli autori la dichiarano, non la nascondono.
@@ -2155,7 +2303,7 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
 - **Come si connette a ciò che questo repository già sa:** è l'asse **funzione** che fallisce mentre **sintesi** e **solubilità** passano — la separazione a cinque vie (*sintesi · solubilità · turnover · rotta · funzione*) che il caso del carcinoma tiroideo del 2026-07-12 impose a questo sistema. Allora fu dimostrata su una linea tumorale e su un allele; **qui è dimostrata in vivo su un allele di malattia e su materiale neurale umano di paziente.**
 - 🔴 `PREMISE_TAG` — *«se la proteina c'è, la funzione c'è»* · `PREMISE: DEFAULT_FROM_TEXTBOOK`. Va nella tabella `DEFAULTS THAT BIT US` del [[dismissal_ledger_current]], accanto a *«stabilizzare ⇒ funzione ripristinata»*, che è la stessa premessa vista dal lato terapeutico.
 - **Cosa serve per muoverlo di un gradino:** un readout **funzionale** prossimale e legato al gene — un partner di interazione la cui occupazione si misuri, non una banda su un blot. Oggi non esiste in questo corpus, e questa voce serve soprattutto a dire che **il posto vuoto è quello**.
-- **Interconnessioni:** `FT-045` · `DL-THER-081` · [[dismissal_ledger_current#DEFAULTS THAT BIT US]] · [[biomarker_endpoint]].
+- **Interconnessioni:** `FT-045` · `DL-THER-089` · `DEFAULTS THAT BIT US` in [[dismissal_ledger_current]] · [[biomarker_endpoint]].
 - **Destinazione dichiarata:** **materiale per un commit candidate**, non un candidato. Promozione a chi possiede il gate.
 
 ### DL-MECH-086 — La review dice «restored» dove il suo stesso primario mostra dieci volte il wild type, e la parentesi che lo falsificherebbe non è disegnata
@@ -2239,7 +2387,7 @@ Candidato: `CC-20260726-003`. Manifest: `deepdive_manifests/PMID22193544.json`.
 - **Cautela sull'unico numero che qualcuno sarà tentato di citare come prognosi:** la coorte di Oliver è dichiaratamente **più anziana** (media 8a 2m contro 3a 4m) e **meno letale** (23% contro 38%) della letteratura con cui è messa in pool, con null/null al 50% contro 60%. La curva di sopravvivenza è un **confronto fra gruppi**, non una prognosi. Chi la citasse come prognosi userebbe un dato di ascertainment come dato clinico.
 
 - **Cosa serve per muoverlo di un gradino:** un saggio funzionale per singola sostituzione — non abbondanza, non solubilità, ma **occupazione di un partner di interazione** — applicato per primo a `Q230P` per ricorrenza e a `P47T`/`P47R` perché sono la coppia che dimostra il punto sullo stesso residuo.
-- **Interconnessioni:** `DL-BIO-085` · `DL-META-088` · `FT-055` · `FT-056` · [[dismissal_ledger_current#DEFAULTS THAT BIT US]] · [[claim_registry_current]].
+- **Interconnessioni:** `DL-BIO-085` · `DL-META-088` · `FT-055` · `FT-056` · `DEFAULTS THAT BIT US` in [[dismissal_ledger_current]] · [[claim_registry_current]].
 - **Destinazione dichiarata:** **materiale per un commit candidate.** È una *sostituzione* di premessa, non un'aggiunta, quindi tocca affermazioni già in stato canonico e la promozione va fatta da chi possiede il gate, non da me.
 - **Interconnessioni:** `FT-045` · `DL-MECH-086` · manifest `PMID42128308.json` entries[7], entries[23], entries[24].
 - **Destinazione dichiarata:** **materiale per un commit candidate**.

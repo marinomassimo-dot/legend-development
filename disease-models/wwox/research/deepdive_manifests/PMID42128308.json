@@ -1,332 +1,334 @@
 {
-  "schema_version": 2,
-  "pmid": "42128308",
-  "doi": "10.1016/j.nbd.2026.107446",
-  "receipt": "FTR-20260810-42128308-02",
-  "landing": [
-    "FTR-20260810-42128308-02",
-    "PMID42128308_partial_locators.md"
-  ],
-  "skills_considered": [
-    {
-      "skill": "legend-deepdive",
-      "used": false,
-      "reason": "Run inline. The four figures had to be inspected from the same open document as the text they contradict, and two of the findings are cross-paper against manifests captured earlier the same day."
-    }
-  ],
-  "group_assessment": {
-    "performed": true,
-    "total_publications": 137,
-    "publications_on_gene": 65,
-    "counts_measured": "PubMed esearch 2026-08-10, carried from PMID42397075.json: 'Aqeilan RI[au]' 137, 'Aqeilan RI[au] AND WWOX' 65. Same group, same day, so the counts are not re-derived.",
-    "research_type": "primary_disease_group",
-    "output_kind": "narrative_review",
-    "is_primary_group_for_disease": true,
-    "is_primary_group_for_gene": true,
-    "weighting": "The gene's primary laboratory reviewing its own field, with the first author of the vector-optimisation primary (PMID 42422765) as first author here. That makes the review authoritative on what the field holds and makes every disagreement with its own primaries a finding rather than a discrepancy between groups."
-  },
-  "field_density": {
-    "wwox_directed": true,
-    "queries": [
-      {
-        "query": "Aqeilan RI[au] AND WWOX",
-        "route": "PubMed esearch 2026-08-10 (carried from PMID42397075.json, same group, same day)",
-        "count": 65
-      }
-    ],
-    "note": "Maximum density: a review of WWOX neurobiology written by the gene's primary laboratory. Every section is WWOX-directed by construction."
-  },
-  "multihop": {
-    "performed": true,
-    "references_enumerated": 103,
-    "enumeration_method": "Reference list split on a newline NOT preceded by a space — the delimiter this extraction actually uses, because fitz keeps the trailing space on a wrapped line. The verdict is COMPUTED, not asserted: 100% of accepted entries begin with a first-author surname and 87.4% carry a DOI, and the check prints a rejection if either falls below threshold. 🔴 TWO EARLIER ATTEMPTS FAILED AND BOTH ARE THE POINT. Splitting on 'Surname, X.,' returned 237, an overcount, because the pattern also matches authors mid-list. Filtering that by alphabetical order returned 4, a catastrophic undercount, because the first candidate captured was a mid-list author sorting at 'v' and it poisoned the chain — and that attempt PRINTED 'small, so the alphabetical assumption holds' beside a 98% rejection rate, because the sentence was hardcoded rather than computed. A verdict that cannot fail is not a verdict.",
-    "gene_direct_refs_in_source": [],
-    "gene_direct_count": 35,
-    "gene_direct_note": "🔴 THE LIST IS EMPTY AND THE COUNT IS 35, AND THE DIFFERENCE IS DELIBERATE. 35 of 103 references name WWOX, Wwox, FRA16D, WOREE or SCAR12 in their citation text — 34% of the list. Not expanded into {ref, pmid} pairs: this list is DOI-keyed with exactly one PMID in 103 entries, so dedup against a PMID-keyed registry needs DOI resolution first, and cited_reference_check has no exposure here because no reference NUMBER is claimed for any paper.",
-    "preprints_cited": 4,
-    "preprint_finding": "All four preprints are WWOX-direct, and they are two different problems. Abudiab 2025 (10.1101/2025.11.22.689900) and Lucas-Clarke 2025 (10.1101/2025.05.01.651195) are genuinely unpublished, and only the second is labelled as a preprint in the text. Steinberg 2024 (10.1101/2024.12.22.630016) and Obeid 2026 (10.64898/2026.03.11.710995) are cited at preprint DOIs although both are published — as PMID 42397075 and PMID 42422765, both read in their published form on 2026-08-10.",
-    "debt_remaining": "The 31 WWOX-direct references that are neither preprints nor already in the registry are not triaged into the queue here. That is queue work and this was a reading session; the enumeration exists so the triage can be done without reopening the paper."
-  },
-  "corpus_crossquery": {
-    "performed": true,
-    "query": "Which artifacts for this paper already exist in the shared files/ tree, before I fetch or derive anything?",
-    "hits": 2,
-    "finding": "The PDF from 7 August and the derived text surface from this morning's partial read, both present and both digest-matching. Nothing was re-derived. The four figures were extracted today as embedded image streams at their native 300 effective ppi — measured before extraction — rather than by rendering the page, so the digests are of the bytes the publisher shipped and do not depend on a renderer version."
-  },
-  "retraction_check": {
-    "performed": true,
-    "at": "2026-08-10",
-    "route": "PubMed esummary for 42128308",
-    "result": "No retraction, no expression of concern, no erratum.",
-    "hold": false
-  },
-  "source_artifacts": [
-    {
-      "path": "files/fulltext/PMID42128308_Aqeilan2026.pdf",
-      "sha256": "520c2743630b86e5e6c2af7a3e2f527d7a31ab7810839ed275c87b0d804d6be7",
-      "kind": "article_binary"
-    },
-    {
-      "path": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-      "sha256": "9e05945335845b06959ac0ec78d3de2a167a606b44398f1961e67adfc8f75576",
-      "kind": "article_text"
-    },
-    {
-      "path": "files/fulltext/PMID42128308_Aqeilan2026_assets/fig1_timeline_p2_300ppi.jpeg",
-      "sha256": "83a823d4d3f674fe35a42af2c3c2e3214bc89d373b4fcad2a37981616acec4cb",
-      "kind": "figure"
-    },
-    {
-      "path": "files/fulltext/PMID42128308_Aqeilan2026_assets/fig2_cfs_p3_300ppi.jpeg",
-      "sha256": "b6ec0c0df5221b56504e8f5be2ef66636e5d9b718f4bd988f0b93105951a8025",
-      "kind": "figure"
-    },
-    {
-      "path": "files/fulltext/PMID42128308_Aqeilan2026_assets/fig3_genetherapy_p11_300ppi.jpeg",
-      "sha256": "7b0482df9d08110acdc9da75bce4bf00f4d0849932d780aa5712bfdc07f28836",
-      "kind": "figure"
-    },
-    {
-      "path": "files/fulltext/PMID42128308_Aqeilan2026_assets/fig4_overview_p4_300ppi.jpeg",
-      "sha256": "91f71b6c19b8324a61a113585a65f18270aca0412308c231180f09475ceb166d",
-      "kind": "figure"
-    }
-  ],
-  "verbatim_locators": {
-    "waived": false,
-    "source_fulltext_indexed": false,
-    "source_fulltext_indexed_evidence": "No PMC deposit: esummary returns only pubmed, doi and pii, and elink to pmc returns no linkset. Recorded per rule 5d rather than assumed. The paper enters the class that has no structured surface, so the PDF plus a fingerprinted derived text is the only pairing available.",
-    "surface_note": "Extraction recipe, stated so it regenerates: PyMuPDF 1.26.5, page.get_text() default mode, ''.join(pages), no separator and no trailing newline, 17 pages, 131033 bytes. Sentinel PASS: two '<' and seven '>' against fifteen occurrences of significan*, which for a review carrying no primary statistics is the expected ratio, and suspicion-by-absence does not fire because comparators are present. The two-column layout breaks lines mid-word with soft hyphens, so several snippets below are the longest fragment lying within one line rather than the whole sentence. 🔴 CORRECTED THE SAME DAY, AND THE CORRECTION IS THE REUSABLE PART. The sentence above states a dichotomy that is false: shorten the snippet, or normalise the surface. There is a third option and it is the right one — QUOTE ACROSS THE BREAK, carrying the break characters and any interpolated line number verbatim. That verifies, and it was never tried. The consequence of not trying it is not cosmetic: taking 'the longest fragment that verifies within one line' means THE PAGE LAYOUT CHOOSES THE CUT POINT, and the layout does not know where the qualifier is. In this corpus the qualifying clause sits at the END of the sentence — the comparator, the figure citation, the hedge, the scope — so a layout-chosen cut drops it at a rate far above chance. Ten snippets across three manifests were extended on 2026-08-10 for exactly this reason, found by auditing the dropped sentence-tail of every text locator rather than the ones anyone had flagged. Normalising the surface remains forbidden; quoting the break is not normalising, it is quoting.",
-    "figure_provenance_note": "🔴 All four figures declare a generation tool in their captions: FigureLabs (Fig. 1), Gemini (Fig. 2), Biorender (Fig. 3), Biorender and Figure Labs (Fig. 4). They are schematics, not data panels. They were inspected at native 300 effective ppi because rule 5c requires it, and the inspection paid: Figure 2 drops a category and reassigns a gene relative to the running text. But no proposition here rests on a figure AS EVIDENCE — the figure entries are evidence about the figures.",
-    "abstract_anchoring_waived": "Every proposition below is a cross-section tension, a cross-paper disagreement, a table reading or a figure reading; none is the kind of summary statement an abstract carries.",
-    "entries": [
-      {
-        "proposition": "THE RUNNING TEXT NAMES SIX NEURODEVELOPMENTAL CATEGORIES AMONG CFS-MAPPED GENES, AND ONE OF THEM IS GLUTAMATE-RECEPTOR SIGNALLING. This is the reference version of the list, and it is the one the figure and the figure's own caption both depart from. Recorded first so the departure below has a fixed point to be measured against.",
-        "snippet": "synapse organization (GRIK2, GPHN), differ",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 1, Introduction, the enumeration of MiDAS-mapped CFS genes (Ji et al., 2020; Macheret et al., 2020)",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found — read in sequence at the start of the introduction, before any figure was opened"
-      },
-      {
-        "proposition": "🔴 A FIGURE DECLARED AS PREPARED BY A GENERATIVE MODEL LOSES A CATEGORY AND REASSIGNS A GENE, AND HERE THE TEXT IS RIGHT AND THE PANEL IS WRONG. The running text lists six categories, including 'glutamate receptor signaling pathways (GRID1, GRM5)'. The figure's 'Functional Gene Mapping at CFSs' panel shows five: the glutamate-receptor category is gone, GRID1 does not appear anywhere in the figure, and GRM5 has been moved under 'Neuron projection development' beside TIAM1 and CTNND2 — a category the text assigns to those two genes alone. The caption enumerates the same five and also omits glutamate-receptor signalling, so caption and panel agree with each other and both differ from the body. 🔴 THE OPERATIONAL POINT IS NOT THE ERROR, IT IS THE DIRECTION OF AUTHORITY. Rule 5c privileges the panel because on 2026-08-04 a panel reversed a conclusion the text did not carry — a rule written for DATA panels, where the panel is the observation and the prose is the summary. This panel is a rendering DOWNSTREAM of the prose, and its caption says so: 'This figure was prepared using Gemini.' A reader applying the 5c default here would carry away that GRM5 is a neuron-projection gene and that GRID1 is not a CFS-linked neurodevelopmental gene at all. A generated schematic is not an observation and must never carry an evidentiary locator on its own authority.",
-        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2, lower-right panel 'Functional Gene Mapping at CFSs', five labelled groups over a chromosome ideogram: GRIK2/GPHN 'Synapse organization'; POU3F2/SPOCK1 'Olfactory bulb interneuron differentiation'; TIAM1/CTNND2/GRM5 'Neuron projection development'; FGF13/PPFIA2 'CNS neuron differentiation'; SLIT2/EPHA2 'Axonogenesis'. GRID1 absent from the panel. Footer: 'High-resolution mapping reveals CFS-linked genes drive neurodevelopment and brain architecture.'",
-        "surface": "figure",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_assets/fig2_cfs_p3_300ppi.jpeg",
-        "anchor": "Figure 2, page 3, embedded image extracted at its native 300 effective ppi",
-        "panel_text_relation": "text_contradicted_by_panel",
-        "found_or_sought": "found — I opened the four figures because rule 5c requires figures inspected at original resolution, expecting schematics with nothing to check; the gene groupings were checkable and did not match",
-        "contradicts": "entries[0]"
-      },
-      {
-        "proposition": "THE GENERATOR IS DECLARED IN THE CAPTION, WHICH IS WHAT MAKES THE PRECEDING FINDING AN OPERATIONAL RULE RATHER THAN AN ACCUSATION. Four figures, four declarations: Fig. 1 'prepared using FigureLabs', Fig. 2 'prepared using Gemini', Fig. 3 'prepared using Biorender', Fig. 4 'prepared using Biorender and Figure Labs'. The provenance of a figure is therefore machine-readable from the caption in this paper, and a manifest can be required to classify a declared-generated figure as a schematic surface rather than an evidentiary one. PREMISE_TAG — the load-bearing premise of rule 5c is that a figure is an observation. PREMISE: DEFAULT_FROM_TEXTBOOK, and false for this class of figure.",
-        "snippet": "This figure was prepared using Gemini.",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Figure 2 caption, final sentence",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found — read as part of the caption, before the panel, per the rule that a figure is not read until its caption is read"
-      },
-      {
-        "proposition": "THE CAPTION OF THE GENE-THERAPY SCHEMATIC SAYS 'SUPPRESSES', WHICH IS THE WEAKER AND CORRECT WORD. Recorded as the fixed point for the panel entry that follows.",
-        "snippet": "increases myelin thickness, suppresses seizure occurrence, and reduces astroglial and inflammatory pathology",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Figure 3 caption, list of early-postnatal treatment effects",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found"
-      },
-      {
-        "proposition": "🔴 THE SCHEMATIC PROMOTES 'SUPPRESSES' TO 'NO SEIZURES', AND PRESENTS THE RESCUE AS BINARY AND COMPLETE. The panel labels the treated arm 'Normal Excitability', 'No Seizures Occurence' [sic], 'Improved Myelination', 'Increased Myelin Thickness', 'Improved Growth & Long-term Survival', 'Reduces astrogliosis', 'Reduces inflammatory response'. No dose, no vector, no fraction of animals, no time point — the figure contains no data at all. Against PMID 42422765 from this same laboratory, which I read today and where survival has a threshold between 1.23E11 and 2.63E11 vg and no treated arm survives at 4E10 or 8E10, 'No Seizures' with no dose attached is the favourable half of a dose-dependent result. 🔴 AND IT EXPOSES A GAP IN OUR OWN VOCABULARY: `text_contradicted_by_panel` presumes the panel is data. Here the panel is a drawing, so the relation is real as a discrepancy and meaningless as evidence, and the value carries no way to say which.",
-        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 3, right half, boxed treated arm: 'Normal Excitability', 'Improved Myelination', 'Increased Myelin Thickness', 'No Seizures Occurence', 'Reduces astrogliosis', 'Reduces inflammatory response'; upstream 'Wwox-null P0-P5', 'ICV Injection (P0-P5)', capsid labelled 'SynI-WWOX'; outcome arrow 'Improved Growth & Long-term Survival'.",
-        "surface": "figure",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_assets/fig3_genetherapy_p11_300ppi.jpeg",
-        "anchor": "Figure 3, page 11, embedded image extracted at its native 300 effective ppi",
-        "panel_text_relation": "text_contradicted_by_panel",
-        "found_or_sought": "found — opened alongside Figure 2 in the same pass over the four figures",
-        "contradicts": "entries[3]"
-      },
-      {
-        "proposition": "🔴 THE REVIEW SAYS 'RESTORED' WHERE ITS OWN PRIMARY SHOWS TEN-FOLD ABOVE WILD TYPE. Describing Steinberg et al. 2024 — PMID 42397075, which I closed as a complete read earlier today — the review states that neuronal WWOX re-expression restored deep-layer neuronal markers CTIP2 and SATB2. That paper's Supplementary Figure 10B–C, recorded in PMID42397075.json entries[22], reads SATB2 mRNA in treated WOREE organoids at about TEN times wild type and BCL11B/CTIP2 at about three times, with the untreated line below wild type on both. 'Restored' is the word for returning to wild type. The reason the word survives is structural and I recorded it in the same entry: the WT-versus-treated bracket is not drawn, so the comparison that would falsify 'restored' was never made. Same laboratory, same first author on the review as on the optimisation primary. 🔴 INFRASTRUCTURE GAP — this is a CROSS-PAPER contradiction and `contradicts` is an intra-manifest pointer, `entries[N]`. The grammar has no slot for it, so the link lives only in this prose and is invisible to `locator_audit.py`.",
-        "snippet": "restored deep-layer neuronal markers (CTIP2, SATB2)",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 10.4, the paragraph on AAV9-WWOX in human WWOX-deficient organoids (Steinberg et al., 2024)",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found — read in sequence; I recognised the sentence against a locator I had captured hours earlier, which is the only reason it registered as a contradiction rather than as a summary"
-      },
-      {
-        "proposition": "🔴 THE REVIEW FRAMES WPRE REMOVAL AS A SAFETY CHOICE AND ITS OWN SECTION 11 NAMES THE PRICE. Section 10.4 presents removing WPRE as 'an important design consideration aimed at avoiding excessive or poorly controlled transgene expression while preserving sufficient therapeutic efficacy'. PMID 42422765, the primary being described, shows that removal required a SIX-FOLD dose increase to recover efficacy, with protein at 2E10 without WPRE sitting at or below wild type — recorded in PMID42422765.json entries[15]. Efficacy was not preserved at dose; it was repurchased with vector. And section 11 of this same review names 'high-dose AAV administration' as the driver of DRG pathology and 'a key regulatory concern in pediatric CNS gene therapy programs'. So the review celebrates a design change in one section and, two sections later, names the cost of that change as the field's principal safety problem — without connecting them. The loop closes inside a single document and neither end mentions the other.",
-        "snippet": "aimed at avoiding excessive or poorly controlled trans­\ngene expression while preserving sufficient therapeutic efficacy.",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 10.4, the paragraph on Obeid et al. 2026 vector optimisation",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found — I was reading 10.4 for the description of a primary I had already read, and the rationale did not match the data I had recorded from it"
-      },
-      {
-        "proposition": "🔴 WWOX PROTEIN ABUNDANCE IS NOT A READOUT OF WWOX FUNCTION, AND THE P47T MOUSE IS THE PROOF. In the SCAR12 knock-in, WWOX protein levels remained comparable to wild-type controls while the mutation disrupted the WW1 domain's PPXY-binding motif, producing partial loss of function through failed interaction rather than through loss of protein. A Tier 1/2 biomarker built on WWOX abundance would score this allele as normal in an animal with adult-onset seizures, cerebellar neurodegeneration and ataxia. This is the 'function' axis failing while 'synthesis' and 'solubility' pass — the same five-way separation the 2026-07-12 thyroid-cancer case forced onto this repository, now demonstrated in vivo for a disease allele rather than in a cancer line. 🔴 QUALIFIED THE SAME DAY BY THE BIBLIOGRAPHY: both Table 1 rows cite Abudiab et al. 2025, which the reference list gives as bioRxiv 10.1101/2025.11.22.689900 and which the review never labels as a preprint. This entry is therefore IPOTESI, not DATO. The shape of the finding is unchanged and its support is not refereed — see entries[23].",
-        "snippet": "WWOX protein levels in P47T mice remained comparable to wild-type ",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 10.1, the paragraph on Hussain et al. 2023 (P47T knock-in)",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "sought — I was reading 10.1 for the model inventory; that the protein level is normal is the part that changes a biomarker decision"
-      },
-      {
-        "proposition": "🔴 OLIGODENDROGLIAL WWOX IS DISPENSABLE AT BASELINE AND REQUIRED UNDER CHALLENGE — A CONDITIONAL REQUIREMENT THAT A BASELINE ASSAY WOULD REPORT AS ABSENT. Table 1 gives the Olig2-Cre conditional knockout 'No major defects' and reads the result as compensation from other cell types. The same line under cuprizone gives 'Defective oligodendrocyte differentiation and impaired remyelination after toxic demyelination', and the review calls that a CELL-AUTONOMOUS function. Both entries cite Abudiab et al. 2025. 🔴 ENDPOINT CONSEQUENCE: an unchallenged oligodendroglial readout is a designed false negative for this axis. The same asymmetry the epistemic-discipline section names — a false negative is silent, permanent and self-reinforcing — with the trigger identified: the phenotype requires a stressor to exist.",
-        "snippet": "No major defects\nUnder normal conditions, \nWWOX from other cell \ntypes compensates for the \nloss in oligodendroglia",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Table 1, row 'Conditional deletion of Wwox in oligodendroglia (Olig2-Cre; O-KO)', column 'Main phenotypes'",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found — reading Table 1 row by row; the two Olig2-Cre rows sit adjacent and the contrast is only visible if both are read"
-      },
-      {
-        "proposition": "The neuronal side of the same axis is non-cell-autonomous and stated as such: hypomyelination across cortex, hippocampus and cerebellum with reduced myelin thickness in corpus callosum and optic nerve arises in neuronal Wwox knockouts although WWOX is intact in oligodendrocytes. Taken with the entry above, WWOX acts on myelination through BOTH routes and each is invisible in the assay that isolates the other — neuronal deletion hides the cell-autonomous arm, unchallenged oligodendroglial deletion hides the neuronal-support arm.",
-        "snippet": "these deficits arise even though WWOX remains intact \nin oligodendrocytes, suggesting a non-cell-autonomous mechanism \nthrough which neuronal WWOX supports oligodendrocyte maturation \nand myelin production.",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 10.1, closing sentence on Repudi et al. 2021a transcriptomics and electron microscopy",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found"
-      },
-      {
-        "proposition": "THE MOST COMPLETE FUNCTIONAL READOUT SET IN THE REVIEW, AND IT CONTAINS AN UNEXAMINED PHARMACOLOGICAL HANDLE. Breton et al. 2021, neocortical slices from neuronal Wwox knockouts: large-amplitude spontaneous bursts in layers II/III absent in controls; increased delta and theta power; sEPSCs up in both frequency and amplitude; sIPSCs reduced, principally in frequency; depolarised resting membrane potential; reduced action-potential threshold; increased firing probability. 🔴 And ELEVATED POTASSIUM CURRENTS, which the review reads as a maladaptive compensatory response to persistent hyperactivity. That is a signed, proximal, druggable node that nothing in this repository has looked at — potassium-channel pharmacology is a mature field with paediatric-CNS precedent. IPOTESI, and the sign is the whole question: if the elevation is compensatory, opposing it is harmful and reinforcing it may be therapeutic.",
-        "snippet": "elevated potassium currents were observed, \nwhich may reflect a maladaptive compensatory response to persistent \nneuronal hyperactivity.",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 10.2, the paragraph on intrinsic properties of pyramidal neurons",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "sought — I read 10.2 expecting the excitability phenotype and found the potassium finding, which the section presents as an aside"
-      },
-      {
-        "proposition": "AND THE INTERNEURON PICTURE IS NOT CONSISTENT ACROSS THE REVIEW'S OWN SECTIONS. Section 10.2 reports that inhibitory interneurons show minimal changes in firing properties, the only abnormality being reduced action-potential amplitude (Breton et al. 2021, neocortex). Section 7 reports a marked reduction in GABAergic interneurons and GABA synthesis in the hippocampus (Hussain et al. 2019). These are different measures in different regions and are not formally in conflict — number and synthesis versus intrinsic firing — but the review never says so, and a reader of either section alone carries a different interneuron away. Recorded because the excitatory/inhibitory imbalance is load-bearing for the seizure model and its inhibitory arm is assembled from two non-overlapping measurements.",
-        "snippet": "reduction in GABAergic interneurons and GABA synthesis within the ",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 7, the paragraph on Hussain et al. 2019; compare Section 10.2 on Breton et al. 2021",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "sought — I went back to section 7 after reading 10.2 precisely to check whether the two interneuron statements were the same statement"
-      },
-      {
-        "proposition": "🔴 THE THREE-CLASS GENOTYPE–PHENOTYPE FRAMEWORK IS PUBLISHED AND, IN THE SAME SECTION, FALSIFIED BY THREE NAMED CASES. The framework: (1) biallelic null → severe, early-lethal; (2) compound heterozygous null/missense → intermediate; (3) biallelic hypomorphic missense → milder, later-onset, SCAR12-like, on a gene-dosage model in which residual function tracks severity. The counterexamples the review itself supplies: an intron-4 deletion causing exon-5 skipping that is category 2 by genotype and category 1 by severity (Oliver et al. 2023); six predominantly missense patients whose severity spans the whole WOREE-to-SCAR12 range with MRI abnormalities in only two (Havali et al. 2021); and a homozygous p.Ser304Tyr MISSENSE with rapid deterioration and death in early infancy (Feng et al. 2024). 🔴 THE CONSEQUENCE FOR THIS REPOSITORY IS DIRECT: 'missense implies residual function implies milder' is the premise under much of the hypomorph and ASO reasoning here, and it has a published counterexample that kills in infancy. PREMISE_TAG — PREMISE: DEFAULT_FROM_TEXTBOOK, and the textbook is wrong for at least one allele.",
-        "snippet": "outlier cases and inconsistencies in clinical studies caution against over- ",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 9, closing sentence of the counterexample paragraph",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found — the section builds the framework and dismantles it in consecutive paragraphs; reading only the first would have carried the framework out as settled"
-      },
-      {
-        "proposition": "A DEGENERATIVE COMPONENT INSIDE A NEURODEVELOPMENTAL DISORDER, FROM REPEATED IMAGING RATHER THAN FROM CROSS-SECTIONS. Oliver et al. 2023, 13 new cases with 62 previously reported: focal seizures 85%, epileptic spasms 77%, tonic seizures 69%, onset typically within five weeks of birth, mostly resistant to conventional antiseizure medication; frontotemporal and hippocampal atrophy, delayed myelination, severe corpus-callosum thinning, bilateral optic-nerve atrophy. Repeated scans at different time points showed PROGRESSIVE cerebral atrophy. 🔴 ENDPOINT CONSEQUENCE: a cross-sectional imaging endpoint cannot see a progressive component by construction, and the Kaplan-Meier result in the same study — biallelic null variants with significantly reduced survival against at least one missense allele — means survival analyses must stratify on allele class or they measure genotype mix.",
-        "snippet": "repeated scans at different time points identified progressive cerebral ",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 9, the paragraph on Oliver et al. 2023",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found"
-      },
-      {
-        "proposition": "A MECHANISM THAT PRODUCES HOMOZYGOSITY WITHOUT CONSANGUINITY, AND IT IS A DIAGNOSTIC POINT NOT A MECHANISTIC ONE. A homozygous splice-site variant c.172+1G>C arose from maternal uniparental disomy, with exon 2 skipping confirmed functionally, in a child with a classic WOREE phenotype (You et al. 2024). Recorded because trio sequencing that assumes biparental inheritance can misread UPD, and because it adds a second canonical splice-site allele to the class this repository's ASO track is built around — the first being c.517-2A>G, carried by two independent WOREE iPSC lines in PMID 42397075.",
-        "snippet": "site WWOX variant (c.172 + 1G > C), resulting from maternal unipa",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 9, the paragraph on You et al. 2024",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found"
-      },
-      {
-        "proposition": "🔴 THE REVIEW PLACES WWOX IN PARKINSON'S DISEASE AND, FIVE PAGES EARLIER, REPORTS THAT THE SUBSTANTIA NIGRA HAS ALMOST NO WWOX. Section 3, on human immunohistochemistry (Nunez et al. 2006): the substantia nigra displays little to no WWOX despite being rich in neurons and astrocytes. Section 5 then attributes dopaminergic neuronal loss in PD to disruption of a WWOX–JNK axis. The two are not formally incompatible — a protein can act where it is scarce, and the MPP+ work is in cell models — but the review states both and reconciles neither, and the expression datum is the more direct measurement of the two. PREMISE_TAG for anything this repository builds on the PD axis: PREMISE: INFERENZA, with a human-expression observation pointing the other way.",
-        "snippet": "no WWOX despite being rich in such cell types",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 3, human immunohistochemistry paragraph; compare Section 5, WWOX in Parkinson's Disease",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found — I read section 3 in sequence and the sentence only became load-bearing two sections later, which is the argument for reading a review in order rather than by section of interest"
-      },
-      {
-        "proposition": "A METABOLIC AXIS WITH A SIGNED DIRECTION AND A DISSOCIATED RESCUE, IN DROSOPHILA AND IN A PREPRINT. Wwox loss drives increased lactate production and elevated lactate dehydrogenase, via the ATF4 branch of the unfolded protein response and independent of HIF1α. Neuronal Wwox overexpression by CRISPR activation restores lifespan and motor function and reduces amyloid accumulation — and 🔴 does NOT reduce lactate, lowering L-methionine and suppressing methionine metabolism instead. So the marker that moves with the lesion is not the marker that moves with the rescue: lactate would be a biomarker that reports the genotype and not the treatment. ESPANSIONE — Drosophila, an Aβ42 model, and Lucas-Clarke et al. 2025 is a preprint. Its value is that it separates a lesion marker from a response marker, which is a distinction this repository's biomarker layer makes structurally and rarely gets to see demonstrated.",
-        "snippet": "lowers L-methionine and suppresses methionine metabolism",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 4, the paragraph on Lucas-Clarke et al. 2025 (preprint)",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "sought — section 4 is an Alzheimer's section and parity of sources says to read it anyway; the dissociation between lesion and rescue markers is what it returned"
-      },
-      {
-        "proposition": "SLEEP HAS HUMAN GENETIC SUPPORT AND AN ANIMAL PHENOTYPE, AND IT IS ONE OF THIS REPOSITORY'S PRIORITY AXES. Two intronic WWOX variants, rs16948804 and rs4887991, were significantly associated with shorter self-reported sleep duration and reduced time in bed in a large Korean GWAS cohort; Drosophila Wwox loss-of-function mutants show reduced and fragmented daytime sleep with increased nighttime sleep, INDEPENDENT of circadian rhythm disruption (S. Kim et al. 2025). The circadian-independence is the useful part: it makes sleep architecture, not phase, the thing to measure.",
-        "snippet": "shorter self-reported sleep duration and reduced time in bed",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 4, the sleep paragraph",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found"
-      },
-      {
-        "proposition": "TWO NEGATIVES THE REVIEW REPORTS AGAINST ITS OWN THESIS, AND THEY ARE WORTH MORE THAN THE POSITIVES AROUND THEM. First, in AD brain transcriptomics WWOX itself is not significantly differentially expressed, and the vascular claim rests on its CO-EXPRESSION network in perivascular fibroblasts (Notch, collagen synthesis, Rac1; Tsartsalis et al. 2024) — which sits beside the review's own statement that WWOX PROTEIN is decreased in AD, a protein-versus-transcript distinction the review does not draw. Second, in two large ASD cortical transcriptomic studies WWOX did not emerge as differentially expressed either (Gupta et al. 2014; Parikshak et al. 2013). A review from the gene's primary laboratory printing two null results on its own gene is a mark of calibration and is recorded as such.",
-        "snippet": "WWOX itself is not significantly differ­\nentially expressed in AD pathology",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 4, the paragraph on Tsartsalis et al. 2024",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found"
-      },
-      {
-        "proposition": "AND A DISSOCIATION BETWEEN PROTEIN LEVEL AND ORGANOID PHENOTYPE, IN THE SAME DIRECTION AS THE P47T RESULT. SCAR12-derived forebrain organoids closely resembled healthy controls in morphology, cortical layer marker expression and excitatory-to-inhibitory ratio, while displaying MINIMAL WWOX expression and only a modest increase in Wnt activity. Near-absent protein with a near-normal organoid. Together with P47T — normal protein with a severe phenotype — the two results bracket the same conclusion from opposite sides: WWOX abundance predicts neither the presence nor the absence of the cellular phenotype.",
-        "snippet": "played minimal WWOX expression and showed a modest increase in ",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 10.3, the paragraph on Steinberg et al. 2021 forebrain organoids",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found — read in sequence; the sentence is written as a caveat to a negative result and carries the more interesting positive"
-      },
-      {
-        "proposition": "THE SURFACE CARRIES EDITORIAL DEFECTS THAT BEAR ON HOW MUCH WEIGHT ITS PROSE CAN TAKE. A near-verbatim duplicated statement in section 4 — 'recent studies have revealed decreased WWOX protein levels in AD patients compared to healthy individuals of the same age, and this reduction in WWOX expression has been associated with enhanced tau phosphorylation in the hippocampus' appears twice within about 280 characters, with the same two citations both times. Table 2 describes the article in the THIRD PERSON twice — 'is presented in the review as' and 'because the review also notes important exceptions and outlier cases' — a voice that belongs to a summary OF the paper, not to a table IN it. With three of four figures declared as prepared by figure-generation tools and one by Gemini, the finding is not about how the text was produced, which I cannot know: it is that the ordinary editorial passes that would catch a duplicated paragraph did not run on this document, so its prose should be read as a map of the field's positions rather than as a carefully weighed statement of them.",
-        "snippet": "presented in the review as \nan important regulator of ",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Table 2, row 'Brain development and homeostasis', column 'Established roles of WWOX'",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found — I read Table 2 after the conclusion because a summary table is where a review commits itself; the third-person voice is visible in the first row"
-      },
-      {
-        "proposition": "THE TIMELINE FIGURE COMPRESSES A LABEL IN A WAY THE CAPTION DOES NOT SUPPORT, AND IT IS RECORDED AS AMBIGUOUS RATHER THAN AS AN ERROR. The node at 2020 reads 'WWOX Gene Therapy Trials', while a separate node reads '2026 & Future — Clinical Trials & Precision Medicine' and the caption places clinical trials in the future. So 'Trials' at 2020 most naturally means preclinical studies, and the figure gives a reader no way to tell. There are no WWOX gene-therapy clinical trials; the first AAV9-WWOX study the text cites is Repudi et al. 2021b. A schematic that compresses 'preclinical AAV9 studies' to 'Gene Therapy Trials' is not false and is not checkable, which is the property that makes generated schematics unusable as locators.",
-        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1, horizontal timeline, nine nodes: 2000 'Discovery & Cloning of WWOX'; 2002 'Expression Profiling in Cancer'; 2004 'Interactome Analysis'; 2007 'First WWOX Knockout Mouse'; 2014 'Role in DNA Damage Response'; 2015 'Genetic Epilepsy Link'; 2020 'WOREE Syndrome from Neuronal WWOX Loss'; 2020 'WWOX Gene Therapy Trials'; '2026 & Future' 'Clinical Trials & Precision Medicine'. Title 'WWOX Research Key Milestones (2000-2026)'.",
-        "surface": "figure",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_assets/fig1_timeline_p2_300ppi.jpeg",
-        "anchor": "Figure 1, page 2, embedded image extracted at its native 300 effective ppi",
-        "panel_text_relation": "panel_only",
-        "found_or_sought": "found — first of the four figures opened"
-      },
-      {
-        "proposition": "THE SAME BIODISTRIBUTION FACT IS FUNCTIONAL RELEVANCE IN THE PRIMARY AND DOSE-LIMITING TOXICITY IN THE REVIEW. Section 11 names dorsal root ganglia pathology and peripheral organ involvement after systemic or high-dose AAV as a key regulatory concern in paediatric CNS gene therapy. PMID 42422765, from this laboratory, reports WWOX protein detected in the sciatic nerve of HD-treated mice as 'supporting functional relevance in the peripheral nervous system'. Neither framing is wrong: peripheral neuronal transduction after neonatal ICV is simultaneously evidence the vector reaches PNS neurons and the mechanism by which DRG pathology arises. 🔴 PREMISE_TAG — any inference that neuron-restricted AAV9-WWOX is CNS-confined is contradicted by the primary's own data and flagged as a regulatory concern by the same group's review. Captured in the partial read of this paper earlier today; re-anchored here to a fragment that verifies against the surface, because the version in the dossier was joined across a line break and would not.",
-        "snippet": "thology and peripheral organ involvement observed after systemic or ",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 11, the translational-hurdles paragraph",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found — recognised against a locator recorded hours earlier from PMID 42422765"
-      },
-      {
-        "proposition": "🔴 THE MYELIN CELL-AUTONOMY CLAIM RESTS ENTIRELY ON AN UNREFEREED PREPRINT THAT THE REVIEW NEVER LABELS AS ONE — AND THE REVIEW LABELS THE OTHER PREPRINT IT USES. Abudiab et al. 2025 is bioRxiv 10.1101/2025.11.22.689900. It is cited seven substantive times: twice in section 6 for WWOX as one of the most dysregulated oligodendroglial genes and for the cuprizone result, and in FOUR separate rows of Table 1 — the Olig2-Cre conditional knockout, the cuprizone challenge on it, the ex vivo OPC culture and the MS-lesion snRNA-seq. Table 2 calls the cell-autonomous concept 'a particularly important emerging concept' and SOX10-linked mechanisms 'a major new direction'. Not once is it described as a preprint. Two pages earlier the review writes 'A recent preprint by (Lucas-Clarke et al., 2025)' about the other unrefereed source it uses. 🔴 THE CORRECTION IS TO MY OWN READING OF TWO HOURS AGO: I recorded the baseline-versus-cuprizone contrast as a conditional requirement and called an unchallenged oligodendroglial readout a designed false negative. That stands as IPOTESI and not as DATO, because its sole source has not been refereed. The finding is not weaker in shape; it is weaker in support, and I had not checked which.",
-        "snippet": "at least in \npart through regulation of the key oligodendrocyte transcription factor \nSOX10 (Abudiab et al., 2025)",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 6, the cuprizone paragraph; compare Section 4, 'A recent preprint by (Lucas-Clarke et al., 2025)', and Table 1 rows 4, 5, 6 and 11",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "found by enumerating the reference list — the debt I had declared and left open. Reading the sections gave me the claim; only the bibliography gave me what it rests on."
-      },
-      {
-        "proposition": "TWO OF THE FOUR PREPRINT CITATIONS ARE STALE, AND ONE OF THEM MATTERS TO WORK ALREADY IN THIS REPOSITORY. The review cites Steinberg et al. 2024 at 10.1101/2024.12.22.630016 and Obeid et al. 2026 at 10.64898/2026.03.11.710995 — both preprint DOIs. Both are published: as PMID 42397075 in Brain, and as PMID 42422765 in Molecular Therapy Nucleic Acids, and I read both in their published form today. A reader following the review's DOIs lands on preprint versions of papers whose refereed versions exist. 🔴 THE CONSEQUENCE THAT IS NOT COSMETIC: the preprint of 42397075 may differ from the accepted manuscript I adjudicated, including in the supplementary panels I read at 258 ppi. Any statement in this review attributed to 'Steinberg et al. 2024' is a statement about a version I have not checked, and the 'restored deep-layer neuronal markers' contradiction recorded in entries[5] is therefore between the review's reading of the PREPRINT and my reading of the ACCEPTED MANUSCRIPT. That does not dissolve the contradiction — the accepted version is what the field will cite — but it names a step I had assumed away.",
-        "snippet": "Extending these observations to a patient-relevant context, a follow- \nup study employed AAV9-WWOX gene therapy in human WWOX- \ndeficient organoids (Steinberg et al., 2024)",
-        "surface": "body",
-        "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
-        "anchor": "Section 10.4; the DOIs are in the reference list entries for Steinberg et al. 2024 and Obeid et al. 2026",
-        "panel_text_relation": "text_only",
-        "found_or_sought": "sought — I enumerated the bibliography expecting a harvest of new targets and found instead that two of its citations point at earlier versions of papers I had just closed"
-      }
-    ]
+ "schema_version": 2,
+ "pmid": "42128308",
+ "doi": "10.1016/j.nbd.2026.107446",
+ "receipt": "FTR-20260810-42128308-02",
+ "landing": [
+  "FTR-20260810-42128308-02",
+  "PMID42128308_partial_locators.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The four figures had to be inspected from the same open document as the text they contradict, and two of the findings are cross-paper against manifests captured earlier the same day."
   }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 137,
+  "publications_on_gene": 65,
+  "counts_measured": "PubMed esearch 2026-08-10, carried from PMID42397075.json: 'Aqeilan RI[au]' 137, 'Aqeilan RI[au] AND WWOX' 65. Same group, same day, so the counts are not re-derived.",
+  "research_type": "primary_disease_group",
+  "output_kind": "narrative_review",
+  "is_primary_group_for_disease": true,
+  "is_primary_group_for_gene": true,
+  "weighting": "The gene's primary laboratory reviewing its own field, with the first author of the vector-optimisation primary (PMID 42422765) as first author here. That makes the review authoritative on what the field holds and makes every disagreement with its own primaries a finding rather than a discrepancy between groups."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Aqeilan RI[au] AND WWOX",
+    "route": "PubMed esearch 2026-08-10 (carried from PMID42397075.json, same group, same day)",
+    "count": 65
+   }
+  ],
+  "note": "Maximum density: a review of WWOX neurobiology written by the gene's primary laboratory. Every section is WWOX-directed by construction."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 103,
+  "enumeration_method": "Reference list split on a newline NOT preceded by a space — the delimiter this extraction actually uses, because fitz keeps the trailing space on a wrapped line. The verdict is COMPUTED, not asserted: 100% of accepted entries begin with a first-author surname and 87.4% carry a DOI, and the check prints a rejection if either falls below threshold. 🔴 TWO EARLIER ATTEMPTS FAILED AND BOTH ARE THE POINT. Splitting on 'Surname, X.,' returned 237, an overcount, because the pattern also matches authors mid-list. Filtering that by alphabetical order returned 4, a catastrophic undercount, because the first candidate captured was a mid-list author sorting at 'v' and it poisoned the chain — and that attempt PRINTED 'small, so the alphabetical assumption holds' beside a 98% rejection rate, because the sentence was hardcoded rather than computed. A verdict that cannot fail is not a verdict.",
+  "gene_direct_refs_in_source": [],
+  "gene_direct_count": 35,
+  "gene_direct_note": "🔴 THE LIST IS EMPTY AND THE COUNT IS 35, AND THE DIFFERENCE IS DELIBERATE. 35 of 103 references name WWOX, Wwox, FRA16D, WOREE or SCAR12 in their citation text — 34% of the list. Not expanded into {ref, pmid} pairs: this list is DOI-keyed with exactly one PMID in 103 entries, so dedup against a PMID-keyed registry needs DOI resolution first, and cited_reference_check has no exposure here because no reference NUMBER is claimed for any paper.",
+  "preprints_cited": 4,
+  "preprint_finding": "All four preprints are WWOX-direct, and they are two different problems. Abudiab 2025 (10.1101/2025.11.22.689900) and Lucas-Clarke 2025 (10.1101/2025.05.01.651195) are genuinely unpublished, and only the second is labelled as a preprint in the text. Steinberg 2024 (10.1101/2024.12.22.630016) and Obeid 2026 (10.64898/2026.03.11.710995) are cited at preprint DOIs although both are published — as PMID 42397075 and PMID 42422765, both read in their published form on 2026-08-10.",
+  "debt_remaining": "The 31 WWOX-direct references that are neither preprints nor already in the registry are not triaged into the queue here. That is queue work and this was a reading session; the enumeration exists so the triage can be done without reopening the paper."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Which artifacts for this paper already exist in the shared files/ tree, before I fetch or derive anything?",
+  "hits": 2,
+  "finding": "The PDF from 7 August and the derived text surface from this morning's partial read, both present and both digest-matching. Nothing was re-derived. The four figures were extracted today as embedded image streams at their native 300 effective ppi — measured before extraction — rather than by rendering the page, so the digests are of the bytes the publisher shipped and do not depend on a renderer version."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-08-10",
+  "route": "PubMed esummary for 42128308",
+  "result": "No retraction, no expression of concern, no erratum.",
+  "hold": false
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID42128308_Aqeilan2026.pdf",
+   "sha256": "520c2743630b86e5e6c2af7a3e2f527d7a31ab7810839ed275c87b0d804d6be7",
+   "kind": "article_binary"
+  },
+  {
+   "path": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+   "sha256": "9e05945335845b06959ac0ec78d3de2a167a606b44398f1961e67adfc8f75576",
+   "kind": "article_text"
+  },
+  {
+   "path": "files/fulltext/PMID42128308_Aqeilan2026_assets/fig1_timeline_p2_300ppi.jpeg",
+   "sha256": "83a823d4d3f674fe35a42af2c3c2e3214bc89d373b4fcad2a37981616acec4cb",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID42128308_Aqeilan2026_assets/fig2_cfs_p3_300ppi.jpeg",
+   "sha256": "b6ec0c0df5221b56504e8f5be2ef66636e5d9b718f4bd988f0b93105951a8025",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID42128308_Aqeilan2026_assets/fig3_genetherapy_p11_300ppi.jpeg",
+   "sha256": "7b0482df9d08110acdc9da75bce4bf00f4d0849932d780aa5712bfdc07f28836",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID42128308_Aqeilan2026_assets/fig4_overview_p4_300ppi.jpeg",
+   "sha256": "91f71b6c19b8324a61a113585a65f18270aca0412308c231180f09475ceb166d",
+   "kind": "figure"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": false,
+  "source_fulltext_indexed_evidence": "No PMC deposit: esummary returns only pubmed, doi and pii, and elink to pmc returns no linkset. Recorded per rule 5d rather than assumed. The paper enters the class that has no structured surface, so the PDF plus a fingerprinted derived text is the only pairing available.",
+  "surface_note": "Extraction recipe, stated so it regenerates: PyMuPDF 1.26.5, page.get_text() default mode, ''.join(pages), no separator and no trailing newline, 17 pages, 131033 bytes. Sentinel PASS: two '<' and seven '>' against fifteen occurrences of significan*, which for a review carrying no primary statistics is the expected ratio, and suspicion-by-absence does not fire because comparators are present. The two-column layout breaks lines mid-word with soft hyphens, so several snippets below are the longest fragment lying within one line rather than the whole sentence. 🔴 CORRECTED THE SAME DAY, AND THE CORRECTION IS THE REUSABLE PART. The sentence above states a dichotomy that is false: shorten the snippet, or normalise the surface. There is a third option and it is the right one — QUOTE ACROSS THE BREAK, carrying the break characters and any interpolated line number verbatim. That verifies, and it was never tried. The consequence of not trying it is not cosmetic: taking 'the longest fragment that verifies within one line' means THE PAGE LAYOUT CHOOSES THE CUT POINT, and the layout does not know where the qualifier is. In this corpus the qualifying clause sits at the END of the sentence — the comparator, the figure citation, the hedge, the scope — so a layout-chosen cut drops it at a rate far above chance. Ten snippets across three manifests were extended on 2026-08-10 for exactly this reason, found by auditing the dropped sentence-tail of every text locator rather than the ones anyone had flagged. Normalising the surface remains forbidden; quoting the break is not normalising, it is quoting.",
+  "figure_provenance_note": "🔴 All four figures declare a generation tool in their captions: FigureLabs (Fig. 1), Gemini (Fig. 2), Biorender (Fig. 3), Biorender and Figure Labs (Fig. 4). They are schematics, not data panels. They were inspected at native 300 effective ppi because rule 5c requires it, and the inspection paid: Figure 2 drops a category and reassigns a gene relative to the running text. But no proposition here rests on a figure AS EVIDENCE — the figure entries are evidence about the figures.",
+  "abstract_anchoring_waived": "Every proposition below is a cross-section tension, a cross-paper disagreement, a table reading or a figure reading; none is the kind of summary statement an abstract carries.",
+  "entries": [
+   {
+    "proposition": "THE RUNNING TEXT NAMES SIX NEURODEVELOPMENTAL CATEGORIES AMONG CFS-MAPPED GENES, AND ONE OF THEM IS GLUTAMATE-RECEPTOR SIGNALLING. This is the reference version of the list, and it is the one the figure and the figure's own caption both depart from. Recorded first so the departure below has a fixed point to be measured against.",
+    "snippet": "synapse organization (GRIK2, GPHN), differ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 1, Introduction, the enumeration of MiDAS-mapped CFS genes (Ji et al., 2020; Macheret et al., 2020)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found — read in sequence at the start of the introduction, before any figure was opened"
+   },
+   {
+    "proposition": "🔴 A FIGURE DECLARED AS PREPARED BY A GENERATIVE MODEL LOSES A CATEGORY AND REASSIGNS A GENE, AND HERE THE TEXT IS RIGHT AND THE PANEL IS WRONG. The running text lists six categories, including 'glutamate receptor signaling pathways (GRID1, GRM5)'. The figure's 'Functional Gene Mapping at CFSs' panel shows five: the glutamate-receptor category is gone, GRID1 does not appear anywhere in the figure, and GRM5 has been moved under 'Neuron projection development' beside TIAM1 and CTNND2 — a category the text assigns to those two genes alone. The caption enumerates the same five and also omits glutamate-receptor signalling, so caption and panel agree with each other and both differ from the body. 🔴 THE OPERATIONAL POINT IS NOT THE ERROR, IT IS THE DIRECTION OF AUTHORITY. Rule 5c privileges the panel because on 2026-08-04 a panel reversed a conclusion the text did not carry — a rule written for DATA panels, where the panel is the observation and the prose is the summary. This panel is a rendering DOWNSTREAM of the prose, and its caption says so: 'This figure was prepared using Gemini.' A reader applying the 5c default here would carry away that GRM5 is a neuron-projection gene and that GRID1 is not a CFS-linked neurodevelopmental gene at all. A generated schematic is not an observation and must never carry an evidentiary locator on its own authority.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2, lower-right panel 'Functional Gene Mapping at CFSs', five labelled groups over a chromosome ideogram: GRIK2/GPHN 'Synapse organization'; POU3F2/SPOCK1 'Olfactory bulb interneuron differentiation'; TIAM1/CTNND2/GRM5 'Neuron projection development'; FGF13/PPFIA2 'CNS neuron differentiation'; SLIT2/EPHA2 'Axonogenesis'. GRID1 absent from the panel. Footer: 'High-resolution mapping reveals CFS-linked genes drive neurodevelopment and brain architecture.'",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_assets/fig2_cfs_p3_300ppi.jpeg",
+    "anchor": "Figure 2, page 3, embedded image extracted at its native 300 effective ppi",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "found — I opened the four figures because rule 5c requires figures inspected at original resolution, expecting schematics with nothing to check; the gene groupings were checkable and did not match",
+    "contradicts": "entries[0]",
+    "contradicts_needle": "synapse organization (GRIK2, GPHN)"
+   },
+   {
+    "proposition": "THE GENERATOR IS DECLARED IN THE CAPTION, WHICH IS WHAT MAKES THE PRECEDING FINDING AN OPERATIONAL RULE RATHER THAN AN ACCUSATION. Four figures, four declarations: Fig. 1 'prepared using FigureLabs', Fig. 2 'prepared using Gemini', Fig. 3 'prepared using Biorender', Fig. 4 'prepared using Biorender and Figure Labs'. The provenance of a figure is therefore machine-readable from the caption in this paper, and a manifest can be required to classify a declared-generated figure as a schematic surface rather than an evidentiary one. PREMISE_TAG — the load-bearing premise of rule 5c is that a figure is an observation. PREMISE: DEFAULT_FROM_TEXTBOOK, and false for this class of figure.",
+    "snippet": "This figure was prepared using Gemini.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Figure 2 caption, final sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found — read as part of the caption, before the panel, per the rule that a figure is not read until its caption is read"
+   },
+   {
+    "proposition": "THE CAPTION OF THE GENE-THERAPY SCHEMATIC SAYS 'SUPPRESSES', WHICH IS THE WEAKER AND CORRECT WORD. Recorded as the fixed point for the panel entry that follows.",
+    "snippet": "increases myelin thickness, suppresses seizure occurrence, and reduces astroglial and inflammatory pathology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Figure 3 caption, list of early-postnatal treatment effects",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "🔴 THE SCHEMATIC PROMOTES 'SUPPRESSES' TO 'NO SEIZURES', AND PRESENTS THE RESCUE AS BINARY AND COMPLETE. The panel labels the treated arm 'Normal Excitability', 'No Seizures Occurence' [sic], 'Improved Myelination', 'Increased Myelin Thickness', 'Improved Growth & Long-term Survival', 'Reduces astrogliosis', 'Reduces inflammatory response'. No dose, no vector, no fraction of animals, no time point — the figure contains no data at all. Against PMID 42422765 from this same laboratory, which I read today and where survival has a threshold between 1.23E11 and 2.63E11 vg and no treated arm survives at 4E10 or 8E10, 'No Seizures' with no dose attached is the favourable half of a dose-dependent result. 🔴 AND IT EXPOSES A GAP IN OUR OWN VOCABULARY: `text_contradicted_by_panel` presumes the panel is data. Here the panel is a drawing, so the relation is real as a discrepancy and meaningless as evidence, and the value carries no way to say which.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 3, right half, boxed treated arm: 'Normal Excitability', 'Improved Myelination', 'Increased Myelin Thickness', 'No Seizures Occurence', 'Reduces astrogliosis', 'Reduces inflammatory response'; upstream 'Wwox-null P0-P5', 'ICV Injection (P0-P5)', capsid labelled 'SynI-WWOX'; outcome arrow 'Improved Growth & Long-term Survival'.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_assets/fig3_genetherapy_p11_300ppi.jpeg",
+    "anchor": "Figure 3, page 11, embedded image extracted at its native 300 effective ppi",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "found_or_sought": "found — opened alongside Figure 2 in the same pass over the four figures",
+    "contradicts": "entries[3]",
+    "contradicts_needle": "increases myelin thickness, suppresses seizure occurrence"
+   },
+   {
+    "proposition": "🔴 THE REVIEW SAYS 'RESTORED' WHERE ITS OWN PRIMARY SHOWS TEN-FOLD ABOVE WILD TYPE. Describing Steinberg et al. 2024 — PMID 42397075, which I closed as a complete read earlier today — the review states that neuronal WWOX re-expression restored deep-layer neuronal markers CTIP2 and SATB2. That paper's Supplementary Figure 10B–C, recorded in PMID42397075.json entries[22], reads SATB2 mRNA in treated WOREE organoids at about TEN times wild type and BCL11B/CTIP2 at about three times, with the untreated line below wild type on both. 'Restored' is the word for returning to wild type. The reason the word survives is structural and I recorded it in the same entry: the WT-versus-treated bracket is not drawn, so the comparison that would falsify 'restored' was never made. Same laboratory, same first author on the review as on the optimisation primary. 🔴 INFRASTRUCTURE GAP — this is a CROSS-PAPER contradiction and `contradicts` is an intra-manifest pointer, `entries[N]`. The grammar has no slot for it, so the link lives only in this prose and is invisible to `locator_audit.py`.",
+    "snippet": "restored deep-layer neuronal markers (CTIP2, SATB2)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 10.4, the paragraph on AAV9-WWOX in human WWOX-deficient organoids (Steinberg et al., 2024)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found — read in sequence; I recognised the sentence against a locator I had captured hours earlier, which is the only reason it registered as a contradiction rather than as a summary"
+   },
+   {
+    "proposition": "🔴 THE REVIEW FRAMES WPRE REMOVAL AS A SAFETY CHOICE AND ITS OWN SECTION 11 NAMES THE PRICE. Section 10.4 presents removing WPRE as 'an important design consideration aimed at avoiding excessive or poorly controlled transgene expression while preserving sufficient therapeutic efficacy'. PMID 42422765, the primary being described, shows that removal required a SIX-FOLD dose increase to recover efficacy, with protein at 2E10 without WPRE sitting at or below wild type — recorded in PMID42422765.json entries[15]. Efficacy was not preserved at dose; it was repurchased with vector. And section 11 of this same review names 'high-dose AAV administration' as the driver of DRG pathology and 'a key regulatory concern in pediatric CNS gene therapy programs'. So the review celebrates a design change in one section and, two sections later, names the cost of that change as the field's principal safety problem — without connecting them. The loop closes inside a single document and neither end mentions the other.",
+    "snippet": "aimed at avoiding excessive or poorly controlled trans­\ngene expression while preserving sufficient therapeutic efficacy.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 10.4, the paragraph on Obeid et al. 2026 vector optimisation",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found — I was reading 10.4 for the description of a primary I had already read, and the rationale did not match the data I had recorded from it"
+   },
+   {
+    "proposition": "🔴 WWOX PROTEIN ABUNDANCE IS NOT A READOUT OF WWOX FUNCTION, AND THE P47T MOUSE IS THE PROOF. In the SCAR12 knock-in, WWOX protein levels remained comparable to wild-type controls while the mutation disrupted the WW1 domain's PPXY-binding motif, producing partial loss of function through failed interaction rather than through loss of protein. A Tier 1/2 biomarker built on WWOX abundance would score this allele as normal in an animal with adult-onset seizures, cerebellar neurodegeneration and ataxia. This is the 'function' axis failing while 'synthesis' and 'solubility' pass — the same five-way separation the 2026-07-12 thyroid-cancer case forced onto this repository, now demonstrated in vivo for a disease allele rather than in a cancer line. 🔴 QUALIFIED THE SAME DAY BY THE BIBLIOGRAPHY: both Table 1 rows cite Abudiab et al. 2025, which the reference list gives as bioRxiv 10.1101/2025.11.22.689900 and which the review never labels as a preprint. This entry is therefore IPOTESI, not DATO. The shape of the finding is unchanged and its support is not refereed — see entries[23].",
+    "snippet": "WWOX protein levels in P47T mice remained comparable to wild-type ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 10.1, the paragraph on Hussain et al. 2023 (P47T knock-in)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — I was reading 10.1 for the model inventory; that the protein level is normal is the part that changes a biomarker decision"
+   },
+   {
+    "proposition": "🔴 OLIGODENDROGLIAL WWOX IS DISPENSABLE AT BASELINE AND REQUIRED UNDER CHALLENGE — A CONDITIONAL REQUIREMENT THAT A BASELINE ASSAY WOULD REPORT AS ABSENT. Table 1 gives the Olig2-Cre conditional knockout 'No major defects' and reads the result as compensation from other cell types. The same line under cuprizone gives 'Defective oligodendrocyte differentiation and impaired remyelination after toxic demyelination', and the review calls that a CELL-AUTONOMOUS function. Both entries cite Abudiab et al. 2025. 🔴 ENDPOINT CONSEQUENCE: an unchallenged oligodendroglial readout is a designed false negative for this axis. The same asymmetry the epistemic-discipline section names — a false negative is silent, permanent and self-reinforcing — with the trigger identified: the phenotype requires a stressor to exist.",
+    "snippet": "No major defects\nUnder normal conditions, \nWWOX from other cell \ntypes compensates for the \nloss in oligodendroglia",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Table 1, row 'Conditional deletion of Wwox in oligodendroglia (Olig2-Cre; O-KO)', column 'Main phenotypes'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found — reading Table 1 row by row; the two Olig2-Cre rows sit adjacent and the contrast is only visible if both are read"
+   },
+   {
+    "proposition": "The neuronal side of the same axis is non-cell-autonomous and stated as such: hypomyelination across cortex, hippocampus and cerebellum with reduced myelin thickness in corpus callosum and optic nerve arises in neuronal Wwox knockouts although WWOX is intact in oligodendrocytes. Taken with the entry above, WWOX acts on myelination through BOTH routes and each is invisible in the assay that isolates the other — neuronal deletion hides the cell-autonomous arm, unchallenged oligodendroglial deletion hides the neuronal-support arm.",
+    "snippet": "these deficits arise even though WWOX remains intact \nin oligodendrocytes, suggesting a non-cell-autonomous mechanism \nthrough which neuronal WWOX supports oligodendrocyte maturation \nand myelin production.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 10.1, closing sentence on Repudi et al. 2021a transcriptomics and electron microscopy",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "THE MOST COMPLETE FUNCTIONAL READOUT SET IN THE REVIEW, AND IT CONTAINS AN UNEXAMINED PHARMACOLOGICAL HANDLE. Breton et al. 2021, neocortical slices from neuronal Wwox knockouts: large-amplitude spontaneous bursts in layers II/III absent in controls; increased delta and theta power; sEPSCs up in both frequency and amplitude; sIPSCs reduced, principally in frequency; depolarised resting membrane potential; reduced action-potential threshold; increased firing probability. 🔴 And ELEVATED POTASSIUM CURRENTS, which the review reads as a maladaptive compensatory response to persistent hyperactivity. That is a signed, proximal, druggable node that nothing in this repository has looked at — potassium-channel pharmacology is a mature field with paediatric-CNS precedent. IPOTESI, and the sign is the whole question: if the elevation is compensatory, opposing it is harmful and reinforcing it may be therapeutic.",
+    "snippet": "elevated potassium currents were observed, \nwhich may reflect a maladaptive compensatory response to persistent \nneuronal hyperactivity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 10.2, the paragraph on intrinsic properties of pyramidal neurons",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — I read 10.2 expecting the excitability phenotype and found the potassium finding, which the section presents as an aside"
+   },
+   {
+    "proposition": "AND THE INTERNEURON PICTURE IS NOT CONSISTENT ACROSS THE REVIEW'S OWN SECTIONS. Section 10.2 reports that inhibitory interneurons show minimal changes in firing properties, the only abnormality being reduced action-potential amplitude (Breton et al. 2021, neocortex). Section 7 reports a marked reduction in GABAergic interneurons and GABA synthesis in the hippocampus (Hussain et al. 2019). These are different measures in different regions and are not formally in conflict — number and synthesis versus intrinsic firing — but the review never says so, and a reader of either section alone carries a different interneuron away. Recorded because the excitatory/inhibitory imbalance is load-bearing for the seizure model and its inhibitory arm is assembled from two non-overlapping measurements.",
+    "snippet": "reduction in GABAergic interneurons and GABA synthesis within the ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 7, the paragraph on Hussain et al. 2019; compare Section 10.2 on Breton et al. 2021",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — I went back to section 7 after reading 10.2 precisely to check whether the two interneuron statements were the same statement"
+   },
+   {
+    "proposition": "🔴 THE THREE-CLASS GENOTYPE–PHENOTYPE FRAMEWORK IS PUBLISHED AND, IN THE SAME SECTION, FALSIFIED BY THREE NAMED CASES. The framework: (1) biallelic null → severe, early-lethal; (2) compound heterozygous null/missense → intermediate; (3) biallelic hypomorphic missense → milder, later-onset, SCAR12-like, on a gene-dosage model in which residual function tracks severity. The counterexamples the review itself supplies: an intron-4 deletion causing exon-5 skipping that is category 2 by genotype and category 1 by severity (Oliver et al. 2023); six predominantly missense patients whose severity spans the whole WOREE-to-SCAR12 range with MRI abnormalities in only two (Havali et al. 2021); and a homozygous p.Ser304Tyr MISSENSE with rapid deterioration and death in early infancy (Feng et al. 2024). 🔴 THE CONSEQUENCE FOR THIS REPOSITORY IS DIRECT: 'missense implies residual function implies milder' is the premise under much of the hypomorph and ASO reasoning here, and it has a published counterexample that kills in infancy. PREMISE_TAG — PREMISE: DEFAULT_FROM_TEXTBOOK, and the textbook is wrong for at least one allele.",
+    "snippet": "outlier cases and inconsistencies in clinical studies caution against over- ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 9, closing sentence of the counterexample paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found — the section builds the framework and dismantles it in consecutive paragraphs; reading only the first would have carried the framework out as settled"
+   },
+   {
+    "proposition": "A DEGENERATIVE COMPONENT INSIDE A NEURODEVELOPMENTAL DISORDER, FROM REPEATED IMAGING RATHER THAN FROM CROSS-SECTIONS. Oliver et al. 2023, 13 new cases with 62 previously reported: focal seizures 85%, epileptic spasms 77%, tonic seizures 69%, onset typically within five weeks of birth, mostly resistant to conventional antiseizure medication; frontotemporal and hippocampal atrophy, delayed myelination, severe corpus-callosum thinning, bilateral optic-nerve atrophy. Repeated scans at different time points showed PROGRESSIVE cerebral atrophy. 🔴 ENDPOINT CONSEQUENCE: a cross-sectional imaging endpoint cannot see a progressive component by construction, and the Kaplan-Meier result in the same study — biallelic null variants with significantly reduced survival against at least one missense allele — means survival analyses must stratify on allele class or they measure genotype mix.",
+    "snippet": "repeated scans at different time points identified progressive cerebral ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 9, the paragraph on Oliver et al. 2023",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "A MECHANISM THAT PRODUCES HOMOZYGOSITY WITHOUT CONSANGUINITY, AND IT IS A DIAGNOSTIC POINT NOT A MECHANISTIC ONE. A homozygous splice-site variant c.172+1G>C arose from maternal uniparental disomy, with exon 2 skipping confirmed functionally, in a child with a classic WOREE phenotype (You et al. 2024). Recorded because trio sequencing that assumes biparental inheritance can misread UPD, and because it adds a second canonical splice-site allele to the class this repository's ASO track is built around — the first being c.517-2A>G, carried by two independent WOREE iPSC lines in PMID 42397075.",
+    "snippet": "site WWOX variant (c.172 + 1G > C), resulting from maternal unipa",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 9, the paragraph on You et al. 2024",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "🔴 THE REVIEW PLACES WWOX IN PARKINSON'S DISEASE AND, FIVE PAGES EARLIER, REPORTS THAT THE SUBSTANTIA NIGRA HAS ALMOST NO WWOX. Section 3, on human immunohistochemistry (Nunez et al. 2006): the substantia nigra displays little to no WWOX despite being rich in neurons and astrocytes. Section 5 then attributes dopaminergic neuronal loss in PD to disruption of a WWOX–JNK axis. The two are not formally incompatible — a protein can act where it is scarce, and the MPP+ work is in cell models — but the review states both and reconciles neither, and the expression datum is the more direct measurement of the two. PREMISE_TAG for anything this repository builds on the PD axis: PREMISE: INFERENZA, with a human-expression observation pointing the other way.",
+    "snippet": "no WWOX despite being rich in such cell types",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 3, human immunohistochemistry paragraph; compare Section 5, WWOX in Parkinson's Disease",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found — I read section 3 in sequence and the sentence only became load-bearing two sections later, which is the argument for reading a review in order rather than by section of interest"
+   },
+   {
+    "proposition": "A METABOLIC AXIS WITH A SIGNED DIRECTION AND A DISSOCIATED RESCUE, IN DROSOPHILA AND IN A PREPRINT. Wwox loss drives increased lactate production and elevated lactate dehydrogenase, via the ATF4 branch of the unfolded protein response and independent of HIF1α. Neuronal Wwox overexpression by CRISPR activation restores lifespan and motor function and reduces amyloid accumulation — and 🔴 does NOT reduce lactate, lowering L-methionine and suppressing methionine metabolism instead. So the marker that moves with the lesion is not the marker that moves with the rescue: lactate would be a biomarker that reports the genotype and not the treatment. ESPANSIONE — Drosophila, an Aβ42 model, and Lucas-Clarke et al. 2025 is a preprint. Its value is that it separates a lesion marker from a response marker, which is a distinction this repository's biomarker layer makes structurally and rarely gets to see demonstrated.",
+    "snippet": "lowers L-methionine and suppresses methionine metabolism",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 4, the paragraph on Lucas-Clarke et al. 2025 (preprint)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — section 4 is an Alzheimer's section and parity of sources says to read it anyway; the dissociation between lesion and rescue markers is what it returned"
+   },
+   {
+    "proposition": "SLEEP HAS HUMAN GENETIC SUPPORT AND AN ANIMAL PHENOTYPE, AND IT IS ONE OF THIS REPOSITORY'S PRIORITY AXES. Two intronic WWOX variants, rs16948804 and rs4887991, were significantly associated with shorter self-reported sleep duration and reduced time in bed in a large Korean GWAS cohort; Drosophila Wwox loss-of-function mutants show reduced and fragmented daytime sleep with increased nighttime sleep, INDEPENDENT of circadian rhythm disruption (S. Kim et al. 2025). The circadian-independence is the useful part: it makes sleep architecture, not phase, the thing to measure.",
+    "snippet": "shorter self-reported sleep duration and reduced time in bed",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 4, the sleep paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "TWO NEGATIVES THE REVIEW REPORTS AGAINST ITS OWN THESIS, AND THEY ARE WORTH MORE THAN THE POSITIVES AROUND THEM. First, in AD brain transcriptomics WWOX itself is not significantly differentially expressed, and the vascular claim rests on its CO-EXPRESSION network in perivascular fibroblasts (Notch, collagen synthesis, Rac1; Tsartsalis et al. 2024) — which sits beside the review's own statement that WWOX PROTEIN is decreased in AD, a protein-versus-transcript distinction the review does not draw. Second, in two large ASD cortical transcriptomic studies WWOX did not emerge as differentially expressed either (Gupta et al. 2014; Parikshak et al. 2013). A review from the gene's primary laboratory printing two null results on its own gene is a mark of calibration and is recorded as such.",
+    "snippet": "WWOX itself is not significantly differ­\nentially expressed in AD pathology",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 4, the paragraph on Tsartsalis et al. 2024",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "AND A DISSOCIATION BETWEEN PROTEIN LEVEL AND ORGANOID PHENOTYPE, IN THE SAME DIRECTION AS THE P47T RESULT. SCAR12-derived forebrain organoids closely resembled healthy controls in morphology, cortical layer marker expression and excitatory-to-inhibitory ratio, while displaying MINIMAL WWOX expression and only a modest increase in Wnt activity. Near-absent protein with a near-normal organoid. Together with P47T — normal protein with a severe phenotype — the two results bracket the same conclusion from opposite sides: WWOX abundance predicts neither the presence nor the absence of the cellular phenotype.",
+    "snippet": "played minimal WWOX expression and showed a modest increase in ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 10.3, the paragraph on Steinberg et al. 2021 forebrain organoids",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found — read in sequence; the sentence is written as a caveat to a negative result and carries the more interesting positive"
+   },
+   {
+    "proposition": "THE SURFACE CARRIES EDITORIAL DEFECTS THAT BEAR ON HOW MUCH WEIGHT ITS PROSE CAN TAKE. A near-verbatim duplicated statement in section 4 — 'recent studies have revealed decreased WWOX protein levels in AD patients compared to healthy individuals of the same age, and this reduction in WWOX expression has been associated with enhanced tau phosphorylation in the hippocampus' appears twice within about 280 characters, with the same two citations both times. Table 2 describes the article in the THIRD PERSON twice — 'is presented in the review as' and 'because the review also notes important exceptions and outlier cases' — a voice that belongs to a summary OF the paper, not to a table IN it. With three of four figures declared as prepared by figure-generation tools and one by Gemini, the finding is not about how the text was produced, which I cannot know: it is that the ordinary editorial passes that would catch a duplicated paragraph did not run on this document, so its prose should be read as a map of the field's positions rather than as a carefully weighed statement of them.",
+    "snippet": "presented in the review as \nan important regulator of ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Table 2, row 'Brain development and homeostasis', column 'Established roles of WWOX'",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found — I read Table 2 after the conclusion because a summary table is where a review commits itself; the third-person voice is visible in the first row"
+   },
+   {
+    "proposition": "THE TIMELINE FIGURE COMPRESSES A LABEL IN A WAY THE CAPTION DOES NOT SUPPORT, AND IT IS RECORDED AS AMBIGUOUS RATHER THAN AS AN ERROR. The node at 2020 reads 'WWOX Gene Therapy Trials', while a separate node reads '2026 & Future — Clinical Trials & Precision Medicine' and the caption places clinical trials in the future. So 'Trials' at 2020 most naturally means preclinical studies, and the figure gives a reader no way to tell. There are no WWOX gene-therapy clinical trials; the first AAV9-WWOX study the text cites is Repudi et al. 2021b. A schematic that compresses 'preclinical AAV9 studies' to 'Gene Therapy Trials' is not false and is not checkable, which is the property that makes generated schematics unusable as locators.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1, horizontal timeline, nine nodes: 2000 'Discovery & Cloning of WWOX'; 2002 'Expression Profiling in Cancer'; 2004 'Interactome Analysis'; 2007 'First WWOX Knockout Mouse'; 2014 'Role in DNA Damage Response'; 2015 'Genetic Epilepsy Link'; 2020 'WOREE Syndrome from Neuronal WWOX Loss'; 2020 'WWOX Gene Therapy Trials'; '2026 & Future' 'Clinical Trials & Precision Medicine'. Title 'WWOX Research Key Milestones (2000-2026)'.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_assets/fig1_timeline_p2_300ppi.jpeg",
+    "anchor": "Figure 1, page 2, embedded image extracted at its native 300 effective ppi",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found — first of the four figures opened"
+   },
+   {
+    "proposition": "THE SAME BIODISTRIBUTION FACT IS FUNCTIONAL RELEVANCE IN THE PRIMARY AND DOSE-LIMITING TOXICITY IN THE REVIEW. Section 11 names dorsal root ganglia pathology and peripheral organ involvement after systemic or high-dose AAV as a key regulatory concern in paediatric CNS gene therapy. PMID 42422765, from this laboratory, reports WWOX protein detected in the sciatic nerve of HD-treated mice as 'supporting functional relevance in the peripheral nervous system'. Neither framing is wrong: peripheral neuronal transduction after neonatal ICV is simultaneously evidence the vector reaches PNS neurons and the mechanism by which DRG pathology arises. 🔴 PREMISE_TAG — any inference that neuron-restricted AAV9-WWOX is CNS-confined is contradicted by the primary's own data and flagged as a regulatory concern by the same group's review. Captured in the partial read of this paper earlier today; re-anchored here to a fragment that verifies against the surface, because the version in the dossier was joined across a line break and would not.",
+    "snippet": "thology and peripheral organ involvement observed after systemic or ",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 11, the translational-hurdles paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found — recognised against a locator recorded hours earlier from PMID 42422765"
+   },
+   {
+    "proposition": "🔴 THE MYELIN CELL-AUTONOMY CLAIM RESTS ENTIRELY ON AN UNREFEREED PREPRINT THAT THE REVIEW NEVER LABELS AS ONE — AND THE REVIEW LABELS THE OTHER PREPRINT IT USES. Abudiab et al. 2025 is bioRxiv 10.1101/2025.11.22.689900. It is cited seven substantive times: twice in section 6 for WWOX as one of the most dysregulated oligodendroglial genes and for the cuprizone result, and in FOUR separate rows of Table 1 — the Olig2-Cre conditional knockout, the cuprizone challenge on it, the ex vivo OPC culture and the MS-lesion snRNA-seq. Table 2 calls the cell-autonomous concept 'a particularly important emerging concept' and SOX10-linked mechanisms 'a major new direction'. Not once is it described as a preprint. Two pages earlier the review writes 'A recent preprint by (Lucas-Clarke et al., 2025)' about the other unrefereed source it uses. 🔴 THE CORRECTION IS TO MY OWN READING OF TWO HOURS AGO: I recorded the baseline-versus-cuprizone contrast as a conditional requirement and called an unchallenged oligodendroglial readout a designed false negative. That stands as IPOTESI and not as DATO, because its sole source has not been refereed. The finding is not weaker in shape; it is weaker in support, and I had not checked which.",
+    "snippet": "at least in \npart through regulation of the key oligodendrocyte transcription factor \nSOX10 (Abudiab et al., 2025)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 6, the cuprizone paragraph; compare Section 4, 'A recent preprint by (Lucas-Clarke et al., 2025)', and Table 1 rows 4, 5, 6 and 11",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found by enumerating the reference list — the debt I had declared and left open. Reading the sections gave me the claim; only the bibliography gave me what it rests on."
+   },
+   {
+    "proposition": "TWO OF THE FOUR PREPRINT CITATIONS ARE STALE, AND ONE OF THEM MATTERS TO WORK ALREADY IN THIS REPOSITORY. The review cites Steinberg et al. 2024 at 10.1101/2024.12.22.630016 and Obeid et al. 2026 at 10.64898/2026.03.11.710995 — both preprint DOIs. Both are published: as PMID 42397075 in Brain, and as PMID 42422765 in Molecular Therapy Nucleic Acids, and I read both in their published form today. A reader following the review's DOIs lands on preprint versions of papers whose refereed versions exist. 🔴 THE CONSEQUENCE THAT IS NOT COSMETIC: the preprint of 42397075 may differ from the accepted manuscript I adjudicated, including in the supplementary panels I read at 258 ppi. Any statement in this review attributed to 'Steinberg et al. 2024' is a statement about a version I have not checked, and the 'restored deep-layer neuronal markers' contradiction recorded in entries[5] is therefore between the review's reading of the PREPRINT and my reading of the ACCEPTED MANUSCRIPT. That does not dissolve the contradiction — the accepted version is what the field will cite — but it names a step I had assumed away.",
+    "snippet": "Extending these observations to a patient-relevant context, a follow- \nup study employed AAV9-WWOX gene therapy in human WWOX- \ndeficient organoids (Steinberg et al., 2024)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID42128308_Aqeilan2026_fitz.txt",
+    "anchor": "Section 10.4; the DOIs are in the reference list entries for Steinberg et al. 2024 and Obeid et al. 2026",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "sought — I enumerated the bibliography expecting a harvest of new targets and found instead that two of its citations point at earlier versions of papers I had just closed"
+   }
+  ]
+ }
 }

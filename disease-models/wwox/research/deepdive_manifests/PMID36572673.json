@@ -1,0 +1,217 @@
+{
+ "schema_version": 2,
+ "pmid": "36572673",
+ "doi": "10.1038/s41419-022-05519-9",
+ "receipt": "FTR-20260810-36572673-01",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID36572673.md",
+  "full_text_queue_current#CORPUS-STUB-076",
+  "disease-models/wwox/research/commit_candidates/CC-20260810-36572673-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-batch-inferential-sweep",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-capability-scout",
+   "used": true
+  },
+  {
+   "skill": "legend-session-self-eval",
+   "used": true
+  },
+  {
+   "skill": "legend-session-takeaways",
+   "used": true
+  },
+  {
+   "skill": "spreadsheets",
+   "used": true
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "A complete local PMC XML was supplied; retrieval was limited to linked figures and supplements."
+  },
+  {
+   "skill": "legend-proband-priority-matrix",
+   "used": false,
+   "reason": "The operator fixed the sequential reading order."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "BLOCK_BATCH_COMMIT requires dossier and candidate landing rather than canonical edits."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No intervention, dose or therapeutic window was tested."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "The four canonical scientific files were intentionally untouched."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 149,
+  "publications_on_gene": 79,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": true,
+  "weighting": "The Aqeilan laboratory is a high-volume primary WWOX group. Construct continuity is useful, but same-group observations are not external replication; small cohorts, pooled Wwox dosage groups and panel/reporting discrepancies retain full weight."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND pancreatic cancer",
+    "count": 557,
+    "source": "Europe PMC broad query, 2026-08-10"
+   },
+   {
+    "query": "WWOX AND TGF beta",
+    "count": 315,
+    "source": "Europe PMC broad query, 2026-08-10"
+   },
+   {
+    "query": "WWOX AND BMP2",
+    "count": 79,
+    "source": "Europe PMC broad query, 2026-08-10"
+   }
+  ],
+  "note": "Pancreatic-cancer and TGF-beta intersections are broad; the direct BMP2 intersection is smaller and this study remains chiefly same-lab mechanistic evidence."
+ },
+ "multihop": {
+  "references_enumerated": 53,
+  "gene_direct_refs_in_source": [
+   "32300104",
+   "30082886",
+   "29724996"
+  ],
+  "resolved": [
+   "32300104",
+   "30082886"
+  ],
+  "queued": [
+   "29724996"
+  ],
+  "note": "All 53 references were enumerated sequentially. Direct WWOX pathway and cancer references were linked without upgrading same-group continuity to independent replication."
+ },
+ "corpus_crossquery": {
+  "query": "Where do pancreatic/PDAC, BMP2 and SMAD3 mechanisms already occur, and what boundary does PMID 36572673 add?",
+  "hits": 13,
+  "note": "Post-reading corpus audit found 13 file hits. This paper adds conditional pancreatic-acinar cooperation with KRAS, bounded by Wwox-alone negativity and untested pathway necessity."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Repository and indexed-record checks on 2026-08-10 found no retraction, expression of concern or correction."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID36572673_Husanie2022_PMC.xml",
+   "sha256": "9aa3fef126948e29d44eb91f2a27e56b58618e8f59d41296f60e4ba697260f77",
+   "kind": "article_text"
+  },
+  {
+   "path": "files/fulltext/PMID36572673_Husanie2022_assets/41419_2022_5519_Fig2_HTML.jpg",
+   "sha256": "da128fab59bcfaab31f09489565b5d38f2363e78c099418ce93caa4e49634a1b",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID36572673_Husanie2022_assets/41419_2022_5519_Fig5_HTML.jpg",
+   "sha256": "6492d4f259ca4ab4e6df7e62f8062463a249b283396df43d3b084754b1a59333",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID36572673_Husanie2022_assets/41419_2022_5519_Fig6_HTML.jpg",
+   "sha256": "5d7a27b93cb4016ce58782806bab8f6b2247682aafe1bded5fe8ddf1b7895e95",
+   "kind": "figure"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "The local PMC JATS identifies PMCID PMC9792466 and contains the complete body, methods, figures, supplement links and 53-reference list; every used surface is fingerprinted.",
+  "entries": [
+   {
+    "proposition": "Pancreatic Wwox deletion alone produced no detected ADM/PanIN phenotype.",
+    "snippet": "However, no phenotypes were identified in the pancreata of WC mice, suggesting that Wwox deletion alone is insufficient for ADM and PanIN lesion formation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36572673_Husanie2022_PMC.xml",
+    "anchor": "Results, targeted deletion section",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The isolated-acinar experiment was designed to test a cell-autonomous component.",
+    "snippet": "To dissect cell-autonomous versus non-cell-autonomous neoplastic lesion formation, acinar cells were isolated from KC and KWC mice, then cells were cultured to assess their ability to transdifferentiate into ductal cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36572673_Husanie2022_PMC.xml",
+    "anchor": "Results, ex-vivo acinar experiment",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Heterozygous and homozygous KWC mice were pooled throughout the study.",
+    "snippet": "Strikingly, no differences were observed between KWC mice harboring Wwoxf/+ and Wwoxf/f alleles. Therefore, we refer to these mice as identical throughout our study.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36572673_Husanie2022_PMC.xml",
+    "anchor": "Results, lesion formation",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Figure 2 caption claims three mice per immunoblot group.",
+    "snippet": "Representative immunoblotting of WWOX of KWC (n = 3), KC (n = 3), and WT (n = 3) mice 1-month post-tamoxifen injection.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36572673_Husanie2022_PMC.xml",
+    "anchor": "Figure 2B caption, text half of replicate contradiction",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 2B visibly contains two lanes per group, not three.",
+    "snippet": "Panel 2B prints two visible WWOX/loading-control lanes under each group label KWC, KC and WT, not three.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID36572673_Husanie2022_assets/41419_2022_5519_Fig2_HTML.jpg",
+    "anchor": "Figure 2B, native-pixel inspection after effective-PPI preflight",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[3]",
+    "contradicts_needle": "KWC (n = 3), KC (n = 3), and WT (n = 3) mice"
+   },
+   {
+    "proposition": "Tumours occurred in 16/64 KWC and 0/14 KC mice during follow-up.",
+    "snippet": "16 out of 64 Wwoxf/+ or Wwoxf/f KWC mice formed tumors between the ages of 4–8 months while none of the KC mice (n = 14) formed tumors in this time range",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID36572673_Husanie2022_PMC.xml",
+    "anchor": "Results, tumour formation",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The tumour-incidence panel displays a binary 0/14 versus 16/64 comparison.",
+    "snippet": "Figure 5A prints no tumours among 14 KC mice and 16 tumours among 64 KWC mice, with three asterisks but no named binary-outcome test in the panel.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID36572673_Husanie2022_assets/41419_2022_5519_Fig5_HTML.jpg",
+    "anchor": "Figure 5A, native-pixel inspection after effective-PPI preflight",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The WWOX knockout rescue is supraphysiological rather than restoration to WT level.",
+    "snippet": "Figure 6H prints rescue-expression values of 5.9 and 6.70 relative to WT and shows colony formation below the WT control.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID36572673_Husanie2022_assets/41419_2022_5519_Fig6_HTML.jpg",
+    "anchor": "Figure 6H, native-pixel inspection after effective-PPI preflight",
+    "panel_text_relation": "panel_only"
+   }
+  ]
+ }
+}

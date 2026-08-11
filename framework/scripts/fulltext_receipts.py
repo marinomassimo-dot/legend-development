@@ -19,6 +19,7 @@ integrity claim degrades to "visible in review", never to "invisible".
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import os
@@ -574,9 +575,35 @@ def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
                 errors.append(f"line {number}: conflicting identifiers for the same study")
         prior_for_study = [item for item in seen if same_study(item, pmid, doi)]
         prior_id = receipt["prior_receipt"]
-        if prior_for_study and prior_id != prior_for_study[-1]["event_id"]:
+        # 🔴 MEMBERSHIP, not recency, and the change is the point rather than a relaxation.
+        #
+        # This rule used to demand that a repeated reading link the LATEST earlier receipt for
+        # its study. That is a positional proxy for a question about lineage, and it holds only
+        # while history is linear. It is not linear any more and will not be again: on
+        # 2026-08-10 two actors read PMID 42422765 in parallel, at 10:17 and 12:19, and BOTH
+        # legitimately continued `FTR-20260810-42422765-01`. Neither had seen the other. After
+        # the merge the older rule demanded that the 12:19 reading link the 10:17 one — which
+        # would have made the ledger assert that one reader built on a reading they never saw.
+        #
+        # Writing a known falsehood into canonical state to satisfy a positional invariant is
+        # the trade this repository refused earlier the same day over an enum that had no true
+        # value. Same shape, different contract: **when no admitted arrangement is true, the
+        # defect is the rule.**
+        #
+        # So `prior_receipt` means what it says — the reading THIS one builds on — and two
+        # independent readings of one study may share a parent. That is the normal case under
+        # parallel branches, not an exception. What the old rule was really protecting, "does
+        # a reader know this paper was already read and what that reading covered", is not a
+        # property of any single event and cannot be: an event records what its author knew,
+        # and A could not name a receipt that did not exist in A's world. It belongs to a view
+        # over all of them — `reading_state.py`, derived and committed — which is also the only
+        # place a FORK can be reported instead of silently linearised.
+        if prior_for_study and prior_id is None:
             errors.append(
-                f"line {number}: repeated study must link its latest prior_receipt"
+                f"line {number}: prior_receipt is null and this study already has "
+                f"{len(prior_for_study)} receipt(s), so a further reading must say which one "
+                f"it builds on. Sharing a parent with a parallel reading is allowed; "
+                f"declaring no parent at all is not"
             )
         if prior_id is not None:
             matching_prior = [item for item in prior_for_study if item["event_id"] == prior_id]
@@ -654,7 +681,8 @@ def receipt_depth_index(path: Path) -> dict[str, dict[str, Any]]:
 
 
 def append_receipt(
-    path: Path, receipt: dict[str, Any], *, manifest: Optional[Path] = None
+    path: Path, receipt: dict[str, Any], *, manifest: Optional[Path] = None,
+    artifact_root: Optional[Path] = None,
 ) -> dict[str, Any]:
     """Append one event under an exclusive lock and return the persisted record.
 
@@ -685,8 +713,11 @@ def append_receipt(
         if record.get("record_kind") == "contemporaneous_receipt":
             record["event_at"] = datetime.now(timezone.utc).isoformat(
                 timespec="seconds").replace("+00:00", "Z")
-        require_work_manifest(record, root, disease, strict=True)
-        strict_errors = _strict_local_source(record, root)
+        evidence_root = artifact_root.resolve() if artifact_root is not None else root
+        require_work_manifest(
+            record, root, disease, strict=True, artifact_root=evidence_root
+        )
+        strict_errors = _strict_local_source(record, evidence_root)
     else:
         root, strict_errors = None, []
     # `root` matters: without it the corpus content check resolves against the process CWD.
@@ -733,6 +764,189 @@ def append_receipt(
         finally:
             fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
     return record
+
+
+def event_body(receipt: dict[str, Any]) -> dict[str, Any]:
+    """The event minus its position in history.
+
+    `ledger_prev_hash` records WHERE an event sits, not WHAT it says. Two ledgers that
+    recorded the same reading and then diverged hold events with identical bodies and
+    different chain fields — so the body is the identity a rechain must preserve, and the
+    chain field is the only thing it is allowed to touch.
+    """
+    return {key: value for key, value in receipt.items() if key != CHAIN_FIELD}
+
+
+def common_prefix_length(base: list[dict[str, Any]], incoming: list[dict[str, Any]]) -> int:
+    """How many leading events the two ledgers agree on, compared by body.
+
+    Deliberately not by line or by digest: a digest commits to `ledger_prev_hash`, so the
+    first re-chained event would make every later comparison false and the whole ledger would
+    read as divergent. The `append_only_prefix` freeze policy asks the same question of a
+    single file over time — is my prefix still my prefix — and this asks it of two files at
+    one moment. Same vocabulary, different object; the freeze verifies a prefix, it does not
+    rebuild a suffix, so there was nothing here to adopt beyond the wording.
+    """
+    length = 0
+    for left, right in zip(base, incoming):
+        if event_body(left) != event_body(right):
+            break
+        length += 1
+    return length
+
+
+RENAMEABLE = ("event_id", "prior_receipt")
+
+
+def _renamed(event: dict[str, Any], renames: dict[str, str]) -> dict[str, Any]:
+    """Apply a rename map to one event's identity fields, SIMULTANEOUSLY.
+
+    🔴 Simultaneous, not sequential, and that is the whole hazard. The real case is a slide —
+    `-02`→`-03`, `-03`→`-04`, `-04`→`-05` — and applying those one after another walks every
+    event into the slot the next rename is about to vacate, so `-02` ends up as `-05` and
+    three events share a name. One pass over the ORIGINAL value is the only correct order,
+    because there isn't one.
+
+    `prior_receipt` is renamed too. An event whose predecessor was renamed and whose pointer
+    was not is a provenance link to an identifier that no longer exists — the same defect the
+    rename exists to remove, moved one field to the left.
+    """
+    if not renames:
+        return event
+    for field in RENAMEABLE:
+        value = event.get(field)
+        if isinstance(value, str) and value in renames:
+            event[field] = renames[value]
+    return event
+
+
+def _rename_errors(renames: dict[str, str], base: list[dict[str, Any]],
+                   incoming: list[dict[str, Any]], shared: int) -> list[str]:
+    """Every way a declared rename can be wrong, before anything is written."""
+    errors: list[str] = []
+    suffix_ids = {event.get("event_id") for event in incoming[shared:]}
+    prefix_ids = {event.get("event_id") for event in incoming[:shared]}
+    base_ids = {event.get("event_id") for event in base}
+    for old, new in renames.items():
+        if old not in suffix_ids:
+            # A rename naming nothing is a typo, and silently succeeding would leave the
+            # collision it was meant to resolve while reporting that it was resolved.
+            where = (" — it is in the SHARED prefix, which this rechain does not move and "
+                     "must not touch" if old in prefix_ids else "")
+            errors.append(
+                f"--rename {old}={new}: no event {old} among the {len(suffix_ids)} being "
+                f"moved{where}")
+        if new in base_ids:
+            errors.append(
+                f"--rename {old}={new}: {new} already exists in the base ledger; a rename "
+                "that lands on an occupied identifier creates the collision it is resolving")
+        if new in suffix_ids and new not in renames:
+            errors.append(
+                f"--rename {old}={new}: {new} is already used by another event being moved "
+                "and is not itself being renamed; declare the whole slide, not one step of it")
+    return errors
+
+
+def rechain(
+    base: list[dict[str, Any]], incoming: list[dict[str, Any]],
+    renames: dict[str, str] | None = None,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], int]:
+    """Rebase `incoming`'s divergent suffix onto `base`, touching only the chain field.
+
+    Returns ``(merged ledger, the events that moved, common prefix length)``.
+
+    🔴 **A hash chain refuses two parents, and that refusal is the design working.** When two
+    branches append different events onto the same predecessor, neither line is wrong and the
+    concatenation of both is: the second event's `ledger_prev_hash` names a predecessor that
+    is no longer its predecessor. There is no way to keep both by editing the file, and that
+    is the point — so the only lawful resolution is to move one line to the end of the other
+    and recompute nothing but its position.
+
+    Every refusal below exists because the alternative is silent:
+
+    - the base's own chain must verify, or a rebase would extend a corrupted history with
+      fresh, honest-looking links — the same reason `append_receipt` re-reads inside its lock;
+    - the incoming chain must verify, or the events being moved were already untrustworthy;
+    - the moved events must differ from their originals in `ledger_prev_hash` **and nothing
+      else**, checked after the fact rather than promised. A rechain that also rewrote a
+      coverage map or a fingerprint would be a rewrite wearing a merge's clothes;
+    - `validate_ledger_sequence` runs over the merged whole, because ordering is not the only
+      thing a merge can break: two branches can mint the same `event_id`, or record
+      conflicting identities for one study, and both are invisible until the lines are in one
+      file.
+
+    🔴 `renames` is the ONE declared exception to "moves an event, does not modify it", and it
+    exists because the sequence check above is unsatisfiable without it. When two branches
+    mint the same `event_id` on different work, no ordering resolves them — one has to be
+    renumbered, and the only lawful place for that is here, declared on the command line and
+    checked, rather than in an editor where nothing would check it at all. The exception is
+    narrow by construction: only `event_id` and `prior_receipt` may change, only in the events
+    being MOVED, only to identifiers nobody holds, and the body guard below still runs over
+    every other field.
+    """
+    errors = validate_ledger_chain(base)
+    if errors:
+        raise ValueError("base ledger is not chained; refusing to rebase onto it: "
+                         + "; ".join(errors))
+    errors = validate_ledger_chain(incoming)
+    if errors:
+        raise ValueError("incoming ledger is not chained; refusing to move its events: "
+                         + "; ".join(errors))
+
+    shared = common_prefix_length(base, incoming)
+    renames = dict(renames or {})
+    rename_errors = _rename_errors(renames, base, incoming, shared)
+    if rename_errors:
+        raise ValueError("; ".join(rename_errors))
+    suffix = [_renamed(copy.deepcopy(event), renames) for event in incoming[shared:]]
+
+    # Deep-copied, and the base is re-compared at the end. Sharing references with the caller
+    # would make `rechain` able to alter the history it is rebasing onto without any of the
+    # checks below noticing: a mutation applied before the digest is taken produces a chain
+    # that verifies against the mutated event. Found by mutation-testing this function rather
+    # than by reading it — the body guard only watches the events that MOVE, and the base was
+    # the half nothing was watching.
+    base_bodies = [event_body(event) for event in base]
+    merged = [copy.deepcopy(event) for event in base]
+    moved: list[dict[str, Any]] = []
+    for original, event in zip(incoming[shared:], suffix):
+        event[CHAIN_FIELD] = ledger_head(merged)
+        # 🔴 The guard does NOT go through `_renamed`. Comparing the renamed event against a
+        # renamed copy of the original was the obvious shape and it is worthless: any bug
+        # inside `_renamed` is applied to both sides and cancels, so the check certifies the
+        # code it is supposed to be checking. Caught by mutation-testing it — a deliberate
+        # corruption injected into `_renamed` passed clean.
+        #
+        # So the expectation is recomputed from the DECLARED map here, and every other field
+        # is compared untouched. A rename cannot be cover for an edit, and a broken rename
+        # cannot hide behind being applied twice.
+        expected = {}
+        for field in RENAMEABLE:
+            value = original.get(field)
+            expected[field] = renames.get(value, value) if isinstance(value, str) else value
+        left = {k: v for k, v in event_body(event).items() if k not in RENAMEABLE}
+        right = {k: v for k, v in event_body(original).items() if k not in RENAMEABLE}
+        if left != right or any(event.get(f) != expected[f] for f in RENAMEABLE):
+            raise ValueError(
+                f"rechain altered {original.get('event_id')} beyond {CHAIN_FIELD}"
+                + (" and the declared renames" if renames else "")
+                + "; a rechain moves an event in history, it does not modify it")
+        merged.append(event)
+        moved.append(event)
+
+    if [event_body(event) for event in merged[:len(base)]] != base_bodies:
+        raise ValueError(
+            "rechain altered the base history it was rebasing onto; a rebase adds to a "
+            "history, it does not touch it")
+    chain_errors = validate_ledger_chain(merged)
+    if chain_errors:
+        raise ValueError("rechained ledger does not verify: " + "; ".join(chain_errors))
+    sequence_errors = validate_ledger_sequence(merged)
+    if sequence_errors:
+        raise ValueError(
+            "rechained ledger breaks a sequence rule — the events are individually valid and "
+            "cannot coexist in one history: " + "; ".join(sequence_errors))
+    return merged, moved, shared
 
 
 ANCHOR_EVENTS = re.compile(r"(?m)^(fulltext_ledger_events:\s*)(\S+)\s*$")
@@ -820,12 +1034,55 @@ def write_state_anchor(manifest_path: Path, receipts: list[dict[str, Any]]) -> b
     return True
 
 
+def write_rechained_ledger(
+    path: Path, merged: list[dict[str, Any]], *, manifest: Optional[Path] = None
+) -> None:
+    """Replace the ledger with a rebased history, under the same lock `append_receipt` uses.
+
+    This is the one writer in this module that does not append, and it says so in its name.
+    It is still not a hand edit: every line it writes came out of `rechain`, which refused to
+    change anything but the chain field, and the whole file is re-verified from disk after the
+    write. If that re-read disagrees, the original bytes go back.
+    """
+    if fcntl is None:
+        raise RuntimeError("POSIX file locking unavailable; refusing unlocked ledger rewrite")
+    payload = "".join(canonical_line(event) + "\n" for event in merged)
+    with path.open("r+", encoding="utf-8") as handle:
+        fcntl.flock(handle.fileno(), fcntl.LOCK_EX)
+        try:
+            handle.seek(0)
+            original = handle.read()
+            handle.seek(0)
+            handle.write(payload)
+            handle.truncate()
+            handle.flush()
+            os.fsync(handle.fileno())
+            try:
+                persisted = load_ledger(path)
+                if [event_body(item) for item in persisted] != [
+                        event_body(item) for item in merged]:
+                    raise ValueError("the ledger on disk is not what rechain produced")
+                if manifest is not None and not write_state_anchor(manifest, persisted):
+                    raise ValueError(
+                        f"{manifest} declares no unique full-text ledger anchor")
+            except Exception:
+                handle.seek(0)
+                handle.write(original)
+                handle.truncate()
+                handle.flush()
+                os.fsync(handle.fileno())
+                raise
+        finally:
+            fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+
+
 def default_manifest_path(root: Path) -> Path:
     return root / "framework" / "state" / "state_manifest_current.md"
 
 
 def require_work_manifest(
-    receipt: Any, root: Path, disease: str, *, strict: bool = True
+    receipt: Any, root: Path, disease: str, *, strict: bool = True,
+    artifact_root: Path | None = None,
 ) -> None:
     """Refuse the strongest claim until the work behind it exists.
 
@@ -857,6 +1114,7 @@ def require_work_manifest(
         ) from exc
     errors, incomplete = deepdive_manifest.load_and_validate(
         root.resolve(), disease, str(pmid),
+        artifact_root=(artifact_root.resolve() if artifact_root is not None else None),
         verify_artifacts=strict,
         require_current_schema=strict,
     )
@@ -898,6 +1156,14 @@ def main() -> int:
     )
     parser.add_argument("--ledger", default="", help="append-only receipt JSONL; defaults to the disease workspace sink")
     parser.add_argument("--root", default=".", help="repository root used for the default sink")
+    parser.add_argument(
+        "--artifact-workspace",
+        default="",
+        help=(
+            "optional persistent workspace root used only for source-artifact and strict "
+            "work-manifest verification"
+        ),
+    )
     parser.add_argument("--disease", default="wwox", help="disease model used for the default sink")
     parser.add_argument(
         "--manifest",
@@ -917,6 +1183,19 @@ def main() -> int:
     status.add_argument("--doi", default="")
     record = subparsers.add_parser("record")
     record.add_argument("--receipt", required=True, help="one receipt JSON file")
+    rechain_cmd = subparsers.add_parser(
+        "rechain",
+        help="rebase this ledger's divergent events onto another ledger's history")
+    rechain_cmd.add_argument(
+        "--onto", required=True,
+        help="the base ledger to rebase onto — e.g. `git show main:<ledger> > base.jsonl`")
+    rechain_cmd.add_argument(
+        "--rename", action="append", default=[], metavar="OLD=NEW",
+        help=("renumber an event being moved, e.g. FTR-...-02=FTR-...-03. Repeatable, and a "
+              "slide must be declared whole: all renames apply at once"))
+    rechain_cmd.add_argument(
+        "--dry-run", action="store_true",
+        help="report the plan and write nothing")
     args = parser.parse_args()
     ledger = (
         Path(args.ledger)
@@ -951,8 +1230,51 @@ def main() -> int:
             return 0
         if args.command == "record":
             receipt = json.loads(Path(args.receipt).read_text(encoding="utf-8"))
-            persisted = append_receipt(ledger, receipt, manifest=manifest)
+            persisted = append_receipt(
+                ledger,
+                receipt,
+                manifest=manifest,
+                artifact_root=(Path(args.artifact_workspace) if args.artifact_workspace else None),
+            )
             print(f"RECORDED: {persisted['event_id']}")
+            return 0
+        if args.command == "rechain":
+            base_path = Path(args.onto)
+            if not base_path.is_file():
+                raise ValueError(f"base ledger does not exist: {base_path}")
+            base = load_ledger(base_path)
+            incoming = load_ledger(ledger)
+            renames: dict[str, str] = {}
+            for pair in args.rename:
+                if pair.count("=") != 1 or not all(part.strip() for part in pair.split("=")):
+                    raise ValueError(f"--rename expects OLD=NEW, got {pair!r}")
+                old, new = (part.strip() for part in pair.split("="))
+                if old in renames:
+                    raise ValueError(f"--rename {old} declared twice")
+                renames[old] = new
+            merged, moved, shared = rechain(base, incoming, renames)
+            print(f"BASE:     {len(base)} event(s) from {base_path}")
+            print(f"INCOMING: {len(incoming)} event(s) from {ledger}")
+            print(f"SHARED:   {shared} event(s) — the two histories agree up to here")
+            if not moved:
+                print("NOTHING TO REBASE: this ledger adds no event the base does not have")
+                return 0
+            reverse = {new: old for old, new in renames.items()}
+            for event in moved:
+                identifier = event.get("event_id")
+                was = reverse.get(str(identifier))
+                print(f"  MOVE {identifier}"
+                      + (f"  (was {was})" if was else "")
+                      + f"  {event.get('evidence_depth', '?')}  "
+                      f"pmid {event.get('study_id', {}).get('pmid', '?')}")
+            if args.dry_run:
+                print(f"DRY RUN: {len(moved)} event(s) would move; "
+                      f"the ledger would hold {len(merged)}. Nothing written.")
+                return 0
+            write_rechained_ledger(ledger, merged, manifest=manifest)
+            print(f"REBASED: {len(moved)} event(s) moved onto {len(base)}; "
+                  f"{len(merged)} chained, head {ledger_head(merged)}")
+            print(f"ANCHORED: {manifest}")
             return 0
 
         pmid = args.pmid.strip()

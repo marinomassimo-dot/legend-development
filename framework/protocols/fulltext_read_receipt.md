@@ -77,6 +77,34 @@ v1 manifests remain visible as migration debt and are not rewritten. For a PDF, 
 fingerprinted PDF as `article_binary` and a deterministic extracted TXT as `article_text`;
 text locators point to the latter while the receipt remains bound to the former.
 
+### 🔴 Evidence locality across branches
+
+`files/` is gitignored for copyright reasons. A branch therefore transports a manifest but
+does **not** transport the evidence bytes named by that manifest. Every probatory artifact
+must be written to the persistent `files/` tree of the shared checkout, never only to an
+ephemeral worktree or `/private/tmp`. A PASS obtained before that temporary workspace
+disappears is historically true but operationally unverifiable and does not close the read.
+
+When manifest work is isolated on a branch, keep the two roots explicit. `--workspace` is
+where the versioned manifest and receipt ledger live; `--artifact-workspace` is the shared
+checkout whose `files/` tree contains the fingerprinted evidence. Both validators retain
+their containment checks within the selected evidence root:
+
+```bash
+python3 <branch>/framework/scripts/deepdive_manifest.py \
+  --workspace <branch> --artifact-workspace <shared-checkout> \
+  --disease wwox --pmid <PMID> --verify-artifacts --require-current-schema
+
+python3 <branch>/framework/scripts/fulltext_receipts.py \
+  --root <branch> --artifact-workspace <shared-checkout> \
+  record --receipt <event.json>
+```
+
+The strict manifest command that counts is launched with the shared checkout as the current
+directory and must resolve the evidence there. Omitting `--artifact-workspace` preserves the
+single-workspace fail-closed default; a symlink that escapes the selected workspace remains
+an error rather than a hidden bypass.
+
 ### 🔴 A text layer is not its page
 
 **Seek XML/HTML PMC first, every time, and record its absence.** A PDF text layer is a
@@ -219,6 +247,61 @@ design guarantees is that such an edit is a visible diff in a second file, under
 control, rather than an invisible one. The integrity claim degrades to "reviewable", never
 to "undetectable"; overstating it would be exactly the kind of unearned assurance this
 protocol exists to prevent.
+
+## Merging two branches that both appended — `rechain`
+
+🔴 **A hash chain refuses two parents, and that refusal is the design working, not a bug in
+anyone's branch.** When two actors append different events onto the same predecessor, neither
+line is wrong and the *concatenation of both* is: the second event's `ledger_prev_hash` names
+a predecessor that is no longer its predecessor. Git will merge the two JSONL files without
+complaint — they touch different lines — and `validate` will then say `line 61: broken hash
+chain`. Resolving it by editing the file is forbidden and would not help: the digests are over
+the whole records.
+
+Measured on **2026-08-10**, when the fork stopped being hypothetical: three of five branches
+had diverged — `lettore` at event 60, `lettore-b` and `codex/pmid-42422765-s8` at event 61 —
+and three of five merges were blocked at once.
+
+The only lawful resolution is to **move one line's events to the end of the other's history**,
+recomputing nothing but their position:
+
+```bash
+git show main:disease-models/wwox/registries/fulltext_read_receipts.jsonl > /tmp/base.jsonl
+python3 framework/scripts/fulltext_receipts.py rechain --onto /tmp/base.jsonl --dry-run
+python3 framework/scripts/fulltext_receipts.py rechain --onto /tmp/base.jsonl
+```
+
+`--dry-run` names every event that would move and writes nothing. Without it the ledger is
+rewritten under the same exclusive lock `append_receipt` uses, re-read from disk, and the
+manifest tail anchor updated in the same operation; if any of that fails the original bytes go
+back.
+
+**What `rechain` refuses, and why each refusal is not decoration:**
+
+| Refusal | The failure it prevents |
+|---|---|
+| the base's own chain must verify | extending a corrupted history with fresh, honest-looking links |
+| the incoming chain must verify | moving events that were already untrustworthy |
+| a moved event may differ in `ledger_prev_hash` **and nothing else**, re-compared after the fact | a rewrite wearing a merge's clothes — a coverage map or a fingerprint quietly changed in transit |
+| the base prefix must come out byte-identical | a mutation applied *before* a digest is taken yields a chain that verifies against the mutated event, so neither the chain nor the sequence check would say a word |
+| `validate_ledger_sequence` runs over the merged whole | ordering is not the only thing a merge breaks — see below |
+
+🔴 **The last one is the one that actually fired.** `lettore` and `codex/pmid-42422765-s8`
+both recorded a second receipt for PMID 42422765 and both called it
+`FTR-20260810-42422765-02` — one for the figures, one for Supplementary S8, different
+coverage, different fingerprint, different source. Each branch is internally valid. The
+collision exists **only once the lines are in one file**, which is precisely what no
+per-branch check can see, and rechaining the second onto the first is refused with
+`duplicate event_id`.
+
+**That refusal is not something the tool may resolve.** Re-minting an event's identifier
+changes its body, and a rechain that edited a body would be the thing this whole section
+exists to forbid. Which of the two colliding events is renamed — and the downstream files
+that name it — is an operator decision, taken before the second merge, not during it.
+
+**Until a fork is rechained, keep appending.** A branch that goes on recording on its own line
+is behaving correctly; the divergence is a chain refusing two parents, not an actor's mistake.
+What must not happen is a hand edit of the ledger to make a merge look clean.
 
 ## The registry-declaration ratchet
 

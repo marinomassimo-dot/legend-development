@@ -11,6 +11,7 @@ Run: `python3 framework/scripts/test_trace_claim_foundation.py`
 
 from __future__ import annotations
 
+import re
 import shutil
 import sys
 import tempfile
@@ -226,9 +227,24 @@ class RecordSplitBattery(unittest.TestCase):
         self.assertNotIn("CORPUS-STUB-004", foundation.papers)
 
     def test_the_live_paper_registry_splits_into_exactly_its_papers(self) -> None:
+        """🔴 The count is derived from the file, never pinned.
+
+        This assertion read `== 49` until 2026-08-10, when `PAPER 060` was promoted and the
+        suite went red for a correct change. That is the defect `CLAUDE.md` names first: a
+        number a human must remember to update is a number someone will bump to make the
+        suite green, which is the gesture the check exists to prevent. What the test actually
+        means is that splitting the registry yields one record per `## PAPER` heading and
+        absorbs nothing — no placeholder, no stray block — so it counts the headings and
+        compares. Updating it now costs exactly as much as complying with it: nothing, and
+        it still fails the moment a record is swallowed.
+        """
         foundation = tcf.Foundation(REPO, "wwox")
+        headings = re.findall(
+            r"(?m)^## (PAPER \d+)\s*$",
+            (REPO / "disease-models" / "wwox" / "registries"
+             / "paper_registry_current.md").read_text(encoding="utf-8"))
         self.assertTrue(all(pid.startswith("PAPER ") for pid in foundation.papers))
-        self.assertEqual(len(foundation.papers), 49)
+        self.assertEqual(sorted(foundation.papers), sorted(headings))
 
 
 class LineageBattery(unittest.TestCase):

@@ -1,191 +1,304 @@
 {
-  "pmid": "32000863",
-  "doi": "10.1186/s40478-020-0883-3",
-  "receipt": "FTR-20260804-32000863-01",
-  "landing": [
-    "FTR-20260804-32000863-01",
-    "PAPER 019",
-    "CLAIM 016",
-    "full_text_queue_current#FT-036"
-  ],
-  "skills_considered": [
-    {
-      "skill": "find-fulltext",
-      "used": true
-    },
-    {
-      "skill": "legend-deepdive",
-      "used": false,
-      "reason": "Run inline. The reading was targeted at a named blocker — the two ELIGIBILITY_DEBT records in the DisMech sidecar sit on CLAIM 016, whose only unbacked source is this paper — and the figure inspection and locator capture had to come from the same open document."
-    },
-    {
-      "skill": "legend-study-intake-triage",
-      "used": false,
-      "reason": "No list arrived; the paper is already PAPER 019 and the target was known before retrieval."
-    },
-    {
-      "skill": "legend-batch-inferential-sweep",
-      "used": false,
-      "reason": "One paper, not a batch."
-    },
-    {
-      "skill": "legend-discovery",
-      "used": false,
-      "reason": "Three leads were surfaced and are recorded as locators rather than promoted: the heterozygote Tc-MEP latency signal, WWOX-17-beta-estradiol binding via the NSYK motif, and the myelin-lipid question. Promotion needs the discovery ledger's stress test against existing leads and is not claimed as done here."
-    },
-    {
-      "skill": "legend-hypothesis-forge",
-      "used": false,
-      "reason": "The paper's closing sentence proposes GSK3-beta inhibitors as candidate treatments. Forging on it now would be premature in exactly the way this reading found: the supporting experiment does not separate target-specific rescue from a general anticonvulsant effect."
-    },
-    {
-      "skill": "legend-commit",
-      "used": false,
-      "reason": "Two commit candidates recorded, not applied. The four canonical current files change only under an operator-authorized BATCH_COMMIT."
-    }
-  ],
-  "group_assessment": {
-    "waived": "The two publication counts cannot be measured; the PubMed connector is unauthorized in this session, and an estimate in an integer slot is indistinguishable from a measurement. What the Methods establish is recorded here so the waiver loses nothing. research_type is experimental_lab: a mouse-genetics study from National Cheng Kung University generating TWO independent Wwox knockout strains, with behaviour (rotarod, footprint, tail suspension), transcranial motor evoked potentials, electron microscopy with immunogold, LFB/cresyl violet/TUNEL/immunohistochemistry, BrdU birthdating, western blotting and two convulsant seizure models. is_primary_group_for_disease is false for the disease and arguably true for the gene: this is a WWOX laboratory whose output is mechanism, not clinical description. Weighting: the observations are strong and internally controlled — the two-strain design exists specifically to exclude an aberrant product of the retained exon 1, and both strains agree on every behavioural measure. The pharmacology is the weak layer and is where this reading disagrees with the paper's own interpretation; see locators 1 to 4. Group standing does not repair a non-selective drug. NOTE: the waiver is per-section but the impediment is per-field."
+ "schema_version": 2,
+ "pmid": "32000863",
+ "doi": "10.1186/s40478-020-0883-3",
+ "receipt": "FTR-20260804-32000863-01",
+ "landing": [
+  "FTR-20260804-32000863-01",
+  "PAPER 019",
+  "CLAIM 016",
+  "full_text_queue_current#FT-036"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true
   },
-  "field_density": {
-    "waived": "Requires a live PubMed query and the connector is unauthorized. Not the gating question: the paper is already PAPER 019 and was read to discharge a named export blocker, not to decide an intake."
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The reading was targeted at a named blocker — the two ELIGIBILITY_DEBT records in the DisMech sidecar sit on CLAIM 016, whose only unbacked source is this paper — and the figure inspection and locator capture had to come from the same open document."
   },
-  "multihop": {
-    "references_enumerated": 66,
-    "gene_direct_refs_in_source": [
-      "10861292"
-    ],
-    "resolved": [],
-    "queued": [
-      "10861292"
-    ],
-    "note": "66 references, 27 WWOX/FRA16D-direct with a PMID, 26 already in the corpus. One unknown: PMID 10861292, the FRA16D sequence and FOR gene identification. The 96% hit rate is itself informative — LEGEND's coverage of the mouse-and-mechanism axis is dense, unlike the clinical-cohort axis where the last three readings each found 7 or more gaps."
+  {
+   "skill": "legend-study-intake-triage",
+   "used": false,
+   "reason": "No list arrived; the paper is already PAPER 019 and the target was known before retrieval."
   },
-  "corpus_crossquery": {
-    "query": "Which of this paper's 27 WWOX/FRA16D-direct references carrying a PMID are already in paper_registry_current.md, literature_tracking_log_current.md, full_text_queue_current.md, research_candidates_current.md or batch_queue.md?",
-    "hits": 26,
-    "note": "Run mechanically over the registries."
+  {
+   "skill": "legend-batch-inferential-sweep",
+   "used": false,
+   "reason": "One paper, not a batch."
   },
-  "retraction_check": {
-    "result": "No retraction, correction or expression of concern in the PMC record. Verified against the local PMC XML article-meta; not re-checked against a live PubMed query, because the connector is unauthorized in this session.",
-    "checked": true
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Three leads were surfaced and are recorded as locators rather than promoted: the heterozygote Tc-MEP latency signal, WWOX-17-beta-estradiol binding via the NSYK motif, and the myelin-lipid question. Promotion needs the discovery ledger's stress test against existing leads and is not claimed as done here."
   },
-  "verbatim_locators": {
-    "waived": false,
-    "source_fulltext_indexed": true,
-    "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:32000863 on 2026-08-07: inEPMC=Y, PMCID PMC6990504, hasPDF=Y — full text is indexed, so an external validator can re-verify body quotes.",
-    "entries": [
-      {
-        "proposition": "READ FROM THE IMAGE, NOT THE TEXT: lithium suppressed PTZ-induced seizures in ALL THREE genotypes, including wild-type — so the experiment does not establish a Wwox-specific rescue.",
-        "snippet": "d Pretreatment of a GSK3β inhibitor LiCl (60 mg/kg) suppressed PTZ-induced seizure activity in Wwox−/− mice.",
-        "anchor": "Figure 7d, image inspected — three stacked panels (+/+, +/−, −/−), each plotting PTZ versus PTZ+LiCl and each carrying its own significance marker. The caption and the Results text name only the −/− panel; the figure shows the same suppression in the two control genotypes."
-      },
-      {
-        "proposition": "READ FROM THE IMAGE: ethosuximide, by contrast, IS genotype-specific — non-significant in +/+ and +/−, significant only in −/−. The drug the paper favours lacks the specificity the comparator has.",
-        "snippet": "Pretreatment of an antiepileptic drug ethosuximide suppressed PTZ-induced seizure in Wwox−/− mice (Fig. b), although ethosuximide pretreatment had no effects on the behavior changes in Wwox+/+ and Wwox+/− mice treated with a low dose of PTZ.",
-        "anchor": "Figure 7b, image inspected — PTZ versus PTZ+ETS marked n.s. in the +/+ and +/− panels and significant in the −/− panel; the text states this for ethosuximide and does not state the converse for lithium"
-      },
-      {
-        "proposition": "READ FROM THE IMAGE: total GSK3-beta protein is essentially unchanged across genotypes and regions; what falls is the inhibitory Ser9 phosphorylation. GSK3-beta is dis-inhibited, not more abundant.",
-        "snippet": "Increased activation of GSK3β was determined in the cerebellum, hippocampus and cerebral cortex of Wwox−/− mice at postnatal day 20, as evidenced by dephosphorylation of GSK3β at Ser9.",
-        "anchor": "Figure 7c, image inspected — densitometry printed under each band: pGSK3β(Ser9) cerebellum 2.7 / 2.5 / 1.3, hippocampus 3.6 / 3.2 / 2.0, cortex 3.9 / 3.8 / 2.5 across +/+, +/−, −/−; total GSK3β flat at 2.2–2.6 in every genotype and region"
-      },
-      {
-        "proposition": "The causal attribution to GSK3-beta rests on lithium, and the paper's own Discussion names lithium's other documented actions in this very system.",
-        "snippet": "Administration of lithium in mice has been demonstrated to attenuate PTZ-induced clonic seizure, and rescue Wnt-dependent cerebellar midline fusion and neurogenesis deficits early in development. Lithium treatment has also been shown to induce β-catenin-mediated myelin gene expression in mouse Schwann cells and enhance remyelination of the injured peripheral nerves in mice.",
-        "anchor": "Discussion, final substantive paragraph"
-      },
-      {
-        "proposition": "GSK3-beta is dis-inhibited in all three brain regions of Wwox-null mice, measured by Ser9 dephosphorylation.",
-        "snippet": "we determined dephosphorylation of GSK3β at Ser9 (active GSK3β) in Wwox−/− mouse cerebellum, hippocampus and brain cortex by western blotting",
-        "anchor": "Results, 'GSK-3β inhibition ameliorates the hypersusceptibility to epileptic seizure due to Wwox loss in mice', final paragraph"
-      },
-      {
-        "snippet": "Injection of a potent GSK3β inhibitor lithium chloride significantly suppressed PTZ-induced epileptic seizure in Wwox−/− mice (Fig. d).",
-        "proposition": "The paper's own statement of the lithium result, restricted to the null genotype.",
-        "anchor": "Results, GSK-3β section, final paragraph"
-      },
-      {
-        "proposition": "Seizure hypersusceptibility sits on top of a structurally malformed brain — the amplifier-not-driver reading.",
-        "snippet": "Wwox−/− mice exhibit cerebral malformations consisting of middle interhemispheric fusion, cortical heterotopia and neuronal disorganization in the hippocampal CA1 region and display increased susceptibilities to convulsant-induced seizures. The aberrant positioning of neurons in Wwox−/− neocortex and hippocampus may cause reorganization of neuronal networks and alteration of cellular physiology that create hyperexcitable tissue.",
-        "anchor": "Discussion, penultimate paragraph"
-      },
-      {
-        "proposition": "Spontaneous seizures appear after postnatal day 12 and are triggered by ordinary sensory stressors, not only by convulsants.",
-        "snippet": "In our generated Wwox−/− mice, spontaneous epileptic seizures were commonly observed after postnatal day 12. Seizures were frequently induced by mild stressors including noise, strobe lights and novel cage during routine handling",
-        "anchor": "Results, GSK-3β section, opening"
-      },
-      {
-        "proposition": "Two independently targeted knockout strains were built specifically to exclude an aberrant product of the retained exon 1, and both give the same phenotype.",
-        "snippet": "To test if the possibly generated aberrant protein may cause phenotypes due to the presence of exon 1 in the mouse genome, we generated both exon 1- and exon 2/3/4-targeting knockout mouse strains for comparison",
-        "anchor": "Methods, 'Wwox gene knockout mice, rotarod performance and footprint analysis'"
-      },
-      {
-        "proposition": "READ FROM THE IMAGE: heterozygotes have a Tc-MEP latency statistically indistinguishable from homozygous nulls while their amplitude is normal — a dissociation, and a candidate carrier readout.",
-        "snippet": "an increase in Tc-MEP latency was determined in Wwox+/− mice (2.13 ± 0.22 msec; p < 0.05) when compared with the wild-type mice, suggesting that Wwox haploinsufficiency may cause a partial Tc-MEP deteriorative change in mice.",
-        "anchor": "Figure 2b–c, images inspected — amplitude +/+ versus +/− marked n.s. and +/− versus −/− significant; latency +/+ versus +/− significant and +/− versus −/− marked n.s. The text gives the +/+ comparison and not the +/− versus −/− one."
-      },
-      {
-        "proposition": "Peripheral nerve involvement with Schwann cell apoptosis and onion-bulb degeneration — a PNS phenotype in a disorder usually framed as central.",
-        "snippet": "abnormal-shaped nerve fibers (red stars), axon demyelination (blue arrow) and onion bulb degeneration (red arrowheads) were observed in all Wwox−/− sciatic nerves examined in this study",
-        "anchor": "Figure 3b caption, image inspected — 5000x and 10000x electron micrographs; panel c shows immunogold cleaved caspase-3 within the Schwann cell"
-      },
-      {
-        "proposition": "Central hypomyelination spans commissural, association and projection fibres and the optic tract.",
-        "snippet": "Wwox−/− mouse brain sections showed significantly reduced myelin staining intensity in the commissural fibers (corpus callosum, and anterior and dorsal hippocampal commissures), the association fibers (cingulum), and the projection fibers emanating from corpus callosum toward striatum",
-        "anchor": "Results, nerve degeneration section, final paragraph; Figure 4, image inspected — rostral and caudal forebrain plus cerebellum, optic tract marked in c3/d3"
-      },
-      {
-        "proposition": "Cerebellar vermian lobules VI and VII are fused with Purkinje cell loss, phenocopying a Joubert-syndrome-associated lesion.",
-        "snippet": "Midline sagittal cresyl violet-stained section revealed foliation defects in lobules V, VI and VII of Wwox−/− cerebellum",
-        "anchor": "Results, cerebellar hypoplasia section; Figure 5b and 5d, images inspected — Purkinje cell counts approximately 18 versus 7 per area"
-      },
-      {
-        "proposition": "Neuronal maturation is delayed rather than merely reduced: the early marker DCX stays high when it should have declined.",
-        "snippet": "Compared with the DCX protein levels in Wwox+/+ and Wwox+/− mice, our results showed that DCX was still highly expressed in Wwox−/− brain tissues at postnatal day 14",
-        "anchor": "Results, neuronal migration section; Figure 6a, image inspected — densitometry cerebellum 0.27 versus 1.19 at P14 and cortex 0.13 versus 0.57 at P20, with the panel's own schematic drawing the DCX-to-NeuN transition as shifted later"
-      },
-      {
-        "proposition": "Brain malformation in this model extends to the holoprosencephaly range, i.e. a forebrain-patterning defect, not only a migration defect.",
-        "snippet": "Gross morphological abnormalities could be observed in Wwox−/− mouse brains from live births, ranging from microcephaly to holoprosencephaly, in which the forebrain did not properly divide into two hemispheres during embryonic development.",
-        "anchor": "Results, 'Wwox is required for proper neuronal migration and development', opening"
-      },
-      {
-        "proposition": "A structural lead on the SDR domain: WWOX may bind 17-beta-estradiol through an NSYK motif, with a proposed neuroprotective role.",
-        "snippet": "WWOX may interact with steroid hormone 17β-estradiol via its NSYK (Asn-Ser-Tyr-Lys) motif in the C-terminal short-chain alcohol dehydrogenase/reductase domain for neuroprotection",
-        "anchor": "Discussion, cerebellar ontogenesis paragraph"
-      },
-      {
-        "proposition": "The paper's own therapeutic proposal, stated as a question requiring test rather than as a finding.",
-        "snippet": "Future studies, as well as more evaluations, will be needed to test whether GSK3β inhibitors may be promising candidates for treatment of human neurological disorders due to loss or dysfunction of WWOX.",
-        "anchor": "Discussion, closing sentence"
-      },
-      {
-        "proposition": "Dosing and design of the seizure experiments, needed to judge how far the pharmacology reaches.",
-        "snippet": "Ethosuximide (i.p., 150 mg/kg), a T-type Ca2+ channel blocker that has anticonvulsant activity, was injected into mice 45 min before PTZ-induced clonic seizures. LiCl (i.p., 60 mg/kg) were pretreated three times within 1 h before PTZ injection.",
-        "anchor": "Methods, 'Induction of seizure'"
-      },
-      {
-        "proposition": "READ FROM THE SUPPLEMENTARY IMAGES: across every quantified developmental measure the heterozygote is indistinguishable from wild-type — brain weight, cortical proliferation and DCX — which makes the Tc-MEP latency finding the single haploinsufficient readout in the whole paper.",
-        "snippet": "Supplementary Figure 1. Wwox gene deletion causes microcephaly and abnormal brain morphology in mice.",
-        "anchor": "Supplementary Figures 1f, 6b and 7, images inspected — S1f brain weight +/+ versus +/− marked n.s. and both versus −/− significant; S6b Ki67-positive cells at birth +/+ versus +/− marked n.s.; S7 DCX densitometry +/+ / +/− / −/− reading 2.60 / 2.38 / 4.12 in cerebellum, 2.21 / 2.82 / 5.23 in hippocampus and 2.47 / 2.43 / 5.17 in cortex"
-      },
-      {
-        "proposition": "Brain water content does not differ between genotypes, which excludes oedema as the explanation for the reduced brain weight.",
-        "snippet": "No differences in brain water contents were detected among the mice of three genotypes",
-        "anchor": "Results, motor disorders section; Supplementary Figure 1g, image inspected — all three pairwise comparisons marked n.s."
-      },
-      {
-        "proposition": "Cortical thinning is already measurable in utero at E16.5, before any seizure has occurred.",
-        "snippet": "We found that the overall cortical thickness was significantly reduced in Wwox knockouts at E16.5, in agreement with the reduced neurogenesis",
-        "anchor": "Results, neuronal migration section; Supplementary Figure 5c, image inspected — scatter of individual animals, approximately 480 versus 370 micrometres, one significance marker"
-      },
-      {
-        "proposition": "Apoptosis is quantified brain-wide, not only in the cerebellum, at roughly a fivefold excess.",
-        "snippet": "Supplementary Figure 9. Increased neuronal apoptosis is detected in Wwox knockout mouse brain.",
-        "anchor": "Supplementary Figure 9c, image inspected — TUNEL-positive fraction of total brain excluding cerebellum printed on the panels as 0.19 per cent in +/+ against 0.89 per cent in −/−"
-      }
-    ],
-    "note": "Twenty-two locators. Eight are anchored to inspected images — four in the main figures and four in the supplementary — and they carry content the running text does not, in one case content that qualifies the paper's own conclusion. All seven main figures and all nine supplementary figures were inspected; the supplementary PDF was retrieved from the publisher's static-content endpoint after the PMC route returned HTTP 200 serving HTML. The seizure video (Additional file 2) was not retrieved."
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "The paper's closing sentence proposes GSK3-beta inhibitors as candidate treatments. Forging on it now would be premature in exactly the way this reading found: the supporting experiment does not separate target-specific rescue from a general anticonvulsant effect."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "Two commit candidates recorded, not applied. The four canonical current files change only under an operator-authorized BATCH_COMMIT."
   }
+ ],
+ "group_assessment": {
+  "waived": "The two publication counts cannot be measured; the PubMed connector is unauthorized in this session, and an estimate in an integer slot is indistinguishable from a measurement. What the Methods establish is recorded here so the waiver loses nothing. research_type is experimental_lab: a mouse-genetics study from National Cheng Kung University generating TWO independent Wwox knockout strains, with behaviour (rotarod, footprint, tail suspension), transcranial motor evoked potentials, electron microscopy with immunogold, LFB/cresyl violet/TUNEL/immunohistochemistry, BrdU birthdating, western blotting and two convulsant seizure models. is_primary_group_for_disease is false for the disease and arguably true for the gene: this is a WWOX laboratory whose output is mechanism, not clinical description. Weighting: the observations are strong and internally controlled — the two-strain design exists specifically to exclude an aberrant product of the retained exon 1, and both strains agree on every behavioural measure. The pharmacology is the weak layer and is where this reading disagrees with the paper's own interpretation; see locators 1 to 4. Group standing does not repair a non-selective drug. NOTE: the waiver is per-section but the impediment is per-field."
+ },
+ "field_density": {
+  "waived": "Requires a live PubMed query and the connector is unauthorized. Not the gating question: the paper is already PAPER 019 and was read to discharge a named export blocker, not to decide an intake."
+ },
+ "multihop": {
+  "references_enumerated": 66,
+  "gene_direct_refs_in_source": [
+   "10861292"
+  ],
+  "resolved": [],
+  "queued": [
+   "10861292"
+  ],
+  "note": "66 references, 27 WWOX/FRA16D-direct with a PMID, 26 already in the corpus. One unknown: PMID 10861292, the FRA16D sequence and FOR gene identification. The 96% hit rate is itself informative — LEGEND's coverage of the mouse-and-mechanism axis is dense, unlike the clinical-cohort axis where the last three readings each found 7 or more gaps."
+ },
+ "corpus_crossquery": {
+  "query": "Which of this paper's 27 WWOX/FRA16D-direct references carrying a PMID are already in paper_registry_current.md, literature_tracking_log_current.md, full_text_queue_current.md, research_candidates_current.md or batch_queue.md?",
+  "hits": 26,
+  "note": "Run mechanically over the registries."
+ },
+ "retraction_check": {
+  "result": "No retraction, correction or expression of concern in the PMC record. Verified against the local PMC XML article-meta; not re-checked against a live PubMed query, because the connector is unauthorized in this session.",
+  "checked": true
+ },
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC REST EXT_ID:32000863 on 2026-08-07: inEPMC=Y, PMCID PMC6990504, hasPDF=Y — full text is indexed, so an external validator can re-verify body quotes.",
+  "entries": [
+   {
+    "proposition": "READ FROM THE IMAGE, NOT THE TEXT: lithium suppressed PTZ-induced seizures in ALL THREE genotypes, including wild-type — so the experiment does not establish a Wwox-specific rescue.",
+    "snippet": "d Pretreatment of a GSK3β inhibitor LiCl (60 mg/kg) suppressed PTZ-induced seizure activity in Wwox−/− mice.",
+    "anchor": "Figure 7d, image inspected — three stacked panels (+/+, +/−, −/−), each plotting PTZ versus PTZ+LiCl and each carrying its own significance marker. The caption and the Results text name only the −/− panel; the figure shows the same suppression in the two control genotypes.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "READ FROM THE IMAGE: ethosuximide, by contrast, IS genotype-specific — non-significant in +/+ and +/−, significant only in −/−. The drug the paper favours lacks the specificity the comparator has.",
+    "snippet": "Pretreatment of an antiepileptic drug ethosuximide suppressed PTZ-induced seizure in Wwox−/− mice (Fig. 7b), although ethosuximide pretreatment had no effects on the behavior changes in Wwox+/+ and Wwox+/− mice treated with a low dose of PTZ.",
+    "anchor": "Figure 7b, image inspected — PTZ versus PTZ+ETS marked n.s. in the +/+ and +/− panels and significant in the −/− panel; the text states this for ethosuximide and does not state the converse for lithium",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "READ FROM THE IMAGE: total GSK3-beta protein is essentially unchanged across genotypes and regions; what falls is the inhibitory Ser9 phosphorylation. GSK3-beta is dis-inhibited, not more abundant.",
+    "snippet": "Increased activation of GSK3β was determined in the cerebellum, hippocampus and cerebral cortex of Wwox−/− mice at postnatal day 20, as evidenced by dephosphorylation of GSK3β at Ser9.",
+    "anchor": "Figure 7c, image inspected at the native 1946×1627 pixels and re-read at 3× on the densitometry row — pGSK3β(Ser9) cerebellum 2.7 / 3.1 / 1.3, hippocampus 3.6 / 3.5 / 2.0, cortex 3.9 / 3.8 / 2.5 across +/+, +/−, −/−; total GSK3β 2.2 / 2.4 / 2.4, 2.3 / 2.4 / 2.6 and 2.2 / 2.4 / 2.6, flat in every genotype and region",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The causal attribution to GSK3-beta rests on lithium, and the paper's own Discussion names lithium's other documented actions in this very system.",
+    "snippet": "Administration of lithium in mice has been demonstrated to attenuate PTZ-induced clonic seizure [10], and rescue Wnt-dependent cerebellar midline fusion and neurogenesis deficits early in development [38]. Lithium treatment has also been shown to induce β-catenin-mediated myelin gene expression in mouse Schwann cells and enhance remyelination of the injured peripheral nerves in mice [47].",
+    "anchor": "Discussion, final substantive paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "GSK3-beta is dis-inhibited in all three brain regions of Wwox-null mice, measured by Ser9 dephosphorylation.",
+    "snippet": "we determined dephosphorylation of GSK3β at Ser9 (active GSK3β) in Wwox−/− mouse cerebellum, hippocampus and brain cortex by western blotting",
+    "anchor": "Results, 'GSK-3β inhibition ameliorates the hypersusceptibility to epileptic seizure due to Wwox loss in mice', final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "snippet": "Injection of a potent GSK3β inhibitor lithium chloride significantly suppressed PTZ-induced epileptic seizure in Wwox−/− mice (Fig. 7d).",
+    "proposition": "The paper's own statement of the lithium result, restricted to the null genotype.",
+    "anchor": "Results, GSK-3β section, final paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Seizure hypersusceptibility sits on top of a structurally malformed brain — the amplifier-not-driver reading.",
+    "snippet": "Wwox−/− mice exhibit cerebral malformations consisting of middle interhemispheric fusion, cortical heterotopia and neuronal disorganization in the hippocampal CA1 region and display increased susceptibilities to convulsant-induced seizures. The aberrant positioning of neurons in Wwox−/− neocortex and hippocampus may cause reorganization of neuronal networks and alteration of cellular physiology that create hyperexcitable tissue.",
+    "anchor": "Discussion, penultimate paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Spontaneous seizures appear after postnatal day 12 and are triggered by ordinary sensory stressors, not only by convulsants.",
+    "snippet": "In our generated Wwox−/− mice, spontaneous epileptic seizures were commonly observed after postnatal day 12. Seizures were frequently induced by mild stressors including noise, strobe lights and novel cage during routine handling",
+    "anchor": "Results, GSK-3β section, opening",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Two independently targeted knockout strains were built specifically to exclude an aberrant product of the retained exon 1, and both give the same phenotype.",
+    "snippet": "To test if the possibly generated aberrant protein may cause phenotypes due to the presence of exon 1 in the mouse genome, we generated both exon 1- and exon 2/3/4-targeting knockout mouse strains for comparison",
+    "anchor": "Methods, 'Wwox gene knockout mice, rotarod performance and footprint analysis'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "READ FROM THE IMAGE: heterozygotes have a Tc-MEP latency statistically indistinguishable from homozygous nulls while their amplitude is normal — a dissociation, and a candidate carrier readout.",
+    "snippet": "an increase in Tc-MEP latency was determined in Wwox+/− mice (2.13 ± 0.22 msec; p < 0.05) when compared with the wild-type mice (Fig. 2b, c), suggesting that Wwox haploinsufficiency may cause a partial Tc-MEP deteriorative change in mice.",
+    "anchor": "Figure 2b–c, images inspected — amplitude +/+ versus +/− marked n.s. and +/− versus −/− significant; latency +/+ versus +/− significant and +/− versus −/− marked n.s. The text gives the +/+ comparison and not the +/− versus −/− one.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "Peripheral nerve involvement with Schwann cell apoptosis and onion-bulb degeneration — a PNS phenotype in a disorder usually framed as central.",
+    "snippet": "abnormal-shaped nerve fibers (red stars), axon demyelination (blue arrow) and onion bulb degeneration (red arrowheads) were observed in all Wwox−/− sciatic nerves examined in this study",
+    "anchor": "Figure 3b caption, image inspected — 5000x and 10000x electron micrographs; panel c shows immunogold cleaved caspase-3 within the Schwann cell",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Central hypomyelination spans commissural, association and projection fibres and the optic tract.",
+    "snippet": "Wwox−/− mouse brain sections showed significantly reduced myelin staining intensity in the commissural fibers (corpus callosum, and anterior and dorsal hippocampal commissures), the association fibers (cingulum), and the projection fibers emanating from corpus callosum toward striatum",
+    "anchor": "Results, nerve degeneration section, final paragraph; Figure 4, image inspected — rostral and caudal forebrain plus cerebellum, optic tract marked in c3/d3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cerebellar vermian lobules VI and VII are fused with Purkinje cell loss, phenocopying a Joubert-syndrome-associated lesion.",
+    "snippet": "Midline sagittal cresyl violet-stained section revealed foliation defects in lobules V, VI and VII of Wwox−/− cerebellum",
+    "anchor": "Results, cerebellar hypoplasia section; Figure 5b and 5d, images inspected — Purkinje cell counts approximately 18 versus 7 per area",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Neuronal maturation is delayed rather than merely reduced: the early marker DCX stays high when it should have declined.",
+    "snippet": "Compared with the DCX protein levels in Wwox+/+ and Wwox+/− mice, our results showed that DCX was still highly expressed in Wwox−/− brain tissues at postnatal day 14",
+    "anchor": "Results, neuronal migration section; Figure 6a, image inspected — densitometry cerebellum 0.27 versus 1.19 at P14 and cortex 0.13 versus 0.57 at P20, with the panel's own schematic drawing the DCX-to-NeuN transition as shifted later",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Brain malformation in this model extends to the holoprosencephaly range, i.e. a forebrain-patterning defect, not only a migration defect.",
+    "snippet": "Gross morphological abnormalities could be observed in Wwox−/− mouse brains from live births, ranging from microcephaly to holoprosencephaly, in which the forebrain did not properly divide into two hemispheres during embryonic development.",
+    "anchor": "Results, 'Wwox is required for proper neuronal migration and development', opening",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A structural lead on the SDR domain: WWOX may bind 17-beta-estradiol through an NSYK motif, with a proposed neuroprotective role.",
+    "snippet": "WWOX may interact with steroid hormone 17β-estradiol via its NSYK (Asn-Ser-Tyr-Lys) motif in the C-terminal short-chain alcohol dehydrogenase/reductase domain for neuroprotection",
+    "anchor": "Discussion, cerebellar ontogenesis paragraph",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The paper's own therapeutic proposal, stated as a question requiring test rather than as a finding.",
+    "snippet": "Future studies, as well as more evaluations, will be needed to test whether GSK3β inhibitors may be promising candidates for treatment of human neurological disorders due to loss or dysfunction of WWOX.",
+    "anchor": "Discussion, closing sentence",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Dosing and design of the seizure experiments, needed to judge how far the pharmacology reaches.",
+    "snippet": "Ethosuximide (i.p., 150 mg/kg), a T-type Ca2+ channel blocker that has anticonvulsant activity (Luszczki et al., 2005), was injected into mice 45 min before PTZ-induced clonic seizures. LiCl (i.p., 60 mg/kg) were pretreated three times within 1 h before PTZ injection.",
+    "anchor": "Methods, 'Induction of seizure'",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Across every quantified developmental measure in the supplement the heterozygote is indistinguishable from wild-type — brain weight, cortical proliferation and DCX — which leaves the Tc-MEP latency finding as the only haploinsufficient readout in the paper.",
+    "snippet": "Supplementary Figure 1f plots brain weight for +/+ (N=20), +/− (N=21) and −/− (N=18) with the +/+ versus +/− bracket marked n.s. and both comparisons against −/− marked ***. Supplementary Figure 7 prints DCX densitometry beneath the blot as 2.60 / 2.38 / 4.12 in cerebellum, 2.21 / 2.82 / 5.23 in hippocampus and 2.47 / 2.43 / 5.17 in cortex, so the heterozygote sits with the wild-type in all three regions while the null is roughly double.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_supplementary.pdf",
+    "anchor": "Supplementary Figures 1f and 7, pages 7 and 19 of the supplementary PDF, rendered at 200 and 300 dpi and read against the page",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Brain water content does not differ between genotypes, which excludes oedema as the explanation for the reduced brain weight.",
+    "snippet": "No differences in brain water contents were detected among the mice of three genotypes",
+    "anchor": "Results, motor disorders section; Supplementary Figure 1g, image inspected — all three pairwise comparisons marked n.s.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Cortical thinning is already measurable in utero at E16.5, before any seizure has occurred.",
+    "snippet": "We found that the overall cortical thickness was significantly reduced in Wwox knockouts at E16.5, in agreement with the reduced neurogenesis",
+    "anchor": "Results, neuronal migration section; Supplementary Figure 5c, image inspected — scatter of individual animals, approximately 480 versus 370 micrometres, one significance marker",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Apoptosis is quantified brain-wide, not only in the cerebellum, at roughly a fivefold excess.",
+    "snippet": "Supplementary Figure 9 panel c, titled TUNEL (total brain excluding cerebellum), prints 0.19% on the +/+ scatter and 0.89% on the −/− scatter, each above a gate line drawn at 17 on the TUNEL mean-intensity axis. Only two genotypes are shown; there is no +/− arm.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_supplementary.pdf",
+    "anchor": "Supplementary Figure 9c, page 23 of the supplementary PDF, rendered at 200 dpi and read against the page",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The lithium experiment does not establish a Wwox-specific rescue: the same suppression is significant in both control genotypes, which the caption and the Results text never say.",
+    "snippet": "Panel d stacks three genotype panels, +/+, +/− and −/−, each plotting PTZ against PTZ+LiCl, and each carries its own **** significance bracket. The wild-type panel is marked as significantly as the null one.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_assets/40478_2020_883_Fig7_HTML.png",
+    "anchor": "Figure 7d, image inspected at the native 1946×1627 pixels — three stacked panels with per-panel significance brackets",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Total GSK3-beta protein is unchanged across genotypes and regions; what falls is the inhibitory Ser9 phosphorylation. GSK3-beta is dis-inhibited, not more abundant — and the heterozygote is not intermediate.",
+    "snippet": "The densitometry printed under the pGSK3β(Ser9) blot reads 2.7 3.1 1.3 for cerebellum, 3.6 3.5 2.0 for hippocampus and 3.9 3.8 2.5 for cortex across +/+, +/− and −/−, and under the total GSK3β blot 2.2 2.4 2.4, 2.3 2.4 2.6 and 2.2 2.4 2.6. In every region the +/− value sits at or above the +/+ value on the phospho blot.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_assets/40478_2020_883_Fig7_HTML.png",
+    "anchor": "Figure 7c, densitometry row re-read at 3× magnification of the native 1946×1627 image",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "Heterozygotes have a Tc-MEP latency statistically indistinguishable from homozygous nulls while their amplitude is normal — a dissociation, and a candidate carrier readout.",
+    "snippet": "Panel b, amplitude, brackets +/+ versus +/− as n.s. and both +/− versus −/− and +/+ versus −/− as significant. Panel c, latency, brackets +/+ versus +/− as significant, +/+ versus −/− as more significant still, and +/− versus −/− as n.s. The legend gives N=10, N=5 and N=4.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID32000863_Cheng2020_assets/40478_2020_883_Fig2_HTML.png",
+    "anchor": "Figure 2b and 2c, image inspected at the native 1418×1576 pixels — significance brackets above each bar chart",
+    "panel_text_relation": "panel_only"
+   }
+  ],
+  "note": "Twenty-two locators. Eight are anchored to inspected images — four in the main figures and four in the supplementary — and they carry content the running text does not, in one case content that qualifies the paper's own conclusion. All seven main figures and all nine supplementary figures were inspected; the supplementary PDF was retrieved from the publisher's static-content endpoint after the PMC route returned HTTP 200 serving HTML. The seizure video (Additional file 2) was not retrieved.\n\n🔴 AUDITED AND CORRECTED 2026-08-10. Every snippet was matched, character for character, against the local XML (sha256 792b5b29…, PMC6990504). SIXTEEN of twenty-two matched; FIVE did not, and all five failed for one reason: they were TRANSCRIBED AS THE PAGE READS, NOT EXTRACTED AS THE ARTIFACT CONTAINS. The markup artefacts had been silently normalised away — `Wwox <sup>−/−</sup>` extracts as `Wwox −/−` and was written `Wwox−/−`; `<xref>7</xref> b` extracts as `Fig. 7 b` and was written `Fig. b`; the reference markers `[ 10 ] [ 38 ] [ 47 ]`, the citation `(Luszczki et al., 2005)` and the cross-reference `(Fig. 2 b, c)` were dropped entirely. None of that changes meaning, but two of them LOSE INFORMATION and they are the two that matter: WHICH FIGURE a result points at, and WHICH REFERENCES support which clause — the latter being precisely the point of the locator on lithium's non-selective pharmacology. Entries 1, 3, 5, 9 and 17 are now the same span of the same sentence taken from the extracted text, each verified to match in STRICT mode, comparators intact. This is a class and not an incident: a locator captured by transcription is not a locator captured from the artifact, and the difference is invisible until a validator matches exactly. Expect it in the remaining legacy manifests. STILL OUTSTANDING, declared not fixed: entries 18 and 21 quote supplementary figure captions, which live in PMID32000863_Cheng2020_supplementary.pdf and not in the XML body — they are correct and unverifiable against the declared surface until this manifest reaches schema v2. That upgrade is blocked on something this repository cannot manufacture: the FOUR MAIN FIGURES WERE INSPECTED AT READING TIME AND NEVER PERSISTED, so eight image locators have no local artifact to name. It is the `files/` rule from the other side — the manifest survived, the evidence did not travel with it.\n\n🔴 SCHEMA v2 UPGRADE 2026-08-10, AND A NUMBER NOTHING WAS CHECKING. The two snippets the corpus audit could not find were SUPPLEMENTARY FIGURE CAPTIONS. They are absent from the main XML because they live in the supplementary PDF, and no manifest declared that artifact — so the quotes were unverifiable by anyone, not wrong. The supplement is now declared and fingerprinted, and those two locators say what the supplementary panels show rather than repeating their captions.\n\n🔴 RE-INSPECTING THE FIGURES TO WRITE THEM PROPERLY FOUND A TRANSCRIPTION ERROR IN AN ANCHOR. Entry 2 recorded the Figure 7c densitometry as `2.7 / 2.5 / 1.3` in cerebellum and `3.6 / 3.2 / 2.0` in hippocampus. The figure prints `2.7 / 3.1 / 1.3` and `3.6 / 3.5 / 2.0`, confirmed at 3× magnification of the native 1946×1627 image. BOTH ERRORS ARE IN THE +/− COLUMN AND BOTH PUSH THE HETEROZYGOTE DOWN: recorded, the het reads BELOW wild-type and looks intermediate; printed, it sits at or above wild-type in every region. The error manufactured a gene-dosage gradient the panel does not show — inside the manifest whose entry 18 concludes the heterozygote is indistinguishable from wild-type on every quantified developmental measure. The anchor contradicted its own manifest's conclusion for a day and nothing noticed, BECAUSE ANCHORS ARE PROSE AND NO VALIDATOR HAS EVER READ ONE. The anchor is corrected here and the verified numbers now also sit in a locator snippet, where the schema can see them.\n\nFour artifacts declared: the JATS XML, the supplementary PDF, and the Figure 2 and Figure 7 images. Three figure locators were added for what the images carry and the text does not — Figure 7d, Figure 7c and Figure 2b-c — each verified in this run. REMAINING DEBT, NAMED: entries 10 to 13, 19 and 20 have anchors that say `image inspected` for Figures 3, 4, 5, 6 and Supplementary Figures 5c and 6b. Their snippets are body text and verify against the XML, so they are sound as text locators, but their image observations still live in prose. Those images are in the corpus; converting them is the next run on this paper, not a claim made here.\n\nPanel/text relation is declared on all twenty-five locators. Entry 0 is deliberately `text_only`: its caption says lithium suppressed seizures in Wwox−/− mice, which is TRUE, and the panel shows the same suppression in +/+ and +/−. Incomplete is not false, so this is a QUALIFICATION, and the vocabulary has neither a value for it nor a way to point at what is qualified. That is the third instance today on the third paper."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID32000863_Cheng2020_PMC.xml",
+   "sha256": "792b5b296863674d0295a7dba918ee7c59ade8cdff64ee8ec9d8f01bd12f00f5",
+   "kind": "article_text"
+  },
+  {
+   "path": "files/fulltext/PMID32000863_Cheng2020_supplementary.pdf",
+   "sha256": "0acb771cfe3a4c3644b41c10451504047adb715e69727c1889f72774151f8b7f",
+   "kind": "article_binary"
+  },
+  {
+   "path": "files/fulltext/PMID32000863_Cheng2020_assets/40478_2020_883_Fig2_HTML.png",
+   "sha256": "9e4648590eec98e148f47c52a151d0bb2c93fa20438151743043fe5e7ae47d05",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID32000863_Cheng2020_assets/40478_2020_883_Fig7_HTML.png",
+   "sha256": "ced68a66c8d2ab69d7c61e7ec0af05f2eaa1566b7740a516593bcae519162542",
+   "kind": "figure"
+  }
+ ]
 }

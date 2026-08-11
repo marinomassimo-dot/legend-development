@@ -1,0 +1,206 @@
+{
+ "schema_version": 2,
+ "pmid": "30082886",
+ "doi": "10.1038/s41419-018-0896-z",
+ "receipt": "FTR-20260810-30082886-01",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID30082886.md",
+  "full_text_queue_current#CORPUS-STUB-164",
+  "disease-models/wwox/research/commit_candidates/CC-20260810-30082886-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend",
+   "used": true
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "legend-batch-inferential-sweep",
+   "used": true
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-capability-scout",
+   "used": true
+  },
+  {
+   "skill": "legend-session-self-eval",
+   "used": true
+  },
+  {
+   "skill": "legend-session-takeaways",
+   "used": true
+  },
+  {
+   "skill": "spreadsheets",
+   "used": true
+  },
+  {
+   "skill": "presentations",
+   "used": true
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "A complete local PMC XML was supplied; only linked supplements required retrieval."
+  },
+  {
+   "skill": "legend-proband-priority-matrix",
+   "used": false,
+   "reason": "The operator fixed the sequential reading order."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "BLOCK_BATCH_COMMIT requires noncanonical landing."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No patient-facing intervention was evaluated."
+  },
+  {
+   "skill": "legend-commit",
+   "used": false,
+   "reason": "The four canonical scientific files were intentionally untouched."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 149,
+  "publications_on_gene": 79,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": true,
+  "weighting": "The Aqeilan laboratory is a high-volume primary WWOX group. Model continuity does not remove the complete genetic-background confounding between Wwox and Trp53 mouse cohorts or turn same-group results into external replication."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX AND breast cancer",
+    "count": 1228,
+    "source": "Europe PMC broad query, 2026-08-10"
+   },
+   {
+    "query": "WWOX AND TP53",
+    "count": 583,
+    "source": "Europe PMC broad query, 2026-08-10"
+   },
+   {
+    "query": "WWOX AND basal-like breast cancer",
+    "count": 258,
+    "source": "Europe PMC broad query, 2026-08-10"
+   }
+  ],
+  "note": "The breast-cancer field is dense; the basal-like intersection is narrower, but direct causal interpretation remains limited by background and rare human deletion groups."
+ },
+ "multihop": {
+  "references_enumerated": 75,
+  "gene_direct_refs_in_source": [
+   "27550453"
+  ],
+  "resolved": [
+   "27550453"
+  ],
+  "queued": [],
+  "note": "All 75 references were enumerated sequentially. PMID 27550453 is a direct WWOX-p53 cooperation source and was read next."
+ },
+ "corpus_crossquery": {
+  "query": "Where do basal-like mammary, TP53 and WWOX mechanisms already occur, and what boundary does PMID 30082886 add?",
+  "hits": 13,
+  "note": "Post-reading audit found 13 file hits. The paper adds somatic mammary evidence but its central cross-model comparison remains strain-confounded."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "Repository and indexed-record checks on 2026-08-10 found no retraction, expression of concern or correction."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID30082886_Abdeen2018_PMC.xml",
+   "sha256": "51b1216220ca5c4767e16dd23d584d155fe0275cc674f5b2ccc988637ce5e508",
+   "kind": "article_text"
+  },
+  {
+   "path": "files/fulltext/PMID30082886_Abdeen2018_assets/41419_2018_896_Fig1_HTML.jpg",
+   "sha256": "c4b2b2fd20edf4c304924b4e357432e890de79986fbc8b42c29eb7569db11204",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID30082886_Abdeen2018_assets/41419_2018_896_Fig4_HTML.jpg",
+   "sha256": "8f403456de749193adbee5465926f4101335184fcc1d59a48ecdb9a1b36a5e67",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID30082886_Abdeen2018_assets/41419_2018_896_MOESM1_ESM_rendered/slide-04_59.8ppi.png",
+   "sha256": "79aedd4643e4e45d44f238def6204c3255a8b8dc10edf2afe937cff503843e34",
+   "kind": "figure"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "The local PMC JATS identifies PMCID PMC6079009 and contains a complete body, methods, captions, supplementary links and 75-reference list; all used surfaces are fingerprinted.",
+  "entries": [
+   {
+    "proposition": "The Wwox mammary line was backcrossed onto tumour-susceptible C3H/HeJ for seven rounds.",
+    "snippet": "WwoxΔMGE mice (on B6/129 genetic background)36 were back-crossed onto the C3H/HeJ mice (shortly named C3H), a mammary tumor-susceptible genetic background, for seven rounds (~99% purity) generating WwoxΔMMTV.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30082886_Abdeen2018_PMC.xml",
+    "anchor": "Methods, mouse models",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Wwox-deleted cohort developed mammary tumours in 14 of 17 mice.",
+    "snippet": "mammary tumors with median latency of 270 days",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30082886_Abdeen2018_PMC.xml",
+    "anchor": "Results, spontaneous mammary tumours",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The authors explicitly require a C3H-facilitated second hit rather than WWOX deletion alone.",
+    "snippet": "Our findings suggest that WWOX deletion by itself might not be enough for BLBC development, and that a second hit facilitated in the C3H background, like perturbations in p53 signaling or locus, is required.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30082886_Abdeen2018_PMC.xml",
+    "anchor": "Discussion, first paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The body does not claim worse survival from adding WWOX perturbation within TP53-perturbed patients.",
+    "snippet": "Furthermore, while TP53 perturbation was associated with poorer survival as expected (Fig. 4b), genetic perturbation of WWOX was not associated with poorer survival of TP53-perturbed patients (Fig. 4b).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30082886_Abdeen2018_PMC.xml",
+    "anchor": "Results, METABRIC analysis",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The human co-deletion result is driven by extremely small altered groups.",
+    "snippet": "Figure 4A prints 2 WWOX-deleted among 5 TP53-deleted tumors, 6 WWOX-deleted among 2047 tumors without TP53 deletion, and N = 2052.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID30082886_Abdeen2018_assets/41419_2018_896_Fig4_HTML.jpg",
+    "anchor": "Figure 4A, native-pixel inspection",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The survival panel supplies an omnibus test but no double-versus-TP53-only pairwise test.",
+    "snippet": "Figure 4B prints four survival curves and an overall P = 2E-4, but no pairwise statistic comparing TP53-perturbed/WWOX-WT with TP53-WWOX-perturbed patients.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID30082886_Abdeen2018_assets/41419_2018_896_Fig4_HTML.jpg",
+    "anchor": "Figure 4B, native-pixel inspection",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The supplementary rescue restores WWOX and reverses the knockout phenotype.",
+    "snippet": "Supplementary Figure S3 displays WWOX re-expression in KO cells with reduced colony formation and restored DNA-damage-response readouts relative to KO controls.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID30082886_Abdeen2018_assets/41419_2018_896_MOESM1_ESM_rendered/slide-04_59.8ppi.png",
+    "anchor": "Supplementary Figure S3, slide 4 rendered at measured 59.8-effective-PPI ceiling",
+    "panel_text_relation": "panel_only"
+   }
+  ]
+ }
+}

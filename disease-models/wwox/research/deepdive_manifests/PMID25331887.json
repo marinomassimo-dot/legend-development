@@ -1,0 +1,493 @@
+{
+ "schema_version": 2,
+ "pmid": "25331887",
+ "doi": "10.1073/pnas.1409252111",
+ "receipt": "FTR-20260810-25331887-01",
+ "landing": [
+  "FTR-20260810-25331887-01",
+  "discovery_ledger_current",
+  "full_text_queue_current"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "PMC HTML acquired by this session's structured-surface sweep. Figures NOT taken from the publisher CDN: the CDN serves 760 px copies while the deposited rasters inside the local PDF are 1397 px, so the figures were extracted from the fingerprinted PDF instead. Recipe under figure_extractions."
+  },
+  {
+   "skill": "legend-batch-inferential-sweep",
+   "used": true
+  },
+  {
+   "skill": "legend-proband-priority-matrix",
+   "used": true
+  },
+  {
+   "skill": "legend-capability-scout",
+   "used": true
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 137,
+  "publications_on_gene": 65,
+  "counts_measured": "PubMed esearch, 2026-08-10. 'Aqeilan RI[au]' 137 total, 'Aqeilan RI[au] AND WWOX' 65. Primary laboratory for the gene.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "High weight on the OBSERVATIONS: the blots, the foci counts and the reporter assays are internally consistent, the knockdown and the ITCH knockout are validated in the same blots that report their phenotypes, and the adenoviral rescue in Fig 3B is a genuine control. Lower weight on the INTERPRETIVE sentences, which repeatedly convert a quantitative reduction into an absolute negative — 'but not WWOX-WFPA', 'but not a catalytic mutant', 'no altered expressions of FHIT and MAF' — where the panels cited show reduction rather than absence. Three of the four contradictions found in this reading are of that single shape, and it is the same shape found in PMID 38182577 from the same laboratory. The distinction is not a criticism of the data; it is the reason the data and the sentences are weighted apart.",
+  "note": "Fourth paper from this laboratory read on 2026-08-10, after 29724996, 38182577 and 38499540. It is the earliest of the four and the one the other three cite."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Aqeilan RI[au] AND WWOX",
+    "route": "PubMed esearch 2026-08-10",
+    "count": 65
+   },
+   {
+    "query": "Aqeilan RI[au]",
+    "route": "PubMed esearch 2026-08-10",
+    "count": 137
+   }
+  ],
+  "note": "Cancer-cell and MEF biology throughout, with no neural or paediatric content. Parity of sources: it is nonetheless the paper that establishes what WWOX does to ATM and where on the protein it is modified, and both facts transfer to any genotype."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 62,
+  "gene_direct_refs_in_source": [
+   {
+    "ref": 3,
+    "note": "Abu-Odeh 2014 JBC, WW-domain interaction networks — the source of the ITCH/K274 result this paper builds on"
+   },
+   {
+    "ref": 15,
+    "pmid": "17575124",
+    "note": "Aqeilan 2007 PNAS, targeted deletion of Wwox"
+   },
+   {
+    "ref": 16,
+    "note": "Abdeen 2011 Oncogene, Wwox inactivation enhances mammary tumorigenesis"
+   },
+   {
+    "ref": 14,
+    "pmid": "20530675",
+    "note": "Kurek 2010, WWOX attenuation in osteosarcoma"
+   }
+  ],
+  "resolved": [
+   {
+    "ref": 15,
+    "pmid": "17575124",
+    "why": "Present locally with a structured surface and listed in the queue as unclassified; identity confirmed from this paper's reference list."
+   },
+   {
+    "ref": 14,
+    "pmid": "20530675",
+    "why": "Same: local, structured, unclassified."
+   }
+  ],
+  "queued": [
+   {
+    "ref": 3,
+    "pmid": null,
+    "note": "Abu-Odeh 2014 J Biol Chem 289(13):8865-8880. THE load-bearing hop: this paper does not itself demonstrate that ITCH ubiquitinates WWOX at K274 — it cites ref 3 for it ('Our recent data revealed that ITCH mediates WWOX ubiquitination at K274 (3)') and then tests whether that modification matters for DNA damage. The identification of the residue and the ligase is therefore an imported premise here, not a result."
+   }
+  ],
+  "note": "The K274/ITCH axis reaches this paper already established from ref 3, and everything downstream — the K274R mutant, the ubiquitination-dependent nuclear import, the model in Fig 7D — rests on it. IMPORTED_PREMISE_ATTRIBUTION_GATE applies to ref 3 and it is queued, not assumed."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does anything already read in this repository measure the direction of WWOX on homologous recombination, and does it agree with this paper?",
+  "hits": 1,
+  "finding": "PMID 38499540, read earlier the same day, measures the opposite direction: loss of WWOX gives MORE RAD51 foci and less 53BP1, i.e. more HDR. This paper measures WWOX overexpression giving MORE HDR. The two are in conflict on the sign, the conflict is ACKNOWLEDGED IN PRINT by 38499540 — 'In contrast, a previous paper by Abu-Odeh and colleagues, has shown that WWOX enhances HDR in U2OS cells [36]' — and both papers carry Aqeilan as senior author. What 38499540's explanation omits is that the two experiments also differ in the direction of manipulation: gain of function here, loss of function there."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-08-10",
+  "route": "PMC record header and PubMed entry for 25331887",
+  "result": "No retraction, no expression of concern, no erratum. PNAS Plus research article.",
+  "hold": false
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+   "sha256": "8c629a545f7cc6961dfe349148a2878709f046e6892d33328eda7dbbf3c008f2",
+   "kind": "article_text"
+  },
+  {
+   "path": "files/fulltext/PMID25331887_AbuOdeh2014.pdf",
+   "sha256": "42df070aa1f699ad84a654e8526d9a332731219f66c9a9f640d870d7ae6b4642",
+   "kind": "article_binary"
+  },
+  {
+   "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig1_p2_xref20.png",
+   "sha256": "c8c485e40c36a046da1039179a5593d00960fb05c2ff0203f4aa42bcc79790bd",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig2_p3_xref98.png",
+   "sha256": "08ce0765e19c9ce60a3dd201a3ac16c9ae7c646ddaa9c54e00217a82cd44acae",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig3_p4_xref171.png",
+   "sha256": "1c5427f53eb5b30467365cfcc5ea2f336786afe8c504dd0625ae69435e643250",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig4_p5_xref9.png",
+   "sha256": "6af07e05611e032ae200c2f65aa7b7f70563178ba222955940aabb6db4bc02c5",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig5_p6_xref85.png",
+   "sha256": "608c91c299aa07ea6f548b8809b0c7614cdefc997bd54c5140190ebeaa2b9a03",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig6_p7_xref160.png",
+   "sha256": "9c075363ce9a8f63e7700c1a7ddf9c4e385b5f5af5e54de6d8bcc0fe7cca1f53",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig7_p8_xref221.png",
+   "sha256": "5e3e59178f0e388e9fd0dff4ff1a7ba5dbc0af4b487592e90b035f260d7c1282",
+   "kind": "figure"
+  }
+ ],
+ "figure_extractions": {
+  "why": "The publisher CDN serves this article's figures at 760 px on the long edge. The rasters the authors deposited, embedded in the article PDF, are 1397 px for Figures 2, 3, 4 and 6. Reading a bar value or a significance bracket from the smaller copy is reading fewer pixels than the author supplied, so the deposited raster is the surface used here. Figures 1, 5 and 7 are 682 px in the deposit itself — the CDN copy is not a downsample of those and nothing better exists.",
+  "source_pdf_sha256": "42df070aa1f699ad84a654e8526d9a332731219f66c9a9f640d870d7ae6b4642",
+  "extractor": "PyMuPDF fitz.Pixmap(doc, xref), no resampling, no colour conversion beyond CMYK-to-RGB where present",
+  "soft_mask_guard": "🔴 EXTRACTING A STREAM IS ONLY SOUND WHEN THE IMAGE HAS NO EFFECTIVE SOFT MASK, and both fitz.Pixmap(doc, xref) and doc.extract_image() return the base image without it — verified here on a masked image from PMID35716775_Rotem-Bamberger2022_supplement.pdf, where the two routes produced byte-equivalent output. Where a mask carries content, the extracted bytes are genuinely the publisher's and genuinely NOT the figure: the transparency layer is where axes, brackets and asterisks live, so the failure looks like a success. All seven images here were measured at smask == 0 before extraction, which settles it — with no mask there is nothing to omit. Recorded per figure below so a regenerator re-measures rather than re-trusts.",
+  "soft_mask_guard_calibration": "smask != 0 is a SCREEN, NOT A VERDICT — measured, against the rule as it was first circulated. Of 16 masked images across the three affected PDFs in this corpus, several masks are ~99.5-100% fully opaque and therefore inert: on PMID35716775 supplement page 1 the extraction, the extraction-with-mask and the page render agree to 0.91/255. Two are not inert: page 4 xref 53 of the same file, whose mask is 44.8% opaque, extracts at 139.99/255 from its render with the dark fraction going 0.055 -> 0.602 — the black-background signature; and page 9 of PMID32000863_Cheng2020_supplementary.pdf, whose mask has NO fully-opaque and NO fully-transparent pixel at all, extracts at 23.25/255, a subtler failure that would not announce itself. The decisive test is therefore not the mask flag but the comparison: extraction against page render, greyscaled onto a common grid. Safe cases in this corpus measure 0.91-2.15/255 across ten comparisons, failures 23.25 and 139.99 — an order of magnitude apart, so the test discriminates without a hand-tuned threshold.",
+  "cross_source_verification": "Independent of the extractor entirely: PMC serves its own rendition of these seven figures from a separate deposit and a different pipeline. Extracted stream against CDN copy, reduced to the smaller grid, gives mean |difference| of 1.35 to 2.15 out of 255 and dark fractions agreeing to within 0.003 on all seven. Two deposits, two pipelines, the same pixels. This is what makes the smask measurement trustworthy rather than merely reassuring.",
+  "figures": [
+   {
+    "figure": 1,
+    "pdf_page": 2,
+    "xref": 20,
+    "smask": 0,
+    "pixels": "682x717",
+    "sha256": "c8c485e40c36a046da1039179a5593d00960fb05c2ff0203f4aa42bcc79790bd",
+    "cdn_cross_check": "1.99/255"
+   },
+   {
+    "figure": 2,
+    "pdf_page": 3,
+    "xref": 98,
+    "smask": 0,
+    "pixels": "1397x1007",
+    "sha256": "08ce0765e19c9ce60a3dd201a3ac16c9ae7c646ddaa9c54e00217a82cd44acae",
+    "cdn_cross_check": "2.15/255"
+   },
+   {
+    "figure": 3,
+    "pdf_page": 4,
+    "xref": 171,
+    "smask": 0,
+    "pixels": "1397x1029",
+    "sha256": "1c5427f53eb5b30467365cfcc5ea2f336786afe8c504dd0625ae69435e643250",
+    "cdn_cross_check": "1.35/255"
+   },
+   {
+    "figure": 4,
+    "pdf_page": 5,
+    "xref": 9,
+    "smask": 0,
+    "pixels": "1397x1051",
+    "sha256": "6af07e05611e032ae200c2f65aa7b7f70563178ba222955940aabb6db4bc02c5",
+    "cdn_cross_check": "1.72/255"
+   },
+   {
+    "figure": 5,
+    "pdf_page": 6,
+    "xref": 85,
+    "smask": 0,
+    "pixels": "682x1144",
+    "sha256": "608c91c299aa07ea6f548b8809b0c7614cdefc997bd54c5140190ebeaa2b9a03",
+    "cdn_cross_check": "1.45/255"
+   },
+   {
+    "figure": 6,
+    "pdf_page": 7,
+    "xref": 160,
+    "smask": 0,
+    "pixels": "1397x859",
+    "sha256": "9c075363ce9a8f63e7700c1a7ddf9c4e385b5f5af5e54de6d8bcc0fe7cca1f53",
+    "cdn_cross_check": "1.35/255"
+   },
+   {
+    "figure": 7,
+    "pdf_page": 8,
+    "xref": 221,
+    "smask": 0,
+    "pixels": "682x1012",
+    "sha256": "5e3e59178f0e388e9fd0dff4ff1a7ba5dbc0af4b487592e90b035f260d7c1282",
+    "cdn_cross_check": "1.91/255"
+   }
+  ],
+  "note": "Same principle as supplement_page_renders on PMID38182577 — publish the derivation, not the derived. A reader with their own copy of the PDF regenerates these seven files and their digests. The PDF is used here ONLY as an image container: its text layer is not a declared text surface and no locator is matched against it, which is what rule 5d requires."
+ },
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC HTML, body 62342 characters, abstract 1933 characters separated by the validator's own extraction. Every text locator below is matched against the body of that artifact.",
+  "abstract_anchoring_waived": "No locator draws on the abstract. The abstract of this paper is accurate and is not the finding.",
+  "panel_text_relation_note": "Every entry carries panel_text_relation. Three contradictions, one-directional: the figure entry carries text_contradicted_by_panel plus contradicts: entries[N] and a needle drawn from the target's snippet, and the sentence it overturns is an ordinary text_only entry. Each paired panel entry also carries cited_panel_check, the invariant added on 2026-08-10: a pair is a contradiction only when the falsifying panel is the panel the sentence itself cites. All three pass — 1A, 5B and 7A are each cited by the sentence they falsify, and none needed re-pointing. 🔴 A GAP IN THE GRAMMAR, FOUND HERE: entries[7] and entries[8] are a contradiction between the running text and a FIGURE CAPTION — the text says NCS, the caption of the panel it cites says ionizing radiation. Both are text surfaces, so neither is 'the panel contradicting the text', and contradicts is defined only on a figure entry. The pair is recorded through the propositions with no pointer. This is the same missing box A reported for cross-manifest links, seen from another side: the grammar assumes the contradicting party is always a panel.",
+  "entries": [
+   {
+    "proposition": "THE CENTRAL RESULT, and it is the one the whole WWOX-DDR line rests on: WWOX is required for normal ATM checkpoint signalling. Stated by the paper as a level effect across three ATM readouts.",
+    "snippet": "WWOX-depleted MCF7 cells exhibited reduced p-ATM, p-H2AX (γ-H2AX), and p-KAP1 levels (Fig. 2C, lanes 7–12), suggesting blunted ATM function",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Results, 'WWOX Regulates Activation of the ATM Checkpoint', first paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL SIDE, QUALIFYING RATHER THAN CONTRADICTING — recorded as panel_only because what it changes is the SHAPE of the claim, not its truth. In the cited blot p-KAP1 is not uniformly reduced in the knockdown: it is ABSENT at 5 min and then reaches an intensity comparable to control by 30 min. That is a delay in onset, and 'reduced levels' is a different assertion from 'later onset'. The distinction matters downstream, because a kinetic defect and an amplitude defect imply different mechanisms — and this paper's own model is a feed-forward loop, which predicts exactly a kinetic defect.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2C, p-KAP1 row read at 1397 px: in MCF7-Sh-EV the band appears at lane 2 (5 min) and peaks at lane 4 (30 min); in MCF7-Sh-WWOX lane 8 (5 min) is blank while lanes 9 and 10 (10 and 30 min) carry bands of intensity comparable to lanes 3 and 4. No densitometry, no replicate count and no significance mark appears anywhere in the panel, for any of its seven rows.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig2_p3_xref98.png",
+    "anchor": "Figure 2, panel C, p-KAP1 row across lanes 1-12, read at deposited resolution 1397 px",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "A confound that exists only in the panel: total H2AX, the SUBSTRATE whose phosphorylation is the readout, is loaded at visibly different levels between the two cell pools while GAPDH is even. A γ-H2AX comparison across pools with different total H2AX is not normalised by the loading control the panel provides. Here the direction happens to be conservative — more substrate in the knockdown, less signal — but the paper neither normalises nor mentions it.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2C, total H2AX row: lanes 7-12 (MCF7-Sh-WWOX) are uniformly darker and thicker than lanes 1-6 (MCF7-Sh-EV), while the GAPDH row below is even across all twelve lanes.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig2_p3_xref98.png",
+    "anchor": "Figure 2, panel C, H2AX and GAPDH rows compared across lanes 1-12, read at deposited resolution",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The specificity claim: the DNA-damage induction is asserted to be particular to WWOX and not to its fragile-site neighbour or to the other classic fragile gene.",
+    "snippet": "no altered expressions of the fragile site gene FHIT and the WWOX neighboring gene MAF after induction of DSBs were observed (Fig. 1A), suggesting that this effect is specific for WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Results, 'Induction of WWOX Expression After DNA Damage', second sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PAIR, PANEL SIDE. MAF is altered, in the panel cited to show that it is not. At 1 h MAF sits at about 1.45 — a larger departure from baseline than WWOX itself shows at that timepoint — and at 2 h it falls to about 0.62, the largest single deviation anywhere in the panel. No significance mark appears in Fig 1A at all, so 'no altered expression' is an eyeball negative over an untested comparison, and the specificity of the whole opening result rests on it.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 1A, fold induction with the untreated triplet pinned at 1.0: WWOX 1.55 at 5 min, 1.90 at 10 min, 1.63 at 30 min, ~1.0 at 1 h, ~1.1 at 2 h. MAF ~0.98, ~1.0, ~1.08, ~1.45 at 1 h and ~0.62 at 2 h. FHIT stays between 0.8 and 1.17 throughout. No asterisk, bracket or P value appears anywhere in the panel.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig1_p2_xref20.png",
+    "anchor": "Figure 1, panel A, bar heights per gene per timepoint, read at deposited resolution 682 px",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[3]",
+    "needle": "no altered expressions of the fragile site gene FHIT and the WWOX neighboring gene MAF",
+    "cited_panel_check": "PASS. The sentence cites ( Fig. 1 A ) and this locator reads Fig 1A. Cited panel and falsifying panel are the same.",
+    "contradicts_needle": "no altered expressions of the fragile site gene FHIT and the WWOX neighboring gene MAF after induction of DSBs were observed"
+   },
+   {
+    "proposition": "🔴 THE RESULT THAT PUTS THIS PAPER IN CONFLICT WITH PMID 38499540, and the reason it was queued. WWOX raises homologous recombination roughly twofold in a DR-GFP reporter.",
+    "snippet": "The GFP-positive population increased approximately twofold from 10% to 21% after I-SceI expression in the cells expressing WWOX (Fig. 3E), suggesting a more efficient HR repair in the cells containing WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Results, 'WWOX Regulates DNA Repair', HR reporter paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL SIDE — the text is accurate and the panel adds the two facts that decide how far the result travels. FIRST: there is no loss-of-function arm anywhere in Fig 3E. Every bar is a construct added to U2OS, and the claim 'WWOX enhances HDR' is therefore established by GAIN of function only, while PMID 38499540 measures LOSS. The two papers are not symmetric opposites, and 38499540's published explanation for the discrepancy — different cell lines and reporter systems — does not mention that the direction of manipulation differs too. SECOND: the ubiquitination-dead K274R bar sits BELOW empty vector, which the text renders as 'was not associated with improved HR'. A mutant that scores under baseline is not merely inactive.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3E, percentage of GFP-positive cells with error bars: EV ~10.0 (8.8-11.2), WWOX ~20.8 (18.4-23.2), WFPA ~10.8 (10.1-11.5), K274R ~8.3 with an error bar smaller than the bar's line width. Brackets read P<0.01 for EV vs WWOX, P<0.01 for WWOX vs WFPA and P<0.001 for WWOX vs K274R. There is no WWOX-depleted or WWOX-knockout bar in the panel.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig3_p4_xref171.png",
+    "anchor": "Figure 3, panel E, all four bars, error bars and significance brackets, read at deposited resolution 1397 px",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "TEXT-VERSUS-CAPTION PAIR, RUNNING-TEXT SIDE. The Results sentence attributes the 15-minute foci comparison to NCS.",
+    "snippet": "We observed higher numbers of γ-H2AX foci in MCF7 control cells compared with WWOX-depleted cells at 15 min after NCS treatment (Fig. 3C and Fig. S3B)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Results, 'WWOX Depletion Leads to Impaired γ-H2AX Foci Formation', final paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "TEXT-VERSUS-CAPTION PAIR, CAPTION SIDE. The caption of the very panel that sentence cites names a different damaging agent, and the sentence that sets up the experiment two lines earlier agrees with the caption rather than with the sentence: 'WWOX-depleted MCF7 cells were treated with ionizing radiation for 15 min, 24 h, and 48 h'. So the running text says NCS once, against ionizing radiation twice. A reader taking the agent from the Results sentence attributes a radiomimetic drug result to a panel that reports radiation. NO POINTER FIELD EXISTS for this: both members are text surfaces, and contradicts is defined only on a figure entry. Declared here, in prose, as a gap in the schema rather than as an absence of a finding.",
+    "snippet": "Quantification of γ-H2AX foci in MCF7 control or WWOX-depleted cells after treatment with ionizing radiation (5 Gy) for different times",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Figure 3 caption, item C. Declared surface body, not figure: this is authored prose that the PMC HTML carries in the body container and it is verified character-for-character. Labelling a caption quote 'figure' would exempt it from that check.",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The panel behind that pair, recorded for its axis rather than its agent. The 15-minute difference the text calls 'higher numbers' is 256 against 9 — a factor of about 28 — and the y-axis is broken between 50 and 260, so the largest effect in the figure is the one the reader cannot see to scale. The late-timepoint reversal, which is the actual repair claim, is a factor of 4 to 6 on the visible part of the axis.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3C, relative foci number, y-axis running 0 to 50 then broken and resuming at 260: untreated both ~1.2; 15 min MCF7-Sh-EV printed as 256 against MCF7-Sh-WWOX ~9; 24 h EV ~7 against sh-WWOX ~31; 48 h EV ~0.9 against sh-WWOX ~5.2. The error bar on the 256 bar is drawn below the axis break, at about the 50 line.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig3_p4_xref171.png",
+    "anchor": "Figure 3, panel C, bar values and the broken y-axis, read at deposited resolution 1397 px",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The foci delay in knockout MEFs, stated by the paper as a delay.",
+    "snippet": "Confocal microscopy revealed that γ-H2AX foci formation was clearly delayed in KO MEFs compared with their WT counterparts (Fig. 3A)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Results, 'WWOX Depletion Leads to Impaired γ-H2AX Foci Formation'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL SIDE, CONFIRMING AND SHARPENING. 'Delayed' understates what the panel prints: the knockout shows no measurable response at all for the first fifteen minutes — 1±1 foci per cell at 0, 5 and 15 min, indistinguishable from untreated — and only at 30 min does it reach 21. And the panel names its cells: WT is clone CL-8 and KO is clone CL-9. The comparison is between two single clones, so clonal variation is not separable from genotype in this experiment. Neither the running text nor the caption mentions that.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3A, foci per cell printed under each column. WT;CL-8: 1.3±1, 24.8±2.5, 35.8±2.1, 39.5±3.1 at 0, 5, 15 and 30 min. KO;CL-9: 1±1, 1±1, 1±1, 21±3.19 at the same timepoints. The row labels read 'WT; CL-8' and 'KO; CL-9'.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig3_p4_xref171.png",
+    "anchor": "Figure 3, panel A, printed foci counts and clone labels, read at deposited resolution 1397 px",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The rescue that makes the knockout phenotype attributable to WWOX rather than to the clone.",
+    "snippet": "reconstitution of WWOX expression in KO MEFs rescued γ-H2AX foci formation to comparable levels as in WT cells (Fig. 3B)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Results, 'WWOX Depletion Leads to Impaired γ-H2AX Foci Formation'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL SIDE, CONFIRMED. The rescue is complete and it is the strongest internal control in the paper — it is also what makes the CL-8/CL-9 single-clone objection above survivable, since the same clone is compared against itself with and without WWOX.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3B, foci per cell printed to the right of each row: WT+AdGFP 27±2.5, WT+AdWWOX 28±2.3, KO+AdGFP 1±0.2, KO+AdWWOX 30±1.5.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig3_p4_xref171.png",
+    "anchor": "Figure 3, panel B, printed foci counts per condition, read at deposited resolution 1397 px",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "The microhomology repair result, quoted with the numbers the text gives.",
+    "snippet": "control MCF7 cells were able to recover about 80% of Luc activity, whereas WWOX-depleted MCF7 cells recovered only 15% (Fig. 3D)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Results, 'WWOX Regulates DNA Repair', pGL2-Luc paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL SIDE — a small numeric drift and a larger structural gap. The panel reads about 0.19, not 0.15, and its error bar reaches 0.28. More importantly Fig 3D carries no significance test of any kind, while the HR panel beside it carries three brackets; the microhomology claim is the one that is never tested.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3D, fold-change luciferase with HindIII pinned at 1.0 in both cell lines: EcoRI in MCF7-EV ~0.80 with an error bar spanning 0.65-0.95, EcoRI in MCF7-WWOX-Sh ~0.19 with an error bar spanning 0.09-0.28. No asterisk, bracket or P value appears in the panel.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig3_p4_xref171.png",
+    "anchor": "Figure 3, panel D, bar heights, error bars and absence of significance marks, read at deposited resolution 1397 px",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "🔴 THE FINDING WITH THE LONGEST REACH BEYOND CANCER, and the one that touches a textbook default this repository has already been burned by. WWOX carries K63-linked polyubiquitination, and the paper's own data make that chain a STABILISING and TRAFFICKING signal rather than a degradation signal.",
+    "snippet": "The results indicate that WWOX undergoes specifically K63-linked polyubiquitination",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Results, 'DNA Damage Triggers Nuclear Accumulation and Ubiquitination of WWOX', K63/K48 mutant paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The direct corollary, and the reason the K63 result is not a curiosity: removing the acceptor lysine SHORTENS the protein's half-life. Ubiquitination here preserves WWOX rather than consuming it, which is the exact inverse of the default the dismissal ledger records as having bitten this project before — polyubiquitination read as a proteasomal death sentence. Any future reasoning about WWOX turnover, in any genotype, has to start from the fact that at least one of its ubiquitin chains does the opposite.",
+    "snippet": "We found, indeed, that half-life of WWOX-K274R is shorter compared with WWOX (Fig. S7B)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Results, 'WWOX Is Ubiquitinated at Lysine 274 on DNA Damage'. The supporting panel S7B is in the supplementary PDF, which is NOT retrievable — see the note on coverage below — so this statement is carried as the authors' assertion with its evidence declared absent.",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The residue claim: K274 is named as the acceptor and the mutant is said to lack the modification.",
+    "snippet": "K274R mutant WWOX lacked DNA damage-induced ubiquitination (Fig. 6A), identifying K274 as a main ubiquitin acceptor lysine residue on DSBs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Results, 'WWOX Is Ubiquitinated at Lysine 274 on DNA Damage', opening",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL SIDE, A CONFOUND THE TEXT CREATES AND THEN NEVER APPLIES. The input GST row of the same figure shows far less K274R protein than wild type, so the pull-down compares an abundant bait against a scarce one and 'lacked ubiquitination' cannot be separated from 'was present in smaller amount'. The paper itself supplies the reason — it reports K274R as less stable — which makes the confound worse rather than better: a mutant chosen for study because it is degraded faster cannot then be assayed against wild type without input normalisation. None appears in the panel.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6A, Input block: the GST row shows strong bands in lanes 1-2 (GST-WWOX) and markedly fainter bands in lanes 3-4 (GST-K274R), while the GAPDH row below is even across all four lanes. In the Pull-down block the anti-HA ladder between 75 and 200 kDa is dense in lane 2 and essentially blank in lanes 3-4. No input-normalised quantification is printed anywhere in the figure.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig6_p7_xref160.png",
+    "anchor": "Figure 6, panel A, Input GST row against Pull-down anti-HA row, read at deposited resolution 1397 px",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The nuclear-ubiquitination claim, stated as an absolute negative for the WW1 mutant.",
+    "snippet": "Nuclear GST-WWOX, but not WWOX-WFPA, was found to be polyubiquitinated (Fig. 5B)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Results, 'DNA Damage Triggers Nuclear Accumulation and Ubiquitination of WWOX', fractionation paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PAIR, PANEL SIDE. WFPA is ubiquitinated in the nuclear fraction — visibly less than wild type, but the ladder is there in all three WFPA lanes, and in the cytoplasmic panel of the same figure it is comparable to wild type. 'But not' asserts absence where the panel shows reduction. This is the third instance in two days of the same shape in this laboratory's writing, after 'did not affect control BM cells' in PMID 38182577: an absolute negative in the text over a quantitative decrease in the figure.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 5B, Nuclear Lysates, Pull-down anti-HA: lanes 4-6 (GST-WFPA) carry a continuous smear from about 60 to above 110 kDa with a distinct band at the UB-WWOX arrow, weaker than lanes 2-3 (GST-WWOX plus NCS) but plainly present. In the Cytoplasmic Lysates panel the WFPA lanes are of comparable intensity to the WWOX lanes.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig5_p6_xref85.png",
+    "anchor": "Figure 5, panel B, nuclear and cytoplasmic pull-down anti-HA rows, read at deposited resolution 682 px",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[20]",
+    "needle": "but not WWOX-WFPA, was found to be polyubiquitinated",
+    "cited_panel_check": "PASS. The sentence cites ( Fig. 5 B ) and this locator reads Fig 5B. Cited panel and falsifying panel are the same.",
+    "contradicts_needle": "Nuclear GST-WWOX, but not WWOX-WFPA, was found to be polyubiquitinated"
+   },
+   {
+    "proposition": "The ligase claim, stated with the same absolute-negative construction.",
+    "snippet": "ectopic expression of ITCH but not a catalytic mutant mediated WWOX ubiquitination (Fig. 7A, lane 3 vs. lane 5)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Results, 'Ub E3 Ligase ITCH Ubiquitinates WWOX After DNA Damage', opening",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PAIR, PANEL SIDE. The catalytically dead C830A mutant supports visible ubiquitination in the lane the text names as the negative comparison, and more of it in the adjacent damage-treated lane. Reduced, not abolished — so ITCH is a major contributor rather than the sole ligase, and the paper's own Discussion concedes as much for its substrates while the Results sentence does not.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7A, Pull-down anti-HA: lane 3 (FLAG-ITCH) carries a dense ladder from the UB-GST-WWOX arrow to above 200 kDa and lane 4 (plus NCS) more; lane 5 (FLAG-C830A) carries a clearly visible ladder over the same range, weaker than lane 3, and lane 6 (C830A plus NCS) is stronger than lane 5. Lane 7 (KU55933) retains a ladder weaker than lane 4.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig7_p8_xref221.png",
+    "anchor": "Figure 7, panel A, pull-down anti-HA lanes 1-8, read at deposited resolution 682 px",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[22]",
+    "needle": "ITCH but not a catalytic mutant mediated WWOX ubiquitination",
+    "cited_panel_check": "PASS. The sentence cites ( Fig. 7 A , lane 3 vs. lane 5) and this locator reads exactly those lanes of Fig 7A. The citation even names the lanes, which is the strongest form this check can take.",
+    "contradicts_needle": "ectopic expression of ITCH but not a catalytic mutant mediated WWOX ubiquitination"
+   },
+   {
+    "proposition": "The genetic confirmation of the ITCH arm, and the cleanest control in the figure: the ITCH row is blank in the knockout, so the knockout is validated in the same blot that reports the phenotype.",
+    "snippet": "Itch-KO cells display reduced p-KAP1 activation as well as reduced WWOX accumulation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Results, 'Ub E3 Ligase ITCH Ubiquitinates WWOX After DNA Damage', MEF paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 A SCHEMATIC, NOT AN OBSERVATION — flagged deliberately, because the surface vocabulary has no box for it and a schematic declared as 'figure' inherits the authority of a measurement. Panel 7D is a drawing of the authors' model, downstream of their prose rather than evidence for it. It is recorded here for what it asserts, which is the causal loop and the K63 chain drawn on the residue, and its status is stated in the anchor rather than left to the reader.",
+    "snippet": "Hypothetical model of WWOX action in DDR",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Figure 7 caption, item D. The caption's own first word is 'Hypothetical', which is the paper doing the labelling correctly; the drawing itself carries an arrow from p-ATM to ITCH to WWOX-K274 to 'Efficient DDR' and a return arrow labelled 'Enhance ATM monomerization and activation'. Declared surface body because this is the caption text, verified character-for-character; the panel is a generated diagram and is NOT declared as a figure locator, since a figure surface in this schema means an observation read from pixels.",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The p53-independence claim, kept because it is what allows any of this to transfer to a non-cancer context: the DDR effect does not run through p53 status.",
+    "snippet": "the effects of WWOX on DDR signaling seem to be independent of p53, because the same consequences were observed in p53 WT (MCF7) and mutant (MDA-MB231) cells",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Discussion, paragraph on p53 and p73",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The genome-instability result, and the boundary condition inside it: WWOX loss does not itself break DNA. It amplifies damage-induced breakage.",
+    "snippet": "depletion of WWOX was associated with increased DSBs after induction of DNA damage (Fig. 2 A and B)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "anchor": "Results, 'WWOX Depletion Decreases Genomic Stability Upon DNA Damage'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL SIDE, CONFIRMED, with the boundary made explicit: the two UNTREATED bars are indistinguishable and carry no bracket between them. Without a damaging agent, WWOX-depleted cells are as intact as controls. That is the difference between a gene that maintains the genome and a gene whose loss breaks it, and it is legible only from the panel.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2B, mean tail moment: MCF7-EV ~105, EV-NCS ~230, MCF7-sh ~115, sh-NCS ~305. Brackets read P<0.001 for EV vs EV-NCS, P<0.01 and P<0.001 on the two right-hand comparisons. No bracket joins the two untreated bars, whose error bars overlap.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig2_p3_xref98.png",
+    "anchor": "Figure 2, panel B, four bars with error bars and significance brackets, read at deposited resolution 1397 px",
+    "panel_text_relation": "text_confirmed_by_panel"
+   }
+  ],
+  "note": "Coverage: the article body is COMPLETE — Introduction, Results, Discussion, Materials and Methods and the reference list read in sequence from the PMC HTML, and all seven main figures inspected as images at the resolution the authors deposited, extracted from the fingerprinted PDF rather than taken from the publisher's downsampled CDN copies. THE SUPPLEMENT IS NOT READ AND CANNOT BE: figures S1-S7 are cited throughout and several are load-bearing — S2B carries the WWOX+/+ / +/- / -/- MEF comparison, S3C the reporter construct validation, S4 the domain mapping, S6C the K63-versus-K48 discrimination and S7B the half-life measurement quoted in entries[18]. The supplementary PDF is not retrievable by any sanctioned route: PMC reports 'identifier PMC4226089 is not Open Access', Europe PMC returns 'Article with id PMC4226089 is not open access one', and the publisher's DCSupplemental URL serves an HTML page rather than the file. The local PDF is the ten-page main article and does not contain it. This is a bounded, named gap with the routes that were tried recorded, not an omission — and it is why the receipt for this reading is partial_fulltext_read."
+ }
+}

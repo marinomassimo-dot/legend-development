@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "question": "Does the pattern 'the comparison that matters is not drawn' arise independently in PMID 34831305?",
+  "observations_frozen_at": "2026-08-10T07:43:00Z",
+  "pattern_assessed_at": "2026-08-10T08:02:00Z",
+  "freeze_sha256": "ee6e4988a4cc766d0066ded821165990e6cff042d85991881a8e103b14668122",
+  "verdict": "No valid third occurrence. The omission of GFAP- and Olig2-targeted negative models from Table 1 and Figure 2 was noticed during ordinary inspection, but the body explicitly states the four cell-targeted groups and the N/S versus G/O result. In a narrative review this is visual compression, not an undrawn primary experimental comparison.",
+  "method_note": "The XML body, table, references and figure pixels were read before the observation freeze; only after hashing that artifact was the named pattern adjudicated. Prior conversational knowledge could not be erased and remains a residual contamination risk."
+}

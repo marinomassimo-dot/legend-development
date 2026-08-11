@@ -1198,28 +1198,30 @@ Serves to:
 ---
 
 ## LIT-0030
-**Short title:** corpus paper 3
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
-**Identifier type:** PMID / DOI
-**Identifier value:** PMID 34831305 / DOI 10.3390/cells10113082
+**Short title:** Steinberg 2021 — atlante dei modelli WWOX
+**Authors:** Steinberg DJ, Aqeilan RI
+**Year:** 2021
+**Source type:** review narrativa / atlante di modelli — nessuna coorte sperimentale nuova
+**Journal/source:** *Cells* 10(11):3082
+**Identifier type:** PMID / PMCID / DOI
+**Identifier value:** PMID 34831305 / PMCID PMC8623516 / DOI 10.3390/cells10113082
+**Evidence depth:** complete_fulltext_read (2026-08-10) — receipt `FTR-20260810-34831305-03`, manifest `deepdive_manifests/PMID34831305.json`
+**Registry record:** [[paper_registry_current#PAPER 063]] (promosso da `CORPUS-STUB-003`, BATCH_20260810_005)
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-10
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 3
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** HIGH
+**Status:** processed
+**Primary pathway:** P3 / P4 / P7 — architettura causale fra modelli
+**Genotype/model tag:** trasversale (ratto, topo globale/ipomorfo/condizionale/cell-targeted, organoidi, tessuto umano); nessun allele proprio
+**Transferability:** MODERATE per l'architettura causale, LOW per la traduzione quantitativa
+**clinical relevance:** HIGH come mappa di ricerca, BACKGROUND come evidenza di claim
 **Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Working Model impact:** none — sintesi, non replica indipendente
+**Report mentions:** corpus alignment; CC-20260810-34831305-01
+**Next action:** none — risolto per promozione
+**Flags:** sintesi secondaria — non contare come corroborazione indipendente dei primari che elenca
 **Note:** Title: WWOX-Related Neurodevelopmental Disorders: Models and Future Perspectives
 
 ---
@@ -2089,15 +2091,21 @@ Serves to:
 ---
 
 ## LIT-0063
-**Short title:** corpus paper 39
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** AbuRemaileh 2019 — ablazione di WWOX nel muscolo scheletrico
+**Authors:** Abu-Remaileh M, Aqeilan RI, et al.
+**Year:** 2019
+**Source type:** primario sperimentale — KO tessuto-specifico murino + knock-down in C2C12
+**Journal/source:** *Molecular Metabolism* 22:132–140
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 30755385 / DOI 10.1016/j.molmet.2019.01.010
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260810-30755385-01`
+**Registry record:** [[paper_registry_current#PAPER 061]] (promosso da `CORPUS-STUB-039`, BATCH_20260810_003)
+**Primary pathway:** P5 — metabolismo
+**Genotype/model tag:** KO condizionale muscolo-scheletrico murino; non CNS, non allele WWOX-DEE
+**Transferability:** T2 — meccanismo trasferibile, tessuto no
+**clinical relevance:** INDIRECT
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-10
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 39
@@ -2332,28 +2340,30 @@ Serves to:
 ---
 
 ## LIT-0072
-**Short title:** corpus paper 48
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
-**Identifier type:** PMID / DOI
-**Identifier value:** PMID 34747138 / DOI 10.15252/emmm.202114599
+**Short title:** Repudi 2021 EMBO gene therapy
+**Authors:** Repudi S, Kustanovich I, Abu-Swai S, Stern S, Aqeilan RI
+**Year:** 2021
+**Source type:** studio preclinico di terapia genica (AAV9-hSynI-WWOX, ICV neonatale)
+**Journal/source:** *EMBO Molecular Medicine* 13(12):e14599
+**Identifier type:** PMID / PMCID / DOI
+**Identifier value:** PMID 34747138 / PMCID PMC8649866 / DOI 10.15252/emmm.202114599
+**Evidence depth:** complete_fulltext_read (2026-08-10) — receipt `FTR-20260810-34747138-01`, manifest `deepdive_manifests/PMID34747138.json` (20 locator, 0 gap)
+**Registry record:** [[paper_registry_current#PAPER 005]] — il record PAPER esisteva già dal 2026-07-05; `CORPUS-STUB-048` era il suo duplicato ed è marcato promosso in BATCH_20260810_005
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-10
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 48
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
+**Status:** processed
+**Primary pathway:** P7 — gene therapy readiness
+**Genotype/model tag:** topo Wwox-null sistemico, trattamento a P0; non un allele WWOX-DEE
+**Transferability:** T2 — design principle trasferibili, non dose né timing
 **clinical relevance:** HIGH
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Claim links:** 004 · 003 (confine)
+**Working Model impact:** qualifica CLAIM 004 con il comparatore mancante; nessun nuovo claim
+**Report mentions:** corpus alignment; BATCH_20260810_005
+**Next action:** none — risolto per promozione; restano dovuti `legend-locator-audit` e le figure dell'Appendix
+**Flags:** il confronto WT-contro-rescued è **non tracciato** nei pannelli dove il rescue appare più forte — non citare *«normalizza»*
 **Note:** Title: Neonatal neuronal WWOX gene therapy rescues Wwox null phenotypes
 
 ---
@@ -3547,21 +3557,25 @@ Serves to:
 ---
 
 ## LIT-0117
-**Short title:** corpus paper 95
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Kołat 2023 — LINC01137/miR-186-5p/WWOX in carcinoma vescicale
+**Authors:** Kołat D, Kałuzińska-Kołat Ż, Kośla K, Orzechowska M, Płuciennik E, Bednarek AK
+**Year:** 2023
+**Source type:** primario in vitro + in silico (rianalisi CAGE-seq + coorti pubbliche)
+**Journal/source:** *Frontiers in Genetics* 14:1214968
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 37519886 / DOI 10.3389/fgene.2023.1214968
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-05
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 95
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — receipt `FTR-20260805-37519886-01`
+**Registry record:** [[paper_registry_current#PAPER 060]] (promosso da `CORPUS-STUB-095`, BATCH_20260810_002)
+**Primary pathway:** regolazione a RNA / ncRNA — contesto oncologico
+**Genotype/model tag:** WWOX wild-type, linee di carcinoma vescicale umano
+**Transferability:** T3 — indiretta; nessun contenuto neuronale, dello sviluppo o di variante
+**clinical relevance:** LOW
 **Transferability:** unassigned
 **clinical relevance:** LOW
 **Claim links:** none
@@ -3844,22 +3858,24 @@ Serves to:
 ---
 
 ## LIT-0128
-**Short title:** corpus paper 108
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Iatan 2014 — WWOX, HDL e metabolismo lipidico
+**Authors:** Iatan I, Choi HY, Ruel I, et al.
+**Year:** 2014
+**Source type:** primario sperimentale + genetica umana (KO murino epatico e total-body; aplotipo intronico umano)
+**Journal/source:** *Circulation: Cardiovascular Genetics* 7:491–504
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 24871327 / DOI 10.1161/CIRCGENETICS.113.000248
+**Evidence depth:** complete_fulltext_read (2026-08-10) — manifest `deepdive_manifests/PMID24871327.json`
+**Registry record:** [[paper_registry_current#PAPER 062]] (promosso da `CORPUS-STUB-108`, BATCH_20260810_004)
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-10
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 108
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
+**Status:** processed
+**Primary pathway:** P5 — metabolismo lipidico
+**Genotype/model tag:** KO murino epatocita-specifico e total-body; aplotipo intronico umano senza saggio funzionale
+**Transferability:** T3 — endpoint periferici, nessun endpoint neurale
 **clinical relevance:** MED
 **Claim links:** none
 **Working Model impact:** none yet

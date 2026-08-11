@@ -328,6 +328,24 @@ razionale di sicurezza di `DL-MECH-067`.
 che gli avevamo attribuito**: misura **un solo sito, Ser396**, e non affronta la selettività di
 sito. Il claim sui *«residui diversi»* è di **Mukai 2002** → `FT-027`. **`Ser404` resta non testato
 per isoforma da chiunque.**
+**Debito di locator — ✅ CHIUSO il 2026-08-10 (`BATCH_20260810_005`).** La lettura del 2026-07-26
+precedeva l'obbligo di locator e il manifest portava una rinuncia dichiarata. Colmarla ha
+richiesto la strada lunga: **il text layer di questo PDF è `SUSPECT` e non esiste alcuna
+superficie XML/HTML** per l'articolo, quindi i **14 locator sono ancorati alla pagina stampata**
+via [`page_adjudications/PMID21212533/adjudications.json`](page_adjudications/PMID21212533/adjudications.json)
+— 11 ritagli, ognuno rigenerabile al proprio digest dal PDF sorgente, otto risolti da un needle
+unico sulla pagina. `regenerate_adjudications.py verify` PASS; manifest schema-2, validatore
+strict PASS, 0 gap. **Perché la superficie è rifiutata invece che riparata:** *«10 μl di tampone
+2×»* si estrae come *«10 ml of 2\x02»* — il segno di moltiplicazione diventa un controllo C0, che
+un sentinella vede, e il micro **sparisce**, che nessun sentinella vede. Un volume sbagliato di
+mille volte in una frase che resta inglese corretto.
+**Cosa ha cambiato aprire le figure** (dettaglio in `discovery_ledger_current#DL-MECH-068`):
+il fattore *«~3–10×»* di Figura 3 **non è una misura** — le due titolazioni non sono appaiate
+(β1 0–3 µg/mL, β2 0–10, nessun massimo comune) e non c'è densitometria: il pannello sostiene
+**≥10× a ispezione**, non un rapporto; Figura 4 marca l'inserto fra **V303 e K304**, contro il
+`K303` di UniProt che questa voce citava (un residuo di differenza, argomento invariato); e
+Figura 5 dice **più** di quanto dicesse il testo — β1ΔCT fosforila tau quanto il WT **con meno
+enzima**, β2ΔCT crolla al livello mock **con banda forte**.
 
 ---
 
@@ -606,22 +624,6 @@ dell'interazione, i controlli di specificità, e se UPF1 compaia con altri compo
 complesso EJC/NMD.
 **Come è emerso:** durante la lettura di PMID 37519886, che importa l'arco senza misurarlo.
 **Current status:** ⬜ recuperato? no — non letto.
-
----
-
-## FT-039
-**Paper:** PMID 24871327 — Iatan et al. 2014, *Circ Cardiovasc Genet* 7:491-504
-**Title:** The WWOX gene modulates high-density lipoprotein and lipid metabolism
-**Surface:** PMID 24871327 · `structured` · sentinella `clean` · PMID24871327_Iatan2014_PMC.html
-**Priority:** **ALTA**
-**Why:** è il primario citato da PMID 33255508 per il primo dei due passaggi del ponte
-`WWOX -> lipid homeostasis -> myelin`. La review lo descrive come “strong evidence”, ma la
-lettura corrente non trasferisce quell'etichetta: servono modello, perturbazione, endpoint e
-dimensioni d'effetto del primario prima che il nodo lipidico possa sostenere un'inferenza
-neurale o un biomarcatore.
-**Come è emerso:** multi-hop della lettura completa di PMID 33255508, receipt
-`FTR-20260806-33255508-01`, `DL-MECH-070`.
-**Current status:** ⬜ presente nel corpus, non letto integralmente.
 
 ---
 
@@ -1036,7 +1038,29 @@ prima la risoluzione dei DOI.
 
 ---
 
-## FT-039 — ✅ CHIUSA il 2026-08-10
+## FT-039
+
+**Stato:** ✅ **CHIUSA il 2026-08-10.** Il marcatore vive qui e non nell'intestazione: tre
+wikilink puntano a `full_text_queue_current#FT-039` e un frammento Obsidian richiede il testo
+completo dell'intestazione, quindi decorarla la spezza. Trovato eseguendo
+[`test_link_targets.py`](../../../scripts/test_link_targets.py), non ragionandoci sopra.
+
+> **Perché era in coda** — testo integrale della voce aperta, che fino al 2026-08-10 viveva
+> come un **secondo blocco `## FT-039`** più in alto in questo stesso file. Due intestazioni
+> con lo stesso identificatore sono un identificatore che non identifica: la voce aperta e la
+> sua chiusura si contraddicevano a 320 righe di distanza e nessuna delle due sapeva
+> dell'altra. Rimossa la duplicazione, conservato il contenuto — la coda perde un'ambiguità,
+> non una riga.
+>
+> **Title:** The WWOX gene modulates high-density lipoprotein and lipid metabolism
+> **Priority:** **ALTA**
+> **Why:** è il primario citato da PMID 33255508 per il primo dei due passaggi del ponte
+> `WWOX -> lipid homeostasis -> myelin`. La review lo descrive come “strong evidence”, ma la
+> lettura corrente non trasferisce quell'etichetta: servono modello, perturbazione, endpoint e
+> dimensioni d'effetto del primario prima che il nodo lipidico possa sostenere un'inferenza
+> neurale o un biomarcatore.
+> **Come è emerso:** multi-hop della lettura completa di PMID 33255508, receipt
+> `FTR-20260806-33255508-01`, `DL-MECH-070`.
 
 **Paper:** PMID 24871327 — Iatan et al. 2014, *Circ Cardiovasc Genet* 7:491–504
 **Surface:** PMID 24871327 · `structured` · sentinella `clean` · PMID24871327_Iatan2014_PMC.html
@@ -1167,6 +1191,270 @@ ha una voce di coda affatto. Il triage resta interamente da fare, e il numero da
 quando si dice "quanti sono classificati" è **0 su 21**, non 19.
 
 ---
+
+## FT-048
+*Discrepanza interna in PMID 30755385, da risolvere alla fonte.*
+**Paper:** PMID 30755385 / DOI 10.1016/j.molmet.2019.01.010 — AbuRemaileh et al. 2019, *Mol Metab*
+**Title:** Loss of Wwox in skeletal muscle — ITT age discrepancy between Figure 2 caption and Methods
+**Surface:** PMID 30755385 · `structured` · sentinella `clean` · PMID30755385_AbuRemaileh2019.pdf, PMID30755385_AbuRemaileh2019_PMC.xml
+**Priority:** **MEDIA**
+**Why:** la didascalia della Figura 2 data l'ITT a **10 mesi**, la sezione Methods 4.4 a **6
+mesi**. Non è una svista tipografica indifferente: l'insulin tolerance test è la misura da cui
+dipende l'interpretazione metabolica sistemica, e quattro mesi in un modello murino sono una
+finestra di malattia diversa. Finché non è risolta, qualunque uso quantitativo di quella
+figura porta con sé un'incertezza di età che nessuna citazione a valle riporterebbe.
+**Come è emerso:** dal **rapporto di lettura** di una seconda sessione su PMID 30755385, non
+dalla lettura stessa — cioè da qualcuno che ha confrontato didascalia e Methods invece di
+leggerli in sequenza. Vale la pena registrarlo come metodo: le discrepanze interne non si
+vedono leggendo, si vedono confrontando.
+**Next action:** risolvere alla fonte — corrispondenza con gli autori o erratum — prima che la
+figura sostenga un'affermazione quantitativa. Nel frattempo, chi la cita dichiara entrambe le
+età.
+**Current status:** ⬜ aperta. Il paper è letto (`FTR-20260810-30755385-01`); è la discrepanza
+a non essere risolta, non la lettura.
+
+---
+
+## FT-049
+*🔴 `INFERENZA`: il tessuto di misura non è il tessuto di necessità.*
+**Papers:** PMID 24871327 · PMID 34747138 · PMID 30755385 — le tre fonti che la sostengono
+**Title:** Un fenotipo misurato nel sangue o a livello sistemico non identifica il tessuto in cui la lesione causale risiede
+**Surface:** PMID 24871327 · `structured` · sentinella `clean` · PMID24871327_Iatan2014_PMC.html  ·  PMID 34747138 · `structured` · sentinella `clean` · PMID34747138_Repudi2021_PMC.xml  ·  PMID 30755385 · `structured` · sentinella `clean` · PMID30755385_AbuRemaileh2019.pdf, PMID30755385_AbuRemaileh2019_PMC.xml
+**Priority:** **ALTA** (è una regola di lettura, non un singolo studio)
+**Epistemic status:** **`INFERENZA`** — convergenza di tre osservazioni indipendenti, mai
+dimostrata come principio nel contesto WWOX. Non è `DATO` e non va citata come tale.
+`PREMISE: DATO` per ciascuna delle tre osservazioni; `PREMISE: INFERENZA` per la
+generalizzazione.
+**Why:** le tre fonti si dispongono in una figura che nessuna di loro afferma da sola.
+
+| Fonte | Osservazione | Direzione |
+|---|---|---|
+| Iatan 2014 (PMID 24871327) | il KO **epatico** di *Wwox* **non** abbassa l'HDL plasmatico | il tessuto ovvio non è quello necessario |
+| Repudi 2021 (PMID 34747138) | il restauro **neuronale-only** (AAV9-hSynI) recupera fenotipi **periferici**, ipoglicemia inclusa | il tessuto di necessità può stare a monte del compartimento misurato |
+| AbuRemaileh 2019 (PMID 30755385) | il KO **muscolare** produce un fenotipo **sistemico** | un compartimento non ovvio basta a generare la misura sistemica |
+
+**Perché conta qui e non altrove:** il modello di malattia ragiona su marcatori periferici —
+lipidi, glucosio, BUN/creatinina — come se il compartimento in cui si misurano indicasse dove
+agire. Queste tre letture dicono che non lo indica. Vincola direttamente la scelta dei
+biomarcatori Tier 1/2 (un marcatore ematico può essere valido come *readout* ed essere muto
+sul *bersaglio*) e la logica di targeting terapeutico.
+**Come è emersa:** dal rapporto di una seconda sessione su PMID 30755385, che ha messo in fila
+tre letture separate. 🔴 **Non esisteva in alcun file canonico** — né claim registry, né
+working model, né meta — pur essendo sostenuta da tre paper già letti. È il tipo di perdita
+che il sistema è costruito per non subire: tre `DATO` in casa e l'inferenza che li unisce in
+nessun posto interrogabile.
+**Next action:** promuoverla via commit candidate → `BATCH_COMMIT`, come `INFERENZA` esplicita
+nel claim registry o in [[meta_metabolism_current]], con le tre fonti wikilinkate. **Non può
+salire a `DATO`** senza un esperimento che testi la dissociazione compartimento/necessità in
+modo diretto.
+**Current status:** ⬜ registrata qui perché interrogabile subito; canonicamente **non**
+promossa — `batch_commit_gate` è chiuso.
+
+---
+
+## FT-050 — Supplementary di PMID 38182577: il debito che tiene la lettura a `partial`
+*(🔴 **Rinumerata da FT-046 il 2026-08-10.** Aperta su `lettore-b` con un ID che `main` aveva
+già assegnato a un'altra voce: due rami hanno preso lo stesso numero libero perché entrambi
+avevano contato, non letto, la coda. Il receipt `FTR-20260810-38182577-02`, già nel ledger a
+catena hash, cita questa voce come **FT-046**: il ledger non si riscrive, quindi il collegamento
+è dichiarato qui.)*
+**Paper:** PMID 38182577 / DOI 10.1038/s41419-023-06378-8 — Akkawi 2024 — *WWOX promotes
+osteosarcoma development via upregulation of Myc*
+(⚠️ titolo invertito rispetto al proprio contenuto — vedi `DL-METH-079`).
+**Priority:** MEDIUM-HIGH
+**Artefatto:** già in locale e fingerprintato —
+`files/fulltext/PMID38182577_Akkawi2024_assets/41419_2023_6378_MOESM1_ESM.pdf`
+(SHA-256 `bf64e0e7133a…`), più `MOESM2_ESM.pptx` non aperto.
+**Perché è debito e non rifinitura:** il corpo e le sette figure principali sono letti
+(`FTR-20260810-38182577-01`), ma i pannelli **S1–S5 non sono stati adjudicati**, e uno di essi
+è portante: la claim *"Trp53 SKO yBM is not tumorigenic"* — cioè il contrasto che regge
+l'intero modello a due colpi — poggia su **Fig S5A,B**. Finché quel pannello non è letto, il
+contrasto DKO-vs-SKO è sostenuto dal testo e non dalla figura.
+**Perché la lettura è `partial_fulltext_read`:** lo scrittore del receipt ha **rifiutato**
+`complete_fulltext_read` con `coverage.supplementary: not_read`, e ha fatto bene. Una prima
+stesura del manifest dichiarava "Coverage: complete"; è stata corretta.
+**Next action:** ~~adjudicare S1–S5 come immagini a risoluzione originale, poi ri-registrare a
+profondità completa con `reread_reason: inadequate_prior_coverage`.~~ **Fatto.**
+**Current status:** ✅ **CHIUSO** — `FTR-20260810-38182577-02`, `complete_fulltext_read`.
+
+---
+
+## FT-051 — Supplementari di PMID 38499540, e la lezione applicata invece che ripetuta
+*(Rinumerata da FT-047 il 2026-08-10, stessa collisione di `FT-050`. Il receipt
+`FTR-20260810-38499540-01` la cita come **FT-047**.)*
+**Paper:** PMID 38499540 / DOI 10.1038/s41420-024-01878-8 — Bidany-Mizrahi 2024 — *Unveiling
+the relationship between WWOX and BRCA1…*
+(⚠️ tre didascalie su sei invertite rispetto ai propri pannelli — vedi `DL-METH-081`).
+**Priority:** MEDIUM
+**Da recuperare:** `MOESM1-4` (tre `.pptx`, un `.docx`) — **non ancora scaricati**.
+**Perché è debito dichiarato e non una svista:** `Supplementary Fig. 1` è citata nel corpo per
+il confronto foci tumore-contro-normale, e non è stata adjudicata. La lettura è quindi
+`partial_fulltext_read` (`FTR-20260810-38499540-01`) **per dichiarazione, non per omissione** —
+la stessa forma che oggi, su `FT-050`, ha corretto due mie coppie di contraddizione. Registrarlo
+subito costa una riga; scoprirlo dopo costa la lettura due volte.
+**Next action:** recuperare i quattro supplementari, adjudicare S1, ri-registrare a profondità
+completa con `reread_reason: inadequate_prior_coverage`.
+**Current status:** ⬜ aperto.
+
+---
+
+## FT-052 — PMID 25331887, e la premessa con cui l'ho accodato era sbagliata
+*(Rinumerata da FT-048 il 2026-08-10, stessa collisione di `FT-050`.)*
+**Paper:** PMID 25331887 / DOI 10.1073/pnas.1409252111 — Abu-Odeh 2014 *PNAS* — *WWOX, the
+common fragile site FRA16D gene product, regulates ATM activation and the DNA damage response*
+**Priority:** HIGH
+**Perché — versione originale, conservata perché è l'errore:** *«38499540 conclude che i suoi
+risultati in vivo "correspond with previous in vitro findings" citando questo lavoro. La
+direzione WWOX→NHEJ nel modello murino è quindi ancorata a una fonte non letta.»*
+🔴 **Falso, e la lettura lo ha dimostrato.** La frase *«correspond with previous in vitro
+findings»* cita **[17], [38], [39]** — nessuno dei quali è questo paper. `25331887` è il
+riferimento **[36]**, citato per l'asse ATM insieme a [35], e nella Discussione è nominato
+**come conflitto**: *«In contrast, a previous paper by Abu-Odeh and colleagues, has shown that
+WWOX enhances HDR in U2OS cells [36]»*. Il DOI che avevo scritto era inventato
+(`1409753111`); quello vero è `1409252111`. Il `multihop` del manifest di 38499540 mappava
+questo PMID ai rif. 17 e 34: entrambi corretti nello stesso commit.
+**La forma dell'errore è quella di tutta la giornata, un piano più su:** avevo attribuito una
+citazione a una frase senza leggere il numero che la frase porta. È lo stesso difetto che
+l'audit `cited_panel_check` cerca fra testo e pannello, qui fra testo e bibliografia.
+**Perché valeva leggerlo lo stesso, e di più:** il conflitto è reale, è **dichiarato dagli
+autori**, e i due lavori hanno lo stesso autore senior. E il pannello aggiunge ciò che la
+spiegazione pubblicata non dice — vedi `DL-METH-084`.
+**Artefatto:** superficie strutturata acquisita dalla sweep del 2026-08-10
+(`PMID25331887_AbuOdeh2014_PMC.html`), più il PDF locale usato **solo** come contenitore di
+immagini per estrarre le sette figure alla risoluzione depositata.
+**Current status:** ✅ **CHIUSO** — `FTR-20260810-25331887-01`, `partial_fulltext_read`
+(supplementary irrecuperabile, vedi `FT-053`). Manifest strict PASS, 29 locator.
+S1–S5 resi dal PDF sorgente a 220 dpi e ispezionati come immagini; la ricetta di rendering
+(digest sorgente · pagina · dpi · digest immagine) è nel manifest sotto
+`supplement_page_renders`, così un lettore con la propria copia rigenera byte identici senza
+che il repository ridistribuisca le figure dell'editore.
+🔴 **Il debito non era formale, e vale registrarlo perché la prossima volta si creda al gate:**
+il supplementary ha **corretto due coppie di contraddizione di questo stesso manifest**, in
+entrambi i casi perché avevo confrontato una frase con una figura principale che la frase
+**non cita** — `Fig 4D` invece di `S5B`, `Fig 4A` invece di `S4D`. E ha prodotto quattro
+reperti che esistono solo lì, fra cui **due conteggi di tumorigenicità incompatibili per lo
+stesso genotipo** (12/28 in Fig 4D contro 11/21 in S5B) e **MCM7 che non è più alto** nel
+pannello che il testo cita per dirlo. Lo scrittore della receipt aveva ragione a rifiutare
+`complete` al primo passaggio.
+
+---
+
+## FT-053 — Il supplementary di PMID 25331887 non è irrecuperato: è **irrecuperabile** dalle vie sancite
+**Paper:** PMID 25331887 / DOI 10.1073/pnas.1409252111 — Abu-Odeh 2014 *PNAS*
+**Priority:** ~~MEDIA-ALTA~~ → **ALTA**, elevata il 2026-08-10 a fine sessione.
+🔴 **Perché è salita, e non per rifinitura:** dopo il ri-audit in coda a `DL-MECH-083`, la
+**stabilizzazione** di WWOX da parte della catena K63 è ritaggata `PREMISE: NON RISOLTA` — e la
+sua unica evidenza è **`Fig S7B`**, che sta esattamente in questo supplementary. È la premessa
+più consequenziale della catena K63/ITCH/K274, quella che decide se `DL-MECH-083` sia un `DATO`
+o un'inferenza, e il repository **non può raggiungerla** per le quattro vie documentate sotto.
+Non è un fallimento: è un debito localizzato al pannello, che è il massimo ottenibile quando
+manca l'accesso. Ma vale ora quanto una lettura mancante, non quanto una figura non adjudicata.
+**Che cosa manca:** `pnas.201409252SI.pdf`, figure **S1–S7**. Non è rifinitura: **S2B** porta
+l'unico confronto `WWOX+/+ / +/− / −/−` in MEF — cioè il solo dato genetico a dosaggio del
+paper — **S6C** è la discriminazione K63-contro-K48 su cui poggia l'intera lettura della catena
+ubiquitinica, e **S7B** è la misura di emivita citata nel corpo per dire che K274R è meno
+stabile. Tre affermazioni portanti del manifest hanno la loro evidenza lì dentro.
+**🔴 Le vie tentate, con la risposta letterale — questa voce esiste per non farle ritentare a
+qualcun altro fra un mese:**
+
+| Via | Risposta |
+|---|---|
+| OA package service (`oa.fcgi?id=PMC4226089`) | `error code="idIsNotOpenAccess"` |
+| Europe PMC `supplementaryFiles` per `PMC4226089` | `errCode 0` — *«Article with id PMC4226089 is not open access one»* |
+| CDN dell'editore, `pnas.org/lookup/suppl/doi:.../DCSupplemental/` | serve una **pagina HTML**, non il PDF (5 701 byte, `HTML document text`) — la stessa trappola già documentata nel manuale deep-dive |
+| PDF locale (`PMID25331887_AbuOdeh2014.pdf`) | dieci pagine, **solo l'articolo principale**; il SI non è allegato |
+
+**La distinzione che conta:** il paper ha un full text libero su PMC ma **non è open access**,
+e le due cose non coincidono. Il corpo si legge, il supplementary no. Un lettore che assume
+«è su PMC quindi il pacchetto OA esiste» tenta le tre vie e conclude che ha sbagliato comando.
+**Next action:** richiesta agli autori, oppure copia via biblioteca istituzionale. È materiale
+per la Fondazione allo stesso titolo dei dodici senza link libero del 2026-08-07.
+**Current status:** ⬜ aperto — **bloccato su accesso, non su tempo.**
+
+---
+
+## FT-054 — PMID 24550385, la fonte da cui `25331887` importa K274 e ITCH senza dimostrarli
+**Paper:** PMID 24550385 / DOI 10.1074/jbc.M113.506790 — Abu-Odeh 2014 *J Biol Chem*
+289(13):8865–8880 — *Characterizing WW Domain Interactions of Tumor Suppressor WWOX Reveals Its
+Association with Multiprotein Networks*
+**Priority:** **ALTA**
+**Surface:** `structured` · `PMID24550385_AbuOdeh2014_PMC.html` (corpo 85 983 caratteri,
+abstract 2 186 separato dal validator) · più `PMID24550385_AbuOdeh2014.pdf` locale
+**Identità verificata dall'artefatto, non assunta:** l'intestazione PMC stampa
+`J Biol Chem . 2014 Feb 18;289(13):8865–8880. doi: 10.1074/jbc.M113.506790`, che coincide
+carattere per carattere con la citazione del **rif. 3** di `25331887`. Verificata prima di
+spendere, perché due volte oggi ho attribuito una citazione senza controllare il numero che la
+frase porta.
+**Perché è il prossimo:** `25331887` scrive *«Our recent data revealed that ITCH mediates WWOX
+ubiquitination at K274 (3)»* e *«ITCH … mediates K63-linked polyubiquitination of WWOX, leading
+to its stabilization and nuclear translocation (3)»*. **L'identificazione del residuo e della
+ligasi non è un risultato di `25331887`**: arriva già fatta da qui, e tutto ciò che ne discende
+— il mutante `K274R`, l'import nucleare ubiquitina-dipendente, il modello di Fig 7D, e
+`DL-MECH-083` — vi poggia sopra. È `IMPORTED_PREMISE_ATTRIBUTION_GATE` nella forma più pura
+che questo corpus abbia prodotto finora.
+**🔴 Le due domande che la lettura deve chiudere** — *poste come domande, non come reperti*: il
+solo materiale ispezionato finora è **l'abstract**, che è `NOT_EVIDENCE` e non chiude nulla.
+Sono scritte qui perché il prossimo giro parta già puntato, non perché siano una risposta.
+1. ~~**Questo paper nomina `K274`?**~~ → **RISTRETTA il 2026-08-10, non chiusa.** Ricerca
+   d'esistenza a pattern dichiarato (`K\s*-?\s*274|Lys\s*-?\s*274|lysine\s+274`, case-insensitive)
+   sul corpo estratto: **10 occorrenze**, nelle forme `K274`, `K 274`, `Lys-274`. Il residuo
+   **è nominato nel corpo** — l'abstract non lo diceva, e il mio sospetto nasceva dall'unica
+   superficie che avevo guardato, che è `NOT_EVIDENCE` per costruzione. Cade quindi l'ipotesi
+   peggiore, cioè che `25331887` attribuisca il residuo a una fonte che non lo contiene.
+   ⚠️ Il conteggio non stabiliva che il residuo fosse **identificato per esperimento qui**,
+   invece che citato, elencato fra i mutanti dei Metodi o importato a sua volta. Dieci
+   occorrenze sono un fatto d'esistenza; *«è identificato in questa fonte»* è un fatto di
+   contenuto. **Risolta ispezionando i dieci contesti** — non il conteggio — e l'esperimento
+   c'è: spettrometria di massa che identifica il peptide ubiquitinato `FTDINDSLGK274LDFSR`
+   (Xcorr 2,11) accanto a `LAFTVDDNPTK100PTTR` (Xcorr 1,54), poi mutagenesi sito-diretta con
+   `K274R` non ubiquitinato da ITCH, in Fig 5 E–G, e la conclusione degli autori *«ITCH
+   predominantly mediates polyubiquitination of WWOX at Lys-274»*. **Domanda 1 chiusa:
+   l'attribuzione di `25331887` regge.**
+   *(Osservazione di triage, non un locator: le citazioni qui sopra vanno riverificate contro
+   l'artefatto in sede di lettura completa, e non sostituiscono la lettura del corpo.)*
+2. **Questo paper riporta una `stabilizzazione`?** L'abstract dice che la ubiquitinazione K63
+   porta a *«nuclear localization and increased cell death»*. `25331887` cita la stessa fonte
+   per *«stabilization and nuclear translocation»*. **Localizzazione e stabilizzazione non sono
+   la stessa affermazione**, e `DL-MECH-083` — la voce che rovescia il default *polyUb →
+   proteasoma* — poggia sulla seconda.
+   ⚠️ **I conteggi non chiudono questa domanda e non vanno usati come se lo facessero.** Sul
+   corpo ricorrono `stabil` 12 volte, `degrad` 14, `half-life` 7, `proteasom` 2. Dicono che il
+   paper **discute** la stabilità; non dicono che riporti che la catena K63 **stabilizzi** WWOX.
+   🔴 **Il termine ricorre: se la lettura riporta la stabilizzazione, deve venire da un
+   esperimento nominato, non dalla frequenza della parola.** Una ricerca tecnica risponde a una
+   domanda d'esistenza, mai a una domanda di contenuto — è la regola 4 applicata al proprio
+   strumento di triage.
+   ⚠️ **Una frase della Discussione sembrava chiuderla e NON la chiude — correzione registrata
+   perché il quasi-reperto era persuasivo.** Avevo isolato *«Whether Lys-274 is the same lysine
+   in the WWOX C terminus that also targets WWOX for degradation is not known»* e ne avevo
+   tratto che la fonte non afferma la stabilizzazione. **Non segue.** Letto il paragrafo intero
+   e verificato verbatim contro l'artefatto, quel *«non è noto»* riguarda **se K274 sia anche
+   il sito di degradazione**, non se la catena K63 stabilizzi: sono domande imparentate e
+   distinte. Se avessi pesato la frase fuori dal suo paragrafo avrei avuto un reperto forte e
+   sbagliato. **La domanda 2 resta aperta esattamente dov'era.**
+   🔴 **Il paragrafo però serve alla lettura vera, per un'altra ragione:** introduce
+   **Mahajan et al. (rif. 62)** — *«full-length WWOX but not a truncated form of WWOX that
+   lacks the C terminus, WWOXΔ5–8, is polyubiquitinated **and degraded**»* — cioè una
+   **seconda via di ubiquitinazione su WWOX, con esito degradativo**, accanto a quella
+   ITCH/K63/K274. Il rif. 62 è **PMID 16288044**, Mahajan 2005 *Cancer Res* 65:10514–10523,
+   *«Role of Ack1 in polyubiquitination of tumor suppressor Wwox»*, **già presente in LEGEND
+   come `corpus placeholder`** e già trattato in `DL-MECH-048` e `DIS-001`. La lettura deve
+   quindi pesare la stabilizzazione **sapendo che la via alternativa è documentata**, non come
+   se il default fosse semplicemente invertito. Vedi la calibrazione in coda a `DL-MECH-083`.
+**Come è emersa:** dalla lettura di `25331887` (`FTR-20260810-25331887-01`), enumerando le
+premesse importate invece dei risultati.
+**Current status:** ⬜ aperto, artefatto in casa, **identità verificata**. Non iniziato:
+interrotto prima di aprire il corpo per contesto residuo insufficiente a chiuderlo bene, che è
+una condizione d'interruzione dichiarata e non un rinvio.
+
+---
+
+> 🔴 **Nota di merge, 2026-08-10.** Le voci che seguono arrivano da un secondo ramo. Tenute
+> entrambe, e questa volta **senza collisione**: `048`–`054` da un lato, `055`–`056`
+> dall'altro. L'attore del secondo ramo aveva lasciato `053`–`054` liberi *come stacco*,
+> esattamente per non ripetere i quattro duplicati `FT-` trovati poche ore prima — e i numeri
+> che aveva evitato sono precisamente quelli che l'altro ramo ha poi usato. **Una spaziatura
+> dichiarata ha fatto il lavoro che un identificatore condiviso non poteva fare.**
 
 ## FT-055 — ✅ APERTA E CHIUSA il 2026-08-10
 

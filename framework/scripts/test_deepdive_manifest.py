@@ -74,6 +74,31 @@ class SectionIsRequired(unittest.TestCase):
         self.assertEqual(errors, [])
         self.assertEqual(incomplete, [])
 
+    def test_manifest_and_artifacts_may_use_separate_explicit_workspaces(self) -> None:
+        """A branch carries the manifest while ignored evidence remains in shared files/."""
+        with TemporaryDirectory() as manifest_tmp, TemporaryDirectory() as evidence_tmp:
+            manifest_root = Path(manifest_tmp)
+            evidence_root = Path(evidence_tmp)
+            relative = "files/fulltext/paper.xml"
+            artifact = evidence_root / relative
+            artifact.parent.mkdir(parents=True)
+            sentence = "This body sentence is long enough to act as exact evidentiary text."
+            artifact.write_text(
+                f"<article><body><p>{sentence}</p></body></article>", encoding="utf-8")
+            manifest = schema_v2(relative)
+            manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+                artifact.read_bytes()).hexdigest()
+            manifest["verbatim_locators"]["entries"][0]["snippet"] = sentence
+            work = gate.manifest_path(manifest_root, "wwox", "12345678")
+            work.parent.mkdir(parents=True)
+            work.write_text(json.dumps(manifest), encoding="utf-8")
+
+            errors, incomplete = gate.load_and_validate(
+                manifest_root, "wwox", "12345678", artifact_root=evidence_root,
+                verify_artifacts=True, require_current_schema=True)
+            self.assertEqual(errors, [])
+            self.assertEqual(incomplete, [])
+
 
 class EntriesMustBeUsable(unittest.TestCase):
     def test_empty_entries_are_rejected(self) -> None:
@@ -726,6 +751,260 @@ class CliVerdictNamesItsVerificationScope(unittest.TestCase):
         self.assertIn("MANIFEST STRICT", scope)
         self.assertIn("SHA-256", scope)
         self.assertIn("exact text locators verified", scope)
+
+
+class PanelTextRelationBites(unittest.TestCase):
+    """Every refusal added for `panel_text_relation`, and a baseline that proves it can pass.
+
+    A mutation battery rather than a parity check: a red baseline is not a capture. Each test
+    below starts from a manifest that validates, changes exactly one thing, and asserts the
+    specific refusal — so a check that silently stopped firing would show up here as a pass
+    that should have been a failure.
+    """
+
+    @staticmethod
+    def _two_entries(**entry_overrides) -> dict:
+        """A text locator at entries[0] and a panel locator at entries[1]."""
+        manifest = schema_v2()
+        text_entry = manifest["verbatim_locators"]["entries"][0]
+        text_entry["panel_text_relation"] = "text_only"
+        panel = {
+            "proposition": "The panel shows the comparison was never drawn",
+            "snippet": "[figure attestation] Fig. 3b, brackets run WT-vs-KO only",
+            "surface": "figure",
+            "anchor": "Figure 3b, read at 500 dpi",
+            "artifact": manifest["source_artifacts"][0]["path"],
+            "panel_text_relation": "text_contradicted_by_panel",
+            "contradicts": "entries[0]",
+            "contradicts_needle": "amino acids 388-407",
+        }
+        panel.update(entry_overrides)
+        manifest["verbatim_locators"]["entries"].append(panel)
+        return manifest
+
+    def test_the_baseline_passes(self) -> None:
+        """Without this, every assertion below could be passing for the wrong reason."""
+        errors, _ = gate.validate(self._two_entries(), require_current_schema=True)
+        self.assertEqual([item for item in errors if "panel_text_relation" in item
+                          or "contradicts" in item], [])
+
+    def test_the_field_is_optional_so_the_legacy_corpus_stays_valid(self) -> None:
+        """The coverage duty lives in growth_anchors, not here — see §6.4."""
+        manifest = schema_v2()
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertEqual([item for item in errors if "panel_text_relation" in item], [])
+
+    def test_a_value_outside_the_enum_is_refused(self) -> None:
+        manifest = schema_v2()
+        manifest["verbatim_locators"]["entries"][0]["panel_text_relation"] = "probably_fine"
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("panel_text_relation: must be one of" in item for item in errors))
+
+    def test_every_declared_value_is_actually_accepted(self) -> None:
+        """The enum and the validator must not drift apart in either direction."""
+        for value in sorted(gate.PANEL_TEXT_RELATIONS - {"text_contradicted_by_panel"}):
+            with self.subTest(value=value):
+                manifest = schema_v2()
+                manifest["verbatim_locators"]["entries"][0]["panel_text_relation"] = value
+                errors, _ = gate.validate(manifest, require_current_schema=True)
+                self.assertEqual(
+                    [item for item in errors if "panel_text_relation" in item], [])
+
+    def test_a_contradiction_without_a_pointer_is_a_block(self) -> None:
+        manifest = self._two_entries()
+        del manifest["verbatim_locators"]["entries"][1]["contradicts"]
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("must name it as `entries[N]`" in item for item in errors))
+
+    def test_a_pointer_to_a_locator_that_does_not_exist_is_a_block(self) -> None:
+        manifest = self._two_entries(contradicts="entries[9]")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("no entries[9] in this manifest" in item for item in errors))
+
+    def test_a_locator_cannot_contradict_itself(self) -> None:
+        manifest = self._two_entries(contradicts="entries[1]")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("cannot contradict itself" in item for item in errors))
+
+    def test_a_panel_cannot_contradict_another_panel(self) -> None:
+        """Two images disagreeing is a different finding and needs its own words."""
+        manifest = self._two_entries()
+        manifest["verbatim_locators"]["entries"][0]["surface"] = "figure"
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("is not a text surface" in item for item in errors))
+
+    def test_only_a_contradiction_may_carry_the_pointer(self) -> None:
+        """Otherwise `contradicts` becomes a free-text field nothing reads."""
+        manifest = self._two_entries(panel_text_relation="text_confirmed_by_panel")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any(
+            "contradicts: only a `text_contradicted_by_panel` locator may carry one" in item
+            for item in errors))
+
+    def test_the_diagnostic_index_is_zero_based_like_the_pointer(self) -> None:
+        """🔴 One error line used to carry two `entries[N]` with opposite meanings.
+
+        The loop counted from ONE while `contradicts` and `adjudications.json` count from
+        zero — the notation collision inside the message whose job is to disambiguate. It cost
+        twice on 2026-08-10: five needles across three branches would each have been attached
+        to the wrong locator by anyone trusting the printed index, and a reader sent to
+        `entries[1].abstract_snippet` found no such field because the defect was in entry 0.
+        """
+        manifest = self._two_entries()
+        del manifest["verbatim_locators"]["entries"][1]["anchor"]
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        anchor_errors = [item for item in errors if ".anchor:" in item]
+        self.assertEqual(len(anchor_errors), 1, errors)
+        self.assertIn("entries[1].anchor", anchor_errors[0])
+
+    def test_the_pointer_and_the_diagnostic_agree_on_the_same_entry(self) -> None:
+        """The property that makes the two indices interchangeable for a reader."""
+        manifest = self._two_entries(contradicts_needle="not in the target at all")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        needle_errors = [item for item in errors if "contradicts_needle" in item]
+        self.assertEqual(len(needle_errors), 1, errors)
+        # The panel locator is at index 1 and names entries[0]; both appear as written.
+        self.assertIn("entries[1].contradicts_needle", needle_errors[0])
+        self.assertIn("entries[0]", needle_errors[0])
+
+    @staticmethod
+    def _qualifying_pair(**entry_overrides) -> dict:
+        """The same fixture for the second coupled relation, so both are exercised alike."""
+        manifest = schema_v2()
+        manifest["verbatim_locators"]["entries"][0]["panel_text_relation"] = "text_only"
+        panel = {
+            "proposition": "The panel bears on the sentence and neither agrees nor disagrees",
+            "snippet": "[figure attestation] Fig. 3b carries a lane the sentence never cites",
+            "surface": "figure",
+            "anchor": "Figure 3b, read at 500 dpi",
+            "artifact": manifest["source_artifacts"][0]["path"],
+            "panel_text_relation": "panel_qualifies_text",
+            "qualifies": "entries[0]",
+            "qualifies_needle": "amino acids 388-407",
+        }
+        panel.update(entry_overrides)
+        manifest["verbatim_locators"]["entries"].append(panel)
+        return manifest
+
+    def test_the_qualifying_baseline_passes(self) -> None:
+        """🔴 A red baseline is not a capture — every refusal below needs this to be green."""
+        errors, _ = gate.validate(self._qualifying_pair(), require_current_schema=True)
+        self.assertEqual([item for item in errors if "qualif" in item], [], errors)
+
+    def test_a_qualification_without_a_pointer_is_a_block(self) -> None:
+        manifest = self._qualifying_pair()
+        del manifest["verbatim_locators"]["entries"][1]["qualifies"]
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("must name it as `entries[N]`" in item for item in errors), errors)
+
+    def test_a_qualification_without_a_needle_is_a_block(self) -> None:
+        """The pointer is an index into a reorderable array; the needle is what pins it."""
+        manifest = self._qualifying_pair()
+        del manifest["verbatim_locators"]["entries"][1]["qualifies_needle"]
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("qualifies_needle:" in item for item in errors), errors)
+
+    def test_a_qualifying_needle_from_the_wrong_sentence_is_a_block(self) -> None:
+        manifest = self._qualifying_pair(qualifies_needle="a span in no snippet at all")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("is not a fragment of the snippet" in item for item in errors),
+                        errors)
+
+    def test_a_panel_cannot_qualify_another_panel(self) -> None:
+        manifest = self._qualifying_pair()
+        manifest["verbatim_locators"]["entries"][0]["surface"] = "figure"
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("is not a text surface" in item for item in errors), errors)
+
+    def test_a_locator_cannot_qualify_itself(self) -> None:
+        manifest = self._qualifying_pair(qualifies="entries[1]")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("cannot qualify itself" in item for item in errors), errors)
+
+    def test_a_contradiction_may_not_carry_a_qualification_pointer(self) -> None:
+        """Both directions, because one-way checks are how a pair drifts apart."""
+        manifest = self._two_entries(qualifies="entries[0]")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any(
+            "qualifies: only a `panel_qualifies_text` locator may carry one" in item
+            for item in errors), errors)
+
+    def test_a_qualification_may_not_carry_a_contradiction_pointer(self) -> None:
+        """The pointers are not interchangeable: each names the relation that owns it."""
+        manifest = self._two_entries(panel_text_relation="panel_qualifies_text")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any(
+            "contradicts: only a `text_contradicted_by_panel` locator may carry one" in item
+            for item in errors), errors)
+
+    def test_the_pointer_grammar_matches_the_adjudication_recipes(self) -> None:
+        """Zero-based, as `adjudications.json` writes it — the reference this repo already has.
+
+        The error messages in the validator count from one. A reader copies the reference
+        grammar, not the diagnostic text, so `contradicts` follows the recipes; this test is
+        what keeps the two from being reconciled in the wrong direction by a later edit.
+        """
+        manifest = self._two_entries(contradicts="entries[0]")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertEqual([item for item in errors if "contradicts" in item], [])
+
+    def test_a_contradiction_must_address_its_target_by_content_too(self) -> None:
+        """🔴 `entries[N]` is a position in a reorderable array; the index can slip.
+
+        Caught in review before the field had a second user. The three checks around the
+        pointer — target exists, is a text surface, is not this one — are all blind to a slip
+        onto a DIFFERENT text locator. `adjudications.json` never writes `entries[N]` alone;
+        the half that makes the address safe had not been copied over with the half that
+        makes it an address.
+        """
+        manifest = self._two_entries()
+        del manifest["verbatim_locators"]["entries"][1]["contradicts_needle"]
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("must be accompanied by a fragment" in item for item in errors))
+
+    def test_a_fragment_from_the_wrong_sentence_is_refused(self) -> None:
+        manifest = self._two_entries(contradicts_needle="a phrase from nowhere")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("is not a fragment of the snippet of entries[0]" in item
+                            for item in errors))
+
+    def test_a_slipped_index_is_caught_by_the_fragment(self) -> None:
+        """The failure the needle exists for, staged end to end.
+
+        A third locator is inserted ahead of the target, exactly as a later reading would add
+        one. `contradicts: entries[0]` now resolves to the new sentence; every structural
+        check still passes, and only the content anchor notices.
+        """
+        manifest = self._two_entries()
+        entries = manifest["verbatim_locators"]["entries"]
+        intruder = dict(entries[0])
+        intruder["snippet"] = ("A different sentence entirely, long enough to satisfy the "
+                               "minimum snippet length imposed by the schema.")
+        entries.insert(0, intruder)
+        structural = [item for item in gate.validate(manifest, require_current_schema=True)[0]
+                      if "contradicts:" in item]
+        self.assertEqual([], structural, "the positional checks cannot see a slip")
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("contradicts_needle" in item for item in errors),
+                        "only the content anchor catches it")
+
+    def test_a_fragment_matching_two_locators_does_not_identify_one(self) -> None:
+        """Uniqueness is the other half of `check_needles`, in this array's terms."""
+        manifest = self._two_entries()
+        entries = manifest["verbatim_locators"]["entries"]
+        twin = dict(entries[0])
+        twin["snippet"] = entries[0]["snippet"] + " Repeated: amino acids 388-407 again."
+        entries.append(twin)
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any("does not identify one" in item for item in errors))
+
+    def test_only_a_contradiction_may_carry_a_fragment(self) -> None:
+        manifest = self._two_entries(panel_text_relation="text_only")
+        del manifest["verbatim_locators"]["entries"][1]["contradicts"]
+        errors, _ = gate.validate(manifest, require_current_schema=True)
+        self.assertTrue(any(
+            "only a `text_contradicted_by_panel` locator may carry one" in item
+            for item in errors))
 
 
 if __name__ == "__main__":
