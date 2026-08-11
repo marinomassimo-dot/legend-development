@@ -2229,23 +2229,39 @@ sotto enuncia piatto; il disegno non porta né tratteggio né `?`. Falsifica la 
 
 ## FT-062 — Lo studio primario che questa review riformula, e la terza voce sul conflitto HDR/NHEJ
 
-**Papers:** DOI 10.1038/s41419-018-0832-2 — Abdeen SK, Ben-David U, Shweiki A, *et al.*,
-*Cell Death Dis* 2018;9(8):832 — *Somatic loss of WWOX is associated with TP53 perturbation in
-basal-like breast cancer*. **PMID non risolto in lettura** — primo passo: risolverlo. · Più il
-riferimento 100 di `31075076`: il lavoro del laboratorio **Huebner** su WWOX–BRCA1 e NHEJ,
-identificatori non risolti.
+**Papers:** PMID 27869163 / DOI 10.1038/onc.2016.389 — Schrock MS, Batar B, Lee J, *et al.*,
+*Oncogene* 2017;36(16):2215–2227, PMC5398941 — *Wwox-Brca1 interaction: role in DNA repair pathway
+choice*. È il rif. 100 di `31075076`, **non letto**, ed è **l'unico debito di lettura** che quella
+review lascia.
 
-**Perché.** `PMID 31075076` è una review **senza dati primari**: ogni sua affermazione empirica
-riformula il *Cell Death Dis* 2018, citato **quattordici volte**. Finché quello non è letto,
-**nulla di `31075076` può essere promosso come evidenza** sull'asse WWOX–p53 — vale come reperto
-di metodo, non come fonte.
+🔴 **CORREZIONE 2026-08-11 — LA PRIMA VERSIONE DI QUESTA VOCE ACCODAVA UN PAPER CHE AVEVO GIÀ
+LETTO IO.** Diceva: *«il primario, DOI 10.1038/s41419-018-0832-2, PMID non risolto… nulla di
+`31075076` può essere promosso finché quello non è letto»*. **Due difetti in una riga, e nessuno
+dei due visibile a un validatore testuale**, perché sono affermazioni *sul corpus*, non citazioni
+dall'artefatto:
 
-🔴 **E il riferimento 100 è una terza voce indipendente su un conflitto già aperto.** `DL-METH-084`
-porta la contraddizione HDR/NHEJ fra `25331887` (WWOX **aumenta** l'HDR) e `38499540`. Qui si
-riporta che il laboratorio Huebner mostra il complesso BRCA1–WWOX sostenere il **NHEJ** come via
-dominante. **Tre laboratori, tre direzioni, sullo stesso asse** — è il nodo con più voci
-contrastanti dell'intero corpus, e nessuna delle tre è stata letta con le altre in mano.
+- il **DOI era fabbricato**, costruito dal numero d'articolo `832` invece di essere letto dalla
+  bibliografia. Il rif. 10 dell'HTML dichiara direttamente **`PMID 30082886` · DOI
+  `10.1038/s41419-018-0896-z` · `PMC6079009`**;
+- il primario **non è né irrisolto né non letto**: è `PMID 30082886`, e **l'ho letto integralmente
+  io il giorno prima** — `FTR-20260810-30082886-01`, manifest `PMID30082886.json` **su questo
+  stesso ramo**. Avevo dichiarato un debito di lettura contro una mia lettura persistita.
 
-**Next action:** risolvere PMID/PMCID di entrambi, preflight a tre vie, e leggere il *Cell Death
-Dis* per primo — è quello che sblocca il valore di una lettura già fatta.
-**Current status:** ⬜ aperto. **Priorità: ALTA** per il primario; media-alta per Huebner.
+**Il compito corretto non è leggere, è confrontare.** `PMID 31075076` è una review senza dati
+primari che riformula `30082886` **quattordici volte**, e la lettura di `30082886` è già in
+archivio: il confronto fra ciò che la review asserisce e ciò che il primario misura **si può
+eseguire adesso**. È esattamente la struttura che ha reso produttiva la coppia
+`27308504`/`25331887`, con la differenza che qui **entrambi i lati sono già letti**.
+
+**Sul rif. 100, la formulazione va tenuta stretta.** `DL-METH-084` porta la contraddizione HDR/NHEJ
+fra `25331887` (WWOX **aumenta** l'HDR) e `38499540`. Schrock 2017 sarebbe una **possibile terza
+direzione**, non una terza direzione stabilita: ciò che questo corpus possiede è **il riassunto di
+una frase che una review fa di quel paper**. Se stabilisca davvero la dominanza del NHEJ, e a quali
+condizioni, è ignoto finché non è letto — e darlo per stabilito sarebbe il difetto di premessa
+importata che questa lettura documenta.
+
+**Next action:** (1) eseguire il confronto `31075076` ↔ `30082886` sulle due letture già
+persistite — non serve recuperare nulla; (2) preflight a tre vie su `PMID 27869163` e leggerlo,
+tenendo la sua direzione come **da verificare**, non come acquisita.
+**Current status:** ⬜ aperto. **Priorità:** ALTA per il confronto (costo basso, entrambi i lati in
+casa); media-alta per Schrock.
