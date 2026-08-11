@@ -3,8 +3,9 @@
   "pmid": "25012504",
   "doi": "10.1038/cdd.2014.95",
   "pmcid": "PMC4211377",
-  "receipt": "FTR-20260811-25012504-01",
-  "landing": ["FTR-20260811-25012504-01", "full_text_queue_current.md#FT-021"],
+  "receipt": "FTR-20260811-25012504-02",
+  "landing": ["FTR-20260811-25012504-02", "full_text_queue_current.md#FT-021"],
+  "superseded_receipt": "FTR-20260811-25012504-01 — partial_fulltext_read, 0/33 panels, superseded by -02 which closes the figure debt at 33/33.",
   "landing_note": "Abu-Remaileh and Aqeilan 2014, Cell Death Differ 21(11):1805-1814. Assigned because HIF1α sits on the convergence list four independent readings produced, AND because PMID 22634283 read an hour earlier changes the question: with WW1's consensus measured as PXPPXYY rather than minimal PPXY, the question is not 'is HIF1α on the list' but DOES IT CARRY THE MOTIF, AND WITH WHAT AFFINITY. That reframing is what this reading was for, and the answer is that the paper does not ask it.",
 
   "skills_considered": [
@@ -17,8 +18,9 @@
     "panels_present": 33,
     "tables_present": 0,
     "supplementary_elements_present": 2,
-    "panels_inspected": 0,
-    "panel_coverage": "0/33",
+    "panels_inspected": 33,
+    "panel_coverage": "33/33",
+    "🔴 figure_debt_closed_and_the_waiver_was_the_same_category_error": "I WAIVED ALL SIX FIGURES ON THE SAME REASONING REFUSED ON PMID 22634283, AND I REPEATED IT KNOWING THE FIRST HAD BEEN REFUSED. Europe PMC answers 'Article with id PMC4211377 is not open access one' — and that constrains REDISTRIBUTION, not inspection. All six images were retrieved from the CDN paths embedded in the article HTML already held, written into the shared checkout's gitignored files/figures/, fingerprinted with native dimensions and route, and INSPECTED. The waiver cost four findings the text does not contain — entries[11] through entries[14] — and one of them materially qualifies the paper's only in-vivo drug experiment.",
     "method": "Counted by READING the six captions: Fig 1 a-d (4), Fig 2 a-f (6), Fig 3 a-f (6), Fig 4 a-e (5), Fig 5 a-f (6), Fig 6 a-f (6) = 33 lettered panels, of which Figure 6f is a proposed-model schematic rather than a measurement.",
     "🔴 i_wrote_30_first_and_the_field_now_says_33": "I FILLED THIS FIELD WITH 30 BEFORE FINISHING THE ADDITION, then wrote the correct count in the prose beside it and left the field at 30. THAT IS PRECISELY THE DEFECT I CORRECTED IN MY OWN MANIFEST ON PMID 30356099 — a field contradicting the prose that explains it, passing because nothing compares the two — and I reproduced it four papers later. The field is now 33 and the prose is 33. The reading budget is the one field in a manifest that describes ME rather than the paper, which is why it keeps being filled from intention: nothing downstream re-derives it, exactly as nothing re-derives a DOI. Fourth occurrence in two days, third caught by re-reading my own block.",
     "🔴 fig_pattern_lesson_confirmed_on_a_second_deposit": "An automatic `<fig>` count returns ZERO on this deposit and `id=\"F[0-9]+\"` returns ZERO; `<figure[^>]*class=\"[^\"]*fig` returns SIX. Identical to PMID 22634283 an hour earlier. A zero from a pattern that does not match the markup is not a measurement of the paper, and it is now confirmed twice rather than argued once.",
@@ -76,7 +78,13 @@
 
   "source_artifacts": [
     { "path": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html", "sha256": "2a0de55a1cbc295a47fe422aac6831e06ca0267f42f091b766807cf05c893d1d", "kind": "article_text" },
-    { "path": "files/fulltext/PMID25012504_AbuRemaileh2014.pdf", "sha256": "98d7cba627e82d1f85c98ae2191bc5a3c08fd4efe907cbf7458f55c2845108d4", "kind": "article_binary" }
+    { "path": "files/fulltext/PMID25012504_AbuRemaileh2014.pdf", "sha256": "98d7cba627e82d1f85c98ae2191bc5a3c08fd4efe907cbf7458f55c2845108d4", "kind": "article_binary" },
+    { "path": "files/figures/PMID25012504/cdd201495f1.jpg", "sha256": "66bf4600b7ea306283de5c18c7725ae4ce4955b0225d0b5fcc341c80f8979cb6", "kind": "figure", "native_px": "750x470", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/4832/4211377/e1cddcb46f2c/cdd201495f1.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" },
+    { "path": "files/figures/PMID25012504/cdd201495f2.jpg", "sha256": "8e11652fa749222765aaf1d41e1d30e2a3a2811639e38918057e61234313375f", "kind": "figure", "native_px": "731x453", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/4832/4211377/4f79c0cac58c/cdd201495f2.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" },
+    { "path": "files/figures/PMID25012504/cdd201495f3.jpg", "sha256": "73f6030cd1c1e529bbfd454afed582186ada75e42b8231086ea386c1afe12264", "kind": "figure", "native_px": "790x605", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/4832/4211377/3e15f668dca4/cdd201495f3.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" },
+    { "path": "files/figures/PMID25012504/cdd201495f4.jpg", "sha256": "52d1c3d3925ae42b635007a67cc7cabf060adc37ffbd0be857c716272882b22c", "kind": "figure", "native_px": "739x519", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/4832/4211377/60fd638b2040/cdd201495f4.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" },
+    { "path": "files/figures/PMID25012504/cdd201495f5.jpg", "sha256": "e2fc6a93a013b1abd17da7243d5d1d98a98c3da4198412ff9cb97f881e9f71e3", "kind": "figure", "native_px": "769x657", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/4832/4211377/02a200884bff/cdd201495f5.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" },
+    { "path": "files/figures/PMID25012504/cdd201495f6.jpg", "sha256": "4da6a5017a4deafdb02676ca548564846dcf658d047add802951f129559ae8ba", "kind": "figure", "native_px": "796x553", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/4832/4211377/151e82093546/cdd201495f6.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" }
   ],
 
   "verbatim_locators": {
@@ -183,6 +191,50 @@
         "anchor": "Results, 'Inverse correlation between WWOX and GLUT1 in human cancer', describing Figure 6e",
         "panel_text_relation": "text_only",
         "found_or_sought": "sought — checked what the human evidence adds, and it adds less than its placement suggests"
+      },
+      {
+        "proposition": "🔴 PANEL 5c SHOWS DIGOXIN LOWERING GLUCOSE IN WILD-TYPE MICE, WHICH THE TEXT DOES NOT MENTION, AND THE TIMESCALE IS INCOMPATIBLE WITH THE MECHANISM THE EXPERIMENT IS OFFERED FOR. The text says digoxin 'caused a fast and specific increase in blood glucose levels SPECIFICALLY in KO mice'. The panel shows both arms moving: under digoxin the knockout rises from about 10 to about 118 mg/dl in forty minutes, and THE WILD TYPE FALLS from about 105 to about 72. Under placebo the knockout stays near 10 and the wild type sits between 128 and 155. So the drug moved wild-type glucose by roughly a third, in the opposite direction, and 'specifically in KO' is not what the figure shows. 🔴 AND THE FORTY MINUTES IS THE HARDER PROBLEM: digoxin is offered here as an inhibitor of HIF1α SYNTHESIS, so any glucose effect through that route requires the loss of existing HIF1α protein and then the decay of its target gene products — GLUT1, PDK1 — whose turnover is measured in hours. A BIDIRECTIONAL SWING OF THIS SIZE IN FORTY MINUTES IS ACUTE PHARMACOLOGY, NOT TRANSCRIPTION. Taken with the printed dose of 100 mg/kg at entries[3] — a hundredfold above the paper's own cited source — the timescale and the dose point the same way, and this figure cannot support a HIF1α-mediated interpretation as published. INFERENZA, and it is a scope limit rather than a refutation of the in-vitro work: the knockdown rescues elsewhere in the paper are genetic and unaffected by this.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5, panel c, titled 'In vivo treatment with digoxin'. Y-axis 'Blood Glucose mg/dl' from 0 to 180; x-axis two groups, Digoxin and Placebo, each split into 0mints and 40mints. Two series in the legend: WWOX KO in red and WWOX WT in blue. Under Digoxin the red bars read approximately 10 at 0 minutes and 118 at 40 minutes; the blue bars read approximately 105 at 0 minutes and 72 at 40 minutes, with a bracket over the 40-minute pair carrying 'P < 0.005'. Under Placebo the red bars read approximately 12 and 10, the blue bars approximately 128 and 155. Error bars are shown on all bars.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID25012504/cdd201495f5.jpg",
+        "anchor": "Figure 5 panel c; native raster 769x657 px, no rendering applied",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[3]",
+        "contradicts_needle": "Digoxin (100 mg/1 kg weight) was injected intraperitoneally",
+        "found_or_sought": "sought — the dose had already failed arithmetic against the paper's own source, so the panel was opened to see what the experiment actually shows, and it shows an effect in the arm the text calls unaffected"
+      },
+      {
+        "proposition": "🔴 THE RESCUE EXPERIMENTS RUN AT TWENTY-THREE TO THIRTY-TWO FOLD OVEREXPRESSION, AND THAT IS THE REGIME ANOTHER PAPER READ TODAY SAYS INVERTS WWOX'S BEHAVIOUR. Three panels display the level of the introduced construct against empty vector: Figure 3b at about 25-fold for WWOX and 23-fold for the WFPA mutant in knockout MEFs, Figure 4d at about 32-fold and Figure 4e at about 28-fold in wild-type MEFs. Every suppression of HIF1α target genes in this paper is measured at those levels. 🔴 PMID 30158849, READ EARLIER TODAY, STATES THAT TRANSIENTLY OVEREXPRESSED WWOX SEQUESTERS TRANSCRIPTION FACTORS IN THE CYTOPLASM WHILE ENDOGENOUS WWOX RELOCATES TO THE NUCLEUS WITH THEM — opposite behaviours for the same protein at different abundance. INFERENZA, and it is the fourth instance of the FT-064 preparation-dependence class in this corpus: the WWOX-HIF1α suppression is established in the overexpression regime, and whether it holds at endogenous abundance is not tested here. The knockout side of the paper is unaffected — loss of function needs no construct.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3 panel b, left sub-panel: three bars on a fold-change axis reaching about 30, labelled KO (EV) at approximately 1, KO (WWOX) at approximately 25 and KO (WFPA) at approximately 23. Figure 4 panel d, left sub-panel: two bars labelled WT EV at approximately 1 and WT WWOX O/E at approximately 32 on an axis to 35. Figure 4 panel e, left sub-panel: WT EV at approximately 1 and WT WWOX O/E at approximately 28 on the same axis.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID25012504/cdd201495f4.jpg",
+        "anchor": "Figure 4 panels d and e principally, read together with Figure 3b; native raster 739x519 px, no rendering applied",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[1]",
+        "qualifies_needle": "revealed that WWOX, but no WFPA mutant, is able to associate with HIF1α",
+        "found_or_sought": "sought — after Liu 2018 distinguished overexpressed from endogenous WWOX this morning, the expression level of every rescue construct became a thing to measure rather than assume"
+      },
+      {
+        "proposition": "ONE OF THE THREE TCA INTERMEDIATES IS NOT SIGNIFICANT, AND THE TEXT LISTS ALL THREE TOGETHER. The Results state 'reduced levels of the TCA cycle intermediates fumarate, malate and succinate'. Panel 2f gives fumarate at P < 0.02, malate at P < 0.02 and SUCCINATE AT P < 0.09 — above the paper's own stated threshold — with visibly overlapping distributions between genotypes. The direction of the metabolic shift is carried by fumarate, malate and fructose-1,6-diphosphate; succinate is listed as if it were equally supported and is not. A small qualification, recorded because a corpus quoting 'fumarate, malate and succinate all reduced' would be quoting one result that the figure marks as not reaching significance.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, panel f, titled 'TCA cycle and glycolysis components (MEFs)'. Four box plots side by side on fold-change axes, each with a blue WT box and a red KO box. Fumarate carries 'P < 0.02', Malate 'P < 0.02', Succinate 'P < 0.09' with the two boxes substantially overlapping, and Fructose 1,6-diphosphate 'P < 0.02' with the KO box raised above the WT box.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID25012504/cdd201495f2.jpg",
+        "anchor": "Figure 2 panel f; native raster 731x453 px, no rendering applied",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[9]",
+        "qualifies_needle": "HIF1α mRNA levels are comparable between Wwox KO and WT skeletal muscles",
+        "found_or_sought": "sought — read the p-values on the metabolite panel because the text listed three intermediates in one clause"
+      },
+      {
+        "proposition": "AND THE HUMAN CORRELATION RESTS ON FIFTEEN POSITIVE SAMPLES OUT OF EIGHTY. Panel 6e prints the contingency table: WWOX-positive 6 GLUT1-positive against 45 GLUT1-negative, WWOX-negative 9 against 20, at P < 0.05. THE ARITHMETIC HOLDS — recomputed, chi-square is about 4.5 on one degree of freedom, p ≈ 0.03 — SO THE STATISTIC IS NOT THE PROBLEM. What the table shows is that only 15 of 80 tumours are GLUT1-positive at all, and the entire association is carried by how those fifteen split, 6 against 9. Moving two or three samples between cells would remove the significance. Recorded beside entries[10] because it makes the same point quantitatively: the mouse genetics carry this paper and the array is fragile, and now the fragility is a number rather than an impression.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6, panel e. Two columns of immunohistochemistry cores labelled Anti-WWOX and Anti-Glut1, rows A10 and B2, each with an inset at higher magnification. Below them a two-by-two table with columns GLUT1 + and GLUT1 − and rows WWOX + and WWOX −, containing 6 and 45 in the first row and 9 and 20 in the second, with 'P < 0.05' printed beneath.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID25012504/cdd201495f6.jpg",
+        "anchor": "Figure 6 panel e, contingency table; native raster 796x553 px, no rendering applied",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[10]",
+        "qualifies_needle": "we observed a significant inverse correlation (P<0.05) between WWOX and GLUT1 levels in these tumors",
+        "found_or_sought": "sought — the text gave a p-value and no counts, so the counts were read off the panel and recomputed"
       }
     ]
   }
