@@ -2346,9 +2346,18 @@ competizione WW1** su cui poggia *«una leva su ITCH non è selettiva per WWOX»
 cita un frame la cui fonte primaria **oggi non può portare una citazione verificabile**. Non è
 per questo sbagliata: è **non ancorata**, e dirlo è lo scopo di questa voce.
 
-**Next action:** decidere se spendere una corsa sull'aggiudicazione di pagina per `16061658`. È
-un meccanismo sostanziale, l'operatore l'ha messa fuori mandato e **non l'ha revocata**: non la
-apro.
+**Next action — ESEGUITA il 2026-08-11.** L'operatore ha autorizzato l'aggiudicazione **in
+sessione e di persona**, con vincoli. Receipt `FTR-20260811-16061658-02`,
+`partial_fulltext_read`; ricetta in
+[`page_adjudications/PMID16061658/`](page_adjudications/PMID16061658/adjudications.json);
+`regenerate_adjudications.py verify --pmid 16061658` → **PASS** (9 artefatti, 10 locator);
+manifest `MANIFEST STRICT PASS`, 0 lacune. **Il frame WW1 è ancorato.** Dettagli sotto.
+
+🔴 **Un'autorizzazione riferita da un pari era arrivata prima ed è stata declinata.** Il
+contenuto era corretto e il pari era in buona fede; ma un'autorizzazione **riportata** e una
+**data** sono due oggetti, che è la stessa distinzione su cui è girata la correzione di
+instradamento di stamattina. Registrato perché la prossima volta la domanda si ripresenterà
+identica.
 
 ### Preflight delle altre due, fatto il 2026-08-11 **prima** di aprirle
 
@@ -2458,9 +2467,57 @@ numero non è mai un denominatore.
 | | stato all'11 agosto |
 |---|---|
 | **`12514174`** Chang 2003 | 🟡 **non sul disco.** `pmcid: null`, non in PMC. Unpaywall: `is_oa: true`, ibrido, PDF all'editore `jbc.org`. 🔴 **Va recuperato e POI schermato**: è un PDF JBC del 2003, coetaneo di quello appena rifiutato, e il rischio che porti la stessa corruzione è alto. **Schermare prima di chiamarla lettura.** 🔴 **E ora lo screening ha un primo gesto che costa un secondo e non richiede di estrarre nulla**: aprire il PDF e chiedere, **font per font**, se ha una `ToUnicode`. `18487609` — un JBC di cinque anni dopo, stesso editore, stessa filiera tipografica — ha `MathematicalPi-One`, `MathematicalPi-Four` e `Universal-GreekwithMathPi` **senza mappa**, ed è `SUSPECT` per assenza pur avendone sette. Se il PDF che arriva assomiglia a quello, **la risposta è nota prima di leggere una riga**. Necessario ma non sufficiente: la sentinella sul testo estratto resta l'arbitro. |
-| **`16061658`** Aqeilan 2005 | 🔴 **SOSPESO.** Superficie rifiutata (`SUSPECT`), receipt `FTR-20260811-16061658-01` `retrieved_not_read`. L'unica via è l'aggiudicazione di pagina 5e, che **l'operatore ha messo fuori mandato e non ha revocato**. Non aprirla senza sua decisione. |
+| **`16061658`** Aqeilan 2005 | ✅ **AGGIUDICATO il 2026-08-11**, su autorizzazione diretta dell'operatore. Superficie **ancora `SUSPECT` e non riabilitata**: il text layer è servito solo per orientamento e coordinate. Receipt `-02`, `partial_fulltext_read`, **5/17 pannelli** — bound dichiarato, non copertura mancata. Le Figure 2, 3 e 4 restano debito di lettura su questo articolo. |
 
-**Il frame WW1 resta `NON ANCORATO`** finché una delle due non cade — e `DL-THER-095` lo dichiara
+### ✅ `16061658` — cosa ha dato l'aggiudicazione
+
+**Il `DATO`, ancorato alla pagina.** Titolazione di YAP2 in co-IP: a YAP2 basso *«ErbB-4
+interacts exclusively with WWOX»*; alzando YAP2, YAP ne guadagna un po' ma *«ErbB-4-WWOX
+interaction was still the predominant complex»*; e rompendo il primo dominio WW,
+*«expression of Myc-WWOXY33R resulted in significant rescue of ErbB-4-YAP2 interaction»*. Tutte
+e tre le comparazioni verificate **sui blot a 150 dpi** — il ppi effettivo misurato di quella
+pagina — e non prese sulla frase.
+
+🔴 **Gli autori sono più cauti della letteratura che li cita:** la conclusione stampata è
+*«indicate that WWOX and YAP **may** compete»*, e la Figura 6 è *«a **proposed** model»*. Ogni
+riformulazione a valle deve portarsi dietro il modale.
+
+**Perché «prevalent»:** *«WWOX binds ErbB-4 with better affinity than YAP, perhaps due to the
+interaction of WWOX with **both** the PPxY motifs»*, dove YAP ne ingaggia uno solo. Due contatti
+contro uno — **la competizione è reale e asimmetrica, non è un interruttore.**
+
+**La generalizzazione, con la sua portata misurata:** *«both WW domain–containing proteins, YAP
+and WWOX, in the cytoplasm are competing for interaction with **PPxY-containing target
+proteins**»*. Generalizza a una **classe**. Gli unici partner nominati oltre ErbB-4 sono p73 e
+AP-2γ, nella legenda e nel diagramma della Figura 6.
+
+🔴 **`ITCH` non compare da nessuna parte — e conta la rotta.** Lo stesso zero era stato
+affermato prima da un conteggio di termini sulla superficie rifiutata, e ritirato: uno zero da
+una superficie che sfigura sedici caratteri stampabili **non è un'assenza**. Questo è letto
+sulla **Figura 6 a 400 dpi**, su una pagina che non contiene alcun raster — cioè su un diagramma
+vettoriale a piena risoluzione, dove gli autori dichiarano quali partner rivendicano: WWOX legato
+a un ottagono *«Other PPxY-containing partners»*, ad `AP2γ` e a `P73`. Nessun ITCH.
+
+**I tre archi restano separati, ed è lo scopo del vincolo:**
+
+| arco | fonte | stato |
+|---|---|---|
+| WWOX/YAP competono su ErbB-4 (via WW1), generalizzato alla classe PPxY | `16061658` | **`DATO`**, ora ancorato |
+| WWOX/ITCH competono su ΔNp63α, co-IP diretta + rescue `Y33R` | `23370280` | **`DATO` di un'altra fonte**, lettura `partial` |
+| leva terapeutica sulla rete WW/ITCH → rischio di non selettività | i due insieme | **`INFERENZA`** — di nessuno dei due da solo |
+
+**Nulla di tutto questo rende *«ITCH non è selettiva»* un `DATO` di `16061658`.** La frase di
+Salah 2013 — *«compete with other WW domain-containing proteins, like YAP and ITCH»* — è un
+rimando all'indietro per la metà YAP e una rivendicazione sui propri dati per la metà ITCH: ogni
+proposizione va alla fonte che la misura.
+
+**E il difetto 5d è visibile *dentro* l'insieme aggiudicato**, il che è meglio che argomentarlo:
+uno dei nove ritagli è la legenda della Figura 5, che porta le quantità di plasmide
+**dell'esperimento di competizione stesso**. La pagina stampa `µg` quattro volte dove il text
+layer stampa `Ag`. Chi avesse citato quella legenda dal layer avrebbe pubblicato quattro dosi che
+nessuno ha usato.
+
+**Il frame WW1 era `NON ANCORATO`** finché una delle due non cadesse — e `DL-THER-095` lo dichiara
 esplicitamente, con la precisazione che la citazione di `23370280` **è** ancorata e che a non
 esserlo è la fonte primaria.
 
