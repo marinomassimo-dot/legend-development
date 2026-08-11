@@ -265,7 +265,84 @@ through an authorised `BATCH_COMMIT`.
 **Priority:** HIGH
 **Why:** tutti e tre **WWOX-diretti** e citati dentro una fonte già letta integralmente. Il rif. 87 è la base della via trascrizionale alternativa che regge [[dismissal_ledger_current#DIS-008 — «La calpaina è una via di degradazione/turnover per WWOX» → ⏸️ **NON STABILITA (rigettata come affermazione, non come possibilità)**]]: finché non è letto, quella via resta plausibile ma non verificata alla fonte.
 **Current status:** debito di espansione multi-hop **non svolto** nella sessione 2026-07-26.
-**Next action:** risolvere i tre riferimenti a PMID, dedup contro il registry, poi full text
+**Next action originale:** risolvere i tre riferimenti a PMID, dedup contro il registry, poi full text
+
+---
+
+### 🟢 `21075834` — superficie ARRIVATA il 2026-08-11, preflight fatto, **lettura non aperta**
+
+🔴 **Correzione di instradamento, da leggere per prima.** Questo paper mi è stato assegnato come
+`FT-021`. **`FT-021` è un altro lavoro** — `PMID 24308844`, Schuchardt 2013, su WWOX–ErbB4.
+O'Keefe sta **qui, in `FT-020`**, dove è dal 2026-07-26. Scrivere la consegna sotto l'etichetta
+sbagliata avrebbe sovrascritto una voce esistente e distinta: **l'ID di coda non è un nome, è un
+indirizzo**, e va verificato prima di scriverci dentro come si verifica un percorso di file.
+
+**E la riga `Surface: PMID 21075834 · absent` qui sopra è ora stale.** Non la riscrivo dentro il
+blocco originale — resta com'era al 2026-07-26 — ma **è superata da quanto segue.**
+
+#### ① Cosa è sul disco adesso, e non va ri-derivato
+
+    files/fulltext/PMID21075834_OKeefe2011_EPMC.xml
+      142 106 byte · sha256 d8ff045d14815ed237c52e468b50cfda32cc63b183ab1708e477c29e3a1b207b
+      PMCID PMC3016910 · DOI 10.1093/hmg/ddq495 · Hum Mol Genet 20(3):497-509
+
+    files/figures/PMID21075834/   ← 🔴 SUPERFICIE IMMAGINE GIÀ ACQUISITA, non rifarlo
+      ddq49501.jpg  bd2db410…   ddq49502.jpg  cf8e6e09…   ddq49503.jpg  030c8a6d…
+      ddq49504.jpg  5e9a463d…   ddq49505.jpg  81852e5a…
+      supp_ddq495_ddq495supp.pdf  3ebea937…  (772 KB, Supplementary Figs S1-S4 e Tables S1-S2)
+
+**Rotta usata:** `https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3016910/supplementaryFiles`
+→ `200`, ZIP da 1 100 720 byte, **cinque JPEG più il PDF supplementare in una sola chiamata**.
+È la rotta che a `30356099` è mancata e che gli ha fatto rendere **zero pannelli**. Qui è già
+spesa.
+
+**Licenza: `CC BY-NC`** (Creative Commons Attribution Non-Commercial), letta dal blocco `<license>`
+dell'artefatto. Diversa da `CC BY` di `31543760` e da `CC BY-NC-ND` di `39952983`: **non darla per
+continua fra depositi.** Irrilevante per leggere, vincolante se un giorno si pubblicasse un
+pannello.
+
+#### ② Il denominatore dei pannelli, **contato leggendo le didascalie**
+
+| figura | pannelli | cosa è |
+|---|---|---|
+| Fig 1 | **1** | 2D-DIGE, spot proteici alterati nei due mutanti `Wwox` e in sovraespressione |
+| Fig 2 | **1** | diagramma delle vie metaboliche (TCA, glucosio, etanolo, lipidi, ossidoriduzione) |
+| Fig 3 | **3** (A,B,C) | interazione genetica `Wwox`–`CG6439/Idh`; C è la correlazione `WWOX`/`IDH1` in 15 linee tumorali umane |
+| Fig 4 | **4** (A,B,C,D) | `Wwox`–`Sod`: vitalità, curve di sopravvivenza, qPCR in larve, qPCR in HEK293 |
+| Fig 5 | **2** (A,B) | ROS in larve per FACS, con soglia arbitraria di fluorescenza |
+| | **11** | **denominatore** |
+
+🔴 **Non fidarti del matcher automatico su questo deposito.** Il regex sulle lettere restituisce
+`a` e `h` da parole comuni dentro le didascalie di Fig 2, 4 e 5 — cioè **lettere spurie**, non
+pannelli. Undici è contato a mano. Il numero del parser qui è rumore, non un limite inferiore.
+
+#### ③ La superficie, verificata e non assunta
+
+    ref-list DENTRO il <body>: SÌ, 12 699 caratteri
+    <ref> 54 · <article-title> >45 caratteri: 0   ← 🔴 la sonda affidabile NON PUÒ GIRARE
+
+Come Piard, Kosla e Kim; a differenza di Denkboy. **Non produrre un numero dalla sonda a fette
+corte** — è stata mostrata inaffidabile l'11 agosto (dà `1/5`, `5/5` e un falso positivo). Ciò
+che è certo per contenimento è che la bibliografia sta dentro l'elemento `<body>` e quindi dentro
+qualunque superficie derivata: **nessun locator vada preso da lì.**
+
+    in-tree surface 61 856 · <body> solo 59 789 · abstract 1 305
+
+Sezioni: `INTRODUCTION 5 686` · `RESULTS 24 148` · `DISCUSSION 6 195` · `MATERIALS AND METHODS
+9 897`, più apparato. **I Results sono il 40% del corpo**: è un paper a molti esperimenti, non a
+molte parole di discussione.
+
+#### ④ Perché questo paper, e cosa aspettarsi
+
+È l'**ortologo Drosophila di WWOX nel metabolismo aerobico e nei ROS** — cioè la fonte primaria
+dietro due cose che il corpus già porta: l'interazione con l'**isocitrato deidrogenasi** citata da
+`39952983` letto oggi, e l'asse ROS che quello stesso paper usa per spiegare il sonno notturno.
+Fig 4D è particolarmente notevole: **`SOD1` sovraespressa alza `WWOX` endogeno in HEK293, e il
+mutante `G37R` no** — una relazione a senso inverso rispetto a quella attesa, in cellule umane.
+
+**Next action:** aprire da sessione fredda. Superficie e immagini ci sono, il denominatore è 11,
+la `ref-list` è dentro il corpo. Il supplementare è un **PDF**, quindi `article_binary`: può
+essere ispezionato come figure ma **non può portare locator testuali** (regola 5c).
 
 ---
 
