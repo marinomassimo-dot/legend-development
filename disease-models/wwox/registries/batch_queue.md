@@ -8,7 +8,7 @@
 
 ## ▶ Start here
 
-**414 records have not been processed.** **243** of them have a free full text and can be worked immediately.
+**414 records have not been processed.** **240** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
@@ -82,11 +82,11 @@ time; it does not redistribute or license the article text.
 | Status | Records | Share |
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 326 | 46% |
-| **Catalogued, never processed** — the reading debt | 166 | 24% |
-| Known to the tracking log only | 152 | 22% |
+| **Catalogued, never processed** — the reading debt | 165 | 23% |
+| Known to the tracking log only | 150 | 21% |
 | Processed from the abstract | 9 | 1% |
 | Partial full text read | 5 | 1% |
-| Full text read | 48 | 7% |
+| Full text read | 51 | 7% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
 `fulltext_read_receipts.jsonl`. Historical registry-only full-text declarations remain
@@ -223,7 +223,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [25649963](https://pubmed.ncbi.nlm.nih.gov/25649963/) | 2015 | ✅ | Journal Article | catalogued only | Loss of wwox expression in zebrafish embryos causes edema and alters Ca(2+) dynamics. |
 | [25627656](https://pubmed.ncbi.nlm.nih.gov/25627656/) | 2015 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | catalogued only | Tyrosine phosphorylation of WW proteins. |
 | [25612104](https://pubmed.ncbi.nlm.nih.gov/25612104/) | 2015 | ✅ | Journal Article | catalogued only | Epigenetic and genetic alterations affect the WWOX gene in head and neck squamous cell carcinoma. |
-| [25491415](https://pubmed.ncbi.nlm.nih.gov/25491415/) | 2015 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | catalogued only | The tumor suppressor WW domain-containing oxidoreductase modulates cell metabolism. |
 | [25488911](https://pubmed.ncbi.nlm.nih.gov/25488911/) | 2015 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | catalogued only | Strategies of oncogenic microbes to deal with WW domain-containing oxidoreductase. |
 | [25537520](https://pubmed.ncbi.nlm.nih.gov/25537520/) | 2014 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | catalogued only | WW domain-containing oxidoreductase in neuronal injury and neurological diseases. |
 | [25502636](https://pubmed.ncbi.nlm.nih.gov/25502636/) | 2014 | ✅ | Journal Article | catalogued only | WWOX suppresses cell growth and induces cell apoptosis via inhibition of P38 nuclear translocation in cholangiocarcinoma. |
@@ -413,9 +412,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [27999774](https://pubmed.ncbi.nlm.nih.gov/27999774/) | 2016 | ✅ | Journal Article; Review | screened | HYAL-2-WWOX-SMAD4 Signaling in Cell Death and Anticancer Response. |
 | [26675548](https://pubmed.ncbi.nlm.nih.gov/26675548/) | 2016 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | WWOX modulates the ATR-mediated DNA damage checkpoint response. |
 | [27551439](https://pubmed.ncbi.nlm.nih.gov/27551439/) | 2015 | ✅ | Journal Article | screened | WWOX dysfunction induces sequential aggregation of TRAPPC6AΔ, TIAF1, tau and amyloid β, and causes apoptosis. |
-| [27308416](https://pubmed.ncbi.nlm.nih.gov/27308416/) | 2015 | ✅ | Journal Article | screened | WWOX loss activates aerobic glycolysis. |
 | [26499798](https://pubmed.ncbi.nlm.nih.gov/26499798/) | 2015 | ✅ | Journal Article; Review | screened | Pleiotropic Functions of Tumor Suppressor WWOX in Normal and Cancer Cells. |
-| [26256646](https://pubmed.ncbi.nlm.nih.gov/26256646/) | 2015 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | Tumor Suppressor WWOX inhibits osteosarcoma metastasis by modulating RUNX2 function. |
 | [25802472](https://pubmed.ncbi.nlm.nih.gov/25802472/) | 2015 | ✅ | Introductory Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S. | screened | Introduction to a thematic issue for WWOX. |
 | [25681467](https://pubmed.ncbi.nlm.nih.gov/25681467/) | 2015 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | screened | Alteration of WWOX in human cancer: a clinical view. |
 | [25595191](https://pubmed.ncbi.nlm.nih.gov/25595191/) | 2015 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | screened | Regulation of cell signaling and apoptosis by tumor suppressor WWOX. |
@@ -749,7 +746,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41661231](https://pubmed.ncbi.nlm.nih.gov/41661231/) | 2026 | — | Journal Article | screened | RNAseq-based meta-analyses revealed tumor suppressor-inducer fusion events in liver, oral, and ovarian cancer in the Indian population: a cancer cell surviving mechanism. |
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 
-*(showing all 644 outstanding records)*
+*(showing all 641 outstanding records)*
 
 ## Already processed from this seed
 
@@ -782,6 +779,9 @@ for an entirely unprocessed record.
 | [27495153](https://pubmed.ncbi.nlm.nih.gov/27495153/) | 2016 | ✅ | full text | PAPER 049 | W44X mutation in the WWOX gene causes intractable seizures and developmental delay: a case report. |
 | [26857392](https://pubmed.ncbi.nlm.nih.gov/26857392/) | 2016 | ✅ | full text | PAPER 050 | ✎ corrected — Relevance of Sp Binding Site Polymorphism in WWOX for Treatment Outcome in Pancreatic Cancer. |
 | [27308504](https://pubmed.ncbi.nlm.nih.gov/27308504/) | 2015 | ✅ | full text | receipt FTR-20260810-27308504-01 | WWOX guards genome stability by activating ATM. |
+| [27308416](https://pubmed.ncbi.nlm.nih.gov/27308416/) | 2015 | ✅ | full text | receipt FTR-20260811-27308416-01 | WWOX loss activates aerobic glycolysis. |
+| [26256646](https://pubmed.ncbi.nlm.nih.gov/26256646/) | 2015 | ✅ | full text | receipt FTR-20260811-26256646-01 | Tumor Suppressor WWOX inhibits osteosarcoma metastasis by modulating RUNX2 function. |
+| [25491415](https://pubmed.ncbi.nlm.nih.gov/25491415/) | 2015 | ✅ | full text | receipt FTR-20260811-25491415-01 | The tumor suppressor WW domain-containing oxidoreductase modulates cell metabolism. |
 | [24932569](https://pubmed.ncbi.nlm.nih.gov/24932569/) | 2014 | ✅ | full text | PAPER 053 | WWOX at the crossroads of cancer, metabolic syndrome related traits and CNS pathologies. |
 | [24871327](https://pubmed.ncbi.nlm.nih.gov/24871327/) | 2014 | ✅ | full text | PAPER 062 | The WWOX gene modulates high-density lipoprotein and lipid metabolism. |
 | [24550385](https://pubmed.ncbi.nlm.nih.gov/24550385/) | 2014 | ✅ | full text | receipt FTR-20260810-24550385-02 | Characterizing WW domain interactions of tumor suppressor WWOX reveals its association with multiprotein networks. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [22193544](https://pubmed.ncbi.nlm.nih.gov/22193544/) | 2012 | ✅ | full text | PAPER 056 | WW domain-containing oxidoreductase promotes neuronal differentiation via negative regulation of glycogen synthase kinase 3β. |
 | [40875931](https://pubmed.ncbi.nlm.nih.gov/40875931/) | 2025 | — | full text | PAPER 014 | WWOX-Related Developmental and Epileptic Encephalopathy: Expanding the Clinical Spectrum and Deciphering the Genotype-Phenotype. |
 
-*(showing all 62 processed records from the seed)*
+*(showing all 65 processed records from the seed)*
 
 ## How to work one
 

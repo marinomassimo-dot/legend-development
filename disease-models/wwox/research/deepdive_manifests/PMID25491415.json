@@ -1,0 +1,138 @@
+{
+  "schema_version": 2,
+  "pmid": "25491415",
+  "doi": "10.1177/1535370214561956",
+  "receipt": "FTR-20260811-25491415-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID25491415.md",
+    "literature_tracking_log_current#LIT-0333",
+    "disease-models/wwox/research/commit_candidates/CC-20260811-AQEILAN-LINE-01.md"
+  ],
+  "skills_considered": [
+    {"skill": "legend", "used": true},
+    {"skill": "legend-deepdive", "used": true},
+    {"skill": "legend-capability-scout", "used": true},
+    {"skill": "legend-session-self-eval", "used": true},
+    {"skill": "legend-session-takeaways", "used": true},
+    {"skill": "pdf", "used": true, "reason": "The local PDF was font-screened before any possible use; it remained UNDECIDED and supplied no locator."},
+    {"skill": "find-fulltext", "used": false, "reason": "A complete local PMC HTML was supplied; only the main figures had to be persisted after the supplementary endpoint refused the non-OA archive."},
+    {"skill": "legend-commit", "used": false, "reason": "Canonical scientific files remain reserved for BATCH_COMMIT."}
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 137,
+    "publications_on_gene": 64,
+    "counts_measured": "PubMed ESearch 2026-08-11: Aqeilan RI[Author] = 137; Aqeilan RI[Author] AND WWOX[Title/Abstract] = 64.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "weighting": "This is a review from a primary WWOX laboratory. It has high value for claim topology and author interpretation, but every experimental statement retains the weight of its cited primary source and is not independent replication."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {"query": "WWOX AND HIF1A[Title/Abstract]", "route": "PubMed ESearch 2026-08-11", "count": 4},
+      {"query": "WWOX AND RUNX2[Title/Abstract]", "route": "PubMed ESearch 2026-08-11", "count": 11}
+    ],
+    "note": "The review spans several small WWOX subfields; sparse intersections amplify the risk of counting review transmission as primary evidence."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 48,
+    "gene_direct_refs_in_source": ["11719429", "17458891", "16941225", "24510053", "11572989", "17360458", "18487609", "20146584", "24550385", "17142102", "15548692", "15070730", "23254685", "17575124", "17823927", "19936220", "18974271", "23254778", "22574198", "17909041", "15692750", "15073846", "21476439", "21731849", "20530675", "19896763", "24330824", "24871327", "20942981", "21075834", "23765596", "25012504", "10861292", "19708029", "21499303", "19458077"],
+    "resolved": ["25012504", "21075834"],
+    "queued": [],
+    "enumeration_method": "All 48 references were read sequentially from the ref-list inside the HTML article body and gene-directed PMIDs were deduplicated against current registries and queue.",
+    "reason": "The review exposes source-transmission cautions but does not authorize reopening its primary references in this fixed perimeter."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "How is PMID 25491415 classified, and which of its metabolic statements already have primary-source homes?",
+    "hits": 4,
+    "finding": "It is CORPUS P333/LIT-0333, Tier-B review. HIF1alpha/glucose belongs to PMID 25012504 and Drosophila ROS to PMID 21075834; the review must not create duplicate data."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-11",
+    "route": "PubMed record-status check for PMID 25491415",
+    "result": "No retraction, expression of concern or correction found.",
+    "hold": false
+  },
+  "supplementary_files_preflight": {
+    "performed": true,
+    "route": "Europe PMC supplementaryFiles, called once before figure reading",
+    "result": "Endpoint returned the explicit non-open-access error for PMC4935230. The complete HTML exposed two main PMC CDN figures and no supplementary links or nodes; both main figures were persisted."
+  },
+  "supplement_locator_waiver": {
+    "waived": true,
+    "reason": "The structured article has no supplementary section or links, and the supplementaryFiles endpoint supplied no archive; all locators bind to the complete HTML or two main figures."
+  },
+  "source_artifacts": [
+    {"path": "files/fulltext/PMID25491415_AbuRemaileh2015_PMC.html", "sha256": "0e2282a017221f6e2b6445fa80a407256c9118bdd065989ec143e86eaa82395f", "kind": "article_text"},
+    {"path": "files/figures/PMID25491415/fig1.jpg", "sha256": "93464f32a325864defbb8fbaf3dc52c7545ab04abb42236dffcbc27a4d689976", "kind": "figure"},
+    {"path": "files/figures/PMID25491415/fig2.jpg", "sha256": "17c24171b4edf32f793d3e8296cbed88e744d933f31f3594659c765675d7d47c", "kind": "figure"}
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC and local PMCID PMC4935230 HTML checked on 2026-08-11: complete indexed body, two figures and all 48 references are present.",
+    "entries": [
+      {
+        "proposition": "The paper explicitly defines itself as a review of WWOX-metabolism evidence.",
+        "snippet": "In this review, we discuss the recent evidence that links WWOX with cell metabolism and how does it contribute to its tumor suppressor function.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25491415_AbuRemaileh2015_PMC.html",
+        "anchor": "Introduction, final sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Physiological WWOX SDR substrates were not authenticated, and the reported activity came from crude bacterial extracts.",
+        "snippet": "This activity was observed in crude bacterial extracts using WWOX recombinant protein and thus further physiological validation is required. To date, no authenticated substrates of WWOX’s SDR domain are known so far",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25491415_AbuRemaileh2015_PMC.html",
+        "anchor": "WWOX and steroid metabolism",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The review transmits a two-part WWOX-HIF1alpha mechanism from prior primary work.",
+        "snippet": "Our data demonstrate that WWOX interacts with the hypoxia-inducible transcription factor (HIF1α), the master regulator of glycolytic genes. This interaction results in (1) destabilization of HIF1α and (2) repression of HIF1α transcriptional activity",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25491415_AbuRemaileh2015_PMC.html",
+        "anchor": "WWOX modulates glucose metabolism",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The review contains an internally reversed causal prediction: it says depletion should increase uptake immediately before saying inhibition reversed the elevated phenotype.",
+        "snippet": "Given these observations, we hypothesized that depleting HIF1α in Wwox-deficient cells would increase glucose uptake. Indeed, inhibiting HIF1α both genetically and pharmacologically reversed the glucose uptake phenotype both in vitro and in vivo.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25491415_AbuRemaileh2015_PMC.html",
+        "anchor": "WWOX modulates glucose metabolism, intervention paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The review's Drosophila ROS wording describes a mutated-WWOX overexpression arm and therefore requires verification against the cited primary design before reuse.",
+        "snippet": "once WWOX is overexpressed in Drosophila larvae, ROS levels were elevated whereas overexpression of mutated WWOX did not show this elevation.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25491415_AbuRemaileh2015_PMC.html",
+        "anchor": "WWOX and reactive oxygen species",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 1 is a conceptual inventory of metabolic phenotypes rather than a new experimental panel.",
+        "snippet": "Figure 1 schematically places WWOX beside steroidogenesis, HDL, bone, glucose and ROS phenotypes; it contains no plotted observations, sample sizes or statistical marks.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID25491415/fig1.jpg",
+        "anchor": "Figure 1, sole panel, inspected at 682 by 270 pixels",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 2 is a conceptual WWOX-HIF1alpha-PDK/PDH pathway and supplies no independent quantitative evidence.",
+        "snippet": "Figure 2 visually depicts WWOX restraining HIF1alpha-driven glucose uptake and PDK activity, thereby favouring PDH and the TCA cycle; no measurements are plotted.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID25491415/fig2.jpg",
+        "anchor": "Figure 2, sole panel, inspected at 700 by 491 pixels",
+        "panel_text_relation": "panel_only"
+      }
+    ]
+  }
+}
