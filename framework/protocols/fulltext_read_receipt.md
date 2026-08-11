@@ -392,9 +392,11 @@ incorrect historical event remains visible in the hash chain.
 
 ## Named open schema items — registered, not designed
 
-Four defects in this contract are **known, measured and deliberately unfixed**. They are
-schema, so they belong to the operator; and none of them breaks anything while nothing
-changes, which is why registering them is the whole of the right action today.
+Four defects in this contract are **known, measured and deliberately unfixed**. The first three
+are schema, so they belong to the operator; the fourth is an enforcement absent from the
+validator, blocked only until one manifest is corrected by its author. None of them breaks
+anything while nothing changes, which is why registering them is the whole of the right action
+today.
 
 🔴 **Registering is not deferring.** A proposal that lives in a cross-session message dies with
 the session, and the loss is invisible because nobody misses what they never saw written. Each
@@ -402,11 +404,20 @@ item below therefore carries **its own measurement, reproduced here rather than 
 so that whoever eventually designs the fix inherits the evidence and not a recollection of it.
 The commands are in this repository; the numbers are dated because they will move.
 
-Two rules bind any of these if it is ever built. **Prospective only** — a new key is declared
-by new records and marked `unknown_legacy` on every existing one. **Never backfilled**: a
-reconstructed value in a field that looks like a measurement is worse than an absent one,
-which is the same principle as `record_kind: legacy_reconstruction` and the `references`
-ratchet above.
+One rule binds any of these if it is ever built, and it is deliberately narrower than the form
+it was first written in:
+
+> **New records must declare the field. The treatment of legacy records — absence,
+> `unknown_legacy` in a derived view, or an explicit migration — remains part of the schema
+> decision and is not anticipated here. No substantive value will be reconstructed from
+> branches, chat or memory.**
+
+🔴 **The wider form was self-contradicting and is recorded rather than quietly replaced.** It
+read "prospective only · marked `unknown_legacy` on every existing record · never backfilled",
+and **marking every existing record is exactly a backfill.** Worse, receipts are append-only:
+a mark on a persisted record is not a write this system permits at all. The demand for
+`unknown_legacy` is preserved above; what is not preserved is the pretence that where it
+materialises has already been decided.
 
 ### 1. The figure denominator has no basis, and today it has no schema either
 
@@ -447,8 +458,10 @@ decays with exactly the operation this repository runs to make progress.
 
 Reproduced 2026-08-11 over 20 local and remote refs: **114 distinct `event_id`, 106 present on
 more than one ref, 8 on exactly one.** `FTR-20260810-34831305-01…04` live on 10, 10, 10 and 9
-refs respectively. For 93% of the ledger, "the branch that has it" reports the precedence order
-of whoever wrote last, not an actor.
+refs respectively. For 93% of the ledger, "the branch that holds it" reports **propagation** —
+which histories have been carried where — and propagation is not authorship. The
+identification fails not because the branch set is noisy but because it answers a different
+question.
 
 🔴 **And the single-branch class is a queue, not a population.** All 8 singletons are today's
 unmerged tail, timestamped 17:57–20:50 UTC on `lettore`, `lettore-b` and one `codex/` branch.
@@ -500,11 +513,17 @@ claim, not a sentence smuggled in as the authors' prose. So the fix is not exclu
 **third declarable surface** — a locator says it is quoting back matter, and one that does not
 may not land there. That is a schema change to `surface`, hence this list.
 
-Worth recording beside it: at 355 locators the contamination hazard **has still not bitten**.
-The only two hits are deliberate, which is why the repair must not be built as if they were
-defects — `ADJUDICATE_THE_DEFECT_LIST_BEFORE_BUILDING_THE_GUARD`.
+🔴 **What the 355 do and do not show.** They show that **no current locator accidentally rests
+on back matter**: the only two that touch it do so on purpose. They do **not** show that
+contamination has never affected a reading — a reader misled by a reference title into a
+conclusion that produced no locator leaves nothing for this measurement to find. The audit
+covers the verified surface, not the reading. Said explicitly because "the hazard has not
+bitten" is the kind of sentence that gets quoted without its denominator.
 
-### 4. `surface` says where a quote lives, and is read as what the evidence is
+The two deliberate hits are still why the repair must not be built as if they were defects —
+`ADJUDICATE_THE_DEFECT_LIST_BEFORE_BUILDING_THE_GUARD`.
+
+### 4. A rule stated in a comment, enforced by nothing
 
 `text_contradicted_by_panel` and `panel_qualifies_text` are assertions made **by the panel
 about the text**, and the module says so: *"the marker belongs to the PANEL locator — the
@@ -512,28 +531,42 @@ evidence that makes the assertion."* Nothing checks it. A text locator may carry
 and point at another text locator, and the validator will accept text contradicting text
 wearing the word "panel".
 
-The small fix writes itself: require the asserting entry's `surface` to be `figure`. Measured
-across the corpus before writing it — 59 coupled locators, 58 on `figure` and **1 on `body`**
-— that fix would flag `PMID23435430.json` `entries[9]`, and that entry is **the best-reasoned
-one of the 59**. Its quote is a figure *caption*, which lives in the body container, and it
-says why in its own anchor:
+**The rule stands as written:** an entry asserting either relation is a reading of the panel
+and declares `surface: figure`. Measured across the corpus, 59 coupled locators: 58 on
+`figure`, **1 on `body`** — `PMID23435430.json` `entries[9]`.
 
-> *"Declared surface body, not figure: this is authored prose carried in the body container and
-> verified character-for-character. Labelling a caption quote 'figure' would exempt it from
-> that check."*
+🔴 **That one is an incompletely modelled case, not a counterexample, and I filed it as a
+counterexample first.** The entry quotes the caption of Figure 6A, carries the coupled
+relation, states that the pixels were inspected — and declares **no figure artifact at all**,
+only the XML. The caption proves that Figure 6A shows HEK293T cells and not the hepatic result
+the running text attributes to it: excellent *textual* evidence of a miscitation, and not the
+panel reading the relation asserts. The pixels have neither artifact nor attestation.
 
-The locator is about Figure 6A, was checked against the pixels, and declares `body` precisely
-so its quote stays machine-verifiable. So the gap is not a missing constraint on `surface` —
-it is that **`surface` is carrying two orthogonal facts**: where the characters live, and what
-kind of evidence the assertion rests on. A guard on the first punishes anyone who gets the
-second right.
+The correct representation needs three locators, and the manifest has two of them:
 
-That is the same finding as `O7b` in the 2026-08-10 orchestration review, from a different
-direction, and `O7b` already asks for it to be decided together with `panel_qualifies_text`
-and `schematic` — **four pressures on the locator vocabulary found by four uncoordinated
-actors in one day.** Which is why this item is here and not in a commit: I was assigned it as a
-minor repair, and it is a vocabulary change. `ADJUDICATE_THE_DEFECT_LIST_BEFORE_BUILDING_THE_GUARD`
-caught it at the last step, on a list of one.
+| | locator | surface |
+|---|---|---|
+| 1 | the running text attributing the result to Figure 6A | `body` — exists, `entries[8]` |
+| 2 | the caption, verified character-for-character | `body` — exists, `entries[9]`, without the coupled relation |
+| 3 | the reading of Figure 6A's pixels, with a figure artifact and a visual attestation, carrying `text_contradicted_by_panel` → (1) | `figure` — **missing** |
+
+The one thing that entry gets right and must not be "fixed": **the caption is not renamed
+`figure`.** Its own anchor argues it — labelling a caption quote `figure` would exempt it from
+character-for-character verification. It simply cannot stand in for the pixel locator.
+
+So the open item is the **absent enforcement**, not a vocabulary change. Routed to the
+manifest's author, who alone can attest to having looked at those pixels; the 59 will be
+re-measured once the correction lands. If cases then remain that genuinely need two axes — as
+`O7b` in the 2026-08-10 orchestration review argues on other grounds, together with
+`panel_qualifies_text` and `schematic` — the vocabulary item gets registered **with those**,
+and not with this one.
+
+🔴 **Recorded because I had the discipline backwards.** I ran
+`ADJUDICATE_THE_DEFECT_LIST_BEFORE_BUILDING_THE_GUARD` on a list of one, concluded the single
+instance was legitimate, and stopped — which is the gate performed rather than applied.
+Adjudication asks what an instance *is*; I asked only whether its author had a reason, found a
+good one, and promoted "well argued" to "correctly modelled". A defect list of one is where
+that substitution is easiest to make, because there is no second instance to disagree.
 
 ### Four fixtures to write before any of this is built
 
