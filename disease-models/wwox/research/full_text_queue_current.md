@@ -2374,5 +2374,48 @@ misura su un fetch che non è il file sul disco.**
 - **Solo `16061658` (rifiutato) o `12514174` (da recuperare e schermare) possono ancorare quel
   frame.**
 
-**Next action:** `18487609` per chiudere il gate — è pronto e non richiede decisioni. Il frame
-resta `NON ANCORATO` e lo dice `DL-THER-095`.
+### ▶️ NEXT ACTION — scritta per una **sessione fredda**. Nulla di questa conversazione serve.
+
+**Apri `PMID 18487609`.** È pronto, non richiede decisioni, e chiude il gate.
+
+**① Cosa è già sul disco e NON va ri-derivato**
+
+    files/fulltext/PMID18487609_Aqeilan2008_PMC.html   212 336 byte   ← superficie TESTO
+    files/fulltext/PMID18487609_Aqeilan2008.pdf        741 044 byte   ← superficie FIGURE
+    PMCID PMC2490770 · inPMC: Y su Europe PMC e su NCBI idconv
+
+**② La superficie è già stata verificata l'11 agosto — non rifarlo, ma sappi cosa è stato
+guardato:** `<body>` presente · **8 blocchi `<figure class="fig">`** ·
+EXPERIMENTAL/RESULTS/DISCUSSION · 67 363 caratteri estratti dall'estrattore in albero ·
+sentinella 5d **PULITA** (`×` 10 · `α` 3 · `β` 5 · zero controlli C0 · zero `Ag`).
+🔴 **L'estrattore include il blocco `<style>` in testa al body**: i primi ~250 caratteri sono
+CSS. Non è corruzione, ma **non scegliere span vicino all'inizio**.
+
+**③ Quello che questo paper NON fa, e va saputo prima di aprirlo**
+
+> `WW1` **0** · `ITCH` **0** · `competition` **0** · `ErbB` **2** · `p73` **2**
+
+**Chiude il gate multi-hop di `FT-062`; NON ancora il frame WW1** su cui poggia il corollario di
+`DL-THER-095`. Le due cose sono state confuse una volta nell'instradamento: **non sono
+intercambiabili.** Se apri questo aspettandoti di ancorare la non-selettività, hai aperto il
+paper sbagliato.
+
+**④ Il budget si conta leggendo le didascalie.** 8 blocchi figura è un limite inferiore dal
+markup, non un conteggio di pannelli. Il censimento automatico **perde il pannello A** su
+depositi con lettere maiuscole e **tutti** i pannelli su depositi con lettere minuscole: il suo
+numero non è mai un denominatore.
+
+**⑤ Superficie figure:** decidere **per immagine** — `smask != 0` → renderizzare la pagina;
+`smask == 0` → estrarre, **ma verificare che l'unità estratta sia la figura e non un frammento**
+(su `23370280` dieci frammenti erano tutti `smask = 0`, cioè fedeli e sbagliati).
+
+### Le altre due, con lo stato del preflight
+
+| | stato all'11 agosto |
+|---|---|
+| **`12514174`** Chang 2003 | 🟡 **non sul disco.** `pmcid: null`, non in PMC. Unpaywall: `is_oa: true`, ibrido, PDF all'editore `jbc.org`. 🔴 **Va recuperato e POI schermato**: è un PDF JBC del 2003, coetaneo di quello appena rifiutato, e il rischio che porti la stessa corruzione è alto. **Schermare prima di chiamarla lettura.** |
+| **`16061658`** Aqeilan 2005 | 🔴 **SOSPESO.** Superficie rifiutata (`SUSPECT`), receipt `FTR-20260811-16061658-01` `retrieved_not_read`. L'unica via è l'aggiudicazione di pagina 5e, che **l'operatore ha messo fuori mandato e non ha revocato**. Non aprirla senza sua decisione. |
+
+**Il frame WW1 resta `NON ANCORATO`** finché una delle due non cade — e `DL-THER-095` lo dichiara
+esplicitamente, con la precisazione che la citazione di `23370280` **è** ancorata e che a non
+esserlo è la fonte primaria.
