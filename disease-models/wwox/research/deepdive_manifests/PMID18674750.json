@@ -1,0 +1,249 @@
+{
+  "schema_version": 2,
+  "pmid": "18674750",
+  "doi": "10.1016/j.ajhg.2008.07.002",
+  "receipt": "FTR-20260811-18674750-01",
+  "landing": ["FTR-20260811-18674750-01", "full_text_queue_current", "discovery_ledger_current"],
+  "skills_considered": [
+    {"skill": "legend-study-intake-triage", "used": true, "reason": "Receipt check re-run rather than accepted from the assignment: 0 receipts and 0 manifests for this PMID in the ledger on this branch. Confirmed unread."},
+    {"skill": "find-fulltext", "used": false, "reason": "Both artifacts were already on the shared disk. What was verified instead was IDENTITY: both declared digests recomputed and matched byte-for-byte before the paper was opened."},
+    {"skill": "caption-census", "used": false, "reason": "HTML surface — the question 'are figures outside <body>' is undefined on a page with one body, and the tool answers not_applicable rather than clean. The denominator was established by reading: three figures, two tables, four supplementary figures and two supplementary tables named in Supplemental Data."}
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 174,
+    "publications_on_gene": 2,
+    "counts_measured": "PubMed esearch, 2026-08-11, senior author: 'Pajukanta P[au]' 174, 'Pajukanta P[au] AND WWOX' 2. First author Lee JC; the consortium spans UCLA, Kuopio, Utrecht, McGill and UCSF.",
+    "research_type": "mixed",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "primary_group_note": "🔴 TWO WWOX PAPERS OUT OF 174, AND THAT IS THE POINT. This is a human-genetics lipid group, not a WWOX laboratory. WWOX is not their subject: it is what a regional association scan happened to land on. The gene arrives here from outside its own literature — the parity-of-sources case in its cleanest form, and unlike the oncology route this one is not even adjacent.",
+    "weighting": "OBSERVATIONS carry high weight and the design is why: two-stage with Bonferroni correction over 1,318 stage-1 SNPs, replication in two independent unascertained population cohorts, 9,798 subjects total, permutation and gene-dropping empirics, and functional follow-up. INTERPRETATION is weighted normally and the authors do most of the discounting themselves — they call the variant a modifier rather than a determinant and warn that the in vitro systems need not reflect physiology. Where this reading must be cautious is not about their rigour but about DOMAIN TRANSFER: nothing here concerns brain, development or the WWOX-DEE genotype class, and the temptation to carry a population-scale lipid effect into a neurodevelopmental model is the reader's error to avoid, not theirs."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {"query": "Pajukanta P[au] AND WWOX", "route": "PubMed esearch 2026-08-11", "count": 2},
+      {"query": "Pajukanta P[au]", "route": "PubMed esearch 2026-08-11", "count": 174}
+    ],
+    "note": "WWOX-directed in its result but not in its intent: the study set out to explain a linkage peak at 16q23-q24 and WWOX is what sits under it."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 48,
+    "gene_direct_refs_in_source": [
+      {"ref": 42, "note": "In vivo enhancer analysis of human conserved non-coding sequences in transgenic mice, reporting a functional enhancer ALSO in intron 8 of WWOX. Independent support for the regulatory character of that intron, from a third party. NOT READ."},
+      {"ref": 43, "note": "AGS gastric adenocarcinoma lines with three distinct regions of homozygous deletion inside WWOX intron 8. Ties the same intron to cancer-associated instability. NOT READ."},
+      {"ref": 47, "note": "The Wwox-heterozygous tumour-suppressor study whose homozygous knockouts die by 4 weeks; this paper quotes its authors' suspicion of a severe METABOLIC defect with no histological lesion found. Very likely PMID 18487609, already queued in FT-057 — identity NOT confirmed here, and not asserted."},
+      {"ref": 45, "note": "The SDR-domain/steroid-metabolism and sex-steroid-upregulation claims, plus impaired in vivo steroidogenesis in Wwox knockout mice. NOT READ."},
+      {"ref": 12, "note": "The GWAS meta-analysis of DGI/FUSION/SardiNIA whose top regional SNP rs2667590 lies in the same intron 8 with no LD to rs2548861. NOT READ."}
+    ],
+    "resolved": [],
+    "queued": [
+      {"ref": 42, "queue": "FT-063", "reason": "A second, independent functional enhancer in WWOX intron 8, demonstrated in vivo in transgenic mice. If intron 8 carries more than one regulatory element, the regulatory architecture of this gene is a subject in itself and this corpus has never opened it."},
+      {"ref": 47, "queue": "FT-063", "reason": "The metabolic reading of the Wwox-null lethality — dramatic serum lipid, carbohydrate and protein changes with no lesion identified. It is the bridge between this population lipid signal and the mouse phenotype, and its identity needs confirming rather than assuming."},
+      {"ref": 12, "queue": "FT-063", "reason": "The GWAS meta-analysis: needed to adjudicate whether two independent intron-8 signals support the gene or whether the non-replication of rs2548861 undercuts it."}
+    ],
+    "gap": "🔴 NO REFERENCE IN THIS PAPER IS RESOLVED AGAINST THE CORPUS, and that is a fact about the corpus rather than about the paper: this is the first reading here from the human-genetics lipid literature, and its 48 references share almost nothing with the oncology and neurodevelopment bibliography the corpus has been built from. Ref 47 is probably PMID 18487609, which FT-057 already queues, but 'probably' is not an identification and it is recorded as unconfirmed rather than claimed."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does this corpus hold any human quantitative WWOX phenotype outside cancer and outside neurodevelopment?",
+    "hits": 0,
+    "finding": "🔴 NO — THIS IS THE FIRST. Every human WWOX phenotype this corpus has read is either a tumour series or a WOREE/SCAR12 case description. Here WWOX carries a continuous, population-scale metabolic trait in 9,798 unselected people, with a longitudinal arm spanning 21 years, and it does so through a NON-CODING REGULATORY variant rather than a coding change. Two consequences worth separating. FIRST, the mechanism class is new to this corpus: an intronic cis-regulatory element with an allele-specific effect on reporter activity, not a protein-level lesion. SECOND, and this is the one to hold carefully: the effect is DOMINANT and small — one T allele, about 17% higher probability of low HDL-C, 1.5% of population variance. A dominant, small, quantitative effect of a regulatory allele is a completely different object from a biallelic loss-of-function neurodevelopmental syndrome, and the only honest transfer is at the level of QUESTION — does WWOX dosage matter outside the nervous system, in humans, at population scale — for which the answer here is yes."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-11",
+    "route": "PMC record header for PMC2495060 as carried in the local HTML artifact",
+    "result": "No retraction, no expression of concern, no erratum. Am J Hum Genet 2008 Aug;83(2):180-192.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID18674750_Lee2008_PMC.html",
+      "sha256": "7c12f31f093146ba4a1ed9ba9c06af5da6c38cc9c7e00cb4f46f8f05418a9f45",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID18674750_Lee2008.pdf",
+      "sha256": "b245190bef454323219272a0acf384c3dffce513c4c25ad43418ebf31a33e42a",
+      "kind": "article_binary"
+    },
+    {
+      "path": "files/fulltext/PMID18674750_Lee2008_assets/p6_x77.jpeg",
+      "sha256": "aa5fcfa62ced4c3097ad7399767616957a0b96a9f5a63190601666a86cc28cdb",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID18674750_Lee2008_assets/p8_x106.png",
+      "sha256": "fed6009da7c63325336cee1c764364bc15f0ea13dc2c82758519a64d748f6290",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID18674750_Lee2008_assets/p9_x120.jpeg",
+      "sha256": "1e6fbc1eac4c8306de993ecf281040b5febc1d67dcf956d17632fdacb64d0f19",
+      "kind": "figure"
+    }
+  ],
+  "figure_extractions": {
+    "rule": "Three figures, three locators. All read from the PDF-embedded copies, and the reason is measured rather than assumed.",
+    "font_screen": "PDF ToUnicode screen run BEFORE the PDF was touched: 117 fonts, 58 carrying ToUnicode. Usable — but no text locator is drawn from the PDF regardless; the HTML is the declared text surface and the PDF is present only as article_binary and as the source of the figure rasters, which font encoding cannot affect.",
+    "cdn_cross_check": "🔴 THE LARGEST DEPOSIT-VERSUS-PDF GAP THIS CORPUS HAS MEASURED, and it decided where every visual locator was read. PMC-deposited copies: Fig 1 506x437, Fig 2 375x338, Fig 3 600x251. Copies embedded in the publisher PDF: Fig 1 897x775 (3.1x the pixels), Fig 3 1063x445 (3.1x), and FIG 2 2657x2395 — FIFTY TIMES the deposited pixel count, and a PNG where the deposit is JPEG. On PMID 27308504 the same comparison gave 3.1x and on PMID 25331887 the CDN copies were downsampled; the direction has now held four times but the MAGNITUDE is unpredictable, which is exactly why the rule is measure both and record the numbers rather than prefer a route. Reading Fig 2 from the deposit would have been reading a 375-pixel-wide plot for the paper's headline longitudinal claim.",
+    "figures": [
+      {"label": "Figure 1", "artifact": "files/fulltext/PMID18674750_Lee2008_assets/p6_x77.jpeg", "page": 6, "xref": 77, "dimensions": "897x775", "smask": 0, "effective_ppi": "not_applicable — native PDF-embedded raster inspected at 897x775"},
+      {"label": "Figure 2", "artifact": "files/fulltext/PMID18674750_Lee2008_assets/p8_x106.png", "page": 8, "xref": 106, "dimensions": "2657x2395", "smask": 0, "effective_ppi": "not_applicable — native PDF-embedded raster inspected at 2657x2395"},
+      {"label": "Figure 3", "artifact": "files/fulltext/PMID18674750_Lee2008_assets/p9_x120.jpeg", "page": 9, "xref": 120, "dimensions": "1063x445", "smask": 0, "effective_ppi": "not_applicable — native PDF-embedded raster inspected at 1063x445"}
+    ]
+  },
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC HTML, body 83,476 characters and abstract 1,559 characters separated by main's own extractor. Every text locator below matched at mode=strict.",
+    "extractor_provenance": "Verified with the worktree copy of framework/scripts/deepdive_manifest.py, confirmed identical to main's by git diff. The suspect-surface screen passes. One candidate quote failed strict and was DROPPED rather than loosened.",
+    "abstract_anchoring_waived": "No locator draws on the abstract.",
+    "figure_coverage": {
+      "figures_present": 3,
+      "figures_with_locators": 3,
+      "coverage": "3/3",
+      "budget_declared_before_reading": "Denominator established by reading the figure and table citations before the body: three figures, two tables, and four supplementary figures plus two supplementary tables declared in Supplemental Data. Target of one locator per main figure was set at that point and was MET — all three inspected, from the PDF copies after measuring both surfaces.",
+      "supplementary_gap": "🔴 THE SUPPLEMENT IS NOT RETRIEVED AND THREE STATEMENTS LEAN ON IT. Figure S1 carries the subset linkage analysis that supports 'rs2548861 explains much of the linkage'; Figure S2 carries the LD structure and the VISTA conservation; Figure S4 carries the COMPETITION EMSA, which is the only quantitative support for the allele-preferential binding that Figure 3B shows qualitatively. Declared, bounded, and the reason this reading is partial rather than complete."
+    },
+    "panel_text_relation_note": "Three figure locators. Figure 1 and Figure 2 carry panel_qualifies_text with pointers and needles: in both cases the text is accurate and the panel adds a structural fact the text does not state. Figure 3 is recorded as text_confirmed_by_panel — the panel shows what the text says, and the qualification there is about a control's dispersion rather than about the claim.",
+    "entries": [
+      {
+        "proposition": "🔴 THE RESULT THAT MAKES THIS PAPER MATTER TO A MODEL BUILT ON BIALLELIC LOSS: THE EFFECT IS DOMINANT, IN HUMANS, AT POPULATION SCALE. One copy of the risk allele is enough. This corpus has argued repeatedly about what a WWOX heterozygote does — on PMID 27308504 a schematic printed WWOX(+/-) on evidence that contained no heterozygous system at all. Here the heterozygous effect IS the measurement, in 475 cases and controls, and it is replicated as a dominant model across 9,798 subjects.",
+        "snippet": "one copy of the T allele of rs2548861 increases the probability for low HDL-C by approximately 17%",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_PMC.html",
+        "anchor": "Results, 'Stage 1 and 2 Association Analysis'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND THE AUTHORS DISCOUNT IT THEMSELVES, WHICH IS WHY THE FIRST LOCATOR CAN BE TRUSTED. A dominant effect of a regulatory allele is not a Mendelian determinant, and they say so in their own Discussion rather than leaving it to a reader. Recorded because the temptation this paper creates — carrying 'WWOX affects a human phenotype dominantly' into a neurodevelopmental model — is defused by the sentence the authors themselves wrote.",
+        "snippet": "this SNP rs2548861 alone is not a major HDL-C determinant but rather that it is a modifier variant that influences serum HDL-C levels",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_PMC.html",
+        "anchor": "Discussion, third paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE SIZE OF IT, in the one cohort that is unascertained and both-sex and broad-age. 1.5% of variance is the honest magnitude of this signal, and it is the number that should travel with any statement that WWOX 'controls' HDL-C.",
+        "snippet": "The TX genotype explains 1.5% of the variance in HDL-C levels",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_PMC.html",
+        "anchor": "Results, Young Finns cohort paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE LONGITUDINAL CLAIM, TEXT SIDE — four HDL-C measurements over 21 years, RANOVA, p = 0.003. This is the paper's strongest population statement and the reason it was assigned.",
+        "snippet": "found a significant association between the dominant model of rs2548861 and the variance of HDL-C levels observed in four repeated measurements obtained over a span of 21 years",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_PMC.html",
+        "anchor": "Results, Young Finns cohort, closing sentence. The Figure 2 citation follows.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "🔴 PANEL SIDE, QUALIFYING — THE PANEL IS ACCURATE AND ITS AXIS RESHAPES WHAT '21 YEARS' LOOKS LIKE. Two structural facts the text does not state. FIRST, the x-axis is NOT drawn to scale: 1980, 1983, 1986 and 2001 are equally spaced, so the 15-year gap occupies the same width as each 3-year gap. Three of the four timepoints fall inside the first six years, and the even cadence hides that the '21 years' rests on one distant point. SECOND, THERE ARE NO ERROR BARS ANYWHERE IN THE FIGURE — eight plotted points, none with a bar or interval, while Table 2 reports every one of them as mean ± SEM. The visual separation is therefore cleaner than the tabulated data. And a third fact that supports the authors rather than qualifying them: the two traces are PARALLEL, so what the figure shows is a persistent offset, not a widening one — the longitudinal result is persistence, not progression, and nothing in the panel suggests the gap grows with age.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2, read from the PDF-embedded PNG at 2657x2395. Two traces on a 'Standardized HDL-C' axis running about -0.10 to 0.20: circles labelled GG at approximately 0.15, 0.10, 0.11, 0.08 for 1980, 1983, 1986, 2001; squares labelled TX at approximately -0.04, -0.01, -0.04, -0.04 for the same years. 'P = 0.003' is printed inside the plot area. The four x positions are evenly spaced. No error bar, whisker or confidence band appears on any of the eight points.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_assets/p8_x106.png",
+        "anchor": "Figure 2, both traces, axis spacing and absence of error bars, read at 2657x2395",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[3]",
+        "qualifies_needle": "four repeated measurements obtained over a span of 21 years"
+      },
+      {
+        "proposition": "THE REGION-WIDE RESULT, TEXT SIDE — and the reason this is not an ordinary sub-threshold hit: it survives Bonferroni correction over all 1,318 stage-1 SNPs, and the authors add 50,000 permutations plus 50,000 gene-dropping replicates on top.",
+        "snippet": "All 50,000 permuted statistics were less significant than Z = 4.96 obtained for rs2548861",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_PMC.html",
+        "anchor": "Results, overall combined analysis paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "🔴 PANEL SIDE, QUALIFYING — THE PEAK IS A SINGLETON, AND THE PANEL IS WHERE THAT IS VISIBLE. Text and panel agree exactly on the numbers: the combined point sits at about 5.85 on the -logP axis (p = 1.4e-6) and the overall combined triangle at about 6.16 (p = 6.9e-7), both far above the drawn Bonferroni line at 4.43. What the panel adds is the SHAPE of the signal: the next highest point anywhere in the 12.4 Mb region is about 3.1, in CDH13. There is nothing at all between 3.1 and 5.85 — a gap of nearly three orders of magnitude — and the other WWOX SNPs in the same panel sit at about 1.4 to 1.5. The paper states that LD extends to tag SNPs immediately surrounding rs2548861, so neighbouring markers exist; they carry no comparable signal. A lone peak without an LD shoulder is not a refutation, and the permutation work speaks to exactly this, but it is a structural feature of the evidence that no sentence in the paper describes and that a reader taking p = 6.9e-7 at face value would never see.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 1, read from the PDF-embedded copy at 897x775. A -logP scatter across Chr.16 positions 70000-82500 kb with gene bars labelled ATBF1, CNTNAP4, ADAMTS18, WWOX, MAF-DYNLRB2 and CDH13. Above the WWOX bar: one open triangle at about 6.16 and one large open circle at about 5.85. Three horizontal lines are drawn and labelled P = 3.7 x 10-5, P <= 0.01 and P = 0.05. The highest remaining point in the entire panel is a filled circle at about 3.1 above CDH13; the region between 3.1 and 5.85 is empty across the whole 12.4 Mb. Small grey circles form a dense band below about 1.8.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_assets/p6_x77.jpeg",
+        "anchor": "Figure 1, whole panel, peak isolation and threshold lines, read at 897x775",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[5]",
+        "qualifies_needle": "All 50,000 permuted statistics were less significant"
+      },
+      {
+        "proposition": "THE FUNCTIONAL ARM, TEXT SIDE, AND THE AUTHORS' OWN LIMIT ON IT. The luciferase and EMSA work is what raises this above an association: it gives the variant a mechanism class. The sentence recorded here is the boundary the authors draw around their own assay, and it is the correct one.",
+        "snippet": "these artificial in vitro systems do not necessarily reflect the normal physiological state",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_PMC.html",
+        "anchor": "Discussion, paragraph on the cis-regulatory function",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "PANEL SIDE, CONFIRMING, WITH ONE DISPERSION FACT WORTH CARRYING. Figure 3A shows what the text says: all three haplotype constructs sit far below the empty vector, and the two carrying the T risk allele sit below the non-risk H1 with the printed p values. The qualification is not about the allelic effect, which is between bars with small error bars and is visually solid. It is about the ANCHOR comparison: the pGL3 empty-vector bar carries by far the largest error bar in the figure, roughly +/-4 against roughly +/-0.3 on the constructs, and it is that bar the p = 0.008 'this region is a cis-regulatory element' claim is measured against. Figure 3B shows the shifted complex in both alleles with the G lane visibly darker, matching 'appeared to be preferential' — and the free-probe rows differ in intensity between lanes, which is why the quantitative claim is properly deferred to the competition EMSA in Figure S4. That supplement is not retrieved, so the allele-preference remains attested visually and unquantified here.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 3, read from the PDF-embedded copy at 1063x445. Panel A: four grey bars on a 'Normalized luciferase activity' axis 0-14 — H1 about 4.5, H2 about 3.5, H3 about 3.3, pGL3 about 10.1. The pGL3 error bar reaches about 14.2; the error bars on H1, H2 and H3 are a few tenths. Printed brackets read P = 0.008 (H1 to pGL3), P = 5x10-6 (H1 to H3), P = 0.0004 (H1 to H2) and P = 0.3 (H2 to H3). Panel B: six lanes headed T and G, each with -/-, +/- and +/+; a black arrowhead marks a shifted band present in T +/- and G +/-, darker in G +/-, and absent in both +/+ lanes; two open arrowheads mark free probe, whose intensity differs between the T and G -/- lanes.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_assets/p9_x120.jpeg",
+        "anchor": "Figure 3, panels A and B, bar heights, error bars, printed p values and lane structure, read at 1063x445",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "🔴 THE EMSA CLAIM IN THE AUTHORS' OWN WORDS, and the verb matters: 'appeared to be'. This corpus has spent three days documenting what happens when such verbs are dropped downstream. Recorded verbatim so that if this result is ever restated elsewhere, the original modality is quotable rather than remembered.",
+        "snippet": "binding of the nuclear factor appeared to be preferential for the nonrisk G allele in three independent experiments",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_PMC.html",
+        "anchor": "Results, EMSA paragraph",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "🔴 THE NEGATIVE THAT SHAPES HOW FAR THIS TRAVELS, AND THE AUTHORS PUT IT IN THEMSELVES. Their variant is NOT significant in the large published GWAS meta-analysis for lipids. They give a reasoned account — different ascertainment, additive versus dominant model, diabetes and obesity as confounders — and the account is plausible. But the fact stands and must travel with the result: this association is established in dyslipidemic families and two Finnish population cohorts under a dominant model, and it did not replicate in a T2DM-ascertained GWAS under an additive one.",
+        "snippet": "rs2548861 was not significantly associated with HDL-C levels in this GWAS for lipid traits when an additive model was used",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_PMC.html",
+        "anchor": "Discussion, GWAS comparison paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AND THE OTHER SIGNAL IN THE SAME INTRON IS INDEPENDENT, WHICH CUTS BOTH WAYS. The GWAS top regional hit rs2667590 lies in the same intron 8 with no linkage disequilibrium to rs2548861 at all. The authors read this as complementary support for the gene. It is equally the reason the two results cannot corroborate each other as measurements of the same thing: two independent variants in one intron support WWOX as a locus, not rs2548861 as the variant.",
+        "snippet": "There is no LD between rs2667590 and rs2548861 in the CEU subjects of the HapMap Project",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_PMC.html",
+        "anchor": "Results, 'Comparison with the GWAS Results for HDL-C Levels'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "🔴 INTRON 8 IS A REGULATORY REGION WITH A SECOND, INDEPENDENTLY DEMONSTRATED ENHANCER — reported here from a third party, in vivo, in transgenic mice. Two functional elements plus two independent association signals in one intron makes the regulatory architecture of WWOX a subject in its own right, and this corpus has never opened it: every mechanism read so far is protein-level. Queued as FT-063 rather than absorbed.",
+        "snippet": "in vivo enhancer analysis of human conserved noncoding sequences in transgenic mice identified a functional enhancer element also located in intron 8",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_PMC.html",
+        "anchor": "Discussion, paragraph following the GWAS comparison. The reference marker 42 follows.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE BRIDGE TO THE MOUSE, QUOTED AS THE SECOND-HAND REPORT IT IS. This paper does not measure the knockout; it reports what another group suspected — that the Wwox-null lethality may be metabolic, with dramatic changes in serum lipids, carbohydrates and proteins and no histological lesion found to account for the death. For a disease model whose reference genotype is a biallelic loss, an unexplained metabolic death is a lead worth holding, and holding at exactly this evidential level: a suspicion, reported at one remove, whose source is queued and whose identity is not confirmed here.",
+        "snippet": "the homozygous knockout mice that die by 4 weeks of age might suffer from a severe metabolic defect",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_PMC.html",
+        "anchor": "Discussion, penultimate paragraph. The reference marker 47 follows.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE CODING SEARCH CAME BACK EMPTY, WHICH IS WHY THE REGULATORY STORY EXISTS AT ALL. Resequencing the exons and exon-intron boundaries in 16 linked probands found one non-synonymous variant, Ala179Val, and the tag capturing it showed no association (p = 0.63). Recorded because a negative of this shape is what makes the non-coding hypothesis load-bearing rather than merely available, and because negatives are the class this repository treats as the compounding loss when they go unrecorded.",
+        "snippet": "This SNP was tagged by rs4888786",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_PMC.html",
+        "anchor": "Results, 'Resequencing of the WWOX Gene'. The sentence continues that the tag was not significantly associated with the low-HDL-C trait, p = 0.63.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A METHODOLOGICAL DETAIL WITH A SHARP EDGE: THE SIGNAL GETS STRONGER AS SUBJECTS ARE REMOVED. Excluding diabetics and lipid-drug users, then obese subjects, monotonically improves both p value and effect size — 0.03 to 0.009 to 0.003 in METSIM. The authors read this as confounding by diabetes and obesity, which is reasonable and is how they explain the GWAS non-replication. It is also a pattern that deserves stating plainly: a result that strengthens under successive exclusions is not thereby more secure, and the exclusions here were pre-specified on physiological grounds rather than chosen after seeing the answer, which is what makes them defensible.",
+        "snippet": "exclusion of individuals with diabetes and/or high BMI improved our association signal",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18674750_Lee2008_PMC.html",
+        "anchor": "Discussion, GWAS comparison paragraph",
+        "panel_text_relation": "text_only"
+      }
+    ],
+    "note": "COVERAGE: abstract, Introduction, the complete Material and Methods, all Results subsections, Discussion and the 48-item reference list read in sequence from the PMC HTML; Tables 1 and 2 read cell by cell in the same surface; all three main figures inspected as images, from the PDF-embedded copies after measuring both surfaces. NOT READ: Supplemental Data — four supplementary figures and two supplementary tables in a single PDF that was not retrieved. Three statements lean on it, named in figure_coverage.supplementary_gap, and the most consequential is Figure S4, the competition EMSA, which carries the only quantitative support for the allele-preferential binding shown qualitatively in Figure 3B. That is why this reading is partial."
+  }
+}

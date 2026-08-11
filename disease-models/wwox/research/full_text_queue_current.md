@@ -2272,6 +2272,41 @@ casa); media-alta per Schrock.
 
 ---
 
+## FT-063 — L'architettura regolatoria dell'introne 8, e il supplementary che quantifica l'unico dato allele-specifico
+
+**Papers:** PMID 18674750 / DOI 10.1016/j.ajhg.2008.07.002 — Lee JC *et al.*, *Am J Hum Genet*
+2008;83(2):180–192, PMC2495060 — *WW-Domain-Containing Oxidoreductase Is Associated with Low
+Plasma HDL-C Levels*. **Letto** (`FTR-20260811-18674750-01`, parziale). Questa voce è il suo debito
+residuo più i suoi hop.
+
+**Il debito immediato — il supplementary, non recuperato.** Quattro figure e due tabelle in un solo
+PDF. **`Figure S4` è la più cara:** porta l'**EMSA competitiva**, cioè **l'unico supporto
+quantitativo** al legame preferenziale per l'allele G, che la Figura 3B mostra solo
+qualitativamente e che il testo dichiara con *«appeared to be preferential»*. `S1` porta la subset
+linkage analysis dietro *«rs2548861 explains much of the linkage»*; `S2` la struttura di LD e la
+conservazione.
+
+🔴 **Gli hop, e sono un soggetto che questo corpus non ha mai aperto.** Ogni meccanismo letto qui
+finora è **a livello proteico**. Questo paper apre il livello **regolatorio**, e non con un solo
+elemento: **rif. 42** riporta un **secondo enhancer funzionale nello stesso introne 8**, dimostrato
+*in vivo* in topi transgenici da un gruppo terzo; **rif. 43** riporta **tre delezioni omozigote**
+nello stesso introne in linee di adenocarcinoma gastrico; e il top hit GWAS della regione
+(`rs2667590`, **rif. 12**) sta **anch'esso in introne 8, senza alcun LD** con `rs2548861`.
+**Due elementi funzionali e due segnali indipendenti in un introne** fanno dell'architettura
+regolatoria di `WWOX` un soggetto a sé.
+
+**Un hop da identificare, non da assumere.** Il **rif. 47** — il KO murino la cui letalità a 4
+settimane gli autori sospettano **metabolica**, con alterazioni marcate di lipidi, carboidrati e
+proteine sieriche e **nessuna lesione istologica** trovata — è **probabilmente `PMID 18487609`**,
+già in `FT-057`. **«Probabilmente» non è un'identificazione:** primo gesto, confermarlo.
+
+**Next action:** recuperare il supplementary di `18674750` (`S4` per primo); poi risolvere e leggere
+il rif. 42; poi confermare l'identità del rif. 47 contro `FT-057` invece di presumerla.
+**Current status:** ⬜ aperto. **Priorità:** ALTA per `S4` — è l'unico pezzo che rende quantitativo
+un risultato oggi solo visivo; media per gli hop.
+
+---
+
 ## ⏳ DEBITO PER PLAN — due voci distinte, non una
 
 Emerse dalla correzione `FTR-20260811-31075076-02`. **Non sono mie da chiudere**: toccano lo schema
