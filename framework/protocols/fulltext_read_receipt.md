@@ -437,6 +437,11 @@ No manifest carries both, and `grep -rn "panel_coverage\|figure_coverage" framew
 scripts .claude` returns **nothing**: neither key is read by any code. Two names, two
 containers, two types, one validator that has never seen either.
 
+🔴 **Their existence does not make the proposal redundant — it is the argument for it.** Two
+ungoverned representations of one quantity are not a partial implementation of an authoritative
+form; they are the two things an authoritative form has to consolidate, and neither can be
+promoted as-is, because neither records what it counted.
+
 The proposal, recorded as received: one authoritative place in the **manifest**, beside the
 figure inventory — `panels_present`, `panels_inspected`, `denominator_basis`,
 `denominator_status` — which the receipt **summarises or references and never duplicates**.
@@ -482,7 +487,10 @@ already holds them, changes nothing.* Measured over the three merges of 2026-08-
 
 One merge in three moved nothing, and it was the largest-looking one by branch age. "Every
 merge dilutes attribution" reads like a tax on integration and would make an integrator
-hesitate over an operation that is, a third of the time, provably free. The honest consequence
+hesitate over an operation that **can** be free — one of these three added nothing, and `n = 3`
+supports exactly that and no rate. "A third of merges is free" is the sentence to avoid, and it
+is the one I wrote first: three observations do not carry a frequency, and a frequency is what
+an integrator would plan around. The honest consequence
 is not to merge less — it is to **never promise anyone that attribution is recoverable after
 the fact.** Provenance identifies an author at the moment of writing and stops meaning that
 afterwards.
@@ -513,8 +521,9 @@ claim, not a sentence smuggled in as the authors' prose. So the fix is not exclu
 **third declarable surface** — a locator says it is quoting back matter, and one that does not
 may not land there. That is a schema change to `surface`, hence this list.
 
-🔴 **What the 355 do and do not show.** They show that **no current locator accidentally rests
-on back matter**: the only two that touch it do so on purpose. They do **not** show that
+🔴 **What the 355 do and do not show.** The admissible form is: **in the current set, 353 of
+355 XML text locators do not depend on back matter, and the two remaining are intentional
+bibliographic uses.** They do **not** show that
 contamination has never affected a reading — a reader misled by a reference title into a
 conclusion that produced no locator leaves nothing for this measurement to find. The audit
 covers the verified surface, not the reading. Said explicitly because "the hazard has not

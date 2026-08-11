@@ -156,6 +156,32 @@ Reference: [[prompt_lint_integrity_check]].
 | Orphan page (no inbound link from any current) | `INFO` |
 | Wikilink to a non-existent heading (heading renamed) | `BLOCK_BATCH_COMMIT` |
 
+### 3.1b 🔴 The severity table cannot see a link that resolves to the wrong object
+
+Every case above is a link that **fails**. The dangerous one succeeds. `FT-`, `DL-` and
+`CC-` identifiers are positional: a merge that renumbers an entry leaves every prose reference
+to the old number pointing at whatever now holds it. The link resolves, the LINT is silent, and
+the reader is sent to a real entry about a different paper.
+
+**Measured instance, 2026-08-11.** `learned_gates_registry.md` closed a gate row with *"see
+`FT-058`"*. At `52bf5c2`, where the row was authored, `FT-058` was the entry it meant. Two
+merges later `FT-058` is Breton 2021 on neocortical electrophysiology, and the row was sending
+readers there. Nothing was broken; everything resolved.
+
+🔴 **Re-pointing it to `FT-069` repaired the instance and not the class**, because `FT-069` is
+a movable reference too and the next renumbering moves it again. Two other properties make this
+worse than an ordinary stale link: the reference was **correct when the renumbering pass ran**
+— it arrived from a branch merged earlier — so a pass that re-points everything it can see is
+not sufficient; and the failure is **silent by construction**, since resolving successfully is
+what a reference is checked for.
+
+Registered, **not built**: the class needs either a **stable anchor per PMID or per object**,
+which renumbering cannot touch, or a **semantic check** that asks whether the target still
+concerns what the referring text says it concerns. Which of the two, and what it costs at a
+thousand entries, is a schema decision — see the named open items in
+[[fulltext_read_receipt]]. Until then this is a known, unmitigated hazard rather than a
+solved one.
+
 ### 3.2 Examples
 
 ✅ **Valid:**
