@@ -215,8 +215,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 95
-fulltext_ledger_head: 5394e027940ff0114ec2cd86848b715083e9dfc32a2ec4f9604f648fe5e19d71
+fulltext_ledger_events: 106
+fulltext_ledger_head: 020834f2e1f1c54c9d0cd84e04f7c6095fed883ce74c87c8c8de9908613efc2d
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -264,8 +264,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 17
-growth_anchor_head: e8ef75fbfefa2715d7d4586c7deaf3f535d259f3120790e422e46a4f8a7eee70
+growth_anchor_events: 18
+growth_anchor_head: dd0d770e922856fe26f634f72f3d86d6e9ac80f879e7daae7e8019dc98058cf5
 ```
 
 ```bash
@@ -314,7 +314,7 @@ with every existing check passing. It is invisible by construction, because lean
 writes nothing anywhere. So it is measured instead of assumed.
 
 ```yaml
-unread_premise_baseline: 6
+unread_premise_baseline: 5
 unread_premise_measured_on: 2026-08-11
 ```
 

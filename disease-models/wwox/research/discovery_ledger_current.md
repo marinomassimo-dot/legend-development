@@ -2462,9 +2462,9 @@ Aperto il rif. 3 (`PMID 24550385`, `FT-054`) sono emerse tre cose che riscrivono
 - 🔴 **Perché è un reperto di metodo e non un rilievo.** L'unico *«might»* superstite dell'intero commentary sta sull'**ipotesi introduttiva che gli autori poi dichiarano confermata** — l'unico posto dove un'attenuazione non costa nulla. E l'unico segno di incertezza dell'intera figura, un `?` in grassetto, sta accanto al complesso **MRE11/RAD50/NBS1**, che non è nominato né nel testo del commentary né nella prosa corrente del primario. **Il lessico dell'attenuazione non si perde: si ridistribuisce** — resta sull'ipotesi superata e su ciò che non è rivendicazione propria, sparisce dalle conclusioni vive. È l'asimmetria ordinaria della fiducia nei propri risultati, ed è esattamente il motivo per cui un commentary non può essere letto come sintesi di ciò che è stabilito.
 - **Conseguenza per il genotipo di riferimento, e non è metodologica.** Lo schema etichetta i due rami con **simboli di genotipo** — `WWOX+/+` contro `WWOX+/−` sopra `WWOX−/−` — e il ramo mutante termina in una freccia disegnata verso **«Cancer»**. Gli esperimenti dietro quel ramo sono HEK293-Sh-WWOX, MCF7-shWWOX e MEF Wwox-KO: un knockdown e un nullo. **Nel primario non esiste alcun sistema eterozigote**, ed è per questo che il primario scriveva *«might»*. Una frase di didascalia può leggersi come abbreviazione di «cellule con meno WWOX»; un `WWOX+/−` stampato su un diagramma no — ed è la forma più trasferibile che una affermazione possa assumere. Per un modello i cui portatori hanno genitori eterozigoti, questo è un rischio di trasferimento specifico, **e si è visto guardando i pixel, non leggendo la didascalia**.
 - **Il caso di controllo, registrato per primo nel manifest.** Non tutto è gonfiato: la monomerizzazione di ATM WWOX-dipendente è una misura reale (Fig 4D del primario, co-IP Flag-ATM/YFP-ATM) e questo corpus **possiede già un locator su quel pannello** — `PMID25331887 entries[26]`. Il verbo più forte del commentary, *«revealed»*, lì è guadagnato. Quattro scarti contro un documento per il resto accurato: è l'unico tipo di scarto che valga la pena riportare.
-- **REVIVAL_TRIGGER / falsificazione:** la generalizzazione cade se un secondo Author's View di un laboratorio diverso, letto con lo stesso metodo — conteggio delle attenuazioni su entrambi i lati contro artefatti impronta-verificati — mostra modalità **conservata**. Un solo caso non stabilisce un tasso: `FT-063` fornisce due paper dello stesso gruppo su cui provare, e la prova sarebbe più forte su un gruppo terzo.
+- **REVIVAL_TRIGGER / falsificazione:** la generalizzazione cade se un secondo Author's View di un laboratorio diverso, letto con lo stesso metodo — conteggio delle attenuazioni su entrambi i lati contro artefatti impronta-verificati — mostra modalità **conservata**. Un solo caso non stabilisce un tasso: `FT-068` fornisce due paper dello stesso gruppo su cui provare, e la prova sarebbe più forte su un gruppo terzo.
 - **Conseguenza operativa immediata:** nessun claim canonico può citare `PMID 27308504` come fonte di alcunché. È `article-commentary`, non ha dati primari, e ogni sua asserzione empirica è una riformulazione di `25331887`. Vale come **oggetto di studio sulla trasmissione della modalità**, non come evidenza.
-- **Interconnessioni:** `IMPORTED_PREMISE_ATTRIBUTION_GATE` · `DL-METH-084` · `DL-MECH-083` · [[epistemic_discipline]] · `FT-066` · `FT-064`.
+- **Interconnessioni:** `IMPORTED_PREMISE_ATTRIBUTION_GATE` · `DL-METH-084` · `DL-MECH-083` · [[epistemic_discipline]] · `FT-066` · `FT-069`.
 
 ---
 
@@ -2489,7 +2489,7 @@ lavoro senza che nessuno se ne accorga.)*
 - **Perché è la terza volta che la stessa lezione si ripresenta cambiando forma.** «Superficie strutturata trovata» non implica «migliore superficie figure trovata» (già a manuale). Non implica **«tutte le vie mettono le stesse cose nel corpo»**. E su `27308504`, poche ore prima, avevo scelto `efetch` **contro** Europe PMC perché solo `efetch` portava le referenze strutturate — la scelta opposta a quella giusta qui. **Non esiste una via preferibile: esiste una domanda da porre a ogni articolo, su che cosa serve citare.**
 - **Conseguenza operativa, e costa cinque righe:** prima di dichiarare un `article_text`, contare `<fig>` dentro `<body>` contro `<fig>` nell'articolo. Se differiscono, o si sceglie la via che le include, o si dichiara esplicitamente che le didascalie vanno lette a parte. Il conteggio va nel manifest accanto a `figure_coverage`, che oggi misura quante figure hanno un locator e **non** se le loro didascalie erano leggibili.
 - **REVIVAL_TRIGGER:** se una futura versione di `_xml_surfaces` restringesse l'estrazione al `<body>` — ottimizzazione plausibile e apparentemente innocua — il difetto di lettura diventerebbe **anche** un difetto di verifica, e dieci manifest esistenti cambierebbero verdetto in silenzio. Da rileggere prima di qualunque modifica a quella funzione.
-- **Interconnessioni:** `FT-055` · `FT-066` · `FT-063` · `DL-METH-096` · `PATTERN_ALREADY_SOLVED_GATE` · [[gold_is_in_the_details]].
+- **Interconnessioni:** `FT-055` · `FT-066` · `FT-068` · `DL-METH-096` · `PATTERN_ALREADY_SOLVED_GATE` · [[gold_is_in_the_details]].
 
 #### Append 2026-08-10 — rimisurato dopo una contestazione, e il predicato adesso è scritto
 
@@ -2906,7 +2906,50 @@ l'altra**, e l'unico modo di saperlo è la figura che nessuno ha visto.
   (`DIS-003`) aggiungendogli un ramo che non nomina, quindi la promozione è di chi possiede il
   gate.
 
-#### 🔴 CORREZIONE APPEND-ONLY — il titolo era sovrastimato, il reperto no, e la lezione è su come si scrive un allarme
+#### 🔴 AGGIUNTA 2026-08-11 — il corollario sulla NON-SELETTIVITÀ è `NON ANCORATO`, e lo dichiaro io prima che lo trovi qualcun altro
+
+Da `PMID 23370280`, letto l'11 agosto, era emerso il corollario:
+
+> **alzare l'attività di ITCH per stabilizzare WWOX aumenterebbe insieme la degradazione
+> ITCH-mediata dei suoi altri bersagli — ΔNp63α e p73. Una leva su ITCH non è selettiva per
+> WWOX.**
+
+Poggia sul **frame di competizione WW1** — WWOX che compete con altre proteine WW per bersagli
+PY comuni — che `23370280` cita come già stabilito e la cui **fonte primaria è `PMID 16061658`**
+(Aqeilan 2005, WWOX e YAP competono per ErbB-4).
+
+🔴 **Quella fonte oggi non può portare una citazione verificabile.** Screening dell'11 agosto,
+receipt `FTR-20260811-16061658-01`, `retrieved_not_read`: nessun deposito PMC, nessuna copia in
+repository, e il text layer del PDF locale è **`SUSPECT`** — `µ` diventa `A` sedici volte,
+**`p73β` diventa `p73h` sette volte**, `×` è un byte di controllo. Superficie **rifiutata**, non
+riparata.
+
+**La classificazione esatta è `NON ANCORATO`, e non è né `rifiutato` né `confermato`:**
+
+| stato | significato |
+|---|---|
+| confermato | esiste un locator verificato che lo sostiene |
+| **non ancorato** | **la proposizione resta plausibile e non esiste oggi un locator che possa sostenerla** |
+| rifiutato | esiste evidenza contraria |
+
+Il corollario **non è sbagliato**: `23370280` lo enuncia in proprio (*«WWOX can compete with
+other WW domain-containing proteins, like YAP and ITCH, for binding common target proteins, such
+as ErbB4 and p73»*, verificato contro artefatto impronta-to) e quella citazione **è** ancorata.
+Ciò che non è ancorato è la **fonte del frame**, cioè la dimostrazione originale che la
+competizione avviene davvero al WW1. Chi userà il corollario deve sapere che poggia su una
+citazione secondaria.
+
+- **Cosa lo ancorerebbe:** ① aggiudicazione di pagina su `16061658` secondo la 5e — decisione
+  dell'operatore, oggi **fuori mandato e non revocata**, e quindi non presa; oppure ②
+  `PMID 12514174` (Chang 2003, JNK1/WOX1), che il preflight dell'11 agosto trova **open access
+  ibrido con PDF all'editore** — ma è un PDF JBC del 2003, coetaneo di quello appena rifiutato, e
+  va **schermato prima** di essere considerato una lettura.
+- 🔴 **Cosa NON lo ancorerebbe, e va detto perché era il candidato indicato:** `PMID 18487609`
+  (Aqeilan 2008, sopravvivenza postnatale e metabolismo osseo). Il suo HTML PMC locale è una
+  superficie **pulita e leggibile** — 67 363 caratteri, `×` 10 · `α` 3 · `β` 5, zero controlli
+  C0 — ma il paper **non contiene il frame**: `WW1` 0 · `ITCH` 0 · `competition` 0 · `ErbB` 2.
+  **Chiude il gate multi-hop di `FT-062`; non ancora questa inferenza.** Le due cose sono state
+  confuse una volta e non devono esserlo di nuovo.
 
 Avevo scritto: *«ITCH compare **18 volte** e **ogni** menzione lo tratta come qualcosa da
 inibire»*. Entrambe le metà sono difettose e in modi diversi.
@@ -2967,3 +3010,152 @@ questa. Le tre correzioni restano accanto ai rispettivi reperti invece di essere
 Il laboratorio di Santini ha **zero paper su WWOX** — misurato, non presunto: `Santini S[au] AND WWOX` → **0**. Il paper è su Atassia Teleangectasia, ITCH e danno epatico. Ci si arriva **solo** dalla voce 42 della bibliografia di `25331887`: non compare in nessuna query WWOX e in nessuna bibliografia citante che questo corpus possieda. Eppure il suo unico risultato è **la freccia portante di un modello WWOX disegnato due paper più a valle**. Una premessa sotto uno schema WWOX, fornita da un gruppo che non ha mai studiato il gene.
 
 E c'è un ponte che questo corpus non aveva: l'A-T **è** una neurodegenerazione cerebellare, e gli autori chiudono ipotizzando che il deficit di ATM deregoli **Gli-1** — substrato di ITCH, effettore Hedgehog, downregolato durante il differenziamento cerebellare. Il disturbo WWOX-correlato include **SCAR12**, un'atassia spinocerebellare. ITCH siede fra l'asse WWOX-DDR che stiamo leggendo e un asse cerebellare che non abbiamo aperto. `ESPANSIONE`: nessuno misura qui WWOX, Gli-1 e cervelletto insieme.
+
+---
+
+> **Nota di merge, 2026-08-11 (sesto blocco).** Le tre voci che seguono arrivano da un altro
+> ramo e allocano `DL-MECH-096`, `DL-META-097`, `DL-META-098`. **Nessuna collide**: la
+> numerazione è per famiglia, e `MECH`, `META` e `METH` sono famiglie distinte — `DL-METH-096`
+> e `DL-METH-097` restano dove sono. Verificato: ogni identificatore `09x` è unico nella
+> propria famiglia.
+>
+> 🔴 **Ma tre famiglie i cui nomi differiscono di una o due lettere sono una trappola di
+> lettura**, non un difetto: `METH`, `MECH`, `META`. Registrato perché è precisamente la
+> condizione in cui una collisione vera passerebbe per un refuso, e viceversa — come già
+> successo oggi in senso opposto.
+
+---
+
+### 🔴 DL-MECH-096 — `RUNX2` a valle di `WWOX` non ha *un* segno: ne ha uno per preparazione, ed è un vincolo per la Track C
+
+**Fonte:** `PMID 18487609` (Aqeilan 2008, *J Biol Chem* 283:21629-39), lettura completa
+`FTR-20260811-18487609-01`, `32/32` pannelli. **Classificazione: `DATO` per le due misure,
+`INFERENZA` per la riconciliazione, `VINCOLO OPERATIVO` per la conseguenza.**
+
+**`DATO`.** Stesso knockout `Wwox`, stesso paper, due preparazioni:
+
+| preparazione | `Runx2` nel KO | pannello |
+|---|---|---|
+| osso in vivo, femore, g7 | **1,50** (+50%) | Fig 5A |
+| osso in vivo, calvaria, g7 | **1,385** (+39%) | Fig 5A |
+| osteoblasti calvariali **isolati**, g12 | **0,295** (−70%) | Fig 6C |
+
+Nello stesso pannello 5A ogni altro gene — `Alp` 0,40 · `Bsp` 0,595 · `ColI` 0,40 · `H4` 0,715 ·
+`Oc` 0,60 — **scende**. `Runx2` è l'unico che sale, e sale in entrambe le ossa.
+
+**`INFERENZA` (riconciliazione, non contraddizione).** La misura tissutale include il
+**reclutamento**: più osteoprogenitori entrano nella linea per compensare la perdita da
+riassorbimento, e `Runx2` è il marcatore di quel reclutamento. La coltura isolata rimuove
+l'input sistemico ed espone il deficit intrinseco. Le due misure non si smentiscono: **misurano
+cose diverse con lo stesso nome.**
+
+**🔴 `VINCOLO OPERATIVO` per la Track C, scritto come vincolo e non come osservazione:**
+
+> **Un nodo il cui segno cambia fra tessuto e cellula isolata non può portare un'ipotesi di
+> riposizionamento.**
+
+La Track C richiede una **direzione di pathway con segno** prima che un nodo si apra. Qui il
+segno non è ignoto — è **doppio**, e un agente scelto per spingere `RUNX2` nella direzione
+«giusta» lo spingerebbe nella direzione sbagliata in una delle due preparazioni. La domanda che
+un nodo così deve superare non è *«in che direzione va?»* ma **_«su quale preparazione si misura
+l'endpoint, e quel readout ha lo stesso segno del bersaglio terapeutico?»_**
+
+**Stessa forma di `DL-MECH-094`**, dove la firma metabolica degli organoidi era confusa col
+difetto di differenziamento: un readout tissutale e uno cellulare autonomo che portano lo stesso
+nome e danno risposte opposte. **Due volte in due giorni, su due assi diversi, dallo stesso
+meccanismo di confusione.** Va cercata la terza.
+
+**`REVIVAL_TRIGGER` / cosa scioglierebbe il nodo:** la delezione `Wwox` **osteoblasto-specifica**,
+che il paper stesso nomina come l'unico esperimento risolutivo (*«only an osteoblast-specific in
+vivo deletion of WWOX can establish a direct role for WWOX in bone formation»*). Finché non
+esiste, ogni misura qui sta dentro un knockout total-body che muore a tre settimane con
+deperimento d'organo, ipoglicemia, ipoproteinemia e ipocalcemia.
+
+---
+
+### 🔴 DL-META-097 — L'eterozigote è silente sull'organismo e dimezzato sul tessuto, **nello stesso paper**: «portatore non affetto» è un'affermazione sullo strumento
+
+**Fonte:** `PMID 18487609`, Fig 3B (µCT, g15) e Fig 4B, contro il primo paragrafo dei Results.
+**Classificazione: `DATO` per le misure, `INFERENZA` per la lettura, `ESPANSIONE` dichiarata per
+qualunque transfer all'uomo.**
+
+**`DATO`, due frasi dello stesso articolo a ~2000 parole di distanza:**
+
+> *«Wwox heterozygous (HET) pups were indistinguishable from wild-type (WT) animals at all stages
+> of development and postnatal life»* — Results, primo paragrafo
+
+| Fig 3B, g15 | WT | **HT** | scarto |
+|---|---|---|---|
+| Trab. No (1/mm) | 3,62 ±0,10 | 2,92 ±0,25 | **−19%** |
+| Conn. Dens (1/mm³) | 128 ±10 | 64 ±8 | **−50%** |
+| Bone Surface (mm²) | 6,30 ±0,28 | 2,88 ±0,30 | **−54%** |
+| Tiss. Dens (mg/ccm) | 722 ±8 | 703 ±10 | −2,6% |
+
+Nessuna barra d'errore delle prime tre si sovrappone. Fig 4B lo **ripete indipendentemente**:
+l'HT è intermedio fra WT e KO per volume osseo e per entrambe le superfici di formazione a g12.
+
+**Il paper lo dichiara** (*«reduced trabecular member connectivity and bone surface area in both
+the HET and KO»`*): questo è un controllo tornato **negativo**, ed è registrato come tale. Ero
+andato a cercare un dato nascosto nei pannelli con il testo muto, e il testo non è muto.
+
+**`INFERENZA`, ed è il punto:** *«indistinguibile dal wild-type»* e *«metà della connettività
+trabecolare»* sono **entrambe vere dello stesso animale**. Quale delle due viene riportata non
+lo decide l'animale: lo decide **quale strumento si prende in mano**. Un fenotipo eterozigote
+misurabile può convivere con una descrizione di piena normalità senza che nessuno menta.
+
+**🔴 `ESPANSIONE`, dichiarata come tale e non promuovibile:** nulla di questo si trasferisce ai
+portatori umani di varianti `WWOX` — il tessuto rilevante là non è l'osso, e la specie, l'età e
+l'allele sono tutti diversi. Ciò che si trasferisce è **la forma dell'errore**: in una malattia
+i cui portatori sono descritti come non affetti, *«non affetto»* è una conclusione che eredita
+il limite di risoluzione dell'esame che è stato fatto. È una domanda da porre alla letteratura,
+non una risposta da darle.
+
+---
+
+### 🔴 DL-META-098 — Un nullo senza test nominato che regge un intero fenotipo, e la legenda che inverte i genotipi
+
+**Fonte:** `PMID 18487609`, Fig 3D e Fig 4B. **Due difetti distinti, stessa famiglia: ciò che il
+lettore riceve non è ciò che il pannello mostra.**
+
+**① Il falso negativo — `PREMISE: DEFAULT_FROM_TEXTBOOK`**
+
+Fig 3D, `Wwox` mRNA / GAPDH sotto differenziamento indotto da RANKL:
+
+    RAW264.7    1,00  ->  0,77     (−23%, barre d'errore dentro il tratto della barra)
+    midollo     2,23  ->  1,67     (−25%)
+
+**Due sistemi indipendenti, stessa direzione.** Il testo: *«Differentiation to osteoclasts
+(induced by RANKL) did not result in significant changes in WWOX expression»*. **Nessun test
+statistico, nessun `n`, nessuna soglia** compaiono nella legenda, nei Methods o sul pannello.
+
+La premessa portante è *«un 25% in una qPCR è rumore»*, e **non è scritta da nessuna parte
+perché sembrava troppo ovvia per scriverla** — la forma esatta che la disciplina sulle premesse
+esiste per catturare. Il paper stesso registra che l'esperimento risolutivo era impossibile:
+*«it was not possible to isolate viable progenitors from bone marrow or spleen from the
+Wwox-/- mice»*. Su quel nullo poggia la conclusione *«osteoclast activity is not impaired in
+vivo with WWOX deficiency»*, ed è così che **l'intero fenotipo di riassorbimento viene attribuito
+all'ipocalcemia sistemica** anziché a un ruolo dell'osteoclasta.
+
+**`REVIVAL_TRIGGER`:** qualunque misura di WWOX (proteina o attività) lungo l'osteoclastogenesi
+RANKL-dipendente **con un test dichiarato**, oppure una delezione `Wwox` osteoclasto-specifica.
+
+**② La legenda con tre barre e due etichette**
+
+Fig 4B: sei grafici, tre barre per gruppo d'età. La legenda ha **tre riquadri e due etichette** —
+grigio chiaro `WT HT`, nero `KO`, e un terzo riquadro grigio scuro **senza alcun testo**. Presa
+alla lettera, il knockout è la barra nera: a g12 avrebbe volume osseo 4,3 su 5,25 mm³, cioè
+**quasi normale**, e la barra grigio scura resterebbe inspiegata.
+
+L'assegnamento vero — chiaro = WT, nero = HT, **scuro = KO** — è forzato da tre affermazioni
+direzionali indipendenti del testo, ed è recuperabile **solo** incrociandole:
+
+| verifica | g7 | esito |
+|---|---|---|
+| densità minerale ridotta nel KO | 485 · 480 · **295** | solo il grigio scuro è ridotto |
+| porosità corticale **non** più alta a g7 | 9,6 · 11,1 · **8,6** | solo il grigio scuro è più basso, come il testo richiede |
+| superfici di formazione ridotte (subperiostale, g12) | 1,50 · 0,97 · **0,45** | idem |
+
+**Stessa classe dell'asterisco non marcato del 2026-08-06.** Un lettore che si fida della legenda
+non ottiene un numero impreciso: ottiene **il fenotipo invertito**. E l'unica difesa è ciò che la
+regola 5c prescrive comunque — guardare il pannello alla risoluzione originale e leggerlo contro
+il testo, mai attraverso di esso.

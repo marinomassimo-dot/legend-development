@@ -1,0 +1,154 @@
+{
+  "schema_version": 2,
+  "pmid": "42082822",
+  "doi": "10.1007/s43032-026-02112-9",
+  "pmcid": "PMC13230315",
+  "receipt": "FTR-20260811-42082822-01",
+  "landing": ["FTR-20260811-42082822-01", "full_text_queue_current.md#FT-013"],
+  "landing_note": "Denkboy Öngen et al. 2026, Reproductive Sciences — a single-case report claiming a homozygous WWOX c.421G>A (p.Ala141Thr) variant as a cause of 46,XY DSD with hypospadias. Newest-first. Read two hours after Piard 2019, which reaches the opposite conclusion about WWOX and DSD, and that pairing is what this reading turns on.",
+
+  "skills_considered": [
+    { "skill": "legend-deepdive", "used": false, "reason": "Run inline. The finding is an arithmetic and pedigree check against the paper's own figure, which needs the case description and the panel held together." }
+  ],
+
+  "reading_budget": {
+    "declared_before_reading": true,
+    "figures_present": 1,
+    "panels_present": 6,
+    "tables_present": 1,
+    "supplementary_elements_present": 0,
+    "panels_inspected": 6,
+    "panel_coverage": "6/6",
+    "method": "🔴 MEASURED, NOT INTENDED — the correction earned an hour ago on PMID 31543760, where I declared 23/23 having opened three figures. Counted by reading the caption: Fig 1 A (proband chromatogram), B (father), C (mother), D (control), E (Western blot plus quantification), F (pedigree) = 6. All six were opened as an image before this number was written.",
+    "image_surface": "ACQUIRED via the Europe PMC REST endpoint /{PMCID}/supplementaryFiles — HTTP 200, a 69,848-byte ZIP containing exactly one figure JPEG and its GIF thumbnail. THE ENDPOINT ALSO ANSWERED THE OTHER HALF OF THE QUESTION: the deposit declares one <fig> and the package contains one figure, so one figure is all that exists. That is the reason the first gesture is a probe and not an assumption — it confirms an absence as well as a presence.",
+    "table_1": "Read. It is the in-silico summary and it carries the most consequential line in the paper — see entries[4]."
+  },
+
+  "surface_preflight": {
+    "structured_surface_preferred": true,
+    "text_surface": "files/fulltext/PMID42082822_Denkboy2026_EPMC.xml",
+    "route": "Europe PMC, CC BY.",
+    "🔴 ref_list_re_checked_and_it_corrects_my_own_earlier_diagnosis": "CHECKED AGAIN RATHER THAN ASSUMED IN EITHER DIRECTION, AND THE ANSWER OVERTURNS WHAT I REPORTED TWICE TODAY. On this artifact the <ref-list> sits OUTSIDE <body>, where it belongs — 0 of 1 inside. AND ITS CONTENT IS STILL IN THE SURFACE `_xml_surfaces` RETURNS AS `body`: of the 12 <ref> elements, 10 carry an <article-title> longer than 45 characters and ALL TEN ARE PRESENT VERBATIM, e.g. 'Utility of genetic work-up for 46, XY patients with severe hypospadias'. So the contamination is a property of THE EXTRACTOR, not of how Europe PMC files its back matter. I told the orchestrator this morning that it was 'a property of the Europe PMC route' and wrote that into two receipts; on Piard and Kosla the ref-list did sit inside <body>, which made the route look like the cause, and this artifact separates the two. The hazard is unchanged and better evidenced; my explanation of it was wrong.",
+    "🔴 and_my_measurement_method_was_unreliable_which_is_the_second_correction": "The single-probe test I used this morning — take one 80-character slice of the ref-list and ask whether it is in the surface — returned TRUE on this artifact before the proper test, and returns inconsistent results on Piard and Kosla (1 of 5 and 5 of 5 slices). A short slice can match text elsewhere in the paper, and normalisation differences can make a true inclusion look false. The reliable test is a WHOLE ARTICLE TITLE from a <ref>, which is long, distinctive, and would not otherwise occur. Piard and Kosla could not be tested that way at all: their <ref> elements carry no <article-title> children, so zero titles were available — which is why their numbers were never evidence in either direction.",
+    "surface_measurement": { "in_tree_surface_chars": 26969, "body_element_only_chars": 17561, "abstract_chars": 1693, "ref_list_chars": 4958 }
+  },
+
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_measured": "Not measured, declared as not measured. A single Turkish clinical centre reporting one patient; this is the group's first appearance in this corpus.",
+    "research_type": "descriptive_clinical",
+    "output_kind": "case_report",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "🔴 THE OBSERVATION IS ONE PATIENT AND THE INTERPRETATION IS A GENE-DISEASE CLAIM, AND THAT GAP IS THE WHOLE ASSESSMENT. The clinical description is careful and the authors state their own limitation plainly. What the paper does NOT do is weigh its own control data against its own conclusion, and every entry below is that arithmetic rather than a judgement about competence. Recorded at case_report weight: a single case with a non-segregating pedigree does not establish a gene-disease relationship, and this corpus should carry it as a candidate observation, never as support for a WWOX-DSD link."
+  },
+
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      { "query": "does the variant segregate with the phenotype in this pedigree?", "route": "read the Results, Discussion and Figure 1F pedigree", "count": 0, "detail": "🔴 IT DOES NOT. The father carries the SAME HOMOZYGOUS GENOTYPE and is not reported as affected. See entries[0] and entries[1]." },
+      { "query": "is the control cohort large enough for the stated allele frequency?", "route": "arithmetic on the paper's own numbers", "count": 0, "detail": "No. 100 controls against an allele frequency of 2.04e-4 expects 0.04 carriers. See entries[3]." }
+    ]
+  },
+
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 12,
+    "gene_direct_count": 3,
+    "gene_direct_refs_in_source": ["30356099"],
+    "resolved": ["30356099"],
+    "resolved_depth_declaration": "PMID 30356099 (Piard 2019) is reference 10 of this paper and was read TODAY at partial_fulltext_read — receipt FTR-20260811-30356099-01, all prose sections read, figures captions_only because no image was on disk. Depth stated because the validator's predicate only asks whether the field is non-empty. The other two gene-direct references — White et al. on a WWOX multi-exon deletion in 46,XY DSD, and a WWOX expression reference — could not be resolved to PMIDs offline from their citation strings and are NOT invented; they are described rather than listed.",
+    "queued": [],
+    "enumeration_method": "12 <ref> elements read off the deposit. Three concern WWOX directly. The citation strings carry no PMIDs, so only the one matched against a paper already in this corpus is listed.",
+    "cross_check_result": "🔴 THE ONE RESOLVED REFERENCE IS THE ONE THAT CONTRADICTS THE PAPER. Denkboy cites Piard for WWOX's pleiotropy; Piard's own Discussion concludes that 'the implication of heterozygous SNVs/CNVs in the molecular etiology of DSD is questionable' and that 'DSD has not been reported in heterozygous parents of patients with WOREE syndrome'. The citation is accurate as far as it goes and the source's verdict on the very question this paper asks is not carried across."
+  },
+
+  "corpus_crossquery": { "performed": true, "query": "prior receipts and manifests for 42082822", "hits": 0, "finding": "No prior receipt, no prior manifest. Identifiers read from the artifact's own <article-id> block before being written." },
+
+  "retraction_check": { "performed": true, "at": "2026-08-11", "route": "the article is a 2026 publication not present in the local PubMed corpus harvest of 2026-08-06, so the corpus route CANNOT answer this and is recorded as unable rather than silently passed; no correction or retraction notice appears in the deposit itself", "result": "no notice in the artifact; corpus route unavailable for this publication date" },
+
+  "source_artifacts": [
+    { "path": "files/fulltext/PMID42082822_Denkboy2026_EPMC.xml", "sha256": "7dba7f1de5673796b1795838b5d34423d2d419ef68f0e4c6fbf6b634d832f300", "kind": "article_text" },
+    { "path": "files/figures/PMID42082822/43032_2026_2112_Fig1_HTML.jpg", "sha256": "a47715c3ea37fea4c2310d1c6f0ffea0256fb062cb605e4cb7dc6923b1e4f843", "kind": "figure" }
+  ],
+
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC XML, CC BY, digest re-verified in this worktree; the single figure acquired via the REST supplementaryFiles endpoint and fingerprinted.",
+    "abstract_anchoring_waived": "No evidentiary locator uses the abstract; all ten candidate snippets were tested against the separated abstract surface.",
+    "entries": [
+      {
+        "proposition": "🔴 THE VARIANT DOES NOT SEGREGATE WITH THE PHENOTYPE, AND THE PAPER'S OWN SENTENCE SAYS SO. The father carries the IDENTICAL HOMOZYGOUS GENOTYPE. A recessive allele offered as the cause of a phenotype, present in homozygous form in a parent who fathered a child, is a co-segregation failure — and it is stated in the Results without being treated as one.",
+        "snippet": "the patient is homozygous for the WWOX c.421G > A variant, with the father being homozygous and the mother heterozygous for the same mutation",
+        "surface": "body", "artifact": "files/fulltext/PMID42082822_Denkboy2026_EPMC.xml",
+        "anchor": "Results, second sentence", "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — the first question to ask of any candidate recessive allele is whether it tracks the phenotype in the family"
+      },
+      {
+        "proposition": "🔴 AND THE FATHER'S PHENOTYPE IS AN INFERENCE FROM A TREATMENT RECORD, NOT AN EXAMINATION. He declined the examination and reported himself normal. The paper's reasoning is that an IVF conception with a male factor, in the absence of maternal pathology, implies 46,XY DSD in him. PREMISE_TAG: PREMISE: INFERENZA. Male-factor infertility has many causes, most of them not DSD, and the one observation that would have settled it was refused. This is the load-bearing premise of the whole report: if the father is unaffected, the variant is a benign homozygous finding in this family.",
+        "snippet": "The father was diagnosed with the variant, but he refused a genital examination and verbally stated that his testicles and penis were normal",
+        "surface": "body", "artifact": "files/fulltext/PMID42082822_Denkboy2026_EPMC.xml",
+        "anchor": "Results, closing paragraph, repeated almost verbatim in the Discussion",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — the authors report it honestly, which is why the reading can be made at all"
+      },
+      {
+        "proposition": "🔴 AND THE PANEL SHOWS THE TWO HOMOZYGOTES ARE NOT ALIKE, WHERE THE TEXT SAYS THEY ARE. The Results state that Western blot revealed significantly reduced WWOX 'in both the proband and the father'. The quantification in panel E does not show two comparable reductions: the PROBAND'S BAR IS AT OR NEAR ZERO while the FATHER'S sits at roughly two-thirds of the controls and clearly above the proband, with the mother at control level. Two individuals with an IDENTICAL homozygous genotype and a roughly ten-fold difference in protein. INFERENZA: whatever sets WWOX protein level in this family, the c.421G>A genotype does not determine it — which removes the mechanism the paper offers for the phenotype at the same time as the pedigree removes the genetics.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1 panel E. Above, a two-row blot across five lanes labelled Mother, Proband, Father, Control 1, Control 2, annotated 45 kDa for β-Actin and 46 kDa for WWOX. Below, a bar chart titled WWOX with y-axis 'Protein Quantity' and five bars in the order Control 1, Control 2, Proband, Father, Mother: Control 1 and Control 2 are the tallest and comparable, the PROBAND bar is at or near the axis, the FATHER bar reaches roughly two-thirds of the control height and plainly exceeds the proband, and the Mother bar is comparable to the controls. Significance brackets carrying single and double asterisks span several pairs, with a legend giving p < 0.05 and p < 0.001.",
+        "surface": "figure", "artifact": "files/figures/PMID42082822/43032_2026_2112_Fig1_HTML.jpg",
+        "anchor": "Figure 1 panel E, blot and quantification",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[3]",
+        "contradicts_needle": "significantly reduced WWOX protein levels in both the proband and the father",
+        "found_or_sought": "sought — opened the panel to see how alike the two homozygotes were, because the text asserting they were alike is what the mechanism rests on"
+      },
+      {
+        "proposition": "THE TEXT'S CLAIM ABOUT THE TWO HOMOZYGOTES, RECORDED AS THE TARGET OF THE PANEL ABOVE.",
+        "snippet": "Western blot analysis revealed significantly reduced WWOX protein levels in both the proband and the father compared to healthy controls",
+        "surface": "body", "artifact": "files/fulltext/PMID42082822_Denkboy2026_EPMC.xml",
+        "anchor": "Results, describing Figure 1E", "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 THE CONTROL COHORT IS ROUGHLY TWENTY-FIVE TIMES TOO SMALL TO MEAN WHAT IT IS SAID TO MEAN, AND THE ARITHMETIC IS THE PAPER'S OWN. Absence in 100 healthy controls is offered as evidence of pathogenicity. The paper also reports the gnomAD allele frequency as 2.04e-4. One hundred people carry 200 alleles, so the EXPECTED NUMBER OF CARRIERS IN THAT COHORT IS 200 × 2.04e-4 = 0.04. Finding the variant absent is precisely what would happen for ANY variant this rare, pathogenic or benign — the observation has no power to discriminate. PREMISE_TAG: PREMISE: DEFAULT_FROM_TEXTBOOK — 'absent in controls means pathogenic' is the unstated rule, and it is false at this cohort size. This is checkable in one multiplication from two numbers printed in the same paper.",
+        "snippet": "This mutation was absent in 100 healthy pediatric controls, suggesting its potential pathogenicity",
+        "surface": "body", "artifact": "files/fulltext/PMID42082822_Denkboy2026_EPMC.xml",
+        "anchor": "Results, opening paragraph; the allele frequency is in Table 1",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — a control-cohort claim is arithmetic, and arithmetic against a stated frequency is the cheapest audit available"
+      },
+      {
+        "proposition": "🔴 AND THE PAPER'S OWN TABLE RECORDS THAT THE DATABASES DISAGREE, INCLUDING WITH ITSELF. Table 1 gives PolyPhen 'probably damaging 0.999' and SIFT 'Tolerated (0.080)' on the same line, and ClinVar as 'Conflicting classifications of pathogenicity — Uncertain significance; Benign; Likely benign'. So an existing submitter set calls this variant BENIGN or LIKELY BENIGN, and one of the two in-silico tools calls it tolerated. The Discussion acknowledges the PolyPhen/SIFT discordance; the ClinVar benign calls are printed in the table and are not discussed anywhere. Recorded because a corpus that later cites this paper for a WWOX-DSD link would inherit a variant its own reference lists as possibly benign.",
+        "snippet": "Probably damaging: 0.999 (sensitivity: 0.14; specificity: 0.99)/Tolerated (0.080)",
+        "surface": "body", "artifact": "files/fulltext/PMID42082822_Denkboy2026_EPMC.xml",
+        "anchor": "Table 1, the in-silico row for WWOX c.421G>A",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — read the table rather than the sentence summarising it, and the table carries more than the sentence does"
+      },
+      {
+        "proposition": "🔴 AND THE PROBAND CARRIES A LARGE ALTERNATIVE EXPLANATION THAT THE PAPER NEVER WEIGHS. Born at 29+5 weeks at 975 g from an IVF pregnancy to a preeclamptic mother, with weight, height and head circumference all below the 3rd percentile. Extreme prematurity, low birth weight and intrauterine growth restriction are among the best-established risk factors for hypospadias and cryptorchidism — the two features on which the genetic claim rests. INFERENZA: the phenotype has a common, well-documented non-genetic explanation present in this patient in severe form, and the report neither adjusts for it nor mentions it as an alternative. That is a missing negative rather than a wrong positive, which is the harder kind to notice.",
+        "snippet": "born to a 36-year-old G1P1 preeclamptic mother at 29 + 5 weeks of gestation with an APGAR score of 5–8 and a weight of 975 g, via cesarean section from an in vitro fertilization (IVF) pregnancy",
+        "surface": "body", "artifact": "files/fulltext/PMID42082822_Denkboy2026_EPMC.xml",
+        "anchor": "Case Presentation", "panel_text_relation": "text_only",
+        "found_or_sought": "sought — asked what else could produce this phenotype in this patient, which is the question a single case report has to answer and this one does not"
+      },
+      {
+        "proposition": "A MECHANISTIC CLAIM THAT ARRIVES WITHOUT A CITATION AND MATTERS TO THIS CORPUS. The Discussion asserts that WWOX interacts with p73 AND with steroidogenic factor-1 (NR5A1). The p73 interaction is well established and this corpus has now read its primary sources — PMID 16061658 page-adjudicated this morning shows WWOX inhibiting YAP-mediated p73 coactivation, and PMID 23370280 the ΔNp63α arm. THE SF1/NR5A1 INTERACTION IS NOT SUPPORTED BY ANY CITATION IN THIS SENTENCE, and NR5A1 is the gene the paper's own Introduction names as an established 46,XY DSD gene. Pairing an established interaction with an unsourced one inside a single clause is how an unsourced claim inherits the credibility of its neighbour. Flagged, not refuted: it may well be real and it is not evidenced here.",
+        "snippet": "WWOX interacts with transcription factors such as p73 and steroidogenic factor-1 (SF1) (NR5A1)",
+        "surface": "body", "artifact": "files/fulltext/PMID42082822_Denkboy2026_EPMC.xml",
+        "anchor": "Discussion, the mechanistic paragraph", "panel_text_relation": "text_only",
+        "found_or_sought": "sought — checked which half of a two-part mechanistic claim carried support, having read the p73 primary sources earlier today"
+      },
+      {
+        "proposition": "AND THE AUTHORS STATE THEIR OWN LIMITATION PLAINLY, WHICH IS WHY THIS READING IS A CALIBRATION AND NOT AN ACCUSATION. A single case, functional validation limited to a Western blot, and the in-silico discordance acknowledged. The paper asks to be read as a candidate observation. The entries above are what a corpus must record so that it IS read that way rather than cited as a WWOX-DSD link — which is the risk, because a 2026 title asserting the link will travel further than a 2019 cohort questioning it.",
+        "snippet": "A notable limitation of this study is its single-case design",
+        "surface": "body", "artifact": "files/fulltext/PMID42082822_Denkboy2026_EPMC.xml",
+        "anchor": "Discussion, limitations paragraph", "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence, and it is the sentence that keeps this reading proportionate"
+      }
+    ]
+  }
+}

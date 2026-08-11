@@ -265,7 +265,84 @@ through an authorised `BATCH_COMMIT`.
 **Priority:** HIGH
 **Why:** tutti e tre **WWOX-diretti** e citati dentro una fonte già letta integralmente. Il rif. 87 è la base della via trascrizionale alternativa che regge [[dismissal_ledger_current#DIS-008 — «La calpaina è una via di degradazione/turnover per WWOX» → ⏸️ **NON STABILITA (rigettata come affermazione, non come possibilità)**]]: finché non è letto, quella via resta plausibile ma non verificata alla fonte.
 **Current status:** debito di espansione multi-hop **non svolto** nella sessione 2026-07-26.
-**Next action:** risolvere i tre riferimenti a PMID, dedup contro il registry, poi full text
+**Next action originale:** risolvere i tre riferimenti a PMID, dedup contro il registry, poi full text
+
+---
+
+### 🟢 `21075834` — superficie ARRIVATA il 2026-08-11, preflight fatto, **lettura non aperta**
+
+🔴 **Correzione di instradamento, da leggere per prima.** Questo paper mi è stato assegnato come
+`FT-021`. **`FT-021` è un altro lavoro** — `PMID 24308844`, Schuchardt 2013, su WWOX–ErbB4.
+O'Keefe sta **qui, in `FT-020`**, dove è dal 2026-07-26. Scrivere la consegna sotto l'etichetta
+sbagliata avrebbe sovrascritto una voce esistente e distinta: **l'ID di coda non è un nome, è un
+indirizzo**, e va verificato prima di scriverci dentro come si verifica un percorso di file.
+
+**E la riga `Surface: PMID 21075834 · absent` qui sopra è ora stale.** Non la riscrivo dentro il
+blocco originale — resta com'era al 2026-07-26 — ma **è superata da quanto segue.**
+
+#### ① Cosa è sul disco adesso, e non va ri-derivato
+
+    files/fulltext/PMID21075834_OKeefe2011_EPMC.xml
+      142 106 byte · sha256 d8ff045d14815ed237c52e468b50cfda32cc63b183ab1708e477c29e3a1b207b
+      PMCID PMC3016910 · DOI 10.1093/hmg/ddq495 · Hum Mol Genet 20(3):497-509
+
+    files/figures/PMID21075834/   ← 🔴 SUPERFICIE IMMAGINE GIÀ ACQUISITA, non rifarlo
+      ddq49501.jpg  bd2db410…   ddq49502.jpg  cf8e6e09…   ddq49503.jpg  030c8a6d…
+      ddq49504.jpg  5e9a463d…   ddq49505.jpg  81852e5a…
+      supp_ddq495_ddq495supp.pdf  3ebea937…  (772 KB, Supplementary Figs S1-S4 e Tables S1-S2)
+
+**Rotta usata:** `https://www.ebi.ac.uk/europepmc/webservices/rest/PMC3016910/supplementaryFiles`
+→ `200`, ZIP da 1 100 720 byte, **cinque JPEG più il PDF supplementare in una sola chiamata**.
+È la rotta che a `30356099` è mancata e che gli ha fatto rendere **zero pannelli**. Qui è già
+spesa.
+
+**Licenza: `CC BY-NC`** (Creative Commons Attribution Non-Commercial), letta dal blocco `<license>`
+dell'artefatto. Diversa da `CC BY` di `31543760` e da `CC BY-NC-ND` di `39952983`: **non darla per
+continua fra depositi.** Irrilevante per leggere, vincolante se un giorno si pubblicasse un
+pannello.
+
+#### ② Il denominatore dei pannelli, **contato leggendo le didascalie**
+
+| figura | pannelli | cosa è |
+|---|---|---|
+| Fig 1 | **1** | 2D-DIGE, spot proteici alterati nei due mutanti `Wwox` e in sovraespressione |
+| Fig 2 | **1** | diagramma delle vie metaboliche (TCA, glucosio, etanolo, lipidi, ossidoriduzione) |
+| Fig 3 | **3** (A,B,C) | interazione genetica `Wwox`–`CG6439/Idh`; C è la correlazione `WWOX`/`IDH1` in 15 linee tumorali umane |
+| Fig 4 | **4** (A,B,C,D) | `Wwox`–`Sod`: vitalità, curve di sopravvivenza, qPCR in larve, qPCR in HEK293 |
+| Fig 5 | **2** (A,B) | ROS in larve per FACS, con soglia arbitraria di fluorescenza |
+| | **11** | **denominatore** |
+
+🔴 **Non fidarti del matcher automatico su questo deposito.** Il regex sulle lettere restituisce
+`a` e `h` da parole comuni dentro le didascalie di Fig 2, 4 e 5 — cioè **lettere spurie**, non
+pannelli. Undici è contato a mano. Il numero del parser qui è rumore, non un limite inferiore.
+
+#### ③ La superficie, verificata e non assunta
+
+    ref-list DENTRO il <body>: SÌ, 12 699 caratteri
+    <ref> 54 · <article-title> >45 caratteri: 0   ← 🔴 la sonda affidabile NON PUÒ GIRARE
+
+Come Piard, Kosla e Kim; a differenza di Denkboy. **Non produrre un numero dalla sonda a fette
+corte** — è stata mostrata inaffidabile l'11 agosto (dà `1/5`, `5/5` e un falso positivo). Ciò
+che è certo per contenimento è che la bibliografia sta dentro l'elemento `<body>` e quindi dentro
+qualunque superficie derivata: **nessun locator vada preso da lì.**
+
+    in-tree surface 61 856 · <body> solo 59 789 · abstract 1 305
+
+Sezioni: `INTRODUCTION 5 686` · `RESULTS 24 148` · `DISCUSSION 6 195` · `MATERIALS AND METHODS
+9 897`, più apparato. **I Results sono il 40% del corpo**: è un paper a molti esperimenti, non a
+molte parole di discussione.
+
+#### ④ Perché questo paper, e cosa aspettarsi
+
+È l'**ortologo Drosophila di WWOX nel metabolismo aerobico e nei ROS** — cioè la fonte primaria
+dietro due cose che il corpus già porta: l'interazione con l'**isocitrato deidrogenasi** citata da
+`39952983` letto oggi, e l'asse ROS che quello stesso paper usa per spiegare il sonno notturno.
+Fig 4D è particolarmente notevole: **`SOD1` sovraespressa alza `WWOX` endogeno in HEK293, e il
+mutante `G37R` no** — una relazione a senso inverso rispetto a quella attesa, in cellule umane.
+
+**Next action:** aprire da sessione fredda. Superficie e immagini ci sono, il denominatore è 11,
+la `ref-list` è dentro il corpo. Il supplementare è un **PDF**, quindi `article_binary`: può
+essere ispezionato come figure ma **non può portare locator testuali** (regola 5c).
 
 ---
 
@@ -1895,10 +1972,13 @@ toccano direttamente due locator già scritti — poi Fig 8 ri-derivata, poi i q
 
 ---
 
-## FT-063 — I due paper fondativi del KO che il commentary invoca e questo corpus non ha letto
+## FT-068 — I due paper fondativi del KO che il commentary invoca e questo corpus non ha letto
 
-> **Rinumerata da `FT-057` il 2026-08-11:** `FTR-20260810-29808465-01` e
-> `FTR-20260810-34634460-02` nominano `057`, questa voce non è nominata da nessuna ricevuta.
+> **Rinumerata due volte il 2026-08-11: `057 → 063 → 068`.** La prima perché
+> `FTR-20260810-29808465-01` e `FTR-20260810-34634460-02` nominano `057`; la seconda perché
+> **tre ricevute portano `outputs: […#FT-063]`**, un collegamento che il LINT verifica. Questa
+> voce non è nominata da alcuna ricevuta, in nessuna delle due occasioni: **è per questo che si
+> muove sempre lei, e non perché conti meno.**
 
 **Papers:** PMID 18487609 / DOI 10.1074/jbc.M800855200 — Aqeilan RI *et al.*, *JBC*
 2008;283:21629–39, PMC2490770 — *The WWOX tumor suppressor is essential for post-natal survival
@@ -1975,7 +2055,7 @@ Leggere `18487609` per primo. Budget figure dichiarato *prima* di aprire.
 
 ---
 
-## FT-064 — Il campo che ho coniato non è controllato da nulla, e lo dico prima che sembri verificato
+## FT-069 — Il campo che ho coniato non è controllato da nulla, e lo dico prima che sembri verificato
 
 > 🔴 **Rinumerata da `FT-058` il 2026-08-11, ed è l'unico caso in cui la regola non ha deciso
 > da sola.** Entrambe le voci in collisione erano nominate da una ricevuta incatenata; ha
@@ -2050,12 +2130,12 @@ ne portano). Figura unica ispezionata a 1302×1051 in due metà. `FTR-20260810-2
    `efetch`: `efetch` tiene le 8 didascalie fuori dal `<body>`. È la premessa non risolta della
    freccia ATM→ITCH. Domanda al paper: la fosforilazione è diretta, e l'effetto sull'attività
    ligasica è **misurato o inferito**? Se fosse inibitorio, il modello di `27308504` si rovescia.
-2. **`FT-063` · `PMID 18487609` — la via PMC è chiusa**, `efetch` dà 200 e nessun corpo. Unica
+2. **`FT-068` · `PMID 18487609` — la via PMC è chiusa**, `efetch` dà 200 e nessun corpo. Unica
    strada: `PMID18487609_Aqeilan2008_PMC.html`, già nel `files/` condiviso, **mai ispezionato**.
 3. **`FT-053`** — ristretta oggi: ITCH→stabilizzazione è ora *misurata* (`24550385`, lettore A);
    K274→emivita resta su `Fig. S7B` irraggiungibile.
 4. **`FT-055`** — Figure 1 e 7 di `24308844`, **e le didascalie di tutte e sette**, mai viste.
-5. **`FT-064`** — il campo coniato non è controllato da nulla.
+5. **`FT-069`** — il campo coniato non è controllato da nulla.
 6. **Non mio da riparare:** `24308844` e `38182577` falliranno alla fusione finché questo ramo
    porta un `deepdive_manifest.py` più vecchio della regola. Appartiene a chi possiede il contratto.
 
@@ -2086,8 +2166,10 @@ ne portano). Figura unica ispezionata a 1302×1051 in due metà. `FTR-20260810-2
 > **Conseguenza dichiarata invece che nascosta:** la frase di `FTR-20260810-27308504-01`
 > *«…is offered as the argument for building one, in FT-058»* adesso nomina una voce che parla
 > d'altro. La ricevuta è dentro la catena e non si riscrive: **la voce che quella frase
-> intendeva è `FT-064`**. È un puntatore stantio, ed è registrato qui perché un puntatore
-> stantio scritto è un debito, mentre uno silenzioso è un errore.
+> intendeva è `FT-069`**, dopo un secondo spostamento nel pomeriggio. È un puntatore stantio,
+> ed è registrato qui perché un puntatore stantio scritto è un debito, mentre uno silenzioso è
+> un errore. 🔴 **E un debito dichiarato va aggiornato quando il bersaglio si muove ancora**,
+> altrimenti la dichiarazione stessa diventa la bugia che doveva prevenire.
 >
 > Spostate quindi le quattro voci dell'altro lato: `057 → 063`, `058 → 064`, `059 → 065`,
 > `060 → 066`, con tutti i riferimenti mobili ri-puntati nello stesso passaggio.
@@ -2508,8 +2590,54 @@ inferiore**, mai come denominatore.
 - Il legame con `DIS-001`: se WWOX modula il checkpoint ATR oltre che ATM, l'argomento
   *«inibire ITCH toglierebbe a WWOX la funzione DDR»* si allarga o si precisa.
 
-**Next action:** aprire il documento. Preflight, superfici, impronte e misura dell'estrattore
-sono già qui sopra.
+### ✅ LETTO INTEGRALMENTE il 2026-08-11
+
+Receipt **`FTR-20260811-26675548-01`**, `complete_fulltext_read`. Manifest `PMID26675548.json`,
+**16 locator, 8 artefatti**, `MANIFEST STRICT PASS`. Copertura **16/16 pannelli**, contati
+**leggendo** le didascalie (il censimento ne dava 10 e rifiutava: perde il pannello A di ognuna).
+
+**Superficie figure: rotta scelta per immagine.** Quattro stream su sei hanno `smask ≠ 0` →
+**renderizzati** dalla pagina a 300 dpi; due con `smask = 0` → estratti. 193–286 ppi.
+
+🔴 **La nota ⑤ di questa voce era già obsoleta quando l'ho aperta**: la fusione di `main` ha
+portato il fix del join, `(Fig` dà **26** e non 19. Trovato perché ho rimisurato sull'artefatto
+invece di fidarmi della mia stessa nota di ieri.
+
+### 🔴 La domanda dell'assegnazione: ATR non è mai misurato
+
+Lista anticorpi: CHK1, p-CHK1(S296), p-H2AX, ATM, p-ATM(S1981), KAP1, p-KAP1, p-H3, WWOX,
+GAPDH, HSP90, lamin. **Nessun anticorpo anti-ATR.** Zero occorrenze di `p-ATR`, inibitore di
+ATR, knockdown di ATR. **L'unico inibitore usato è KU-55933, che è di ATM.** Ogni affermazione
+su «ATR checkpoint» è **p-CHK1 come proxy**.
+
+| reperto | dove |
+|---|---|
+| 🔴 l'unico esperimento di perturbazione **impoverisce ciò che dovrebbe separare**: 48 h di inibitore ATM azzerano p-ATM e p-KAP1, quasi azzerano **ITCH** e riducono **WWOX** — «segnalazione ATM-dipendente» e «l'inibizione cronica ha depauperato il modulo» predicono lo stesso blot | entries[1]–[4] |
+| 🔴 **lo schema di Fig 6 marca con un `?`** proprio la freccia WWOX→CHK1 che il titolo afferma | entries[5] |
+| 🔴 `K274R` non fa rescue — ma nel pannello 2C è **espresso meno** del WT; il controllo che toglie il confondimento è la **Figure S4**, dietro il proof-of-work | entries[6], [7] |
+| 🔴 pannello 4C: `K274R` **è** ubiquitinato (ladder chiaro), il testo dice *«but not»*. Coerente con `24550385` (predominante ≠ esclusivo) — e **meglio controllato**: input anti-GST pari su 12 corsie | entries[9], [10] |
+| 🔴 *«comparable levels of WWOX in WT e KO-Ad-WWOX»* — il blot 3C mostra il ricostituito **nettamente più alto**: il rescue è supra-fisiologico | entries[11], [12] |
+| l'induzione è **1,5–3,4×** e transitoria: due pannelli finiscono **sotto** il basale (0,6 a 24 h; 0,3 a 6 h) | entries[14] |
+| il risultato più pulito, senza proxy: **2,8 ± 1 contro 5,7 ± 1,7** rotture per cellula | entries[13] |
+
+### La domanda di `FT-062`, risposta
+
+Questo paper riassume `24550385` come *«K63-linked ubiquitination resulting in its
+**stabilization**»*. **K63, stabilizzazione — non «proteasomal».** Quindi la formula *«direct
+ITCH/proteasomal stabilization»* del commit candidate **non viene né da qui né da `24550385`**.
+
+### 🔴 Supplementari: `unavailable`, e il buco è portante
+
+`oncotarget-07-4344-s001.pdf` (Figure S1–S6 + Table S1) sta a `/articles/instance/4826209/bin/`
+dietro lo **stesso challenge proof-of-work** di `FT-059`. **Non aggirato.** Dentro c'è la
+**Figure S4**, unico sostegno alla claim che K274 porti una funzione di segnalazione oltre la
+stabilità — cioè ciò che decide se la leva di `DL-THER-095` sia *«più proteina»* o *«ripristinare
+una modificazione specifica`*.
+
+**Next action:** procurarsi `s001.pdf` da browser e **riaprire `entries[7]` per primo**. Debito
+multi-hop: 5 referenze gene-dirette né lette né in coda — `16187332` · `15798093` · `23254778` ·
+`25891642` · `25245215`. E resta aperta la domanda di provenienza su Oncotarget 2016, che
+**non ho verificato** e che non ho asserito.
 
 ---
 
@@ -2697,3 +2825,446 @@ riscoperta a ogni preflight.**
 **Next action:** `31543760` (11 figure, `CC BY`) e `21075834` sono pronte alla lettura. Per
 `FT-007` e `FT-009` serve la rotta bioRxiv, che **non ho eseguito**. Per le due `pdf_only`, screen
 `ToUnicode` prima di qualunque locator. Per le sei senza PMCID, via editore.
+
+---
+
+> 🔴 **Nota di merge, 2026-08-11 — quinta collisione di numerazione, e la regola decide netta
+> in un verso solo.** Il blocco che segue alloca `FT-063` e `FT-064`, entrambi già usati da
+> voci che io stesso avevo rinumerato stamattina.
+>
+> **Tre ricevute incatenate portano `outputs: […#FT-063]`** — collegamento strutturale che il
+> LINT verifica — e due nominano `FT-064` in prosa. Sono tutte del blocco che segue. Le mie
+> due voci non sono nominate da nessuna ricevuta.
+>
+> Quindi **si muovono le mie**: `063 → 068` e `064 → 069`, con i loro cinque e tre riferimenti
+> mobili ri-puntati nello stesso passaggio. È il verso opposto alla collisione `FT-061` di
+> poche ore fa, dove a decidere fu il conteggio dei riferimenti perché la catena taceva: qui
+> la catena parla, e batte il conteggio.
+
+---
+
+### 🔴 LETTO il 2026-08-11 — e **l'attribuzione dello stato è invertita nei ruoli**
+
+Receipt `FTR-20260811-23370280-01`. Manifest `PMID23370280.json`, **12 locator**, `MANIFEST
+STRICT PASS`. Copertura: abstract, introduzione, metodi, risultati, discussione, **23/23
+pannelli**, 66 referenze enumerate.
+
+**In questo paper WWOX non è il substrato di ITCH: ne è l'ANTAGONISTA**, e la proteina
+stabilizzata è **ΔNp63α**.
+
+> *«Altogether, these results suggest that **WWOX antagonizes ITCH** effect on ΔNp63α and
+> **stabilizes its protein levels**»*
+>
+> *«we show that **WWOX competes with ITCH** on binding to ΔNp63α and inhibits ΔNp63α
+> ubiquitination mediated by ITCH»*
+
+Il commit candidate che cita questo paper per *«direct ITCH/proteasomal stabilization»* legge un
+risultato su **WWOX che impedisce a ITCH di degradare una terza proteina** come se fosse su ITCH
+che stabilizza WWOX. **Substrato, stabilizzatore e direzione: tutti e tre invertiti.**
+
+**Le assenze misurate lo rendono certo, non probabile:** `K63` **zero** occorrenze · `Lys-63`
+**zero** · nessuna frase descrive WWOX come ubiquitinato. Ciò che c'è: `ITCH` 26, `stabilization`
+8, `proteasome` 6 — **e tutte riguardano ΔNp63α**.
+
+### La domanda di questa voce, risposta: le due parole non sono lo stesso meccanismo
+
+| | substrato | catena | esito |
+|---|---|---|---|
+| `24550385` · `26675548` | **WWOX** | **K63** | stabilizzazione, **indipendente dalla degradazione** |
+| **`23370280`** (questo) | **ΔNp63α** | proteasoma | degradazione, **bloccata da WWOX** |
+
+**`DL-THER-095` non si muove**: poggia su `24550385` (CHX chase, MEF `Itch⁻/⁻`, `0.36`), non su
+questo paper. A muoversi è l'attribuzione nel commit candidate — di un altro attore.
+
+### 🔴 E il frame che riconcilia i due, che è degli autori
+
+> *«WWOX can **compete** with other WW domain-containing proteins, like YAP and ITCH, for binding
+> common target proteins, such as ErbB4 and p73»*
+
+WWOX è **insieme** substrato di ITCH (K63, stabilizzante) **e** competitore di ITCH per i suoi
+altri substrati. Entrambi passano da WW1/PY, quindi entrambi possono valere.
+
+🔴 **`INFERENZA` con conseguenza terapeutica, che nessuno dei due paper dà da solo:** alzare
+l'attività di ITCH per stabilizzare WWOX **aumenterebbe insieme** la degradazione ITCH-mediata
+dei suoi altri bersagli — ΔNp63α qui, p73 nella Fig 7 di `24550385`. **Una leva su ITCH non è
+selettiva per WWOX.**
+
+### Altri reperti
+
+- 🔴 **zero statistica in tutto il paper**: nessuna sezione, nessun p-value, nessun test, nessun
+  `n`. Barre con `STDV`, il pannello 6d senza barre — e il testo usa *«significantly»* quattro
+  volte per confronti mai testati;
+- *«**exclusive** presence of GAPDH and lamin»*: nel pannello 4a **GAPDH è in tutte e tre le
+  corsie nucleari**;
+- la trappola annunciata da questa voce ha retto: **6 figure, 0 dentro il `<body>`**;
+- 🔴 il censimento rifiutava su tutte e sei perché **questo deposito usa lettere minuscole** e il
+  matcher cerca `[A-J]`. Quinta istanza della stessa classe;
+- **superficie figure: la pagina, non lo stream.** Il PDF ha **dieci frammenti** a 82–252 ppi:
+  estrarli darebbe pezzi senza etichette. Sei pagine renderizzate a 300 dpi. Tutti i frammenti
+  hanno `smask = 0`, quindi l'estrazione sarebbe stata *fedele* — sarebbe stata l'**unità
+  sbagliata**. Fedeltà e oggetto giusto qui divergono.
+
+**Perché la ricevuta dice `partial` mentre ogni sezione dice `read`:** il ledger ha rifiutato
+`complete` per `multihop: references queued but not resolved` — **nessuna** delle sei referenze
+gene-dirette ha una ricevuta su alcun ramo. Il gate ha ragione e non l'ho aggirato: un paper il
+cui intero vicinato gene-diretto è non letto ha un buco reale nel multi-hop. Si chiude leggendone
+una, non rietichettando questa.
+
+**Next action — RISOLTA il 2026-08-11.** Il gate si è chiuso leggendone una, esattamente come
+diceva questa voce. `18487609` è stato letto **completamente** (32/32 pannelli) ed è una delle sei
+gene-dirette; `16061658` è passato da superficie rifiutata ad aggiudicazione di pagina. Receipt
+`FTR-20260811-23370280-02`, **`complete_fulltext_read`**. Manifest `PASS` con **0 lacune** sotto
+due validatori indipendenti.
+
+### ✅ `23370280` — da `partial` a `complete`, **senza rileggere**
+
+🔴 **Il documento era già stato letto per intero** all'evento `-01`: ogni sezione, 23/23 pannelli,
+66 referenze. `partial` non era mai stato un giudizio sulla lettura — era il gate multi-hop. Per
+questo la receipt `-02` porta l'`analysis_at` **della lettura originale** (07:35Z) e non di adesso:
+attesta quell'analisi, non una seconda passata.
+
+**E il ledger non ha un vocabolario per questo evento**, cosa che vale la pena dire invece di
+mascherarla: `record_kind` offre `contemporaneous_receipt`, `legacy_reconstruction`,
+`receipt_invalidation`; nessuno significa *«la lettura regge, un gate esterno che era aperto si è
+chiuso»*. Segnalato a Plan come osservazione di schema.
+
+### 🔴 Due identificatori sbagliati, miei, trovati dal ledger e non da una revisione
+
+| | registrato | corretto |
+|---|---|---|
+| receipt `-01` | `doi 10.1038/cddis.2013.**5**` | `10.1038/cddis.2013.**6**` |
+| manifest, `retraction_check` | `PMC356400**3**` | `PMC356400**6**` |
+
+**I registri canonici avevano ragione dall'inizio** — `paper_registry_current` e
+`literature_tracking_log_current` portano entrambi `PMC3564006 / 10.1038/cddis.2013.6`. Ho
+introdotto errori in un artefatto derivato che lo stato canonico registrava già correttamente,
+senza confrontarli.
+
+**Come è emerso, che è l'unico motivo per cui sarebbe mai emerso.** Non da una rilettura: dal
+fatto che scrivere una **seconda** receipt sullo stesso studio fa confrontare gli identificatori
+fra record. E il valore che il ledger ha rifiutato era **il mio nuovo**, anch'esso sbagliato —
+avevo scritto `10.1038/cddis.2012.192` a memoria invece di leggerlo dall'artefatto. **Una sola
+scrittura ha fatto emergere due errori indipendenti**, uno di otto ore e uno di pochi secondi.
+
+> **Un identificatore è l'unico campo che nulla a valle ri-deriva**: nessun locator vi dipende,
+> nessun digest lo copre. È esattamente per questo che un controllo di uguaglianza fra record
+> rende qui più che altrove.
+
+**E la verifica di ritrattazione andava rieseguita, non riscritta.** La sua rotta diceva *«PMC
+record for PMC3564003»*, un PMCID che **non compare nei 706 record del corpus**: nominava un
+oggetto che non posso dimostrare di aver visitato, mentre il risultato che riportava era giusto.
+Una verifica la cui rotta non è rieseguibile è un'asserzione travestita da verifica. Rieseguita
+offline sul record PubMed locale: `corrections` vuoto.
+
+### La correzione del DOI nel ledger **non** l'ho fatta — e il motivo è il ledger stesso
+
+Tre vie tentate, tutte e tre rifiutate **correttamente**:
+
+1. depositare il DOI giusto accanto a quello sbagliato → *«conflicting identifiers for the same
+   study»*. Un registro append-only non lascia che due record dissentano su **quale** paper
+   descrivono.
+2. `reread_reason: receipt_correction` → *«changed substantive fields: study_id, evidence_depth»*.
+   Una correzione non può ridichiarare in silenzio né l'identità di uno studio né la profondità di
+   una lettura. **Sono esattamente le due cose giuste da proteggere.**
+3. `record_kind: receipt_invalidation`, l'unico meccanismo che *può* cambiare l'identità → ma
+   **ritira la lettura**, e il suo stesso commento nel codice dice che ritirare una lettura
+   completa deve costare quanto ammettere di non averla fatta. Invalidare una lettura sana per un
+   refuso è sproporzionato, e non è una decisione che una sessione prende da sola.
+
+Quindi la receipt `-02` porta **solo il `pmid`** — corretto, ed è l'identificatore con cui tutto
+qui si risolve — e **non asserisce alcun DOI**, invece di ripetere un valore che sa sbagliato.
+**Gli identificatori corretti stanno dove stanno le correzioni**: nel manifest e nei canonici.
+La questione del ledger è dell'operatore.
+
+**Next action:** il debito residuo è `FT-063` — restano `17360458`, `17575124`, `15070730`,
+`12514174` gene-dirette non lette.
+
+---
+
+## FT-063 — Le tre referenze che chiudono il gate del multi-hop di `FT-062`
+
+**Papers:** PMID 18487609 · PMID 16061658 · PMID 12514174
+**Origine:** multi-hop di `FT-062` (`PMID 23370280`), 2026-08-11.
+**Priority:** **MEDIA-ALTA** — non per il contenuto in sé, ma perché **una sola di queste,
+letta, converte `FTR-20260811-23370280-01` da `partial` a `complete`**: il gate chiede almeno
+una referenza gene-diretta *risolta* e oggi nessuna delle sei ne ha una.
+
+| PMID | lavoro | perché |
+|---|---|---|
+| **16061658** | Aqeilan 2005 — *WW domain-containing proteins, WWOX and YAP, compete for interaction with ErbB4* | 🔴 **è l'istanza originale del frame di competizione WW1** che `23370280` generalizza e su cui poggia l'`INFERENZA` di `DL-THER-095` sulla non-selettività di una leva ITCH |
+| **12514174** | Chang 2003 — *JNK1 physically interacts with WW domain-containing oxidoreductase* | seconda istanza precoce della competizione al WW1 |
+| **18487609** | Aqeilan 2008 — *WWOX is essential for postnatal survival and normal bone metabolism* | fenotipo del knockout murino; tocca la sopravvivenza postnatale, asse rilevante per WOREE |
+
+Le altre tre gene-dirette di `23370280` sono già in coda ma non lette: `17360458` · `17575124` ·
+`15070730`.
+
+### 🔴 `16061658` — tentato il 2026-08-11: **superficie RIFIUTATA, nulla letto**
+
+Receipt `FTR-20260811-16061658-01`, **`retrieved_not_read`**. Non è una lettura parziale: **non
+è una lettura.** Ogni slot di copertura è `not_read`.
+
+**Preflight — nessuna superficie strutturata esiste:**
+
+| rotta | risposta |
+|---|---|
+| Europe PMC | `pmcid: null` · `inPMC: N` · `isOpenAccess: N` |
+| Unpaywall `10.1158/0008-5472.can-05-1150` | `is_oa: false` · `oa_status: closed` · `has_repository_copy: false` |
+| disco | `PMID16061658_Aqeilan2005.pdf`, 9 pagine, `sha256 075fdbbcd1e17c3b…` |
+
+**Screening del text layer → `SUSPECT`, e la superficie è rifiutata, non normalizzata:**
+
+- due controlli C0;
+- 🔴 **zero** occorrenze di `<` `>` `≤` `≥` `±` `×` `−` `µ` `α` `β` `Δ` su 44 465 caratteri, in un
+  paper che dice *«significan»* sei volte e riporta quantità di plasmide dappertutto. **Sospetto
+  per assenza.**
+
+**E il danno identificato carattere per carattere** — è questo che lo rende più di un verdetto:
+
+| pagina | testo estratto | testo stampato | n |
+|---|---|---|---|
+| 4 | `using 63\x01 objective lens` | `63×` | 1 |
+| 6 e legende | `(6.0 Ag)` · `(1.0 Ag)` · `(7.0 Ag)` | **`µg`** | **16** |
+| corpo | `p73h` · `h-dystroglycan` | **`p73β`** · `β-dystroglycan` | **7** |
+
+🔴 **`p73h` è il nome di un'isoforma corrotto in silenzio.** Venticinque corruzioni identificate,
+**ventitré printable** — 92%, contro l'«80% circa» che la regola 5d stima. **Uno scan sui
+caratteri di controllo ne avrebbe trovate 2 su 25 e avrebbe dichiarato la superficie pulita.**
+
+**Controllato e negativo, perché uno screening che riporta solo i positivi non è uno screening:**
+la firma `P 5 0.05` di `33914858` **non** compare (zero), e i nove `D` isolati sono genuini
+(FRA16D, pannello D, ciclina D1) — **non** `Δ` corrotti.
+
+### Conseguenza sulla rotta
+
+Regola 5d: una superficie `SUSPECT` **non si ripara** — una correzione a mano su sedici punti è
+indistinguibile da una riscrittura e verificabile da nulla. Non c'è superficie strutturata da cui
+ri-derivare né un PDF migliore da ottenere. **Quindi questo paper si legge solo dalla pagina
+renderizzata**, e ogni locator che produrrà è un'**aggiudicazione di pagina** secondo la 5e —
+digest del PDF, pagina, rettangolo in punti, dpi, SHA-256 dell'immagine, pubblicati come
+*ricetta* e mai come immagine. La macchina esiste (`regenerate_adjudications.py`) ed è arrivata
+in questo ramo con la fusione.
+
+🔴 **E tocca un'inferenza che ho scritto io ieri.** `16061658` è l'origine del **frame di
+competizione WW1** su cui poggia *«una leva su ITCH non è selettiva per WWOX»*. Quell'inferenza
+cita un frame la cui fonte primaria **oggi non può portare una citazione verificabile**. Non è
+per questo sbagliata: è **non ancorata**, e dirlo è lo scopo di questa voce.
+
+**Next action — ESEGUITA il 2026-08-11.** L'operatore ha autorizzato l'aggiudicazione **in
+sessione e di persona**, con vincoli. Receipt `FTR-20260811-16061658-02`,
+`partial_fulltext_read`; ricetta in
+[`page_adjudications/PMID16061658/`](page_adjudications/PMID16061658/adjudications.json);
+`regenerate_adjudications.py verify --pmid 16061658` → **PASS** (9 artefatti, 10 locator);
+manifest `MANIFEST STRICT PASS`, 0 lacune. **Il frame WW1 è ancorato.** Dettagli sotto.
+
+🔴 **Un'autorizzazione riferita da un pari era arrivata prima ed è stata declinata.** Il
+contenuto era corretto e il pari era in buona fede; ma un'autorizzazione **riportata** e una
+**data** sono due oggetti, che è la stessa distinzione su cui è girata la correzione di
+instradamento di stamattina. Registrato perché la prossima volta la domanda si ripresenterà
+identica.
+
+### Preflight delle altre due, fatto il 2026-08-11 **prima** di aprirle
+
+| | `18487609` Aqeilan 2008 | `12514174` Chang 2003 |
+|---|---|---|
+| PMC | 🟢 **`PMC2490770`, `inPMC: Y`** | 🔴 `pmcid: null`, non depositato |
+| sul disco | 🟢 `_PMC.html` **e** PDF | ⬜ assente |
+| Unpaywall | — | 🟢 `is_oa: true`, ibrido, PDF all'editore JBC |
+| superficie | 🟢 **PULITA**: 67 363 car., `×` 10 · `α` 3 · `β` 5, **zero** controlli C0, **zero** `Ag` | ⬜ da recuperare, poi **da schermare** |
+| porta il frame WW1? | 🔴 **NO** — `WW1` 0 · `ITCH` 0 · `competition` 0 · `ErbB` 2 | probabile (JNK1/WOX1, stessa era) |
+
+🔴 **Correzione a un instradamento.** Era stato riferito che `18487609` *«risponde 200 e non ha
+alcun `<body>`, metadati travestiti da full text»*. **Il file che abbiamo non è quello**: ha
+`<body>`, **otto blocchi `<figure class="fig">`**, EXPERIMENTAL/RESULTS/DISCUSSION, e supera la
+sentinella 5d. Chi l'ha misurato ha misurato un altro oggetto — probabilmente un fetch diverso o
+l'interstiziale proof-of-work. **Una risposta `200` non è una superficie, e nemmeno lo è una
+misura su un fetch che non è il file sul disco.**
+
+🔴 **E la distinzione che conta, perché le due cose sono state confuse una volta:**
+
+- **`18487609` chiude il gate multi-hop di `FT-062`** — è leggibile adesso, superficie pulita,
+  otto figure. Ma **non ancora** l'inferenza sulla non-selettività: non contiene il frame.
+- **Solo `16061658` (rifiutato) o `12514174` (da recuperare e schermare) possono ancorare quel
+  frame.**
+
+### ✅ `18487609` — **LETTO il 2026-08-11.** Receipt `FTR-20260811-18487609-01`, `complete_fulltext_read`
+
+`32/32` pannelli · manifest `PMID18487609.json` `MANIFEST STRICT PASS` (17 artefatti, 23 locator)
+· **il gate multi-hop di `FT-062` è chiuso**: `18487609` era una delle sei gene-dirette di
+`23370280` con `resolved` vuoto.
+
+Le cinque istruzioni qui sotto (①–⑤) hanno tenuto tutte, compreso il blocco `<style>` in testa al
+body. **Il preflight del ④ e del ⑤ va però corretto su due punti, entrambi difetti degli
+strumenti e non del paper** — vedi sotto.
+
+#### Cosa ha dato il paper
+
+| | reperto |
+|---|---|
+| 🔴 **`Runx2` cambia segno** | in vivo **+50%** femore / **+39%** calvaria (Fig 5A); ex vivo, osteoblasti calvariali isolati, **−70%** (Fig 6C). Stesso KO, stesso paper. |
+| 🔴 **la frase riassuntiva** | la Discussion scrive *«an indirect effect that leads to decreased RUNX2 expression **in bone** and in isolated osteoblasts»* — la metà «in bone» è contraddetta dalla sua stessa Fig 5A, e 400 parole prima la stessa Discussion scrive *«slightly increased in both calvarial and femoral bone»*. |
+| 🔴 **vincolo Track C** | **un nodo che cambia segno fra tessuto e cellula isolata non può portare un'ipotesi di riposizionamento.** Non è un'osservazione: è un vincolo. `RUNX2` a valle di `WWOX` non ha *un* segno, ne ha uno per preparazione. |
+| 🔴 **falso negativo sull'osteoclasta** | Fig 3D: RANKL porta `Wwox` da 1,00 a 0,77 (RAW264.7) e da 2,23 a 1,67 (midollo) — due sistemi, stessa direzione, barre d'errore dentro il tratto della barra, **nessun test nominato**. Il testo lo chiama *«did not result in significant changes»*, e su quel nullo poggia *«osteoclast activity is not impaired in vivo»*. `PREMISE: DEFAULT_FROM_TEXTBOOK`. |
+| 🔴 **legenda Fig 4B rotta** | tre barre per gruppo, **due etichette**: `WT HT` su grigio chiaro, `KO` su nero, e un terzo riquadro grigio scuro **senza etichetta**. Preso alla lettera **inverte il fenotipo**. L'ordine vero (chiaro=WT, nero=HT, scuro=KO) è recuperabile solo incrociando tre affermazioni direzionali del testo. |
+| **eterozigote** | silente a livello d'organismo, **−50% conn. dens. e −54% bone surface** a livello tissutale (Fig 3B, g15), barre non sovrapposte. Il testo *lo dichiara* — controllo tornato **negativo** per il paper. |
+| **tre scarti numerici** | `∼25%` misura 50/39% · `4-4.5-fold` misura 3,28× · `∼50%` misura 60%. Tutti in direzione lusinghiera. |
+| **lacuna dichiarata** | supplemental Tables 2-4 dietro il proof-of-work PMC: il *«50% lower calcium»* su cui poggia tutta l'attribuzione metabolica **non è stato visto**. |
+
+#### 🔴 Due difetti di strumento trovati durante questa corsa
+
+**a) Lo screen `ToUnicode` va fatto per-font, non per-file.** Questo PDF passa lo screen di file
+(7 font ce l'hanno) ed è comunque `SUSPECT` per assenza: i 13 senza mappa includono
+`MathematicalPi-One/Four` e `Universal-GreekwithMathPi`, **cioè esattamente i font che compongono
+`α β × ± µ Δ`**. Misurato su tutti e 55 i PDF locali: **11 con zero mappe ovunque** (lo screen di
+file li prende) e **10 in più con una mappa ma un font-simbolo senza** (li lascia passare), di cui
+tre `SUSPECT` per assenza — `18487609`, `24550385`, `26499798`. **Undici mine diventano ventuno.**
+Resta uno screening **negativo**: `17803050` e `33916893` hanno font-simbolo senza mappa e non sono
+sospetti. Il corpus è comunque pulito: dei 36 manifest **uno solo** ha un testo derivato da PDF
+(`42128308`), e quel PDF ha zero font senza mappa.
+
+**b) Il censimento pannelli non rifiuta su un buco nell'alfabeto.** Ha stampato `A,B,C,E` per la
+Figura 2 e ha restituito 27 senza protestare, perché la didascalia scrive *«higher magnifications
+in D showing»* e il regex vuole una virgola, un punto, una parentesi o una congiunzione dopo la
+lettera. **Una quarta condizione di rifiuto — lettere contigue a partire da A — va aggiunta a quel
+tool.** Il conteggio corretto è 28 lettere + 4 sub-pannelli nominati in 2B = **32**.
+
+---
+
+### ▶️ NEXT ACTION — scritta per una **sessione fredda**. Nulla di questa conversazione serve.
+
+**`18487609` è chiuso.** Le istruzioni ①–⑤ qui sotto restano come traccia di cosa è stato
+verificato prima di aprirlo, non come lavoro da fare.
+
+**① Cosa è già sul disco e NON va ri-derivato**
+
+    files/fulltext/PMID18487609_Aqeilan2008_PMC.html   212 336 byte   ← superficie TESTO
+    files/fulltext/PMID18487609_Aqeilan2008.pdf        741 044 byte   ← superficie FIGURE
+    PMCID PMC2490770 · inPMC: Y su Europe PMC e su NCBI idconv
+
+**② La superficie è già stata verificata l'11 agosto — non rifarlo, ma sappi cosa è stato
+guardato:** `<body>` presente · **8 blocchi `<figure class="fig">`** ·
+EXPERIMENTAL/RESULTS/DISCUSSION · 67 363 caratteri estratti dall'estrattore in albero ·
+sentinella 5d **PULITA** (`×` 10 · `α` 3 · `β` 5 · zero controlli C0 · zero `Ag`).
+🔴 **L'estrattore include il blocco `<style>` in testa al body**: i primi ~250 caratteri sono
+CSS. Non è corruzione, ma **non scegliere span vicino all'inizio**.
+
+**③ Quello che questo paper NON fa, e va saputo prima di aprirlo**
+
+> `WW1` **0** · `ITCH` **0** · `competition` **0** · `ErbB` **2** · `p73` **2**
+
+**Chiude il gate multi-hop di `FT-062`; NON ancora il frame WW1** su cui poggia il corollario di
+`DL-THER-095`. Le due cose sono state confuse una volta nell'instradamento: **non sono
+intercambiabili.** Se apri questo aspettandoti di ancorare la non-selettività, hai aperto il
+paper sbagliato.
+
+**④ Il budget si conta leggendo le didascalie.** 8 blocchi figura è un limite inferiore dal
+markup, non un conteggio di pannelli. Il censimento automatico **perde il pannello A** su
+depositi con lettere maiuscole e **tutti** i pannelli su depositi con lettere minuscole: il suo
+numero non è mai un denominatore.
+
+**⑤ Superficie figure:** decidere **per immagine** — `smask != 0` → renderizzare la pagina;
+`smask == 0` → estrarre, **ma verificare che l'unità estratta sia la figura e non un frammento**
+(su `23370280` dieci frammenti erano tutti `smask = 0`, cioè fedeli e sbagliati).
+
+### Le altre due, con lo stato del preflight
+
+| | stato all'11 agosto |
+|---|---|
+| **`12514174`** Chang 2003 | 🟡 **non sul disco.** `pmcid: null`, non in PMC. Unpaywall: `is_oa: true`, ibrido, PDF all'editore `jbc.org`. 🔴 **Va recuperato e POI schermato**: è un PDF JBC del 2003, coetaneo di quello appena rifiutato, e il rischio che porti la stessa corruzione è alto. **Schermare prima di chiamarla lettura.** 🔴 **E ora lo screening ha un primo gesto che costa un secondo e non richiede di estrarre nulla**: aprire il PDF e chiedere, **font per font**, se ha una `ToUnicode`. `18487609` — un JBC di cinque anni dopo, stesso editore, stessa filiera tipografica — ha `MathematicalPi-One`, `MathematicalPi-Four` e `Universal-GreekwithMathPi` **senza mappa**, ed è `SUSPECT` per assenza pur avendone sette. Se il PDF che arriva assomiglia a quello, **la risposta è nota prima di leggere una riga**. Necessario ma non sufficiente: la sentinella sul testo estratto resta l'arbitro. |
+| **`16061658`** Aqeilan 2005 | ✅ **AGGIUDICATO il 2026-08-11**, su autorizzazione diretta dell'operatore. Superficie **ancora `SUSPECT` e non riabilitata**: il text layer è servito solo per orientamento e coordinate. Receipt `-02`, `partial_fulltext_read`, **5/17 pannelli** — bound dichiarato, non copertura mancata. Le Figure 2, 3 e 4 restano debito di lettura su questo articolo. |
+
+### ✅ `16061658` — cosa ha dato l'aggiudicazione
+
+**Il `DATO`, ancorato alla pagina.** Titolazione di YAP2 in co-IP: a YAP2 basso *«ErbB-4
+interacts exclusively with WWOX»*; alzando YAP2, YAP ne guadagna un po' ma *«ErbB-4-WWOX
+interaction was still the predominant complex»*; e rompendo il primo dominio WW,
+*«expression of Myc-WWOXY33R resulted in significant rescue of ErbB-4-YAP2 interaction»*. Tutte
+e tre le comparazioni verificate **sui blot a 150 dpi** — il ppi effettivo misurato di quella
+pagina — e non prese sulla frase.
+
+🔴 **Gli autori sono più cauti della letteratura che li cita:** la conclusione stampata è
+*«indicate that WWOX and YAP **may** compete»*, e la Figura 6 è *«a **proposed** model»*. Ogni
+riformulazione a valle deve portarsi dietro il modale.
+
+**Perché «prevalent»:** *«WWOX binds ErbB-4 with better affinity than YAP, perhaps due to the
+interaction of WWOX with **both** the PPxY motifs»*, dove YAP ne ingaggia uno solo. Due contatti
+contro uno — **la competizione è reale e asimmetrica, non è un interruttore.**
+
+**La generalizzazione, con la sua portata misurata:** *«both WW domain–containing proteins, YAP
+and WWOX, in the cytoplasm are competing for interaction with **PPxY-containing target
+proteins**»*. Generalizza a una **classe**. Gli unici partner nominati oltre ErbB-4 sono p73 e
+AP-2γ, nella legenda e nel diagramma della Figura 6.
+
+🔴 **`ITCH` non compare da nessuna parte — e conta la rotta.** Lo stesso zero era stato
+affermato prima da un conteggio di termini sulla superficie rifiutata, e ritirato: uno zero da
+una superficie che sfigura sedici caratteri stampabili **non è un'assenza**. Questo è letto
+sulla **Figura 6 a 400 dpi**, su una pagina che non contiene alcun raster — cioè su un diagramma
+vettoriale a piena risoluzione, dove gli autori dichiarano quali partner rivendicano: WWOX legato
+a un ottagono *«Other PPxY-containing partners»*, ad `AP2γ` e a `P73`. Nessun ITCH.
+
+**I tre archi restano separati, ed è lo scopo del vincolo:**
+
+| arco | fonte | stato |
+|---|---|---|
+| WWOX/YAP competono su ErbB-4 (via WW1), generalizzato alla classe PPxY | `16061658` | **`DATO`**, ora ancorato |
+| WWOX/ITCH competono su ΔNp63α, co-IP diretta + rescue `Y33R` | `23370280` | **`DATO` di un'altra fonte**, lettura `partial` |
+| leva terapeutica sulla rete WW/ITCH → rischio di non selettività | i due insieme | **`INFERENZA`** — di nessuno dei due da solo |
+
+**Nulla di tutto questo rende *«ITCH non è selettiva»* un `DATO` di `16061658`.** La frase di
+Salah 2013 — *«compete with other WW domain-containing proteins, like YAP and ITCH»* — è un
+rimando all'indietro per la metà YAP e una rivendicazione sui propri dati per la metà ITCH: ogni
+proposizione va alla fonte che la misura.
+
+**E il difetto 5d è visibile *dentro* l'insieme aggiudicato**, il che è meglio che argomentarlo:
+uno dei nove ritagli è la legenda della Figura 5, che porta le quantità di plasmide
+**dell'esperimento di competizione stesso**. La pagina stampa `µg` quattro volte dove il text
+layer stampa `Ag`. Chi avesse citato quella legenda dal layer avrebbe pubblicato quattro dosi che
+nessuno ha usato.
+
+**Il frame WW1 era `NON ANCORATO`** finché una delle due non cadesse — e `DL-THER-095` lo dichiara
+esplicitamente, con la precisazione che la citazione di `23370280` **è** ancorata e che a non
+esserlo è la fonte primaria.
+
+---
+
+## FT-064 — Cercare la **terza** istanza del segno che cambia con la preparazione, col predicato già scritto
+
+**Papers:** PMID 17360458 · PMID 17575124 · PMID 15070730 — più **una ripassata all'indietro sui
+paper già letti**, che è la parte più economica e va fatta per prima.
+**Origine:** `DL-MECH-096` (`PMID 18487609`, 2026-08-11) e `DL-MECH-094` (`PMID 34268881`).
+**Priority:** **MEDIA** — non urgente, ma non affidabile alla memoria. È una voce di coda proprio
+perché due istanze in due giorni non sono una coincidenza, e perché il modo tipico in cui questa
+classe si perde è che chi l'ha vista se ne ricordi e chi viene dopo no.
+
+**Il predicato, scritto perché chi prende questa voce sappia cosa cercare invece di ricostruirlo:**
+
+> Un paper è un'istanza se **misura la stessa grandezza in una preparazione tissutale e in una
+> preparazione cellulare autonoma**, le chiama **con lo stesso nome**, e le due misure hanno
+> **segno opposto** — oppure hanno lo stesso segno ma la conclusione ne cita una sola.
+
+**Le due istanze note, per calibrare la ricerca:**
+
+| | tessuto | cellula isolata | come si è manifestata |
+|---|---|---|---|
+| `DL-MECH-096` | `Runx2` osso in vivo **+50%** | osteoblasti calvariali **−70%** | la frase riassuntiva della Discussion porta il segno sbagliato |
+| `DL-MECH-094` | firma metabolica degli organoidi | difetto di differenziamento | il confondimento è dichiarato nel titolo della figura, non nella conclusione |
+
+**🔴 Dove guardare per prime, e perché è quasi gratuito.** Non serve una ricerca nuova: le
+candidate sono già in casa. Ogni paper che accosti un fenotipo di knockout **total-body** a una
+coltura primaria derivata dallo stesso animale è un candidato — e il knockout `Wwox` total-body
+muore a tre settimane con deperimento d'organo, ipoglicemia, ipoproteinemia e ipocalcemia, quindi
+**ogni** misura tissutale in quella linea porta dentro un input sistemico che la coltura rimuove.
+`17360458` (il paper del knockout), `17575124` e `15070730` sono già in coda e non letti.
+
+**Perché non è metodologia ma Track C.** La domanda che questo predicato produce si può porre a
+**ogni** nodo del portafoglio terapeutico, non solo a questi due:
+
+> **Su quale preparazione si misura l'endpoint, e quel readout ha lo stesso segno del bersaglio
+> terapeutico?**
+
+Un nodo che non sa rispondere non ha una direzione **firmata**, e la Track C ne richiede una
+prima che il nodo si apra.
+
+**Next action:** applicare il predicato ai paper **già letti** prima di aprirne di nuovi. È il
+lavoro meno costoso della coda — i manifest hanno già i pannelli e le relazioni
+`text_contradicted_by_panel` — e **una terza istanza trovata all'indietro vale quanto una trovata
+in avanti**, perché ciò che serve non è un altro caso ma la conferma che la classe è ricorrente.

@@ -1,0 +1,158 @@
+{
+  "schema_version": 2,
+  "pmid": "39952983",
+  "doi": "10.1038/s41598-024-81158-8",
+  "pmcid": "PMC11828923",
+  "receipt": "FTR-20260811-39952983-01",
+  "landing": ["FTR-20260811-39952983-01", "full_text_queue_current.md#FT-017"],
+  "landing_note": "Kim et al. 2025, Scientific Reports — a Korean two-cohort GWAS on self-aware sleep duration (n = 8,840) with a Drosophila Wwox loss-of-function follow-up. Newest-first. SLEEP IS A DECLARED AXIS OF THE PROBAND PRIORITY MATRIX, and this is the only paper in the corpus that measures it directly against WWOX.",
+
+  "skills_considered": [
+    { "skill": "legend-deepdive", "used": false, "reason": "Run inline. The reading turns on effect sizes in a table set against a limitations paragraph, and on a figure panel against its own figure title." }
+  ],
+
+  "reading_budget": {
+    "declared_before_reading": true,
+    "figures_present": 2,
+    "panels_present": 7,
+    "tables_present": 3,
+    "supplementary_elements_present": 1,
+    "panels_inspected": 7,
+    "panel_coverage": "7/7",
+    "method": "MEASURED, NOT INTENDED. Counted by reading the captions: Fig 1 is a single LocusZoom plot (1); Fig 2 carries A-F (6). Total 7. Both figures were opened as images before this number was written — Fig 2 in detail, Fig 1 as the regional association plot its caption describes. Tables 1, 2 and 3 read in the body surface.",
+    "image_surface": "ACQUIRED via the Europe PMC REST /{PMCID}/supplementaryFiles endpoint, HTTP 200, 311,307-byte ZIP: both figure JPEGs plus 41598_2024_81158_MOESM1_ESM.docx (197 KB). 🔴 THE DOCX MATTERS AND IS NOT READ IN THIS PASS: `.docx` is one of the four suffixes `deepdive_manifest._artifact_text` accepts as a text surface, so unlike a PDF supplement it COULD carry verbatim locators. It holds Supplementary Tables 1-2 and Supplementary Figures 1-2, which are where the Bonferroni-corrected p-values, the QQ plot and the genomic inflation figure live — i.e. the statistical support for the paper's central claim. Fingerprinted and declared `supplementary: not_read`, with the route open."
+  },
+
+  "surface_preflight": {
+    "structured_surface_preferred": true,
+    "text_surface": "files/fulltext/PMID39952983_Kim2025_EPMC.xml",
+    "route": "Europe PMC. 🔴 LICENCE IS CC BY-NC-ND, NOT CC BY — different from PMID 31543760 read an hour ago, and worth stating rather than assuming continuity: no derivatives, non-commercial. Nothing here redistributes the figures (files/ is gitignored) and no crop is published, so the reading is unaffected; but a future artefact that wanted to publish a panel from this paper could not, where it could from Kosla.",
+    "🔴 ref_list_checked_not_assumed_in_either_direction": "The <ref-list> IS inside <body> here, 9,281 characters — like Piard and Kosla, unlike Denkboy. AND THE RELIABLE PROBE CANNOT RUN: of 58 <ref> elements, ZERO carry an <article-title> longer than 45 characters. So this artifact CANNOT be tested by the whole-title method, and I am recording that rather than producing a number from the short-slice probe that was shown unreliable two readings ago. What IS certain by containment is that the bibliography sits inside the <body> element and therefore inside any surface derived from it. No locator in this manifest is drawn from it.",
+    "route_gap_explained_and_it_matches": "B measured the largest Europe-PMC-versus-efetch body gap of the group on this artifact: 40,456 against 26,299, a difference of 14,157. Measured here: the <body> element carries, as top-level sections, References 9,291 + Acknowledgements 259 + Abbreviations 398 + Author contributions 1,105 + Funding 1,157 + Data availability 739 + Declarations 74 + Footnotes 231 + Contributor Information 102 + Associated Data 811 + Electronic supplementary material 117 = 14,284 characters of apparatus. Against a gap of 14,157. THIRD ARTIFACT, THIRD MATCH — the route folds back matter into <body>, and that is a separate fact from the extractor behaviour established on PMID 42082822.",
+    "surface_measurement": { "in_tree_surface_chars": 43745, "body_element_only_chars": 40456, "abstract_chars": 1716, "ref_list_chars": 9281 }
+  },
+
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_measured": "Not measured, declared as not measured. Korea University Ansan Hospital with Ajou University supplying the Drosophila work; the human data are the Korean Genome and Epidemiology Study cohorts.",
+    "research_type": "mixed",
+    "output_kind": "primary_research",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "The cohort is real and well-characterised and the fly experiment is competently run with an adequate n and a backcrossed background. What the paper cannot bear is the weight its title and abstract place on it, and the authors say so themselves in the limitations — which is why every entry below is anchored on their own statements rather than on an external standard."
+  },
+
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      { "query": "does the human association reach genome-wide significance?", "route": "read the limitations paragraph against Table 2", "count": 0, "detail": "NO, and the authors say so. p = 1.11e-7 and 2.05e-7 against the conventional 5e-8 threshold. See entries[0]." },
+      { "query": "how large is the effect in minutes of sleep?", "route": "arithmetic on Table 3's betas, which are in hours", "count": 0, "detail": "About 12 to 18 minutes for minor homozygotes. See entries[1]." }
+    ]
+  },
+
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 58,
+    "gene_direct_count": 1,
+    "gene_direct_refs_in_source": ["18487609"],
+    "resolved": ["18487609"],
+    "resolved_depth_declaration": "The Discussion's WW-domain partner list cites a reference for RUNX2, and PMID 18487609 (Aqeilan 2008) is the paper that established WWOX-RUNX2 — read COMPLETELY this morning, receipt FTR-20260811-18487609-01, 32/32 panels. The citation strings in this deposit carry no PMIDs, so the mapping is by content and not by identifier, and it is recorded as such rather than as a resolved accession. Every other WWOX reference here is cited by number to a list without PMIDs and is NOT invented into an enumeration.",
+    "queued": [],
+    "enumeration_method": "58 <ref> elements counted in the deposit; none carries an <article-title> or a PMID. Only the one identifiable by content against a paper already read is listed."
+  },
+
+  "corpus_crossquery": { "performed": true, "query": "prior receipts and manifests for 39952983", "hits": 0, "finding": "No prior receipt, no prior manifest. Identifiers read from the artifact's <article-id> block before being written." },
+
+  "retraction_check": { "performed": true, "at": "2026-08-11", "route": "the local PubMed corpus was harvested 2026-08-06 and this 2025 article is checked against it", "result": "no retraction, no expression of concern, no erratum; no notice in the deposit" },
+
+  "source_artifacts": [
+    { "path": "files/fulltext/PMID39952983_Kim2025_EPMC.xml", "sha256": "752c9661c1da61d3f986ac7d8110e66cdf99e049c0884667d9ba6aa8b03de819", "kind": "article_text" },
+    { "path": "files/figures/PMID39952983/41598_2024_81158_Fig1_HTML.jpg", "sha256": "b83d6fcd81fd61fd34b3127ae6800caedd80d73f5fb87757a3683faf9a05a2ec", "kind": "figure" },
+    { "path": "files/figures/PMID39952983/41598_2024_81158_Fig2_HTML.jpg", "sha256": "723eaeb907ba7794641761d5467ef42f08e415a7bb033d5293a3e6b183e47684", "kind": "figure" },
+    { "path": "files/figures/PMID39952983/41598_2024_81158_MOESM1_ESM.docx", "sha256": "ab192d9420e9833308d6e295758809660f43775dee601df55cd02df641d17f1c", "kind": "supplement_text" }
+  ],
+
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC XML, CC BY-NC-ND, digest re-verified in this worktree; both figures and the supplementary DOCX acquired via the REST endpoint and fingerprinted.",
+    "abstract_anchoring_waived": "No evidentiary locator uses the abstract; every candidate was tested against the separated abstract surface.",
+    "entries": [
+      {
+        "proposition": "🔴 THE HUMAN ASSOCIATION DOES NOT REACH GENOME-WIDE SIGNIFICANCE, AND THE AUTHORS SAY SO IN THEIR OWN LIMITATIONS. The conventional threshold is 5 × 10⁻⁸; Table 2 gives 1.11 × 10⁻⁷ and 2.05 × 10⁻⁷ for the two lead SNVs — two to four times above it. The abstract reports both p-values without qualification and the title of the paper asserts the association. This is not concealed, it is placed where fewest readers go.",
+        "snippet": "the WWOX gene did not reach the conventional genome-wide significance level in the human GWAS results",
+        "surface": "body", "artifact": "files/fulltext/PMID39952983_Kim2025_EPMC.xml",
+        "anchor": "Discussion, limitations paragraph", "panel_text_relation": "text_only",
+        "found_or_sought": "sought — a GWAS claim is a threshold claim, so the first thing to check is which side of the threshold it is on"
+      },
+      {
+        "proposition": "🔴 AND THE EFFECT IS ABOUT A QUARTER OF AN HOUR, WHICH NO SENTENCE IN THE PAPER STATES IN MINUTES. Table 3's betas are in HOURS: for minor homozygotes, −0.209 h at rs16948804 and −0.304 h at rs4887991. That is TWELVE AND EIGHTEEN MINUTES of sleep, against a cohort standard deviation of 1.4 hours — roughly 0.15 to 0.22 SD. INFERENZA with a direct bearing on this corpus: an intronic common-variant effect of a quarter-hour in middle-aged adults is a different biological object from biallelic WWOX loss of function, and nothing licenses reading one as evidence about the other. The unit is what hides it — hours make 0.3 look substantial where minutes would not.",
+        "snippet": "Reference-0.131 (0.030)< 0.001-0.209 (0.060)< 0.001",
+        "surface": "body", "artifact": "files/fulltext/PMID39952983_Kim2025_EPMC.xml",
+        "anchor": "Table 3, self-aware sleep duration row for rs16948804, heterozygous and minor-homozygous columns",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — converted the paper's own betas into the unit a reader thinks in, which is the cheapest audit in a genetics paper"
+      },
+      {
+        "proposition": "AND THE SECOND STATED LIMITATION IS THE ONE THAT EXPLAINS THE FIRST. Two cohorts of 4,635 and 4,205 are small for a quantitative-trait GWAS, and the authors name it. Recorded beside entries[0] because together they say what the paper is: an underpowered discovery that did not clear threshold, followed by a functional experiment offered in place of the power.",
+        "snippet": "the number of subjects in each cohort was not sufficient for GWAS",
+        "surface": "body", "artifact": "files/fulltext/PMID39952983_Kim2025_EPMC.xml",
+        "anchor": "Discussion, limitations paragraph, immediately following entries[0]",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 AND THE PHENOTYPE IS A QUESTIONNAIRE, WITH A DERIVED VARIABLE THAT CANNOT MEAN WHAT IT SAYS. Sleep duration is self-reported for the past month, at a baseline collected 2001-2003. From it the study derives habitual sleep efficiency as duration divided by time in bed, and Table 1 reports it as 98.3 ± 12.6%. A MEAN OF 98.3% WITH AN SD OF 12.6 ON A QUANTITY BOUNDED AT 100% REQUIRES A LARGE FRACTION OF VALUES ABOVE 100% — participants reporting more sleep than time in bed. Measured sleep efficiency by actigraphy or polysomnography in this age range is typically 85-90%. The variable is not used for the paper's main claim, and Table 3 correctly reports no association with it; recorded because a corpus that later reached for 'sleep efficiency' from this cohort would be reaching for an artefact of self-report arithmetic.",
+        "snippet": "Habitual sleep efficiency (%) 98.6 ± 12.2 98.0 ± 12.9 98.3 ± 12.6",
+        "surface": "body", "artifact": "files/fulltext/PMID39952983_Kim2025_EPMC.xml",
+        "anchor": "Table 1, habitual sleep efficiency row",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — asked what the phenotype physically is, and the derived variable answered louder than the primary one"
+      },
+      {
+        "proposition": "THE FLY RESULT, AND IT SPLITS BY TIME OF DAY RATHER THAN REPRODUCING THE HUMAN DIRECTION. Daytime sleep falls, night-time sleep rises. The abstract states both, honestly. What 'confirmatory experiments' and 'confirmed the functional relevance' cannot mean is that the fly reproduced the human phenotype: the human finding is a reduction in total self-reported duration, and the fly gives a redistribution across the light cycle whose net is a modest reduction.",
+        "snippet": "In Wwoxf04545 flies, daytime sleep was reduced throughout the day (p-value < 0.0001), whereas night-time sleep was higher and lasted longer than that in control flies",
+        "surface": "body", "artifact": "files/fulltext/PMID39952983_Kim2025_EPMC.xml",
+        "anchor": "Results, Drosophila section, describing Figure 2B and 2C",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 AND THE FIGURE'S OWN TITLE CLAIMS MORE THAN ITS PANEL D SUPPORTS. Figure 2 is titled 'Deletion of Wwox changed sleep duration WITHOUT AFFECTING THE CIRCADIAN RHYTHM', and the evidence offered for the second half is panel E: free-running period and rhythmicity are equivalent, 23.5 h and 96.9% against 96.7%. But panel D shows the mutant's EVENING ACTIVITY PEAK MARKEDLY BLUNTED — the control rises to roughly 100 beam counts per 30 min at ZT11-12 where the mutant reaches about 60 — while the morning peak is far more similar. In Drosophila that evening rise is anticipatory behaviour driven by the clock's evening oscillator, and IT CAN BE LOST WITH AN INTACT FREE-RUNNING PERIOD: period measures the pacemaker, anticipation measures its coupling to behaviour. INFERENZA: 'without affecting the circadian rhythm' is supported for the pacemaker and not for its output, and the two are different claims wearing one phrase. Panel B agrees — the night-time gain is not uniform but concentrated in the late night, where controls become active and mutants do not.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, panels B, D and E. B: sleep profile in 30-minute bins across ZT0-24, grey w1118 and olive Wwox-f04545, dark phase shaded from ZT12; the grey trace shows a daytime siesta peak near 30 min per bin around ZT5-8 that the olive trace does not reach, and in the shaded night both traces sit near 30 min per bin until roughly ZT20 after which the GREY trace declines toward 20-25 while the olive stays at ceiling. D: activity in beam counts per 30 min on the same axis; both genotypes show a morning peak near ZT0-1 of roughly 110 and 95 counts, and an evening peak at ZT11-12 where GREY reaches about 100 and OLIVE only about 60. E: free-running period bars, both at approximately 23.5 h, with rhythmicity printed inside the bars as 96.9% and 96.7%.",
+        "surface": "figure", "artifact": "files/figures/PMID39952983/41598_2024_81158_Fig2_HTML.jpg",
+        "anchor": "Figure 2 panels B, D and E",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[6]",
+        "qualifies_needle": "The alteration of sleep duration could not be attributed to a defective core circadian clock",
+        "found_or_sought": "sought — a figure title containing the word 'without' is a negative claim, and negatives are what this corpus checks first"
+      },
+      {
+        "proposition": "THE TEXT'S CIRCADIAN CLAIM, RECORDED AS THE TARGET OF THE PANEL ABOVE. Its evidence is the free-running period and rhythmicity, correctly cited.",
+        "snippet": "The alteration of sleep duration could not be attributed to a defective core circadian clock, as the free-running periods and rhythmicity were equivalent",
+        "surface": "body", "artifact": "files/fulltext/PMID39952983_Kim2025_EPMC.xml",
+        "anchor": "Results, Drosophila section, describing Figure 2E",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "A CHECK THAT CAME BACK NEGATIVE FOR THE PAPER, RECORDED BECAUSE A SCREEN THAT ONLY REPORTS HITS IS NOT A SCREEN. Reduced activity WITH reduced daytime sleep looked incoherent to me — in Drosophila sleep is defined as five minutes without beam crossings, so less activity ought to mean more scored sleep. The authors use it to argue the sleep phenotype is not a locomotion artefact, and they are right: the resolution is fragmentation, which panel F confirms by showing daytime average bout length reduced. Short, broken activity prevents five-minute quiescent windows without raising total beam counts. The data are coherent and my objection was wrong.",
+        "snippet": "Wwoxf04545 fly activity was lower throughout the day, which implied that the sleep phenotype of Wwoxf04545 did not simply result from reduced locomotor activity",
+        "surface": "body", "artifact": "files/fulltext/PMID39952983_Kim2025_EPMC.xml",
+        "anchor": "Results, Drosophila section, describing Figure 2D",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — went to check an apparent incoherence and found the paper had already resolved it"
+      },
+      {
+        "proposition": "AND THE SAME PARTNER LIST APPEARS A FOURTH TIME TODAY. The Discussion's one-sentence account of WWOX function names p73, ErbB4, Ap2γ, RUNX2 and HIF1α as WW-domain partners. Those are the partners of PMID 16061658 page-adjudicated this morning (ErbB4, p73, AP-2γ) and PMID 18487609 read this morning (RUNX2), and three of them turned up in the neural-progenitor leading edge of PMID 31543760 an hour ago. Recorded not as a finding of this paper — it is a review sentence with citations — but because FOUR INDEPENDENT PAPERS READ IN ONE DAY CONVERGE ON ONE PARTNER SET, and that convergence is the argument for treating the WW/PPxY competition network as the corpus's central mechanistic object rather than as an oncology detail.",
+        "snippet": "The WW domain mediates interactions with several proteins such as p73",
+        "surface": "body", "artifact": "files/fulltext/PMID39952983_Kim2025_EPMC.xml",
+        "anchor": "Discussion, the paragraph describing WWOX protein architecture",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — looked for the partner list because three papers today had already named it"
+      }
+    ]
+  }
+}

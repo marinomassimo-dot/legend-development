@@ -1,0 +1,395 @@
+{
+  "schema_version": 2,
+  "pmid": "16061658",
+  "doi": "10.1158/0008-5472.CAN-05-1150",
+  "receipt": "FTR-20260811-16061658-02",
+  "landing": [
+    "FTR-20260811-16061658-02",
+    "full_text_queue_current.md#FT-063"
+  ],
+  "landing_note": "Opened under a direct operator authorisation for page adjudication, given in this session. The authorisation covers recovery of the primary premise on the WW-protein competition frame; it explicitly does NOT authorise promoting the conclusion 'ITCH is not selective'. A first receipt on this article, FTR-20260811-16061658-01, is retrieved_not_read and stands: the surface was screened and refused, and this manifest does not rehabilitate it.",
+
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline. The perimeter had to be decided by looking at the pages — the previous keyword-derived perimeter was withdrawn — and deciding what a crop must contain is not delegable to a reader that cannot see the page."
+    },
+    {
+      "skill": "legend-capability-scout",
+      "used": true,
+      "reason": "The crop_contains_span failure on p03 by 1.2pt, caught before publication, is the reusable lesson: a recipe recorded in prose decays silently, one a command runs cannot."
+    }
+  ],
+
+  "reading_budget": {
+    "declared_before_reading": true,
+    "figures_present": 6,
+    "panels_present": 17,
+    "tables_present": 0,
+    "supplementary_elements_present": 0,
+    "panels_inspected": 5,
+    "panel_coverage": "5/17",
+    "method": "Counted by reading the figure legends off the rendered pages: Fig 1 A-C (3), Fig 2 A-C (3), Fig 3 A-B with B carrying sub-panels a-d (2), Fig 4 A-D (4), Fig 5 A-B (2), Fig 6 unlettered model (1) = 15 lettered units, plus the four named sub-panels of Fig 3B = 17 as the honest denominator.",
+    "why_coverage_is_partial_and_deliberately_so": "🔴 THIS IS A BOUNDED ADJUDICATION, NOT A COMPLETE READ, AND THE NUMBER SAYS SO. All nine pages were read as rendered images — that is how the perimeter was determined, since the previous perimeter had been derived from a keyword scan on a refused surface and was withdrawn. But only the panels the competition frame rests on were INSPECTED at adjudication resolution and only they carry locators: Figure 5 A and B, and Figure 6. Figures 2, 3 and 4 were read at page resolution and are not adjudicated; the K274/localisation and transactivation experiments they carry remain reading debt on this article. Recording 5/17 rather than 17/17 is the point: a bounded authorisation produces a bounded reading, and the residual debt is declared rather than absorbed."
+  },
+
+  "surface_preflight": {
+    "structured_surface_preferred": false,
+    "structured_surface_absent": "Europe PMC: pmcid null, inPMC N, isOpenAccess N. Unpaywall on 10.1158/0008-5472.can-05-1150: is_oa false, oa_status closed, has_repository_copy false. Cancer Research 2005, AACR, subscription. No structured deposit exists anywhere, so rule 5d's first consequence — prefer XML/HTML, and record the absence — is discharged by recording the absence.",
+    "text_surface_verdict": "🔴 SUSPECT, REFUSED, AND STILL REFUSED AFTER THIS ADJUDICATION. Two C0 control characters and ZERO occurrences of < > ≤ ≥ ± × − µ α β Δ across 44,465 extracted characters, against six uses of 'significan' and plasmid amounts throughout. Suspicion by absence. Damage identified character by character: 'using 63\\x01 objective lens' for 63×; sixteen instances of the micro sign rendered as the letter A; seven instances of 'p73h' for p73β plus 'h-dystroglycan' for β-dystroglycan. Twenty-five corruptions, twenty-three printable (92%), so a control-character scan finds two of twenty-five and reports the surface clean.",
+    "text_layer_use_in_this_run": "Orientation and coordinates ONLY, as the authorisation permits. Every needle is drawn from a span that is pure ASCII in both surfaces; every snippet is what the rendered page prints. No proposition, no absence and no quotation in this manifest rests on the extracted text.",
+    "tounicode_screen": {
+      "applied": true,
+      "result": "19 fonts, all embedded subsets, all declaring WinAnsiEncoding, and NOT ONE carrying a ToUnicode map. This is the file-level screen's clearest possible positive and it agrees with the sentinel: the PDF is not damaged, it is well formed and declares the wrong thing, which is why comparing extractors detects nothing — they all obey the same false declaration.",
+      "relation_to_the_per_font_refinement": "This article sits in the 11 PDFs with zero maps anywhere, so the per-font refinement found on PMID 18487609 the same morning does not change its verdict. It is recorded here because the two cases together define the screen: zero maps is decisive, and a map on the text faces with none on MathematicalPi is equally decisive and invisible to a file-level check."
+    },
+    "raster_ceiling_measured_before_rendering": "Per image, before any content was rendered. Page 6 carries the Figure 5 blots as raster at 149.1-149.9 effective ppi, so the panel crop is rendered at 150 and no higher. Page 7 carries ZERO images: Figure 6 is entirely vector, so 400 dpi is resolution and not upsampling. Pages 7, 8 and 9 have no raster at all."
+  },
+
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_measured": "Not measured, declared as not measured. Aqeilan and Croce at Ohio State with Marius Sudol, who is the WW-domain field itself — refs 16, 17, 22 of this article are his, and the WW-domain nomenclature and the YAP-as-proline-rich-ligand-binder characterisation are his work.",
+    "research_type": "experimental_lab",
+    "output_kind": "primary_research",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "weighting": "The observation is authoritative and the co-authorship is the reason: the competition experiment is a WW-domain experiment designed with the person who defined the domain class. The interpretation is where care is owed, and the authors themselves show it — the conclusion is written 'may compete', and the model figure is labelled 'a proposed model'. The over-reach in this corpus has never been theirs; it has been in how the frame was carried forward."
+  },
+
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "does this article name ITCH anywhere — as text, as a figure label, or in the model diagram?",
+        "route": "read off the nine rendered pages, and off the Figure 6 model at 400 dpi vector resolution",
+        "count": 0,
+        "detail": "🔴 THE ANSWER IS ZERO AND THE ROUTE IS WHAT MAKES IT REPORTABLE. A term count on the refused text layer had returned zero earlier and was correctly withdrawn as NOT_FOUND_IN_TRIAGE, because a zero drawn from a surface that mangles printable characters is not an absence. This zero comes from reading the pages. The model diagram of Figure 6, which is where a named partner would appear if the authors claimed one, draws WWOX bound to 'Other PPxY-containing partners', to AP2γ and to P73 — a class and two named proteins, and ITCH is not among them."
+      },
+      {
+        "query": "which partners does the article name as competed-for, in its own words?",
+        "route": "rendered pages, Results and Discussion and the Figure 6 legend",
+        "count": 3,
+        "detail": "ErbB-4 (the experiment), and p73 and AP-2γ (named in the Figure 6 legend and diagram as targets whose translocation WWOX inhibits). The generalisation beyond these is stated as a CLASS — 'PPxY-containing target proteins' — never as a further list."
+      }
+    ]
+  },
+
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 49,
+    "gene_direct_count": 8,
+    "gene_direct_refs_in_source": [
+      "10786676", "11719429", "11572989", "15070730", "15548692", "15064722", "12514174", "17142102"
+    ],
+    "resolved": ["18487609"],
+    "resolved_depth_declaration": "🔴 18487609 IS NOT A REFERENCE OF THIS ARTICLE — IT IS THREE YEARS LATER — AND IT IS LISTED HERE AS THE RESOLVED NEIGHBOUR FOR A DIFFERENT AND STATED REASON. It is a complete read closed this same morning by the same group, and it carries the competition frame INDEPENDENTLY for a different partner: its Discussion states that the RUNX2 PPxY motif is contested by YAP, TAZ, SMURF1 and a Schnurri-3–WWP1 complex, and that 'the balance between the different WW domain-adaptor proteins may determine the functional outcome of RUNX2'. Recording it as resolved rather than inventing a resolution among this article's own citations is the honest move; fourteen of the sixteen gene-direct references enumerated across the two papers still have no receipt of any kind, and that debt is untouched.",
+    "queued": [
+      "10786676", "11719429", "11572989", "15070730", "15548692", "15064722", "12514174", "17142102"
+    ],
+    "enumeration_method": "49 references read off the rendered reference list on pages 8 and 9. Eight name the gene or its protein. 12514174 (Chang 2003, JNK1–WWOX) is among them and is the remaining member of FT-063, still not on disk.",
+    "cross_check_result": "None of the eight has a receipt. The competition frame's own citation neighbourhood is therefore entirely unread, which is worth stating plainly now that the frame itself is anchored."
+  },
+
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "prior receipts and manifests for 16061658 across branches; corrections",
+    "hits": 1,
+    "finding": "One prior receipt, FTR-20260811-16061658-01, retrieved_not_read, recorded this morning when the surface was screened and refused. No prior manifest. The corpus record carries an empty corrections array; PubMed identifiers give doi 10.1158/0008-5472.CAN-05-1150 and no PMCID."
+  },
+
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-11",
+    "route": "local corpus record, corrections field",
+    "result": "no retraction, no expression of concern, no erratum"
+  },
+
+  "three_arcs_kept_separate": {
+    "why": "The authorisation requires it, and the requirement is not bureaucratic: a single sentence in a later paper compresses two provenances, and compression is how a hedged result becomes a fact.",
+    "arc_1_this_article": "DATO — WWOX and YAP compete for interaction with ErbB-4, via WWOX's first WW domain, demonstrated by a YAP2 titration co-IP and a Y33R rescue. The authors state it as 'may compete'; this manifest states it as they did. Generalised by the authors to 'PPxY-containing target proteins' as a class, with p73 and AP-2γ named in the model.",
+    "arc_2_pmid_23370280": "DATO of a DIFFERENT source — WWOX competes with ITCH on ΔNp63α, shown there by direct co-immunoprecipitation with a WWOX-Y33R rescue control. That evidence is primary to Salah 2013 and is NOT retro-attributable here. The reading of 23370280 in this corpus is partial_fulltext_read, which does not license a global characterisation of that paper.",
+    "arc_3_the_combination": "INFERENZA, and it belongs to neither paper alone — that a therapeutic lever on the WW/ITCH interaction network risks non-selective effects. It requires both arcs and is supported by neither on its own.",
+    "🔴 what_this_adjudication_does_not_do": "It does not make 'ITCH is not selective' a DATO of PMID 16061658, and it does not make this article the primary evidence for any WWOX–ITCH interaction. The sentence in Salah 2013 that reads 'compete with other WW domain-containing proteins, like YAP and ITCH' is a back-reference for the YAP half and a forward-claim on their own data for the ITCH half; each proposition goes to the source that measured it."
+  },
+
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID16061658_Aqeilan2005.pdf",
+      "sha256": "075fdbbcd1e17c3ba1654e78e56ed7345b3e5242ffcf0944f4f6569cf90103eb",
+      "kind": "article_binary"
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16061658/p02_rationale_common_targets.png",
+      "sha256": "e5660779d656f5a766354e0660b7474d6840d960d5497f9ba3300c051fef2b68",
+      "kind": "figure",
+      "note": "page 2 crop at 400 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16061658/p03_ww1_primarily_responsible.png",
+      "sha256": "a8f6fcaf04eea1841d3613be50c5e9e6a3a0b9dc1e02ae929dddd32bf26bcf46",
+      "kind": "figure",
+      "note": "page 3 crop at 400 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16061658/p07_competition_experiment.png",
+      "sha256": "efe1e248792e319053ac27f659f089f0300f488552821d8878549db119fb23de",
+      "kind": "figure",
+      "note": "page 7 crop at 400 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16061658/p06_figure5_legend_doses.png",
+      "sha256": "59342dce8539d86308aa73107411983860237c659b4f4fc13614277511a5ddb4",
+      "kind": "figure",
+      "note": "page 6 crop at 400 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16061658/p06_figure5_panels.png",
+      "sha256": "b8c47d09c49ad8c89430be9f855cfd1a605f1864c94e8b83566a464e1e91079a",
+      "kind": "figure",
+      "note": "page 6 crop at 150 dpi — the measured effective ppi of the raster on that page — regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped (rule 5e)"
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16061658/p08_generalised_frame.png",
+      "sha256": "66696e23986e9397fffde03a44f47597e6b85fa8040236213acf59ba395bf5f0",
+      "kind": "figure",
+      "note": "page 8 crop at 400 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16061658/p08_affinity_asymmetry.png",
+      "sha256": "bc36f5f2f4c421d8aa6cb8bbd46f6f6f47c682e06feb6fb67b16d8bbbb7d1453",
+      "kind": "figure",
+      "note": "page 8 crop at 400 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16061658/p07_figure6_legend.png",
+      "sha256": "906cfca9959cc9952e2aaee1bc9f638abf16b18ab56ead7639a89d79bc53db62",
+      "kind": "figure",
+      "note": "page 7 crop at 400 dpi, regenerated from the source PDF by regenerate_adjudications.py; the image is not shipped — the recipe is (rule 5e)"
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16061658/p07_figure6_model.png",
+      "sha256": "c4dc253fc7ce65027af03cd248d54891e17b8d9617cb8d39f5ec1014410c564e",
+      "kind": "figure",
+      "note": "page 7 crop at 400 dpi — page 7 carries no raster, so Figure 6 is vector and this is resolution, not upsampling — regenerated by regenerate_adjudications.py; the image is not shipped (rule 5e)"
+    }
+  ],
+
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": false,
+    "source_fulltext_indexed_evidence": "No structured deposit exists: pmcid null, inPMC N, Unpaywall closed with no repository copy. The only surface is the local PDF, whose text layer is SUSPECT and refused. Every locator below is anchored to the RENDERED PAGE under rule 5e, with a page_anchor recording source-PDF digest, page, crop rectangle in PDF points, dpi, needle and the SHA-256 of the regenerated image.",
+    "abstract_anchoring_waived": "No locator uses the abstract. The abstract states the frame and states it well, but the body states it with the experiment attached, and the body is what was adjudicated.",
+    "entries": [
+      {
+        "proposition": "THE PREMISE THE EXPERIMENT TESTS, IN THE AUTHORS' OWN WORDS. Both proteins carry tandem class-I WW domains and both bind PPxY ligands; the hypothesis is that they therefore contend for the same partners with opposite transcriptional consequences. Adjudicated because a competition result without its hypothesis reads as a discovery about ErbB-4 rather than about WW-domain economy.",
+        "snippet": "Because WWOX and YAP have the similar tandems of WW domains and interact with common protein targets but have different effects on transactivation, we decided to investigate whether WWOX and YAP expression have opposite effects on their target proteins.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16061658/p02_rationale_common_targets.png",
+        "anchor": "page 2, end of the Introduction, immediately before Materials and Methods",
+        "page_anchor": {
+          "page": 2,
+          "crop_pdf_points": [296, 540, 554, 598],
+          "dpi": 400,
+          "needle": "interact with common protein targets",
+          "image_sha256": "e5660779d656f5a766354e0660b7474d6840d960d5497f9ba3300c051fef2b68",
+          "source_pdf_sha256": "075fdbbcd1e17c3ba1654e78e56ed7345b3e5242ffcf0944f4f6569cf90103eb"
+        },
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — the perimeter was decided by looking, and the hypothesis sentence was the first thing the pages showed that the withdrawn keyword perimeter had excluded"
+      },
+      {
+        "proposition": "🔴 THE WW1 ANCHOR. Competition 'at the first WW domain' is asserted throughout the downstream literature and this is where it is established: the Y33R point mutation, which abolishes WWOX binding to p73 and AP2γ, also abolishes binding to ErbB-4.",
+        "snippet": "These results indicate that the first WW domain of WWOX is primarily responsible for the interaction with ErbB-4.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16061658/p03_ww1_primarily_responsible.png",
+        "anchor": "page 3, Results, 'WWOX associates physically with ErbB-4', describing Figure 2A lanes 5 and 7",
+        "page_anchor": {
+          "page": 3,
+          "crop_pdf_points": [298, 670, 554, 700],
+          "dpi": 400,
+          "needle": "primarily responsible for the interaction",
+          "image_sha256": "a8f6fcaf04eea1841d3613be50c5e9e6a3a0b9dc1e02ae929dddd32bf26bcf46",
+          "source_pdf_sha256": "075fdbbcd1e17c3ba1654e78e56ed7345b3e5242ffcf0944f4f6569cf90103eb"
+        },
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — without it, every downstream 'competition at WW1' is unanchored"
+      },
+      {
+        "proposition": "🔴 THE DATO, FIRST DIRECTION OF THE TITRATION. With YAP2 low, ErbB-4 comes down with WWOX and not with YAP.",
+        "snippet": "Our results show that in the presence of reduced amount of YAP2, ErbB-4 interacts exclusively with WWOX (Fig. 5A, lane 4 versus 5).",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16061658/p07_competition_experiment.png",
+        "anchor": "page 7, Results, 'WWOX and YAP compete for interaction with ErbB-4'",
+        "page_anchor": {
+          "page": 7,
+          "crop_pdf_points": [32, 173, 292, 416],
+          "dpi": 400,
+          "needle": "interacts exclusively with WWOX",
+          "image_sha256": "efe1e248792e319053ac27f659f089f0300f488552821d8878549db119fb23de",
+          "source_pdf_sha256": "075fdbbcd1e17c3ba1654e78e56ed7345b3e5242ffcf0944f4f6569cf90103eb"
+        },
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — this is the sentence the authorisation was granted to recover"
+      },
+      {
+        "proposition": "THE SECOND DIRECTION, AND THE PART THAT KEEPS THE RESULT HONEST. Raising YAP2 buys YAP some ErbB-4, but WWOX still holds the majority. The competition is real and it is ASYMMETRIC; it is not a switch.",
+        "snippet": "On the other hand, increased expression of YAP2 causes some ErbB-4-YAP2 association, although ErbB-4-WWOX interaction was still the predominant complex (Fig. 5A, lane 9 versus 8).",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16061658/p07_competition_experiment.png",
+        "anchor": "page 7, the sentence immediately following entries[2]",
+        "page_anchor": {
+          "page": 7,
+          "crop_pdf_points": [32, 173, 292, 416],
+          "dpi": 400,
+          "needle": "still the predominant complex",
+          "image_sha256": "efe1e248792e319053ac27f659f089f0300f488552821d8878549db119fb23de",
+          "source_pdf_sha256": "075fdbbcd1e17c3ba1654e78e56ed7345b3e5242ffcf0944f4f6569cf90103eb"
+        },
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found — read in sequence, and it is the half most easily dropped when the frame is summarised"
+      },
+      {
+        "proposition": "🔴 THE CONTROL THAT MAKES IT COMPETITION RATHER THAN CORRELATION. Break WWOX's first WW domain and YAP recovers access to ErbB-4. A point mutation restoring the rival's binding is the strongest form this experiment can take.",
+        "snippet": "expression of Myc-WWOXY33R resulted in significant rescue of ErbB-4-YAP2 interaction (Fig. 5B, lane 9 versus 8).",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16061658/p07_competition_experiment.png",
+        "anchor": "page 7, the Y33R arm of the same paragraph",
+        "page_anchor": {
+          "page": 7,
+          "crop_pdf_points": [32, 173, 292, 416],
+          "dpi": 400,
+          "needle": "resulted in significant rescue",
+          "image_sha256": "efe1e248792e319053ac27f659f089f0300f488552821d8878549db119fb23de",
+          "source_pdf_sha256": "075fdbbcd1e17c3ba1654e78e56ed7345b3e5242ffcf0944f4f6569cf90103eb"
+        },
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — the rescue is what separates competition from co-occurrence, and PMID 23370280 uses the identical control on a different partner"
+      },
+      {
+        "proposition": "🔴 AND THE CONCLUSION IS HEDGED IN THE ORIGINAL. The authors write 'may compete'. Every downstream restatement in this corpus should carry that modal, because the paper's own claim is that the data are consistent with competition and that WWOX's occupancy is the prevalent one — not that competition is demonstrated to the exclusion of alternatives.",
+        "snippet": "indicate that WWOX and YAP may compete for the association with ErbB-4 and that WWOX-ErbB-4 interaction is prevalent.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16061658/p07_competition_experiment.png",
+        "anchor": "page 7, closing sentence of the competition Results section",
+        "page_anchor": {
+          "page": 7,
+          "crop_pdf_points": [32, 173, 292, 416],
+          "dpi": 400,
+          "needle": "indicate that WWOX and YAP may",
+          "image_sha256": "efe1e248792e319053ac27f659f089f0300f488552821d8878549db119fb23de",
+          "source_pdf_sha256": "075fdbbcd1e17c3ba1654e78e56ed7345b3e5242ffcf0944f4f6569cf90103eb"
+        },
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — went looking for how strongly the authors state their own result, and found them stating it more carefully than the literature that cites them"
+      },
+      {
+        "proposition": "🔴 THE FIGURE 5 LEGEND, AND IT IS THE RULE-5D DEMONSTRATION INSIDE THE ADJUDICATED SET. These are the plasmid amounts of the competition experiment. The rendered page prints µg four times; the extracted text layer prints 'Ag' four times. Anyone quoting this legend from the text layer would publish four doses nobody used — which is precisely why the surface was refused and why this crop exists.",
+        "snippet": "Omni-YAP2 (1.0 µg), and Myc-WWOX (7.0 µg) or Myc-WWOXY33R (7.0 µg). Cells were then treated as (A).",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16061658/p06_figure5_legend_doses.png",
+        "anchor": "page 6, Figure 5 legend, panel B arm",
+        "page_anchor": {
+          "page": 6,
+          "crop_pdf_points": [30, 518, 246, 610],
+          "dpi": 400,
+          "needle": "or Myc-WWOXY33R",
+          "image_sha256": "59342dce8539d86308aa73107411983860237c659b4f4fc13614277511a5ddb4",
+          "source_pdf_sha256": "075fdbbcd1e17c3ba1654e78e56ed7345b3e5242ffcf0944f4f6569cf90103eb"
+        },
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — the needle deliberately avoids the µ, because a needle is matched against the layer under suspicion while the snippet is what the page prints"
+      },
+      {
+        "proposition": "PANEL 5A AND 5B, READ AT THE MEASURED CEILING. The blots carry the DATO and they show what the text says, including the asymmetry: at low YAP2 the anti-Omni lane is empty while the anti-WWOX lane is strong; at high YAP2 the anti-Omni lane acquires a faint band while anti-WWOX stays strong; and with Y33R the anti-WWOX lane goes blank while the anti-Omni lane becomes strong. The Y33R arm is the cleanest of the three: the rival gains exactly what the mutant loses.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5. Panel A, two ten-lane blots headed 'ErbB-4+Wwox+YAP2 (1.0µg)' and 'ErbB-4+Wwox+YAP2 (2.0µg)', immunoblotted with anti-HA and marked at 210 and 125; lane 4 carries a strong ErbB-4HA band and lane 5 none, while in the right-hand set lane 8 is strong and lane 9 shows a faint band. Below, two small blots labelled 7.0µg/7.0µg over Wwox at 52 and 1.0µg/2.0µg over YAP2 at 89. Panel B, the same layout headed 'ErbB-4+YAP2 +Wwox' and 'ErbB-4+YAP2 +WwoxY33R'; in the left set lane 4 carries a band and lane 5 is faint, and in the right set lane 8 is blank while lane 9 carries a strong band.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16061658/p06_figure5_panels.png",
+        "anchor": "page 6, Figure 5 panels A and B; rendered at 150 dpi, the measured effective ppi of this page's raster",
+        "page_anchor": {
+          "page": 6,
+          "crop_pdf_points": [255, 412, 556, 738],
+          "dpi": 150,
+          "needle": null,
+          "needle_absent_because": "a panel attestation quotes no sentence, so there is no span to resolve; the artifact carries an empty `adjudicates` list in the recipe and its digest is what a reader regenerates and compares",
+          "image_sha256": "b8c47d09c49ad8c89430be9f855cfd1a605f1864c94e8b83566a464e1e91079a",
+          "source_pdf_sha256": "075fdbbcd1e17c3ba1654e78e56ed7345b3e5242ffcf0944f4f6569cf90103eb"
+        },
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — the text asserts three comparisons by lane number and each was checked against the blot rather than taken on the sentence"
+      },
+      {
+        "proposition": "🔴 THE GENERALISATION, AND ITS EXACT SCOPE. This is the sentence the downstream literature cites when it says WWOX and YAP compete for shared partners. It generalises to a CLASS — PPxY-containing target proteins — and names no partner beyond the ones this paper measured. The generalisation is the authors'; the list of specific partners it is later taken to license is not.",
+        "snippet": "shown in Fig. 6, where both WW domain–containing proteins, YAP and WWOX, in the cytoplasm are competing for interaction with PPxY-containing target proteins. Whereas WWOX inhibits nuclear translocation of target proteins, YAP translocates with these targets into the nucleus thus determining the transcriptional outcome of these target proteins.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16061658/p08_generalised_frame.png",
+        "anchor": "page 8, Discussion, the sentence introducing Figure 6",
+        "page_anchor": {
+          "page": 8,
+          "crop_pdf_points": [296, 51, 554, 116],
+          "dpi": 400,
+          "needle": "in the cytoplasm are competing for interaction with",
+          "image_sha256": "66696e23986e9397fffde03a44f47597e6b85fa8040236213acf59ba395bf5f0",
+          "source_pdf_sha256": "075fdbbcd1e17c3ba1654e78e56ed7345b3e5242ffcf0944f4f6569cf90103eb"
+        },
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — this is the load-bearing sentence for arc 1, and its scope is the whole question"
+      },
+      {
+        "proposition": "WHY THE COMPETITION IS ASYMMETRIC, WHICH IS THE MECHANISM BEHIND 'PREVALENT'. WWOX engages BOTH PPxY motifs of ErbB-4; YAP engages only the COOH-terminal one. A competitor with two contacts against one is not merely a competitor — it is the default occupant, which is exactly what the titration showed.",
+        "snippet": "Interestingly, WWOX binds ErbB-4 with better affinity than YAP, perhaps due to the interaction of WWOX with both the PPxY motifs of ErbB-4",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16061658/p08_affinity_asymmetry.png",
+        "anchor": "page 8, Discussion, left column",
+        "page_anchor": {
+          "page": 8,
+          "crop_pdf_points": [30, 92, 288, 138],
+          "dpi": 400,
+          "needle": "than YAP, perhaps due to the interaction of WWOX with both the",
+          "image_sha256": "bc36f5f2f4c421d8aa6cb8bbd46f6f6f47c682e06feb6fb67b16d8bbbb7d1453",
+          "source_pdf_sha256": "075fdbbcd1e17c3ba1654e78e56ed7345b3e5242ffcf0944f4f6569cf90103eb"
+        },
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — 'prevalent' is a quantitative word and I went looking for what the authors think produces it. Note their own hedge, 'perhaps'."
+      },
+      {
+        "proposition": "THE MODEL'S LEGEND, WHICH NAMES ITS OWN SCOPE: 'ErbB-4 and other target proteins', with p73 and AP-2γ named as the others. Adjudicated because a model figure is the most reproduced element of any paper and its legend travels with it.",
+        "snippet": "A proposed model of WWOX and YAP function competing for interaction with ErbB-4 and other target proteins.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16061658/p07_figure6_legend.png",
+        "anchor": "page 7, Figure 6 legend, opening sentence",
+        "page_anchor": {
+          "page": 7,
+          "crop_pdf_points": [412, 506, 552, 630],
+          "dpi": 400,
+          "needle": "and YAP function competing for interaction",
+          "image_sha256": "906cfca9959cc9952e2aaee1bc9f638abf16b18ab56ead7639a89d79bc53db62",
+          "source_pdf_sha256": "075fdbbcd1e17c3ba1654e78e56ed7345b3e5242ffcf0944f4f6569cf90103eb"
+        },
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read on the page while deciding the perimeter"
+      },
+      {
+        "proposition": "🔴 THE MODEL DIAGRAM, ADJUDICATED FOR AN ABSENCE — AND THE ABSENCE IS READ, NOT COUNTED. Figure 6 draws WWOX bound to an octagon labelled 'Other PPxY-containing partners', to AP2γ and to P73, each with a cross barring the arrow into the nucleus, while YAP carries CTF and P73 through. ITCH APPEARS NOWHERE. This matters because a term count on the refused text layer had returned ITCH = 0 and that zero was correctly withdrawn as NOT_FOUND_IN_TRIAGE: a zero from a surface that mangles printable characters is not evidence of absence. This one comes from a vector diagram rendered at 400 dpi on a page carrying no raster, which is the only kind of zero this article can support. CONSEQUENCE, stated as scope and not as a result: PMID 16061658 anchors WWOX/YAP competition and the PPxY class generalisation, and it is NOT the primary evidence for any WWOX–ITCH claim.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6, proposed model. A boxed cytoplasm containing ErbB-4 at the membrane with TPA acting through PKC and heregulin binding, γ-secretase releasing CTF. Down the left margin, three black WWOX wedges: one bound to a white octagon reading 'Other PPxY-containing partners', one bound to a grey circle 'AP2γ', one bound to a grey circle 'P73'; the AP2γ and P73 complexes each have an arrow toward the nucleus struck through with a cross. Centre, WWOX bound to CTF with its arrow to the nucleus also crossed, beside an uncrossed CTF that reaches the nuclear oval. Inside the oval, CTF-YAP and P73-YAP drive TRANSCRIPTION. No element of the diagram is labelled ITCH.",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16061658/p07_figure6_model.png",
+        "anchor": "page 7, Figure 6; vector content rendered at 400 dpi, page 7 carrying zero raster images",
+        "page_anchor": {
+          "page": 7,
+          "crop_pdf_points": [36, 443, 408, 716],
+          "dpi": 400,
+          "needle": null,
+          "needle_absent_because": "a panel attestation quotes no sentence; the artifact carries an empty `adjudicates` list in the recipe and its digest is what a reader regenerates and compares",
+          "image_sha256": "c4dc253fc7ce65027af03cd248d54891e17b8d9617cb8d39f5ec1014410c564e",
+          "source_pdf_sha256": "075fdbbcd1e17c3ba1654e78e56ed7345b3e5242ffcf0944f4f6569cf90103eb"
+        },
+        "panel_text_relation": "text_confirmed_by_panel",
+        "🔴 relation_to_entries_8_stated_in_prose_because_the_schema_cannot_carry_it": "This diagram BOUNDS THE SCOPE of the generalisation at entries[8]: the sentence generalises to 'PPxY-containing target proteins' and the diagram shows which partners the authors were willing to draw. That is a `panel_qualifies_text` relation and it was written as one, and the validator refused it — correctly, on its own terms: `qualifies` must point at a TEXT surface, and on a page-adjudicated article there are none, because rule 5e makes every locator a page crop with surface 'figure'. So the relation is recorded in words here instead of as a machine-checkable pointer. It is a real limitation and it is not mine to fix in a manifest: PMID 17803050, the only other fully adjudicated article in this corpus, carries 32 entries all with surface 'figure' and NOT ONE cross-entry relation — the same collapse, unremarked. Passed to Plan.",
+        "found_or_sought": "sought — the authorisation forbids retro-attributing ITCH to this paper, and the only honest way to say what the paper does not claim was to look at the diagram where it states its claims"
+      }
+    ]
+  }
+}

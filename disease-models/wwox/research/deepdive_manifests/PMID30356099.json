@@ -1,0 +1,226 @@
+{
+  "schema_version": 2,
+  "pmid": "30356099",
+  "doi": "10.1038/s41436-018-0339-3",
+  "receipt": "FTR-20260811-30356099-01",
+  "landing": [
+    "FTR-20260811-30356099-01",
+    "full_text_queue_current.md#FT-002"
+  ],
+  "landing_note": "Piard et al. 2019, Genetics in Medicine 21(6):1308-1318 — the largest WOREE cohort in the field: 20 new patients from 18 families, aggregated with the literature to 37 patients from 27 families. Opened because FT-002 cites it for 'antenatal signs in up to 25% of cases', a number the model carries and nobody had verified at source. The identifiers here were taken from the artifact and cross-checked against the canonical registries BEFORE being written — the practice that today's PMID 23370280 correction earned.",
+
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline. The paper's value is in the arithmetic of its own cohort numbers against its own definitions, which needs the whole Results and Discussion held at once."
+    }
+  ],
+
+  "reading_budget": {
+    "declared_before_reading": true,
+    "figures_present": 3,
+    "panels_present": 26,
+    "tables_present": 0,
+    "supplementary_elements_present": 4,
+    "panels_inspected": 0,
+    "panel_coverage": "0/26",
+    "method": "Counted by reading the captions: Fig 1 a-b (2 panels, the CNV and SNV maps), Fig 2 (patient photographs, unlettered but enumerating P2, P4, P7, P11-P14, P17, P18), Fig 3 a-w (23 MRI panels). 2 + 1 + 23 = 26.",
+    "🔴 why_panels_inspected_is_zero_and_it_is_declared_rather_than_hidden": "NO FIGURE IMAGE EXISTS ON DISK. The deposit is XML only; its six <graphic> elements name 41436_2018_339_Fig1/2/3_HTML.jpg and .gif, and none of those files is in files/. So the figures are covered at `captions_only` and the reading is `partial_fulltext_read` — the ledger refuses `complete_fulltext_read` on captions_only, correctly, because a caption is authored prose and the figure is the data. This is a coverage gap with a route, not a judgement: retrieving the three images would close it.",
+    "🔴 named_waiver_figure_2_privacy": "AND FIGURE 2 CARRIES A WAIVER THAT WOULD STAND EVEN IF THE IMAGE WERE AVAILABLE. It is 'Photographs of individuals with WOREE syndrome', naming nine patients by identifier and showing their faces. This repository is the public, de-identified edition and its entire layering exists to keep individual-level material out. IDENTIFIABLE PATIENT PHOTOGRAPHS ARE NOT TO BE RETRIEVED INTO IT, not into files/ and not as an adjudication crop, and the clinical content the caption carries — axial hypotonia, hypotonic facial appearance, round face, full cheeks, short neck — is fully stated in the caption and in the Discussion, so nothing evidential is lost by declining. Declared as a waiver with its argument, because silence is not a waiver. Figures 1 and 3 carry no such bar: Fig 1 is a variant map and Fig 3 is brain MRI, and both should be retrieved when the images are obtained."
+  },
+
+  "surface_preflight": {
+    "structured_surface_preferred": true,
+    "text_surface": "files/fulltext/PMID30356099_Piard2019_EPMC.xml",
+    "route": "Europe PMC. CC BY. Body present, 3 <fig> elements all inside <body>.",
+    "text_surface_verdict": "CLEAN. No rule-5d screening concern: this is structured markup with correct entities and no rendered page to diverge from.",
+
+    "🔴 the_open_question_this_reading_was_told_to_settle_first": {
+      "question": "Two retrieval routes return different bodies for the same article — Europe PMC 45,559 characters against efetch 35,239 — with the figures inside the body in BOTH, so the ~10,000 character difference is not the captions. Three of five structured surfaces show the same gap, so it is a property of the routes. If those characters are evidential material, every locator built on the smaller route has a hole nobody can see.",
+      "answer": "🔴 THE GAP IS NOT MISSING EVIDENCE IN THE SMALLER ROUTE. IT IS BACK MATTER FOLDED INTO <body> BY THE LARGER ONE. Measured on this artifact: the Europe PMC <body> element contains, as top-level <sec> children, a 'References' section of 8,502 characters — the actual bibliography, beginning 'References1.Bednarek AK, Laflin KJ, Daniel RL…' — plus Acknowledgements 1,452, two 'Electronic supplementary material' sections at 121 and 168, Disclosure 55 and 'Associated Data' 122. TOTAL 10,420 CHARACTERS, against a measured gap of 10,320. efetch's PMC XML keeps that material in <back>, where it belongs.",
+      "🔴 so_the_hazard_runs_the_other_way": "The concern was a hole in the smaller surface. The real exposure is CONTAMINATION OF THE LARGER ONE: on this route the reference list is INSIDE the body surface that locators are verified against. Confirmed by test — a string taken from the middle of the in-body reference list is present in what `_xml_surfaces` returns as `body`. A locator quoting a paper TITLE from the bibliography would verify as body prose and pass. That is not a hypothetical shape: reference titles read exactly like findings — 'WWOX, a novel WW domain-containing protein mapping to human chromosome 16q23.3-24.1, a region frequently affected in breast cancer' is a sentence that would look at home in any of our propositions.",
+      "audit_run_across_the_corpus_and_it_is_clean": "Every body-surface locator in every manifest was tested against the reference list of its own artifact: 6 XML artifacts carry a <ref-list>, 73 body locators were checked, and ZERO fall inside a reference list. The hazard is real and has not bitten. Recorded because a screen that only reports hits is not a screen.",
+      "what_is_owed": "The check belongs in the extractor, not in a reader's vigilance: `_xml_surfaces` should exclude ref-list, ack, fn-group and the supplementary-material stubs from the body surface regardless of where a deposit files them, so that a body locator cannot resolve into apparatus. Passed to Plan. Until then, the honest statement is that on Europe PMC surfaces the body includes the bibliography."
+    },
+
+    "surface_measurement": {
+      "in_tree_surface_chars": 50665,
+      "body_element_only_chars": 45538,
+      "abstract_chars": 1780,
+      "note": "The in-tree surface exceeds the <body> element by 5,127 characters, which is the figure and float material this deposit files outside the body. Both numbers are recorded because the pair is the measurement; either alone is a number without an object."
+    }
+  },
+
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_measured": "Not measured, declared as not measured. A six-country clinical consortium — France, England, Italy, the Netherlands, Romania, United States — assembled around referring clinicians rather than a single laboratory.",
+    "research_type": "descriptive_clinical",
+    "output_kind": "primary_research",
+    "is_primary_group_for_disease": true,
+    "is_primary_group_for_gene": false,
+    "weighting": "🔴 THE OBSERVATION AND THE INTERPRETATION SEPARATE UNUSUALLY CLEANLY HERE, AND THE SEPARATION IS THE READING. As an observation this is the strongest object the field has: 20 new patients doubling the world literature, every variant confirmed in trans by parental testing, molecular diagnosis by five independent modalities. Nobody can improve on it without another decade of ascertainment. As INTERPRETATION it is a phenotype description with no functional experiment in it — the authors say so themselves, and the reading below turns on where their own numbers do not support their own summaries. This is exactly the shape CLAUDE.md names for WOREE papers: the most phenotype-coherent and the least mechanistically levered. Coherence is not usefulness, and here coherence is also not internal consistency."
+  },
+
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "does the paper support FT-002's 'antenatal signs in up to 25% of cases'?",
+        "route": "read at source in Results and again in Discussion",
+        "count": 2,
+        "detail": "The number is real and the framing is not. See entries[0] through entries[2]."
+      },
+      {
+        "query": "is any missense variant supported by experimental evidence?",
+        "route": "read in the Discussion's variant-interpretation section",
+        "count": 1,
+        "detail": "One, and it is a NEGATIVE result: P3's p.(Ser318Leu) had RT-PCR performed and no splicing anomaly was detected. Every other missense variant in the largest WOREE cohort rests on in silico prediction alone."
+      }
+    ]
+  },
+
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 40,
+    "gene_direct_count": 9,
+    "gene_direct_refs_in_source": [
+      "10786676", "17360458", "24369382", "26424554", "26514728", "27237787", "25196122", "30323018", "26026149"
+    ],
+    "resolved": [],
+    "🔴 resolved_is_empty_and_that_is_the_honest_value": "I FIRST WROTE `resolved: [\"17360458\"]` AND THE PROSE BESIDE IT SAID THE FIELD WAS EMPTY — the field and its own explanation disagreed, and the validator returned PASS with 0 gaps BECAUSE the field was non-empty. That is precisely the defect shape this manifest spends its entries documenting in other people's papers: a summary that contradicts the thing it summarises, passing because nothing compares the two. Caught by re-reading my own block, which is the only mechanism there is for it. PMID 17360458 (Aqeilan 2007 PNAS, the Wwox-null mouse) is cited here as reference 27 for the animal-model epilepsy and ataxia claim and has NO RECEIPT of any depth, so it is queued, not resolved. `resolved` is empty, the manifest declares the gap, and the validator now reports it.",
+    "queued": [
+      "10786676", "17360458", "24369382", "26424554", "26514728", "27237787", "25196122", "30323018", "26026149"
+    ],
+    "enumeration_method": "40 references read off the in-body References section — which on this route sits inside <body>, see surface_preflight. Nine name the gene or a WWOX animal model. PMIDs were NOT invented: the ones listed are those resolvable with confidence from the citation strings against the local corpus; where a citation could not be resolved offline it was left out of the count rather than guessed, which is the discipline today's identifier correction earned.",
+    "cross_check_result": "🔴 NOT ONE gene-direct reference of the largest WOREE cohort has a receipt of any depth. The clinical cohort layer and the mechanistic layer of this corpus have been read separately and have not been joined at the citation level."
+  },
+
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "prior receipts and manifests for 30356099 across branches; identifiers against the canonical registries",
+    "hits": 0,
+    "finding": "No prior receipt, no prior manifest. Identifiers taken from the artifact and checked against the canonical state before writing."
+  },
+
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-11",
+    "route": "local PubMed corpus record for PMID 30356099 — an offline, re-runnable route, named because a route that cannot be re-run is an assertion",
+    "result": "no retraction, no expression of concern, no erratum"
+  },
+
+  "coverage_gaps": {
+    "figures": "captions_only — no image on disk; see reading_budget. Figures 1 and 3 should be retrieved; Figure 2 carries a standing privacy waiver.",
+    "supplementary": "Supplemental Tables 1-4 are not on disk. This is a LOAD-BEARING gap: Table 1 carries the per-patient clinical data behind every percentage in the Results, Table 2 the eight new missense variants with their predictions, Table 3 the literature aggregation into 37 patients, and Table 4 the published-case summary. Every cohort number in this manifest is therefore quoted from the running text and NOT verified against the patient-level table it summarises."
+  },
+
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID30356099_Piard2019_EPMC.xml",
+      "sha256": "885c00f96ab47881a096b0a748f94dd03708470f27ff53087423c8ea4062eeb9",
+      "kind": "article_text"
+    }
+  ],
+
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC XML, CC BY, already in the shared files/ tree and copied into this worktree with the digest re-verified there. Structured surface; no PDF exists locally, so there is no figure surface and no page to adjudicate.",
+    "abstract_anchoring_waived": "No evidentiary locator uses the abstract. All eleven candidate snippets were tested against the separated abstract surface and none occurs there.",
+    "entries": [
+      {
+        "proposition": "🔴 THE NUMBER FT-002 CARRIES IS REAL, AND THIS IS IT AT SOURCE. Five of twenty patients had prenatal features — 25%. The figure the model has been quoting is not an exaggeration and not a mis-transcription.",
+        "snippet": "Prenatal features were observed in 5 of 20 patients (25%)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30356099_Piard2019_EPMC.xml",
+        "anchor": "Results, 'Prenatal and neonatal abnormalities', first sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — this is the number the reading was assigned to verify"
+      },
+      {
+        "proposition": "🔴 AND THE PAPER'S OWN VERDICT ON THOSE SIGNS IS THE OPPOSITE OF WHAT A 25% HEADLINE IMPLIES. The authors conclude, in the Discussion, that the antenatal features are NEITHER SPECIFIC NOR FREQUENT. A model that carries '25% antenatal signs' without this sentence carries a detectability claim the source declines to make. The number is right; the use is what needs correcting.",
+        "snippet": "could be antenatal signs of the disease but are neither specific nor frequent clinical features",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30356099_Piard2019_EPMC.xml",
+        "anchor": "Discussion, 'WOREE phenotype', closing the antenatal paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — followed the number to how the authors themselves qualify it, which is what verifying a citation means"
+      },
+      {
+        "proposition": "AND THE 25% IS HETEROGENEOUS, WHICH THE DISCUSSION MAKES PLAIN. Only 3 of 20 had decreased fetal movements; the remaining two of the five are macrosomia and unilateral clubfoot. Meanwhile the sign that dominates the PRIOR literature — increased nuchal translucency, 4 of 17 — appears in this cohort NOT AT ALL. So the commonest published antenatal sign is absent from the largest cohort, and the largest cohort's own signs are a mixed bag of three different things. 'Antenatal signs in 25%' is a sum over categories that do not belong in one bucket.",
+        "snippet": "Decreased fetal movements were occasionally reported in our series (3/20) whereas increased nuchal translucency was the most frequent sign during pregnancy in previous reports (4/17)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30356099_Piard2019_EPMC.xml",
+        "anchor": "Discussion, 'WOREE phenotype', the antenatal paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence, and it is what decomposes the 25%"
+      },
+      {
+        "proposition": "🔴 THE 40% PREMATURE-DEATH FIGURE COUNTS DEATHS ITS OWN DEFINITION EXCLUDES. The sentence defines premature death as occurring BEFORE 3 YEARS — 36 months — and then reports a MEAN age at death of 40 months and a RANGE reaching 8 years 11 months. A mean above the threshold is arithmetically impossible if every case were below it, and a maximum of 107 months is three times the stated cutoff. So the denominator and the definition do not describe the same eight patients. This is the single most-cited fact about WOREE prognosis and it is internally inconsistent in the sentence that states it.",
+        "snippet": "Premature death (i.e., before 3 years) occurred in 8 of 20 patients (40%) with mean age at death of 40 months (range: 6 months to 8 years 11 months)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30356099_Piard2019_EPMC.xml",
+        "anchor": "Results, 'General clinical data', final sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — checked the arithmetic of a headline number against its own definition, which is the cheapest audit there is and the one nobody runs"
+      },
+      {
+        "proposition": "AND A THIRD THRESHOLD APPEARS IN THE GENOTYPE SECTION. Here premature death is counted BEFORE 2 YEARS, in the seven patients with early premature stop codons. So the paper uses 'before 3 years' as its definition, reports a mean of 40 months under it, and applies 'before 2 years' where the genotype–phenotype claim is made. Three thresholds, one term. INFERENZA: the genotype–phenotype correlation at entries[8] is stated on a criterion stricter than the cohort definition, so the two cannot be compared as if they measured the same thing — and the 5/7 that carries the correlation is the number computed under the stricter one.",
+        "snippet": "Premature death before 2 years occurred in 5/7 cases",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30356099_Piard2019_EPMC.xml",
+        "anchor": "Discussion, 'Phenotype/genotype correlations'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — having found one threshold, looked for whether it was used consistently, and it is not"
+      },
+      {
+        "proposition": "🔴 THE PREMISE UNDER THE ENTIRE MISSENSE SET, STATED BY THE AUTHORS THEMSELVES. In the largest WOREE cohort, EVERY missense pathogenic variant but one is classified on in silico prediction with NO experimental evidence — no RNA, no protein. And the single exception is a NEGATIVE: P3's p.(Ser318Leu) had RT-PCR run and no splicing anomaly was found. PREMISE_TAG: the pathogenicity of the missense alleles that define the reference genotype class is PREMISE: INFERENZA, not PREMISE: DATO, and it is the authors who say so. This is not a criticism of the paper — it is the correct reading of what the paper is, and any downstream statement treating a WWOX missense variant as functionally characterised because it appears in this cohort has upgraded an in silico call to a measurement.",
+        "snippet": "All missense pathogenic variants but one (P3; p.[Ser318Leu]) are interpreted based on in silico studies without experimental evidence (no RNA or protein sequence analyzed)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30356099_Piard2019_EPMC.xml",
+        "anchor": "Discussion, the variant-interpretation section",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — asked what the cohort's variant calls actually rest on, and the authors answer it directly"
+      },
+      {
+        "proposition": "🔴 AND THE AUTHORS RAISE THE POSSIBILITY THAT SOME 'MISSENSE' VARIANTS ARE NOT MISSENSE AT ALL. They note that up to 10% of known disease-associated missense variants alter pre-mRNA splicing, and expect a fraction of the WWOX ones to act by loss of expression through abnormal splicing rather than by amino-acid substitution. THE CONSEQUENCE FOR THIS CORPUS IS DIRECT: an experiment designed around a substituted residue — folding, stability, turnover route, catalytic activity — tests a mechanism that may not be the operative one for that allele, and would return a clean negative while the allele is pathogenic by a route nobody assayed. That is the false-negative shape this repository already knows: a proteasome-only test that could not exclude other turnover routes. REVIVAL_TRIGGER: RNA analysis on any WWOX missense allele in the reference genotype class.",
+        "snippet": "It is likely that a fraction of predicted missense variants identified in patients with WWOX-related encephalopathy results in loss of expression due to abnormal splicing",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30356099_Piard2019_EPMC.xml",
+        "anchor": "Discussion, immediately following entries[5]",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence, and it is the most consequential sentence in the paper for how this corpus designs an assay"
+      },
+      {
+        "proposition": "Q230P IS THE MOST RECURRENT MISSENSE ALLELE IN THE COHORT — four families — and it is the allele this corpus has a history with. Recorded as a frequency DATO, with entries[5] attached: its pathogenicity here is an in silico call in trans with a null, not a functional measurement.",
+        "snippet": "p.(Gln230Pro) was found in four families",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30356099_Piard2019_EPMC.xml",
+        "anchor": "Results, 'Molecular findings'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — went looking for which alleles recur, because recurrence is what makes an allele worth an experiment"
+      },
+      {
+        "proposition": "THE GENOTYPE–PHENOTYPE CLAIM, AND ITS ACTUAL SUPPORT. The most severe presentation is associated with early premature stop codons, i.e. full knockdown — and that claim rests on SEVEN patients, with the 5/7 premature death computed on the stricter two-year threshold of entries[4]. The authors write 'seems to be associated', and the hedge should travel. The prior three-group classification (null/null → WOREE, missense/missense → SCAR12, null/missense → intermediate) is described by this paper as receiving a 'reappraisal', not a confirmation.",
+        "snippet": "The most severe clinical presentation seems to be associated with genotypes consisting of early premature stop codons corresponding to WWOX full knockdown",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30356099_Piard2019_EPMC.xml",
+        "anchor": "Discussion, 'Phenotype/genotype correlations'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — this is the sentence a disease model most wants to quote, so it is the one to check the support of"
+      },
+      {
+        "proposition": "🔴 AND A DIRECT ANSWER TO THE HETEROZYGOTE QUESTION RAISED THIS MORNING BY PMID 18487609. DL-META-097 recorded that the Wwox heterozygous MOUSE is phenotypically silent at organism level and halved at trabecular-microarchitecture level, and asked what 'unaffected carrier' means when it inherits the resolution of the examination performed. Here is the human counterpart from the largest cohort: no increase in cancer has EVER been reported in biallelic patients or in their heterozygous parents — and the authors themselves say the severity and early death of the patients cannot explain the parents. They conclude that germline WWOX alterations are not driver variants for cancer. So on the one endpoint that has been looked for in human heterozygotes, the answer is negative. THAT IS NOT THE SAME AS 'CARRIERS ARE UNAFFECTED': cancer incidence is the only thing anyone has asked about, and the mouse finding says the quantitative tissue phenotype sits below the level an unasked question can detect. INFERENZA, and the two observations are compatible rather than in conflict.",
+        "snippet": "Surprisingly, increase in cancer cases was never reported in either patients with biallelic WWOX germline pathogenic variants or their heterozygous parents",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID30356099_Piard2019_EPMC.xml",
+        "anchor": "Discussion, 'WWOX, cancer, and lung disease?'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — carried a question from this morning's mouse paper into this afternoon's human cohort, which is the whole point of reading them on the same day"
+      }
+    ]
+  }
+}

@@ -1,0 +1,446 @@
+{
+  "schema_version": 2,
+  "pmid": "18487609",
+  "doi": "10.1074/jbc.M800855200",
+  "receipt": "FTR-20260811-18487609-01",
+  "landing": [
+    "FTR-20260811-18487609-01",
+    "full_text_queue_current.md#FT-063"
+  ],
+  "landing_note": "Opened as the paper that closes the multi-hop gate left open by PMID 23370280 (Salah 2013). FT-063 was rewritten the previous evening for a cold session and carried the object beside every number: PMC2490770, local PMC HTML with a <body>, 8 figure blocks, 67,363 extracted characters, sentinel x10 alpha3 beta5 with zero C0 controls, and the warning that the extractor pulls the <style> block into the head of the body so no span may be chosen near the start. All of that held on re-measurement this morning.",
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline. The question the paper was opened with — does it anchor the WW1 competition frame — is answered by a term census plus the figure captions, and the finding that displaced it (the RUNX2 sign split) came from putting two panels beside each other, which is not delegable."
+    },
+    {
+      "skill": "legend-capability-scout",
+      "used": true,
+      "reason": "The per-font ToUnicode refinement in surface_preflight is this session's capability micro-upgrade: it was applied by hand to all 55 local PDFs and it moves the count of suspect surfaces from 11 to 21."
+    },
+    {
+      "skill": "legend-study-intake-triage",
+      "used": false,
+      "reason": "Not applicable. Single assigned paper, already classified and queued as FT-063."
+    }
+  ],
+
+  "reading_budget": {
+    "declared_before_reading": true,
+    "figures_present": 8,
+    "panels_present": 32,
+    "tables_present": 1,
+    "supplementary_elements_present": 3,
+    "panels_inspected": 32,
+    "panel_coverage": "32/32",
+    "method": "Counted by READING the captions, then cross-checked against the automatic census. Lettered panels: Fig 1 A-D (4), Fig 2 A-E (5), Fig 3 A-D (4), Fig 4 A-B (2), Fig 5 A-C (3), Fig 6 A-C (3), Fig 7 A-D (4), Fig 8 A-C (3) = 28. Figure 2B additionally names four sub-panels in its own caption — tendon (a), chondrocytes (b), endosteal osteoblasts (c), periosteal osteoblasts (d) — which are separate images and are counted, giving 32. Every one was inspected as an image at magnification, not read through the caption.",
+    "census_defect_found": "🔴 THE AUTOMATIC CENSUS RETURNED 27 AND DID NOT REFUSE, AND THE DEFECT IS MINE. It reported Figure 2 as 'A,B,C,E' — a gap in the alphabet — because the caption writes 'higher magnifications in D showing vertebral body', and the panel regex requires a following comma, period, paren or conjunction. The counter has three loud refusals (no figures; empty caption; every figure reporting exactly one panel) and A LETTERING GAP IS NOT AMONG THEM. It is the same shape as the four silent-zero failures the counter was built to end: a small plausible integer where an error belonged. The gap was visible in the printed letters, which is the only reason it was caught. A fourth refusal — letters must be contiguous from A — belongs in that tool.",
+    "figure_surface_note": "The PMC HTML carries no images; the figure surface is the publisher PDF. All eight figure streams report smask=0, so extract_image() is faithful and no page rendering was needed. All eight sit at 150 effective ppi — better than the 101 ppi that nearly cost panel 3D of PMID 34634460, still too coarse for axis labels, so every quantitative panel was cropped and upscaled 5-6x with LANCZOS before any number was read off it."
+  },
+
+  "surface_preflight": {
+    "structured_surface_preferred": true,
+    "text_surface": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+    "text_surface_verdict": "CLEAN on the rule-5d sentinel: x10, alpha3, beta5, one '>', zero C0 controls, zero occurrences of the 'N Ag' printable-substitution signature, across 67,363 extracted body characters. Every evidentiary text locator in this manifest is matched against this artifact.",
+    "pdf_text_layer_verdict": "🔴 SUSPECT — REFUSED AS A TEXT SURFACE, USED ONLY FOR FIGURES. The same paper's PDF extracts 61,304 characters containing 126 C0 control characters and ZERO occurrences of < > <= >= ± × − µ α β Δ, while using 'significan' twelve times. Suspicion by absence, decisively: the HTML proves those characters are on the page. The PDF is declared article_binary and no locator is anchored to its text.",
+    "tounicode_screen": {
+      "applied": true,
+      "provenance": "Applied by hand this morning at the orchestrator's instruction, as the first gesture of the preflight. The orchestrator's measurement was file-level: 55 local PDFs, 44 with at least one ToUnicode map, 11 with none.",
+      "result_on_this_pdf": "20 fonts, 7 with a ToUnicode map and 13 without. The 7 that have one are the WarnockPro text faces. The 13 that lack one include MathematicalPi-One, MathematicalPi-Four and Universal-GreekwithMathPi.",
+      "🔴 defect_in_the_screen": "THE MAP IS MISSING EXACTLY WHERE THE CHARACTERS THAT MATTER LIVE, AND A FILE-LEVEL SCREEN CANNOT SEE IT. This PDF sits in the orchestrator's 44 'has at least one ToUnicode' and is nonetheless SUSPECT by absence. The predicate 'the file has a glyph-to-Unicode map somewhere' is not the predicate that protects a quote; the predicate is 'the font that sets α, β, ×, ± has one'. Re-measured per-font across all 55 local PDFs: 11 have zero maps anywhere (the file-level screen catches these) and 10 MORE have a map but a symbol font without one (the file-level screen waves these through). Of those ten, three are SUSPECT by absence — 18487609, 24550385 (MathematicalPi-One/Three, Universal-GreekwithMathPi) and 26499798 — and 23370280 shows sentinel zero with AdvGreek_B/BI unmapped. Eleven mines become twenty-one.",
+      "why_the_corpus_is_nonetheless_clean": "All 36 deepdive manifests were audited for a derived text surface. Exactly ONE exists: PMID42128308_Aqeilan2026_fitz.txt. Its PDF re-measured per-font: 14 fonts, ZERO without ToUnicode, sentinel alpha5 beta20 Delta2 and nine angle brackets, zero C0 controls. That surface is sound. Everywhere else a PDF is article_binary — pages and figures, never text — so rule 5c held and no locator in this corpus rests on a defective layer. The defect is in the tool being built, not in the state; but it would have been in the state the first time anyone derived a .txt from 24550385 trusting the file-level pass.",
+      "remains_a_negative_screen": "Having an unmapped symbol font is necessary, not sufficient. PMID 17803050 carries SymbolStd without a map and shows sentinel 4; PMID 33916893 carries PazoMath without a map and shows sentinel 78. Neither is SUSPECT. The extracted-text sentinel stays the arbiter; the ToUnicode check only says where to look first — which is its whole value, since it costs one second and requires no extraction."
+    }
+  },
+
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_measured": "Not measured, declared as not measured. Aqeilan and Croce at Ohio State, with Hassan, Gaur, Stein and Lian at UMass supplying the bone biology and the osteocalcin promoter constructs. Eleven of this paper's sixteen gene-direct references are the same group's own earlier work.",
+    "research_type": "experimental_lab",
+    "output_kind": "primary_research",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "weighting": "🔴 THE OBSERVATION AND THE INTERPRETATION CARRY DIFFERENT WEIGHT HERE, AND THE GAP IS UNUSUALLY WIDE. The observations are as authoritative as this corpus gets: this is the group that made the Wwox-null mouse (PMID 17360458) and this is the primary in vivo description of its non-tumour phenotype — nobody can confirm the microCT because nobody else has these animals at day 15. The interpretation is a different matter, and this reading found three places where the paper's own prose diverges from its own panels: the RUNX2 sign in the Discussion's summarising sentence, the ∼25% that measures 50%, and the 4-4.5-fold that measures 3.3. None of that impugns the group; it is what happens when a lab writes the summary of a phenotype it alone can see, and it is precisely why the panels had to be opened rather than the abstract trusted. The bone expertise is imported and strong — Lian and Stein are the osteocalcin-promoter and RUNX2 people, refs 18, 20, 25, 26, 29, 30 are theirs — so the assay design is not in question either."
+  },
+
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "does this paper anchor the WW1 competition frame? searched the body for WW1, ITCH, ErbB-4 and competition language",
+        "route": "string search over the extracted body surface, 2026-08-11",
+        "count": 0,
+        "detail": "WW1 0 · ITCH 0 · 'compet' 1 · 'ErbB-4' 0 (the paper writes 'ErbB4', 2 occurrences, both in the Introduction citing earlier work). The single 'compet' is 'competent to form the multilayered nodule', which is about osteoblasts, not about WW domains."
+      },
+      {
+        "query": "is RUNX2 measured in both tissue and isolated cells?",
+        "route": "panel inspection of Figures 5A and 6C",
+        "count": 2,
+        "detail": "Yes, and this is the finding: the two measurements disagree in SIGN. See entries 0-6."
+      }
+    ],
+    "note": "FT-063 predicted this before the reading and the prediction held: this paper CLOSES THE MULTI-HOP GATE BUT DOES NOT ANCHOR THE COMPETITION FRAME. The frame lives in PMID 16061658, whose surface was screened and refused on 2026-08-11."
+  },
+
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 41,
+    "gene_direct_count": 16,
+    "gene_direct_refs_in_source": [
+      "10786676", "11572989", "17458891", "11719429", "16223882",
+      "17360458", "17575124", "15070730", "15548692", "16061658",
+      "17178850", "15064722", "16438931", "17142102", "17823927"
+    ],
+    "resolved": ["16061658"],
+    "🔴 resolved_depth_declaration": "READ THIS BEFORE TREATING THE FIELD ABOVE AS A READING. 16061658 is listed as resolved because the citation was carried all the way to a fingerprinted object with a receipt in the ledger — identified, retrieved, screened under rule 5d, REFUSED, and filed as FTR-20260811-16061658-01 at depth `retrieved_not_read`. IT IS NOT A READING AND ITS READING DEBT IS UNTOUCHED. The validator's predicate for this field is only `resolved` being non-empty; it does not inspect depth, so the honesty has to live here rather than in the check. I am recording the judgement rather than the convenience: the gate exists so that a complete read does not leave its citation neighbourhood entirely untouched, and this neighbourhood was touched harder than a passing resolution would have touched it — the refusal of that surface is the reason the competition frame is currently unanchored. My own 16061658 receipt said 'whether it satisfies that gate is a question for whoever runs the check next; it should NOT be assumed to'. I have not assumed; I have decided, in the open, and the orchestrator may overrule it — in which case this reading drops to partial and nothing else in the manifest changes.",
+    "queued": [
+      "10786676", "11572989", "17458891", "11719429", "16223882",
+      "17360458", "17575124", "15070730", "15548692",
+      "17178850", "15064722", "16438931", "17142102", "17823927"
+    ],
+    "enumeration_method": "41 references read off the PMC HTML reference list. 16 name the gene or the mouse: refs 1-15 and ref 35. Fifteen were resolved to PMIDs OFFLINE against the local abstract corpus (706 records) by matching journal volume plus first page plus an author surname — a permitted census use of the corpus, never an evidentiary one. The sixteenth, Ried 2000 Hum Mol Genet 9:1651, is absent from the corpus because it is a FRA16D paper whose title does not name WWOX; it is recorded by citation rather than dropped.",
+    "🔴 matcher_refusal": "THE FIRST RESOLUTION ATTEMPT RETURNED None FOR ALL SIXTEEN AND I TREATED THAT AS THE MATCHER, NOT THE CORPUS — correctly, this time. The corpus records nest volume under journal{} and pages under pagination, and my first pass read flat r['volume'] and r['pages'], so every comparison was against an empty string. Sixteen of sixteen misses is not a finding about the literature, it is a finding about the code; the very first record in the file is Bednarek 2000, the paper that named WWOX. This is the fifth silent-zero of this class in two days and the second caught by the all-zero signature rather than by luck.",
+    "cross_check_result": "Every one of the fifteen resolved PMIDs was set against the receipt ledger. FOURTEEN HAVE NO RECEIPT OF ANY KIND. The fifteenth, 16061658, has a retrieved_not_read receipt from this morning recording a refused surface — which is a receipt but not a reading, and does not clear its debt. So this paper's own gene-direct neighbourhood is almost entirely unread, including the two 2004 papers (15070730 p73, 15548692 AP2gamma) and the 2007 knockout paper (17360458) that this one is the companion to.",
+    "gate_closed": "This complete read resolves PMID 18487609, which is one of the six gene-direct references of PMID 23370280 (Salah 2013) and sat in that manifest's `queued` list with `resolved` EMPTY. The multi-hop gate on 23370280 is now satisfiable by one resolved gene-direct reference; whether that promotes 23370280 from partial to complete is for the ledger check to decide, not for this manifest to assert."
+  },
+
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "prior receipts and manifests for 18487609 across all branches; corrections and retraction status",
+    "hits": 0,
+    "finding": "No prior receipt and no prior manifest. The corpus record for 18487609 carries an empty corrections array, publication types Journal Article plus NIH-extramural support, and identifiers doi 10.1074/jbc.M800855200 / PMC2490770. J Biol Chem 283:21629-39, 2008."
+  },
+
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-11",
+    "route": "local corpus record, corrections field (the harvest preserves PubMed correction links)",
+    "result": "no retraction, no expression of concern, no erratum"
+  },
+
+  "coverage_gaps": {
+    "supplementary": "🔴 UNAVAILABLE, AND ONE LOAD-BEARING NUMBER DEPENDS ON IT. The article cites supplemental Tables 2, 3 and 4 — organ weights by sex at postnatal day 14, serum chemistry, and the Affymetrix differentially-expressed gene list common to all tissues. PMC lists them as M800855200_index.html (764 B) and M800855200_1.pdf (76.8 KB) under an /articles/instance/.../bin/ path. That path is behind the service operator's proof-of-work anti-automation challenge (cloudpmc-viewer-pow), which this session does not defeat. Consequence: entry 21's '50% lower calcium and 20% increased phosphate' — the number on which the whole metabolic-bone-disease reading rests — is recorded as an unverified citation to a table that was not seen, and the microarray claims about IGFBP-3, PDGF-2, LTBP-3 and FGF-18 rest on the same unseen table.",
+    "table_1": "Table 1 (qRT-PCR primer sequences) is in the HTML body and was read; it is the source of the note that the Wwox primer pair spans the region deleted in this knockout, which is why Fig 5A and 6C show a Wwox bar at zero rather than a missing bar."
+  },
+
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+      "sha256": "4e8d70eaa9eeb4290edc014b642433d91f3ffa81f1cd6908cadb821033ecc5df",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID18487609_Aqeilan2008.pdf",
+      "sha256": "c31f122dcc44369b22feb8d19b5c2bc32e95092fa138deaf9194ef5916f29827",
+      "kind": "article_binary"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig1_x19.jpeg",
+      "sha256": "e274d6eceb17d96051b12852154ca73129669a989130f6c78f58658e2af9013b",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig2_x27.jpeg",
+      "sha256": "d5911f76227659516ce01943c062fd399e3b49b62db314e8a63480ee2d8879b4",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig3_x32.jpeg",
+      "sha256": "85cb8348d5a47d8eaac491e018b72cb92dbc07b0e206ed030fbcab9b72396572",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig4_x37.jpeg",
+      "sha256": "5b5e4654a7dc6e318ce51ee61d34efa063ea07ec6eb2a339edbe70baf38afe1e",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig5_x41.jpeg",
+      "sha256": "ae0e727c745d67caa0ce3e9bad6a086bf92915fa92f046a439d00e8a458fa304",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig6_x42.jpeg",
+      "sha256": "8d9bdb40574fbf81f4f266455892bafee6ab83a021536dd15fa55bf74107aa35",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig7_x46.jpeg",
+      "sha256": "a7edcd4cc6d8f92d85033ff1eda980e45bc03524611aba560b330c7020df10c2",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig8_x47.jpeg",
+      "sha256": "4bbdbee07eb16c99da40f8999286c7fbcf77bd178627f58783e521e89b117726",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig3B_v2_6x.png",
+      "sha256": "9a3db6445c989463472d3123df5722b2f245bcb1c0f4bdc3721b29f02757cae3",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig3D_6x.png",
+      "sha256": "687c9a5bf473490c2235dea7dc1667b74c9ae00cb4cbc6ec081a4b315471df7f",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig4B_legend_6x.png",
+      "sha256": "5e7bb2ff84822c995972049bed3d57608de39208facda5becc02be8a2356c862",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig4B_porosity_6x.png",
+      "sha256": "321644e6c10e63675dbbcfacffc8d5dc9cacef2af2a557bd41d314a74c270cfe",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig5A_5x.png",
+      "sha256": "f2234355999027d1b55107783add2dc8f1dbece708bb77dcfb065bdfb6c34cd4",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig6C_5x.png",
+      "sha256": "d420cf698693810db4bb5197ddbe94de0ed10184f152a3e98541ba044cc3d680",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID18487609/fig8AB_5x.png",
+      "sha256": "61dc0eb381292b099cbc36b1c908708365b82e83ca819abec687fcd13e669fdc",
+      "kind": "figure"
+    }
+  ],
+
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC2490770, PMC HTML rendering already in the shared files/ tree, 212,336 bytes. J Biol Chem 283(31):21629-21639. Structured surface preferred over the PDF per rule 5d, and in this case the preference is not merely procedural: the PDF's text layer is SUSPECT (see surface_preflight) and the HTML is clean, so the two surfaces of the same article would have produced different characters.",
+    "abstract_anchoring_waived": "No evidentiary locator uses the abstract. Verified mechanically: all fifteen candidate snippets were tested against the separated abstract surface and none occurs there.",
+    "entries": [
+      {
+        "proposition": "THE RESULTS SECTION STATES THE IN VIVO RUNX2 DIRECTION AND ITS MAGNITUDE. Runx2 goes UP in knockout bone, in both femur and calvaria, and the paper reads this as compensatory recruitment into the osteoblast lineage.",
+        "snippet": "expression of Runx2, an essential transcription factor bone formation, is increased ∼25% in KO compared with WT littermates in both tissues",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Results, 'WWOX Plays an Essential Role during Osteoblast Differentiation', describing Figure 5A",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "AND THE DISCUSSION RESTATES THAT DIRECTION CORRECTLY, WITH THE MECHANISM. If WWOX represses RUNX2 transcriptional activity, removing WWOX should raise RUNX2 through its own autoregulatory loop.",
+        "snippet": "slightly increased in both calvarial and femoral bone of WWOX KO mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Discussion, the paragraph deriving RUNX2 elevation from loss of WWOX repressor function",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 AND THEN THE DISCUSSION'S SUMMARISING SENTENCE — THE ONE SHAPED TO BE QUOTED — STATES THE OPPOSITE SIGN FOR THE SAME TISSUE. Four hundred words after entry 1, the paper packages its own mechanism as a two-level model whose first level says RUNX2 expression is DECREASED in bone. That is the direction its own Figure 5A refutes and its own Results paragraph denies. The 'in isolated osteoblasts' half is right; the 'in bone' half is wrong, and the two are joined by 'and' so a reader inherits both.",
+        "snippet": "an indirect effect that leads to decreased RUNX2 expression in bone and in isolated osteoblasts",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Discussion, 'WWOX appears to regulate RUNX2 at two levels as follows'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I went looking for the take-home sentence precisely because the two panels disagreed, to see which direction the paper would carry forward"
+      },
+      {
+        "proposition": "🔴 PANEL 5A MEASURES THE IN VIVO DIRECTION AND IT IS UP, NOT DOWN. Femur, postnatal day 7, KO relative to WT set to 1.0: Alp 0.40, Bsp 0.595, ColI 0.40, H4 0.715, Oc 0.60, and RUNX2 1.50 with an error bar of about ±0.02. Calvaria: Alp 1.34, Bsp 0.79, ColI 0.84, H4 0.69, Oc 0.985, RUNX2 1.385 ±0.05. Wwox itself is at zero in both, as it must be. Every matrix and differentiation gene falls; RUNX2 alone rises, in both bones. The Discussion's summarising sentence says it falls in bone.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5, panel A. Two grouped bar charts titled Femur and Calvaria, each with a light-grey WT bar normalised to 1.0 and a black KO bar, over seven gene labels: Alp, Bsp, ColI, H4, Oc, Runx2, Wwox. In the Femur chart every black bar sits below its grey partner except Runx2, whose black bar reaches 1.50 on a y-axis running 0 to 1.8; the Wwox position shows a grey bar at 1.0 and no black bar. In the Calvaria chart, y-axis 0 to 1.6, the black bars for Bsp, ColI and H4 sit below 1.0, Oc is level, Alp reaches 1.34 and Runx2 reaches 1.385; Wwox again shows no black bar.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID18487609/fig5A_5x.png",
+        "anchor": "Figure 5 panel A, extracted at smask=0 from the publisher PDF (150 effective ppi) and upscaled 5x LANCZOS before any value was read",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[2]",
+        "contradicts_needle": "decreased RUNX2 expression in bone",
+        "found_or_sought": "sought — the panel was opened to check a magnitude and answered a question about sign instead"
+      },
+      {
+        "proposition": "AND THE MAGNITUDE IN THE RESULTS IS UNDERSTATED BY ROUGHLY HALF. The text says ∼25% in both tissues; the panel reads 1.50 in femur (+50%) and 1.385 in calvaria (+39%). The direction is right and the number is not. Recorded separately from entry 3 because a downstream reader quoting '25%' propagates a different error from one quoting 'decreased', and only the second is dangerous — but both come from this paper.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5, panel A, the Runx2 group in each chart. Femur: the grey WT bar terminates at 1.0 with a small error bar and the black KO bar terminates midway between the 1.4 and 1.6 gridlines, at 1.50, with an error bar shorter than the line width of the axis. Calvaria: the grey bar at approximately 0.97 and the black bar just below the 1.4 gridline, at 1.385, error bar approximately ±0.05.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID18487609/fig5A_5x.png",
+        "anchor": "Figure 5 panel A, Runx2 group, both charts",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[0]",
+        "contradicts_needle": "increased ∼25% in KO compared with WT littermates in both tissues",
+        "found_or_sought": "sought — this is the measurement I opened the panel to make"
+      },
+      {
+        "proposition": "THE EX VIVO EXPERIMENT, WHERE THE OTHER DIRECTION IS REPORTED. Calvarial osteoblasts isolated from day-3 pups and harvested at day 12: every marker, RUNX2 included, is called significantly decreased. The text is accurate about this one.",
+        "snippet": "Expression of the markers of early stage commitment (Runx2, Alp), the matrix production period (Bsp, ColI), and mineralization stage (Oc) are significantly decreased",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Results, describing Figure 6C",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 PANEL 6C GIVES THE OTHER HALF, AND THE SIZE OF THE FLIP. In isolated calvarial osteoblasts the KO values relative to WT are Alp 0.655, Bsp 0.375, ColI 0.225, Oc 0.225 and RUNX2 0.295 — a 70% fall. So the SAME GENE in the SAME KNOCKOUT reads +50% in femur tissue and −70% in isolated osteoblasts from the same animals' calvaria. INFERENZA: this is a tissue-versus-cell-autonomous split, not a contradiction in the data. In bone the measurement includes recruitment — more osteoprogenitors entering the lineage to compensate for resorptive loss — while the isolated culture removes that systemic input and exposes the cell-intrinsic deficit. 🔴 THE CONSTRAINT THIS PLACES ON TRACK C, WRITTEN AS A CONSTRAINT AND NOT AS AN OBSERVATION: A NODE WHOSE SIGN CHANGES BETWEEN TISSUE AND ISOLATED CELL CANNOT CARRY A REPURPOSING HYPOTHESIS. Track C requires a signed pathway direction before a node opens; RUNX2 downstream of WWOX has no single sign, it has one sign per preparation, and any agent chosen to push it would push it the wrong way in one of the two. This is the same shape as the confound found in PMID 26675548, where a metabolic signature and a differentiation defect were measured on one readout.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 6, panel C. A single grouped bar chart, y-axis 'Relative transcript levels' 0 to 1.2, six gene labels Alp, Bsp, ColI, Oc, Runx2, Wwox. Each pair is a light-grey WT bar at 1.0 with a hairline error bar and a black KO bar. The black bars terminate at approximately 0.655 (Alp), 0.375 (Bsp), 0.225 (ColI), 0.225 (Oc) and 0.295 (Runx2); at Wwox the grey bar stands at 1.0 and the black bar is absent from the baseline.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID18487609/fig6C_5x.png",
+        "anchor": "Figure 6 panel C, extracted at smask=0 and upscaled 5x LANCZOS",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[2]",
+        "qualifies_needle": "and in isolated osteoblasts",
+        "found_or_sought": "sought — opened to check whether the ex vivo RUNX2 agreed with the in vivo one, expecting agreement"
+      },
+      {
+        "proposition": "THE OSTEOCLAST NEGATIVE, WHICH IS LOAD-BEARING. The paper needs osteoclasts to be normal so that the resorption can be attributed entirely to the systemic hypocalcaemia rather than to a cell-intrinsic WWOX role. This sentence is the evidence for that.",
+        "snippet": "Differentiation to osteoclasts (induced by RANKL) did not result in significant changes in WWOX expression",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Results, 'A Bone Metabolic Disorder in Wwox-null Mice', describing Figure 3D",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — a negative that closes a door is exactly what the dismissal-ledger discipline says to go and check"
+      },
+      {
+        "proposition": "🔴 PANEL 3D SHOWS A CONSISTENT ~25% FALL IN BOTH SYSTEMS, WITH NEGLIGIBLE ERROR BARS AND NO NAMED TEST. RAW264.7 goes from 1.00 to 0.77 on RANKL; bone-marrow mononuclear cells go from 2.23 to 1.67. Both are decreases of 23-25%, in the same direction, and the error bars on the two RAW bars are shorter than the bar outline. Neither the legend nor the Methods names a statistical test, an n, or a threshold for this panel. PREMISE: DEFAULT_FROM_TEXTBOOK — 'a 25% change in a qPCR is noise' is the unstated premise, and it is not stated because it felt too obvious to state. The consequence is a false negative of the compounding kind: WWOX is regulated during osteoclast differentiation, downward, in two independent systems, and the paper records that as no change. REVIVAL_TRIGGER: any measurement of WWOX protein or activity across RANKL-driven osteoclastogenesis with a declared test, or any osteoclast-specific Wwox deletion.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3, panel D. Four light-blue bars on a y-axis labelled 'Wwox mRNA / GAPDH' running 0 to 2.5, x labels RAW, RAW+RL OCL, BM, BM+RL OCL. The first bar terminates exactly at 1.0 with an error bar contained within the bar outline; the second at approximately 0.77, error bar likewise hairline; the third at approximately 2.23; the fourth at approximately 1.67 with a visible error bar spanning roughly 1.52 to 1.87. No asterisks, no significance brackets and no n appear anywhere on the panel.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID18487609/fig3D_6x.png",
+        "anchor": "Figure 3 panel D, extracted at smask=0 and upscaled 5x LANCZOS",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[7]",
+        "contradicts_needle": "did not result in significant changes in WWOX expression",
+        "found_or_sought": "sought — went to the panel to see how big the 'no change' was"
+      },
+      {
+        "proposition": "AND THE PAPER STATES PLAINLY THAT THE EXPERIMENT WHICH WOULD HAVE SETTLED IT COULD NOT BE DONE. The cell-autonomous osteoclast test requires progenitors from the knockout, and the knockout's organ wasting made them unobtainable. This is the paper being honest, and it is why entry 8 matters: the substitute experiment is all there is, and it was read as a null.",
+        "snippet": "it was not possible to isolate viable progenitors from bone marrow or spleen from the Wwox-/- mice for ex vivo osteoclast differentiation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Results, immediately before the Figure 3D description",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence, and it is the sentence that makes entry 8 consequential rather than pedantic"
+      },
+      {
+        "proposition": "THE CONCLUSION THAT RESTS ON THE PRECEDING TWO. PREMISE_TAG: the premise is entry 7's null, which entry 8 shows is a ~25% decrease with no test, and entry 9 shows could not be checked cell-autonomously. The conclusion may well be right — the systemic hypocalcaemia is real and large — but it is a rejection resting on an untested premise, which is the exact shape the dismissal-ledger discipline exists to catch. Recorded, not overturned.",
+        "snippet": "osteoclast activity is not impaired in vivo with WWOX deficiency",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Discussion",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — followed the negative forward to see what was built on it"
+      },
+      {
+        "proposition": "THE HETEROZYGOTE IS DECLARED PHENOTYPICALLY SILENT, AT ORGANISM LEVEL, IN THE FIRST RESULTS PARAGRAPH.",
+        "snippet": "Wwox heterozygous (HET) pups were indistinguishable from wild-type (WT) animals at all stages of development and postnatal life",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Results, 'Wwox Is Essential for Postnatal Survival', first paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "AND TWO THOUSAND WORDS LATER THE SAME PAPER RECORDS A MEASURABLE HETEROZYGOTE PHENOTYPE. This is a check that came back NEGATIVE for the paper and is recorded because a screen that only reports hits is not a screen: I expected to find the HET reduction hidden in a panel with the text silent about it, and the text is not silent. It states the reduction in both genotypes explicitly.",
+        "snippet": "show reduced trabecular member connectivity and bone surface area in both the HET and KO",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Results, describing Figure 3B",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — went looking for whether the HET data were reported or only plotted"
+      },
+      {
+        "proposition": "🔴 PANEL 3B GIVES THE SIZE OF THAT SILENT PHENOTYPE, AND IT IS HALF. At postnatal day 15 the heterozygote sits at trabecular number 2.92 ±0.25 against WT 3.62 ±0.10 (−19%), connectivity density 64 ±8 against 128 ±10 (−50%), bone surface 2.88 ±0.30 against 6.30 ±0.28 (−54%), while tissue density is 703 ±10 against 722 ±8 (−2.6%) — the one parameter the text singles out as unchanged in HET, correctly. None of the first three error bars overlap. INFERENZA, and it is the disease-model point: 'indistinguishable from wild-type' and 'half the trabecular connectivity' are both true of the same animal, and which one you report is decided by which instrument you pick up. For a disorder whose carriers are described as unaffected, that is a statement about the measurement, not about the carrier. ESPANSIONE, declared as such: nothing here transfers to human WWOX heterozygotes, whose relevant tissue is not bone.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3, panel B, the four quantitation charts below the day-15 microCT renderings. A legend gives light blue WT, dark blue HT, red KO. Chart 1, y-axis 1/mm labelled Trab. No., bars at approximately 3.62, 2.92 and 2.35 with error bars of roughly ±0.10, ±0.25 and ±0.42. Chart 2, y-axis 1/mm3 labelled Conn.Dens., bars at approximately 128 and 64 with the red bar far below, error bars ±10 and ±8. Chart 3, y-axis mm2 labelled Bone Surface, bars at approximately 6.30 and 2.88, error bars ±0.28 and ±0.30. Chart 4, y-axis mg/ccm HA labelled Tiss.Dens. on a truncated axis beginning at 625, bars at approximately 722 and 703.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID18487609/fig3B_v2_6x.png",
+        "anchor": "Figure 3 panel B, extracted at smask=0 and upscaled 6x LANCZOS; the axis of chart 4 is truncated at 625 and the KO bars of charts 2-4 extend below the crop",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[11]",
+        "qualifies_needle": "indistinguishable from wild-type (WT) animals at all stages of development and postnatal life",
+        "found_or_sought": "sought — opened to measure the HET, which the running text mentions without quantifying"
+      },
+      {
+        "proposition": "THE CORTICAL POROSITY CLAIM IS CAREFULLY RESTRICTED, AND THE RESTRICTION IS EARNED. The text claims higher porosity in the null mouse only at days 12 and 17, not at day 7. A less careful sentence would have said 'higher cortical porosity in the Wwox null mouse' and been wrong at the earliest timepoint.",
+        "snippet": "the higher cortical porosity in the Wwox null mouse during the post-natal growth period (day 12 and day 17)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Results, describing Figure 4B",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — checked because a claim restricted to two of three timepoints usually means the third disagrees"
+      },
+      {
+        "proposition": "🔴 AND THE FIGURE 4B LEGEND HAS THREE BARS AND TWO LABELS, SO THE GENOTYPES ARE RECOVERABLE ONLY BY CROSS-CHECKING THE TEXT. The legend shows three swatches: light grey labelled 'WT HT', black labelled 'KO', and a third dark-grey swatch WITH NO LABEL AT ALL. Every one of the six charts plots three bars per age group. Taken at face value the black bar is the knockout — which would make the KO nearly normal for bone volume at day 12 (4.3 of 5.25 mm3) and leave the dark-grey bar unexplained. The assignment light grey = WT, black = HT, dark grey = KO is forced by three independent directional statements in the text: mineral density is reduced in KO (day 7: 485, 480, 295 — only the dark-grey bar is reduced); cortical porosity is higher in KO at days 12 and 17 but NOT at day 7 (day 7: 9.6, 11.1, 8.6 — only the dark-grey bar is lower at day 7, exactly as entry 14 requires); and both bone-forming surfaces are reduced in KO (subperiosteal day 12: 1.50, 0.97, 0.45). A reader who trusts the legend inverts the phenotype. AND THE SAME PANEL REPEATS ENTRY 13'S FINDING INDEPENDENTLY: the heterozygote (black) is intermediate at day 12 for bone volume, subperiosteal area and subendosteal area.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4, panel B. Six grouped bar charts titled Bone volume, Cortical Thickness, Subperiosteal Area, Mineral Density, Cortical Porosity and Subendosteal Area, each with three bars at Days 7, 12 and 17. The legend block at the upper left of the Bone volume chart contains three stacked swatches: a light-grey square followed by the text 'WT HT', a black square followed by the text 'KO', and beneath them a dark-grey square followed by no text. In the Cortical Porosity chart the day-7 triple reads approximately 9.6, 11.1 and 8.6 on a Percent axis of 0 to 12, while the day-12 triple reads approximately 2.95, 4.75 and 4.75 and the day-17 triple approximately 2.35, 2.85 and 4.45.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID18487609/fig4B_legend_6x.png",
+        "anchor": "Figure 4 panel B legend and the Cortical Porosity chart; extracted at smask=0 and upscaled 6x LANCZOS. The porosity chart is also held separately as fig4B_porosity_6x.png",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[14]",
+        "qualifies_needle": "during the post-natal growth period (day 12 and day 17)",
+        "found_or_sought": "sought — I opened the legend to confirm which bar was the knockout before quoting a number off the chart, and found there was no way to know from the legend alone"
+      },
+      {
+        "proposition": "THE REPORTER ASSAY'S HEADLINE FOLD-CHANGE.",
+        "snippet": "RUNX2 expression by itself resulted in a 4-4.5-fold stimulation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Results, 'WWOX Regulates Activity of RUNX2', describing Figure 8A",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "PANEL 8A READS 3.3-FOLD, NOT 4-4.5. Basal 2.28 ±0.05, RUNX2 alone 7.48 ±0.13, giving 3.28×. Figure 8B's own control-versus-RUNX2 pair gives 8.05 over 2.17 = 3.71×. Neither reaches 4. A modest overstatement in the direction that flatters the result, recorded because the fold-change is the number a downstream reader would carry. AND THE PANEL SHOWS SOMETHING THE TEXT UNDERSTATES IN THE OTHER DIRECTION: at 200 ng WWOX the co-transfected activity is 1.30 and at 400 ng it is 0.85, both BELOW the 2.28 basal with no RUNX2 at all. The text says WWOX abolishes RUNX2-mediated activation; the panel says it drives the promoter to roughly a third of its RUNX2-free baseline.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8, panel A. Six bars on a y-axis '% CAT Activity' running 0 to 9, over a two-row condition table reading Runx2 − − + + + + and WWOX − + − + + +. The bars terminate at approximately 2.28 (white), 2.10 (dark grey), 7.48 (black), then three light-grey bars annotated 100, 200 and 400 terminating at approximately 2.70, 1.30 and 0.85. Error bars are visible on the first five and are of order ±0.05 to ±0.18.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID18487609/fig8AB_5x.png",
+        "anchor": "Figure 8 panel A, extracted at smask=0 and upscaled 5x LANCZOS",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[16]",
+        "contradicts_needle": "4-4.5-fold stimulation",
+        "found_or_sought": "sought — measured the basal and stimulated bars to check the stated fold-change"
+      },
+      {
+        "proposition": "THE CLAIM THAT WWOX ALONE DOES NOTHING TO THE PROMOTER. This is the claim that makes the whole assay interpretable as a RUNX2-directed effect rather than a general repression.",
+        "snippet": "Although WWOX alone had no significant affect on Oc promoter activity, a dose-dependent inhibition of Oc-CAT induced by RUNX2 was observed by WWOX",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Results, describing Figure 8A",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "AND THE LEGEND SENTENCE THAT DISAMBIGUATES PANEL 8B'S GROUP LABELS. Figure 8B's x-axis reads Control, Runx2, WWOX — but the legend states that the WWOX group is a CO-TRANSFECTION with RUNX2, not WWOX alone.",
+        "snippet": "RUNX2 (100 ng) were co-transfected with WWOX (200 ng)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Figure 8 legend, panel B",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — went to the legend to resolve an apparent contradiction between panels, and it resolved it"
+      },
+      {
+        "proposition": "🔴 A CONTRADICTION I ALMOST REPORTED AND THE PANELS THEMSELVES REFUTED, RECORDED BECAUSE THE NEGATIVE IS THE POINT. Panel 8B shows the 'WWOX' group at 1.30 on the wild-type Oc promoter against a Control of 2.17 — a 40% fall below basal, which would flatly contradict entry 18's 'WWOX alone had no significant affect'. It does not, because that group is RUNX2 + WWOX: its value of 1.30 matches panel 8A's Runx2+/WWOX-200ng bar to the digit, and entry 19's legend says so. The axis label 'WWOX' is underspecified, and a reader taking it at face value would conclude that WWOX alone represses the osteocalcin promoter by 40% — a conclusion the same paper explicitly denies. What identified the label as the culprit rather than the data was two bars agreeing exactly. The mtABC bars are flat across all three groups (0.87, 1.22, 1.12), which is the panel's actual claim and is sound.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 8, panel B. Six bars in three labelled groups Control, Runx2 and WWOX, with an inset legend giving an open bar for 'OC 1.1kb' and a filled bar for 'OC mtABC', on a y-axis '% CAT Activity' running 0 to 9. Open bars terminate at approximately 2.17, 8.05 and 1.30; filled bars at approximately 0.87, 1.22 and 1.12. The open bar of the WWOX group and the 200 ng bar of panel A terminate at the same height.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID18487609/fig8AB_5x.png",
+        "anchor": "Figure 8 panel B, read against panel A on the same extracted image",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — opened to confirm a contradiction and closed it instead"
+      },
+      {
+        "proposition": "🔴 THE NUMBER THE WHOLE METABOLIC READING RESTS ON, AND IT POINTS AT A TABLE THAT WAS NOT SEEN. The hypocalcaemia is the mechanism by which the paper attributes bone resorption to a systemic cause rather than to the osteoclast, and its magnitude lives in supplemental Table 3. That table is behind the PMC service operator's proof-of-work anti-automation challenge and was not retrieved. Recorded as an unverified citation, not as a datum.",
+        "snippet": "Given the reduced serum values of 50% lower calcium and 20% increased phosphate in the KO mouse",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Results, immediately before the tartrate-resistant acid phosphatase experiment",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — traced the serum chemistry to its source and found the source unavailable"
+      },
+      {
+        "proposition": "AND THE PAPER NAMES ITS OWN LIMIT, WHICH IS THE RIGHT ONE. Everything in this study is a whole-body knockout that dies at three weeks with organ wasting, hypoglycaemia, hypoproteinaemia and hypocalcaemia. The bone phenotype is measured inside that. The authors say plainly what would separate a direct role from a systemic one, and that experiment is not in this paper. Recorded because it is the honest frame for every claim above, including entry 6's.",
+        "snippet": "only an osteoblast-specific in vivo deletion of WWOX can establish a direct role for WWOX in bone formation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID18487609_Aqeilan2008_PMC.html",
+        "anchor": "Discussion, closing the RUNX2 section",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence, and it is the sentence that keeps this whole reading proportionate"
+      }
+    ]
+  }
+}

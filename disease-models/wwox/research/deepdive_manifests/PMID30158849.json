@@ -1,0 +1,206 @@
+{
+  "schema_version": 2,
+  "pmid": "30158849",
+  "doi": "10.3389/fnins.2018.00563",
+  "pmcid": "PMC6104168",
+  "receipt": "FTR-20260811-30158849-01",
+  "landing": ["FTR-20260811-30158849-01", "full_text_queue_current.md#FT-002"],
+  "landing_note": "Liu, Ho, Lee, Chen, Chu, Teng, Wu, Sze, Chiang, Chang 2018, Front Neurosci 12:563 — a REVIEW on WWOX phosphorylation, signalling and neurodegeneration. Assigned by the operator on the thread four independent readings opened yesterday. Read as a review: what matters is which primary sources it names and whether any contradicts what this corpus holds. It does, twice, and the more consequential of the two is about a frame page-adjudicated yesterday.",
+
+  "skills_considered": [
+    { "skill": "legend-deepdive", "used": false, "reason": "Run inline. Characterising a review means measuring its citation base and setting its claims against papers already read, which needs the corpus in hand." }
+  ],
+
+  "reading_budget": {
+    "declared_before_reading": true,
+    "figures_present": 5,
+    "panels_present": 17,
+    "tables_present": 1,
+    "supplementary_elements_present": 1,
+    "panels_inspected": 17,
+    "panel_coverage": "17/17",
+    "method": "MEASURED, NOT INTENDED. Counted by reading the captions: Fig 1 A-B (2), Fig 2 A-F (6), Fig 3 unlettered schematic (1), Fig 4 A-G (7), Fig 5 unlettered schematic (1) = 17. All five figures were opened as images at native resolution before this number was written.",
+    "image_surface": "ACQUIRED via the Europe PMC REST /{PMCID}/supplementaryFiles endpoint, HTTP 200, 791,050-byte ZIP: all five figure JPEGs plus Table_1.XLSX at 5.3 MB. 🔴 THE XLSX CANNOT CARRY A LOCATOR AND THAT IS A PROPERTY OF THE SCHEMA, NOT A CHOICE: `deepdive_manifest._artifact_text` accepts only .xml, .html, .txt and .docx as text surfaces, so .xlsx is refused the way a PDF is. It is fingerprinted and declared `supplementary: not_read`; it holds Supplementary Table S1, which is the Allen Brain Atlas data behind Figure 2A and behind the contradiction recorded at entries[5].",
+    "figure_kinds": "Two of the five carry data and three do not. Fig 1A (immunoelectron microscopy) and Fig 2 (Allen Brain Atlas plus blots) and Fig 4 (histology plus a quantification) are data, ALL OF IT ADAPTED FROM THE GROUP'S OWN EARLIER PUBLICATIONS and labelled as such in the captions. Fig 3 and Fig 5 and Fig 1B are schematics. A review's figures are not new measurements, and the manifest treats them accordingly."
+  },
+
+  "surface_preflight": {
+    "structured_surface_preferred": true,
+    "text_surface": "files/fulltext/PMID30158849_Liu2018_EPMC.xml",
+    "route": "Europe PMC. CC BY 4.0. article-type declared as `review-article` in the deposit, which is the first thing checked and the frame for everything below.",
+    "🔴 ref_list_checked_and_this_is_the_cleanest_instance_of_the_extractor_defect_yet": "The <ref-list> sits OUTSIDE <body>, correctly filed — and its content is in the surface anyway. THE RELIABLE PROBE RUNS HERE AND IT IS UNAMBIGUOUS: of 127 <ref> elements, 122 carry an <article-title> longer than 45 characters and ALL 122 ARE VERBATIM IN THE SURFACE. That is the strongest confirmation of what was established on PMID 42082822 at 10 of 10. AND ON A REVIEW THE HAZARD IS AT ITS MAXIMUM: 28,294 characters of bibliography against a <body> of 53,034 — the surface is 87,786, so roughly a THIRD of what a locator would be verified against is other people's titles, and a review's reference titles are precisely statements about WWOX biology. 'WWOX at the crossroads of cancer, metabolic syndrome related traits and CNS pathologies' would pass as this review's own prose. No locator here is drawn from it; every snippet was taken from a named prose section or a caption and its position confirmed.",
+    "surface_measurement": { "in_tree_surface_chars": 87786, "body_element_only_chars": 53034, "abstract_chars": 1362, "ref_list_chars": 28294 },
+    "🔴 the_brief_described_a_different_object": "The assignment gave 219,663 bytes and a body of 53,897 characters. THE FILE ON DISK IS 220,167 BYTES and its <body> measures 53,034 — 504 bytes and 863 characters apart. Neither difference changes anything in this reading, which is anchored to sha256 2602bc80…, and both are recorded because a number without its object is what this corpus has been correcting all week. The likeliest explanation is a different fetch of the same article; it is not asserted, only that the two measurements are not of the same bytes."
+  },
+
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_measured": "Not measured as a publication count; MEASURED AS A CITATION BASE, which is the meaningful quantity for a review. Nan-Shan Chang's group, National Cheng Kung University, with collaborators. This is the laboratory that named the protein WOX1 and has developed the phosphorylation, Zfra, Hyal-2 and TIAF1/TPC6A lines for two decades.",
+    "research_type": "mixed",
+    "output_kind": "review",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "weighting": "🔴 ON A REVIEW THE OBSERVATION AND THE INTERPRETATION COME APART FURTHER THAN ANYWHERE ELSE, BECAUSE THE OBSERVATIONS ARE NOT THIS PAPER'S. Every figure carrying data here is captioned 'adapted from' one of the group's earlier publications — Sze 2004, Lee 2010, Chang 2015, Hsu 2017 — so what is being weighted is a SELECTION and a SYNTHESIS, not a measurement. THE OBSERVATIONS behind it carry real weight and are largely unavailable elsewhere: this laboratory owns the Tyr33/Ser14 phosphorylation biology, the Hyal-2 anchoring, the TIAF1/TPC6AΔ aggregation cascade and the Zfra peptide, and nobody else has produced them. THE INTERPRETATION carries much less, and the reason is measured rather than felt: 34% of the citation base shares an author with the review and 20% names a Chang, against four references to Aqeilan and one to Croce. A synthesis assembled almost entirely from one group's own output is a strong description of that group's model and a weak description of the field — and this reading found three places where its own prose diverges from its own panels or from a paper in our corpus (entries[5], entries[7]-[8], entries[10]-[11]). Practical consequence for this corpus: TREAT ITS PRIMARY-SOURCE POINTERS AS THE PRODUCT AND ITS SYNTHESIS AS A HYPOTHESIS. The pointers are the reason to have read it.",
+    "🔴 citation_base_measured_rather_than_asserted": "43 of 127 references (34%) share at least one author with this review; 25 (20%) contain an author named Chang. Against that: AQEILAN APPEARS ON 4 REFERENCES AND CROCE ON 1. And the WOREE clinical literature is essentially absent — ZERO references to Piard, Mignot, Repudi or Hussain, in a 2018 review with a section titled 'WWOX in Neurodegeneration In Vivo'. (Piard is later in the year and its absence is fair; Mignot 2015, which defined WOREE, is not.) THE CONSEQUENCE IS THE MOST USEFUL THING THIS READING PRODUCES: there are TWO LARGELY DISJOINT LITERATURES ON ONE GENE. This corpus is built almost entirely on the Aqeilan/Croce axis — WW-domain competition, partner binding, knockout phenotypes, DNA damage response. This review is the Chang axis — Tyr33/Ser14 phosphorylation, Zfra, Hyal-2, bubbling cell death, TIAF1/TPC6A aggregation. They cite each other sparsely and neither is visible from inside the other. Reading this is the first window from our side into the second."
+  },
+
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      { "query": "which of the seven papers this corpus read in the last two days does this review cite?", "route": "matched reference article-titles against the read set", "count": 1, "detail": "ONE: O'Keefe 2011 (PMID 21075834), the Drosophila aerobic-metabolism paper handed off yesterday. NOT cited: 16061658 (2005, the WW1 competition frame page-adjudicated yesterday), 18487609 (2008, bone and RUNX2), 23370280 (2013, ΔNp63α and ITCH) — all published well before this review, all central to our model." },
+      { "query": "does anything here contradict what the corpus holds?", "route": "read against the adjudicated frame and against yesterday's Kosla reading", "count": 2, "detail": "Two. See entries[0]-[1] and entries[5]." }
+    ]
+  },
+
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 127,
+    "gene_direct_count": 122,
+    "gene_direct_refs_in_source": ["21075834"],
+    "resolved": ["21075834"],
+    "resolved_depth_declaration": "🔴 RESOLVED BY IDENTITY, NOT BY READING, AND THE DISTINCTION IS THE POINT. PMID 21075834 (O'Keefe 2011) is cited here and its surface was acquired and preflighted yesterday — but it was NOT read: the exit condition was taken and it was handed to a cold session with its denominator and images ready. It has NO RECEIPT. Listing it as `resolved` on the strength of a matched title would be exactly the error corrected on PMID 30356099 yesterday, so it is listed here and the depth is stated: identified, surfaced, unread. If the validator's non-empty predicate is satisfied by that, the predicate is weaker than the field's name suggests, and this declaration is what a later reader has instead.",
+    "queued": ["21075834"],
+    "enumeration_method": "127 <ref> elements, of which 122 carry an <article-title> over 45 characters. Almost all are WWOX- or neurodegeneration-directed — this is a single-gene review — so a gene_direct count of 122 is honest but uninformative, and the useful measurement is the citation-base composition recorded in group_assessment. PMIDs are not present in the deposit and were NOT invented; only the one identifiable against a paper already surfaced in this corpus is named."
+  },
+
+  "corpus_crossquery": { "performed": true, "query": "prior receipts and manifests for 30158849", "hits": 0, "finding": "No prior receipt, no prior manifest. Identifiers read from the artifact's <article-id> block before being written anywhere." },
+
+  "retraction_check": { "performed": true, "at": "2026-08-11", "route": "local PubMed corpus record for PMID 30158849, harvested 2026-08-06 — offline and re-runnable", "result": "no retraction, no expression of concern, no erratum" },
+
+  "source_artifacts": [
+    { "path": "files/fulltext/PMID30158849_Liu2018_EPMC.xml", "sha256": "2602bc807e693da4a47f983abda6c594ee9efd2936fa8491f6e02416049dec52", "kind": "article_text" },
+    { "path": "files/figures/PMID30158849/fnins-12-00563-g001.jpg", "sha256": "d8e252b539fa48269726d3ced0e00b5c435f66d3f7a30310ace4d1270e263134", "kind": "figure" },
+    { "path": "files/figures/PMID30158849/fnins-12-00563-g002.jpg", "sha256": "86797f5c3b2c59284941cf4dac20125a57252ee52ccd9ce51a6b3488522f9ed5", "kind": "figure" },
+    { "path": "files/figures/PMID30158849/fnins-12-00563-g003.jpg", "sha256": "74e0264a7fb663d94bcd3d6a9b938aaab0931b2f1b31fd0c61b3cdb088bd83a8", "kind": "figure" },
+    { "path": "files/figures/PMID30158849/fnins-12-00563-g004.jpg", "sha256": "2e8d38926dd1a8306f4f31eaca2ffb79d9192e740a6e07af85e1efb737d2d14d", "kind": "figure" },
+    { "path": "files/figures/PMID30158849/fnins-12-00563-g005.jpg", "sha256": "17b49ee9bb70c00c4ba216c5c7d485d5d0eac308b5e8177e8d9ef74d6d9a15fe", "kind": "figure" },
+    { "path": "files/figures/PMID30158849/Table_1.XLSX", "sha256": "1ee1ef8314d15628861b74bf05a4681992fc5d187de76728acefa3af9877082f", "kind": "supplement_text" }
+  ],
+
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC XML, CC BY 4.0, digest re-verified in this worktree after copying from the shared checkout. All five figures and the supplementary XLSX acquired via the REST endpoint and fingerprinted.",
+    "abstract_anchoring_waived": "No evidentiary locator uses the abstract; every candidate was tested against the separated abstract surface.",
+    "entries": [
+      {
+        "proposition": "🔴 THE SEQUESTRATION FRAME IS STATED HERE AS A PROPERTY OF OVEREXPRESSED WWOX, AND THAT IS A CONDITION THE FRAME DOES NOT CARRY IN OUR STATE. Cytoplasmic sequestration of transcription factors — WWOX binding a partner and preventing its nuclear translocation — is the mechanism PMID 16061658 draws in its Figure 6 and the one this corpus page-adjudicated yesterday. This sentence attaches it explicitly to TRANSIENT OVEREXPRESSION in cancer cells in vitro.",
+        "snippet": "Transiently overexpressed WWOX frequently sequesters transcription factors in the cytoplasm, and thereby blocks their transcription for prosurvival proteins in the nucleus in cancer cells in vitro",
+        "surface": "body", "artifact": "files/fulltext/PMID30158849_Liu2018_EPMC.xml",
+        "anchor": "Introduction, the paragraph on WW-domain protein interactions",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — went looking for how this literature states the frame I adjudicated yesterday, and found it stated with a qualifier"
+      },
+      {
+        "proposition": "🔴 AND THE VERY NEXT SENTENCE SAYS THE ENDOGENOUS PROTEIN DOES THE OPPOSITE. Endogenous WWOX does not hold transcription factors in the cytoplasm — it RELOCATES TO THE NUCLEUS WITH THEM. INFERENZA, and it is a FOURTH INSTANCE OF THE FT-064 CLASS on a new axis: DL-MECH-096 turned on tissue versus isolated osteoblast, DL-MECH-094 on organoid signature versus differentiation, PMID 31543760 on 3D versus 2D culture, and this one on OVEREXPRESSED VERSUS ENDOGENOUS PROTEIN. Same readout — where WWOX puts its partner — opposite answers, and the preparation decides. THE CONSEQUENCE FOR THE ADJUDICATED FRAME IS BOUNDED AND SHOULD BE STATED THAT WAY: PMID 16061658's competition experiment is a co-transfection at fixed and variable plasmid doses, i.e. the overexpression condition. Its DATO stands as adjudicated. What does NOT follow, and what this corpus must not assume, is that endogenous WWOX at physiological levels sequesters ErbB-4 the same way. That is a claim about a preparation nobody in our read set has tested.",
+        "snippet": "In contrast, endogenous WWOX binds and co-translates with many transcription factors to relocate to the nucleus to enhance or block neuronal survival under sciatic nerve dissection",
+        "surface": "body", "artifact": "files/fulltext/PMID30158849_Liu2018_EPMC.xml",
+        "anchor": "Introduction, the sentence immediately following entries[0]",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence, and it is the most consequential sentence in the review for this corpus"
+      },
+      {
+        "proposition": "🔴 AND IN THIS LITERATURE ACTIVATED WWOX KILLS NEURONS, WHICH INVERTS THE THERAPEUTIC DIRECTION A WOREE MODEL WOULD ASSUME. Our state reasons from loss of function: no WWOX, disease. This review holds both arms — WWOX loss permits protein aggregation, AND Tyr33-phosphorylated WWOX accumulating in the nucleus causes rapid neuronal death after nerve injury, retinal damage and MPP+ neurotoxicity. Its own Table 1 sets WWOX against the oestrogen receptor and classifies WWOX in neural injury as 'a pro-apoptotic factor'. INFERENZA WITH A DIRECT BEARING ON TRACK C: 'more WWOX' is not a therapeutic direction this literature supports, and any repurposing node aiming to raise WWOX abundance or activity has to say WHICH SPECIES it raises — the review's own resolution is a BALANCE between pS14-WWOX and pY33-WWOX, not a level.",
+        "snippet": "pY33-WWOX, along with its interacting transcription factors, becomes accumulated in the nucleus that leads to the rapid death of the large-sized neurons in vivo",
+        "surface": "body", "artifact": "files/fulltext/PMID30158849_Liu2018_EPMC.xml",
+        "anchor": "'Activated WWOX Induces Cell Death From the Mitochondria and Nuclei', WWOX in Neuronal Injury",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — asked what direction this literature would push WWOX for therapy, and it points the other way from ours"
+      },
+      {
+        "proposition": "THE SAME CLASSIFICATION, PUT AS A TABLE ROW, WHERE IT IS HARDEST TO MISS AND EASIEST TO QUOTE OUT OF ITS CONDITIONS. Table 1 compares oestrogen receptor and WWOX; under 'Role in neural system / Injury' the ER is 'a pro-survival factor' and WWOX is the opposite.",
+        "snippet": "As a pro-apoptotic factor through interacting with CREB, JNK, NF-κB, p53",
+        "surface": "body", "artifact": "files/fulltext/PMID30158849_Liu2018_EPMC.xml",
+        "anchor": "Table 1, row 'Role in neural system — Injury', WWOX column",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — read the table rather than the sentence summarising it, which on the last three papers has been where the sharper statement lives"
+      },
+      {
+        "proposition": "AND THE BALANCE THE REVIEW OFFERS AS ITS RESOLUTION, WHICH IS THE PART A REPURPOSING NODE WOULD HAVE TO ENGAGE. Two phosphorylation states with opposite consequences: Ser14 during differentiation and disease progression, Tyr33 under stress and toward apoptosis. Recorded because it converts 'how much WWOX' into 'which WWOX', and only the second is a tractable question.",
+        "snippet": "the levels of pS14-WWOX and pY33-WWOX must be in a good balance in vivo",
+        "surface": "body", "artifact": "files/fulltext/PMID30158849_Liu2018_EPMC.xml",
+        "anchor": "'WWOX Phosphorylation at Ser14 and Its Potential Role in Neurodegeneration'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 A SECOND CONTRADICTION, THIS ONE WITH A PAPER READ YESTERDAY, AND THE REVIEW SUPPLIES ITS OWN RECONCILIATION TWO PARAGRAPHS EARLIER. Liu states that WWOX PROTEIN is significantly increased in human fetal brains, agreeing with the group's mouse data. PMID 31543760 (Kosla 2019), read yesterday, reports from FANTOM5 that 'adults display greater WWOX expression in the brain as a whole than 20-33 weeks fetuses, 17.7 against 9.2 TPM RLE' — the OPPOSITE direction. INFERENZA: these are not the same measurand. Liu is protein (GeneCard-aggregated plus mouse immunostaining), Kosla is mRNA (CAGE tags). And this review states the reconciling principle itself — 'It is generally agreed that gene expression cannot always correlate with protein expression' — and then demonstrates it at length for skin SCC, where WWOX protein falls with no fall in mRNA. THE CORPUS MUST CARRY BOTH WITH THEIR MEASURAND ATTACHED: a developmental claim about WWOX in brain is not answerable without saying protein or transcript.",
+        "snippet": "However, WWOX protein expression levels are significantly increased in the human fetal brains",
+        "surface": "body", "artifact": "files/fulltext/PMID30158849_Liu2018_EPMC.xml",
+        "anchor": "'WWOX Gene Expression in the Brain', final paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — carried yesterday's Kosla number into today's review and they disagreed, which is why the two were read against each other"
+      },
+      {
+        "proposition": "THE RECONCILING PRINCIPLE, IN THE REVIEW'S OWN WORDS, AND IT IS LOAD-BEARING FOR MORE THAN ENTRIES[5]. The review devotes a subsection to WWOX mRNA and protein failing to correlate — in AD hippocampus, in skin squamous cell carcinoma where protein falls with mRNA unchanged, and in the brain regions of Figure 2A. ANY CLAIM IN THIS CORPUS THAT MOVES BETWEEN TRANSCRIPT AND PROTEIN INHERITS THIS.",
+        "snippet": "It is generally agreed that gene expression cannot always correlate with protein expression",
+        "surface": "body", "artifact": "files/fulltext/PMID30158849_Liu2018_EPMC.xml",
+        "anchor": "'WWOX Protein Downregulation in Alzheimer's Disease (AD)', opening sentence",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "found — read in sequence, and it is the sentence that turns entries[5] from a conflict into a distinction"
+      },
+      {
+        "proposition": "🔴 A Z-SCORE REPORTED AS A FOLD CHANGE, AND THE FIGURE'S OWN CAPTION SAYS THE FOLD CHANGES ARE AROUND ONE. The running text claims WWOX gene expression is upregulated 2.31-fold in the cingulum bundle and 2.78-fold in the central glial substance. Panel 2A's y-axis is labelled Z-SCORE, and its cingulum-bundle bar stands at approximately 2.3 — the number in the text is the height of a bar on a standard-deviation axis, relabelled as a fold. Meanwhile the caption of that same panel directs the reader to Supplementary Table S1 'for WWOX gene expression in the normal brains (around one-fold changes for all indicated regions)'. THREE STATEMENTS, MUTUALLY INCONSISTENT UNLESS THE FOLDS ARE Z-SCORES. This is the third consecutive day a quantity has changed meaning with its presentation — hours instead of minutes in PMID 39952983, a mean above its own definitional threshold in PMID 30356099, and a standard-deviation score wearing the word 'fold' here.",
+        "snippet": "WWOX gene expression is upregulated in the cingulum bundle of the white matter by 2.31-fold, and the central glial substance of the myelencephalon by 2.78-fold",
+        "surface": "body", "artifact": "files/fulltext/PMID30158849_Liu2018_EPMC.xml",
+        "anchor": "'WWOX Gene Expression in the Brain', describing Figure 2A",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — a fold change quoted to two decimals invites a look at the axis it came from"
+      },
+      {
+        "proposition": "PANEL 2A CARRIES THE AXIS THAT SETTLES IT, AND ALSO SHOWS HOW SMALL THE NORMAL-BRAIN ANALYSIS IS. The y-axis reads Z-score, not fold change, across all three charts. The hippocampal chart is entirely NEGATIVE — dentate gyrus near −2.2, CA1 to CA4 and subiculum between −0.4 and −1.5 — which is the observation the text builds its hippocampal downregulation on. And the whole panel rests on the six individuals the text names. Panels B and C, by contrast, carry n between 36 and 48 per region with four-asterisk significance, so the review's WEAKEST analysis is the one its narrative leans on and its strongest is the one about aged and injured brains.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, panel A. Three bar charts sharing a y-axis labelled 'Z-score'. White matter: corpus callosum at approximately 1.0 and cingulum bundle at approximately 2.3. Pons: pontine nuclei near 0.4, corpus callosum near 0.65, cingulum bundle near −0.5 with an error bar crossing zero. Hippocampus: all six bars negative — dentate gyrus near −2.2, CA1 near −1.0, CA2 near −1.5, CA3 near −1.4, CA4 near −0.4, subiculum near −1.0. Below each chart sits a small heat-map strip with a legend table. Panels B and C plot Z-score against brain region for 'Possible Alzheimer's Disease' and 'Traumatic brain injury' with n printed inside each bar between 36 and 48, and significance markers up to four asterisks at p < 0.00001.",
+        "surface": "figure", "artifact": "files/figures/PMID30158849/fnins-12-00563-g002.jpg",
+        "anchor": "Figure 2 panels A, B and C",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[7]",
+        "contradicts_needle": "upregulated in the cingulum bundle of the white matter by 2.31-fold",
+        "found_or_sought": "sought — opened the panel to read the axis label, which is the whole question"
+      },
+      {
+        "proposition": "AND THE NORMAL-BRAIN ANALYSIS IS n = 6, STATED PLAINLY BY THE AUTHORS. Six postmortem individuals with detectable signal, and the text says so twice. Recorded beside entries[7] and entries[8] because a two-decimal fold change computed on six brains is a precision the sample cannot support, whatever the unit.",
+        "snippet": "There were only six normal brain samples exhibiting detectable signals for WWOX gene expression",
+        "surface": "body", "artifact": "files/fulltext/PMID30158849_Liu2018_EPMC.xml",
+        "anchor": "'WWOX Gene Expression in the Brain'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — the authors state it, which is why this is calibration and not accusation"
+      },
+      {
+        "proposition": "PANEL 4E SHOWS A NON-MONOTONIC GENOTYPE SERIES THAT THE TEXT SMOOTHS. The review says pT181-Tau aggregation is present in Wwox knockout cortex and 'barely detectable in the wild type and heterozygous Wwox mice'. The quantification puts Wwox+/+ at roughly 10% aggregation, Wwox+/− at roughly 5% — BELOW wild type — and Wwox−/− at roughly 28%, with a single p = 0.0176 and NO n STATED. A heterozygote below wild type is not what a gene-dosage effect looks like, and 'barely detectable in the wild type and heterozygous' groups two bars that differ twofold. The direction of the knockout effect is not in doubt; the series is not a dose-response and should not be read as one.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4, panel E. Three immunohistochemistry fields labelled Wwox−/−, Wwox−/− and Wwox+/+ stained for pT181-Tau, with a red scale bar on the third. To their right a bar chart with y-axis '% Aggregation' running 0 to about 35 and three bars labelled Wwox +/+, +/− and −/−: the +/+ bar reaches approximately 10, the +/− bar approximately 5, and the −/− bar approximately 28 with a large error bar. A bracket spans the series carrying 'p = 0.0176'. No n appears on the panel.",
+        "surface": "figure", "artifact": "files/figures/PMID30158849/fnins-12-00563-g004.jpg",
+        "anchor": "Figure 4 panel E, adapted in the caption from Chang et al. 2015",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[11]",
+        "qualifies_needle": "barely detectable in the wild type and heterozygous Wwox mice",
+        "found_or_sought": "sought — a three-genotype series is a dose-response claim, so the middle bar is the one to look at"
+      },
+      {
+        "proposition": "THE TEXT'S DESCRIPTION OF THAT SERIES, RECORDED AS THE TARGET OF THE PANEL ABOVE.",
+        "snippet": "but is barely detectable in the wild type and heterozygous Wwox mice",
+        "surface": "body", "artifact": "files/fulltext/PMID30158849_Liu2018_EPMC.xml",
+        "anchor": "'TRAPPC6AΔ Protein Aggregation Is Upstream of TIAF1', describing Figure 4D",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "AND A NEGATIVE THE REVIEW STATES ABOUT ITSELF, WHICH IS WORTH MORE THAN MOST OF ITS POSITIVES. CDK5 hyperphosphorylates tau and APP and is one of the obvious candidates for the mechanism this review proposes — and the authors say outright that no functional interaction with WWOX has ever been documented. A review that names its own gap is telling a reader where the field actually ends, and REVIVAL_TRIGGER for this corpus: any measurement of WWOX against CDK5 would test the aggregation model at the point its own authors mark as untested.",
+        "snippet": "functional interaction between WWOX and CDK5 has never been documented",
+        "surface": "body", "artifact": "files/fulltext/PMID30158849_Liu2018_EPMC.xml",
+        "anchor": "'WWOX Control of Neuronal Survival via Binding and Suppressing Tau and Tau Hyperphosphorylating Enzymes'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — looked for what the review says is NOT known, which on a self-citing review is the most trustworthy category"
+      },
+      {
+        "proposition": "AND THE PARTNER LIST APPEARS A FIFTH TIME, FROM THE OTHER LITERATURE. This review's account of the first WW domain names p73, ErbB-4, SIMPLE, WWBP1, WWBP2, Ezrin, AP-2g and Runx-2 — the same set four independent papers landed on yesterday, reached here through an almost disjoint citation base. Recorded with the same limits as before: this is a review sentence with citations, not a measurement. What it adds is that the set is stable ACROSS the two literatures, which is a stronger statement than four papers within one of them.",
+        "snippet": "The first WW domain of WWOX binds PPxY or PPPY-containing proteins (e.g., p73, ErbB-4, SIMPLE, WWBP1, WWBP2, Ezrin, AP-2g, Runx-2, and many others)",
+        "surface": "body", "artifact": "files/fulltext/PMID30158849_Liu2018_EPMC.xml",
+        "anchor": "Introduction, second paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — checked whether the partner set survives a change of literature, and it does"
+      }
+    ]
+  }
+}

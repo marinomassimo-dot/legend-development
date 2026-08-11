@@ -1,0 +1,160 @@
+{
+  "schema_version": 2,
+  "pmid": "16061658",
+  "citation": "Aqeilan RI, Donati V, Palamarchuk A, Trapasso F, Kaou M, Pekarsky Y, Sudol M, Croce CM. WW domain-containing proteins, WWOX and YAP, compete for interaction with ErbB-4 and modulate its transcriptional function. Cancer Res 2005;65(15):6764-72",
+  "rights": {
+    "notice": "©2005 American Association for Cancer Research",
+    "open_licence": null,
+    "pmc_deposit": false,
+    "redistribution": "NOT_REDISTRIBUTED",
+    "why": "Europe PMC returns pmcid null, inPMC N, isOpenAccess N; Unpaywall returns is_oa false, oa_status closed, has_repository_copy false. Subscription article with an all-rights-reserved notice and no open deposit anywhere. The crops reproduce printed columns, a complete figure and a complete figure legend, so the images are not published with this repository. This file is the recipe that regenerates them, byte for byte, from a copy of the PDF the reader already holds."
+  },
+  "source_pdf": {
+    "path": "files/fulltext/PMID16061658_Aqeilan2005.pdf",
+    "sha256": "075fdbbcd1e17c3ba1654e78e56ed7345b3e5242ffcf0944f4f6569cf90103eb"
+  },
+  "manifest": "disease-models/wwox/research/deepdive_manifests/PMID16061658.json",
+
+  "why_this_article_is_adjudicated": "🔴 THE TEXT LAYER OF THIS PDF IS SUSPECT AND STAYS SUSPECT. It carries two C0 control characters and ZERO occurrences of < > ≤ ≥ ± × − µ α β Δ across 44,465 extracted characters in a paper that uses 'significan' six times and states plasmid amounts throughout — suspicion by absence. The damage was then identified character by character: the micro sign becomes the letter A sixteen times, and 'p73β' becomes 'p73h' seven times, an isoform name corrupted in silence. Twenty-five corruptions, twenty-three of them printable, so a control-character scan would have found two and called the surface clean. There is no structured deposit to re-derive from and rule 5d forbids repairing the surface, because a hand fix across sixteen points is indistinguishable from a rewrite and verifiable by nothing. So every locator this article carries is anchored to the RENDERED PAGE, and the text layer was used for one purpose only: orientation and coordinates.",
+
+  "the_defect_is_visible_inside_the_adjudicated_set": "The Figure 5 legend is one of the crops below, and it is the demonstration. The extracted text reads 'ErbB-4HA (6.0 Ag), Omni-YAP2 (1.0 Ag), and Myc-WWOX (7.0 Ag) or Myc-WWOXY33R (7.0 Ag)'. The printed page reads µg in all four places, and the crop shows it. Those are the plasmid amounts of the competition experiment itself: anyone quoting that legend from the text layer would have published four doses nobody used.",
+
+  "dpi_discipline": "Constraint: raster content is never rendered above its measured effective ppi. Measured per image before any rendering — page 6 carries its Figure 5 blots as raster at ~149-150 effective ppi, so p06_figure5_panels is rendered at 150 and no higher. Page 7 carries NO images at all: Figure 6 is entirely vector, so 400 dpi there is resolution rather than upsampling, and that was measured rather than assumed. Every text crop is vector and unconstrained.",
+
+  "needles": {
+    "why": "A locator identifier alone is a promise. The needle is the search string that resolves the locator to a span on the printed page, so the recipe can be checked end to end by a command — needle to span, span inside crop, crop to digest — instead of by eye. Each needle occurs exactly once on its page and is a fragment of the snippet of the locator it adjudicates.",
+    "why_needles_here_avoid_greek_and_symbols": "🔴 A NEEDLE IS MATCHED AGAINST THE TEXT LAYER, AND ON THIS ARTICLE THE TEXT LAYER IS THE THING UNDER SUSPICION. So every needle below is drawn from a span that is pure ASCII in both surfaces, where the layer and the page cannot disagree. The snippets, by contrast, are what the PAGE prints — µg, p73β, AP-2γ, the en dash in 'domain–containing' — which is why no needle ever spans one of those characters. This is not fastidiousness: a needle containing µ would fail to resolve, and a needle taken from the corrupted rendering would resolve to a string the author never wrote.",
+    "line_wrapping": "search_for returns one rectangle per line segment, so a phrase that wraps matches twice and is rejected as non-unique. Every needle below was therefore chosen to sit on a single printed line, which was read off the layout rather than guessed."
+  },
+
+  "artifacts": [
+    {
+      "file": "p02_rationale_common_targets.png",
+      "page": 2,
+      "crop": [296, 540, 554, 598],
+      "dpi": 400,
+      "sha256": "e5660779d656f5a766354e0660b7474d6840d960d5497f9ba3300c051fef2b68",
+      "why": "The premise of the whole paper, in the authors' own words, immediately before Materials and Methods: WWOX and YAP have similar tandem WW domains and interact with common protein targets. Without this sentence the competition experiment is a result without a hypothesis.",
+      "adjudicates": [
+        {
+          "locator": "entries[0]",
+          "needle": "interact with common protein targets"
+        }
+      ]
+    },
+    {
+      "file": "p03_ww1_primarily_responsible.png",
+      "page": 3,
+      "crop": [298, 670, 554, 700],
+      "dpi": 400,
+      "sha256": "a8f6fcaf04eea1841d3613be50c5e9e6a3a0b9dc1e02ae929dddd32bf26bcf46",
+      "why": "The WW1 anchor. Competition 'at the first WW domain' is asserted throughout the downstream literature, and this is the sentence that establishes it in the primary source. The crop rectangle was extended by three points after crop_contains_span failed by 1.2pt on the first attempt — the check caught a recipe that would have published a crop not containing its own span.",
+      "adjudicates": [
+        {
+          "locator": "entries[1]",
+          "needle": "primarily responsible for the interaction"
+        }
+      ]
+    },
+    {
+      "file": "p07_competition_experiment.png",
+      "page": 7,
+      "crop": [32, 173, 292, 416],
+      "dpi": 400,
+      "sha256": "efe1e248792e319053ac27f659f089f0300f488552821d8878549db119fb23de",
+      "why": "🔴 THE DATO. The entire Results section headed 'WWOX and YAP compete for interaction with ErbB-4', from its heading to its final sentence: the design (fixed ErbB-4-HA and Myc-WWOX, variable Omni-YAP2), both directions of the titration, the Y33R rescue, and the conclusion — which is HEDGED in the original ('may compete') and should be quoted hedged. Adjudicated as one crop rather than four because the four propositions are one paragraph and separating them would let a reader lose the design that produced them.",
+      "adjudicates": [
+        {
+          "locator": "entries[2]",
+          "needle": "interacts exclusively with WWOX"
+        },
+        {
+          "locator": "entries[3]",
+          "needle": "still the predominant complex"
+        },
+        {
+          "locator": "entries[4]",
+          "needle": "resulted in significant rescue"
+        },
+        {
+          "locator": "entries[5]",
+          "needle": "indicate that WWOX and YAP may"
+        }
+      ]
+    },
+    {
+      "file": "p06_figure5_legend_doses.png",
+      "page": 6,
+      "crop": [30, 518, 246, 610],
+      "dpi": 400,
+      "sha256": "59342dce8539d86308aa73107411983860237c659b4f4fc13614277511a5ddb4",
+      "why": "The Figure 5 legend, carrying the plasmid amounts of the competition experiment and the antibody-to-lane mapping without which panel 5A and 5B cannot be read. It is also the place where the text layer's corruption is visible against the page: four µg printed, four 'Ag' extracted.",
+      "adjudicates": [
+        {
+          "locator": "entries[6]",
+          "needle": "or Myc-WWOXY33R"
+        }
+      ]
+    },
+    {
+      "file": "p06_figure5_panels.png",
+      "page": 6,
+      "crop": [255, 412, 556, 738],
+      "dpi": 150,
+      "sha256": "b8c47d09c49ad8c89430be9f855cfd1a605f1864c94e8b83566a464e1e91079a",
+      "why": "Figure 5, panels A and B — the blots the DATO rests on. Rendered at 150 dpi because that is the measured effective ppi of the raster on this page; rendering higher would have invented sharpness. Adjudicates no text locator: it is the panel surface for the figure attestation at entries[7], which quotes no sentence because pixels cannot be quote-matched.",
+      "adjudicates": []
+    },
+    {
+      "file": "p08_generalised_frame.png",
+      "page": 8,
+      "crop": [296, 51, 554, 116],
+      "dpi": 400,
+      "sha256": "66696e23986e9397fffde03a44f47597e6b85fa8040236213acf59ba395bf5f0",
+      "why": "🔴 THE GENERALISATION, AND THE SENTENCE THE DOWNSTREAM LITERATURE ACTUALLY CITES. The competition is stated here for 'PPxY-containing target proteins' as a class — not for any named partner beyond ErbB-4. This crop is what allows a later reader to check what the generalisation does and does not say.",
+      "adjudicates": [
+        {
+          "locator": "entries[8]",
+          "needle": "in the cytoplasm are competing for interaction with"
+        }
+      ]
+    },
+    {
+      "file": "p08_affinity_asymmetry.png",
+      "page": 8,
+      "crop": [30, 92, 288, 138],
+      "dpi": 400,
+      "sha256": "bc36f5f2f4c421d8aa6cb8bbd46f6f6f47c682e06feb6fb67b16d8bbbb7d1453",
+      "why": "Why the competition is asymmetric, which is the part most easily lost: WWOX engages BOTH PPxY motifs of ErbB-4 where YAP engages only the COOH-terminal one. This is the mechanism behind 'WWOX-ErbB-4 interaction is prevalent', and it is the sentence that makes the competition quantitative rather than merely mutual.",
+      "adjudicates": [
+        {
+          "locator": "entries[9]",
+          "needle": "than YAP, perhaps due to the interaction of WWOX with both the"
+        }
+      ]
+    },
+    {
+      "file": "p07_figure6_legend.png",
+      "page": 7,
+      "crop": [412, 506, 552, 630],
+      "dpi": 400,
+      "sha256": "906cfca9959cc9952e2aaee1bc9f638abf16b18ab56ead7639a89d79bc53db62",
+      "why": "The legend of the proposed model: 'competing for interaction with ErbB-4 and other target proteins', and it names which other targets the model claims — p73 and AP-2γ. Adjudicated because the model figure is the most copied part of any paper and its legend is what travels with it.",
+      "adjudicates": [
+        {
+          "locator": "entries[10]",
+          "needle": "and YAP function competing for interaction"
+        }
+      ]
+    },
+    {
+      "file": "p07_figure6_model.png",
+      "page": 7,
+      "crop": [36, 443, 408, 716],
+      "dpi": 400,
+      "sha256": "c4dc253fc7ce65027af03cd248d54891e17b8d9617cb8d39f5ec1014410c564e",
+      "why": "🔴 THE MODEL DIAGRAM, ADJUDICATED FOR WHAT IT DOES NOT CONTAIN. It draws WWOX bound to 'Other PPxY-containing partners', to AP2γ and to P73, each with a cross barring nuclear translocation, and YAP carrying its targets in. ITCH appears nowhere in it. Page 7 carries no raster at all, so this is a vector rendering at 400 dpi — an absence read off a diagram at full resolution rather than inferred from a keyword count on a surface that was refused. Adjudicates no text locator; it is the panel surface for entries[11].",
+      "adjudicates": []
+    }
+  ]
+}
