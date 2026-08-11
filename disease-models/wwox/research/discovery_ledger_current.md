@@ -2355,7 +2355,7 @@ Aperto il rif. 3 (`PMID 24550385`, `FT-054`) sono emerse tre cose che riscrivono
   | **terapeutico** | rimuovere WPRE *«aimed at avoiding excessive or poorly controlled transgene expression while preserving sufficient therapeutic efficacy»* | la rimozione richiese **sei volte la dose**, e §11 della review stessa nomina l'alta dose come la principale preoccupazione regolatoria pediatrica (`PMID 42422765`) |
   | **clinico** | *«a homozygous missense WWOX mutation (p.Ser304Tyr) … despite the mutation type typically being associated with milder phenotypes»* | la variante è **ACMG «Unclear clinical significance»**, gli autori scrivono che la patogenicità *«require[s] validation»*, e c'è un **secondo candidato in `CACNA1A`** contro una DEE **autosomica dominante** (`PMID 39416860`) |
 
-  **Tre volte la metà semplice**, e ogni volta la metà che cade è quella che introdurrebbe una qualificazione. Nessuna delle tre è visibile leggendo la review; tutte e tre lo sono leggendo **ciò che la review cita**. Fonti: `FT-045` · `FT-055` · manifest `PMID42128308.json` entries[5], entries[6], entries[23], entries[24].
+  **Tre volte la metà semplice**, e ogni volta la metà che cade è quella che introdurrebbe una qualificazione. Nessuna delle tre è visibile leggendo la review; tutte e tre lo sono leggendo **ciò che la review cita**. Fonti: `FT-045` · `FT-059` · manifest `PMID42128308.json` entries[5], entries[6], entries[23], entries[24].
 - 🔴 **QUARTA, TROVATA DOPO LE ALTRE TRE, E DI UNA SPECIE DIVERSA: le prime tre RIDUCONO un risultato, questa ne INVERTE il senso.** La review presenta il caso dell'introne 4 di Oliver 2023 come una crepa nel framework — *«technically falls under category 2 … However, the observed clinical severity was comparable to that of patients with category 1 genotypes»*. Ma Oliver **codifica quella delezione come null**, perché causa lo skipping dell'esone 5 mentre quella dell'introne 3 è benigna, e tabula il paziente 6 come **`Missense/null`**: un ordinario caso di classe 2. E in uno schema dove la classe 2 **non mostra alcun fenotipo intermedio**, un classe-2 grave quanto un classe-1 è **il risultato atteso**. La review lo offre come anomalia; è il framework che funziona come la sua fonte dice che funziona. Fonte: `FT-056`, `FTR-20260810-36779245-03`.
 
 ---
@@ -2387,7 +2387,131 @@ Aperto il rif. 3 (`PMID 24550385`, `FT-054`) sono emerse tre cose che riscrivono
 - **Cautela sull'unico numero che qualcuno sarà tentato di citare come prognosi:** la coorte di Oliver è dichiaratamente **più anziana** (media 8a 2m contro 3a 4m) e **meno letale** (23% contro 38%) della letteratura con cui è messa in pool, con null/null al 50% contro 60%. La curva di sopravvivenza è un **confronto fra gruppi**, non una prognosi. Chi la citasse come prognosi userebbe un dato di ascertainment come dato clinico.
 
 - **Cosa serve per muoverlo di un gradino:** un saggio funzionale per singola sostituzione — non abbondanza, non solubilità, ma **occupazione di un partner di interazione** — applicato per primo a `Q230P` per ricorrenza e a `P47T`/`P47R` perché sono la coppia che dimostra il punto sullo stesso residuo.
-- **Interconnessioni:** `DL-BIO-085` · `DL-META-088` · `FT-055` · `FT-056` · `DEFAULTS THAT BIT US` in [[dismissal_ledger_current]] · [[claim_registry_current]].
+- **Interconnessioni:** `DL-BIO-085` · `DL-META-088` · `FT-059` · `FT-056` · `DEFAULTS THAT BIT US` in [[dismissal_ledger_current]] · [[claim_registry_current]].
 - **Destinazione dichiarata:** **materiale per un commit candidate.** È una *sostituzione* di premessa, non un'aggiunta, quindi tocca affermazioni già in stato canonico e la promozione va fatta da chi possiede il gate, non da me.
 - **Interconnessioni:** `FT-045` · `DL-MECH-086` · manifest `PMID42128308.json` entries[7], entries[23], entries[24].
 - **Destinazione dichiarata:** **materiale per un commit candidate**.
+
+---
+
+> 🔴 **Nota di merge, 2026-08-11.** Le due voci che seguono arrivano da un terzo ramo che ha
+> appeso al ledger contro un'istantanea anteriore. **Tenute entrambe**, come sempre: un ledger
+> append-only si somma, non si sceglie.
+>
+> Seconda collisione di numerazione della stessa forma, e vale registrare che si è ripetuta:
+> due rami hanno allocato «il prossimo numero libero» contro istantanee diverse e sono
+> arrivati entrambi a **085** e **086**, su famiglie diverse — `DL-METH-` di qui contro
+> `DL-BIO-`/`DL-MECH-` già atterrate. In questo ledger la numerazione è **globale fra le
+> famiglie**, quindi il prefisso non separa nulla e la collisione è reale.
+>
+> Rinumerate le voci di **questo** blocco, `085 → 091` e `086 → 092`, e non quelle già
+> atterrate: `DL-METH-086` è citata tre volte dalla coda dei full text, ma quelle citazioni
+> arrivano nella **stessa fusione**, quindi si ri-puntano insieme all'identificatore invece di
+> restare appese. Le due voci di `main` non erano citate da nessun file. **Rinominare e
+> ri-puntare sono un'operazione sola**: separarle è ciò che, un'ora prima e su un altro
+> registro, aveva lasciato un manifest a citare una ricevuta che non lo descriveva più.
+
+---
+
+### DL-METH-091 — **Il commentary di un autore sul proprio paper non è un riassunto: la modalità epistemica si degrada, e in modo asimmetrico**
+
+- **Classificazione:** `DATO` sul fatto misurato (le occorrenze sono contate contro due artefatti impronta-verificati); `INFERENZA` sulla generalizzazione oltre questo laboratorio.
+- **Fonte:** `PMID 27308504` (Hazan, Abu-Odeh, Hofmann, Aqeilan, *Mol Cell Oncol* 2015 — `article-commentary`) contro `PMID 25331887` (Abu-Odeh *et al.*, *PNAS* 2014), entrambi dichiarati come `article_text` nello stesso manifest e citati verbatim su entrambi i lati. `FTR-20260810-27308504-01`.
+- **Il reperto.** Quattro attenuazioni presenti nel paper primario mancano dall'Author's View che gli stessi autori gli dedicano un anno dopo: (1) il modale — *«might result in»* diventa *«results in»*, stessa costruzione, operatore epistemico cancellato; (2) la parola **«Hypothetical»**, che nel primario intitola la figura-modello e nel commentary non compare mai (`hypothetic`: **zero occorrenze** su tutto il documento); (3) la **citazione a terzi** per la freccia ATM→ITCH, che il primario attribuisce al suo rif. 42 (Santini, *Oncogene* 2014) e il commentary asserisce senza numero, dentro un modello presentato come proprio, **senza quel riferimento in bibliografia**; (4) l'**attribuzione della stabilizzazione**, che il commentary assegna al rif. 5 (`25331887`) mentre `25331887` la assegna al proprio rif. 3 (`24550385`) — cioè al paper che l'ha davvero misurata, letto da A in questa stessa sessione.
+- 🔴 **Perché è un reperto di metodo e non un rilievo.** L'unico *«might»* superstite dell'intero commentary sta sull'**ipotesi introduttiva che gli autori poi dichiarano confermata** — l'unico posto dove un'attenuazione non costa nulla. E l'unico segno di incertezza dell'intera figura, un `?` in grassetto, sta accanto al complesso **MRE11/RAD50/NBS1**, che non è nominato né nel testo del commentary né nella prosa corrente del primario. **Il lessico dell'attenuazione non si perde: si ridistribuisce** — resta sull'ipotesi superata e su ciò che non è rivendicazione propria, sparisce dalle conclusioni vive. È l'asimmetria ordinaria della fiducia nei propri risultati, ed è esattamente il motivo per cui un commentary non può essere letto come sintesi di ciò che è stabilito.
+- **Conseguenza per il genotipo di riferimento, e non è metodologica.** Lo schema etichetta i due rami con **simboli di genotipo** — `WWOX+/+` contro `WWOX+/−` sopra `WWOX−/−` — e il ramo mutante termina in una freccia disegnata verso **«Cancer»**. Gli esperimenti dietro quel ramo sono HEK293-Sh-WWOX, MCF7-shWWOX e MEF Wwox-KO: un knockdown e un nullo. **Nel primario non esiste alcun sistema eterozigote**, ed è per questo che il primario scriveva *«might»*. Una frase di didascalia può leggersi come abbreviazione di «cellule con meno WWOX»; un `WWOX+/−` stampato su un diagramma no — ed è la forma più trasferibile che una affermazione possa assumere. Per un modello i cui portatori hanno genitori eterozigoti, questo è un rischio di trasferimento specifico, **e si è visto guardando i pixel, non leggendo la didascalia**.
+- **Il caso di controllo, registrato per primo nel manifest.** Non tutto è gonfiato: la monomerizzazione di ATM WWOX-dipendente è una misura reale (Fig 4D del primario, co-IP Flag-ATM/YFP-ATM) e questo corpus **possiede già un locator su quel pannello** — `PMID25331887 entries[26]`. Il verbo più forte del commentary, *«revealed»*, lì è guadagnato. Quattro scarti contro un documento per il resto accurato: è l'unico tipo di scarto che valga la pena riportare.
+- **REVIVAL_TRIGGER / falsificazione:** la generalizzazione cade se un secondo Author's View di un laboratorio diverso, letto con lo stesso metodo — conteggio delle attenuazioni su entrambi i lati contro artefatti impronta-verificati — mostra modalità **conservata**. Un solo caso non stabilisce un tasso: `FT-057` fornisce due paper dello stesso gruppo su cui provare, e la prova sarebbe più forte su un gruppo terzo.
+- **Conseguenza operativa immediata:** nessun claim canonico può citare `PMID 27308504` come fonte di alcunché. È `article-commentary`, non ha dati primari, e ogni sua asserzione empirica è una riformulazione di `25331887`. Vale come **oggetto di studio sulla trasmissione della modalità**, non come evidenza.
+- **Interconnessioni:** `IMPORTED_PREMISE_ATTRIBUTION_GATE` · `DL-METH-084` · `DL-MECH-083` · [[epistemic_discipline]] · `FT-060` · `FT-058`.
+
+---
+
+### DL-METH-092 — **In dieci articoli su trentacinque le didascalie stanno FUORI dal `<body>`, e chi legge col `<body>` non le vede mai**
+
+- **Classificazione:** `DATO` — censimento meccanico su tutte le superfici XML del `files/` condiviso, riproducibile con cinque righe.
+- **Il numero.** **10 su 35** superfici XML collocano gli elementi `<fig>` fuori da `<body>`: `21318118`, `22193544`, `23370280`, **`24308844`**, `27551470`, `30755385`, `31340538`, `33255508`, `34747138`, e — reperto d'origine — `23435430` nella via `efetch`, dove Europe PMC invece le include. Sullo stesso articolo le due vie danno corpo di 29 341 contro 46 114 caratteri: **la differenza sono otto didascalie.**
+- 🔴 **DOVE *NON* È IL PROBLEMA, dichiarato per primo perché stavo per sbagliarlo.** Ero a un passo dall'affermare che questo apre un buco di verifica. **È falso, e l'ho verificato prima di scriverlo.** `_xml_surfaces` di `main` percorre l'**articolo**, non il `<body>`: separa l'abstract e nient'altro. Provato direttamente — una didascalia di `24308844`, presa da dentro un `<fig>` fuori dal corpo, viene trovata dall'estrattore del validatore (`mode=folded`). **I locator su didascalia restano verificabili ovunque stiano.** Il contratto è sano.
+- **DOVE È, DAVVERO: è un difetto di *lettura*, non di *verifica*.** Su quei dieci articoli, un agente che legga con un estrattore delimitato al `<body>` — come il mio `extract_body.py` — **non vede una sola didascalia**. Non riceve un errore, non vede un buco: riceve un testo che scorre bene e sembra completo. E il manifest passa lo stesso, perché il validatore controlla ciò che *hai citato*, non ciò che *hai potuto leggere*.
+- 🔴 **E ha morso me, misurabilmente.** `PMID 24308844` è uno dei dieci: 0 didascalie su 7 dentro il corpo, e l'ho letto con l'estrattore delimitato. Il suo manifest **non contiene un solo locator su didascalia** — le sette voci figura sono tutte attestazioni da pixel. Su `25331887`, dove la superficie era HTML e le didascalie stavano nella pagina, ne ho due, ed **entrambe portano peso**: la didascalia che nomina un agente diverso da quello del testo, e la parola «Hypothetical» che oggi è diventata il reperto centrale di `DL-METH-091`. L'assenza su `24308844` sembrava una scelta di budget — è ciò che dice `FT-055`. **Non lo era: era una superficie che non ho mai visto.**
+- **Perché è la terza volta che la stessa lezione si ripresenta cambiando forma.** «Superficie strutturata trovata» non implica «migliore superficie figure trovata» (già a manuale). Non implica **«tutte le vie mettono le stesse cose nel corpo»**. E su `27308504`, poche ore prima, avevo scelto `efetch` **contro** Europe PMC perché solo `efetch` portava le referenze strutturate — la scelta opposta a quella giusta qui. **Non esiste una via preferibile: esiste una domanda da porre a ogni articolo, su che cosa serve citare.**
+- **Conseguenza operativa, e costa cinque righe:** prima di dichiarare un `article_text`, contare `<fig>` dentro `<body>` contro `<fig>` nell'articolo. Se differiscono, o si sceglie la via che le include, o si dichiara esplicitamente che le didascalie vanno lette a parte. Il conteggio va nel manifest accanto a `figure_coverage`, che oggi misura quante figure hanno un locator e **non** se le loro didascalie erano leggibili.
+- **REVIVAL_TRIGGER:** se una futura versione di `_xml_surfaces` restringesse l'estrazione al `<body>` — ottimizzazione plausibile e apparentemente innocua — il difetto di lettura diventerebbe **anche** un difetto di verifica, e dieci manifest esistenti cambierebbero verdetto in silenzio. Da rileggere prima di qualunque modifica a quella funzione.
+- **Interconnessioni:** `FT-055` · `FT-060` · `FT-057` · `DL-METH-091` · `PATTERN_ALREADY_SOLVED_GATE` · [[gold_is_in_the_details]].
+
+#### Append 2026-08-10 — rimisurato dopo una contestazione, e il predicato adesso è scritto
+
+L'Orchestrator ha rimisurato questa classe e riportato **14 su 62, di cui 8 pure**, contro il mio
+10 su 35. Ho **rieseguito invece di accettare**, con uno script che pretende una radice assoluta e
+la stampa — la loro prima misura di questa stessa classe era sbagliata perché la shell aveva
+ereditato la cwd di un worktree, e la mia era stata scritta senza dichiarare il predicato.
+[`caption_census.py`](../../../framework/scripts/caption_census.py), predicato esplicito:
+`inbody = |{fig : fig ∈ descendants(body)}|` contro `tot = |{fig : fig ∈ descendants(article)}|`.
+
+**Misura stabile su due esecuzioni, radice `/Users/massimo/Desktop/legend-public`:**
+
+| | |
+|---|---|
+| superfici XML analizzabili | **34** (35 file, 1 non analizzabile) |
+| tutte le didascalie dentro `<body>` | 22 |
+| **tutte fuori — la classe pura** | **7** |
+| alcune fuori | 2 |
+| nessuna figura | 3 |
+
+**Su ciò che conta siamo identici.** La classe pura dell'Orchestrator elenca esattamente i miei
+sette nomi: `21318118` · `22193544` · **`23370280`** · `24308844` · `27551470` · `31340538` ·
+`33255508`. Nessuna divergenza dove il difetto morde.
+
+🔴 **E il loro puntamento è il contributo più utile del messaggio:** `PMID23370280_Salah2013_PMC.xml`,
+**6 figure su 6 fuori dal corpo**, è il paper a cui lo stato attribuisce la stabilizzazione ITCH e
+che nessuno ha letto. Chi lo aprirà con un estrattore delimitato non vedrà una sola didascalia —
+sullo stesso filone dove stanotte una didascalia («Hypothetical») è diventata il reperto centrale.
+
+**Dove le due misure divergevano — RISOLTO, e la causa è un carattere.** *(Aggiornato poche ore
+dopo: l'Orchestrator ha pubblicato il predicato, e pubblicarlo è bastato a chiudere la questione.
+Il paragrafo che segue è conservato com'era scritto, perché il ragionamento che ha portato alla
+richiesta è il reperto; la risoluzione viene dopo.)*
+
+La loro riga «parziali» contiene `27308504`,
+`32581702`, `34268881`, `36779245`, `39416860`, che il predicato sopra dà **interamente dentro il
+corpo** (1/1, 4/4, 11/11, 4/4, 1/1). Ho cercato di ricostruire la loro definizione e ne ho
+falsificata una: su `34268881` i `<graphic>` sono **12** contro 11 `<fig>`, quindi contare le
+grafiche spiegherebbe quel caso — **ma non `36779245`, dove `<graphic>` e `<fig>` sono entrambi 4.**
+Non so quale predicato produca 14, e **non lo assumo**: chi ha misurato pubblichi il predicato,
+come io ho dovuto pubblicare il mio. *Due conteggi che non nominano la propria definizione non
+sono in disaccordo — non sono ancora confrontabili.*
+
+🔴 **E il predicato, pubblicato, conteneva la risposta: `re.findall(r"<fig\b|<figure\b", …)`.**
+**`<fig\b` matcha `<fig-count>`** — dopo `fig` viene un trattino, che è un confine di parola,
+quindi `\b` è soddisfatto. `<fig-count>` è un contatore di metadati JATS: vive in `<article-meta>`,
+cioè **sempre fuori dal corpo, sempre esattamente uno**. Riprodotto qui in modo indipendente prima
+di accettarlo: su tutti e cinque i file contestati `fig-count` è **1 in `<article-meta>` e 0 in
+`<body>`**, e quel predicato applicato all'intero `files/` classifica come «parziali» esattamente
+**7** file. La classe «alcune fuori» dell'altra misura va a **zero**, e questa classificazione
+regge intatta. **Numero canonico: 9 su 34, di cui 7 pure.**
+
+**Due cose che vale la pena tenere separate, perché insegnano l'opposto l'una dell'altra.**
+La ricostruzione che avevo tentato — contare i `<graphic>` — **era falsa**, e l'avevo falsificata
+io stesso su `36779245` invece di fermarmi al caso che tornava. Non aver assunto una risoluzione
+plausibile è ciò che ha lasciato spazio a quella vera. E la causa vera è **la stessa classe di
+`CC-` dentro `OCC-`**: una forma sintatticamente valida che punta alla cosa sbagliata, invisibile
+a qualunque controllo che verifichi soltanto che il conteggio sia ben formato. **Un conteggio
+plausibile non è un conteggio verificato**, e la differenza non si vede mai dal risultato — solo
+dal predicato.
+
+**Sulla popolazione, il disaccordo è invece di categoria e si chiude qui.** Loro contano 62 =
+35 XML + 27 HTML. **A un HTML questa domanda non si può porre:** una pagina ha esattamente un
+`<body>` e tutto ci sta dentro per costruzione, quindi «figure fuori dal corpo» non è né vero né
+falso — è indefinito. Le 27 superfici HTML vanno contate a parte e con un'altra domanda (*la
+didascalia è raggiungibile?*), mai sommate al denominatore di questa. Sommandole si abbassa la
+percentuale di una classe di rischio diluendola con casi che non possono appartenervi.
+
+**Correzione al mio numero originale, e non è un arrotondamento.** Avevo scritto «10 su 35».
+Sono **9 su 34**: il decimo era `23435430`, che sta in `/tmp` e **non nel `files/` condiviso**, e
+il denominatore includeva un file non analizzabile. Ho contato insieme un artefatto del corpus e
+un artefatto di lavoro — esattamente il confine che [[CLAUDE]] impone di non attraversare, sbagliato
+da me nella riga che quel confine lo stava insegnando.
+
+- **Conseguenza operativa aggiuntiva:** `PMID42395553_PMC.xml` non è di questa classe ed è peggio —
+  9 586 byte, **nessun `<body>` e nessuna `<fig>`**: metadati soltanto, come `18487609`. È una
+  classe distinta, *«superficie assente travestita da superficie»*, e va censita da sé.

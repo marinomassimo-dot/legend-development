@@ -891,6 +891,38 @@ def repoint_manifests(hits: dict[Path, str], renames: dict[str, str]) -> list[st
     return touched
 
 
+def already_merged(base: list[dict[str, Any]], incoming: list[dict[str, Any]],
+                   shared: int, renames: dict[str, str] | None = None,
+                   ) -> list[dict[str, Any]]:
+    """Divergent events the base already holds, identically — history merged once before.
+
+    🔴 A branch whose earlier work was already integrated carries those events again, and they
+    are not a collision to renumber: they are one reading, recorded once. Two branches holding
+    `FTR-...-38182577-01` byte-for-byte apart from its chain link describe the same act of
+    reading, and appending it a second time would record it twice.
+
+    Measured 2026-08-11 merging `lettore-b`: 7 divergent events, 4 already in the base and
+    identical, 3 genuinely new. Without this the sequence validator refused the whole rebase
+    for `duplicate event_id`, so the 3 new ones — including the only attestation of a
+    25-locator manifest — could not land at all. The refusal was right about the file and
+    wrong about the situation.
+
+    Narrow on purpose. Identity is judged modulo `ledger_prev_hash`, the one field a rebase is
+    allowed to change; a shared identifier over DIFFERENT bodies is still a collision and still
+    refused, which is what `--rename` exists for. And an event named in `renames` is never
+    skipped: declaring a rename for something about to be dropped means the operator and the
+    tool disagree about what is happening, and the tool must not win that silently.
+    """
+    renames = renames or {}
+    known = {event.get("event_id"): event_body(event) for event in base}
+    return [
+        event for event in incoming[shared:]
+        if event.get("event_id") not in renames
+        and known.get(event.get("event_id")) == event_body(event)
+        and event.get("event_id") in known
+    ]
+
+
 def rechain(
     base: list[dict[str, Any]], incoming: list[dict[str, Any]],
     renames: dict[str, str] | None = None,
@@ -942,7 +974,26 @@ def rechain(
     rename_errors = _rename_errors(renames, base, incoming, shared)
     if rename_errors:
         raise ValueError("; ".join(rename_errors))
-    suffix = [_renamed(copy.deepcopy(event), renames) for event in incoming[shared:]]
+    # 🔴 A branch that already had part of its history merged carries those events again, and
+    # they are not a collision to renumber — they are the same reading, recorded once. Two
+    # branches that both hold `FTR-...-38182577-01` byte-for-byte apart from its chain link
+    # describe one act of reading, and appending it a second time would record it twice.
+    #
+    # Measured 2026-08-11 merging `lettore-b`: 7 divergent events, 4 of them already in the
+    # base and identical, 3 genuinely new. Without this the sequence validator refused the
+    # whole rebase for "duplicate event_id" and the 3 new ones — including the only attestation
+    # of a 25-locator manifest — could not land at all.
+    #
+    # Narrow on purpose: identical modulo `ledger_prev_hash`, which is the one field a rebase
+    # is allowed to change. A shared identifier over DIFFERENT bodies is still a collision and
+    # still refused; `--rename` is what that case is for. And an event named in `renames` is
+    # never skipped: declaring a rename for something about to be dropped means the operator
+    # and the tool disagree about what is happening, and the tool must not win silently.
+    already = already_merged(base, incoming, shared, renames)
+    identifiers = {id(event) for event in already}
+    fresh = [event for event in incoming[shared:] if id(event) not in identifiers]
+    incoming = incoming[:shared] + fresh
+    suffix = [_renamed(copy.deepcopy(event), renames) for event in fresh]
 
     # Deep-copied, and the base is re-compared at the end. Sharing references with the caller
     # would make `rechain` able to alter the history it is rebasing onto without any of the
@@ -1317,6 +1368,9 @@ def main() -> int:
             print(f"BASE:     {len(base)} event(s) from {base_path}")
             print(f"INCOMING: {len(incoming)} event(s) from {ledger}")
             print(f"SHARED:   {shared} event(s) — the two histories agree up to here")
+            for event in already_merged(base, incoming, shared, renames):
+                print(f"  ALREADY {event.get('event_id')}  identical in the base — merged "
+                      f"once before, not appended again")
             if not moved:
                 print("NOTHING TO REBASE: this ledger adds no event the base does not have")
                 return 0

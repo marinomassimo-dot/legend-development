@@ -8,7 +8,7 @@
 
 ## ▶ Start here
 
-**415 records have not been processed.** **246** of them have a free full text and can be worked immediately.
+**415 records have not been processed.** **245** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
@@ -82,11 +82,11 @@ time; it does not redistribute or license the article text.
 | Status | Records | Share |
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 326 | 46% |
-| **Catalogued, never processed** — the reading debt | 168 | 24% |
-| Known to the tracking log only | 154 | 22% |
+| **Catalogued, never processed** — the reading debt | 167 | 24% |
+| Known to the tracking log only | 152 | 22% |
 | Processed from the abstract | 10 | 1% |
-| Partial full text read | 3 | 0% |
-| Full text read | 45 | 6% |
+| Partial full text read | 5 | 1% |
+| Full text read | 46 | 7% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
 `fulltext_read_receipts.jsonl`. Historical registry-only full-text declarations remain
@@ -236,7 +236,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [24510053](https://pubmed.ncbi.nlm.nih.gov/24510053/) | 2014 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | catalogued only | WW domain-containing oxidoreductase's role in myriad cancers: clinical significance and future implications. |
 | [24648952](https://pubmed.ncbi.nlm.nih.gov/24648952/) | 2013 | ✅ | Journal Article | catalogued only | Methylation status of WWOX gene promoter CpG islands in epithelial ovarian cancer and its clinical significance. |
 | [24330824](https://pubmed.ncbi.nlm.nih.gov/24330824/) | 2013 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | catalogued only | Correlation of WWOX, RUNX2 and VEGFA protein expression in human osteosarcoma. |
-| [24308844](https://pubmed.ncbi.nlm.nih.gov/24308844/) | 2013 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | catalogued only | Molecular origin of the binding of WWOX tumor suppressor to ErbB4 receptor tyrosine kinase. |
 | [24137446](https://pubmed.ncbi.nlm.nih.gov/24137446/) | 2013 | ✅ | Journal Article | catalogued only | Gene expression of WWOX, FHIT and p73 in acute lymphoblastic leukemia. |
 | [23534718](https://pubmed.ncbi.nlm.nih.gov/23534718/) | 2013 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Expression of fragile histidine triad (FHIT) and WW-domain oxidoreductase gene (WWOX) in nasopharyngeal carcinoma. |
 | [23459853](https://pubmed.ncbi.nlm.nih.gov/23459853/) | 2013 | ✅ | Journal Article | catalogued only | Tumor Suppressor WWOX and p53 Alterations and Drug Resistance in Glioblastomas. |
@@ -401,7 +400,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [30158849](https://pubmed.ncbi.nlm.nih.gov/30158849/) | 2018 | ✅ | Journal Article; Review | screened | WWOX Phosphorylation, Signaling, and Role in Neurodegeneration. |
 | [30154439](https://pubmed.ncbi.nlm.nih.gov/30154439/) | 2018 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | Loss of Wwox drives metastasis in triple-negative breast cancer by JAK2/STAT3 axis. |
 | [29845204](https://pubmed.ncbi.nlm.nih.gov/29845204/) | 2018 | ✅ | Journal Article | screened | LncRNA WWOX‑AS1 inhibits the proliferation, migration and invasion of osteosarcoma cells. |
-| [29724996](https://pubmed.ncbi.nlm.nih.gov/29724996/) | 2018 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | ✎ corrected — WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
 | [29310447](https://pubmed.ncbi.nlm.nih.gov/29310447/) | 2018 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Research Support, U.S. Gov't, Non-P.H.S.; Review | screened | Phosphorylation/de-phosphorylation in specific sites of tumor suppressor WWOX and control of distinct biological events. |
 | [31966718](https://pubmed.ncbi.nlm.nih.gov/31966718/) | 2017 | ✅ | Journal Article | screened | EBV-LMP1 regulating AKT/mTOR signaling pathway and WWOX in nasopharyngeal carcinoma. |
 | [31966508](https://pubmed.ncbi.nlm.nih.gov/31966508/) | 2017 | ✅ | Journal Article | screened | WWOX suppresses proliferation and induces apoptosis via G2 arrest and caspase 3 pathway in nasopharyngeal carcinoma cells. |
@@ -417,7 +415,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [27999774](https://pubmed.ncbi.nlm.nih.gov/27999774/) | 2016 | ✅ | Journal Article; Review | screened | HYAL-2-WWOX-SMAD4 Signaling in Cell Death and Anticancer Response. |
 | [26675548](https://pubmed.ncbi.nlm.nih.gov/26675548/) | 2016 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | WWOX modulates the ATR-mediated DNA damage checkpoint response. |
 | [27551439](https://pubmed.ncbi.nlm.nih.gov/27551439/) | 2015 | ✅ | Journal Article | screened | WWOX dysfunction induces sequential aggregation of TRAPPC6AΔ, TIAF1, tau and amyloid β, and causes apoptosis. |
-| [27308504](https://pubmed.ncbi.nlm.nih.gov/27308504/) | 2015 | ✅ | Journal Article | screened | WWOX guards genome stability by activating ATM. |
 | [27308416](https://pubmed.ncbi.nlm.nih.gov/27308416/) | 2015 | ✅ | Journal Article | screened | WWOX loss activates aerobic glycolysis. |
 | [26499798](https://pubmed.ncbi.nlm.nih.gov/26499798/) | 2015 | ✅ | Journal Article; Review | screened | Pleiotropic Functions of Tumor Suppressor WWOX in Normal and Cancer Cells. |
 | [26256646](https://pubmed.ncbi.nlm.nih.gov/26256646/) | 2015 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | Tumor Suppressor WWOX inhibits osteosarcoma metastasis by modulating RUNX2 function. |
@@ -753,7 +750,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [41661231](https://pubmed.ncbi.nlm.nih.gov/41661231/) | 2026 | — | Journal Article | screened | RNAseq-based meta-analyses revealed tumor suppressor-inducer fusion events in liver, oral, and ovarian cancer in the Indian population: a cancer cell surviving mechanism. |
 | [41776383](https://pubmed.ncbi.nlm.nih.gov/41776383/) | 2026 | — | Journal Article; Multicenter Study | screened | Pharmacogenomics of response to interferon-beta and glatiramer acetate in Multiple Sclerosis: A multi-centric study. |
 
-*(showing all 648 outstanding records)*
+*(showing all 645 outstanding records)*
 
 ## Already processed from this seed
 
@@ -765,6 +762,8 @@ for an entirely unprocessed record.
 |---|---:|:---:|---|---|---|
 | [29808465](https://pubmed.ncbi.nlm.nih.gov/29808465/) | 2018 | — | abstract only | PAPER 041 | A novel missense variant in the SDR domain of the WWOX gene leads to complete loss of WWOX protein with early-onset epileptic encephalopathy and severe developmental delay. |
 | [38499540](https://pubmed.ncbi.nlm.nih.gov/38499540/) | 2024 | ✅ | partial full text | receipt FTR-20260810-38499540-01 | Unveiling the relationship between WWOX and BRCA1 in mammary tumorigenicity and in DNA repair pathway selection. |
+| [29724996](https://pubmed.ncbi.nlm.nih.gov/29724996/) | 2018 | ✅ | partial full text | receipt FTR-20260810-29724996-01 | ✎ corrected — WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
+| [24308844](https://pubmed.ncbi.nlm.nih.gov/24308844/) | 2013 | ✅ | partial full text | receipt FTR-20260810-24308844-01 | Molecular origin of the binding of WWOX tumor suppressor to ErbB4 receptor tyrosine kinase. |
 | [39416860](https://pubmed.ncbi.nlm.nih.gov/39416860/) | 2024 | ✅ | full text | receipt FTR-20260810-39416860-01 | WWOX-related epileptic encephalopathy caused by a novel mutation in the WWOX gene: a case report. |
 | [38182577](https://pubmed.ncbi.nlm.nih.gov/38182577/) | 2024 | ✅ | full text | receipt FTR-20260810-38182577-02 | ✎ corrected — WWOX promotes osteosarcoma development via upregulation of Myc. |
 | [38161429](https://pubmed.ncbi.nlm.nih.gov/38161429/) | 2023 | ✅ | full text | PAPER 046 | Neuroimaging features of WOREE syndrome: a mini-review of the literature. |
@@ -783,6 +782,7 @@ for an entirely unprocessed record.
 | [27550453](https://pubmed.ncbi.nlm.nih.gov/27550453/) | 2016 | ✅ | full text | receipt FTR-20260810-27550453-01 | WWOX and p53 Dysregulation Synergize to Drive the Development of Osteosarcoma. |
 | [27495153](https://pubmed.ncbi.nlm.nih.gov/27495153/) | 2016 | ✅ | full text | PAPER 049 | W44X mutation in the WWOX gene causes intractable seizures and developmental delay: a case report. |
 | [26857392](https://pubmed.ncbi.nlm.nih.gov/26857392/) | 2016 | ✅ | full text | PAPER 050 | ✎ corrected — Relevance of Sp Binding Site Polymorphism in WWOX for Treatment Outcome in Pancreatic Cancer. |
+| [27308504](https://pubmed.ncbi.nlm.nih.gov/27308504/) | 2015 | ✅ | full text | receipt FTR-20260810-27308504-01 | WWOX guards genome stability by activating ATM. |
 | [24932569](https://pubmed.ncbi.nlm.nih.gov/24932569/) | 2014 | ✅ | full text | PAPER 053 | WWOX at the crossroads of cancer, metabolic syndrome related traits and CNS pathologies. |
 | [24871327](https://pubmed.ncbi.nlm.nih.gov/24871327/) | 2014 | ✅ | full text | PAPER 062 | The WWOX gene modulates high-density lipoprotein and lipid metabolism. |
 | [24456803](https://pubmed.ncbi.nlm.nih.gov/24456803/) | 2014 | ✅ | full text | PAPER 043 | The supposed tumor suppressor gene WWOX is mutated in an early lethal microcephaly syndrome with epilepsy, growth retardation and retinal degeneration. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [22193544](https://pubmed.ncbi.nlm.nih.gov/22193544/) | 2012 | ✅ | full text | PAPER 056 | WW domain-containing oxidoreductase promotes neuronal differentiation via negative regulation of glycogen synthase kinase 3β. |
 | [40875931](https://pubmed.ncbi.nlm.nih.gov/40875931/) | 2025 | — | full text | PAPER 014 | WWOX-Related Developmental and Epileptic Encephalopathy: Expanding the Clinical Spectrum and Deciphering the Genotype-Phenotype. |
 
-*(showing all 58 processed records from the seed)*
+*(showing all 61 processed records from the seed)*
 
 ## How to work one
 

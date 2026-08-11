@@ -1095,6 +1095,55 @@ class ARenameIsTheOneDeclaredExceptionAndItIsNarrow(unittest.TestCase):
         self.assertEqual(before, json.dumps(branch, sort_keys=True))
 
 
+class HistoryMergedOnceIsNotAppendedTwice(unittest.TestCase):
+    """🔴 A branch whose earlier work was already integrated carries those events again.
+
+    Measured 2026-08-11 merging `lettore-b` into the integration branch: 7 divergent events,
+    4 of them byte-identical to events already in the base apart from their chain link, 3
+    genuinely new. The sequence validator refused the whole rebase for `duplicate event_id` —
+    right about the file, wrong about the situation — so the 3 new events, including the only
+    attestation of a 25-locator manifest, could not land at all.
+
+    An identical event is one reading recorded once, not a collision to renumber. A shared
+    identifier over DIFFERENT bodies still is, and must stay refused.
+    """
+
+    def _pair(self):
+        return ARenameIsTheOneDeclaredExceptionAndItIsNarrow("run")._collision()
+
+    def test_an_identical_event_already_in_the_base_is_not_appended_again(self) -> None:
+        base, _branch = self._pair()
+        # A branch that is the base's own history plus nothing new: everything is already in.
+        merged, moved, shared = receipts.rechain(base, list(base))
+        self.assertEqual(moved, [])
+        self.assertEqual(len(merged), len(base))
+
+    def test_the_skipped_events_are_reported_not_silent(self) -> None:
+        base, _branch = self._pair()
+        shared = receipts.common_prefix_length(base, base)
+        # With identical histories the prefix covers everything, so nothing is even divergent.
+        self.assertEqual(receipts.already_merged(base, list(base), shared), [])
+        # Force divergence: the same events, presented as if they came after a shorter prefix.
+        skipped = receipts.already_merged(base, list(base), 1)
+        self.assertEqual([event["event_id"] for event in skipped],
+                         [event["event_id"] for event in base[1:]])
+
+    def test_a_shared_identifier_over_a_different_body_is_still_refused(self) -> None:
+        """The skip must not become a way to swallow two different readings under one id."""
+        base, branch = self._pair()
+        divergent = copy.deepcopy(base)
+        divergent[-1]["evidence_depth"] = "complete_fulltext_read"
+        self.assertEqual(receipts.already_merged(base, divergent, 1), [])
+
+    def test_an_event_named_in_renames_is_never_skipped(self) -> None:
+        """Declaring a rename for something about to be dropped means the operator and the
+        tool disagree about what is happening, and the tool must not win that silently."""
+        base, _branch = self._pair()
+        target = base[-1]["event_id"]
+        skipped = receipts.already_merged(base, list(base), 1, {target: "FTR-X"})
+        self.assertNotIn(target, [event["event_id"] for event in skipped])
+
+
 class ARenameReachesReferencesOutsideTheLedger(unittest.TestCase):
     """🔴 A rename repairs the ledger and re-points every citation held outside it in silence.
 

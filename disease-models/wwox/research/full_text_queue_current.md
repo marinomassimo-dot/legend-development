@@ -1434,7 +1434,11 @@ una condizione d'interruzione dichiarata e non un rinvio.
 > che aveva evitato sono precisamente quelli che l'altro ramo ha poi usato. **Una spaziatura
 > dichiarata ha fatto il lavoro che un identificatore condiviso non poteva fare.**
 
-## FT-055 — ✅ APERTA E CHIUSA il 2026-08-10
+## FT-059 — ✅ APERTA E CHIUSA il 2026-08-10
+
+> **Rinumerata da `FT-055` il 2026-08-11**, alla fusione del terzo ramo. Nessuna ricevuta
+> incatenata la nominava, mentre `FTR-20260810-24308844-01` nominava l'altra `FT-055`: fra due
+> voci in collisione si muove quella i cui riferimenti si possono ancora ri-puntare.
 
 > **Numerazione:** `048`–`052` sono in uso o in rinumerazione da altri attori, `053`–`054`
 > lasciati liberi come stacco. Stessa disciplina dichiarata per `DL-*-085`: l'allocazione qui è
@@ -1529,7 +1533,7 @@ valore per la premessa ipomorfi/ASO. **Entrambi triageati la sera stessa: vedi `
 **Papers:** PMID 34034642 / DOI 10.1080/01616412.2021.1932173 — Havali et al. 2021, *Neurol Res*
 · PMID 36779245 / DOI 10.1111/epi.17542 — Oliver et al. 2023, *Epilepsia*
 **Priority:** **ALTA** — sono i due che decidono *«missenso ⇒ funzione residua ⇒ più lieve»*,
-dopo che `FT-055` ha stabilito che il terzo controesempio non la falsifica.
+dopo che `FT-059` ha stabilito che il terzo controesempio non la falsifica.
 
 ### 🔴 Havali 2021 — closed access, e lo dichiaro come rotta, non come proprietà
 
@@ -1677,3 +1681,245 @@ la causa misurata sopra. **Dichiarare l'artefatto e alzare lo schema porterebbe 
 "non verificati" a FAIL duro** — è lavoro di un altro attore e non sta a me romperlo. Le
 citazioni stanno nel receipt, verificate, **pronte ad atterrare quando il normalizzatore sarà
 riparato**, che è di Plan.
+---
+
+> 🔴 **Nota di merge, 2026-08-11.** Le voci che seguono arrivano da un terzo ramo, e questa
+> volta la spaziatura dichiarata non è bastata: entrambi i lati hanno allocato **055** e
+> **056**.
+>
+> 🔴 **A decidere chi si muove non è chi è arrivato dopo: è quale riferimento sta dentro la
+> catena hash e quindi non si riscrive.** Ce n'è esattamente uno per lato, e cadono in versi
+> opposti:
+>
+> - `FTR-20260810-24308844-01` nomina `FT-055` nel proprio testo → la voce **di questo blocco**
+>   tiene `055`, e si sposta invece quella dell'altro lato (Feng 2024): **`055 → 059`**;
+> - `FTR-20260810-36779245-03` ha `outputs: […#FT-056]` → la voce **dell'altro lato** tiene
+>   `056`, e si sposta questa (Santini 2014): **`056 → 060`**.
+>
+> Rinumerare per anzianità avrebbe lasciato una ricevuta immutabile a nominare `FT-055` mentre
+> `FT-055` era diventata la voce di un altro paper — un puntatore che non si rompe e cambia
+> significato, che è la classe di difetto misurata stamattina sul ledger delle ricevute. Tutti
+> i riferimenti mobili sono ri-puntati in questo stesso passaggio. `057` e `058` non
+> collidevano e non si muovono.
+
+## FT-055 — Le sette figure di PMID 24308844, e l'esperimento che **non** è stato eseguito
+**Paper:** PMID 24308844 / DOI 10.1021/bi400987k — Schuchardt 2013, *Biochemistry* 52(51) —
+*Molecular Origin of the Binding of WWOX Tumor Suppressor to ErbB4 Receptor Tyrosine Kinase*
+**Priority:** **ALTA**
+**Surface:** `structured` · `PMID24308844_Schuchardt2013_PMC.xml` (JATS da `efetch`,
+sha256 `00da56df…`) · corpo letto integralmente, `FTR-20260810-24308844-01`
+*(Voce creata il 2026-08-10 **dopo** che tre riferimenti la citavano già — manifest, ricevuta e
+rapporto — senza che esistesse. Uno dei tre è dentro la catena hash e non si riscrive. Un debito
+citato e mai aperto è un debito che evapora: è la stessa forma delle collisioni di ID, vista dal
+lato opposto — non due voci con un nome, ma un nome senza voce.)*
+
+### 🔴 Il punto non è la copertura: è che l'esperimento non è stato eseguito
+Questo paper era stato assegnato come **controllo** su una domanda precisa: il mio tasso di
+contraddizione del **29,3%** contro il 12–18% degli altri lettori è il metodo o il campione? Quel
+tasso è definito come **contraddizioni per locator su figura ispezionato**.
+
+**Ho ispezionato zero figure.** Quindi lo «zero contraddizioni» che la lettura ha prodotto è
+testo-contro-tabelle — **una quantità diversa, su un altro asse**, con numeratore e denominatore
+entrambi assenti. Non falsifica nulla e non conferma nulla. **L'esperimento resta aperto, non
+fallito**, e si esegue qui.
+
+⚠️ **E la lezione di metodo va con la voce, perché è la stessa che il paper insegna:** il titolo
+del mio rapporto diceva *«zero contraddizioni»* mentre l'ultimo paragrafo diceva che non è sullo
+stesso asse. **A viaggiare è il titolo.** È letteralmente la forma trovata nell'abstract di
+questo stesso articolo — *«akin to the binding of WW1»* smentito dalla sua Tabella 3 — applicata
+al mio rapporto su di esso.
+
+### Che cosa manca, con il costo di ciascuna
+| figura | che cosa porta | perché pesa |
+|---|---|---|
+| **2** e **4** | isoterme ITC | **ogni Kd citato** (144 · 383 · 362 · 68 µM) esce da questi fit, mai ispezionati |
+| **3** | modello strutturale WW1/WW2–ErbB4_PY3 | è l'evidenza dell'argomento **W44/Y85**, il reperto di raggio maggiore della lettura |
+| **5** | light scattering, profili di eluizione | la spalla di omodimerizzazione che gli autori dichiarano irrilevante |
+| **6** e **7** | RMSD/RMSF/Rg e istantanee MD | il modello «chaperone», che gli autori stessi dichiarano non dimostrato |
+| **1** | architettura ErbB4 e sequenze dei peptidi | la nomenclatura P0/P+1/Y+3 su cui poggia tutto il resto |
+
+**Next action:** recuperare le sette figure — `smask` misurato prima di scegliere fra estrazione
+e render, e **registrare la risoluzione oltre alla superficie** — un locator per figura o
+rinuncia nominata, poi ri-registrare a profondità completa con
+`reread_reason: inadequate_prior_coverage`. Solo allora il tasso è calcolabile su questo paper.
+**Current status:** ⬜ aperto. Debito **di sessione, non del paper**: la rinuncia è nominata nel
+manifest sotto `figure_coverage.waiver`, con il costo di ciascuna figura scritto.
+
+🔴 **AGGIUNTA 2026-08-10, e cambia la natura del debito.** Sopra ho attribuito la rinuncia al
+budget. C'era una **seconda ragione, che non conoscevo mentre scrivevo**: `PMID24308844_Schuchardt2013_PMC.xml`
+colloca **0 dei suoi 7 elementi `<fig>` dentro `<body>`**, e l'ho letto con un estrattore delimitato
+al corpo. **Non ho mai visto una sola didascalia di questo paper.** Si vede nel manifest: le sette
+voci figura sono tutte attestazioni da pixel e **non esiste un solo locator su didascalia**, mentre
+su `25331887` — HTML, didascalie nella pagina — ne ho due, ed entrambe portano peso. L'assenza
+sembrava una scelta; era una superficie invisibile. Censimento e regola in `DL-METH-092`.
+**Al prossimo run le didascalie si leggono per prime**, prima delle figure: costano nulla e sono
+il posto dove questo corpus ha già trovato tre reperti.
+
+---
+
+## FT-060 — Santini et al., *Oncogene* 2014: la freccia ATM→ITCH non è di questo laboratorio, e dal commentary non è raggiungibile
+
+**Paper:** DOI 10.1038/onc.2013.52 — Santini S *et al.*, *Oncogene* 2014;33(9):1113–1123 —
+*ATM kinase activity modulates ITCH E3-ubiquitin ligase activity*
+**PMID 23435430** · **PMCID PMC3938399** — risolti nella stessa sessione via `esearch` sul DOI,
+subito dopo aver scritto questa voce. La citazione originaria era stata letta dalla reference list
+di `PMID 25331887` (voce 42), verificata carattere-per-carattere contro
+`files/fulltext/PMID25331887_AbuOdeh2014_PMC.html` (`sha256 8c629a54…`).
+
+**Surface (preflight eseguito, 3 vie):** `oa.fcgi` → record presente, `license="none"`,
+`retracted="no"` (manoscritto d'autore depositato, non licenza aperta) · Europe PMC `fullTextXML`
+→ **200, 96 812 byte, corpo presente** · `efetch db=pmc` → **200, 92 519 byte, corpo presente**.
+Otto figure `F1`–`F8`, 38 referenze, nessuna tabella. **È raggiungibile.**
+
+🔴 **E le due vie non concordano su che cosa sta dentro `<body>`.** Corpo `efetch` 29 341
+caratteri contro **46 114** di Europe PMC. La differenza non è coda: `efetch` colloca **tutti e
+otto** gli elementi `<fig>` **fuori** dal `<body>`, Europe PMC tutti e otto **dentro**. Otto
+didascalie — otto frasi dichiarative, una per figura — che un estrattore delimitato al `<body>`
+non mostra affatto. **Dichiarare Europe PMC come `article_text`**, e comunque contare le figure
+dentro il corpo prima di leggere (vedi `DL-METH-092`).
+
+**Perché è in coda, e non è una questione bibliografica.** `PMID 25331887` scrive nella Discussion
+*«After DNA damage, ATM positively regulates the ligase activity of ITCH (42)»* — con il numero.
+Il suo Author's View `PMID 27308504` scrive nella didascalia della propria unica figura *«Activated
+ATM phosphorylates and positively regulates the ligase activity of ITCH»* — **senza numero**, dentro
+un modello presentato come proprio, e **il riferimento 42 non compare fra le dieci voci del
+commentary**. Un lettore che partisse dall'Author's View per risalire a quella freccia non
+troverebbe alcun percorso.
+
+🔴 **È la freccia che chiude l'anello.** Senza ATM→ITCH il *feed-forward loop* del modello è aperto:
+resta ITCH→WWOX→ATM, una catena lineare. L'anello — la proprietà che rende il modello
+interessante — poggia interamente su un lavoro di terzi che questo corpus non ha letto.
+`IMPORTED_PREMISE_ATTRIBUTION_GATE`, su una premessa che porta peso.
+
+**Next action (sessione fredda):** risolvere `10.1038/onc.2013.52` → PMID/PMCID via `idconv` o
+`esearch`; preflight a tre vie; se `Oncogene` 2014 non è open access, dichiararlo e accodare come
+`PREMISE: NON RISOLTA` invece di assumere il segno. **La domanda precisa da porre al paper:** ATM
+fosforila ITCH *direttamente*, e l'effetto sull'attività ligasica è misurato o inferito? La
+direzione conta: se ATM *attiva* ITCH e ITCH *stabilizza* WWOX, l'anello è positivo; se in quel
+paper l'effetto fosse inibitorio, il modello di `27308504` si rovescia.
+**Current status:** ⬜ aperto. **Priorità: ALTA** — è l'unica premessa non risolta di una catena
+che questo corpus cita in tre letture.
+
+---
+
+## FT-057 — I due paper fondativi del KO che il commentary invoca e questo corpus non ha letto
+
+**Papers:** PMID 18487609 / DOI 10.1074/jbc.M800855200 — Aqeilan RI *et al.*, *JBC*
+2008;283:21629–39, PMC2490770 — *The WWOX tumor suppressor is essential for post-natal survival
+and normal bone metabolism* · PMID 17360458 / DOI 10.1073/pnas.0609783104 — Aqeilan RI *et al.*,
+*PNAS* 2007;104:3949–54, PMC1820689 — *Targeted deletion of Wwox reveals a tumor suppressor
+function*.
+
+🔴 **PREMESSA SBAGLIATA, CORRETTA UN'ORA DOPO AVERLA SCRITTA — e la tengo accanto a quella giusta.**
+Avevo scritto: *«Entrambi PMC, quindi superficie strutturata attesa — da verificare, non da
+presumere»*. Ho scritto «da verificare», poi ho verificato, e **la previsione era falsa**.
+`PMID 18487609`: `oa.fcgi` risponde `idIsNotOpenAccess`, Europe PMC `fullTextXML` risponde **404**,
+`efetch db=pmc` risponde 200 con **11 699 byte e nessun elemento `<body>`** — metadati e abstract,
+zero corpo, zero figure, zero referenze. **Un PMCID non è una superficie.** Il 200 di `efetch` è la
+parte pericolosa: una pipeline che controlli solo lo status code o solo che il file non sia vuoto
+archivierebbe quel file come «full text recuperato». La copia locale
+`PMID18487609_Aqeilan2008_PMC.html` esiste già nel `files/` condiviso ed è la sola via aperta —
+**da ispezionare prima di qualunque altra cosa**, perché nessuno ha ancora verificato se porti il
+corpo o soltanto il landing.
+
+Ordinati per priorità di lettura, non per data: vedi sotto.
+
+**Perché pesano più di quanto suggerisca il titolo.** `PMID 27308504` li cita insieme per una
+sola frase — *«Wwox knockout (KO) mice exhibit post-natal lethality and die by 4 weeks of age»* —
+e quella frase è il fondamento fenotipico di ogni trasferimento dal modello murino alla malattia.
+**`PMID 18487609` è il paper meno oncologico dei due**: sopravvivenza post-natale e metabolismo
+osseo, cioè esattamente il registro non tumorale in cui vive il genotipo di riferimento. Sta in
+coda da tempo per il titolo che promette osso; è la forma classica descritta in
+`gold_is_in_the_details`.
+
+**Next action (sessione fredda):** preflight a tre vie su entrambi i PMCID, **e preflight separato
+sulla superficie figure** — «superficie strutturata trovata» non implica «migliore superficie
+figure trovata», e su `27308504` la copia dentro il PDF aveva 3,1× i pixel del deposito PMC.
+Leggere `18487609` per primo. Budget figure dichiarato *prima* di aprire.
+**Current status:** ⬜ aperto. Priorità: media-alta.
+
+---
+
+## FT-058 — Il campo che ho coniato non è controllato da nulla, e lo dico prima che sembri verificato
+
+**Source:** `NOT_AN_ARTICLE` — un contratto, non un paper: `framework/scripts/deepdive_manifest.py` su `main`,
+`COUPLED_RELATIONS` e `_pointer_needle_errors`; l'istanza vive in
+`disease-models/wwox/research/deepdive_manifests/PMID27308504.json`, `entries[2]`.
+
+**Che cosa esiste.** `PMID27308504.json` `entries[2]` porta tre campi nuovi:
+`cross_document_relation: "hedge_deleted_by"`, `restates: "entries[1]"`, `restates_needle`.
+Seguono la grammatica che `main` ha fissato — puntatore più frammento, con la *suffix law*
+`<pointer>_needle`.
+
+**Perché non è dentro `panel_text_relation`.** Quell'enum è delimitato dal proprio nome: dice come
+un **pannello** sta rispetto a un **testo**. Questa relazione sta fra **due documenti**. Allargare
+l'enum sarebbe stato lo stesso ragionamento che ha prodotto `panel_qualifies_text` applicato al
+contrario per arrivare alla conclusione opposta: là nessun valore ammesso era vero e il difetto
+era l'enum; qui il difetto sarebbe stato usarlo.
+
+🔴 **E qui sta il debito.** Il validatore di `main` **ignora del tutto** questi tre campi: il
+manifest passa `MANIFEST STRICT PASS, 0 gaps` **senza che siano stati controllati**. È esattamente
+la forma «verde silenzioso» che questo repository esiste per impedire — un campo che *sembra*
+verificato perché sta accanto a campi che lo sono. La regola dell'ago è stata quindi eseguita **a
+mano** contro `_match_key` di `main` (il frammento appartiene allo snippet del bersaglio e a
+nessun altro), e il risultato è scritto nel manifest sotto
+`cross_document_relation_selfcheck`. **Un controllo eseguito a mano è più debole di un gate**, ed è
+offerto come argomento per costruirlo, non come sostituto.
+
+**Next action:** proporre a chi possiede `framework/scripts` di estendere `COUPLED_RELATIONS` con
+una tabella gemella per le relazioni cross-documento — il codice esiste già, `_pointer_needle_errors`
+è agnostico rispetto al nome della relazione e servirebbe solo una seconda mappa. **Non è mio da
+scrivere**: è lo stesso confine per cui `24308844` e `38182577` falliranno alla fusione finché il
+mio ramo porta un validatore più vecchio della regola.
+**Current status:** ⬜ aperto. Priorità: media — nessuna lettura ne dipende oggi, ma la seconda
+istanza del campo arriverà prima del gate se nessuno lo costruisce.
+
+---
+
+# ⏭️ HANDOFF — lettore B, ramo `lettore-b`, 2026-08-10 22:xx UTC
+
+*Scritto per una **sessione fredda**: chi legge domani non ha nulla di questa conversazione. Tutto
+ciò che serve per ripartire senza rileggere niente sta qui.*
+
+## Dove sono gli artefatti
+**Tutti nel `files/` del checkout condiviso** `/Users/massimo/Desktop/legend-public/files/fulltext/`,
+**mai nel worktree** — `files/` è gitignored per copyright, quindi il ramo porta il manifest e non
+l'evidenza. Validare sempre con `--artifact-workspace /Users/massimo/Desktop/legend-public`.
+
+| artefatto | sha256 | note |
+|---|---|---|
+| `PMID27308504_Hazan2015_PMC.xml` | `4124af2c…` | JATS `efetch`, corpo 11 944 car. — superficie dichiarata |
+| `PMID27308504_Hazan2015.pdf` | `20d80aa0…` | 3 pagine, `article_binary` |
+| `PMID27308504_Hazan2015_assets/p2_x4.jpeg` | `a979aad0…` | Fig 1, **1302×1051**, `smask=0` |
+| `PMID27308504_Hazan2015_assets/orig_g001.jpg` | `45e02106…` | deposito PMC, **730×597** — 3,1× meno pixel, tenuto solo per il confronto |
+| `PMID25331887_AbuOdeh2014_PMC.html` | `8c629a54…` | **secondo `article_text`**: entrambi i lati di ogni confronto sono verificati |
+
+## Che cosa è stato letto, per sezione
+`PMID 27308504` — **completo**, ed è un documento piccolo: `article-commentary` (Author's View),
+abstract + 4 paragrafi + didascalia + 10 referenze. Metodi, risultati e limiti **non esistono**;
+tabelle **zero** (verificato in entrambe le vie); supplementary **assente** (né `oa.fcgi` né il PDF
+ne portano). Figura unica ispezionata a 1302×1051 in due metà. `FTR-20260810-27308504-01`,
+`MANIFEST STRICT PASS, 0 gaps` contro il validatore di `main`. Ledger a **67**, tail ancorato.
+
+## Il debito preciso
+1. **`FT-060` · `PMID 23435430` (Santini, *Oncogene* 2014) — ALTA, e il preflight è già fatto.**
+   PMC3938399, corpo presente in entrambe le vie, 8 figure, 38 ref. **Dichiarare Europe PMC**, non
+   `efetch`: `efetch` tiene le 8 didascalie fuori dal `<body>`. È la premessa non risolta della
+   freccia ATM→ITCH. Domanda al paper: la fosforilazione è diretta, e l'effetto sull'attività
+   ligasica è **misurato o inferito**? Se fosse inibitorio, il modello di `27308504` si rovescia.
+2. **`FT-057` · `PMID 18487609` — la via PMC è chiusa**, `efetch` dà 200 e nessun corpo. Unica
+   strada: `PMID18487609_Aqeilan2008_PMC.html`, già nel `files/` condiviso, **mai ispezionato**.
+3. **`FT-053`** — ristretta oggi: ITCH→stabilizzazione è ora *misurata* (`24550385`, lettore A);
+   K274→emivita resta su `Fig. S7B` irraggiungibile.
+4. **`FT-055`** — Figure 1 e 7 di `24308844`, **e le didascalie di tutte e sette**, mai viste.
+5. **`FT-058`** — il campo coniato non è controllato da nulla.
+6. **Non mio da riparare:** `24308844` e `38182577` falliranno alla fusione finché questo ramo
+   porta un `deepdive_manifest.py` più vecchio della regola. Appartiene a chi possiede il contratto.
+
+## Due trappole misurate oggi, da non ripagare
+- **Contare `<fig>` dentro `<body>` prima di dichiarare una superficie** — 10 XML su 35 le tengono
+  fuori (`DL-METH-092`). Il validatore non se ne accorge perché percorre l'articolo; **chi legge sì.**
+- **Misurare la risoluzione di entrambe le copie** — su `27308504` la copia dentro il PDF aveva
+  3,1× i pixel del deposito PMC, l'inverso dell'assunzione portata da `25331887`. E la vecchia via
+  `www.ncbi.nlm.nih.gov/pmc/articles/…/bin/` risponde **404 con 48 KB di HTML**: chi controlla solo
+  lo status code o solo la dimensione salva quel file come immagine.
