@@ -2463,3 +2463,48 @@ numero non è mai un denominatore.
 **Il frame WW1 resta `NON ANCORATO`** finché una delle due non cade — e `DL-THER-095` lo dichiara
 esplicitamente, con la precisazione che la citazione di `23370280` **è** ancorata e che a non
 esserlo è la fonte primaria.
+
+---
+
+## FT-064 — Cercare la **terza** istanza del segno che cambia con la preparazione, col predicato già scritto
+
+**Papers:** PMID 17360458 · PMID 17575124 · PMID 15070730 — più **una ripassata all'indietro sui
+paper già letti**, che è la parte più economica e va fatta per prima.
+**Origine:** `DL-MECH-096` (`PMID 18487609`, 2026-08-11) e `DL-MECH-094` (`PMID 34268881`).
+**Priority:** **MEDIA** — non urgente, ma non affidabile alla memoria. È una voce di coda proprio
+perché due istanze in due giorni non sono una coincidenza, e perché il modo tipico in cui questa
+classe si perde è che chi l'ha vista se ne ricordi e chi viene dopo no.
+
+**Il predicato, scritto perché chi prende questa voce sappia cosa cercare invece di ricostruirlo:**
+
+> Un paper è un'istanza se **misura la stessa grandezza in una preparazione tissutale e in una
+> preparazione cellulare autonoma**, le chiama **con lo stesso nome**, e le due misure hanno
+> **segno opposto** — oppure hanno lo stesso segno ma la conclusione ne cita una sola.
+
+**Le due istanze note, per calibrare la ricerca:**
+
+| | tessuto | cellula isolata | come si è manifestata |
+|---|---|---|---|
+| `DL-MECH-096` | `Runx2` osso in vivo **+50%** | osteoblasti calvariali **−70%** | la frase riassuntiva della Discussion porta il segno sbagliato |
+| `DL-MECH-094` | firma metabolica degli organoidi | difetto di differenziamento | il confondimento è dichiarato nel titolo della figura, non nella conclusione |
+
+**🔴 Dove guardare per prime, e perché è quasi gratuito.** Non serve una ricerca nuova: le
+candidate sono già in casa. Ogni paper che accosti un fenotipo di knockout **total-body** a una
+coltura primaria derivata dallo stesso animale è un candidato — e il knockout `Wwox` total-body
+muore a tre settimane con deperimento d'organo, ipoglicemia, ipoproteinemia e ipocalcemia, quindi
+**ogni** misura tissutale in quella linea porta dentro un input sistemico che la coltura rimuove.
+`17360458` (il paper del knockout), `17575124` e `15070730` sono già in coda e non letti.
+
+**Perché non è metodologia ma Track C.** La domanda che questo predicato produce si può porre a
+**ogni** nodo del portafoglio terapeutico, non solo a questi due:
+
+> **Su quale preparazione si misura l'endpoint, e quel readout ha lo stesso segno del bersaglio
+> terapeutico?**
+
+Un nodo che non sa rispondere non ha una direzione **firmata**, e la Track C ne richiede una
+prima che il nodo si apra.
+
+**Next action:** applicare il predicato ai paper **già letti** prima di aprirne di nuovi. È il
+lavoro meno costoso della coda — i manifest hanno già i pannelli e le relazioni
+`text_contradicted_by_panel` — e **una terza istanza trovata all'indietro vale quanto una trovata
+in avanti**, perché ciò che serve non è un altro caso ma la conferma che la classe è ricorrente.
