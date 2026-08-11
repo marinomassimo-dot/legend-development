@@ -2428,12 +2428,29 @@ Aperto il rif. 3 (`PMID 24550385`, `FT-054`) sono emerse tre cose che riscrivono
 > `PREMISE: DEFAULT_FROM_TEXTBOOK` nella sua forma locale: **una premessa troppo ovvia per
 > essere riletta, e sbagliata**.
 >
-> 🔴 **E cercandola ho trovato le collisioni vere, che nessuno ha visto:** `DL-MECH-017` e
-> `DL-MECH-055` compaiono **due volte ciascuna** — stessa famiglia, stesso numero, difetto
-> preesistente e non toccato da questa fusione. Nessun controllo verifica l'unicità di un
-> identificatore `DL-` dentro la propria famiglia, e finché non esiste, la numerazione di
-> questo ledger è affidata all'attenzione. Registrato qui come debito, non riparato in una
-> fusione: correggere due voci storiche richiede di sapere chi le cita, ed è lavoro suo.
+> 🟡 **SECONDA CORREZIONE, e stavolta l'errore è dentro la riga che diagnosticava il primo.**
+>
+> Avevo scritto qui che `DL-MECH-017` e `DL-MECH-055` erano *«le collisioni vere, che nessuno
+> ha visto»*. **Non lo sono.** Le seconde occorrenze sono blocchi `### STATUS UPDATE — …`,
+> cioè aggiornamenti append-only a una voce esistente: il modo in cui questo ledger è
+> progettato per funzionare. Lo stesso vale per `DL-MOL-006` e `DL-MOL-008`, che una ricerca
+> più larga aggiunge e che sono blocchi `### Update — …`. **Zero duplicati veri.**
+>
+> Avevo contato gli identificatori nelle intestazioni senza distinguere una **definizione** da
+> un **aggiornamento** — cioè un predicato plausibile che risponde a una domanda diversa da
+> quella che gli ponevo, con un risultato ben formato. È **esattamente la classe che la riga
+> qui sopra stava diagnosticando**, commessa mentre la scrivevo.
+>
+> E la conseguenza pratica è la parte che conta: un controllo di unicità `DL-` costruito su
+> quel conteggio avrebbe segnalato **ogni blocco `STATUS UPDATE`**, cioè la pratica che questo
+> ledger esiste per rendere possibile — e il suo numero sarebbe cresciuto con la qualità del
+> lavoro. **Una guardia progettata a partire da un elenco di difetti non aggiudicato punisce
+> la pratica che genera quei "difetti".** L'aggiudicazione non è una cortesia prima di
+> costruire: è il passo che decide se è una guardia o un freno.
+>
+> L'allarme sbagliato resta scritto accanto alla sua correzione invece di essere cancellato,
+> che è la regola di questo file. Trovato da un altro attore che ha aperto le intestazioni
+> invece di riportare il mio numero.
 
 ---
 
