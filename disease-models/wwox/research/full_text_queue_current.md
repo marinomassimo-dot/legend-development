@@ -2227,7 +2227,11 @@ sotto enuncia piatto; il disegno non porta né tratteggio né `?`. Falsifica la 
 
 ---
 
-## FT-062 — Lo studio primario che questa review riformula, e la terza voce sul conflitto HDR/NHEJ
+## FT-062 — Confronto review ↔ primario **già letto**, più la lettura di Schrock
+
+*(Titolo corretto il 2026-08-11 da «Lo studio primario che questa review riformula, e la terza voce
+sul conflitto HDR/NHEJ». Entrambe le metà erano sbagliate: il primario **è già letto**, e Schrock
+è una **possibile** terza direzione, non una acquisita. Il titolo è la parte che viaggia.)*
 
 **Papers:** PMID 27869163 / DOI 10.1038/onc.2016.389 — Schrock MS, Batar B, Lee J, *et al.*,
 *Oncogene* 2017;36(16):2215–2227, PMC5398941 — *Wwox-Brca1 interaction: role in DNA repair pathway
@@ -2265,3 +2269,38 @@ persistite — non serve recuperare nulla; (2) preflight a tre vie su `PMID 2786
 tenendo la sua direzione come **da verificare**, non come acquisita.
 **Current status:** ⬜ aperto. **Priorità:** ALTA per il confronto (costo basso, entrambi i lati in
 casa); media-alta per Schrock.
+
+---
+
+## ⏳ DEBITO PER PLAN — due voci distinte, non una
+
+Emerse dalla correzione `FTR-20260811-31075076-02`. **Non sono mie da chiudere**: toccano lo schema
+delle ricevute e i consumatori. Registrate qui perché una consegnata solo in un messaggio decade.
+
+**`CONSUMER_CORRECTION_RESOLUTION`** — il protocollo **stabilisce già** che i consumatori usano
+l'ultimo evento di pari profondità: **non è una semantica da decidere**, e la mia formulazione
+precedente («è proprietà di ciascun consumatore») lo dava per aperto quando è scritto. Ciò che
+resta da verificare è se **tutti** i consumatori rispettino davvero quel contratto — preferibilmente
+con un **resolver comune** e i suoi test, invece che con la regola reimplementata a ogni sito. È la
+stessa forma di `PATTERN_ALREADY_SOLVED_GATE`: la regola esiste, l'applicazione è disomogenea.
+
+**`UNRELIABLE_ANALYSIS_AT`** — e questa è più grave di come l'avevo descritta. Portare
+`analysis_time_precision` a `unknown` **ritira la falsa precisione ma non rende vero il valore**:
+`analysis_at: 2026-08-11T08:20:00Z` resta **un istante costruito**, anche dentro la ricevuta `-02`.
+Lo schema deve poter dichiarare che `analysis_at` è **inaffidabile**, oppure i consumatori devono
+**ignorarlo** quando una correzione lo invalida. Oggi non esiste modo di rappresentare
+onestamente *«questo campo è invalido, non impreciso»*.
+
+**Non invalidare la ricevuta:** lettura e identità dello studio sono valide, e
+`receipt_invalidation` è lo strumento sbagliato per un campo temporale.
+
+### E una precisazione contro me stesso
+
+Ho scritto *«nessuno dei nove difetti è stato trovato da un validatore»*. **Vero per il validatore
+attuale, e fuorviante come lo avevo formulato**: suonava come *«non sono validabili»*. Il controllo
+ha fatto esattamente ciò che dichiara — artefatto, hash, schema, citazioni — e almeno tre di quei
+difetti **possono diventare controlli automatici**: il **DOI bibliografico** confrontato con la
+reference list, lo **stato già-letto** di un riferimento verificato contro il ledger, e le
+**incoerenze interne** fra `resolved`, `queued` e `gap`. Restano materia di ispezione e review la
+**lettura dei pixel** e la **verità semantica** delle relazioni `panel_text_relation`. Una cosa è
+dire che un controllo non l'ha vista; un'altra è dire che non poteva.
