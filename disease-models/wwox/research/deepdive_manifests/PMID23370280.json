@@ -1,7 +1,9 @@
 {
   "schema_version": 2,
   "pmid": "23370280",
-  "doi": "10.1038/cddis.2013.5",
+  "doi": "10.1038/cddis.2013.6",
+  "pmcid": "PMC3564006",
+  "🔴 identifier_correction_2026-08-11": "THIS MANIFEST CARRIED TWO WRONG IDENTIFIERS FOR EIGHT HOURS AND THEY WERE MINE. It read `doi 10.1038/cddis.2013.5` (off by one) and, in retraction_check, `PMC3564003` (off by three). The article is `10.1038/cddis.2013.6` / `PMC3564006`, per the XML artifact's own <article-id> block, the PubMed corpus record, and — this is the part that matters — the CANONICAL REGISTRIES, which had it right all along: paper_registry_current.md and literature_tracking_log_current.md both carry `PMID 23370280 / PMC3564006 / DOI 10.1038/cddis.2013.6`. I introduced errors into a derived artifact that the canonical state already recorded correctly, and I did not check the canonical state against the artifact I was describing. Neither error changes a reading, a locator or a finding: every locator in this manifest is matched against the fingerprinted XML, and the fingerprint was always right. What they change is whether a reader can find the paper, and whether the retraction check can be believed — see retraction_check below.",
   "receipt": "FTR-20260811-23370280-01",
   "landing": [
     "FTR-20260811-23370280-01",
@@ -55,9 +57,10 @@
     "gene_direct_refs_in_source": [
       "17360458", "17575124", "18487609", "15070730", "16061658", "12514174"
     ],
-    "resolved": [],
+    "resolved": ["18487609", "16061658"],
+    "resolved_depth_declaration": "🔴 BOTH RESOLUTIONS ARE REAL READINGS, AND THEIR DEPTHS DIFFER — READ THIS BEFORE TREATING THE FIELD AS UNIFORM. 18487609 (Aqeilan 2008, JBC) is a COMPLETE read closed 2026-08-11, receipt FTR-20260811-18487609-01, 32/32 panels. It is the resolution that closes this gate and it needed no judgement call. 16061658 (Aqeilan 2005, Cancer Res) is a PAGE ADJUDICATION under a direct operator authorisation, receipt FTR-20260811-16061658-02, partial_fulltext_read at 5/17 panels — the document was read across all nine rendered pages but only the competition-frame panels were inspected at adjudication resolution, so reading debt on its Figures 2, 3 and 4 is untouched. Recorded separately because the validator's predicate is only that `resolved` be non-empty and it does not inspect depth; a later reader must not infer that both were read the same way.",
     "queued": [
-      "17360458", "17575124", "15070730", "18487609", "16061658", "12514174"
+      "17360458", "17575124", "15070730", "12514174"
     ],
     "enumeration_method": "66 references enumerated from the JATS ref-list, every one carrying a PMID; 6 name the gene and each was set against every receipt on all six branches and against the full-text queue. Done because the ledger refused `references: not_read` on a complete read — the third time that refusal has produced something worth having rather than merely enforcing a field.",
     "cross_check_result": "Three sit queued unread (17360458, 17575124, 15070730). THREE ARE NEITHER READ NOR QUEUED: 18487609 (Aqeilan 2008, WWOX essential for postnatal survival and bone metabolism), 16061658 (Aqeilan 2005, WW domain-containing proteins and ErbB4) and 12514174 (Chang 2003, JNK1 physically interacts with WWOX). The last two are the earlier instances of WWOX competing at WW1 for a partner — precisely the mechanism entry 5 generalises, and the reason the competition frame is older than this paper."
@@ -71,10 +74,30 @@
   "retraction_check": {
     "performed": true,
     "at": "2026-08-11",
-    "route": "PMC record for PMC3564003; no correction or retraction notice",
+    "route": "RE-RUN 2026-08-11 against the local PubMed corpus record for PMID 23370280, whose `corrections` array is empty and whose identifiers are doi 10.1038/cddis.2013.6, pmc PMC3564006. This is an offline, authoritative, re-runnable route and it replaces the original one.",
+    "🔴 the_route_this_replaces_and_why_that_matters": "The original entry read 'PMC record for PMC3564003'. That PMCID does not exist in the 706-record corpus and is a typo for PMC3564006 — so the recorded route named an object I cannot show I visited. The result was right and the route was not, which is the weaker half of a check being the half that was written down. A retraction check whose route cannot be re-run is an assertion, not a check: it is exactly the class this corpus keeps meeting — a measurement reported without the object it was taken on. Re-run rather than merely re-worded.",
     "result": "No retraction, no expression of concern, no erratum.",
     "hold": false
   },
+
+  "surface_measurement": {
+    "measured_at": "2026-08-11, on this artifact, before the locators were re-verified",
+    "why": "The extractor's join behaviour differs from article to article, so a measurement taken on another deposit does not transfer. Recorded here because it was missing from the first version of this manifest — the reading was sound and the provenance of its surface was not written down.",
+    "in_tree_surface_chars": 51083,
+    "body_element_only_chars": 26900,
+    "🔴 where_the_difference_comes_from_and_why_it_matters": "THE SIX FIGURE CAPTIONS OF THIS DEPOSIT SIT OUTSIDE <body>, IN floats-group. A hand-rolled extraction that takes the <body> element and stops sees 26,900 characters, NOT ONE FIGURE CAPTION, and reports no error — it simply returns a document with no figures in it. The in-tree `_xml_surfaces` DOES reach them: all six captions were tested by a mid-caption fragment and all six are present in the surface it returns. So the hazard is real and the tool is not the place it bites; a reader who writes their own extraction is. Tested with a fragment taken from the middle of each caption rather than its start, because the deposit joins the label to the title without a space — 'Figure 1WWOX physically interacts…' — and a naive head-of-caption probe fails for that reason alone and would have been misread as the caption being absent.",
+    "abstract_separation_verified": "The abstract and front matter are NOT in the body surface (tested by sample fragment), and neither is the ref-list. The corpus firewall's requirement that the XML abstract be separated from its body holds on this artifact.",
+    "locator_stability_under_join": "All 9 body-surface snippets of this manifest match under BOTH the in-tree surface and a naive body-only itertext join. No locator in this reading depends on which join was used, which is the specific thing the measurement was made to establish."
+  },
+
+  "validator_provenance": {
+    "why": "A green verdict is a statement about the tool that produced it. Recording which one prevents a manifest from being certified by a validator older than the rule it is meant to satisfy — twice this has caught a verdict that would not have survived the current check.",
+    "branch_validator": "framework/scripts/deepdive_manifest.py at lettore HEAD",
+    "main_validator": "extracted with `git show main:framework/scripts/deepdive_manifest.py` at main = d06a4a1, together with its corpus_firewall dependency",
+    "the_two_differ": true,
+    "verdicts": "Both return PASS on this manifest. Re-run after the multihop resolution above, both return PASS with 0 gaps. The same cross-check was run on the two manifests written earlier today, PMID 18487609 and PMID 16061658, and main's validator returns PASS with 0 gaps on both."
+  },
+
   "source_artifacts": [
     {
       "path": "files/fulltext/PMID23370280_Salah2013_PMC.xml",

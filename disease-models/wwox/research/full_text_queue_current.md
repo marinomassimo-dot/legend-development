@@ -2274,7 +2274,74 @@ gene-dirette ha una ricevuta su alcun ramo. Il gate ha ragione e non l'ho aggira
 cui intero vicinato gene-diretto è non letto ha un buco reale nel multi-hop. Si chiude leggendone
 una, non rietichettando questa.
 
-**Next action:** il debito è `FT-063` — le tre referenze gene-dirette né lette né in coda.
+**Next action — RISOLTA il 2026-08-11.** Il gate si è chiuso leggendone una, esattamente come
+diceva questa voce. `18487609` è stato letto **completamente** (32/32 pannelli) ed è una delle sei
+gene-dirette; `16061658` è passato da superficie rifiutata ad aggiudicazione di pagina. Receipt
+`FTR-20260811-23370280-02`, **`complete_fulltext_read`**. Manifest `PASS` con **0 lacune** sotto
+due validatori indipendenti.
+
+### ✅ `23370280` — da `partial` a `complete`, **senza rileggere**
+
+🔴 **Il documento era già stato letto per intero** all'evento `-01`: ogni sezione, 23/23 pannelli,
+66 referenze. `partial` non era mai stato un giudizio sulla lettura — era il gate multi-hop. Per
+questo la receipt `-02` porta l'`analysis_at` **della lettura originale** (07:35Z) e non di adesso:
+attesta quell'analisi, non una seconda passata.
+
+**E il ledger non ha un vocabolario per questo evento**, cosa che vale la pena dire invece di
+mascherarla: `record_kind` offre `contemporaneous_receipt`, `legacy_reconstruction`,
+`receipt_invalidation`; nessuno significa *«la lettura regge, un gate esterno che era aperto si è
+chiuso»*. Segnalato a Plan come osservazione di schema.
+
+### 🔴 Due identificatori sbagliati, miei, trovati dal ledger e non da una revisione
+
+| | registrato | corretto |
+|---|---|---|
+| receipt `-01` | `doi 10.1038/cddis.2013.**5**` | `10.1038/cddis.2013.**6**` |
+| manifest, `retraction_check` | `PMC356400**3**` | `PMC356400**6**` |
+
+**I registri canonici avevano ragione dall'inizio** — `paper_registry_current` e
+`literature_tracking_log_current` portano entrambi `PMC3564006 / 10.1038/cddis.2013.6`. Ho
+introdotto errori in un artefatto derivato che lo stato canonico registrava già correttamente,
+senza confrontarli.
+
+**Come è emerso, che è l'unico motivo per cui sarebbe mai emerso.** Non da una rilettura: dal
+fatto che scrivere una **seconda** receipt sullo stesso studio fa confrontare gli identificatori
+fra record. E il valore che il ledger ha rifiutato era **il mio nuovo**, anch'esso sbagliato —
+avevo scritto `10.1038/cddis.2012.192` a memoria invece di leggerlo dall'artefatto. **Una sola
+scrittura ha fatto emergere due errori indipendenti**, uno di otto ore e uno di pochi secondi.
+
+> **Un identificatore è l'unico campo che nulla a valle ri-deriva**: nessun locator vi dipende,
+> nessun digest lo copre. È esattamente per questo che un controllo di uguaglianza fra record
+> rende qui più che altrove.
+
+**E la verifica di ritrattazione andava rieseguita, non riscritta.** La sua rotta diceva *«PMC
+record for PMC3564003»*, un PMCID che **non compare nei 706 record del corpus**: nominava un
+oggetto che non posso dimostrare di aver visitato, mentre il risultato che riportava era giusto.
+Una verifica la cui rotta non è rieseguibile è un'asserzione travestita da verifica. Rieseguita
+offline sul record PubMed locale: `corrections` vuoto.
+
+### La correzione del DOI nel ledger **non** l'ho fatta — e il motivo è il ledger stesso
+
+Tre vie tentate, tutte e tre rifiutate **correttamente**:
+
+1. depositare il DOI giusto accanto a quello sbagliato → *«conflicting identifiers for the same
+   study»*. Un registro append-only non lascia che due record dissentano su **quale** paper
+   descrivono.
+2. `reread_reason: receipt_correction` → *«changed substantive fields: study_id, evidence_depth»*.
+   Una correzione non può ridichiarare in silenzio né l'identità di uno studio né la profondità di
+   una lettura. **Sono esattamente le due cose giuste da proteggere.**
+3. `record_kind: receipt_invalidation`, l'unico meccanismo che *può* cambiare l'identità → ma
+   **ritira la lettura**, e il suo stesso commento nel codice dice che ritirare una lettura
+   completa deve costare quanto ammettere di non averla fatta. Invalidare una lettura sana per un
+   refuso è sproporzionato, e non è una decisione che una sessione prende da sola.
+
+Quindi la receipt `-02` porta **solo il `pmid`** — corretto, ed è l'identificatore con cui tutto
+qui si risolve — e **non asserisce alcun DOI**, invece di ripetere un valore che sa sbagliato.
+**Gli identificatori corretti stanno dove stanno le correzioni**: nel manifest e nei canonici.
+La questione del ledger è dell'operatore.
+
+**Next action:** il debito residuo è `FT-063` — restano `17360458`, `17575124`, `15070730`,
+`12514174` gene-dirette non lette.
 
 ---
 
