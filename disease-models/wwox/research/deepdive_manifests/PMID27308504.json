@@ -47,9 +47,9 @@
       {"ref": 10, "pmid": "25012504", "status": "adjacent to the hepatic HIF1alpha axis; not read as full text, but the axis itself was read completely in this corpus through PMID 29724996, which measures HIF1alpha occupancy on its own glycolytic targets"}
     ],
     "queued": [
-      {"ref": 7, "pmid": "17360458", "queue": "FT-057", "reason": "Targeted deletion of Wwox reveals a tumour suppressor function. Foundational for the KO phenotype this commentary invokes; not read."},
-      {"ref": 8, "pmid": "18487609", "queue": "FT-057", "reason": "Wwox KO post-natal lethality and bone metabolism. Directly relevant to the reference genotype's non-cancer phenotype, and unread."},
-      {"ref": "42 of PMID 25331887", "pmid": "unresolved at read time", "queue": "FT-060", "reason": "Santini et al., Oncogene 2014. The load-bearing source for the ATM->ITCH arrow, absent from this commentary's own reference list. Queue entry renumbered FT-056 -> FT-060 on merge, 2026-08-11: two branches allocated 056 and the other side's is named by a chained receipt."}
+      {"ref": 7, "pmid": "17360458", "queue": "FT-063", "reason": "Targeted deletion of Wwox reveals a tumour suppressor function. Foundational for the KO phenotype this commentary invokes; not read. Queue entry renumbered FT-057 -> FT-063 on merge, 2026-08-11."},
+      {"ref": 8, "pmid": "18487609", "queue": "FT-063", "reason": "Wwox KO post-natal lethality and bone metabolism. Directly relevant to the reference genotype's non-cancer phenotype, and unread."},
+      {"ref": "42 of PMID 25331887", "pmid": "unresolved at read time", "queue": "FT-066", "reason": "Santini et al., Oncogene 2014. The load-bearing source for the ATM->ITCH arrow, absent from this commentary's own reference list. Queue entry renumbered FT-056 -> FT-060 -> FT-066 across two merges on 2026-08-11: three branches allocated overlapping numbers, and each number this entry vacated is named by a chained receipt belonging to another reading."}
     ],
     "gap": "Ref 42 OF THE PRIMARY PAPER — Santini et al., Oncogene 2014, ATM kinase activity modulates ITCH E3-ubiquitin ligase activity — is not read. It is the load-bearing source for the ATM->ITCH arrow that entries[6] shows this commentary asserts without citation. It is not in this commentary's reference list at all, which is precisely the finding; queued rather than silently absorbed."
   },
@@ -191,7 +191,7 @@
         "panel_text_relation": "text_only"
       },
       {
-        "proposition": "AND HERE IS WHO REF 42 IS: a third-party Oncogene paper, not an Aqeilan publication, and not present in this commentary's ten references. It is therefore unread in this corpus and unreachable from the commentary alone — a reader who tried to follow the ATM-to-ITCH arrow back from the Author's View would find no path at all. Queued as FT-060 (FT-056 at capture, renumbered on merge) rather than absorbed.",
+        "proposition": "AND HERE IS WHO REF 42 IS: a third-party Oncogene paper, not an Aqeilan publication, and not present in this commentary's ten references. It is therefore unread in this corpus and unreachable from the commentary alone — a reader who tried to follow the ATM-to-ITCH arrow back from the Author's View would find no path at all. Queued as FT-066 (FT-056 at capture, renumbered twice on merge) rather than absorbed.",
         "snippet": "Santini S, et al. ATM kinase activity modulates ITCH E3-ubiquitin ligase activity",
         "surface": "body",
         "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",

@@ -2355,7 +2355,7 @@ Aperto il rif. 3 (`PMID 24550385`, `FT-054`) sono emerse tre cose che riscrivono
   | **terapeutico** | rimuovere WPRE *«aimed at avoiding excessive or poorly controlled transgene expression while preserving sufficient therapeutic efficacy»* | la rimozione richiese **sei volte la dose**, e §11 della review stessa nomina l'alta dose come la principale preoccupazione regolatoria pediatrica (`PMID 42422765`) |
   | **clinico** | *«a homozygous missense WWOX mutation (p.Ser304Tyr) … despite the mutation type typically being associated with milder phenotypes»* | la variante è **ACMG «Unclear clinical significance»**, gli autori scrivono che la patogenicità *«require[s] validation»*, e c'è un **secondo candidato in `CACNA1A`** contro una DEE **autosomica dominante** (`PMID 39416860`) |
 
-  **Tre volte la metà semplice**, e ogni volta la metà che cade è quella che introdurrebbe una qualificazione. Nessuna delle tre è visibile leggendo la review; tutte e tre lo sono leggendo **ciò che la review cita**. Fonti: `FT-045` · `FT-059` · manifest `PMID42128308.json` entries[5], entries[6], entries[23], entries[24].
+  **Tre volte la metà semplice**, e ogni volta la metà che cade è quella che introdurrebbe una qualificazione. Nessuna delle tre è visibile leggendo la review; tutte e tre lo sono leggendo **ciò che la review cita**. Fonti: `FT-045` · `FT-065` · manifest `PMID42128308.json` entries[5], entries[6], entries[23], entries[24].
 - 🔴 **QUARTA, TROVATA DOPO LE ALTRE TRE, E DI UNA SPECIE DIVERSA: le prime tre RIDUCONO un risultato, questa ne INVERTE il senso.** La review presenta il caso dell'introne 4 di Oliver 2023 come una crepa nel framework — *«technically falls under category 2 … However, the observed clinical severity was comparable to that of patients with category 1 genotypes»*. Ma Oliver **codifica quella delezione come null**, perché causa lo skipping dell'esone 5 mentre quella dell'introne 3 è benigna, e tabula il paziente 6 come **`Missense/null`**: un ordinario caso di classe 2. E in uno schema dove la classe 2 **non mostra alcun fenotipo intermedio**, un classe-2 grave quanto un classe-1 è **il risultato atteso**. La review lo offre come anomalia; è il framework che funziona come la sua fonte dice che funziona. Fonte: `FT-056`, `FTR-20260810-36779245-03`.
 
 ---
@@ -2387,7 +2387,7 @@ Aperto il rif. 3 (`PMID 24550385`, `FT-054`) sono emerse tre cose che riscrivono
 - **Cautela sull'unico numero che qualcuno sarà tentato di citare come prognosi:** la coorte di Oliver è dichiaratamente **più anziana** (media 8a 2m contro 3a 4m) e **meno letale** (23% contro 38%) della letteratura con cui è messa in pool, con null/null al 50% contro 60%. La curva di sopravvivenza è un **confronto fra gruppi**, non una prognosi. Chi la citasse come prognosi userebbe un dato di ascertainment come dato clinico.
 
 - **Cosa serve per muoverlo di un gradino:** un saggio funzionale per singola sostituzione — non abbondanza, non solubilità, ma **occupazione di un partner di interazione** — applicato per primo a `Q230P` per ricorrenza e a `P47T`/`P47R` perché sono la coppia che dimostra il punto sullo stesso residuo.
-- **Interconnessioni:** `DL-BIO-085` · `DL-META-088` · `FT-059` · `FT-056` · `DEFAULTS THAT BIT US` in [[dismissal_ledger_current]] · [[claim_registry_current]].
+- **Interconnessioni:** `DL-BIO-085` · `DL-META-088` · `FT-065` · `FT-056` · `DEFAULTS THAT BIT US` in [[dismissal_ledger_current]] · [[claim_registry_current]].
 - **Destinazione dichiarata:** **materiale per un commit candidate.** È una *sostituzione* di premessa, non un'aggiunta, quindi tocca affermazioni già in stato canonico e la promozione va fatta da chi possiede il gate, non da me.
 - **Interconnessioni:** `FT-045` · `DL-MECH-086` · manifest `PMID42128308.json` entries[7], entries[23], entries[24].
 - **Destinazione dichiarata:** **materiale per un commit candidate**.
@@ -2398,22 +2398,46 @@ Aperto il rif. 3 (`PMID 24550385`, `FT-054`) sono emerse tre cose che riscrivono
 > appeso al ledger contro un'istantanea anteriore. **Tenute entrambe**, come sempre: un ledger
 > append-only si somma, non si sceglie.
 >
-> Seconda collisione di numerazione della stessa forma, e vale registrare che si è ripetuta:
-> due rami hanno allocato «il prossimo numero libero» contro istantanee diverse e sono
-> arrivati entrambi a **085** e **086**, su famiglie diverse — `DL-METH-` di qui contro
-> `DL-BIO-`/`DL-MECH-` già atterrate. In questo ledger la numerazione è **globale fra le
-> famiglie**, quindi il prefisso non separa nulla e la collisione è reale.
+> *(Rinumerate una seconda volta un'ora dopo, `091/092 → 096/097`, alla fusione del quarto
+> ramo: quello alloca `091`–`095` e `FTR-…` nomina `DL-META-091` **sei volte** dentro la
+> catena hash. Stessa regola, stesso verso: si muove chi non è nominato da una ricevuta
+> incatenata. Ho scoperto la collisione solo alla seconda passata perché la prima
+> enumerazione cercava `^### DL-` e quelle intestazioni portano un emoji prima
+> dell'identificatore — **l'anti-pattern sulla decorazione delle intestazioni che ho scritto
+> ieri, che ha morso me oggi.** Il LINT deve normalizzarla, ed è già registrato come debito.)*
 >
-> Rinumerate le voci di **questo** blocco, `085 → 091` e `086 → 092`, e non quelle già
-> atterrate: `DL-METH-086` è citata tre volte dalla coda dei full text, ma quelle citazioni
-> arrivano nella **stessa fusione**, quindi si ri-puntano insieme all'identificatore invece di
-> restare appese. Le due voci di `main` non erano citate da nessun file. **Rinominare e
-> ri-puntare sono un'operazione sola**: separarle è ciò che, un'ora prima e su un altro
-> registro, aveva lasciato un manifest a citare una ricevuta che non lo descriveva più.
+> 🔴 **CORREZIONE, scritta dopo aver rinumerato e verificato: la collisione non c'era, e la
+> premessa che me l'ha fatta vedere l'ho presa da una nota di merge invece che dai dati.**
+>
+> Avevo letto `DL-METH-085` contro `DL-BIO-085` come collisione perché una nota precedente in
+> questo stesso file dichiara che qui la numerazione è *«globale fra le famiglie»* — e su
+> quella base aveva già rinumerato `DL-THER-081`. **I dati dicono il contrario, e in modo
+> netto:** `DL-BIO-001`, `DL-MECH-001`, `DL-MOL-001` e `DL-REPO-001` convivono da sempre in
+> questo ledger, e così `002`. La numerazione **è per famiglia**. Né `085`/`086` né
+> `DL-METH-091` contro `DL-META-091` erano collisioni.
+>
+> Quindi le due rinumerazioni — `085 → 091 → 096`, `086 → 092 → 097` — **non servivano**.
+> Restano applicate perché gli identificatori risultanti sono validi e unici e un terzo giro di
+> rinomina costerebbe più di quanto vale, ma restano registrate come **non necessarie**, non
+> come dovute. I riferimenti sono stati ri-puntati insieme, il che è l'unica parte che era
+> giusta a prescindere.
+>
+> **Il reperto vero non è il mio errore: è come si è propagato.** Una nota di merge ha
+> asserito una regola, la nota successiva l'ha applicata senza verificarla, e la terza — la
+> mia — l'ha applicata due volte. Nessuno l'ha controllata contro il file che la conteneva. È
+> `PREMISE: DEFAULT_FROM_TEXTBOOK` nella sua forma locale: **una premessa troppo ovvia per
+> essere riletta, e sbagliata**.
+>
+> 🔴 **E cercandola ho trovato le collisioni vere, che nessuno ha visto:** `DL-MECH-017` e
+> `DL-MECH-055` compaiono **due volte ciascuna** — stessa famiglia, stesso numero, difetto
+> preesistente e non toccato da questa fusione. Nessun controllo verifica l'unicità di un
+> identificatore `DL-` dentro la propria famiglia, e finché non esiste, la numerazione di
+> questo ledger è affidata all'attenzione. Registrato qui come debito, non riparato in una
+> fusione: correggere due voci storiche richiede di sapere chi le cita, ed è lavoro suo.
 
 ---
 
-### DL-METH-091 — **Il commentary di un autore sul proprio paper non è un riassunto: la modalità epistemica si degrada, e in modo asimmetrico**
+### DL-METH-096 — **Il commentary di un autore sul proprio paper non è un riassunto: la modalità epistemica si degrada, e in modo asimmetrico**
 
 - **Classificazione:** `DATO` sul fatto misurato (le occorrenze sono contate contro due artefatti impronta-verificati); `INFERENZA` sulla generalizzazione oltre questo laboratorio.
 - **Fonte:** `PMID 27308504` (Hazan, Abu-Odeh, Hofmann, Aqeilan, *Mol Cell Oncol* 2015 — `article-commentary`) contro `PMID 25331887` (Abu-Odeh *et al.*, *PNAS* 2014), entrambi dichiarati come `article_text` nello stesso manifest e citati verbatim su entrambi i lati. `FTR-20260810-27308504-01`.
@@ -2421,23 +2445,23 @@ Aperto il rif. 3 (`PMID 24550385`, `FT-054`) sono emerse tre cose che riscrivono
 - 🔴 **Perché è un reperto di metodo e non un rilievo.** L'unico *«might»* superstite dell'intero commentary sta sull'**ipotesi introduttiva che gli autori poi dichiarano confermata** — l'unico posto dove un'attenuazione non costa nulla. E l'unico segno di incertezza dell'intera figura, un `?` in grassetto, sta accanto al complesso **MRE11/RAD50/NBS1**, che non è nominato né nel testo del commentary né nella prosa corrente del primario. **Il lessico dell'attenuazione non si perde: si ridistribuisce** — resta sull'ipotesi superata e su ciò che non è rivendicazione propria, sparisce dalle conclusioni vive. È l'asimmetria ordinaria della fiducia nei propri risultati, ed è esattamente il motivo per cui un commentary non può essere letto come sintesi di ciò che è stabilito.
 - **Conseguenza per il genotipo di riferimento, e non è metodologica.** Lo schema etichetta i due rami con **simboli di genotipo** — `WWOX+/+` contro `WWOX+/−` sopra `WWOX−/−` — e il ramo mutante termina in una freccia disegnata verso **«Cancer»**. Gli esperimenti dietro quel ramo sono HEK293-Sh-WWOX, MCF7-shWWOX e MEF Wwox-KO: un knockdown e un nullo. **Nel primario non esiste alcun sistema eterozigote**, ed è per questo che il primario scriveva *«might»*. Una frase di didascalia può leggersi come abbreviazione di «cellule con meno WWOX»; un `WWOX+/−` stampato su un diagramma no — ed è la forma più trasferibile che una affermazione possa assumere. Per un modello i cui portatori hanno genitori eterozigoti, questo è un rischio di trasferimento specifico, **e si è visto guardando i pixel, non leggendo la didascalia**.
 - **Il caso di controllo, registrato per primo nel manifest.** Non tutto è gonfiato: la monomerizzazione di ATM WWOX-dipendente è una misura reale (Fig 4D del primario, co-IP Flag-ATM/YFP-ATM) e questo corpus **possiede già un locator su quel pannello** — `PMID25331887 entries[26]`. Il verbo più forte del commentary, *«revealed»*, lì è guadagnato. Quattro scarti contro un documento per il resto accurato: è l'unico tipo di scarto che valga la pena riportare.
-- **REVIVAL_TRIGGER / falsificazione:** la generalizzazione cade se un secondo Author's View di un laboratorio diverso, letto con lo stesso metodo — conteggio delle attenuazioni su entrambi i lati contro artefatti impronta-verificati — mostra modalità **conservata**. Un solo caso non stabilisce un tasso: `FT-057` fornisce due paper dello stesso gruppo su cui provare, e la prova sarebbe più forte su un gruppo terzo.
+- **REVIVAL_TRIGGER / falsificazione:** la generalizzazione cade se un secondo Author's View di un laboratorio diverso, letto con lo stesso metodo — conteggio delle attenuazioni su entrambi i lati contro artefatti impronta-verificati — mostra modalità **conservata**. Un solo caso non stabilisce un tasso: `FT-063` fornisce due paper dello stesso gruppo su cui provare, e la prova sarebbe più forte su un gruppo terzo.
 - **Conseguenza operativa immediata:** nessun claim canonico può citare `PMID 27308504` come fonte di alcunché. È `article-commentary`, non ha dati primari, e ogni sua asserzione empirica è una riformulazione di `25331887`. Vale come **oggetto di studio sulla trasmissione della modalità**, non come evidenza.
-- **Interconnessioni:** `IMPORTED_PREMISE_ATTRIBUTION_GATE` · `DL-METH-084` · `DL-MECH-083` · [[epistemic_discipline]] · `FT-060` · `FT-058`.
+- **Interconnessioni:** `IMPORTED_PREMISE_ATTRIBUTION_GATE` · `DL-METH-084` · `DL-MECH-083` · [[epistemic_discipline]] · `FT-066` · `FT-064`.
 
 ---
 
-### DL-METH-092 — **In dieci articoli su trentacinque le didascalie stanno FUORI dal `<body>`, e chi legge col `<body>` non le vede mai**
+### DL-METH-097 — **In dieci articoli su trentacinque le didascalie stanno FUORI dal `<body>`, e chi legge col `<body>` non le vede mai**
 
 - **Classificazione:** `DATO` — censimento meccanico su tutte le superfici XML del `files/` condiviso, riproducibile con cinque righe.
 - **Il numero.** **10 su 35** superfici XML collocano gli elementi `<fig>` fuori da `<body>`: `21318118`, `22193544`, `23370280`, **`24308844`**, `27551470`, `30755385`, `31340538`, `33255508`, `34747138`, e — reperto d'origine — `23435430` nella via `efetch`, dove Europe PMC invece le include. Sullo stesso articolo le due vie danno corpo di 29 341 contro 46 114 caratteri: **la differenza sono otto didascalie.**
 - 🔴 **DOVE *NON* È IL PROBLEMA, dichiarato per primo perché stavo per sbagliarlo.** Ero a un passo dall'affermare che questo apre un buco di verifica. **È falso, e l'ho verificato prima di scriverlo.** `_xml_surfaces` di `main` percorre l'**articolo**, non il `<body>`: separa l'abstract e nient'altro. Provato direttamente — una didascalia di `24308844`, presa da dentro un `<fig>` fuori dal corpo, viene trovata dall'estrattore del validatore (`mode=folded`). **I locator su didascalia restano verificabili ovunque stiano.** Il contratto è sano.
 - **DOVE È, DAVVERO: è un difetto di *lettura*, non di *verifica*.** Su quei dieci articoli, un agente che legga con un estrattore delimitato al `<body>` — come il mio `extract_body.py` — **non vede una sola didascalia**. Non riceve un errore, non vede un buco: riceve un testo che scorre bene e sembra completo. E il manifest passa lo stesso, perché il validatore controlla ciò che *hai citato*, non ciò che *hai potuto leggere*.
-- 🔴 **E ha morso me, misurabilmente.** `PMID 24308844` è uno dei dieci: 0 didascalie su 7 dentro il corpo, e l'ho letto con l'estrattore delimitato. Il suo manifest **non contiene un solo locator su didascalia** — le sette voci figura sono tutte attestazioni da pixel. Su `25331887`, dove la superficie era HTML e le didascalie stavano nella pagina, ne ho due, ed **entrambe portano peso**: la didascalia che nomina un agente diverso da quello del testo, e la parola «Hypothetical» che oggi è diventata il reperto centrale di `DL-METH-091`. L'assenza su `24308844` sembrava una scelta di budget — è ciò che dice `FT-055`. **Non lo era: era una superficie che non ho mai visto.**
+- 🔴 **E ha morso me, misurabilmente.** `PMID 24308844` è uno dei dieci: 0 didascalie su 7 dentro il corpo, e l'ho letto con l'estrattore delimitato. Il suo manifest **non contiene un solo locator su didascalia** — le sette voci figura sono tutte attestazioni da pixel. Su `25331887`, dove la superficie era HTML e le didascalie stavano nella pagina, ne ho due, ed **entrambe portano peso**: la didascalia che nomina un agente diverso da quello del testo, e la parola «Hypothetical» che oggi è diventata il reperto centrale di `DL-METH-096`. L'assenza su `24308844` sembrava una scelta di budget — è ciò che dice `FT-055`. **Non lo era: era una superficie che non ho mai visto.**
 - **Perché è la terza volta che la stessa lezione si ripresenta cambiando forma.** «Superficie strutturata trovata» non implica «migliore superficie figure trovata» (già a manuale). Non implica **«tutte le vie mettono le stesse cose nel corpo»**. E su `27308504`, poche ore prima, avevo scelto `efetch` **contro** Europe PMC perché solo `efetch` portava le referenze strutturate — la scelta opposta a quella giusta qui. **Non esiste una via preferibile: esiste una domanda da porre a ogni articolo, su che cosa serve citare.**
 - **Conseguenza operativa, e costa cinque righe:** prima di dichiarare un `article_text`, contare `<fig>` dentro `<body>` contro `<fig>` nell'articolo. Se differiscono, o si sceglie la via che le include, o si dichiara esplicitamente che le didascalie vanno lette a parte. Il conteggio va nel manifest accanto a `figure_coverage`, che oggi misura quante figure hanno un locator e **non** se le loro didascalie erano leggibili.
 - **REVIVAL_TRIGGER:** se una futura versione di `_xml_surfaces` restringesse l'estrazione al `<body>` — ottimizzazione plausibile e apparentemente innocua — il difetto di lettura diventerebbe **anche** un difetto di verifica, e dieci manifest esistenti cambierebbero verdetto in silenzio. Da rileggere prima di qualunque modifica a quella funzione.
-- **Interconnessioni:** `FT-055` · `FT-060` · `FT-057` · `DL-METH-091` · `PATTERN_ALREADY_SOLVED_GATE` · [[gold_is_in_the_details]].
+- **Interconnessioni:** `FT-055` · `FT-066` · `FT-063` · `DL-METH-096` · `PATTERN_ALREADY_SOLVED_GATE` · [[gold_is_in_the_details]].
 
 #### Append 2026-08-10 — rimisurato dopo una contestazione, e il predicato adesso è scritto
 
@@ -2515,3 +2539,372 @@ da me nella riga che quel confine lo stava insegnando.
 - **Conseguenza operativa aggiuntiva:** `PMID42395553_PMC.xml` non è di questa classe ed è peggio —
   9 586 byte, **nessun `<body>` e nessuna `<fig>`**: metadati soltanto, come `18487609`. È una
   classe distinta, *«superficie assente travestita da superficie»*, e va censita da sé.
+
+---
+
+> 🔴 **Nota di merge, 2026-08-11 (quarto ramo).** Il blocco che segue alloca `091`–`095`, e
+> l'autore lo aveva dichiarato. `DL-META-091` è nominata **sei volte** dentro la catena hash
+> delle ricevute, quindi resta dov'è.
+>
+> Le due voci del blocco precedente sono passate da `DL-METH-091/092` a `096/097` — ma vedi la
+> correzione poco sopra: `DL-METH-` e `DL-META-` sono **famiglie diverse** e non collidevano.
+> Lo spostamento non serviva. È registrato invece che cancellato perché il modo in cui una
+> premessa falsa si è propagata attraverso tre note di merge vale più della premessa.
+
+---
+
+### 🔴 DL-META-091 — Johannsen 2018 non è mai stato letto, e il modello ci poggia sopra 21 volte
+
+> **Allocazione:** 091–093 sono miei (sessione A, 2026-08-10 sera). 084 e 089 restano i buchi
+> dichiarati in precedenza; 083 è di B.
+
+- **Status:** open · **Tag epistemico:** `DATO` sul censimento, `INFERENZA` su cosa comporta.
+- **Come è emerso — e il punto è *come*, non *cosa*.** Non l'ho cercato. Stavo registrando la
+  ricevuta di `PMID 32581702` e avevo scritto `references: not_read`. **Il writer del ledger ha
+  rifiutato**: una `complete_fulltext_read` non può lasciare una sezione non letta. Enumerare la
+  `<ref-list>` è costato due minuti — 50 referenze, 22 WWOX-dirette — e incrociarle contro ogni
+  ricevuta di tutti e sei i rami ha prodotto nove paper invisibili al piano di lettura (`FT-057`).
+  Uno di quei nove è **Johannsen 2018, `PMID 29808465`**.
+
+- 🔴 **Il censimento, misurato e non stimato:**
+
+  | dove | quante volte |
+  |---|---|
+  | `discovery_ledger_current.md` | **21** occorrenze |
+  | `claim_registry_current.md` · `paper_registry_current.md` · `disease_model.md` | presente |
+  | `dismissal_ledger_current.md` · `therapeutic_hypotheses_ledger_current.md` | presente |
+  | `analysis/proteostasis_rationale.md` | presente |
+  | **ricevute full-text, su `main` · `lettore` · `lettore-b` · `mirror` · `evidence-index` · `codex`** | **0** |
+
+- 🔴 **Cosa regge esattamente.** Il dato che il modello importa da Johannsen è
+  *«Q230P → trascritto normale, proteina assente»*. **È la base dell'intera traccia di
+  proteostasi**: è ciò che rende Q230P un amorfo funzionale invece che un missenso ipomorfo, ed
+  è la ragione per cui il genotipo di riferimento viene letto «più vicino a null/null che a
+  quei fratelli» (`DL-MECH-037`, e la riserva a riga 819 di questo ledger). Se quel dato fosse
+  qualificato — un solo paziente, una sola condizione, un anticorpo, un'unica frazione — nulla
+  di ciò che ne discende cambierebbe *segno*, ma tutto cambierebbe *forza*.
+
+- **`PREMISE_TAG`:** 🔴 `PREMISE: DEFAULT_FROM_TEXTBOOK` — non perché il dato sia dubbio, ma
+  perché **nessuno in questo sistema ha visto la figura che lo mostra.** È il caso puro di
+  `UNREAD_PREMISE`: una premessa che ha attraversato l'intero stato canonico senza mai passare
+  dal gate che esiste per le premesse.
+- **`REVIVAL_TRIGGER` / condizione di chiusura:** leggere `PMID 29808465` per intero, con
+  ispezione della figura che mostra trascritto e proteina, e verificare **(a)** che il dato sia
+  su Q230P e non su un'altra variante SDR, **(b)** con quale n e in quale materiale, **(c)** se
+  il trascritto normale sia stato misurato o inferito.
+- **Interconnessioni:** `FT-057` · `FT-002` · `DL-MECH-037` · `DL-BIO-090` · `DL-BIO-085` ·
+  [[dismissal_ledger_current#🩸 DEFAULTS THAT BIT US|DEFAULTS THAT BIT US]] · `analysis/proteostasis_rationale.md`.
+- **Destinazione dichiarata:** **priorità di lettura**, non commit candidate. Non c'è nulla da
+  promuovere finché il paper non è letto; c'è da leggere.
+
+#### 🔴 CORREZIONE APPEND-ONLY, stessa sera, dopo aver provato a leggerlo — **la metà allarmistica di questa voce era sbagliata**
+
+Ho tentato la lettura un'ora dopo aver scritto quanto sopra. Due risultati, e il secondo
+ribalta il primo.
+
+**(a) Non è leggibile, e non da oggi.** `PMID 29808465` — *Neurogenetics* 19(3):151-156,
+Springer. `pmcid: null` · `inPMC: N` · `isOpenAccess: N` · Unpaywall `is_oa: false`,
+`oa_status: closed`, `has_repository_copy: false`, `oa_locations: []` · nessun artefatto locale.
+🔴 **Formulazione deliberata: non l'ho potuto recuperare per queste rotte, non «è
+irrecuperabile».** Quindi le 47 citazioni non sono una svista di nessuno: **il paper non è mai
+stato disponibile a chi lo citava.** Il dato è entrato dall'abstract, che è dove sta.
+
+**(b) 🔴 E lo stato canonico lo ha trattato meglio di come questa voce lasciava intendere.**
+Ho verificato invece di assumere, e il modello **porta già** ogni qualificazione che conta:
+
+| ciò che temevo | ciò che lo stato dice davvero |
+|---|---|
+| che «proteina assente» fosse letta come degradazione | `disease_model.md`: **inversione MAJOR `WM v2.1 → v3.0`** che *ritira* l'equazione `mRNA normale + proteina assente = degradazione post-traduzionale`, citando le due alternative di Johannsen |
+| che il meccanismo fosse dato per risolto | **`DL-MECH-029`**, il cui titolo stesso è *«Q230P: trascritto normale, **proteina non rilevata**; causa traduttiva versus degradativa non risolta»*, e che porta *«cause ∈ {impaired_translation, insolubility, premature_degradation} non discriminata»* |
+| che «assente» fosse letto come zero | *«"assenza" al Western blot è un limite di sensibilità, non uno zero assoluto»* |
+| che il fibroblasto fosse letto come neurone | *«la stabilità proteica può essere tessuto-specifica (un fibroblasto non è un neurone)»* |
+| che si assumesse funzione dopo ristabilizzazione | *«⚠️ Assunzione critica ancora aperta … Johannsen non lo testa»* |
+
+**Questo è il sistema che funziona**, e va detto con la stessa forza con cui ho suonato
+l'allarme. Una premessa importata da un abstract è stata qualificata meglio di molte importate
+da letture complete.
+
+**(c) Il difetto che RESTA non è il contenuto: è la classe di evidenza, e vive su un rifiuto.**
+`dismissal_ledger_current.md` `DIS-003` — *«Boosting WWOX expression» → ✅ REJECTION THAT
+HOLDS* — dichiara come premessa portante: *«Johannsen 2018 — normal transcript, protein absent
+in fibroblasts homozygous for Gln230. ✅ `PREMISE: DATO` (direct measurement, exact variant)»*.
+🔴 **`direct measurement` di una misura che nessuno qui ha mai visto.** Il contenuto è giusto;
+l'etichetta afferma un atto — aver consultato la fonte primaria — che non è avvenuto. E lo fa
+sotto un **rifiuto**, che è la classe asimmetrica: un falso positivo viene testato e muore, un
+falso negativo è silenzioso, permanente e auto-rinforzante.
+
+**(d) Due scarti che solo l'abstract rende visibili**, entrambi piccoli e entrambi del tipo che
+un'etichetta `DATO` nasconde:
+- l'abstract dice *«Functional WWOX analysis was performed in fibroblasts of **one patient**»* —
+  su **due** sorelle. Lo stato scrive «in fibroblasts homozygous for Gln230» **senza l'n**;
+- l'abstract offre **due** alternative — *«impaired translation **or** premature degradation»* —
+  mentre il ledger ne scrive **tre**, aggiungendo `insolubility`. È un'aggiunta difendibile (un
+  insolubile scompare dalla frazione solubile di un western) ma **non è ciò che dice l'autore**,
+  e siede in uno `Statement causale` accanto alla citazione.
+
+🔴 **E la conseguenza terapeutica che il ramo «impaired translation» porta con sé, che non
+trovo enunciata da nessuna parte:** se la proteina non viene **mai sintetizzata**, non c'è
+niente da stabilizzare. Una strategia proteostatica indirizza uno solo dei due rami autoriali.
+`DIS-003` rifiuta il boost dell'espressione *perché* il collo di bottiglia è a valle — ma se il
+collo di bottiglia fosse la traduzione, «a valle della trascrizione» e «stabilizzabile» non
+sono la stessa cosa. **Il rifiuto potrebbe essere giusto per una ragione e sbagliato per
+l'altra**, e l'unico modo di saperlo è la figura che nessuno ha visto.
+
+- **`REVIVAL_TRIGGER` aggiornato:** ottenere il PDF per via istituzionale e guardare **il
+  western**: quante corsie, quale controllo di caricamento, quale esposizione, se il segnale è
+  assente o sotto soglia, e se la qRT-PCR è su un solo amplicone. Chi ha accesso a Springer lo
+  prenda — è il singolo recupero a più alto rendimento di questa coda.
+- **Riclassificazione proposta, non applicata** (tocca un rifiuto in stato canonico, quindi
+  spetta a chi possiede il gate): `DIS-003` da `PREMISE: DATO (direct measurement)` a
+  **`PREMISE: DATO — abstract-only, primary source never retrieved`**, con il rifiuto che
+  *resta valido* e la sua etichetta che smette di affermare un atto non avvenuto.
+
+- 🔴 **`REVIVAL_TRIGGER` proposto per `DIS-003`, che oggi non ne dichiara uno sul meccanismo:**
+  > *«Un western che discrimini traduzione da degradazione su fibroblasti Q230P — pulse-labeling
+  > della sintesi nascente, o inibizione del proteasoma/lisosoma con recupero del segnale —
+  > riapre `DIS-003`. Se il collo di bottiglia è la sintesi, "boosting expression" non è
+  > rifiutato dalla stessa ragione con cui è rifiutato oggi.»*
+
+  Il rifiuto attuale poggia su *«il collo di bottiglia è a valle»*: vero, ma **copre due
+  meccanismi con conseguenze terapeutiche opposte.** Può essere giusto per uno e sbagliato per
+  l'altro, e finché il trigger non lo nomina la distinzione non ha modo di risvegliarlo.
+  L'attuale `REVIVAL_TRIGGER` di `DIS-003` riguarda solo il caso composto-eterozigote, cioè la
+  *generalizzabilità* del dato, non il **meccanismo** che il dato lascia aperto.
+
+- **Nota di attribuzione, corretta due volte in dieci minuti e vale la pena registrarlo.** Avevo
+  scritto che la disgiunzione stava su `DL-MECH-034`: sbagliato, quella è il Warburg negli
+  organoidi. L'Orchestratore ha corretto in `CLAIM 019`: **sbagliato anche quello.** È
+  **`DL-MECH-029`**, il cui titolo *enuncia* la disgiunzione. Due attori hanno sbagliato lo
+  stesso puntatore in direzioni diverse, e solo il terzo controllo — `awk` sull'intestazione che
+  precede la riga — ha dato la risposta. *Citare un identificatore a memoria è la stessa classe
+  di errore del locator non verificato, applicata alla nostra stessa scrittura.*
+
+---
+
+### 🔴 DL-MECH-092 — `p.R264Ter` non è un null finché qualcuno non misura: tronca **dopo** l'MTS e **prima** del sito catalitico
+
+- **Status:** open · **Tag epistemico:** `DATO` sulla posizione (pannello 1G di `PMID 32581702`),
+  `INFERENZA` sulle due biologie che ne discendono.
+- **Il fatto.** Il pannello 1G colloca `p.R264Ter` in rosso al confine C-terminale del blocco
+  **MTS**, immediatamente prima del `Loop` e del `Catalytic Site`, su una proteina di 414 residui.
+  Il paper dichiara la disgiunzione e non la risolve: *«resulting in a loss of normal Wwox
+  function either through protein truncation (and disruption of the active C-terminal
+  short-chain dehydrogenase/reductase SDR domain), or nonsense-mediated mRNA decay»*. Nessun
+  western, nessuna quantificazione del trascritto, nessun materiale del paziente.
+- 🔴 **Perché i due rami non sono intercambiabili.** Se il trascritto è degradato dall'NMD, il
+  prodotto è **assenza**. Se sfugge all'NMD, il prodotto conserva **WW1, l'NLS, WW2, il sito
+  NADP e l'intera sequenza di targeting mitocondriale**, e perde solo la catalisi e ciò che le
+  sta a valle: cioè una **Wwox cataliticamente morta che raggiunge ancora i mitocondri e presenta
+  ancora entrambi i domini WW ai partner PPXY**. Sono due malattie diverse — e due problemi
+  terapeutici opposti: *un'assenza non si può stabilizzare; un interattore morto-ma-presente
+  potrebbe non doverlo essere.*
+- **`PREMISE_TAG`:** 🔴 `PREMISE: DEFAULT_FROM_TEXTBOOK` — «variante nonsenso ⇒ null». È la
+  stessa premessa non misurata su cui poggia la classificazione null/missenso di Oliver 2023
+  (`PMID 36779245`), dove una delezione intronica viene codificata `null` per convenzione.
+  Sommata a `DL-BIO-090` — «missenso» non è una classe funzionale — resta che **nessuna delle
+  due classi del sistema a tre classi è definita da una misura.**
+- **`REVIVAL_TRIGGER`:** qualunque dato proteico su un allele nonsenso WWOX — western su
+  materiale di paziente, o un modello che esprima il troncato — decide il ramo.
+- **Interconnessioni:** `FT-002` · `FT-057` · `DL-BIO-090` · `DL-META-091` · manifest
+  `PMID32581702.json` entries[6], entries[7].
+- **Destinazione dichiarata:** **materiale per un commit candidate**, come qualificazione di
+  premessa e non come nuova affermazione.
+
+---
+
+### DL-META-093 — Tre modi in cui il riassunto di un paper non è il suo dato, tutti e tre nello stesso articolo
+
+- **Status:** open · **Tag epistemico:** `DATO` — tutti e tre verificati contro i pannelli.
+- **Perché una voce sola per tre reperti:** perché sono la stessa cosa vista da tre lati, e
+  perché tutti e tre sarebbero passati inosservati leggendo solo il testo corrente.
+
+  | # | il testo dice | il pannello mostra |
+  |---|---|---|
+  | 1 | *«altered distribution of BrdU-positive cells»*, senza numeri | **8 zone su 10** significative, con la zona 2 che va da ~810 a ~70 cellule/mm² — **un ordine di grandezza**, il più grande effetto del paper |
+  | 2 | l'abstract attribuisce il reperto trascrittomico ai **progenitori** | nel pannello progenitori i geni etichettati sono **grigi o verdi sotto soglia**; sono rossi solo nel pannello **neuroni** |
+  | 3 | la Discussione dice *«significantly reduced expression»* | l'asse di significatività **non è ricostruibile**: soglia a ~0.83 su un asse che si dichiara `-Log10 p`, cioè p≈0.15, e punti sopra 1.0 che una probabilità NOISeq non può assumere |
+
+- 🔴 **L'inversione di enfasi è il reperto generale.** L'effetto che il testo mette in prima
+  linea (Satb2, ~un terzo, due asterischi) è **molto più piccolo** di quello che liquida in sei
+  parole (BrdU, 8/10, ~11×). Non è disonestà: è che il testo racconta la storia che l'autore
+  sta argomentando, e il pannello contiene quello che l'esperimento ha prodotto. **Chi legge
+  solo il testo eredita l'enfasi dell'autore al posto dei suoi dati.**
+- **Corollario operativo, e va oltre questo paper:** la regola di copertura dei pannelli non
+  serve a «trovare di più». Serve perché **il testo corrente è una selezione fatta da qualcun
+  altro con un obiettivo diverso dal nostro.**
+- **Interconnessioni:** `FT-002` · `DL-BIO-085` · manifest `PMID32581702.json` entries[2], [3],
+  [10], [11], [20] · l'istruzione permanente dell'Orchestratore del 2026-08-10 sulla copertura.
+- **Destinazione dichiarata:** **materiale per un commit candidate** e argomento a favore della
+  regola di copertura, misurato invece che asserito.
+
+---
+
+### 🔴 DL-MECH-094 — La firma «Warburg» degli organoidi è confusa con il difetto di differenziamento che il paper stesso dichiara nel titolo della figura
+
+> **Allocazione:** 094 è mio (sessione A, 2026-08-10 sera). Vedi `DL-META-091` per l'allocazione
+> 091–093.
+
+- **Status:** open · **Tag epistemico:** `DATO` sulle due citazioni, `INFERENZA` sul confondimento.
+- **Cosa qualifica:** `DL-MECH-034`, che porta la firma OXPHOS↓/glicolisi↑ di `PMID 34268881`
+  come chiusura del caveat *«il fenotipo Warburg è documentato in MEF e in cancro, mai nel
+  neurone WWOX-carente»*, e con essa il razionale WWOX-specifico della dieta chetogenica.
+
+- ✅ **Prima, ciò che NON contesto, perché lo stato lo dice già e lo dice bene.** `DL-MECH-034`
+  dichiara esplicitamente **`Belief: medio sul salto trascrittoma→flusso metabolico
+  («l'espressione genica non è il flusso: servirebbe Seahorse/fluxomica»)`**, dichiara l'n basso
+  (WT n=2, KO n=4), nomina la tecnica come trascrittomica e rimanda a `DL-BIO-008`, la
+  contraddizione sul lattato. **Il salto trascrittoma→flusso era già sotto controllo.** Arrivavo
+  per segnalarlo e l'ho trovato scritto meglio di come lo stavo scrivendo io.
+
+- 🔴 **Ciò che invece non trovo da nessuna parte: la spiegazione alternativa sta nel titolo della
+  figura da cui il dato proviene.** La sezione che produce la firma metabolica si intitola —
+  verbatim — *«Cerebral organoid RNA sequencing revealed **major differentiation defects**»*, e
+  l'arricchimento glicolitico compare dentro un elenco di vie **dello sviluppo**:
+
+  > *«marked enrichment was seen in pathways related to regionalization, neuron fate commitment
+  > and specification, axis specification (ventral–dorsal and anterior–posterior), and
+  > **glycolysis and gluconeogenesis**»*
+
+  mentre l'altro braccio della firma è:
+
+  > *«inhibition of processes related to ATP synthesis‐coupled electron transport and
+  > **oxidative phosphorylation**»*
+
+- **L'inferenza, e perché non è una pignoleria.** I progenitori neurali sono **glicolitici**; la
+  maturazione neuronale comporta uno **switch verso la fosforilazione ossidativa**. È biologia
+  dello sviluppo di base. Un tessuto che il paper stesso descrive come **immaturo e con
+  differenziamento difettoso** produrrà per *quella* ragione un trascrittoma con OXPHOS↓ e
+  glicolisi↑. **La firma metabolica è quindi il fenotipo atteso dell'immaturità, e non è
+  separabile — con questi dati — da un ruolo metabolico di WWOX.**
+
+- **`PREMISE_TAG`:** 🔴 `PREMISE: DEFAULT_FROM_TEXTBOOK` sulla premessa non scritta *«un
+  trascrittoma OXPHOS↓/glicolisi↑ in questo tessuto riflette un assetto metabolico
+  WWOX-dipendente»*. La spiegazione concorrente non è esotica: è la tesi principale del paper.
+
+- 🔴 **Conseguenza sull'esperimento discriminante, che è la parte operativa.** `DL-MECH-034`
+  propone giustamente **Seahorse OCR/ECAR sugli organoidi WWOX-KO**. Ma un Seahorse su organoidi
+  KO contro WT alla stessa settimana di coltura **riprodurrebbe lo stesso confondimento**: se i
+  KO sono developmentally più giovani, misurerei l'immaturità e la chiamerei metabolismo.
+  L'esperimento deve essere **appaiato per stadio di differenziamento**, non per età di coltura —
+  per esempio normalizzando su marcatori di maturazione, o confrontando popolazioni cellulari
+  ordinate anziché organoidi interi. Senza quel controllo, un risultato positivo non
+  discriminerebbe le due ipotesi.
+
+- **Che cosa lo falsificherebbe (a favore di `DL-MECH-034`):** una firma OXPHOS↓/glicolisi↑ che
+  persista **dopo** appaiamento per stadio; oppure la stessa firma in un sistema WWOX-carente
+  *senza* difetto di differenziamento — che è precisamente ciò che i MEF e i modelli oncologici
+  di `DL-MECH-020` offrono, e che rende quel corpus più probante di quanto la voce attuale lasci
+  intendere, non meno.
+
+- 🔴 **Nota di provenienza, e non è secondaria.** `DL-MECH-034` dichiara *«full text letto
+  integralmente»*. **Il ledger delle ricevute non lo sostiene:** l'unica ricevuta per
+  `PMID 34268881` è `FTR-20260726-34268881-01`, `partial_fulltext_read`, con `source_locator`
+  che punta al **paper registry**, **nessuna impronta** e tutti gli slot a `unknown_legacy` —
+  una delle ventitré ricostruzioni del 26 luglio. La superficie strutturata (`PMC8350905`, CC BY)
+  **esisteva e non era stata recuperata**; l'ho recuperata in questa sessione. Le due citazioni
+  qui sopra sono le prime di questo paper verificate contro un artefatto impronta-to.
+
+- **Interconnessioni:** `DL-MECH-034` · `DL-MECH-020` · `DL-BIO-008` · `DL-BIO-085` · `FT-059` ·
+  [[therapeutic_hypotheses_ledger_current#HYP-20260709-01 — Dieta chetogenica con razionale WWOX-specifico (non solo antiepilettico empirico)|HYP-20260709-01]] · [[meta_metabolism_current]].
+- **Destinazione dichiarata:** **materiale per un commit candidate**, come qualificazione di
+  `DL-MECH-034` e come **correzione dell'esperimento discriminante**. Non tocca il verso della
+  conclusione: tocca ciò che serve per stabilirlo.
+
+---
+
+### 🔴 DL-THER-095 — ITCH **alza** l'abbondanza di WWOX, e nessun file canonico lo dice: `DIS-003` ha una maniglia a valle che non ha mai nominato
+
+- **Status:** open · **Tag epistemico:** `DATO` sulle misure di Abu-Odeh 2014, `INFERENZA` sulla
+  convergenza terapeutica.
+- **Fonte:** `PMID 24550385` — Abu-Odeh et al. 2014, *J Biol Chem* 289(13):8865-8880. Letto il
+  2026-08-10, receipt `FTR-20260810-24550385-01` (`partial_fulltext_read`: testo integrale,
+  pannelli non ispezionati), manifest `PMID24550385.json`, 13 locator, `MANIFEST STRICT PASS`.
+  **Prima lettura di questo paper in questo corpus dalla sua fonte primaria.**
+
+- ✅ **Cosa lo stato sapeva già** — e va detto per primo, perché è la terza volta stasera. Il
+  linkage e il sito ci sono: `DEFAULTS THAT BIT US` porta `D-01` *«polyubiquitination →
+  proteasome»* come default falsificato, e `DIS-001` è stato riaperto esattamente su questa
+  biologia, con la nota corretta che **inibire ITCH sarebbe sbagliato** (si toglierebbe a WWOX
+  la funzione DDR via ATM; ITCH è promiscuo, i topi `Itch⁻/⁻` sono autoimmuni).
+
+- 🔴 **Cosa non c'è: il segno.** *(Titolo corretto in append — vedi la nota in fondo alla voce:
+  la prima stesura diceva «in nessuno dei 18 punti in cui ITCH compare» e «tutte le menzioni»,
+  e nessuna delle due misure era quella che dichiarava di essere.)* Le tre misure, dalla fonte
+  primaria:
+
+  | esperimento | risultato, verbatim |
+  |---|---|
+  | CHX chase, sovraespressione | *«Expression of ITCH in the presence of CHX **extended the half-life** of WWOX as compared with CHX alone»* |
+  | MEF `Itch⁻/⁻`, livelli | *«We found that WWOX levels were **decreased** in Itch[⁻/⁻] mouse embryonic fibroblasts»* |
+  | MEF `Itch⁻/⁻`, emivita | *«WWOX **half-life is shorter** in the absence of ITCH»*, p < 0.001 |
+  | inquadramento degli autori | *«ITCH ubiquitinates WWOX **independent of degradation**»* · *«coexpression of WWOX and ITCH **stabilizes** WWOX levels»* |
+
+  Guadagno **e** perdita di funzione, per livello **e** per emivita, in cellule non trasfettate
+  per la metà delle misure. Non è un artefatto da sovraespressione.
+
+- 🔴 **La conseguenza, ed è il motivo per cui questa voce è `DL-THER` e non `DL-MECH`.**
+  `DIS-003` — *«Boosting WWOX expression» → REJECTION THAT HOLDS* — rifiuta di alzare
+  trascrizione/traduzione **perché il collo di bottiglia è a valle**. Ma «a valle» non è un
+  luogo vuoto: **l'ubiquitinazione K63 mediata da ITCH è una maniglia a valle sull'abbondanza di
+  WWOX**, cioè precisamente il ramo che quel rifiuto lascia aperto e non nomina.
+
+- **`PREMISE_TAG`:** `PREMISE: DATO` sulle tre misure (fonte primaria, letta, citazioni
+  verificate contro artefatto impronta-to) · `PREMISE: INFERENZA` sul trasferimento al genotipo
+  di riferimento, che **non è dimostrato**: Abu-Odeh lavora su WWOX wild-type in HEK293 e MEF,
+  non su Q230P, e non testa se un allele destabilizzato risponda alla stessa via.
+
+- 🔴 **La convergenza, che è la parte operativa.** Se ITCH sia una leva per il genotipo di
+  riferimento dipende dalla disgiunzione che `DL-META-091` non ha potuto risolvere:
+
+  > **degradazione prematura → una leva stabilizzante è on-target · traduzione impedita → non
+  > c'è niente da stabilizzare.**
+
+  Quindi **il western che discrimina traduzione da degradazione su fibroblasti Q230P decide
+  anche se ITCH è una leva.** È lo stesso recupero già indicato come il più redditizio della
+  coda — il PDF di Johannsen, `PMID 29808465`, closed access. **Due premesse aperte, una sola
+  misura.** Un esperimento che risolve due voci del ledger vale più di due che ne risolvono una
+  ciascuna, ed è la ragione per cui questa convergenza va scritta e non lasciata implicita.
+
+- **Cosa NON si propone.** Non inibire ITCH — `DIS-001` ha già ragione su questo. E non si
+  propone *nulla* come candidato terapeutico: la direzione plausibile sarebbe **aumentare** o
+  mimare l'ubiquitinazione K63 su WWOX, che oggi non ha un agente, non ha un readout proximale
+  e non ha dati CNS/pediatrici. Resta ipotesi nei ledger, come impone `mission.md`.
+- **`REVIVAL_TRIGGER` / condizione di chiusura:** ① il western che discrimina i due rami su
+  Q230P; ② una misura di abbondanza di WWOX-Q230P in funzione dell'attività di ITCH, che è
+  l'esperimento che trasferisce — o no — Abu-Odeh al genotipo di riferimento.
+- **Interconnessioni:** `DL-MECH-083` (premessa chiusa) · `DL-META-091` · `DIS-001` · `DIS-003` ·
+  `D-01` in [[dismissal_ledger_current#🩸 DEFAULTS THAT BIT US|DEFAULTS THAT BIT US]] · `FT-060` · `FT-057`.
+- **Destinazione dichiarata:** **materiale per un commit candidate.** Tocca un rifiuto canonico
+  (`DIS-003`) aggiungendogli un ramo che non nomina, quindi la promozione è di chi possiede il
+  gate.
+
+#### 🔴 CORREZIONE APPEND-ONLY — il titolo era sovrastimato, il reperto no, e la lezione è su come si scrive un allarme
+
+Avevo scritto: *«ITCH compare **18 volte** e **ogni** menzione lo tratta come qualcosa da
+inibire»*. Entrambe le metà sono difettose e in modi diversi.
+
+- **Il 18 erano righe, non occorrenze**, e su quattro file scelti da me. Misurato sull'intero
+  `disease-models/wwox/`: **175 occorrenze in 24 file** — che però includono i seed del corpus,
+  i log e il manifest che ho appena scritto io, cioè cose che non sono affermazioni dello stato.
+  L'Orchestratore ne ha misurate 46 in 101 file. **Tre numeri, tre strumenti, nessuno
+  riproducibile** — la stessa forma del «6,5× contro 4,7×» di stamattina.
+- **«Ogni menzione» era una generalizzazione che non avevo verificato**, e non potevo: non le
+  avevo lette tutte. Lo stato porta almeno una cautela esplicita, nel paper registry:
+  *«meccanismi di degradazione **regolata**, non controllo-qualità di proteina misfolded: **non
+  assumere** che inibire ACK1/ITCH salvi Q230P»*, e `DIS-001` dice la stessa cosa meglio.
+
+🔴 **Ma la proposizione che conta sopravvive, e ora è testata invece che contata.** Ho cercato
+nello stato una frase che desse la **direzione** — ITCH che *aumenta* l'abbondanza o l'emivita
+di WWOX — e **ogni singolo riscontro è testo scritto da me stasera** (`FT-060` e questa voce).
+L'unico altro riscontro parla della stabilizzazione di WW1 da parte di un'altra interazione, non
+di ITCH.
+
+**E le due proposizioni non sono la stessa:** *«non assumere che inibire aiuti»* è **agnostica**;
+*«inibire plausibilmente danneggia, perché ITCH allunga l'emivita di WWOX»* ha un **segno**. La
+cautela già presente non poteva dire la seconda, perché il segno non era noto qui.
+
+**La lezione non è "verifica di più prima di allarmarti" — è che l'allarme e il reperto vanno
+separati nel testo, perché è il titolo che viaggia.** Un conteggio nel titolo invita a
+controllare il conteggio; la proposizione sostanziale sta sotto e sopravvive. Terza volta
+stasera che arrivo con un titolo troppo forte su un nucleo che regge — Johannsen, Steinberg,
+questa. Le tre correzioni restano accanto ai rispettivi reperti invece di essere cancellate.

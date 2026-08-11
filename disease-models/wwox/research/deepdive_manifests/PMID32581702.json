@@ -1,0 +1,324 @@
+{
+  "schema_version": 2,
+  "pmid": "32581702",
+  "doi": "10.3389/fnins.2020.00644",
+  "receipt": "FTR-20260810-32581702-01",
+  "landing": [
+    "FTR-20260810-32581702-01",
+    "full_text_queue_current.md#FT-002"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": false,
+      "reason": "Run inline. The paper was assigned as an UNREAD_PREMISE closure — cited in the meta layer and never extracted in depth — so the reading had to be a first-pass complete read against the structured surface, not a dossier hand-off."
+    }
+  ],
+  "reading_budget": {
+    "declared_before_reading": true,
+    "figures_present": 4,
+    "panels_present": 22,
+    "tables_present": 0,
+    "supplementary_elements_present": 2,
+    "panels_inspected": 22,
+    "panel_coverage": "22/22",
+    "method": "Counted from the JATS <fig> captions, which enumerate their own panels (Figure 1 A-G, Figure 2 A-D, Figure 3 A-J, Figure 4 single). Derived from the article, not typed in afterwards, and fixed BEFORE reading so the budget could not be chosen to match what was found.",
+    "derivation_correction": "🔴 HOW THE 22 WAS ACTUALLY REACHED, ADDED AFTER THE FACT BECAUSE THE DERIVATION WAS NOT WHAT THE SENTENCE ABOVE IMPLIES. The captions enumerate 21 lettered panels: Figure 1 A-G, Figure 2 A-D, Figure 3 A-J. FIGURE 4 CARRIES NO PANEL LETTERS AT ALL — it is two volcano plots with no A/B labels — and my counter turned that into 1 through a silent `or 1` fallback, giving 22. The count is defensible as a convention (an unlettered figure is one panel) and the coverage claim is true, since Figure 4 was inspected and carries its own locator at entries[20]. But the number was produced by a fallback rather than by a decision, and a fallback that cannot report 'I found nothing' is the same defect that later reported 17 panels for PMID 34268881 where there are 69, and 7 for PMID 24550385 where the count is still not reliably obtainable. Four instances in one session, four different scripts. The replacement counter refuses on any figure whose caption yields no panels, which is how this one surfaced.",
+    "note": "This is the first reading under the orchestrator's revised coverage rule. The rule as first issued was `figures per paper` compared across readers; that ratio has the reader's denominator, not the paper's, so covering four panels of four and four of sixteen score identically. `panels_covered / panels_present` is bounded in [0,1] and its denominator is a property of the article. `figures_present` did not previously exist anywhere in the state, which is why the original criterion was not computable without reopening every paper."
+  },
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_measured": "Not measured, and declared as not measured rather than guessed. The authorship is a three-way collaboration whose parts have different standing in this corpus: a Genoa/Gaslini + UCL clinical-genetics axis (Salpietro, Zara), the Nippon Veterinary and Life Science University group that owns the lde/lde rat (Suzuki, Tochigi), and the Lodz group that generated the hNPC transcriptome (Kosla, Bednarek).",
+    "research_type": "mixed",
+    "output_kind": "primary_research",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": false,
+    "weighting": "The rat work and the human neuropathology are primary and are this paper's real contribution. The transcriptomic figure is a re-analysis of a dataset the same authors published previously (GSE126075, Kosla 2019) and must not be weighted as an independent replication."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "structured-surface preflight across all 32 open full-text-queue entries carrying a PMID",
+        "route": "Europe PMC REST resultType=core, 2026-08-10",
+        "count": 15
+      }
+    ],
+    "note": "The preflight was run over the whole open queue rather than this paper alone, because the cost is the same and the answer is reusable: 15 of 32 open entries have a PMC deposit, 17 do not. The reportable sub-finding is that `isOpenAccess` and `inPMC` answer different questions — five entries are `inPMC: Y` with `isOpenAccess: N`, i.e. author-manuscript deposits where a structured surface exists even though the paper is not freely redistributable. A reader who consults the open-access field to decide whether a structured surface exists will open a PDF that did not need opening."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 50,
+    "gene_direct_count": 22,
+    "gene_direct_refs_in_source": [
+      "11719429", "15026124", "16941225", "17163164", "17360458", "17823927",
+      "19500159", "24369382", "24456803", "24871327", "24932569", "25403906",
+      "25411445", "25416187", "25716914", "26345274", "29808465", "30158849",
+      "30356099", "30370248", "31340538", "31543760"
+    ],
+    "resolved": [
+      "19500159", "24871327", "30370248", "31340538",
+      "24369382", "24456803", "24932569"
+    ],
+    "queued": [
+      "16941225", "17163164", "17823927", "25403906", "25411445", "25416187",
+      "29808465", "30158849", "30356099",
+      "11719429", "15026124", "17360458", "25716914", "26345274", "31543760"
+    ],
+    "resolved_queued_split": "RESOLVED means the reference was chased to a receipt: four are read complete (19500159 Suzuki 2009, 24871327 Iatan 2014, 30370248 Tanna & Aqeilan 2018, 31340538 Tochigi 2019) and three carry partial receipts (24369382 Mallaret 2014, 24456803 Abdel-Salam 2014, 24932569 Aldaz 2014). QUEUED means the reference has a queue entry and no receipt: six already sat in the queue unread (11719429, 15026124, 17360458, 25716914, 26345274, 31543760) and NINE WERE ADDED BY THIS READING as FT-057, having existed in no queue and no ledger on any branch.",
+    "enumeration_method": "Enumerated deterministically from the JATS <ref-list>: 50 references, 49 carrying a PMID and 45 a DOI, of which 22 are WWOX-direct by gene-name match on the citation text (WWOX/Wwox/WOX1/FRA16D/WOREE/SCAR12). Each was then set against every receipt on all six branches and against the full-text queue. 🔴 THIS STEP WAS ADDED MID-RUN BECAUSE THE LEDGER REFUSED THE ALTERNATIVE: I first wrote `references: not_read` on a complete read and the writer blocked it, correctly — either the section was covered or the reading is partial. Enumerating cost two minutes and produced the most reusable result of the run, which is the argument against ever declaring this debt open again.",
+    "cross_check_result": "🔴 NINE OF THE 22 GENE-DIRECT REFERENCES ARE ABSENT FROM THE FULL-TEXT QUEUE ENTIRELY — no receipt, no queue entry, invisible to the reading plan: 16941225 (Nunez 2006, WWOX protein expression in normal human tissues), 17163164 (Ramos & Aldaz 2006), 17823927 (Ludes-Meyers 2007, WWOX hypomorphic mice), 25403906 (Ben-Salem 2015, whole-exon deletion), 25411445 (Mignot 2015, WWOX-related encephalopathies — delineation of the phenotypical spectrum), 25416187 (Tabarki 2015a), 29808465 (Johannsen 2018, SDR-domain missense leading to complete loss of protein), 30158849 (Liu 2018, WWOX phosphorylation and neurodegeneration), 30356099 (Piard 2018, 20 additional WOREE cases). Two of those — Mignot 2015 and Piard 2018 — are the largest WOREE cohort papers in the field, and 29808465 bears directly on the SDR/NMD question this paper leaves open. Four are already read complete (19500159, 24871327, 30370248, 31340538); three carry partial receipts (24369382, 24456803, 24932569); six sit in the queue unread (11719429, 15026124, 17360458, 25716914, 26345274, 31543760)."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Prior receipts, prior manifest, prior artifact for 32581702 across all six branches",
+    "hits": 0,
+    "finding": "Zero receipts on main, lettore, lettore-b, mirror, evidence-index and codex/pmid-34831305. No manifest. No local artifact — the XML was fetched in this run. The queue entry FT-002 read `cited in meta, not yet deeply extracted`, which was accurate: this is the UNREAD_PREMISE class, a source the model leans on without having read it."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-10",
+    "route": "Europe PMC core record for EXT_ID:33914858-adjacent query batch; record for 32581702 returned with no correction or retraction links",
+    "result": "No retraction, no expression of concern, no erratum.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+      "sha256": "369100251faee767e1002188cb63f78622df88c1b2b8dde09f71c5dc89855e1f",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/figures/PMID32581702/PMID32581702_fig1.jpg",
+      "sha256": "b1709d2e890a80b2eba5d64265688351d392bbd84604f39812d26cdda2a27953",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID32581702/PMID32581702_fig2.jpg",
+      "sha256": "45298dd0c368967f840023f41d5c504cbc995a00b622b408f90854ba8d4519ab",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID32581702/PMID32581702_fig3.jpg",
+      "sha256": "1440af3fc60cf9cf8902f5f273f6a7d03383455bd246c52aaeaaaa28ef74bf78",
+      "kind": "figure"
+    },
+    {
+      "path": "files/figures/PMID32581702/PMID32581702_fig4.jpg",
+      "sha256": "2953481730a1cb8ed6e09c79c235d5d7c38a5a8f3aa035c06b9781bf401ed31b",
+      "kind": "figure"
+    }
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC7300205, JATS XML fetched from PMC efetch on 2026-08-10. Frontiers in Neuroscience, CC BY. Structured surface, rule 5d's preferred class, no rendered page to diverge from. The structured-surface preflight was the first gesture of the reading and is recorded whichever way it came out.",
+    "abstract_anchoring_waived": "No evidentiary locator below uses the abstract surface. The abstract is nonetheless the subject of entry 12, where the discrepancy between what it attributes and what the panel shows IS the finding — that entry is anchored on the body sentence and the figure, never on the abstract itself.",
+    "surface_note": "🔴 THE EXTRACTOR QUESTION WAS MEASURED, NOT ASSUMED. This branch (80e6f03) does not carry Plan's inline-join fix (2e6fd6a, on evidence-index only — NOT on main). On the PMC HTML of PMID 24550385 that defect is severe: 0 of 32 figure citations and 2 of 31 `PPXY` survive my branch's extractor. So before choosing a single span here I ran both extractors against this artifact. On this JATS XML all 17 body snippets verify under BOTH, character for character, so this manifest is immune to merge order. The general rule the pair of measurements supports is per-artifact, not global: the defect is real and can be total, and it is cheap to test, so test it rather than fear it.",
+    "resolution_note": "Figures were inspected as images at the publisher's own resolution — 1500x1212, 1900x1709, 1465x1600 and 1950x932 px, i.e. 209-279 effective ppi across a 7-inch page width. Panels needing a judgement about an asterisk or an axis were cropped at native resolution and upscaled (panel 3J at 3x, 3E at 5x, 3G/H at 3x, 2A at 5x, 1B at 5x, 1G at 4x). Where the native pixels do not support a call, entry 11 says so instead of making one.",
+    "entries": [
+      {
+        "proposition": "🔴 THE PAPER CONTRADICTS ITSELF ON HOW MANY CONTROL FETUSES ITS ONLY HUMAN EXPERIMENT HAD, AND THE FIGURE SIDES WITH THE SMALLER NUMBER. The Methods describe obtaining tissue from ONE control fetus. This is the load-bearing n of the paper's sole human neuropathological comparison, and the entire claim of 'abnormal cortical architecture in a WWOX-deficient human brain' rests on it.",
+        "snippet": "We obtained samples of brain tissue from a control male fetus at the 21th gestational week",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Materials and Methods, Neuropathological studies, second sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence; the number registered only when the Results said something different two sections later"
+      },
+      {
+        "proposition": "🔴 THE OTHER HALF OF THE CONTRADICTION. The Results say THREE fetuses, and add '(sampled as above)', pointing back at the Methods sentence that describes one. Figure 2A's caption is the tie-breaker and it agrees with the Methods: 'compared to a normal fetus (left panel)', singular. So two of three statements say one control and the panel shows one control field per stain. This is not a quibble about wording: n=1 versus n=3 is the difference between a case observation and a small series, and the paper's own figure supports the weaker reading.",
+        "snippet": "A parietal section of the cerebral cortex of three fetuses of the same gestational period",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Results, Defective architecture of cortical layers in WWOX-deficient human developing brain",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I went back to the Methods to check the control n after this sentence read oddly against the figure"
+      },
+      {
+        "proposition": "🔴 THE STRONGEST QUANTITATIVE RESULT IN THE PAPER IS REPORTED IN THE TEXT AS THE PHRASE 'ALTERED DISTRIBUTION', WITH NO NUMBER AND NO COUNT. This one sentence is everything the running text says about the BrdU birth-dating experiment. The panel it cites shows eight of ten cortical zones significantly different. See entry 4 for what the panel actually contains.",
+        "snippet": "we found altered distribution of BrdU-positive cells in lde/lde cerebral walls, revealing delayed migration of late-born neurons",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Results, Abnormal neural migration and cortical layer formation in lde/lde rats, penultimate sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence, and the brevity was what sent me to the panel"
+      },
+      {
+        "proposition": "🔴 WHAT PANEL 3J ACTUALLY SHOWS, AND WHY IT MATTERS THAT THE TEXT DOES NOT. Eight of ten zones carry a significance marker: zones 1 and 2 at p<0.01, zone 4 at p<0.05, zones 5, 6 and 7 at p<0.01, zones 9 and 10 at p<0.05. Zones 3 and 8 are unmarked. The direction is a clean migration arrest: in the two most superficial zones the wild-type carries far more birth-dated neurons than the mutant, and from zone 4 inward the mutant carries far more than the wild type. In zone 2 the wild-type sits near 810 BrdU+ cells/mm2 against roughly 70 in lde/lde — an order of magnitude, and the single largest effect anywhere in the paper. The text gives none of these numbers, and the effect it DOES foreground (Satb2, entry 5) is roughly a third-scale change. The paper's emphasis is inverted relative to the effect sizes in its own panels.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3, panel J. Upper part: an experimental scheme, an arrow spanning '7 days' from 'E16.5 BruU injection' to 'P1 Sacrify' (both misspellings are the panel's). Lower part: a horizontal bar chart, y-axis 'Area number' 1 to 10, x-axis 'BrdU+ cells /mm2' from 0 to 1000, open bars '+/+' and grey bars 'lde/lde', error bars on every bar. Asterisks to the right of the lde/lde bar: '**' at areas 1, 2, 5, 6 and 7; '*' at areas 4, 9 and 10; no marker at areas 3 and 8.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID32581702/PMID32581702_fig3.jpg",
+        "anchor": "Figure 3 panel J, cropped at native resolution from the 1465x1600 publisher JPEG and upscaled 3x for asterisk adjudication",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "found_or_sought": "sought — the text's single bland sentence about this experiment was the reason to open the panel",
+        "contradicts": "entries[2]",
+        "contradicts_needle": "altered distribution of BrdU-positive cells"
+      },
+      {
+        "proposition": "THE RESULT THE TEXT DOES FOREGROUND, AND ITS ACTUAL SIZE. The Satb2 finding is real and the panel confirms it: panel 3G carries exactly two asterisks, at area 1 and area 7, both at p<0.05, in the directions the text describes. But the magnitude is modest — area 1 runs from roughly 1830 Satb2+ cells/mm2 in wild type to roughly 1230 in lde/lde, about a third. This is the sentence the Results build their conclusion on, while the order-of-magnitude BrdU effect gets 'altered distribution'.",
+        "snippet": "the density of Satb2-positive cells was significantly decreased in the surface layer of lde/lde cortical plate",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Results, Abnormal neural migration and cortical layer formation in lde/lde rats",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence and then checked against panel 3G"
+      },
+      {
+        "proposition": "A NEGATIVE THAT THE PANEL CONFIRMS, RECORDED BECAUSE NEGATIVES ARE WHERE THIS SYSTEM HAS BEEN BURNED. Panel 3H carries no asterisk anywhere, on any of its eight zones, so the Tbr1 negative is a tested negative rather than an untested one. The same holds for panel 3E: no marker, wild type 1.51 mm with a very tight error bar against 1.64 mm in lde/lde with an error bar roughly eight times wider. The layer V/VI population and the gross cortical wall thickness are both spared while the layer II-IV population and the birth-dated cohort are not — which is what makes this a migration phenotype rather than a growth phenotype.",
+        "snippet": "There was no significant difference between +/+ and lde/lde in the distribution of Tbr1",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Results, Abnormal neural migration and cortical layer formation in lde/lde rats; verified against panels 3H and 3E",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — an unmarked panel is exactly the case where 'not significant' and 'not tested' look identical, and on 2026-08-06 that distinction cost this corpus a correction"
+      },
+      {
+        "proposition": "🔴 THE VARIANT'S MECHANISM IS AN UNMEASURED DISJUNCTION, AND THE TWO ARMS ARE NOT INTERCHANGEABLE. The paper states the alternative and never resolves it: either a truncated protein is made, or the transcript is destroyed by nonsense-mediated decay. No western blot, no transcript quantification, no patient-derived material is used to decide. PREMISE: DEFAULT_FROM_TEXTBOOK - that a nonsense variant equals a null. See entry 8 for why the position of this particular stop codon makes the two arms predict different proteins, and entry 9 for why that matters to the classification schemes built on top of it.",
+        "snippet": "resulting in a loss of normal Wwox function either through protein truncation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Discussion, the paragraph introducing the family's variant",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I was looking for whether anyone had measured protein in this family, because the same gap is open on Q230P"
+      },
+      {
+        "proposition": "🔴 WHERE THE STOP CODON FALLS, READ OFF THE DOMAIN MAP, AND IT IS THE DETAIL THAT SEPARATES THE TWO ARMS. In panel 1G, p.R264Ter is drawn in red at the C-terminal boundary of the MTS block, immediately before the grey 'Loop' and the red 'Catalytic Site'. So a truncation at residue 264 of 414 would RETAIN WW1, the NLS, WW2, the NADP site and the ENTIRE mitochondrial targeting sequence, and would remove only the loop, the catalytic site, the Central block and the C-terminus. INFERENZA: if the transcript escapes NMD, the product is not an absence of Wwox but a catalytically dead Wwox that can still be delivered to mitochondria and still present both WW domains to PPXY partners. Absence and a dead-but-present interactor are different diseases mechanistically and different problems therapeutically - one cannot be stabilised, the other might not want to be. The paper's disjunction hides this because both arms are called 'loss of normal function'.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1, panel G. A linear protein schematic numbered 1 to 414, blocks left to right: WW1 (orange), a yellow block with a yellow arrow labelled 'NLS', WW2 (green), a blue region, a teal block with a teal arrow labelled 'NADP', 'N' (blue), 'MTS' (orange to yellow), 'Loop' (grey), a red block with a red arrow labelled 'Catalytic Site', 'Central' (teal), 'C' (cream). A bracket underneath spans from the NADP region to the Central block, labelled 'SRD DOMAIN'. Variant lollipops above the bar include p.D16STer, p.E17K, p.W44Ter, p.P47R, p.R54Ter, p.G137E, p.H150P, p.H173Ter, p.Q230P, p.L239R, then p.R264Ter drawn in RED at the right-hand edge of MTS, then p.K297Ter, p.S304P, p.S318L, p.W335Ter. Horizontal arrows above mark 'Del exon 3-4', 'Del exons 1-6', 'Del exon 5', 'Del exons 6-8' and 'p.P203_R264del'.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID32581702/PMID32581702_fig1.jpg",
+        "anchor": "Figure 1 panel G, cropped at native resolution and upscaled 4x around the MTS/Loop/Catalytic Site boundary",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "found_or_sought": "sought — the Discussion asserts the truncation 'disrupts the active C-terminal SDR domain' and I wanted to see what it leaves intact, which the text never says",
+        "contradicts": "entries[8]",
+        "contradicts_needle": "only partial loss-of-function"
+      },
+      {
+        "proposition": "🔴 THE SAME PANEL CARRIES p.P47R AS A WOREE ALLELE WHILE THE DISCUSSION NAMES p.Pro47Thr AS A SCAR12 ALLELE - THE SAME RESIDUE, TWO SUBSTITUTIONS, TWO DIFFERENT DISEASES. Panel 1G is titled as the map of WOREE-associated mutations and it places p.P47R inside WW1; the Discussion, four paragraphs later, gives Pro47Thr and Gly372Arg as the two SCAR12 hotspot variants. This converges independently on the finding recorded from PMID 36779245 on 2026-08-10, where Oliver's cohort showed p.Pro47 carrying a conservative change in SCAR12 and a different substitution in WWOX-DEE, and it converges on PMID 42128308's P47T mouse allele that holds protein at wild-type level while disrupting the WW1 PPXY motif. Severity is substitution-specific, not residue-specific — which is a direct problem for any scheme that grades severity by variant CLASS.",
+        "snippet": "these variants cause only partial loss-of-function due to conformational changes",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Discussion, the SCAR12 paragraph; read against p.P47R in panel 1G",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — I recognised P47 from Oliver 2023 while inspecting the domain map, and went back to the Discussion to see which substitution it named"
+      },
+      {
+        "proposition": "🔴 THE MOLECULAR FIGURE IS A RE-ANALYSIS OF THE AUTHORS' OWN PREVIOUSLY PUBLISHED DATASET, NOT A NEW EXPERIMENT, AND NOT FROM THIS FAMILY. The transcriptome is GSE126075 from Kosla 2019, an shRNA knockdown in H9-derived human neural progenitors. So the paper's three lines of evidence come from three unrelated systems — one human fetus carrying p.Arg264Ter, a rat carrying a 13-bp exon-9 deletion, and an shRNA knockdown in an embryonic-stem-cell-derived line — and none of the molecular work was done in the genotype the paper is about. That is a legitimate design, but it means the transcriptomic figure must never be weighted as independent replication of the histology, and any downstream use of TUBA1A/TUBB3 has to carry the system it came from.",
+        "snippet": "obtained in the experiment of in vitro WWOX silencing in H9-derived hNPC as previously described",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Materials and Methods, Transcriptomic analyses of hNPC and neurons with silenced WWOX, first sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I read the transcriptomic methods specifically to find out whose cells they were, because the Results present the figure as if it belonged to this study"
+      },
+      {
+        "proposition": "🔴 THE SIGNIFICANCE AXIS OF THE ONLY MOLECULAR FIGURE CANNOT BE MAPPED ONTO ANY STATED THRESHOLD. The y-axis of both volcano plots is labelled '-Log10 adjusted differential value p'. Read literally, the dashed threshold line sits at about 0.83 on that axis, i.e. p around 0.15, and the most extreme point in either panel reaches about 1.4, i.e. p around 0.04 — meaning that across 9,404 and 9,318 variables not one gene would reach p<0.04. That is not a credible p-value distribution for a transcriptome comparison. The Methods do not resolve it: they say significance came from the NOISeq-sim algorithm, and NOISeq's statistic is a PROBABILITY of differential expression whose conventional cut is 0.8, not a p-value — and 0.8 is almost exactly where the threshold line sits. But values above 1.0 appear in both panels, which a probability cannot take. So the axis is consistent with neither reading, and the Discussion's phrase 'significantly reduced expression' rests on a criterion that the paper does not let a reader reconstruct. This is a PREMISE_TAG on everything downstream of the tubulin result, not a refutation of it.",
+        "snippet": "P significance was calculated according to NOISeq-sim algorithm",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Materials and Methods, Transcriptomic analyses, final sentences; read against the y-axis of both panels of Figure 4",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — the axis label did not parse on first sight, and the gridline spacing (1.0 to 0.5 against 0.5 to 0.3) is itself logarithmic, so I measured it rather than assumed it"
+      },
+      {
+        "proposition": "🔴 THE ABSTRACT ATTRIBUTES THE TRANSCRIPTOMIC FINDING TO PROGENITORS; THE PANEL SHOWS IT IN NEURONS. The abstract's sentence is 'Transcriptomic analyses of Wwox-depleted human neural progenitor cells showed an impaired expression of a number of neuronal migration-related genes encoding for tubulins, kinesins and associated proteins'. The Results sentence quoted here is correct and says neurons. Figure 4 settles which is which: in the left panel (progenitors) the labelled migration genes sit in the grey non-significant cloud or in green (fold-change only) — TUBB3, DNM1, TUBB6, MAP6 and TUBA1B are all below the threshold line — while in the right panel (neurons) the same names sit in red, above threshold and at log2 fold changes between roughly -1.5 and -4.5. The finding is differentiation-dependent, and the abstract is the sentence most readers will carry away.",
+        "snippet": "we found tubulin TUBA1A gene expression lowered more than 10 times in Wwox-depleted neurons compared to control neurons",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Results, WWOX-depleted neurons show reduced expression of different neural migration-related genes; read against both panels of Figure 4 and against the abstract",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — I compared the two volcano panels against each other before reading the fold-change sentence, and the abstract's wording stood out afterwards"
+      },
+      {
+        "proposition": "THE FOLD CHANGES THE TEXT CLAIMS ARE CONSISTENT WITH THE PANEL, AND THIS IS RECORDED AS A POSITIVE VERIFICATION RATHER THAN LEFT SILENT. >15-fold is log2 -3.91 and >3-fold is log2 -1.58; in the neurons panel the TUBB3 leader line reaches the far-left extreme of the red cluster near log2 -3.6 to -4, and TUBB2B, MAP2 and the KIF5 family point into the -1.2 to -1.8 band, matching the '2-3-fold' and '3-fold' the text gives for them. The quantitative claims survive inspection; what does not survive is the significance criterion behind them (entry 11).",
+        "snippet": "include TUBB3 (>15-fold reduced) and TUBB2B (>3-fold reduced expression)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Results, final paragraph; read against the neurons panel of Figure 4",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — checked deliberately, because a reading that only reports what fails to verify is not an audit"
+      },
+      {
+        "proposition": "🔴 THE PROTEIN-LEVEL TEST OF THE PAPER'S CENTRAL MOLECULAR CLAIM WAS DONE, WAS NEGATIVE, AND IS CONFINED TO ONE HALF-SENTENCE THAT THE DISCUSSION NEVER REPEATS. A greater-than-tenfold mRNA reduction was checked at the protein level in the actual WWOX-deficient human brain and the reduction was slight and not significant. The Discussion then says only 'This showed a significantly reduced expression of several tubulins, microtubule-associated proteins and microtubule motor kinesins', with no mention of the protein result. This is the same asymmetry recorded as DL-BIO-085: transcript abundance is not a readout of protein, and protein abundance is not a readout of function. Here the paper had the protein measurement and the negative did not travel.",
+        "snippet": "revealed a slight reduction of tubulin-1-alpha protein, although not significant",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Results, WWOX-depleted neurons show reduced expression..., the sentence immediately after the TUBA1A mRNA claim; the supporting Supplementary Figure S3 could not be retrieved (see supplementary_gap)",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence, and it is the kind of clause that reads as a formality until you notice it tests the headline"
+      },
+      {
+        "proposition": "🔴 FIGURE 2A LABELS THE CORTICAL LAYERS ONLY ON THE CONTROL, SO THE ABNORMAL SPECIMEN'S LAYER IDENTIFICATION IS ASSERTED RATHER THAN SHOWN. The claim of the paper's sole human experiment is that the external granular layer has migrated INTO the molecular layer. Verifying that requires knowing which band is which in the patient section — and it is exactly the patient section that carries no annotation. The control panel carries ML, EGL and CG with tick marks at the tissue edge; the patient panel carries none, in either magnification. The control and patient fields are also not matched in orientation, which limits a morphological comparison independently of the labelling.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, all four panels A (H&E), B (GFAP), C (CD31) and D (PAS). Each panel is a 2x2 block with exactly TWO columns, headed 'Ctrl' and 'II.3', over two rows marked 10X and 20X — one control field per stain, not three. In the panel A Ctrl 10X image only, three small black labels 'CG', 'EGL' and 'ML' sit at the upper-left tissue margin with short black tick marks delimiting the corresponding bands. The II.3 images carry no layer labels at either magnification, in any panel. Black arrows mark features in the II.3 images of panels B, C and D; no arrows appear in any Ctrl image. White scale bars are present in the lower left of the Ctrl images.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID32581702/PMID32581702_fig2.jpg",
+        "anchor": "Figure 2 panel A, cropped at native resolution and upscaled 5x over the control image's upper-left margin",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "found_or_sought": "sought — I went looking for the layer boundaries in the patient image in order to check the migration claim myself, and there were none to find",
+        "contradicts": "entries[1]",
+        "contradicts_needle": "three fetuses of the same gestational period"
+      },
+      {
+        "proposition": "🔴 FIGURE 1B SHOWS FOUR SANGER TRACES WHILE ITS CAPTION NAMES THREE INDIVIDUALS, AND NO TRACE IS LABELLED. The caption reads 'Electropherograms of carrier parents and index case (II.1)' — two parents plus one proband. The panel shows four sequence rows. The fourth is most plausibly the fetus II.3, whose prenatal Sanger result the Results section reports, but the panel does not say so and carries no per-trace identification at all, so which trace belongs to whom is not recoverable from the figure. WHAT I CANNOT CALL AT THIS RESOLUTION, DECLARED RATHER THAN GUESSED: the boxed base of the first trace is called 'N' while its chromatogram looks single-peaked like the homozygous fourth trace, where the second and third traces show the clear double peaks of heterozygotes. Panel B occupies roughly 450x290 native pixels; that is not enough to decide whether a minor allele peak is present, and upscaling is interpolation, not evidence. Recorded as an unresolved observation, not a finding.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 1, panel B. Four stacked Sanger chromatogram rows, each with base calls printed above the trace, reading C C A T then a boxed position then G G T G G. A red rectangle spans all four rows at the variant position. Base calls at the boxed position, top to bottom: N, N, N, T. No individual identifiers appear anywhere in the panel.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID32581702/PMID32581702_fig1.jpg",
+        "anchor": "Figure 1 panel B, cropped at native resolution and upscaled 5x; native extent approximately 450x290 px",
+        "panel_text_relation": "panel_only",
+        "found_or_sought": "sought — I opened the panel to see the segregation the caption claims and found I could not attribute a single trace to a single person"
+      },
+      {
+        "proposition": "THE RAT ALLELE, RECORDED BECAUSE IT IS NOT THE SAME LESION AS THE HUMAN ONE AND THE PAPER READS THE TWO AS EQUIVALENT. The lde/lde rat carries a 13-bp exon-9 deletion truncating the Wwox C-terminus; the family carries a stop at codon 264. Both are C-terminal truncations, which is the basis for reading the rat as a model of this family — but exon 9 is well downstream of residue 264, so the rat retains more of the protein than the human variant would if it escapes NMD. The cross-species argument is reasonable and is not the same as identity.",
+        "snippet": "spontaneous homozygous 13-bp deletion within the exon 9 of WWOX",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Discussion, the lde/lde paragraph",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence; the comparison with entry 8's domain position is mine"
+      },
+      {
+        "proposition": "THE RAT EXPERIMENTS ARE n=3 PER GENOTYPE, STATED ONCE IN THE METHODS AND NOWHERE IN THE RESULTS. Every asterisk in panels 3E, 3G, 3H and 3J — including the eight significant zones of entry 4 — rests on three animals per group compared by Student's t-test, with no correction for the ten zones tested per panel. The effect in zone 2 is large enough that this is unlikely to explain it away; the smaller markers at zones 4, 9 and 10 are a different matter. Recorded so that the eight-of-ten count is never quoted without its n.",
+        "snippet": "Data from each 3 +/+ and lde/lde rats genotyped by PCR were used for statistical analysis",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Materials and Methods, lde/lde rat experiments, final sentence",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — I went back to the Methods for the n after counting the asterisks in panel 3J"
+      },
+      {
+        "proposition": "WHY THIS PAPER WAS WORTH THE UNREAD-PREMISE CLOSURE, IN THE AUTHORS' OWN FRAMING. Before this study nobody had looked at cerebral cortex development under a pathogenic WWOX variant, and the neuropathology of WOREE had never been examined. Whatever the qualifications recorded above, the human fetal histology and the perinatal rat cortex are the paper's genuine first, and they are the reason FT-002 sat at HIGH priority while being cited in the meta layer without ever having been read.",
+        "snippet": "no study has assessed the impact of pathogenic WWOX variants on the development of cerebral cortex",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Introduction, the sentence establishing the gap",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "THE CORTICAL WALL IS NOT THINNER, WHICH IS WHAT MAKES THIS A MIGRATION PHENOTYPE RATHER THAN A GROWTH ONE. Panel 3E carries no significance marker and the text agrees. The point is worth its own entry because the negative is load-bearing in the opposite direction from usual: if the mutant cortex were simply smaller, a redistribution of birth-dated neurons across ten equal zones could be an artefact of dividing a shorter wall. It is not smaller — if anything the mutant mean is slightly higher — so the zone-by-zone redistribution in panel 3J is about where cells are, not about how much wall there is to divide.",
+        "snippet": "there was no significant difference between +/+ and lde/lde in the thickness of cortical wall",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID32581702_Repudi2020_PMC.xml",
+        "anchor": "Results, Abnormal neural migration and cortical layer formation in lde/lde rats, second sentence; verified against panel 3E at 5x",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — I checked the denominator of the zone analysis before trusting the zone analysis"
+      },
+      {
+        "proposition": "🔴 FIGURE 4 ITSELF, WHICH IS BOTH THE TARGET OF ENTRY 11 AND THE PANEL THAT SEPARATES PROGENITORS FROM NEURONS. Two volcano plots share a y-axis labelled '-Log10 adjusted differential value p' whose printed gridlines are 0.3, 0.5 and 1.0 with non-uniform spacing — the gap from 1.0 to 0.5 stands to the gap from 0.5 to 0.3 as 1.37 to 1, against the 1.36 to 1 that a logarithmic axis predicts and the 1.5 to 1 a linear one would give, so the axis is itself log-scaled in a quantity that is already a negative logarithm. The dashed significance line sits near 0.83 and the highest points reach about 1.4. The left panel is the progenitor comparison and the right the neuron comparison, and the LABELLED MIGRATION GENES CHANGE COLOUR BETWEEN THEM: in the left panel TUBB3, DNM1, TUBB6, MAP6, TUBGCP6 and TUBA1B sit in the grey non-significant cloud or in green below the threshold line, and TUBA1A sits in blue; in the right panel the same names sit in red above the line, with leader lines reaching log2 fold changes from about -1.2 to -4.5. Total variables printed beneath the panels: 9,404 left and 9,318 right.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 4. Left plot titled 'progenitors_WT vs progenitors_WWOXdel', right plot titled 'neurons_WT vs neurons_WWOXdel'. Shared axes: x 'Log2 fold change' from -5.0 to 5.0 with vertical dashed lines near -1 and +1; y '-Log10 adjusted differential value p' with gridlines labelled 0.3, 0.5 and 1.0 and one horizontal dashed threshold line. Legends: left 'NS / Log2 FC / p-value / p - value and log2 FC' in grey, green, blue and red; right the same without the blue category. Footers 'Total = 9404 variables' and 'Total = 9318 variables'. Gene labels in white boxes with purple leader lines.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID32581702/PMID32581702_fig4.jpg",
+        "anchor": "Figure 4, both panels; y-axis regions cropped at native resolution and upscaled 4x to read the gridline labels and measure their spacing",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "found_or_sought": "sought — added after the fact because the coverage rule requires every main figure to carry a locator or a named waiver, and Figure 4 had neither while three other entries were pointing at it",
+        "contradicts": "entries[10]",
+        "contradicts_needle": "according to NOISeq-sim algorithm"
+      }
+    ],
+    "figure_provenance_note": "PMC's bin path and the PMC OA package both failed for this article (bin returns Not Found; the OA service offers only an ftp:// href whose https mirror 404s). The figures were taken from the publisher at https://www.frontiersin.org/files/Articles/540673/fnins-14-00644-HTML/image_m/, which serves 1500x1212, 1900x1709, 1465x1600 and 1950x932 JPEGs — the largest copies available, since the image_l path returns an HTML error page. The article is CC BY, so no rule-5e adjudication recipe is required to justify holding the images; they nonetheless live only in the gitignored files/ tree of the SHARED checkout, per the rule that a branch carries the manifest and never the evidence.",
+    "privacy_waiver": "🔴 FIGURE 1 PANEL D IS AN IDENTIFIABLE CLINICAL PHOTOGRAPH OF THE LIVING PROBAND. It was inspected as part of closing the figure surface and is DELIBERATELY NOT DESCRIBED, not cropped and not quoted, and no locator rests on it. The panel supports the caption's claim of distinctive craniofacial features and adds nothing that the running text does not already state in general terms. This is a named waiver under the coverage rule, not a skipped panel: silence would have been the violation. Recording it here rather than in an entry keeps the description out of the state entirely, which is the point.",
+    "supplementary_gap": "🔴 SUPPLEMENTARY DECLARED unavailable, WITH THE ROUTES NAMED, AND THE GAP IS MATERIAL. The article has two supplementary elements (Data_Sheet_1.pdf and Table_1.XLSX) holding Supplementary Figures S1-S3 and Supplementary Table S1. Five retrieval routes were tried and all failed: the PMC OA service (ftp-only href), its https mirror (404), the PMC bin path (Not Found), the Frontiers api/v3 file endpoint (500) and the Frontiers downloadfile path (404). This matters more than a usual supplementary gap for two reasons. Supplementary Table S1 carries the actual fold changes behind entry 13, so the text's numbers were checked against the volcano panel rather than against the table. And Supplementary Figure S3 is the TUBA1A immunostaining of entry 14 — the one protein-level test of the paper's central molecular claim, and the one that came back not significant. The negative is therefore recorded from the running text alone and its underlying panel has NOT been inspected. Anyone who obtains the supplementary should re-open entry 14 first."
+  }
+}
