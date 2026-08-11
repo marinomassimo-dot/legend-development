@@ -26,6 +26,17 @@ Two rules this script exists to keep executable rather than remembered:
   shell had inherited a worktree's cwd. `files/` is gitignored, so it exists in exactly one
   checkout, and a relative path measures whatever tree you happen to be standing in.
 
+🔴 Count elements by TAG NAME, never by regex over the markup. A competing census of this
+same class used `re.findall(r"<fig\b|<figure\b", ...)` and reported five extra surfaces as
+partially outside the body. `<fig\b` matches `<fig-count>`: after `fig` comes a hyphen, which
+is a word boundary, so `\b` is satisfied. `<fig-count>` is a JATS metadata counter living in
+`<article-meta>` — always outside the body, always exactly one — so every article with a
+figure count looked like it had one caption stranded. It is the same shape as a prefix
+matching inside a longer identifier: syntactically valid, pointing at the wrong thing, and
+invisible to any check that only asks whether the count is well formed. A plausible count is
+not a verified one, and the difference is never visible in the result — only in the predicate.
+That is why this module parses and iterates by tag, and why it prints its predicate.
+
 HTML surfaces are counted SEPARATELY and never folded into the denominator: a page has
 exactly one `<body>` and everything is inside it by construction, so "figures outside the
 body" is not false for an HTML surface, it is undefined. Summing them dilutes a risk class

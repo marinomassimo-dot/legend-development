@@ -2247,7 +2247,12 @@ sette nomi: `21318118` · `22193544` · **`23370280`** · `24308844` · `2755147
 che nessuno ha letto. Chi lo aprirà con un estrattore delimitato non vedrà una sola didascalia —
 sullo stesso filone dove stanotte una didascalia («Hypothetical») è diventata il reperto centrale.
 
-**Dove le due misure divergono, e resta irrisolto.** La loro riga «parziali» contiene `27308504`,
+**Dove le due misure divergevano — RISOLTO, e la causa è un carattere.** *(Aggiornato poche ore
+dopo: l'Orchestrator ha pubblicato il predicato, e pubblicarlo è bastato a chiudere la questione.
+Il paragrafo che segue è conservato com'era scritto, perché il ragionamento che ha portato alla
+richiesta è il reperto; la risoluzione viene dopo.)*
+
+La loro riga «parziali» contiene `27308504`,
 `32581702`, `34268881`, `36779245`, `39416860`, che il predicato sopra dà **interamente dentro il
 corpo** (1/1, 4/4, 11/11, 4/4, 1/1). Ho cercato di ricostruire la loro definizione e ne ho
 falsificata una: su `34268881` i `<graphic>` sono **12** contro 11 `<fig>`, quindi contare le
@@ -2255,6 +2260,24 @@ grafiche spiegherebbe quel caso — **ma non `36779245`, dove `<graphic>` e `<fi
 Non so quale predicato produca 14, e **non lo assumo**: chi ha misurato pubblichi il predicato,
 come io ho dovuto pubblicare il mio. *Due conteggi che non nominano la propria definizione non
 sono in disaccordo — non sono ancora confrontabili.*
+
+🔴 **E il predicato, pubblicato, conteneva la risposta: `re.findall(r"<fig\b|<figure\b", …)`.**
+**`<fig\b` matcha `<fig-count>`** — dopo `fig` viene un trattino, che è un confine di parola,
+quindi `\b` è soddisfatto. `<fig-count>` è un contatore di metadati JATS: vive in `<article-meta>`,
+cioè **sempre fuori dal corpo, sempre esattamente uno**. Riprodotto qui in modo indipendente prima
+di accettarlo: su tutti e cinque i file contestati `fig-count` è **1 in `<article-meta>` e 0 in
+`<body>`**, e quel predicato applicato all'intero `files/` classifica come «parziali» esattamente
+**7** file. La classe «alcune fuori» dell'altra misura va a **zero**, e questa classificazione
+regge intatta. **Numero canonico: 9 su 34, di cui 7 pure.**
+
+**Due cose che vale la pena tenere separate, perché insegnano l'opposto l'una dell'altra.**
+La ricostruzione che avevo tentato — contare i `<graphic>` — **era falsa**, e l'avevo falsificata
+io stesso su `36779245` invece di fermarmi al caso che tornava. Non aver assunto una risoluzione
+plausibile è ciò che ha lasciato spazio a quella vera. E la causa vera è **la stessa classe di
+`CC-` dentro `OCC-`**: una forma sintatticamente valida che punta alla cosa sbagliata, invisibile
+a qualunque controllo che verifichi soltanto che il conteggio sia ben formato. **Un conteggio
+plausibile non è un conteggio verificato**, e la differenza non si vede mai dal risultato — solo
+dal predicato.
 
 **Sulla popolazione, il disaccordo è invece di categoria e si chiude qui.** Loro contano 62 =
 35 XML + 27 HTML. **A un HTML questa domanda non si può porre:** una pagina ha esattamente un
