@@ -2111,3 +2111,54 @@ inferiore**, mai come denominatore.
 
 **Next action:** aprire il documento. Preflight, superfici, impronte e misura dell'estrattore
 sono già qui sopra.
+
+---
+
+## FT-062 — Salah 2013: la fonte a cui lo stato attribuisce già la stabilizzazione ITCH, mai letta
+
+**Paper:** PMID 23370280 — Salah Z., Bar-mag T., Kohn Y., Pichiorri F., Palumbo T., Melino G.,
+Aqeilan R. I., 2013
+**Priority:** **ALTA** — un commit candidate di questo repository cita già questo paper per
+*«direct ITCH/proteasomal stabilization»*. **Zero ricevute su tutti e sei i rami.** Stessa forma
+di `DL-META-091` (Johannsen): un'attribuzione che regge senza che nessuno abbia aperto la fonte.
+**Come è emerso:** multi-hop di `FT-060`, dove è una delle 14 referenze gene-dirette né lette né
+in coda.
+
+### 🔴 LA TRAPPOLA DA LEGGERE PRIMA DI APRIRLO — le sei figure stanno FUORI dal `<body>`
+
+Censito da B sul `files/` condiviso: **62 superfici strutturate, 14 con figure fuori dal corpo,
+8 con TUTTE fuori.** Questa è una delle otto. Verificato in proprio il 2026-08-11:
+
+    figure totali: 6   dentro <body>: 0   FUORI: 6
+
+> **Chi lo apre con un estrattore delimitato al corpo non vedrà una sola didascalia e non se ne
+> accorgerà.** Non è un buco di verifica — `_xml_surfaces` percorre l'articolo intero — **è un
+> buco di lettura**: il rendering per la lettura umana, se taglia sul `<body>`, perde tutte le
+> figure in silenzio.
+
+Le altre sette della stessa classe, per chi le incontra: `21318118` · `22193544` · `24308844` ·
+`27551470` · `31340538` · `33255508`.
+
+E il censimento dei pannelli **rifiuta su tutte e sei le figure** (`NO PANELS FOUND` × 6) — che
+è coerente: le didascalie non sono dove il parser le cerca. 🔴 **Il budget si conta leggendo le
+didascalie**, che qui vanno raccolte fuori dal corpo.
+
+### Preflight, per una sessione fredda
+
+| | |
+|---|---|
+| superficie **testo** | `files/fulltext/PMID23370280_Salah2013_PMC.xml` · `sha256 d6d46a8c7a2d8ee9ec281d53d0f4a3f3d1aeb8e4b99e16c383891f8f133f446e` — **già sul disco** |
+| superficie **figure** | `files/fulltext/PMID23370280_Salah2013.pdf` · `sha256 d8cb3a81a045ec59fe1ebd00dffe851e4592cb3424a20309c4a77bd44e30616c` — misurare `smask` prima di estrarre |
+| ricevute | **0 su main · lettore · lettore-b · mirror · evidence-index · codex** |
+| estrattore | da misurare **su questo artefatto** prima di scegliere le span |
+
+### La domanda con cui aprirlo
+
+Non *«il paper conferma l'attribuzione?»* ma **«su quale figura poggia, e cosa mostra quella
+figura?»**. `DL-THER-095` afferma che ITCH **alza** l'abbondanza di WWOX sulla base di
+`PMID 24550385` (CHX chase, MEF `Itch⁻/⁻`, `0.36` contro `1`). Se anche questo paper lo mostra,
+la voce guadagna una fonte indipendente; se mostra qualcosa di diverso — «proteasomal» nel testo
+del commit candidate non è la stessa parola di «K63, degradation-independent» — allora
+l'attribuzione va corretta e `DL-THER-095` con essa.
+
+**Next action:** aprire il documento **raccogliendo le didascalie da fuori il `<body>`**.
