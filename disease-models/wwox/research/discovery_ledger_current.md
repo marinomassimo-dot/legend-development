@@ -2792,3 +2792,139 @@ separati nel testo, perché è il titolo che viaggia.** Un conteggio nel titolo 
 controllare il conteggio; la proposizione sostanziale sta sotto e sopravvive. Terza volta
 stasera che arrivo con un titolo troppo forte su un nucleo che regge — Johannsen, Steinberg,
 questa. Le tre correzioni restano accanto ai rispettivi reperti invece di essere cancellate.
+
+---
+
+### 🔴 DL-MECH-096 — `RUNX2` a valle di `WWOX` non ha *un* segno: ne ha uno per preparazione, ed è un vincolo per la Track C
+
+**Fonte:** `PMID 18487609` (Aqeilan 2008, *J Biol Chem* 283:21629-39), lettura completa
+`FTR-20260811-18487609-01`, `32/32` pannelli. **Classificazione: `DATO` per le due misure,
+`INFERENZA` per la riconciliazione, `VINCOLO OPERATIVO` per la conseguenza.**
+
+**`DATO`.** Stesso knockout `Wwox`, stesso paper, due preparazioni:
+
+| preparazione | `Runx2` nel KO | pannello |
+|---|---|---|
+| osso in vivo, femore, g7 | **1,50** (+50%) | Fig 5A |
+| osso in vivo, calvaria, g7 | **1,385** (+39%) | Fig 5A |
+| osteoblasti calvariali **isolati**, g12 | **0,295** (−70%) | Fig 6C |
+
+Nello stesso pannello 5A ogni altro gene — `Alp` 0,40 · `Bsp` 0,595 · `ColI` 0,40 · `H4` 0,715 ·
+`Oc` 0,60 — **scende**. `Runx2` è l'unico che sale, e sale in entrambe le ossa.
+
+**`INFERENZA` (riconciliazione, non contraddizione).** La misura tissutale include il
+**reclutamento**: più osteoprogenitori entrano nella linea per compensare la perdita da
+riassorbimento, e `Runx2` è il marcatore di quel reclutamento. La coltura isolata rimuove
+l'input sistemico ed espone il deficit intrinseco. Le due misure non si smentiscono: **misurano
+cose diverse con lo stesso nome.**
+
+**🔴 `VINCOLO OPERATIVO` per la Track C, scritto come vincolo e non come osservazione:**
+
+> **Un nodo il cui segno cambia fra tessuto e cellula isolata non può portare un'ipotesi di
+> riposizionamento.**
+
+La Track C richiede una **direzione di pathway con segno** prima che un nodo si apra. Qui il
+segno non è ignoto — è **doppio**, e un agente scelto per spingere `RUNX2` nella direzione
+«giusta» lo spingerebbe nella direzione sbagliata in una delle due preparazioni. La domanda che
+un nodo così deve superare non è *«in che direzione va?»* ma **_«su quale preparazione si misura
+l'endpoint, e quel readout ha lo stesso segno del bersaglio terapeutico?»_**
+
+**Stessa forma di `DL-MECH-094`**, dove la firma metabolica degli organoidi era confusa col
+difetto di differenziamento: un readout tissutale e uno cellulare autonomo che portano lo stesso
+nome e danno risposte opposte. **Due volte in due giorni, su due assi diversi, dallo stesso
+meccanismo di confusione.** Va cercata la terza.
+
+**`REVIVAL_TRIGGER` / cosa scioglierebbe il nodo:** la delezione `Wwox` **osteoblasto-specifica**,
+che il paper stesso nomina come l'unico esperimento risolutivo (*«only an osteoblast-specific in
+vivo deletion of WWOX can establish a direct role for WWOX in bone formation»*). Finché non
+esiste, ogni misura qui sta dentro un knockout total-body che muore a tre settimane con
+deperimento d'organo, ipoglicemia, ipoproteinemia e ipocalcemia.
+
+---
+
+### 🔴 DL-META-097 — L'eterozigote è silente sull'organismo e dimezzato sul tessuto, **nello stesso paper**: «portatore non affetto» è un'affermazione sullo strumento
+
+**Fonte:** `PMID 18487609`, Fig 3B (µCT, g15) e Fig 4B, contro il primo paragrafo dei Results.
+**Classificazione: `DATO` per le misure, `INFERENZA` per la lettura, `ESPANSIONE` dichiarata per
+qualunque transfer all'uomo.**
+
+**`DATO`, due frasi dello stesso articolo a ~2000 parole di distanza:**
+
+> *«Wwox heterozygous (HET) pups were indistinguishable from wild-type (WT) animals at all stages
+> of development and postnatal life»* — Results, primo paragrafo
+
+| Fig 3B, g15 | WT | **HT** | scarto |
+|---|---|---|---|
+| Trab. No (1/mm) | 3,62 ±0,10 | 2,92 ±0,25 | **−19%** |
+| Conn. Dens (1/mm³) | 128 ±10 | 64 ±8 | **−50%** |
+| Bone Surface (mm²) | 6,30 ±0,28 | 2,88 ±0,30 | **−54%** |
+| Tiss. Dens (mg/ccm) | 722 ±8 | 703 ±10 | −2,6% |
+
+Nessuna barra d'errore delle prime tre si sovrappone. Fig 4B lo **ripete indipendentemente**:
+l'HT è intermedio fra WT e KO per volume osseo e per entrambe le superfici di formazione a g12.
+
+**Il paper lo dichiara** (*«reduced trabecular member connectivity and bone surface area in both
+the HET and KO»`*): questo è un controllo tornato **negativo**, ed è registrato come tale. Ero
+andato a cercare un dato nascosto nei pannelli con il testo muto, e il testo non è muto.
+
+**`INFERENZA`, ed è il punto:** *«indistinguibile dal wild-type»* e *«metà della connettività
+trabecolare»* sono **entrambe vere dello stesso animale**. Quale delle due viene riportata non
+lo decide l'animale: lo decide **quale strumento si prende in mano**. Un fenotipo eterozigote
+misurabile può convivere con una descrizione di piena normalità senza che nessuno menta.
+
+**🔴 `ESPANSIONE`, dichiarata come tale e non promuovibile:** nulla di questo si trasferisce ai
+portatori umani di varianti `WWOX` — il tessuto rilevante là non è l'osso, e la specie, l'età e
+l'allele sono tutti diversi. Ciò che si trasferisce è **la forma dell'errore**: in una malattia
+i cui portatori sono descritti come non affetti, *«non affetto»* è una conclusione che eredita
+il limite di risoluzione dell'esame che è stato fatto. È una domanda da porre alla letteratura,
+non una risposta da darle.
+
+---
+
+### 🔴 DL-META-098 — Un nullo senza test nominato che regge un intero fenotipo, e la legenda che inverte i genotipi
+
+**Fonte:** `PMID 18487609`, Fig 3D e Fig 4B. **Due difetti distinti, stessa famiglia: ciò che il
+lettore riceve non è ciò che il pannello mostra.**
+
+**① Il falso negativo — `PREMISE: DEFAULT_FROM_TEXTBOOK`**
+
+Fig 3D, `Wwox` mRNA / GAPDH sotto differenziamento indotto da RANKL:
+
+    RAW264.7    1,00  ->  0,77     (−23%, barre d'errore dentro il tratto della barra)
+    midollo     2,23  ->  1,67     (−25%)
+
+**Due sistemi indipendenti, stessa direzione.** Il testo: *«Differentiation to osteoclasts
+(induced by RANKL) did not result in significant changes in WWOX expression»*. **Nessun test
+statistico, nessun `n`, nessuna soglia** compaiono nella legenda, nei Methods o sul pannello.
+
+La premessa portante è *«un 25% in una qPCR è rumore»*, e **non è scritta da nessuna parte
+perché sembrava troppo ovvia per scriverla** — la forma esatta che la disciplina sulle premesse
+esiste per catturare. Il paper stesso registra che l'esperimento risolutivo era impossibile:
+*«it was not possible to isolate viable progenitors from bone marrow or spleen from the
+Wwox-/- mice»*. Su quel nullo poggia la conclusione *«osteoclast activity is not impaired in
+vivo with WWOX deficiency»*, ed è così che **l'intero fenotipo di riassorbimento viene attribuito
+all'ipocalcemia sistemica** anziché a un ruolo dell'osteoclasta.
+
+**`REVIVAL_TRIGGER`:** qualunque misura di WWOX (proteina o attività) lungo l'osteoclastogenesi
+RANKL-dipendente **con un test dichiarato**, oppure una delezione `Wwox` osteoclasto-specifica.
+
+**② La legenda con tre barre e due etichette**
+
+Fig 4B: sei grafici, tre barre per gruppo d'età. La legenda ha **tre riquadri e due etichette** —
+grigio chiaro `WT HT`, nero `KO`, e un terzo riquadro grigio scuro **senza alcun testo**. Presa
+alla lettera, il knockout è la barra nera: a g12 avrebbe volume osseo 4,3 su 5,25 mm³, cioè
+**quasi normale**, e la barra grigio scura resterebbe inspiegata.
+
+L'assegnamento vero — chiaro = WT, nero = HT, **scuro = KO** — è forzato da tre affermazioni
+direzionali indipendenti del testo, ed è recuperabile **solo** incrociandole:
+
+| verifica | g7 | esito |
+|---|---|---|
+| densità minerale ridotta nel KO | 485 · 480 · **295** | solo il grigio scuro è ridotto |
+| porosità corticale **non** più alta a g7 | 9,6 · 11,1 · **8,6** | solo il grigio scuro è più basso, come il testo richiede |
+| superfici di formazione ridotte (subperiostale, g12) | 1,50 · 0,97 · **0,45** | idem |
+
+**Stessa classe dell'asterisco non marcato del 2026-08-06.** Un lettore che si fida della legenda
+non ottiene un numero impreciso: ottiene **il fenotipo invertito**. E l'unica difesa è ciò che la
+regola 5c prescrive comunque — guardare il pannello alla risoluzione originale e leggerlo contro
+il testo, mai attraverso di esso.

@@ -2374,9 +2374,53 @@ misura su un fetch che non è il file sul disco.**
 - **Solo `16061658` (rifiutato) o `12514174` (da recuperare e schermare) possono ancorare quel
   frame.**
 
+### ✅ `18487609` — **LETTO il 2026-08-11.** Receipt `FTR-20260811-18487609-01`, `complete_fulltext_read`
+
+`32/32` pannelli · manifest `PMID18487609.json` `MANIFEST STRICT PASS` (17 artefatti, 23 locator)
+· **il gate multi-hop di `FT-062` è chiuso**: `18487609` era una delle sei gene-dirette di
+`23370280` con `resolved` vuoto.
+
+Le cinque istruzioni qui sotto (①–⑤) hanno tenuto tutte, compreso il blocco `<style>` in testa al
+body. **Il preflight del ④ e del ⑤ va però corretto su due punti, entrambi difetti degli
+strumenti e non del paper** — vedi sotto.
+
+#### Cosa ha dato il paper
+
+| | reperto |
+|---|---|
+| 🔴 **`Runx2` cambia segno** | in vivo **+50%** femore / **+39%** calvaria (Fig 5A); ex vivo, osteoblasti calvariali isolati, **−70%** (Fig 6C). Stesso KO, stesso paper. |
+| 🔴 **la frase riassuntiva** | la Discussion scrive *«an indirect effect that leads to decreased RUNX2 expression **in bone** and in isolated osteoblasts»* — la metà «in bone» è contraddetta dalla sua stessa Fig 5A, e 400 parole prima la stessa Discussion scrive *«slightly increased in both calvarial and femoral bone»*. |
+| 🔴 **vincolo Track C** | **un nodo che cambia segno fra tessuto e cellula isolata non può portare un'ipotesi di riposizionamento.** Non è un'osservazione: è un vincolo. `RUNX2` a valle di `WWOX` non ha *un* segno, ne ha uno per preparazione. |
+| 🔴 **falso negativo sull'osteoclasta** | Fig 3D: RANKL porta `Wwox` da 1,00 a 0,77 (RAW264.7) e da 2,23 a 1,67 (midollo) — due sistemi, stessa direzione, barre d'errore dentro il tratto della barra, **nessun test nominato**. Il testo lo chiama *«did not result in significant changes»*, e su quel nullo poggia *«osteoclast activity is not impaired in vivo»*. `PREMISE: DEFAULT_FROM_TEXTBOOK`. |
+| 🔴 **legenda Fig 4B rotta** | tre barre per gruppo, **due etichette**: `WT HT` su grigio chiaro, `KO` su nero, e un terzo riquadro grigio scuro **senza etichetta**. Preso alla lettera **inverte il fenotipo**. L'ordine vero (chiaro=WT, nero=HT, scuro=KO) è recuperabile solo incrociando tre affermazioni direzionali del testo. |
+| **eterozigote** | silente a livello d'organismo, **−50% conn. dens. e −54% bone surface** a livello tissutale (Fig 3B, g15), barre non sovrapposte. Il testo *lo dichiara* — controllo tornato **negativo** per il paper. |
+| **tre scarti numerici** | `∼25%` misura 50/39% · `4-4.5-fold` misura 3,28× · `∼50%` misura 60%. Tutti in direzione lusinghiera. |
+| **lacuna dichiarata** | supplemental Tables 2-4 dietro il proof-of-work PMC: il *«50% lower calcium»* su cui poggia tutta l'attribuzione metabolica **non è stato visto**. |
+
+#### 🔴 Due difetti di strumento trovati durante questa corsa
+
+**a) Lo screen `ToUnicode` va fatto per-font, non per-file.** Questo PDF passa lo screen di file
+(7 font ce l'hanno) ed è comunque `SUSPECT` per assenza: i 13 senza mappa includono
+`MathematicalPi-One/Four` e `Universal-GreekwithMathPi`, **cioè esattamente i font che compongono
+`α β × ± µ Δ`**. Misurato su tutti e 55 i PDF locali: **11 con zero mappe ovunque** (lo screen di
+file li prende) e **10 in più con una mappa ma un font-simbolo senza** (li lascia passare), di cui
+tre `SUSPECT` per assenza — `18487609`, `24550385`, `26499798`. **Undici mine diventano ventuno.**
+Resta uno screening **negativo**: `17803050` e `33916893` hanno font-simbolo senza mappa e non sono
+sospetti. Il corpus è comunque pulito: dei 36 manifest **uno solo** ha un testo derivato da PDF
+(`42128308`), e quel PDF ha zero font senza mappa.
+
+**b) Il censimento pannelli non rifiuta su un buco nell'alfabeto.** Ha stampato `A,B,C,E` per la
+Figura 2 e ha restituito 27 senza protestare, perché la didascalia scrive *«higher magnifications
+in D showing»* e il regex vuole una virgola, un punto, una parentesi o una congiunzione dopo la
+lettera. **Una quarta condizione di rifiuto — lettere contigue a partire da A — va aggiunta a quel
+tool.** Il conteggio corretto è 28 lettere + 4 sub-pannelli nominati in 2B = **32**.
+
+---
+
 ### ▶️ NEXT ACTION — scritta per una **sessione fredda**. Nulla di questa conversazione serve.
 
-**Apri `PMID 18487609`.** È pronto, non richiede decisioni, e chiude il gate.
+**`18487609` è chiuso.** Le istruzioni ①–⑤ qui sotto restano come traccia di cosa è stato
+verificato prima di aprirlo, non come lavoro da fare.
 
 **① Cosa è già sul disco e NON va ri-derivato**
 
@@ -2413,7 +2457,7 @@ numero non è mai un denominatore.
 
 | | stato all'11 agosto |
 |---|---|
-| **`12514174`** Chang 2003 | 🟡 **non sul disco.** `pmcid: null`, non in PMC. Unpaywall: `is_oa: true`, ibrido, PDF all'editore `jbc.org`. 🔴 **Va recuperato e POI schermato**: è un PDF JBC del 2003, coetaneo di quello appena rifiutato, e il rischio che porti la stessa corruzione è alto. **Schermare prima di chiamarla lettura.** |
+| **`12514174`** Chang 2003 | 🟡 **non sul disco.** `pmcid: null`, non in PMC. Unpaywall: `is_oa: true`, ibrido, PDF all'editore `jbc.org`. 🔴 **Va recuperato e POI schermato**: è un PDF JBC del 2003, coetaneo di quello appena rifiutato, e il rischio che porti la stessa corruzione è alto. **Schermare prima di chiamarla lettura.** 🔴 **E ora lo screening ha un primo gesto che costa un secondo e non richiede di estrarre nulla**: aprire il PDF e chiedere, **font per font**, se ha una `ToUnicode`. `18487609` — un JBC di cinque anni dopo, stesso editore, stessa filiera tipografica — ha `MathematicalPi-One`, `MathematicalPi-Four` e `Universal-GreekwithMathPi` **senza mappa**, ed è `SUSPECT` per assenza pur avendone sette. Se il PDF che arriva assomiglia a quello, **la risposta è nota prima di leggere una riga**. Necessario ma non sufficiente: la sentinella sul testo estratto resta l'arbitro. |
 | **`16061658`** Aqeilan 2005 | 🔴 **SOSPESO.** Superficie rifiutata (`SUSPECT`), receipt `FTR-20260811-16061658-01` `retrieved_not_read`. L'unica via è l'aggiudicazione di pagina 5e, che **l'operatore ha messo fuori mandato e non ha revocato**. Non aprirla senza sua decisione. |
 
 **Il frame WW1 resta `NON ANCORATO`** finché una delle due non cade — e `DL-THER-095` lo dichiara
