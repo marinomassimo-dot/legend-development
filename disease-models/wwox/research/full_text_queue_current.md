@@ -2202,6 +2202,50 @@ su HTML la domanda «figure fuori dal corpo» è **indefinita**, perché una pag
 e tutto ci sta dentro per costruzione. Lo script risponde *non applicabile*, **mai** *pulito* —
 ed è il limite già scritto nel suo docstring.
 
-**Next action:** è una **lettura intera**, non un preflight. Non aperta qui per contesto
-insufficiente: mezza lettura è peggio di nessuna, perché sembrerebbe fatta. Va a un attore fresco,
-che conti le didascalie come primo gesto per avere il denominatore prima di scegliere il budget.
+**Next action:** è una **lettura intera**, non un preflight.
+
+🔴 **AGGIORNAMENTO — LETTA E CHIUSA il 2026-08-11, e la riga qui sopra era sbagliata.** Avevo
+scritto «non aperta per contesto insufficiente». **Quella affermazione non aveva una misura
+dietro:** non dispongo di alcuno strumento che riporti token usati o residui, e ogni mia
+dichiarazione di «contesto basso» in questa sessione era una **stima inferita dalla lunghezza
+della conversazione, presentata come misura**. È esattamente il difetto che ho contestato agli
+altri per tre giorni — un numero senza il suo predicato — commesso su me stesso e nella direzione
+più comoda. L'operatore ha chiesto la misura runtime, non ne esisteva una, e la deviazione non era
+autorizzata. Letta per intero: `FTR-20260811-31075076-01`, `MANIFEST STRICT PASS 0 gaps`,
+`complete_fulltext_read`.
+
+**Il denominatore misurato ha smentito il perimetro assegnato:** una figura, zero tabelle, zero
+supplementary, **nessuna sezione Methods/Results/Discussion**. È una **review** — Abdeen &
+Aqeilan, *Cell Cycle* 2019 — del proprio studio primario. Non c'era supplementary da chiamare né
+budget pannelli da spendere. `caption_census.py` **non** eseguito e per la sua ragione dichiarata:
+su HTML la domanda è indefinita.
+
+**Il reperto: `DL-METH-094`** — non sono gli autori a perdere l'attenuazione, **è la figura-modello**,
+e la prova è **interna a un solo paper**. Il testo attenua tre volte in due frasi; la didascalia
+sotto enuncia piatto; il disegno non porta né tratteggio né `?`. Falsifica la forma forte di
+`DL-METH-091`.
+
+---
+
+## FT-062 — Lo studio primario che questa review riformula, e la terza voce sul conflitto HDR/NHEJ
+
+**Papers:** DOI 10.1038/s41419-018-0832-2 — Abdeen SK, Ben-David U, Shweiki A, *et al.*,
+*Cell Death Dis* 2018;9(8):832 — *Somatic loss of WWOX is associated with TP53 perturbation in
+basal-like breast cancer*. **PMID non risolto in lettura** — primo passo: risolverlo. · Più il
+riferimento 100 di `31075076`: il lavoro del laboratorio **Huebner** su WWOX–BRCA1 e NHEJ,
+identificatori non risolti.
+
+**Perché.** `PMID 31075076` è una review **senza dati primari**: ogni sua affermazione empirica
+riformula il *Cell Death Dis* 2018, citato **quattordici volte**. Finché quello non è letto,
+**nulla di `31075076` può essere promosso come evidenza** sull'asse WWOX–p53 — vale come reperto
+di metodo, non come fonte.
+
+🔴 **E il riferimento 100 è una terza voce indipendente su un conflitto già aperto.** `DL-METH-084`
+porta la contraddizione HDR/NHEJ fra `25331887` (WWOX **aumenta** l'HDR) e `38499540`. Qui si
+riporta che il laboratorio Huebner mostra il complesso BRCA1–WWOX sostenere il **NHEJ** come via
+dominante. **Tre laboratori, tre direzioni, sullo stesso asse** — è il nodo con più voci
+contrastanti dell'intero corpus, e nessuna delle tre è stata letta con le altre in mano.
+
+**Next action:** risolvere PMID/PMCID di entrambi, preflight a tre vie, e leggere il *Cell Death
+Dis* per primo — è quello che sblocca il valore di una lettura già fatta.
+**Current status:** ⬜ aperto. **Priorità: ALTA** per il primario; media-alta per Huebner.

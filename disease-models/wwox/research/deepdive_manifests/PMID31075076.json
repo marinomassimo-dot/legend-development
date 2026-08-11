@@ -1,0 +1,179 @@
+{
+  "schema_version": 2,
+  "pmid": "31075076",
+  "doi": "10.1080/15384101.2019.1616998",
+  "receipt": "FTR-20260811-31075076-01",
+  "landing": ["FTR-20260811-31075076-01", "full_text_queue_current", "discovery_ledger_current"],
+  "skills_considered": [
+    {"skill": "legend-study-intake-triage", "used": true, "reason": "No prior manifest, no prior receipt. The HTML surface was already on the shared disk, so no retrieval was needed."},
+    {"skill": "find-fulltext", "used": false, "reason": "Surface already present and fingerprinted. The only retrieval performed was the figure image."},
+    {"skill": "caption-census", "used": false, "reason": "🔴 DELIBERATELY NOT USED, AND THE REASON IS THE TOOL'S OWN STATED LIMIT. This is an HTML surface: a page has exactly one <body> and everything is inside it by construction, so 'figures outside the body' is undefined, not clean. Running it would have returned a meaningless zero. The figure denominator was established by READING — one figure referenced twice, one 'Open in a new tab', zero tables, zero supplementary."}
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 137,
+    "publications_on_gene": 65,
+    "counts_measured": "PubMed esearch, 2026-08-11: 'Aqeilan RI[au]' 137, 'Aqeilan RI[au] AND WWOX' 65 — the same measurement as PMID 27308504, reused rather than re-run because it is the same senior author on the same date.",
+    "research_type": "primary_disease_group",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "primary_group_note": "Abdeen SK and Aqeilan RI, Lautenberg Center, Hebrew University. The same laboratory as PMID 27308504 and PMID 25331887. That identity is what makes this reading a controlled comparison rather than a new data point.",
+    "weighting": "🔴 THIS PAPER INVERTS THE WEIGHTING I APPLIED TO PMID 27308504, AND THAT IS THE FINDING. There I recorded that authorship weights the interpretation DOWN, because authors restating their own work restate it more firmly. Here the same authors, one year later, restating the same work in a different venue, hedge CORRECTLY throughout the running text: 'we propose', 'it is possible to speculate', 'still to be investigated', 'yet to be shown'. So the down-weighting cannot be a property of authorship. What it is a property of is recorded in corpus_crossquery."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {"query": "Aqeilan RI[au] AND WWOX", "route": "PubMed esearch 2026-08-11", "count": 65},
+      {"query": "Aqeilan RI[au]", "route": "PubMed esearch 2026-08-11", "count": 137}
+    ],
+    "note": "Entirely WWOX-directed. A review, in Cell Cycle, by the authors of the primary study it reviews."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 120,
+    "gene_direct_refs_in_source": [
+      {"ref": 10, "note": "Abdeen SK, Ben-David U, Shweiki A, et al., 'Somatic loss of WWOX is associated with TP53 perturbation in basal-like breast cancer', Cell Death Dis 2018;9(8):832. THE PRIMARY STUDY THIS REVIEWS, cited 14 times. Not read."},
+      {"ref": 22, "pmid": "25331887", "note": "Abu-Odeh 2014 PNAS, WWOX and ATM. Read completely in this corpus, 30 locators."},
+      {"ref": 13, "note": "Khawaled et al., WWOX antagonises EMT through c-MYC and miR-146a. Corpus holds PMID 32300104 Khawaled 2020 as a surface; identity of ref 13 not resolved here."},
+      {"ref": 100, "note": "Huebner lab, WWOX binds BRCA1 via its first WW domain and supports NHEJ as the dominant DSB repair pathway. NOT READ, and it is the third independent claim in this corpus about WWOX and repair-pathway CHOICE — see the HDR/NHEJ conflict already recorded in DL-METH-084."},
+      {"ref": 23, "note": "The SSB/ATR arm, companion to ref 22. Not read."}
+    ],
+    "resolved": [
+      {"ref": 22, "pmid": "25331887", "status": "read completely in this corpus; the sentence this review draws from it is quoted verbatim at entries[5] and checked against the primary"}
+    ],
+    "queued": [
+      {"ref": 10, "queue": "FT-062", "reason": "Cell Death Dis 2018;9(8):832 — the primary study. Everything empirical in this review is a restatement of it, exactly as PMID 27308504 restates PMID 25331887. Reading the review without it means the comparison that makes this reading valuable cannot be completed on the p53 axis."},
+      {"ref": 100, "queue": "FT-062", "reason": "The BRCA1-WWOX/NHEJ claim. It bears directly on the unresolved HDR-versus-NHEJ direction conflict in DL-METH-084 and is a third laboratory's voice on it."}
+    ],
+    "gap": "The reference list holds 120 entries and only the five above were classified as gene-direct; the remainder are breast-cancer, p53, EMT and microRNA background. Ref 10 and ref 100 are queued rather than absorbed."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does the hedge erosion recorded in DL-METH-091 hold when the same authors restate the same work in a different venue?",
+    "hits": 2,
+    "finding": "🔴 NO — AND THE FALSIFICATION IS SHARPER THAN THE ORIGINAL CLAIM. DL-METH-091 said a commentary by authors on their own paper is not a summary, because modality degrades. This is a review by the same laboratory on its own primary study, and the running text hedges PROPERLY throughout: 'Our recent study SUGGESTS new mechanisms', 'The first mechanism WE PROPOSE', 'it is POSSIBLE TO SPECULATE', 'is STILL TO BE INVESTIGATED', 'this is YET TO BE SHOWN'. Authorship therefore does not predict erosion. WHAT DOES, on the evidence of both papers, is the MODEL FIGURE. Here the running text that introduces Figure 1 hedges three times in two sentences, and the figure caption directly below states the same three mechanisms flatly — 'WWOX modulates ER expression and function, which in turn positively or negatively affects p53' — with no modal at all, and the drawing carries no dashed line, no question mark and no 'proposed' anywhere. The comparison is INTERNAL: same authors, same year, same venue, same paragraph. That controls for everything the venue-based explanation would need. 🔴 AND THE SECOND HALF REPLICATES PMID 27308504 EXACTLY: the one place this figure DOES hedge is ER→p53, drawn as two opposing arrows simultaneously because the authors have no directional claim there — precisely as 27308504's only hedge was a '?' on the MRN complex, the one element that was not its authors' claim. Two independent papers, same laboratory, same asymmetry: the figure marks uncertainty where the authors have no stake and states flatly where they do."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-11",
+    "route": "PMC record header for PMC6592247 as carried in the local HTML artifact",
+    "result": "No retraction, no expression of concern, no erratum. Cell Cycle 2019;18(11):1177-1186, received 2019-03-02, accepted 2019-04-18.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID31075076_Abdeen2019_PMC.html",
+      "sha256": "556336eaad86998710bd2b369e31bd988f5e26ac934d9d7ba2327611f398f7b1",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID31075076_Abdeen2019_assets/g001.jpg",
+      "sha256": "fdfce0f6797e31816dcbde50cbb4e16a4e14361b4ff9540b5308795bda819a8a",
+      "kind": "figure"
+    }
+  ],
+  "figure_extractions": {
+    "rule": "One figure in the paper, one locator on it. The denominator was established by reading, not by a tool.",
+    "figures": [
+      {
+        "label": "Figure 1",
+        "artifact": "files/fulltext/PMID31075076_Abdeen2019_assets/g001.jpg",
+        "route": "PMC blob CDN, kccy-18-11-1616998-g001.jpg",
+        "dimensions": "800x820",
+        "inspected_at": "800x820, the deposited resolution — this is a vector-style schematic of boxes and arrows, so 800 px is not a limitation on anything the locator claims",
+        "route_note": "The legacy pmc.ncbi.nlm.nih.gov/articles/instance/.../bin/ path returned 404 with a 48,716-byte HTML body — the same trap recorded on PMID 27308504. Any pipeline checking only the status code or only the file size would have saved that HTML as an image. The working route was the src attribute in the article HTML itself."
+      }
+    ]
+  },
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC HTML, body 52,747 characters and abstract 944 characters separated by main's own extractor. Every text locator matched at mode=strict except entries[7], which matched folded because the source renders 'Wwox -heterozygous' with a space before the hyphen.",
+    "extractor_provenance": "Verified with the worktree copy of framework/scripts/deepdive_manifest.py, which git diff confirms is identical to main's. The suspect-surface screen passes.",
+    "abstract_anchoring_waived": "No locator draws on the abstract.",
+    "figure_coverage": {
+      "figures_present": 1,
+      "figures_with_locators": 1,
+      "coverage": "1/1",
+      "budget_declared_before_reading": "🔴 THE DENOMINATOR WAS ESTABLISHED BEFORE READING THE BODY AND IT CONTRADICTED THE ASSIGNED PERIMETER. The task was framed as a whole reading with a measured panel budget, and the advice was to call supplementaryFiles first — which on another paper had returned eleven figures in one call. Measured here instead: ONE figure referenced twice in the running text, one 'Open in a new tab', ZERO tables, ZERO supplementary, and no Methods, Results or Discussion sections. The paper is a REVIEW with a single schematic. There was no supplementary to call and no panel budget to spend. Recorded because the correct denominator is what makes a coverage number mean anything, and here it turned a large-sounding task into a small one."
+    },
+    "panel_text_relation_note": "One panel/text pair: entries[4] qualifies entries[1], carrying qualifies and qualifies_needle. No contradictions — the figure does not falsify the text, it states without hedge what the text states with three.",
+    "entries": [
+      {
+        "proposition": "WHAT THIS DOCUMENT IS, established before anything is drawn from it. A review, by the authors, of their own primary study — the same structural relationship PMID 27308504 has to PMID 25331887. No Methods, no Results, no Discussion section exists in the body; the empirical content is entirely restatement, and ref 10 (Cell Death Dis 2018) is cited fourteen times.",
+        "snippet": "In this review article, the crosstalk of WWOX-p53 in aggressive breast cancer is discussed",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31075076_Abdeen2019_PMC.html",
+        "anchor": "Introduction, final sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "🔴 THE HEDGED SENTENCE, AND IT IS THE CONTROL THAT FALSIFIES MY OWN GENERALISATION. DL-METH-091 concluded that authors restating their own work state it more firmly. Here the same laboratory, restating the same work, hedges properly and repeatedly. The verb is 'suggests', the mechanism is 'proposed', and the inference is marked 'possible to speculate' — three hedges in two consecutive sentences, on the exact claim the figure below then states flat.",
+        "snippet": "Our recent study suggests new mechanisms of regulation of p53 that are mediated by WWOX action",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31075076_Abdeen2019_PMC.html",
+        "anchor": "Section 'The interplay between WWOX and p53 in breast carcinogenesis: conclusions and future perspective'. The Figure 1 citation follows immediately.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The second hedge of the same passage, quoted separately because the two are doing different work: this one marks the mechanism as the authors' proposal rather than a finding.",
+        "snippet": "The first mechanism we propose is p53 regulation through ER signaling",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31075076_Abdeen2019_PMC.html",
+        "anchor": "Same section, next sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The third, and the strongest marking of the three: the inference from WWOX to p53 by way of ER is labelled speculation by the people making it.",
+        "snippet": "it is possible to speculate that WWOX through regulating ER levels controls those of p53",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31075076_Abdeen2019_PMC.html",
+        "anchor": "Same sentence, continuation",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "🔴 PANEL SIDE, QUALIFYING — AND THIS IS WHERE THE HEDGE DIES, INSIDE A PAPER THAT HEDGES CORRECTLY EVERYWHERE ELSE. The caption and the drawing state the three mechanisms as facts. No modal, no 'proposed', no dashed line, no question mark, no 'model' anywhere in the drawing's own lettering. The comparison is INTERNAL — same authors, same year, same venue, same paragraph — which controls for everything an explanation based on venue or on authorship would need. What the figure does hedge is the one thing the authors have no directional claim about: ER→p53 is drawn as TWO OPPOSING ARROWS SIMULTANEOUSLY, an inhibition and an activation from the same box to the same box, matching the caption's 'positively or negatively'. That is the exact asymmetry recorded on PMID 27308504, where the only hedge in the whole figure was a question mark on MRN — the one element that was not its authors' claim. Two papers, one laboratory, same rule: the figure marks uncertainty where the authors have no stake, and states flatly where they do.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 1 at 800x820: an orange-outlined WWOX ellipse at the top with three solid lines descending — a blunt-ended inhibition to a 'Genomic instability' box, a plain arrowhead to an 'ER pathway' box, a blunt-ended inhibition to an 'EMT' box. Below, a blue-outlined 'p53' box receives from 'ER pathway' TWO separate solid lines drawn side by side, one blunt-ended and one arrowheaded. 'Genomic instability' and p53 are joined by two parallel blunt-ended lines pointing in opposite directions, as are 'EMT' and p53. Every line in the image is solid; there is no dashed stroke, no question mark and no word other than the six node labels.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID31075076_Abdeen2019_assets/g001.jpg",
+        "anchor": "Figure 1, whole image, arrow styles and hedging marks, read at the deposited 800x820",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[1]",
+        "qualifies_needle": "suggests new mechanisms of regulation of p53"
+      },
+      {
+        "proposition": "THE CAPTION ITSELF, quoted so the comparison with entries[1]-[3] is verifiable on both sides rather than argued. Authored prose, in the declared surface, character-for-character. Note the construction 'positively or negatively affects p53' — the one place the caption declines to commit, and the one place the drawing carries two arrows.",
+        "snippet": "WWOX modulates ER expression and function, which in turn positively or negatively affects p53",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31075076_Abdeen2019_PMC.html",
+        "anchor": "Figure 1 caption, item II. Declared surface body, not figure: this is authored prose in the HTML page and is verified character-for-character. Labelling a caption quote 'figure' would exempt it from that check.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE ATM CHAIN AGAIN, AND IT IS THE THIRD DOCUMENT IN THIS CORPUS TO CARRY IT. Stated flatly and cited to ref 22 = PMID 25331887, which this corpus has read completely. The verb here is 'enhances its activation' — firmer than Santini's 'putative' and Abu-Odeh's 'regulates', softer than Hazan's 'phosphorylates'. It belongs in the chain of DL-METH-093, and unlike Hazan it KEEPS ITS CITATION, which is the difference that matters.",
+        "snippet": "Upon DNA damage, WWOX levels are induced and accumulate in the cell nucleus, where it interacts with ATM and enhances its activation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31075076_Abdeen2019_PMC.html",
+        "anchor": "Section 'WWOX, p53, and genomic instability'. The citation marker [22] follows.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "🔴 THE ONE FACT IN THIS REVIEW THAT BEARS DIRECTLY ON THE REFERENCE GENOTYPE, and it is the opposite of the transfer flagged on PMID 27308504. There the schematic printed WWOX(+/-) on evidence that was entirely knockdown and null, with no heterozygous system anywhere in the primary. HERE A HETEROZYGOUS SYSTEM IS NAMED AND MEASURED: aged germline Wwox-heterozygous mice, on a mammary-susceptible C3H background, at about 50% penetrance. Recorded because it is the first heterozygous phenotype this corpus has anchored, and because the boundary conditions are as important as the number — the tumours are mammary, the background is chosen for mammary susceptibility, and the animals are aged. It is a cancer phenotype in a sensitised strain, not a statement about carriers of a neurodevelopmental genotype, and it must not be transferred as one.",
+        "snippet": "aged germline Wwox -heterozygous mice in mammary susceptible C3H genetic background develop mammary tumors with ~50% penetrance",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31075076_Abdeen2019_PMC.html",
+        "anchor": "Section 'Wwox and Trp53 conditional knockout (cKO) in mice'. Matched folded: the source renders 'Wwox -heterozygous' with a space before the hyphen.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "AN OPEN QUESTION THE AUTHORS LEAVE MARKED, recorded because it is the honest counterpart of everything above and because it names an unread third-party claim this corpus needs. The Huebner laboratory reports that WWOX binds BRCA1 through its first WW domain and supports NHEJ as the dominant repair pathway — a THIRD independent voice on repair-pathway choice, where this corpus already holds an unresolved conflict between PMID 25331887 (WWOX enhances HDR) and PMID 38499540. Queued as FT-062 rather than absorbed.",
+        "snippet": "The Huebner lab has recently shown that WWOX, via its first WW domain, interacts with BRCA1 and proposed that the BRCA1–WWOX complex supports non-homologous end-joining pathway as the dominant DSB repair pathway in WWOX-sufficient cells",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID31075076_Abdeen2019_PMC.html",
+        "anchor": "Same section, sentence closing the BRCA1 paragraph: 'Whether WWOX affects p53's level/function through BRCA1, is still to be investigated.'",
+        "panel_text_relation": "text_only"
+      }
+    ],
+    "note": "COVERAGE IS COMPLETE FOR WHAT THIS DOCUMENT CONTAINS. Abstract, Introduction, all four thematic sections, the conclusions section, the figure caption and the 120-item reference list read in sequence from the PMC HTML; the single figure inspected at its deposited resolution. There are no Methods, Results or Discussion sections — checked, not assumed: the strings do not occur as headings. No tables and no supplementary material — likewise checked. 🔴 WHAT THIS READING IS NOT: this is a REVIEW and it contains no primary data. Its value here is not evidential but comparative — it is the control that falsifies the authorship-based explanation of DL-METH-091 and localises the erosion to the model figure. The primary study it reviews, Cell Death Dis 2018;9(8):832, is NOT read, and until it is, nothing here may be promoted as evidence for the WWOX-p53 axis."
+  }
+}
