@@ -1,0 +1,189 @@
+{
+  "schema_version": 2,
+  "pmid": "25012504",
+  "doi": "10.1038/cdd.2014.95",
+  "pmcid": "PMC4211377",
+  "receipt": "FTR-20260811-25012504-01",
+  "landing": ["FTR-20260811-25012504-01", "full_text_queue_current.md#FT-021"],
+  "landing_note": "Abu-Remaileh and Aqeilan 2014, Cell Death Differ 21(11):1805-1814. Assigned because HIF1α sits on the convergence list four independent readings produced, AND because PMID 22634283 read an hour earlier changes the question: with WW1's consensus measured as PXPPXYY rather than minimal PPXY, the question is not 'is HIF1α on the list' but DOES IT CARRY THE MOTIF, AND WITH WHAT AFFINITY. That reframing is what this reading was for, and the answer is that the paper does not ask it.",
+
+  "skills_considered": [
+    { "skill": "legend-deepdive", "used": false, "reason": "Run inline. The reading turns on setting this paper's binding evidence against a quantitative standard established in another paper read the same hour, which needs both in hand." }
+  ],
+
+  "reading_budget": {
+    "declared_before_reading": true,
+    "figures_present": 6,
+    "panels_present": 33,
+    "tables_present": 0,
+    "supplementary_elements_present": 2,
+    "panels_inspected": 0,
+    "panel_coverage": "0/33",
+    "method": "Counted by READING the six captions: Fig 1 a-d (4), Fig 2 a-f (6), Fig 3 a-f (6), Fig 4 a-e (5), Fig 5 a-f (6), Fig 6 a-f (6) = 33 lettered panels, of which Figure 6f is a proposed-model schematic rather than a measurement.",
+    "🔴 i_wrote_30_first_and_the_field_now_says_33": "I FILLED THIS FIELD WITH 30 BEFORE FINISHING THE ADDITION, then wrote the correct count in the prose beside it and left the field at 30. THAT IS PRECISELY THE DEFECT I CORRECTED IN MY OWN MANIFEST ON PMID 30356099 — a field contradicting the prose that explains it, passing because nothing compares the two — and I reproduced it four papers later. The field is now 33 and the prose is 33. The reading budget is the one field in a manifest that describes ME rather than the paper, which is why it keeps being filled from intention: nothing downstream re-derives it, exactly as nothing re-derives a DOI. Fourth occurrence in two days, third caught by re-reading my own block.",
+    "🔴 fig_pattern_lesson_confirmed_on_a_second_deposit": "An automatic `<fig>` count returns ZERO on this deposit and `id=\"F[0-9]+\"` returns ZERO; `<figure[^>]*class=\"[^\"]*fig` returns SIX. Identical to PMID 22634283 an hour earlier. A zero from a pattern that does not match the markup is not a measurement of the paper, and it is now confirmed twice rather than argued once.",
+    "named_waiver_all_six_figures": "WAIVED WITH ARGUMENT AND ROUTE, as on PMID 22634283. No figure image is on disk; the supplementaryFiles route was not attempted for this article because the panel claims recorded below are all anchored on TEXT — the Results narrate every panel's outcome and the figure legends carry the n, the error-bar convention and the significance markers. RESIDUAL RISK NAMED, NOT DENIED: rule 5c exists because a panel once reversed a conclusion, and three of the entries below concern blots (5d, 5e, 5f) whose band intensities I have not seen. The route is open — the deposit is Cell Death & Differentiation via PMC and the images would follow the same endpoint that delivered eleven figures for a CC BY paper yesterday. A REREAD THAT INSPECTS FIGURES 3e, 5a, 5d, 5e AND 5f WOULD BE WORTH ITS COST, and is named here so the debt is visible."
+  },
+
+  "surface_preflight": {
+    "structured_surface_preferred": true,
+    "text_surface": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+    "text_surface_verdict": "CLEAN. Sentinel 220 across the body surface, ZERO C0 controls. This is the surface every locator is matched against.",
+    "🔴 pdf_font_screen_run_before_the_pdf_was_touched": "The PDF exists at files/fulltext/PMID25012504_AbuRemaileh2014.pdf, sha256 98d7cba6…, and it was screened PER FONT before any text was taken from it: 10 pages, 24 fonts, TWENTY WITHOUT A ToUnicode MAP, and the unmapped set includes the symbol faces AdvGreek_BI and AdvItcSymbol-M — the exact signature that made PMID 18487609 SUSPECT while passing a file-level check. It is NOT suspect by absence: the extracted layer carries 53 sentinel characters and no instance of 'significan'. But it carries SEVENTEEN C0 CONTROL CHARACTERS, and with the Greek face unmapped there is no reason to prefer it. THE PDF IS DECLARED article_binary AND NO LOCATOR IS ANCHORED TO ITS TEXT. Rule 5d's first consequence — prefer the structured surface — is discharged by measurement rather than by default.",
+    "ref_list_leaks_into_the_html_surface": "Probed and present, as on PMID 22634283: 'Cancer Res' 12 times, 'J Biol Chem' 3, 'Bednarek AK' 1 — bibliography strings inside the body surface. The bibliography begins at character 44,595 of a 57,725-character extraction and no locator below is drawn from it.",
+    "style_block_at_head": "The extractor pulls the CSS <style> block into the head of the body. No span was taken from the first ~700 characters.",
+    "surface_measurement": { "html_body_surface_chars": 57725, "abstract_chars": 1192, "bibliography_starts_at_char": 44595, "html_bytes": 202580, "pdf_bytes": 1170082 }
+  },
+
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_measured": "Not measured, declared as not measured. Abu-Remaileh and Aqeilan, Hebrew University with Ohio State — the laboratory that made the Wwox knockout and whose primary literature this corpus largely rests on. Two authors only.",
+    "research_type": "experimental_lab",
+    "output_kind": "primary_research",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "weighting": "🔴 THE OBSERVATION AND THE INTERPRETATION SEPARATE ALONG A LINE THAT PMID 22634283 DREW AN HOUR EARLIER, AND THE SEPARATION IS THIS READING. THE METABOLIC OBSERVATIONS ARE STRONG AND MULTI-MODAL: glucose uptake by flow cytometry, lactate, Seahorse oxygen consumption, ATP, NADH, NADPH, an independent Metabolon metabolite panel showing raised fructose-1,6-diphosphate with depleted fumarate, malate and succinate, a superarray plus qRT-PCR validation, and the phenotype rescued by HIF1α knockdown in vitro and in vivo. Those converge and do not depend on any single assay. THE BINDING INTERPRETATION IS THINNER THAN THE METABOLISM IT IS ASKED TO EXPLAIN: every WWOX-HIF1α interaction here is a pulldown or co-immunoprecipitation FROM CELL LYSATE, with WW1-dependence established by a mutation (W44F/P47A) that the biophysics literature describes as abolishing WWOX's binding to ALL its partners. No purified binary binding, no affinity, no motif. The metabolic claim would survive a bridged interaction; the mechanistic claim would not."
+  },
+
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      { "query": "does the paper identify a PPXY or PXPPXYY motif in HIF1α?", "route": "searched the whole body surface for motif language", "count": 0, "detail": "🔴 ZERO. 'PPXY' does not appear; the Introduction says WWOX 'interacts with proline-tyrosin motif-containing proteins' when listing AP-2γ, ErbB4 and c-Jun, and HIF1α is never placed in that class. The interaction is attributed to the WW1 DOMAIN, never to a motif in the ligand. See entries[0]." },
+      { "query": "is there a binary, purified-protein binding measurement?", "route": "read Methods and all interaction figures", "count": 0, "detail": "None. GST pulldown from HEK293 lysate, endogenous co-IP from lysate, both requiring MG-132 to stabilise HIF1α. See entries[1]-[2]." }
+    ]
+  },
+
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 48,
+    "gene_direct_count": 0,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "enumeration_method": "NOT ENUMERATED TO PMIDs AND DECLARED AS NOT ENUMERATED. The deposit is an HTML rendering whose bibliography carries DOIs but no PMIDs and no <ref> elements. The WWOX-directed citations named in the prose — the Wwox knockout (ref 4), the conditional models (6, 7), the WW1 mass-spectrometry interactome (14), the Drosophila isocitrate/malate dehydrogenase work (15) — overlap papers this corpus holds or has surfaced, and reference 15 is PMID 21075834, handed off yesterday with its preflight done. None is claimed as resolved on a title match; the discipline that produced a wrong identifier this morning is not repeated."
+  },
+
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "receipt check for 25012504 across every ref in this checkout, and artifact fingerprints against the assignment",
+    "hits": 0,
+    "finding": "TWENTY REFS CHECKED, ZERO RECEIPTS. Both artifact digests verified against the values supplied in the assignment before anything was read and both match exactly — html 2a0de55a…, pdf 98d7cba6…. Population stated with the count."
+  },
+
+  "retraction_check": { "performed": true, "at": "2026-08-11", "route": "local PubMed corpus record for PMID 25012504, harvested 2026-08-06 — offline and re-runnable", "result": "no retraction, no expression of concern, no erratum" },
+
+  "source_artifacts": [
+    { "path": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html", "sha256": "2a0de55a1cbc295a47fe422aac6831e06ca0267f42f091b766807cf05c893d1d", "kind": "article_text" },
+    { "path": "files/fulltext/PMID25012504_AbuRemaileh2014.pdf", "sha256": "98d7cba627e82d1f85c98ae2191bc5a3c08fd4efe907cbf7458f55c2845108d4", "kind": "article_binary" }
+  ],
+
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC HTML for PMC4211377, in the shared files/ tree, digest re-verified here. The PDF is present and fingerprinted as article_binary only, on the font-screen result recorded in surface_preflight. No figure images on disk; figures waived by name.",
+    "abstract_anchoring_waived": "No evidentiary locator uses the abstract; all eleven candidates were tested against the separated abstract surface.",
+    "entries": [
+      {
+        "proposition": "🔴 THE INTERACTION IS ATTRIBUTED TO A DOMAIN, NEVER TO A MOTIF, AND THE DISTINCTION IS THE WHOLE QUESTION THIS READING WAS SENT WITH. Isolated GST-WW1 constructs precipitate HIF1α from HEK293 lysate. That establishes WW1-DEPENDENCE. It does not establish that HIF1α carries a PPXY ligand, and the paper never claims one: 'PPXY' appears nowhere in the text, and where the Introduction lists WWOX's proline-tyrosine-motif partners — AP-2γ, ErbB4, c-Jun — HIF1α is not among them. PMID 22634283, read an hour before this, measured WW1's requirement as the extended PXPPXYY consensus and showed that three of five genuine PPXY motifs in two real adaptors are not bound at all. INFERENZA: a WW1-dependent association with a protein that has no identified motif is either non-canonical binding or a bridged complex, and this experiment cannot separate them because it is a pulldown from lysate.",
+        "snippet": "only GST-WW1 domain-containing vectors were able to precipitate HIF1α",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, 'WWOX physically interacts with HIF1α and functionally affects its level', describing Supplementary Figure S6A",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — this is the sentence the reframed assignment was aimed at, and it answers a different question from the one asked"
+      },
+      {
+        "proposition": "AND THE MUTANT THAT CARRIES THE WW1-DEPENDENCE CANNOT DISCRIMINATE DIRECT FROM BRIDGED, BECAUSE IT ABOLISHES EVERYTHING. Full-length GST-WWOX pulls down HIF1α and GST-WWOX-WFPA does not. But WFPA is W44F/P47A — and PMID 22634283 describes exactly these residues as 'essential for its structural integrity and ligand binding', with the double mutation 'sufficient to abolish interaction of WWOX with its partners'. A mutation that removes all partner binding removes any bridging partner too. PREMISE_TAG: PREMISE: INFERENZA — 'WFPA loses HIF1α therefore WWOX binds HIF1α directly' rests on the unstated premise that no third protein is involved, which this design cannot test.",
+        "snippet": "revealed that WWOX, but no WFPA mutant, is able to associate with HIF1α",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, describing Figure 5d",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — checked what the discriminating control actually discriminates"
+      },
+      {
+        "proposition": "AND THE MUTATION IS DEFINED IN THE METHODS, WHICH IS WHERE THE OVERLAP WITH THE BIOPHYSICS BECOMES CHECKABLE. W44 and P47 replaced by phenylalanine and alanine. These are the same residues PMID 22634283 identifies as making WW1 a binder — W44 stacking the pyrrolidine rings of the ligand — so the two papers are describing the same structural element from opposite ends, and only one of them measured an affinity.",
+        "snippet": "where tryptophan (W44) and proline (P47) in the first WW domain of WWOX was replaced by phenylalanin (F) and alanine (A), respectively",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Materials and Methods, GST pulldown",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — read the Methods to identify the mutant precisely enough to set it against the biophysics"
+      },
+      {
+        "proposition": "🔴 THE DIGOXIN DOSE AS PRINTED CANNOT BE THE DOSE THAT WAS GIVEN, AND THIS IS THE MOST TRACK-C-RELEVANT NUMBER IN THE PAPER. An approved drug, given in vivo to the disease model, rescuing the phenotype — that is exactly the shape a repurposing hypothesis grows from. The legend states 100 mg per kg body weight, intraperitoneally, in 21-day-old mice, with blood glucose read 40 minutes later, n = 3 per group. DIGOXIN IS A CARDIAC GLYCOSIDE WITH A NARROW THERAPEUTIC INDEX AND MOUSE TOLERANCE IN THE LOW MILLIGRAM-PER-KILOGRAM RANGE; the paper's own cited source for digoxin as a HIF1α inhibitor (Zhang et al. 2008 PNAS) used roughly 1 mg/kg/day. A hundredfold above that is not a dose, it is an acute overdose — and an acute cardiac-glycoside overdose perturbs blood glucose by routes that have nothing to do with HIF1α. INFERENZA, and it is a scope limit rather than a refutation: the direction of the reported effect may well be real, but AS PRINTED THE NUMBER CANNOT SUPPORT IT, and this figure must not be carried into a repurposing entry until the dose is confirmed against the published Methods or an erratum. FOURTH CONSECUTIVE DAY that a quantity's meaning has turned on its presentation — hours instead of minutes, a mean above its own threshold, a Z-score called a fold, and now a milligram that should almost certainly be a microgram.",
+        "snippet": "Digoxin (100 mg/1 kg weight) was injected intraperitoneally (i.p.) in 21-day-old WT and WWOX KO mice, and 40 min later blood was withdrawn for glucose measurement",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Figure 5 legend, panel c",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — a drug dose in a disease model is the number a repurposing track would reach for first, so it is the number to check first"
+      },
+      {
+        "proposition": "🔴 AND THE WHOLE MECHANISM IS NORMOXIA-ONLY, BY THE AUTHORS' OWN MEASUREMENT. Under hypoxia WWOX itself is downregulated, and under hypoxia WWOX no longer affects HIF1α protein levels. So the WWOX-HIF1α axis operates where HIF1α is normally being destroyed and stops operating where HIF1α is normally stabilised. SCOPE LIMIT FOR THIS CORPUS, STATED PLAINLY: any transfer of this mechanism to a brain phenotype has to specify the oxygen tension it assumes, and a hypoxic or ischaemic context is one the paper explicitly measures and excludes.",
+        "snippet": "we found that WWOX does not affect HIF1α protein levels under hypoxic conditions",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, 'WWOX is downregulated under hypoxic conditions', describing Figure 4c",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — asked under which conditions the mechanism holds, because a hypoxia-inducible factor makes that the first question"
+      },
+      {
+        "proposition": "AND WWOX IS ITSELF DOWNREGULATED BY HYPOXIA, WHICH MAKES THE AXIS A FEEDBACK LOOP RATHER THAN A ONE-WAY CONTROL. Recorded beside entries[4] because together they say the two proteins suppress each other's availability in opposite oxygen regimes — an arrangement whose steady state depends on the regime, not on either protein alone.",
+        "snippet": "we found that WWOX is downregulated under hypoxic conditions",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, 'WWOX is downregulated under hypoxic conditions', describing Figures 4a and 4b",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "THE PAPER DOES NOT DISTINGUISH ITS OWN TWO MECHANISMS, AND SAYS SO. Sequestration of HIF1α away from its promoters, or facilitation of its hydroxylation and degradation — the Discussion offers both as 'two supposed scenarios' and settles neither. Recorded because the two make DIFFERENT predictions for any intervention: a sequestration mechanism is saturable and stoichiometric, a degradation mechanism is catalytic, and a Track C node built on the wrong one would be built on the wrong dose-response.",
+        "snippet": "there are two supposed scenarios for HIF1α regulation by WWOX",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Discussion, 'How does tumor-suppressor WWOX affect glucose metabolism?'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — asked which mechanism the data select, and the authors answer that they do not"
+      },
+      {
+        "proposition": "THE HYDROXYLATION RESULT, WHICH IS THE STRONGER OF THE TWO SCENARIOS AND STILL CORRELATIVE. HIF1α hydroxylation is reduced in Wwox-KO relative to wild-type MEFs, suggesting WWOX promotes the prolyl-hydroxylation that marks HIF1α for VHL-mediated degradation. The authors immediately name the untested step themselves: whether WWOX acts on PHD2 is undetermined. REVIVAL_TRIGGER for this corpus: any measurement of PHD2 activity or of HIF1α hydroxylation kinetics in the presence and absence of WWOX would convert the stronger scenario from correlation to mechanism.",
+        "snippet": "HIF1α hydroxylation is significantly reduced in WWOX KO MEFs as compared with WWOX WT MEFs",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, describing Figure 5f",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "AND THE AUTHORS NAME THEIR OWN UNTESTED STEP, WHICH ON A PAPER THIS ASSERTIVE IS THE MOST TRUSTWORTHY SENTENCE IN IT.",
+        "snippet": "Whether WWOX affects PHD2 activity is to be determined",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Discussion, immediately following the hydroxylation argument",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — looked for what the paper says is not known"
+      },
+      {
+        "proposition": "THE REGULATION IS POST-TRANSCRIPTIONAL, WHICH IS THE CONTROL THAT MAKES THE PROTEIN RESULT MEAN SOMETHING. HIF1α mRNA is comparable between Wwox knockout and wild-type skeletal muscle while HIF1α protein differs, so WWOX is not acting on HIF1α transcription. Recorded because it is the check that separates a level effect from an expression effect, and the paper ran it.",
+        "snippet": "HIF1α mRNA levels are comparable between Wwox KO and WT skeletal muscles",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, 'WWOX decreases HIF1α protein levels both in vitro and in vivo', describing Supplementary Figure S4C",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — asked whether the protein difference could be a transcript difference, and the control exists"
+      },
+      {
+        "proposition": "AND THE HUMAN CORRELATION, WHICH IS THE WEAKEST LINK IN THE CHAIN AND IS PRESENTED AS THE CLINCHER. A breast-cancer tissue microarray of 80 samples scored by immunohistochemistry for WWOX and GLUT1, reported as a significant inverse correlation at P < 0.05. INFERENZA: an inverse IHC correlation between a tumour suppressor lost in many cancers and a glucose transporter raised in many cancers is consistent with the model and is also consistent with both markers tracking tumour grade. No grade adjustment is reported. The mouse genetics carry this paper; the human array does not add to them.",
+        "snippet": "we observed a significant inverse correlation (P<0.05) between WWOX and GLUT1 levels in these tumors",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, 'Inverse correlation between WWOX and GLUT1 in human cancer', describing Figure 6e",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — checked what the human evidence adds, and it adds less than its placement suggests"
+      }
+    ]
+  }
+}
