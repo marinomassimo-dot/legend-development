@@ -202,12 +202,36 @@ class TheLedgerIsAppendOnly(unittest.TestCase):
         self.assertFalse(ledger.exists())
 
     def test_a_manifest_without_the_anchor_pair_refuses_the_append(self) -> None:
+        """🔴 And the refusal must leave NOTHING behind.
+
+        The first version of this test asserted only that a `ValueError` was raised — and it
+        passed while the writer appended the event and then failed to anchor it, leaving the
+        ledger in the exact state this module's own LINT check calls `BLOCK_SYSTEM`. The
+        error message even said so: *"the ledger was appended but could not be anchored"*.
+        **A test for a refusal has to assert what was not written**, or it certifies the
+        exception and ignores the damage behind it.
+        """
         root = self.workspace()
         epochs.default_manifest(root).write_text("# no anchor here\n", encoding="utf-8")
         with self.assertRaises(ValueError) as caught:
             epochs.append_event(event(), ledger=epochs.default_ledger(root),
                                 manifest=epochs.default_manifest(root))
-        self.assertIn("anchor", str(caught.exception))
+        self.assertIn("refusing to append", str(caught.exception))
+        self.assertFalse(epochs.default_ledger(root).exists(),
+                         "the event was written despite the refusal")
+
+    def test_a_refusal_never_extends_an_existing_ledger(self) -> None:
+        """The same property with history already present: a rejected append must leave the
+        prior ledger byte-identical, not merely 'not much longer'."""
+        root = self.workspace()
+        ledger, manifest = epochs.default_ledger(root), epochs.default_manifest(root)
+        epochs.append_event(event(), ledger=ledger, manifest=manifest)
+        before = ledger.read_bytes()
+        manifest.write_text("# anchor removed by someone else\n", encoding="utf-8")
+        with self.assertRaises(ValueError):
+            epochs.append_event(event(event_id="SYNC-20260811-002"),
+                                ledger=ledger, manifest=manifest)
+        self.assertEqual(ledger.read_bytes(), before)
 
 
 class TheWriterTouchesNothingElse(unittest.TestCase):

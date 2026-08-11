@@ -231,8 +231,32 @@ def append_event(event: dict[str, Any], *, ledger: Path, manifest: Path) -> dict
     existing = load_ledger(ledger)
     if any(item["event_id"] == record["event_id"] for item in existing):
         raise ValueError(f"event_id already recorded: {record['event_id']}")
-    record[chain.CHAIN_FIELD] = chain.ledger_head(existing)
 
+    # 🔴 The anchor is checked BEFORE the append, and the first version was not.
+    #
+    # It appended, then tried to anchor, and on failure raised an error whose own wording
+    # admitted the damage: *"the ledger was appended but could not be anchored"*. That is
+    # exactly the state this module's own LINT check calls `SYNC_EPOCH_LEDGER_UNTRUSTED` /
+    # `BLOCK_SYSTEM` — so the writer's failure path manufactured the condition the reader's
+    # failure path treats as unrecoverable. Reproduced before fixing: one line written, no
+    # anchor, `verify` red.
+    #
+    # The test that was supposed to cover this asserted only that a `ValueError` was raised.
+    # **A test for a refusal has to assert what was NOT written, not merely that something was
+    # thrown** — otherwise it passes while the damage happens behind the exception.
+    #
+    # Reported by another actor reading the source; the wording of my own error message was
+    # the evidence.
+    if not manifest.exists():
+        raise ValueError(f"{manifest} does not exist; refusing to append an unanchorable event")
+    manifest_text = manifest.read_text(encoding="utf-8")
+    if len(ANCHOR_EVENTS.findall(manifest_text)) != 1 or \
+            len(ANCHOR_HEAD.findall(manifest_text)) != 1:
+        raise ValueError(
+            f"{manifest} declares no single {ANCHOR_PREFIX}_events/{ANCHOR_PREFIX}_head "
+            f"anchor pair; refusing to append an event that could not then be anchored")
+
+    record[chain.CHAIN_FIELD] = chain.ledger_head(existing)
     ledger.parent.mkdir(parents=True, exist_ok=True)
     with open(ledger, "a", encoding="utf-8") as handle:
         handle.write(chain.canonical_line(record) + "\n")
@@ -242,9 +266,13 @@ def append_event(event: dict[str, Any], *, ledger: Path, manifest: Path) -> dict
     persisted = load_ledger(ledger)
     if not chain.write_state_anchor(manifest, persisted,
                                     events_pattern=ANCHOR_EVENTS, head_pattern=ANCHOR_HEAD):
+        # Unreachable through the preflight above; kept because the manifest is a shared file
+        # and another writer can change it between the two reads. The ledger is now ahead of
+        # the anchor, so it says so instead of returning as if it had not.
         raise ValueError(
-            f"{manifest} declares no single {ANCHOR_PREFIX}_events/{ANCHOR_PREFIX}_head "
-            f"anchor pair; the ledger was appended but could not be anchored")
+            f"{manifest} lost its {ANCHOR_PREFIX} anchor pair between the preflight and the "
+            f"write: the event IS persisted and the anchor is NOT updated. Re-anchor before "
+            f"anything else reads this ledger")
     return record
 
 
