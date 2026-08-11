@@ -2925,3 +2925,45 @@ separati nel testo, perché è il titolo che viaggia.** Un conteggio nel titolo 
 controllare il conteggio; la proposizione sostanziale sta sotto e sopravvive. Terza volta
 stasera che arrivo con un titolo troppo forte su un nucleo che regge — Johannsen, Steinberg,
 questa. Le tre correzioni restano accanto ai rispettivi reperti invece di essere cancellate.
+
+---
+
+### 🔴 DL-MECH-099 — Un allele condizionale non è un fenotipo condizionale: EIIA-Cre ricrea la crisi sistemica del nullo
+
+- **Status:** open · **Tag epistemico:** `DATO` per allele, delezione e osso; `INFERENZA` per le cellule “malignant appearing”.
+- **Fonte:** PMID 23254685, letto integralmente il 2026-08-11, receipt `FTR-20260811-23254685-01`; dossier [[PMID23254685]].
+- Il `Wwox^fl/fl` non ricombinato non mostra un fenotipo evidente in circa due anni, mentre EIIA-Cre abolisce WWOX e ricrea crescita ridotta, ipoglicemia, morte entro tre settimane e osteopenia. La parola *conditional* descrive il reagente; questo esperimento usa una delezione germinale globale.
+- Figure 4–5: la perdita ossea è robusta; la neoplasia no. Le rarissime cellule atipiche non hanno marker, denominatore d'incidenza o decorso. Il confronto con PMID 19936220 resta `CONFLICTING EVIDENCE`.
+- **Interconnessioni:** [[claim_registry_current#CLAIM 036]] · [[PMID19936220]].
+- **Destinazione:** commit candidate `CC-20260811-WWOX-MOUSE-SERIES-01`; promozione canonica riservata all'operatore.
+
+### 🔴 DL-MECH-100 — Il fenotipo steroideo del nullo ha almeno quattro cause compatibili, e il paper non le separa
+
+- **Status:** open · **Tag epistemico:** `DATO` per gonadi, testosterone, Fsh/Lh e trascritti; `INFERENZA` per cell-autonomy/“essential for steroidogenesis”.
+- **Fonte:** PMID 18974271, letto integralmente il 2026-08-11, receipt `FTR-20260811-18974271-01`; dossier [[PMID18974271]].
+- Nel nullo giovanile coesistono ipoplasia gonadica, testosterone non rilevabile, riduzione di Fsh/Lh ipofisari, ritardo dello sviluppo e crisi metabolica terminale. Ciascuno può contribuire alla firma gonadica; il disegno globale non li discrimina.
+- MLTC-1 aggiunge una dipendenza dal primo WW domain per alcuni trascritti `Hsd`, ma non identifica il partner, non misura flusso steroideo e non replica tutti i geni alterati in vivo.
+- **REVIVAL_TRIGGER:** knockout gonadico cell-type-specific o rescue gonadico con ormoni ipofisari e stato metabolico controllati.
+- **Interconnessioni:** [[claim_registry_current#CLAIM 036]] · [[PMID19936220]].
+- **Destinazione:** commit candidate `CC-20260811-WWOX-MOUSE-SERIES-01`.
+
+### 🔴 DL-MECH-101 — Eterozigote fisiologicamente silente e suscettibilità a NMBA non sono affermazioni opposte
+
+- **Status:** open · **Tag epistemico:** `DATO` per suscettibilità; `INFERENZA` per haploinsufficiency stretta.
+- **Fonte:** PMID 17575124, letto integralmente il 2026-08-11, receipt `FTR-20260811-17575124-01`; dossier [[PMID17575124]].
+- Dopo NMBA, tumori del forestomach: 25/26 HET contro 10/34 WT; SCC invasivo: 7/26 contro 0/34. È una forte interazione genotipo–carcinogeno, non un fenotipo spontaneo del portatore.
+- L'immunoistochimica mostra Wwox residuo che cala con la progressione, ma non dimostra che il secondo allele sia geneticamente integro. “Haploinsufficiency” è quindi una lettura compatibile, non l'unico meccanismo.
+- **REVIVAL_TRIGGER:** genotipo/copy number e metilazione del secondo allele nelle lesioni, con coorte non trattata parallela.
+- **Interconnessioni:** [[claim_registry_current#CLAIM 032]].
+- **Destinazione:** commit candidate `CC-20260811-WWOX-MOUSE-SERIES-01`.
+
+### 🔴 DL-MECH-102 — Il 4/13 che fonda l'osteosarcoma Wwox-nullo è morfologico e resta in conflitto con lo 0/9 multimodale
+
+- **Status:** open · **Tag epistemico:** `DATO` per quattro lesioni focali su tredici; `INFERENZA` per la diagnosi di osteosarcoma; `CONFLICTING EVIDENCE` contro PMID 19936220.
+- **Fonte:** PMID 17360458, letto integralmente il 2026-08-11, receipt `FTR-20260811-17360458-01`; dossier [[PMID17360458]].
+- Le lesioni periostali dei nulli sono compatibili morfologicamente con osteosarcoma/chondroid osteosarcoma, ma mancano marker, clonality, adjudication cieca e decorso. Il successivo 0/9 con necroscopia, X-ray, istologia e microCT non è un negativo meno diretto; è un conflitto reale.
+- Negli adulti HET, tumori spontanei 10/58 contro 2/60 WT e, dopo ENU, 37/46 contro 20/42. Il dato sostiene suscettibilità dipendente dal contesto; la positività Wwox nei tumori non prova da sola haploinsufficiency.
+- 🔴 Il testo ENU chiama due volte entrambi i gruppi `WT`; Table 1 rende ricostruibile la direzione corretta (HET 59% vs WT 31% per linfoma). Errore d'autore registrato, non normalizzato.
+- **REVIVAL_TRIGGER:** coorte preregistrata con patologia cieca, marker tumorali e identica finestra/allele/background nei due modelli.
+- **Interconnessioni:** [[claim_registry_current#CLAIM 032]] · [[claim_registry_current#CLAIM 036]] · [[PMID19936220]].
+- **Destinazione:** commit candidate `CC-20260811-WWOX-MOUSE-SERIES-01`.

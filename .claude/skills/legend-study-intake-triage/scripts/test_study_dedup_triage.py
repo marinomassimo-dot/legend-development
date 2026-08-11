@@ -61,6 +61,26 @@ def main() -> int:
         if triage.match_row(known, records, index)["class"] != "KNOWN_INTEGRATED":
             failures.append("known PMID was not classified KNOWN_INTEGRATED")
 
+        registry.write_text(
+            registry.read_text(encoding="utf-8")
+            + "\n## PAPER 002\n"
+            + "**Full title:** A second primary study\n"
+            + "**Identifier:** PMID: 56789012\n"
+            + "**Note:** This record cites unread PMID 67890123 as future work.\n",
+            encoding="utf-8",
+        )
+        records = triage.build_index(workspace)
+        index = triage.build_identifier_index(workspace)
+        incidental = {
+            "line": "67890123", "lineno": "1", "aggregate": "no", "raw": ""
+        }
+        result = triage.match_row(incidental, records, index)
+        if result["class"] != "NEW":
+            failures.append(
+                "PMID cited only inside record prose was treated as record identity: "
+                + result["class"]
+            )
+
     if failures:
         print("FAIL")
         for failure in failures:
