@@ -1797,8 +1797,66 @@ interessante — poggia interamente su un lavoro di terzi che questo corpus non 
 fosforila ITCH *direttamente*, e l'effetto sull'attività ligasica è misurato o inferito? La
 direzione conta: se ATM *attiva* ITCH e ITCH *stabilizza* WWOX, l'anello è positivo; se in quel
 paper l'effetto fosse inibitorio, il modello di `27308504` si rovescia.
-**Current status:** ⬜ aperto. **Priorità: ALTA** — è l'unica premessa non risolta di una catena
-che questo corpus cita in tre letture.
+**Current status:** ✅ **CHIUSA il 2026-08-11.** `FTR-20260811-23435430-01`, manifest
+`PMID23435430.json`, `MANIFEST STRICT PASS 0 gaps` al primo tentativo. Lettura **parziale**:
+corpo integrale, tutte e otto le didascalie, **3 figure su 8** ispezionate, **5 supplementari
+non recuperate**.
+
+### La risposta, e la direzione regge mentre la fermezza no
+
+**Il segno è positivo**, quindi il modello di `27308504` non si rovescia. Ma la catena
+dell'affermazione, tre paper e tre artefatti impronta-verificati, si legge così:
+
+| paper | come lo dice |
+|---|---|
+| Santini 2014 (`23435430`) | Ser161 è un sito bersaglio **`putative`**; il meccanismo *«pull down experiments **allow to speculate**»* |
+| Abu-Odeh 2014 (`25331887`) | «ATM positively **regulates** the ligase activity of ITCH **(42)**» — verbo neutro, attenuazione caduta, **citazione tenuta** |
+| Hazan 2015 (`27308504`) | «Activated ATM **phosphorylates** and positively regulates…» — verbo molecolare specifico, **citazione sparita** |
+
+🔴 **L'affermazione è più ferma esattamente dove la provenienza è più sottile.** `DL-METH-085`
+era un'osservazione su due documenti dentro un laboratorio: adesso è una **catena a tre che
+attraversa laboratori diversi**. Voce nuova `DL-METH-087`.
+
+**Tre qualificazioni che il modello WWOX non importa**, tutte scritte dagli autori: l'attivazione
+è **un impulso che poi si inverte** (*«Later on ITCH activity is down-regulated»*); **non
+raggiunge tutti i substrati** (*«may not modulate … all ITCH substrates»* — p73 non cambia, e
+**WWOX non è fra i substrati testati**); e **il tipo di catena non è mai determinato** — nessun
+anticorpo linkage-specifico in otto figure, e ogni esito misurato qui è **degradativo**, mentre
+su WWOX la rivendicazione è K63 e stabilizzazione.
+
+**Debito residuo:** cinque supplementari (S1 il controllo sui livelli di ITCH, S3 il negativo
+p73, S4 la cinetica breve) e cinque figure — vedi `FT-061`.
+
+---
+
+## FT-061 — I quattro hop che Santini lascia aperti, e le cinque figure che non ho ispezionato
+
+**Papers:** PMID 23435430 / DOI 10.1038/onc.2013.52 — Santini 2014, *Oncogene* 33(9) — questa voce
+è il **debito residuo** di quella lettura, e i suoi hop non risolti: rif. 14 (ITCH-null / ConA,
+insufficienza epatica) · rif. 21 (Rossi/Melino, ITCH e stabilità di p73) · rif. 12 e 13
+(autoinibizione intramolecolare HECT/WW e suo rilascio per fosforilazione JNK1). **I PMID dei
+quattro rif. non sono risolti** — primo passo del prossimo run: risolverli, non fidarsi di questa
+riga.
+
+**Perché pesano.** Tutto ciò che è meccanicistico in `23435430` è un **argomento per analogia** ai
+rif. 12 e 13: la frase che gli autori stessi etichettano come speculazione dice *«similarly to
+what described for the S/T residues targeted by JNK activity»*. Il rif. 21 è il paper dietro
+**l'unico substrato che ATM non modula**, cioè il confine dell'intero risultato. Il rif. 14 è il
+modello in vivo su cui è ricalcato il braccio murino.
+
+**Il debito figure, con il costo di ciascuna** — budget dichiarato 8, raggiunto 3:
+
+| figura | che cosa porta | perché pesa |
+|---|---|---|
+| **1** | dose-risposta ATM, mutante kinase-dead, controllo NEDD4 | è la figura che **fonda il paper**, e la porto sul testo degli autori |
+| **2** | ubiquitinazione di c-FLIP-L e c-Jun | **la direzione degradativa** di ogni esito misurato poggia qui |
+| **5** | S161A contro S430A **sui substrati** | Fig 4 copre la metà autoubiquitinazione dello stesso argomento |
+| **7** | rescue HepG2, ciclina D1, p53-pS15/pS46 | l'unica misura dell'interpretazione sul ciclo cellulare |
+| **8** | 🔴 il braccio in vivo | **è dove vive davvero il risultato mal citato** — la mis-citazione è provata dalle didascalie, ma *se* Fig 8A mostri ciò che la frase afferma resta **aperto**. È anche l'estrazione a risoluzione più bassa delle otto (720×1664 contro ~2400×2800): **da ri-derivare prima di ispezionare.** |
+
+**Next action (sessione fredda):** i supplementari S1–S5 di `23435430` per primi — S1 e S4
+toccano direttamente due locator già scritti — poi Fig 8 ri-derivata, poi i quattro rif.
+**Current status:** ⬜ aperto. Priorità: media-alta.
 
 ---
 

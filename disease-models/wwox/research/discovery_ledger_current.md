@@ -2427,7 +2427,12 @@ Aperto il rif. 3 (`PMID 24550385`, `FT-054`) sono emerse tre cose che riscrivono
 
 ---
 
-### DL-METH-092 — **In dieci articoli su trentacinque le didascalie stanno FUORI dal `<body>`, e chi legge col `<body>` non le vede mai**
+### DL-METH-092 — **In nove superfici su trentaquattro le didascalie stanno FUORI dal `<body>`, e chi legge col `<body>` non le vede mai**
+
+*(Titolo corretto il 2026-08-11 da «dieci su trentacinque». Il numero era sbagliato — il decimo
+stava in `/tmp` e non nel `files/` condiviso — ed è stato corretto nell'append qui sotto lo stesso
+giorno, ma **il titolo era rimasto quello vecchio**. È letteralmente la lezione che questa
+sessione ha già scritto una volta: **a viaggiare è il titolo**, non l'ultimo paragrafo.)*
 
 - **Classificazione:** `DATO` — censimento meccanico su tutte le superfici XML del `files/` condiviso, riproducibile con cinque righe.
 - **Il numero.** **10 su 35** superfici XML collocano gli elementi `<fig>` fuori da `<body>`: `21318118`, `22193544`, `23370280`, **`24308844`**, `27551470`, `30755385`, `31340538`, `33255508`, `34747138`, e — reperto d'origine — `23435430` nella via `efetch`, dove Europe PMC invece le include. Sullo stesso articolo le due vie danno corpo di 29 341 contro 46 114 caratteri: **la differenza sono otto didascalie.**
@@ -2515,3 +2520,24 @@ da me nella riga che quel confine lo stava insegnando.
 - **Conseguenza operativa aggiuntiva:** `PMID42395553_PMC.xml` non è di questa classe ed è peggio —
   9 586 byte, **nessun `<body>` e nessuna `<fig>`**: metadati soltanto, come `18487609`. È una
   classe distinta, *«superficie assente travestita da superficie»*, e va censita da sé.
+
+---
+
+### DL-METH-093 — **La catena a tre: l'affermazione è più ferma dove la provenienza è più sottile, e attraversa laboratori diversi**
+
+- **Classificazione:** `DATO` sulle tre citazioni, verificate carattere-per-carattere contro tre artefatti impronta-verificati; `INFERENZA` sulla generalizzazione a letterature diverse da questa.
+- **Fonti:** `PMID 23435430` (Santini, *Oncogene* 2014, `FTR-20260811-23435430-01`) · `PMID 25331887` (Abu-Odeh, *PNAS* 2014) · `PMID 27308504` (Hazan, *Mol Cell Oncol* 2015).
+- **Il reperto, in tre righe.** *Santini*: Ser161 è un sito bersaglio **`putative`**, e il meccanismo è *«pull down experiments **allow to speculate** that S161 phosphorylation destabilizes the inhibitory intramolecular interaction»*. *Abu-Odeh*, che lo cita: *«After DNA damage, ATM positively **regulates** the ligase activity of ITCH **(42)**»* — verbo neutro, attenuazione caduta, **citazione tenuta**. *Hazan*, l'Author's View: *«Activated ATM **phosphorylates** and positively regulates the ligase activity of ITCH»* — **il verbo molecolare specifico compare per la prima volta, dentro una figura-modello, e la citazione sparisce.**
+- 🔴 **Perché è più di `DL-METH-091`.** Quello era un fenomeno *dentro un laboratorio*: gli stessi autori che riformulano il proprio paper. Questo **attraversa tre laboratori** e mostra che la degradazione della modalità è una proprietà del **percorso citazionale**, non della psicologia di un gruppo. E ha una forma misurabile: **l'affermazione è più ferma esattamente dove la provenienza è più sottile.** Il verbo più specifico convive con l'assenza totale di riferimento.
+- **Che cosa Santini misura davvero, perché il verbo «phosphorylates» rivendica di più.** Nessun anticorpo fosfo-S161, nessun saggio chinasico in vitro con ATM ricombinante, nessuna spettrometria di massa. L'evidenza è un blot **pan-fosfoserina** su ITCH immunoprecipitato che un inibitore di ATM riduce — Fig 4A, che **non contiene alcuna corsia ATM-negativa** — più un mutante S→A che smette di rispondere ad ATM. È un forte argomento genetico che S161 sia *necessario*; non è una fosforilazione *misurata* su quel residuo.
+- **Tre qualificazioni che il modello a valle non importa**, tutte in stampa nella fonte: (1) l'attivazione è **un impulso che poi si inverte**; (2) **non raggiunge tutti i substrati** — p73 non cambia, e **WWOX non è fra quelli testati**, quindi il trasferimento assume che WWOX si comporti come c-FLIP-L e non come p73; (3) **il tipo di catena non è mai determinato** — nessun anticorpo linkage-specifico in otto figure, e ogni esito misurato è **degradativo**, mentre su WWOX la rivendicazione è K63 e stabilizzazione. Non è una contraddizione, perché i substrati differiscono: **è il motivo per cui la freccia non può essere importata con il suo esito attaccato.**
+- **Conseguenza operativa:** nessun claim canonico su «ATM attiva ITCH» può portare il verbo *fosforila* senza dichiarare `PREMISE: INFERENZA_DA_MUTAGENESI`. E il nodo ATM→ITCH→WWOX resta **`PREMISE: NON RISOLTA` sul tipo di catena**, non sulla direzione.
+- **REVIVAL_TRIGGER:** un anticorpo fosfo-S161, una spettrometria che localizzi il sito, o un saggio in vitro con ATM ricombinante chiuderebbero il primo anello. Per il terzo, un esperimento che misuri la catena costruita da ITCH su WWOX in presenza e assenza di ATM.
+- **Falsificazione della generalizzazione:** una terza catena, in una letteratura diversa, dove il verbo si mantenga o si attenui lungo i hop.
+- **Interconnessioni:** `DL-METH-091` · `IMPORTED_PREMISE_ATTRIBUTION_GATE` · `DEFAULTS THAT BIT US` `D-01` · `FT-060` · `FT-061` · [[epistemic_discipline]] · [[gold_is_in_the_details]].
+
+#### E una nota di parità delle fonti che vale da sola
+
+Il laboratorio di Santini ha **zero paper su WWOX** — misurato, non presunto: `Santini S[au] AND WWOX` → **0**. Il paper è su Atassia Teleangectasia, ITCH e danno epatico. Ci si arriva **solo** dalla voce 42 della bibliografia di `25331887`: non compare in nessuna query WWOX e in nessuna bibliografia citante che questo corpus possieda. Eppure il suo unico risultato è **la freccia portante di un modello WWOX disegnato due paper più a valle**. Una premessa sotto uno schema WWOX, fornita da un gruppo che non ha mai studiato il gene.
+
+E c'è un ponte che questo corpus non aveva: l'A-T **è** una neurodegenerazione cerebellare, e gli autori chiudono ipotizzando che il deficit di ATM deregoli **Gli-1** — substrato di ITCH, effettore Hedgehog, downregolato durante il differenziamento cerebellare. Il disturbo WWOX-correlato include **SCAR12**, un'atassia spinocerebellare. ITCH siede fra l'asse WWOX-DDR che stiamo leggendo e un asse cerebellare che non abbiamo aperto. `ESPANSIONE`: nessuno misura qui WWOX, Gli-1 e cervelletto insieme.
