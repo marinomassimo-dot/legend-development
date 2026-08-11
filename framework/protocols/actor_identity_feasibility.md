@@ -25,8 +25,10 @@ Coordinates make a claim checkable; they do not authenticate content.
 
 ## Two layers, and everything measured belongs to the lower one
 
-**LEGEND logical actor core** — `actor_id`, role, authority, worktree, branch, exclusivity.
-Stable, versioned, portable across any transport.
+**LEGEND logical actor core** — `actor_id`, role, `declared_authority_non_enforced`, worktree,
+branch, exclusivity. Stable and versioned. 🔴 It **contains no coordinates from the measured
+transport; portability was not tested** — an earlier draft claimed it was "portable across any
+transport", which is a property no experiment here examined.
 
 **Claude Code transport adapter** — UDS sockets, PID, `process_start`, `SendMessage`,
 `PreToolUse`, `ListAgents`. Every measurement here is about the adapter. **None of it defines
@@ -67,6 +69,14 @@ processed the message; every failure mode that is not `ENOENT`.
 E0 does not make the adapter useless. It narrows the *one* failure mode the first proposal
 leaned on hardest.
 
+🔴 **No session continuity is claimed between the two socket paths.** Earlier drafts wrote
+`1944` → `92030`, and the arrow asserted something never measured. What was observed is two
+separate facts: **(a)** at the time of E0, the pathname `1944.sock` did not exist; **(b)** at
+various times, messages were received from, and sent to, `92030.sock`. **Whether these belong
+to one session that restarted, or to two different sessions, is not established** — nothing in
+this study can distinguish those, and the transport's own error text says only that a peer
+*may* have restarted.
+
 ### E1 — one runtime store · **INCONCLUSIVE**
 
 From `evidence-index`: `git rev-parse --path-format=absolute --git-common-dir` →
@@ -104,17 +114,24 @@ not to reply manually — which is what keeps a peer's chosen answer from being 
 transport handshake. Result shape `{success, message, msg_id}`, no peer-generated content,
 consistent with every send this session.
 
-Documentary support: the `SendMessage` contract states messages *"enqueue and drain at the
-receiver's next tool round"* — delivery automatic, **answering an agent action**. This is the
-interface's documented contract, not its source.
+🔴 **No observation window was defined in advance.** "No response observed" therefore has no
+declared duration behind it, and the experimental silence carries correspondingly little
+weight. **Requirement 2 rests on the documented `SendMessage` contract** — messages *"enqueue
+and drain at the receiver's next tool round"*, delivery automatic and answering an agent
+action — **and not on that silence.** This is the interface's documented contract, not its
+source.
 
 🔴 **Process defect in this experiment, recorded rather than omitted.** The delivered message
 **exceeded the minimal challenge**: it also transmitted operational conclusions about E0, E4
-and the namespace-correlation finding. That was outside what the experiment required, it made
-the single authorised message carry unreviewed claims, and **one of those claims — the E0
-delivery guarantee — has since been corrected here.** A peer therefore holds a conclusion this
-report now withdraws. The experimental channel should have carried the challenge and nothing
-else.
+and the namespace-correlation finding. That was outside what the experiment required, and it
+made the single authorised message carry unreviewed claims — **one of which, the E0 delivery
+guarantee, is withdrawn in this report.**
+
+The false conclusion was transmitted. Per the operator, the orchestrator has since **withdrawn
+it**; that retraction is reported to this session rather than observed by it, and is recorded
+as the operator's statement. The correction propagated, but it propagated by someone else's
+diligence rather than by design: the experimental channel should have carried the challenge and
+nothing else.
 
 ### E4 — socket ownership · **PASS**, 5/5 `OWNED`
 
@@ -131,7 +148,7 @@ claude     1978 massimo   18u  unix 0xd6da3c0c51df51a8      0t0      /tmp/cc-soc
 claude     2024 massimo   13u  unix 0x7b07579ddaccd765      0t0      /tmp/cc-socks/2024.sock
 claude    39715 massimo   12u  unix 0xd72a129d67b6fcd8      0t0      /tmp/cc-socks/39715.sock
 claude    92030 massimo   15u  unix 0xecc74cecae020278      0t0      /tmp/cc-socks/92030.sock
-### these are dead coordinates by the time you read this; do not address them ###
+### historical coordinates whose current validity is not asserted; never use for routing ###
 ```
 
 **All five `OWNED`, zero `UNOWNED_STALE`, and the owning PID equals the filename in every

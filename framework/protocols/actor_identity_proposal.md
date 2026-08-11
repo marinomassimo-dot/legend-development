@@ -18,7 +18,7 @@ failure, and the conflation was the central defect adversarial review found.
 
 | problem | example, 2026-08-10/11 | does a directory solve it |
 |---|---|---|
-| **routing** — message delivered to the wrong session | endpoint `1944` → `92030`; a directive headed `RECIPIENT: PLAN` reaching an actor that could not tell whether it was Plan | **the mismatch becomes detectable under the declared discipline**, and refusable by the recipient — delivery is not prevented, and detection holds only where actors state their coordinates as the discipline requires |
+| **routing** — message delivered to the wrong session | a remembered endpoint later found absent, and separately a different endpoint in use — **no session continuity between the two is established**; a directive headed `RECIPIENT: PLAN` reaching an actor that could not tell whether it was Plan | **the mismatch becomes detectable under the declared discipline**, and refusable by the recipient — delivery is not prevented, and detection holds only where actors state their coordinates as the discipline requires |
 | **attribution** — a statement assigned to the wrong actor | nine `checkout --detach` reported as another actor's | **no.** Coordinates make a claim checkable; they do not authenticate content |
 | **authority / provenance** — an operator directive relayed by another actor | three directives forwarded verbatim | **no.** Structural only with a channel enforcement that Phase -1 could not demonstrate |
 
@@ -26,9 +26,11 @@ Everything below is about **routing**, and only routing.
 
 ## 2. Two layers
 
-**LEGEND logical actor core** — `actor_id`, role, authority, worktree, branch, exclusivity.
-Stable, versioned, reviewed, and portable across any transport. **This is what the proposal
-now recommends building.**
+**LEGEND logical actor core** — `actor_id`, role, `declared_authority_non_enforced`, worktree,
+branch, exclusivity. Stable, versioned, reviewed. 🔴 It **contains no coordinates from the
+measured transport; portability was not tested** — an earlier draft called it "portable across
+any transport", a property no experiment here examined. **This is what the proposal now
+recommends building.**
 
 **Claude Code transport adapter** — UDS sockets, PID, `process_start`, `SendMessage`,
 `PreToolUse`, `ListAgents`. Measured in Phase -1; **not built**; and none of it defines
@@ -66,22 +68,22 @@ schema_version: 1
 actors:
   - actor_id: plan
     role: integrator
-    authority: [merge_to_main, batch_commit, sync_epoch_record, framework_write]
+    declared_authority_non_enforced: [merge_to_main, batch_commit, sync_epoch_record, framework_write]
     worktree: .claude/worktrees/evidence-index
     branch: evidence-index
   - actor_id: reader-a
     role: reader
-    authority: [reading_write, receipt_record, manifest_write]
+    declared_authority_non_enforced: [reading_write, receipt_record, manifest_write]
     worktree: .claude/worktrees/lettore
     branch: lettore
   - actor_id: mirror
     role: auditor
-    authority: [read_only]
+    declared_authority_non_enforced: [read_only]
     worktree: .claude/worktrees/mirror
     branch: mirror
   - actor_id: orchestrator
     role: coordinator
-    authority: [read_only, propose]
+    declared_authority_non_enforced: [read_only, propose]
     worktree: null
     branch: null
 
@@ -90,8 +92,15 @@ multi_instance_roles: [reader]
 
 - 🔴 **every `actor_id` is exclusive.** Two actors may share the role `reader`; two live
   sessions may never both be `reader-a`. The first version got this wrong;
-- **`authority` is enumerated tokens, not prose**, because a sentence cannot be checked before
-  a write;
+- 🔴 **`declared_authority_non_enforced` is named for what it is.** The field is enumerated
+  tokens rather than prose, because a sentence cannot be checked before a write — but **nothing
+  checks it.** No validator reads it, no gate consults it, and Phase -1 could not demonstrate
+  that any enforcement point exists on this transport. It is a **declaration of intent**, and
+  calling it `authority` would have invited a reader to assume otherwise.
+  **Validation and enforcement are formally deferred**: validating the field against what an
+  actor actually does, and enforcing it at a write or a send, are separate future work
+  conditioned on an enforcement point being demonstrated. Until then a token in this list
+  constrains nobody;
 - there is **no `operator_relay` capability**, and — corrected — its absence is a **declared
   rule, not a structural impossibility.** Making it structural requires channel enforcement
   that Phase -1 could not demonstrate;
