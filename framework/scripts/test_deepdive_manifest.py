@@ -12,6 +12,7 @@ from __future__ import annotations
 import importlib.util
 import hashlib
 import json
+import subprocess
 import sys
 import unittest
 from pathlib import Path
@@ -1050,6 +1051,48 @@ class AFileCanBeWellFormedAndDeclareTheFalse(unittest.TestCase):
         verdict, detail = gate.font_encoding_verdict(self._pdf("bare.pdf", embedded=False))
         self.assertEqual(verdict, "UNTRUSTWORTHY")
         self.assertIn("ToUnicode", detail)
+
+    def test_font_screen_cli_accepts_a_pdf_file_without_reporting_zero_pdfs(self) -> None:
+        """A file target used to fall through ``Path.glob`` and print a false 0-PDF pass."""
+        path = self._pdf("single.pdf", embedded=False)
+        completed = subprocess.run(
+            [sys.executable, str(Path(gate.__file__)), "--font-screen", str(path)],
+            text=True, capture_output=True, check=False,
+        )
+        self.assertEqual(completed.returncode, 1, completed.stdout + completed.stderr)
+        self.assertIn("matched and screened 1 PDF(s) of 1 regular file(s)", completed.stdout)
+        self.assertIn("complement: 0 non-PDF file(s)", completed.stdout)
+
+    def test_font_screen_uses_the_same_case_insensitive_pdf_predicate_for_a_directory(self) -> None:
+        """A deposited `.PDF` must not disappear only because the target is a directory."""
+        self._pdf("lower.pdf", embedded=False)
+        self._pdf("upper.PDF", embedded=False)
+        completed = subprocess.run(
+            [sys.executable, str(Path(gate.__file__)), "--font-screen", str(self.root)],
+            text=True, capture_output=True, check=False,
+        )
+        self.assertEqual(completed.returncode, 1, completed.stdout + completed.stderr)
+        self.assertIn("matched and screened 2 PDF(s) of 2 regular file(s)", completed.stdout)
+        self.assertIn("complement: 0 non-PDF file(s)", completed.stdout)
+
+    def test_font_screen_directory_reports_the_non_pdf_complement(self) -> None:
+        self._pdf("paper.PDF", embedded=False)
+        (self.root / "readme.txt").write_text("not a PDF", encoding="utf-8")
+        completed = subprocess.run(
+            [sys.executable, str(Path(gate.__file__)), "--font-screen", str(self.root)],
+            text=True, capture_output=True, check=False,
+        )
+        self.assertEqual(completed.returncode, 1, completed.stdout + completed.stderr)
+        self.assertIn("matched and screened 1 PDF(s) of 2 regular file(s)", completed.stdout)
+        self.assertIn("complement: 1 non-PDF file(s)", completed.stdout)
+
+    def test_font_screen_cli_refuses_an_empty_directory(self) -> None:
+        completed = subprocess.run(
+            [sys.executable, str(Path(gate.__file__)), "--font-screen", str(self.root)],
+            text=True, capture_output=True, check=False,
+        )
+        self.assertEqual(completed.returncode, 2, completed.stdout + completed.stderr)
+        self.assertIn("contains no PDF files", completed.stderr)
 
     def test_having_a_tounicode_is_never_a_clearance(self) -> None:
         """🔴 The limit that keeps this from becoming the inverse defect — a guard that CLEARS

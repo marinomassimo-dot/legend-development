@@ -1481,6 +1481,11 @@ def verification_scope(*, verify_artifacts: bool, require_current_schema: bool) 
     )
 
 
+def is_pdf_file(path: Path) -> bool:
+    """One case-insensitive PDF predicate for both CLI target shapes."""
+    return path.is_file() and path.suffix.casefold() == ".pdf"
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--workspace", default=".")
@@ -1493,11 +1498,11 @@ def main() -> int:
     )
     parser.add_argument("--disease", default="wwox")
     parser.add_argument(
-        "--font-screen", metavar="DIR",
+        "--font-screen", metavar="PATH",
         help=(
-            "inspect every PDF in DIR for a ToUnicode CMap and exit; a file whose fonts "
-            "declare none cannot be trusted to spell what its page prints. Says nothing "
-            "about files that have one"
+            "inspect one PDF or every case-insensitively named PDF in a directory for a "
+            "ToUnicode CMap and exit; a file whose fonts declare none cannot be trusted to "
+            "spell what its page prints. Says nothing about files that have one"
         ),
     )
     parser.add_argument("--pmid", required=False)
@@ -1511,16 +1516,36 @@ def main() -> int:
     )
     args = parser.parse_args()
     if args.font_screen:
+        screen_target = Path(args.font_screen)
+        if screen_target.is_file():
+            population_size = 1
+            if not is_pdf_file(screen_target):
+                parser.error("--font-screen file target must have a .pdf suffix")
+            pdfs = [screen_target]
+        elif screen_target.is_dir():
+            population = sorted(path for path in screen_target.iterdir() if path.is_file())
+            population_size = len(population)
+            pdfs = [path for path in population if is_pdf_file(path)]
+            if not pdfs:
+                parser.error(
+                    "--font-screen matched 0 PDF(s) of "
+                    f"{population_size} regular file(s); directory contains no PDF files"
+                )
+        else:
+            parser.error("--font-screen target must be an existing PDF file or directory")
         counts = {"UNTRUSTWORTHY": 0, "SUSPECT_FONTS": 0, "UNDECIDED": 0}
         inspected = 0
-        for pdf in sorted(Path(args.font_screen).glob("*.pdf")):
+        for pdf in pdfs:
             verdict, detail = font_encoding_verdict(pdf)
             inspected += 1
             counts[verdict] = counts.get(verdict, 0) + 1
             if verdict in {"UNTRUSTWORTHY", "SUSPECT_FONTS"}:
                 print(f"  [{verdict}] {detail}")
+        excluded = population_size - inspected
         print(f"\n{counts['UNTRUSTWORTHY']} UNTRUSTWORTHY · {counts['SUSPECT_FONTS']} "
-              f"SUSPECT_FONTS · {counts['UNDECIDED']} UNDECIDED, of {inspected} PDF(s).")
+              f"SUSPECT_FONTS · {counts['UNDECIDED']} UNDECIDED; matched and screened "
+              f"{inspected} PDF(s) of {population_size} regular file(s); complement: "
+              f"{excluded} non-PDF file(s).")
         print("No verdict here means clean. The arbiter is the sentinel evidence in the "
               "extracted text; this says where to look first, in a second, without "
               "extracting.")
