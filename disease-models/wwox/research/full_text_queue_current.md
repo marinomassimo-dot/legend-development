@@ -2295,5 +2295,58 @@ una referenza gene-diretta *risolta* e oggi nessuna delle sei ne ha una.
 Le altre tre gene-dirette di `23370280` sono già in coda ma non lette: `17360458` · `17575124` ·
 `15070730`.
 
-**Next action:** `16061658` per primo — è quello che regge un'inferenza che ho appena scritto,
-ed è il caso in cui leggere la fonte del *frame* vale più che leggere un altro risultato.
+### 🔴 `16061658` — tentato il 2026-08-11: **superficie RIFIUTATA, nulla letto**
+
+Receipt `FTR-20260811-16061658-01`, **`retrieved_not_read`**. Non è una lettura parziale: **non
+è una lettura.** Ogni slot di copertura è `not_read`.
+
+**Preflight — nessuna superficie strutturata esiste:**
+
+| rotta | risposta |
+|---|---|
+| Europe PMC | `pmcid: null` · `inPMC: N` · `isOpenAccess: N` |
+| Unpaywall `10.1158/0008-5472.can-05-1150` | `is_oa: false` · `oa_status: closed` · `has_repository_copy: false` |
+| disco | `PMID16061658_Aqeilan2005.pdf`, 9 pagine, `sha256 075fdbbcd1e17c3b…` |
+
+**Screening del text layer → `SUSPECT`, e la superficie è rifiutata, non normalizzata:**
+
+- due controlli C0;
+- 🔴 **zero** occorrenze di `<` `>` `≤` `≥` `±` `×` `−` `µ` `α` `β` `Δ` su 44 465 caratteri, in un
+  paper che dice *«significan»* sei volte e riporta quantità di plasmide dappertutto. **Sospetto
+  per assenza.**
+
+**E il danno identificato carattere per carattere** — è questo che lo rende più di un verdetto:
+
+| pagina | testo estratto | testo stampato | n |
+|---|---|---|---|
+| 4 | `using 63\x01 objective lens` | `63×` | 1 |
+| 6 e legende | `(6.0 Ag)` · `(1.0 Ag)` · `(7.0 Ag)` | **`µg`** | **16** |
+| corpo | `p73h` · `h-dystroglycan` | **`p73β`** · `β-dystroglycan` | **7** |
+
+🔴 **`p73h` è il nome di un'isoforma corrotto in silenzio.** Venticinque corruzioni identificate,
+**ventitré printable** — 92%, contro l'«80% circa» che la regola 5d stima. **Uno scan sui
+caratteri di controllo ne avrebbe trovate 2 su 25 e avrebbe dichiarato la superficie pulita.**
+
+**Controllato e negativo, perché uno screening che riporta solo i positivi non è uno screening:**
+la firma `P 5 0.05` di `33914858` **non** compare (zero), e i nove `D` isolati sono genuini
+(FRA16D, pannello D, ciclina D1) — **non** `Δ` corrotti.
+
+### Conseguenza sulla rotta
+
+Regola 5d: una superficie `SUSPECT` **non si ripara** — una correzione a mano su sedici punti è
+indistinguibile da una riscrittura e verificabile da nulla. Non c'è superficie strutturata da cui
+ri-derivare né un PDF migliore da ottenere. **Quindi questo paper si legge solo dalla pagina
+renderizzata**, e ogni locator che produrrà è un'**aggiudicazione di pagina** secondo la 5e —
+digest del PDF, pagina, rettangolo in punti, dpi, SHA-256 dell'immagine, pubblicati come
+*ricetta* e mai come immagine. La macchina esiste (`regenerate_adjudications.py`) ed è arrivata
+in questo ramo con la fusione.
+
+🔴 **E tocca un'inferenza che ho scritto io ieri.** `16061658` è l'origine del **frame di
+competizione WW1** su cui poggia *«una leva su ITCH non è selettiva per WWOX»*. Quell'inferenza
+cita un frame la cui fonte primaria **oggi non può portare una citazione verificabile**. Non è
+per questo sbagliata: è **non ancorata**, e dirlo è lo scopo di questa voce.
+
+**Next action:** decidere se spendere una corsa sull'aggiudicazione di pagina per `16061658`. È
+un meccanismo sostanziale e non lo apro di mia iniziativa. In alternativa, il gate multi-hop di
+`FT-062` si chiude leggendo `18487609` o `12514174` — **ma il loro preflight non è stato fatto**,
+e questa voce è la ragione per cui va fatto prima di aprirli.
