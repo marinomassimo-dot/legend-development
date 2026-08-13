@@ -104,14 +104,24 @@ author, not a silent edit made to turn a suite green.
 **What a recertification verifies** (resolution of OQ‑1) — the contract surfaces between kernel
 and CLI that have been *measured* to change across versions:
 
-1. the parse of `claude agents --json` (Agent View is a research preview; its schema may move);
-2. the parse of `--bg` output (the launcher reads the short id from it);
+1. the parse of `claude agents --json` (Agent View is a research preview; its schema may move) —
+   verified **positively**, i.e. against a name that is actually live, not only against absence;
+2. the `--bg` launch contract: exit status, and that the spawned session appears **uniquely** in
+   the roster;
 3. the default-name semantics — **observation only**, since after MC‑1/OB‑4 the kernel no
    longer depends on it;
 4. the order and text of the named refusals: MC‑1's receipts (a)/(b), MC‑3's residue test and
    MC‑2's own regression **are** the smoke test.
 
-Executable in minutes, entirely on an unqualified host except one optional birth/stop cycle.
+Executable in minutes, entirely on an unqualified host except one birth/stop cycle.
+
+> **Corrected against the implementation.** Item 2 read *"the parse of `--bg` output (the
+> launcher reads the short id from it)"*. It does not: it keeps that output verbatim as spawn
+> evidence and resolves the sessionId from the roster, precisely so an uncontracted format is
+> never load-bearing. The item was describing a coupling the kernel had already refused. What
+> the birth actually exercises is the launch contract above, which is the wider and truer
+> surface — and the first run of it also produced the `claude stop <id>` verb, which
+> `claude agents --help` does not list and on which the disposition step depends.
 
 **Test receipt (regression).** After every other amendment, on an unqualified host, the string
 above must still be produced — and still **before** any location or lineage check, so an
@@ -293,6 +303,50 @@ every actor re-birthable at the first upgrade, the identical failure MC‑1 remo
 injection for the crash test — the state machine is testable from the residue.
 
 ---
+
+## Certification log
+
+Every entry is the record MC‑2 requires: a version is certified by an act with an author, and
+the act is this checklist run on that version.
+
+### `2.1.231` — certified 2026-08-13
+
+Authorised as a controlled qualification birth: throwaway actor `qualification-probe`, dedicated
+scratch cell, **never** Scientist A and never the `mac-dev-001` cell, because the next experiment
+on A is a recovery and the two must not mix. `LEGEND_CERTIFIED_VERSION` was overridden for the
+run and is declared as an instrument of the certification: **verifying a version requires
+executing it.**
+
+| surface | evidence |
+|---|---|
+| 1 · roster parse | positive hit on a live name: `ACTOR_ALREADY_LIVE legend-public-04 (e35c9be1-… 6260)` — the row was found, and sessionId and pid extracted |
+| 2 · launch contract | `claude --bg` exited 0; output captured verbatim; **exactly one** roster row carried the name; the resolved sessionId `2d2c3b77-5144-4db2-aab9-74b3fddf7f67` matched the record |
+| 3 · default names | observation: three values for one unchanged sessionId in 24h. The kernel does not depend on it |
+| 4 · refusal order and text | 28 assertions plus the receipts of MC‑1 and MC‑3, all produced on this host |
+
+**The lineage transition was observed, not inferred** — a sampler recorded every distinct state
+the record ever held:
+
+```
+t+0.000s   <absent>
+t+9.385s   PENDING_BIRTH   reserved_by_pid 11006
+t+10.601s  ACTIVE          session_id 2d2c3b77-5144-4db2-aab9-74b3fddf7f67
+```
+
+**The reservation existed for 1.216 s.** That interval is the window MC‑3 was built to cover, and
+it is now a measurement rather than an argument.
+
+**Disposition.** Session stopped with `claude stop 2d2c3b77`; absence verified in the active
+roster and `state: "stopped"` with **no `pid`** under `--all`, which is the field the liveness
+predicate keys on. The test lineage was **archived, not cleaned up** — it is the evidence that
+the certification was executed rather than argued — and the cell then re-checked through the
+same decision function, which reports `ABSENT`.
+
+**Defense in depth, not a substitute for the measure.** Had the launch contract moved, the birth
+would have ended in `LINEAGE_UNRESOLVED` and left an *annotated* reservation — a named block
+rather than an invisible duplicate. That is a property of MC‑3, and it is why an unverified
+surface would have been survivable; it is not why this one is certified. This one is certified
+because it was run.
 
 ## Execution order
 
