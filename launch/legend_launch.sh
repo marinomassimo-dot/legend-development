@@ -285,9 +285,89 @@ if [ "$MODE" = check ]; then
 fi
 
 # ---- act ----------------------------------------------------------------------
+# RECOVERY IS `respawn`, NOT `--resume`. Measured 2026-08-13 on a throwaway subject,
+# both forms against the identical session id:
+#
+#   claude --resume <id>          refused, exit 1 — fail-closed
+#   claude --resume <id> --bg     exit 0, success-shaped banner, and a DIFFERENT
+#                                 sessionId in the CALLER's cwd. A fork wearing the
+#                                 recovered actor's name, with the lineage record
+#                                 still pointing at a session that is not running.
+#   claude respawn <job id>       same sessionId, same kind, same cwd, same name
+#
+# `respawn` addresses by JOB id, and the two keys are not interchangeable — passing
+# a session id gives `No job matching '<sessionId>'`. The job id is resolved from the
+# documented roster by matching the session id, NEVER by truncating it: the short id
+# happens to be a prefix today, and a format nobody contracted is not a fact.
+#
+# `--settings` is not passed here because `respawn` takes none. The transport for a
+# recovered actor is preserved by the supervisor, which stores it in the job's
+# `respawnFlags` — observed, on a surface that is not contracted. Recovery therefore
+# DEPENDS on that preservation, so it is item 5 of the recertification checklist.
 if [ "$MODE" = resume ]; then
-  printf 'RECOVERY actor=%s session=%s\n' "$ACTOR" "$SESSION_ID" >&2
-  exec claude --resume "$SESSION_ID" --settings "$TRANSPORT" "$@"
+  [ $# -eq 0 ] || refuse USAGE "resume takes no extra claude arguments — respawn accepts none, and silently dropping them would be worse than refusing"
+
+  set +e
+  JOB_ID="$(claude agents --json --all 2>/dev/null | python3 -c '
+import json, sys
+try:
+    rows = json.loads(sys.stdin.read() or "[]")
+except Exception:
+    sys.exit(2)
+want = sys.argv[1]
+hits = [r for r in rows if isinstance(r, dict) and r.get("sessionId") == want and r.get("id")]
+if len(hits) != 1:
+    sys.exit(1)
+print(hits[0]["id"])
+' "$SESSION_ID")"
+  JOB_RC=$?
+  set -e
+  [ "$JOB_RC" -eq 0 ] && [ -n "$JOB_ID" ] || \
+    refuse JOB_ABSENT "the lineage of $ACTOR names session $SESSION_ID, which the supervisor does not list under \`claude agents --json --all\` — the job is gone or ambiguous. The record is not wrong, it is stale: do not re-birth over it without deciding what happened to that session"
+
+  printf 'RECOVERY actor=%s session=%s job=%s\n' "$ACTOR" "$SESSION_ID" "$JOB_ID" >&2
+
+  set +e
+  claude respawn "$JOB_ID"
+  RESPAWN_RC=$?
+  set -e
+
+  # A success-shaped exit is not evidence. This post-check exists because one of the
+  # rejected forms exits 0 while substituting a different session, and the old code
+  # `exec`ed, so nothing downstream could ever have noticed.
+  set +e
+  BACK="$(claude agents --json 2>/dev/null | python3 -c '
+import json, sys
+try:
+    rows = json.loads(sys.stdin.read() or "[]")
+except Exception:
+    sys.exit(2)
+want = sys.argv[1]
+for r in rows:
+    if isinstance(r, dict) and r.get("sessionId") == want:
+        if r.get("pid") is None:
+            sys.exit(3)
+        print(r.get("kind") or "", r.get("id") or "")
+        sys.exit(0)
+sys.exit(1)
+' "$SESSION_ID")"
+  BACK_RC=$?
+  set -e
+
+  case "$BACK_RC" in
+    0) : ;;
+    1) refuse RECOVERY_UNVERIFIED "respawn exited $RESPAWN_RC, but session $SESSION_ID is not in the live roster. If a session came back under a different id it is a fork, not $ACTOR — find it and stop it before trying again" ;;
+    3) refuse RECOVERY_UNVERIFIED "session $SESSION_ID is listed but carries no pid, so it is not running" ;;
+    *) refuse ROSTER_UNREADABLE "the roster gave no usable answer after respawn; refusing to report a recovery it cannot confirm" ;;
+  esac
+
+  BACK_KIND="${BACK%% *}"
+  [ "$BACK_KIND" = background ] || \
+    refuse RECOVERY_UNVERIFIED "session $SESSION_ID came back as '$BACK_KIND', not background — this kernel only ever births background actors, so a change of kind means it is not the same actor"
+
+  printf 'RECOVERY_PASS actor=%s session=%s job=%s kind=%s cell=%s\n' \
+    "$ACTOR" "$SESSION_ID" "$JOB_ID" "$BACK_KIND" "$RUNTIME_INSTANCE"
+  exit 0
 fi
 
 # BIRTH, in two phases.

@@ -111,7 +111,11 @@ and CLI that have been *measured* to change across versions:
 3. the default-name semantics — **observation only**, since after MC‑1/OB‑4 the kernel no
    longer depends on it;
 4. the order and text of the named refusals: MC‑1's receipts (a)/(b), MC‑3's residue test and
-   MC‑2's own regression **are** the smoke test.
+   MC‑2's own regression **are** the smoke test;
+5. **that a respawned actor keeps its transport.** `respawn` accepts no `--settings`, so after
+   MC‑6 the transport of a *recovered* actor is preserved by the supervisor and not by this
+   launcher. Observed in the job's stored `respawnFlags` — a surface that is **not contracted**,
+   which is exactly why it belongs on a list that gets re-run rather than assumed.
 
 Executable in minutes, entirely on an unqualified host except one birth/stop cycle.
 
@@ -384,9 +388,55 @@ one running. That is the historical duplicate MC‑3 closes at the birth door, a
 recovery door. The launcher cannot catch it afterwards either: `resume` ends in `exec`, so there
 is nothing left to check.
 
-**No corrective is written here.** Per the standing rule the measurement is reported before any
-mechanism, and the recovery of background actors is **out of contract** until a measured route
-exists. Scientist A is untouched.
+### MC‑6 — recovery is `respawn`, and a success-shaped exit is not evidence
+
+*Surface: launcher. Adjudicated PASS on the third arm, same throwaway subject, never A.*
+
+Read before use, per MC‑4: `claude respawn <id>|--all` — *"Restart a background session (or all
+of them) so it picks up the current Claude binary."* **`--all` is never used here**; it would
+restart every background session on the machine. The documented purpose is itself an answer to
+OB‑1: picking up a new binary is what the supervisor does about version drift.
+
+| arm | command | result |
+|---|---|---|
+| 3a | `claude respawn <sessionId>` | `No job matching '<sessionId>'`, exit 1 |
+| 3b | `claude respawn <job id>` | `respawned 2d2c3b77`, exit 0 — **same** sessionId, `kind: background`, **the original `cwd`**, and the name `qualification-probe` still attached |
+
+**PASS on every pre-committed criterion** except one that this subject cannot answer: *the
+transcript continues* is not evaluable, because the probe was never prompted and no transcript
+exists even after the respawn. Declared, not glossed.
+
+🔴 **The lineage names a session; the supervisor names a job, and the two keys are not
+interchangeable.** The short id is a prefix of the session id *today*, and truncating one into
+the other would be an assumption about a format nobody contracted — so the launcher resolves the
+job id from the documented roster by matching the session id, and refuses `JOB_ABSENT` when it
+cannot. That refusal says the record is **stale, not wrong**: a lineage the supervisor can no
+longer place is a fact about the supervisor, and re-birthing over it would destroy the only
+pointer to whatever happened.
+
+🔴 **The transport moves house.** `respawn` takes no `--settings`, so for a recovered actor the
+per-launch guarantee this kernel enforces at birth is enforced by the supervisor instead —
+observed in `respawnFlags`, which carried `--name`, `--settings <our transport.json>` and
+`--model`. Recovery therefore *depends* on a non-contracted surface, which is why it became item
+5 of the recertification checklist rather than a comment. The same observation touches OB‑2:
+`--model` is stored as the model the actor was **born** with, so a respawn undoes a mid-session
+fallback — the actor returns as what it was, not as what it became.
+
+**And the post-check exists because arm 2 earned it.** `resume` no longer ends in `exec`; it
+verifies that the same session came back, live, still background, and refuses
+`RECOVERY_UNVERIFIED` otherwise. A mutation removing the absence branch left the primary
+assertion **green** — the downstream kind check refused anyway, on an empty string, with the
+wrong explanation. `rc == 1` cannot see which layer refused, so both assertions now name their
+layer. That is the third variant of `PATTERN_ALREADY_SOLVED_GATE` arriving from the other side:
+not a defence with no test, but a *test* passing on a defence it was not aiming at.
+
+**Budget.** `+2` refusals (`JOB_ABSENT`, `RECOVERY_UNVERIFIED`), `0` new verbs, `0` new files.
+
+**Registered, no design now.** The fork semantics measured in arm 2 — transcript continuity
+without session identity — is a **candidate** for read-only inspection of archived transcripts
+without touching a lineage. Nothing is designed for it here. And this test **informs** 6.A
+without replacing it: different trigger (explicit stop vs the supervisor's idle-stop) and
+different channel (CLI vs `SendMessage`), so 6.A1 keeps its own slot.
 
 ## Execution order
 

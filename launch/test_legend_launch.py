@@ -55,14 +55,33 @@ class Bed:
         os.makedirs(self.cell_dir)
         os.makedirs(self.bin)
 
-        # A stub CLI. `--version` prints a version we control; `agents --json`
-        # returns an empty roster, which is the "nobody alive by that name" path.
+        # A scriptable stub CLI. `agents` serves a roster from disk, and serves a
+        # DIFFERENT one once `respawn` has run, so a recovery can be tested end to
+        # end — including the case where something comes back under another id.
+        self.stub = os.path.join(root, "stub")
+        os.makedirs(self.stub)
+        self.set_roster("pre", [])
+        self.set_roster("pre_all", [])
+
         stub = os.path.join(self.bin, "claude")
         with open(stub, "w") as fh:
             fh.write(
                 "#!/usr/bin/env bash\n"
-                'if [ "$1" = "--version" ]; then echo "%s (stub)"; exit 0; fi\n'
-                'if [ "$1" = "agents" ]; then echo "[]"; exit 0; fi\n'
+                'D="$STUB_DIR"\n'
+                'case "$1" in\n'
+                '  --version) echo "%s (stub)"; exit 0 ;;\n'
+                "  agents)\n"
+                '    suffix=""\n'
+                '    for a in "$@"; do [ "$a" = "--all" ] && suffix="_all"; done\n'
+                '    phase="pre"\n'
+                '    [ -f "$D/respawned" ] && phase="post"\n'
+                '    f="$D/roster_${phase}${suffix}.json"\n'
+                '    [ -f "$f" ] || f="$D/roster_pre${suffix}.json"\n'
+                '    cat "$f"; exit 0 ;;\n'
+                "  respawn)\n"
+                '    printf "%%s" "$2" > "$D/respawned"\n'
+                '    echo "respawned $2"; exit "${STUB_RESPAWN_RC:-0}" ;;\n'
+                "esac\n"
                 "echo 'stub refuses to launch anything' >&2; exit 97\n" % STUB_VERSION
             )
         os.chmod(stub, 0o755)
@@ -77,6 +96,23 @@ class Bed:
             subprocess.run(args, cwd=self.repo, check=True, env=env,
                            stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
+    def set_roster(self, name, rows):
+        with open(os.path.join(self.stub, "roster_%s.json" % name), "w") as fh:
+            json.dump(rows, fh)
+
+    def reset_respawn(self):
+        for name in ("respawned", "roster_post.json", "roster_post_all.json"):
+            path = os.path.join(self.stub, name)
+            if os.path.exists(path):
+                os.remove(path)
+
+    def respawned_with(self):
+        path = os.path.join(self.stub, "respawned")
+        if not os.path.exists(path):
+            return None
+        with open(path) as fh:
+            return fh.read()
+
     def write_record(self, actor, record):
         with open(os.path.join(self.cell_dir, actor + ".json"), "w") as fh:
             json.dump(record, fh, indent=2, sort_keys=True)
@@ -90,6 +126,7 @@ class Bed:
             cell="__default__", certified=STUB_VERSION):
         env = dict(os.environ)
         env["PATH"] = self.bin + os.pathsep + env["PATH"]
+        env["STUB_DIR"] = self.stub
         env["LEGEND_LINEAGE_DIR"] = self.lineage
         env["LEGEND_TRANSPORT_SETTINGS"] = os.path.join(HERE, "transport.json")
         env["LEGEND_CERTIFIED_VERSION"] = certified
@@ -205,6 +242,60 @@ def main():
         rc, out, _ = bed.run("check", "nobody")
         check("check passes when every precondition holds",
               rc == 0 and "PRECONDITIONS_PASS" in out, out)
+
+        print("recovery is respawn, and a success-shaped exit is not evidence")
+        # The lineage names a session; the roster names the JOB. They are different
+        # keys, and truncating one into the other would be an assumption about a
+        # format nobody contracted.
+        STOPPED = {"sessionId": "1111-2222", "id": "job77", "kind": "background",
+                   "name": "active", "state": "stopped"}
+        RUNNING = {"sessionId": "1111-2222", "id": "job77", "kind": "background",
+                   "name": "active", "pid": 4242}
+
+        bed.reset_respawn()
+        bed.set_roster("pre_all", [])
+        rc, _, err = bed.run("resume", "active")
+        check("a lineage the supervisor cannot place refuses",
+              rc == 1 and "JOB_ABSENT" in err, err)
+        check("and says the record is stale, not wrong", "it is stale" in err, err)
+
+        bed.reset_respawn()
+        bed.set_roster("pre_all", [STOPPED])
+        bed.set_roster("post", [RUNNING])
+        rc, out, err = bed.run("resume", "active")
+        check("recovery succeeds", rc == 0 and "RECOVERY_PASS" in out, out + err)
+        check("respawn was addressed by the job id, not the session id",
+              bed.respawned_with() == "job77", str(bed.respawned_with()))
+
+        bed.reset_respawn()
+        bed.set_roster("pre_all", [STOPPED])
+        bed.set_roster("post", [{"sessionId": "9999-0000", "id": "other",
+                                 "kind": "background", "pid": 4243}])
+        rc, out, err = bed.run("resume", "active")
+        # Both assertions name the layer, not just the refusal. Deleting the
+        # absence branch left the FIRST of these green — the kind check downstream
+        # refused anyway, on an empty string, with the wrong explanation. A refusal
+        # arriving from the wrong layer is still a defect, and `rc == 1` cannot see it.
+        check("a session returning under another id is refused by the absence check",
+              rc == 1 and "not in the live roster" in err, out + err)
+        check("and it is named a fork", "fork" in err, err)
+
+        bed.reset_respawn()
+        bed.set_roster("pre_all", [STOPPED])
+        bed.set_roster("post", [dict(RUNNING, kind="interactive")])
+        rc, _, err = bed.run("resume", "active")
+        check("a change of kind is refused", rc == 1 and "RECOVERY_UNVERIFIED" in err, err)
+        check("and the refusal names the kind it came back as", "interactive" in err, err)
+
+        bed.reset_respawn()
+        bed.set_roster("pre_all", [STOPPED])
+        bed.set_roster("post", [dict(STOPPED)])   # listed, but carrying no pid
+        rc, _, err = bed.run("resume", "active")
+        check("a session listed without a pid is not a recovery",
+              rc == 1 and "RECOVERY_UNVERIFIED" in err, err)
+
+        bed.reset_respawn()
+        bed.set_roster("pre_all", [])
 
         print("existing behaviour still enforced")
         rc, _, err = bed.run("birth", "nobody", branch="wrong-branch")
