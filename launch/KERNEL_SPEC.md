@@ -77,11 +77,14 @@ LAUNCH_REFUSED CELL_UNKNOWN: no cell '<id>' at <dir> — create it deliberately
 ```
 
 **Test receipt.** (a) invoke with the variable unset → `RUNTIME_INSTANCE_UNDECLARED`, exit 1.
-(b) invoke with an invented cell → `CELL_UNKNOWN`, exit 1. (c) invoke with `mac-dev-001` →
-passes MC‑1 and proceeds to the next precondition. All three run on an unqualified host,
-because MC‑1 is evaluated before the version gate is reached only for (a); (b) and (c) are
-observed through `check`, which after MC‑5/OQ‑3 reports every precondition rather than dying
-at the first.
+(b) invoke with an invented cell → `CELL_UNKNOWN`, exit 1. (c) invoke with the coined cell →
+passes and proceeds to the next precondition.
+
+> **Corrected against the implementation.** v1.1 said (b) and (c) were observable only through
+> `check`, because identity was assumed to be judged after the runtime gate. Both identity
+> checks were placed **before** it instead — a wrong or absent cell is wrong on a qualified
+> host too — so all three receipts fire in the acting modes as well. Asserted in the suite as
+> *identity is judged before the runtime gate*.
 
 **Stated residual.** MC‑1 does not *authenticate* a cell. A typo that lands on an existing cell
 is still undetected → OQ‑2, optional.
@@ -259,8 +262,9 @@ requirement — it makes an actor findable — and is never a persistable addres
 ## Primitive budget
 
 ```
-launcher    +4 refusals  RUNTIME_INSTANCE_UNDECLARED · CELL_UNKNOWN ·
-                         LINEAGE_RESERVED · LINEAGE_UNBOUND
+launcher    +5 refusals  RUNTIME_INSTANCE_UNDECLARED · CELL_UNKNOWN ·
+                         LINEAGE_RESERVED · LINEAGE_UNBOUND · LINEAGE_UNREADABLE
+            −1 refusal   CWD_MISMATCH, removed
             +1 record field  state: PENDING_BIRTH | ACTIVE   (+ annotation on pending)
              0 new verbs · 0 new files · 0 new configuration surfaces
             −1 derivation removed (hostname/id)
@@ -268,6 +272,17 @@ protocol    +5 gates registered in the existing learned_gates_registry
             +2 named outcomes reusing a schema already in use
              0 new ledgers
 ```
+
+> **The budget said +4 refusals; the implementation spent +5 and refunded one — net +4, but the
+> composition changed and that is the part worth recording.** `LINEAGE_UNREADABLE` was needed
+> because a record that cannot be interpreted must refuse rather than be overwritten: the
+> alternative was to *derive* a state for it, and deriving a state is how a record that may
+> point at a live session gets treated as disposable. `CWD_MISMATCH` was removed because it
+> could not fail — it compared `pwd -P` after `cd` against the same path resolved the same way,
+> and still printed a reassuring line every run. **A control that cannot fail is not a control;
+> it is a claim of verification.** The net figure was not the reason for either decision, and
+> reshaping the work to hit a number written yesterday would have been the failure this
+> repository names in its own growth rules.
 
 **Rejected, with reasons.** `launch/certification.json` — the constant already lives in a
 versioned file with `git blame`; a second file adds surface without adding accountability.

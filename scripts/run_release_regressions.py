@@ -41,6 +41,7 @@ TESTS = (
     "scripts/test_deepdive_method_contract.py",
     "scripts/test_fulltext_trace_contract.py",
     "scripts/test_phenotypic_neighbors.py",
+    "launch/test_legend_launch.py",
     "framework/scripts/test_legend_lint.py",
     "framework/scripts/test_batch_commit.py",
     "framework/scripts/test_generate_semantic_graph.py",
