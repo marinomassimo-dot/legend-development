@@ -338,15 +338,55 @@ it is now a measurement rather than an argument.
 
 **Disposition.** Session stopped with `claude stop 2d2c3b77`; absence verified in the active
 roster and `state: "stopped"` with **no `pid`** under `--all`, which is the field the liveness
-predicate keys on. The test lineage was **archived, not cleaned up** — it is the evidence that
-the certification was executed rather than argued — and the cell then re-checked through the
-same decision function, which reports `ABSENT`.
+predicate keys on. The test lineage record was retired rather than deleted, and the cell then
+re-checked through the same decision function, which reports `ABSENT`.
+
+> **It is a SCRATCH qualification artifact, not an archive.** The record lives in a temporary
+> scratchpad, so calling it archived would promise a durability it does not have. **The durable
+> receipt is this commit.** The distinction matters because the reason for keeping the record
+> was that it evidences the certification — and evidence stored where it can evaporate is the
+> failure this repository has already paid for once, when a `MANIFEST STRICT PASS` was certified
+> in a temporary workspace that then disappeared.
 
 **Defense in depth, not a substitute for the measure.** Had the launch contract moved, the birth
 would have ended in `LINEAGE_UNRESOLVED` and left an *annotated* reservation — a named block
 rather than an invisible duplicate. That is a property of MC‑3, and it is why an unverified
 surface would have been survivable; it is not why this one is certified. This one is certified
 because it was run.
+
+## `BACKGROUND_RECOVERY_CONTRACT` — UNDETERMINED, and one thing that is not
+
+Second qualification act, 2026‑08‑13, same throwaway subject, never Scientist A. The launcher's
+`resume` branch runs `exec claude --resume <id> --settings <transport>` with **no `--bg`**, while
+Scientist A is `kind: background` — so recovering her would either fail or change her kind, and
+neither is a recovery. Both arms were run against the stopped probe.
+
+| arm | command | result |
+|---|---|---|
+| 1 | `claude --resume <id> --settings <transport>` | `No conversation found with session ID: …`, exit 1, immediate. Fail-closed; no hang, no TTY error |
+| 2 | `claude --resume <id> --bg --settings <transport>` | **exit 0** with a success-shaped banner — and a **new** sessionId `8eba3b81-…`, `kind: background`, `cwd` = the **caller's**, which then reached `state: failed` |
+
+🔴 **The subject could not answer the question.** The probe was born idle and never prompted, so
+no conversation was ever persisted: no transcript exists anywhere under `~/.claude`, only
+`session-env/` and `jobs/<id>/state.json`. `No conversation found` therefore explains itself and
+says nothing about background recovery. Recording arm 1 as *"background recovery fails"* would
+have been a plausible predicate answering a different question — so the contract stays
+**UNDETERMINED for a resumable subject**, and 6.A1 keeps its own slot: different trigger
+(explicit stop vs the supervisor's idle-stop) and different channel.
+
+🔴 **What IS determined, because both arms used the identical id: the two forms disagree on
+failure semantics. One refuses; the other silently substitutes a new session and reports
+success.** That is unconfounded by the subject's emptiness, and it is decisive for this kernel.
+`--bg` is the obvious way to make the resume branch recover a background actor — and with it, a
+stale, purged or mistyped sessionId stops being a refusal and becomes **a new actor wearing the
+recovered actor's name**, with an `ACTIVE` lineage record pointing at a session that is not the
+one running. That is the historical duplicate MC‑3 closes at the birth door, arriving through the
+recovery door. The launcher cannot catch it afterwards either: `resume` ends in `exec`, so there
+is nothing left to check.
+
+**No corrective is written here.** Per the standing rule the measurement is reported before any
+mechanism, and the recovery of background actors is **out of contract** until a measured route
+exists. Scientist A is untouched.
 
 ## Execution order
 
