@@ -355,7 +355,7 @@ essere ispezionato come figure ma **non può portare locator testuali** (regola 
 **Why:** fonte primaria WWOX–ErbB4 direttamente a monte di PMID 35716775; serve a verificare quali determinanti di sequenza/affinità precedenti sopravvivono oltre il nuovo modello topology-dependent e a evitare che peptidi ingegnerizzati vengano generalizzati ai partner naturali.
 **Current status:** ✅ **CORPO LETTO il 2026-08-10** — ricevuta `FTR-20260810-24308844-01`,
 `partial_fulltext_read`. **La voce viva per questo paper è
-[[full_text_queue_current#FT-055]]**,
+[[full_text_queue_current#FT-055 — Le sette figure di PMID 24308844, e l'esperimento che **non** è stato eseguito|FT-055]]**,
 che porta il debito residuo: le sette figure, mai ispezionate. Il testo sotto **resta com'era
 al 2026-07-26** ed è superato da qui in avanti.
 
