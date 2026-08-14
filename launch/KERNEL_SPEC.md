@@ -26,8 +26,8 @@ accountability this project has already declined twice.
 | **identity** | [MC‑1 — cell identity is declared, never derived](#mc1--cell-identity-is-declared-never-derived) · [OB‑4, the name is not an identity](#observation--recorded-no-gate) |
 | **lifecycle** | [MC‑3 — two-phase lineage](#mc3--two-phase-lineage-pending_birth--active-created-with-o_excl) · [MC‑6 — recovery is `respawn`](#mc6--recovery-is-respawn-and-a-success-shaped-exit-is-not-evidence) · [`BACKGROUND_RECOVERY_CONTRACT`](#background_recovery_contract--undetermined-and-one-thing-that-is-not) · [the kernel does not guarantee continuation](#the-kernel-does-not-guarantee-continuation--declared-boundary-not-implementation) |
 | **messaging** | [MC‑5 — `REACHABLE` vs `OPERATIONAL`](#mc5--51c-reachable-and-operational-are-two-outcomes-never-one-word) · [`RETURN_CHANNEL_PASS`](#return_channel_pass--the-leg-that-had-never-been-observed-observed-once) · [five outcomes, never four](#five-outcomes-never-four) |
-| **workspace** | [5.1g — closed, the boundary was never there](#51g--closed-the-boundary-was-never-there-to-be-observed) · [registered candidate: `--worktree` at birth](#registered-candidate-not-to-be-tried-now) |
-| **permissions** | [`PERMISSION_WAIT`](#permission_wait--measured-named-by-the-supervisor-and-unanswerable-at-night) · [the register, entry 1](#permission-collection--the-register-entry-1) · [the register needs a sampler](#-the-register-cannot-be-compiled-afterwards--a-requirement-of-the-attended-pilot) |
+| **workspace** | [5.1g — closed, the boundary was never there](#51g--closed-the-boundary-was-never-there-to-be-observed) · [the `--worktree` candidate — not practicable](#the---worktree-candidate--not-practicable-by-the-hypothesised-route-not-refuted) · [the variable is probably the birth channel](#the-variable-is-probably-the-birth-channel--hypothesis-two-observations) |
+| **permissions** | [`PERMISSION_WAIT`](#permission_wait--measured-named-by-the-supervisor-and-unanswerable-at-night) · [the register, entry 1](#permission-collection--the-register-entry-1) · [the register needs a sampler](#-the-register-cannot-be-compiled-afterwards--a-requirement-of-the-attended-pilot) · [**re-prioritised to primary boundary**](#-re-prioritisation-two-demoted-layers-become-the-only-boundary-there-is) |
 | **observability** | [`state.json` is not a liveness source](#statejson-is-diagnostic-evidence-never-a-liveness-source) · [an actor cannot report the permission it was blocked on](#-an-actor-cannot-report-the-permission-it-was-blocked-on) · [`SESSION_RUNTIME_DRIFT` and model identity](#observation--recorded-no-gate) |
 | **failure taxonomy** | [`MESSAGE_TURN_TRUNCATION`](#message_turn_truncation--a-failure-class-defined-by-its-symptom) · [`PERMISSION_WAIT`](#permission_wait--measured-named-by-the-supervisor-and-unanswerable-at-night) · [self-erasing blocking events — **hypothesis**](#self-erasing-blocking-events--a-hypothesis-with-one-instance) |
 | **process** | [decisions of record](#decisions-of-record) · [certification log](#certification-log) · [primitive budget](#primitive-budget) · [open questions](#open-question--resolutions-and-residue) · [execution order](#execution-order) |
@@ -618,14 +618,73 @@ unprompted disclosure about the deferred tool is exactly that value. But it is n
 never the liveness source, and never the answer to *why did you stop*. For that, read the surface
 that observes the actor rather than the one the actor writes.
 
-### Registered candidate, not to be tried now
+### The `--worktree` candidate — NOT PRACTICABLE by the hypothesised route, not refuted
 
-If isolation is a property of the **dispatch**, it may be requestable **at birth**: the
-`--worktree` flag is documented and the dispatch already carries an `isolation` field. Birth with
-the flag, rather than `cd` plus a plain birth, is what would turn the discipline into an enforced
-boundary for background actors. **Associated future measurement:** a dispatch with
-`isolation ≠ none` **and** a cross-worktree probe that is refused — both halves, or neither.
-No implementation, no change to the launcher.
+The idea was that isolation, being a property of the **dispatch**, might be requestable **at
+birth** via the documented `--worktree` flag. Read before use, per MC‑4:
+
+```
+-w, --worktree [name]    Create a NEW git worktree for this session
+                         (optionally specify a name)
+```
+
+**It creates one; it does not bind a session to an existing one.** The optional `[name]` names
+the new worktree. Neither `claude --help` nor `claude agents --help` exposes any isolation,
+worktree-binding or sandbox option that would.
+
+🔴 **And executing it anyway would have broken the kernel's location contract — this is the part
+that generalises.** The launcher validates `WORKTREE_ABSENT`, `TOPLEVEL_MISMATCH` and
+`BRANCH_MISMATCH` against the path it is given, and *then* launches:
+
+```
+launcher validates  →  worktree X
+session is born in  →  worktree Y   (new, created by the flag)
+lineage records     →  X, which is not where the actor lives
+```
+
+The lineage would certify a position the actor does not occupy — **the exact failure class MC‑1
+and MC‑3 exist to prevent**, arriving through an argument rather than through a derivation.
+**Stated as a standing rule, because it outlives this flag: any argument that can move the birth
+cwd invalidates the launcher's location checks, which are performed before the launch and never
+re-verified after it.** A future flag with that property must be refused or must move the checks,
+never simply be passed through.
+
+Verdict: **not practicable by this route, and not refuted.** `isolation` remains a dispatch
+field, so something populates it when it is not `"none"`.
+
+### The variable is probably the birth channel — hypothesis, two observations
+
+| observation | isolation |
+|---|---|
+| interactive session launched inside a worktree | **isolated** — cross-worktree git refused with explicit wording |
+| background session dispatched by the fleet | `"none"` |
+
+**Candidate: what differs is the channel of birth, not an argument that can be passed.** Evidence
+is two observations, one per side, on an internal diagnostic surface — **hypothesis, not class**,
+and it stays that way until something is measured populating the field.
+
+**If it holds, the consequence is not small:** on this version native isolation is **not available
+to the class of session an unattended night requires**, and the lever lives in the *supervisor's
+dispatch*, not in anything the launcher can pass.
+
+**Unexplored, registered without being tried:** what populates `isolation` when it is not
+`"none"`; and whether a settings key governs it — reading `--help` is not an exhaustive search of
+the configuration surface.
+
+### 🔴 Re-prioritisation: two demoted layers become the only boundary there is
+
+With the native boundary absent for background actors, the two layers previously filed as
+defence-in-depth are **no longer secondary**. For that actor class they are **the primary
+boundary**, and the spec records them as such:
+
+| layer | previous status | status now | evidence |
+|---|---|---|---|
+| **permission rules** in the launcher's `--settings` — explicit denies and allow-list | night-time configuration, secondary | **primary boundary for background actors** | measured working today: the cross-worktree `git -C` was intercepted **by permissions, not by isolation** |
+| **repo-side pre-commit hook** | never built, classified secondary | **primary** | it is the only layer that travels *with the repository* and can stop a commit made from the wrong toplevel |
+
+The first is not a convenience for unattended runs; it is the boundary that actually held. The
+second is the only one a clone carries with it. **Neither is built here — the priority line is the
+deliverable, not the code.**
 
 ## The kernel does not guarantee continuation — declared boundary, not implementation
 
