@@ -460,6 +460,83 @@ not solve this class — it prolongs it.** A VPS means the prompt hangs *longer*
 answers it. The condition for unattended operation is not "hardware that stays alive" but
 **"no execution path can stop on a question."**
 
+## 5.1g — CLOSED. The boundary was never there to be observed
+
+Three delegations over three days tried to measure whether the harness refuses a background
+actor's reach into the shared checkout. Two truncated. The third, run under an approved prompt,
+reached the end:
+
+| axis | result |
+|---|---|
+| `CMD_RESULT` | record 68 `TOOL_USE[Bash]` → `git -C /Users/massimo/Desktop/legend-public status --short; echo "EXIT=$?"`; record 69 `toolUseResult {"stdout": "EXIT=0", "stderr": "", "interrupted": false}` — **exit 0, working tree clean, and the actor read it** |
+| `NATIVE_CROSS_WORKTREE_GIT_GUARD` | **`NOT_OBSERVED`** |
+| return path | **2 round-trips** — `req_…QfhsXs` (Bash), `req_…SLhn2k` (SendMessage), plus a closing text request. **No `ToolSearch`: the tool reference was warm** |
+
+🔴 **And this time `NOT_OBSERVED` is not an absence to interpret, because the cause was measured
+upstream.** The daemon roster's dispatch for that actor carries **`"isolation": "none"`**. Nothing
+could have refused. The two truncated probes were never capable of producing a refusal — they were
+measuring a boundary that does not exist for that actor class.
+
+**The third property of the triad is measured absent.** *The worktree exists ≠ the session was
+launched there ≠ the harness enforces its boundary.* For a launcher-born background actor the
+third term is `none`, so **"one actor, one worktree" is DISCIPLINE, not an enforced boundary** —
+it holds exactly as long as the actor honours it, and nothing detects a breach.
+
+**Evidence level, declared:** a field of an internal, non-contracted surface. Read to *understand*,
+never to *decide* — which is why the launcher still refuses to parse it. Corroboration taken from
+the same read: `mode: "resume"`, `restoresTranscript: true`, `fork: false`, confirming MC‑6 from
+the supervisor's own record. Noted and deliberately not built upon: the daemon roster reports
+`pid 5059` where `claude agents --json` reports `5064` — two surfaces, two pids; liveness stays on
+the documented one.
+
+### The approval, and why it is part of the measurement
+
+Granted by **the operator**, via `claude attach 2e2571b7`, **option 1**, landing immediately before
+`09:53:50.932Z` — **21 min 52 s** after the call was emitted. Option 2 was forbidden and unused,
+for two reasons kept on record: it would alter configuration as a side effect of a measurement,
+and *"don't ask again"* writes into the **main checkout's** `settings.local.json`, applying to
+**every worktree** — a global permission for every actor, granted by one click inside a probe.
+
+🔴 **The approval existed only because the pilot is attended.** At 3 a.m. that gesture does not
+happen, and the call is still sitting there in the morning. That is the finding, not the footnote.
+
+### 🔴 An actor cannot report the permission it was blocked on
+
+A's own report states *"no permission prompt, no hook intervened"*. **It is false, and it is not
+her fault:** the prompt existed — read verbatim off her screen, named by the roster as
+`waitingFor: "permission prompt"`, and measured by the 22-minute gap between records 68 and 69 —
+but **nothing about it appears in her transcript**. Approval happens outside the actor's flow, so
+from inside, the command simply succeeded.
+
+**Direct consequence for the capability profile: it cannot be collected from actor self-reports.**
+Asking an actor *"did you hit any prompts?"* returns `no` **precisely on the events worth
+collecting**. The source must be the roster's `waitingFor` and the prompt surface. Same shape as
+the two corrections recorded above: the transcript holds the answer and not the question.
+
+### Permission collection — the register, entry 1
+
+```
+command    git -C /Users/massimo/Desktop/legend-public status --short
+actor      scientist-a · background · isolation: none · permissionMode: default
+context    read-only probe against the shared checkout, attended pilot
+outcome    APPROVED (option 1) by the operator, after 21m52s of waiting
+source     roster waitingFor + the prompt surface — NOT self-report
+status     request observed · no permission written
+```
+
+Every prompt raised during the attended pilot is a candidate line. The night's allow-list is
+**derived from measured use, never from an imagined list.** No policy engine, no permission
+written.
+
+### Registered candidate, not to be tried now
+
+If isolation is a property of the **dispatch**, it may be requestable **at birth**: the
+`--worktree` flag is documented and the dispatch already carries an `isolation` field. Birth with
+the flag, rather than `cd` plus a plain birth, is what would turn the discipline into an enforced
+boundary for background actors. **Associated future measurement:** a dispatch with
+`isolation ≠ none` **and** a cross-worktree probe that is refused — both halves, or neither.
+No implementation, no change to the launcher.
+
 ## The kernel does not guarantee continuation — declared boundary, not implementation
 
 *Operator decision, by delegation.*
