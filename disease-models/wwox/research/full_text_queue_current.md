@@ -2307,6 +2307,36 @@ un risultato oggi solo visivo; media per gli hop.
 
 ---
 
+## FT-064 — Il supplemento che contiene la confutazione, e i due hop su cui Kurek poggia senza misurarli
+
+**Papers:** PMID 20530675 / DOI 10.1038/onc.2010.222 — Kurek KC *et al.*, *Oncogene* 2010,
+PMC3037996 — *Frequent attenuation of the WWOX tumor suppressor in osteosarcoma*. **Letto**
+(`FTR-20260814-20530675-01`, parziale). Voce di debito residuo.
+
+🔴 **Il supplemento non è un'appendice: contiene la confutazione di un titolo di figura.** Un solo
+PDF da 5,8 MB con **Fig S1–S6 e Tabelle S1–S9**. **`Supplemental Table 8`** è dove il confronto
+appaiato WWOX/RUNX2 **fallisce** — la negativa che qualifica il titolo *«Inverse association … in
+osteosarcoma»*. **`Supplemental Fig 6`** è l'elevazione di Runx2 nei femori dei topi Wwox-carenti,
+cioè il braccio animale della stessa affermazione. **`Supplemental Fig 1`** è il metodo micro-CT
+dietro *«100% of Wwox-deficient mice had developed OS by 18 days-of-age»*.
+
+**I due hop portanti, entrambi non letti.** **Rif. 8** — WWOX sopprime la transattivazione di
+RUNX2: questo paper **cita** quel meccanismo e non lo misura, e ogni affermazione funzionale sull'asse
+WWOX–RUNX2 in questo corpus poggerebbe lì. **Rif. 7** — il topo Wwox-nullo con osteosarcoma
+periostale nel >30% dei giovani: è la premessa dell'intero studio, ed è **probabilmente** già in
+`FT-057`. *«Probabilmente» non è un'identificazione*: primo gesto, confermarlo.
+
+**Debito figure:** 5 presenti, 2 ispezionate. Non ispezionate: **Fig 4** (rescue su cloni stabili
+HOS — colony formation, soft agar, migrazione, invasione Matrigel: **la rinuncia più cara**, è
+l'affermazione funzionale su cui poggerebbe una lettura terapeutica), Fig 3, Fig 2. Le cinque
+immagini sono **già sul disco condiviso** in `files/fulltext/PMID20530675_Kurek2010_assets/`.
+
+**Next action:** recuperare il supplemento (`Table S8` per prima); poi Fig 4; poi risolvere il
+rif. 8. **Current status:** ⬜ aperto. **Priorità: ALTA** per `Table S8` — è ciò che rende
+quantificabile una negativa oggi affidata a una sola frase.
+
+---
+
 ## ⏳ DEBITO PER PLAN — due voci distinte, non una
 
 Emerse dalla correzione `FTR-20260811-31075076-02`. **Non sono mie da chiudere**: toccano lo schema

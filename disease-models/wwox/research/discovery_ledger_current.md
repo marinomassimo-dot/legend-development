@@ -2583,3 +2583,22 @@ E c'è un ponte che questo corpus non aveva: l'A-T **è** una neurodegenerazione
 #### La parità delle fonti, misurata di nuovo
 
 `Pajukanta P[au] AND WWOX` → **2** su **174**. È un gruppo di genetica umana dei lipidi, **non un laboratorio WWOX**: il gene è semplicemente ciò che sta sotto il loro picco di linkage. Arriva qui da **fuori dalla propria letteratura**, e a differenza della via oncologica questa non è nemmeno adiacente.
+
+---
+
+### DL-METH-096 — **Non solo la modalità: anche l'AMPIEZZA. Un titolo di figura generalizza a «in osteosarcoma» ciò che il paper stesso dichiara non evidente nell'umano**
+
+- **Classificazione:** `DATO` sulle tre citazioni e sull'ispezione del pannello, verificate contro artefatti impronta-verificati.
+- **Fonte:** `PMID 20530675` — Kurek 2010, *Oncogene*. `FTR-20260814-20530675-01`, `file:files/fulltext/PMID20530675_Kurek2010_PMC.html @ 8fadfda1…`. Lettura **parziale**: corpo integrale, 2 figure su 5 ispezionate, **supplementary non recuperato**.
+- **Il reperto.** La Figura 5 è intitolata *«Inverse association of WWOX and RUNX2 expression **in osteosarcoma**»*. Due paragrafi dopo, nei Risultati: *«Although WWOX and RUNX2 results suggested an inverse association in human OSs, **this was not evident when paired comparisons were performed on the 56 available cases**»*. E i numeri vanno **nella direzione opposta**: **78% (7/9)** delle biopsie WWOX-forti erano **RUNX2 positive**, e 55% (6/11) delle WWOX-ridotte erano RUNX2 negative — co-occorrenza nello stesso verso, non inversa.
+- 🔴 **Ed è una classe DIVERSA da `DL-METH-094`.** Là ciò che superava l'evidenza era la **modalità**: attenuazioni presenti nel testo e assenti dalla figura. **Qui la modalità è intatta** — gli autori attenuano correttamente, nei Risultati, in stampa. Ciò che viaggia oltre l'evidenza è **l'AMPIEZZA di un titolo**: una rivendicazione sulla malattia, su una figura che contiene linee cellulari. **Il rimedio è diverso**: questa non si cattura cercando i modali mancanti.
+- **La terna sul pannello, letta dai pixel.** Corpo: *«murine cell lines MC3T3 and K7M2 express Wwox and have reduced Runx2 expression»*. Didascalia 5A: *«HOS, Saos2 and KHOS (WWOX-reduced) cells have higher levels of RUNX2 compared to MC3T3 and K7M2 (Wwox-positive) cells»*. **Pannello: MC3T3 e K7M2 portano bande RUNX2 nette**, confrontabili con HOS — che la stessa didascalia colloca sul lato RUNX2-alto. L'unica corsia davvero vuota è **MCF7**, che è una linea mammaria. `cited_panel_check` soddisfatto.
+- **E una corsia che il paper non nomina mai:** dieci corsie nel blot, la didascalia ne rende conto di cinque e il paragrafo dei Risultati di nove. **`ROS` non compare da nessuna parte**, e porta la banda RUNX2 più scura della riga.
+- **Che cosa la contraddizione NON è:** non rovescia la tesi. Le linee umane WWOX-basse portano davvero RUNX2 alto, e MCF7 contro MDA-MB231 va davvero in senso inverso. **Fallisce il contrasto specifico su cui la didascalia costruisce l'affermazione** — e gli autori registrano essi stessi che altre due linee, MG-63 e U2OS, non seguono la correlazione.
+- **Conseguenza operativa:** al `PREMISE_TAG` sulle figure-modello va affiancato un controllo di **ampiezza**: quando un titolo di figura nomina la malattia e il pannello contiene solo linee cellulari o modelli, la differenza va dichiarata. E `DL-METH-094` va letta come *compressione di modalità*, non come la regola generale che credevo.
+- **REVIVAL_TRIGGER:** il **Supplemental Table 8**, dove il confronto appaiato fallisce, non è stato recuperato. Recuperarlo rende quantificabile ciò che oggi è solo la frase degli autori.
+- **Interconnessioni:** `DL-METH-094` (**sorella, non identica**) · `DL-METH-091` · `FT-064` · [[epistemic_discipline]].
+
+#### Il lato clinico regge, ed è la cosa più forte del paper
+
+WWOX assente o ridotto nel **58%** di 83 campioni da 51 pazienti contro 12 controlli di osso e cartilagine normali, con intervalli binomiali esatti e test esatto di Fisher. E l'osservazione **longitudinale dentro gli stessi pazienti**: *«chemotherapy restored WWOX levels and the metastases had reduced levels»* — due movimenti opposti dello stesso marcatore nelle stesse persone, argomento assai più forte di una prevalenza. La Figura 1C lo mostra nei pixel: cromogeno bruno denso nella biopsia iniziale, praticamente assente nella metastasi.
