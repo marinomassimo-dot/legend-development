@@ -405,6 +405,18 @@ Mandatory blocking message: `FULL STATE NOT AVAILABLE — COMMIT BLOCKED`
 
 **Minimal change and verification contract.** Before every non-trivial operational change, state the assumptions, the smallest sufficient change, an observable success criterion, and the final verification. When testing scripts, lint rules, rankings, heuristics or reusable procedures, use [`legend-research-loop`](.claude/skills/legend-research-loop/SKILL.md): establish a baseline, change one conceptual variable, record `KEEP` / `DISCARD` / `INCONCLUSIVE` / `CRASH`. This loop validates only the tested procedure; it never replaces full-text reading, scientific judgement, safety review or the canonical promotion pipeline.
 
+**Observable-stop gate for long readings.** `Context low` is never, by itself, an exit
+condition. Conversation length, a resumed session, or compaction may motivate care, but they
+do not demonstrate that a complete reading cannot continue. If the runtime exposes no
+measurement of context used and remaining, the actor must label the concern as a subjective
+estimate and may not replace the assigned reading with a preflight, smaller unit, or partial
+analysis on that basis. During a full-text run the actor pauses and escalates only for an
+observable blocker: the validator refuses the required surface or locators; the reading
+contradicts a consolidated baseline; a `BLOCK-1` safety signal appears; continuation requires
+writing outside the actor's branch or assigned perimeter; or a required gate is closed. All
+other pre-existing system hard stops remain binding. The actor names the blocker and its
+evidence; absent one, it continues until the reading's verifiable artifacts are closed.
+
 **No rebuild.** LEGEND cannot regenerate current, meta or structural files from chat memory, partial state or inferential reconstruction. Work only from files explicitly provided.
 
 **Lossless.** Every output file must contain all previously valid information. Do not abbreviate, compress or omit sections that are not being changed. Copy unchanged sections verbatim.
