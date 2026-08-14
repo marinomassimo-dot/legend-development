@@ -35,6 +35,29 @@ CHALLENGE_RE = re.compile(r'const POW_CHALLENGE = "([^"]+)"')
 DIFFICULTY_RE = re.compile(r'const POW_DIFFICULTY = "([0-9]+)"')
 COOKIE_NAME_RE = re.compile(r'const POW_COOKIE_NAME = "([^"]+)"')
 
+OFFICE_CONTENT_TYPES = {
+    "application/msword",
+    "application/vnd.ms-excel",
+    "application/vnd.ms-powerpoint",
+    "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+    "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+}
+
+IMAGE_CONTENT_TYPES = {"image/jpeg", "image/png"}
+
+
+def is_supported_binary(data: bytes, content_type: str) -> bool:
+    """Accept the article/supplement formats PMC advertises, never an HTML interstitial."""
+    mime = content_type.split(";", 1)[0].strip().lower()
+    if data.startswith(b"%PDF"):
+        return mime in {"application/pdf", "application/octet-stream", ""}
+    if data.startswith(b"\xd0\xcf\x11\xe0") or data.startswith(b"PK\x03\x04"):
+        return mime in OFFICE_CONTENT_TYPES | {"application/octet-stream", ""}
+    if data.startswith(b"\xff\xd8\xff") or data.startswith(b"\x89PNG\r\n\x1a\n"):
+        return mime in IMAGE_CONTENT_TYPES | {"application/octet-stream", ""}
+    return False
+
 
 def parse_interstitial(page: bytes) -> tuple[str, int, str]:
     text = page.decode("utf-8", errors="replace")
@@ -61,8 +84,13 @@ def fetch(url: str) -> tuple[bytes, dict[str, object]]:
     with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=60) as response:
         first = response.read()
         first_status = response.status
-    if first.startswith(b"%PDF"):
-        return first, {"first_status": first_status, "pow_used": False}
+        first_content_type = response.headers.get("content-type", "")
+    if is_supported_binary(first, first_content_type):
+        return first, {
+            "first_status": first_status,
+            "pow_used": False,
+            "content_type": first_content_type,
+        }
 
     challenge, difficulty, cookie_name = parse_interstitial(first)
     nonce, digest = solve_pow(challenge, difficulty)
@@ -74,9 +102,9 @@ def fetch(url: str) -> tuple[bytes, dict[str, object]]:
         data = response.read()
         retry_status = response.status
         content_type = response.headers.get("content-type", "")
-    if not data.startswith(b"%PDF"):
+    if not is_supported_binary(data, content_type):
         raise ValueError(
-            f"POW retry returned HTTP {retry_status}, {content_type}, but not a PDF"
+            f"POW retry returned HTTP {retry_status}, {content_type}, but not a supported binary"
         )
     return data, {
         "first_status": first_status,

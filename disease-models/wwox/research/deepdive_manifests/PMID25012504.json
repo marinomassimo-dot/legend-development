@@ -1,0 +1,288 @@
+{
+  "schema_version": 2,
+  "pmid": "25012504",
+  "doi": "10.1038/cdd.2014.95",
+  "receipt": "FTR-20260814-25012504-01",
+  "landing": [
+    "PAPER 024",
+    "DL-MECH-095",
+    "PMID25012504.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": true,
+      "reason": "Primary mechanistic paper selected for a receipt-backed full read."
+    },
+    {
+      "skill": "pdf",
+      "used": true,
+      "reason": "The 10-page source PDF and every figure panel required visual reconciliation."
+    },
+    {
+      "skill": "Presentations",
+      "used": true,
+      "reason": "All supplementary figures were distributed as a seven-slide legacy PowerPoint."
+    },
+    {
+      "skill": "documents",
+      "used": true,
+      "reason": "The complete supplementary legends were distributed as a four-page legacy Word file."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 137,
+    "publications_on_gene": 65,
+    "counts_measured": "PubMed counts measured for Aqeilan RI on 2026-08-10 and retained in the existing PMID42422765 manifest; local 2026-08-14 Aqeilan audit found 66 matching WWOX-corpus records.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": true,
+    "is_primary_group_for_gene": true,
+    "weighting": "Foundational WWOX laboratory and primary experimental group. This 2014 study reports no commercial conflict and is weighted as a primary mechanistic source; laboratory provenance does not substitute for panel-level verification.",
+    "note": "Author identity is unambiguous from affiliation and co-author continuity."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "Aqeilan-authored WWOX records in the local PubMed corpus",
+        "route": "local corpus audit 2026-08-14",
+        "count": 66
+      }
+    ],
+    "note": "Direct WWOX loss/rescue study from the gene's primary laboratory."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 48,
+    "gene_direct_refs_in_source": [],
+    "enumeration_method": "All 48 references read sequentially from the structured PMC back matter; topic classification was not used to replace full-text reading.",
+    "resolved": [],
+    "queued": [
+      {
+        "scope": "one cited source currently marked retracted",
+        "queue": "integrity review",
+        "pmids": [],
+        "why": "Wei et al. 2012 is marked retracted in PMC. It is background to HIF biology and is not required for this paper's primary WWOX experiments."
+      }
+    ],
+    "dedup_performed": "PMID 25012504 resolved to PAPER 024 and the prior DL-MECH-020/DL-MECH-028/DL-BIO-007/DL-MOL-009 lineage before horizontal integration.",
+    "reason": "Reference list completed; no new primary paper was promoted during this read."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Which existing LEGEND records depend on PMID 25012504 and do the full panels support their wording?",
+    "hits": 6,
+    "finding": "The core HIF1A axis is supported, but three propagated details required correction: acute blood glucose is not in-vivo glucose uptake; digoxin-associated transcripts are GLUT1/PHD3 rather than PDK1/PHD3; and the reported 100 mg/kg dose remains ambiguous rather than verified as a typo. Corrections are appended as DL-MECH-095."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-14",
+    "route": "PubMed exact PMID-only integrity check",
+    "result": "No retraction, expression of concern or correction for PMID 25012504. One background reference in its bibliography is marked retracted and was not used as primary support.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {"path": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html", "sha256": "2a0de55a1cbc295a47fe422aac6831e06ca0267f42f091b766807cf05c893d1d", "kind": "article_text"},
+    {"path": "files/fulltext/PMID25012504_AbuRemaileh2014.pdf", "sha256": "98d7cba627e82d1f85c98ae2191bc5a3c08fd4efe907cbf7458f55c2845108d4", "kind": "article_binary"},
+    {"path": "files/fulltext/PMID25012504_assets/cdd201495x1.ppt", "sha256": "842d94426f916997bf3a37964f0993c73080772bf9a52d2a520ec11909afd7a5", "kind": "article_binary"},
+    {"path": "files/fulltext/PMID25012504_assets/cdd201495x2.doc", "sha256": "ac5ad2eeec46a25643b3dea5eff306147a8d05a5a89fc609e19484ecf12ed730", "kind": "article_binary"},
+    {"path": "files/fulltext/PMID25012504_assets/fig1.jpg", "sha256": "66bf4600b7ea306283de5c18c7725ae4ce4955b0225d0b5fcc341c80f8979cb6", "kind": "figure"},
+    {"path": "files/fulltext/PMID25012504_assets/fig2.jpg", "sha256": "8e11652fa749222765aaf1d41e1d30e2a3a2811639e38918057e61234313375f", "kind": "figure"},
+    {"path": "files/fulltext/PMID25012504_assets/fig3.jpg", "sha256": "73f6030cd1c1e529bbfd454afed582186ada75e42b8231086ea386c1afe12264", "kind": "figure"},
+    {"path": "files/fulltext/PMID25012504_assets/fig4.jpg", "sha256": "52d1c3d3925ae42b635007a67cc7cabf060adc37ffbd0be857c716272882b22c", "kind": "figure"},
+    {"path": "files/fulltext/PMID25012504_assets/fig5.jpg", "sha256": "e2fc6a93a013b1abd17da7243d5d1d98a98c3da4198412ff9cb97f881e9f71e3", "kind": "figure"},
+    {"path": "files/fulltext/PMID25012504_assets/fig6.jpg", "sha256": "4da6a5017a4deafdb02676ca548564846dcf658d047add802951f129559ae8ba", "kind": "figure"},
+    {"path": "files/fulltext/PMID25012504_assets/supp_slide1_200dpi.png", "sha256": "61ed03b4fede53c38d29ec30e69bd99981f955bbaee2c21d91fc14b72d5d2b47", "kind": "figure"},
+    {"path": "files/fulltext/PMID25012504_assets/supp_slide2_200dpi.png", "sha256": "91ffefb93971ca813fe1807b76602f4705a73ed3b532411afd6fe588bae8de71", "kind": "figure"},
+    {"path": "files/fulltext/PMID25012504_assets/supp_slide3_200dpi.png", "sha256": "1e2bf91b9fc76d047b69cfb9d3c1680168bbd64a4af2d75ac6948aefb3e8eee9", "kind": "figure"},
+    {"path": "files/fulltext/PMID25012504_assets/supp_slide4_200dpi.png", "sha256": "9b2bed9ac6eca0da0ba5c52356b295ed7071f4ad73ab03ce005a66bd8dfb2425", "kind": "figure"},
+    {"path": "files/fulltext/PMID25012504_assets/supp_slide5_200dpi.png", "sha256": "ad6e9d3d802a4ee4610437e726ca43512ef32a9c44b8686bed8e009807d6a9e7", "kind": "figure"},
+    {"path": "files/fulltext/PMID25012504_assets/supp_slide6_200dpi.png", "sha256": "e24da6f2e295d18d79d78c0d96dca12409a21441c20b154e82a85d48325ba403", "kind": "figure"},
+    {"path": "files/fulltext/PMID25012504_assets/supp_slide7_200dpi.png", "sha256": "25b9a7d4738600f44c58dc23f8d03be0f36f435c2e15c2dc7c5aa52a3902ad66", "kind": "figure"}
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Structured PMC HTML and 10-page PDF are local and fingerprinted. Six main figures were inspected at native 731-796 pixel width. The complete legacy PPT was rendered to seven 2000x1500 slide images and inspected; all four pages of the Word legends were rendered and read.",
+    "abstract_anchoring_waived": "All textual locators below are from Results or Discussion, never the abstract; visual locators point to fingerprinted figure artifacts.",
+    "entries": [
+      {
+        "proposition": "WWOX loss increases glucose uptake cell-autonomously in primary MEFs.",
+        "snippet": "Remarkably, mouse embryonic fibroblasts (MEFs) isolated from KO embryos displayed an increase in glucose uptake as early as 1 h following addition of 2-NBDG",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, WWOX deficiency causes a cell-autonomous increase in glucose uptake",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "The paper directly measures a glycolytic/respiratory shift rather than inferring it solely from transcription.",
+        "snippet": "Concomitantly, lack of WWOX causes a reduction in oxygen consumption (Figure 2b), suggesting that in Wwox-deficient cells glucose is utilized primarily for glycolysis, whereas mitochondrial respiration is inhibited",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, enhanced glycolysis and reduced mitochondrial respiration",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "PDK1, the proposed PDH gate, is directly reported as upregulated in KO cells.",
+        "snippet": "Notably, we observed higher levels of Pdk1, which phosphorylates and inhibits pyruvate dehydrogenase, the rate-limiting enzyme that regulates entrance of pyruvate into the TCA cycle",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, WWOX directly inhibits expression of HIF1alpha target genes",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The first WW domain is required for WWOX rescue of HIF1alpha target-gene expression.",
+        "snippet": "Importantly, we found that overexpression of intact WWOX, but not a mutant form of WWOX-WFPA, which harbor a mutation in WW1 domain of WWOX that abrogates its interaction ability, in Wwox KO MEFs reduced HIF1α target genes' expression under normoxia",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, WWOX directly inhibits expression of HIF1alpha target genes",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "WWOX loss raises HIF1alpha protein under normoxia.",
+        "snippet": "In contrast, HIF1α was readily detected in Wwox KO cells (Figure 3e). HIF1α was also detected in skeletal muscles, which is considered the main peripheral organ involved in glucose uptake, of Wwox KO mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, WWOX decreases HIF1alpha protein levels",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "The WWOX-dependent difference in HIF1alpha abundance disappears under hypoxia in the authors' model.",
+        "snippet": "Interestingly, we found that WWOX does not affect HIF1α protein levels under hypoxic conditions (Figure 4c), likely as WWOX levels goes down under these conditions",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, WWOX is downregulated under hypoxic conditions",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "The pharmacological in-vivo result is an acute blood-glucose change, not a flux or neurological endpoint.",
+        "snippet": "Strikingly, treatment with digoxin caused a fast and specific increase in blood glucose levels specifically in KO mice (Figure 5c)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, knocking down HIF1alpha rescues the metabolic phenotype",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "HIF1alpha binding maps to WWOX constructs containing WW1.",
+        "snippet": "As seen in Supplementary Figure S6A, only GST-WW1 domain-containing vectors were able to precipitate HIF1α",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, WWOX physically interacts with HIF1alpha",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "Reduced HIF1alpha hydroxylation is observed, while the upstream PHD2 mechanism remains unresolved.",
+        "snippet": "Using specific antibodies, we found that HIF1α hydroxylation is significantly reduced in WWOX KO MEFs as compared with WWOX WT MEFs (Figure 5f), suggesting that WWOX increases HIF1α hydroxylation leading to its degradation under normoxia",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Results, WWOX physically interacts with HIF1alpha",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors explicitly leave PHD2 activity as an open mechanism.",
+        "snippet": "Whether WWOX affects PHD2 activity is to be determined. Nevertheless, our findings demonstrate that the interaction between WWOX and HIF1α in the nucleus affects HIF1α levels",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID25012504_AbuRemaileh2014_PMC.html",
+        "anchor": "Discussion, proposed HIF1alpha degradation route",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 1 visually supports severe systemic hypoglycaemia and increased MEF glucose uptake, but does not itself establish a neural phenotype.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1: WT blood glucose approximately 130 mg/dl versus KO approximately 10; NBDG uptake KO approximately 2.2-fold versus WT 1, and KO+WWOX approximately 0.25 versus KO+EV 1.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID25012504_assets/fig1.jpg",
+        "anchor": "Figure 1, panels a-d, native 750x470 JPEG",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "Figure 2 supports the metabolic shift but shows that succinate is only a non-significant trend.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2f: fumarate P<0.02, malate P<0.02, succinate P<0.09, fructose-1,6-diphosphate P<0.02. Panel b shows lower KO OCR at baseline and after FCCP.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID25012504_assets/fig2.jpg",
+        "anchor": "Figure 2, panels a-f, native 731x453 JPEG",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 3's rescue uses strongly supraphysiological WWOX transcript expression, which limits dose-equivalent interpretation.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 3b left: KO+WWOX WWOX transcript approximately 25-fold, KO+WFPA approximately 23-fold, KO+EV 1; target-gene rescue is shown in the adjacent graph.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID25012504_assets/fig3.jpg",
+        "anchor": "Figure 3, panels a-f, native 790x605 JPEG",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 4 similarly tests large WWOX overexpression and shows context-dependent target suppression.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 4d-e: WWOX overexpression is approximately 32-fold under normoxia and 28-fold under hypoxia; under normoxia only selected targets fall, while under hypoxia multiple HIF1alpha targets fall.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID25012504_assets/fig4.jpg",
+        "anchor": "Figure 4, panels a-e, native 739x519 JPEG",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 5 bounds the digoxin claim and lacks the promised HIF1alpha-OH densitometry graph.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5c: KO glucose rises from approximately 10 to 115 mg/dl after 40 minutes of digoxin; WT visually falls from approximately 105 to 75, with no drawn test for that change. Figure 5f contains blots only although the caption announces a graph on the right.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID25012504_assets/fig5.jpg",
+        "anchor": "Figure 5, panels a-f, native 769x657 JPEG",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 6 supports HIF1alpha dependence of transformed KO growth and quantifies a modest human WWOX/GLUT1 association.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 6e table: WWOX+/GLUT1+ 6, WWOX+/GLUT1- 45, WWOX-/GLUT1+ 9, WWOX-/GLUT1- 20, P<0.05. Panels a-c show KO growth suppressed most strongly by shHIF1alpha.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID25012504_assets/fig6.jpg",
+        "anchor": "Figure 6, panels a-f, native 796x553 JPEG",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Supplement S1 offers only representative pancreatic islet images, not quantified islet equivalence.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure S1 shows one WT and one KO insulin/Pdx4 image with no scale bar, replicate count, quantification or statistical comparison.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID25012504_assets/supp_slide1_200dpi.png",
+        "anchor": "Supplementary Figure S1, one panel, legacy PPT slide 1 rendered 2000x1500",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Supplement S2 provides in-vivo lactate and liver NADPH measurements with unequal lactate group sizes.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure S2: serum lactate WT approximately 2.4 versus KO 4.8, P<0.009, WT n=4 and KO n=12; liver NADPH approximately 0.34 versus 0.49, P<0.03, n=3 each.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID25012504_assets/supp_slide2_200dpi.png",
+        "anchor": "Supplementary Figure S2, panels A-B, legacy PPT slide 2 rendered 2000x1500",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Supplement S3 is descriptive PCR-array output without panel-level inferential statistics.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure S3 spans slides 3-4: glycolysis, TCA, PPP, MEF gluconeogenesis and liver gluconeogenesis fold-change bars are shown without error bars or P-values; HIF1alpha targets are coloured red in panel A.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID25012504_assets/supp_slide3_200dpi.png",
+        "anchor": "Supplementary Figure S3 panels A-B on legacy PPT slide 3, with panels C-D-F continuing on slide 4; both slides inspected at 2000x1500",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Supplement S4 shows HRE suppression and confirms unchanged HIF1alpha mRNA, but uses large WWOX overexpression.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure S4C HRE assay: WWOX lowers reporter output under normoxia and hypoxia; panel D shows similar HIF1alpha mRNA in WT and KO skeletal muscle while WWOX is absent in KO.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID25012504_assets/supp_slide5_200dpi.png",
+        "anchor": "Supplementary Figure S4, panels A-D, legacy PPT slide 5 rendered 2000x1500",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Supplement S5 has a B/C labelling conflict and its digoxin transcript arms are n=2 without shown significance tests.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure S5 titles panel B as WT-treated mice and panel C as KO-treated mice; the Word legend and main text assign B to KO and C to WT. The legend states n=2 per digoxin/placebo condition.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID25012504_assets/supp_slide6_200dpi.png",
+        "anchor": "Supplementary Figure S5, panels A-C, legacy PPT slide 6 rendered 2000x1500; all four Word-legend pages inspected",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Supplement S6 supports a WW1-dependent interaction primarily under MG132-stabilized conditions and shows weak, uneven blots under hypoxia.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Supplementary Figure S6A: WW1-containing GST constructs show the clearest HIF1alpha pulldown after MG132; hypoxia lanes are weak and uneven. Panel B compares endogenous IP under MG132 normoxia and hypoxia with IgG and lysis controls.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID25012504_assets/supp_slide7_200dpi.png",
+        "anchor": "Supplementary Figure S6, panels A-B, legacy PPT slide 7 rendered 2000x1500",
+        "panel_text_relation": "panel_only"
+      }
+    ]
+  }
+}

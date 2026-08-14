@@ -2657,6 +2657,13 @@ multi-hop: 5 referenze gene-dirette né lette né in coda — `16187332` · `157
 `25891642` · `25245215`. E resta aperta la domanda di provenienza su Oncotarget 2016, che
 **non ho verificato** e che non ho asserito.
 
+**Status update 2026-08-14 — LETTO E CHIUSO:** lettura completa in una sola corsa, inclusi
+12 pagine PDF, 6 figure principali/16 pannelli etichettati, Supplementary Figures S1–S6/12
+pannelli etichettati, Table S1 in PPTX e 54 riferimenti. Receipt
+`FTR-20260814-26675548-01`; dossier `PMID26675548.md`; scoperta `DL-MECH-099`; candidate
+`CC-20260814-26675548-01`. Nessun debito di superficie. Registrata la discrepanza
+`0.2 mM` nella slide Table S1 contro `0.2 μM` in testo, metodi, Figure 3 e Supplementary S6.
+
 ---
 
 ## FT-062 — Salah 2013: la fonte a cui lo stato attribuisce già la stabilizzazione ITCH, mai letta
@@ -3286,3 +3293,35 @@ prima che il nodo si apra.
 lavoro meno costoso della coda — i manifest hanno già i pannelli e le relazioni
 `text_contradicted_by_panel` — e **una terza istanza trovata all'indietro vale quanto una trovata
 in avanti**, perché ciò che serve non è un altro caso ma la conferma che la classe è ricorrente.
+## CORREZIONE APPEND-ONLY FT-059 — copertura disponibile completata, debito ristretto alla fonte assente (2026-08-14)
+
+`FTR-20260814-34268881-03` sostituisce operativamente il vecchio preflight, senza cancellarlo:
+
+- testo principale letto in tutte le sezioni e 91 referenze enumerate;
+- PDF principale riconciliato 20/20 pagine;
+- 11/11 figure, **69/69 pannelli disponibili** ispezionati;
+- recuperati e letti tutti gli otto file del pacchetto PMC: Expanded View PDF, Table EV1–EV5,
+  Appendix DOCX e Review Process File 47 pagine;
+- manifest schema-v2 strict PASS e dossier `PMID34268881.md` persistito.
+
+🔴 **FT-059 non è chiuso.** Il paper cita Appendix Figures S1–S6, ma il file ufficiale
+`EMMM-13-e13610-s004.docx` contiene soltanto Appendix Table S1; le sei figure non compaiono in
+nessuno degli altri sette supplementi. Il receipt resta quindi `partial_fulltext_read`.
+
+**Debito residuo unico:** ottenere Appendix Figures S1–S6 dall'archivio editoriale o dagli
+autori, verificarne l'impronta, leggerle come immagini e appendere un nuovo receipt. Non va
+riaperto o ripetuto il resto del paper.
+
+---
+
+## CORREZIONE APPEND-ONLY FT-062 — Salah 2013 LETTO E CHIUSO (2026-08-14)
+
+Lettura completata in una sola corsa: XML strutturato e PDF di nove pagine, tutte le sezioni,
+6/6 figure e 23/23 pannelli, 66/66 riferimenti; tabelle e supplementi `not_present`. Manifest
+schema-v2 strict PASS, dossier `PMID23370280.md`, scoperta `DL-MECH-100`, candidate
+`CC-20260814-23370280-01`, receipt `FTR-20260814-23370280-01`.
+
+**Esito della domanda di apertura:** Figura 3 mostra WWOX che compete con ITCH sul substrato
+ΔNp63α, ne riduce ubiquitinazione/degradazione e ne aumenta l’emivita. Non mostra ITCH che
+stabilizza WWOX. Il debito FT-062 è chiuso; la frase object-reversed di
+`CC-20260810-41984841-01` è superseduta dal nuovo candidate, senza riscrivere il file storico.

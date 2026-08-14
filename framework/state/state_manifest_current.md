@@ -215,8 +215,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 106
-fulltext_ledger_head: 020834f2e1f1c54c9d0cd84e04f7c6095fed883ce74c87c8c8de9908613efc2d
+fulltext_ledger_events: 111
+fulltext_ledger_head: ccd6e4de03512d37c09a60d00525ceff1faadb29a5794983a5b1f2b04612440c
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -264,8 +264,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 18
-growth_anchor_head: dd0d770e922856fe26f634f72f3d86d6e9ac80f879e7daae7e8019dc98058cf5
+growth_anchor_events: 19
+growth_anchor_head: 9395228b6bff5a3d8ddd262c6eef84340fc4fa168d8dbf00641fbaf4bc5daf56
 ```
 
 ```bash
@@ -292,8 +292,8 @@ must be backed by a persisted `complete_fulltext_read` receipt, or `LINT_AUTOMAT
 `BLOCK_BATCH_COMMIT`.
 
 ```yaml
-registry_only_fulltext_declarations_baseline: 17
-registry_only_fulltext_declaration_ids: ["PAPER 010", "PAPER 011", "PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 032", "PAPER 039", "PAPER 040", "PAPER 042", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050", "PAPER 053"]
+registry_only_fulltext_declarations_baseline: 16
+registry_only_fulltext_declaration_ids: ["PAPER 010", "PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 032", "PAPER 039", "PAPER 040", "PAPER 042", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050", "PAPER 053"]
 ```
 
 Lowering the baseline is the intended direction of travel: back-fill a record with real
@@ -314,8 +314,8 @@ with every existing check passing. It is invisible by construction, because lean
 writes nothing anywhere. So it is measured instead of assumed.
 
 ```yaml
-unread_premise_baseline: 5
-unread_premise_measured_on: 2026-08-11
+unread_premise_baseline: 4
+unread_premise_measured_on: 2026-08-14
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions
