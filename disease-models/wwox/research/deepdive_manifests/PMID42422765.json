@@ -2,9 +2,10 @@
  "schema_version": 2,
  "pmid": "42422765",
  "doi": "10.1016/j.omta.2026.201791",
- "receipt": "FTR-20260810-42422765-04",
+ "receipt": "FTR-20260814-42422765-06",
  "landing": [
-  "FTR-20260810-42422765-04",
+  "FTR-20260810-42422765-05",
+  "FTR-20260814-42422765-06",
   "PAPER 011",
   "PMID42422765_partial_locators.md"
  ],
@@ -187,6 +188,31 @@
   {
    "path": "files/fulltext/PMID42422765_Obeid2026_assets/S_p08_200dpi.png",
    "sha256": "e92ba3564609ed1626ef674f6282dfc6ac985c92e1e3a754a991f06267f6fc7d",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID42422765_Obeid2026_assets/S_p02_300dpi.png",
+   "sha256": "76637868dd7420dd9746af37599a6524cedda99be3d1405bdbf4e89d79d8acf5",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID42422765_Obeid2026_assets/S_p03_300dpi.png",
+   "sha256": "b2a23f87b3d275e945e67f012ae0a9773551c7d1f523331b3652931b67e9a5e1",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID42422765_Obeid2026_assets/S_p04_300dpi.png",
+   "sha256": "bae7644375888a4c38b75a50253df748ef3eb994b890ffb8b91cd24ee6335973",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID42422765_Obeid2026_assets/S_p06_300dpi.png",
+   "sha256": "a8505e3f44d18d36e726f5a8d1277b8f6cb5d7f0401b7643f2c1f42b1763b54b",
+   "kind": "figure"
+  },
+  {
+   "path": "files/fulltext/PMID42422765_Obeid2026_assets/S_p07_300dpi.png",
+   "sha256": "b66881aeed0ae06b56fa813eee8373eaceaf507572e1950990d303b5d2707fcf",
    "kind": "figure"
   }
  ],
@@ -391,6 +417,46 @@
     "artifact": "files/fulltext/PMID42422765_Obeid2026_PMC.html",
     "anchor": "Results, WPRE section, citing Figure S3C",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "S1 does not establish the neuron specificity claimed for the GFP control by colocalisation: panel D contains DAPI and SynI-EGFP only, without a neuronal marker. The promoter comparison itself is qualitative and shows weak MBP-driven WWOX in cerebellum, while corpus-callosum WWOX signal remains visible under several promoters.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] S1D shows DAPI and SynI-EGFP in cortex, hippocampus and cerebellum with no NeuN or Tuj1 channel; S1A-B compare four promoters without quantitative axes or statistics.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p02_300dpi.png",
+    "anchor": "Supplementary Figure S1, panels A-D, mmc1.pdf page 2 rendered at 300 dpi; microscopy native detail is bounded by the embedded raster",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "S2 contains an internal sample-size conflict: the plotted CBA-treated survival legend says n=5, whereas its caption says n=4. The curve also shows partial rather than full survival rescue, ending near 50 percent by day 30.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] S2A legend: 'CBA+W n=5'; the black survival curve falls to approximately 50% by day 30, while WT remains at 100% and KO reaches 0% near day 17.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p03_300dpi.png",
+    "anchor": "Supplementary Figure S2, panel A, mmc1.pdf page 3 rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "S3 confirms that WPRE, not dose alone, drives the high and spatially diffuse expression state. At each matched dose WPRE produces much more protein; without WPRE, doubling 2E10 to 4E10 significantly raises the percentage of positive neurons only in cortex, not hippocampus or cerebellum.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] S3B: WPRE exceeds no-WPRE at both 2E10 (**) and 4E10 (***). S3C: 2E10 versus 4E10 is * in cortex, ns (0.07) in hippocampus and ns in cerebellum.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p04_300dpi.png",
+    "anchor": "Supplementary Figure S3, panels A-F, mmc1.pdf page 4 rendered at 300 dpi; caption continues on page 5 and was read in full",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The motor rescue in S4 is dose-graded rather than binary: high dose is indistinguishable from wild type, low dose remains intermediate, and low versus high dose is significant. Fertility is presented from only about three plotted observations per group and without an untreated-KO comparator.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] S4A: WT approximately 0, KO approximately 3.6, LD approximately 1.8 and HD approximately 0.3; WT-HD is ns and LD-HD is ***. S4C-D show roughly three observations per WT, HT and HD-treated KO group.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p06_300dpi.png",
+    "anchor": "Supplementary Figure S4, panels A-E, mmc1.pdf page 6 rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "S5 makes the expression-survival argument selection-conditioned: the P90 blots explicitly mark one HD and three LD animals as dead, so the later dose comparison is necessarily made among survivors. It also shows durable regional overexpression, with the P300 HD blot labelled 8.2-fold cortex, 10.7-fold hippocampus, 5.6-fold midbrain and 1.4-fold cerebellum relative to WT.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] S5A-D label the last four treated animals 'Dead' (one HD and three LD). S5J at P300 prints WT 1, KO 0.2, cortex 8.2, hippocampus 10.7, midbrain 5.6 and cerebellum 1.4.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID42422765_Obeid2026_assets/S_p07_300dpi.png",
+    "anchor": "Supplementary Figure S5, panels A-K, mmc1.pdf page 7 rendered at 300 dpi",
+    "panel_text_relation": "panel_only"
    }
   ]
  }

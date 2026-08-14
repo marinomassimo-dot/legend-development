@@ -6,7 +6,7 @@ from __future__ import annotations
 import hashlib
 import unittest
 
-from pmc_pow_fetch import parse_interstitial, solve_pow
+from pmc_pow_fetch import is_supported_binary, parse_interstitial, solve_pow
 
 
 class PmcPowFetchTest(unittest.TestCase):
@@ -30,6 +30,28 @@ class PmcPowFetchTest(unittest.TestCase):
     def test_unrecognised_page_is_refused(self) -> None:
         with self.assertRaisesRegex(ValueError, "neither the requested binary"):
             parse_interstitial(b"<html>ordinary error</html>")
+
+    def test_accepts_declared_legacy_office_supplements(self) -> None:
+        ole = b"\xd0\xcf\x11\xe0" + b"fixture"
+        self.assertTrue(is_supported_binary(ole, "application/msword; charset=utf-8"))
+        self.assertTrue(
+            is_supported_binary(ole, "application/vnd.ms-powerpoint; charset=utf-8")
+        )
+
+    def test_accepts_spreadsheets_and_images_with_matching_magic(self) -> None:
+        self.assertTrue(
+            is_supported_binary(
+                b"PK\x03\x04fixture",
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+            )
+        )
+        self.assertTrue(is_supported_binary(b"\xff\xd8\xfffixture", "image/jpeg"))
+        self.assertTrue(
+            is_supported_binary(b"\x89PNG\r\n\x1a\nfixture", "image/png")
+        )
+
+    def test_refuses_html_even_with_a_binary_mime(self) -> None:
+        self.assertFalse(is_supported_binary(b"<html>challenge</html>", "application/msword"))
 
 
 if __name__ == "__main__":

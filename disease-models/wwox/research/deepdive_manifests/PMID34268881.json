@@ -1,0 +1,207 @@
+{
+  "schema_version": 2,
+  "pmid": "34268881",
+  "doi": "10.15252/emmm.202013610",
+  "receipt": "FTR-20260814-34268881-03",
+  "landing": [
+    "PAPER 039",
+    "DL-MECH-098",
+    "PMID34268881.md"
+  ],
+  "coverage_status": "partial_fulltext_read",
+  "declared_reading_gap": "Appendix Figures S1-S6 are cited by the article but absent from the eight-item official PMC supplementary package. EMMM-13-e13610-s004.docx is the labelled Appendix and contains Appendix Table S1 only. All other available article, figure, table and peer-review surfaces were read in full.",
+  "skills_considered": [
+    {"skill": "legend-deepdive", "used": true, "reason": "WWOX-central human organoid paper required vertical and horizontal integration."},
+    {"skill": "pdf", "used": true, "reason": "The 20-page article, 9-page Expanded View file and 47-page review file required render-and-inspect reconciliation."},
+    {"skill": "documents", "used": true, "reason": "The official Appendix was a DOCX and was rendered and read as a three-page document."},
+    {"skill": "Spreadsheets", "used": true, "reason": "Five supplementary XLSX workbooks were read row by row and audited for formulas and symbol corruption."}
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 137,
+    "publications_on_gene": 65,
+    "counts_measured": "PubMed counts measured for Aqeilan RI on 2026-08-10; local 2026-08-14 audit found 66 matching WWOX-corpus records.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": true,
+    "is_primary_group_for_gene": true,
+    "weighting": "Foundational WWOX laboratory and primary experimental disease group. This is a strong source for model generation and direct measurements, while its interpretations were checked against panels, supplementary tables and the full peer-review history.",
+    "note": "The source combines WWOX disease biology, organoid engineering and electrophysiology with external collaborators."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {"query": "Aqeilan-authored WWOX records in the local PubMed corpus", "route": "local corpus audit 2026-08-14", "count": 66},
+      {"query": "WWOX Steinberg organoid records already represented in LEGEND", "route": "canonical registry and discovery-ledger cross-query", "count": 8}
+    ],
+    "note": "Direct disease paper from a primary WWOX group; high field relevance."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 91,
+    "gene_direct_refs_in_source": [
+      "Abdel-Salam et al. 2014",
+      "Abu-Odeh et al. 2014a",
+      "Abu-Odeh et al. 2014b",
+      "Abu-Remaileh & Aqeilan 2014",
+      "Aqeilan et al. 2007",
+      "Aqeilan et al. 2008",
+      "Hussain et al. 2019",
+      "Iacomino et al. 2020",
+      "Mallaret et al. 2014",
+      "Repudi et al. 2021",
+      "Suzuki et al. 2009",
+      "Tochigi et al. 2019"
+    ],
+    "enumeration_method": "All 91 references were read sequentially from pages 18-20 and reconciled against the structured XML reference count.",
+    "resolved": [
+      {"scope": "WWOX neurodevelopment, GABA, myelin, DDR and rescue antecedents", "status": "already represented in LEGEND registries or research ledgers", "result": "No terminal source was allowed to substitute for this paper's own measurements."}
+    ],
+    "queued": [],
+    "dedup_performed": "PMID 34268881 resolved to PAPER 039, prior partial receipts FTR-20260726-34268881-01 and FTR-20260810-34268881-02, plus DL-MECH-034 and DL-MECH-094 before rereading.",
+    "reason": "The bibliography was completed; the main unresolved debt is a missing source surface, not an unresolved citation hop."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Which canonical and discovery statements rely on Steinberg 2021, and do its methods, panels, raw tables and peer review support their strength?",
+    "hits": 8,
+    "finding": "The human-organoid phenotype and reversibility proof-of-concept remain useful. GABA depolarization is an unmeasured mechanistic interpretation; the bulk RNA-seq metabolic signature is maturity/composition-confounded; final RNA-seq n is 2 WT versus 4 KO; and WWOX rescue is ubiquitous supraphysiological expression with partial rescue. DL-MECH-098 records the correction."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-14",
+    "route": "PubMed exact PMID-only integrity check during three-study intake",
+    "result": "No retraction, expression of concern or correction flagged for PMID 34268881.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {"path": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml", "sha256": "de340289bc6704c9b9ec752f81afed64a02211a83d95d675a1d46f40be6304f6", "kind": "article_text"},
+    {"path": "files/fulltext/PMID34268881_Steinberg2021.pdf", "sha256": "c1013c46520911ebc6b7281545c135d54bc1c941c9652818fe240a54425011ef", "kind": "article_binary"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g011.jpg", "sha256": "d0b0f5f0901b120c23d92caef01445dfca5857eb6887db9bb78dd21e9c999fbe", "kind": "figure"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g006.jpg", "sha256": "e388c3862c27dd1ddaaa32126d9d2107ca30be2ec4275432eedc00305efca22a", "kind": "figure"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g002.jpg", "sha256": "b3d57471b0e1016687258cdf71a3d8a5b3d7f331c6764a3a3fb868b3000bde00", "kind": "figure"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g003.jpg", "sha256": "02c90b2abf183aac8a594962120644c8e6719b7a1148c319175fc298bde5b08f", "kind": "figure"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g009.jpg", "sha256": "297e8d568d14c9c12af2fd167b05459b5063601401475c7b742f17179dab0a0f", "kind": "figure"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g004.jpg", "sha256": "896442594f518d6d900b0e48231f90d56e8aaf7d3ccade18c94ee30d329e5ae8", "kind": "figure"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g008.jpg", "sha256": "b66b6f3442c6d40ce7c3de6d838167d2032e91ac3cba728b0052de344ab7ed48", "kind": "figure"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g010.jpg", "sha256": "747555043dd996b03d66eb5480d3c1236d50cfc5011b614fa508d04c0e8e4c8e", "kind": "figure"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g012.jpg", "sha256": "5481c1f48dfe916d2f98ac7800734f5b103a21fb574d5fa86d9efe0c011dd7ae", "kind": "figure"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g013.jpg", "sha256": "c0cef9a9fa080bcaf8f04107dd69a442f41d858c90b5810ab188580c4813a611", "kind": "figure"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g005.jpg", "sha256": "4269d26513f254a761231adbbdc6ed5643a497f6bfdea9f2012e390e7f7573f3", "kind": "figure"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s001.pdf", "sha256": "488b49e0e6bb69a64313fc45e9d9129f98848daae128cf6a460dd20b259e2adb", "kind": "article_binary"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s002.xlsx", "sha256": "514c8f2c358e9f1868dbaaaea9977a2d8af8d0b67d5c1b7f08b5d7578e2d3967", "kind": "table"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s003.xlsx", "sha256": "31298c2a333ee4da822959f6139d95451a3159dbfb586790ce3dd0afedcc7829", "kind": "table"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s004.docx", "sha256": "ad0ee39cf80126e371ec75551f2bd2dc3350ddcd7f7d6a5cbda35fad11820e91", "kind": "supplement_text"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s005.xlsx", "sha256": "82a03fc996b2ca3da0ff96032ba6a6b011458f9cf0df29a6129165bc7bed2718", "kind": "table"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s006.xlsx", "sha256": "83857ec6006928d9810f7a4c284b93b04266792fce38d960e21731f72f944eeb", "kind": "table"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s007.pdf", "sha256": "e63bf1b975ced9afec7e678e9bd3e1c5eba9948a037af0f65751b5ea3acf339a", "kind": "article_binary"},
+    {"path": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-s008.xlsx", "sha256": "f55a64419c4e3f3b4b9b532ec8e4eec333f5fceb833f9bb5f72293c3226afc86", "kind": "table"}
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "The structured PMC XML and 20-page PDF are local and fingerprinted. All 11 article/Expanded View figures were inspected at native resolution; all eight retrievable supplementary files were read in full, including 2,272 differential-expression rows and 47 review-process pages. Appendix Figures S1-S6 remain a declared unavailable-source gap.",
+    "abstract_anchoring_waived": "Every textual locator is drawn from Results, Discussion, Limitations or Methods; none is anchored to the abstract. Visual locators point to fingerprinted native figure artifacts.",
+    "entries": [
+      {
+        "proposition": "The patient-derived WOREE neuronal firing rescue is strong within the model but is not an independent-family replication.",
+        "snippet": "WSM S COs demonstrated bursts of action potentials and overall elevated neuronal activity compared with the WSM P",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+        "anchor": "Results, Brain organoids of patient-derived WWOX-related developmental and epileptic encephalopathies",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "The paper invokes depolarizing GABA as an interpretation from developmental literature rather than reporting a direct chloride or GABA-response measurement.",
+        "snippet": "It should be noted that several lines of evidence implicate that during development, GABAergic synapses have a depolarizing effect",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+        "anchor": "Discussion, interpretation of GABAergic markers and hyperexcitability",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Two of four WT RNA-seq samples were removed, leaving two WT versus four KO samples.",
+        "snippet": "These two samples were extracted from further analysis, giving a total of six samples used for further analysis.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+        "anchor": "Materials and Methods, Library preparation and RNA sequencing",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The study did not use randomization or blinding.",
+        "snippet": "No randomization or blinding was applied in this study.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+        "anchor": "Materials and Methods, Statistics",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors themselves bound generalization to two patient families.",
+        "snippet": "This makes generalizing our results more difficult, a problem we partially addressed by gene manipulation in hESCs.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+        "anchor": "Limitations of study",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Brain-organoid heterogeneity is an explicit study limitation.",
+        "snippet": "Another limitation stems from the well‐described heterogeneity of brain organoids, which we dealt with by analyzing several repeats and confirmed in patient‐derived models and protocols.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+        "anchor": "Limitations of study",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The rescue is explicitly supraphysiological and therefore not dose-equivalent to native WWOX.",
+        "snippet": "This resulted in supraphysiological expression of WWOX in all cell populations seen in COs and a partial rescue.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+        "anchor": "Discussion, genetic rescue boundary",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "The authors describe the rescue only as proof of concept and require targeting and expression optimization.",
+        "snippet": "These results provide a proof of concept for successful reintroduction of WWOX as a mean for correcting the phenotype and possibly for therapeutic intervention.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID34268881_Steinberg2021_PMC.xml",
+        "anchor": "Discussion, genetic rescue boundary",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 2 supports hyperexcitability and recovery after WWOX but does not measure GABA reversal potential.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2C shows increased 0.25-1 Hz area under the curve in WWOX-KO and Figure 2G shows reduction after lenti-WWOX; no chloride or GABA-response assay appears in any panel.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g002.jpg",
+        "anchor": "Figure 2, panels A-G, native JPEG inspected",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[1]",
+        "qualifies_needle": "depolarizing effect"
+      },
+      {
+        "proposition": "Figure 4's bulk RNA-seq embeds metabolic enrichment among broad developmental and regionalization defects.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 4 combines RNA-seq heatmaps, regionalization enrichment, Wnt targets and cortical-layer markers; it contains no direct metabolic flux measurement.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g008.jpg",
+        "anchor": "Figure 4, panels A-H, native JPEG inspected",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 5 visually confirms the within-family WOREE firing phenotype and rescue sample sizes.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5C reports 24 control neurons from four organoids, 41 WOREE neurons from three organoids and 40 rescued neurons from three organoids, with WOREE firing near 1.7 Hz versus approximately 0.4 Hz in control and rescue.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g010.jpg",
+        "anchor": "Figure 5, panels A-E, native JPEG inspected",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "Figure 6 shows partial molecular rescue in the patient-derived model rather than universal normalization.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 6 shows endpoint-specific and incomplete normalization across astrocytic markers, DNA-damage foci, Wnt targets and cortical-layer markers after W-AAV.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID34268881_assets/EMMM-13-e13610-g012.jpg",
+        "anchor": "Figure 6, panels A-F, native JPEG inspected",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[7]",
+        "qualifies_needle": "proof of concept"
+      }
+    ]
+  }
+}

@@ -1,0 +1,244 @@
+{
+  "schema_version": 2,
+  "pmid": "23370280",
+  "doi": "10.1038/cddis.2013.6",
+  "receipt": "FTR-20260814-23370280-01",
+  "landing": [
+    "FT-062",
+    "DL-MECH-100",
+    "CC-20260814-23370280-01",
+    "PMID23370280.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": true,
+      "reason": "Primary mechanistic paper selected for a receipt-backed complete read."
+    },
+    {
+      "skill": "pdf",
+      "used": true,
+      "reason": "The nine-page source PDF and all six figures required visual reconciliation."
+    },
+    {
+      "skill": "Presentations",
+      "used": false,
+      "reason": "No slide-format supplementary artifact exists for this article."
+    },
+    {
+      "skill": "documents",
+      "used": false,
+      "reason": "No Word-format article or supplementary artifact exists for this article."
+    }
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 137,
+    "publications_on_gene": 65,
+    "counts_measured": "PubMed counts measured for Aqeilan RI on 2026-08-10 and retained in the PMID42422765 manifest; local 2026-08-14 Aqeilan audit found 66 matching WWOX-corpus records.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "weighting": "Foundational WWOX experimental laboratory, but not a primary WWOX developmental-epileptic-encephalopathy group in this 2013 oncology study. The interaction observations receive primary-mechanism weight; disease translation remains weak.",
+    "note": "The team has direct WWOX and p63 expertise; that strengthens assay provenance but does not repair the transformed-cell and overexpression limits."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {
+        "query": "Unique PMID records matching p63 or ΔNp63 in the local 2026-08-06 WWOX PubMed corpus",
+        "route": "jq audit of files/corpus/wwox_20260806.jsonl on 2026-08-14",
+        "count": 2
+      }
+    ],
+    "note": "The local WWOX literature intersection is sparse: PMID 22855598 and PMID 23370280."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 66,
+    "gene_direct_refs_in_source": [
+      "PMID 19708029", "PMID 20146584", "PMID 19609013", "PMID 17458891",
+      "PMID 18487609", "PMID 16219768", "PMID 16061658", "PMID 11058590",
+      "PMID 12514174", "PMID 15126504", "PMID 22193544"
+    ],
+    "enumeration_method": "All 66 references read sequentially from the structured PMC back matter; eleven explicitly WWOX/WOX1-directed references were resolved by PMID.",
+    "resolved": [
+      {
+        "pmids": ["19708029", "20146584", "19609013", "17458891", "18487609", "16219768", "16061658", "11058590", "12514174", "15126504", "22193544"],
+        "result": "Resolved by identifiers and deduplicated against the local corpus/state; none is needed to support the paper's primary Figure 3 directionality correction."
+      }
+    ],
+    "queued": [],
+    "dedup_performed": "PMID 23370280 resolved to CORPUS P284 and FT-062 before reading; cited WWOX papers were checked against existing local records.",
+    "reason": "Reference list completed; no new source was made load-bearing by this read."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Where does LEGEND attribute ITCH/proteasomal stabilization to PMID 23370280, and is the stabilized object WWOX or ΔNp63α?",
+    "hits": 24,
+    "finding": "The load-bearing error is bullet 3 of CC-20260810-41984841-01. Salah 2013 stabilizes ΔNp63α by WWOX-mediated competition against ITCH; ITCH/K63-associated stabilization of WWOX belongs to PMID 24550385. A superseding commit candidate and DL-MECH-100 preserve the correction append-only."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-14",
+    "route": "PubMed exact-PMID integrity check",
+    "result": "No retraction, expression of concern or correction for PMID 23370280.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {"path": "files/fulltext/PMID23370280_Salah2013_PMC.xml", "sha256": "d6d46a8c7a2d8ee9ec281d53d0f4a3f3d1aeb8e4b99e16c383891f8f133f446e", "kind": "article_text"},
+    {"path": "files/fulltext/PMID23370280_Salah2013.pdf", "sha256": "d8cb3a81a045ec59fe1ebd00dffe851e4592cb3424a20309c4a77bd44e30616c", "kind": "article_binary"},
+    {"path": "files/fulltext/PMID23370280_assets/cddis20136f1.jpg", "sha256": "3aac1d1ad277646bdcdb3fed6465160f9367d8194246ab8594e02658305924f2", "kind": "figure"},
+    {"path": "files/fulltext/PMID23370280_assets/cddis20136f2.jpg", "sha256": "1a0874bdd439f25abd966506a0b0c734f3f9219589d8a8de49e73d010015ca98", "kind": "figure"},
+    {"path": "files/fulltext/PMID23370280_assets/cddis20136f3.jpg", "sha256": "11094d423a267658d672e4bb0d42a0a46bb1508bbadc93c0289ab726230379eb", "kind": "figure"},
+    {"path": "files/fulltext/PMID23370280_assets/cddis20136f4.jpg", "sha256": "c29f7bb029874f8bb03d16840e2f81b7061c77624d2c9f3c1dcc4583df5bae5d", "kind": "figure"},
+    {"path": "files/fulltext/PMID23370280_assets/cddis20136f5.jpg", "sha256": "7344811637c09c58dbb8405059f992f45dda520553812c21e894b9a8e8fc464e", "kind": "figure"},
+    {"path": "files/fulltext/PMID23370280_assets/cddis20136f6.jpg", "sha256": "8dd9ebe2ce67a94c3139aff7309b5313ffd80dcd6c96bb7c7b1ba87dc50bdd71", "kind": "figure"}
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Structured PMC XML and nine-page PDF are local and fingerprinted. All six native figures and all 23 labelled panels were visually inspected; the article declares no tables or supplementary material.",
+    "abstract_anchoring_waived": "Every textual locator is drawn from Results, Discussion or Methods rather than the abstract; visual locators point to fingerprinted native JPEGs.",
+    "entries": [
+      {
+        "proposition": "WWOX binds ΔNp63α through WW1 in these co-immunoprecipitation/pulldown systems.",
+        "snippet": "While a physical interaction was revealed between WWOX and ΔNp63α, WWOX-Y33R abolished this interaction",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23370280_Salah2013_PMC.xml",
+        "anchor": "Results, Mapping of WWOX–ΔNp63α interaction",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "The canonical ΔNp63α PPxY motif is not required for the observed WWOX association.",
+        "snippet": "Unexpectedly, ΔNp63α-AAxA was still able to bind WWOX similar to intact ΔNp63α",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23370280_Salah2013_PMC.xml",
+        "anchor": "Results, Mapping of WWOX–ΔNp63α interaction",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "WWOX antagonizes ITCH-driven ubiquitination of ΔNp63α.",
+        "snippet": "We found that while expression of ITCH increases ubiquitination of ΔNp63α (Figure 3a, middle lane), coexpression of WWOX abrogated this ubiquitination event",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23370280_Salah2013_PMC.xml",
+        "anchor": "Results, WWOX inhibits ΔNp63α ubiquitination and degradation mediated by ITCH",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "WWOX competes with ITCH for ΔNp63α and this depends on the WWOX interaction surface.",
+        "snippet": "We found that while WWOX expression reduced the interaction between ΔNp63α and ITCH, WWOX-Y33R was unable to do so",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23370280_Salah2013_PMC.xml",
+        "anchor": "Results, WWOX inhibits ΔNp63α ubiquitination and degradation mediated by ITCH",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "The stabilized object in the cycloheximide experiment is ΔNp63α, not WWOX.",
+        "snippet": "Whereas WWOX led to increased half-life of ΔNp63α, WWOX-Y33R mutant that does not interact with ΔNp63α (Figure 2), had little effect if at all, on ΔNp63α half-life",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23370280_Salah2013_PMC.xml",
+        "anchor": "Results, WWOX inhibits ΔNp63α ubiquitination and degradation mediated by ITCH",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "Endogenous WWOX depletion is associated with lower ΔNp63α abundance in HaCaT cells.",
+        "snippet": "WWOX-depleted HaCaT (KD) cells displayed lower ΔNp63α levels compared with control shRNA-expressing (EV) cells",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23370280_Salah2013_PMC.xml",
+        "anchor": "Results, WWOX inhibits ΔNp63α ubiquitination and degradation mediated by ITCH",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "WWOX shifts ΔNp63α from nuclear toward cytoplasmic localization.",
+        "snippet": "although ΔNp63α alone localizes mainly in the nuclear fraction, coexpression of ΔNp63α and WWOX was associated with increased ΔNp63α presence in the cytoplasm concomitant with less nuclear ΔNp63α levels",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23370280_Salah2013_PMC.xml",
+        "anchor": "Results, WWOX sequesters ΔNp63α in the cytoplasm",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "WWOX suppresses ΔNp63α transcriptional output despite increasing its abundance.",
+        "snippet": "coexpression of WWOX with ΔNp63α significantly suppressed ΔNp63α transactivation function in a dose-dependent manner",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23370280_Salah2013_PMC.xml",
+        "anchor": "Results, WWOX suppresses ΔNp63α transactivation ability",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "Doxycycline independently causes cell death in the assay system and therefore confounds Figure 6 interpretation.",
+        "snippet": "We observed that treatment of Dox alone induces cell death by 2.6-fold as compared with untreated cells",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23370280_Salah2013_PMC.xml",
+        "anchor": "Results, WWOX antagonizes ΔNp63α-induced chemoresistance",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "All study cell lines lack normal p53 function, limiting generalization.",
+        "snippet": "In all cell lines used in this article, p53 function is lost by different mechanisms, including mutation and loss of expression and function",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID23370280_Salah2013_PMC.xml",
+        "anchor": "Materials and Methods, Cell culture and transient transfection",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 1 supports selective WWOX association with ΔNp63α but also exposes a failed initial reverse co-IP.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1 panels a-d show ΔNp63α-associated WWOX signal across co-IP and GST-pulldown configurations; the lower reverse co-IP in panel a lacks the specific signal that motivated panel d.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID23370280_assets/cddis20136f1.jpg",
+        "anchor": "Figure 1, panels a-d, native 744x406 JPEG",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 2 visually supports WW1 dependence and noncanonical binding despite the ΔNp63α AAxA mutation.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2 panels a-c: Y33R loses the ΔNp63α pulldown, WW1-containing constructs carry the interaction, and ΔNp63α-AAxA retains visible WWOX association without quantitative densitometry.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID23370280_assets/cddis20136f2.jpg",
+        "anchor": "Figure 2, panels a-c, native 641x1173 JPEG",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[1]",
+        "qualifies_needle": "still able to bind WWOX similar to intact ΔNp63α"
+      },
+      {
+        "proposition": "Figure 3 establishes the correct substrate and direction but relies mainly on overexpression blots with limited quantification.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 3 panels a-f: WWOX reduces ITCH-mediated ΔNp63α ubiquitination/association and lengthens ΔNp63α stability; the panels do not show ITCH stabilizing WWOX and most lack densitometry or inferential statistics.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID23370280_assets/cddis20136f3.jpg",
+        "anchor": "Figure 3, panels a-f, native 752x435 JPEG",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[4]",
+        "qualifies_needle": "increased half-life of ΔNp63α"
+      },
+      {
+        "proposition": "Figure 4 supports partial cytoplasmic redistribution rather than complete sequestration.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 4 panels a-c show increased cytoplasmic ΔNp63α with WWOX, while nuclear ΔNp63α remains visible in a subset and the authors leave other localization regulators possible.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID23370280_assets/cddis20136f4.jpg",
+        "anchor": "Figure 4, panels a-c, native 743x833 JPEG",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[6]",
+        "qualifies_needle": "increased ΔNp63α presence in the cytoplasm"
+      },
+      {
+        "proposition": "Figure 5 supports transcriptional suppression but Y33R only partially attenuates it and statistical details are sparse.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 5 panels a-c show dose-dependent reporter suppression by WWOX and residual suppression with Y33R; error bars are shown but the plotted panels do not identify the inferential test or significance marks.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID23370280_assets/cddis20136f5.jpg",
+        "anchor": "Figure 5, panels a-c, native 743x805 JPEG",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[7]",
+        "qualifies_needle": "suppressed ΔNp63α transactivation function"
+      },
+      {
+        "proposition": "Figure 6 does not isolate WWOX-specific chemosensitization because doxycycline itself changes cell death.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 6 panels a-d show cisplatin-associated death alongside a control in which doxycycline alone raises death and further increases the cisplatin response; this prevents clean attribution to induced ΔNp63α/WWOX alone.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID23370280_assets/cddis20136f6.jpg",
+        "anchor": "Figure 6, panels a-d, native 743x570 JPEG",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[8]",
+        "qualifies_needle": "Dox alone induces cell death by 2.6-fold"
+      }
+    ]
+  }
+}

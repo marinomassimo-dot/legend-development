@@ -2925,3 +2925,68 @@ separati nel testo, perché è il titolo che viaggia.** Un conteggio nel titolo 
 controllare il conteggio; la proposizione sostanziale sta sotto e sopravvive. Terza volta
 stasera che arrivo con un titolo troppo forte su un nucleo che regge — Johannsen, Steinberg,
 questa. Le tre correzioni restano accanto ai rispettivi reperti invece di essere cancellate.
+
+---
+
+### 🔴 DL-MECH-095 — Abu-Remaileh 2014 regge sull’asse WWOX–HIF1α, ma la digossina era stata raccontata più forte dei suoi pannelli
+
+- **Status:** open · **Tag epistemico:** `DATO` per pannelli/testo; `CORREZIONE` per la propagazione precedente.
+- **Fonte:** Abu-Remaileh & Aqeilan 2014, PMID 25012504 / PMC4211377 — lettura completa con figure e supplementi, receipt `FTR-20260814-25012504-01`.
+- **Cosa resta forte:** Wwox-null MEF → glucosio/lattato↑, OCR/ATP/NADH↓, HIF1α normossico↑ e target glicolitici inclusa PDK1↑; full-length WWOX e shHIF1α correggono l’uptake; WFPA W44F/P47A non lega né corregge. L’asse WW1/HIF1α resta un buon readout funzionale.
+- **Correzione 1 — endpoint:** `DL-MECH-020` dice che l’inibizione farmacologica reverte l’uptake di glucosio *in vivo*. Il topo misura invece **glicemia ematica acuta**, 40 minuti dopo una singola iniezione; nessun uptake, flux, durata, sopravvivenza o endpoint neurologico in vivo.
+- **Correzione 2 — trascritti:** `DL-MOL-009` attribuisce alla digossina la riduzione di **PDK1 e PHD3**. Supplementary Figure S5 misura **GLUT1 e PHD3**, non PDK1. Inoltre `n=2` per condizione e nessuna statistica inferenziale è mostrata.
+- **Correzione 3 — dose:** il controllo richiesto sul PDF è chiuso: HTML e PDF stampano entrambi **`100 mg/kg`**. È farmacologicamente implausibile, ma non esiste base documentale per riscriverlo in µg/kg; resta `REPORTED_DOSE_AMBIGUITY`, non “refuso verificato”.
+- **Correzione 4 — specificità:** Figure 5C mostra il KO passare da ~10 a ~115 mg/dl dopo digossina, ma mostra anche il WT scendere visivamente da ~105 a ~75 mg/dl; nessun confronto statistico è disegnato per quest’ultimo. “Specifico” descrive la significatività dichiarata del rialzo KO, non dimostra assenza di effetto WT.
+- **Due limiti ulteriori dai pannelli:** Figure 2F dà succinato `P<0.09`, quindi non significativo; Supplementary Figure S5 inverte B/C tra titolo del pannello e legenda/testo (pannello B dice WT, pannello C KO; legenda e testo dicono il contrario).
+- **Impatto:** digossina resta **validazione del bersaglio**, non candidato. Il test trasferibile al genotipo di riferimento è cellulare: HIF1α/HRE, OCR–ECAR, phospho-PDH e rescue Q230P a quantità proteica controllata.
+- **Interconnessioni:** `DL-MECH-020` · `DL-MECH-028` · `DL-BIO-007` · `DL-MOL-009` · `HYP-20260709-01` · dossier `PMID25012504.md`.
+- **Destinazione dichiarata:** materiale per commit candidate; nessuna modifica canonica fuori da `BATCH_COMMIT`.
+
+---
+
+### 🔴 DL-MECH-098 — Steinberg 2021 sostiene il modello-organoide, non dimostra né GABA depolarizzante né un programma metabolico separato dalla maturazione
+
+- **Status:** open · **Tag epistemico:** `DATO` per le misure; `CORREZIONE` per la forza delle inferenze propagate.
+- **Fonte:** Steinberg et al. 2021, PMID 34268881 / PMC8350905 — testo principale completo, 11 figure/69 pannelli, cinque tabelle Excel, Expanded View e peer-review file letti; receipt `FTR-20260814-34268881-03` resta `partial_fulltext_read` perché Appendix Figures S1–S6 non sono nel pacchetto ufficiale disponibile.
+- **Cosa resta forte:** organoidi WWOX-KO isogenici e patient-derived ricapitolano ipereccitabilità, alterazioni di differenziamento/astrogenesi/DDR/Wnt e stratificazione; la reintroduzione di WWOX corregge diversi endpoint. È una piattaforma disease-relevant e un proof-of-concept di modificabilità del fenotipo.
+- **Correzione 1 — GABA:** nessun pannello misura `E_GABA`, cloro intracellulare, NKCC1/KCC2, risposta a GABA o farmacologia GABAergica. Il paper misura marcatori GABAergici + componenti recettoriali + ipereccitabilità e collega questi dati alla letteratura sul GABA depolarizzante. Quindi `GABA depolarizzante` è `IPOTESI`, non `DATO` di questo studio.
+- **Correzione 2 — RNA-seq:** da 4 WT + 4 KO vengono esclusi due WT, lasciando **2 WT vs 4 KO**. Le liste EV1/EV2 usano fold-change e **P grezzo <0,01**, non un filtro FDR; numerosi geni inclusi hanno `padj >0,05`.
+- **Correzione 3 — metabolismo:** OXPHOS↓/glicolisi↑ deriva da bulk RNA-seq nello stesso campione con forti difetti di regionalizzazione, asse e maturazione. Non misura flusso e non separa effetto metabolico da composizione/stadio. `DL-MECH-094` resta la formulazione corretta; la promozione richiede OCR/ECAR o isotope tracing stage-matched/sorted.
+- **Correzione 4 — rescue:** promotore ubiquitario, espressione in tutte le popolazioni, livello supraphysiological e rescue parziale, dichiarati dagli autori e contestati dai revisori. Dimostra reversibilità nel modello, non dose fisiologica, targeting, finestra o sicurezza.
+- **Correzione 5 — provenance statistica:** nessuna randomizzazione o cecità; sample size empirico; 11 outlier rimossi con ROUT Q=1% in Figure 1F; solo due famiglie patient-derived. L'esperimento BrdU sulla provenienza degli astrociti è definito inconclusivo nella peer review.
+- **Correzione 6 — artefatto:** cinque simboli genici nelle tabelle sono corrotti dall'auto-conversione Excel (`SEPT7`, `SEPT5`, `MARCH7`, `MARCH2`, `MARCH8` → date). Entrez ID/descrizione consentono il recupero, ma il file non va trattato come lossless.
+- **Esperimenti discriminanti:** gramicidin perforated patch + NKCC1/KCC2 e risposta GABA per il ramo GABA; fluxomics su stadio/cell type abbinati per il ramo metabolico; rescue titolato e cell-type-specific per la traslazione GT.
+- **Interconnessioni:** `PAPER 039` · `DL-MECH-034` · `DL-MECH-094` · `meta_gaba_paradox_current.md` · dossier `PMID34268881.md`.
+- **Destinazione dichiarata:** commit candidate per correggere PAPER 039 e le formulazioni canoniche solo via `BATCH_COMMIT`; nessuna modifica diretta ai quattro current scientifici.
+
+---
+
+### 🔴 DL-MECH-099 — Abu-Odeh 2016 sostiene la competenza DDR di WWOX, ma la catena ATM–ITCH–K63–ATR non è tutta dimostrata nello stesso paper
+
+- **Status:** open · **Tag epistemico:** `DATO` per i fenotipi cellulari; `CORREZIONE` per la forza della catena causale.
+- **Fonte:** Abu-Odeh et al. 2016, PMID 26675548 / PMC4826209 — testo, 6 figure principali, Supplementary Figures S1–S6 e Table S1 letti integralmente; receipt `FTR-20260814-26675548-01`.
+- **Cosa regge:** APH/HU/UVC aumentano WWOX; perdita/deplezione di WWOX attenua p-CHK1 e il checkpoint G2/M e aumenta le rotture cromosomiche dopo APH; il rescue wild-type riduce le rotture, mentre K274R/WFPA non riproducono il rescue.
+- **Confine causale 1 — ITCH/K63:** questo paper mostra ubiquitinazione di GST-WWOX dopo danno e perdita del segnale con K274R/WFPA. Non manipola ITCH e non misura direttamente il legame K63; quei due archi vengono da lavori precedenti citati.
+- **Confine causale 2 — ATM:** il pull-down contiene p-ATM dopo IR/UVC/HU, ma non mostra un controllo GST-only. La dipendenza da ATM usa KU-55933 per 48 ore e riduce insieme ATM/p-ATM, ITCH, WWOX e segnali downstream; è compatibile con dipendenza, non epistasi genetica lineare.
+- **Endpoint più forte:** dopo `0.2 μM` APH, circa `2.8 ± 1` rotture/cellula nei WT contro `5.7 ± 1.7` nei KO (`P<0.05`), con rescue WWOX. Molti altri pannelli non dichiarano il numero di repliche biologiche.
+- **Discrepanza artefatto:** Table S1 stampa `0.2 mM` APH; Results, Methods, Figure 3 e Supplementary Figure S6 stampano `0.2 μM`. La tabella non può essere usata per riscrivere la dose convergente delle altre superfici.
+- **Provenienza:** NLM indica Oncotarget in MEDLINE dal volume 1 (2010) al volume 8 issue 30 (2017), poi di nuovo dal volume 13 (2022). Il paper 2016 cade nel primo intervallo indicizzato; la storia successiva della rivista non sostituisce il controllo dei dati.
+- **Trasferibilità:** bassa verso il genotipo di riferimento e il SNC; moderata come blueprint di assay endogeno `p-CHK1 + fork/chromosome stability` e come vincolo di sicurezza su ipotesi di inibizione ITCH.
+- **Esperimenti discriminanti:** ATM loss/rescue o degradazione acuta; ITCH KO + rescue ligase-dead; assay ubiquitina K63-specifici; editing endogeno K274; fork assay e break mapping in cellule del genotipo di riferimento.
+- **Interconnessioni:** `FT-060` · `DIS-001` · `CORPUS-STUB-081` · dossier `PMID26675548.md` · `CC-20260814-26675548-01`.
+- **Destinazione dichiarata:** materiale per commit candidate; nessuna modifica ai quattro current scientifici fuori da `BATCH_COMMIT`.
+
+---
+
+### 🔴 DL-MECH-100 — Salah 2013 stabilizza **ΔNp63α**, non WWOX: l’attribuzione ITCH ereditata aveva invertito l’oggetto
+
+- **Status:** open · **Tag epistemico:** `DATO` per interazione/ubiquitinazione/emivita/localizzazione; `CORREZIONE` per l’attribuzione propagata; `INFERENZA` per il vincolo sugli assay di rescue.
+- **Fonte:** Salah et al. 2013, PMID 23370280 / PMC3564006 — XML e PDF letti integralmente; 6 figure/23 pannelli ispezionati; 66 riferimenti enumerati; nessuna tabella o supplemento distribuito; receipt `FTR-20260814-23370280-01`.
+- **Direzione misurata:** `WWOX lega ΔNp63α → riduce l’interazione ITCH–ΔNp63α → riduce ubiquitinazione/degradazione proteasomale di ΔNp63α → aumenta l’emivita di ΔNp63α`. Figura 3 non mostra ITCH che stabilizza WWOX.
+- **Correzione di provenienza:** il bullet 3 di `CC-20260810-41984841-01` attribuisce a PMID 23370280 *«direct ITCH/proteasomal stabilization»*. La formulazione è troppo ellittica e, nel contesto WWOX, inverte l’oggetto. `CC-20260814-23370280-01` la supersede append-only. L’ITCH/K63-stabilizzazione di **WWOX** resta attribuita a PMID 24550385, non a questo paper.
+- **Hidden gold:** WWOX aumenta l’abbondanza di ΔNp63α ma ne riduce l’attività trascrizionale tramite redistribuzione citoplasmatica. Quindi abbondanza proteica e recupero funzionale possono divergere; un assay di stabilizzazione deve misurare anche localizzazione, partner occupancy e output.
+- **Confini:** cellule tumorali trasformate e tutte p53-deficienti; prevale la sovraespressione; Y33R è un controllo ingegnerizzato, non una variante di malattia; nessun neurone, genotipo di riferimento o esperimento in vivo.
+- **Figura 6:** la doxiciclina da sola aumenta la morte cellulare di circa 2,6 volte e potenzia il cisplatino nel controllo. Cisplatino e doxiciclina non sono lead WWOX-DEE derivabili da questo studio.
+- **REVIVAL_TRIGGER per il trasferimento al genotipo:** dimostrare a quantità proteica appaiata che WWOX-Q230P conserva interazione/competizione, corretta localizzazione e output funzionale; la sola crescita di abbondanza non basta.
+- **Interconnessioni:** `FT-062` · `DL-THER-095` · `DIS-001` · `CC-20260810-41984841-01` · dossier `PMID23370280.md` · `CC-20260814-23370280-01`.
+- **Destinazione dichiarata:** correzione al prossimo `BATCH_COMMIT`; nessuna modifica diretta ai quattro current scientifici.
