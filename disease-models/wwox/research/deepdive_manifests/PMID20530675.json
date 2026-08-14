@@ -1,0 +1,195 @@
+{
+  "schema_version": 2,
+  "pmid": "20530675",
+  "doi": "10.1038/onc.2010.222",
+  "receipt": "FTR-20260811-20530675-01",
+  "landing": ["FTR-20260811-20530675-01", "full_text_queue_current", "discovery_ledger_current"],
+  "skills_considered": [
+    {"skill": "legend-study-intake-triage", "used": true, "reason": "Receipt check re-run rather than accepted: 0 receipts, 0 manifests for this PMID. Confirmed unread."},
+    {"skill": "find-fulltext", "used": true, "reason": "The HTML was on the shared disk with its digest matching. The FIVE FIGURE IMAGES WERE NOT — the dispatch stated 'nessuna sul disco' and that was correct. Retrieved from the PMC blob CDN via the src attributes in the article HTML itself, since the legacy /articles/.../bin/ route is the one that answers 404 with a 48 KB HTML body."},
+    {"skill": "caption-census", "used": false, "reason": "HTML surface: the figures-outside-body question is undefined, and the tool answers not_applicable. The denominator was established by reading — five figure captions, each preceded by an 'Open in a new tab' marker, plus one table carrying the same marker."}
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 137,
+    "publications_on_gene": 65,
+    "counts_measured": "PubMed esearch, 2026-08-11, senior author: 'Aqeilan RI[au]' 137, 'Aqeilan RI[au] AND WWOX' 65 — the same measurement taken today for PMID 27308504 and reused rather than re-run, since it is the same senior author on the same date.",
+    "research_type": "mixed",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "primary_group_note": "The Aqeilan laboratory again, this time with a clinical pathology arm — 83 osteosarcoma specimens from 51 patients, scored by immunohistochemistry. That mix is unusual for this corpus, where the group's work read so far is cell and mouse biology, and it is what makes the paper's own negative result (below) worth more than its positive one.",
+    "weighting": "OBSERVATIONS in the clinical arm carry real weight: 83 specimens, 12 normal controls, exact binomial confidence intervals, Fisher's exact test against normal bone. The cell-line and mouse arms are ordinary. INTERPRETATION needs one specific discount, and it is not about rigour: the paper's own paired human analysis fails to show the association its Figure 5 title asserts, the authors say so in the Results, and the failure is reported only in a supplementary table. Where the text and the figure title disagree, the text is the one that was written last and hedged."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {"query": "Aqeilan RI[au] AND WWOX", "route": "PubMed esearch 2026-08-11", "count": 65},
+      {"query": "Aqeilan RI[au]", "route": "PubMed esearch 2026-08-11", "count": 137}
+    ],
+    "note": "Entirely WWOX-directed: a primary study of WWOX status in human osteosarcoma and its relation to RUNX2."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 40,
+    "gene_direct_refs_in_source": [
+      {"ref": 7, "note": "The Wwox-targeted-ablation mouse in which >30% of juvenile mice develop periosteal osteosarcoma. The whole rationale of this paper rests on it. NOT READ, and probably PMID 18487609 or its companion — identity NOT confirmed here and not asserted."},
+      {"ref": 8, "note": "The paper reporting RUNX2 as a WWOX partner and WWOX suppressing RUNX2 transactivation. It is the mechanism this study assumes rather than tests. NOT READ."},
+      {"ref": 3, "note": "FRA16D as the second most active common fragile site. Background."},
+      {"ref": 10, "note": "RUNX2 elevated in the majority of human osteosarcoma — the prior that makes the inverse-correlation hypothesis worth testing. NOT READ."}
+    ],
+    "resolved": [],
+    "queued": [
+      {"ref": 8, "queue": "FT-072", "reason": "WWOX suppresses RUNX2 transactivation. This paper CITES that mechanism and does not measure it; every functional statement about the WWOX-RUNX2 axis in this corpus would rest on it. Unread."},
+      {"ref": 7, "queue": "FT-072", "reason": "The Wwox-null osteosarcoma mouse. Its identity needs confirming against FT-057 rather than assuming, and it is the animal model behind the paper's premise."}
+    ],
+    "gap": "No reference resolved against the corpus. Refs 7 and 8 are the load-bearing ones and both are unread; ref 7 may be a paper already queued elsewhere, and 'may be' is recorded rather than claimed."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Does a figure title in this corpus ever generalise beyond what the paper's own text says the data support?",
+    "hits": 3,
+    "finding": "🔴 YES, AND THIS IS THE THIRD INSTANCE AND THE FIRST WHERE THE PAPER ITSELF PRINTS THE REFUTATION. Figure 5 is titled 'Inverse association of WWOX and RUNX2 expression in osteosarcoma' — a claim about the disease. The Results text, two paragraphs later, states: 'Although WWOX and RUNX2 results suggested an inverse association in human OSs, this was not evident when paired comparisons were performed on the 56 available cases'. And the numbers that follow run the OTHER WAY: 78% (7/9) of WWOX-strong pre-treatment biopsies were also RUNX2 POSITIVE, and 55% (6/11) of WWOX-reduced biopsies were RUNX2 NEGATIVE — both are same-direction co-occurrence, not inverse. The figure whose title generalises to 'in osteosarcoma' contains only cell lines and two illustrative stained sections. This differs from PMID 27308504 and PMID 31075076, where the compression was of MODALITY: here the modality is intact — the authors hedge properly in the text — and what travels beyond the evidence is the SCOPE of the title. DL-METH-094 should gain scope alongside modality, and this instance is the reason."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-11",
+    "route": "PMC record header for PMC3037996 as carried in the local HTML artifact",
+    "result": "No retraction, no expression of concern, no erratum. NIHMS author manuscript, Oncogene 2010.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID20530675_Kurek2010_PMC.html",
+      "sha256": "8fadfda105ef66ce6215e95c91f3521dd400d34367ec10d22a6fae925caf3ee9",
+      "kind": "article_text"
+    },
+    {
+      "path": "files/fulltext/PMID20530675_Kurek2010_assets/f1.jpg",
+      "sha256": "3e21c0717bbb9285c2350c8b1512a9c1deb8f4823437f516843920ed205f37a7",
+      "kind": "figure"
+    },
+    {
+      "path": "files/fulltext/PMID20530675_Kurek2010_assets/f5.jpg",
+      "sha256": "433c72b28c2f0fe7370b992e985b58885dafe91266e84bc7d42f8cd96e123d87",
+      "kind": "figure"
+    }
+  ],
+  "figure_extractions": {
+    "rule": "Five figures present, two inspected, three waived by name with their cost. No PDF exists for this article, so there is no deposit-versus-PDF comparison to make and no font screen to run — recorded because their ABSENCE is a fact about this artifact, not an omission in the protocol.",
+    "figures": [
+      {"label": "Figure 1", "artifact": "files/fulltext/PMID20530675_Kurek2010_assets/f1.jpg", "dimensions": "1050x845", "effective_ppi": "not_applicable — native PMC-deposited raster inspected at 1050x845", "route": "PMC blob CDN via the src attribute in the article HTML"},
+      {"label": "Figure 5", "artifact": "files/fulltext/PMID20530675_Kurek2010_assets/f5.jpg", "dimensions": "1050x779", "effective_ppi": "not_applicable — native PMC-deposited raster inspected at 1050x779", "route": "PMC blob CDN via the src attribute in the article HTML"}
+    ],
+    "retrieved_but_not_inspected": [
+      {"label": "Figure 2", "file": "f2.jpg", "dimensions": "1050x284"},
+      {"label": "Figure 3", "file": "f3.jpg", "dimensions": "1050x492"},
+      {"label": "Figure 4", "file": "f4.jpg", "dimensions": "1050x376"}
+    ]
+  },
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC HTML, body 48,117 characters and abstract 1,547 characters separated by the validator's own extraction. Every text locator matched at mode=strict.",
+    "extractor_provenance": "🔴 VALIDATED AGAINST main@d06a4a1, NOT AGAINST THIS BRANCH'S COPY, and the difference is not cosmetic: main@d06a4a1's deepdive_manifest.py is 1,559 lines against this worktree's 1,359. The 200-line delta is a per-font encoding-verdict subsystem (font_is_symbolic, font_encoding_verdict, verdicts UNTRUSTWORTHY / SUSPECT_FONTS / UNDECIDED) that did not exist when this branch was aligned. Extracted with git show d06a4a1:framework/scripts/deepdive_manifest.py and used for every quote match and for the final verdict.",
+    "abstract_anchoring_waived": "No locator draws on the abstract. One candidate quote — the 58% figure — was refused by the abstract separation and DROPPED rather than re-anchored, because that sentence genuinely lives in the abstract; the Discussion states the same result and is quoted instead at entries[0].",
+    "figure_coverage": {
+      "figures_present": 5,
+      "figures_with_locators": 2,
+      "coverage": "2/5",
+      "budget_declared_before_reading": "🔴 THE DISPATCH DECLARED FIVE FIGURES AND THAT WAS CORRECT — verified rather than accepted, by counting the display markers in the surface: six 'Open in a new tab' markers, of which five head figure captions and one heads Table 1. My own first regex said 'distinct 1-6' and would have given SIX; the sixth was a citation to Supplemental Fig. 6, not a main figure. A regex over figure citations counts what the text MENTIONS, not what the article CONTAINS, and the two differ whenever a supplement is cited by the same name. Target set at that point: one locator per main figure. NOT MET — two of five.",
+      "waivers": [
+        {"figure": "Figure 2", "cost": "WWOX mRNA and protein across human and mouse OS cell lines. It is the quantitative basis for 'WWOX expression is altered in most human OS cells', carried here on the authors' text."},
+        {"figure": "Figure 3", "cost": "Ad-WWOX proliferation and tumorigenicity. The in vitro functional arm — reduced proliferation and the sub-G1 population — rests on it and on Supplemental Fig 3, neither inspected."},
+        {"figure": "Figure 4", "cost": "The HOS stable-clone rescue: colony formation, soft agar, migration and Matrigel invasion. It is the strongest functional claim in the paper and the one a therapeutic reading would lean on hardest. The most expensive of the three waivers."}
+      ],
+      "supplementary_gap": "🔴 THE SUPPLEMENT IS NOT RETRIEVED AND IT CARRIES THE PAPER'S OWN REFUTATION. One 5.8 MB PDF holding Supplemental Figures 1-6 and Supplemental Tables 1-9. SUPPLEMENTAL TABLE 8 is where the paired WWOX/RUNX2 comparison fails — the negative that qualifies the Figure 5 title — and SUPPLEMENTAL FIG 6 is the mouse femur Runx2 elevation, the animal arm of the same claim. Also there: Supplemental Fig 1, the micro-CT method behind '100% of Wwox-deficient mice had developed OS by 18 days-of-age'. A supplement that holds the refutation of a main-figure title is not an appendix, and this reading is partial because of it."
+    },
+    "panel_text_relation_note": "One three-member contradiction set, built as the dispatch asks: entries[3] the body sentence, entries[4] the caption, entries[5] the panel read from pixels. The pointer and needle live on the FIGURE locator, which is the one that declares a figure surface and a fingerprinted image — the arrangement PMID 23435430 got wrong and had to be corrected today.",
+    "entries": [
+      {
+        "proposition": "THE CLINICAL HEADLINE, and it is the strongest thing in the paper: WWOX is absent or reduced in more than half of osteosarcoma specimens, against 12 normal bone and cartilage controls, with a p value from Fisher's exact test. Quoted from the Discussion rather than the abstract because the abstract is separated from the body by the validator and a quote taken there could not be verified against this surface.",
+        "snippet": "We find that WWOX expression is absent or reduced in 58% of OS patient specimens",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID20530675_Kurek2010_PMC.html",
+        "anchor": "Discussion, opening sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE DIRECTIONAL CLINICAL OBSERVATION THAT MATTERS MOST FOR A TUMOUR-SUPPRESSOR READING, because it is longitudinal within patients rather than cross-sectional: WWOX comes BACK after chemotherapy and is LOST again in metastases. Two opposite movements of the same marker in the same patients is a far stronger argument than a single prevalence figure.",
+        "snippet": "In some OS patients, chemotherapy restored WWOX levels and the metastases had reduced levels",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID20530675_Kurek2010_PMC.html",
+        "anchor": "Discussion, first paragraph",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "PANEL SIDE, CONFIRMING — the metastasis arm of the sentence above, read from the pixels. What the panel shows is qualitative and the text does not overstate it; recorded because it is the one place in this paper where the clinical claim is visible rather than tabulated, and because a reader should know the comparison is between two different sections stained separately, which is an intrinsic limit of immunohistochemistry and not a defect of this figure.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 1, panel C, read from files/fulltext/PMID20530675_Kurek2010_assets/f1.jpg at its native 1050x845. Three photomicrographs in a row, headed 'Initial Biopsy H&E stain', 'Initial Biopsy WWOX immunostain' and 'Metastasis WWOX immunostain', lettered l, m and n. Panel m carries dense brown cytoplasmic chromogen across most cells; panel n carries essentially none, showing blue counterstain only. Panel B above it holds three further sections lettered i, j, k, of which k is strongly brown and j is not.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID20530675_Kurek2010_assets/f1.jpg",
+        "anchor": "Figure 1, panels B and C, read at 1050x845",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "🔴 CONTRADICTION SET, MEMBER 1 OF 3 — THE BODY CLAIM. The Results assert that the two murine lines express Wwox AND have reduced Runx2, which is the comparison the whole inverse-correlation argument turns on.",
+        "snippet": "murine cell lines MC3T3 and K7M2 express Wwox and have reduced Runx2 expression",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID20530675_Kurek2010_PMC.html",
+        "anchor": "Results, 'Loss of WWOX expression is associated with elevated RUNX2 levels in several OS cell lines'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "CONTRADICTION SET, MEMBER 2 OF 3 — THE CAPTION, which states the same comparison as the panel's own summary. Authored prose in the declared text surface, verified character-for-character. Note what it does NOT name: of the ten lanes in the blot it accounts for five.",
+        "snippet": "HOS, Saos2 and KHOS (WWOX-reduced) cells have higher levels of RUNX2 compared to MC3T3 and K7M2 (Wwox-positive) cells",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID20530675_Kurek2010_PMC.html",
+        "anchor": "Figure 5 caption, item A. Declared surface body: authored prose in the declared artifact, not a pixel observation.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "🔴 CONTRADICTION SET, MEMBER 3 OF 3 — THE PANEL, READ FROM THE PIXELS, AND IT DOES NOT SHOW WHAT THE SENTENCE AND CAPTION CLAIM. The claim requires MC3T3 and K7M2 to carry reduced RUNX2. In the blot both carry CLEAR RUNX2 BANDS, comparable to HOS, which the same caption places on the RUNX2-high side. The only lane with genuinely absent RUNX2 is MCF7 — a breast line, not an osteosarcoma line. AND THE PANEL HOLDS A LANE THE PAPER NEVER MENTIONS: ROS appears between MG-63 and U2OS, carries the strongest RUNX2 signal in the entire blot, and is named neither in the caption nor anywhere in the Results paragraph, which accounts for nine of the ten lanes. cited_panel_check holds: Figure 5A is the panel both the sentence and the caption cite. This is a contradiction of the stated comparison, not of the paper's thesis — the WWOX-low human lines HOS, SAOS-2 and KHOS do carry high RUNX2, and MCF7 versus MDA-MB231 does run inverse. What fails is the specific contrast the caption builds the claim on.",
+        "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 5, panel A, read from files/fulltext/PMID20530675_Kurek2010_assets/f5.jpg at its native 1050x779, upper region. TEN lanes, labelled left to right: MCF7, MC3T3, K7M2, HOS, SAOS-2, MG-63, ROS, U2OS, KHOS, MDA-MB231. Three rows labelled at the left: RUNX2, WWOX, GAPDH. In the RUNX2 row the MCF7 lane is blank; MC3T3 and K7M2 both carry distinct bands of intensity comparable to HOS; ROS carries the darkest band in the row; SAOS-2, U2OS and KHOS carry strong bands; MDA-MB231 carries a band. In the WWOX row MCF7 is strongest, KHOS is faint and MDA-MB231 is faintest. GAPDH is even across all ten lanes.",
+        "surface": "figure",
+        "artifact": "files/fulltext/PMID20530675_Kurek2010_assets/f5.jpg",
+        "anchor": "Figure 5, panel A, all ten lanes and three rows, read at 1050x779",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[3]",
+        "contradicts_needle": "MC3T3 and K7M2 express Wwox and have reduced Runx2",
+        "cited_panel_check": "SATISFIED, verified on the pixels. Figure 5A is the panel cited by the body sentence at entries[3] and described by the caption at entries[4]. The falsifying observation is in the panel they both name."
+      },
+      {
+        "proposition": "🔴 AND THE PAPER PRINTS ITS OWN REFUTATION OF THE FIGURE'S TITLE, IN THE RESULTS, WHERE THE FIGURE IS TITLED 'INVERSE ASSOCIATION … IN OSTEOSARCOMA'. The paired human comparison does not show the association. This is what separates this instance from the modality compressions recorded in PMID 27308504 and PMID 31075076: there the hedge was removed, here the hedge is INTACT and what travels beyond the evidence is the SCOPE of a title — a claim about osteosarcoma, on a figure containing cell lines.",
+        "snippet": "Although WWOX and RUNX2 results suggested an inverse association in human OSs, this was not evident when paired comparisons were performed on the 56 available cases",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID20530675_Kurek2010_PMC.html",
+        "anchor": "Results, 'Aberrant RUNX2 expression in human osteosarcoma'. The reference to Supplemental Table 8 follows.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE NUMBERS RUN THE OTHER WAY, AND THEY ARE IN THE RUNNING TEXT. If the association were inverse, WWOX-strong tumours should be RUNX2-negative. Seven of nine were RUNX2 POSITIVE. Recorded because a negative stated in words is easy to read past, and a negative stated as 78% is not.",
+        "snippet": "In pre-treatment biopsies, 78% (7/9) of WWOX strong tumors were also RUNX2 positive",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID20530675_Kurek2010_PMC.html",
+        "anchor": "Results, 'Aberrant RUNX2 expression in human osteosarcoma', immediately after the sentence at entries[6]",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE BOUNDARY THE AUTHORS DRAW INSIDE THEIR OWN CELL-LINE ARM, quoted because it is the honest half of the same paragraph the contradiction sits in: two of the osteosarcoma lines do not follow the correlation, and the authors say so. A reader who takes only the figure title would not know that either.",
+        "snippet": "the inverse correlation between WWOX and RUNX2 was not observed in two less differentiated OS cell lines, MG-63 and U2OS",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID20530675_Kurek2010_PMC.html",
+        "anchor": "Results, 'Loss of WWOX expression is associated with elevated RUNX2 levels in several OS cell lines'",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "THE MOUSE PREMISE, AND WHERE ITS EVIDENCE LIVES. The claim that every Wwox-deficient mouse develops osteosarcoma by 18 days rests on a micro-CT screening method described in a supplementary figure that is not retrieved. Recorded at the evidential level it actually has: a strong number whose method this reading has not seen.",
+        "snippet": "100% of Wwox -deficient mice had developed OS by 18 days-of-age and 68% of mice had bilateral involvement",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID20530675_Kurek2010_PMC.html",
+        "anchor": "Results, 'High incidence of OS in Wwox -deficient mice'. The reference to Supplemental Table 1 follows; the method is Supplemental Fig 1.",
+        "panel_text_relation": "text_only"
+      }
+    ],
+    "note": "COVERAGE: abstract, Introduction, Materials and Methods, all Results subsections, Discussion and the 40-item reference list read in sequence from the PMC HTML; Table 1 read in the same surface; two of five figures inspected as images at their native deposited resolution, three retrieved and waived by name with their cost. NOT READ: the 5.8 MB supplement holding Supplemental Figures 1-6 and Supplemental Tables 1-9, which is where the paper's own paired-comparison negative lives. There is no PDF of the article itself, so no font screen applies and no deposit-versus-PDF resolution comparison was possible — stated because their absence is a property of this artifact rather than a step skipped."
+  }
+}

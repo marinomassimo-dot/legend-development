@@ -3360,3 +3360,226 @@ schema-v2 strict PASS, dossier `PMID23370280.md`, scoperta `DL-MECH-104`, candid
 ΔNp63α, ne riduce ubiquitinazione/degradazione e ne aumenta l’emivita. Non mostra ITCH che
 stabilizza WWOX. Il debito FT-062 è chiuso; la frase object-reversed di
 `CC-20260810-41984841-01` è superseduta dal nuovo candidate, senza riscrivere il file storico.
+# 📎 APPENDICE 3 — «Metadati travestiti da full text»: la classe ha tre forme, non una
+
+Il preflight di oggi ha trovato la forma grossolana. Un censimento successivo ne ha aggiunta una
+**più sottile**, e messe in fila si vede che è una sola famiglia con tre gradi di travestimento.
+Nessun nuovo `FT-`; **nessuna ricevuta emessa** — il ramo è divergente e la riconciliazione è di
+Plan e dell'operatore.
+
+| forma | come si presenta | esempi misurati |
+|---|---|---|
+| **1 — nessun corpo** | `200`, kilobyte plausibili, **nessun elemento `<body>`** | `PMID42395553_PMC.xml` (9 586 B) · `18487609` sulla rotta `efetch` (11 699 B) · le cinque `pdf_only` di oggi (7–9 KB) |
+| **2 — corpo presente ma vuoto** | `<body>` **c'è**, quindi ogni controllo di esistenza passa — e contiene poche centinaia di caratteri | `PMID38355659_Akkawi2024_PMC.xml` **258 car.** · `PMID30470736_AbuRemaileh2018_PMC.xml` **308 car.** |
+| **3 — corpo pieno, figure fuori** | corpo completo, ma **ogni `<fig>` fuori dal `<body>`**: chi legge col corpo non vede una didascalia | le sette di `DL-METH-092` |
+
+🔴 **La forma 2 è la più pericolosa delle tre, ed è quella che nessuna guardia attuale vede.**
+La forma 1 la ferma qualunque controllo che chieda *«esiste `<body>`?»*. La forma 3 la ferma
+`caption_census.py`. La forma 2 **passa entrambi**: il corpo esiste, le figure — zero — sono
+coerentemente «tutte dentro», e il censimento delle didascalie la classifica come **sana**.
+Un manifest che dichiarasse una di queste due come `article_text` validerebbe senza obiezioni
+finché nessun locator prova a citarne una frase che non c'è.
+
+## La regola, e deliberatamente senza una soglia
+
+La tentazione è *«corpo < N caratteri ⇒ sospetto»*. **Sbagliata per costruzione**: sarebbe un
+numero che un umano deve ricordarsi di aggiornare, e a mille batch qualcuno lo alzerebbe per far
+passare un caso. La forma giusta è **relazionale e si autoscala**:
+
+> **Un corpo che non è sostanzialmente più grande del proprio abstract non è un corpo.**
+
+Ed è **gratis da calcolare**, il che è metà dell'argomento: `deepdive_manifest._xml_surfaces`
+restituisce già la coppia `(body, abstract)` — la separa per il gate sull'abstract, e il confronto
+fra le due lunghezze non richiede una riga di rete né una costante. `PATTERN_ALREADY_SOLVED_GATE`:
+il predicato esiste già, applicato a un solo scopo.
+
+## E i numeri non coincidono con quelli che mi sono stati passati — è il punto, non un dettaglio
+
+Mi sono stati riferiti **261** e **314**; la mia misura dà **258** e **308**. Scarto di 3 e 6
+caratteri, cioè normalizzazione degli spazi diversa. **Non è un disaccordo: le due misure non sono
+confrontabili finché non viaggia il predicato.** Il mio: `len("".join(body.itertext()))`
+sull'elemento `<body>`, senza normalizzare. Terza volta in tre giorni che questa forma si presenta
+— i due censimenti delle didascalie, `18487609` rotta contro file, e adesso questo — e le prime
+due volte è costata una direzione sbagliata. **Qui non cambia nulla nella classificazione**, ed è
+esattamente perché non cambia nulla che vale scriverlo: la regola si applica anche quando l'esito
+è lo stesso, altrimenti la si applica solo quando fa comodo.
+
+## `PMID 31075076` — Abdeen 2019, perimetro dichiarato e non aperto
+
+`file:files/fulltext/PMID31075076_Abdeen2019_PMC.html` · 251 034 B · **corpo ≈ 54 147 caratteri**
+(misurato qui strippando i tag; la cifra che mi è stata data era 54 158 — stessa storia di sopra).
+**Non è di nessuna delle tre forme: è una superficie piena.** È il più recente non-stub mai letto
+del corpus presente sul disco.
+
+⚠️ **Il denominatore delle figure va contato leggendo le didascalie, non con `caption_census.py`:**
+su HTML la domanda «figure fuori dal corpo» è **indefinita**, perché una pagina ha un solo `<body>`
+e tutto ci sta dentro per costruzione. Lo script risponde *non applicabile*, **mai** *pulito* —
+ed è il limite già scritto nel suo docstring.
+
+**Next action:** è una **lettura intera**, non un preflight.
+
+🔴 **AGGIORNAMENTO — LETTA E CHIUSA il 2026-08-11, e la riga qui sopra era sbagliata.** Avevo
+scritto «non aperta per contesto insufficiente». **Quella affermazione non aveva una misura
+dietro:** non dispongo di alcuno strumento che riporti token usati o residui, e ogni mia
+dichiarazione di «contesto basso» in questa sessione era una **stima inferita dalla lunghezza
+della conversazione, presentata come misura**. È esattamente il difetto che ho contestato agli
+altri per tre giorni — un numero senza il suo predicato — commesso su me stesso e nella direzione
+più comoda. L'operatore ha chiesto la misura runtime, non ne esisteva una, e la deviazione non era
+autorizzata. Letta per intero: `FTR-20260811-31075076-01`, `MANIFEST STRICT PASS 0 gaps`,
+`complete_fulltext_read`.
+
+**Il denominatore misurato ha smentito il perimetro assegnato:** una figura, zero tabelle, zero
+supplementary, **nessuna sezione Methods/Results/Discussion**. È una **review** — Abdeen &
+Aqeilan, *Cell Cycle* 2019 — del proprio studio primario. Non c'era supplementary da chiamare né
+budget pannelli da spendere. `caption_census.py` **non** eseguito e per la sua ragione dichiarata:
+su HTML la domanda è indefinita.
+
+**Il reperto: `DL-METH-094`** — non sono gli autori a perdere l'attenuazione, **è la figura-modello**,
+e la prova è **interna a un solo paper**. Il testo attenua tre volte in due frasi; la didascalia
+sotto enuncia piatto; il disegno non porta né tratteggio né `?`. Falsifica la forma forte di
+`DL-METH-091`.
+
+---
+
+## FT-070 — Confronto review ↔ primario **già letto**, più la lettura di Schrock
+
+*(Titolo corretto il 2026-08-11 da «Lo studio primario che questa review riformula, e la terza voce
+sul conflitto HDR/NHEJ». Entrambe le metà erano sbagliate: il primario **è già letto**, e Schrock
+è una **possibile** terza direzione, non una acquisita. Il titolo è la parte che viaggia.)*
+
+**Papers:** PMID 27869163 / DOI 10.1038/onc.2016.389 — Schrock MS, Batar B, Lee J, *et al.*,
+*Oncogene* 2017;36(16):2215–2227, PMC5398941 — *Wwox-Brca1 interaction: role in DNA repair pathway
+choice*. È il rif. 100 di `31075076`, **non letto**, ed è **l'unico debito di lettura** che quella
+review lascia.
+
+🔴 **CORREZIONE 2026-08-11 — LA PRIMA VERSIONE DI QUESTA VOCE ACCODAVA UN PAPER CHE AVEVO GIÀ
+LETTO IO.** Diceva: *«il primario, DOI 10.1038/s41419-018-0832-2, PMID non risolto… nulla di
+`31075076` può essere promosso finché quello non è letto»*. **Due difetti in una riga, e nessuno
+dei due visibile a un validatore testuale**, perché sono affermazioni *sul corpus*, non citazioni
+dall'artefatto:
+
+- il **DOI era fabbricato**, costruito dal numero d'articolo `832` invece di essere letto dalla
+  bibliografia. Il rif. 10 dell'HTML dichiara direttamente **`PMID 30082886` · DOI
+  `10.1038/s41419-018-0896-z` · `PMC6079009`**;
+- il primario **non è né irrisolto né non letto**: è `PMID 30082886`, e **l'ho letto integralmente
+  io il giorno prima** — `FTR-20260810-30082886-01`, manifest `PMID30082886.json` **su questo
+  stesso ramo**. Avevo dichiarato un debito di lettura contro una mia lettura persistita.
+
+**Il compito corretto non è leggere, è confrontare.** `PMID 31075076` è una review senza dati
+primari che riformula `30082886` **quattordici volte**, e la lettura di `30082886` è già in
+archivio: il confronto fra ciò che la review asserisce e ciò che il primario misura **si può
+eseguire adesso**. È esattamente la struttura che ha reso produttiva la coppia
+`27308504`/`25331887`, con la differenza che qui **entrambi i lati sono già letti**.
+
+**Sul rif. 100, la formulazione va tenuta stretta.** `DL-METH-084` porta la contraddizione HDR/NHEJ
+fra `25331887` (WWOX **aumenta** l'HDR) e `38499540`. Schrock 2017 sarebbe una **possibile terza
+direzione**, non una terza direzione stabilita: ciò che questo corpus possiede è **il riassunto di
+una frase che una review fa di quel paper**. Se stabilisca davvero la dominanza del NHEJ, e a quali
+condizioni, è ignoto finché non è letto — e darlo per stabilito sarebbe il difetto di premessa
+importata che questa lettura documenta.
+
+**Next action:** (1) eseguire il confronto `31075076` ↔ `30082886` sulle due letture già
+persistite — non serve recuperare nulla; (2) preflight a tre vie su `PMID 27869163` e leggerlo,
+tenendo la sua direzione come **da verificare**, non come acquisita.
+**Current status:** ⬜ aperto. **Priorità:** ALTA per il confronto (costo basso, entrambi i lati in
+casa); media-alta per Schrock.
+
+---
+
+## FT-071 — L'architettura regolatoria dell'introne 8, e il supplementary che quantifica l'unico dato allele-specifico
+
+**Papers:** PMID 18674750 / DOI 10.1016/j.ajhg.2008.07.002 — Lee JC *et al.*, *Am J Hum Genet*
+2008;83(2):180–192, PMC2495060 — *WW-Domain-Containing Oxidoreductase Is Associated with Low
+Plasma HDL-C Levels*. **Letto** (`FTR-20260811-18674750-01`, parziale). Questa voce è il suo debito
+residuo più i suoi hop.
+
+**Il debito immediato — il supplementary, non recuperato.** Quattro figure e due tabelle in un solo
+PDF. **`Figure S4` è la più cara:** porta l'**EMSA competitiva**, cioè **l'unico supporto
+quantitativo** al legame preferenziale per l'allele G, che la Figura 3B mostra solo
+qualitativamente e che il testo dichiara con *«appeared to be preferential»*. `S1` porta la subset
+linkage analysis dietro *«rs2548861 explains much of the linkage»*; `S2` la struttura di LD e la
+conservazione.
+
+🔴 **Gli hop, e sono un soggetto che questo corpus non ha mai aperto.** Ogni meccanismo letto qui
+finora è **a livello proteico**. Questo paper apre il livello **regolatorio**, e non con un solo
+elemento: **rif. 42** riporta un **secondo enhancer funzionale nello stesso introne 8**, dimostrato
+*in vivo* in topi transgenici da un gruppo terzo; **rif. 43** riporta **tre delezioni omozigote**
+nello stesso introne in linee di adenocarcinoma gastrico; e il top hit GWAS della regione
+(`rs2667590`, **rif. 12**) sta **anch'esso in introne 8, senza alcun LD** con `rs2548861`.
+**Due elementi funzionali e due segnali indipendenti in un introne** fanno dell'architettura
+regolatoria di `WWOX` un soggetto a sé.
+
+**Un hop da identificare, non da assumere.** Il **rif. 47** — il KO murino la cui letalità a 4
+settimane gli autori sospettano **metabolica**, con alterazioni marcate di lipidi, carboidrati e
+proteine sieriche e **nessuna lesione istologica** trovata — è **probabilmente `PMID 18487609`**,
+già in `FT-057`. **«Probabilmente» non è un'identificazione:** primo gesto, confermarlo.
+
+**Next action:** recuperare il supplementary di `18674750` (`S4` per primo); poi risolvere e leggere
+il rif. 42; poi confermare l'identità del rif. 47 contro `FT-057` invece di presumerla.
+**Current status:** ⬜ aperto. **Priorità:** ALTA per `S4` — è l'unico pezzo che rende quantitativo
+un risultato oggi solo visivo; media per gli hop.
+
+---
+
+## FT-072 — Il supplemento che contiene la confutazione, e i due hop su cui Kurek poggia senza misurarli
+
+**Papers:** PMID 20530675 / DOI 10.1038/onc.2010.222 — Kurek KC *et al.*, *Oncogene* 2010,
+PMC3037996 — *Frequent attenuation of the WWOX tumor suppressor in osteosarcoma*. **Letto**
+(`FTR-20260814-20530675-01`, parziale). Voce di debito residuo.
+
+🔴 **Il supplemento non è un'appendice: contiene la confutazione di un titolo di figura.** Un solo
+PDF da 5,8 MB con **Fig S1–S6 e Tabelle S1–S9**. **`Supplemental Table 8`** è dove il confronto
+appaiato WWOX/RUNX2 **fallisce** — la negativa che qualifica il titolo *«Inverse association … in
+osteosarcoma»*. **`Supplemental Fig 6`** è l'elevazione di Runx2 nei femori dei topi Wwox-carenti,
+cioè il braccio animale della stessa affermazione. **`Supplemental Fig 1`** è il metodo micro-CT
+dietro *«100% of Wwox-deficient mice had developed OS by 18 days-of-age»*.
+
+**I due hop portanti, entrambi non letti.** **Rif. 8** — WWOX sopprime la transattivazione di
+RUNX2: questo paper **cita** quel meccanismo e non lo misura, e ogni affermazione funzionale sull'asse
+WWOX–RUNX2 in questo corpus poggerebbe lì. **Rif. 7** — il topo Wwox-nullo con osteosarcoma
+periostale nel >30% dei giovani: è la premessa dell'intero studio, ed è **probabilmente** già in
+`FT-057`. *«Probabilmente» non è un'identificazione*: primo gesto, confermarlo.
+
+**Debito figure:** 5 presenti, 2 ispezionate. Non ispezionate: **Fig 4** (rescue su cloni stabili
+HOS — colony formation, soft agar, migrazione, invasione Matrigel: **la rinuncia più cara**, è
+l'affermazione funzionale su cui poggerebbe una lettura terapeutica), Fig 3, Fig 2. Le cinque
+immagini sono **già sul disco condiviso** in `files/fulltext/PMID20530675_Kurek2010_assets/`.
+
+**Next action:** recuperare il supplemento (`Table S8` per prima); poi Fig 4; poi risolvere il
+rif. 8. **Current status:** ⬜ aperto. **Priorità: ALTA** per `Table S8` — è ciò che rende
+quantificabile una negativa oggi affidata a una sola frase.
+
+---
+
+## ⏳ DEBITO PER PLAN — due voci distinte, non una
+
+Emerse dalla correzione `FTR-20260811-31075076-02`. **Non sono mie da chiudere**: toccano lo schema
+delle ricevute e i consumatori. Registrate qui perché una consegnata solo in un messaggio decade.
+
+**`CONSUMER_CORRECTION_RESOLUTION`** — il protocollo **stabilisce già** che i consumatori usano
+l'ultimo evento di pari profondità: **non è una semantica da decidere**, e la mia formulazione
+precedente («è proprietà di ciascun consumatore») lo dava per aperto quando è scritto. Ciò che
+resta da verificare è se **tutti** i consumatori rispettino davvero quel contratto — preferibilmente
+con un **resolver comune** e i suoi test, invece che con la regola reimplementata a ogni sito. È la
+stessa forma di `PATTERN_ALREADY_SOLVED_GATE`: la regola esiste, l'applicazione è disomogenea.
+
+**`UNRELIABLE_ANALYSIS_AT`** — e questa è più grave di come l'avevo descritta. Portare
+`analysis_time_precision` a `unknown` **ritira la falsa precisione ma non rende vero il valore**:
+`analysis_at: 2026-08-11T08:20:00Z` resta **un istante costruito**, anche dentro la ricevuta `-02`.
+Lo schema deve poter dichiarare che `analysis_at` è **inaffidabile**, oppure i consumatori devono
+**ignorarlo** quando una correzione lo invalida. Oggi non esiste modo di rappresentare
+onestamente *«questo campo è invalido, non impreciso»*.
+
+**Non invalidare la ricevuta:** lettura e identità dello studio sono valide, e
+`receipt_invalidation` è lo strumento sbagliato per un campo temporale.
+
+### E una precisazione contro me stesso
+
+Ho scritto *«nessuno dei nove difetti è stato trovato da un validatore»*. **Vero per il validatore
+attuale, e fuorviante come lo avevo formulato**: suonava come *«non sono validabili»*. Il controllo
+ha fatto esattamente ciò che dichiara — artefatto, hash, schema, citazioni — e almeno tre di quei
+difetti **possono diventare controlli automatici**: il **DOI bibliografico** confrontato con la
+reference list, lo **stato già-letto** di un riferimento verificato contro il ledger, e le
+**incoerenze interne** fra `resolved`, `queued` e `gap`. Restano materia di ispezione e review la
+**lettura dei pixel** e la **verità semantica** delle relazioni `panel_text_relation`. Una cosa è
+dire che un controllo non l'ha vista; un'altra è dire che non poteva.
