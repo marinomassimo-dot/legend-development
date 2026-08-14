@@ -260,7 +260,7 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **Journal/source:** Molecular Therapy - Methods & Clinical Development (OMTA) 2026;34 (Cell Press)
 **Identifier:** PMID 42422765 / PMCID PMC13343157 / DOI 10.1016/j.omta.2026.201791 — *Mol Ther Adv* 2026;34(3):201791. Identifier normalizzato in BATCH_20260710_A (era "da confermare"); main text full letto integralmente. Versione published del preprint bioRxiv omonimo.
 **Status:** integrated
-**Evidence depth:** full text reviewed
+**Evidence depth:** complete_fulltext_read — article and S1–S8; latest receipt `FTR-20260814-42422765-06`; strict schema-v2 manifest `deepdive_manifests/PMID42422765.json`
 **Primary pathway:** P7 — gene therapy readiness
 **Secondary pathway:** P4 / P6 indiretto
 **Model/species:** murine — Wwox-null (severo)
@@ -271,6 +271,7 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **Role:** P7 design-principle paper
 **Note:** AAV9-hSynI-hWWOX ICV neonatale; rescue dose-dependent durable su survival, ECoG/SWD, myelination, gliosis; neuron-specific targeting; full KO ≠ the reference genotype ma design principles sono trasferibili alla logica di trial-readiness. — Versione published (peer-reviewed, OMTA vol 34) del preprint bioRxiv; riferimento preprint conservato per tracciabilità. Design-principle quantitativi dai supplementari S1–S8 (BATCH_20260703 discovery): promotore SynI neuronale ottimale vs MBP/CMV; WPRE aumenta WWOX 3–16.7×/regione (trade-off dose↔sicurezza; la review PAPER 029 lo sintetizza come "WPRE removed to avoid overexpression"); espressione durevole fino a P300; neuron-specific (fegato negativo). Gap traslazionale per il genotipo di riferimento: nessun dato post-onset/età avanzata. Main-text OMTA full da recuperare (NS-019).
 🔴 **Corretto 2026-08-10 (`CC-20260810-42422765-S8`, BATCH_20260810_002) — la scorciatoia «finestra terapeutica P1–P5» è stata rimossa perché la Figura S8 non la sostiene.** Al suo posto, ciò che S8 mostra davvero: **efficacia dimostrata a più dosi postnatali precoci, P5 incluso; l'intervallo è campionato in modo incompleto per ciascun endpoint e il limite superiore oltre P5 non è stato testato.** In dettaglio, e ogni punto è una precisazione che la scorciatoia cancellava: (1) **nessuna evidenza P0 va attribuita a S8** — S8 non contiene alcun gruppo trattato a P0; (2) la sopravvivenza a **P40** include P1/P2/P3/P5 ma **non P4**; la sopravvivenza a **P300** include **solo P1 e P5**; (3) peso e glicemia a **P14** includono P1–P5, ma i test disegnati sono WT-vs-KO e WT-vs-P5 — **non esiste un confronto trattato-vs-KO**, e `ns` non è equivalenza; (4) i pannelli istologici/molecolari **E–I testano solo P5**; MBP è rappresentativa e non quantificata, e le statistiche GFAP confrontano WT-vs-KO e WT-vs-P5, non KO-vs-P5. *«P1–P5» leggeva come un intervallo continuo e validato ciò che è un insieme di punti campionati a maglie larghe, con il confronto che conta — trattato contro non trattato — mai disegnato.*
+🔴 **Completamento 2026-08-15 (`CC-20260814-42422765-01`, BATCH_20260815_001).** Articolo e supplementi S1–S8 sono ora letti integralmente. L'espressione a lungo termine resta regionalmente disomogenea e sovrafisiologica nei sopravvissuti; P300 è una coorte survivor-selected e non prova sostituzione fisiologica uniforme. In S2 le etichette del grafico indicano `n=5`, la didascalia `n=4`: entrambe le numerosità sono preservate come discrepanza.
 
 ---
 
@@ -549,7 +550,7 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **clinical relevance:** MODERATE
 **Claim links:** 009
 **Role:** foundational HIF1A metabolic anchor
-**Note:** strengthens HIF1A/Warburg framework
+**Note:** strengthens HIF1A/Warburg framework. 🔴 `BATCH_20260815_001`: lettura completa `FTR-20260814-25012504-01`. L'asse WW1/HIF1α è sostenuto in MEF con rescue, knock-down e controllo WFPA. L'endpoint in vivo è glicemia acuta a 40 minuti, non uptake/flux; i trascritti supplementari sono `GLUT1/PHD3` (n=2), non `PDK1/PHD3`; `100 mg/kg` resta una `REPORTED_DOSE_AMBIGUITY`. Digossina è validazione del bersaglio, non candidato terapeutico.
 
 ---
 
@@ -825,7 +826,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 11
 **Full title:** Modeling WWOX Loss of Function in vivo: What Have We Learned?
 **Identifier:** PMID 30370248 / DOI 10.3389/fonc.2018.00420
-**Status:** not_processed
+**Status:** promoted — see [[paper_registry_current#PAPER 067]] (`BATCH_20260815_001`)
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -1195,7 +1196,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 50
 **Full title:** Pleiotropic tumor suppressor functions of WWOX antagonize metastasis
 **Identifier:** PMID 32300104 / DOI 10.1038/s41392-020-0136-8
-**Status:** not_processed
+**Status:** promoted — see [[paper_registry_current#PAPER 068]] (`BATCH_20260815_001`)
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -1446,7 +1447,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 76
 **Full title:** Loss of tumor suppressor WWOX accelerates pancreatic cancer development through promotion of TGFbeta/BMP2 signaling
 **Identifier:** PMID 36572673 / DOI 10.1038/s41419-022-05519-9
-**Status:** not_processed
+**Status:** promoted — see [[paper_registry_current#PAPER 069]] (`BATCH_20260815_001`)
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -1466,7 +1467,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 78
 **Full title:** WWOX loss activates aerobic glycolysis
 **Identifier:** PMID 27308416 / DOI 10.4161/23723548.2014.965640
-**Status:** not_processed
+**Status:** promoted — see [[paper_registry_current#PAPER 072]] (`BATCH_20260815_001`)
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -1496,7 +1497,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 81
 **Full title:** WWOX modulates the ATR-mediated DNA damage checkpoint response
 **Identifier:** PMID 26675548 / DOI 10.18632/oncotarget.6571
-**Status:** not_processed
+**Status:** promoted — see [[paper_registry_current#PAPER 080]] (`BATCH_20260815_001`)
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -1686,7 +1687,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 102
 **Full title:** WWOX and p53 Dysregulation Synergize to Drive the Development of Osteosarcoma
 **Identifier:** PMID 27550453 / DOI 10.1158/0008-5472.CAN-16-0621
-**Status:** not_processed
+**Status:** promoted — see [[paper_registry_current#PAPER 065]] (`BATCH_20260815_001`)
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -2147,7 +2148,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 152
 **Full title:** Tumor Suppressor WWOX inhibits osteosarcoma metastasis by modulating RUNX2 function
 **Identifier:** PMID 26256646 / DOI 10.1038/srep12959
-**Status:** not_processed
+**Status:** promoted — see [[paper_registry_current#PAPER 074]] (`BATCH_20260815_001`)
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -2257,7 +2258,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 164
 **Full title:** Somatic loss of WWOX is associated with TP53 perturbation in basal-like breast cancer
 **Identifier:** PMID 30082886 / DOI 10.1038/s41419-018-0896-z
-**Status:** not_processed
+**Status:** promoted — see [[paper_registry_current#PAPER 066]] (`BATCH_20260815_001`)
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -2934,7 +2935,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** J Cell Physiol
 **Identifier:** PMID 23254685 / PMC3943428 / DOI 10.1002/jcp.24308
 **Tier (FASE 1):** B
-**Status:** screened — corpus placeholder
+**Status:** promoted — see [[paper_registry_current#PAPER 075]] (`BATCH_20260815_001`)
 **LIT link:** LIT-0242
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Model/species:** mouse
@@ -3714,7 +3715,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** Cancer Res
 **Identifier:** PMID 17575124 / PMC2621009 / DOI 10.1158/0008-5472.CAN-07-1081
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** promoted — see [[paper_registry_current#PAPER 077]] (`BATCH_20260815_001`)
 **LIT link:** LIT-0282
 **Primary pathway:** P6 — DDR / genome stability
 **Model/species:** mouse
@@ -3754,7 +3755,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** Cell Death Dis
 **Identifier:** PMID 23370280 / PMC3564006 / DOI 10.1038/cddis.2013.6
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** promoted — see [[paper_registry_current#PAPER 079]] (`BATCH_20260815_001`)
 **LIT link:** LIT-0284
 **Primary pathway:** oncology / tumor suppressor biology
 **Model/species:** not assessed in triage
@@ -4735,7 +4736,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** Exp Biol Med (Maywood)
 **Identifier:** PMID 25491415 / PMC4935230 / DOI 10.1177/1535370214561956
 **Tier (FASE 1):** B
-**Status:** screened — corpus placeholder
+**Status:** promoted — see [[paper_registry_current#PAPER 073]] (`BATCH_20260815_001`)
 **LIT link:** LIT-0333
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Model/species:** mouse
@@ -5235,7 +5236,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** Hum Mol Genet
 **Identifier:** PMID 21075834 / PMC3016910 / DOI 10.1093/hmg/ddq495
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** promoted — see [[paper_registry_current#PAPER 071]] (`BATCH_20260815_001`)
 **LIT link:** LIT-0358
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Model/species:** Drosophila
@@ -6175,7 +6176,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Journal/source:** *EMBO Mol Med* 2021;13(8):e13610
 **Identifier:** PMID 34268881 / PMCID PMC8350905 / DOI 10.15252/emmm.202013610
 **Status:** claim_linked
-**Evidence depth:** full text reviewed (coverage_status: complete_fulltext_read; Expanded-View raw tables non incluse)
+**Evidence depth:** partial_fulltext_read — `FTR-20260814-34268881-03`; articolo, 11/11 figure e tutti gli otto supplementi depositati letti, ma Appendix Figures S1–S6 sono assenti dal pacchetto ufficiale
 **Primary pathway:** P1 — network hyperexcitability / E-I balance
 **Secondary pathway:** P5 — metabolism (OXPHOS↓/glycolysis↑); P3 — Wnt; DDR
 **Model/species:** human cerebral & forebrain organoids; WiBR3 hESC WWOX-KO; patient iPSC (WSM c.517-2A>G WOREE; WPM G372R SCAR12); W-AAV / lenti-WWOX rescue
@@ -6184,7 +6185,7 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **clinical relevance:** HIGH — piattaforma umana + il controllo negativo (G372R) necessario a testare il rescue proteostatico
 **Claim links:** 002, 030, 032
 **Role:** primary source for CLAIM 002 extension; provides the human bench for HYP-08
-**Note:** Promosso in BATCH_20260710_A da [[paper_registry_current#CORPUS P365]] (Tier A, priorità HIGH, mai deep-dived). Findings: **GABA depolarizzante** — GAD67/GAD1/GAD2 ↑, VGLUT1 invariato, GABRB2/3 ↓; neuroni da paziente WOREE scaricano a ~4× la frequenza dei genitori (P<0.0001), **normalizzata dal rescue W-AAV (P=0.77)**. LFP: potenza ↑ in banda 0.25–1 Hz; iperreccitabilità sotto 4-aminopiridina 100 µM. DDR: γH2AX 1.5 (KO) vs 0.78 (WT) vs 0.58 (W-AAV); checkpoint apoptotico perso. Wnt cronicamente attivo (β-catenina nucleare ~1.7×). RNA-seq (GEO **GSE156243**): **OXPHOS/ATP-synthesis ↓, glicolisi ↑** → fenotipo Warburg in **tessuto neurale umano**; autofagia (RB1CC1/FIP200) e mTOR/EIF4EBP1 ↓. Discussione: la severità potrebbe correlare con i **livelli funzionali** di WWOX, non con quelli totali (G372R mostra proteina quasi assente all'IF ma fenotipo lieve). ⚠️ **Vincolo BLOCCO 1:** il rescue W-AAV era **supra-fisiologico e in tutte le popolazioni cellulari**, con recupero **solo parziale**; gli autori richiamano *"population-targeted delivery and fine-tuning of expression levels"*. **Né troppo poco né troppo WWOX.** Lead terapeutico non ancora forgiato: **bumetanide/NKCC1** (correzione del GABA depolarizzante) — da safety-triage. ⚠️ La microcefalia **non** è ricapitolata negli organoidi.
+**Note:** Promosso in BATCH_20260710_A da [[paper_registry_current#CORPUS P365]]. 🔴 Corretto in `BATCH_20260815_001`: il paper misura marker GABAergici, componenti recettoriali e ipereccitabilità, **non** inversione del cloro, NKCC1/KCC2, risposta al GABA o farmacologia GABA; “GABA depolarizzante” è quindi ipotesi meccanicistica, non dato. Il rescue W-AAV è ubiquitario, sovrafisiologico e parziale. RNA-seq effettivo `n=2 WT` contro `n=4 KO` dopo due esclusioni; EV1/EV2 usa selezione raw-`P<0.01`, distinta dalla significatività aggiustata. La firma OXPHOS/glicolisi è bulk transcriptomics confondibile da maturazione, identità regionale e composizione, non flusso. Cinque simboli corrotti dall'auto-date Excel sono annotati: SEPT7, SEPT5, MARCH7, MARCH2, MARCH8. Le Appendix Figures S1–S6 restano l'unico debito.
 **Wikilinks:** [[claim_registry_current#CLAIM 002]] · [[claim_registry_current#CLAIM 030]] · [[claim_registry_current#CLAIM 032]]
 
 ---
@@ -6635,3 +6636,188 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Role:** promosso da `CORPUS-STUB-003` (BATCH_20260810_005) via `CC-20260810-34831305-01`; il placeholder è conservato append-only.
 **Note:** 🔴 **Il valore è che il gruppo primario del gene mette più sistemi-modello su una sola mappa causale; il limite è che la lettura non può ereditare lo statuto `DATO` dei primari solo perché li enumera.** Reperti di superficie: sono nominate quattro delezioni cell-targeted (Nestin-Cre, Synapsin-I-Cre, GFAP-Cre, Olig2-Cre) e **solo Nestin e Synapsin ricapitolano il fenotipo null** nell'intervallo riportato; l'accoppiamento neurone→oligodendrocita è riassunto come **difetto di maturazione** (OL maturi ↓, OPC ↑, mielinizzazione ↓); è distinto un compartimento umano **assente o poco sviluppato nei roditori** (glia radiale esterna / oSVZ) mentre WWOX precoce negli organoidi si concentra nella glia radiale ventricolare; l'arricchimento trascrizionale negli organoidi WWOX-KO (trasporto elettronico ATP-linked, OXPHOS, glicolisi/gluconeogenesi, ciclo cellulare, regionalizzazione Wnt) è **programma di espressione, non misura di flusso**. 🔴 **Tre tensioni registrate, non appianate.** (1) *Inflazione di sintesi:* la review descrive il litio come soppressore delle crisi da PTZ **nel contesto KO**; l'audit d'immagine già persistito del primario PMID 32000863 mostra la soppressione nei pannelli **WT, eterozigote e KO** — quindi **non può sostenere un rescue farmacologico WWOX-specifico** (vedi [[claim_registry_current#CLAIM 016]]). (2) *«Efficient and safe» eccede l'evidenza:* non ci sono dati umani né esperimenti formali di sicurezza in questa fonte; è un'ipotesi di design preclinico. (3) *Compressione dei modelli:* Tabella 1 e Figura 2 collassano ceppi distinti, modelli cell-targeted e bracci negativi, il che migliora la leggibilità e oscura **quale modello sostenga quale affermazione causale**. ⚠️ Debito: figure servite dalla CDN PMC a 757×434 e 772×550 contro originali dichiarati nell'XML di 4542×2601 e 4248×3026 — **artefatti scalati**, ispezionati ai pixel nativi perché leggibili; le rotte `/bin/` e il pacchetto OA hanno restituito HTTP 404. **Assenza del supplementary dedotta** dalla struttura XML completa, non da una dichiarazione dell'editore.
 **Wikilinks:** [[paper_registry_current#CORPUS-STUB-003]] · [[paper_registry_current#PAPER 004]] · [[paper_registry_current#PAPER 005]] · [[claim_registry_current#CLAIM 003]] · [[claim_registry_current#CLAIM 004]] · [[claim_registry_current#CLAIM 016]] · [[full_text_queue_current#FT-049]] · [[literature_tracking_log_current#LIT-0030]]
+
+---
+
+## PAPER 064
+**Short title:** Drusco 2011 — common-fragile-site mouse-model review
+**Full title:** Common Fragile Site Tumor Suppressor Genes and Corresponding Mouse Models of Cancer
+**Identifier:** PMID 21318118 / PMCID PMC3035048 / DOI 10.1155/2011/984505
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-21318118-01`; manifest `deepdive_manifests/PMID21318118.json`
+**Source type:** narrative review; background, not independent primary evidence
+**Transferability:** T3
+**Claim links:** none
+**Note:** Preserves the 2011 review-level tension that global-null mice had no reported abnormal behaviour or motor impairment; its proposed compound chemical-challenge model was not tested. Figure 1 contains no WWOX panel.
+
+## PAPER 065
+**Short title:** WWOX/p53 cooperation in osteosarcoma lineage
+**Full title:** WWOX and p53 Dysregulation Synergize to Drive the Development of Osteosarcoma
+**Identifier:** PMID 27550453 / DOI 10.1158/0008-5472.CAN-16-0621
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-27550453-01`; manifest `deepdive_manifests/PMID27550453.json`
+**Source type:** primary mouse genetics
+**Transferability:** T3; oncology and lineage context
+**Claim links:** 032
+**Note:** Wwox loss impairs differentiation without producing osteosarcoma alone; Wwox/p53 double loss accelerates tumour formation in early Osx1-lineage cells but not mature Oc-lineage cells. Table S6 cytogenetics and p53-IHC classification remain explicit limitations.
+
+## PAPER 066
+**Short title:** Somatic WWOX/TP53 cooperation in basal-like breast cancer
+**Full title:** Somatic loss of WWOX is associated with TP53 perturbation in basal-like breast cancer
+**Identifier:** PMID 30082886 / DOI 10.1038/s41419-018-0896-z
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-30082886-01`; manifest `deepdive_manifests/PMID30082886.json`
+**Source type:** primary mouse/cell/human-cohort study
+**Transferability:** T3
+**Claim links:** 032
+**Note:** Supports context-dependent WWOX–p53 cooperation. Mouse comparisons are background-confounded; human deletion groups are small and no pairwise double-versus-TP53-only survival test establishes common co-occurrence.
+
+## PAPER 067
+**Short title:** Abdeen 2018 — in-vivo WWOX model review
+**Full title:** Modeling WWOX Loss of Function in vivo: What Have We Learned?
+**Identifier:** PMID 30370248 / DOI 10.3389/fonc.2018.00420
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-30370248-01`; manifest `deepdive_manifests/PMID30370248.json`
+**Source type:** narrative review; secondary evidence
+**Transferability:** background only
+**Claim links:** none
+**Note:** Used as a historical model map, not replication. It miscites a human SCAR12 paper for rodent seizures and pools species in its figure; primary mouse/rat readings control the interpretation.
+
+## PAPER 068
+**Short title:** WWOX antagonizes metastasis through context-dependent axes
+**Full title:** Pleiotropic tumor suppressor functions of WWOX antagonize metastasis
+**Identifier:** PMID 32300104 / DOI 10.1038/s41392-020-0136-8
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-32300104-01`; manifest `deepdive_manifests/PMID32300104.json`
+**Source type:** primary cell/xenograft study
+**Transferability:** T3
+**Claim links:** none
+**Note:** Directly supports miR-146a targeting of SMAD3 3′UTR with partial anti-miR rescue and contextually replicates WWOX–DVL2 association. Computational targets and denominator-sensitive supplementary analyses are not promoted as validated therapeutic evidence.
+
+## PAPER 069
+**Short title:** WWOX/KRAS cooperation in pancreatic cancer
+**Full title:** Loss of tumor suppressor WWOX accelerates pancreatic cancer development through promotion of TGFβ/BMP2 signaling
+**Identifier:** PMID 36572673 / DOI 10.1038/s41419-022-05519-9
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-36572673-01`; manifest `deepdive_manifests/PMID36572673.json`
+**Source type:** primary conditional-mouse and acinar-cell study
+**Transferability:** T3
+**Claim links:** 032
+**Note:** Acinar Wwox loss alone has no detected phenotype; with KrasG12D it accelerates ADM/PanIN and PDAC. Culture supports a cell-autonomous component, not autonomous sufficiency; TGFβ/BMP inhibition remains future work.
+
+## PAPER 070
+**Short title:** WWOX/p53 cooperation in cutaneous SCC
+**Full title:** WWOX loss cooperates with p53 deficiency to drive cutaneous squamous cell carcinoma through destabilization of p63
+**Identifier:** PMID 41984841 / PMCID PMC13099603 / DOI 10.1073/pnas.2534844123
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-41984841-01`; manifest `deepdive_manifests/PMID41984841.json`
+**Source type:** primary conditional mouse/cell/human-tissue study
+**Transferability:** T3
+**Claim links:** 032
+**Note:** Wwox loss cooperates with p53 deficiency but is insufficient alone in this model. The WWOX–p63 axis is supported; the proposed direct ITCH/proteasomal stabilization of WWOX is superseded by PAPER 079's substrate-resolved reading. ChIP-seq n=1, nonphysiological rescue and outcome-model limits remain attached.
+
+## PAPER 071
+**Short title:** Wwox–Idh/Sod redox genetics in Drosophila
+**Full title:** WWOX, the chromosomal fragile site FRA16D spanning gene, has a role in cell metabolism
+**Identifier:** PMID 21075834 / PMCID PMC3016910 / DOI 10.1093/hmg/ddq495
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-21075834-01`; manifest `deepdive_manifests/PMID21075834.json`
+**Source type:** primary fly genetics plus HEK293 experiment
+**Transferability:** T3
+**Claim links:** 009 (counter-directional) · 034 (context dependence)
+**Note:** Thresholded CM-H2DCFDA, Wwox×Idh and Wwox×Sod interactions support a redox-metabolic resilience network, not a universal deficiency→ROS direction or a treatment recommendation. No metabolic flux was measured.
+
+## PAPER 072
+**Short title:** Abu-Remaileh 2014 — glycolysis commentary
+**Full title:** WWOX loss activates aerobic glycolysis
+**Identifier:** PMID 27308416 / DOI 10.4161/23723548.2014.965640
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-27308416-01`; manifest `deepdive_manifests/PMID27308416.json`
+**Source type:** commentary on PAPER 024; no independent experimental cohort
+**Transferability:** background only
+**Claim links:** 009 as interpretation, not replication
+**Note:** Its metabolic observations transmit PMID 25012504 and must not be counted as a second core paper.
+
+## PAPER 073
+**Short title:** Aqeilan 2015 — WWOX biology review
+**Identifier:** PMID 25491415 / PMCID PMC4935230 / DOI 10.1177/1535370214561956
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-25491415-01`; manifest `deepdive_manifests/PMID25491415.json`
+**Source type:** review; secondary evidence
+**Transferability:** background only
+**Claim links:** none
+**Note:** Carries an internally reversed HIF1α/glucose formulation and a questionable transmission of Drosophila ROS; neither is promoted as a new datum.
+
+## PAPER 074
+**Short title:** WWOX rescue suppresses osteosarcoma metastasis
+**Full title:** Tumor Suppressor WWOX inhibits osteosarcoma metastasis by modulating RUNX2 function
+**Identifier:** PMID 26256646 / DOI 10.1038/srep12959
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-26256646-01`; manifest `deepdive_manifests/PMID26256646.json`
+**Source type:** primary rescue-model study
+**Transferability:** T3
+**Claim links:** 032
+**Note:** WWOX re-expression suppresses migration, invasion and lung metastasis. RUNX2 mediation remains inference because direct perturbation, occupancy, reporter and interaction tests are absent; small and unequal mouse arms remain attached.
+
+## PAPER 075
+**Short title:** Conditional Wwox allele and systemic-null phenotype
+**Identifier:** PMID 23254685 / PMCID PMC3943428 / DOI 10.1002/jcp.24308
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-23254685-01`; manifest `deepdive_manifests/PMID23254685.json`
+**Source type:** primary mouse genetics
+**Transferability:** T3
+**Claim links:** 036
+**Note:** Germline deletion recreates systemic collapse and osteopenia. Rare malignant-appearing osteoblasts lack an incidence denominator and do not settle the cross-study osteosarcoma conflict.
+
+## PAPER 076
+**Short title:** Wwox loss and impaired steroidogenesis
+**Full title:** Targeted ablation of the WW domain-containing oxidoreductase tumor suppressor leads to impaired steroidogenesis
+**Identifier:** PMID 18974271 / PMCID PMC2654736 / DOI 10.1210/en.2008-1087
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-18974271-01`; manifest `deepdive_manifests/PMID18974271.json`
+**Source type:** primary systemic-null mouse study
+**Transferability:** T3
+**Claim links:** 036
+**Note:** The endocrine phenotype is measured, but gonadal autonomy cannot be separated from pituitary suppression, developmental delay and terminal systemic illness.
+
+## PAPER 077
+**Short title:** Wwox heterozygosity and NMBA tumour susceptibility
+**Identifier:** PMID 17575124 / PMCID PMC2621009 / DOI 10.1158/0008-5472.CAN-07-1081
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-17575124-01`; manifest `deepdive_manifests/PMID17575124.json`
+**Source type:** primary carcinogen-challenge mouse study
+**Transferability:** T3
+**Claim links:** 032
+**Note:** Adult heterozygotes can be unremarkable without challenge yet show strong NMBA-dependent susceptibility. Protein positivity in tumours does not prove integrity of the residual allele.
+
+## PAPER 078
+**Short title:** Targeted deletion of Wwox
+**Full title:** Targeted deletion of Wwox reveals a tumor suppressor function
+**Identifier:** PMID 17360458 / PMCID PMC1820689 / DOI 10.1073/pnas.0609783104
+**Status:** processed
+**Evidence depth:** complete_fulltext_read with inaccessible SI Figure 4 gap — `FTR-20260811-17360458-01`; manifest `deepdive_manifests/PMID17360458.json`
+**Source type:** primary mouse genetics
+**Transferability:** T3
+**Claim links:** 032 · 036
+**Note:** Establishes complete pre-weaning mortality and carcinogen-sensitive heterozygous tumour susceptibility. The 4/13 morphology-only juvenile bone-lesion finding conflicts with 0/9 by multimodal examination in PAPER 057 and remains unsettled.
+
+## PAPER 079
+**Short title:** WWOX competes with ITCH for ΔNp63α
+**Identifier:** PMID 23370280 / PMCID PMC3564006 / DOI 10.1038/cddis.2013.6
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260814-23370280-02`; manifest `deepdive_manifests/PMID23370280.json`
+**Source type:** primary transformed-cell mechanistic study
+**Transferability:** T3
+**Claim links:** none
+**Note:** WWOX competes with ITCH for ΔNp63α, reducing substrate ubiquitination/turnover and raising ΔNp63α half-life while cytoplasmic sequestration lowers transcriptional activity. It does not show ITCH stabilizing WWOX; that separate mechanism belongs to PMID 24550385.
+
+## PAPER 080
+**Short title:** WWOX supports the ATR checkpoint response
+**Full title:** WWOX modulates the ATR-mediated DNA damage checkpoint response
+**Identifier:** PMID 26675548 / DOI 10.18632/oncotarget.6571
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260814-26675548-02`; manifest `deepdive_manifests/PMID26675548.json`
+**Source type:** primary cultured-cell mechanistic study
+**Transferability:** T3
+**Claim links:** none
+**Note:** WWOX loss associates with weaker p-CHK1, defective G2/M arrest and more APH-associated breaks; wild-type rescue improves the break phenotype. The ATM→ITCH→K63-WWOX→ATR chain remains composite, and the APH dose conflict (0.2 mM versus 0.2 μM) is preserved.

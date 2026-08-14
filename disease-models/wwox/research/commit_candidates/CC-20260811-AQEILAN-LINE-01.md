@@ -2,7 +2,7 @@
 
 **Candidate ID:** CC-20260811-AQEILAN-LINE-01
 
-**Status:** queued; no canonical scientific file modified
+**Status:** committed — `BATCH_20260815_001`
 
 **Receipts:** FTR-20260811-27308416-01 · FTR-20260811-25491415-01 · FTR-20260811-26256646-01
 

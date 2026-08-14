@@ -1424,11 +1424,11 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 30370248 / DOI 10.3389/fonc.2018.00420
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-10
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 11
-**Status:** discovered
+**Status:** completed — [[paper_registry_current#PAPER 067]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -2404,11 +2404,11 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 32300104 / DOI 10.1038/s41392-020-0136-8
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-10
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 50
-**Status:** discovered
+**Status:** completed — [[paper_registry_current#PAPER 068]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -3079,11 +3079,11 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 36572673 / DOI 10.1038/s41419-022-05519-9
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-10
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 76
-**Status:** discovered
+**Status:** completed — [[paper_registry_current#PAPER 069]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -3133,11 +3133,11 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 27308416 / DOI 10.4161/23723548.2014.965640
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-11
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 78
-**Status:** discovered
+**Status:** completed — [[paper_registry_current#PAPER 072]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -3214,11 +3214,11 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 26675548 / DOI 10.18632/oncotarget.6571
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-14
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 81
-**Status:** discovered
+**Status:** completed — [[paper_registry_current#PAPER 080]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -3731,11 +3731,11 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 27550453 / DOI 10.1158/0008-5472.CAN-16-0621
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-10
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 102
-**Status:** discovered
+**Status:** completed — [[paper_registry_current#PAPER 065]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -4975,11 +4975,11 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 26256646 / DOI 10.1038/srep12959
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-11
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 152
-**Status:** discovered
+**Status:** completed — [[paper_registry_current#PAPER 074]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -5272,11 +5272,11 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 30082886 / DOI 10.1038/s41419-018-0896-z
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-08-10
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 164
-**Status:** discovered
+**Status:** completed — [[paper_registry_current#PAPER 066]] (`BATCH_20260815_001`)
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -6494,7 +6494,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 23254685 / PMC3943428 / DOI 10.1002/jcp.24308
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-08-11
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -6503,7 +6503,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** in — standard
 **Tier:** B
-**Status:** screened
+**Status:** completed — [[paper_registry_current#PAPER 075]] (`BATCH_20260815_001`)
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** mouse
@@ -7820,7 +7820,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 17575124 / PMC2621009 / DOI 10.1158/0008-5472.CAN-07-1081
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-08-11
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -7829,7 +7829,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** completed — [[paper_registry_current#PAPER 077]] (`BATCH_20260815_001`)
 **Primary pathway:** P6 — DDR / genome stability
 **Genotype/model tag:** unassigned in triage
 **Species:** mouse
@@ -7888,7 +7888,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 23370280 / PMC3564006 / DOI 10.1038/cddis.2013.6
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-08-14
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -7897,7 +7897,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** completed — [[paper_registry_current#PAPER 079]] (`BATCH_20260815_001`)
 **Primary pathway:** oncology / tumor suppressor biology
 **Genotype/model tag:** unassigned in triage
 **Species:** not assessed in triage
@@ -9555,7 +9555,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 25491415 / PMC4935230 / DOI 10.1177/1535370214561956
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-08-11
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -9564,7 +9564,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** in — standard
 **Tier:** B
-**Status:** screened
+**Status:** completed — [[paper_registry_current#PAPER 073]] (`BATCH_20260815_001`)
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** mouse
@@ -10405,7 +10405,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 21075834 / PMC3016910 / DOI 10.1093/hmg/ddq495
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-08-11
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -10414,7 +10414,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** completed — [[paper_registry_current#PAPER 071]] (`BATCH_20260815_001`)
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** Drosophila
@@ -12043,3 +12043,37 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 - CC-001 proponeva voci di ledger con uno schema di ID inesistente in questo repository (`DISC-2026-07-26-A/B/C`, `DISM-2026-07-26-A`). Le voci erano **già atterrate** con lo schema corretto (`DL-MECH-061`, `DIS-008`) prima del commit: i wikilink dei claim puntano agli ID reali, non a quelli proposti.
 
 **Debito dichiarato e non pagato:** PMID 28123895 (C1q → attivazione WWOX, coda HIGH) · PMID 21444760 (Wwox/HDL da QTL murino, coda MEDIUM) · riferimenti 38/39 di PMID 34214506 non risolti a PMID · [[full_text_queue_current#FT-022]]–[[full_text_queue_current#FT-025]] dall'espansione multi-hop di PMID 22193544.
+
+---
+
+## LIT-0406
+**Short title:** Drusco 2011 fragile-site mouse-model review
+**Identifier:** PMID 21318118 / PMCID PMC3035048 / DOI 10.1155/2011/984505
+**Date processed:** 2026-08-10
+**Status:** completed — [[paper_registry_current#PAPER 064]] (`BATCH_20260815_001`)
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-21318118-01`
+**Claim links:** none
+
+## LIT-0407
+**Short title:** Bidany-Mizrahi 2026 WWOX/p53 cutaneous SCC
+**Identifier:** PMID 41984841 / PMCID PMC13099603 / DOI 10.1073/pnas.2534844123
+**Date processed:** 2026-08-10
+**Status:** completed — [[paper_registry_current#PAPER 070]] (`BATCH_20260815_001`)
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-41984841-01`
+**Claim links:** CLAIM 032
+
+## LIT-0408
+**Short title:** Aqeilan 2009 impaired steroidogenesis
+**Identifier:** PMID 18974271 / PMCID PMC2654736 / DOI 10.1210/en.2008-1087
+**Date processed:** 2026-08-11
+**Status:** completed — [[paper_registry_current#PAPER 076]] (`BATCH_20260815_001`)
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-18974271-01`
+**Claim links:** CLAIM 036
+
+## LIT-0409
+**Short title:** Aqeilan 2007 targeted Wwox deletion
+**Identifier:** PMID 17360458 / PMCID PMC1820689 / DOI 10.1073/pnas.0609783104
+**Date processed:** 2026-08-11
+**Status:** completed — [[paper_registry_current#PAPER 078]] (`BATCH_20260815_001`)
+**Evidence depth:** complete_fulltext_read with declared SI gap — `FTR-20260811-17360458-01`
+**Claim links:** CLAIM 032 · CLAIM 036

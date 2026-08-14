@@ -21,23 +21,23 @@ the whole known corpus, not the part already processed.
 
 | Depth | Records | Share | What it means |
 |---|---:|---:|---|
-| **Full text depth** | 58 | 14% | complete receipt or legacy registry declaration; trace split below |
-| Partial full text | 10 | 2% | some sections read; explicitly declared incomplete |
+| **Full text depth** | 61 | 14% | complete receipt or legacy registry declaration; trace split below |
+| Partial full text | 11 | 3% | some sections read; explicitly declared incomplete |
 | Abstract / screened | 13 | 3% | classified from metadata and abstract; no full text read |
-| Catalogued only | 325 | 79% | known, deduplicated, never analytically processed — **the debt** |
+| Catalogued only | 338 | 79% | known, deduplicated, never analytically processed — **the debt** |
 | Filtered / superseded | 3 | 1% | explicitly set aside, with the reason preserved |
 
-- **53** promoted `PAPER` records · **356** `CORPUS` placeholders
-- **386** lifecycle entries in the literature tracking log
-- **378** unique PMIDs known across the registries
+- **70** promoted `PAPER` records · **356** `CORPUS` placeholders
+- **390** lifecycle entries in the literature tracking log
+- **381** unique PMIDs known across the registries
 
 ## Receipt trace
 
 - Authoritative ledger: `disease-models/wwox/registries/fulltext_read_receipts.jsonl`
 - **128** append-only events: **105** contemporaneous · **22** conservative legacy reconstructions
-- **42** registry records have a persisted `complete_fulltext_read` receipt
-- **16** records still rely on a historical registry full-text declaration without a surviving complete coverage receipt
-- **17** receipt event(s) do not yet map to a registry record
+- **46** registry records have a persisted `complete_fulltext_read` receipt
+- **15** records still rely on a historical registry full-text declaration without a surviving complete coverage receipt
+- **13** receipt event(s) do not yet map to a registry record
 
 A full-text marker in the registry is preserved as historical state, but it is not
 retroactively converted into a complete receipt. Only a contemporaneous or adequately

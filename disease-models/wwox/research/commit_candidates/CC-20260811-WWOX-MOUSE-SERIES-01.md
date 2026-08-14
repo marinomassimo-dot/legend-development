@@ -1,6 +1,7 @@
 # Commit candidate — Wwox mouse series
 
 **Candidate:** `CC-20260811-WWOX-MOUSE-SERIES-01`  
+**Status:** committed — `BATCH_20260815_001`
 **Scope:** PMID 23254685, 18974271, 17575124, 17360458  
 **Authority:** evidence package only; no canonical scientific file changed. Promotion remains an operator `BATCH_COMMIT`.
 
@@ -32,4 +33,3 @@
 - No therapeutic hypothesis is created.
 - The two UNTRUSTWORTHY PDFs are not evidence surfaces.
 - SI Figure 4 of PMID 17360458 remains an explicit inaccessible figure gap.
-

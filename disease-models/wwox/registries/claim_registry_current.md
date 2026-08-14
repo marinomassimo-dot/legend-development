@@ -178,6 +178,7 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 **Wikilinks:** [[paper_registry_current#PAPER 002]] · [[paper_registry_current#PAPER 023]] (Baryła 2022) · [[paper_registry_current#PAPER 017]] (Chong) · [[paper_registry_current#PAPER 054]] · [[paper_registry_current#PAPER 061]] (AbuRemaileh 2019) · [[claim_registry_current#CLAIM 034]] — Baryła 2025 non ancora in registry
 🔴 **Aggiunto 2026-08-10 (`CC-20260810-30755385`, BATCH_20260810_003): [[paper_registry_current#PAPER 061]] come evidenza a sostegno, con due confini espliciti.** La perdita di WWOX nel **muscolo scheletrico** è *sufficiente* a produrre fenotipi metabolici locali e sistemici — il che rafforza la claim ma **non la trasferisce al CNS**: il modello è un KO condizionale muscolare, non un allele WWOX-DEE. Secondo confine, più stretto: fra le misure del paper **non c'è l'ossidazione mitocondriale del glucosio** (nessuna respirometria, nessun saggio di flusso), che fino a oggi [[meta_metabolism_current]] elencava come `DATO`. La claim resta `INFERENZA` e il suo `Type` non cambia. **Condizione per stringere:** flusso ex-vivo su fibre primarie o rescue muscolo-specifico.
 **Impact on Working Model:** rationale support, not BLOCCO 1 upgrade yet
+🔴 **BATCH_20260815_001:** [[paper_registry_current#PAPER 071]] adds a second counter-directional primary system: fly Wwox loss lowers, and overexpression raises, thresholded CM-H2DCFDA fluorescence, with Wwox×Idh and Wwox×Sod genetic interactions. This strengthens the claim's context-dependent redox boundary and does not license a monotonic direction or intervention.
 
 ---
 
@@ -209,8 +210,9 @@ Canonical audit trail of numbered claims relevant to the Working Model.
 **Clinical meaning:** P7 matures from proof-of-concept to design-principle stage. Non cambia pratica immediata per il genotipo di riferimento. Rafforza trial-readiness logic e argomento per partial restoration (anche restore parziale è atteso benefico secondo Gao 2025).
 **Source:** Obeid, Aqeilan et al. 2026, Molecular Therapy - Methods & Clinical Development (OMTA) vol 34 (peer-reviewed; versione published del preprint bioRxiv precedente — contenuto "dose-dependent durable rescue" identico nelle due versioni)
 **Wikilinks:** [[paper_registry_current#PAPER 011]]
-**Full text status:** reviewed
+**Full text status:** complete article plus S1–S8 — latest receipt `FTR-20260814-42422765-06`
 **Impact on Working Model:** BLOCCO 2 integrated; gene therapy context section updated in BLOCCO 1
+🔴 **BATCH_20260815_001 boundary:** long-term W-AAV expression is regionally uneven and supraphysiological in surviving animals; P300 observations are survivor-selected and do not establish physiological replacement across CNS cell types. S2 reports `n=5` on graph labels and `n=4` in its caption.
 
 ---
 
@@ -580,6 +582,7 @@ If comparable studies conflict:
 **Source:** [[paper_registry_current#PAPER 053]] (Aldaz 2014 — *"haploinsufficiency appears not to be deleterious"*; *"lifespan indistinguishable from WT mice"*) · [[paper_registry_current#PAPER 021]] (Tochigi 2019 — ratti `+/lde`: banda di peso normale a **metà** intensità, IHC corticale normale) · [[paper_registry_current#PAPER 043]] (Abdel-Salam 2014 — *"no tumors were observed in the patient or **heterozygous mutation carriers**"*) · [[paper_registry_current#PAPER 045]] e [[paper_registry_current#PAPER 049]] (genitori portatori eterozigoti sani) · [[paper_registry_current#PAPER 042]] (idem)
 **Wikilinks:** [[paper_registry_current#PAPER 053]] · [[paper_registry_current#PAPER 021]] · [[paper_registry_current#PAPER 043]] · [[paper_registry_current#PAPER 045]] · [[paper_registry_current#PAPER 049]] · [[paper_registry_current#PAPER 042]] · [[claim_registry_current#CLAIM 019]] · [[claim_registry_current#CLAIM 031]] · [[therapeutic_strategies_current#TX-007 — AAV9-WWOX gene therapy (gene addition) — the north-star, now FIRST-IN-HUMAN ⭐|TX-007]]
 **Impact on Working Model:** abbassa la soglia di efficacia richiesta a tutte le leve di ripristino; **da riflettere in TX-003 e TX-007**. Nessun cambio BLOCCO 1.
+🔴 **BATCH_20260815_001 qualification:** [[paper_registry_current#PAPER 077]] and [[paper_registry_current#PAPER 078]] show that adult heterozygotes can be unremarkable in unchallenged assays yet strongly tumour-susceptible after NMBA or ENU. This is genotype×stress interaction, not proof that untreated heterozygotes phenocopy biallelic disease; tumour protein positivity does not establish an intact residual allele.
 
 ---
 
@@ -618,6 +621,7 @@ If comparable studies conflict:
 **Source:** [[paper_registry_current#PAPER 054]] (Saadane 2021)
 **Wikilinks:** [[paper_registry_current#PAPER 054]] · [[claim_registry_current#CLAIM 028]] · [[claim_registry_current#CLAIM 009]] · [[dismissal_ledger_current#DIS-008 — «La calpaina è una via di degradazione/turnover per WWOX» → ⏸️ **NON STABILITA (rigettata come affermazione, non come possibilità)**]]
 **Impact on Working Model:** nessun cambio BLOCCO 1. Obbliga CLAIM 009 a portare una nota controdirezionale esplicita.
+🔴 **BATCH_20260815_001:** [[paper_registry_current#PAPER 071]] independently supports the context-dependence principle through Wwox×Idh/Sod genetics and a counter-directional ROS readout; it does not broaden the neuron-specific title or its T3 boundary.
 
 ---
 
@@ -651,6 +655,7 @@ If comparable studies conflict:
 **Source:** [[paper_registry_current#PAPER 057]] (Ludes-Meyers 2009, PMID 19936220; full text read 2026-08-06, receipt `FTR-20260806-19936220-01`)
 **Wikilinks:** [[paper_registry_current#PAPER 057]] · [[claim_registry_current#CLAIM 005]] · [[claim_registry_current#CLAIM 038]]
 **Impact on Working Model:** nessun cambio BLOCCO 1. Aggiunge un vincolo di disegno trasversale: i null sistemici nella finestra P14–P18 non separano cell-autonomo da sistemico.
+🔴 **BATCH_20260815_001 qualification:** [[paper_registry_current#PAPER 075]], [[paper_registry_current#PAPER 076]] and [[paper_registry_current#PAPER 078]] reproduce early systemic collapse with bone/endocrine abnormalities but do not separate local autonomy from pituitary input, developmental delay or terminal metabolic illness. Juvenile osteosarcoma remains conflicting: 4/13 morphology-positive in PAPER 078, rare malignant-appearing cells without denominator in PAPER 075, and 0/9 by multimodal examination in PAPER 057.
 
 ---
 

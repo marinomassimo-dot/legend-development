@@ -47,7 +47,7 @@
     "queries": [
       {
         "query": "Unique PMID records matching p63 or ΔNp63 in the local 2026-08-06 WWOX PubMed corpus",
-        "route": "jq audit of files/corpus/wwox_20260806.jsonl on 2026-08-14",
+        "route": "jq audit of the gitignored 2026-08-06 NOT_EVIDENCE bibliography census on 2026-08-14; used only for field-density triage, never as a reading surface or locator",
         "count": 2
       }
     ],
