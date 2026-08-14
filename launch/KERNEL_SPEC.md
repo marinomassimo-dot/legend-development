@@ -220,6 +220,26 @@ outcome.
 > apart. **No corrective is designed here.** The constraint is recorded so that the next probe
 > is designed to discriminate the two classes rather than to collide with them.
 
+> 🔴 **Superseded the same day it was written, by the first probe that actually returned:
+> `DECISIVE_RESPONSE_IN_EARLIEST_REACHABLE_EXECUTION_PATH`.** The rule above demands the
+> decisive output in the *first* round-trip. Measured 2026‑08‑14 on the return-channel test:
+> that is **not reachable** for a response, because `SendMessage` is a **deferred** tool in the
+> actor's session — the schema is not loaded, so a `ToolSearch` resolution necessarily precedes
+> it and consumes a round-trip of its own.
+>
+> ```
+> req_011Ce2MxQcL6rER3NpDZ1Ut8   thinking + ToolSearch(select:SendMessage)
+> req_011Ce2MyEioD7mokxwdQhkhc   SendMessage → TOKEN-RETURN-001
+> ```
+>
+> **The corrected rule keeps the constraint instead of dissolving it:** the decisive output goes
+> in the **earliest execution path the session can actually reach**, and *every round-trip
+> required before the decisive action must be known, declared and separable*. It is emphatically
+> **not** "whenever the system feels ready" — the number of technical hops stays a **variable to
+> be measured**, per delegation and per session, not an excuse. The earlier form is kept above
+> because it is why the round-trip became the unit at all; it was the right unit and the wrong
+> ordinal.
+
 **Test receipt.** Not a launcher refusal but a review refusal: a probe placing its decisive
 measurement after avoidable steps is rejected before dispatch as
 `PROBE_REJECTED DECISIVE_PROBE_NOT_FIRST`.
@@ -311,6 +331,69 @@ What these surfaces **cannot** distinguish: whether the continuation was never *
 by the next morning the roster reported **`failed`**. The transition happened afterwards and its
 cause is `UNKNOWN`. It is not the truncation, and it must not be called an idle-stop: the observed
 state is `failed`, not `stopped`. It informs 6.A without resolving it.
+
+## `RETURN_CHANNEL_PASS` — the leg that had never been observed, observed once
+
+**n = 1. No generalisation beyond the measured case.** Until 2026‑08‑14 the chain
+*Orchestrator → Actor → execution → **response*** had three proven legs and a fourth never seen:
+33 inbound messages had reached this session in its lifetime, **all from interactive peers,
+none ever from a launcher-born background actor.**
+
+Measured, in order, on Scientist A recovered through the declared lifecycle:
+
+| leg | evidence |
+|---|---|
+| recovery | `RECOVERY_PASS` — same sessionId `2e2571b7-…`, `kind: background`, same cwd, new pid 5064 |
+| delivery | A's transcript record 51, `2026-08-14T08:56:21.166Z`, envelope `from uds:/tmp/cc-socks/2475.sock` |
+| emission | record 57 `SendMessage`, `to: "uds:/tmp/cc-socks/2475.sock"`, `message: "TOKEN-RETURN-001"`; record 58 result `success: true`, `msg_id e59077e1-…` |
+| arrival | received at this session from `uds:/tmp/cc-socks/5064.sock`, `from-name: scientist-a` — and `5064` is A's pid in the roster |
+
+**Addressing by envelope is proven:** A copied the `from` field verbatim, with no `ListAgents`
+and no discovery — which is what kept the return inside two round-trips instead of three.
+
+### The obligatory qualification: it was not the first round-trip
+
+Two requests, not one, and the token left in the second. `SendMessage` is a **deferred** tool in
+that session: it exists, it is registered, and it is **not callable until its schema is fetched**.
+A declared this herself, unprompted, before the requestIds were measured.
+
+So both statements are true and neither cancels the other: **the channel works**, and **the
+channel is proven to depend on the one surface that has failed twice** — the second round-trip is
+exactly where `MESSAGE_TURN_TRUNCATION` struck on 2026‑08‑12 and 2026‑08‑14's earlier probe.
+Today it held. Nothing in this measurement says it always will.
+
+### Five outcomes, never four
+
+`TOOL_DEFERRED` is a class the earlier matrix had no cell for, and it is the cell we landed in.
+
+| class | meaning |
+|---|---|
+| `PASS` | emitted and arrived |
+| `TOOL_DEFERRED` | the tool exists and is available, but a resolution/loading phase must precede execution — **latency and order of availability** |
+| `TOOL_UNAVAILABLE` | the capability is **absent** from the session or not exposed to the actor class |
+| `NOT_EMITTED` | the tool was reachable and no call was made |
+| `EMITTED_NOT_ARRIVED` | the call was made and nothing reached the receiver |
+
+🔴 **Never merge `TOOL_DEFERRED` with `TOOL_UNAVAILABLE`.** The first is a cost to be budgeted in
+the execution path; the second is a missing capability that no amount of waiting supplies. Reading
+the first as the second would have declared background actors incapable of replying, on the day
+one replied.
+
+**`TOOL_REFERENCE_WARMTH_OBSERVATION`** — after that first use, A may now hold the tool reference
+already resolved. **This is an observation, not a mechanism, and it is deliberately not called
+warm-up:** a future measurement must separate three cases that today are one — *same session after
+first use*, *respawn of the same session*, and *a fresh background session*. Only the third
+answers whether the deferred cost is structural for the actor class.
+
+### Two measurements kept open, at zero cost, documented and not executed
+
+1. **Deferred comparison.** Is `SendMessage` immediately available in an interactive session
+   (Plan, Orchestrator) while requiring a `ToolSearch` in a background one? Both halves are
+   observable from transcripts already on disk. No generalisation until both are read.
+2. **Truncation rate.** N identical token delegations, reporting *completed · truncated ·
+   not emitted · not delivered*. The useful result is **an observed rate, not a boolean** — one
+   success and two failures are three data points about the same channel, and a single PASS is
+   not a property.
 
 ## The kernel does not guarantee continuation — declared boundary, not implementation
 
