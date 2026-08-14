@@ -2,10 +2,10 @@
   "schema_version": 2,
   "pmid": "26675548",
   "doi": "10.18632/oncotarget.6571",
-  "receipt": "FTR-20260814-26675548-01",
+  "receipt": "FTR-20260814-26675548-02",
   "landing": [
     "CORPUS-STUB-081",
-    "DL-MECH-099",
+    "DL-MECH-103",
     "PMID26675548.md"
   ],
   "skills_considered": [
@@ -81,7 +81,7 @@
     "performed": true,
     "query": "Which LEGEND safety or DDR statements could inherit stronger causality than PMID 26675548 directly demonstrates?",
     "hits": 3,
-    "finding": "FT-060 and DIS-001 remain directionally supported, but ITCH inhibition risk must be described as a cross-paper mechanistic warning. PMID 26675548 directly supports WWOX ubiquitination, K274/WW1 dependence, p-ATM association, checkpoint phenotypes and a pleiotropic ATM-inhibitor response; it does not manipulate ITCH or establish K63 linkage within this study. DL-MECH-099 records the boundary."
+    "finding": "FT-060 and DIS-001 remain directionally supported, but ITCH inhibition risk must be described as a cross-paper mechanistic warning. PMID 26675548 directly supports WWOX ubiquitination, K274/WW1 dependence, p-ATM association, checkpoint phenotypes and a pleiotropic ATM-inhibitor response; it does not manipulate ITCH or establish K63 linkage within this study. DL-MECH-103 records the boundary."
   },
   "retraction_check": {
     "performed": true,

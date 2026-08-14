@@ -3192,7 +3192,7 @@ il testo, mai attraverso di esso.
 
 ---
 
-### 🔴 DL-MECH-099 — Abu-Odeh 2016 sostiene la competenza DDR di WWOX, ma la catena ATM–ITCH–K63–ATR non è tutta dimostrata nello stesso paper
+### 🔴 DL-MECH-103 — Abu-Odeh 2016 sostiene la competenza DDR di WWOX, ma la catena ATM–ITCH–K63–ATR non è tutta dimostrata nello stesso paper
 
 - **Status:** open · **Tag epistemico:** `DATO` per i fenotipi cellulari; `CORREZIONE` per la forza della catena causale.
 - **Fonte:** Abu-Odeh et al. 2016, PMID 26675548 / PMC4826209 — testo, 6 figure principali, Supplementary Figures S1–S6 e Table S1 letti integralmente; receipt `FTR-20260814-26675548-01`.
@@ -3209,7 +3209,7 @@ il testo, mai attraverso di esso.
 
 ---
 
-### 🔴 DL-MECH-100 — Salah 2013 stabilizza **ΔNp63α**, non WWOX: l’attribuzione ITCH ereditata aveva invertito l’oggetto
+### 🔴 DL-MECH-104 — Salah 2013 stabilizza **ΔNp63α**, non WWOX: l’attribuzione ITCH ereditata aveva invertito l’oggetto
 
 - **Status:** open · **Tag epistemico:** `DATO` per interazione/ubiquitinazione/emivita/localizzazione; `CORREZIONE` per l’attribuzione propagata; `INFERENZA` per il vincolo sugli assay di rescue.
 - **Fonte:** Salah et al. 2013, PMID 23370280 / PMC3564006 — XML e PDF letti integralmente; 6 figure/23 pannelli ispezionati; 66 riferimenti enumerati; nessuna tabella o supplemento distribuito; receipt `FTR-20260814-23370280-01`.

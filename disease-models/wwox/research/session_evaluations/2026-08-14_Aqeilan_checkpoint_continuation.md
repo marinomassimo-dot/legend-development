@@ -27,7 +27,7 @@
 ## Persistence diagnosis
 
 - **Dossier:** `PMID26675548.md`.
-- **Discovery:** `DL-MECH-099`.
+- **Discovery:** `DL-MECH-103`.
 - **Commit candidate:** `CC-20260814-26675548-01`; canonical scientific files remain untouched outside `BATCH_COMMIT`.
 - **Queue:** `FT-061` has an append-only closure update; generated coverage, batch-queue and reading-state views were regenerated.
 - **Manifest:** `PMID26675548.json`, schema v2, receipt pointer `FTR-20260814-26675548-01`.

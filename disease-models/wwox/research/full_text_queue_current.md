@@ -2660,7 +2660,7 @@ multi-hop: 5 referenze gene-dirette né lette né in coda — `16187332` · `157
 **Status update 2026-08-14 — LETTO E CHIUSO:** lettura completa in una sola corsa, inclusi
 12 pagine PDF, 6 figure principali/16 pannelli etichettati, Supplementary Figures S1–S6/12
 pannelli etichettati, Table S1 in PPTX e 54 riferimenti. Receipt
-`FTR-20260814-26675548-01`; dossier `PMID26675548.md`; scoperta `DL-MECH-099`; candidate
+`FTR-20260814-26675548-01`; dossier `PMID26675548.md`; scoperta `DL-MECH-103`; candidate
 `CC-20260814-26675548-01`. Nessun debito di superficie. Registrata la discrepanza
 `0.2 mM` nella slide Table S1 contro `0.2 μM` in testo, metodi, Figure 3 e Supplementary S6.
 
@@ -3318,7 +3318,7 @@ riaperto o ripetuto il resto del paper.
 
 Lettura completata in una sola corsa: XML strutturato e PDF di nove pagine, tutte le sezioni,
 6/6 figure e 23/23 pannelli, 66/66 riferimenti; tabelle e supplementi `not_present`. Manifest
-schema-v2 strict PASS, dossier `PMID23370280.md`, scoperta `DL-MECH-100`, candidate
+schema-v2 strict PASS, dossier `PMID23370280.md`, scoperta `DL-MECH-104`, candidate
 `CC-20260814-23370280-01`, receipt `FTR-20260814-23370280-01`.
 
 **Esito della domanda di apertura:** Figura 3 mostra WWOX che compete con ITCH sul substrato

@@ -2,10 +2,10 @@
   "schema_version": 2,
   "pmid": "23370280",
   "doi": "10.1038/cddis.2013.6",
-  "receipt": "FTR-20260814-23370280-01",
+  "receipt": "FTR-20260814-23370280-02",
   "landing": [
     "FT-062",
-    "DL-MECH-100",
+    "DL-MECH-104",
     "CC-20260814-23370280-01",
     "PMID23370280.md"
   ],
@@ -76,7 +76,7 @@
     "performed": true,
     "query": "Where does LEGEND attribute ITCH/proteasomal stabilization to PMID 23370280, and is the stabilized object WWOX or ΔNp63α?",
     "hits": 24,
-    "finding": "The load-bearing error is bullet 3 of CC-20260810-41984841-01. Salah 2013 stabilizes ΔNp63α by WWOX-mediated competition against ITCH; ITCH/K63-associated stabilization of WWOX belongs to PMID 24550385. A superseding commit candidate and DL-MECH-100 preserve the correction append-only."
+    "finding": "The load-bearing error is bullet 3 of CC-20260810-41984841-01. Salah 2013 stabilizes ΔNp63α by WWOX-mediated competition against ITCH; ITCH/K63-associated stabilization of WWOX belongs to PMID 24550385. A superseding commit candidate and DL-MECH-104 preserve the correction append-only."
   },
   "retraction_check": {
     "performed": true,
