@@ -1,0 +1,171 @@
+{
+  "schema_version": 2,
+  "pmid": "26256646",
+  "doi": "10.1038/srep12959",
+  "receipt": "FTR-20260811-26256646-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID26256646.md",
+    "full_text_queue_current#FT-047",
+    "disease-models/wwox/research/commit_candidates/CC-20260811-AQEILAN-LINE-01.md"
+  ],
+  "skills_considered": [
+    {"skill": "legend", "used": true},
+    {"skill": "legend-deepdive", "used": true},
+    {"skill": "legend-capability-scout", "used": true},
+    {"skill": "legend-session-self-eval", "used": true},
+    {"skill": "legend-session-takeaways", "used": true},
+    {"skill": "find-fulltext", "used": false, "reason": "A complete fingerprinted PMC XML was supplied and the first supplementaryFiles call returned all four main figures."},
+    {"skill": "legend-commit", "used": false, "reason": "Canonical scientific files remain reserved for BATCH_COMMIT."}
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 137,
+    "publications_on_gene": 64,
+    "counts_measured": "PubMed ESearch 2026-08-11: Aqeilan RI[Author] = 137; Aqeilan RI[Author] AND WWOX[Title/Abstract] = 64.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "weighting": "Primary WWOX-group rescue data in two osteosarcoma lines and two mouse routes receive direct experimental weight. Same-group continuity is not replication, and the RUNX2 interpretation is kept below the measurements because RUNX2 itself is not perturbed."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {"query": "WWOX AND RUNX2[Title/Abstract]", "route": "PubMed ESearch 2026-08-11", "count": 11},
+      {"query": "WWOX AND osteosarcoma AND metastasis[Title/Abstract]", "route": "PubMed ESearch 2026-08-11", "count": 5}
+    ],
+    "note": "Direct WWOX-RUNX2 and WWOX-osteosarcoma-metastasis intersections are small, so the paper's missing direct RUNX2 perturbation is a material mechanistic boundary."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 57,
+    "gene_direct_refs_in_source": ["25245215", "25538133", "24510053", "25681467", "20530675", "19896763", "21165567", "17360458", "19936220", "23254685", "24369382", "17575124", "17823927", "21499303", "18487609", "24932569", "24330824", "16223882", "17200365", "17704139", "18460020", "19458077", "23254778", "22226915", "19500159", "24456803", "25403906", "25411445", "24585490", "23339925", "22693020", "25491415", "25416187", "25595186"],
+    "resolved": ["25491415", "20530675", "18487609", "24330824"],
+    "queued": [],
+    "enumeration_method": "All 57 references were read sequentially from the ref-list inside the XML body; gene-directed PMIDs were deduplicated against the registries and full-text queue.",
+    "reason": "No additional paper was opened. PMID 16223882 is under an expression-of-concern hold and was explicitly excluded from load-bearing support."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Which canonical claims and debts already contain osteosarcoma, metastasis, RUNX2 or context-dependent WWOX effects?",
+    "hits": 9,
+    "finding": "PMID 26256646 is CORPUS-STUB-152/LIT-0169 and part of FT-047. Its primary rescue observations support context dependence, but no current CNS claim can inherit the osteosarcoma-specific RUNX2 mechanism."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-11",
+    "route": "PubMed record-status check for PMID 26256646",
+    "result": "No retraction, expression of concern or correction found for the focal paper. Cited PMID 16223882 is held separately and is not load-bearing.",
+    "hold": false
+  },
+  "supplementary_files_preflight": {
+    "performed": true,
+    "route": "Europe PMC supplementaryFiles, called once before figure reading",
+    "result": "Archive returned four main figures and no supplementary material; all four JPEGs were persisted and fingerprinted."
+  },
+  "supplement_locator_waiver": {
+    "waived": true,
+    "reason": "Neither the XML nor the repository archive contains a supplement; the complete evidentiary surface is the body, Table 1 and four main figures."
+  },
+  "source_artifacts": [
+    {"path": "files/fulltext/PMID26256646_DelMare2015_PMC.xml", "sha256": "a3418204d64c0e878caa2b353e3b29ff16fc9b2cf995b7d30839d9b1ce5f1de3", "kind": "article_text"},
+    {"path": "files/figures/PMID26256646/srep12959-f1.jpg", "sha256": "170f8e88ad0fb35afe90d7609fd6549378dea142c905929b3cb1d57882983c0e", "kind": "figure"},
+    {"path": "files/figures/PMID26256646/srep12959-f2.jpg", "sha256": "e8cc6344278ba7ac3638698fca3639e1784c0e662cf31ae6671ba1eed6ca28eb", "kind": "figure"},
+    {"path": "files/figures/PMID26256646/srep12959-f3.jpg", "sha256": "7ea701b28900c81d7d5a079b0b6609024152597d3cf114bb876416e54b9689ad", "kind": "figure"},
+    {"path": "files/figures/PMID26256646/srep12959-f4.jpg", "sha256": "4f622e6771e19dfd61fb7c669acfe92d25b0eafa59cdecda205ef72492def5db", "kind": "figure"}
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC record and local PMCID PMC4542681 XML checked on 2026-08-11: complete indexed body, four figures, Table 1 and 57 references are present.",
+    "entries": [
+      {
+        "proposition": "Each manipulated osteosarcoma cell line was tested in five mice per arm.",
+        "snippet": "Five animals were injected with each OS-manipulated cell line.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26256646_DelMare2015_PMC.xml",
+        "anchor": "Methods, in vivo tumorigenesis assays",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The intratibial HOS groups were evaluated at unequal endpoints, limiting a simple time-matched metastasis interpretation.",
+        "snippet": "Animals were sacrificed at ~3 weeks (for HOS EV tumors) and 5 weeks (for HOS-WWOX tumors).",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26256646_DelMare2015_PMC.xml",
+        "anchor": "Methods, intratibial model",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The paper's prespecified significance rule is strictly below 0.05.",
+        "snippet": "P < 0.05 indicated significant difference.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26256646_DelMare2015_PMC.xml",
+        "anchor": "Methods, statistical analysis",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The intratibial HOS experiment reports macro-metastasis in all EV animals and only micro-metastasis in two of five WWOX animals.",
+        "snippet": "In fact, all HOS-EV IT-injected mice developed macrometastasis whereas 2 out of 5 (40%) mice injected with HOS-WWOX developed only micrometastasis",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26256646_DelMare2015_PMC.xml",
+        "anchor": "Results, intratibial HOS metastasis",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "LM7 supplied no intratibial metastasis test because it did not form tumours in the observation period.",
+        "snippet": "LM-7 cells did not form tumors in the IT model in same time period and therefore WWOX effect on metastatsis using this model could not be assessed.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26256646_DelMare2015_PMC.xml",
+        "anchor": "Results, intratibial model limitation",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The intravenous HOS experiment reports metastasis in all EV animals and micro-metastasis in one of five WWOX animals.",
+        "snippet": "all mice injected with HOS-EV developed macrometastasis (60%) and micrometastasis (40%) whereas only 1 out of 5 (20%) of mice bearing HOS-WWOX cells in the IV model develop micrometastasis",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26256646_DelMare2015_PMC.xml",
+        "anchor": "Results, intravenous HOS metastasis",
+        "panel_text_relation": "text_confirmed_by_panel"
+      },
+      {
+        "proposition": "The RUNX2 bridge rests on associated transcript changes rather than direct perturbation in this study.",
+        "snippet": "we found that RUNX2 target genes related to tumor properties are significantly downregulated in HOS-WWOX and LM7-WWOX OS cell lines when compared to the EV cells.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID26256646_DelMare2015_PMC.xml",
+        "anchor": "Results, RUNX2 target-gene expression",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 1 visually supports reduced wound closure and Matrigel invasion after WWOX restoration in both cell lines.",
+        "snippet": "Figure 1 panels A-D show WWOX-restoration immunoblots, wound images and lower closure quantification, plus invasion images with HOS-WWOX and LM7-WWOX bars below their EV controls.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID26256646/srep12959-f1.jpg",
+        "anchor": "Figure 1 A-D, four of four panels, inspected at 700 by 481 pixels",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 2 separates delayed primary growth from reduced intratibial lung metastasis but its caption does not preserve the unequal sacrifice times stated in Methods.",
+        "snippet": "Figure 2 panels A-C plot slower HOS-WWOX tibial growth and fewer lung metastases, with p below 0.01 on the metastasis comparison; the raster itself does not resolve the Methods' three-week versus five-week endpoints.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID26256646/srep12959-f2.jpg",
+        "anchor": "Figure 2 A-C, three of three panels, inspected at 700 by 214 pixels",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 3 supports reduced intravenous metastasis while exposing the LM7 boundary p-value of exactly 0.05.",
+        "snippet": "Figure 3 panels A-D show lower HOS and LM7 lung-metastasis counts after WWOX restoration; the HOS comparison is labelled p=0.01 and the LM7 comparison p=0.05.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID26256646/srep12959-f3.jpg",
+        "anchor": "Figure 3 A-D, four of four panels, inspected at 700 by 190 pixels",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "Figure 4 does not justify a blanket claim that every assayed transcript decreased and provides no visible significance marks or biological replicate count.",
+        "snippet": "Figure 4 panels A-D display metastasis-gene and RUNX2-target qPCR bars without visible significance symbols; LM7 integrin alpha-2 is not visibly lower in the WWOX bar.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID26256646/srep12959-f4.jpg",
+        "anchor": "Figure 4 A-D, four of four panels, inspected at 700 by 456 pixels",
+        "panel_text_relation": "panel_only"
+      }
+    ]
+  }
+}

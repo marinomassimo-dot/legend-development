@@ -1,0 +1,119 @@
+{
+  "schema_version": 2,
+  "pmid": "27308416",
+  "doi": "10.4161/23723548.2014.965640",
+  "receipt": "FTR-20260811-27308416-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID27308416.md",
+    "full_text_queue_current#FT-047",
+    "disease-models/wwox/research/commit_candidates/CC-20260811-AQEILAN-LINE-01.md"
+  ],
+  "skills_considered": [
+    {"skill": "legend", "used": true},
+    {"skill": "legend-deepdive", "used": true},
+    {"skill": "legend-capability-scout", "used": true},
+    {"skill": "legend-session-self-eval", "used": true},
+    {"skill": "legend-session-takeaways", "used": true},
+    {"skill": "find-fulltext", "used": false, "reason": "A complete fingerprinted local PMC XML was supplied."},
+    {"skill": "legend-commit", "used": false, "reason": "Canonical scientific files remain reserved for BATCH_COMMIT."}
+  ],
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 137,
+    "publications_on_gene": 64,
+    "counts_measured": "PubMed ESearch 2026-08-11: Aqeilan RI[Author] = 137; Aqeilan RI[Author] AND WWOX[Title/Abstract] = 64.",
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "weighting": "The Aqeilan laboratory is a primary experimental WWOX group, but this article is commentary on the group's own PMID 25012504. Its interpretation is useful and its experimental statements do not constitute independent replication or a second dataset."
+  },
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      {"query": "WWOX AND HIF1A[Title/Abstract]", "route": "PubMed ESearch 2026-08-11", "count": 4}
+    ],
+    "note": "The direct WWOX-HIF1A literature is sparse; source type therefore matters especially, because a commentary can otherwise be mistaken for a second primary study."
+  },
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 10,
+    "gene_direct_refs_in_source": ["25012504", "24510053", "18487609", "24550385", "23765596"],
+    "resolved": ["25012504"],
+    "queued": [],
+    "enumeration_method": "All ten references were read sequentially from the ref-list inside the XML body; five WWOX-directed records were identified and deduplicated against the current registries and queue.",
+    "reason": "The load-bearing primary PMID 25012504 is already PAPER 024; this commentary creates no new citation hop."
+  },
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "Where is PMID 27308416 already used, and is it distinguished from primary PMID 25012504?",
+    "hits": 3,
+    "finding": "It is CORPUS-STUB-078/LIT-0101 and appears in metabolism synthesis as a core paper. The complete read shows it is commentary and should not be counted as independent primary evidence."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-08-11",
+    "route": "PubMed record-status check for PMID 27308416",
+    "result": "No retraction, expression of concern or correction found.",
+    "hold": false
+  },
+  "supplementary_files_preflight": {
+    "performed": true,
+    "route": "Europe PMC supplementaryFiles, called once before figure reading",
+    "result": "Archive returned the one main Figure 1 image and no supplementary material."
+  },
+  "supplement_locator_waiver": {
+    "waived": true,
+    "reason": "The repository endpoint and XML contain no supplement; the complete evidentiary surface is the body plus the single main conceptual figure."
+  },
+  "source_artifacts": [
+    {"path": "files/fulltext/PMID27308416_AbuRemaileh2015_PMC.xml", "sha256": "9586b1ad9b4b5a7a5177f4866160fba103db89839fe9e8cb49f024b471f1e94c", "kind": "article_text"},
+    {"path": "files/figures/PMID27308416/kmco-02-02-965640-g001.jpg", "sha256": "8e0bc00e14fd28fc0af46bd72956ee5024a785136fcb5193e1784a5aa3b44eb8", "kind": "figure"}
+  ],
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC record and local PMCID PMC4904998 XML checked on 2026-08-11: complete indexed body, one figure and ten references are present.",
+    "entries": [
+      {
+        "proposition": "The article identifies itself as a report about the authors' recent primary paper, fixing its evidence type as commentary rather than an independent experiment.",
+        "snippet": "In a recent paper published in Cell Death & Differentiation, we reported that loss of the tumor suppressor WW domain-containing oxidoreductase (WWOX) is associated with enhanced levels and function of HIF1α, resulting in rewiring of cell metabolism and cancer transformation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27308416_AbuRemaileh2015_PMC.xml",
+        "anchor": "Opening body paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The commentary transmits the primary-cell metabolic phenotype from PMID 25012504.",
+        "snippet": "Wwox-deficient cells displayed significantly higher levels of lactate and NADPH, while exhibiting low NADH and ATP levels and reduced oxygen consumption.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27308416_AbuRemaileh2015_PMC.xml",
+        "anchor": "Body, metabolic phenotype paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The commentary reports reversal of the elevated glucose-uptake phenotype after HIF1alpha inhibition.",
+        "snippet": "As predicted, both genetic and pharmacologic inhibition of HIF1α reversed the glucose uptake phenotype in vitro and in vivo.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27308416_AbuRemaileh2015_PMC.xml",
+        "anchor": "Body, HIF1alpha intervention paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The proposed molecular bridge is WWOX WW1 binding to HIF1alpha with reduced HIF1alpha abundance and glucose uptake.",
+        "snippet": "At the biochemical level, WWOX physically interacts with HIF1α through its WW1 domain and functionally decreases HIF1α levels, and hence glucose uptake.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID27308416_AbuRemaileh2015_PMC.xml",
+        "anchor": "Body, biochemical mechanism paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 1 is a conceptual pathway surface, not a result panel: it depicts WWOX restraining HIF1alpha, HIF1alpha inducing PDK and PDK inhibiting PDH/TCA entry.",
+        "snippet": "Figure 1 visually maps WWOX inhibition of HIF1alpha to PDK induction, PDH inhibition and reduced pyruvate entry into the mitochondrial TCA cycle; no measurements or statistical marks are plotted.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID27308416/kmco-02-02-965640-g001.jpg",
+        "anchor": "Figure 1, sole panel, inspected at 638 by 485 pixels",
+        "panel_text_relation": "panel_only"
+      }
+    ]
+  }
+}

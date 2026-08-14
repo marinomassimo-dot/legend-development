@@ -91,6 +91,28 @@ class SelfEvalGate(unittest.TestCase):
             self.assertEqual(1, result.returncode, result.stdout)
             self.assertIn("ORPHAN_COMPLETE_READ", result.stdout)
 
+    def test_literature_tracking_record_is_a_structured_landing(self) -> None:
+        """A registry the gate reads must recognise the registry's own record IDs."""
+        with tempfile.TemporaryDirectory() as tmp:
+            root = build(
+                Path(tmp), RECEIPT,
+                {"registries/literature_tracking_log_current.md":
+                 "## LIT-0333\n**Identifier:** PMID 34214506\n"},
+            )
+            result = run(with_manifest(root, MANIFEST_OK))
+            self.assertEqual(0, result.returncode, result.stdout)
+
+    def test_corpus_placeholder_is_a_structured_landing(self) -> None:
+        """A CORPUS placeholder is a real paper-registry record, not incidental prose."""
+        with tempfile.TemporaryDirectory() as tmp:
+            root = build(
+                Path(tmp), RECEIPT,
+                {"registries/paper_registry_current.md":
+                 "## CORPUS P333\n**Identifier:** PMID 34214506\n"},
+            )
+            result = run(with_manifest(root, MANIFEST_OK))
+            self.assertEqual(0, result.returncode, result.stdout)
+
     def test_declared_output_id_that_does_not_exist_is_blocked(self) -> None:
         """The real defect: a hash-chained receipt naming records nobody created."""
         receipt = dict(RECEIPT, outputs=["discovery_ledger_current.md DL-MECH-061"])
