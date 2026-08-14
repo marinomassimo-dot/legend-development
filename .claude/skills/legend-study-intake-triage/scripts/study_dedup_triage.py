@@ -114,14 +114,22 @@ def build_index(workspace: Path) -> list[dict[str, str]]:
             authors = field(block, ["Authors"])
             year = field(block, ["Year"])
             status = field(block, ["Status", "Current status"])
+            # Identity belongs to the record's bibliographic fields, not to every
+            # identifier mentioned in its prose.  A full block may cite another
+            # PMID as evidence or reading debt; indexing that citation as the
+            # record itself turns an unread paper into a false KNOWN_INTEGRATED.
             identifier = " ".join(
                 [
                     field(block, ["Identifier"]),
                     field(block, ["Identifier value"]),
                     field(block, ["URL/DOI"]),
+                    field(block, ["Paper", "Papers"]),
+                    field(block, ["PMID"]),
+                    field(block, ["PMCID"]),
+                    field(block, ["DOI"]),
                 ]
             )
-            identifiers = extract_identifiers(f"{block}\n{identifier}")
+            identifiers = extract_identifiers(identifier)
             best_title = title or short
             if not (best_title or any(identifiers.values())):
                 continue
@@ -145,26 +153,12 @@ def build_index(workspace: Path) -> list[dict[str, str]]:
 
 
 def build_identifier_index(workspace: Path) -> dict[tuple[str, str], set[str]]:
-    """Index explicit identifiers even outside recognized Markdown blocks."""
+    """Index record identity fields without treating prose citations as identity."""
     seen: dict[tuple[str, str], set[str]] = defaultdict(set)
-    patterns = {
-        "pmid": re.compile(r"\bPMID[:\s]*(\d{6,9})\b", re.I),
-        "doi": re.compile(r"\b10\.\d{4,9}/[-._;()/:A-Z0-9]+\b", re.I),
-        "pmcid": re.compile(r"\bPMC\d{5,}\b", re.I),
-    }
-    for relative in REGISTRY_FILES:
-        path = workspace / relative
-        if not path.exists():
-            continue
-        text = path.read_text(errors="replace")
-        for kind, pattern in patterns.items():
-            for match in pattern.finditer(text):
-                value = match.group(1) if kind == "pmid" else match.group(0)
-                if kind == "doi":
-                    value = value.rstrip(".,;").lower()
-                elif kind == "pmcid":
-                    value = value.upper()
-                seen[(kind, value)].add(relative)
+    for record in build_index(workspace):
+        for kind in ("pmid", "doi", "pmcid"):
+            for value in filter(None, record[kind].split(";")):
+                seen[(kind, value)].add(record["source_file"])
     return seen
 
 
