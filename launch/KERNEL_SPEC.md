@@ -395,6 +395,71 @@ answers whether the deferred cost is structural for the actor class.
    success and two failures are three data points about the same channel, and a single PASS is
    not a property.
 
+## `PERMISSION_WAIT` — measured, named by the supervisor, and unanswerable at night
+
+2026‑08‑14. A delegation was delivered to a recovered background actor at `09:31:55.033Z`
+(`queue-operation` ×2, then the `user` record). **Nothing followed for 241 s** — no `requestId`,
+no assistant record, no tool call. The roster then carried a field that had never appeared in
+any earlier measurement:
+
+```
+state: blocked · status: waiting · waitingFor: "permission prompt"
+```
+
+Read verbatim off the actor's own screen, read-only and without attaching:
+
+```
+Bash command
+git -C /Users/massimo/Desktop/legend-public status --short; echo "EXIT=$?"
+Read-only git status in shared checkout
+
+This command requires approval
+Do you want to proceed?
+❯ 1. Yes
+  2. Yes, and don't ask again for: git -C /Users/massimo/Desktop/legend-public status --short
+  3. No
+```
+
+**It is the ordinary approval dialog**, and the text is what separates the candidates:
+
+| candidate | verdict |
+|---|---|
+| isolation guard that *asks* instead of refusing (`GUARD_PROMPTED`) | **refuted** — the isolation refusal seen in this session is a refusal with explicit wording, never a Yes/No question |
+| permission mode `default` with no rule covering the command | **confirmed** |
+| LEGEND's own Bash guard | **refuted by reading it**: it touches git only for blanket staging (`add -A` / `add .` / `commit -a`); no `-C`, no worktree logic |
+| editor integration | not implicated — the dialog is the standard CLI one |
+
+**Intra-session comparative evidence, which is what makes this specific rather than general.**
+Same session, same `permissionMode: default`: on 2026‑08‑13 `pwd` and
+`git rev-parse --show-toplevel` ran **with no prompt at all**; on 2026‑08‑14 `git -C <shared
+checkout>` prompts. **Not a permissions problem in general — a property of the target outside
+the worktree.**
+
+### 🔴 Two corrections this reading forces on entries written above
+
+**A tool call awaiting permission does not appear in the transcript.** The `MESSAGE_TURN_TRUNCATION`
+entry excludes `PERMISSION_WAIT` for the 2026‑08‑13 case *"structurally — no pending tool call to
+approve"*. That premise is **false**: the `tool_use` record is written after approval, so its
+absence proves nothing about a pending call. The exclusion did not hold.
+
+**And the measurement that would have answered it was filtered out by the measurer.** On
+2026‑08‑13 the roster was printed as `state`, `status`, `pid` — a selective projection. `waitingFor`
+exists today and was never asked for then. The 2026‑08‑13 sub-cause stays `UNKNOWN`, because that
+process is gone — but the *reason for the ignorance* is now known, and it is the same
+plausible-predicate shape this repository keeps catching: something was measured, not the thing.
+
+### The remedy is configuration, and it is already specified
+
+Capability per role, explicit denies and an allow-list inside the launcher's `--settings`,
+pre-approved permissions for unattended workers — §3.3 of the plan, **specified and never
+configured**. A home-grown policy engine would be exactly the alternative mini-runtime the
+declared boundary forbids. Nothing is built here.
+
+🔴 **Architectural note, and it holds regardless of how this resolves: an always-on machine does
+not solve this class — it prolongs it.** A VPS means the prompt hangs *longer*, not that anyone
+answers it. The condition for unattended operation is not "hardware that stays alive" but
+**"no execution path can stop on a question."**
+
 ## The kernel does not guarantee continuation — declared boundary, not implementation
 
 *Operator decision, by delegation.*
