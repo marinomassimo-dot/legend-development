@@ -1,0 +1,231 @@
+{
+  "schema_version": 2,
+  "pmid": "22634283",
+  "doi": "10.1016/j.jmb.2012.05.015",
+  "pmcid": "PMC3412936",
+  "receipt": "FTR-20260811-22634283-02",
+  "landing": ["FTR-20260811-22634283-02", "full_text_queue_current.md#FT-021"],
+  "superseded_receipt": "FTR-20260811-22634283-01 — partial_fulltext_read, 0/24 panels, superseded by -02 which closes the figure debt at 24/24 and moves the depth to complete. The manifest pointed at -01 after the debt was closed; corrected on the operator's instruction, because a manifest naming the receipt that predates its own coverage tells a reader the opposite of what it did.",
+  "landing_note": "McDonald, Buffa, Bar-Mag, Salah, Bhat, Mikles, Deegan, Seldeen, Malhotra, Sudol, Aqeilan, Nawaz, Farooq 2012, J Mol Biol 422(1):58-74. NIH author manuscript, NIHMSID NIHMS377220. Assigned as the QUANTITATIVE basis of the WW/PPXY competition network on which four independent readings converged in a day and on which PMID 16061658 was page-adjudicated. Opened with the question the orchestrator framed: not 'does it confirm competition' but WITH WHAT AFFINITIES, FOR WHICH MOTIFS, IN WHAT RATIO — and does that ratio support or break the asymmetry this corpus inferred.",
+
+  "skills_considered": [
+    { "skill": "legend-deepdive", "used": false, "reason": "Run inline. The reading is a comparison between measured dissociation constants and stoichiometries and an inference recorded in this corpus yesterday; both sides have to be held together." }
+  ],
+
+  "reading_budget": {
+    "declared_before_reading": true,
+    "figures_present": 9,
+    "panels_present": 24,
+    "tables_present": 6,
+    "supplementary_elements_present": 0,
+    "panels_inspected": 24,
+    "panel_coverage": "24/24",
+    "🔴 figure_debt_closed_2026-08-11_and_the_waiver_was_wrong": "I FIRST WAIVED ALL NINE FIGURES ON THE GROUND THAT THE ARTICLE IS NOT OPEN ACCESS. THE OPERATOR REFUSED THAT REASONING AND IS RIGHT: NON-OPEN-ACCESS IS A CONSTRAINT ON REDISTRIBUTION, NOT A DISPENSATION FROM VISUAL INSPECTION. The images can be held locally, gitignored, with hash and recipe recorded and the bytes never committed — which is what `files/` has always been for. All nine were retrieved from the CDN URLs embedded in the document already held, fingerprinted below, and INSPECTED. Tables support numeric locators; they do not substitute for figure coverage. The waiver was a category error and it cost two panel findings that the text does not contain — see entries[10] and entries[11].",
+    "method": "Counted by READING the captions collected from the nine <figure class=\"fig\"> blocks: Fig 1 a-c (3), Fig 2 a-b (2), Fig 3 a-e (5), Fig 4 a-c (3), Fig 5 a-b (2), Fig 6 a-b (2), Fig 7 a-c (3), Fig 8 a-c (3), Fig 9 unlettered alignment (1) = 24. 🔴 THE ORCHESTRATOR'S WARNING WAS CORRECT AND THE REMEDY WAS A DIFFERENT PATTERN, NOT A DIFFERENT METHOD: an automatic <fig> count returns ZERO on this deposit, but `<figure[^>]*class=\"[^\"]*fig` returns NINE. A count of zero from a pattern that does not match the markup is not a measurement of the paper.",
+    "🔴 superseded_waiver_kept_visible": "THIS WAIVER IS WITHDRAWN AND IS LEFT HERE RATHER THAN DELETED, BECAUSE THE REASONING IN IT IS THE ERROR WORTH KEEPING. It confused a redistribution constraint with a dispensation from looking. Original text follows. (1) THE ARTICLE IS NOT OPEN ACCESS AND THE SERVICE SAYS SO: the Europe PMC supplementaryFiles endpoint returns HTTP 200 with an errorBean reading 'Article with id PMC3412936 is not open access one' — a licensing statement, not an access control, and there is therefore no lawful bulk route of the kind that delivered eleven figures for the CC BY paper read yesterday. (2) AND NOTHING IN THIS READING RESTS ON A PANEL: every quantitative claim recorded below is anchored on a TABLE VALUE that is present verbatim in the extracted text surface — Tables 1 through 6 are rendered in the HTML as text, not as images, and were read as text. The figures are visualisations of those numbers: ITC isotherms whose fits produced Table 1, CD and DSC spectra, structural models, MD traces. Inspecting them would confirm shapes, not values. (3) THE RESIDUAL RISK IS NAMED RATHER THAN DENIED: rule 5c exists because a panel once reversed a conclusion the running text did not contain, and an unviewed isotherm could in principle show a fit the tabulated Kd does not deserve. That risk is carried, not dismissed. THE ROUTE IF IT MATTERS LATER: the HTML itself embeds direct CDN URLs for all figure and table images (cdn.ncbi.nlm.nih.gov/pmc/blobs/aec4/3412936/…/nihms377220f*.jpg), so the images are reachable one at a time from the document already held — a decision about a non-open-access article that belongs to the operator, not to this run."
+  },
+
+  "surface_preflight": {
+    "structured_surface_preferred": true,
+    "text_surface": "files/fulltext/PMID22634283_McDonald2012_PMC.html",
+    "route": "PMC HTML rendering of an NIH author manuscript. NOT open access — see the named waiver.",
+    "text_surface_verdict": "CLEAN on the rule-5d sentinel, and the sentinel matters unusually much here because this is a THERMODYNAMICS paper: 293 sentinel characters including ± 112 times, − 97 times, Δ 39 times, μ 11, Å 8, and ZERO C0 controls. Every one of those characters is load-bearing — an errors column, a sign on an enthalpy, an ångström. A corrupted surface would have destroyed the numbers this reading is for.",
+    "🔴 ref_list_leaks_into_the_body_surface_on_HTML_TOO": "NEW, AND IT EXTENDS YESTERDAY'S FINDING TO A SECOND EXTRACTOR. The contamination was established on `_xml_surfaces` — 122 of 122 reference titles verbatim in the surface on PMID 30158849, 10 of 10 on PMID 42082822. THIS IS AN HTML SURFACE AND `_html_surfaces` DOES THE SAME: the body surface contains 'Cancer Res' 14 times, 'J Biol Chem' 5 times and 'Bednarek AK' 6 times — journal abbreviations and author-with-initials strings that occur only in a bibliography. So the defect is not specific to the XML path. No locator here is drawn from it; every snippet was taken from a named section or a table and its position confirmed, and the bibliography begins at character 64,860 of an 80,600-character extraction.",
+    "style_block_at_head": "The extractor pulls the CSS <style> block into the head of the body, as on PMID 18487609. The first ~600 characters are CSS and no span was taken from there.",
+    "surface_measurement": { "in_tree_body_surface_chars": 79404, "abstract_chars": 1725, "artifact_bytes": 269318, "bibliography_starts_at_char": 64860 }
+  },
+
+  "group_assessment": {
+    "performed": true,
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "counts_measured": "Not measured as a count. 🔴 MEASURED AS SOMETHING MORE USEFUL: THIS PAPER SPANS THE TWO LITERATURES YESTERDAY'S REVIEW SHOWED TO BE DISJOINT. Farooq's biophysics laboratory at Miami with Nawaz; Aqeilan and Salah and Bar-Mag from the Hebrew University; and Marius Sudol, who defined the WW domain class. The Chang axis is absent and the Aqeilan axis is a co-author. A quantitative bridge built by the people whose primary literature this corpus already rests on.",
+    "research_type": "experimental_lab",
+    "output_kind": "primary_research",
+    "is_primary_group_for_disease": false,
+    "is_primary_group_for_gene": true,
+    "weighting": "🔴 THE OBSERVATION IS THE STRONGEST KIND THIS CORPUS HAS AND THE INTERPRETATION IS THE MOST RESTRAINED, WHICH IS THE OPPOSITE OF EVERY PAPER READ IN THE LAST TWO DAYS. The observations are isothermal titration calorimetry with errors from at least three independent measurements, alanine scans, circular dichroism, differential scanning calorimetry, molecular dynamics and a cell-based pulldown — dissociation constants with standard deviations, stoichiometries fitted rather than assumed. They do not depend on how anyone reads a blot. The interpretation is correspondingly narrow: the authors say 'we are tempted to suggest' where they speculate, mark NBD rather than reporting a weak number, and their central negative — WW2 binds nothing — is supported by ITC, CD, DSC, structural modelling AND a pulldown. THE CONSEQUENCE FOR WEIGHTING IS UNUSUAL AND WORTH STATING PLAINLY: this is the one paper in the corpus where a number can settle an argument that blots have been carrying, and it settles one recorded here yesterday."
+  },
+
+  "field_density": {
+    "wwox_directed": true,
+    "queries": [
+      { "query": "does WWOX have one PPXY-binding site or two?", "route": "ITC on isolated WW1, isolated WW2, and the WW1-WW2 tandem, with fitted stoichiometry", "count": 1, "detail": "🔴 ONE. WW2 binds no PPXY motif tested, and the wild-type tandem binds its ligands with 1:1 stoichiometry. See entries[0] and entries[2]." },
+      { "query": "how tight is the WWOX-PPXY interaction?", "route": "Tables 1 and 5 read as text", "count": 2, "detail": "Weak. Best affinity 122 μM for isolated WW1, 49 μM for the tandem. See entries[1] and entries[3]." }
+    ]
+  },
+
+  "multihop": {
+    "performed": true,
+    "references_enumerated": 47,
+    "gene_direct_count": 0,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "enumeration_method": "🔴 NOT ENUMERATED TO PMIDs, AND DECLARED AS NOT ENUMERATED. The deposit cites by number to a bibliography carrying no PMIDs and no <ref> elements — it is an HTML rendering, not JATS — so resolving would require a network round-trip per citation or the offline title matching that produced a wrong identifier yesterday. The reference count is the numbered range visible in the text. The WWOX-directed citations named in the prose (Ludes-Meyers for the PPXY ligand identification, Aqeilan for ErbB4 and for the knockout, Chen and Sudol for the WW domain) overlap papers this corpus holds; none is claimed as resolved.",
+    "cross_check_result": "Not applicable — no enumeration to cross-check. The gap is declared rather than padded."
+  },
+
+  "corpus_crossquery": {
+    "performed": true,
+    "query": "receipt check for 22634283 across every ref in this checkout",
+    "hits": 0,
+    "finding": "🔴 TWENTY REFS CHECKED, ZERO RECEIPTS ANYWHERE. Population stated with the count, which is the discipline the orchestrator's own censuses failed twice today by querying six refs of twenty and reporting a bare number. Artifact fingerprint verified against the digest supplied in the assignment before anything was read: 269,318 bytes, sha256 dd8485ac… — matching exactly, unlike the previous assignment where the brief's byte count described a different fetch."
+  },
+
+  "retraction_check": { "performed": true, "at": "2026-08-11", "route": "local PubMed corpus record for PMID 22634283, harvested 2026-08-06 — offline and re-runnable", "result": "no retraction, no expression of concern, no erratum" },
+
+  "source_artifacts": [
+    { "path": "files/fulltext/PMID22634283_McDonald2012_PMC.html", "sha256": "dd8485ac333b5e587d795c90b7a5d1e9167cb8c4331fe788cadf45215e125095", "kind": "article_text" },
+    { "path": "files/figures/PMID22634283/nihms377220f1.jpg", "sha256": "0a8817151c184dd40ceebd9f73f2f288806993575ec6d33d1d602c94f1ec912b", "kind": "figure", "native_px": "751x833", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/aec4/3412936/85a4b383912a/nihms377220f1.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" },
+    { "path": "files/figures/PMID22634283/nihms377220f2.jpg", "sha256": "67199101d1dfb36a0abff3ae110c3913a3816d5f7880507a577aaf92c4a56a54", "kind": "figure", "native_px": "651x569", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/aec4/3412936/0a0991e5226a/nihms377220f2.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" },
+    { "path": "files/figures/PMID22634283/nihms377220f3.jpg", "sha256": "16104279aa8976caa74b7daf7222fa64be799cf92fd0e904626495e52661c654", "kind": "figure", "native_px": "800x332", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/aec4/3412936/b1e47cf1d78c/nihms377220f3.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" },
+    { "path": "files/figures/PMID22634283/nihms377220f4.jpg", "sha256": "11f865049b95f1b655918ebf89f1d5daf7a7957b86c563183c38ee691a4578a9", "kind": "figure", "native_px": "540x1050", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/aec4/3412936/6876c636ed4f/nihms377220f4.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" },
+    { "path": "files/figures/PMID22634283/nihms377220f5.jpg", "sha256": "c754119de182b7ab64f0c94d44a67c871b4ac05f4a887dbaa62a005324292fe9", "kind": "figure", "native_px": "619x826", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/aec4/3412936/54d196c778be/nihms377220f5.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" },
+    { "path": "files/figures/PMID22634283/nihms377220f6.jpg", "sha256": "2d0636a1880bbd1279f68ba95d00b22e9f17b29693e79332010a24f557b8e5d7", "kind": "figure", "native_px": "729x353", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/aec4/3412936/57118315be16/nihms377220f6.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" },
+    { "path": "files/figures/PMID22634283/nihms377220f7.jpg", "sha256": "dcca20a562e763546574a29ff61092098afd3523498c5a5391c613ae58559ba4", "kind": "figure", "native_px": "507x1044", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/aec4/3412936/a851ad80b597/nihms377220f7.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" },
+    { "path": "files/figures/PMID22634283/nihms377220f8.jpg", "sha256": "63db7560a984cbcd638d770dd5b16ead8593c3e75fd72f33e9d758984a0852ca", "kind": "figure", "native_px": "800x429", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/aec4/3412936/958d39f79962/nihms377220f8.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" },
+    { "path": "files/figures/PMID22634283/nihms377220f9.jpg", "sha256": "21bba234de4625120200d0c50e3a61a5dbd01a558aabf3bfdea91ff820ea85e7", "kind": "figure", "native_px": "800x754", "effective_ppi": "not_applicable — native HTML raster, no rendering", "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/aec4/3412936/a1142495cf0b/nihms377220f9.jpg — URL embedded in the article HTML already held", "rights": "not open access; held gitignored in the shared files/, bytes never committed" }
+  ],
+
+  "verbatim_locators": {
+    "waived": false,
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "PMC HTML, PMC3412936, NIH author manuscript, in the shared files/ tree with the digest re-verified here. FIGURE SURFACE ACQUIRED AND INSPECTED: nine native raster JPEGs written into the shared checkout's files/figures/PMID22634283/, each fingerprinted and each carrying its retrieval route, 24 of 24 panels inspected. The images are gitignored and their bytes are never committed; the article is not open access and that constrains redistribution, not inspection. Strict validation is re-run with the SHARED CHECKOUT as artifact workspace, so the artifacts are verified where they will still exist tomorrow. Text locators are matched against the HTML; figure locators name the JPEG they were read from.",
+    "abstract_anchoring_waived": "No evidentiary locator uses the abstract; all twelve candidates were tested against the separated abstract surface.",
+    "entries": [
+      {
+        "proposition": "🔴 WWOX HAS ONE FUNCTIONAL PPXY-BINDING DOMAIN, NOT TWO, AND THIS IS MEASURED RATHER THAN INFERRED. The isolated WW2 domain shows no detectable interaction with ANY of the five PPXY motifs tested across WBP1 and WBP2. 🔴 AND THE EVIDENCE IS CONVERGENT ON THE MODEL, NOT FIVE INDEPENDENT REPLICATES OF THE SAME COMPARISON — MY EARLIER PHRASING SAID THE LATTER AND IT IS WRONG. THE ITC IS THE DIRECT TEST ON THE MOTIFS: purified WW2 against all five peptides, no detectable heat. THE PULLDOWN TESTS CELLULAR WBP2 ONLY, and carries the bait limitation at entries[11]. CD AND DSC CHARACTERISE STRUCTURE AND STABILITY — they say WW2 is folded, which is what makes its failure to bind surprising, and they test no motif at all. THE MODELLING OFFERS A STRUCTURAL EXPLANATION rather than a measurement. Together they converge on one account; only one of them is a test of binding across the five motifs. The structural reason offered is that R25 and W44 in WW1 are replaced by E66 and Y85 in WW2, and that restoring them by an E66R/Y85W double substitution restores binding — which is itself an ITC result.",
+        "snippet": "the WW2 domain does not appear to interact with any PPXY motifs within either WBP1 or WBP2 within the sensitivity of our measurements",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22634283_McDonald2012_PMC.html",
+        "anchor": "Results and Discussion, 'WW1 domain but not WW2 domain of WWOX binds to PPXY motifs within WBP1 and WBP2', describing Figure 3 and Table 1",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — the paper was opened to find out how many binding sites WWOX has, because an inference recorded here yesterday assumed two"
+      },
+      {
+        "proposition": "AND THE AFFINITIES ARE WEAK, WHICH THE PAPER'S OWN PHRASE 'PHYSIOLOGICALLY-RELEVANT MICROMOLAR RANGE' DOES NOT CONVEY. Table 1, isolated WW1 domain: WBP2_PY3 at 122 ± 1 μM, WBP1_PY2 at 366 ± 23 μM, and NO BINDING DETECTED for the other three motifs. Binding is enthalpy-driven with unfavourable entropy in both cases. INFERENZA: an interaction at 122 μM is not a stable complex at physiological concentrations — it is a transient, high-turnover contact, and any model in which WWOX HOLDS a partner in the cytoplasm has to account for how a 122 μM interaction holds anything.",
+        "snippet": "WBP2_PY1 NBD NBD NBD NBD WBP2_PY2 NBD NBD NBD NBD WBP2_PY3 122 ± 1 −12.61 ± 0.11 −7.27 ± 0.12 −5.34 ± 0.01",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22634283_McDonald2012_PMC.html",
+        "anchor": "Table 1, WBP2_PY3 row, dissociation constant column",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — the number the whole assignment was framed around"
+      },
+      {
+        "proposition": "🔴 THE WILD-TYPE TANDEM IS MONOVALENT TOWARD THE WBP PEPTIDES TESTED, AND THE PREVIOUS TWO-SIMULTANEOUS-CONTACTS MECHANISM IS NOT SUPPORTED. Table 5: the wild-type WW1-WW2 tandem binds WBP2_PY3 at fitted stoichiometry n = 1.05 ± 0.01, Kd 49 ± 1 μM, and WBP1_PY2 at n = 0.99 ± 0.04. Only the ENGINEERED WW1-WW2rw tandem reaches n = 2.00. 🔴 THE SCOPE OF THAT STATEMENT IS BOUNDED AND THE BOUND IS THE POINT, BECAUSE MY FIRST FORMULATION EXCEEDED IT. I wrote 'the competition is not by valency', which generalises from isolated synthetic peptides to whole proteins. WHAT TABLE 5 EXCLUDES IS THE SPECIFIC MECHANISM OF TWO SIMULTANEOUS CONTACTS IN THIS SYSTEM. IT DOES NOT EXCLUDE avidity, site availability, oligomerisation, or other effects in intact ErbB4 or YAP, none of which is tested here. Adjudicating PMID 16061658 I recorded Aqeilan's hypothesis that WWOX out-binds YAP 'perhaps due to the interaction of WWOX with both the PPxY motifs of ErbB-4' and carried it forward as 'two contacts against one'. The hedge was recorded with it; WHAT IS CORRECTED IS MY RESTATEMENT, AND THE CORRECTION IS ITSELF NOW BOUNDED TO THE PEPTIDES TESTED.",
+        "snippet": "WBP2_PY3 1.05 ± 0.01 49 ± 1 −8.46 ± 0.03 −2.58 ± 0.03 −5.88 ± 0.01",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22634283_McDonald2012_PMC.html",
+        "anchor": "Table 5, WBP2_PY3 row: stoichiometry n and dissociation constant for the wild-type WW1-WW2 tandem",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — this is the single number the run was for, and it went against the inference I brought to it"
+      },
+      {
+        "proposition": "WHAT THE TANDEM ACTUALLY BUYS, AND IT IS REAL: BETTER THAN TWO-FOLD AFFINITY AND A WIDER CAPTURE RADIUS. WW1 alone binds WBP2_PY3 at 122 μM; the tandem binds it at 49 μM. And the tandem acquires binding to WBP2_PY2, which WW1 alone does not detectably bind. So the second WW domain matters — not by adding a site but by making the first one better and broader. That is a mechanistically different claim from the one this corpus was carrying, and it is the one the data support.",
+        "snippet": "the WW2 domain not only plays a role in augmenting ligand binding affinity of WW1 domain but also increases its capture radius",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22634283_McDonald2012_PMC.html",
+        "anchor": "Results and Discussion, 'WW2 domain chaperones WW1 domain in the context of WW1-WW2 tandem domains'",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence, and it is what replaces the valency story"
+      },
+      {
+        "proposition": "AND THE STRUCTURAL SURPRISE: THE BINDING DOMAIN IS THE DISORDERED ONE. WW1 — the binding DOMAIN, not the ligand; the ligand is the WBP peptide — is largely unstructured and undergoes a disorder-to-order transition upon engagement, while WW2, which binds nothing here, is a well-folded β-sheet melting about 7°C higher. (The panel evidence for this is a separate locator — see entries[12] — because a body-surface entry may not carry observations read off an image.) The authors state the general lesson themselves — lack of structure does not equate to lack of binding, nor the reverse. INFERENZA WITH A BEARING ON THE REFERENCE GENOTYPE, AND THE CAUTION IS NARROWER THAN I FIRST WROTE: I said 'no static structure describes it', which is false — the BOUND conformations are modelled here, in Figure 4. THE CORRECT CAUTION IS THAT A STATIC APO STRUCTURE DOES NOT REPRESENT THE DISORDER-TO-ORDER TRANSITION, so a missense prediction computed on an unbound model is computed on the state the domain does not occupy when it works. That is the biophysical face of the caution PMID 30356099 raised clinically when it recorded that every missense call in the largest WOREE cohort rests on in silico prediction.",
+        "snippet": "it is the WW1 domain not the WW2 domain that is structurally disordered",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22634283_McDonald2012_PMC.html",
+        "anchor": "Results and Discussion, 'WW1 domain but not WW2 domain of WWOX appears to be structurally disordered', describing Figure 5",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — asked why the non-binding domain is the conserved one, and the answer inverts the expectation"
+      },
+      {
+        "proposition": "THE ROLE THE PAPER ASSIGNS WW2, STATED AS A HYPOTHESIS AND SUPPORTED BY FOUR INDEPENDENT MEASUREMENTS. An orphan domain with no physiological ligand, evolved as a chaperone that imparts structural and thermal stability on WW1. Recorded because it is the sentence a downstream reader will quote, and because it makes the tandem architecture meaningful without making it bivalent.",
+        "snippet": "the WW2 domain of WWOX is likely an orphan WW domain without any physiological ligands and that it may have evolved as a chaperone",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22634283_McDonald2012_PMC.html",
+        "anchor": "CONCLUSIONS",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence"
+      },
+      {
+        "proposition": "🔴 A SEQUENCE-BASED MECHANISTIC PRIOR FOR THE WWOX-ITCH COMPETITION, FROM 2012 — AND IT IS A FAMILY PRIOR, NOT AN ITCH PRIOR. Searching the human proteome for WW domains carrying an arginine and a tryptophan at the positions that make WW1 a binder, the authors report 'only a handful', all belonging to the E3 ubiquitin ligase family, and the text names ITCH and NEDD4. WHICH DOMAINS THOSE ARE IS READ OFF THE ALIGNMENT AND IS A SEPARATE LOCATOR — see entries[13] — because this body entry may not carry a count taken from an image. CORRECT FORMULATION FROM THAT PANEL: the signature is shared by MULTIPLE WW DOMAINS OF SEVERAL NEDD4-FAMILY MEMBERS, so THE PRIOR IS NOT SPECIFIC TO ITCH. And the relation it supports is FROM APPARENT COINCIDENCE TO AN OBSERVATION CONSISTENT WITH A SEQUENCE PRIOR — not a specific prospective prediction of the later PMID 23370280 result. It does not make ITCH selectivity a DATO: nothing here manipulates ITCH, and the authors' own words are 'we are tempted to suggest'.",
+        "snippet": "all of these WW domains belong to the E3 ubiquitin ligase family of enzymes, such as ITCH and NEDD4",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22634283_McDonald2012_PMC.html",
+        "anchor": "Results and Discussion, 'Wildtype WW1 domain and the engineered WW2_RW domain appear to share high sequence similarity with ubiquitin ligase family of WW domains', describing Figure 9",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — went looking for what else shares WW1's binding chemistry, and the answer named the E3 ligase this corpus has been arguing about for two days"
+      },
+      {
+        "proposition": "AND THE AUTHORS DRAW THE CONSEQUENCE THEMSELVES, HEDGED AND WORTH QUOTING HEDGED. That WWOX's WW1 may compete with the cellular partners of ubiquitin ligases and thereby neutralise their function — offered as 'we are tempted to suggest', not as a result. IPOTESI, and the corpus should carry the modal: it is a proposal built on a sequence alignment, not a measurement of competition.",
+        "snippet": "the WW1 domain of WWOX may compete with cellular partners of ubiquitin ligases and, in so doing, modulate or neutralize their physiological function",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22634283_McDonald2012_PMC.html",
+        "anchor": "Results and Discussion, the paragraph following the BLAST alignment",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "found — read in sequence, immediately after entries[6]"
+      },
+      {
+        "proposition": "THE RECOGNITION REQUIREMENT IS LONGER THAN PPXY IN THIS PEPTIDE PANEL. Alanine scanning across WBP2_PY3 shows proline at −2 and tyrosine at +4 required for HIGH-AFFINITY binding, and the authors define PXPPXYY as the OPTIMAL CONSENSUS SEQUENCE for WWOX's WW1 — a statement about the panel they tested, NOT a universal consensus, and my earlier phrase 'the true consensus' overstated it. The authors also state the qualifier explicitly: absence of the extended positions REDUCES affinity without necessarily abolishing binding, which is why WBP1_PY2 binds at 366 μM despite lacking both. THE METHODOLOGICAL CONCLUSION SURVIVES THE NARROWING AND IS THE PART THAT MATTERS HERE: a PPXY proteome scan generates too many candidates and is not an inventory of partners — demonstrated in this paper, where three of five PPXY motifs in two genuine adaptors are not bound at all.",
+        "snippet": "rendering the PXPPXYY motif the optimal consensus sequence for binding to the WW1 domain of WWOX",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22634283_McDonald2012_PMC.html",
+        "anchor": "Results and Discussion, describing the alanine scan of Table 2",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — asked what defines a real WWOX site, because the corpus carries partner lists built on the four-residue motif"
+      },
+      {
+        "proposition": "AND THE WWOX-YAP COMPETITION IS STILL FRAMED AS OPEN IN 2012, WITH AQEILAN A CO-AUTHOR. The sentence gives 'the ability OR LACK THEREOF' of WWOX to compete with YAP as what may be a defining event — a conditional, seven years after PMID 16061658 reported the competition from the same laboratory. WHAT THIS CORROBORATES IS THE PERSISTENCE OF THE UNCERTAINTY, AND MY EARLIER PHRASING CLAIMED MORE THAN THAT: I wrote that it shows the 2005 hedge 'was meant', which is a claim about the authors' intention and is not evidence anyone can produce. The record is that the uncertainty stood in 2005 and still stood in 2012 — which is enough, and is checkable.",
+        "snippet": "the ability or lack thereof of WWOX to compete with YAP for cellular partners may be a defining event in the development of cancer",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID22634283_McDonald2012_PMC.html",
+        "anchor": "INTRODUCTION, final paragraph before the aims",
+        "panel_text_relation": "text_only",
+        "found_or_sought": "sought — checked how the co-author of the 2005 competition paper states the competition in 2012, and it is stated as a conditional"
+      },
+      {
+        "proposition": "🔴 THE ITC ISOTHERMS DO NOT REACH SATURATION, WHICH QUALIFIES EVERY NUMBER IN TABLES 1 AND 5 AND IS INVISIBLE IN THE TEXT. This is the panel finding the figure waiver cost, and it is exactly the residual risk that waiver named. THE THREE NBD PANELS ARE HONEST: WBP1_PY1, WBP2_PY1 and WBP2_PY2 give essentially flat heat traces, so 'no binding detected' is what the raw data show rather than a fitting choice. BUT THE TWO BINDING PANELS ARE SHALLOW: WBP1_PY2 runs from about −1.9 to −0.6 kcal/mol and WBP2_PY3 from about −3.1 to −0.5, and NEITHER HAS FLATTENED at the highest molar ratio shown, about 7.5. A titration that has not saturated is a low-c experiment in the Wiseman sense, and in that regime the fitted stoichiometry and the dissociation constant are correlated and weakly determined. 🔴 AND THE LOW-c DIAGNOSIS MUST NOT REST ON CURVE SHAPE ALONE — IT IS ARITHMETIC FROM THE PAPER'S OWN METHODS. The Methods state 25 × 10 μl injections of 2-4 mM peptide into 1.8 ml of 100-200 μM WW domain at 25 °C, so for a 1:1 interaction c = [domain]/Kd falls in a RANGE rather than at a point, because the concentration used in any single titration is not reported: WW1 alone with WBP1_PY2 (366 μM) gives c ≈ 0.27-0.55; WW1 alone with WBP2_PY3 (122 μM) gives c ≈ 0.82-1.64. Both are at or below the threshold where an isotherm is informative about stoichiometry. THE TANDEM MEASUREMENTS ARE BETTER PLACED AND THIS CUTS IN THEIR FAVOUR: the WT tandem with WBP2_PY3 (49 μM) gives c ≈ 2.04-4.08, and the engineered WW1-WW2rw with WBP2_PY3 (59 μM) gives c ≈ 1.69-3.39 — low, but not the regime where n is unrecoverable. The remaining tandem titrations sit lower: WT with WBP1_PY2 (132 μM) c ≈ 0.76-1.52 and with WBP2_PY2 (326 μM) c ≈ 0.31-0.61. CONSEQUENCE, STATED AS THE OPERATOR REQUIRES: the ±1 μM on a 122 μM Kd is the scatter of three fits and not the accuracy of the determination. AND THE ENGINEERED CONTROL DOES NOT 'PROTECT' n = 1.05 NOR DEMONSTRATE ITS ACCURACY ON ITS OWN — it CORROBORATES that the fit can discriminate one binding capacity from two under comparable conditions, which is a weaker and correct statement.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 3, five paired panels a-e. Upper panels: raw thermal power against time over roughly 80 minutes, showing injection spikes. Lower panels: molar heat against molar ratio from 0 to about 7.5, fitted with a solid line. Panels a (WBP1_PY1), c (WBP2_PY1) and d (WBP2_PY2) show near-horizontal traces between about −0.9 and −0.4 kcal/mol with no sigmoidal shape and shallow injection spikes. Panel b (WBP1_PY2) descends from about −1.9 to −0.6 kcal/mol, still curving at the highest molar ratio. Panel e (WBP2_PY3) descends from about −3.1 to −0.5 kcal/mol, also still curving at the highest molar ratio, with the deepest injection spikes of the set reaching about −2 μcal/s.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID22634283/nihms377220f3.jpg",
+        "anchor": "Figure 3, all five ITC panels; image retrieved from the CDN path embedded in the article HTML and held gitignored",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[1]",
+        "qualifies_needle": "WBP2_PY3 122 ± 1",
+        "found_or_sought": "sought — the waiver I wrote named 'an unviewed isotherm could show a fit the tabulated Kd does not deserve' as the residual risk, and inspecting it found precisely that class of qualification"
+      },
+      {
+        "proposition": "AND THE CELL-BASED PANEL'S BAIT IS NOT CLEANLY COMPARABLE, WHICH THE TEXT DOES NOT MENTION. Figure 2b is offered as showing that only WW1 co-precipitates WBP2 from HEK293 lysate. THE GST-WW2 BAIT IS PRESENT — this is not an absent-bait artefact and I must not write that it 'was not there' — but its recovery and loading are not comparable with GST-WW1: the anti-GST row shows WW2 fainter and more diffuse in both the input and the pulldown lanes. CORRECT STATEMENT: THE NEGATIVE PANEL DOES NOT BY ITSELF PERMIT A QUANTITATIVE COMPARISON NORMALISED FOR BAIT AMOUNT. THE ITC REMAINS THE PRINCIPAL INDEPENDENT EVIDENCE — purified domains at controlled concentrations, a direct test on the motifs themselves. Recorded because the paper presents the pulldown first and a reader who stops there is relying on the weaker of the two.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 2, panel b. Four lanes in two blocks headed Input and GST-pulldown, each with GST-WW1 and GST-WW2. Upper row anti-WBP2: strong bands in both input lanes, a strong band in the GST-pulldown WW1 lane and no detectable band in the GST-pulldown WW2 lane. Lower row anti-GST: a strong band in the input WW1 lane and a much fainter, diffuse band in the input WW2 lane; in the pulldown block the WW1 lane shows a defined band while the WW2 lane shows a faint smear.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID22634283/nihms377220f2.jpg",
+        "anchor": "Figure 2 panel b, GST-pulldown of WBP2 by isolated WW domains",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[0]",
+        "qualifies_needle": "the WW2 domain does not appear to interact with any PPXY motifs",
+        "found_or_sought": "sought — opened the loading control of the panel that is presented first, because a negative result in a pulldown is only as good as its bait"
+      },
+      {
+        "proposition": "THE SPECTROSCOPIC AND CALORIMETRIC EVIDENCE FOR WW1'S DISORDER, CAPTURED AS A FIGURE LOCATOR BECAUSE IT IS READ OFF IMAGES. Three panels agree: WW1 and its three point mutants show only the random-coil minimum with none of the β-sheet or aromatic features; WW1's thermal unfolding is barely detectable while WW2's is large and about 7°C higher; and the heat-capacity change on ligand binding collapses by an order of magnitude between WW1 alone and the tandem, which is what a domain already folded in the tandem looks like. This is the panel side of the disorder-to-order account and it was previously written inside a body-surface entry, which was wrong: a locator declaring `body` must not carry observations taken from an image.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 5a: far-UV CD, molar ellipticity against wavelength 190-250 nm, four traces (WW1_WT black, R25A red, R25E green, W44Y blue) all sharing a single deep minimum near 203 nm at about −10 × 10⁵ deg.cm².dmol⁻¹, with no negative band near 220 nm and no positive band near 230 nm. Figure 6a: DSC, upper panel heat capacity against temperature showing four nearly superimposed traces peaking below 0.15 kcal.mol⁻¹.K⁻¹, lower panel a bar chart of melting temperature with all four bars at approximately 54 °C. Figure 7c: enthalpy change against temperature from 15 to 35 °C, black circles for the WW1-WW2 tandem lying flat near −8.5 kcal.mol⁻¹ and red triangles for WW1 alone descending from about −11 to −14 across the same range.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID22634283/nihms377220f7.jpg",
+        "anchor": "Figure 7c principally, read together with Figures 5a and 6a; native raster 507x1044 px, no rendering applied",
+        "panel_text_relation": "text_confirmed_by_panel",
+        "found_or_sought": "sought — the disorder claim is the one this corpus would carry into variant interpretation, so the panels behind it were opened rather than taken from the narrative"
+      },
+      {
+        "proposition": "🔴 THE ALIGNMENT, READ AS A FIGURE LOCATOR AND STATED WITHIN WHAT IT SHOWS. Seventeen WW domains selected by a BLAST search, belonging to SIX PROTEINS of the NEDD4 family — ITCH, NEDD4, NEDD4L, WWP1, WWP2 and SUDX — aligned with WWOX_WW1 and the engineered WWOX_WW2_RW, with the arginine and tryptophan positions marked. WHAT IT DOES NOT SHOW, AND WHAT I EARLIER ASSERTED THAT IT DID: it is not the entire NEDD4 family, since neither every member nor every domain of the members displayed is present; the signature is not demonstrated to be family-defining, which would require a claim about the family that this alignment does not test; and seventeen domains out of the 'several hundred' in the human proteome does not make the authors' phrase 'only a handful' false or understated. WHAT IT DOES SUPPORT: the arginine-tryptophan combination is shared by multiple WW domains across several NEDD4-family members, SO THE SEQUENCE PRIOR IS NOT SPECIFIC TO ITCH.",
+        "snippet": "[figure attestation - pixels cannot be quote-matched] Figure 9, a sequence alignment of nineteen rows. The first two are WWOX_WW2_RW and WWOX_WW1; the remaining seventeen are labelled ITCH_WW1, ITCH_WW2, ITCH_WW3, NEDD4_WW1, NEDD4_WW3, NEDD4_WW4, NEDD4L_WW2, NEDD4L_WW3, NEDD4L_WW4, SUDX_WW1, SUDX_WW2, WWP1_WW1, WWP1_WW2, WWP1_WW3, WWP2_WW1 and WWP2_WW2. Two downward arrows above the alignment mark the columns labelled E66R and Y85W. Conserved residues are coloured red, semi-conserved blue.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID22634283/nihms377220f9.jpg",
+        "anchor": "Figure 9, the full alignment; native raster 800x754 px, no rendering applied",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[6]",
+        "qualifies_needle": "all of these WW domains belong to the E3 ubiquitin ligase family of enzymes, such as ITCH and NEDD4",
+        "found_or_sought": "sought — the ITCH prior is the finding this corpus would carry furthest, so the panel it rests on was opened and then read for what it does not show as well as what it does"
+      }
+    ]
+  }
+}

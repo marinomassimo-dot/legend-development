@@ -1194,20 +1194,55 @@ a LEGEND, più due premesse esterne portanti non risolte a PMID (rif. 44 Lichten
 Timmins), elencate nella tabella qui sotto.
 *(Riga di identità riaperta il 2026-08-10: apriva con «i riferimenti gene-diretti di PMID
 24871327», e quel PMID è il paper **citante**, non un paper di questa voce.)*
-**Surface:** PMID 18974271 · `pdf_only` · sentinella `SUSPECT` · PMID18974271_Aqeilan2009.pdf  ·  PMID 15070730 · `pdf_only` · sentinella `SUSPECT` · PMID15070730_Aqeilan2004.pdf  ·  PMID 24871327 · `structured` · sentinella `clean` · PMID24871327_Iatan2014_PMC.html
+**Surface:** PMID 18974271 · `pdf_only` · sentinella `SUSPECT` · PMID18974271_Aqeilan2009.pdf  ·  PMID 15070730 · ~~`pdf_only` · sentinella `SUSPECT` · PMID15070730_Aqeilan2004.pdf~~ → `structured` · sentinella `clean` · **PMID15070730_Aqeilan2004_PMC.html** (il PDF resta a disco come `article_binary`, non usato come superficie di testo)  ·  PMID 24871327 · `structured` · sentinella `clean` · PMID24871327_Iatan2014_PMC.html
 **Priority:** **MEDIA-ALTA** sui primi due; **ALTA** su `18974271`.
+
+> 🔴 **Il record di superficie di `15070730` era stantio, e nella direzione che costa.** Diceva
+> `pdf_only` / `SUSPECT` mentre l'HTML PMC era già a disco e la sentinella lo dà `clean` —
+> zero controlli C0, glifi corretti. `surface_census.md` lo registrava correttamente come
+> `structured`/`clean` **su questa stessa voce**; la riga `Surface:` non era mai stata
+> riallineata. Una superficie dichiarata `SUSPECT` è una superficie che nessuno apre: il
+> record stantio è di per sé un motivo per cui il paper è rimasto chiuso due anni di corpus.
+> Stessa forma dei doppioni `FT-021`/`FT-055` e `FT-029`/`FT-030` — **due registrazioni dello
+> stesso fatto che divergono, e quella sbagliata è quella che si legge.**
 
 | PMID / rif. | Anno | Titolo | Perché |
 |---|---|---|---|
 | 18974271 (rif. 20) | 2008 | Aqeilan et al. — Targeted ablation of *Wwox* … | 🔴 **ignoto a LEGEND.** È la fonte primaria citata in introduzione per "Wwox KO mice exhibit marked reductions in serum lipid levels and display impaired gene expression of key steroidogenic enzymes": cioè la premessa su cui poggia l'intero fenotipo lipidico del null totale, che 24871327 estende ma non stabilisce |
-| 15070730 (rif. 17) | 2004 | Aqeilan et al. — Functional association … | 🔴 **ignoto a LEGEND.** Partner/funzione, serie fondativa del gruppo primario del gene |
+| 15070730 (rif. 17) | 2004 | Aqeilan et al. — Functional association … | ✅ **LETTO il 2026-08-14** — receipt `FTR-20260814-15070730-01`, manifest `PMID15070730.json`, `MANIFEST STRICT PASS` sotto il validatore del worktree **e** quello di `main` a `d06a4a1`. Profondità `partial`: 40/40 pannelli del corpo, tre figure supplementari irraggiungibili. ~~🔴 ignoto a LEGEND. Partner/funzione, serie fondativa del gruppo primario del gene~~ |
 | rif. 44 — Lichtenstein et al. | — | ANGPTL4 inattiva LPL convertendo il dimero in monomero | premessa **esterna portante** del meccanismo TG proposto. Non gene-diretta, quindi invisibile a un audit di bibliografia che filtri per WWOX — e proprio per questo va accodata a mano |
 | rif. 53 — Timmins et al. | — | Il KO epatico di *Abca1* abbassa HDL plasmatico di ~80% | è il comparatore che gli autori invocano **contro** il proprio risultato negativo. Serve per sapere se il null epatico di Wwox differisce da quello di Abca1 per grado o per natura |
 
 **Come sono emersi:** enumerazione dei **53** riferimenti di PMID 24871327 — 14 gene-diretti,
 di cui **12 già noti** (uno letto integralmente, `19936220`) e **2 no**. I due non gene-diretti
 sono stati aggiunti a mano perché portano premesse su cui il paper appoggia conclusioni.
-**Current status:** ⬜ nessuno recuperato, nessuno letto.
+**Current status:** 🟨 uno letto (`15070730`, 2026-08-14); `18974271` e le due premesse esterne restano aperte.
+
+> ### Debiti aperti da questa lettura — 2026-08-14
+>
+> 1. 🔴 **Le tre figure supplementari di `15070730` (Fig 5, 6, 7) NON sono state lette, e sono
+>    portanti.** Fig 5 è la **dose-dipendenza** della rilocalizzazione di p73 — la cosa più
+>    vicina a una titolazione causale del paper, e la forma più forte dell'evidenza di routing.
+>    Fig 6 è il controllo di **comparabilità di espressione** Wwox vs WWY33R, cioè ciò che
+>    separa un risultato funzionale da un artefatto di espressione in Fig 3B. Fig 7 sostiene la
+>    quantificazione di apoptosi di Fig 3C. Sono dietro il proof-of-work del cloud-viewer PMC;
+>    Europe PMC declina l'articolo come `not open access`. **È per questo che la receipt è
+>    `partial` e non `complete`.**
+> 2. 🔴 **`pmc_pow_fetch.py` risolve esattamente quell'interstiziale ma è PDF-only** — `%PDF` è
+>    cablato due volte, nel ritorno anticipato e nell'asserzione post-POW. Un supplementare
+>    JPEG solleva `ValueError`. Difetto stretto e reale di uno strumento sanzionato, registrato
+>    per l'operatore e **non aggirato**: rifare il protocollo a mano duplicherebbe l'unico
+>    client onesto che il repository possiede.
+> 3. 🔴 **`PMID 12514174` (Chang 2003, J Biol Chem 278:9195-9202) è la premessa sotto tutta la
+>    storia di Y33** — è da lì che viene la scelta di studiare Y33 e l'affermazione che
+>    alterarlo riduce l'attività proapoptotica di Wwox. **Non è a disco e non è mai stato
+>    letto.** `PREMISE: DATO` nella fonte, ma un DATO che non abbiamo mai verificato.
+> 4. **`CLAIM 023` va riportato all'operatore, non modificato da me.** È `consolidated
+>    baseline` / `DATO` con `Source: paper 206`, e `CORPUS P206` porta `Identifier: PENDING`
+>    più la nota `likely overlaps PAPER 026 (PMID 32185845); verify before merge`. PAPER 026 è
+>    **abstract only** e dà la **direzione opposta** per l'effetto Tyr33. Il contenuto della
+>    claim è fedele a questo paper; la catena di custodia non esiste. La riconciliazione è una
+>    scrittura canonica e non è mia.
 
 ---
 
