@@ -528,6 +528,40 @@ Every prompt raised during the attended pilot is a candidate line. The night's a
 **derived from measured use, never from an imagined list.** No policy engine, no permission
 written.
 
+### 🔴 The register cannot be compiled afterwards — a requirement of the attended pilot
+
+`waitingFor` exists **only while the actor is blocked**. Measured once the prompt was answered:
+
+```
+roster now       state: "done" · status: "idle"      → waitingFor GONE
+job timeline     working 08:56:32 · blocked 08:56:43 · done 09:54:08
+                 — no entry at all for the 09:31→09:53 block; it jumps from a
+                   "blocked" that describes waiting on the requester, straight to "done"
+```
+
+**Neither surface retains the event.** What survives is the 22-minute gap between transcript
+records 68 and 69 — a timing inference, not a record, and one that cannot separate *waited on a
+prompt* from *the command was slow*. And the only persisted narrative is worse than silence: the
+`text` of the timeline's `done` entry carries the actor's own sentence, *"no refusal, no
+permission prompt, no hook"* — **the sole durable account of the event asserts the prompt never
+happened.**
+
+**Requirement, recorded and not built:** the register needs a **sampler** that polls the roster at
+intervals while the pilot runs and writes `command · actor · wait-start · wait-end`. Without one,
+only prompts a human happened to watch live are collected — which is the census the correction
+above just demolished, rebuilt by hand.
+
+**And the sampler has a resolution, so write the size down:** a prompt raised and answered between
+two samples is invisible, so the polling interval is the lower bound on what can ever be caught.
+An attended pilot answers quickly, which is precisely when the events are shortest and hardest to
+sample — the interval must be declared with the data, or a sparse register will read as a quiet
+system.
+
+**Row zero, already in hand:** 21 min 52 s of waiting on a *read-only* `git status`, with the
+operator present and waiting for exactly that. If the cheapest possible command costs that, the
+register's first lesson is not which permissions to grant but **how much a single unanswered
+question costs.**
+
 ### Registered candidate, not to be tried now
 
 If isolation is a property of the **dispatch**, it may be requestable **at birth**: the
