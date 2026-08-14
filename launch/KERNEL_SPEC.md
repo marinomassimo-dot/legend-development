@@ -201,6 +201,25 @@ Every step stays independently reportable, so a truncation leaves a usable parti
 delegation carries a **completion token**; its absence is `UNDETERMINED`, never a substantive
 outcome.
 
+> 🔴 **The operative constraint is the round-trip, not the narrative order:
+> `DECISIVE_PROBE_IN_FIRST_INTERPRETABLE_ROUND_TRIP`.** Measured 2026‑08‑14: on the re-ordered
+> probe, `pwd` and `git rev-parse --show-toplevel` were emitted **in the same `requestId`**
+> (`req_011Ce1Qkg4XNzUc2Tix6SWX4`) — the model batched the whole interpretive prefix into one
+> response. The decisive probe would therefore have fallen in the **next** round-trip, which was
+> never requested or emitted. Reordering the list inside the prompt could not have helped, and
+> that is why it bought nothing. **The rule: wherever technically possible, the minimum context
+> needed to interpret the measurement and the decisive measurement itself must sit in the first
+> usable round-trip.**
+>
+> 🔴 **And a known constraint that must be registered alongside the rule, because it makes the
+> obvious fix ambiguous.** A worktree-isolated session refuses a *composite* command with
+> *"too complex to verify that it stays inside the worktree"* — measured repeatedly in this
+> session. So a future probe that packs prefix and decisive step into one command risks a
+> refusal that could be **either** the native cross-worktree guard **or** the
+> complex-command/isolation guard, and the two are the very thing the probe exists to tell
+> apart. **No corrective is designed here.** The constraint is recorded so that the next probe
+> is designed to discriminate the two classes rather than to collide with them.
+
 **Test receipt.** Not a launcher refusal but a review refusal: a probe placing its decisive
 measurement after avoidable steps is rejected before dispatch as
 `PROBE_REJECTED DECISIVE_PROBE_NOT_FIRST`.
@@ -260,6 +279,78 @@ an inconsistent base (repo, then worktree, then repo). `--name` remains a **live
 requirement — it makes an actor findable — and is never a persistable address.
 
 ---
+
+## `MESSAGE_TURN_TRUNCATION` — a failure class defined by its symptom
+
+**Symptom, and the whole definition:** tool calls emitted → tool results returned and **not**
+interrupted → **no subsequent assistant request or continuation.**
+
+It is defined by the symptom because the two instances observed so far have **different
+mechanisms and the same shape**, and a class defined by cause would have missed the second:
+
+| date | mechanism | what the transcript shows |
+|---|---|---|
+| 2026‑08‑12 | `model_refusal_fallback`, `apiRefusalCategory: "bio"`, `scope: session` | the record exists, at the fifth of six commands |
+| 2026‑08‑14 | **none of the above** | one `requestId`, thinking + two `tool_use`, both results `interrupted: false`, a `todo_reminder` attachment with 0 items — then nothing |
+
+**Sub-cause of the 2026‑08‑14 case: `UNKNOWN`, and it is obligatory.** What the evidence excludes
+or does not support:
+
+| candidate | verdict | on what |
+|---|---|---|
+| `TOOL_WAIT` | excluded | both results returned, `interrupted: false` |
+| `PERMISSION_WAIT` | excluded structurally | no pending tool call to approve — the decisive command was never emitted; `permissionMode: default`; the job dir holds only `state.json`, `timeline.jsonl` and an empty `tmp/` |
+| `MODEL/SAFETY_INTERRUPTION` | not supported | no `model_refusal_fallback` on the turn. A **strong** absence, not a generic one: this same session demonstrably writes that record type, on 2026‑08‑12 at 22:00:48.420Z |
+| `SUPERVISOR/QUEUE_WAIT` | not supported | `inFlight: {tasks: 0, queued: 0, kinds: []}` |
+
+What these surfaces **cannot** distinguish: whether the continuation was never *generated*, never
+*requested*, or generated and *lost*. Three different worlds, one identical set of records — so
+`UNKNOWN` stays.
+
+**Scientist A's overnight death is a SEPARATE event.** She was alive and stalled at the deadline;
+by the next morning the roster reported **`failed`**. The transition happened afterwards and its
+cause is `UNKNOWN`. It is not the truncation, and it must not be called an idle-stop: the observed
+state is `failed`, not `stopped`. It informs 6.A without resolving it.
+
+## The kernel does not guarantee continuation — declared boundary, not implementation
+
+*Operator decision, by delegation.*
+
+The model ↔ tool ↔ supervisor loop is the **supervisor's** responsibility. LEGEND **detects**
+non-completion, **adjudicates** from durable state and the transcript, and **recovers** only when
+the lifecycle authorises it. Guaranteeing continuation would mean coupling to uncontracted
+internals and turning this kernel into an alternative mini-runtime.
+
+Detection already exists and has been measured: a durable deadline, a completion token, transcript
+adjudication, and `UNDETERMINED` when the token is absent. Recovery uses primitives already
+measured — but it is **not automatic at the deadline**:
+
+```
+deadline expired
+    → transcript adjudication
+    → check the actor's lifecycle
+        if FAILED or STOPPED:  respawn by job id
+                               → verify SAME session / kind / roster
+                               → RECOVERY_PASS
+                               → optional re-delegation
+        if still alive / blocked / waiting:  DO NOT respawn.
+                                             Adjudicate the stall first.
+```
+
+🔴 **`TIMEOUT ≠ RESTART AUTHORIZATION`.** An expired deadline says the work was not completed. It
+does not demonstrate that the actor should be restarted — and restarting one that is still alive
+destroys the stall that is the only thing worth measuring. **Zero new primitives; no continuation
+mechanism is built.**
+
+### `state.json` is diagnostic evidence, never a liveness source
+
+Measured the same morning: the job's `state.json` still read `state: "working"`, frozen at
+`2026‑08‑13T21:53:22Z`, while the supervisor's roster reported Scientist A as `failed`.
+**The stale surface is the one that reads healthy** — a reader consulting the internal store would
+have concluded she was working. Canonical lifecycle is whatever the supervisor's documented
+surface exposes; the internals are useful only to understand *what happened*, never to adjudicate
+alive or dead. This is the same rule already applied when the launcher refused to parse
+`~/.claude/daemon/roster.json`, arriving from the other direction.
 
 ## OPEN QUESTION — resolutions and residue
 
@@ -418,9 +509,25 @@ pointer to whatever happened.
 per-launch guarantee this kernel enforces at birth is enforced by the supervisor instead —
 observed in `respawnFlags`, which carried `--name`, `--settings <our transport.json>` and
 `--model`. Recovery therefore *depends* on a non-contracted surface, which is why it became item
-5 of the recertification checklist rather than a comment. The same observation touches OB‑2:
-`--model` is stored as the model the actor was **born** with, so a respawn undoes a mid-session
-fallback — the actor returns as what it was, not as what it became.
+5 of the recertification checklist rather than a comment.
+
+> 🔴 **`MODEL_REVERT_ON_RESPAWN` — FALSIFIED, and it was mine.** This section first claimed that
+> `--model` is stored as the model the actor was *born* with, so a respawn undoes a mid-session
+> fallback. Measured 2026‑08‑14 on Scientist A: her `respawnFlags` carry `--model
+> claude-opus-5` — the **fallback** model, not her birth model `claude-fable-5` — and the turn
+> she ran after the respawn executed as `claude-opus-5`. **What the narrow observation supports,
+> and nothing further: in this measured case the respawn preserved the CURRENT model state, not
+> the model of birth.** No generalisation beyond the observed case.
+>
+> **The shape of the error is the part worth keeping.** On the qualification probe, birth model
+> and current model were *the same string*, because that probe's model never changed. The two
+> hypotheses were therefore **indistinguishable on that subject** — and from a non-discriminating
+> measurement I picked the stronger causal explanation and wrote it into a commit and a spec.
+> The measurement was real; it just could not tell the two apart.
+>
+> This **strengthens** D2's `executed_by`: actor identity, birth model and executing model can
+> diverge over time and stay diverged across a recovery. The per-turn source of truth remains the
+> transcript.
 
 **And the post-check exists because arm 2 earned it.** `resume` no longer ends in `exec`; it
 verifies that the same session came back, live, still background, and refuses
