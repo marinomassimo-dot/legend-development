@@ -15,6 +15,23 @@ dismantling anything here.
 
 ---
 
+## Index
+
+Pointers only. Every claim lives in the entry that carries its measurement, and a summary that
+restated them here would separate the claim from its evidence — the surface without
+accountability this project has already declined twice.
+
+| theme | entries |
+|---|---|
+| **identity** | [MC‑1 — cell identity is declared, never derived](#mc1--cell-identity-is-declared-never-derived) · [OB‑4, the name is not an identity](#observation--recorded-no-gate) |
+| **lifecycle** | [MC‑3 — two-phase lineage](#mc3--two-phase-lineage-pending_birth--active-created-with-o_excl) · [MC‑6 — recovery is `respawn`](#mc6--recovery-is-respawn-and-a-success-shaped-exit-is-not-evidence) · [`BACKGROUND_RECOVERY_CONTRACT`](#background_recovery_contract--undetermined-and-one-thing-that-is-not) · [the kernel does not guarantee continuation](#the-kernel-does-not-guarantee-continuation--declared-boundary-not-implementation) |
+| **messaging** | [MC‑5 — `REACHABLE` vs `OPERATIONAL`](#mc5--51c-reachable-and-operational-are-two-outcomes-never-one-word) · [`RETURN_CHANNEL_PASS`](#return_channel_pass--the-leg-that-had-never-been-observed-observed-once) · [five outcomes, never four](#five-outcomes-never-four) |
+| **workspace** | [5.1g — closed, the boundary was never there](#51g--closed-the-boundary-was-never-there-to-be-observed) · [registered candidate: `--worktree` at birth](#registered-candidate-not-to-be-tried-now) |
+| **permissions** | [`PERMISSION_WAIT`](#permission_wait--measured-named-by-the-supervisor-and-unanswerable-at-night) · [the register, entry 1](#permission-collection--the-register-entry-1) · [the register needs a sampler](#-the-register-cannot-be-compiled-afterwards--a-requirement-of-the-attended-pilot) |
+| **observability** | [`state.json` is not a liveness source](#statejson-is-diagnostic-evidence-never-a-liveness-source) · [an actor cannot report the permission it was blocked on](#-an-actor-cannot-report-the-permission-it-was-blocked-on) · [`SESSION_RUNTIME_DRIFT` and model identity](#observation--recorded-no-gate) |
+| **failure taxonomy** | [`MESSAGE_TURN_TRUNCATION`](#message_turn_truncation--a-failure-class-defined-by-its-symptom) · [`PERMISSION_WAIT`](#permission_wait--measured-named-by-the-supervisor-and-unanswerable-at-night) · [self-erasing blocking events — **hypothesis**](#self-erasing-blocking-events--a-hypothesis-with-one-instance) |
+| **process** | [decisions of record](#decisions-of-record) · [certification log](#certification-log) · [primitive budget](#primitive-budget) · [open questions](#open-question--resolutions-and-residue) · [execution order](#execution-order) |
+
 ## Decisions of record
 
 Both were exercised under explicit delegation: **adjudicated by Fable, ratified by the
@@ -561,6 +578,45 @@ system.
 operator present and waiting for exactly that. If the cheapest possible command costs that, the
 register's first lesson is not which permissions to grant but **how much a single unanswered
 question costs.**
+
+### Self-erasing blocking events — a hypothesis with one instance
+
+**Measured instances: one.** A permission prompt blocks an actor, is answered, and leaves no
+record in either the roster or the job timeline. It is tempting to call this a *class* of
+blocking event and start designing for it. **That would be a frequency inferred from n = 1**,
+which this registry forbids by name.
+
+So it is recorded as a **hypothesis with a candidate list**, and each candidate carries the
+measurement that would promote it. The confirming observation is uniform and cheap: **`waitingFor`
+carrying a value other than `"permission prompt"`**, followed by that value leaving no durable
+trace once resolved.
+
+| candidate | status |
+|---|---|
+| rate limit | not measured |
+| API timeout | not measured |
+| tool initialisation | not measured |
+| network wait | not measured |
+| model queue | not measured |
+| unavailable resource | not measured |
+
+Until at least one of these is observed with its own `waitingFor` value, the statement stands at:
+*one blocking event is known to erase itself.* Not *blocking events erase themselves.*
+
+### 🔴 The actor's perspective is not the system's
+
+**An orchestrator cannot ask an agent why it is stuck.** The agent will answer, accurately, about
+its own experience — and that experience is *incomplete with respect to the system*, in ways the
+agent has no way to detect. The actor here reported no permission prompt because none appears in
+its record; from inside, the command simply took a while. Nothing was concealed and nothing was
+mistaken: two vantage points, one of which cannot see the event.
+
+This sits beside the rule about the timeline's `text` field, and they are the same rule from two
+sides: **an actor's account is testimony, not instrumentation.** Testimony is worth having — it
+carries intent, reasoning and the qualifications an instrument never records, and this actor's own
+unprompted disclosure about the deferred tool is exactly that value. But it is never the census,
+never the liveness source, and never the answer to *why did you stop*. For that, read the surface
+that observes the actor rather than the one the actor writes.
 
 ### Registered candidate, not to be tried now
 
