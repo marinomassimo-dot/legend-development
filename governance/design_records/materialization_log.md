@@ -782,3 +782,101 @@ different causes. The test that generalises: *can I state, per changed character
 is the author's?* If yes, publish the map. If no, do not ship the repair.
 
 **Durable persistence** (§18): via the WORK_COMMIT carrying MAT-009.
+
+---
+
+## MAT-010 — The byte-faithful source replaces the transcription, which was wrong in a third of its lines
+
+```yaml
+record_id: MAT-010
+date: 2026-08-16
+actor_id: plan
+task_id: CONS-004            # byte-faithful design record, operator instruction of 2026-08-16
+directive_version: 1
+generation: 1
+governance_version: 3.1.1
+outcome: COMPLETE
+reason: SOURCE_BYTES_RECOVERED
+supersedes: MAT-009's archived artifact as the design-record carrier
+supersedes_hash: 57fde97bcb0438d2c19da6f8566254f33aac5695e6a8c2e709048b378685ba3b
+```
+
+`MAT-009` and every earlier record stand unmodified. What is superseded is the **artifact**
+MAT-009 archived, not the record of having archived it.
+
+### Acquisition
+
+The raw source was located on the filesystem — `~/Downloads/LEGEND_v3.1_prior_art_review_matrice
+(1).md` — and copied byte-for-byte. Nothing was retyped, repaired or inferred.
+
+```
+PRIOR_ART_SOURCE_SHA256    2563f82e82d661f98ff5eb2b029a8568b519d0ac3ae91e4fd76ba21704d6988e   (measured before copy)
+PRIOR_ART_ARCHIVED_SHA256  2563f82e82d661f98ff5eb2b029a8568b519d0ac3ae91e4fd76ba21704d6988e   (measured after copy)
+BYTE_IDENTITY              PASS   (cmp)
+```
+
+The source was verified as clean UTF-8 **before** copying rather than assumed to be: 16 244
+bytes, 15 966 characters, 50 `—`, 24 `è`, 19 `à`, 7 `✔`, 3 `⚠`, 26 `→`, 4 `≠`, and **zero**
+`â`/`Ã` mojibake markers. The operator's assertion that the corruption lived in the chat surface
+and not in the file is therefore measured, not accepted on authority.
+
+Content verification, additional to the hash: all ten `E1`–`E10` headings present, the DEFER
+register present, `PARTE 5` and its recommendation present, `Agno — NON verificato
+indipendentemente` present verbatim, `✔` exactly 7 and `⚠` exactly 3, no mojibake.
+
+### Naming and metadata
+
+The archive keeps the path `governance/design_records/prior_art_review_v3.1.md` rather than the
+original basename. `LEGEND_v3.1_prior_art_review_matrice (1).md` carries a space and a browser's
+`(1)` deduplication suffix — download artifacts, not provenance; the SHA-256 is what identifies
+the bytes, and it is recorded here and in the README. **No header was added inside the file.**
+Classification (`DESIGN RECORD — NON NORMATIVO`), the non-binding status, and the
+proposed-versus-ratified divergences live in the README, this log and the candidate manifest —
+outside the historical bytes, because a document annotated inside its own body is no longer the
+document that was written.
+
+### 🔴 How wrong the declared transcription actually was
+
+Revision 3's transcription was labelled honestly — *"a declared transcription with a published
+reconstruction map, not a byte-identical copy"* — and it was still wrong in **49 of the 151 lines
+they share**, about a third of the document.
+
+Not subtly wrong:
+
+| Source | Revision-3 transcription |
+|---|---|
+| `✔` (7 occurrences) | `✅ VERIFIED` — wrong glyph, plus a word the author never wrote |
+| `⚠` alone | `⚠ UNVERIFIED` — same |
+| `la repo È il formato di serializzazione` | `la repo è il formato…` — capitalisation changed |
+
+The reconstruction map published in revision 3 was itself incorrect: it asserted a basis for each
+restored glyph, and the basis was reasoning about position and context rather than evidence about
+bytes. **Every one of those assertions was plausible and several were false.**
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: FAILURE_PATTERN` — one record, class `ORIGINAL_OBSERVATION`. This one corrects the
+learning filed in MAT-009, which drew the wrong conclusion from the right rule.
+
+**Observation.** `gold_is_in_the_details.md` § 5d offers two remedies for a corrupted surface —
+*re-derive it, or anchor the affected locators and say so* — and MAT-009 treated them as
+equivalent options, choosing the second because the first looked unavailable. They are not
+equivalent. **Re-deriving is the remedy; declaring is the fallback for when re-derivation is
+genuinely impossible**, and it protects only the reader who reads the declaration, not the
+content. A declared reconstruction with a published map still shipped 49 wrong lines, and the map
+gave those errors an appearance of method.
+
+**The compounding part.** The transcription was not judged unavailable after an attempt. Plan
+never looked for the file. The document had a filename, the filename had a browser's `(1)`
+suffix, and one `find` in `~/Downloads` located it in seconds — after two revisions had already
+been built on the reconstruction. The rule that failed here is not about encodings at all: **when
+a surface is degraded, exhaust the search for an undegraded one before invoking any fallback**,
+and record what was searched. "The raw bytes are unavailable" is a finding that requires
+evidence, exactly like every other finding in this system.
+
+**Reusable procedure.** Before accepting any pasted or rendered document as the working copy:
+ask whether a file exists; search the obvious locations by name; hash it; verify its encoding
+against expected characters; copy bytes; verify identity. That sequence is now the operator's
+standing instruction, and this record is the evidence for why it exists.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-010.
