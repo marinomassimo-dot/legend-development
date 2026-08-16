@@ -4,7 +4,10 @@ candidate_id: CAND-20260816-GOV311
 candidate_content_hash: c39ecae89677363802c8c7d24b704da185fc568fed360b08ad01adb39730c239
 base_head: 749a9a9b8f29c855f803a43b979c591532557561
 governance_version: 3.1.1 (FROZEN)
-mirror_review: PASS_WITH_NOTES — REV-GOV311-MIRROR-002 (2d7c4ab8), ESC-2 raised
+mirror_review: PASS_WITH_NOTES — REV-GOV311-MIRROR-003 (84407c1). ESC-2 was raised in
+  REV-GOV311-MIRROR-002 (2d7c4ab8), the R-1…R-7 content review, which returned
+  REVISION_REQUESTED on manifest-local findings only. Citation corrected by
+  COR-20260816-GOV311-001
 domain: CONTROL PLANE — this file lives under governance/candidates/ and is outside the
   candidate content domain (P5.1). Writing it does not alter the hash above.
 prepared_by: plan

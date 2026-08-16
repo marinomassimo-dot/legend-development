@@ -34,7 +34,7 @@ gate changes at once.
 |---|---|
 | `CANDIDATE_CONTENT_HASH` | `c39ecae89677363802c8c7d24b704da185fc568fed360b08ad01adb39730c239` |
 | `BASE_HEAD` | `749a9a9b8f29c855f803a43b979c591532557561` — equals `main`; branch **0 behind** |
-| Mirror | `PASS_WITH_NOTES` — `REV-GOV311-MIRROR-002`, commit `2d7c4ab8`, bound to this hash |
+| Mirror | `PASS_WITH_NOTES` — `REV-GOV311-MIRROR-003`, commit `84407c1`, delta verification bound to this hash. The full R-1…R-7 content review is `REV-GOV311-MIRROR-002` (`2d7c4ab8`), whose verdicts 003 did not reopen |
 | Human approval | `APPROVED` — `RES-20260816-GOV311-001`, bound to this hash + base |
 | Deviations | PID-09 and PID-10 **ACCEPTED** by the operator |
 | LINT · publication gate | `PASS` · `PASS`, `BLOCKS: 0` |
