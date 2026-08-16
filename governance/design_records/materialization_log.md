@@ -581,3 +581,117 @@ instead of rediscovering it.
 **Durable persistence** (§18): via the WORK_COMMIT carrying MAT-007. Six session-learning records
 now exist across MAT-001…007 and none is yet in `LEARNING_INDEX`, which does not exist; that
 filing is the first item due after canonical commit.
+
+---
+
+## MAT-008 — An undeclared methodology change, withdrawn into its lifecycle; design record still missing
+
+```yaml
+record_id: MAT-008
+date: 2026-08-16
+actor_id: plan
+task_id: CONS-002            # residual verifications before routing, operator instruction of 2026-08-16
+directive_version: 1
+generation: 1
+governance_version: 3.1.1
+outcome: PARTIAL — point 2 closed by correction; point 1 still BLOCKED
+supersedes_hash: f869a5237a70634ada535343b7484ddc45f36111e9c79664179086a81f8b8909
+```
+
+### Point 1 — the design record was not transmitted a third time
+
+The instruction reads *"Ti fornirò ora il documento: `LEGEND v3.1 — TARGETED HOSTILE PRIOR-ART
+REVIEW`"* and then specifies how to archive it. **No document accompanied the message.** Nothing
+was archived and nothing was reconstructed; MAT-005 is not modified and its `MISSING`
+classification stands.
+
+Three requests, three absences, same channel, same document. Under Annex E.2 this is a further
+`REPLICATION` of the failure pattern first recorded in MAT-001. The proposed practice — *declare
+the parts and their count, and register each as `RECEIVED` or `ABSENT` before writing any of
+them* — is now confirmed by three observations in the two classes that count fully, well past the
+`BEST_PRACTICE_CANDIDATE` threshold. The wording of the third request differs from the second in
+a way worth recording: *"ti fornirò ora"* (future) rather than *"in allegato trovi"* (present), so
+the document may be intended for a following message. Plan does not act on that presumption.
+
+### Point 2 — the operator's challenge was correct, and the classification was wrong
+
+The migration map classified the whole *One actor, one worktree* section as `PRESERVED`. Verified
+against the source, that is **false for rule 4**. The pre-migration `CLAUDE.md` rule 4 ends at
+*"`git diff <path>` in full, or not at all."* The version written into
+`framework/protocols/parallel_legend_protocol.md` at commit `04cbd3bd` continued:
+
+> *"Read it against the **target** you intend to move to, not only against the common ancestor: a
+> file can look ahead of its base and still be far behind the branch you are about to absorb it
+> into."*
+
+Two sentences that appear in no source file. A new normative obligation, binding on every actor,
+introduced inside a commit whose message says *every rule given a canonical home* and whose map
+says `PRESERVED`. **That is exactly the implicit methodology change the instruction names**, and
+it was not visible in the manifest because Plan had classified its own addition as preservation.
+
+**Authority analysis, since it was asked for.** The operator's step-2 instruction gave Plan
+structural competence over the migration and named `/framework/protocols/` as an eligible
+destination — that authorizes *relocating* content into the file. It does not authorize adding
+new law to it. Under Annex E.2 the addition rests on a single `ORIGINAL_OBSERVATION` with no
+Mirror validation, which does not meet the `BEST_PRACTICE_CANDIDATE` threshold of two
+confirmations or one plus Mirror. Under Annex C.1 a methodology-changing rule carries a review
+floor of **R4 — Mirror**. Writing it straight into a shared canonical protocol is a `PROMOTED`-level
+act performed at `OBSERVED` evidence, skipping `LOCAL`, `PROVISIONAL` and `VALIDATING` entirely.
+
+**Correction applied.** The two sentences are removed. Rule 4 is now byte-identical to the
+migrated source (verified by diff), so the map's `PRESERVED` classification is true as written
+rather than true after a footnote. Nothing is lost: the observation lives in MAT-007 and is
+registered below as the object it should have been from the start.
+
+```
+PRACTICE_ID:        PROV-DIFF-AGAINST-TARGET
+HYPOTHESIS:         Before migrating, reverting, absorbing or inventorying a file, diffing it
+                    against the branch you intend to end on — not against the common ancestor —
+                    prevents a class of silent loss that the existing "read the whole diff" rule
+                    does not catch
+APPLIES_TO:         any absorption, revert, relocation or inventory across branches
+STARTED:            2026-08-16
+EVIDENCE_EXPECTED:  occurrences where an ancestor-relative diff and a target-relative diff would
+                    have led to different actions
+SUCCESS_CRITERION:  at least one further independent occurrence, or Mirror validation, before
+                    promotion into parallel_legend_protocol.md rule 4
+FAILURE_CRITERION:  the distinction never changes an outcome in practice, i.e. the existing rule
+                    was already sufficient
+EXPIRY:             at Mirror's first coordination review — PROMOTE | REJECT | EXTEND_WITH_REASON
+ROLLBACK:           none required; the practice is not yet applied to any canonical file
+STATUS:             PROVISIONAL — evidence: 2 occurrences in one session (the superseded
+                    PMID42422765 manifest, MAT-006; the stale CLAUDE.md, MAT-006), both by the
+                    same actor in the same session, which is why they count as one observation
+```
+
+### Consequence for the candidate
+
+The content tree changed, so **`f869a523…f8b8909` is SUPERSEDED and must not be reviewed.** The
+manifest carries the new value. `BASE_HEAD` is unchanged: `main` is still `749a9a9b`, the branch
+is 0 behind, and the GATE 0 base condition holds without a further alignment.
+
+The hash definition is also tightened, because the old one picked a commit by hand to dodge the
+self-reference. It now hashes a **filtered tree listing** that deterministically excludes
+`governance/candidates/`, so editing the manifest never changes the hash of the content the
+manifest describes, and editing any content file always does. See PID-06 in the manifest.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: FAILURE_PATTERN` — one record, class `ORIGINAL_OBSERVATION`.
+
+**Observation.** A migration is the ideal cover for an undeclared change, and the actor doing it
+is the least able to see one. Every edit in a relocation legitimately looks like the others: same
+commit, same rationale, same "moved from CLAUDE.md" framing. The added sentences even *felt* like
+preservation, because they strengthened the very rule being moved and came from a lesson learned
+minutes earlier in the same session. Nothing in the process flagged them, and the actor's own map
+recorded them as `PRESERVED` in good faith.
+
+**The reusable part.** A relocation must be verifiable as a relocation: for every rule claimed
+`PRESERVED`, the destination text must be **diffable against the source text**, and any
+difference is a separate change requiring its own classification — regardless of whether it
+strengthens, clarifies or improves. "Improvement" is not a category that exempts a change from
+declaration; it is the category most likely to be smuggled. The check is mechanical and takes
+seconds, and it was an external reviewer, not the author, who asked the question that surfaced
+this one.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-008.
