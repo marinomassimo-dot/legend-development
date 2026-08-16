@@ -504,3 +504,80 @@ now reachable only through the reflog. It is **not rewritten** — it is a true 
 that existed. The successor checkpoint carries the post-rebase pointers and this mapping.
 
 **Durable persistence** (§18): via the WORK_COMMIT carrying MAT-005 and MAT-006.
+
+---
+
+## MAT-007 — CLAUDE.md migrated; single INTEGRATION_CANDIDATE prepared; STOP
+
+```yaml
+record_id: MAT-007
+date: 2026-08-16
+actor_id: plan
+task_id: CONS-001
+directive_version: 1
+generation: 1
+governance_version: 3.1.1
+outcome: COMPLETE — candidate READY FOR MIRROR HOSTILE REVIEW
+candidate_id: CAND-20260816-GOV311
+candidate_content_hash: f869a5237a70634ada535343b7484ddc45f36111e9c79664179086a81f8b8909
+```
+
+### How the migration was made non-lossy
+
+Three independent read-only inventories mapped the old root `CLAUDE.md` rule by rule against
+`framework/`, `ARCHITECTURE.md`, the protocols, the manuals and the disease-model layer, under
+one instruction: quote, do not paraphrase, when claiming a rule already exists elsewhere.
+Terminological similarity was not accepted as equivalence.
+
+What that produced was not a formality. **The growth principle existed in no other file** — and
+`mission.md`, the only file that summarised it, delegated its five binding consequences *back
+into `CLAUDE.md` by anchor*. Emptying the file without noticing would have removed a principle
+and simultaneously broken the pointer that would have revealed the removal. Likewise
+`gold_is_in_the_details.md` had been called the "full statement" of parity of sources while
+stopping at rule 6, so rules 5b–5e, 7 and 8 had no master-level home at all; `MODE: Q&A` existed
+nowhere else; and several literal strings a reader is instructed to emit verbatim —
+`FULL STATE NOT AVAILABLE — COMMIT BLOCKED`, `PARTIAL FILE — NOT SAFE FOR REPLACEMENT` — appeared
+in exactly one file in the repository.
+
+The router was written **last, and only after every destination existed**, so that an
+interruption at any point would have left the old file intact rather than half-emptied.
+
+Complete map: [`claude_md_migration_map.md`](claude_md_migration_map.md). Counts: 36 rules
+`PRESERVED` (moved in full), 20 `REPLACED_BY_EQUIVALENT`, 2 `UNRESOLVED` inbound pointers.
+
+### The candidate
+
+One candidate for the whole introduction, `CHANGE_CLASS: MAJOR`, six source commits on
+`BASE_HEAD 749a9a9b`. Sixteen Plan implementation decisions are listed individually with their
+delegating clause and state — four `PROVISIONAL` with expiry, two `UNRESOLVED`, the rest
+`PROPOSED` — rather than left to be discovered inside file diffs.
+
+The manifest declares one thing it cannot do: **the content hash excludes the manifest itself**.
+A manifest containing a hash of a tree containing that manifest is a fixed point. The hash binds
+the proposed content; the manifest is the declaration about it, in the relation a signature has
+to what it signs. Said out loud rather than papered over.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: FAILURE_PATTERN` — one record, class `ORIGINAL_OBSERVATION`.
+
+**Observation.** A relocation is safe only when the inventory is taken against the state you are
+migrating *to*, not the state you happen to be sitting on. Two separate near-misses in this
+session had the same shape, and neither was visible from the working tree alone. The dirty
+manifest looked ahead of its base and was far behind `main`, carrying five figure locators fewer.
+The `CLAUDE.md` in hand looked complete and was missing a rule `main` had added twelve lines of.
+In both cases the object being reasoned about was **stale in a way that only a diff against the
+target could show**, and in both cases the confident-looking action — revert the file, inventory
+the file — would have destroyed something while appearing careful.
+
+**The reusable part.** Before migrating, reverting, absorbing or inventorying anything, diff it
+against the branch you intend to end on, not against the ancestor you started from. The ancestor
+tells you what *you* changed; only the target tells you what *you would lose*. This is the
+sharpened form of the existing rule *read the whole diff before reverting* — the rule says read
+it all, and this says read it against the right thing. Carried into
+`parallel_legend_protocol.md` rule 4 as part of this migration, so the next actor inherits it
+instead of rediscovering it.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-007. Six session-learning records
+now exist across MAT-001…007 and none is yet in `LEARNING_INDEX`, which does not exist; that
+filing is the first item due after canonical commit.

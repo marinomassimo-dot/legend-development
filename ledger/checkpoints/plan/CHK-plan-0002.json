@@ -1,0 +1,45 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Written at the STOP point of the pre-candidate consolidation. Supersedes CHK-plan-0001 as the resume point; CHK-plan-0001 is not rewritten — its head pointer is reflog-only after the rebase and remains a true record of the state that existed.",
+
+  "CHECKPOINT_ID": "CHK-plan-0002",
+  "SUPERSEDES": "CHK-plan-0001",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "CONS-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "c1d1a9cf3054bfdfaee8c2db45129f8049e652f2bebbb56b3f6740a07ccc81da",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+
+  "TIMESTAMP": "2026-08-16",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "MILESTONE_PLAN_ORIGIN": "The operator instruction of 2026-08-16 supplied seven ordered steps; they are treated as the milestone plan. Steps 2 and 4 were executed in reverse order, declared in MAT-006.",
+
+  "MILESTONES_REACHED": [
+    {"milestone": "step 1 — archive the prior-art design record", "durable_evidence": "MAT-005", "status": "BLOCKED — document never transmitted; nothing reconstructed"},
+    {"milestone": "step 4 — base alignment onto main", "durable_evidence": "commit a34bf188; rebase onto 749a9a9b; stash@{0} preserved", "status": "COMPLETE"},
+    {"milestone": "step 2 — non-lossy CLAUDE.md migration", "durable_evidence": "commit 04cbd3bd; governance/design_records/claude_md_migration_map.md", "status": "COMPLETE"},
+    {"milestone": "step 3 — perimeter freeze", "durable_evidence": "PENDING_IMPLEMENTATION section of the candidate", "status": "OBSERVED — no new component started"},
+    {"milestone": "step 5 — full verification", "durable_evidence": "candidate §6 verification record", "status": "COMPLETE — LINT PASS, gate PASS/0"},
+    {"milestone": "step 6 — single INTEGRATION_CANDIDATE", "durable_evidence": "governance/candidates/CAND-20260816-GOV311.md", "status": "COMPLETE"},
+    {"milestone": "step 7 — stop and hand over", "durable_evidence": "this checkpoint", "status": "COMPLETE"}
+  ],
+
+  "DURABLE_POINTERS": {
+    "branch": "evidence-index",
+    "base_head": "749a9a9b8f29c855f803a43b979c591532557561",
+    "candidate_id": "CAND-20260816-GOV311",
+    "candidate_content_hash": "f869a5237a70634ada535343b7484ddc45f36111e9c79664179086a81f8b8909",
+    "candidate_manifest": "governance/candidates/CAND-20260816-GOV311.md",
+    "materialization_log": "governance/design_records/materialization_log.md",
+    "migration_map": "governance/design_records/claude_md_migration_map.md",
+    "preserved_stash": "stash@{0} — superseded PMID42422765 worktree edit, deliberately not dropped"
+  },
+
+  "STATE": "AWAITING_APPROVAL — candidate handed to the operator for routing to Mirror",
+
+  "RESUME_RULE": "Annex A.6 refusal rule. Recompute the fingerprint with governance/scripts/governance_fingerprint.py compose --role plan and compare; never compare against a value copied from prose. Do not resume on a directive_version, generation or fingerprint mismatch — report and ask Orchestrator for state. Note that the candidate content hash binds the tree at 04cbd3bd: any material change to the proposed content invalidates it and every approval bound to it."
+}
