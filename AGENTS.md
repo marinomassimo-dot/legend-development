@@ -1,13 +1,21 @@
 # AGENTS.md — agent entrypoint (thin pointer)
 
 This file is only the **entry point** for Codex and compatible agentic tooling.
-**The single normative source is [`CLAUDE.md`](CLAUDE.md)** (plus [`framework/instruction/LEGEND_CORE.md`](framework/instruction/LEGEND_CORE.md)).
-No content is duplicated here: read `CLAUDE.md` and operate from it. That is deliberate — two parallel normative files drift.
+[`CLAUDE.md`](CLAUDE.md) is the **router**: it is deliberately minimal and does not itself carry
+the operating law. The normative sources it routes to are
+[`framework/instruction/LEGEND_CORE.md`](framework/instruction/LEGEND_CORE.md),
+[`framework/instruction/epistemic_discipline.md`](framework/instruction/epistemic_discipline.md),
+[`framework/master/gold_is_in_the_details.md`](framework/master/gold_is_in_the_details.md),
+[`framework/master/designed_for_growth.md`](framework/master/designed_for_growth.md),
+[`framework/protocols/`](framework/protocols/) and, for the multi-agent laboratory,
+[`governance/`](governance/) with [`roles/`](roles/).
+No content is duplicated here: follow the router and operate from what it names. That is
+deliberate — two parallel normative files drift.
 
 ## Read order (mandatory, in this order)
 
 1. [`framework/state/state_manifest_current.md`](framework/state/state_manifest_current.md) — the live state, **always first**; confirm `current_state: READY`.
-2. [`CLAUDE.md`](CLAUDE.md) — **the complete normative source**: layer architecture, modes, operational gates, writing rules, epistemic discipline, skill bootstraps.
+2. [`CLAUDE.md`](CLAUDE.md) — the router, then the normative files it names for the work at hand.
 3. The bootstrap skills named in `CLAUDE.md`: [`legend-capability-scout`](.claude/skills/legend-capability-scout/SKILL.md), [`legend-session-takeaways`](.claude/skills/legend-session-takeaways/SKILL.md), and [`legend`](.claude/skills/legend/SKILL.md) as the autopilot when a study list is supplied.
 4. The 4 canonical current files in [`disease-models/wwox/registries/`](disease-models/wwox/registries/) (plus [`meta_index_current.md`](disease-models/wwox/meta/meta_index_current.md) for Standard sessions).
 
@@ -26,4 +34,4 @@ No content is duplicated here: read `CLAUDE.md` and operate from it. That is del
 
 ## Sync rule
 
-If this file and `CLAUDE.md` diverge, **`CLAUDE.md` + the state manifest win**. This file is deliberately minimal: update it **only** if the read order or the inviolable facts above change — **never** re-duplicate `CLAUDE.md`.
+If this file and the normative sources diverge, **the normative sources + the state manifest win** — `CLAUDE.md` routes, it does not adjudicate. This file is deliberately minimal: update it **only** if the read order or the inviolable facts above change — **never** re-duplicate the normative files.

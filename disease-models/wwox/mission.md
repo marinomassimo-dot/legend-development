@@ -58,7 +58,7 @@ Growth is deliberately slow at this stage because the infrastructure is being
 built now so that nobody has to reopen it at scale later. Every check, constant,
 ratchet, seal and baseline in this repository must therefore answer one question
 before it ships — *will this still be informative at the thousandth batch?* The
-binding consequences are in [`CLAUDE.md`](../../CLAUDE.md#-the-system-is-alive-and-always-growing--design-for-that-never-for-today).
+binding consequences are in [`designed_for_growth.md`](../../framework/master/designed_for_growth.md).
 
 ---
 

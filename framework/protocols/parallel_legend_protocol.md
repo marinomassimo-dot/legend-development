@@ -356,6 +356,65 @@ Day 4 (later):
 
 ---
 
+## 🔴 One actor, one worktree, one branch — and one integrator
+
+Everything above governs parallelism **logically**: disjoint scopes, merge before commit. It says
+nothing about where the work physically lives, because it was written for a system with one actor
+at a time. On **2026-08-09/10** several sessions ran against a single checkout — one HEAD, one
+index, one working tree — and it broke four times in two days, three different ways:
+
+- a branch created by one session **silently redirected another session's commit**: the author
+  reported work "on `main`" that was on a branch it had never chosen, twice;
+- `git checkout -- <path>` **destroyed another actor's uncommitted work** — specifically the
+  receipt-ledger tail anchor written moments earlier by `fulltext_receipts.py record`, turning a
+  healthy ledger into `BLOCK_SYSTEM`. The reverting actor had read the first twenty lines of the
+  diff and concluded the file held only its own change;
+- one session **committed another's in-flight files** because they looked finished.
+
+Nothing was lost, and that is luck rather than design. The binding rules:
+
+1. **Every actor works in its own `git worktree`, on its own branch.** Not a convention — the
+   shared checkout is what makes the other three failures possible.
+2. **Only the integrating session merges to `main`**, and only from the shared checkout. Other
+   actors publish by pushing their branch, never by checking `main` out.
+3. **Never commit, revert or stage a file another actor is holding** unless that actor has
+   declared it finished. If you do it anyway because the work would otherwise be lost, say so in
+   the commit message and name the author.
+4. **Read the whole diff before reverting.** `git checkout -- <path>` is a destructive write with
+   no confirmation, and — unlike blanket staging and heredoc writes — the `PreToolUse` Bash guard
+   does not cover it. `git diff <path>` in full, or not at all. Read it against the **target** you
+   intend to move to, not only against the common ancestor: a file can look ahead of its base and
+   still be far behind the branch you are about to absorb it into.
+5. **A `BATCH_COMMIT` owns the shared checkout for its duration.** It snapshots, propagates and
+   restores on failure; a foreign commit inside that window corrupts the snapshot it would
+   restore from.
+6. 🔴 **A branch carries the manifest; it does not carry the evidence.** The five rules above are
+   about *who may write*. This one is about *what a write can still not reach*. `files/` is
+   gitignored for copyright — this repository publishes the derivation and never the derived — so
+   a branch, a worktree and a temporary workspace all carry the **manifest**, and none of them
+   carries the artifacts the manifest names. Two actors on two worktrees read the same
+   `source_artifacts` block off two different filesystems, only one of which has the file in it.
+
+   So **every evidentiary artifact is written into the `files/` of the shared checkout**, and
+   **the validation that counts is the one re-run there**. `_safe_repo_path` already refuses to
+   resolve an artifact outside its workspace, which is the right refusal: it is what stops a
+   reading from being certified against a copy that will not exist tomorrow. Where the manifest is
+   authored elsewhere, validate it with the shared checkout as artifact root —
+   `deepdive_manifest.py --artifact-workspace` exists for exactly that — and say so.
+
+   `PMID 34831305` was validated `MANIFEST STRICT PASS` in a temporary workspace that then
+   evaporated: the manifest survived on its branch, the two figure files did not travel with it,
+   and two visual locators spent a day being unverifiable by anyone — **including the actor that
+   had verified them.** A green verdict whose inputs are gone is not a verification, it is a
+   memory of one. Operational detail: [[fulltext_read_receipt]] § *Evidence locality across
+   branches*.
+
+The private working material a `BATCH_COMMIT` consumes — the commit candidates in `staging/` — is
+gitignored, so it exists in **exactly one checkout** and does not propagate to worktrees. That is
+why the integrator's step is not interchangeable with anyone else's.
+
+---
+
 **End of `parallel_legend_protocol.md`**
 
 > Parallel deep dive yes; parallel commit no.
