@@ -213,29 +213,86 @@ This resolves the `HEARTBEAT_CADENCE = UNRESOLVED` that Plan declared at rehydra
 
 ---
 
-## P5 · CANDIDATE_CONTENT_HASH — deterministic definition
+## P5 · CANDIDATE_CONTENT_HASH — the candidate content domain and its hash
 
 **Delegated by:** D.2 — *"hash del CONTENUTO (tree/patch deterministico definito da Plan) — NON
 l'hash git del commit futuro"*.
 
+**This section is the single authoritative definition.** A candidate manifest **references** it;
+it never restates it. `governance/scripts/candidate_content_hash.py` parses the two declarations
+below rather than carrying its own copy, so the executable form and the governed form cannot
+disagree.
+
 ```
-CANDIDATE_CONTENT_HASH = SHA-256( "legend-candidate-v1\n" + <tree-oid> + "\n" + <base-head-oid> )
-
-  <tree-oid>      = git rev-parse <candidate-commit>^{tree}
-  <base-head-oid> = the BASE_HEAD recorded in the manifest
+CANDIDATE_HASH_VERSION: legend-candidate-v3
 ```
 
-A git tree object is content-addressed over exactly the file contents and paths, and carries
-none of the commit metadata — author, date, message, parent — which is precisely the distinction
-D.2 draws. Two candidates that would produce byte-identical trees hash identically no matter who
-prepared them or when; a single changed byte in any file changes the tree, and therefore
-invalidates every approval bound to it (gate 5).
+### P5.1 · The candidate content domain
 
-BASE_HEAD is folded into the hash as well as recorded beside it, so that an approval cannot be
-transplanted onto a different base while still matching.
+Two kinds of artifact live on a candidate branch, and conflating them creates a fixed point:
 
-The version prefix exists so that a future change to this definition cannot silently produce
-colliding values with the old one.
+- **CONTENT** — what is proposed for canonical integration: the governance body and annexes, role
+  contracts, framework instruction, protocols, scripts, the disease model, documentation, the
+  bootstrap and deployment files. **Content determines the candidate's identity.**
+- **CONTROL PLANE** — artifacts whose function is to *describe or manage* a candidate, a review,
+  or an actor's runtime state: candidate manifests, checkpoints, task claims, the event ledger.
+  They exist because of the candidate; they are not the candidate.
+
+The rule follows from the difference: **an artifact that describes the candidate must not be able
+to change the identity of what it describes, and an artifact that constitutes the candidate must
+always change it.** A manifest recording a hash of a tree containing that manifest is a fixed
+point; so is a checkpoint recording the candidate's state inside the hashed tree. Revision 4
+excluded the first and left the second standing, which is what Mirror found.
+
+Control-plane roots are declared here, exhaustively, as directory prefixes:
+
+```
+CONTROL_PLANE_ROOTS:
+- governance/candidates/
+- ledger/
+```
+
+Everything not under a declared root is content. Adding a root is a **governed change to this
+file**, reviewable as such — never an ad-hoc exclusion made while preparing a candidate. The
+script prints every excluded path under `--show-domain`, so a reviewer sees exactly what was
+dropped rather than trusting that the filter did what it says.
+
+Nothing scientific or normative can be excluded by accident: `disease-models/`, `framework/`,
+`roles/`, `scripts/`, `deployment/`, the top-level documents and all of `governance/` except
+`candidates/` are outside both roots and always in the domain.
+
+### P5.2 · The hash
+
+```
+serialized = CANDIDATE_HASH_VERSION + "\n"
+           + BASE_HEAD + "\n"
+           + for each included entry, path-sorted:  <git ls-tree -r --full-tree line> + "\n"
+
+CANDIDATE_CONTENT_HASH = SHA-256(serialized), full hex
+```
+
+Each `ls-tree` line carries mode, type, object id and path, so a permission change or a blob
+change moves the hash exactly as a content change should. `BASE_HEAD` is inside the hash as well
+as beside it, so an approval cannot be transplanted onto a different base while still matching.
+
+**Every entry is newline-terminated, including the last.** This is stated because its absence
+caused a real defect: at revision 4 the recorded value was computed through a shell variable,
+where `$(...)` strips the trailing newline, while the published command used a pipe, which keeps
+it. One byte, two different hashes, on the same tree — and the count reported alongside it was
+short by one for the same reason. Byte layout is therefore pinned in the definition, and computed
+by a script that never passes the listing through a shell.
+
+### P5.3 · Reproduction
+
+```bash
+python3 governance/scripts/candidate_content_hash.py --base <BASE_HEAD> --tip <BRANCH_TIP>
+```
+
+Add `--show-domain` to print the version, the base, the tip, the included entry count and every
+excluded path. The count is **derived by the command**, never maintained by hand in a manifest.
+
+The version prefix moves to `v3` because both the byte layout and the excluded roots changed;
+`v1` and `v2` values can therefore never collide with these.
 
 ---
 

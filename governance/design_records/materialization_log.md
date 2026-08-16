@@ -880,3 +880,161 @@ against expected characters; copy bytes; verify identity. That sequence is now t
 standing instruction, and this record is the evidence for why it exists.
 
 **Durable persistence** (§18): via the WORK_COMMIT carrying MAT-010.
+
+---
+
+## MAT-011 — Mirror remediation RC-1…RC-5: the defect was one byte, and it had two faces
+
+```yaml
+record_id: MAT-011
+date: 2026-08-16
+actor_id: plan
+task_id: GOV311-PLAN-REMEDIATION-001
+directive_version: 1
+generation: 2
+governance_version: 3.1.1
+source_of_truth: mirror review c6a290e1 · reviews/mirror/REV-GOV311-MIRROR-001.md
+outcome: COMPLETE — RC-1…RC-5 resolved; candidate revision 5 prepared
+supersedes_hash: 2e7da13ff3bfff4554a28300d01b6e23b62ead3b787c3de78f92a2cd5b9256d7
+```
+
+New task, new generation, **not a resume**. The anti-resume declaration and the durable claim are
+in `ledger/tasks/plan/GOV311-PLAN-REMEDIATION-001.json`.
+
+### RC-1 — the mechanism, which Mirror correctly declined to infer
+
+Mirror's `WHAT_WOULD_CHANGE_MY_MIND` asked for *"a single executable command, run against a
+committed object in this repository, that outputs `2e7da13f…`"*. Here it is, at `3c6c6e15`:
+
+```bash
+LISTING=$(git ls-tree -r --full-tree 3c6c6e15 | grep -v $'\tgovernance/candidates/')
+printf 'legend-candidate-v2\n%s\n%s' "$BASE" "$LISTING" | shasum -a 256
+  → 2e7da13ff3bfff4554a28300d01b6e23b62ead3b787c3de78f92a2cd5b9256d7   (the recorded value)
+```
+
+versus the command that was published:
+
+```bash
+git ls-tree -r --full-tree 3c6c6e15 | grep -v $'\tgovernance/candidates/' \
+  | { printf 'legend-candidate-v2\n%s\n' "$BASE"; cat; } | shasum -a 256
+  → e3ca1983f6f09bc613fa1b108efc805f28c0a43782978eba2586cc1e04e79e76   (Mirror's value)
+```
+
+**The difference is one byte.** `$(...)` command substitution strips trailing newlines, so the
+value computed through a shell variable hashed a listing that ended without `\n`; the published
+pipeline preserves it. Same tree, same recipe, two hashes.
+
+The recorded value was therefore **derived, not fabricated** — by a command that was never
+published. That distinction matters for the diagnosis and changes nothing about the disposition:
+the number was unverifiable by a third party, which is precisely what gate 5 must prevent, and
+revision 4 stands superseded.
+
+**The same byte explains RC-3.** The manifest's "507 entries" came from
+`printf '%s' "$LISTING" | wc -l`, which counts newlines — and the stripped variable is one short.
+The true count at that tree is 508, exactly as Mirror measured. One root cause, two findings,
+which is why they are repaired together rather than separately.
+
+### RC-2 — P5 amended; this is a CORE change and it invalidates every existing checkpoint
+
+`§ P5` defined `legend-candidate-v1` over a tree-oid while the manifest operated a `v2` filtered
+listing, and PID-06 pointed at P5 as the implementation site. The pointer was false. P5 is now
+**the single authoritative definition**: it declares `CANDIDATE_HASH_VERSION`, the control-plane
+roots, the byte layout and the reproduction command, and the manifest references it instead of
+restating it.
+
+`plan_defined_parameters.md` is in `CORE` for every role, so all four fingerprints moved:
+
+| Role | Before | After |
+|---|---|---|
+| plan | `c1d1a9cf…7ccc81da` | `37c3b863…0e15495f` |
+| mirror | `fddbe5a5…7532bd` | `84d2b841…02ef0738` |
+| orchestrator | `0f7acdee…00ea704` | `6b55605d…47d349f` |
+| scientist | `1369930d…348adbfdd` | `ce3c0d94…900a665d04` |
+
+**`CHK-plan-0001` through `CHK-plan-0005` are all incompatible with the current fingerprint and
+none may be used to resume.** They are not rewritten — they are true records of states that
+existed. This is the behaviour P2.3 predicts for a `CORE` change and the first live data point of
+the invalidation-rate signal A.6 and G.3 assign to Mirror (ESC-1).
+
+### RC-3 — the count is derived, not maintained
+
+Removed from the manifest as a hand-carried number. `candidate_content_hash.py --show-domain`
+emits the included count and every excluded path from the same pass that builds the hash, so the
+figure cannot be stale relative to the value beside it. This is the repository's own rule —
+*never pin a number a human must remember to update* — applied to the artifact that had just
+violated it.
+
+### RC-4 — one ambiguous field replaced by three derivable ones
+
+`TIP` named `3c6c6e15` while revision 4 was `154aef5`. The field is gone. The manifest now
+records `BRANCH_TIP` (the commit whose tree defines the domain), `MANIFEST_COMMIT` (control
+plane, outside the domain) and `SOURCE_COMMITS`, each mechanically checkable. Because the domain
+excludes the control plane, `BRANCH_TIP` and `MANIFEST_COMMIT` yield the same hash — the
+invariance is now a property of the definition rather than a coincidence a reader must verify.
+
+### RC-5 — the fixed point resolved by classification, not by exception
+
+Revision 4 excluded `governance/candidates/` and left `ledger/checkpoints/` inside, so writing a
+checkpoint about the candidate changed the candidate's identity. Mirror found the 508th entry was
+`CHK-plan-0005.json` itself.
+
+The repair is a **rule, not a list of files encountered**: P5.1 distinguishes artifacts that
+*constitute* the candidate from artifacts that *describe or manage* it — manifests, checkpoints,
+task claims, the event ledger. The first determine identity; the second cannot. Control-plane
+roots are declared exhaustively in P5 as `governance/candidates/` and `ledger/`, adding one is a
+governed change to that file, and `--show-domain` prints every excluded path so a reviewer sees
+what was dropped instead of trusting the filter. Nothing scientific or normative can fall out by
+accident: `disease-models/`, `framework/`, `roles/`, `scripts/`, `deployment/`, the top-level
+documents and all of `governance/` except `candidates/` lie outside both roots.
+
+### NBN-1 — recorded as a positive result
+
+Mirror independently ran `governance_fingerprint.py` and reproduced `c1d1a9cf…7ccc81da` exactly,
+the value in all five checkpoints. UNRESOLVED #8 — *no fingerprint is load-bearing until an actor
+other than Plan has run the composer* — is **discharged**: the composer is deterministic across
+actors and PID-03's parse-the-prose design works in another actor's hands.
+
+The scope of that evidence is bounded and the bound is worth stating: it validates the composer
+**under the bytes as they were**. RC-2 changed those bytes, so the four fingerprints above are
+again single-actor values awaiting independent reproduction. The finding is not withdrawn; it is
+a verified property of the tool, not a permanent certificate for a number.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: MICRO_UPGRADE` — one record, class `ORIGINAL_OBSERVATION`, contributed by Mirror.
+
+**Observation.** A negative result from an instrument is not discriminating until the same
+instrument has produced a known-good positive. Mirror's first comparison showed a mismatch, which
+is equally consistent with *the author's number is wrong* and *the reviewer's method is wrong*.
+Rather than report on that, it ran its tooling against revision 1's superseded hash and
+reproduced it exactly — and only then was the negative result evidence about the author rather
+than about the reviewer.
+
+**Why this is not merely good practice.** The asymmetry is the same one the epistemic discipline
+already records for false negatives: a wrong positive gets tested and dies, a wrong negative is
+silent and self-reinforcing. A reviewer whose tool is subtly misconfigured produces exactly this
+shape of finding, confidently, forever.
+
+**Lifecycle placement — deliberately not promoted.** This is `OBSERVED`, on one occurrence, and
+it is **not** written into any protocol or shared rule. Under E.2 a single `ORIGINAL_OBSERVATION`
+without a second confirmation or Mirror validation is below the `BEST_PRACTICE_CANDIDATE`
+threshold, and a verification rule binding all actors is methodology-changing with an R4 floor.
+The last time a lesson from the same session went straight into a shared protocol it had to be
+withdrawn (PID-17). Registered as:
+
+```
+PRACTICE_ID:        PROV-POSITIVE-CONTROL-BEFORE-NEGATIVE-FINDING
+HYPOTHESIS:         Before reporting a mismatch as a finding about the author, the reviewer
+                    reproduces a known-good value with the same tooling
+APPLIES_TO:         hash, digest, fingerprint and validator comparisons in review
+ORIGIN_ACTOR:       mirror (observed in REV-GOV311-MIRROR-001 §1.2)
+EVIDENCE_EXPECTED:  further reviews where a positive control changed the conclusion or the
+                    confidence attached to it
+SUCCESS_CRITERION:  a second independent occurrence, or Mirror validation as a method change
+FAILURE_CRITERION:  the control never changes an outcome and costs review time
+EXPIRY:             Mirror's first coordination review — PROMOTE | REJECT | EXTEND_WITH_REASON
+ROLLBACK:           none required; not applied to any canonical file
+STATUS:             PROVISIONAL
+```
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-011.
