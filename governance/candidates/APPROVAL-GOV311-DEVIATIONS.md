@@ -294,7 +294,7 @@ the same clause, which is the correct behaviour rather than a stall.
 
 ---
 
-## Decision requested
+## Decision requested — RESOLVED
 
 | Item | Recommendation | If accepted | If rejected |
 |---|---|---|---|
@@ -302,4 +302,49 @@ the same clause, which is the correct behaviour rather than a stall.
 | **PID-10** | `ACCEPT_DEVIATION_RECOMMENDED` | candidate unchanged; hash holds | the common section is pasted into six worktree files — content-domain change, new hash, new full review |
 | **ESC-3** | no recommendation; not Plan's to make | — | — |
 
-Plan proposes; only the operator authorises. Nothing in this document exercises an approval.
+Plan proposes; only the operator authorises. Nothing in *this* section exercised an approval.
+
+---
+
+## OPERATOR DECISION — recorded 2026-08-16
+
+```
+HUMAN_APPROVAL:          APPROVED
+APPROVAL_ID:             APR-20260816-GOV311-001
+RESOLUTION_ID:           RES-20260816-GOV311-001
+RESOLVED_BY:             operator
+CANDIDATE_ID:            CAND-20260816-GOV311
+CANDIDATE_CONTENT_HASH:  c39ecae89677363802c8c7d24b704da185fc568fed360b08ad01adb39730c239
+BASE_HEAD:               749a9a9b8f29c855f803a43b979c591532557561
+DURABLE_RECORD:          ledger/approvals/HUMAN_APPROVAL_QUEUE.jsonl
+```
+
+### PID-09 — Shared Scientist role contract · **ACCEPTED**
+
+> *The shared Scientist role contract preserves actor separation through ACTOR_ID, Agent Card,
+> worktree, branch, task assignment and capability declarations while reducing duplicated
+> normative surfaces.*
+
+### PID-10 — Canonical pointer model · **ACCEPTED**
+
+> *The canonical pointer model preserves discoverability while reducing multi-source drift risk
+> through a single authoritative location.*
+
+Both deviations are now **ratified departures from the FROZEN text**, not silent practice. They
+stand for `CAND-20260816-GOV311` at the hash above; a later candidate that changes either
+mechanism carries its own deviation record and its own decision.
+
+### ESC-3 — carried
+
+`MIRROR_RETROSPECTIVE` cadence parameter `N` remains `UNRESOLVED` by explicit operator decision.
+No numeric value is introduced. The route in the ESC-3 section above stands unchanged.
+
+### What this approval does not do
+
+**`APPROVAL ≠ AUTHORIZATION`** (Annex D.4, J.3, amendment E4). The approval authorises the
+**intent**. The `CANONICAL_BATCH_COMMIT` remains subject to GATE 0–5, the stop conditions and the
+authority matrix, and gate 5 binds this approval to the exact hash above: any material change to
+the candidate content invalidates it and requires a new approval.
+
+**Plan may not execute the commit.** H.1 assigns `CANONICAL_BATCH_COMMIT` to Orchestrator alone,
+under an ACTIVE lease. That is unchanged by an approval addressed to Plan's candidate.
