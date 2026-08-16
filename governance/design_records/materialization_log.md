@@ -213,3 +213,91 @@ cost a governed re-calibration to discover from invalidation rates months later.
 **Durable persistence** (§18): via the WORK_COMMIT carrying MAT-002. `LEARNING_INDEX` is now
 unblocked (E.2 schema received) but not yet built; both this record and MAT-001's remain to be
 filed there, and that filing is itself a tracked debt.
+
+---
+
+## MAT-003 — Role contracts, bootstrap and deployment profile
+
+```yaml
+record_id: MAT-003
+date: 2026-08-16
+actor_id: plan
+task_id: MAT-001
+directive_version: 2
+generation: 1
+governance_version: 3.1.1
+outcome: COMPLETE for §47 step 7 except the fingerprint script; step 8 deliberately not attempted
+```
+
+### Produced
+
+`roles/orchestrator.md`, `roles/plan.md`, `roles/mirror.md`, `roles/scientist.md`,
+`/BOOTSTRAP.md`, `/deployment/deployment_profile.md`, and one `.gitignore` entry for
+`deployment/local_instance.md`.
+
+All are marked `status: PROPOSED`. They become binding when Mirror's hostile review passes and
+the operator approves — Plan materializes governance, it does not enact it.
+
+### Three declared deviations
+
+Stated rather than silently diverged from, per the repository's own rule that a divergence from
+an existing pattern must carry its reason.
+
+1. **One scientist contract, not three.** Annex I.2 step 7 says each actor reads
+   `/roles/<suo>.md`. Body §32 makes the three scientists equivalent in mandate, protocol,
+   authority, obligations and isolation. Three byte-identical files would fork the day one is
+   edited, and the divergence would be invisible until it mattered; one contract also gives the
+   three a single `ROLE_CONTRACT_HASH`, which is what makes their fingerprints comparable. The
+   Agent Card records the ACTOR_ID → contract mapping.
+2. **The §35.2 common section is a pointer table, not a paste.** §35.2 requires the common
+   AUTHORITY & ROUTING section in every worktree. `governance/` is tracked, so it is *already*
+   in every worktree; what each contract needs is routing to it. Pasting the section into six
+   files would create six copies that drift — the same uneven-application failure the repository
+   names as characteristic of systems that grow by accretion, arriving from the duplication side
+   rather than the omission side.
+3. **The local runtime instance is untracked.** I.5 forbids absolute paths in the governance and
+   defines a local half that holds them. That half is `deployment/local_instance.md`, gitignored:
+   an absolute path in the tracked portion breaks the clone-and-run test the profile exists to
+   protect, and in a public repository a machine path also carries a username. The release gate
+   checks for patient re-identification and would not catch either.
+
+### Proposed, not decided
+
+The ACTOR_IDs `scientist-a`, `scientist-b`, `scientist-c` are a proposal. `orchestrator` is fixed
+by Annex I.3, which writes it literally; `plan` was assigned by the operator; `mirror` follows.
+The scientists' worktrees are named `lettore`, `lettore-b`, `lettore-c`, so the identifier does
+not follow from the directory. An ACTOR_ID is permanent and carries identity, provenance and
+learning attribution, so it is confirmed at registration (I.2 step 7), not fixed by a
+materialization.
+
+### Verification
+
+`legend_lint.py` → `VERDICT: PASS`. `public_release_gate.py` → `VERDICT: PASS, BLOCKS: 0`. The
+four `[REVIEW]` items in the gate output are pre-existing and unrelated to this work. Introducing
+four new top-level entrants (`governance/`, `roles/`, `deployment/`, `BOOTSTRAP.md`) into a
+repository whose layering is itself the privacy design was worth verifying rather than assuming.
+
+### Held deliberately: bootstrap step 8
+
+The root `CLAUDE.md` rewrite is **not** attempted. Contradiction 1 in MAT-001 stands: the current
+root CLAUDE.md is not a router but the load-bearing scientific core, and replacing it with a
+minimal router deletes operating law that no annex replaces. That relocation is an operator
+decision, and doing it as a side effect of materialization is exactly the lossy edit the record
+warned about.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: MICRO_UPGRADE` — one record, class `ORIGINAL_OBSERVATION`.
+
+**Observation.** A specification that says *"this section must appear in every worktree"* reads
+as an instruction to duplicate. In a version-controlled repository it usually is not: the file is
+already in every worktree by virtue of being tracked, and the requirement is satisfied by
+presence plus routing. Duplicating it instead creates N copies that are identical exactly once —
+at creation — and silently diverge afterwards.
+
+**The reusable part.** Before satisfying a replication requirement by copying, ask what mechanism
+already replicates. Where one exists, copying does not add availability; it only adds surfaces
+that can disagree. Where none exists, the copy is necessary and its drift must be guarded. Both
+answers are defensible; the failure is not asking, because copying always looks like compliance.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-003.
