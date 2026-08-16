@@ -89,6 +89,14 @@ The operational capability set, genericized:
 - `LINT` — integrity/consistency check over the `.md` files (fast every session; deep on demand).
 - `BATCH_COMMIT` — the **only** moment current files change. 8-phase, all-or-nothing, with snapshot/restore.
 - `PARALLEL_BRANCH` / `PARALLEL_MERGE` — parallel deep dives on disjoint scopes; merge before commit. *Parallel deep dive yes, parallel commit no.*
+- `Q&A` — consultation layer, **non-canonical and READ-ONLY** toward the four current files. A Q&A answer is not a claim and changes nothing; if a promotable datum emerges it goes through the pipeline. Always carries the "not medical advice / discuss with the treating clinical team" disclaimer.
+
+Modes are **declared explicitly** when a session enters them, written with the `MODE:` prefix —
+`MODE: LEGEND_AUTOPILOT`, `MODE: DEEP_DIVE`, `MODE: INGEST`, `MODE: STUDY_INTAKE_TRIAGE`,
+`MODE: BATCH_INFERENTIAL_SWEEP`, `MODE: DISEASE_PRIORITY_MATRIX`, `MODE: LINT_AUTOMATIC` /
+`MODE: LINT_DEEP`, `MODE: BATCH_COMMIT`, `MODE: PARALLEL_BRANCH` / `MODE: PARALLEL_MERGE`,
+`MODE: Q&A`. The priority-matrix mode is `DISEASE_PRIORITY_MATRIX`: it scores against the
+disease model's own axes, so the disease is part of the mode, not a parameter of it.
 
 ## Core invariants
 

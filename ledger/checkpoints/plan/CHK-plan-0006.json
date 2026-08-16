@@ -1,0 +1,70 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "First checkpoint of GENERATION 2. Not a successor state of CHK-plan-0005: that checkpoint belongs to a different task, a different generation and a superseded fingerprint, and was not used to resume anything. Checkpoints now sit in the CONTROL PLANE domain (P5.1), so writing this file does not change the candidate's content hash — the fixed point RC-5 identified.",
+
+  "CHECKPOINT_ID": "CHK-plan-0006",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "GOV311-PLAN-REMEDIATION-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 2,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "37c3b863a88db79c209b6aeb73366d7d498519d4cd87c5a6b6a760340e15495f",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+
+  "TIMESTAMP": "2026-08-16",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "PREVIOUS_CHECKPOINT_COMPATIBILITY": {
+    "verdict": "INCOMPATIBLE — none of CHK-plan-0001…0005 may be resumed",
+    "reason": "All five record fingerprint c1d1a9cf3054bfdfaee8c2db45129f8049e652f2bebbb56b3f6740a07ccc81da. RC-2 amended plan_defined_parameters.md, which is in CORE for every role, so the plan fingerprint is now 37c3b863a88db79c209b6aeb73366d7d498519d4cd87c5a6b6a760340e15495f.",
+    "additional_mismatch": "TASK_ID and GENERATION also differ: CHK-plan-0005 is CONS-004 / generation 1.",
+    "not_rewritten": "The five earlier checkpoints are left untouched. They are true records of states that existed, and A.6 invalidation is about resuming, not about history.",
+    "expected_behaviour": "P2.3 states that broad invalidation on a CORE change is intended. Mirror ESC-1 records this as the first live data point of the A.6/G.3 invalidation-rate signal."
+  },
+
+  "FINGERPRINTS_AFTER_RC2": {
+    "plan": "37c3b863a88db79c209b6aeb73366d7d498519d4cd87c5a6b6a760340e15495f",
+    "mirror": "84d2b841b6081929e59d61e961e49077aca69c03136451d1000c72d902ef0738",
+    "orchestrator": "6b55605d6f712d6cc145d6f2352b7da4d7a807dbf7f7f64b933fc41b147d349f",
+    "scientist": "ce3c0d94b407bbd1e3d1e33e628b7cffdc2a0fed9c3cb93bd26e7a900a665d04",
+    "independent_reproduction": "PENDING — Mirror reproduced the pre-RC-2 value c1d1a9cf exactly (NBN-1), validating the composer across actors; these four values are again single-actor until reproduced."
+  },
+
+  "MILESTONES_REACHED": [
+    {"id": "M-1", "milestone": "RC-1 diagnosed", "durable_evidence": "MAT-011 — one byte: $(...) strips the trailing newline; both commands reproduced", "status": "COMPLETE"},
+    {"id": "M-2", "milestone": "single authoritative executable definition", "durable_evidence": "P5 amended; governance/scripts/candidate_content_hash.py parses it", "status": "COMPLETE"},
+    {"id": "M-3", "milestone": "fingerprints recomputed; checkpoint incompatibility recorded", "durable_evidence": "this checkpoint; MAT-011", "status": "COMPLETE"},
+    {"id": "M-4", "milestone": "candidate revision 5 with reproducible binding", "durable_evidence": "governance/candidates/CAND-20260816-GOV311.md", "status": "COMPLETE"},
+    {"id": "M-5", "milestone": "gates re-run; package delivered; STOP", "durable_evidence": "manifest §6", "status": "COMPLETE"}
+  ],
+
+  "RC_STATUS": {
+    "RC-1": "RESOLVED — mechanism stated and reproduced; hash now computed by the published script",
+    "RC-2": "RESOLVED — P5 is the single authoritative definition; manifest references it",
+    "RC-3": "RESOLVED — count derived by --show-domain, no longer carried in the manifest",
+    "RC-4": "RESOLVED — TIP replaced by BRANCH_TIP / MANIFEST_COMMIT / SOURCE_COMMITS",
+    "RC-5": "RESOLVED — control-plane vs content classification declared in P5.1, rule-based"
+  },
+
+  "DURABLE_POINTERS": {
+    "branch": "evidence-index",
+    "base_head": "749a9a9b8f29c855f803a43b979c591532557561",
+    "candidate_id": "CAND-20260816-GOV311",
+    "candidate_revision": 5,
+    "candidate_manifest": "governance/candidates/CAND-20260816-GOV311.md",
+    "task_record": "ledger/tasks/plan/GOV311-PLAN-REMEDIATION-001.json",
+    "mirror_review": "c6a290e1 · reviews/mirror/REV-GOV311-MIRROR-001.md",
+    "superseded_content_hashes": [
+      "f869a5237a70634ada535343b7484ddc45f36111e9c79664179086a81f8b8909",
+      "3e4cf1355017b75256ecb15c5957c130cc19858c0a9c55b11211adb2b6e05474",
+      "57fde97bcb0438d2c19da6f8566254f33aac5695e6a8c2e709048b378685ba3b",
+      "2e7da13ff3bfff4554a28300d01b6e23b62ead3b787c3de78f92a2cd5b9256d7"
+    ],
+    "materialization_log": "governance/design_records/materialization_log.md"
+  },
+
+  "STATE": "AWAITING_APPROVAL — revision 5 held for a fresh Mirror review; R-2…R-7 were never reviewed and nothing carries forward",
+
+  "RESUME_RULE": "Annex A.6 refusal rule. Recompute the fingerprint with governance/scripts/governance_fingerprint.py compose --role plan and compare against this record; never compare against a value copied from prose. Do not resume on a directive_version, generation or fingerprint mismatch. Recompute the candidate hash with governance/scripts/candidate_content_hash.py before treating any recorded value as current."
+}

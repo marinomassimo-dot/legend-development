@@ -263,6 +263,85 @@ Uncertain state → recover before advancing. Never improvise.
 
 ---
 
+## 21b. OPERATIONAL GATES, BLOCKING STRINGS, RECOVERY ORDER
+
+### Gate semantics
+
+`current_state: READY` means **analytical work can proceed**. Commit permission is gated
+separately in the state manifest, and the two must never be conflated:
+
+- `deep_dive_gate` / `ingest_gate` control read-only and new-source work;
+- `batch_commit_gate` controls canonical writes;
+- `BLOCK_BATCH_COMMIT` blocks BATCH_COMMIT only; `BLOCK_SYSTEM` blocks everything.
+
+A system that is `READY` with `batch_commit_gate` closed is working normally: reading and locator
+capture stay safe, which is the whole reason the two levels exist.
+
+### Blocking strings — literal, not paraphrasable
+
+A commit is **blocked** if one of the four currents is missing (`BLOCK_SYSTEM`); if the commit
+would rest on state reconstructed from chat memory; if unresolved mismatches exist (a claim in
+the working model absent from the claim registry, a paper in a claim absent from the paper
+registry); if the output is a partial stub; if `LINT_AUTOMATIC` returns
+`BLOCK_BATCH_COMMIT`/`BLOCK_SYSTEM`; or if a parallel branch is active and unmerged.
+
+The mandatory blocking message is emitted verbatim:
+
+```
+FULL STATE NOT AVAILABLE — COMMIT BLOCKED
+```
+
+Every valid `BATCH_COMMIT` produces four outputs under these exact headings: **`FILES TO
+CREATE`**, **`FILES TO UPDATE`** — rewritten in full, never patched in prose — **`FILES
+UNCHANGED`**, listed explicitly rather than implied, and a **`CHANGE LOG`** per modified file
+with Added / Modified / Unchanged / Removed. **"Removed" must be empty** except in explicitly
+justified cases.
+
+A file that cannot be produced complete is refused with its own literal marker:
+
+```
+PARTIAL FILE — NOT SAFE FOR REPLACEMENT
+```
+
+State files carry the `_current` suffix and are `.md`. Append-only files — commit log, activity
+log, inbox — **never lose entries**; only their status changes.
+
+### Minimal change and verification contract
+
+Before every non-trivial operational change, state four things: the assumptions, the smallest
+sufficient change, an **observable success criterion**, and the final verification. When testing
+scripts, lint rules, rankings, heuristics or reusable procedures, run the controlled loop —
+baseline, one conceptual variable, and a recorded outcome of `KEEP` / `DISCARD` / `INCONCLUSIVE`
+/ `CRASH`. That loop validates **only the tested procedure**: it never replaces full-text
+reading, scientific judgement, safety review or the canonical promotion pipeline.
+
+### Observable-stop gate for long readings
+
+`Context low` is never, by itself, an exit condition. Conversation length, a resumed session, or
+compaction may motivate care, but they do not demonstrate that a complete reading cannot
+continue. If the runtime exposes no measurement of context used and remaining, the actor must
+label the concern as a subjective estimate and may not replace the assigned reading with a
+preflight, smaller unit, or partial analysis on that basis. During a full-text run the actor
+pauses and escalates only for an **observable blocker**: the validator refuses the required
+surface or locators; the reading contradicts a consolidated baseline; a `BLOCK-1` safety signal
+appears; continuation requires writing outside the actor's branch or assigned perimeter; or a
+required gate is closed. All other pre-existing system hard stops remain binding. The actor names
+the blocker and its evidence; absent one, it continues until the reading's verifiable artifacts
+are closed.
+
+### Recovery priority order
+
+If system state is uncertain or desynchronized, **prioritize recovery over progress**. Load at
+minimum the state manifest + the four currents + `meta_index_current.md`, run `LINT_AUTOMATIC`,
+then ask for a coherence verdict before any commit. The load order is fixed:
+
+```
+state manifest → current files → meta index → active metas → research/biomarker layer
+              → protocols → master
+```
+
+---
+
 ## 22. FINAL MAXIMS
 
 > Better a blocked commit than silent data loss

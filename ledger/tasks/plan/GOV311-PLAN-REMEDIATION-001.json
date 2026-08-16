@@ -1,0 +1,45 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.2 TASK_ACK + A.3 TASK_CLAIM",
+
+  "TASK_ID": "GOV311-PLAN-REMEDIATION-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 2,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+
+  "TASK_ACK": {
+    "state": "ACCEPTED",
+    "accepted_on": "2026-08-16",
+    "objective": "Resolve only the blockers and material corrections in Mirror review c6a290e1 (RC-1…RC-5), produce CAND-20260816-GOV311 revision 5 with a new reproducible binding, and stop for a fresh hostile review.",
+    "interaction_mode": "AUTONOMOUS_COMPLETE",
+    "review_requirement": "R4 / MIRROR_REQUIRED before HUMAN_APPROVAL",
+    "scope_limit": "Minimal and causally tied to RC-1…RC-5. R-2…R-7 were not reviewed and their possible objections are not pre-empted."
+  },
+
+  "TASK_CLAIM": {
+    "claimed_by": "plan",
+    "claimed_on": "2026-08-16",
+    "timestamp_precision": "date only — the runtime exposed no wall-clock time",
+    "durable_pointer": "governance/design_records/materialization_log.md → MAT-011",
+    "uniqueness": "single-assigner (operator, in this bridge phase) + this record; no competing claim exists for TASK_ID + GENERATION 2"
+  },
+
+  "ANTI_RESUME_DECLARATION": {
+    "rule": "Annex A.6 refusal rule",
+    "statement": "CHK-plan-0005 belongs to TASK_ID CONS-004, GENERATION 1, and to the pre-remediation APPLICABLE_GOVERNANCE_FINGERPRINT c1d1a9cf3054bfdfaee8c2db45129f8049e652f2bebbb56b3f6740a07ccc81da. RC-2 amends plan_defined_parameters.md, which is in CORE for every role, so that fingerprint necessarily changes. CHK-plan-0005 is therefore NOT a compatible checkpoint for this remediation and is not used to resume anything.",
+    "all_prior_checkpoints_invalidated": ["CHK-plan-0001", "CHK-plan-0002", "CHK-plan-0003", "CHK-plan-0004", "CHK-plan-0005"],
+    "invalidation_is_expected": "P2.3 states that broad invalidation on a CORE change is the intended behaviour. Mirror ESC-1 records this as the first live data point of the A.6/G.3 invalidation-rate signal.",
+    "fingerprint_at_claim_time": "c1d1a9cf3054bfdfaee8c2db45129f8049e652f2bebbb56b3f6740a07ccc81da",
+    "fingerprint_after_remediation": "recorded in CHK-plan-0006 once RC-2 makes it defined; not predicted here"
+  },
+
+  "MILESTONE_PLAN": [
+    {"id": "M-1", "milestone": "Diagnose RC-1: state the exact mechanism that produced 2e7da13f, or declare it unreproducible", "durable_evidence": "MAT-011"},
+    {"id": "M-2", "milestone": "One authoritative executable definition of the candidate content domain and its hash", "durable_evidence": "governance/scripts/candidate_content_hash.py + P5 amended"},
+    {"id": "M-3", "milestone": "Recompute all four role fingerprints; record checkpoint incompatibility", "durable_evidence": "MAT-011, CHK-plan-0006"},
+    {"id": "M-4", "milestone": "Candidate revision 5 with reproducible binding, verified twice", "durable_evidence": "governance/candidates/CAND-20260816-GOV311.md"},
+    {"id": "M-5", "milestone": "LINT, publication gate, base check re-run; package delivered; STOP", "durable_evidence": "manifest §6 + operator report"}
+  ],
+
+  "STATE": "CLAIMED → IN_PROGRESS"
+}

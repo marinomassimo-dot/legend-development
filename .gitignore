@@ -38,6 +38,16 @@ overlay/
 # the published repository by design.
 grants/
 
+# === Laboratory runtime instance (never published) ===
+# The deployment profile splits into a portable half, tracked, and a local half that
+# belongs to one machine and one moment: absolute paths, a runtime instance id, and the
+# session references currently live. Both halves have a reason to stay out of the
+# published repository — an absolute path breaks the clone-and-run portability that the
+# profile exists to protect, and a machine path carries a username while a session ref
+# carries a runtime identifier. The release gate looks for patient re-identification, not
+# for either of those, so the exclusion is structural rather than a reminder to be careful.
+deployment/local_instance.md
+
 # === Standard ===
 .DS_Store
 *.log

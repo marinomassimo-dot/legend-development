@@ -273,6 +273,31 @@ Contiene:
 
 ---
 
+# SESSION TYPES — AUTOPILOT-ERA ADDITIONS
+
+*(In English, alongside §1.1–1.3 above, which remain valid. These are the obligations added after
+the autopilot and the skill layer existed; they extend the three session types, they do not
+replace them.)*
+
+**Always read the state manifest first**, in every session type. It is the first load target, not
+an optional extra, and `current_state: READY` is confirmed before analytical work begins.
+
+**Minimal** — the four currents + the state manifest, plus `legend-capability-scout` and
+`legend-session-takeaways`. If studies are supplied, apply intake triage, the batch inferential
+sweep and the priority matrix. No commit required.
+
+**Standard** — the above + `meta_index_current.md` + the relevant metas. With a study list, use
+the autopilot by default and continue autonomously through ingest / full-text / deep-dive /
+discovery / therapeutic fan-out where the gates allow. Produces commit candidates; propagation
+happens only through `BATCH_COMMIT`.
+
+**Full** — all layers. Reserved for bootstrap, recovery, batch consolidation, meta propagation
+and framework changes. Rigorous commit mandatory.
+
+> Prefer a clean Standard session over a Full session on uncertain state.
+
+---
+
 # FRASE FINALE
 
 > Meglio bloccare un commit

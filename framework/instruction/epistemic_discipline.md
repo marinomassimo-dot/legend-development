@@ -48,3 +48,9 @@ Before discarding anything, consult the **`DEFAULTS THAT BIT US`** table — tex
 ## 4. Why this matters
 
 Two real classes of error motivated this layer, both of the form **`P → C`, where C is a rejection and P was never checked — because P was the "obvious" part.** The lesson generalizes to any long-running AI-assisted synthesis: **make the premise explicit, make the rejection reopenable, and re-audit on new evidence.** This is the discipline the failure-aware evaluation (`eval/`) is designed to measure.
+
+## 5. Provenance, and where a rejection is written down
+
+**Until 2026-07-12 LEGEND had no discipline for premises or for rejections.** The four levels above were already in place and covered only positive assertions; every error of that day came from the missing side. The date is recorded because the asymmetry it exposed is not intuitive, and a rule whose origin is forgotten is a rule that gets relaxed.
+
+`REVIVAL_TRIGGER` has one named destination, not a general obligation to "record somewhere": every rejection goes into [[dismissal_ledger_current]] and declares there what would resurrect it. That file is also the home of the growing `DEFAULTS THAT BIT US` table, which is why the re-audit rule and the discard rule point at the same artefact. A rejection recorded anywhere else is a rejection nobody will re-scan.

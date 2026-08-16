@@ -1,0 +1,59 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Written at the STOP point of the residual verifications. Deliberately does NOT embed the candidate content hash: the checkpoint lives inside the hashed tree, so embedding the hash would make the hash depend on itself. It references the candidate by ID; the manifest holds the value. CHK-plan-0002 embedded it and is left unmodified as a record of what was true when written.",
+
+  "CHECKPOINT_ID": "CHK-plan-0003",
+  "SUPERSEDES": "CHK-plan-0002",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "CONS-002",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "c1d1a9cf3054bfdfaee8c2db45129f8049e652f2bebbb56b3f6740a07ccc81da",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+
+  "TIMESTAMP": "2026-08-16",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "MILESTONE_PLAN_ORIGIN": "Operator instruction of 2026-08-16: two residual verifications before routing, then re-verification and a new package.",
+
+  "MILESTONES_REACHED": [
+    {
+      "milestone": "point 1 — archive the prior-art design record",
+      "durable_evidence": "MAT-008",
+      "status": "BLOCKED — third request, third absence; nothing archived, nothing reconstructed, MAT-005 not modified"
+    },
+    {
+      "milestone": "point 2 — classify the parallel_legend_protocol.md change",
+      "durable_evidence": "MAT-008; rule 4 diffed byte-identical against the migrated source",
+      "status": "COMPLETE — the change was an undeclared new rule, withdrawn and re-registered as PROV-DIFF-AGAINST-TARGET"
+    },
+    {
+      "milestone": "base check",
+      "durable_evidence": "main still 749a9a9b; branch 0 behind",
+      "status": "COMPLETE — no re-alignment needed, GATE 0 base condition holds"
+    },
+    {
+      "milestone": "re-verification and new candidate hash",
+      "durable_evidence": "governance/candidates/CAND-20260816-GOV311.md §1 and §6",
+      "status": "COMPLETE"
+    }
+  ],
+
+  "DURABLE_POINTERS": {
+    "branch": "evidence-index",
+    "base_head": "749a9a9b8f29c855f803a43b979c591532557561",
+    "candidate_id": "CAND-20260816-GOV311",
+    "candidate_manifest": "governance/candidates/CAND-20260816-GOV311.md",
+    "superseded_content_hash": "f869a5237a70634ada535343b7484ddc45f36111e9c79664179086a81f8b8909",
+    "materialization_log": "governance/design_records/materialization_log.md",
+    "migration_map": "governance/design_records/claude_md_migration_map.md",
+    "preserved_stash": "stash@{0} — superseded PMID42422765 worktree edit, deliberately not dropped",
+    "open_blocking_input": "LEGEND v3.1 — TARGETED HOSTILE PRIOR-ART REVIEW: never transmitted (MAT-005, MAT-008)"
+  },
+
+  "STATE": "AWAITING_APPROVAL — candidate held; the operator asked that it NOT be routed to Mirror yet, and one required input is still missing",
+
+  "RESUME_RULE": "Annex A.6 refusal rule. Recompute the fingerprint with governance/scripts/governance_fingerprint.py compose --role plan; never compare against a value copied from prose. Do not resume on a directive_version, generation or fingerprint mismatch. Before treating the candidate as reviewable, recompute the content hash per the manifest's own recipe and confirm it matches the manifest — the value in any earlier checkpoint is historical, not authoritative."
+}

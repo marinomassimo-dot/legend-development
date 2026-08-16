@@ -1,0 +1,1040 @@
+---
+artifact: LEGEND governance — materialization log
+governance_version: 3.1.1
+normative: NO — provenance record
+maintained_by: plan
+---
+
+# MATERIALIZATION LOG
+
+Append-only. A record already written is never modified; a later record supersedes an earlier
+one by pointing at it, never by rewriting it.
+
+---
+
+## MAT-001 — Governance v3.1.1 body materialized; annexes blocked
+
+```yaml
+record_id: MAT-001
+date: 2026-08-16
+actor_id: plan
+session_ref: e49d3bd1-2c63-4969-be19-f7fca4b240fc
+worktree: .claude/worktrees/evidence-index
+branch: evidence-index
+head_at_start: 3f720662d9215d9a4fcaae68ea7892b484f830bc
+task_id: MAT-001
+directive_version: 1
+generation: 1
+governance_version: 3.1.1
+applicable_governance_fingerprint: UNAVAILABLE
+outcome: PARTIAL — body materialized, annexes A–J blocked on missing source
+```
+
+### Produced
+
+| Artifact | SHA-256 | Nature |
+|---|---|---|
+| `governance/GOVERNANCE_v3.1.1.md` | `bb8e356ff4ee6d59b5143db40334059661f6def8a9b7bac5bf43d04bdc8322a2` | The frozen body, verbatim, under a materialization header. 466 lines. |
+| `governance/ANNEX_INDEX.md` | `ce161956c1950b320704d35c74a0452760d0d07c91aff1597836bc0b7fdeb2ff` | Register of A–J: binding requirements, authorship class, blocked downstream artifacts. |
+| `governance/design_records/README.md` | *(see git)* | Scope of design_records + the missing prior-art matrix and DEFER register. |
+| `governance/design_records/materialization_log.md` | *(this file)* | This record. |
+
+The hashes are recorded now because they are the first real inputs any future
+`APPLICABLE_GOVERNANCE_FINGERPRINT` will consume. They are inputs, **not** the fingerprint: the
+composition function is Annex A.6, which does not exist yet.
+
+### Refused
+
+Plan did **not** compose: the ten canonical annexes, `/BOOTSTRAP.md`, `/roles/*.md`, the
+deployment profile, the runtime inventory / Agent Card, `LEARNING_INDEX`, role-specific
+`ACTIVE_LESSONS`, the fingerprint composition, or the prior-art matrix and DEFER register.
+
+The body presents the annexes as *"(allegato)"* — attached — and they were not transmitted.
+Composing them from the body would convert Plan's derivation into normative law under a
+governance version that is frozen, and would do so invisibly: an annex authored by Plan and one
+supplied by the operator are indistinguishable once written to `governance/`. §12 prescribes
+fail-closed on doubt; this is the same rule applied to authorship rather than to batch class.
+
+Stub files were also refused. The LEGEND file protocol invalidates placeholders, and an empty
+`ANNEX_A.md` would report presence to a directory listing while carrying nothing.
+
+### Initial state recorded (body preamble, obligation 1) and measured (obligation 2)
+
+| Fact | Measured value |
+|---|---|
+| Root checkout | `/Users/massimo/Desktop/legend-public`, branch `main`, HEAD `749a9a9`, **clean** |
+| Plan worktree | `evidence-index`, HEAD `3f72066` |
+| Branch vs main | `evidence-index` is **35 commits behind** `main`, with **0 commits of its own**; merge-base is its own HEAD — a strict ancestor |
+| Worktrees present | root(main) · evidence-index · lettore · lettore-b · mirror · 4 Codex worktrees (aqeilan, partials, reading, wwox-mouse-series) |
+| `lettore-c` (Scientist C, §32) | **absent** — bootstrap step 6 not yet performed |
+| Governance artifacts before this record | none: no `governance/`, `BOOTSTRAP.md`, `roles/`, `design_records/`, `runtime/`, `LEARNING_INDEX`, `ACTIVE_LESSONS` |
+| LEGEND scientific state | `framework_version: v3.3.1`, `current_state: READY`, `deep_dive_gate`/`ingest_gate`/`batch_commit_gate` all OPEN |
+| GATE 2 tooling | present and runnable: `framework/scripts/legend_lint.py`, `scripts/public_release_gate.py` |
+| `governance/` gitignore status | not ignored — the tree is tracked |
+
+### Contradictions with the real repository state (body preamble, obligation 5)
+
+1. **§0.3 · root CLAUDE.md as a MINIMAL router.** The current root `CLAUDE.md` is not a router:
+   it is the load-bearing scientific operating core — parity of sources, rules 5b–5e on
+   locators and corrupted text surfaces, epistemic discipline, commit rules. Reducing it to a
+   router at bootstrap step 8 would delete operating law that no annex replaces. The rewrite
+   MUST relocate that content to a durable, referenced home before the router replaces it,
+   otherwise step 8 is a lossy edit dressed as a structural one.
+2. **§35 · paths `/protocols/` and `/active_lessons/`.** Neither exists at top level. Protocols
+   live at `framework/protocols/`. Either the governance paths are adopted and the framework
+   layout is bridged, or the governance is materialized against the existing layout. This is a
+   decision, not a detail: `/roles/` and `/governance/` are equally new top-level entrants into
+   a repository whose layering (`framework/` vs `disease-models/`) is itself the privacy design.
+3. **§32 · Scientist C.** `lettore-c` does not exist; A and B do.
+4. **Public-edition exposure.** This repository is the public edition and is pushed to a public
+   remote under a publication gate. Governance material now sits at top level and will travel
+   with it. No governance artifact may reach a public push without `public_release_gate.py`, and
+   — per the root CLAUDE.md — without a human reading `git diff origin/main..main --stat`, which
+   is the one judgement no gate makes.
+5. **Base staleness.** Any `INTEGRATION_CANDIDATE` from this branch would be computed against a
+   35-commit-old base. GATE 0 binds `BASE_HEAD`; the branch must be brought up to `main` before
+   a candidate is prepared, and the four files produced here are new paths, so they carry no
+   merge risk of their own.
+
+### Foreign uncommitted change — classified, not touched
+
+`disease-models/wwox/research/deepdive_manifests/PMID42422765.json` was already modified in this
+worktree when Plan rehydrated, by an unidentified prior actor: `receipt` and the first `landing`
+entry bumped from `FTR-20260810-42422765-04` to `-05`.
+
+Classification: **SUPERSEDED_BY_MAIN, not pending work.** `main` already carries `-05` in
+`landing` *and* a later `FTR-20260814-42422765-06` as the active receipt. Nothing is at risk of
+being lost.
+
+It was left exactly as found. Reverting it is a destructive write on another actor's file, and
+the root CLAUDE.md records the day `git checkout -- <path>` destroyed a receipt-ledger anchor
+under precisely this reasoning ("it looked like only my own change"). It resolves itself when
+the branch is brought up to `main`.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: FAILURE_PATTERN` — one record, class `ORIGINAL_OBSERVATION`.
+
+**Observation.** A two-level specification whose second level is described as *"(allegato)"*
+transmits, over a chat channel, as a single-level specification that *looks* complete. The body
+is self-consistent, ends with a numbered bootstrap sequence, and never announces its own
+incompleteness; the gap is visible only by cross-referencing every `(Annex X)` mention against
+what actually arrived. The failure mode is not that the annexes are missing — it is that the
+body reads as sufficient, which invites the receiving actor to close the gap by derivation and
+call it materialization.
+
+**Why it matters here specifically.** The receiving actor is the one entitled to write
+`governance/`. Derived and supplied annexes are byte-indistinguishable once written, and
+`APPLICABLE_GOVERNANCE_FINGERPRINT` would then hash Plan's own inventions as constitutional
+input — the fingerprint would be perfectly valid and would certify the wrong constitution.
+
+**Candidate practice** (to be filed against `LEARNING_INDEX` when it exists, per §15's
+duplicate check): a multi-part governance transmission declares its parts and their count, and
+the materializing actor registers every part as `RECEIVED` or `ABSENT` **before** writing any of
+them. The register precedes the materialization; that ordering is what makes the absence
+visible instead of inferable.
+
+**Durable persistence** (§18): this record reaches durable state via the WORK_COMMIT that
+carries MAT-001. It is not yet in `LEARNING_INDEX`, because `LEARNING_INDEX` does not yet exist
+and its schema is bound to Annex E. Tracked here as a debt, not as a completed filing.
+
+---
+
+## MAT-002 — Annexes A–J materialized; the seven delegated parameters defined
+
+```yaml
+record_id: MAT-002
+supersedes: none — extends MAT-001
+date: 2026-08-16
+actor_id: plan
+session_ref: e49d3bd1-2c63-4969-be19-f7fca4b240fc
+task_id: MAT-001
+directive_version: 2
+generation: 1
+governance_version: 3.1.1
+outcome: COMPLETE for the annex scope; downstream artifacts pending
+```
+
+### Produced
+
+Ten annex files, verbatim under materialization headers, named per the transmitted convention
+(`governance/annex_a_task_contract.md` and siblings). Hashes are in
+[`../ANNEX_INDEX.md`](../ANNEX_INDEX.md), which was rewritten from a register of absences into a
+register of contents, carrying the transmitted preamble verbatim.
+
+Plus [`../plan_defined_parameters.md`](../plan_defined_parameters.md): the seven values the
+annexes delegate to Plan by name — `RETRY_POLICY` default, fingerprint composition, ACK timeout,
+heartbeat cadence, `CANDIDATE_CONTENT_HASH` definition, lesson budgets, event ledger design.
+Collected in one artifact rather than seven footnotes, so the fingerprint has one thing to hash
+and a reader can see every knob at once.
+
+Four of those values are numbers that no evidence yet supports. None was left as a bare
+constant: each is registered as a `PROVISIONAL_OPERATIONAL_PRACTICE` (E.3) with a success
+criterion, a failure criterion, an expiry and a rollback. The repository's own rule — *never pin
+a number a human must remember to update* — is satisfied by machinery the governance already
+owns, rather than by a comment asking someone to remember.
+
+### Debts opened, stated as debts and not as work done
+
+1. **The fingerprint composition is prose.** P2 specifies the pertinence sets and the hashing
+   function precisely enough to execute, and nothing executes it. Until a script takes a role
+   and emits the hex, every fingerprint would be hand-assembled — and the repository has already
+   recorded what prose-only recipes do: they decay silently, and the one that was made
+   executable immediately caught two of seven entries that prose had recorded wrongly. **No
+   checkpoint's fingerprint is load-bearing until that script exists.**
+2. **The event ledger has a chosen design and no writer.** P7 picks option (a) and specifies the
+   format; the append machinery is not built. It must be built on the existing receipt-ledger
+   pattern rather than as a second mechanism — `PATTERN_ALREADY_SOLVED_GATE` names uneven
+   application as this system's characteristic failure, and an append-only ledger with a hash
+   chain and a tail anchor already runs here.
+3. **`MIRROR_RETROSPECTIVE ogni N batch` has no owner.** G.3 assigns `N` to nobody. Plan did not
+   take it: G.2 places retrospective methodology inside Mirror's own method, which Mirror may
+   not change alone. Flagged `UNASSIGNED_PARAMETER` for bootstrap.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: MICRO_UPGRADE` — one record, class `ORIGINAL_OBSERVATION`.
+
+**Observation.** The obvious way to compose `APPLICABLE_GOVERNANCE_FINGERPRINT` is at file
+granularity: hash each annex the role depends on. That choice is wrong, and the specification
+that delegated the parameter contains the proof. A.6 illustrates a change that must **not**
+invalidate anything with *"un cambio alla COST_POLICY mentre uno Scientist legge un paper"* —
+and COST_POLICY is J.4, a section of Annex J. Hashing Annex J whole would invalidate every
+scientist checkpoint on precisely the change the annex uses to illustrate the opposite. The
+composition had to split Annex J by section.
+
+**The reusable part.** A specification that delegates a parameter usually also contains its test
+case, phrased as an example rather than as a requirement — and the example is easy to read past,
+because it appears to be explaining the concept rather than constraining the answer. Before
+choosing any delegated value, re-read the delegating clause for worked examples and treat each
+one as a test the chosen value must pass. Here it cost one paragraph to check and would have
+cost a governed re-calibration to discover from invalidation rates months later.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-002. `LEARNING_INDEX` is now
+unblocked (E.2 schema received) but not yet built; both this record and MAT-001's remain to be
+filed there, and that filing is itself a tracked debt.
+
+---
+
+## MAT-003 — Role contracts, bootstrap and deployment profile
+
+```yaml
+record_id: MAT-003
+date: 2026-08-16
+actor_id: plan
+task_id: MAT-001
+directive_version: 2
+generation: 1
+governance_version: 3.1.1
+outcome: COMPLETE for §47 step 7 except the fingerprint script; step 8 deliberately not attempted
+```
+
+### Produced
+
+`roles/orchestrator.md`, `roles/plan.md`, `roles/mirror.md`, `roles/scientist.md`,
+`/BOOTSTRAP.md`, `/deployment/deployment_profile.md`, and one `.gitignore` entry for
+`deployment/local_instance.md`.
+
+All are marked `status: PROPOSED`. They become binding when Mirror's hostile review passes and
+the operator approves — Plan materializes governance, it does not enact it.
+
+### Three declared deviations
+
+Stated rather than silently diverged from, per the repository's own rule that a divergence from
+an existing pattern must carry its reason.
+
+1. **One scientist contract, not three.** Annex I.2 step 7 says each actor reads
+   `/roles/<suo>.md`. Body §32 makes the three scientists equivalent in mandate, protocol,
+   authority, obligations and isolation. Three byte-identical files would fork the day one is
+   edited, and the divergence would be invisible until it mattered; one contract also gives the
+   three a single `ROLE_CONTRACT_HASH`, which is what makes their fingerprints comparable. The
+   Agent Card records the ACTOR_ID → contract mapping.
+2. **The §35.2 common section is a pointer table, not a paste.** §35.2 requires the common
+   AUTHORITY & ROUTING section in every worktree. `governance/` is tracked, so it is *already*
+   in every worktree; what each contract needs is routing to it. Pasting the section into six
+   files would create six copies that drift — the same uneven-application failure the repository
+   names as characteristic of systems that grow by accretion, arriving from the duplication side
+   rather than the omission side.
+3. **The local runtime instance is untracked.** I.5 forbids absolute paths in the governance and
+   defines a local half that holds them. That half is `deployment/local_instance.md`, gitignored:
+   an absolute path in the tracked portion breaks the clone-and-run test the profile exists to
+   protect, and in a public repository a machine path also carries a username. The release gate
+   checks for patient re-identification and would not catch either.
+
+### Proposed, not decided
+
+The ACTOR_IDs `scientist-a`, `scientist-b`, `scientist-c` are a proposal. `orchestrator` is fixed
+by Annex I.3, which writes it literally; `plan` was assigned by the operator; `mirror` follows.
+The scientists' worktrees are named `lettore`, `lettore-b`, `lettore-c`, so the identifier does
+not follow from the directory. An ACTOR_ID is permanent and carries identity, provenance and
+learning attribution, so it is confirmed at registration (I.2 step 7), not fixed by a
+materialization.
+
+### Verification
+
+`legend_lint.py` → `VERDICT: PASS`. `public_release_gate.py` → `VERDICT: PASS, BLOCKS: 0`. The
+four `[REVIEW]` items in the gate output are pre-existing and unrelated to this work. Introducing
+four new top-level entrants (`governance/`, `roles/`, `deployment/`, `BOOTSTRAP.md`) into a
+repository whose layering is itself the privacy design was worth verifying rather than assuming.
+
+### Held deliberately: bootstrap step 8
+
+The root `CLAUDE.md` rewrite is **not** attempted. Contradiction 1 in MAT-001 stands: the current
+root CLAUDE.md is not a router but the load-bearing scientific core, and replacing it with a
+minimal router deletes operating law that no annex replaces. That relocation is an operator
+decision, and doing it as a side effect of materialization is exactly the lossy edit the record
+warned about.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: MICRO_UPGRADE` — one record, class `ORIGINAL_OBSERVATION`.
+
+**Observation.** A specification that says *"this section must appear in every worktree"* reads
+as an instruction to duplicate. In a version-controlled repository it usually is not: the file is
+already in every worktree by virtue of being tracked, and the requirement is satisfied by
+presence plus routing. Duplicating it instead creates N copies that are identical exactly once —
+at creation — and silently diverge afterwards.
+
+**The reusable part.** Before satisfying a replication requirement by copying, ask what mechanism
+already replicates. Where one exists, copying does not add availability; it only adds surfaces
+that can disagree. Where none exists, the copy is necessary and its drift must be guarded. Both
+answers are defensible; the failure is not asking, because copying always looks like compliance.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-003.
+
+---
+
+## MAT-004 — The fingerprint composition stops being prose; first checkpoint written
+
+```yaml
+record_id: MAT-004
+date: 2026-08-16
+actor_id: plan
+task_id: MAT-001
+directive_version: 2
+generation: 1
+governance_version: 3.1.1
+outcome: COMPLETE — debt 1 of MAT-002 closed; body §49.Q satisfied
+closes_debt: MAT-002 debt 1 (fingerprint composition was specification only)
+```
+
+### Produced
+
+`governance/scripts/governance_fingerprint.py`, and the first checkpoint
+`ledger/checkpoints/plan/CHK-plan-0001.json` under the A.6 schema.
+
+**The script does not carry its own copy of the pertinence sets.** It parses § P2.2 of
+`plan_defined_parameters.md` — the CORE block and the per-role table — so the governance document
+stays the single source of truth and the two cannot silently disagree. This is the repository's
+own rule about constraints applied to itself: *updating a constraint must cost at least as much
+as complying with it*. Had the script hard-coded the sets, someone could later change the prose,
+watch nothing break, and ship a system whose documented rules and computed rules differ. A stale
+or unparseable table now fails loudly instead.
+
+### Verified, not asserted
+
+The composition's load-bearing design choice is that Annex J is split by section so that a change
+to the cost policy does not invalidate a scientist's in-flight reading — A.6's own worked example.
+Checked against the tool rather than argued:
+
+```
+scientist    → J.0, J.2, J.3          (no J.1, no J.4)
+orchestrator → J.0, J.1, J.2, J.3, J.4
+```
+
+A fingerprint is a pure function of its input list, so J.4's absence from the scientist set is a
+proof rather than a sample: no edit to J.4 can move that fingerprint.
+
+The mechanism was also observed working in the other direction. Editing P2.4 — a paragraph inside
+`plan_defined_parameters.md`, which is in `CORE` — changed all four role fingerprints in the same
+session. That is the intended behaviour and it is documented in P2.4 itself, because the first
+time someone sees it, it looks like a defect.
+
+### An attempted verification that was correctly refused
+
+A mutation test was attempted first: copy the governance into the scratchpad, alter `J.4` there,
+recompute. The shell guard blocked the write, and the block was right — the safe-looking path
+(an inline heredoc) is the one that bypasses read-before-overwrite, which is how a file authored
+by another actor was once destroyed unread. The refusal was not worked around with a different
+shell primitive. The structural check above is stronger anyway: it proves the property for every
+possible mutation instead of sampling one.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: MICRO_UPGRADE` — one record, class `ORIGINAL_OBSERVATION`.
+
+**Observation.** When a specification and its implementation both contain the same rule, the
+implementation is not "executable documentation" — it is a **second source of truth**, and the
+two diverge the moment someone edits one. The instinct when making prose executable is to
+translate it into code. The stronger move is to make the code *read* the prose, so the document
+stays authoritative and the tool cannot drift from it.
+
+**The boundary.** This works when the prose is already structured enough to parse — a fenced
+block, a table with stable columns — and fails when it is narrative. Where it fails, the honest
+answer is to restructure the prose into something parseable, not to give the tool its own copy
+and promise to keep them in sync.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-004.
+
+---
+
+## MAT-005 — Step 1 could not be executed: the design record was again not transmitted
+
+```yaml
+record_id: MAT-005
+date: 2026-08-16
+actor_id: plan
+task_id: CONS-001            # pre-candidate consolidation, operator instruction of 2026-08-16
+directive_version: 1
+generation: 1
+outcome: BLOCKED — MISSING_INPUT
+```
+
+The consolidation instruction opens with *"In allegato a questa istruzione trovi il documento:
+`LEGEND v3.1 — TARGETED HOSTILE PRIOR-ART REVIEW`"*. **No document accompanied the
+instruction.** The transmission carried the seven steps and nothing else.
+
+Nothing was archived, and nothing was reconstructed. The prior-art matrix, the E1–E10
+amendments, the operator's corrections, the DEFER register and the source-verification markings
+— including, per the instruction, an Agno entry to be preserved as unverified — are records of a
+review Plan did not witness. Composing them would be provenance fabricated to fill a provenance
+slot, which is precisely what `design_records/` exists to prevent.
+
+Per the instruction, no earlier record was rewritten: MAT-001's `MISSING` classification stands
+as written and remains accurate. The debt is unchanged, not resolved.
+
+**This is a REPLICATION, not a new observation.** MAT-001 recorded the failure pattern *a
+multi-part transmission whose second part is described as attached arrives as a single-part
+transmission that looks complete*, and proposed the practice: **declare the parts and their
+count, and register each as `RECEIVED` or `ABSENT` before writing any of them.** The same
+failure has now occurred twice on the same channel, with the same document. Under Annex E.2 this
+is a second confirmation of class `REPLICATION`, which — with the ORIGINAL_OBSERVATION in
+MAT-001 — meets the `BEST_PRACTICE_CANDIDATE` threshold of two confirmations in the two classes
+that count fully. It is recorded here and will be filed under that status when `LEARNING_INDEX`
+is built.
+
+---
+
+## MAT-006 — Base alignment onto main, and a classification of mine that was wrong
+
+```yaml
+record_id: MAT-006
+date: 2026-08-16
+actor_id: plan
+task_id: CONS-001
+directive_version: 1
+generation: 1
+outcome: COMPLETE — branch rebased onto main, zero conflicts, nothing lost
+corrects: MAT-001 "Foreign uncommitted change — classified, not touched"
+```
+
+### Measured before touching anything
+
+| Fact | Value |
+|---|---|
+| `main` HEAD | `749a9a9` |
+| `evidence-index` HEAD before | `e799f47` |
+| merge-base | `3f72066` |
+| main-only commits | 35 |
+| branch-only commits | 4 (all Plan's) |
+| dirty | `disease-models/wwox/research/deepdive_manifests/PMID42422765.json` |
+| path overlap between main's 35 commits and Plan's paths | **none** — main touches no file under `governance/`, `roles/`, `deployment/`, `ledger/`, nor `.gitignore` or `BOOTSTRAP.md` |
+
+### The order of steps 2 and 4 was inverted, deliberately
+
+The instruction places the CLAUDE.md migration at step 2 and the base alignment at step 4. Doing
+them in that order would have produced a **provably lossy migration**, because `main` commit
+`f2b9067` adds twelve lines to `CLAUDE.md` — an *Observable-stop gate for long readings* — that
+the pre-rebase base does not contain. Inventorying the stale file would have silently dropped a
+live operating rule.
+
+Non-loss is stated as non-negotiable in the same instruction (*"NON eliminare né indebolire
+alcuna regola scientifica ancora valida"*, *"Nessuna perdita semantica silenziosa"*), and
+sequence yields to it. The inversion is declared here rather than performed quietly.
+
+### The dirty file: my MAT-001 classification was right in conclusion, wrong in reasoning
+
+MAT-001 called it a stale receipt bump, `-04 → -05`, superseded because main already carried
+`-05` and `-06`. That was measured against the **base**, not against `main`, and the full diff
+against `main` shows something different: the working-tree file was not *ahead* of the base, it
+was far *behind* main. Main additionally carried five figure artifacts
+(`S_p02/03/04/06/07_300dpi.png`, each with its SHA-256) and **five figure verbatim locators** for
+Supplementary Figures S1–S5 — the sample-size conflict in S2, the selection-conditioned survival
+argument in S5, and three others. None of that was visible from the base-relative diff.
+
+Had the file been "restored" or force-resolved on the strength of the MAT-001 reading, the
+question of what was being discarded would never have been asked correctly. Reading the whole
+diff **against the target**, not against the ancestor, is what made the difference.
+
+**Proof of no unintegrated content**, as the instruction requires:
+
+```
+lines unique to the working tree vs main:   + "receipt": "FTR-20260810-42422765-05",   (exactly one)
+that value in main's version:               line 7, inside "landing"                   (preserved)
+main's "receipt" field:                     FTR-20260814-42422765-06                   (superseded forward)
+```
+
+One line, and it survives in main under a different field. Absorption loses nothing.
+
+### How it was absorbed
+
+Not by `checkout --`, which is a destructive write with no confirmation and no recovery. The file
+was copied to the session scratchpad
+(`preserved/PMID42422765.worktree-before-alignment.json`, SHA-256 `6c3fe60f…f888b83`) and then
+`git stash push`ed with an explanatory message. **The stash is deliberately not dropped**: it
+remains recoverable in this worktree as `stash@{0}`.
+
+### Rebase
+
+`git rebase main` — four commits replayed, zero conflicts, as the absence of path overlap
+predicted.
+
+| Before | After |
+|---|---|
+| `f89a4a9` | `318d117` |
+| `e99aeb4` | `ccdbe94` |
+| `40ba0b7` | `a8cd125` |
+| `e799f47` | `36305c6` |
+
+`main`-only commits after rebase: 0. Branch-only: 4. The deep-dive manifest is now byte-identical
+to main's.
+
+Consequence for the checkpoint: `CHK-plan-0001.json` records `head_at_write: 40ba0b7`, which is
+now reachable only through the reflog. It is **not rewritten** — it is a true record of a state
+that existed. The successor checkpoint carries the post-rebase pointers and this mapping.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-005 and MAT-006.
+
+---
+
+## MAT-007 — CLAUDE.md migrated; single INTEGRATION_CANDIDATE prepared; STOP
+
+```yaml
+record_id: MAT-007
+date: 2026-08-16
+actor_id: plan
+task_id: CONS-001
+directive_version: 1
+generation: 1
+governance_version: 3.1.1
+outcome: COMPLETE — candidate READY FOR MIRROR HOSTILE REVIEW
+candidate_id: CAND-20260816-GOV311
+candidate_content_hash: f869a5237a70634ada535343b7484ddc45f36111e9c79664179086a81f8b8909
+```
+
+### How the migration was made non-lossy
+
+Three independent read-only inventories mapped the old root `CLAUDE.md` rule by rule against
+`framework/`, `ARCHITECTURE.md`, the protocols, the manuals and the disease-model layer, under
+one instruction: quote, do not paraphrase, when claiming a rule already exists elsewhere.
+Terminological similarity was not accepted as equivalence.
+
+What that produced was not a formality. **The growth principle existed in no other file** — and
+`mission.md`, the only file that summarised it, delegated its five binding consequences *back
+into `CLAUDE.md` by anchor*. Emptying the file without noticing would have removed a principle
+and simultaneously broken the pointer that would have revealed the removal. Likewise
+`gold_is_in_the_details.md` had been called the "full statement" of parity of sources while
+stopping at rule 6, so rules 5b–5e, 7 and 8 had no master-level home at all; `MODE: Q&A` existed
+nowhere else; and several literal strings a reader is instructed to emit verbatim —
+`FULL STATE NOT AVAILABLE — COMMIT BLOCKED`, `PARTIAL FILE — NOT SAFE FOR REPLACEMENT` — appeared
+in exactly one file in the repository.
+
+The router was written **last, and only after every destination existed**, so that an
+interruption at any point would have left the old file intact rather than half-emptied.
+
+Complete map: [`claude_md_migration_map.md`](claude_md_migration_map.md). Counts: 36 rules
+`PRESERVED` (moved in full), 20 `REPLACED_BY_EQUIVALENT`, 2 `UNRESOLVED` inbound pointers.
+
+### The candidate
+
+One candidate for the whole introduction, `CHANGE_CLASS: MAJOR`, six source commits on
+`BASE_HEAD 749a9a9b`. Sixteen Plan implementation decisions are listed individually with their
+delegating clause and state — four `PROVISIONAL` with expiry, two `UNRESOLVED`, the rest
+`PROPOSED` — rather than left to be discovered inside file diffs.
+
+The manifest declares one thing it cannot do: **the content hash excludes the manifest itself**.
+A manifest containing a hash of a tree containing that manifest is a fixed point. The hash binds
+the proposed content; the manifest is the declaration about it, in the relation a signature has
+to what it signs. Said out loud rather than papered over.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: FAILURE_PATTERN` — one record, class `ORIGINAL_OBSERVATION`.
+
+**Observation.** A relocation is safe only when the inventory is taken against the state you are
+migrating *to*, not the state you happen to be sitting on. Two separate near-misses in this
+session had the same shape, and neither was visible from the working tree alone. The dirty
+manifest looked ahead of its base and was far behind `main`, carrying five figure locators fewer.
+The `CLAUDE.md` in hand looked complete and was missing a rule `main` had added twelve lines of.
+In both cases the object being reasoned about was **stale in a way that only a diff against the
+target could show**, and in both cases the confident-looking action — revert the file, inventory
+the file — would have destroyed something while appearing careful.
+
+**The reusable part.** Before migrating, reverting, absorbing or inventorying anything, diff it
+against the branch you intend to end on, not against the ancestor you started from. The ancestor
+tells you what *you* changed; only the target tells you what *you would lose*. This is the
+sharpened form of the existing rule *read the whole diff before reverting* — the rule says read
+it all, and this says read it against the right thing. Carried into
+`parallel_legend_protocol.md` rule 4 as part of this migration, so the next actor inherits it
+instead of rediscovering it.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-007. Six session-learning records
+now exist across MAT-001…007 and none is yet in `LEARNING_INDEX`, which does not exist; that
+filing is the first item due after canonical commit.
+
+---
+
+## MAT-008 — An undeclared methodology change, withdrawn into its lifecycle; design record still missing
+
+```yaml
+record_id: MAT-008
+date: 2026-08-16
+actor_id: plan
+task_id: CONS-002            # residual verifications before routing, operator instruction of 2026-08-16
+directive_version: 1
+generation: 1
+governance_version: 3.1.1
+outcome: PARTIAL — point 2 closed by correction; point 1 still BLOCKED
+supersedes_hash: f869a5237a70634ada535343b7484ddc45f36111e9c79664179086a81f8b8909
+```
+
+### Point 1 — the design record was not transmitted a third time
+
+The instruction reads *"Ti fornirò ora il documento: `LEGEND v3.1 — TARGETED HOSTILE PRIOR-ART
+REVIEW`"* and then specifies how to archive it. **No document accompanied the message.** Nothing
+was archived and nothing was reconstructed; MAT-005 is not modified and its `MISSING`
+classification stands.
+
+Three requests, three absences, same channel, same document. Under Annex E.2 this is a further
+`REPLICATION` of the failure pattern first recorded in MAT-001. The proposed practice — *declare
+the parts and their count, and register each as `RECEIVED` or `ABSENT` before writing any of
+them* — is now confirmed by three observations in the two classes that count fully, well past the
+`BEST_PRACTICE_CANDIDATE` threshold. The wording of the third request differs from the second in
+a way worth recording: *"ti fornirò ora"* (future) rather than *"in allegato trovi"* (present), so
+the document may be intended for a following message. Plan does not act on that presumption.
+
+### Point 2 — the operator's challenge was correct, and the classification was wrong
+
+The migration map classified the whole *One actor, one worktree* section as `PRESERVED`. Verified
+against the source, that is **false for rule 4**. The pre-migration `CLAUDE.md` rule 4 ends at
+*"`git diff <path>` in full, or not at all."* The version written into
+`framework/protocols/parallel_legend_protocol.md` at commit `04cbd3bd` continued:
+
+> *"Read it against the **target** you intend to move to, not only against the common ancestor: a
+> file can look ahead of its base and still be far behind the branch you are about to absorb it
+> into."*
+
+Two sentences that appear in no source file. A new normative obligation, binding on every actor,
+introduced inside a commit whose message says *every rule given a canonical home* and whose map
+says `PRESERVED`. **That is exactly the implicit methodology change the instruction names**, and
+it was not visible in the manifest because Plan had classified its own addition as preservation.
+
+**Authority analysis, since it was asked for.** The operator's step-2 instruction gave Plan
+structural competence over the migration and named `/framework/protocols/` as an eligible
+destination — that authorizes *relocating* content into the file. It does not authorize adding
+new law to it. Under Annex E.2 the addition rests on a single `ORIGINAL_OBSERVATION` with no
+Mirror validation, which does not meet the `BEST_PRACTICE_CANDIDATE` threshold of two
+confirmations or one plus Mirror. Under Annex C.1 a methodology-changing rule carries a review
+floor of **R4 — Mirror**. Writing it straight into a shared canonical protocol is a `PROMOTED`-level
+act performed at `OBSERVED` evidence, skipping `LOCAL`, `PROVISIONAL` and `VALIDATING` entirely.
+
+**Correction applied.** The two sentences are removed. Rule 4 is now byte-identical to the
+migrated source (verified by diff), so the map's `PRESERVED` classification is true as written
+rather than true after a footnote. Nothing is lost: the observation lives in MAT-007 and is
+registered below as the object it should have been from the start.
+
+```
+PRACTICE_ID:        PROV-DIFF-AGAINST-TARGET
+HYPOTHESIS:         Before migrating, reverting, absorbing or inventorying a file, diffing it
+                    against the branch you intend to end on — not against the common ancestor —
+                    prevents a class of silent loss that the existing "read the whole diff" rule
+                    does not catch
+APPLIES_TO:         any absorption, revert, relocation or inventory across branches
+STARTED:            2026-08-16
+EVIDENCE_EXPECTED:  occurrences where an ancestor-relative diff and a target-relative diff would
+                    have led to different actions
+SUCCESS_CRITERION:  at least one further independent occurrence, or Mirror validation, before
+                    promotion into parallel_legend_protocol.md rule 4
+FAILURE_CRITERION:  the distinction never changes an outcome in practice, i.e. the existing rule
+                    was already sufficient
+EXPIRY:             at Mirror's first coordination review — PROMOTE | REJECT | EXTEND_WITH_REASON
+ROLLBACK:           none required; the practice is not yet applied to any canonical file
+STATUS:             PROVISIONAL — evidence: 2 occurrences in one session (the superseded
+                    PMID42422765 manifest, MAT-006; the stale CLAUDE.md, MAT-006), both by the
+                    same actor in the same session, which is why they count as one observation
+```
+
+### Consequence for the candidate
+
+The content tree changed, so **`f869a523…f8b8909` is SUPERSEDED and must not be reviewed.** The
+manifest carries the new value. `BASE_HEAD` is unchanged: `main` is still `749a9a9b`, the branch
+is 0 behind, and the GATE 0 base condition holds without a further alignment.
+
+The hash definition is also tightened, because the old one picked a commit by hand to dodge the
+self-reference. It now hashes a **filtered tree listing** that deterministically excludes
+`governance/candidates/`, so editing the manifest never changes the hash of the content the
+manifest describes, and editing any content file always does. See PID-06 in the manifest.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: FAILURE_PATTERN` — one record, class `ORIGINAL_OBSERVATION`.
+
+**Observation.** A migration is the ideal cover for an undeclared change, and the actor doing it
+is the least able to see one. Every edit in a relocation legitimately looks like the others: same
+commit, same rationale, same "moved from CLAUDE.md" framing. The added sentences even *felt* like
+preservation, because they strengthened the very rule being moved and came from a lesson learned
+minutes earlier in the same session. Nothing in the process flagged them, and the actor's own map
+recorded them as `PRESERVED` in good faith.
+
+**The reusable part.** A relocation must be verifiable as a relocation: for every rule claimed
+`PRESERVED`, the destination text must be **diffable against the source text**, and any
+difference is a separate change requiring its own classification — regardless of whether it
+strengthens, clarifies or improves. "Improvement" is not a category that exempts a change from
+declaration; it is the category most likely to be smuggled. The check is mechanical and takes
+seconds, and it was an external reviewer, not the author, who asked the question that surfaced
+this one.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-008.
+
+---
+
+## MAT-009 — The design record arrived and is archived; the debt closes
+
+```yaml
+record_id: MAT-009
+date: 2026-08-16
+actor_id: plan
+task_id: CONS-003            # design record archival, operator instruction of 2026-08-16
+directive_version: 1
+generation: 1
+governance_version: 3.1.1
+outcome: COMPLETE
+closes: the MISSING debt recorded in MAT-001 and restated in MAT-005 and MAT-008
+supersedes_hash: 3e4cf1355017b75256ecb15c5957c130cc19858c0a9c55b11211adb2b6e05474
+```
+
+`MAT-001`, `MAT-005` and `MAT-008` are **not modified**. Their `MISSING` classification was
+accurate when written and remains the record of what was true at those moments. This record
+closes the debt by pointing forward, which is the only way an append-only log closes anything.
+
+### Archived
+
+[`prior_art_review_v3.1.md`](prior_art_review_v3.1.md) — the complete document: the honest
+server-backed-guarantees table (Parte 1), the 17-primitive matrix with its 10 KEEP / 6 ADAPT /
+1 KEEP+REJECT verdicts (Parte 2), the ten amendments E1–E10 (Parte 3), the five-entry DEFER
+register with reopening triggers (Parte 4), and the verdict (Parte 5). Classified
+`DESIGN RECORD — NON NORMATIVO`; it binds no actor.
+
+Preserved without upgrade: the per-source verification status, and **Agno as ⚠ UNVERIFIED** —
+the document states it was not independently verified and that no amendment rests on it alone.
+Nothing in the archive quietly promotes it.
+
+### What the archive adds that the review itself does not
+
+A table of **three divergences between what was proposed and what v3.1.1 ratified**, recorded
+rather than reconciled:
+
+| Proposed | Ratified |
+|---|---|
+| E1 binds the checkpoint to `GOVERNANCE_VERSION` | binds it to `APPLICABLE_GOVERNANCE_FINGERPRINT`; the global version is audit only |
+| E2 corollary: *every mutating operation is a transaction boundary* | the idempotence boundary is the **significant durable milestone** |
+| E8: `closed_by: EVENT_ID` on the opening event | the opening event is never mutated; the **closing** event carries `CLOSES_EVENT_ID` |
+
+These are the three operator corrections the v3.1.1 preamble refers to without listing. Leaving
+them visible as a difference is what makes the record useful: a design record that silently
+matches the ratified text explains nothing about how the text was reached. Where the two differ,
+the FROZEN body and annexes prevail exclusively.
+
+### 🔴 The document arrived on a corrupted surface
+
+The transmission had already mangled the character encoding — UTF-8 read as latin-1/cp1252, so
+`—` arrived as `â`, `è` as `Ã¨`, and the verification marks were reduced to bare `â`. This is the
+exact defect class of `gold_is_in_the_details.md` § 5d, and its instruction is unambiguous: **do
+not hand-correct a corrupted surface** — re-derive it, or anchor and say so.
+
+The bytes lost in transit are not recoverable from this copy: the sequences in the `0x80–0x9F`
+range that would disambiguate ✅ from ⚠ from `—` were dropped, not corrupted. So the archive
+does the second thing the rule allows. It carries a **published reconstruction map** — received
+glyph, restored glyph, and the basis for each — and declares itself a transcription rather than a
+byte-identical copy. Where a glyph could not be derived unambiguously it is rendered by its
+*meaning* (VERIFIED / UNVERIFIED / no-amendment), which is the load-bearing content, rather than
+by a guessed symbol.
+
+**This is a real limitation, not a formality.** A byte-faithful original should be supplied if
+provenance-grade fidelity is ever required, and the archive says so in its own header rather than
+in this log where a future reader would not look.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: MICRO_UPGRADE` — one record, class `REPLICATION` of the 5d principle in a new domain.
+
+**Observation.** Rule 5d was written for scientific PDFs whose text layer diverges from the
+printed page. It applied unchanged to a governance document pasted through a chat channel, and
+the temptation was identical in shape: the repair looked trivial — a dozen obvious substitutions
+— and performing it silently would have produced a file that reads perfectly and whose fidelity
+nobody could check. The rule's value here was that it already forbade the tempting action before
+the temptation arose.
+
+**The reusable part.** The corrupted-surface discipline is not about PDFs; it is about **any
+document whose received bytes are not the author's**. Chat transmission, copy-paste through a
+terminal, an editor rewriting line endings, and a PDF text layer are the same failure with
+different causes. The test that generalises: *can I state, per changed character, why my version
+is the author's?* If yes, publish the map. If no, do not ship the repair.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-009.
+
+---
+
+## MAT-010 — The byte-faithful source replaces the transcription, which was wrong in a third of its lines
+
+```yaml
+record_id: MAT-010
+date: 2026-08-16
+actor_id: plan
+task_id: CONS-004            # byte-faithful design record, operator instruction of 2026-08-16
+directive_version: 1
+generation: 1
+governance_version: 3.1.1
+outcome: COMPLETE
+reason: SOURCE_BYTES_RECOVERED
+supersedes: MAT-009's archived artifact as the design-record carrier
+supersedes_hash: 57fde97bcb0438d2c19da6f8566254f33aac5695e6a8c2e709048b378685ba3b
+```
+
+`MAT-009` and every earlier record stand unmodified. What is superseded is the **artifact**
+MAT-009 archived, not the record of having archived it.
+
+### Acquisition
+
+The raw source was located on the filesystem — `~/Downloads/LEGEND_v3.1_prior_art_review_matrice
+(1).md` — and copied byte-for-byte. Nothing was retyped, repaired or inferred.
+
+```
+PRIOR_ART_SOURCE_SHA256    2563f82e82d661f98ff5eb2b029a8568b519d0ac3ae91e4fd76ba21704d6988e   (measured before copy)
+PRIOR_ART_ARCHIVED_SHA256  2563f82e82d661f98ff5eb2b029a8568b519d0ac3ae91e4fd76ba21704d6988e   (measured after copy)
+BYTE_IDENTITY              PASS   (cmp)
+```
+
+The source was verified as clean UTF-8 **before** copying rather than assumed to be: 16 244
+bytes, 15 966 characters, 50 `—`, 24 `è`, 19 `à`, 7 `✔`, 3 `⚠`, 26 `→`, 4 `≠`, and **zero**
+`â`/`Ã` mojibake markers. The operator's assertion that the corruption lived in the chat surface
+and not in the file is therefore measured, not accepted on authority.
+
+Content verification, additional to the hash: all ten `E1`–`E10` headings present, the DEFER
+register present, `PARTE 5` and its recommendation present, `Agno — NON verificato
+indipendentemente` present verbatim, `✔` exactly 7 and `⚠` exactly 3, no mojibake.
+
+### Naming and metadata
+
+The archive keeps the path `governance/design_records/prior_art_review_v3.1.md` rather than the
+original basename. `LEGEND_v3.1_prior_art_review_matrice (1).md` carries a space and a browser's
+`(1)` deduplication suffix — download artifacts, not provenance; the SHA-256 is what identifies
+the bytes, and it is recorded here and in the README. **No header was added inside the file.**
+Classification (`DESIGN RECORD — NON NORMATIVO`), the non-binding status, and the
+proposed-versus-ratified divergences live in the README, this log and the candidate manifest —
+outside the historical bytes, because a document annotated inside its own body is no longer the
+document that was written.
+
+### 🔴 How wrong the declared transcription actually was
+
+Revision 3's transcription was labelled honestly — *"a declared transcription with a published
+reconstruction map, not a byte-identical copy"* — and it was still wrong in **49 of the 151 lines
+they share**, about a third of the document.
+
+Not subtly wrong:
+
+| Source | Revision-3 transcription |
+|---|---|
+| `✔` (7 occurrences) | `✅ VERIFIED` — wrong glyph, plus a word the author never wrote |
+| `⚠` alone | `⚠ UNVERIFIED` — same |
+| `la repo È il formato di serializzazione` | `la repo è il formato…` — capitalisation changed |
+
+The reconstruction map published in revision 3 was itself incorrect: it asserted a basis for each
+restored glyph, and the basis was reasoning about position and context rather than evidence about
+bytes. **Every one of those assertions was plausible and several were false.**
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: FAILURE_PATTERN` — one record, class `ORIGINAL_OBSERVATION`. This one corrects the
+learning filed in MAT-009, which drew the wrong conclusion from the right rule.
+
+**Observation.** `gold_is_in_the_details.md` § 5d offers two remedies for a corrupted surface —
+*re-derive it, or anchor the affected locators and say so* — and MAT-009 treated them as
+equivalent options, choosing the second because the first looked unavailable. They are not
+equivalent. **Re-deriving is the remedy; declaring is the fallback for when re-derivation is
+genuinely impossible**, and it protects only the reader who reads the declaration, not the
+content. A declared reconstruction with a published map still shipped 49 wrong lines, and the map
+gave those errors an appearance of method.
+
+**The compounding part.** The transcription was not judged unavailable after an attempt. Plan
+never looked for the file. The document had a filename, the filename had a browser's `(1)`
+suffix, and one `find` in `~/Downloads` located it in seconds — after two revisions had already
+been built on the reconstruction. The rule that failed here is not about encodings at all: **when
+a surface is degraded, exhaust the search for an undegraded one before invoking any fallback**,
+and record what was searched. "The raw bytes are unavailable" is a finding that requires
+evidence, exactly like every other finding in this system.
+
+**Reusable procedure.** Before accepting any pasted or rendered document as the working copy:
+ask whether a file exists; search the obvious locations by name; hash it; verify its encoding
+against expected characters; copy bytes; verify identity. That sequence is now the operator's
+standing instruction, and this record is the evidence for why it exists.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-010.
+
+---
+
+## MAT-011 — Mirror remediation RC-1…RC-5: the defect was one byte, and it had two faces
+
+```yaml
+record_id: MAT-011
+date: 2026-08-16
+actor_id: plan
+task_id: GOV311-PLAN-REMEDIATION-001
+directive_version: 1
+generation: 2
+governance_version: 3.1.1
+source_of_truth: mirror review c6a290e1 · reviews/mirror/REV-GOV311-MIRROR-001.md
+outcome: COMPLETE — RC-1…RC-5 resolved; candidate revision 5 prepared
+supersedes_hash: 2e7da13ff3bfff4554a28300d01b6e23b62ead3b787c3de78f92a2cd5b9256d7
+```
+
+New task, new generation, **not a resume**. The anti-resume declaration and the durable claim are
+in `ledger/tasks/plan/GOV311-PLAN-REMEDIATION-001.json`.
+
+### RC-1 — the mechanism, which Mirror correctly declined to infer
+
+Mirror's `WHAT_WOULD_CHANGE_MY_MIND` asked for *"a single executable command, run against a
+committed object in this repository, that outputs `2e7da13f…`"*. Here it is, at `3c6c6e15`:
+
+```bash
+LISTING=$(git ls-tree -r --full-tree 3c6c6e15 | grep -v $'\tgovernance/candidates/')
+printf 'legend-candidate-v2\n%s\n%s' "$BASE" "$LISTING" | shasum -a 256
+  → 2e7da13ff3bfff4554a28300d01b6e23b62ead3b787c3de78f92a2cd5b9256d7   (the recorded value)
+```
+
+versus the command that was published:
+
+```bash
+git ls-tree -r --full-tree 3c6c6e15 | grep -v $'\tgovernance/candidates/' \
+  | { printf 'legend-candidate-v2\n%s\n' "$BASE"; cat; } | shasum -a 256
+  → e3ca1983f6f09bc613fa1b108efc805f28c0a43782978eba2586cc1e04e79e76   (Mirror's value)
+```
+
+**The difference is one byte.** `$(...)` command substitution strips trailing newlines, so the
+value computed through a shell variable hashed a listing that ended without `\n`; the published
+pipeline preserves it. Same tree, same recipe, two hashes.
+
+The recorded value was therefore **derived, not fabricated** — by a command that was never
+published. That distinction matters for the diagnosis and changes nothing about the disposition:
+the number was unverifiable by a third party, which is precisely what gate 5 must prevent, and
+revision 4 stands superseded.
+
+**The same byte explains RC-3.** The manifest's "507 entries" came from
+`printf '%s' "$LISTING" | wc -l`, which counts newlines — and the stripped variable is one short.
+The true count at that tree is 508, exactly as Mirror measured. One root cause, two findings,
+which is why they are repaired together rather than separately.
+
+### RC-2 — P5 amended; this is a CORE change and it invalidates every existing checkpoint
+
+`§ P5` defined `legend-candidate-v1` over a tree-oid while the manifest operated a `v2` filtered
+listing, and PID-06 pointed at P5 as the implementation site. The pointer was false. P5 is now
+**the single authoritative definition**: it declares `CANDIDATE_HASH_VERSION`, the control-plane
+roots, the byte layout and the reproduction command, and the manifest references it instead of
+restating it.
+
+`plan_defined_parameters.md` is in `CORE` for every role, so all four fingerprints moved:
+
+| Role | Before | After |
+|---|---|---|
+| plan | `c1d1a9cf…7ccc81da` | `37c3b863…0e15495f` |
+| mirror | `fddbe5a5…7532bd` | `84d2b841…02ef0738` |
+| orchestrator | `0f7acdee…00ea704` | `6b55605d…47d349f` |
+| scientist | `1369930d…348adbfdd` | `ce3c0d94…900a665d04` |
+
+**`CHK-plan-0001` through `CHK-plan-0005` are all incompatible with the current fingerprint and
+none may be used to resume.** They are not rewritten — they are true records of states that
+existed. This is the behaviour P2.3 predicts for a `CORE` change and the first live data point of
+the invalidation-rate signal A.6 and G.3 assign to Mirror (ESC-1).
+
+### RC-3 — the count is derived, not maintained
+
+Removed from the manifest as a hand-carried number. `candidate_content_hash.py --show-domain`
+emits the included count and every excluded path from the same pass that builds the hash, so the
+figure cannot be stale relative to the value beside it. This is the repository's own rule —
+*never pin a number a human must remember to update* — applied to the artifact that had just
+violated it.
+
+### RC-4 — one ambiguous field replaced by three derivable ones
+
+`TIP` named `3c6c6e15` while revision 4 was `154aef5`. The field is gone. The manifest now
+records `BRANCH_TIP` (the commit whose tree defines the domain), `MANIFEST_COMMIT` (control
+plane, outside the domain) and `SOURCE_COMMITS`, each mechanically checkable. Because the domain
+excludes the control plane, `BRANCH_TIP` and `MANIFEST_COMMIT` yield the same hash — the
+invariance is now a property of the definition rather than a coincidence a reader must verify.
+
+### RC-5 — the fixed point resolved by classification, not by exception
+
+Revision 4 excluded `governance/candidates/` and left `ledger/checkpoints/` inside, so writing a
+checkpoint about the candidate changed the candidate's identity. Mirror found the 508th entry was
+`CHK-plan-0005.json` itself.
+
+The repair is a **rule, not a list of files encountered**: P5.1 distinguishes artifacts that
+*constitute* the candidate from artifacts that *describe or manage* it — manifests, checkpoints,
+task claims, the event ledger. The first determine identity; the second cannot. Control-plane
+roots are declared exhaustively in P5 as `governance/candidates/` and `ledger/`, adding one is a
+governed change to that file, and `--show-domain` prints every excluded path so a reviewer sees
+what was dropped instead of trusting the filter. Nothing scientific or normative can fall out by
+accident: `disease-models/`, `framework/`, `roles/`, `scripts/`, `deployment/`, the top-level
+documents and all of `governance/` except `candidates/` lie outside both roots.
+
+### NBN-1 — recorded as a positive result
+
+Mirror independently ran `governance_fingerprint.py` and reproduced `c1d1a9cf…7ccc81da` exactly,
+the value in all five checkpoints. UNRESOLVED #8 — *no fingerprint is load-bearing until an actor
+other than Plan has run the composer* — is **discharged**: the composer is deterministic across
+actors and PID-03's parse-the-prose design works in another actor's hands.
+
+The scope of that evidence is bounded and the bound is worth stating: it validates the composer
+**under the bytes as they were**. RC-2 changed those bytes, so the four fingerprints above are
+again single-actor values awaiting independent reproduction. The finding is not withdrawn; it is
+a verified property of the tool, not a permanent certificate for a number.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: MICRO_UPGRADE` — one record, class `ORIGINAL_OBSERVATION`, contributed by Mirror.
+
+**Observation.** A negative result from an instrument is not discriminating until the same
+instrument has produced a known-good positive. Mirror's first comparison showed a mismatch, which
+is equally consistent with *the author's number is wrong* and *the reviewer's method is wrong*.
+Rather than report on that, it ran its tooling against revision 1's superseded hash and
+reproduced it exactly — and only then was the negative result evidence about the author rather
+than about the reviewer.
+
+**Why this is not merely good practice.** The asymmetry is the same one the epistemic discipline
+already records for false negatives: a wrong positive gets tested and dies, a wrong negative is
+silent and self-reinforcing. A reviewer whose tool is subtly misconfigured produces exactly this
+shape of finding, confidently, forever.
+
+**Lifecycle placement — deliberately not promoted.** This is `OBSERVED`, on one occurrence, and
+it is **not** written into any protocol or shared rule. Under E.2 a single `ORIGINAL_OBSERVATION`
+without a second confirmation or Mirror validation is below the `BEST_PRACTICE_CANDIDATE`
+threshold, and a verification rule binding all actors is methodology-changing with an R4 floor.
+The last time a lesson from the same session went straight into a shared protocol it had to be
+withdrawn (PID-17). Registered as:
+
+```
+PRACTICE_ID:        PROV-POSITIVE-CONTROL-BEFORE-NEGATIVE-FINDING
+HYPOTHESIS:         Before reporting a mismatch as a finding about the author, the reviewer
+                    reproduces a known-good value with the same tooling
+APPLIES_TO:         hash, digest, fingerprint and validator comparisons in review
+ORIGIN_ACTOR:       mirror (observed in REV-GOV311-MIRROR-001 §1.2)
+EVIDENCE_EXPECTED:  further reviews where a positive control changed the conclusion or the
+                    confidence attached to it
+SUCCESS_CRITERION:  a second independent occurrence, or Mirror validation as a method change
+FAILURE_CRITERION:  the control never changes an outcome and costs review time
+EXPIRY:             Mirror's first coordination review — PROMOTE | REJECT | EXTEND_WITH_REASON
+ROLLBACK:           none required; not applied to any canonical file
+STATUS:             PROVISIONAL
+```
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-011.
