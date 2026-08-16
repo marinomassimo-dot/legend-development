@@ -375,3 +375,132 @@ answer is to restructure the prose into something parseable, not to give the too
 and promise to keep them in sync.
 
 **Durable persistence** (§18): via the WORK_COMMIT carrying MAT-004.
+
+---
+
+## MAT-005 — Step 1 could not be executed: the design record was again not transmitted
+
+```yaml
+record_id: MAT-005
+date: 2026-08-16
+actor_id: plan
+task_id: CONS-001            # pre-candidate consolidation, operator instruction of 2026-08-16
+directive_version: 1
+generation: 1
+outcome: BLOCKED — MISSING_INPUT
+```
+
+The consolidation instruction opens with *"In allegato a questa istruzione trovi il documento:
+`LEGEND v3.1 — TARGETED HOSTILE PRIOR-ART REVIEW`"*. **No document accompanied the
+instruction.** The transmission carried the seven steps and nothing else.
+
+Nothing was archived, and nothing was reconstructed. The prior-art matrix, the E1–E10
+amendments, the operator's corrections, the DEFER register and the source-verification markings
+— including, per the instruction, an Agno entry to be preserved as unverified — are records of a
+review Plan did not witness. Composing them would be provenance fabricated to fill a provenance
+slot, which is precisely what `design_records/` exists to prevent.
+
+Per the instruction, no earlier record was rewritten: MAT-001's `MISSING` classification stands
+as written and remains accurate. The debt is unchanged, not resolved.
+
+**This is a REPLICATION, not a new observation.** MAT-001 recorded the failure pattern *a
+multi-part transmission whose second part is described as attached arrives as a single-part
+transmission that looks complete*, and proposed the practice: **declare the parts and their
+count, and register each as `RECEIVED` or `ABSENT` before writing any of them.** The same
+failure has now occurred twice on the same channel, with the same document. Under Annex E.2 this
+is a second confirmation of class `REPLICATION`, which — with the ORIGINAL_OBSERVATION in
+MAT-001 — meets the `BEST_PRACTICE_CANDIDATE` threshold of two confirmations in the two classes
+that count fully. It is recorded here and will be filed under that status when `LEARNING_INDEX`
+is built.
+
+---
+
+## MAT-006 — Base alignment onto main, and a classification of mine that was wrong
+
+```yaml
+record_id: MAT-006
+date: 2026-08-16
+actor_id: plan
+task_id: CONS-001
+directive_version: 1
+generation: 1
+outcome: COMPLETE — branch rebased onto main, zero conflicts, nothing lost
+corrects: MAT-001 "Foreign uncommitted change — classified, not touched"
+```
+
+### Measured before touching anything
+
+| Fact | Value |
+|---|---|
+| `main` HEAD | `749a9a9` |
+| `evidence-index` HEAD before | `e799f47` |
+| merge-base | `3f72066` |
+| main-only commits | 35 |
+| branch-only commits | 4 (all Plan's) |
+| dirty | `disease-models/wwox/research/deepdive_manifests/PMID42422765.json` |
+| path overlap between main's 35 commits and Plan's paths | **none** — main touches no file under `governance/`, `roles/`, `deployment/`, `ledger/`, nor `.gitignore` or `BOOTSTRAP.md` |
+
+### The order of steps 2 and 4 was inverted, deliberately
+
+The instruction places the CLAUDE.md migration at step 2 and the base alignment at step 4. Doing
+them in that order would have produced a **provably lossy migration**, because `main` commit
+`f2b9067` adds twelve lines to `CLAUDE.md` — an *Observable-stop gate for long readings* — that
+the pre-rebase base does not contain. Inventorying the stale file would have silently dropped a
+live operating rule.
+
+Non-loss is stated as non-negotiable in the same instruction (*"NON eliminare né indebolire
+alcuna regola scientifica ancora valida"*, *"Nessuna perdita semantica silenziosa"*), and
+sequence yields to it. The inversion is declared here rather than performed quietly.
+
+### The dirty file: my MAT-001 classification was right in conclusion, wrong in reasoning
+
+MAT-001 called it a stale receipt bump, `-04 → -05`, superseded because main already carried
+`-05` and `-06`. That was measured against the **base**, not against `main`, and the full diff
+against `main` shows something different: the working-tree file was not *ahead* of the base, it
+was far *behind* main. Main additionally carried five figure artifacts
+(`S_p02/03/04/06/07_300dpi.png`, each with its SHA-256) and **five figure verbatim locators** for
+Supplementary Figures S1–S5 — the sample-size conflict in S2, the selection-conditioned survival
+argument in S5, and three others. None of that was visible from the base-relative diff.
+
+Had the file been "restored" or force-resolved on the strength of the MAT-001 reading, the
+question of what was being discarded would never have been asked correctly. Reading the whole
+diff **against the target**, not against the ancestor, is what made the difference.
+
+**Proof of no unintegrated content**, as the instruction requires:
+
+```
+lines unique to the working tree vs main:   + "receipt": "FTR-20260810-42422765-05",   (exactly one)
+that value in main's version:               line 7, inside "landing"                   (preserved)
+main's "receipt" field:                     FTR-20260814-42422765-06                   (superseded forward)
+```
+
+One line, and it survives in main under a different field. Absorption loses nothing.
+
+### How it was absorbed
+
+Not by `checkout --`, which is a destructive write with no confirmation and no recovery. The file
+was copied to the session scratchpad
+(`preserved/PMID42422765.worktree-before-alignment.json`, SHA-256 `6c3fe60f…f888b83`) and then
+`git stash push`ed with an explanatory message. **The stash is deliberately not dropped**: it
+remains recoverable in this worktree as `stash@{0}`.
+
+### Rebase
+
+`git rebase main` — four commits replayed, zero conflicts, as the absence of path overlap
+predicted.
+
+| Before | After |
+|---|---|
+| `f89a4a9` | `318d117` |
+| `e99aeb4` | `ccdbe94` |
+| `40ba0b7` | `a8cd125` |
+| `e799f47` | `36305c6` |
+
+`main`-only commits after rebase: 0. Branch-only: 4. The deep-dive manifest is now byte-identical
+to main's.
+
+Consequence for the checkpoint: `CHK-plan-0001.json` records `head_at_write: 40ba0b7`, which is
+now reachable only through the reflog. It is **not rewritten** — it is a true record of a state
+that existed. The successor checkpoint carries the post-rebase pointers and this mapping.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-005 and MAT-006.
