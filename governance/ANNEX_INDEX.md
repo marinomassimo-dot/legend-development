@@ -1,69 +1,87 @@
 ---
 artifact: LEGEND governance — annex register
 governance_version: 3.1.1
-status: REGISTER — complete as a register; the annexes themselves are NOT materialized
-normative: no (this file records requirements and status; the annexes, once materialized, are normative)
+status: COMPLETE — all ten annexes received and materialized
+normative: no (this file is a register; the annexes it lists are the normative artifacts)
 maintained_by: plan
 created_on: 2026-08-16
+last_updated: 2026-08-16 (MAT-002)
 ---
 
 # ANNEX REGISTER — Governance v3.1.1
 
-The v3.1.1 body is a two-level structure: **CORPO** (materialized as
-[`GOVERNANCE_v3.1.1.md`](GOVERNANCE_v3.1.1.md)) **+ ANNESSI CANONICI A–J**, which Plan MUST
-materialize as separate files. The body transmitted to Plan referred to the annexes as
-*"(allegato)"*; **the annex text was not transmitted with it.**
+Governance v3.1.1 is a two-level structure: **CORPO** ([`GOVERNANCE_v3.1.1.md`](GOVERNANCE_v3.1.1.md))
+**+ ANNESSI CANONICI A–J**, each materialized as a separate file. All ten were transmitted on
+2026-08-16 and are materialized verbatim.
 
-**None of the ten annexes exists yet.** This register is not a substitute for them and must
-never be read as one. It records, for each annex: what the body binds it to contain, which body
-sections depend on it, who is entitled to author it, and what is blocked while it is missing.
+## Transmitted preamble (verbatim)
 
-Per the LEGEND file protocol (`CLAUDE.md` → *File protocol*), stub or placeholder annex files
-are invalid output. No empty `ANNEX_A.md` … `ANNEX_J.md` have therefore been created: an absent
-file is an honest absence, a stub is a lie that passes a directory listing.
+> Materializzati da Plan come file separati (es. `governance/annex_a_task_contract.md`). Le parti
+> **[MAJOR]** richiedono il gate 3 completo. Campi minimi: estendibili, mai rimovibili. Modifiche
+> rispetto alla v3.1 marcate **[v3.1.1]**.
+>
+> Regola trasversale: ogni meccanismo di coordinamento dichiara
+> `GUARANTEE_PROVIDED / FAILURE_MODE_STILL_POSSIBLE / DETECTION / RECOVERY`. Sintesi consolidata:
+> **Annex J.0**.
+>
+> Provenance: la prior-art matrix e il registro DEFER vivono in `design_records/` — spiegano il
+> perché, non vincolano il runtime.
 
-## Authorship classes
+## The ten annexes
 
-| Class | Meaning |
-|---|---|
-| `OPERATOR_SOURCED` | The body presents the annex as already drafted and attached. Plan materializes the supplied text; it does not compose the content. |
-| `PLAN_DEFINED` | The body explicitly delegates the design to Plan. Plan composes it, and it goes through Mirror hostile review like everything else. |
-| `MIXED` | Structure supplied, one or more parameters delegated to Plan. |
+Hashes are a snapshot taken at MAT-002. They are recorded for audit; the authoritative value for
+any fingerprint is the one computed at use time by the composition function
+([`plan_defined_parameters.md`](plan_defined_parameters.md) § P2), never a number copied from
+this table.
 
-## Register
+| Annex | File | Subject | SHA-256 (MAT-002) |
+|---|---|---|---|
+| **A** | [`annex_a_task_contract.md`](annex_a_task_contract.md) | Task contract, claim, generation, checkpoint, idempotent resume | `372d493b…50159` |
+| **B** | [`annex_b_message_protocol.md`](annex_b_message_protocol.md) | Envelope, message types, ACK/heartbeat reliability, A2A name map | `f148b4e6…f0fb3` |
+| **C** | [`annex_c_review_protocol.md`](annex_c_review_protocol.md) | Review ladder with floors, single review format, discipline | `a3fd5587…4a5b` |
+| **D** | [`annex_d_commit_batch.md`](annex_d_commit_batch.md) | Three commit types, candidate manifest, GATE 0, batch transaction | `02febe99…83159` |
+| **E** | [`annex_e_learning_lifecycle.md`](annex_e_learning_lifecycle.md) | Learning state machine, LEARNING_INDEX, provisional practice, compression budgets | `db2294ab…4be35` |
+| **F** | [`annex_f_challenge_dissent.md`](annex_f_challenge_dissent.md) | Challenge severity, adjudication, lifecycle, DIAGNOSE before non-compliance | `23ee2c6e…f807` |
+| **G** | [`annex_g_mirror.md`](annex_g_mirror.md) | Mirror perimeter, self-upgrade constraint, autonomy ledger and review yield | `80e37d38…f9954` |
+| **H** | [`annex_h_authority_matrix.md`](annex_h_authority_matrix.md) | Authority matrix **[MAJOR]**, governance version and fingerprint roles | `e6182d55…76acd` |
+| **I** | [`annex_i_bootstrap_deployment.md`](annex_i_bootstrap_deployment.md) | Bootstrap protocol, orchestrator lease, Agent Card, deployment profile | `a1e9e7fa…b937ef` |
+| **J** | [`annex_j_runtime_control_plane.md`](annex_j_runtime_control_plane.md) | Guarantees not possessed, event ledger, state machines, approval queue, cost policy | `20e84e15…c2414` |
 
-| Annex | Subject | Bound by | Must contain (per the body) | Authorship | Status |
-|---|---|---|---|---|---|
-| **A** | TASK CONTRACT | §22, §4, §9.3, §36.2, §36.3 | Full contract schema: Task ID, directive version, generation, owner, priority, objective, scope, acceptance criteria, dependencies, review floor, **A.1 INTERACTION_MODE** (`QUESTIONS_ALLOWED` / `AUTONOMOUS_COMPLETE`, E6), **A.3 TASK_CLAIM** with G/F/D/R, **RETRY_POLICY** (E7), deliverable with durable-milestone plan (E2), current state + TASK_ACK, **A.6 checkpoint schema + fingerprint composition** (E1) | MIXED — schema `OPERATOR_SOURCED`; A.6 fingerprint composition explicitly `PLAN_DEFINED` (§6, §30) | ABSENT |
-| **B** | COMMUNICATION | §20.2, §20.4, §21 | Message types; envelope `MESSAGE_ID, TASK_ID, ACTOR_ID, FROM, TO, TYPE, STATE_CHANGE?, DURABLE_POINTER`; ACK obligation and timeout→resend→BLOCKER; HEARTBEAT feeding the DOWN timeout; broadcast receipts; **B.5 nominal map to A2A states** (E5); normative routing table | OPERATOR_SOURCED | ABSENT |
-| **C** | PEER REVIEW FORMAT | §25 | Single review format: mandatory STEELMAN, VERDICT `CONFIRMED / WEAKENED / REFINED (+formulation) / REFUTED`, REVIEWER_CONFIDENCE, RESIDUAL_UNCERTAINTY, EVIDENCE_NEEDED, WHAT_WOULD_CHANGE_MY_MIND, mandatory AUTHOR_RESPONSE | OPERATOR_SOURCED | ABSENT |
-| **D** | INTEGRATION_CANDIDATE MANIFEST | §11, §12 GATE 2/5 | Manifest schema carrying, at minimum, LINT PASS + publication gate PASS/0 in the same window, CANDIDATE_CONTENT_HASH and BASE_HEAD | OPERATOR_SOURCED | ABSENT |
-| **E** | LEARNING LIFECYCLE | §17 | States `OBSERVED → LOCAL → PROVISIONAL → VALIDATING → PROMOTED / REJECTED / SUPERSEDED / EXPIRED`; confirmation classes; ≥2 threshold or 1 + Mirror validation; mandatory PROVISIONAL expiry with `PROMOTE / REJECT / EXTEND_WITH_REASON`; change isolation only in VALIDATING | OPERATOR_SOURCED | ABSENT |
-| **F** | ORCHESTRATOR_CHALLENGE | §9.2 | Structured challenge object and mandatory adjudication `ACCEPT / MODIFY / OVERRIDE_WITH_RATIONALE / ESCALATE`, recorded | OPERATOR_SOURCED | ABSENT |
-| **G** | MIRROR PERIMETER + AUTONOMY LEDGER | §3, §29.1, §29.3 | **G.1** `MIRROR_REQUIRED / MIRROR_SAMPLED / NO_MIRROR` perimeter; AUTONOMY LEDGER schema — HUMAN_REQUIRED PREVENTABLE vs UNAVOIDABLE, blocked hours, false escalations, exclusion of voluntary supervision | OPERATOR_SOURCED | ABSENT |
-| **H** | AUTHORITY MATRIX | §7, §35.2 | The normative authority matrix, to be replicated into each worktree's CLAUDE.md | OPERATOR_SOURCED | ABSENT |
-| **I** | BOOTSTRAP, LEASE, DEPLOYMENT PROFILE | §0.2, §0.4, §8, §9.4, §38, §47 step 9 | Bootstrap protocol detail; ORCHESTRATOR_LEASE (acquisition, ACTIVE singleton, governed reacquisition); DEPLOYMENT_PROFILE with the concrete `<REPO_ROOT>`; **I.4 registry = LEGEND AGENT CARD** with declared vs L2-verified capabilities | OPERATOR_SOURCED | ABSENT |
-| **J** | SYSTEM OBJECTS | §12 GATE 3, §4, §29.3, §36.6, and the GUARANTEE rule | **J.0** consolidated, normative synthesis of the guarantees NOT possessed (E10); **J.1** consolidated EVENT LEDGER, Mirror's primary analysis surface; **J.2** actor state machine (ACTIVE / DOWN / PARKED / …); **J.3** HUMAN_APPROVAL_QUEUE durable object; **J.4** COST_POLICY with `DEFAULT_EXTERNAL_SPEND = 0` | MIXED — J.1 ledger design explicitly `PLAN_DEFINED` (§49.P: *"design del ledger scelto da Plan, con G/F/D/R"*); the rest OPERATOR_SOURCED | ABSENT |
+Plus [`plan_defined_parameters.md`](plan_defined_parameters.md) — the seven values the annexes
+delegate to Plan by name, collected in one artifact so the fingerprint has one thing to hash
+rather than seven scattered footnotes. `9860ac7a…0361e1`.
 
-## What the absence blocks
+## What the annexes delegated to Plan, and where it now lives
 
-Downstream artifacts Plan owns cannot be composed without the annexes they depend on, and
-composing them from the body alone would mean inventing normative content:
+| Delegating clause | Value | Status |
+|---|---|---|
+| A.1 — `RETRY_POLICY.on_exhaust` default | `PARK` | P1 |
+| A.6 / H.1 — fingerprint composition | per-role pertinence sets + composition function, version 1 | P2 — **spec only; must become a script before any fingerprint is load-bearing** |
+| B.3 — ACK timeout | 30 minutes, PROVISIONAL with expiry | P3 |
+| B.3 — HEARTBEAT cadence | 30 minutes, DOWN after 3 missed, PROVISIONAL | P4 |
+| D.2 — `CANDIDATE_CONTENT_HASH` | SHA-256 over versioned prefix + tree oid + BASE_HEAD | P5 |
+| E.5 — role subset budgets | 25 lessons or 4 000 words, PROVISIONAL | P6 |
+| J.1 — event ledger one-writer design | option (a), per-actor JSONL consolidated by Plan | P7 — **design chosen; writer and validator not yet built** |
+| G.3 — `MIRROR_RETROSPECTIVE ogni N batch` | — | **UNASSIGNED** by the annexes; left UNRESOLVED, not filled in by Plan |
 
-| Blocked artifact | Blocked by |
-|---|---|
-| `/BOOTSTRAP.md` | Annex I (bootstrap protocol, lease, deployment profile) |
-| `/roles/*.md` | Annex H (authority matrix), Annex A (contract schema), Annex B (routing) |
-| `APPLICABLE_GOVERNANCE_FINGERPRINT` composition | Annex A.6 + the role contracts that supply `ROLE_CONTRACT_HASH` |
-| Runtime / authority inventory, Agent Card | Annex I.4 (card schema), §43 columns |
-| `LEARNING_INDEX` + role-specific `ACTIVE_LESSONS` with budget | Annex E (lifecycle), §19 (budget, Plan-defined) |
-| EVENT LEDGER structure + consolidated view | Annex J.1 — Plan-designed, but J.0's G/F/D/R declaration frames it |
-| CLAUDE.md router update (§0.3, §35.1, §35.2) | Annex H, Annex I |
-| First INTEGRATION_CANDIDATE | Annex D (manifest schema) |
+## Downstream artifacts — now unblocked, still to build
 
-## Ledger append-only constraint (recorded here so it is not lost)
+| Artifact | Unblocked by | Status |
+|---|---|---|
+| `/roles/*.md` role contracts | H, A, B | pending |
+| `/BOOTSTRAP.md` | I.1, I.2 | pending |
+| `/deployment/deployment_profile.md` | I.5 | pending |
+| Runtime inventory / Agent Card registry | I.4, body §43 | pending |
+| `LEARNING_INDEX` | E.2 | pending |
+| `ACTIVE_LESSONS` role subsets | E.5 + P6 | pending |
+| Event ledger structure + consolidated view | J.1 + P7 | pending |
+| Fingerprint composition script | A.6 + P2.4 | pending |
+| Root `CLAUDE.md` router rewrite (bootstrap step 8) | H, I | **held** — see contradiction 1 in `design_records/materialization_log.md`; the current root CLAUDE.md is the load-bearing scientific core, and replacing it with a router is a lossy edit until that content has a durable home |
+| First `INTEGRATION_CANDIDATE` | D.2 + P5 | pending; requires the branch to be brought up to `main` first (GATE 0 binds BASE_HEAD) |
 
-Independently of Annex J.1's final design, the EVENT LEDGER obeys a constraint given directly
-to Plan: **a source event already written is never modified.** The closing event points back to
-the opening one via `CLOSES_EVENT_ID`, and `closed_by` may exist **only in a derived view**.
-This is carried forward into whatever ledger design Plan proposes.
+## Still missing — design records
+
+The prior-art matrix and the DEFER register (document *"LEGEND v3.1 prior art review"*) have not
+been transmitted. They are provenance, not runtime law, so nothing is blocked on them, but
+`design_records/` stays incomplete until they arrive. See
+[`design_records/README.md`](design_records/README.md).

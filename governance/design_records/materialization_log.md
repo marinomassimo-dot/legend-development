@@ -137,3 +137,79 @@ visible instead of inferable.
 **Durable persistence** (§18): this record reaches durable state via the WORK_COMMIT that
 carries MAT-001. It is not yet in `LEARNING_INDEX`, because `LEARNING_INDEX` does not yet exist
 and its schema is bound to Annex E. Tracked here as a debt, not as a completed filing.
+
+---
+
+## MAT-002 — Annexes A–J materialized; the seven delegated parameters defined
+
+```yaml
+record_id: MAT-002
+supersedes: none — extends MAT-001
+date: 2026-08-16
+actor_id: plan
+session_ref: e49d3bd1-2c63-4969-be19-f7fca4b240fc
+task_id: MAT-001
+directive_version: 2
+generation: 1
+governance_version: 3.1.1
+outcome: COMPLETE for the annex scope; downstream artifacts pending
+```
+
+### Produced
+
+Ten annex files, verbatim under materialization headers, named per the transmitted convention
+(`governance/annex_a_task_contract.md` and siblings). Hashes are in
+[`../ANNEX_INDEX.md`](../ANNEX_INDEX.md), which was rewritten from a register of absences into a
+register of contents, carrying the transmitted preamble verbatim.
+
+Plus [`../plan_defined_parameters.md`](../plan_defined_parameters.md): the seven values the
+annexes delegate to Plan by name — `RETRY_POLICY` default, fingerprint composition, ACK timeout,
+heartbeat cadence, `CANDIDATE_CONTENT_HASH` definition, lesson budgets, event ledger design.
+Collected in one artifact rather than seven footnotes, so the fingerprint has one thing to hash
+and a reader can see every knob at once.
+
+Four of those values are numbers that no evidence yet supports. None was left as a bare
+constant: each is registered as a `PROVISIONAL_OPERATIONAL_PRACTICE` (E.3) with a success
+criterion, a failure criterion, an expiry and a rollback. The repository's own rule — *never pin
+a number a human must remember to update* — is satisfied by machinery the governance already
+owns, rather than by a comment asking someone to remember.
+
+### Debts opened, stated as debts and not as work done
+
+1. **The fingerprint composition is prose.** P2 specifies the pertinence sets and the hashing
+   function precisely enough to execute, and nothing executes it. Until a script takes a role
+   and emits the hex, every fingerprint would be hand-assembled — and the repository has already
+   recorded what prose-only recipes do: they decay silently, and the one that was made
+   executable immediately caught two of seven entries that prose had recorded wrongly. **No
+   checkpoint's fingerprint is load-bearing until that script exists.**
+2. **The event ledger has a chosen design and no writer.** P7 picks option (a) and specifies the
+   format; the append machinery is not built. It must be built on the existing receipt-ledger
+   pattern rather than as a second mechanism — `PATTERN_ALREADY_SOLVED_GATE` names uneven
+   application as this system's characteristic failure, and an append-only ledger with a hash
+   chain and a tail anchor already runs here.
+3. **`MIRROR_RETROSPECTIVE ogni N batch` has no owner.** G.3 assigns `N` to nobody. Plan did not
+   take it: G.2 places retrospective methodology inside Mirror's own method, which Mirror may
+   not change alone. Flagged `UNASSIGNED_PARAMETER` for bootstrap.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: MICRO_UPGRADE` — one record, class `ORIGINAL_OBSERVATION`.
+
+**Observation.** The obvious way to compose `APPLICABLE_GOVERNANCE_FINGERPRINT` is at file
+granularity: hash each annex the role depends on. That choice is wrong, and the specification
+that delegated the parameter contains the proof. A.6 illustrates a change that must **not**
+invalidate anything with *"un cambio alla COST_POLICY mentre uno Scientist legge un paper"* —
+and COST_POLICY is J.4, a section of Annex J. Hashing Annex J whole would invalidate every
+scientist checkpoint on precisely the change the annex uses to illustrate the opposite. The
+composition had to split Annex J by section.
+
+**The reusable part.** A specification that delegates a parameter usually also contains its test
+case, phrased as an example rather than as a requirement — and the example is easy to read past,
+because it appears to be explaining the concept rather than constraining the answer. Before
+choosing any delegated value, re-read the delegating clause for worked examples and treat each
+one as a test the chosen value must pass. Here it cost one paragraph to check and would have
+cost a governed re-calibration to discover from invalidation rates months later.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-002. `LEARNING_INDEX` is now
+unblocked (E.2 schema received) but not yet built; both this record and MAT-001's remain to be
+filed there, and that filing is itself a tracked debt.
