@@ -125,14 +125,27 @@ that stops being true — if the body starts absorbing minor edits — the compo
 and must be narrowed to sections. A.6 assigns Mirror the monitoring of the invalidation rate;
 this is the specific signal to watch.
 
-### P2.4 · This must become executable
+### P2.4 · Executable, and the prose above is its input
 
 A composition recorded only in prose decays silently, and the repository has already paid for
 that lesson in its adjudication recipes: *"A recipe recorded only in prose decays silently; one
-a command runs cannot."* This specification is therefore **not sufficient as shipped**. Before
-any checkpoint's fingerprint is load-bearing, the composition must be computed by a script that
-takes a role and emits the hex, so that no actor ever hand-assembles one. Tracked as a debt in
-[`design_records/materialization_log.md`](design_records/materialization_log.md), not as done.
+a command runs cannot."* So no actor hand-assembles a fingerprint:
+
+```
+governance/scripts/governance_fingerprint.py compose --role <role>
+governance/scripts/governance_fingerprint.py inputs  --role <role>
+```
+
+The script does **not** carry its own copy of the pertinence sets. It parses § P2.2 above — the
+CORE block and the per-role table — so this document remains the single source of truth and the
+two cannot disagree. Editing the table changes the computed fingerprint; if the table stops
+parsing, the script fails loudly rather than falling back to a stale default.
+
+One consequence is worth stating because it looks like a bug the first time it is seen: this file
+is itself in `CORE`, so **editing this file changes every role's fingerprint**, including through
+edits to this very paragraph. That is correct. A change to the parameters is a change to the
+rules an actor is working under, and A.6 says resume compatibility is exactly the question of
+whether those rules still hold.
 
 ---
 

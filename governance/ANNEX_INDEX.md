@@ -56,7 +56,7 @@ rather than seven scattered footnotes. `9860ac7a…0361e1`.
 | Delegating clause | Value | Status |
 |---|---|---|
 | A.1 — `RETRY_POLICY.on_exhaust` default | `PARK` | P1 |
-| A.6 / H.1 — fingerprint composition | per-role pertinence sets + composition function, version 1 | P2 — **spec only; must become a script before any fingerprint is load-bearing** |
+| A.6 / H.1 — fingerprint composition | per-role pertinence sets + composition function, version 1 | P2 — executable: `governance/scripts/governance_fingerprint.py`, which parses § P2.2 rather than copying it |
 | B.3 — ACK timeout | 30 minutes, PROVISIONAL with expiry | P3 |
 | B.3 — HEARTBEAT cadence | 30 minutes, DOWN after 3 missed, PROVISIONAL | P4 |
 | D.2 — `CANDIDATE_CONTENT_HASH` | SHA-256 over versioned prefix + tree oid + BASE_HEAD | P5 |

@@ -1,0 +1,59 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "First test checkpoint (body §49.Q). Written by hand under the A.6 schema; the fingerprint is NOT hand-assembled — it is the output of governance/scripts/governance_fingerprint.py compose --role plan.",
+
+  "CHECKPOINT_ID": "CHK-plan-0001",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "MAT-001",
+  "DIRECTIVE_VERSION": 2,
+  "GENERATION": 1,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "c1d1a9cf3054bfdfaee8c2db45129f8049e652f2bebbb56b3f6740a07ccc81da",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+
+  "TIMESTAMP": "2026-08-16",
+  "TIMESTAMP_PRECISION": "date only — the runtime did not expose a wall-clock time to this session, and an invented one would be worse than a coarse one",
+
+  "MILESTONE_PLAN_ORIGIN": "RECONSTRUCTED — MAT-001 was assigned conversationally, before Annex A existed, so it carried no MILESTONE_PLAN. The milestones below are the durable units the work actually produced, recorded under the A.6 schema retroactively. Future tasks receive their plan in the contract.",
+
+  "MILESTONES_REACHED": [
+    {
+      "milestone": "governance body materialized verbatim",
+      "durable_evidence": "commit f89a4a9 · governance/GOVERNANCE_v3.1.1.md",
+      "record": "MAT-001"
+    },
+    {
+      "milestone": "annexes A–J materialized; seven delegated parameters defined",
+      "durable_evidence": "commit e99aeb4 · governance/annex_*.md, governance/plan_defined_parameters.md",
+      "record": "MAT-002"
+    },
+    {
+      "milestone": "role contracts, bootstrap, deployment profile",
+      "durable_evidence": "commit 40ba0b7 · roles/*.md, BOOTSTRAP.md, deployment/deployment_profile.md",
+      "record": "MAT-003"
+    },
+    {
+      "milestone": "fingerprint composition made executable and structurally verified",
+      "durable_evidence": "governance/scripts/governance_fingerprint.py — uncommitted at the moment this checkpoint was written; see DURABLE_POINTERS",
+      "record": "MAT-004"
+    }
+  ],
+
+  "DURABLE_POINTERS": {
+    "branch": "evidence-index",
+    "head_at_write": "40ba0b73c00215625b086c9bea071b270f47fb34",
+    "materialization_log": "governance/design_records/materialization_log.md",
+    "annex_register": "governance/ANNEX_INDEX.md",
+    "open_debts": [
+      "event ledger: design chosen (P7), writer and validator not built",
+      "LEARNING_INDEX and ACTIVE_LESSONS: schema available (E.2/E.5), not built",
+      "runtime inventory / Agent Card registry: schema available (I.4), not built",
+      "MIRROR_RETROSPECTIVE interval N: UNASSIGNED by the annexes",
+      "root CLAUDE.md router rewrite (bootstrap step 8): held, operator decision",
+      "design_records: prior-art matrix and DEFER register never transmitted"
+    ]
+  },
+
+  "RESUME_RULE": "Annex A.6 refusal rule. A rehydration that finds DIRECTIVE_VERSION, GENERATION or APPLICABLE_GOVERNANCE_FINGERPRINT incompatible does NOT resume: it reports and asks Orchestrator for state. Recompute the fingerprint with the script — never compare against a value copied from prose. A changed GOVERNANCE_VERSION with an unchanged fingerprint is not an incompatibility: the version is audit, the fingerprint is compatibility."
+}

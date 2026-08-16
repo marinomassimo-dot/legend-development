@@ -301,3 +301,77 @@ that can disagree. Where none exists, the copy is necessary and its drift must b
 answers are defensible; the failure is not asking, because copying always looks like compliance.
 
 **Durable persistence** (§18): via the WORK_COMMIT carrying MAT-003.
+
+---
+
+## MAT-004 — The fingerprint composition stops being prose; first checkpoint written
+
+```yaml
+record_id: MAT-004
+date: 2026-08-16
+actor_id: plan
+task_id: MAT-001
+directive_version: 2
+generation: 1
+governance_version: 3.1.1
+outcome: COMPLETE — debt 1 of MAT-002 closed; body §49.Q satisfied
+closes_debt: MAT-002 debt 1 (fingerprint composition was specification only)
+```
+
+### Produced
+
+`governance/scripts/governance_fingerprint.py`, and the first checkpoint
+`ledger/checkpoints/plan/CHK-plan-0001.json` under the A.6 schema.
+
+**The script does not carry its own copy of the pertinence sets.** It parses § P2.2 of
+`plan_defined_parameters.md` — the CORE block and the per-role table — so the governance document
+stays the single source of truth and the two cannot silently disagree. This is the repository's
+own rule about constraints applied to itself: *updating a constraint must cost at least as much
+as complying with it*. Had the script hard-coded the sets, someone could later change the prose,
+watch nothing break, and ship a system whose documented rules and computed rules differ. A stale
+or unparseable table now fails loudly instead.
+
+### Verified, not asserted
+
+The composition's load-bearing design choice is that Annex J is split by section so that a change
+to the cost policy does not invalidate a scientist's in-flight reading — A.6's own worked example.
+Checked against the tool rather than argued:
+
+```
+scientist    → J.0, J.2, J.3          (no J.1, no J.4)
+orchestrator → J.0, J.1, J.2, J.3, J.4
+```
+
+A fingerprint is a pure function of its input list, so J.4's absence from the scientist set is a
+proof rather than a sample: no edit to J.4 can move that fingerprint.
+
+The mechanism was also observed working in the other direction. Editing P2.4 — a paragraph inside
+`plan_defined_parameters.md`, which is in `CORE` — changed all four role fingerprints in the same
+session. That is the intended behaviour and it is documented in P2.4 itself, because the first
+time someone sees it, it looks like a defect.
+
+### An attempted verification that was correctly refused
+
+A mutation test was attempted first: copy the governance into the scratchpad, alter `J.4` there,
+recompute. The shell guard blocked the write, and the block was right — the safe-looking path
+(an inline heredoc) is the one that bypasses read-before-overwrite, which is how a file authored
+by another actor was once destroyed unread. The refusal was not worked around with a different
+shell primitive. The structural check above is stronger anyway: it proves the property for every
+possible mutation instead of sampling one.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: MICRO_UPGRADE` — one record, class `ORIGINAL_OBSERVATION`.
+
+**Observation.** When a specification and its implementation both contain the same rule, the
+implementation is not "executable documentation" — it is a **second source of truth**, and the
+two diverge the moment someone edits one. The instinct when making prose executable is to
+translate it into code. The stronger move is to make the code *read* the prose, so the document
+stays authoritative and the tool cannot drift from it.
+
+**The boundary.** This works when the prose is already structured enough to parse — a fenced
+block, a table with stable columns — and fails when it is narrative. Where it fails, the honest
+answer is to restructure the prose into something parseable, not to give the tool its own copy
+and promise to keep them in sync.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-004.
