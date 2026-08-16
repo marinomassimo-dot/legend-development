@@ -695,3 +695,90 @@ seconds, and it was an external reviewer, not the author, who asked the question
 this one.
 
 **Durable persistence** (§18): via the WORK_COMMIT carrying MAT-008.
+
+---
+
+## MAT-009 — The design record arrived and is archived; the debt closes
+
+```yaml
+record_id: MAT-009
+date: 2026-08-16
+actor_id: plan
+task_id: CONS-003            # design record archival, operator instruction of 2026-08-16
+directive_version: 1
+generation: 1
+governance_version: 3.1.1
+outcome: COMPLETE
+closes: the MISSING debt recorded in MAT-001 and restated in MAT-005 and MAT-008
+supersedes_hash: 3e4cf1355017b75256ecb15c5957c130cc19858c0a9c55b11211adb2b6e05474
+```
+
+`MAT-001`, `MAT-005` and `MAT-008` are **not modified**. Their `MISSING` classification was
+accurate when written and remains the record of what was true at those moments. This record
+closes the debt by pointing forward, which is the only way an append-only log closes anything.
+
+### Archived
+
+[`prior_art_review_v3.1.md`](prior_art_review_v3.1.md) — the complete document: the honest
+server-backed-guarantees table (Parte 1), the 17-primitive matrix with its 10 KEEP / 6 ADAPT /
+1 KEEP+REJECT verdicts (Parte 2), the ten amendments E1–E10 (Parte 3), the five-entry DEFER
+register with reopening triggers (Parte 4), and the verdict (Parte 5). Classified
+`DESIGN RECORD — NON NORMATIVO`; it binds no actor.
+
+Preserved without upgrade: the per-source verification status, and **Agno as ⚠ UNVERIFIED** —
+the document states it was not independently verified and that no amendment rests on it alone.
+Nothing in the archive quietly promotes it.
+
+### What the archive adds that the review itself does not
+
+A table of **three divergences between what was proposed and what v3.1.1 ratified**, recorded
+rather than reconciled:
+
+| Proposed | Ratified |
+|---|---|
+| E1 binds the checkpoint to `GOVERNANCE_VERSION` | binds it to `APPLICABLE_GOVERNANCE_FINGERPRINT`; the global version is audit only |
+| E2 corollary: *every mutating operation is a transaction boundary* | the idempotence boundary is the **significant durable milestone** |
+| E8: `closed_by: EVENT_ID` on the opening event | the opening event is never mutated; the **closing** event carries `CLOSES_EVENT_ID` |
+
+These are the three operator corrections the v3.1.1 preamble refers to without listing. Leaving
+them visible as a difference is what makes the record useful: a design record that silently
+matches the ratified text explains nothing about how the text was reached. Where the two differ,
+the FROZEN body and annexes prevail exclusively.
+
+### 🔴 The document arrived on a corrupted surface
+
+The transmission had already mangled the character encoding — UTF-8 read as latin-1/cp1252, so
+`—` arrived as `â`, `è` as `Ã¨`, and the verification marks were reduced to bare `â`. This is the
+exact defect class of `gold_is_in_the_details.md` § 5d, and its instruction is unambiguous: **do
+not hand-correct a corrupted surface** — re-derive it, or anchor and say so.
+
+The bytes lost in transit are not recoverable from this copy: the sequences in the `0x80–0x9F`
+range that would disambiguate ✅ from ⚠ from `—` were dropped, not corrupted. So the archive
+does the second thing the rule allows. It carries a **published reconstruction map** — received
+glyph, restored glyph, and the basis for each — and declares itself a transcription rather than a
+byte-identical copy. Where a glyph could not be derived unambiguously it is rendered by its
+*meaning* (VERIFIED / UNVERIFIED / no-amendment), which is the load-bearing content, rather than
+by a guessed symbol.
+
+**This is a real limitation, not a formality.** A byte-faithful original should be supplied if
+provenance-grade fidelity is ever required, and the archive says so in its own header rather than
+in this log where a future reader would not look.
+
+### SESSION LEARNING REVIEW (§15)
+
+`OUTCOME: MICRO_UPGRADE` — one record, class `REPLICATION` of the 5d principle in a new domain.
+
+**Observation.** Rule 5d was written for scientific PDFs whose text layer diverges from the
+printed page. It applied unchanged to a governance document pasted through a chat channel, and
+the temptation was identical in shape: the repair looked trivial — a dozen obvious substitutions
+— and performing it silently would have produced a file that reads perfectly and whose fidelity
+nobody could check. The rule's value here was that it already forbade the tempting action before
+the temptation arose.
+
+**The reusable part.** The corrupted-surface discipline is not about PDFs; it is about **any
+document whose received bytes are not the author's**. Chat transmission, copy-paste through a
+terminal, an editor rewriting line endings, and a PDF text layer are the same failure with
+different causes. The test that generalises: *can I state, per changed character, why my version
+is the author's?* If yes, publish the map. If no, do not ship the repair.
+
+**Durable persistence** (§18): via the WORK_COMMIT carrying MAT-009.

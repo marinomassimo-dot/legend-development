@@ -1,0 +1,65 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Written at the STOP point of the design-record archival. Does not embed the candidate content hash — the checkpoint lives inside the hashed tree, so embedding it would make the hash depend on itself. References the candidate by ID; the manifest holds the value.",
+
+  "CHECKPOINT_ID": "CHK-plan-0004",
+  "SUPERSEDES": "CHK-plan-0003",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "CONS-003",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "c1d1a9cf3054bfdfaee8c2db45129f8049e652f2bebbb56b3f6740a07ccc81da",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+
+  "TIMESTAMP": "2026-08-16",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "MILESTONE_PLAN_ORIGIN": "Operator instruction of 2026-08-16: archive the transmitted design record, close the candidate, stop.",
+
+  "MILESTONES_REACHED": [
+    {
+      "milestone": "read and archive the design record",
+      "durable_evidence": "governance/design_records/prior_art_review_v3.1.md; MAT-009",
+      "status": "COMPLETE — matrix, E1–E10, DEFER register, source verification status and Agno as UNVERIFIED all preserved"
+    },
+    {
+      "milestone": "close the MISSING debt append-only",
+      "durable_evidence": "MAT-009; MAT-001, MAT-005 and MAT-008 unmodified",
+      "status": "COMPLETE"
+    },
+    {
+      "milestone": "manifest and SOURCE_COMMITS updated, hash recomputed",
+      "durable_evidence": "governance/candidates/CAND-20260816-GOV311.md revision 3",
+      "status": "COMPLETE"
+    },
+    {
+      "milestone": "LINT and publication gate re-run",
+      "durable_evidence": "candidate §6 verification record",
+      "status": "COMPLETE"
+    }
+  ],
+
+  "DURABLE_POINTERS": {
+    "branch": "evidence-index",
+    "base_head": "749a9a9b8f29c855f803a43b979c591532557561",
+    "candidate_id": "CAND-20260816-GOV311",
+    "candidate_revision": 3,
+    "candidate_manifest": "governance/candidates/CAND-20260816-GOV311.md",
+    "superseded_content_hashes": [
+      "f869a5237a70634ada535343b7484ddc45f36111e9c79664179086a81f8b8909",
+      "3e4cf1355017b75256ecb15c5957c130cc19858c0a9c55b11211adb2b6e05474"
+    ],
+    "design_record": "governance/design_records/prior_art_review_v3.1.md",
+    "materialization_log": "governance/design_records/materialization_log.md",
+    "migration_map": "governance/design_records/claude_md_migration_map.md",
+    "preserved_stash": "stash@{0} — superseded PMID42422765 worktree edit, deliberately not dropped"
+  },
+
+  "STATE": "AWAITING_APPROVAL — candidate complete and held; routing to Mirror is the operator's act in this bridge phase",
+
+  "OPEN_CAVEAT": "The archived design record is a declared transcription with a published reconstruction map, not a byte-identical copy: the transmission corrupted its character encoding and the disambiguating bytes were lost, not merely mangled. A byte-faithful original should be supplied if provenance-grade fidelity is ever required.",
+
+  "RESUME_RULE": "Annex A.6 refusal rule. Recompute the fingerprint with governance/scripts/governance_fingerprint.py compose --role plan; never compare against a value copied from prose. Do not resume on a directive_version, generation or fingerprint mismatch. Before treating the candidate as reviewable, recompute the content hash per the manifest's own recipe and confirm it matches revision 3 — earlier values are historical, not authoritative."
+}
