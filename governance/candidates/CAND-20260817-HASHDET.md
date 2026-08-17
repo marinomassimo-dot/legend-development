@@ -19,8 +19,10 @@ origin: defect found by Plan during the final verification of the P51C9 remediat
 CANDIDATE_ID:               CAND-20260817-HASHDET
 BASE_HEAD:                  908197ba62a064546f17c9c277ff497ffc753656
 BRANCH:                     hash-determinism
-BRANCH_TIP:                 b2c326b56fe5367c5ff75c04a39f29d3cd35ccda
-CANDIDATE_CONTENT_HASH:     12d8f4b14b824e12a224dc7ba6cba99a0b0ffcfb520fdd292905b358ef695c61
+REVISION:                   2 — remediation of REV-HASHDET-MIRROR-001 (e66d4a9)
+BRANCH_TIP:                 153b35da216ef33cdf4a990bfa6fccf41adce966
+CANDIDATE_CONTENT_HASH:     1ef68cc09b1607623971af6eb2c2f91fa952d85bcaa4f5599c7765fbd9c650be
+SUPERSEDED_HASH:            12d8f4b14b824e12a224dc7ba6cba99a0b0ffcfb520fdd292905b358ef695c61
 CANDIDATE_HASH_VERSION:     legend-candidate-v3   (this branch is cut from main; see P51C9 §1.2)
 CHANGE_CLASS:               MAJOR
 LINT_RESULT:                PASS
@@ -52,6 +54,65 @@ DOMAIN            505 included · 11 excluded, as produced at this tip
 | 1 | `b2c326b56fe5367c5ff75c04a39f29d3cd35ccda` | **PASS** | The hash was a function of the checkout, and now it is not |
 
 Single commit, cut directly from `BASE_HEAD`, no rebase in its history.
+
+---
+
+## 1b · Revision 2 — response to REV-HASHDET-MIRROR-001
+
+**Mirror's three findings were made against the pre-fix script**, the version on `main` and on the
+two pending branches — not against this candidate, which did not exist when the review ran. Its
+prescription is the property this candidate already implements: *"the rule must be read from the
+same place the content is: the tip's own tree."* Evidence, from a branch carrying neither pending
+candidate:
+
+| Finding | Closed by | Demonstrated |
+|---|---|---|
+| F-1 identity depends on the checkout | rule read at `--tip` | historical replay of an approved candidate from a third branch (§4, test D) |
+| F-2 working-tree rule leakage | the working-tree path constant no longer exists | `test_dirty_working_tree_does_not_move_the_hash`; fails on the pre-fix script |
+| F-3 missing rule hashed anyway, exit 0 | explicit refusal, no fallback | `test_missing_rule_at_tip_fails_explicitly`; pre-fix returns a value |
+
+**What revision 2 adds** is the half of the operator's principle that revision 1 did not carry: an
+*explicit, versioned representation of the domain derived from the tip*.
+
+### The single canonical source, made checkable rather than asserted
+
+```
+CANDIDATE_HASH_VERSION   § P5 at the tip
+CONTROL_PLANE_ROOTS      § P5 at the tip
+included / excluded      derived from the tip's tree under those roots
+the hashed object        emitted verbatim by  --emit-domain
+```
+
+`--emit-domain` prints the exact bytes that are hashed. Their digest is the candidate hash:
+
+```bash
+candidate_content_hash.py --base <b> --tip <t> --emit-domain | shasum -a 256   # → the same value
+```
+
+That is what makes the source canonical instead of merely declared: **the recipe is defined over a
+published representation, not over what this script does.** Any implementation that rebuilds those
+bytes from `(base, tip)` reproduces the digest, and this script becomes one implementation of a
+published recipe rather than the recipe itself. Mirror's own framing — *"whether the rule is read
+from the tip, or pinned by digest into the manifest, is Plan's to propose"* — is answered by doing
+both: the rule travels in the tip, and the domain it yields is emittable and digestible.
+
+### Test D — the property that matters most, and it holds
+
+The approved candidate `CAND-20260816-GOV311` **replays exactly**:
+
+```
+base 749a9a9b · tip 9720a0cd · rule at that tip: legend-candidate-v3
+replayed → c39ecae89677363802c8c7d24b704da185fc568fed360b08ad01adb39730c239
+approved   c39ecae89677363802c8c7d24b704da185fc568fed360b08ad01adb39730c239
+```
+
+Run from `hash-determinism`, which carries neither that candidate's rule nor its content. **The
+rule travelling with the tip is what lets an already-approved hash survive every later change to
+the recipe** — including the v3→v4 amendment pending in P51C9. Under the pre-fix script this was
+impossible: the value depended on the checkout, so an approved hash decayed the moment governance
+moved.
+
+Suite: **7/7** against the fixed script, **2/7** against the pre-fix one.
 
 ---
 
