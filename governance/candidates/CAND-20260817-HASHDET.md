@@ -19,10 +19,10 @@ origin: defect found by Plan during the final verification of the P51C9 remediat
 CANDIDATE_ID:               CAND-20260817-HASHDET
 BASE_HEAD:                  908197ba62a064546f17c9c277ff497ffc753656
 BRANCH:                     hash-determinism
-REVISION:                   2 — remediation of REV-HASHDET-MIRROR-001 (e66d4a9)
-BRANCH_TIP:                 153b35da216ef33cdf4a990bfa6fccf41adce966
-CANDIDATE_CONTENT_HASH:     1ef68cc09b1607623971af6eb2c2f91fa952d85bcaa4f5599c7765fbd9c650be
-SUPERSEDED_HASH:            12d8f4b14b824e12a224dc7ba6cba99a0b0ffcfb520fdd292905b358ef695c61
+REVISION:                   3 — verification-record repair per REV-MIRROR-HASHDET-R2 (7cd8b397)
+BRANCH_TIP:                 b9af54ebe2fd24d94ec0eee71fcb064797922082
+CANDIDATE_CONTENT_HASH:     c85acdb2d3e55f71bed9aa985ff996fdcfdd5b43c4b1e097c3b6063b80ad05d8
+SUPERSEDED_HASHES:          12d8f4b1…695c61 (r1) · 1ef68cc0…c650be (r2) — DO NOT REVIEW
 CANDIDATE_HASH_VERSION:     legend-candidate-v3   (this branch is cut from main; see P51C9 §1.2)
 CHANGE_CLASS:               MAJOR
 LINT_RESULT:                PASS
@@ -37,14 +37,14 @@ SNAPSHOT_ID:                n/a until canonical execution — GATE 4 belongs to 
 ```bash
 python3 governance/scripts/candidate_content_hash.py \
   --base 908197ba62a064546f17c9c277ff497ffc753656 \
-  --tip  153b35da216ef33cdf4a990bfa6fccf41adce966 --show-domain
+  --tip  b9af54ebe2fd24d94ec0eee71fcb064797922082 --show-domain
 ```
 
 ```
-EXPECTED          1ef68cc09b1607623971af6eb2c2f91fa952d85bcaa4f5599c7765fbd9c650be
-OBTAINED (run 1)  1ef68cc09b1607623971af6eb2c2f91fa952d85bcaa4f5599c7765fbd9c650be
-OBTAINED (run 2)  1ef68cc09b1607623971af6eb2c2f91fa952d85bcaa4f5599c7765fbd9c650be
-DOMAIN            505 included · 12 excluded, as produced at this tip
+EXPECTED          c85acdb2d3e55f71bed9aa985ff996fdcfdd5b43c4b1e097c3b6063b80ad05d8
+OBTAINED (run 1)  c85acdb2d3e55f71bed9aa985ff996fdcfdd5b43c4b1e097c3b6063b80ad05d8
+OBTAINED (run 2)  c85acdb2d3e55f71bed9aa985ff996fdcfdd5b43c4b1e097c3b6063b80ad05d8
+DOMAIN            506 included · 12 excluded, as produced at this tip
 ```
 
 ### SOURCE_COMMITS
@@ -53,6 +53,7 @@ DOMAIN            505 included · 12 excluded, as produced at this tip
 |---|---|---|---|
 | 1 | `b2c326b56fe5367c5ff75c04a39f29d3cd35ccda` | **PASS** | The hash was a function of the checkout, and now it is not |
 | 2 | `153b35da216ef33cdf4a990bfa6fccf41adce966` | **PASS** | The hashed object becomes publishable, and the approved candidate replays |
+| 3 | `b9af54ebe2fd24d94ec0eee71fcb064797922082` | **PASS** | The verification record catches up with the object it verifies |
 
 Cut directly from `BASE_HEAD`, no rebase in either commit's history. Row 2 was missing at the
 reviewed revision — the same stale-representation defect as F-1, in the row directly above the
@@ -253,7 +254,8 @@ Recommended: `HASHDET` → `ORCHWT` → `P51C9`. Plan recommends; the operator a
 
 | Check | Command | Result |
 |---|---|---|
-| Candidate hash | published command, twice | identical `1ef68cc0…c650be` |
+| Candidate hash | published command, twice | identical `c85acdb2…ad05d8` |
+| Record consistency | grep every hash and count in this document | one current value per site; superseded values labelled as such |
 | Determinism suite | `test_candidate_content_hash.py` | **7/7 PASS** |
 | Suite can fail | same suite vs the pre-fix script | **2/7** — 5 failures, the defect exhibited |
 | Emitted domain | `--emit-domain \| shasum -a 256` | equals the candidate hash |
