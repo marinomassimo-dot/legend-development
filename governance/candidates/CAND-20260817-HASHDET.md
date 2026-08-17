@@ -1,0 +1,200 @@
+---
+artifact: INTEGRATION_CANDIDATE manifest (Annex D.2)
+candidate_id: CAND-20260817-HASHDET
+governance_version: 3.1.1
+change_class: MAJOR
+prepared_by: plan
+prepared_on: 2026-08-17
+state: READY FOR MIRROR HOSTILE REVIEW
+scope: governance/scripts/candidate_content_hash.py + its determinism tests. Nothing else.
+origin: defect found by Plan during the final verification of the P51C9 remediation, classified
+  by the operator as a new change rather than a fix inside either pending candidate
+---
+
+# INTEGRATION_CANDIDATE — hash determinism
+
+## 1 · Manifest (Annex D.2)
+
+```yaml
+CANDIDATE_ID:               CAND-20260817-HASHDET
+BASE_HEAD:                  908197ba62a064546f17c9c277ff497ffc753656
+BRANCH:                     hash-determinism
+BRANCH_TIP:                 b2c326b56fe5367c5ff75c04a39f29d3cd35ccda
+CANDIDATE_CONTENT_HASH:     12d8f4b14b824e12a224dc7ba6cba99a0b0ffcfb520fdd292905b358ef695c61
+CANDIDATE_HASH_VERSION:     legend-candidate-v3   (this branch is cut from main; see P51C9 §1.2)
+CHANGE_CLASS:               MAJOR
+LINT_RESULT:                PASS
+PUBLICATION_GATE:           PASS / BLOCKS: 0
+MIRROR_REVIEW:              PENDING
+HUMAN_APPROVAL:             PENDING
+SNAPSHOT_ID:                n/a until canonical execution — GATE 4 belongs to Orchestrator
+```
+
+### Reproduction — one command, run twice
+
+```bash
+python3 governance/scripts/candidate_content_hash.py \
+  --base 908197ba62a064546f17c9c277ff497ffc753656 \
+  --tip  b2c326b56fe5367c5ff75c04a39f29d3cd35ccda --show-domain
+```
+
+```
+EXPECTED          12d8f4b14b824e12a224dc7ba6cba99a0b0ffcfb520fdd292905b358ef695c61
+OBTAINED (run 1)  12d8f4b14b824e12a224dc7ba6cba99a0b0ffcfb520fdd292905b358ef695c61
+OBTAINED (run 2)  12d8f4b14b824e12a224dc7ba6cba99a0b0ffcfb520fdd292905b358ef695c61
+DOMAIN            505 included · 11 excluded, as produced at this tip
+```
+
+### SOURCE_COMMITS
+
+| # | Commit oid | Ancestry | Subject |
+|---|---|---|---|
+| 1 | `b2c326b56fe5367c5ff75c04a39f29d3cd35ccda` | **PASS** | The hash was a function of the checkout, and now it is not |
+
+Single commit, cut directly from `BASE_HEAD`, no rebase in its history.
+
+---
+
+## 2 · The defect
+
+`candidate_content_hash.py` read the **tree** from the commit given as `--tip`, and the **rule** —
+the version prefix and the control-plane roots — from `governance/plan_defined_parameters.md` **in
+the working tree**. The contract in `§ P5` says the hash is a function of `(base, tip)`. The
+implementation made it a function of `(base, tip, whichever branch happened to be checked out)`.
+
+Measured, on the two pending candidates:
+
+| Tip | Hashed from `orchestrator-worktree` (rule v3) | Hashed from `evidence-index` (rule v4) |
+|---|---|---|
+| `ab4856b1` | `280dc497…65763d` | `b4e7c493…cea3be0` |
+
+Same commit, same base, two values. Under `gate 5` an approval binds to a content hash; a hash a
+third party cannot reproduce makes that binding unenforceable at the exact moment it matters — the
+same class as RC-1, from a different door.
+
+**Why it stayed invisible.** For as long as every candidate was hashed from its own branch, the
+working tree and the tip carried the same rule and the two definitions coincided. The defect
+required two branches with *different governance* to become observable, and the candidate split of
+this same day is what first created that configuration. It was introduced when the script was
+written and was latent for its whole life.
+
+---
+
+## 3 · The fix
+
+`parse_p5()` takes the tip and reads the rule with `git show <tip>:governance/plan_defined_parameters.md`.
+The working-tree path constant is gone; there is no code path left that reads the rule from disk.
+
+A tip that carries no rule now **fails explicitly**:
+
+```
+DOMAIN FAILED: the domain rule is absent at <tip>: governance/plan_defined_parameters.md could
+not be read there. A tip that does not carry § P5 cannot be hashed under it, and this command
+will not substitute the working tree's copy.
+```
+
+The refusal matters as much as the read. A silent fallback is precisely what let the defect live:
+the old code, given a tip without the rule, quietly used the checkout's copy and returned a
+plausible number.
+
+### 3.1 · The fix validates the two pending candidates rather than disturbing them
+
+Both published hashes now reproduce **from any checkout**, each under the rule its own tip carries:
+
+| Candidate | Tip | Rule at that tip | Hash |
+|---|---|---|---|
+| `CAND-20260817-ORCHWT` | `ab4856b1` | v3 | `280dc4973cf046123a3356ebdf3e8ae2e575b83d6cce9e8b7b58987f2065763d` |
+| `CAND-20260817-P51C9` | `b5eaf81e` | v4 | `f325bd9d1667638eeda718b73bc106263fea3a509f832bcc62e082cdba0651da` |
+
+Verified from `hash-determinism`, a third branch carrying neither candidate. **Neither pending
+manifest requires amendment**, which is why this is a separate candidate and not an edit to
+either.
+
+---
+
+## 4 · Tests — and the demonstration that they can fail
+
+`governance/scripts/test_candidate_content_hash.py`, five tests. Each builds a **throw-away git
+repository** with two commits whose *rules* differ, so nothing depends on this repository's
+history and the suite passes in a clean clone.
+
+```
+PASS  test_rule_comes_from_the_tip_not_the_working_tree — rule read from the tip, not the checkout
+PASS  test_hash_is_branch_independent — branch-independent
+PASS  test_dirty_working_tree_does_not_move_the_hash — immune to a dirty working tree
+PASS  test_missing_rule_at_tip_fails_explicitly — absent rule fails explicitly, no fallback
+PASS  test_determinism_across_runs — stable across runs
+5/5 passed
+```
+
+**The companion demonstration**, required by `PATTERN_ALREADY_SOLVED_GATE` variant 3 — *a green
+suite is evidence only if the environment it ran in is capable of exhibiting the defect*. The same
+suite, run unchanged against the **pre-fix** script:
+
+```
+1/5 passed
+  FAIL  test_rule_comes_from_the_tip_not_the_working_tree
+  FAIL  test_hash_is_branch_independent — 'a6ca8ee7…' vs '5081c7cf…'
+  FAIL  test_dirty_working_tree_does_not_move_the_hash
+  FAIL  test_missing_rule_at_tip_fails_explicitly — fell back instead of refusing
+  PASS  test_determinism_across_runs
+```
+
+The one that passes on both is the one that could never have caught this: running twice from the
+same checkout was always stable. That row is worth keeping precisely because it shows what a
+determinism test looks like when it is measuring the wrong invariant.
+
+---
+
+## 5 · CHANGE_CLASS: MAJOR
+
+The script implements the definition `Annex D.2` delegates to `§ P5`, and `gate 5` binds every
+approval to its output. A change to how a candidate's identity is computed is a gate-model change,
+and body §12 resolves a doubtful classification to MAJOR fail-closed. The small diff is not
+evidence of a small blast radius.
+
+---
+
+## 6 · Scope — what is deliberately absent
+
+| Excluded | Why |
+|---|---|
+| `CAND-20260817-P51C9` | held PENDING, unmodified, per operator instruction |
+| `CAND-20260817-ORCHWT` | same |
+| `runtime/` classification | open against C-9 §7.2; not this candidate's question |
+| SLR integration | awaits Mirror's E.2 curation |
+| `legend_lint.py` | Mirror classified lint expansion as a future candidate (N-5) |
+| `plan_defined_parameters.md` | **the rule itself is untouched.** This candidate changes only how the rule is *read* |
+
+That last row is the load-bearing one: fixing a reader by editing what it reads would have put the
+change inside P51C9's content and rehashed a candidate under review.
+
+---
+
+## 7 · Execution ordering
+
+`HASHDET` should execute **first** among the three. It changes how every subsequent candidate's
+identity is computed, and executing it after the others would mean their approvals were bound by a
+recipe that is being replaced. Executing it first costs nothing: it validates the other two
+without altering them (§3.1), so neither needs re-hashing on its account — only the ordinary
+re-base that any candidate needs once another has moved `main`.
+
+Recommended: `HASHDET` → `ORCHWT` → `P51C9`. Plan recommends; the operator and Orchestrator decide.
+
+---
+
+## 8 · Verification record
+
+| Check | Command | Result |
+|---|---|---|
+| Candidate hash | published command, twice | identical `12d8f4b1…695c61` |
+| Determinism suite | `test_candidate_content_hash.py` | **5/5 PASS** |
+| Suite can fail | same suite vs the pre-fix script | **1/5** — 4 failures, the defect exhibited |
+| Both pending hashes reproduce | from `hash-determinism`, a third branch | `280dc497…` and `f325bd9d…`, matching their manifests |
+| No residual working-tree read | `grep PARAMETERS` | only the tip-scoped `git show` |
+| Structural LINT | `legend_lint.py .` | `PASS` |
+| Publication gate | `public_release_gate.py` | `PASS`, `BLOCKS: 0` |
+| No history rewritten | branch from `main`, single commit | no rebase, amend or force push |
+
+**NO CANONICAL_BATCH_COMMIT EXECUTED.** Preparation only. `GATE 0` still cannot pass: root not
+clean, no lease, L2 suspended.
