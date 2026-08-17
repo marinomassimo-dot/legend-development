@@ -1,30 +1,37 @@
 ---
 artifact: PROPOSAL C-9 — how LEGEND represents state
 proposal_id: C9-STATE-MODEL
-revision: 2
+revision: 3
 task_id: C9-STATE-MODEL-001
 author: plan
 authored_on: 2026-08-17
 domain: CONTROL PLANE — governance/candidates/ is a declared CONTROL_PLANE_ROOT (P5.1), so this
   file modifies no content-domain artifact, no candidate content hash and no role fingerprint
 lineage:
-  - rev 1 @ f7a0049 — R4 Mirror review returned REQUEST CHANGES (B-1…B-4, notes 1–4)
-  - rev 2 @ this commit — revises rev 1 in response; supersedes nothing, corrects itself
+  - rev 1 @ f7a0049 — R4 returned REQUEST CHANGES (B-1…B-4, notes 1–4)
+  - rev 2 @ 6c2ab4f — R4 re-review returned REQUEST CHANGES; §2.2, §3, §6.1, §7 and §10 ACCEPTED;
+    two clauses blocking (hash rule too strong; "never cited as evidence" incorrect)
+  - rev 3 @ this commit — revises the two blocking clauses only; accepted sections preserved
 status: PROPOSED
-status_since_event: R4 REQUEST CHANGES on rev 1, relayed by the operator 2026-08-17
+status_since_event: R4 REQUEST CHANGES on rev 2, relayed by the operator 2026-08-17
 status_transition_owner: operator, on the outcome of the next R4 Mirror review
 status_next_review: R4 — MIRROR_REQUIRED, before anything proposed here is implemented
 hold: no implementation and no governance modification until that review completes; L2 suspended;
   the status/C-8 batch frozen pending a later operator decision
 ---
 
-# PROPOSAL C-9 — static, derived and transitional state · revision 2
+# PROPOSAL C-9 — static, derived and transitional state · revision 3
 
-> **Lineage note.** Revision 1 was reviewed at R4 and returned `REQUEST CHANGES` with four
-> blocking findings. This revision answers them. Three of the four were defects *in the model*,
-> not in its presentation, and one — B-3 — was the proposal committing, inside itself, the exact
-> failure it proposes to fix. That is recorded rather than smoothed over, because a proposal about
-> state errors that hides its own is worth less than the model it carries.
+> **Lineage note.** Revision 1 returned `REQUEST CHANGES` with four blocking findings; revision 2
+> answered them and returned `REQUEST CHANGES` with two. The review states the model does not
+> require redesign and accepts §2.2, §3, §6.1, §7 and §10. **This revision touches only the two
+> blocking clauses and the sections they force.** Accepted text is preserved verbatim.
+>
+> Both remaining findings are the same failure at one more level of generality: revision 2 fixed
+> a per-field judgement by promoting it to a universal rule, and each universal rule turned out to
+> have a counterexample sitting in this repository. **A rule stated more strongly than its
+> evidence is an (a1) assertion — untested — wearing the clothes of a principle.** That is
+> recorded as instances 11 and 12 rather than smoothed over.
 
 ## 0 · What this proposes, and what it does not
 
@@ -74,6 +81,33 @@ The question one step earlier:
 > ### Does this assertion claim to describe the present?
 
 *(The question is the orchestrator's. The test it replaced was mine.)*
+
+### 2.1b · A prior question — is this an assertion at all? · **[BLOCKING-1]**
+
+The question above presupposes the value **asserts** something about state. Not every recorded
+value does. `BASE_HEAD: 749a9a9b…` does not claim that something *is* or *was* the case: it
+**names an object**. A name is not an assertion, and asking a name whether it describes the
+present is a category error — which is how revision 2 produced a rule that swallowed the
+identifiers the gates depend on.
+
+So the classifier begins one step further back:
+
+> ### 1. Is this a NAME or an ASSERTION?
+> ### 2. If an assertion — does it claim to describe the present?
+
+**The operational test**, which needs no theory: *if this value changed, would you say "the
+measurement was wrong" or "that is a different object"?*
+
+- *the measurement was wrong* → an **assertion**; continue to question 2
+- *that is a different object* → a **NAME** — an `IDENTIFIER` (§4.1)
+
+`BASE_HEAD` fails the first and passes the second: a different value there does not mean the base
+was mis-measured, it means the candidate is bound to a different commit. That is precisely what
+GATE 5 exists to detect, and it is why identifiers must be immutable rather than correctable.
+
+**Identifiers do not enter the semantic axis of §3.** That axis classifies assertions about state;
+a name has no temporal claim to classify. This is stated as an addition *before* §3 rather than as
+a fourth class *inside* it, so the section the review accepted stands unamended.
 
 ### 2.2 · The unit is the FIELD, scoped by its RECORD · **[B-1]**
 
@@ -150,32 +184,54 @@ Both are true; they differ in what they are true **about**.
 | Goes stale? | never — the moment does not move | never — it is recomputed |
 | Remedy when wrong | re-measure, then **append** a correction | recompute |
 
-### 4.1 · Every hash is DERIVED. A recorded hash is a STATIC record of a derivation. · **[B-3]**
+### 4.1 · A hash is not a class. The semantic ROLE decides. · **[B-3, BLOCKING-1]**
 
-Revision 1 classified `ROLE_CONTRACT_HASH` as STATIC. **Mirror is right that this is wrong**, and
-the error is instructive: §4 of revision 1 drew exactly this distinction for
-`CANDIDATE_CONTENT_HASH` — *recorded in a commit message it is historical; emitted by the script
-today it is derived* — and then failed to carry it one section later to a hash of the same kind.
+Revision 1 classified `ROLE_CONTRACT_HASH` as STATIC, which was wrong. Revision 2 corrected it
+with *"a hash is never STATIC; the value is DERIVED"* — **which is also wrong, and more
+dangerously**, because it is general enough to swallow the anchors the gates depend on.
+`BASE_HEAD`, `BRANCH_TIP` and the `PRIOR_ART_*_SHA256` pair are not measurements awaiting
+recomputation. They are identities, and `P5` says why in its own words: BASE_HEAD is folded in
+*"so an approval cannot be transplanted onto a different base"*.
 
-**Uneven application, inside the document proposing to fix uneven application.** Not by forgetting
-the rule: by recognising the shape and stopping there, which is the mechanism this repository
-names in `designed_for_growth.md` consequence 5.
+**A hash has no class of its own.** The same 64 hex characters carry three different roles, and
+the role decides:
 
-The corrected rule is general and removes the per-field judgement:
+| Role | The question it answers | Class | If the value differs |
+|---|---|---|---|
+| **A · DERIVED MEASUREMENT** | *what does this mutable input hash to now?* | DERIVED | the measurement was wrong or the input moved → **recompute** |
+| **B · IMMUTABLE IDENTIFIER** | *which object?* | **IDENTIFIER** — outside the temporal axis (§2.1b) | you are naming a **different object**. There is nothing to correct; a gate must **refuse**, not reconcile |
+| **C · HISTORICAL RECORD of either** | *what was it, then?* | STATIC | append a correction; never edit |
 
-> **A hash is never STATIC. The *value* is DERIVED — recomputable from its input by a stated
-> recipe. A *record* of that value, dated, is STATIC.**
+Applied to the values in force:
 
-| Occurrence | Class | Remedy if wrong |
+| Value | Role | Why |
 |---|---|---|
-| `shasum -a 256 roles/plan.md` today | DERIVED | recompute |
-| `ROLE_CONTRACT_HASH` inside `CHK-plan-0006` | STATIC — what it hashed to at that checkpoint | append a correction |
-| `CANDIDATE_CONTENT_HASH` in commit `908197b` | STATIC | append a correction |
-| `CANDIDATE_CONTENT_HASH` in a live manifest field | **DERIVED, and must not be stored** without its recipe beside it | recompute |
+| `shasum -a 256 roles/plan.md` run today | A | asks what a mutable file hashes to now |
+| `ROLE_CONTRACT_HASH` inside `CHK-plan-0006` | B, and C by being recorded | names which contract version the checkpoint was taken under; a different value means a different contract, not a mis-measurement |
+| `BASE_HEAD 749a9a9b…` | **B** | GATE 5 binds to it precisely so it cannot move |
+| `BRANCH_TIP 9720a0cd…` | **B** | names the tree the domain was taken over |
+| `PRIOR_ART_SOURCE_SHA256` / `..._ARCHIVED_SHA256` | **B** | their whole purpose is an identity comparison — `BYTE_IDENTITY: PASS` asserts the two names denote the same bytes |
+| `CANDIDATE_CONTENT_HASH` as computed by the script | A | a measurement over a tree, by a published recipe |
+| `CANDIDATE_CONTENT_HASH` as bound in an approval | **B** | the approval names *that* content; a different value is a different candidate, which is what gate 5 detects |
+| any of the above inside a commit message or checkpoint | C | dated testimony |
 
-The last row is the one with teeth: it is why the manifest publishes the reproduction command and
-why the entry count was removed rather than corrected (RC-3). A stored derived value without its
-recipe is a state error waiting for its input to move.
+**The strongest kind of identifier is one that is also derivable**, and this is not a curiosity —
+it is why RC-1 mattered. `CANDIDATE_CONTENT_HASH` is role B when a gate binds to it and role A
+when the script computes it, so the binding can be **re-verified** rather than merely compared.
+An identifier that cannot be recomputed — a session ref, a UUID — can only be compared against a
+record of itself, which is why §5.2's observation rule exists.
+
+**Storage rule that follows:** a role-A value must not be stored without its recipe beside it.
+That is why the manifest publishes the reproduction command and why the entry count was removed
+rather than corrected (RC-3). A role-B value *must* be stored — that is what an anchor is for.
+
+**What revision 2 got right and should be kept:** the failure that produced it. §4 of revision 1
+drew the historical-versus-current distinction for one hash and failed to carry it one section
+later to another. Uneven application inside the document proposing to cure uneven application —
+not by forgetting the rule, but by recognising the shape and stopping there
+(`designed_for_growth.md` consequence 5). Revision 2 then over-corrected into a universal, which
+is the same error with the sign flipped: a per-case judgement replaced by a rule that was never
+tested against `BASE_HEAD`.
 
 ### 4.2 · Instrumentation rider
 
@@ -196,7 +252,48 @@ mechanism existed.
 | **STATIC** | the actor that witnessed it | never edited by anyone, its author included. A correction is a **new record** naming what it supersedes |
 | **DERIVED** | the tool | *the tool that causes the change re-anchors it.* No hand-written derived values; a cache is written by the computing tool and carries its input digest |
 | **TRANSITIONAL** | the actor whose act causes the transition | named **in the field itself** |
-| *(untracked cell)* | whoever holds the runtime | free to rewrite; never tracked; never cited as evidence |
+| *(untracked cell)* | whoever holds the runtime | free to rewrite; never tracked; never **stored** as durable state — but see §5.2, an *observation of* it may be evidence |
+
+### 5.2 · Durability of a value ≠ admissibility of an observation · **[BLOCKING-2]**
+
+Revision 2 said an untracked value is *"never cited as evidence"*. **That is wrong**, and the
+counterexample is this bootstrap's own L1 smoke test.
+
+The load-bearing item in L1 was the `from` attribute the runtime placed on an incoming message —
+untracked, ephemeral, gone when the session ends. It was nevertheless **valid evidence**, and it
+was the only thing that could confirm a derived `SESSION_REF` by observation rather than by
+inference. Under revision 2's clause, the one test that closed L1 would have been inadmissible.
+
+The clause conflated two different properties:
+
+| | Untracked **value** | **Observation of** an untracked value |
+|---|---|---|
+| may become durable state | **no** | — |
+| may be persistent configuration | **no** | — |
+| may be evidence | — | **yes**, under the conditions below |
+| what is durable | nothing | the **observation record** |
+| its class | TRANSITIONAL × UNTRACKED | **STATIC** — dated testimony (§2.2) |
+
+**The boundary.** An untracked value cannot become durable state or be treated as configuration.
+An *observation* of it becomes durable through the observation record, and that record is STATIC:
+it asserts *at time T, observer O saw V*, which remains true forever regardless of what the value
+does next.
+
+**Conditions on the observation**, higher than for a re-checkable value, because nobody can go
+back and look:
+
+- **an authorised observer** — someone whose role places them where the value was visible. In L1
+  the receiving actor was the only party who could see the `from` the runtime supplied;
+- **verbatim** — the value as received, not as paraphrased or as the sender's envelope claimed it.
+  Quoting the sender's own assertion back would have confirmed nothing, which is why the protocol
+  asked the receiver to quote the runtime's attribute;
+- **attributed and dated** — observer and moment, since the observation cannot be repeated;
+- **the instrument named** — §4.2's rider applies with more force here: an unrepeatable
+  observation taken through an unnamed pipeline cannot be distinguished later from instance 7.
+
+**This is the model classifying its own machinery correctly:** the value is
+TRANSITIONAL × UNTRACKED, the record about it is STATIC, and revision 2's error was assigning the
+record the class of the value.
 
 ### 5.1 · Transition owners in force today
 
@@ -348,7 +445,9 @@ only rewriting the frozen prefix is a violation.
 | `materialization_log.md:238` | **STATIC** — dated testimony, field scoped by its record (§2.2) | 🔴 **none. Do not touch.** A new record, never an edit | must remain |
 | Every `REVIVAL_TRIGGER` in the dismissal ledger | **STATIC** — standing condition recorded at time T | firing it produces a new record | must remain |
 | C-8, the stale capability line in `roles/plan.md` | TRANSITIONAL | §6 form; owner orchestrator at L2 | yes |
-| `ROLE_CONTRACT_HASH` wherever stored live | **DERIVED** (§4.1) | recompute; store only inside dated records | yes |
+| `ROLE_CONTRACT_HASH` computed today | **role A — DERIVED** (§4.1) | recompute | yes |
+| `BASE_HEAD`, `BRANCH_TIP`, `PRIOR_ART_*_SHA256`, an approval's bound hash | **role B — IDENTIFIER** | none. A different value names a different object; a gate **refuses** rather than reconciles | n/a — must not move |
+| The `from` attribute observed in L1 | value: TRANSITIONAL × UNTRACKED · record: **STATIC** (§5.2) | the observation record is the durable artifact | n/a |
 | Agent Card `STATUS` | three machines (§7.1) | split into named fields | yes |
 
 ---
@@ -446,9 +545,23 @@ All measured during the v3.1.1 bootstrap and its reviews. Each is (A); each was 
 | 8 | 834 bytes published as characters; delta of 5 comes from **3** multi-byte characters | a2 | orchestrator, refined by plan |
 | 9 | Both actors reconciled #8 by assuming an unchecked explanation, which was wrong | a1 | orchestrator |
 | 10 | **This proposal classified `ROLE_CONTRACT_HASH` as STATIC one section after drawing the correct distinction for another hash** | a1 | mirror, at R4 |
+| 11 | **The fix for #10 — *"a hash is never STATIC"* — was never tested against `BASE_HEAD`, and would have reclassified every gate anchor as a recomputable measurement** | a1 | mirror, at R4 re-review |
+| 12 | **"Untracked values are never cited as evidence" would have made the observation that closed L1 inadmissible** | a1 | mirror, at R4 re-review |
 
-Six of ten are (a2), and every correction in the chain was right about the thing it corrected while
-carrying a smaller instance of the same family — #10 included, which is this document.
+Twelve instances; six are (a2). Every correction in the chain was right about the thing it
+corrected while carrying a smaller instance of the same family.
+
+**Instances 10, 11 and 12 form one chain and are the most useful rows in this table**, because
+they are this document failing three times in the same place: a per-field misclassification, then
+a universal rule that over-corrected it, then a second universal rule with the same defect. The
+first was uneven application; the second and third were its mirror image — **a rule stated more
+strongly than the evidence that produced it.** Both are (a1): an assertion made without testing it
+against the cases it would govern, and in both cases the counterexample was already in the
+repository, load-bearing, and two files away.
+
+The generalisation worth keeping: **over-correction is not the opposite of uneven application, it
+is the same error at a higher altitude.** Fixing a case by promoting it to a universal skips the
+same step — checking the rule against the instances it now covers.
 
 The sharpest statement of the class came out of #7: **a mis-scoped pattern leaves a suspicious
 silence; a broken pipeline hands you a number.**
@@ -465,6 +578,11 @@ silence; a broken pipeline hands you a number.**
 - B-1 through B-4 and notes 1–4 are **Mirror's**, at R4. B-3 and B-4 were defects in the model;
   B-1 was an ambiguity that would have misclassified the dismissal ledger; B-2 was a capability
   asserted into existence.
+- BLOCKING-1 and BLOCKING-2 are **Mirror's**, at the R4 re-review, together with the framing that
+  resolves the first — *hash is not a class by itself; classification depends on semantic role* —
+  and the distinction that resolves the second, between the durability of a value and the
+  admissibility of an observation. Both caught rules this document had stated more strongly than
+  its evidence.
 - The two-axis composition, the transitional-owner rule, the four-field form, the Agent Card
   split, the field-scoped-by-record unit, and instance 7 are **Plan's**.
 
@@ -472,11 +590,19 @@ silence; a broken pipeline hands you a number.**
 
 ## 13 · What the next review must decide
 
-1. §2.2 — is *field, scoped by record* the right unit, and does it protect every append-only
-   artifact rather than only the two tested?
-2. §3 — are two axes stated correctly, and is `TRANSITIONAL × UNTRACKED` the whole of what
-   "ephemeral" meant?
-3. §4.1 — is *no hash is ever STATIC* too strong?
+*(Items 1, 2 and the §6.1, §7, §10 questions were accepted at the R4 re-review and are retained
+for the record rather than reopened.)*
+
+1. §2.2 — ✅ accepted at re-review.
+2. §3 — ✅ accepted at re-review. Note that §2.1b adds a step **before** this axis rather than a
+   class inside it, precisely so the accepted section stands unamended; confirm that placement is
+   right.
+3. §4.1 — is the three-role split (measurement / identifier / historical record) correct, and is
+   *"a gate refuses rather than reconciles"* the right consequence for a role-B mismatch?
+3b. §2.1b — is the operational test — *"the measurement was wrong" versus "that is a different
+   object"* — sufficient to sort a value without appeal to theory?
+3c. §5.2 — are the four conditions on an observation of an untracked value the right ones, and is
+   *authorised observer* definable without a registry that does not yet exist?
 4. §6.1 — is the resolver contract a model requirement or an implementation smuggled into a
    proposal? It was written to be the former.
 5. §7.1 — is retiring the field name `STATUS` proportionate to the confusion it caused?
@@ -487,6 +613,28 @@ silence; a broken pipeline hands you a number.**
 8. §10 — does the (A)/(B) separation hold, and is the derived assignment acceptable as a proposal?
 9. Ordering: the status/C-8 batch is frozen behind this review. If adopted, the batch should apply
    the new form rather than the old value — one change rather than two.
+
+---
+
+## 14 · Non-blocking observations from the R4 re-review — recorded, not acted on
+
+**The append-only carve-out remains a prose declaration unless a validator exists.** Correct, and
+kept at proposal level deliberately. §7.3 states the requirement — a carve-out is a permission
+*plus* a validator the LINT consumes — and does not build one. Writing the validator would be
+implementation, which the hold forbids, and a proposal that quietly shipped its own enforcement
+would be the same boundary violation this document's §0 disclaims.
+
+**`BLOCKED` / `AWAITING_APPROVAL` overlap between J.2 and A.5.** Noted and left outside scope. J.2
+lists them among actor states; A.5 lists them among task states. Whether one actor blocked on one
+task is the same fact recorded twice, or two facts that can legitimately disagree, is a question
+about the frozen text rather than about this model. Recorded here so it is not rediscovered.
+
+**Checkpoint lineage.** `CHK-plan-0007` recorded the hand-off at revision 1. Revisions 2 and 3
+each changed what a resumer would need to know, so a successor checkpoint accompanies this
+revision rather than an edit to `0007` — the same append-not-edit rule the model proposes, applied
+to the model's own process artifacts.
+
+---
 
 **Nothing here is adopted by having been written.** No implementation, no governance modification,
 L2 suspended, batch frozen — as directed.
