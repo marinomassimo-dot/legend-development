@@ -171,6 +171,55 @@ def test_determinism_across_runs(repo, base, tip):
     return "stable across runs"
 
 
+def test_emitted_domain_is_the_hashed_object(repo, base, tip):
+    """`--emit-domain` must print exactly the bytes whose SHA-256 is the candidate hash.
+
+    This is what makes the recipe checkable by an implementation nobody has written yet: the hash
+    is defined over a published representation, not over what this script happens to do.
+    """
+    emitted = subprocess.run(
+        [sys.executable, str(repo / "governance/scripts" / SCRIPT.name),
+         "--base", base, "--tip", tip, "--emit-domain"],
+        capture_output=True, text=True,
+    ).stdout
+    import hashlib
+    assert emitted, "--emit-domain produced nothing"
+    digest = hashlib.sha256(emitted.encode("utf-8")).hexdigest()
+    reported = _run(repo, base, tip).stdout.strip()
+    assert digest == reported, f"emitted bytes digest to {digest[:16]}…, command reports {reported[:16]}…"
+    return "emitted representation digests to the reported hash"
+
+
+def test_historical_replay(repo, base, tip):
+    """A candidate already approved must replay, or the command must declare incompatibility.
+
+    Run against this repository's real history rather than the fixture, because replay of an
+    approved value is the property under test and a fixture cannot have one. Skips — loudly —
+    where the history is unavailable, so a clean clone without these objects does not report a
+    false green.
+    """
+    real = Path(__file__).resolve().parent.parent.parent
+    approved = "c39ecae89677363802c8c7d24b704da185fc568fed360b08ad01adb39730c239"
+    probe = subprocess.run(["git", "-C", str(real), "cat-file", "-e", "9720a0cd^{commit}"],
+                           capture_output=True)
+    if probe.returncode != 0:
+        return "SKIPPED — the historical commits are not in this clone"
+    out = subprocess.run(
+        [sys.executable, str(real / "governance/scripts" / SCRIPT.name),
+         "--base", "749a9a9b", "--tip", "9720a0cd"],
+        capture_output=True, text=True,
+    )
+    value = out.stdout.strip()
+    assert out.returncode == 0 or "incompatib" in out.stderr.lower(), (
+        f"neither replayed nor declared incompatibility: {out.stderr}"
+    )
+    if out.returncode == 0:
+        assert value == approved, (
+            f"historical candidate did not replay: expected {approved[:16]}…, got {value[:16]}…"
+        )
+    return f"approved candidate replays: {value[:16]}…"
+
+
 def main() -> int:
     tests = [
         test_rule_comes_from_the_tip_not_the_working_tree,
@@ -178,6 +227,8 @@ def main() -> int:
         test_dirty_working_tree_does_not_move_the_hash,
         test_missing_rule_at_tip_fails_explicitly,
         test_determinism_across_runs,
+        test_emitted_domain_is_the_hashed_object,
+        test_historical_replay,
     ]
     failures = 0
     with tempfile.TemporaryDirectory() as tmp:

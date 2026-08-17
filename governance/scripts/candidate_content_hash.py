@@ -114,6 +114,20 @@ def domain(tip: str) -> tuple[list[str], list[str]]:
     return included, excluded
 
 
+def serialize_domain(base_head: str, tip: str) -> tuple[str, list[str], list[str], str]:
+    """Build the explicit, versioned domain representation that IS the hashed object.
+
+    The hash is not defined as "whatever this script does". It is defined over these bytes, which
+    any implementation can rebuild from `(base, tip)` alone — so the digest is checkable by a tool
+    nobody has written yet, and this script becomes one implementation of a published recipe
+    rather than the recipe itself.
+    """
+    version, _ = parse_p5(tip)
+    included, excluded = domain(tip)
+    serialized = f"{version}\n{base_head}\n" + "".join(f"{entry}\n" for entry in included)
+    return serialized, included, excluded, version
+
+
 def compute(base_head: str, tip: str) -> tuple[str, list[str], list[str], str]:
     version, _ = parse_p5(tip)
     included, excluded = domain(tip)
@@ -128,6 +142,9 @@ def main() -> int:
     parser.add_argument("--tip", required=True, help="commit whose tree defines the domain")
     parser.add_argument("--show-domain", action="store_true",
                         help="print the entry count and every excluded path")
+    parser.add_argument("--emit-domain", action="store_true",
+                        help="print the explicit domain representation itself, the bytes that are "
+                             "hashed, so a third party can rebuild and re-digest them")
     args = parser.parse_args()
 
     try:
@@ -137,6 +154,11 @@ def main() -> int:
     except DomainError as exc:
         print(f"DOMAIN FAILED: {exc}", file=sys.stderr)
         return 2
+
+    if args.emit_domain:
+        serialized, _, _, _ = serialize_domain(base, tip)
+        sys.stdout.write(serialized)
+        return 0
 
     if args.show_domain:
         print(f"version        {version}")
