@@ -11,11 +11,14 @@ lineage:
   - rev 1 @ f7a0049 — R4 returned REQUEST CHANGES (B-1…B-4, notes 1–4)
   - rev 2 @ 6c2ab4f — R4 re-review returned REQUEST CHANGES; §2.2, §3, §6.1, §7 and §10 ACCEPTED;
     two clauses blocking (hash rule too strong; "never cited as evidence" incorrect)
-  - rev 3 @ this commit — revises the two blocking clauses only; accepted sections preserved
-status: PROPOSED
-status_since_event: R4 REQUEST CHANGES on rev 2, relayed by the operator 2026-08-17
-status_transition_owner: operator, on the outcome of the next R4 Mirror review
-status_next_review: R4 — MIRROR_REQUIRED, before anything proposed here is implemented
+  - rev 3 @ f3bef29 — revised the two blocking clauses; R4 returned REQUEST CHANGES on one
+    finding, the identifier collision (REV-C9-STATE-MODEL-003)
+  - rev 4 @ this commit — CLOSING PATCH: §2.1c, one clause, per that review's first exit
+status: ACCEPTED
+status_since_event: operator closure directive, 2026-08-17
+status_transition_owner: operator
+status_next_review: at the first governed change that adopts any clause of this proposal
+acceptance_is_not_adoption: true
 hold: no implementation and no governance modification until that review completes; L2 suspended;
   the status/C-8 batch frozen pending a later operator decision
 ---
@@ -99,7 +102,37 @@ So the classifier begins one step further back:
 measurement was wrong" or "that is a different object"?*
 
 - *the measurement was wrong* → an **assertion**; continue to question 2
-- *that is a different object* → a **NAME** — an `IDENTIFIER` (§4.1)
+- *that is a different object* → a **NAME**; continue to the scoping clause below
+
+### 2.1c · A name leaves the axis only if something is BOUND to it · **[the one clause]**
+
+The test above is necessary and not sufficient. It returns *"a different object"* for both
+`BASE_HEAD` and `CURRENT_SESSION_REF` — a session restart genuinely produces a different session —
+while the model needs the two in different places. Revision 3 put every name outside the semantic
+axis, which would have given a session ref a transition owner and a review date. That is not a
+taxonomy blemish; it is a wrong action.
+
+> **A name sits outside the axis only when something is bound to it.**
+>
+> A **binding name** is one that an approval, a gate or a freeze cites, such that a different
+> value produces **refusal rather than update**. It is an `IDENTIFIER` (§4.1, role B).
+>
+> A name that binds nothing is not an identifier in this sense. When it changes, nothing refuses —
+> the new value is simply the current one — so it remains an assertion about the present and is
+> classified by §3 like any other.
+
+The second half of the test, therefore: *and does anything refuse when it changes?*
+
+| Value | Different object? | Anything refuses? | Result |
+|---|---|---|---|
+| `BASE_HEAD` | yes | yes — gate 5 | **IDENTIFIER**, outside the axis |
+| `CANDIDATE_CONTENT_HASH` bound in an approval | yes | yes — gate 5 | **IDENTIFIER** |
+| `PRIOR_ART_*_SHA256` | yes | yes — `BYTE_IDENTITY` | **IDENTIFIER** |
+| `CURRENT_SESSION_REF` | yes | **no** | assertion → `TRANSITIONAL × UNTRACKED` (§3), **no owner, no review date** |
+
+*(The collision, the operational test that exposes it, and the wrong-action consequence are
+Mirror's, at the R4 review of revision 3. The scoping clause is the first of the two exits that
+review offered.)*
 
 `BASE_HEAD` fails the first and passes the second: a different value there does not mean the base
 was mis-measured, it means the candidate is bound to a different commit. That is precisely what
@@ -635,6 +668,32 @@ revision rather than an edit to `0007` — the same append-not-edit rule the mod
 to the model's own process artifacts.
 
 ---
+
+---
+
+## 15 · Closure
+
+C-9 closes at revision 4 on the operator's directive, with the minimal patch its last review
+prescribed: **one clause**, §2.1c, scoping the identifier exit to names something is bound to.
+
+**Accepted is not adopted.** The status above records that the proposal is settled as a
+*document*; it changes no governed artifact. Every remedy in §8 remains frozen, L2 remains
+suspended, and the status/C-8 batch remains frozen. Adoption of any clause is a governed change
+with its own review, and for the clauses touching `plan_defined_parameters.md` or a role contract
+it carries a fingerprint rotation.
+
+**What was deliberately kept out.** The Fable advisory produced two formulations better than
+anything this document carries — *the role constrains admissible behaviour rather than composing
+freely*, and *the violation is not the change, it is a transition without an event*. Neither is
+folded in here. The second in particular would improve §5: C-9 makes staleness **attributable**
+by naming an owner, while that formulation makes it **detectable**, and detection beats
+attribution because it does not depend on anyone noticing.
+
+They are held out on purpose. Folding a binding-contract abstraction into a proposal four
+revisions deep and one clause from closure would replace a one-clause fix with a redesign, inside
+a document whose §0 disclaims exactly that. They are registered separately as
+[`ADVISORY-FABLE-C9-001.md`](ADVISORY-FABLE-C9-001.md), outcome `MACRO_UPGRADE_CANDIDATE`, where
+they can be argued on their own merits under §17's governed path.
 
 **Nothing here is adopted by having been written.** No implementation, no governance modification,
 L2 suspended, batch frozen — as directed.
