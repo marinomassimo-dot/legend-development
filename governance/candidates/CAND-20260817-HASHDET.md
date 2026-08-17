@@ -37,14 +37,14 @@ SNAPSHOT_ID:                n/a until canonical execution — GATE 4 belongs to 
 ```bash
 python3 governance/scripts/candidate_content_hash.py \
   --base 908197ba62a064546f17c9c277ff497ffc753656 \
-  --tip  b2c326b56fe5367c5ff75c04a39f29d3cd35ccda --show-domain
+  --tip  153b35da216ef33cdf4a990bfa6fccf41adce966 --show-domain
 ```
 
 ```
-EXPECTED          12d8f4b14b824e12a224dc7ba6cba99a0b0ffcfb520fdd292905b358ef695c61
-OBTAINED (run 1)  12d8f4b14b824e12a224dc7ba6cba99a0b0ffcfb520fdd292905b358ef695c61
-OBTAINED (run 2)  12d8f4b14b824e12a224dc7ba6cba99a0b0ffcfb520fdd292905b358ef695c61
-DOMAIN            505 included · 11 excluded, as produced at this tip
+EXPECTED          1ef68cc09b1607623971af6eb2c2f91fa952d85bcaa4f5599c7765fbd9c650be
+OBTAINED (run 1)  1ef68cc09b1607623971af6eb2c2f91fa952d85bcaa4f5599c7765fbd9c650be
+OBTAINED (run 2)  1ef68cc09b1607623971af6eb2c2f91fa952d85bcaa4f5599c7765fbd9c650be
+DOMAIN            505 included · 12 excluded, as produced at this tip
 ```
 
 ### SOURCE_COMMITS
@@ -52,8 +52,11 @@ DOMAIN            505 included · 11 excluded, as produced at this tip
 | # | Commit oid | Ancestry | Subject |
 |---|---|---|---|
 | 1 | `b2c326b56fe5367c5ff75c04a39f29d3cd35ccda` | **PASS** | The hash was a function of the checkout, and now it is not |
+| 2 | `153b35da216ef33cdf4a990bfa6fccf41adce966` | **PASS** | The hashed object becomes publishable, and the approved candidate replays |
 
-Single commit, cut directly from `BASE_HEAD`, no rebase in its history.
+Cut directly from `BASE_HEAD`, no rebase in either commit's history. Row 2 was missing at the
+reviewed revision — the same stale-representation defect as F-1, in the row directly above the
+verification record, and found while repairing it.
 
 ---
 
@@ -185,7 +188,9 @@ PASS  test_hash_is_branch_independent — branch-independent
 PASS  test_dirty_working_tree_does_not_move_the_hash — immune to a dirty working tree
 PASS  test_missing_rule_at_tip_fails_explicitly — absent rule fails explicitly, no fallback
 PASS  test_determinism_across_runs — stable across runs
-5/5 passed
+PASS  test_emitted_domain_is_the_hashed_object — emitted representation digests to the reported hash
+PASS  test_historical_replay — approved candidate replays: c39ecae896773638…
+7/7 passed
 ```
 
 **The companion demonstration**, required by `PATTERN_ALREADY_SOLVED_GATE` variant 3 — *a green
@@ -193,7 +198,7 @@ suite is evidence only if the environment it ran in is capable of exhibiting the
 suite, run unchanged against the **pre-fix** script:
 
 ```
-1/5 passed
+2/7 passed
   FAIL  test_rule_comes_from_the_tip_not_the_working_tree
   FAIL  test_hash_is_branch_independent — 'a6ca8ee7…' vs '5081c7cf…'
   FAIL  test_dirty_working_tree_does_not_move_the_hash
@@ -248,9 +253,11 @@ Recommended: `HASHDET` → `ORCHWT` → `P51C9`. Plan recommends; the operator a
 
 | Check | Command | Result |
 |---|---|---|
-| Candidate hash | published command, twice | identical `12d8f4b1…695c61` |
-| Determinism suite | `test_candidate_content_hash.py` | **5/5 PASS** |
-| Suite can fail | same suite vs the pre-fix script | **1/5** — 4 failures, the defect exhibited |
+| Candidate hash | published command, twice | identical `1ef68cc0…c650be` |
+| Determinism suite | `test_candidate_content_hash.py` | **7/7 PASS** |
+| Suite can fail | same suite vs the pre-fix script | **2/7** — 5 failures, the defect exhibited |
+| Emitted domain | `--emit-domain \| shasum -a 256` | equals the candidate hash |
+| Historical replay | approved `GOV311`, base `749a9a9b`, tip `9720a0cd` | `c39ecae8…30c239`, matches the approved value |
 | Both pending hashes reproduce | from `hash-determinism`, a third branch | `280dc497…` and `f325bd9d…`, matching their manifests |
 | No residual working-tree read | `grep PARAMETERS` | only the tip-scoped `git show` |
 | Structural LINT | `legend_lint.py .` | `PASS` |
