@@ -418,6 +418,17 @@ the laboratory rather than to any actor's card.
 
 ### 7.2 · Two of the three halves already have homes
 
+🔴 **Open classification question, registered against this section — `runtime/`.** The P5.1
+amendment of 2026-08-17 added `reviews/` as a control-plane root and deliberately did **not** add
+`runtime/`. That directory holds artifacts of at least three classes — dated bootstrap records
+(STATIC testimony), a roster (transitional), the Agent Card this section says should not be a
+single artifact, and scientific handoff material that is not a governance artifact at all.
+Declaring a root for it would **treat a container as a class**, which is the error §2.2 corrects
+one level down. **The question is resolved by adopting this section, not by a fourth root.** While
+`runtime/` remains untracked it is absent from the domain and no fixed point arises; the standing
+cost is C-5b — the roster of who exists stays readable by one actor. Operator decision of
+2026-08-17.
+
 ```
 ACTOR_ID / ROLE / WORKTREE / ROLE_CONTRACT              → STATIC, tracked  → deployment_profile.md
 ROLE_CONTRACT_HASH                                       → DERIVED (§4.1)  → computed, not stored
