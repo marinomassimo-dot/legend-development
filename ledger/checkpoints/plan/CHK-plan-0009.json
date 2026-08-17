@@ -1,0 +1,83 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Opens under the post-amendment fingerprint. Successor to CHK-plan-0008, which is not edited: it records a true state under the previous CORE bytes. Control plane under P5.1, so it perturbs no candidate hash.",
+
+  "CHECKPOINT_ID": "CHK-plan-0009",
+  "SUPERSEDES": "CHK-plan-0008",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "P51C9-CANDIDATE-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+
+  "TIMESTAMP": "2026-08-17",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "PREVIOUS_CHECKPOINT_COMPATIBILITY": {
+    "verdict": "INCOMPATIBLE — CHK-plan-0001 through 0008 are all unusable for resume",
+    "reason": "The P5.1 amendment edits plan_defined_parameters.md, which is in the CORE set of every role. All four fingerprints rotated.",
+    "fingerprint_before": "37c3b863a88db79c209b6aeb73366d7d498519d4cd87c5a6b6a760340e15495f",
+    "fingerprint_after": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+    "not_rewritten": "No earlier checkpoint is edited. Each records a true state under the CORE bytes in force when it was written.",
+    "expected_behaviour": "P2.3 states broad invalidation on a CORE change is intended. This is the second live exercise of the A.6/G.3 invalidation-rate signal; the first was RC-2."
+  },
+
+  "FINGERPRINTS_AFTER_AMENDMENT": {
+    "plan": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+    "mirror": "3dff8954d4f6a56f6be14bc72be369095a1436437913a1e908c4b33c9762f65c",
+    "orchestrator": "e2c544705e623a7761e627396724aab6fcb5a6f35466e6f1b978a0e8baaec59a",
+    "scientist": "355e3529431f89f3e7adf764548f4117374fa92118f8f794bd0ba579b7ff97ab",
+    "independent_reproduction": "PENDING — single-actor values until a second actor runs the composer"
+  },
+
+  "OPERATOR_DECISIONS_MATERIALISED": {
+    "1_runtime": "kept out of the P5.1 change; no new root; registered as an open classification question against C-9 §7.2",
+    "2_orchestrator_worktree": "included in this MAJOR, argued as a structural ONE_WRITER correction rather than an unblocking",
+    "3_claim_foundation_trace": "durable retirement record written; deletion NOT performed and not authorised",
+    "4_SLRs": "excluded from this candidate; both go to Mirror for E.2 curation first"
+  },
+
+  "BASE_ALIGNMENT": {
+    "note": "The branch was 1 behind main before this candidate was finalised: it did not contain the canonical commit 908197ba, so BASE_HEAD would not have been an ancestor of the tip.",
+    "action": "Rebased onto main. 908197ba changed no file relative to 620cb42, so the replay was clean.",
+    "after": "0 behind, 5 ahead"
+  },
+
+  "MILESTONES_REACHED": [
+    {"id": "M-1", "milestone": "P5.1 amended: reviews/ added, learning/ stated, runtime/ deferred, hash version to v4", "status": "COMPLETE"},
+    {"id": "M-2", "milestone": "Orchestrator worktree corrected in the deployment profile", "status": "COMPLETE"},
+    {"id": "M-3", "milestone": "Retirement record for claim-foundation-trace", "status": "COMPLETE"},
+    {"id": "M-4", "milestone": "Base realigned, hash computed twice, manifest written", "status": "COMPLETE"},
+    {"id": "M-5", "milestone": "Gates re-run; stop for R4", "status": "COMPLETE"}
+  ],
+
+  "HOLDS_IN_FORCE": {
+    "L2": "SUSPENDED — six capabilities remain UNVERIFIED",
+    "status_C8_batch": "FROZEN pending a later operator decision",
+    "C9_clauses": "ACCEPTED as a document, NOT adopted; every remedy in C-9 §8 stays frozen",
+    "gate_0": "cannot pass — root not clean (9 untracked), no lease, exemption spent"
+  },
+
+  "OWED_AND_DEFERRED": {
+    "MAT-012_013_014": "log records for the RC-6…RC-10 correction, the C-9 proposal, and this candidate",
+    "reason": "governance/design_records/ is content domain; writing there now would move the candidate hash after it was computed and published. Declared, not skipped."
+  },
+
+  "DURABLE_POINTERS": {
+    "branch": "evidence-index",
+    "base_head": "908197ba62a064546f17c9c277ff497ffc753656",
+    "branch_tip": "629bc89ac62b4bd0478e4b05fa403e769abda2b1",
+    "candidate_id": "CAND-20260817-P51C9",
+    "candidate_manifest": "governance/candidates/CAND-20260817-P51C9.md",
+    "retirement_record": "ledger/retirements/RET-20260817-claim-foundation-trace.md",
+    "c9_proposal": "governance/candidates/PROPOSAL-C9-STATE-MODEL.md — ACCEPTED at revision 4",
+    "advisory": "governance/candidates/ADVISORY-FABLE-C9-001.md — REVIEWED, MACRO_UPGRADE_CANDIDATE"
+  },
+
+  "STATE": "AWAITING_APPROVAL — candidate held for R4 Mirror review",
+
+  "RESUME_RULE": "Annex A.6 refusal rule. Recompute the fingerprint with governance/scripts/governance_fingerprint.py compose --role plan before resuming; never compare against a value copied from prose. Recompute the candidate hash with candidate_content_hash.py before treating any recorded value as current."
+}
