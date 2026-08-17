@@ -1,0 +1,52 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.2 TASK_ACK + A.3 TASK_CLAIM",
+  "_note": "Operator-directed work, not a task assigned under H.1. No ACTIVE lease exists and no Orchestrator issued a Task Contract; the directive arrived from the operator (§5 precedence 2, §10.2) and was relayed once through the orchestrator channel before being confirmed directly. This record exists so the work has provenance, not to assert that a task-assignment authority was exercised.",
+
+  "TASK_ID": "C9-STATE-MODEL-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+
+  "TASK_ACK": {
+    "state": "ACCEPTED",
+    "accepted_on": "2026-08-17",
+    "objective": "Formalise the C-9 proposal: define how LEGEND represents static, derived and transitional state, incorporating the state-error vs stale-transition-state distinction, and covering the four elements the operator's addendum requires.",
+    "interaction_mode": "AUTONOMOUS_COMPLETE",
+    "review_requirement": "R4 / MIRROR_REQUIRED — the proposal is methodology-touching and must be reviewed before anything it proposes is implemented",
+    "scope_limit": "Proposal only. NO implementation, NO governance modification until the review completes. L2 remains suspended. The status/C-8 batch remains frozen pending a later operator decision."
+  },
+
+  "TASK_CLAIM": {
+    "claimed_by": "plan",
+    "claimed_on": "2026-08-17",
+    "timestamp_precision": "date only — the runtime exposed no wall-clock time",
+    "durable_pointer": "governance/candidates/PROPOSAL-C9-STATE-MODEL.md",
+    "uniqueness": "no competing claim exists for this TASK_ID + GENERATION"
+  },
+
+  "PROVENANCE_OF_THE_DIRECTIVE": {
+    "relayed": ["OPD-20260817-ORCH-001", "OPD-20260817-ORCH-002"],
+    "relay_channel": "orchestrator (legend-public-cf)",
+    "relay_disclaimer": "The relaying actor declared itself a channel and not an authority, held no lease, issued no Task Contract, and explicitly stated the relay did not lift Plan's standing operator instruction.",
+    "plan_handling": "Plan did not treat either relay as authorisation. The substance was worked and delivered in the operator's own channel; nothing was written until the operator confirmed the directive directly.",
+    "confirmed_directly_by_operator": true
+  },
+
+  "WRITE_PERIMETER": {
+    "permitted_here": ["governance/candidates/", "ledger/"],
+    "reason": "Both are declared CONTROL_PLANE_ROOTS in plan_defined_parameters.md § P5.1, so writing here modifies no content domain artifact and perturbs no candidate content hash and no role fingerprint.",
+    "deliberately_not_touched": {
+      "governance/design_records/": "content domain — MAT-012 and a record for this work remain owed and deferred under the hold",
+      "roles/, governance/ (except candidates/), deployment/, framework/": "content domain, and the hold forbids governance modification until the review completes"
+    }
+  },
+
+  "MILESTONE_PLAN": [
+    {"id": "M-1", "milestone": "Proposal materialised in control plane", "durable_evidence": "governance/candidates/PROPOSAL-C9-STATE-MODEL.md"},
+    {"id": "M-2", "milestone": "Checkpoint recording the state at hand-off for review", "durable_evidence": "ledger/checkpoints/plan/CHK-plan-0007.json"},
+    {"id": "M-3", "milestone": "WORK_COMMIT; stop for R4 review", "durable_evidence": "this branch"}
+  ],
+
+  "STATE": "CLAIMED → IN_PROGRESS"
+}

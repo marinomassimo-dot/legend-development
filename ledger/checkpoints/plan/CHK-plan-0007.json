@@ -1,0 +1,57 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Written at the hand-off of PROPOSAL C-9 for R4 review. Control plane under P5.1, so it perturbs no content hash.",
+
+  "CHECKPOINT_ID": "CHK-plan-0007",
+  "SUPERSEDES": "CHK-plan-0006",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "C9-STATE-MODEL-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "37c3b863a88db79c209b6aeb73366d7d498519d4cd87c5a6b6a760340e15495f",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+  "FINGERPRINT_UNCHANGED_BECAUSE": "Everything written for this task lives under governance/candidates/ and ledger/, both declared CONTROL_PLANE_ROOTS. No CORE artifact was touched, so CHK-plan-0006 remains compatible and this checkpoint continues rather than replaces its lineage.",
+
+  "TIMESTAMP": "2026-08-17",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "PREVIOUS_CHECKPOINT_COMPATIBILITY": {
+    "CHK-plan-0006": "COMPATIBLE — identical fingerprint, but its task GOV311-PLAN-REMEDIATION-001 is COMPLETE and exhausted; this is a new task, not a resume of it",
+    "CHK-plan-0001..0005": "INCOMPATIBLE — pre-RC-2 fingerprint c1d1a9cf; never reused, never rewritten"
+  },
+
+  "MILESTONES_REACHED": [
+    {"id": "M-1", "milestone": "Proposal materialised", "durable_evidence": "governance/candidates/PROPOSAL-C9-STATE-MODEL.md", "status": "COMPLETE"},
+    {"id": "M-2", "milestone": "Checkpoint at hand-off", "durable_evidence": "this file", "status": "COMPLETE"},
+    {"id": "M-3", "milestone": "WORK_COMMIT and stop for R4", "durable_evidence": "branch evidence-index", "status": "COMPLETE"}
+  ],
+
+  "HOLDS_IN_FORCE": {
+    "governance_modification": "FROZEN until the R4 review of this proposal completes",
+    "implementation": "FROZEN — nothing proposed here is built",
+    "L2": "SUSPENDED — six capabilities remain UNVERIFIED",
+    "status_C8_batch": "FROZEN pending a later operator decision; if the proposal is adopted the batch should apply the new form rather than the old value, making it one change rather than two"
+  },
+
+  "OWED_AND_DEFERRED": {
+    "MAT-012": "the log record for the RC-6…RC-10 correction",
+    "MAT-013": "a log record for this proposal",
+    "reason": "governance/design_records/ is content domain, and the hold forbids governance modification until the review completes. Both are declared here rather than silently skipped."
+  },
+
+  "DURABLE_POINTERS": {
+    "branch": "evidence-index",
+    "head_at_write": "620cb420c93c3ee9eebd7c86d0c4ab7e88ac3ee4 plus this task's commit",
+    "canonical_main": "908197ba62a064546f17c9c277ff497ffc753656",
+    "task_record": "ledger/tasks/plan/C9-STATE-MODEL-001.json",
+    "proposal": "governance/candidates/PROPOSAL-C9-STATE-MODEL.md",
+    "mirror_reviews": ["c6a290e1 REV-001", "2d7c4ab8 REV-002", "84407c1 REV-003"],
+    "preserved_stash": "stash@{0} — superseded PMID42422765 edit; now fully superseded by main, disposal still not mine to decide"
+  },
+
+  "STATE": "AWAITING_APPROVAL — proposal held for R4 Mirror review",
+
+  "RESUME_RULE": "Annex A.6 refusal rule. Recompute the fingerprint with governance/scripts/governance_fingerprint.py compose --role plan before resuming; never compare against a value copied from prose. Do not resume on a directive_version, generation or fingerprint mismatch."
+}
