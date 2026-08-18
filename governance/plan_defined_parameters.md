@@ -224,8 +224,16 @@ below rather than carrying its own copy, so the executable form and the governed
 disagree.
 
 ```
-CANDIDATE_HASH_VERSION: legend-candidate-v3
+CANDIDATE_HASH_VERSION: legend-candidate-v4
 ```
+
+**Why v4 and not v3.** The version prefix exists so two definitions can never produce colliding
+values, and this amendment changes the **domain definition** by adding `reviews/` to the excluded
+roots. It happens to change nothing in the tree that carries it — no `reviews/` path exists on
+this branch — but a v3 hash and a v4 hash are computed under genuinely different rules, and the
+prefix must move whenever the rule does rather than whenever the output does. Bumping only when a
+value visibly changes would make the guard depend on the accident of what a particular tree
+contains.
 
 ### P5.1 · The candidate content domain
 
@@ -250,6 +258,7 @@ Control-plane roots are declared here, exhaustively, as directory prefixes:
 CONTROL_PLANE_ROOTS:
 - governance/candidates/
 - ledger/
+- reviews/
 ```
 
 Everything not under a declared root is content. Adding a root is a **governed change to this
@@ -259,7 +268,32 @@ dropped rather than trusting that the filter did what it says.
 
 Nothing scientific or normative can be excluded by accident: `disease-models/`, `framework/`,
 `roles/`, `scripts/`, `deployment/`, the top-level documents and all of `governance/` except
-`candidates/` are outside both roots and always in the domain.
+`candidates/` are outside every root and always in the domain.
+
+**`reviews/` — added, and it closes a gap between the definition and the rule.** The paragraph
+above already named *"a candidate, **a review**, or an actor's runtime state"* as control plane,
+while the exhaustive list omitted `reviews/`. Definition and rule now agree. A hostile review
+describes a candidate; it does not constitute one, and a reviewer's verdict must not alter the
+identity of the object under review.
+
+**`learning/` is CONTENT — by intent, not by omission.** It requires no edit to the list above,
+which is exactly why it is stated here. A determination that is binding, was made, and leaves no
+durable trace is branch (B) of the C-9 model in its purest form. Session Learning Records are the
+laboratory's accumulated knowledge, they are proposed for canonical integration like any other
+knowledge, and they therefore belong to the content domain and **must** move the candidate hash
+when they change.
+
+🔴 **`runtime/` — OPEN CLASSIFICATION QUESTION, deliberately not answered here.** It is not a
+declared root and this amendment does not make it one. The reason is not oversight: `runtime/`
+holds artifacts of at least three different classes — dated bootstrap records (STATIC testimony),
+a roster (transitional), an Agent Card that C-9 §7.2 says should not be a single artifact at all,
+and scientific handoff material that is not a governance artifact. **Declaring a root for it would
+treat a container as a class**, which is the error C-9's B-1 corrected one level down. The
+question is registered against C-9 §7.2 and is resolved by that section's adoption, not by a
+fourth root. While `runtime/` remains untracked it is invisible to `git ls-tree` and therefore
+absent from the domain, so no fixed point arises in the interim; the cost is that C-5b persists —
+the roster of who exists stays readable by one actor — which is a cost already counted, not a new
+one.
 
 ### P5.2 · The hash
 

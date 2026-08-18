@@ -1,0 +1,70 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Successor to CHK-plan-0007, not an edit to it. CHK-plan-0007 recorded the hand-off at proposal revision 1 and remains a true record of that state; revisions 2 and 3 each changed what a resumer would need to know. Append, never edit — the rule the proposal argues for, applied to the proposal's own process artifacts. Control plane under P5.1, so no content hash and no fingerprint moves.",
+
+  "CHECKPOINT_ID": "CHK-plan-0008",
+  "SUPERSEDES": "CHK-plan-0007",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "C9-STATE-MODEL-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "37c3b863a88db79c209b6aeb73366d7d498519d4cd87c5a6b6a760340e15495f",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+  "FINGERPRINT_UNCHANGED_BECAUSE": "All three revisions were written under governance/candidates/ and ledger/, both declared CONTROL_PLANE_ROOTS. No CORE artifact was touched across the whole task.",
+
+  "TIMESTAMP": "2026-08-17",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "PROPOSAL_LINEAGE": [
+    {"revision": 1, "commit": "f7a0049", "r4_outcome": "REQUEST CHANGES — B-1…B-4, notes 1–4"},
+    {"revision": 2, "commit": "6c2ab4f", "r4_outcome": "REQUEST CHANGES — model accepted; §2.2, §3, §6.1, §7, §10 ACCEPTED; two clauses blocking"},
+    {"revision": 3, "commit": "this commit", "r4_outcome": "PENDING re-review"}
+  ],
+
+  "REVISION_3_SCOPE": {
+    "changed": [
+      "§2.1b added — a prior question separating NAME from ASSERTION, placed BEFORE the §3 axis so the accepted section stands unamended",
+      "§4.1 rewritten — a hash is not a class; three semantic roles: derived measurement, immutable identifier, historical record",
+      "§5 untracked row corrected and §5.2 added — durability of a value versus admissibility of an observation",
+      "§8 case rows, §11 instances 11–12, §12 attribution, §13 decisions, §14 non-blocking observations"
+    ],
+    "preserved_verbatim": ["§2.2", "§3", "§6.1", "§7", "§10"],
+    "reason": "The re-review accepted those sections. Revising accepted text would put a reviewer in the position of re-reading what they had already cleared."
+  },
+
+  "SELF_ASSESSMENT": {
+    "finding": "Instances 10, 11 and 12 are one chain, all inside this document: a per-field misclassification, then a universal rule that over-corrected it, then a second universal rule with the same defect.",
+    "generalisation": "Over-correction is not the opposite of uneven application; it is the same error at a higher altitude. Fixing a case by promoting it to a universal skips the same step — testing the rule against the instances it now covers. In both cases the counterexample was already in the repository, load-bearing, two files away."
+  },
+
+  "HOLDS_IN_FORCE": {
+    "governance_modification": "FROZEN until an R4 review of this proposal returns PASS",
+    "implementation": "FROZEN — nothing proposed here is built, including the carve-out validator, which is deliberately left at proposal level",
+    "L2": "SUSPENDED — six capabilities remain UNVERIFIED",
+    "status_C8_batch": "FROZEN pending a later operator decision"
+  },
+
+  "OWED_AND_DEFERRED": {
+    "MAT-012": "log record for the RC-6…RC-10 correction",
+    "MAT-013": "log record for this proposal and its three revisions",
+    "reason": "governance/design_records/ is content domain and the hold covers it. Declared, not silently skipped."
+  },
+
+  "OUT_OF_SCOPE_RECORDED": {
+    "J2_A5_overlap": "BLOCKED and AWAITING_APPROVAL appear in J.2's actor states and A.5's task states. Whether that is one fact recorded twice or two facts free to disagree is a question about the frozen text, not about this model."
+  },
+
+  "DURABLE_POINTERS": {
+    "branch": "evidence-index",
+    "canonical_main": "908197ba62a064546f17c9c277ff497ffc753656",
+    "task_record": "ledger/tasks/plan/C9-STATE-MODEL-001.json",
+    "proposal": "governance/candidates/PROPOSAL-C9-STATE-MODEL.md",
+    "mirror_reviews": ["c6a290e1 REV-001", "2d7c4ab8 REV-002", "84407c1 REV-003", "R4 on rev 1 and rev 2, relayed by the operator"]
+  },
+
+  "STATE": "AWAITING_APPROVAL — revision 3 held for R4 re-review",
+
+  "RESUME_RULE": "Annex A.6 refusal rule. Recompute the fingerprint with governance/scripts/governance_fingerprint.py compose --role plan before resuming; never compare against a value copied from prose. Do not resume on a directive_version, generation or fingerprint mismatch."
+}
