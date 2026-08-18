@@ -31,7 +31,7 @@ produce a double record observable by anyone.
 
 | Layer | What it covers | Where it lives |
 |---|---|---|
-| **`MECHANIZED`** | the derivation from `RELEASED_AT` · `EXPIRES_AT` · the clock; stored-vs-derived disagreement; the `EXPIRED_UNUSED` condition; the `ACTIVE` singleton count | `framework/scripts/lease_state.py`, tracked and runnable by any actor |
+| **`MECHANIZED`** | the derivation from `RELEASED_AT` · `EXPIRES_AT` · the clock; stored-vs-derived disagreement; the `EXPIRED_WITHOUT_RENEWAL` condition; **the `ACTIVE` singleton as an invariant — fatal in every mode** | `framework/scripts/lease_state.py`, tracked and runnable by any actor |
 | **`OBSERVABLE`** | this file, its git history, and the derivation's output — all reproducible by a second actor who was not present when the record was written | this record + `git log` |
 | **`PROCEDURAL`** | **writing a row at all.** Acquisition, renewal and the terminal row are still authored by hand. Nothing compels the Orchestrator to record an acquisition, and nothing runs between turns | discipline |
 
@@ -45,9 +45,17 @@ Observed once, at lease #3 below: acquired at `12:24:11Z`, never renewed, never 
 `13:04:11Z`, and `GATE 0` was never asserted against it.
 
 ```
-DETECTABLE   yes — lease_state.py --check reports EXPIRED_UNUSED at the next consultation
-PREVENTED    no  — nothing executes between turns, so the window itself is unwatched
+DETECTABLE   partly — lease_state.py --check reports EXPIRED_WITHOUT_RENEWAL at the next
+                      consultation, which CATCHES this case but is not the same predicate
+PREVENTED    no     — nothing executes between turns, so the window itself is unwatched
 ```
+
+🔴 **The condition is named for what it measures, and that is narrower than "unused".** Nothing
+in this record format records *use*; renewal is the only observable proxy and it is a poor one.
+**Three of the five records below — #2, #4 and #5 — were never renewed and were demonstrably
+used**, each holding a canonical batch. A lease used without being renewed is indistinguishable
+here from one never used at all. Lease #3 is reported because it also lacks `RELEASED_AT`, not
+because the tool can see that nobody used it.
 
 **A tracked home does not fix this and neither does the derivation.** The derivation moves the
 failure from *invisible* to *reported at next consultation*, which is a real improvement and is
@@ -114,7 +122,8 @@ LEASE:
 no `RELEASED_AT`, and `GATE 0` was never asserted against it. **`lease_state.py --check` reports
 two findings on this row**, and both are correct:*
 
-- ***`EXPIRED_UNUSED`*** *— the observed failure, now detectable.*
+- ***`EXPIRED_WITHOUT_RENEWAL`*** *— catches the observed failure. Named for the property it can
+  test, not for the one that motivated it: see the note above on why renewal is not use.*
 - ***`DISAGREEMENT`*** *— stored `EXPIRED`, derived `STALE`. **`EXPIRED` is not in I.3's
   vocabulary**, which declares `ACTIVE | STALE | RELEASED`. A terminal state was written by hand
   in a value the governance does not define. **The row is left exactly as written**; recording

@@ -11,18 +11,32 @@ The derivation uses three inputs and never the stored field:
     now >= EXPIRES_AT     -> STALE      (terminal by expiry)
     otherwise             -> ACTIVE
 
-`--check` additionally reports two conditions that a readable record does NOT by itself
-prevent, which is the whole point of VISIBILITY != LIFECYCLE ENFORCEMENT:
+THE SINGLETON IS AN INVARIANT, NOT A FINDING. Annex I.3 exists to guarantee one ACTIVE lease.
+Two ACTIVE leases means two writers over one shared resource, so it is checked in EVERY mode
+and always exits non-zero. It must not be possible to invoke this tool in a way that reports
+two live leases and calls the result clean. (Mirror, REV-SUNSET-DEC3-MIRROR-001, blocking.)
 
-  * DISAGREEMENT   the stored STATUS differs from the derived state. Visibility gives you the
-                   raw material for this comparison; only running the comparison performs it.
-  * EXPIRED_UNUSED a lease that reached EXPIRES_AT with no recorded use between ACTIVATED_AT
-                   and expiry. Observed once (lease #3). This tool makes it DETECTABLE at the
-                   next consultation. It does not make it IMPOSSIBLE: nothing runs between
-                   turns, so the window itself is unwatched. That limit is stated here rather
-                   than papered over.
+`--check` additionally reports conditions that a readable record does NOT by itself prevent,
+which is the whole point of VISIBILITY != LIFECYCLE ENFORCEMENT:
 
-Exit codes:  0 clean · 1 finding · 2 could not read or parse the record
+  * DISAGREEMENT              the stored STATUS differs from the derived state. Visibility
+                              gives you the raw material for the comparison; only running it
+                              performs the comparison.
+  * EXPIRED_WITHOUT_RENEWAL   a lease that reached EXPIRES_AT with LAST_RENEWED absent or equal
+                              to ACTIVATED_AT.
+
+  NAMED FOR WHAT IT MEASURES. An earlier revision called this EXPIRED_UNUSED, which claimed
+  more than the data supports: nothing in the record format records USE, so renewal is the only
+  observable proxy, and it is a poor one. The record shipped with this tool contains three
+  leases that were never renewed and were demonstrably used — each held a canonical batch. A
+  lease that is used without being renewed is indistinguishable here from one that is never
+  used at all, and the condition is named for the property it can actually test.
+
+  The motivating failure (a lease acquired, never used, expired before GATE 0 was asserted)
+  is DETECTED by this condition and is not IMPLIED by it. Nothing runs between turns, so the
+  window itself stays unwatched; closing that needs the P7 event ledger, not this tool.
+
+Exit codes:  0 clean · 1 finding (--check) · 2 could not read or parse · 3 invariant violated
 """
 
 from __future__ import annotations
@@ -99,13 +113,15 @@ def findings(record: dict[str, str], derived: str, index: int) -> list[str]:
             f"lease #{index} DISAGREEMENT: stored STATUS={stored!r}, derived={derived!r}. "
             "The stored field is not authoritative."
         )
-    if derived == "STALE" and not record.get("LAST_USED"):
+    if derived == "STALE":
         renewed = record.get("LAST_RENEWED", "").strip()
         activated = record.get("ACTIVATED_AT", "").strip()
         if not renewed or renewed == activated:
             out.append(
-                f"lease #{index} EXPIRED_UNUSED: reached EXPIRES_AT with no use recorded after "
-                "ACTIVATED_AT. Detected at consultation; nothing watched the window itself."
+                f"lease #{index} EXPIRED_WITHOUT_RENEWAL: reached EXPIRES_AT with LAST_RENEWED "
+                "absent or equal to ACTIVATED_AT. Renewal is a proxy for use and a poor one — "
+                "an unrenewed lease may still have been used. Detected at consultation; "
+                "nothing watched the window itself."
             )
     return out
 
@@ -136,15 +152,20 @@ def main(argv: list[str] | None = None) -> int:
     live = [index for index, state in enumerate(derived, start=1) if state == "ACTIVE"]
     print(f"ACTIVE by derivation: {len(live)}" + (f" — lease #{live[0]}" if len(live) == 1 else ""))
 
+    # The singleton is an INVARIANT: checked in every mode, before --check is consulted, and
+    # always fatal. A tool that can report two live leases and exit 0 is fail-open on exactly
+    # the condition Annex I.3 exists to guarantee.
+    if len(live) > 1:
+        print(f"INVARIANT VIOLATED: {len(live)} leases derive ACTIVE — {live}. "
+              "Two writers over one shared resource; Annex I.3 singleton broken.", file=sys.stderr)
+        return 3
+
     if not args.check:
         return 0
 
     problems: list[str] = []
     for index, (record, state) in enumerate(zip(records, derived), start=1):
         problems.extend(findings(record, state, index))
-    if len(live) > 1:
-        problems.append(f"SINGLETON VIOLATED: {len(live)} leases derive ACTIVE — {live}")
-
     for problem in problems:
         print(f"FINDING: {problem}")
     return 1 if problems else 0
