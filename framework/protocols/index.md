@@ -89,6 +89,8 @@ Provide a content map of the LEGEND system organized by:
 | [[prompt_lint_integrity_check]] | LINT protocol (automatic + deep) |
 | [[ingest_protocol]] | Ingest protocol with quarantine |
 | [[parallel_legend_protocol]] | Parallel-branch protocol |
+| [[scientist_reading_modes]] | Reading modes A/B, Scientist actor identity, task ownership of a reading |
+| [[controlled_benchmark_ab]] | Controlled A/B reading benchmark — blind input surface, freezing, evaluation |
 | [[wikilink_schema]] | Wikilinking rules |
 
 ---
