@@ -20,11 +20,19 @@ REVISION:                   1
 BASE_HEAD:                  cbce30168091f7769c56c4f019055fa55fd0d66a
 BRANCH:                     scientist-ab-spec
 CONTENT_TIP:                b965ca5880e93ad57770a0483aaa4652ec5f390c
-MANIFEST_TIP:               7641dfdf3b42a0312bfeae304b03832a94181633
-                            # governance/candidates/ and ledger/ are declared CONTROL_PLANE_ROOTS,
-                            # so the hash is identical at the content tip, at the ledger commit
-                            # between them, and here. Measured at all three (§1 Reproduction),
-                            # not asserted from the property.
+MANIFEST_TIP:               7641dfdf3b42a0312bfeae304b03832a94181633 — and every later
+                            control-plane commit on this branch, including the one carrying
+                            this correction.
+                            # 🔴 A MANIFEST CANNOT NAME THE COMMIT THAT CARRIES IT. Writing the
+                            # value creates the commit the value would have to name, so the field
+                            # lags by one by construction and chasing it is an infinite regress.
+                            # It is therefore INFORMATIONAL. The binding is BASE_HEAD +
+                            # CANDIDATE_CONTENT_HASH, and it holds because governance/candidates/
+                            # and ledger/ are declared CONTROL_PLANE_ROOTS (P5.1): the hash is
+                            # identical at the content tip, at the ledger commit between, and at
+                            # every manifest revision. Measured at all four, not asserted.
+                            # `git log --oneline cbce3016..HEAD` shows the branch; the hash
+                            # command shows the invariance.
 CANDIDATE_CONTENT_HASH:     3b568aae6c76848da197cacd43e517373ab7ca9532cf9289a73097e261916c75
 CANDIDATE_HASH_VERSION:     legend-candidate-v4
 CHANGE_CLASS:               MAJOR
