@@ -1,12 +1,13 @@
 ---
 artifact: INTEGRATION_CANDIDATE manifest (Annex D.2)
 candidate_id: CAND-20260818-SUNSET-DEC3
-revision: 1
+revision: 2 — remediation of REV-SUNSET-DEC3-MIRROR-001 (473bec9e): the blocking singleton
+  fail-open, and both recorded findings
 governance_version: 3.1.1
 change_class: MAJOR
 prepared_by: plan
 prepared_on: 2026-08-18
-state: READY FOR MIRROR INDEPENDENT REVIEW
+state: READY FOR MIRROR RE-REVIEW
 scope: sunset of DECISION 3 — the interim git-ignored lease seat. Scope A–G of
   HANDOFF-SUNSET-DECISION3.md, not reduced and not widened.
 ---
@@ -17,16 +18,20 @@ scope: sunset of DECISION 3 — the interim git-ignored lease seat. Scope A–G 
 
 ```yaml
 CANDIDATE_ID:               CAND-20260818-SUNSET-DEC3
-REVISION:                   1
+REVISION:                   2
 BASE_HEAD:                  f5b321556e5f1f081482f13fbbabb4f90f3d6295
 BRANCH:                     sunset-decision3
-BRANCH_TIP:                 325da043e22e1bb5ffc88b5e36b3a8025e2988be
-CANDIDATE_CONTENT_HASH:     48d4f3a7d96f5bda4c4c219486d83861e51d4666665b53bd255002b045bcd9a0
+BRANCH_TIP:                 234c8bae2a33b7376e4015049793b1f3a30b9c9b
+CANDIDATE_CONTENT_HASH:     e7036a1fca7a63d41121b52b8ab33dd5cc5a104dcd6f104b426603dfd4f2e8e9
+SUPERSEDED_HASH:            48d4f3a7d96f5bda4c4c219486d83861e51d4666665b53bd255002b045bcd9a0
+                            — superseded BY DEFECT (blocking singleton fail-open), NOT by
+                              re-baseline. DO NOT REVIEW revision 1.
 CANDIDATE_HASH_VERSION:     legend-candidate-v4
 CHANGE_CLASS:               MAJOR
 LINT_RESULT:                PASS
 PUBLICATION_GATE:           PASS / BLOCKS: 0
-MIRROR_REVIEW:              NOT YET REQUESTED
+MIRROR_REVIEW:              REQUEST CHANGES on revision 1 (REV-SUNSET-DEC3-MIRROR-001) —
+                            re-review of revision 2 requested
 HUMAN_APPROVAL:             NONE — not requested, not granted, not implied
 SNAPSHOT_ID:                n/a until canonical execution — GATE 4 belongs to Orchestrator
 ```
@@ -39,36 +44,39 @@ determined.
 ```bash
 python3 governance/scripts/candidate_content_hash.py \
   --base f5b321556e5f1f081482f13fbbabb4f90f3d6295 \
-  --tip  325da043e22e1bb5ffc88b5e36b3a8025e2988be --show-domain
+  --tip  234c8bae2a33b7376e4015049793b1f3a30b9c9b --show-domain
 ```
 
 ```
-EXPECTED          48d4f3a7d96f5bda4c4c219486d83861e51d4666665b53bd255002b045bcd9a0
-OBTAINED (run 1)  48d4f3a7d96f5bda4c4c219486d83861e51d4666665b53bd255002b045bcd9a0
-OBTAINED (run 2)  48d4f3a7d96f5bda4c4c219486d83861e51d4666665b53bd255002b045bcd9a0
-DOMAIN            509 included · 22 excluded, as produced by the command at this tip
+EXPECTED          e7036a1fca7a63d41121b52b8ab33dd5cc5a104dcd6f104b426603dfd4f2e8e9
+OBTAINED (run 1)  e7036a1fca7a63d41121b52b8ab33dd5cc5a104dcd6f104b426603dfd4f2e8e9
+OBTAINED (run 2)  e7036a1fca7a63d41121b52b8ab33dd5cc5a104dcd6f104b426603dfd4f2e8e9
 ```
 
-Counts are stated as **outputs of that command at that tip**, never as maintained constants.
+Domain counts are **outputs of that command at that tip**, never maintained constants — read
+them from `--show-domain` rather than from this manifest.
 
-**Manifest tip vs content tip.** This manifest is added at a later commit than
-`325da043`. `governance/candidates/` is a declared `CONTROL_PLANE_ROOT`, so the hash is
-identical at both — §7 records the measurement rather than asserting the property.
+**Manifest tip vs content tip.** This manifest revision is added at a later commit than
+`234c8bae`. `governance/candidates/` is a declared `CONTROL_PLANE_ROOT`, so the hash is identical
+at both — §7 records the measurement rather than asserting the property.
 
 ## 2 · File list and classification
 
-| File | Status | Classification |
-|---|---|---|
-| `runtime/orchestrator_lease.md` | **added** | **RUNTIME** — the lease record itself |
-| `framework/scripts/lease_state.py` | **added** | **NORMATIVE (tooling)** — it decides a `GATE 0` input; it is not documentation |
-| `deployment/deployment_profile.md` | modified | **NORMATIVE** (§ lease seat retirement) + **DOCUMENTATION** (§ *Current instance — status*) |
+| File | Status | Domain | Classification |
+|---|---|---|---|
+| `runtime/orchestrator_lease.md` | **added** | CONTENT — hashed | **RUNTIME** — the lease record itself |
+| `framework/scripts/lease_state.py` | **added** | CONTENT — hashed | **NORMATIVE (tooling)** — it decides a `GATE 0` input; it is not documentation |
+| `deployment/deployment_profile.md` | modified | CONTENT — hashed | **NORMATIVE** (§ lease seat retirement) + **DOCUMENTATION** (§ *Current instance — status*) |
+| `governance/candidates/CAND-20260818-SUNSET-DEC3.md` | added | **CONTROL PLANE — excluded** | this manifest |
 
 ```
-3 files · +394 / −5 · no file deleted · no history rewritten
+content   3 files · +424 / −5      diff total  4 files, the fourth being this manifest
+no file deleted · no history rewritten
 ```
 
-**Nothing under `governance/`, `ledger/` or `reviews/` is touched by the content commit.** The
-candidate proposes no governance-text amendment: `I.3` is *satisfied* here, not edited.
+**No governance text is amended.** `I.3` is *satisfied* here, not edited. The only file under a
+control-plane root is this manifest, which by construction cannot move the candidate's identity —
+that is why the file list states the domain per row rather than leaving a reviewer to infer it.
 
 ## 3 · Scope A–G — what was done, per clause
 
@@ -102,7 +110,7 @@ that it be run at every consultation including every `GATE 0`.
 
 | Layer | Content |
 |---|---|
-| `MECHANIZED` | derivation from `RELEASED_AT` · `EXPIRES_AT` · clock; stored-vs-derived disagreement; `EXPIRED_UNUSED`; `ACTIVE` singleton count |
+| `MECHANIZED` | derivation from `RELEASED_AT` · `EXPIRES_AT` · clock; stored-vs-derived disagreement; `EXPIRED_WITHOUT_RENEWAL`; **the `ACTIVE` singleton as an invariant, fatal in every mode** |
 | `OBSERVABLE` | the tracked record, its git history, and the derivation's output — reproducible by an actor who was not present |
 | `PROCEDURAL` | **writing a row at all.** Nothing compels an acquisition to be recorded, and nothing runs between turns |
 
@@ -184,8 +192,18 @@ lease #4  derived=RELEASED  stored=RELEASED
 lease #5  derived=RELEASED  stored=RELEASED
 ACTIVE by derivation: 0
 
-FINDING  #3 DISAGREEMENT:   stored 'EXPIRED', derived 'STALE'
-FINDING  #3 EXPIRED_UNUSED: reached EXPIRES_AT with no use recorded after ACTIVATED_AT
+FINDING  #3 DISAGREEMENT:             stored 'EXPIRED', derived 'STALE'
+FINDING  #3 EXPIRED_WITHOUT_RENEWAL:  LAST_RENEWED absent or equal to ACTIVATED_AT
+```
+
+**The singleton invariant, against Mirror's own fixture** — two simultaneous `ACTIVE` leases:
+
+```
+revision 1   default mode  exit 0   ← the blocking defect: "clean" by its own contract
+revision 2   default mode  exit 3   INVARIANT VIOLATED, on stderr
+revision 2   --check       exit 3   fatal before --check is consulted
+real record  default       exit 0   singleton holds
+real record  --check       exit 1   the two findings above
 ```
 
 **Both findings are correct, and the row was left as written.** `EXPIRED` is a hand-written
@@ -231,6 +249,63 @@ the registry-validator debt        — recorded and unimplemented
 scope creep                        — three files; is any of it outside A–G?
 ```
 
-**One thing to attack first, because Plan is the wrong actor to judge it:** whether
-`EXPIRED_UNUSED` is *treated* or merely *described*. The candidate claims detection and denies
-prevention. If that reads as a fix, the wording has failed and Plan cannot see it from here.
+**One thing to attack first, because Plan is the wrong actor to judge it:** whether the unwatched
+window is *treated* or merely *described*. The candidate claims detection and denies prevention.
+If that reads as a fix, the wording has failed and Plan cannot see it from here. *(Reviewed at
+revision 1: Mirror answered **no**, on four independent denials. Not re-asked; recorded.)*
+
+---
+
+## 8 · `AUTHOR_RESPONSE` — `REV-SUNSET-DEC3-MIRROR-001`, all three items **ACCEPTED**
+
+**Nothing was contested.** Each finding was reproduced by Plan before being accepted; none was
+taken on report.
+
+### 🔴 BLOCKING — singleton fail-open · **ACCEPTED, classification not contested**
+
+Reproduced exactly: two simultaneous `ACTIVE` leases returned `exit 0` in default mode, and the
+docstring declares `0` to mean *clean*. `SINGLETON VIOLATED` sat **after** `if not args.check`.
+
+**Mirror's classification is right and Plan does not contest it.** The singleton is an
+**invariant**, not a finding: two `ACTIVE` leases is two writers over one shared resource, which
+is the condition Annex I.3 exists to guarantee. **A fail-open that needs a flag to close is the
+shape that outlives documentation edits** — the profile documenting `--check` protected the
+documented path and left the default path unsound.
+
+Remedy: the check runs **before** `--check` is consulted, in **every** mode, exits `3`, and
+prints to stderr. Verified against Mirror's fixture in both modes.
+
+### `LAST_USED` read and never written · **ACCEPTED — and it is worse than reported**
+
+Confirmed: one occurrence in the entire candidate, in the reader. So the condition reduced to
+*"is `LAST_RENEWED` absent or equal to `ACTIVATED_AT`?"* while being named for **use**.
+
+**Plan's addition, which strengthens Mirror's finding:** the naming is not merely imprecise, it
+is **falsified by the record the candidate ships with**. Leases **#2, #4 and #5** were never
+renewed **and were demonstrably used** — each held a canonical batch (`HASHDET`, `P51C9` r3,
+`ORCHWT`). An unrenewed lease that was used is indistinguishable here from one never used at all.
+
+Remedy: the phantom read is removed and the condition is `EXPIRED_WITHOUT_RENEWAL`, **named for
+the property it can test**, with the proxy limit stated in the tool, in the record, and beside
+the affected row.
+
+### The finding counts endings, not waste · **ACCEPTED**
+
+Correct: `RELEASED_AT` returns `RELEASED` before the branch is reachable, so released-and-
+unrenewed leases are never reported. **`1 finding` is not `1 wasted lease`**, and the manifest no
+longer invites that reading — the counter-examples above are the same three leases, which makes
+this item and the previous one one defect seen from two sides.
+
+### On the two questions Plan asked, and Mirror's answers
+
+Mirror answered **no** (the wording does not read as a fix) and **yes** (it should ship with its
+own tool reporting findings). **Neither answer is treated as clearing anything**, and both are
+recorded rather than relied on. The `rc=1` against the tool's own data stands unchanged in
+revision 2.
+
+### On routing
+
+Mirror declined to treat Plan's account of an operator directive as the directive, reviewed
+anyway because reviewing changes no state, and recorded that answering settles nothing. **Plan
+agrees and will not cite this exchange as having settled the `Plan→Mirror routing` debt**, which
+remains open in §3G.
