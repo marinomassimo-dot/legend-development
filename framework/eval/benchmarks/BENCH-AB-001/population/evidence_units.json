@@ -1,0 +1,430 @@
+{
+  "_schema": "LEGEND benchmark \u00b7 evaluation population v1",
+  "benchmark_id": "BENCH-AB-001",
+  "pmid": "42397075",
+  "derivation": "framework/scripts/benchmark_input_surface.py population --spec <spec> --source-root <root>",
+  "note": "Structural enumeration only. It lists what the paper contains, never what any unit shows, and it does NOT rank units by importance \u2014 which of them matter is exactly what the readings and the adjudication are for.",
+  "declared_notes": [
+    "PANEL EXTRACTION IS FROM CAPTIONS, and the caption is what the paper printed. Two",
+    "observations from the first derivation, recorded so neither is later read as a tool",
+    "defect: (1) Supplementary Figure 1 yields A-I, K, L, M \u2014 no J. The caption labels (G)",
+    "twice and never labels J; the enumeration reports the paper, not a repair of it.",
+    "(2) Figure 6 labels its panels [A(i)], [A(ii)], [B(i)]\u2026 and the range (C-D). Ranges are",
+    "expanded; a single-letter pattern alone reported A,B,E and would have made the",
+    "denominator short by two, which flatters both readers' coverage.",
+    "The main text carries no numbered Table \u2014 main_table is 0 by measurement, not by",
+    "omission of the rule.",
+    "This population fixes WHAT the paper contains. It does not rank units by importance:",
+    "which of them matter is what the two readings and the adjudication are for."
+  ],
+  "counts": {
+    "units": 36,
+    "panels": 115,
+    "by_kind": {
+      "main_figure": 6,
+      "supplement_methods_section": 20,
+      "supplementary_figure": 10
+    }
+  },
+  "units": [
+    {
+      "unit_id": "main_figure:Figure 1",
+      "kind": "main_figure",
+      "label": "Figure 1",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+      "locus": "l2186",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    {
+      "unit_id": "main_figure:Figure 2",
+      "kind": "main_figure",
+      "label": "Figure 2",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+      "locus": "l2232",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ]
+    },
+    {
+      "unit_id": "main_figure:Figure 3",
+      "kind": "main_figure",
+      "label": "Figure 3",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+      "locus": "l2254",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J",
+        "K",
+        "L"
+      ]
+    },
+    {
+      "unit_id": "main_figure:Figure 4",
+      "kind": "main_figure",
+      "label": "Figure 4",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+      "locus": "l2324",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ]
+    },
+    {
+      "unit_id": "main_figure:Figure 5",
+      "kind": "main_figure",
+      "label": "Figure 5",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+      "locus": "l2370",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ]
+    },
+    {
+      "unit_id": "main_figure:Figure 6",
+      "kind": "main_figure",
+      "label": "Figure 6",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+      "locus": "l2404",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    },
+    {
+      "unit_id": "supplement_methods_section:AAV9 infection",
+      "kind": "supplement_methods_section",
+      "label": "AAV9 infection",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p4"
+    },
+    {
+      "unit_id": "supplement_methods_section:Cell Culture and Maintenance",
+      "kind": "supplement_methods_section",
+      "label": "Cell Culture and Maintenance",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p2"
+    },
+    {
+      "unit_id": "supplement_methods_section:Cell cycle phase and potency state inference",
+      "kind": "supplement_methods_section",
+      "label": "Cell cycle phase and potency state inference",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p10"
+    },
+    {
+      "unit_id": "supplement_methods_section:Cell-attached recordings",
+      "kind": "supplement_methods_section",
+      "label": "Cell-attached recordings",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p6"
+    },
+    {
+      "unit_id": "supplement_methods_section:Cerebral organoid generation and culture",
+      "kind": "supplement_methods_section",
+      "label": "Cerebral organoid generation and culture",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p3"
+    },
+    {
+      "unit_id": "supplement_methods_section:Chromatin immunoprecipitation sequencing (ChIP-seq)",
+      "kind": "supplement_methods_section",
+      "label": "Chromatin immunoprecipitation sequencing (ChIP-seq)",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p12"
+    },
+    {
+      "unit_id": "supplement_methods_section:Differential Gene Expression",
+      "kind": "supplement_methods_section",
+      "label": "Differential Gene Expression",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p9"
+    },
+    {
+      "unit_id": "supplement_methods_section:Dorso-ventral gene expression",
+      "kind": "supplement_methods_section",
+      "label": "Dorso-ventral gene expression",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p12"
+    },
+    {
+      "unit_id": "supplement_methods_section:Immunoblot analysis",
+      "kind": "supplement_methods_section",
+      "label": "Immunoblot analysis",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p7"
+    },
+    {
+      "unit_id": "supplement_methods_section:Immunofluorescence",
+      "kind": "supplement_methods_section",
+      "label": "Immunofluorescence",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p5"
+    },
+    {
+      "unit_id": "supplement_methods_section:MYC and WWOX interactome analysis",
+      "kind": "supplement_methods_section",
+      "label": "MYC and WWOX interactome analysis",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p12"
+    },
+    {
+      "unit_id": "supplement_methods_section:MYC inhibition",
+      "kind": "supplement_methods_section",
+      "label": "MYC inhibition",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p4"
+    },
+    {
+      "unit_id": "supplement_methods_section:NSCs differentiation",
+      "kind": "supplement_methods_section",
+      "label": "NSCs differentiation",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p5"
+    },
+    {
+      "unit_id": "supplement_methods_section:Neuron Analysis",
+      "kind": "supplement_methods_section",
+      "label": "Neuron Analysis",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p11"
+    },
+    {
+      "unit_id": "supplement_methods_section:Overrepresentation analysis",
+      "kind": "supplement_methods_section",
+      "label": "Overrepresentation analysis",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p11"
+    },
+    {
+      "unit_id": "supplement_methods_section:Pseudobulk analysis",
+      "kind": "supplement_methods_section",
+      "label": "Pseudobulk analysis",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p11"
+    },
+    {
+      "unit_id": "supplement_methods_section:RNA extraction, reverse transcription-PCR, and qPCR",
+      "kind": "supplement_methods_section",
+      "label": "RNA extraction, reverse transcription-PCR, and qPCR",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p7"
+    },
+    {
+      "unit_id": "supplement_methods_section:Reprogramming of somatic cells",
+      "kind": "supplement_methods_section",
+      "label": "Reprogramming of somatic cells",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p2"
+    },
+    {
+      "unit_id": "supplement_methods_section:Single-cell data preprocessing",
+      "kind": "supplement_methods_section",
+      "label": "Single-cell data preprocessing",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p9"
+    },
+    {
+      "unit_id": "supplement_methods_section:Transfection and Gene Editing",
+      "kind": "supplement_methods_section",
+      "label": "Transfection and Gene Editing",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p2"
+    },
+    {
+      "unit_id": "supplementary_figure:Supplementary Figure 1",
+      "kind": "supplementary_figure",
+      "label": "Supplementary Figure 1",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+      "locus": "p3",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "K",
+        "L",
+        "M"
+      ]
+    },
+    {
+      "unit_id": "supplementary_figure:Supplementary Figure 10",
+      "kind": "supplementary_figure",
+      "label": "Supplementary Figure 10",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+      "locus": "p19",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    {
+      "unit_id": "supplementary_figure:Supplementary Figure 2",
+      "kind": "supplementary_figure",
+      "label": "Supplementary Figure 2",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+      "locus": "p4",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    },
+    {
+      "unit_id": "supplementary_figure:Supplementary Figure 3",
+      "kind": "supplementary_figure",
+      "label": "Supplementary Figure 3",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+      "locus": "p6",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E"
+      ]
+    },
+    {
+      "unit_id": "supplementary_figure:Supplementary Figure 4",
+      "kind": "supplementary_figure",
+      "label": "Supplementary Figure 4",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+      "locus": "p8",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "I",
+        "J"
+      ]
+    },
+    {
+      "unit_id": "supplementary_figure:Supplementary Figure 5",
+      "kind": "supplementary_figure",
+      "label": "Supplementary Figure 5",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+      "locus": "p9",
+      "panels": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    {
+      "unit_id": "supplementary_figure:Supplementary Figure 6",
+      "kind": "supplementary_figure",
+      "label": "Supplementary Figure 6",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+      "locus": "p11",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    {
+      "unit_id": "supplementary_figure:Supplementary Figure 7",
+      "kind": "supplementary_figure",
+      "label": "Supplementary Figure 7",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+      "locus": "p13",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F",
+        "G"
+      ]
+    },
+    {
+      "unit_id": "supplementary_figure:Supplementary Figure 8",
+      "kind": "supplementary_figure",
+      "label": "Supplementary Figure 8",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+      "locus": "p15",
+      "panels": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    {
+      "unit_id": "supplementary_figure:Supplementary Figure 9",
+      "kind": "supplementary_figure",
+      "label": "Supplementary Figure 9",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+      "locus": "p17",
+      "panels": [
+        "A",
+        "B",
+        "C"
+      ]
+    }
+  ]
+}

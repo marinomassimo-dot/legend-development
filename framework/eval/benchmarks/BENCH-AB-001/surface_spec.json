@@ -1,0 +1,225 @@
+{
+  "_schema": "LEGEND benchmark · input surface spec v1",
+  "_note": [
+    "The allowlist. `benchmark_input_surface.py` copies exactly what is listed here and",
+    "nothing else, and `verify` refuses a surface holding anything not listed. Source paths",
+    "are relative to --source-root, which is the LEGEND root checkout: the packet lives under",
+    "files/, which is git-ignored, so it exists in a checkout and never in a commit.",
+    "Adding a path here is a governed change to a tracked artifact, reviewable as such.",
+    "Removed on purpose and recorded so the omission is not read as an oversight: the",
+    "page renders and figure crops under *_assets/ (S_fig_*, S_page_*, S_native_*, figs/*,",
+    "S10_caption_*). They are renders of the source, and their SELECTION encodes a prior",
+    "reader's attention — which pages, which panels, at which dpi. Each reader renders what",
+    "it needs from the PDF and declares its renders as figure artifacts with digests."
+  ],
+  "spec_version": 1,
+  "benchmark_id": "BENCH-AB-001",
+  "pmid": "42397075",
+  "doi": "10.1093/brain/awag239",
+  "actors": ["scientist-a", "scientist-b"],
+
+  "source_files": [
+    {
+      "source": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+      "surface": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+      "kind": "article_binary"
+    },
+    {
+      "source": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+      "surface": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+      "kind": "article_text"
+    },
+    {
+      "source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File008.pdf",
+      "surface": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File008.pdf",
+      "kind": "supplement_text"
+    },
+    {
+      "source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "surface": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "kind": "supplement_text"
+    },
+    {
+      "source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+      "surface": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+      "kind": "supplement_text"
+    },
+    {
+      "source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File011.pdf",
+      "surface": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File011.pdf",
+      "kind": "supplement_text"
+    },
+    {
+      "source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File012.pdf",
+      "surface": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File012.pdf",
+      "kind": "supplement_text"
+    }
+  ],
+
+  "common_files": [
+    {"source": "framework/eval/benchmarks/BENCH-AB-001/instructions/SURFACE_CLAUDE.md",
+     "surface": "CLAUDE.md"},
+    {"source": "framework/eval/benchmarks/BENCH-AB-001/instructions/BENCHMARK_INSTRUCTIONS.md",
+     "surface": "benchmark/BENCHMARK_INSTRUCTIONS.md"},
+    {"source": "framework/eval/benchmarks/BENCH-AB-001/instructions/OUTPUT_SCHEMA.md",
+     "surface": "benchmark/OUTPUT_SCHEMA.md"},
+    {"source": "roles/scientist.md", "surface": "roles/scientist.md"},
+    {"source": "framework/instruction/epistemic_discipline.md",
+     "surface": "framework/instruction/epistemic_discipline.md"},
+    {"source": "framework/master/gold_is_in_the_details.md",
+     "surface": "framework/master/gold_is_in_the_details.md"},
+    {"source": "framework/protocols/fulltext_read_receipt.md",
+     "surface": "framework/protocols/fulltext_read_receipt.md"},
+    {"source": "framework/protocols/scientist_reading_modes.md",
+     "surface": "framework/protocols/scientist_reading_modes.md"},
+    {"source": "framework/eval/failure_taxonomy.md",
+     "surface": "framework/eval/failure_taxonomy.md"},
+    {"source": "framework/scripts/deepdive_manifest.py",
+     "surface": "framework/scripts/deepdive_manifest.py"},
+    {"source": "framework/scripts/corpus_firewall.py",
+     "surface": "framework/scripts/corpus_firewall.py"}
+  ],
+
+  "per_actor_files": {
+    "scientist-a": [
+      {"source": "framework/eval/benchmarks/BENCH-AB-001/instructions/ASSIGNMENT.scientist-a.md",
+       "surface": "ASSIGNMENT.md"},
+      {"source": "framework/eval/benchmarks/BENCH-AB-001/instructions/MODE_A.md",
+       "surface": "benchmark/MODE_DIRECTIVE.md"}
+    ],
+    "scientist-b": [
+      {"source": "framework/eval/benchmarks/BENCH-AB-001/instructions/ASSIGNMENT.scientist-b.md",
+       "surface": "ASSIGNMENT.md"},
+      {"source": "framework/eval/benchmarks/BENCH-AB-001/instructions/MODE_B.md",
+       "surface": "benchmark/MODE_DIRECTIVE.md"}
+    ]
+  },
+  "per_actor_may_be_identical": [],
+
+  "empty_dirs": [
+    "disease-models/wwox/research/deepdive_manifests",
+    "disease-models/wwox/research/fulltext_dossiers",
+    "output",
+    "output/renders"
+  ],
+
+  "forbidden_prior_output_paths": [
+    "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+    "disease-models/wwox/research/fulltext_dossiers/PMID42397075_partial_locators.md",
+    "disease-models/wwox/research/fulltext_dossiers/PMID42128308_partial_locators.md",
+    "disease-models/wwox/research/fulltext_dossiers/PMID34747138_partial_locators.md",
+    "disease-models/wwox/research/deepdive_manifests/PMID42128308.json",
+    "disease-models/wwox/research/deepdive_manifests/PMID18487609.json",
+    "disease-models/wwox/research/deepdive_manifests/PMID24550385.json",
+    "disease-models/wwox/research/discovery_ledger_current.md",
+    "disease-models/wwox/research/full_text_queue_current.md",
+    "disease-models/wwox/research/surface_census.md",
+    "disease-models/wwox/registries/fulltext_read_receipts.jsonl",
+    "disease-models/wwox/registries/literature_tracking_log_current.md",
+    "disease-models/wwox/registries/paper_registry_current.md",
+    "disease-models/wwox/registries/claim_registry_current.md",
+    "disease-models/wwox/registries/working_model_current.md",
+    "disease-models/wwox/registries/reading_state.md",
+    "disease-models/wwox/registries/batch_queue.md",
+    "disease-models/wwox/registries/corpus_seed_pubmed_20260805.tsv",
+    "disease-models/wwox/registries/corpus_seed_pubmed_20260806.tsv",
+    "disease-models/wwox/registries/corpus_seed_pubmed_20260806.jsonl",
+    "disease-models/wwox/analysis/orchestration_reviews/2026-08-10.md",
+    "framework/eval/finding_20260809_text_surface_fidelity.md",
+    "framework/protocols/controlled_benchmark_ab.md"
+  ],
+  "_forbidden_derivation": [
+    "The 21 tracked paths naming the paper at BASE_HEAD cbce3016, enumerated by:",
+    "  git grep -l -i -E '42397075|awag239|Aqeilan 2026|Aqeilan2026' cbce3016 -- .",
+    "  | grep -v '^governance/candidates'",
+    "plus claim_registry_current.md and working_model_current.md — which do NOT name the",
+    "paper and are excluded anyway, because they carry what the laboratory already concluded",
+    "about it; plus controlled_benchmark_ab.md, which describes this experiment and names",
+    "the paper. Governance candidates are excluded from the surface wholesale, so listing",
+    "each of them here would be noise."
+  ],
+
+  "content_scan": {
+    "_note": [
+      "The paper's identifiers must not appear in anything that is not the paper. The packet",
+      "is exempt because it IS the paper; the instructions are exempt because a reader must",
+      "be told which PMID it is reading. Everything else scans to zero, or the surface is",
+      "not blind. Verified 2026-08-18 on all nine non-instruction text files: 0 hits each."
+    ],
+    "pattern": "42397075|awag239|aqeilan|steinberg|zonca|abdellatif|\\bMYC\\b",
+    "text_suffixes": [".md", ".txt", ".json", ".py", ".yaml", ".yml"],
+    "exempt_surface_paths": [
+      "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+      "ASSIGNMENT.md",
+      "benchmark/BENCHMARK_INSTRUCTIONS.md",
+      "benchmark/OUTPUT_SCHEMA.md",
+      "benchmark/MODE_DIRECTIVE.md",
+      "CLAUDE.md"
+    ]
+  },
+
+  "population": {
+    "_note": [
+      "Structural enumeration of what the paper CONTAINS. Patterns are declared here so the",
+      "population is a function of (spec, source) and can be re-derived by anyone. Main",
+      "figures and supplementary figures carry their lettered panels, read out of the caption",
+      "window that follows the label. Tables, Results subsections and the supplement's",
+      "Materials-and-methods sections are units without panels."
+    ],
+    "notes": [
+      "PANEL EXTRACTION IS FROM CAPTIONS, and the caption is what the paper printed. Two",
+      "observations from the first derivation, recorded so neither is later read as a tool",
+      "defect: (1) Supplementary Figure 1 yields A-I, K, L, M — no J. The caption labels (G)",
+      "twice and never labels J; the enumeration reports the paper, not a repair of it.",
+      "(2) Figure 6 labels its panels [A(i)], [A(ii)], [B(i)]… and the range (C-D). Ranges are",
+      "expanded; a single-letter pattern alone reported A,B,E and would have made the",
+      "denominator short by two, which flatters both readers' coverage.",
+      "The main text carries no numbered Table — main_table is 0 by measurement, not by",
+      "omission of the rule.",
+      "This population fixes WHAT the paper contains. It does not rank units by importance:",
+      "which of them matter is what the two readings and the adjudication are for."
+    ],
+    "sources": [
+      {
+        "source": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "surface": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "rules": [
+          {
+            "kind": "main_figure",
+            "pattern": "^(?P<label>Figure \\d+)\\s+\\S",
+            "panel_pattern": "[(\\[]([A-Z])(?=[)(])",
+            "panel_range_pattern": "[(\\[]([A-Z])\\s*[-–]\\s*([A-Z])[)\\]]",
+            "panel_window": 3600
+          },
+          {
+            "kind": "main_table",
+            "pattern": "^(?P<label>Table \\d+)\\s+[A-Z]"
+          }
+        ]
+      },
+      {
+        "source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+        "surface": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+        "rules": [
+          {
+            "kind": "supplementary_figure",
+            "pattern": "^\\s*(?P<label>Supplementary Figure \\d+)\\s*\\.",
+            "panel_pattern": "[(\\[]([A-Z])(?=[)(])",
+            "panel_range_pattern": "[(\\[]([A-Z])\\s*[-–]\\s*([A-Z])[)\\]]",
+            "panel_window": 2200
+          }
+        ]
+      },
+      {
+        "source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+        "surface": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+        "rules": [
+          {
+            "kind": "supplement_methods_section",
+            "pattern": "^(?P<label>Cell Culture and Maintenance|Transfection and Gene Editing|Reprogramming of somatic cells|Cerebral organoid generation and culture|AAV9 infection|MYC inhibition|NSCs differentiation|Immunofluorescence|Cell-attached recordings|Immunoblot analysis|RNA extraction, reverse transcription-PCR, and qPCR|Single-cell data preprocessing|Differential Gene Expression|Cell cycle phase and potency state inference|Overrepresentation analysis|Neuron Analysis|Pseudobulk analysis|Dorso-ventral gene expression|MYC and WWOX interactome analysis|Chromatin immunoprecipitation sequencing \\(ChIP-seq\\))\\s*$"
+          }
+        ]
+      }
+    ]
+  }
+}
