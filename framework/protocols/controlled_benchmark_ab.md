@@ -27,12 +27,25 @@ comparison, a blind locator audit, Mirror's adjudication of the process, and an 
 reports every dimension separately.
 
 **The single declared variable is the mode directive.** Everything else the two readers receive
-is byte-identical and the manifest proves it (§3–§4). One caveat is stated here so it cannot be
-lost later: with one paper and one session per actor, **the benchmark cannot separate the effect
-of the mode from the variance between two sessions**. It is a first controlled benchmark — one
-variable, everything else held — not a statistical study. Its value is the *material* it produces
-(two frozen readings, an audit, an adjudication) and the failure modes it surfaces, not a
-number.
+is byte-identical and the manifest proves it (§3–§4).
+
+**Two caveats on that variable, stated here so neither can be lost later.**
+
+1. **Session variance is not separable from mode.** With one paper and one session per actor, the
+   benchmark cannot separate the effect of the mode from the variance between two sessions. It
+   is a first controlled benchmark — one variable, everything else held — not a statistical
+   study. Its value is the *material* it produces (two frozen readings, an audit, an
+   adjudication) and the failure modes it surfaces, not a number.
+
+2. 🔴 **Each reader can read the other's mode directive, and the variable is narrower than it
+   looks.** `scientist_reading_modes.md` §4–§5 is a **common** file — it is normative for both
+   readers and could not honestly be withheld from either — and it describes MODE A and MODE B
+   in full. So the manipulated variable is not *knowledge of the two modes*; it is **which
+   directive is addressed to you** in `benchmark/MODE_DIRECTIVE.md` and `ASSIGNMENT.md`. The
+   instruction *"do not speculate about what the other directive says"* is therefore about
+   attention, not information: the other directive is in the surface, in the protocol both
+   readers hold. Recorded as a **known contamination of the variable**, beside the session
+   variance above, and not softened (Mirror R-2).
 
 **Explicitly not measured as quality:** speed, token use, cost, output length, or how often A and
 B agree. They are recorded (§8.4) because they are cheap to record and someone will ask; they are
@@ -130,7 +143,11 @@ guarantee.
 │   ├── protocols/fulltext_read_receipt.md        identical
 │   ├── protocols/scientist_reading_modes.md      identical
 │   ├── eval/failure_taxonomy.md                  identical
-│   └── scripts/deepdive_manifest.py, corpus_firewall.py   identical — the validator, unmodified
+│   └── framework/scripts/deepdive_manifest.py, framework/scripts/corpus_firewall.py
+│                                                  identical — the validator, unmodified. Written
+│                                                  full-length rather than nested: the layout is a
+│                                                  drawing, and a leaf read out of its branch is a
+│                                                  path that resolves nowhere in this repository.
 ├── files/fulltext/
 │   ├── PMID42397075_Aqeilan2026.pdf              article_binary   b6b44816…
 │   ├── PMID42397075_Aqeilan2026_fitz.txt         article_text     9c48aa09…
@@ -169,7 +186,11 @@ identity of the text surface**. Recorded in the manifest as `text_surface_recipe
 ## 3 · The input manifest — an experiment record, not a data model
 
 `framework/eval/benchmarks/BENCH-AB-001/benchmark_manifest.json`, **frozen before HANDOVER**,
-tracked, its own digest recorded in each actor's `ASSIGNMENT.md`. Fields:
+tracked, and its own digest recorded in **each actor's freeze receipt** as
+`INPUT_MANIFEST_SHA256`. It is *not* written into `ASSIGNMENT.md`: `build` copies files, it does
+no templating, so a digest promised inside a copied file would be a digest nobody wrote
+(Mirror R-1). The receipt is the right home for it anyway — it binds the manifest to the pass
+that ran under it, at the moment that pass was frozen. Fields:
 
 ```
 BENCHMARK_ID · PMID · DOI · PAPER_TITLE_SHORT · BASE_HEAD
@@ -256,13 +277,32 @@ file is a broken benchmark, and `verify` reports it.**
   disease and PMID and it cannot be elsewhere without breaking the validator. **In a checkout
   of the repository the reader would be writing its manifest on top of the prior one.** In the
   surface the slot is proven empty at handover and the freeze receipt pins what it held at
-  completion; the post-read run therefore skips the output slots rather than reporting on
-  authorship it cannot determine. *Both this and the mirror-image case — the content scan
-  firing on the reader's own PMID — were found by running the tool against a synthetic output
-  tree before any reader existed, and are recorded in the candidate's test evidence.*
+  completion. *Both this and the mirror-image case — the content scan firing on the reader's
+  own PMID — were found by running the tool against a synthetic output tree before any reader
+  existed, and are recorded in the candidate's test evidence.*
 
-What "after" cannot do: prove that a reader did not open a file by absolute path and quote
-nothing from it. That is the J.0 residual of §2.1, and this section does not claim otherwise.
+  **The blind spot is that one path, and `verify --post-read` prints it by name on every run.**
+  It is computed as the intersection of `expected_output_paths` with
+  `forbidden_prior_output_paths`, so it cannot be wider than what the spec declares and cannot
+  be widened silently. Revision 1 skipped *everything under an output slot*, which was six
+  other forbidden paths wider than the collision it was written for; those six are checked
+  again (Mirror B-4).
+
+**Exactly what the three instruments guarantee, together and separately.** The vocabulary here
+is deliberately weaker than "we know who wrote this", because that is not available:
+
+| Instrument | When | GUARANTEE_PROVIDED | FAILURE_MODE_STILL_POSSIBLE |
+|---|---|---|---|
+| `verify` (pre-handover) | before either reader sees anything | the slots were **empty**, every forbidden path was **absent**, no symlink, parity across the two surfaces, no identifier leak — all of it observed, not attested | nothing about what happens after handover |
+| `verify --post-read` | after the freeze | every forbidden path **except the printed blind spot** is still absent; nothing outside the allowlist and the declared output set is present; no symlink appeared | authorship at the blind-spot path; a file the reader opened outside the tree |
+| `freeze` + `verify-freeze` | at completion, and at any later moment | these bytes under these paths were present **when the freeze ran**; any later addition, removal or edit is detected set-wise; the actor and benchmark were read **from inside the tree**, so the receipt cannot be mislabelled | a substitution made **before** the freeze; the timestamp is this process's clock and nothing corroborates it |
+
+**Read together, the three bound the window and do not close it.** Before handover the tree
+provably held no prior output; at freeze the tree is pinned; after freeze any change to it is
+detectable. What no combination of them establishes is **authorship of bytes at the one
+colliding path**, and none of the three is to be described as if it did. That is the J.0
+residual of §2.1, together with the residual that no instrument here can prove a reader did not
+open a file by absolute path and quote nothing from it.
 
 ---
 
@@ -297,7 +337,8 @@ population/evidence_units.json              Plan     ex ante population (§8.1);
 instructions/BENCHMARK_INSTRUCTIONS.md      Plan     versioned; digest in the manifest
 instructions/OUTPUT_SCHEMA.md               Plan     versioned; digest in the manifest
 instructions/MODE_A.md · MODE_B.md          Plan     versioned; digests in the manifest
-instructions/ASSIGNMENT.template.md         Plan     the per-actor file, with the two values that vary
+instructions/ASSIGNMENT.scientist-a.md      Plan     the per-actor file — two concrete files, not a
+instructions/ASSIGNMENT.scientist-b.md      Plan     template: `build` copies, it does not template
 first_pass/scientist-a/…                    Plan (import, byte-identical from A's frozen tree)
 first_pass/scientist-b/…                    Plan (import, byte-identical from B's frozen tree)
 frozen/RECEIPT-scientist-a.json             Plan     the freeze record — commit sha, tree digest, file digests, timestamps
@@ -316,10 +357,32 @@ benchmark directory carries a pointer and a digest, never a copy that could drif
 
 ## 7 · Freezing — first passes are immutable from the moment they are declared complete
 
-- Plan freezes **on the completion declaration and before reading the content**: the receipt is
-  written from `git rev-parse HEAD`, the tree digest, and per-file digests of the surface's
-  output tree. The order matters: a freeze taken after Plan has read the content is a freeze
-  whose timing cannot be shown.
+- Plan freezes **on the completion declaration and before reading the content**. The order
+  matters: a freeze taken after Plan has read the content is a freeze whose timing cannot be
+  shown.
+
+**The receipt schema — `RECEIPT_SCHEMA_VERSION 2`**, emitted by
+`benchmark_input_surface.py freeze` and validated by `verify-freeze`. Revision 1 of this command
+recorded an absolute local path, took the actor and benchmark ids as unchecked free text (A's
+tree froze happily as `scientist-b`), and emitted no time, no commit, no mode and no state.
+
+| Field | Where it comes from |
+|---|---|
+| `BENCHMARK_ID` · `ACTOR_ID` · `TASK_ID` · `MODE` · `PARALLEL_READ_GROUP` | **read from `ASSIGNMENT.md` inside the frozen tree**; the command line is checked against it and a disagreement is a refusal, exit 2 |
+| `INSTRUCTIONS_VERSION` · `OUTPUT_SCHEMA_VERSION` · `MANIFEST_SCHEMA_VERSION` | front matter of the two instruction files in the tree |
+| `INPUT_MANIFEST_PATH` · `INPUT_MANIFEST_SHA256` | the benchmark manifest the run was handed |
+| `SURFACE_RELATIVE` = `<BENCHMARK_ID>/<ACTOR_ID>` | the layout `build` creates. `SURFACE_ABSOLUTE_PATH` is explicitly **NOT RECORDED** — `BENCH_ROOT` is a local-instance value (§2.3) |
+| `SURFACE_COMMIT` · `SURFACE_BRANCH` · `SURFACE_DIRTY` | `git` in the surface, or `DECLARED_ABSENT` if it is not a repository |
+| `FREEZE_TIMESTAMP_UTC` · `FIRST_PASS_STATE` | the clock, and one of `COMPLETE_DECLARED_BY_ACTOR · ABANDONED · TIMED_OUT` |
+| `TREE_SHA256` · `FILE_COUNT` · `FILES[]` with `role` ∈ input · output · unexpected | the shared tree digest; `OUTPUT_FILE_SET` and `UNEXPECTED_FILE_SET` are enumerated separately |
+| `SYMLINKS` | always empty — `freeze` **refuses** a tree containing one, since a link's bytes are not here |
+| `GUARANTEE_PROVIDED` · `FAILURE_MODE_STILL_POSSIBLE` · `DETECTION` | carried in the receipt itself, per the Annex J.0 cross-cutting rule |
+
+`verify-freeze --receipt <file> --surface <tree>` recomputes and compares **set-wise, never by
+count**: `ADDED` · `REMOVED` · `MODIFIED`, each enumerated, plus an identity check against the
+tree's own `ASSIGNMENT.md` so a receipt pointed at the wrong actor's tree fails on identity and
+not merely on digests. Two trees of equal file count holding different files is exactly the
+substitution this exists to catch, and a count says they agree.
 - The import into `first_pass/<ACTOR_ID>/` is byte-identical and the receipt's digests are the
   check. Anyone can re-derive them from the import.
 - **The comparison, the audit, the adjudication and the outcome never modify a first pass.** A
@@ -331,21 +394,62 @@ benchmark directory carries a pointer and a digest, never a copy that could drif
   finishes first is frozen first; the second is not shown the first until its own freeze is
   recorded.
 
+  🔴 **This rule is `PROCEDURAL`, and it is labelled the way `runtime/orchestrator_lease.md`
+  labels its own.** Nothing mechanises it. No process stands between the two surfaces, and
+  Plan showing B the contents of A's tree before B's freeze would leave no trace in any
+  artifact this protocol produces.
+
+  ```
+  GUARANTEE_PROVIDED:            none by mechanism — discipline only
+  FAILURE_MODE_STILL_POSSIBLE:   Plan reads or relays A's first pass to B before B freezes
+  DETECTION:                     the two receipts carry FREEZE_TIMESTAMP_UTC and SURFACE_COMMIT;
+                                 an inspection of B's commit history against A's freeze time
+                                 makes a violation VISIBLE AFTER THE FACT, never prevented
+  RECOVERY:                      the benchmark is void for the second reader; the outcome says so
+  ```
+
 ---
 
 ## 8 · Evaluation design — population first, dimensions separately, no composite
 
 ### 8.1 · The evaluation population is fixed before anyone reads
 
-`population/evidence_units.json` enumerates the paper's **structural evidence units** from the
-text surfaces alone, by command, before either first pass — main figures and their lettered
-panels as named in captions, tables, Results subsection headings, supplementary figures and
-tables, supplement sections. Structural enumeration is not a reading: it lists what the paper
+`population/evidence_units.json` enumerates the paper's **structural evidence units** by command,
+before either first pass. Structural enumeration is not a reading: it lists what the paper
 *contains*, not what it *shows*, and Plan may do it (§28) because it decides nothing about
 meaning. Its digest is in the manifest, so it cannot be redefined after the readings exist. Every
 coverage measure below is computed over this population and nothing else. What the population
 does **not** do: it does not say which units matter — that is exactly what the two readings and
 the adjudication will disagree about, and it must not be pre-empted.
+
+**What is enumerated, exactly** — every kind below has a rule in `surface_spec.json`, and a
+count, including a count of zero. This list and the command's output are the same list; a kind
+named here without a rule is the defect Mirror recorded as B-1 and is not to reappear.
+
+| Kind | Source | Count | Sub-units |
+|---|---|---|---|
+| `main_figure` | article text surface | 6 | 46 panels |
+| `main_table` | article text surface | **0** — measured, the paper prints none | — |
+| `main_results_section` | article PDF, by typography | 7 | — |
+| `main_methods_section` | article PDF, by typography | 2 | — |
+| `supplementary_figure` | File010 | 10 | 63 panels |
+| `supplement_methods_section` | File009, by typography | 24 | — |
+| `supplement_table_section` | File011, resource categories | 7 | — |
+| `source_data_blot` | File012, uncropped blots | 9 | — |
+| **total** | | **65 units** | **109 panels** |
+
+**Declared evidence boundary.** `File008` (author contributions, 1 p.) yields **no** evidence
+unit: it names no figure, table, method or datum. It is in both packets — the packets are
+identical — and it is outside the denominator, because there is nothing in it to cover. The
+command **refuses** a spec in which any packet source is neither enumerated nor declared empty,
+so an unmeasurable supplement cannot pass silently the way File011 and File012 did in revision 1.
+
+**Two bounding rules, both structural, neither an integer.** A caption runs to the next label of
+its own rule or to the end of its segment — never to a fixed character count, which in revision 1
+ran 925 characters past Figure 2's caption into Figure 3's and reported twelve panels for a
+caption that prints six. A Methods or Results heading is selected by the face and size the paper
+sets it in, inside a region bounded by two declared markers — not by a hand-written list, which
+in revision 1 was short by four sections.
 
 ### 8.2 · Dimensions — each with unit, measure, route, evaluator, blindness
 
@@ -355,7 +459,7 @@ the adjudication will disagree about, and it must not be pre-empted.
 | **CLAIM PRECISION** | per (proposition, snippet, anchor): `SUPPORTED · OVERSHOOT · UNDERSHOOT · NOT_IN_SOURCE · UNVERIFIABLE_SURFACE`; per claim candidate: `Type` claimed vs `Type` the audited evidence bears | blind locator audit; then adjudication for the `Type` question | fresh blind agents; Mirror |
 | **PROVENANCE** | every locator's artifact ∈ ALLOWED_PATHS with matching digest; manifest `PASS` under `--verify-artifacts --require-current-schema`; `source_artifacts` complete; coverage map consistent with where locators come from (a supplement locator against `Supplementary: not_read` is an inconsistency) | mechanical | Plan |
 | **LOCATOR FIDELITY** | text-surface snippets match exactly (validator); figure attestations declared as such; elisions marked; anchors resolvable | mechanical + audit | Plan; blind agents |
-| **EPISTEMIC DISCIPLINE** | every carried statement typed; negatives with `PREMISE` tag and `REVIVAL_TRIGGER`; `DEFAULT_FROM_TEXTBOOK` declared where used; the four intermediate fields present and separable — `Observation` free of conclusion verbs, `Author interpretation` marked as theirs; hypothesis→observation promotions found by audit | mechanical for presence; adjudication for substance | Plan; Mirror |
+| **EPISTEMIC DISCIPLINE** | every carried statement typed; negatives with `PREMISE` tag and `REVIVAL_TRIGGER`; `DEFAULT_FROM_TEXTBOOK` declared where used; the seven benchmark fields present and separable — `Observation` free of conclusion verbs, `Author interpretation` marked as theirs; hypothesis→observation promotions found by audit | mechanical for presence; adjudication for substance | Plan; Mirror |
 | **CONTEXT PRESERVATION** | per claim candidate: genotype · cell type · developmental stage · intervention · endpoint present; instances of context collapse (`CONTEXT_COLLAPSE` axis; `MECHANISTIC_OVERTRANSFER` gate) | presence mechanical; instances adjudicated | Plan; Mirror |
 | **METHODS / LIMITATIONS** | findings with methods captured; limitations recorded (authors' and reader's, distinguished); statistics caveats named; detailed-methods supplement (File009) covered | presence mechanical; substance adjudicated | Plan; Mirror |
 | **CONTRADICTION / NEGATIVE EVIDENCE** | null/negative findings carried; internal contradictions found; `panel_qualifies_text` / `text_contradicted_by_panel` used with valid pointers; MODE B axes each answered | mechanical for pointers and axis completeness; substance adjudicated | Plan; Mirror |
@@ -425,6 +529,12 @@ this protocol are canonical. Read, not inferred:
 3. Annex A.1: a Task Contract names an `OWNER (ACTOR_ID)`. Both ACTOR_IDs are `UNRESOLVED`
    until the candidate executes (`scientist_reading_modes.md` §1.1). No contract can be issued
    to an unresolved owner.
+
+   ⚠️ **This is the weakest of the four grounds and is not load-bearing.** The `PROPOSAL-C9`
+   path — an ACTOR_ID *confirmed at registration* — exists in governance independently of this
+   candidate, so ground 3 rests on **this candidate's own choice** to fix both IDs at approval
+   rather than at registration. It is a real reason and it is a circular one, so it is marked
+   (Mirror R-8). Grounds 2 and 4 are each decisive on their own and neither depends on it.
 4. Body §8 / I.4: assignment on `VERIFIED` capabilities. None is verified; L2 is suspended by
    operator decision. Independent of canonicalization, and also unmet.
 

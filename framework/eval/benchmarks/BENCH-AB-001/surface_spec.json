@@ -12,7 +12,7 @@
     "reader's attention — which pages, which panels, at which dpi. Each reader renders what",
     "it needs from the PDF and declares its renders as figure artifacts with digests."
   ],
-  "spec_version": 1,
+  "spec_version": 2,
   "benchmark_id": "BENCH-AB-001",
   "pmid": "42397075",
   "doi": "10.1093/brain/awag239",
@@ -103,6 +103,33 @@
     "output/renders"
   ],
 
+  "_expected_output_note": [
+    "The EXACT set of paths a reader is told to write, and the only paths --post-read",
+    "exempts from the content scan and the allowlist check.",
+    "",
+    "Revision 2, Mirror finding B-4. The exemption used to be 'anything under an output",
+    "slot', which is far wider than the blind spot it was written for. The blind spot is",
+    "ONE path: the reader's own work manifest lands where LEGEND's prior manifest lives,",
+    "because deepdive_manifest.py derives that path from disease and PMID and cannot put",
+    "it elsewhere. Six other forbidden paths sit under the same two slots, collide with",
+    "nothing the reader was asked to write, and were being skipped along with it.",
+    "",
+    "The tool COMPUTES the blind spot as the intersection of this list with",
+    "forbidden_prior_output_paths, and prints it on every --post-read run. It is size 1.",
+    "A path added here that collides with a forbidden path therefore widens a printed",
+    "blind spot; it cannot widen a silent one."
+  ],
+  "expected_output_paths": [
+    "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
+    "disease-models/wwox/research/fulltext_dossiers/PMID42397075.md",
+    "output/receipt.json",
+    "output/claim_candidates.md",
+    "output/critical_reading.md"
+  ],
+  "expected_output_prefixes": [
+    "output/renders/"
+  ],
+
   "forbidden_prior_output_paths": [
     "disease-models/wwox/research/deepdive_manifests/PMID42397075.json",
     "disease-models/wwox/research/fulltext_dossiers/PMID42397075_partial_locators.md",
@@ -160,36 +187,68 @@
 
   "population": {
     "_note": [
-      "Structural enumeration of what the paper CONTAINS. Patterns are declared here so the",
-      "population is a function of (spec, source) and can be re-derived by anyone. Main",
-      "figures and supplementary figures carry their lettered panels, read out of the caption",
-      "window that follows the label. Tables, Results subsections and the supplement's",
-      "Materials-and-methods sections are units without panels."
+      "Structural enumeration of what the paper CONTAINS. Rules are declared here so the",
+      "population is a function of (spec, source) and can be re-derived by anyone.",
+      "",
+      "REVISION 2 — the whole block was rebuilt after Mirror finding B-1. What changed and why:",
+      "  (1) NO FIXED CAPTION WINDOW. A caption now runs to the NEXT MATCH OF ITS OWN RULE,",
+      "      or to the end of the segment. The 3600-character window ran 925 characters past",
+      "      Figure 2's caption into Figure 3's and reported TWELVE panels for a caption that",
+      "      prints SIX. A fixed integer bounds the wrong axis: the axis a caption window",
+      "      fails on is whether it respects the next label.",
+      "  (2) METHODS ARE DERIVED, NOT LISTED. The twenty hand-enumerated headings were a",
+      "      list, not a rule (R-6), and were short by four. Sections are now selected by",
+      "      TYPOGRAPHY — the face and size the paper sets a heading in — inside a region",
+      "      bounded by two declared markers. Recovered: Ca2+ Imaging, WWOX and MYC",
+      "      expression invivo, ChIP-seq analysis (all three named by Mirror), and",
+      "      'Library preparation and Single-cell RNA-seq (scRNA-seq) (10x Chromium)', a",
+      "      heading that WRAPS across two lines and that a line-bounded rule cannot see.",
+      "  (3) RESULTS HEADINGS ARE ENUMERATED, not promised. Protocol §8.1 named them and no",
+      "      rule existed. They are typographically distinct in this source, so the promise",
+      "      is kept rather than narrowed.",
+      "  (4) EVERY PACKET SOURCE IS ACCOUNTED FOR. File011 (resource table) and File012",
+      "      (uncropped blots) yielded zero units and were therefore unmeasurable; both are",
+      "      now enumerated. File008 yields none and says so, under declared_empty_sources.",
+      "      The command REFUSES a spec that leaves a packet source unclassified."
     ],
     "notes": [
-      "PANEL EXTRACTION IS FROM CAPTIONS, and the caption is what the paper printed. Two",
-      "observations from the first derivation, recorded so neither is later read as a tool",
-      "defect: (1) Supplementary Figure 1 yields A-I, K, L, M — no J. The caption labels (G)",
-      "twice and never labels J; the enumeration reports the paper, not a repair of it.",
+      "PANEL EXTRACTION IS FROM CAPTIONS, and the caption is what the paper printed.",
+      "(1) Supplementary Figure 1 yields A-I, K, L, M — no J. The caption labels (G) twice and",
+      "never labels J; the enumeration reports the paper, not a repair of it.",
       "(2) Figure 6 labels its panels [A(i)], [A(ii)], [B(i)]… and the range (C-D). Ranges are",
       "expanded; a single-letter pattern alone reported A,B,E and would have made the",
       "denominator short by two, which flatters both readers' coverage.",
-      "The main text carries no numbered Table — main_table is 0 by measurement, not by",
+      "(3) The main text carries no numbered Table — main_table is 0 by measurement, not by",
       "omission of the rule.",
+      "(4) Every figure label is reprinted in a trailing size listing ('Figure 2 / 140x90 mm').",
+      "The FIRST occurrence is the caption and is the one kept; the repeat is skipped, and it",
+      "also serves as the bound of Figure 6's caption, which is the last one in the text.",
+      "(5) File012 keys its uncropped blots to supplementary figure PANELS, not to figures.",
+      "Supplementary Fig. 1J spans two pages; it is ONE source-data unit, met twice.",
+      "(6) File012 prints its keys inconsistently — 'Supplementary Fig. 5B' with a space and",
+      "'Supplementary Fig.6F' without. Labels are reported AS PRINTED, not normalized: the",
+      "enumeration reports the paper, and a tidied label is a label no reader can grep for.",
       "This population fixes WHAT the paper contains. It does not rank units by importance:",
       "which of them matter is what the two readings and the adjudication are for."
+    ],
+    "declared_empty_sources": [
+      {
+        "source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File008.pdf",
+        "reason": "Author contributions only — one page, a CRediT-style role list naming no figure, table, method or datum. It carries no evidence unit, so no coverage over it is claimed and none is measurable. It stays in the packet because both readers must see the same packet; it is excluded from the denominator because there is nothing in it to cover."
+      }
     ],
     "sources": [
       {
         "source": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
         "surface": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+        "extraction": "regex",
         "rules": [
           {
             "kind": "main_figure",
             "pattern": "^(?P<label>Figure \\d+)\\s+\\S",
-            "panel_pattern": "[(\\[]([A-Z])(?=[)(])",
-            "panel_range_pattern": "[(\\[]([A-Z])\\s*[-–]\\s*([A-Z])[)\\]]",
-            "panel_window": 3600
+            "sub_unit_kind": "panel",
+            "sub_unit_pattern": "[(\\[]([A-Z])(?=[)(])",
+            "sub_unit_range_pattern": "[(\\[]([A-Z])\\s*[-–]\\s*([A-Z])[)\\]]"
           },
           {
             "kind": "main_table",
@@ -198,25 +257,109 @@
         ]
       },
       {
+        "source": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+        "surface": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+        "extraction": "typography",
+        "_note": [
+          "The article sets its section headings in Aptos Display: 20.27 for a top-level",
+          "section, 15.77 for a subsection. Body text is Times New Roman 12. Both rules below",
+          "are bounded by top-level markers, so neither can reach into the section after it."
+        ],
+        "rules": [
+          {
+            "kind": "main_results_section",
+            "heading": {"font_contains": "Aptos Display", "size": 15.77, "size_tolerance": 0.05},
+            "scope": {
+              "start_after": {"font_contains": "Aptos Display", "size": 20.27, "text": "Results"},
+              "stop_before": {"font_contains": "Aptos Display", "size": 20.27, "text": "Discussion"}
+            },
+            "join_wrapped": true,
+            "join_wrapped_ignore": {"font_contains": "Aptos", "size": 12.0,
+                                    "text_pattern": "^\\d+$"}
+          },
+          {
+            "kind": "main_methods_section",
+            "heading": {"font_contains": "Aptos Display", "size": 15.77, "size_tolerance": 0.05},
+            "scope": {
+              "start_after": {"font_contains": "Aptos Display", "size": 20.27,
+                              "text": "Materials and methods"},
+              "stop_before": {"font_contains": "Aptos Display", "size": 20.27, "text": "Results"}
+            },
+            "join_wrapped": true,
+            "join_wrapped_ignore": {"font_contains": "Aptos", "size": 12.0,
+                                    "text_pattern": "^\\d+$"}
+          }
+        ]
+      },
+      {
         "source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
         "surface": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+        "extraction": "regex",
         "rules": [
           {
             "kind": "supplementary_figure",
             "pattern": "^\\s*(?P<label>Supplementary Figure \\d+)\\s*\\.",
-            "panel_pattern": "[(\\[]([A-Z])(?=[)(])",
-            "panel_range_pattern": "[(\\[]([A-Z])\\s*[-–]\\s*([A-Z])[)\\]]",
-            "panel_window": 2200
+            "sub_unit_kind": "panel",
+            "sub_unit_pattern": "[(\\[]([A-Z])(?=[)(])",
+            "sub_unit_range_pattern": "[(\\[]([A-Z])\\s*[-–]\\s*([A-Z])[)\\]]"
           }
         ]
       },
       {
         "source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
         "surface": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+        "extraction": "typography",
+        "_note": [
+          "The supplement sets a Methods heading in Times New Roman Bold 15.96; the section",
+          "title 'Materials and methods' is 18.00 and the cover page is 21.00 / 12.00, so",
+          "neither is selected. 'References' is bold at the SAME 15.96 as a heading — size",
+          "alone cannot exclude it, which is why it bounds the scope by name."
+        ],
         "rules": [
           {
             "kind": "supplement_methods_section",
-            "pattern": "^(?P<label>Cell Culture and Maintenance|Transfection and Gene Editing|Reprogramming of somatic cells|Cerebral organoid generation and culture|AAV9 infection|MYC inhibition|NSCs differentiation|Immunofluorescence|Cell-attached recordings|Immunoblot analysis|RNA extraction, reverse transcription-PCR, and qPCR|Single-cell data preprocessing|Differential Gene Expression|Cell cycle phase and potency state inference|Overrepresentation analysis|Neuron Analysis|Pseudobulk analysis|Dorso-ventral gene expression|MYC and WWOX interactome analysis|Chromatin immunoprecipitation sequencing \\(ChIP-seq\\))\\s*$"
+            "heading": {"font_contains": "Bold", "size": 15.96, "size_tolerance": 0.05},
+            "scope": {
+              "start_after": {"font_contains": "Bold", "size": 18.0,
+                              "text": "Materials and methods"},
+              "stop_before": {"font_contains": "Bold", "size": 15.96, "text": "References"}
+            },
+            "join_wrapped": true
+          }
+        ]
+      },
+      {
+        "source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File011.pdf",
+        "surface": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File011.pdf",
+        "extraction": "typography",
+        "_note": [
+          "The tools-and-reagents list is one supplementary table. Its resource categories are",
+          "merged full-width rows, centred at x≈291.4; the four column-header cells (Resource,",
+          "Source, Catalog, Number) sit in their columns at x≈112, 302, 467 and are excluded by",
+          "that geometry, not by being named. page_from 2 skips the cover page."
+        ],
+        "rules": [
+          {
+            "kind": "supplement_table_section",
+            "heading": {"font_contains": "Bold", "size": 8.04, "size_tolerance": 0.05,
+                        "center_x": 291.4, "center_tolerance": 2.0, "page_from": 2}
+          }
+        ]
+      },
+      {
+        "source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File012.pdf",
+        "surface": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File012.pdf",
+        "extraction": "regex",
+        "_note": [
+          "Uncropped immunoblots, one page per blot, each keyed to the supplementary figure",
+          "panel it is the source data for. The label is the key; spacing after 'Fig.' varies",
+          "in the source ('Supplementary Fig. 5B' and 'Supplementary Fig.6F' both occur), so",
+          "the pattern tolerates it and the label is normalized to a single space."
+        ],
+        "rules": [
+          {
+            "kind": "source_data_blot",
+            "pattern": "^\\s*(?P<label>Supplementary Fig\\.\\s*\\d+[A-Z])"
           }
         ]
       }

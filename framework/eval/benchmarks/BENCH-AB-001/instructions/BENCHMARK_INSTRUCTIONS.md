@@ -95,9 +95,11 @@ python3 framework/scripts/deepdive_manifest.py \
 
 1. every locator's `artifact` is a path **inside this surface**;
 2. the coverage map contains no `not_read`;
-3. every claim candidate carries the twelve canonical fields **and** the four intermediate
-   fields, and its `Type` is one of the four epistemic levels (compound values are allowed and
-   are how the registry already writes them);
+3. every claim candidate carries the twelve canonical fields **and** all eight labels of the
+   block in `OUTPUT_SCHEMA.md` §3 — the seven benchmark fields (`Observation`, `Author
+   interpretation`, `LEGEND interpretation`, `Direction`, `Uncertainty`, `Limitations`,
+   `Contradictory evidence`) plus `Locators` — and its `Type` is one of the four epistemic
+   levels (compound values are allowed and are how the registry already writes them);
 4. every negative or rejection carries a premise tag and a revival trigger;
 5. — MODE B — every mandatory axis is answered, including the ones with nothing to report.
 

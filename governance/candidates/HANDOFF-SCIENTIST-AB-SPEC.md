@@ -5,9 +5,13 @@ status: TAKEN UP — by CAND-20260818-SCIENTIST-AB-SPEC (branch scientist-ab-spe
   The body below is the handoff exactly as it was written; only this status line and the
   carried_from block were added.
 carried_from: branch sunset-decision3, commits fbf3e7e (written) + b22968d (revised) — not in
-  main. Carried into this branch as a byte-identical copy of blob 8e59df08 (sha256
-  f3f883c1e76767216ad75963d30be80209e80a63aa7e536e0aada4c9ca7f9a0e) because a cherry-pick was
-  refused by the session guard; verify with `git show b22968d:governance/candidates/HANDOFF-SCIENTIST-AB-SPEC.md | shasum -a 256`.
+  main. Carried into this branch because a cherry-pick was refused by the session guard.
+  BYTE-IDENTICAL APPLIES TO THE BODY BELOW THE FRONT MATTER, not to this file: the body equals
+  blob 8e59df08 (sha256 f3f883c1e76767216ad75963d30be80209e80a63aa7e536e0aada4c9ca7f9a0e),
+  while THIS FILE differs from it by exactly the `status` line and this `carried_from` block, so
+  hashing the whole file gives a different value and that is expected, not a discrepancy
+  (Mirror R-12). Verify the source with
+  `git show b22968d:governance/candidates/HANDOFF-SCIENTIST-AB-SPEC.md | shasum -a 256`.
 prepared_by: plan (evidence-index) — handing off, not authoring
 authorized_by: operator, 2026-08-18, transmitted L2-20260818-ORCH-051
 base: main cbce30168091f7769c56c4f019055fa55fd0d66a

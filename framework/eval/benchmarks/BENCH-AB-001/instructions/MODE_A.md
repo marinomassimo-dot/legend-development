@@ -66,7 +66,9 @@ file · invent a schema for anything.
 
 ## What you are not asked to do
 
-You are **not** asked to critique the paper systematically — that is the other mode's directive,
-and a critique you volunteer is not what is being measured here. Record what you observe,
-including weaknesses you cannot help noticing, in `Limitations`, `Uncertainty` and
-`Contradictory evidence`. Do not build a critical apparatus.
+You are **not** asked to critique the paper **systematically** — building a critical apparatus is
+the other mode's directive. What you *do* notice is still evidence and is still recorded:
+weaknesses, unsettled points and internal contradictions go in `Limitations`, `Uncertainty` and
+`Contradictory evidence`, which are required fields of every claim candidate you write. Do not
+suppress an observation because it reads as critical; record it in its field and do not build the
+apparatus around it.

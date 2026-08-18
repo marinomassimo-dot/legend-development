@@ -95,8 +95,9 @@ copies would fork. The ACTOR_IDs above are proposed by the materialization and b
 at registration (step 6); an ACTOR_ID is identity, provenance and learning attribution, so it is
 worth one deliberate moment before it is fixed.
 
-> **`scientist-a` and `scientist-b` are already fixed**, by the operator's approval of
-> `CAND-20260818-SCIENTIST-AB-SPEC` — the deliberate moment, taken before either session opened,
+> **`scientist-a` and `scientist-b` become fixed on canonical execution of**
+> `CAND-20260818-SCIENTIST-AB-SPEC`, with the operator's approval — the deliberate moment, taken
+> before either session opened,
 > because the first controlled benchmark prepares task contracts, input surfaces and frozen
 > receipts **named per ACTOR_ID** before anyone incarnates them. See
 > [`framework/protocols/scientist_reading_modes.md`](framework/protocols/scientist_reading_modes.md)

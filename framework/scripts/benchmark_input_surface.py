@@ -37,17 +37,30 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import posixpath
 import re
 import shutil
 import sys
 from pathlib import Path
 from typing import Any
 
-SPEC_VERSION = 1
+SPEC_VERSION = 2
 # A digest of bytes, never of a normalized or re-encoded form: the whole point is that
 # two surfaces hold the identical file, and normalization would hide the case where they
 # do not.
 CHUNK = 1 << 20
+REFUSE = 2
+
+
+def refuse(message: str) -> "NoReturn":  # type: ignore[valid-type]
+    """Exit 2, the code the docstring promises for a refusal.
+
+    🔴 `sys.exit("text")` prints and exits **1**, which is the code for FINDINGS. A
+    refusal and a finding were therefore indistinguishable to any caller that reads the
+    return code — including the protocol's own handover checklist, which branches on it.
+    """
+    print(message, file=sys.stderr)
+    sys.exit(REFUSE)
 
 
 def sha256_file(path: Path) -> str:
@@ -68,6 +81,10 @@ def iter_files(root: Path) -> list[Path]:
     store is an artifact of the actor's own commits, not of the surface handed over.
     Anything else present is reported: a file nobody put in the allowlist is exactly
     what `verify` exists to catch.
+
+    Symlinks are NOT returned here — their bytes live somewhere this tool did not look,
+    so digesting them would attribute foreign content to the surface. They are not
+    ignored either: `iter_symlinks` collects them and `verify` reports every one.
     """
     out = []
     for path in sorted(root.rglob("*")):
@@ -76,6 +93,35 @@ def iter_files(root: Path) -> list[Path]:
         if ".git" in path.relative_to(root).parts:
             continue
         out.append(path)
+    return out
+
+
+def iter_symlinks(root: Path) -> list[tuple[str, str]]:
+    """Every symlink under root, with the target it resolves to.
+
+    🔴 `iter_files` skips symlinks, and for a while nothing else looked at them. A
+    surface holding a file symlink to LEGEND's prior manifest, or a directory symlink to
+    `deepdive_manifests/`, printed *"PASS — allowlist is exhaustive, no prior output"*:
+    every check ran, and every one of them looked past the link. Plan builds by copy, so
+    no built surface has one — but `verify` is the instrument a reviewer is told to
+    trust INSTEAD of Plan's account, and an instrument that cannot see a class of object
+    must say so rather than pass over it.
+
+    `rglob` does not descend into a directory symlink, so the link itself is reported
+    and its contents are never walked; that is the correct order — report the door,
+    do not inventory the room behind it as though it were this one.
+    """
+    out = []
+    for path in sorted(root.rglob("*")):
+        if not path.is_symlink():
+            continue
+        if ".git" in path.relative_to(root).parts:
+            continue
+        try:
+            target = str(path.resolve())
+        except (OSError, RuntimeError):  # broken link, or a symlink loop
+            target = f"<unresolvable: {path.readlink()}>"
+        out.append((str(path.relative_to(root)), target))
     return out
 
 
@@ -94,24 +140,52 @@ def tree_digest(root: Path) -> tuple[str, list[tuple[str, str]]]:
 
 def load_spec(path: Path) -> dict[str, Any]:
     if not path.is_file():
-        sys.exit(f"REFUSE: spec not found: {path}")
+        refuse(f"REFUSE: spec not found: {path}")
     try:
         spec = json.loads(path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
-        sys.exit(f"REFUSE: spec is not valid JSON: {exc}")
+        refuse(f"REFUSE: spec is not valid JSON: {exc}")
     version = spec.get("spec_version")
     if version != SPEC_VERSION:
-        sys.exit(f"REFUSE: spec_version {version!r}; this tool speaks {SPEC_VERSION}")
+        refuse(f"REFUSE: spec_version {version!r}; this tool speaks {SPEC_VERSION}")
     for key in ("benchmark_id", "actors", "common_files", "source_files", "per_actor_files",
-                "empty_dirs", "forbidden_prior_output_paths", "content_scan"):
+                "empty_dirs", "forbidden_prior_output_paths", "content_scan",
+                "expected_output_paths", "expected_output_prefixes"):
         if key not in spec:
-            sys.exit(f"REFUSE: spec is missing required key {key!r}")
+            refuse(f"REFUSE: spec is missing required key {key!r}")
     return spec
 
 
 def _entries(spec: dict[str, Any], key: str) -> list[dict[str, str]]:
     """`[{source, surface, kind?}]` — the source path is relative to --source-root."""
     return list(spec[key])
+
+
+def _is_expected_output(rel: str, spec: dict[str, Any]) -> bool:
+    """Is this the exact path a reader was TOLD to write, or a render under a slot?
+
+    🔴 The predicate `--post-read` used to apply was *"anywhere under an output slot"*,
+    and that is far wider than the blind spot it was written for. The blind spot is ONE
+    path — the reader's own manifest lands where LEGEND's prior manifest lives, because
+    `deepdive_manifest.py` derives that path from disease and PMID and cannot put it
+    elsewhere without breaking the validator. Six other forbidden paths sit under the
+    same two slots, collide with nothing the reader was asked to write, and were being
+    skipped along with it. They are checked again.
+    """
+    if rel in set(spec["expected_output_paths"]):
+        return True
+    return any(rel.startswith(prefix) for prefix in spec["expected_output_prefixes"])
+
+
+def declared_blind_spots(spec: dict[str, Any]) -> list[str]:
+    """Forbidden paths that a legitimate reader output would occupy anyway.
+
+    Computed, never asserted: it is the intersection of what the reader is told to write
+    with what must not be present. Printing it on every `--post-read` run is the point —
+    a blind spot named in a comment is a blind spot the reader of the output never sees.
+    """
+    return sorted(set(spec["expected_output_paths"])
+                  & set(spec["forbidden_prior_output_paths"]))
 
 
 def surface_root(out_root: Path, benchmark_id: str, actor: str) -> Path:
@@ -123,7 +197,7 @@ def cmd_build(args: argparse.Namespace) -> int:
     source_root = Path(args.source_root).resolve()
     out_root = Path(args.out).resolve()
     if not source_root.is_dir():
-        sys.exit(f"REFUSE: source root is not a directory: {source_root}")
+        refuse(f"REFUSE: source root is not a directory: {source_root}")
 
     common = _entries(spec, "common_files") + _entries(spec, "source_files")
     findings: list[str] = []
@@ -133,13 +207,13 @@ def cmd_build(args: argparse.Namespace) -> int:
         root = surface_root(out_root, spec["benchmark_id"], actor)
         if root.exists():
             if not args.force:
-                sys.exit(f"REFUSE: surface already exists: {root} (use --force to rebuild)")
+                refuse(f"REFUSE: surface already exists: {root} (use --force to rebuild)")
             shutil.rmtree(root)
         root.mkdir(parents=True)
 
         per_actor = spec["per_actor_files"].get(actor)
         if per_actor is None:
-            sys.exit(f"REFUSE: spec has no per_actor_files entry for actor {actor!r}")
+            refuse(f"REFUSE: spec has no per_actor_files entry for actor {actor!r}")
 
         digests: dict[str, str] = {}
         for entry in common + list(per_actor):
@@ -182,12 +256,16 @@ def cmd_verify(args: argparse.Namespace) -> int:
     out_root = Path(args.surfaces).resolve()
     actors = list(spec["actors"])
     if len(actors) != 2:
-        sys.exit(f"REFUSE: parity is defined over exactly two surfaces; spec declares {len(actors)}")
+        refuse(f"REFUSE: parity is defined over exactly two surfaces; spec declares {len(actors)}")
 
+    # 🔴 EXACTLY TWO, by design and not by accident. Parity, "NOT DIFFERING" and the per-actor
+    # comparison are all binary relations here. A three-arm benchmark is a tool change, not a
+    # spec change, and this refusal is where that cost is declared rather than discovered
+    # (Mirror R-7).
     roots = {actor: surface_root(out_root, spec["benchmark_id"], actor) for actor in actors}
     for actor, root in roots.items():
         if not root.is_dir():
-            sys.exit(f"REFUSE: surface not found: {root}")
+            refuse(f"REFUSE: surface not found: {root}")
 
     findings: list[str] = []
     allowed: dict[str, set[str]] = {actor: set() for actor in actors}
@@ -250,30 +328,33 @@ def cmd_verify(args: argparse.Namespace) -> int:
     for actor in actors:
         present = {str(path.relative_to(roots[actor])) for path in iter_files(roots[actor])}
         if args.post_read:
-            present = {
-                rel for rel in present
-                if not any(rel.startswith(f"{d}/") for d in spec["empty_dirs"])
-            }
+            present = {rel for rel in present if not _is_expected_output(rel, spec)}
         for rel in sorted(present - allowed[actor]):
             findings.append(f"NOT ALLOWLISTED {actor}  {rel}")
 
+    # 4b · symlinks, at every stage. A link's bytes are somewhere this tool did not look.
+    for actor in actors:
+        for rel, target in iter_symlinks(roots[actor]):
+            findings.append(f"SYMLINK         {actor}  {rel}  →  {target}")
+
     # 5 · forbidden prior-output paths absent from both surfaces
     #
-    # 🔴 The reader's OWN manifest lands at exactly the path LEGEND's prior manifest occupies
-    # — `deepdive_manifest.py` derives that path from disease and PMID, so it cannot be
-    # elsewhere without breaking the validator. Post-read the two are indistinguishable BY
-    # PATH, and nothing here can tell authorship apart. So the guarantee is carried by the
-    # pre-handover run, where the slot is proven empty and the forbidden path proven absent,
-    # plus the freeze receipt that pins what the tree held at completion. Post-read, output
-    # slots are skipped rather than reported on evidence this check does not have.
+    # 🔴 ONE forbidden path is genuinely undecidable post-read: the reader's own manifest
+    # lands exactly where LEGEND's prior manifest lives, because `deepdive_manifest.py`
+    # derives that path from disease and PMID and cannot put it elsewhere without breaking
+    # the validator. Authorship is not decidable from a path, so for THAT path — and only
+    # that path — the guarantee is carried by the pre-handover run plus the freeze receipt.
+    # The set is computed from the spec, printed on every post-read run, and is currently
+    # of size one. Every other forbidden path is checked post-read as it is pre-read.
     #
-    # This collision is also the sharpest argument for §2.1 of the protocol: in a checkout of
-    # the repository, the reader would be writing its manifest on top of the prior one.
+    # This collision is also the sharpest argument for §2.1 of the protocol: in a checkout
+    # of the repository, the reader would be writing its manifest on top of the prior one.
+    blind = declared_blind_spots(spec)
     for rel in spec["forbidden_prior_output_paths"]:
-        if args.post_read and any(rel.startswith(f"{d}/") for d in spec["empty_dirs"]):
+        if args.post_read and rel in blind:
             continue
         for actor in actors:
-            if (roots[actor] / rel).exists():
+            if (roots[actor] / rel).exists() or (roots[actor] / rel).is_symlink():
                 findings.append(f"PRIOR OUTPUT    {actor}  {rel}  present in surface")
 
     # 6 · content scan — the paper's identifiers must not appear in anything that is not
@@ -286,12 +367,14 @@ def cmd_verify(args: argparse.Namespace) -> int:
     for actor in actors:
         for path in iter_files(roots[actor]):
             rel = str(path.relative_to(roots[actor]))
-            # 🔴 In --post-read the output slots hold the READER'S OWN work, which names the
-            # paper by construction — a manifest must carry the PMID. Scanning them reports
-            # a leak on every honest reading, and a check that fires on the correct case is
-            # a check people learn to ignore. Found by running this on a synthetic output
-            # tree before any reader ever saw the tool.
-            if args.post_read and any(rel.startswith(f"{d}/") for d in spec["empty_dirs"]):
+            # 🔴 In --post-read the reader's OWN declared outputs name the paper by
+            # construction — a manifest must carry the PMID. Scanning them reports a leak
+            # on every honest reading, and a check that fires on the correct case is a
+            # check people learn to ignore. Found by running this on a synthetic output
+            # tree before any reader ever saw the tool. The exemption is the EXACT declared
+            # output set, not the whole slot: a file the reader was never asked to write is
+            # scanned wherever it sits.
+            if args.post_read and _is_expected_output(rel, spec):
                 continue
             if rel in exempt or not rel.endswith(suffixes):
                 continue
@@ -310,37 +393,288 @@ def cmd_verify(args: argparse.Namespace) -> int:
     for actor in actors:
         digest, pairs = tree_digest(roots[actor])
         print(f"  {actor}  tree_sha256 {digest}  files {len(pairs)}")
+    if args.post_read:
+        for rel in blind:
+            print(f"  [BLIND SPOT] {rel}  — the reader writes here by construction; "
+                  "authorship is not decidable from a path post-read")
+        if not blind:
+            print("  [BLIND SPOT] none — no declared reader output collides with a "
+                  "forbidden path")
     if findings:
         print(f"VERDICT: FAIL — {len(findings)} finding(s). A surface that fails is rebuilt "
               "from the spec, never patched.")
         return 1
-    print("VERDICT: PASS — parity holds, allowlist is exhaustive, no prior output, no leak. "
-          "This says nothing about what a reader may open by absolute path (Annex J.0).")
+    # 🔴 The PASS sentence is the reviewer's evidence, so it states what was CHECKED, not
+    # what is true. Every clause here has a probe behind it in test_benchmark_surface.py;
+    # the previous sentence claimed "allowlist is exhaustive, no prior output" over a tree
+    # whose symlinks nothing had looked at.
+    print("VERDICT: PASS — parity holds across the two surfaces; every present file is "
+          "allowlisted; no symlink; no forbidden prior-output path outside the printed "
+          "blind spot; no identifier leak in a scanned file.")
+    print("  NOT CHECKED, and no clause above implies it: what a reader may open by "
+          "absolute path outside this tree (Annex J.0); the authorship of bytes at a "
+          "blind-spot path; anything about a file this scan could not decode.")
     return 0
 
 
+RECEIPT_SCHEMA_VERSION = 2
+FIRST_PASS_STATES = ("COMPLETE_DECLARED_BY_ACTOR", "ABANDONED", "TIMED_OUT")
+
+
+def _front_matter(path: Path) -> dict[str, str]:
+    """The `key: value` block between the first two `---` lines.
+
+    Deliberately not a YAML parser: these blocks are flat scalars, and a dependency the
+    surface does not carry is a dependency the freeze cannot rely on.
+    """
+    if not path.is_file():
+        refuse(f"REFUSE: the surface has no {path.name} to read its identity from: {path}")
+    lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+    if not lines or lines[0].strip() != "---":
+        refuse(f"REFUSE: {path.name} has no front matter; identity cannot be verified")
+    fields: dict[str, str] = {}
+    for line in lines[1:]:
+        if line.strip() == "---":
+            return fields
+        key, separator, value = line.partition(":")
+        if separator:
+            fields[key.strip()] = value.strip()
+    refuse(f"REFUSE: {path.name} front matter is unterminated")
+
+
+def _git(root: Path, *arguments: str) -> str | None:
+    try:
+        import subprocess
+        result = subprocess.run(("git", "-C", str(root)) + arguments,
+                                capture_output=True, text=True, timeout=30)
+    except (OSError, ImportError):
+        return None
+    return result.stdout.strip() if result.returncode == 0 else None
+
+
+def _classify(rel: str, spec: dict[str, Any] | None, actor: str) -> str:
+    """input / output / unexpected — allowlist first, so scaffolding is not counted as work.
+
+    The `.gitkeep` that holds an empty slot open sits under an output prefix and is
+    allowlisted input. Testing the prefix first counted it as a reader's output and made
+    OUTPUT_FILE_SET wrong in the one direction nobody would check.
+    """
+    if spec is None:
+        return "unclassified"
+    if rel in _allowed_paths(spec, actor):
+        return "input"
+    if _is_expected_output(rel, spec):
+        return "output"
+    return "unexpected"
+
+
 def cmd_freeze(args: argparse.Namespace) -> int:
+    """Bind one first pass to the bytes it consisted of, at the moment it was declared done.
+
+    🔴 Revision 1 of this command recorded `surface` as an ABSOLUTE local path — the very
+    `BENCH_ROOT` the protocol says is never written down — and took `--actor-id` and
+    `--benchmark-id` as free text: A's tree froze happily as `scientist-b` / `BENCH-XX-999`.
+    It emitted no timestamp, no commit, no mode, no input-manifest digest and no first-pass
+    state, while §4.3 named it as half of the compensation for a check that cannot see
+    authorship. A receipt that is trusted to carry a guarantee has to verify what it says.
+
+    Every identity field below is READ FROM THE TREE — `ASSIGNMENT.md` and the two
+    instruction files inside the surface — and the command line is checked AGAINST it, not
+    copied into it. A disagreement is a refusal, because a receipt naming the wrong actor
+    is worse than no receipt: it is a wrong answer with a digest beside it.
+    """
     root = Path(args.surface).resolve()
     if not root.is_dir():
-        sys.exit(f"REFUSE: not a directory: {root}")
+        refuse(f"REFUSE: not a directory: {root}")
+
+    symlinks = iter_symlinks(root)
+    if symlinks:
+        for rel, target in symlinks:
+            print(f"  [BLOCK] SYMLINK  {rel}  →  {target}", file=sys.stderr)
+        refuse("REFUSE: the surface holds symlink(s). A freeze must digest bytes that are "
+               "here; a link's bytes are somewhere this command did not look.")
+
+    assignment = _front_matter(root / "ASSIGNMENT.md")
+    instructions = _front_matter(root / "benchmark" / "BENCHMARK_INSTRUCTIONS.md")
+    schema = _front_matter(root / "benchmark" / "OUTPUT_SCHEMA.md")
+
+    for flag, field, source in (("actor_id", "actor_id", "ASSIGNMENT.md"),
+                                ("benchmark_id", "benchmark_id", "ASSIGNMENT.md")):
+        declared = getattr(args, flag)
+        found = assignment.get(field)
+        if found is None:
+            refuse(f"REFUSE: {source} declares no {field}; identity cannot be verified")
+        if declared != found:
+            refuse(f"REFUSE: --{flag.replace('_', '-')} is {declared!r}, but {source} inside "
+                   f"this surface says {found!r}. The tree decides, and it disagrees.")
+    if assignment.get("benchmark_id") != instructions.get("benchmark_id"):
+        refuse("REFUSE: ASSIGNMENT.md and BENCHMARK_INSTRUCTIONS.md name different "
+               f"benchmarks ({assignment.get('benchmark_id')!r} vs "
+               f"{instructions.get('benchmark_id')!r})")
+    if args.first_pass_state not in FIRST_PASS_STATES:
+        refuse(f"REFUSE: --first-pass-state must be one of {FIRST_PASS_STATES}")
+
+    spec = load_spec(Path(args.spec)) if args.spec else None
+    input_manifest = Path(args.input_manifest) if args.input_manifest else None
+    if input_manifest is not None and not input_manifest.is_file():
+        refuse(f"REFUSE: input manifest not found: {input_manifest}")
+
     digest, pairs = tree_digest(root)
+    actor = assignment["actor_id"]
+    files = [{"path": rel, "sha256": sha, "role": _classify(rel, spec, actor)}
+             for rel, sha in pairs]
+    outputs = [entry["path"] for entry in files if entry["role"] == "output"]
+    unexpected = [entry["path"] for entry in files if entry["role"] == "unexpected"]
+
+    from datetime import datetime, timezone
     record = {
-        "_schema": "LEGEND benchmark · frozen surface receipt v1",
-        "surface": str(root),
-        "actor_id": args.actor_id,
-        "benchmark_id": args.benchmark_id,
-        "tree_sha256": digest,
-        "file_count": len(pairs),
-        "files": [{"path": rel, "sha256": sha} for rel, sha in pairs],
-        "note": ("Digests of bytes at freeze time. The freeze is taken on the completion "
-                 "declaration and BEFORE the content is read, so that the timing is a "
-                 "property of the record and not of anyone's account of it."),
+        "_schema": "LEGEND benchmark · frozen surface receipt",
+        "RECEIPT_SCHEMA_VERSION": RECEIPT_SCHEMA_VERSION,
+
+        "BENCHMARK_ID": assignment["benchmark_id"],
+        "ACTOR_ID": actor,
+        "TASK_ID": assignment.get("task_id"),
+        "MODE": assignment.get("mode"),
+        "PARALLEL_READ_GROUP": assignment.get("parallel_read_group"),
+        "IDENTITY_SOURCE": ("ASSIGNMENT.md inside the frozen tree; the command-line "
+                            "--actor-id and --benchmark-id were checked against it and "
+                            "agreed. They are not the source."),
+
+        "INSTRUCTIONS_VERSION": instructions.get("instructions_version"),
+        "OUTPUT_SCHEMA_VERSION": schema.get("schema_version"),
+        "MANIFEST_SCHEMA_VERSION": schema.get("manifest_schema_version"),
+
+        # Surface-relative and nothing more. `<BENCHMARK_ID>/<ACTOR_ID>` is the layout
+        # `build` creates; BENCH_ROOT is a local-instance value and is deliberately absent.
+        "SURFACE_RELATIVE": f"{assignment['benchmark_id']}/{actor}",
+        "SURFACE_ABSOLUTE_PATH": "NOT RECORDED — local-instance value (protocol §2.3)",
+        "SURFACE_COMMIT": _git(root, "rev-parse", "HEAD") or "DECLARED_ABSENT — not a git repo",
+        "SURFACE_BRANCH": _git(root, "rev-parse", "--abbrev-ref", "HEAD") or "DECLARED_ABSENT",
+        "SURFACE_DIRTY": bool(_git(root, "status", "--porcelain")),
+
+        "INPUT_MANIFEST_PATH": str(input_manifest.name) if input_manifest else None,
+        "INPUT_MANIFEST_SHA256": sha256_file(input_manifest) if input_manifest else None,
+
+        "FREEZE_TIMESTAMP_UTC": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "FIRST_PASS_STATE": args.first_pass_state,
+
+        "TREE_SHA256": digest,
+        "FILE_COUNT": len(pairs),
+        "OUTPUT_FILE_SET": sorted(outputs),
+        "UNEXPECTED_FILE_SET": sorted(unexpected),
+        "SYMLINKS": [],
+        "FILES": files,
+
+        "GUARANTEE_PROVIDED": [
+            "These bytes, under these paths, were present in this tree when the freeze ran.",
+            "Any later addition, removal or edit under the tree is detected by "
+            "`verify-freeze`, which recomputes and compares set-wise, not by count.",
+            "The actor and benchmark named here were read from inside the tree, so a "
+            "receipt cannot be mislabelled by a wrong command line.",
+            "The instruction and schema versions the reading ran under are pinned, and the "
+            "instruction bytes are covered transitively by TREE_SHA256.",
+        ],
+        "FAILURE_MODE_STILL_POSSIBLE": [
+            "AUTHORSHIP: this cannot show WHO wrote a file, only what was there. A path on "
+            "the declared blind-spot list is bytes at a path, nothing more.",
+            "TIMING: FREEZE_TIMESTAMP_UTC is this process's clock, attested by nothing "
+            "else. It orders the two freezes on one machine; it proves nothing to a party "
+            "that does not trust the clock.",
+            "ORDER: that the second reader was not shown the first reader's output before "
+            "its own freeze is PROCEDURAL (Annex J.0). Nothing here enforces it; the two "
+            "receipts and their timestamps make a violation of it visible afterwards.",
+            "PRE-FREEZE SUBSTITUTION: a swap made BEFORE the freeze ran is inside the "
+            "freeze. Only the pre-handover `verify` run speaks to that end of the window.",
+        ],
+        "DETECTION": "framework/scripts/benchmark_input_surface.py verify-freeze "
+                     "--receipt <this file> --surface <the tree>",
     }
     if args.out:
         Path(args.out).write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
-        print(f"FROZEN  {args.actor_id}  {digest}  {len(pairs)} file(s)  → {args.out}")
+        print(f"FROZEN  {actor}  {digest}  {len(pairs)} file(s)  → {args.out}")
+        print(f"  mode {record['MODE']}  task {record['TASK_ID']}  "
+              f"state {record['FIRST_PASS_STATE']}  at {record['FREEZE_TIMESTAMP_UTC']}")
+        print(f"  outputs {len(outputs)}  unexpected {len(unexpected)}")
+        if unexpected:
+            for rel in sorted(unexpected):
+                print(f"  [NOTE] UNEXPECTED FILE  {rel}  — frozen and flagged, not removed")
     else:
         print(json.dumps(record, indent=2))
+    return 0
+
+
+def cmd_verify_freeze(args: argparse.Namespace) -> int:
+    """Does the tree still hold exactly what the receipt froze?
+
+    Set-wise, never count-wise. Two trees with the same number of files and different
+    files in them is precisely the substitution this exists to catch, and a count says
+    they agree. The comparison is therefore ADDED / REMOVED / MODIFIED, each enumerated.
+    """
+    receipt_path = Path(args.receipt)
+    if not receipt_path.is_file():
+        refuse(f"REFUSE: receipt not found: {receipt_path}")
+    try:
+        receipt = json.loads(receipt_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        refuse(f"REFUSE: receipt is not valid JSON: {exc}")
+    version = receipt.get("RECEIPT_SCHEMA_VERSION")
+    if version != RECEIPT_SCHEMA_VERSION:
+        refuse(f"REFUSE: receipt schema version {version!r}; this tool speaks "
+               f"{RECEIPT_SCHEMA_VERSION}")
+    root = Path(args.surface).resolve()
+    if not root.is_dir():
+        refuse(f"REFUSE: not a directory: {root}")
+
+    findings: list[str] = []
+    for rel, target in iter_symlinks(root):
+        findings.append(f"SYMLINK APPEARED  {rel}  →  {target}")
+
+    frozen = {entry["path"]: entry["sha256"] for entry in receipt["FILES"]}
+    digest, pairs = tree_digest(root)
+    present = dict(pairs)
+
+    for rel in sorted(set(present) - set(frozen)):
+        findings.append(f"ADDED             {rel}  {present[rel][:16]}…")
+    for rel in sorted(set(frozen) - set(present)):
+        findings.append(f"REMOVED           {rel}  was {frozen[rel][:16]}…")
+    for rel in sorted(set(frozen) & set(present)):
+        if frozen[rel] != present[rel]:
+            findings.append(f"MODIFIED          {rel}  "
+                            f"was {frozen[rel][:16]}…  now {present[rel][:16]}…")
+
+    # The identity the receipt asserts must still be the identity the tree asserts. A
+    # substitution that swapped ASSIGNMENT.md would already show as MODIFIED; this catches
+    # the case where a receipt is pointed at a DIFFERENT actor's tree entirely.
+    assignment = root / "ASSIGNMENT.md"
+    if assignment.is_file():
+        found = _front_matter(assignment)
+        for field, key in (("actor_id", "ACTOR_ID"), ("benchmark_id", "BENCHMARK_ID")):
+            if found.get(field) != receipt.get(key):
+                findings.append(f"IDENTITY MISMATCH {key}: receipt {receipt.get(key)!r}, "
+                                f"tree {found.get(field)!r}")
+    else:
+        findings.append("IDENTITY MISMATCH ASSIGNMENT.md absent from the tree")
+
+    for item in findings:
+        print(f"  [BLOCK] {item}")
+    print(f"  receipt {receipt['ACTOR_ID']} · {receipt['BENCHMARK_ID']} · "
+          f"frozen {receipt['FREEZE_TIMESTAMP_UTC']} · state {receipt['FIRST_PASS_STATE']}")
+    print(f"  frozen tree_sha256 {receipt['TREE_SHA256']}  {receipt['FILE_COUNT']} file(s)")
+    print(f"  present tree_sha256 {digest}  {len(pairs)} file(s)")
+    if findings:
+        print(f"VERDICT: FAIL — {len(findings)} difference(s) from the frozen tree. The "
+              "comparison is against the frozen objects, so this is what the evaluation "
+              "must be told it is reading.")
+        return 1
+    if digest != receipt["TREE_SHA256"]:
+        # Belt and braces: the per-file comparison found nothing, so a digest disagreement
+        # would mean the digest function itself changed under us. Say that, rather than
+        # printing PASS over a number that does not match.
+        print("VERDICT: FAIL — every file matches but the tree digest does not. The digest "
+              "function is not the one that produced this receipt.")
+        return 1
+    print("VERDICT: PASS — the tree holds exactly the frozen file set, byte for byte, and "
+          "still names the actor and benchmark the receipt does.")
     return 0
 
 
@@ -348,84 +682,299 @@ def _pdf_pages(path: Path) -> list[str]:
     try:
         import fitz  # type: ignore
     except ImportError:
-        sys.exit("REFUSE: PyMuPDF is required to enumerate units from a PDF artifact")
+        refuse("REFUSE: PyMuPDF is required to enumerate units from a PDF artifact")
     with fitz.open(str(path)) as doc:
         return [page.get_text() for page in doc]
 
 
+def _pdf_lines(path: Path) -> list[dict[str, Any]]:
+    """Every typographic line of a PDF, in reading order, with font, size and centre.
+
+    The flattened text of this paper does not mark its own structure: a Methods heading
+    is not bounded by a blank line, is not punctuated, and is not distinguishable from
+    the sentence under it by any character. It IS distinguishable by font and size, and
+    a table's merged category row is distinguishable from a column cell by being centred
+    where the column cell is not. Reading those properties off the source is what makes
+    the enumeration a function of (spec, source) in more than the trivial sense (R-6).
+    """
+    try:
+        import fitz  # type: ignore
+    except ImportError:
+        refuse("REFUSE: PyMuPDF is required to enumerate units from a PDF artifact")
+    lines: list[dict[str, Any]] = []
+    with fitz.open(str(path)) as doc:
+        for number, page in enumerate(doc, 1):
+            for block in page.get_text("dict")["blocks"]:
+                for line in block.get("lines", []):
+                    # 🔴 Whitespace-only spans are dropped BEFORE any style test. A heading
+                    # line in File009 ends in a plain-roman space span, and an "every span
+                    # is bold" test that counted it rejected two real Methods headings —
+                    # including the ChIP-seq analysis section this population was missing.
+                    spans = [s for s in line.get("spans", []) if s["text"].strip()]
+                    if not spans:
+                        continue
+                    text = " ".join("".join(s["text"] for s in spans).split())
+                    x0 = min(span["bbox"][0] for span in spans)
+                    x1 = max(span["bbox"][2] for span in spans)
+                    lines.append({
+                        "page": number,
+                        "text": text,
+                        "fonts": sorted({span["font"] for span in spans}),
+                        "size": max(span["size"] for span in spans),
+                        "center_x": (x0 + x1) / 2,
+                    })
+    return lines
+
+
+def _matches_style(line: dict[str, Any], style: dict[str, Any]) -> bool:
+    """Does one typographic line carry the declared style?
+
+    Every criterion is optional; every criterion that IS declared must hold.
+    `font_contains` is a substring test over every font on the line, so a line mixing
+    faces fails it — which is the point: a heading is set in one face.
+    """
+    needle = style.get("font_contains")
+    if needle is not None and not all(needle in font for font in line["fonts"]):
+        return False
+    size = style.get("size")
+    if size is not None and abs(line["size"] - size) > style.get("size_tolerance", 0.05):
+        return False
+    center = style.get("center_x")
+    if center is not None and abs(line["center_x"] - center) > style.get(
+            "center_tolerance", 2.0):
+        return False
+    if line["page"] < style.get("page_from", 1):
+        return False
+    text = style.get("text")
+    if text is not None and line["text"].rstrip(" .") != text:
+        return False
+    text_pattern = style.get("text_pattern")
+    if text_pattern is not None and not re.search(text_pattern, line["text"]):
+        return False
+    return True
+
+
+def _scope_slice(lines: list[dict[str, Any]], scope: dict[str, Any]) -> list[dict[str, Any]]:
+    """Restrict the line stream to the region a rule declares it measures.
+
+    `start_after` and `stop_before` are themselves styles, matched against the same
+    stream. That is what keeps a Results-subsection rule out of Discussion and a Methods
+    rule out of the reference list — two failure modes a bare size filter cannot refuse.
+    A boundary marker that never matches is a REFUSAL, not an empty result: silently
+    measuring the whole document is exactly the kind of wrong denominator this repairs.
+    """
+    start = 0
+    after = scope.get("start_after")
+    if after is not None:
+        start = None
+        for index, line in enumerate(lines):
+            if _matches_style(line, after):
+                start = index + 1
+                break
+        if start is None:
+            refuse(f"REFUSE: population scope start_after never matched: {after!r}")
+    stop = len(lines)
+    before = scope.get("stop_before")
+    if before is not None:
+        stop = None
+        for index in range(start, len(lines)):
+            if _matches_style(lines[index], before):
+                stop = index
+                break
+        if stop is None:
+            refuse(f"REFUSE: population scope stop_before never matched: {before!r}")
+    return lines[start:stop]
+
+
+def _typography_units(lines: list[dict[str, Any]], rule: dict[str, Any],
+                      artifact: str) -> list[dict[str, Any]]:
+    """Units whose boundary in the source is typographic, not lexical."""
+    scoped = _scope_slice(lines, rule.get("scope", {}))
+    # 🔴 Adjacency is tested on a stream with the declared furniture removed first. This
+    # manuscript numbers its lines in the margin, and each number is a text line of its
+    # own sitting BETWEEN the two halves of a wrapped heading. Testing adjacency on the
+    # raw stream, four wrapped Results headings came back as eight sections — a
+    # denominator inflated by a typesetting artefact, which is the same class of error
+    # as the phantom panels, arriving from the other direction.
+    ignore = rule.get("join_wrapped_ignore")
+    stream = ([line for line in scoped if not _matches_style(line, ignore)]
+              if ignore else scoped)
+    selected = [(index, line) for index, line in enumerate(stream)
+                if _matches_style(line, rule["heading"])]
+    excluded = set(rule.get("exclude_labels", []))
+
+    groups: list[list[dict[str, Any]]] = []
+    previous = None
+    for index, line in selected:
+        # 🔴 A heading too long for its column wraps onto the next line and is still ONE
+        # heading. Consecutive selected lines — nothing of body style between them — join.
+        # A blank-line or lexical rule cannot see this and drops the wrapped section
+        # entirely; that is one of the four sections this enumeration recovers over the
+        # hand-written list it replaces.
+        if rule.get("join_wrapped") and previous is not None and index == previous + 1:
+            groups[-1].append(line)
+        else:
+            groups.append([line])
+        previous = index
+
+    units = []
+    for group in groups:
+        label = " ".join(" ".join(line["text"] for line in group).split()).rstrip(" .")
+        if label in excluded:
+            continue
+        units.append({
+            "unit_id": f"{rule['kind']}:{label}",
+            "kind": rule["kind"],
+            "label": label,
+            "artifact": artifact,
+            "locus": f"p{group[0]['page']}",
+        })
+    return units
+
+
+def _regex_units(segments: list[tuple[Any, str]], rule: dict[str, Any],
+                 artifact: str) -> list[dict[str, Any]]:
+    """Units whose extent runs to the next occurrence of their own label.
+
+    🔴 The window is bounded by the NEXT MATCH OF THIS RULE, or by the end of the
+    segment — never by a character count. A fixed window is a bound on the wrong axis:
+    the axis a caption window fails on is *does it respect the next label*, and no
+    integer bounds that. Measured on this paper, a 3600-character window ran 925
+    characters past Figure 2's caption into Figure 3's and reported twelve panels for a
+    caption that prints six — six units no locator could ever anchor.
+    """
+    pattern = re.compile(rule["pattern"], re.MULTILINE)
+    sub_pattern = (re.compile(rule["sub_unit_pattern"])
+                   if rule.get("sub_unit_pattern") else None)
+    range_pattern = (re.compile(rule["sub_unit_range_pattern"])
+                     if rule.get("sub_unit_range_pattern") else None)
+    seen: set[str] = set()
+    units = []
+    for locus, text in segments:
+        matches = list(pattern.finditer(text))
+        for index, match in enumerate(matches):
+            label = " ".join(match.group("label").split())
+            bound = matches[index + 1].start() if index + 1 < len(matches) else len(text)
+            if label in seen:
+                # A repeated label is one unit met twice — this paper reprints every figure
+                # label in a trailing size listing. The FIRST occurrence is the caption and
+                # is kept; the repeat is skipped only AFTER it has served as the bound of
+                # its predecessor, which is why `bound` is computed above this test.
+                continue
+            seen.add(label)
+            unit = {
+                "unit_id": f"{rule['kind']}:{label}",
+                "kind": rule["kind"],
+                "label": label,
+                "artifact": artifact,
+                "locus": (locus if locus is not None
+                          else f"l{text.count(chr(10), 0, match.start()) + 1}"),
+            }
+            if sub_pattern is not None:
+                window = text[match.end():bound]
+                found = {m.group(1) for m in sub_pattern.finditer(window)}
+                # 🔴 A caption may label a range — `(C-D)` — and a pattern reading only
+                # single letters silently drops every panel inside one. Measured here:
+                # Figure 6 reported A,B,E and contains A,B,C,D,E. A short denominator
+                # flatters both readers, so ranges are expanded, never approximated.
+                if range_pattern is not None:
+                    for m in range_pattern.finditer(window):
+                        start, stop = ord(m.group(1)), ord(m.group(2))
+                        if start <= stop:
+                            found.update(chr(code) for code in range(start, stop + 1))
+                unit["sub_unit_kind"] = rule.get("sub_unit_kind", "panel")
+                unit["sub_units"] = sorted(found)
+                unit["window_chars"] = len(window)
+            units.append(unit)
+    return units
+
+
 def cmd_population(args: argparse.Namespace) -> int:
-    """Enumerate structural evidence units, by declared pattern, before anyone reads.
+    """Enumerate structural evidence units, by declared rule, before anyone reads.
 
     Structural enumeration is not a reading: it lists what the paper CONTAINS — figures,
-    their lettered panels, tables, Results subsections, supplementary items — and says
-    nothing about what any of it shows. That is why Plan may run it without crossing the
-    epistemic boundary (body §28), and why it must be fixed before the readings exist:
-    a denominator chosen afterwards is a denominator chosen to fit.
+    their lettered panels, tables, Results subsections, Methods sections, source-data
+    panels — and says nothing about what any of it shows. That is why Plan may run it
+    without crossing the epistemic boundary (body §28), and why it must be right before
+    the readings exist: a denominator chosen afterwards is a denominator chosen to fit.
+
+    Two extractors, because this source marks its units two different ways:
+
+      `regex`       the unit announces itself with a label in the text, and its extent
+                    runs to the next such label or to the end of the segment
+      `typography`  the unit announces itself with a font, a size or a position, and its
+                    extent is a region declared by two typographic boundary markers
+
+    Every packet source must be classified — including one that yields NO units.
+    `declared_empty_sources` is not a courtesy: an unlisted source is an unmeasured one,
+    and this command refuses a spec that leaves any source unaccounted for.
     """
     spec = load_spec(Path(args.spec))
     population_spec = spec.get("population")
     if population_spec is None:
-        sys.exit("REFUSE: spec has no `population` block")
+        refuse("REFUSE: spec has no `population` block")
     source_root = Path(args.source_root).resolve()
 
     units: list[dict[str, Any]] = []
     for source in population_spec["sources"]:
         path = source_root / source["source"]
         if not path.is_file():
-            sys.exit(f"REFUSE: population source missing: {path}")
+            refuse(f"REFUSE: population source missing: {path}")
         artifact = source["surface"]
-        # 🔴 One segment per PAGE for a PDF, and ONE segment for the whole text file — not
-        # one per line. A caption window that stops at the end of the line the label sits on
-        # finds the first panel and no other: measured on this paper, per-line segmentation
-        # reported 1 panel for a six-panel figure. The window has to cross line boundaries,
-        # so the locus is computed from the match offset instead of from the segment.
-        if path.suffix.lower() == ".pdf":
-            segments = [(f"p{i + 1}", None, text) for i, text in enumerate(_pdf_pages(path))]
-        else:
-            whole = path.read_text(encoding="utf-8", errors="replace")
-            segments = [(None, "line", whole)]
+        extraction = source.get("extraction", "regex")
 
-        for rule in source["rules"]:
-            pattern = re.compile(rule["pattern"], re.MULTILINE)
-            panel_pattern = re.compile(rule["panel_pattern"]) if rule.get("panel_pattern") else None
-            range_pattern = (re.compile(rule["panel_range_pattern"])
-                             if rule.get("panel_range_pattern") else None)
-            seen: set[str] = set()
-            for fixed_locus, locus_mode, text in segments:
-                for match in pattern.finditer(text):
-                    label = " ".join(match.group("label").split())
-                    if label in seen:
-                        continue
-                    seen.add(label)
-                    locus = (fixed_locus if fixed_locus is not None
-                             else f"l{text.count(chr(10), 0, match.start()) + 1}")
-                    unit = {
-                        "unit_id": f"{rule['kind']}:{label}",
-                        "kind": rule["kind"],
-                        "label": label,
-                        "artifact": artifact,
-                        "locus": locus,
-                    }
-                    if panel_pattern is not None:
-                        tail = text[match.end(): match.end() + rule.get("panel_window", 2600)]
-                        found = {m.group(1) for m in panel_pattern.finditer(tail)}
-                        # 🔴 A caption may label a range — `(C-D)` — and a pattern that reads
-                        # only single letters silently drops every panel inside one. Measured
-                        # on this paper: Figure 6 reported A,B,E and contains A,B,C,D,E. A
-                        # denominator short by two panels is a coverage number that flatters
-                        # both readers, so ranges are expanded rather than approximated.
-                        if range_pattern is not None:
-                            for m in range_pattern.finditer(tail):
-                                start, stop = ord(m.group(1)), ord(m.group(2))
-                                if start <= stop:
-                                    found.update(chr(code) for code in range(start, stop + 1))
-                        unit["panels"] = sorted(found)
-                    units.append(unit)
+        if extraction == "typography":
+            lines = _pdf_lines(path)
+            for rule in source["rules"]:
+                units.extend(_typography_units(lines, rule, artifact))
+        elif extraction == "regex":
+            # 🔴 One segment per PAGE for a PDF, ONE segment for a whole text file — never
+            # one per line. A caption window that stops at the end of the line its label
+            # sits on finds the first panel and no other: measured on this paper, per-line
+            # segmentation reported 1 panel for a six-panel figure.
+            if path.suffix.lower() == ".pdf":
+                segments = [(f"p{i + 1}", text) for i, text in enumerate(_pdf_pages(path))]
+            else:
+                segments = [(None, path.read_text(encoding="utf-8", errors="replace"))]
+            for rule in source["rules"]:
+                units.extend(_regex_units(segments, rule, artifact))
+        else:
+            refuse(f"REFUSE: unknown extraction {extraction!r} for {source['source']}")
+
+    # Completeness against the packet: every article and supplement handed to the readers
+    # either produces units or is declared to produce none, with its reason. A source
+    # silently absent from this block is coverage nobody can measure and nobody was told
+    # was unmeasurable — which is what §8.1 promised and the spec did not deliver.
+    declared_empty = {entry["source"]: entry["reason"]
+                      for entry in population_spec.get("declared_empty_sources", [])}
+    enumerated = {source["source"] for source in population_spec["sources"]}
+    packet = {entry["source"] for entry in _entries(spec, "source_files")}
+    findings = [f"UNACCOUNTED SOURCE    {item}"
+                for item in sorted(packet - enumerated - set(declared_empty))]
+    findings += [f"DOUBLE-DECLARED SOURCE {item}"
+                 for item in sorted(set(declared_empty) & enumerated)]
+    if findings:
+        for item in findings:
+            print(f"  [BLOCK] {item}")
+        print("VERDICT: FAIL — a packet source is neither enumerated nor declared empty, "
+              "or is both. Coverage over it would be unmeasurable and unstated.")
+        return 1
 
     units.sort(key=lambda item: (item["kind"], item["label"]))
-    panel_units = sum(len(unit.get("panels", [])) for unit in units)
+    sub_unit_total = sum(len(unit.get("sub_units", [])) for unit in units)
+    panel_units = sum(len(unit.get("sub_units", []))
+                      for unit in units if unit.get("sub_unit_kind") == "panel")
+    # 🔴 Every DECLARED kind appears in the count, including one that measured zero. A
+    # by_kind built only from the units found cannot distinguish "the rule ran and the
+    # paper has none" from "no rule was ever written" — and those are the two halves of
+    # B-1. `main_table: 0` is a measurement; its absence would be an omission.
+    declared_kinds = {rule["kind"] for source in population_spec["sources"]
+                      for rule in source["rules"]}
+    by_kind = {kind: 0 for kind in sorted(declared_kinds)}
+    for unit in units:
+        by_kind[unit["kind"]] = by_kind.get(unit["kind"], 0) + 1
     record = {
-        "_schema": "LEGEND benchmark · evaluation population v1",
+        "_schema": "LEGEND benchmark · evaluation population v2",
         "benchmark_id": spec["benchmark_id"],
         "pmid": spec.get("pmid"),
         "derivation": ("framework/scripts/benchmark_input_surface.py population "
@@ -434,19 +983,22 @@ def cmd_population(args: argparse.Namespace) -> int:
                  "any unit shows, and it does NOT rank units by importance — which of them "
                  "matter is exactly what the readings and the adjudication are for."),
         # Carried verbatim from the spec: caption anomalies and extraction limits observed
-        # when the population was first derived. They belong beside the numbers, not in a
+        # when the population was derived. They belong beside the numbers, not in a
         # separate file a reader of the numbers never opens.
         "declared_notes": population_spec.get("notes", []),
-        "counts": {"units": len(units), "panels": panel_units,
-                   "by_kind": {kind: sum(1 for unit in units if unit["kind"] == kind)
-                               for kind in sorted({unit["kind"] for unit in units})}},
+        "declared_empty_sources": population_spec.get("declared_empty_sources", []),
+        "counts": {"units": len(units), "sub_units": sub_unit_total, "panels": panel_units,
+                   "by_kind": dict(sorted(by_kind.items()))},
         "units": units,
     }
     if args.out:
         Path(args.out).write_text(json.dumps(record, indent=2) + "\n", encoding="utf-8")
-        print(f"POPULATION  {len(units)} unit(s), {panel_units} panel(s) → {args.out}")
+        print(f"POPULATION  {len(units)} unit(s), {panel_units} panel(s), "
+              f"{sub_unit_total} sub-unit(s) → {args.out}")
         for kind, count in record["counts"]["by_kind"].items():
-            print(f"  {kind:24s} {count}")
+            print(f"  {kind:28s} {count}")
+        for entry in record["declared_empty_sources"]:
+            print(f"  DECLARED EMPTY  {entry['source']}  — {entry['reason']}")
     else:
         print(json.dumps(record, indent=2))
     return 0
@@ -472,26 +1024,65 @@ def cmd_locators(args: argparse.Namespace) -> int:
     A render the reader made under an output directory is legitimate and is admitted: it is
     derived from the packet, inside the surface, and declared with its digest. What is not
     admitted is any path that is neither allowlisted nor produced here.
+
+    🔴 Three ways a citation used to walk straight through this check, all of them found by
+    taking its PASS sentence — *"every cited artifact is inside the surface"* — literally
+    and building the cheapest state that makes it false:
+
+      * a forbidden prior-output path that happens to sit UNDER an output slot. LEGEND's
+        own dossier lives at `…/fulltext_dossiers/PMID42397075_partial_locators.md`, which
+        starts with an admitted prefix, so "produced in the surface" admitted it verbatim —
+        at exactly the path the repository always cites it by;
+      * `output/../../../…` — a prefix test is a string test, and `..` satisfies it while
+        pointing anywhere on the machine;
+      * an absolute path was caught, but only because it failed the prefix test by luck.
+
+    So: normalize first, refuse traversal and absolute paths outright, and check the
+    forbidden set BEFORE the prefix, never after.
     """
     spec = load_spec(Path(args.spec))
     root = Path(args.surface).resolve()
     manifest_path = (root / "disease-models" / args.disease / "research" / "deepdive_manifests"
                      / f"PMID{args.pmid}.json")
     if not manifest_path.is_file():
-        sys.exit(f"REFUSE: no manifest at {manifest_path}")
+        refuse(f"REFUSE: no manifest at {manifest_path}")
     try:
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
-        sys.exit(f"REFUSE: manifest is not valid JSON: {exc}")
+        refuse(f"REFUSE: manifest is not valid JSON: {exc}")
 
     allowed = _allowed_paths(spec, args.actor_id)
+    forbidden = set(spec["forbidden_prior_output_paths"])
     produced = tuple(f"{rel}/" for rel in spec["empty_dirs"])
     findings: list[str] = []
 
     def check(path_value: str, where: str) -> None:
-        if path_value in allowed or path_value.startswith(produced):
+        raw = path_value.strip()
+        if not raw:
+            findings.append(f"EMPTY PATH       {where}")
             return
-        findings.append(f"OUTSIDE SURFACE  {where}  {path_value}")
+        if posixpath.isabs(raw) or re.match(r"^[A-Za-z]:[\\/]", raw):
+            findings.append(f"ABSOLUTE PATH    {where}  {raw}")
+            return
+        normalized = posixpath.normpath(raw.replace("\\", "/"))
+        if normalized == ".." or normalized.startswith("../"):
+            findings.append(f"TRAVERSAL        {where}  {raw}  → {normalized}")
+            return
+        if raw != normalized:
+            # Not fatal on its own, but a citation that needed normalizing is a citation
+            # whose literal form does not name the file it resolves to. Say so, then judge
+            # the resolved form.
+            findings.append(f"NON-CANONICAL    {where}  {raw}  → {normalized}")
+        # The forbidden set is checked BEFORE the produced-prefix, and independently of it.
+        # Provenance, not position: a path on this list is prior LEGEND output wherever it
+        # is found, including inside a slot the reader legitimately writes to.
+        if normalized in forbidden:
+            findings.append(f"FORBIDDEN SOURCE {where}  {normalized}  "
+                            "(prior LEGEND output, cited by path)")
+            return
+        if normalized in allowed or normalized.startswith(produced):
+            return
+        findings.append(f"OUTSIDE SURFACE  {where}  {normalized}")
 
     for index, artifact in enumerate(manifest.get("source_artifacts") or []):
         check(str(artifact.get("path", "")), f"source_artifacts[{index}]")
@@ -507,14 +1098,18 @@ def cmd_locators(args: argparse.Namespace) -> int:
         print(f"VERDICT: FAIL — {len(findings)} citation(s) outside the benchmark surface. "
               "Each is recorded as BENCH_INVALID for that entry, not removed.")
         return 1
-    print("VERDICT: PASS — every cited artifact is inside the surface or was produced in it.")
+    print("VERDICT: PASS — every cited path is relative, free of traversal, not on the "
+          "forbidden prior-output list, and either allowlisted or written into an output "
+          "slot of this surface.")
+    print("  NOT CHECKED: that the reader actually opened only what it cited (Annex J.0); "
+          "a citation is a declaration, and this reads the declaration.")
     return 0
 
 
 def cmd_tree_digest(args: argparse.Namespace) -> int:
     root = Path(args.path).resolve()
     if not root.is_dir():
-        sys.exit(f"REFUSE: not a directory: {root}")
+        refuse(f"REFUSE: not a directory: {root}")
     digest, pairs = tree_digest(root)
     print(f"{digest}  {len(pairs)} file(s)  {root}")
     return 0
@@ -541,12 +1136,25 @@ def main() -> int:
                              "enforce parity, allowlist and prior-output absence elsewhere")
     verify.set_defaults(func=cmd_verify)
 
-    freeze = sub.add_parser("freeze", help="tree digest and per-file digests of one surface")
+    freeze = sub.add_parser(
+        "freeze", help="bind one first pass to its bytes; identity verified from the tree")
     freeze.add_argument("--surface", required=True)
-    freeze.add_argument("--actor-id", required=True)
-    freeze.add_argument("--benchmark-id", required=True)
+    freeze.add_argument("--actor-id", required=True,
+                        help="checked against ASSIGNMENT.md in the tree; a disagreement refuses")
+    freeze.add_argument("--benchmark-id", required=True,
+                        help="checked against ASSIGNMENT.md in the tree; a disagreement refuses")
+    freeze.add_argument("--first-pass-state", default="COMPLETE_DECLARED_BY_ACTOR",
+                        choices=list(FIRST_PASS_STATES))
+    freeze.add_argument("--spec", help="classify each frozen file as input / output / unexpected")
+    freeze.add_argument("--input-manifest", help="the benchmark manifest the run was handed")
     freeze.add_argument("--out")
     freeze.set_defaults(func=cmd_freeze)
+
+    verify_freeze = sub.add_parser(
+        "verify-freeze", help="does the tree still hold exactly what the receipt froze?")
+    verify_freeze.add_argument("--receipt", required=True)
+    verify_freeze.add_argument("--surface", required=True)
+    verify_freeze.set_defaults(func=cmd_verify_freeze)
 
     population = sub.add_parser("population", help="enumerate structural evidence units")
     population.add_argument("--spec", required=True)

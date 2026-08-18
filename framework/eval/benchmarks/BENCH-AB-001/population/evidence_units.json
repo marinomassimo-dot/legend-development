@@ -1,28 +1,47 @@
 {
-  "_schema": "LEGEND benchmark \u00b7 evaluation population v1",
+  "_schema": "LEGEND benchmark \u00b7 evaluation population v2",
   "benchmark_id": "BENCH-AB-001",
   "pmid": "42397075",
   "derivation": "framework/scripts/benchmark_input_surface.py population --spec <spec> --source-root <root>",
   "note": "Structural enumeration only. It lists what the paper contains, never what any unit shows, and it does NOT rank units by importance \u2014 which of them matter is exactly what the readings and the adjudication are for.",
   "declared_notes": [
-    "PANEL EXTRACTION IS FROM CAPTIONS, and the caption is what the paper printed. Two",
-    "observations from the first derivation, recorded so neither is later read as a tool",
-    "defect: (1) Supplementary Figure 1 yields A-I, K, L, M \u2014 no J. The caption labels (G)",
-    "twice and never labels J; the enumeration reports the paper, not a repair of it.",
+    "PANEL EXTRACTION IS FROM CAPTIONS, and the caption is what the paper printed.",
+    "(1) Supplementary Figure 1 yields A-I, K, L, M \u2014 no J. The caption labels (G) twice and",
+    "never labels J; the enumeration reports the paper, not a repair of it.",
     "(2) Figure 6 labels its panels [A(i)], [A(ii)], [B(i)]\u2026 and the range (C-D). Ranges are",
     "expanded; a single-letter pattern alone reported A,B,E and would have made the",
     "denominator short by two, which flatters both readers' coverage.",
-    "The main text carries no numbered Table \u2014 main_table is 0 by measurement, not by",
+    "(3) The main text carries no numbered Table \u2014 main_table is 0 by measurement, not by",
     "omission of the rule.",
+    "(4) Every figure label is reprinted in a trailing size listing ('Figure 2 / 140x90 mm').",
+    "The FIRST occurrence is the caption and is the one kept; the repeat is skipped, and it",
+    "also serves as the bound of Figure 6's caption, which is the last one in the text.",
+    "(5) File012 keys its uncropped blots to supplementary figure PANELS, not to figures.",
+    "Supplementary Fig. 1J spans two pages; it is ONE source-data unit, met twice.",
+    "(6) File012 prints its keys inconsistently \u2014 'Supplementary Fig. 5B' with a space and",
+    "'Supplementary Fig.6F' without. Labels are reported AS PRINTED, not normalized: the",
+    "enumeration reports the paper, and a tidied label is a label no reader can grep for.",
     "This population fixes WHAT the paper contains. It does not rank units by importance:",
     "which of them matter is what the two readings and the adjudication are for."
   ],
+  "declared_empty_sources": [
+    {
+      "source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File008.pdf",
+      "reason": "Author contributions only \u2014 one page, a CRediT-style role list naming no figure, table, method or datum. It carries no evidence unit, so no coverage over it is claimed and none is measurable. It stays in the packet because both readers must see the same packet; it is excluded from the denominator because there is nothing in it to cover."
+    }
+  ],
   "counts": {
-    "units": 36,
-    "panels": 115,
+    "units": 65,
+    "sub_units": 109,
+    "panels": 109,
     "by_kind": {
       "main_figure": 6,
-      "supplement_methods_section": 20,
+      "main_methods_section": 2,
+      "main_results_section": 7,
+      "main_table": 0,
+      "source_data_blot": 9,
+      "supplement_methods_section": 24,
+      "supplement_table_section": 7,
       "supplementary_figure": 10
     }
   },
@@ -33,14 +52,16 @@
       "label": "Figure 1",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
       "locus": "l2186",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C",
         "D",
         "E",
         "F"
-      ]
+      ],
+      "window_chars": 1829
     },
     {
       "unit_id": "main_figure:Figure 2",
@@ -48,20 +69,16 @@
       "label": "Figure 2",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
       "locus": "l2232",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C",
         "D",
         "E",
-        "F",
-        "G",
-        "H",
-        "I",
-        "J",
-        "K",
-        "L"
-      ]
+        "F"
+      ],
+      "window_chars": 925
     },
     {
       "unit_id": "main_figure:Figure 3",
@@ -69,7 +86,8 @@
       "label": "Figure 3",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
       "locus": "l2254",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C",
@@ -82,7 +100,8 @@
         "J",
         "K",
         "L"
-      ]
+      ],
+      "window_chars": 2846
     },
     {
       "unit_id": "main_figure:Figure 4",
@@ -90,7 +109,8 @@
       "label": "Figure 4",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
       "locus": "l2324",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C",
@@ -101,7 +121,8 @@
         "H",
         "I",
         "J"
-      ]
+      ],
+      "window_chars": 2045
     },
     {
       "unit_id": "main_figure:Figure 5",
@@ -109,7 +130,8 @@
       "label": "Figure 5",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
       "locus": "l2370",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C",
@@ -117,7 +139,8 @@
         "E",
         "F",
         "G"
-      ]
+      ],
+      "window_chars": 1275
     },
     {
       "unit_id": "main_figure:Figure 6",
@@ -125,13 +148,141 @@
       "label": "Figure 6",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
       "locus": "l2404",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C",
         "D",
         "E"
-      ]
+      ],
+      "window_chars": 3284
+    },
+    {
+      "unit_id": "main_methods_section:Cell Culture and Maintenance",
+      "kind": "main_methods_section",
+      "label": "Cell Culture and Maintenance",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+      "locus": "p4"
+    },
+    {
+      "unit_id": "main_methods_section:Statistical analysis",
+      "kind": "main_methods_section",
+      "label": "Statistical analysis",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+      "locus": "p5"
+    },
+    {
+      "unit_id": "main_results_section:Cell-cycle and potency abnormalities in WWOX-deficient MYC- overexpressing RGs",
+      "kind": "main_results_section",
+      "label": "Cell-cycle and potency abnormalities in WWOX-deficient MYC- overexpressing RGs",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+      "locus": "p8"
+    },
+    {
+      "unit_id": "main_results_section:Early gene expression signature in WOREE- and SCAR12-derived neurons",
+      "kind": "main_results_section",
+      "label": "Early gene expression signature in WOREE- and SCAR12-derived neurons",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+      "locus": "p11"
+    },
+    {
+      "unit_id": "main_results_section:Generation of WWOX-deficient neural organoids",
+      "kind": "main_results_section",
+      "label": "Generation of WWOX-deficient neural organoids",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+      "locus": "p5"
+    },
+    {
+      "unit_id": "main_results_section:Inverse relationship between MYC and WWOX expression through brain development and in neural organoids",
+      "kind": "main_results_section",
+      "label": "Inverse relationship between MYC and WWOX expression through brain development and in neural organoids",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+      "locus": "p7"
+    },
+    {
+      "unit_id": "main_results_section:MYC dysregulation mediates neurogenic defects in WWOX-deficient organoids",
+      "kind": "main_results_section",
+      "label": "MYC dysregulation mediates neurogenic defects in WWOX-deficient organoids",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+      "locus": "p11"
+    },
+    {
+      "unit_id": "main_results_section:Neuron-specific Gene Therapy Rescues Neuronal Hyperexcitability",
+      "kind": "main_results_section",
+      "label": "Neuron-specific Gene Therapy Rescues Neuronal Hyperexcitability",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+      "locus": "p12"
+    },
+    {
+      "unit_id": "main_results_section:scRNA-seq reveals impaired neurogenesis in WWOX-mutant organoids",
+      "kind": "main_results_section",
+      "label": "scRNA-seq reveals impaired neurogenesis in WWOX-mutant organoids",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+      "locus": "p6"
+    },
+    {
+      "unit_id": "source_data_blot:Supplementary Fig. 1B",
+      "kind": "source_data_blot",
+      "label": "Supplementary Fig. 1B",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File012.pdf",
+      "locus": "p2"
+    },
+    {
+      "unit_id": "source_data_blot:Supplementary Fig. 1J",
+      "kind": "source_data_blot",
+      "label": "Supplementary Fig. 1J",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File012.pdf",
+      "locus": "p3"
+    },
+    {
+      "unit_id": "source_data_blot:Supplementary Fig. 1K",
+      "kind": "source_data_blot",
+      "label": "Supplementary Fig. 1K",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File012.pdf",
+      "locus": "p5"
+    },
+    {
+      "unit_id": "source_data_blot:Supplementary Fig. 1L",
+      "kind": "source_data_blot",
+      "label": "Supplementary Fig. 1L",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File012.pdf",
+      "locus": "p6"
+    },
+    {
+      "unit_id": "source_data_blot:Supplementary Fig. 1M",
+      "kind": "source_data_blot",
+      "label": "Supplementary Fig. 1M",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File012.pdf",
+      "locus": "p7"
+    },
+    {
+      "unit_id": "source_data_blot:Supplementary Fig. 5B",
+      "kind": "source_data_blot",
+      "label": "Supplementary Fig. 5B",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File012.pdf",
+      "locus": "p8"
+    },
+    {
+      "unit_id": "source_data_blot:Supplementary Fig.6E",
+      "kind": "source_data_blot",
+      "label": "Supplementary Fig.6E",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File012.pdf",
+      "locus": "p9"
+    },
+    {
+      "unit_id": "source_data_blot:Supplementary Fig.6F",
+      "kind": "source_data_blot",
+      "label": "Supplementary Fig.6F",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File012.pdf",
+      "locus": "p9"
+    },
+    {
+      "unit_id": "source_data_blot:Supplementary Fig.7C",
+      "kind": "source_data_blot",
+      "label": "Supplementary Fig.7C",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File012.pdf",
+      "locus": "p10"
     },
     {
       "unit_id": "supplement_methods_section:AAV9 infection",
@@ -139,6 +290,13 @@
       "label": "AAV9 infection",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
       "locus": "p4"
+    },
+    {
+      "unit_id": "supplement_methods_section:Ca2+ Imaging",
+      "kind": "supplement_methods_section",
+      "label": "Ca2+ Imaging",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p6"
     },
     {
       "unit_id": "supplement_methods_section:Cell Culture and Maintenance",
@@ -176,6 +334,13 @@
       "locus": "p12"
     },
     {
+      "unit_id": "supplement_methods_section:Chromatin immunoprecipitation sequencing (ChIP-seq) analysis",
+      "kind": "supplement_methods_section",
+      "label": "Chromatin immunoprecipitation sequencing (ChIP-seq) analysis",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p13"
+    },
+    {
       "unit_id": "supplement_methods_section:Differential Gene Expression",
       "kind": "supplement_methods_section",
       "label": "Differential Gene Expression",
@@ -202,6 +367,13 @@
       "label": "Immunofluorescence",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
       "locus": "p5"
+    },
+    {
+      "unit_id": "supplement_methods_section:Library preparation and Single-cell RNA-seq (scRNA-seq) (10x Chromium)",
+      "kind": "supplement_methods_section",
+      "label": "Library preparation and Single-cell RNA-seq (scRNA-seq) (10x Chromium)",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p8"
     },
     {
       "unit_id": "supplement_methods_section:MYC and WWOX interactome analysis",
@@ -274,12 +446,69 @@
       "locus": "p2"
     },
     {
+      "unit_id": "supplement_methods_section:WWOX and MYC expression invivo",
+      "kind": "supplement_methods_section",
+      "label": "WWOX and MYC expression invivo",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+      "locus": "p10"
+    },
+    {
+      "unit_id": "supplement_table_section:Antibodies",
+      "kind": "supplement_table_section",
+      "label": "Antibodies",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File011.pdf",
+      "locus": "p2"
+    },
+    {
+      "unit_id": "supplement_table_section:Chemicals, Enzymes and other reagents",
+      "kind": "supplement_table_section",
+      "label": "Chemicals, Enzymes and other reagents",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File011.pdf",
+      "locus": "p3"
+    },
+    {
+      "unit_id": "supplement_table_section:Experimental Models",
+      "kind": "supplement_table_section",
+      "label": "Experimental Models",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File011.pdf",
+      "locus": "p2"
+    },
+    {
+      "unit_id": "supplement_table_section:Oligonucleotides",
+      "kind": "supplement_table_section",
+      "label": "Oligonucleotides",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File011.pdf",
+      "locus": "p3"
+    },
+    {
+      "unit_id": "supplement_table_section:Other",
+      "kind": "supplement_table_section",
+      "label": "Other",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File011.pdf",
+      "locus": "p4"
+    },
+    {
+      "unit_id": "supplement_table_section:Recombinant DNA",
+      "kind": "supplement_table_section",
+      "label": "Recombinant DNA",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File011.pdf",
+      "locus": "p2"
+    },
+    {
+      "unit_id": "supplement_table_section:Software",
+      "kind": "supplement_table_section",
+      "label": "Software",
+      "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File011.pdf",
+      "locus": "p4"
+    },
+    {
       "unit_id": "supplementary_figure:Supplementary Figure 1",
       "kind": "supplementary_figure",
       "label": "Supplementary Figure 1",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
       "locus": "p3",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C",
@@ -292,7 +521,8 @@
         "K",
         "L",
         "M"
-      ]
+      ],
+      "window_chars": 2370
     },
     {
       "unit_id": "supplementary_figure:Supplementary Figure 10",
@@ -300,14 +530,16 @@
       "label": "Supplementary Figure 10",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
       "locus": "p19",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C",
         "D",
         "E",
         "F"
-      ]
+      ],
+      "window_chars": 1764
     },
     {
       "unit_id": "supplementary_figure:Supplementary Figure 2",
@@ -315,13 +547,15 @@
       "label": "Supplementary Figure 2",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
       "locus": "p4",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C",
         "D",
         "E"
-      ]
+      ],
+      "window_chars": 926
     },
     {
       "unit_id": "supplementary_figure:Supplementary Figure 3",
@@ -329,13 +563,15 @@
       "label": "Supplementary Figure 3",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
       "locus": "p6",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C",
         "D",
         "E"
-      ]
+      ],
+      "window_chars": 2510
     },
     {
       "unit_id": "supplementary_figure:Supplementary Figure 4",
@@ -343,7 +579,8 @@
       "label": "Supplementary Figure 4",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
       "locus": "p8",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C",
@@ -354,7 +591,8 @@
         "H",
         "I",
         "J"
-      ]
+      ],
+      "window_chars": 2079
     },
     {
       "unit_id": "supplementary_figure:Supplementary Figure 5",
@@ -362,11 +600,13 @@
       "label": "Supplementary Figure 5",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
       "locus": "p9",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C"
-      ]
+      ],
+      "window_chars": 598
     },
     {
       "unit_id": "supplementary_figure:Supplementary Figure 6",
@@ -374,14 +614,16 @@
       "label": "Supplementary Figure 6",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
       "locus": "p11",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C",
         "D",
         "E",
         "F"
-      ]
+      ],
+      "window_chars": 1166
     },
     {
       "unit_id": "supplementary_figure:Supplementary Figure 7",
@@ -389,7 +631,8 @@
       "label": "Supplementary Figure 7",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
       "locus": "p13",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C",
@@ -397,7 +640,8 @@
         "E",
         "F",
         "G"
-      ]
+      ],
+      "window_chars": 1813
     },
     {
       "unit_id": "supplementary_figure:Supplementary Figure 8",
@@ -405,14 +649,16 @@
       "label": "Supplementary Figure 8",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
       "locus": "p15",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C",
         "D",
         "E",
         "F"
-      ]
+      ],
+      "window_chars": 1665
     },
     {
       "unit_id": "supplementary_figure:Supplementary Figure 9",
@@ -420,11 +666,13 @@
       "label": "Supplementary Figure 9",
       "artifact": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
       "locus": "p17",
-      "panels": [
+      "sub_unit_kind": "panel",
+      "sub_units": [
         "A",
         "B",
         "C"
-      ]
+      ],
+      "window_chars": 1109
     }
   ]
 }

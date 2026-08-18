@@ -10,12 +10,18 @@ identical_for: scientist-a, scientist-b
 
 **Nothing here is a new data model.** Three of the four artifacts are the forms this repository
 already uses; the fourth is the MODE B critical record. The only addition anywhere is the block
-of four intermediate fields in §3, and it is a **benchmark field set**, not a change to the
-canonical claim registry.
+of **seven benchmark fields** in §3 (plus the `Locators:` cross-reference), and it is a
+**benchmark field set**, not a change to the canonical claim registry.
 
 ---
 
-## 1 · The work manifest — `disease-models/wwox/research/deepdive_manifests/PMID42397075.json`
+> **Every path in this file is relative to the root of YOUR SURFACE**, written here as
+> `<SURFACE>/`. It is not a path in the LEGEND repository, and a reader who resolves it there
+> will not find it: your surface is a standalone repository that reuses LEGEND's layout so the
+> validators run unmodified. Where a path is written without the marker it is relative to the
+> same root.
+
+## 1 · The work manifest — `<SURFACE>/disease-models/wwox/research/deepdive_manifests/PMID42397075.json`
 
 `schema_version: 2`, validated by `framework/scripts/deepdive_manifest.py` in this surface.
 The validator is the specification; this section names only what the benchmark fixes.
@@ -57,7 +63,7 @@ that way. Declare it as such rather than paraphrasing a panel into a quote.
 
 ---
 
-## 2 · The dossier — `disease-models/wwox/research/fulltext_dossiers/PMID42397075.md`
+## 2 · The dossier — `<SURFACE>/disease-models/wwox/research/fulltext_dossiers/PMID42397075.md`
 
 The existing dossier form. An artifact table with role, path and SHA-256; then locators grouped
 by section of the paper, each with its quote, surface and anchor; then, at the end, the coverage
@@ -68,7 +74,8 @@ note. It is the human-readable twin of the manifest, and the two must not disagr
 ## 3 · Claim candidates — `output/claim_candidates.md`
 
 The **canonical claim form**, section per claim, exactly as `claim_registry_current.md` writes
-it — then the four benchmark intermediate fields. Nothing is renamed to fit the benchmark.
+it — then the seven benchmark fields and the `Locators:` cross-reference. Eight labels, all
+required. Nothing is renamed to fit the benchmark.
 
 ```markdown
 ## CLAIM BENCH-<ACTOR_ID>-001
@@ -106,9 +113,18 @@ conclusion begins — and today, in the registry, that seam sits inside a paragr
 `Observation` contains "shows that", "demonstrates", "suggests" or "supports" has put the
 conclusion in the wrong field.
 
-`Uncertainty`, `Limitations` and `Contradictory evidence` are **labelled prose under stable
-labels**, which is what the registry already does. They are not new fields and must not grow a
-new vocabulary.
+`Uncertainty`, `Limitations` and `Contradictory evidence` are **benchmark fields**, exactly like
+`Observation`, `Author interpretation`, `LEGEND interpretation` and `Direction`. Seven in all,
+plus `Locators:`. Write every one of the eight, or the claim is incomplete.
+
+An earlier revision of this schema described the last three as *"labelled prose under stable
+labels the registry already carries"*. It does not: measured over the 39 claims of
+`claim_registry_current.md`, `**Uncertainty:**`, `**Limitations:**` and
+`**Contradictory evidence:**` appear as labels **0, 0 and 0 times**. There is no existing
+convention to defer to, which is why they are fields here.
+
+None of the seven is written to `claim_registry_current.md`. They live in the benchmark output,
+they are compared there, and whether any becomes canonical is a later governed decision.
 
 ---
 

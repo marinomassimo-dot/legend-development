@@ -84,7 +84,7 @@
   "FORBIDDEN_PRIOR_OUTPUT_PATHS": {
     "_derivation": "git grep -l -i -E '42397075|awag239|Aqeilan 2026|Aqeilan2026' cbce3016 -- . | grep -v '^governance/candidates'  → 21 tracked paths at BASE_HEAD, plus claim_registry_current.md and working_model_current.md (which do not name the paper and carry what the laboratory concluded about it), plus controlled_benchmark_ab.md (which describes this experiment and names the paper).",
     "_enumerated_in": "surface_spec.json `forbidden_prior_output_paths` — the list a command checks, kept in one place so it cannot drift from the one a reviewer reads",
-    "_post_read_caveat": "After a reading, paths inside the output slots are skipped: the reader's own manifest lands at the same repository-relative path as LEGEND's prior manifest, and authorship is not decidable from a path. The guarantee is carried by the pre-handover run (slot proven empty, forbidden path proven absent) plus the freeze receipt."
+    "_post_read_caveat": "After a reading, EXACTLY ONE forbidden path is skipped: disease-models/wwox/research/deepdive_manifests/PMID42397075.json, where the reader's own manifest lands because deepdive_manifest.py derives that path from disease and PMID. Authorship is not decidable from a path, so for that path the guarantee is carried by the pre-handover run (slot proven empty, forbidden path proven absent) plus the freeze receipt. The set is COMPUTED as the intersection of expected_output_paths with forbidden_prior_output_paths and PRINTED by every --post-read run; it is size 1. Revision 1 skipped everything under an output slot, which was six other forbidden paths wider than the collision it was written for (Mirror B-4); those six are checked again."
   },
 
   "CONTENT_SCAN": {
@@ -109,12 +109,24 @@
     "path": "population/evidence_units.json",
     "sha256": "DERIVED_AT_BUILD",
     "fixed_before_reading": true,
-    "counts_at_first_derivation_2026_08_18": {
+    "counts_at_derivation_2026_08_18_revision_2": {
+      "units": 65, "panels": 109, "sub_units": 109,
+      "by_kind": {"main_figure": 6, "main_methods_section": 2, "main_results_section": 7,
+                  "main_table": 0, "source_data_blot": 9, "supplement_methods_section": 24,
+                  "supplement_table_section": 7, "supplementary_figure": 10}
+    },
+    "_superseded_counts": {
+      "_note": "Revision 1 recorded units 36 / panels 115. BOTH numbers were wrong and are kept here because a count that is silently replaced is a count nobody can audit. Mirror finding B-1: a fixed 3600-character caption window ran 925 characters past Figure 2's caption into Figure 3's and reported TWELVE panels for a caption that prints SIX, so 115 was 109; and the Methods 'pattern' was a hand-written list of twenty headings against a supplement that has twenty-four. Revision 2 also enumerates the Results headings, the main Methods sections, the resource-table categories and the uncropped-blot source data, none of which had a rule at all.",
       "units": 36, "panels": 115,
       "by_kind": {"main_figure": 6, "supplementary_figure": 10, "supplement_methods_section": 20, "main_table": 0}
     },
+    "declared_empty_sources": [
+      {"source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File008.pdf",
+       "reason": "author contributions only; no evidence unit, so no coverage over it is claimed or measurable"}
+    ],
     "derivation": "framework/scripts/benchmark_input_surface.py population --spec framework/eval/benchmarks/BENCH-AB-001/surface_spec.json --source-root <root checkout>",
-    "determinism": "identical bytes across two consecutive runs, 2026-08-18"
+    "determinism": "identical bytes across two consecutive runs, 2026-08-18 (revision 1) and again at revision 2",
+    "completeness": "the command REFUSES a spec in which any packet source is neither enumerated nor declared empty, so an unmeasurable supplement cannot pass silently"
   },
 
   "HANDOVER": {

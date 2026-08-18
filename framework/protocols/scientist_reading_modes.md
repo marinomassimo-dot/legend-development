@@ -195,6 +195,13 @@ DUPLICATED_ASSIGNMENT          accidental. Two Task Contracts (or one contract a
    `PARALLEL_READ_GROUP: <PROTOCOL_ID or BENCHMARK_ID>`, and the named protocol lists the
    members and the reason. `BENCH-AB-001` is such a group; its members are exactly `scientist-a`
    and `scientist-b`.
+
+   🔴 **`PARALLEL_READ_GROUP` is an EXTENSION FIELD on the Annex A.1 Task Contract schema,
+   introduced here by protocol.** Annex A is not amended and this candidate amends no governance
+   text; A.1 declares its minimum fields *extendible, never removable*, which is the clause this
+   extension stands on. It is named as an extension so that a reader of A.1 who does not find it
+   there knows where it came from and that it was a deliberate act, not drift (Mirror R-4). Any
+   promotion of it into Annex A itself is a separate governed change.
 3. **The actor checks before it claims** (Annex A.3): before `TASK_CLAIM`, query the receipt
    ledger for the source and the task ledger for open contracts on it. An existing reading or an
    open contract without a shared group → **do not claim**; raise `BLOCKER` to Orchestrator
@@ -296,8 +303,9 @@ READING PROVENANCE   a work manifest, schema_version 2, valid under deepdive_man
 LOCATOR FIDELITY     a dossier in the fulltext_dossiers/*.md form — artifact table with digests,
                      verbatim locators, section by section
 CLAIM ASSERTION      claim candidates in the claim_registry_current.md section form
-                     (## CLAIM <id> + the twelve canonical fields), plus the four
-                     BENCHMARK / INTERMEDIATE fields of §6.2 — NOT written to the registry
+                     (## CLAIM <id> + the twelve canonical fields), plus the seven
+                     BENCHMARK / INTERMEDIATE fields of §6.2 and the Locators
+                     cross-reference — NOT written to the registry
 ```
 
 MODE B produces, in addition, a **critical-reading record** (§5.3) whose entries point back at
@@ -325,7 +333,9 @@ declared to Plan for **freezing** before anyone else reads it (benchmark protoco
      --require-current-schema                                → PASS
 2. every locator's `artifact` is inside the declared packet and its digest matches
 3. coverage map: no not_read
-4. per claim candidate: the twelve fields present; the four intermediate fields present;
+4. per claim candidate: the twelve canonical fields present; the SEVEN benchmark fields of
+   §6.2 present, plus `Locators:` — eight labels, the same eight the output schema requires,
+   so the acceptance test and the schema cannot disagree about what a complete claim is;
    Type ∈ {DATO, INFERENZA, IPOTESI, ESPANSIONE} (compound allowed, as the registry does)
 5. blind locator audit (`.claude/skills/legend-locator-audit`) over the (proposition, snippet,
    anchor) triples — auditor receives triples + packet, never the dossier or the reader's name
@@ -408,7 +418,7 @@ by Orchestrator under Annex C.3 and is a separate act.
 
 ---
 
-## 6 · One data model, three surfaces, four intermediate fields — no parallel schema
+## 6 · One data model, three surfaces, seven benchmark fields — no parallel schema
 
 ### 6.1 · Verified, not assumed — 2026-08-18
 
@@ -437,16 +447,46 @@ value; `CLAIM 009` and `CLAIM 034` carry *"counter-directional evidence"* as lab
 | `LOCATOR` | dossier quotes + manifest `verbatim_locators.entries[]` | the other two surfaces |
 | `PROVENANCE` | manifest `receipt` · `source_artifacts[]` (path + sha256 + kind) · `Wikilinks` | the other two surfaces |
 | `MECHANISTIC_RELEVANCE` | `Pathway` + `Impact on Working Model` | structural field |
-| `UNCERTAINTY` | `Status` (`in observation` · `conflicting evidence` · …) + qualifiers inside `Type` | structural + labelled prose, existing convention |
-| `LIMITATIONS` | labelled prose in `Summary` / `Clinical meaning` (existing: *"con limiti metodologici dichiarati"*, *"Evidence boundary"*) | labelled prose, existing convention |
-| `CONTRADICTORY_EVIDENCE` | `Status: conflicting evidence` + labelled prose (existing: *"⚠️ Counter-directional evidence"*) | structural + labelled prose, existing convention |
+| **`UNCERTAINTY`** | **none as a label** — `Status` carries a lifecycle value, not this | **BENCHMARK / INTERMEDIATE field** |
+| **`LIMITATIONS`** | **none as a label** — prose inside `Summary` / `Clinical meaning`, unlabelled | **BENCHMARK / INTERMEDIATE field** |
+| **`CONTRADICTORY_EVIDENCE`** | **none as a label** — one claim carries *⚠️ Counter-directional evidence*; `Status: conflicting evidence` is cross-paper lifecycle, not intra-paper contradiction | **BENCHMARK / INTERMEDIATE field** |
 | **`OBSERVATION`** | **none** | **BENCHMARK / INTERMEDIATE field** |
 | **`AUTHOR_INTERPRETATION`** | **none** | **BENCHMARK / INTERMEDIATE field** |
 | **`LEGEND_INTERPRETATION`** | **none** — today blended into `Summary` | **BENCHMARK / INTERMEDIATE field** |
 | **`DIRECTION`** | **none** — prose only (*up-regolata*, *counter-directional*) | **BENCHMARK / INTERMEDIATE field** |
 
-**The four intermediate fields are written by both modes, per claim candidate, in a fixed
-block after the twelve canonical fields:**
+### 6.3 · Why the last three moved — revision 2, Mirror finding B-5
+
+Revision 1 refused to promote `UNCERTAINTY`, `LIMITATIONS` and `CONTRADICTORY_EVIDENCE` on the
+stated ground that *"the registry already carries them as labelled prose under stable labels"*.
+**That premise fails measurement.** Counted over the 39 `## CLAIM` sections of
+`claim_registry_current.md` at `BASE_HEAD cbce3016`, and re-counted independently after the
+finding was raised:
+
+```
+the twelve canonical bold labels          39/39   (Wikilinks 38/39)
+**Uncertainty:**   as a label              0/39
+**Limitations:**   as a label              0/39
+**Contradictory evidence:** as a label     0/39
+**Evidence boundary:**                     5/39  + 3 suffixed variants  = 8 claims
+**⚠️ Counter-directional evidence …:**      1/39
+Status: conflicting evidence                     cross-paper lifecycle value, not this concept
+```
+
+There is no stable label to defer to. An evaluator could not locate any of the three across
+claims without reading prose, which is precisely the comparison the benchmark has to make. So
+the refusal rested on something that is not the case, and the classification is corrected:
+**seven benchmark fields, not four.**
+
+Two things this does *not* change, and they are the load-bearing half. The refusal of a
+**parallel claim schema** stands and was right. And nothing here is added to
+`claim_registry_current.md`: the three move from *"already canonical, do not duplicate"* to
+*"benchmark-only, like the other four"* — a move **within** the benchmark field set, not a step
+toward the canonical registry. Whether any of the seven is later promoted remains a separate
+governed decision after the benchmark outcome exists.
+
+**The seven benchmark fields are written by both modes, per claim candidate, in a fixed block
+after the twelve canonical fields:**
 
 ```
 **Observation:**            what was measured, in what, with what result — no verb of conclusion
@@ -454,19 +494,20 @@ block after the twelve canonical fields:**
 **LEGEND interpretation:**  what the reader concludes, typed (INFERENZA / IPOTESI), or "none"
 **Direction:**              increase | decrease | no change | not tested | mixed  — of the endpoint
                             under the intervention/genotype named in the observation
+**Uncertainty:**            what is not settled, and by what
+**Limitations:**            authors' limitations and the reader's, distinguished
+**Contradictory evidence:** inside this paper, or "none found — searched: <what>"
 ```
 
-They exist because *the one thing a second reader must be able to attack is the seam between what
-was observed and what was concluded, and today that seam is inside a paragraph.* They are
-**benchmark intermediate fields**: written in benchmark outputs, evaluated in the comparison,
-and **not added to `claim_registry_current.md`** by this protocol. Whether they are later
-promoted into the canonical claim form is a separate, governed decision after the benchmark
-outcome exists — not made here, and not to be made by anyone during the benchmark.
+A block of eight labels appears in the output schema: these seven, plus **`Locators:`**, which
+is a cross-reference to manifest entry indices rather than a claim concept. It is counted
+separately for that reason, and it is required exactly as the seven are.
 
-`UNCERTAINTY`, `LIMITATIONS`, `CONTRADICTORY_EVIDENCE` are **not** promoted: the registry already
-carries them as labelled prose under stable labels, and a field that duplicates a labelled
-convention is the *second noun for one object* the operator's instruction forbids. The
-benchmark output schema requires the labels; it does not require new fields.
+The first four exist because *the one thing a second reader must be able to attack is the seam
+between what was observed and what was concluded, and today that seam is inside a paragraph.*
+The last three exist because the labels they were deferred to do not exist. All seven are
+**benchmark fields**: written in benchmark outputs, evaluated in the comparison, and **not added
+to `claim_registry_current.md`** by this protocol.
 
 ### 6.3 · What is explicitly not created
 
