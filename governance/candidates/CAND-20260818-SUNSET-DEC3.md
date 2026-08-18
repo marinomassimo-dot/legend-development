@@ -230,6 +230,31 @@ real record           exit 0   reports without judging
 **Determinism:** identical output for the same `--now`, twice. **The clock drives it:** lease #3
 derives `ACTIVE` at `13:00:00Z` and `STALE` at `13:10:00Z`, across its own `EXPIRES_AT`.
 
+### 🔴 What Mirror's independent check does and does not establish — pinned deliberately
+
+Mirror verified that leases #2, #4 and #5 were used, by converting the canonical commit
+timestamps to UTC and placing them inside the windows in this record — all three inside, all
+before release. **That route is stronger than the annotation** in §*Lease records*, because it
+does not require trusting the annotation.
+
+**State its limit, because the sentence this compresses into is *"Mirror verified the leases"*,
+and that is not what happened.**
+
+```
+ESTABLISHED    a hand-written record is CONSISTENT with an independent trace
+NOT ESTABLISHED  that the record is AUTHENTIC
+```
+
+The lease record is **hand-written**: its timestamps are asserted by the Orchestrator, the commit
+times are not. **A record composed to match commit times would pass this check identically.** The
+check is stronger than an annotation and weaker than verification of a lease, which nothing
+currently available can supply and which this candidate does not claim to provide.
+
+**§3B survives intact**: the demonstration is that `VISIBILITY` was worth having — Mirror could
+not run this check at all while the record was git-ignored — **and nothing more.** It says
+nothing about `LIFECYCLE ENFORCEMENT`, which is the distinction this candidate exists to keep
+apart. *(Raised by Mirror, `REV-SUNSET-DEC3-MIRROR-002`; pinned at Mirror's request.)*
+
 **Repository validators, at the content tip:** `legend_lint` PASS · `fulltext_receipts verify` OK
 · `growth_anchors check` PASS · `public_release_gate` PASS / BLOCKS 0 ·
 `governance_fingerprint compose --all` PASS. *(§7 records the run.)*
