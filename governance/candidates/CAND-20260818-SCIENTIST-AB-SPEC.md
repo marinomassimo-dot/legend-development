@@ -20,9 +20,11 @@ REVISION:                   1
 BASE_HEAD:                  cbce30168091f7769c56c4f019055fa55fd0d66a
 BRANCH:                     scientist-ab-spec
 CONTENT_TIP:                b965ca5880e93ad57770a0483aaa4652ec5f390c
-MANIFEST_TIP:               the commit carrying this file — governance/candidates/ is a declared
-                            CONTROL_PLANE_ROOT, so the hash is identical at both (§2 records the
-                            measurement rather than asserting the property)
+MANIFEST_TIP:               7641dfdf3b42a0312bfeae304b03832a94181633
+                            # governance/candidates/ and ledger/ are declared CONTROL_PLANE_ROOTS,
+                            # so the hash is identical at the content tip, at the ledger commit
+                            # between them, and here. Measured at all three (§1 Reproduction),
+                            # not asserted from the property.
 CANDIDATE_CONTENT_HASH:     3b568aae6c76848da197cacd43e517373ab7ca9532cf9289a73097e261916c75
 CANDIDATE_HASH_VERSION:     legend-candidate-v4
 CHANGE_CLASS:               MAJOR
