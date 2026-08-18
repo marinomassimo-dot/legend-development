@@ -28,12 +28,35 @@ Actors are identified by ACTOR_ID and located by worktree name:
 
 | ACTOR_ID | Worktree | Contract |
 |---|---|---|
-| `orchestrator` | the root checkout | `roles/orchestrator.md` |
+| `orchestrator` | `orchestrator` — its own worktree, for its own work | `roles/orchestrator.md` |
 | `plan` | `evidence-index` | `roles/plan.md` |
 | `mirror` | `mirror` | `roles/mirror.md` |
 | `scientist-a` | `lettore` | `roles/scientist.md` |
 | `scientist-b` | `lettore-b` | `roles/scientist.md` |
 | `scientist-c` | `lettore-c` | `roles/scientist.md` |
+
+### The Orchestrator's worktree, and why the root is not it
+
+The Orchestrator previously had no worktree of its own: its working directory *was* the root
+checkout. That is corrected here, and **not as a workaround.**
+
+`Annex D.1` defines `WORK_COMMIT` as *"ogni attore, proprio branch"* and `CANONICAL_BATCH_COMMIT`
+as *"solo Orchestrator, root"*. The root's branch is `main`, and a commit to `main` is canonical by
+definition — so an Orchestrator living in the root had **no branch on which a `WORK_COMMIT` was
+possible**. Every other actor had one. The consequence was not theoretical: anything the
+Orchestrator authored could not become durable, could not reach an integration candidate, and left
+the root permanently unclean, so `GATE 0` would fail from that actor's first durable output onward
+— and §8 obliges it to produce durable output, since it maintains the `DAILY_BRIEF` and records
+every adjudication rationale.
+
+**The correction improves the posture that §14 calls critical rather than merely unblocking one.**
+`ONE_WRITER_PER_WORKING_DIRECTORY` is *"critico nella root"*. With the Orchestrator resident there,
+the root carried a standing writer at all times. With this change the root has a writer **only
+inside a batch window**: it becomes the canonical-commit surface and nothing else, which is what
+§14 asks for and what the previous arrangement could not give.
+
+*(The improved-posture framing, and the observation that a change argued as a workaround gets
+reverted as one, are the orchestrator's, from the exchange of 2026-08-17.)*
 
 ```
 INTERACTION_PROFILE: VISIBLE_VSCODE
