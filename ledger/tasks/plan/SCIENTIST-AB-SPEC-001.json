@@ -1,0 +1,88 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.2 TASK_ACK + A.3 TASK_CLAIM",
+  "_note": "Operator-directed work, not a task assigned under H.1. No ACTIVE lease exists and no Orchestrator issued a Task Contract; the work arrives through the durable handoff HANDOFF-20260818-SCIENTIST-AB, whose front matter records the operator authorization (2026-08-18, transmitted L2-20260818-ORCH-051). This record exists so the work has provenance, not to assert that a task-assignment authority was exercised.",
+
+  "TASK_ID": "SCIENTIST-AB-SPEC-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+
+  "TASK_ACK": {
+    "state": "ACCEPTED",
+    "accepted_on": "2026-08-18",
+    "objective": "Complete the definitive specification of Scientist A and Scientist B: distinct registrable actors, scientifically independent and comparable, usable in the first controlled benchmark — reusing the existing scientific data model and documenting only genuinely necessary extensions.",
+    "interaction_mode": "AUTONOMOUS_COMPLETE",
+    "review_requirement": "R4 / MIRROR_REQUIRED — the candidate changes a role contract and defines a method; nothing it proposes may be executed before that review and the operator's approval",
+    "scope_rule": "SCOPE MUST NOT BE REDUCED (handoff front matter). Scope is also not widened: the seven governance debts stay open and no benchmark is started."
+  },
+
+  "TASK_CLAIM": {
+    "claimed_by": "plan",
+    "claimed_on": "2026-08-18",
+    "timestamp_precision": "date only — the runtime exposed no wall-clock time",
+    "durable_pointer": "governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md",
+    "uniqueness": "no competing claim exists for this TASK_ID + GENERATION; ledger/tasks/ holds no other open contract naming this handoff"
+  },
+
+  "REHYDRATION": {
+    "_note": "This session inherited no identity, authority or state from a previous chat. Everything below was read at source before any work began (body §36.5: memory orients, durable state decides).",
+    "worktree": "evidence-index",
+    "worktree_matches_git_toplevel": true,
+    "branch": "scientist-ab-spec",
+    "head_at_open": "cbce30168091f7769c56c4f019055fa55fd0d66a",
+    "tree_at_open": "clean",
+    "role_contract_read": "roles/plan.md — in full",
+    "governance_version": "3.1.1",
+    "applicable_governance_fingerprint": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+    "fingerprint_recomputed_in_worktree": true,
+    "stable_actor_identity": "plan · evidence-index · roles/plan.md — from the Agent Card registry on branch orchestrator and the deployment profile, both read at source",
+    "current_session_ref": "NOT DECLARED — an actor cannot observe its own routing reference (ListAgents shows peers only). The registry's evidence-index-59 [de42c4] describes an earlier incarnation and is not asserted for this one. Nothing in this work is keyed by a session reference."
+  },
+
+  "PRECONDITIONS_VERIFIED_AT_SOURCE": {
+    "handoff": "governance/candidates/HANDOFF-SCIENTIST-AB-SPEC.md — tracked on branch sunset-decision3 at fbf3e7e, revised b22968d; NOT present in main at cbce3016. Read from git, verified complete, and not superseded: the only later commit on that branch, 84b25fe, adds an unrelated debt record.",
+    "main": "cbce30168091f7769c56c4f019055fa55fd0d66a — root checkout clean, unchanged by this work",
+    "scientist_a": "worktree lettore · branch lettore · HEAD 9b0cf470 · 164 behind main · 0 ahead · DIRTY (1 file) · no roles/ and no governance/ in the tree",
+    "scientist_b": "worktree lettore-b · branch lettore-b · HEAD cb50e177 · 166 behind main · 0 ahead · DIRTY (1 file) · no roles/ and no governance/ in the tree",
+    "actor_ids": "UNRESOLVED for both, confirmed in the Agent Card registry on branch orchestrator — NOT_REGISTERED, no session, zero tasks, zero checkpoints",
+    "c2": "PMID42422765.json modified in both worktrees, byte-identical, sha256 6c3fe60f…, equal to tag handoff/C-2/PMID42422765-working-blob (blob 86bba8bb). Nothing reset, checked out, deleted or committed. Content CLOSED; only the forward-ownership question was carried, and it is answered as a rule in the spec.",
+    "packet": "files/fulltext/PMID42397075_Aqeilan2026.pdf sha256 b6b44816… present in the root checkout and in lettore (hard-linked, same inode 6395850); ABSENT in lettore-b and in evidence-index — files/ is git-ignored. Parity between the two readers is therefore something to BUILD, not something to assume, which is what the input surface does."
+  },
+
+  "MILESTONE_PLAN": [
+    {"id": "M-1", "milestone": "Handoff carried onto this branch byte-identically", "durable_evidence": "governance/candidates/HANDOFF-SCIENTIST-AB-SPEC.md @ 97735fe", "status": "COMPLETE"},
+    {"id": "M-2", "milestone": "Reading modes, actor identity, ownership rule — normative", "durable_evidence": "framework/protocols/scientist_reading_modes.md, roles/scientist.md, BOOTSTRAP.md @ 384f05f", "status": "COMPLETE"},
+    {"id": "M-3", "milestone": "Benchmark protocol, tooling exercised, input package, evaluation population", "durable_evidence": "framework/protocols/controlled_benchmark_ab.md, framework/scripts/benchmark_input_surface.py, framework/eval/benchmarks/BENCH-AB-001/ @ b965ca5", "status": "COMPLETE"},
+    {"id": "M-4", "milestone": "Checkpoint + candidate manifest with hash, classification and Mirror package", "durable_evidence": "ledger/checkpoints/plan/CHK-plan-0010.json, governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md", "status": "IN_PROGRESS"},
+    {"id": "M-5", "milestone": "Stop for R4 Mirror review. No execution, no approval, no benchmark.", "durable_evidence": "this branch", "status": "PENDING"}
+  ],
+
+  "WRITE_PERIMETER": {
+    "content_domain_written": [
+      "framework/protocols/scientist_reading_modes.md",
+      "framework/protocols/controlled_benchmark_ab.md",
+      "framework/protocols/index.md",
+      "framework/scripts/benchmark_input_surface.py",
+      "framework/eval/benchmarks/BENCH-AB-001/**",
+      "framework/eval/README.md",
+      "roles/scientist.md",
+      "BOOTSTRAP.md"
+    ],
+    "control_plane_written": [
+      "governance/candidates/HANDOFF-SCIENTIST-AB-SPEC.md",
+      "governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md",
+      "ledger/tasks/plan/SCIENTIST-AB-SPEC-001.json",
+      "ledger/checkpoints/plan/CHK-plan-0010.json"
+    ],
+    "deliberately_not_touched": {
+      "main and the root checkout": "Plan may not use them as a working space (roles/plan.md)",
+      "disease-models/**": "no scientific content is changed; the four current files are untouched",
+      "lettore, lettore-b": "another actor's worktree; the C-2 working copies are each actor's own",
+      "governance/ (body and annexes)": "no governance text is amended — Annex I.2 step 7 and I.4 are SATISFIED here, not edited",
+      "runtime/agent_card_registry.md": "on branch orchestrator; the registry row is written at registration, by the registrar, not here"
+    }
+  },
+
+  "STATE": "CLAIMED → IN_PROGRESS → AWAITING_REVIEW"
+}
