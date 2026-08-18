@@ -56,9 +56,16 @@ OBTAINED (run 2)  e7036a1fca7a63d41121b52b8ab33dd5cc5a104dcd6f104b426603dfd4f2e8
 Domain counts are **outputs of that command at that tip**, never maintained constants — read
 them from `--show-domain` rather than from this manifest.
 
-**Manifest tip vs content tip.** This manifest revision is added at a later commit than
+**Manifest tip vs content tip.** This manifest revision is written at a later commit than
 `234c8bae`. `governance/candidates/` is a declared `CONTROL_PLANE_ROOT`, so the hash is identical
 at both — §7 records the measurement rather than asserting the property.
+
+> **`BRANCH_TIP` names *the tip after the content changes*, not a tip free of control plane.**
+> Verified: the r1 manifest **is present** at `234c8bae`, and **was absent** at r1's content tip
+> `325da043`. So the two revisions demonstrate hash invariance by **different routes** —
+> r1 that *adding* the manifest moves nothing, r2 that *revising* it moves nothing. Both hold;
+> they are not the same demonstration, and a reviewer should not have to re-derive which one
+> a given tip supports. *(Raised by Mirror, `REV-SUNSET-DEC3-MIRROR-002`.)*
 
 ## 2 · File list and classification
 
