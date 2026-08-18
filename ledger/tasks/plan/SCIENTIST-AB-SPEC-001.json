@@ -55,8 +55,19 @@
     {"id": "M-2", "milestone": "Reading modes, actor identity, ownership rule — normative", "durable_evidence": "framework/protocols/scientist_reading_modes.md, roles/scientist.md, BOOTSTRAP.md @ 384f05f", "status": "COMPLETE"},
     {"id": "M-3", "milestone": "Benchmark protocol, tooling exercised, input package, evaluation population", "durable_evidence": "framework/protocols/controlled_benchmark_ab.md, framework/scripts/benchmark_input_surface.py, framework/eval/benchmarks/BENCH-AB-001/ @ b965ca5", "status": "COMPLETE"},
     {"id": "M-4", "milestone": "Checkpoint + candidate manifest with hash, classification and Mirror package", "durable_evidence": "ledger/checkpoints/plan/CHK-plan-0010.json, governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md", "status": "IN_PROGRESS"},
-    {"id": "M-5", "milestone": "Stop for R4 Mirror review. No execution, no approval, no benchmark.", "durable_evidence": "this branch", "status": "PENDING"}
+    {"id": "M-5", "milestone": "Stop for R4 Mirror review. No execution, no approval, no benchmark.", "durable_evidence": "this branch", "status": "COMPLETE — REV-SCIAB-MIRROR-001, verdict REQUEST CHANGES"},
+    {"id": "M-6", "milestone": "GENERATION 2 — remediate the five blocking findings and classify R-1..R-12. Reproduce each finding before changing anything.", "durable_evidence": "the remediation commit; ledger/checkpoints/plan/CHK-plan-0011.json", "status": "COMPLETE"},
+    {"id": "M-7", "milestone": "Revision 2 binding: new content tip, new hash c0701094…, manifest revised, DELTA REGRESSION 0 with both sets enumerated", "durable_evidence": "governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md §1, §4.2", "status": "COMPLETE"},
+    {"id": "M-8", "milestone": "Stop for a NEW independent R4 Mirror review of revision 2, from R-1. No prior verdict transfers.", "durable_evidence": "this branch", "status": "REACHED — nothing further is executed"}
   ],
+
+  "GENERATION_2": {
+    "_note": "A separate Plan session, opened by the operator for the bounded remediation task. It inherited no identity, authority, decision or task state from the session that authored revision 1; everything was reconstructed from durable repository evidence (body §36.5).",
+    "review_remediated": "REV-SCIAB-MIRROR-001 @ ff8b15cc — read from the git object on branch mirror, without merging Mirror into this branch and without any cross-worktree write",
+    "session_ref": "NOT DECLARED — no durable protocol provides or verifies one; the registry's evidence-index-59 [de42c4] describes an earlier incarnation and is not asserted here",
+    "checkpoint": "ledger/checkpoints/plan/CHK-plan-0011.json",
+    "scope": "the five blocking findings, the twelve recorded findings, and the binding. Nothing else. The session-routing debt was observed again and deliberately left untouched."
+  },
 
   "WRITE_PERIMETER": {
     "content_domain_written": [
@@ -84,5 +95,5 @@
     }
   },
 
-  "STATE": "CLAIMED → IN_PROGRESS → AWAITING_REVIEW"
+  "STATE": "CLAIMED → IN_PROGRESS → AWAITING_REVIEW → CHANGES_REQUESTED → REMEDIATED (rev 2) → AWAITING_REVIEW"
 }
