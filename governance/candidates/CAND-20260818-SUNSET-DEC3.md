@@ -232,10 +232,22 @@ derives `ACTIVE` at `13:00:00Z` and `STALE` at `13:10:00Z`, across its own `EXPI
 
 ### 🔴 What Mirror's independent check does and does not establish — pinned deliberately
 
-Mirror verified that leases #2, #4 and #5 were used, by converting the canonical commit
-timestamps to UTC and placing them inside the windows in this record — all three inside, all
-before release. **That route is stronger than the annotation** in §*Lease records*, because it
-does not require trusting the annotation.
+**Mirror *checked* leases #2, #4 and #5 against canonical commit timestamps**, converting them to
+UTC and comparing them with the windows in this record: all three batches fall **inside** their
+window and **before** release.
+
+**That is co-occurrence between two records.** *"The leases were used"* is an **inference** from
+it, and the inference holds only if the hand-written record is authentic — which the block below
+says is **not** established. The route is stronger than the annotation in §*Lease records*,
+because it does not require trusting the annotation; it is not a verification of use.
+
+> *Revision note.* The first version of this paragraph opened *"Mirror verified that leases #2,
+> #4 and #5 were used"* — **asserting in its headline exactly what the block below withholds**,
+> in the section written to stop this compressing into *"Mirror verified the leases"*. It is the
+> same defect Mirror filed against its own review table — the claim in the headline, the caveat
+> underneath, **and a reader takes the headline.** Corrected on Mirror's finding, and the
+> original wording is recorded here rather than replaced silently, because a guard that failed
+> at its own opening line is worth seeing.
 
 **State its limit, because the sentence this compresses into is *"Mirror verified the leases"*,
 and that is not what happened.**
