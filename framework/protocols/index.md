@@ -91,6 +91,7 @@ Provide a content map of the LEGEND system organized by:
 | [[parallel_legend_protocol]] | Parallel-branch protocol |
 | [[scientist_reading_modes]] | Reading modes A/B, Scientist actor identity, task ownership of a reading |
 | [[controlled_benchmark_ab]] | Controlled A/B reading benchmark — blind input surface, freezing, evaluation |
+| [[cross_session_transport]] | Cross-session transport — durable artifact vs control envelope, delivery taxonomy, version-bound runtime guarantees |
 | [[wikilink_schema]] | Wikilinking rules |
 
 ---
