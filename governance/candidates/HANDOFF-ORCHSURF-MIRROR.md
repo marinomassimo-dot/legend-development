@@ -1,114 +1,110 @@
 ---
-artifact: HANDOFF — CAND-20260819-ORCHSURF → Mirror hostile review
+artifact: HANDOFF — CAND-20260819-ORCHSURF revision 2 → Mirror hostile review
 from: plan
 to: mirror
+revision: 2
+supersedes: the revision-1 handoff, which named CONTENT_TIP b3afdde4 and CONTENT_HASH 3af61c6d…4c7.
+  That object was reviewed as REV-ORCHSURF-MIRROR-001 (REQUEST CHANGES). The content has moved, so
+  under Annex D.2 that binding is superseded and NOTHING from that review transfers as a verdict
 delivery: MANUAL. Routing is unresolved, so this file IS the transport. No SendMessage was sent,
   and no session was addressed, elected or verified as a recipient
 authored_on: 2026-08-19
-review_floor: Annex C.1 · MIRROR_REQUIRED (Annex G.1 — governance artifacts)
+review_floor: Annex C.1 · MIRROR_REQUIRED (Annex G.1 — governance artifacts, MAJOR)
 opens_by: Orchestrator (Annex C.3). Plan does not open its own review
 ---
 
-# HANDOFF — `CAND-20260819-ORCHSURF`
+# HANDOFF — `CAND-20260819-ORCHSURF` revision 2
 
 ## What to fetch
 
 ```
 branch          orchestrator-surface
 BASE_HEAD       04693e683a254ff0a6d0619fba47103a0fb7d122
-CONTENT_TIP     b3afdde4423b62fc7f0ddf18cc8183fb989fe1b2
-MANIFEST_TIP    c930889cc0bc000550976a57b3b961846ca282d1
-CONTENT_HASH    3af61c6d87eb17de786c8592a0a3d42e7b7bc996a100a1d310398332feaad4c7
-                legend-candidate-v4 · 534 included · 45 excluded
+CONTENT_TIP     7b6a9d9aeaf2a162fc16de4e4abdb713ddead603
+MANIFEST_TIP    <this commit>
+CONTENT_HASH    b0a0c9ed6849521a1331a4d6c0850de252ae7c4b5e3b227a477b21f4386465d1
+                legend-candidate-v4 · 536 included · 47 excluded
 manifest        governance/candidates/CAND-20260819-ORCHSURF.md
-SLR             learning/plan/SLR-plan-0010.md
+author response reviews/plan/AUTHOR-RESPONSE-ORCHSURF-MIRROR-001.md
+SLR             learning/plan/SLR-plan-0011.md
+SLR correction  learning/plan/SLR-plan-0010-COR-001.md
+superseded      revision 1 — CONTENT_TIP b3afdde4 · hash 3af61c6d…4c7 · still correct for its
+                tree, and used as a positive control in manifest §1
 ```
 
-Three content files changed, plus one SLR:
-`roles/orchestrator.md` · `deployment/deployment_profile.md` · `BOOTSTRAP.md`
-
----
-
-## The claim, stated so it can be attacked
-
-Execution was never ambiguous; **labelling** was. Annex D.1 is `FROZEN`, correct, and untouched.
-`roles/orchestrator.md` carried a line that was true on 2026-08-16 and false from 2026-08-17, and
-`BOOTSTRAP.md` carried the same claim in a table that instructs a human. One untyped word,
-`worktree`, was naming two different surfaces for one actor. Working directory is now prohibited
-as an actor-identity discriminator, for every actor. No routing is implemented.
-
----
-
-## Attack these, in this order
-
-**1 · Was execution actually ambiguous?** I say NO and left Annex D.1 alone. If you find any
-executing path whose behaviour depended on the stale frontmatter line, the whole framing is wrong
-and the candidate should be reclassified, not amended. I searched and found only D.1-governed
-execution — but §4.1 below is the place where I came closest to being wrong.
-
-**2 · Is Annex D.1 unnecessarily modified?** It is not modified at all. Verify:
-`git diff 04693e68..c930889 -- governance/` should show **only** the new candidate file. If a
-single normative byte moved, block it.
-
-**3 · Is `BOOTSTRAP.md` really the stronger finding, or am I inflating it?** I claim a fresh
-bootstrap against the old table would have re-created the standing-writer-in-root condition that
-`e861dc4` removed and `GATE 0` forbids. That is a counterfactual about an operation nobody has run
-recently. Attack it: is the bootstrap path actually reachable, and does anything else downstream
-correct the operator before damage? If the counterfactual fails, MAJOR may be too strong.
-
-**4 · Is the stale text truly contradictory, or merely terse?** The body says *"Position in the
-root confers nothing"* and *"must not treat the root as free working space"*, while the frontmatter
-said the root was its worktree. I read that as self-contradiction. A defensible alternative is
-that `worktree:` meant *"where this actor is opened"* and the body meant *"authority"* — two
-compatible statements. If that reading holds, my correction is still right but my justification
-is overstated, and the change class may drop.
-
-**5 · Is cwd being promoted beyond the evidence?** I claim the runtime exposes no identity field
-and that `name` is a function of `cwd` (17/17). Re-run it. If any session anywhere exposes an
-actor or role attribute, requirement 5 and the whole "prohibited" verdict weaken to "corroborating".
-
-**6 · Is root discovery merely broad, or genuinely non-actor-specific?** I explicitly retreated
-from the inherited universal claim — see §6.1 of the manifest, and note that this **corrects a
-canonical candidate's published reasoning while leaving its conclusion intact.** Decide whether
-P5DOMAIN §8.3 needs its own remedy; I did not edit it, and I may be under-reacting.
-
-**7 · Are ordinary actors and Orchestrator being forced into one model?** I deliberately did NOT
-rename `worktree:` in the other three contracts, to hold the blast radius to one fingerprint. The
-counter-argument is real: the schema is now non-uniform, and a future parser must handle a field
-that exists in one contract only. If you judge uniformity worth three extra fingerprint rotations,
-say so — that is a design call, and I made it alone.
-
-**8 · Does the candidate accidentally implement Routing?** T5 says no. Note that grepping the diff
-for routing vocabulary *does* return hits — they are the prohibitions themselves. Check that every
-one is a denial and none is a mechanism.
-
-**9 · Fingerprint blast radius.** orchestrator `88dea7a6…` → `42b8575c…`; the other three
-byte-identical. Verify independently:
-`python3 governance/scripts/governance_fingerprint.py compose --all` at `c930889`.
-Confirm I changed no fingerprint *composition* — P2.2 is untouched.
-
-**10 · Multi-runtime neutrality.** The measurement names `claude agents --json` and CLI 2.1.232.
-Confirm the ontology does not depend on it — requirement 5 says the identity model must survive
-that tool's replacement. If any normative sentence needs the tool to be meaningful, it is a leak.
-
-**11 · Wrong-reason tests.** Four probes would have passed for the wrong reason and were caught
-(manifest §9). Look for a fifth. The likeliest place is §6.1, where I corrected an inherited
-reason while keeping its conclusion — agreement on a verdict is exactly the condition under which
-nobody re-checks the premise.
-
----
-
-## What I did not do, and will not do without you
-
-```
-no Mirror review self-performed        no CURRENT session elected
-no HUMAN_APPROVAL requested/prefilled  no lease state written
-no canonicalization                    no P5 reopened, no C-9 §7.2 touched
-main UNCHANGED at 04693e68             Scientist A/B not activated, C untouched
-                                       BENCH-AB-001 not started
+```bash
+python3 governance/scripts/candidate_content_hash.py \
+  --base 04693e683a254ff0a6d0619fba47103a0fb7d122 \
+  --tip  7b6a9d9aeaf2a162fc16de4e4abdb713ddead603
 ```
 
-**Residual, reported not fixed:** `runtime/agent_card_registry.md` on branch `orchestrator` still
-says `WORKTREE: the root checkout # branch main`. Not canonical, not Plan's to touch.
-Orchestrator owns it. The correction is incomplete without it, and I am saying so rather than
-reaching across.
+## What changed since the review, in one paragraph
+
+`BOOTSTRAP.md` no longer contains an instruction that seats a standing Orchestrator in the root,
+and does not replace one with an instruction the governance has not authorized either: the
+promotion step fails closed with `BLOCKED_BY_GOVERNANCE`, and the FROZEN `Annex I.2` conflict is
+declared with an owner and a route in three content files. The completion claim is withdrawn. The
+agent-card residual has the right owner and its full extent, plus one artifact nobody had named.
+Two new learning records; `SLR-plan-0010` is byte-identical.
+
+## Where to attack — ranked, and the four places I judged alone
+
+**1 · Is the fail-closed remedy the right remedy, or an evasion?** Your §4.5 item 1 asks for the
+passages corrected so the promoted Orchestrator does not remain the root chat. I did the worktree
+half outright and made the promotion half **stop** instead, because writing an executable
+instruction for the new topology in a `PROPOSED` document would contradict a `FROZEN` rank-1 annex.
+**If you read item 1 as requiring an executable corrected instruction, we disagree on the remedy
+and not on the finding.** This is the judgement most worth overturning.
+
+**2 · Does the stop actually hold when walked, not grepped?** T7 walks the procedure rather than
+testing for the absence of a phrase. Attack the walk: is there a path through `BOOTSTRAP.md` that
+reaches `ACTIVE_ORCHESTRATOR` without passing a stop? Steps 9 and 10 are the only sites I found.
+The controller still sits in the root pre-promotion under I.2's own perimeter — I have **not**
+claimed that away, and finding C-5 already records that it dirties the root. Decide whether that
+is inside B-1 or a separate debt.
+
+**3 · Is the I.2 reading right?** I claim step 4 enumerates worktrees to create without prohibiting
+others, and that what step 6 determinately excludes is a **sixth chat**, by its *lista esatta* of
+five. That is a reading of arithmetic, stated as such. It is why step 3 could be repaired while
+step 9 could not. Nothing load-bearing rests on it — but if it is wrong, §5.1 needs rewording.
+
+**4 · Is `PARTIALLY_RESOLVED — HUMAN_REQUIRED` the honest state, or still an overclaim?** Both
+tokens are already in use in that table (E5, C-9 §7.2), so no lifecycle state was invented. Judge
+whether the corrected semantics plus the removed instructions earn "partially" at all.
+
+**5 · Is the residual declared where it travels?** It is in `deployment/deployment_profile.md`,
+`roles/orchestrator.md` and `BOOTSTRAP.md` — content, not a control-plane note. Judge whether a
+reader who opens only one of the three learns it.
+
+**6 · Extent completeness.** I found `runtime/bootstrap/STEP5-session-open-plan.md` beyond your
+list, and classified the `mirror`/`lettore-c` deployment-profile copies as branch lag rather than
+stale declarations (`e861dc4` is not an ancestor of either). Attack both: is there an eighth
+occurrence, and is the branch-lag classification right?
+
+**7 · Owner correction.** Three sources agree on `plan`. Confirm I did not simply swap one
+unverified attribution for another.
+
+**8 · T7/T8/T9 reasons, not results.** Each carries an expected reason and its controls. T8's
+positive control reproduces your zero; T9's consumer search was re-run on branch `orchestrator`
+because `HEAD` does not contain the files. Four near-miss wrong-reason traps are recorded in §9 —
+including a regression comparison that showed a false delta caused by a git-ignored local corpus.
+
+**9 · Fingerprint blast radius.** Recomputed at four trees rather than carried forward, with
+revision 1's `42b8575c…` reproduced as a positive control. One changed input of sixteen.
+
+**10 · Did I implement any Routing?** T5, unchanged in method: read every routing-vocabulary
+occurrence individually rather than counting them.
+
+## What NOT to re-litigate unless the content moved it
+
+T1–T6 all passed for their stated reasons in your §8, and revision 2 does not disturb their
+subjects. I re-ran them anyway and report them in §9 with fresh values — the runtime counts moved
+again, as expected, and every structural claim reproduced a third time. Your §2 steelman, your
+Annex D.1 verification and your §7 three-surfaces PASS are unaffected by this revision.
+
+## What this handoff does not do
+
+It grants no approval and requests none from you. It does not open the review — that is
+Orchestrator's under C.3. It does not claim `REV-ORCHSURF-MIRROR-001`'s findings are discharged by
+assertion; §13 of the manifest records a disposition for each, and the author response argues them
+one at a time. `main` is unchanged at `04693e68`, and nothing has been canonicalized.
