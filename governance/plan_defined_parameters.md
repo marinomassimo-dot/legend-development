@@ -283,17 +283,55 @@ laboratory's accumulated knowledge, they are proposed for canonical integration 
 knowledge, and they therefore belong to the content domain and **must** move the candidate hash
 when they change.
 
-🔴 **`runtime/` — OPEN CLASSIFICATION QUESTION, deliberately not answered here.** It is not a
-declared root and this amendment does not make it one. The reason is not oversight: `runtime/`
-holds artifacts of at least three different classes — dated bootstrap records (STATIC testimony),
-a roster (transitional), an Agent Card that C-9 §7.2 says should not be a single artifact at all,
-and scientific handoff material that is not a governance artifact. **Declaring a root for it would
-treat a container as a class**, which is the error C-9's B-1 corrected one level down. The
-question is registered against C-9 §7.2 and is resolved by that section's adoption, not by a
-fourth root. While `runtime/` remains untracked it is invisible to `git ls-tree` and therefore
-absent from the domain, so no fixed point arises in the interim; the cost is that C-5b persists —
-the roster of who exists stays readable by one actor — which is a cost already counted, not a new
-one.
+🔴 **`runtime/` — OPEN CLASSIFICATION QUESTION, and one tracked path already inside the domain.**
+It is not a declared root and this amendment does not make it one. The reason is not oversight:
+`runtime/` holds artifacts of at least three different classes — dated bootstrap records (STATIC
+testimony), a roster (transitional), an Agent Card that C-9 §7.2 says should not be a single
+artifact at all, and scientific handoff material that is not a governance artifact. **Declaring a
+root for it would treat a container as a class**, which is the error C-9's B-1 corrected one level
+down. The question is registered against C-9 §7.2 and is resolved by that section's adoption, not
+by a fourth root.
+
+🔴 **The sentence that stood here was false, and it was the load-bearing one.** It read: *"While
+`runtime/` remains untracked it is invisible to `git ls-tree` and therefore absent from the domain,
+so no fixed point arises in the interim."* `runtime/` has not been untracked since `325da04`, which
+gave the `ORCHESTRATOR_LEASE` a tracked home when `DECISION 3` sunset. At `main` there is exactly
+one tracked path under it — `runtime/orchestrator_lease.md` — it is not git-ignored, and it is
+**inside the content domain**: entry 495 of the 532 that the `XPORT` binding hashed, which
+`--emit-domain` prints and any reader can count. The premise was falsified by a change made in
+another file for a good reason, and nothing connected the two.
+
+**So the interim is not hazard-free, and the hazard is named here rather than deferred with the
+classification.** The lease is a *mutable* control-plane record — Annex I.3 gives it
+`ACTIVATED_AT`, `LAST_RENEWED`, `EXPIRES_AT`, `RELEASED_AT` — sitting in the domain that defines
+candidate identity. Both halves of that claim are measured, not assumed:
+
+```
+lease blob swapped at the XPORT tip   81f241f2… → ddc0b08d…   HASH MOVES
+reviews/ blob swapped, same tip       81f241f2… → 81f241f2…   HASH HOLDS — and the tree did change
+BASE_HEAD advanced, same tree         81f241f2… → 06095c0c…   HASH MOVES
+```
+
+**What prevents the fixed point today is procedure, and only procedure.** Lease rows are written on
+the `orchestrator` branch, never on `main` and never on a candidate branch, so a candidate cut from
+`main` carries a frozen lease blob and its binding is stable. Nothing mechanizes that: no script
+checks the write surface, `lease_state.py` derives lifecycle and not location, and `GATE 0` is
+asserted by hand. **A rule about what a batch may not touch is not a check that it did not.**
+
+🔴 **One consequence is structural and does not dissolve by being careful.** `GATE 0` requires an
+`ACTIVE` lease, and a lease's terminal row is written after the batch it authorized. The row
+recording a lease can therefore never sit inside the batch that lease authorized, so `main`'s copy
+of this record lags by at least the current lease, permanently — at this writing `main` carries
+rows #1–#5 while the `orchestrator` branch carries #1–#8. **Annex I.3's `DETECTION` — *"doppio
+record sulla stessa successione"* — is therefore weaker than a tracked home suggests**, because the
+rows an actor must compare sit on a branch it has to know to read rather than in `main`.
+
+**This amendment corrects the false sentence and does not resolve the classification.** Excluding
+the path would answer the question this section routes to C-9 §7.2, whose `hold` forbids adopting
+any clause until an operator-owned review closes; re-deriving that answer here is precisely the
+self-authorization a hold exists to prevent. **The debt is recorded with its owner** — C-9 §7.2,
+operator — and until it closes the mitigation is the procedure above, declared `PROCEDURAL` and not
+`MECHANIZED`. The cost that C-5b persists is unchanged and was already counted.
 
 ### P5.2 · The hash
 
@@ -325,8 +363,14 @@ python3 governance/scripts/candidate_content_hash.py --base <BASE_HEAD> --tip <B
 Add `--show-domain` to print the version, the base, the tip, the included entry count and every
 excluded path. The count is **derived by the command**, never maintained by hand in a manifest.
 
-The version prefix moves to `v3` because both the byte layout and the excluded roots changed;
-`v1` and `v2` values can therefore never collide with these.
+**The prefix in force is `legend-candidate-v4`, declared once at the head of this section.** It
+moved to `v3` when the byte layout and the excluded roots changed, and to `v4` when `reviews/` was
+added, so `v1`–`v3` values can never collide with these. The sentence that stood here still said
+*"moves to `v3`"* — true of the revision that wrote it, false of the section that carries it, and a
+reader reconciling it against the declaration eight lines above had no way to tell which bound.
+**The declaration binds; this paragraph describes it.** Because `candidate_content_hash.py` reads
+the rule from the tip being hashed, every historical value stays reproducible under the prefix it
+was computed with, and correcting this prose moves no published hash.
 
 ---
 
