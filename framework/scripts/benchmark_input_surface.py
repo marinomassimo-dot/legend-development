@@ -51,6 +51,10 @@ SPEC_VERSION = 2
 CHUNK = 1 << 20
 REFUSE = 2
 
+# The scan's default reach when a spec declares no `text_suffixes`. Named here because
+# `scan_skip_reason()` and the scan loop must not each carry their own copy of it.
+DEFAULT_TEXT_SUFFIXES = (".md", ".txt", ".json", ".py", ".yaml", ".yml")
+
 
 def refuse(message: str) -> "NoReturn":  # type: ignore[valid-type]
     """Exit 2, the code the docstring promises for a refusal.
@@ -226,42 +230,120 @@ def declared_blind_spots(spec: dict[str, Any]) -> list[str]:
                   & set(spec["forbidden_prior_output_paths"]))
 
 
-def unchecked_surface(root: Path, spec: dict[str, Any]) -> dict[str, list[str]]:
-    """Everything `--post-read` does NOT establish about a file that is PRESENT, by path.
+# 🔴 The census classes, and the one place their explanations live.
+#
+# Mirror `M-3`: revision 3's census enumerated the three populations that come out of
+# ONE of the content scan's four skip conditions, and the tool then printed that the
+# list was the whole of it. It was not: a declared scan-exempt input and a file whose
+# suffix is outside `text_suffixes` are skipped by the scan and were named by nothing,
+# and so was a text-suffixed file whose bytes do not decode. On a clean build that is
+# sixteen present files per surface, before any reader exists.
+#
+# `expected` answers "is this a consequence the protocol declares", which is a different
+# question from "was its content read". `still_covered_by` answers the question a
+# reviewer asks next, and it is deliberately narrow: it names the checks that DID run,
+# never a check that merely exists.
+SCAN_SKIP_CLASSES: dict[str, dict[str, Any]] = {
+    "blind_spot": {
+        "expected": True,
+        "reason": "blind-spot path, PRESENT; whose bytes these are is not decidable here",
+        "still_covered_by": "the pre-handover verify run and the freeze receipt",
+    },
+    "scan_exempt_present": {
+        "expected": True,
+        "reason": "declared output, present; its content is not scanned, because it must "
+                  "name the paper",
+        "still_covered_by": "the forbidden-path check and the freeze receipt",
+    },
+    "undecodable_prefix": {
+        "expected": True,
+        "reason": "under a declared output prefix and not decodable as text; its content "
+                  "was not scanned",
+        "still_covered_by": "the forbidden-path check and the freeze receipt",
+    },
+    "scan_exempt_input": {
+        "expected": True,
+        "reason": "declared scan-exempt input; its content is not scanned, because the "
+                  "instructions and the paper must name the paper",
+        "still_covered_by": "the allowlist check, the forbidden-path check, cross-surface "
+                            "parity for a change made to one surface only, and the freeze "
+                            "receipt",
+    },
+    "suffix_not_scanned": {
+        "expected": True,
+        "reason": "suffix outside content_scan.text_suffixes; the scan never opened it",
+        "still_covered_by": "the allowlist check, the forbidden-path check and the freeze "
+                            "receipt",
+    },
+    "undecodable_text": {
+        "expected": False,
+        "reason": "a text suffix whose bytes did not decode as UTF-8; the scan could not "
+                  "read it, and the protocol does not anticipate this file being binary",
+        "still_covered_by": "the allowlist check, the forbidden-path check and the freeze "
+                            "receipt",
+    },
+}
+
+
+def scan_skip_reason(rel: str, spec: dict[str, Any], path: Path,
+                     post_read: bool) -> str | None:
+    """Why the content scan does not read this file's bytes — or `None` if it does.
+
+    🔴 ONE predicate, called by the scan loop AND by the census, because Mirror `M-3` is
+    what happens when they are two. Revision 3's census re-derived the skip conditions
+    beside the loop that implements them, got one of four, and the tool printed that the
+    result was complete. An equality maintained by two copies of a rule is an equality
+    that holds until one copy is edited; here `actual unscanned == declared unscanned`
+    holds because it is the same call.
+
+    The order below is the scan loop's order and must stay that way: the class reported
+    is the reason the file was ACTUALLY skipped, not the first reason that would also
+    have applied. A PDF is `suffix_not_scanned` rather than `undecodable_text` because
+    the suffix test is what returned first.
+    """
+    scan = spec["content_scan"]
+    if post_read and _is_expected_output(rel, spec, path):
+        if rel in set(declared_blind_spots(spec)):
+            return "blind_spot"
+        if rel in set(spec["expected_output_paths"]):
+            return "scan_exempt_present"
+        return "undecodable_prefix"
+    if rel in set(scan.get("exempt_surface_paths", [])):
+        return "scan_exempt_input"
+    if not rel.endswith(tuple(scan.get("text_suffixes", DEFAULT_TEXT_SUFFIXES))):
+        return "suffix_not_scanned"
+    if not _is_decodable_text(path):
+        return "undecodable_text"
+    return None
+
+
+def unchecked_surface(root: Path, spec: dict[str, Any],
+                      post_read: bool = True) -> dict[str, list[str]]:
+    """Every PRESENT file whose content the identifier scan did not read, by path.
 
     🔴 Mirror `M-2`: the census was computed over `expected_output_paths` while the
     exemption was spread over that key **and** `expected_output_prefixes`, so three
     artifacts asserted the unchecked region was one path when it was one path plus a
-    prefix. A derived number inherits the incompleteness of its inputs and looks
-    authoritative while doing it.
+    prefix. Mirror `M-3`: the repair enumerated three populations out of one skip
+    condition and three artifacts then asserted THAT was the whole of it, while a
+    declared scan-exempt input, a file with a non-text suffix and a text-suffixed file
+    that does not decode were skipped and named by nothing. A derived number inherits
+    the incompleteness of its inputs and looks authoritative while doing it — twice.
 
-    Three populations, and the code below is the argument that there is no fourth: every
-    present file is allowlisted input (fully checked), an exact declared output, under a
-    declared output prefix, or none of those — and the last case is reported by the
-    allowlist check, so it is never silent.
-
-      blind_spot            a forbidden path the reader occupies by construction; the path
-                            check is skipped there and authorship is not decidable post-read
-      scan_exempt_present   a declared output that is present: it must name the paper, so
-                            the identifier scan is not run over its content
-      undecodable_prefix    a file under a declared output prefix whose bytes could not be
-                            decoded — a render is pixels, and pixels are not scannable
+    So it is no longer derived here at all. The classes are `SCAN_SKIP_CLASSES` and the
+    predicate is `scan_skip_reason()`, the same call the scan loop makes; a file is in
+    this census exactly when the scan skipped it. There is no third class because there
+    is no second implementation.
 
     Enumerated from the tree at run time, not from the spec, because what is exposed is
-    what is *there*: at handover all three are empty and the command says so.
+    what is *there*.
     """
-    blind = set(declared_blind_spots(spec))
-    exact = set(spec["expected_output_paths"])
-    census: dict[str, list[str]] = {"blind_spot": [], "scan_exempt_present": [],
-                                    "undecodable_prefix": []}
+    census: dict[str, list[str]] = {name: [] for name in SCAN_SKIP_CLASSES}
     for path in iter_files(root):
         rel = str(path.relative_to(root))
-        if rel in blind:
-            census["blind_spot"].append(rel)
-        elif rel in exact:
-            census["scan_exempt_present"].append(rel)
-        elif _under_expected_prefix(rel, spec) is not None and not _is_decodable_text(path):
-            census["undecodable_prefix"].append(rel)
+        reason = scan_skip_reason(rel, spec, path, post_read)
+        if reason is not None:
+            census[reason].append(rel)
     return {key: sorted(value) for key, value in census.items()}
 
 
@@ -440,8 +522,6 @@ def cmd_verify(args: argparse.Namespace) -> int:
     #     instructions must name the PMID, and the paper is the paper.
     scan = spec["content_scan"]
     pattern = re.compile(scan["pattern"], re.IGNORECASE)
-    exempt = set(scan.get("exempt_surface_paths", []))
-    suffixes = tuple(scan.get("text_suffixes", [".md", ".txt", ".json", ".py", ".yaml", ".yml"]))
     for actor in actors:
         for path in iter_files(roots[actor]):
             rel = str(path.relative_to(roots[actor]))
@@ -454,13 +534,21 @@ def cmd_verify(args: argparse.Namespace) -> int:
             # scanned wherever it sits — and under an output PREFIX it is exempt only if
             # its bytes cannot be decoded at all (Mirror M-2). A render is pixels; a
             # markdown file under output/renders/ is read here like any other.
-            if args.post_read and _is_expected_output(rel, spec, path):
-                continue
-            if rel in exempt or not rel.endswith(suffixes):
+            #
+            # 🔴 The four skip conditions used to be written out here and re-derived,
+            # partially, in the census. They are now one call, and every non-None answer
+            # is printed by name below (Mirror M-3). Skipping a file silently is no
+            # longer expressible: the same predicate decides the skip and the printing.
+            if scan_skip_reason(rel, spec, path, args.post_read) is not None:
                 continue
             try:
                 text = path.read_text(encoding="utf-8", errors="strict")
             except (UnicodeDecodeError, OSError):
+                # Unreachable through `scan_skip_reason`, which already answered this
+                # question; kept because a file can change between two syscalls and a
+                # traceback is a worse answer than a finding.
+                findings.append(f"UNREADABLE      {actor}  {rel}  became unreadable "
+                                "between the skip decision and the scan")
                 continue
             hits = pattern.findall(text)
             if hits:
@@ -485,22 +573,29 @@ def cmd_verify(args: argparse.Namespace) -> int:
         if not blind:
             print("  [BLIND SPOT] none declared — no declared reader output path collides "
                   "with a forbidden path")
+        # 🔴 Every class of SCAN_SKIP_CLASSES, in one loop, so adding a skip condition to
+        # `scan_skip_reason()` without giving it an explanation is a KeyError at the first
+        # run rather than a file that quietly stops being printed (Mirror M-3).
         total = 0
+        unexpected_skips = 0
         for actor in actors:
-            census = unchecked_surface(roots[actor], spec)
+            census = unchecked_surface(roots[actor], spec, args.post_read)
             total += sum(len(value) for value in census.values())
-            for rel in census["blind_spot"]:
-                print(f"  [UNCHECKED] {actor}  {rel}  — blind-spot path, PRESENT; whose "
-                      "bytes these are is not decidable here")
-            for rel in census["scan_exempt_present"]:
-                print(f"  [UNCHECKED] {actor}  {rel}  — declared output, present; its "
-                      "content is not scanned, because it must name the paper")
-            for rel in census["undecodable_prefix"]:
-                print(f"  [UNCHECKED] {actor}  {rel}  — under a declared output prefix and "
-                      "not decodable as text; its content was not scanned")
-        print(f"  [UNCHECKED SURFACE] {total} present file(s), each named above. That is the "
-              "whole of it: every other present file took the allowlist check, the "
-              "forbidden-path check and — where its bytes decode — the identifier scan.")
+            for name, described in SCAN_SKIP_CLASSES.items():
+                for rel in census[name]:
+                    if not described["expected"]:
+                        unexpected_skips += 1
+                    print(f"  [UNCHECKED] {actor}  {rel}  — {name}: {described['reason']}; "
+                          f"EXPECTED_BY_PROTOCOL "
+                          f"{'yes' if described['expected'] else 'NO'}; still covered by "
+                          f"{described['still_covered_by']}")
+        print(f"  [UNCHECKED SURFACE] {total} present file(s), each named above with the "
+              "class and reason its content was not read. Every other present file was "
+              "scanned. Each file above still took every check its class does not exempt "
+              "it from, and its line says which.")
+        if unexpected_skips:
+            print(f"  [UNCHECKED SURFACE] {unexpected_skips} of them are NOT a consequence "
+                  "the protocol declares — read those lines first.")
     if findings:
         print(f"VERDICT: FAIL — {len(findings)} finding(s). A surface that fails is rebuilt "
               "from the spec, never patched.")
@@ -511,13 +606,15 @@ def cmd_verify(args: argparse.Namespace) -> int:
     # whose symlinks nothing had looked at.
     print("VERDICT: PASS — parity holds across the two surfaces; every present file is "
           "allowlisted or is a declared output; no symlink; no forbidden prior-output path "
-          "outside the printed blind spot; every file whose bytes this tool could decode "
-          "was scanned, and none leaked an identifier.")
+          "outside the printed blind spot; every present file was either scanned for the "
+          "paper's identifiers or printed above under [UNCHECKED] with the reason it was "
+          "not, and nothing scanned leaked an identifier.")
     print("  NOT CHECKED, and no clause above implies it: what a reader may open by "
           "absolute path outside this tree (Annex J.0); the authorship of bytes at a "
-          "blind-spot path; the content of every file printed above as [UNCHECKED]. That "
-          "printed list is the whole unchecked surface — no present file is skipped by both "
-          "the allowlist check and the identifier scan without appearing in it.")
+          "blind-spot path; the content of every file printed above as [UNCHECKED]. "
+          "SCANNED and [UNCHECKED] partition the present files — one predicate decides "
+          "both, so no present file is skipped by the identifier scan without appearing "
+          "in that list, and none appears in it that was scanned.")
     return 0
 
 

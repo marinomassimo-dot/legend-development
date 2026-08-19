@@ -29,8 +29,10 @@ BOUNDING RULE, on a fixture whose right answer is known by construction.
 
 from __future__ import annotations
 
+import inspect
 import json
 import os
+import re
 import subprocess
 import sys
 import tempfile
@@ -46,6 +48,48 @@ FORBIDDEN_NON_COLLIDING = (
 # A real render's opening bytes. The point is only that they do not decode as UTF-8: that
 # is the predicate the prefix exemption is written on since revision 3 (Mirror M-2).
 PNG_BYTES = b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\xff\xfe\xfd\x00\x01\x02\x03"
+
+# 🔴 THE CENSUS ORACLE, AND WHY IT IS A LITERAL.
+#
+# Mirror `M-3`: `test_the_census_names_every_unchecked_file_and_counts_them` asserted a set
+# that excluded the five decodable scan-exempt paths its own fixture declared, so the test
+# written to prove the census complete certified it incomplete. The reason it could is that
+# its expectation was read off the shape of the implementation instead of off the fixture.
+#
+# So this expectation is HAND-WRITTEN from what `build_fixture` puts on disk, path by path.
+# It is not computed from the spec, not derived by calling `scan_skip_reason()`, and not
+# obtained by running the tool. If the implementation's skip logic changes, this literal does
+# not move with it — which is the entire point of an oracle. `expected = filter(actual)` can
+# only ever agree with itself.
+FIXTURE_PRESENT_AT_HANDOVER = {
+    "ASSIGNMENT.md",
+    "CLAUDE.md",
+    "benchmark/BENCHMARK_INSTRUCTIONS.md",
+    "benchmark/MODE_DIRECTIVE.md",
+    "benchmark/OUTPUT_SCHEMA.md",
+    "roles/scientist.md",
+    "files/paper.txt",
+    "disease-models/wwox/research/deepdive_manifests/.gitkeep",
+    "disease-models/wwox/research/fulltext_dossiers/.gitkeep",
+    "output/.gitkeep",
+    "output/renders/.gitkeep",
+}
+# The one file in the fixture the scan actually reads: allowlisted, `.md`, decodable, and not
+# on the exempt list. Everything else is skipped for one of the reasons below.
+FIXTURE_SCANNED_AT_HANDOVER = {"roles/scientist.md"}
+FIXTURE_CENSUS_AT_HANDOVER = {
+    "ASSIGNMENT.md": "scan_exempt_input",
+    "CLAUDE.md": "scan_exempt_input",
+    "benchmark/BENCHMARK_INSTRUCTIONS.md": "scan_exempt_input",
+    "benchmark/MODE_DIRECTIVE.md": "scan_exempt_input",
+    "benchmark/OUTPUT_SCHEMA.md": "scan_exempt_input",
+    "files/paper.txt": "scan_exempt_input",
+    "disease-models/wwox/research/deepdive_manifests/.gitkeep": "suffix_not_scanned",
+    "disease-models/wwox/research/fulltext_dossiers/.gitkeep": "suffix_not_scanned",
+    "output/.gitkeep": "suffix_not_scanned",
+    "output/renders/.gitkeep": "suffix_not_scanned",
+}
+IDENTIFIER = "42397075"
 
 
 def run(*arguments: str) -> subprocess.CompletedProcess:
@@ -102,6 +146,11 @@ def build_fixture(root: Path) -> tuple[Path, Path]:
     write(source / "instructions/MODE_A.md", "mode a directive\n")
     write(source / "instructions/MODE_B.md", "mode b directive\n")
     write(source / "roles/scientist.md", "the contract, with no identifier in it\n")
+    # 🔴 CLAUDE.md is in the fixture because Mirror `M-3`'s reproducer is CLAUDE.md: the real
+    # spec exempts it from the scan, and the same forbidden bytes that produced two findings
+    # at roles/scientist.md produced a VERDICT: PASS and no mention at CLAUDE.md. A fixture
+    # that omits the exempt-input class cannot probe the class.
+    write(source / "CLAUDE.md", "the router, with no identifier in it\n")
     write(source / "paper.txt", "PMID 42397075 — the paper itself, exempt from the scan\n")
 
     spec = {
@@ -115,6 +164,7 @@ def build_fixture(root: Path) -> tuple[Path, Path]:
              "surface": "benchmark/BENCHMARK_INSTRUCTIONS.md"},
             {"source": "instructions/OUTPUT_SCHEMA.md", "surface": "benchmark/OUTPUT_SCHEMA.md"},
             {"source": "roles/scientist.md", "surface": "roles/scientist.md"},
+            {"source": "CLAUDE.md", "surface": "CLAUDE.md"},
         ],
         "per_actor_files": {
             "scientist-a": [
@@ -139,7 +189,8 @@ def build_fixture(root: Path) -> tuple[Path, Path]:
             "exempt_surface_paths": ["files/paper.txt", "ASSIGNMENT.md",
                                      "benchmark/BENCHMARK_INSTRUCTIONS.md",
                                      "benchmark/OUTPUT_SCHEMA.md",
-                                     "benchmark/MODE_DIRECTIVE.md"],
+                                     "benchmark/MODE_DIRECTIVE.md",
+                                     "CLAUDE.md"],
         },
     }
     spec_path = write(root / "spec.json", json.dumps(spec, indent=2))
@@ -163,6 +214,44 @@ class SurfaceFixture(unittest.TestCase):
 
     def verify(self, *extra: str) -> subprocess.CompletedProcess:
         return run("verify", "--spec", str(self.spec), "--surfaces", str(self.surfaces), *extra)
+
+    @staticmethod
+    def census(stdout: str, actor: str = "scientist-a") -> dict[str, str]:
+        """`{path: class}` parsed out of one actor's printed `[UNCHECKED]` lines.
+
+        Parsing the tool's OUTPUT, not calling its functions: what a reviewer reads is what
+        is asserted. `[UNCHECKED] <actor>  <rel>  — <class>: <reason>; …`
+        """
+        rows: dict[str, str] = {}
+        for line in stdout.splitlines():
+            # Anchored, not a substring search: the PASS sentence names `[UNCHECKED]` in
+            # prose, and a parser that matches prose reports whatever the prose says.
+            if not line.strip().startswith("[UNCHECKED] "):
+                continue
+            body = line.strip()[len("[UNCHECKED] "):]
+            named, rest = body.split("  ", 1)
+            if named.strip() != actor:
+                continue
+            rel, described = rest.split("  — ", 1)
+            rows[rel.strip()] = described.split(":", 1)[0].strip()
+        return rows
+
+    @staticmethod
+    def census_rows(stdout: str) -> int:
+        """How many `[UNCHECKED]` rows were printed, over both actors.
+
+        🔴 Anchored for the same reason `census()` is: counting lines that merely CONTAIN
+        `[UNCHECKED] ` counts the PASS sentence's prose, and a count that includes its own
+        description is the arithmetic version of the defect this file is about.
+        """
+        return sum(1 for line in stdout.splitlines()
+                   if line.strip().startswith("[UNCHECKED] "))
+
+    @staticmethod
+    def present(surface: Path) -> set[str]:
+        """Every regular file under a surface, walked here rather than asked of the tool."""
+        return {str(path.relative_to(surface)) for path in surface.rglob("*")
+                if path.is_file() and not path.is_symlink()}
 
 
 class ExAnteVerifyTests(SurfaceFixture):
@@ -241,11 +330,26 @@ class PostReadExclusionTests(SurfaceFixture):
             (surface / "output/renders/fig1.png").write_bytes(PNG_BYTES)
 
     def test_positive_control_an_honest_reading_passes_post_read(self) -> None:
-        """The reader's own outputs name the paper by construction and must not fire."""
+        """The reader's own outputs name the paper by construction and must not fire.
+
+        🔴 Checked, not merely asserted (`SLR-plan-0003` L-1, and Mirror `M-3` is its second
+        instance). Until revision 4 this control asserted `rc == 0` and `VERDICT: PASS` and
+        nothing else, so it passed identically over a tree where ten present files per
+        surface were skipped by the scan and named by nothing. A positive control that only
+        checks the verdict cannot see a defect that leaves the verdict alone. It now pins
+        the whole census of the honest tree, against a hand-written expectation.
+        """
         self._plausible_reading()
         result = self.verify("--post-read")
         self.assertEqual(0, result.returncode, result.stdout)
         self.assertIn("VERDICT: PASS", result.stdout)
+        expected = dict(FIXTURE_CENSUS_AT_HANDOVER)
+        expected[FORBIDDEN_COLLIDING] = "blind_spot"
+        expected["disease-models/wwox/research/fulltext_dossiers/PMID42397075.md"] = \
+            "scan_exempt_present"
+        expected["output/receipt.json"] = "scan_exempt_present"
+        expected["output/renders/fig1.png"] = "undecodable_prefix"
+        self.assertEqual(expected, self.census(result.stdout), result.stdout)
 
     def test_the_blind_spot_is_printed_by_name_and_is_exactly_one_path(self) -> None:
         self._plausible_reading()
@@ -348,12 +452,17 @@ class ExpectedOutputPrefixTests(SurfaceFixture):
         self.assertEqual(1, result.returncode, result.stdout)
         self.assertIn("NOT ALLOWLISTED scientist-a  output/renders/innocent.png", result.stdout)
 
-    def test_an_empty_prefix_reports_an_empty_unchecked_surface(self) -> None:
+    def test_an_empty_render_prefix_contributes_nothing_to_the_census(self) -> None:
+        """🔴 Renamed at revision 4: it used to say *an empty unchecked surface* while
+        asserting four files, which was the same over-claim one scale down."""
         self._reading()
         result = self.verify("--post-read")
         self.assertEqual(0, result.returncode, result.stdout)
-        self.assertIn("[UNCHECKED SURFACE] 4 present file(s)", result.stdout)
-        self.assertNotIn("output/renders/", result.stdout)
+        self.assertEqual({}, {rel: name for rel, name in self.census(result.stdout).items()
+                              if name == "undecodable_prefix"}, result.stdout)
+        # `output/renders/.gitkeep` is present and censused; no OTHER path under the prefix is.
+        under = [rel for rel in self.census(result.stdout) if rel.startswith("output/renders/")]
+        self.assertEqual(["output/renders/.gitkeep"], sorted(under), result.stdout)
 
     def test_several_legitimate_renders_are_each_named_in_the_census(self) -> None:
         self._reading()
@@ -361,9 +470,12 @@ class ExpectedOutputPrefixTests(SurfaceFixture):
             (self.a / "output/renders" / name).write_bytes(PNG_BYTES)
         result = self.verify("--post-read")
         self.assertEqual(0, result.returncode, result.stdout)
+        census = self.census(result.stdout)
         for name in ("a.png", "b.png", "c.jpg"):
-            self.assertIn(f"[UNCHECKED] scientist-a  output/renders/{name}", result.stdout)
-        self.assertIn("[UNCHECKED SURFACE] 7 present file(s)", result.stdout)
+            self.assertEqual("undecodable_prefix", census.get(f"output/renders/{name}"),
+                             result.stdout)
+        self.assertIn(f"[UNCHECKED SURFACE] {self.census_rows(result.stdout)} present "
+                      "file(s)", result.stdout)
 
     def test_a_hostile_file_beside_a_legitimate_render_does_not_hide_behind_it(self) -> None:
         self._reading()
@@ -385,18 +497,81 @@ class ExpectedOutputPrefixTests(SurfaceFixture):
         self.assertEqual(1, after.returncode, after.stdout)
         self.assertIn("NOT ALLOWLISTED scientist-a  output/renders/late.md", after.stdout)
 
-    def test_the_census_names_every_unchecked_file_and_counts_them(self) -> None:
-        """The guarantee, as an assertion: the printed list IS the unchecked surface."""
+    def test_the_census_is_exactly_the_present_files_the_scan_did_not_read(self) -> None:
+        """The guarantee, as an assertion — against a HAND-WRITTEN expectation.
+
+        🔴 Mirror `M-3`. The predecessor of this test was called
+        `test_the_census_names_every_unchecked_file_and_counts_them` and docstringed *"the
+        printed list IS the unchecked surface"*, and it asserted a three-path set over a
+        fixture that declared five decodable scan-exempt paths, every one of them present
+        and none of them in the assertion. It excluded from the denominator exactly the
+        population the census was missing, so the test written to prove completeness
+        certified the incompleteness instead — `L-1` of `SLR-plan-0003`, a second time, in
+        the revision that recorded `L-1`.
+
+        The name is narrower now because the guarantee is: the census is the set of present
+        files whose CONTENT the identifier scan did not read — which is not the same as
+        "unverified", and the printed reasons say what did still run.
+
+        The expectation is `FIXTURE_CENSUS_AT_HANDOVER` plus the three paths this test
+        writes itself. It is a literal, so it cannot follow the implementation anywhere.
+        """
         self._reading()
         (self.a / "output/renders/fig1.png").write_bytes(PNG_BYTES)
         result = self.verify("--post-read")
         self.assertEqual(0, result.returncode, result.stdout)
-        named = [line for line in result.stdout.splitlines() if "[UNCHECKED] " in line]
-        for_a = [line for line in named if "scientist-a" in line]
-        self.assertEqual(
-            {FORBIDDEN_COLLIDING, "output/receipt.json", "output/renders/fig1.png"},
-            {line.split()[2] for line in for_a}, result.stdout)
-        self.assertIn(f"[UNCHECKED SURFACE] {len(named)} present file(s)", result.stdout)
+
+        expected = dict(FIXTURE_CENSUS_AT_HANDOVER)
+        expected[FORBIDDEN_COLLIDING] = "blind_spot"
+        expected["output/receipt.json"] = "scan_exempt_present"
+        expected["output/renders/fig1.png"] = "undecodable_prefix"
+        self.assertEqual(expected, self.census(result.stdout), result.stdout)
+        self.assertIn(f"[UNCHECKED SURFACE] {self.census_rows(result.stdout)} present "
+                      "file(s)", result.stdout)
+
+    def test_every_present_file_is_either_scanned_or_named_and_never_both(self) -> None:
+        """The `M-3` invariant, measured by EFFECT — the oracle the previous test lacked.
+
+        🔴 This test never asks the tool which files it skips, and never re-implements the
+        skip predicate: `expected = implementation_filter(actual)` can only agree with
+        itself, and that is how a census and its test were wrong together. Instead, for
+        every present file it plants the paper's identifier in that file and observes
+        whether the scan REPORTS it. Scanning is measured by its consequence.
+
+        A file that neither leaks nor appears in the census is a silent one, and there must
+        be none — that is Mirror `M-3` stated as a property. A file that does both would be
+        the census lying in the other direction, and there must be none of those either.
+
+        The anti-vacuity guard is `SCANNED`: if planting an identifier never produces a
+        finding anywhere, this harness is measuring its own invocation and not the tool
+        (`SLR-mirror-0011` §3).
+        """
+        self.assertEqual(FIXTURE_PRESENT_AT_HANDOVER, self.present(self.a),
+                         "the fixture moved; the hand-written oracle must move with it")
+
+        scanned: set[str] = set()
+        censused: set[str] = set()
+        for rel in sorted(FIXTURE_PRESENT_AT_HANDOVER):
+            target = self.a / rel
+            original = target.read_bytes()
+            try:
+                target.write_bytes(original + f"\nPMID {IDENTIFIER} planted here\n".encode())
+                result = self.verify("--post-read")
+                if f"IDENTIFIER LEAK scientist-a  {rel}" in result.stdout:
+                    scanned.add(rel)
+                if rel in self.census(result.stdout):
+                    censused.add(rel)
+            finally:
+                target.write_bytes(original)
+
+        self.assertEqual(set(), scanned & censused,
+                         "a file reported as skipped and scanned in the same run")
+        self.assertEqual(FIXTURE_PRESENT_AT_HANDOVER, scanned | censused,
+                         f"SILENT: {sorted(FIXTURE_PRESENT_AT_HANDOVER - scanned - censused)}")
+        self.assertEqual(FIXTURE_SCANNED_AT_HANDOVER, scanned,
+                         "the scanned population is not the one the fixture is built for")
+        self.assertTrue(scanned, "positive control: the scan never fired, so nothing above "
+                                 "is evidence about the tool")
 
     def test_freeze_calls_a_decodable_file_under_the_prefix_unexpected(self) -> None:
         """🔴 freeze used to agree with the verifier about a file neither had looked at."""
@@ -423,6 +598,228 @@ class ExpectedOutputPrefixTests(SurfaceFixture):
         record = json.loads(receipt.read_text(encoding="utf-8"))
         self.assertIn("output/renders/fig1.png", record["OUTPUT_FILE_SET"])
         self.assertEqual([], record["UNEXPECTED_FILE_SET"])
+
+
+class ScanSkipClassTests(SurfaceFixture):
+    """Mirror `M-3` — one probe per condition under which the content scan skips a file.
+
+    🔴 The defect these probe: the scan skipped on FOUR conditions and the census enumerated
+    the three populations produced by ONE of them, while the tool printed *"every file whose
+    bytes this tool could decode was scanned"* and the protocol tabulated the same claim. On
+    a clean build of the real benchmark that is sixteen present files per surface, and the
+    identical forbidden bytes that produce two findings at `roles/scientist.md` produced a
+    `VERDICT: PASS` with no mention at all at `CLAUDE.md`.
+
+    Every case asserts the printed CLASS, not the exit code — `SLR-mirror-0010` §4 and
+    `SLR-mirror-0011` §3 are both about batteries that measured their own invocation. The
+    scanned cases are the positive controls: without them, "nothing was reported" and "the
+    scan never ran" are the same observation.
+    """
+
+    # A forbidden prior-output artifact, in the shape that matters: real prose, identifiers
+    # in it, and nothing about it that a path could reveal.
+    HOSTILE = f"LEGEND's prior dossier for PMID {IDENTIFIER}, copied whole.\n" * 4
+
+    def _reading(self) -> None:
+        for surface in (self.a, self.b):
+            write(surface / FORBIDDEN_COLLIDING, f'{{"pmid": "{IDENTIFIER}"}}\n')
+            write(surface / "output/receipt.json", f'{{"pmid": "{IDENTIFIER}"}}\n')
+
+    def _plant(self, rel: str, payload: bytes, differ: bool = False) -> None:
+        """Write the same bytes into BOTH surfaces — the version parity cannot see.
+
+        🔴 Writing to one surface only is caught by `PARITY BROKEN`, and a battery that
+        does that is measuring the parity check while believing it measures the scan. The
+        adversary's move is the identical edit to both trees, which is also Mirror `P-4`:
+        `build --emit-digests` records what these files were and `verify` consumes it
+        nowhere, so parity is the only comparison and it compares A with B.
+        """
+        for surface, actor in ((self.a, "scientist-a"), (self.b, "scientist-b")):
+            target = surface / rel
+            target.parent.mkdir(parents=True, exist_ok=True)
+            # `differ=True` for a per-actor path: the spec requires those two to be unequal,
+            # so identical hostile bytes there would be caught by `NOT DIFFERING` — again the
+            # wrong check answering the question.
+            target.write_bytes(payload + (f"\n{actor}\n".encode() if differ else b""))
+
+    def test_positive_control_the_scan_fires_on_an_allowlisted_scanned_file(self) -> None:
+        """The discriminator. Everything below is read against this one."""
+        self._reading()
+        self._plant("roles/scientist.md", self.HOSTILE.encode())
+        result = self.verify("--post-read")
+        self.assertEqual(1, result.returncode, result.stdout)
+        self.assertIn("IDENTIFIER LEAK scientist-a  roles/scientist.md", result.stdout)
+        self.assertIn("IDENTIFIER LEAK scientist-b  roles/scientist.md", result.stdout)
+        self.assertNotIn("PARITY BROKEN", result.stdout)
+        self.assertNotIn("roles/scientist.md", self.census(result.stdout))
+
+    def test_positive_control_the_same_file_clean_is_scanned_and_silent(self) -> None:
+        """A scanned file that is clean must appear in NEITHER population's output."""
+        self._reading()
+        result = self.verify("--post-read")
+        self.assertEqual(0, result.returncode, result.stdout)
+        self.assertNotIn("roles/scientist.md", result.stdout.split("VERDICT")[0])
+
+    def test_the_same_bytes_are_named_at_an_exempt_path_and_caught_at_a_scanned_one(self)\
+            -> None:
+        """🔴 Mirror `M-3`'s reproducer, as one test: identical bytes, four paths.
+
+        Two are caught and two are exempt from the scan — which is the design. What was the
+        defect is that the two exempt ones were also invisible. Now they are named, with the
+        class and the reason, and the difference between "not scanned" and "not mentioned"
+        is the whole finding.
+        """
+        self._reading()
+        for rel in ("CLAUDE.md", "roles/scientist.md", "output/renders/smuggled.md"):
+            self._plant(rel, self.HOSTILE.encode())
+        self._plant("benchmark/MODE_DIRECTIVE.md", self.HOSTILE.encode(), differ=True)
+        result = self.verify("--post-read")
+
+        self.assertEqual(1, result.returncode, result.stdout)
+        self.assertNotIn("PARITY BROKEN", result.stdout)
+        self.assertNotIn("NOT DIFFERING", result.stdout)
+        # caught
+        self.assertIn("IDENTIFIER LEAK scientist-a  roles/scientist.md", result.stdout)
+        self.assertIn("NOT ALLOWLISTED scientist-a  output/renders/smuggled.md", result.stdout)
+        self.assertIn("IDENTIFIER LEAK scientist-a  output/renders/smuggled.md", result.stdout)
+        # exempt from the scan — and NAMED, which is what revision 3 did not do
+        census = self.census(result.stdout)
+        self.assertEqual("scan_exempt_input", census.get("CLAUDE.md"), result.stdout)
+        self.assertEqual("scan_exempt_input", census.get("benchmark/MODE_DIRECTIVE.md"),
+                         result.stdout)
+        for rel in ("roles/scientist.md", "output/renders/smuggled.md"):
+            self.assertNotIn(rel, census, "a scanned file must not be censused")
+
+    def test_hostile_bytes_under_a_non_text_suffix_are_named_not_silent(self) -> None:
+        """`.gitkeep` is allowlisted, present, decodable, and never opened by the scan."""
+        self._reading()
+        self._plant("output/.gitkeep", self.HOSTILE.encode())
+        result = self.verify("--post-read")
+        self.assertEqual(0, result.returncode, result.stdout)
+        self.assertEqual("suffix_not_scanned", self.census(result.stdout).get("output/.gitkeep"),
+                         result.stdout)
+
+    def test_an_allowlisted_text_file_that_is_not_utf8_is_named_and_flagged_unexpected(self)\
+            -> None:
+        """The fourth skip condition, and the only class the protocol does NOT declare.
+
+        A `.md` file that is not text reaches the decode guard, is skipped, and was silent.
+        It stays a `PASS` — the file is allowlisted and nothing here proves it hostile — but
+        the census marks it `EXPECTED_BY_PROTOCOL NO` and counts it separately, because an
+        allowlisted markdown file full of UTF-16 is an anomaly and not a design.
+        """
+        self._reading()
+        self._plant("roles/scientist.md", self.HOSTILE.encode("utf-16"))
+        result = self.verify("--post-read")
+        self.assertEqual(0, result.returncode, result.stdout)
+        self.assertEqual("undecodable_text", self.census(result.stdout).get("roles/scientist.md"),
+                         result.stdout)
+        self.assertIn("EXPECTED_BY_PROTOCOL NO", result.stdout)
+        self.assertIn("[UNCHECKED SURFACE] 2 of them are NOT a consequence the protocol "
+                      "declares", result.stdout)
+
+    def test_a_non_utf8_hostile_payload_under_the_render_prefix_is_named(self) -> None:
+        """Prior output re-encoded into bytes no scan can read still gets a line of its own."""
+        self._reading()
+        self._plant("output/renders/fig1.png", self.HOSTILE.encode("utf-16"))
+        result = self.verify("--post-read")
+        self.assertEqual(0, result.returncode, result.stdout)
+        self.assertEqual("undecodable_prefix",
+                         self.census(result.stdout).get("output/renders/fig1.png"),
+                         result.stdout)
+
+    def test_every_skip_class_present_at_once_is_reported_with_its_own_reason(self) -> None:
+        """Six classes in one tree, because a census that is right one class at a time is
+        not yet a census."""
+        self._reading()
+        (self.a / "output/renders/fig1.png").write_bytes(PNG_BYTES)
+        self._plant("CLAUDE.md", self.HOSTILE.encode())
+        self._plant("output/.gitkeep", self.HOSTILE.encode())
+        self._plant("benchmark/OUTPUT_SCHEMA.md", self.HOSTILE.encode("utf-16"))
+        self._plant("roles/scientist.md", self.HOSTILE.encode("utf-16"))
+        result = self.verify("--post-read")
+        self.assertEqual(0, result.returncode, result.stdout)
+        census = self.census(result.stdout)
+        self.assertEqual("blind_spot", census.get(FORBIDDEN_COLLIDING), result.stdout)
+        self.assertEqual("scan_exempt_present", census.get("output/receipt.json"), result.stdout)
+        self.assertEqual("undecodable_prefix", census.get("output/renders/fig1.png"),
+                         result.stdout)
+        self.assertEqual("scan_exempt_input", census.get("CLAUDE.md"), result.stdout)
+        self.assertEqual("suffix_not_scanned", census.get("output/.gitkeep"), result.stdout)
+        # 🔴 `benchmark/OUTPUT_SCHEMA.md` is BOTH exempt and undecodable. The class reported
+        # must be the reason the scan ACTUALLY stopped, which is the exempt list, because
+        # that test returns first. A census that reported the other one would be describing
+        # a code path that did not run.
+        self.assertEqual("scan_exempt_input", census.get("benchmark/OUTPUT_SCHEMA.md"),
+                         result.stdout)
+        # ... and the same bytes at a path that is allowlisted but NOT exempt reach the
+        # decode guard instead, which is the class the protocol does not declare.
+        self.assertEqual("undecodable_text", census.get("roles/scientist.md"), result.stdout)
+        self.assertEqual(6, len(set(census.values())), sorted(set(census.values())))
+
+    def test_the_census_survives_a_file_arriving_after_a_clean_run(self) -> None:
+        self._reading()
+        before = self.verify("--post-read")
+        self.assertEqual(0, before.returncode, before.stdout)
+        self._plant("CLAUDE.md", self.HOSTILE.encode())
+        after = self.verify("--post-read")
+        self.assertEqual(0, after.returncode, after.stdout)
+        self.assertEqual(self.census(before.stdout), self.census(after.stdout),
+                         "an edit to an exempt input must not move the census")
+
+
+class CensusContractTests(unittest.TestCase):
+    """Structural guards on the census itself, read from the module rather than its output."""
+
+    @staticmethod
+    def _module():
+        import importlib.util
+        spec = importlib.util.spec_from_file_location("bis_under_test", TOOL)
+        module = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(module)
+        return module
+
+    def test_every_class_the_predicate_can_return_has_an_explanation(self) -> None:
+        """🔴 The census prints from `SCAN_SKIP_CLASSES` keyed by what `scan_skip_reason()`
+        returns. A new skip condition without a matching entry must be a loud error, not a
+        file that silently stops being printed — which is Mirror `M-3` in one line."""
+        module = self._module()
+        source = inspect.getsource(module.scan_skip_reason)
+        returned = set(re.findall(r'return "([a-z_]+)"', source))
+        self.assertEqual(set(module.SCAN_SKIP_CLASSES), returned,
+                         "SCAN_SKIP_CLASSES and scan_skip_reason() disagree")
+        for name, described in module.SCAN_SKIP_CLASSES.items():
+            self.assertTrue(described["reason"].strip(), name)
+            self.assertTrue(described["still_covered_by"].strip(), name)
+            self.assertIn(described["expected"], (True, False), name)
+
+    def test_the_scan_and_the_census_call_the_same_predicate(self) -> None:
+        """The equality `actual unscanned == declared unscanned` must hold by construction.
+
+        Revision 3 maintained it with two copies of the skip rule and one of them was three
+        conditions short. Two call sites, one function: that is the whole repair.
+        """
+        module = self._module()
+        for function in (module.cmd_verify, module.unchecked_surface):
+            self.assertIn("scan_skip_reason", inspect.getsource(function),
+                          f"{function.__name__} does not go through the shared predicate")
+
+    def test_every_scan_exempt_path_in_the_real_spec_is_an_allowlisted_path(self) -> None:
+        """The census tells a reviewer an exempt input *still took the allowlist check*.
+
+        That sentence is only true if every exempt path is in the allowlist, so this is the
+        probe behind the claim rather than the claim repeated. A path exempt from the scan
+        and absent from the allowlist would be checked by nothing at all.
+        """
+        module = self._module()
+        spec = json.loads((ROOT / "framework/eval/benchmarks/BENCH-AB-001/surface_spec.json")
+                          .read_text(encoding="utf-8"))
+        for actor in spec["actors"]:
+            allowed = module._allowed_paths(spec, actor)
+            allowed |= {f"{rel}/.gitkeep" for rel in spec["empty_dirs"]}
+            for rel in spec["content_scan"]["exempt_surface_paths"]:
+                self.assertIn(rel, allowed, f"{rel} is exempt from the scan for {actor} "
+                                            "and is not in the allowlist")
 
 
 class LocatorTests(SurfaceFixture):

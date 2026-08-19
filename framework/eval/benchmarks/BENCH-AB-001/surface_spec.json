@@ -123,8 +123,13 @@
     "the exemption, because the exemption is spread over this key AND",
     "expected_output_prefixes, and the census read only this one. See",
     "_expected_output_prefix_note. What --post-read leaves unchecked is now enumerated",
-    "from the tree on every run, under [UNCHECKED], and the blind spot is one of three",
-    "populations rather than the whole of it."
+    "from the tree on every run, under [UNCHECKED], and the blind spot is one of six",
+    "classes rather than the whole of it.",
+    "",
+    "Revision 4, Mirror finding M-3. It said THREE classes, and three was the count of",
+    "the populations produced by ONE of the content scan's four skip conditions. The",
+    "census now comes from scan_skip_reason(), the single predicate the scan loop itself",
+    "calls, so the six classes are not a list maintained beside the code."
   ],
   "_expected_output_prefix_note": [
     "Renders cannot be enumerated in advance: the reader chooses which panels to render.",
@@ -197,7 +202,13 @@
       "The paper's identifiers must not appear in anything that is not the paper. The packet",
       "is exempt because it IS the paper; the instructions are exempt because a reader must",
       "be told which PMID it is reading. Everything else scans to zero, or the surface is",
-      "not blind. Verified 2026-08-18 on all nine non-instruction text files: 0 hits each."
+      "not blind. Verified 2026-08-18 on all nine non-instruction text files: 0 hits each.",
+      "",
+      "Revision 4, Mirror finding M-3. EXEMPT MEANS THE CONTENT IS NOT READ, and until now",
+      "nothing said so out loud: the six paths below, plus every file whose suffix is not in",
+      "text_suffixes, were skipped by the scan and named by no output. They are now printed",
+      "under [UNCHECKED] on every --post-read run with the class and the reason. Adding a",
+      "path here does not widen a silent region; it widens a printed one."
     ],
     "pattern": "42397075|awag239|aqeilan|steinberg|zonca|abdellatif|\\bMYC\\b",
     "text_suffixes": [".md", ".txt", ".json", ".py", ".yaml", ".yml"],

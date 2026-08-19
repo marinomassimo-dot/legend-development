@@ -301,14 +301,44 @@ file is a broken benchmark, and `verify` reports it.**
      puts it in `UNEXPECTED_FILE_SET` rather than counting it as work. The instructions say so
      to the reader, so this is a rule and not a trap.
   2. **The command enumerates the unchecked surface from the tree, per actor, on every run**,
-     under `[UNCHECKED]`, in three populations with no fourth: the blind-spot path when it is
-     occupied; each declared output that is present, whose content the scan does not read
-     because it must name the paper; and each file under a prefix whose bytes would not decode.
-     `[UNCHECKED SURFACE] n present file(s)` closes the list.
+     under `[UNCHECKED]`.
 
-  **The guarantee, stated so it can be falsified:** *no present file is skipped by both the
-  allowlist check and the identifier scan without being printed by name.* Falsify it with a file
-  that `verify --post-read` neither checks nor names.
+  🔴 **The enumeration was itself incomplete, and revision 3 said it was not (Mirror `M-3`).**
+  It listed three populations — the occupied blind-spot path, each present declared output, and
+  each file under a prefix whose bytes do not decode — and called that the whole of it. All
+  three come out of **one** of the content scan's **four** skip conditions. The other three were
+  named by nothing: a declared **scan-exempt input**, a file whose **suffix is outside
+  `text_suffixes`**, and a **text-suffixed file whose bytes do not decode**. On a clean build of
+  this benchmark that is **sixteen present files per surface, before any reader exists**, and
+  the same forbidden bytes that produce two findings at `roles/scientist.md` produced a
+  `VERDICT: PASS` and no mention at `CLAUDE.md`.
+
+  The repair is structural rather than arithmetical. **`scan_skip_reason()` is one predicate,
+  and both the scan loop and the census call it**: a file is named in the census exactly when
+  the scan skipped it, because the same call decides both. Adding a skip condition without an
+  explanation for it is an error at the first run, not a file that quietly stops being printed.
+  The six classes it reports are `blind_spot`, `scan_exempt_present`, `undecodable_prefix`,
+  `scan_exempt_input`, `suffix_not_scanned`, `undecodable_text`; each printed line carries the
+  path, the class, the reason, whether the skip is **a consequence this protocol declares**, and
+  **which checks did still run over that file**. `undecodable_text` is the one class marked
+  `EXPECTED_BY_PROTOCOL NO`, and the command counts those separately, because an allowlisted
+  `.md` file that is not text is an anomaly rather than a design.
+
+  **The guarantee, stated so it can be falsified:** *`SCANNED` and `[UNCHECKED]` partition the
+  present files — no present file is skipped by the identifier scan without being printed by
+  name, and no file is printed that was scanned.* Falsify it with a file that
+  `verify --post-read` neither scans nor names. The narrow form revision 3 stated — *no present
+  file is skipped by **both** the allowlist check and the identifier scan without being printed*
+  — was true and remains true; it is strictly weaker than this one and is no longer what the
+  tool claims.
+
+  ⚠️ **What the census does not say.** `[UNCHECKED]` means *this content was not read by the
+  identifier scan*, never *this file is unverified*. Five of the six classes are allowlisted
+  paths that took the allowlist check, the forbidden-path check and the freeze receipt; the
+  parity check compares each `common_files` and `source_files` entry across the two surfaces, so
+  it detects a change made to **one** surface and not a change applied identically to both. That
+  last gap is real and is not closed here: `build --emit-digests` already records per-file input
+  digests and `verify` does not consume them.
 
 **Exactly what the three instruments guarantee, together and separately.** The vocabulary here
 is deliberately weaker than "we know who wrote this", because that is not available:
@@ -316,7 +346,7 @@ is deliberately weaker than "we know who wrote this", because that is not availa
 | Instrument | When | GUARANTEE_PROVIDED | FAILURE_MODE_STILL_POSSIBLE |
 |---|---|---|---|
 | `verify` (pre-handover) | before either reader sees anything | the slots were **empty**, every forbidden path was **absent**, no symlink, parity across the two surfaces, no identifier leak — all of it observed, not attested | nothing about what happens after handover |
-| `verify --post-read` | after the freeze | every forbidden path **except the printed blind spot** is still absent; nothing outside the allowlist and the declared output set is present; no symlink appeared; **every present file whose bytes decode was scanned, and the ones that were not are printed by name under `[UNCHECKED]`** | authorship at the blind-spot path; a file the reader opened outside the tree; the content of a file it could not decode — named, never silent |
+| `verify --post-read` | after the freeze | every forbidden path **except the printed blind spot** is still absent; nothing outside the allowlist and the declared output set is present; no symlink appeared; **every present file was either scanned for the paper's identifiers or printed by name under `[UNCHECKED]` with the class and reason its content was not read** — the two populations partition the tree, decided by one predicate | authorship at the blind-spot path; a file the reader opened outside the tree; the **content** of every file printed under `[UNCHECKED]` — named with its reason, never silent; a change to an allowlisted input applied **identically to both surfaces**, which parity cannot see |
 | `freeze` + `verify-freeze` | at completion, and at any later moment | these bytes under these paths were present **when the freeze ran**; any later addition, removal or edit is detected set-wise; the actor and benchmark were read **from inside the tree**, so the receipt cannot be mislabelled | a substitution made **before** the freeze; the timestamp is this process's clock and nothing corroborates it |
 
 **Read together, the three bound the window and do not close it.** Before handover the tree
