@@ -26,8 +26,21 @@ CANDIDATE_ID:               CAND-20260818-SCIENTIST-AB-SPEC
 REVISION:                   3
 BASE_HEAD:                  cbce30168091f7769c56c4f019055fa55fd0d66a
 BRANCH:                     scientist-ab-spec
-CONTENT_TIP:                b634829… — the M-1/M-2 remediation commit; see the block below for
-                            the reproduced value at every tip
+CONTENT_TIP:                a3cad1d… — the Session Learning Record, which is the last content
+                            commit of this revision; see the block below for the reproduced
+                            value at every tip
+SUPERSEDED_REV3_TIP:        b63482978dab13383177ed60ab55f4ca29fb1ed3   (the M-1/M-2 remediation
+                            commit — a revision-3 content tip, superseded WITHIN revision 3)
+SUPERSEDED_REV3_HASH:       7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596
+                            # 🔴 Declared, then superseded by a content commit of this same
+                            # revision. learning/ is CONTENT by intent (P5.1) and the Session
+                            # Learning Review is owed by §15 at session closure, so the record
+                            # had to enter the population BEFORE review: Annex D.2 binds an
+                            # approval to CANDIDATE_CONTENT_HASH + BASE_HEAD and any material
+                            # change invalidates it. Writing it afterwards would have had
+                            # Mirror review a population that is not the one carried forward.
+                            # Not preserved for convenience; recorded so the supersession is
+                            # visible rather than quiet.
 SUPERSEDED_CONTENT_TIP:     daaa33353840304aaa7d288b393a2b3bb4faa08d   (revision 2)
 SUPERSEDED_HASH:            c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf
 SUPERSEDED_CONTENT_TIP_1:   b965ca5880e93ad57770a0483aaa4652ec5f390c   (revision 1)
@@ -48,7 +61,7 @@ MANIFEST_TIP:               the control-plane commit carrying this revision — 
                             # in miniature. `--show-domain` prints what was excluded at each.
                             # `git log --oneline cbce3016..HEAD` shows the branch; the hash
                             # command shows the invariance.
-CANDIDATE_CONTENT_HASH:     7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596
+CANDIDATE_CONTENT_HASH:     570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7
 CANDIDATE_HASH_VERSION:     legend-candidate-v4
 CHANGE_CLASS:               MAJOR
 LINT_RESULT:                PASS (1 pre-existing INFO)
@@ -83,12 +96,12 @@ python3 governance/scripts/candidate_content_hash.py \
 ```
 
 ```
-EXPECTED             7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596
-OBTAINED (run 1)     7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596
-OBTAINED (run 2)     7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596
-OBTAINED (run 3)     7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596
+EXPECTED             570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7
+OBTAINED (run 1)     570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7
+OBTAINED (run 2)     570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7
+OBTAINED (run 3)     570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7
 OBTAINED at the control-plane commit carrying this revision
-                     7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596
+                     570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7
 ```
 
 **Recomputed without the script**, from P5.1 and P5.2 directly — `git ls-tree -r --full-tree`,
@@ -96,14 +109,21 @@ the three declared roots removed, path-sorted, `legend-candidate-v4\n` + `BASE_H
 entry newline-terminated:
 
 ```
-at b634829 (content tip)        7cef4ccc…4596     included 523 · excluded 28
-POSITIVE CONTROL, same route
-at daaa3335 (revision 2)        c0701094…21bcf     included 523 · excluded 27
+at a3cad1d (CONTENT TIP)                 570fcbbb…8ab7     included 524 · excluded 29
+POSITIVE CONTROLS, same route
+at b634829 (superseded rev-3 tip)        7cef4ccc…4596     included 523 · excluded 28
+at daaa3335 (revision 2)                 c0701094…21bcf     included 523 · excluded 27
 ```
 
-The control is the point: a second implementation that reproduces the **published** hash of the
-previous revision is a second implementation, and one that only agrees with itself is one.
-Revision 2's hash is **not** the binding of revision 3, and the two values above are why.
+The controls are the point: a second implementation that reproduces the **published** hashes of
+the earlier tips is a second implementation, and one that only agrees with itself is one. Neither
+`7cef4ccc…` nor `c0701094…` is the binding of this candidate, and the three values above are why.
+
+**The one entry that separates `570fcbbb…` from `7cef4ccc…`** is
+`learning/plan/SLR-plan-0003.md` — 523 included entries becomes 524. That is `learning/` being
+CONTENT by intent (P5.1) rather than by omission, behaving exactly as the declaration says it
+must, and it is the third Plan record to exercise it (`SLR-plan-0001` @ `05cdeda`,
+`SLR-plan-0002` @ `b9af54e`, whose commit message states the same consequence).
 
 The invariance across the content tip and every later control-plane commit is the property that
 makes `MANIFEST_TIP` informational, and it is **measured at each point, never asserted**.
@@ -130,17 +150,23 @@ read them from `--show-domain`.
 | `…/benchmark_manifest.json` | **added** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — the experiment record, `PREPARED — NOT FROZEN` |
 | `…/population/evidence_units.json` | **added** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — the ex-ante evaluation population, derived by command |
 | `…/instructions/` ×7 | **added**, one modified **(rev 3)** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — surface router, common instructions, output schema, `MODE_A`, `MODE_B`, and the two per-actor assignments. **Rev 3:** `BENCHMARK_INSTRUCTIONS.md` §1 tells the reader that `output/renders/` holds image files — before the reading, so the rule is a rule and not a trap |
+| `learning/plan/SLR-plan-0003.md` | **added (rev 3)** | CONTENT — hashed | **LEARNING RECORD** — the Session Learning Review §15 / E.6 owes for this session. `learning/` is CONTENT by intent (P5.1), so it is in the population and moves the hash; §15 requires it at session closure, and D.2 binds an approval to the hash, so it enters **before** review rather than after |
 | `governance/candidates/HANDOFF-SCIENTIST-AB-SPEC.md` | **added** | **CONTROL PLANE — excluded** | the durable handoff, carried byte-identically |
 | `governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md` | added | **CONTROL PLANE — excluded** | this manifest |
 | `ledger/tasks/plan/SCIENTIST-AB-SPEC-001.json` | **added** | **CONTROL PLANE — excluded** | task ACK + claim |
 | `ledger/checkpoints/plan/CHK-plan-0010.json` | **added** | **CONTROL PLANE — excluded** | checkpoint |
 
 ```
-content        19 files · +5106 / −1        no file deleted · no history rewritten
-control plane   5 files                     excluded from the hash by construction
+content        20 files · +5361 / −1        no file deleted · no history rewritten
+control plane   6 files                     excluded from the hash by construction
 
-  Revision 3 adds NO content file and removes none: the same 19, five of them edited.
-  The control-plane count moves 4 → 5 only because CHK-plan-0011 now exists.
+  Revision 3 edits five of revision 2's nineteen content files and ADDS exactly one —
+  learning/plan/SLR-plan-0003.md, the Session Learning Record §15 owes. That single
+  addition is the whole difference between 7cef4ccc… and 570fcbbb…, and between 523
+  and 524 included entries. The control-plane count moves 4 → 6 as CHK-plan-0011,
+  CHK-plan-0012 and CHK-plan-0013 accumulate.
+
+  git diff --shortstat cbce3016 HEAD -- . ':!governance/candidates' ':!ledger' ':!reviews'
 
   git diff --shortstat cbce3016 HEAD -- . ':!governance/candidates' ':!ledger'
 ```
@@ -487,6 +513,46 @@ No suite was disabled, weakened, skipped, or removed from `TESTS`; the baseline 
 redefined. The six suites and the seven tests under them are `PREEXISTING FAILURE`, carried
 forward and classified, not resolved.
 
+### 4.1b · The Session Learning Record, and why it is inside the reviewed population
+
+`learning/plan/SLR-plan-0003.md` is in this candidate's content, and it was added **after** a
+revision-3 binding had already been declared. That is deliberate, and the alternative was a
+review-integrity defect.
+
+**The rule, at source.** Body §15: *"Ogni sessione significativa MUST chiudersi con Session
+Learning Review."* — the trigger is **session closure**, not review submission. Annex E.6 gives
+the record's schema and its persistence route: *"Persistenza: `WORK_COMMIT` alla granularità delle
+milestone (A.7)."* P5.1 classifies the destination: *"`learning/` is CONTENT — by intent, not by
+omission … they therefore belong to the content domain and **must** move the candidate hash when
+they change."* And Annex D.2: *"ogni approvazione si lega a `CANDIDATE_CONTENT_HASH + BASE_HEAD`;
+qualsiasi modifica materiale le invalida."*
+
+**Read together they order it.** The record is owed now; it is content; content changes invalidate
+a binding. So writing it after review would mean Mirror reviewed a population that is **not** the
+one carried to canonicalization, and an ACCEPT would attach to a hash that no longer describes the
+candidate. The record therefore enters before review, and the binding declared before it is
+recorded as superseded in §1 rather than quietly replaced.
+
+**Precedent, and it is durable rather than inferred.** Both earlier Plan records took this route
+inside their own candidates: `SLR-plan-0001` @ `05cdeda`, and `SLR-plan-0002` @ `b9af54e`, whose
+commit message states the consequence in as many words — *"The candidate content hash moves only
+because SLR-plan-0002 is a content file on this branch — the documentary change the instruction
+anticipated."* `SLR-plan-0001` closes by calling itself *"the first artifact to exercise that
+declaration, and moving the candidate hash exactly as the declaration says it must."*
+
+**What was NOT done.** `learning/` was not declared a control-plane root to avoid the hash move:
+P5.1 forbids exactly that — *"Adding a root is a governed change to this file, reviewable as such —
+never an ad-hoc exclusion made while preparing a candidate"* — and it declares `learning/` content
+by intent. The record was not deferred to a later candidate either; §15 attaches it to this
+session, and this session's work is this candidate.
+
+**Declared debt, unchanged by this record.** No `LEARNING_INDEX` file exists (Annex E.2 names the
+instrument; Plan owns its durability). §15's dedup step was therefore performed against the record
+corpus read at source — `SLR-plan-0001`, `SLR-plan-0002`, `SLR-mirror-0009`, `SLR-mirror-0010` —
+and two of the five entries are filed as `REPLICATION` of Mirror's patterns rather than as
+originals. Every `CONFIRMATION_CLASS` is **proposed**: E.2 gives epistemic curation to Mirror, and
+an actor classifying its own learning is the shape E.2 exists to prevent.
+
 ### 4.2b · The corrections revision 2's own numbers needed (Mirror N-4, N-5)
 
 Two numbers in this manifest were superseded and survived anyway, which is the failure the
@@ -826,9 +892,21 @@ M-2  reason discipline every new probe asserts a reason token. Find one that wou
                        the wrong reason — that is the defect Mirror's own harness committed.
 N-4 · N-5              §3G and §5 are corrected. Are any other superseded numbers still alive
                        in this manifest?
-     binding           reproduce 7cef4ccc… at the content tip and at every later control-plane
-                       commit, and verify it is NOT c0701094… — a content change that left the
-                       hash alone would be the more serious finding
+     binding           reproduce 570fcbbb… at the content tip a3cad1d and at every later
+                       control-plane commit, and verify it is NEITHER c0701094… (revision 2)
+                       NOR 7cef4ccc… (the superseded revision-3 tip b634829) — a content
+                       change that left the hash alone would be the more serious finding.
+                       Both superseded values are declared in §1; check that no third place
+                       in this document still presents either as current.
+     SLR ordering      §4.1b argues that §15 + E.6 + P5.1 + D.2 REQUIRE the Session Learning
+                       Record inside the reviewed population rather than after it. Attack the
+                       reading: is §15's trigger really session closure? Is there a
+                       review-safe mechanism the argument missed? And is SLR-plan-0003
+                       truthful about this session — in particular L-5, which records that
+                       Plan first proposed to defer this very record, and L-1, which says the
+                       suite's own positive control asserted the M-2 defect as correct
+                       behaviour. E.2 gives you the curation: every CONFIRMATION_CLASS in it
+                       is proposed, and two are filed as REPLICATION of your own patterns.
 ```
 
 ### 6.0 · Revision 2 — retest these first, none of it transfers

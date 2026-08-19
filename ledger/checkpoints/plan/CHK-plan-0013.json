@@ -1,0 +1,95 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Pre-Mirror closure check on CAND-20260818-SCIENTIST-AB-SPEC revision 3. Not a new remediation and not a new revision: it discharges the Session Learning Review §15/E.6 that CHK-plan-0012 reported as deferred, and records the binding consequence of doing so. CHK-plan-0012 is not edited — it records a true state for the revision-3 content tip b634829, which this checkpoint supersedes.",
+
+  "CHECKPOINT_ID": "CHK-plan-0013",
+  "SUPERSEDES": "CHK-plan-0012 — same TASK_ID, same revision, later content tip. CHK-plan-0012 remains valid as the record of the M-1/M-2 remediation and of the binding declared at b634829.",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "SCIENTIST-AB-SPEC-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 3,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+  "FINGERPRINT_RECOMPUTED": "recomputed in this worktree with governance/scripts/governance_fingerprint.py compose --role plan; unchanged from CHK-plan-0012, and unchanged by this commit because learning/ is in no role's fingerprint set",
+
+  "TIMESTAMP": "2026-08-19",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "TRIGGER": "Operator pre-Mirror closure check. CHK-plan-0012 and the session report classified the Session Learning Review as an obligation NOT discharged, on the reasoning that learning/ is CONTENT and writing it would move a binding already declared. That reasoning is recorded here as WRONG, and the correction is the subject of SLR-plan-0003 L-5.",
+
+  "RULE_VERIFIED_AT_SOURCE": {
+    "body_15": "governance/GOVERNANCE_v3.1.1.md §15 — 'Ogni sessione significativa MUST chiudersi con Session Learning Review.' The trigger is SESSION CLOSURE. Outcomes: MICRO_UPGRADE | BEST_PRACTICE_CANDIDATE | FAILURE_PATTERN | MACRO_UPGRADE_CANDIDATE | NO_NEW_LEARNING. 'Prima di filare: consultare il LEARNING_INDEX — simile esistente → conferma con classe, non duplicato.'",
+    "body_35_2_plan_row": "GOVERNANCE_v3.1.1.md line 350, the plan row: 'Session Learning Review obbligatoria.'",
+    "role_contract": "roles/plan.md, Session obligations: 'Every significant session closes with a Session Learning Review (body §15, Annex E.6), and the record reaches durable state through a WORK_COMMIT — the message notifies, the commit is what happened.'",
+    "annex_e6": "governance/annex_e_learning_lifecycle.md § E.6 — record schema, and 'Persistenza: WORK_COMMIT alla granularità delle milestone (A.7)'",
+    "annex_e2": "§ E.2 — LEARNING_INDEX: durability Plan, epistemic curation MIRROR. Confirmation classes ORIGINAL_OBSERVATION | REPLICATION | EXPOSURE_AFTER_BROADCAST; dedup 'simile esistente → conferma con classe'",
+    "p5_1": "governance/plan_defined_parameters.md § P5.1 — CONTROL_PLANE_ROOTS are exactly governance/candidates/, ledger/, reviews/. 'learning/ is CONTENT — by intent, not by omission … Session Learning Records … belong to the content domain and MUST move the candidate hash when they change.' Also: 'Adding a root is a governed change to this file, reviewable as such — never an ad-hoc exclusion made while preparing a candidate.'",
+    "annex_d2": "governance/annex_d_commit_batch.md § D.2 — '[MAJOR] Binding: ogni approvazione si lega a CANDIDATE_CONTENT_HASH + BASE_HEAD; qualsiasi modifica materiale le invalida.'",
+    "timing_class": "A — REQUIRED BEFORE MIRROR REVIEW. §15 attaches the record to session closure; the record is CONTENT; D.2 makes any material content change invalidate a binding. Writing it after review would have Mirror review a population that is not the one carried forward.",
+    "no_review_safe_mechanism_exists": "Checked and none found. learning/ cannot be excluded without a governed change to P5, which P5.1 forbids as an ad-hoc preparation-time exclusion and which would contradict its own 'by intent' declaration. Plan has no second branch: its WORK_COMMITs are on the candidate branch by role contract and deployment. Deferring to a later candidate would detach the record from the session §15 attaches it to."
+  },
+
+  "PRECEDENT_AT_SOURCE": {
+    "_note": "Durable state, not interpretation. Both earlier Plan learning records were committed into the candidate they belonged to, moving the candidate hash.",
+    "SLR-plan-0001": "05cdedae9e7424f767569bc29d86782eade87a65 — learning/plan/SLR-plan-0001.md; the record's own closing paragraph: 'the first artifact to exercise that declaration, and moving the candidate hash exactly as the declaration says it must'",
+    "SLR-plan-0002": "b9af54ebe2fd24d94ec0eee71fcb064797922082 — commit message: 'The candidate content hash moves only because SLR-plan-0002 is a content file on this branch - the documentary change the instruction anticipated.'"
+  },
+
+  "BINDING_CONSEQUENCE_DEMONSTRATED": {
+    "_method": "Not inferred from the directory name. The roots were parsed from § P5 at the tip the way candidate_content_hash.py parses them, and the population was counted before and after.",
+    "parsed_control_plane_roots": ["governance/candidates/", "ledger/", "reviews/"],
+    "learning_among_roots": false,
+    "included_entries_before": 523,
+    "included_entries_after": 524,
+    "the_single_added_entry": "learning/plan/SLR-plan-0003.md",
+    "hash_before": "7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596",
+    "hash_after": "570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7",
+    "changes_candidate_content": true,
+    "changes_content_hash": true,
+    "changes_the_object_mirror_reviews": true
+  },
+
+  "SLR": {
+    "artifact": "learning/plan/SLR-plan-0003.md",
+    "commit": "a3cad1dcffc4090c23aaa972ad5e5fb817a7b912",
+    "entries": 5,
+    "dedup_route": "no LEARNING_INDEX file exists in this repository — E.2 names the instrument and Plan owns its durability; the debt is carried, not discovered here. Dedup was performed against the durable corpus read at source: SLR-plan-0001, SLR-plan-0002, SLR-mirror-0009, SLR-mirror-0010.",
+    "L-1": "ORIGINAL_OBSERVATION / FAILURE_PATTERN — a positive control can assert the defect as the correct behaviour. _plausible_reading() wrote output/renders/fig1.md, a markdown render, as part of the honest case; that is the object of M-2, so the class covering the clause could not have found it. A negative probe is checked by whether it fires; a positive control is checked by nothing.",
+    "L-2": "ORIGINAL_OBSERVATION / MICRO_UPGRADE — a false census can be repaired by changing the claim or by changing the thing claimed; both close the finding and survive re-review, and only one keeps the capability. State both directions and which was taken.",
+    "L-3": "ORIGINAL_OBSERVATION / MICRO_UPGRADE — three closures of M-1 (EXEMPT, a pasted token, the obligation stated) produce the same green test, so the classification must be argued in the artifact where it can be attacked.",
+    "L-4": "REPLICATION of SLR-mirror-0010 §1 / FAILURE_PATTERN — with the author-side addition that the delta-measuring instrument fails silently in the same direction as the defect it measures, and that the harness used here is NOT committed.",
+    "L-5": "ORIGINAL_OBSERVATION / FAILURE_PATTERN — Plan proposed to defer this very record because discharging it would move a declared binding, without checking precedent that had already answered it. A rule's inconvenient consequence is evidence of having understood it, not grounds for postponing it.",
+    "curation": "PENDING — every CONFIRMATION_CLASS is proposed, not self-certified (E.2 assigns epistemic curation to Mirror)"
+  },
+
+  "BINDING": {
+    "base_head": "cbce30168091f7769c56c4f019055fa55fd0d66a",
+    "content_tip": "a3cad1dcffc4090c23aaa972ad5e5fb817a7b912",
+    "candidate_content_hash": "570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7",
+    "reproductions": "3 runs of candidate_content_hash.py at the content tip, all equal; recomputed independently from P5.1/P5.2 without the script → identical, 524 included / 29 excluded",
+    "positive_controls": "the same independent route returns 7cef4ccc… at b634829 and c0701094… at daaa3335 — the two published earlier values, reproduced by the second implementation",
+    "superseded_rev3_bindings": [
+      {"tip": "b63482978dab13383177ed60ab55f4ca29fb1ed3", "hash": "7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596", "reason": "superseded WITHIN revision 3 by the Session Learning Record, which is content. Recorded in manifest §1 as SUPERSEDED_REV3_TIP / SUPERSEDED_REV3_HASH, not preserved for convenience and not quietly replaced."}
+    ],
+    "superseded_earlier_revisions": [
+      {"revision": 2, "tip": "daaa33353840304aaa7d288b393a2b3bb4faa08d", "hash": "c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf"},
+      {"revision": 1, "tip": "b965ca5880e93ad57770a0483aaa4652ec5f390c", "hash": "3b568aae6c76848da197cacd43e517373ab7ca9532cf9289a73097e261916c75"}
+    ]
+  },
+
+  "SCOPE_OF_THIS_COMMIT": {
+    "authorized": "only what the SLR/binding issue requires",
+    "content_added": ["learning/plan/SLR-plan-0003.md"],
+    "content_modified": [],
+    "M-1_unchanged": "framework/protocols/controlled_benchmark_ab.md §5.1 untouched since b634829",
+    "M-2_unchanged": "framework/scripts/benchmark_input_surface.py, surface_spec.json, BENCHMARK_INSTRUCTIONS.md, test_benchmark_input_surface.py all untouched since b634829",
+    "benchmark_protocol_scientist_roles_population_prefix_semantics_freeze_fields": "all untouched",
+    "regression_position_unchanged": "the SLR is a markdown file under learning/ and is read by no test; the release battery's failing set is unchanged from the measurement at b634829 and 2fc0551"
+  },
+
+  "STATE": "AWAITING_REVIEW — revision 3 complete AND closed, held for a NEW independent R4 Mirror review from R-1, over content tip a3cad1d / hash 570fcbbb…. No HUMAN_APPROVAL requested, granted or implied. No benchmark executed. No actor registered. No lease taken. main unchanged.",
+
+  "RESUME_RULE": "Annex A.6 refusal rule. Recompute the plan fingerprint before resuming and never compare against a value copied from prose. Recompute the candidate hash with candidate_content_hash.py --base cbce3016 --tip <content tip> before treating 570fcbbb… as current. 7cef4ccc… and c0701094… are SUPERSEDED and neither is a valid binding for review or approval. No verdict from REV-SCIAB-MIRROR-001 or REV-SCIAB-MIRROR-002 applies to this content."
+}
