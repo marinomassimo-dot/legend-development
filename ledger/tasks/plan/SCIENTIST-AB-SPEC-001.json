@@ -85,6 +85,19 @@
     "session_learning_review": "learning/plan/SLR-plan-0003.md @ a3cad1d — DISCHARGED, inside the reviewed population. Confirmation classes proposed, not self-certified: E.2 gives epistemic curation to Mirror."
   },
 
+  "GENERATION_4": {
+    "_note": "A fourth Plan session, opened by the operator for a TARGETED remediation of the single new blocking finding M-3. It inherited no identity, authority, routing, candidate state or decision from any earlier session; everything was reconstructed from durable repository evidence (body §36.5). The prompt's expected values — main, both tips, the revision-3 hash, the review commit — were treated as claims to verify at source, and all of them verified.",
+    "review_remediated": "REV-SCIAB-MIRROR-003 @ 015574a1 — read from the git object on branch mirror, without merging Mirror into this branch and without any cross-worktree write",
+    "session_ref": "NOT DECLARED — no durable protocol provides or verifies one; the registry's evidence-index-59 [de42c4] describes an earlier incarnation and is not asserted here",
+    "checkpoint": "ledger/checkpoints/plan/CHK-plan-0014.json — supersedes CHK-plan-0013, which remains valid as the record of revision 3's closure",
+    "scope": "M-3 only: the complete scan-skip population derived from the executable logic, the census that must equal it, the two false printed sentences, the false normative guarantee row, the test whose fixture encoded the defect, the hostile matrix that proves the repair, the Session Learning Record §15/E.6 owes for this session, and the binding. Four content files changed, one added. M-1 was not reopened; M-2's remedy was extended, not undone. The session-routing debt was observed a fourth time and deliberately left untouched.",
+    "reproduced_before_fix": "16 silent files per surface on a clean build where the review reported 10, plus a fourth skip class (undecodable_text) that no review had named. Mirror's four-path same-bytes control reproduced exactly.",
+    "content_tip": "a210f7381e5adc2fc43fc0f202213532ec6e80ed",
+    "candidate_content_hash": "07b65b3707a4e63df23918b844140e7548929b27a8a182f8ebf2d9b0ab165198",
+    "no_binding_superseded_within_this_revision": "b1061eb (1613fa3b…) is a real content commit and was never declared as a tip. The Session Learning Review was written and committed first — the correction of the ordering error SLR-plan-0003 L-5 recorded.",
+    "session_learning_review": "learning/plan/SLR-plan-0004.md @ a210f73 — DISCHARGED, inside the reviewed population, written BEFORE any binding was declared. Confirmation classes proposed, not self-certified: E.2 gives epistemic curation to Mirror."
+  },
+
   "WRITE_PERIMETER": {
     "content_domain_written": [
       "framework/protocols/scientist_reading_modes.md",
@@ -111,5 +124,5 @@
     }
   },
 
-  "STATE": "CLAIMED → IN_PROGRESS → AWAITING_REVIEW → CHANGES_REQUESTED → REMEDIATED (rev 2) → AWAITING_REVIEW → CHANGES_REQUESTED (REV-SCIAB-MIRROR-002: M-1, M-2) → REMEDIATED (rev 3) → AWAITING_REVIEW"
+  "STATE": "CLAIMED → IN_PROGRESS → AWAITING_REVIEW → CHANGES_REQUESTED → REMEDIATED (rev 2) → AWAITING_REVIEW → CHANGES_REQUESTED (REV-SCIAB-MIRROR-002: M-1, M-2) → REMEDIATED (rev 3) → AWAITING_REVIEW → CHANGES_REQUESTED (REV-SCIAB-MIRROR-003: M-1 CLOSED, M-2's defect CLOSED, new blocking M-3) → REMEDIATED (rev 4) → AWAITING_REVIEW"
 }

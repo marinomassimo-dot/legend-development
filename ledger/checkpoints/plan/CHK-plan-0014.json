@@ -1,0 +1,179 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Targeted remediation of REV-SCIAB-MIRROR-003's single new blocking finding M-3 on CAND-20260818-SCIENTIST-AB-SPEC, producing revision 4. A fourth Plan session, opened by the operator. It inherited no identity, authority, routing, candidate state or decision from any earlier session; every value below was reconstructed from durable repository evidence (body §36.5), and the prompt's expected values were treated as claims to verify at source. All of them verified.",
+
+  "CHECKPOINT_ID": "CHK-plan-0014",
+  "SUPERSEDES": "CHK-plan-0013 — same TASK_ID, next generation. CHK-plan-0013 remains valid as the record of revision 3's closure and of the binding declared at a3cad1d, which this checkpoint supersedes as the candidate's current binding.",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "SCIENTIST-AB-SPEC-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 4,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+  "FINGERPRINT_RECOMPUTED": "recomputed in this worktree with governance/scripts/governance_fingerprint.py compose --role plan, and independently at BASE_HEAD in a clean detached worktree; identical at both, and unchanged from CHK-plan-0013",
+
+  "TIMESTAMP": "2026-08-19",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "REHYDRATION": {
+    "worktree": "evidence-index",
+    "worktree_matches_git_toplevel": true,
+    "branch": "scientist-ab-spec",
+    "head_at_open": "bdac30f64856335e1545d8a1e0686db2901c53e1",
+    "tree_at_open": "clean",
+    "role_contract_read": "roles/plan.md — in full; plus body §5, §11–§15, §23–§28, §30, §36.5, Annex D.1–D.5, Annex E.2/E.6, P5 at source",
+    "stable_actor_identity": "plan · evidence-index · roles/plan.md · PERSISTENT_LEGEND_ACTOR — from the Agent Card on branch orchestrator and roles/plan.md, both read at source",
+    "current_session_ref": "NOT DECLARED — an actor cannot observe its own routing reference. The registry's evidence-index-59 [de42c4] describes an earlier incarnation and is not asserted for this one. Nothing in this work is keyed by a session reference.",
+    "agent_card_note": "runtime/agent_card_registry.md on branch orchestrator carries FINGERPRINT 37c3b863… for plan, written 2026-08-17 under an earlier composition. The value composed at BASE_HEAD and at this tip is 9c0c13fb…. The stale row is the registrar's to correct and is NOT touched here; it is recorded so the discrepancy is not read as this candidate's.",
+    "lease": "derived with framework/scripts/lease_state.py --check: ACTIVE by derivation 0. No Orchestrator authority is assumed and none is needed for a candidate.",
+    "result": "PLAN REHYDRATION: PASS"
+  },
+
+  "REVIEW_REMEDIATED": {
+    "review": "reviews/mirror/REV-SCIAB-MIRROR-003.md @ 015574a1718b4bef3a4b17c720a45d03a443b00b",
+    "read_how": "from the git object on branch mirror, without merging mirror into this branch and without any cross-worktree write",
+    "also_read": ["learning/mirror/SLR-mirror-0011.md", "ledger/checkpoints/mirror/CHK-mirror-0005.json"],
+    "verdict": "REQUEST CHANGES — M-1 CLOSED, M-2's reported defect CLOSED, one NEW blocking finding M-3, five recorded P-1…P-5, nine carried findings re-classified"
+  },
+
+  "M3_REPRODUCED_BEFORE_FIX": {
+    "_method": "In surfaces built by the tool itself at revision 3's content tip, from a scratchpad source root holding a read-only copy of the packet. Nothing was written to root, to main, or to another actor's worktree.",
+    "clean_build_per_surface": {"present": 24, "scanned": 8, "skipped": 16, "named_under_UNCHECKED": 0, "SILENT": 16, "silent_and_decodable": 10},
+    "mirror_reported": "10 silent decodable files per surface — correct for the sentence the finding is about; the six packet PDFs are skipped on the suffix test and were also named by nothing, so the silent population is 16",
+    "same_bytes_four_paths": {
+      "payload": "the whole of framework/protocols/controlled_benchmark_ab.md, appended in BOTH surfaces",
+      "CLAUDE.md": "PASS rc=0 · no finding · not named · [UNCHECKED SURFACE] 0",
+      "benchmark/MODE_DIRECTIVE.md": "PASS rc=0 · no finding · not named · [UNCHECKED SURFACE] 0",
+      "roles/scientist.md": "FAIL rc=1 · IDENTIFIER LEAK 18 hit(s) — the control",
+      "output/renders/smuggled.md": "FAIL rc=1 · NOT ALLOWLISTED + IDENTIFIER LEAK, 4 findings"
+    },
+    "fourth_class_found_here_and_in_no_review": "an allowlisted text-suffixed file that is not exempt and whose bytes do not decode. roles/scientist.md re-encoded UTF-16 into BOTH surfaces, carrying the whole forbidden protocol text: VERDICT: PASS, [UNCHECKED SURFACE] 0, no finding. Parity is silent because the change is identical on both sides.",
+    "freeze": "on the tampered CLAUDE.md tree: outputs 0 · unexpected 0 — correct classification, CLAUDE.md is a declared input. Its digest IS in FILES, so verify-freeze detects any post-freeze change (measured: rc=1 on one appended byte, PASS on the untouched tree)."
+  },
+
+  "SCAN_SKIP_CONDITIONS": {
+    "_derivation": "read off cmd_verify's step-6 loop, top to bottom, not from documentation and not from the review",
+    "conditions": 4,
+    "census_classes": 6,
+    "table": [
+      {"class": "blind_spot", "predicate": "post_read AND rel in expected_output_paths ∩ forbidden_prior_output_paths", "expected_by_protocol": true},
+      {"class": "scan_exempt_present", "predicate": "post_read AND rel in expected_output_paths", "expected_by_protocol": true},
+      {"class": "undecodable_prefix", "predicate": "post_read AND under expected_output_prefixes AND bytes do not decode", "expected_by_protocol": true},
+      {"class": "scan_exempt_input", "predicate": "rel in content_scan.exempt_surface_paths", "expected_by_protocol": true, "was_censused_at_rev3": false},
+      {"class": "suffix_not_scanned", "predicate": "suffix not in content_scan.text_suffixes", "expected_by_protocol": true, "was_censused_at_rev3": false},
+      {"class": "undecodable_text", "predicate": "text suffix, not exempt, bytes do not decode", "expected_by_protocol": false, "was_censused_at_rev3": false}
+    ]
+  },
+
+  "REMEDIATION": {
+    "mechanism": "scan_skip_reason() — ONE predicate with TWO callers, the scan loop in cmd_verify and unchecked_surface(). A file is censused exactly when the scan skipped it, because it is the same call. The equality 'actual unscanned == declared unscanned' is structural rather than maintained.",
+    "rejected": [
+      "Mirror remedy (i) — add the two missing populations to unchecked_surface(). Closes the finding and leaves the scan and the census as two statements of one rule, which is what failed here twice.",
+      "Mirror remedy (ii) — restore revision 2's weaker wording and declare the exempt inputs a residual. True, and weaker than what the tool can establish."
+    ],
+    "census_line_fields": ["path", "class", "reason", "EXPECTED_BY_PROTOCOL", "which checks did still run"],
+    "unexpected_skips_counted_separately": "undecodable_text is the only EXPECTED_BY_PROTOCOL NO class; the command prints a separate count so a reviewer reads those lines first",
+    "tool_output_claims": "the PASS sentence and the census closing line now state the partition; the NOT CHECKED line states it as a property of one predicate. The narrow revision-3 formulation was true and is strictly weaker; nothing claims it any more.",
+    "normative_claims": "controlled_benchmark_ab.md §4.5 and the guarantee-table row corrected; two surface_spec.json _note blocks corrected. No spec key, path or rule changed.",
+    "after": {"per_surface": {"present": 24, "scanned": 8, "censused": 16, "SILENT": 0}, "printed_total": 32}
+  },
+
+  "TESTS": {
+    "suite": "framework/scripts/test_benchmark_input_surface.py — 71 tests, 71 green at this tip, registered in the release battery",
+    "replaced": "test_the_census_names_every_unchecked_file_and_counts_them → test_the_census_is_exactly_the_present_files_the_scan_did_not_read. The old expectation was written by asking what the census produces, which the implementation answers; it asserted a three-path set over a fixture declaring five decodable exempt paths.",
+    "oracle_1": "a hand-written literal, FIXTURE_CENSUS_AT_HANDOVER, path by path from what build_fixture puts on disk. Not computed from the spec, not derived by calling the predicate.",
+    "oracle_2": "test_every_present_file_is_either_scanned_or_named_and_never_both — plants the paper's identifier in each present file and measures the scan by whether it REPORTS it. Contains no copy of the skip rule. Asserts the partition in both directions, and requires the scanned set to be non-empty (SLR-mirror-0011 §3).",
+    "positive_control_repaired": "test_positive_control_an_honest_reading_passes_post_read asserted rc == 0 and VERDICT: PASS and nothing else, so it passed identically over ten silent files per surface. It now pins the whole census of the honest tree.",
+    "added": ["ScanSkipClassTests — 8 probes, one per skip class, each asserting the printed CLASS", "CensusContractTests — 3 structural guards"],
+    "hostile_discipline": "every probe plants into BOTH surfaces. A probe editing one surface is caught by PARITY BROKEN — a real check firing correctly and answering a question the probe did not ask.",
+    "fixture_change": "CLAUDE.md added as a common file and an exempt path, so the fixture models Mirror's own reproducer",
+    "differential_against_rev3_tool": "the revision-4 tests, unchanged, against the tool at a3cad1d: 12 of 71 FAIL/ERROR — including the invariant test, the rewritten census test, the honest-reading positive control, and the contract test that the scan and the census share a predicate"
+  },
+
+  "REGRESSION": {
+    "_method": "every target of scripts/run_release_regressions.py executed the way the runner executes it, in clean detached worktrees of BASE_HEAD and of the candidate tip. Neither holds files/. Per-test identities and failure blocks parsed from the unittest output; a suite exiting non-zero with NO parsed test failure is recorded as `unattributed`.",
+    "base": {"tip": "cbce3016", "targets_present": 64, "targets_missing": 0, "failing_suites": 6, "failing_tests": 7, "tests_run": 870, "unattributed": []},
+    "candidate": {"tip": "a210f73", "targets_present": 65, "targets_missing": 0, "failing_suites": 6, "failing_tests": 7, "tests_run": 941, "unattributed": []},
+    "added_failing_suites": [],
+    "removed_failing_suites": [],
+    "added_failing_tests": [],
+    "removed_failing_tests": [],
+    "shared_failing_tests": 7,
+    "same_reason": "PASS 7/7 — full failure blocks compared after normalizing only worktree roots, temp dirs, line numbers, addresses and elapsed times. No assertion text normalized.",
+    "harness_committed": false,
+    "harness_limitation": "as at revision 3 (SLR-plan-0003 L-4): the delta harness is not tracked, so these numbers are reproducible only by re-authoring an equivalent instrument. Not repaired here — a committed harness is not required to prove M-3 and adding one is scope this session was not given."
+  },
+
+  "NON_REGRESSION": {
+    "_method": "function-level byte identity where it is sufficient, measurement where it is not",
+    "functions_byte_identical_to_rev3": ["cmd_locators", "cmd_freeze", "cmd_verify_freeze", "cmd_population", "_classify", "cmd_build", "_is_expected_output", "_is_decodable_text", "iter_files", "iter_symlinks", "tree_digest", "and 17 more — 28 of 31"],
+    "functions_changed": ["cmd_verify", "unchecked_surface"],
+    "functions_added": ["scan_skip_reason"],
+    "content_files_byte_identical_to_rev3": 16,
+    "M-1": "PASS — test_every_route_carries_the_obligation_or_declares_an_exemption green at BASE_HEAD and at a210f73, absent from both failing sets. The guard file is untouched by revision 4; verbatim_locators still present 3× in controlled_benchmark_ab.md and §5.1 is unedited.",
+    "M-2": "PASS — output/renders/smuggled.md still produces NOT ALLOWLISTED + IDENTIFIER LEAK, 4 findings, rc=1; roles/scientist.md still produces IDENTIFIER LEAK 18 hit(s). The census extension did not reopen it.",
+    "NON_UTF8_RENDER_RULE": "CONTAINED — undecodable_prefix is unchanged in predicate and now carries an explicit reason and coverage line; a UTF-16 payload under the prefix is named, as before.",
+    "B-1": "PASS — cmd_population byte-identical; no population file changed",
+    "B-3": "PASS — cmd_freeze / cmd_verify_freeze byte-identical; 3 freeze cases re-run at this tip (honest tree, positive control, one edited byte)",
+    "B-5": "PASS — OUTPUT_SCHEMA.md byte-identical",
+    "MODE_A_B": "PASS — scientist_reading_modes.md and both MODE files byte-identical",
+    "ACTOR_EQUIVALENCE": "PRESERVED — roles/scientist.md byte-identical",
+    "C-2": "PASS — byte-identical",
+    "INPUT_PARITY": "PASS — the parity check is untouched and two probes now assert its ABSENCE on identical-both-surfaces edits, which is the honest statement of what it covers",
+    "SCIENTIFIC_DEPTH": "PRESERVED — no MODE file, assignment, instruction file or population file changed",
+    "ACTOR_REGISTRATION": "PASS — byte-identical",
+    "CANONICALIZATION_DEPENDENCY": "CONFIRMED — scientist 355e3529… → 82423a48…; plan 9c0c13fb…, mirror 3dff8954…, orchestrator e2c54470… identical at BASE_HEAD and at this tip",
+    "PUBLICATION_GATE": "PASS / BLOCKS 0",
+    "LINT": "PASS (1 pre-existing INFO)",
+    "receipts": "OK — 128 chained, tail anchored",
+    "growth_anchors": "PASS — claims=39 · papers=70 · corpus=356 · literature=390",
+    "NO_PARALLEL_CLAIM_SCHEMA": "NONE — zero matches over the revision-4 diff",
+    "SCOPE": "four content files changed, one added. Zero paths matching session|rout|registr|lease|approval|_current|agent_card in the revision-4 diff."
+  },
+
+  "SLR": {
+    "artifact": "learning/plan/SLR-plan-0004.md",
+    "commit": "a210f7381e5adc2fc43fc0f202213532ec6e80ed",
+    "written_before_binding_declared": true,
+    "entries": 4,
+    "dedup_route": "no LEARNING_INDEX file exists — E.2 names the instrument and Plan owns its durability; the debt is carried, not discovered here. Dedup performed against the durable corpus read at source: SLR-plan-0003, SLR-mirror-0009, SLR-mirror-0010, SLR-mirror-0011.",
+    "L-1": "ORIGINAL_OBSERVATION / FAILURE_PATTERN — the census was derived from the finding just fixed rather than from the predicate that implements the skip. Mirror reported ten silent files; the code has sixteen, and a fourth class no review had named. A finding is a lower bound on its own population. Noted as agreeing independently with SLR-mirror-0011 §1, reached from the other side; whether that is one learning or two is Mirror's call under E.2.",
+    "L-2": "ORIGINAL_OBSERVATION / MICRO_UPGRADE — both available repairs close the finding and leave the scan and the census as two statements of one rule. When a tool reports on its own behaviour, the report and the behaviour must come from the same call. The cost is stated: an honest census is loud.",
+    "L-3": "REPLICATION of SLR-plan-0003 L-1, on the object Mirror named / FAILURE_PATTERN — the expectation was read off the implementation, so the test verified that the implementation does what the implementation does. Two oracles replace it, and the differential against revision 3's tool is the evidence they discriminate.",
+    "L-4": "REPLICATION of SLR-mirror-0011 §4 / BEST_PRACTICE_CANDIDATE (proposed) — the same bytes at four paths, priced from the author's side; plus the discipline that a probe editing one surface measures the parity check.",
+    "curation": "PENDING — every CONFIRMATION_CLASS is proposed, not self-certified (E.2 assigns epistemic curation to Mirror)"
+  },
+
+  "BINDING": {
+    "base_head": "cbce30168091f7769c56c4f019055fa55fd0d66a",
+    "content_tip": "a210f7381e5adc2fc43fc0f202213532ec6e80ed",
+    "candidate_content_hash": "07b65b3707a4e63df23918b844140e7548929b27a8a182f8ebf2d9b0ab165198",
+    "hash_version": "legend-candidate-v4",
+    "reproductions": "3 runs of candidate_content_hash.py at the content tip, all equal; recomputed independently from P5.1/P5.2 without the script → identical, 525 included / 30 excluded",
+    "positive_controls": "the same independent route returns the four PUBLISHED earlier values: 570fcbbb… at a3cad1d, 7cef4ccc… at b634829, c0701094… at daaa3335, 3b568aae… at b965ca58",
+    "positive_controls_caught_a_real_error": "the FIRST independent implementation reproduced NONE of the four, with every included/excluded count exactly right: it sorted the whole ls-tree line instead of the path, which orders by mode and moves the two 100755 entries. P5.2 says path-sorted. Without requiring the published values back, a wrong second implementation would have been reported as independent confirmation.",
+    "no_binding_superseded_within_this_revision": "b1061eb, the M-3 remediation commit, is a real content commit (1613fa3b…) and was NEVER declared as this candidate's tip. The Session Learning Review was written first. Revision 3 did the reverse and had to supersede its own value; SLR-plan-0003 L-5 recorded that and SLR-plan-0004 records the correction.",
+    "superseded_bindings": [
+      {"revision": 3, "tip": "a3cad1dcffc4090c23aaa972ad5e5fb817a7b912", "hash": "570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7"},
+      {"revision": "3 (within-revision)", "tip": "b63482978dab13383177ed60ab55f4ca29fb1ed3", "hash": "7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596"},
+      {"revision": 2, "tip": "daaa33353840304aaa7d288b393a2b3bb4faa08d", "hash": "c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf"},
+      {"revision": 1, "tip": "b965ca5880e93ad57770a0483aaa4652ec5f390c", "hash": "3b568aae6c76848da197cacd43e517373ab7ca9532cf9289a73097e261916c75"}
+    ]
+  },
+
+  "CARRIED_FINDINGS": {
+    "not_resolved_by_M3": ["N-1", "N-2", "N-3", "N-6", "N-7", "N-8", "N-9", "P-1", "P-3", "P-4", "P-5", "R-7", "R-10"],
+    "N-8_verified_structurally": "cmd_locators is byte-identical between bdac30f and this tip; a census cannot reach a lexical path check. M-3 does not change its status and revision 4 does not claim it does.",
+    "N-2_verified_structurally": "cmd_population byte-identical; declared_empty_sources is still accepted on declaration",
+    "P-2": "ACCEPTED and stated — §4.1b now names the missing premise (Plan's only durable branch is the candidate branch)",
+    "P-4": "STATED, NOT CLOSED — it is the residual on every scan_exempt_input census line and in §4.5. Closing it is a new check; this revision was given one finding."
+  },
+
+  "SESSION_ROUTING_DEBT": "OUT OF SCOPE — observed a fourth time and deliberately left untouched. No SESSION_REF declared, no supersession, no routing change, no session registry.",
+
+  "STATE": "AWAITING_REVIEW — revision 4 complete AND closed, held for a NEW independent R4 Mirror review from R-1, over content tip a210f73 / hash 07b65b37…. No HUMAN_APPROVAL requested, granted or implied. No benchmark executed. No actor registered. No lease taken. main unchanged at cbce3016.",
+
+  "RESUME_RULE": "Annex A.6 refusal rule. Recompute the plan fingerprint before resuming and never compare against a value copied from prose. Recompute the candidate hash with candidate_content_hash.py --base cbce3016 --tip <content tip> before treating 07b65b37… as current. 570fcbbb…, 7cef4ccc…, c0701094… and 3b568aae… are SUPERSEDED and none is a valid binding for review or approval; 1613fa3b… was never a binding at all. No verdict from REV-SCIAB-MIRROR-001, -002 or -003 applies to this content, M-1's closure included."
+}

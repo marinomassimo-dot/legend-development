@@ -1,20 +1,23 @@
 ---
 artifact: INTEGRATION_CANDIDATE manifest (Annex D.2)
 candidate_id: CAND-20260818-SCIENTIST-AB-SPEC
-revision: 3
-supersedes: revision 2 (content tip daaa3335, hash c0701094…21bcf) — REQUEST CHANGES under
-  REV-SCIAB-MIRROR-002; and revision 1 (content tip b965ca58, hash 3b568aae…916c75) — REQUEST
-  CHANGES under REV-SCIAB-MIRROR-001. No verdict, finding or PASS from either review transfers
-  to this content: a revision is reviewed from R-1 (CHK-mirror-0004 RESUME_RULE). That includes
-  the fourteen rows REV-SCIAB-MIRROR-002 §5 re-tested and passed.
+revision: 4
+supersedes: revision 3 (content tip a3cad1d, hash 570fcbbb…8ab7) — REQUEST CHANGES under
+  REV-SCIAB-MIRROR-003; revision 2 (content tip daaa3335, hash c0701094…21bcf) — REQUEST CHANGES
+  under REV-SCIAB-MIRROR-002; and revision 1 (content tip b965ca58, hash 3b568aae…916c75) —
+  REQUEST CHANGES under REV-SCIAB-MIRROR-001. No verdict, finding or PASS from any of the three
+  transfers to this content: a revision is reviewed from R-1 (CHK-mirror-0004 RESUME_RULE). That
+  includes M-1, which REV-SCIAB-MIRROR-003 closed, and the twenty-odd rows it passed.
 governance_version: 3.1.1
 change_class: MAJOR
 prepared_by: plan
 prepared_on: 2026-08-19
-state: READY FOR MIRROR REVIEW (revision 3) — no approval requested, granted or implied
-scope: HANDOFF-20260818-SCIENTIST-AB, as transmitted. Not reduced and not widened. Revision 3
-  adds no scope: it repairs M-1 and M-2, corrects the manifest sentences those findings made
-  false, and touches nothing else. No architecture was redesigned and no passed row reopened.
+state: READY FOR MIRROR REVIEW (revision 4) — no approval requested, granted or implied
+scope: HANDOFF-20260818-SCIENTIST-AB, as transmitted. Not reduced and not widened. Revision 4
+  adds no scope: it repairs M-3, corrects the three artifacts that asserted the incomplete
+  census, replaces the test that encoded the defect, and touches nothing else. Four content
+  files changed. No architecture was redesigned, M-1 was not reopened, and M-2's remedy was
+  extended rather than undone.
 ---
 
 # INTEGRATION_CANDIDATE — the definitive Scientist A / Scientist B specification
@@ -23,24 +26,25 @@ scope: HANDOFF-20260818-SCIENTIST-AB, as transmitted. Not reduced and not widene
 
 ```yaml
 CANDIDATE_ID:               CAND-20260818-SCIENTIST-AB-SPEC
-REVISION:                   3
+REVISION:                   4
 BASE_HEAD:                  cbce30168091f7769c56c4f019055fa55fd0d66a
 BRANCH:                     scientist-ab-spec
-CONTENT_TIP:                a3cad1d… — the Session Learning Record, which is the last content
-                            commit of this revision; see the block below for the reproduced
-                            value at every tip
+CONTENT_TIP:                a210f7381e5adc2fc43fc0f202213532ec6e80ed — the Session Learning
+                            Record, which is the last content commit of this revision; see the
+                            block below for the reproduced value at every tip
+                            # 🔴 NO BINDING WAS DECLARED AND THEN SUPERSEDED WITHIN THIS
+                            # REVISION. b1061eb, the M-3 remediation commit, is a real content
+                            # commit and its hash is reproduced below as a control, but it was
+                            # never declared as the candidate's binding: the Session Learning
+                            # Review §15 owes for this session was written first, and only then
+                            # was a tip named. Revision 3 did it the other way round and had to
+                            # supersede its own value; SLR-plan-0003 L-5 recorded that as the
+                            # session's failure and SLR-plan-0004 records the correction.
+SUPERSEDED_CONTENT_TIP_3:   a3cad1dcffc4090c23aaa972ad5e5fb817a7b912   (revision 3)
+SUPERSEDED_HASH_3:          570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7
 SUPERSEDED_REV3_TIP:        b63482978dab13383177ed60ab55f4ca29fb1ed3   (the M-1/M-2 remediation
                             commit — a revision-3 content tip, superseded WITHIN revision 3)
 SUPERSEDED_REV3_HASH:       7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596
-                            # 🔴 Declared, then superseded by a content commit of this same
-                            # revision. learning/ is CONTENT by intent (P5.1) and the Session
-                            # Learning Review is owed by §15 at session closure, so the record
-                            # had to enter the population BEFORE review: Annex D.2 binds an
-                            # approval to CANDIDATE_CONTENT_HASH + BASE_HEAD and any material
-                            # change invalidates it. Writing it afterwards would have had
-                            # Mirror review a population that is not the one carried forward.
-                            # Not preserved for convenience; recorded so the supersession is
-                            # visible rather than quiet.
 SUPERSEDED_CONTENT_TIP:     daaa33353840304aaa7d288b393a2b3bb4faa08d   (revision 2)
 SUPERSEDED_HASH:            c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf
 SUPERSEDED_CONTENT_TIP_1:   b965ca5880e93ad57770a0483aaa4652ec5f390c   (revision 1)
@@ -61,7 +65,7 @@ MANIFEST_TIP:               the control-plane commit carrying this revision — 
                             # in miniature. `--show-domain` prints what was excluded at each.
                             # `git log --oneline cbce3016..HEAD` shows the branch; the hash
                             # command shows the invariance.
-CANDIDATE_CONTENT_HASH:     570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7
+CANDIDATE_CONTENT_HASH:     07b65b3707a4e63df23918b844140e7548929b27a8a182f8ebf2d9b0ab165198
 CANDIDATE_HASH_VERSION:     legend-candidate-v4
 CHANGE_CLASS:               MAJOR
 LINT_RESULT:                PASS (1 pre-existing INFO)
@@ -72,11 +76,12 @@ DELTA_REGRESSION:           0 ADDED FAILING TESTS — at TEST-METHOD granularity
                             same-reason comparison over every shared test. A set of suite names
                             is not evidence for this claim: an already-red suite absorbs a new
                             failing test without changing its name, and in revision 2 one did.
-MIRROR_REVIEW:              REV-SCIAB-MIRROR-002 → REQUEST CHANGES, on revision 2 (M-1, M-2,
-                            nine recorded). Revision 3 requires a NEW independent review from
-                            R-1. No PASS, no PRESERVED and no CONFIRMED from that review — or
-                            from REV-SCIAB-MIRROR-001 — transfers to this content, including
-                            the fourteen §5 rows revision 2 was found to have got right.
+MIRROR_REVIEW:              REV-SCIAB-MIRROR-003 → REQUEST CHANGES, on revision 3 (M-1 CLOSED,
+                            M-2's reported defect CLOSED, one new blocking finding M-3, five
+                            recorded P-1…P-5, nine carried findings re-classified). Revision 4
+                            requires a NEW independent review from R-1. No PASS, no PRESERVED
+                            and no CONFIRMED from that review — or from -002 or -001 — transfers
+                            to this content, M-1's closure included.
 HUMAN_APPROVAL:             NONE — not requested, not granted, not implied
 SNAPSHOT_ID:                n/a until canonical execution — GATE 4 belongs to Orchestrator
 ```
@@ -96,34 +101,43 @@ python3 governance/scripts/candidate_content_hash.py \
 ```
 
 ```
-EXPECTED             570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7
-OBTAINED (run 1)     570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7
-OBTAINED (run 2)     570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7
-OBTAINED (run 3)     570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7
+EXPECTED             07b65b3707a4e63df23918b844140e7548929b27a8a182f8ebf2d9b0ab165198
+OBTAINED (run 1)     07b65b3707a4e63df23918b844140e7548929b27a8a182f8ebf2d9b0ab165198
+OBTAINED (run 2)     07b65b3707a4e63df23918b844140e7548929b27a8a182f8ebf2d9b0ab165198
+OBTAINED (run 3)     07b65b3707a4e63df23918b844140e7548929b27a8a182f8ebf2d9b0ab165198
 OBTAINED at the control-plane commit carrying this revision
-                     570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7
+                     07b65b3707a4e63df23918b844140e7548929b27a8a182f8ebf2d9b0ab165198
 ```
 
 **Recomputed without the script**, from P5.1 and P5.2 directly — `git ls-tree -r --full-tree`,
-the three declared roots removed, path-sorted, `legend-candidate-v4\n` + `BASE_HEAD\n` + every
-entry newline-terminated:
+the three declared roots removed, **path-sorted**, `legend-candidate-v4\n` + `BASE_HEAD\n` +
+every entry newline-terminated:
 
 ```
-at a3cad1d (CONTENT TIP)                 570fcbbb…8ab7     included 524 · excluded 29
-POSITIVE CONTROLS, same route
+at a210f73 (CONTENT TIP, revision 4)     07b65b37…5198     included 525 · excluded 30
+at b1061eb (rev-4 remediation commit)    1613fa3b…9332     included 524 · excluded 30
+POSITIVE CONTROLS, same route — the four PUBLISHED values of the earlier tips
+at a3cad1d (revision 3)                  570fcbbb…8ab7     included 524 · excluded 29
 at b634829 (superseded rev-3 tip)        7cef4ccc…4596     included 523 · excluded 28
 at daaa3335 (revision 2)                 c0701094…21bcf     included 523 · excluded 27
+at b965ca58 (revision 1)                 3b568aae…916c75   included 522 · excluded 24
 ```
 
-The controls are the point: a second implementation that reproduces the **published** hashes of
-the earlier tips is a second implementation, and one that only agrees with itself is one. Neither
-`7cef4ccc…` nor `c0701094…` is the binding of this candidate, and the three values above are why.
+The controls are the point, and this revision is the run where they earned their keep. **My
+first recomputation reproduced none of the four**, with every included/excluded count exactly
+right: it sorted the whole `ls-tree` line instead of the path, which orders by mode and moves the
+two `100755` entries. P5.2 says *path-sorted*. A second implementation that agreed only with
+itself would have shipped a wrong "independent" confirmation of a right hash, and the only thing
+that caught it was requiring the published values to come back.
 
-**The one entry that separates `570fcbbb…` from `7cef4ccc…`** is
-`learning/plan/SLR-plan-0003.md` — 523 included entries becomes 524. That is `learning/` being
+`1613fa3b…` is **not** a superseded binding — it was never declared as one. It is the
+mid-revision content commit, printed so the single-entry delta below is checkable.
+
+**The one entry that separates `07b65b37…` from `1613fa3b…`** is
+`learning/plan/SLR-plan-0004.md` — 524 included entries becomes 525. That is `learning/` being
 CONTENT by intent (P5.1) rather than by omission, behaving exactly as the declaration says it
-must, and it is the third Plan record to exercise it (`SLR-plan-0001` @ `05cdeda`,
-`SLR-plan-0002` @ `b9af54e`, whose commit message states the same consequence).
+must, and it is the fourth Plan record to exercise it (`SLR-plan-0001` @ `05cdeda`,
+`SLR-plan-0002` @ `b9af54e`, `SLR-plan-0003` @ `a3cad1d`).
 
 The invariance across the content tip and every later control-plane commit is the property that
 makes `MANIFEST_TIP` informational, and it is **measured at each point, never asserted**.
@@ -138,33 +152,37 @@ read them from `--show-domain`.
 | File | Status | Domain | Classification |
 |---|---|---|---|
 | `framework/protocols/scientist_reading_modes.md` | **added** | CONTENT — hashed | **NORMATIVE** — reading modes, actor identity of A and B, task-ownership rule |
-| `framework/protocols/controlled_benchmark_ab.md` | **added**, modified **(rev 3)** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — normative for the benchmark it defines, and for nothing outside it. **Rev 3:** new §5.1 carries the verbatim-locator obligation into the route that instructs the reading (M-1); §4.3 and the guarantee table state what `--post-read` leaves unchecked (M-2) |
-| `framework/scripts/benchmark_input_surface.py` | **added**, modified **(rev 3)** | CONTENT — hashed | **NORMATIVE (tooling)** — it decides whether a surface may be handed over; it is not documentation. **Rev 2: substantially rewritten**; **rev 3:** the prefix exemption is written on bytes rather than position, and the unchecked surface is enumerated from the tree — see §4.5 |
-| `framework/scripts/test_benchmark_input_surface.py` | **added (rev 2)**, modified **(rev 3)** | CONTENT — hashed | **NORMATIVE (tooling)** — **59** probes, one per clause of every PASS sentence, each null finding with a positive control. Rev 3 adds fourteen and repairs a fixture whose "render" was a markdown file |
+| `framework/protocols/controlled_benchmark_ab.md` | **added**, modified **(rev 3, rev 4)** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — normative for the benchmark it defines, and for nothing outside it. **Rev 3:** new §5.1 carries the verbatim-locator obligation into the route that instructs the reading (M-1); §4.3 and the guarantee table state what `--post-read` leaves unchecked (M-2). **Rev 4:** §4.5 and the guarantee row state the complete skip population and the partition, and name what the census does **not** say (M-3) |
+| `framework/scripts/benchmark_input_surface.py` | **added**, modified **(rev 3, rev 4)** | CONTENT — hashed | **NORMATIVE (tooling)** — it decides whether a surface may be handed over; it is not documentation. **Rev 2: substantially rewritten**; **rev 3:** the prefix exemption is written on bytes rather than position, and the unchecked surface is enumerated from the tree; **rev 4:** `scan_skip_reason()` — one predicate, called by the scan loop **and** the census, so the two cannot disagree (M-3). Twelve functions byte-identical to rev 3; only `cmd_verify` and `unchecked_surface` changed |
+| `framework/scripts/test_benchmark_input_surface.py` | **added (rev 2)**, modified **(rev 3, rev 4)** | CONTENT — hashed | **NORMATIVE (tooling)** — **71** probes, one per clause of every PASS sentence, each null finding with a positive control. Rev 3 adds fourteen and repairs a fixture whose "render" was a markdown file; **rev 4** replaces the census test whose expectation reproduced the implementation, adds `ScanSkipClassTests` (8) and `CensusContractTests` (3), and makes the honest-reading positive control assert the whole census instead of the verdict alone |
 | `scripts/run_release_regressions.py` | modified **(rev 2)** | CONTENT — hashed | **DOCUMENTATION/INFRA** — one line: the new suite registered in the battery, which `test_release_runner_verdict.py` requires of every tracked test file |
 | `roles/scientist.md` | modified | CONTENT — hashed | **NORMATIVE** — `actor_id_status` front matter + the *Reading modes* section. 🔴 In the `CORE` fingerprint set |
 | `BOOTSTRAP.md` | modified | CONTENT — hashed | **NORMATIVE** — records that A and B are fixed and C is not |
 | `framework/protocols/index.md` | modified | CONTENT — hashed | **DOCUMENTATION** — two rows in the protocol table |
 | `framework/eval/README.md` | modified | CONTENT — hashed | **DOCUMENTATION** — the reader-benchmark axis, and what it does not have |
-| `framework/eval/benchmarks/BENCH-AB-001/surface_spec.json` | **added**, modified **(rev 3)** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — the allowlist; a command reads it, a reviewer reads the same file. **Rev 3:** `_expected_output_prefix_note` states what the prefix admits and why, and the note claiming a blind spot "cannot widen a silent one" is corrected where it was false |
+| `framework/eval/benchmarks/BENCH-AB-001/surface_spec.json` | **added**, modified **(rev 3, rev 4)** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — the allowlist; a command reads it, a reviewer reads the same file. **Rev 3:** `_expected_output_prefix_note` states what the prefix admits and why, and the note claiming a blind spot "cannot widen a silent one" is corrected where it was false. **Rev 4:** two `_note` blocks only — the census is six classes and not three, and `content_scan` says out loud that an exempt path's content is **not read** and is now printed under `[UNCHECKED]`. No key, path or rule changed |
 | `…/benchmark_manifest.json` | **added** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — the experiment record, `PREPARED — NOT FROZEN` |
 | `…/population/evidence_units.json` | **added** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — the ex-ante evaluation population, derived by command |
 | `…/instructions/` ×7 | **added**, one modified **(rev 3)** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — surface router, common instructions, output schema, `MODE_A`, `MODE_B`, and the two per-actor assignments. **Rev 3:** `BENCHMARK_INSTRUCTIONS.md` §1 tells the reader that `output/renders/` holds image files — before the reading, so the rule is a rule and not a trap |
-| `learning/plan/SLR-plan-0003.md` | **added (rev 3)** | CONTENT — hashed | **LEARNING RECORD** — the Session Learning Review §15 / E.6 owes for this session. `learning/` is CONTENT by intent (P5.1), so it is in the population and moves the hash; §15 requires it at session closure, and D.2 binds an approval to the hash, so it enters **before** review rather than after |
+| `learning/plan/SLR-plan-0003.md` | **added (rev 3)** | CONTENT — hashed | **LEARNING RECORD** — the Session Learning Review §15 / E.6 owed for revision 3's session. `learning/` is CONTENT by intent (P5.1), so it is in the population and moves the hash; §15 requires it at session closure, and D.2 binds an approval to the hash, so it enters **before** review rather than after |
+| `learning/plan/SLR-plan-0004.md` | **added (rev 4)** | CONTENT — hashed | **LEARNING RECORD** — the same obligation for **this** session, and the single entry separating `07b65b37…` from `1613fa3b…`. Written and committed **before** any revision-4 binding was declared, so unlike revision 3 nothing had to be superseded |
 | `governance/candidates/HANDOFF-SCIENTIST-AB-SPEC.md` | **added** | **CONTROL PLANE — excluded** | the durable handoff, carried byte-identically |
 | `governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md` | added | **CONTROL PLANE — excluded** | this manifest |
 | `ledger/tasks/plan/SCIENTIST-AB-SPEC-001.json` | **added** | **CONTROL PLANE — excluded** | task ACK + claim |
 | `ledger/checkpoints/plan/CHK-plan-0010.json` | **added** | **CONTROL PLANE — excluded** | checkpoint |
 
 ```
-content        20 files · +5361 / −1        no file deleted · no history rewritten
+content        21 files · +6125 / −1        no file deleted · no history rewritten
 control plane   6 files                     excluded from the hash by construction
 
-  Revision 3 edits five of revision 2's nineteen content files and ADDS exactly one —
-  learning/plan/SLR-plan-0003.md, the Session Learning Record §15 owes. That single
-  addition is the whole difference between 7cef4ccc… and 570fcbbb…, and between 523
-  and 524 included entries. The control-plane count moves 4 → 6 as CHK-plan-0011,
-  CHK-plan-0012 and CHK-plan-0013 accumulate.
+  Revision 4 edits FOUR of revision 3's twenty content files and ADDS exactly one —
+  learning/plan/SLR-plan-0004.md. The other sixteen are byte-identical to revision 3
+  by blob sha. That single addition is the whole difference between 1613fa3b… and
+  07b65b37…, and between 524 and 525 included entries. The control-plane count moves
+  as CHK-plan-0014 accumulates.
+
+  Revision 3 edited five of revision 2's nineteen content files and added exactly one —
+  learning/plan/SLR-plan-0003.md, the difference between 7cef4ccc… and 570fcbbb….
 
   git diff --shortstat cbce3016 HEAD -- . ':!governance/candidates' ':!ledger' ':!reviews'
 
@@ -366,6 +384,30 @@ said it would.
 
 ## 4 · Test and validator evidence
 
+### 4.0aa · Revision 4 — the one blocking finding, reproduced before anything was changed
+
+Reproduced at revision 3's content tip `a3cad1d`, in the surfaces the tool itself builds, before a
+byte was edited. Mirror's report is not the evidence here; the runs are — and one of them measured
+more than the report did.
+
+| Mirror | Finding | Reproduced | Now |
+|---|---|---|---|
+| **M-3** | the content scan skips on **four** conditions and the census enumerates the three shapes produced by **one**; two printed sentences and the §4.5 guarantee row say the list is complete. Ten present decodable files per surface, on a clean build | ✅ and **larger**: sixteen silent files per surface, not ten. Mirror's ten are the decodable ones its sentence is about; the six packet PDFs are skipped on the suffix test and were also named by nothing. Four-path same-bytes control reproduced exactly — `CLAUDE.md` and `benchmark/MODE_DIRECTIVE.md` silent, `roles/scientist.md` and `output/renders/smuggled.md` caught. **Plus a fourth class no review had named**: an allowlisted `.md` re-encoded UTF-16 into both surfaces reaches the decode guard, is skipped, is silent, and parity cannot see it | `scan_skip_reason()` is **one predicate with two callers** — the scan loop and the census — so a file is censused exactly when it is skipped. Six classes, each printed with reason, `EXPECTED_BY_PROTOCOL` and which checks did run. Silent files: **0**, measured. §4.5 |
+
+**What revision 4 did NOT do, stated because both shortcuts were on offer and one was the
+review's own suggestion.** `REV-SCIAB-MIRROR-003`'s remedy (i) is *add the two missing populations
+to `unchecked_surface()`*; remedy (ii) is *restore revision 2's weaker wording*. Either closes the
+finding and survives re-review. **Both leave the census and the scan as two separate statements of
+one rule**, which is the thing that failed here twice: revision 3's census was not wrong because
+it had three branches, it was wrong because it had *its own* branches, and `M-2`'s remedy edited
+one copy of the rule and not the other. The repair is the shared predicate. That reasoning is
+`SLR-plan-0004` L-2 and it is offered for Mirror to attack, not to accept.
+
+The scope was also not widened. `verify` still does not consume `build --emit-digests`' per-file
+input digests (`P-4`); that gap is now **stated** in the protocol and on every `scan_exempt_input`
+census line — *parity detects a change made to one surface only* — rather than closed, because
+closing it is a new check and this revision was given one finding.
+
 ### 4.0a · Revision 3 — the two blocking findings, reproduced before anything was changed
 
 Both were reproduced at `BASE_HEAD` **and** at revision 2's content tip, in clean detached
@@ -446,11 +488,18 @@ exactly that commit and nothing else. Neither has `files/`, so the confound that
 signatures are parsed from the unittest failure blocks.
 
 ```
-                                  BASE cbce3016    REV 2 daaa3335    REV 3 b634829
-targets executed                        64               65               65
-FAILING SUITES                           6                6                6
-FAILING TESTS                            7                8                7
+                                  BASE cbce3016   REV 2 daaa3335   REV 3 b634829   REV 4 a210f73
+targets present                         64              65              65              65
+targets missing                          0               0               0               0
+FAILING SUITES                           6               6               6               6
+FAILING TESTS                            7               8               7               7
+tests executed                         870               —               —             941
+suites red, NO parsed test failure       ∅               —               —               ∅
 ```
+
+The last row is the omission channel `SLR-plan-0003` L-4 warns makes `ADDED = 0` true by
+silence — a suite that exits non-zero while reporting no failing test. **It is empty at both
+tips**, measured, so the zero below is a measurement and not an absence of measurement.
 
 **FAILING SUITES — identical at all three tips, and that is exactly why it is not the evidence:**
 
@@ -475,19 +524,32 @@ scripts/test_release_runner_verdict.py::test_every_tracked_test_file_is_in_the_r
 scripts/test_release_surface.py::test_shebang_python_entrypoints_are_executable
 ```
 
-**FAILING TESTS at this candidate tip `b634829` — 7, the same seven, and nothing else.**
+**FAILING TESTS at this candidate tip `a210f73` — 7, the same seven, and nothing else.**
+The same was true at revision 3's tip `b634829`.
 
 **FAILING TESTS at revision 2 `daaa3335` — 8: those seven plus**
 `scripts/test_locator_obligation_reaches_every_route.py::test_every_route_carries_the_obligation_or_declares_an_exemption`.
 That one test is `M-1`, and it is what a set of suite names could not show.
 
 ```
-ADDED FAILING TESTS    (rev 3 − base)   = ∅        0
-REMOVED FAILING TESTS  (base − rev 3)   = ∅        0
+ADDED FAILING SUITES   (rev 4 − base)   = ∅        0
+REMOVED FAILING SUITES (base − rev 4)   = ∅        0
+ADDED FAILING TESTS    (rev 4 − base)   = ∅        0
+REMOVED FAILING TESTS  (base − rev 4)   = ∅        0
 SHARED FAILING TESTS                    = 7
 DELTA REGRESSION at test granularity    = 0
   for the record, revision 2 measured the same way:  ADDED = 1
 ```
+
+**`M-1` re-measured, not assumed.** `REV-SCIAB-MIRROR-003` closed it; no verdict transfers, so it
+was measured again here.
+`test_locator_obligation_reaches_every_route.py::ObligationReachesEveryRoute::test_every_route_carries_the_obligation_or_declares_an_exemption`
+is **green at `BASE_HEAD` and green at `a210f73`**, and it is absent from both failing sets above.
+The guard file is untouched by revision 4 — `git diff` over
+`scripts/test_locator_obligation_reaches_every_route.py` between `bdac30f` and `a210f73` is empty —
+and revision 4 edits `framework/protocols/controlled_benchmark_ab.md`, which is one of the files
+that guard scans; the `verbatim_locators` obligation in §5.1 is untouched and the token is still
+present three times.
 
 **SAME-REASON CHECK — over all seven shared tests, not one selected suite.** Each failing test's
 signature (the exception line and its message) is compared between the two tips. Normalized:
@@ -515,9 +577,21 @@ forward and classified, not resolved.
 
 ### 4.1b · The Session Learning Record, and why it is inside the reviewed population
 
-`learning/plan/SLR-plan-0003.md` is in this candidate's content, and it was added **after** a
-revision-3 binding had already been declared. That is deliberate, and the alternative was a
-review-integrity defect.
+`learning/plan/SLR-plan-0004.md` is in this candidate's content, and it was written and committed
+**before any revision-4 binding was declared**. `learning/plan/SLR-plan-0003.md` is also here, and
+at revision 3 it was added *after* a binding had been declared, which forced a supersession.
+
+🔴 **That ordering error is not repeated.** `b1061eb`, the `M-3` remediation commit, was never
+named as this candidate's tip; the record was written, committed, and only then was
+`a210f73` declared. `SUPERSEDED_REV3_TIP` / `SUPERSEDED_REV3_HASH` stay in §1 as the record of
+what revision 3 did, and revision 4 adds no equivalent pair because it produced none.
+
+🔴 **`REV-SCIAB-MIRROR-003` `P-2` — the argument below is sound for Plan and one premise short of
+the general claim it made, and the premise is now stated.** The missing premise is *that this
+session's only durable branch is the candidate branch*. Mirror discharges the same §15 obligation
+on branch `mirror`, under `learning/mirror/`, where a `WORK_COMMIT` moves no candidate hash;
+Plan has no such branch and inventing one would be a governed change. So the conclusion holds
+**for Plan**, by role contract and deployment, and not universally. Accepted as stated.
 
 **The rule, at source.** Body §15: *"Ogni sessione significativa MUST chiudersi con Session
 Learning Review."* — the trigger is **session closure**, not review submission. Annex E.6 gives
@@ -604,18 +678,27 @@ as an error and not dressed up as a clean red.
 > rather than reconciled, because Mirror's numbers were measured and this explanation is
 > inferred, and revision 3 did not re-run revision 1's tool to settle it.
 
-### 4.5 · M-2 — the exact guarantee, its mechanism, and the census that must match it
+### 4.5 · M-2 and M-3 — the exact guarantee, its mechanism, and the census that must match it
 
-**The guarantee revision 3 makes, written so it can be falsified in one command:**
+**The guarantee revision 4 makes, written so it can be falsified in one command:**
 
-> No file present in a surface is skipped by **both** the allowlist check and the identifier
-> scan without being printed by name under `[UNCHECKED]`.
+> `SCANNED` and `[UNCHECKED]` **partition** the present files. No file present in a surface is
+> skipped by the identifier scan without being printed by name with the class and the reason,
+> and no file is printed that was scanned.
 
-Falsify it by producing a file that `verify --post-read` neither checks nor names. It is not the
+Falsify it by producing a file that `verify --post-read` neither scans nor names. It is not the
 claim *"post-read verification reads every file"* — it cannot, and it says so; and it is not
 *"all unchecked paths are enumerated in advance"* — renders cannot be enumerated in advance,
-which is why the prefix exists at all. It is the claim that the unchecked surface is **named at
+which is why the prefix exists at all. It is the claim that the unscanned surface is **named at
 run time, from the tree, exhaustively**.
+
+🔴 **Revision 3's guarantee was the narrow one** — *no present file is skipped by **both** the
+allowlist check and the identifier scan without being printed by name*. `REV-SCIAB-MIRROR-003`
+found it true and I do not dispute that. The problem was that the tool printed two broader
+sentences and this manifest tabulated a third, and all three were false: the scan skips on **four**
+conditions and the census enumerated the three shapes produced by **one** of them. The narrow
+formulation survives and is now strictly weaker than what holds, so it is no longer what anything
+claims.
 
 **Mechanism — one predicate changed, and the census follows it.** `_is_expected_output()` admits
 an exact declared path as before; under `expected_output_prefixes` it now admits a file **only
@@ -626,6 +709,29 @@ reports it, the identifier scan reads it, and `freeze` — which shares the pred
 rejected: printing the prefix as a blind spot (declares as unchecked a file the scan can read);
 an extension allowlist (a `.png` that is text walks through it, and case 07 below is that file).
 
+**The complete skip population, derived from the executable logic and not from the finding.**
+`REV-SCIAB-MIRROR-003` measured ten silent decodable files per surface. Re-derived here from the
+scan loop's own exits, on a clean build of `BENCH-AB-001` before any reader exists, the silent
+population was **sixteen** — the six decodable ones Mirror counted plus four `.gitkeep` and six
+packet PDFs, all skipped on the suffix test and all named by nothing. A finding is a lower bound
+on its own population; the predicate is the population.
+
+| SKIP_CLASS | PREDICATE (the scan loop's own exit) | EXPECTED BY PROTOCOL | WHAT STILL COVERS THE FILE |
+|---|---|---|---|
+| `blind_spot` | post-read · `expected_output_paths` ∩ `forbidden_prior_output_paths` | yes | the pre-handover `verify` run, the freeze receipt |
+| `scan_exempt_present` | post-read · in `expected_output_paths` | yes | forbidden-path check, freeze receipt |
+| `undecodable_prefix` | post-read · under `expected_output_prefixes` and bytes do not decode | yes | forbidden-path check, freeze receipt |
+| `scan_exempt_input` | in `content_scan.exempt_surface_paths` | yes | allowlist check, forbidden-path check, cross-surface parity **for a change made to one surface only**, freeze receipt |
+| `suffix_not_scanned` | suffix outside `content_scan.text_suffixes` | yes | allowlist check, forbidden-path check, freeze receipt |
+| `undecodable_text` | text suffix, not exempt, bytes do not decode | **NO** | allowlist check, forbidden-path check, freeze receipt |
+
+The last two rows were named by nothing at revision 3. `undecodable_text` was named by nothing
+**and** reported by no review: an allowlisted `.md` re-encoded UTF-16 into *both* surfaces carries
+the whole forbidden protocol text through `VERDICT: PASS` with `[UNCHECKED SURFACE] 0`, and
+parity is silent because the change is identical on both sides. It is the one class the protocol
+does not declare, the census marks it `EXPECTED_BY_PROTOCOL NO`, and the command counts those
+separately so a reviewer reads them first.
+
 **The census, in the vocabulary the review asked for.** Sizes are for a built pair before any
 reading; every population is computed from the tree, and `[UNCHECKED SURFACE] n present file(s)`
 closes the printed list on every run.
@@ -634,9 +740,10 @@ closes the printed list on every run.
 |---|---|---|
 | EXPECTED EXACT OUTPUT PATHS | **5** | declared in `expected_output_paths` — a static spec fact |
 | EXPECTED OUTPUT PREFIXES | **1** | `output/renders/` — admits only undecodable bytes |
-| VERIFIED POST-READ SURFACE | every present file **not** in the three rows below | allowlist + forbidden-path + symlink checks, and the identifier scan wherever the bytes decode |
-| DECLARED RESIDUAL SURFACE | printed `[UNCHECKED]`, per actor, per run | (i) the blind-spot path when occupied — one path, `deepdive_manifests/PMID42397075.json`, whose authorship is not decidable post-read; (ii) each **present** declared output, whose content the scan does not read because it must name the paper; (iii) each file under a prefix whose bytes do not decode |
-| UNENUMERATED / SILENT SURFACE | **NONE** | there is no fourth class: a present file is allowlisted input, an exact declared output, under a prefix, or none of those — and the last is reported by the allowlist check |
+| PRESENT FILES, clean build | **24** per surface | 48 across the pair |
+| SCANNED | **8** per surface | allowlist + forbidden-path + symlink checks **and** the identifier scan read their bytes |
+| UNSCANNED / CENSUSED | **16** per surface, 32 printed | each with path, class, reason, `EXPECTED_BY_PROTOCOL`, and which checks did run |
+| UNENUMERATED / SILENT SURFACE | **0** | not an argument this time: `scan_skip_reason()` is one predicate and the scan loop and the census are its two callers, so a file is censused exactly when it is skipped |
 
 **Reproduced, with the control that makes it a hole rather than a design.** Same bytes, one
 directory apart, against this tip:
@@ -650,6 +757,32 @@ freeze, real render present                      → OUTPUT_FILE_SET   ['output/
 against revision 2's tool, same states           → PASS rc=0 · blind spot size 1 · role "output"
 ```
 
+**M-3 reproduced before anything was edited**, with Mirror's construction: the whole of
+`framework/protocols/controlled_benchmark_ab.md` — a forbidden prior-output path, identifiers in
+it — appended at four paths in **both** surfaces, at content tip `a3cad1d`.
+
+```
+                              REVISION 3 (before)              REVISION 4 (after)
+CLAUDE.md                     PASS rc=0 · no finding ·         PASS rc=0 · NAMED
+                              NOT NAMED · [UNCHECKED] 0        scan_exempt_input
+benchmark/MODE_DIRECTIVE.md   PASS rc=0 · no finding ·         PASS rc=0 · NAMED
+                              NOT NAMED · [UNCHECKED] 0        scan_exempt_input
+roles/scientist.md  CONTROL   FAIL rc=1 · IDENTIFIER LEAK 18   FAIL rc=1 · unchanged
+output/renders/smuggled.md    FAIL rc=1 · 4 findings           FAIL rc=1 · unchanged
+```
+
+Identical bytes; two caught, two silent. Without the two controls this is a design note about an
+exemption; with them it is a hole and no argument is needed. **`M-2`'s closure is untouched** —
+the two rows that caught it still catch it, with the same reasons and the same counts.
+
+**`freeze` does not compensate, and revision 4 does not claim it does.** On the tampered
+`CLAUDE.md` tree the receipt reports `outputs 0 · unexpected 0`, which is *correct*: `CLAUDE.md`
+is a declared input, so `_classify` calls it input, exactly as it should. What the receipt does
+carry is the file's digest in `FILES`, so `verify-freeze` detects any change made **after** the
+freeze — measured, `rc=1` on one appended byte, `VERDICT: PASS` on the untouched tree. That is
+the whole of the row's *"still covered by the freeze receipt"*, and it says nothing about a
+substitution made before the freeze.
+
 **Twelve hostile cases, each asserting the REASON and not only the exit code**, plus two spec
 contracts — added to the tracked suite as `ExpectedOutputPrefixTests` and run in the release
 battery. `SLR-mirror-0010` §4 is the argument for the discipline and it is Mirror's own: its
@@ -659,11 +792,59 @@ first B-4 battery reported 13/13 caught, and all thirteen were `rc=2` from `argp
 ```
 positive control · binary render passes and is named   forbidden bytes under the prefix
 same bytes under prefix AND outside it                 nested directory under the prefix
-renamed copy wearing a .png extension                  empty prefix, empty unchecked surface
+renamed copy wearing a .png extension                  empty render prefix adds nothing
 several legitimate renders, each named                 hostile file beside a legitimate render
-late arrival on the next run                           the census names every unchecked file
+late arrival on the next run                           the census IS the unscanned set
 freeze calls a decodable prefix file UNEXPECTED        freeze still calls a render an output
 ```
+
+**Revision 4 adds `ScanSkipClassTests` (8) and `CensusContractTests` (3), and replaces the test
+that encoded `M-3`.** One probe per derived skip class, each asserting the printed **class** and
+not the exit code, and each planting into **both** surfaces — a probe that edits one surface is
+caught by `PARITY BROKEN`, which is a real check firing correctly and answering a question the
+probe did not ask.
+
+```
+positive control · the scan fires on an allowlisted scanned file
+positive control · the same file clean is in neither population
+the same bytes at an exempt path and at a scanned one  (Mirror's four-path reproducer, as one test)
+hostile bytes under a non-text suffix are named        an allowlisted .md that is not UTF-8 is
+a non-UTF-8 hostile payload under the render prefix      named AND flagged EXPECTED_BY_PROTOCOL NO
+all six classes present at once, each with its reason  an edit to an exempt input does not move
+                                                         the census
+CONTRACT · every class the predicate returns has an explanation
+CONTRACT · the scan and the census call the same predicate
+CONTRACT · every scan-exempt path in the real spec is an allowlisted path
+```
+
+That last contract is the probe behind a census line rather than the line repeated: the census
+tells a reviewer an exempt input *still took the allowlist check*, and that is only true if every
+exempt path is in the allowlist.
+
+**Differential against revision 3's tool, which is the evidence the suite discriminates.** The
+revision-4 tests, run unchanged against the tool at content tip `a3cad1d`:
+
+```
+71 tests · 12 FAIL/ERROR against revision 3 · 71 green at this tip
+
+among them  test_every_present_file_is_either_scanned_or_named_and_never_both   FAIL
+            test_the_census_is_exactly_the_present_files_the_scan_did_not_read  FAIL
+            test_positive_control_an_honest_reading_passes_post_read            FAIL  ← the one
+              that matters: at revision 3 it passed over ten silent files per surface, because
+              it asserted rc == 0 and VERDICT: PASS and nothing else
+            CensusContractTests::the scan and the census call the same predicate FAIL
+```
+
+**The oracle is not the implementation.** `REV-SCIAB-MIRROR-003` requires a census test whose
+expected population does not reproduce the filter it validates, and the replaced test failed
+exactly that way: its expectation was written by asking *what does the census produce here*,
+which is a question the implementation answers. Revision 4 uses two oracles and neither is that —
+a **hand-written literal** (`FIXTURE_CENSUS_AT_HANDOVER`, path by path from what the fixture puts
+on disk, which does not move when the skip logic moves), and a **behavioural** probe that plants
+the paper's identifier in each present file in turn and measures the scan by whether it *reports*
+it. The behavioural one contains no copy of the skip rule at all, asserts the partition in both
+directions, and requires the scanned set to be non-empty — because a battery whose detector never
+fires is measuring its own invocation (`SLR-mirror-0011` §3).
 
 **Differential against the pre-fix tool** — the same fourteen probes, revision 2's script,
 revision 3's spec:
@@ -833,6 +1014,31 @@ revision that also repairs a caption bound or a completeness check is no longer 
 a revision Mirror would have to review from R-1 across a wider surface, for defects it has
 already classified as non-blocking.
 
+### 5b.3 · `REV-SCIAB-MIRROR-003` — the carried nine at revision 4, and the five it recorded
+
+Revision 4 touches four content files, none of which is the file any carried finding lives in.
+**Nothing below is marked resolved by `M-3`'s repair**, and the one finding whose status could
+plausibly have moved is stated with why it did not.
+
+| # | Mirror's class at rev 3 | Revision 4 |
+|---|---|---|
+| **N-1** | NON-BLOCKING CARRIED | **CARRIED.** `surface_spec.json` is edited by this revision — two `_note` blocks, both about the census — and the File012 `notes` contradiction is **not** among them. Deliberately: it is a one-word fix in an unrelated rule and belongs with the next change to that rule |
+| **N-2** | NON-BLOCKING CARRIED — reproduced | **CARRIED, unchanged.** `cmd_population` is byte-identical to revision 3. A declared-empty source is still accepted on declaration; the finding goes live the moment a second entry is added |
+| **N-3** | NON-BLOCKING CARRIED — latent | **CARRIED.** `_pdf_pages` / `_regex_units` byte-identical |
+| **N-4 · N-5** | RESOLVED | remain resolved; §3G and §5 are untouched by this revision |
+| **N-6** | NON-BLOCKING CARRIED — declared | **CARRIED.** The three exit-code-only assertions are untouched. Every probe added at revision 4 asserts a class or a reason string |
+| **N-7** | UNRESOLVED, honestly labelled | **CARRIED, still unreconciled.** Revision 4 did not re-run revision 1's tool either. Neither side has moved and neither pretends it has |
+| **N-8** | NON-BLOCKING CARRIED — contained | **CARRIED, and `M-3` does not change its status.** Verified structurally rather than asserted: `cmd_locators` is **byte-identical** between `bdac30f` and this tip, as are `cmd_freeze`, `cmd_verify_freeze`, `cmd_population`, `_classify`, `cmd_build`, `_is_expected_output`, `_is_decodable_text`, `iter_files`, `iter_symlinks` and `tree_digest`. Only `cmd_verify` and `unchecked_surface` changed, and one function was added. A census cannot reach a lexical path check, and claiming it did would be the overclaim `M-2` was about |
+| **N-9** | NON-BLOCKING CARRIED | **CARRIED.** Vocabulary in a note, same reasoning as N-1 |
+
+| # | Recorded at revision 3 | Revision 4 |
+|---|---|---|
+| **P-1** | the `M-1` guard's `INSTRUCTION_SURFACES` globs do not cover `framework/eval/benchmarks/*/instructions/*.md` | **CARRIED, not fixed.** Mirror states it is *not a candidate defect* — the obligation is semantically carried in all three files and the globs are `BASE_HEAD`'s. Widening a guard that `BASE_HEAD` owns is a change to another candidate's file inside a revision scoped to one finding. Recorded here so its owner inherits it rather than rediscovers it |
+| **P-2** | §4.1b's ordering argument is sound for Plan and one premise short of the general claim | **ACCEPTED and stated.** The missing premise is that Plan's only durable branch is the candidate branch; Mirror's own records take the other route. §4.1b now says so |
+| **P-3** | `N-6`'s three exit-code-only assertions fire for the right reason | **CARRIED**, none load-bearing |
+| **P-4** | `verify` never compares an allowlisted input to `build --emit-digests`' record; parity cannot see a change applied identically to both surfaces | **CARRIED and now STATED, not closed.** It is the residual on every `scan_exempt_input` census line and in §4.5 of the protocol. Closing it is a new check, and this revision was given one finding. It is the cheapest available closure of the input half and the next revision's obvious first move |
+| **P-5** | `N-7` remains unreconciled | **CARRIED** — see N-7 |
+
 ---
 
 ## 5c · The session-routing debt — named, not resolved
@@ -851,9 +1057,49 @@ its absence is a decision rather than an oversight, and it is not mixed into thi
 ## 6 · What Mirror is asked to verify
 
 Independent review of the binding **and** the content, **from R-1**. **No prior attestation
-transfers** — including the fourteen rows `REV-SCIAB-MIRROR-002` §5 re-tested and passed, and the
-ten `REV-SCIAB-MIRROR-001` §6 found acceptable. The content they were found acceptable over no
-longer exists.
+transfers** — including `M-1`'s closure and every row `REV-SCIAB-MIRROR-003` passed, the fourteen
+rows `-002` re-tested, and the ten `-001` found acceptable. The content they were found acceptable
+over no longer exists.
+
+### 6.000 · Revision 4 — the one finding, and the claim it was about
+
+```
+M-3  the reproducer    append framework/protocols/controlled_benchmark_ab.md to CLAUDE.md in
+                       BOTH surfaces and run verify --post-read. At revision 3 it printed
+                       VERDICT: PASS with no mention. It must now PASS and print CLAUDE.md
+                       under [UNCHECKED] as scan_exempt_input. The same at
+                       benchmark/MODE_DIRECTIVE.md. The controls must not move:
+                       roles/scientist.md → IDENTIFIER LEAK, output/renders/smuggled.md → 4
+                       findings. Plant into BOTH surfaces — one surface only is caught by
+                       PARITY BROKEN, which is a different check answering.
+M-3  the population    derive the skip conditions from the code, not from this manifest and
+                       not from your own review. §4.5 claims six classes out of four
+                       predicates and SILENT = 0 on a clean build. I measured sixteen silent
+                       files per surface where -003 reported ten, and found a fourth class
+                       (undecodable_text) no review had named. Is there a fifth? The claim to
+                       attack is that scan_skip_reason() has no exit that reaches `continue`
+                       without a census line.
+M-3  the partition     the PASS sentence now says SCANNED and [UNCHECKED] partition the present
+                       files. Construct a file that is in both, or in neither. The behavioural
+                       test asserts exactly this and it is the one to distrust first.
+M-3  the oracle        test_the_census_is_exactly_the_present_files_the_scan_did_not_read uses
+                       a hand-written literal, and
+                       test_every_present_file_is_either_scanned_or_named_and_never_both
+                       measures the scan by planting an identifier and watching for the
+                       finding. Neither should reproduce the implementation's filter — check
+                       that, because the test this replaces did, and that is why it agreed
+                       with the defect. Is the anti-vacuity guard real, or does the scanned
+                       set have some other way to be non-empty?
+M-3  the truthfulness  the census says a scan_exempt_input "still took the allowlist check".
+                       Verify the contract test behind that sentence, and verify the freeze
+                       claim: freeze reports unexpected 0 on a tampered CLAUDE.md — is that
+                       correct classification or a second blind spot? I claim correct, because
+                       the digest is in FILES and verify-freeze catches any later change.
+M-3  what I did NOT do  P-4 is stated, not closed: verify still ignores build --emit-digests,
+                       so a change applied identically to both surfaces is seen by nothing at
+                       verify time. Is stating it enough, or does the census line overclaim by
+                       naming parity at all?
+```
 
 ### 6.00 · Revision 3 — the two findings, and the two claims they were about
 
