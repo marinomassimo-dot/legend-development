@@ -1,28 +1,31 @@
 ---
 artifact: INTEGRATION_CANDIDATE manifest (Annex D.2)
 candidate_id: CAND-20260818-SCIENTIST-AB-SPEC
-revision: 5
-supersedes: revision 4 (content tip a210f738, hash 07b65b37…5198) — REQUEST CHANGES under
-  REV-SCIAB-MIRROR-004; revision 3 (content tip a3cad1d, hash 570fcbbb…8ab7) — REQUEST CHANGES
-  under REV-SCIAB-MIRROR-003; revision 2 (content tip daaa3335, hash c0701094…21bcf) — REQUEST
-  CHANGES under REV-SCIAB-MIRROR-002; and revision 1 (content tip b965ca58, hash 3b568aae…916c75)
-  — REQUEST CHANGES under REV-SCIAB-MIRROR-001. No verdict, finding or PASS from any of the four
-  transfers to this content: a revision is reviewed from R-1 (CHK-mirror-0006 RESUME_RULE). That
-  includes M-1's closure, M-2's closure and M-3's closure in `--post-read`, which
-  REV-SCIAB-MIRROR-004 recorded and which its own RESUME_RULE says do not transfer.
+revision: 6
+supersedes: revision 5 (content tip 2ffaedb2, hash 5307d4d2…423f) — REQUEST CHANGES under
+  REV-SCIAB-MIRROR-005; revision 4 (content tip a210f738, hash 07b65b37…5198) — REQUEST CHANGES
+  under REV-SCIAB-MIRROR-004; revision 3 (content tip a3cad1d, hash 570fcbbb…8ab7) — REQUEST
+  CHANGES under REV-SCIAB-MIRROR-003; revision 2 (content tip daaa3335, hash c0701094…21bcf) —
+  REQUEST CHANGES under REV-SCIAB-MIRROR-002; and revision 1 (content tip b965ca58, hash
+  3b568aae…916c75) — REQUEST CHANGES under REV-SCIAB-MIRROR-001. No verdict, finding or PASS
+  from any of the five transfers to this content: a revision is reviewed from R-1
+  (CHK-mirror-0006 RESUME_RULE). That includes M-1's, M-2's, M-3's and M-4's closures, which
+  REV-SCIAB-MIRROR-005 recorded and which its own RESUME_RULE says do not transfer.
 governance_version: 3.1.1
 change_class: MAJOR
 prepared_by: plan
 prepared_on: 2026-08-19
-state: READY FOR MIRROR REVIEW (revision 5) — no approval requested, granted or implied
-scope: HANDOFF-20260818-SCIENTIST-AB, as transmitted. Not reduced and not widened. Revision 5
-  adds no scope: it repairs M-4 — the census now runs in both `verify` modes and the two modes
-  are written as two contracts — corrects the artifacts that asserted the census unscoped,
-  repairs the positive control that exercised the wrong mode, and touches nothing else. FIVE
-  content files change: four edited and one added, the added one being this revision's Session
-  Learning Review, which is the entry that moves the hash. No architecture was redesigned; M-1,
-  M-2 and M-3's post-read closure were retested and not reopened, and the predicate M-3's
-  closure rests on is byte-identical to revision 4.
+state: READY FOR MIRROR REVIEW (revision 6) — no approval requested, granted or implied
+scope: HANDOFF-20260818-SCIENTIST-AB, as transmitted. Not reduced and not widened. Revision 6
+  adds no scope and changes NO EXECUTABLE BEHAVIOUR: it repairs M-5, a normative-description
+  defect. §4.4 said the pre-handover blocking level was "derived and not chosen"; the direction
+  of the asymmetry is derived, the level is a policy choice, and the section now says which is
+  which and carries a POLICY CHOICE block naming the alternative refused and who approves it.
+  The same claim was corrected at the three other operative sites it also occupied — a comment
+  in the tool, a test docstring, and a note in the spec. FIVE content files change: four edited
+  and one added, the added one being this revision's Session Learning Review, which is the entry
+  that moves the hash. M-1, M-2, M-3 and M-4 were retested and not reopened; every top-level
+  definition of the executable is byte-identical to revision 5 by AST.
 ---
 
 # INTEGRATION_CANDIDATE — the definitive Scientist A / Scientist B specification
@@ -31,19 +34,22 @@ scope: HANDOFF-20260818-SCIENTIST-AB, as transmitted. Not reduced and not widene
 
 ```yaml
 CANDIDATE_ID:               CAND-20260818-SCIENTIST-AB-SPEC
-REVISION:                   5
+REVISION:                   6
 BASE_HEAD:                  cbce30168091f7769c56c4f019055fa55fd0d66a
 BRANCH:                     scientist-ab-spec
-CONTENT_TIP:                2ffaedb2218ae9a9d96acf99fa6051ee545d6fef — ONE content commit for
+CONTENT_TIP:                2a854177a1b4cdf1c6d00867c7278c97f62f1645 — ONE content commit for
                             this revision, carrying the remediation AND the Session Learning
                             Review together
                             # 🔴 NO BINDING WAS DECLARED AND THEN SUPERSEDED WITHIN THIS
-                            # REVISION, for the second revision running. Revision 4 achieved
-                            # that by writing SLR-plan-0004 before naming a tip; revision 5
-                            # achieves it more simply, by not naming any tip until the single
-                            # content commit — SLR-plan-0005 included — existed. Revision 3 did
-                            # it the other way round and had to supersede its own value;
-                            # SLR-plan-0003 L-5 recorded that as its session's failure.
+                            # REVISION, for the third revision running. Revision 4 achieved
+                            # that by writing SLR-plan-0004 before naming a tip; revisions 5
+                            # and 6 achieve it more simply, by not naming any tip until the
+                            # single content commit — the Session Learning Review included —
+                            # existed. Revision 3 did it the other way round and had to
+                            # supersede its own value; SLR-plan-0003 L-5 recorded that as its
+                            # session's failure.
+SUPERSEDED_CONTENT_TIP_5:   2ffaedb2218ae9a9d96acf99fa6051ee545d6fef   (revision 5)
+SUPERSEDED_HASH_5:          5307d4d213c1d25c42a51e27811b7e375907ceed77682b343dee68e0e2b8423f
 SUPERSEDED_CONTENT_TIP_4:   a210f7381e5adc2fc43fc0f202213532ec6e80ed   (revision 4)
 SUPERSEDED_HASH_4:          07b65b3707a4e63df23918b844140e7548929b27a8a182f8ebf2d9b0ab165198
 SUPERSEDED_CONTENT_TIP_3:   a3cad1dcffc4090c23aaa972ad5e5fb817a7b912   (revision 3)
@@ -71,7 +77,7 @@ MANIFEST_TIP:               the control-plane commit carrying this revision — 
                             # in miniature. `--show-domain` prints what was excluded at each.
                             # `git log --oneline cbce3016..HEAD` shows the branch; the hash
                             # command shows the invariance.
-CANDIDATE_CONTENT_HASH:     5307d4d213c1d25c42a51e27811b7e375907ceed77682b343dee68e0e2b8423f
+CANDIDATE_CONTENT_HASH:     beef6db08bdf8489b68078fc00c08fee913a585a4e1ee8359b592fc9e31a6061
 CANDIDATE_HASH_VERSION:     legend-candidate-v4
 CHANGE_CLASS:               MAJOR
 LINT_RESULT:                PASS (1 pre-existing INFO)
@@ -82,13 +88,15 @@ DELTA_REGRESSION:           0 ADDED FAILING TESTS — at TEST-METHOD granularity
                             same-reason comparison over every shared test. A set of suite names
                             is not evidence for this claim: an already-red suite absorbs a new
                             failing test without changing its name, and in revision 2 one did.
-MIRROR_REVIEW:              REV-SCIAB-MIRROR-004 → REQUEST CHANGES, on revision 4 (M-1 CLOSED,
-                            M-2 CLOSED, M-3 CLOSED in `--post-read` with the partition measured
-                            independently, one new blocking finding M-4, three recorded P-6…P-8,
-                            nine carried findings re-classified). Revision 5 requires a NEW
+MIRROR_REVIEW:              REV-SCIAB-MIRROR-005 → REQUEST CHANGES, on revision 5 (M-1, M-2, M-3
+                            and M-4 all CLOSED and re-measured from R-1 — M-4 in BOTH modes
+                            against an independent os.walk universe with a passing instrument
+                            check; binding PASS on 12 reproductions and 5 published controls;
+                            one new blocking finding M-5, three recorded P-9…P-11, thirteen
+                            carried findings re-classified). Revision 6 requires a NEW
                             independent review from R-1. No PASS, no PRESERVED and no CONFIRMED
-                            from that review — or from -003, -002 or -001 — transfers to this
-                            content: M-3's post-read closure and M-1's included.
+                            from that review — or from -004, -003, -002 or -001 — transfers to
+                            this content: M-4's closure in both modes included.
 HUMAN_APPROVAL:             NONE — not requested, not granted, not implied
 SNAPSHOT_ID:                n/a until canonical execution — GATE 4 belongs to Orchestrator
 ```
@@ -108,32 +116,42 @@ python3 governance/scripts/candidate_content_hash.py \
 ```
 
 ```
-EXPECTED             5307d4d213c1d25c42a51e27811b7e375907ceed77682b343dee68e0e2b8423f
-OBTAINED (run 1)     5307d4d213c1d25c42a51e27811b7e375907ceed77682b343dee68e0e2b8423f
-OBTAINED (run 2)     5307d4d213c1d25c42a51e27811b7e375907ceed77682b343dee68e0e2b8423f
-OBTAINED (run 3)     5307d4d213c1d25c42a51e27811b7e375907ceed77682b343dee68e0e2b8423f
+EXPECTED             beef6db08bdf8489b68078fc00c08fee913a585a4e1ee8359b592fc9e31a6061
+OBTAINED (run 1)     beef6db08bdf8489b68078fc00c08fee913a585a4e1ee8359b592fc9e31a6061
+OBTAINED (run 2)     beef6db08bdf8489b68078fc00c08fee913a585a4e1ee8359b592fc9e31a6061
+OBTAINED (run 3)     beef6db08bdf8489b68078fc00c08fee913a585a4e1ee8359b592fc9e31a6061
 OBTAINED at the control-plane commit carrying this revision
-                     5307d4d213c1d25c42a51e27811b7e375907ceed77682b343dee68e0e2b8423f
+                     beef6db08bdf8489b68078fc00c08fee913a585a4e1ee8359b592fc9e31a6061
 ```
 
-**Recomputed without the script**, from P5.1 and P5.2 directly — `git ls-tree -r --full-tree`,
-the three declared roots removed, **path-sorted**, `legend-candidate-v4\n` + `BASE_HEAD\n` +
-every entry newline-terminated:
+**Recomputed without the script**, from P5.1 and P5.2 directly — `git ls-tree -r --full-tree`
+read as raw bytes through a list argv and never through a shell, the three declared roots
+removed, **path-sorted**, `legend-candidate-v4\n` + `BASE_HEAD\n` + every entry
+newline-terminated:
 
 ```
-at 2ffaedb (CONTENT TIP, revision 5)     5307d4d2…423f     included 526 · excluded 31
+at 2a85417 (CONTENT TIP, revision 6)     beef6db0…6061     included 527 · excluded 32
 TRAP RUN, deliberately wrong — the whole ls-tree LINE sorted instead of the PATH:
-at 2ffaedb, line-sorted                  ab884df6…db2c     included 526 — a DIFFERENT value,
+at 2a85417, line-sorted                  740cb9c1…fc11     included 527 — a DIFFERENT value,
                                          because two 100755 entries move when the mode leads
                                          the key. P5.2 says path-sorted, and an implementation
                                          that agrees only with itself is not a second one.
-POSITIVE CONTROLS, same route — the four PUBLISHED values of the earlier tips
+at 2ffaedb, line-sorted                  ab884df6…db2c     — the SAME wrong value revision 5
+                                         published for its own trap, reproduced here. A trap
+                                         that only ever produces new numbers is not a control.
+POSITIVE CONTROLS, same route — the five PUBLISHED values of the earlier tips
+at 2ffaedb (revision 5)                  5307d4d2…423f     included 526 · excluded 31
 at a210f73 (revision 4)                  07b65b37…5198     included 525 · excluded 30
 at a3cad1d (revision 3)                  570fcbbb…8ab7     included 524 · excluded 29
 at b634829 (superseded rev-3 tip)        7cef4ccc…4596     included 523 · excluded 28
 at daaa3335 (revision 2)                 c0701094…21bcf     included 523 · excluded 27
 at b965ca58 (revision 1)                 3b568aae…916c75   included 522 · excluded 24
 ```
+
+**The single content-domain entry separating `5307d4d2…` (526) from `beef6db0…` (527)** is
+`learning/plan/SLR-plan-0006.md`, added — derived from the tree, not read off the report. The
+four edited content files change blobs without changing the entry count, which is why the count
+alone is not the evidence and the hash is.
 
 The controls are the point, and this revision is the run where they earned their keep. **My
 first recomputation reproduced none of the four**, with every included/excluded count exactly
@@ -159,34 +177,104 @@ read them from `--show-domain`.
 
 ---
 
+## 1b · 🔴 THE POLICY CHOICE THIS CANDIDATE ASKS THE OPERATOR TO APPROVE
+
+Revision 6 exists because this was previously presented as something nobody had decided.
+`REV-SCIAB-MIRROR-005` `M-5` found that §4.4 of the protocol described the rule below as
+*"derived and not chosen"*. It is derived in **direction** and chosen in **level**, and the level
+is the discretionary decision this candidate makes. It is stated here, and in the canonical
+protocol at §4.4, so that approving this candidate is not the same as failing to notice it.
+
+```
+POLICY CHOICE     At PRE-HANDOVER, a present artifact classified EXPECTED_BY_PROTOCOL: NO
+                  causes verification failure and blocks handover — `rc=1`, and the surface
+                  is rebuilt from the spec, never patched.
+                  (Concretely and today, exactly one class: `undecodable_text` — an
+                  allowlisted file with a text suffix whose bytes are not UTF-8.)
+
+RATIONALE         The pre-handover surface is Plan-controlled (§2.2 — Plan is its only writer
+                  until handover) and such an artifact indicates a state outside the declared
+                  surface-construction protocol. Choosing to block keeps the pre-handover
+                  GUARANTEE_PROVIDED row — *"no identifier leak, all of it observed, not
+                  attested"* — assertable as written, because the mechanism that satisfies it
+                  already exists and is already correct.
+                  🔴 This is a judgement about which of two true contracts to publish. It is
+                  NOT an entailment of the premises, and this candidate does not claim it is.
+
+ALTERNATIVE       Enumerate the anomaly and scope the guarantee rather than block: `PASS`, the
+NOT CHOSEN        file named under `[UNCHECKED]` with `EXPECTED_BY_PROTOCOL NO` and counted
+                  separately, with the pre-handover guarantee row narrowed to say the guarantee
+                  does not extend to it. That contract is consistent with every premise §4.4
+                  cites; it is exactly what `verify --post-read` does with the same class. It
+                  was available and was refused deliberately.
+
+FAIL-CLOSED       The chosen rule can only REFUSE surfaces the alternative would ADMIT. The two
+                  never disagree in the permissive direction, so the choice cannot weaken the
+                  blinding claim — at worst it costs a rebuild of a surface that would have
+                  been usable.
+
+WHAT REFUSING IT  Selecting the alternative is a self-contained change: the census, the six
+COSTS             classes, the partition, the two `PASS` sentences and every other claim in
+                  §4.4 stand unaltered. It removes one branch in `cmd_verify` and narrows one
+                  guarantee-table cell. No other finding's closure depends on it.
+
+STANDING          Plan proposes it under Annex H.1 (*integrazione strutturale / candidate*).
+                  `framework/protocols/controlled_benchmark_ab.md` does NOT exist at BASE_HEAD
+                  — verified — so no prior durable rule is overridden and nothing is "stricter
+                  than" an existing one; the candidate IS the normative text being authored.
+                  CHANGE_CLASS is MAJOR, so under H.1 (*MAJOR approval → Operatore*) the
+                  choice is the Human Operator's. Mirror R4 and HUMAN_APPROVAL are both
+                  unspent; nothing here is self-approved.
+```
+
+---
+
 ## 2 · File list and classification
 
 | File | Status | Domain | Classification |
 |---|---|---|---|
 | `framework/protocols/scientist_reading_modes.md` | **added** | CONTENT — hashed | **NORMATIVE** — reading modes, actor identity of A and B, task-ownership rule |
-| `framework/protocols/controlled_benchmark_ab.md` | **added**, modified **(rev 3, rev 4)** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — normative for the benchmark it defines, and for nothing outside it. **Rev 3:** new §5.1 carries the verbatim-locator obligation into the route that instructs the reading (M-1); §4.3 and the guarantee table state what `--post-read` leaves unchecked (M-2). **Rev 4:** §4.5 and the guarantee row state the complete skip population and the partition, and name what the census does **not** say (M-3) |
-| `framework/scripts/benchmark_input_surface.py` | **added**, modified **(rev 3, rev 4)** | CONTENT — hashed | **NORMATIVE (tooling)** — it decides whether a surface may be handed over; it is not documentation. **Rev 2: substantially rewritten**; **rev 3:** the prefix exemption is written on bytes rather than position, and the unchecked surface is enumerated from the tree; **rev 4:** `scan_skip_reason()` — one predicate, called by the scan loop **and** the census, so the two cannot disagree (M-3). Twelve functions byte-identical to rev 3; only `cmd_verify` and `unchecked_surface` changed |
-| `framework/scripts/test_benchmark_input_surface.py` | **added (rev 2)**, modified **(rev 3, rev 4)** | CONTENT — hashed | **NORMATIVE (tooling)** — **71** probes, one per clause of every PASS sentence, each null finding with a positive control. Rev 3 adds fourteen and repairs a fixture whose "render" was a markdown file; **rev 4** replaces the census test whose expectation reproduced the implementation, adds `ScanSkipClassTests` (8) and `CensusContractTests` (3), and makes the honest-reading positive control assert the whole census instead of the verdict alone |
+| `framework/protocols/controlled_benchmark_ab.md` | **added**, modified **(rev 3, rev 4, rev 5, rev 6)** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — normative for the benchmark it defines, and for nothing outside it. **Rev 3:** new §5.1 carries the verbatim-locator obligation into the route that instructs the reading (M-1); §4.3 and the guarantee table state what `--post-read` leaves unchecked (M-2). **Rev 4:** §4.5 and the guarantee row state the complete skip population and the partition, and name what the census does **not** say (M-3). **Rev 5:** §4.4 added — the two `verify` modes written as two contracts, one row per property (M-4). **Rev 6:** §4.4's heading and first bullet corrected — the entailed **direction** separated from the chosen **level**, `I1`'s source-root disjunct named with its contingency, and a **POLICY CHOICE** block added stating the rule, the alternative refused, the fail-closed argument and whose approval it needs (M-5). No behaviour, no test and no other section touched |
+| `framework/scripts/benchmark_input_surface.py` | **added**, modified **(rev 3, rev 4, rev 5, rev 6)** | CONTENT — hashed | **NORMATIVE (tooling)** — it decides whether a surface may be handed over; it is not documentation. **Rev 2: substantially rewritten**; **rev 3:** the prefix exemption is written on bytes rather than position, and the unchecked surface is enumerated from the tree; **rev 4:** `scan_skip_reason()` — one predicate, called by the scan loop **and** the census, so the two cannot disagree (M-3). Twelve functions byte-identical to rev 3; only `cmd_verify` and `unchecked_surface` changed. **Rev 5:** the census made unconditional, `post_read` left with no default, a `MODE` line printed on every run — 37 of 39 definitions byte-identical to rev 4 (M-4). **Rev 6: a COMMENT only.** The block above the branch implementing the pre-handover finding said the asymmetry *"is derived rather than chosen"*; it now separates the derived direction from the chosen level and names the branch that goes if the operator refuses the choice. **51 of 51 top-level definitions byte-identical to rev 5 by `ast.dump`** — §4.6a |
+| `framework/scripts/test_benchmark_input_surface.py` | **added (rev 2)**, modified **(rev 3, rev 4, rev 5, rev 6)** | CONTENT — hashed | **NORMATIVE (tooling)** — **83** probes at this revision, one per clause of every PASS sentence, each null finding with a positive control. Rev 3 adds fourteen and repairs a fixture whose "render" was a markdown file; **rev 4** replaces the census test whose expectation reproduced the implementation, adds `ScanSkipClassTests` (8) and `CensusContractTests` (3), and makes the honest-reading positive control assert the whole census instead of the verdict alone; **rev 5** takes 71 → **83**, adds `assert_mode()` so every mode-specific oracle checks the tool's own printed `MODE` line, and repairs the positive control that exercised the wrong mode. **Rev 6: a DOCSTRING only** — the hostile-case docstring implied the blocking level followed from §2.2; it now says the test pins what §4.4 **declares**. **40 of 40 definitions byte-identical to rev 5 with docstrings stripped**, 83/83 green — §4.6a |
 | `scripts/run_release_regressions.py` | modified **(rev 2)** | CONTENT — hashed | **DOCUMENTATION/INFRA** — one line: the new suite registered in the battery, which `test_release_runner_verdict.py` requires of every tracked test file |
 | `roles/scientist.md` | modified | CONTENT — hashed | **NORMATIVE** — `actor_id_status` front matter + the *Reading modes* section. 🔴 In the `CORE` fingerprint set |
 | `BOOTSTRAP.md` | modified | CONTENT — hashed | **NORMATIVE** — records that A and B are fixed and C is not |
 | `framework/protocols/index.md` | modified | CONTENT — hashed | **DOCUMENTATION** — two rows in the protocol table |
 | `framework/eval/README.md` | modified | CONTENT — hashed | **DOCUMENTATION** — the reader-benchmark axis, and what it does not have |
-| `framework/eval/benchmarks/BENCH-AB-001/surface_spec.json` | **added**, modified **(rev 3, rev 4)** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — the allowlist; a command reads it, a reviewer reads the same file. **Rev 3:** `_expected_output_prefix_note` states what the prefix admits and why, and the note claiming a blind spot "cannot widen a silent one" is corrected where it was false. **Rev 4:** two `_note` blocks only — the census is six classes and not three, and `content_scan` says out loud that an exempt path's content is **not read** and is now printed under `[UNCHECKED]`. No key, path or rule changed |
+| `framework/eval/benchmarks/BENCH-AB-001/surface_spec.json` | **added**, modified **(rev 3, rev 4, rev 5, rev 6)** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — the allowlist; a command reads it, a reviewer reads the same file. **Rev 3:** `_expected_output_prefix_note` states what the prefix admits and why, and the note claiming a blind spot "cannot widen a silent one" is corrected where it was false. **Rev 4:** two `_note` blocks only — the census is six classes and not three, and `content_scan` says out loud that an exempt path's content is **not read** and is now printed under `[UNCHECKED]`. **Rev 5:** one `_note` block, about the census running in both modes. **Rev 6: one `_note` block.** The `content_scan` note said `undecodable_text` is a finding *"See §4.4 for **the derivation**"* and asserted flatly that `build` cannot produce the state — false twice, since it drops `I1`'s source-root disjunct. It now separates DERIVED from CHOSEN and points at §4.4's POLICY CHOICE block. **Exactly one key differs structurally from rev 5**; the tool does not read `_note` and no test asserts on it. No key, path or rule changed in any revision |
 | `…/benchmark_manifest.json` | **added** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — the experiment record, `PREPARED — NOT FROZEN` |
 | `…/population/evidence_units.json` | **added** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — the ex-ante evaluation population, derived by command |
 | `…/instructions/` ×7 | **added**, one modified **(rev 3)** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — surface router, common instructions, output schema, `MODE_A`, `MODE_B`, and the two per-actor assignments. **Rev 3:** `BENCHMARK_INSTRUCTIONS.md` §1 tells the reader that `output/renders/` holds image files — before the reading, so the rule is a rule and not a trap |
 | `learning/plan/SLR-plan-0003.md` | **added (rev 3)** | CONTENT — hashed | **LEARNING RECORD** — the Session Learning Review §15 / E.6 owed for revision 3's session. `learning/` is CONTENT by intent (P5.1), so it is in the population and moves the hash; §15 requires it at session closure, and D.2 binds an approval to the hash, so it enters **before** review rather than after |
 | `learning/plan/SLR-plan-0004.md` | **added (rev 4)** | CONTENT — hashed | **LEARNING RECORD** — the same obligation for revision 4's session, and the single entry separating `07b65b37…` from `1613fa3b…`. Written and committed **before** any revision-4 binding was declared, so unlike revision 3 nothing had to be superseded |
-| `learning/plan/SLR-plan-0005.md` | **added (rev 5)** | CONTENT — hashed | **LEARNING RECORD** — the same obligation for **this** session, and the entry that takes the domain from 525 to 526. Revision 5 makes one content commit carrying the remediation and this record together, so no tip could be named before it existed |
+| `learning/plan/SLR-plan-0005.md` | **added (rev 5)** | CONTENT — hashed | **LEARNING RECORD** — the same obligation for revision 5's session, and the entry that took the domain from 525 to 526. 🔴 **Not edited at revision 6.** Its `L-2` carries the formulation Mirror superseded and refined under E.2, and it is the durable record of what Plan reasoned at revision 5 — the evidence `M-5` rests on. Curating it is Mirror's, not Plan's |
+| `learning/plan/SLR-plan-0006.md` | **added (rev 6)** | CONTENT — hashed | **LEARNING RECORD** — the same obligation for **this** session, and the single entry that takes the domain from 526 to 527. Revision 6 makes one content commit carrying the remediation and this record together, so no tip could be named before it existed — a third consecutive revision |
 | `governance/candidates/HANDOFF-SCIENTIST-AB-SPEC.md` | **added** | **CONTROL PLANE — excluded** | the durable handoff, carried byte-identically |
 | `governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md` | added | **CONTROL PLANE — excluded** | this manifest |
 | `ledger/tasks/plan/SCIENTIST-AB-SPEC-001.json` | **added** | **CONTROL PLANE — excluded** | task ACK + claim |
-| `ledger/checkpoints/plan/CHK-plan-0010.json` | **added** | **CONTROL PLANE — excluded** | checkpoint |
+| `ledger/checkpoints/plan/CHK-plan-0010.json` … `CHK-plan-0015.json` | **added** — six files, not one | **CONTROL PLANE — excluded** | checkpoints. 🔴 Revisions 3–5 listed only `CHK-plan-0010` here and printed a control-plane count of 6 while the measured count was 8 at the content tip and 9 at the manifest tip. That is Mirror's `P-9`; the rows and the count are now derived rather than maintained |
 
 ```
-content        22 files · +6855 / −1        no file deleted · no history rewritten
-control plane   6 files                     excluded from the hash by construction
+content        23 files · +7137 / −1        no file deleted · no history rewritten
+control plane   9 files at the content tip  excluded from the hash by construction
+               (+1 per later checkpoint)
+
+  🔴 The control-plane figure read "6 files" from revision 3 through revision 5, while the
+  measured count was 8 at revision 5's content tip and 9 at its manifest tip. That is
+  Mirror's P-9, and it is P-8's class one revision after P-8 was closed — the candidate's
+  own L-1 again: a repaired instance is not a repaired class. Both numbers are now DERIVED
+  by the command below rather than maintained by hand, and the §2 table lists every
+  control-plane row rather than four of them.
+
+  Revision 6 edits FOUR of revision 5's twenty-two content files and ADDS exactly one —
+  learning/plan/SLR-plan-0006.md. The four are the same four: benchmark_input_surface.py,
+  test_benchmark_input_surface.py, controlled_benchmark_ab.md and surface_spec.json — and
+  in all four the edit is a COMMENT, a DOCSTRING, a NOTE or normative prose. The other
+  eighteen are byte-identical to revision 5 by blob sha. Included entries move 526 → 527,
+  and the added record is the entry that moves them. Within the executable, 51 of 51
+  top-level definitions are byte-identical to revision 5 by ast.dump — nothing changed,
+  nothing added, nothing removed. §4.6a.
 
   Revision 5 edits FOUR of revision 4's twenty-one content files and ADDS exactly one —
   learning/plan/SLR-plan-0005.md. The four are benchmark_input_surface.py,
@@ -405,6 +493,36 @@ said it would.
 
 ## 4 · Test and validator evidence
 
+### 4.0aaaa · Revision 6 — the one blocking finding, reproduced from the sources, not adopted
+
+`M-5` is not a measurement, so reproducing it is not a run. It is a claim about whether a
+sentence in normative text is true, and the only way to reproduce it is to re-derive the thing
+the sentence describes from the sources it cites — which I did before editing a byte, and from
+§2.2, §3, §1 and §2.3 at their own text rather than from Mirror's transcription of them.
+
+| Mirror | Finding | Reproduced | Now |
+|---|---|---|---|
+| **M-5** | §4.4's heading reads *"Why the one asymmetry, derived and not chosen"*, and revision 5's commit message attaches the same word to *"`EXPECTED_BY_PROTOCOL: NO` is BLOCKING pre-handover and INFORMATIONAL post-read"*. The referent a reader takes is the **level**, and the level is a choice between two internally consistent contracts. Normative content, canonicalizes, on the one point where the operator's MAJOR authority applies | ✅ **confirmed on my own reading.** Written out with numbered premises, §2.2 + §3 + §1's P-7 + §2.3 reach `I4` — *a `PASS` in that state asserts a guarantee the run cannot support* — and stop. `I4` eliminates the permissive reading of the **unscoped** row; it does not select between **(a)** block and **(b)** enumerate-and-scope. **(b)** is consistent with every premise §4.4 cites and is what the same tool already does post-read with the same class. I ran Mirror's own falsifier: a clause under which an unanticipated-but-allowlisted artifact must exit non-zero rather than be enumerated, at BASE_HEAD or at revisions 1–4 — **there is none**. And `I1`'s first disjunct is real: §3 forbids patching, it does not forbid the source root carrying a non-UTF-8 text-suffixed file, and `build` copying that faithfully is the thing §3 protects. It is empty for BENCH-AB-001 today — 16 of 16 allowlisted text-suffixed files decode, measured — which is a contingent fact, not a normative exclusion | §4.4 separates the **entailed direction** from the **chosen level**, names both disjuncts of `I1` with the contingency stated, and carries a **POLICY CHOICE** block: the rule, the rationale, the alternative refused, that (a) can only refuse what (b) would admit, and that the choice is Plan's to propose under H.1 and the operator's to approve under MAJOR. §1b of this manifest repeats it as the approval surface. **No behaviour changed** — §4.6a |
+
+**The claim was in four operative places, and the review names one.** `M-5` is written against
+§4.4. I searched the revision-5 content population for the claim's **meaning**, not its wording,
+and found it four times. Three would have survived a grep for *"derived and not chosen"*:
+
+| Site | What it said | Class | Now |
+|---|---|---|---|
+| `controlled_benchmark_ab.md` §4.4 | *"Why the one asymmetry, derived and not chosen"* | **FALSE — operative, canonical** | corrected, with the POLICY CHOICE block |
+| `benchmark_input_surface.py` ~L596 | *"…and the asymmetry is derived rather than chosen"*, in the comment **directly above the branch that implements the blocking** | **FALSE — operative** | corrected; the comment now separates DERIVED (direction) from CHOSEN (level) and says which branch goes if the choice is refused |
+| `test_benchmark_input_surface.py` | the hostile-case docstring: *"…so a text-suffixed file that is not text is a state `build` cannot produce … **It is a FINDING, and `rc=1`**"* — the same unstated jump, with no keyword to grep for | **FALSE in its final step — operative** | corrected; the test now pins what §4.4 **declares** and says so, rather than implying the rule was the only one available |
+| `surface_spec.json` `content_scan/_note` | *"…is not a state build can produce. See `controlled_benchmark_ab.md` 4.4 for **the derivation**, which is 2.2's single-writer rule"* | **FALSE TWICE — operative** | corrected. It was worse than §4.4, not milder: it drops `I1`'s source-root disjunct entirely and asserts flatly that `build` cannot produce the state, which is false if the source root carries such a file |
+| revision 5's commit message | *"the asymmetry is derived rather than chosen"* | **HISTORICAL — not rewritten** | it is the durable record of what revision 5 claimed and it is the evidence `M-5` rests on. Rewriting it would move the content tip and destroy the binding chain. Revision 6's own message states the correction |
+| `SLR-plan-0005` L-2 | the same reasoning, in the session record | **HISTORICAL — not rewritten** | Mirror marked one formulation `SUPERSEDED` and attached a `REFINED_FORMULATION` under E.2. It accurately records what Plan reasoned at revision 5; erasing it would remove the evidence for `M-5` from the branch carrying `M-5`'s repair. Curation there is Mirror's, not Plan's |
+| `SLR-plan-0004` L-1 (*"the replacement claim is derived by reading the predicate"*) | a different subject — how to derive a **coverage** claim | **TRUE** | untouched |
+| §3's *"`EXPECTED_BY_PROTOCOL: NO` in this mode is a FINDING, not a note"*, §4.4's table row, the guarantee row's *"any class the protocol does not declare is a finding here"* | they **declare** the rule; none claims it was entailed | **TRUE** | untouched. These are the ex-ante declarations, and `M-5` is not about them |
+
+```
+FALSE OPERATIVE CLAIMS REMAINING:   0   — re-swept after the edit, §4.6a
+```
+
 ### 4.0aaa · Revision 5 — the one blocking finding, reproduced before anything was changed
 
 Reproduced at revision 4's content tip `a210f738`, on a clean build of the real benchmark, before
@@ -541,15 +659,24 @@ exactly that commit and nothing else. Neither has `files/`, so the confound that
 signatures are parsed from the unittest failure blocks.
 
 ```
-                              BASE cbce3016  REV 2 daaa3335  REV 3 b634829  REV 4 a210f73  REV 5 2ffaedb
+                              BASE cbce3016  REV 2 daaa3335  REV 3 b634829  REV 4 a210f73  REV 6 2a85417
 targets present                     64             65             65             65            65
 targets missing                      0              0              0              0             0
 FAILING SUITES                       6              6              6              6             6
 FAILING TESTS                        7              8              7              7             7
-tests executed                     850              —              —            941           933
+tests executed                     870              —              —              —           953
 suites red, NO parsed test failure   ∅              —              —              ∅             ∅
 targets with no test-id granularity  3              —              —              —             3
 ```
+
+🔴 **The `tests executed` row was wrong at revision 5 and is Mirror's `P-10`.** It read
+`850 … 941 … 933`, which is internally impossible: revision 5 *added* twelve tests, so the figure
+could not fall. Re-measured here by summing every target's own `Ran N tests` line: **870 at
+BASE_HEAD, 953 at revision 6.** Mirror measured 870/953 independently and
+`REV-SCIAB-MIRROR-004` had published 870 for the base a revision earlier. The delta is
+**953 − 870 = 83**, which is exactly the added suite — the reconciliation, not a coincidence.
+The revision-4 cell is struck rather than back-filled, because I did not re-run revision 4's tree
+this session and a number I did not measure does not belong in a table of measurements.
 
 The second-to-last row is the omission channel `SLR-plan-0003` L-4 warns makes `ADDED = 0` true by
 silence — a suite that exits non-zero while reporting no failing test. **It is empty at both
@@ -570,6 +697,16 @@ the two it missed are `subTest` failures, which print a `FAIL:` header while the
 still ends `... ok`. Corrected, the count reconciles with Mirror's independent measurement
 exactly: **7 at both tips, same reason, 7/7.** A number that was wrong once is evidence about the
 harness, and the reconciliation against another actor's number is what caught the second one.
+
+🔴 **And it produced a third at revision 6, in a new place: the target list itself.** Re-authored
+this session, the harness first reported **63 targets at the candidate and 62 at base** against
+the true **65 / 64**. The cause is that two entries of `TESTS` in `run_release_regressions.py` are
+split across lines as implicit string concatenation, and a regex over the source sees neither.
+Reading the tuple by **AST** returns the right list. Nothing downstream was wrong — the two missed
+targets are green at both tips — but the denominator was, and a delta reported over a short list
+is a delta with an unmeasured region beside it. What caught it was Mirror's published 65 / 64,
+which is the second consecutive revision in which another actor's number is what corrected mine.
+Recorded in `SLR-plan-0006`, boundary section, rather than quietly replaced.
 
 **FAILING SUITES — identical at all three tips, and that is exactly why it is not the evidence:**
 
@@ -1039,6 +1176,59 @@ hole; it is now pinned as `test_bomless_utf16_decodes_as_utf8_unless_a_byte_exce
 three rows and the BOM case, rather than left in prose. This cost the battery four red rows
 before it was understood, and that is `SLR-plan-0005` L-4.
 
+### 4.6a · M-5 — the proof that revision 6 changed no behaviour
+
+`M-5` is a normative-description defect. The remedy edits one protocol section, one code
+**comment**, one test **docstring** and one JSON `_note`. That is a claim, and a claim about
+identity has to be measured, not asserted — a comment edit that accidentally lands inside a
+string literal is exactly the kind of thing this candidate has been told twice not to assume.
+
+```
+REV5 → REV6 EXECUTABLE BEHAVIOUR:  IDENTICAL
+
+benchmark_input_surface.py      51 / 51 top-level definitions identical by `ast.dump`
+                                — comments are not in the parse tree, so this is the
+                                  measurement that a comment edit is a comment edit —
+                                and 51 / 51 identical again with every docstring stripped.
+                                0 added, 0 removed, 0 changed.
+test_benchmark_input_surface.py 40 / 40 identical with docstrings stripped. Exactly one
+                                differs by plain `ast.dump`: `HandoverGateCensusTests`,
+                                which is where the docstring was edited. A docstring is
+                                not an assertion.
+surface_spec.json               parsed and compared STRUCTURALLY, key by key, against the
+                                revision-5 blob: exactly one key differs —
+                                `content_scan/_note`. No key added, none removed, no path,
+                                pattern, suffix, exemption or prefix touched. The tool
+                                reads `population.notes`; it does not read `_note`, and no
+                                test asserts on it (the one test that reads a spec note
+                                reads `_expected_output_prefix_note`, untouched).
+
+verify, real surfaces built from the candidate tree, all four runs that matter:
+                                    REV 5            REV 6
+  pre-handover, clean               rc=0 PASS        rc=0 PASS      output BYTE-IDENTICAL
+  --post-read, clean                rc=0 PASS        rc=0 PASS      output BYTE-IDENTICAL
+  UTF-16 hostile at the gate        rc=1 FAIL        rc=1 FAIL      2 × UNANTICIPATED,
+                                                                   undecodable_text, both
+                                                                   surfaces — identical but
+                                                                   for the tree-digest lines,
+                                                                   which MUST move because the
+                                                                   planted payload is the
+                                                                   edited protocol text
+  same bytes --post-read            rc=0 PASS        rc=0 PASS      same, 0 UNANTICIPATED
+  census, both modes, clean         32 · 32          32 · 32
+suite                               83 / 83 OK       83 / 83 OK
+freeze + verify-freeze              PASS             PASS           positive control mutating
+                                                                   one byte → rc=1, refused
+```
+
+**The false-claim sweep was re-run after the edit**, over every content file of the candidate,
+for the meaning and not only the strings: `derived and not chosen`, `derived rather than chosen`,
+`follows necessarily`, `no alternative`, `inevitable`, `logically forced`, `forced by §4.4`,
+`nothing to decide`, `not a decision`, `not a choice`, `the only consistent`, `had to be`,
+`must block`. **Currently operative false claims remaining: 0.** The two historical occurrences —
+revision 5's commit message and `SLR-plan-0005` L-2 — are classified in §4.0aaaa and deliberately
+not rewritten.
+
 ### 4.4 · Revision 1's evidence, retained
 
 **The surface tool, exercised — two positives and six negatives, before any reader exists:**
@@ -1215,6 +1405,33 @@ plausibly have moved is stated with why it did not.
 
 ---
 
+### 5b.5 · `REV-SCIAB-MIRROR-005` — the carried findings at revision 6, and the three it recorded
+
+Same rule as 5b.2, 5b.3 and 5b.4. Revision 6 changes no behaviour, so almost every row here is
+carried by **byte identity** rather than by re-argument — and byte identity is measured, not
+assumed. **Nothing below is closed by `M-5`'s repair, and `M-5`'s repair claims nothing about any
+of it.**
+
+| # | Class at revision 6 | What revision 6 did |
+|---|---|---|
+| **P-4** | **CARRIED, STATED, NOT CLOSED** | `verify` still takes no digest input. `cmd_verify` is byte-identical to revision 5 by `ast.dump`, so it contains exactly the zero references to `emit_digests` it contained then. This revision touched a comment inside it and nothing else, and claims nothing about `P-4`. Still the cheapest available closure of the input half, and still not this revision's finding |
+| **P-6** | **CARRIED — unchanged in both halves** | `iter_files` byte-identical; `.git/**` still outside both populations. The printed-claim half stands exactly as revision 5 left it — both `PASS` sentences still print the `.git/` scope, verified in the captured output of all four runs. The finding is **not** closed: a forbidden artifact under `.git/` is still invisible to `verify` and to `freeze` |
+| **P-7** | **CARRIED — unchanged** | the residual and its corrected boundary are both untouched; `test_bomless_utf16_decodes_as_utf8_unless_a_byte_exceeds_7f` is byte-identical and green |
+| **N-7** | **UNRESOLVED, honestly labelled — fifth review running** | Revision 6 did not re-run revision 1's tool either, and I say so rather than letting five revisions of silence read as agreement. A measured number and an inferred explanation still face each other. Nothing in this revision touches it, and nothing in this revision is evidence about it |
+| **P-9** | **FIXED** | the §2 table's four stale `Status` cells now read *(rev 3, rev 4, rev 5, rev 6)* with each revision's change described; **71 probes** → **83**; *control plane 6 files* → **9 at the content tip**, measured, with every checkpoint row listed instead of one. All control plane, so the binding does not move — which is also why it went uncorrected for two revisions, and is the reason it is fixed rather than carried |
+| **P-10** | **FIXED** | the `tests executed` row read `850 … 941 … 933`, which is internally impossible across a revision that added twelve tests. Re-measured: **870 at BASE_HEAD, 953 at revision 6**, reconciling with Mirror's independent 870/953 and with `REV-SCIAB-MIRROR-004`'s published 870. The revision-4 cell is struck rather than back-filled, because I did not measure that tree this session |
+| **P-11** | **CARRIED, ACCEPTED** | one of the 17 substantive discriminating tests discriminates on a newly printed line over byte-identical behaviour. Mirror's characterization is right and I do not contest it; the line is true and the test is not wrong, but calling that discrimination *substantive* overstates it. Not repaired here — repairing it means re-partitioning the discrimination set, which is a numbers change in a revision that is meant to change one sentence |
+| **N-1 · N-2 · N-3 · N-6 · N-8 · N-9 · P-1 · P-3 · P-5** | **CARRIED, all by byte identity** | `surface_spec.json` is edited at this revision — one `_note` block — and the File012 normalization contradiction is again not among them (`N-1`). `cmd_population`, `_pdf_pages`, `_regex_units` and `cmd_locators` are byte-identical by `ast.dump` (`N-2`, `N-3`, `N-8`). No test was added at all, so no exit-code-only test was added (`N-6`). `N-9` is vocabulary in a note, untouched. `P-1` is `BASE_HEAD`'s guard. `P-3` and `P-5` see `N-6` and `N-7` |
+| **R-1 … R-12** | not reopened | `R-10` remains Mirror's own worktree debt and Plan may not write there |
+| **M-1 · M-2 · M-3 · M-4** | **RETESTED, NOT REOPENED** | all four rest on code that is byte-identical to revision 5 by `ast.dump`, 51 definitions of 51. `M-4`'s partition re-measured live on real surfaces: `CENSUSED 32 · SILENT 0` in **both** modes, and the UTF-16 hostile case still `rc=1` at the gate with `UNANTICIPATED` in both surfaces and `rc=0` post-read — outputs byte-identical to revision 5's. The suite is 83/83. §4.6a |
+| **freeze** | **RETESTED, NOT REDESIGNED** | `cmd_freeze`, `cmd_verify_freeze` and `_classify` byte-identical; live re-run at both tips `PASS`, and the positive control — one byte appended to a frozen file — refuses with `rc=1` |
+
+**Two findings are fixed, and both are numbers in this manifest rather than properties of the
+system.** `P-9` and `P-10` are corrected because they are currently-false statements in the
+artifact the operator reads in order to approve, not because they were convenient to reach.
+
+---
+
 ### 5b.4 · `REV-SCIAB-MIRROR-004` — the carried findings at revision 5, and the three it recorded
 
 Same rule as 5b.2 and 5b.3: a false sentence **in this manifest** is corrected here; a change to
@@ -1258,11 +1475,64 @@ its absence is a decision rather than an oversight, and it is not mixed into thi
 ## 6 · What Mirror is asked to verify
 
 Independent review of the binding **and** the content, **from R-1**. **No prior attestation
-transfers** — including `M-1`'s closure, `M-2`'s closure, `M-3`'s closure in `--post-read` and
-every row `REV-SCIAB-MIRROR-004` passed, the fourteen rows `-002` re-tested, and the ten `-001`
-found acceptable. The content they were found acceptable over no longer exists.
+transfers** — including `M-4`'s closure in both modes, `M-1`'s, `M-2`'s and `M-3`'s, every row
+`REV-SCIAB-MIRROR-005` passed, the fourteen rows `-002` re-tested, and the ten `-001` found
+acceptable. The content they were found acceptable over no longer exists.
+
+### 6.00000 · Revision 6 — the one finding, and the claim it was about
+
+**The claim:** *§4.4 now states truthfully which part of the pre-handover/post-read asymmetry is
+entailed and which part is chosen; the blocking level is presented as a policy choice with its
+alternative named and its approver named; and **nothing executable changed**.*
+
+**Attack it here, in this order:**
+
+1. **The identity claim first, because everything else rests on it.** I say revision 6 changed no
+   behaviour. If that is false, this is not a one-sentence revision and the rest of the review is
+   about the wrong object. The falsifier is any behavioural difference between `2ffaedb2` and
+   `2a854177`: a differing `ast.dump` over the 51 definitions of the tool, a `surface_spec.json`
+   key other than `content_scan/_note`, a differing `verify` output in either mode on the same
+   surfaces, a differing exit code, or a test whose result moves. §4.6a gives my measurements;
+   they are cheap to re-run and I would rather you re-ran them than read them.
+2. **Whether the corrected §4.4 is now true — including its new claims.** I have replaced one
+   false sentence with several sentences that are longer and therefore have more surface. Attack
+   in particular: that `(b)` really is consistent with every premise §4.4 cites (if it is not,
+   the level *is* entailed and my correction is itself an error in the other direction); that
+   `I1`'s source-root branch really is unforbidden and really is empty today — I measured 16 of
+   16 allowlisted text-suffixed files decoding, and a contingent fact stated as contingent is
+   still a fact I could have measured wrong; and that *"(a) can only refuse surfaces (b) would
+   admit"* holds in every reachable state rather than only the ones I imagined.
+3. **Whether the POLICY CHOICE block is a decision surface or a decoration.** It is in the
+   canonical protocol at §4.4 and repeated in §1b of this manifest. Ask whether an operator who
+   read **only** §4.4 would know a decision was theirs to make, what refusing it would cost, and
+   that refusing it leaves the rest of the section standing. If the answer is no, the finding is
+   not repaired, only relocated.
+4. **Whether I found all of the claim.** `M-5` named §4.4. I found it in four operative places
+   and classify two more as historical (§4.0aaaa). The falsifier is a fifth operative site, or a
+   sixth — and note that three of the four would have survived a grep for the review's own
+   wording, so a string search is not the instrument. My classification of revision 5's commit
+   message and `SLR-plan-0005` L-2 as historical-and-not-to-be-rewritten is also a judgement, and
+   if it is wrong the right answer is that the record needs an addendum, not an edit.
+5. **Whether the two fixed numbers are now right.** `P-9`'s control-plane count and `P-10`'s
+   tests-executed row are corrected against my own measurement. `P-10`'s new figures reconcile
+   with yours (870/953) and with `REV-SCIAB-MIRROR-004`'s published 870, and 953 − 870 = 83 is
+   exactly the added suite. Two instruments agreeing on a number is not agreement on the set
+   underneath it, so the set is what to check.
+6. **What I did not do, stated so it can be checked rather than discovered.** `P-4`, `P-6`,
+   `P-7`, `P-11` and `N-7` are carried and none is closed; `N-7` is unreconciled for the fifth
+   review running and I did not re-run revision 1's tool. `SLR-plan-0005` is deliberately not
+   edited. The session-routing debt is untouched. If any row of §5b.5 reads as a closure it
+   should not be, that is a finding.
 
 ### 6.0000 · Revision 5 — the one finding, and the claim it was about
+
+> 🔴 **Retained as revision 5's request, as written — and item 2 below is the defect.** It says
+> *"the pre-handover half is derived from §2.2's single-writer rule…"*, which is exactly the
+> characterization `REV-SCIAB-MIRROR-005` `M-5` found false: that derivation reaches the
+> **direction** and not the **level**. It is left standing because this is the record of what
+> revision 5 asked Mirror to attack, and Mirror attacked precisely this and was right. The
+> corrected statement is at §4.4 of the protocol, at §4.0aaaa and at §1b — **not here**. Nothing
+> in this subsection is a current claim of the candidate.
 
 **The claim:** *`SCANNED` and `[UNCHECKED]` partition the present files in **both** `verify`
 modes; each mode's `PASS` sentence states only what that run checked; and pre-handover a skip
