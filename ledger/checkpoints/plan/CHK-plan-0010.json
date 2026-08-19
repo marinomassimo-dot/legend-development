@@ -1,0 +1,93 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Written under the CORE bytes in force at BASE_HEAD cbce3016. Control plane under P5.1, so it perturbs no candidate hash. CHK-plan-0009 is not edited: it records a true state for a different task.",
+
+  "CHECKPOINT_ID": "CHK-plan-0010",
+  "SUPERSEDES": "CHK-plan-0009 — for the previous task only; that checkpoint is not invalidated by this one",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "SCIENTIST-AB-SPEC-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+  "FINGERPRINT_RECOMPUTED": "in this worktree, with governance/scripts/governance_fingerprint.py compose --role plan; equal to the value recorded in CHK-plan-0009, so this task is resume-compatible with it",
+
+  "TIMESTAMP": "2026-08-18",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "FINGERPRINT_EFFECT_OF_THIS_CANDIDATE": {
+    "_note": "Measured, not predicted — both values composed from the two versions of roles/scientist.md, everything else identical.",
+    "scientist_before": "355e3529431f89f3e7adf764548f4117374fa92118f8f794bd0ba579b7ff97ab",
+    "scientist_after": "82423a48b700bc2b392b4c8e944eb6a0b07cefebddf63db00e96716cbed43e79",
+    "plan": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff — UNCHANGED",
+    "mirror": "3dff8954d4f6a56f6be14bc72be369095a1436437913a1e908c4b33c9762f65c — UNCHANGED",
+    "orchestrator": "e2c544705e623a7761e627396724aab6fcb5a6f35466e6f1b978a0e8baaec59a — UNCHANGED",
+    "consequence": "On canonical execution, every Scientist checkpoint written under 355e3529 becomes INCOMPATIBLE under the A.6 refusal rule. There are none: both A and B have zero checkpoints. The rotation is confined to the scientist set — this is the narrow case P2.3 describes, not the broad invalidation the P5.1 amendment caused.",
+    "reviewer_note": "This is also the load-bearing half of the canonicalization determination in controlled_benchmark_ab.md §9. A benchmark run before execution would carry checkpoints under a fingerprint that the execution retires."
+  },
+
+  "MILESTONES_REACHED": [
+    {"id": "M-1", "milestone": "Handoff carried byte-identically onto this branch", "status": "COMPLETE", "evidence": "97735fe · blob sha256 f3f883c1e76767216ad75963d30be80209e80a63aa7e536e0aada4c9ca7f9a0e vs source blob 8e59df08"},
+    {"id": "M-2", "milestone": "scientist_reading_modes.md + role contract + BOOTSTRAP + protocols index", "status": "COMPLETE", "evidence": "384f05f"},
+    {"id": "M-3", "milestone": "controlled_benchmark_ab.md + benchmark_input_surface.py + BENCH-AB-001 package + evaluation population", "status": "COMPLETE", "evidence": "b965ca5"},
+    {"id": "M-4", "milestone": "Checkpoint, ledger task record, candidate manifest with hash and classification", "status": "COMPLETE", "evidence": "this file, ledger/tasks/plan/SCIENTIST-AB-SPEC-001.json, governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md"},
+    {"id": "M-5", "milestone": "Stop for R4 Mirror review", "status": "REACHED — nothing further is executed", "evidence": "this branch"}
+  ],
+
+  "TOOL_EVIDENCE": {
+    "_note": "Each row is a command that was run, with what came back. Counts are enumerated sets or carry the command that produced them.",
+    "benchmark_surfaces_built": "2 surfaces × 24 files, from the allowlist alone",
+    "verify_positive": "PASS twice — after the first build, and after the instruction files were corrected",
+    "verify_negative": [
+      "prior output planted in an output slot → 4 findings (NOT EMPTY, NOT ALLOWLISTED, PRIOR OUTPUT, IDENTIFIER LEAK), rc=1",
+      "a repository file naming the paper planted → 2 findings, rc=1",
+      "the two MODE_DIRECTIVE files made identical → NOT DIFFERING, rc=1",
+      "one byte appended to the text surface in B → PARITY BROKEN with both digests, rc=1",
+      "a locator citing LEGEND's own dossier, and a source_artifact by absolute path → OUTSIDE SURFACE, rc=1",
+      "a registry planted outside an output slot, post-read → 3 findings, rc=1"
+    ],
+    "defects_found_by_running_it": [
+      "post-read content scan fired on the reader's OWN manifest, which must name the PMID — a check that fires on the correct case is one people learn to ignore. Fixed: output slots are skipped in --post-read.",
+      "post-read forbidden-path check fired on the reader's own manifest, which lands at exactly the path LEGEND's prior manifest occupies, because deepdive_manifest.py derives that path from disease and PMID. Authorship is not decidable from a path; the guarantee is carried by the pre-handover run plus the freeze receipt. Fixed, and recorded in the protocol as the sharpest argument against using a checkout as the surface."
+    ],
+    "population": "36 units · 115 panels · main_figure 6, supplementary_figure 10, supplement_methods_section 20, main_table 0 — byte-identical across two consecutive runs",
+    "population_defect_found": "per-line segmentation truncated every caption window at one line, reporting 1 panel for a six-panel figure; and a single-letter pattern read Figure 6 as A,B,E when the caption uses the range (C-D). Both fixed; a short denominator flatters both readers.",
+    "manifest_validator_in_surface": "deepdive_manifest.py imports and runs inside a built surface; refuses an absent manifest with the expected BLOCK",
+    "legend_lint": "PASS (1 pre-existing INFO)",
+    "fulltext_receipts_verify": "OK — 128 chained receipts, tail anchored",
+    "growth_anchors": "PASS — claims=39 · papers=70 · corpus=356 · literature=390",
+    "public_release_gate": "PASS / BLOCKS: 0 — after it caught 18 real broken links in the benchmark instruction files, whose relative paths are valid in a surface and not in the repository. Rewritten as plain paths with the reason stated.",
+    "run_release_regressions": "FAIL — 8 suites, IDENTICAL at BASE_HEAD in the clean root checkout. Pre-existing, measured rather than assumed, and not resolved inside this work."
+  },
+
+  "OPEN_DEBTS_CARRIED": [
+    "REGISTRY VALIDATOR — MISSING INSTRUMENT",
+    "P7 EVENT LEDGER — OWED, NOT BARRED",
+    "approval queue non-canonical",
+    "ACK criteria",
+    "Plan→Mirror routing",
+    "Mirror methodology observation — UNRATIFIED under G.2",
+    "LEASE EXPIRED BETWEEN TURNS — detectable, not prevented",
+    "DEBT-20260818-LEASE-SNAPSHOT — the derivation does not declare which copy it read (raised by Mirror, verified by Plan, recorded on sunset-decision3 and not carried into this candidate's scope)",
+    "C-9 clauses — ACCEPTED as a document, NOT adopted; runtime/ classification still open at §7.2",
+    "L2 — SUSPENDED by operator decision; this candidate does not lift it",
+    "release regressions — 8 suites failing at BASE_HEAD, including 4 shebang entrypoints without executable mode"
+  ],
+  "_debts_note": "None of these is resolved, partially implemented, or quietly narrowed here. The new script was given executable mode so this candidate does not ADD a ninth failure to the release-surface test; the four pre-existing ones are untouched.",
+
+  "DURABLE_POINTERS": {
+    "branch": "scientist-ab-spec",
+    "base_head": "cbce30168091f7769c56c4f019055fa55fd0d66a",
+    "content_tip": "b965ca5880e93ad57770a0483aaa4652ec5f390c",
+    "candidate_id": "CAND-20260818-SCIENTIST-AB-SPEC",
+    "candidate_manifest": "governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md",
+    "candidate_content_hash": "3b568aae6c76848da197cacd43e517373ab7ca9532cf9289a73097e261916c75",
+    "handoff": "governance/candidates/HANDOFF-SCIENTIST-AB-SPEC.md"
+  },
+
+  "STATE": "AWAITING_REVIEW — candidate complete, held for R4 Mirror review. No HUMAN_APPROVAL requested, granted or implied.",
+
+  "RESUME_RULE": "Annex A.6 refusal rule. Recompute the plan fingerprint with governance/scripts/governance_fingerprint.py compose --role plan before resuming; never compare against a value copied from prose. Recompute the candidate hash with candidate_content_hash.py --base cbce3016 --tip <content tip> before treating any recorded value as current. If the scientist fingerprint already reads 82423a48, the candidate has executed and this checkpoint describes a state that is past."
+}

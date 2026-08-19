@@ -54,6 +54,25 @@ This measures **permanent false negatives**, `REVIVAL_TRIGGER` quality, re-audit
 
 Real observed errors are organized as **error families** (see `failure_taxonomy.md`), each with **multiple public instances**, **positive cases and negative controls**, a **development set** and a **held-out test set**, **independent adjudication** on at least a subset, and **no final tuning on the test set** — so guardrails cannot "win" by having been written on the eval examples.
 
+### Reader benchmarks — a different axis, in `benchmarks/`
+
+The arms above vary the **configuration** around one reader. `benchmarks/` holds experiments that
+vary the **reading directive** across two persistent actors on one paper, with everything else
+held byte-identical: same source packet, same instructions, same output schema, same evaluation
+population, and no visibility between the readers during the first pass.
+
+`benchmarks/BENCH-AB-001/` is the first: `scientist-a` in `PRIMARY_EVIDENCE_READ` against
+`scientist-b` in `INDEPENDENT_CRITICAL_READ`. Its protocol is
+[`framework/protocols/controlled_benchmark_ab.md`](../protocols/controlled_benchmark_ab.md);
+its input surfaces are built, proven and frozen by
+[`framework/scripts/benchmark_input_surface.py`](../scripts/benchmark_input_surface.py).
+
+**One property it shares with the arms above, and one it does not.** Held-constant inputs and an
+ex-ante evaluation population, yes — the denominator of every coverage number is fixed before
+either reading exists, so it cannot be redefined to fit. Statistical power, no: one paper and one
+session per actor cannot separate the effect of the directive from the variance between two
+sessions, and the protocol says so where the claim is rather than in a footnote.
+
 ### Reproducibility
 
 Every run logs model version · prompt · schema · corpus · seed/replicate · tokens · cost (**run/cost ledger**), so A/B/C differences are attributable and the budget is auditable. The eval runs **lean first** (few replicates) and scales only where the signal justifies it.

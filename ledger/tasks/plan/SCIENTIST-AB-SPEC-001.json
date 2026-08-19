@@ -1,0 +1,128 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.2 TASK_ACK + A.3 TASK_CLAIM",
+  "_note": "Operator-directed work, not a task assigned under H.1. No ACTIVE lease exists and no Orchestrator issued a Task Contract; the work arrives through the durable handoff HANDOFF-20260818-SCIENTIST-AB, whose front matter records the operator authorization (2026-08-18, transmitted L2-20260818-ORCH-051). This record exists so the work has provenance, not to assert that a task-assignment authority was exercised.",
+
+  "TASK_ID": "SCIENTIST-AB-SPEC-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+
+  "TASK_ACK": {
+    "state": "ACCEPTED",
+    "accepted_on": "2026-08-18",
+    "objective": "Complete the definitive specification of Scientist A and Scientist B: distinct registrable actors, scientifically independent and comparable, usable in the first controlled benchmark — reusing the existing scientific data model and documenting only genuinely necessary extensions.",
+    "interaction_mode": "AUTONOMOUS_COMPLETE",
+    "review_requirement": "R4 / MIRROR_REQUIRED — the candidate changes a role contract and defines a method; nothing it proposes may be executed before that review and the operator's approval",
+    "scope_rule": "SCOPE MUST NOT BE REDUCED (handoff front matter). Scope is also not widened: the seven governance debts stay open and no benchmark is started."
+  },
+
+  "TASK_CLAIM": {
+    "claimed_by": "plan",
+    "claimed_on": "2026-08-18",
+    "timestamp_precision": "date only — the runtime exposed no wall-clock time",
+    "durable_pointer": "governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md",
+    "uniqueness": "no competing claim exists for this TASK_ID + GENERATION; ledger/tasks/ holds no other open contract naming this handoff"
+  },
+
+  "REHYDRATION": {
+    "_note": "This session inherited no identity, authority or state from a previous chat. Everything below was read at source before any work began (body §36.5: memory orients, durable state decides).",
+    "worktree": "evidence-index",
+    "worktree_matches_git_toplevel": true,
+    "branch": "scientist-ab-spec",
+    "head_at_open": "cbce30168091f7769c56c4f019055fa55fd0d66a",
+    "tree_at_open": "clean",
+    "role_contract_read": "roles/plan.md — in full",
+    "governance_version": "3.1.1",
+    "applicable_governance_fingerprint": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+    "fingerprint_recomputed_in_worktree": true,
+    "stable_actor_identity": "plan · evidence-index · roles/plan.md — from the Agent Card registry on branch orchestrator and the deployment profile, both read at source",
+    "current_session_ref": "NOT DECLARED — an actor cannot observe its own routing reference (ListAgents shows peers only). The registry's evidence-index-59 [de42c4] describes an earlier incarnation and is not asserted for this one. Nothing in this work is keyed by a session reference."
+  },
+
+  "PRECONDITIONS_VERIFIED_AT_SOURCE": {
+    "handoff": "governance/candidates/HANDOFF-SCIENTIST-AB-SPEC.md — tracked on branch sunset-decision3 at fbf3e7e, revised b22968d; NOT present in main at cbce3016. Read from git, verified complete, and not superseded: the only later commit on that branch, 84b25fe, adds an unrelated debt record.",
+    "main": "cbce30168091f7769c56c4f019055fa55fd0d66a — root checkout clean, unchanged by this work",
+    "scientist_a": "worktree lettore · branch lettore · HEAD 9b0cf470 · 164 behind main · 0 ahead · DIRTY (1 file) · no roles/ and no governance/ in the tree",
+    "scientist_b": "worktree lettore-b · branch lettore-b · HEAD cb50e177 · 166 behind main · 0 ahead · DIRTY (1 file) · no roles/ and no governance/ in the tree",
+    "actor_ids": "UNRESOLVED for both, confirmed in the Agent Card registry on branch orchestrator — NOT_REGISTERED, no session, zero tasks, zero checkpoints",
+    "c2": "PMID42422765.json modified in both worktrees, byte-identical, sha256 6c3fe60f…, equal to tag handoff/C-2/PMID42422765-working-blob (blob 86bba8bb). Nothing reset, checked out, deleted or committed. Content CLOSED; only the forward-ownership question was carried, and it is answered as a rule in the spec.",
+    "packet": "files/fulltext/PMID42397075_Aqeilan2026.pdf sha256 b6b44816… present in the root checkout and in lettore (hard-linked, same inode 6395850); ABSENT in lettore-b and in evidence-index — files/ is git-ignored. Parity between the two readers is therefore something to BUILD, not something to assume, which is what the input surface does."
+  },
+
+  "MILESTONE_PLAN": [
+    {"id": "M-1", "milestone": "Handoff carried onto this branch byte-identically", "durable_evidence": "governance/candidates/HANDOFF-SCIENTIST-AB-SPEC.md @ 97735fe", "status": "COMPLETE"},
+    {"id": "M-2", "milestone": "Reading modes, actor identity, ownership rule — normative", "durable_evidence": "framework/protocols/scientist_reading_modes.md, roles/scientist.md, BOOTSTRAP.md @ 384f05f", "status": "COMPLETE"},
+    {"id": "M-3", "milestone": "Benchmark protocol, tooling exercised, input package, evaluation population", "durable_evidence": "framework/protocols/controlled_benchmark_ab.md, framework/scripts/benchmark_input_surface.py, framework/eval/benchmarks/BENCH-AB-001/ @ b965ca5", "status": "COMPLETE"},
+    {"id": "M-4", "milestone": "Checkpoint + candidate manifest with hash, classification and Mirror package", "durable_evidence": "ledger/checkpoints/plan/CHK-plan-0010.json, governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md", "status": "IN_PROGRESS"},
+    {"id": "M-5", "milestone": "Stop for R4 Mirror review. No execution, no approval, no benchmark.", "durable_evidence": "this branch", "status": "COMPLETE — REV-SCIAB-MIRROR-001, verdict REQUEST CHANGES"},
+    {"id": "M-6", "milestone": "GENERATION 2 — remediate the five blocking findings and classify R-1..R-12. Reproduce each finding before changing anything.", "durable_evidence": "the remediation commit; ledger/checkpoints/plan/CHK-plan-0011.json", "status": "COMPLETE"},
+    {"id": "M-7", "milestone": "Revision 2 binding: new content tip, new hash c0701094…, manifest revised, DELTA REGRESSION 0 with both sets enumerated", "durable_evidence": "governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md §1, §4.2", "status": "COMPLETE"},
+    {"id": "M-8", "milestone": "Stop for a NEW independent R4 Mirror review of revision 2, from R-1. No prior verdict transfers.", "durable_evidence": "this branch", "status": "REACHED — nothing further is executed"}
+  ],
+
+  "GENERATION_2": {
+    "_note": "A separate Plan session, opened by the operator for the bounded remediation task. It inherited no identity, authority, decision or task state from the session that authored revision 1; everything was reconstructed from durable repository evidence (body §36.5).",
+    "review_remediated": "REV-SCIAB-MIRROR-001 @ ff8b15cc — read from the git object on branch mirror, without merging Mirror into this branch and without any cross-worktree write",
+    "session_ref": "NOT DECLARED — no durable protocol provides or verifies one; the registry's evidence-index-59 [de42c4] describes an earlier incarnation and is not asserted here",
+    "checkpoint": "ledger/checkpoints/plan/CHK-plan-0011.json",
+    "scope": "the five blocking findings, the twelve recorded findings, and the binding. Nothing else. The session-routing debt was observed again and deliberately left untouched."
+  },
+
+  "GENERATION_3": {
+    "_note": "A third Plan session, opened by the operator for a TARGETED remediation. It inherited no identity, authority, routing, candidate state or decision from either earlier session; everything was reconstructed from durable repository evidence (body §36.5). The prompt's expected values — main, the tips, the hash — were treated as claims to verify at source, and all of them verified.",
+    "review_remediated": "REV-SCIAB-MIRROR-002 @ 402e25cd — read from the git object on branch mirror, without merging Mirror into this branch and without any cross-worktree write",
+    "session_ref": "NOT DECLARED — no durable protocol provides or verifies one; the registry's evidence-index-59 [de42c4] describes an earlier incarnation and is not asserted here",
+    "checkpoint": "ledger/checkpoints/plan/CHK-plan-0013.json — supersedes CHK-plan-0012, which remains valid as the record of the M-1/M-2 remediation and of the binding declared at b634829",
+    "scope": "M-1 and M-2, the tests that prove them, the manifest sentences those findings made false, the Session Learning Record §15/E.6 owes for this session, and the binding. Two recorded findings (N-4, N-5) are corrected because they are false statements in the manifest about its own evidence; the other seven are carried and named. No architecture was redesigned; no row REV-SCIAB-MIRROR-002 passed was reopened. The session-routing debt was observed a third time and deliberately left untouched.",
+    "content_tip": "a3cad1dcffc4090c23aaa972ad5e5fb817a7b912",
+    "candidate_content_hash": "570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7",
+    "superseded_rev3_binding": {
+      "tip": "b63482978dab13383177ed60ab55f4ca29fb1ed3",
+      "hash": "7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596",
+      "reason": "superseded WITHIN revision 3 by learning/plan/SLR-plan-0003.md. §15 attaches the Session Learning Review to session closure; P5.1 makes learning/ CONTENT by intent; D.2 binds an approval to CANDIDATE_CONTENT_HASH + BASE_HEAD and any material change invalidates it. Writing the record after review would have had Mirror review a population that is not the one carried forward. Plan first proposed to defer it, and that error is itself recorded as SLR-plan-0003 L-5."
+    },
+    "session_learning_review": "learning/plan/SLR-plan-0003.md @ a3cad1d — DISCHARGED, inside the reviewed population. Confirmation classes proposed, not self-certified: E.2 gives epistemic curation to Mirror."
+  },
+
+  "GENERATION_4": {
+    "_note": "A fourth Plan session, opened by the operator for a TARGETED remediation of the single new blocking finding M-3. It inherited no identity, authority, routing, candidate state or decision from any earlier session; everything was reconstructed from durable repository evidence (body §36.5). The prompt's expected values — main, both tips, the revision-3 hash, the review commit — were treated as claims to verify at source, and all of them verified.",
+    "review_remediated": "REV-SCIAB-MIRROR-003 @ 015574a1 — read from the git object on branch mirror, without merging Mirror into this branch and without any cross-worktree write",
+    "session_ref": "NOT DECLARED — no durable protocol provides or verifies one; the registry's evidence-index-59 [de42c4] describes an earlier incarnation and is not asserted here",
+    "checkpoint": "ledger/checkpoints/plan/CHK-plan-0014.json — supersedes CHK-plan-0013, which remains valid as the record of revision 3's closure",
+    "scope": "M-3 only: the complete scan-skip population derived from the executable logic, the census that must equal it, the two false printed sentences, the false normative guarantee row, the test whose fixture encoded the defect, the hostile matrix that proves the repair, the Session Learning Record §15/E.6 owes for this session, and the binding. Four content files changed, one added. M-1 was not reopened; M-2's remedy was extended, not undone. The session-routing debt was observed a fourth time and deliberately left untouched.",
+    "reproduced_before_fix": "16 silent files per surface on a clean build where the review reported 10, plus a fourth skip class (undecodable_text) that no review had named. Mirror's four-path same-bytes control reproduced exactly.",
+    "content_tip": "a210f7381e5adc2fc43fc0f202213532ec6e80ed",
+    "candidate_content_hash": "07b65b3707a4e63df23918b844140e7548929b27a8a182f8ebf2d9b0ab165198",
+    "no_binding_superseded_within_this_revision": "b1061eb (1613fa3b…) is a real content commit and was never declared as a tip. The Session Learning Review was written and committed first — the correction of the ordering error SLR-plan-0003 L-5 recorded.",
+    "session_learning_review": "learning/plan/SLR-plan-0004.md @ a210f73 — DISCHARGED, inside the reviewed population, written BEFORE any binding was declared. Confirmation classes proposed, not self-certified: E.2 gives epistemic curation to Mirror."
+  },
+
+  "WRITE_PERIMETER": {
+    "content_domain_written": [
+      "framework/protocols/scientist_reading_modes.md",
+      "framework/protocols/controlled_benchmark_ab.md",
+      "framework/protocols/index.md",
+      "framework/scripts/benchmark_input_surface.py",
+      "framework/eval/benchmarks/BENCH-AB-001/**",
+      "framework/eval/README.md",
+      "roles/scientist.md",
+      "BOOTSTRAP.md"
+    ],
+    "control_plane_written": [
+      "governance/candidates/HANDOFF-SCIENTIST-AB-SPEC.md",
+      "governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md",
+      "ledger/tasks/plan/SCIENTIST-AB-SPEC-001.json",
+      "ledger/checkpoints/plan/CHK-plan-0010.json"
+    ],
+    "deliberately_not_touched": {
+      "main and the root checkout": "Plan may not use them as a working space (roles/plan.md)",
+      "disease-models/**": "no scientific content is changed; the four current files are untouched",
+      "lettore, lettore-b": "another actor's worktree; the C-2 working copies are each actor's own",
+      "governance/ (body and annexes)": "no governance text is amended — Annex I.2 step 7 and I.4 are SATISFIED here, not edited",
+      "runtime/agent_card_registry.md": "on branch orchestrator; the registry row is written at registration, by the registrar, not here"
+    }
+  },
+
+  "STATE": "CLAIMED → IN_PROGRESS → AWAITING_REVIEW → CHANGES_REQUESTED → REMEDIATED (rev 2) → AWAITING_REVIEW → CHANGES_REQUESTED (REV-SCIAB-MIRROR-002: M-1, M-2) → REMEDIATED (rev 3) → AWAITING_REVIEW → CHANGES_REQUESTED (REV-SCIAB-MIRROR-003: M-1 CLOSED, M-2's defect CLOSED, new blocking M-3) → REMEDIATED (rev 4) → AWAITING_REVIEW"
+}

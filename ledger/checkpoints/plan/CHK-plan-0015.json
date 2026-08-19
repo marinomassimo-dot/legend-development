@@ -1,0 +1,160 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "REVISION 5 of CAND-20260818-SCIENTIST-AB-SPEC — targeted remediation of the single blocking finding M-4 of REV-SCIAB-MIRROR-004. One finding, one mechanism, five content files. Every value below was re-derived in this session from durable state; nothing was carried from chat memory or from an earlier checkpoint.",
+
+  "CHECKPOINT_ID": "CHK-plan-0015",
+  "SUPERSEDES": "CHK-plan-0014 (COMPLETE, revision 4 of the same candidate — a different content hash, not resumed)",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "SCIENTIST-AB-SPEC-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 5,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "composed at session open over CORE + Annex D + E + I + J.1 per plan_defined_parameters.md P2.2",
+  "GOVERNANCE_VERSION": "3.1.1",
+  "TIMESTAMP": "2026-08-19",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "REHYDRATION": {
+    "worktree": "evidence-index",
+    "worktree_matches_git_toplevel": true,
+    "branch": "scientist-ab-spec",
+    "head_at_open": "0ec863b3664c1df179df71714580ffdb2fed1d1b",
+    "tree_at_open": "clean",
+    "role_contract_read": "roles/plan.md in full — mandate, permitted and forbidden writes, proposer/executor/reviewer separation, session obligations",
+    "stable_actor_identity": "plan · worktree evidence-index · roles/plan.md · PERSISTENT_LEGEND_ACTOR — reconstructed from durable repository evidence alone",
+    "current_session_ref": "NOT DECLARED — an actor cannot observe its own routing reference and no durable protocol provides one here. None invented, none inherited, no other Plan session superseded.",
+    "result": "PLAN REHYDRATION: PASS"
+  },
+
+  "REVIEWED_INPUT": {
+    "review": "reviews/mirror/REV-SCIAB-MIRROR-004.md at 609553cce962236d2c70bd28e9e8c3c83cbf3753, read in full from the git object on branch mirror without merging",
+    "also_read": ["learning/mirror/SLR-mirror-0012.md", "ledger/checkpoints/mirror/CHK-mirror-0006.json"],
+    "verdict_received": "REQUEST CHANGES",
+    "blocking": ["M-4"],
+    "closed_at_rev4": ["M-1", "M-2", "M-3 in --post-read"],
+    "recorded_at_rev4": ["P-6", "P-7", "P-8"]
+  },
+
+  "OBJECT": {
+    "candidate_id": "CAND-20260818-SCIENTIST-AB-SPEC",
+    "revision": 5,
+    "base_head": "cbce30168091f7769c56c4f019055fa55fd0d66a",
+    "content_tip": "2ffaedb2218ae9a9d96acf99fa6051ee545d6fef",
+    "candidate_content_hash": "5307d4d213c1d25c42a51e27811b7e375907ceed77682b343dee68e0e2b8423f",
+    "hash_version": "legend-candidate-v4",
+    "included_entries": 526,
+    "excluded_entries": 31,
+    "superseded_hashes": {
+      "revision_4": "07b65b3707a4e63df23918b844140e7548929b27a8a182f8ebf2d9b0ab165198",
+      "revision_3": "570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7",
+      "revision_3_intra": "7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596",
+      "revision_2": "c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf",
+      "revision_1": "3b568aae6c76848da197cacd43e517373ab7ca9532cf9289a73097e261916c75"
+    },
+    "no_binding_superseded_within_revision_5": "ONE content commit carries the remediation and SLR-plan-0005 together, so no tip existed to declare before the learning record did. Second consecutive revision in which nothing is superseded intra-revision; SLR-plan-0003 L-5 recorded the failure this corrects.",
+    "hash_reproduced_at": [
+      "2ffaedb via the governed script ×3 — identical",
+      "2ffaedb independently, without the script, path-sorted per P5.2: 526 included / 31 excluded",
+      "POSITIVE CONTROLS reproduced by the same independent route: a210f738 07b65b37… (525/30), a3cad1d 570fcbbb… (524/29), b634829 7cef4ccc… (523/28), daaa333 c0701094… (523/27), b965ca5 3b568aae… (522/24)",
+      "TRAP exercised: sorting the whole ls-tree LINE instead of the PATH gives ab884df6… at the same tip — a different value, because two 100755 entries move when the mode leads the key"
+    ],
+    "content_files": 22,
+    "content_changed_at_rev5": 5,
+    "content_byte_identical_to_rev4": 17,
+    "function_level_delta": "37 of 39 top-level definitions byte-identical by AST segment; 2 changed (cmd_verify, unchecked_surface); 0 added; 0 removed. scan_skip_reason, SCAN_SKIP_CLASSES, iter_files, _is_expected_output, _is_decodable_text, _under_expected_prefix, declared_blind_spots, cmd_build, cmd_freeze, cmd_verify_freeze, _classify, cmd_population, cmd_locators, tree_digest, iter_symlinks, _pdf_pages, _regex_units all byte-identical",
+    "main_unchanged": true
+  },
+
+  "M4_REMEDIATION": {
+    "handover_gate": "python3 framework/scripts/benchmark_input_surface.py verify --spec <spec> --surfaces <root>, NO --post-read. Derived from protocol §5 step 1 (build; verify), §5 step 3 (HANDOVER), §1 P-7 (surfaces built, verified, manifest frozen) and §3's ex-ante list.",
+    "mechanism": "the census block is hoisted out of `if args.post_read:` and computed unconditionally before findings are printed; `unchecked_surface()`'s post_read parameter loses its default so no call site can acquire the post-read universe by omission; EXPECTED_BY_PROTOCOL:NO becomes a finding pre-handover and stays informational post-read; the two modes print two different PASS sentences, each stating only what its own run checked; a MODE line is printed on every run including a failing one.",
+    "pre_handover_contract": "census in 3 reachable classes; identifier scan over every non-exempt present file; exhaustive allowlist; output slots must be EMPTY; EVERY forbidden prior-output path checked with no exemption; parity; EXPECTED_BY_PROTOCOL:NO = BLOCKING; PASS authorizes §1 P-7",
+    "post_read_contract": "census in all 6 classes; declared outputs exempt from the scan; forbidden paths checked except the printed blind spot; parity; EXPECTED_BY_PROTOCOL:NO = INFORMATIONAL, named and counted separately — REV-SCIAB-MIRROR-004 §9, undisturbed",
+    "asymmetry_derivation": "protocol §2.2 — Plan is the surface's only writer until handover, and `build` copies without templating, so pre-handover an allowlisted text-suffixed file that is not text is a state build cannot produce: the source root carries one, or the surface was patched, which §3 forbids by name. Post-read the writer is the reader, who may legitimately emit UTF-16. Who the writer is decides whether an unanticipated file is an anomaly or an artifact. Written out as protocol §4.4, one row per property.",
+    "route_refused": "scoping the two printed sentences and §4.3 bullet 2 to --post-read and declaring the pre-handover skip population a named residual. It closes the finding and would have required weakening the pre-handover guarantee row — 'no identifier leak, all of it observed, not attested' — while the mechanism to satisfy it already existed and was correct."
+  },
+
+  "MEASURED": {
+    "file_universe_before_fix": {
+      "post_read": {"present": 48, "scanned": 16, "censused": 32, "silent": 0, "overlap": 0},
+      "pre_handover": {"present": 48, "scanned": 16, "censused": 0, "silent": 32, "overlap": 0}
+    },
+    "file_universe_after_fix": {
+      "post_read": {"present": 48, "scanned": 16, "censused": 32, "silent": 0, "overlap": 0},
+      "pre_handover": {"present": 48, "scanned": 16, "censused": 32, "silent": 0, "overlap": 0}
+    },
+    "oracle_independence": "os.walk universe; scan membership measured BY EFFECT via a planted identifier and an observed IDENTIFIER LEAK; census parsed from printed [UNCHECKED] lines. Nothing imports the module or calls scan_skip_reason()/unchecked_surface(). Instrument check (roles/scientist.md must leak) PASSED in every run reported.",
+    "utf16_handover_before_fix": "VERDICT: PASS, rc=0, path named 0 times, both partition sentences printed",
+    "utf16_handover_after_fix": "VERDICT: FAIL, rc=1, path named 4 times, UNANTICIPATED in both surfaces, census class undecodable_text, EXPECTED_BY_PROTOCOL NO, PARITY BROKEN 0 (identical bytes in both surfaces, as intended)",
+    "utf16_post_read_after_fix": "VERDICT: PASS, named under [UNCHECKED] as undecodable_text, counted separately — unchanged from revision 4",
+    "candidate_suite": {"tests_rev4": 71, "tests_rev5": 83, "green": 83, "fail_against_rev4_tool": 20, "fail_against_rev4_tool_with_MODE_backported": 17, "non_discriminating": 3, "non_discriminating_identity": "the two positive controls and the post-read partition — exactly the rows that must not discriminate"},
+    "regression": {
+      "targets_base": 64, "targets_rev5": 65,
+      "tests_executed_base": 850, "tests_executed_rev5": 933,
+      "failing_suites": "6 at both, identical set",
+      "failing_tests": "7 at both, identical set",
+      "added": 0, "removed": 0, "same_reason": "7/7 by parsed assertion text, per test id",
+      "omission_channel": "empty at both tips — no suite exits non-zero with zero attributable test failures",
+      "declared_limitation": "3 targets are custom non-unittest harnesses (launch/test_legend_launch.py and the two skill-package suites); rc=0 at both tips, no test-id granularity available, recorded rather than counted as passes"
+    },
+    "harness_defects_found_and_corrected_in_this_session": [
+      "the hostile UTF-16 rows first failed against the FIXED tool: the payload's em dash U+2014 encodes as 14 20 in UTF-16LE, both bytes below 0x80, so the file decoded as UTF-8 and was genuinely scanned. The tool was right and the test was wrong.",
+      "the regression harness reported 421 of ~850 tests: it invoked `python3 -m unittest <dotted-module>`, which cannot name the 12 targets with hyphens or dots in their paths, and matched only unittest's single-line verbose form, dropping every test with a docstring.",
+      "it then reported 5 failing tests where Mirror measured 7: the two missed are subTest failures, which print a FAIL: header while the top-level line still ends '... ok'. Corrected, the count reconciles with Mirror's exactly."
+    ],
+    "publication_gate": "PASS / BLOCKS 0 at the content tip",
+    "legend_lint": "PASS (1 pre-existing INFO)",
+    "growth_anchors": "PASS — claims=39 · papers=70 · corpus=356 · literature=390",
+    "receipts_ledger": "OK: 128 chained receipts, tail anchored in the state manifest",
+    "documented_commands": "OK", "fresh_clone_reader_journey": "OK", "cli_smoke": "OK",
+    "freeze_battery": "cmd_freeze / cmd_verify_freeze / _classify byte-identical AND — verified by AST — none of them calls either changed function. Live re-run on the real surface: 29 receipt fields, SURFACE_ABSOLUTE_PATH not recorded, outputs 0, unexpected 0, symlinks 0; verify-freeze PASS on the untouched tree; wrong-actor-id refuses, naming scientist-a read from ASSIGNMENT.md inside the tree"
+  },
+
+  "MILESTONES_REACHED": [
+    {"milestone": "identity rehydration fail-closed", "durable_evidence": "this checkpoint § REHYDRATION", "status": "COMPLETE — PASS"},
+    {"milestone": "Mirror revision-4 review, SLR-mirror-0012 and CHK-mirror-0006 read from git objects without merging", "durable_evidence": "CAND §5b.4", "status": "COMPLETE"},
+    {"milestone": "M-4 reproduced before any edit, in both modes, with an independent os.walk oracle and a behavioural scan probe", "durable_evidence": "CAND §4.0aaa, §4.6", "status": "COMPLETE — REPRODUCED EXACTLY"},
+    {"milestone": "handover gate identified from durable protocol rather than from variable names", "durable_evidence": "controlled_benchmark_ab.md §3 ex-ante list, annotated", "status": "COMPLETE"},
+    {"milestone": "two mode contracts derived and written out as a property matrix", "durable_evidence": "controlled_benchmark_ab.md §4.4", "status": "COMPLETE"},
+    {"milestone": "EXPECTED_BY_PROTOCOL:NO decided per mode from normative evidence, not by transferring Mirror's post-read ruling", "durable_evidence": "controlled_benchmark_ab.md §4.4", "status": "COMPLETE — BLOCKING pre-handover, INFORMATIONAL post-read"},
+    {"milestone": "census wired into both modes; unchecked_surface's post_read default removed", "durable_evidence": "framework/scripts/benchmark_input_surface.py", "status": "COMPLETE"},
+    {"milestone": "independent file-universe oracle run in BOTH modes, before and after", "durable_evidence": "CAND §4.6", "status": "COMPLETE — 0 silent in both after"},
+    {"milestone": "the positive control that exercised the wrong mode repaired as a PAIR, with runtime mode assertions on argv and on the tool's printed MODE line", "durable_evidence": "test_benchmark_input_surface.py", "status": "COMPLETE"},
+    {"milestone": "UTF-16 hostile matrix at the handover gate: 5 encodings x both surfaces, plus UTF-8 discriminator, clean-state control and the post-read counterpart", "durable_evidence": "HandoverGateCensusTests", "status": "COMPLETE"},
+    {"milestone": "P-7's stated boundary measured and corrected; the residual itself carried", "durable_evidence": "CAND §4.6, SLR-plan-0005 L-4", "status": "COMPLETE"},
+    {"milestone": "M-1, M-2, M-3 and freeze retested and not redesigned", "durable_evidence": "CAND §5b.4", "status": "COMPLETE — none regressed"},
+    {"milestone": "regression accounting at suite AND test-id granularity with the omission channel recorded, after two harness defects of my own were found and fixed", "durable_evidence": "CAND §4.2, SLR-plan-0005 L-3", "status": "COMPLETE — ADDED 0, REMOVED 0, same-reason 7/7"},
+    {"milestone": "Session Learning Review written and committed BEFORE any binding was declared", "durable_evidence": "learning/plan/SLR-plan-0005.md at 2ffaedb", "status": "COMPLETE"},
+    {"milestone": "binding recomputed by the governed script and independently, with five published positive controls and the line-sort trap run deliberately", "durable_evidence": "CAND §1 Reproduction", "status": "COMPLETE"}
+  ],
+
+  "TASK_STATE": "AWAITING_REVIEW",
+
+  "FINDINGS_STATUS": {
+    "remediated_this_revision": ["M-4"],
+    "fixed_manifest_error": ["P-8"],
+    "retested_not_reopened": ["M-1", "M-2", "M-3 in --post-read"],
+    "carried": ["P-1", "P-3", "P-4", "P-5", "P-6", "P-7", "N-1", "N-2", "N-3", "N-6", "N-7", "N-8", "N-9"],
+    "unresolved": ["N-7 — revision 1's differential counts remain unreconciled for the fourth review running; neither side re-ran revision 1's tool"],
+    "not_claimed_solved": "P-4 is unchanged: verify still consumes no digest input, so an identical edit to both surfaces escapes verify-time parity. M-4's remedy touches neither the parity check nor the digest map, and this revision claims nothing about it.",
+    "human_approval": "NONE — not requested, not granted, not implied"
+  },
+
+  "SCOPE": {
+    "scope_creep": "NONE — five content files, four of them the ones the finding is about and one the mandatory learning record. No *_current.md, no registry, no approval queue, no lease record, no runtime/, no Agent Card, no receipt ledger, no P7, no Metacognition surface, no Scientist C, no second paper, no session-routing artifact.",
+    "session_routing_debt": "OUT OF SCOPE — NOT SILENTLY RESOLVED. No SESSION_REF declared or inferred; no routing inferred from chat recency; §5c of the manifest still names the gap and implements nothing.",
+    "not_done": "no HUMAN_APPROVAL; nothing canonicalized; no benchmark executed; no batch authorized; Scientist A/B not activated; main unchanged at cbce3016; no other actor's worktree written; branch mirror read from git objects without merging."
+  },
+
+  "SESSION_GUARD": "The session guard refused two inline heredocs that would have written files while the shell was inside a repository worktree. Neither refusal was worked around with an unchecked tool: both probes were authored with Write into the session scratchpad and invoked by name, and the measurements are the same ones.",
+
+  "DURABLE_POINTERS": {
+    "branch": "scientist-ab-spec",
+    "manifest": "governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md",
+    "session_learning_record": "learning/plan/SLR-plan-0005.md",
+    "prior_checkpoint": "ledger/checkpoints/plan/CHK-plan-0014.json",
+    "review_answered": "reviews/mirror/REV-SCIAB-MIRROR-004.md on branch mirror"
+  },
+
+  "RESUME_RULE": "Annex A.6. AWAITING_REVIEW; do not resume to alter content. Any content change produces a new CANDIDATE_CONTENT_HASH and requires a new Mirror review from R-1. No PASS from REV-SCIAB-MIRROR-001..004 transfers to this content."
+}

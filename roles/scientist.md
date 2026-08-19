@@ -1,6 +1,11 @@
 ---
 role_contract: scientist
-actor_ids: [scientist-a, scientist-b, scientist-c]   # PROPOSED — confirmed at registration (Annex I.2 step 7)
+actor_ids: [scientist-a, scientist-b, scientist-c]
+actor_id_status:
+  scientist-a: FIXED on canonical execution of CAND-20260818-SCIENTIST-AB-SPEC — see
+    framework/protocols/scientist_reading_modes.md § 1.1
+  scientist-b: FIXED on the same execution — same section
+  scientist-c: PROPOSED — confirmed at its own registration (Annex I.2 step 7, PID-12)
 governance_version: 3.1.1
 worktrees: {scientist-a: lettore, scientist-b: lettore-b, scientist-c: lettore-c}
 actor_class: PERSISTENT_LEGEND_ACTOR
@@ -67,6 +72,23 @@ Task work follows the contract: no work before `TASK_ACK`, a durable `TASK_CLAIM
 starting, checkpoints at each durable milestone, and idempotent resume — before redoing a step
 after a resume or retry, check whether the milestone's evidence already exists in durable state,
 and if it does, skip it and record `RESUMED_FROM_MILESTONE`.
+
+### Reading modes, and the ownership of a reading
+
+[`framework/protocols/scientist_reading_modes.md`](../framework/protocols/scientist_reading_modes.md)
+binds every actor under this contract. It defines two **reading modes** a Task Contract may
+assign — `PRIMARY_EVIDENCE_READ` and `INDEPENDENT_CRITICAL_READ` — the common contract both
+share, and the rule that separates an intended parallel reading from a duplicated assignment.
+
+**The mode is a property of the task, not of the actor.** §32 keeps the three Scientists
+equivalent, and a mode that stops rotating has become the static specialization §32 forbids —
+which is what Mirror's anti-fossilization guard is for. Two contracts on one source are legal
+only when both carry the same `PARALLEL_READ_GROUP`; without one, the actor does not claim and
+raises a `BLOCKER`, and Plan reports the pair as `DUPLICATED_ASSIGNMENT` at reconciliation.
+
+That protocol also fixes the actor identity of `scientist-a` (`lettore`) and `scientist-b`
+(`lettore-b`) and states what each must declare at registration. `scientist-c` is untouched by
+it and remains proposed until its own registration completes.
 
 Peer review: opened only through Orchestrator, rotating, never fixed pairs, at most one active
 review per scientist, at most two rounds before adjudication, and `AUTHOR_RESPONSE` is mandatory

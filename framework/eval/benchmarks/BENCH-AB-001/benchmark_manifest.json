@@ -1,0 +1,146 @@
+{
+  "_schema": "LEGEND benchmark · input manifest v1 (Annex-D-shaped, for an experiment rather than a candidate)",
+  "_state": "PREPARED — NOT FROZEN. Freezing happens at build time, immediately before handover, and only after every precondition of controlled_benchmark_ab.md §1 is satisfied. The fields below marked DERIVED_AT_BUILD are computed by the command named beside them and are deliberately absent here: a digest written by hand today would be a value that ages without anything detecting it.",
+
+  "BENCHMARK_ID": "BENCH-AB-001",
+  "PMID": "42397075",
+  "DOI": "10.1093/brain/awag239",
+  "PAPER_TITLE_SHORT": "Steinberg/Zonca/Abdellatif … Aqeilan, Brain 2026 — patient-derived neural organoids",
+  "BASE_HEAD": "cbce30168091f7769c56c4f019055fa55fd0d66a",
+
+  "ACTORS": {
+    "scientist-a": {"mode": "PRIMARY_EVIDENCE_READ", "task_id": "BENCH-AB-001-A",
+                    "worktree_of_record": "lettore", "branch_of_record": "lettore"},
+    "scientist-b": {"mode": "INDEPENDENT_CRITICAL_READ", "task_id": "BENCH-AB-001-B",
+                    "worktree_of_record": "lettore-b", "branch_of_record": "lettore-b"}
+  },
+  "_actors_note": "The worktree and branch of record are the actor's LEGEND home, where its identity, task claim and checkpoints live. The READING happens in the benchmark surface — a standalone repository — under the declared deviation of controlled_benchmark_ab.md §2.2, and is imported back by Plan at FREEZE.",
+
+  "PROTOCOL": {
+    "reading_modes": {"path": "framework/protocols/scientist_reading_modes.md", "version": 1,
+                      "sha256": "DERIVED_AT_BUILD — shasum -a 256 <path> at the canonical tip"},
+    "benchmark": {"path": "framework/protocols/controlled_benchmark_ab.md", "version": 1,
+                  "sha256": "DERIVED_AT_BUILD"}
+  },
+
+  "SCHEMA_VERSION": {
+    "work_manifest": 2,
+    "_work_manifest_source": "framework/scripts/deepdive_manifest.py CURRENT_SCHEMA_VERSION",
+    "output_schema": {"path": "instructions/OUTPUT_SCHEMA.md", "version": 1,
+                      "sha256": "DERIVED_AT_BUILD"}
+  },
+
+  "INSTRUCTIONS_VERSION": {
+    "common": {"path": "instructions/BENCHMARK_INSTRUCTIONS.md", "version": 1,
+               "sha256": "DERIVED_AT_BUILD"},
+    "surface_router": {"path": "instructions/SURFACE_CLAUDE.md", "version": 1,
+                       "sha256": "DERIVED_AT_BUILD"},
+    "mode_a": {"path": "instructions/MODE_A.md", "version": 1, "sha256": "DERIVED_AT_BUILD"},
+    "mode_b": {"path": "instructions/MODE_B.md", "version": 1, "sha256": "DERIVED_AT_BUILD"}
+  },
+
+  "SOURCE_FILES": [
+    {"surface_path": "files/fulltext/PMID42397075_Aqeilan2026.pdf",
+     "kind": "article_binary", "bytes": 3341414,
+     "sha256": "b6b44816bb5a029ad6dd3760dbf02ae94c5fcb69f8a9b5721f45c128bbf189a0",
+     "origin": "files/fulltext/ in the root checkout; git-ignored, present in a checkout and never in a commit",
+     "verified_on": "2026-08-18"},
+    {"surface_path": "files/fulltext/PMID42397075_Aqeilan2026_fitz.txt",
+     "kind": "article_text", "bytes": 91848,
+     "sha256": "9c48aa0934648f58f8f5d3b39fa73b0f31e0b0d8d284914b32bd5e3f9b34bb17",
+     "origin": "same", "verified_on": "2026-08-18",
+     "text_surface_recipe": "NOT_REPRODUCIBLE — identity by digest. The declared extraction (PyMuPDF 1.26.5 page.get_text(), 'pages joined in order') does not regenerate these bytes under any of the three obvious joins; the separator was never specified. The artifact is intact and its recipe is not runnable, so the digest is its identity."},
+    {"surface_path": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File008.pdf",
+     "kind": "supplement_text", "bytes": 74416,
+     "sha256": "8a91fd6c5bf78d861fb3a2db6e60d4af82599324b88844ff0fe279c562c4e972",
+     "content": "author contributions (1 p.)", "verified_on": "2026-08-18"},
+    {"surface_path": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File009.pdf",
+     "kind": "supplement_text", "bytes": 250075,
+     "sha256": "19d1b1d7305315159f4319ece8e7da745015564cc94932058f1eeccd45aa6771",
+     "content": "detailed Materials and methods (14 pp.)", "verified_on": "2026-08-18"},
+    {"surface_path": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File010.pdf",
+     "kind": "supplement_text", "bytes": 4084016,
+     "sha256": "aa86f300c7f5333db95f5e0c80a462b8c7f2a290409cd7c5e61527a810dffc42",
+     "content": "supplementary figures 1–10 (19 pp.)", "verified_on": "2026-08-18"},
+    {"surface_path": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File011.pdf",
+     "kind": "supplement_text", "bytes": 173539,
+     "sha256": "7c8d7fdd1c65dbc92adb7f61bd51f874b76170e69cb9f6923f6e17347e03b340",
+     "content": "resource table (5 pp.)", "verified_on": "2026-08-18"},
+    {"surface_path": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File012.pdf",
+     "kind": "supplement_text", "bytes": 456041,
+     "sha256": "18864bfbdd8329a8fa0044c38ef428fdd481dd84d9afc409e4874d157408dc45",
+     "content": "uncropped western blots (10 pp.)", "verified_on": "2026-08-18"}
+  ],
+
+  "COMMON_FILES": "DERIVED_AT_BUILD — surface_spec.json `common_files`, each with its sha256 as built. Enumerated by `benchmark_input_surface.py build --emit-digests`.",
+  "PER_ACTOR_FILES": {
+    "_rule": "EXACTLY TWO paths differ between the surfaces. A third is a broken benchmark and `verify` reports it as NOT ALLOWLISTED or PARITY BROKEN.",
+    "scientist-a": ["ASSIGNMENT.md", "benchmark/MODE_DIRECTIVE.md"],
+    "scientist-b": ["ASSIGNMENT.md", "benchmark/MODE_DIRECTIVE.md"],
+    "digests": "DERIVED_AT_BUILD"
+  },
+  "ALLOWED_PATHS": "DERIVED_AT_BUILD — the union of COMMON_FILES, SOURCE_FILES, PER_ACTOR_FILES and the empty output slots. The authoritative list is surface_spec.json; this field records what was actually built.",
+
+  "FORBIDDEN_PRIOR_OUTPUT_PATHS": {
+    "_derivation": "git grep -l -i -E '42397075|awag239|Aqeilan 2026|Aqeilan2026' cbce3016 -- . | grep -v '^governance/candidates'  → 21 tracked paths at BASE_HEAD, plus claim_registry_current.md and working_model_current.md (which do not name the paper and carry what the laboratory concluded about it), plus controlled_benchmark_ab.md (which describes this experiment and names the paper).",
+    "_enumerated_in": "surface_spec.json `forbidden_prior_output_paths` — the list a command checks, kept in one place so it cannot drift from the one a reviewer reads",
+    "_post_read_caveat": "After a reading, EXACTLY ONE forbidden path is skipped: disease-models/wwox/research/deepdive_manifests/PMID42397075.json, where the reader's own manifest lands because deepdive_manifest.py derives that path from disease and PMID. Authorship is not decidable from a path, so for that path the guarantee is carried by the pre-handover run (slot proven empty, forbidden path proven absent) plus the freeze receipt. The set is COMPUTED as the intersection of expected_output_paths with forbidden_prior_output_paths and PRINTED by every --post-read run; it is size 1. Revision 1 skipped everything under an output slot, which was six other forbidden paths wider than the collision it was written for (Mirror B-4); those six are checked again."
+  },
+
+  "CONTENT_SCAN": {
+    "pattern": "42397075|awag239|aqeilan|steinberg|zonca|abdellatif|\\bMYC\\b",
+    "scope": "every text file in the surface except the packet and the instruction files",
+    "expected_hits": 0,
+    "measured_2026_08_18": {
+      "roles/scientist.md": 0,
+      "framework/instruction/epistemic_discipline.md": 0,
+      "framework/master/gold_is_in_the_details.md": 0,
+      "framework/protocols/fulltext_read_receipt.md": 0,
+      "framework/protocols/scientist_reading_modes.md": 0,
+      "framework/eval/failure_taxonomy.md": 0,
+      "framework/scripts/deepdive_manifest.py": 0,
+      "framework/scripts/corpus_firewall.py": 0
+    }
+  },
+
+  "PARITY": "DERIVED_AT_BUILD — per surface path: sha256_A == sha256_B for every COMMON and SOURCE file; the two PER_ACTOR paths recorded with both digests and asserted DIFFERENT. Run: `benchmark_input_surface.py verify`.",
+
+  "EVALUATION_POPULATION": {
+    "path": "population/evidence_units.json",
+    "sha256": "DERIVED_AT_BUILD",
+    "fixed_before_reading": true,
+    "counts_at_derivation_2026_08_18_revision_2": {
+      "units": 65, "panels": 109, "sub_units": 109,
+      "by_kind": {"main_figure": 6, "main_methods_section": 2, "main_results_section": 7,
+                  "main_table": 0, "source_data_blot": 9, "supplement_methods_section": 24,
+                  "supplement_table_section": 7, "supplementary_figure": 10}
+    },
+    "_superseded_counts": {
+      "_note": "Revision 1 recorded units 36 / panels 115. BOTH numbers were wrong and are kept here because a count that is silently replaced is a count nobody can audit. Mirror finding B-1: a fixed 3600-character caption window ran 925 characters past Figure 2's caption into Figure 3's and reported TWELVE panels for a caption that prints SIX, so 115 was 109; and the Methods 'pattern' was a hand-written list of twenty headings against a supplement that has twenty-four. Revision 2 also enumerates the Results headings, the main Methods sections, the resource-table categories and the uncropped-blot source data, none of which had a rule at all.",
+      "units": 36, "panels": 115,
+      "by_kind": {"main_figure": 6, "supplementary_figure": 10, "supplement_methods_section": 20, "main_table": 0}
+    },
+    "declared_empty_sources": [
+      {"source": "files/fulltext/PMID42397075_Aqeilan2026_assets/brain-2025-03809-File008.pdf",
+       "reason": "author contributions only; no evidence unit, so no coverage over it is claimed or measurable"}
+    ],
+    "derivation": "framework/scripts/benchmark_input_surface.py population --spec framework/eval/benchmarks/BENCH-AB-001/surface_spec.json --source-root <root checkout>",
+    "determinism": "identical bytes across two consecutive runs, 2026-08-18 (revision 1) and again at revision 2",
+    "completeness": "the command REFUSES a spec in which any packet source is neither enumerated nor declared empty, so an unmeasurable supplement cannot pass silently"
+  },
+
+  "HANDOVER": {
+    "_note": "The only block written after the manifest is frozen. FROZEN_SHA256 covers every other field.",
+    "scientist-a": {"at": null, "by": "plan", "to": "scientist-a", "surface_tree_sha256": null,
+                    "memory_scope_absent": null},
+    "scientist-b": {"at": null, "by": "plan", "to": "scientist-b", "surface_tree_sha256": null,
+                    "memory_scope_absent": null}
+  },
+  "FROZEN_SHA256": null,
+
+  "WHAT_THIS_MANIFEST_DOES_NOT_CLAIM": [
+    "That a reader cannot open a file outside its surface by absolute path. Nothing enforces that at runtime (Annex J.0). The surface makes the blind path the default one and makes any departure visible in the reader's own locators.",
+    "That the model holds no prior knowledge of this paper from training. Uncontrollable; covered by the standing rule that undeclared general knowledge is a DEFAULT_FROM_TEXTBOOK premise.",
+    "That the mode is separable from session variance. One paper, one session per actor: the design holds everything else identical, and cannot separate those two. Stated in controlled_benchmark_ab.md §0 and not softened here."
+  ]
+}

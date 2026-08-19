@@ -1,0 +1,162 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Targeted remediation of REV-SCIAB-MIRROR-002 (M-1, M-2) on CAND-20260818-SCIENTIST-AB-SPEC, in a NEW Plan session that inherited nothing from any previous chat. Every value below was re-derived at source. CHK-plan-0011 is not edited: it records a true state for revision 2, and revision 2 is what REV-SCIAB-MIRROR-002 is bound to.",
+
+  "CHECKPOINT_ID": "CHK-plan-0012",
+  "SUPERSEDES": "CHK-plan-0011 — same TASK_ID, next generation of the same work. CHK-plan-0011 remains valid as the record of revision 2.",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "SCIENTIST-AB-SPEC-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 3,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+  "FINGERPRINT_RECOMPUTED": "in this worktree with governance/scripts/governance_fingerprint.py compose --role plan, before any content was edited; equal to the value in CHK-plan-0011 and in CHK-plan-0010, so this generation is resume-compatible with both",
+
+  "TIMESTAMP": "2026-08-19",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "REHYDRATION": {
+    "_note": "Fail-closed, from durable repository evidence only. No identity, authority, decision, routing or task state was carried from a previous Plan chat. The prompt's expected values were treated as claims to verify, not as inputs.",
+    "worktree": "evidence-index",
+    "worktree_matches_git_toplevel": true,
+    "branch": "scientist-ab-spec",
+    "head_at_open": "90fcfa2511accef4b749b4bf85d1bc1259e2bb7d",
+    "tree_at_open": "clean",
+    "role_contract_read": "roles/plan.md — in full",
+    "role_contract_sha256": "e1c26d42854a54ffb975095f95f1a0ee90c85eb9f881576d637ec7b6e084c0ff",
+    "role_contract_hash_matches_registry": "yes — runtime/agent_card_registry.md on branch orchestrator, read with git show, records the identical value",
+    "stable_actor_identity": "plan · evidence-index · roles/plan.md · PERSISTENT_LEGEND_ACTOR",
+    "current_session_ref": "NOT DECLARED. An actor cannot observe its own routing reference, and no durable protocol provides or verifies one for this session. The registry's derived value evidence-index-59 [de42c4] describes an EARLIER incarnation and is not asserted for this one. Nothing in this work is keyed by a session reference.",
+    "authority_boundary": "prepare WORK_COMMIT on own branch and INTEGRATION_CANDIDATE with manifest (Annex D); may NOT execute CANONICAL_BATCH_COMMIT, direct another actor, resolve a contested scientific meaning (body §28), write main or the root checkout, or grant HUMAN_APPROVAL",
+    "proposer_reviewer_executor": "author plan · reviewer mirror · adjudicator operator — holds; no Plan session superseded, none claimed",
+    "main_verified_at_source": "cbce30168091f7769c56c4f019055fa55fd0d66a — equal to the prompt's expected value and to the branch's merge-base",
+    "result": "PLAN REHYDRATION: PASS"
+  },
+
+  "REVIEW_REMEDIATED": {
+    "review_id": "REV-SCIAB-MIRROR-002",
+    "reviewer": "mirror",
+    "commit": "402e25cd84b6634479fcaff6576b824a8b57b9ec",
+    "read_from": "the durable git object on branch mirror, via git show — Mirror was NOT merged into this branch and no cross-worktree write was performed",
+    "verdict": "REQUEST CHANGES",
+    "associated_records_read": ["learning/mirror/SLR-mirror-0010.md", "ledger/checkpoints/mirror/CHK-mirror-0005.json"],
+    "blocking": ["M-1", "M-2"],
+    "recorded": ["N-1", "N-2", "N-3", "N-4", "N-5", "N-6", "N-7", "N-8", "N-9"]
+  },
+
+  "FINDINGS_REPRODUCED_BEFORE_REMEDIATION": {
+    "_discipline": "Both were reproduced at BASE_HEAD and at the revision-2 content tip in clean detached worktrees BEFORE any edit. Mirror's report was not accepted as the evidence.",
+    "M-1": "scripts/test_locator_obligation_reaches_every_route.py run alone at both tips: cbce3016 → 1 failure (test_the_bootstrap_states_the_rule); daaa3335 → 2, adding test_every_route_carries_the_obligation_or_declares_an_exemption. Assertion read: controlled_benchmark_ab.md trips the 'coverage map' marker, carries verbatim_locators zero times, and is not in EXEMPT. Full battery: base 6 suites / 7 failing tests; revision 2 → 6 suites / 8 failing tests.",
+    "M-2": "surfaces built at the revision-2 tip from the real packet; a copy of controlled_benchmark_ab.md (itself a forbidden_prior_output path) placed at output/renders/smuggled.md → verify --post-read VERDICT: PASS, rc=0, [BLIND SPOT] size 1, no finding. CONTROL, same bytes at disease-models/wwox/research/fulltext_dossiers/NOTES.md → NOT ALLOWLISTED + IDENTIFIER LEAK 18 hit(s), rc=1. freeze on the same tree classified the smuggled file role 'output' and left UNEXPECTED_FILE_SET empty."
+  },
+
+  "REMEDIATION": {
+    "M-1": {
+      "classification": "the route genuinely CARRIES the locator obligation — it instructs two complete full-text readings — so an EXEMPT entry would have been the dishonest answer",
+      "change": "framework/protocols/controlled_benchmark_ab.md §5.1: verbatim_locators.entries[] captured while the document is open, every claim candidate resolving to at least one, no not_read in the coverage map, and the statement that freezing an incomplete reading does not complete it",
+      "guard_untouched": "git diff main b634829 -- scripts/test_locator_obligation_reaches_every_route.py is empty; the guard was not weakened, narrowed or exempted",
+      "after": "the test passes at the candidate tip; the only remaining failure in that suite is test_the_bootstrap_states_the_rule, which fails at BASE_HEAD too"
+    },
+    "M-2": {
+      "guarantee": "No file present in a surface is skipped by BOTH the allowlist check and the identifier scan without being printed by name under [UNCHECKED].",
+      "mechanism": "_is_expected_output() admits an exact declared path as before; under expected_output_prefixes it admits a file ONLY when the tool cannot decode its bytes as UTF-8. The exemption was written for pixels. A decodable file under the prefix takes the allowlist check and the identifier scan, and freeze — which shares the predicate — puts it in UNEXPECTED_FILE_SET.",
+      "census": "verify --post-read enumerates the unchecked surface from the tree, per actor, per run, in three populations: the blind-spot path when occupied; each present declared output whose content the scan does not read; each file under a prefix whose bytes do not decode. Closed by [UNCHECKED SURFACE] n present file(s).",
+      "unenumerated_silent_surface": "NONE — a present file is allowlisted input, an exact declared output, under a prefix, or none of those, and the last is reported by the allowlist check",
+      "alternatives_rejected": "printing the prefix as a blind spot (declares as unchecked a file the scan can read); an extension allowlist (a .png that is text walks through it)",
+      "reader_told_first": "BENCHMARK_INSTRUCTIONS.md §1 states that output/renders/ holds image files, before the reading — so the rule is a rule and not a trap",
+      "sentences_corrected": ["controlled_benchmark_ab.md §4.3 'cannot be widened silently'", "controlled_benchmark_ab.md the verify --post-read guarantee row", "surface_spec.json _expected_output_note 'it cannot widen a silent one'"]
+    }
+  },
+
+  "DELTA_REGRESSION": {
+    "_granularity_note": "At TEST-METHOD granularity, which is the granularity the claim is about. Revision 2's suite-name sets are retained as a summary and are NOT the evidence: an already-red suite absorbs a new failing test without changing its name, and in revision 2 one did.",
+    "measured_in": "clean detached worktrees at each tip, each holding exactly its own commit; neither has files/, so the test_surface_census confound cannot arise",
+    "method": "every target of scripts/run_release_regressions.py executed the way the runner executes it (python3 <relative> from the tree root); per-test identities and failure signatures parsed from the unittest failure blocks",
+    "base_failing_suites": 6,
+    "candidate_failing_suites": 6,
+    "base_failing_tests": [
+      "framework/scripts/test_session_self_eval.py::test_diagnosis_is_wired_before_growth_and_takeaways",
+      "scripts/test_abstract_corpus_is_not_evidence.py::test_the_bootstrap_bounds_the_corpus (file='CLAUDE.md')",
+      "scripts/test_fulltext_trace_contract.py::test_normative_layers_make_receipts_universal",
+      "scripts/test_fulltext_trace_contract.py::test_normative_write_rules_name_the_append_only_carveout",
+      "scripts/test_locator_obligation_reaches_every_route.py::test_the_bootstrap_states_the_rule (file='CLAUDE.md')",
+      "scripts/test_release_runner_verdict.py::test_every_tracked_test_file_is_in_the_runner",
+      "scripts/test_release_surface.py::test_shebang_python_entrypoints_are_executable"
+    ],
+    "candidate_failing_tests": "identical to base_failing_tests — the same seven, and nothing else",
+    "revision_2_failing_tests": "those seven plus scripts/test_locator_obligation_reaches_every_route.py::test_every_route_carries_the_obligation_or_declares_an_exemption — the +1 that M-1 names",
+    "added_failing_tests": [],
+    "removed_failing_tests": [],
+    "shared_failing_tests": 7,
+    "delta_at_test_granularity": 0,
+    "same_reason_check": "PASS — 7/7 identical after normalization, over EVERY shared failing test rather than one selected suite",
+    "unexplained_reason_changes": 0,
+    "normalization_declared": "absolute worktree paths, temporary directories, line numbers, elapsed times and memory addresses. NO assertion text is normalized, so a changed reason cannot be normalized into agreement.",
+    "nothing_disabled": "no suite disabled, weakened, skipped or removed from TESTS; the baseline was not redefined"
+  },
+
+  "TOOL_EVIDENCE": {
+    "suite": "framework/scripts/test_benchmark_input_surface.py — 59 tests, all green (45 at revision 2), registered in scripts/run_release_regressions.py",
+    "new_probes": "twelve hostile prefix cases plus two spec contracts, EACH asserting the intended reason and not only the exit code (SLR-mirror-0010 §4: an expected exit code is never sufficient)",
+    "differential_control": "the same fourteen probes against the pre-fix tool with the revision-3 spec: 11 of the 12 hostile probes FAIL; the one that passes is 'freeze still calls a binary render an output', the positive control that must NOT move; the 2 spec contracts pass against both, correctly, because they read the spec and not the tool",
+    "out_of_tree_battery": "the ten cases the remediation required, plus a positive control, asserting exit code AND reason: 11/11 against this tip, 1/11 against revision 2 (the surviving case is the symlink, which was already correct and is not an M-2 case)",
+    "freeze_interaction": "a decodable file under the prefix → UNEXPECTED_FILE_SET; a binary render → OUTPUT_FILE_SET, UNEXPECTED empty. Against revision 2's tool the same smuggled file was role 'output'.",
+    "legend_lint": "PASS (1 pre-existing INFO)",
+    "fulltext_receipts_verify": "OK — 128 chained receipts, tail anchored",
+    "growth_anchors": "PASS — claims=39 · papers=70 · corpus=356 · literature=390",
+    "public_release_gate": "PASS / BLOCKS: 0 — at BASE_HEAD and at the revision-3 content tip",
+    "fingerprints": "plan 9c0c13fb… recomputed and unchanged. Revision 3 edits no file in any role's fingerprint set, so no fingerprint rotates relative to revision 2; scientist remains 82423a48… by roles/scientist.md, which this revision does not touch."
+  },
+
+  "BINDING": {
+    "base_head": "cbce30168091f7769c56c4f019055fa55fd0d66a",
+    "content_tip": "b63482978dab13383177ed60ab55f4ca29fb1ed3",
+    "candidate_content_hash": "7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596",
+    "reproductions": "3 runs of candidate_content_hash.py at the content tip, all equal; recomputed independently from P5.1/P5.2 without the script (git ls-tree -r --full-tree, three declared roots removed, path-sorted, every entry newline-terminated) → identical, 523 included / 28 excluded",
+    "positive_control": "the same independent route at revision 2's tip daaa3335 returns c0701094…21bcf — the published revision-2 value. A second implementation that only agrees with itself is one implementation.",
+    "superseded_hash_is_not_current": "c0701094… is revision 2's binding and is NOT presented as revision 3's; the content changed and the hash moved",
+    "manifest_tip": "INFORMATIONAL by construction — a manifest cannot name the commit that carries it. The binding is BASE_HEAD + CANDIDATE_CONTENT_HASH, invariant across the content tip and every later control-plane commit because governance/candidates/, ledger/ and reviews/ are declared CONTROL_PLANE_ROOTS (P5.1)."
+  },
+
+  "DURABLE_POINTERS": {
+    "branch": "scientist-ab-spec",
+    "base_head": "cbce30168091f7769c56c4f019055fa55fd0d66a",
+    "candidate_id": "CAND-20260818-SCIENTIST-AB-SPEC",
+    "revision": 3,
+    "candidate_manifest": "governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md",
+    "candidate_content_hash": "7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596",
+    "superseded_content_tip": "daaa33353840304aaa7d288b393a2b3bb4faa08d",
+    "superseded_hash": "c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf",
+    "review_remediated": "reviews/mirror/REV-SCIAB-MIRROR-002.md @ 402e25cd (branch mirror)"
+  },
+
+  "RECORDED_FINDINGS_DISPOSITION": {
+    "_rule": "Where a recorded finding is a false sentence in the candidate manifest about its own evidence, it is corrected here. Where it requires a content change outside M-1 and M-2, it is carried and named — a targeted revision that also repairs a caption bound is no longer targeted.",
+    "FIXED": ["N-4 — §3G stated the superseded 36 units / 115 panels; corrected to 65 / 109 with the superseded pair named", "N-5 — §5 said eight failing release suites; corrected to six suites and the seven failing tests under them"],
+    "CARRIED": ["N-1 File012 note contradiction", "N-2 declared_empty_sources accepted on declaration and never measured — the strongest of the nine", "N-3 caption crossing a PDF page break is truncated — latent, no caption in this packet crosses one", "N-6 three exit-code-only assertions, declared and verified non-load-bearing by Mirror", "N-7 differential counts not reproduced — Mirror's are measured, Plan's explanation is inferred, recorded rather than reconciled", "N-8 locators is purely lexical — contained by verify and freeze; the M-2 change does not reach it and saying it did would be the overclaim M-2 is about", "N-9 'REFUSES' vocabulary against exit 1"]
+  },
+
+  "OPEN_DEBTS_CARRIED": [
+    "REGISTRY VALIDATOR — MISSING INSTRUMENT",
+    "P7 EVENT LEDGER — OWED, NOT BARRED",
+    "approval queue non-canonical",
+    "ACK criteria",
+    "Plan→Mirror routing",
+    "Mirror methodology observation — UNRATIFIED under G.2; SLR-mirror-0010 §4 is used here as METHODOLOGY EVIDENCE for how to write a hostile battery, and is NOT ratified as a rule",
+    "LEASE EXPIRED BETWEEN TURNS — detectable, not prevented",
+    "DEBT-20260818-LEASE-SNAPSHOT",
+    "C-9 clauses — ACCEPTED as a document, NOT adopted; runtime/ classification still open",
+    "L2 — SUSPENDED by operator decision; this candidate does not lift it",
+    "release regressions — 6 suites and 7 tests failing at BASE_HEAD in a clean checkout, including 4 shebang entrypoints without executable mode",
+    "governance/scripts/test_candidate_content_hash.py unregistered in the release battery — another candidate's debt",
+    "SESSION-ROUTING: stable ACTOR_ID → current routable SESSION_REF, supersession, deterministic SendMessage routing — REAL, observed again by this session, DELIBERATELY OUT OF SCOPE, not implemented, not partially implemented, not quietly narrowed",
+    "R-10 — plan_defined_parameters.md stale on branch mirror (P5 v3); Mirror's own worktree, which Plan may not write",
+    "N-1, N-2, N-3, N-6, N-7, N-8, N-9 — carried from REV-SCIAB-MIRROR-002, each named above"
+  ],
+
+  "STATE": "AWAITING_REVIEW — revision 3 complete, held for a NEW independent R4 Mirror review from R-1. No HUMAN_APPROVAL requested, granted or implied. No benchmark executed. No actor registered. No lease taken. main unchanged.",
+
+  "RESUME_RULE": "Annex A.6 refusal rule. Recompute the plan fingerprint before resuming and never compare against a value copied from prose. Recompute the candidate hash with candidate_content_hash.py --base cbce3016 --tip <content tip> before treating 7cef4ccc… as current. No verdict from REV-SCIAB-MIRROR-001 or REV-SCIAB-MIRROR-002 applies to this content: those reviews are bound to hashes 3b568aae… and c0701094…, and a revision is reviewed from R-1."
+}

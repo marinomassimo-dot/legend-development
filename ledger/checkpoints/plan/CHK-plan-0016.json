@@ -1,0 +1,172 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "REVISION 6 of CAND-20260818-SCIENTIST-AB-SPEC — targeted remediation of the single blocking finding M-5 of REV-SCIAB-MIRROR-005. M-5 is a NORMATIVE-DESCRIPTION defect: §4.4 presented the pre-handover blocking LEVEL as derived when it is a policy choice. No executable behaviour changed, and that identity is measured rather than asserted. Every value below was re-derived in this session from durable state; nothing was carried from chat memory or from an earlier checkpoint.",
+
+  "CHECKPOINT_ID": "CHK-plan-0016",
+  "SUPERSEDES": "CHK-plan-0015 (AWAITING_REVIEW, revision 5 of the same candidate — a different content hash, not resumed)",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "SCIENTIST-AB-SPEC-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 6,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "composed at session open over CORE + Annex D + E + I + J.1 per plan_defined_parameters.md P2.2",
+  "GOVERNANCE_VERSION": "3.1.1",
+  "TIMESTAMP": "2026-08-19",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "REHYDRATION": {
+    "worktree": "evidence-index",
+    "worktree_matches_git_toplevel": true,
+    "branch": "scientist-ab-spec",
+    "head_at_open": "4501a8af1a8ff75440d2cf7d9b590c9bf3ec9f56",
+    "tree_at_open": "clean",
+    "role_contract_read": "roles/plan.md in full — mandate, permitted and forbidden writes, proposer/executor/reviewer separation, declared capabilities and their UNVERIFIED status, fingerprint set, session obligations",
+    "authority_read_at_source": "Annex H.1 authority matrix (integrazione strutturale / candidate → Plan; MAJOR approval → Operatore), P5.1/P5.2 hash definition, ANNEX_INDEX",
+    "stable_actor_identity": "plan · worktree evidence-index · roles/plan.md · PERSISTENT_LEGEND_ACTOR — reconstructed from durable repository evidence alone; no part depended on a prior conversation",
+    "current_session_ref": "NOT DECLARED — an actor cannot observe its own routing reference and no durable protocol provides one here. None invented, none inherited, no other Plan session superseded.",
+    "agent_card": "runtime/agent_card_registry.md is not on main and not on this branch; plan's six declared capabilities remain UNVERIFIED per contract, L2 suspended",
+    "result": "PLAN REHYDRATION: PASS"
+  },
+
+  "REVIEWED_INPUT": {
+    "review": "reviews/mirror/REV-SCIAB-MIRROR-005.md at 1b9883446c64d405695b9fd509578b252856f231, blob aed31cc6adba53efdbcb78e6a637a4b3b13ccda9, read in full from the git object on branch mirror without merging",
+    "also_read": ["learning/mirror/SLR-mirror-0013.md"],
+    "verdict_received": "REQUEST CHANGES",
+    "blocking": ["M-5"],
+    "closed_at_rev5": ["M-1", "M-2", "M-3", "M-4 in BOTH modes"],
+    "recorded_at_rev5": ["P-9", "P-10", "P-11"],
+    "mirror_classification_adopted_only_after_independent_derivation": true
+  },
+
+  "OBJECT": {
+    "candidate_id": "CAND-20260818-SCIENTIST-AB-SPEC",
+    "revision": 6,
+    "base_head": "cbce30168091f7769c56c4f019055fa55fd0d66a",
+    "content_tip": "2a854177a1b4cdf1c6d00867c7278c97f62f1645",
+    "candidate_content_hash": "beef6db08bdf8489b68078fc00c08fee913a585a4e1ee8359b592fc9e31a6061",
+    "hash_version": "legend-candidate-v4",
+    "included_entries": 527,
+    "excluded_entries": 32,
+    "superseded_hashes": {
+      "revision_5": "5307d4d213c1d25c42a51e27811b7e375907ceed77682b343dee68e0e2b8423f",
+      "revision_4": "07b65b3707a4e63df23918b844140e7548929b27a8a182f8ebf2d9b0ab165198",
+      "revision_3": "570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7",
+      "revision_3_intra": "7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596",
+      "revision_2": "c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf",
+      "revision_1": "3b568aae6c76848da197cacd43e517373ab7ca9532cf9289a73097e261916c75"
+    },
+    "no_binding_superseded_within_revision_6": "ONE content commit carries the remediation and SLR-plan-0006 together, so no tip existed to declare before the learning record did. Third consecutive revision in which nothing is superseded intra-revision.",
+    "hash_reproduced_at": [
+      "2a854177 via the governed script ×3 — identical",
+      "2a854177 independently, without the script, path-sorted per P5.2, ls-tree read as raw bytes through a list argv and never through a shell: 527 included / 32 excluded",
+      "POSITIVE CONTROLS reproduced by the same independent route: 2ffaedb2 5307d4d2… (526/31), a210f738 07b65b37… (525/30), a3cad1d 570fcbbb… (524/29), b634829 7cef4ccc… (523/28), daaa333 c0701094… (523/27), b965ca5 3b568aae… (522/24) — six published values, all reproduce",
+      "TRAP exercised at BOTH tips: sorting the whole ls-tree LINE instead of the PATH gives 740cb9c1… at 2a854177 and ab884df6… at 2ffaedb2 — the second being exactly the wrong value revision 5 published for its own trap, so the trap reproduces a KNOWN wrong number and not merely a new one"
+    ],
+    "single_entry_delta": "learning/plan/SLR-plan-0006.md — the one content-domain entry separating 5307d4d2… (526) from beef6db0… (527), derived from the tree. The four edited content files change blobs without changing the entry count, which is why the count is not the evidence and the hash is.",
+    "content_files": 23,
+    "content_changed_at_rev6": 5,
+    "content_byte_identical_to_rev5": 18,
+    "main_unchanged": true
+  },
+
+  "M5_REMEDIATION": {
+    "finding": "§4.4's heading read 'Why the one asymmetry, derived and not chosen', and revision 5's commit message attached the same word to 'EXPECTED_BY_PROTOCOL: NO is BLOCKING pre-handover and INFORMATIONAL post-read'. The referent a reader takes is the LEVEL, and the level is not derived.",
+    "reproduced_how": "NOT adopted from the review. The derivation was rebuilt from the cited sources at their own text — protocol §2.2, §3, §1 P-7, §2.3 — with premises numbered, before any edit.",
+    "asymmetry_direction": "ENTAILED. §2.2 makes Plan the surface's only writer until handover and the named actor the writer after it; build copies and does no templating. The set of legitimate producers of an undecodable_text file is strictly smaller before handover than after, so the same bytes are an anomaly pre-handover and may be an ordinary artifact post-read. This is entailed and revision 6 continues to state it as entailed.",
+    "blocking_level": "POLICY CHOICE. The premises reach I4 — a PASS in that state asserts a guarantee the run cannot support — and stop. I4 eliminates the permissive reading of the UNSCOPED guarantee row; it does not select between (a) block, rc=1, rebuild from spec, and (b) enumerate under [UNCHECKED] as EXPECTED_BY_PROTOCOL NO, count separately, and narrow the pre-handover GUARANTEE_PROVIDED row. (b) is consistent with every premise §4.4 cites and is exactly what --post-read does with the same class. Nothing in §1, §2.2, §2.3, §3 or §4.3 selects between them.",
+    "falsifier_run": "Mirror's own WHAT_WOULD_CHANGE_MY_MIND — a clause at BASE_HEAD or at revisions 1–4 under which an unanticipated-but-allowlisted artifact must make the pre-handover command exit non-zero rather than be enumerated. Searched; there is none.",
+    "i1_disjunct_verified": "§3 forbids patching a failed surface; it does not forbid the source root carrying a non-UTF-8 text-suffixed file, and build copying that faithfully is what §3 protects. Empirically empty for BENCH-AB-001 today — 16 of 16 allowlisted text-suffixed files decode as UTF-8, measured — which is a contingent fact about this source root, not a normative exclusion. §4.4 now says so.",
+    "plan_authority": "PASS under Annex H.1 'Integrazione strutturale / candidate → Plan'. framework/protocols/controlled_benchmark_ab.md does NOT exist at BASE_HEAD — verified by git — so no prior durable rule is overridden; the candidate IS the normative text being authored. CHANGE_CLASS MAJOR, so under H.1 'MAJOR approval → Operatore' the choice is the Human Operator's. Mirror R4 and HUMAN_APPROVAL both unspent. Nothing self-approved.",
+    "remedy": "§4.4 separates the entailed DIRECTION from the chosen LEVEL, names both disjuncts of I1 with the contingency stated, and adds a POLICY CHOICE block giving the rule, the rationale, the alternative refused, the fail-closed argument, what refusing it costs, and the standing under H.1. §1b of the manifest repeats it as the operator's approval surface.",
+    "claim_population": "M-5 names §4.4. Searched for the CLAIM'S MEANING across the revision-5 content population, not for its wording, and found it in FOUR operative places: controlled_benchmark_ab.md §4.4; benchmark_input_surface.py's comment directly above the branch that implements the blocking; test_benchmark_input_surface.py's hostile-case docstring (same jump, no keyword); and surface_spec.json content_scan/_note, which is false twice because it drops I1's source-root disjunct entirely. All four corrected. THREE of the four would have survived a grep for 'derived and not chosen'.",
+    "classified_historical_not_rewritten": "revision 5's commit message (rewriting it would move the content tip and destroy the binding chain; it is also the evidence M-5 rests on) and SLR-plan-0005 L-2 (Mirror marked one formulation SUPERSEDED and attached a REFINED_FORMULATION under E.2; curation there is Mirror's, and erasing it would remove the evidence for M-5 from the branch carrying M-5's repair). §6.0000 of the manifest, which is revision 5's own review request, is annotated in place rather than rewritten.",
+    "false_operative_claims_remaining": 0
+  },
+
+  "BEHAVIOUR_IDENTITY_REV5_TO_REV6": {
+    "verdict": "IDENTICAL — measured, not asserted",
+    "benchmark_input_surface_py": "51 of 51 top-level definitions identical by ast.dump, and identical again with every docstring stripped. 0 added, 0 removed, 0 changed. Comments are not in the parse tree, which is what makes this the right instrument for a comment edit.",
+    "test_benchmark_input_surface_py": "40 of 40 definitions identical with docstrings stripped. Exactly one differs by plain ast.dump — HandoverGateCensusTests, where the docstring was edited. A docstring is not an assertion.",
+    "surface_spec_json": "parsed and compared structurally key by key against the revision-5 blob: exactly one key differs, content_scan/_note. No key added or removed; no path, pattern, suffix, exemption or prefix touched. The tool reads population.notes and does not read _note; the one test that reads a spec note reads _expected_output_prefix_note, untouched.",
+    "verify_runs": {
+      "pre_handover_clean": "rc=0 PASS at both revisions — output BYTE-IDENTICAL",
+      "post_read_clean": "rc=0 PASS at both revisions — output BYTE-IDENTICAL",
+      "utf16_hostile_pre_handover": "rc=1 FAIL at both, 2 × UNANTICIPATED undecodable_text across both surfaces — identical but for the tree-digest lines, which MUST move because the planted payload is the edited protocol text",
+      "utf16_hostile_post_read": "rc=0 PASS at both, 0 UNANTICIPATED",
+      "census_both_modes": "PRESENT 48 · SCANNED 16 · CENSUSED 32 · SILENT 0 at both revisions, in both modes"
+    },
+    "candidate_suite": "83/83 OK at both revisions",
+    "freeze_battery": "freeze and verify-freeze PASS at both tips; positive control — one byte appended to a frozen file — refuses with rc=1",
+    "mode_specific_oracles": "PASS. They rest on assert_mode() and on the tool's printed MODE line, all byte-identical by ast.dump, so the mutation property Mirror proved at revision 5 (18 failures when the handover oracle is pointed at the wrong mode) is preserved by construction rather than re-argued."
+  },
+
+  "MEASURED": {
+    "regression": {
+      "targets_base": 64, "targets_rev6": 65,
+      "tests_executed_base": 870, "tests_executed_rev6": 953,
+      "reconciliation": "953 − 870 = 83, exactly the added suite",
+      "failing_suites": "6 at both, identical set",
+      "failing_tests": "7 at both, identical set",
+      "added": 0, "removed": 0,
+      "same_reason": "7/7, reasons compared verbatim and NOT normalized, per test id",
+      "omission_channel": "empty at both tips — no granular target at base stopped being granular at rev6, and no suite exits non-zero with zero attributable test failures",
+      "declared_limitation": "3 targets are custom non-unittest harnesses (launch/test_legend_launch.py and the two skill-package suites); rc=0 at both tips, no test-id granularity available, recorded rather than counted as passes",
+      "method": "clean detached worktree of BASE_HEAD; each target invoked as the runner invokes it"
+    },
+    "harness_defect_found_and_corrected_in_this_session": "the re-authored delta harness first reported 63 targets at the candidate and 62 at base against the true 65/64. Two entries of the TESTS tuple in run_release_regressions.py are split across lines as implicit string concatenation, and a regex over the source sees neither; reading the tuple by AST returns the right list. Nothing downstream was wrong — both missed targets are green at both tips — but the denominator was. Caught by Mirror's published 65/64. Second consecutive revision in which another actor's published number corrected mine. Recorded in SLR-plan-0006 rather than replaced.",
+    "publication_gate": "PASS / BLOCKS 0",
+    "legend_lint": "PASS (1 pre-existing INFO)",
+    "growth_anchors": "PASS — claims=39 · papers=70 · corpus=356 · literature=390",
+    "receipts_ledger": "OK: 128 chained receipts, tail anchored in the state manifest",
+    "documented_commands": "OK", "link_targets": "OK", "fresh_clone_reader_journey": "OK",
+    "cli_smoke": "OK", "record_conventions": "OK", "public_prose_quality": "OK"
+  },
+
+  "MILESTONES_REACHED": [
+    {"milestone": "identity rehydration fail-closed, with H.1 and P5 read at source", "durable_evidence": "this checkpoint § REHYDRATION", "status": "COMPLETE — PASS"},
+    {"milestone": "revision-5 binding verified from durable state before anything was touched — governed script at both tips plus an independent implementation reproducing all five published controls", "durable_evidence": "CAND §1 Reproduction", "status": "COMPLETE"},
+    {"milestone": "Mirror revision-5 review and SLR-mirror-0013 read from git objects on branch mirror without merging", "durable_evidence": "CAND §4.0aaaa, §5b.5", "status": "COMPLETE"},
+    {"milestone": "M-5 reproduced from the cited sources with premises numbered, before any edit, and Mirror's falsifier run rather than quoted", "durable_evidence": "CAND §4.0aaaa", "status": "COMPLETE — CONFIRMED on independent derivation"},
+    {"milestone": "asymmetry DIRECTION classified ENTAILED and blocking LEVEL classified POLICY CHOICE, each derived rather than copied from the review", "durable_evidence": "CAND §4.0aaaa, protocol §4.4", "status": "COMPLETE"},
+    {"milestone": "Plan's authority to propose the rule verified at source — H.1, and the protocol's absence at BASE_HEAD confirmed by git", "durable_evidence": "CAND §1b STANDING", "status": "COMPLETE — PASS"},
+    {"milestone": "§4.4 corrected: derived direction separated from chosen level, I1's source-root disjunct named with its contingency, POLICY CHOICE block added", "durable_evidence": "framework/protocols/controlled_benchmark_ab.md §4.4", "status": "COMPLETE"},
+    {"milestone": "human-decision surface made explicit in the artifact the operator reads to approve", "durable_evidence": "CAND §1b", "status": "COMPLETE"},
+    {"milestone": "the claim searched for by MEANING across the content population, not by string — four operative sites found where the review named one, all corrected; two historical sites classified and preserved", "durable_evidence": "CAND §4.0aaaa, SLR-plan-0006 L-3", "status": "COMPLETE — 0 operative false claims remaining"},
+    {"milestone": "behaviour identity measured by AST, structural JSON comparison, four live verify runs, the suite and the freeze battery", "durable_evidence": "CAND §4.6a", "status": "COMPLETE — IDENTICAL"},
+    {"milestone": "regression accounting re-run at test-method granularity against BASE_HEAD after a defect in my own target list was found and corrected", "durable_evidence": "CAND §4.2, SLR-plan-0006 boundary", "status": "COMPLETE — ADDED 0, REMOVED 0, same-reason 7/7"},
+    {"milestone": "P-9 and P-10 corrected — both currently-false numbers in the operator's approval surface", "durable_evidence": "CAND §2, §4.2, §5b.5", "status": "COMPLETE"},
+    {"milestone": "Session Learning Review written and committed BEFORE any binding was declared", "durable_evidence": "learning/plan/SLR-plan-0006.md at 2a854177", "status": "COMPLETE"},
+    {"milestone": "binding recomputed by the governed script and independently, with six published positive controls and the line-sort trap run at both tips", "durable_evidence": "CAND §1 Reproduction", "status": "COMPLETE"}
+  ],
+
+  "TASK_STATE": "AWAITING_REVIEW",
+
+  "FINDINGS_STATUS": {
+    "remediated_this_revision": ["M-5"],
+    "fixed_manifest_error": ["P-9", "P-10"],
+    "retested_not_reopened": ["M-1", "M-2", "M-3", "M-4 in both modes"],
+    "carried": ["P-1", "P-3", "P-4", "P-5", "P-6", "P-7", "P-11", "N-1", "N-2", "N-3", "N-6", "N-7", "N-8", "N-9"],
+    "unresolved": ["N-7 — revision 1's differential counts remain unreconciled for the FIFTH review running; neither side re-ran revision 1's tool, and this revision did not either"],
+    "not_claimed_solved": "P-4 is unchanged: verify still consumes no digest input, so an identical edit to both surfaces escapes verify-time parity — cmd_verify is byte-identical by ast.dump, so it contains exactly the zero references to emit_digests it contained at revision 5. P-6's exclusion of .git/** is unchanged. P-7's residual is unchanged. P-11 is accepted and not repaired. M-5's remedy claims nothing about any of them.",
+    "human_approval": "NONE — not requested, not granted, not implied"
+  },
+
+  "SCOPE": {
+    "scope_creep": "NONE — five content files, four of them the ones carrying the false claim and one the mandatory learning record; in all four the edit is a comment, a docstring, a note or normative prose. No *_current.md, no registry, no approval queue, no lease record, no runtime/, no Agent Card, no receipt ledger, no P7, no Metacognition surface, no Scientist C, no second paper, no session-routing artifact.",
+    "session_routing_debt": "OUT OF SCOPE — NOT SILENTLY RESOLVED. No SESSION_REF declared or inferred; no routing inferred from chat recency; §5c of the manifest still names the gap and implements nothing.",
+    "slr_plan_0005_not_edited": "deliberate. Its L-2 carries the formulation Mirror superseded and refined under E.2; it is the durable record of what Plan reasoned at revision 5 and the evidence M-5 rests on. Epistemic curation of learning is Mirror's under E.2; durability is Plan's.",
+    "not_done": "no HUMAN_APPROVAL; nothing canonicalized; no benchmark executed; no batch authorized; Scientist A/B not activated; main unchanged at cbce3016; no other actor's worktree written; branch mirror read from git objects without merging."
+  },
+
+  "SESSION_GUARD": "The session guard refused one inline heredoc that would have run a write while the shell was inside a repository worktree. The refusal was not worked around with an unchecked tool: the probe was authored with Write into the session scratchpad and invoked by name, and the measurement is the same one.",
+
+  "DURABLE_POINTERS": {
+    "branch": "scientist-ab-spec",
+    "manifest": "governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md",
+    "session_learning_record": "learning/plan/SLR-plan-0006.md",
+    "prior_checkpoint": "ledger/checkpoints/plan/CHK-plan-0015.json",
+    "review_answered": "reviews/mirror/REV-SCIAB-MIRROR-005.md on branch mirror"
+  },
+
+  "RESUME_RULE": "Annex A.6. AWAITING_REVIEW; do not resume to alter content. Any content change produces a new CANDIDATE_CONTENT_HASH and requires a new Mirror review from R-1. No PASS from REV-SCIAB-MIRROR-001..005 transfers to this content — M-4's closure in both modes included."
+}

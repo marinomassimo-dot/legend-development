@@ -95,6 +95,15 @@ copies would fork. The ACTOR_IDs above are proposed by the materialization and b
 at registration (step 6); an ACTOR_ID is identity, provenance and learning attribution, so it is
 worth one deliberate moment before it is fixed.
 
+> **`scientist-a` and `scientist-b` become fixed on canonical execution of**
+> `CAND-20260818-SCIENTIST-AB-SPEC`, with the operator's approval — the deliberate moment, taken
+> before either session opened,
+> because the first controlled benchmark prepares task contracts, input surfaces and frozen
+> receipts **named per ACTOR_ID** before anyone incarnates them. See
+> [`framework/protocols/scientist_reading_modes.md`](framework/protocols/scientist_reading_modes.md)
+> § 1. `orchestrator`, `plan` and `mirror` were fixed earlier. **`scientist-c` is still
+> proposed** and is fixed at its own registration.
+
 All actors are **visible**: real chats a human can open and inspect. Autonomy here does not mean
 invisibility, and no part of this laboratory runs as a hidden job.
 
