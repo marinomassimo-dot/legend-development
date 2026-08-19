@@ -803,13 +803,24 @@ breaking. The invariant that binds from here is the revision-2 one.
 CONTENT TIP (revision 2)  e839db38382781564a9767fe206eefd5fba0467c
 measured there            81f241f26ed668ee02e6b04d191c98a4deaa025355d9212bc999b80c6e056e1f
                           532 included · 38 excluded
-MANIFEST TIP              <the commit carrying this section>
-re-derived there          stated in that commit's own message, measured not assumed
+MANIFEST TIP (first)      cedb4d5f1200955fbb6fca6ab0844a066e0a92f1
+re-derived there          81f241f26ed668ee02e6b04d191c98a4deaa025355d9212bc999b80c6e056e1f
+                          532 included · 40 excluded
+IDENTITY                  ✅ IDENTICAL digest, IDENTICAL `included`. The four paths in that commit
+                          are all under declared CONTROL_PLANE_ROOTS — this manifest, the review
+                          package, CHK-plan-0018 and the author response — so `excluded` moves
+                          38 → 40 for the two newly added ones, `included` does not move at all,
+                          and the bound identity never moved
 WHY included MOVES 531→532   learning/plan/SLR-plan-0008.md is CONTENT (P5.1: `learning/` is
                              CONTENT by intent). The protocol edit changes a blob id, not a count
-WHY excluded MOVES 33→38     the five control-plane paths added since f48a807 — this manifest, the
-                             handoff, two ledger records and the SCIAB author response
+WHY excluded MOVES 33→38     the five control-plane paths added between f48a807 and e839db38 —
+                             the revision-1 manifest commits, the handoff, two ledger records and
+                             the SCIAB author response
 ```
+
+Verified by `git diff --name-only e839db3 cedb4d5f`, which returns exactly those four paths, and
+by filtering that list against the declared roots: **no CONTENT path appears**. Reproduced through
+the independent non-script route as well, which returns `532 / 40` and the same digest.
 
 ```bash
 # the check that matters, runnable at any tip of this branch at or after e839db38

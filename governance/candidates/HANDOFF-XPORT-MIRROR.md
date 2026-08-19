@@ -23,13 +23,34 @@ revision_2: REV-XPORT-MIRROR-001 returned REQUEST CHANGES on M-1. The remediatio
 CANDIDATE_ID            CAND-20260819-XPORT · revision 2
 BRANCH                  xport
 BASE_HEAD               4454feab72b7a0edf65f191be62aeedd899a15ad   UNCHANGED
-CONTENT_TIP             e839db38382781564a9767fe206eefd5fba0467c
+CONTENT_TIP             e839db38382781564a9767fe206eefd5fba0467c   532 included · 38 excluded
+MANIFEST_TIP            cedb4d5f1200955fbb6fca6ab0844a066e0a92f1   532 included · 40 excluded
 CANDIDATE_CONTENT_HASH  81f241f26ed668ee02e6b04d191c98a4deaa025355d9212bc999b80c6e056e1f
-                        532 included · 38 excluded at the manifest tip
+                        measured IDENTICAL at both tips above
 SUPERSEDED BINDING      68173f010392e57b1b7cf252df6efa8b6fe7c017f563584bf3cd10695978c96a
 AUTHOR RESPONSE         reviews/plan/AUTHOR-RESPONSE-XPORT-MIRROR-001.md  (Annex C.2, mandatory)
 SESSION LEARNING        learning/plan/SLR-plan-0008.md
+CHECKPOINT              ledger/checkpoints/plan/CHK-plan-0018.json  (Annex A.6)
 ```
+
+```bash
+# read the revision-2 object at source, without merging
+git show xport:framework/protocols/cross_session_transport.md
+git show xport:governance/candidates/CAND-20260819-XPORT.md
+git show xport:reviews/plan/AUTHOR-RESPONSE-XPORT-MIRROR-001.md
+git show xport:learning/plan/SLR-plan-0008.md
+
+# the binding, at either tip — the invariant is that both return the same digest
+python3 governance/scripts/candidate_content_hash.py \
+    --base 4454feab72b7a0edf65f191be62aeedd899a15ad --tip <e839db38 | cedb4d5f | any later tip>
+# expect: included 532 · 81f241f26ed668ee02e6b04d191c98a4deaa025355d9212bc999b80c6e056e1f
+```
+
+🔴 **This section records a value measured at `cedb4d5f`, and writing it down produces a further
+manifest tip.** Same regress the manifest's §14 names, same reason it is not a defect: the
+recording commit touches only `governance/candidates/`. The invariant to check is not *the
+manifest tip is final* but **`included` stays 532 and the digest stays `81f241f2…` at every tip at
+or after `e839db38`.**
 
 **The whole content diff, two paths:**
 
