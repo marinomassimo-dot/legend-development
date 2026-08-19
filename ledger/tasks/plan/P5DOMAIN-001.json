@@ -1,0 +1,134 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK record, as held by the owning actor",
+  "_domain": "CONTROL PLANE — ledger/ is a declared CONTROL_PLANE_ROOT (P5.1)",
+  "_note": "No TASK_ASSIGNMENT message was received. This task was opened by an operator session instruction of 2026-08-19 delivered directly to this actor, which Annex A.1 records as origin OPERATOR with the directive version incremented accordingly (body §10.2 OPERATOR_OVERRIDE route). Recorded as what it was rather than as a fabricated Orchestrator assignment: 0 ACTIVE ORCHESTRATOR_LEASE existed at any point in this session, lease #8 having been terminally released, and no Orchestrator was reachable to assign it.",
+
+  "TASK_ID": "P5DOMAIN-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ORIGIN": "OPERATOR",
+  "PRIORITY": "high",
+
+  "OBJECTIVE": "Resolve the two durable governance debts that block safe future Routing work, without reopening XPORT: (1) the § P5 premise conflict and whether it exposes a fixed-point hazard in the candidate content domain; (2) the Orchestrator work/batch/routing-surface semantics. Decide the partition and prepare only the first justified candidate.",
+
+  "SCOPE": {
+    "in": [
+      "fail-closed identity rehydration from durable state alone",
+      "verification of the post-XPORT canonical state at source",
+      "confirmation or refutation of the P5 premise conflict from git",
+      "a hostile fixed-point falsifier with positive and non-void negative controls",
+      "determination of P5 ownership from governance, not from the file's name",
+      "evaluation of at least P5-A / P5-B / P5-C / P5-D with guarantees and failure modes",
+      "reconstruction of the Orchestrator surface contradiction and reproduction of the --cwd divergence",
+      "the partition decision, with rationale exposed for independent attack",
+      "the first candidate only, bound and handed to Mirror manually"
+    ],
+    "out": [
+      "resolving the runtime/ classification question — C-9 §7.2 hold, operator-owned",
+      "Routing Candidate B — NOT OPENED",
+      "any write to main or any canonicalization",
+      "granting HUMAN_APPROVAL",
+      "reopening or modifying CAND-20260819-XPORT",
+      "modifying Annex D.1 or any FROZEN governance",
+      "deciding CURRENT sessions, electing or superseding any session",
+      "activating scientist-a / scientist-b, creating scientist-d",
+      "BENCH-AB-001",
+      "cleaning the historical session population",
+      "rewriting Mirror historical ACCEPT evidence",
+      "recreating historical snapshot tags",
+      "modifying the four scientific current files"
+    ]
+  },
+
+  "ACCEPTANCE_CRITERIA": [
+    "identity, authority, worktree and applicable governance reconstructed with no essential fact resting on the prompt",
+    "canonical main verified at source and unchanged at binding",
+    "the P5 premise conflict CONFIRMED or NOT_CONFIRMED from git rather than from report",
+    "the fixed-point question answered by an executed falsifier, not by argument from past success",
+    "every load-bearing probe carries a positive control, a non-void negative control where meaningful, and an independent oracle",
+    "no negative capability claim stated as impossibility from a single instrument",
+    "the historical Mirror 533-path mechanism classified against actual script history",
+    "P5 ownership derived from D.2 and H.1, not assumed from the filename",
+    "the selected remediation states what it does NOT fix, and names the owner of the remainder",
+    "no procedural discipline described as an enforced invariant",
+    "candidate hash reproduced by a route independent of the governed script, with a negative control",
+    "the partition rationale attackable without reading the candidate's content"
+  ],
+
+  "DEPENDENCIES": [
+    "CAND-20260819-XPORT canonical at f70878d1 — verified from git this session",
+    "PROPOSAL-C9-STATE-MODEL §7.2 — ACCEPTED, acceptance_is_not_adoption: true, ON HOLD, operator-owned",
+    "actor_identity_proposal.md BUILD_MINIMAL_DIRECTORY — PROVISIONAL; framework/state/actors.yaml verified ABSENT at main",
+    "DEFERRED_PHASE MULTI_AGENT_ARCHITECTURE_FEASIBILITY — PRESERVED, NOT AUTHORIZED, NOT STARTED",
+    "Annex D.1 — FROZEN, verified correct, untouched",
+    "b2c326b — candidate_content_hash.py reads the rule from the tip; verified from the commit and by reproduction"
+  ],
+
+  "REVIEW_REQUIREMENT": {
+    "floor": "R4 METHOD (Mirror) — Annex C.1; Annex G.1 MIRROR_REQUIRED, the candidate is MAJOR and edits the authoritative definition of CANDIDATE_CONTENT_HASH",
+    "reviewer": "mirror",
+    "author": "plan",
+    "adjudicator": "orchestrator — AUTHOR != REVIEWER != ADJUDICATOR (C.3)"
+  },
+
+  "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+
+  "RETRY_POLICY": {
+    "max_attempts": 1,
+    "retryable_error_classes": [],
+    "on_exhaust": "ESCALATE"
+  },
+
+  "MILESTONE_PLAN": [
+    {"milestone": "identity rehydration PASS", "durable_evidence": "CHK-plan-0019 REHYDRATION block"},
+    {"milestone": "post-XPORT canonical state verified at source", "durable_evidence": "CHK-plan-0019 VERIFIED_STATE block"},
+    {"milestone": "P5 premise conflict CONFIRMED from git", "durable_evidence": "CAND-20260819-P5DOMAIN §2.1"},
+    {"milestone": "fixed-point falsifier executed with non-void negative control", "durable_evidence": "CAND-20260819-P5DOMAIN §3"},
+    {"milestone": "mechanization audited — convention found unenforced", "durable_evidence": "CAND-20260819-P5DOMAIN §3.1"},
+    {"milestone": "Orchestrator surface analysed and --cwd divergence reproduced", "durable_evidence": "CAND-20260819-P5DOMAIN §8"},
+    {"milestone": "partition decided SPLIT, P5 first", "durable_evidence": "CAND-20260819-P5DOMAIN §9"},
+    {"milestone": "Session Learning Review", "durable_evidence": "learning/plan/SLR-plan-0009.md, inside the content tip"},
+    {"milestone": "candidate bound with rule-parse regression", "durable_evidence": "CAND-20260819-P5DOMAIN §0 and §7.1"}
+  ],
+
+  "DELIVERABLE": {
+    "artifact": "CAND-20260819-P5DOMAIN — § P5 domain truth",
+    "worktree": "evidence-index",
+    "branch": "p5-domain-truth",
+    "base_head": "f70878d1cb98317ec62808987fc328be7f8f4ea8"
+  },
+
+  "CURRENT_STATE": {
+    "state": "COMPLETE — awaiting Mirror review, which Orchestrator opens (C.3)",
+    "durable_pointer": "governance/candidates/CAND-20260819-P5DOMAIN.md on branch p5-domain-truth",
+    "task_state_history": ["ASSIGNED(operator) → CLAIMED → IN_PROGRESS → COMPLETE"]
+  },
+
+  "TASK_CLAIM": {
+    "ACTOR_ID": "plan",
+    "TASK_ID": "P5DOMAIN-001",
+    "GENERATION": 1,
+    "timestamp": "2026-08-19",
+    "TIMESTAMP_PRECISION": "date, plus one UTC instant printed by the runtime during the --cwd probe (2026-08-19T17:35:40Z)",
+    "durable_pointer": "this record",
+    "uniqueness": "at most one valid claim per TASK_ID + GENERATION (A.3). No other claim on this TASK_ID exists on any branch; checked by name across the task ledger."
+  },
+
+  "SESSION_ROUTING": {
+    "ACTOR_ID": "plan",
+    "OBSERVED_SESSION_REF": "evidence-index-56",
+    "SESSION_ID": "8070f738-419e-45c0-b071-8da0224eb4ab",
+    "OBSERVED_HOW": "claude agents --json at CLI 2.1.232, correlated to this process by a ps ancestor-pid walk, and corroborated independently by the session scratchpad path assigned by the harness, which carries the same UUID without being read from the CLI.",
+    "🔴_THIS_IS_NOT_A_ROUTING_CLAIM": "Recording an OBSERVED address is not a claim to be plan's current routable incarnation. Ten live sessions exist in this worktree. NO SUPERSESSION IS CLAIMED, ASSERTED OR PERFORMED by this record, no session was elected CURRENT, and nothing in this task or candidate is keyed by a session reference.",
+    "WHY_RECORDED_AT_ALL": "Because it is the E5 observation, and a fact that contradicts a durable negative claim is recorded where the contradiction is checkable. See CAND-20260819-P5DOMAIN §10.1."
+  },
+
+  "GOVERNANCE": {
+    "GOVERNANCE_VERSION": "3.1.1",
+    "APPLICABLE_GOVERNANCE_FINGERPRINT_AT_BASE": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+    "APPLICABLE_GOVERNANCE_FINGERPRINT_AT_CONTENT_TIP": "0d6987bd79e54839cb33052b95bf85116d77c18537c27951fc08eeaefaec1429",
+    "fingerprint_source": "governance/scripts/governance_fingerprint.py compose --role plan, run at BASE_HEAD in a clean detached worktree and at the content tip in this worktree",
+    "🔴_fingerprint_moves": "This candidate edits plan_defined_parameters.md, which sits in CORE. All four role fingerprints move; see CAND-20260819-P5DOMAIN §7.2. Per P2.2 this invalidates all in-flight checkpoints, which is the intended behaviour, and per H.2 it is a GOVERNANCE_UPDATE requiring ACK."
+  }
+}

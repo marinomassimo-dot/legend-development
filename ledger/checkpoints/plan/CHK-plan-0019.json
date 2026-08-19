@@ -1,0 +1,120 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_domain": "CONTROL PLANE — ledger/ is a declared CONTROL_PLANE_ROOT (P5.1)",
+  "_note": "First checkpoint of task P5DOMAIN-001, written by a NEW Plan session that rehydrated fail-closed from durable state. Nothing below was carried from the session prompt: every value stated as verified was re-derived this session from git or from a command run in this worktree, in a clean detached worktree, or in a throw-away clone.",
+  "CHECKPOINT_ID": "CHK-plan-0019",
+  "SUPERSEDES": "nothing — new task. CHK-plan-0018 closed XPORT-ROUTING-001 and is left untouched, including its entry-index value, which this session measured as 495 rather than 496 and reports without repairing (XPORT is canonical and closed).",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "P5DOMAIN-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+  "FINGERPRINT_NOTE": "This is the fingerprint at BASE_HEAD — the governance under which this work was performed. At the content tip it is 0d6987bd79e54839cb33052b95bf85116d77c18537c27951fc08eeaefaec1429, because the candidate edits a CORE file. The two differing is the point of §7.2 of the manifest, not an inconsistency in this record.",
+  "GOVERNANCE_VERSION": "3.1.1",
+  "TIMESTAMP": "2026-08-19",
+  "TIMESTAMP_PRECISION": "date, plus one UTC instant printed by the runtime during the --cwd probe (2026-08-19T17:35:40Z)",
+
+  "REHYDRATION": {
+    "worktree": "evidence-index",
+    "worktree_matches_git_toplevel": true,
+    "pwd": "/Users/massimo/Desktop/legend-public/.claude/worktrees/evidence-index",
+    "branch_at_open": "xport",
+    "head_at_open": "86dfe297de7a7ccc286d815b0d4be786a3b0e31e",
+    "tree_at_open": "clean — 0 porcelain entries",
+    "branch_created_for_this_task": "p5-domain-truth, cut from f70878d1 (canonical main)",
+    "role_contract_read": "roles/plan.md in full at main — mandate, permitted and forbidden writes, the epistemic boundary, declared capabilities and their UNVERIFIED status, fingerprint set, session obligations",
+    "authority_read_at_source": "GOVERNANCE_v3.1.1 §5 §12 §35.1; Annex D in full (D.1–D.5); Annex H.1 in full; Annex I.3; plan_defined_parameters P2.2, P2.3, P5.1–P5.3; roles/orchestrator.md in full; deployment/deployment_profile.md in full",
+    "stable_actor_identity": "plan · worktree evidence-index · roles/plan.md · PERSISTENT_LEGEND_ACTOR · governance 3.1.1 — reconstructed from durable repository state alone",
+    "current_session_routing": "NOT CLAIMED. This session does not declare itself CURRENT or ROUTABLE and no registrar exists to declare it. Its own SESSION_REF was OBSERVED (see task record) as the E5 datum; observation is not election. Stable actor identity and current session routing remain different things and only the first is reconstructible today.",
+    "authority_boundary": "may prepare and revise an INTEGRATION_CANDIDATE with manifest, and refuse integration on structural, provenance, schema or protocol grounds; may NOT execute CANONICAL_BATCH_COMMIT (GATE 1: proponente != esecutore), act as command authority, resolve contested scientific meaning (§28), use main or the root checkout as working space, or grant HUMAN_APPROVAL",
+    "p5_ownership_derived_not_assumed": "D.2 delegates the CANDIDATE_CONTENT_HASH definition to Plan; H.1 gives Plan 'Integrazione strutturale / candidate'. Plan owns the PROPOSAL. Mirror reviews, operator approves (H.1 governance row), Orchestrator executes. The filename was not treated as evidence of ownership.",
+    "no_essential_fact_from_prompt": true,
+    "verdict": "PLAN REHYDRATION: PASS"
+  },
+
+  "VERIFIED_STATE": {
+    "canonical_main": "f70878d1cb98317ec62808987fc328be7f8f4ea8 — verified from git at session open and again at binding, UNCHANGED",
+    "xport_canonical": "CONFIRMED — content tip e839db38 and manifest tip 86dfe297 are ancestors of main; the published hash 81f241f2… was reproduced this session from a fresh clone with no checkout, as the oracle for every later probe",
+    "active_orchestrator_leases": "0 — lease #8 terminally released; derived, not read from a STATUS field",
+    "xport_did_not_canonicalize": "verified: no CURRENT routing, no activation, no registrar, no supersession and no lifecycle state machine entered main. framework/state/actors.yaml remains ABSENT.",
+    "routing": "UNRESOLVED",
+    "bench_ab_001": "NOT STARTED",
+    "scientist_a": "NOT ACTIVATED",
+    "scientist_b": "NOT ACTIVATED"
+  },
+
+  "FINDINGS": {
+    "p5_premise_conflict": "CONFIRMED. One tracked path under runtime/ at main (runtime/orchestrator_lease.md, blob c34f4866), not git-ignored (check-ignore rc=1), entry 495 of the 532 the XPORT binding hashed. The premise was falsified by 325da04.",
+    "p5_second_defect": "CONFIRMED. P5.3 said 'The version prefix moves to v3' inside a section declaring legend-candidate-v4.",
+    "fixed_point_hazard": "CONFIRMED as a structural property; ALREADY_PREVENTED in practice, but PROCEDURALLY and not MECHANIZED.",
+    "fixed_point_test": "PASS — the falsifier ran and discriminated. T1 lease mutation moved the hash; T2 excluded-path mutation held it with the tree SHA verified changed; T3 BASE_HEAD advance moved it.",
+    "mechanization_audit": "lease_state.py has no location predicate; batch_commit.py is snapshot/restore only; no script anywhere constrains a lease row's write surface; GATE 0 is asserted by hand.",
+    "structural_consequence": "a lease terminal row is written after the batch it authorized and can never sit inside it; main carries rows #1–#5, branch orchestrator carries #1–#8.",
+    "historical_mirror_mechanism_claim": "STALE. Since b2c326b (2026-08-17) candidate_content_hash.py reads the rule from the tip via git show, never from the working tree. A 533-path population reproduced from a stale local governance/script pairing is not current behaviour. The mitigation it produced remains correct; the mechanism does not. The review artifact is preserved unchanged and no historical ACCEPT was rewritten.",
+    "orchestrator_execution_ambiguity": "NO — Annex D.1 (FROZEN) distinguishes WORK_COMMIT (own branch) from CANONICAL_BATCH_COMMIT (root, gates 0–5); body §5 ranks it above role rules. Verified independently and untouched.",
+    "orchestrator_label_ambiguity": "CONFIRMED — roles/orchestrator.md frontmatter says 'the repository root checkout', touched once at a8cd125 and never updated by e861dc4 which gave Orchestrator a worktree. The same file's body refutes it: 'Position in the root confers nothing… is not Orchestrator; it is an OBSERVER.'",
+    "orchestrator_cwd_divergence": "CONFIRMED — 24 sessions at root cwd, 0 at the orchestrator worktree, 10 at evidence-index as positive control. --cwd matches a subtree and every worktree lives under the root, so the root reading is the universal set and contains no Orchestrator.",
+    "e5": "PARTIALLY_RESOLVED — the central negative is falsified by two independent instruments; the re-run is still owed and E1/E2 remain INCONCLUSIVE."
+  },
+
+  "MILESTONES_REACHED": [
+    "identity rehydrated fail-closed; stable identity distinguished from session routing; no SESSION_REF invented",
+    "post-XPORT canonical state verified at source, including that XPORT canonicalized no routing or lifecycle state",
+    "XPORT hash reproduced from a fresh clone with no checkout — the oracle for every subsequent probe",
+    "P5 premise conflict confirmed from git rather than from report; entry index re-derived after catching an off-by-one in my own reading",
+    "fixed-point falsifier executed in an isolated clone with plumbing-built synthetic trees; canonical repo and lease state untouched",
+    "negative control verified NON-VOID: tree SHA asserted changed before the hash was read, and the same blob used as the positive probe",
+    "mechanization audited across lease_state.py, batch_commit.py and the whole script surface",
+    "P5 ownership derived from D.2 and H.1",
+    "four remediation options evaluated with guarantees, failure modes, detection, recovery, blast radius and hash compatibility",
+    "Orchestrator surface analysed to a conclusion; --cwd divergence reproduced read-only with a positive control",
+    "partition decided SPLIT with rationale attackable independently of content",
+    "SLR-plan-0009 written and committed BEFORE binding",
+    "rule-parse regression PASS with a mutation control; historical XPORT hash re-derived from this branch unchanged",
+    "candidate hash reproduced by an independent route (shasum over --emit-domain) with a negative control on BASE_HEAD"
+  ],
+
+  "OBJECT": {
+    "candidate_id": "CAND-20260819-P5DOMAIN",
+    "revision": 1,
+    "base_head": "f70878d1cb98317ec62808987fc328be7f8f4ea8",
+    "content_tip": "ceefaa28611527d83b9f5e2209c99733a3a10afd",
+    "candidate_content_hash": "930dfefb3ce69bfaedc3920c96b3cddafbd07c9560498da4291b04b1f5476b97",
+    "candidate_hash_version": "legend-candidate-v4",
+    "domain_cardinality": "533 included · 40 excluded",
+    "change_class": "MAJOR",
+    "mirror_review": "REQUIRED, NOT PERFORMED, NOT ASSUMED",
+    "human_approval": "NONE — not requested, not prefilled, not implied"
+  },
+
+  "GATES_EVIDENCED_BY_PLAN": {
+    "lint": "PASS — 1 pre-existing INFO (CLAIM 010 wikilink)",
+    "publication_gate": "PASS / BLOCKS: 0 — 4 [REVIEW] lines, all under disease-models/, which this candidate does not touch",
+    "hash_reproduced_independently": "shasum -a 256 over --emit-domain equals the script's digest; a different BASE_HEAD returns 326b1773…, so the digest is not indifferent to its base",
+    "rule_parse_regression": "PASS — version prefix and control-plane roots identical before and after, with a mutation adding '- runtime/' proving the checker can detect a real rule change",
+    "historical_binding_unmoved": "XPORT at (4454feab, 86dfe297) still returns 81f241f2… when computed from this branch",
+    "instrument_discipline": "no `timeout` wrapper was used — it does not exist on this platform. Verdicts were read from output, never from exit codes. Both blobs used in the falsifier were size-checked non-empty (8703 and 18837 bytes) so no probe compared empty strings.",
+    "wrong_reason_load_bearing_passes": 0
+  },
+
+  "NOT_DONE_DELIBERATELY": {
+    "runtime_classification": "NOT MADE. § P5 routes it to C-9 §7.2, which is ACCEPTED with acceptance_is_not_adoption: true and a hold whose transition owner is the operator. Re-deriving the exclusion here under another name is the self-authorization the hold exists to prevent.",
+    "p5_d_detector": "NOT BUILT. A check that a candidate's tip mutates no tracked runtime/ path would mechanize the convention; it is one step from making the classification, and belongs with the C-9 closure. OWED NOT BARRED.",
+    "orchestrator_surface_candidate": "ANALYSED TO A CONCLUSION, NOT BOUND. Partition is SPLIT and P5 is first; the surface debt is the next candidate's, on its own evidence and review.",
+    "annex_d1": "NOT MODIFIED — verified correct. No FROZEN governance is changed by this candidate.",
+    "p2_composition_narrowing": "NOT PROPOSED — surfaced as a measured calibration signal under A.6, which is Mirror's monitoring duty, not Plan's to act on inside a P5 candidate.",
+    "routing": "UNRESOLVED. Candidate B NOT OPENED. No registrar, activation, CURRENT assignment, supersession or routing generation was introduced.",
+    "xport": "NOT REOPENED, NOT MODIFIED. CHK-plan-0018's entry index reported, not repaired.",
+    "main": "UNCHANGED at f70878d1cb98317ec62808987fc328be7f8f4ea8",
+    "session_population": "not touched. No session closed, killed, renamed, activated, superseded, elected or cleaned. The 24-session population is left intact as evidence for future Routing.",
+    "scientists": "Scientist A NOT ACTIVATED · Scientist B NOT ACTIVATED · Scientist D NOT CREATED · BENCH-AB-001 NOT STARTED"
+  },
+
+  "DURABLE_POINTERS": {
+    "manifest": "governance/candidates/CAND-20260819-P5DOMAIN.md @ branch p5-domain-truth",
+    "amended_governance": "governance/plan_defined_parameters.md § P5.1, § P5.3 @ ceefaa2",
+    "session_learning_record": "learning/plan/SLR-plan-0009.md @ ceefaa2",
+    "review_package": "governance/candidates/HANDOFF-P5DOMAIN-MIRROR.md @ branch p5-domain-truth",
+    "task_record": "ledger/tasks/plan/P5DOMAIN-001.json @ branch p5-domain-truth"
+  }
+}
