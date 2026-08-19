@@ -1,0 +1,124 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK record, as held by the owning actor",
+  "_domain": "CONTROL PLANE — ledger/ is a declared CONTROL_PLANE_ROOT (P5.1)",
+  "_note": "No TASK_ASSIGNMENT message was received. This task was opened by an operator session instruction of 2026-08-19 delivered directly to this actor, which Annex A.1 records as origin OPERATOR with the directive version incremented accordingly (body §10.2 OPERATOR_OVERRIDE route). Recorded as what it was rather than as a fabricated Orchestrator assignment: no ACTIVE ORCHESTRATOR_LEASE existed at any point in this session, and no Orchestrator was reachable to assign it.",
+
+  "TASK_ID": "XPORT-ROUTING-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ORIGIN": "OPERATOR",
+  "PRIORITY": "high",
+
+  "OBJECTIVE": "Close the owed Plan author response to REV-SCIAB-MIRROR-006; classify three carried post-batch observations; probe the installed cross-session harness ONCE and persist it as a shared design record; decide whether cross-session transport and actor session lifecycle / routing are one candidate or two; prepare whichever candidate the partition decision selects.",
+
+  "SCOPE": {
+    "in": [
+      "identity rehydration from durable state alone",
+      "verification of the post-canonical state at source",
+      "one harness probe, persisted as one design record usable by both candidates",
+      "the author response owed on P-12, P-13 and the Annex E.2 re-classifications of §10.2",
+      "the partition decision, with its rationale exposed for review",
+      "the first candidate, if one is selected"
+    ],
+    "out": [
+      "BENCH-AB-001 — NOT STARTED",
+      "activation of scientist-a, scientist-b, scientist-c",
+      "creation or activation of any scientist-d",
+      "any write to main or any canonicalization",
+      "granting HUMAN_APPROVAL",
+      "reopening CAND-20260818-SCIENTIST-AB-SPEC",
+      "resetting, deleting or committing the dirty C-2 files in lettore and lettore-b",
+      "modifying the four scientific current files",
+      "cleaning any path in the root checkout",
+      "recreating historical snapshot tags",
+      "repairing launch/ (findings H-2, H-3 recorded and handed on)",
+      "editing canonical text whose stated premise this session falsified (finding H-4)"
+    ]
+  },
+
+  "ACCEPTANCE_CRITERIA": [
+    "identity, authority, worktree and governance version reconstructed with no essential fact resting on conversation",
+    "canonical main verified at source and unchanged at binding",
+    "Scientist fingerprint recomputed at source, not quoted",
+    "the harness probe performed exactly once and persisted durably",
+    "every runtime claim carries one of DOCUMENTED / OBSERVED / REPORTED_UPSTREAM / PROPOSED, and no claim promoted by conversation",
+    "the author response reproduces each finding before accepting it",
+    "the partition decision states its rationale in a form Mirror can attack independently of the candidate's content",
+    "no procedural discipline described as an enforced invariant",
+    "candidate hash reproduced by at least one route independent of the governed script, with a positive and a negative control"
+  ],
+
+  "DEPENDENCIES": [
+    "CAND-20260818-SCIENTIST-AB-SPEC canonical at 4454feab — verified",
+    "REV-SCIAB-MIRROR-006 at 98f8766 on branch mirror — read in full at source",
+    "APR-20260819-SCIAB-001 at a9cc7d2 on branch orchestrator — read in full at source",
+    "PROPOSAL-C9-STATE-MODEL §7.2 — ACCEPTED, acceptance_is_not_adoption, ON HOLD",
+    "actor_identity_proposal.md BUILD_MINIMAL_DIRECTORY — PROVISIONAL, pending operator acceptance",
+    "DEFERRED_PHASE MULTI_AGENT_ARCHITECTURE_FEASIBILITY — PRESERVED, NOT AUTHORIZED, NOT STARTED"
+  ],
+
+  "REVIEW_REQUIREMENT": {
+    "floor": "R4 METHOD (Mirror) — Annex C.1: a methodology-changing inferential process; and Annex G.1 MIRROR_REQUIRED, since the candidate is MAJOR and touches protocol",
+    "reviewer": "mirror",
+    "author": "plan",
+    "adjudicator": "orchestrator — AUTHOR != REVIEWER != ADJUDICATOR (C.3)"
+  },
+
+  "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+
+  "RETRY_POLICY": {
+    "max_attempts": 1,
+    "retryable_error_classes": [],
+    "on_exhaust": "ESCALATE"
+  },
+
+  "MILESTONE_PLAN": [
+    {"milestone": "identity rehydration PASS", "durable_evidence": "CHK-plan-0017 REHYDRATION block"},
+    {"milestone": "post-canonical state verified", "durable_evidence": "CHK-plan-0017 VERIFIED_STATE block"},
+    {"milestone": "harness probed once", "durable_evidence": "governance/design_records/runtime_harness_probe_20260819.md"},
+    {"milestone": "author response written", "durable_evidence": "reviews/plan/AUTHOR-RESPONSE-SCIAB-MIRROR-006.md"},
+    {"milestone": "P-13 half B repaired", "durable_evidence": "learning/plan/SLR-plan-0006-COR-001.md"},
+    {"milestone": "transport protocol written", "durable_evidence": "framework/protocols/cross_session_transport.md"},
+    {"milestone": "Session Learning Review", "durable_evidence": "learning/plan/SLR-plan-0007.md, inside the content tip"},
+    {"milestone": "candidate bound", "durable_evidence": "governance/candidates/CAND-20260819-XPORT.md with hash reproduced at both tips"}
+  ],
+
+  "DELIVERABLE": {
+    "artifact": "CAND-20260819-XPORT — cross-session transport discipline",
+    "worktree": "evidence-index",
+    "branch": "xport",
+    "base_head": "4454feab72b7a0edf65f191be62aeedd899a15ad"
+  },
+
+  "CURRENT_STATE": {
+    "state": "COMPLETE — awaiting Mirror review, which Orchestrator opens (C.3)",
+    "durable_pointer": "governance/candidates/CAND-20260819-XPORT.md on branch xport",
+    "task_state_history": ["ASSIGNED(operator) → CLAIMED → IN_PROGRESS → COMPLETE"]
+  },
+
+  "TASK_CLAIM": {
+    "ACTOR_ID": "plan",
+    "TASK_ID": "XPORT-ROUTING-001",
+    "GENERATION": 1,
+    "timestamp": "2026-08-19",
+    "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time to this session other than derived instants printed by tools",
+    "durable_pointer": "this record",
+    "uniqueness": "at most one valid claim per TASK_ID + GENERATION (A.3). No other claim on this TASK_ID exists on any branch; checked by name across the task ledger."
+  },
+
+  "SESSION_ROUTING": {
+    "ACTOR_ID": "plan",
+    "CURRENT_SESSION_REF": "evidence-index-a4",
+    "SESSION_ID": "5c896a65-5701-47a4-ac1f-e6cc8ef4efb2",
+    "OBSERVED_HOW": "claude agents --json, which returns this session's own row at runtime version 2.1.232. Corroborated by the process image (pid 49611) and by the transcript path.",
+    "🔴_THIS_IS_NOT_A_ROUTING_CLAIM": "Recording an OBSERVED address is not a claim to be plan's current routable incarnation. Seven other live sessions exist in this worktree, and one of them — evidence-index-59, sessionId e49d3bd1 — is the session the Agent Card registry records as plan's current, verified at L1 on 2026-08-17 and still alive. NO SUPERSESSION IS CLAIMED, ASSERTED OR PERFORMED by this record. Nothing in this task, this candidate or this session is keyed by a session reference.",
+    "WHY_RECORDED_AT_ALL": "Because it is now observable and was previously declared unobtainable, and a fact that contradicts a durable claim is recorded where the contradiction is checkable. See design record §3.4 and CAND-20260819-XPORT §7."
+  },
+
+  "GOVERNANCE": {
+    "GOVERNANCE_VERSION": "3.1.1",
+    "APPLICABLE_GOVERNANCE_FINGERPRINT": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+    "fingerprint_source": "governance/scripts/governance_fingerprint.py compose --role plan, run inside this worktree at 4454feab"
+  }
+}

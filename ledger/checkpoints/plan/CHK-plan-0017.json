@@ -1,0 +1,144 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_domain": "CONTROL PLANE — ledger/ is a declared CONTROL_PLANE_ROOT (P5.1)",
+  "_note": "First checkpoint of task XPORT-ROUTING-001. Every value below was derived in this session from durable state or from a command whose output is quoted in the design record; nothing was carried from chat memory, from CHK-plan-0016, or from any earlier Plan session.",
+
+  "CHECKPOINT_ID": "CHK-plan-0017",
+  "SUPERSEDES": "nothing. CHK-plan-0016 belongs to task SCIENTIST-AB-SPEC-001, which reached COMPLETE when 4454feab executed. This is a different task and does not resume it.",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "XPORT-ROUTING-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+  "FINGERPRINT_COMPOSITION": "CORE + Annex D + Annex E + Annex I + Annex J §J.1, per plan_defined_parameters.md P2.2, computed by governance/scripts/governance_fingerprint.py inside this worktree — not quoted from any registry",
+  "GOVERNANCE_VERSION": "3.1.1",
+  "TIMESTAMP": "2026-08-19",
+  "TIMESTAMP_PRECISION": "date only",
+
+  "REHYDRATION": {
+    "worktree": "evidence-index",
+    "worktree_matches_git_toplevel": true,
+    "pwd": "/Users/massimo/Desktop/legend-public/.claude/worktrees/evidence-index",
+    "branch_at_open": "scientist-ab-spec",
+    "head_at_open": "5edfd040ec273d5a92be1f3e6f1dfeb410665d22",
+    "tree_at_open": "clean — 0 porcelain entries",
+    "branch_for_this_candidate": "xport, cut from main at 4454feab; scientist-ab-spec verified an ancestor of main before leaving it, so nothing was abandoned unmerged",
+    "role_contract_read": "roles/plan.md in full — mandate, permitted writes, forbidden writes, proposer/executor/reviewer separation, declared capabilities and their UNVERIFIED status, fingerprint set, session obligations",
+    "authority_read_at_source": "GOVERNANCE_v3.1.1 §5 §6 §7 §8 §9 §10 §20-22 §28 §34-38 §43 §47 §48; Annexes A-J in full; plan_defined_parameters P2-P7",
+    "stable_actor_identity": "plan · worktree evidence-index · roles/plan.md · PERSISTENT_LEGEND_ACTOR · governance 3.1.1 — reconstructed from durable repository state alone",
+    "authority_boundary": "may prepare INTEGRATION_CANDIDATE with manifest and refuse integration on structural grounds; may NOT execute CANONICAL_BATCH_COMMIT, act as command authority, resolve contested scientific meaning, use main or the root as working space, or escalate to the operator for ordinary matters",
+    "no_essential_fact_from_conversation": true,
+    "result": "PLAN REHYDRATION: PASS"
+  },
+
+  "SESSION_INCARNATION": {
+    "SESSION_ID": "5c896a65-5701-47a4-ac1f-e6cc8ef4efb2",
+    "SESSION_NAME": "evidence-index-a4",
+    "runtime_version": "2.1.232",
+    "pid": 49611,
+    "observed_how": "claude agents --json returns this session's own row; corroborated by the process image and the transcript path",
+    "🔴_not_a_routing_claim": "This is an OBSERVED runtime address, recorded because it was previously declared unobtainable. It asserts nothing about being plan's current routable incarnation, and no supersession of evidence-index-59 (sessionId e49d3bd1, alive, the registry's recorded current) is claimed or performed. Nothing in this candidate is keyed by a session reference.",
+    "prior_checkpoints_said": "CHK-plan-0016 recorded 'an actor cannot observe its own routing reference'. That was true of the instrument then used. It is not withdrawn as a record of what was believed; it is superseded as a statement about the runtime."
+  },
+
+  "VERIFIED_STATE": {
+    "canonical_main": "4454feab72b7a0edf65f191be62aeedd899a15ad — verified at session open and again at binding",
+    "canonical_main_is_merge_of": "cbce3016 + 5edfd04, tree identical to 5edfd04",
+    "scientist_ab_spec_canonical": "YES — roles/scientist.md carries actor_id_status FIXED for scientist-a and scientist-b; framework/protocols/scientist_reading_modes.md and controlled_benchmark_ab.md are in main",
+    "scientist_fingerprint": "82423a48b700bc2b392b4c8e944eb6a0b07cefebddf63db00e96716cbed43e79 — recomputed at source in this worktree, 12 inputs listed",
+    "all_role_fingerprints": {
+      "plan": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+      "mirror": "3dff8954d4f6a56f6be14bc72be369095a1436437913a1e908c4b33c9762f65c",
+      "orchestrator": "e2c544705e623a7761e627396724aab6fcb5a6f35466e6f1b978a0e8baaec59a",
+      "scientist": "82423a48b700bc2b392b4c8e944eb6a0b07cefebddf63db00e96716cbed43e79"
+    },
+    "old_scientist_checkpoints": "INCOMPATIBLE UNDER A.6. The Agent Card registry records the pre-rotation Scientist fingerprint ce3c0d94b407bbd1e3d1e33e628b7cffdc2a0fed9c3cb93bd26e7a900a665d04 against all three cards; the canonical value is 82423a48…, because roles/scientist.md is in CORE and was edited by 4454feab. Any Scientist checkpoint or card carrying ce3c0d94… fails A.6's refusal rule and must not be resumed — it must report and request state.",
+    "bench_ab_001": "NOT STARTED — verified three ways: no receipt, no task record, and zero live sessions in lettore and lettore-b",
+    "scientist_a_activated": "NO — 0 live sessions with cwd lettore",
+    "scientist_b_activated": "NO — 0 live sessions with cwd lettore-b",
+    "orchestrator_lease_7": "RELEASED — terminally closed. RELEASED_AT 2026-08-19T13:14:01Z, derived RELEASED by lease_state.py against the record on branch orchestrator",
+    "active_leases": "0 by derivation. Two findings reported, both lease #3's, both historical",
+    "human_approval_traceable": "APR-20260819-SCIAB-001 / RES-20260819-SCIAB-001 at a9cc7d2e2d9770c813e410f80e00609c247b17ab on branch orchestrator — read in full",
+    "mirror_accept_traceable": "REV-SCIAB-MIRROR-006 at 98f8766553980811e14a965ccfee77943945e2b3 on branch mirror — ACCEPT, read in full, 973 lines",
+    "candidate_traceable_to_main": "YES — the approved manifest tip 5edfd04 is the second parent of 4454feab, and the approved content tip 2a854177 is in its history",
+    "divergences_found": [
+      "runtime/orchestrator_lease.md carries 5 leases in main and 7 on branch orchestrator — a known, separately-recorded debt, not reconciled here",
+      "the HUMAN_APPROVAL_QUEUE has divergent copies across branches — the SCIAB approval is on orchestrator only, and is absent from main's copy. Known debt, declared in the approval record itself, not reconciled here"
+    ]
+  },
+
+  "MILESTONES_REACHED": [
+    {"milestone": "identity rehydration PASS", "evidence": "this REHYDRATION block"},
+    {"milestone": "post-canonical state verified", "evidence": "this VERIFIED_STATE block"},
+    {"milestone": "harness probed once", "evidence": "governance/design_records/runtime_harness_probe_20260819.md @ f48a807"},
+    {"milestone": "author response written", "evidence": "reviews/plan/AUTHOR-RESPONSE-SCIAB-MIRROR-006.md"},
+    {"milestone": "P-13 half B repaired", "evidence": "learning/plan/SLR-plan-0006-COR-001.md @ f48a807"},
+    {"milestone": "transport protocol written", "evidence": "framework/protocols/cross_session_transport.md @ f48a807"},
+    {"milestone": "Session Learning Review", "evidence": "learning/plan/SLR-plan-0007.md @ f48a807, inside the content tip"},
+    {"milestone": "candidate bound", "evidence": "governance/candidates/CAND-20260819-XPORT.md"}
+  ],
+
+  "OBJECT": {
+    "candidate_id": "CAND-20260819-XPORT",
+    "revision": 1,
+    "base_head": "4454feab72b7a0edf65f191be62aeedd899a15ad",
+    "content_tip": "f48a807f7ba7b5b71c0ba5dd5d2361fc7dca57e4",
+    "candidate_content_hash": "68173f010392e57b1b7cf252df6efa8b6fe7c017f563584bf3cd10695978c96a",
+    "hash_version": "legend-candidate-v4",
+    "included_entries": 531,
+    "excluded_entries": 33,
+    "change_class": "MAJOR",
+    "hash_reproduced_at": [
+      "content tip via the governed script ×3 — identical",
+      "content tip independently, without the script, P5.2 by hand, ls-tree read as raw bytes through an argv list and never through a shell: 531 included / 33 excluded, identical",
+      "POSITIVE CONTROL: beef6db08bdf8489b68078fc00c08fee913a585a4e1ee8359b592fc9e31a6061 reproduced at cbce3016 → 2a854177, matching the published value of CAND-20260818-SCIENTIST-AB-SPEC",
+      "NEGATIVE CONTROL: the same tip against base cbce3016 gives c076dee8f3ec1d9712f73fbb50b7059ada08d3861a6c1852019d8028ff798d5d — the base is genuinely inside the hash"
+    ]
+  },
+
+  "GATES_EVIDENCED_BY_PLAN": {
+    "_note": "Plan evidences; it does not assert GATE 0 or execute anything. GATE 0 is Orchestrator's and is not claimed here.",
+    "LINT": "PASS — 1 pre-existing INFO",
+    "PUBLICATION_GATE": "PASS / BLOCKS: 0",
+    "GROWTH_ANCHORS": "PASS — 39 / 70 / 356 / 390",
+    "RECEIPTS": "OK — 128 chained, tail anchored",
+    "RELEASE_REGRESSIONS": "65 suites, 953 tests, 6 red at the candidate AND the same 6 red at BASE_HEAD in a fresh detached worktree — compared SET-WISE, DELTA 0"
+  },
+
+  "PARTITION_DECISION": {
+    "decision": "SPLIT",
+    "first": "TRANSPORT — this candidate",
+    "second": "ROUTING — NOT OPENED",
+    "routing_blocked_on": [
+      "C-9 §7.2 ACCEPTED with acceptance_is_not_adoption and an explicit hold",
+      "BUILD_MINIMAL_DIRECTORY provisional pending operator acceptance; framework/state/actors.yaml does not exist",
+      "DEFERRED_PHASE MULTI_AGENT_ARCHITECTURE_FEASIBILITY PRESERVED, NOT AUTHORIZED, NOT STARTED",
+      "Phase −1 E5 needs re-running: its central negative was measured through one instrument and is false through another"
+    ]
+  },
+
+  "DURABLE_POINTERS": {
+    "candidate_manifest": "governance/candidates/CAND-20260819-XPORT.md",
+    "protocol": "framework/protocols/cross_session_transport.md",
+    "design_record": "governance/design_records/runtime_harness_probe_20260819.md",
+    "author_response": "reviews/plan/AUTHOR-RESPONSE-SCIAB-MIRROR-006.md",
+    "slr": "learning/plan/SLR-plan-0007.md",
+    "correction": "learning/plan/SLR-plan-0006-COR-001.md",
+    "task": "ledger/tasks/plan/XPORT-ROUTING-001.json",
+    "branch": "xport"
+  },
+
+  "NOT_DONE_DELIBERATELY": [
+    "BENCH-AB-001 not started",
+    "no Scientist activated; no scientist-d created",
+    "no write to main, no canonicalization, no HUMAN_APPROVAL",
+    "CAND-20260818-SCIENTIST-AB-SPEC not reopened; no revision 7 exists",
+    "no canonical text edited, including the three artifacts whose stated premise this probe falsified",
+    "no dirty C-2 file in lettore or lettore-b touched, read into a commit, reset or deleted",
+    "no path in the root checkout written; root inspected read-only with --no-optional-locks",
+    "no snapshot tag recreated",
+    "launch/ not repaired — findings H-2 and H-3 recorded and handed on",
+    "no actor-routed SendMessage sent to any peer; the two transport probes targeted a name that resolves to nothing",
+    "no resolver implemented"
+  ]
+}
