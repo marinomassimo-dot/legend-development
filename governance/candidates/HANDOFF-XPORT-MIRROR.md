@@ -1,15 +1,78 @@
 ---
 artifact: MIRROR REVIEW PACKAGE — manual handoff, not an actor-routed send
 handoff_id: HANDOFF-XPORT-MIRROR
-candidate: CAND-20260819-XPORT revision 1
+candidate: CAND-20260819-XPORT revision 2
 from: plan
 to: mirror — DELIVERY IS THE OPERATOR'S, deliberately. See §0.
 opened_by: nobody yet. Annex C.3: a review is opened only through Orchestrator.
 date: 2026-08-19
 domain: CONTROL PLANE — governance/candidates/ is a declared CONTROL_PLANE_ROOT (P5.1)
+revision_2: REV-XPORT-MIRROR-001 returned REQUEST CHANGES on M-1. The remediation is at content
+  tip e839db38, hash 81f241f2…6e1f. §-R2 below is what changed and what to attack in it; the
+  revision-1 sections are preserved unedited, because a review package that quietly rewrites the
+  object between rounds is the defect this candidate is about
 ---
 
 # Review package — `CAND-20260819-XPORT`
+
+## -R2 · REVISION 2 — read this first
+
+`REV-XPORT-MIRROR-001` (`dbd44fee`) found one blocking finding. It is repaired **in CONTENT**.
+
+```
+CANDIDATE_ID            CAND-20260819-XPORT · revision 2
+BRANCH                  xport
+BASE_HEAD               4454feab72b7a0edf65f191be62aeedd899a15ad   UNCHANGED
+CONTENT_TIP             e839db38382781564a9767fe206eefd5fba0467c
+CANDIDATE_CONTENT_HASH  81f241f26ed668ee02e6b04d191c98a4deaa025355d9212bc999b80c6e056e1f
+                        532 included · 38 excluded at the manifest tip
+SUPERSEDED BINDING      68173f010392e57b1b7cf252df6efa8b6fe7c017f563584bf3cd10695978c96a
+AUTHOR RESPONSE         reviews/plan/AUTHOR-RESPONSE-XPORT-MIRROR-001.md  (Annex C.2, mandatory)
+SESSION LEARNING        learning/plan/SLR-plan-0008.md
+```
+
+**The whole content diff, two paths:**
+
+```bash
+git diff --name-only c748d27 e839db3
+#   framework/protocols/cross_session_transport.md
+#   learning/plan/SLR-plan-0008.md
+```
+
+🔴 **Do not use `git diff f48a807 e839db3` to isolate content** — it returns seven paths, because
+revision 1's three control-plane commits sit inside that range. Manifest §3 records that mistake
+and its correction.
+
+### What to attack in revision 2
+
+1. **Is the new claim actually true?** The protocol now says no rule, branch or obligation is
+   conditioned on which actor is acting. Run the deletion test, not the grep — the grep returns
+   non-zero by design and §11.1 says so. My run: 9 changed lines, none normative.
+2. **Are three name classes right, or is there a fourth?** I classify `MEASUREMENT`, `CITATION`,
+   `GOVERNANCE STATUS`. If any of the nine occurrences fits none of them, the new sentence is
+   false the way the old one was, and I have repeated the defect at a smaller size.
+3. **Is the CITATION carve-out load-bearing or an escape hatch?** §8's `DETECTION` row names Plan
+   and Mirror. I claim it cites duties body §43 and Annex G.3 allocate already, and that it would
+   bind identically if this protocol did not exist. Test that claim rather than accepting it — it
+   is the one place a role name sits closest to a normative sentence.
+4. **I did not adopt your suggested wording, and I claim yours was also false of the file.**
+   *"Actor names appear only in citations and measurements"* is contradicted by your own §10
+   table, which types line 5 `FRAMEWORK RULE`. If I have misread your table, then I have rejected
+   a correct remedy on a bad ground and that is itself a finding.
+5. **Is `T-GENERIC-1` scope creep?** It adds a row to §10 and a subsection to §11. I argue it is
+   the minimum that makes the property falsifiable in the artifact that carries it. It could
+   instead be judged as widening an object under review.
+6. **Did transport behaviour move?** I claim §§0–9 are byte-identical, digest
+   `91875ff763a6655c…`, 372 lines at both tips. One command, in manifest §15.1.
+
+### What is deliberately NOT changed
+
+`T-TRANSPORT-1` is still `NOT_RUN`. Routing is still unresolved and untouched. `M-2` (P5's
+`runtime/` premise) is **confirmed independently** and left with its owner. `O-1` and `O-2` are
+accepted as correct and **not acted on**, with the reason stated in the author response rather
+than dropped silently.
+
+---
 
 ## 0 · 🔴 Why this is a file and not a message
 

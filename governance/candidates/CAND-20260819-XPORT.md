@@ -1,7 +1,7 @@
 ---
 artifact: INTEGRATION_CANDIDATE — cross-session transport discipline
 candidate_id: CAND-20260819-XPORT
-revision: 1
+revision: 2
 task_id: XPORT-ROUTING-001
 author: plan
 authored_on: 2026-08-19
@@ -11,6 +11,14 @@ domain: CONTROL PLANE — governance/candidates/ is a declared CONTROL_PLANE_ROO
 partition: SPLIT — Candidate A (this one) is TRANSPORT. Candidate B (ROUTING) is NOT opened, and
   §10 states the three preconditions that block it, none of which Plan may satisfy alone
 human_approval: NOT REQUESTED — no APPROVAL_ID is prefilled here, and none exists
+revision_2: remediates M-1 of REV-XPORT-MIRROR-001, the single blocking finding. The remedy is in
+  CONTENT — the protocol's own frontmatter and §11, plus a new §11.1 carrying the property, its
+  three permitted name classes and the semantic falsifier. §15 records the disposition of every
+  finding. No transport rule changed; routing not reopened; T-TRANSPORT-1 still NOT_RUN
+supersedes: revision 1, CANDIDATE_CONTENT_HASH 68173f010392e57b1b7cf252df6efa8b6fe7c017f563584bf3cd10695978c96a
+  at content tip f48a807f7ba7b5b71c0ba5dd5d2361fc7dca57e4. That binding is SUPERSEDED, not
+  withdrawn — it was correct for the tree it named, and Annex D.2 invalidates it because the
+  content moved
 ---
 
 # INTEGRATION_CANDIDATE — `CAND-20260819-XPORT`
@@ -22,19 +30,26 @@ CANDIDATE_ID              CAND-20260819-XPORT
 BASE_HEAD                 4454feab72b7a0edf65f191be62aeedd899a15ad   (canonical main, verified
                                                                       unchanged at session open
                                                                       and again at binding)
-SOURCE_COMMITS            f48a807f7ba7b5b71c0ba5dd5d2361fc7dca57e4   CONTENT — one commit
+SOURCE_COMMITS            f48a807f7ba7b5b71c0ba5dd5d2361fc7dca57e4   CONTENT — revision 1
+                          e839db38382781564a9767fe206eefd5fba0467c   CONTENT — revision 2, the
+                                                                      M-1 remediation + SLR-plan-0008
                           <this commit>                              CONTROL PLANE — manifest,
                                                                       author response, checkpoint,
                                                                       task record
-CONTENT_TIP               f48a807f7ba7b5b71c0ba5dd5d2361fc7dca57e4
+CONTENT_TIP               e839db38382781564a9767fe206eefd5fba0467c
 CANDIDATE_HASH_VERSION    legend-candidate-v4
-CANDIDATE_CONTENT_HASH    68173f010392e57b1b7cf252df6efa8b6fe7c017f563584bf3cd10695978c96a
-                          531 included · 33 excluded
+CANDIDATE_CONTENT_HASH    81f241f26ed668ee02e6b04d191c98a4deaa025355d9212bc999b80c6e056e1f
+                          532 included · 38 excluded
+SUPERSEDED_HASH           68173f010392e57b1b7cf252df6efa8b6fe7c017f563584bf3cd10695978c96a
+                          revision 1, at content tip f48a807 — correct for its tree, invalidated
+                          by the content change (Annex D.2 binding rule)
 CHANGE_CLASS              MAJOR — it introduces a normative protocol that binds every actor
                           (Annex G.1: protocols/governance ⇒ MIRROR_REQUIRED; body §12)
 LINT_RESULT               PASS — 1 pre-existing INFO
 PUBLICATION_GATE          PASS / BLOCKS: 0
-MIRROR_REVIEW             n/a — not yet opened
+MIRROR_REVIEW             REV-XPORT-MIRROR-001 — REQUEST CHANGES on M-1, CONFIRMED on every other
+                          axis. M-1 remediated in CONTENT at this revision (§15). Revision 2 has
+                          NOT been reviewed; a second Mirror review is required and not assumed
 HUMAN_APPROVAL            n/a — not requested, not prefilled
 SNAPSHOT_ID               n/a until canonical execution — GATE 4 belongs to Orchestrator
 ```
@@ -44,16 +59,27 @@ SNAPSHOT_ID               n/a until canonical execution — GATE 4 belongs to Or
 ```bash
 python3 governance/scripts/candidate_content_hash.py \
     --base 4454feab72b7a0edf65f191be62aeedd899a15ad \
-    --tip  f48a807f7ba7b5b71c0ba5dd5d2361fc7dca57e4
+    --tip  e839db38382781564a9767fe206eefd5fba0467c
 ```
 
-**Reproduced five ways before being written down.** Three runs of the governed script, identical.
-One independent route that does not use the script — `git ls-tree -r --full-tree` read as raw
-bytes through an argv list and never through a shell, path-sorted, every entry newline-terminated
-per P5.2 — which returns `531 / 33` and the same digest. One **positive control**: the published
-`beef6db08bdf…` of `CAND-20260818-SCIENTIST-AB-SPEC` reproduces exactly at its own base and tip.
-One **negative control**: the same tip against the wrong base returns `c076dee8…`, so the base is
-genuinely inside the hash.
+**Reproduced six ways before being written down**, at revision 2. Two runs of the governed script
+— one in the `evidence-index` worktree, one in a clean detached worktree at the content tip —
+identical. One independent route that does not use the script: `git ls-tree -r --full-tree` read
+as raw bytes through an argv list and never through a shell, path-sorted, every entry
+newline-terminated per P5.2, control-plane roots applied as prefixes. It returns `532 / 38` and
+the same digest, so the count is reproduced as well as the hash.
+
+**Two positive controls.** The published `beef6db08bdf…` of `CAND-20260818-SCIENTIST-AB-SPEC`
+reproduces exactly at its own base and tip; and **revision 1's own `68173f01…c96a` reproduces
+exactly at `f48a807`**, which is the control that matters here — it shows the recipe is unchanged
+and that the digest moved because the *content* moved, not because the instrument did.
+
+**Three negative controls, with their independence verified first.** The revision-2 tip against
+`main^` (`cbce3016`) returns `bf3b9092…`; against `main^^` (`f5b32155`) returns `49a32274…`; and
+`main^` and `main^^` were compared and confirmed **distinct commits before** their disagreement
+was read as evidence — the void-control failure recorded in `SLR-mirror-0015` L-4, avoided by
+checking rather than by luck. The correct base against the *revision-1* tip returns
+`68173f01…c96a`, so tip and base are both genuinely inside the hash.
 
 **The control-plane commit is expected to leave the hash unchanged**, because everything in it is
 under `governance/candidates/`, `reviews/` or `ledger/`. §12 re-derives the hash at the manifest
@@ -86,15 +112,35 @@ says so in the text rather than leaving it to be discovered.
 
 | path | change | domain | class |
 |---|---|---|---|
-| `framework/protocols/cross_session_transport.md` | **added** | CONTENT — hashed | **NORMATIVE** — the protocol |
+| `framework/protocols/cross_session_transport.md` | **added**, then **amended at revision 2** | CONTENT — hashed | **NORMATIVE** — the protocol |
 | `framework/protocols/index.md` | modified — one row | CONTENT — hashed | navigational |
 | `governance/design_records/runtime_harness_probe_20260819.md` | **added** | CONTENT — hashed | **NON-NORMATIVE** — provenance, binds nobody (`design_records/README.md`) |
 | `learning/plan/SLR-plan-0007.md` | **added** | CONTENT — hashed (P5.1: `learning/` is CONTENT by intent) | Session Learning Record, E.6 |
 | `learning/plan/SLR-plan-0006-COR-001.md` | **added** | CONTENT — hashed | correction record, appended never edited |
+| `learning/plan/SLR-plan-0008.md` | **added at revision 2** | CONTENT — hashed | Session Learning Record, E.6 — the remediation session |
 | `governance/candidates/CAND-20260819-XPORT.md` | **added** | CONTROL PLANE | this manifest |
-| `reviews/plan/AUTHOR-RESPONSE-SCIAB-MIRROR-006.md` | **added** | CONTROL PLANE | the owed author response |
+| `reviews/plan/AUTHOR-RESPONSE-SCIAB-MIRROR-006.md` | **added** | CONTROL PLANE | the owed author response, SCIAB |
+| `reviews/plan/AUTHOR-RESPONSE-XPORT-MIRROR-001.md` | **added at revision 2** | CONTROL PLANE | the owed author response, Annex C.2 |
+| `governance/candidates/HANDOFF-XPORT-MIRROR.md` | **added**, re-issued at revision 2 | CONTROL PLANE | the Mirror review package |
 | `ledger/checkpoints/plan/CHK-plan-0017.json` | **added** | CONTROL PLANE | Annex A.6 checkpoint |
 | `ledger/tasks/plan/XPORT-ROUTING-001.json` | **added** | CONTROL PLANE | task record |
+
+**Revision 2 touches exactly two CONTENT paths**: the protocol, in three places, and one new
+Session Learning Record.
+
+```bash
+git diff --name-only c748d27 e839db3          # prior tip → revision-2 content tip
+# → framework/protocols/cross_session_transport.md
+#   learning/plan/SLR-plan-0008.md
+```
+
+🔴 **The check that first suggested itself was wrong, and is recorded rather than replaced
+silently.** `git diff --name-only f48a807 e839db3` returns **seven** paths, not two, because the
+three control-plane commits of revision 1 sit inside that range. Diffing the two *content* tips
+across an interval containing control-plane commits does not isolate content; either diff from the
+immediately prior tip, as above, or filter the declared `CONTROL_PLANE_ROOTS` out of the range
+diff — both return the same two paths. The error was caught by running the command before the
+sentence claiming its output was allowed to stand.
 
 **Nothing scientific is touched.** The four current files, the state manifest, every registry and
 the receipt ledger are unmodified. No role contract is edited, so **no role fingerprint moves and
@@ -102,31 +148,50 @@ no in-flight checkpoint is invalidated** — a deliberate scoping choice, see §
 
 ---
 
-## 4 · Evidence, re-run in this session against this tree
+## 4 · Evidence, re-run at revision 2 in a clean detached worktree at the content tip
+
+Not inherited from revision 1 and not inherited from the review. Every value below was produced
+this session at `e839db38`, in a detached worktree created for the purpose, never in root.
 
 ```
 LINT                    PASS — 1 pre-existing INFO (CLAIM 010 wikilink, background only)
 PUBLICATION GATE        PASS / BLOCKS: 0 — 4 [REVIEW] lines, all pre-existing
 GROWTH ANCHORS          PASS — claims 39 · papers 70 · corpus 356 · literature 390
+                        registry_only 15 · unread_premises 4
 RECEIPT LEDGER          OK — 128 chained receipts, tail anchored in the state manifest
-LEASE DERIVATION        ACTIVE by derivation: 0 (record on branch `orchestrator`, 7 leases)
-GOVERNANCE FINGERPRINTS recomputed in this worktree — scientist 82423a48b700bc…,
-                        plan 9c0c13fb2cba98…, mirror 3dff8954d4f6a5…, orchestrator e2c5447056…
+GOVERNANCE FINGERPRINTS recomputed at BOTH trees and compared —
+                        scientist 82423a48b700bc… · plan 9c0c13fb2cba98…
+                        mirror 3dff8954d4f6a5…   · orchestrator e2c544705e623a…
+                        IDENTICAL at BASE_HEAD and at the revision-2 content tip, which is the
+                        measured form of the claim in §3 that no role contract is touched and
+                        therefore no in-flight checkpoint is invalidated
 ```
 
-### 4.1 · Release regressions — measured SET-WISE at both trees, not by count
+Every one of these reproduces revision 1's published value exactly, which is the expected result
+of a change confined to one protocol and one learning record — stated here as a measurement, not
+as an expectation that was assumed.
+
+### 4.1 · Release regressions — measured SET-WISE and NAME-WISE at both trees
+
+Two clean detached worktrees, one at `BASE_HEAD` and one at the revision-2 content tip. **No
+`timeout` wrapper** — `timeout` does not exist on this platform, and wrapping a run in a missing
+binary returns exit 0 having executed nothing (`SLR-mirror-0015` L-4). The verdict below was read
+out of the output, never off an exit code.
 
 ```
-                                    BASE_HEAD 4454feab      CANDIDATE f48a807
-                                    (detached worktree)     (this worktree)
+                                    BASE_HEAD 4454feab      REVISION 2 e839db38
+                                    (detached worktree)     (detached worktree)
 suites RUN                          65                      65
 tests executed                      953                     953
 suites failing                      6                       6
+individual tests failing            7                       7
 
-set difference of failing suites:   EMPTY — DELTA 0
+set difference of failing suites:   EMPTY both directions  →  DELTA 0
+set difference of failing tests:    EMPTY both directions  →  DELTA 0
+suites-run list identical:          TRUE
 ```
 
-The six are identical at both trees, name for name:
+The six failing suites are identical at both trees, name for name:
 
 ```
 scripts/test_release_runner_verdict.py
@@ -137,10 +202,24 @@ scripts/test_fulltext_trace_contract.py
 framework/scripts/test_session_self_eval.py
 ```
 
-**They are pre-existing and this candidate neither causes nor repairs them.** The comparison was
-run in a fresh detached worktree at `BASE_HEAD`, not inherited from any earlier manifest, and it
-is a **set** comparison: two runs with equal failure counts over different failures would pass a
-count check and fail this one.
+**And one level deeper — the seven individual failing tests, identical at both trees:**
+
+```
+framework/scripts/test_session_self_eval.py :: SelfEvalGate.test_diagnosis_is_wired_before_growth_and_takeaways
+scripts/test_abstract_corpus_is_not_evidence.py :: InstructionSurfacesCarryTheDistinction.test_the_bootstrap_bounds_the_corpus
+scripts/test_fulltext_trace_contract.py :: FulltextTraceContractTests.test_normative_layers_make_receipts_universal
+scripts/test_fulltext_trace_contract.py :: FulltextTraceContractTests.test_normative_write_rules_name_the_append_only_carveout
+scripts/test_locator_obligation_reaches_every_route.py :: ObligationReachesEveryRoute.test_the_bootstrap_states_the_rule
+scripts/test_release_runner_verdict.py :: EveryTestSuiteIsActuallyRun.test_every_tracked_test_file_is_in_the_runner
+scripts/test_release_surface.py :: ReleaseSurfaceTests.test_shebang_python_entrypoints_are_executable
+```
+
+**They are pre-existing and this candidate neither causes nor repairs them.** `ADDED: none`,
+`REMOVED: none`, at both granularities. The comparison is set-wise because two runs with equal
+failure *counts* over different failures would pass a count check and fail this one — and it is
+then repeated at test-name level because a suite that fails for a new reason at an unchanged
+count would pass even the suite-level set check. Root was never written, cleaned or read
+destructively, so no environmental state of the workstation enters the comparison.
 
 ---
 
@@ -431,6 +510,28 @@ per-field table, §5's taxonomy, §8's six-term conjunction and §9's five refus
 over *any actor*. The names appear only where the protocol is quoting what was measured, and a
 measurement that names its subjects is more checkable, not less general.
 
+#### 9.1b-R2 · 🔴 This section was the wrong place to fix it, and revision 2 moves the repair
+
+Everything above is true and stays. It was also **insufficient**, and Mirror's `M-1` is exactly
+why: this manifest is under `governance/candidates/`, a declared `CONTROL_PLANE_ROOT`. It moves no
+hash, it does not canonicalize, and it will not be read beside the protocol by anyone who meets
+that protocol in `main` a year from now. The protocol's own frontmatter and its §11 went on
+asserting that it *names* no actor, role, worktree or benchmark — **two sentences that the table
+above disproves, in the artifact that canonicalizes.** The concession and the defect sat on
+opposite sides of the seam.
+
+Revision 2 repairs it in CONTENT. See §15 for the disposition and the exact edits; the corrected
+property, its three permitted name classes and the semantic falsifier now live in the protocol's
+new §11.1, and `T-GENERIC-1` in the protocol's §10 records the falsifier as an executed test
+rather than as advice to a reviewer.
+
+🔴 **One correction to the table above, found while remediating.** The corrected claim as written
+here says every one of the eight occurrences is *"a citation or a measurement"* — **and the same
+table types line 5 as front-matter status**, which is neither. Mirror's §10 reaches the same
+three-way split independently, typing line 5 `FRAMEWORK RULE`. Revision 2's protocol text
+therefore carries **three** classes, not two. The two-class summary is left standing here as the
+record of what was written, with its own table as the disproof.
+
 ### 9.2 · The Scientist D falsifier
 
 ```
@@ -573,20 +674,35 @@ prevent. That is recorded as `SLR-plan-0007` L-4.
 ## 12 · Binding
 
 ```
-BASE_HEAD               4454feab72b7a0edf65f191be62aeedd899a15ad
-CONTENT TIP             f48a807f7ba7b5b71c0ba5dd5d2361fc7dca57e4
-CANDIDATE_CONTENT_HASH  68173f010392e57b1b7cf252df6efa8b6fe7c017f563584bf3cd10695978c96a
+REVISION                2
+BASE_HEAD               4454feab72b7a0edf65f191be62aeedd899a15ad     verified unchanged at
+                                                                     session open and at binding
+CONTENT TIP             e839db38382781564a9767fe206eefd5fba0467c
+CANDIDATE_CONTENT_HASH  81f241f26ed668ee02e6b04d191c98a4deaa025355d9212bc999b80c6e056e1f
+                        532 included · 38 excluded
 CANDIDATE_HASH_VERSION  legend-candidate-v4
+SUPERSEDED BINDING      68173f010392e57b1b7cf252df6efa8b6fe7c017f563584bf3cd10695978c96a
+                        revision 1, content tip f48a807
 MANIFEST TIP            recorded in §14 after the control-plane commit exists, together with the
                         re-derivation of the hash at that tip
 ```
 
-The commits between the two tips touch only `governance/candidates/`, `reviews/` and `ledger/`,
-all declared `CONTROL_PLANE_ROOTS` (P5.1), so the hash is expected to be identical at both. §14
-**states the measured result** rather than asserting the expectation.
+**Revision 1's binding is SUPERSEDED, and the word is chosen.** It was not wrong: it is still the
+correct digest of the tree it named, and it reproduces exactly today — §1 uses it as a positive
+control for that reason. Annex D.2 invalidates it because *"qualsiasi modifica materiale"* to the
+bound content invalidates the binding attached to it, and the M-1 repair is a material change to
+the normative artifact. Nothing approved was withdrawn, because nothing was ever approved.
 
-**No `HUMAN_APPROVAL` is prefilled.** No `APPROVAL_ID` exists for this candidate, no approval has
-been requested, and Mirror review has not been opened.
+The commits between the content tips touch only `governance/candidates/`, `reviews/` and
+`ledger/`, all declared `CONTROL_PLANE_ROOTS` (P5.1), so the hash is expected to be identical at
+every tip after `e839db38`. §14 **states the measured result** rather than asserting the
+expectation.
+
+**No `HUMAN_APPROVAL` is prefilled.** No `APPROVAL_ID` exists for this candidate, and no approval
+has been requested. **Mirror review of revision 1 is complete — `REV-XPORT-MIRROR-001`,
+`REQUEST CHANGES`. Revision 2 has not been reviewed**, and this manifest does not treat the
+revision-1 verdict on the other axes as carrying forward to a tree Mirror has not seen. That is
+the reviewer's determination to make, not the author's.
 
 ---
 
@@ -677,9 +793,122 @@ tip and states the result in its message.** The invariant a reviewer should chec
 manifest tip is final* — it never is — but **`included` stays 531 and the digest stays
 `68173f01…` at every tip on this branch after `f48a807`.**
 
+### 14.1 · Revision 2 — the same invariant, re-measured against the new content tip
+
+The revision-1 invariant above **has now terminated, correctly and by design**: `included` moved
+531 → 532 and the digest moved, because CONTENT moved. That is the rule working, not the rule
+breaking. The invariant that binds from here is the revision-2 one.
+
+```
+CONTENT TIP (revision 2)  e839db38382781564a9767fe206eefd5fba0467c
+measured there            81f241f26ed668ee02e6b04d191c98a4deaa025355d9212bc999b80c6e056e1f
+                          532 included · 38 excluded
+MANIFEST TIP              <the commit carrying this section>
+re-derived there          stated in that commit's own message, measured not assumed
+WHY included MOVES 531→532   learning/plan/SLR-plan-0008.md is CONTENT (P5.1: `learning/` is
+                             CONTENT by intent). The protocol edit changes a blob id, not a count
+WHY excluded MOVES 33→38     the five control-plane paths added since f48a807 — this manifest, the
+                             handoff, two ledger records and the SCIAB author response
+```
+
+```bash
+# the check that matters, runnable at any tip of this branch at or after e839db38
+python3 governance/scripts/candidate_content_hash.py \
+    --base 4454feab72b7a0edf65f191be62aeedd899a15ad --tip <any tip ≥ e839db38>
+# expect: included 532 · 81f241f26ed668ee02e6b04d191c98a4deaa025355d9212bc999b80c6e056e1f
+```
+
+🔴 **A reviewer running the revision-1 command will get the revision-1 answer, and should.**
+`--tip f48a807` still returns `68173f01…` with `531 / 33`. Both statements are true of different
+trees, which is the whole point of binding a hash to a named tip — and it is why §1 uses the old
+value as a positive control rather than deleting it.
+
 ```bash
 # the check that matters, runnable at any tip of this branch
 python3 governance/scripts/candidate_content_hash.py \
     --base 4454feab72b7a0edf65f191be62aeedd899a15ad --tip <any tip ≥ f48a807>
 # expect: included 531 · 68173f010392e57b1b7cf252df6efa8b6fe7c017f563584bf3cd10695978c96a
 ```
+
+---
+
+## 15 · Revision 2 — disposition of every finding in `REV-XPORT-MIRROR-001`
+
+The full author response is `reviews/plan/AUTHOR-RESPONSE-XPORT-MIRROR-001.md` (Annex C.2,
+mandatory, silence is not acceptance). This section carries the dispositions that bear on the
+binding.
+
+| finding | class | disposition |
+|---|---|---|
+| **M-1** two false self-describing sentences in the normative artifact | 🔴 BLOCKING | **REPAIRED IN CONTENT** at `e839db38`. Frontmatter `actor_scope` and §11's bullet replaced; new §11.1 carries the property, the three permitted name classes and the semantic falsifier; `T-GENERIC-1` added to §10 and executed |
+| **M-2** canonical P5.1's `runtime/` rationale is false today | NON-BLOCKING, BASE_HEAD's | **CONFIRMED INDEPENDENTLY, NOT REPAIRED.** See §15.2 |
+| **M-3** "third binary" confirmed, "third version" not | OBSERVATION | **ACCEPTED.** The candidate and the design record already carry the accurate form; the looser paraphrase is not adopted and must not travel into Candidate B |
+| **O-1** `T-TRANSPORT-6`/`-7` better typed `PASS_BY_DESIGN — NOT EXECUTED` | NON-BLOCKING | **ACCEPTED, NOT ACTED ON in this revision.** Retyping four test rows is not part of remediating M-1, and doing it here would widen the object under review. Carried |
+| **O-2** `KERNEL_SPEC` cited without a version or commit pin | NON-BLOCKING | **ACCEPTED, carried.** A pin is right and it is a change to a citation the review confirmed sound; not bundled into a blocking-finding repair |
+| **O-3** the `to` boundary between 201 and 212 is a bracket, not a boundary | NON-BLOCKING | **ACCEPTED.** The protocol claims the declared bound plus one rejection above it and nothing more. No text change needed; recorded so it does not harden |
+
+### 15.1 · What M-1's repair does NOT do
+
+```
+TRANSPORT BEHAVIOR        UNCHANGED. §§0–9 of the protocol are byte-identical between f48a807
+                          and e839db38 — measured, not asserted. The durable payload rule,
+                          control envelope, depth rule, message-budget refusal, version binding,
+                          per-field size table, outcome taxonomy, discovery/liveness distinction,
+                          recipient-processing classes, the six-term handoff conjunction and
+                          §9's five refusals are all untouched
+RUNTIME-SCOPE MODEL       PRESERVED — endpoint/interaction-scoped, not a single global version.
+                          Mirror's revalidation at 2.1.233 stands as evidence and is not
+                          flattened; no new runtime claim is added at this revision
+SUMMARY                   still NON-AUTHORITATIVE, by the same mechanism-based reasoning
+T-TRANSPORT-1             still NOT_RUN. A new revision is not new evidence, and no
+                          routing-neutral execution mechanism exists. None was created
+ROUTING                   not reopened, not solved, not silently advanced. No registrar, no
+                          activation, no CURRENT assignment, no supersession, no generation
+SCOPE                     no Scientist activated · BENCH-AB-001 not started · main unchanged
+```
+
+The one addition to the acceptance table, `T-GENERIC-1`, is a test **about this document's own
+generality**, not a transport rule. It adds no obligation to any sender or recipient.
+
+**The `§§0–9 unchanged` claim is a measurement, and here is the command that produced it:**
+
+```bash
+for TIP in f48a807 e839db3; do
+  git show $TIP:framework/protocols/cross_session_transport.md \
+    | awk '/^## 0 · /,/^## 10 · /' | sed '$d' | shasum -a 256
+done
+# both → 91875ff763a6655caeafbf26026e15da0b9b72414ab3be7b43f6aa94b8cb98ad   372 lines each
+```
+
+Every executable transport clause lives inside that range. The three edits are outside it: the
+frontmatter `actor_scope`, one row appended to §10's table, and §11 with its new §11.1.
+
+### 15.2 · `M-2` — confirmed at source, and left with its owner
+
+Verified independently this session, not taken on report:
+
+```
+CANONICAL P5.1 @ main   "While `runtime/` remains untracked it is invisible to `git ls-tree` and
+                         therefore absent from the domain, so no fixed point arises in the interim."
+MEASURED @ main          `git ls-tree -r --name-only main | grep '^runtime/'`
+                         → runtime/orchestrator_lease.md          IS TRACKED
+MEASURED in the domain   the emitted domain for this candidate lists it at entry 496 of 532
+                         → runtime/orchestrator_lease.md          IS INSIDE THE HASH
+CORROBORATED             deployment/deployment_profile.md — the lease "has moved to
+                         runtime/orchestrator_lease.md, tracked." Canonical, one file away
+```
+
+**Classification: `SEPARATE_GOVERNANCE_DEBT`, confirmed.** The premise is false today, and the
+consequence Mirror names is real — an Orchestrator lease write on a candidate branch would move
+that candidate's content hash, which is the fixed-point class P5.1 exists to prevent.
+
+**Not repaired here, and the reason is the one Mirror already accepted for the five artifacts of
+§7**: P5 is canonical text at `BASE_HEAD`, editing it is a governed change belonging to whichever
+candidate next opens P5, and XPORT's binding must follow canonical P5 **as actually implemented**
+rather than Plan's hypothetical correction of it. XPORT neither introduces nor relies on the
+defect: this candidate's hash is correct under the rule as executed, the script's behaviour
+matches the declared roots, and no lease was written on this branch.
+
+It is recorded as a fifth instance of the shape §7 documents — a true conclusion carried by a
+premise that has quietly stopped being true — which is now the second time that pattern has been
+found by someone other than the author of the artifact carrying it.

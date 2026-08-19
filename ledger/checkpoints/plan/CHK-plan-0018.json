@@ -1,0 +1,91 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_domain": "CONTROL PLANE — ledger/ is a declared CONTROL_PLANE_ROOT (P5.1)",
+  "_note": "Second checkpoint of task XPORT-ROUTING-001, written by a NEW Plan session that rehydrated fail-closed from durable state. Nothing below was carried from conversation, from CHK-plan-0017, or from the Mirror review's summary of it: every value was re-derived this session from git or from a command run in this worktree or in a clean detached worktree.",
+  "CHECKPOINT_ID": "CHK-plan-0018",
+  "SUPERSEDES": "CHK-plan-0017 — same task XPORT-ROUTING-001, same directive version, same generation. It is superseded because the candidate advanced to revision 2, not because anything in it was found wrong.",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "XPORT-ROUTING-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+  "FINGERPRINT_COMPOSITION": "CORE + Annex D + Annex E + Annex I + Annex J §J.1, per plan_defined_parameters.md P2.2, recomputed this session by governance/scripts/governance_fingerprint.py at BOTH the BASE_HEAD tree and the revision-2 content tip. Identical at both, which is the measured form of the claim that no role contract is touched.",
+  "GOVERNANCE_VERSION": "3.1.1",
+  "TIMESTAMP": "2026-08-19",
+  "TIMESTAMP_PRECISION": "date only",
+  "REHYDRATION": {
+    "worktree": "evidence-index",
+    "worktree_matches_git_toplevel": true,
+    "pwd": "/Users/massimo/Desktop/legend-public/.claude/worktrees/evidence-index",
+    "branch_at_open": "xport",
+    "head_at_open": "c748d271de57c9bb73b755184401fddd6e614833",
+    "tree_at_open": "clean — 0 porcelain entries",
+    "role_contract_read": "roles/plan.md in full — mandate, permitted and forbidden writes, the epistemic boundary, declared capabilities and their UNVERIFIED status, fingerprint set, session obligations",
+    "authority_read_at_source": "GOVERNANCE_v3.1.1 §15 §16 §29.2 GATE 1 §33; Annex C in full (C.1-C.4), Annex D in full (D.1-D.5), Annex E.6, plan_defined_parameters P5.1-P5.3",
+    "stable_actor_identity": "plan · worktree evidence-index · roles/plan.md · PERSISTENT_LEGEND_ACTOR · governance 3.1.1 — reconstructed from durable repository state alone",
+    "current_session_routing": "NOT CLAIMED. No SESSION_REF is invented here, this session does not declare itself CURRENT or ROUTABLE, and no registrar exists to declare it. Stable actor identity and current session routing are different things and only the first is reconstructible today.",
+    "authority_boundary": "may prepare and revise an INTEGRATION_CANDIDATE with manifest, and refuse integration on structural, provenance, schema or protocol grounds; may NOT execute CANONICAL_BATCH_COMMIT (GATE 1: proponente != esecutore), act as command authority, resolve contested scientific meaning (§28), use main or the root checkout as working space, or grant HUMAN_APPROVAL",
+    "relation_to_mirror": "Plan proposes, Mirror reviews. AUTHOR != REVIEWER != ADJUDICATOR (C.3). Epistemic curation of learning is Mirror's under E.2; durability of learning is Plan's. Plan does not open a review — Annex C.3 gives that to Orchestrator.",
+    "relation_to_orchestrator": "assignment arrives by TASK CONTRACT (Annex A); escalation route for ordinary matters is Orchestrator, never the operator directly (§9.5); canonical execution is Orchestrator's alone under lease and gates",
+    "no_essential_fact_from_conversation": true,
+    "verdict": "PLAN REHYDRATION: PASS"
+  },
+  "VERIFIED_STATE": {
+    "canonical_main": "4454feab72b7a0edf65f191be62aeedd899a15ad — verified from git at session open and again at binding, UNCHANGED",
+    "revision_1_content_tip": "f48a807f7ba7b5b71c0ba5dd5d2361fc7dca57e4 — verified an ancestor of HEAD",
+    "revision_1_hash_reproduced": "68173f010392e57b1b7cf252df6efa8b6fe7c017f563584bf3cd10695978c96a — reproduced this session as a POSITIVE CONTROL before any edit, and again after",
+    "mirror_review_read": "reviews/mirror/REV-XPORT-MIRROR-001.md @ dbd44feee5ae8fac4430529ccc560e05d2c37e3d, read in full from durable git state, together with learning/mirror/SLR-mirror-0015.md"
+  },
+  "MILESTONES_REACHED": [
+    "identity rehydrated fail-closed from durable evidence; stable identity distinguished from current session routing",
+    "revision 1 state verified from git, not from report; revision-1 hash reproduced as positive control",
+    "Mirror review and Mirror SLR read in full at their review commit",
+    "M-1 reproduced independently before editing: two false assertions located at lines 16 and 424, eight name occurrences enumerated and classified",
+    "true property derived from the protocol itself, with three name classes rather than the two the review's suggested wording allowed",
+    "M-1 repaired in CONTENT at e839db38 — frontmatter, §11 bullet, new §11.1, plus T-GENERIC-1 in §10",
+    "T-GENERIC-1 executed: 9 changed lines, none normative; first run of the instrument found void and re-run",
+    "regression accounting reproduced in two clean detached worktrees, set-wise and test-name-wise, delta 0",
+    "SLR-plan-0008 written and committed BEFORE binding",
+    "revision-2 binding established and independently reproduced, with two positive and three negative controls"
+  ],
+  "OBJECT": {
+    "candidate_id": "CAND-20260819-XPORT",
+    "revision": 2,
+    "base_head": "4454feab72b7a0edf65f191be62aeedd899a15ad",
+    "content_tip": "e839db38382781564a9767fe206eefd5fba0467c",
+    "candidate_content_hash": "81f241f26ed668ee02e6b04d191c98a4deaa025355d9212bc999b80c6e056e1f",
+    "candidate_hash_version": "legend-candidate-v4",
+    "domain_cardinality": "532 included · 38 excluded",
+    "superseded_binding": "68173f010392e57b1b7cf252df6efa8b6fe7c017f563584bf3cd10695978c96a",
+    "change_class": "MAJOR",
+    "mirror_review_of_revision_2": "REQUIRED, NOT PERFORMED, NOT ASSUMED",
+    "human_approval": "NONE — not requested, not prefilled, not implied"
+  },
+  "GATES_EVIDENCED_BY_PLAN": {
+    "lint": "PASS — 1 pre-existing INFO (CLAIM 010 wikilink)",
+    "publication_gate": "PASS / BLOCKS: 0 — 4 [REVIEW] lines, all pre-existing",
+    "growth_anchors": "PASS — claims 39 · papers 70 · corpus 356 · literature 390",
+    "receipt_ledger": "OK — 128 chained receipts, tail anchored in the state manifest",
+    "release_regressions": "65 suites · 953 tests at BOTH trees; 6 failing suites and 7 failing tests, IDENTICAL sets in both directions. ADDED: none. REMOVED: none.",
+    "instrument_discipline": "no `timeout` wrapper was used — it does not exist on this platform and returns exit 0 having executed nothing. Verdicts were read from output, never from exit codes.",
+    "transport_behavior_unchanged": "protocol §§0–9 byte-identical between f48a807 and e839db38, sha256 91875ff763a6655caeafbf26026e15da0b9b72414ab3be7b43f6aa94b8cb98ad, 372 lines at each"
+  },
+  "NOT_DONE_DELIBERATELY": {
+    "T-TRANSPORT-1": "NOT_RUN. Unchanged. A new revision is not new evidence, and no routing-neutral execution mechanism exists. None was created for this revision.",
+    "routing": "UNRESOLVED. Not solved, not silently advanced. No registrar, activation, CURRENT assignment, supersession or routing generation was introduced.",
+    "M-2 / P5 runtime premise": "CONFIRMED INDEPENDENTLY as a false premise in canonical P5.1 at BASE_HEAD, and NOT repaired. runtime/orchestrator_lease.md is tracked at main and is entry 496 of 532 in this candidate's emitted domain. Classified SEPARATE_GOVERNANCE_DEBT and routed to whichever candidate next opens P5.",
+    "O-1 / O-2": "accepted as correct, not acted on in this revision, and carried explicitly rather than dropped",
+    "carried_debts": "orchestrator worktree contradiction, root environmental sensitivity, four missing snapshot tags, SCIAB carried findings, HUMAN_APPROVAL_QUEUE divergence — all preserved unchanged, none repaired",
+    "scientists": "Scientist A NOT ACTIVATED · Scientist B NOT ACTIVATED · BENCH-AB-001 NOT STARTED",
+    "main": "UNCHANGED at 4454feab72b7a0edf65f191be62aeedd899a15ad",
+    "session_inventory": "not touched. No session was closed, killed, renamed, activated, superseded or cleaned. Root was not cleaned or written."
+  },
+  "DURABLE_POINTERS": {
+    "manifest": "governance/candidates/CAND-20260819-XPORT.md @ branch xport",
+    "protocol": "framework/protocols/cross_session_transport.md @ e839db38",
+    "author_response": "reviews/plan/AUTHOR-RESPONSE-XPORT-MIRROR-001.md @ branch xport",
+    "session_learning_record": "learning/plan/SLR-plan-0008.md @ e839db38",
+    "review_package": "governance/candidates/HANDOFF-XPORT-MIRROR.md @ branch xport",
+    "mirror_review": "reviews/mirror/REV-XPORT-MIRROR-001.md @ dbd44feee5ae8fac4430529ccc560e05d2c37e3d"
+  }
+}
