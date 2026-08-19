@@ -21,7 +21,7 @@ opens_by: Orchestrator (Annex C.3). Plan does not open its own review
 branch          orchestrator-surface
 BASE_HEAD       04693e683a254ff0a6d0619fba47103a0fb7d122
 CONTENT_TIP     7b6a9d9aeaf2a162fc16de4e4abdb713ddead603
-MANIFEST_TIP    <this commit>
+MANIFEST_TIP    c70087f67a57ca02ce5325c76178cdd61743443e
 CONTENT_HASH    b0a0c9ed6849521a1331a4d6c0850de252ae7c4b5e3b227a477b21f4386465d1
                 legend-candidate-v4 · 536 included · 47 excluded
 manifest        governance/candidates/CAND-20260819-ORCHSURF.md

@@ -40,7 +40,10 @@ BASE_HEAD                 04693e683a254ff0a6d0619fba47103a0fb7d122   (canonical 
 SOURCE_COMMITS            b3afdde4423b62fc7f0ddf18cc8183fb989fe1b2   CONTENT — revision 1
                           7b6a9d9aeaf2a162fc16de4e4abdb713ddead603   CONTENT — revision 2, the
                                                                       remediation + two SLRs
-                          <this commit>                              CONTROL PLANE — this manifest
+                          c70087f67a57ca02ce5325c76178cdd61743443e   CONTROL PLANE — this manifest,
+                                                                      recorded at the tip where it
+                                                                      was complete and the binding
+                                                                      was measured
 CONTENT_TIP               7b6a9d9aeaf2a162fc16de4e4abdb713ddead603
 CANDIDATE_HASH_VERSION    legend-candidate-v4
 CANDIDATE_CONTENT_HASH    b0a0c9ed6849521a1331a4d6c0850de252ae7c4b5e3b227a477b21f4386465d1
