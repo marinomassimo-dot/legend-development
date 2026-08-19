@@ -617,7 +617,35 @@ carries seven. **This candidate does not reconcile either and is not authorized 
 
 ---
 
-## 14 · Manifest tip and re-derivation
+## 14 · Manifest tip and re-derivation — measured, and the regress named
 
-*(completed by the control-plane commit that carries this manifest — see the commit message and
-§12; the value measured at the manifest tip is recorded there.)*
+```
+MANIFEST TIP (first)    268df0420a21b47c48dbedb4815ea428c76fb57f
+re-derived there        68173f010392e57b1b7cf252df6efa8b6fe7c017f563584bf3cd10695978c96a
+                        531 included · 37 excluded
+content tip value       68173f010392e57b1b7cf252df6efa8b6fe7c017f563584bf3cd10695978c96a
+                        531 included · 33 excluded
+IDENTITY                ✅ IDENTICAL. The four added paths are all under declared
+                        CONTROL_PLANE_ROOTS — governance/candidates/, reviews/, ledger/ ×2 —
+                        so `excluded` moves 33 → 37, `included` does not move at all, and the
+                        approved identity never moved.
+```
+
+Verified by `git diff --name-only f48a807 268df04`, which returns exactly those four paths and
+nothing else.
+
+**The regress, stated rather than hidden.** This section records a value measured at
+`268df0420a…`, and writing it down produces a *further* commit and therefore a further manifest
+tip. That is not a defect and it is not concealed: P5.1 exists precisely so that a manifest can
+describe a candidate without changing it, and the recording commit touches only
+`governance/candidates/`. **The commit that carries this section re-derives the hash at its own
+tip and states the result in its message.** The invariant a reviewer should check is not *the
+manifest tip is final* — it never is — but **`included` stays 531 and the digest stays
+`68173f01…` at every tip on this branch after `f48a807`.**
+
+```bash
+# the check that matters, runnable at any tip of this branch
+python3 governance/scripts/candidate_content_hash.py \
+    --base 4454feab72b7a0edf65f191be62aeedd899a15ad --tip <any tip ≥ f48a807>
+# expect: included 531 · 68173f010392e57b1b7cf252df6efa8b6fe7c017f563584bf3cd10695978c96a
+```
