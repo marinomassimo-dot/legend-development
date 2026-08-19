@@ -35,6 +35,13 @@ is legible, write the render into `output/renders/`, and declare it as a `source
 kind `figure` with its SHA-256. A caption is not a panel; a panel you did not open is a panel
 you did not read.
 
+🔴 **`output/renders/` holds image files and nothing else.** The verifier exempts a file there
+from the allowlist check and from the identifier scan **only when its bytes cannot be decoded as
+text** — because that exemption exists for pixels, which no scan can read. Anything decodable you
+put there is not a render, and `verify --post-read` reports it exactly as it would one directory
+away. Your prose, your notes and your quotations belong in the four declared output files; the
+render slot is for the images and their digests go in the manifest.
+
 ## 2 · What binds you
 
 Everything in `roles/scientist.md` and `framework/protocols/scientist_reading_modes.md` §3 —

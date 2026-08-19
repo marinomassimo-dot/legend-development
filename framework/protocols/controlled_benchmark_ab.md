@@ -281,12 +281,34 @@ file is a broken benchmark, and `verify` reports it.**
   own PMID — were found by running the tool against a synthetic output tree before any reader
   existed, and are recorded in the candidate's test evidence.*
 
-  **The blind spot is that one path, and `verify --post-read` prints it by name on every run.**
+  **That path is the *blind spot*, and `verify --post-read` prints it by name on every run.**
   It is computed as the intersection of `expected_output_paths` with
-  `forbidden_prior_output_paths`, so it cannot be wider than what the spec declares and cannot
-  be widened silently. Revision 1 skipped *everything under an output slot*, which was six
-  other forbidden paths wider than the collision it was written for; those six are checked
-  again (Mirror B-4).
+  `forbidden_prior_output_paths`, so it cannot be wider than what the spec declares. Revision 1
+  skipped *everything under an output slot*, which was six other forbidden paths wider than the
+  collision it was written for; those six are checked again (Mirror B-4).
+
+  🔴 **The blind spot is not the whole unchecked surface, and revision 2 said it was.** The
+  exemption lives in two spec keys — `expected_output_paths` **and** `expected_output_prefixes` —
+  and the census was computed over the first alone, so a decodable text file placed under
+  `output/renders/` passed with a `VERDICT: PASS` while the same bytes one directory away
+  produced two findings (Mirror `M-2`). Two things changed, and both are measured rather than
+  asserted:
+
+  1. **The prefix now admits only what the exemption was written for.** A file under a declared
+     output prefix is an expected output **when its bytes cannot be decoded as text** — a render
+     is pixels, and no scan can read pixels. A decodable file there is exempt from nothing: it
+     takes the allowlist check and the identifier scan it would take anywhere else, and `freeze`
+     puts it in `UNEXPECTED_FILE_SET` rather than counting it as work. The instructions say so
+     to the reader, so this is a rule and not a trap.
+  2. **The command enumerates the unchecked surface from the tree, per actor, on every run**,
+     under `[UNCHECKED]`, in three populations with no fourth: the blind-spot path when it is
+     occupied; each declared output that is present, whose content the scan does not read
+     because it must name the paper; and each file under a prefix whose bytes would not decode.
+     `[UNCHECKED SURFACE] n present file(s)` closes the list.
+
+  **The guarantee, stated so it can be falsified:** *no present file is skipped by both the
+  allowlist check and the identifier scan without being printed by name.* Falsify it with a file
+  that `verify --post-read` neither checks nor names.
 
 **Exactly what the three instruments guarantee, together and separately.** The vocabulary here
 is deliberately weaker than "we know who wrote this", because that is not available:
@@ -294,7 +316,7 @@ is deliberately weaker than "we know who wrote this", because that is not availa
 | Instrument | When | GUARANTEE_PROVIDED | FAILURE_MODE_STILL_POSSIBLE |
 |---|---|---|---|
 | `verify` (pre-handover) | before either reader sees anything | the slots were **empty**, every forbidden path was **absent**, no symlink, parity across the two surfaces, no identifier leak — all of it observed, not attested | nothing about what happens after handover |
-| `verify --post-read` | after the freeze | every forbidden path **except the printed blind spot** is still absent; nothing outside the allowlist and the declared output set is present; no symlink appeared | authorship at the blind-spot path; a file the reader opened outside the tree |
+| `verify --post-read` | after the freeze | every forbidden path **except the printed blind spot** is still absent; nothing outside the allowlist and the declared output set is present; no symlink appeared; **every present file whose bytes decode was scanned, and the ones that were not are printed by name under `[UNCHECKED]`** | authorship at the blind-spot path; a file the reader opened outside the tree; the content of a file it could not decode — named, never silent |
 | `freeze` + `verify-freeze` | at completion, and at any later moment | these bytes under these paths were present **when the freeze ran**; any later addition, removal or edit is detected set-wise; the actor and benchmark were read **from inside the tree**, so the receipt cannot be mislabelled | a substitution made **before** the freeze; the timestamp is this process's clock and nothing corroborates it |
 
 **Read together, the three bound the window and do not close it.** Before handover the tree
@@ -324,6 +346,32 @@ open a file by absolute path and quote nothing from it.
 
 Steps 5–9 each reach `main` only through an integration candidate. Nothing in the benchmark
 writes a `*_current.md`, the receipt ledger, or any registry.
+
+### 5.1 · The reading obligation this route instructs, carried here and not merely referenced
+
+Step 4 is a `complete_fulltext_read` in the sense of
+[`fulltext_read_receipt.md`](fulltext_read_receipt.md), and **being a benchmark relaxes nothing
+about it**. Stated here, in the route that instructs the reading, rather than left to the sibling
+protocol — a rule that lives only next door is a rule this route does not carry, and a new reading
+route that does not carry it is exactly how the obligation stopped reaching the canonical state on
+2026-08-04:
+
+- **`verbatim_locators` are captured while the document is open**, not reconstructed afterwards:
+  proposition · snippet · surface (`body | figure | table | supplement | abstract`) · artifact ·
+  anchor · `panel_text_relation`, written into `verbatim_locators.entries[]` of the reader's own
+  work manifest — the entry `framework/scripts/deepdive_manifest.py` accepts and its `SECTIONS`
+  gate requires. A `figure` surface is an attestation, not a quote, and says so.
+- **Every claim candidate resolves to at least one such entry**, against the packet by digest
+  (`scientist_reading_modes.md` §3.6); every entry's `artifact` is inside `ALLOWED_PATHS` or a
+  render the reader produced (§4.3).
+- **The coverage map carries no `not_read`**, over all nine sections.
+
+A reading declared complete without `verbatim_locators.entries[]` **is not complete**, and step 5
+does not repair it: the freeze records what was in the tree, it does not confer the depth that was
+not. Under §8.2 such a reading scores `EVIDENCE COVERAGE` and `PROVENANCE` on an empty locator
+set, and the blind audit of step 7 has no triple to audit — which is the measurable form of the
+same statement, and the reason this is a precondition of the benchmark rather than one of its
+outcomes.
 
 ---
 

@@ -161,20 +161,54 @@ def _entries(spec: dict[str, Any], key: str) -> list[dict[str, str]]:
     return list(spec[key])
 
 
-def _is_expected_output(rel: str, spec: dict[str, Any]) -> bool:
+def _under_expected_prefix(rel: str, spec: dict[str, Any]) -> str | None:
+    """The declared output prefix this path sits under, or None."""
+    for prefix in spec["expected_output_prefixes"]:
+        if rel.startswith(prefix):
+            return prefix
+    return None
+
+
+def _is_decodable_text(path: Path) -> bool:
+    """Can this tool read these bytes at all? The scan's reach, asked as a question.
+
+    The exemption under an output prefix is written on **bytes**, not on position, and
+    this is the predicate that decides it. Same rule the content scan uses to read a
+    file, so the two cannot disagree about which files are readable.
+    """
+    try:
+        path.read_text(encoding="utf-8", errors="strict")
+    except (UnicodeDecodeError, OSError):
+        return False
+    return True
+
+
+def _is_expected_output(rel: str, spec: dict[str, Any], path: Path) -> bool:
     """Is this the exact path a reader was TOLD to write, or a render under a slot?
 
-    🔴 The predicate `--post-read` used to apply was *"anywhere under an output slot"*,
-    and that is far wider than the blind spot it was written for. The blind spot is ONE
-    path — the reader's own manifest lands where LEGEND's prior manifest lives, because
-    `deepdive_manifest.py` derives that path from disease and PMID and cannot put it
-    elsewhere without breaking the validator. Six other forbidden paths sit under the
-    same two slots, collide with nothing the reader was asked to write, and were being
-    skipped along with it. They are checked again.
+    🔴 Revision 2's predicate was *"anywhere under an output slot"* narrowed to the exact
+    declared list **or** any path under `expected_output_prefixes`. The exact list is right.
+    The prefix was not: it exempted a path from the allowlist check AND from the content
+    scan **on position alone**, so a decodable text file placed at `output/renders/` — a
+    copy of prior LEGEND output, identifiers and all — passed `--post-read` with a
+    `VERDICT: PASS`, while the same bytes one directory away produced `NOT ALLOWLISTED`
+    plus `IDENTIFIER LEAK` (Mirror `M-2`).
+
+    So the prefix now admits only what the exemption was written for: **a render is
+    pixels**. A file under a declared output prefix is an expected output when this tool
+    **cannot decode its bytes**; a decodable one is not exempt from anything and takes the
+    same checks it would take anywhere else in the tree. That keeps every legitimate render
+    working — the instructions ask for image renders and nothing else — and leaves the
+    unchecked surface exactly the set `unchecked_surface()` enumerates and `verify` prints.
+
+    `path` is required rather than optional on purpose: a caller that cannot see the bytes
+    cannot decide this question, and an optional argument is how it would decide it anyway.
     """
     if rel in set(spec["expected_output_paths"]):
         return True
-    return any(rel.startswith(prefix) for prefix in spec["expected_output_prefixes"])
+    if _under_expected_prefix(rel, spec) is None:
+        return False
+    return not _is_decodable_text(path)
 
 
 def declared_blind_spots(spec: dict[str, Any]) -> list[str]:
@@ -183,9 +217,52 @@ def declared_blind_spots(spec: dict[str, Any]) -> list[str]:
     Computed, never asserted: it is the intersection of what the reader is told to write
     with what must not be present. Printing it on every `--post-read` run is the point —
     a blind spot named in a comment is a blind spot the reader of the output never sees.
+
+    This is the **exact-path** population only, and it is not the whole unchecked surface.
+    `unchecked_surface()` is; read that one before writing a sentence about what
+    `--post-read` establishes.
     """
     return sorted(set(spec["expected_output_paths"])
                   & set(spec["forbidden_prior_output_paths"]))
+
+
+def unchecked_surface(root: Path, spec: dict[str, Any]) -> dict[str, list[str]]:
+    """Everything `--post-read` does NOT establish about a file that is PRESENT, by path.
+
+    🔴 Mirror `M-2`: the census was computed over `expected_output_paths` while the
+    exemption was spread over that key **and** `expected_output_prefixes`, so three
+    artifacts asserted the unchecked region was one path when it was one path plus a
+    prefix. A derived number inherits the incompleteness of its inputs and looks
+    authoritative while doing it.
+
+    Three populations, and the code below is the argument that there is no fourth: every
+    present file is allowlisted input (fully checked), an exact declared output, under a
+    declared output prefix, or none of those — and the last case is reported by the
+    allowlist check, so it is never silent.
+
+      blind_spot            a forbidden path the reader occupies by construction; the path
+                            check is skipped there and authorship is not decidable post-read
+      scan_exempt_present   a declared output that is present: it must name the paper, so
+                            the identifier scan is not run over its content
+      undecodable_prefix    a file under a declared output prefix whose bytes could not be
+                            decoded — a render is pixels, and pixels are not scannable
+
+    Enumerated from the tree at run time, not from the spec, because what is exposed is
+    what is *there*: at handover all three are empty and the command says so.
+    """
+    blind = set(declared_blind_spots(spec))
+    exact = set(spec["expected_output_paths"])
+    census: dict[str, list[str]] = {"blind_spot": [], "scan_exempt_present": [],
+                                    "undecodable_prefix": []}
+    for path in iter_files(root):
+        rel = str(path.relative_to(root))
+        if rel in blind:
+            census["blind_spot"].append(rel)
+        elif rel in exact:
+            census["scan_exempt_present"].append(rel)
+        elif _under_expected_prefix(rel, spec) is not None and not _is_decodable_text(path):
+            census["undecodable_prefix"].append(rel)
+    return {key: sorted(value) for key, value in census.items()}
 
 
 def surface_root(out_root: Path, benchmark_id: str, actor: str) -> Path:
@@ -328,7 +405,8 @@ def cmd_verify(args: argparse.Namespace) -> int:
     for actor in actors:
         present = {str(path.relative_to(roots[actor])) for path in iter_files(roots[actor])}
         if args.post_read:
-            present = {rel for rel in present if not _is_expected_output(rel, spec)}
+            present = {rel for rel in present
+                       if not _is_expected_output(rel, spec, roots[actor] / rel)}
         for rel in sorted(present - allowed[actor]):
             findings.append(f"NOT ALLOWLISTED {actor}  {rel}")
 
@@ -373,8 +451,10 @@ def cmd_verify(args: argparse.Namespace) -> int:
             # check people learn to ignore. Found by running this on a synthetic output
             # tree before any reader ever saw the tool. The exemption is the EXACT declared
             # output set, not the whole slot: a file the reader was never asked to write is
-            # scanned wherever it sits.
-            if args.post_read and _is_expected_output(rel, spec):
+            # scanned wherever it sits — and under an output PREFIX it is exempt only if
+            # its bytes cannot be decoded at all (Mirror M-2). A render is pixels; a
+            # markdown file under output/renders/ is read here like any other.
+            if args.post_read and _is_expected_output(rel, spec, path):
                 continue
             if rel in exempt or not rel.endswith(suffixes):
                 continue
@@ -394,12 +474,33 @@ def cmd_verify(args: argparse.Namespace) -> int:
         digest, pairs = tree_digest(roots[actor])
         print(f"  {actor}  tree_sha256 {digest}  files {len(pairs)}")
     if args.post_read:
+        # 🔴 Two populations, printed separately because they are different objects: what
+        # the SPEC declares unchecked, and what is ACTUALLY unchecked in these trees.
+        # Revision 2 printed the first alone — the spec-level intersection — and three
+        # artifacts then said the unchecked region was that one path. It was that path plus
+        # everything a prefix admitted, and nothing printed the second half (Mirror M-2).
         for rel in blind:
-            print(f"  [BLIND SPOT] {rel}  — the reader writes here by construction; "
-                  "authorship is not decidable from a path post-read")
+            print(f"  [BLIND SPOT] {rel}  — declared: the reader writes here by "
+                  "construction; authorship is not decidable from a path post-read")
         if not blind:
-            print("  [BLIND SPOT] none — no declared reader output collides with a "
-                  "forbidden path")
+            print("  [BLIND SPOT] none declared — no declared reader output path collides "
+                  "with a forbidden path")
+        total = 0
+        for actor in actors:
+            census = unchecked_surface(roots[actor], spec)
+            total += sum(len(value) for value in census.values())
+            for rel in census["blind_spot"]:
+                print(f"  [UNCHECKED] {actor}  {rel}  — blind-spot path, PRESENT; whose "
+                      "bytes these are is not decidable here")
+            for rel in census["scan_exempt_present"]:
+                print(f"  [UNCHECKED] {actor}  {rel}  — declared output, present; its "
+                      "content is not scanned, because it must name the paper")
+            for rel in census["undecodable_prefix"]:
+                print(f"  [UNCHECKED] {actor}  {rel}  — under a declared output prefix and "
+                      "not decodable as text; its content was not scanned")
+        print(f"  [UNCHECKED SURFACE] {total} present file(s), each named above. That is the "
+              "whole of it: every other present file took the allowlist check, the "
+              "forbidden-path check and — where its bytes decode — the identifier scan.")
     if findings:
         print(f"VERDICT: FAIL — {len(findings)} finding(s). A surface that fails is rebuilt "
               "from the spec, never patched.")
@@ -409,11 +510,14 @@ def cmd_verify(args: argparse.Namespace) -> int:
     # the previous sentence claimed "allowlist is exhaustive, no prior output" over a tree
     # whose symlinks nothing had looked at.
     print("VERDICT: PASS — parity holds across the two surfaces; every present file is "
-          "allowlisted; no symlink; no forbidden prior-output path outside the printed "
-          "blind spot; no identifier leak in a scanned file.")
+          "allowlisted or is a declared output; no symlink; no forbidden prior-output path "
+          "outside the printed blind spot; every file whose bytes this tool could decode "
+          "was scanned, and none leaked an identifier.")
     print("  NOT CHECKED, and no clause above implies it: what a reader may open by "
           "absolute path outside this tree (Annex J.0); the authorship of bytes at a "
-          "blind-spot path; anything about a file this scan could not decode.")
+          "blind-spot path; the content of every file printed above as [UNCHECKED]. That "
+          "printed list is the whole unchecked surface — no present file is skipped by both "
+          "the allowlist check and the identifier scan without appearing in it.")
     return 0
 
 
@@ -452,18 +556,24 @@ def _git(root: Path, *arguments: str) -> str | None:
     return result.stdout.strip() if result.returncode == 0 else None
 
 
-def _classify(rel: str, spec: dict[str, Any] | None, actor: str) -> str:
+def _classify(rel: str, spec: dict[str, Any] | None, actor: str, path: Path) -> str:
     """input / output / unexpected — allowlist first, so scaffolding is not counted as work.
 
     The `.gitkeep` that holds an empty slot open sits under an output prefix and is
     allowlisted input. Testing the prefix first counted it as a reader's output and made
     OUTPUT_FILE_SET wrong in the one direction nobody would check.
+
+    🔴 It shares `_is_expected_output` with `verify` deliberately, and Mirror `M-2` is why
+    that matters: while the prefix admitted anything by position, a smuggled markdown file
+    at `output/renders/` was classified `role: "output"` here and left
+    `UNEXPECTED_FILE_SET` empty, so the freeze receipt agreed with the verifier about a
+    file neither of them had looked at. One predicate, one answer.
     """
     if spec is None:
         return "unclassified"
     if rel in _allowed_paths(spec, actor):
         return "input"
-    if _is_expected_output(rel, spec):
+    if _is_expected_output(rel, spec, path):
         return "output"
     return "unexpected"
 
@@ -521,7 +631,7 @@ def cmd_freeze(args: argparse.Namespace) -> int:
 
     digest, pairs = tree_digest(root)
     actor = assignment["actor_id"]
-    files = [{"path": rel, "sha256": sha, "role": _classify(rel, spec, actor)}
+    files = [{"path": rel, "sha256": sha, "role": _classify(rel, spec, actor, root / rel)}
              for rel, sha in pairs]
     outputs = [entry["path"] for entry in files if entry["role"] == "output"]
     unexpected = [entry["path"] for entry in files if entry["role"] == "unexpected"]

@@ -43,6 +43,9 @@ TOOL = ROOT / "framework/scripts/benchmark_input_surface.py"
 FORBIDDEN_COLLIDING = "disease-models/wwox/research/deepdive_manifests/PMID42397075.json"
 FORBIDDEN_NON_COLLIDING = (
     "disease-models/wwox/research/fulltext_dossiers/PMID42397075_partial_locators.md")
+# A real render's opening bytes. The point is only that they do not decode as UTF-8: that
+# is the predicate the prefix exemption is written on since revision 3 (Mirror M-2).
+PNG_BYTES = b"\x89PNG\r\n\x1a\n\x00\x00\x00\rIHDR\xff\xfe\xfd\x00\x01\x02\x03"
 
 
 def run(*arguments: str) -> subprocess.CompletedProcess:
@@ -220,13 +223,22 @@ class PostReadExclusionTests(SurfaceFixture):
     """Mirror B-4 — the exemption must be the declared output set, not the whole slot."""
 
     def _plausible_reading(self) -> None:
-        """What an honest reader leaves behind: its own manifest, dossier and receipt."""
+        """What an honest reader leaves behind: its own manifest, dossier, receipt, renders.
+
+        🔴 The render here is BYTES, not markdown. Until revision 3 this fixture wrote
+        `output/renders/fig1.md` and the tool passed it, which is exactly the hole Mirror
+        `M-2` names: the render slot was exempt by position, so a text file in it was
+        skipped by the allowlist check and by the scan. A render is pixels; the fixture
+        now says so, and `test_a_decodable_file_under_the_render_prefix_is_caught` is the
+        negative control that the old fixture was standing in front of.
+        """
         for surface in (self.a, self.b):
             write(surface / FORBIDDEN_COLLIDING, '{"pmid": "42397075"}\n')
             write(surface / "disease-models/wwox/research/fulltext_dossiers/PMID42397075.md",
                   "# dossier for PMID 42397075\n")
             write(surface / "output/receipt.json", '{"pmid": "42397075"}\n')
-            write(surface / "output/renders/fig1.md", "a render naming 42397075\n")
+            (surface / "output/renders").mkdir(parents=True, exist_ok=True)
+            (surface / "output/renders/fig1.png").write_bytes(PNG_BYTES)
 
     def test_positive_control_an_honest_reading_passes_post_read(self) -> None:
         """The reader's own outputs name the paper by construction and must not fire."""
@@ -265,6 +277,152 @@ class PostReadExclusionTests(SurfaceFixture):
         result = self.verify("--post-read")
         self.assertEqual(1, result.returncode, result.stdout)
         self.assertIn("SYMLINK", result.stdout)
+
+
+class ExpectedOutputPrefixTests(SurfaceFixture):
+    """Mirror M-2 — the exemption is spread over two keys, so both must be accounted for.
+
+    🔴 The defect these probe: `_is_expected_output()` admitted a path by the exact list OR
+    by `expected_output_prefixes`, and `declared_blind_spots()` intersected only the exact
+    list. So the prefix was an exemption that was never computed and never printed, and a
+    copy of prior LEGEND output at `output/renders/smuggled.md` passed `--post-read` with a
+    `VERDICT: PASS` and a `blind spot: size 1` beside it, while the same bytes one directory
+    away produced `NOT ALLOWLISTED` + `IDENTIFIER LEAK`.
+
+    Every case asserts the REASON and not only the exit code. `SLR-mirror-0010` §4 is the
+    argument: Mirror's own first battery reported 13/13 caught, and all thirteen were
+    `rc=2` from argparse rejecting an unknown flag before any check ran.
+    """
+
+    def _reading(self) -> None:
+        for surface in (self.a, self.b):
+            write(surface / FORBIDDEN_COLLIDING, '{"pmid": "42397075"}\n')
+            write(surface / "output/receipt.json", '{"pmid": "42397075"}\n')
+
+    def test_positive_control_a_binary_render_under_the_prefix_passes(self) -> None:
+        """The control: the exemption must still work for what it was written for."""
+        self._reading()
+        (self.a / "output/renders/fig3f.png").write_bytes(PNG_BYTES)
+        result = self.verify("--post-read")
+        self.assertEqual(0, result.returncode, result.stdout)
+        self.assertIn("VERDICT: PASS", result.stdout)
+        self.assertIn("[UNCHECKED] scientist-a  output/renders/fig3f.png", result.stdout)
+
+    def test_a_decodable_file_under_the_render_prefix_is_caught(self) -> None:
+        """The finding itself: forbidden bytes at `output/renders/`, on both checks."""
+        self._reading()
+        write(self.a / "output/renders/smuggled.md",
+              "LEGEND's prior dossier on 42397075, smuggled under the render slot\n")
+        result = self.verify("--post-read")
+        self.assertEqual(1, result.returncode, result.stdout)
+        self.assertIn("NOT ALLOWLISTED scientist-a  output/renders/smuggled.md", result.stdout)
+        self.assertIn("IDENTIFIER LEAK scientist-a  output/renders/smuggled.md", result.stdout)
+
+    def test_the_same_bytes_are_caught_under_the_prefix_and_outside_it(self) -> None:
+        """🔴 The control that made M-2 a hole rather than a design: one directory apart."""
+        self._reading()
+        payload = "prior LEGEND output on 42397075\n"
+        write(self.a / "output/renders/copy.md", payload)
+        write(self.b / "disease-models/wwox/research/fulltext_dossiers/NOTES.md", payload)
+        result = self.verify("--post-read")
+        self.assertEqual(1, result.returncode, result.stdout)
+        for actor, rel in (("scientist-a", "output/renders/copy.md"),
+                           ("scientist-b",
+                            "disease-models/wwox/research/fulltext_dossiers/NOTES.md")):
+            self.assertIn(f"NOT ALLOWLISTED {actor}  {rel}", result.stdout)
+            self.assertIn(f"IDENTIFIER LEAK {actor}  {rel}", result.stdout)
+
+    def test_a_nested_directory_under_the_prefix_is_not_a_way_in(self) -> None:
+        self._reading()
+        write(self.a / "output/renders/deep/nested/smuggled.md", "42397075 again\n")
+        result = self.verify("--post-read")
+        self.assertEqual(1, result.returncode, result.stdout)
+        self.assertIn("NOT ALLOWLISTED scientist-a  output/renders/deep/nested/smuggled.md",
+                      result.stdout)
+
+    def test_a_renamed_copy_wearing_a_render_extension_is_caught(self) -> None:
+        """The exemption is on bytes, not on a suffix: `.png` does not make it pixels."""
+        self._reading()
+        write(self.a / "output/renders/innocent.png", "prior output about 42397075\n")
+        result = self.verify("--post-read")
+        self.assertEqual(1, result.returncode, result.stdout)
+        self.assertIn("NOT ALLOWLISTED scientist-a  output/renders/innocent.png", result.stdout)
+
+    def test_an_empty_prefix_reports_an_empty_unchecked_surface(self) -> None:
+        self._reading()
+        result = self.verify("--post-read")
+        self.assertEqual(0, result.returncode, result.stdout)
+        self.assertIn("[UNCHECKED SURFACE] 4 present file(s)", result.stdout)
+        self.assertNotIn("output/renders/", result.stdout)
+
+    def test_several_legitimate_renders_are_each_named_in_the_census(self) -> None:
+        self._reading()
+        for name in ("a.png", "b.png", "c.jpg"):
+            (self.a / "output/renders" / name).write_bytes(PNG_BYTES)
+        result = self.verify("--post-read")
+        self.assertEqual(0, result.returncode, result.stdout)
+        for name in ("a.png", "b.png", "c.jpg"):
+            self.assertIn(f"[UNCHECKED] scientist-a  output/renders/{name}", result.stdout)
+        self.assertIn("[UNCHECKED SURFACE] 7 present file(s)", result.stdout)
+
+    def test_a_hostile_file_beside_a_legitimate_render_does_not_hide_behind_it(self) -> None:
+        self._reading()
+        (self.a / "output/renders/ok.png").write_bytes(PNG_BYTES)
+        write(self.a / "output/renders/hostile.md", "42397075 prior output\n")
+        result = self.verify("--post-read")
+        self.assertEqual(1, result.returncode, result.stdout)
+        self.assertIn("NOT ALLOWLISTED scientist-a  output/renders/hostile.md", result.stdout)
+        self.assertIn("[UNCHECKED] scientist-a  output/renders/ok.png", result.stdout)
+
+    def test_a_file_arriving_late_under_the_prefix_is_caught_on_the_next_run(self) -> None:
+        """The tree passed a moment ago; the guarantee is about the run, not the history."""
+        self._reading()
+        (self.a / "output/renders/fig1.png").write_bytes(PNG_BYTES)
+        before = self.verify("--post-read")
+        self.assertEqual(0, before.returncode, before.stdout)
+        write(self.a / "output/renders/late.md", "42397075 arriving afterwards\n")
+        after = self.verify("--post-read")
+        self.assertEqual(1, after.returncode, after.stdout)
+        self.assertIn("NOT ALLOWLISTED scientist-a  output/renders/late.md", after.stdout)
+
+    def test_the_census_names_every_unchecked_file_and_counts_them(self) -> None:
+        """The guarantee, as an assertion: the printed list IS the unchecked surface."""
+        self._reading()
+        (self.a / "output/renders/fig1.png").write_bytes(PNG_BYTES)
+        result = self.verify("--post-read")
+        self.assertEqual(0, result.returncode, result.stdout)
+        named = [line for line in result.stdout.splitlines() if "[UNCHECKED] " in line]
+        for_a = [line for line in named if "scientist-a" in line]
+        self.assertEqual(
+            {FORBIDDEN_COLLIDING, "output/receipt.json", "output/renders/fig1.png"},
+            {line.split()[2] for line in for_a}, result.stdout)
+        self.assertIn(f"[UNCHECKED SURFACE] {len(named)} present file(s)", result.stdout)
+
+    def test_freeze_calls_a_decodable_file_under_the_prefix_unexpected(self) -> None:
+        """🔴 freeze used to agree with the verifier about a file neither had looked at."""
+        self._reading()
+        write(self.a / "output/renders/smuggled.md", "42397075 prior output\n")
+        receipt = self.root / "receipt.json"
+        result = run("freeze", "--surface", str(self.a), "--actor-id", "scientist-a",
+                     "--benchmark-id", "FIX-001", "--spec", str(self.spec),
+                     "--first-pass-state", "COMPLETE_DECLARED_BY_ACTOR", "--out", str(receipt))
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        record = json.loads(receipt.read_text(encoding="utf-8"))
+        self.assertIn("output/renders/smuggled.md", record["UNEXPECTED_FILE_SET"])
+        self.assertNotIn("output/renders/smuggled.md", record["OUTPUT_FILE_SET"])
+
+    def test_freeze_still_calls_a_binary_render_an_output(self) -> None:
+        """The positive control for the row above: the legitimate case must not move."""
+        self._reading()
+        (self.a / "output/renders/fig1.png").write_bytes(PNG_BYTES)
+        receipt = self.root / "receipt-ok.json"
+        result = run("freeze", "--surface", str(self.a), "--actor-id", "scientist-a",
+                     "--benchmark-id", "FIX-001", "--spec", str(self.spec),
+                     "--first-pass-state", "COMPLETE_DECLARED_BY_ACTOR", "--out", str(receipt))
+        self.assertEqual(0, result.returncode, result.stdout + result.stderr)
+        record = json.loads(receipt.read_text(encoding="utf-8"))
+        self.assertIn("output/renders/fig1.png", record["OUTPUT_FILE_SET"])
+        self.assertEqual([], record["UNEXPECTED_FILE_SET"])
 
 
 class LocatorTests(SurfaceFixture):
@@ -618,6 +776,25 @@ class SpecContractTests(unittest.TestCase):
         blind = set(self.spec["expected_output_paths"]) & set(
             self.spec["forbidden_prior_output_paths"])
         self.assertEqual({FORBIDDEN_COLLIDING}, blind)
+
+    def test_the_prefix_key_is_accounted_for_and_not_only_the_exact_key(self) -> None:
+        """🔴 Mirror M-2 — the exemption is two keys; a census over one of them is false.
+
+        The intersection above is a statement about `expected_output_paths` alone. This
+        test is here so that a future prefix cannot be added without the spec saying what
+        admits a path under it, which is the sentence the tool implements.
+        """
+        self.assertEqual(["output/renders/"], self.spec["expected_output_prefixes"])
+        note = " ".join(self.spec["_expected_output_prefix_note"])
+        self.assertIn("CANNOT decode it as UTF-8 text", note)
+        self.assertIn("exempt from nothing", note)
+
+    def test_no_forbidden_path_hides_under_a_declared_output_prefix(self) -> None:
+        """A forbidden path under a prefix would be exempt by position and never printed."""
+        for forbidden in self.spec["forbidden_prior_output_paths"]:
+            for prefix in self.spec["expected_output_prefixes"]:
+                self.assertFalse(forbidden.startswith(prefix),
+                                 f"{forbidden} sits under the exempt prefix {prefix}")
 
     def test_every_packet_source_is_enumerated_or_declared_empty(self) -> None:
         packet = {entry["source"] for entry in self.spec["source_files"]}
