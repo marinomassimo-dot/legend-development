@@ -69,6 +69,16 @@
     "scope": "the five blocking findings, the twelve recorded findings, and the binding. Nothing else. The session-routing debt was observed again and deliberately left untouched."
   },
 
+  "GENERATION_3": {
+    "_note": "A third Plan session, opened by the operator for a TARGETED remediation. It inherited no identity, authority, routing, candidate state or decision from either earlier session; everything was reconstructed from durable repository evidence (body §36.5). The prompt's expected values — main, the tips, the hash — were treated as claims to verify at source, and all of them verified.",
+    "review_remediated": "REV-SCIAB-MIRROR-002 @ 402e25cd — read from the git object on branch mirror, without merging Mirror into this branch and without any cross-worktree write",
+    "session_ref": "NOT DECLARED — no durable protocol provides or verifies one; the registry's evidence-index-59 [de42c4] describes an earlier incarnation and is not asserted here",
+    "checkpoint": "ledger/checkpoints/plan/CHK-plan-0012.json",
+    "scope": "M-1 and M-2, the tests that prove them, the manifest sentences those findings made false, and the binding. Two recorded findings (N-4, N-5) are corrected because they are false statements in the manifest about its own evidence; the other seven are carried and named. No architecture was redesigned; no row REV-SCIAB-MIRROR-002 passed was reopened. The session-routing debt was observed a third time and deliberately left untouched.",
+    "content_tip": "b63482978dab13383177ed60ab55f4ca29fb1ed3",
+    "candidate_content_hash": "7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596"
+  },
+
   "WRITE_PERIMETER": {
     "content_domain_written": [
       "framework/protocols/scientist_reading_modes.md",
@@ -95,5 +105,5 @@
     }
   },
 
-  "STATE": "CLAIMED → IN_PROGRESS → AWAITING_REVIEW → CHANGES_REQUESTED → REMEDIATED (rev 2) → AWAITING_REVIEW"
+  "STATE": "CLAIMED → IN_PROGRESS → AWAITING_REVIEW → CHANGES_REQUESTED → REMEDIATED (rev 2) → AWAITING_REVIEW → CHANGES_REQUESTED (REV-SCIAB-MIRROR-002: M-1, M-2) → REMEDIATED (rev 3) → AWAITING_REVIEW"
 }

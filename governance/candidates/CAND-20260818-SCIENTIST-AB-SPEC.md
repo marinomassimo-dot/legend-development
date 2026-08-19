@@ -1,17 +1,20 @@
 ---
 artifact: INTEGRATION_CANDIDATE manifest (Annex D.2)
 candidate_id: CAND-20260818-SCIENTIST-AB-SPEC
-revision: 2
-supersedes: revision 1 (content tip b965ca58, hash 3b568aae…916c75) — REQUEST CHANGES under
-  REV-SCIAB-MIRROR-001. No verdict, finding or PASS from that review transfers to this content:
-  a revision is reviewed from R-1 (CHK-mirror-0004 RESUME_RULE).
+revision: 3
+supersedes: revision 2 (content tip daaa3335, hash c0701094…21bcf) — REQUEST CHANGES under
+  REV-SCIAB-MIRROR-002; and revision 1 (content tip b965ca58, hash 3b568aae…916c75) — REQUEST
+  CHANGES under REV-SCIAB-MIRROR-001. No verdict, finding or PASS from either review transfers
+  to this content: a revision is reviewed from R-1 (CHK-mirror-0004 RESUME_RULE). That includes
+  the fourteen rows REV-SCIAB-MIRROR-002 §5 re-tested and passed.
 governance_version: 3.1.1
 change_class: MAJOR
 prepared_by: plan
 prepared_on: 2026-08-19
-state: READY FOR MIRROR REVIEW (revision 2) — no approval requested, granted or implied
-scope: HANDOFF-20260818-SCIENTIST-AB, as transmitted. Not reduced and not widened. Revision 2
-  adds no scope: it repairs what the review found and nothing else.
+state: READY FOR MIRROR REVIEW (revision 3) — no approval requested, granted or implied
+scope: HANDOFF-20260818-SCIENTIST-AB, as transmitted. Not reduced and not widened. Revision 3
+  adds no scope: it repairs M-1 and M-2, corrects the manifest sentences those findings made
+  false, and touches nothing else. No architecture was redesigned and no passed row reopened.
 ---
 
 # INTEGRATION_CANDIDATE — the definitive Scientist A / Scientist B specification
@@ -20,13 +23,15 @@ scope: HANDOFF-20260818-SCIENTIST-AB, as transmitted. Not reduced and not widene
 
 ```yaml
 CANDIDATE_ID:               CAND-20260818-SCIENTIST-AB-SPEC
-REVISION:                   2
+REVISION:                   3
 BASE_HEAD:                  cbce30168091f7769c56c4f019055fa55fd0d66a
 BRANCH:                     scientist-ab-spec
-CONTENT_TIP:                daaa333… — the remediation commit; see the block below for the
-                            reproduced value at every tip
-SUPERSEDED_CONTENT_TIP:     b965ca5880e93ad57770a0483aaa4652ec5f390c   (revision 1)
-SUPERSEDED_HASH:            3b568aae6c76848da197cacd43e517373ab7ca9532cf9289a73097e261916c75
+CONTENT_TIP:                b634829… — the M-1/M-2 remediation commit; see the block below for
+                            the reproduced value at every tip
+SUPERSEDED_CONTENT_TIP:     daaa33353840304aaa7d288b393a2b3bb4faa08d   (revision 2)
+SUPERSEDED_HASH:            c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf
+SUPERSEDED_CONTENT_TIP_1:   b965ca5880e93ad57770a0483aaa4652ec5f390c   (revision 1)
+SUPERSEDED_HASH_1:          3b568aae6c76848da197cacd43e517373ab7ca9532cf9289a73097e261916c75
 MANIFEST_TIP:               the control-plane commit carrying this revision — and every later
                             control-plane commit on this branch, including the one carrying
                             this correction.
@@ -37,19 +42,28 @@ MANIFEST_TIP:               the control-plane commit carrying this revision — 
                             # CANDIDATE_CONTENT_HASH, and it holds because governance/candidates/
                             # and ledger/ are declared CONTROL_PLANE_ROOTS (P5.1): the hash is
                             # identical at the content tip, at the ledger commit between, and at
-                            # every manifest revision. Measured at all four, not asserted.
+                            # every manifest revision. Measured at each point, not asserted —
+                            # the count of points is not maintained here, because a count that
+                            # has to be edited when a commit is added is the same fixed point
+                            # in miniature. `--show-domain` prints what was excluded at each.
                             # `git log --oneline cbce3016..HEAD` shows the branch; the hash
                             # command shows the invariance.
-CANDIDATE_CONTENT_HASH:     c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf
+CANDIDATE_CONTENT_HASH:     7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596
 CANDIDATE_HASH_VERSION:     legend-candidate-v4
 CHANGE_CLASS:               MAJOR
 LINT_RESULT:                PASS (1 pre-existing INFO)
 PUBLICATION_GATE:           PASS / BLOCKS: 0   — at BASE_HEAD and at this tip
-DELTA_REGRESSION:           0 — baseline and candidate failure SETS enumerated in §4, not counted
-MIRROR_REVIEW:              REV-SCIAB-MIRROR-001 → REQUEST CHANGES, on revision 1. Revision 2
-                            requires a NEW independent review from R-1. No PASS, no
-                            PRESERVED and no CONFIRMED from that review transfers to this
-                            content, including the ten §6 rows it found acceptable.
+DELTA_REGRESSION:           0 ADDED FAILING TESTS — at TEST-METHOD granularity, which is the
+                            granularity the claim is about (Mirror M-1). Failing suites AND
+                            failing tests are enumerated as sets at both tips in §4.2, with a
+                            same-reason comparison over every shared test. A set of suite names
+                            is not evidence for this claim: an already-red suite absorbs a new
+                            failing test without changing its name, and in revision 2 one did.
+MIRROR_REVIEW:              REV-SCIAB-MIRROR-002 → REQUEST CHANGES, on revision 2 (M-1, M-2,
+                            nine recorded). Revision 3 requires a NEW independent review from
+                            R-1. No PASS, no PRESERVED and no CONFIRMED from that review — or
+                            from REV-SCIAB-MIRROR-001 — transfers to this content, including
+                            the fourteen §5 rows revision 2 was found to have got right.
 HUMAN_APPROVAL:             NONE — not requested, not granted, not implied
 SNAPSHOT_ID:                n/a until canonical execution — GATE 4 belongs to Orchestrator
 ```
@@ -69,12 +83,27 @@ python3 governance/scripts/candidate_content_hash.py \
 ```
 
 ```
-EXPECTED             c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf
-OBTAINED (run 1)     c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf
-OBTAINED (run 2)     c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf
+EXPECTED             7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596
+OBTAINED (run 1)     7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596
+OBTAINED (run 2)     7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596
+OBTAINED (run 3)     7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596
 OBTAINED at the control-plane commit carrying this revision
-                     c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf
+                     7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596
 ```
+
+**Recomputed without the script**, from P5.1 and P5.2 directly — `git ls-tree -r --full-tree`,
+the three declared roots removed, path-sorted, `legend-candidate-v4\n` + `BASE_HEAD\n` + every
+entry newline-terminated:
+
+```
+at b634829 (content tip)        7cef4ccc…4596     included 523 · excluded 28
+POSITIVE CONTROL, same route
+at daaa3335 (revision 2)        c0701094…21bcf     included 523 · excluded 27
+```
+
+The control is the point: a second implementation that reproduces the **published** hash of the
+previous revision is a second implementation, and one that only agrees with itself is one.
+Revision 2's hash is **not** the binding of revision 3, and the two values above are why.
 
 The invariance across the content tip and every later control-plane commit is the property that
 makes `MANIFEST_TIP` informational, and it is **measured at each point, never asserted**.
@@ -89,26 +118,29 @@ read them from `--show-domain`.
 | File | Status | Domain | Classification |
 |---|---|---|---|
 | `framework/protocols/scientist_reading_modes.md` | **added** | CONTENT — hashed | **NORMATIVE** — reading modes, actor identity of A and B, task-ownership rule |
-| `framework/protocols/controlled_benchmark_ab.md` | **added** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — normative for the benchmark it defines, and for nothing outside it |
-| `framework/scripts/benchmark_input_surface.py` | **added** | CONTENT — hashed | **NORMATIVE (tooling)** — it decides whether a surface may be handed over; it is not documentation. **Rev 2: substantially rewritten** — see §4 |
-| `framework/scripts/test_benchmark_input_surface.py` | **added (rev 2)** | CONTENT — hashed | **NORMATIVE (tooling)** — 45 probes, one per clause of every PASS sentence, each null finding with a positive control |
+| `framework/protocols/controlled_benchmark_ab.md` | **added**, modified **(rev 3)** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — normative for the benchmark it defines, and for nothing outside it. **Rev 3:** new §5.1 carries the verbatim-locator obligation into the route that instructs the reading (M-1); §4.3 and the guarantee table state what `--post-read` leaves unchecked (M-2) |
+| `framework/scripts/benchmark_input_surface.py` | **added**, modified **(rev 3)** | CONTENT — hashed | **NORMATIVE (tooling)** — it decides whether a surface may be handed over; it is not documentation. **Rev 2: substantially rewritten**; **rev 3:** the prefix exemption is written on bytes rather than position, and the unchecked surface is enumerated from the tree — see §4.5 |
+| `framework/scripts/test_benchmark_input_surface.py` | **added (rev 2)**, modified **(rev 3)** | CONTENT — hashed | **NORMATIVE (tooling)** — **59** probes, one per clause of every PASS sentence, each null finding with a positive control. Rev 3 adds fourteen and repairs a fixture whose "render" was a markdown file |
 | `scripts/run_release_regressions.py` | modified **(rev 2)** | CONTENT — hashed | **DOCUMENTATION/INFRA** — one line: the new suite registered in the battery, which `test_release_runner_verdict.py` requires of every tracked test file |
 | `roles/scientist.md` | modified | CONTENT — hashed | **NORMATIVE** — `actor_id_status` front matter + the *Reading modes* section. 🔴 In the `CORE` fingerprint set |
 | `BOOTSTRAP.md` | modified | CONTENT — hashed | **NORMATIVE** — records that A and B are fixed and C is not |
 | `framework/protocols/index.md` | modified | CONTENT — hashed | **DOCUMENTATION** — two rows in the protocol table |
 | `framework/eval/README.md` | modified | CONTENT — hashed | **DOCUMENTATION** — the reader-benchmark axis, and what it does not have |
-| `framework/eval/benchmarks/BENCH-AB-001/surface_spec.json` | **added** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — the allowlist; a command reads it, a reviewer reads the same file |
+| `framework/eval/benchmarks/BENCH-AB-001/surface_spec.json` | **added**, modified **(rev 3)** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — the allowlist; a command reads it, a reviewer reads the same file. **Rev 3:** `_expected_output_prefix_note` states what the prefix admits and why, and the note claiming a blind spot "cannot widen a silent one" is corrected where it was false |
 | `…/benchmark_manifest.json` | **added** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — the experiment record, `PREPARED — NOT FROZEN` |
 | `…/population/evidence_units.json` | **added** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — the ex-ante evaluation population, derived by command |
-| `…/instructions/` ×7 | **added** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — surface router, common instructions, output schema, `MODE_A`, `MODE_B`, and the two per-actor assignments |
+| `…/instructions/` ×7 | **added**, one modified **(rev 3)** | CONTENT — hashed | **BENCHMARK_PROTOCOL** — surface router, common instructions, output schema, `MODE_A`, `MODE_B`, and the two per-actor assignments. **Rev 3:** `BENCHMARK_INSTRUCTIONS.md` §1 tells the reader that `output/renders/` holds image files — before the reading, so the rule is a rule and not a trap |
 | `governance/candidates/HANDOFF-SCIENTIST-AB-SPEC.md` | **added** | **CONTROL PLANE — excluded** | the durable handoff, carried byte-identically |
 | `governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md` | added | **CONTROL PLANE — excluded** | this manifest |
 | `ledger/tasks/plan/SCIENTIST-AB-SPEC-001.json` | **added** | **CONTROL PLANE — excluded** | task ACK + claim |
 | `ledger/checkpoints/plan/CHK-plan-0010.json` | **added** | **CONTROL PLANE — excluded** | checkpoint |
 
 ```
-content        19 files · +4738 / −1        no file deleted · no history rewritten
-control plane   4 files                     excluded from the hash by construction
+content        19 files · +5106 / −1        no file deleted · no history rewritten
+control plane   5 files                     excluded from the hash by construction
+
+  Revision 3 adds NO content file and removes none: the same 19, five of them edited.
+  The control-plane count moves 4 → 5 only because CHK-plan-0011 now exists.
 
   git diff --shortstat cbce3016 HEAD -- . ':!governance/candidates' ':!ledger'
 ```
@@ -269,9 +301,11 @@ reader's own locators. It is not a barrier and the protocol does not call it one
 
 ### G · Evaluation — population first, dimensions separate, no composite
 
-The population is fixed **before either reading exists**, by command: 36 units, 115 panels,
+The population is fixed **before either reading exists**, by command: **65 units, 109 panels**,
 identical across two runs, digest in the manifest. A denominator chosen afterwards is a
-denominator chosen to fit.
+denominator chosen to fit. *(Mirror N-4: this sentence read "36 units, 115 panels" through
+revision 2 — the pair `B-1` superseded. The correction reached `benchmark_manifest.json` and not
+this paragraph, which is precisely the failure R-9 exists for, one document over.)*
 
 Ten dimensions, each with its unit, measure, route and evaluator, each reported separately. The
 mechanical ones are commands; the substantive ones are Mirror's, on the process; **the one that
@@ -305,6 +339,27 @@ said it would.
 ---
 
 ## 4 · Test and validator evidence
+
+### 4.0a · Revision 3 — the two blocking findings, reproduced before anything was changed
+
+Both were reproduced at `BASE_HEAD` **and** at revision 2's content tip, in clean detached
+worktrees, before a single byte was edited. Mirror's report is not the evidence here; the runs
+are.
+
+| Mirror | Finding | Reproduced | Now |
+|---|---|---|---|
+| **M-1** | `DELTA_REGRESSION: 0` is false. `test_every_route_carries_the_obligation_or_declares_an_exemption` is green at `cbce3016` and red at `daaa3335`, inside a suite already red, so a set of **suite names** could not see it | ✅ exactly — base 6 suites / **7** failing tests; revision 2, 6 suites / **8**. The assertion names the cause: `controlled_benchmark_ab.md` trips the guard's marker and carries `verbatim_locators` zero times | the route **carries the obligation** (§5.1 of the protocol), because it does instruct two complete readings; **the guard is untouched**; and the delta is stated at test-method granularity in §4.2 |
+| **M-2** | the blind spot is computed over `expected_output_paths` while the exemption also lives in `expected_output_prefixes`, so prior LEGEND output at `output/renders/smuggled.md` passes `--post-read` while the same bytes one directory away produce two findings | ✅ exactly — `VERDICT: PASS`, rc=0, `blind spot: size 1`, no finding; control at `…/fulltext_dossiers/NOTES.md` → `NOT ALLOWLISTED` + `IDENTIFIER LEAK 18 hit(s)`, rc=1. `freeze` called the same file `role: "output"` and left `UNEXPECTED_FILE_SET` empty | the prefix admits **only bytes this tool cannot decode**; a decodable file there takes every check it would take anywhere else and `freeze` calls it `UNEXPECTED`; and `verify --post-read` **enumerates the unchecked surface from the tree** — §4.5 |
+
+**What revision 3 did NOT do, stated because the temptation was available.** M-1 was not closed by
+dropping the literal token into prose, and not by adding the path to `EXEMPT`: the benchmark
+protocol instructs two complete full-text readings, so the honest classification is that it
+**carries** the obligation, and §5.1 states it with its consequence — a reading declared complete
+without `verbatim_locators.entries[]` is not complete, and freezing it does not repair it. The
+guard was not weakened, and `git diff` over
+`scripts/test_locator_obligation_reaches_every_route.py` between `main` and this tip is empty.
+M-2 was not closed by printing the prefix and moving on, because that would have declared a
+residual the tool could have checked instead: the scan can read a markdown file, so it does.
 
 ### 4.0 · Revision 2 — what the five blocking findings cost, measured
 
@@ -350,39 +405,105 @@ Byte-identical across two consecutive runs. `File008`'s exclusion is a **declare
 boundary**, not silence: the command exits 1 on a packet source that is neither enumerated nor
 declared.
 
-### 4.2 · Baseline and candidate failure SETS — enumerated, in identical clean worktrees
+### 4.2 · Regression accounting at TEST-METHOD granularity — the granularity the claim is about
 
-Measured in two detached scratch worktrees created from this repository, each holding **exactly**
-its own commit's tree and no staged extras. The environmental confound Mirror hit — a partial
-`files/` inflating `test_surface_census` — does not arise: neither worktree has `files/`.
+🔴 **Revision 2's version of this section is the finding.** It enumerated failure **sets**, which
+answered revision 1's *"counts, not sets"* — and the sets were of **suite names**, while the claim
+being made is about regressions, and a regression is a test. `test_release_runner_verdict.py`
+appeared in both columns and said nothing about the failing test that appeared underneath it.
+A set of containers is a count wearing a list.
+
+Every target of `scripts/run_release_regressions.py` is executed the way the runner executes it —
+`python3 <relative>` from the tree root — at each tip, in **clean detached worktrees** holding
+exactly that commit and nothing else. Neither has `files/`, so the confound that inflated
+`test_surface_census` in an earlier round cannot arise. Per-test identities and failure
+signatures are parsed from the unittest failure blocks.
 
 ```
-BASE_HEAD cbce3016                              CANDIDATE (rev 2)
-  scripts/test_release_runner_verdict.py          scripts/test_release_runner_verdict.py
-  scripts/test_locator_obligation_reaches_…py     scripts/test_locator_obligation_reaches_…py
-  scripts/test_abstract_corpus_is_not_evidence.py scripts/test_abstract_corpus_is_not_evidence.py
-  scripts/test_release_surface.py                 scripts/test_release_surface.py
-  scripts/test_fulltext_trace_contract.py         scripts/test_fulltext_trace_contract.py
-  framework/scripts/test_session_self_eval.py     framework/scripts/test_session_self_eval.py
-  ── 6 ──                                         ── 6 ──
-
-candidate_set − baseline_set   = ∅
-baseline_set  − candidate_set  = ∅
-DELTA REGRESSION               = 0
+                                  BASE cbce3016    REV 2 daaa3335    REV 3 b634829
+targets executed                        64               65               65
+FAILING SUITES                           6                6                6
+FAILING TESTS                            7                8                7
 ```
 
-`test_release_runner_verdict.py` fails at **both** tips for the **same reason**, verified by
-reading the assertion: `governance/scripts/test_candidate_content_hash.py` is not registered in
-the battery. That is a pre-existing debt of another candidate, untouched here. The new suite
-**is** registered, and runs green inside the battery.
+**FAILING SUITES — identical at all three tips, and that is exactly why it is not the evidence:**
+
+```
+framework/scripts/test_session_self_eval.py
+scripts/test_abstract_corpus_is_not_evidence.py
+scripts/test_fulltext_trace_contract.py
+scripts/test_locator_obligation_reaches_every_route.py
+scripts/test_release_runner_verdict.py
+scripts/test_release_surface.py
+```
+
+**FAILING TESTS at `BASE_HEAD` — 7:**
+
+```
+framework/scripts/test_session_self_eval.py::test_diagnosis_is_wired_before_growth_and_takeaways
+scripts/test_abstract_corpus_is_not_evidence.py::test_the_bootstrap_bounds_the_corpus (file='CLAUDE.md')
+scripts/test_fulltext_trace_contract.py::test_normative_layers_make_receipts_universal
+scripts/test_fulltext_trace_contract.py::test_normative_write_rules_name_the_append_only_carveout
+scripts/test_locator_obligation_reaches_every_route.py::test_the_bootstrap_states_the_rule (file='CLAUDE.md')
+scripts/test_release_runner_verdict.py::test_every_tracked_test_file_is_in_the_runner
+scripts/test_release_surface.py::test_shebang_python_entrypoints_are_executable
+```
+
+**FAILING TESTS at this candidate tip `b634829` — 7, the same seven, and nothing else.**
+
+**FAILING TESTS at revision 2 `daaa3335` — 8: those seven plus**
+`scripts/test_locator_obligation_reaches_every_route.py::test_every_route_carries_the_obligation_or_declares_an_exemption`.
+That one test is `M-1`, and it is what a set of suite names could not show.
+
+```
+ADDED FAILING TESTS    (rev 3 − base)   = ∅        0
+REMOVED FAILING TESTS  (base − rev 3)   = ∅        0
+SHARED FAILING TESTS                    = 7
+DELTA REGRESSION at test granularity    = 0
+  for the record, revision 2 measured the same way:  ADDED = 1
+```
+
+**SAME-REASON CHECK — over all seven shared tests, not one selected suite.** Each failing test's
+signature (the exception line and its message) is compared between the two tips. Normalized:
+absolute worktree paths, temporary directories, `line <N>`, elapsed times and memory addresses —
+the substrings that differ because a run is a run. **No assertion text is normalized**, so a
+changed reason cannot be normalized into agreement.
+
+```
+SAME-REASON CHECK            PASS   7 / 7 identical after normalization
+UNEXPLAINED REASON CHANGES   0
+```
+
+Revision 2 performed this check on `test_release_runner_verdict.py` alone — one suite of six, and
+not the one whose reason changed. It is now done over every shared failing test, which is what
+makes it capable of finding a semantic change hidden inside an already-red suite.
+
+`test_release_runner_verdict.py` fails at all three tips for the same reason, verified by reading
+the assertion: `governance/scripts/test_candidate_content_hash.py` is not registered in the
+battery. That is a pre-existing debt of another candidate, untouched here. The new suite **is**
+registered and runs green inside the battery.
 
 No suite was disabled, weakened, skipped, or removed from `TESTS`; the baseline was not
-redefined. The six are `PREEXISTING FAILURE`, carried forward and classified, not resolved.
+redefined. The six suites and the seven tests under them are `PREEXISTING FAILURE`, carried
+forward and classified, not resolved.
+
+### 4.2b · The corrections revision 2's own numbers needed (Mirror N-4, N-5)
+
+Two numbers in this manifest were superseded and survived anyway, which is the failure the
+finding they came from exists to prevent.
+
+- **N-4** — §3G said the population is *"36 units, 115 panels"*. That pair was superseded by
+  `B-1` and correctly annotated in `benchmark_manifest.json`, but not here. **Corrected in §3G**:
+  the population is **65 units, 109 panels**, and the superseded pair is named as superseded.
+- **N-5** — §5 listed *"eight failing release suites"* among the open debts while §4.2 of the
+  same document enumerated six, and six is what three independent measurements show.
+  **Corrected in §5** to six suites, and to the seven failing tests under them, since a suite
+  count is the object M-1 showed to be the wrong one.
 
 ### 4.3 · The adversarial suite — and the proof that it probes the defects
 
-`framework/scripts/test_benchmark_input_surface.py` — **45 tests, all green**, registered in the
-release battery. Built on the method Mirror used to find the defects: *take the tool's PASS
+`framework/scripts/test_benchmark_input_surface.py` — **59 tests, all green** (45 at revision 2),
+registered in the release battery. Built on the method Mirror used to find the defects: *take the tool's PASS
 sentence literally and construct the cheapest state that makes it false while the tool still
 prints it.* Every null finding carries a **positive control**, because a check that never fires
 and a check that cannot fire look identical from outside.
@@ -409,6 +530,93 @@ The ten ERRORs are `PopulationBoundingTests` and one `setUpClass`: the old tool 
 understand `sub_unit_pattern` and produces units with no sub-units, so the probes raise rather
 than assert. That is the defect, arriving as an exception instead of a failure; it is reported
 as an error and not dressed up as a clean red.
+
+> **Mirror could not reproduce these counts (N-7)** and measured 45 / 9 ERROR / 14 pass / 12
+> genuine against the 41 / 10 / 9 / 7 above, inferring a `setUpClass` abort in this environment
+> that collapses a five-test class into one error — the arithmetic fits exactly. The
+> discrimination conclusion is the same either way and neither count is load-bearing. Recorded
+> rather than reconciled, because Mirror's numbers were measured and this explanation is
+> inferred, and revision 3 did not re-run revision 1's tool to settle it.
+
+### 4.5 · M-2 — the exact guarantee, its mechanism, and the census that must match it
+
+**The guarantee revision 3 makes, written so it can be falsified in one command:**
+
+> No file present in a surface is skipped by **both** the allowlist check and the identifier
+> scan without being printed by name under `[UNCHECKED]`.
+
+Falsify it by producing a file that `verify --post-read` neither checks nor names. It is not the
+claim *"post-read verification reads every file"* — it cannot, and it says so; and it is not
+*"all unchecked paths are enumerated in advance"* — renders cannot be enumerated in advance,
+which is why the prefix exists at all. It is the claim that the unchecked surface is **named at
+run time, from the tree, exhaustively**.
+
+**Mechanism — one predicate changed, and the census follows it.** `_is_expected_output()` admits
+an exact declared path as before; under `expected_output_prefixes` it now admits a file **only
+when the tool cannot decode its bytes as UTF-8 text**. The exemption was written for pixels, and
+a render is pixels. A decodable file under the prefix is exempt from nothing: the allowlist check
+reports it, the identifier scan reads it, and `freeze` — which shares the predicate — puts it in
+`UNEXPECTED_FILE_SET` instead of counting it as the reader's work. Alternatives considered and
+rejected: printing the prefix as a blind spot (declares as unchecked a file the scan can read);
+an extension allowlist (a `.png` that is text walks through it, and case 07 below is that file).
+
+**The census, in the vocabulary the review asked for.** Sizes are for a built pair before any
+reading; every population is computed from the tree, and `[UNCHECKED SURFACE] n present file(s)`
+closes the printed list on every run.
+
+| | | |
+|---|---|---|
+| EXPECTED EXACT OUTPUT PATHS | **5** | declared in `expected_output_paths` — a static spec fact |
+| EXPECTED OUTPUT PREFIXES | **1** | `output/renders/` — admits only undecodable bytes |
+| VERIFIED POST-READ SURFACE | every present file **not** in the three rows below | allowlist + forbidden-path + symlink checks, and the identifier scan wherever the bytes decode |
+| DECLARED RESIDUAL SURFACE | printed `[UNCHECKED]`, per actor, per run | (i) the blind-spot path when occupied — one path, `deepdive_manifests/PMID42397075.json`, whose authorship is not decidable post-read; (ii) each **present** declared output, whose content the scan does not read because it must name the paper; (iii) each file under a prefix whose bytes do not decode |
+| UNENUMERATED / SILENT SURFACE | **NONE** | there is no fourth class: a present file is allowlisted input, an exact declared output, under a prefix, or none of those — and the last is reported by the allowlist check |
+
+**Reproduced, with the control that makes it a hole rather than a design.** Same bytes, one
+directory apart, against this tip:
+
+```
+output/renders/smuggled.md                       → NOT ALLOWLISTED + IDENTIFIER LEAK 18 hit(s), rc=1
+…/fulltext_dossiers/NOTES.md      (control)      → NOT ALLOWLISTED + IDENTIFIER LEAK 18 hit(s), rc=1
+output/renders/fig1_page1.png     (real render)  → VERDICT: PASS, rc=0, and [UNCHECKED] names it
+freeze, smuggled.md present                      → UNEXPECTED_FILE_SET ['output/renders/smuggled.md']
+freeze, real render present                      → OUTPUT_FILE_SET   ['output/renders/fig1.png']
+against revision 2's tool, same states           → PASS rc=0 · blind spot size 1 · role "output"
+```
+
+**Twelve hostile cases, each asserting the REASON and not only the exit code**, plus two spec
+contracts — added to the tracked suite as `ExpectedOutputPrefixTests` and run in the release
+battery. `SLR-mirror-0010` §4 is the argument for the discipline and it is Mirror's own: its
+first B-4 battery reported 13/13 caught, and all thirteen were `rc=2` from `argparse` rejecting
+`--out` where the command takes `--surfaces`. An expected exit code is never sufficient.
+
+```
+positive control · binary render passes and is named   forbidden bytes under the prefix
+same bytes under prefix AND outside it                 nested directory under the prefix
+renamed copy wearing a .png extension                  empty prefix, empty unchecked surface
+several legitimate renders, each named                 hostile file beside a legitimate render
+late arrival on the next run                           the census names every unchecked file
+freeze calls a decodable prefix file UNEXPECTED        freeze still calls a render an output
+```
+
+**Differential against the pre-fix tool** — the same fourteen probes, revision 2's script,
+revision 3's spec:
+
+```
+11 of the 12 hostile probes FAIL against the pre-fix tool
+ 1 passes: `freeze still calls a binary render an output` — the positive control that must NOT
+   move, and it did not
+ 2 spec-contract probes pass against both, correctly: they read the spec, not the tool
+```
+
+Five of the eleven discriminate on the **exit code** (the detector itself); six on the census
+output. A separate out-of-tree battery of the same ten cases required by the review ran
+11/11 on exit code and reason against this tip, and 1/11 against revision 2.
+
+**LOAD-BEARING WRONG-REASON PASSES: 0.** Every new probe asserts a reason string. The three
+pre-existing exit-code-only assertions Mirror flagged (`N-6`) are unchanged in this revision and
+remain declared, not load-bearing: Mirror verified independently that all three fire for the
+correct reason.
 
 ### 4.4 · Revision 1's evidence, retained
 
@@ -490,7 +698,11 @@ benchmark Scientist C · name a second paper.
 P7 (OWED, NOT BARRED) · approval queue non-canonical · ACK criteria · Plan→Mirror routing ·
 Mirror's methodology observation (UNRATIFIED) · lease expired between turns (detectable, not
 prevented) · `DEBT-20260818-LEASE-SNAPSHOT` · C-9 clauses accepted and unadopted, `runtime/`
-classification open · L2 suspended · eight failing release suites.
+classification open · L2 suspended · **six** failing release suites carrying **seven** failing
+tests, enumerated in §4.2. *(Mirror N-5: this line read "eight failing release suites" through
+revision 2 — the withdrawn revision-1 number surviving in a second place. It is corrected here,
+and it now names tests as well as suites, because M-1 is the demonstration that a suite count is
+the wrong object for this claim.)*
 
 **No `HUMAN_APPROVAL` is pre-filled. None exists and none is implied.**
 
@@ -529,6 +741,32 @@ Every file in the diff is named by a clause of the handoff, and §2 gives the cl
 Nothing here silently fixes an unrelated governance debt, and no R finding became material
 enough to change a blocking remedy.
 
+### 5b.2 · `REV-SCIAB-MIRROR-002`'s nine recorded findings — what revision 3 did with each
+
+The remediation was scoped to M-1 and M-2. Where a recorded finding is a **false sentence in this
+manifest**, it is corrected here, because a manifest whose numbers are wrong is not a smaller
+problem for being non-blocking. Where it is a change to content outside the two findings, it is
+carried and named, not smuggled into a targeted revision.
+
+| # | Finding | Class | Revision 3 |
+|---|---|---|---|
+| **N-1** | `surface_spec.json` `notes` (6) and the File012 rule `_note` contradict each other about label normalization | **CARRIED** | not touched. The output is as printed and `notes` (6) is the correct one; the fix is one word in a note and belongs with the next change to that rule, not inside an M-1/M-2 revision |
+| **N-2** | `declared_empty_sources` is accepted on declaration and never measured | **CARRIED — REAL** | not touched, and it is the strongest of the nine: a declared-empty source shortens the denominator and a short denominator flatters both readers. Named here so it cannot be read as closed |
+| **N-3** | for a PDF the regex segment is one page, so a caption crossing a page break is truncated | **CARRIED — LATENT** | not touched; no caption in this packet crosses a break, Mirror checked all ten. The bound is real and unstated, and it becomes live on the next paper |
+| **N-4** | §3G still states the superseded `36 / 115` | **FIXED** | §3G, above — with the superseded pair named as superseded |
+| **N-5** | §5 says "eight failing release suites" while §4.2 enumerates six | **FIXED** | §5, above — corrected to six suites and seven tests |
+| **N-6** | three suite tests assert an exit code with no reason | **CARRIED — DECLARED** | not touched. Mirror verified independently that all three fire for the correct reason, so none is load-bearing; every probe **added** at revision 3 asserts a reason |
+| **N-7** | Mirror cannot reproduce Plan's differential counts | **RECORDED, NOT RECONCILED** | Mirror's numbers are measured, Plan's explanation is inferred, and revision 3 did not re-run revision 1's tool to settle it. §4.3 now carries both |
+| **N-8** | `locators` is purely lexical: a symlink under the produced prefix is cited and passes | **CARRIED — CONTAINED** | not touched. `verify` reports the symlink and `freeze` refuses the tree outright; the M-2 change does not reach `locators`, and saying it did would be the exact overclaim M-2 is about |
+| **N-9** | the population completeness failure exits 1 while the spec `_note` says "REFUSES" | **CARRIED** | not touched — a vocabulary correction in a note, with the same reasoning as N-1 |
+
+**Two are fixed and seven are carried, and the split is not convenience.** N-4 and N-5 are false
+statements in this document about its own evidence, which is what §9 of the remediation asks to
+be true. The other seven require edits to content that neither finding touches, and a targeted
+revision that also repairs a caption bound or a completeness check is no longer targeted — it is
+a revision Mirror would have to review from R-1 across a wider surface, for defects it has
+already classified as non-blocking.
+
 ---
 
 ## 5c · The session-routing debt — named, not resolved
@@ -547,29 +785,72 @@ its absence is a decision rather than an oversight, and it is not mixed into thi
 ## 6 · What Mirror is asked to verify
 
 Independent review of the binding **and** the content, **from R-1**. **No prior attestation
-transfers** — including the ten rows `REV-SCIAB-MIRROR-001` §6 found acceptable. The content they
-were found acceptable over no longer exists.
+transfers** — including the fourteen rows `REV-SCIAB-MIRROR-002` §5 re-tested and passed, and the
+ten `REV-SCIAB-MIRROR-001` §6 found acceptable. The content they were found acceptable over no
+longer exists.
 
-### 6.0 · Revision 2 — retest these first
+### 6.00 · Revision 3 — the two findings, and the two claims they were about
+
+```
+M-1  the exact test    run test_every_route_carries_the_obligation_or_declares_an_exemption
+                       alone at cbce3016 and at b634829. It was green at base and red at
+                       daaa3335; it must now be green at both. If it is not, this fix failed.
+M-1  test-level delta  re-derive FAILING TESTS, not FAILING SUITES, at both tips, and compute
+                       both differences. §4.2 claims ADDED = 0 over 7 shared. Attack the
+                       harness too: does it parse subTest failures, ERRORs and a suite that
+                       dies before any test runs? A parser that under-reports failures makes
+                       this claim by omission.
+M-1  same-reason       over all seven shared tests, not one. The normalization is declared in
+                       §4.2 and removes paths, temp dirs, line numbers, times, addresses — and
+                       no assertion text. Is a semantic change being normalized into agreement?
+M-1  the semantics     is `controlled_benchmark_ab.md` genuinely a route that carries the
+                       obligation, or was an EXEMPT entry the honest answer? §5.1 argues the
+                       first. And is §5.1 a real obligation or a token placed to satisfy a
+                       grep? The guard is untouched — verify that too:
+                       `git diff main b634829 -- scripts/test_locator_obligation_*.py`
+M-2  the smuggle       copy a forbidden file to output/renders/smuggled.md and run
+                       verify --post-read. It must FAIL with NOT ALLOWLISTED and IDENTIFIER
+                       LEAK — the same two findings the same bytes produce one directory away.
+M-2  the census        is the printed [UNCHECKED] list really the whole unchecked surface?
+                       Construct a file that verify --post-read neither checks nor names.
+                       That is the guarantee of §4.5 and it is one command from falsified.
+M-2  the prefix rule   the exemption is now on undecodable bytes. Attack it: a UTF-16 render,
+                       a zero-byte file, a decodable file with a binary-looking name, a
+                       symlink whose realpath is prior output (N-8, unchanged and declared).
+M-2  legitimate use    does a real render still pass? Is any scientific functionality lost by
+                       refusing a text file under output/renders/? The instructions now say
+                       renders are images — is that visible to the reader before the reading?
+M-2  freeze            re-run the B-3 tamper battery, and check the freeze interaction: a
+                       decodable file under the prefix must be UNEXPECTED, a render must not.
+M-2  reason discipline every new probe asserts a reason token. Find one that would pass for
+                       the wrong reason — that is the defect Mirror's own harness committed.
+N-4 · N-5              §3G and §5 are corrected. Are any other superseded numbers still alive
+                       in this manifest?
+     binding           reproduce 7cef4ccc… at the content tip and at every later control-plane
+                       commit, and verify it is NOT c0701094… — a content change that left the
+                       hash alone would be the more serious finding
+```
+
+### 6.0 · Revision 2 — retest these first, none of it transfers
 
 ```
 B-1  population        the caption bound, the typographic Methods derivation, the four
                        recovered sections (one of which Mirror's own heuristic missed),
                        the four new kinds, the declared-empty refusal. Re-derive; compare
                        to evidence_units.json byte for byte.
-B-2  delta regression  re-measure BOTH sets in clean worktrees. Is DELTA really 0, and does
-                       test_release_runner_verdict fail at both tips for the SAME reason?
+B-2  delta regression  SUPERSEDED BY M-1 above — the suite-set answer was the finding. Read
+                       §4.2, which now answers it at test granularity.
 B-3  freeze receipt    freeze A's tree as scientist-b. Tamper after freezing. Point a receipt
                        at the other actor's tree. Does anything pass that should not?
 B-4  post-read         plant each of the six previously-skipped forbidden paths. Symlink,
-                       `..`, absolute. Is the printed blind spot really size 1?
+                       `..`, absolute. The blind SPOT is still one path; the unchecked
+                       SURFACE is not the blind spot — see M-2 above and §4.5.
 B-5  benchmark fields  re-count the registry. Are the seven right, is `Locators` correctly
                        classified apart, and do §3.6 / §5.3 / the schema now agree?
 R-*  affected findings §5b above — each classification is Plan's and each is attackable
-     binding           reproduce c0701094… at the content tip and at every later
-                       control-plane commit
      depth             did any of this buy tooling cleanliness with scientific coverage?
-     scope creep       19 content files. Is any change outside the five findings and the R list?
+     scope creep       19 content files, five edited at revision 3. Is any change outside
+                       M-1, M-2, N-4 and N-5?
 ```
 
 ### 6.1 · The seventeen from revision 1, still open
