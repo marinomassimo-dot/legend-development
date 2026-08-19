@@ -318,7 +318,7 @@ def scan_skip_reason(rel: str, spec: dict[str, Any], path: Path,
 
 
 def unchecked_surface(root: Path, spec: dict[str, Any],
-                      post_read: bool = True) -> dict[str, list[str]]:
+                      post_read: bool) -> dict[str, list[str]]:
     """Every PRESENT file whose content the identifier scan did not read, by path.
 
     🔴 Mirror `M-2`: the census was computed over `expected_output_paths` while the
@@ -337,6 +337,16 @@ def unchecked_surface(root: Path, spec: dict[str, Any],
 
     Enumerated from the tree at run time, not from the spec, because what is exposed is
     what is *there*.
+
+    🔴 `post_read` has NO DEFAULT (Mirror `M-4`). It defaulted to `True`, and the one call
+    site sat behind `if args.post_read:` — so the parameter existed, was threaded
+    correctly, and could never be False from the CLI, while four artifacts said the census
+    ran on every run. A defaulted mode parameter is how a caller acquires the wrong
+    semantics without writing anything; requiring it makes every call state which universe
+    of skip classes it is asking about. Pre-handover only three of the six are reachable —
+    `blind_spot`, `scan_exempt_present` and `undecodable_prefix` all sit behind the
+    `post_read` branch of `scan_skip_reason()`, because before handover there are no
+    reader outputs to exempt.
     """
     census: dict[str, list[str]] = {name: [] for name in SCAN_SKIP_CLASSES}
     for path in iter_files(root):
@@ -425,6 +435,14 @@ def cmd_verify(args: argparse.Namespace) -> int:
     for actor, root in roots.items():
         if not root.is_dir():
             refuse(f"REFUSE: surface not found: {root}")
+
+    # 🔴 The mode, printed first and on every run including a failing one (Mirror `M-4`).
+    # The two modes are two contracts (§4.4), a reader of this output must not have to
+    # reconstruct which one ran from the presence or absence of a later block, and a test
+    # that claims to exercise one must be able to assert it as a runtime fact rather than
+    # rely on its own name — which is exactly how the candidate's own oracle came to prove
+    # the wrong property.
+    print(f"  MODE  {'--post-read' if args.post_read else 'pre-handover (HANDOVER GATE)'}")
 
     findings: list[str] = []
     allowed: dict[str, set[str]] = {actor: set() for actor in actors}
@@ -537,8 +555,11 @@ def cmd_verify(args: argparse.Namespace) -> int:
             #
             # 🔴 The four skip conditions used to be written out here and re-derived,
             # partially, in the census. They are now one call, and every non-None answer
-            # is printed by name below (Mirror M-3). Skipping a file silently is no
-            # longer expressible: the same predicate decides the skip and the printing.
+            # is printed by name below (Mirror M-3) — IN BOTH MODES (Mirror M-4), because
+            # one predicate deciding the skip and the printing says nothing about whether
+            # the printing site is reached. Skipping a file silently is not expressible in
+            # either mode: `verify` and `verify --post-read` both print the census, and
+            # the pre-handover run treats an unanticipated class as a finding.
             if scan_skip_reason(rel, spec, path, args.post_read) is not None:
                 continue
             try:
@@ -555,6 +576,50 @@ def cmd_verify(args: argparse.Namespace) -> int:
                 findings.append(
                     f"IDENTIFIER LEAK {actor}  {rel}  {len(hits)} hit(s): "
                     + ", ".join(sorted({str(h) for h in hits})[:5]))
+
+    # 7 · the unchecked surface — enumerated in BOTH modes, and computed HERE because
+    #     pre-handover one of its classes is a finding rather than a note.
+    #
+    # 🔴 Mirror `M-4`. Revision 4 put this whole block behind `if args.post_read:` and
+    # printed the partition sentence in both modes. `unchecked_surface()` already took the
+    # `post_read` parameter and its only call site sat inside the guard, so the parameter
+    # could not be False from the CLI: the mechanism existed, was correct, and was
+    # unreachable. On a clean build that was 32 present files — 16 per surface, before any
+    # reader exists — skipped by the scan and named by nothing, under a `VERDICT: PASS`
+    # asserting the opposite. `M-2` was scoped to one spec key, `M-3` to one skip
+    # condition, `M-4` to one CLI flag: the remedy each time was complete along the axis
+    # the finding was measured on. So the census is now unconditional and the MODE is a
+    # parameter of what it means, never of whether it runs.
+    census = {actor: unchecked_surface(roots[actor], spec, args.post_read)
+              for actor in actors}
+
+    # 🔴 THE ONE PLACE THE TWO MODES GIVE THE SAME FACT DIFFERENT FORCE, and the asymmetry
+    # is derived rather than chosen. §2.2 of the protocol: Plan is the surface's ONLY
+    # writer until handover. So pre-handover every present byte is a function of the
+    # allowlist and of `build`, which copies and does no templating — and an allowlisted
+    # file with a text suffix whose bytes are not text is a state `build` cannot produce
+    # from a text source. It means the source root carries a non-UTF-8 text file, or the
+    # surface was written to after `build`; §3 forbids the second by name — *a surface that
+    # fails is rebuilt from the spec, never patched*. Either way the pre-handover
+    # guarantee — *no identifier leak, all of it observed* — cannot be said over that file,
+    # and §1 authorizes the blind first pass only when `verify` is satisfied.
+    #
+    # Post-read the writer is the READER, who is permitted to write files, so the same
+    # bytes may be a reader artifact; there the claimed guarantee is ENUMERATION, the
+    # runtime provides exactly that, and the class is informational — which is Mirror's
+    # `REV-SCIAB-MIRROR-004` §9 and is NOT disturbed here. Who the writer is decides
+    # whether an unanticipated file is an anomaly or an artifact.
+    if not args.post_read:
+        for actor in actors:
+            for name, described in SCAN_SKIP_CLASSES.items():
+                if described["expected"]:
+                    continue
+                for rel in census[actor][name]:
+                    findings.append(
+                        f"UNANTICIPATED   {actor}  {rel}  — {name}: {described['reason']}. "
+                        "Pre-handover the surface is a function of the allowlist and "
+                        "`build`, so this state is not one the protocol declares; the "
+                        "surface is rebuilt from the spec, never patched")
 
     for item in findings:
         print(f"  [BLOCK] {item}")
@@ -573,29 +638,39 @@ def cmd_verify(args: argparse.Namespace) -> int:
         if not blind:
             print("  [BLIND SPOT] none declared — no declared reader output path collides "
                   "with a forbidden path")
-        # 🔴 Every class of SCAN_SKIP_CLASSES, in one loop, so adding a skip condition to
-        # `scan_skip_reason()` without giving it an explanation is a KeyError at the first
-        # run rather than a file that quietly stops being printed (Mirror M-3).
-        total = 0
-        unexpected_skips = 0
-        for actor in actors:
-            census = unchecked_surface(roots[actor], spec, args.post_read)
-            total += sum(len(value) for value in census.values())
-            for name, described in SCAN_SKIP_CLASSES.items():
-                for rel in census[name]:
-                    if not described["expected"]:
-                        unexpected_skips += 1
-                    print(f"  [UNCHECKED] {actor}  {rel}  — {name}: {described['reason']}; "
-                          f"EXPECTED_BY_PROTOCOL "
-                          f"{'yes' if described['expected'] else 'NO'}; still covered by "
-                          f"{described['still_covered_by']}")
-        print(f"  [UNCHECKED SURFACE] {total} present file(s), each named above with the "
-              "class and reason its content was not read. Every other present file was "
-              "scanned. Each file above still took every check its class does not exempt "
-              "it from, and its line says which.")
-        if unexpected_skips:
+    else:
+        # Stated rather than left to be inferred from an absent block: pre-handover the
+        # forbidden-path check has no exemption at all, which is STRONGER than post-read
+        # and is the reason the blind spot is a post-read object.
+        print("  [BLIND SPOT] none in this mode — every declared forbidden prior-output "
+              "path is checked in both surfaces, including the one --post-read must exempt")
+    # 🔴 Every class of SCAN_SKIP_CLASSES, in one loop, so adding a skip condition to
+    # `scan_skip_reason()` without giving it an explanation is a KeyError at the first
+    # run rather than a file that quietly stops being printed (Mirror M-3).
+    total = 0
+    unexpected_skips = 0
+    for actor in actors:
+        total += sum(len(value) for value in census[actor].values())
+        for name, described in SCAN_SKIP_CLASSES.items():
+            for rel in census[actor][name]:
+                if not described["expected"]:
+                    unexpected_skips += 1
+                print(f"  [UNCHECKED] {actor}  {rel}  — {name}: {described['reason']}; "
+                      f"EXPECTED_BY_PROTOCOL "
+                      f"{'yes' if described['expected'] else 'NO'}; still covered by "
+                      f"{described['still_covered_by']}")
+    print(f"  [UNCHECKED SURFACE] {total} present file(s), each named above with the "
+          "class and reason its content was not read. Every other present file was "
+          "scanned. Each file above still took every check its class does not exempt "
+          "it from, and its line says which.")
+    if unexpected_skips:
+        if args.post_read:
             print(f"  [UNCHECKED SURFACE] {unexpected_skips} of them are NOT a consequence "
                   "the protocol declares — read those lines first.")
+        else:
+            print(f"  [UNCHECKED SURFACE] {unexpected_skips} of them are NOT a consequence "
+                  "the protocol declares, and pre-handover that is a finding above, not a "
+                  "note: this surface is not handed over.")
     if findings:
         print(f"VERDICT: FAIL — {len(findings)} finding(s). A surface that fails is rebuilt "
               "from the spec, never patched.")
@@ -604,17 +679,47 @@ def cmd_verify(args: argparse.Namespace) -> int:
     # what is true. Every clause here has a probe behind it in test_benchmark_surface.py;
     # the previous sentence claimed "allowlist is exhaustive, no prior output" over a tree
     # whose symlinks nothing had looked at.
-    print("VERDICT: PASS — parity holds across the two surfaces; every present file is "
-          "allowlisted or is a declared output; no symlink; no forbidden prior-output path "
-          "outside the printed blind spot; every present file was either scanned for the "
-          "paper's identifiers or printed above under [UNCHECKED] with the reason it was "
-          "not, and nothing scanned leaked an identifier.")
-    print("  NOT CHECKED, and no clause above implies it: what a reader may open by "
-          "absolute path outside this tree (Annex J.0); the authorship of bytes at a "
-          "blind-spot path; the content of every file printed above as [UNCHECKED]. "
-          "SCANNED and [UNCHECKED] partition the present files — one predicate decides "
-          "both, so no present file is skipped by the identifier scan without appearing "
-          "in that list, and none appears in it that was scanned.")
+    #
+    # 🔴 AND IT IS WRITTEN PER MODE (Mirror `M-4`). One sentence printed by two runs is a
+    # sentence true of the stronger one and asserted by the weaker; revision 4 printed the
+    # partition clause under a run that produced no partition. The two modes check
+    # genuinely different things — pre-handover exempts no forbidden path and requires the
+    # slots empty; post-read exempts the blind spot and admits the reader's outputs — so
+    # each states its own, and neither borrows the other's.
+    if args.post_read:
+        print("VERDICT: PASS (--post-read) — parity holds across the two surfaces; every "
+              "present file is allowlisted or is a declared output; no symlink; no "
+              "forbidden prior-output path outside the printed blind spot; every present "
+              "file was either scanned for the paper's identifiers or printed above under "
+              "[UNCHECKED] with the reason it was not, and nothing scanned leaked an "
+              "identifier.")
+        print("  NOT CHECKED, and no clause above implies it: what a reader may open by "
+              "absolute path outside this tree (Annex J.0); the authorship of bytes at a "
+              "blind-spot path; the content of every file printed above as [UNCHECKED]; a "
+              "change made identically to BOTH surfaces, which parity cannot see. "
+              "SCANNED and [UNCHECKED] partition the present files of this run — one "
+              "predicate decides both, so no present file is skipped by the identifier "
+              "scan without appearing in that list, and none appears in it that was "
+              "scanned. `Present` is every regular file in the surface tree outside "
+              "`.git/`, which iter_files() excludes from both populations.")
+        return 0
+    print("VERDICT: PASS (pre-handover) — parity holds across the two surfaces; every "
+          "present file is allowlisted; every output slot is empty; no symlink; NO "
+          "forbidden prior-output path is present, and none is exempt in this mode; every "
+          "present file was either scanned for the paper's identifiers or printed above "
+          "under [UNCHECKED] with the reason it was not; every reason printed is one this "
+          "protocol declares, since an unanticipated one is a finding above and not a line "
+          "here; and nothing scanned leaked an identifier.")
+    print("  NOT CHECKED, and no clause above implies it: anything about what happens "
+          "after handover; what a reader may open by absolute path outside this tree "
+          "(Annex J.0); the content of every file printed above as [UNCHECKED] — the "
+          "packet, the instruction files and every non-text suffix are exempt BY "
+          "DECLARATION and their bytes were not read here; a change made identically to "
+          "BOTH surfaces, which parity cannot see. SCANNED and [UNCHECKED] partition the "
+          "present files of this run — one predicate decides both, so no present file is "
+          "skipped by the identifier scan without appearing in that list, and none appears "
+          "in it that was scanned. `Present` is every regular file in the surface tree "
+          "outside `.git/`, which iter_files() excludes from both populations.")
     return 0
 
 

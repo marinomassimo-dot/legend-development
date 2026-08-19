@@ -223,16 +223,22 @@ command for build, verify and freeze (`framework/scripts/benchmark_input_surface
 
 ```
 build       plan builds both surfaces from the source root and the allowlist, digests every file
-verify      for every path in ALLOWED_PATHS: exists in A, exists in B, sha256_A == sha256_B
+verify      ← THE HANDOVER GATE. §5 step 1 runs it; §5 step 3 is HANDOVER; P-7 of §1 is
+              this command having passed. No flag: `--post-read` is a different contract.
+            for every path in ALLOWED_PATHS: exists in A, exists in B, sha256_A == sha256_B
             (PER_ACTOR paths: present, and NOT identical across actors)
             for every path in FORBIDDEN_PRIOR_OUTPUT_PATHS: absent from A, absent from B
+              — EVERY one of them, with no exemption; the blind spot is a post-read object
             no file present in either surface outside ALLOWED_PATHS
             output slots empty
-            CONTENT_SCAN hits == 0
+            CONTENT_SCAN hits == 0, over every present file the spec does not exempt
+            the unchecked surface enumerated per actor under [UNCHECKED], class and reason
+            EXPECTED_BY_PROTOCOL: NO in this mode is a FINDING, not a note — see §4.4
 freeze      surface_tree_sha256 per actor; recorded in HANDOVER, then in the frozen receipt
 locators    after a reading: every cited artifact ∈ ALLOWED_PATHS or produced in an output slot
 verify --post-read   the same parity, allowlist and prior-output checks, with the output slots
-            excluded — see §4.3 for why authorship inside a slot is not decidable there
+            excluded — see §4.3 for why authorship inside a slot is not decidable there;
+            the same census, and EXPECTED_BY_PROTOCOL: NO informational there (§4.4)
 ```
 
 Every one of these is a subcommand of `framework/scripts/benchmark_input_surface.py`, and
@@ -301,7 +307,8 @@ file is a broken benchmark, and `verify` reports it.**
      puts it in `UNEXPECTED_FILE_SET` rather than counting it as work. The instructions say so
      to the reader, so this is a rule and not a trap.
   2. **The command enumerates the unchecked surface from the tree, per actor, on every run**,
-     under `[UNCHECKED]`.
+     under `[UNCHECKED]` — *every run* meaning both `verify` and `verify --post-read`, which
+     is what §4.4 is about and what revision 4 did not do.
 
   🔴 **The enumeration was itself incomplete, and revision 3 said it was not (Mirror `M-3`).**
   It listed three populations — the occupied blind-spot path, each present declared output, and
@@ -326,11 +333,25 @@ file is a broken benchmark, and `verify` reports it.**
 
   **The guarantee, stated so it can be falsified:** *`SCANNED` and `[UNCHECKED]` partition the
   present files — no present file is skipped by the identifier scan without being printed by
-  name, and no file is printed that was scanned.* Falsify it with a file that
-  `verify --post-read` neither scans nor names. The narrow form revision 3 stated — *no present
-  file is skipped by **both** the allowlist check and the identifier scan without being printed*
-  — was true and remains true; it is strictly weaker than this one and is no longer what the
-  tool claims.
+  name, and no file is printed that was scanned.* Falsify it with a file that `verify`, **in
+  either mode**, neither scans nor names. *Present* is every regular file in the surface tree
+  outside `.git/`, which `iter_files()` excludes from both populations and which no built
+  surface contains. The narrow form revision 3 stated — *no present file is skipped by **both**
+  the allowlist check and the identifier scan without being printed* — was true and remains
+  true; it is strictly weaker than this one and is no longer what the tool claims.
+
+  🔴 **And the sentence above was printed by a run that produced no census (Mirror `M-4`).**
+  Revision 4 put the whole census block behind `if args.post_read:` and printed the partition
+  clause in both modes. `unchecked_surface()` already took the mode as a parameter, threaded
+  correctly, defaulting to `True`, with its only call site inside the guard — so the parameter
+  could not be `False` from the CLI. On a clean build that was **32 present files, 16 per
+  surface, before any reader exists**, skipped by the scan and named by nothing, under a
+  `VERDICT: PASS` asserting the opposite; the whole of this protocol file, encoded UTF-16 into
+  both surfaces at an allowlisted `.md`, passed the **handover gate** with the path named zero
+  times. Three revisions, one pattern: `M-2` was scoped to one spec key, `M-3` to one skip
+  condition, `M-4` to one CLI flag. **A finding is measured under one invocation; the claim it
+  repairs is printed under all of them.** The census is now unconditional, the mode is a
+  parameter of what it *means* rather than of whether it *runs*, and `post_read` has no default.
 
   ⚠️ **What the census does not say.** `[UNCHECKED]` means *this content was not read by the
   identifier scan*, never *this file is unverified*. Five of the six classes are allowlisted
@@ -340,12 +361,57 @@ file is a broken benchmark, and `verify` reports it.**
   last gap is real and is not closed here: `build --emit-digests` already records per-file input
   digests and `verify` does not consume them.
 
+### 4.4 · The two `verify` modes are two contracts, and the difference is who the writer is
+
+`verify` and `verify --post-read` are not one check with an option. They run at opposite ends of
+the one transfer §2.2 defines, and **the writer is different on each side of it**. Stating them
+in one sentence is what produced `M-4`; stating them separately is what this section is.
+
+| Property | `verify` — PRE-HANDOVER | `verify --post-read` |
+|---|---|---|
+| **who wrote the tree** | Plan, via `build`, from the allowlist and the source root (§2.2) | the named actor, permitted to write |
+| **FILE-UNIVERSE CENSUS** | **yes** — per actor, from the tree, under `[UNCHECKED]` | **yes** — per actor, from the tree, under `[UNCHECKED]` |
+| **classes reachable** | 3 of 6: `scan_exempt_input`, `suffix_not_scanned`, `undecodable_text` | all 6 — the other three exist only once outputs do |
+| **IDENTIFIER SCAN** | every present file the spec does not exempt | same, plus the declared output set exempted |
+| **ALLOWLIST CHECK** | `present ⊆ ALLOWED_PATHS`, exhaustive | the same, with declared outputs excluded from `present` |
+| **EXPECTED OUTPUT HANDLING** | the slots must be **empty**; a file in one is `NOT EMPTY` | the declared output set is expected and exempt from the scan |
+| **UNEXPECTED FILE HANDLING** | `NOT ALLOWLISTED` | `NOT ALLOWLISTED`; under an output prefix, exempt only if its bytes do not decode |
+| **FORBIDDEN PRIOR OUTPUT** | **every** declared path, no exemption | every path **except** the printed blind spot |
+| **PARITY** | across the two surfaces, per path | the same |
+| **`EXPECTED_BY_PROTOCOL: NO`** | **BLOCKING — a finding, `rc=1`, the surface is not handed over** | **INFORMATIONAL — named, counted separately, `PASS`** |
+| **VERDICT EFFECT** | any finding → `rc=1` | any finding → `rc=1` |
+| **HANDOVER EFFECT** | `PASS` is P-7 of §1 and authorizes step 3 | none — handover already happened |
+
+**Why the one asymmetry, derived and not chosen.** The only class marked `EXPECTED_BY_PROTOCOL
+NO` is `undecodable_text`: an allowlisted file with a text suffix whose bytes are not UTF-8.
+
+- **Pre-handover it blocks.** §2.2: Plan is the surface's only writer until handover. `build`
+  copies and does no templating, so every present byte is a function of the allowlist and the
+  source root. A text-suffixed file that is not text is therefore a state `build` cannot produce
+  from a text source: either the source root carries one, or the surface was written to after
+  `build` — and §3 forbids the second by name, *a surface that fails is rebuilt from the spec,
+  never patched*. It is also precisely the state in which the pre-handover guarantee — *no
+  identifier leak, **all of it observed***— cannot be said about that file, while §1 authorizes
+  the blind first pass only when this command is satisfied. And it defeats the ex-ante check
+  §2.3 records for exactly these files: `grep -c -i -E '42397075|aqeilan|…'` returns `0` over a
+  UTF-16 file for the same reason the scan does. The remedy is already written and is the right
+  one: rebuild from the spec.
+- **Post-read it is informational.** The writer is the reader, who is permitted to write files,
+  so the same bytes may be an ordinary artifact of a tool that emitted UTF-16 or CP1252. What
+  this protocol claims after the freeze is **enumeration, not prevention** — the guarantee row
+  below says so, and the runtime does exactly that: the file is named, with its class, its
+  reason, and a separate count of the skips the protocol does not declare. Inventing a stronger
+  security guarantee there than the protocol provides is not available to the tool.
+
+**Who the writer is decides whether an unanticipated file is an anomaly or an artifact.** That is
+the whole of the asymmetry, and it is the same premise §2.2 already carries.
+
 **Exactly what the three instruments guarantee, together and separately.** The vocabulary here
 is deliberately weaker than "we know who wrote this", because that is not available:
 
 | Instrument | When | GUARANTEE_PROVIDED | FAILURE_MODE_STILL_POSSIBLE |
 |---|---|---|---|
-| `verify` (pre-handover) | before either reader sees anything | the slots were **empty**, every forbidden path was **absent**, no symlink, parity across the two surfaces, no identifier leak — all of it observed, not attested | nothing about what happens after handover |
+| `verify` (pre-handover) | before either reader sees anything | the slots were **empty**; **every** forbidden path was absent, none exempt; no symlink; parity across the two surfaces; and each present file was **either** scanned for the identifiers with no hit **or** printed by name under `[UNCHECKED]` with the class and reason its content was not read — the two partition the tree, decided by one predicate, and any class the protocol does not declare is a **finding** here rather than a note (§4.4). All of it observed, not attested — and *observed* is now the exact population the census names, not the whole tree | nothing about what happens after handover; the **content** of the files printed under `[UNCHECKED]` — the packet, the instruction files and every non-text suffix are exempt **by declaration**, so their bytes were not read and no clause here says they were; a change to an allowlisted input applied **identically to both surfaces**, which parity cannot see |
 | `verify --post-read` | after the freeze | every forbidden path **except the printed blind spot** is still absent; nothing outside the allowlist and the declared output set is present; no symlink appeared; **every present file was either scanned for the paper's identifiers or printed by name under `[UNCHECKED]` with the class and reason its content was not read** — the two populations partition the tree, decided by one predicate | authorship at the blind-spot path; a file the reader opened outside the tree; the **content** of every file printed under `[UNCHECKED]` — named with its reason, never silent; a change to an allowlisted input applied **identically to both surfaces**, which parity cannot see |
 | `freeze` + `verify-freeze` | at completion, and at any later moment | these bytes under these paths were present **when the freeze ran**; any later addition, removal or edit is detected set-wise; the actor and benchmark were read **from inside the tree**, so the receipt cannot be mislabelled | a substitution made **before** the freeze; the timestamp is this process's clock and nothing corroborates it |
 
