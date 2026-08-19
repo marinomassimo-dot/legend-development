@@ -18,7 +18,7 @@ domain: CONTROL PLANE — governance/candidates/ is a declared CONTROL_PLANE_ROO
 BRANCH            p5-domain-truth        (evidence-index worktree; also readable from any checkout)
 BASE_HEAD         f70878d1cb98317ec62808987fc328be7f8f4ea8
 CONTENT_TIP       ceefaa28611527d83b9f5e2209c99733a3a10afd
-MANIFEST_TIP      <the commit carrying this file>
+MANIFEST_TIP      dae0cca8f56f22fd88ffc7093a8fe2ea88430a33
 HASH              930dfefb3ce69bfaedc3920c96b3cddafbd07c9560498da4291b04b1f5476b97
 CHANGE_CLASS      MAJOR
 ```
