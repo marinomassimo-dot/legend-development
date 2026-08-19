@@ -382,20 +382,38 @@ in one sentence is what produced `M-4`; stating them separately is what this sec
 | **VERDICT EFFECT** | any finding → `rc=1` | any finding → `rc=1` |
 | **HANDOVER EFFECT** | `PASS` is P-7 of §1 and authorizes step 3 | none — handover already happened |
 
-**Why the one asymmetry, derived and not chosen.** The only class marked `EXPECTED_BY_PROTOCOL
-NO` is `undecodable_text`: an allowlisted file with a text suffix whose bytes are not UTF-8.
+**The one asymmetry: a derived direction, and a chosen level.** The only class marked
+`EXPECTED_BY_PROTOCOL NO` is `undecodable_text`: an allowlisted file with a text suffix whose
+bytes are not UTF-8. Two different things are said about it below and they do not have the same
+standing. **Which way the asymmetry points is derived** from §2.2's writer identity. **How hard
+the pre-handover side of it bites is a policy choice this candidate makes**, and it is the one
+thing in this section an approver decides rather than checks.
 
-- **Pre-handover it blocks.** §2.2: Plan is the surface's only writer until handover. `build`
+- **Derived — the direction.** §2.2: Plan is the surface's only writer until handover. `build`
   copies and does no templating, so every present byte is a function of the allowlist and the
   source root. A text-suffixed file that is not text is therefore a state `build` cannot produce
-  from a text source: either the source root carries one, or the surface was written to after
-  `build` — and §3 forbids the second by name, *a surface that fails is rebuilt from the spec,
-  never patched*. It is also precisely the state in which the pre-handover guarantee — *no
-  identifier leak, **all of it observed***— cannot be said about that file, while §1 authorizes
-  the blind first pass only when this command is satisfied. And it defeats the ex-ante check
-  §2.3 records for exactly these files: `grep -c -i -E '42397075|aqeilan|…'` returns `0` over a
-  UTF-16 file for the same reason the scan does. The remedy is already written and is the right
-  one: rebuild from the spec.
+  *from a text source*: either the source root carries such a file and `build` copied it
+  faithfully, or the surface was written to after `build` — and §3 forbids only the second by
+  name, *a surface that fails is rebuilt from the spec, never patched*. The first branch is not
+  excluded by any clause here; it is empty for BENCH-AB-001 as specified today, which is a
+  contingent fact about this source root and not a normative exclusion. **Either branch leaves
+  the same epistemic state**: it is precisely the state in which the pre-handover guarantee —
+  *no identifier leak, **all of it observed*** — cannot be said about that file, while §1
+  authorizes the blind first pass only when this command is satisfied; and it defeats the
+  ex-ante check §2.3 records for exactly these files, since
+  `grep -c -i -E '42397075|aqeilan|…'` returns `0` over a UTF-16 file for the same reason the
+  scan does. Post-read the same bytes carry no such implication, because the writer is the
+  reader. That much is entailed, and it is the whole of what §2.2 settles.
+- **Chosen — the level, pre-handover.** What the premises above reach is that a `PASS` in that
+  state would assert a guarantee the run cannot support. That leaves **two** internally
+  consistent contracts, not one: **(a) block** — `rc=1`, the surface is not handed over and is
+  rebuilt from the spec; or **(b) enumerate and scope** — `PASS`, the file named under
+  `[UNCHECKED]` with `EXPECTED_BY_PROTOCOL NO` and counted separately, with the pre-handover
+  `GUARANTEE_PROVIDED` row narrowed to say the guarantee does not extend to it. **(b) is
+  consistent with every premise cited above** and is exactly what `--post-read` does with the
+  same class. Nothing in §1, §2.2, §2.3, §3 or §4.3 selects between them. **This protocol
+  chooses (a)**, for the reason given in the policy block below, and the choice is stated here
+  rather than left to be inferred from the exit code.
 - **Post-read it is informational.** The writer is the reader, who is permitted to write files,
   so the same bytes may be an ordinary artifact of a tool that emitted UTF-16 or CP1252. What
   this protocol claims after the freeze is **enumeration, not prevention** — the guarantee row
@@ -404,7 +422,39 @@ NO` is `undecodable_text`: an allowlisted file with a text suffix whose bytes ar
   security guarantee there than the protocol provides is not available to the tool.
 
 **Who the writer is decides whether an unanticipated file is an anomaly or an artifact.** That is
-the whole of the asymmetry, and it is the same premise §2.2 already carries.
+the whole of the asymmetry's **direction**, and it is the same premise §2.2 already carries. It
+is not where the blocking **level** comes from, and this protocol does not claim that it is.
+
+🔴 **POLICY CHOICE — stated here because it is what an approver approves.**
+
+```
+POLICY CHOICE     At PRE-HANDOVER, a present artifact classified EXPECTED_BY_PROTOCOL: NO
+                  causes verification failure and blocks handover — `rc=1`, and the surface
+                  is rebuilt from the spec, never patched.
+
+RATIONALE         The pre-handover surface is Plan-controlled (§2.2) and such an artifact
+                  indicates a state outside the declared surface-construction protocol. Taking
+                  (a) keeps the pre-handover GUARANTEE_PROVIDED row assertable as written,
+                  because the mechanism that satisfies it already exists and is already
+                  correct. This is a judgement about which of two true contracts to publish;
+                  it is not an entailment of the premises above.
+
+ALTERNATIVE       (b) — enumerate the anomaly and scope the guarantee rather than block. It
+NOT CHOSEN        closes the same gap, it is what this tool already does post-read, and it was
+                  refused deliberately: it narrows the epistemic content of the handover gate
+                  in order to admit a surface the stricter rule can refuse.
+
+FAIL-CLOSED       (a) can only refuse surfaces (b) would admit. The two never disagree in the
+                  permissive direction, so the choice cannot weaken the blinding claim — it
+                  can only make the gate harder to pass, and can only cost a rebuild.
+
+STANDING          Plan proposes this under Annex H.1 (*integrazione strutturale / candidate*).
+                  This protocol is NOT canonical at BASE_HEAD, so no prior durable rule is
+                  being overridden and nothing is being made "stricter than" an existing one.
+                  The candidate is MAJOR: the choice is the Human Operator's to approve or
+                  refuse under H.1, and refusing it selects (b) without disturbing any other
+                  claim in this section.
+```
 
 **Exactly what the three instruments guarantee, together and separately.** The vocabulary here
 is deliberately weaker than "we know who wrote this", because that is not available:

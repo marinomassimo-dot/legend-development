@@ -216,9 +216,15 @@
       "Six exempt paths plus ten non-text files is sixteen per surface skipped and named by",
       "nothing, on the run that gates handover. The census now runs in both modes. The",
       "third pre-handover class, undecodable_text, is EXPECTED_BY_PROTOCOL: NO and is a",
-      "FINDING before handover rather than a note: build copies and does no templating, so",
-      "a text-suffixed file that is not text is not a state build can produce. See",
-      "controlled_benchmark_ab.md 4.4 for the derivation, which is 2.2's single-writer rule."
+      "FINDING before handover rather than a note. Two parts, different standing. DERIVED:",
+      "build copies and does no templating, so a text-suffixed file that is not text is not",
+      "a state build can produce FROM A TEXT SOURCE -- the source root carries one, or the",
+      "surface was patched, which 3 forbids by name -- and either way the pre-handover",
+      "guarantee cannot be said over it. That is 2.2's single-writer rule. CHOSEN: that the",
+      "response is a FINDING with rc=1, rather than an enumeration under a narrowed",
+      "guarantee row, is a POLICY CHOICE. See controlled_benchmark_ab.md 4.4, POLICY CHOICE",
+      "block: it is fail-closed, it is Plan's to propose under H.1 and the operator's to",
+      "approve, and the alternative it refuses is what --post-read does with the same class."
     ],
     "pattern": "42397075|awag239|aqeilan|steinberg|zonca|abdellatif|\\bMYC\\b",
     "text_suffixes": [".md", ".txt", ".json", ".py", ".yaml", ".yml"],

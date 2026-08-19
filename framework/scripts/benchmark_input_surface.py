@@ -593,22 +593,34 @@ def cmd_verify(args: argparse.Namespace) -> int:
     census = {actor: unchecked_surface(roots[actor], spec, args.post_read)
               for actor in actors}
 
-    # 🔴 THE ONE PLACE THE TWO MODES GIVE THE SAME FACT DIFFERENT FORCE, and the asymmetry
-    # is derived rather than chosen. §2.2 of the protocol: Plan is the surface's ONLY
-    # writer until handover. So pre-handover every present byte is a function of the
-    # allowlist and of `build`, which copies and does no templating — and an allowlisted
-    # file with a text suffix whose bytes are not text is a state `build` cannot produce
-    # from a text source. It means the source root carries a non-UTF-8 text file, or the
-    # surface was written to after `build`; §3 forbids the second by name — *a surface that
-    # fails is rebuilt from the spec, never patched*. Either way the pre-handover
-    # guarantee — *no identifier leak, all of it observed* — cannot be said over that file,
-    # and §1 authorizes the blind first pass only when `verify` is satisfied.
+    # 🔴 THE ONE PLACE THE TWO MODES GIVE THE SAME FACT DIFFERENT FORCE. The DIRECTION of
+    # that asymmetry is derived; the LEVEL implemented below is a POLICY CHOICE the
+    # protocol makes and declares, and the two are separated here because conflating them
+    # is what `REV-SCIAB-MIRROR-005` M-5 found.
     #
-    # Post-read the writer is the READER, who is permitted to write files, so the same
-    # bytes may be a reader artifact; there the claimed guarantee is ENUMERATION, the
-    # runtime provides exactly that, and the class is informational — which is Mirror's
-    # `REV-SCIAB-MIRROR-004` §9 and is NOT disturbed here. Who the writer is decides
-    # whether an unanticipated file is an anomaly or an artifact.
+    # DERIVED — the direction. §2.2 of the protocol: Plan is the surface's ONLY writer
+    # until handover. So pre-handover every present byte is a function of the allowlist and
+    # of `build`, which copies and does no templating — and an allowlisted file with a text
+    # suffix whose bytes are not text is a state `build` cannot produce FROM A TEXT SOURCE.
+    # It means the source root carries a non-UTF-8 text file and `build` copied it
+    # faithfully, or the surface was written to after `build`; §3 forbids only the second by
+    # name — *a surface that fails is rebuilt from the spec, never patched*. Either branch
+    # leaves the pre-handover guarantee — *no identifier leak, all of it observed* — unable
+    # to be said over that file, and §1 authorizes the blind first pass only when `verify`
+    # is satisfied. Post-read the writer is the READER, who is permitted to write files, so
+    # the same bytes may be a reader artifact; there the claimed guarantee is ENUMERATION,
+    # the runtime provides exactly that, and the class is informational — which is Mirror's
+    # `REV-SCIAB-MIRROR-004` §9 and is NOT disturbed here. Who the writer is decides whether
+    # an unanticipated file is an anomaly or an artifact.
+    #
+    # CHOSEN — the level. That the guarantee cannot be said leaves TWO consistent contracts:
+    # (a) block, rc=1, rebuild from the spec — implemented below; or (b) PASS, name the file
+    # in the census as EXPECTED_BY_PROTOCOL NO, count it apart, and narrow the pre-handover
+    # guarantee row to say so — which is what the `--post-read` branch does with the same
+    # class. Nothing in §1, §2.2, §2.3, §3 or §4.3 selects (a) over (b). The protocol chooses
+    # (a) at §4.4's POLICY CHOICE block, fail-closed: (a) can only refuse surfaces (b) would
+    # admit. The choice is Plan's to propose under H.1 and the operator's to approve; if it
+    # is refused, THIS is the branch that goes, and the census above stays exactly as it is.
     if not args.post_read:
         for actor in actors:
             for name, described in SCAN_SKIP_CLASSES.items():

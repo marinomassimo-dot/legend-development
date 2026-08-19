@@ -965,12 +965,16 @@ class HandoverGateCensusTests(SurfaceFixture):
         fails, so the scan cannot see it and parity cannot either. Revision 4 answered
         `VERDICT: PASS` with the path named zero times.
 
-        The expected result is derived in `controlled_benchmark_ab.md` §4.4, not read off
-        revision 4's behaviour: §2.2 makes Plan the only writer until handover and `build`
-        copies without templating, so a text-suffixed file that is not text is a state
-        `build` cannot produce — the source root carries one, or the surface was patched,
-        which §3 forbids by name. It is a FINDING, and `rc=1` means the surface is not
-        handed over.
+        The expected result is taken from what `controlled_benchmark_ab.md` §4.4 DECLARES,
+        not read off revision 4's behaviour. Two parts, with different standing. §2.2 makes
+        Plan the only writer until handover and `build` copies without templating, so a
+        text-suffixed file that is not text is a state `build` cannot produce from a text
+        source — the source root carries one, or the surface was patched, which §3 forbids
+        by name; either way the pre-handover guarantee cannot be said over it. That much is
+        derived. That the response is a FINDING with `rc=1`, rather than an enumeration
+        under a narrowed guarantee row, is §4.4's declared POLICY CHOICE (a) — see its
+        POLICY CHOICE block. This test pins the declared rule; it does not prove the rule
+        was the only one available.
         """
         for encoding, bom in self.UTF16_CASES:
             with self.subTest(encoding=encoding, bom=bom):
