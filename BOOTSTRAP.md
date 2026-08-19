@@ -83,12 +83,18 @@ Until step 9, the controller writes **bootstrap artifacts only**. Nothing else.
 
 | ACTOR_ID | Working directory | Contract |
 |---|---|---|
-| `orchestrator` | the repository root checkout | `roles/orchestrator.md` |
+| `orchestrator` | worktree `orchestrator` | `roles/orchestrator.md` |
 | `plan` | worktree `evidence-index` | `roles/plan.md` |
 | `mirror` | worktree `mirror` | `roles/mirror.md` |
 | `scientist-a` | worktree `lettore` | `roles/scientist.md` |
 | `scientist-b` | worktree `lettore-b` | `roles/scientist.md` |
 | `scientist-c` | worktree `lettore-c` | `roles/scientist.md` |
+
+**The Orchestrator's chat opens in its own worktree, not in the root.** The root checkout is the
+`CANONICAL_BATCH_COMMIT` surface (Annex D.1) and is reserved to it; an actor resident there is a
+standing writer in the root, which `GATE 0` requires to be clean and which `ONE_WRITER` calls
+*"critico nella root"*. Opening the chat there is the arrangement `deployment/deployment_profile.md`
+corrected — and a working directory never establishes who an actor is, in either direction.
 
 The three scientists share one contract on purpose — they are equivalent by design, and three
 copies would fork. The ACTOR_IDs above are proposed by the materialization and become permanent

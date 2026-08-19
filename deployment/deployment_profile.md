@@ -115,6 +115,72 @@ session reference is new. Routing uses the reference; identity, provenance and l
 ACTOR_ID. Never carry a session reference across a restart, and never treat a stale row as
 authoritative — body §43 is explicit that a stale inventory row is not authoritative.
 
+### 🔴 Working directory is NOT an actor identity attribute
+
+The table above locates actors by worktree name, and that is what it does: it says where an actor
+works. **It does not say that whoever is there is that actor**, and a future resolver must not
+read it that way. The distinction is cheap to state and was expensive to discover.
+
+**Three concepts, kept apart on purpose.** They were carried by one untyped word — `worktree` —
+and separating them is the whole point of this subsection:
+
+```
+ACTOR WORK SURFACE       where an actor does governed work and its WORK_COMMIT lands.
+                         The table above. One per actor
+CANONICAL BATCH SURFACE  the root checkout, branch `main`, batch window only. Annex D.1.
+                         Exists for exactly one actor and is not that actor's home
+ROUTING / DISCOVERY      which runtime session is currently acting for an ACTOR_ID.
+                         NOT a filesystem attribute. Unresolved, and deliberately so
+```
+
+**Why the filesystem cannot carry the third one.** Measured on this machine with
+`claude agents --json --cwd <path>`, CLI 2.1.232, read-only, on 2026-08-19:
+
+| Query | Sessions | Composition |
+|---|---|---|
+| root | 17 | 5 root · 10 `mirror` · 1 `lettore-c` · 1 `evidence-index` |
+| `orchestrator` worktree | 0 | — |
+| `evidence-index` (positive control) | 1 | the query can return non-zero |
+| `mirror` (second positive control) | 10 | — |
+| a path that does not exist (negative control) | 0 | — |
+
+Four properties follow, and each is a reason on its own:
+
+- **`--cwd` matches a subtree, not a location.** All six named actor worktrees sit below the root,
+  so the root query returns other actors' sessions. It is **over-broad for actor discrimination**.
+  It is *not* the universal set: seven of this machine's fourteen worktrees are outside the root
+  entirely, so the earlier framing — *"every worktree lives under the root"* — is false, and the
+  correct claim is the narrow one about the six named actors;
+- **the runtime exposes no actor and no role.** A session carries `cwd`, `kind`, `name`, `pid`,
+  `sessionId`, `startedAt`. There is no identity field to read;
+- **`name` is derived from the `cwd` leaf** — verified 17/17, with a negative control that matches
+  nothing. Name and cwd are **one attribute**, so a resolver keying on both corroborates nothing;
+- **the zeros are ambiguous.** The `orchestrator` worktree exists and returned 0; a nonexistent
+  path also returned 0. The instrument cannot tell an unoccupied surface from an absent one.
+
+**The rule, therefore:** working directory is evidence about an environment. It is **prohibited as
+an actor-identity discriminator**, and it may not establish `ACTOR_ID`, authority, or which session
+is current. Neither presence in the root nor presence in an actor's own worktree establishes
+anything by itself.
+
+**Requirements this places on a future resolver — requirements only; none of this is built.**
+
+1. `ACTOR_ID` is stable and is never inferred from a path, a session name, or a `pid`.
+2. `ROOT CHECKOUT != ORCHESTRATOR IDENTITY`. A session in the root during an authorized batch is
+   a session executing a batch; the identity that authorized it is established independently, by
+   the assigned role and an `ACTIVE` `ORCHESTRATOR_LEASE` (Annex I.3).
+3. `DEDICATED WORKTREE != CURRENT`. Occupying an actor's work surface is not a claim to be that
+   actor's routable session.
+4. `MANUAL OPERATOR SELECTION != CANONICAL ROUTING`. An operator picking a chat is a runtime act,
+   not a governed election, and leaves no durable claim behind.
+5. The resolver's identity model must not be defined by `claude agents --json`. That command is an
+   **observed runtime adapter surface** — one runtime's accidental vocabulary, recorded here as a
+   measurement. Actor ontology must survive its replacement.
+
+**Nothing here elects, supersedes or registers a session, and no routing lifecycle is created.**
+Which session is current for an ACTOR_ID remains unresolved; this subsection only removes a wrong
+answer that was available to the next person who looked.
+
 ## Current instance — status
 
 **The laboratory has been bootstrapped.** Governance v3.1.1 is canonical, the Orchestrator holds

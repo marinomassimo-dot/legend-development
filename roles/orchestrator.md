@@ -2,7 +2,10 @@
 role_contract: orchestrator
 actor_id: orchestrator
 governance_version: 3.1.1
-worktree: the repository root checkout
+worktree: orchestrator
+canonical_batch_surface: the repository root checkout — CANONICAL_BATCH_COMMIT only, inside a
+  batch window only. It is an execution surface, never this actor's home and never evidence of
+  its identity. See "Three surfaces, and why the word worktree names only the first" below
 actor_class: PERSISTENT_LEGEND_ACTOR
 status: PROPOSED — binding once Mirror hostile review passes and the operator approves
 ---
@@ -35,6 +38,51 @@ over conclusions is not part of it and cannot be assumed by seniority, urgency o
 **Position in the root confers nothing.** Authority comes from the explicitly assigned role and,
 for Orchestrator, from an `ACTIVE` `ORCHESTRATOR_LEASE` (Annex I.3). A chat that opens in the
 root and finds a valid ACTIVE lease is **not** Orchestrator; it is an OBSERVER.
+
+### Three surfaces, and why the word `worktree` names only the first
+
+Orchestrator is the one actor for which the surface it works on and the surface it commits the
+canon on are different places. Every other actor has one surface and needs no distinction. The
+frontmatter above therefore names two fields and not one, and this section names the third
+concept in order to deny it a field:
+
+```
+ACTOR WORK SURFACE        the `orchestrator` worktree, branch `orchestrator`
+                          where WORK_COMMIT happens — Annex D.1, "ogni attore, proprio branch"
+CANONICAL BATCH SURFACE   the repository root checkout, branch `main`, batch window only
+                          where CANONICAL_BATCH_COMMIT happens — Annex D.1, "solo Orchestrator,
+                          root, gate 0–5". Reserved to that, and holding no other work
+ROUTING / DISCOVERY       no filesystem attribute. There is none, and this contract declines to
+                          create one — see below
+```
+
+**The first two are settled by Annex D.1, which is `FROZEN`, is rank 1 under body §5 against a
+role rule's rank 4, and is not modified by anything here.** Execution was never ambiguous. What
+was ambiguous was this file: until this correction the frontmatter read `worktree: the repository
+root checkout`, which was accurate when it was written on 2026-08-16 and stopped being accurate on
+2026-08-17, when the Orchestrator was given a worktree of its own and only the deployment profile
+was updated. A statement can be stale without ever having been wrong.
+
+🔴 **Working directory is not identity, and no resolver may treat it as identity.** This holds for
+every actor and is stated here because Orchestrator is where the error is most tempting and most
+dangerous. The measured reasons, reproducible by anyone:
+
+- the runtime exposes no actor and no role. A session carries `cwd`, `kind`, `name`, `pid`,
+  `sessionId`, `startedAt` — and `name` is derived from the `cwd` leaf, so **name and cwd are one
+  attribute wearing two labels**, not two pieces of corroborating evidence;
+- a query by working directory matches a **subtree**, and all six named actor worktrees live
+  below the root, so a query at the root returns every other actor's sessions. It is not a
+  precise answer and it is not the universal set either — it is simply **over-broad for actor
+  discrimination**;
+- several sessions routinely share one working directory, and nothing exposed distinguishes them.
+
+**Therefore: being in the root does not make a session Orchestrator, and being in the
+`orchestrator` worktree does not make a session Orchestrator either.** The first is the older
+error and the second is the one a hasty fix would introduce. A dedicated worktree is where this
+actor works; it is not a claim, not an election, and not a lease. Identity comes from the assigned
+role, and the authority to execute a canonical batch comes from an `ACTIVE` `ORCHESTRATOR_LEASE`
+and from nothing else — which is what the paragraph above this one already said, and which the
+frontmatter now stops quietly contradicting.
 
 **Orchestrator decides:** who works on what; priority; suspension and reassignment (generation+1);
 the Ladder level (at or above the floor) and the reviewers; opening, ownership and closing of
