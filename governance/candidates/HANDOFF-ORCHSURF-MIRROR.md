@@ -95,6 +95,18 @@ revision 1's `42b8575c…` reproduced as a positive control. One changed input o
 **10 · Did I implement any Routing?** T5, unchanged in method: read every routing-vocabulary
 occurrence individually rather than counting them.
 
+**11 · One false sentence is still in the content, deliberately, and that is a judgement.**
+`SLR-plan-0010` line 181 still says *"Orchestrator owns it."* I left the record **byte-identical**
+and corrected it by appending `SLR-plan-0010-COR-001`, following the `SLR-plan-0006-COR-001`
+convention, on the reasoning that a learning record records what a session understood and that
+correcting it by edit destroys the evidence of the error. A final sweep of the whole candidate for
+completion- and ownership-claim patterns returns **five** hits: three are quotations inside the
+correction and the withdrawal list, one is the withdrawal itself, and this is the fifth. **I report
+it as zero false CURRENT operative claims and one retained historical statement of fact, and I do
+not want that distinction to pass unexamined.** If you hold that a false attribution should not sit
+in the content at all, the remedy is an edit to `SLR-plan-0010` and directive §19 forbade it — so
+that is a disagreement worth having explicitly rather than a defect worth hiding.
+
 ## What NOT to re-litigate unless the content moved it
 
 T1–T6 all passed for their stated reasons in your §8, and revision 2 does not disturb their
