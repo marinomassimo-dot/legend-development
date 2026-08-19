@@ -392,10 +392,44 @@ harness offers — returns *three sessions* under one reading and *zero* under t
 | ACK | Annex B.3 + durable | same | same | same | same | **same** | same |
 | SPECIAL CASE REQUIRED? | no | no | **no** | **no** | no | **no** | **YES — justified: lease, canonical execution, command authority, registrar self-reference** |
 
-**No `A/B`-specific framework logic exists.** Searched and stated so it can be falsified: the
-transport protocol contains no occurrence of `scientist-a`, `scientist-b`, `BENCH-AB-001`,
-`lettore`, or any role name. The design record names actors only as *measurements* — how many live
-sessions each worktree holds — never as a rule.
+### 9.1b · 🔴 The no-hard-coding claim, corrected — the grep this manifest asks Mirror to run falsifies its first wording
+
+Revision 1 of this section first stated that *"the transport protocol contains no occurrence of
+`scientist-a`, `scientist-b`, `BENCH-AB-001`, `lettore`, or any role name."* **That is false, and
+the check that found it is the one §5 of the handoff package tells Mirror to run.** Recorded here
+rather than quietly rewritten, because a manifest that invites a falsification and then absorbs
+the result silently has taught the reviewer nothing.
+
+Measured, at the content tip:
+
+```
+grep -inE 'scientist-a|scientist-b|BENCH-AB-001|lettore' framework/protocols/cross_session_transport.md
+  → 2 lines: 281, 366
+grep -inE '…|\bplan\b|\bmirror\b|orchestrator'           (adding the role names)
+  → 8 lines: 5, 30, 281, 346, 365, 366, 367, 389
+```
+
+**The corrected claim, which is the one that was meant and the one that matters:**
+
+> **No rule, no branch and no obligation in the transport protocol is conditioned on any actor,
+> role, worktree or benchmark.** Every one of the eight occurrences is a *citation* or a
+> *measurement*, and each can be checked to be so:
+
+| line | occurrence | what it is |
+|---|---|---|
+| 5 | *"binding once Mirror hostile review passes"* | front-matter status, the standard formula on every PROPOSED artifact in this repository |
+| 30 | *"`roles/plan.md` already says…"* | a citation of prior art, establishing that the rule is not new |
+| 281 | *"the name `scientist-a` still resolving under `--all` to a job"* | **a measurement** — the observed example of a name outliving its session. It illustrates the rule; the rule is *require a live pid*, which names nobody |
+| 346 | *"visible to Plan at reconciliation and to Mirror on the ledger"* | a `DETECTION` row naming who holds an existing constitutional duty — body §43 and Annex G.3, not a transport rule |
+| 365–367 | *"`plan` has 8 … `mirror` has 7 … `scientist-a` and `scientist-b` have 0"* | **a measurement**, cited to establish that term 3 of §8 cannot be satisfied today |
+| 389 | *"blocked on preconditions Plan may not satisfy alone"* | a statement about authority, not a protocol clause |
+
+**The falsifier a reviewer should use instead**, because it tests the property that was meant:
+delete every actor name from the protocol and ask whether any normative sentence changes meaning.
+None does — §1.1's list of authoritative content, §1.4's depth rule, §3's version binding, §4's
+per-field table, §5's taxonomy, §8's six-term conjunction and §9's five refusals are all stated
+over *any actor*. The names appear only where the protocol is quoting what was measured, and a
+measurement that names its subjects is more checkable, not less general.
 
 ### 9.2 · The Scientist D falsifier
 
