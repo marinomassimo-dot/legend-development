@@ -31,8 +31,12 @@ running laboratory.
 The chat that opens at the repository root is not in charge by virtue of where it is. It becomes
 the `BOOTSTRAP_CONTROLLER`, runs the procedure below, and is **promoted** to Orchestrator only
 after the qualification steps pass and it has acquired the `ORCHESTRATOR_LEASE`. The promotion is
-a durable record, never a self-assumption. The same chat is promoted — you do not need to open a
-second one.
+a durable record, never a self-assumption.
+
+🔴 **Where the promoted Orchestrator then lives is an open governance question, and this file does
+not answer it.** Two governed documents describe two different topologies and only one of them can
+be executed. **Stop before step 9 and read [Before you promote anyone](#-before-you-promote-anyone--blocked_by_governance).**
+Do not resolve it by choosing.
 
 If you find a **valid ACTIVE lease already recorded**, then a laboratory is already running. You
 are not the Orchestrator. Operate as an OBSERVER or ask the operator.
@@ -54,14 +58,21 @@ laboratory. When in doubt, read first.
 2. **Verify** before touching anything: that this is the expected repository; the state of the
    root checkout (it must be clean); the governance version; that no other writer is active in
    the root; and the state of the worktrees.
-3. **Create or verify the worktrees** — one per actor, each on its own branch:
-   `lettore`, `lettore-b`, `lettore-c`, `evidence-index`, `mirror`. One actor, one worktree, one
-   branch. This is not a convention: a shared checkout is what allows one session to commit
-   another's unfinished work, and it has happened here.
+3. **Create or verify the worktrees** — one per actor, each on its own branch: `lettore`,
+   `lettore-b`, `lettore-c`, `evidence-index`, `mirror` — the five named in FROZEN `Annex I.2`
+   step 4 — **and** `orchestrator`, which canonical `main` established through
+   `CAND-20260817-ORCHWT`. One actor, one worktree, one branch. This is not a convention: a
+   shared checkout is what allows one session to commit another's unfinished work, and it has
+   happened here.
+   **Creating a directory opens no chat and promotes nobody.** Which chat becomes the Orchestrator
+   is the blocked question; which directories exist is not.
 4. **Prepare the Agent Card registry** (Annex I.4) and the inventory skeleton (body §43).
 5. **Tell the operator exactly which chats to open**, one line each: the working directory and
-   the ACTOR_ID. This is about two minutes of mechanical human action — it is not permanent
-   human-in-the-loop, and it happens once.
+   the ACTOR_ID. FROZEN `Annex I.2` step 6 fixes that list at **five** — the five worktrees above.
+   🔴 **Do not issue a sixth line for `orchestrator`**: that row of the table below is blocked, and
+   the reason is in [Before you promote anyone](#-before-you-promote-anyone--blocked_by_governance).
+   This is about two minutes of mechanical human action — it is not permanent human-in-the-loop,
+   and it happens once.
 6. **Receive each actor's registration**: ACTOR_ID, session reference, declared capabilities.
    Each actor reads its own contract in `roles/` first.
 7. **L1 — messaging smoke.** Every actor answers: presence, routing, the `from` reference copied
@@ -73,28 +84,77 @@ laboratory. When in doubt, read first.
    gates 0, 2 and 4 and the restore path. Plan: registry validation. Mirror: a micro-review.
    `CONFIGURED != PROVEN`: a capability nobody smoke-tested is not a capability, and Orchestrator
    assigns on verified ones.
-9. **Acquire the `ORCHESTRATOR_LEASE`** (Annex I.3) only if the conditions passed.
+9. 🔴 **STOP — read [Before you promote anyone](#-before-you-promote-anyone--blocked_by_governance)
+   first.** Promotion is the step the unresolved conflict lands on, and it is the one step of this
+   procedure you may not currently execute. Then, and only if that block has been lifted by the
+   operator: **acquire the `ORCHESTRATOR_LEASE`** (Annex I.3), and only if the conditions passed.
 10. **Record the registration durably** → the chat is now `ACTIVE_ORCHESTRATOR`, and ordinary
     governance takes over from this file.
 
 Until step 9, the controller writes **bootstrap artifacts only**. Nothing else.
 
+## 🔴 Before you promote anyone — `BLOCKED_BY_GOVERNANCE`
+
+**Two governed documents describe two different Orchestrator topologies, and this file may not
+choose between them.** Record `BLOCKED_BY_GOVERNANCE` with the evidence below (body §48), raise a
+`HUMAN_APPROVAL_QUEUE` object of `TYPE: GOVERNANCE` (Annex J.3), and wait. Steps 1–8 continue;
+step 9, step 10 and the `orchestrator` row of the table below are the only things that wait.
+
+| Source | Status | What it mandates |
+|---|---|---|
+| `governance/annex_i_bootstrap_deployment.md` § I.2, steps 1, 6, 9–10 | **FROZEN**, `normative: yes` | the first chat opens in `<REPO_ROOT>`; the operator is given the *lista esatta* of **five** chats to open; that same root chat is promoted in place to `ACTIVE_ORCHESTRATOR` |
+| `deployment/deployment_profile.md`, canonical in `main` since `CAND-20260817-ORCHWT` | canonical | the Orchestrator has a worktree of its own, and **the root checkout is reserved to `CANONICAL_BATCH_COMMIT` and holds no other work** |
+
+**They cannot both be executed.** A chat's working directory is fixed when the chat opens and
+cannot be relocated, so promoting the root chat *in place* is identical to leaving the Orchestrator
+resident in the root.
+
+**The I.2 topology is known to be defective — and that is still not this file's decision to act
+on.** Under it the Orchestrator's working directory is the root, whose branch is `main`; `Annex
+D.1` makes any commit to `main` a `CANONICAL_BATCH_COMMIT`, so that actor has **no branch on which
+a `WORK_COMMIT` is possible**. Its output cannot become durable, `GATE 0`'s *root clean* is
+contradicted by body §8's obligation to produce durable output, and `ONE_WRITER` — *"critico nella
+root"* — carries a standing writer at all times. That argument is already canonical, in
+`deployment/deployment_profile.md`. It is a reason to **change** `Annex I.2`. It is not authority
+to ignore it: I.2 is rank 1 under body §5, this file is `status: PROPOSED`, and this file's own
+`authority:` field names Annex I.2 as its source — a document cannot outrank the document it
+derives from.
+
+```
+CONFLICT              Annex I.2 steps 1, 6, 9–10  vs  the canonical deployment profile
+RESOLUTION AUTHORITY  operator — body §4 ("cambio governance / authority model" → attende,
+                      human required) and Annex H.1 ("Spese / MAJOR approval / governance →
+                      Operatore")
+ROUTE                 plan proposes an Annex I.2 amendment → mirror reviews → operator approves
+                      → orchestrator canonicalizes under an ACTIVE lease and gates 0–5
+STATE                 HUMAN_REQUIRED — not resolved by this file, and not resolvable by it
+UNTIL RESOLVED        do not promote any chat to ACTIVE_ORCHESTRATOR, in the root or anywhere
+```
+
+**Do not work around it.** Promoting the root chat recreates the standing root writer. Promoting a
+chat in the `orchestrator` worktree adopts a topology no approved act has authorized. Both are the
+failure this block exists to prevent, and choosing either one silently is worse than waiting.
+
 ## The chats to open
 
 | ACTOR_ID | Working directory | Contract |
 |---|---|---|
-| `orchestrator` | worktree `orchestrator` | `roles/orchestrator.md` |
+| `orchestrator` | worktree `orchestrator` — 🔴 **BLOCKED, do not open** | `roles/orchestrator.md` |
 | `plan` | worktree `evidence-index` | `roles/plan.md` |
 | `mirror` | worktree `mirror` | `roles/mirror.md` |
 | `scientist-a` | worktree `lettore` | `roles/scientist.md` |
 | `scientist-b` | worktree `lettore-b` | `roles/scientist.md` |
 | `scientist-c` | worktree `lettore-c` | `roles/scientist.md` |
 
-**The Orchestrator's chat opens in its own worktree, not in the root.** The root checkout is the
-`CANONICAL_BATCH_COMMIT` surface (Annex D.1) and is reserved to it; an actor resident there is a
-standing writer in the root, which `GATE 0` requires to be clean and which `ONE_WRITER` calls
-*"critico nella root"*. Opening the chat there is the arrangement `deployment/deployment_profile.md`
-corrected — and a working directory never establishes who an actor is, in either direction.
+**The five rows below `orchestrator` are the `Annex I.2` step 6 list, and they are not in
+dispute.** The `orchestrator` row records the **work surface** canonical `main` assigns that
+actor — `deployment/deployment_profile.md`, `roles/orchestrator.md`. It is **not an instruction to
+open a chat there and it is not authority to**, because which chat becomes the Orchestrator is
+`HUMAN_REQUIRED` and blocked above. What the root checkout *is*, on the other hand, is settled:
+`Annex D.1` makes it the `CANONICAL_BATCH_COMMIT` surface, `GATE 0` requires it clean, and
+`ONE_WRITER` calls it *"critico nella root"*. **A working directory never establishes who an actor
+is, in either direction** — neither presence in the root nor presence in the `orchestrator`
+worktree makes a session the Orchestrator.
 
 The three scientists share one contract on purpose — they are equivalent by design, and three
 copies would fork. The ACTOR_IDs above are proposed by the materialization and become permanent

@@ -58,6 +58,38 @@ inside a batch window**: it becomes the canonical-commit surface and nothing els
 *(The improved-posture framing, and the observation that a change argued as a workaround gets
 reverted as one, are the orchestrator's, from the exchange of 2026-08-17.)*
 
+### 🔴 The correction never reached `Annex I.2`, and a fresh bootstrap is blocked on it
+
+**This is a declared, owned, unresolved residual and not a description of something fixed.** The
+change above was made here and in `main`'s history. `governance/annex_i_bootstrap_deployment.md`
+§ I.2 — `status: FROZEN`, `normative: yes`, rank 1 under body §5 — was not amended and still reads:
+the first chat opens in `<REPO_ROOT>` (step 1), the operator is handed the *lista esatta* of
+**five** chats (step 6), and that same root chat is promoted in place to `ACTIVE_ORCHESTRATOR`
+(steps 9–10). A chat's working directory cannot be relocated, so those steps and this section
+describe **different, mutually exclusive topologies**.
+
+The consequence is confined and it is real: for an **already-bootstrapped** laboratory this
+section governs and the Orchestrator has its worktree — that is settled canonical state. For a
+**fresh bootstrap**, `BOOTSTRAP.md` now stops at step 9 and records `BLOCKED_BY_GOVERNANCE`
+(body §48) rather than executing either topology, because it is `status: PROPOSED`, it derives its
+own authority from Annex I.2, and it cannot override the document it derives from.
+
+```
+RESIDUAL              Annex I.2 steps 1, 6, 9–10 still mandate the superseded topology
+INTRODUCED BY         CAND-20260817-ORCHWT, which corrected this file and not the annex.
+                      It pre-dates CAND-20260819-ORCHSURF, which exposes it and does not
+                      create it
+OWNER                 plan proposes the amendment · mirror reviews · operator ratifies ·
+                      orchestrator canonicalizes under an ACTIVE lease and gates 0–5
+AUTHORITY REQUIRED    operator — body §4 ("cambio governance / authority model") and
+                      Annex H.1 ("Spese / MAJOR approval / governance → Operatore")
+STATE                 HUMAN_REQUIRED — open
+CONVERGENCE ROUTE     a governance candidate that amends Annex I.2 steps 4, 6 and 9–10 to the
+                      six-worktree topology, carrying the WORK_COMMIT argument above as its
+                      rationale. Not opened here, and not opened by ORCHSURF
+BLAST RADIUS IF LEFT  fresh bootstrap only. No running laboratory depends on it
+```
+
 ```
 INTERACTION_PROFILE: VISIBLE_VSCODE
 ```
