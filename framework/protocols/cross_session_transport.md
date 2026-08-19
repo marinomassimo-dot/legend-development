@@ -13,8 +13,13 @@ rests_on: governance/design_records/runtime_harness_probe_20260819.md — every 
 also_references: launch/KERNEL_SPEC.md — REACHABLE/OPERATIONAL (MC-5), the five emission
   outcomes, MESSAGE_TURN_TRUNCATION, OB-3. Those classes are cited, never restated.
 enforcement_mode: PROCEDURAL — see §8. No mechanism in this protocol runs between turns.
-actor_scope: ACTOR-GENERIC. Nothing in this protocol names an actor, a role, a worktree or a
-  benchmark. It binds every actor that sends or receives a cross-session message.
+actor_scope: ACTOR-GENERIC in the semantic sense, which is the only sense in which it is true.
+  No rule, no branch and no obligation in this protocol is conditioned on which actor is acting;
+  every clause is stated over any actor, and it binds every actor that sends or receives a
+  cross-session message. Actor, role and worktree names DO occur in this file — as measurements,
+  as citations of prior art or of duties governance has already allocated, and in the status line
+  above. §11.1 states the property, those three classes, and the falsifier that tests it. That
+  falsifier is a deletion test, not a grep; a grep for names returns non-zero here by design.
 ---
 
 # CROSS-SESSION TRANSPORT — the message notifies, the repository proves
@@ -407,6 +412,7 @@ contacted**.
 | `T-TRANSPORT-6` | truncation / partial delivery | cannot alter the authoritative instruction, because the artifact owns it | **PASS by construction** — §1.3's deletion test |
 | `T-TRANSPORT-7` | recipient-processing failure after accepted delivery | no durable ACK → handoff not established | **PASS by construction** — §8 term 6; the failure classes are KERNEL_SPEC's, measured twice |
 | `T-DEPTH-1` | the size discipline changes only the transport representation | reading depth, evidence coverage, locator coverage and uncertainty analysis are unchanged | **PASS by construction** — §1.4, and no clause of this protocol mentions any of them except to forbid their reduction |
+| `T-GENERIC-1` | actor-generality — delete every actor, role, worktree and benchmark name from this file | no normative sentence changes meaning; no clause branches on `ACTOR_ID`; every remaining occurrence falls in one of §11.1's three classes | **PASS** — executed at this revision, §11.1. The inventory grep returns non-zero by design and is **not** this test |
 
 🔴 **`T-TRANSPORT-1` is the one that matters and it is unrun.** It is recorded as `NOT RUN`
 because running it requires choosing one of eight live sessions to address, and choosing one
@@ -421,6 +427,45 @@ by picking a session would be a measurement of luck.
 - does not create a message type, an envelope field, an ACK, or an escalation path;
 - does not modify Annex B, which is FROZEN;
 - does not set a numeric body budget;
-- does not name any actor, role, worktree, or benchmark;
+- does not condition any rule, branch or obligation on any actor, role, worktree or benchmark —
+  §11.1 states that property, the three classes in which names do legitimately occur here, and
+  the falsifier that tests it;
 - does not measure the harness — it cites the design record that did;
 - does not claim any enforcement the harness has not been shown to provide.
+
+### 11.1 · The actor-generality property, and the falsifier that tests it
+
+Revision 1 of this file asserted, in this section and in `actor_scope`, that the protocol *names*
+no actor, role, worktree or benchmark. **That was false of this file at the moment it was
+written**, and false in the direction that costs most: it put a checkable *absence of strings*
+where the semantic property was meant, so the cheapest check available — a grep — falsifies it.
+The property below is the one that was meant. It is stronger, and it survives the grep.
+
+> **THE PROPERTY.** No rule, no branch and no obligation in this protocol is conditioned on which
+> actor is acting. Every clause is stated over *any* actor, and a new actor needs no new
+> transport clause.
+
+Actor, role and worktree names occur in this file in three classes, and none of the three is a
+transport rule:
+
+| class | what the name is doing | where |
+|---|---|---|
+| MEASUREMENT | quoting what was observed — and an observation names its subjects | §6's dead-name example; §9's live-session counts |
+| CITATION | pointing at prior art, or at a duty governance has already allocated elsewhere | §0's `roles/plan.md` quote; §8's `DETECTION` row; §9's note that the successor work exceeds one actor's authority |
+| GOVERNANCE STATUS | this artifact's own standing under the framework rules that bind every artifact | the `status` line |
+
+A role named in a CITATION carries no transport rule with it. The duty is the one governance
+allocated already — body §43 and Annex G.3 for the `DETECTION` row — cited here rather than
+restated, and it would bind identically if this protocol did not exist. A MEASUREMENT that names
+its subjects is more checkable, not less general.
+
+> **THE FALSIFIER — semantic, and a grep is not it.** Delete every actor, role, worktree and
+> benchmark name from this file and ask whether any normative sentence changes meaning. If none
+> does, the property holds. It is **falsified** by any clause of the form *if the actor is X,
+> transport rule P applies, otherwise Q* — unless the difference is an authority class governance
+> has already allocated, cited here and not created here.
+
+**Why the lexical check is the wrong instrument, said here so it is not run as the right one.** A
+grep for actor names returns non-zero on this file and is expected to. It would return **zero** on
+a protocol that branched on `ACTOR_ID` through a variable, which is precisely the failure this
+property exists to exclude. Use a grep to build the inventory; use the deletion test to decide.
