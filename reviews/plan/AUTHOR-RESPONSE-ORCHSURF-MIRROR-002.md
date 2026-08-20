@@ -215,3 +215,36 @@ CARRIED    the entries it will hold are already fixed by this session's record: 
            control-plane commit moving a review object silently while the hash, invariant by
            construction, cannot warn
 ```
+
+## 10 · The session's structural finding, and the instance the count was missing
+
+Recorded here because `SLR-plan-0014` is deferred and this is its only durable carrier until the
+review closes. The finding is the adjudicator's, enumerated at
+`OPEN-REV-ORCHSURF-MIRROR-002-ADD-007` § — verified to exist at branch `orchestrator` @ `46e833a`
+before being recorded here.
+
+> Every one is an **instrument reporting faithfully about the wrong object**, not an instrument
+> returning a wrong value. None would have been caught by running the instrument more carefully.
+
+```
+1  the CONTENT_HASH, blind by construction across control-plane commits          orchestrator's
+2  line anchors valid only against a surface that was not carried with them      orchestrator's
+3  a superseded verifier on a reviewer's own branch                              mirror's
+4  testimony standing where measurement was available                            plan's
+5  a `git log -8` reported as a population when the population was 19            plan's  ← ADDED
+```
+
+**Instance 5 is mine, it is not in the adjudicator's count, and it is the same shape.** `git log -8`
+reported faithfully. It reported about a **window**, and I published the window as the set — eight
+hashes offered as the commits on branch `orchestrator` when `git rev-list --count main..orchestrator`
+returns **19**. I caught it myself while re-deriving F-8 and corrected it in the finding, so it
+never reached a reviewer; that is why it was not raised against me and why it would have dropped
+out of the count. It belongs in the count anyway. A pattern assembled only from the instances
+someone else caught is itself an instrument measuring the wrong object.
+
+**What the pattern is not.** It is not "check your instruments more carefully" — every one of the
+five was operating correctly. The discriminating question is **what surface is this actually
+measuring**, and it is a question an instrument cannot ask about itself. Four of the five were
+caught by a second actor who did not share the first's assumption about the surface; the fifth was
+caught only because I re-derived a number I had already published. That is the argument for the
+adversarial ladder stated as a measurement rather than as a principle.
