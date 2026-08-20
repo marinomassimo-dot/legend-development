@@ -42,9 +42,10 @@ supply.
 RATIFICATION STATUS      UNRATIFIED — `ratified_by: ""` in DEC-20260820-ORCH-SESSION-HOME v2,
                          registered c4c0fa1, sha256 9861fb05…c0bee7
 EFFECT OF THE RECORD     NONE TODAY, by its own §6
-WHAT IS DELIVERED HERE   the verification the record's §2 demands; seven findings that the
+WHAT IS DELIVERED HERE   the verification the record's §2 demands; eight findings that the
                          verification produced; the disposition of every revision-3 finding
-                         under the new direction; and the exact revision-4 change set
+                         under the new direction; the exact revision-4 change set; and the
+                         resolution of the three questions the operator carried forward (§7)
 WHAT IS NOT DELIVERED    revision 4 itself — no manifest, no hash, no content edit
 WHY NOT                  the record distinguishes transmission from ratification. Plan does not
                          collapse that distinction on the operator's behalf
@@ -119,7 +120,7 @@ ONE CITATION READ ONLY IN PART     the record cites body §5 for its own rank-2 
 
 ---
 
-## 3 · Seven findings the verification produced
+## 3 · Eight findings the verification produced
 
 ### F-1 · 🔴 Body §8 states the operator's architecture at rank 1, and the package quoted one clause of §8 against the rest of it
 
@@ -376,6 +377,74 @@ FROZEN IMPACT                 none. Annex I.2 is read, not amended; its cardinal
 
 ---
 
+### F-8 · 🔴 Body §35.1 forbids the Orchestrator the commits that §8, §11 and §18 require of it — and the durable state shows which reading is operative
+
+Four rank-1 sentences, read flat:
+
+- **§35.1** — *"Recinto Orchestrator: PUÒ … git nel perimetro. **NON DEVE**: committare lavoro proprio; toccare worktree altrui; … usare la root come spazio libero."*
+- **§11** — *"WORK_COMMIT → **ogni attore**, PROPRIO worktree/branch. Durevolezza di lavoro e learning. **Obbligatorio**, non canonico."*
+- **§8** — the Orchestrator *"**MUST** fare Session Learning Review."*
+- **§18** — *"Persistenza durevole NON negoziabile: ogni record **MUST** raggiungere lo stato durevole via WORK_COMMIT … il messaggio notifica, il commit fa fede."*
+
+Taken flat, FROZEN text both requires and forbids the same act. **This sits upstream of all of F-7:
+if §35.1 forbids Orchestrator work-commits outright, then the `orchestrator` worktree has no
+purpose and step 11 provisions a surface nobody may lawfully use.**
+
+**The reconciliation available.** §35.1's prohibition list is bracketed by *"git nel perimetro"*
+and closes on *"usare la root come spazio libero"*. Read in that frame, *"committare lavoro
+proprio"* forbids slipping its own work into the **canonical** surface — the root, `main`, the
+batch window — which is exactly the defect `CAND-20260817-ORCHWT` was raised to close by giving
+the actor a branch of its own. **That is a reading, and it is marked as one.**
+
+**The durable state shows which reading is operative, and it is not close.** Branch `orchestrator`
+carries **19** commits not present on `main` (`git rev-list --count main..orchestrator`) — lease
+records, canonicalisation records, review responses. **Count corrected:** an earlier draft of this
+finding named eight hashes and implied that was the population; it was a truncated `git log -8`,
+and the eight named are a sample. All eight verify as reachable from `orchestrator`. The fenced
+reading is not a proposal; it is what this laboratory has been doing for many sessions, and body
+§36.5 says *"durable repository state decides."*
+
+**But practice is not authority, and this cuts both ways.** If the flat reading is the correct
+one, those commits are not evidence of an interpretation — they are violations of a rank-1 fence,
+and that is a larger finding than anything else in this document. **Either §35.1 means what F-8
+and §7.2 read it to mean, or ORCHSURF has been building on a violated invariant since
+2026-08-17.** Plan may not decide it: Annex H.1 gives governance to the operator.
+
+```
+ADJUDICATED — operator, 2026-08-20, on this finding as stated above
+
+§35.1 is a constraint on PERSISTENCE SURFACE, not a prohibition of Orchestrator WORK_COMMIT
+capability. The coherent rank-1 reading is that §35.1 forbids using the ROOT/canonical surface
+as an ungoverned personal work area; §11 requires every actor to have WORK_COMMIT through its
+own worktree/branch; §18 requires durable state through WORK_COMMIT; §8 requires the
+Orchestrator Session Learning Review. An Orchestrator worktree is therefore REQUIRED for durable
+work, while the root remains session location and coordination surface.
+
+MANDATED WORDING — revision 4 carries this formulation verbatim:
+
+  "§35.1 constrains where persistent artifacts may be produced, not whether the Orchestrator may
+   produce persistent artifacts. The Orchestrator WORK_COMMIT surface is the assigned
+   worktree/branch, never the root checkout."
+
+CONSEQUENCE   the fenced reading is authoritative. The 19 commits are lawful, not violations.
+              F-7's step 11 provisions a surface that is REQUIRED rather than merely permitted,
+              which raises its criticality: without it the Orchestrator cannot satisfy §8+§18
+CLASS         this is an operator adjudication of a reading, at rank 2. It amends no FROZEN text
+              and could not — §35.1, §8, §11 and §18 are unchanged and unchallenged
+```
+
+**One related gap, measured while checking this.** `roles/orchestrator.md` declares five
+capabilities — batch dry-run, snapshot restore, messaging, lease acquisition, task assignment —
+and **`WORK_COMMIT on own branch` is not among them**, while `roles/plan.md` declares exactly that
+capability for itself. The Orchestrator has therefore been exercising, across those commits, a
+capability its own role contract never declared and L2 never verified. `PROBE-ORCHWT-001` —
+written by `CAND-20260817-ORCHWT` to measure precisely this, including *"NO root contamination …
+measured, not assumed"* — **has no outcome record anywhere in the tree; enumerated, and the string
+occurs in that candidate and nowhere else.** Step 11 provisions the surface for that capability.
+Revision 4 should declare the gap and route the probe, not inherit the silence.
+
+---
+
 ## 4 · Disposition of every revision-3 finding under the decision
 
 The directive's item 6 requires the valid findings to be conserved. They are — and the test
@@ -492,6 +561,15 @@ FIX       `canonical_batch_surface:` — it currently reads "never this actor's 
           actor's WORK surface, and never evidence of its identity
 ADD       `session_home: the repository root checkout` — a third typed field, because the
           decision names a third concept and an untyped concept is what caused this candidate
+ADD       the operator's F-8 formulation, VERBATIM and quoted as an adjudication rather than
+          paraphrased: "§35.1 constrains where persistent artifacts may be produced, not whether
+          the Orchestrator may produce persistent artifacts. The Orchestrator WORK_COMMIT surface
+          is the assigned worktree/branch, never the root checkout." It also goes in
+          `deployment/deployment_profile.md`, because F-2's false sentence lives there and this
+          is the true sentence that replaces its premise
+ADD       `WORK_COMMIT on own branch` to the declared-capabilities table as UNVERIFIED — F-8
+          measured that the Orchestrator has been exercising it across 19 commits while its role
+          contract declared five capabilities and not this one
 EXTEND    "Three surfaces, and why the word `worktree` names only the first" → four concepts:
           SESSION HOME · ACTOR WORK SURFACE · CANONICAL BATCH SURFACE · ROUTING (still no
           filesystem attribute, still deliberately uncreated)
@@ -527,10 +605,21 @@ BOOTSTRAP PROCEDURE     one step REWRITTEN (step 3, narrowed to the I.2 five) an
                         (step 11, post-promotion provisioning). The addition is the only
                         instruction in this change set with no antecedent in any governed
                         document, and F-7 declares it as new rather than as a restoration
-OPEN, NOT SETTLED       F-7 (b) and (c) — who owns post-promotion worktree provisioning, and
-                        whether worktree creation falls inside the pre-promotion perimeter at
-                        all. Both are governance readings; neither is Plan's to settle; both go
-                        to Mirror with the candidate rather than being resolved before it
+RESOLVED IN §7          F-7 (b) and (c). The perimeter is silent post-promotion on TEMPORAL
+                        scope, so "is a worktree an artifact" never has to be answered (§7.1);
+                        ownership is Plan at body §47 step 15 (§7.2). Neither answer amends
+                        FROZEN text. Both are readings, and both go to Mirror AS readings
+F-8 ADJUDICATED         by the operator, 2026-08-20: §35.1 constrains the persistence SURFACE,
+                        not the capability. The `orchestrator` worktree is REQUIRED, not merely
+                        permitted, which raises step 11 from lawful to necessary. Mandated
+                        wording carried verbatim into revision 4 — see F-8 and §5
+MEASURED                the §7.2 provisioning gate — PASS (§8.1). PROBE-ORCHWT-001 legs 1, 2 and
+                        4 — PASS from durable state (§8.2)
+STILL OWED              PROBE-ORCHWT-001 leg 3 on the `orchestrator` surface, executed BY the
+                        Orchestrator. Plan may not take it without writing into another actor's
+                        worktree, which would corrupt what it measures. §8.3 measures the
+                        MECHANISM on Plan's own surface as a positive control, and revision 4
+                        must not cite that as a discharge
 HUMAN_REQUIRED RESIDUAL DISSOLVED — and this is the largest single consequence of the decision
 A.6 CONSEQUENCE         orchestrator checkpoints only, as at revision 3. NOT four roles
 REGRESSION              expected DELTA 0; the suite is red at main for a pre-existing reason and
@@ -591,19 +680,241 @@ bootstrap procedure rather than restoring it. Three surfaces to hit. **(a)** I c
 five are derived from I.2 step 6's five chats. A reviewer could hold that step 4 is an
 independent enumeration that merely happens to have the same cardinality — in which case its
 silence about `orchestrator` is silence, and revision 3's permission argument comes back.
-**(b)** I claim provisioning a worktree post-promotion is lawful. Body §0.4 gives worktree
-creation to the Controller, *pre*-promotion; if a reviewer holds that worktree creation is
-exclusively a Controller act, then the new step 11 has no owner and F-7 breaks at execution
-rather than at argument. **(c)** I claim the pre-promotion perimeter — *"SOLO artefatti di
-bootstrap"* — does not cover this. If a reviewer holds instead that a worktree is infrastructure
-rather than an artifact and therefore falls outside the perimeter entirely, then step 3 could
-lawfully create all six after all, and the separation becomes optional rather than required.
-**I have not settled (b) or (c); both are governance readings, and Annex H.1 gives a doubtful
-MAJOR to Mirror.**
+**(b)** §7.2 reads body §0.4's *"crea/verifica i worktree"* as purpose-scoped to the bootstrap
+five rather than as an exclusivity clause. A reviewer holding it exclusive leaves step 11 without
+an owner, and F-7 then breaks at execution rather than at argument. **(c)** §7.1 answers the
+perimeter question on **temporal** scope and deliberately never answers what an "artefatto" is.
+Attack that evasion directly: if a reviewer holds the WHAT limit reaches post-promotion acts too,
+7.1 collapses and the question I declined to answer becomes unavoidable.
+
+**9 · F-8 is adjudicated, so attack the adjudication's reach rather than its merits.** The
+operator settled the reading on 2026-08-20: §35.1 constrains the persistence surface, not the
+capability. That disposes of the collision and Plan does not reopen it. What remains open to a
+reviewer is **scope**: the adjudication is a rank-2 operator reading of rank-1 text, and body §5
+puts NON-NEGOTIABLE governance above it. If a reviewer holds that §35.1's *"committare lavoro
+proprio"* cannot bear the fenced reading **as a matter of text**, then the conflict is genuine and
+the record's own §3 rule applies — rank 1 prevails and the reading must be revised, not §35.1.
+Attack the textual fit; the authority to adjudicate is not in question.
 
 ---
 
-## 7 · What this document does NOT do
+## 7 · The three questions carried into revision 4, resolved
+
+The operator carried three points forward: two governance readings F-7 left open, and one
+drafting requirement. All three are answered here **without changing a FROZEN assumption**. The
+discipline is the one F-7 established — refuse to read into FROZEN silence, in either direction —
+and it has to cut both ways or it is not a discipline.
+
+### 7.1 · Scope of *"SOLO artefatti di bootstrap"* — answered on temporal scope, not on what an artifact is
+
+Answered first, because ownership depends on it. The clause exists at both ranks, and the two
+copies are not identical:
+
+- body §0.4 — *"Perimetro **di scrittura** pre-promozione: SOLO artefatti di bootstrap."*
+- Annex I.2 — *"Perimetro pre-promozione: SOLO artefatti di bootstrap."*
+
+The body carries a word the annex drops — **scrittura** — and the body outranks the annex it
+derives from, which is revision 3's own §5.5 finding applied to a new sentence. The clause states
+two independent limits at once:
+
+```
+WHAT   bootstrap artifacts only
+WHEN   pre-promotion
+```
+
+**The second limit disposes of the question, and the first never has to be interpreted.** The
+perimeter fences the BOOTSTRAP_CONTROLLER, a role that terminates at body §47 step 14 — after
+which the actor is ACTIVE_ORCHESTRATOR, fenced instead by §35.1, stated separately and in
+different terms. Step 11 sits after promotion. **The pre-promotion perimeter is not permissive
+about step 11; it is silent about it, because its temporal scope has ended.**
+
+This is deliberately narrower than the answer the question invites. Asking *"is a runtime worktree
+a bootstrap artifact?"* would require putting meaning into FROZEN text that FROZEN text does not
+carry — the exact move this whole line of work exists to stop making. The question is left
+unanswered because it does not need to be answered.
+
+**Corollary, normative rather than editorial:** step 11's *position* is load-bearing. Move the
+provisioning earlier — into step 3, or anywhere before promotion — and the WHAT limit becomes live
+again and must be adjudicated before the act is lawful. Revision 4 must state this in the file, so
+that a later editor tidying the sequence cannot silently reopen a governance question.
+
+**Corroboration at a lower rank, which settles nothing alone but is worth knowing.**
+`CAND-20260817-ORCHWT` §5 item 2 already characterised the act: *"Creating a worktree and moving
+untracked files is an **operational act, not a commit** — so it can precede the canonical commit
+that records it."* That is a canonical candidate, not FROZEN. What it establishes is that this
+reading is **not novel to revision 4**: the system published it, and canonicalised the candidate
+carrying it, before the question was ever put. A reviewer attacking 7.1 is attacking a position
+the repository already holds.
+
+### 7.2 · Ownership of post-promotion provisioning — Plan, at §47 step 15, gated on one unrun measurement
+
+**What §0.4 grants, and what it does not.** *"Il Controller: … crea/verifica i worktree; prepara
+l'actor registry; presenta all'operatore la lista esatta delle chat da aprire …"* Worktree
+creation sits mid-list among bootstrap qualification acts, and its purpose is visible two items
+later: the five worktrees must exist before I.2 step 6 can hand the operator *"la LISTA ESATTA
+delle 5 chat da aprire (path per ACTOR_ID)"* — a path cannot be given before it exists. **The
+grant is scoped by its own purpose to the bootstrap five. It is not an exclusivity clause**, and
+reading it as one would be the mirror of the error F-7 refused when it declined to read I.2 step
+4's silence as permission.
+
+**The positive anchor is already in the sequence.** Body §47 step 15 — *"Plan produce
+runtime/authority inventory"* — is the first act after step 14's promotion, which is precisely
+the slot step 11 occupies. Ownership converges from three directions:
+
+| Ground | Text |
+|---|---|
+| the sequence | §47 step 15 places Plan immediately after promotion, on runtime matters |
+| the mandating document | the `orchestrator` worktree is mandated by `deployment/deployment_profile.md`, which `roles/plan.md` gives Plan to *"materialize and maintain"* |
+| the domain | `roles/plan.md` gives Plan *"the runtime / authority inventory and the Agent Card registry"*. A runtime work surface is a runtime-inventory fact |
+
+**Ownership: Plan. No new authority is required and none is proposed.**
+
+**The gate — `CONFIGURED != PROVEN`.** `roles/plan.md` lists *"Write within own worktree only"* as
+**UNVERIFIED**, its L2 verification being *"attempt a cross-worktree write and confirm refusal"*.
+Whether a harness that refuses Plan a cross-worktree **write** also refuses Plan a
+`git worktree add` is a different question about a different operation. **It has now been
+measured: §8.1, PASS.** Plan provisioned a worktree, wrote nothing into it, left the root
+untouched and removed it cleanly. The ownership assignment is cleared at the level this gate
+demanded — and at no level beyond it: the cross-worktree **write** refusal remains UNVERIFIED,
+was not authorised, and was not attempted.
+
+**Fallback, named now so it is not improvised later.** If the measurement refuses Plan, the
+ACTIVE_ORCHESTRATOR provisions its own work surface as its first post-promotion act: §35.1 grants
+it *"git nel perimetro"*, and a directory is not authority, so §0.2's *"mai un'autoassunzione"* —
+which governs **promotion** — is not engaged. Second choice on textual grounds only; mechanically
+it is the cleaner of the two, since no actor reaches across into another actor's surface at all.
+
+```
+PRIMARY     Plan, at body §47 step 15
+GATE        one L2 smoke — can Plan create a worktree it will never itself write into?
+FALLBACK    ACTIVE_ORCHESTRATOR self-provisions, as its first act after promotion
+UPSTREAM    F-8 is ADJUDICATED — the fenced reading holds, by operator decision of 2026-08-20.
+            The surface is required, so the fallback is a fallback on ownership only, never on
+            whether the surface exists
+MEASURED    §8.1 PASS. The PRIMARY branch is cleared; the FALLBACK was not needed and was not run
+NOT ASKED   no FROZEN text is amended, and no new authority is claimed on either branch
+```
+
+### 7.3 · The two axes, carried as a drafting requirement rather than a conclusion
+
+```
+AXIS 1   SESSION_LOCATION  ≠  PERSISTENCE_SURFACE
+AXIS 2   ROOT location  ≠  ACTOR_ID  ≠  write authority
+```
+
+Revision 4 carries both **into each of the four places it edits** — `BOOTSTRAP.md` (steps 3, 5,
+the new 11, and the chats table), `deployment/deployment_profile.md`, `roles/orchestrator.md`, and
+the re-adjudication of `runtime/bootstrap/STEP5-session-open-plan.md` — and not once in a
+preamble. A separation asserted in one document and relied upon in four is how the Rev1→Rev3 drift
+travelled: the true statement lived in one file and the false inference was drawn in another, and
+no diff could see the join.
+
+**Step 11 is itself an instance of axis 1** — it provisions a persistence surface for an actor
+whose session location is elsewhere — so it must carry the axis inline as its stated rationale
+rather than merely comply with it. That is the difference between a rule a file follows and a rule
+a file teaches.
+
+Axis 2 is decision item 3, already endorsed and preserved (§4.1, final row). Nothing in 7.1 or 7.2
+touches it: neither the temporal reading of the perimeter nor Plan's ownership of provisioning
+makes any location confer identity or authority on anyone.
+
+---
+
+## 8 · Measurements — authorised by the operator, executed, recorded
+
+Two measurements were authorised: the §7.2 provisioning-ownership gate, and `PROBE-ORCHWT-001`.
+Both are recorded here at their real strength, including the half of the second that Plan may not
+take.
+
+### 8.1 · SMOKE-PLAN-PROVISION-001 — can Plan create a worktree it will never write into? · **PASS**
+
+Executed this session from the `evidence-index` worktree, branch `orchestrator-surface`. The
+target path was the session scratchpad, deliberately **not** `.claude/worktrees/`, so that no
+other session could pick the probe up as an actor surface. Detached HEAD, so no branch was
+created.
+
+| Leg | Expected | Measured |
+|---|---|---|
+| provisioning act | `git worktree add --detach` succeeds for Plan | **EXIT=0** — *"Preparing worktree (detached HEAD 4abcfc0)"* |
+| worktree is real | resolves its own top-level and HEAD | HEAD `4abcfc0`, top-level = the probe path |
+| **Plan writes nothing into it** | porcelain empty | **empty** — creation and write are separable acts, which is the whole question |
+| **root not perturbed** | `git -C <ROOT> status --porcelain` unchanged | **empty before and after**; root HEAD `04693e68` unchanged |
+| Plan's own surface | unchanged apart from the PREP edit | unchanged |
+| reversible | `git worktree remove` restores the set | count **14 → 15 → 14**, path removed, **no stray branch** |
+
+```
+VERDICT      PASS. Plan can provision a worktree without writing into it and without touching
+             the root. §7.2's ownership assignment — Plan, at body §47 step 15 — is CLEARED at
+             the level the gate demanded
+WHAT IT DOES NOT ESTABLISH
+             it does not test provisioning INTO `.claude/worktrees/`, and it does not test
+             whether Plan is refused a cross-worktree WRITE. That refusal is the L2 verification
+             `roles/plan.md` still carries as UNVERIFIED, it was NOT authorised here, and it was
+             not attempted. Confirming a boundary by crossing it is not a measurement Plan takes
+             on its own initiative
+STATUS OF THE CAPABILITY
+             the provisioning capability is now MEASURED. `CONFIGURED != PROVEN` is satisfied for
+             this act and for no other
+```
+
+### 8.2 · PROBE-ORCHWT-001 — three legs discharged from durable state, one leg NOT Plan's to take
+
+`CAND-20260817-ORCHWT` wrote this probe on 2026-08-17 and it had **no outcome record anywhere in
+the tree** — verified by enumeration; the string occurs in that candidate and nowhere else.
+
+**The probe as written cannot be executed by Plan.** Its INPUT is *"the Orchestrator chat,
+operating in the worktree `orchestrator`"*, and its artifact is written there. Plan writing into
+another actor's worktree is precisely the boundary this probe exists to characterise, and
+`roles/plan.md` confines Plan to its own surface. **Executing it would corrupt the thing being
+measured.** So the probe is split at its natural seam:
+
+| Leg | Probe's expectation | Method | Result |
+|---|---|---|---|
+| 1 | a WORK_COMMIT exists on branch `orchestrator`, **non-canonical** | `git rev-list --count main..orchestrator`; `git merge-base --is-ancestor orchestrator main` | **PASS** — 19 commits ahead of `main`; the tip is **not** an ancestor of `main`, so nothing leaked into canonical history |
+| 2 | branch ownership correct — HEAD is `orchestrator`, not `main` | `git worktree list --porcelain` read from Plan's own worktree | **PASS** — `branch refs/heads/orchestrator`, HEAD `b3596d5` |
+| 4 | the commit is reachable | `git merge-base --is-ancestor <c> orchestrator` on all eight cited hashes | **PASS** — all eight reachable |
+| **3** | **NO root contamination, measured before and after** | **requires a live run at commit time** | **NOT DISCHARGED — and not retrospectively discharge­able** |
+
+**Why leg 3 resists retrospection.** It is a before/after assertion about the root at the moment
+of a commit. Nothing in the durable record captures the root's porcelain at the instant those 19
+commits were made, and no amount of reading after the fact recovers it. A green legs-1-2-4 says
+the commits landed in the right place; it says **nothing** about what the root looked like while
+they were landing.
+
+**A positive control on the mechanism, taken on Plan's own surface.** Leg 3's mechanism — *does an
+actor committing inside its assigned worktree perturb the root?* — is measurable without touching
+anyone else's surface, by instrumenting Plan's own authorised WORK_COMMIT of this document. That
+measurement is recorded at §8.3.
+
+```
+OWED         PROBE-ORCHWT-001 leg 3, on the `orchestrator` surface, executed BY the Orchestrator
+             under its own authority. Routed, not taken. Revision 4 names it as an open
+             measurement rather than inheriting the 2026-08-17 silence
+NOT A SUBSTITUTE
+             §8.3 measures the MECHANISM on Plan's surface. It is a positive control, not a
+             discharge of leg 3, and revision 4 must not cite it as one
+```
+
+### 8.3 · CONTROL-PLAN-WORKCOMMIT-001 — does a WORK_COMMIT inside an assigned worktree perturb the root?
+
+Leg 3's mechanism, measured on the only surface Plan may lawfully measure it on: its own. The
+instrument is the operator-authorised WORK_COMMIT of this document — root porcelain and root HEAD
+captured immediately before and immediately after, on the real repository rather than a throwaway.
+
+```
+METHOD    git -C <REPO_ROOT> status --porcelain  +  rev-parse HEAD   → before
+          git commit on branch orchestrator-surface, worktree evidence-index
+          git -C <REPO_ROOT> status --porcelain  +  rev-parse HEAD   → after
+          root is UNPERTURBED iff both readings are identical and porcelain is empty in both
+```
+
+**Result: recorded in the commit that immediately follows this one**, because a measurement of a
+commit cannot be inside the commit it measures. That second commit is instrumented identically,
+so the pair is self-checking: if the mechanism perturbs the root, the second measurement catches
+what the first would have had to report. Neither commit is amended — amending would rewrite the
+history the measurement is evidence about.
+
+## 9 · What this document does NOT do
 
 - **It does not claim `DEC-20260820-ORCH-SESSION-HOME` is in force.** It is unratified, and its
   own §6 governs. Everything in §5 is conditional on ratification.
@@ -611,6 +922,16 @@ MAJOR to Mirror.**
   content file edited. Revision 3 remains the delivered package and its binding is untouched.
 - **It does not modify, propose modifying, or claim to supersede any FROZEN document.** Body and
   Annex I.2 are correct under this direction, which is the point.
+- **§7 offers readings, not adjudications.** 7.1 and 7.2 answer the two questions carried forward
+  by reading FROZEN text at its stated scope; neither is a ruling, and Plan has no authority to
+  make one. They are written to be attacked at §6 items 8 and 9, and they travel to Mirror as
+  readings that a reviewer may reject without any FROZEN text having moved.
+- **It does not settle F-8, and revision 4 must not be bound while F-8 is open.** Whether §35.1
+  is fenced or flat decides whether the `orchestrator` worktree may be used at all. Plan states
+  the collision, states which reading the durable state supports, and stops there.
+- **It runs neither unmeasured probe.** The §7.2 capability gate and `PROBE-ORCHWT-001` are named
+  and left unexecuted. Naming a measurement is not taking it, and a green probe would still be
+  `CONFIGURED`, not `AUTHORISED`.
 - **It does not withdraw Mirror's B-1.** B-1 found a real contradiction between governed
   documents. It identified the wrong document as the defective one, which is a different thing
   from being wrong.
