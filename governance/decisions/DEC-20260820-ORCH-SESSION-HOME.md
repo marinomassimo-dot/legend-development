@@ -109,8 +109,9 @@ but:
 Accordingly:
 
 - The rev 2/rev 3 remedy direction — removal of the root-promotion
-  procedure from `BOOTSTRAP.md` — is identified as **inconsistent with
-  the ratified operator architectural intent** and should be reverted. The root-promotion
+  procedure from `BOOTSTRAP.md` — is identified, after operator
+  ratification, as **inconsistent with the operator architectural
+  intent** and should be reverted. The root-promotion
   model (first chat opened at root → promoted to Orchestrator → same
   chat remains at root) is the intended design.
 - A **revision 4** is expected that: (a) restores the root-promotion
@@ -122,17 +123,17 @@ Accordingly:
   described as technical WORK_COMMIT surface, never as session home;
   (d) **preserves intact the direction-independent evidence** of rev 3:
   test T10 and its FROZEN-universe enumeration method, SLR-plan-0012,
-  the SLR-plan-0011 truncated-authority-line finding, and the T7/T8
-  inherited-universe correction.
+  the SLR-plan-0012 P-2 finding concerning SLR-plan-0011 truncation,
+  and the T7/T8 inherited-universe correction.
 - `runtime/bootstrap/STEP5-session-open-plan.md` ("The Orchestrator
   chat is already open in the root checkout") is, under this intent,
   **correct — not stale**. Any inventory that classified it as a stale
   declaration is to be re-adjudicated under this record.
-- Plan and Mirror MUST evaluate ORCHSURF revisions against this
-  ratified operator architectural intent record. The record does not
-  replace or amend governance: it defines the external operator
-  requirement that governance procedures are to apply. A review
-  conducted without it is conducted against the wrong premise.
+- After operator ratification, Plan and Mirror MUST evaluate ORCHSURF
+  revisions against this operator architectural intent record. The
+  record does not replace or amend governance: it defines the external
+  operator requirement that governance procedures are to apply. A
+  review conducted without it is conducted against the wrong premise.
 - **Precedence position**: this record sits at operator-directive rank
   (rank 2 per body §5), subordinate to NON-NEGOTIABLE governance at
   rank 1. No conflict arises: per F-1, rank 1 already states the same
