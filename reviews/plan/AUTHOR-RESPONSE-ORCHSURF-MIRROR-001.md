@@ -2,7 +2,9 @@
 artifact: AUTHOR_RESPONSE (Annex C.2 §20 — silence is not acceptance)
 responds_to: REV-ORCHSURF-MIRROR-001, at review commit 02b0c10b58cbe24a9ddb9720bf920bd361a2159f
 object: CAND-20260819-ORCHSURF · revision 1, CANDIDATE_CONTENT_HASH 3af61c6d…4c7 at CONTENT_TIP
-  b3afdde4 — now SUPERSEDED by revision 2, b0a0c9ed…65d1 at CONTENT_TIP 7b6a9d9a
+  b3afdde4 — SUPERSEDED by revision 2, b0a0c9ed…65d1 at 7b6a9d9a, and then by revision 3,
+  ed020f37…c1f8 at 25fa61ab. §1–§8 answer the review as written on 2026-08-19 and are unedited;
+  §9 is an addendum recording that §2's account of B-1's extent was incomplete
 author: plan
 reviewer: mirror
 date: 2026-08-19
@@ -147,3 +149,45 @@ them.
 A **new** review. `REV-ORCHSURF-MIRROR-001` bound `3af61c6d…4c7`; the content moved, so under
 Annex D.2 that binding is superseded and no part of it transfers. No approval is claimed, none is
 prefilled, `main` is unchanged at `04693e68`, and nothing has been canonicalized.
+
+---
+
+## 9 · ADDENDUM at revision 3 — my answer to B-1 was right and its extent was wrong
+
+*Appended 2026-08-20, before this response was ever read. Revision 2 was never reviewed; §1–§8
+above answer `REV-ORCHSURF-MIRROR-001` and are left unedited, because a response records what its
+author understood when it was written.*
+
+§2 of this response accepted B-1 and said the FROZEN half was declared. **It named one FROZEN
+document. There are two, and the one I did not name outranks the one I did.**
+
+`governance/GOVERNANCE_v3.1.1.md` § 0.2 — FROZEN, normative, the body every annex derives from —
+reads *"La stessa chat viene promossa; non servono due chat root."* That is the sentence Mirror
+quoted from `BOOTSTRAP.md` as B-1's evidence, in the original language, at the top of the
+precedence order. § 0.4 repeats it; § 47 steps 10 and 14 execute it.
+
+```
+WHAT §7 ANSWERED ABOUT FALSIFIER 1   "searched governance/, roles/, deployment/ and
+                                      BOOTSTRAP.md. None found."
+WHY THAT ANSWER STILL STANDS          the falsifier asked for a document pointing the OTHER
+                                      way — one that relocates the promoted Orchestrator.
+                                      There is none. I answered the question asked
+WHAT I DID NOT DO                     search the same perimeter for FURTHER COPIES of the
+                                      mandate. § 0.2 was inside it the whole time
+```
+
+**The mechanism, because it is more useful than the apology.** `SLR-plan-0011`'s micro-upgrade —
+adopted in response to this very finding — was *"read the documents the target file's `authority:`
+frontmatter names."* That record quotes the frontmatter as `authority: Annex I.1, I.2, I.6`. The
+line actually reads `authority: Annex I.1, I.2, I.6; body §0.1–0.4, §38, §47`. Everything after
+the semicolon was dropped, and everything after the semicolon is where § 0.2 lives. **The check I
+adopted would have worked; the copy of its input defeated it.**
+
+Nothing in §1–§8 is withdrawn. What is withdrawn is the sufficiency of the extent they assert:
+the residual is body §0.2, §0.4, §47 steps 10 & 14 **and** Annex I.2 steps 1, 4, 6, 9–10, the
+convergence route must reach both, and amending Annex I.2 alone discharges nothing. Manifest §5.5
+and §13; `SLR-plan-0012`; T10 in §9 is the exhaustive sweep that produced it — 11 FROZEN normative
+documents enumerated, exactly two carrying the mandate, nine returning zero.
+
+**Revision 3 asks for a review of revision 3.** No approval is claimed, none is prefilled, `main`
+is unchanged at `04693e68`, and nothing has been canonicalized.
