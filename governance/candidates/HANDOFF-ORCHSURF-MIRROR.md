@@ -1,12 +1,14 @@
 ---
-artifact: HANDOFF — CAND-20260819-ORCHSURF revision 3 → Mirror hostile review
+artifact: HANDOFF — CAND-20260819-ORCHSURF revision 4 → Mirror hostile review
 from: plan
 to: mirror
-revision: 3
-supersedes: the revision-2 handoff (CONTENT_TIP 7b6a9d9, CONTENT_HASH b0a0c9ed…65d1), which was
-  never reviewed, and the revision-1 handoff (CONTENT_TIP b3afdde4, hash 3af61c6d…4c7), which was
-  reviewed as REV-ORCHSURF-MIRROR-001 (REQUEST CHANGES). Under Annex D.2 both bindings are
-  superseded because the content moved, and NOTHING from that review transfers as a verdict
+revision: 4
+supersedes: the revision-3 handoff (CONTENT_TIP 25fa61ab, CONTENT_HASH ed020f37…c1f8), never
+  reviewed; the revision-2 handoff (CONTENT_TIP 7b6a9d9a, hash b0a0c9ed…65d1), never reviewed;
+  and the revision-1 handoff (CONTENT_TIP b3afdde4, hash 3af61c6d…4c7), reviewed as
+  REV-ORCHSURF-MIRROR-001 (REQUEST CHANGES). Under Annex D.2 all three bindings are superseded
+  because the content moved. **Nothing from that one review transfers as a verdict — and less
+  than ever, because revision 4 inverts the direction revision 1 was reviewed under**
 delivery: MANUAL. Routing is unresolved, so this file IS the transport. No SendMessage was sent,
   and no session was addressed, elected or verified as a recipient
 authored_on: 2026-08-20
@@ -14,142 +16,223 @@ review_floor: Annex C.1 · MIRROR_REQUIRED (Annex G.1 — governance artifacts, 
 opens_by: Orchestrator (Annex C.3). Plan does not open its own review
 ---
 
-# HANDOFF — `CAND-20260819-ORCHSURF` revision 3
+# HANDOFF — `CAND-20260819-ORCHSURF` revision 4
 
 ## What to fetch
 
 ```
 branch          orchestrator-surface
 BASE_HEAD       04693e683a254ff0a6d0619fba47103a0fb7d122
-CONTENT_TIP     25fa61abe0dfe5c19f11b15d9b906a2e07d64a56
-CONTENT_HASH    ed020f37c6a33d6c84b0b1eb7a5ed7e3800b4915b599715e3954d1036ab9c1f8
-                legend-candidate-v4 · 537 included · 48 excluded
+CONTENT_TIP     9a70e94d6d9863622c22159d0d7f2117b77b793d
+CONTENT_HASH    844de909c6b0d1cef4ce4014e9fef3870aeb8729e8b3c6ac029a12dfcaacb6dc
+                legend-candidate-v4 · 539 included · pre-image 541 lines / 58 040 bytes
 MANIFEST_TIP    the branch tip — fetch `orchestrator-surface`, not a recorded SHA. A manifest
                 cannot name the commit containing it, so any MANIFEST_TIP value is one commit
                 behind the package. governance/candidates/ is excluded from the hashed domain,
-                so control-plane commits cannot move CONTENT_HASH. This is the same seam
-                c9de134 recorded for P5DOMAIN and 51d1317 for revision 2, stated instead of
-                repeated: revision 2's handoff named c70087f as MANIFEST_TIP and two later
-                commits then amended the package it pointed at
+                so control-plane commits cannot move CONTENT_HASH
 manifest        governance/candidates/CAND-20260819-ORCHSURF.md
+operator record governance/decisions/DEC-20260820-ORCH-SESSION-HOME.md  — RATIFIED
+preparation     governance/candidates/PREP-20260820-ORCHSURF-REV4.md  — eight findings, the
+                measurements, and the reasoning §17 compresses
+SLR             learning/plan/SLR-plan-0013.md · SLR-plan-0012 · SLR-plan-0011
 author response reviews/plan/AUTHOR-RESPONSE-ORCHSURF-MIRROR-001.md
-SLR             learning/plan/SLR-plan-0012.md  (revision 3) · SLR-plan-0011 (revision 2)
-SLR correction  learning/plan/SLR-plan-0010-COR-001.md
-superseded      revision 2 — tip 7b6a9d9 · hash b0a0c9ed…65d1 · never reviewed
-                revision 1 — tip b3afdde · hash 3af61c6d…4c7 · reviewed as REV-…-001
-                both still correct for their trees; both used as positive controls in §1
 ```
 
 ```bash
 python3 governance/scripts/candidate_content_hash.py \
   --base 04693e683a254ff0a6d0619fba47103a0fb7d122 \
-  --tip  25fa61abe0dfe5c19f11b15d9b906a2e07d64a56
+  --tip  9a70e94d6d9863622c22159d0d7f2117b77b793d
+# 844de909c6b0d1cef4ce4014e9fef3870aeb8729e8b3c6ac029a12dfcaacb6dc
 ```
 
-## What changed since revision 2, in one paragraph
+## Manifest lineage — two bindings inside revision 4, and why
 
-**The remedy did not change. The declaration did, because it was wrong.**
-`governance/GOVERNANCE_v3.1.1.md` — FROZEN, normative, the body every annex derives from — states
-at § 0.2: *"La stessa chat viene promossa; non servono due chat root."* That is the same
-proposition Mirror quoted from `BOOTSTRAP.md` lines 31–35 as blocking finding B-1, sitting at the
-highest rank in the system; § 0.4 repeats it and § 47 steps 10 & 14 execute it. The revision-2
-package named it **nowhere** — 0 hits across the manifest, the handoff, the author response and
-both SLRs. `BOOTSTRAP.md`'s deleted sentence was a *translation* of § 0.2; revision 2 removed the
-translation and left the original standing. Revision 3 corrects the conflict table (three sources,
-body first), the residual's extent (identical now in all three content files, where revision 2
-disagreed with itself on step 4), the convergence route (both documents, and amending the annex
-alone discharges nothing), the route's cost (the body is a fingerprint input for **all four**
-roles, not two), and the grounding of the stop. One new learning record, `SLR-plan-0012`.
+Revision 4 was bound twice. **Both bindings are recorded, and the seam is not hidden.**
 
-**I found this by re-reviewing my own package before delivering it. You did not raise it, and
-neither did I at revision 2.**
+```
+1a650d85e7686654e37329576c034b899d43bb40   first revision-4 content tip
+    hash 79af3e52302aa4ca9fc99e53979904aff2535f28949f2af2a573eee222d82ea0
+    publication gate at this tip: BLOCK · 1
+
+9a70e94d6d9863622c22159d0d7f2117b77b793d   CONTENT_TIP as delivered
+    hash 844de909c6b0d1cef4ce4014e9fef3870aeb8729e8b3c6ac029a12dfcaacb6dc
+    publication gate at this tip: PASS · 0
+```
+
+**What moved between them: one field, in one file.** `DEC-20260820-ORCH-SESSION-HOME.md` is an
+**included** entry of the candidate content domain, so redacting a field inside it moved the
+binding. Annex D.2 invalidates the first hash for that reason. The domain delta between the two
+pre-images is **exactly one line** — the DEC's digest — and both pre-images are 541 lines /
+58 040 bytes, identical in shape.
+
+**Plan's judgement, offered for you to overturn: this is a re-binding, not a revision 5.** No
+argument, finding, remedy or disposition changed. If you hold that any content change demands a
+revision bump regardless of substance, say so — the judgement is recorded here precisely so it
+can be contested rather than discovered.
+
+## The DEC redaction event, and the three hashes of the operator record
+
+The operator record was ratified, then redacted. Each step changed exactly one line, verified by
+diff both times, and **all three hashes are meaningful and none is interchangeable**:
+
+```
+9861fb05c66d4e763f6f1e36e012f6f019a5447356fa35ec87f0153b29c0bee7
+    the content AS RATIFIED, before any signature existed.
+    THE RATIFICATION ATTACHES TO THIS VALUE
+
+6e89ba5f23f6a5fd1ae70e7bc339d1cb452b38fb1a5f0c9ffaa22e705fc4e1e1
+    after signature, carrying a direct identifier.
+    This is the value that tripped the publication gate
+
+6b5d9c3fd625aed3c72811d8bfff458f38b92f2973aa9b99aa90063df762f83c
+    after identifier redaction — THE RECORD AS IT NOW STANDS in the tree
+```
+
+```
+ec4bf60   ratification — ratified_by filled
+9a70e94   redaction    — ratified_by: <operator name>  →  ratified_by: Operatore
+```
+
+The redaction was an operator decision of 2026-08-20, on the ground that the record's own
+`authority:` field already read `Operatore`, that ratification is an operator **action** rather
+than a public identity assertion, and that this is the public edition, where a registered private
+identifier in canonical content is a publication block. **The ratification act is unchanged; only
+its rendering is.** Verify that claim rather than take it: `git show 9a70e94` is one line.
+
+**Why you are being told this at all.** The block was real, it was measured, and it was caused by
+the ratification rather than by any content this candidate edits — established by stashing the
+three edited files and re-measuring, which reproduced the same single block. A handoff that
+reported only the final green gate would have concealed a genuine event in the package's history.
+
+## Read the candidate in three layers — they are not the same kind of text
+
+This is the most important instruction in this handoff, and it is deliberate rather than
+accidental. **The operator directed that §§2–15 remain unrewritten**, so the package contains
+reasoning that its own §17 supersedes.
+
+```
+LAYER 1 — OPERATIVE            §1 (manifest) and §17 (revision-4 disposition)
+                               These govern. Where §§2–15 conflict with them, they win
+
+LAYER 2 — HISTORICAL EVIDENCE  §§2–15, retained VERBATIM and NOT rewritten
+                               These argue revisions 1–3's direction, which is withdrawn. They
+                               are preserved as the observed record of how the reasoning went
+                               wrong, not as claims the package still makes
+
+LAYER 3 — RESOLVED FINDINGS    §17.1, a row per revision-3 finding, each disposed by ONE test:
+                               did it depend on the remediation direction?
+                               PRESERVED — direction-independent, carried unchanged
+                               WITHDRAWN — direction-dependent, and the direction inverted
+```
+
+**Do not review §§2–15 as current assertions, and do not let them pass as harmless either.** They
+are in scope as evidence: if §17 fails to withdraw something §§2–15 assert, that gap is a finding
+and it is exactly the kind this layering could hide.
+
+The rationale for keeping them is the operator's: rewriting would replace an observed evolution
+with a cleaned narrative and reduce auditability. `SLR-plan-0012` L-1 records the same principle
+from the other direction — a claim removed from a derived document is not thereby removed.
+
+## What changed at revision 4, in one paragraph
+
+**The remedy direction is inverted, and not one measurement is withdrawn to do it.**
+`DEC-20260820-ORCH-SESSION-HOME`, ratified, states that the Orchestrator's **session home** is the
+repository root by architectural intent and that the `orchestrator` worktree is that actor's
+**WORK_COMMIT surface** — both at once, because they answer different questions. Revisions 1–3
+read them as rival topologies and proposed to extinguish root-promotion; that direction is gone,
+and with it the `HUMAN_REQUIRED` FROZEN transition, the four-role fingerprint rotation and the
+`BLOCKED_BY_GOVERNANCE` stop. Three findings are new and none was reachable from the old
+direction: **body §8 states the architecture at rank 1 and the whole package quoted one clause of
+it against the rest (F-1)**; the WORK_COMMIT-impossibility premise that grounded the stop is
+**false and was canonical in `main` (F-2)**; and **Annex I.2 step 4 and the deployment profile
+were never one list (F-7)**. No FROZEN document is amended — `git diff` over the body and annexes
+A–J across the whole range returns empty.
 
 ## Where to attack — ranked
 
-**1 · Is § 0.2 really a mandate, or a statement of principle?** This is the attack I would run
-first and the one that would shrink revision 3 the most. § 0.2's heading is *"Root ≠ authority vale
-anche al giorno zero"* — which is the principle this candidate **defends**. A reader could hold
-that only the clause *non servono due chat root* is procedural, and that the residual against the
-body is one sentence rather than three sections. My answer is § 47 step 14, which is unambiguously
-a numbered procedural step. But that is a reading, and if it does not hold, the extent and the
-convergence route both shrink.
+**1 · Does body §8 mean session home, or association?** The costliest attack. *"Orchestrator vive
+nella chat grafica associata a `<REPO_ROOT>`"* — a reader could hold that *associata* denotes the
+actor's association with the root as its canonical batch surface, not the chat's filesystem
+location. My answer: the subject of *vive* is *la chat grafica*, a chat's location is where it is
+opened, §8's own title is **"ORCHESTRATOR — ROOT, AUTORITÀ, IDENTITÀ"**, and the very next
+sentence denies that the location confers authority — a denial only necessary if the location is
+real. **It is a reading, and F-1 and the whole revision depend on it.**
 
-**2 · Is T10's universe actually exhaustive?** It enumerates 11 FROZEN `normative: yes` governance
-documents from their own frontmatter and greps five vocabulary terms. Attack both halves: is the
-document set complete (are there normative surfaces outside `governance/*.md` — `roles/`,
-`framework/instruction/`, `CLAUDE.md`), and is the term set complete (a mandate phrased in words
-none of the five terms match would be invisible to it). **The whole value of revision 3 rests on
-this sweep, and I ran it alone.**
+**2 · Does F-7's separation hold, or is it a distinction without a difference?** I claim Annex I.2
+step 4's five worktrees are *derived from* step 6's five chats, so `orchestrator`'s absence is the
+architecture rather than a gap. A reviewer could hold step 4 is an independent enumeration that
+merely shares a cardinality — in which case its silence is silence, and revision 3's permission
+argument (*"I.2 does not prohibit others"*), which revision 4 **withdraws**, would come back.
 
-**3 · Is the stopping rule sound?** I claim the search terminates at a document with **no
-`authority:` field**, because that is where a mandate can originate, and that `GOVERNANCE_v3.1.1.md`
-has none. Verify the second half from the tree. Attack the first half: a document could inherit a
-mandate without declaring an `authority:` field at all, in which case the rule under-terminates.
+**3 · Is `BOOTSTRAP.md` step 11 lawful, and is it in the right place?** It is the one instruction
+in this package with **no antecedent in any governed document**, and it is declared as new rather
+than presented as a restoration. Two surfaces: does body §0.4's *"crea/verifica i worktree"* make
+worktree creation an exclusively Controller act (if so, step 11 has no owner); and does the
+pre-promotion perimeter *"SOLO artefatti di bootstrap"* reach post-promotion acts (I answer on
+**temporal** scope and deliberately never define "artefatto" — attack that evasion directly).
 
-**4 · Does the fail-closed stop hold now that it claims grounding?** Revision 3 adds two arguments
-it did not have: that a stop is the *absence* of an instruction and needs no precedence, and that
-body §48 (*"violare one-writer"*) is hit directly with body §4 routing a directly-hit §48 condition
-to `HUMAN_REQUIRED` without an Orchestrator. Attack whether §48's *one-writer* clause is really
-triggered by a promoted root chat, or whether that is my inference dressed as a citation.
+**4 · Is the F-8 adjudication's reach right?** The operator settled that §35.1 constrains the
+persistence surface, not the capability. That disposes of the collision with §8, §11 and §18, and
+Plan does not reopen it. What remains open to you is **scope**: it is a rank-2 reading of rank-1
+text. If §35.1's *"committare lavoro proprio"* cannot bear the fenced reading **as a matter of
+text**, then rank 1 prevails and the reading is what gets revised — the record says so itself.
 
-**5 · Does the corrected top section still assert the thing it forbids?** Revision 2's lines 31–34
-said the root chat *"is promoted to Orchestrator"* — the proposition, surviving the deleted
-sentence. Revision 3 rewrites it so the file asserts nothing about which chat, and attributes the
-claim to § 0.2 as the disputed mandate. **Read lines 31–41 as a whole and decide whether the file
-now states a topology anywhere in its own voice.** If it does, revision 3 repeats revision 2's
-error one layer down.
+**5 · Is F-2's retraction sound?** I claim *"no branch on which a `WORK_COMMIT` was possible"* is
+false because a WORK_COMMIT is bound to a branch, not a directory. That sentence was **canonical
+in `main`**. Attack whether it was ever a claim about git at all, or about something narrower I
+have flattened.
 
-**6 · Is the cost statement right?** `governance_fingerprint.py inputs --all`: the body is an input
-for all four roles, `annex_i` for `orchestrator` and `plan` only. I claim this means the operator
-is approving a four-role rotation and every checkpoint invalidated under A.6. Check that A.6 says
-what I say it says.
+**6 · Does §17 actually withdraw everything §§2–15 assert?** The layering above is where this
+package is most likely to hide something. Take any assertion from the historical sections and
+check that §17.1 disposes of it. **A gap here is a real finding and I cannot see it from inside.**
 
-**7 · T7 and T8 passed at revision 2 and were scoped to the wrong universe.** Both inherited the
-candidate's own list of sources, so neither could have found the body. §9 records that as a trap
-that **landed**. Judge whether T10 actually escapes it or merely widens the same circle.
+**7 · Is the re-binding a revision 5?** See the lineage section. My judgement, contestable.
 
-**8 · The regression comparison is reported as identical *outcome sets*, not identical output.**
-65 suites, 6 failing, 834 test-outcome lines, all three sets diffed and equal; six residual lines
-after normalization, four of them run-dependent `LEDGER_TAIL_ANCHOR` hashes and two my own exit
-markers. I also checked individually that the two BOOTSTRAP-*named* failures assert against
-`CLAUDE.md`, not `BOOTSTRAP.md`. Attack whether a shared name hid anything else.
+**8 · Is T10 still exhaustive, and does its term set see §8?** T10 is PRESERVED and re-run. The
+`PREP` records that its five vocabulary terms **cannot** match §8's phrasing — so the sweep that
+was the whole value of revision 3 was blind to the document that decides revision 4. Judge whether
+T10 escapes the trap T7/T8 fell into or merely widens the same circle.
 
-**9 · One false sentence is still in the content, deliberately, and that is a judgement.**
-Unchanged from revision 2 and re-offered here rather than allowed to go quiet. `SLR-plan-0010`
-line 181 still says *"Orchestrator owns it."* I left the record **byte-identical** and corrected
-it by appending `SLR-plan-0010-COR-001`, following the `SLR-plan-0006-COR-001` convention, on the
-reasoning that a learning record records what a session understood and that correcting it by edit
-destroys the evidence of the error. **Zero false CURRENT operative claims, one retained historical
-statement of fact** — and I do not want that distinction to pass unexamined. If you hold that a
-false attribution should not sit in the content at all, the remedy is an edit to `SLR-plan-0010`
-and directive §19 forbade it, so that is a disagreement worth having explicitly.
-
-**10 · Did I implement any Routing?** T5, unchanged in method: read every routing-vocabulary
-occurrence individually rather than counting them. Still NO.
+**9 · Are the measurements what I say they are?** `SMOKE-PLAN-PROVISION-001` (Plan can provision a
+worktree it never writes into — PASS) and `CONTROL-PLAN-WORKCOMMIT-001` (a WORK_COMMIT in an
+assigned worktree left the root byte-identical — PASS). Both are on **Plan's** surface. Neither is
+`PROBE-ORCHWT-001` leg 3, and §17.3 says so; check that no part of the package leans on them as if
+they were.
 
 ## What NOT to re-litigate unless the content moved it
 
-T1–T6 all passed for their stated reasons in your §8, and revisions 2 and 3 do not disturb their
-subjects. Your §2 steelman, your Annex D.1 verification and your §7 three-surfaces PASS are
-unaffected. **T7 and T8 are the exception** — they passed, and §9 now records why they could not
-have caught what T10 caught.
+`REV-ORCHSURF-MIRROR-001`'s T1–T6 passed for their stated reasons and revision 4 does not disturb
+their subjects. Your §2 steelman, your Annex D.1 verification and your §7 three-surfaces PASS
+stand — note that "three surfaces" is now **four concepts** in `roles/orchestrator.md`, because
+SESSION HOME was the one the package never named. **B-1 is not withdrawn**: it found a real
+contradiction between governed documents. What revision 4 changes is which document was defective.
+
+## What is still owed, and is not Mirror's to grant
+
+```
+PROBE-ORCHWT-001 LEG 3   root non-perturbation, on the `orchestrator` surface, executed BY the
+                         Orchestrator. Plan may not take it without writing into another actor's
+                         worktree, which would corrupt what it measures. Legs 1, 2 and 4 are
+                         discharged from durable state. Written 2026-08-17, never run until now
+ORCHESTRATOR CAPABILITY  `WORK_COMMIT on own branch` was missing from roles/orchestrator.md while
+                         branch `orchestrator` already carried 19 commits not on `main`. Revision
+                         4 adds the row as UNVERIFIED. CONFIGURED != PROVEN, applied to the actor
+                         that enforces it on others
+PLAN CROSS-WORKTREE      `roles/plan.md`'s "attempt a cross-worktree write and confirm refusal"
+                         remains UNVERIFIED. It was not authorised and was not attempted:
+                         confirming a boundary by crossing it is not a measurement Plan takes on
+                         its own initiative
+REGRESSION SUITE         NOT re-measured at revision 4. Revision 3 recorded DELTA 0 against a
+                         suite red at `main`. Revision 4 does not restate a number it did not take
+ROOTGUARD                CAND-20260820-ROOTGUARD-001, deferred by the ratified record's §1 item 5.
+                         Out of scope, and must not enter this candidate
+```
 
 ## What this handoff does not do
 
-It grants no approval and requests none from you. It does not open the review — that is
-Orchestrator's under C.3. It does not claim `REV-ORCHSURF-MIRROR-001`'s findings are discharged by
-assertion; §13 of the manifest records a disposition for each, and B-1's disposition is now
-*accepted, remediated, and its declaration corrected at revision 3 after being wrong in extent at
-revision 2*. `main` is unchanged at `04693e68`, and nothing has been canonicalized.
-
-## What is still HUMAN_REQUIRED, and is not Mirror's to grant
-
-```
-THE FROZEN TRANSITION   body §0.2, §0.4, §47 steps 10 & 14 and Annex I.2 steps 4, 6, 9–10 still
-                        mandate the root-promotion topology. Amending them is HUMAN_REQUIRED
-                        (body §4, Annex H.1) and is NOT proposed in this candidate
-THE COST OF IT          all four role fingerprints rotate; every actor's resume checkpoint is
-                        invalidated under Annex A.6
-WHAT A FRESH BOOTSTRAP  it completes steps 1–8 and halts at step 9 with BLOCKED_BY_GOVERNANCE.
-DOES UNTIL THEN         No running laboratory is affected
-```
+It grants no approval and requests none from you. **It does not open the review** — that is
+Orchestrator's under Annex C.3, and Plan does not open its own. It does not claim
+`REV-ORCHSURF-MIRROR-001` is discharged by assertion; §17.1 carries a disposition per finding. It
+asserts no verdict on the layering question at attack 6, which is the one I most want run.
+`main` is UNCHANGED at `04693e68`, nothing has been canonicalized, and Plan does not execute in
+any case — GATE 1 keeps proposer and executor distinct.

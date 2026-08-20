@@ -958,8 +958,19 @@ Stated as a list because revision 1's defect was a claim that outran its evidenc
 
 **§16 above, and §§2–15, were written under revision 3's direction and are retained verbatim as
 the record of what this package argued before the operator's intent was ratified.** Where they
-conflict with this section, this section governs. They are not deleted, because a candidate that
-edits its own history to look consistent is exactly the failure mode `SLR-plan-0012` L-1 records.
+conflict with this section, this section governs.
+
+**Retention is an operator directive of 2026-08-20, not a Plan convenience.** Plan offered to
+rewrite them for internal consistency and the operator declined, on the ground that rewriting
+would replace an observed reasoning evolution with a cleaned narrative and reduce auditability,
+and that Mirror should review the candidate with the full history available. It is the same
+principle `SLR-plan-0012` L-1 records from the other side — a claim removed from a derived
+document is not thereby removed.
+
+**Consequence for a reviewer, stated so the layering cannot hide behind itself:** §§2–15 are in
+scope as EVIDENCE, not as current assertions. If §17.1 below fails to withdraw something those
+sections assert, that gap is a finding — and it is precisely the class of finding this
+arrangement could conceal.
 
 ### 17.1 · Every revision-3 finding, disposed by whether it depended on the direction
 
