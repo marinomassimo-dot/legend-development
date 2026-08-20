@@ -1040,8 +1040,20 @@ row records, and the row could not state its own correction without them.
  9   content-DOMAIN files modified anywhere in BASE..CONTENT_TIP
      the three above, plus DEC-20260820-ORCH-SESSION-HOME.md and five SLR records
 13   every path touched in BASE..CONTENT_TIP, in the domain or excluded from it
- 2   net growth in domain ENTRIES, 537 → 539
+ 6   net growth in domain ENTRIES over THIS block's declared surface, 533 → 539
+     BASE_HEAD 04693e68 carries 533 · CONTENT_TIP 9a70e94d carries 539. The six:
+     DEC-20260820-ORCH-SESSION-HOME.md · SLR-plan-0010 · 0010-COR-001 · 0011 · 0012 · 0013
+ 2   net growth AGAINST REVISION 3 — a different surface, stated as such:
+     revision-3 tip 25fa61a carries 537 → CONTENT_TIP 539. The two: the DEC and SLR-plan-0013.
+     This is the figure §1's "Domain accounting against revision 3" reports, and it is correct
+     THERE because §1 declares that surface in its own heading
 ```
+
+**Row 4 read `2 · 537 → 539` until `ADD-009`, under a header declaring `BASE..CONTENT_TIP`.** The
+value was true and §1 labels it correctly; the defect was that it inherited a surface it had not
+been measured over — **inside the one block written to cure exactly that**. 533 is what BASE_HEAD
+carries; 537 lives at `25fa61a`. Both deltas are now stated with their surfaces, because the whole
+finding is that a count without one is not a number.
 
 **Three, nine, thirteen and two are all true, and they answer four different questions.** Note
 what the stated population excludes and a reader might not expect it to: `DEC-…-SESSION-HOME.md`
