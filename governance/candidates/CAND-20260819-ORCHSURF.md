@@ -1,7 +1,7 @@
 ---
 artifact: INTEGRATION_CANDIDATE — Orchestrator surface semantics
 candidate_id: CAND-20260819-ORCHSURF
-revision: 3
+revision: 4
 task_id: ORCHSURF-001
 author: plan
 authored_on: 2026-08-20
@@ -28,66 +28,131 @@ revision_3: the REMEDY IS UNCHANGED. Revision 3 corrects what this candidate SAY
   proposition at the highest rank in the system, and the revision-2 package named it nowhere.
   Found by Plan re-reviewing its own package before delivery; not raised by Mirror. §5.5 states
   the finding, §13 re-opens B-1's disposition
-supersedes: revision 2, CANDIDATE_CONTENT_HASH
+revision_4: THE REMEDY DIRECTION IS INVERTED, and not one measurement is withdrawn to do it.
+  DEC-20260820-ORCH-SESSION-HOME — RATIFIED by the operator on 2026-08-20 at commit ec4bf60,
+  ratified content sha256 9861fb05…c0bee7, record-after-signature sha256 6e89ba5f…e1e1 — states
+  that the Orchestrator's SESSION HOME is the repository root by architectural intent, and that
+  the `orchestrator` worktree is that actor's WORK_COMMIT surface. Both at once, because they
+  answer different questions. Revisions 1–3 read them as rival topologies and proposed to
+  extinguish root-promotion; that direction is withdrawn. What revisions 2 and 3 MEASURED stands
+  entirely — see §17.1. Three findings are new at revision 4 and none of them was reachable from
+  the old direction: body §8 states the architecture at rank 1 and the whole package quoted one
+  clause of it against the rest (F-1); the WORK_COMMIT-impossibility premise that grounded the
+  fail-closed stop is FALSE and was canonical in main (F-2); and Annex I.2 step 4 and the
+  deployment profile were never one list (F-7). §17 carries the disposition of every prior
+  finding. NO FROZEN DOCUMENT IS AMENDED, and none is claimed superseded — which is the whole
+  point: the residual revision 3 declared HUMAN_REQUIRED is DISSOLVED, not discharged
+supersedes: revision 3, CANDIDATE_CONTENT_HASH
+  ed020f37c6a33d6c84b0b1eb7a5ed7e3800b4915b599715e3954d1036ab9c1f8 at content tip
+  25fa61abe0dfe5c19f11b15d9b906a2e07d64a56; and, transitively, revision 2, CANDIDATE_CONTENT_HASH
   b0a0c9ed6849521a1331a4d6c0850de252ae7c4b5e3b227a477b21f4386465d1 at content tip
   7b6a9d9aeaf2a162fc16de4e4abdb713ddead603; and, transitively, revision 1,
   3af61c6d87eb17de786c8592a0a3d42e7b7bc996a100a1d310398332feaad4c7 at content tip
-  b3afdde4423b62fc7f0ddf18cc8183fb989fe1b2. Both bindings are SUPERSEDED, not withdrawn — each
-  was correct for the tree it named, both are used as positive controls in §1, and Annex D.2
-  invalidates them because the bound content moved. REV-ORCHSURF-MIRROR-001 reviewed revision 1;
-  no review has ever been performed on revision 2 or 3
+  b3afdde4423b62fc7f0ddf18cc8183fb989fe1b2. All three bindings are SUPERSEDED, not withdrawn —
+  each was correct for the tree it named, all three are reproduced as positive controls in §1, and
+  Annex D.2 invalidates them because the bound content moved. REV-ORCHSURF-MIRROR-001 reviewed
+  revision 1; NO REVIEW has ever been performed on revision 2, 3 or 4
+publication_gate: 🔴 BLOCK_PUBLICATION · 1 BLOCK, and it is NOT in this candidate's content edits.
+  `governance/decisions/DEC-20260820-ORCH-SESSION-HOME.md:14` carries `ratified_by: <operator
+  name>`, which the gate matches against its register of private identifiers. Measured at BASE_HEAD
+  in a matched checkout: PASS, 0 blocks. Measured at this content tip: BLOCK, 1. The block was
+  introduced by the ratification commit ec4bf60 and is a DELTA THIS BRANCH CARRIES INTO main.
+  Plan does not resolve it: the signature is the operator's act and removing it would un-ratify.
+  See §1 PUBLICATION_GATE. **This candidate is not canonicalizable until the operator disposes
+  of it.**
 ---
 
-# INTEGRATION_CANDIDATE — `CAND-20260819-ORCHSURF` · revision 3
+# INTEGRATION_CANDIDATE — `CAND-20260819-ORCHSURF` · revision 4
 
 ## 1 · Manifest (Annex D.2)
 
 ```
 CANDIDATE_ID              CAND-20260819-ORCHSURF
-REVISION                  3
-BASE_HEAD                 04693e683a254ff0a6d0619fba47103a0fb7d122   (canonical main, verified
-                                                                      from git at session open
-                                                                      and again at binding)
+REVISION                  4
+BASE_HEAD                 04693e683a254ff0a6d0619fba47103a0fb7d122   (canonical main, read from
+                                                                      git at session open and
+                                                                      again at binding — never
+                                                                      from a manifest or a prompt)
+OPERATOR_INPUT            DEC-20260820-ORCH-SESSION-HOME · RATIFIED
+                          ratified at   ec4bf603fcdc30dd3b56a92b0102a56eaf838f7e
+                          ratified_by   filled 2026-08-20; the ratification diff is ONE line and
+                                        touches nothing but the signature field — verified
+                          content ratified (pre-signature)
+                                        9861fb05c66d4e763f6f1e36e012f6f019a5447356fa35ec87f0153b29c0bee7
+                          record after signature
+                                        6e89ba5f23f6a5fd1ae70e7bc339d1cb452b38fb1a5f0c9ffaa22e705fc4e1e1
+                          Both are recorded because filling the signature necessarily moves the
+                          bytes. Ratification attaches to the FIRST; the second is what is in
+                          the tree. RANK 2 (body §5, OPERATOR STRATEGIC DIRECTIVE), subordinate
+                          to NON-NEGOTIABLE governance at rank 1
 SOURCE_COMMITS            b3afdde4423b62fc7f0ddf18cc8183fb989fe1b2   CONTENT — revision 1
-                          7b6a9d9aeaf2a162fc16de4e4abdb713ddead603   CONTENT — revision 2, the
-                                                                      remediation + two SLRs
-                          25fa61abe0dfe5c19f11b15d9b906a2e07d64a56   CONTENT — revision 3, the
-                                                                      residual's true extent
-                                                                      + SLR-plan-0012
+                          7b6a9d9aeaf2a162fc16de4e4abdb713ddead603   CONTENT — revision 2
+                          25fa61abe0dfe5c19f11b15d9b906a2e07d64a56   CONTENT — revision 3
+                          1a650d85e7686654e37329576c034b899d43bb40   CONTENT — revision 4, the
+                                                                      inverted direction
                           <this commit>                              CONTROL PLANE — this manifest.
-                                                                      Recorded at the tip that
-                                                                      carries it once measured; see
-                                                                      the SELF-REFERENCE note below
-CONTENT_TIP               25fa61abe0dfe5c19f11b15d9b906a2e07d64a56
+                                                                      Resolved by the commit that
+                                                                      follows; see SELF-REFERENCE
+CONTENT_TIP               1a650d85e7686654e37329576c034b899d43bb40
 CANDIDATE_HASH_VERSION    legend-candidate-v4
-CANDIDATE_CONTENT_HASH    ed020f37c6a33d6c84b0b1eb7a5ed7e3800b4915b599715e3954d1036ab9c1f8
-                          537 included · 48 excluded
-SUPERSEDED_HASH           b0a0c9ed6849521a1331a4d6c0850de252ae7c4b5e3b227a477b21f4386465d1
-                          revision 2, at content tip 7b6a9d9 — correct for its tree, invalidated
-                          by Annex D.2 because the content moved. Reproduced below as a control
+CANDIDATE_CONTENT_HASH    79af3e52302aa4ca9fc99e53979904aff2535f28949f2af2a573eee222d82ea0
+                          539 included · pre-image 541 lines / 58 040 bytes
+SUPERSEDED_HASH           ed020f37c6a33d6c84b0b1eb7a5ed7e3800b4915b599715e3954d1036ab9c1f8
+                          revision 3, at content tip 25fa61a
+                          b0a0c9ed6849521a1331a4d6c0850de252ae7c4b5e3b227a477b21f4386465d1
+                          revision 2, at content tip 7b6a9d9
                           3af61c6d87eb17de786c8592a0a3d42e7b7bc996a100a1d310398332feaad4c7
-                          revision 1, at content tip b3afdde — same status, same treatment
-CHANGE_CLASS              MAJOR — it edits a role contract, the deployment profile and the
-                          bootstrap procedure, which is governance (H.1: "Spese / MAJOR approval
-                          / governance → Operatore"; Annex G.1 MIRROR_REQUIRED). Classified MAJOR
-                          fail-closed; H.1 gives a doubtful MAJOR classification to Mirror
-LINT_RESULT               PASS — 1 pre-existing INFO (MISSING_WIKILINK, CLAIM 010), identical at
-                          BASE_HEAD
-PUBLICATION_GATE          PASS / BLOCKS: 0
-REGRESSION                DELTA 0 — measured in matched environments, §15. The suite is RED at
-                          canonical main and this candidate does not move it
+                          revision 1, at content tip b3afdde
+                          All three were correct for the trees they named; Annex D.2 invalidates
+                          them because the bound content moved. All three are REPRODUCED below
+CHANGE_CLASS              MAJOR — unchanged from revision 3. It edits a role contract, the
+                          deployment profile and the bootstrap procedure, which is governance
+                          (H.1 "governance → Operatore"; Annex G.1 MIRROR_REQUIRED). Classified
+                          MAJOR fail-closed; H.1 gives a doubtful MAJOR to Mirror
+FROZEN DOCUMENTS          NONE amended, NONE proposed for amendment, NONE claimed superseded.
+                          Verified mechanically: `git diff --name-only BASE..TIP` over the body
+                          and every annex A–J returns EMPTY. Annex I.2's cardinality of five is
+                          AFFIRMED by F-7, not excused
+LINT_RESULT               PASS — 1 INFO (MISSING_WIKILINK, CLAIM 010), byte-identical at
+                          BASE_HEAD measured in a matched checkout. DELTA 0
+PUBLICATION_GATE          🔴 BLOCK_PUBLICATION · BLOCKS: 1 — and this is a REGRESSION this branch
+                          carries, disclosed rather than absorbed:
+                            at BASE_HEAD, matched checkout   PASS · 0 blocks
+                            at CONTENT_TIP                   BLOCK · 1 block
+                          The block is DIRECT_IDENTIFIER at
+                          governance/decisions/DEC-20260820-ORCH-SESSION-HOME.md:14 — the
+                          `ratified_by` signature, matched against the gate's register of private
+                          identifiers. It is NOT in this candidate's three edited files: stashing
+                          them and re-measuring reproduces the same single block.
+                          INTRODUCED BY  ec4bf60, the ratification commit
+                          NOT PLAN'S     the signature is the operator's act; removing it
+                                         un-ratifies the record
+                          CONSEQUENCE    GATE blocks canonicalization until the operator
+                                         disposes. That is the gate working, not failing
+REGRESSION                NOT RE-MEASURED at revision 4. Revision 3 recorded DELTA 0 against a
+                          suite RED at canonical main for a pre-existing reason. This revision
+                          does not assert a value it did not take
 MIRROR_REVIEW             REV-ORCHSURF-MIRROR-001 returned REQUEST CHANGES on revision 1.
-                          Revisions 2 and 3 have NEVER been reviewed. None performed, none assumed
-HUMAN_APPROVAL            n/a — not requested, not prefilled
+                          Revisions 2, 3 and 4 have NEVER been reviewed. None performed, none
+                          assumed, and revision 4 inverts the direction revision 1 was reviewed
+                          under — so the earlier review does not transfer
+HUMAN_APPROVAL            n/a — not requested, not prefilled, and no APPROVAL_ID exists
 SNAPSHOT_ID               n/a until canonical execution — GATE 4 belongs to Orchestrator
 FINGERPRINT IMPACT        orchestrator  88dea7a635919c9faa73506f38a10aa5230011059d646885e86aa1c07b2a5ebb
-                                     →  f293114766741ffac52d2d0c903522e4b28b54940cc950dae62a3c97b166f2e9
-                          plan · mirror · scientist  UNCHANGED, byte-identical — §14
+                                     →  f85d743c8b31597b8c96430ac36b77f62f650b94750f9df941a929dd4022fefe
+                          plan · mirror · scientist  UNCHANGED, byte-identical
+                          Both ends measured this session — the BASE value in a temporary
+                          checkout at BASE_HEAD, not carried from revision 3's manifest. Revision
+                          3 PREDICTED f2931147… for orchestrator; that prediction is void because
+                          revision 4's roles/orchestrator.md is different content
+A.6 CONSEQUENCE           orchestrator checkpoints only. NOT four roles — the body is not
+                          amended, so no cross-role rotation occurs. This is the single largest
+                          cost the inverted direction removes
 SELF-REFERENCE            a manifest cannot name the commit that contains it. `<this commit>` is
-                          resolved by the commit that follows, exactly as `c9de134` did for
-                          P5DOMAIN and `51d1317` did for revision 2. What keeps the seam harmless
-                          is that governance/candidates/ is excluded from the hashed domain, so
-                          no control-plane commit can move CANDIDATE_CONTENT_HASH. **Fetch the
+                          resolved by the commit that follows, as `c9de134` did for P5DOMAIN and
+                          `51d1317` did for revision 2. The seam is harmless because
+                          governance/candidates/ is excluded from the hashed domain, so no
+                          control-plane commit can move CANDIDATE_CONTENT_HASH. **Fetch the
                           branch tip, not MANIFEST_TIP** — the tip is where the package is whole
 ```
 
@@ -96,44 +161,62 @@ SELF-REFERENCE            a manifest cannot name the commit that contains it. `<
 ```bash
 python3 governance/scripts/candidate_content_hash.py \
   --base 04693e683a254ff0a6d0619fba47103a0fb7d122 \
-  --tip  25fa61abe0dfe5c19f11b15d9b906a2e07d64a56
-# ed020f37c6a33d6c84b0b1eb7a5ed7e3800b4915b599715e3954d1036ab9c1f8
+  --tip  1a650d85e7686654e37329576c034b899d43bb40
+# 79af3e52302aa4ca9fc99e53979904aff2535f28949f2af2a573eee222d82ea0
 ```
 
 **Independent route** — the digest reproduced without trusting the script's own final step, by
-re-digesting the published pre-image with a different tool:
+re-digesting the emitted pre-image with a different tool:
 
 ```bash
 … --emit-domain | shasum -a 256
-# ed020f37…c1f8   (57 848 bytes, 539 lines: 537 domain entries + 2 header lines)
+# 79af3e52…2ea0   (58 040 bytes, 541 lines: 539 domain entries + 2 header lines)
 ```
 
-The domain grew by exactly one included entry against revision 2 — `SLR-plan-0012` — and by one
-excluded entry, `reviews/plan/AUTHOR-RESPONSE-ORCHSURF-MIRROR-001.md`, which did not yet exist in
-the tree at revision 2's content tip. 536+1 and 47+1 are accounted for, not merely observed.
-
-**Four positive controls — published values authored by earlier sessions, reproduced here.** This
-is what makes the instrument trustworthy rather than merely self-consistent:
+**Domain accounting against revision 3 — enumerated, not observed.** The pre-image grew by
+exactly **two** included entries, 537 → 539:
 
 ```
-CAND-20260819-P5DOMAIN   base f70878d1 tip ceefaa28  → 930dfefb…6b97   MATCHES published
-CAND-20260819-XPORT      base 4454feab tip e839db38  → 81f241f2…6e1f   MATCHES published
-ORCHSURF revision 1      base 04693e68 tip b3afdde4  → 3af61c6d…d4c7   MATCHES published
-ORCHSURF revision 2      base 04693e68 tip 7b6a9d9a  → b0a0c9ed…65d1   MATCHES published
++ governance/decisions/DEC-20260820-ORCH-SESSION-HOME.md   the operator record, created on this
+                                                            branch and absent at BASE_HEAD
++ learning/plan/SLR-plan-0013.md                            the session learning record
+~ BOOTSTRAP.md · deployment/deployment_profile.md · roles/orchestrator.md
+                                                            same three paths, changed digests —
+                                                            these are the candidate's edits, and
+                                                            they move the hash without moving the
+                                                            entry count
 ```
+
+537 + 2 = 539, and the three changed digests are the three files this revision edits. Nothing
+entered or left the domain unaccounted for.
+
+**Three positive controls — published values authored by earlier sessions, reproduced here at
+revision 4.** This is what makes the instrument trustworthy rather than merely self-consistent:
+
+```
+ORCHSURF revision 1      base 04693e68 tip b3afdde4  → 3af61c6d…   MATCHES published
+ORCHSURF revision 2      base 04693e68 tip 7b6a9d9a  → b0a0c9ed…   MATCHES published
+ORCHSURF revision 3      base 04693e68 tip 25fa61ab  → ed020f37…   MATCHES published
+```
+
+Revision 3's own value is now a control rather than a claim, which is the strongest form the
+check takes: the instrument that binds this revision reproduces the binding it supersedes.
 
 **Three negative controls, verified rather than void.**
 
 ```
 BASE tree against itself           cfe8957d…1298   ≠ candidate — and it is the value Mirror
-                                                    independently measured at revision 1
-revision 2 vs revision 3           b0a0c9ed… ≠ ed020f37…   the binding moved with the content
-SHA-256 of the empty string        e3b0c442…b855   ≠ candidate, and the pre-image is 57 848
+                                                    independently measured at revision 1, so this
+                                                    control is corroborated from outside Plan
+revision 3 vs revision 4           ed020f37… ≠ 79af3e52…   the binding moved with the content
+SHA-256 of the empty string        e3b0c442…b855   ≠ candidate, and the pre-image is 58 040
                                                     bytes — this comparison is not two voids
 ```
 
 ```
 BINDING   PASS
+GATE      🔴 PUBLICATION BLOCKED — see §1. The binding is sound and the candidate is not
+          canonicalizable until the operator disposes of the DIRECT_IDENTIFIER block
 ```
 
 ---
@@ -840,3 +923,71 @@ Stated as a list because revision 1's defect was a claim that outran its evidenc
 - **It does not claim Routing is advanced.** Three holds stand, none of them Plan's to lift.
 - **It grants no approval and implies none.** `HUMAN_APPROVAL: NONE`. `main` UNCHANGED at
   `04693e68`.
+
+---
+
+## 17 · Revision 4 — the direction inverted, and what survives the inversion
+
+**§16 above, and §§2–15, were written under revision 3's direction and are retained verbatim as
+the record of what this package argued before the operator's intent was ratified.** Where they
+conflict with this section, this section governs. They are not deleted, because a candidate that
+edits its own history to look consistent is exactly the failure mode `SLR-plan-0012` L-1 records.
+
+### 17.1 · Every revision-3 finding, disposed by whether it depended on the direction
+
+| Finding | Disposition at revision 4 |
+|---|---|
+| **T10 enumeration method** — a document universe enumerated from the tree, not from a manifest | **PRESERVED**, and re-run this session. Direction-independent by construction |
+| **T7/T8 inherited-universe correction** — a test that inherits the candidate's source list cannot falsify it | **PRESERVED and applied**: every section reference in this revision was re-read at source, and no list was inherited from revisions 1–3, from the DEC, or from any prompt |
+| **`SLR-plan-0012` P-2, concerning `SLR-plan-0011`'s truncation** — a procedure that says *read what `authority:` names* is defeated by a quotation ending at a semicolon | **PRESERVED.** Note the attribution: the defect is in 0011, the finding is in 0012. Citing it as "the SLR-plan-0011 finding" sends a reader to the defective quote instead of its diagnosis |
+| **The authority-line lesson** — a field a check reads belongs in evidence verbatim and whole | **PRESERVED** |
+| **Mirror's B-1, as a finding of contradiction** | **PRESERVED as a finding.** Governed documents did describe two irreconcilable arrangements. What changes is which document was defective: not the body and not Annex I.2, but `deployment/deployment_profile.md`'s WORK_COMMIT sentence and this package's reading of it |
+| **N-1 · agent-card owner is `plan`** · **N-2 · E.2/E.6 form** · **N-4 · suite red at main** | **PRESERVED**, all direction-independent |
+| **N-3 · the GATE 0 compression is lossy** | **PRESERVED and exceeded** — the uncompressed sentence is false too |
+| **`P5DOMAIN` §8.3 carried debt** | **PRESERVED**, still owed, still not ORCHSURF's |
+| **cwd-is-not-identity, in all three content files** | **PRESERVED and endorsed** — it is the ratified record's own item 3 |
+| the FROZEN residual is `HUMAN_REQUIRED`, discharged by amending body + Annex I.2 | **WITHDRAWN — the residual DISSOLVES.** No FROZEN text required amendment |
+| the convergence route rotates all four fingerprints | **WITHDRAWN.** Only `orchestrator` moves |
+| `BOOTSTRAP.md` must fail closed at step 9 | **WITHDRAWN.** The stop's §48 grounding did not hold, and the conflict it stopped for was not a conflict |
+| the `orchestrator` chat row is BLOCKED | **WITHDRAWN.** There is no sixth chat, and there never was |
+| `STEP5-session-open-plan.md` is stale | **RE-ADJUDICATED CORRECT** |
+| the profile's WORK_COMMIT argument is the sound version | **WITHDRAWN AS FALSE.** It is the sentence this revision retracts |
+
+### 17.2 · Three ranks, kept apart on purpose
+
+```
+RANK 1   FROZEN governance — body §0.2, §0.4, §5, §8, §11, §14, §18, §35.1, §47; Annex D.1,
+         Annex I.2. UNAMENDED, unchallenged, and the source of the architecture this candidate
+         implements. Verified mechanically: git diff over body and annexes A–J returns EMPTY
+RANK 2   DEC-20260820-ORCH-SESSION-HOME, ratified. It RECOGNIZES the rank-1 architecture and
+         does not grant it. Where it and rank 1 were ever to conflict, rank 1 prevails and the
+         record is revised — the record says so itself
+—        THIS CANDIDATE. An implementation. It carries no rank of its own, edits no FROZEN
+         document, and cannot make either of the two above mean anything they do not say
+```
+
+The F-8 adjudication is a rank-2 **reading** of rank-1 text, quoted verbatim in both content
+files rather than paraphrased, so that a later reader can see it is quoted:
+
+> §35.1 constrains where persistent artifacts may be produced, not whether the Orchestrator may
+> produce persistent artifacts. The Orchestrator WORK_COMMIT surface is the assigned
+> worktree/branch, never the root checkout.
+
+### 17.3 · What revision 4 does NOT claim
+
+- **It does not claim Mirror has reviewed this.** No review exists for revisions 2, 3 or 4, and
+  revision 1's review was conducted under the opposite direction, so it does not transfer.
+- **It does not claim the publication gate passes.** It does not — see §1. The block is the
+  operator's signature in a public-edition repository, it is disclosed rather than absorbed, and
+  Plan does not resolve it.
+- **It does not claim `PROBE-ORCHWT-001` is discharged.** Legs 1, 2 and 4 are, from durable
+  state. **Leg 3 — root non-perturbation — is owed by the Orchestrator** and cannot be taken by
+  Plan without writing into another actor's worktree, which would corrupt what it measures.
+- **It does not claim the regression suite was re-measured.** It was not, and revision 4 does not
+  restate a number it did not take.
+- **It does not claim `roles/plan.md`'s cross-worktree write refusal is verified.** It is not.
+  What was measured is narrower: Plan can *provision* a worktree it never writes into.
+- **It does not open ROOTGUARD, Routing, or P5.** The ratified record's §1 item 5 excludes the
+  first; three routing holds stand, none of them Plan's to lift.
+- **It grants no approval and implies none.** `HUMAN_APPROVAL: NONE`. `main` UNCHANGED at
+  `04693e68`, and Plan does not execute in any case — GATE 1 keeps proposer and executor distinct.
