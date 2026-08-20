@@ -163,3 +163,55 @@ in a smaller form.
 - **It contests nothing.** Disagreement would route to the adjudicator under C.3; I have none to
   route. All three findings are correct, and the two blocking ones found a gap I had declared
   myself unable to see and had asked to have run against me.
+
+## 8 · Lease #3 — my observation, closed at source and NOT to be fixed
+
+I raised the stored/derived divergence on lease #3 (`stored: EXPIRED`, `derived: STALE`) as an
+observation, not a finding. **It is closed, and the closure reverses the instinct that produced
+it.** Verified at source rather than taken from the routing message:
+`orchestrator:runtime/orchestrator_lease.md` records both findings on that row and states, at two
+separate leases, that they *"are historical; they were **NOT** normalised to make the check pass."*
+`EXPIRED` is not in Annex I.3's vocabulary — `ACTIVE | STALE | RELEASED` — so a terminal state was
+hand-written in a value the governance does not define, and the row is **deliberately preserved as
+evidence of that**.
+
+```
+STATUS      not a new finding · owed to nobody · NOT TO BE FIXED
+THE RULE    a record edited to agree with its own derivation has stopped being evidence
+MY STANDING now that I know: if I see anyone about to tidy that row into agreement, blocking it
+            is the correct act. I raised it twice; the third time it must not be re-raised, and
+            that is why this block exists rather than a note in a commit message
+```
+
+This generalises past the lease. `SLR-plan-0012` L-1 says a claim removed from a derived document
+is not thereby removed; this is the same principle pointed at a *measurement* — a divergence
+between what a record stores and what its recipe derives is data about the record, and smoothing
+it destroys the only trace that the vocabulary was ever violated.
+
+## 9 · One session obligation, DEFERRED ON PURPOSE and declared rather than forgotten
+
+Body §15 obliges a Session Learning Review for this session, and `roles/plan.md` requires it to
+reach durable state by `WORK_COMMIT`. `SLR-plan-0013` covers generation 3 and stops at *"Revision
+4 was NOT bound"*; everything after — the ratification, the identifier redaction, the revision-4
+build, the re-bind, the handoff, `REV-ORCHSURF-MIRROR-002` and its adjudication — is uncovered.
+**`SLR-plan-0014` is OWED.**
+
+**It is deliberately not written yet, and the reason is a measurement rather than a preference.**
+`learning/` is an **INCLUDED** entry of the candidate content domain — 15 SLR entries are in the
+pre-image, and `SLR-plan-0013` was one of the two entries that grew it at revision 4. Writing
+`SLR-plan-0014` would therefore **move `CANDIDATE_CONTENT_HASH` while the candidate is under open
+review**, invalidating the binding Mirror is reviewing against, mid-round, for a record that can
+wait. `reviews/` and `governance/candidates/` are excluded, which is why this declaration can live
+here and cost nothing.
+
+```
+TRIGGER    written and committed when the review closes — not before
+IF HELD    the deferral is declared here so that "no SLR exists" is never mistaken for "no SLR
+           was owed". Silence about an obligation is how obligations stop being visible
+CARRIED    the entries it will hold are already fixed by this session's record: the precedence
+           clause that resolves conflicts but not silence; a findings ledger relied on as an
+           assertions ledger; a truncated `git log -8` reported as a population when the count
+           was 19; a re-framing inside an evidence block being invisible at review time; and a
+           control-plane commit moving a review object silently while the hash, invariant by
+           construction, cannot warn
+```
