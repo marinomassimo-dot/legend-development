@@ -982,7 +982,7 @@ arrangement could conceal.
 | **T8's RESULT** — *"can an operator reach the bootstrap without being told FROZEN mandates the legacy topology?" → NO, PASS* | **WITHDRAWN, on the same ruling.** Its evidence was *"the first reference to the block (line 41) precedes the first lease-acquisition verb (line 93)"*; there is no block to reference. Its premise — FROZEN mandating a *legacy* topology a reader must be warned about — inverted with the direction. What replaces it is not a test result but the architecture |
 | **The re-framed T7** — *can a root-resident session obtain standing write authority outside lease + GATE 0–5?* | **REGISTERED AS OWED TO `CAND-20260820-ROOTGUARD-001`, and NOT to this candidate.** Recorded here so it is not reinvented later. Importing it under a test number would bring ROOTGUARD in through the back door, against a constraint the operator set |
 | **T1–T6, T9, T10 results** | **NOT RE-RUN at revision 4**, and revision 4 does not restate them. T10's method is preserved and was re-exercised; its *result* is a revision-3 measurement. See §17.3 |
-| **§8's remediation accounting** — `SELECTED REMEDIATION CLASS E`, `PROBLEM DECLARED, NOT SOLVED`, `WHAT REMAINS UNSOLVED`, `GUARANTEE PROVIDED (b)`, `BLAST RADIUS 5 content files` | **WITHDRAWN in every row.** Class E's third conjunct is the declared FROZEN residual, which dissolves; the I.2 transition named as unsolved is not a blocker; guarantee (b) describes the withdrawn stop; and the blast radius is **three** content files at revision 4 — `BOOTSTRAP.md`, `deployment/deployment_profile.md`, `roles/orchestrator.md` — not five. Found by `REV-ORCHSURF-MIRROR-002` M-3 |
+| **§8's remediation accounting** — `SELECTED REMEDIATION CLASS E`, `PROBLEM DECLARED, NOT SOLVED`, `WHAT REMAINS UNSOLVED`, `GUARANTEE PROVIDED (b)`, `BLAST RADIUS 5 content files` | **WITHDRAWN in every row.** Class E's third conjunct is the declared FROZEN residual, which dissolves; the I.2 transition named as unsolved is not a blocker; guarantee (b) describes the withdrawn stop. **`BLAST RADIUS 5` is STALE OVER AN UNSTATED POPULATION — it is NOT arithmetically wrong.** §8 is headed *"at revision 2"*, verified, and five reproduces there under a defensible population. Plan's first correction called it arithmetic; that diagnosis is **withdrawn** per `REV-ORCHSURF-MIRROR-002-R2`, because filing an unstated population as an arithmetic slip would record this laboratory's most recurrent defect under the one label that stops anyone learning it from the record — **an unstated population is an unstated surface.** At revision 4 the value is **3, and the population is now stated: content files edited by the revision-4 content commit `1a650d8`.** The number is population-dependent, so the alternatives are measured rather than implied — and the corrected row inherited the same defect until this ruling: |
 | **`SLR-plan-0012` P-2, concerning `SLR-plan-0011`'s truncation** — a procedure that says *read what `authority:` names* is defeated by a quotation ending at a semicolon | **PRESERVED.** Note the attribution: the defect is in 0011, the finding is in 0012. Citing it as "the SLR-plan-0011 finding" sends a reader to the defective quote instead of its diagnosis |
 | **The authority-line lesson** — a field a check reads belongs in evidence verbatim and whole | **PRESERVED** |
 | **Mirror's B-1, as a finding of contradiction** | **PRESERVED as a finding.** Governed documents did describe two irreconcilable arrangements. What changes is which document was defective: not the body and not Annex I.2, but `deployment/deployment_profile.md`'s WORK_COMMIT sentence and this package's reading of it |
@@ -1030,6 +1030,25 @@ WHAT IS STILL OWED       the review ladder itself. This candidate has one hostil
                          revision 4 and no operator approval, and MAJOR requires both
 ```
 
+**The `BLAST RADIUS` populations, measured at `BASE_HEAD 04693e68 .. CONTENT_TIP 9a70e94d`.** A
+population needs a **surface** and an **instant**; naming the count without both is the defect the
+row records, and the row could not state its own correction without them.
+
+```
+ 3   content files edited by the revision-4 CONTENT commit 1a650d8   ← THE STATED POPULATION
+     BOOTSTRAP.md · deployment/deployment_profile.md · roles/orchestrator.md
+ 9   content-DOMAIN files modified anywhere in BASE..CONTENT_TIP
+     the three above, plus DEC-20260820-ORCH-SESSION-HOME.md and five SLR records
+13   every path touched in BASE..CONTENT_TIP, in the domain or excluded from it
+ 2   net growth in domain ENTRIES, 537 → 539
+```
+
+**Three, nine, thirteen and two are all true, and they answer four different questions.** Note
+what the stated population excludes and a reader might not expect it to: `DEC-…-SESSION-HOME.md`
+is a content-domain file that revision 4 also edits, at `9a70e94d`, and it is outside population
+3 only because that population is scoped to the content commit rather than to the range. That is
+exactly why the scope has to be written down.
+
 ### 17.2 · Three ranks, kept apart on purpose
 
 ```
@@ -1054,9 +1073,15 @@ files rather than paraphrased, so that a later reader can see it is quoted:
 
 - **It does not claim Mirror has reviewed this.** No review exists for revisions 2, 3 or 4, and
   revision 1's review was conducted under the opposite direction, so it does not transfer.
-- **It does not claim the publication gate passes.** It does not — see §1. The block is the
-  operator's signature in a public-edition repository, it is disclosed rather than absorbed, and
-  Plan does not resolve it.
+- **It does not claim the publication gate was clean throughout.** It **passes now** — §1 records
+  `PASS · BLOCKS: 0` at CONTENT_TIP with DELTA 0 against BASE_HEAD — and it did **not** at the
+  first revision-4 binding, where the ratification signature carried a registered private
+  identifier into public canonical content. §1 keeps that history rather than erasing it.
+  *Until `REV-ORCHSURF-MIRROR-002-R2` M-4 this clause read "it does not claim the publication gate
+  passes … Plan does not resolve it" — present tense, and false from the moment the redaction
+  cleared the block. I corrected §1 when the gate went green and left the sentence that points AT
+  §1 uncorrected. Both are Layer 1, so the precedence clause had nothing to resolve — structurally
+  the same reason it could not reach M-1's silence.*
 - **It does not claim `PROBE-ORCHWT-001` is discharged.** Legs 1, 2 and 4 are, from durable
   state. **Leg 3 — root non-perturbation — is owed by the Orchestrator** and cannot be taken by
   Plan without writing into another actor's worktree, which would corrupt what it measures.
