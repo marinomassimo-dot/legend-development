@@ -63,10 +63,13 @@ root checkout`, which was accurate when it was written on 2026-08-16 and stopped
 2026-08-17, when the Orchestrator was given a worktree of its own and only the deployment profile
 was updated. A statement can be stale without ever having been wrong.
 
-🔴 **One more document was not updated on 2026-08-17, and it is `FROZEN`.**
-`governance/annex_i_bootstrap_deployment.md` § I.2 steps 1, 6 and 9–10 still promote the root chat
-in place, which is the topology this frontmatter no longer names. **For this already-bootstrapped
-laboratory the question is settled** — the worktree exists, it is canonical in `main`, and this
+🔴 **Two more documents were not updated on 2026-08-17, both are `FROZEN`, and one of them is the
+body.** `governance/GOVERNANCE_v3.1.1.md` § 0.2 still reads *"La stessa chat viene promossa; non
+servono due chat root"*, with § 0.4 and § 47 steps 10 & 14 repeating the flow; and
+`governance/annex_i_bootstrap_deployment.md` § I.2 steps 1, 4, 6 and 9–10 still promote the root
+chat in place. That is the topology this frontmatter no longer names. **For this
+already-bootstrapped laboratory the question is settled** — the worktree exists, it is canonical
+in `main`, and this
 contract's `worktree:` field is correct. **For a fresh bootstrap it is not**, and `BOOTSTRAP.md`
 now stops there rather than choosing. The residual is declared, owned and routed in
 `deployment/deployment_profile.md`; its resolution is `HUMAN_REQUIRED` and belongs to the operator

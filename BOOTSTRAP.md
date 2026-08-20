@@ -29,14 +29,16 @@ running laboratory.
 > **Being in the root does not make you the Orchestrator.**
 
 The chat that opens at the repository root is not in charge by virtue of where it is. It becomes
-the `BOOTSTRAP_CONTROLLER`, runs the procedure below, and is **promoted** to Orchestrator only
-after the qualification steps pass and it has acquired the `ORCHESTRATOR_LEASE`. The promotion is
-a durable record, never a self-assumption.
+the `BOOTSTRAP_CONTROLLER` and runs the procedure below. Promotion to Orchestrator happens only
+after the qualification steps pass and an `ORCHESTRATOR_LEASE` has been acquired, and it is a
+durable record, never a self-assumption.
 
-🔴 **Where the promoted Orchestrator then lives is an open governance question, and this file does
-not answer it.** Two governed documents describe two different topologies and only one of them can
-be executed. **Stop before step 9 and read [Before you promote anyone](#-before-you-promote-anyone--blocked_by_governance).**
-Do not resolve it by choosing.
+🔴 **Which chat is promoted — and therefore where the Orchestrator lives — is an open governance
+question, and this file does not answer it.** FROZEN body § 0.2 answers it one way, in the
+governance's own words: *"La stessa chat viene promossa; non servono due chat root."* The canonical
+deployment profile requires the opposite. Both are governed, they cannot both be executed, and
+**this file chooses neither.** **Stop before step 9 and read
+[Before you promote anyone](#-before-you-promote-anyone--blocked_by_governance).**
 
 If you find a **valid ACTIVE lease already recorded**, then a laboratory is already running. You
 are not the Orchestrator. Operate as an OBSERVER or ask the operator.
@@ -68,7 +70,8 @@ laboratory. When in doubt, read first.
    is the blocked question; which directories exist is not.
 4. **Prepare the Agent Card registry** (Annex I.4) and the inventory skeleton (body §43).
 5. **Tell the operator exactly which chats to open**, one line each: the working directory and
-   the ACTOR_ID. FROZEN `Annex I.2` step 6 fixes that list at **five** — the five worktrees above.
+   the ACTOR_ID. FROZEN `Annex I.2` step 6 and FROZEN body § 47 step 10 — *"l'operatore apre le
+   cinque chat restanti"* — both fix that list at **five**, the five worktrees above.
    🔴 **Do not issue a sixth line for `orchestrator`**: that row of the table below is blocked, and
    the reason is in [Before you promote anyone](#-before-you-promote-anyone--blocked_by_governance).
    This is about two minutes of mechanical human action — it is not permanent human-in-the-loop,
@@ -95,38 +98,58 @@ Until step 9, the controller writes **bootstrap artifacts only**. Nothing else.
 
 ## 🔴 Before you promote anyone — `BLOCKED_BY_GOVERNANCE`
 
-**Two governed documents describe two different Orchestrator topologies, and this file may not
-choose between them.** Record `BLOCKED_BY_GOVERNANCE` with the evidence below (body §48), raise a
+**Governed documents describe two different Orchestrator topologies, and this file may not choose
+between them.** Record `BLOCKED_BY_GOVERNANCE` with the evidence below (body §48), raise a
 `HUMAN_APPROVAL_QUEUE` object of `TYPE: GOVERNANCE` (Annex J.3), and wait. Steps 1–8 continue;
 step 9, step 10 and the `orchestrator` row of the table below are the only things that wait.
 
+**There are three sources, not two, and the one that outranks everything else is the body.**
+
 | Source | Status | What it mandates |
 |---|---|---|
-| `governance/annex_i_bootstrap_deployment.md` § I.2, steps 1, 6, 9–10 | **FROZEN**, `normative: yes` | the first chat opens in `<REPO_ROOT>`; the operator is given the *lista esatta* of **five** chats to open; that same root chat is promoted in place to `ACTIVE_ORCHESTRATOR` |
+| `governance/GOVERNANCE_v3.1.1.md` § 0.2, § 0.4, § 47 steps 10 & 14 | **FROZEN**, `normative: yes` — the **body**, which every annex derives from | § 0.2: *"La stessa chat viene promossa; non servono due chat root."* § 0.4: the Controller *"acquisisce il lease e diventa ACTIVE_ORCHESTRATOR"*. § 47: the operator opens *"le cinque chat restanti"*, then step 14 promotes the Controller |
+| `governance/annex_i_bootstrap_deployment.md` § I.2, steps 1, 4, 6, 9–10 | **FROZEN**, `normative: yes` | the first chat opens in `<REPO_ROOT>`; **five** worktrees; the operator is given the *lista esatta* of **five** chats to open; that same root chat is promoted in place to `ACTIVE_ORCHESTRATOR` |
 | `deployment/deployment_profile.md`, canonical in `main` since `CAND-20260817-ORCHWT` | canonical | the Orchestrator has a worktree of its own, and **the root checkout is reserved to `CANONICAL_BATCH_COMMIT` and holds no other work** |
 
 **They cannot both be executed.** A chat's working directory is fixed when the chat opens and
 cannot be relocated, so promoting the root chat *in place* is identical to leaving the Orchestrator
-resident in the root.
+resident in the root. Body § 0.2 says so in as many words — *non servono due chat root* — and that
+sentence is the mandate, not a gloss on it.
 
-**The I.2 topology is known to be defective — and that is still not this file's decision to act
-on.** Under it the Orchestrator's working directory is the root, whose branch is `main`; `Annex
+**The root-promotion topology is known to be defective — and that is still not this file's decision
+to act on.** Under it the Orchestrator's working directory is the root, whose branch is `main`; `Annex
 D.1` makes any commit to `main` a `CANONICAL_BATCH_COMMIT`, so that actor has **no branch on which
 a `WORK_COMMIT` is possible**. Its output cannot become durable, `GATE 0`'s *root clean* is
 contradicted by body §8's obligation to produce durable output, and `ONE_WRITER` — *"critico nella
 root"* — carries a standing writer at all times. That argument is already canonical, in
-`deployment/deployment_profile.md`. It is a reason to **change** `Annex I.2`. It is not authority
-to ignore it: I.2 is rank 1 under body §5, this file is `status: PROPOSED`, and this file's own
-`authority:` field names Annex I.2 as its source — a document cannot outrank the document it
-derives from.
+`deployment/deployment_profile.md`. It is a reason to **change** the body and `Annex I.2`. It is
+not authority to ignore either: both are rank 1 under body §5, this file is `status: PROPOSED`,
+and this file's own `authority:` field names `Annex I.1, I.2, I.6` **and `body §0.1–0.4, §38,
+§47`** as its sources — a document cannot outrank the documents it derives from.
+
+**Why this file may nonetheless stop.** Declining to act needs no precedence: a stop is not an
+instruction that overrides a mandate, it is the absence of one, and it is the only move that
+neither executes a defective topology nor publishes an unauthorized one. It is also grounded
+directly rather than by inference. Body §48 forbids proceeding past a point that could *"violare
+one-writer"*, and a standing Orchestrator in the root is exactly that; body §4 makes a §48 stop
+condition *hit directly* the one route to `HUMAN_REQUIRED` that does not require an Orchestrator to
+classify it — which is the situation every bootstrap is in by definition. What this file may not do
+is publish the replacement topology as an executable instruction, and it does not.
 
 ```
-CONFLICT              Annex I.2 steps 1, 6, 9–10  vs  the canonical deployment profile
+CONFLICT              body § 0.2, § 0.4, § 47 steps 10 & 14  AND  Annex I.2 steps 1, 4, 6, 9–10
+                      vs  the canonical deployment profile
+STOP GROUNDED IN      body §48 ("violare one-writer") hit directly; body §4 routes a directly-hit
+                      §48 condition to HUMAN_REQUIRED without needing an Orchestrator
 RESOLUTION AUTHORITY  operator — body §4 ("cambio governance / authority model" → attende,
                       human required) and Annex H.1 ("Spese / MAJOR approval / governance →
                       Operatore")
-ROUTE                 plan proposes an Annex I.2 amendment → mirror reviews → operator approves
-                      → orchestrator canonicalizes under an ACTIVE lease and gates 0–5
+ROUTE                 plan proposes an amendment to BOTH the body and Annex I.2 → mirror reviews
+                      → operator approves → orchestrator canonicalizes under an ACTIVE lease and
+                      gates 0–5. Amending Annex I.2 alone does NOT discharge this
+COST OF THE ROUTE     the body is a fingerprint input for ALL FOUR roles, so amending it rotates
+                      every fingerprint and invalidates every actor's checkpoint (Annex A.6).
+                      Annex I.2 is an input for orchestrator and plan only
 STATE                 HUMAN_REQUIRED — not resolved by this file, and not resolvable by it
 UNTIL RESOLVED        do not promote any chat to ACTIVE_ORCHESTRATOR, in the root or anywhere
 ```

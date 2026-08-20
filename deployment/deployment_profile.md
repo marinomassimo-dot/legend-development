@@ -58,15 +58,27 @@ inside a batch window**: it becomes the canonical-commit surface and nothing els
 *(The improved-posture framing, and the observation that a change argued as a workaround gets
 reverted as one, are the orchestrator's, from the exchange of 2026-08-17.)*
 
-### 🔴 The correction never reached `Annex I.2`, and a fresh bootstrap is blocked on it
+### 🔴 The correction never reached the governance body or `Annex I.2`, and a fresh bootstrap is blocked on it
 
 **This is a declared, owned, unresolved residual and not a description of something fixed.** The
-change above was made here and in `main`'s history. `governance/annex_i_bootstrap_deployment.md`
-§ I.2 — `status: FROZEN`, `normative: yes`, rank 1 under body §5 — was not amended and still reads:
-the first chat opens in `<REPO_ROOT>` (step 1), the operator is handed the *lista esatta* of
-**five** chats (step 6), and that same root chat is promoted in place to `ACTIVE_ORCHESTRATOR`
-(steps 9–10). A chat's working directory cannot be relocated, so those steps and this section
-describe **different, mutually exclusive topologies**.
+change above was made here and in `main`'s history. **Two FROZEN normative documents were not
+amended with it, and one of them is the body itself.**
+
+`governance/GOVERNANCE_v3.1.1.md` — `status: FROZEN`, `normative: yes`, the corpus every annex
+derives from — still reads, at § 0.2: *"La stessa chat viene promossa; non servono due chat
+root."* § 0.4 repeats the flow (the Controller *"acquisisce il lease e diventa
+ACTIVE_ORCHESTRATOR"*), and § 47 has the operator open *"le cinque chat restanti"* at step 10
+before step 14 promotes the Controller in place.
+
+`governance/annex_i_bootstrap_deployment.md` § I.2 — also `status: FROZEN`, `normative: yes` —
+still reads: the first chat opens in `<REPO_ROOT>` (step 1), five worktrees are created (step 4),
+the operator is handed the *lista esatta* of **five** chats (step 6), and that same root chat is
+promoted in place to `ACTIVE_ORCHESTRATOR` (steps 9–10).
+
+A chat's working directory cannot be relocated, so those passages and this section describe
+**different, mutually exclusive topologies**. The body's sentence is the load-bearing one: it is
+the highest-ranked statement of the arrangement, and any amendment that does not reach it leaves
+the mandate intact.
 
 The consequence is confined and it is real: for an **already-bootstrapped** laboratory this
 section governs and the Orchestrator has its worktree — that is settled canonical state. For a
@@ -75,18 +87,26 @@ section governs and the Orchestrator has its worktree — that is settled canoni
 own authority from Annex I.2, and it cannot override the document it derives from.
 
 ```
-RESIDUAL              Annex I.2 steps 1, 6, 9–10 still mandate the superseded topology
-INTRODUCED BY         CAND-20260817-ORCHWT, which corrected this file and not the annex.
-                      It pre-dates CAND-20260819-ORCHSURF, which exposes it and does not
-                      create it
+RESIDUAL              body § 0.2, § 0.4 and § 47 steps 10 & 14, AND Annex I.2 steps 1, 4, 6
+                      and 9–10, still mandate the superseded topology
+INTRODUCED BY         CAND-20260817-ORCHWT, which corrected this file and neither the body nor
+                      the annex. It pre-dates CAND-20260819-ORCHSURF, which exposes it and does
+                      not create it
 OWNER                 plan proposes the amendment · mirror reviews · operator ratifies ·
                       orchestrator canonicalizes under an ACTIVE lease and gates 0–5
 AUTHORITY REQUIRED    operator — body §4 ("cambio governance / authority model") and
                       Annex H.1 ("Spese / MAJOR approval / governance → Operatore")
 STATE                 HUMAN_REQUIRED — open
-CONVERGENCE ROUTE     a governance candidate that amends Annex I.2 steps 4, 6 and 9–10 to the
-                      six-worktree topology, carrying the WORK_COMMIT argument above as its
-                      rationale. Not opened here, and not opened by ORCHSURF
+CONVERGENCE ROUTE     ONE governance candidate amending BOTH: body § 0.2, § 0.4 and § 47
+                      steps 10 & 14, and Annex I.2 steps 4, 6 and 9–10, to the six-worktree
+                      topology, carrying the WORK_COMMIT argument above as its rationale.
+                      Amending the annex alone does NOT discharge this: the body outranks it
+                      and says the same thing. Not opened here, and not opened by ORCHSURF
+COST OF THAT ROUTE    the body is a fingerprint input for ALL FOUR roles — orchestrator, plan,
+                      mirror, scientist — so the amendment rotates every fingerprint and
+                      invalidates every actor's resume checkpoint (Annex A.6). Annex I.2 is an
+                      input for orchestrator and plan only. The operator is approving a
+                      four-role rotation, not a two-role one
 BLAST RADIUS IF LEFT  fresh bootstrap only. No running laboratory depends on it
 ```
 
