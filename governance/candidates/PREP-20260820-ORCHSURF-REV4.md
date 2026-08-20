@@ -908,11 +908,30 @@ METHOD    git -C <REPO_ROOT> status --porcelain  +  rev-parse HEAD   → before
           root is UNPERTURBED iff both readings are identical and porcelain is empty in both
 ```
 
-**Result: recorded in the commit that immediately follows this one**, because a measurement of a
-commit cannot be inside the commit it measures. That second commit is instrumented identically,
-so the pair is self-checking: if the mechanism perturbs the root, the second measurement catches
-what the first would have had to report. Neither commit is amended — amending would rewrite the
-history the measurement is evidence about.
+The result could not be written inside the commit it measures, so it is recorded here, in the
+commit immediately following. Both commits are instrumented identically, which makes the pair
+self-checking: had the mechanism perturbed the root, the second reading would have caught what
+the first could not report. Neither commit is amended — amending would rewrite the very history
+the measurement is evidence about.
+
+| Reading | Before | After |
+|---|---|---|
+| root `status --porcelain` | **empty** | **empty** |
+| root HEAD | `04693e683a254ff0a6d0619fba47103a0fb7d122` | `04693e683a254ff0a6d0619fba47103a0fb7d122` |
+| Plan's branch | `orchestrator-surface` | `orchestrator-surface` |
+| Plan's HEAD | `4abcfc0` | `0b4b5ff` |
+
+```
+VERDICT   PASS. A WORK_COMMIT made inside an assigned worktree advanced that worktree's branch
+          and left the root checkout byte-for-byte unmoved — porcelain empty at both readings,
+          root HEAD identical. The commit was staged BY EXPLICIT PATH, never by blanket staging
+READS ON  §7.2's ownership assignment and, indirectly, the whole architecture of the decision:
+          this is the mechanism by which SESSION_LOCATION and PERSISTENCE_SURFACE stay
+          independent in practice and not merely in prose
+SCOPE     Plan's surface, Plan's branch, one commit. It is a POSITIVE CONTROL on the mechanism.
+          It is NOT PROBE-ORCHWT-001 leg 3, which remains owed on the `orchestrator` surface by
+          the Orchestrator, and revision 4 may not cite this row in its place
+```
 
 ## 9 · What this document does NOT do
 
