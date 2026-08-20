@@ -83,6 +83,18 @@ premise inverted, which is why I disposed of it rather than re-ran it.
 but I would be running a re-framed T7, and the re-framing is itself a judgement I would rather
 have adjudicated than make quietly.
 
+> **ADJUDICATED 2026-08-20** — `OPEN-REV-ORCHSURF-MIRROR-002-ADD-004` § 4, branch `orchestrator`
+> @ `dd434d5`, verified to exist at that ref before being recorded here. **Ruling: withdrawal
+> stands. T7 is not re-run, verbatim or re-framed, inside this candidate.** The decisive ground is
+> not the one I offered: the answer is now *entailed by the design under test*, so the test no
+> longer discriminates and a PASS would credit this candidate with evidence it did not earn.
+> Re-running verbatim would return PASS for a reason unrelated to the recorded one — a second
+> wrong-reason pass, which is precisely what §9's `WRONG-REASON LOAD-BEARING PASSES 0` forbids;
+> curing one by manufacturing another is not a cure. T8 falls the same way. **The re-framed
+> question is owed to `CAND-20260820-ROOTGUARD-001`**, and re-framing T7 here would have imported
+> ROOTGUARD under a test number against a constraint the operator set. Recorded in §17.1 of the
+> candidate. Nothing is required of me on this point, and I ran nothing.
+
 ## 3 · M-3 — ACCEPTED
 
 **Re-derived.** `REMEDIATION`, `UNSOLVED` and `BLAST RADIUS` occur **0 times** in §1 (lines
