@@ -12,6 +12,15 @@ gate: BLOCKED ON RATIFICATION. `DEC-20260820-ORCH-SESSION-HOME` carries
   `status: BINDING_UPON_OPERATOR_RATIFICATION` and `ratified_by: ""`, and its own §6 states it
   has no effect until ratified. Plan will not build a bound candidate on an unratified premise —
   that is the exact class of error revision 1 made, pointed the other way
+decision_record: `DEC-20260820-ORCH-SESSION-HOME` **v2**, registered at
+  `c4c0fa11d5a1ca9650ca9230013fc14156dc7c42`, content sha256
+  `9861fb05c66d4e763f6f1e36e012f6f019a5447356fa35ec87f0153b29c0bee7` — verified this session both
+  on disk and in the blob at that commit, and the full range `5559c11..c4c0fa1` changes exactly
+  one file, so no FROZEN document moved. v2 repaired two pre-ratification defects Plan raised
+  against v1 (`43772c8`): an SLR misattribution in §3(d), and §3 wording that called the record
+  "ratified" while `ratified_by` was empty. **Ratification attaches to this hash.** Filling
+  `ratified_by` will change the bytes and yield a third hash; both must be recorded, and the
+  content ratified is the one hashed before the signature
 scope_negative: Routing NOT implemented. Annex D.1 NOT modified. Annex I.2 NOT modified. The
   governance BODY NOT modified. P5 NOT reopened. ROOTGUARD NOT designed and NOT in scope
   (the decision's §1.5 excludes it). Scientist A/B NOT activated. No FROZEN document is edited,
@@ -30,9 +39,10 @@ the whole of the work that inversion makes available, and stops at the one input
 supply.
 
 ```
-RATIFICATION STATUS      UNRATIFIED — `ratified_by: ""` in DEC-20260820-ORCH-SESSION-HOME
+RATIFICATION STATUS      UNRATIFIED — `ratified_by: ""` in DEC-20260820-ORCH-SESSION-HOME v2,
+                         registered c4c0fa1, sha256 9861fb05…c0bee7
 EFFECT OF THE RECORD     NONE TODAY, by its own §6
-WHAT IS DELIVERED HERE   the verification the record's §2 demands; four findings that the
+WHAT IS DELIVERED HERE   the verification the record's §2 demands; seven findings that the
                          verification produced; the disposition of every revision-3 finding
                          under the new direction; and the exact revision-4 change set
 WHAT IS NOT DELIVERED    revision 4 itself — no manifest, no hash, no content edit
@@ -84,18 +94,32 @@ review, the handoff or any prior revision.
 | body §5 precedence | **CORRECT** | rank 1 NON-NEGOTIABLE GOVERNANCE, rank 2 OPERATOR STRATEGIC DIRECTIVE |
 | body §48 | **CORRECT AS TEXT, MISAPPLIED IN THE PACKAGE** | see F-3 |
 | body §14 | **CORRECT AS TEXT, MISAPPLIED IN THE PACKAGE** | *"mai **due attori** abilitati alla scrittura sulla stessa directory. Critico nella root."* — see F-3 |
-| **body §8** | **CORRECT — AND NAMED IN NEITHER THE RECORD NOR ANY REVISION OF ORCHSURF** | see F-1. This is the finding |
+| **body §8** | **CORRECT — AND NAMED IN NEITHER THE RECORD NOR ANY REVISION OF ORCHSURF** | see F-1. This is the finding. **v2 of the record adopts it as "Primary basis"** |
+| **body §35.1** | **CORRECT — AND STILL NAMED NOWHERE** | *"Recinto Orchestrator: … NON DEVE: committare lavoro proprio; toccare worktree altrui; … **usare la root come spazio libero**"*. This is the rank-1 statement of exactly what the record's §1 item 4 calls *"root as an accidental work surface"* |
+| body §11 | **CORRECT** | *"WORK_COMMIT → ogni attore, PROPRIO worktree/branch. Durevolezza di lavoro e learning. Obbligatorio, non canonico."* |
+| body §18 | **CORRECT** | *"Persistenza durevole NON negoziabile: ogni record MUST raggiungere lo stato durevole via WORK_COMMIT … il messaggio notifica, il commit fa fede."* Load-bearing for F-7 |
 
 ```
-SECTION REFERENCES IN THE RECORD   ALL CORRECT AS CITED
-ENUMERATION IN THE RECORD          INCOMPLETE — body §8 and §14 bear on this decision and the
-                                   record names neither. The omission does not weaken the
-                                   record; §8 is the strongest support it has
+SECTION REFERENCES IN THE RECORD   ALL CORRECT AS CITED, v1 AND v2
+ENUMERATION IN THE RECORD          INCOMPLETE — body §8, §14 and §35.1 bear on this decision.
+                                   v2 adopted §8 as Primary basis; §14 and §35.1 remain
+                                   uncited. The omission does not weaken the record; all three
+                                   support it, and §8 is the strongest support it has
+ONE CITATION READ ONLY IN PART     the record cites body §5 for its own rank-2 position and does
+                                   not carry §5's second half — the *clausola temporale
+                                   (anti-trinceramento)*: "una vecchia direttiva operatore non
+                                   batte l'Orchestrator di oggi … lo stato durevole delle
+                                   priorità decide." The record's `applies_to` claims reach over
+                                   "any future candidate", a forward scope that this clause
+                                   qualifies. Not a defect in the architecture and not Plan's to
+                                   settle; it is a defect in the citation, and it is the same
+                                   error-shape the record itself names at its §2 — citing a
+                                   section for a subordinate clause while missing an operative one
 ```
 
 ---
 
-## 3 · Four findings the verification produced
+## 3 · Seven findings the verification produced
 
 ### F-1 · 🔴 Body §8 states the operator's architecture at rank 1, and the package quoted one clause of §8 against the rest of it
 
@@ -277,7 +301,78 @@ The record's §6 instructs Plan to *"register it according to decision-record co
 Enumerated: there is no `DEC-*` artifact anywhere in the tree and no `governance/decisions/`
 directory. The precedent the repository calls `DECISION 3` exists only as prose inside other
 documents. `governance/decisions/DEC-20260820-ORCH-SESSION-HOME.md` therefore **proposes** a
-convention rather than applying one, and says so in its own frontmatter.
+convention rather than applying one, and says so in its own frontmatter. **Superseded in part:
+the convention now exists**, proposed by that file and exercised twice — v1 at `43772c8`, v2 at
+`c4c0fa1`, the second superseding the first in place with the history preserved and unrewritten.
+
+---
+
+### F-7 · 🔴 The `orchestrator` worktree is absent from Annex I.2 step 4 because it is not a bootstrap artifact — and that absence is evidence FOR the operator's architecture
+
+**The problem, stated at full strength.** Annex I.2 step 4 enumerates the worktrees the
+Controller creates: *"crea/verifica worktree: lettore, lettore-b, lettore-c, evidence-index,
+mirror"*. Five. **`orchestrator` is not among them, and the string appears in no FROZEN document
+as a worktree to create.** `BOOTSTRAP.md` step 3 creates it anyway, citing `CAND-20260817-ORCHWT`.
+The decision's §3(b) asks revision 4 to restore the bootstrap procedure *"consistent with … Annex
+I.2"* **and** to retain that creation. Taken naively those two instructions collide, and the
+collision is the last thing standing between this preparation and a bound revision 4.
+
+**The defence offered until now is too weak to carry it.** Revision 3, and the first draft of
+this document, answered that *I.2 step 4 enumerates worktrees to create and does not prohibit
+others*. That argument treats a precise FROZEN enumeration as merely silent, and it licenses a
+seventh and an eighth worktree exactly as well as the sixth. A permission argument cannot be the
+grounding for a MAJOR candidate.
+
+**The resolution is a separation, and the artifact record already contains it.** These are two
+lists answering two different questions, and they were never the same list:
+
+| | **Annex I.2 step 4** | **`deployment/deployment_profile.md`** |
+|---|---|---|
+| Question answered | which worktrees must exist so that the chats of I.2 step 6 have homes | where does the Orchestrator's WORK_COMMIT land |
+| Rank | **1** — FROZEN, `normative: yes` | canonical content, amendable under Annex D |
+| Cardinality | **five, and it is derived**: I.2 step 6 hands the operator *"la LISTA ESATTA delle 5 chat da aprire (path per ACTOR_ID)"* — one path per chat | **one, and it is derived** from the WORK_COMMIT rule: body §11, *"ogni attore, PROPRIO worktree/branch"*, and Annex H.1, *"solo proprio branch"* |
+| Lifecycle | bootstrap, **pre**-promotion; a Controller act under body §0.4 | runtime, **post**-promotion |
+| Established by | the governance body and Annex I | `CAND-20260817-ORCHWT` |
+
+**The decisive measurement: ORCHWT never touched Annex I.2, and said so in its own scope field.**
+`CAND-20260817-ORCHWT` frontmatter reads *"scope: deployment/deployment_profile.md ONLY. No P5.1
+change, no runtime classification, no SLR integration, no lint change."* The `orchestrator`
+worktree entered this system as a **deployment fact**. Nothing was ever smuggled into Annex I.2,
+and Annex I.2 was never in tension with ORCHWT. The tension was manufactured in one place only —
+`BOOTSTRAP.md` step 3, which names the I.2 five and the ORCHWT one in a single breath and so
+presents a runtime surface as a bootstrap step.
+
+**And the absence is not an oversight.** I.2 step 4's five map one-to-one onto I.2 step 6's five
+chats, and body §47 step 10 calls them *"le cinque chat **restanti**"* — remaining, that is,
+after the one already open. **The Orchestrator has no worktree in step 4 for precisely the same
+reason it has no chat in step 6: its session is the root chat, which is already open and is
+promoted in place.** Under revision 3's direction that absence was inexplicable and had to be
+argued around. Under the operator's architecture it is exactly what the FROZEN text should say.
+F-7 therefore converts the strongest apparent objection to the decision into support for it — and
+the support sits at rank 1, where a rank-2 operator directive could not have put it.
+
+**Consequence for revision 4 — and this is a change, not a preservation.** `BOOTSTRAP.md` step 3
+creates the **five** worktrees Annex I.2 step 4 enumerates and nothing else, so that the file is
+consistent with I.2 in the plain sense rather than the permissive one. Provisioning the
+`orchestrator` work surface becomes a **named post-promotion act** governed by the deployment
+profile, sequenced after body §47 step 14 and before the Orchestrator's first Session Learning
+Review — which is when the surface is first needed, since §8 makes that review mandatory and §18
+makes WORK_COMMIT the only route to durable state (*"il messaggio notifica, il commit fa fede"*).
+
+```
+LOAD-BEARING, NOT EDITORIAL   if revision 4 separates the lists and omits the post-promotion
+                              provisioning step, a fresh install reaches ACTIVE_ORCHESTRATOR
+                              with no orchestrator worktree in existence, and the first
+                              Orchestrator session has nowhere lawful to commit its own work —
+                              which is the exact defect ORCHWT was raised to close
+DECLARED AS NEW               revision 4 must present this step as an addition, not as a
+                              restoration. Nothing in FROZEN text describes it, and F-7's whole
+                              argument is that FROZEN text is silent here on purpose
+COST TO THE RUNNING SYSTEM    none. The `orchestrator` worktree exists at `b3596d5` and no
+                              running surface is touched by any of this
+FROZEN IMPACT                 none. Annex I.2 is read, not amended; its cardinality of five is
+                              affirmed rather than excused
+```
 
 ---
 
@@ -291,7 +386,7 @@ applied to each is **whether it depends on the remediation direction**.
 | Finding | Why it survives |
 |---|---|
 | **T10 enumeration method** | a method for enumerating a document universe from the tree rather than from a manifest. Independent of which document turns out to be wrong. **Reproduced this session** |
-| **The truncated authority-line finding** | `BOOTSTRAP.md` line 5 reads `authority: Annex I.1, I.2, I.6; body §0.1–0.4, §38, §47` and `SLR-plan-0011` quoted it to the semicolon. Verified at source. A transcription defect, true in every direction |
+| **The authority-line lesson** — `SLR-plan-0012` **P-2**, concerning `SLR-plan-0011`'s truncation | `BOOTSTRAP.md` line 5 reads `authority: Annex I.1, I.2, I.6; body §0.1–0.4, §38, §47`; `SLR-plan-0011`'s evidence block quoted it to the semicolon, and `SLR-plan-0012` P-2 is where that truncation was caught. Verified at source this session: the string `truncat` appears in `SLR-plan-0012` and **not** in `SLR-plan-0011`. **The finding lives in 0012; 0011 is where the defect lives.** Citing it as "the SLR-plan-0011 finding" sends a reader to the defective quotation instead of to its diagnosis — which is the very failure mode P-2 describes. Corrected in the decision record at v2; revision 4 must carry the corrected form. A transcription defect, true in every direction |
 | **T7/T8 inherited-universe correction** | a test that inherits the candidate's own list of sources cannot falsify that list. **Extended by F-5**, not weakened |
 | **Mirror's B-1, as a finding of contradiction** | governed documents did describe two mutually exclusive topologies. **That was true and remains true.** What changes is which document is the defective one |
 | **N-1 — agent-card owner is `plan`** | from `maintained_by`, body §43 and finding C-5. Independent |
@@ -342,9 +437,21 @@ REMOVE    "which chat is promoted … is an open governance question, and this f
 RESTORE   the affirmative statement of the architecture, in the governance's own terms: the root
           chat becomes BOOTSTRAP_CONTROLLER, is promoted in place by lease, and being in the
           root confers nothing. Body §0.2 and §8 are the citations
-KEEP      step 3 creating the `orchestrator` worktree — with the reason corrected: it is the
-          Orchestrator's WORK_COMMIT surface, not a chat to open. I.2 step 4 enumerates
-          worktrees to create and does not prohibit others (revision 3's own reading, retained)
+REWRITE   step 3 — **this replaces the earlier draft of this line, which retained revision 3's
+          permission argument (*"I.2 step 4 … does not prohibit others"*). F-7 withdraws that
+          argument.** Step 3 creates the FIVE worktrees Annex I.2 step 4 enumerates — `lettore`,
+          `lettore-b`, `lettore-c`, `evidence-index`, `mirror` — and stops there, so that
+          "consistent with Annex I.2" is a plain reading and not a permissive one
+ADD       a post-promotion step, declared as NEW, as this file's **step 11** — immediately after
+          its step 10 (*"record the registration durably → the chat is now ACTIVE_ORCHESTRATOR"*,
+          which is body §47 step 14 and Annex I.2 step 10) and before the Orchestrator's first
+          Session Learning Review: the `orchestrator` work surface is provisioned per
+          `deployment/deployment_profile.md`. Cited to body §11 and §18, and to
+          `CAND-20260817-ORCHWT`, never to Annex I.2 — the whole point of F-7 is that these are
+          two lists answering two questions
+STATE     explicitly, in the file, why there is no sixth worktree at step 3 and no sixth chat at
+          step 5: they are the same reason, and it is the architecture — the Orchestrator's
+          session is the root chat, already open, promoted in place
 KEEP      "Being in the root does not make you the Orchestrator" — decision item 3, verbatim
 REWRITE   the chats table: the `orchestrator` row gains a session-home value (repository root)
           and a work-surface value (worktree `orchestrator`). Two facts, two columns, no block
@@ -369,6 +476,11 @@ KEEP      the actor table, the three-concepts block, the five resolver requireme
           measurements and the "working directory is NOT an actor identity attribute" section —
           all endorsed by decision item 3, none direction-dependent
 ADD       SESSION HOME as a fourth named concept alongside the existing three
+ADD       this file becomes the NAMED GOVERNING DOCUMENT of the `orchestrator` work surface, per
+          F-7: it states that the surface is provisioned post-promotion, that it is NOT an Annex
+          I.2 step-4 worktree, and that its cardinality derives from body §11 rather than from
+          any chat list. ORCHWT's scope line — "deployment_profile.md ONLY" — is quoted as the
+          evidence that this separation is original to the system and not invented by revision 4
 ```
 
 ### `roles/orchestrator.md` — status `PROPOSED`, **the one fingerprint input this candidate moves**
@@ -409,7 +521,16 @@ CHANGE_CLASS            MAJOR — unchanged. It edits a role contract, the deplo
 FINGERPRINT IMPACT      orchestrator only — `roles/orchestrator.md` is the single input that
                         moves. plan · mirror · scientist UNCHANGED. To be recomputed at the
                         revision-4 tip, never carried forward
-FROZEN DOCUMENTS        none modified, none proposed for modification, none claimed superseded
+FROZEN DOCUMENTS        none modified, none proposed for modification, none claimed superseded.
+                        Annex I.2's cardinality of five is AFFIRMED by F-7 rather than excused
+BOOTSTRAP PROCEDURE     one step REWRITTEN (step 3, narrowed to the I.2 five) and one step ADDED
+                        (step 11, post-promotion provisioning). The addition is the only
+                        instruction in this change set with no antecedent in any governed
+                        document, and F-7 declares it as new rather than as a restoration
+OPEN, NOT SETTLED       F-7 (b) and (c) — who owns post-promotion worktree provisioning, and
+                        whether worktree creation falls inside the pre-promotion perimeter at
+                        all. Both are governance readings; neither is Plan's to settle; both go
+                        to Mirror with the candidate rather than being resolved before it
 HUMAN_REQUIRED RESIDUAL DISSOLVED — and this is the largest single consequence of the decision
 A.6 CONSEQUENCE         orchestrator checkpoints only, as at revision 3. NOT four roles
 REGRESSION              expected DELTA 0; the suite is red at main for a pre-existing reason and
@@ -463,6 +584,22 @@ written, or amended to name it first.
 **7 · Am I conserving revision 3's findings, or re-labelling them?** §4 claims a clean split into
 direction-independent and direction-dependent. Attack any row of §4.1 by showing it secretly
 depends on the direction, and any row of §4.2 by showing it does not.
+
+**8 · Does F-7's separation hold, or is it a distinction without a difference?** This is the
+attack I most want run, because F-7 is the one place where this preparation *changes* the
+bootstrap procedure rather than restoring it. Three surfaces to hit. **(a)** I claim I.2 step 4's
+five are derived from I.2 step 6's five chats. A reviewer could hold that step 4 is an
+independent enumeration that merely happens to have the same cardinality — in which case its
+silence about `orchestrator` is silence, and revision 3's permission argument comes back.
+**(b)** I claim provisioning a worktree post-promotion is lawful. Body §0.4 gives worktree
+creation to the Controller, *pre*-promotion; if a reviewer holds that worktree creation is
+exclusively a Controller act, then the new step 11 has no owner and F-7 breaks at execution
+rather than at argument. **(c)** I claim the pre-promotion perimeter — *"SOLO artefatti di
+bootstrap"* — does not cover this. If a reviewer holds instead that a worktree is infrastructure
+rather than an artifact and therefore falls outside the perimeter entirely, then step 3 could
+lawfully create all six after all, and the separation becomes optional rather than required.
+**I have not settled (b) or (c); both are governance readings, and Annex H.1 gives a doubtful
+MAJOR to Mirror.**
 
 ---
 
