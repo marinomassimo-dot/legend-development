@@ -24,30 +24,52 @@ learning archive and index, and the actor definitions. **No absolute path appear
 it** — that is a rule, not a habit, and a single hard-coded home directory is enough to make a
 clone non-portable.
 
-Actors are identified by ACTOR_ID and located by worktree name:
+Actors are identified by ACTOR_ID. **Location takes two columns, not one**, because for one actor
+the two values differ — and a single `Worktree` column is what let a true statement about the
+second be read as a false statement about the first:
 
-| ACTOR_ID | Worktree | Contract |
-|---|---|---|
-| `orchestrator` | `orchestrator` — its own worktree, for its own work | `roles/orchestrator.md` |
-| `plan` | `evidence-index` | `roles/plan.md` |
-| `mirror` | `mirror` | `roles/mirror.md` |
-| `scientist-a` | `lettore` | `roles/scientist.md` |
-| `scientist-b` | `lettore-b` | `roles/scientist.md` |
-| `scientist-c` | `lettore-c` | `roles/scientist.md` |
+| ACTOR_ID | Session home | Work surface (`WORK_COMMIT`) | Contract |
+|---|---|---|---|
+| `orchestrator` | the repository **root** checkout | worktree `orchestrator`, branch `orchestrator` | `roles/orchestrator.md` |
+| `plan` | worktree `evidence-index` | same | `roles/plan.md` |
+| `mirror` | worktree `mirror` | same | `roles/mirror.md` |
+| `scientist-a` | worktree `lettore` | same | `roles/scientist.md` |
+| `scientist-b` | worktree `lettore-b` | same | `roles/scientist.md` |
+| `scientist-c` | worktree `lettore-c` | same | `roles/scientist.md` |
 
-### The Orchestrator's worktree, and why the root is not it
+Neither column is an ACTOR_ID oracle and neither is a write-authority oracle — see *Working
+directory is NOT an actor identity attribute* below, which is unchanged and which this revision
+depends on rather than weakens.
 
-The Orchestrator previously had no worktree of its own: its working directory *was* the root
-checkout. That is corrected here, and **not as a workaround.**
+### The Orchestrator's worktree and the Orchestrator's root — both are its surfaces, for different purposes
 
-`Annex D.1` defines `WORK_COMMIT` as *"ogni attore, proprio branch"* and `CANONICAL_BATCH_COMMIT`
-as *"solo Orchestrator, root"*. The root's branch is `main`, and a commit to `main` is canonical by
-definition — so an Orchestrator living in the root had **no branch on which a `WORK_COMMIT` was
-possible**. Every other actor had one. The consequence was not theoretical: anything the
-Orchestrator authored could not become durable, could not reach an integration candidate, and left
-the root permanently unclean, so `GATE 0` would fail from that actor's first durable output onward
-— and §8 obliges it to produce durable output, since it maintains the `DAILY_BRIEF` and records
-every adjudication rationale.
+The Orchestrator's session is opened in the root checkout and stays there; its `WORK_COMMIT`
+surface is the `orchestrator` worktree on branch `orchestrator`. **Both are true at once, because
+they answer different questions**, and this section previously asserted that they could not be.
+
+🔴 **A sentence in this section was false, and it was the premise the section was built on.** It
+read: *"an Orchestrator living in the root had **no branch on which a `WORK_COMMIT` was
+possible**."* That is wrong. `Annex D.1` defines `WORK_COMMIT` as *"ogni attore, proprio branch"*,
+and body § 11 as *"ogni attore, PROPRIO worktree/branch"* — a `WORK_COMMIT` is bound to a
+**branch**, never to a working directory. A session open in the root can commit to branch
+`orchestrator` from where it sits; git has never required otherwise. The false sentence is
+withdrawn here rather than quietly edited, because it was canonical in `main` and it was load-
+bearing: the whole *"and why the root is not it"* framing of this section rested on it, and so did
+the `BLOCKED_BY_GOVERNANCE` stop that an earlier `BOOTSTRAP.md` derived from it.
+
+What is true, and what the worktree is actually for: the root's branch is `main`, and `Annex D.1`
+makes a commit to `main` a `CANONICAL_BATCH_COMMIT` by definition. So the Orchestrator needs a
+branch that is **not** `main` on which to make its own work durable — body § 8 obliges it to
+produce durable output, since it maintains the `DAILY_BRIEF` and records every adjudication
+rationale, and body § 18 makes `WORK_COMMIT` the only route to durable state. The `orchestrator`
+worktree is where that branch is checked out. It is required, not merely convenient.
+
+> **§ 35.1 constrains where persistent artifacts may be produced, not whether the Orchestrator may
+> produce persistent artifacts. The Orchestrator `WORK_COMMIT` surface is the assigned
+> worktree/branch, never the root checkout.**
+
+Operator adjudication of 2026-08-20, quoted verbatim. It is a rank-2 reading of rank-1 text and
+amends nothing.
 
 **The correction improves the posture that §14 calls critical rather than merely unblocking one.**
 `ONE_WRITER_PER_WORKING_DIRECTORY` is *"critico nella root"*. With the Orchestrator resident there,
@@ -58,56 +80,57 @@ inside a batch window**: it becomes the canonical-commit surface and nothing els
 *(The improved-posture framing, and the observation that a change argued as a workaround gets
 reverted as one, are the orchestrator's, from the exchange of 2026-08-17.)*
 
-### 🔴 The correction never reached the governance body or `Annex I.2`, and a fresh bootstrap is blocked on it
+### No FROZEN residual — the two lists were never one list
 
-**This is a declared, owned, unresolved residual and not a description of something fixed.** The
-change above was made here and in `main`'s history. **Two FROZEN normative documents were not
-amended with it, and one of them is the body itself.**
+**The residual this section used to declare is withdrawn, because it rested on the false sentence
+withdrawn above.** No FROZEN document required amendment, none was amended, and the
+`HUMAN_REQUIRED` state is closed.
 
-`governance/GOVERNANCE_v3.1.1.md` — `status: FROZEN`, `normative: yes`, the corpus every annex
-derives from — still reads, at § 0.2: *"La stessa chat viene promossa; non servono due chat
-root."* § 0.4 repeats the flow (the Controller *"acquisisce il lease e diventa
-ACTIVE_ORCHESTRATOR"*), and § 47 has the operator open *"le cinque chat restanti"* at step 10
-before step 14 promotes the Controller in place.
+`governance/GOVERNANCE_v3.1.1.md` § 0.2, § 0.4 and § 47 steps 10 & 14, and
+`governance/annex_i_bootstrap_deployment.md` § I.2 steps 1, 4, 6 and 9–10, all describe the root
+chat being promoted **in place** — and body § 8 states the same architecture most directly of all:
+*"Orchestrator vive nella chat grafica associata a `<REPO_ROOT>`"*, immediately followed by *"La
+posizione nella root NON conferisce autorità."* **Three revisions and one hostile review cited § 8
+only for that second clause and never for the first.** All of it is correct as written and remains
+untouched.
 
-`governance/annex_i_bootstrap_deployment.md` § I.2 — also `status: FROZEN`, `normative: yes` —
-still reads: the first chat opens in `<REPO_ROOT>` (step 1), five worktrees are created (step 4),
-the operator is handed the *lista esatta* of **five** chats (step 6), and that same root chat is
-promoted in place to `ACTIVE_ORCHESTRATOR` (steps 9–10).
-
-A chat's working directory cannot be relocated, so those passages and this section describe
-**different, mutually exclusive topologies**. The body's sentence is the load-bearing one: it is
-the highest-ranked statement of the arrangement, and any amendment that does not reach it leaves
-the mandate intact.
-
-The consequence is confined and it is real: for an **already-bootstrapped** laboratory this
-section governs and the Orchestrator has its worktree — that is settled canonical state. For a
-**fresh bootstrap**, `BOOTSTRAP.md` now stops at step 9 and records `BLOCKED_BY_GOVERNANCE`
-(body §48) rather than executing either topology, because it is `status: PROPOSED`, it derives its
-own authority from Annex I.2, and it cannot override the document it derives from.
+**This section and those passages are not rival topologies.** They are the two axes:
 
 ```
-RESIDUAL              body § 0.2, § 0.4 and § 47 steps 10 & 14, AND Annex I.2 steps 1, 4, 6
-                      and 9–10, still mandate the superseded topology
-INTRODUCED BY         CAND-20260817-ORCHWT, which corrected this file and neither the body nor
-                      the annex. It pre-dates CAND-20260819-ORCHSURF, which exposes it and does
-                      not create it
-OWNER                 plan proposes the amendment · mirror reviews · operator ratifies ·
-                      orchestrator canonicalizes under an ACTIVE lease and gates 0–5
-AUTHORITY REQUIRED    operator — body §4 ("cambio governance / authority model") and
-                      Annex H.1 ("Spese / MAJOR approval / governance → Operatore")
-STATE                 HUMAN_REQUIRED — open
-CONVERGENCE ROUTE     ONE governance candidate amending BOTH: body § 0.2, § 0.4 and § 47
-                      steps 10 & 14, and Annex I.2 steps 4, 6 and 9–10, to the six-worktree
-                      topology, carrying the WORK_COMMIT argument above as its rationale.
-                      Amending the annex alone does NOT discharge this: the body outranks it
-                      and says the same thing. Not opened here, and not opened by ORCHSURF
-COST OF THAT ROUTE    the body is a fingerprint input for ALL FOUR roles — orchestrator, plan,
-                      mirror, scientist — so the amendment rotates every fingerprint and
-                      invalidates every actor's resume checkpoint (Annex A.6). Annex I.2 is an
-                      input for orchestrator and plan only. The operator is approving a
-                      four-role rotation, not a two-role one
-BLAST RADIUS IF LEFT  fresh bootstrap only. No running laboratory depends on it
+SESSION_LOCATION  ≠  PERSISTENCE_SURFACE
+ROOT location  ≠  ACTOR_ID  ≠  write authority
+```
+
+FROZEN governance places the **session** in the root. This file places the **`WORK_COMMIT`
+surface** on a worktree. A chat's working directory being unrelocatable was never an objection,
+because nothing here asks it to move.
+
+**This file is the governing document of the `orchestrator` work surface, and it is not a
+bootstrap document.** `Annex I.2` step 4 enumerates the worktrees that must exist so the five
+chats of step 6 have homes — its cardinality of five is *derived from* that chat list, and
+`orchestrator` is absent from it for exactly the reason it is absent from step 6: that session is
+the root chat. The `orchestrator` worktree's cardinality of one is derived instead from body § 11,
+*"ogni attore, PROPRIO worktree/branch"*. Two lists, two questions, two clocks.
+
+```
+ESTABLISHED BY        CAND-20260817-ORCHWT, whose scope field reads "deployment/deployment_profile
+                      .md ONLY. No P5.1 change, no runtime classification, no SLR integration, no
+                      lint change." It never touched Annex I.2 and never claimed to
+LIFECYCLE             runtime, POST-promotion. Provisioned at BOOTSTRAP.md step 11, after the
+                      lease is acquired and recorded, and before the Orchestrator's first Session
+                      Learning Review
+OWNER OF PROVISIONING plan — body § 47 step 15 places Plan immediately after promotion on runtime
+                      matters, and this file is Plan's to maintain. Measured, not assumed:
+                      SMOKE-PLAN-PROVISION-001, 2026-08-20, PASS — Plan created a worktree,
+                      wrote nothing into it, left the root unperturbed, removed it cleanly
+FALLBACK              if that capability is ever refused, the ACTIVE_ORCHESTRATOR provisions its
+                      own surface as its first post-promotion act. Second choice on textual
+                      grounds only
+NOT A BOOTSTRAP ACT   the pre-promotion write perimeter — body § 0.4, "Perimetro di scrittura
+                      pre-promozione: SOLO artefatti di bootstrap" — fences the
+                      BOOTSTRAP_CONTROLLER, a role that ends at promotion. It does not reach
+                      step 11, and step 11's POSITION is therefore normative rather than
+                      editorial
 ```
 
 ```

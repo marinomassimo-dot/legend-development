@@ -33,12 +33,20 @@ the `BOOTSTRAP_CONTROLLER` and runs the procedure below. Promotion to Orchestrat
 after the qualification steps pass and an `ORCHESTRATOR_LEASE` has been acquired, and it is a
 durable record, never a self-assumption.
 
-🔴 **Which chat is promoted — and therefore where the Orchestrator lives — is an open governance
-question, and this file does not answer it.** FROZEN body § 0.2 answers it one way, in the
-governance's own words: *"La stessa chat viene promossa; non servono due chat root."* The canonical
-deployment profile requires the opposite. Both are governed, they cannot both be executed, and
-**this file chooses neither.** **Stop before step 9 and read
-[Before you promote anyone](#-before-you-promote-anyone--blocked_by_governance).**
+**Which chat is promoted — and therefore where the Orchestrator's session lives — is settled, and
+this file answers it.** The root chat is promoted **in place**. FROZEN body § 8 states the
+architecture directly — *"Orchestrator vive nella chat grafica associata a `<REPO_ROOT>`"* — and
+FROZEN body § 0.2 states the mechanism — *"La stessa chat viene promossa; non servono due chat
+root."* Neither sentence is amended by anything in this file.
+
+**Promotion moves no chat and opens no chat.** The session running as `BOOTSTRAP_CONTROLLER`
+acquires the lease and continues, in the same place, under a new role. That is why body § 47
+step 10 has the operator open *"le cinque chat **restanti**"* — remaining, because the sixth is
+the one already open and reading this.
+
+And it changes nothing about authority. Being in the root is still not being the Orchestrator;
+the lease is. The two statements sit side by side in § 8 itself, and the second only needs saying
+because the first is true.
 
 If you find a **valid ACTIVE lease already recorded**, then a laboratory is already running. You
 are not the Orchestrator. Operate as an OBSERVER or ask the operator.
@@ -60,22 +68,24 @@ laboratory. When in doubt, read first.
 2. **Verify** before touching anything: that this is the expected repository; the state of the
    root checkout (it must be clean); the governance version; that no other writer is active in
    the root; and the state of the worktrees.
-3. **Create or verify the worktrees** — one per actor, each on its own branch: `lettore`,
-   `lettore-b`, `lettore-c`, `evidence-index`, `mirror` — the five named in FROZEN `Annex I.2`
-   step 4 — **and** `orchestrator`, which canonical `main` established through
-   `CAND-20260817-ORCHWT`. One actor, one worktree, one branch. This is not a convention: a
-   shared checkout is what allows one session to commit another's unfinished work, and it has
-   happened here.
-   **Creating a directory opens no chat and promotes nobody.** Which chat becomes the Orchestrator
-   is the blocked question; which directories exist is not.
+3. **Create or verify the bootstrap worktrees** — exactly the five named in FROZEN `Annex I.2`
+   step 4, each on its own branch: `lettore`, `lettore-b`, `lettore-c`, `evidence-index`,
+   `mirror`. **Five, and not six.** These are the homes of the five chats step 5 asks the operator
+   to open, which is both why the count is five and why `orchestrator` is not among them — that
+   actor's session is this one, already open in the root. The `orchestrator` **work surface** is a
+   different thing on a different clock: it is provisioned at step 11, after promotion, and it is
+   not a bootstrap artifact. See [Two lists, two questions](#two-lists-two-questions).
+   One actor, one worktree, one branch. This is not a convention: a shared checkout is what allows
+   one session to commit another's unfinished work, and it has happened here.
+   **Creating a directory opens no chat and promotes nobody.**
 4. **Prepare the Agent Card registry** (Annex I.4) and the inventory skeleton (body §43).
 5. **Tell the operator exactly which chats to open**, one line each: the working directory and
    the ACTOR_ID. FROZEN `Annex I.2` step 6 and FROZEN body § 47 step 10 — *"l'operatore apre le
    cinque chat restanti"* — both fix that list at **five**, the five worktrees above.
-   🔴 **Do not issue a sixth line for `orchestrator`**: that row of the table below is blocked, and
-   the reason is in [Before you promote anyone](#-before-you-promote-anyone--blocked_by_governance).
-   This is about two minutes of mechanical human action — it is not permanent human-in-the-loop,
-   and it happens once.
+   **There is no sixth line for `orchestrator`, and its absence is the architecture rather than an
+   omission**: that chat is this one, already open in the root, and step 9 promotes it where it
+   sits. This is about two minutes of mechanical human action — it is not permanent
+   human-in-the-loop, and it happens once.
 6. **Receive each actor's registration**: ACTOR_ID, session reference, declared capabilities.
    Each actor reads its own contract in `roles/` first.
 7. **L1 — messaging smoke.** Every actor answers: presence, routing, the `from` reference copied
@@ -87,97 +97,117 @@ laboratory. When in doubt, read first.
    gates 0, 2 and 4 and the restore path. Plan: registry validation. Mirror: a micro-review.
    `CONFIGURED != PROVEN`: a capability nobody smoke-tested is not a capability, and Orchestrator
    assigns on verified ones.
-9. 🔴 **STOP — read [Before you promote anyone](#-before-you-promote-anyone--blocked_by_governance)
-   first.** Promotion is the step the unresolved conflict lands on, and it is the one step of this
-   procedure you may not currently execute. Then, and only if that block has been lifted by the
-   operator: **acquire the `ORCHESTRATOR_LEASE`** (Annex I.3), and only if the conditions passed.
+9. **Acquire the `ORCHESTRATOR_LEASE`** (Annex I.3) — and only if every condition above passed.
+   This is the ordinary step FROZEN body § 0.4 and § 47 step 14 describe, taken **in place**: this
+   chat is promoted, and no chat is opened or moved to receive the promotion. The lease is what
+   confers the authority. The location confers nothing, and never did.
 10. **Record the registration durably** → the chat is now `ACTIVE_ORCHESTRATOR`, and ordinary
     governance takes over from this file.
+11. **Provision the `orchestrator` work surface** — worktree `orchestrator` on branch
+    `orchestrator`, per `deployment/deployment_profile.md`. **This step is new, and it restores
+    nothing**: no FROZEN document describes it, because no FROZEN document is describing a runtime
+    surface at this point in the sequence. It sits here rather than at step 3 for the reason in
+    [Two lists, two questions](#two-lists-two-questions), and it must happen before the
+    Orchestrator's first Session Learning Review — body § 8 makes that review mandatory and body
+    § 18 makes `WORK_COMMIT` the only route to durable state, *"il messaggio notifica, il commit
+    fa fede"*. Owner: `plan`, whom body § 47 step 15 already places at exactly this point on
+    runtime matters. **The step's position is normative, not editorial**: moving it before
+    promotion reopens a governance question that is closed only because it sits after.
 
-Until step 9, the controller writes **bootstrap artifacts only**. Nothing else.
+Until promotion at step 9, the controller writes **bootstrap artifacts only** — FROZEN body § 0.4,
+*"Perimetro di scrittura pre-promozione: SOLO artefatti di bootstrap."* That perimeter fences the
+`BOOTSTRAP_CONTROLLER`, and the Controller ceases to exist at promotion. It is therefore neither a
+licence for steps 10–11 nor a bar to them: it has simply stopped applying, and what governs after
+promotion is body § 35.1.
 
-## 🔴 Before you promote anyone — `BLOCKED_BY_GOVERNANCE`
+## Two lists, two questions
 
-**Governed documents describe two different Orchestrator topologies, and this file may not choose
-between them.** Record `BLOCKED_BY_GOVERNANCE` with the evidence below (body §48), raise a
-`HUMAN_APPROVAL_QUEUE` object of `TYPE: GOVERNANCE` (Annex J.3), and wait. Steps 1–8 continue;
-step 9, step 10 and the `orchestrator` row of the table below are the only things that wait.
+An earlier revision of this file stopped at step 9 and recorded `BLOCKED_BY_GOVERNANCE`, on the
+reading that FROZEN governance and the canonical deployment profile described two mutually
+exclusive Orchestrator topologies. **That reading was wrong, and the error is worth keeping
+written down**, because it is the kind that survives review: three revisions and one hostile
+review passed over it.
 
-**There are three sources, not two, and the one that outranks everything else is the body.**
+There was never one list with a disputed length. There were always **two lists answering two
+different questions**, and this file was reading them as one:
 
-| Source | Status | What it mandates |
+| | **`Annex I.2` step 4** | **`deployment/deployment_profile.md`** |
 |---|---|---|
-| `governance/GOVERNANCE_v3.1.1.md` § 0.2, § 0.4, § 47 steps 10 & 14 | **FROZEN**, `normative: yes` — the **body**, which every annex derives from | § 0.2: *"La stessa chat viene promossa; non servono due chat root."* § 0.4: the Controller *"acquisisce il lease e diventa ACTIVE_ORCHESTRATOR"*. § 47: the operator opens *"le cinque chat restanti"*, then step 14 promotes the Controller |
-| `governance/annex_i_bootstrap_deployment.md` § I.2, steps 1, 4, 6, 9–10 | **FROZEN**, `normative: yes` | the first chat opens in `<REPO_ROOT>`; **five** worktrees; the operator is given the *lista esatta* of **five** chats to open; that same root chat is promoted in place to `ACTIVE_ORCHESTRATOR` |
-| `deployment/deployment_profile.md`, canonical in `main` since `CAND-20260817-ORCHWT` | canonical | the Orchestrator has a worktree of its own, and **the root checkout is reserved to `CANONICAL_BATCH_COMMIT` and holds no other work** |
+| Answers | which worktrees must exist so the chats of step 6 have homes | where the Orchestrator's `WORK_COMMIT` lands |
+| Rank | **1** — FROZEN, `normative: yes` | canonical content, amendable under Annex D |
+| Count | **five, and it is derived** — step 6 hands the operator *"la LISTA ESATTA delle 5 chat da aprire (path per ACTOR_ID)"*, one path per chat | **one, and it is derived** — body § 11, *"ogni attore, PROPRIO worktree/branch"* |
+| Clock | bootstrap, **pre**-promotion | runtime, **post**-promotion |
+| Established by | the governance body and Annex I | `CAND-20260817-ORCHWT`, whose scope field reads *"deployment/deployment_profile.md ONLY"* |
 
-**They cannot both be executed.** A chat's working directory is fixed when the chat opens and
-cannot be relocated, so promoting the root chat *in place* is identical to leaving the Orchestrator
-resident in the root. Body § 0.2 says so in as many words — *non servono due chat root* — and that
-sentence is the mandate, not a gloss on it.
+**`CAND-20260817-ORCHWT` never touched `Annex I.2`, and said so in its own scope field.** The
+`orchestrator` worktree entered this system as a deployment fact, not as a bootstrap step. Nothing
+was smuggled into the annex, and the annex was never in tension with the profile. The tension was
+manufactured here — by an earlier step 3 that named the annex's five and the profile's one in a
+single breath, and so presented a runtime surface as a bootstrap artifact.
 
-**The root-promotion topology is known to be defective — and that is still not this file's decision
-to act on.** Under it the Orchestrator's working directory is the root, whose branch is `main`; `Annex
-D.1` makes any commit to `main` a `CANONICAL_BATCH_COMMIT`, so that actor has **no branch on which
-a `WORK_COMMIT` is possible**. Its output cannot become durable, `GATE 0`'s *root clean* is
-contradicted by body §8's obligation to produce durable output, and `ONE_WRITER` — *"critico nella
-root"* — carries a standing writer at all times. That argument is already canonical, in
-`deployment/deployment_profile.md`. It is a reason to **change** the body and `Annex I.2`. It is
-not authority to ignore either: both are rank 1 under body §5, this file is `status: PROPOSED`,
-and this file's own `authority:` field names `Annex I.1, I.2, I.6` **and `body §0.1–0.4, §38,
-§47`** as its sources — a document cannot outrank the documents it derives from.
+**The absence is not an oversight.** The five worktrees of step 4 map one-to-one onto the five
+chats of step 6, and body § 47 step 10 calls them *"le cinque chat **restanti**"*. The Orchestrator
+has no worktree at step 4 for exactly the same reason it has no chat at step 6: **its session is
+the root chat, already open, promoted in place.** Read against the architecture, the FROZEN
+cardinality of five is not a gap to be argued around. It is the architecture, stated.
 
-**Why this file may nonetheless stop.** Declining to act needs no precedence: a stop is not an
-instruction that overrides a mandate, it is the absence of one, and it is the only move that
-neither executes a defective topology nor publishes an unauthorized one. It is also grounded
-directly rather than by inference. Body §48 forbids proceeding past a point that could *"violare
-one-writer"*, and a standing Orchestrator in the root is exactly that; body §4 makes a §48 stop
-condition *hit directly* the one route to `HUMAN_REQUIRED` that does not require an Orchestrator to
-classify it — which is the situation every bootstrap is in by definition. What this file may not do
-is publish the replacement topology as an executable instruction, and it does not.
+### The two axes this file exists to keep apart
 
 ```
-CONFLICT              body § 0.2, § 0.4, § 47 steps 10 & 14  AND  Annex I.2 steps 1, 4, 6, 9–10
-                      vs  the canonical deployment profile
-STOP GROUNDED IN      body §48 ("violare one-writer") hit directly; body §4 routes a directly-hit
-                      §48 condition to HUMAN_REQUIRED without needing an Orchestrator
-RESOLUTION AUTHORITY  operator — body §4 ("cambio governance / authority model" → attende,
-                      human required) and Annex H.1 ("Spese / MAJOR approval / governance →
-                      Operatore")
-ROUTE                 plan proposes an amendment to BOTH the body and Annex I.2 → mirror reviews
-                      → operator approves → orchestrator canonicalizes under an ACTIVE lease and
-                      gates 0–5. Amending Annex I.2 alone does NOT discharge this
-COST OF THE ROUTE     the body is a fingerprint input for ALL FOUR roles, so amending it rotates
-                      every fingerprint and invalidates every actor's checkpoint (Annex A.6).
-                      Annex I.2 is an input for orchestrator and plan only
-STATE                 HUMAN_REQUIRED — not resolved by this file, and not resolvable by it
-UNTIL RESOLVED        do not promote any chat to ACTIVE_ORCHESTRATOR, in the root or anywhere
+SESSION_LOCATION  ≠  PERSISTENCE_SURFACE
+ROOT location  ≠  ACTOR_ID  ≠  write authority
 ```
 
-**Do not work around it.** Promoting the root chat recreates the standing root writer. Promoting a
-chat in the `orchestrator` worktree adopts a topology no approved act has authorized. Both are the
-failure this block exists to prevent, and choosing either one silently is worse than waiting.
+Both axes are independent, and conflating the first is precisely how the earlier error travelled:
+a true statement about where an actor **commits** was turned into a false statement about where its
+**session lives**. Step 3 and step 11 are the two halves of the first axis, and they are separate
+steps on purpose.
+
+### On the Orchestrator and durable work
+
+The earlier reading also held that a root-resident Orchestrator has *"no branch on which a
+`WORK_COMMIT` is possible"*. That is false: a `WORK_COMMIT` is bound to a **branch**, never to a
+working directory. The Orchestrator commits its own work on branch `orchestrator`, from wherever
+its session is open, and the root stays clean because nothing is written there outside a batch
+window.
+
+The rank-1 fence is body § 35.1, and the operator has adjudicated its reading:
+
+> **§ 35.1 constrains where persistent artifacts may be produced, not whether the Orchestrator may
+> produce persistent artifacts. The Orchestrator `WORK_COMMIT` surface is the assigned
+> worktree/branch, never the root checkout.**
+
+So § 35.1's *"non usare la root come spazio libero"* stands unamended and undiminished, and body
+§ 11, § 18 and § 8 — which require every actor including this one to make its work durable — are
+satisfied on the worktree. This is why step 11 provisions a surface that is **required** rather
+than merely permitted.
 
 ## The chats to open
 
-| ACTOR_ID | Working directory | Contract |
-|---|---|---|
-| `orchestrator` | worktree `orchestrator` — 🔴 **BLOCKED, do not open** | `roles/orchestrator.md` |
-| `plan` | worktree `evidence-index` | `roles/plan.md` |
-| `mirror` | worktree `mirror` | `roles/mirror.md` |
-| `scientist-a` | worktree `lettore` | `roles/scientist.md` |
-| `scientist-b` | worktree `lettore-b` | `roles/scientist.md` |
-| `scientist-c` | worktree `lettore-c` | `roles/scientist.md` |
+Two columns, because the `orchestrator` row carries two facts that an earlier revision collapsed
+into one and then could not choose between.
 
-**The five rows below `orchestrator` are the `Annex I.2` step 6 list, and they are not in
-dispute.** The `orchestrator` row records the **work surface** canonical `main` assigns that
-actor — `deployment/deployment_profile.md`, `roles/orchestrator.md`. It is **not an instruction to
-open a chat there and it is not authority to**, because which chat becomes the Orchestrator is
-`HUMAN_REQUIRED` and blocked above. What the root checkout *is*, on the other hand, is settled:
+| ACTOR_ID | Session home | Work surface | Contract |
+|---|---|---|---|
+| `orchestrator` | the repository **root** checkout — **already open; not opened at step 5** | worktree `orchestrator`, branch `orchestrator` — provisioned at step 11 | `roles/orchestrator.md` |
+| `plan` | worktree `evidence-index` | same | `roles/plan.md` |
+| `mirror` | worktree `mirror` | same | `roles/mirror.md` |
+| `scientist-a` | worktree `lettore` | same | `roles/scientist.md` |
+| `scientist-b` | worktree `lettore-b` | same | `roles/scientist.md` |
+| `scientist-c` | worktree `lettore-c` | same | `roles/scientist.md` |
+
+**The five rows below `orchestrator` are the `Annex I.2` step 6 list**, and for those five actors
+the two columns hold the same value — which is why every other role contract needs one field and
+this one needs two.
+
+What the root checkout *is*, on the other hand, is settled and unchanged by any of this:
 `Annex D.1` makes it the `CANONICAL_BATCH_COMMIT` surface, `GATE 0` requires it clean, and
-`ONE_WRITER` calls it *"critico nella root"*. **A working directory never establishes who an actor
-is, in either direction** — neither presence in the root nor presence in the `orchestrator`
-worktree makes a session the Orchestrator.
+`ONE_WRITER` calls it *"critico nella root"*. A session lives there; no work is written there
+outside a batch window.
+
+**A working directory never establishes who an actor is, in either direction** — neither presence
+in the root nor presence in the `orchestrator` worktree makes a session the Orchestrator. The
+lease does, and nothing else does.
 
 The three scientists share one contract on purpose — they are equivalent by design, and three
 copies would fork. The ACTOR_IDs above are proposed by the materialization and become permanent
