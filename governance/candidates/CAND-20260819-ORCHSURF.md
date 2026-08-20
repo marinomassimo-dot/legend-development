@@ -977,7 +977,11 @@ arrangement could conceal.
 | Finding | Disposition at revision 4 |
 |---|---|
 | **T10 enumeration method** — a document universe enumerated from the tree, not from a manifest | **PRESERVED**, and re-run this session. Direction-independent by construction |
-| **T7/T8 inherited-universe correction** — a test that inherits the candidate's source list cannot falsify it | **PRESERVED and applied**: every section reference in this revision was re-read at source, and no list was inherited from revisions 1–3, from the DEC, or from any prompt |
+| **T7/T8 inherited-universe correction** — a test that inherits the candidate's source list cannot falsify it | **PRESERVED and applied** as a METHOD: every section reference in this revision was re-read at source, and no list was inherited from revisions 1–3, from the DEC, or from any prompt. **This row disposes of the LESSON only. The RESULTS are disposed of in the two rows below — a distinction revision 4 originally failed to draw, found by `REV-ORCHSURF-MIRROR-002` M-2** |
+| **T7's RESULT** — *"can the procedure silently create or promote a standing root Orchestrator?" → NO, PASS* | **WITHDRAWN, and the question with it.** The PASS rested on artefacts revision 4 deleted: at CONTENT_TIP `UNTIL RESOLVED` returns **0 hits** in `BOOTSTRAP.md`, `STOP` returns **0**, and step 9 sits at line 100 reading *"Acquire the `ORCHESTRATOR_LEASE` … and only if every condition above passed"*. The question is also mis-framed now: revision 4's procedure **does** seat a root-resident Orchestrator — openly, by ratified architectural intent, which is the opposite of *silently*. Re-running the test verbatim would re-ask a question whose premise inverted |
+| **T8's RESULT** — *"can an operator reach the bootstrap without being told FROZEN mandates the legacy topology?" → NO, PASS* | **WITHDRAWN.** Its evidence was *"the first reference to the block (line 41) precedes the first lease-acquisition verb (line 93)"*; there is no block to reference. What replaces it is not a test result but the architecture: FROZEN does not mandate a rival topology, so there is nothing to warn the operator about |
+| **T1–T6, T9, T10 results** | **NOT RE-RUN at revision 4**, and revision 4 does not restate them. T10's method is preserved and was re-exercised; its *result* is a revision-3 measurement. See §17.3 |
+| **§8's remediation accounting** — `SELECTED REMEDIATION CLASS E`, `PROBLEM DECLARED, NOT SOLVED`, `WHAT REMAINS UNSOLVED`, `GUARANTEE PROVIDED (b)`, `BLAST RADIUS 5 content files` | **WITHDRAWN in every row.** Class E's third conjunct is the declared FROZEN residual, which dissolves; the I.2 transition named as unsolved is not a blocker; guarantee (b) describes the withdrawn stop; and the blast radius is **three** content files at revision 4 — `BOOTSTRAP.md`, `deployment/deployment_profile.md`, `roles/orchestrator.md` — not five. Found by `REV-ORCHSURF-MIRROR-002` M-3 |
 | **`SLR-plan-0012` P-2, concerning `SLR-plan-0011`'s truncation** — a procedure that says *read what `authority:` names* is defeated by a quotation ending at a semicolon | **PRESERVED.** Note the attribution: the defect is in 0011, the finding is in 0012. Citing it as "the SLR-plan-0011 finding" sends a reader to the defective quote instead of its diagnosis |
 | **The authority-line lesson** — a field a check reads belongs in evidence verbatim and whole | **PRESERVED** |
 | **Mirror's B-1, as a finding of contradiction** | **PRESERVED as a finding.** Governed documents did describe two irreconcilable arrangements. What changes is which document was defective: not the body and not Annex I.2, but `deployment/deployment_profile.md`'s WORK_COMMIT sentence and this package's reading of it |
@@ -991,6 +995,39 @@ arrangement could conceal.
 | the `orchestrator` chat row is BLOCKED | **WITHDRAWN.** There is no sixth chat, and there never was |
 | `STEP5-session-open-plan.md` is stale | **RE-ADJUDICATED CORRECT** |
 | the profile's WORK_COMMIT argument is the sound version | **WITHDRAWN AS FALSE.** It is the sentence this revision retracts |
+
+### 17.1a · The operative status of this candidate's own subject
+
+Added at `REV-ORCHSURF-MIRROR-002` M-1. Revision 4 dissolved the ground §11 and §16 stood on and
+never said what replaced it, so the one question this package exists to answer had no Layer-1
+answer at all.
+
+```
+ORCHESTRATOR SURFACE     RESOLVED at the level this candidate operates on.
+                         The three surfaces are typed and named in all three content files;
+                         SESSION HOME is added as the concept the package never had; and the
+                         two axes are stated in each document rather than once in a preamble
+
+BLOCKED_BY_FROZEN        NO. WITHDRAWN. There is no FROZEN residual, no HUMAN_REQUIRED governance
+                         transition and no fingerprint rotation beyond `orchestrator`. This is
+                         the largest single consequence of the ratified record
+
+A FRESH BOOTSTRAP        COMPLETES. Revision 3 could not say this: its step 9 halted at
+                         BLOCKED_BY_GOVERNANCE. Revision 4 removes the stop because the conflict
+                         it stopped for was not a conflict. §16's "It does not claim a fresh
+                         bootstrap can complete" is WITHDRAWN — it was true of revision 3 and is
+                         false of this one
+
+WHAT STILL BLOCKS        nothing in governance. What remains are MEASUREMENTS, not blockers, and
+                         they are enumerated in §17.3: PROBE-ORCHWT-001 leg 3, the Orchestrator's
+                         undeclared WORK_COMMIT capability, Plan's cross-worktree refusal, and
+                         the regression suite. None is discharged by this section, and none of
+                         them prevents canonicalization on its own — that is Orchestrator's call
+                         under the gates, not Plan's
+
+WHAT IS STILL OWED       the review ladder itself. This candidate has one hostile review at
+                         revision 4 and no operator approval, and MAJOR requires both
+```
 
 ### 17.2 · Three ranks, kept apart on purpose
 
@@ -1022,6 +1059,13 @@ files rather than paraphrased, so that a later reader can see it is quoted:
 - **It does not claim `PROBE-ORCHWT-001` is discharged.** Legs 1, 2 and 4 are, from durable
   state. **Leg 3 — root non-perturbation — is owed by the Orchestrator** and cannot be taken by
   Plan without writing into another actor's worktree, which would corrupt what it measures.
+- **It does not claim T1–T10 were re-run at revision 4.** They were not. T7 and T8 were verified
+  against the revision-3 tree and **their stated reasons do not describe this one** — the stop,
+  the `UNTIL RESOLVED` line and the line numbers they cite were all deleted by this revision.
+  Their results are withdrawn in §17.1; T10's *method* is preserved and was re-exercised, but its
+  result is a revision-3 measurement. This omission was the one gap in this list, and
+  `REV-ORCHSURF-MIRROR-002` M-2 found it against the package's own `WRONG-REASON LOAD-BEARING
+  PASSES 0` standard.
 - **It does not claim the regression suite was re-measured.** It was not, and revision 4 does not
   restate a number it did not take.
 - **It does not claim `roles/plan.md`'s cross-worktree write refusal is verified.** It is not.
