@@ -11,7 +11,7 @@ applies_to:
   - CAND-20260819-ORCHSURF (all revisions)
   - any future candidate touching Orchestrator surfaces, bootstrap, or promotion
 drafted_by: external advisory (Claude/Fable), at operator request
-ratified_by: Massimo Marino, 2026-08-20
+ratified_by: Operatore, 2026-08-20
 ---
 
 # 1. Decision
