@@ -52,14 +52,13 @@ supersedes: revision 3, CANDIDATE_CONTENT_HASH
   each was correct for the tree it named, all three are reproduced as positive controls in §1, and
   Annex D.2 invalidates them because the bound content moved. REV-ORCHSURF-MIRROR-001 reviewed
   revision 1; NO REVIEW has ever been performed on revision 2, 3 or 4
-publication_gate: 🔴 BLOCK_PUBLICATION · 1 BLOCK, and it is NOT in this candidate's content edits.
-  `governance/decisions/DEC-20260820-ORCH-SESSION-HOME.md:14` carries `ratified_by: <operator
-  name>`, which the gate matches against its register of private identifiers. Measured at BASE_HEAD
-  in a matched checkout: PASS, 0 blocks. Measured at this content tip: BLOCK, 1. The block was
-  introduced by the ratification commit ec4bf60 and is a DELTA THIS BRANCH CARRIES INTO main.
-  Plan does not resolve it: the signature is the operator's act and removing it would un-ratify.
-  See §1 PUBLICATION_GATE. **This candidate is not canonicalizable until the operator disposes
-  of it.**
+publication_gate: PASS · 0 BLOCKS at CONTENT_TIP, DELTA 0 against BASE_HEAD. A DIRECT_IDENTIFIER
+  block stood at the first revision-4 binding — the `ratified_by` signature in the DEC carried the
+  operator's name into public canonical content, and the gate matched it against its register of
+  private identifiers. Cleared at 9a70e94 by an operator-approved one-line redaction to
+  `Operatore`, the vocabulary the record's own `authority:` field already used; the ratification
+  act is unchanged. The history is kept in §1 rather than erased, because a gate measured red and
+  then green is worth more in the record than one never measured at all
 ---
 
 # INTEGRATION_CANDIDATE — `CAND-20260819-ORCHSURF` · revision 4
@@ -75,28 +74,49 @@ BASE_HEAD                 04693e683a254ff0a6d0619fba47103a0fb7d122   (canonical 
                                                                       from a manifest or a prompt)
 OPERATOR_INPUT            DEC-20260820-ORCH-SESSION-HOME · RATIFIED
                           ratified at   ec4bf603fcdc30dd3b56a92b0102a56eaf838f7e
-                          ratified_by   filled 2026-08-20; the ratification diff is ONE line and
-                                        touches nothing but the signature field — verified
-                          content ratified (pre-signature)
-                                        9861fb05c66d4e763f6f1e36e012f6f019a5447356fa35ec87f0153b29c0bee7
-                          record after signature
-                                        6e89ba5f23f6a5fd1ae70e7bc339d1cb452b38fb1a5f0c9ffaa22e705fc4e1e1
-                          Both are recorded because filling the signature necessarily moves the
-                          bytes. Ratification attaches to the FIRST; the second is what is in
-                          the tree. RANK 2 (body §5, OPERATOR STRATEGIC DIRECTIVE), subordinate
-                          to NON-NEGOTIABLE governance at rank 1
+                          redacted at   9a70e94d6d9863622c22159d0d7f2117b77b793d
+                          Each of those two commits changes exactly ONE line, and the line is the
+                          signature field — verified by diff, both times.
+                          THREE HASHES, all meaningful, none interchangeable:
+                            9861fb05c66d4e763f6f1e36e012f6f019a5447356fa35ec87f0153b29c0bee7
+                              the content AS RATIFIED, before any signature. Ratification
+                              attaches to THIS
+                            6e89ba5f23f6a5fd1ae70e7bc339d1cb452b38fb1a5f0c9ffaa22e705fc4e1e1
+                              after signature, with a direct identifier. Superseded; it is the
+                              value that tripped the publication gate
+                            6b5d9c3fd625aed3c72811d8bfff458f38b92f2973aa9b99aa90063df762f83c
+                              after identifier redaction — THE RECORD AS IT NOW STANDS
+                          The redaction replaced the operator's name with `Operatore`, which is
+                          the vocabulary the record's own `authority:` field already used. The
+                          RATIFICATION ACT IS UNCHANGED; only its rendering is. Operator decision
+                          of 2026-08-20, on the ground that ratification is an operator ACTION
+                          and not a public identity assertion.
+                          RANK 2 (body §5, OPERATOR STRATEGIC DIRECTIVE), subordinate to
+                          NON-NEGOTIABLE governance at rank 1
 SOURCE_COMMITS            b3afdde4423b62fc7f0ddf18cc8183fb989fe1b2   CONTENT — revision 1
                           7b6a9d9aeaf2a162fc16de4e4abdb713ddead603   CONTENT — revision 2
                           25fa61abe0dfe5c19f11b15d9b906a2e07d64a56   CONTENT — revision 3
                           1a650d85e7686654e37329576c034b899d43bb40   CONTENT — revision 4, the
                                                                       inverted direction
+                          9a70e94d6d9863622c22159d0d7f2117b77b793d   CONTENT — identifier
+                                                                      redaction in the DEC
                           <this commit>                              CONTROL PLANE — this manifest.
                                                                       Resolved by the commit that
                                                                       follows; see SELF-REFERENCE
-CONTENT_TIP               1a650d85e7686654e37329576c034b899d43bb40
+CONTENT_TIP               9a70e94d6d9863622c22159d0d7f2117b77b793d
 CANDIDATE_HASH_VERSION    legend-candidate-v4
-CANDIDATE_CONTENT_HASH    79af3e52302aa4ca9fc99e53979904aff2535f28949f2af2a573eee222d82ea0
+CANDIDATE_CONTENT_HASH    844de909c6b0d1cef4ce4014e9fef3870aeb8729e8b3c6ac029a12dfcaacb6dc
                           539 included · pre-image 541 lines / 58 040 bytes
+REBOUND WITHIN REVISION 4 the first revision-4 binding was
+                          79af3e52302aa4ca9fc99e53979904aff2535f28949f2af2a573eee222d82ea0
+                          at content tip 1a650d85. It is SUPERSEDED under Annex D.2 because the
+                          bound content moved — the DEC is an included domain entry and the
+                          redaction changed it. **This is a re-binding, not a revision 5:** no
+                          argument, finding, remedy or disposition changed. The domain delta
+                          between the two is exactly ONE entry, enumerated below. A reviewer
+                          holding that a content change of any kind demands a revision bump
+                          should say so; Plan judged the substance unchanged and records the
+                          judgement rather than hiding the seam
 SUPERSEDED_HASH           ed020f37c6a33d6c84b0b1eb7a5ed7e3800b4915b599715e3954d1036ab9c1f8
                           revision 3, at content tip 25fa61a
                           b0a0c9ed6849521a1331a4d6c0850de252ae7c4b5e3b227a477b21f4386465d1
@@ -115,20 +135,23 @@ FROZEN DOCUMENTS          NONE amended, NONE proposed for amendment, NONE claime
                           AFFIRMED by F-7, not excused
 LINT_RESULT               PASS — 1 INFO (MISSING_WIKILINK, CLAIM 010), byte-identical at
                           BASE_HEAD measured in a matched checkout. DELTA 0
-PUBLICATION_GATE          🔴 BLOCK_PUBLICATION · BLOCKS: 1 — and this is a REGRESSION this branch
-                          carries, disclosed rather than absorbed:
-                            at BASE_HEAD, matched checkout   PASS · 0 blocks
-                            at CONTENT_TIP                   BLOCK · 1 block
-                          The block is DIRECT_IDENTIFIER at
+PUBLICATION_GATE          PASS · BLOCKS: 0 — and the history is kept, because a gate that went
+                          red and back to green is worth more in the record than one that was
+                          never measured:
+                            at BASE_HEAD, matched checkout        PASS · 0
+                            at 1a650d85, first revision-4 binding BLOCK · 1
+                            at 9a70e94d, CONTENT_TIP              PASS · 0
+                          The block was DIRECT_IDENTIFIER at
                           governance/decisions/DEC-20260820-ORCH-SESSION-HOME.md:14 — the
                           `ratified_by` signature, matched against the gate's register of private
-                          identifiers. It is NOT in this candidate's three edited files: stashing
-                          them and re-measuring reproduces the same single block.
+                          identifiers. It was never in this candidate's three edited files:
+                          stashing them and re-measuring reproduced the same single block, which
+                          is how the cause was attributed rather than guessed.
                           INTRODUCED BY  ec4bf60, the ratification commit
-                          NOT PLAN'S     the signature is the operator's act; removing it
-                                         un-ratifies the record
-                          CONSEQUENCE    GATE blocks canonicalization until the operator
-                                         disposes. That is the gate working, not failing
+                          CLEARED BY     9a70e94d, operator-approved redaction to `Operatore`
+                          DELTA vs BASE  0. The branch no longer carries a publication regression
+                          The gate did its job: it caught a registered private identifier entering
+                          public canonical content, and it caught it before canonicalization
 REGRESSION                NOT RE-MEASURED at revision 4. Revision 3 recorded DELTA 0 against a
                           suite RED at canonical main for a pre-existing reason. This revision
                           does not assert a value it did not take
@@ -161,8 +184,8 @@ SELF-REFERENCE            a manifest cannot name the commit that contains it. `<
 ```bash
 python3 governance/scripts/candidate_content_hash.py \
   --base 04693e683a254ff0a6d0619fba47103a0fb7d122 \
-  --tip  1a650d85e7686654e37329576c034b899d43bb40
-# 79af3e52302aa4ca9fc99e53979904aff2535f28949f2af2a573eee222d82ea0
+  --tip  9a70e94d6d9863622c22159d0d7f2117b77b793d
+# 844de909c6b0d1cef4ce4014e9fef3870aeb8729e8b3c6ac029a12dfcaacb6dc
 ```
 
 **Independent route** — the digest reproduced without trusting the script's own final step, by
@@ -170,7 +193,7 @@ re-digesting the emitted pre-image with a different tool:
 
 ```bash
 … --emit-domain | shasum -a 256
-# 79af3e52…2ea0   (58 040 bytes, 541 lines: 539 domain entries + 2 header lines)
+# 844de909…b6dc   (58 040 bytes, 541 lines: 539 domain entries + 2 header lines)
 ```
 
 **Domain accounting against revision 3 — enumerated, not observed.** The pre-image grew by
@@ -208,15 +231,20 @@ check takes: the instrument that binds this revision reproduces the binding it s
 BASE tree against itself           cfe8957d…1298   ≠ candidate — and it is the value Mirror
                                                     independently measured at revision 1, so this
                                                     control is corroborated from outside Plan
-revision 3 vs revision 4           ed020f37… ≠ 79af3e52…   the binding moved with the content
+revision 3 vs revision 4           ed020f37… ≠ 844de909…   the binding moved with the content
+rev-4 first bind vs the rebind     79af3e52… ≠ 844de909…   exactly ONE domain entry moved — the
+                                                    DEC's digest — and the hash moved with it.
+                                                    The instrument is sensitive to a single
+                                                    redacted field in a single file
 SHA-256 of the empty string        e3b0c442…b855   ≠ candidate, and the pre-image is 58 040
                                                     bytes — this comparison is not two voids
 ```
 
 ```
 BINDING   PASS
-GATE      🔴 PUBLICATION BLOCKED — see §1. The binding is sound and the candidate is not
-          canonicalizable until the operator disposes of the DIRECT_IDENTIFIER block
+GATE      PASS — publication gate 0 blocks at CONTENT_TIP, DELTA 0 against BASE_HEAD. The
+          DIRECT_IDENTIFIER block that stood at the first revision-4 binding is CLEARED. §1
+          keeps that history rather than erasing it
 ```
 
 ---
