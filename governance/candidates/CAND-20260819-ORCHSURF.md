@@ -51,7 +51,14 @@ supersedes: revision 3, CANDIDATE_CONTENT_HASH
   b3afdde4423b62fc7f0ddf18cc8183fb989fe1b2. All three bindings are SUPERSEDED, not withdrawn —
   each was correct for the tree it named, all three are reproduced as positive controls in §1, and
   Annex D.2 invalidates them because the bound content moved. REV-ORCHSURF-MIRROR-001 reviewed
-  revision 1; NO REVIEW has ever been performed on revision 2, 3 or 4
+  revision 1; revisions 2 and 3 have NEVER been reviewed; revision 4 WAS reviewed —
+  REV-ORCHSURF-MIRROR-002, rounds 1 and 2, REQUEST CHANGES at both, closed at
+  CLOSE-REV-ORCHSURF-MIRROR-002 with every finding disposed and no DISAGREEMENT_UNRESOLVED.
+  Examined is not approved: no reviewer issued PASS on revision 4 and HUMAN_APPROVAL is
+  unchanged. Until CLOSE-REV-ORCHSURF-MIRROR-002-ADD-002 this clause read "NO REVIEW has ever
+  been performed on revision 2, 3 or 4" — true when written, false from the moment
+  REV-ORCHSURF-MIRROR-002 reviewed revision 4, and kept rather than erased because a record
+  edited to agree with its own present is no longer evidence of what it said
 publication_gate: PASS · 0 BLOCKS at CONTENT_TIP, DELTA 0 against BASE_HEAD. A DIRECT_IDENTIFIER
   block stood at the first revision-4 binding — the `ratified_by` signature in the DEC carried the
   operator's name into public canonical content, and the gate matched it against its register of
@@ -155,10 +162,28 @@ PUBLICATION_GATE          PASS · BLOCKS: 0 — and the history is kept, because
 REGRESSION                NOT RE-MEASURED at revision 4. Revision 3 recorded DELTA 0 against a
                           suite RED at canonical main for a pre-existing reason. This revision
                           does not assert a value it did not take
-MIRROR_REVIEW             REV-ORCHSURF-MIRROR-001 returned REQUEST CHANGES on revision 1.
-                          Revisions 2, 3 and 4 have NEVER been reviewed. None performed, none
-                          assumed, and revision 4 inverts the direction revision 1 was reviewed
-                          under — so the earlier review does not transfer
+MIRROR_REVIEW             REV-ORCHSURF-MIRROR-002 — revision 4 WAS reviewed, over two rounds.
+                          Round 1, REV-ORCHSURF-MIRROR-002: REQUEST CHANGES. Round 2,
+                          REV-ORCHSURF-MIRROR-002-R2: REQUEST CHANGES. Closed at
+                          CLOSE-REV-ORCHSURF-MIRROR-002 — findings M-1, M-2, M-3, M-4 and the
+                          adjudicator residual R-1 all disposed, no DISAGREEMENT_UNRESOLVED
+                          NOT `PASS`, and not any other value D.2 declares. D.2 gives
+                          `n/a | PASS | FAIL + REVIEW_ID`, and the true state is none of the
+                          three: `n/a` would deny a review that happened, `FAIL` would assert a
+                          verdict no round returned, and `PASS` was issued by no reviewer on
+                          revision 4. The state is named here rather than forced into a legal
+                          value, and the vocabulary mismatch is disclosed rather than resolved
+                          silently. CHANGE_CLASS is MAJOR: a `PASS` written into this field
+                          would manufacture a GATE input out of a review that produced none
+                          Examination is not approval, and this field is not one. HUMAN_APPROVAL
+                          is unchanged and no APPROVAL_ID exists
+                          REV-ORCHSURF-MIRROR-001 returned REQUEST CHANGES on revision 1 and does
+                          NOT transfer — revision 4 inverts the direction revision 1 was reviewed
+                          under. Revisions 2 and 3 have NEVER been reviewed
+                          Until CLOSE-REV-ORCHSURF-MIRROR-002-ADD-002 this field read "Revisions
+                          2, 3 and 4 have NEVER been reviewed. None performed, none assumed" —
+                          true when written, false from the moment REV-ORCHSURF-MIRROR-002
+                          reviewed revision 4
 HUMAN_APPROVAL            n/a — not requested, not prefilled, and no APPROVAL_ID exists
 SNAPSHOT_ID               n/a until canonical execution — GATE 4 belongs to Orchestrator
 FINGERPRINT IMPACT        orchestrator  88dea7a635919c9faa73506f38a10aa5230011059d646885e86aa1c07b2a5ebb
@@ -1083,8 +1108,18 @@ files rather than paraphrased, so that a later reader can see it is quoted:
 
 ### 17.3 · What revision 4 does NOT claim
 
-- **It does not claim Mirror has reviewed this.** No review exists for revisions 2, 3 or 4, and
+- **It does not claim Mirror's review approved it.** Mirror DID review revision 4 —
+  `REV-ORCHSURF-MIRROR-002`, rounds 1 and 2, `REQUEST CHANGES` at both, closed at
+  `CLOSE-REV-ORCHSURF-MIRROR-002` with every finding disposed. What that establishes is that the
+  package was examined, which is not that it may be canonicalized: no reviewer issued `PASS` on
+  revision 4 and `HUMAN_APPROVAL` is unchanged. Revisions 2 and 3 have NEVER been reviewed, and
   revision 1's review was conducted under the opposite direction, so it does not transfer.
+  *Until `CLOSE-REV-ORCHSURF-MIRROR-002-ADD-002` this bullet read "It does not claim Mirror has
+  reviewed this. No review exists for revisions 2, 3 or 4" — true when written, and false from the
+  moment `REV-ORCHSURF-MIRROR-002` reviewed revision 4. The bullet is re-headed rather than deleted,
+  because a list of what revision 4 does not claim still owes a true entry on the review, and the
+  old sentence is kept visible because a record edited to agree with its own present is no longer
+  evidence of what it said.*
 - **It does not claim the publication gate was clean throughout.** It **passes now** — §1 records
   `PASS · BLOCKS: 0` at CONTENT_TIP with DELTA 0 against BASE_HEAD — and it did **not** at the
   first revision-4 binding, where the ratification signature carried a registered private
