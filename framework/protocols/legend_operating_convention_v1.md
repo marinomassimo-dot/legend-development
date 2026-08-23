@@ -382,10 +382,24 @@ caught an unquoted-glob fault, and the figure was repaired before use. B.2.2.1's
 published as load-bearing. **The sweep that carried the most weight is the one that ran naked** — and
 its control, when finally written, fired at 39 of 39 immediately.*
 
-**S.7.2b — Anchor a field search to the field position.** An unanchored `grep -i FIELD_NAME` counts
-prose mentions as declarations: over the same 39 files the unanchored form returns 28 lines, of which
-**20 are prose**, against 8 real declarations. *A peer's count of the same object was inflated this
-way while this seat's was scoped to zero — both wrong, in opposite directions, on one field.*
+**S.7.2b — 🔴 Name what the control is FOR. Four independent properties each produced a clean wrong
+number on ONE field in one hour, and each defeated a different instrument:**
+
+```
+SCOPE    reading only part of each file        → sed -n '1,25p' returned 0 of 39
+ANCHOR   matching the name anywhere on a line  → counts prose as a declaration
+SYNTAX   assuming ONE emission form            → `MIRROR_REVIEW:` misses `MIRROR_REVIEW␣␣␣`, 6 of 14
+SHELL    `for x in $VAR` in zsh does not split → the loop runs once on one joined string, all zeroes
+```
+
+*All four are documented in this repository, in one day, on two seats. **The anchor fix is the one to
+watch, because it looks like rigour**: tightening a pattern to exclude prose also excluded six real
+declarations, and the tightened sweep produced a confident number that was wrong in the direction of
+the tightener's own prior claim (B.2.2.1, rung 3).*
+
+**Corollary: a control proves the instrument fires. It does not prove the instrument sees every form
+the data takes.** Where a field may be emitted more than one way, enumerate the forms found and say
+how the enumeration was bounded — or report the count as a floor.
 
 **S.7.3 — 🔴 A control that shares the flaw of the search cannot detect it.** It proves the instrument
 works; it cannot prove it is aimed correctly.
@@ -703,33 +717,53 @@ NOT DONE    no file is moved · CONTROL_PLANE_ROOTS is not amended · nothing is
 
 ### B.2.2.1 · 🟠 INTEGRATION CORRECTION — the field is populated, and NOT in the frozen vocabulary
 
-> **An earlier blob of this document asserted "0 of 39 `REV-*` files carry a `MIRROR_REVIEW` field."
-> That negative was FALSE, and the defect was in my sweep: it read only the first 25 lines of each
-> file, and the field is not always in the frontmatter.** Re-measured over whole files, anchored at
-> `^ *MIRROR_REVIEW:`, 39 `REV-*` on `refs/heads/mirror`, **positive control `^ *(artifact|verdict):`
-> → 39 of 39**:
+**THE FIELD IS EMITTED IN TWO SYNTACTIC FORMS, AND THIS TOOK THREE ROUNDS AND THREE WRONG NUMBERS
+TO ESTABLISH.** Final measurement — 39 `REV-*` on `refs/heads/mirror`, whole files, **positive
+control `^ *(artifact|verdict):` → 39 of 39**:
 
 ```
-MIRROR_REVIEW, field declarations          8 of 39 files      (object-derived)
-  ACCEPT                3
+form  `MIRROR_REVIEW:`        colon-delimited, frontmatter or body      8
+form  `MIRROR_REVIEW␣␣␣`      column-aligned inside a fenced block      6   ← no colon at all
+────────────────────────────────────────────────────────────────────────────
+TOTAL declarations                                                     14   in 14 of 39 files
+
+  REQUEST CHANGES       7
+  ACCEPT                4
   REVISION_REQUESTED    2
-  REQUEST CHANGES       2
   PASS_WITH_NOTES       1
-  ────────────────────────
+  ──────────────────────────
   exact `PASS` or `FAIL`:   0    ← the frozen vocabulary at D.1 line 38 is: n/a | PASS | FAIL
 ```
 
-**The accurate statement is neither "unpopulated" nor "populated consistently".** The field is
-adopted in a **minority** of reviews — 8 of 39 — and **zero of those adoptions use the vocabulary the
-frozen gate defines.** Partial adoption, zero conformance.
+The aligned form sits **beside the C.2 axis in one block** — `REV-SCIAB-MIRROR-001` § 8 and its
+siblings through `-006`:
 
-> 🟠 *A second figure is corrected in the same breath.* A peer reported **14** instances distributed
-> `REQUEST CHANGES 7 · ACCEPT 4 · REVISION_REQUESTED 2 · PASS_WITH_NOTES 1`. Its **value set is
-> exactly right** — the same four values, and no fifth exists on any content ref. Its **counts are
-> inflated by an unanchored match**: `grep -i MIRROR_REVIEW` over the same 39 files returns 28 lines,
-> of which **20 are prose mentions, not field declarations**. Anchoring the pattern to the field
-> position is the difference. *Neither seat's number was right, both were wrong in opposite
-> directions, and the conclusion below survives both.*
+```
+Annex C.2 VERDICT       WEAKENED — …
+MIRROR_REVIEW           REQUEST CHANGES
+REVIEWER_CONFIDENCE     high on B-1, B-2, B-4 …
+```
+
+**One block carries both verdict axes, in a form no colon-anchored parser reads.**
+
+> 🟠 **THE CORRECTION LADDER, RECORDED IN FULL BECAUSE EACH RUNG DEFEATED A DIFFERENT INSTRUMENT.**
+>
+> | # | claim | by | defect |
+> |---|---|---|---|
+> | 1 | *"0 of 39 carry the field"* | this seat | sweep scoped to `sed -n '1,25p'`; the field is not always in frontmatter, **and no control was run** |
+> | 2 | *"14 instances, populated consistently across the entire review history"* | peer | **the count was right**; the characterisation was not — 14 of 39 is a minority |
+> | 3 | *"8 declarations; the peer's 14 is an unanchored match counting 20 prose mentions"* | this seat | 🔴 **anchoring was not enough. Six of the six I dismissed as prose are real declarations in the aligned form.** I labelled correct data as noise in order to explain away a number that was right |
+> | 4 | **14 declarations, 14 of 39 files, two forms, 0 conforming** | both, re-derived here | — |
+>
+> *Verified at rung 4: no INDENTED aligned variant exists (column-0 form and whitespace-tolerant form
+> both return 6), and exactly one genuine prose mention exists — `MIRROR_REVIEW not-PASS` in
+> `REV-ORCHSURF-ADD-002-COMPLIANCE-VALIDATION` — which the strict pattern correctly excludes and a
+> looser one wrongly counts. That single line is the whole of the "prose" my rung-3 claim inflated
+> into twenty.*
+
+**The accurate statement is none of the first three.** The field is adopted in a **minority** of
+reviews — 14 of 39 — in **two syntaxes**, and **zero of those adoptions use the vocabulary the frozen
+gate defines. Partial adoption, zero conformance.**
 
 **🔴 The load-bearing fact survives every counting method: `PASS_WITH_NOTES` exists, and a canonical
 commit's GATE 3 already rested on it.** `runtime/agent_card_registry.md` line 53 —
@@ -759,7 +793,8 @@ REVIEW       three fields, none of them invented here:
                c2_verdict:     CONFIRMED | WEAKENED | REFINED | REFUTED       (Annex C.2)
                mirror_review:  n/a | PASS | FAIL  + REVIEW_ID                 (Annex D.1 — the gate)
              A review that omits `mirror_review:` cannot feed GATE 3, and one that fills it with a
-             value outside `n/a | PASS | FAIL` has not fed it either — 8 of 39 fill it, 0 conform.
+             value outside `n/a | PASS | FAIL` has not fed it either — 14 of 39 fill it, 0 conform.
+             Forward form is the COLON form; the aligned form is legacy and is READ, never written.
              Whether a disposition implies a PASS is NOT decided here — P-8, B.2.2.1.
 APPROVAL     J.3's enumeration ONLY. DEFERRED and RESOLVED are preserved verbatim as LEGACY and
              NEVER normalised in a source line.
@@ -842,7 +877,7 @@ escalation conditions in one document is the drift failure this convention is ab
 | M-d | classes spanning both domains | 2 | report only (Appendix D); no file moves | nothing |
 | M-e | CAND manifests using `state:` | 6 | key rename at next touch, never a sweep | nothing |
 | M-f | `REV-*` with no `verdict:` field | 13 | the reviewer adds what it stated in prose | nothing |
-| M-g | `REV-*` not conforming to D.1's `mirror_review:` vocabulary | **39 of 39** — 31 omit the field, 8 fill it with a non-vocabulary value | the reviewer adds or corrects it | **P-8** — and it cannot be a sweep: one such value already carried a canonical GATE 3 |
+| M-g | `REV-*` not conforming to D.1's `mirror_review:` vocabulary | **39 of 39** — **25 omit** the field, **14 fill it** (8 colon-form, 6 aligned) with a non-vocabulary value | the reviewer adds or corrects it | **P-8** — and it cannot be a sweep: one such value already carried a canonical GATE 3 |
 | M-h | artifacts carrying `session_ref:` | **0** | forward-only, never retrofitted | nothing |
 | M-i | `runtime_inventory.md` on 1 ref, dated 2026-08-17 | 1 | mechanization — Appendix D | nothing |
 
@@ -890,7 +925,7 @@ without any conclusion moving — and one that is object-derived cannot move qui
 | approval queue forked into 3 lineages; 4 MAJOR approvals reachable from `orchestrator` alone | coordinator | object | B.3.2, P-2 | 🔴 **YES** |
 | `ledger/events/` on zero refs | coordinator; consistent with this seat's sweep | **population** | B.8.2 | 🔴 **YES** — but a zero survives every denominator |
 | D.1 line 38 declares the `MIRROR_REVIEW` field, values `n/a` · `PASS` · `FAIL` + `REVIEW_ID` | Mirror → coordinator; **re-verified here at `main`** | object | B.2.2, P-8 | 🔴 **YES** |
-| the field is filled in **8 of 39** `REV-*`, in 4 values, **0 of them `PASS` or `FAIL`**; `PASS_WITH_NOTES` carried a canonical GATE 3 | 🟠 **measured here after this seat's own false negative and a peer's inflated count — B.2.2.1** | object | B.2.2.1, M-g, P-8 | 🔴 **YES** |
+| the field is filled in **14 of 39** `REV-*`, in **two syntactic forms**, in 4 values, **0 of them `PASS` or `FAIL`**; `PASS_WITH_NOTES` carried a canonical GATE 3 | 🟠 **four measurements over three rounds, two seats, three wrong numbers before this one — the ladder is in B.2.2.1** | object | B.2.2.1, M-g, P-8 | 🔴 **YES** |
 | transcript birth vs `started` — 19h56m | orchestrator seat, two seats | object | S.1.4 | yes, for S.1.4 only; **S.1.5 is why the rule survives if it falls** |
 | `cp -p` / `git archive` forge mtime | orchestrator seat, reproduced forward | object | S.4.2 | yes, for S.4 only |
 | stash entry predates every current session; message says `superseded` | orchestrator seat | object | S.6.4 | yes, for S.6.4 only |
@@ -917,7 +952,7 @@ Why: P-6 runs through GATE 3, which needs a MIRROR PASS nobody can currently emi
 | # | proposal | conflicts with | trips | **depends on** |
 |---|---|---|---|---|
 | **P-2** | declare ONE writer for `ledger/approvals/`. Recommended: per-actor `requests/<ACTOR_ID>.jsonl` + `resolutions/operator.jsonl`, consolidated by replay — the topology § P7 already chose, dissolving the fork by construction | J.3 allocates no file writer | S.8-6 | **nothing — this is the root** |
-| **P-8** | **resolve the divergence between D.1's frozen `MIRROR_REVIEW` vocabulary and the values reviews actually emit.** Measured: filled in 8 of 39 `REV-*`, values `ACCEPT` 3 · `REVISION_REQUESTED` 2 · `REQUEST CHANGES` 2 · `PASS_WITH_NOTES` 1, and **0 exact `PASS` or `FAIL`**. It is not a fresh gap: `PASS_WITH_NOTES` **already carried a canonical GATE 3** (`agent_card_registry.md` line 53), and `REV-ORCHSURF-ADD-002-COMPLIANCE-VALIDATION` already registers `UNRESOLVED-A` — *"may the corrected MIRROR_REVIEW carry a value outside D.2's vocabulary"* — routed by a DEC as a **SCOPED_RULING for one field and one locus, explicitly non-generalizing**. Options: extend the vocabulary · declare a mapping · declare that no disposition implies PASS · generalize the scoped ruling | D.1 owns the field; C.2 and G.2 own review method; **and any mapping retroactively characterises a completed GATE 3** | S.8-1, S.8-2, S.8-3 | nothing — but it gates P-6 |
+| **P-8** | **resolve the divergence between D.1's frozen `MIRROR_REVIEW` vocabulary and the values reviews actually emit.** Measured: filled in **14 of 39** `REV-*` across **two syntactic forms**, values `REQUEST CHANGES` 7 · `ACCEPT` 4 · `REVISION_REQUESTED` 2 · `PASS_WITH_NOTES` 1, and **0 exact `PASS` or `FAIL`**. It is not a fresh gap: `PASS_WITH_NOTES` **already carried a canonical GATE 3** (`agent_card_registry.md` line 53), and `REV-ORCHSURF-ADD-002-COMPLIANCE-VALIDATION` already registers `UNRESOLVED-A` — *"may the corrected MIRROR_REVIEW carry a value outside D.2's vocabulary"* — routed by a DEC as a **SCOPED_RULING for one field and one locus, explicitly non-generalizing**. Options: extend the vocabulary · declare a mapping · declare that no disposition implies PASS · generalize the scoped ruling | D.1 owns the field; C.2 and G.2 own review method; **and any mapping retroactively characterises a completed GATE 3** | S.8-1, S.8-2, S.8-3 | nothing — but it gates P-6 |
 | **P-7** | **DEC is treated as a class with a path, domain and writer (B.1.2 row 1). Whether DEC is a governance object class at all — versus an instance of the J.3 queue object, which body § 4 names as the durable home of a HUMAN_REQUIRED, *"mai solo un messaggio"* — has no normative basis and is not decided here.** Measured: `OPERATOR_DECISION` 0, `governance/decisions` 0 in the 15-file normative corpus; controls 3 / 8 / 15 fire. Each DEC cites the previous DEC's *act* as its basis, and this document would be the next and strongest link — CONTENT, proposed for canonical integration. The domain is not free either: `governance/decisions/` is CONTENT, so **every DEC written moves the hash for every candidate rebased onto it**, while the three `DEC-*` in `governance/candidates/` move nothing | nothing frozen — the silence IS the finding (limb 2) | S.8-3 | nothing |
 | **P-1** | PROPOSAL's correct domain is CONTENT: a root outside `governance/candidates/`, or amend `CONTROL_PLANE_ROOTS` | P5.1 declares the roots exhaustively | S.8-1, S.8-2 | nothing |
 | **P-3** | recognise `DEFERRED` / `RESOLVED` as LEGACY in a derived view, never normalised in a source line | J.3's enumeration lacks them | S.8-1 | P-2 |
@@ -979,6 +1014,11 @@ CHECKS  1 PATH ⇄ CLASS
         3 🔴 SPAN: a class whose instances land in both domains is REPORTED (N-1's cure)
         4 ATTRIBUTION (author, session_ref)
         5 LIFECYCLE token in the class enumeration, incl. `mirror_review:` presence on REVIEW
+          🔴 BOTH EMISSION FORMS OR IT CERTIFIES A FALSE ABSENCE: the colon form AND the
+            column-aligned form `MIRROR_REVIEW␣␣␣VALUE`. A colon-only parser reads 6 of 14
+            declarations as missing — and the six are the SCIAB series, the longest review chain
+            in the corpus. Enumerating emission forms is part of the spec, not an implementation
+            detail (S.7.2b).
         6 LEGACY KEY (`state:` where `status:` is forward)
 MODES   --report  default, exit 0        --strict  exit 1 — SHIPS UNWIRED
 NEVER   edits · normalises a legacy value · moves anything
@@ -1071,7 +1111,8 @@ NO NEW ROOT · NO CI GATE (--strict unwired) · NO GOVERNED WRITE · NO RETROFIT
 | 5 | union of tracked paths | `git ls-tree -r` over every content ref, `sort -u` | **population** | **767** — read 764 an hour earlier; the delta is this workstream's own output |
 | 6 | DEC normative basis | 15-file corpus sweep, line-fed, file count asserted `== 15` | object | `OPERATOR_DECISION` **0** · `governance/decisions` **0** · controls **3 / 8 / 15** fire |
 | 7 | `MIRROR_REVIEW` field | `git show main:governance/annex_d_commit_batch.md` | object | **line 38** — `n/a \| PASS \| FAIL + REVIEW_ID`; GATE 3 at body line 244 requires MIRROR PASS |
-| 8 | reviews filling it | whole-file sweep anchored at `^ *MIRROR_REVIEW:`, 39 `REV-*` on `refs/heads/mirror`, control `^ *(artifact\|verdict):` → **39/39** | object | **8 of 39** · `ACCEPT` 3 · `REVISION_REQUESTED` 2 · `REQUEST CHANGES` 2 · `PASS_WITH_NOTES` 1 · **exact `PASS`/`FAIL` 0**. 🟠 an earlier blob printed **0**, from a sweep scoped to the first 25 lines and run without a control |
+| 8 | reviews filling it | whole-file sweep over **both** forms — `^ *MIRROR_REVIEW:` and `^MIRROR_REVIEW {2,}[A-Z]` — 39 `REV-*` on `refs/heads/mirror`, control `^ *(artifact\|verdict):` → **39/39** | object | **14 of 39** (8 colon + 6 aligned) · `REQUEST CHANGES` 7 · `ACCEPT` 4 · `REVISION_REQUESTED` 2 · `PASS_WITH_NOTES` 1 · **exact `PASS`/`FAIL` 0**. 🟠 three earlier numbers — 0, then 14-mischaracterised, then 8 — are laddered in B.2.2.1 |
+| 8b | is there an indented aligned variant, or more prose? | whitespace-tolerant pattern vs column-0; loose vs strict per file | object | **no indented variant** (6 = 6) · exactly **1** genuine prose mention, correctly excluded |
 | 9 | candidates directory | `git ls-tree --name-only main governance/candidates/` | object | **16 files · 8 CAND · 8 non-CAND** — the 7→8 repair |
 | 10 | distinct files, `governance/candidates/` across refs | union sweep, `grep -c` | object | **28** — held across both sweeps |
 | 11 | distinct files, `reviews/` · of those `REV-*` | union sweep | object | **74** · **40** — both held |
