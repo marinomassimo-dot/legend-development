@@ -377,29 +377,40 @@ git for-each-ref --format='%(refname)' refs/heads refs/remotes refs/tags | wc -l
 **S.7.2 — Every sweep carries a positive control, and the control must be able to fail. EVERY sweep —
 the rule fails by omission long before it fails by design.** *Two instances from this document's own
 construction, in opposite directions. § 0.1's corpus sweep HAD a control; the control returned 0,
-caught an unquoted-glob fault, and the figure was repaired before use. B.2.2.1's field sweep had
+caught an unquoted-glob fault, and the figure was repaired before use. B.2.2.3's field sweep had
 **no control**, was scoped to the first 25 lines of each file, returned a clean `0 of 39`, and was
 published as load-bearing. **The sweep that carried the most weight is the one that ran naked** — and
 its control, when finally written, fired at 39 of 39 immediately.*
 
-**S.7.2b — 🔴 Name what the control is FOR. Four independent properties each produced a clean wrong
-number on ONE field in one hour, and each defeated a different instrument:**
+**S.7.2b — 🔴 ENUMERATE THE POPULATION WITH AN INSTRUMENT THAT CANNOT EXPRESS THE PROPERTY YOU ARE
+HUNTING, THEN MEASURE INTO IT.**
 
 ```
-SCOPE    reading only part of each file        → sed -n '1,25p' returned 0 of 39
-ANCHOR   matching the name anywhere on a line  → counts prose as a declaration
-SYNTAX   assuming ONE emission form            → `MIRROR_REVIEW:` misses `MIRROR_REVIEW␣␣␣`, 6 of 14
-SHELL    `for x in $VAR` in zsh does not split → the loop runs once on one joined string, all zeroes
+WRONG   run a pattern; report what it found.        The population is whatever the pattern matched.
+RIGHT   enumerate the set (git ls-tree, for-each-ref) — an instrument that cannot see the property —
+        then measure the property into that fixed denominator.
 ```
 
-*All four are documented in this repository, in one day, on two seats. **The anchor fix is the one to
-watch, because it looks like rigour**: tightening a pattern to exclude prose also excluded six real
-declarations, and the tightened sweep produced a confident number that was wrong in the direction of
-the tightener's own prior claim (B.2.2.1, rung 3).*
+*This one rule covers every sweep failure this laboratory documented in a single day, and it is why
+they were not detectable from inside the sweep:*
 
-**Corollary: a control proves the instrument fires. It does not prove the instrument sees every form
-the data takes.** Where a field may be emitted more than one way, enumerate the forms found and say
-how the enumeration was bounded — or report the count as a floor.
+| mechanism | what it produced | why the control missed it |
+|---|---|---|
+| **SCOPE** — `sed -n '1,25p'` | `0 of 39` | no control was run at all |
+| **ANCHOR** — name matched anywhere on a line | prose counted as declarations | control fired, denominator was still pattern-defined |
+| **SYNTAX** — assuming one emission form | `MIRROR_REVIEW:` misses `MIRROR_REVIEW␣␣␣`, 6 of 14 | the control shared the syntax it was checking |
+| **SHELL** — `for x in $VAR` in zsh does not split | every count zero, on both seats | the control shared the loop |
+| **OBJECT** — measuring reviews for a manifest field | three rounds on the wrong class | every control was correct, and aimed at the wrong population |
+
+**`0 of 39` and `14 of 39` became comparable only because the 39 came from `git ls-tree` before any
+pattern ran.** `8` and `14` were each *what a pattern found*; neither was *the set, then measured*.
+
+🔴 **The anchor fix is the one to watch, because it looks like rigour**: tightening a pattern to
+exclude prose also excluded six real declarations, and the tightened sweep produced a confident
+number wrong in the direction of the tightener's own prior claim (B.2.2.3, rung 3).
+
+**Corollary: a control proves the instrument fires. It proves nothing about the denominator, the
+emission forms, or whether the object under it is the right one.**
 
 **S.7.3 — 🔴 A control that shares the flaw of the search cannot detect it.** It proves the instrument
 works; it cannot prove it is aimed correctly.
@@ -633,6 +644,7 @@ the governance-surface decision package, as a J.3 schema question. Not this laye
 |---|---|---|---|---|---|---|
 | 1 | **DEC** | an operator determination | `governance/decisions/DEC-<YYYYMMDD>-<SLUG>.md` | `DEC-` | CONTENT | operator |
 | 2 | **CAND** | content proposed for canonical integration | `governance/candidates/CAND-<YYYYMMDD>-<SLUG>.md` | `CAND-` | CONTROL PLANE | plan (H.1) |
+| | ↳ **CAND carries `MIRROR_REVIEW: n/a \| PASS \| FAIL + REVIEW_ID`** — a **D.1/D.2-owned** field, not this convention's. It is the ONLY field a FROZEN gate reads (body GATE 3), and it lives here, on the manifest, not on the review. **Measured: 8 of 8 manifests carry it, 0 conform** (B.2.2.1). Recorded so a validator built from this table looks at it; **reporting only, gating nothing** | | | | |
 | 3 | **REVIEW** | a reviewer's judgement of a named object | `reviews/<ACTOR_ID>/REV-<OBJECT>-<REVIEWER>-<NNN>.md` | `REV-` | CONTROL PLANE | that reviewer, that directory |
 | 4 | **APPROVAL** | a human resolution of a `HUMAN_REQUIRED` | `ledger/approvals/…` | `APR-` / `RES-` | CONTROL PLANE | 🔴 undeclared — B.3.2 |
 | 5 | **PROPOSAL** | proposes a rule or model, not content for one candidate | 🔴 no correct home today | `PROPOSAL-` | 🔴 spans — P-1 | any actor |
@@ -715,7 +727,59 @@ NOT DONE    no file is moved · CONTROL_PLANE_ROOTS is not amended · nothing is
                   THE ONLY AXIS A FROZEN GATE READS: body GATE 3 requires "MIRROR PASS".
 ```
 
-### B.2.2.1 · 🟠 INTEGRATION CORRECTION — the field is populated, and NOT in the frozen vocabulary
+### B.2.2.1 · 🔴 THE GATING FIELD LIVES ON THE **MANIFEST**, AND 0 OF 8 CONFORM
+
+**`MIRROR_REVIEW` is a D.1 batch-manifest field. The CAND class owns it. Reviews are its upstream
+input.** Three rounds of this integration measured the review corpus and the wrong object was under
+the instrument the whole time.
+
+**Population enumerated by `git ls-tree` BEFORE any pattern ran** — 8 `CAND-*` manifests on
+`main ∪ refs/heads/mirror`; first `MIRROR_REVIEW` declaration in either emission form:
+
+```
+CAND-20260816-GOV311             PASS_WITH_NOTES — REV-GOV311-MIRROR-003 (84407c1), delta
+CAND-20260817-HASHDET            PENDING
+CAND-20260817-ORCHWT             PENDING
+CAND-20260817-P51C9              ACCEPT — REV-P51C9-MIRROR-002, plus Mirror's re-attestation
+CAND-20260818-SCIENTIST-AB-SPEC  REV-SCIAB-MIRROR-005 → REQUEST CHANGES, on revision 5
+CAND-20260818-SUNSET-DEC3        REQUEST CHANGES on revision 1 (REV-SUNSET-DEC3-MIRROR-001)
+CAND-20260819-P5DOMAIN           REQUIRED · NOT PERFORMED · NOT ASSUMED
+CAND-20260819-XPORT              REV-XPORT-MIRROR-001 — REQUEST CHANGES on M-1, CONFIRMED on…
+──────────────────────────────────────────────────────────────────────────────────────────
+carry the field   8 of 8          D.2 vocabulary: n/a | PASS | FAIL + REVIEW_ID
+CONFORMING        0 of 8          `n/a` is legal and UNUSED — verified, zero occurrences
+```
+
+*Scope stated per S.7.5: a Mirror seat measured **9** sweeping all heads; this is **8** on
+`main ∪ mirror`. Same conclusion at either denominator — the conformance count is zero in both.*
+
+🔴 **`PENDING` and `REQUIRED` are not review outcomes at all.** They are scheduling states someone
+needed a slot for. One manifest carries a full sentence; one carries a review id and no verdict.
+**`PASS_WITH_NOTES` is not the outlier — it is the most nearly-conformant value in the set, and it
+is the one that completed a canonical commit.**
+
+### B.2.2.2 · 🟠 THE VALIDATOR-SPEC DEFECT THIS EXPOSES, IN B.1.2 AND B.2.3 IN OPPOSITE DIRECTIONS
+
+```
+B.2.3   added `verdict:` and `c2_verdict:` to REVIEW frontmatter   → where NO gate reads them
+B.1.2   the CAND row listed state + CANDIDATE_CONTENT_HASH + BASE_HEAD
+        and did not mention MIRROR_REVIEW at all                   → the class that OWNS the field
+```
+
+**A validator built from B.1.2 as written would never look at the field that decides whether a MAJOR
+may commit.** That is a defect in the specification, not a note on a proposal, and it is repaired in
+B.1.2's CAND row and in Appendix D — **both report non-conformance and gate nothing.**
+
+The layers are four, each defeating a different instrument:
+
+```
+1  the field is not in review frontmatter        → defeats a frontmatter window
+2  a second, column-aligned syntax               → defeats a colon anchor
+3  no value conforms to D.2's vocabulary         → defeats the gate itself
+4  the MANIFEST field is in no class row         → defeats the validator, before it is written
+```
+
+### B.2.2.3 · The upstream side — the review corpus, and the correction ladder that produced it
 
 **THE FIELD IS EMITTED IN TWO SYNTACTIC FORMS, AND THIS TOOK THREE ROUNDS AND THREE WRONG NUMBERS
 TO ESTABLISH.** Final measurement — 39 `REV-*` on `refs/heads/mirror`, whole files, **positive
@@ -792,10 +856,12 @@ REVIEW       three fields, none of them invented here:
                verdict:        ACCEPT | REQUEST_CHANGES | BINDING_VERIFIED    (disposition, observed)
                c2_verdict:     CONFIRMED | WEAKENED | REFINED | REFUTED       (Annex C.2)
                mirror_review:  n/a | PASS | FAIL  + REVIEW_ID                 (Annex D.1 — the gate)
-             A review that omits `mirror_review:` cannot feed GATE 3, and one that fills it with a
-             value outside `n/a | PASS | FAIL` has not fed it either — 14 of 39 fill it, 0 conform.
-             Forward form is the COLON form; the aligned form is legacy and is READ, never written.
-             Whether a disposition implies a PASS is NOT decided here — P-8, B.2.2.1.
+             🔴 A review's verdict is an UPSTREAM INPUT to `MIRROR_REVIEW`, not the field itself.
+             The field is the CAND manifest's (D.1) — B.1.2 row 2, B.2.2.1. What maps a review
+             disposition onto `PASS` is UNRESOLVED-A's actual scope and is NOT decided here — P-8.
+CAND         state/status token · CANDIDATE_CONTENT_HASH · BASE_HEAD ·
+             mirror_review:  n/a | PASS | FAIL  + REVIEW_ID     ← D.1's vocabulary, verbatim
+             Forward form is the COLON form; the column-aligned form is LEGACY, READ never written.
 APPROVAL     J.3's enumeration ONLY. DEFERRED and RESOLVED are preserved verbatim as LEGACY and
              NEVER normalised in a source line.
 DEC          record_type: OPERATOR_DECISION plus a status token — recorded as practice, see P-7.
@@ -877,7 +943,8 @@ escalation conditions in one document is the drift failure this convention is ab
 | M-d | classes spanning both domains | 2 | report only (Appendix D); no file moves | nothing |
 | M-e | CAND manifests using `state:` | 6 | key rename at next touch, never a sweep | nothing |
 | M-f | `REV-*` with no `verdict:` field | 13 | the reviewer adds what it stated in prose | nothing |
-| M-g | `REV-*` not conforming to D.1's `mirror_review:` vocabulary | **39 of 39** — **25 omit** the field, **14 fill it** (8 colon-form, 6 aligned) with a non-vocabulary value | the reviewer adds or corrects it | **P-8** — and it cannot be a sweep: one such value already carried a canonical GATE 3 |
+| M-g | 🔴 **`CAND-*` manifests not conforming to D.1's `MIRROR_REVIEW` vocabulary** — the gating locus | **8 of 8** carry the field, **0 conform**; two carry scheduling states (`PENDING`, `REQUIRED`) rather than outcomes | Plan corrects the manifest field | **P-8** — and it cannot be a sweep: one such value already carried a canonical GATE 3 |
+| M-g2 | `REV-*` upstream verdicts | **39 of 39** non-conforming — 25 omit, 14 fill (8 colon, 6 aligned) | the reviewer adds or corrects it | **P-8**, after the mapping exists |
 | M-h | artifacts carrying `session_ref:` | **0** | forward-only, never retrofitted | nothing |
 | M-i | `runtime_inventory.md` on 1 ref, dated 2026-08-17 | 1 | mechanization — Appendix D | nothing |
 
@@ -925,7 +992,8 @@ without any conclusion moving — and one that is object-derived cannot move qui
 | approval queue forked into 3 lineages; 4 MAJOR approvals reachable from `orchestrator` alone | coordinator | object | B.3.2, P-2 | 🔴 **YES** |
 | `ledger/events/` on zero refs | coordinator; consistent with this seat's sweep | **population** | B.8.2 | 🔴 **YES** — but a zero survives every denominator |
 | D.1 line 38 declares the `MIRROR_REVIEW` field, values `n/a` · `PASS` · `FAIL` + `REVIEW_ID` | Mirror → coordinator; **re-verified here at `main`** | object | B.2.2, P-8 | 🔴 **YES** |
-| the field is filled in **14 of 39** `REV-*`, in **two syntactic forms**, in 4 values, **0 of them `PASS` or `FAIL`**; `PASS_WITH_NOTES` carried a canonical GATE 3 | 🟠 **four measurements over three rounds, two seats, three wrong numbers before this one — the ladder is in B.2.2.1** | object | B.2.2.1, M-g, P-8 | 🔴 **YES** |
+| 🔴 **8 of 8 `CAND-*` manifests carry `MIRROR_REVIEW`; 0 conform to D.2**; `n/a` legal and unused; two values are scheduling states | **population enumerated by `git ls-tree` before any pattern ran; measured here** | object | B.1.2, B.2.2.1, M-g, P-8, D.2 | 🔴 **YES — this is the gating locus** |
+| upstream: the field is filled in **14 of 39** `REV-*`, in **two syntactic forms**, 4 values, **0 `PASS`/`FAIL`**; `PASS_WITH_NOTES` carried a canonical GATE 3 | 🟠 **four measurements, three rounds, two seats, three wrong numbers before this one — ladder in B.2.2.3** | object | B.2.2.3, M-g2, P-8 | yes, for the upstream half |
 | transcript birth vs `started` — 19h56m | orchestrator seat, two seats | object | S.1.4 | yes, for S.1.4 only; **S.1.5 is why the rule survives if it falls** |
 | `cp -p` / `git archive` forge mtime | orchestrator seat, reproduced forward | object | S.4.2 | yes, for S.4 only |
 | stash entry predates every current session; message says `superseded` | orchestrator seat | object | S.6.4 | yes, for S.6.4 only |
@@ -952,7 +1020,7 @@ Why: P-6 runs through GATE 3, which needs a MIRROR PASS nobody can currently emi
 | # | proposal | conflicts with | trips | **depends on** |
 |---|---|---|---|---|
 | **P-2** | declare ONE writer for `ledger/approvals/`. Recommended: per-actor `requests/<ACTOR_ID>.jsonl` + `resolutions/operator.jsonl`, consolidated by replay — the topology § P7 already chose, dissolving the fork by construction | J.3 allocates no file writer | S.8-6 | **nothing — this is the root** |
-| **P-8** | **resolve the divergence between D.1's frozen `MIRROR_REVIEW` vocabulary and the values reviews actually emit.** Measured: filled in **14 of 39** `REV-*` across **two syntactic forms**, values `REQUEST CHANGES` 7 · `ACCEPT` 4 · `REVISION_REQUESTED` 2 · `PASS_WITH_NOTES` 1, and **0 exact `PASS` or `FAIL`**. It is not a fresh gap: `PASS_WITH_NOTES` **already carried a canonical GATE 3** (`agent_card_registry.md` line 53), and `REV-ORCHSURF-ADD-002-COMPLIANCE-VALIDATION` already registers `UNRESOLVED-A` — *"may the corrected MIRROR_REVIEW carry a value outside D.2's vocabulary"* — routed by a DEC as a **SCOPED_RULING for one field and one locus, explicitly non-generalizing**. Options: extend the vocabulary · declare a mapping · declare that no disposition implies PASS · generalize the scoped ruling | D.1 owns the field; C.2 and G.2 own review method; **and any mapping retroactively characterises a completed GATE 3** | S.8-1, S.8-2, S.8-3 | nothing — but it gates P-6 |
+| **P-8** | **resolve the divergence between D.1's frozen `MIRROR_REVIEW` vocabulary and the values reviews actually emit.** Measured **where the field lives — the CAND manifest: 8 of 8 carry it, 0 conform**, and `n/a` is legal and unused. Values include `PENDING` and `REQUIRED`, which are scheduling states and not review outcomes at all. Upstream, 14 of 39 `REV-*` fill their own field across two syntactic forms, also 0 conforming. It is not a fresh gap: `PASS_WITH_NOTES` **already carried a canonical GATE 3** (`agent_card_registry.md` line 53), and `REV-ORCHSURF-ADD-002-COMPLIANCE-VALIDATION` already registers `UNRESOLVED-A` — *"may the corrected MIRROR_REVIEW carry a value outside D.2's vocabulary"* — routed by a DEC as a **SCOPED_RULING for one field and one locus, explicitly non-generalizing**. Options: extend the vocabulary · declare a mapping · declare that no disposition implies PASS · generalize the scoped ruling | D.1 owns the field; C.2 and G.2 own review method; **and any mapping retroactively characterises a completed GATE 3** | S.8-1, S.8-2, S.8-3 | nothing — but it gates P-6 |
 | **P-7** | **DEC is treated as a class with a path, domain and writer (B.1.2 row 1). Whether DEC is a governance object class at all — versus an instance of the J.3 queue object, which body § 4 names as the durable home of a HUMAN_REQUIRED, *"mai solo un messaggio"* — has no normative basis and is not decided here.** Measured: `OPERATOR_DECISION` 0, `governance/decisions` 0 in the 15-file normative corpus; controls 3 / 8 / 15 fire. Each DEC cites the previous DEC's *act* as its basis, and this document would be the next and strongest link — CONTENT, proposed for canonical integration. The domain is not free either: `governance/decisions/` is CONTENT, so **every DEC written moves the hash for every candidate rebased onto it**, while the three `DEC-*` in `governance/candidates/` move nothing | nothing frozen — the silence IS the finding (limb 2) | S.8-3 | nothing |
 | **P-1** | PROPOSAL's correct domain is CONTENT: a root outside `governance/candidates/`, or amend `CONTROL_PLANE_ROOTS` | P5.1 declares the roots exhaustively | S.8-1, S.8-2 | nothing |
 | **P-3** | recognise `DEFERRED` / `RESOLVED` as LEGACY in a derived view, never normalised in a source line | J.3's enumeration lacks them | S.8-1 | P-2 |
@@ -1013,12 +1081,18 @@ CHECKS  1 PATH ⇄ CLASS
         2 DOMAIN: transcribed vs P5.1 prefix match — disagreement is a finding, prefix wins
         3 🔴 SPAN: a class whose instances land in both domains is REPORTED (N-1's cure)
         4 ATTRIBUTION (author, session_ref)
-        5 LIFECYCLE token in the class enumeration, incl. `mirror_review:` presence on REVIEW
-          🔴 BOTH EMISSION FORMS OR IT CERTIFIES A FALSE ABSENCE: the colon form AND the
-            column-aligned form `MIRROR_REVIEW␣␣␣VALUE`. A colon-only parser reads 6 of 14
-            declarations as missing — and the six are the SCIAB series, the longest review chain
-            in the corpus. Enumerating emission forms is part of the spec, not an implementation
-            detail (S.7.2b).
+        5 LIFECYCLE token in the class enumeration
+        6 🔴 `MIRROR_REVIEW` ON THE **CAND MANIFEST** — the field a FROZEN gate reads. Checked
+          where it lives, not where three rounds of this integration looked for it. Reports
+          non-conformance against D.2's `n/a | PASS | FAIL`; **gates nothing, retroactively or
+          otherwise** — 8 of 8 manifests would fail today and one of them carried a canonical commit.
+        7 BOTH EMISSION FORMS, OR THE VALIDATOR CERTIFIES A FALSE ABSENCE: the colon form AND the
+          column-aligned `MIRROR_REVIEW␣␣␣VALUE`. A colon-only parser reads 6 of 14 review
+          declarations as missing — and the six are the SCIAB series, the longest chain in the
+          corpus. Enumerating emission forms is part of the SPEC, not an implementation detail.
+        🔴 Every check above enumerates its population with `git ls-tree` FIRST and measures into
+          that denominator — S.7.2b. A check whose population is whatever its own pattern matched
+          is the defect this validator exists to catch, committed by the validator.
         6 LEGACY KEY (`state:` where `status:` is forward)
 MODES   --report  default, exit 0        --strict  exit 1 — SHIPS UNWIRED
 NEVER   edits · normalises a legacy value · moves anything
@@ -1111,8 +1185,9 @@ NO NEW ROOT · NO CI GATE (--strict unwired) · NO GOVERNED WRITE · NO RETROFIT
 | 5 | union of tracked paths | `git ls-tree -r` over every content ref, `sort -u` | **population** | **767** — read 764 an hour earlier; the delta is this workstream's own output |
 | 6 | DEC normative basis | 15-file corpus sweep, line-fed, file count asserted `== 15` | object | `OPERATOR_DECISION` **0** · `governance/decisions` **0** · controls **3 / 8 / 15** fire |
 | 7 | `MIRROR_REVIEW` field | `git show main:governance/annex_d_commit_batch.md` | object | **line 38** — `n/a \| PASS \| FAIL + REVIEW_ID`; GATE 3 at body line 244 requires MIRROR PASS |
-| 8 | reviews filling it | whole-file sweep over **both** forms — `^ *MIRROR_REVIEW:` and `^MIRROR_REVIEW {2,}[A-Z]` — 39 `REV-*` on `refs/heads/mirror`, control `^ *(artifact\|verdict):` → **39/39** | object | **14 of 39** (8 colon + 6 aligned) · `REQUEST CHANGES` 7 · `ACCEPT` 4 · `REVISION_REQUESTED` 2 · `PASS_WITH_NOTES` 1 · **exact `PASS`/`FAIL` 0**. 🟠 three earlier numbers — 0, then 14-mischaracterised, then 8 — are laddered in B.2.2.1 |
+| 8 | reviews filling it | whole-file sweep over **both** forms — `^ *MIRROR_REVIEW:` and `^MIRROR_REVIEW {2,}[A-Z]` — 39 `REV-*` on `refs/heads/mirror`, control `^ *(artifact\|verdict):` → **39/39** | object | **14 of 39** (8 colon + 6 aligned) · `REQUEST CHANGES` 7 · `ACCEPT` 4 · `REVISION_REQUESTED` 2 · `PASS_WITH_NOTES` 1 · **exact `PASS`/`FAIL` 0**. 🟠 three earlier numbers — 0, then 14-mischaracterised, then 8 — are laddered in B.2.2.3; and this was never the gating locus (8c) |
 | 8b | is there an indented aligned variant, or more prose? | whitespace-tolerant pattern vs column-0; loose vs strict per file | object | **no indented variant** (6 = 6) · exactly **1** genuine prose mention, correctly excluded |
+| 8c | 🔴 **the gating locus** — `MIRROR_REVIEW` on `CAND-*` manifests | population from `git ls-tree` over `main ∪ refs/heads/mirror` **before any pattern**, then both forms measured into it | object | **8 of 8 carry it · 0 conform · `n/a` unused**. A Mirror seat measured 9 over all heads; conformance is 0 at either denominator |
 | 9 | candidates directory | `git ls-tree --name-only main governance/candidates/` | object | **16 files · 8 CAND · 8 non-CAND** — the 7→8 repair |
 | 10 | distinct files, `governance/candidates/` across refs | union sweep, `grep -c` | object | **28** — held across both sweeps |
 | 11 | distinct files, `reviews/` · of those `REV-*` | union sweep | object | **74** · **40** — both held |
