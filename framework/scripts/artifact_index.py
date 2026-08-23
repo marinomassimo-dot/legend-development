@@ -72,6 +72,9 @@ ROOTS_BLOCK = re.compile(r"CONTROL_PLANE_ROOTS:\s*\n((?:\s*-\s*\S+\s*\n)+)")
 FRONTMATTER_FIELDS = ("record_type", "author", "session_ref", "status", "state")
 # Fields read wherever they appear in the file, not only in frontmatter — see rule 2.
 ANYWHERE_FIELDS = ("MIRROR_REVIEW",)
+# The extensions that can carry frontmatter. Named once, used as the parse filter AND printed
+# in the report, so a reader can derive the excluded count instead of being asked to trust it.
+PARSEABLE_SUFFIXES = (".md", ".jsonl", ".json")
 
 
 class ConventionParseError(RuntimeError):
@@ -396,7 +399,14 @@ def render(records: list[Record], classes: list[ArtifactClass], roots: tuple[str
     add(f"COMMAND      {population.command}")
     add(f"INSTANT      {population.instant}")
     add(f"FIGURE CLASS {population.figure_class}")
-    add(f"ENUMERATED   {len(population.paths)} paths, before any pattern ran")
+    # 🔴 Three populations, three nouns, and the delta between each stated. An earlier blob
+    # printed `ENUMERATED 616 paths` and `CLASSIFIED 66 of 439 enumerated paths` — two
+    # different figures under one label, which is S.7.5 broken inside the tool built to
+    # enforce it, and the same shape as the 24-vs-27, 764-vs-767 and 8-vs-14 confusions this
+    # convention was written about. A reader could not tell whether 177 paths were filtered,
+    # unreadable, or silently dropped.
+    add(f"ENUMERATED   {len(population.paths)} paths — the POPULATION, fixed before any "
+        "pattern ran")
     add("")
     add(f"CLASS TABLE  parsed from {CONVENTION} section B.1.2 — {len(classes)} classes, "
         "never restated in this script")
@@ -408,7 +418,13 @@ def render(records: list[Record], classes: list[ArtifactClass], roots: tuple[str
     add("")
 
     classified = [r for r in records if r.class_by_id or r.class_by_path]
-    add(f"CLASSIFIED   {len(classified)} of {len(records)} enumerated paths")
+    excluded = len(population.paths) - len(records)
+    add(f"PARSED       {len(records)} of {len(population.paths)} enumerated — files whose "
+        f"extension can carry frontmatter ({', '.join(PARSEABLE_SUFFIXES)})")
+    add(f"             {excluded} excluded by extension. None dropped silently: "
+        "enumerated = parsed + excluded")
+    add(f"CLASSIFIED   {len(classified)} of {len(records)} parsed — matched a class in the "
+        "table above")
     add("")
     counts: dict[str, int] = {}
     for rec in classified:
@@ -456,7 +472,10 @@ def render(records: list[Record], classes: list[ArtifactClass], roots: tuple[str
             form = f"[{rec.mirror_review_form}]" if rec.mirror_review_form else ""
             add(f"  {'  ' if ok else '!!'} {rec.basename:<42} {form:<10} "
                 f"{rec.mirror_review[:60]}")
-        add(f"  conforming: {conforming} of {len(group)}   (object-derived)")
+        in_class = sum(1 for r in classified
+                       if (r.class_by_id or r.class_by_path) == holder)
+        add(f"  conforming: {conforming} of {len(group)} carrying the field "
+            f"({in_class} in the class) — object-derived")
         add("")
     return "\n".join(out)
 
@@ -473,6 +492,17 @@ def main() -> int:
                         help="path to the convention whose section B.1.2 declares the classes")
     args = parser.parse_args()
 
+    if not (ROOT / ".git").exists():
+        # Everything here is ref-aware. Handed a `git archive` extraction — a tree with no
+        # repository — every git call returns empty and the report shows a confident zero
+        # instead of an error. A peer hit exactly this twice in one afternoon: once measuring
+        # the publication gate, once running this suite. Fail with the reason rather than
+        # succeed with nothing.
+        print(f"NOT A REPOSITORY: {ROOT} has no .git. artifact_index reads refs and the index; "
+              "a `git archive` extraction is a tree, not a repository, and every count would "
+              "read zero.", file=sys.stderr)
+        return 2
+
     convention_text = (ROOT / args.convention).read_text(encoding="utf-8")
     classes = parse_classes(convention_text)
     roots = parse_control_plane_roots((ROOT / DOMAIN_SOURCE).read_text(encoding="utf-8"))
@@ -480,7 +510,7 @@ def main() -> int:
     population = enumerate_refs() if args.all_refs else enumerate_working_tree()
     records = [
         build_record(path, load(path, population), classes, roots)
-        for path in population.paths if path.endswith((".md", ".jsonl", ".json"))
+        for path in population.paths if path.endswith(PARSEABLE_SUFFIXES)
     ]
 
     if args.json:

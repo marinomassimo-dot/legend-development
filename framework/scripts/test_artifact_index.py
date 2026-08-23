@@ -27,6 +27,17 @@ CONVENTION = (ROOT / ai.CONVENTION).read_text(encoding="utf-8")
 CLASSES = ai.parse_classes(CONVENTION)
 ROOTS = ai.parse_control_plane_roots((ROOT / ai.DOMAIN_SOURCE).read_text(encoding="utf-8"))
 
+# 🔴 Ref-aware tests SKIP, they do not fail, when handed a tree without a repository.
+# A `git archive | tar -x` extraction has no `.git`, so every git call returns empty and the
+# ref-aware assertions fail for a reason the failure text does not state — a peer reported
+# "2 of 21 FAILED" from exactly this, and the same mechanism had already produced a wrong
+# publication-gate verdict an hour earlier. A red CI job that means "wrong input" must say so.
+IS_REPOSITORY = (ROOT / ".git").exists()
+NEEDS_REPO = unittest.skipUnless(
+    IS_REPOSITORY,
+    "no .git: this is an extracted tree, not a repository — ref-aware checks cannot run",
+)
+
 
 class TheClassListIsParsedNeverRestated(unittest.TestCase):
     """Five modules once held five private copies of one definition; the shortest was wrong."""
@@ -79,6 +90,7 @@ class BothEmissionFormsAreRead(unittest.TestCase):
         self.assertIsNone(value)
         self.assertIsNone(form)
 
+    @NEEDS_REPO
     def test_the_real_corpus_carries_both_forms(self) -> None:
         """Guards the finding itself: if either form vanishes, the rule needs re-deriving."""
         forms = set()
@@ -137,6 +149,7 @@ class PlacementIsJudgedOnlyInsideAGovernedDirectory(unittest.TestCase):
 class ThePopulationIsEnumeratedBeforeAnyPattern(unittest.TestCase):
     """`0 of 39`, `8` and `14` were each what a pattern found, not a set then measured."""
 
+    @NEEDS_REPO
     def test_a_population_declares_command_instant_and_figure_class(self) -> None:
         population = ai.enumerate_working_tree()
         self.assertTrue(population.command)
@@ -168,6 +181,7 @@ class TimestampsComeFromTheRawEpoch(unittest.TestCase):
 class ItReportsAndGatesNothing(unittest.TestCase):
     """Discovery reports; it does not judge. Exit 0 either way, and it writes nothing."""
 
+    @NEEDS_REPO
     def test_exit_zero_with_findings_present(self) -> None:
         proc = subprocess.run((sys.executable, str(HERE / "artifact_index.py")),
                               cwd=str(ROOT), capture_output=True, text=True, check=False)
@@ -175,6 +189,7 @@ class ItReportsAndGatesNothing(unittest.TestCase):
         self.assertIn("FINDINGS", proc.stdout)
         self.assertIn("gating nothing", proc.stdout)
 
+    @NEEDS_REPO
     def test_it_leaves_the_tree_unchanged(self) -> None:
         before = subprocess.run(("git", "status", "--porcelain"), cwd=str(ROOT),
                                 capture_output=True, text=True, check=False).stdout
