@@ -73,8 +73,14 @@ next_transition_note: >
 
 ```
 ANALYSIS ARTIFACT   learning/plan/PLAN-SURFACE-MAP-QUEUE-CLOSURE-001.md
-                    blob        5ec014ddf870
-WORK_COMMIT         5e25147edb9e274732bd535b650c3241ac5cef4d      (Annex D.1, own branch)
+                    blob        527de8b6dc45   (rev 2, WITH ADD-001)
+                    superseded  5ec014ddf870   (rev 1 — preserved in git, not erased)
+WORK_COMMIT         5e25147edb9e274732bd535b650c3241ac5cef4d      rev 1 (Annex D.1, own branch)
+                    9155cbba841a5030cca556c562ded258b5130655      ADD-001 — 3 repairs, no
+                                                                  finding changed
+                    🔴 A binding names the object it binds. Rev 1 of this handoff named
+                       5ec014ddf870, which ADD-001 superseded; leaving that pointer standing
+                       would be the stale-pointer defect this analysis is about.
 BRANCH              plan-orchsurf-r4-transcription
 WORKTREE            .claude/worktrees/evidence-index
 BASE (measured HEAD at session open)
