@@ -56,6 +56,11 @@ TESTS = (
     "framework/scripts/test_regenerate_adjudications.py",
     "framework/scripts/test_growth_anchors.py",
     "framework/scripts/test_record_conventions.py",
+    "framework/scripts/test_artifact_index.py",
+    # Tracked and passing, but absent from this inventory until 2026-08-23 — found by
+    # test_release_runner_verdict.py's own "every tracked suite is actually run" check,
+    # which was failing for this one reason before DISCOVERY was added beside it.
+    "governance/scripts/test_candidate_content_hash.py",
     "framework/scripts/test_trace_claim_foundation.py",
     "framework/scripts/test_build_evidence_index.py",
     "framework/scripts/test_surface_census.py",

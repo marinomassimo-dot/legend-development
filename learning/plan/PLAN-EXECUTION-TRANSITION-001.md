@@ -176,9 +176,9 @@ and it is why § 1(b) had to be derived by hand three times in three records.
 
 | id | deliverable | kind | DEC? |
 |---|---|---|---|
-| **M1.1** | `framework/scripts/artifact_class_map.py` — path ⇄ class ⇄ ID-prefix consistency report over the whole tree; `--report` (default, exit 0) and `--strict` (exit 1 on mismatch, unused until D-6) | script + test | **no** |
-| **M1.2** | `framework/scripts/activation_state.py` — for every file with a conditional `status:` line, resolve each named condition to a measured fact and print the table of § 1(b) | script + test | **no** |
-| **M1.3** | `framework/protocols/artifact_conventions.md` — the table of § 2.1, `status: PROPOSED`, deliberately | document | **for its normativity only (D-6)** |
+| **M1.1** | `artifact_class_map (PROPOSED — no file exists)` — path ⇄ class ⇄ ID-prefix consistency report over the whole tree; `--report` (default, exit 0) and `--strict` (exit 1 on mismatch, unused until D-6) | script + test | **no** |
+| **M1.2** | `activation_state (PROPOSED — no file exists)` — for every file with a conditional `status:` line, resolve each named condition to a measured fact and print the table of § 1(b) | script + test | **no** |
+| **M1.3** | `the convention document itself (PROPOSED at the time; delivered as legend_operating_convention_v1.md)` — the table of § 2.1, `status: PROPOSED`, deliberately | document | **for its normativity only (D-6)** |
 | **M1.4** | relocation of the 3 `DEC-*` and 1 `APPROVAL-*` misplaced files | git mv | **yes — D-6** (moving a governance artifact is a governance act) |
 
 **Owner:** plan (M1.1–M1.3) · operator (M1.4 authorization).
@@ -233,7 +233,7 @@ there is no `ACTIVE_ORCHESTRATOR` to write onto `main` under GATE 0.
 
 | id | deliverable | kind | DEC? |
 |---|---|---|---|
-| **M2.1** | `framework/scripts/approval_queue_reconcile.py --report` — keyed union + machine-readable divergence report, **writes nothing to `ledger/`** | script + test | **no** |
+| **M2.1** | `approval_queue_reconcile (PROPOSED — no file exists) --report` — keyed union + machine-readable divergence report, **writes nothing to `ledger/`** | script + test | **no** |
 | **M2.2** | declare the writer for the J.3 surface | governance | **yes — D-1** |
 | **M2.3** | rule for the 3 out-of-vocabulary states | governance | **yes — D-2** |
 | **M2.4** | the single reconciling write, on the destination ref, by the declared writer | execution | **after D-1, D-2** |
@@ -282,7 +282,7 @@ of this mechanism rather than a second one (see D-1, option (b)).
 
 | id | deliverable | kind | DEC? |
 |---|---|---|---|
-| **M3.1** | `framework/scripts/legend_events.py` — writer + validator on the receipts pattern: J.1 schema, the 23-type enum closed, `CLOSES_EVENT_ID` accepted only on closure types, **writer refuses any path but `ledger/events/<its own ACTOR_ID>.jsonl`** | script + test | **no** |
+| **M3.1** | `legend_events (PROPOSED — no file exists)` — writer + validator on the receipts pattern: J.1 schema, the 23-type enum closed, `CLOSES_EVENT_ID` accepted only on closure types, **writer refuses any path but `ledger/events/<its own ACTOR_ID>.jsonl`** | script + test | **no** |
 | **M3.2** | consolidator → `ledger/consolidated/events.jsonl`, rebuilt by replay via `rechain`; `closed_by` computed **in the view only**, never in a source line | script + test | **no** |
 | **M3.3** | LINT wiring at **INFO** severity first (gap between ledger and durable state = missing event), ratcheted to WARN/BLOCK only after one full cycle of real data | edit to `legend_lint.py` | **no** (INFO is not a gate) |
 | **M3.4** | first emission — who emits, from when, and is § P7 normative | governance + activation | **yes — D-3, D-4** |
@@ -414,12 +414,12 @@ Everything in Track A. Concretely, in dependency order, with the authority each 
 
 | # | file | ~size | authority it rests on |
 |---|---|---|---|
-| 1 | `framework/scripts/artifact_class_map.py` + `test_artifact_class_map.py` | ~150 + ~120 | none needed — a report over `git ls-tree`. Writes nothing but stdout |
-| 2 | `framework/scripts/activation_state.py` + test | ~180 + ~140 | none needed — resolves declared conditions to measured facts; **asserts no activation** |
-| 3 | `framework/protocols/artifact_conventions.md`, `status: PROPOSED` | ~80 lines | none — a PROPOSED document binds nobody, which is clause 3 of the convention applied to itself |
-| 4 | `framework/scripts/legend_events.py` + test | ~300 + ~250 | `CAND-20260816-GOV311` § 4: the debt row is **eligible now**. Emits nothing |
+| 1 | `artifact_class_map (PROPOSED — no file exists)` + `test_artifact_class_map.py` | ~150 + ~120 | none needed — a report over `git ls-tree`. Writes nothing but stdout |
+| 2 | `activation_state (PROPOSED — no file exists)` + test | ~180 + ~140 | none needed — resolves declared conditions to measured facts; **asserts no activation** |
+| 3 | `the convention document itself (PROPOSED at the time; delivered as legend_operating_convention_v1.md)`, `status: PROPOSED` | ~80 lines | none — a PROPOSED document binds nobody, which is clause 3 of the convention applied to itself |
+| 4 | `legend_events (PROPOSED — no file exists)` + test | ~300 + ~250 | `CAND-20260816-GOV311` § 4: the debt row is **eligible now**. Emits nothing |
 | 5 | consolidator + replay view + test (may live in #4) | ~150 + ~120 | same row, *"with the writer"* |
-| 6 | `framework/scripts/approval_queue_reconcile.py --report` + test | ~200 + ~150 | none — pure function, `ledger/` untouched |
+| 6 | `approval_queue_reconcile (PROPOSED — no file exists) --report` + test | ~200 + ~150 | none — pure function, `ledger/` untouched |
 | 7 | LINT wiring at INFO | ~30 | INFO is not a gate; the LINT already carries pre-existing INFO |
 | 8 | M4.2 measurement sheet | ~60 lines | none — a declaration made before a run |
 
@@ -447,33 +447,33 @@ DOMAIN        CONTENT (framework/) — moves a future candidate hash. Disclosed,
 
 ```
 learning/plan/PLAN-EXECUTION-TRANSITION-001.md          this record
-framework/scripts/artifact_class_map.py                 M1.1
-framework/scripts/test_artifact_class_map.py
-framework/scripts/activation_state.py                   M1.2
-framework/scripts/test_activation_state.py
-framework/protocols/artifact_conventions.md             M1.3   status: PROPOSED
+artifact_class_map (PROPOSED — no file exists)                 M1.1
+its test (PROPOSED)
+activation_state (PROPOSED — no file exists)                   M1.2
+its test (PROPOSED)
+the convention document itself (PROPOSED at the time; delivered as legend_operating_convention_v1.md)             M1.3   status: PROPOSED
 framework/protocols/index.md                            one pointer line added
 ```
 
 **Acceptance, run before staging — all four must pass:**
 
 ```bash
-python3 framework/scripts/test_artifact_class_map.py
-python3 framework/scripts/test_activation_state.py
+python3 its test (PROPOSED)
+python3 its test (PROPOSED)
 python3 framework/scripts/legend_lint.py .                     # expect PASS
-python3 framework/scripts/artifact_class_map.py --report       # expect exit 0, 7 findings listed
-python3 framework/scripts/activation_state.py                  # expect the § 1(b) table, reproduced
+python3 artifact_class_map (PROPOSED — no file exists) --report       # expect exit 0, 7 findings listed
+python3 activation_state (PROPOSED — no file exists)                  # expect the § 1(b) table, reproduced
 ```
 
 **Commit:**
 
 ```bash
 git add learning/plan/PLAN-EXECUTION-TRANSITION-001.md \
-        framework/scripts/artifact_class_map.py \
-        framework/scripts/test_artifact_class_map.py \
-        framework/scripts/activation_state.py \
-        framework/scripts/test_activation_state.py \
-        framework/protocols/artifact_conventions.md \
+        artifact_class_map (PROPOSED — no file exists) \
+        its test (PROPOSED) \
+        activation_state (PROPOSED — no file exists) \
+        its test (PROPOSED) \
+        the convention document itself (PROPOSED at the time; delivered as legend_operating_convention_v1.md) \
         framework/protocols/index.md
 git commit -m "The convention was already true of forty reviews and false of four governance files, and nothing measured which"
 ```

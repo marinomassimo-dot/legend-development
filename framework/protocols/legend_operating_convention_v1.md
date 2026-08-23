@@ -1135,7 +1135,7 @@ laboratory figure is failure 2 exactly. **Every output states its population in 
 its counts (S.7.5), as a command result and never a literal (S.7.1).**
 **Existence is tested with `git cat-file -e` and its exit status, never `rev-parse` stdout (S.7.4).**
 
-## APX-2 · VALIDATION — `framework/scripts/artifact_conventions.py`
+## APX-2 · VALIDATION — `artifact_conventions (PROPOSED — no file exists)`
 
 ```
 CHECKS  1 PATH ⇄ CLASS
