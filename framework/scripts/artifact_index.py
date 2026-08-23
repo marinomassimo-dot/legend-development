@@ -204,22 +204,63 @@ def parse_control_plane_roots(text: str) -> tuple[str, ...]:
 # ---------------------------------------------------------------- field extraction
 
 def field_patterns(name: str) -> tuple[re.Pattern[str], re.Pattern[str]]:
-    """Rule 2: a field is emitted colon-delimited OR column-aligned with no colon."""
+    """Rule 2: a field is emitted colon-delimited OR column-aligned with no colon.
+
+    🔴 **The aligned form requires COLUMN 0, and both patterns are case-insensitive.** Two
+    defects, both found in review of this module and both reproduced before repair:
+
+    * `[ \\t]*` on the aligned pattern admitted indentation — which is exactly where a
+      quotation inside a fenced block sits. A review REPORTING this field was being counted
+      as an INSTANCE of it, and the inflation grows as reviews accumulate. Column 0 is the
+      discriminator that separated a true 14 from an inflated 16 exactly.
+    * `re.I` was on the colon pattern and not on the aligned one, two lines apart. Nothing was
+      missed today — the one lowercase instance is colon-delimited — but half the pair still
+      carried the case assumption that hid a real instance for an afternoon. **The absence of a
+      search is not a zero**: no aligned-lowercase sweep was ever run, so symmetry is restored
+      rather than justified by a count.
+
+    A column-0 declaration inside a fence is still a declaration — `REV-SCIAB-MIRROR-001` § 8
+    emits one that way — so fences are not excluded wholesale, only their indentation.
+    """
     return (
         re.compile(rf"^[ \t]*{re.escape(name)}[ \t]*:[ \t]*(.*)$", re.M | re.I),
-        re.compile(rf"^[ \t]*{re.escape(name)}[ \t]{{2,}}([^\s:].*)$", re.M),
+        re.compile(rf"^{re.escape(name)}[ \t]{{2,}}([^\s:].*)$", re.M | re.I),
     )
 
 
+def frontmatter_end(text: str) -> int:
+    """Character offset where YAML frontmatter closes, or 0 when there is none."""
+    if not text.startswith("---"):
+        return 0
+    closing = re.search(r"^---\s*$", text[3:], re.M)
+    return 3 + closing.end() if closing else 0
+
+
 def read_field(text: str, name: str) -> tuple[str | None, str | None]:
-    """Return (value, emission_form). Colon form wins when both are present."""
+    """Return (value, emission_form).
+
+    🔴 THREE forms, not two, and the third is the one that decides whether a frontmatter
+    parser sees the field at all:
+
+        frontmatter    `mirror_review: …`     a frontmatter reader finds it
+        body-colon     `MIRROR_REVIEW: …`     hundreds of lines down
+        body-aligned   `MIRROR_REVIEW␣␣␣…`    same, and invisible to a colon anchor
+
+    Tagging the first two alike is correct as syntax and useless as a distinction: across
+    `main ∪ mirror` exactly ONE artifact declares this field in frontmatter, and it is the
+    same artifact that is B.1.3's evidence of misplacement. Collapsing that into `[colon]`
+    hides the only instance where the convention's own forward form is already in use.
+    """
+    boundary = frontmatter_end(text)
     colon, aligned = field_patterns(name)
     hit = colon.search(text)
     if hit:
-        return hit.group(1).strip() or None, "colon"
+        where = "frontmatter" if hit.start() < boundary else "body-colon"
+        return hit.group(1).strip() or None, where
     hit = aligned.search(text)
     if hit:
-        return hit.group(1).strip() or None, "aligned"
+        where = "frontmatter" if hit.start() < boundary else "body-aligned"
+        return hit.group(1).strip() or None, where
     return None, None
 
 
@@ -465,6 +506,10 @@ def render(records: list[Record], classes: list[ArtifactClass], roots: tuple[str
     for holder, group in sorted(carriers.items()):
         add(f"MIRROR_REVIEW carried by class {holder} — the field a FROZEN gate reads")
         add("  vocabulary: annex_d_commit_batch.md line 38 — n/a | PASS | FAIL + REVIEW_ID")
+        add("  ⚠ a carrier whose class is not the field's own is prima facie a QUOTATION, not "
+            "a declaration:")
+        add("    an artifact that reviews another quotes the field it reports on. Column 0 is "
+            "the discriminator here; the class column is the reader's check on it.")
         conforming = 0
         for rec in sorted(group, key=lambda r: r.basename):
             ok = bool(re.fullmatch(r"(n/a|PASS|FAIL)(\s.*)?", rec.mirror_review.strip(), re.I))

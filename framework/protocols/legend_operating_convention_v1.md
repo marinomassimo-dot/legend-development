@@ -497,6 +497,59 @@ broader than the gate and is not evidence of a leak. *Counted here without print
 **S.7.8 — `VERDICT_TRANSFER: NONE` is the default.** A verdict carried from another record is not a
 verdict.
 
+**S.7.9 — 🔴 A CAUSAL STORY IS NOT A MEASUREMENT.** Where a claim explains *why* an instrument
+behaved as it did, the explanation is checked **against the source**, not against the observations
+that prompted it. **Consistency with everything you have seen is the condition under which this
+failure is invisible, not evidence against it.**
+
+This governs *explanations of sweeps*, where S.7.2b governs sweeps. Every other mechanism in this
+section announced itself — a zero, a mismatch, a count that would not reconcile. **This one produces
+no output at all**, because there is nothing to output.
+
+> **Worked example, two seats deep.** A provenance — *"the aligned form lives on
+> `refs/heads/mirror`"* — was where a seat first SAW the form, not where the test reads. A reviewer
+> built a complete causal account on that sentence plus a real error: *"no ref carries both, the
+> suite tests a union of two branches, it will bite whoever wires this into CI."* Every observation
+> in it was real; the conclusion was false; it would have blocked CI wiring on a story. **The seat
+> had already disproved it itself, forty minutes earlier**, by measuring the aligned form in two
+> manifests and writing *"the parser problem is not confined to reviews."* It then reasoned as though
+> it were.
+>
+> **A provenance repeated often enough starts reading as a definition.**
+
+**S.7.9b — A CORRECTION INHERITS THE BURDEN OF THE CLAIM IT REPLACES.** Over-correcting is not the
+safe direction: it is the same failure with the sign flipped, and **it arrives with more confidence
+because it feels like rigour.**
+
+> Measured, on the same claim, one message later: *"the CAND manifests, never `reviews/`"* — also
+> false. Column-0 declarations of the aligned form: **6 in `reviews/` on `mirror`, 3 in
+> `governance/candidates/`.** It lives in both. *The test source settles what the TEST READS; it does
+> not settle where the FORM EXISTS.* The first claim was incomplete, the correction was wrong in the
+> other direction, and the second arrived faster.
+>
+> 🔴 **Of the thirteen sweep mechanisms this laboratory documented in one day, the two newest are
+> over-corrections rather than under-measurements** — which is the class to watch next, because the
+> reflex everyone built today is to correct hard and fast.
+
+**S.7.9c — A MEASURER WRITING INTO ITS OWN CORPUS SAYS SO.** A sweep over `reviews/` now includes the
+reviews performing it: three landed there in one afternoon, and the denominator moved by exactly
+that. Two consequences, both live: a review REPORTING a field is counted as an INSTANCE of it unless
+quotation context is excluded, and every `reviews/`-scoped figure is self-referential in a way its
+own reader cannot see. **State it beside the number.**
+
+**S.7.9d — Three results, confidently about the wrong world, and only one looked like failure.**
+
+```
+a publication gate that silently CLEARED a branch     ref-scoped, blind to untracked files
+a tool that silently CONDEMNED itself                 an extraction, every count zero
+`Ran 0 tests … OK`                                    two zero-byte files
+```
+
+🔴 **Only the third looked like success, which is why it would have travelled furthest.** The general
+answer is to **refuse to answer rather than answer from an empty world** — the shape
+`artifact_index.py` now uses: no repository, exit 2 with the reason named, and its ref-aware tests
+skip rather than fail.
+
 ## S.8 · 🟡 PROPOSAL (limb 2) · Escalation — a FLOOR, never a ceiling
 
 **These ALWAYS reach the operator.** The list is a floor; it does not enumerate H.1's complement and
@@ -758,7 +811,8 @@ NOT DONE    no file is moved · CONTROL_PLANE_ROOTS is not amended · nothing is
 
 ### B.2.2.1 · 🔴 THE GATING FIELD LIVES ON THE **MANIFEST**, AND 0 OF 8 CONFORM
 
-**`MIRROR_REVIEW` is a D.2 CANDIDATE MANIFEST field. The CAND class owns it. Reviews are its upstream
+**`MIRROR_REVIEW` is declared at `annex_d_commit_batch.md` line 38, in the CANDIDATE MANIFEST
+section. The CAND class owns it. Reviews are its upstream
 input.** Three rounds of this integration measured the review corpus and the wrong object was under
 the instrument the whole time.
 
@@ -784,6 +838,20 @@ carry the field   9 of 9          vocabulary at annex_d_commit_batch.md line 38:
 CONFORMING        0 of 9          n/a | PASS | FAIL + REVIEW_ID   — `n/a` legal and UNUSED
 emission form     6 colon · 3 aligned (P5DOMAIN · XPORT · ORCHSURF)
 ```
+
+> 🟠 **`9` and `10` are both right, and S.7.5 requires saying which is which.** `9` is
+> **filename-scoped** — artifacts named `CAND-*`. `10` is **class-by-path** — what
+> `artifact_index.py` reports, because `APPROVAL-GOV311-DEVIATIONS.md` sits in
+> `governance/candidates/` and derives to the same class. **The delta is exactly the
+> class-versus-container question this section turns on**: that file is simultaneously B.1.3's
+> evidence of misplacement AND a member of the population by derivation. Conformance is 0 under
+> both scopes. *The section applying S.7.5 everywhere had not applied it to the figure it argues
+> from.*
+>
+> It is also the **only artifact in either population that declares the field in FRONTMATTER**
+> (`mirror_review:`, lowercase, line 7) — the one place a frontmatter parser would look, after an
+> afternoon of three seats measuring this field in bodies. Three emission forms, not two:
+> `[frontmatter]` · `[body-colon]` · `[body-aligned]`.
 
 > 🟠 **THE ENUMERATION EXCLUDED THIS DOCUMENT'S OWN BRANCH, AND THAT IS THE FINDING.** The first
 > sweep drew `main ∪ refs/heads/mirror` and missed `CAND-20260819-ORCHSURF`, which lives on
@@ -819,7 +887,8 @@ The layers are four, each defeating a different instrument:
 ```
 1  the field is not in review frontmatter        → defeats a frontmatter window
 2  a second, column-aligned syntax               → defeats a colon anchor
-3  no value conforms to D.2's vocabulary         → defeats the gate itself
+3  no value conforms to the frozen vocabulary    → defeats the gate itself
+     (annex_d_commit_batch.md line 38)
 4  the MANIFEST field is in no class row         → defeats the validator, before it is written
 ```
 
@@ -1035,7 +1104,7 @@ without any conclusion moving — and one that is object-derived cannot move qui
 | 16 files / 8 CAND / 8 non-CAND in `governance/candidates/`; 535 included, 45 excluded | coordinator; **count repaired by measurement here, 7→8** | object | B.1.3, P-1 | 🔴 **YES** |
 | approval queue forked into 3 lineages; 4 MAJOR approvals reachable from `orchestrator` alone | coordinator | object | B.3.2, P-2 | 🔴 **YES** |
 | `ledger/events/` on zero refs | coordinator; consistent with this seat's sweep | **population** | B.8.2 | 🔴 **YES** — but a zero survives every denominator |
-| D.2 line 38 declares the `MIRROR_REVIEW` field, values `n/a` · `PASS` · `FAIL` + `REVIEW_ID` | Mirror → coordinator; **re-verified here at `main`** | object | B.2.2, P-8 | 🔴 **YES** |
+| `annex_d_commit_batch.md` line 38 declares the `MIRROR_REVIEW` field, values `n/a` · `PASS` · `FAIL` + `REVIEW_ID` | Mirror → coordinator; **re-verified here at `main`** | object | B.2.2, P-8 | 🔴 **YES** |
 | 🔴 **9 of 9 `CAND-*` manifests carry `MIRROR_REVIEW`; 0 conform**; `n/a` legal and unused; two values are scheduling states | **population enumerated by `git ls-tree` before any pattern ran; measured here** | object | B.1.2, B.2.2.1, M-g, P-8, D.2 | 🔴 **YES — this is the gating locus** |
 | upstream: the field is filled in **14 of 39** `REV-*`, in **two syntactic forms**, 4 values, **0 `PASS`/`FAIL`**; `PASS_WITH_NOTES` carried a canonical GATE 3 | 🟠 **four measurements, three rounds, two seats, three wrong numbers before this one — ladder in B.2.2.3** | object | B.2.2.3, M-g2, P-8 | yes, for the upstream half |
 | transcript birth vs `started` — 19h56m | orchestrator seat, two seats | object | S.1.4 | yes, for S.1.4 only; **S.1.5 is why the rule survives if it falls** |
@@ -1129,6 +1198,12 @@ NEVER   writes into the tree it scans · resolves an ambiguity · repairs a fiel
 EXIT    0 always. Discovery reports; it does not judge.
 ```
 
+**BUILT** — `framework/scripts/artifact_index.py`, with its test suite.
+**PRECONDITION:** a *repository*, not a tree. Handed a `git archive` extraction it exits **2** naming
+the reason, and its ref-aware tests **skip** rather than fail; and its test module needs a tree
+carrying this convention, or the import dies at the parse. *That precondition is what survives of a
+reported "CI blocker" — S.7.9.*
+
 🔴 **`--all-refs` is not optional** — `reading_state.md`'s own header: *"true of ONE checkout… a count
 over unmerged state is a count of work that is not in the model."* A working-tree scan reported as a
 laboratory figure is failure 2 exactly. **Every output states its population in the same sentence as
@@ -1145,8 +1220,15 @@ CHECKS  1 PATH ⇄ CLASS
         5 LIFECYCLE token in the class enumeration
         6 🔴 `MIRROR_REVIEW` ON THE **CAND MANIFEST** — the field a FROZEN gate reads. Checked
           where it lives, not where three rounds of this integration looked for it. Reports
-          non-conformance against D.2's `n/a | PASS | FAIL`; **gates nothing, retroactively or
+          non-conformance against `annex_d_commit_batch.md` line 38; **gates nothing, retroactively or
           otherwise** — 9 of 9 manifests would fail today and one of them carried a canonical commit.
+        7b 🔴 QUOTATION IS NOT DECLARATION. The aligned form must require COLUMN 0: an indented
+          match sits exactly where a quotation inside a fenced block sits, so a review REPORTING
+          a field is counted as an INSTANCE of it — and the inflation grows as reviews
+          accumulate. Column 0 separated a true 14 from an inflated 16 exactly. A carrier whose
+          class is not the field's own is prima facie a quotation, and the report says so.
+          Case-insensitivity applies to BOTH patterns or neither: the absence of a search is not
+          a zero.
         7 BOTH EMISSION FORMS, OR THE VALIDATOR CERTIFIES A FALSE ABSENCE: the colon form AND the
           column-aligned `MIRROR_REVIEW␣␣␣VALUE`. A colon-only parser reads 6 of 14 review
           declarations as missing — and the six are the SCIAB series, the longest chain in the

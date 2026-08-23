@@ -74,14 +74,46 @@ class TheClassListIsParsedNeverRestated(unittest.TestCase):
 class BothEmissionFormsAreRead(unittest.TestCase):
     """A colon-only parser reported 6 of 14 reviews and 3 of 9 manifests as ABSENT."""
 
-    def test_colon_form(self) -> None:
+    def test_body_colon_form(self) -> None:
         self.assertEqual(ai.read_field("MIRROR_REVIEW: PASS\n", "MIRROR_REVIEW"),
-                         ("PASS", "colon"))
+                         ("PASS", "body-colon"))
 
-    def test_aligned_form_with_no_colon(self) -> None:
+    def test_body_aligned_form_with_no_colon(self) -> None:
         self.assertEqual(ai.read_field("MIRROR_REVIEW           REQUEST CHANGES\n",
                                        "MIRROR_REVIEW"),
-                         ("REQUEST CHANGES", "aligned"))
+                         ("REQUEST CHANGES", "body-aligned"))
+
+    def test_frontmatter_is_a_third_form_not_a_colon_variant(self) -> None:
+        """The split that decides whether a frontmatter parser sees the field at all."""
+        text = "---\nartifact: x\nmirror_review: PASS_WITH_NOTES\n---\n\nbody\n"
+        self.assertEqual(ai.read_field(text, "MIRROR_REVIEW"),
+                         ("PASS_WITH_NOTES", "frontmatter"))
+
+    def test_the_same_key_below_the_frontmatter_is_body(self) -> None:
+        text = "---\nartifact: x\n---\n\nMIRROR_REVIEW: PASS\n"
+        self.assertEqual(ai.read_field(text, "MIRROR_REVIEW")[1], "body-colon")
+
+    def test_a_file_without_frontmatter_has_no_frontmatter_span(self) -> None:
+        self.assertEqual(ai.frontmatter_end("MIRROR_REVIEW: PASS\n"), 0)
+
+    def test_an_indented_quotation_is_not_a_declaration(self) -> None:
+        """A review REPORTING the field was being counted as an INSTANCE of it."""
+        quoted = ("---\ntitle: a review\n---\n\nquoting a manifest:\n\n```\n"
+                  "    MIRROR_REVIEW           REQUEST CHANGES\n```\n")
+        self.assertEqual(ai.read_field(quoted, "MIRROR_REVIEW"), (None, None))
+
+    def test_a_column_zero_declaration_inside_a_fence_still_counts(self) -> None:
+        """REV-SCIAB-MIRROR-001 § 8 emits one that way; fences are not excluded wholesale."""
+        fenced = ("---\ntitle: a review\n---\n\n```\n"
+                  "MIRROR_REVIEW           REQUEST CHANGES\n```\n")
+        self.assertEqual(ai.read_field(fenced, "MIRROR_REVIEW"),
+                         ("REQUEST CHANGES", "body-aligned"))
+
+    def test_both_patterns_are_case_insensitive(self) -> None:
+        """`re.I` was on one pattern of two, two lines apart. The asymmetry was the finding."""
+        self.assertEqual(ai.read_field("mirror_review: PASS\n", "MIRROR_REVIEW")[0], "PASS")
+        self.assertEqual(ai.read_field("mirror_review           PASS\n", "MIRROR_REVIEW")[0],
+                         "PASS")
 
     def test_a_single_space_is_not_a_declaration(self) -> None:
         """Prose such as `MIRROR_REVIEW not-PASS` inside a sentence must not count."""
@@ -91,8 +123,15 @@ class BothEmissionFormsAreRead(unittest.TestCase):
         self.assertIsNone(form)
 
     @NEEDS_REPO
-    def test_the_real_corpus_carries_both_forms(self) -> None:
-        """Guards the finding itself: if either form vanishes, the rule needs re-deriving."""
+    def test_the_real_corpus_carries_more_than_one_form(self) -> None:
+        """Guards the finding itself: if the corpus stops exercising a form, re-derive the rule.
+
+        Scoped to `HEAD:governance/candidates/` — the manifests, on ONE ref. A provenance for
+        the aligned form travelled as *"it lives on refs/heads/mirror"*, which is where a peer
+        first SAW it, not where this test looks; a causal story built on that sentence nearly
+        blocked CI wiring over a two-branch union this suite does not need. The aligned form is
+        in the manifests on HEAD, and the assertion is written so the scope is visible.
+        """
         forms = set()
         listing = subprocess.run(
             ("git", "ls-tree", "-r", "--name-only", "HEAD", "governance/candidates/"),
@@ -104,8 +143,9 @@ class BothEmissionFormsAreRead(unittest.TestCase):
             _, form = ai.read_field(text, "MIRROR_REVIEW")
             if form:
                 forms.add(form)
-        self.assertEqual(forms, {"colon", "aligned"},
-                         "the corpus no longer exercises both forms; re-derive the rule")
+        self.assertIn("body-colon", forms)
+        self.assertIn("body-aligned", forms,
+                      "the manifests on HEAD no longer exercise the aligned form; re-derive")
 
 
 class DomainComesFromThePrefixMatch(unittest.TestCase):
