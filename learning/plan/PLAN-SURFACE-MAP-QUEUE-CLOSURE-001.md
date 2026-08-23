@@ -268,7 +268,7 @@ there, rather than left unsearched.
 |---|---|
 | **Canonical purpose** | append-only activity ledger; *"state changes by appending events, never by mutating"*; primary analysis surface for Mirror (G.3, `roles/mirror.md`) |
 | **Path** | `governance/annex_j_runtime_control_plane.md` § J.1 |
-| **Ref / commit** | `plan-orchsurf-r4-transcription` @ `b72af2f`, blob `bad0c1a2d4b8`; **byte-identical on all 27 refs that carry the file** |
+| **Ref / commit** | `plan-orchsurf-r4-transcription` @ `b72af2f`, blob `bad0c1a2d4b8`; **byte-identical (`bad0c1a2d4b8`) on all 30 refs that carry the file** — *corrected in ADD-001 from `27`, which was scoped to the 43 heads and not to this record's declared 52-ref population* |
 | **Writer / owner** | the annex text: `materialized_by: plan`, `status: FROZEN`, `normative: yes`. The *ledger's* writer is delegated, not fixed here — see § 5 |
 | **Readers** | Mirror (primary), Plan (consolidation), any actor |
 | **Authoritative or derived** | 🔴 **NEITHER, by its own words.** J.1: *"lo stato repo resta sovrano — in conflitto vince il repo; il ledger è audit e analisi, mai seconda fonte di verità"* |
@@ -281,7 +281,7 @@ there, rather than left unsearched.
 |---|---|
 | **Canonical purpose** | supplies the choice J.1 delegates: *"Design one-writer (decisione di Plan): (a) … oppure (b) …"* |
 | **Path** | `governance/plan_defined_parameters.md` § P7 |
-| **Ref / commit** | HEAD blob `e1f9e1ec6fce`; **§ P7's own text is byte-identical (`5ef9956ab8e5c039`) on all 27 refs carrying the file** — 3 whole-file blobs exist, and none of them differs inside P7 |
+| **Ref / commit** | HEAD blob `e1f9e1ec6fce`; **§ P7's own text is byte-identical (`5ef9956ab8e5c039`) on all 30 refs carrying the file** — 3 whole-file blobs exist (15 · 11 · 4), and none of them differs inside P7. *Corrected in ADD-001 from `27` (heads-scoped)* |
 | **Writer / owner** | `authored_by: plan`, under J.1's delegation and H.1 |
 | **Decision recorded** | **(a)** — per-actor append-only file in each actor's own worktree, consolidated by Plan into a derived canonical view |
 | **Declared shape** | `FORMAT: JSON Lines, one event per line, append-only` · `PATH: ledger/events/<ACTOR_ID>.jsonl` (actor's own worktree) · `VIEW: ledger/consolidated/` — derived, rebuilt by replay, never hand-edited |
@@ -305,7 +305,7 @@ shared multi-writer file exists anywhere.
 |---|---|
 | **Canonical purpose** | singleton-with-expiry for `ACTIVE_ORCHESTRATOR`; the GATE 0 precondition (D.3, body § 12) |
 | **Normative path** | `governance/annex_i_bootstrap_deployment.md` § I.3, blob `8bcd455a3f1f` |
-| **Record path** | `runtime/orchestrator_lease.md`, blob `c34f48668d07` — **present on 22 of 52 content refs** |
+| **Record path** | `runtime/orchestrator_lease.md` — **present on 22 of 52 content refs, in TWO distinct blobs**: `c34f48668d07` × 21 (incl. `main` and this HEAD, 5 rows) and 🔴 `d8a2b47bf8bc` × 1 (`refs/heads/orchestrator`, **9 rows**). *ADD-001: this record's first revision treated it as one blob* |
 | **Derivation** | `framework/scripts/lease_state.py`, blob `d826812e2796` |
 | **Writer / owner** | 🔴 declared in the record's own frontmatter: *"`writer: orchestrator ONLY — one writer, from the orchestrator worktree`"* |
 | **Readers** | *"every actor, from every checkout, via git"* |
@@ -332,7 +332,7 @@ python3 framework/scripts/lease_state.py --check     @ 2026-08-23T09:16:27Z
 hand-written in a value the governance does not define, and the record deliberately preserves it
 rather than normalising the evidence away.
 
-**Also measured:** `main` carries lease rows #1–#5; branch `orchestrator` carries #1–#8. The lag
+🔴 **CORRECTED IN ADD-001 — this figure was INHERITED, not measured.** `main` carries lease rows **#1–#5** (measured). Branch `orchestrator` carries **#9, not #8** (measured: `git show orchestrator:runtime/orchestrator_lease.md | grep -c '^LEASE:'` → 9; row #9 released 2026-08-19T20:34:32Z, which post-dates § P5.1's writing). The first revision of this record carried `#1–#8` verbatim from § P5.1's prose and labelled it *measured*. **The direction survives and the magnitude did not**; the derivation over the 9-row blob also returns `ACTIVE by derivation: 0`, so the conclusion is strengthened, not weakened. The lag
 is structural, not sloppiness — a lease's terminal row is written *after* the batch that lease
 authorized, so it can never sit inside that batch. § P5.1 already states this and its consequence:
 I.3's `DETECTION` (*"doppio record sulla stessa successione"*) is **weaker than a tracked home
@@ -485,7 +485,7 @@ HUMAN_APPROVAL        APR-20260819-XPORT-001 / RES-20260819-XPORT-001, STATE APP
                       🔴 readable ONLY on refs/heads/orchestrator (§ 3.6)
 ```
 
-Yet the blob is `49b7b63a05dc` on **all 16** refs carrying it, status line unchanged.
+Yet the blob is `49b7b63a05dc` on **all 17** refs carrying it, status line unchanged. *Corrected in ADD-001 from `16` (heads-scoped).*
 
 > 🔴 **This record does NOT resolve that question, and must not.** `DEC-20260822` scoped itself to
 > `roles/` and states it *"adopts no general interpretation"*. Extending it by analogy is exactly
@@ -806,7 +806,7 @@ semantics; it is that two of J.1's existing 23 types have no emitter.
 `GATE 0` requires an `ACTIVE` lease, and a lease's terminal row is written **after** the batch that
 lease authorized. The row can therefore never sit inside the batch it authorized, so `main`'s copy
 of the record **lags by at least the current lease, permanently** (`main` #1–#5, `orchestrator`
-#1–#8). § P5.1 records this already; it is confirmed unchanged at this HEAD and is **not** reopened.
+**#1–#9, measured — see ADD-001 R-3**). § P5.1 records the phenomenon already; it is confirmed unchanged at this HEAD and is **not** reopened.
 
 ---
 
@@ -1095,7 +1095,7 @@ change_class          🔴 NOT DETERMINED HERE, and deliberately. If the delta i
 | receiver / system verification | **XPORT § 8** terms 1,2,5,6 · **C.2** VERDICT + mandatory AUTHOR_RESPONSE · `REVIEW_CLOSED` · GATE 0–5 · D.2 manifest fields | separation exists in 4 places (§ 5.2). XPORT § 8 term 5 detection: 🔴 `NONE — ATTENTION_ONLY`. Review *closure* allocated to the **author** (C.2) | **0 events**; 54 `REV-*` vs 8 `AUTHOR-RESPONSE-*` | **ALREADY_PRESENT** (semantics) + **PATCH_REQUIRED** (observability) | emit `REVIEW_OPENED`/`REVIEW_CLOSED`. 🔴 do **not** name a new "VERIFIED_CLOSURE" | any change to C.2's author-closure allocation is FROZEN-governance → MAJOR |
 | dependency-driven next transition | **A.1 `DEPENDENCIES`** · **§ 12 GATE 0–5** · **GATE 1** proponente ≠ esecutore | GATEs are canonical and mechanically partly checkable; **GATE 0 is asserted by hand**; C.3 review opening has no executor at 0 leases | 0 events; 4 canonical batches evidenced via approvals on `orchestrator` | **CONFIRM_ONLY** | test that transitions derive from `DEPENDENCIES` + gates, not from the reviewed actor's handoff | none — the guard is FROZEN and adequate; only unexercised |
 | actor rehydration | **§ 36.5** · **A.4** · **A.6** MAF refusal · **A.7** / § 36.3 | 27 checkpoints carry full `REHYDRATION` blocks with `verdict: PASS`; SCIAB record documents 4 generations rehydrating fail-closed with nothing carried from prompt | n/a — exercised | **ALREADY_PRESENT** (refusal) / **PATCH_REQUIRED** (completing another instance's closure) | § 9.2. 🔴 do **not** add `scope_lock` | none for the refusal half |
-| lease integration | **I.3** · `runtime/orchestrator_lease.md` · `lease_state.py` · **D.3 GATE 0** | derived **0 ACTIVE**; 5 records; 1 `DISAGREEMENT` (`EXPIRED` ∉ vocabulary); 1 `EXPIRED_WITHOUT_RENEWAL`; `main` #1–#5 vs `orchestrator` #1–#8 | 5 lease rows; **0 `LEASE_ACQUIRED` / `LEASE_STALE` events** | **PATCH_REQUIRED** | emit the two existing types. 🔴 **do not alter lease semantics and do not originate a second mechanism** — the record itself names P7 as its closure | none — the types already exist in J.1 |
+| lease integration | **I.3** · `runtime/orchestrator_lease.md` · `lease_state.py` · **D.3 GATE 0** | derived **0 ACTIVE**; 5 records; 1 `DISAGREEMENT` (`EXPIRED` ∉ vocabulary); 1 `EXPIRED_WITHOUT_RENEWAL`; `main` #1–#5 vs `orchestrator` **#1–#9** (ADD-001 R-3) | 5 rows on `main`, **9** on `orchestrator`; **0 `LEASE_ACQUIRED` / `LEASE_STALE` events** | **PATCH_REQUIRED** | emit the two existing types. 🔴 **do not alter lease semantics and do not originate a second mechanism** — the record itself names P7 as its closure | none — the types already exist in J.1 |
 | Orchestrator continuation | **§ 9.5** · **§ 4** · **§ 2** · **H.1** · **§ 3 / G.3** | 5 FROZEN clauses grant it; G.3 measures asking as `PREVENTABLE`; § P1 chooses PARK over ESCALATE for that reason | 0 ACTIVE leases → unexercised | **ALREADY_PRESENT** | 🔴 **none. Propose nothing.** Anything added here contradicts § 9.5 | none |
 | human escalation boundary | **§ 4** closed taxonomy · **J.3** queue · **§ 48** stop conditions · **G.3** autonomy ledger | queue exists and is used — and is **FORKED across 3 lineages**, with `DEFERRED`/`RESOLVED` outside J.3's vocabulary; `main` carries none of the 4 canonicalizing approvals | 14 queue lines total across all lineages; **0 `HUMAN_REQUIRED_OPENED` / `APPROVAL_RESOLVED` events** | **PATCH_REQUIRED** | emit the two types **and** allocate a writer for `ledger/approvals/`, which § P7 does not cover | allocating a writer to a J.3 surface is a governance act → operator / Mirror R4 |
 | roster (J.2) | **J.2**: *"Ogni transizione = evento (J.1) + roster durevole"* | 🔴 **0 roster artifacts on 52 refs** (control: 5 `*registry*` paths). `runtime/agent_card_registry.md` exists on **1** ref, `updated_on: 2026-08-17`, 23 `UNVERIFIED` / 0 `VERIFIED`, contradicted by `runtime/L2-OUTCOMES.md` (3 VERIFIED, operator-ratified 2026-08-18) on the same branch | 0 | **PATCH_REQUIRED** — reported, out of this dispatch's scope | reconcile the registry against L2-OUTCOMES; § 43 already rules *"riga stantia = non autoritativa"* | none for the reconciliation |
@@ -1321,7 +1321,9 @@ NARROWER THAN   EXPIRED_WITHOUT_RENEWAL ≠ unused. #2, #4 and #5 were never ren
 IT LOOKS        a canonical batch. Renewal is a proxy for use and a poor one
 VOCABULARY      lease #3 stored `EXPIRED`, which is not in I.3's ACTIVE|STALE|RELEASED
 DRIFT           — same class as DEFERRED/RESOLVED in the J.3 queue (§ 3.6)
-STRUCTURAL      main #1–#5 vs orchestrator #1–#8, permanently, by § P5.1's own analysis
+STRUCTURAL      main #1–#5 vs orchestrator #1–#9 — MEASURED in ADD-001, not inherited. The
+                phenomenon is § P5.1's; the magnitude is this record's and its first revision
+                got it wrong by carrying P5.1's figure as if measured
 SELF-NAMED      the record names the P7 event ledger with LEASE_ACQUIRED/LEASE_STALE as its own
 REMEDY          closure, "OWED NOT BARRED" — and Mirror reached the same conclusion independently
                 (HANDOFF-ROLE-CONTRACTS-001, open question 8)
@@ -1370,13 +1372,149 @@ it. `main` was observed at `788c357d9b7ca7afcbe7c1efc3a06b426cf7e2d5` and not mo
 | 18 | roster (J.2) | 52-ref filename sweep | **0** · control `*registry*` **5 paths** ✅ |
 | 19 | `active_lessons/` | 52-ref sweep | **0 files** |
 | 20 | advisory artifact | 1122 distinct blobs sha256'd + working tree scan | 🔴 **NO MATCH** for `70c8b312…e68a1`; id strings **0** · control `ADVISORY-FABLE` **109** ✅ |
-| 21 | § P7 stability | `sed`-extracted § P7, sha256 per ref | **identical (`5ef9956ab8e5c039`) on all 27 refs carrying the file** |
+| 21 | § P7 stability | `sed`-extracted § P7, sha256 per ref | **identical (`5ef9956ab8e5c039`) on all 30 refs carrying the file** (ADD-001: was `27`, heads-scoped) |
 | 22 | § P7 normative standing | `git log --all -S'status: NORMATIVE' -- governance/plan_defined_parameters.md` | **empty** — never activated |
-| 23 | XPORT activation conditions | `git merge-base --is-ancestor e839db38 main` + `APR-20260819-XPORT-001` + `REV-XPORT-MIRROR-002` | all three **satisfied**; status line **unchanged** on all 16 refs (blob `49b7b63a05dc`) |
+| 23 | XPORT activation conditions | `git merge-base --is-ancestor e839db38 main` + `APR-20260819-XPORT-001` + `REV-XPORT-MIRROR-002` | all three **satisfied**; status line **unchanged** on all 17 refs (blob `49b7b63a05dc`) (ADD-001: was `16`, heads-scoped) |
 | 24 | LINT | `python3 framework/scripts/legend_lint.py .` | **PASS** (1 INFO, pre-existing) |
 | 25 | receipts | `python3 framework/scripts/fulltext_receipts.py verify` | **OK** — 128 chained, tail anchored |
 | 26 | `main` untouched | `git rev-parse main` | `788c357d9b7ca7afcbe7c1efc3a06b426cf7e2d5` — unchanged |
 | 27 | instrument check | `for w in $X` vs `for w in ${=X}` in zsh | zsh does **not** word-split; the first form silently returned ABSENT on every ref. All sweeps re-run with `${=…}` and positive controls |
+
+---
+
+## 18 · ADD-001 — WHAT A REDELIVERY OF THE SAME DISPATCH MEASURED
+
+```
+ADDENDUM_ID       ADD-001
+TRIGGER           the dispatch PLAN-SURFACE-MAP-QUEUE-CLOSURE-001 was delivered a SECOND time,
+                  byte-identical in substance: same DISPATCH_ID, same DATE, no DIRECTIVE_VERSION
+                  and no GENERATION increment. Under A.3 that is at most one valid claim for the
+                  same TASK_ID + GENERATION, and under A.7 / § 36.3 the canonical response is to
+                  verify durable evidence and NOT repeat completed work
+MEASURED_AT       2026-08-23T10:18:57Z … 10:27Z, worktree evidence-index,
+                  branch plan-orchsurf-r4-transcription, HEAD 0d953e719ee287bd
+BASE OF REV 1     b72af2f25d42c3cafb781d42b66ef3a1761cdb66
+main              788c357d9b7ca7afcbe7c1efc3a06b426cf7e2d5   UNCHANGED, still not moved
+```
+
+**The redelivery is itself a live instance of the dispatch's own RECOVERY POINT A** — durable
+producer output exists, receiver verification did not visibly occur, and the specified behaviour
+is *"detect existing durable producer output … do NOT redo completed substantive work."* That is
+what was done: the analysis was not re-executed. What follows is verification, plus the three
+defects verification found **in this record**.
+
+### 18.0 · A.7's own prescribed act has nowhere to go — second-order confirmation
+
+A.7 says: *"if the evidence exists, skip and **record `RESUMED_FROM_MILESTONE`**."* That is one of
+the 23 J.1 types. **There is no surface on which to record it** (§ 4.2), and creating one is
+forbidden by this dispatch's hard constraints. So the skip is correct, canonical, and
+**unobservable to anyone but this session** — which is § 4.4(b) happening to this record rather
+than being described by it.
+
+### 18.1 · Re-verification — nothing in the repository moved
+
+| check | rev 1 | now | verdict |
+|---|---|---|---|
+| ref population (total / content) | 57 / 52 | 57 / 52 | unchanged |
+| `ledger/events/` · `ledger/consolidated/` | 0 · 0 | **0 · 0** | holds |
+| control `ledger/checkpoints/` | 450 | **450** | instrument alive |
+| `governance/decisions/` distinct records | 5 | **5** | no DEC on P-1 or P-2 |
+| lease, derived | `ACTIVE: 0`, 2 findings | **`ACTIVE: 0`, 2 findings** | holds |
+| LINT | PASS (1 INFO) | **PASS (1 INFO)** | holds |
+| `main` | `788c357…` | **`788c357…`** | not moved |
+| the 5 untracked foreign artifacts (§ 2.4) | present | **present, untouched** | not committed |
+
+**No substantive finding of this record changed.** The three repairs below are defects in how the
+record states its evidence, not in what the evidence says.
+
+### 18.2 · 🔴 R-1 — the verification trail invalidated itself by being written
+
+Re-running § 17 rows 7, 14, 16 and 20 at this HEAD returns **1, 2, 2, 2** where the table says
+**0** — while the positive controls still pass, which is exactly the shape of a finding that looks
+real and is not.
+
+**Cause: this record now carries the strings whose absence it measures.** Every single new hit was
+located and is one of this record's own two paths, on this branch, and nowhere else:
+
+```
+'HANDOFF v2.1'                        → PLAN-SURFACE-MAP-…-001.md, HANDOFF-20260823-….md
+'scope_lock'                          → the same two
+'VERIFIED_CLOSURE'                    → PLAN-SURFACE-MAP-…-001.md
+'EXTRACTION-20260823|QUEUE-CLOSURE…'  → the same two
+'"EVENT_TYPE"|"EVENT_ID"'             → PLAN-SURFACE-MAP-…-001.md
+```
+
+**The substantive negatives are unchanged**, and the re-run proves it. Under self-exclusion, at
+this HEAD, over all 52 content refs:
+
+```bash
+EX=(':!learning/plan/PLAN-SURFACE-MAP-QUEUE-CLOSURE-001.md' \
+    ':!learning/plan/HANDOFF-20260823-SURFACE-MAP-QUEUE-CLOSURE.md')
+
+'HANDOFF v2.1'                       → 0     control AUTHOR_RESPONSE     → 286  ✅
+'scope_lock'                         → 0     control ORCHESTRATOR_LEASE  → 515  ✅
+'VERIFIED_CLOSURE'                   → 0
+'EXTRACTION-20260823|QUEUE-CLOSURE'  → 0
+'"EVENT_TYPE"|"EVENT_ID"'            → 0
+```
+
+🔴 **§ 17's commands must be run with that exclusion from this commit onward**, and the table's
+`0`s remain correct **as pinned** to § 2's instant and to base `b72af2f`. The defect was
+publishing a reproduction recipe that its own publication breaks. A reader who ran it without the
+exclusion would have found a true zero turned into a false one **by the act of recording it**.
+
+### 18.3 · R-2 — five counts were scoped to the 43 heads inside a record declaring 52 content refs
+
+| figure | rev 1 (heads, 43) | corrected (content refs, 52) |
+|---|---|---|
+| refs carrying `annex_j_runtime_control_plane.md` | 27 | **30**, all blob `bad0c1a2d4b8` |
+| refs carrying `plan_defined_parameters.md` | 27 | **30** (blobs 15 · 11 · 4; § P7 identical on all 30) |
+| refs carrying `cross_session_transport.md` | 16 | **17**, all blob `49b7b63a05dc` |
+| refs carrying `scientist_reading_modes.md` | — | **19**, all blob `2aae1ca75856` |
+| refs at the 6-line approval-queue lineage | "main + 24" | **27** (+ 1 at 10 lines, + 2 at 14 lines) |
+
+**Every one moved in the direction that strengthens the claim**, and none changes a conclusion:
+the blobs are still identical within each group, and the approval queue still has exactly **three
+lineages, two of them forked**. Corrected in place, with the superseded figure named rather than
+erased.
+
+### 18.4 · 🔴 R-3 — one figure was INHERITED, labelled measured, and was wrong
+
+```
+STATED IN REV 1   "main carries lease rows #1–#5; branch orchestrator carries #1–#8",
+                  under the heading "Also measured:"
+SOURCE            § P5.1's prose, written 2026-08-19. NOT measured by this record.
+MEASURED NOW      git show main:runtime/orchestrator_lease.md         | grep -c '^LEASE:' → 5
+                  git show orchestrator:runtime/orchestrator_lease.md | grep -c '^LEASE:' → 9
+                  two DISTINCT blobs:  c34f48668d07 × 21 refs (5 rows, incl. main and this HEAD)
+                                       d8a2b47bf8bc ×  1 ref  (9 rows, refs/heads/orchestrator)
+WHY IT DRIFTED    lease #9 was released 2026-08-19T20:34:32Z — AFTER § P5.1 was written.
+                  The prose was correct when authored and stale when quoted
+```
+
+**This is the defect class § 2.3 of this record announces it caught, committed again two sections
+later**, and it is the exact class the operator's own memory of this laboratory records: *a row
+that inherited a surface it was not measured over*. It is corrected in place, not quietly.
+
+**The conclusion is strengthened, not weakened.** Rev 1 derived lease state only from this
+checkout's 5-row copy. The derivation was now run against the **9-row** blob as well:
+
+```
+python3 framework/scripts/lease_state.py --home <orchestrator's 9-row copy> --check
+  → ACTIVE by derivation: 0
+  → the same two findings on lease #3, and no others
+```
+
+So **`0 ACTIVE leases` now rests on the complete lease history, not on the truncated copy `main`
+carries** — and `main`'s permanent lag is measured at **4 rows**, not asserted at 3.
+
+### 18.5 · What ADD-001 does NOT do
+
+Does not re-run the analysis · does not change any classification (`A′` `PATCH_REQUIRED`, `B′`
+split, `C′` `ALREADY_PRESENT` all stand) · does not change the minimum residual delta · does not
+resolve P-1, P-2 or P-3 · does not open a `CAND` · does not write a `DEC` · does not normalise any
+historical row to make a check pass · does not commit the five untracked foreign artifacts · does
+not move `main`.
 
 ---
 

@@ -16,6 +16,19 @@ APPROVAL: NOT_GRANTED
 AUTHORITY_CLAIMED: none
 
 accompanies: learning/plan/PLAN-SURFACE-MAP-QUEUE-CLOSURE-001.md
+redelivery_note: >
+  The dispatch was delivered a SECOND time on 2026-08-23, byte-identical in substance — same
+  DISPATCH_ID, same DATE, no DIRECTIVE_VERSION and no GENERATION increment. Under A.3 that is a
+  redelivery, not a new generation, and under A.7 / body § 36.3 the canonical response is to
+  verify the durable evidence and NOT repeat completed work. The analysis was NOT re-executed.
+  Verification found nothing in the repository moved (§ 18.1 of the accompanying record) and
+  three defects IN THAT RECORD, all repaired in ADD-001: R-1 the verification trail invalidated
+  itself by being written; R-2 five counts were scoped to the 43 heads inside a record declaring
+  52 content refs; 🔴 R-3 one figure was INHERITED from § P5.1's prose, labelled measured, and was
+  wrong — orchestrator carries NINE lease rows, not eight, in a SECOND distinct blob this record
+  had not measured. No classification, no gap-table row and no residual delta changed. A.7's own
+  prescribed act for this situation — record RESUMED_FROM_MILESTONE — has no surface to be
+  recorded on, which is this dispatch's subject matter happening to its own closure.
 
 format_note: >
   🔴 The dispatch specifies "the existing canonical HANDOFF v2.1 format". MEASURED: no such
@@ -110,7 +123,7 @@ observational work completed and nothing consuming an iteration budget was perfo
    minimum types; § P7 already chose the topology — option (a), per-actor
    `ledger/events/<ACTOR_ID>.jsonl` consolidated into `ledger/consolidated/` — and § P7 already
    names the reuse target (`fulltext_receipts.py`) and calls itself *"tracked as a debt; not yet
-   built"*. **§ P7 is byte-identical on all 27 refs carrying it.**
+   built"*. **§ P7 is byte-identical on all 30 refs carrying it** (ADD-001: rev 1 said 27, which was scoped to the 43 heads and not to the declared 52-ref population).
 2. **0 of 23 event types have ever been emitted, over 52 content refs**, verified at four
    independent angles with controls at 450. The lease record, Mirror, and a sibling Orchestrator
    analysis each arrived independently at the same missing object.
@@ -153,7 +166,7 @@ in its own terms.** Three preconditions, none of them Plan's:
 | # | determination | why Plan may not make it | authority |
 |---|---|---|---|
 | **P-1** | 🔴 **Is § P7 normative?** `governance/plan_defined_parameters.md` reads `status: PROPOSED — normative once Mirror hostile review passes and the operator approves`, and `git log --all -S'status: NORMATIVE'` on that file is **empty**. `DEC-20260822-ROLE-CONTRACT-ACTIVATION-STATE` answered `ACTIVATION_NOT_CONFIRMED` for the structurally identical grammar in `roles/` and explicitly *"adopts no general interpretation"*. Extending it by analogy is a governance interpretation — **and the file is Plan's own** | H.1 → **operator** |
-| **P-2** | 🔴 **Same question for `framework/protocols/cross_session_transport.md`**, whose § 8 is the closure semantics this analysis found canonical. Its three activation conditions are **all independently satisfied and verified at source** — canonical execution (`e839db38` ancestor of `main`), `REV-XPORT-MIRROR-002` ACCEPT, `APR-20260819-XPORT-001` APPROVED — and the status line was **never updated**, on all 16 refs carrying it. A staleness defect, not a contradiction | H.1 → **operator** |
+| **P-2** | 🔴 **Same question for `framework/protocols/cross_session_transport.md`**, whose § 8 is the closure semantics this analysis found canonical. Its three activation conditions are **all independently satisfied and verified at source** — canonical execution (`e839db38` ancestor of `main`), `REV-XPORT-MIRROR-002` ACCEPT, `APR-20260819-XPORT-001` APPROVED — and the status line was **never updated**, on all 17 refs carrying it (ADD-001: rev 1 said 16, heads-scoped). A staleness defect, not a contradiction | H.1 → **operator** |
 | **P-3** | **No `ACTIVE_ORCHESTRATOR`.** `TASK_ASSIGNED` has exactly one authorized writer (H.1 row 1) and nobody holds it. A ledger only Plan writes reproduces the self-written-task-record defect one layer up | activation, not governance |
 
 **Also transmitted, and owned elsewhere:** XPORT § 9 term 3 — routing — remains unresolved
