@@ -158,7 +158,17 @@ Raised by `evidence-index-a6`, verified here rather than accepted:
 |---|---|---|
 | `dismech_legend_evidence_crosswalk_v2.md` | **ABSENT**. On **1 of 57** refs, in exactly **1** commit — `43cf690` itself. Positive control: `CLAUDE.md` resolves on 56 refs | **destroys it permanently.** Nothing to restore |
 | `full_text_queue_current.md` | **TRACKED**, 72 `FT-` entries (→ 73) | restores a real prior state |
-| `batch_queue.md` | **TRACKED**, 4 lines changed / 8 diff-lines | restores a real prior state |
+| `batch_queue.md` | **TRACKED**. `4/4`, decomposing unevenly: **3 lines modified in place** (the two counters on one line, `NEW` 73→72, `IN_PIPELINE` 25→26) **+ 1 row relocated, byte-identical** | restores a real prior state |
+
+**Write the batch-queue change as `4/4 (3 modified, 1 relocated)`.** Both `8` and a flat `4` lose
+the relocation, and the relocation is the part that carries meaning. Byte-identity of the moved
+row was tested by stripping the diff marker and counting distinct contents — **1** — with a
+negative control on a line that genuinely changed, which returns **2**.
+
+🔴 **And the relocated row is `PMID 27845895` — the same paper FT-073 declares and the crosswalk
+cites 8 times.** It moves from `NEW` to `IN_PIPELINE`. So `batch_queue.md` is not bookkeeping
+alongside the other two: it is the third leg of a single change about a single paper, which is
+why the coupling is a property of the object and not a convenience of the commit.
 
 `git show --numstat 43cf690` → `834/0` · `4/4` · `57/0`: **one addition and two modifications, not
 three additions.**
@@ -167,6 +177,23 @@ three additions.**
 `legend_lint.py` **PASS** · `growth_anchors.py check` **PASS** · `unread_premises` **4/4** · 72
 `FT-` entries · crosswalk absent. **A full revert is valid and lands in a real, self-consistent,
 gate-passing state.**
+
+**The arm that makes those PASSes mean anything — a gate that always passes would print the same
+thing.** Raised by `legend-public-cb`, re-run here on a scratch extraction. Take `43cf690`'s tree,
+**keep** the crosswalk, and revert **only** `full_text_queue_current.md`:
+
+```
+legend_lint.py .          VERDICT: BLOCK_BATCH_COMMIT
+                          UNREAD_PREMISE: 5 reasoning-layer citations lack any read receipt,
+                          registry full-text declaration or queue entry — above the baseline of 4
+growth_anchors.py check   VERDICT: BLOCK
+                          RATCHET_VIOLATION: 1 new unread premises (27845895).
+                          This ratchet may only fall.
+```
+
+⇒ **The gates discriminate, and the ratchet names the PMID.** The `PASS` on the full revert is
+therefore informative rather than vacuous, and `43cf690`'s own coupling claim reproduces down to
+the identifier. **A full revert is safe; reverting half of it manufactures the failure.**
 
 ⇒ **The decision is therefore narrower and cleaner than this record first made it.** It is not
 "revert into an invalid state, or keep a contested commit". Both arms are valid and both pass the
