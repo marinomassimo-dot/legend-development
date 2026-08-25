@@ -142,12 +142,41 @@ been seen here and was not bypassed.
 
 **Standing position, agreed across three sessions and recorded so it is not re-litigated:**
 
-- **Do not revert.** Reverting a gate-forced coupled set is the same one-writer hazard with the
-  sign flipped, it would delete an untracked file rather than restore its untracked state, and it
-  would destroy the object the decision is about. **The commit is the evidence.**
+- **The recommendation is: do not revert.** It is a recommendation, not a finding.
 - The question before the Operator is **"does `43cf690` stand"** — not "preserve these or not".
 - **Provenance is not closed by the commit.** The commit gives these three files an author field,
   a message and a timestamp. None of those is authorship.
+
+### 3.1 · CORRECTION — the first version of this section argued the wrong thing
+
+**This record originally said a revert "would delete an untracked file rather than restore its
+untracked state", implying a revert lands nowhere valid. That is true of ONE of the three files
+and I generalised it to three** — a wrong-denominator error inside a record about denominators.
+Raised by `evidence-index-a6`, verified here rather than accepted:
+
+| File | State at `43cf690~1` | What a revert does |
+|---|---|---|
+| `dismech_legend_evidence_crosswalk_v2.md` | **ABSENT**. On **1 of 57** refs, in exactly **1** commit — `43cf690` itself. Positive control: `CLAUDE.md` resolves on 56 refs | **destroys it permanently.** Nothing to restore |
+| `full_text_queue_current.md` | **TRACKED**, 72 `FT-` entries (→ 73) | restores a real prior state |
+| `batch_queue.md` | **TRACKED**, 4 lines changed / 8 diff-lines | restores a real prior state |
+
+`git show --numstat 43cf690` → `834/0` · `4/4` · `57/0`: **one addition and two modifications, not
+three additions.**
+
+**And the arm I had not tested.** Extracting the tree at `43cf690~1` and running the gates on it:
+`legend_lint.py` **PASS** · `growth_anchors.py check` **PASS** · `unread_premises` **4/4** · 72
+`FT-` entries · crosswalk absent. **A full revert is valid and lands in a real, self-consistent,
+gate-passing state.**
+
+⇒ **The decision is therefore narrower and cleaner than this record first made it.** It is not
+"revert into an invalid state, or keep a contested commit". Both arms are valid and both pass the
+gates. **The entire cost of reverting is one thing: an 834-line analysis, whose author nobody can
+name, ceases to exist.** The two queue arms follow the crosswalk either way, for the coupling
+reason, and should carry no weight in the decision.
+
+`evidence-index-a6`'s recommendation, recorded as its recommendation and not as a finding: do not
+revert, because *an analysis with no author is still an object, deleting it is the only
+irreversible move on the table, and irreversibility is the thing to spend last.*
 
 ---
 
