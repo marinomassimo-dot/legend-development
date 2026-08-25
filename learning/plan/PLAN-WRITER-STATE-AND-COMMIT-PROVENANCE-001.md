@@ -59,6 +59,24 @@ is not an authority grant, and no session conferred anything on another.
 ⚠️ **This table decays.** It is true of the moment it was written. A later session must re-run the
 check rather than read this row and believe it.
 
+⚠️ **And it reaches one branch.** Measured: this file exists on **1 of 55 content refs** — the
+branch it was committed to — against a positive control of `CLAUDE.md` on **54 of 55**. So the
+honest description is not "the repository records the writer state" but **"one branch records it,
+for the moment of writing."** A reader standing on `main`, or on any of the other 54, does not find
+this file and cannot know a seat was ever negotiated.
+
+🔴 **That is the same defect `MINOR-2` already names against a different object.** `MINOR-2` flags
+`runtime/agent_card_registry.md` for grounding an authority premise while existing *"on one ref
+only"*; re-measured here, it is on **1 of 55**, exactly like this file. **This record therefore
+inherits the defect it was written to describe**, one layer down, and saying so is the only thing
+that distinguishes it from the failure it documents.
+
+**It is still not a reason to build a lock.** A mechanism originated now would be a control plane
+invented to enforce a record invented the same evening — and every dispatch governing this work
+says originate nothing merely because a cleaner architecture can be imagined. The class is named
+and bounded here; whether anything should execute it is the Operator's to want, not Plan's to
+assume. Raised by `legend-public-cb` and verified here rather than accepted.
+
 ---
 
 ## 2 · WHAT COMMIT `702df73` DOES AND DOES NOT ESTABLISH
