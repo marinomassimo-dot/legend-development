@@ -149,3 +149,78 @@ The third exists because the first two are satisfied by a tool that refuses ever
 
 **20 tests.** Reading both streams fixes today's runner; refusing a verdict that disagrees with
 its own list is what catches the next one.
+
+---
+
+## 8 · The composed P0 matrix, at current hashes
+
+`BASE 788c357d`, ten candidates, order chosen for **earliest trustworthy detection** and not for
+fewest conflicts. Composed tip `630731cc`. **Candidate identity preserved: every tip identical
+before and after.**
+
+| Prefix step | runner | dup | mode-bit | fails | conflict | movement |
+|---|:--:|:--:|:--:|:--:|---|---|
+| `REPOSURFACE` | 66 | 0 | **4** | **6** | clean | *(baseline)* |
+| + `RELSURF` | 67 | 0 | **0** | **4** | clean | VANISHED ×2, **both declared** |
+| + `CPROOT` | 68 | 0 | 0 | 4 | union | none |
+| + `LEASESINGLETON` | 69 | 0 | 0 | 4 | union | none |
+| + `GOVTESTS` | 71 | 0 | 0 | 4 | union | none |
+| + `ADJFAILCLOSED` | 72 | 0 | 0 | 4 | union | none |
+| + `P7LEDGER` | 73 | 0 | 0 | 4 | union | none |
+| + `APQCONS` | 75 | 0 | 0 | 4 | union | none |
+| + `INTMATRIX` | 76 | 0 | 0 | 4 | clean | none |
+| + `ORCHMAJOR2` | 76 | 0 | 0 | 4 | clean | none |
+
+**Zero duplicate enrolments and zero new failures at every step.** Runner entries 65 → **76**.
+The only conflicts are on `scripts/run_release_regressions.py`, six of them, every one a
+pure-addition union that passed the base-stage safety check.
+
+### Why REPOSURFACE first, and what it bought
+
+Not fewer conflicts — it is clean either way. **Every later measurement is taken through a walker
+that cannot lose files.** The baseline step immediately surfaces the four `100644` shebang files
+inherited from `main`, and the next step clears them:
+
+```
+step 1  framework/scripts/lease_state.py · governance/scripts/candidate_content_hash.py
+        governance/scripts/governance_fingerprint.py · governance/scripts/test_candidate_content_hash.py
+step 2  none
+```
+
+### The two vanishings, and why they are not findings
+
+```
+scripts/test_release_runner_verdict.py    declared by RELSURF
+scripts/test_release_surface.py           declared by RELSURF
+```
+
+Both were supplied as `--declares`. **Undeclared, the same two would have been reported
+`VANISHED-UNEXPLAINED` and the run would have exited 1** — which is the point: the tool does not
+decide that a shorter list is good news, it asks who claimed it.
+
+### The four that never move
+
+```
+scripts/test_locator_obligation_reaches_every_route.py   'verbatim_locators'        not in CLAUDE.md
+scripts/test_abstract_corpus_is_not_evidence.py          'pubmed_corpus_harvest'    not in CLAUDE.md
+scripts/test_fulltext_trace_contract.py                  'FULLTEXT_READ_RECEIPT'    not in CLAUDE.md
+framework/scripts/test_session_self_eval.py              'session_self_evaluation.md' not in CLAUDE.md
+```
+
+All four assert a literal string is present in `CLAUDE.md`, which became a router on 2026-08-16
+and deliberately stopped reproducing operating law. **They are red on `main` and on every prefix,
+and no candidate here introduced or could remove them.** Not counted as candidate regressions.
+
+🔴 **The migration map answers only one of the four.** `claude_md_migration_map.md` names
+`session_self_evaluation.md` and does not name the other three; the three strings are present in
+27, 5 and 21 tracked files respectively. **Repointing the guards is therefore not mechanically
+derivable** — choosing which surface must carry an obligation is a routing decision, not an
+engineering one, so it is stated and not made.
+
+### A residual of the tool, stated
+
+**The baseline step inherits the base's defects and the tool cannot tell them apart from the
+candidate's.** `INTEGRATION FINDINGS: plan-repo-surface-determinism` names the step that carried
+the 4 mode-bit offenders, and those offenders are `main`'s. A step zero measuring the base alone
+would separate them; it is not built here, and until it is, the first row of any matrix must be
+read as *base + candidate*.
