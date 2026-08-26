@@ -1,7 +1,7 @@
 ---
 artifact: INTEGRATION_CANDIDATE — Claude ↔ Codex minimum runtime bridge
 candidate_id: CAND-20260826-RTBRIDGE
-revision: 1
+revision: 2
 task_id: RTBRIDGE-P00-001
 author: plan
 authored_on: 2026-08-26
@@ -28,9 +28,16 @@ BASE_HEAD                 f2b8ecf11e77ebe86e6e17b6348e6469cc2e432b
                           it is used deliberately: main is 788c357 and this branch carries
                           80 prior Plan commits that are NOT part of this candidate. Hashing
                           against main would bind all of them to this review.
-TIP                       cda34cfa99fd6c853a0dd01fab72a1af319b4921
+TIP                       7a867e72920044ff052de3aff62e75abf68dd544
 BRANCH                    plan-runtime-bridge-p00
-CANDIDATE_CONTENT_HASH    6277b98e023734c0ab23177b5ca4f7642438a9d07d8fd52b78e002c639678d93
+CANDIDATE_CONTENT_HASH    7f88cf34d8d19527bd3e7e295f5fada03e1561d6771ab3b0108d527f98323f2a
+                          🔴 SUPERSEDES 6277b98e023734c0ab23177b5ca4f7642438a9d07d8fd52b78e002c639678d93
+                          at tip cda34cf, which this file carried for exactly one commit
+                          before the withdrawal in § 6.1 moved two content-domain files.
+                          That binding was correct for the tree it named and is superseded,
+                          not withdrawn (Annex D.2). It is left visible because a candidate
+                          that silently rewrites its own hash teaches a reviewer to trust
+                          the current value, which is the one thing a hash cannot ask for.
 CHANGE_CLASS              MAJOR — it changes what a safety control does on a malformed
                           payload (§ 5), and it introduces a second registrant of that
                           control. Mirror classifies; this field is the author's declaration
