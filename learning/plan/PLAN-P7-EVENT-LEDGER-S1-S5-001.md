@@ -127,13 +127,14 @@ vacuous passes.** It is ready and it belongs with the first emission, not before
 git worktree add --checkout <dir> plan-p7-event-ledger
 ```
 
-then, inside it, `event_ledger.py` and `test_event_ledger.py` — both in `framework/scripts/`:
+then, inside it, run `event_ledger.py` and `test_event_ledger.py` — both in the
+`framework/scripts` directory:
 
-```
-python3 <that dir>/framework/scripts/event_ledger.py types      # 23, closed
-python3 <that dir>/framework/scripts/event_ledger.py validate   # exit 3 — nothing validated
-python3 <that dir>/framework/scripts/test_event_ledger.py       # 31 tests
-```
+| Command | Expected |
+|---|---|
+| `event_ledger.py types` | 23 types, closed |
+| `event_ledger.py validate` | **exit 3** — no ledger, nothing validated |
+| `test_event_ledger.py` | 31 tests, OK |
 
 and, from anywhere with the refs visible:
 
