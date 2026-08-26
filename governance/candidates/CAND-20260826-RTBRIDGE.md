@@ -44,7 +44,12 @@ CHANGE_CLASS              MAJOR — it changes what a safety control does on a m
                           and not the classification.
 RECIPE                    python3 governance/scripts/candidate_content_hash.py \
                             --base f2b8ecf11e77ebe86e6e17b6348e6469cc2e432b \
-                            --tip  cda34cfa99fd6c853a0dd01fab72a1af319b4921
+                            --tip  7a867e72920044ff052de3aff62e75abf68dd544
+                          🔴 The recipe named cda34cf for one commit after the TIP above had
+                          already moved. Run as written it would have reproduced the
+                          SUPERSEDED value and agreed with itself, which is the failure mode
+                          a recipe exists to prevent: a hash with a recipe that reproduces a
+                          different tree is worse than a hash with no recipe at all.
 ```
 
 ## 2 · Why four units and one commit
