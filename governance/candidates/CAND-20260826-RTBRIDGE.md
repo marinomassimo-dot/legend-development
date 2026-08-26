@@ -117,9 +117,41 @@ to edit — and it is the failure direction chosen deliberately.
 | Claim | Status | Instrument |
 |---|---|---|
 | project `.codex/config.toml` is loaded | `OBSERVED` | wrong type on a known key exits 1 from the worktree and the root; unknown key exits 0 |
-| `hooks.PreToolUse` recognized, `matcher` required | `OBSERVED` | type-probe, controls both ways |
+| `hooks.PreToolUse` is a recognized key | `OBSERVED` | wrong types error on three consecutive runs; `zzz.PreToolUse=1` ignored; `model=1` errors |
+| `matcher` is required in a hook group | 🔴 `WITHDRAWN` | asserted from one run, does not reproduce over three. See § 6.1 |
 | the shipped registration parses | `OBSERVED` | `codex doctor` rc 0; rc 1 with a broken key prepended |
-| **the Codex hook FIRES, before the shell mutates** | 🔴 `UNVERIFIED` | a Codex session that runs `git add -A` in a scratch fixture and is refused |
+| **the Codex hook FIRES, before the shell mutates** | 🔴 `UNVERIFIED` here; **`OBSERVED NOT FIRING`** by a peer — § 6.2 | a Codex session that runs `git add -A` in a scratch fixture and is refused |
+
+### 6.1 · A claim this candidate made and withdrew
+
+An earlier revision of `.codex/config.toml` and of `runtime_bridge.md` stated that `matcher`
+is **required** in a Codex hook group, from a single probe run that errored on a group
+without one. Re-run three times with three controls green, a matcher-less group is
+**accepted**. The claim is withdrawn.
+
+It is recorded rather than deleted for one reason: it had already been used to judge another
+actor's registration — `.codex/hooks.json` on `codex-bridge-integration` declares a hook
+group with no matcher, and on the withdrawn claim that file would have been called broken.
+It is not. A negative asserted from one run is a guess with a citation.
+
+### 6.2 · The concurrent implementation, and what it measured
+
+Branch `codex-bridge-integration`, 8 commits ahead of `main`, in another session's worktree,
+independently built this bridge. Four files collide by name: `AGENTS.md`,
+`framework/protocols/runtime_bridge.md`, `scripts/guard_bash_command.py`, its test.
+
+**This candidate does not merge it, defer to it or override it.** Two writers on one problem
+is an Orchestrator adjudication (Annex H.1: task, priority, reassignment), and the two are
+not interchangeable — that branch splits the adapters into two entry scripts over a shared
+engine and registers via `.codex/hooks.json`; this one keeps a single entry point and
+registers via `.codex/config.toml`. Neither registration path has been observed loading.
+
+Two of its results are recorded in `runtime_bridge.md` § 8 because they are **stronger than
+anything reachable here**: it ran the session probe and the Codex hook **did not fire**, and
+it reports the enforced output contract as narrower than the schema shipped in the binary.
+The engine in this candidate satisfies the narrow reading already, so nothing changes — but a
+future edit that begins emitting `continue` or `updatedInput` would break Codex and pass
+every test in this repository, and that is now written down.
 
 `codex doctor` does not load hooks, so no local no-cost probe reaches the last row. A
 session probe **is a spend**: Annex J.4, `DEFAULT_EXTERNAL_SPEND = 0`, so it needs

@@ -14,10 +14,18 @@
 #   OBSERVED    a project `.codex/config.toml` IS loaded — a deliberately wrong type on
 #               a known key (`model = 1`) made `codex doctor` exit 1 from a scratch
 #               fixture, while an unknown key (`zzz_fake = 1`) exited 0.
-#   OBSERVED    `hooks.PreToolUse` is a recognized config key: wrong-typed values are a
-#               hard config error, an invented key is ignored. `matcher` is required —
-#               a group without one is rejected.
+#   OBSERVED    `hooks.PreToolUse` is a recognized config key: wrong-typed values (`hooks=1`,
+#               `hooks="x"`, `hooks.PreToolUse=1`) are a hard config error on three
+#               consecutive runs, while an invented key at the same depth
+#               (`zzz.PreToolUse=1`) is ignored. Three controls, both directions.
 #   OBSERVED    the group shape written below parses.
+#
+#   🔴 WITHDRAWN — an earlier revision of this comment said `matcher` is REQUIRED, on a
+#   single run that returned an error for a group without one. It does not reproduce:
+#   three consecutive runs accept a matcher-less group while the controls stay correct.
+#   The claim is withdrawn rather than quietly deleted, because it had already been used
+#   to judge another actor's registration. `matcher` is used below to scope the hook to
+#   shell tools, which is a choice this file makes, not a requirement the runtime imposes.
 #   DOCUMENTED  the runtime describes this file as "Project `.codex/config.toml`:
 #               settings for a trusted repository, including sandbox, MCP, hooks, model,
 #               and reasoning defaults", and gates project-local hooks behind directory

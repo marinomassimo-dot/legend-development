@@ -79,7 +79,8 @@ documentation about them.
 | shell tool name | `Bash` | `shell_command` · `unified_exec` | `DOCUMENTED` — `core/src/tools/handlers/shell/shell_command.rs`, `ConfigShellToolType` |
 | command key | `tool_input.command` (string) | `cmd` (string, "Shell script to run in the user's default shell") | `DOCUMENTED` |
 | output object | `hookSpecificOutput.{hookEventName, permissionDecision, permissionDecisionReason}` | **identical**, per `pre-tool-use.command.output`; `permissionDecision ∈ allow\|deny\|ask` | `DOCUMENTED` |
-| project registration | `.claude/settings.json` | `.codex/config.toml`, key `hooks.PreToolUse`, `matcher` required | `OBSERVED` — type-probe with both controls, § 5 |
+| project registration | `.claude/settings.json` | `.codex/config.toml`, key `hooks.PreToolUse` | `OBSERVED` — type-probe with three controls, § 5 |
+| output actually accepted | the full object | 🔴 **narrower than its own schema** — see § 5 | `REPORTED_BY_PEER` |
 
 🔴 **The output side needed no adapter at all.** The object this repository already emitted
 for Claude validates against Codex's own output schema unchanged. That is a fact about the
@@ -152,9 +153,10 @@ updated with the fix rather than drifting away from it.
 | Claim | Status | What would move it |
 |---|---|---|
 | `.codex/config.toml` is loaded as a project layer | **`OBSERVED`** | done: a wrong type on a known key (`model = 1`) exits 1 from the LEGEND worktree and the root checkout; an unknown key exits 0 |
-| `hooks.PreToolUse` is a recognized key, `matcher` required | **`OBSERVED`** | done: type-probe, with `zzz_fake.sub=1` (ignored) and `model=1` (error) as controls |
+| `hooks.PreToolUse` is a recognized key | **`OBSERVED`** | done: wrong types error on three consecutive runs while `zzz.PreToolUse=1` is ignored and `model=1` errors — three controls |
+| `matcher` is required in a hook group | 🔴 **`WITHDRAWN`** | asserted from one run, does not reproduce over three with the controls green. `matcher` is how *this* repository scopes its hook, not a runtime requirement. Recorded because the claim had already been used to judge another actor's registration |
 | the shipped registration parses | **`OBSERVED`** | done: `codex doctor` exits 0 on it, and 1 when a broken key is prepended |
-| **the hook actually FIRES, before the shell mutates anything** | 🔴 **`UNVERIFIED`** | a Codex session that runs `git add -A` in a scratch fixture and is refused. `codex doctor` does not load hooks, so no local no-cost probe reaches it. **This is a spend** — `DEFAULT_EXTERNAL_SPEND = 0`, Annex J.4 — and needs `HUMAN_APPROVAL (TYPE: SPEND)` |
+| **the hook actually FIRES, before the shell mutates anything** | 🔴 **`UNVERIFIED` here, and `OBSERVED NOT FIRING` by a peer** — see § 8 | a Codex session that runs `git add -A` in a scratch fixture and is refused. `codex doctor` does not load hooks, so no local no-cost probe reaches it. **This is a spend** — `DEFAULT_EXTERNAL_SPEND = 0`, Annex J.4 — and needs `HUMAN_APPROVAL (TYPE: SPEND)` |
 | hook trust: a project hook requires a trusted directory and a persisted hash | `DOCUMENTED` | the same session probe records what the trust prompt actually demands |
 
 **While the firing row is `UNVERIFIED`, `runtime_parity.py` exits non-zero and a Codex actor
@@ -194,3 +196,41 @@ one reason.
 | `FAIL_CLOSED_ON_MISSING_BRIDGE` | a missing engine, a malformed payload or an unknown tool produces anything but a denial |
 | `NO_SELF_ELECTION` | any artifact derives `ACTOR_ID` from runtime, session, worktree or branch |
 | `NO_RUNTIME_AUTHORITY_ESCALATION` | a control exists on one side and not the other, or `CODEX_HOOK_FIRES` is still `UNVERIFIED` |
+
+## 8 · A second, concurrent implementation — reported, not merged
+
+While this protocol was being written, branch `codex-bridge-integration` (8 commits ahead of
+`main`, in a worktree belonging to another session) was independently building the same
+bridge. Four files collide by name: `AGENTS.md`, **this file**,
+`scripts/guard_bash_command.py` and its test. **Nothing here merges, overrides or defers to
+it.** Two writers on one problem is an Orchestrator adjudication, not an author's.
+
+Two of that branch's results bear on rows above and are recorded because they are *stronger*
+than what this work could reach, not because a peer said so:
+
+🔴 **It ran the session probe, and the hook did not fire.** *"A `PreToolUse` command hook did
+not run and did not block. The probed shell command executed normally and the hook script was
+never invoked."* — Codex CLI 0.147.0, 2026-08-26. That moves § 5's last row from
+"unmeasured" to "measured negative", and the read-only floor is doing all the work. Its own
+record is careful about the cause: the hook-trust gate is an **inference from a flag's
+existence**, explicitly not a measurement, and must not be reported as the reason.
+
+🔴 **The output contract Codex enforces is narrower than the schema it ships.** That branch
+reports `permissionDecision` accepting only `deny`, a denial with an empty
+`permissionDecisionReason` being rejected, and `decision`, `continue`, `stopReason`,
+`suppressOutput` and `updatedInput` all rejected on this event — against the
+`pre-tool-use.command.output` schema extracted here, which *declares* all of them. Both can
+be true: a declared wire and a narrower validator. **The engine happens to satisfy the
+narrow reading** — it emits `hookSpecificOutput` with exactly `hookEventName`,
+`permissionDecision: "deny"` and a non-empty reason, and emits nothing at all on allow — so
+no change follows. It is written down because a future edit that starts emitting `continue`
+or `updatedInput` would break Codex and pass every test in this repository.
+
+Class: `REPORTED_BY_PEER`. Not reproduced here, and it is not promoted by being plausible.
+
+**The two registrations disagree on where a Codex hook is declared** — `.codex/config.toml`
+with a `hooks.PreToolUse` table here, `.codex/hooks.json` there. Neither has been observed
+loading. The type-probe above is evidence for the first and there is no equivalent evidence
+for the second, which settles nothing: an unrecognised config key is *ignored*, so a file the
+loader never reads and a key the loader accepts but never reaches look identical from
+outside. One probe answers both, and it is the same probe § 5 already owes.
