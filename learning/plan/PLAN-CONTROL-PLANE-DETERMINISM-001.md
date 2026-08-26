@@ -332,6 +332,19 @@ Every candidate passed **isolated** validation before entering, and each ordered
 measured. The only conflicts are on `run_release_regressions.py`, resolved by union — correct
 because `test_release_runner_verdict` reads `set(runner.TESTS)`, so position is not asserted.
 
+| Prefix step | runner entries | mode-bit offenders | duplicate tests | fails | conflict | new failures |
+|---|:--:|:--:|:--:|:--:|---|---|
+| `RELSURF` | 66 | 0 | 0 | 4 | clean | *(baseline)* |
+| + `CPROOT` | 67 | 0 | 0 | 4 | union | none |
+| + `REPOSURFACE` | 68 | 0 | 0 | 4 | clean | none |
+| + `GOVTESTS` | 70 | 0 | 0 | 4 | union | none |
+| + `ADJFAILCLOSED` | 71 | 0 | 0 | 4 | union | none |
+| + `P7LEDGER` | 72 | 0 | 0 | 4 | union | none |
+| + `APQCONS` | 74 | 0 | 0 | 4 | union | none |
+| + `ORCHMAJOR2` | 74 | 0 | 0 | 4 | clean | none |
+
+`main` fails **6**. The composed branch fails **4**, and the four are one class.
+
 **Zero mode-bit offenders and zero duplicate test entries at every prefix**, and no prefix
 introduced a failure. The four residual failures are the CLAUDE.md router class throughout.
 
