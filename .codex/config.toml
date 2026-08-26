@@ -1,0 +1,52 @@
+# LEGEND — Codex adapter registration.
+#
+# This file is the Codex half of the runtime bridge. Its Claude counterpart is
+# `.claude/settings.json`, and BOTH register the SAME engine:
+# `framework/scripts/pre_tool_use_guard.py`. There is no Codex copy of the policy and
+# there must never be one — see `framework/protocols/runtime_bridge.md`.
+#
+# ─────────────────────────────────────────────────────────────────────────────────
+# WHAT WAS MEASURED, AND WHAT WAS NOT
+# ─────────────────────────────────────────────────────────────────────────────────
+#
+# Against the installed runtime (codex-cli 0.147.0), with controls, on 2026-08-26:
+#
+#   OBSERVED    a project `.codex/config.toml` IS loaded — a deliberately wrong type on
+#               a known key (`model = 1`) made `codex doctor` exit 1 from a scratch
+#               fixture, while an unknown key (`zzz_fake = 1`) exited 0.
+#   OBSERVED    `hooks.PreToolUse` is a recognized config key: wrong-typed values are a
+#               hard config error, an invented key is ignored. `matcher` is required —
+#               a group without one is rejected.
+#   OBSERVED    the group shape written below parses.
+#   DOCUMENTED  the runtime describes this file as "Project `.codex/config.toml`:
+#               settings for a trusted repository, including sandbox, MCP, hooks, model,
+#               and reasoning defaults", and gates project-local hooks behind directory
+#               trust and a persisted hook hash.
+#
+#   🔴 NOT OBSERVED — that the hook actually FIRES, and that it fires BEFORE the shell
+#   mutates anything. `codex doctor` does not load hooks, so no local no-cost probe can
+#   settle it; settling it needs a Codex session, which is a spend. Until a session
+#   probe records otherwise, `framework/scripts/runtime_parity.py` reports
+#   CODEX_HOOK_FIRES = UNVERIFIED and the parity battery FAILS. Parsing is not firing,
+#   and a registration that parses is not a control.
+#
+# ─────────────────────────────────────────────────────────────────────────────────
+# WHY THE COMMAND PATH IS RELATIVE
+# ─────────────────────────────────────────────────────────────────────────────────
+#
+# `deployment/deployment_profile.md` forbids an absolute path anywhere in the portable
+# half: one hard-coded home directory makes a clone non-portable, and this file is
+# tracked into every worktree. Codex resolves the repository root per working directory
+# — `codex doctor` reported `repo root` as the worktree, not the shared checkout — so a
+# relative path resolves correctly in each actor's own worktree, which is also the only
+# reading of `ONE_WRITER_PER_WORKING_DIRECTORY` that survives six actors.
+
+[hooks]
+PreToolUse = [
+  { matcher = "shell_command", hooks = [
+    { type = "command", command = "python3 framework/scripts/pre_tool_use_guard.py" },
+  ] },
+  { matcher = "unified_exec", hooks = [
+    { type = "command", command = "python3 framework/scripts/pre_tool_use_guard.py" },
+  ] },
+]

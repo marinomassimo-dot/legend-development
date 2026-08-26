@@ -71,6 +71,10 @@ TESTS = (
     "framework/scripts/test_figure_ppi_preflight.py",
     "framework/scripts/test_pmc_pow_fetch.py",
     "framework/scripts/test_recapture_snippets.py",
+    # The runtime bridge: one guard engine registered by both runtimes, and the battery
+    # that refuses the bridge when they stop agreeing. Added 2026-08-26 with the bridge.
+    "framework/scripts/test_pre_tool_use_guard.py",
+    "framework/scripts/test_runtime_parity.py",
     ".claude/skills/legend-study-intake-triage/scripts/"
     "test_study_dedup_triage.py",
     ".claude/skills/legend-batch-inferential-sweep/scripts/"

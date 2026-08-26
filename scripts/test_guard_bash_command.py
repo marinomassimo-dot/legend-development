@@ -133,13 +133,27 @@ class HookContract(unittest.TestCase):
         self.assertEqual(code, 0)
         self.assertEqual(out, "")
 
-    def test_malformed_payload_never_blocks(self) -> None:
+    def test_malformed_payload_fails_closed(self) -> None:
+        """🔴 REVERSED on 2026-08-26, and the reversal is the point of the change.
+
+        This assertion read `test_malformed_payload_never_blocks` and pinned the
+        opposite behaviour: stdin that did not parse produced no output, and the command
+        ran. That was defensible while one runtime registered the guard — a malformed
+        payload then meant a harness bug, and blocking every command on a harness bug is
+        worse than the bug. It stops being defensible the moment a second runtime
+        registers the same engine, because "the payload did not parse" becomes
+        indistinguishable from "this runtime's payload is shaped differently", and the
+        fail-open answer hands the unrecognised runtime a guard that says yes to
+        everything. A guard that cannot read its input does not know the command is safe.
+        """
         result = subprocess.run(
             [sys.executable, str(HERE / "guard_bash_command.py")],
             input="not json", capture_output=True, text=True,
         )
-        self.assertEqual(result.returncode, 0)
-        self.assertEqual(result.stdout.strip(), "")
+        self.assertEqual(result.returncode, 0, "a denial is not an error")
+        decision = json.loads(result.stdout)["hookSpecificOutput"]
+        self.assertEqual(decision["permissionDecision"], "deny")
+        self.assertIn("did not parse as JSON", decision["permissionDecisionReason"])
 
 
 if __name__ == "__main__":
