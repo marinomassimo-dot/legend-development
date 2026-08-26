@@ -231,6 +231,27 @@ The only conflicts are on `run_release_regressions.py`, resolved by union — co
 suites are red on `main` and on every prefix, and they are a normative decision, not a defect any
 of these candidates introduced.
 
+| Prefix step | runner entries | mode-bit offenders | duplicate tests | failures | conflict | new failures |
+|---|:--:|:--:|:--:|:--:|---|---|
+| `RELSURF` | 66 | 0 | 0 | 4 | clean | *(baseline)* |
+| + `CPROOT` | 67 | 0 | 0 | 4 | union | none |
+| + `REPOSURFACE` | 68 | 0 | 0 | 4 | clean | none |
+| + `LEASESINGLETON` | 69 | 0 | 0 | 4 | union | none |
+| + `GOVTESTS` | 71 | 0 | 0 | 4 | union | none |
+| + `ADJFAILCLOSED` | 72 | 0 | 0 | 4 | union | none |
+| + `P7LEDGER` | 73 | 0 | 0 | 4 | union | none |
+| + `APQCONS` | 75 | 0 | 0 | 4 | union | none |
+| + `ORCHMAJOR2` | 75 | 0 | 0 | 4 | clean | none |
+
+`main` fails **6**. The composed branch fails **4** — the router class throughout. **Zero
+mode-bit offenders and zero duplicate entries at every prefix**, and no prefix introduced a
+failure. Runner entries 65 → **75**.
+
+⚠️ Content-hash invalidation is total and unavoidable: any candidate executing moves `BASE_HEAD`
+for the other eight, so all eight rebase and rehash. What the order buys is that each is measured
+against a guard an earlier candidate has already cleaned — which is how the `100644` shebang and
+the `.git` pruning bypass were both found.
+
 ---
 
 ## 10 · Candidates
