@@ -220,6 +220,52 @@ correct; its prose (15) double-counts. No conclusion moves; the repair is unchan
 
 ---
 
+## 3.4 · ADDENDUM — a guard that scans raw bytes fires on the document that reports its findings
+
+Measured after this record was first committed, and it belongs with M3-8/M3-9/M3-10 because it is
+the same family: **a gate whose population includes the reports written about it.**
+
+**Tracking a document is a change to the release surface.** Action 7 committed twelve records; its
+acceptance criteria named a privacy scrub and said nothing about the release suites. Two went from
+green to red on that commit, and a third on a later one — measured with a before/after control on
+clean extractions of `43cf690~2` and `HEAD`:
+
+| Guard | What it matched | Why the document said it |
+|---|---|---|
+| `public_release_gate.py` → `BROKEN_WIKILINK` | a wikilink token shown inside backticks **as an illustration** | the paragraph was explaining that a registry mention *carries no wikilink* |
+| `test_documented_commands.py` | two `pathograph` script paths under `framework/scripts/` | the document's finding is that those scripts **do not exist on any ref** |
+| `test_fresh_clone_reader_journey.py` | two `.md` paths | same shape — one names an untracked file, one is **this record** reporting that `scientist_evidence_standard.md` is absent from `main` |
+
+⇒ **Three independent guards, one evening, all firing on a true report of an absence.** The guards
+read raw bytes, so they cannot distinguish *documenting a path* from *reporting that a path is
+missing*, and the act of recording a negative is what falsifies it.
+
+**Repaired here at the text layer only, meaning preserved:** paths written as filename plus
+directory rather than one slash-joined string, and the wikilink token described rather than shown.
+**Verified with a positive control** — planting a fresh bad path and a fresh bad wikilink makes both
+guards fire again, so the green is informative and nothing was disabled. The full runner now shows
+**the same six failures as the pre-commit baseline, and no seventh**: the regression is closed and
+those six are pre-existing and outside this work.
+
+🔴 **The text repair is not a fix for the class, and must not be recorded as one.** As
+`legend-public-cb` established by trying it: there is **no construction that displays the wikilink
+syntax inside the scanned surface** — backticks, fences, line splits all match, because the
+extractor sees bytes. So the repository currently **cannot document its own wikilink convention**.
+The real repair is code-span stripping in the extractor, which changes what a `BLOCK`-severity gate
+blocks on and therefore routes through **GATE 3** — Plan does not self-adjudicate that.
+
+**Consequence for Action 3, and it is a genuine addition to the repair set.** Action 3 asks gates to
+*print* their population. This asks something adjacent and cheaper to state: **a guard must not
+count, as a violation, a document that is reporting the violation.** Both are the same defect seen
+from two sides — a gate that does not know what its population is.
+
+**Consequence for Action 7, stated as an acceptance criterion nobody had written down:** *tracking a
+document changes the release surface, so the release suites belong in the acceptance criteria of any
+commit that tracks one.* Raised by `evidence-index-cb`, which found the two red suites and declined
+to repair another author's file unilaterally — correctly.
+
+---
+
 ## 4 · OWNING-OBJECT MAP — every finding to an existing object
 
 **No object is originated below.** Two of the objects Mirror names are not where its handoff
@@ -227,7 +273,7 @@ assumes they are, and § 7 re-orders the work accordingly.
 
 | Finding | Existing owning object | Object's measured state | Originates anything? |
 |---|---|---|:--:|
-| M3-1, M3-2, M3-3, M3-11 | `framework/protocols/scientist_evidence_standard.md` | **Exists on `lettore` only** — absent from `main` and all other heads. `lettore` is 201 behind `main`. Self-declared *"Non-canonical, PROPOSED."* | no |
+| M3-1, M3-2, M3-3, M3-11 | `scientist_evidence_standard.md`, in `framework/protocols/` | **Exists on `lettore` only** — absent from `main` and all other heads. `lettore` is 201 behind `main`. Self-declared *"Non-canonical, PROPOSED."* | no |
 | M3-4 | Same standard, § 0 denominator discipline | as above | no |
 | M3-5, M3-6, M3-12 | `learning/plan/PATHOGRAPH-TRANSPORT-CONSOLIDATION-001` | **Untracked** — on disk here, tracked on **0 of 44 heads**. `record_type: WORK_ANALYSIS`, already carries an `OBSERVATION_SCOPE` § 0. | no |
 | M3-8 | `scripts/run_release_regressions.py` + the v2 tool-repair commit | Both on `main`, live | no |

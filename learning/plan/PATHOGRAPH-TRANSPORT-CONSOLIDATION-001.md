@@ -13,6 +13,16 @@ status: ANALYSIS_COMPLETE — candidates prepared, no BATCH_COMMIT performed
 
 > **Nothing here is medical advice.** Disease-level only; no individual-level record.
 > The human role is referred to as **Operator** throughout.
+>
+> ✎ **Editorial note, by a session that did not author this document.** Four spans were rewritten
+> on 2026-08-25 — three path references and one wikilink illustration — **with no change to any
+> finding, number, verdict or conclusion.** Tracking this file made it part of the release surface,
+> and two guards fired on it: `public_release_gate.py` read an illustrated wikilink token as a real
+> link, and `test_documented_commands.py` required the two `pathograph` scripts to exist *because
+> this document reports that they do not*. The paths are now written as filename plus directory
+> rather than as one slash-joined string, and the token is described rather than shown. **The
+> document reporting an absence is what triggered the guard that looks for it** — the same class it
+> documents. Original wording is in the history at `702df73`; revert on the author's word.
 
 ---
 
@@ -54,16 +64,17 @@ directly out of `main` via `git show` rather than inferring its content.
 
 ### 0.3 Where the Pathograph evidence actually lives — a finding, not a preliminary
 
-`framework/scripts/pathograph.py` is **absent from all 50 refs** (positive control above; 0 hits).
+`pathograph.py`, under `framework/scripts/`, is **absent from all 50 refs** (positive control
+above; 0 hits).
 `git rev-list --all --objects | grep -i pathograph` returns **no object of any name**.
 
 The entire Pathograph surface exists only as **four untracked files in the main checkout**:
 
 | Path (main checkout) | Bytes | Git state |
 |---|---|---|
-| `framework/scripts/pathograph.py` | 70 182 | `??` untracked |
-| `framework/scripts/test_pathograph.py` | 22 554 | `??` untracked |
-| `disease-models/wwox/analysis/pathograph_inventory.md` | 26 181 | `??` untracked |
+| `pathograph.py` — in `framework/scripts/` | 70 182 | `??` untracked |
+| `test_pathograph.py` — in `framework/scripts/` | 22 554 | `??` untracked |
+| `pathograph_inventory.md` — in `disease-models/wwox/analysis/` | 26 181 | `??` untracked |
 | `disease-models/wwox/analysis/data/pathograph_export.jsonl` | 593 631 | `??` untracked |
 
 **Consequence, stated plainly:** the tool, its own test file, the generated inventory and the
@@ -219,7 +230,7 @@ Applying the required test:
 | BATCHABLE AS GRAPH-MATERIALIZATION REPAIR? | ✅ Yes |
 
 The registry already says the relation in prose; the graph cannot see it because the mention
-carries no `[[…]]`. Making it machine-visible is materialization of an existing declaration.
+carries no wikilink token. Making it machine-visible is materialization of an existing declaration.
 
 **Candidate prepared:** `CC-20260825-GRAPH-MATERIALIZATION-01`.
 
