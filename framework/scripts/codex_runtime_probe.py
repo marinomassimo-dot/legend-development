@@ -156,19 +156,23 @@ CALL_TYPES = ("custom_tool_call", "function_call", "local_shell_call")
 def read_rollout(path: Path):
     meta, tools = {}, {}
     try:
-        for line in path.open(encoding="utf-8", errors="replace"):
-            try:
-                record = json.loads(line)
-            except ValueError:
-                continue
-            payload = record.get("payload") or {}
-            if not isinstance(payload, dict):
-                continue
-            if record.get("type") == "session_meta" and not meta:
-                meta = payload
-            if payload.get("type") in CALL_TYPES:
-                name = payload.get("name") or payload.get("type")
-                tools[name] = tools.get(name, 0) + 1
+        # A context manager, not a bare `path.open(...)` in a for-clause: the corpus is 62
+        # files and counting, and a leaked handle per rollout is a probe that stops being
+        # able to read the corpus it is measuring.
+        with path.open(encoding="utf-8", errors="replace") as handle:
+            for line in handle:
+                try:
+                    record = json.loads(line)
+                except ValueError:
+                    continue
+                payload = record.get("payload") or {}
+                if not isinstance(payload, dict):
+                    continue
+                if record.get("type") == "session_meta" and not meta:
+                    meta = payload
+                if payload.get("type") in CALL_TYPES:
+                    name = payload.get("name") or payload.get("type")
+                    tools[name] = tools.get(name, 0) + 1
     except OSError:
         return None
     return {"rollout": path.name, "cli_version": meta.get("cli_version"),

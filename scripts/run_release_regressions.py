@@ -75,6 +75,14 @@ TESTS = (
     # that refuses the bridge when they stop agreeing. Added 2026-08-26 with the bridge.
     "framework/scripts/test_pre_tool_use_guard.py",
     "framework/scripts/test_runtime_parity.py",
+    # The probe behind the matcher list. Its finding is a set of ZEROES — which tool names
+    # never appear — and a zero from a sweep that silently parsed nothing is indistinguish-
+    # able from a zero that is true. This suite is the positive control for those zeroes.
+    # 🔴 `codex_runtime_probe.py` itself is NOT enrolled: it reads ~/.codex, which does not
+    # exist in CI, and `mutate_guard_suite.py` is not enrolled either — it spawns a worktree
+    # per mutation and takes tens of minutes. Both are operator-run instruments; only their
+    # parsing is a regression.
+    "framework/scripts/test_codex_runtime_probe.py",
     ".claude/skills/legend-study-intake-triage/scripts/"
     "test_study_dedup_triage.py",
     ".claude/skills/legend-batch-inferential-sweep/scripts/"
