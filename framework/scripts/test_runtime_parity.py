@@ -470,6 +470,45 @@ class EachDimensionCanGoRed(unittest.TestCase):
         self.assertFalse(ok, "a Codex-only permission must fail GUARD_POLICY_PARITY")
         self.assertIn("codex=allow", detail)
 
+    def test_a_missing_matcher_for_a_tool_the_runtime_uses_is_named(self) -> None:
+        """The condition a failing sibling row was hiding.
+
+        🔴 Found by mutation M25: `NO_RUNTIME_AUTHORITY_ESCALATION` already fails today on
+        the hook state, so deleting the matcher check entirely changed no verdict and no
+        test noticed. The row's *detail* is therefore asserted, not just its boolean —
+        which is the only way to test one condition of a check that has several.
+        """
+        with tempfile.TemporaryDirectory() as tmp:
+            surface = build_fixture(tmp, rewrite={
+                ".codex/config.toml":
+                    '[hooks]\nPreToolUse = [{ matcher = "shell_command", hooks = ['
+                    '{ type = "command", command = '
+                    '"python3 framework/scripts/pre_tool_use_guard.py" }] }]\n',
+            })
+            _, detail = row(surface, rp.check_no_runtime_authority_escalation)
+        self.assertIn("no matcher for Codex tool `exec`", detail)
+        self.assertIn("no matcher for Codex tool `unified_exec`", detail)
+
+    def test_the_real_registration_declares_every_tool_the_check_requires(self) -> None:
+        _, detail = row(REAL, rp.check_no_runtime_authority_escalation)
+        self.assertNotIn("no matcher", detail,
+                         "the shipped registration must not be missing a matcher")
+
+    def test_matchers_are_whole_values_not_substrings(self) -> None:
+        """`exec` is a substring of `unified_exec`, and that once passed the check."""
+        with tempfile.TemporaryDirectory() as tmp:
+            surface = build_fixture(tmp, rewrite={
+                ".codex/config.toml":
+                    '[hooks]\nPreToolUse = [{ matcher = "unified_exec", hooks = ['
+                    '{ type = "command", command = '
+                    '"python3 framework/scripts/pre_tool_use_guard.py" }] }]\n',
+            })
+            declared = rp.codex_matchers(surface)
+            _, detail = row(surface, rp.check_no_runtime_authority_escalation)
+        self.assertEqual(declared, {"unified_exec"})
+        self.assertIn("no matcher for Codex tool `exec`", detail,
+                      "a substring test would have reported `exec` as declared")
+
     def test_guard_policy_parity_fails_when_both_sides_agree_on_the_wrong_answer(self) -> None:
         """Agreement is not correctness — two permissive sides agree perfectly.
 

@@ -54,17 +54,24 @@
 # THE MATCHER LIST, AND THE TOOL NAME THAT WAS MISSING FROM IT
 # ─────────────────────────────────────────────────────────────────────────────────
 #
-#   🔴 OBSERVED, 2026-08-28 — a real Codex session in this repository called NEITHER
-#   `shell_command` NOR `unified_exec`. All 20 of its tool calls were the code-mode tool
-#   `exec`, each carrying a JavaScript body that called
-#   `tools.exec_command({"cmd": …, "workdir": …})`. Instrument: the session's own rollout
-#   at ~/.codex/sessions/2026/08/28/rollout-2026-08-28T10-14-22-01a0476f-…jsonl, written by
-#   codex 0.150.0-alpha.8 via the VS Code extension (`originator: codex_vscode`), cwd
-#   .claude/worktrees/mirror.
+#   🔴 OBSERVED, 2026-08-28, over the WHOLE local session corpus — `shell_command` and
+#   `unified_exec` appear ZERO times in 62 recorded sessions. In the 17 whose cwd is inside
+#   this repository the tool is `exec` 2988 times and nothing else but `wait`; `exec_command`
+#   survives across the corpus only on cli_version <= 0.145, which is why it stays declared.
+#   Each `exec` call carries a JavaScript body calling
+#   `tools.exec_command({"cmd": …, "workdir": …})`.
 #
-#   A two-matcher registration would therefore have policed nothing in that session even
-#   had it fired, and the parity battery would have gone on reporting a guard that was
-#   never consulted. `exec` and `exec_command` are registered below, and
+#   INSTRUMENT  python3 framework/scripts/codex_runtime_probe.py   (read-only, no spend)
+#               It prints MATCHER_COVERAGE — declared, used-here, used-and-undeclared,
+#               declared-and-never-seen — so this list cannot go stale silently again.
+#
+#   🔴 The first reading of this said "20 calls in one session". That was a count taken
+#   from a rollout that was STILL RUNNING; the same file reached 27 an hour later. The
+#   claim that survives is the proportion, not the count.
+#
+#   A two-matcher registration would therefore have policed nothing in any recorded session
+#   even had it fired, and the parity battery would have gone on reporting a guard that was
+#   never consulted. `exec`, `exec_command` and `apply_patch` are registered below, and
 #   `pre_tool_use_guard.py` reduces a code-mode body to the shell commands inside it.
 #
 #   🔴 The runtime that ran was NOT the runtime this file was measured against: 0.147.0 on

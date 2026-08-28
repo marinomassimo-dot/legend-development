@@ -86,24 +86,39 @@ documentation about them.
 | project registration | `.claude/settings.json` | `.codex/config.toml`, key `hooks.PreToolUse` | `OBSERVED` — type-probe with three controls, § 5 |
 | output actually accepted | the full object | 🔴 **narrower than its own schema** — see § 8 | `REPORTED_BY_PEER` |
 
-### 2.1 · The matcher list was wrong, and a real session is what said so
+### 2.1 · The matcher list named two tools no session has ever called
 
-🔴 **`OBSERVED`, 2026-08-28.** A Codex session working in a LEGEND worktree called neither
-`shell_command` nor `unified_exec`. All **20** of its tool calls were the code-mode tool
-`exec`, each carrying a JavaScript body of the form
-`const r = await tools.exec_command({"cmd": …, "workdir": …});`.
+🔴 **`OBSERVED`, 2026-08-28, over the whole local session corpus** — not over one session,
+for a reason § 2.2 records.
 
 ```
-INSTRUMENT   ~/.codex/sessions/2026/08/28/rollout-2026-08-28T10-14-22-01a0476f-….jsonl
-             session_meta.cli_version   0.150.0-alpha.8
-             session_meta.originator    codex_vscode
-             session_meta.cwd           .claude/worktrees/mirror
-             20 × response_item.custom_tool_call, name "exec"
+INSTRUMENT   python3 framework/scripts/codex_runtime_probe.py
+             reads ~/.codex/sessions/**/rollout-*.jsonl — read-only, no spend
+
+             62   rollouts on disk
+             17   with cwd inside this repository
+        2988 × exec        in those 17          144 × wait      and nothing else
+           0 × shell_command                      0 × unified_exec   — in ALL 62
+        5795 × exec        across all 62
+        1264 × exec_command  across all 62, and every one of them on cli_version ≤ 0.145
+         367 × apply_patch · 38 × write_stdin
 ```
 
-A two-matcher registration would therefore have policed **nothing** in that session even had
-it fired, while the battery went on reporting a guard that was never consulted. Two things
-follow, and both are implemented rather than filed:
+Every LEGEND-worktree call is the code-mode tool `exec`, carrying a JavaScript body of the
+form `const r = await tools.exec_command({"cmd": …, "workdir": …});`. The two names
+revision 2 registered — `shell_command` and `unified_exec` — appear **zero times in 62
+sessions**, and `exec_command` survives only as the top-level tool of runtimes at or below
+`0.145`, which is why it stays registered.
+
+A two-matcher registration would therefore have policed **nothing** in any recorded session
+even had it fired, while the battery went on reporting a guard that was never consulted.
+`codex_runtime_probe.py` now prints `MATCHER_COVERAGE` — what is declared, what is used
+here, what is used and *not* declared, and what is declared and never seen — so this cannot
+go stale silently again. It currently reports `wait` as used-and-undeclared; `wait` blocks
+on a process rather than starting one, so it is not a mutation path, and it is listed rather
+than filtered so the next reader decides that for themselves.
+
+Two things follow, and both are implemented rather than filed:
 
 1. `.codex/config.toml` registers `exec`, `exec_command` and `apply_patch` as well;
 2. `pre_tool_use_guard.py` reduces a code-mode body to the shell commands inside it, and
@@ -111,9 +126,27 @@ follow, and both are implemented rather than filed:
    a call the guard cannot clear, not a call it may ignore.
 
 🔴 **The runtime that ran is not the runtime this protocol measured.** `codex --version` on
-the CLI is `0.147.0`; the session ran `0.150.0-alpha.8` in the VS Code extension. Under
-`cross_session_transport.md` § 3 that makes every row above **unmeasured** for the extension
-host rather than false — including the input schema, the output schema and the config key.
+the CLI is `0.147.0`; the recorded sessions ran `0.150.0-alpha.8` in the VS Code extension.
+Under `cross_session_transport.md` § 3 that makes every row above **unmeasured** for the
+extension host rather than false — including the input schema, the output schema and the
+config key.
+
+### 2.2 · A count taken from a live file, and the correction
+
+The first reading of this finding said *"all **20** of its tool calls"*, from one rollout,
+and that number went into three committed artifacts. It was correct when taken and wrong an
+hour later: **the session was still running**, and the same file reached 27 calls by the
+time it was re-read.
+
+The repair is not a bigger number. It is a claim that does not decay: **which tool names
+appear at all, and which appear zero times**. A proportion over a closed set survives the set
+growing; a count does not. The figures above are therefore all re-derivable by running
+`codex_runtime_probe.py`, and the protocol quotes the probe rather than a transcription of
+one reading of one file.
+
+This is the second time on this candidate that a number was true of the tree that produced
+it and false of the tree that carried it — the first is `CANDIDATE_CONTENT_HASH`, which is
+why that manifest carries an invariance check.
 
 🔴 **The output side needed no adapter at all.** The object this repository already emitted
 for Claude validates against Codex's own output schema unchanged. That is a fact about the
