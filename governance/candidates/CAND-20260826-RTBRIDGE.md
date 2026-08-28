@@ -1,7 +1,7 @@
 ---
 artifact: INTEGRATION_CANDIDATE — Claude ↔ Codex minimum runtime bridge
 candidate_id: CAND-20260826-RTBRIDGE
-revision: 3
+revision: 4
 task_id: RTBRIDGE-P00-001
 author: plan
 authored_on: 2026-08-26
@@ -10,7 +10,7 @@ governance_version: 3.1.1
 domain: CONTROL PLANE — governance/candidates/ is a declared CONTROL_PLANE_ROOT (P5.1), so this
   file is outside the candidate content domain and cannot move the hash it records
 partition: >
-  FIVE REVIEW UNITS over ONE tip, and the single tip is argued in § 2 rather than assumed.
+  SIX REVIEW UNITS over ONE tip, and the single tip is argued in § 2 rather than assumed.
   A reviewer may accept or reject each unit independently; § 10 gives each one its own revert.
 human_approval: >
   NOT REQUESTED for the content. One item DOES require it and is not prefilled: the Codex
@@ -29,18 +29,18 @@ BASE_HEAD                 f2b8ecf11e77ebe86e6e17b6348e6469cc2e432b
                           it is used deliberately: main is 788c357 and this branch carries
                           80 prior Plan commits that are NOT part of this candidate. Hashing
                           against main would bind all of them to this review.
-TIP                       e40e6201b9f4ddbfb1e248e0fe9533a990fe7d17
+TIP                       6a4a3a43960116c858c00cbfcd9bbc2d1edc4881
                           the last commit in the CONTENT domain. This file is committed
                           after it, and cannot move the hash — see the invariance note.
-CANDIDATE_CONTENT_HASH    4d55c865a79388c9e87fe094fe01db6a0ef8e5d3396da1275270d39def7ad832
-                          🔴 SUPERSEDES 7f88cf34d8d19527bd3e7e295f5fada03e1561d6771ab3b0108d527f98323f2a
-                          at tip 7a867e7 (revision 2), which superseded
-                          6277b98e023734c0ab23177b5ca4f7642438a9d07d8fd52b78e002c639678d93
-                          at tip cda34cf (revision 1). Both were correct for the trees they
-                          named and are superseded, not withdrawn (Annex D.2). They stay
-                          visible because a candidate that silently rewrites its own hash
-                          teaches a reviewer to trust the current value, which is the one
-                          thing a hash cannot ask for.
+CANDIDATE_CONTENT_HASH    99b24e000513aca2575868447b655eab261a731c8e632b4892f26426342807d4
+                          🔴 SUPERSEDES, newest first:
+                            4d55c865…07ad832  tip e40e620  revision 3
+                            7f88cf34…8323f2a  tip 7a867e7  revision 2
+                            6277b98e…9678d93  tip cda34cf  revision 1
+                          Each was correct for the tree it named and is superseded, not
+                          withdrawn (Annex D.2). They stay visible because a candidate that
+                          silently rewrites its own hash teaches a reviewer to trust the
+                          current value, which is the one thing a hash cannot ask for.
 CHANGE_CLASS              MAJOR — it reverses what a safety control does on a malformed
                           payload (§ 5), it introduces a second registrant of that control,
                           and revision 3 CHANGES WHAT IS FORBIDDEN FOR EVERY ACTOR IN BOTH
@@ -48,19 +48,23 @@ CHANGE_CLASS              MAJOR — it reverses what a safety control does on a 
                           declaration and not the classification.
 RECIPE                    python3 governance/scripts/candidate_content_hash.py \
                             --base f2b8ecf11e77ebe86e6e17b6348e6469cc2e432b \
-                            --tip  e40e6201b9f4ddbfb1e248e0fe9533a990fe7d17
+                            --tip  6a4a3a43960116c858c00cbfcd9bbc2d1edc4881
 INVARIANCE                Run the same recipe with --tip set to the branch tip that carries
                           THIS FILE. It must print the same value, because every commit
-                          after e40e620 on this branch touches only governance/candidates/,
+                          after 6a4a3a4 on this branch touches only governance/candidates/,
                           which P5.1 excludes. If it does not, the hash is stale and this
                           manifest is wrong — check that before reviewing anything else.
-CONTENT DOMAIN TOUCHED    11 paths:
+CONTENT DOMAIN TOUCHED    14 paths, by `git diff --name-only <base> <tip>` minus the
+                          control plane:
                             AGENTS.md
                             .codex/config.toml
                             framework/protocols/runtime_bridge.md
                             framework/scripts/guard_policy.py
                             framework/scripts/pre_tool_use_guard.py
                             framework/scripts/runtime_parity.py
+                            framework/scripts/codex_runtime_probe.py       (new)
+                            framework/scripts/mutate_guard_suite.py        (new)
+                            framework/scripts/test_codex_runtime_probe.py  (new)
                             framework/scripts/test_pre_tool_use_guard.py
                             framework/scripts/test_runtime_parity.py
                             scripts/guard_bash_command.py
@@ -68,7 +72,7 @@ CONTENT DOMAIN TOUCHED    11 paths:
                             scripts/run_release_regressions.py
 ```
 
-## 2 · Why five units and one commit series
+## 2 · Why six units and one commit series
 
 Body § 11 wants milestone granularity and the dispatch asked for units kept apart *where
 practical*. It is not practical here, and the reason is checkable rather than stylistic:
@@ -84,7 +88,7 @@ policy   is asserted by three test files at once            → they move togeth
 The artifacts are one change, and the units below are one *review* surface each, with
 independent accept/reject and independent reverts in § 10.
 
-## 3 · The five units
+## 3 · The six units
 
 | Unit | What it is | Files |
 |---|---|---|
@@ -93,6 +97,7 @@ independent accept/reject and independent reverts in § 10.
 | **C · hook adapter / shared guard** | one policy, one engine, two registrations, three payload shapes | `framework/scripts/pre_tool_use_guard.py`, `scripts/guard_bash_command.py`, `.codex/config.toml` |
 | **D · parity battery + bootstrap** | the falsifier, and the fail-closed bootstrap | `framework/scripts/runtime_parity.py`, `framework/scripts/test_runtime_parity.py`, `scripts/run_release_regressions.py` |
 | **E · the write-primitive model** 🆕 | the guard stops matching strings and starts parsing commands; twenty mutation paths close | `framework/scripts/guard_policy.py`, `framework/scripts/test_pre_tool_use_guard.py`, `scripts/test_guard_bash_command.py` |
+| **F · durable instruments** 🆕 | every machine-local derivation becomes a re-runnable script, and the suites are themselves tested | `framework/scripts/codex_runtime_probe.py`, `framework/scripts/mutate_guard_suite.py` |
 
 🔴 **Unit E is the one with a blast radius outside this candidate.** It changes what every
 actor in this repository may type, in both runtimes, the moment it lands. § 7 measures that
@@ -148,26 +153,41 @@ to edit — and it is the failure direction chosen deliberately.
 
 ## 6 · The hook: what moved in revision 3, and what did not
 
-### 6.1 · The matcher list was wrong, and a real session said so
+### 6.1 · The matcher list named two tools no session has ever called
 
-🔴 **The finding of this revision.** A Codex session ran in a LEGEND worktree on
-2026-08-28 and called **neither** `shell_command` **nor** `unified_exec`. All 20 of its
-tool calls were the code-mode tool `exec`, each carrying a JavaScript body of the form
-`const r = await tools.exec_command({"cmd": …, "workdir": …});`.
+🔴 **The finding of this revision**, and it is a corpus rather than a session.
 
 ```
-INSTRUMENT   ~/.codex/sessions/2026/08/28/rollout-2026-08-28T10-14-22-01a0476f-….jsonl
-             cli_version  0.150.0-alpha.8      originator  codex_vscode
-             cwd          .claude/worktrees/mirror
-             20 × custom_tool_call, name "exec"
+INSTRUMENT   python3 framework/scripts/codex_runtime_probe.py    read-only, no spend
+
+     62   rollouts in ~/.codex/sessions
+     17   with cwd inside this repository
+  2988 x  exec        in those 17            144 x wait,  and nothing else
+     0 x  shell_command      0 x unified_exec      -- in ALL 62 rollouts
+  5795 x  exec        1264 x exec_command (every one on cli_version <= 0.145)
+   367 x  apply_patch   38 x write_stdin
 ```
 
-Revision 2's registration would therefore have policed **nothing** in that session even had
-it fired, while the battery reported a guard that was never consulted. Both halves are
-fixed: `.codex/config.toml` registers `exec`, `exec_command` and `apply_patch`, and the
-adapter reduces a code-mode body to the shell commands inside it — denying a body whose
+Every LEGEND-worktree call is the code-mode tool `exec`, carrying a JavaScript body of the
+form `const r = await tools.exec_command({"cmd": ..., "workdir": ...});`. The two names
+revision 2 registered appear **zero times in sixty-two sessions**.
+
+Revision 2's registration would therefore have policed **nothing** in any recorded session
+even had it fired, while the battery reported a guard that was never consulted. Both halves
+are fixed: `.codex/config.toml` registers `exec`, `exec_command` and `apply_patch`, and the
+adapter reduces a code-mode body to the shell commands inside it -- denying a body whose
 shell call it cannot read, because `tools.exec_command(buildArgs())` is a call the guard
-cannot clear, not one it may ignore.
+cannot clear, not one it may ignore. `codex_runtime_probe.py` prints `MATCHER_COVERAGE`
+(declared, used-here, used-and-undeclared, declared-and-never-seen) so this list cannot go
+stale silently again.
+
+🔴 **Self-correction, and why the figures above are proportions.** The first reading said
+*"all 20 of its tool calls"*, taken from one rollout, and that number went into three
+committed artifacts. **The session was still running**; the same file held 27 calls an hour
+later. The count was true of the tree that produced it and false of the tree that carried
+it -- the second time on this candidate, after `CANDIDATE_CONTENT_HASH`. A count over a
+growing set decays; *which names appear zero times* does not, and it is also the claim the
+matcher list actually rests on.
 
 🔴 **The runtime that ran is not the runtime revision 2 measured.** `codex --version` is
 `0.147.0`; the session was `0.150.0-alpha.8`. Under `cross_session_transport.md` § 3 every
@@ -287,7 +307,9 @@ from a pipe (`echo 'git add -A' | sh`), and an expansion in `argv[0]`
 ```
 
 **Zero is a property of the probed set, not of the shell.** The residual debt below is what
-is known to remain open; what neither list contains is unmeasured.
+is known to remain open; what neither list contains is unmeasured — and § 11.3 is the check
+on *that*: 26 deliberate breakages of the policy, the adapter and the battery, each of which
+a suite must catch.
 
 ### 7.5 · The cost, measured
 
@@ -393,24 +415,66 @@ gone and `roles/plan.md` is not, so the failure is the assigned actor's and nobo
 
 ```
 framework/scripts/test_pre_tool_use_guard.py   31 tests   OK    (python3.9 and 3.12)
-framework/scripts/test_runtime_parity.py       46 tests   OK    (python3.9 and 3.12)
+framework/scripts/test_runtime_parity.py       49 tests   OK    (python3.9 and 3.12)
 scripts/test_guard_bash_command.py             14 tests   OK    (python3.9 and 3.12)
+framework/scripts/mutate_guard_suite.py        26 mutations — see § 11.3
 framework/scripts/legend_lint.py .                        PASS
 scripts/public_release_gate.py                            PASS, BLOCKS 0
 framework/scripts/fulltext_receipts.py verify             OK, 128 chained receipts
 framework/scripts/runtime_parity.py --actor mirror        READ_ONLY PASS · WRITE_ENABLED FAIL
-scripts/run_release_regressions.py                        FAIL, 7 suites
+scripts/run_release_regressions.py                        FAIL, 7 suites — § 11.1
+integration_matrix.py (read-only from a peer branch)      clean merge, 0 dup, 4 mode, 7 fails
 ```
 
 🔴 **Both interpreters on purpose.** CI runs Python 3.12, this machine runs 3.9, and the
 registration reader takes a different path on each — `tomllib` there, a textual check here.
 Running only one would have tested only one of them.
 
-### 11.1 · The seven pre-existing failures, re-diffed at this tip
+### 11.1 · The seven failures, with the two denominators that matter
 
 A detached worktree at `f2b8ecf` was created and the same seven suites run in both trees,
-comparing **normalised output line by line** rather than exit codes or counts. Six are
-byte-identical. The seventh is § 11.2.
+comparing **normalised output line by line** rather than exit codes or counts.
+
+```
+vs BASE f2b8ecf     7 fail there, 7 fail here, all seven signatures IDENTICAL
+                    SUITES WHOSE FAILURE CHANGED: none
+vs MAIN  788c357    6 fail there, 7 fail here
+                    FIXED by this branch      scripts/test_release_runner_verdict.py
+                    ADDED by this branch      scripts/test_documented_commands.py
+                                              scripts/test_fresh_clone_reader_journey.py
+```
+
+🔴 **The two added share one cause, and it is not this candidate's.** Both are
+`learning/plan/PLAN-INTEGRATION-TOOLING-DURABILITY-001.md` naming `integration_matrix.py`
+under `framework/scripts/` — a script that lives on `plan-integration-matrix` and not on
+this branch. One document, one absent file, two red suites — and both were already red at
+`f2b8ecf`, so they belong to earlier work on this branch rather than to this review unit.
+
+🔴 **And the lesson of § 11.2 did not transfer on the first try.** The paragraph above
+originally wrote that path out in full, inline and backticked, which made
+`test_fresh_clone_reader_journey.py` red about *this file* — the same class the same
+document diagnoses two sections later, reintroduced by the sentence describing it, for the
+second time on this candidate. Writing the rule down is not the same as applying it; the
+detector caught it, which is the argument for running the detector on your own prose before
+claiming a clean tree.
+
+🔴 **A normaliser that invented six of its own findings.** The first run of that comparison
+reported six of the seven as CHANGED. Every one was the harness: the base worktree lives
+under `/private/tmp`, and a generic tmp-path rule ordered before the repository-root rules
+rewrote the two trees' paths differently. The tool was reporting a difference it had
+created. Fixed, and the ordering is now commented in the harness, because a noisy diff
+teaches a reader to skim exactly the report that must not be skimmed.
+
+### 11.1.1 · Queue item "re-run the integration matrix"
+
+`integration_matrix.py` is **not on this branch**; it is on `plan-integration-matrix`, by
+that tool's own declaration that it belongs to no candidate. It was run **without merging
+anything**: the script was extracted with `git show <ref>:<path>` into scratch and pointed at
+this branch. Merging the branch would be an Orchestrator adjudication under Annex H.1 and is
+not an author's to take — and the operator's decision for this run forbids merging two
+runtime-bridge architectures.
+
+It reported a clean composition — and one finding about this candidate, in § 11.4.
 
 ### 11.2 · 🔴 A self-correction: revision 2's § 9 was false, and false about itself
 
@@ -444,6 +508,129 @@ without a resolvable inline path — the directory and the filename are named se
 
 The verification claim itself was the failure, not the code it described, which makes it the
 worse of the two: a reviewer would have read "re-diffed, now identical" and stopped.
+
+### 11.3 · Mutation-testing the suites: do they bite?
+
+A green suite proves the tests pass. It does not prove they would **fail** if the control
+were broken, and for a safety control that second property is the only one worth having.
+`framework/scripts/mutate_guard_suite.py` breaks the guard, the adapter and the battery
+**26 ways**, one at a time, each in a detached worktree, and requires a suite to notice.
+
+```
+M01-M12   the policy      staging silenced · unknown root fails OPEN · UNDERIVABLE allowed
+                          eval unwrapped · piped shell · ANSI-C quoting · opaque argv[0]
+                          `-c` not re-analysed · cp dropped · in-command variables
+                          in-repo write allowed · unnamed target allowed
+M13-M16   the adapter     unknown tool waved through · unreadable code-mode call skipped
+                          only the first call judged · apply_patch payload unpoliced
+M17-M26   the battery     CONFIGURED accepted as DEMONSTRATED · write floor collapsed into
+                          the read floor · unassigned actor elected · any receipt accepted
+                          · receipt provenance dropped · runtimes compared only to each
+                          other · missing engine tolerated · role reachable without a route
+                          · missing matcher unnoticed · matchers matched as substrings
+```
+
+🔴 **The first run found two things, and both were real.**
+
+- **M25 SURVIVED.** No test asserted the missing-matcher condition, because the row it
+  belongs to (`NO_RUNTIME_AUTHORITY_ESCALATION`) already fails today on the hook state — so
+  deleting the matcher check outright changed no verdict and no test noticed. Three arms
+  now assert that row's *detail* rather than its boolean, which is the only way to test one
+  condition of a check that has several.
+- **M24 was never applied** — its anchor carried an indentation the file does not have. The
+  harness reported `ANCHOR_MISSING` rather than a pass, because *a mutation that never ran
+  is not a mutation that was killed*, and a harness that scored it as one would inflate its
+  own result.
+
+🔴 **And a defect in the harness itself.** `apply_and_run` re-read `HEAD` once per
+mutation. A full run takes tens of minutes, and a commit landing halfway through split the
+run across two trees with nothing in the output saying so — which happened, on the second
+run, because I committed while it was going. The tip is now resolved **once**, printed with
+the results, and an uncommitted working tree is called out, since the worktrees carry the
+committed tree and not the one the operator is looking at.
+
+That is why only the run pinned to this candidate's content tip is quoted. The intermediate
+runs are not reported as results: one predates the repair it would have been used to
+justify, and the other is a statement about no particular tree.
+
+```
+MUTATION TEST   26 mutations, each in a detached worktree
+TIP             6a4a3a43960116c858c00cbfcd9bbc2d1edc4881   pinned once
+RESULT          KILLED 26/26     SURVIVED 0     UNUSABLE 0
+```
+
+🔴 **26/26 is a property of these 26 mutations**, not of the guard. It says every breakage
+someone thought to write down is caught; it says nothing about the breakage nobody wrote
+down. The list is in `mutate_guard_suite.py --list` so the next reader can add the one that
+is missing rather than infer from the score that none is.
+
+### 11.4 · 🔴 A second self-correction: two files this candidate added joined a red list
+
+`integration_matrix.py`, run read-only from the peer branch, reported **6 mode-bit
+offenders** on this branch against **4 on `main`**. The two extra were
+`codex_runtime_probe.py` and `mutate_guard_suite.py` — committed at mode `100644` while
+carrying a `#!` line — so this candidate made `test_release_surface.py`, already red, red
+about two more files.
+
+The failure-signature diff had said IDENTICAL, and it was, **when it was run**: the two
+scripts did not exist yet. A pre-existing failure is only pre-existing at the tip you
+measured it on, and a verification that predates half the work verifies half the work.
+
+Both bits are set; the count is back to 4, matching `main`. The remaining four are
+pre-existing and are not this candidate's to fix.
+
+🔴 **The instrument belonged to someone else.** Nothing in this candidate's own test set
+looks at file modes. It was found because a peer's tool was run against this branch, which
+is the argument for running it at all — and for the queue item that asked for it.
+
+
+### 11.5 · The one review this candidate is answerable to, and what of it is stale
+
+No review of `CAND-20260826-RTBRIDGE` exists on any of the 62 local refs — searched by
+content, not by filename. **STALE_REVIEWS = 0 for this candidate.**
+
+But one Mirror hostile review is about the same proposition and must not be treated as
+unrelated: `RUNTIME_FAILOVER_CLAUDE_CODEX_HOSTILE_REVIEW_MIRROR_v1`, on branch `mirror`,
+2026-08-26, verdict **REFUTED** — *"The control exists in every worktree, byte-identical,
+and Codex does not run it."*
+
+**Its verdict is not moved by this candidate, and this candidate does not claim to move
+it.** `WRITE_ENABLED_PARITY` still FAILS, for the reason the review gives.
+
+What this candidate *does* touch, row by row:
+
+| Review row | Status after this candidate |
+|---|---|
+| `ENFORCEMENT_PARITY` **FAILS** | **unchanged.** The guard is registered on the Codex side and still not demonstrated firing. The battery says so in its own row rather than leaving it to prose |
+| `CE-1` / `CE-2`: *"0 `hooks` keys in `~/.codex/config.toml`"* | **the row was about the USER config and remains true.** A PROJECT `.codex/config.toml` with `[hooks]` now exists, which the review's Codex column did not contemplate — and it changes nothing about the conclusion, because parsing is not firing |
+| `SEMANTIC_PARITY` **FAILS**: *"`AGENTS.md` omits the § 0 authority gate"* | **addressed at the router level**, not adjudicated: `AGENTS.md` now names `CLAUDE.md` *"including its § 0"*. Occurrences in `AGENTS.md`: `§ 0` 0 → 1, `BOOTSTRAP` 0 → 2, `ORCHESTRATOR_LEASE` 0 → 1 |
+| `CE-5`: `~/.codex/AGENTS.md` prepends a brevity directive that pulls against the locator obligations | 🔴 **independently corroborated here.** The recorded session's `world_state.agents_md` carries exactly that text above the project doc. It is a live finding and this candidate does not fix it |
+| `CONTENT_PARITY` **HIGH, with a measured hole** | 🔴 **this candidate moves that number the WRONG way — see below** |
+
+#### 11.5.1 · 🔴 A cost of the router rewrite, reported rather than left to be found
+
+The review scored content parity by how many link targets the two entry points share. On
+that metric, making `AGENTS.md` a pure router **reduces the overlap**:
+
+```
+                     CLAUDE  AGENTS  C-only  A-only  shared
+f2b8ecf  (base)          29      15      18       4      11
+HEAD                     29      14      23       8       6
+```
+
+I think the metric does not capture the property — `AGENTS.md` is deliberately a router that
+*names* obligations and sends the reader to `CLAUDE.md`, so shared link targets measure
+duplication rather than reachability, which is what `ROUTER_PARITY` and `ROLE_REACHABILITY`
+test instead. **A reviewer is entitled to disagree, and the number is put here so the
+disagreement is about the design and not about an undisclosed regression.**
+
+🔴 **These are not the review's own figures.** The review reported `31 / 18 / 20 / 7 / 11`;
+my extractor gives `29 / 15 / 18 / 4 / 11` on the review's own ref. **One of five agrees.**
+The instruments differ — mine counts Markdown link targets only — so the table above is
+comparable *within itself*, base against HEAD with one instrument, and is **not** a
+reproduction of the review's measurement. Reporting it as one would have been the error the
+tool makes on your behalf.
+
 
 ## 12 · Pre-existing debt this candidate found and did NOT fix
 
