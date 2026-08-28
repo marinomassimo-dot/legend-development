@@ -165,7 +165,6 @@ PROGRAM_WRITES = re.compile(
       | \bshutil\.(?:copy|move|copyfile|copy2|rmtree)\s*\(
       | \bos\.(?:replace|rename|remove|unlink|rmdir|truncate)\s*\(
       | \bPath\s*\([^)]*\)\s*\.\s*(?:write|unlink|rename|replace|mkdir|touch)
-      | \bsubprocess\.
       | \bfs\.(?:write|append|unlink|rename|copy|rm)
       | \bwriteFileSync\b | \bcreateWriteStream\b
       | \bFile\.(?:write|open|delete|rename)\b
@@ -176,6 +175,18 @@ PROGRAM_WRITES = re.compile(
 )
 #: String literals inside a program body, used to name that body's write targets.
 PROGRAM_STRING = re.compile(r"""['"]([^'"\n]{1,300})['"]""")
+
+#: A program body that shells out. Its ARGUMENT is a command and is judged as one.
+#:
+#: 🔴 `\bsubprocess\.` used to sit in `PROGRAM_WRITES`, treating every shell-out as a write.
+#: That denied `python3 - <<PY … subprocess.run([sys.executable, "framework/scripts/x.py"]) … PY`
+#: — invoking a committed script by name, which is the escape hatch every denial message
+#: offers. A rule that forbids the alternative it recommends is not a rule an actor can
+#: follow. Analysing the argument instead is both more permissive HERE and stricter where it
+#: matters: `subprocess.run(["rm", "-rf", "framework"])` is now read as `rm -rf framework`.
+SHELL_OUT = re.compile(
+    r"\b(?:subprocess\.(?:run|call|check_call|check_output|Popen)|os\.(?:system|popen)"
+    r"|commands\.getoutput|child_process\.(?:exec|execSync|spawn|spawnSync))\s*\(")
 
 #: `*** Update File: path` — the apply_patch envelope names its own targets.
 PATCH_TARGET = re.compile(r"^\*\*\*\s+(?:Add|Update|Delete)\s+File:\s*(.+?)\s*$", re.MULTILINE)
@@ -703,11 +714,52 @@ def analyse_interpreter(argv: List[str], program: str, heredocs: List[str],
         bodies.extend(heredocs)
 
     for body in bodies:
+        for match in SHELL_OUT.finditer(body):
+            _analyse_shell_out(body, match.end(), findings)
         if not PROGRAM_WRITES.search(body):
             continue
         targets = [s for s in PROGRAM_STRING.findall(body) if "/" in s or "." in s]
         findings.append(Finding("PROGRAM_WRITE", f"{program} program", targets or [UNNAMED],
                                 "an interpreted body that opens a file for writing"))
+
+
+def _analyse_shell_out(body: str, start: int, findings: List[Finding]) -> None:
+    """Judge what a program body hands to the shell, as the command it is.
+
+    A literal list becomes an argv; a literal string becomes a command line. Anything
+    computed is `UNNAMED`: a shell-out whose argument this guard cannot read is a shell-out
+    it cannot clear.
+    """
+    cursor = start
+    while cursor < len(body) and body[cursor] in " \t\n":
+        cursor += 1
+    if cursor >= len(body):
+        return
+    char = body[cursor]
+    if char == "[":
+        depth, index = 0, cursor
+        while index < len(body):
+            if body[index] == "[":
+                depth += 1
+            elif body[index] == "]":
+                depth -= 1
+                if depth == 0:
+                    break
+            index += 1
+        parts = PROGRAM_STRING.findall(body[cursor : index + 1])
+        if parts:
+            analyse_command(shlex.join(parts), findings, depth=7)
+        else:
+            findings.append(Finding("SHELL_OUT", "subprocess", [UNNAMED],
+                                    "a shell-out whose argv is computed"))
+        return
+    if char in "\"'":
+        end = body.find(char, cursor + 1)
+        if end != -1:
+            analyse_command(body[cursor + 1 : end], findings, depth=7)
+            return
+    findings.append(Finding("SHELL_OUT", "subprocess", [UNNAMED],
+                            "a shell-out whose argument is computed"))
 
 
 ASSIGNMENT = re.compile(r"^([A-Za-z_][A-Za-z0-9_]*)=(.*)$", re.S)

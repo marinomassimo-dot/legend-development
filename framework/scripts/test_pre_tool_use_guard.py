@@ -548,6 +548,29 @@ class TheRepositoryBoundaryIsWhatMakesAWriteProhibited(unittest.TestCase):
         self.assertIsNotNone(policy.verdict("echo x > ./framework/../AGENTS.md",
                                             cwd=str(ROOT), repo_root=str(ROOT)))
 
+    def test_a_shell_out_is_judged_as_the_command_it_runs(self) -> None:
+        """The escape hatch must survive being taken from inside a program.
+
+        🔴 `\\bsubprocess\\.` was once a write primitive outright, so a heredoc that invoked
+        a committed script through `subprocess.run` was denied — the guard forbidding the
+        alternative its own denial message recommends. Reading the argument as a command
+        instead is both more permissive here and stricter where it matters.
+        """
+        body = "python3 - <<'PY'\n{}\nPY"
+        for program, expected in (
+            ('import subprocess, sys\n'
+             'subprocess.run([sys.executable, "framework/scripts/legend_lint.py", "."])', "allow"),
+            ('import subprocess\nsubprocess.run(["git", "log", "--oneline", "-5"])', "allow"),
+            ('import subprocess\nsubprocess.run(["git", "add", "-A"])', "deny"),
+            ('import subprocess\nsubprocess.run(["rm", "-rf", "framework/scripts"])', "deny"),
+            ('import os\nos.system("git add -A")', "deny"),
+            ("import subprocess\nsubprocess.run(build_argv())", "deny"),
+        ):
+            with self.subTest(program=program.splitlines()[-1][:50]):
+                reason = policy.verdict(body.format(program), cwd=str(ROOT),
+                                        repo_root=str(ROOT))
+                self.assertEqual("deny" if reason else "allow", expected)
+
     def test_the_directory_decides_when_only_the_filename_expands(self) -> None:
         """A loop writing one file per iteration into a directory it just named.
 

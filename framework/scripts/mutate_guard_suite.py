@@ -208,6 +208,11 @@ MUTATIONS = [
         GUARD_SUITES, "an expansion in a middle path segment is judged by a prefix that "
                       "no longer determines the directory"),
     Mutation(
+        "M31", GUARD_POLICY,
+        "        for match in SHELL_OUT.finditer(body):\n            _analyse_shell_out(body, match.end(), findings)",
+        "        pass  # shell-outs from a program body are not judged",
+        GUARD_SUITES, "a program body that shells out to `git add -A` is not judged"),
+    Mutation(
         "M26", PARITY,
         "    body = text.split(\"[hooks]\", 1)[-1] if \"[hooks]\" in text else text\n    return set(MATCHER_LINE.findall(body))",
         "    return set(re.findall(r'[a-z_]+', text))",
