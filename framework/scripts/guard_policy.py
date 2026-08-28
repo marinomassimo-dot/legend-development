@@ -14,102 +14,771 @@ entirely. The author never saw the files. Blanket staging assumes the working tr
 belongs to one actor, and in this repository it does not: Claude and Codex work in it
 concurrently. Stage paths you name.
 
-**2. Inline heredoc writes.** The `Write` tool refuses to overwrite a file the session
-has not read. That guard was bypassed by doing the write from Bash instead —
-`python3 - <<'PY' ... Path(x).write_text(...)` — which destroyed a file another actor
-had authored and declared. The guard existed; the shell was the way around it. Use
+**2. Shell writes onto repository files.** The `Write` tool refuses to overwrite a file
+the session has not read. That guard was bypassed by doing the write from Bash instead —
+`python3 - <<'PY' ... Path(x).write_text(...)` — which destroyed a file another actor had
+authored and declared. The guard existed; the shell was the way around it. Use
 `Write`/`Edit`, whose read-before-overwrite rule is the point, or invoke a committed
 script by name.
 
-Temp-only writes are allowed: scratchpad and /tmp work is not what went wrong.
+Temp-only writes are allowed: scratchpad and `/tmp` work is not what went wrong.
 
-> **Scope, declared.** This policy is *narrow on purpose* and it is measurably porous:
-> `framework/scripts/runtime_parity.py --characterize` prints, from this module, the
-> command shapes it does NOT stop — shell wrappers, `sed -i`, redirection, `tee`, `cp`,
-> `mv`. Those are `GUARD_HARDENING_DEBT`, a separate question from whether two runtimes
-> reach the *same* verdict, which is what the bridge is for. Widening the policy changes
-> what is forbidden for every actor and belongs in its own change, with its own review.
+## Why this is a parser and not a list of forbidden strings
+
+Revision 1 matched substrings and blanked quoted spans, because a literal match blocked
+the very commit that *documented* `git add -A`. That exemption was the hole: it is
+exactly where `bash -c "git add -A"` hides, and eight further shapes with it. A blacklist
+long enough to catch the wrappers is also long enough to catch the prose.
+
+So the command is **parsed** instead. `echo "git add -A"` and `bash -c "git add -A"` carry
+the same bytes and differ in structure: in the first the quoted span is an *argument to
+`echo`*, in the second it is a *script argument to a shell*, and only the second is
+re-analysed as a command. Nothing is exempted for being quoted, and nothing is condemned
+for containing a word.
+
+The classification has three outcomes, and the third is not a synonym for either:
+
+```
+PROHIBITED   a mutation is derivable AND its target is inside the repository,
+             or the target is not named in the command at all
+ALLOWED      no mutation is derivable, or every target is scratch space
+UNDERIVABLE  a mutation is derivable and its target cannot be resolved —
+             a substitution, a variable, a glob, or an unparseable command
+```
+
+🔴 `UNDERIVABLE` **fails closed**, and only for a command in which a write primitive was
+already found. A read-only command containing `$(...)` stays allowed: refusing to reason
+is not the same as having something to refuse.
+
+## Scope, declared — what this still does NOT stop
+
+The policy is about *content* mutation reachable from the shell. It does not police
+`chmod`/`chown`, `git reset --hard` / `git checkout --` / `git clean`, `git push`, or a
+committed script that writes when invoked by name — that last one is deliberate and is
+the escape hatch every denial names. Those are separate entries, printed by
+`framework/scripts/runtime_parity.py --characterize` and asserted open by
+`framework/scripts/test_pre_tool_use_guard.py`.
 """
 from __future__ import annotations
 
+import posixpath
 import re
+import shlex
+from typing import Iterable, List, Optional, Sequence, Tuple
 
-BLANKET_STAGING = re.compile(
-    r"""\bgit\s+
-        (?:
-            add\s+(?:-A\b|--all\b|(?:-[A-Za-z]*\s+)*\.\s*(?:$|[;&|]))
-          | commit\s+(?:[^;&|]*\s)?(?:-a\b|--all\b|-[a-zA-Z]*a[a-zA-Z]*\b)
-        )""",
-    re.VERBOSE,
-)
+# ── outcomes ───────────────────────────────────────────────────────────────────────
 
-# `python3 - <<EOF`, `python <<'PY'`, `cat <<EOF > file` — a script body fed on stdin.
-HEREDOC = re.compile(r"<<-?\s*['\"]?\w+['\"]?")
-INLINE_INTERPRETER = re.compile(r"\b(?:python3?|perl|ruby|node)\s+-\s*(?=<<)")
+PROHIBITED = "PROHIBITED"
+ALLOWED = "ALLOWED"
+UNDERIVABLE = "UNDERIVABLE"
 
-WRITE_PRIMITIVE = re.compile(
+#: A target the command does not name at all — `xargs rm`, `find -delete`, a patch body
+#: whose paths could not be read. Distinct from a named target that cannot be resolved.
+UNNAMED = "\x00UNNAMED\x00"
+#: A token whose value depends on expansion: `$(...)`, `` `...` ``, `$VAR`, a glob.
+OPAQUE = "\x00OPAQUE\x00"
+
+
+class Finding:
+    """One derived mutation: what would write, where, and how that was decided."""
+
+    def __init__(self, rule: str, primitive: str, targets: Sequence[str], detail: str = ""):
+        self.rule = rule
+        self.primitive = primitive
+        self.targets = list(targets)
+        self.detail = detail
+
+    def __repr__(self) -> str:  # pragma: no cover - diagnostics only
+        return f"Finding({self.rule!r}, {self.primitive!r}, {self.targets!r})"
+
+
+# ── the command shapes that carry other commands ───────────────────────────────────
+
+SHELL_BINARIES = frozenset({"sh", "bash", "zsh", "dash", "ksh", "mksh", "ash", "fish", "busybox"})
+SHELL_SCRIPT_FLAGS = frozenset({"-c", "-lc", "-ic", "-lic", "-ilc", "-cl", "-li", "-il"})
+
+#: Wrappers that run their remaining argv as a command, after their own options.
+#: The value maps each wrapper's own value-taking flags — dropping every `-x` token
+#: blindly is how `nohup bash -c '…'` loses the `-c` and stops looking like a shell.
+TRANSPARENT_WRAPPERS = {
+    "nohup": frozenset(),
+    "nice": frozenset({"-n", "--adjustment"}),
+    "ionice": frozenset({"-c", "-n", "-p", "--class", "--classdata", "--pid"}),
+    "stdbuf": frozenset({"-i", "-o", "-e", "--input", "--output", "--error"}),
+    "setsid": frozenset(),
+    "time": frozenset({"-f", "-o", "--format", "--output"}),
+    "command": frozenset(),
+    "builtin": frozenset(),
+    "exec": frozenset({"-a"}),
+    "sudo": frozenset({"-u", "-g", "-U", "-C", "-p", "-r", "-t", "--user", "--group", "--prompt"}),
+    "doas": frozenset({"-u", "-C"}),
+    "caffeinate": frozenset({"-t", "-w"}),
+    "script": frozenset({"-c"}),
+    "arch": frozenset({"-arch"}),
+    "unbuffer": frozenset(),
+}
+#: `timeout 30 CMD`, `chroot /dir CMD` — one positional operand before the child argv.
+POSITIONAL_WRAPPERS = {
+    "timeout": frozenset({"-k", "--kill-after", "-s", "--signal"}),
+    "gtimeout": frozenset({"-k", "--kill-after", "-s", "--signal"}),
+    "chroot": frozenset({"--userspec", "--groups"}),
+}
+
+#: Wrappers whose child receives its operands from stdin, so the command never names
+#: the paths it acts on. That is the blanket-staging defect in a different costume.
+STDIN_FED_WRAPPERS = frozenset({"xargs", "gxargs", "parallel"})
+
+INTERPRETERS = frozenset({"python", "python2", "python3", "perl", "ruby", "node", "php", "deno", "bun"})
+#: Interpreter flags whose value is a program body rather than a file.
+INLINE_PROGRAM_FLAGS = frozenset({"-c", "-e", "-E", "--eval", "--exec"})
+
+
+# ── write primitives, by argv[0] ───────────────────────────────────────────────────
+
+#: Commands whose non-option operands are all written to.
+WRITES_ALL_OPERANDS = frozenset({"tee", "truncate", "shred", "unlink", "mkfifo"})
+#: Commands that read every operand but the last and write the last.
+WRITES_LAST_OPERAND = frozenset({"cp", "mv", "install", "rsync", "ln"})
+#: Commands that destroy every operand.
+DESTROYS_OPERANDS = frozenset({"rm", "rmdir", "srm"})
+
+OPTIONS_WITH_VALUE = {
+    "truncate": frozenset({"-s", "--size", "-r", "--reference"}),
+    "cp": frozenset({"-t", "--target-directory", "-S", "--suffix"}),
+    "mv": frozenset({"-t", "--target-directory", "-S", "--suffix"}),
+    "install": frozenset({"-m", "--mode", "-o", "--owner", "-g", "--group", "-t"}),
+    "rsync": frozenset({"-e", "--rsh", "--exclude", "--include", "--files-from"}),
+    "sed": frozenset({"-e", "--expression", "-f", "--file", "-l"}),
+    "perl": frozenset({"-e", "-E", "-I", "-m", "-M"}),
+    "tee": frozenset({}),
+}
+
+#: Python/Perl/Ruby/Node source that opens a file for writing. Applied ONLY to a program
+#: body already established as such — an inline `-c`/`-e` script or a heredoc fed to an
+#: interpreter — never to arbitrary command text.
+PROGRAM_WRITES = re.compile(
     r"""\.write_text\s*\(
       | \.write_bytes\s*\(
-      | \bopen\s*\([^)]*['"][wa]b?\+?['"]
+      | \bopen\s*\([^)]*['"][wax]b?\+?['"]
+      | \bopen\s*\([^)]*['"]\s*>            # perl: open(F, '>', $path) / open(F, ">$path")
       | \bjson\.dump\s*\(
-      | \bshutil\.(?:copy|move|copyfile|copy2)\s*\(
-      | \bos\.replace\s*\(
-      | \bPath\s*\([^)]*\)\s*\.\s*write
+      | \bshutil\.(?:copy|move|copyfile|copy2|rmtree)\s*\(
+      | \bos\.(?:replace|rename|remove|unlink|rmdir|truncate)\s*\(
+      | \bPath\s*\([^)]*\)\s*\.\s*(?:write|unlink|rename|replace|mkdir|touch)
+      | \bsubprocess\.
+      | \bfs\.(?:write|append|unlink|rename|copy|rm)
+      | \bwriteFileSync\b | \bcreateWriteStream\b
+      | \bFile\.(?:write|open|delete|rename)\b
+      | \bopen\s*\(\s*[A-Za-z_$][\w$]*\s*,\s*['"][wax]
+      | >\s*\$?\w                      # a shell redirect inside an interpreted body
     """,
     re.VERBOSE,
 )
+#: String literals inside a program body, used to name that body's write targets.
+PROGRAM_STRING = re.compile(r"""['"]([^'"\n]{1,300})['"]""")
 
-# A write is tolerated when every path literal in the command is scratch space.
-TEMP_PATH = re.compile(r"['\"](?:/private)?/tmp/[^'\"]*['\"]|['\"][^'\"]*scratchpad[^'\"]*['\"]")
-PATH_LITERAL = re.compile(r"['\"][^'\"\n]*\.[A-Za-z0-9]{1,6}['\"]")
+#: `*** Update File: path` — the apply_patch envelope names its own targets.
+PATCH_TARGET = re.compile(r"^\*\*\*\s+(?:Add|Update|Delete)\s+File:\s*(.+?)\s*$", re.MULTILINE)
+
+
+# ── target classification ──────────────────────────────────────────────────────────
+
+SCRATCH_PREFIXES = ("/tmp/", "/private/tmp/", "/var/tmp/", "/var/folders/", "/dev/")
+SCRATCH_EXACT = frozenset({"/tmp", "/private/tmp", "/var/tmp", "/dev/null", "/dev/stdout",
+                           "/dev/stderr", "-"})
+SCRATCH_SEGMENT = "scratchpad"
+
+EXPANDS = re.compile(r"[$`*?\[\]~{}]|\x00")
+
+INSIDE_REPO = "INSIDE_REPO"
+OUTSIDE_REPO = "OUTSIDE_REPO"
+SCRATCH = "SCRATCH"
+
+
+def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str]) -> str:
+    """Where does this operand point? `UNDERIVABLE` when the answer needs a shell."""
+    if token == UNNAMED:
+        return UNNAMED
+    if token == OPAQUE or not token or EXPANDS.search(token):
+        return UNDERIVABLE
+    if token in SCRATCH_EXACT or token.startswith(SCRATCH_PREFIXES):
+        return SCRATCH
+
+    path = token if posixpath.isabs(token) else posixpath.join(cwd or "", token)
+    path = posixpath.normpath(path)
+    if SCRATCH_SEGMENT in path.split("/"):
+        return SCRATCH
+    if path in SCRATCH_EXACT or path.startswith(SCRATCH_PREFIXES):
+        return SCRATCH
+    if repo_root is None:
+        # 🔴 Without a root, "outside the repository" is not derivable, and guessing
+        # outward is guessing in the unsafe direction. Everything non-scratch is treated
+        # as repository space.
+        return INSIDE_REPO
+    root = posixpath.normpath(repo_root)
+    if path == root or path.startswith(root.rstrip("/") + "/"):
+        return INSIDE_REPO
+    return OUTSIDE_REPO
+
+
+# ── lexing ─────────────────────────────────────────────────────────────────────────
+
+HEREDOC_START = re.compile(r"<<-?\s*(['\"]?)([A-Za-z_][A-Za-z0-9_]*)\1")
+FD_REDIRECT = re.compile(r"\d*>&\d*|&>>|&>|\d+>>|\d+>")
+SUBSTITUTION = re.compile(r"\$\(|\`|<\(|>\(")
+
+
+class Unparseable(Exception):
+    """The command could not be read as a command. Undecidable, therefore denied."""
+
+
+def extract_heredocs(command: str) -> Tuple[str, List[str]]:
+    """Strip heredoc bodies out of the command text and return them separately.
+
+    A heredoc body is program text, not command text: lexing it as a command produces
+    nonsense, and leaving it in place makes every quote in it a lexing hazard.
+    """
+    bodies: List[str] = []
+    lines = command.split("\n")
+    out: List[str] = []
+    index = 0
+    while index < len(lines):
+        line = lines[index]
+        out.append(line)
+        starts = HEREDOC_START.findall(line)
+        index += 1
+        for _, delimiter in starts:
+            body: List[str] = []
+            while index < len(lines) and lines[index].strip() != delimiter:
+                body.append(lines[index])
+                index += 1
+            index += 1  # consume the terminator
+            bodies.append("\n".join(body))
+    return "\n".join(out), bodies
+
+
+def extract_substitutions(command: str) -> Tuple[str, List[str]]:
+    """Replace `$(…)`, `` `…` ``, `<(…)` and `>(…)` with an opaque token.
+
+    The bodies are returned so they can be analysed as commands in their own right — a
+    substitution is a place a command hides, and `echo $(git add -A)` must not be read as
+    a harmless `echo`.
+    """
+    bodies: List[str] = []
+    out: List[str] = []
+    i = 0
+    n = len(command)
+    quote = ""
+    while i < n:
+        char = command[i]
+        if quote:
+            out.append(char)
+            if char == quote and command[i - 1 : i] != "\\":
+                quote = ""
+            elif char == "\\" and quote == '"' and i + 1 < n:
+                out.append(command[i + 1])
+                i += 1
+            i += 1
+            continue
+        if char == "'":
+            quote = "'"
+            out.append(char)
+            i += 1
+            continue
+        if char == '"':
+            quote = '"'
+            out.append(char)
+            i += 1
+            continue
+        if char == "`":
+            end = command.find("`", i + 1)
+            if end == -1:
+                raise Unparseable("an unterminated backtick substitution")
+            bodies.append(command[i + 1 : end])
+            out.append(OPAQUE)
+            i = end + 1
+            continue
+        if command.startswith(("$(", "<(", ">("), i):
+            depth = 0
+            j = i + 1
+            while j < n:
+                if command[j] == "(":
+                    depth += 1
+                elif command[j] == ")":
+                    depth -= 1
+                    if depth == 0:
+                        break
+                j += 1
+            if j >= n:
+                raise Unparseable("an unterminated command substitution")
+            bodies.append(command[i + 2 : j])
+            out.append(OPAQUE)
+            i = j + 1
+            continue
+        out.append(char)
+        i += 1
+    if quote:
+        raise Unparseable("an unterminated quoted string")
+    return "".join(out), bodies
+
+
+CONTROL_TOKENS = frozenset({";", "&&", "||", "|", "&", "|&", "(", ")", "{", "}", "\n"})
+REDIRECT_WRITE = frozenset({">", ">>", ">|", "<>"})
+REDIRECT_READ = frozenset({"<", "<<", "<<<"})
+
+
+def lex(command: str) -> List[str]:
+    lexer = shlex.shlex(command, posix=True, punctuation_chars=True)
+    lexer.whitespace_split = True
+    try:
+        return list(lexer)
+    except ValueError as exc:
+        raise Unparseable(f"the shell lexer refused it: {exc}") from exc
+
+
+def segments(tokens: Sequence[str]) -> List[Tuple[List[str], List[str], bool]]:
+    """Split a token stream into (argv, write-redirect-targets, fed-from-a-pipe) triples.
+
+    The pipe flag is not decoration: `echo 'git add -A' | sh` runs a script this guard can
+    read, and the only thing that distinguishes it from a harmless `sh` is that something
+    upstream is writing to its stdin.
+    """
+    result: List[Tuple[List[str], List[str], bool]] = []
+    argv: List[str] = []
+    writes: List[str] = []
+    pending_redirect = False
+    piped_in = False
+    next_piped = False
+    for token in tokens:
+        if pending_redirect:
+            writes.append(token)
+            pending_redirect = False
+            continue
+        if token in REDIRECT_WRITE:
+            pending_redirect = True
+            continue
+        if token in REDIRECT_READ:
+            pending_redirect = False
+            continue
+        if token in CONTROL_TOKENS:
+            if argv or writes:
+                result.append((argv, writes, piped_in))
+            argv, writes = [], []
+            piped_in = next_piped = token in ("|", "|&")
+            continue
+        argv.append(token)
+    if pending_redirect:
+        writes.append(UNNAMED)
+    if argv or writes:
+        result.append((argv, writes, piped_in))
+    return result
+
+
+# ── argv analysis ──────────────────────────────────────────────────────────────────
+
+def base(token: str) -> str:
+    return posixpath.basename(token)
+
+
+def operands(argv: Sequence[str], program: str) -> List[str]:
+    """Non-option arguments, with option-values skipped for the programs that take them."""
+    takes_value = OPTIONS_WITH_VALUE.get(program, frozenset())
+    out: List[str] = []
+    skip = False
+    for token in argv[1:]:
+        if skip:
+            skip = False
+            continue
+        if token == "--":
+            continue
+        if token.startswith("-") and token != "-":
+            if token in takes_value:
+                skip = True
+            continue
+        out.append(token)
+    return out
+
+
+def has_flag(argv: Sequence[str], *names: str) -> bool:
+    """True if any short flag letter or long option among `names` is present.
+
+    `-pi` and `-i` and `--in-place` are the same instruction to `perl` and `sed`, and a
+    guard that only knows the spelling it was shown is a guard with a spelling bypass.
+    """
+    for token in argv[1:]:
+        if not token.startswith("-") or token == "-" or token == "--":
+            continue
+        if token.startswith("--"):
+            if token.split("=")[0] in names:
+                return True
+            continue
+        for name in names:
+            if len(name) == 2 and name.startswith("-") and name[1] in token[1:]:
+                return True
+    return False
+
+
+def strip_wrapper_options(argv: Sequence[str], value_flags: Iterable[str],
+                          assignments: bool = False) -> List[str]:
+    """Drop a wrapper's OWN leading options and reach the child argv untouched.
+
+    🔴 The child argv is returned verbatim, flags included. Filtering `-`-prefixed tokens
+    out of the whole tail is what turned `nohup bash -c 'git add -A'` into `bash 'git add
+    -A'` — a shell with no script flag, which this guard then had nothing to follow.
+    """
+    value_flags = frozenset(value_flags)
+    rest = list(argv)
+    while rest:
+        token = rest[0]
+        if assignments and "=" in token and not token.startswith("-"):
+            rest.pop(0)
+            continue
+        if not token.startswith("-") or token == "-":
+            break
+        rest.pop(0)
+        if token == "--":
+            break
+        if token.split("=")[0] in value_flags and "=" not in token and rest:
+            rest.pop(0)
+    return rest
+
+
+def git_subcommand(argv: Sequence[str]) -> Tuple[str, List[str]]:
+    """Skip git's global options — `-C <dir>`, `-c k=v` — to reach the subcommand."""
+    index = 1
+    value_options = {"-C", "-c", "--git-dir", "--work-tree", "--namespace", "--exec-path"}
+    while index < len(argv):
+        token = argv[index]
+        if token in value_options:
+            index += 2
+            continue
+        if token.startswith("--") and "=" in token:
+            index += 1
+            continue
+        if token.startswith("-"):
+            index += 1
+            continue
+        return token, list(argv[index + 1 :])
+    return "", []
+
+
+BLANKET_ADD = frozenset({"-A", "--all", "--no-ignore-removal", "-u", "--update"})
+
+
+def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[str],
+                 findings: List[Finding], depth: int, piped_in: bool = False) -> None:
+    """Classify one simple command, recursing through every wrapper that carries one."""
+    if depth > 8:
+        findings.append(Finding("WRAPPER_DEPTH", " ".join(argv[:2]), [UNNAMED],
+                                "nesting deeper than this guard will follow"))
+        return
+
+    for target in redirect_targets:
+        findings.append(Finding("REDIRECTION", "> / >>", [target],
+                                "shell redirection writes the file it names"))
+
+    if not argv:
+        return
+    program = base(argv[0])
+
+    if OPAQUE in argv[0]:
+        # `$(echo git) add -A` — the program itself is the result of an expansion, so
+        # nothing about what runs is derivable. Fail closed rather than read the operands.
+        findings.append(Finding("OPAQUE_PROGRAM", "expansion", [OPAQUE],
+                                "the program name is produced by an expansion"))
+        return
+
+    # ── wrappers that carry another command ──
+    if program in SHELL_BINARIES:
+        for index, token in enumerate(argv[1:], start=1):
+            if token in SHELL_SCRIPT_FLAGS and index + 1 < len(argv):
+                analyse_command(argv[index + 1], findings, depth + 1)
+                return
+        operands_ = [t for t in argv[1:] if not t.startswith("-")]
+        if piped_in and not operands_:
+            # `echo 'git add -A' | sh` — the script arrives on stdin, so the command
+            # names nothing about what will run. `sh script.sh` is the declared escape
+            # hatch and stays allowed: a committed script invoked by name is reviewable.
+            findings.append(Finding("STDIN_SHELL", program, [UNNAMED],
+                                    "a shell reading its script from a pipe"))
+        return  # an interactive shell, or a named script, carries nothing to police here
+
+    if program == "eval":
+        # `eval "git add -A"` is a shell wrapper spelled without a flag.
+        for token in argv[1:]:
+            analyse_command(token, findings, depth + 1)
+        return
+    if program in TRANSPARENT_WRAPPERS or program in POSITIONAL_WRAPPERS or program == "env":
+        value_flags = TRANSPARENT_WRAPPERS.get(program) or POSITIONAL_WRAPPERS.get(
+            program, frozenset({"-u", "--unset"}))
+        rest = strip_wrapper_options(argv[1:], value_flags, assignments=(program == "env"))
+        if program in POSITIONAL_WRAPPERS:
+            rest = rest[1:]  # the duration, or the new root
+        analyse_argv(rest, [], heredocs, findings, depth + 1)
+        return
+    if program in STDIN_FED_WRAPPERS:
+        rest = list(argv[1:])
+        value_flags = {"-n", "-P", "-I", "-i", "-L", "-s", "-d", "-a", "-E", "--max-args",
+                       "--max-procs", "--replace", "--delimiter", "--arg-file"}
+        while rest and rest[0].startswith("-"):
+            flag = rest.pop(0)
+            if flag in value_flags and rest:
+                rest.pop(0)
+        child = list(rest)
+        # Every operand this child acts on arrives on stdin, so the command names none.
+        sub: List[Finding] = []
+        analyse_argv(child + [UNNAMED], [], heredocs, sub, depth + 1)
+        for finding in sub:
+            finding.detail = (finding.detail + " · operands arrive on stdin, so the "
+                              "command names none of them").strip(" ·")
+            finding.targets = [UNNAMED]
+        findings.extend(sub)
+        return
+
+    # ── git ──
+    if program == "git":
+        sub, rest = git_subcommand(argv)
+        if sub == "add":
+            paths = [t for t in rest if not t.startswith("-")]
+            blanket = any(t in BLANKET_ADD for t in rest) or any(t in (".", "./", "*") for t in paths)
+            if blanket or not paths or UNNAMED in paths:
+                findings.append(Finding("BLANKET_STAGING", "git add", [UNNAMED],
+                                        "stages paths the command does not name"))
+        elif sub == "commit":
+            if has_flag(["git"] + rest, "-a", "--all"):
+                findings.append(Finding("BLANKET_STAGING", "git commit -a", [UNNAMED],
+                                        "stages every tracked change, named or not"))
+        elif sub == "stage":
+            findings.append(Finding("BLANKET_STAGING", "git stage", [UNNAMED],
+                                    "an alias of `git add` with the same reach"))
+        return
+
+    # ── in-place editors ──
+    if program in ("sed", "gsed") and has_flag(argv, "-i", "--in-place"):
+        targets = operands(argv, "sed")
+        # BSD `sed -i ''` consumes the empty suffix as the option value.
+        targets = [t for t in targets if t != ""]
+        findings.append(Finding("IN_PLACE_EDIT", "sed -i", targets[1:] or targets or [UNNAMED],
+                                "rewrites the files it names, unread"))
+        return
+    if program in INTERPRETERS:
+        analyse_interpreter(argv, program, heredocs, findings)
+        return
+    if program in ("apply_patch", "applypatch"):
+        targets: List[str] = []
+        for body in heredocs:
+            targets.extend(PATCH_TARGET.findall(body))
+        findings.append(Finding("PATCH_APPLY", program, targets or [UNNAMED],
+                                "writes every file its envelope names"))
+        return
+    if program == "patch":
+        findings.append(Finding("PATCH_APPLY", "patch", operands(argv, "patch") or [UNNAMED],
+                                "writes the files the diff names"))
+        return
+
+    # ── plain filesystem writes ──
+    if program in WRITES_ALL_OPERANDS:
+        targets = operands(argv, program)
+        findings.append(Finding("FILE_WRITE", program, targets or [UNNAMED],
+                                "writes every operand"))
+        return
+    if program in WRITES_LAST_OPERAND:
+        targets = operands(argv, program)
+        findings.append(Finding("FILE_WRITE", program, targets[-1:] or [UNNAMED],
+                                "writes its destination operand"))
+        return
+    if program in DESTROYS_OPERANDS:
+        findings.append(Finding("FILE_DELETE", program, operands(argv, program) or [UNNAMED],
+                                "removes every operand"))
+        return
+    if program == "dd":
+        outs = [t.split("=", 1)[1] for t in argv[1:] if t.startswith("of=")]
+        findings.append(Finding("FILE_WRITE", "dd", outs or [UNNAMED], "writes `of=`"))
+        return
+    if program == "find":
+        if "-delete" in argv:
+            findings.append(Finding("FILE_DELETE", "find -delete", [UNNAMED],
+                                    "deletes whatever the traversal matched"))
+        for flag in ("-exec", "-execdir", "-ok", "-okdir"):
+            if flag in argv:
+                child = argv[argv.index(flag) + 1 :]
+                cut = next((i for i, t in enumerate(child) if t in (";", "+", "{}")), len(child))
+                sub = []
+                analyse_argv(child[:cut] + [UNNAMED], [], heredocs, sub, depth + 1)
+                for finding in sub:
+                    finding.targets = [UNNAMED]
+                    finding.detail = (finding.detail + " · run per traversal match").strip()
+                findings.extend(sub)
+        return
+
+
+def analyse_interpreter(argv: List[str], program: str, heredocs: List[str],
+                        findings: List[Finding]) -> None:
+    """`python3 -c …`, `perl -pi -e …`, `node -e …`, and the heredoc-fed forms."""
+    if program == "perl" and has_flag(argv, "-i"):
+        findings.append(Finding("IN_PLACE_EDIT", "perl -i",
+                                operands(argv, "perl") or [UNNAMED],
+                                "rewrites the files it names, unread"))
+        return
+
+    bodies: List[str] = []
+    for index, token in enumerate(argv[1:], start=1):
+        if token in INLINE_PROGRAM_FLAGS and index + 1 < len(argv):
+            bodies.append(argv[index + 1])
+    reads_stdin = any(t == "-" for t in argv[1:]) or len(argv) == 1
+    if reads_stdin:
+        bodies.extend(heredocs)
+
+    for body in bodies:
+        if not PROGRAM_WRITES.search(body):
+            continue
+        targets = [s for s in PROGRAM_STRING.findall(body) if "/" in s or "." in s]
+        findings.append(Finding("PROGRAM_WRITE", f"{program} program", targets or [UNNAMED],
+                                "an interpreted body that opens a file for writing"))
+
+
+ASSIGNMENT = re.compile(r"^([A-Za-z_][A-Za-z0-9_]*)=(.*)$", re.S)
+VARIABLE = re.compile(r"\$\{([A-Za-z_][A-Za-z0-9_]*)\}|\$([A-Za-z_][A-Za-z0-9_]*)")
+
+#: Variables whose scratch-ness is definitional rather than derived from an assignment.
+SCRATCH_VARIABLES = {"TMPDIR": "/tmp/", "TMP": "/tmp/", "TEMP": "/tmp/"}
+
+
+def resolve_assignments(tokens: Sequence[str]) -> List[str]:
+    """Expand `$NAME` using assignments made in this same command, and nothing else.
+
+    `SC=/tmp/work; cmd > "$SC/out.json"` is fully derivable — the value is right there in
+    the text being judged — and refusing it would deny the single most common way an
+    agent writes to scratch space. A variable assigned in an *earlier* command, or by the
+    environment, stays opaque: this resolves what the command says, never what the shell
+    happens to know.
+    """
+    known = dict(SCRATCH_VARIABLES)
+    out: List[str] = []
+    for token in tokens:
+        match = ASSIGNMENT.match(token)
+        if match and not token.startswith("-"):
+            known[match.group(1)] = _expand(match.group(2), known)
+            out.append(token)
+            continue
+        out.append(_expand(token, known))
+    return out
+
+
+def _expand(token: str, known: dict) -> str:
+    def replace(match: "re.Match[str]") -> str:
+        name = match.group(1) or match.group(2)
+        return known.get(name, match.group(0))
+    return VARIABLE.sub(replace, token)
+
+
+#: `$'git add -A'` is ANSI-C quoting: the `$` is syntax, not part of the word. Left in
+#: place it made `bash -c $'git add -A'` parse as a program called `$git`.
+ANSI_C_QUOTE = re.compile(r"\$(?=')")
+
+
+def analyse_command(command: str, findings: List[Finding], depth: int = 0) -> None:
+    stripped, heredocs = extract_heredocs(command)
+    stripped, subs = extract_substitutions(stripped)
+    stripped = FD_REDIRECT.sub(" ", stripped)
+    stripped = ANSI_C_QUOTE.sub("", stripped)
+    for body in subs:
+        analyse_command(body, findings, depth + 1)
+    for argv, writes, piped_in in segments(resolve_assignments(lex(stripped))):
+        analyse_argv(argv, writes, heredocs, findings, depth, piped_in)
+
+
+# ── verdict ────────────────────────────────────────────────────────────────────────
 
 DENY_STAGING = (
     "Blanket staging is blocked in this repository.\n\n"
-    "`git add -A` / `git add .` / `git commit -a` stage everything in the working tree, "
-    "including work another actor has in flight. That is not hypothetical here: it "
-    "already happened, and put an unreviewed blind-derivation run inside a commit whose "
-    "message described unrelated work.\n\n"
+    "`git add -A` / `git add .` / `git commit -a` / `… | xargs git add` stage everything "
+    "in the working tree, including work another actor has in flight. That is not "
+    "hypothetical here: it already happened, and put an unreviewed blind-derivation run "
+    "inside a commit whose message described unrelated work.\n\n"
     "Stage the paths you actually changed:  git add <path> [<path> ...]\n"
     "Check first with:  git status --short"
 )
 
-DENY_INLINE_WRITE = (
-    "Writing repository files from an inline heredoc is blocked.\n\n"
-    "The Write tool refuses to overwrite a file this session has not read. Doing the "
-    "same write from Bash bypasses that guard — which is how a file authored and "
-    "declared by another actor was destroyed unread.\n\n"
-    "Use Write or Edit (they enforce read-before-overwrite), or invoke a committed "
-    "script by name. Heredoc writes confined to /tmp or the scratchpad are allowed."
+DENY_SHELL_WRITE = (
+    "Writing a repository file from the shell is blocked.\n\n"
+    "The Write and Edit tools refuse to overwrite a file this session has not read. Doing "
+    "the same write from Bash bypasses that guard — which is how a file authored and "
+    "declared by another actor was destroyed unread. The shape does not matter: a "
+    "redirection, `sed -i`, `tee`, `cp`, `mv`, `rm`, an interpreter one-liner and a shell "
+    "wrapper around any of them are the same act.\n\n"
+    "Use Write or Edit (they enforce read-before-overwrite), or invoke a committed script "
+    "by name. Writes confined to /tmp or the scratchpad are allowed."
+)
+
+DENY_UNNAMED = (
+    "A write whose target this command does not name is blocked.\n\n"
+    "`xargs`, `find -exec`, a patch envelope and a bare redirection can all mutate files "
+    "the command never mentions, so neither you nor a reviewer can tell from the command "
+    "what it touched. That is the same defect as blanket staging.\n\n"
+    "Name the paths, or do the write with Write/Edit, or confine it to /tmp or the "
+    "scratchpad."
+)
+
+DENY_UNDERIVABLE = (
+    "A write whose target cannot be resolved without running it is blocked.\n\n"
+    "The target came from a substitution, a variable or a glob, so this guard cannot tell "
+    "whether it lands in the repository or in scratch space. It answers no rather than "
+    "assuming, which is the declared failure direction.\n\n"
+    "Write the path literally, or do the write with Write/Edit, or confine it to /tmp or "
+    "the scratchpad."
+)
+
+DENY_UNPARSEABLE = (
+    "This command could not be parsed, so the guard cannot say what it writes, and "
+    "answers no.\n\n"
 )
 
 
-QUOTED = re.compile(r"'[^']*'|\"[^\"]*\"", re.S)
+def classify(command: object, cwd: Optional[str] = None,
+             repo_root: Optional[str] = None) -> Tuple[str, Optional[str], List[Finding]]:
+    """Return `(outcome, reason, findings)` for one shell command.
 
-
-def _outside_quotes(command: str) -> str:
-    """Blank out quoted spans so message text is not read as an invocation.
-
-    Found by the guard blocking the very commit that documented it: the message
-    quoted `git add -A` as an example, and substring matching cannot tell an
-    example from a command. A real blanket-staging invocation is never quoted.
-
-    🔴 This is also the reason `bash -c "git add -A"` is not stopped. The exemption
-    that keeps the guard from blocking its own documentation is the same exemption a
-    shell wrapper hides behind. Recorded in `GUARD_HARDENING_DEBT`, identical in both
-    runtimes, and not silently narrowed here.
+    `outcome` is `ALLOWED`, `PROHIBITED` or `UNDERIVABLE`; `reason` is the denial text, or
+    `None` when allowed. `findings` are the derived mutations, for characterisation.
     """
-    return QUOTED.sub(lambda m: " " * len(m.group(0)), command)
+    if not isinstance(command, str):
+        return UNDERIVABLE, DENY_UNPARSEABLE + "it is not text.", []
+
+    findings: List[Finding] = []
+    try:
+        analyse_command(command, findings)
+    except Unparseable as exc:
+        return UNDERIVABLE, DENY_UNPARSEABLE + str(exc), []
+
+    staged = [f for f in findings if f.rule == "BLANKET_STAGING"]
+    if staged:
+        return PROHIBITED, DENY_STAGING, findings
+
+    unnamed = False
+    underivable = False
+    in_repo = False
+    for finding in findings:
+        for target in finding.targets:
+            where = classify_target(target, cwd, repo_root)
+            if where == UNNAMED:
+                unnamed = True
+            elif where == UNDERIVABLE:
+                underivable = True
+            elif where == INSIDE_REPO:
+                in_repo = True
+
+    if in_repo:
+        return PROHIBITED, DENY_SHELL_WRITE, findings
+    if unnamed:
+        return PROHIBITED, DENY_UNNAMED, findings
+    if underivable:
+        return UNDERIVABLE, DENY_UNDERIVABLE, findings
+    return ALLOWED, None, findings
 
 
-def verdict(command: str) -> str | None:
-    """Return a denial reason, or None to allow."""
-    if BLANKET_STAGING.search(_outside_quotes(command)):
-        return DENY_STAGING
-
-    is_inline = bool(HEREDOC.search(command)) and bool(INLINE_INTERPRETER.search(command))
-    if is_inline and WRITE_PRIMITIVE.search(command):
-        literals = PATH_LITERAL.findall(command)
-        temp_only = bool(literals) and all(TEMP_PATH.fullmatch(p) for p in literals)
-        if not temp_only:
-            return DENY_INLINE_WRITE
-    return None
+def verdict(command: object, cwd: Optional[str] = None,
+            repo_root: Optional[str] = None) -> Optional[str]:
+    """Return a denial reason, or None to allow. `UNDERIVABLE` denies — it fails closed."""
+    outcome, reason, _ = classify(command, cwd, repo_root)
+    return None if outcome == ALLOWED else reason
