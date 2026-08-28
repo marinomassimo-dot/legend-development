@@ -62,9 +62,14 @@ Derive that mechanically before your first write, never by impression:
 python3 framework/scripts/runtime_parity.py --bootstrap
 ```
 
-It prints `ACTOR_ID`, worktree, branch, `HEAD`, dirty state, role contract, governance
-fingerprint, lease state, the gates you owe, and the bridge and write-guard status — and
-it **exits non-zero** while any of them is unresolved. A non-zero exit is not advice.
+It prints `ACTOR_ID`, worktree, branch, `HEAD`, dirty state, role contract and its
+`sha256`, governance fingerprint, lease state, the gates you owe, and **two separate
+verdicts** — `READ_ONLY_PARITY` and `WRITE_ENABLED_PARITY`. It **exits non-zero** while
+either is unresolved. A non-zero exit is not advice.
+
+🔴 **`--bootstrap` will not choose an actor for you.** With no `ACTOR_ID` it reports
+`UNRESOLVED` and blocks, and an `ACTOR_ID` naming no role contract is refused rather than
+approximated. That is § 4 made mechanical, not a convenience it declines to offer.
 
 ## 3 · What is not equivalent, and must not be assumed
 
@@ -94,9 +99,24 @@ If you do not know your `ACTOR_ID`, you do not have one yet. Ask.
 Codex registers the same engine Claude registers —
 [`framework/scripts/pre_tool_use_guard.py`](framework/scripts/pre_tool_use_guard.py),
 declared in [`.codex/config.toml`](.codex/config.toml). There is no Codex copy of the
-policy. If `runtime_parity.py` reports the guard `UNVERIFIED`, you are read-only until
-the operator says otherwise, and the runtime sandbox — not this sentence — is what is
-holding.
+policy, and there must never be one.
+
+Check the state, never assume it:
+
+```bash
+python3 framework/scripts/runtime_parity.py --hook-status
+```
+
+Only `DEMONSTRATED` — a session-probe receipt recording an actual refusal — permits a
+write. `CONFIGURED` and `TRUST_PENDING` do not: a registration that parses is not a
+control, and the runtime gates project hooks behind a review this repository cannot read.
+While it is anything else **you are read-only**, and what is holding is the Codex sandbox,
+not this sentence.
+
+🔴 The repository gives you **textual authority, one enforced class of shell mutation, CI
+on push, and audit**. It does not enforce who you are or what you may decide — see
+[`framework/protocols/runtime_bridge.md`](framework/protocols/runtime_bridge.md) § 3.1,
+which states exactly what was checked. Do not read a passing gate as permission.
 
 ## 6 · Sync rule
 
