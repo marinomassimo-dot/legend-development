@@ -548,6 +548,30 @@ class TheRepositoryBoundaryIsWhatMakesAWriteProhibited(unittest.TestCase):
         self.assertIsNotNone(policy.verdict("echo x > ./framework/../AGENTS.md",
                                             cwd=str(ROOT), repo_root=str(ROOT)))
 
+    def test_the_directory_decides_when_only_the_filename_expands(self) -> None:
+        """A loop writing one file per iteration into a directory it just named.
+
+        🔴 This is a deliberate narrowing of fail-closed, so it is asserted in BOTH
+        directions in one table: a known-scratch directory allows an expanding *filename*,
+        a known-repository directory does not, and an expansion anywhere but the last
+        segment — or a `..` anywhere — goes back to being undecidable.
+        """
+        for command, expected in (
+            ('SC=/tmp/w; git show a:b > "$SC/out/gp_$rev.py"', "allow"),
+            ('SC=/tmp/w; echo x > "$SC/$f"', "allow"),
+            ("echo x > /private/tmp/x/scratchpad/f_$i.txt", "allow"),
+            ("rm /tmp/w/*.pyc", "allow"),
+            ('echo x > "framework/scripts/gen_$n.py"', "deny"),
+            ('SC=/tmp/w; echo x > "$SC/$d/f"', "deny"),
+            ('SC=/tmp/w; echo x > "$SC/../$f"', "deny"),
+            ('echo x > "$TARGET"', "deny"),
+            ('echo x > "$SOMETHING/f"', "deny"),
+            ("rm framework/scripts/*.pyc", "deny"),
+        ):
+            with self.subTest(command=command):
+                reason = policy.verdict(command, cwd=str(ROOT), repo_root=str(ROOT))
+                self.assertEqual("deny" if reason else "allow", expected)
+
     def test_an_unknown_root_treats_everything_as_repository_space(self) -> None:
         """Fail-closed, stated: no root means no safe outside."""
         self.assertIsNotNone(policy.verdict("echo x > /Users/someone/notes.md",

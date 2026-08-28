@@ -196,6 +196,18 @@ MUTATIONS = [
         GUARD_SUITES, "a leading NAME=VALUE is read as the program, so `FOO=1 git add -A` "
                       "matches no rule"),
     Mutation(
+        "M29", GUARD_POLICY,
+        "    if EXPANDS.search(token):\n        return _classify_by_prefix(token, cwd, repo_root)",
+        "    if EXPANDS.search(token):\n        return SCRATCH",
+        GUARD_SUITES, "any expanding path is treated as scratch, so a repository target "
+                      "behind a variable is allowed"),
+    Mutation(
+        "M30", GUARD_POLICY,
+        "    if any(EXPANDS.search(part) for part in segments_[:-1]):\n        return UNDERIVABLE",
+        "    if False:\n        return UNDERIVABLE",
+        GUARD_SUITES, "an expansion in a middle path segment is judged by a prefix that "
+                      "no longer determines the directory"),
+    Mutation(
         "M26", PARITY,
         "    body = text.split(\"[hooks]\", 1)[-1] if \"[hooks]\" in text else text\n    return set(MATCHER_LINE.findall(body))",
         "    return set(re.findall(r'[a-z_]+', text))",

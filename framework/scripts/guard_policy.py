@@ -199,8 +199,10 @@ def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str]) ->
     """Where does this operand point? `UNDERIVABLE` when the answer needs a shell."""
     if token == UNNAMED:
         return UNNAMED
-    if token == OPAQUE or not token or EXPANDS.search(token):
+    if token == OPAQUE or not token:
         return UNDERIVABLE
+    if EXPANDS.search(token):
+        return _classify_by_prefix(token, cwd, repo_root)
     if token in SCRATCH_EXACT or token.startswith(SCRATCH_PREFIXES):
         return SCRATCH
 
@@ -219,6 +221,39 @@ def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str]) ->
     if path == root or path.startswith(root.rstrip("/") + "/"):
         return INSIDE_REPO
     return OUTSIDE_REPO
+
+
+def _classify_by_prefix(token: str, cwd: Optional[str], repo_root: Optional[str]) -> str:
+    """A path whose FILENAME expands but whose directory does not.
+
+    `SC=/tmp/work; git show "$rev":x > "$SC/out/gp_$rev.py"` is a scratch write, and calling
+    it `UNDERIVABLE` denies one of the most ordinary shapes an agent types — a loop writing
+    one file per iteration into a directory it just named. That is the failure mode this
+    policy's own docstring warns about: a guard that blocks ordinary work gets turned off.
+
+    So the *resolvable prefix* decides, under three conditions that keep it honest:
+
+      - every segment before the last must be free of expansion, so the DIRECTORY is known;
+      - the expansion may appear only in the final segment, so it cannot walk elsewhere;
+      - no segment may be `..`, so the known prefix cannot be escaped literally.
+
+    🔴 This is a deliberate narrowing of fail-closed, and it is not airtight: a variable
+    whose *value* begins `../` still escapes a scratch prefix. It is accepted because the
+    threat this policy names is an actor clobbering repository files it has not read, not an
+    adversary choosing a value to defeat the guard — and because a prefix inside the
+    repository still denies, which is the direction that matters.
+    """
+    segments_ = token.split("/")
+    if any(part == ".." for part in segments_):
+        return UNDERIVABLE
+    if any(EXPANDS.search(part) for part in segments_[:-1]):
+        return UNDERIVABLE
+    prefix = "/".join(segments_[:-1])
+    if not prefix:
+        # A bare expanding filename in the current directory.
+        return classify_target(".", cwd, repo_root)
+    where = classify_target(prefix, cwd, repo_root)
+    return where if where in (SCRATCH, INSIDE_REPO) else UNDERIVABLE
 
 
 # ── lexing ─────────────────────────────────────────────────────────────────────────
