@@ -32,11 +32,44 @@
 #               trust and a persisted hook hash.
 #
 #   🔴 NOT OBSERVED — that the hook actually FIRES, and that it fires BEFORE the shell
-#   mutates anything. `codex doctor` does not load hooks, so no local no-cost probe can
-#   settle it; settling it needs a Codex session, which is a spend. Until a session
-#   probe records otherwise, `framework/scripts/runtime_parity.py` reports
-#   CODEX_HOOK_FIRES = UNVERIFIED and the parity battery FAILS. Parsing is not firing,
-#   and a registration that parses is not a control.
+#   mutates anything. `codex doctor --json` reports 18 checks and NOT ONE of them is about
+#   hooks — the word does not occur in its report — so no local no-cost probe can settle
+#   it; settling it needs a Codex session, which is a spend. Until a session probe records
+#   otherwise, `framework/scripts/runtime_parity.py --hook-status` reports TRUST_PENDING
+#   and the write floor FAILS. Parsing is not firing, and a registration that parses is
+#   not a control.
+#
+#   🔴 TRUST_PENDING, and why that word rather than CONFIGURED. The installed binary
+#   carries its own per-hook trust gate — the strings "New hook - review required",
+#   "Modified since last trusted - review required", "Trusted", "Managed hooks are always
+#   on", "1 hook needs review before it can run." — and a `bypass_hook_trust` config key.
+#   `~/.codex/config.toml` grants DIRECTORY trust to /Users/massimo/Desktop/legend-public,
+#   which every worktree beneath it inherits; the PER-HOOK review state is not recorded
+#   anywhere this repository can read. So the gate is DOCUMENTED and which side of it this
+#   file is on is UNVERIFIED. That distinction is the whole of § 38 here, and it must not
+#   be collapsed into a cause: a peer reported the hook not firing and was careful that the
+#   trust gate was an inference from a flag's existence, not a measurement. It still is.
+#
+# ─────────────────────────────────────────────────────────────────────────────────
+# THE MATCHER LIST, AND THE TOOL NAME THAT WAS MISSING FROM IT
+# ─────────────────────────────────────────────────────────────────────────────────
+#
+#   🔴 OBSERVED, 2026-08-28 — a real Codex session in this repository called NEITHER
+#   `shell_command` NOR `unified_exec`. All 20 of its tool calls were the code-mode tool
+#   `exec`, each carrying a JavaScript body that called
+#   `tools.exec_command({"cmd": …, "workdir": …})`. Instrument: the session's own rollout
+#   at ~/.codex/sessions/2026/08/28/rollout-2026-08-28T10-14-22-01a0476f-…jsonl, written by
+#   codex 0.150.0-alpha.8 via the VS Code extension (`originator: codex_vscode`), cwd
+#   .claude/worktrees/mirror.
+#
+#   A two-matcher registration would therefore have policed nothing in that session even
+#   had it fired, and the parity battery would have gone on reporting a guard that was
+#   never consulted. `exec` and `exec_command` are registered below, and
+#   `pre_tool_use_guard.py` reduces a code-mode body to the shell commands inside it.
+#
+#   🔴 The runtime that ran was NOT the runtime this file was measured against: 0.147.0 on
+#   the CLI, 0.150.0-alpha.8 in the extension. Under `cross_session_transport.md` § 3 that
+#   makes every row above UNMEASURED for the extension host rather than false.
 #
 # ─────────────────────────────────────────────────────────────────────────────────
 # WHY THE COMMAND PATH IS RELATIVE
@@ -55,6 +88,15 @@ PreToolUse = [
     { type = "command", command = "python3 framework/scripts/pre_tool_use_guard.py" },
   ] },
   { matcher = "unified_exec", hooks = [
+    { type = "command", command = "python3 framework/scripts/pre_tool_use_guard.py" },
+  ] },
+  { matcher = "exec_command", hooks = [
+    { type = "command", command = "python3 framework/scripts/pre_tool_use_guard.py" },
+  ] },
+  { matcher = "exec", hooks = [
+    { type = "command", command = "python3 framework/scripts/pre_tool_use_guard.py" },
+  ] },
+  { matcher = "apply_patch", hooks = [
     { type = "command", command = "python3 framework/scripts/pre_tool_use_guard.py" },
   ] },
 ]
