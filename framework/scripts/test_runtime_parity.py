@@ -618,5 +618,67 @@ class TheResidualDebtStaysDeclared(unittest.TestCase):
                                  "if this now denies, close the debt entry with the fix")
 
 
+class TheBridgesOwnFilesDoNotAddSurfaceDefects(unittest.TestCase):
+    """A delta check, because the absolute one is already red and cannot report a new fault.
+
+    🔴 `scripts/test_release_surface.py` asserts that no tracked `#!` file sits at mode
+    `100644`. It has been red for four pre-existing files for weeks, so when this candidate
+    added a fifth, and then a sixth, and then a seventh, the suite said exactly what it had
+    always said. Two of them were caught only because a peer's tool counted offenders; the
+    third was caught only because that count was re-run.
+
+    Fixing each instance was not fixing the class. This is the class: the bridge's own file
+    set, asserted to add nothing — a check that can be GREEN, and therefore a check that can
+    change to red and mean something.
+    """
+
+    OWNED = (
+        "framework/scripts/guard_policy.py",
+        "framework/scripts/pre_tool_use_guard.py",
+        "framework/scripts/runtime_parity.py",
+        "framework/scripts/codex_runtime_probe.py",
+        "framework/scripts/mutate_guard_suite.py",
+        "framework/scripts/test_pre_tool_use_guard.py",
+        "framework/scripts/test_runtime_parity.py",
+        "framework/scripts/test_codex_runtime_probe.py",
+        "scripts/guard_bash_command.py",
+        "scripts/test_guard_bash_command.py",
+    )
+
+    def test_every_owned_file_is_tracked(self) -> None:
+        """The list is the point; a stale entry would make the next test vacuous."""
+        tracked = set(rp._git(REAL, "ls-files").splitlines())
+        missing = [path for path in self.OWNED if path not in tracked]
+        self.assertEqual([], missing, "this list names a file the repository does not track")
+
+    def test_no_owned_shebang_file_sits_at_mode_100644(self) -> None:
+        entries = rp._git(REAL, "ls-tree", "-r", "HEAD").splitlines()
+        modes = {}
+        for line in entries:
+            meta, _, path = line.partition("\t")
+            modes[path] = meta.split()[0]
+        offenders = []
+        for path in self.OWNED:
+            body = (REPO / path).read_bytes()[:2]
+            if body == b"#!" and modes.get(path) == "100644":
+                offenders.append(path)
+        self.assertEqual([], offenders,
+                         "a shebang entrypoint committed non-executable; run "
+                         "`git add --chmod=+x <path>`")
+
+    def test_the_check_can_see_an_offender(self) -> None:
+        """POSITIVE CONTROL. A green delta check that cannot detect is worse than a red one."""
+        entries = rp._git(REAL, "ls-tree", "-r", "HEAD").splitlines()
+        self.assertTrue(entries, "ls-tree returned nothing, so the check above tested nothing")
+        modes = {line.partition("\t")[2]: line.split()[0] for line in entries}
+        self.assertIn("100755", set(modes.values()),
+                      "no executable file at all — the mode field is not being read")
+        known = [p for p, m in modes.items()
+                 if m == "100644" and p.endswith(".py")
+                 and (REPO / p).exists() and (REPO / p).read_bytes()[:2] == b"#!"]
+        self.assertTrue(known, "POSITIVE CONTROL FAILED — the detector finds no offender "
+                               "anywhere in the tree, and four are known to exist")
+
+
 if __name__ == "__main__":
     sys.exit(0 if unittest.main(exit=False, verbosity=2).result.wasSuccessful() else 1)
