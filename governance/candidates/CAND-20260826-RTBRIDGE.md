@@ -1,7 +1,7 @@
 ---
 artifact: INTEGRATION_CANDIDATE — Claude ↔ Codex minimum runtime bridge
 candidate_id: CAND-20260826-RTBRIDGE
-revision: 4
+revision: 6
 task_id: RTBRIDGE-P00-001
 author: plan
 authored_on: 2026-08-26
@@ -29,11 +29,13 @@ BASE_HEAD                 f2b8ecf11e77ebe86e6e17b6348e6469cc2e432b
                           it is used deliberately: main is 788c357 and this branch carries
                           80 prior Plan commits that are NOT part of this candidate. Hashing
                           against main would bind all of them to this review.
-TIP                       6a4a3a43960116c858c00cbfcd9bbc2d1edc4881
+TIP                       b4388aed1bab08b556e4d31e11f387e383ba82e8
                           the last commit in the CONTENT domain. This file is committed
                           after it, and cannot move the hash — see the invariance note.
-CANDIDATE_CONTENT_HASH    99b24e000513aca2575868447b655eab261a731c8e632b4892f26426342807d4
+CANDIDATE_CONTENT_HASH    cfab7840fbcc13d3113201661b0df1bc837a1a737569f1ae1c6a4bdd252c8bfe
                           🔴 SUPERSEDES, newest first:
+                            176b606e…1756ba  tip 6555117  revision 5
+                            99b24e00…2807d4  tip 6a4a3a4  revision 4
                             4d55c865…07ad832  tip e40e620  revision 3
                             7f88cf34…8323f2a  tip 7a867e7  revision 2
                             6277b98e…9678d93  tip cda34cf  revision 1
@@ -48,10 +50,12 @@ CHANGE_CLASS              MAJOR — it reverses what a safety control does on a 
                           declaration and not the classification.
 RECIPE                    python3 governance/scripts/candidate_content_hash.py \
                             --base f2b8ecf11e77ebe86e6e17b6348e6469cc2e432b \
-                            --tip  6a4a3a43960116c858c00cbfcd9bbc2d1edc4881
+                            --tip  b4388aed1bab08b556e4d31e11f387e383ba82e8
 INVARIANCE                Run the same recipe with --tip set to the branch tip that carries
                           THIS FILE. It must print the same value, because every commit
-                          after 6a4a3a4 on this branch touches only governance/candidates/,
+                          after b4388ae on this branch touches only governance/candidates/
+                          or is an empty correction commit — both verified to leave the
+                          value unmoved,
                           which P5.1 excludes. If it does not, the hash is stale and this
                           manifest is wrong — check that before reviewing anything else.
 CONTENT DOMAIN TOUCHED    14 paths, by `git diff --name-only <base> <tip>` minus the
@@ -299,12 +303,30 @@ from a pipe (`echo 'git add -A' | sh`), and an expansion in `argv[0]`
 
 ### 7.4 · GUARD_BYPASS_COUNT = 0 against the probed set — with its denominator
 
+Counted from the committed tests, not from a scratch harness, so a reader can re-derive
+each figure from the file that holds it:
+
 ```
-46  prohibited shapes probed          46 refused        0 leaks
-36  negative controls probed          36 allowed        0 false positives
-20  alternate encodings probed        20 refused        0 leaks
-20  battery commands × 3 payload shapes                 identical AND correct
+test_pre_tool_use_guard.py
+  20  closed shapes            TheDemonstratedMutationPathsAreClosed.CLOSED
+  28  alternate encodings      AlternateEncodingsDoNotEvadeTheParser.EVASIONS
+  33  negative controls        NegativeControlsMustKeepWorking.ALLOWED
+ 208  documented commands      TheRepositorysOwnDocumentedCommandsStillRun, 197 must pass
+runtime_parity.py
+  20  battery commands x 3 payload shapes, identical AND carrying the right verdict
+mutate_guard_suite.py
+  30  mutations of the policy, the adapter and the battery
 ```
+
+🔴 **And the count that matters more: TWO bypass classes were shipped and then found**,
+after all of the above was already green — `echo "$(git add -A)"` (with its backtick twin)
+and `FOO=1 git add -A`, § 11.4.1. Measured across the shipped commits: both LEAK at
+`a7589a2` and `6a4a3a4`, both denied from `0782c37` onward.
+
+Neither was on any list, because a list is written by someone who already knows what to
+look for. **`GUARD_BYPASS_COUNT = 0` means *against these probes, today*, and it has read 0
+before while two shapes walked through.** A reviewer should read it as a statement about
+coverage, not about the shell.
 
 **Zero is a property of the probed set, not of the shell.** The residual debt below is what
 is known to remain open; what neither list contains is unmeasured — and § 11.3 is the check
@@ -554,12 +576,12 @@ runs are not reported as results: one predates the repair it would have been use
 justify, and the other is a statement about no particular tree.
 
 ```
-MUTATION TEST   26 mutations, each in a detached worktree
-TIP             6a4a3a43960116c858c00cbfcd9bbc2d1edc4881   pinned once
-RESULT          KILLED 26/26     SURVIVED 0     UNUSABLE 0
+MUTATION TEST   30 mutations, each in a detached worktree
+TIP             34adc836bd3a1abf326444aec242575dfc84f4f0   pinned once
+RESULT          KILLED 30/30     SURVIVED 0     UNUSABLE 0
 ```
 
-🔴 **26/26 is a property of these 26 mutations**, not of the guard. It says every breakage
+🔴 **30/30 is a property of these 30 mutations**, not of the guard. It says every breakage
 someone thought to write down is caught; it says nothing about the breakage nobody wrote
 down. The list is in `mutate_guard_suite.py --list` so the next reader can add the one that
 is missing rather than infer from the score that none is.
@@ -582,6 +604,33 @@ pre-existing and are not this candidate's to fix.
 🔴 **The instrument belonged to someone else.** Nothing in this candidate's own test set
 looks at file modes. It was found because a peer's tool was run against this branch, which
 is the argument for running it at all — and for the queue item that asked for it.
+
+
+### 11.4.1 · 🔴 Two bypasses this candidate SHIPPED, found by using the guard on myself
+
+Between revision 4 and revision 5 the guard refused a diagnostic command of mine that
+contained `->` inside a quoted command substitution. Following that false positive found
+two defects, and the second is the more serious of the two:
+
+| Shape | Verdict when found | Why |
+|---|---|---|
+| `echo "$(git add -A)"` | 🔴 **ALLOWED** | `extract_substitutions` skipped `$(…)` inside **both** quote kinds. The shell expands it inside double quotes and leaves it alone inside single ones, so half that rule was wrong in the unsafe direction |
+| `FOO=1 git add -A` | 🔴 **ALLOWED** | a leading `NAME=VALUE` was read as the *program*. No rule matches a program called `FOO=1`, so an assignment prefix disarmed staging, `rm`, redirection and every wrapper |
+| `a=$(git rev-parse HEAD)` | 🔴 **DENIED** | the same missing step seen from its other side: after substitution extraction a pure assignment looked like a program named by an expansion |
+
+Both bypasses were in **shipped commits of this candidate** — `a7589a2` for the first,
+`6a4a3a4` and earlier for the second — and both survived the 46-shape attack list, the
+20-encoding sweep and 26 mutations. They were found by the guard **being used**, on an
+ordinary command, which no probe list contained because no probe list is written by someone
+who does not already know the answer.
+
+The lesson is not "write more probes". It is that a control you only test is tested against
+your imagination, and a control you *run against your own work all day* is tested against
+the shapes that actually occur. `FOO=1 <anything>` is the most ordinary shape in shell and
+was not on any list here.
+
+`M27` and `M28` now restore each defect and require a suite to catch it, so neither can
+return quietly.
 
 
 ### 11.5 · The one review this candidate is answerable to, and what of it is stale
