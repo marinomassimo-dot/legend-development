@@ -5,20 +5,36 @@
 can *refuse* it. Every check fails for exactly one reason, and the reason is printed, so a
 red run tells the operator what broke rather than that something did.
 
-    python3 framework/scripts/runtime_parity.py                  # the eight checks
-    python3 framework/scripts/runtime_parity.py --bootstrap      # the Codex bootstrap contract
-    python3 framework/scripts/runtime_parity.py --skills         # the skill-bridge proof
-    python3 framework/scripts/runtime_parity.py --characterize   # the open guard gaps
+    runtime_parity.py                      # both verdicts, ten dimensions
+    runtime_parity.py --read-only          # the read-only floor alone
+    runtime_parity.py --write-enabled      # the write floor alone
+    runtime_parity.py --actor mirror       # ROLE_REACHABILITY needs an ASSIGNED actor
+    runtime_parity.py --bootstrap          # the Codex bootstrap contract
+    runtime_parity.py --hook-status        # the hook state machine, with its evidence
+    runtime_parity.py --stages             # per-stage pilot readiness
+    runtime_parity.py --skills             # the skill-bridge proof
+    runtime_parity.py --characterize       # what the guard policy still does not stop
+    runtime_parity.py --root <dir>         # judge a different tree (used by the tests)
 
-Exit `0` only when every check passes. `--bootstrap` exits non-zero while any field an
-actor owes before its first write is unresolved, because a bootstrap that reports a
-problem and exits 0 is a bootstrap nobody reads.
+`READ_ONLY_PARITY` and `WRITE_ENABLED_PARITY` are **separate verdicts** and neither
+implies the other. Exit `0` only when every requested verdict passes.
+
+## The overclaim this file used to carry
+
+Revision 2 imported the guard engine at module scope and *then* offered a check for the
+engine being absent. The import made that check unreachable: with the engine missing the
+process died at line 60 with a traceback, so the branch asserting fail-closed had never
+run once. It exited non-zero, so nothing green was ever printed — but the property "a
+missing safety component is *detected*" was not tested, only the property "python raises
+on a missing file".
+
+The engine is now never imported. It is invoked as a subprocess, exactly as a runtime
+invokes it, and its absence is a derived state with its own row.
 """
 from __future__ import annotations
 
 import argparse
 import hashlib
-import importlib.util
 import json
 import os
 import re
@@ -26,15 +42,49 @@ import subprocess
 import sys
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[2]
-SCRIPTS = ROOT / "framework" / "scripts"
-GUARD_ENTRY = SCRIPTS / "pre_tool_use_guard.py"
+# ── hook states ────────────────────────────────────────────────────────────────────
+#
+# Six, and `CONFIGURED` is deliberately not the same as `DEMONSTRATED`. Body § 38:
+# CONFIGURED != PROVEN. A registration that parses is not a control.
 
-CLAUDE_REGISTRATION = ROOT / ".claude" / "settings.json"
-CODEX_REGISTRATION = ROOT / ".codex" / "config.toml"
-ROUTER = ROOT / "CLAUDE.md"
-CODEX_ROUTER = ROOT / "AGENTS.md"
-BRIDGE_PROTOCOL = ROOT / "framework" / "protocols" / "runtime_bridge.md"
+NOT_CONFIGURED = "NOT_CONFIGURED"   # no registration names the engine
+CONFIGURED = "CONFIGURED"           # a registration exists and parses
+TRUST_PENDING = "TRUST_PENDING"     # configured, and the runtime gates it behind a review
+DEMONSTRATED = "DEMONSTRATED"       # a probe receipt records a refusal
+NOT_FIRING = "NOT_FIRING"           # a probe receipt records the command running anyway
+UNDERIVABLE = "UNDERIVABLE"         # the registration cannot be read or parsed at all
+
+PASSING_HOOK_STATES = frozenset({DEMONSTRATED})
+
+# Evidence classes, used verbatim in the printed rows.
+OBSERVED = "OBSERVED"
+DOCUMENTED = "DOCUMENTED"
+DERIVED = "DERIVED"
+UNVERIFIED = "UNVERIFIED"
+
+
+class Surface:
+    """Every path this battery judges, resolved from one root.
+
+    🔴 Constructed from a root rather than hard-coded, so a test can point the whole
+    battery at a tree with a component deliberately removed. Without this the negative
+    arms of P0-D cannot be executed, only asserted.
+    """
+
+    def __init__(self, root: Path):
+        self.root = Path(root).resolve()
+        self.scripts = self.root / "framework" / "scripts"
+        self.guard_entry = self.scripts / "pre_tool_use_guard.py"
+        self.guard_policy = self.scripts / "guard_policy.py"
+        self.claude_registration = self.root / ".claude" / "settings.json"
+        self.codex_registration = self.root / ".codex" / "config.toml"
+        self.router = self.root / "CLAUDE.md"
+        self.codex_router = self.root / "AGENTS.md"
+        self.bridge_protocol = self.root / "framework" / "protocols" / "runtime_bridge.md"
+        self.probe_receipt = self.root / "framework" / "state" / "codex_hook_probe.json"
+        self.fingerprint_tool = self.root / "governance" / "scripts" / "governance_fingerprint.py"
+        self.lease_tool = self.scripts / "lease_state.py"
+
 
 # The chain AGENTS.md § 1 promises. If Codex cannot traverse it, it is not on the core.
 ROUTER_CHAIN = (
@@ -60,135 +110,251 @@ PROBE_SKILLS = ("legend-start", "legend-deepdive", "legend-locator-audit")
 # branch are not among them, and that is the whole of NO_SELF_ELECTION.
 ACTOR_ID_ENV = "LEGEND_ACTOR_ID"
 
-_spec = importlib.util.spec_from_file_location("pre_tool_use_guard", GUARD_ENTRY)
-_guard = importlib.util.module_from_spec(_spec)
-sys.modules[_spec.name] = _guard
-_spec.loader.exec_module(_guard)
-
 
 # ── plumbing ──────────────────────────────────────────────────────────────────────
 
-def _git(*args: str) -> str:
-    out = subprocess.run(["git", "-C", str(ROOT), *args], capture_output=True, text=True)
+def _git(surface: Surface, *args: str) -> str:
+    out = subprocess.run(["git", "-C", str(surface.root), *args],
+                         capture_output=True, text=True)
     return out.stdout.strip() if out.returncode == 0 else ""
 
 
-def _hook(payload: dict) -> str:
-    """Run the shared engine exactly as a runtime would, and name its decision."""
+def _hook(surface: Surface, payload: dict) -> str:
+    """Run the shared engine exactly as a runtime would, and name its decision.
+
+    `ERROR` is a distinct answer from `deny`: a hook that cannot run is a broken control,
+    and a battery that folded the two together would score a missing engine as a refusal.
+    """
+    if not surface.guard_entry.exists():
+        return "ENGINE_MISSING"
     result = subprocess.run(
-        [sys.executable, str(GUARD_ENTRY)], input=json.dumps(payload),
+        [sys.executable, str(surface.guard_entry)], input=json.dumps(payload),
         capture_output=True, text=True,
     )
     if result.returncode != 0:
         return "ERROR"
     if not result.stdout.strip():
         return "allow"
-    return json.loads(result.stdout)["hookSpecificOutput"]["permissionDecision"]
+    try:
+        return json.loads(result.stdout)["hookSpecificOutput"]["permissionDecision"]
+    except (ValueError, KeyError, TypeError):
+        return "ERROR"
 
 
-def claude_payload(command: str) -> dict:
+def claude_payload(surface: Surface, command: str) -> dict:
     return {"hook_event_name": "PreToolUse", "tool_name": "Bash",
-            "cwd": str(ROOT), "tool_input": {"command": command}}
+            "cwd": str(surface.root), "tool_input": {"command": command}}
 
 
-def codex_payload(command: str) -> dict:
+def codex_payload(surface: Surface, command: str) -> dict:
     return {"hook_event_name": "PreToolUse", "tool_name": "shell_command",
-            "cwd": str(ROOT), "tool_input": {"cmd": command, "workdir": str(ROOT)}}
+            "cwd": str(surface.root),
+            "tool_input": {"cmd": command, "workdir": str(surface.root)}}
 
 
+def codemode_payload(surface: Surface, command: str) -> dict:
+    """The shape the recorded 2026-08-28 Codex session actually produced."""
+    body = ('const r = await tools.exec_command('
+            + json.dumps({"cmd": command, "workdir": str(surface.root)}) + ");")
+    return {"hook_event_name": "PreToolUse", "tool_name": "exec",
+            "cwd": str(surface.root), "tool_input": {"input": body}}
+
+
+#: Commands whose verdict must not move with the runtime. Both directions on purpose: a
+#: guard that denied everything would pass a deny-only list.
 PROBE_COMMANDS = (
-    "git add -A",
-    "git add --all",
-    'git commit -am "x"',
-    "git status --short",
-    "git add scripts/foo.py",
-    "python3 - <<'PY'\nfrom pathlib import Path\nPath(\"x.md\").write_text(\"y\")\nPY",
-    "python3 framework/scripts/legend_lint.py .",
-    "rg --files",
+    ("git add -A", "deny"),
+    ("git add --all", "deny"),
+    ('git commit -am "x"', "deny"),
+    ('bash -c "git add -A"', "deny"),
+    ("git ls-files | xargs git add", "deny"),
+    ("sed -i '' 's/x/y/' AGENTS.md", "deny"),
+    ("echo x > AGENTS.md", "deny"),
+    ("echo x | tee AGENTS.md", "deny"),
+    ("cp /tmp/x.md AGENTS.md", "deny"),
+    ("rm AGENTS.md", "deny"),
+    ("python3 -c \"open('AGENTS.md','w')\"", "deny"),
+    ("perl -pi -e 's/a/b/' AGENTS.md", "deny"),
+    ("python3 - <<'PY'\nfrom pathlib import Path\nPath(\"x.md\").write_text(\"y\")\nPY", "deny"),
+    ("git status --short", "allow"),
+    ("git add scripts/foo.py", "allow"),
+    ('echo "git add -A"', "allow"),
+    ("grep -rn 'git add -A' framework/", "allow"),
+    ("python3 framework/scripts/legend_lint.py .", "allow"),
+    ("echo x > /tmp/scratch.txt", "allow"),
+    ("rg --files | sort", "allow"),
 )
 
-GUARD_GAPS = (
-    ("shell -c wrapper", 'bash -c "git add -A"'),
-    ("sed -i", "sed -i '' 's/x/y/' FILE"),
-    ("redirection >", "echo x > FILE"),
-    ("append >>", "echo x >> FILE"),
-    ("tee", "echo x | tee FILE"),
-    ("cp over a tracked file", "cp /tmp/x FILE"),
-    ("mv over a tracked file", "mv /tmp/x FILE"),
-    ("python -c write", "python3 -c \"open('FILE','w')\""),
-    ("perl -pi", "perl -pi -e 's/a/b/' FILE"),
+#: What the policy still does NOT stop, printed by --characterize and asserted open by
+#: framework/scripts/test_pre_tool_use_guard.py. Closing one means closing its entry too.
+GUARD_RESIDUAL_DEBT = (
+    ("chmod / chown", "chmod 777 AGENTS.md"),
+    ("git reset --hard", "git reset --hard HEAD~1"),
+    ("git checkout -- .", "git checkout -- ."),
+    ("git clean -fd", "git clean -fd"),
+    ("git push", "git push --force origin main"),
+    ("a committed script that writes", "python3 framework/scripts/legend_lint.py --fix"),
 )
 
 
 class Result:
     def __init__(self) -> None:
-        self.rows: list[tuple[str, bool, str]] = []
+        self.rows: list = []
 
     def add(self, name: str, ok: bool, detail: str = "") -> None:
         self.rows.append((name, ok, detail))
 
-    @property
-    def ok(self) -> bool:
-        return all(ok for _, ok, _ in self.rows)
+    def named(self, name: str) -> bool:
+        return all(ok for row_name, ok, _ in self.rows if row_name == name)
 
-    def render(self) -> str:
+    def subset(self, names) -> bool:
+        return all(self.named(name) for name in names)
+
+    def render(self, requires=None) -> str:
         lines = []
         for name, ok, detail in self.rows:
-            lines.append(f"{'PASS' if ok else 'FAIL':<5} {name:<34} {detail}")
-        failed = [n for n, ok, _ in self.rows if not ok]
-        lines.append("")
-        lines.append(f"VERDICT: {'PASS' if self.ok else 'FAIL'}   "
-                     f"{len(self.rows) - len(failed)}/{len(self.rows)} checks")
-        if failed:
-            lines.append("FAILED: " + ", ".join(failed))
+            lines.append(f"{'PASS' if ok else 'FAIL':<5} {name:<32} {detail}")
         return "\n".join(lines)
 
 
-# ── the eight checks ──────────────────────────────────────────────────────────────
+# ── the ten dimensions ─────────────────────────────────────────────────────────────
 
-def check_router_reachability(r: Result) -> None:
-    if not CODEX_ROUTER.exists():
-        r.add("ROUTER_REACHABILITY", False, "AGENTS.md is absent")
+def check_router_parity(surface: Surface, r: Result, actor) -> None:
+    if not surface.codex_router.exists():
+        r.add("ROUTER_PARITY", False, "AGENTS.md is absent")
         return
-    text = CODEX_ROUTER.read_text(encoding="utf-8")
+    text = surface.codex_router.read_text(encoding="utf-8")
     if "CLAUDE.md" not in text:
-        r.add("ROUTER_REACHABILITY", False, "AGENTS.md no longer routes to CLAUDE.md")
+        r.add("ROUTER_PARITY", False, "AGENTS.md no longer routes to CLAUDE.md")
         return
-    missing = [str(p) for p in ROUTER_CHAIN if not (ROOT / p).exists()]
+    missing = [str(p) for p in ROUTER_CHAIN if not (surface.root / p).exists()]
     if missing:
-        r.add("ROUTER_REACHABILITY", False, "chain unresolvable: " + ", ".join(missing))
+        r.add("ROUTER_PARITY", False, "chain unresolvable: " + ", ".join(missing))
         return
     unlinked = [str(p) for p in ROUTER_CHAIN if p.name not in text and str(p) not in text]
     if unlinked:
-        r.add("ROUTER_REACHABILITY", False, "chain member not named in AGENTS.md: "
+        r.add("ROUTER_PARITY", False, "chain member not named in AGENTS.md: "
               + ", ".join(unlinked))
         return
-    r.add("ROUTER_REACHABILITY", True, f"{len(ROUTER_CHAIN)} surfaces named and present")
+    r.add("ROUTER_PARITY", True, f"{len(ROUTER_CHAIN)} surfaces named and present")
 
 
-def check_role_contract_reachability(r: Result) -> None:
-    missing = [f"{role}->{p}" for role, p in ROLE_CONTRACTS.items() if not (ROOT / p).exists()]
-    if missing:
-        r.add("ROLE_CONTRACT_REACHABILITY", False, ", ".join(missing))
+SELF_ELECTION = re.compile(
+    r"ACTOR_ID\s*(?:=|:|is\s+)?\s*(?:derived|inferred|taken)\s+from\s+"
+    r"(?:the\s+)?(?:runtime|session|worktree|branch|directory|cwd)",
+    re.IGNORECASE,
+)
+
+
+def check_actor_id_parity(surface: Surface, r: Result, actor) -> None:
+    """No artifact may let the host decide who is acting — in either runtime."""
+    offenders = []
+    listed = _git(surface, "ls-files", "AGENTS.md", "CLAUDE.md", "BOOTSTRAP.md", "roles",
+                  "framework/protocols", "governance").splitlines()
+    for rel in listed:
+        path = surface.root / rel
+        if path.suffix != ".md" or not path.exists():
+            continue
+        if SELF_ELECTION.search(path.read_text(encoding="utf-8", errors="replace")):
+            offenders.append(rel)
+    declared = (surface.codex_router.read_text(encoding="utf-8")
+                if surface.codex_router.exists() else "")
+    if "assigned by the operator" not in declared:
+        offenders.append("AGENTS.md no longer states that ACTOR_ID is assigned")
+    r.add("ACTOR_ID_PARITY", not offenders,
+          ", ".join(offenders) or "no artifact derives ACTOR_ID from its host")
+
+
+def role_contract_for(surface: Surface, actor):
+    """Resolve an ASSIGNED actor to its contract. Never elect one.
+
+    Returns `(path_or_None, reason)`. A missing actor resolves to nothing at all — the
+    battery reports `UNRESOLVED` and the write floor fails, which is the only reading of
+    `NO_SELF_ELECTION` that survives an unattended run.
+    """
+    if not actor:
+        return None, "no ACTOR_ID assigned"
+    role = str(actor).split("-")[0].strip().lower()
+    if role not in ROLE_CONTRACTS:
+        return None, f"ACTOR_ID {actor!r} names no role contract; roles are not invented"
+    return ROLE_CONTRACTS[role], ""
+
+
+def role_contract_digest(surface: Surface, actor):
+    path, _ = role_contract_for(surface, actor)
+    if path is None or not (surface.root / path).exists():
+        return None
+    return hashlib.sha256((surface.root / path).read_bytes()).hexdigest()
+
+
+def check_role_reachability(surface: Surface, r: Result, actor) -> None:
+    """The chain must *arrive* at the assigned actor's contract, not merely contain files.
+
+    Revision 2 asserted that four files existed and were readable. That is true of a tree
+    in which `AGENTS.md` names no role at all, and true when the operator assigned an
+    actor whose contract the router never reaches. Both now fail.
+    """
+    path, why = role_contract_for(surface, actor)
+    if path is None:
+        r.add("ROLE_REACHABILITY", False, f"UNRESOLVED — {why}")
         return
-    unreadable = []
-    for role, p in ROLE_CONTRACTS.items():
-        try:
-            if not (ROOT / p).read_text(encoding="utf-8").strip():
-                unreadable.append(role)
-        except OSError:
-            unreadable.append(role)
-    r.add("ROLE_CONTRACT_REACHABILITY", not unreadable,
-          ", ".join(unreadable) or f"{len(ROLE_CONTRACTS)} contracts readable by path")
+    target = surface.root / path
+    if not target.exists():
+        r.add("ROLE_REACHABILITY", False, f"{actor} -> {path} does not exist")
+        return
+    try:
+        body = target.read_text(encoding="utf-8")
+    except OSError as exc:
+        r.add("ROLE_REACHABILITY", False, f"{path} unreadable: {exc}")
+        return
+    if not body.strip():
+        r.add("ROLE_REACHABILITY", False, f"{path} is empty")
+        return
+
+    # Semantic traversal: the router chain must name the directory the contract lives in,
+    # and some document in the chain must be reachable to a reader who starts at AGENTS.md.
+    if not surface.codex_router.exists():
+        r.add("ROLE_REACHABILITY", False, "AGENTS.md is absent, so nothing routes anywhere")
+        return
+    router_text = surface.codex_router.read_text(encoding="utf-8")
+    hop = path.parent.as_posix()
+    if hop not in router_text and path.as_posix() not in router_text:
+        r.add("ROLE_REACHABILITY", False,
+              f"AGENTS.md names neither {path.as_posix()} nor {hop}/, "
+              f"so a reader never arrives at {actor}'s contract")
+        return
+    r.add("ROLE_REACHABILITY", True,
+          f"{actor} -> {path.as_posix()} reached from AGENTS.md, sha {role_contract_digest(surface, actor)[:12]}")
 
 
-def skill_report() -> list[dict]:
+def check_governance_fingerprint_parity(surface: Surface, r: Result, actor) -> None:
+    """A fingerprint that moves with the runtime would be authority following the host."""
+    if not surface.fingerprint_tool.exists():
+        r.add("GOVERNANCE_FINGERPRINT_PARITY", False, "governance_fingerprint.py is absent")
+        return
+    values = {}
+    for runtime in ("claude", "codex"):
+        env = {**os.environ, "LEGEND_RUNTIME": runtime}
+        out = subprocess.run([sys.executable, str(surface.fingerprint_tool), "compose", "--all"],
+                             capture_output=True, text=True, env=env, cwd=str(surface.root))
+        if out.returncode != 0:
+            r.add("GOVERNANCE_FINGERPRINT_PARITY", False, f"compose failed under {runtime}")
+            return
+        values[runtime] = out.stdout
+    if values["claude"] != values["codex"]:
+        r.add("GOVERNANCE_FINGERPRINT_PARITY", False, "fingerprints differ between runtimes")
+        return
+    n = len([ln for ln in values["claude"].splitlines() if ln.strip()])
+    r.add("GOVERNANCE_FINGERPRINT_PARITY", True, f"{n} role fingerprints, runtime-invariant")
+
+
+def skill_report(surface: Surface) -> list:
     """One copy of each probed skill, reachable by path from the repository root."""
-    tracked = _git("ls-files").splitlines()
-    digests: dict[str, list[str]] = {}
+    tracked = _git(surface, "ls-files").splitlines()
+    digests: dict = {}
     for rel in tracked:
         if rel.endswith("SKILL.md"):
-            path = ROOT / rel
+            path = surface.root / rel
             if path.exists():
                 digest = hashlib.sha256(path.read_bytes()).hexdigest()
                 digests.setdefault(digest, []).append(rel)
@@ -196,7 +362,7 @@ def skill_report() -> list[dict]:
     rows = []
     for name in PROBE_SKILLS:
         rel = f".claude/skills/{name}/SKILL.md"
-        path = ROOT / rel
+        path = surface.root / rel
         present = path.exists()
         digest = hashlib.sha256(path.read_bytes()).hexdigest() if present else ""
         copies = digests.get(digest, []) if present else []
@@ -213,8 +379,8 @@ def skill_report() -> list[dict]:
     return rows
 
 
-def check_skill_reachability(r: Result) -> None:
-    rows = skill_report()
+def check_skill_reachability(surface: Surface, r: Result, actor) -> None:
+    rows = skill_report(surface)
     bad = [row["skill"] for row in rows
            if not (row["CLAUDE_REACHABLE"] and row["CODEX_REACHABLE"]
                    and row["NO_DUPLICATED_NORMATIVE_COPY"])]
@@ -222,153 +388,333 @@ def check_skill_reachability(r: Result) -> None:
           ", ".join(bad) or f"{len(rows)} probed, one copy each, readable by path")
 
 
-def check_write_guard_parity(r: Result) -> None:
+def check_guard_policy_parity(surface: Surface, r: Result, actor) -> None:
+    """Same command, three payload shapes, one verdict — and the verdict must be right.
+
+    Comparing the two runtimes to each other is necessary and not sufficient: two sides
+    that both allow blanket staging agree perfectly. Each row therefore carries the
+    verdict it must reach, so agreement on a wrong answer fails.
+    """
     divergent = []
-    for command in PROBE_COMMANDS:
-        a, b = _hook(claude_payload(command)), _hook(codex_payload(command))
-        if a != b or a == "ERROR":
-            divergent.append(f"{command.splitlines()[0][:28]!r}: claude={a} codex={b}")
-    r.add("WRITE_GUARD_PARITY", not divergent,
-          "; ".join(divergent) or f"{len(PROBE_COMMANDS)} commands, identical verdicts")
+    for command, expected in PROBE_COMMANDS:
+        answers = {
+            "claude": _hook(surface, claude_payload(surface, command)),
+            "codex": _hook(surface, codex_payload(surface, command)),
+            "codex-code-mode": _hook(surface, codemode_payload(surface, command)),
+        }
+        label = command.splitlines()[0][:30]
+        if len(set(answers.values())) != 1:
+            divergent.append(f"{label!r}: " + " ".join(f"{k}={v}" for k, v in answers.items()))
+        elif answers["claude"] != expected:
+            divergent.append(f"{label!r}: expected {expected}, got {answers['claude']}")
+    r.add("GUARD_POLICY_PARITY", not divergent,
+          "; ".join(divergent[:3]) or
+          f"{len(PROBE_COMMANDS)} commands x 3 payload shapes, identical and correct")
 
 
-def check_authority_parity(r: Result) -> None:
-    """A fingerprint that moves with the runtime would be authority following the host."""
-    tool = ROOT / "governance" / "scripts" / "governance_fingerprint.py"
-    if not tool.exists():
-        r.add("AUTHORITY_PARITY", False, "governance_fingerprint.py is absent")
-        return
-    values = {}
-    for runtime in ("claude", "codex"):
-        env = {**os.environ, "LEGEND_RUNTIME": runtime}
-        out = subprocess.run([sys.executable, str(tool), "compose", "--all"],
-                             capture_output=True, text=True, env=env, cwd=str(ROOT))
-        if out.returncode != 0:
-            r.add("AUTHORITY_PARITY", False, f"compose failed under {runtime}")
-            return
-        values[runtime] = out.stdout
-    if values["claude"] != values["codex"]:
-        r.add("AUTHORITY_PARITY", False, "fingerprints differ between runtimes")
-        return
-    n = len([ln for ln in values["claude"].splitlines() if ln.strip()])
-    r.add("AUTHORITY_PARITY", True, f"{n} role fingerprints, runtime-invariant")
+# ── the hook state machine ─────────────────────────────────────────────────────────
+
+def codex_registration_state(surface: Surface):
+    """Does a Codex registration exist, parse, and name THIS engine?"""
+    path = surface.codex_registration
+    if not path.exists():
+        return NOT_CONFIGURED, [(OBSERVED, f"{path.name} is absent")]
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError as exc:
+        return UNDERIVABLE, [(OBSERVED, f"{path.name} unreadable: {exc}")]
+
+    evidence = []
+    try:
+        import tomllib  # Python 3.11+
+        parsed = tomllib.loads(text)
+    except ImportError:
+        parsed = None
+        evidence.append((DERIVED, "no TOML parser in this interpreter; checked textually"))
+    except Exception as exc:  # noqa: BLE001 - any TOML error is the same finding
+        return UNDERIVABLE, [(OBSERVED, f"{path.name} is not valid TOML: {exc}")]
+
+    if parsed is not None:
+        groups = (parsed.get("hooks") or {}).get("PreToolUse")
+        if not isinstance(groups, list) or not groups:
+            return NOT_CONFIGURED, [(OBSERVED, "hooks.PreToolUse is absent or not a list")]
+        commands = json.dumps(groups)
+        evidence.append((OBSERVED, f"hooks.PreToolUse parses, {len(groups)} group(s)"))
+    else:
+        commands = text
+        if "[hooks]" not in text or "PreToolUse" not in text:
+            return NOT_CONFIGURED, [(OBSERVED, "no hooks.PreToolUse table in the file")]
+
+    if "pre_tool_use_guard.py" not in commands:
+        return NOT_CONFIGURED, evidence + [
+            (OBSERVED, "the registration does not name framework/scripts/pre_tool_use_guard.py")]
+    if not surface.guard_entry.exists():
+        return UNDERIVABLE, evidence + [
+            (OBSERVED, "the registration names an engine that is not on disk")]
+    return CONFIGURED, evidence
 
 
-def check_fail_closed(r: Result) -> None:
-    cases = {
-        "malformed stdin": "not json",
-        "empty stdin": "",
-        "no tool_name": json.dumps({"hook_event_name": "PreToolUse", "tool_input": {}}),
-        "unknown tool": json.dumps({"hook_event_name": "PreToolUse", "tool_name": "Shell",
-                                    "tool_input": {"command": "ls"}}),
-        "wrong event": json.dumps({"hook_event_name": "PostToolUse", "tool_name": "Bash",
-                                   "tool_input": {"command": "ls"}}),
-        "uncextractable command": json.dumps({"hook_event_name": "PreToolUse",
-                                              "tool_name": "shell_command",
-                                              "tool_input": {"workdir": "/tmp"}}),
-    }
-    leaks = []
-    for label, raw in cases.items():
-        result = subprocess.run([sys.executable, str(GUARD_ENTRY)], input=raw,
-                                capture_output=True, text=True)
-        decision = ("allow" if not result.stdout.strip()
-                    else json.loads(result.stdout)["hookSpecificOutput"]["permissionDecision"])
-        if decision != "deny":
-            leaks.append(f"{label}->{decision}")
-    for path, label in ((CLAUDE_REGISTRATION, "claude registration"),
-                        (CODEX_REGISTRATION, "codex registration")):
-        if not path.exists():
-            leaks.append(f"{label} absent")
-    if not GUARD_ENTRY.exists():
-        leaks.append("shared engine absent")
-    r.add("FAIL_CLOSED_ON_MISSING_BRIDGE", not leaks,
-          "; ".join(leaks) or f"{len(cases)} undecidable inputs all denied")
+MATCHER_LINE = re.compile(r"""matcher\s*=\s*["']([^"']+)["']""")
 
 
-SELF_ELECTION = re.compile(
-    r"ACTOR_ID\s*(?:=|:|is\s+)?\s*(?:derived|inferred|taken)\s+from\s+"
-    r"(?:the\s+)?(?:runtime|session|worktree|branch|directory|cwd)",
-    re.IGNORECASE,
+def codex_matchers(surface: Surface) -> set:
+    """The matcher VALUES the Codex registration declares, as whole strings."""
+    if not surface.codex_registration.exists():
+        return set()
+    text = surface.codex_registration.read_text(encoding="utf-8")
+    body = text.split("[hooks]", 1)[-1] if "[hooks]" in text else text
+    return set(MATCHER_LINE.findall(body))
+
+
+def probe_receipt_state(surface: Surface):
+    """Read the session-probe receipt. It is the ONLY thing that may say DEMONSTRATED."""
+    path = surface.probe_receipt
+    if not path.exists():
+        return None, [(UNVERIFIED,
+                       f"no session probe recorded at {path.relative_to(surface.root)}")]
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        return UNDERIVABLE, [(OBSERVED, f"probe receipt unreadable: {exc}")]
+    if not isinstance(data, dict):
+        return UNDERIVABLE, [(OBSERVED, "probe receipt is not an object")]
+
+    required = ("schema", "recorded_on", "codex_version", "cwd", "probe_command", "observed")
+    missing = [k for k in required if not data.get(k)]
+    if missing:
+        return UNDERIVABLE, [(OBSERVED,
+                              "probe receipt omits " + ", ".join(missing)
+                              + " — an incomplete receipt proves nothing")]
+    observed = str(data["observed"]).upper()
+    stamp = f"codex {data['codex_version']} on {data['recorded_on']}"
+    if observed == "REFUSED":
+        return DEMONSTRATED, [(OBSERVED, f"probe refused: {stamp}")]
+    if observed == "EXECUTED":
+        return NOT_FIRING, [(OBSERVED, f"probe ran unimpeded: {stamp}")]
+    return UNDERIVABLE, [(OBSERVED, f"probe receipt records observed={observed!r}, "
+                                    "which is neither REFUSED nor EXECUTED")]
+
+
+#: Strings the installed Codex binary carries for its own per-hook trust gate. They are
+#: `DOCUMENTED`: they establish that the gate EXISTS, never which side of it we are on.
+CODEX_TRUST_GATE_STRINGS = (
+    "New hook - review required",
+    "Modified since last trusted - review required",
+    "Trusted",
+    "Managed hooks are always on",
 )
 
 
-def check_no_self_election(r: Result) -> None:
-    offenders = []
-    for rel in (_git("ls-files", "AGENTS.md", "CLAUDE.md", "BOOTSTRAP.md", "roles",
-                     "framework/protocols", "governance").splitlines()):
-        path = ROOT / rel
-        if path.suffix != ".md" or not path.exists():
-            continue
-        if SELF_ELECTION.search(path.read_text(encoding="utf-8", errors="replace")):
-            offenders.append(rel)
-    declared = CODEX_ROUTER.read_text(encoding="utf-8") if CODEX_ROUTER.exists() else ""
-    if "assigned by the operator" not in declared:
-        offenders.append("AGENTS.md no longer states that ACTOR_ID is assigned")
-    r.add("NO_SELF_ELECTION", not offenders,
-          ", ".join(offenders) or "no artifact derives ACTOR_ID from its host")
+def hook_status(surface: Surface):
+    """The five-plus-one valued derivation, with each row's evidence class.
+
+    🔴 A receipt is the only path to `DEMONSTRATED`. Configuration never reaches it, and
+    neither does directory trust: the runtime's own UI strings show a per-hook review gate
+    exists, and nothing readable from this repository says whether it has been passed. The
+    honest answer for a configured, unprobed hook is therefore `TRUST_PENDING` — not
+    `CONFIGURED`, which would read as "nothing further is needed", and not `NOT_FIRING`,
+    which would be a measurement nobody took.
+    """
+    registration, evidence = codex_registration_state(surface)
+    if registration in (NOT_CONFIGURED, UNDERIVABLE):
+        return registration, evidence
+
+    receipt_state, receipt_evidence = probe_receipt_state(surface)
+    evidence = evidence + receipt_evidence
+    if receipt_state in (DEMONSTRATED, NOT_FIRING, UNDERIVABLE):
+        return receipt_state, evidence
+
+    evidence.append((DOCUMENTED,
+                     "the runtime gates project hooks behind a per-hook review — its own "
+                     "strings: " + "; ".join(repr(s) for s in CODEX_TRUST_GATE_STRINGS[:2])))
+    evidence.append((UNVERIFIED,
+                     "which side of that gate this registration is on is not readable "
+                     "from the repository, and `codex doctor` reports no hook state at "
+                     "all (18 checks, none about hooks)"))
+    return TRUST_PENDING, evidence
 
 
-def codex_hook_fires() -> tuple[str, str]:
-    """The one thing no local, no-cost probe can reach. Reported, never assumed."""
-    receipt = ROOT / "framework" / "state" / "codex_hook_probe.json"
-    if not receipt.exists():
-        return ("UNVERIFIED",
-                "no session probe recorded; a registration that parses is not a control "
-                f"(record one at {receipt.relative_to(ROOT)})")
-    try:
-        data = json.loads(receipt.read_text(encoding="utf-8"))
-    except (OSError, ValueError) as exc:
-        return "UNVERIFIED", f"probe receipt unreadable: {exc}"
-    if data.get("blocked_blanket_staging") is True and data.get("codex_version"):
-        return "OBSERVED", f"blocked under codex {data['codex_version']}"
-    return "UNVERIFIED", "probe receipt does not record a refusal"
-
-
-def check_no_runtime_authority_escalation(r: Result) -> None:
+def check_hook_registration_present(surface: Surface, r: Result, actor) -> None:
     problems = []
-    if not CODEX_REGISTRATION.exists():
-        problems.append("Codex has no registration, so the guard is Claude-only")
+    state, _ = codex_registration_state(surface)
+    if state != CONFIGURED:
+        problems.append(f"codex registration {state}")
+    if not surface.claude_registration.exists():
+        problems.append("claude registration absent")
     else:
-        text = CODEX_REGISTRATION.read_text(encoding="utf-8")
-        if "pre_tool_use_guard.py" not in text:
-            problems.append("the Codex registration does not name the shared engine")
-        for tool in ("shell_command", "unified_exec"):
-            if tool not in text:
-                problems.append(f"no matcher for Codex tool {tool}")
-    if CLAUDE_REGISTRATION.exists():
-        settings = json.loads(CLAUDE_REGISTRATION.read_text(encoding="utf-8"))
+        try:
+            settings = json.loads(surface.claude_registration.read_text(encoding="utf-8"))
+        except (OSError, ValueError) as exc:
+            problems.append(f"claude registration malformed: {exc}")
+            settings = {}
         commands = json.dumps(settings.get("hooks", {}))
-        if "guard_bash_command.py" not in commands and "pre_tool_use_guard.py" not in commands:
+        if "PreToolUse" not in commands:
+            problems.append("claude registration declares no PreToolUse hook")
+        elif ("guard_bash_command.py" not in commands
+                and "pre_tool_use_guard.py" not in commands):
             problems.append("the Claude registration does not name the shared engine")
-    status, detail = codex_hook_fires()
-    if status != "OBSERVED":
-        problems.append(f"CODEX_HOOK_FIRES={status}: {detail}")
+    r.add("HOOK_REGISTRATION_PRESENT", not problems,
+          "; ".join(problems) or "both runtimes register the one engine")
+
+
+def check_hook_demonstrated(surface: Surface, r: Result, actor) -> None:
+    state, evidence = hook_status(surface)
+    detail = f"CODEX_HOOK={state}"
+    tail = next((text for cls, text in evidence if cls in (UNVERIFIED, OBSERVED)), "")
+    r.add("HOOK_DEMONSTRATED", state in PASSING_HOOK_STATES,
+          f"{detail} — {tail}" if tail else detail)
+
+
+def check_missing_bridge_fail_closed(surface: Surface, r: Result, actor) -> None:
+    """Every way the bridge can be absent or unreadable must answer `deny`.
+
+    The engine's absence is checked by *running the battery against it*, not by asking
+    whether a file exists next to code that already imported it.
+    """
+    leaks = []
+    if not surface.guard_entry.exists():
+        leaks.append("the shared engine is absent, so nothing is policed")
+    elif not surface.guard_policy.exists():
+        leaks.append("the policy module is absent, so the engine cannot decide")
+    else:
+        cases = {
+            "malformed stdin": "not json",
+            "empty stdin": "",
+            "json but not an object": "[]",
+            "null payload": "null",
+            "no tool_name": json.dumps({"hook_event_name": "PreToolUse", "tool_input": {}}),
+            "unknown tool": json.dumps({"hook_event_name": "PreToolUse", "tool_name": "Shell",
+                                        "tool_input": {"command": "ls"}}),
+            "wrong event": json.dumps({"hook_event_name": "PostToolUse", "tool_name": "Bash",
+                                       "tool_input": {"command": "ls"}}),
+            "unextractable command": json.dumps({"hook_event_name": "PreToolUse",
+                                                 "tool_name": "shell_command",
+                                                 "tool_input": {"workdir": "/tmp"}}),
+            "tool_input is a number": json.dumps({"hook_event_name": "PreToolUse",
+                                                  "tool_name": "Bash", "tool_input": 7}),
+            "code-mode body unreadable": json.dumps({"hook_event_name": "PreToolUse",
+                                                     "tool_name": "exec",
+                                                     "tool_input": {"input": "tools.exec_command(x)"}}),
+        }
+        for label, raw in cases.items():
+            result = subprocess.run([sys.executable, str(surface.guard_entry)], input=raw,
+                                    capture_output=True, text=True)
+            if result.returncode != 0:
+                leaks.append(f"{label}->hook errored (rc={result.returncode})")
+                continue
+            try:
+                decision = ("allow" if not result.stdout.strip()
+                            else json.loads(result.stdout)["hookSpecificOutput"]["permissionDecision"])
+            except (ValueError, KeyError, TypeError):
+                decision = "unreadable output"
+            if decision != "deny":
+                leaks.append(f"{label}->{decision}")
+
+    for path, label in ((surface.claude_registration, "claude registration"),
+                        (surface.codex_registration, "codex registration")):
+        if not path.exists():
+            leaks.append(f"{label} absent")
+    r.add("MISSING_BRIDGE_FAIL_CLOSED", not leaks,
+          "; ".join(leaks[:3]) or "10 undecidable inputs denied; both registrations present")
+
+
+def check_no_runtime_authority_escalation(surface: Surface, r: Result, actor) -> None:
+    """A control present on one side and not the other is the host granting authority."""
+    problems = []
+    state, _ = codex_registration_state(surface)
+    if state != CONFIGURED:
+        problems.append(f"Codex registration is {state}, so the guard is Claude-only")
+    else:
+        declared = codex_matchers(surface)
+        # 🔴 Compared as whole matcher values, never as substrings: `exec` is a substring
+        # of `unified_exec`, so a substring test reports a matcher that is not there.
+        for tool in ("shell_command", "unified_exec", "exec"):
+            if tool not in declared:
+                problems.append(f"no matcher for Codex tool `{tool}`")
+    hook, _ = hook_status(surface)
+    if hook not in PASSING_HOOK_STATES:
+        problems.append(f"CODEX_HOOK={hook}: the Codex side is not demonstrated, so a "
+                        "write-enabled Codex actor would run a control Claude has and it "
+                        "does not")
     r.add("NO_RUNTIME_AUTHORITY_ESCALATION", not problems,
           "; ".join(problems) or "both adapters register one engine, firing observed")
 
 
 CHECKS = (
-    check_router_reachability,
-    check_role_contract_reachability,
+    check_router_parity,
+    check_actor_id_parity,
+    check_role_reachability,
+    check_governance_fingerprint_parity,
     check_skill_reachability,
-    check_write_guard_parity,
-    check_authority_parity,
-    check_fail_closed,
-    check_no_self_election,
+    check_guard_policy_parity,
+    check_hook_registration_present,
+    check_hook_demonstrated,
+    check_missing_bridge_fail_closed,
     check_no_runtime_authority_escalation,
 )
 
+#: 🔴 The two floors are separate verdicts, and the write floor is NOT the read floor plus
+#: one row: it re-requires every read-floor row, because a write-enabled actor reads too.
+READ_ONLY_REQUIRES = (
+    "ROUTER_PARITY", "ACTOR_ID_PARITY", "ROLE_REACHABILITY",
+    "GOVERNANCE_FINGERPRINT_PARITY", "SKILL_REACHABILITY", "MISSING_BRIDGE_FAIL_CLOSED",
+)
+WRITE_ENABLED_REQUIRES = READ_ONLY_REQUIRES + (
+    "GUARD_POLICY_PARITY", "HOOK_REGISTRATION_PRESENT", "HOOK_DEMONSTRATED",
+    "NO_RUNTIME_AUTHORITY_ESCALATION",
+)
 
-def run_battery() -> Result:
+
+def run_battery(surface: Surface, actor=None) -> Result:
     r = Result()
     for check in CHECKS:
-        check(r)
+        check(surface, r, actor)
     return r
+
+
+# ── pilot stage readiness ──────────────────────────────────────────────────────────
+
+#: Each stage names its OWN prerequisites. Nothing is promoted because a lower stage
+#: passed: the rows are recomputed per stage, and a stage with an extra condition fails on
+#: that condition alone.
+STAGES = (
+    ("MIRROR_READ_ONLY_CODEX", "read-only",
+     ("the read-only floor", "a Codex sandbox at read-only")),
+    ("MIRROR_WRITE_CODEX", "write",
+     ("the write floor", "HOOK_DEMONSTRATED from a session probe")),
+    ("SCIENTIST_C_READ_ONLY_CODEX", "read-only",
+     ("the read-only floor", "roles/scientist.md reachable for the assigned actor")),
+    ("SCIENTIST_AB_READ_ONLY_CODEX", "read-only",
+     ("the read-only floor", "roles/scientist.md reachable for the assigned actor")),
+    ("PLAN_CODEX", "write",
+     ("the write floor", "Plan authors candidates, which is a write")),
+    ("ORCHESTRATOR_CODEX", "write",
+     ("the write floor", "an ACTIVE lease, which body § 33.1 does not grant by runtime")),
+)
+
+
+def stage_verdicts(surface: Surface, actor=None):
+    """One verdict per stage, each computed from its own conditions."""
+    out = []
+    for stage, floor, reasons in STAGES:
+        role = {"MIRROR_READ_ONLY_CODEX": "mirror", "MIRROR_WRITE_CODEX": "mirror",
+                "SCIENTIST_C_READ_ONLY_CODEX": "scientist",
+                "SCIENTIST_AB_READ_ONLY_CODEX": "scientist",
+                "PLAN_CODEX": "plan", "ORCHESTRATOR_CODEX": "orchestrator"}[stage]
+        result = run_battery(surface, role)
+        required = READ_ONLY_REQUIRES if floor == "read-only" else WRITE_ENABLED_REQUIRES
+        blockers = [name for name in required if not result.named(name)]
+        if stage == "ORCHESTRATOR_CODEX":
+            lease, detail = lease_state(surface)
+            if lease != "ACTIVE":
+                blockers.append(f"LEASE={lease}")
+        out.append((stage, "GO" if not blockers else "NO_GO", blockers, reasons))
+    return out
 
 
 # ── bootstrap contract ────────────────────────────────────────────────────────────
 
-def lease_state() -> tuple[str, str]:
+def lease_state(surface: Surface):
     """🔴 `exit == 0` is the wrong predicate, in BOTH directions.
 
     `lease_state.py` has a four-valued exit contract, and a bootstrap that reduces it to
@@ -387,11 +733,10 @@ def lease_state() -> tuple[str, str]:
     `2` and `3` — and the question a bootstrap actually asks, *is a laboratory running*,
     is answered by the derived `ACTIVE` count, which is the tool's own recipe.
     """
-    tool = ROOT / "framework" / "scripts" / "lease_state.py"
-    if not tool.exists():
+    if not surface.lease_tool.exists():
         return "UNDERIVABLE", "lease_state.py absent"
-    out = subprocess.run([sys.executable, str(tool), "--check"],
-                         capture_output=True, text=True, cwd=str(ROOT))
+    out = subprocess.run([sys.executable, str(surface.lease_tool), "--check"],
+                         capture_output=True, text=True, cwd=str(surface.root))
     if out.returncode == 3:
         return "SINGLETON_VIOLATION", "two leases derive ACTIVE — Annex I.3 broken, fatal"
     if out.returncode == 2:
@@ -409,28 +754,28 @@ def lease_state() -> tuple[str, str]:
     return "SINGLETON_VIOLATION", tail
 
 
-def bootstrap(actor_id: str | None) -> tuple[dict, list[str]]:
+def bootstrap(surface: Surface, actor_id):
     runtime = os.environ.get("LEGEND_RUNTIME", "CODEX").upper()
     actor = actor_id or os.environ.get(ACTOR_ID_ENV)
-    branch = _git("rev-parse", "--abbrev-ref", "HEAD")
-    head = _git("rev-parse", "HEAD")
-    dirty = _git("status", "--porcelain=v1")
-    role_path = ROLE_CONTRACTS.get((actor or "").split("-")[0], None)
+    branch = _git(surface, "rev-parse", "--abbrev-ref", "HEAD")
+    head = _git(surface, "rev-parse", "HEAD")
+    dirty = _git(surface, "status", "--porcelain=v1")
+    role_path, role_why = role_contract_for(surface, actor)
 
     fingerprint = "UNDERIVABLE"
-    if role_path:
-        role = (actor or "").split("-")[0]
+    if role_path and surface.fingerprint_tool.exists():
         out = subprocess.run(
-            [sys.executable, str(ROOT / "governance/scripts/governance_fingerprint.py"),
-             "compose", "--role", role],
-            capture_output=True, text=True, cwd=str(ROOT),
+            [sys.executable, str(surface.fingerprint_tool), "compose", "--role",
+             str(actor).split("-")[0]],
+            capture_output=True, text=True, cwd=str(surface.root),
         )
         if out.returncode == 0 and out.stdout.strip():
             fingerprint = out.stdout.strip().split()[-1][:16]
 
-    lease, lease_detail = lease_state()
-    hook_status, hook_detail = codex_hook_fires()
-    battery = run_battery()
+    lease, lease_detail = lease_state(surface)
+    hook, hook_evidence = hook_status(surface)
+    battery = run_battery(surface, actor)
+    digest = role_contract_digest(surface, actor)
 
     unavailable = [
         ".claude/skills — readable by path, NOT auto-applied",
@@ -443,11 +788,12 @@ def bootstrap(actor_id: str | None) -> tuple[dict, list[str]]:
     fields = {
         "RUNTIME": runtime,
         "ACTOR_ID": actor or "UNASSIGNED — operator must assign it; never self-elected",
-        "WORKTREE": str(ROOT),
+        "WORKTREE": str(surface.root),
         "BRANCH": branch or "UNDERIVABLE",
         "HEAD": head or "UNDERIVABLE",
         "DIRTY_STATE": f"{len(dirty.splitlines())} path(s)" if dirty else "clean",
-        "ROLE_CONTRACT": str(role_path) if role_path else "UNRESOLVED — follows ACTOR_ID",
+        "ROLE_CONTRACT": role_path.as_posix() if role_path else f"UNRESOLVED — {role_why}",
+        "ROLE_CONTRACT_SHA256": digest or "UNDERIVABLE",
         "GOVERNANCE_FINGERPRINT": fingerprint,
         "AUTHORITY_STATUS": ("ON_DEMAND_LEGEND_COLLABORATOR (body § 33.4) — a runtime "
                              "confers no authority; the operator and the lease do"),
@@ -455,8 +801,9 @@ def bootstrap(actor_id: str | None) -> tuple[dict, list[str]]:
         "REQUIRED_GATES": ("legend_lint.py · public_release_gate.py · "
                            "run_release_regressions.py · fulltext_receipts.py verify"),
         "CLAUDE_ONLY_CAPABILITIES_UNAVAILABLE": unavailable,
-        "CODEX_BRIDGE_STATUS": "PASS" if battery.ok else "FAIL",
-        "WRITE_GUARD_STATUS": f"CODEX_HOOK_FIRES={hook_status} — {hook_detail}",
+        "READ_ONLY_PARITY": "PASS" if battery.subset(READ_ONLY_REQUIRES) else "FAIL",
+        "WRITE_ENABLED_PARITY": "PASS" if battery.subset(WRITE_ENABLED_REQUIRES) else "FAIL",
+        "CODEX_HOOK": hook,
     }
 
     blockers = []
@@ -466,37 +813,78 @@ def bootstrap(actor_id: str | None) -> tuple[dict, list[str]]:
         blockers.append("HEAD is underivable")
     if lease == "SINGLETON_VIOLATION":
         blockers.append("two ACTIVE leases")
-    if not battery.ok:
-        blockers.append("the parity battery does not pass")
-    if hook_status != "OBSERVED":
-        blockers.append("the Codex write guard is unverified — READ-ONLY until it is")
-    return fields, blockers
+    if not battery.subset(READ_ONLY_REQUIRES):
+        blockers.append("the read-only floor does not pass: "
+                        + ", ".join(n for n in READ_ONLY_REQUIRES if not battery.named(n)))
+    write_blockers = [n for n in WRITE_ENABLED_REQUIRES if not battery.named(n)]
+    return fields, blockers, write_blockers, hook_evidence
 
 
 # ── entry point ───────────────────────────────────────────────────────────────────
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("--root", default=None, help="tree to judge (default: this repository)")
+    parser.add_argument("--actor", default=None, help="ACTOR_ID, assigned by the operator")
     parser.add_argument("--bootstrap", action="store_true")
     parser.add_argument("--skills", action="store_true")
     parser.add_argument("--characterize", action="store_true")
-    parser.add_argument("--actor", default=None, help="ACTOR_ID, assigned by the operator")
+    parser.add_argument("--hook-status", action="store_true")
+    parser.add_argument("--stages", action="store_true")
+    parser.add_argument("--read-only", action="store_true")
+    parser.add_argument("--write-enabled", action="store_true")
+    parser.add_argument("--json", action="store_true")
     args = parser.parse_args()
 
+    root = Path(args.root) if args.root else Path(__file__).resolve().parents[2]
+    surface = Surface(root)
+    actor = args.actor or os.environ.get(ACTOR_ID_ENV)
+
     if args.characterize:
-        print("GUARD_HARDENING_DEBT — shapes the policy does NOT stop, both runtimes\n")
-        print(f"{'SHAPE':<26} {'CLAUDE':<8} {'CODEX':<8} PARITY")
-        for label, command in GUARD_GAPS:
-            a, b = _hook(claude_payload(command)), _hook(codex_payload(command))
-            print(f"{label:<26} {a:<8} {b:<8} {'same' if a == b else 'DIVERGENT'}")
-        print("\nThese predate the bridge and are identical on both sides. Widening the "
-              "policy is GUARD_HARDENING_DEBT, a separate change.")
+        print("GUARD POLICY — closed shapes and the residual debt, both runtimes\n")
+        print(f"{'SHAPE':<34} {'CLAUDE':<8} {'CODEX':<8} {'CODE-MODE':<10} PARITY")
+        for command, expected in PROBE_COMMANDS:
+            a = _hook(surface, claude_payload(surface, command))
+            b = _hook(surface, codex_payload(surface, command))
+            c = _hook(surface, codemode_payload(surface, command))
+            label = command.splitlines()[0][:32]
+            same = "same" if a == b == c else "DIVERGENT"
+            print(f"{label:<34} {a:<8} {b:<8} {c:<10} {same}")
+        print("\nGUARD_HARDENING_DEBT — still NOT stopped, declared rather than discovered\n")
+        print(f"{'SHAPE':<34} {'CLAUDE':<8} {'CODEX':<8} PARITY")
+        for label, command in GUARD_RESIDUAL_DEBT:
+            a = _hook(surface, claude_payload(surface, command))
+            b = _hook(surface, codex_payload(surface, command))
+            print(f"{label:<34} {a:<8} {b:<8} {'same' if a == b else 'DIVERGENT'}")
+        print("\nThese are metadata, history and committed-script writes: a different "
+              "blast radius\nfrom the content mutations above, and their own review.")
+        return 0
+
+    if args.hook_status:
+        state, evidence = hook_status(surface)
+        print(f"CODEX_HOOK_STATUS      {state}\n")
+        for cls, text in evidence:
+            print(f"  [{cls:<10}] {text}")
+        print("\nOnly a session-probe receipt at "
+              f"{surface.probe_receipt.relative_to(surface.root)} may report DEMONSTRATED.")
+        print("Required keys: schema, recorded_on, codex_version, cwd, probe_command, "
+              "observed ∈ {REFUSED, EXECUTED}.")
+        return 0 if state in PASSING_HOOK_STATES else 1
+
+    if args.stages:
+        print("PILOT STAGE READINESS — each stage computed from its own conditions\n")
+        for stage, verdict, blockers, reasons in stage_verdicts(surface, actor):
+            print(f"{verdict:<6} {stage}")
+            print(f"       requires: {'; '.join(reasons)}")
+            if blockers:
+                print(f"       blocked by: {', '.join(blockers)}")
+        print("\nNo stage is promoted because a lower one passes.")
         return 0
 
     if args.skills:
         print("SKILL BRIDGE — one copy, reachable by path from both runtimes\n")
         ok = True
-        for row in skill_report():
+        for row in skill_report(surface):
             print(f"{row['skill']}  ({row['path']}, sha {row['sha256']})")
             for key in ("SOURCE_BYTES_IDENTICAL", "CLAUDE_REACHABLE",
                         "CODEX_REACHABLE", "NO_DUPLICATED_NORMATIVE_COPY"):
@@ -508,7 +896,7 @@ def main() -> int:
         return 0 if ok else 1
 
     if args.bootstrap:
-        fields, blockers = bootstrap(args.actor)
+        fields, blockers, write_blockers, evidence = bootstrap(surface, actor)
         print("CODEX BOOTSTRAP CONTRACT — derived, never declared from memory\n")
         for key, value in fields.items():
             if isinstance(value, list):
@@ -519,17 +907,50 @@ def main() -> int:
                 print(f"{key:<38} {value}")
         print()
         if blockers:
-            print("BLOCKED_BY_GOVERNANCE — resolve before any write:")
+            print("BLOCKED_BY_GOVERNANCE — resolve before ANY operation:")
             for item in blockers:
+                print(f"    - {item}")
+            return 1
+        if write_blockers:
+            print("READ_ONLY — the read floor holds; the write floor does not:")
+            for item in write_blockers:
                 print(f"    - {item}")
             return 1
         print("READY")
         return 0
 
-    result = run_battery()
-    print("RUNTIME PARITY BATTERY — claude-code ↔ codex\n")
-    print(result.render())
-    return 0 if result.ok else 1
+    result = run_battery(surface, actor)
+    read_ok = result.subset(READ_ONLY_REQUIRES)
+    write_ok = result.subset(WRITE_ENABLED_REQUIRES)
+    if args.json:
+        print(json.dumps({
+            "root": str(surface.root),
+            "actor": actor,
+            "rows": [{"check": n, "pass": ok, "detail": d} for n, ok, d in result.rows],
+            "READ_ONLY_PARITY": "PASS" if read_ok else "FAIL",
+            "WRITE_ENABLED_PARITY": "PASS" if write_ok else "FAIL",
+            "CODEX_HOOK": hook_status(surface)[0],
+        }, indent=2))
+    else:
+        print("RUNTIME PARITY BATTERY — claude-code ↔ codex\n")
+        print(result.render())
+        print()
+        print(f"ACTOR_ID               {actor or 'UNASSIGNED — ROLE_REACHABILITY cannot pass'}")
+        print(f"READ_ONLY_PARITY       {'PASS' if read_ok else 'FAIL'}"
+              f"   ({sum(1 for n in READ_ONLY_REQUIRES if result.named(n))}"
+              f"/{len(READ_ONLY_REQUIRES)} required rows)")
+        print(f"WRITE_ENABLED_PARITY   {'PASS' if write_ok else 'FAIL'}"
+              f"   ({sum(1 for n in WRITE_ENABLED_REQUIRES if result.named(n))}"
+              f"/{len(WRITE_ENABLED_REQUIRES)} required rows)")
+        failed = [n for n, ok, _ in result.rows if not ok]
+        if failed:
+            print("FAILED: " + ", ".join(failed))
+
+    if args.read_only:
+        return 0 if read_ok else 1
+    if args.write_enabled:
+        return 0 if write_ok else 1
+    return 0 if (read_ok and write_ok) else 1
 
 
 if __name__ == "__main__":
