@@ -1,7 +1,7 @@
 ---
 artifact: INTEGRATION_CANDIDATE — Claude ↔ Codex minimum runtime bridge
 candidate_id: CAND-20260826-RTBRIDGE
-revision: 6
+revision: 7
 task_id: RTBRIDGE-P00-001
 author: plan
 authored_on: 2026-08-26
@@ -29,11 +29,12 @@ BASE_HEAD                 f2b8ecf11e77ebe86e6e17b6348e6469cc2e432b
                           it is used deliberately: main is 788c357 and this branch carries
                           80 prior Plan commits that are NOT part of this candidate. Hashing
                           against main would bind all of them to this review.
-TIP                       b4388aed1bab08b556e4d31e11f387e383ba82e8
+TIP                       baaa8e4d27240b9b6d038db850f038a5350be67e
                           the last commit in the CONTENT domain. This file is committed
                           after it, and cannot move the hash — see the invariance note.
-CANDIDATE_CONTENT_HASH    cfab7840fbcc13d3113201661b0df1bc837a1a737569f1ae1c6a4bdd252c8bfe
+CANDIDATE_CONTENT_HASH    b8d3bfd7c44f41dd4217eec507d2b196504d934c2dddd0c5d33205bc774a86bc
                           🔴 SUPERSEDES, newest first:
+                            cfab7840…2c8bfe  tip b4388ae  revision 6
                             176b606e…1756ba  tip 6555117  revision 5
                             99b24e00…2807d4  tip 6a4a3a4  revision 4
                             4d55c865…07ad832  tip e40e620  revision 3
@@ -50,10 +51,10 @@ CHANGE_CLASS              MAJOR — it reverses what a safety control does on a 
                           declaration and not the classification.
 RECIPE                    python3 governance/scripts/candidate_content_hash.py \
                             --base f2b8ecf11e77ebe86e6e17b6348e6469cc2e432b \
-                            --tip  b4388aed1bab08b556e4d31e11f387e383ba82e8
+                            --tip  baaa8e4d27240b9b6d038db850f038a5350be67e
 INVARIANCE                Run the same recipe with --tip set to the branch tip that carries
                           THIS FILE. It must print the same value, because every commit
-                          after b4388ae on this branch touches only governance/candidates/
+                          after baaa8e4 on this branch touches only governance/candidates/
                           or is an empty correction commit — both verified to leave the
                           value unmoved,
                           which P5.1 excludes. If it does not, the hash is stale and this
@@ -315,7 +316,7 @@ test_pre_tool_use_guard.py
 runtime_parity.py
   20  battery commands x 3 payload shapes, identical AND carrying the right verdict
 mutate_guard_suite.py
-  30  mutations of the policy, the adapter and the battery
+  31  mutations of the policy, the adapter and the battery
 ```
 
 🔴 **And the count that matters more: TWO bypass classes were shipped and then found**,
@@ -576,12 +577,12 @@ runs are not reported as results: one predates the repair it would have been use
 justify, and the other is a statement about no particular tree.
 
 ```
-MUTATION TEST   30 mutations, each in a detached worktree
-TIP             34adc836bd3a1abf326444aec242575dfc84f4f0   pinned once
-RESULT          KILLED 30/30     SURVIVED 0     UNUSABLE 0
+MUTATION TEST   31 mutations, each in a detached worktree
+TIP             baaa8e4d27240b9b6d038db850f038a5350be67e   pinned once
+RESULT          KILLED 31/31     SURVIVED 0     UNUSABLE 0
 ```
 
-🔴 **30/30 is a property of these 30 mutations**, not of the guard. It says every breakage
+🔴 **31/31 is a property of these 31 mutations**, not of the guard. It says every breakage
 someone thought to write down is caught; it says nothing about the breakage nobody wrote
 down. The list is in `mutate_guard_suite.py --list` so the next reader can add the one that
 is missing rather than infer from the score that none is.
@@ -631,6 +632,31 @@ was not on any list here.
 
 `M27` and `M28` now restore each defect and require a suite to catch it, so neither can
 return quietly.
+
+
+### 11.4.2 · 🔴 The false-positive rate under real use, measured on myself
+
+The two bypasses of § 11.4.1 were found because the guard **refused a command of mine**.
+That happened three times in one session of heavy use, and each refusal was a defect:
+
+| # | The command shape | Why it was wrong |
+|---|---|---|
+| 1 | `printf … "$([ … ] && echo "A -> B")"` | `->` inside a quoted substitution fragmented under the lexer. Chasing it found the two bypasses |
+| 2 | `git show X:Y > "$SC/out/gp_$rev.py"` | a scratch directory named in the same command, with a loop variable in the *filename*. Now decided by the resolvable prefix |
+| 3 | `python3 - <<PY … subprocess.run([sys.executable, "framework/scripts/legend_lint.py"]) … PY` | 🔴 **the guard forbade the alternative its own denial message recommends.** `subprocess.` was a write primitive outright, so invoking a committed script by name from a program body was denied. The argument is now read as the command it is |
+
+All three are repaired, and each carries a mutation (`M27`–`M31`) so it cannot return. But
+the honest reading of "three in one session" is not that the count is now zero:
+
+🔴 **A guard is tested by its author against the shapes its author imagines, and used by
+everyone against the shapes that occur.** The 33 negative controls did not contain
+`FOO=1 <anything>`, a loop writing one file per iteration, or a heredoc that shells out —
+three of the most ordinary things anyone types. More remain, and the mechanism that will
+find them is the same one that found these: somebody's real work being refused.
+
+That is a reason to keep the denial message specific and the escape hatch real, not a
+reason to widen the policy pre-emptively — and it is a reason a reviewer should weigh Unit E
+by its blast radius rather than by its test count.
 
 
 ### 11.5 · The one review this candidate is answerable to, and what of it is stale
