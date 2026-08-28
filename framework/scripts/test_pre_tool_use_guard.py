@@ -405,6 +405,29 @@ class NegativeControlsMustKeepWorking(unittest.TestCase):
         ("fd redirect", "python3 framework/scripts/legend_lint.py . 2>&1 | head"),
     )
 
+    def test_blanket_is_about_the_target_not_the_flag(self) -> None:
+        """`-u` with a path names its targets; `-u` alone does not. `-A` never does.
+
+        Both directions are asserted together, because a rule that only checks the
+        prohibited half would pass a policy that refused `git add -u framework/scripts/` —
+        which is the guard blocking the very behaviour its denial message asks for.
+        """
+        for command, expected in (
+            ("git add -A", "deny"),
+            ("git add --all", "deny"),
+            ("git add -A framework/", "deny"),
+            ("git add .", "deny"),
+            ("git add -u", "deny"),
+            ("git add --update", "deny"),
+            ("git add -p", "deny"),
+            ("git add -u framework/scripts/", "allow"),
+            ("git add --update framework/", "allow"),
+            ("git add framework/scripts/guard_policy.py", "allow"),
+        ):
+            with self.subTest(command=command):
+                reason = policy.verdict(command, cwd=str(ROOT), repo_root=str(ROOT))
+                self.assertEqual("deny" if reason else "allow", expected)
+
     def test_every_negative_control_is_allowed(self) -> None:
         for label, command in self.ALLOWED:
             with self.subTest(control=label):

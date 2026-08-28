@@ -462,7 +462,14 @@ def git_subcommand(argv: Sequence[str]) -> Tuple[str, List[str]]:
     return "", []
 
 
-BLANKET_ADD = frozenset({"-A", "--all", "--no-ignore-removal", "-u", "--update"})
+#: Always blanket: they stage the whole tree no matter what else is on the line, and
+#: `git add -A` is the documented harm this policy exists for.
+BLANKET_ADD = frozenset({"-A", "--all", "--no-ignore-removal"})
+#: Blanket ONLY without a path operand. `git add -u` stages every tracked modification;
+#: `git add -u framework/scripts/` stages the ones under a path the author named, which is
+#: what the rule asks for. Refusing the second would be the guard blocking the behaviour it
+#: is trying to teach.
+BLANKET_WITHOUT_PATH = frozenset({"-u", "--update"})
 
 
 def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[str],
@@ -540,7 +547,12 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
         sub, rest = git_subcommand(argv)
         if sub == "add":
             paths = [t for t in rest if not t.startswith("-")]
-            blanket = any(t in BLANKET_ADD for t in rest) or any(t in (".", "./", "*") for t in paths)
+            named = [t for t in paths if t not in (".", "./", "*", UNNAMED)]
+            blanket = (
+                any(t in BLANKET_ADD for t in rest)
+                or any(t in (".", "./", "*") for t in paths)
+                or (any(t in BLANKET_WITHOUT_PATH for t in rest) and not named)
+            )
             if blanket or not paths or UNNAMED in paths:
                 findings.append(Finding("BLANKET_STAGING", "git add", [UNNAMED],
                                         "stages paths the command does not name"))
