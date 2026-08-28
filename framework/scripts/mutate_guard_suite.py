@@ -180,6 +180,21 @@ MUTATIONS = [
         '        for tool in ("shell_command", "unified_exec", "exec"):\n            if tool not in declared:',
         '        for tool in ("shell_command", "unified_exec", "exec"):\n            if tool in declared and False:',
         PARITY_SUITES, "a missing matcher for a tool the runtime uses stops being noticed"),
+    # ── the two bypasses found by USING the guard rather than testing it ──
+    Mutation(
+        "M27", GUARD_POLICY,
+        '        if quote == \'"\':\n            if char == "\\\\" and i + 1 < n:',
+        '        if quote:\n            out.append(char)\n            if char == quote:\n'
+        '                quote = ""\n            i += 1\n            continue\n'
+        '        if quote == \'"\':\n            if char == "\\\\" and i + 1 < n:',
+        GUARD_SUITES, "a substitution inside double quotes stops being extracted, so "
+                      "`echo \"$(git add -A)\"` runs unpoliced"),
+    Mutation(
+        "M28", GUARD_POLICY,
+        "    while argv and ASSIGNMENT.match(argv[0]) and not argv[0].startswith(\"-\"):\n        argv = argv[1:]",
+        "    pass  # assignment prefixes left in place",
+        GUARD_SUITES, "a leading NAME=VALUE is read as the program, so `FOO=1 git add -A` "
+                      "matches no rule"),
     Mutation(
         "M26", PARITY,
         "    body = text.split(\"[hooks]\", 1)[-1] if \"[hooks]\" in text else text\n    return set(MATCHER_LINE.findall(body))",
