@@ -263,6 +263,14 @@ def extract_substitutions(command: str) -> Tuple[str, List[str]]:
     The bodies are returned so they can be analysed as commands in their own right — a
     substitution is a place a command hides, and `echo $(git add -A)` must not be read as
     a harmless `echo`.
+
+    🔴 **A substitution inside DOUBLE quotes is still a substitution.** The shell expands
+    `"$(…)"` and `` "`…`" `` and leaves `'$(…)'` alone, so only the single-quoted case is
+    inert. Skipping both — which this function did — was a bypass, not a nicety:
+    `echo "$(git add -A)"` runs blanket staging and was `ALLOWED`. It was found by the
+    guard refusing an unrelated diagnostic command of my own, whose `->` inside a quoted
+    substitution fragmented under the lexer; the false positive and the bypass are the same
+    defect seen from its two sides.
     """
     bodies: List[str] = []
     out: List[str] = []
@@ -271,21 +279,31 @@ def extract_substitutions(command: str) -> Tuple[str, List[str]]:
     quote = ""
     while i < n:
         char = command[i]
-        if quote:
+        if quote == "'":
+            # Single quotes are literal: nothing expands, so nothing is extracted.
             out.append(char)
-            if char == quote and command[i - 1 : i] != "\\":
+            if char == "'":
                 quote = ""
-            elif char == "\\" and quote == '"' and i + 1 < n:
-                out.append(command[i + 1])
-                i += 1
             i += 1
             continue
-        if char == "'":
+        if quote == '"':
+            if char == "\\" and i + 1 < n:
+                out.append(char)
+                out.append(command[i + 1])
+                i += 2
+                continue
+            if char == '"':
+                quote = ""
+                out.append(char)
+                i += 1
+                continue
+            # fall through: `$(` and backticks below are live inside double quotes
+        elif char == "'":
             quote = "'"
             out.append(char)
             i += 1
             continue
-        if char == '"':
+        elif char == '"':
             quote = '"'
             out.append(char)
             i += 1
@@ -484,6 +502,14 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
         findings.append(Finding("REDIRECTION", "> / >>", [target],
                                 "shell redirection writes the file it names"))
 
+    # 🔴 A leading `NAME=VALUE` is an assignment prefix, not the program. Two defects lived
+    # here at once, found together: reading it AS the program made `FOO=1 git add -A`
+    # allowed — a bypass anyone would find by accident — while a *pure* assignment whose
+    # value came from a substitution, `a=$(git rev-parse HEAD)`, was denied as an opaque
+    # program. Both are the same missing step. The substitution's body is analysed
+    # separately either way, so nothing hides inside the value.
+    while argv and ASSIGNMENT.match(argv[0]) and not argv[0].startswith("-"):
+        argv = argv[1:]
     if not argv:
         return
     program = base(argv[0])
