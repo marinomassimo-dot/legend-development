@@ -189,11 +189,17 @@ MUTATIONS = [
 ]
 
 
-def apply_and_run(mutation, keep_going=True):
+def apply_and_run(mutation, head):
+    """Run one mutation against `head`, which is PINNED by the caller.
+
+    🔴 An earlier version re-read `HEAD` inside this function, once per mutation. A run
+    takes minutes; a commit landing halfway through it silently split the run across two
+    trees, and the report said nothing about that. A mutation report is only a statement
+    about a tree if every mutation saw the same one, so the tip is resolved once and
+    printed with the results.
+    """
     tmp = Path(tempfile.mkdtemp(prefix=f"mutate-{mutation.name}-"))
     tree = tmp / "tree"
-    head = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "HEAD"],
-                          capture_output=True, text=True).stdout.strip()
     add = subprocess.run(["git", "-C", str(ROOT), "worktree", "add", "--detach",
                           str(tree), head], capture_output=True, text=True)
     if add.returncode != 0:
@@ -238,10 +244,19 @@ def main() -> int:
             print(f"{m.name}  {Path(m.target).name:<26} {m.why}")
         return 0
 
-    print(f"MUTATION TEST — {len(chosen)} mutations, each in a detached worktree at HEAD\n")
+    head = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "HEAD"],
+                          capture_output=True, text=True).stdout.strip()
+    dirty = subprocess.run(["git", "-C", str(ROOT), "status", "--porcelain=v1"],
+                           capture_output=True, text=True).stdout.strip()
+    print(f"MUTATION TEST — {len(chosen)} mutations, each in a detached worktree")
+    print(f"TIP  {head}   (pinned once; every mutation sees this tree)")
+    if dirty:
+        print(f"🔴 {len(dirty.splitlines())} uncommitted path(s) — they are NOT in the "
+              "worktrees below, so this run judges the committed tree, not yours")
+    print()
     survivors, broken = [], []
     for m in chosen:
-        verdict, detail = apply_and_run(m)
+        verdict, detail = apply_and_run(m, head)
         print(f"{verdict:<16} {m.name}  {m.why}")
         if verdict == "SURVIVED":
             survivors.append(m)
