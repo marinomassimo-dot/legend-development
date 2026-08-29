@@ -197,8 +197,16 @@ MUTATIONS = [
         PARITY_SUITES, "an unassigned actor is silently elected to a default role"),
     Mutation(
         "M20", PARITY,
-        '    if observed == "REFUSED":',
-        '    if True:',
+        # 🔴 REANCHORED in revision 10: the branch it named was restructured when a
+        # refusal stopped being sufficient on its own. Its MEANING is preserved — the
+        # `observed` value stops gating anything, so a receipt recording EXECUTED walks
+        # into the same conclusion a refusal does.
+        '    if observed == "EXECUTED":\n'
+        '        return NOT_FIRING, [(OBSERVED, f"probe ran unimpeded: {stamp}")]\n'
+        '    if observed != "REFUSED":',
+        '    if False:\n'
+        '        return NOT_FIRING, [(OBSERVED, f"probe ran unimpeded: {stamp}")]\n'
+        '    if False:',
         PARITY_SUITES, "any receipt at all reports DEMONSTRATED"),
     Mutation(
         "M21", PARITY,
@@ -755,6 +763,31 @@ MUTATIONS = [
         "the revision-10 generation stops being derivable, so the census reports the "
         "candidate worktree as revision 9 and the probe precondition passes on the "
         "wrong engine"),
+    Mutation(
+        "M88", "framework/scripts/runtime_parity.py",
+        '    schema = str(data.get("schema", ""))\n    if schema != PROBE_SCHEMA:',
+        '    schema = str(data.get("schema", ""))\n    if False:',
+        PARITY_SUITES,
+        "🔴 a revision-9 receipt — `observed: REFUSED` and nothing else — reaches "
+        "DEMONSTRATED again, so a refusal the LEGACY guard also produces flips "
+        "WRITE_ENABLED_PARITY. This is the false GO R2 exists to prevent, in the "
+        "instrument rather than in the protocol document"),
+    Mutation(
+        "M89", "framework/scripts/runtime_parity.py",
+        '    if not unique:',
+        '    if False:',
+        PARITY_SUITES,
+        "the discriminating-code requirement is dropped, so a receipt recording only "
+        "BLANKET_STAGING — the one refusal both engines produce identically — is "
+        "accepted as identifying the engine"),
+    Mutation(
+        "M90", "framework/scripts/runtime_parity.py",
+        '    return tuple(sorted(set(gp.DECISION_CODES) - {gp.CODE_BLANKET_STAGING}))',
+        '    return tuple(sorted(gp.DECISION_CODES))',
+        PARITY_SUITES,
+        "BLANKET_STAGING rejoins the discriminators, which is the same false GO by a "
+        "different edit: the code for the one command the legacy guard refuses with "
+        "byte-identical text becomes proof of which engine refused it"),
     Mutation(
         "M87", "framework/scripts/runtime_parity.py",
         '        "<WORKTREE_B_REL>": (os.path.relpath(peer, str(surface.root)) if peer else ""),',

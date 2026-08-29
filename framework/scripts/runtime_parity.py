@@ -656,12 +656,67 @@ def probe_receipt_state(surface: Surface):
                               + " — an incomplete receipt proves nothing")]
     observed = str(data["observed"]).upper()
     stamp = f"codex {data['codex_version']} on {data['recorded_on']}"
-    if observed == "REFUSED":
-        return DEMONSTRATED, [(OBSERVED, f"probe refused: {stamp}")]
     if observed == "EXECUTED":
         return NOT_FIRING, [(OBSERVED, f"probe ran unimpeded: {stamp}")]
-    return UNDERIVABLE, [(OBSERVED, f"probe receipt records observed={observed!r}, "
-                                    "which is neither REFUSED nor EXECUTED")]
+    if observed != "REFUSED":
+        return UNDERIVABLE, [(OBSERVED, f"probe receipt records observed={observed!r}, "
+                                        "which is neither REFUSED nor EXECUTED")]
+
+    # 🔴 A REFUSAL IS NOT YET AN ANSWER — revision 10, and this is where R2 actually bites.
+    #
+    # Revision 9 returned DEMONSTRATED from `observed == "REFUSED"` alone. But the LEGACY
+    # single-file guard on `main` refuses `git add -A` too, with byte-identical text, so a
+    # receipt saying "REFUSED" says a guard ran and says NOTHING about which one. That is
+    # the false GO the whole R2 repair exists to prevent, and rewriting the protocol
+    # document while leaving this branch reading one bit would have been a repair to the
+    # description of the control rather than to the control.
+    #
+    # A `codex_hook_probe/2` receipt records the generation and the decision codes the
+    # session actually observed. DEMONSTRATED needs BOTH: the generation, and at least one
+    # code the legacy engine cannot emit.
+    schema = str(data.get("schema", ""))
+    if schema != PROBE_SCHEMA:
+        return UNDERIVABLE, [(OBSERVED,
+                              f"probe receipt declares schema {schema!r}; {PROBE_SCHEMA} "
+                              "is required, because the earlier shape records a refusal "
+                              "without recording WHICH engine refused — and the legacy "
+                              "guard refuses the same command with the same sentence")]
+    generation = str(data.get("guard_generation", ""))
+    if generation != REQUIRED_PROBE_GENERATION:
+        return UNDERIVABLE, [(OBSERVED,
+                              f"probe receipt records guard_generation={generation!r}; "
+                              f"{REQUIRED_PROBE_GENERATION} is required")]
+    codes = data.get("decision_codes")
+    codes = list(codes.values()) if isinstance(codes, dict) else list(codes or [])
+    unique = sorted(set(str(c) for c in codes) & set(PROBE_DISCRIMINATING_CODES))
+    if not unique:
+        return UNDERIVABLE, [(OBSERVED,
+                              "probe receipt records no decision code the legacy engine "
+                              "cannot emit; a refusal both engines produce identifies "
+                              "neither")]
+    return DEMONSTRATED, [(OBSERVED,
+                           f"probe refused with {', '.join(unique)}: {stamp}")]
+
+
+#: The receipt shape that can identify the engine that answered. Revision 9's
+#: `codex_hook_probe/1` recorded `observed` and nothing else.
+PROBE_SCHEMA = "codex_hook_probe/2"
+REQUIRED_PROBE_GENERATION = "REV10"
+
+#: Decision codes NO legacy guard can emit, so observing one identifies the engine.
+#: Read from the policy rather than spelled here, and asserted absent from the legacy blob
+#: by `test_runtime_diagnostics.py`. `BLANKET_STAGING` is deliberately NOT among them: it
+#: is the code for the one refusal both engines produce.
+def _discriminating_codes():
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import guard_policy as gp  # noqa: PLC0415 - optional, only for this table
+    return tuple(sorted(set(gp.DECISION_CODES) - {gp.CODE_BLANKET_STAGING}))
+
+
+try:
+    PROBE_DISCRIMINATING_CODES = _discriminating_codes()
+except Exception:  # pragma: no cover - a tree with no policy has no discriminator
+    PROBE_DISCRIMINATING_CODES = ()
 
 
 #: Strings the installed Codex binary carries for its own per-hook trust gate. They are
@@ -1087,8 +1142,12 @@ def main() -> int:
             print(f"  [{cls:<10}] {text}")
         print("\nOnly a session-probe receipt at "
               f"{surface.probe_receipt.relative_to(surface.root)} may report DEMONSTRATED.")
-        print("Required keys: schema, recorded_on, codex_version, cwd, probe_command, "
-              "observed ∈ {REFUSED, EXECUTED}.")
+        print(f"Required keys: schema = {PROBE_SCHEMA}, recorded_on, codex_version, cwd, "
+              "probe_command, observed ∈ {REFUSED, EXECUTED},")
+        print(f"               guard_generation = {REQUIRED_PROBE_GENERATION}, and "
+              "decision_codes carrying at least one code")
+        print("               the legacy engine cannot emit — a refusal both engines "
+              "produce identifies neither.")
         return 0 if state in PASSING_HOOK_STATES else 1
 
     if args.stages:

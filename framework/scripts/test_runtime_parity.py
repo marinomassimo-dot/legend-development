@@ -293,16 +293,72 @@ class TheHookStateMachineIsFiveValued(unittest.TestCase):
         self.assertNotEqual(rp.NOT_LOADED, rp.TRUST_PENDING)
         self.assertNotIn(rp.NOT_LOADED, rp.PASSING_HOOK_STATES)
 
+    #: A receipt that identifies the engine that answered. Every field below is required,
+    #: and the tests underneath remove them one at a time.
+    DISCRIMINATING_RECEIPT = {
+        "schema": "codex_hook_probe/2", "recorded_on": "2026-08-30",
+        "codex_version": "0.150.0-alpha.8", "cwd": "/x",
+        "probe_command": "git -C <PEER_WORKTREE> commit -m x <path>",
+        "observed": "REFUSED", "guard_generation": "REV10",
+        "decision_codes": {"2": "CONFINED_PEER_WORKTREE"},
+    }
+
+    def _status(self, tmp, receipt):
+        surface = build_fixture(tmp, rewrite={
+            "framework/state/codex_hook_probe.json": json.dumps(receipt)})
+        return rp.hook_status(surface)[0], surface
+
     def test_a_refusal_receipt_reaches_demonstrated(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
-            surface = build_fixture(tmp, rewrite={
-                "framework/state/codex_hook_probe.json": json.dumps({
-                    "schema": "codex_hook_probe/1", "recorded_on": "2026-08-28",
-                    "codex_version": "0.150.0-alpha.8", "cwd": "/x",
-                    "probe_command": "git add -A", "observed": "REFUSED"}),
-            })
-            self.assertEqual(rp.hook_status(surface)[0], rp.DEMONSTRATED)
+            state, surface = self._status(tmp, self.DISCRIMINATING_RECEIPT)
+            self.assertEqual(state, rp.DEMONSTRATED)
             self.assertTrue(row(surface, rp.check_hook_demonstrated)[0])
+
+    def test_the_revision_9_receipt_shape_no_longer_reaches_demonstrated(self) -> None:
+        """🔴 R2, where it actually bites: the INSTRUMENT, not the protocol document.
+
+        Revision 9 returned `DEMONSTRATED` from `observed == "REFUSED"` alone. The legacy
+        single-file guard on `main` refuses `git add -A` too, with byte-identical text — so
+        that receipt records that A guard ran and nothing about WHICH. It is the false GO
+        the whole R2 repair exists to prevent, and it lived in this branch while the
+        protocol document was being rewritten around it.
+
+        Repairing the description of a control and leaving the control reading one bit is
+        the shape of a repair that changes no behaviour.
+        """
+        with tempfile.TemporaryDirectory() as tmp:
+            state, _ = self._status(tmp, {
+                "schema": "codex_hook_probe/1", "recorded_on": "2026-08-28",
+                "codex_version": "0.150.0-alpha.8", "cwd": "/x",
+                "probe_command": "git add -A", "observed": "REFUSED"})
+            self.assertEqual(state, rp.UNDERIVABLE)
+            self.assertNotIn(state, rp.PASSING_HOOK_STATES)
+
+    def test_a_refusal_without_a_discriminating_code_is_underivable(self) -> None:
+        """The right schema and generation, and the code of the ONE refusal both engines
+        produce. It identifies neither, and must not pass."""
+        with tempfile.TemporaryDirectory() as tmp:
+            state, _ = self._status(tmp, {
+                **self.DISCRIMINATING_RECEIPT,
+                "probe_command": "git add -A",
+                "decision_codes": {"3": "BLANKET_STAGING"}})
+            self.assertEqual(state, rp.UNDERIVABLE)
+
+    def test_a_refusal_recording_the_wrong_generation_is_underivable(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            state, _ = self._status(tmp, {**self.DISCRIMINATING_RECEIPT,
+                                          "guard_generation": "REV9"})
+            self.assertEqual(state, rp.UNDERIVABLE)
+
+    def test_the_blanket_staging_code_is_excluded_from_the_discriminators(self) -> None:
+        """🔴 The table, not an example. `BLANKET_STAGING` is the code for the one command
+        both engines refuse identically; every other code is one the legacy engine has no
+        branch for. An empty discriminator table would make every receipt UNDERIVABLE,
+        which is safe but useless, so the size is asserted too."""
+        self.assertNotIn("BLANKET_STAGING", rp.PROBE_DISCRIMINATING_CODES)
+        self.assertIn("CONFINED_PEER_WORKTREE", rp.PROBE_DISCRIMINATING_CODES)
+        self.assertIn("RUNTIME_CONFIG", rp.PROBE_DISCRIMINATING_CODES)
+        self.assertGreater(len(rp.PROBE_DISCRIMINATING_CODES), 10)
 
     def test_an_execution_receipt_reaches_not_firing(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

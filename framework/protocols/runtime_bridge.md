@@ -979,8 +979,18 @@ any required observation missing                              → UNDERIVABLE
 
 `observed` per step takes exactly `REFUSED` or `EXECUTED`. Any other value, or any missing
 key, is `UNDERIVABLE` — **a receipt that records a verdict without its provenance proves
-nothing**, and `test_runtime_parity.py` asserts that a receipt containing only
-`{"observed":"REFUSED"}` does not reach `DEMONSTRATED`.
+nothing**.
+
+🔴 **`runtime_parity.probe_receipt_state` enforces this, and revision 9's version did not.**
+It returned `DEMONSTRATED` from `observed == "REFUSED"` alone — and the legacy guard refuses
+`git add -A` with byte-identical text, so that receipt recorded that *a* guard ran and
+nothing about which. Rewriting this section while leaving that branch reading one bit would
+have been a repair to the description of a control rather than to the control. A
+`codex_hook_probe/2` receipt must carry `guard_generation = REV10` **and** at least one
+decision code the legacy engine cannot emit; `BLANKET_STAGING` is deliberately excluded from
+that set, because it is the code for the one refusal both engines produce.
+`test_runtime_parity.py` asserts every arm, including that the revision-9 receipt shape now
+reaches `UNDERIVABLE`.
 
 🔴 `OBSERVED == AUTHORIZED` still needs `post_effect_verify.run` over an authorised write
 in the same session. That is a second probe and is deliberately not folded in: a probe that
