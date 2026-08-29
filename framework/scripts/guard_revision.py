@@ -42,10 +42,17 @@ from typing import Dict, List, Optional
 LEGACY = "LEGACY"        # a single-file guard, no effect model
 REV8 = "REV8"            # guard_policy + effect_model, no topology
 REV9 = "REV9"            # the above, plus repository-topology confinement
+REV10 = "REV10"          # the above, plus the session-bound assigned worktree
 ABSENT = "ABSENT"        # no guard entrypoint at all
 UNKNOWN = "UNKNOWN"      # an entrypoint that matches no known shape
 
-GENERATIONS = (LEGACY, REV8, REV9, ABSENT, UNKNOWN)
+GENERATIONS = (LEGACY, REV8, REV9, REV10, ABSENT, UNKNOWN)
+
+#: Newest first. The survey walks this in order and takes the first generation whose
+#: structural signature is present, so a worktree carrying revision 10 is never reported
+#: as revision 9 merely because revision 9's signature is also there — every generation
+#: is a superset of the one below it.
+GENERATION_ORDER = (REV10, REV9, REV8)
 
 #: The entry point every runtime registers, relative to a worktree root.
 GUARD_ENTRY = Path("scripts/guard_bash_command.py")
@@ -54,12 +61,26 @@ GUARD_POLICY = Path("framework/scripts/guard_policy.py")
 GUARD_ADAPTER = Path("framework/scripts/pre_tool_use_guard.py")
 #: Introduced in revision 9. Its IMPORT in the policy is what makes confinement reachable.
 GUARD_TOPOLOGY = Path("framework/scripts/repo_topology.py")
+#: Introduced in revision 10. Its IMPORT in the ADAPTER is what makes the assigned
+#: worktree session-bound: the policy can accept an assignment all day, and it is the
+#: adapter passing one that stops the model choosing it.
+GUARD_SESSION_BINDING = Path("framework/scripts/session_binding.py")
+GUARD_RUNTIME_CONFIG = Path("framework/scripts/runtime_config.py")
 
 #: 🔴 The import, not the file. A worktree could carry `repo_topology.py` as an untracked
 #: leftover while its policy never calls it, and a file-existence test would report REV9
 #: for a guard with revision-8 behaviour. The generation has to be derived from what the
 #: executing code DOES.
 TOPOLOGY_IMPORT = "import repo_topology"
+#: 🔴 Same rule, one revision on, and the SITE matters more here than the file did.
+#: `session_binding` imported by the policy would prove nothing — the policy's default is
+#: to ask the session for an assignment, and a revision-9 adapter that never passes one
+#: would still leave the perimeter derived from the effective workdir. The signature is
+#: therefore the ADAPTER importing it, and the adapter calling `adjudicate` with an
+#: `assigned=` argument.
+SESSION_BINDING_IMPORT = "import session_binding"
+SESSION_BINDING_CALL = "assigned=assignment.worktree"
+RUNTIME_CONFIG_IMPORT = "import runtime_config"
 
 
 def _sha256(path: Path) -> str:
@@ -84,6 +105,13 @@ def worktrees(cwd: str) -> List[str]:
             for line in listing.splitlines() if line.startswith("worktree ")]
 
 
+def _read(path: Path) -> Optional[str]:
+    try:
+        return path.read_text(encoding="utf-8", errors="replace")
+    except OSError:
+        return None
+
+
 def generation_of(root: Path) -> str:
     """Derive the guard generation from the shape of what is installed."""
     entry, policy = root / GUARD_ENTRY, root / GUARD_POLICY
@@ -92,10 +120,19 @@ def generation_of(root: Path) -> str:
     if not policy.is_file():
         # The single-file guard: the entry point IS the policy.
         return LEGACY if entry.is_file() else UNKNOWN
-    try:
-        source = policy.read_text(encoding="utf-8", errors="replace")
-    except OSError:
+    source = _read(policy)
+    if source is None:
         return UNKNOWN
+    adapter = _read(root / GUARD_ADAPTER) or ""
+    rev10 = (
+        SESSION_BINDING_IMPORT in adapter
+        and SESSION_BINDING_CALL in adapter
+        and RUNTIME_CONFIG_IMPORT in source
+        and (root / GUARD_SESSION_BINDING).is_file()
+        and (root / GUARD_RUNTIME_CONFIG).is_file()
+    )
+    if rev10:
+        return REV10
     if TOPOLOGY_IMPORT in source and (root / GUARD_TOPOLOGY).is_file():
         return REV9
     return REV8

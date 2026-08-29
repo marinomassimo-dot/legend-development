@@ -72,6 +72,8 @@ if str(Path(__file__).resolve().parent) not in sys.path:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
 import effect_model as em  # noqa: E402
 import repo_topology as rt  # noqa: E402
+import runtime_config as rc  # noqa: E402
+import session_binding as sb  # noqa: E402
 
 # ── outcomes ───────────────────────────────────────────────────────────────────────
 
@@ -209,6 +211,56 @@ DELEGATION_EXEMPT_SUBCOMMANDS = frozenset({
     "app-server", "mcp", "plugin", "login", "logout", "doctor", "hooks", "completion",
 })
 DELEGATION_EXEMPT_FLAGS = frozenset({"--version", "-V", "--help", "-h"})
+
+#: 🔴 Revision 10. Nine launcher spellings reached `codex` and `claude` without ever
+#: being read as delegation, because the binary this policy tests is `argv[0]` and
+#: `argv[0]` was the launcher. Every one measured ALLOWED against the revision-9 engine
+#: on 2026-08-29:
+#:
+#: ```text
+#: npx codex exec 'go'        pnpm dlx codex exec 'go'    pipx run codex exec 'go'
+#: npx -y codex exec 'go'     yarn dlx codex exec 'go'    npm exec codex exec 'go'
+#: bunx codex exec 'go'       uvx codex exec 'go'         npx claude -p 'write x'
+#: ```
+#:
+#: The repair is UNWRAPPING, not a blacklist. A launcher fetches a package and then runs
+#: a program out of it, so whatever that program does, the launcher does — which is the
+#: rule already applied to `nohup`, `timeout`, `env` and `sudo`. A name-based rule would
+#: have to enumerate every launcher AND every delegating binary; unwrapping needs
+#: neither, and `npx cowsay hi` stays allowed, which is the control that keeps this a
+#: derivation rather than a ban on `npx`.
+#:
+#: The key is the launcher's OWN words: `("npx",)` consumes one, `("pnpm", "dlx")` two.
+#: The value is that launcher's own value-taking flags, so `npx -p pkg codex exec` does
+#: not read `pkg` as the program.
+PACKAGE_LAUNCHERS = {
+    ("npx",): frozenset({"-p", "--package", "-c", "--call", "--node-options",
+                         "--node-arg", "--userconfig", "--shell"}),
+    ("bunx",): frozenset({"--bun"}),
+    ("uvx",): frozenset({"--from", "-p", "--python", "--with", "--index", "--index-url"}),
+    ("pnpm", "dlx"): frozenset({"--package", "-p", "--shell-mode"}),
+    ("yarn", "dlx"): frozenset({"--package", "-p"}),
+    ("pipx", "run"): frozenset({"--spec", "--python", "--pip-args", "--index-url"}),
+    ("npm", "exec"): frozenset({"-p", "--package", "-c", "--call", "--userconfig"}),
+    ("pnpm", "exec"): frozenset(),
+    ("yarn", "exec"): frozenset(),
+    ("bun", "x"): frozenset({"--bun"}),
+}
+
+#: Launcher flags whose VALUE is a shell command rather than a package name. `npx -c
+#: 'codex exec go'` is a shell string, and reading it as a package name would drop the
+#: command inside it — the same defect as stringifying an argv, one level out.
+LAUNCHER_COMMAND_FLAGS = frozenset({"-c", "--call"})
+
+#: 🔴 A chmod MODE operand, which revision 9 read as an option and lost. `chmod -x
+#: <scratch>` reported `PERMISSION_CHANGE` at `UNNAMED` scope, which no authority
+#: grants — so it failed CLOSED, and refused a legitimate scratch act. `-R`, `-v`, `-f`,
+#: `-h` and the rest are unambiguous because `R`, `v`, `f` and `h` are not mode letters;
+#: `-r`, `-w`, `-x`, `-s`, `-t` and `-X` are modes because neither GNU nor BSD `chmod`
+#: has an option by those names. The symbolic and octal forms are both here because
+#: `chmod 755 f` had already been fixed by a different mechanism (a positional skip),
+#: and one rule that finds the mode wherever it sits replaces both.
+CHMOD_MODE = re.compile(r"^(?:[ugoa]*[-+=][rwxXstugo]*|[0-7]{1,4})$")
 
 # ── residual command families (M-06) ───────────────────────────────────────────────
 
@@ -371,6 +423,7 @@ SCRATCH = "SCRATCH"
 PEER_WORKTREE = "PEER_WORKTREE"
 SHARED_CHECKOUT = "SHARED_CHECKOUT"
 GIT_COMMON_DIR = "GIT_COMMON_DIR"
+RUNTIME_CONFIG = "RUNTIME_CONFIG"
 
 #: `repo_topology`'s vocabulary onto this module's. Only the three confined scopes are
 #: new; the rest already had names here.
@@ -384,27 +437,82 @@ _FROM_TOPOLOGY = {
     rt.UNDERIVABLE: UNDERIVABLE,
 }
 
+#: The four scopes the SESSION topology owns. A path that lands in one of them is
+#: answered by the topology and by nothing after it.
+_REPOSITORY_SCOPES = (rt.ASSIGNED_WORKTREE, rt.PEER_WORKTREE,
+                      rt.SHARED_CHECKOUT, rt.GIT_COMMON_DIR)
 
-def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str]) -> str:
+
+class _AskSession:
+    """The default value of `assigned`: *go and derive it from the session binding*.
+
+    🔴 A sentinel rather than `None`, because `None` has to keep meaning *there is no
+    assignment* — the state in which every repository-space mutation is refused. A
+    single value for "not supplied" and "supplied as nothing" would make the fail-closed
+    branch unreachable from a test, which is how a fail-closed branch stops being one.
+    """
+
+    __slots__ = ()
+
+    def __repr__(self) -> str:  # pragma: no cover - diagnostics only
+        return "ASK_SESSION"
+
+
+ASK_SESSION = _AskSession()
+
+
+def session_topology(assigned: object = ASK_SESSION) -> Optional[rt.Topology]:
+    """The repository as seen from the ASSIGNED worktree, or None when there is none.
+
+    🔴 This is the whole revision-10 repair in one function, and the thing it must never
+    do is fall back to `rt.of(cwd)`. `cwd` here is the effective workdir, the model
+    writes it, and deriving the assignment from it is what let a peer worktree be staged
+    and committed at ordinary `SHELL_DEFAULT`. `None` means the perimeter is
+    `UNDERIVABLE`, and `UNDERIVABLE` denies.
+    """
+    if isinstance(assigned, _AskSession):
+        assigned = sb.cached().worktree
+    if not assigned or not isinstance(assigned, str):
+        return None
+    topology = rt.cached_for(assigned)
+    return topology if topology.ok else None
+
+
+def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str],
+                    assigned: object = ASK_SESSION) -> str:
     """Where does this operand point? `UNDERIVABLE` when the answer needs a shell.
 
-    🔴 `cwd` is the EFFECTIVE working directory — the one the command will actually run
-    in — not the session's. `pre_tool_use_guard.derive_workdir` establishes it before
-    calling, because a relative operand means nothing until that base is fixed, and
-    revision 8 anchored it to the payload's `cwd` while the runtime executed in
-    `tool_input.workdir`. The two differ routinely under Codex code mode.
+    Two different directories decide two different things, and revision 9 used one for
+    both:
+
+    ```text
+    cwd       EFFECTIVE_WORKDIR — model-selected. Anchors a RELATIVE operand, and
+              nothing else. `pre_tool_use_guard.derive_workdir` establishes it.
+    assigned  SESSION_ASSIGNED_WORKTREE — session-bound. Decides which subdivision of
+              the repository is this actor's, and therefore what the authority table is
+              consulted about. `session_binding.derive` establishes it.
+    ```
+
+    🔴 Collapsing them is Mirror's REV9 finding. With the assignment read out of `cwd`,
+    `workdir=<PEER_WORKTREE> git add framework/probe.md` made the peer the assignment,
+    so the target was `INSIDE_REPO`, so `SHELL_DEFAULT`'s named-staging grant applied —
+    while the identical `git -C <PEER_WORKTREE> …` was refused. Rotating the frame did
+    not defeat the authority table; it removed the target from the class the table
+    refuses, before the table was ever asked.
     """
     if token == UNNAMED:
         return UNNAMED
     if token == OPAQUE or not token:
         return UNDERIVABLE
     if EXPANDS.search(token):
-        return _classify_by_prefix(token, cwd, repo_root)
+        return _classify_by_prefix(token, cwd, repo_root, assigned)
     if token in SCRATCH_EXACT:
         return SCRATCH
 
     path = token if posixpath.isabs(token) else posixpath.join(cwd or "", token)
     path = posixpath.normpath(path)
+    topology = session_topology(assigned)
+    unbound = topology is None
 
     # 🔴 The repository is the set of worktrees sharing one object store, and asking
     # only "is this under my toplevel?" answered NO for every peer worktree, for the
@@ -422,10 +530,27 @@ def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str]) ->
     # this case; it closed the spelling where the two agree. Found by running the
     # committed corpus against BOTH engines, which is what the corpus is for.
     if posixpath.isabs(path):
-        placed = rt.cached(cwd if cwd else repo_root).classify(path)
-        if placed in (rt.ASSIGNED_WORKTREE, rt.PEER_WORKTREE, rt.SHARED_CHECKOUT,
-                      rt.GIT_COMMON_DIR):
-            return _FROM_TOPOLOGY[placed]
+        if topology is not None:
+            placed = topology.classify(path)
+            if placed in _REPOSITORY_SCOPES:
+                return _FROM_TOPOLOGY[placed]
+
+        # 🔴 The runtime's own registration, checked AFTER the repository and before
+        # everything else. After, because a control file inside the assigned worktree
+        # already has a governance surface — a shell write to it is refused, and the
+        # only route in is Write/Edit plus a named `git add` plus a commit, which is a
+        # review. Before everything else, because outside the repository there is no
+        # such surface at all, and `~/.claude/settings.json` is where the hook that
+        # enforces this policy is named.
+        if rc.cached().contains(path):
+            return RUNTIME_CONFIG
+
+        # 🔴 No assignment, no perimeter. Scratch survives — it is a property of the
+        # path rather than of the repository — and everything else is UNDERIVABLE,
+        # which denies every mutation and no read. Falling back to the effective
+        # workdir here is precisely the defect this parameter exists to remove.
+        if unbound:
+            return SCRATCH if _is_scratch_path(path) else UNDERIVABLE
 
     # 🔴 REPOSITORY MEMBERSHIP BEATS THE SCRATCH PREFIX, and until revision 8 it did
     # not. `/tmp`, `/private/tmp`, `/var/folders` and any path with a `scratchpad`
@@ -444,9 +569,7 @@ def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str]) ->
         if path == root or path.startswith(root.rstrip("/") + "/"):
             return INSIDE_REPO
 
-    if SCRATCH_SEGMENT in path.split("/"):
-        return SCRATCH
-    if path in SCRATCH_EXACT or path.startswith(SCRATCH_PREFIXES):
+    if _is_scratch_path(path):
         return SCRATCH
     if repo_root is None:
         # 🔴 Without a root, "outside the repository" is not derivable, and guessing
@@ -456,7 +579,25 @@ def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str]) ->
     return OUTSIDE_REPO
 
 
-def _classify_by_prefix(token: str, cwd: Optional[str], repo_root: Optional[str]) -> str:
+def _is_scratch_path(path: str) -> bool:
+    """Scratch by the shape of the path alone, in both macOS spellings.
+
+    Factored out because revision 10 needs the same answer on a branch that has no
+    topology to consult, and a second inline copy of a prefix list is the shape that
+    drifts. Both tuples are consulted: `repo_topology`'s carries `/private/var/tmp/` and
+    `/private/var/folders/`, which this module's does not, and taking the union means a
+    resolved `/private` spelling is scratch under both readings rather than under
+    whichever list the caller happened to reach.
+    """
+    if SCRATCH_SEGMENT in path.split("/"):
+        return True
+    if path in SCRATCH_EXACT or path in rt.SCRATCH_EXACT:
+        return True
+    return path.startswith(SCRATCH_PREFIXES) or path.startswith(rt.SCRATCH_PREFIXES)
+
+
+def _classify_by_prefix(token: str, cwd: Optional[str], repo_root: Optional[str],
+                        assigned: object = ASK_SESSION) -> str:
     """A path whose FILENAME expands but whose directory does not.
 
     `SC=/tmp/work; git show "$rev":x > "$SC/out/gp_$rev.py"` is a scratch write, and calling
@@ -484,13 +625,14 @@ def _classify_by_prefix(token: str, cwd: Optional[str], repo_root: Optional[str]
     prefix = "/".join(segments_[:-1])
     if not prefix:
         # A bare expanding filename in the current directory.
-        return classify_target(".", cwd, repo_root)
-    where = classify_target(prefix, cwd, repo_root)
+        return classify_target(".", cwd, repo_root, assigned)
+    where = classify_target(prefix, cwd, repo_root, assigned)
     # The confined scopes propagate rather than collapsing to UNDERIVABLE. Both refuse,
     # so the outcome is the same; only the SENTENCE differs, and `<peer>/out_$n.md`
     # deserves the denial that says which peer rather than the one that says the guard
     # could not resolve a glob.
-    if where in (SCRATCH, INSIDE_REPO, PEER_WORKTREE, SHARED_CHECKOUT, GIT_COMMON_DIR):
+    if where in (SCRATCH, INSIDE_REPO, PEER_WORKTREE, SHARED_CHECKOUT, GIT_COMMON_DIR,
+                 RUNTIME_CONFIG):
         return where
     return UNDERIVABLE
 
@@ -749,6 +891,86 @@ def operands(argv: Sequence[str], program: str) -> List[str]:
     return out
 
 
+def chmod_operands(argv: Sequence[str]) -> Tuple[Optional[str], List[str]]:
+    """`(mode, paths)` for a chmod invocation, with the mode LOCATED rather than counted.
+
+    Revision 9 dropped every `-`-leading token as an option and then discarded the first
+    survivor as the mode. Both halves are wrong for `chmod -x <path>`: the mode is
+    dropped as an option, and then the path is discarded as the mode, leaving nothing —
+    `UNNAMED`, which no authority grants. It failed closed and refused ordinary scratch
+    work, which is the failure mode that gets a guard turned off.
+
+    `--reference=<file>` supplies the mode instead, and then there is no mode operand at
+    all; returning `None` for it is right, and the old positional rule would have eaten
+    the path.
+    """
+    value_flags = OPTIONS_WITH_VALUE.get("chmod", frozenset())
+    mode: Optional[str] = None
+    paths: List[str] = []
+    index = 1
+    while index < len(argv):
+        token = argv[index]
+        index += 1
+        if token == "--":
+            continue
+        if mode is None and CHMOD_MODE.match(token):
+            mode = token
+            continue
+        if token.startswith("-") and token != "-":
+            if token in value_flags:
+                index += 1
+            continue
+        paths.append(token)
+    return mode, paths
+
+
+def launcher_key(argv: Sequence[str]) -> "Optional[Tuple[int, frozenset]]":
+    """`(words consumed, that launcher's value flags)` when argv[0] starts a launcher.
+
+    Two-word forms are tried first: `pnpm dlx` must not be read as bare `pnpm`, whose
+    branch is about installing, and `npm exec` must not fall through to `npm install`'s.
+    """
+    program = base(argv[0]) if argv else ""
+    if not program:
+        return None
+    if len(argv) > 1:
+        two = (program, argv[1])
+        if two in PACKAGE_LAUNCHERS:
+            return 2, PACKAGE_LAUNCHERS[two]
+    one = (program,)
+    if one in PACKAGE_LAUNCHERS:
+        return 1, PACKAGE_LAUNCHERS[one]
+    return None
+
+
+def launcher_child(argv: Sequence[str], words: int,
+                   value_flags: Iterable[str]) -> Tuple[List[str], List[str]]:
+    """`(child argv, inline shell strings)` after the launcher's own options.
+
+    The child is everything from the first non-option operand onward — its own argv,
+    untouched — because that is what the launcher will actually execute.
+    """
+    value_flags = frozenset(value_flags)
+    rest = list(argv[words:])
+    inline: List[str] = []
+    index = 0
+    while index < len(rest):
+        token = rest[index]
+        if token == "--":
+            index += 1
+            continue
+        if token.startswith("-") and token != "-":
+            if token in value_flags and index + 1 < len(rest):
+                if token in LAUNCHER_COMMAND_FLAGS:
+                    inline.append(rest[index + 1])
+                index += 2
+                continue
+            index += 1
+            continue
+        return rest[index:], inline
+    return [], inline
+
+
 def has_flag(argv: Sequence[str], *names: str) -> bool:
     """True if any short flag letter or long option among `names` is present.
 
@@ -898,6 +1120,26 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
             findings.append(Finding("DELEGATE", " ".join(argv[:2]), [UNNAMED],
                                     "starts another agent runtime, whose effects this "
                                     "guard never sees"))
+        return
+
+    # ── a launcher that fetches a package and runs a program out of it ──
+    #
+    # Placed immediately after delegation and before every other wrapper, for the same
+    # reason delegation is placed before them: `npx codex exec 'go'` names no path and
+    # writes nothing itself, so without this branch the package-manager rule below reads
+    # `npx` as an unclassified program and the whole line is allowed.
+    launcher = launcher_key(argv)
+    if launcher is not None:
+        words, value_flags = launcher
+        child, inline = launcher_child(argv, words, value_flags)
+        for body in inline:
+            analyse_command(body, findings, depth + 1)
+        if child:
+            analyse_argv(child, [], heredocs, findings, depth + 1)
+        elif not inline:
+            findings.append(Finding(
+                "SHELL_OUT", " ".join(argv[:words]), [UNNAMED],
+                "fetches and runs a program this command does not name"))
         return
 
     # ── wrappers that carry another command ──
@@ -1112,11 +1354,17 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
 
     # ── permission and ownership ──
     if program in ("chmod", "chown", "chgrp", "chflags", "xattr", "setfacl"):
-        targets = operands(argv, program)
-        # The first operand is the mode / owner / flag spec, not a path. Reporting `755`
-        # as a write target would deny for the right reason and name the wrong thing,
-        # and a receipt has to name what was actually touched.
-        targets = targets[1:] if program in ("chmod", "chown", "chgrp", "chflags") else targets
+        if program == "chmod":
+            # 🔴 The mode is LOCATED, not counted off the front. `chmod -x <scratch>`
+            # lost its path to the option filter and then lost the filter's survivor to
+            # the positional skip — see `chmod_operands`.
+            _, targets = chmod_operands(argv)
+        else:
+            targets = operands(argv, program)
+            # The first operand is the owner or flag spec, not a path. Reporting it as a
+            # write target would deny for the right reason and name the wrong thing, and
+            # a receipt has to name what was actually touched.
+            targets = targets[1:] if program in ("chown", "chgrp", "chflags") else targets
         findings.append(Finding("PERMISSION_CHANGE", program, targets or [UNNAMED],
                                 "changes mode, ownership or attributes of every operand"))
         return
@@ -1245,6 +1493,34 @@ GIT_READ_SUBCOMMANDS = frozenset({
 })
 
 
+#: The ref namespace each subcommand operates in. `update-ref`, `reflog` and the
+#: history-rewriting subcommands are absent on purpose: they take an already-qualified
+#: ref, or they take a commit-ish that is not a ref at all, and inventing a namespace
+#: for those would be guessing which one.
+REF_NAMESPACE = {"branch": "refs/heads/", "tag": "refs/tags/"}
+
+
+def qualify_ref(sub: str, target: str) -> str:
+    """Write a predicted ref in the namespace its subcommand implies.
+
+    🔴 Only when the subcommand SAYS which namespace, and never across namespaces: a
+    bare name under `git branch` is a branch, a bare name under `git tag` is a tag, and
+    a name that is already qualified is left exactly as written — including one
+    qualified into the *other* namespace, because `git branch -D refs/tags/v1` failing
+    to match an observed tag mutation is the correct answer, not a spelling to smooth over.
+    """
+    prefix = REF_NAMESPACE.get(sub)
+    if not prefix or not target or target in (UNNAMED, OPAQUE):
+        return target
+    if target.startswith("refs/") or target == "HEAD":
+        return target
+    # A slash in the name is NOT a sign of qualification — `feature/x` is an ordinary
+    # branch name and `refs/heads/feature/x` is what the ref snapshot will show. An
+    # earlier draft treated any slash as "already qualified" and left exactly the
+    # branches whose names have a slash unmatched.
+    return prefix + target
+
+
 def analyse_git(sub: str, rest: List[str], heredocs: List[str],
                 findings: List[Finding]) -> None:
     """Every `git` subcommand but add/commit/stage, projected onto the effect model."""
@@ -1365,7 +1641,23 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
                                     "writes a whole checkout into its destination"))
             return
 
-        findings.append(Finding("REF_MUTATION", f"git {sub}", named or ["HEAD"],
+        # 🔴 `git update-ref <ref> <newvalue> [<oldvalue>]` names ONE ref. Revision 9
+        # took every non-flag operand, so `git update-ref refs/heads/x deadbeef`
+        # predicted a second REF_MUTATION on a ref called `deadbeef` — a target that
+        # does not exist, cannot be observed, and would be reported MISSING by
+        # `post_effect_verify` for every authorised update-ref there could ever be.
+        if sub == "update-ref" and named:
+            named = named[:1]
+
+        # 🔴 A predicted ref is written in the namespace its subcommand implies, so that
+        # the prediction and the observation are the same string. `git branch -D other`
+        # predicted `other`; `post_effect_verify` observes `refs/heads/other` out of the
+        # ref snapshot, and the two never met — a legitimate authorised deletion
+        # verified INVALID. Branch and tag namespaces are qualified SEPARATELY and never
+        # into each other: a `git tag -d` that moved a branch is a mismatch and must
+        # stay one.
+        named = [qualify_ref(sub, t) for t in named] if named else ["HEAD"]
+        findings.append(Finding("REF_MUTATION", f"git {sub}", named,
                                 "moves or deletes a ref, or rewrites history"))
         return
 
@@ -1626,6 +1918,34 @@ DENY_CONFINED = (
     "is no rung of this ladder that reaches across."
 )
 
+DENY_NO_ASSIGNMENT = (
+    "This actor's assigned worktree could not be established, so the guard cannot say "
+    "which repository state is this actor's to change, and answers no.\n\n"
+    "The assignment is SESSION-BOUND on purpose: it is read from the operator binding "
+    "`LEGEND_ASSIGNED_WORKTREE`, from the runtime's own project directory, or from the "
+    "payload envelope — never from `workdir`, `cwd` or a `-C` operand, all of which the "
+    "model writes. With none of them readable there is no perimeter, and every mutation "
+    "outside scratch space is refused.\n\n"
+    "READS are unaffected, and so are writes to /tmp and the scratchpad. To restore "
+    "write authority, start the session so the runtime sets its project directory, or "
+    "have the operator set LEGEND_ASSIGNED_WORKTREE."
+)
+
+DENY_RUNTIME_CONFIG = (
+    "This command mutates the configuration that decides whether this guard runs, and "
+    "no authority class grants that from the shell.\n\n"
+    "`~/.claude/settings.json` and the active Codex `config.toml` are where a runtime is "
+    "told which PreToolUse hook to load, and the first of them also carries the `env` "
+    "block this guard reads its own session binding out of. An actor that can rewrite "
+    "them can switch the control off and then act unguarded, and nothing would look "
+    "wrong until the next process start.\n\n"
+    "Only the RESOLVED ACTIVE registration is confined — not `~/.claude` or `~/.codex` "
+    "wholesale. Caches, sessions and scratch beside them stay writable.\n\n"
+    "Changing a registration is an operator act on a separate governance surface. Inside "
+    "the repository the surface already exists: edit with Write/Edit, stage the path by "
+    "name, and let the commit be reviewed."
+)
+
 DENY_DELEGATE = (
     "This command hands the work to another agent runtime, and the guard cannot follow "
     "it there.\n\n"
@@ -1661,14 +1981,16 @@ _SCOPE = {
     PEER_WORKTREE: em.PEER_WORKTREE,
     SHARED_CHECKOUT: em.SHARED_CHECKOUT,
     GIT_COMMON_DIR: em.GIT_COMMON_DIR,
+    RUNTIME_CONFIG: em.RUNTIME_CONFIG,
     UNDERIVABLE: em.UNDERIVABLE,
     UNNAMED: em.UNNAMED,
 }
 
 
 def effects(command: object, cwd: Optional[str] = None,
-            repo_root: Optional[str] = None) -> Tuple[List[em.Effect], List[Finding],
-                                                      Optional[str]]:
+            repo_root: Optional[str] = None,
+            assigned: object = ASK_SESSION) -> Tuple[List[em.Effect], List[Finding],
+                                                     Optional[str]]:
     """Derive the PREDICTED effect set for one command.
 
     Returns `(effects, findings, parse_error)`. `findings` are the policy's own
@@ -1692,7 +2014,7 @@ def effects(command: object, cwd: Optional[str] = None,
     for finding in findings:
         for target in finding.targets:
             scope = finding.scope or _SCOPE.get(
-                classify_target(target, cwd, repo_root), em.UNDERIVABLE)
+                classify_target(target, cwd, repo_root, assigned), em.UNDERIVABLE)
             # The index and HEAD are repository objects whatever path is named, so a
             # STAGE of a scratch path is still a mutation of the repository's index.
             # This runs only for a target that RESOLVED — UNNAMED and UNDERIVABLE fall
@@ -1706,8 +2028,51 @@ def effects(command: object, cwd: Optional[str] = None,
     return derived, findings, None
 
 
+#: 🔴 A stable, machine-readable name for WHY a command was refused — revision 10.
+#:
+#: The denial prose is for the reader. This is for the live probe, which has to
+#: establish *which engine* answered before it can conclude anything, and cannot do that
+#: from a sentence the legacy guard also contains. `test_runtime_diagnostics.py` asserts
+#: that no code here appears anywhere in the legacy blob.
+CODE_ALLOWED = ""
+CODE_UNPARSEABLE = "UNPARSEABLE"
+CODE_NO_ASSIGNMENT = "SESSION_ASSIGNMENT_UNDERIVABLE"
+CODE_RUNTIME_CONFIG = "RUNTIME_CONFIG"
+CODE_DELEGATE = "DELEGATE"
+CODE_BLANKET_STAGING = "BLANKET_STAGING"
+CODE_SHELL_WRITE = "SHELL_WRITE_IN_ASSIGNED_WORKTREE"
+CODE_REF_WRITE = "REF_WRITE_REQUIRED"
+CODE_NETWORK = "NETWORK_WRITE"
+CODE_PERMISSION = "PERMISSION_CHANGE"
+CODE_ARCHIVE = "ARCHIVE_EXTRACT"
+CODE_UNKNOWN = "UNKNOWN_EFFECT"
+CODE_UNNAMED = "UNNAMED_TARGET"
+CODE_UNDERIVABLE = "UNDERIVABLE_TARGET"
+CODE_SHORTFALL = "AUTHORITY_SHORTFALL"
+
+_CONFINED_CODE = {
+    em.PEER_WORKTREE: "CONFINED_PEER_WORKTREE",
+    em.SHARED_CHECKOUT: "CONFINED_SHARED_CHECKOUT",
+    em.GIT_COMMON_DIR: "CONFINED_GIT_COMMON_DIR",
+}
+
+def confined_code(scope: str) -> str:
+    """The decision code for one confined scope. `UNKNOWN` for anything else, never a
+    silent empty string: a probe that matched on `""` would match every denial."""
+    return _CONFINED_CODE.get(scope, "CONFINED_UNKNOWN_SCOPE")
+
+
+DECISION_CODES: Tuple[str, ...] = (
+    CODE_UNPARSEABLE, CODE_NO_ASSIGNMENT, CODE_RUNTIME_CONFIG, CODE_DELEGATE,
+    CODE_BLANKET_STAGING, CODE_SHELL_WRITE, CODE_REF_WRITE, CODE_NETWORK,
+    CODE_PERMISSION, CODE_ARCHIVE, CODE_UNKNOWN, CODE_UNNAMED, CODE_UNDERIVABLE,
+    CODE_SHORTFALL, *sorted(_CONFINED_CODE.values()),
+)
+
+
 def classify(command: object, cwd: Optional[str] = None, repo_root: Optional[str] = None,
-             authority: str = DEFAULT_AUTHORITY) -> Tuple[str, Optional[str], List[Finding]]:
+             authority: str = DEFAULT_AUTHORITY,
+             assigned: object = ASK_SESSION) -> Tuple[str, Optional[str], List[Finding]]:
     """Return `(outcome, reason, findings)` for one shell command.
 
     `outcome` is `ALLOWED`, `PROHIBITED` or `UNDERIVABLE`; `reason` is the denial text, or
@@ -1718,13 +2083,28 @@ def classify(command: object, cwd: Optional[str] = None, repo_root: Optional[str
     a table of effects and authorities that another module can also read, and this
     function no longer holds any policy of its own.
     """
-    derived, findings, parse_error = effects(command, cwd, repo_root)
+    outcome, reason, _code, findings = adjudicate(
+        command, cwd, repo_root, authority, assigned)
+    return outcome, reason, findings
+
+
+def adjudicate(command: object, cwd: Optional[str] = None,
+               repo_root: Optional[str] = None, authority: str = DEFAULT_AUTHORITY,
+               assigned: object = ASK_SESSION
+               ) -> Tuple[str, Optional[str], str, List[Finding]]:
+    """`classify`, plus the machine-readable code the live probe reads.
+
+    Split out rather than widening `classify`'s tuple, because every existing caller
+    unpacks three values and a fourth would have to be added to each of them for a field
+    only the probe uses.
+    """
+    derived, findings, parse_error = effects(command, cwd, repo_root, assigned)
     if parse_error is not None:
-        return UNDERIVABLE, DENY_UNPARSEABLE + parse_error, findings
+        return UNDERIVABLE, DENY_UNPARSEABLE + parse_error, CODE_UNPARSEABLE, findings
 
     decision = em.authorize(derived, authority)
     if decision.authorized:
-        return ALLOWED, None, findings
+        return ALLOWED, None, CODE_ALLOWED, findings
 
     denied = [effect for effect, _ in decision.denials]
     kinds = {effect.kind for effect in denied}
@@ -1744,56 +2124,75 @@ def classify(command: object, cwd: Optional[str] = None, repo_root: Optional[str
     # and the reader needs the second: the first tells them to be careful with a command
     # they may repeat correctly in their own worktree, and only the second says the
     # target was never theirs. The most specific true sentence goes first.
+    # 🔴 Before the cross-worktree sentence, because it is the more specific true one.
+    # A reader told "this belongs to the whole repository" would look for the owning
+    # actor; the file in question has no owning actor, it is the switch that decides
+    # whether this guard runs at all, and the reader needs to be told that instead.
+    if em.RUNTIME_CONFIG in scopes:
+        return PROHIBITED, DENY_RUNTIME_CONFIG, CODE_RUNTIME_CONFIG, findings
     if scopes & em.CONFINED:
-        return PROHIBITED, DENY_CONFINED, findings
+        confined = sorted(scopes & em.CONFINED)
+        code = (_CONFINED_CODE[confined[0]] if len(confined) == 1
+                else "CONFINED_MULTIPLE_SCOPES")
+        return PROHIBITED, DENY_CONFINED, code, findings
     if em.DELEGATE in kinds:
-        return PROHIBITED, DENY_DELEGATE, findings
+        return PROHIBITED, DENY_DELEGATE, CODE_DELEGATE, findings
+
+    # 🔴 Before the generic underivable-target sentence: when the SESSION ASSIGNMENT is
+    # what could not be derived, every repository path is UNDERIVABLE at once, and the
+    # message "write the path literally" is unactionable advice for a guard that lost
+    # its perimeter. Two causes, two sentences.
+    if em.UNDERIVABLE in scopes and session_topology(assigned) is None:
+        return PROHIBITED, DENY_NO_ASSIGNMENT, CODE_NO_ASSIGNMENT, findings
 
     if primitives & DESTRUCTIVE_GIT:
-        return PROHIBITED, DENY_REF, findings
+        return PROHIBITED, DENY_REF, CODE_REF_WRITE, findings
 
     # Blanket staging keeps its own sentence and its own priority, because it is the
     # documented harm this policy was built for and its message is the one an actor has
     # already learned to read.
     if any(f.rule == "BLANKET_STAGING" for f in findings):
-        return PROHIBITED, DENY_STAGING, findings
+        return PROHIBITED, DENY_STAGING, CODE_BLANKET_STAGING, findings
     if any(e.kind in (em.WRITE, em.DELETE, em.RENAME) and e.scope == em.INSIDE_REPO
            for e in denied):
-        return PROHIBITED, DENY_SHELL_WRITE, findings
+        return PROHIBITED, DENY_SHELL_WRITE, CODE_SHELL_WRITE, findings
     if em.NETWORK_WRITE in kinds:
-        return PROHIBITED, DENY_NETWORK, findings
+        return PROHIBITED, DENY_NETWORK, CODE_NETWORK, findings
     if em.REF_MUTATION in kinds:
-        return PROHIBITED, DENY_REF, findings
+        return PROHIBITED, DENY_REF, CODE_REF_WRITE, findings
     if em.PERMISSION_CHANGE in kinds:
-        return PROHIBITED, DENY_PERMISSION, findings
+        return PROHIBITED, DENY_PERMISSION, CODE_PERMISSION, findings
     if em.ARCHIVE_EXTRACT in kinds:
-        return PROHIBITED, DENY_ARCHIVE, findings
+        return PROHIBITED, DENY_ARCHIVE, CODE_ARCHIVE, findings
     if em.UNKNOWN_EFFECT in kinds:
-        return UNDERIVABLE, DENY_UNKNOWN_EFFECT, findings
+        return UNDERIVABLE, DENY_UNKNOWN_EFFECT, CODE_UNKNOWN, findings
     if em.UNNAMED in scopes:
-        return PROHIBITED, DENY_UNNAMED, findings
+        return PROHIBITED, DENY_UNNAMED, CODE_UNNAMED, findings
     if em.UNDERIVABLE in scopes:
-        return UNDERIVABLE, DENY_UNDERIVABLE, findings
-    return PROHIBITED, DENY_SHELL_WRITE + "\n\n" + decision.reason(), findings
+        return UNDERIVABLE, DENY_UNDERIVABLE, CODE_UNDERIVABLE, findings
+    return (PROHIBITED, DENY_SHELL_WRITE + "\n\n" + decision.reason(),
+            CODE_SHORTFALL, findings)
 
 
 def verdict(command: object, cwd: Optional[str] = None, repo_root: Optional[str] = None,
-            authority: str = DEFAULT_AUTHORITY) -> Optional[str]:
+            authority: str = DEFAULT_AUTHORITY,
+            assigned: object = ASK_SESSION) -> Optional[str]:
     """Return a denial reason, or None to allow. `UNDERIVABLE` denies — it fails closed."""
-    outcome, reason, _ = classify(command, cwd, repo_root, authority)
+    outcome, reason, _ = classify(command, cwd, repo_root, authority, assigned)
     return None if outcome == ALLOWED else reason
 
 
 def authorized_effects(command: object, cwd: Optional[str] = None,
                        repo_root: Optional[str] = None,
-                       authority: str = DEFAULT_AUTHORITY) -> List[em.Effect]:
+                       authority: str = DEFAULT_AUTHORITY,
+                       assigned: object = ASK_SESSION) -> List[em.Effect]:
     """The effect set an execution of this command is permitted to produce.
 
     Empty when the command is refused — a refused command is authorised for nothing,
     and `post_effect_verify` comparing against an empty set is exactly right: if it ran
     anyway, every effect it produced is EXTRA.
     """
-    derived, _, parse_error = effects(command, cwd, repo_root)
+    derived, _, parse_error = effects(command, cwd, repo_root, assigned)
     if parse_error is not None:
         return []
     return em.authorize(derived, authority).authorized_effects

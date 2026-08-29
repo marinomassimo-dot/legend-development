@@ -48,6 +48,19 @@ the two answers is returned. A symlink planted inside the assigned worktree poin
 a peer is caught by the resolved reading; a `/var/folders` path whose resolved form
 `/private/var/folders` might miss a scratch prefix is caught by the lexical one. Taking
 the stricter of both needs no faith in either being complete.
+
+## 🔴 Which worktree is the ASSIGNED one — revision 10
+
+`of(cwd)` answers *the topology around this directory*, and revision 9's policy called it
+with the EFFECTIVE WORKING DIRECTORY, which comes from `tool_input.workdir`. The model
+writes that field, so the model chose which subdivision was `ASSIGNED_WORKTREE` — and a
+peer named as the workdir stopped being a peer. Measured, and reported in
+`session_binding.py`'s docstring with the six spellings that reached it.
+
+`of_assigned(assigned)` is the repair: it derives the same repository, from the same git,
+but pins `ASSIGNED_WORKTREE` to a directory the model does not author. `of()` survives for
+the READ-ONLY instruments — the guard-revision census, the parity probes, the corpus's own
+scene builder — which ask *what is around this directory* and grant nothing.
 """
 from __future__ import annotations
 
@@ -249,15 +262,48 @@ def _worktrees(cwd: str) -> Optional[List[str]]:
 
 
 def of(cwd: Optional[str]) -> Topology:
-    """Derive the topology containing `cwd`. Never raises; failure is `ok=False`."""
+    """Derive the topology containing `cwd`, taking its toplevel as the assignment.
+
+    🔴 **Not the enforcement path.** The assignment it returns is whatever working tree
+    `cwd` happens to sit in, and under the guard `cwd` is the model-selected effective
+    workdir. Every caller that DECIDES something uses `of_assigned`; this one is for the
+    read-only instruments, which grant nothing and want the topology around a directory.
+    """
     if not cwd or not isinstance(cwd, str):
         return Topology(ok=False, detail="no working directory was supplied")
 
     toplevel = _git(cwd, "rev-parse", "--show-toplevel")
     if not toplevel:
         return Topology(ok=False, detail=f"`{cwd}` is not inside a git working tree")
-    assigned = _realpath(toplevel)
+    return _derive(cwd, _realpath(toplevel))
 
+
+def of_assigned(assigned: Optional[str]) -> Topology:
+    """Derive the repository around the SESSION-BOUND assigned worktree.
+
+    🔴 The one difference from `of` is the whole revision-10 repair: `assigned` comes
+    from `session_binding`, not from the payload, so no `workdir`, no `cwd` and no `-C`
+    operand can make a peer worktree or the shared checkout become this actor's own.
+    The effective workdir keeps its job — it resolves relative operands — and loses the
+    one it should never have had.
+
+    A caller that cannot supply an assignment must NOT fall back to `of(cwd)`; it has to
+    treat the assignment as `UNDERIVABLE`, which denies. `guard_policy` does exactly that.
+    """
+    if not assigned or not isinstance(assigned, str):
+        return Topology(ok=False, detail="no assigned worktree was supplied")
+    root = _realpath(assigned)
+    if not os.path.isdir(root):
+        return Topology(ok=False, detail=f"the assigned worktree `{assigned}` is not a directory")
+    toplevel = _git(root, "rev-parse", "--show-toplevel")
+    if not toplevel:
+        return Topology(ok=False,
+                        detail=f"the assigned worktree `{assigned}` is not a git working tree")
+    return _derive(root, _realpath(toplevel))
+
+
+def _derive(cwd: str, assigned: str) -> Topology:
+    """The shared body: one repository, seen from `cwd`, with `assigned` pinned."""
     common = _git(cwd, "rev-parse", "--git-common-dir")
     if not common:
         return Topology(ok=False, detail="the git common directory is not derivable")
@@ -293,6 +339,7 @@ def of(cwd: Optional[str]) -> Topology:
 # exists for the suites, which build and tear down fixtures inside one process.
 
 _CACHE: Dict[str, Topology] = {}
+_ASSIGNED_CACHE: Dict[str, Topology] = {}
 
 
 def cached(cwd: Optional[str]) -> Topology:
@@ -302,9 +349,19 @@ def cached(cwd: Optional[str]) -> Topology:
     return _CACHE[key]
 
 
+def cached_for(assigned: Optional[str]) -> Topology:
+    """`of_assigned`, memoised. Its own cache: the two answer different questions and a
+    shared one keyed on a path would return whichever question was asked first."""
+    key = assigned or ""
+    if key not in _ASSIGNED_CACHE:
+        _ASSIGNED_CACHE[key] = of_assigned(assigned)
+    return _ASSIGNED_CACHE[key]
+
+
 def reset() -> None:
     """Forget every derived topology. Called by fixtures, never by the hook path."""
     _CACHE.clear()
+    _ASSIGNED_CACHE.clear()
 
 
 # ── reporting ──────────────────────────────────────────────────────────────────────

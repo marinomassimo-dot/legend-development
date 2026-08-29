@@ -63,8 +63,30 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import guard_policy  # noqa: E402
+import session_binding  # noqa: E402
 
 HOOK_EVENT = "PreToolUse"
+
+#: 🔴 The generation of the engine that emitted a decision, as a machine-readable token
+#: carried in every denial — revision 10.
+#:
+#: Mirror demonstrated that the revision-9 live probe could not tell which guard fired.
+#: Its named discriminator, "Blanket staging is blocked in this repository.", is
+#: BYTE-IDENTICAL in the legacy single-file guard on `main` and in `guard_policy.py`, and
+#: all four proposed probe commands return the same verdict under both. A probe that
+#: cannot distinguish the engines can return `FIRING = YES` while measuring the engine
+#: the candidate replaces.
+#:
+#: The token is derived from a STRUCTURAL fact rather than declared: `guard_policy` has
+#: to expose the revision-10 scope for this to read. A constant nobody checks is a claim,
+#: and `guard_revision.py` already refuses to read one.
+GUARD_GENERATION = ("REV10" if hasattr(guard_policy, "RUNTIME_CONFIG")
+                    and hasattr(guard_policy, "session_topology") else "PRE_REV10")
+
+#: The structured trailer every denial carries. `codex_registration.probe_preconditions`
+#: parses it, and `test_runtime_diagnostics.py` asserts that no byte of it appears in the
+#: legacy guard blob — which is the property the old probe lacked.
+DECISION_TRAILER = "LEGEND_GUARD"
 
 # Shell tools, per runtime, each name taken from that runtime's own surface.
 SHELL_TOOLS = {
@@ -157,12 +179,24 @@ class Undecidable(Exception):
     """The guard cannot tell what it is being asked about. That is a denial."""
 
 
-def _deny(reason: str) -> dict:
+def trailer(code: str, source: str) -> str:
+    """The structured line every revision-10 denial ends with.
+
+    🔴 Names only, never paths. The trailer travels into a transcript and possibly into
+    a probe receipt, and an absolute worktree path there would put this machine's
+    directory layout in both. The SOURCE that answered is the auditable fact; the value
+    it answered with is in the receipt, under the operator's own eye.
+    """
+    return (f"{DECISION_TRAILER} GENERATION={GUARD_GENERATION} "
+            f"DECISION_CODE={code or 'NONE'} ASSIGNED_WORKTREE_SOURCE={source}")
+
+
+def _deny(reason: str, code: str = "", source: str = session_binding.NONE) -> dict:
     return {
         "hookSpecificOutput": {
             "hookEventName": HOOK_EVENT,
             "permissionDecision": "deny",
-            "permissionDecisionReason": reason,
+            "permissionDecisionReason": reason + "\n\n" + trailer(code, source),
         }
     }
 
@@ -465,12 +499,27 @@ def decide(payload: object) -> "dict | None":
     else:
         calls = [(command_text(tool_input), tool_input)]
 
+    # 🔴 THE REVISION-10 REPAIR, and it is one line plus the module behind it.
+    #
+    # `EXECUTION_WORKDIR` and `ASSIGNED_WORKTREE` are derived from DIFFERENT things and
+    # must stay that way. The first comes from `derive_workdir`, below, out of the
+    # payload the model writes — because where a command runs is the model's to choose,
+    # and relative paths mean nothing until it is fixed. The second comes from
+    # `session_binding`, out of the runtime and the operator — because which worktree
+    # this actor owns is NOT the model's to choose, and revision 9 let it be.
+    #
+    # The assignment is derived ONCE per payload, not per call: a code-mode program with
+    # twenty inner `workdir`s has twenty execution bases and exactly one actor.
+    assignment = session_binding.derive(payload)
+
     for command, carrier in calls:
         workdir = derive_workdir(payload, carrier)
         root = repo_root_of(workdir)
-        reason = guard_policy.verdict(command, cwd=workdir or None, repo_root=root)
-        if reason:
-            return _deny(reason)
+        outcome, reason, code, _ = guard_policy.adjudicate(
+            command, cwd=workdir or None, repo_root=root,
+            assigned=assignment.worktree)
+        if outcome != guard_policy.ALLOWED and reason:
+            return _deny(reason, code, assignment.source)
     return None
 
 

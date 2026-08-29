@@ -88,6 +88,43 @@
 # — `codex doctor` reported `repo root` as the worktree, not the shared checkout — so a
 # relative path resolves correctly in each actor's own worktree, which is also the only
 # reading of `ONE_WRITER_PER_WORKING_DIRECTORY` that survives six actors.
+#
+# ─────────────────────────────────────────────────────────────────────────────────
+# 🔴 REVISION 10 — THIS FILE IS NOT A DEPLOYABLE REGISTRATION, AND SAYS SO
+# ─────────────────────────────────────────────────────────────────────────────────
+#
+# `framework/scripts/codex_registration.py --config .codex/config.toml` measures this
+# file and reports:
+#
+#     ANCHORING       UNANCHORED
+#     RESOLVED_ENGINE_PATH   UNDERIVABLE
+#
+# The paragraph above is not withdrawn — its reasoning about portability is right, and it
+# is why the path CANNOT simply be made absolute here. What it did not say is that the
+# consequence is a registration that names a different file depending on which directory
+# the runtime starts the hook process in. `codex doctor` reporting a repo root is a
+# statement about `codex doctor`, not a guarantee about the hook process's cwd, and it was
+# read as one.
+#
+# Compounding it, and measured at revision 9: codex-cli 0.147.0 resolves the PROJECT
+# config layer through git to the SHARED CHECKOUT, so a linked worktree's own `.codex` is
+# never read at all. Where this file IS read, the engine is absent (`main` carries the
+# legacy guard); where the engine exists, this file is not read.
+#
+# The DEPLOYMENT PROTOCOL, and nothing here performs it:
+#
+#   routes A/B/C   the config is machine-local and never committed, so the engine path is
+#                  ABSOLUTE. Render it with
+#                      codex_registration.py --emit-registration <ABS ENGINE PATH>
+#                  which PRINTS; placing the output is an operator act.
+#   route D        a tracked config may not carry this machine's layout, so it needs a
+#                  Codex runtime anchor variable — `$CODEX_PROJECT_DIR` or equivalent.
+#                  🔴 NOT MEASURED. No such variable has been observed in a Codex hook
+#                  environment here, and until one is, route D cannot be anchored.
+#
+# The hooks below are therefore a SHAPE that parses, kept because the shape itself was
+# measured, and NOT a control. `codex_registration.preconditions_met` refuses to let a
+# live probe start against an UNANCHORED registration.
 
 [hooks]
 PreToolUse = [

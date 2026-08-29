@@ -88,7 +88,6 @@ UNDERIVABLE = "UNDERIVABLE"      # the app-server could not be asked
 
 CONFIG_ABSENT = "CONFIG_ABSENT"        # no config layer discoverable for this cwd
 CONFIG_INVALID = "CONFIG_INVALID"      # a config exists and cannot be read
-CONFIG_DISCOVERED = "CONFIG_DISCOVERED"  # a config on the path names hooks, none loaded
 HOOKS_EMPTY = "HOOKS_EMPTY"            # a config exists, is readable, declares no hooks
 HOOKS_LOADED_UNTRUSTED = "HOOKS_LOADED_UNTRUSTED"
 HOOKS_LOADED_TRUSTED = "HOOKS_LOADED_TRUSTED"
@@ -109,11 +108,23 @@ TRUST_BLOCKED = "TRUST_BLOCKED"        # a config ON THE PATH names hooks, none 
 #: draft of the repair reproduced the defect it was repairing, one level in.
 CONFIG_OFF_RESOLUTION_PATH = "CONFIG_OFF_RESOLUTION_PATH"
 
-#: The revision-9 vocabulary. `state_for` still returns the revision-8 value so nothing
-#: downstream breaks; `diagnose` returns one of these, and the two are reported side by
-#: side so a reader can see which distinction is new.
+#: The vocabulary. `state_for` still returns the revision-8 value so nothing downstream
+#: breaks; `diagnose` returns one of these, and the two are reported side by side so a
+#: reader can see which distinction is new.
+#:
+#: 🔴 `CONFIG_DISCOVERED` was REMOVED in revision 10. It was declared with the comment
+#: *"a config on the path names hooks, none loaded"* — which is, word for word, the
+#: comment on `TRUST_BLOCKED`. Two names for one condition, and `classify_state` could
+#: emit only the second, so the first was dead operational vocabulary: a state a reader
+#: could find in the table, look for in a report, and never see. Removed rather than
+#: made reachable, because inventing a transition to justify a name is how a vocabulary
+#: grows past the distinctions it can actually draw.
+#:
+#: `test_runtime_diagnostics.py` now asserts that EVERY member of this tuple is produced
+#: by a concrete `classify_state` fixture. A state that cannot be reached fails the suite
+#: instead of sitting in the table.
 DIAGNOSTIC_STATES = (
-    CONFIG_ABSENT, CONFIG_INVALID, CONFIG_DISCOVERED, CONFIG_OFF_RESOLUTION_PATH,
+    CONFIG_ABSENT, CONFIG_INVALID, CONFIG_OFF_RESOLUTION_PATH,
     HOOKS_EMPTY, HOOKS_LOADED_UNTRUSTED, HOOKS_LOADED_TRUSTED, TRUST_BLOCKED,
     UNDERIVABLE,
 )
@@ -175,21 +186,76 @@ def hooks_list(cwd: str, env: Optional[dict] = None,
     return answer, stderr
 
 
-def hooks_for(cwd: str, env: Optional[dict] = None) -> Tuple[List[dict], str]:
+def hooks_for(cwd: str, env: Optional[dict] = None) -> Tuple[Optional[List[dict]], str]:
+    """The hooks the runtime reports, or `None` when it did not successfully answer.
+
+    🔴 `None` and `[]` are DIFFERENT ANSWERS and revision 9 had only one of them.
+    `answer.get("result", {}).get("data", [])` reduced a JSON-RPC **error** to an empty
+    hook list, which `state_for` reported as `NOT_LOADED`, which `classify_state` then
+    crossed with the filesystem and turned into `CONFIG_ABSENT` or `TRUST_BLOCKED` —
+    sending the operator to place a file or to make a trust decision on the strength of
+    a query that failed. Mirror injected `{"error":{"code":-32601}}` and watched it
+    happen. A non-dict `result` did worse: it raised `AttributeError` out of a
+    diagnostic.
+
+    The whole of the repair is that a malformed, errored or absent answer is a FAILURE
+    TO MEASURE, and a failure to measure is `UNDERIVABLE`:
+
+    ```text
+    transport failure / no answer      →  None   (UNDERIVABLE)
+    an `error` member                  →  None   (UNDERIVABLE)
+    no `result`, or `result` not an object  →  None
+    `result.data` missing or not a list     →  None
+    an entry with no `hooks` list           →  None
+    `result.data == []`                →  []     a genuine, well-formed empty answer
+    ```
+
+    The last two lines are the boundary and they are drawn deliberately: an empty `data`
+    is a complete answer meaning *no layer reported hooks*, while an entry that omits
+    `hooks` is a shape this parser was not written against, and reading it leniently
+    would be guessing about the field the whole diagnosis rests on.
+    """
     answer, stderr = hooks_list(cwd, env)
     if answer is None:
+        return None, stderr
+    if not isinstance(answer, dict):
+        return None, stderr + "\nthe app-server's reply was not a JSON object"
+    if answer.get("error") is not None:
+        return None, stderr + f"\n`hooks/list` returned a JSON-RPC error: {answer['error']!r}"
+    if "result" not in answer:
+        return None, stderr + "\n`hooks/list` replied with neither `result` nor `error`"
+    result = answer.get("result")
+    if not isinstance(result, dict):
+        return None, stderr + "\n`hooks/list` replied with a `result` that is not an object"
+    data = result.get("data")
+    if not isinstance(data, list):
+        return None, stderr + "\n`hooks/list` replied with a `result.data` that is not a list"
+    if not data:
         return [], stderr
-    data = answer.get("result", {}).get("data", [])
-    entry = data[0] if data else {}
-    return entry.get("hooks", []), stderr
+    entry = data[0]
+    if not isinstance(entry, dict) or not isinstance(entry.get("hooks"), list):
+        return None, stderr + "\n`hooks/list` replied with an entry carrying no `hooks` list"
+    return entry["hooks"], stderr
+
+
+def _count(hooks: Optional[List[dict]]) -> int:
+    """How many hooks, with a NON-ANSWER reported as `-1` rather than as zero.
+
+    The reachability experiment in `explain()` compares counts across three placements,
+    and `0` there means *the runtime read the config and found no hooks* — the finding
+    itself. A query that failed must not be able to produce that number.
+    """
+    return -1 if hooks is None else len(hooks)
 
 
 def state_for(cwd: str) -> Tuple[str, List[dict], str]:
     """`(state, hooks, detail)` for one working directory."""
     hooks, stderr = hooks_for(cwd)
+    if hooks is None:
+        # 🔴 The runtime did not answer. Never tell the operator to make a trust
+        # decision — or to place a config file — on the strength of a query that failed.
+        return UNDERIVABLE, [], stderr
     if not hooks:
-        if "did not answer" in stderr or "could not start" in stderr:
-            return UNDERIVABLE, [], stderr
         return NOT_LOADED, [], stderr
     if all(hook.get("trustStatus") == "trusted" for hook in hooks):
         return LOADED_TRUSTED, hooks, stderr
@@ -443,18 +509,18 @@ def explain() -> int:
         (root / ".codex").mkdir()
         shutil.copyfile(source, root / ".codex" / "config.toml")
         rows.append(("CONTROL   .codex at a trusted project root",
-                     len(hooks_for(str(root), env)[0])))
+                     _count(hooks_for(str(root), env)[0])))
         shutil.rmtree(root / ".codex")
 
         (worktree / ".codex").mkdir()
         shutil.copyfile(source, worktree / ".codex" / "config.toml")
         rows.append(("WORKTREE  .codex in the worktree only",
-                     len(hooks_for(str(worktree), env)[0])))
+                     _count(hooks_for(str(worktree), env)[0])))
 
         (root / ".codex").mkdir()
         shutil.copyfile(source, root / ".codex" / "config.toml")
         rows.append(("WORKTREE  .codex at the shared checkout",
-                     len(hooks_for(str(worktree), env)[0])))
+                     _count(hooks_for(str(worktree), env)[0])))
 
         for label, count in rows:
             print(f"  {label:<46} hooks={count}")

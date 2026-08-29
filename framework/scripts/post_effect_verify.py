@@ -536,7 +536,14 @@ def run(command: str, root: str, actor: Optional[str] = None,
     """
     import guard_policy  # local: keeps effect_model importable without the policy
 
-    predicted, _, parse_error = guard_policy.effects(command, cwd=root, repo_root=root)
+    # 🔴 `assigned=root` is stated rather than left to the environment. This module
+    # executes in a disposable fixture, and inheriting whatever `CLAUDE_PROJECT_DIR`
+    # this process happens to carry would judge a fixture command against the SESSION's
+    # worktree — which is a different repository, so every fixture path would classify
+    # OUTSIDE_REPO and the whole floor would measure nothing. The verifier's root IS the
+    # assignment for the run it is verifying.
+    predicted, _, parse_error = guard_policy.effects(command, cwd=root, repo_root=root,
+                                                     assigned=root)
     decision = em.authorize(predicted, authority)
     authorized = decision.authorized_effects
 
@@ -573,7 +580,7 @@ def run(command: str, root: str, actor: Optional[str] = None,
     # receipts that do not name their engine are not comparable, and a reader who
     # assumes they are is comparing verdicts from two different rule sets.
     import repo_topology as rt  # local: keeps this module importable without git
-    topology = rt.of(root)
+    topology = rt.of_assigned(root)
     scopes = sorted({e.scope for e in predicted}) or ["<none derived>"]
 
     return {
@@ -581,7 +588,16 @@ def run(command: str, root: str, actor: Optional[str] = None,
         "actor": actor,
         "authority": authority,
         "repository_id": topology.repository_id or "UNDERIVABLE",
+        # 🔴 Three directories, three fields, never one — revision 10. The assignment is
+        # what the authority table was consulted about; the effective workdir is what
+        # relative operands were resolved against; the execution base is where the
+        # command was actually run. They coincide here because this module builds its
+        # own fixture and is all three, and they are recorded SEPARATELY anyway, because
+        # a receipt that prints one value under one name cannot show a reader that a
+        # rotation happened.
+        "session_assigned_worktree": topology.assigned_worktree or "UNDERIVABLE",
         "effective_workdir": root,
+        "actual_execution_base": root,
         "target_scope": ",".join(scopes),
         "guard_generation": _guard_generation(root),
         "guard_policy_hash": _guard_policy_hash(root),

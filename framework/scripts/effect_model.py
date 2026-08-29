@@ -112,6 +112,23 @@ PEER_WORKTREE = "PEER_WORKTREE"
 SHARED_CHECKOUT = "SHARED_CHECKOUT"
 GIT_COMMON_DIR = "GIT_COMMON_DIR"
 
+#: 🔴 The files that decide whether this guard runs at all — revision 10.
+#:
+#: Measured on 2026-08-29 against the revision-9 engine, at ordinary `SHELL_DEFAULT`:
+#: `echo x > <HOME>/.claude/settings.json`, `echo x > <CODEX_HOME>/config.toml` and
+#: `rm -rf <CODEX_HOME>` were all ALLOWED. Those files are where a runtime is told which
+#: hook to run, and `settings.json` additionally carries the `env` block that supplies
+#: `session_binding`'s operator row. So an actor governed by this policy could rewrite
+#: the registration that makes the policy govern it, and the write floor would report
+#: itself intact right up until the next process start.
+#:
+#: This is NOT `~/.claude` and NOT `~/.codex`. It is the RESOLVED ACTIVE control surface
+#: — the settings file a runtime is actually reading and the registered engine it names
+#: — because a scope that swallowed a runtime's caches and scratch would refuse ordinary
+#: work, and a guard that refuses ordinary work is a guard that gets turned off.
+#: `runtime_config.py` resolves the membership and says when it cannot.
+RUNTIME_CONFIG = "RUNTIME_CONFIG"
+
 #: The command performs the effect but does not name what it acts on.
 UNNAMED = "UNNAMED"
 #: The command names a target that cannot be resolved without running it.
@@ -121,7 +138,7 @@ NONLOCAL = "NONLOCAL"
 
 SCOPES: FrozenSet[str] = frozenset({
     INSIDE_REPO, OUTSIDE_REPO, SCRATCH, PEER_WORKTREE, SHARED_CHECKOUT,
-    GIT_COMMON_DIR, UNNAMED, UNDERIVABLE, NONLOCAL,
+    GIT_COMMON_DIR, RUNTIME_CONFIG, UNNAMED, UNDERIVABLE, NONLOCAL,
 })
 
 #: 🔴 The scopes a shared object store makes this guard responsible for, beyond the
@@ -129,6 +146,15 @@ SCOPES: FrozenSet[str] = frozenset({
 #: mutating kind in any of them, which is the property that survives someone adding a
 #: seventh authority class without reading this comment.
 CONFINED: FrozenSet[str] = frozenset({PEER_WORKTREE, SHARED_CHECKOUT, GIT_COMMON_DIR})
+
+#: 🔴 Every scope no authority class grants a MUTATION in, which is `CONFINED` plus the
+#: runtime control surface. Kept as a set of its own rather than folded into `CONFINED`
+#: because the two are refused for different reasons and say different sentences: a peer
+#: worktree is somebody else's work, and the runtime config is this guard's own switch.
+#: `test_effect_model.py` quantifies over THIS set, so a scope added here inherits the
+#: property and a scope added to neither fails the suite rather than defaulting to
+#: grantable.
+UNGRANTED: FrozenSet[str] = CONFINED | frozenset({RUNTIME_CONFIG})
 
 #: Scopes in which a mutating effect can be reviewed, because a reader of the command
 #: can say what it touched. The complement is refused by every authority.
@@ -141,7 +167,7 @@ CONFINED: FrozenSet[str] = frozenset({PEER_WORKTREE, SHARED_CHECKOUT, GIT_COMMON
 #: could not see the path, which is false and unactionable.
 NAMEABLE: FrozenSet[str] = frozenset({
     INSIDE_REPO, OUTSIDE_REPO, SCRATCH, NONLOCAL,
-    PEER_WORKTREE, SHARED_CHECKOUT, GIT_COMMON_DIR,
+    PEER_WORKTREE, SHARED_CHECKOUT, GIT_COMMON_DIR, RUNTIME_CONFIG,
 })
 
 
@@ -288,7 +314,7 @@ class Authority:
 #: topology is derived, and reading the shared checkout is how anyone learns what `main`
 #: says. The confinement is about MUTATION; a read confinement would break the review
 #: function this laboratory runs on, and would be the kind of rule that gets turned off.
-_EVERYWHERE = {INSIDE_REPO, OUTSIDE_REPO, SCRATCH, NONLOCAL} | set(CONFINED)
+_EVERYWHERE = {INSIDE_REPO, OUTSIDE_REPO, SCRATCH, NONLOCAL} | set(UNGRANTED)
 _CONTENT = (WRITE, DELETE, RENAME, ARCHIVE_EXTRACT)
 
 
@@ -322,8 +348,9 @@ _L5 = {REF_MUTATION: {INSIDE_REPO}, PERMISSION_CHANGE: {INSIDE_REPO}}
 _L6 = {NETWORK_WRITE: {NONLOCAL}, REF_MUTATION: {NONLOCAL}}
 
 #: 🔴 No authority in this table grants UNKNOWN_EFFECT or DELEGATE, none grants any kind
-#: at UNNAMED or UNDERIVABLE scope, and none grants any MUTATING kind at PEER_WORKTREE,
-#: SHARED_CHECKOUT or GIT_COMMON_DIR. All four are asserted over the table by
+#: at UNNAMED or UNDERIVABLE scope, and none grants any MUTATING kind at any scope in
+#: `UNGRANTED` — PEER_WORKTREE, SHARED_CHECKOUT, GIT_COMMON_DIR and, from revision 10,
+#: RUNTIME_CONFIG. All four are asserted over the table by
 #: `test_effect_model.py` rather than trusted to review: a seventh authority added
 #: later inherits the properties or fails the suite.
 #:
