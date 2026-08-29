@@ -116,6 +116,60 @@ class UnknownEffectIsDeniedByEveryAuthority(unittest.TestCase):
         decision = em.authorize([em.Effect(em.READ, "x", em.INSIDE_REPO)], "PUBLICH")
         self.assertFalse(decision.authorized)
 
+    def test_the_unnameable_refusal_happens_BEFORE_the_grant_is_consulted(self) -> None:
+        """🔴 M37 survived, and it survived because the rule is defence in depth.
+
+        Removing the pre-check that refuses UNNAMED and UNDERIVABLE targets changes no
+        verdict: those scopes appear in no authority's grant, so the per-kind check
+        refuses them anyway. The mutant is EQUIVALENT for the answer and not for the
+        REASON — and the reason is the part that survives a refactor. A future rung that
+        listed `UNNAMED` in its scopes for some plausible-sounding purpose would be
+        stopped by the pre-check and waved through by the grant alone.
+
+        So the ORDER is asserted, not only the outcome.
+        """
+        for scope in (em.UNNAMED, em.UNDERIVABLE):
+            with self.subTest(scope=scope):
+                decision = em.authorize([em.Effect(em.WRITE, None, scope)], "PUBLISH")
+                self.assertFalse(decision.authorized)
+                _, why = decision.denials[0]
+                self.assertIn("a mutation whose target is", why,
+                              "the refusal must come from the pre-check, which names the "
+                              "scope, and not from the grant, which names a rung")
+
+    def test_an_unnamed_effect_carries_no_target_at_all(self) -> None:
+        """🔴 M12: an UNNAMED target must not acquire a resolvable one.
+
+        `guard_policy` maps the UNNAMED sentinel to `target=None`. A mutation that maps
+        it to `"."` instead still denies — the scope is computed from the sentinel and
+        stays UNNAMED — so the verdict is unchanged and the RECEIPT is not: an effect
+        recorded against `.` covers every path in the repository under
+        `post_effect_verify._under`, and would silently match any observed write.
+        """
+        derived, _, _ = policy.effects("git ls-files | xargs git add", str(ROOT), str(ROOT))
+        unnameable = [e for e in derived if e.scope == em.UNNAMED]
+        self.assertTrue(unnameable, "this command must derive an unnamed effect")
+        for effect in unnameable:
+            self.assertIsNone(effect.target,
+                              "an unnamed effect must carry no target; a placeholder "
+                              "target is a wildcard in every comparison downstream")
+
+    def test_a_write_outside_the_floor_reaches_the_catch_all_and_is_refused(self) -> None:
+        """🔴 M45: the last branch of `classify` was never exercised.
+
+        Every denial in the suite was caught by an earlier, specific message branch, so
+        the catch-all could be turned into an ALLOW and nothing noticed. It is reachable:
+        a scratch write under `READ_ONLY` — the authority an UNATTESTED session holds, so
+        the ordinary state of any session that has not attested — is denied by the grant
+        and matches none of the specific branches.
+        """
+        outcome, reason, _ = policy.classify(
+            "echo x > /tmp/probe.txt", str(ROOT), str(ROOT), authority=em.UNATTESTED)
+        self.assertEqual(policy.PROHIBITED, outcome,
+                         "an unattested session may not write, even to scratch")
+        self.assertIn("READ_ONLY", reason,
+                      "the catch-all must name the authority that refused it")
+
 
 class TheAuthorityLadderIsMonotone(unittest.TestCase):
 
