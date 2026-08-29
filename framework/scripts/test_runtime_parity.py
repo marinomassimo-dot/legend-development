@@ -907,7 +907,16 @@ class ThePeerPlaceholdersAreDerivedAndNotThisMachinesLayout(unittest.TestCase):
                                   "yield None so the caller SKIPS")
 
     def test_the_same_entries_do_resolve_where_a_peer_exists(self):
-        """The positive control: `None` everywhere would satisfy the test above."""
+        """The positive control: `None` everywhere would satisfy the test above.
+
+        🔴 It SKIPS where there is no peer, and that is not a weakening — this surface is
+        whatever tree the suite is run from, and in a clone there is one. A control that
+        FAILED there would be asserting that the machine has a particular layout, which is
+        the defect this whole class exists to remove.
+        """
+        import repo_topology as topo  # noqa: PLC0415 - only on this path
+        if not topo.of_assigned(str(REAL.root)).peer_worktrees:
+            self.skipTest("this surface has no peer worktree; the negative arm covers it")
         resolved = 0
         for label, command in rp.GUARD_CLOSED_DEBT:
             if "<WORKTREE_B" not in command:
@@ -919,6 +928,40 @@ class ThePeerPlaceholdersAreDerivedAndNotThisMachinesLayout(unittest.TestCase):
         self.assertGreater(resolved, 0,
                            "no peer placeholder resolved even here, so the skip above "
                            "proves nothing about the placeholder machinery")
+
+    def test_the_shared_checkout_placeholder_never_names_this_tree(self):
+        """🔴 The R4 defect one placeholder further on, found in a fresh clone.
+
+        `<REPO>` is the shared checkout, and in a single-worktree checkout that IS the
+        surface's own root. `echo x > <REPO>/CLAUDE.md` then stops being a cross-checkout
+        write and becomes an ordinary write into the actor's own tree — still DENY, for an
+        entirely different rule, with nothing saying so. `git -C <REPO> add CLAUDE.md`
+        becomes ordinary named staging and is ALLOWED, so that row fails on a clone and
+        passes in a worktree.
+
+        A row that measures a different family depending on the host's layout is exactly
+        what R4 is about, and this half was invisible until the suite was run in a clone.
+        """
+        surface = self.fresh_clone()
+        for label, command in rp.GUARD_CLOSED_DEBT:
+            if "<REPO>" not in command:
+                continue
+            with self.subTest(entry=label):
+                self.assertIsNone(
+                    rp.expand_placeholders(command, surface),
+                    "a shared-checkout row must SKIP where the shared checkout is this "
+                    "tree, not silently measure a different rule")
+
+    def test_the_shared_checkout_placeholder_resolves_where_it_is_a_different_tree(self):
+        """The positive control for the rule above."""
+        import repo_topology as topo  # noqa: PLC0415 - only on this path
+        topology = topo.of_assigned(str(REAL.root))
+        if not topology.shared_checkout or \
+                Path(topology.shared_checkout).resolve() == REAL.root:
+            self.skipTest("this surface IS its own shared checkout")
+        filled = rp.expand_placeholders("echo x > <REPO>/CLAUDE.md", REAL)
+        self.assertIsNotNone(filled)
+        self.assertNotIn("<REPO>", filled)
 
     def test_the_relative_spelling_is_preserved_and_still_points_at_the_peer(self):
         """The relative cases are ABOUT the spelling, so deriving them must not turn

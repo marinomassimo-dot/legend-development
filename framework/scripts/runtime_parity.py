@@ -189,8 +189,24 @@ def expand_placeholders(command: str, surface: Surface) -> Optional[str]:
     if not topology.ok:
         return None
     peer = topology.peer_worktrees[0] if topology.peer_worktrees else ""
+    # 🔴 A placeholder that names ANOTHER tree must not resolve to THIS one.
+    #
+    # `<REPO>` is `shared_checkout`, and in a single-worktree checkout — a fresh clone,
+    # which is the layout every reader who clones this repository has — the shared
+    # checkout IS the surface's own root. `echo x > <REPO>/CLAUDE.md` then stops being a
+    # cross-checkout write and becomes an ordinary write into the actor's own tree: still
+    # DENY, for an entirely different rule, with nothing saying so. And
+    # `git -C <REPO> add CLAUDE.md` becomes ordinary named staging, which is ALLOWED, so
+    # the row fails on a clone and passes here.
+    #
+    # This is the R4 defect one placeholder further on: the same "a row silently measures
+    # a different family depending on the host's layout", found by running the parity
+    # suite in a fresh clone rather than by reading the table.
+    shared = topology.shared_checkout
+    if shared and Path(shared).resolve() == surface.root:
+        shared = ""
     values = {
-        "<REPO>": topology.shared_checkout,
+        "<REPO>": shared,
         "<WORKTREE_B>": peer,
         # The peer as this surface would have to spell it relatively — derived, so it
         # names the peer that exists rather than the one a host happened to have.
