@@ -115,8 +115,8 @@ MUTATIONS = [
     # ── the adapter ───────────────────────────────────────────────────────────────
     Mutation(
         "M13", GUARD_ENTRY,
-        "        raise Undecidable(\n            f\"`{tool_name}` is not a tool this guard knows.",
-        "        return None\n        raise Undecidable(\n            f\"`{tool_name}` is not a tool this guard knows.",
+        "    if tool_name not in known:\n        raise Undecidable(",
+        "    if tool_name not in known:\n        return None\n        raise Undecidable(",
         GUARD_SUITES, "an unrecognised tool is waved through instead of denied"),
     Mutation(
         "M14", GUARD_ENTRY,
@@ -218,6 +218,115 @@ MUTATIONS = [
         "    return set(re.findall(r'[a-z_]+', text))",
         PARITY_SUITES, "matchers are matched as substrings again, so `exec` inside "
                        "`unified_exec` counts as a declaration"),
+
+    # ── revision 8 · SEMANTIC mutations ───────────────────────────────────────────
+    #
+    # 🔴 Each of these breaks a MEANING, not a string. The test for whether a mutation
+    # is semantic: could it be introduced by a plausible refactor that keeps every
+    # identifier and every message intact? M32 is a one-character regex edit, M35 is a
+    # reordering of two blocks, M38 removes a single condition from a comprehension.
+    # None of them changes a name the tests could be matching on.
+    Mutation(
+        "M32", GUARD_POLICY,
+        'FD_WRITE = re.compile(r"&>>|&>|" + _FD_START + r"\\d+>>|" + _FD_START + r"\\d+>")',
+        'FD_WRITE = re.compile(r"(?!x)x")',
+        GUARD_SUITES,
+        "a numbered redirect stops being a redirect, so `echo x 1> repo/file` is allowed "
+        "while `echo x > repo/file` is denied — the revision-7 bypass, restored"),
+    Mutation(
+        "M33", GUARD_POLICY,
+        'lexer = shlex.shlex(command, posix=True, punctuation_chars="();<>|&\\n")',
+        'lexer = shlex.shlex(command, posix=True, punctuation_chars=True)',
+        GUARD_SUITES,
+        "a newline stops separating commands, so only the first line of a multi-line "
+        "block is analysed — the bypass every revision through 7 shipped"),
+    Mutation(
+        "M34", GUARD_POLICY,
+        '        into = flag_value(argv, "-t", "--target-directory")',
+        '        into = None',
+        GUARD_SUITES,
+        "`cp -t DIR src` reports a SOURCE as its destination, so a write into the "
+        "repository is classified by a scratch path"),
+    Mutation(
+        "M35", GUARD_POLICY,
+        "    if repo_root is not None:\n        root = posixpath.normpath(repo_root)\n"
+        "        if path == root or path.startswith(root.rstrip(\"/\") + \"/\"):\n"
+        "            return INSIDE_REPO\n\n    if SCRATCH_SEGMENT in path.split(\"/\"):",
+        "    if SCRATCH_SEGMENT in path.split(\"/\"):",
+        GUARD_SUITES,
+        "the scratch prefix beats repository membership again, so a repository under "
+        "/tmp or /var/folders is entirely unguarded"),
+    Mutation(
+        "M36", GUARD_POLICY,
+        '    if sub in GIT_NETWORK_SUBCOMMANDS:',
+        '    if False and sub in GIT_NETWORK_SUBCOMMANDS:',
+        GUARD_SUITES,
+        "`git push` stops being a NETWORK_WRITE, so publishing to a public remote is "
+        "allowed from the shell"),
+    Mutation(
+        "M37", GUARD_POLICY,
+        '        if effect.kind in MUTATING and effect.scope not in NAMEABLE:',
+        '        if False:',
+        GUARD_SUITES,
+        "a mutation whose target is UNNAMED or UNDERIVABLE stops being refused ahead of "
+        "the authority table, so the highest rung starts authorising them"),
+    Mutation(
+        "M38", "framework/scripts/effect_model.py",
+        '        if effect.kind == UNKNOWN_EFFECT:\n'
+        '            denials.append((effect, "the effect could not be derived at all"))\n'
+        '            continue',
+        '        if effect.kind == UNKNOWN_EFFECT:\n            continue',
+        GUARD_SUITES + ("framework/scripts/test_effect_model.py",),
+        "UNKNOWN_EFFECT stops denying — the one rule with no override"),
+    Mutation(
+        "M39", "framework/scripts/effect_model.py",
+        '    def permits(self, kind: str, scope: str) -> bool:\n'
+        '        return scope in self.grants.get(kind, frozenset())',
+        '    def permits(self, kind: str, scope: str) -> bool:\n'
+        '        return kind in self.kinds and scope in {\n'
+        '            s for scopes in self.grants.values() for s in scopes}',
+        GUARD_SUITES + ("framework/scripts/test_effect_model.py",),
+        "the authority collapses from per-kind scopes back into kinds x scopes, so any "
+        "rung that permits `git commit` also permits a shell write into the repository"),
+    Mutation(
+        "M40", "framework/scripts/post_effect_verify.py",
+        '    verdict = em.MATCH if not extra and not missing else em.MISMATCH',
+        '    verdict = em.MATCH if not extra else em.MISMATCH',
+        ("framework/scripts/test_post_effect_verify.py",),
+        "a MISSING authorised effect stops invalidating the write, so 'the write did "
+        "not happen' and 'it happened where I cannot see' become the same answer"),
+    Mutation(
+        "M41", "framework/scripts/post_effect_verify.py",
+        '        worktree[entry[3:]] = entry[1]',
+        '        worktree[entry[3:]] = entry[:2]',
+        ("framework/scripts/test_post_effect_verify.py",),
+        "the delta reads the index column as a worktree change again, so every "
+        "legitimate `git add` is reported with a phantom EXTRA write"),
+    Mutation(
+        "M42", "framework/scripts/execution_attestation.py",
+        '    if not current.complete:\n'
+        '        return Attestation(RESUME_BINDING_MISMATCH, current,',
+        '    if False:\n'
+        '        return Attestation(RESUME_BINDING_MISMATCH, current,',
+        ("framework/scripts/test_execution_attestation.py",),
+        "a dimension that became UNDERIVABLE on resume stops failing, so a field nobody "
+        "can read counts as a field that stayed the same"),
+    Mutation(
+        "M43", "framework/scripts/execution_attestation.py",
+        '        if not self.ok:\n            return em.UNATTESTED\n        return self.binding.authority',
+        '        return self.binding.authority',
+        ("framework/scripts/test_execution_attestation.py",),
+        "a failed attestation keeps the authority it DECLARED, which is exactly the "
+        "shape of an authority inherited across a restart"),
+    Mutation(
+        "M44", "framework/scripts/execution_receipt.py",
+        '        decision = em.authorize(effects, raw["authority"])\n'
+        '        if not decision.authorized:',
+        '        decision = em.authorize(effects, raw["authority"])\n'
+        '        if False:',
+        ("framework/scripts/test_execution_receipt.py",),
+        "a receipt stops having its own authorisation re-derived, so one claiming an "
+        "effect set its named authority does not grant validates perfectly"),
 ]
 
 

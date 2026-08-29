@@ -263,10 +263,17 @@ def _ladder(*layers: Dict[str, Iterable[str]]) -> Dict[str, FrozenSet[str]]:
 
 
 _L1 = {READ: _EVERYWHERE}
+# 🔴 PERMISSION_CHANGE belongs on THIS rung outside the repository, not on REF_WRITE.
+# The boundary this policy defends is the repository, and it has to be the same boundary
+# for every effect kind: a `chmod 755 /tmp/probe.sh` is no more this guard's business
+# than an `echo x > /tmp/probe.txt`. Putting the whole kind on the REF_WRITE rung made
+# the scratch case refused, which the negative controls caught in the same run that
+# added them — a guard that blocks ordinary work gets turned off, and this was ordinary.
 _L2 = {kind: {SCRATCH, OUTSIDE_REPO} for kind in _CONTENT}
+_L2[PERMISSION_CHANGE] = {SCRATCH, OUTSIDE_REPO}
 _L3 = {STAGE: {INSIDE_REPO}, COMMIT: {INSIDE_REPO}}
 _L4 = {kind: {INSIDE_REPO} for kind in _CONTENT}
-_L5 = {REF_MUTATION: {INSIDE_REPO}, PERMISSION_CHANGE: {INSIDE_REPO, SCRATCH, OUTSIDE_REPO}}
+_L5 = {REF_MUTATION: {INSIDE_REPO}, PERMISSION_CHANGE: {INSIDE_REPO}}
 _L6 = {NETWORK_WRITE: {NONLOCAL}, REF_MUTATION: {NONLOCAL}}
 
 #: 🔴 No authority in this table grants UNKNOWN_EFFECT, and none grants any kind at

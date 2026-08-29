@@ -383,6 +383,52 @@ class TheDemonstratedMutationPathsAreClosed(unittest.TestCase):
         ("find -exec rm", "find . -name '*.md' -exec rm {} \\;"),
         ("find -delete", "find . -name '*.md' -delete"),
         ("dd of=", "dd if=/tmp/x of=AGENTS.md"),
+
+        # ── revision 8 ────────────────────────────────────────────────────────────
+        #
+        # 🔴 These were asserted only in `test_runtime_parity.py::GUARD_CLOSED_DEBT`
+        # when they were closed, and the mutation harness said so: M32, M33, M34 and
+        # M36 all SURVIVED a run of the guard's OWN suite. A bypass closed in the
+        # policy and pinned only in another file is a bypass one refactor away from
+        # returning, because the suite a reviewer runs for the guard does not bite.
+        ("numbered redirect", "echo x 1> AGENTS.md"),
+        ("numbered append", "echo x 2>> AGENTS.md"),
+        ("both-streams redirect", "echo x &> AGENTS.md"),
+        ("exec fd redirect", "exec 3> AGENTS.md"),
+        ("a newline hides the write", "echo hi\necho x > AGENTS.md"),
+        ("a newline hides the staging", "echo hi\ngit add -A"),
+        ("a newline hides the delete", "ls\nrm AGENTS.md"),
+        ("destination in -t", "cp -t framework/scripts /tmp/a"),
+        ("destination in --target-directory",
+         "cp --target-directory=framework/scripts /tmp/a"),
+        ("mv into a directory flag", "mv -t framework/scripts /tmp/a"),
+        ("install into a directory flag", "install -t framework/scripts /tmp/a"),
+        ("touch", "touch AGENTS.md"),
+        ("curl to a named file", "curl -o AGENTS.md https://example.com/x"),
+        ("curl remote-name into cwd", "curl -O https://example.com/x"),
+        ("wget to a named file", "wget -O AGENTS.md https://example.com/x"),
+        ("wget into a directory", "wget -P framework/scripts https://example.com/x"),
+        ("tar extraction into the repo", "tar -xf /tmp/a.tar -C framework"),
+        ("tar extraction with no destination", "tar -xf /tmp/a.tar"),
+        ("unzip with no destination", "unzip /tmp/a.zip"),
+        ("git apply", "git apply /tmp/p.diff"),
+        ("git rm", "git rm AGENTS.md"),
+        ("git mv", "git mv AGENTS.md OTHER.md"),
+        ("git restore", "git restore AGENTS.md"),
+        ("git checkout --", "git checkout -- ."),
+        ("git checkout a branch", "git checkout main"),
+        ("git reset --hard", "git reset --hard HEAD~1"),
+        ("git clean", "git clean -fd"),
+        ("git push", "git push development HEAD"),
+        ("git push --force", "git push --force origin main"),
+        ("git branch -D", "git branch -D lettore"),
+        ("git update-ref", "git update-ref refs/heads/main HEAD"),
+        ("git stash", "git stash push -u -m x"),
+        ("git rebase", "git rebase -i HEAD~3"),
+        ("chmod", "chmod 777 AGENTS.md"),
+        ("chown", "chown root AGENTS.md"),
+        ("scp out of the machine", "scp AGENTS.md host:/b"),
+        ("an unclassified git subcommand", "git frobnicate --all"),
     )
 
     def test_each_closed_shape_denies_identically_in_all_three(self) -> None:
@@ -495,6 +541,39 @@ class NegativeControlsMustKeepWorking(unittest.TestCase):
          'printf "%s\\n" "$([ 1 = 1 ] && echo "A -> B")"'),
         ("xargs grep", "find . -name '*.py' | xargs grep -l guard"),
         ("fd redirect", "python3 framework/scripts/legend_lint.py . 2>&1 | head"),
+
+        # ── revision 8 ────────────────────────────────────────────────────────────
+        #
+        # 🔴 Revision 8 refuses nineteen more families, and the cost of that has to be
+        # asserted in the same file, in the same run. Every line below is something an
+        # actor NEEDS in order to land work here, and several of them are one flag away
+        # from something now refused.
+        ("create its own branch", "git checkout -b plan-a-new-branch"),
+        ("create its own branch with switch", "git switch -c plan-a-new-branch"),
+        ("name a new branch without moving to it", "git branch plan-a-new-branch"),
+        ("read the current branch", "git branch --show-current"),
+        ("list branches", "git branch"),
+        ("list worktrees", "git worktree list"),
+        ("list stashes", "git stash list"),
+        ("show a stash", "git stash show"),
+        ("read the reflog", "git reflog"),
+        ("list tags", "git tag -l"),
+        ("create a tag", "git tag v1.2.3"),
+        ("commit named paths", "git commit -m 'msg' framework/scripts/guard_policy.py"),
+        ("fetch without pushing", "git fetch origin"),
+        ("list remotes", "git remote -v"),
+        ("a numbered redirect into scratch", "echo x 1> /tmp/probe.txt"),
+        ("a newline between two reads", "git status --short\ngit log --oneline -3"),
+        ("a multi-line block whose lines are all reads",
+         "cd /tmp\nls -la\ngrep -rn guard ."),
+        ("cp into a scratch directory by flag", "cp -t /tmp/out /tmp/a"),
+        ("tar extraction into scratch", "tar -xf /tmp/a.tar -C /tmp/out"),
+        ("curl to a scratch file", "curl -o /tmp/out.json https://example.com/x"),
+        ("touch a scratch file", "touch /tmp/probe.txt"),
+        ("mkdir in scratch", "mkdir -p /tmp/out/nested"),
+        ("chmod a scratch file", "chmod 755 /tmp/probe.sh"),
+        ("a continuation is one command, not two",
+         "python3 framework/scripts/legend_lint.py \\\n    ."),
     )
 
     def test_blanket_is_about_the_target_not_the_flag(self) -> None:
