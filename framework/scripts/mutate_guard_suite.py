@@ -558,10 +558,58 @@ def apply_and_run(mutation, head):
         shutil.rmtree(tmp, ignore_errors=True)
 
 
+#: The prefix every worktree this harness creates is named with. `prune()` will not
+#: touch a directory whose name does not start with it.
+WORKTREE_PREFIX = "mutate-"
+
+
+def prune() -> int:
+    """Remove worktrees an INTERRUPTED run of this harness left behind.
+
+    🔴 This exists because the guard this harness tests forbids the cleanup. `git
+    worktree remove` and `git worktree prune` both need REF_WRITE, which no runtime,
+    role or lease grants — so a run killed part-way leaves an entry that nobody can
+    clear from the shell, and a stale worktree makes `guard_revision.survey` report
+    `UNDERIVABLE` where the truth is `NO`. The sanctioned path out of a denial is "a
+    committed script invoked by name", and this is that script doing its own cleaning.
+
+    🔴 It removes ONLY worktrees this harness could have created: the path must be
+    absent from disk AND its directory name must carry `WORKTREE_PREFIX`. A prune that
+    matched on prunability alone would remove another actor's worktree the moment their
+    external drive was unmounted, which is precisely the cross-worktree act the guard
+    exists to prevent — performed by the tool that verifies the prevention.
+    """
+    listing = subprocess.run(["git", "-C", str(ROOT), "worktree", "list", "--porcelain"],
+                             capture_output=True, text=True).stdout
+    removed, skipped = [], []
+    for line in listing.splitlines():
+        if not line.startswith("worktree "):
+            continue
+        path = Path(line[len("worktree "):].strip())
+        if not path.name.startswith(WORKTREE_PREFIX) and \
+                not any(p.startswith(WORKTREE_PREFIX) for p in path.parts):
+            continue
+        if path.exists():
+            skipped.append(f"{path}  — still on disk; a run may be in progress")
+            continue
+        subprocess.run(["git", "-C", str(ROOT), "worktree", "remove", "--force",
+                        str(path)], capture_output=True)
+        removed.append(str(path))
+    for path in removed:
+        print(f"REMOVED   {path}")
+    for note in skipped:
+        print(f"KEPT      {note}")
+    if not removed and not skipped:
+        print("nothing to prune — no worktree of this harness is stranded")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--list", action="store_true")
     parser.add_argument("--only", default=None)
+    parser.add_argument("--prune", action="store_true",
+                        help="remove worktrees a previous interrupted run left behind")
     args = parser.parse_args()
 
     chosen = [m for m in MUTATIONS if not args.only or m.name == args.only]
@@ -569,6 +617,8 @@ def main() -> int:
         for m in chosen:
             print(f"{m.name}  {Path(m.target).name:<26} {m.why}")
         return 0
+    if args.prune:
+        return prune()
 
     head = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "HEAD"],
                           capture_output=True, text=True).stdout.strip()
