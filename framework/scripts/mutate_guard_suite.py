@@ -407,9 +407,30 @@ MUTATIONS = [
     # guarantee nothing asserts — which makes the candidate NOT READY, not merely
     # under-tested.
     Mutation(
+        # 🔴 REANCHORED, and its MEANING corrected with it — revision 10.
+        #
+        # Revision 9's anchor deleted the whole topology consultation, and its sentence
+        # said so: everything collapses into OUTSIDE_REPO, where SHELL_DEFAULT grants
+        # content writes. In revision 10 that edit is an EQUIVALENT MUTANT, because the
+        # fall-through re-consults the same topology and maps the same scopes through
+        # `_FROM_TOPOLOGY`. It survived the whole suite on that basis.
+        #
+        # What the early return still decides is the ORDER against the runtime-config
+        # resolution, and the sentence below is now that — the true one. Leaving the old
+        # sentence in place would have been a claim about behaviour the code no longer
+        # has, attached to a mutation that no longer tests it.
         "M47", GUARD_POLICY,
         '            if placed in _REPOSITORY_SCOPES:',
         '            if False:',
+        CONFINEMENT_SUITES,
+        "the repository scopes stop being answered BEFORE the runtime-config resolution, "
+        "so a control file inside the assigned worktree — an operator who pointed "
+        "CODEX_HOME at a directory in the repository — becomes RUNTIME_CONFIG, where "
+        "nothing can land, instead of INSIDE_REPO, where a reviewed commit can"),
+    Mutation(
+        "M47b", GUARD_POLICY,
+        '    rt.PEER_WORKTREE: PEER_WORKTREE,',
+        '    rt.PEER_WORKTREE: OUTSIDE_REPO,',
         CONFINEMENT_SUITES,
         "the topology stops being consulted at all, so every peer worktree, the shared "
         "checkout and the whole git common dir collapse back into OUTSIDE_REPO — where "
