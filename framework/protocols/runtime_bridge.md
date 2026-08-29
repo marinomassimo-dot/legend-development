@@ -79,6 +79,7 @@ documentation about them.
 |---|---|---|---|
 | input event key | `hook_event_name: "PreToolUse"` | same, per `pre-tool-use.command.input` | `DOCUMENTED` — schema extracted from the shipped binary |
 | required input fields | `session_id, transcript_path, cwd, hook_event_name, tool_name, tool_input` | **ten**: those minus none, plus `model, permission_mode, tool_use_id, turn_id` — and `additionalProperties: false` | `DOCUMENTED` |
+| 🔴 input fields **actually sent** | the six above **plus `effort` and `prompt_id`** | not re-measured | `OBSERVED` — 2026-08-29, claude-code 2.1.232 |
 | shell tool name | `Bash` | `shell_command` · `unified_exec` | `DOCUMENTED` — `ConfigShellToolType` |
 | 🔴 shell tool name **actually used** | `Bash` | **`exec`**, a code-mode tool carrying a JS body that calls `tools.exec_command({"cmd": …})` | `OBSERVED` — § 2.1 |
 | command key | `tool_input.command` (string) | `cmd` (string), or an argv list, or inside a code-mode program | `DOCUMENTED` + `OBSERVED` |
@@ -147,6 +148,20 @@ one reading of one file.
 This is the second time on this candidate that a number was true of the tree that produced
 it and false of the tree that carried it — the first is `CANDIDATE_CONTENT_HASH`, which is
 why that manifest carries an invariance check.
+
+🔴 **The row above says this table is narrower than the wire, and it was found the hard
+way.** Revision 8 added a rule denying any unknown top-level payload key — Codex's own
+input schema declares `additionalProperties: false`, so an extra key is a protocol
+violation there. The rule refused **every command in the session that wrote it**, within a
+minute, because claude-code 2.1.232 sends two keys that appear in neither the harness
+contract nor this table, which says both schemas were *read out of the installed
+runtimes*.
+
+The rule now turns on **where** the key is. A key BESIDE `tool_input` cannot change what
+the decision fields mean, so it is recorded as unmeasured and does not deny; a key INSIDE
+`tool_input` is in the object the command is read out of, may itself carry a command, and
+denies. Denying on a sibling makes the guard fail on every runtime release, and a guard
+that fails on every release is a guard that gets disabled.
 
 🔴 **The output side needed no adapter at all.** The object this repository already emitted
 for Claude validates against Codex's own output schema unchanged. That is a fact about the
@@ -240,6 +255,65 @@ the right call for a bridge change and the wrong state to leave a write floor in
 operator's condition for a write-enabled runtime is that every demonstrated mutation path
 required for parity is closed. They are closed, and the mechanism is the point.
 
+### 4.0 · The executable model — revision 8
+
+`COMMAND → ALLOW/DENY` has no answer that survives contact with a shell, because the set
+of texts that mean "write" is not enumerable and § 4.5 measures what that costs. The
+question changes shape:
+
+```
+COMMAND → PREDICTED EFFECT → TARGET → AUTHORIZATION → EXECUTION
+        → OBSERVED EFFECT → MATCH / MISMATCH
+```
+
+Two rules, neither with an override:
+
+```
+UNKNOWN_EFFECT                        → DENY, under every authority, always
+OBSERVED_EFFECT != AUTHORIZED_EFFECT  → FAIL CLOSED, WRITE RESULT INVALID
+```
+
+**Eleven effects, closed:** `READ · WRITE · DELETE · RENAME · STAGE · COMMIT ·
+REF_MUTATION · NETWORK_WRITE · ARCHIVE_EXTRACT · PERMISSION_CHANGE · UNKNOWN_EFFECT`.
+Closed is load-bearing: a derivation that cannot place a command in one of these emits
+`UNKNOWN_EFFECT`, never nothing — "no effect derived" and "no effect" are the same value
+in an open vocabulary and opposite values here.
+
+**Six scopes:** `INSIDE_REPO · OUTSIDE_REPO · SCRATCH · NONLOCAL · UNNAMED · UNDERIVABLE`.
+The last two are scopes, not errors: a command that mutates something it does not name and
+one whose target needs a shell to resolve are both *derivable as mutations* and
+*underivable as targets*, and both are refused by every authority including the highest.
+An effect nobody can name is an effect nobody can review, and that — not the write itself
+— is what put another actor's in-flight work into a commit describing something else.
+
+**Six authorities, a monotone ladder**, each rung a superset of the one below:
+
+```
+READ_ONLY        the floor, and where an unattested session sits
+SCRATCH_WRITE  + content and permission changes at SCRATCH / OUTSIDE_REPO
+SHELL_DEFAULT  + STAGE and COMMIT at INSIDE_REPO      ← what the PreToolUse guard enforces
+WORKTREE_WRITE + content mutation at INSIDE_REPO
+REF_WRITE      + REF_MUTATION and PERMISSION_CHANGE at INSIDE_REPO
+PUBLISH        + NETWORK_WRITE and remote refs — an operator act, never a runtime's
+```
+
+🔴 **An authority is a mapping from kind to scopes, not a product of the two.** `STAGE` and
+`WRITE` both land at `INSIDE_REPO`, so any `kinds × scopes` product that admits
+`git commit` also admits a shell write into `framework/` — it either loses the commit,
+which is how work lands here, or regains the write revisions 1–7 exist to stop.
+
+**Where each half lives.** `effect_model.py` holds the vocabulary and the algebra and
+knows nothing of shells; `guard_policy.py` derives predicted effects; `post_effect_verify.py`
+derives observed ones from a git delta and compares. The shared vocabulary is the only
+reason the two ends can be compared at all — and the comparison is what distinguishes *the
+hook refused this* from *the hook never fired*, which no `PreToolUse` hook can report about
+itself.
+
+`execution_attestation.py` binds nine dimensions — actor, runtime, runtime version,
+session, task, worktree, branch, `HEAD`, authority — into one fingerprint, and revokes
+write authority when any of them changes **or becomes underivable** across a resume. A
+field nobody can read is not a field that stayed the same.
+
 ### 4.1 · Why the old policy leaked, in one sentence
 
 It matched substrings and **blanked quoted spans** — an exemption added because it once
@@ -317,14 +391,64 @@ Printed by `runtime_parity.py --characterize` and asserted **open and identical*
 test and forces this list to be updated with the fix:
 
 ```
-chmod / chown        git reset --hard      git checkout -- .
-git clean -fd        git push              a committed script that writes when invoked
+a committed script that writes when invoked by name
 ```
 
-The last is deliberate: invoking a reviewed script by name is the escape hatch every
+That one is deliberate: invoking a reviewed script by name is the escape hatch every
 denial names, and closing it would leave no way to do a legitimate write from the shell.
-The others are metadata, history and remote state — a different blast radius from content
-mutation, and their own review.
+
+🔴 **Revision 8 closed the other five, and found twenty-seven that were not on this list
+at all.** `chmod`/`chown`, `git reset --hard`, `git checkout -- .`, `git clean -fd` and
+`git push` are now refused, not by adding five patterns but by deriving their EFFECT —
+`PERMISSION_CHANGE`, `FILE_WRITE`, `FILE_DELETE`, `NETWORK_WRITE` — and asking whether the
+acting authority grants it. `SHELL_DEFAULT` grants none of them.
+
+They move to `GUARD_CLOSED_DEBT`, asserted in the **deny** direction in both runtimes by
+`test_runtime_parity.py::test_every_closed_gap_stays_closed_on_both_sides`, alongside a
+`GUARD_POSITIVE_FLOOR` asserted in the **allow** direction. A table that only asserts gaps
+are open cannot notice one re-opening.
+
+🔴 **The gap this list could not express.** Against the 46 repository-mutating shapes the
+revision-8 brief enumerates, the revision-7 policy allowed **35**. Six were on this list.
+The other twenty-nine were allowed *and* undeclared — and three of those were bypasses of
+rules § 4.3 already claimed to hold. *(The block below is a results table, fenced as
+`text` deliberately: `TheRepositorysOwnDocumentedCommandsStillRun` harvests every shell
+line this repository documents in a shell-fenced block and would otherwise read these
+rows as commands to run — which is how revision 7's own debt table ended up in its
+denied list.)*
+
+```text
+echo x 1> framework/x    ALLOWED   `>` denied. `FD_REDIRECT` deleted `1>` before lexing.
+cp -t framework /tmp/a   ALLOWED   `-t` moves the destination into a flag, and
+                                   `operands()` skips flag values, so the derived
+                                   "destination" was the last SOURCE.
+echo hi                  ALLOWED   `CONTROL_TOKENS` has held "\n" since revision 1 and
+git add -A                         `shlex(whitespace_split=True)` never emits one. Two
+                                   lines lexed into ONE argv; only the first line's
+                                   program was analysed. `;` split. `|` split. A newline
+                                   did not, for seven revisions — and a multi-line block
+                                   is the ordinary shape of agent shell use.
+```
+
+The lesson is not "the list was too short". A list of shapes is the wrong instrument:
+`git push` was on it because someone thought of `git push`, and `1>` was not because
+nobody thought of `1>`. An effect model refuses what it cannot classify, so the failure
+mode of forgetting becomes a refusal instead of a hole. `UNKNOWN_EFFECT → DENY`, under
+every authority, with no override.
+
+### 4.6 · The boundary is the repository, and it was not
+
+🔴 `classify_target` returned `SCRATCH` for anything under `/tmp`, `/private/tmp`,
+`/var/folders` or any path with a `scratchpad` segment **before** consulting the
+repository root. A git working tree living under any of them was therefore entirely
+unguarded — and `TMPDIR` on macOS points into `/var/folders`, which is where every fixture
+repository in this repository's own suites is created. The live floor written for revision
+8 measured `echo tampered > kept.txt` as ALLOWED and read the file back to find it
+rewritten.
+
+Repository membership now beats the scratch prefix, for every effect kind. The exemption
+exists so that work *outside* the tree is not this guard's business; inside the tree is
+exactly its business.
 
 ## 5 · The hook state machine — what is unverified, and the one experiment that settles it
 
@@ -335,11 +459,50 @@ now a **derived state with six values** rather than a boolean. `runtime_parity.p
 ```
 NOT_CONFIGURED   no registration names the shared engine
 CONFIGURED       a registration exists, parses, and names it
-TRUST_PENDING    configured, AND the runtime gates it behind a review nobody here can read
+NOT_LOADED       the runtime's own `hooks/list` reports ZERO hooks here    ← revision 8
+TRUST_PENDING    LOADED, and the runtime gates it behind a per-hook review
 DEMONSTRATED     a session-probe receipt records a REFUSAL         ← the only passing state
 NOT_FIRING       a session-probe receipt records the command running anyway
 UNDERIVABLE      the registration or the receipt cannot be read at all
 ```
+
+### 5.0 · 🔴 The state is `NOT_LOADED`, and the cause is measured
+
+Revisions 2–7 recorded `TRUST_PENDING` and were careful to say the trust gate was an
+inference from a flag's existence, explicitly not a measurement. That care was right. It
+was also covering for an instrument that did not exist — and it does:
+
+**`codex app-server` answers a `hooks/list` JSON-RPC method**, returning one
+`HookMetadata` per loaded hook with `source`, `sourcePath` and `trustStatus`. No session,
+no prompt, no turn, no model call — **not a spend under Annex J.4**. Asked from any LEGEND
+worktree it returns `hooks: []`, with no warning and no error.
+
+Four zeroes are not a finding. The controls, all from
+`framework/scripts/codex_hook_state.py --explain`:
+
+```
+this repository's own .codex/config.toml at a TRUSTED PROJECT ROOT     5 hooks
+the same file in a trusted NESTED git repository                       5 hooks
+the same file in a git WORKTREE                                        0 hooks
+the same file at that worktree's SHARED CHECKOUT                       5 hooks
+```
+
+**In a git worktree, codex-cli 0.147.0 resolves the project config layer through git to
+the SHARED CHECKOUT and collects project hooks from there.** A `.codex/config.toml` in the
+worktree contributes nothing, silently. Every LEGEND actor works in a worktree, and the
+shared checkout has no `.codex` at all — the file is tracked and `main` predates it.
+
+So the registration policed **nothing, in every worktree, for every actor**. This is a
+measured cause for the `HOOK_NOT_FIRING` § 8 records, and it **replaces** the trust-gate
+inference rather than confirming it: the ancestor IS trusted, the layer IS discovered, and
+no error is raised.
+
+🔴 It also corrects this file. `.codex/config.toml` says its command path is relative
+because "`codex doctor` reported `repo root` as the worktree". That is `doctor`'s notion of
+a repository root; the **config layer** uses a different one.
+
+`NOT_LOADED` sits BELOW `TRUST_PENDING`: a registration that never loaded is not on either
+side of the gate, and naming the gate for it claims a state it never reached.
 
 | Claim | Status | Instrument |
 |---|---|---|
@@ -513,8 +676,23 @@ including this one and the peer's. Directory trust is therefore **not** a differ
 the two registrations, and cannot be either branch's explanation for a probe not firing.
 
 **The two registrations disagree on where a Codex hook is declared** — `.codex/config.toml`
-with a `hooks.PreToolUse` table here, `.codex/hooks.json` there. Neither has been observed
-loading. The type-probe above is evidence for the first and there is no equivalent evidence
-for the second, which settles nothing: an unrecognised config key is *ignored*, so a file the
-loader never reads and a key the loader accepts but never reaches look identical from
-outside. One probe answers both, and it is the same probe § 5 already owes.
+with a `hooks.PreToolUse` table here, `.codex/hooks.json` there.
+
+🔴 **Settled in revision 8, and the answer is not "one probe for both".** `hooks/list`
+(§ 5.0) answers each separately, with no spend:
+
+```
+[hooks] PreToolUse = [ … ]      loads — 5 hooks, source "project"
+hooks = "./hooks.json"          a TYPE ERROR:
+                                `invalid type: string "./hooks.json",
+                                 expected struct HooksToml`
+```
+
+So the group table **this** file ships is the correct shape, and the peer branch's
+`.codex/hooks.json` is not a shape codex-cli 0.147.0 accepts. That was reachable all along
+and neither branch reached it: revision 7's type-probe could tell that `hooks` was a
+*recognised key* and could not tell **what type it was recognised as**, and read that
+ambiguity as confirmation of the shape already written.
+
+The correct shape still loads nothing here, for the reason § 5.0 measures. Being right
+about the shape and wrong about the location produces exactly the same zero.
