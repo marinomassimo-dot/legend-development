@@ -951,6 +951,37 @@ class TheActiveRuntimeConfigurationCannotEraseItself(unittest.TestCase):
         surface = rc.resolve(self.env)
         self.assertFalse(surface.contains(str(root / ".claude" / "settings.json")))
 
+    def test_the_repository_scopes_are_consulted_BEFORE_the_runtime_config_scope(self):
+        """🔴 The ordering, pinned — and it was pinned because a mutation survived.
+
+        `classify_target` returns early for the four repository scopes, and that early
+        return LOOKS redundant: the fall-through re-consults the same topology and maps
+        the same scopes through `_FROM_TOPOLOGY`. Deleting it changes nothing for any
+        path outside the repository, which is why the mutation that deletes it survived
+        the whole suite — an EQUIVALENT MUTANT everywhere except here.
+
+        It is load-bearing for exactly one case, and this is it: a runtime-config member
+        that lives INSIDE the assigned worktree — an operator who pointed `CODEX_HOME` at
+        a directory in the repository — must stay `INSIDE_REPO`, where a named `git add`
+        and a reviewed commit are the governance surface, rather than becoming
+        `RUNTIME_CONFIG`, where nothing can land at all.
+        """
+        root = Path(__file__).resolve().parents[2]
+        inside = root / ".codex"
+        env = {"HOME": str(root), "CODEX_HOME": str(inside),
+               "CLAUDE_CONFIG_DIR": str(root / ".claude")}
+        rc.reset()
+        self.addCleanup(rc.reset)
+        self.assertTrue(rc.resolve(env).contains(str(inside / "config.toml")),
+                        "the fixture must actually put a member inside the worktree, or "
+                        "this test asserts nothing about the ordering")
+        rt.reset()
+        self.assertEqual(
+            ask("git add .codex/config.toml", str(root), assigned=str(root), home=env),
+            "ALLOW",
+            "a config file inside the assigned worktree keeps the repository's own "
+            "governance surface; RUNTIME_CONFIG would make it unlandable")
+
 
 class ChmodLocatesItsModeOperand(unittest.TestCase):
     """🔴 R8. A refusal in the WRONG direction, which is still a defect."""

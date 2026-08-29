@@ -528,6 +528,34 @@ class TheMutationHarnessCanCleanUpAfterAKilledRun(unittest.TestCase):
         self.assertIn('WORKTREE_PREFIX = "mutate-"', source)
         self.assertIn('prefix=f"{WORKTREE_PREFIX}', source)
 
+    def test_every_mutation_anchor_appears_exactly_once_in_its_target(self):
+        """🔴 An UNUSABLE mutation is not a kill, and it takes an hour to find out.
+
+        A mutation whose `old` string is missing reports `ANCHOR_MISSING`; one that
+        appears twice reports `ANCHOR_AMBIGUOUS`. Both mean the mutation was never
+        applied, so the guarantee it attacks was never attacked — and both are produced by
+        the ordinary act of refactoring the code a mutation points at, silently, with no
+        signal until the run ends.
+
+        Revision 10 refactored `guard_policy.classify` and broke FIVE inherited anchors
+        (`M03`, `M29`, `M35`, `M45`, `M47`) and wrote one of its own with two matches
+        (`M83`). They were found by checking anchors BEFORE a run rather than by reading
+        the report after one, and this is that check, at a second rather than an hour.
+        """
+        import mutate_guard_suite as mgs  # noqa: PLC0415 - the harness, not a dependency
+        sources = {}
+        problems = []
+        for mutation in mgs.MUTATIONS:
+            if mutation.target not in sources:
+                sources[mutation.target] = (ROOT / mutation.target).read_text()
+            found = sources[mutation.target].count(mutation.old)
+            if found != 1:
+                problems.append(f"{mutation.name} in {mutation.target}: "
+                                f"{found} occurrences of its anchor")
+        self.assertEqual([], problems)
+        self.assertGreater(len(mgs.MUTATIONS), 60,
+                           "an empty mutation table satisfies the loop above")
+
 
 class TheLiveProbeCanTellTheEnginesApart(unittest.TestCase):
     """🔴 R2. The revision-9 probe could return FIRING while measuring the legacy guard.

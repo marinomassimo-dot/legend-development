@@ -78,9 +78,18 @@ MUTATIONS = [
         # then chooses a sentence. The harness reported ANCHOR_MISSING rather than a
         # pass, which is the only correct behaviour — a mutation that was never applied
         # is not a mutation the tests killed.
+        # 🔴 REANCHORED TWICE. Revision 8 moved it off a block that no longer existed;
+        # revision 10 moved it again, because `classify` now delegates to `adjudicate`
+        # and every return carries a DECISION_CODE. Both times the harness reported
+        # ANCHOR_MISSING rather than a pass, which is the only correct behaviour — a
+        # mutation that was never applied is not a mutation the tests killed — and both
+        # times the re-anchoring was found by CHECKING every anchor against HEAD before
+        # the run, not by reading the report afterwards.
         "M03", GUARD_POLICY,
-        "    if em.UNDERIVABLE in scopes:\n        return UNDERIVABLE, DENY_UNDERIVABLE, findings",
-        "    if em.UNDERIVABLE in scopes:\n        return ALLOWED, None, findings",
+        "    if em.UNDERIVABLE in scopes:\n"
+        "        return UNDERIVABLE, DENY_UNDERIVABLE, CODE_UNDERIVABLE, findings",
+        "    if em.UNDERIVABLE in scopes:\n"
+        "        return ALLOWED, None, CODE_ALLOWED, findings",
         GUARD_SUITES, "an unresolvable write target is allowed instead of denied"),
     Mutation(
         "M04", GUARD_POLICY,
@@ -233,7 +242,8 @@ MUTATIONS = [
                       "matches no rule"),
     Mutation(
         "M29", GUARD_POLICY,
-        "    if EXPANDS.search(token):\n        return _classify_by_prefix(token, cwd, repo_root)",
+        "    if EXPANDS.search(token):\n"
+        "        return _classify_by_prefix(token, cwd, repo_root, assigned)",
         "    if EXPANDS.search(token):\n        return SCRATCH",
         GUARD_SUITES, "any expanding path is treated as scratch, so a repository target "
                       "behind a variable is allowed"),
@@ -284,14 +294,21 @@ MUTATIONS = [
         "`cp -t DIR src` reports a SOURCE as its destination, so a write into the "
         "repository is classified by a scratch path"),
     Mutation(
+        # 🔴 REANCHORED in revision 10, onto the SHARPER half of what it always meant.
+        #
+        # Revision 9's anchor was the lexical root fallback. That block is now
+        # `_workdir_repository_overlay`, and the half that actually decides case K1 is the
+        # SECOND comparison: `--show-toplevel` answers `/private/var/folders/…` while a
+        # runtime's cwd says `/var/folders/…`, so the lexical test alone returns False and
+        # a repository under TMPDIR goes back to being scratch. Deleting the resolved
+        # reading is therefore the K1 defect exactly, rather than approximately.
         "M35", GUARD_POLICY,
-        "    if repo_root is not None:\n        root = posixpath.normpath(repo_root)\n"
-        "        if path == root or path.startswith(root.rstrip(\"/\") + \"/\"):\n"
-        "            return INSIDE_REPO\n\n    if SCRATCH_SEGMENT in path.split(\"/\"):",
-        "    if SCRATCH_SEGMENT in path.split(\"/\"):",
+        "    inside = _under(root, path) or _under(rt.realpath(root), rt.realpath(path))",
+        "    inside = _under(root, path)",
         GUARD_SUITES,
-        "the scratch prefix beats repository membership again, so a repository under "
-        "/tmp or /var/folders is entirely unguarded"),
+        "the two path spellings stop being compared, so a repository whose toplevel git "
+        "reports through /private and whose cwd does not is entirely unguarded — which "
+        "is case K1, the defect revision 8 believed it had closed"),
     Mutation(
         "M36", GUARD_POLICY,
         '    if sub in GIT_NETWORK_SUBCOMMANDS:',
@@ -367,8 +384,9 @@ MUTATIONS = [
         "effect set its named authority does not grant validates perfectly"),
     Mutation(
         "M45", GUARD_POLICY,
-        '    return PROHIBITED, DENY_SHELL_WRITE + "\\n\\n" + decision.reason(), findings',
-        '    return ALLOWED, None, findings',
+        '    return (PROHIBITED, DENY_SHELL_WRITE + "\\n\\n" + decision.reason(),\n'
+        '            CODE_SHORTFALL, findings)',
+        '    return ALLOWED, None, CODE_ALLOWED, findings',
         GUARD_SUITES + ("framework/scripts/test_effect_model.py",),
         "the catch-all at the end of `classify` allows anything the specific message "
         "branches did not name, so a refused decision becomes an ALLOW for any effect "
@@ -390,10 +408,8 @@ MUTATIONS = [
     # under-tested.
     Mutation(
         "M47", GUARD_POLICY,
-        '        if placed in (rt.ASSIGNED_WORKTREE, rt.PEER_WORKTREE, rt.SHARED_CHECKOUT,\n'
-        '                      rt.GIT_COMMON_DIR):\n'
-        '            return _FROM_TOPOLOGY[placed]',
-        '        pass',
+        '            if placed in _REPOSITORY_SCOPES:',
+        '            if False:',
         CONFINEMENT_SUITES,
         "the topology stops being consulted at all, so every peer worktree, the shared "
         "checkout and the whole git common dir collapse back into OUTSIDE_REPO — where "
@@ -680,8 +696,15 @@ MUTATIONS = [
         "the decision code and the binding source leave the denial, so a live probe is "
         "back to a sentence the legacy guard also contains"),
     Mutation(
+        # 🔴 The anchor carries the two lines above it. `return UNANCHORED` appears TWICE
+        # in `classify_anchoring` — the empty-path guard and the fall-through — and an
+        # ambiguous anchor is UNUSABLE, which is not a kill.
         "M83", "framework/scripts/codex_registration.py",
+        '    if match and match.group(1) in RUNTIME_ANCHORS:\n'
+        '        return RUNTIME_ANCHORED\n'
         '    return UNANCHORED',
+        '    if match and match.group(1) in RUNTIME_ANCHORS:\n'
+        '        return RUNTIME_ANCHORED\n'
         '    return RUNTIME_ANCHORED',
         ("framework/scripts/test_runtime_diagnostics.py",),
         "a RELATIVE registration is reported as deterministically anchored, so the "

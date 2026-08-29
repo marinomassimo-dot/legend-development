@@ -842,6 +842,36 @@ class TheRepositoryBoundaryIsWhatMakesAWriteProhibited(unittest.TestCase):
                 "a path inside the named root is repository space even when it belongs "
                 "to no worktree of the SESSION's repository and sits under TMPDIR")
 
+    def test_the_two_path_spellings_are_both_compared(self) -> None:
+        """🔴 Case K1 in unit form, and the half a same-spelling fixture cannot reach.
+
+        `git rev-parse --show-toplevel` answers `/private/var/folders/…` on macOS while a
+        runtime's `cwd` says `/var/folders/…`. Same directory, two strings, and a lexical
+        comparison between them returns False — which is how a fixture repository under
+        `TMPDIR` was writable for a whole revision. The test above builds both sides from
+        one spelling, so it passes with the resolved reading deleted; this one deliberately
+        does not.
+
+        It SKIPS where the platform has no such symlink, and the skip is stated rather than
+        silent: on Linux `realpath(tmpdir) == tmpdir` and there is nothing to compare.
+        """
+        with tempfile.TemporaryDirectory() as raw:
+            if os.path.realpath(raw) == raw:
+                self.skipTest("this platform's temp directory is already resolved")
+            repo = Path(raw) / "repo"
+            repo.mkdir()
+            subprocess.run(["git", "-C", str(repo), "init", "-q"], capture_output=True)
+            outside = Path(raw) / "not-a-repo"
+            outside.mkdir()
+            # repo_root in the RESOLVED spelling, the target in the unresolved one —
+            # which is exactly the pair the hook receives.
+            self.assertEqual(
+                policy.classify_target(str(repo / "a.md"), cwd=str(outside),
+                                       repo_root=os.path.realpath(str(repo)),
+                                       assigned=str(ROOT)),
+                policy.INSIDE_REPO,
+                "a repository is a repository under either spelling of its own path")
+
     def test_the_same_path_with_no_assignment_is_underivable_not_scratch(self) -> None:
         """🔴 The revision-10 half of the branch above, and it fails DIFFERENTLY.
 
