@@ -181,6 +181,31 @@ class TheHostileCorpusIsSelfDescribing(unittest.TestCase):
                    and r["observed"] != hc.SKIP]
         self.assertEqual(len(counted), 1)
 
+    def test_an_unrecognised_scene_makes_nothing_attributable(self):
+        """🔴 The confound is TOTAL, and a first version scored the half it thought was
+        safe. If an engine reads the scene's root as scratch, every case touching the
+        scene is allowed for that ONE reason, and a ratio over any subset of them
+        attributes a location defect to whatever families the subset happened to name.
+        """
+        rows = [{"id": "A1-workdir-in-in", "observed": hc.ALLOW},
+                {"id": "Z2-numbered-redirect", "observed": hc.ALLOW},
+                {"id": "T1-scratch-write", "observed": hc.ALLOW}]
+        control = next(r for r in rows if r["id"] == "A1-workdir-in-in")
+        recognised = control["observed"] == hc.DENY
+        confounded = [] if recognised else [r["id"] for r in rows]
+        self.assertFalse(recognised)
+        self.assertEqual(len(confounded), len(rows),
+                         "a partially-scored confounded run misattributes by design")
+
+    def test_the_k1_fixture_is_always_built_in_the_system_temp_dir(self):
+        """🔴 TMPDIR is the whole content of case K1. Building its fixture beside a
+        scene deliberately placed OUTSIDE scratch space would make the case measure an
+        ordinary directory, which every revision handles — passing everywhere while the
+        defect it names went unmeasured."""
+        source = (HERE / "hostile_corpus.py").read_text()
+        self.assertIn('self.fixture = Path(tempfile.mkdtemp(prefix="hostile-k1-"))',
+                      source)
+
     def test_the_reconstruction_shas_are_real_commits(self):
         """A revision reconstructed from a SHA nobody can resolve is a quotation."""
         for revision, spec in hc.ENGINES.items():

@@ -498,11 +498,20 @@ MUTATIONS = [
         "M60", "framework/scripts/hostile_corpus.py",
         '    mutating = [r for r in rows\n'
         '                if r.get("mutating") and not r.get("positive_control")\n'
-        '                and r["observed"] != SKIP]',
+        '                and r["observed"] != SKIP\n'
+        '                and r["id"] not in confounded]',
         '    mutating = [r for r in rows if r.get("mutating") and r["observed"] != SKIP]',
         ("framework/scripts/test_runtime_diagnostics.py",),
         "the positive floor is counted as bypasses again, so the corpus reports a "
         "revision as worse the more controls it is given"),
+    Mutation(
+        "M61", "framework/scripts/hostile_corpus.py",
+        '    confounded = [] if scene_recognised else [r["id"] for r in rows]',
+        '    confounded = []',
+        ("framework/scripts/test_runtime_diagnostics.py",),
+        "an engine that reads the whole scene as scratch is scored anyway, so a "
+        "location defect is attributed to every family the corpus names and the "
+        "revision that fixed the location is credited with closing all of them"),
 ]
 
 
