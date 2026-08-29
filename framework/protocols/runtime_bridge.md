@@ -450,6 +450,92 @@ Repository membership now beats the scratch prefix, for every effect kind. The e
 exists so that work *outside* the tree is not this guard's business; inside the tree is
 exactly its business.
 
+🔴 **Revision 9 correction: that repair was incomplete, and the committed corpus found it.**
+The comparison against the root was *lexical*, and on macOS `git rev-parse --show-toplevel`
+answers `/private/var/folders/…` while the cwd a runtime sends is `/var/folders/…` — the
+same directory through the `/private` symlink, and not the same string. So the fixture
+repository under `TMPDIR` was **still writable**, and revision 8's candidate says the case
+was closed. Case `K1-repo-under-tmp` in `framework/scripts/hostile_corpus.py` measures
+`ALLOW` against the reconstructed revision-8 engine and `DENY` against revision 9. This is
+what a corpus that runs against *both* engines is for: the claim and the object disagreed,
+and only re-running the old object could say so.
+
+### 4.7 · The confinement unit is the REPOSITORY, not the worktree — revision 9
+
+Revision 8 knew two places: inside `--show-toplevel`, and everywhere else. This repository
+runs eleven worktrees off one `.git`, so "everywhere else" contained every other actor's
+working tree, the shared checkout carrying canonical `main`, and the shared git directory
+itself. All of them classified `OUTSIDE_REPO`, where `SHELL_DEFAULT` grants content
+writes. Measured from an actor worktree on 2026-08-29, **all ALLOWED**:
+
+```text
+echo x > <WORKTREE_B>/framework/pwned.md          rewrite a peer's source
+rm -rf <WORKTREE_B>/framework                     delete a peer's work
+mv <WORKTREE_B>/CLAUDE.md /tmp/stolen             take a peer's file away
+echo x > <REPO>/CLAUDE.md                         rewrite the shared checkout
+echo x > <GIT_COMMON_DIR>/config                  rewrite everyone's git config
+echo x > <GIT_COMMON_DIR>/hooks/pre-commit        install a hook in every worktree
+echo x > <GIT_COMMON_DIR>/refs/heads/main         move canonical main, with no git command
+echo x > <GIT_COMMON_DIR>/worktrees/*/HEAD        move a peer's checkout under them
+git -C <WORKTREE_B> commit -m x <path>            the same acts, with better tooling
+```
+
+`framework/scripts/repo_topology.py` derives the unit from git — `--show-toplevel`,
+`--git-common-dir`, `worktree list --porcelain` — and **repository identity is the common
+directory**, not the toplevel. Two worktrees of one repository have two toplevels and one
+object store; keying identity on the toplevel says two actors worked in two repositories,
+which is the fact that would have to be true for a cross-worktree write to be nobody's
+business.
+
+| Scope | Ordinary actor write | Read |
+|---|---|---|
+| `INSIDE_REPO` — the assigned worktree | the authority ladder, unchanged | granted |
+| `SCRATCH` | granted from `SCRATCH_WRITE` up | granted |
+| `OUTSIDE_REPO` — elsewhere, non-scratch | granted from `SCRATCH_WRITE` up | granted |
+| `PEER_WORKTREE` | 🔴 **no authority class** | granted |
+| `SHARED_CHECKOUT` | 🔴 **no authority class** | granted |
+| `GIT_COMMON_DIR` | 🔴 **no authority class** | granted |
+| `UNNAMED` · `UNDERIVABLE` | refused ahead of the table | — |
+
+The three confined scopes are absent from every grant **by omission**, and an omission can
+be undone by adding a grant with no error anywhere — so
+`test_confinement_and_delegation.py::NoAuthorityReachesAcrossTheRepository` asserts the
+property over `AUTHORITIES` itself, and mutation `M49` is the edit that adds the grant.
+
+Two things this deliberately does **not** do. It does not confine READS: reading a peer's
+branch is how review works here, reading `.git/config` is how the topology is derived, and
+a read confinement would break the function this laboratory runs on. And it does not
+promote the confined scopes at a higher rung — reaching one is a *separate authority
+surface*, not the top of this ladder, so an actor that earns `WORKTREE_WRITE` earns nothing
+across the repository.
+
+**Longest prefix wins**, and that is load-bearing rather than tidy: this repository nests
+its worktrees at `<REPO>/.claude/worktrees/<name>`, so a peer path is *also* under the
+shared checkout, and `<REPO>/.git/config` is under it too. A first-match scan over an
+unordered root list answers whichever it happened to try first.
+
+Each path is classified twice — as written, and as `realpath` resolves it — and the
+**stricter** answer is returned, which is what stops a symlink planted inside the assigned
+worktree from laundering a write into a peer or into the common dir.
+
+### 4.8 · Delegation is an effect — revision 9
+
+`codex exec`, `codex exec --full-auto` and `claude -p` were ordinary programs to revisions
+1–8: they name no path and write nothing themselves, so every write rule read them as
+harmless. What they do is hand the work to a runtime with its own permissions, its own
+hooks — or none — whose effects land in this repository without passing this policy.
+
+`DELEGATE` is now a kind in the effect vocabulary, and **no authority class grants it**. It
+is a kind of its own rather than `UNKNOWN_EFFECT` because the two want opposite repairs: an
+unknown effect wants the derivation taught, a delegation wants the delegate's own write
+floor demonstrated before the handoff is allowed at all.
+
+The membership test is on the **binary**, and the exemptions are what is enumerated —
+`--version`, `--help`, `app-server`, `mcp`, `plugin` and the other read-only subcommands.
+A subcommand shipped after this table was written therefore fails closed. That direction is
+the point: `DELEGATE_GENERALIZATION` — an arbitrary agent binary this list has never heard
+of — remains **`P0_DEBT`**, and Plugin CC companion invocation remains `NOT_YET_TESTED`.
+
 ## 5 · The hook state machine — what is unverified, and the one experiment that settles it
 
 `CONFIGURED != DEMONSTRATED` is the unresolved property of this whole protocol, and it is
@@ -521,6 +607,74 @@ is why a peer's probe did not fire — that remains an inference from a flag's e
 naming a cause we have not measured would repeat the withdrawn `matcher` claim in a new
 place.
 
+### 5.0.1 · 🔴 Revision 9 corrects a diagnostic that gave two causes one name
+
+`codex_hook_state.py` asked the runtime and reported `NOT_LOADED`. That value was returned
+for **both** "there is no config layer here" and "there is one and the runtime declined to
+load it" — two conditions needing opposite repairs, one wanting a file placed and the other
+wanting a human decision. The runtime cannot separate them: an empty `hooks/list` with
+empty `warnings` and empty `errors` is what both produce.
+
+So the discrimination does not come from asking the runtime harder. It comes from a
+**second, independent question the filesystem answers for free** — is there a config layer
+here, is it readable, does it name hooks, and is it on the layer this runtime actually
+resolves — crossed with what the runtime loaded:
+
+```text
+config                        hooks/list     diagnostic                  repair
+───────────────────────────   ───────────    ─────────────────────────   ──────────────────
+no config file anywhere       []             CONFIG_ABSENT               place a config layer
+a file that cannot be read    []             CONFIG_INVALID              fix the file
+files, none naming hooks      []             HOOKS_EMPTY                 declare the hook
+hooks named only OFF the      []             CONFIG_OFF_RESOLUTION_PATH  move it to a layer
+  resolution path                                                          that is read
+hooks named ON the path       []             TRUST_BLOCKED               a human decision
+any                           [h] untrusted  HOOKS_LOADED_UNTRUSTED      the per-hook review
+any                           [h] trusted    HOOKS_LOADED_TRUSTED        nothing — and STILL
+                                                                           not FIRING
+any                           no answer      UNDERIVABLE                 app-server did not run
+```
+
+🔴 **`CONFIG_OFF_RESOLUTION_PATH` was found by writing the repair, and its absence was the
+same defect one level in.** The first draft of this table had five states and classified
+Plan's own worktree `TRUST_BLOCKED` — a `.codex` naming five hooks, `hooks/list` returning
+zero, and trust is a plausible story for that pair. It is the wrong one: § 5.0 measured
+that codex-cli 0.147.0 resolves the project layer to the *shared checkout*, so a linked
+worktree's own `.codex` is never read and **no trust decision was ever withheld, because
+nothing was ever offered for review.**
+
+`FIRING` and `ENFORCING` are returned as `NOT_TESTED` from **every** branch. `hooks/list`
+reports what is *loaded*; loaded is not trusted, trusted is not fired, and fired is not
+enforcing.
+
+### 5.0.2 · 🔴 WITHDRAWN: that the repair requires canonical `main`
+
+Revision 8's candidate recorded that placing the registration "requires a file to reach the
+branch checked out at the SHARED CHECKOUT, which is canonical main and is protected", and
+classified that as `TRUE_HUMAN_REQUIRED`. **That claim is withdrawn.** It confused *this
+repository's* `.codex` being tracked on `main` with the runtime requiring a tracked file,
+and the runtime requires no such thing: the config layer is resolved from a **path**, and
+nothing about that path has to be under version control.
+
+Four routes exist, and this revision **selects none of them** — the choice is a policy
+question about what the laboratory wants to be reviewable, not a fact anyone can measure:
+
+| Route | Versioned | Reviewable | Portable | Machine-local | Ungated | Fresh-clone reproducible |
+|---|---|---|---|---|---|---|
+| **A** untracked/gitignored `.codex` at the shared checkout | no | no | no | yes | **yes** | no |
+| **B** user-level `~/.codex/config.toml` | no | no | no | yes | **yes** | no |
+| **C** managed `CODEX_HOME` | no | by whoever manages it | yes | no | depends | no |
+| **D** tracked `.codex` on `main` | **yes** | **yes** | **yes** | no | no | **yes** |
+
+Only **D** touches the protected branch, and only **D** survives a fresh clone. A, B and C
+are all reachable without any write to `main`, which is what refutes the necessity claim.
+
+The correct classification is therefore **`ARCHITECTURE_DECISION_REQUIRED`**, not
+`TRUE_HUMAN_REQUIRED`: selecting among policy alternatives with different governance
+properties is the operator's call, while nothing about *executing* the chosen one is
+non-delegable. The one item that remains genuinely non-delegable is § 5.1 — the
+spend-bearing session probe.
+
 ### 5.1 · The ONE operator action, and the ONE test
 
 Everything reachable without an operator is done. What remains is a single interactive act
@@ -551,6 +705,30 @@ control. What holds during a read-only Codex pilot is the runtime sandbox — th
 2026-08-28 session ran under `sandbox_policy: read-only`, `permission_profile.file_system:
 restricted/read`, `network: restricted`, `approval_policy: never` — and that is a Codex
 property, not a LEGEND one.
+
+### 5.2 · 🔴 The engine is not the same in every worktree — `GUARD_REVISION_UNIFORM = NO`
+
+A candidate branch changes the guard in the worktree that has it checked out, and in no
+other. Nothing in this repository propagates a guard across worktrees, and nothing should:
+that would be the cross-worktree write § 4.7 exists to forbid, performed by the tool that
+measures the forbidding. `framework/scripts/guard_revision.py` reports the fact, read-only,
+measured on 2026-08-29:
+
+```text
+11 worktrees   1 carries the revision-9 engine   10 carry the legacy single-file guard
+GUARD_REVISION_UNIFORM = NO
+```
+
+The generation is derived from what the installed code **does** — whether the policy
+imports the topology — and not from a version constant, so a worktree cannot report a
+generation it does not structurally have. `UNDERIVABLE` is a third answer and not a synonym
+for `NO`: a worktree whose guard could not be read is a failure to measure, and reporting
+that as "not uniform" would make an unreadable worktree look like a merely stale one.
+
+**A repository-wide write floor may not be claimed while this is `NO`**, and no candidate
+branch can make it `YES` — only a merge can. Every ratio in § 4 is therefore a statement
+about *this* engine, and the nine other actors are running the policy their own branch
+carries.
 
 ## 6 · Version-bound, like every runtime guarantee in this repository
 

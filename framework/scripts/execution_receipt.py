@@ -59,6 +59,22 @@ REQUIRED: Tuple[str, ...] = (
     "worktree", "branch", "head_before", "head_after", "authority", "attestation",
     "binding_fingerprint", "normalized_action",
     "predicted_effect", "authorized_effect", "observed_effect", "result",
+    # ── revision 9 ──
+    #
+    # 🔴 `worktree` alone cannot answer "was this within the actor's own tree?", and
+    # that is now a question the policy decides on. Two worktrees of one repository
+    # have two toplevels and one object store, so a receipt keyed on the toplevel
+    # records two actors as having worked in two repositories — which is the fact that
+    # would have to be true for a cross-worktree write to be nobody's business.
+    "repository_id",
+    # The base relative targets were resolved against. Without it, `normalized_action`
+    # is a command with no meaning: `echo x > framework/probe.md` is a repository write
+    # or a scratch write depending entirely on this value.
+    "effective_workdir",
+    # WHICH policy judged it. `GUARD_REVISION_UNIFORM` is NO across this repository, so
+    # a receipt that does not name its engine cannot be compared with one from another
+    # worktree — the two were produced by different rules.
+    "guard_generation", "guard_policy_hash",
 )
 
 VALID_ATTESTATIONS = frozenset({ea.ATTESTED, ea.UNATTESTED,
@@ -117,6 +133,15 @@ def build(binding: ea.Binding, report: Dict[str, object],
         "head_after": report.get("head_after"),
         "result": report.get("result"),
         "match": report.get("match"),
+        # 🔴 Read from the report, and UNDERIVABLE when the report does not carry them —
+        # never defaulted to this process's own topology. A receipt is a record of what
+        # judged THAT command; filling a gap from the recorder's environment would make
+        # every receipt describe the machine that read it.
+        "repository_id": report.get("repository_id", ea.UNDERIVABLE),
+        "effective_workdir": report.get("effective_workdir", ea.UNDERIVABLE),
+        "target_scope": report.get("target_scope", ea.UNDERIVABLE),
+        "guard_generation": report.get("guard_generation", ea.UNDERIVABLE),
+        "guard_policy_hash": report.get("guard_policy_hash", ea.UNDERIVABLE),
         "tool_call_id": tool_call_id or ea.UNDERIVABLE,
         "transcript": transcript or ea.UNDERIVABLE,
         "previous": previous or "",

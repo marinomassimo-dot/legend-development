@@ -43,9 +43,67 @@ def report(**overrides) -> dict:
         "head_after": "a" * 40,
         "result": "WRITE_RESULT_VALID",
         "match": em.MATCH,
+        # ── revision 9 ──
+        #
+        # 🔴 A COMPLETE report carries these, and the fixture supplies them because the
+        # suite's job is to test the receipt and not to freeze the report's shape at
+        # revision 8. `test_a_receipt_missing_any_required_field_is_invalid` iterates
+        # `er.REQUIRED`, so these four are covered in the missing direction the moment
+        # they were declared required — which is why adding them here does not weaken
+        # anything: the negative arm is generated from the table, not written by hand.
+        "repository_id": "/repo/.git",
+        "effective_workdir": "/repo/wt",
+        "target_scope": em.INSIDE_REPO,
+        "guard_generation": "REV9",
+        "guard_policy_hash": "0" * 16,
     }
     base.update(overrides)
     return base
+
+
+class AReceiptNamesTheBasisOfItsOwnVerdict(unittest.TestCase):
+    """🔴 Revision 9: which repository, which base, which policy.
+
+    A receipt that omits these is not merely less informative — it is not comparable
+    with any other receipt. `GUARD_REVISION_UNIFORM` is NO across this repository, so
+    two receipts from two worktrees were produced by two different rule sets, and a
+    reader who assumes otherwise is comparing verdicts that do not share a basis.
+    """
+
+    def test_the_repository_the_worktree_and_the_engine_are_all_recorded(self) -> None:
+        receipt = er.build(binding(), report())
+        for field in ("repository_id", "effective_workdir",
+                      "guard_generation", "guard_policy_hash"):
+            with self.subTest(field=field):
+                self.assertIn(field, er.REQUIRED)
+                self.assertTrue(receipt[field])
+                self.assertNotEqual(receipt[field], ea.UNDERIVABLE)
+
+    def test_repository_identity_is_not_the_worktree(self) -> None:
+        """Two worktrees of one repository share an object store and not a toplevel."""
+        receipt = er.build(binding(), report())
+        self.assertNotEqual(receipt["repository_id"], receipt["worktree"])
+
+    def test_an_absent_field_is_never_filled_from_the_recorders_environment(self) -> None:
+        """🔴 A gap becomes UNDERIVABLE, never this machine's own topology — otherwise
+        every receipt describes the process that read it rather than the run."""
+        thin = {k: v for k, v in report().items()
+                if k not in ("repository_id", "effective_workdir", "guard_generation",
+                             "guard_policy_hash")}
+        receipt = er.build(binding(), thin)
+        for field in ("repository_id", "effective_workdir", "guard_generation",
+                      "guard_policy_hash"):
+            with self.subTest(field=field):
+                self.assertEqual(receipt[field], ea.UNDERIVABLE)
+        ok, problems = er.validate(receipt)
+        self.assertFalse(ok, "an unbound receipt must not validate")
+        self.assertTrue(problems)
+
+    def test_the_effective_workdir_is_what_gives_the_action_a_meaning(self) -> None:
+        """`echo x > framework/probe.md` is a repository write or a scratch write
+        depending entirely on this field, so it may not be UNDERIVABLE."""
+        self.assertNotIn("effective_workdir", er.MAY_BE_UNDERIVABLE)
+        self.assertNotIn("repository_id", er.MAY_BE_UNDERIVABLE)
 
 
 class AReceiptWithoutProvenanceProvesNothing(unittest.TestCase):

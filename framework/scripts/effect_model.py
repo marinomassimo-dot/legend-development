@@ -73,11 +73,18 @@ REF_MUTATION = "REF_MUTATION"
 NETWORK_WRITE = "NETWORK_WRITE"
 ARCHIVE_EXTRACT = "ARCHIVE_EXTRACT"
 PERMISSION_CHANGE = "PERMISSION_CHANGE"
+#: 🔴 Handing the work to ANOTHER agent runtime — `codex exec`, `claude -p`, a companion
+#: invocation. Its own effects happen in a process this guard never sees, so the only
+#: honest derivation is "an unbounded effect set behind a name", and the only honest
+#: authorisation is none. It is a kind of its own rather than UNKNOWN_EFFECT because the
+#: two need different repairs: an unknown effect wants the derivation taught, a delegation
+#: wants the DELEGATE's own write floor demonstrated before the handoff can be allowed.
+DELEGATE = "DELEGATE"
 UNKNOWN_EFFECT = "UNKNOWN_EFFECT"
 
 KINDS: FrozenSet[str] = frozenset({
     READ, WRITE, DELETE, RENAME, STAGE, COMMIT, REF_MUTATION,
-    NETWORK_WRITE, ARCHIVE_EXTRACT, PERMISSION_CHANGE, UNKNOWN_EFFECT,
+    NETWORK_WRITE, ARCHIVE_EXTRACT, PERMISSION_CHANGE, DELEGATE, UNKNOWN_EFFECT,
 })
 
 #: Every kind but READ changes state somewhere. UNKNOWN_EFFECT is in here deliberately:
@@ -86,9 +93,25 @@ MUTATING: FrozenSet[str] = frozenset(KINDS - {READ})
 
 # ── target scopes ───────────────────────────────────────────────────────────────────
 
+#: The ASSIGNED worktree — the one this actor was given. The name is kept from revision
+#: 8 because every rule, suite and receipt already speaks it; what changed in revision 9
+#: is that it no longer means "the repository", which is now three further scopes wide.
 INSIDE_REPO = "INSIDE_REPO"
+#: Outside this repository altogether, and not scratch.
 OUTSIDE_REPO = "OUTSIDE_REPO"
 SCRATCH = "SCRATCH"
+
+#: 🔴 The three subdivisions revision 8 collapsed into OUTSIDE_REPO, where SHELL_DEFAULT
+#: grants content writes. Measured on 2026-08-29: from an actor worktree, rewriting a
+#: peer's sources, deleting a peer's directories, rewriting the shared checkout's
+#: `CLAUDE.md`, and writing `.git/config`, `.git/hooks/pre-commit`, `.git/refs/heads/main`
+#: and `.git/worktrees/*/HEAD` were ALL allowed. They are separate scopes rather than one
+#: because they are separate authority surfaces: a governed operation might one day be
+#: granted the shared checkout without ever being granted the common dir.
+PEER_WORKTREE = "PEER_WORKTREE"
+SHARED_CHECKOUT = "SHARED_CHECKOUT"
+GIT_COMMON_DIR = "GIT_COMMON_DIR"
+
 #: The command performs the effect but does not name what it acts on.
 UNNAMED = "UNNAMED"
 #: The command names a target that cannot be resolved without running it.
@@ -97,12 +120,29 @@ UNDERIVABLE = "UNDERIVABLE"
 NONLOCAL = "NONLOCAL"
 
 SCOPES: FrozenSet[str] = frozenset({
-    INSIDE_REPO, OUTSIDE_REPO, SCRATCH, UNNAMED, UNDERIVABLE, NONLOCAL,
+    INSIDE_REPO, OUTSIDE_REPO, SCRATCH, PEER_WORKTREE, SHARED_CHECKOUT,
+    GIT_COMMON_DIR, UNNAMED, UNDERIVABLE, NONLOCAL,
 })
+
+#: 🔴 The scopes a shared object store makes this guard responsible for, beyond the
+#: worktree it runs in. `test_effect_model.py` asserts that NO authority grants ANY
+#: mutating kind in any of them, which is the property that survives someone adding a
+#: seventh authority class without reading this comment.
+CONFINED: FrozenSet[str] = frozenset({PEER_WORKTREE, SHARED_CHECKOUT, GIT_COMMON_DIR})
 
 #: Scopes in which a mutating effect can be reviewed, because a reader of the command
 #: can say what it touched. The complement is refused by every authority.
-NAMEABLE: FrozenSet[str] = frozenset({INSIDE_REPO, OUTSIDE_REPO, SCRATCH, NONLOCAL})
+#:
+#: The confined scopes ARE nameable — a reader can see exactly which peer file is meant —
+#: so they belong here. What stops them is that no authority grants them, which is a
+#: different sentence and produces a different denial: "granted by no authority class"
+#: rather than "a mutation whose target is UNNAMED". Putting them in the unnameable set
+#: instead would have been one line shorter and would have told the reader the guard
+#: could not see the path, which is false and unactionable.
+NAMEABLE: FrozenSet[str] = frozenset({
+    INSIDE_REPO, OUTSIDE_REPO, SCRATCH, NONLOCAL,
+    PEER_WORKTREE, SHARED_CHECKOUT, GIT_COMMON_DIR,
+})
 
 
 class Effect:
@@ -243,7 +283,12 @@ class Authority:
         return f"Authority({self.name})"
 
 
-_EVERYWHERE = {INSIDE_REPO, OUTSIDE_REPO, SCRATCH, NONLOCAL}
+#: 🔴 READ is granted everywhere INCLUDING the confined scopes, and that is deliberate.
+#: Reading a peer's branch is how Mirror reviews, reading `.git/config` is how the
+#: topology is derived, and reading the shared checkout is how anyone learns what `main`
+#: says. The confinement is about MUTATION; a read confinement would break the review
+#: function this laboratory runs on, and would be the kind of rule that gets turned off.
+_EVERYWHERE = {INSIDE_REPO, OUTSIDE_REPO, SCRATCH, NONLOCAL} | set(CONFINED)
 _CONTENT = (WRITE, DELETE, RENAME, ARCHIVE_EXTRACT)
 
 
@@ -276,10 +321,18 @@ _L4 = {kind: {INSIDE_REPO} for kind in _CONTENT}
 _L5 = {REF_MUTATION: {INSIDE_REPO}, PERMISSION_CHANGE: {INSIDE_REPO}}
 _L6 = {NETWORK_WRITE: {NONLOCAL}, REF_MUTATION: {NONLOCAL}}
 
-#: 🔴 No authority in this table grants UNKNOWN_EFFECT, and none grants any kind at
-#: UNNAMED or UNDERIVABLE scope. Both are asserted over the table by
+#: 🔴 No authority in this table grants UNKNOWN_EFFECT or DELEGATE, none grants any kind
+#: at UNNAMED or UNDERIVABLE scope, and none grants any MUTATING kind at PEER_WORKTREE,
+#: SHARED_CHECKOUT or GIT_COMMON_DIR. All four are asserted over the table by
 #: `test_effect_model.py` rather than trusted to review: a seventh authority added
-#: later inherits the property or fails the suite.
+#: later inherits the properties or fails the suite.
+#:
+#: DELEGATE and the confined scopes are absent by OMISSION, not by an exclusion rule,
+#: and that is worth naming because the two fail differently. An exclusion checked
+#: before the grants — as UNKNOWN_EFFECT is — cannot be undone by adding a grant. An
+#: omission can: someone writes `_L7 = {DELEGATE: ...}` and the confinement is gone with
+#: no error anywhere. The suite is what closes that, which is why it asserts the
+#: property over `AUTHORITIES` itself rather than over a list of expected denials.
 AUTHORITIES: Dict[str, Authority] = {
     "READ_ONLY": Authority(
         "READ_ONLY", _ladder(_L1),

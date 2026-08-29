@@ -273,13 +273,20 @@ def _json_object_at(text: str, start: int) -> "tuple[object, int]":
     raise Undecidable("a code-mode shell call with an unbalanced argument")
 
 
-def code_mode_commands(body: str) -> "list[str]":
-    """Every shell command a code-mode program invokes.
+def code_mode_commands(body: str) -> "list[tuple[str, object]]":
+    """Every shell command a code-mode program invokes, each with ITS OWN argument object.
 
     An `exec_command` call whose argument cannot be read is `Undecidable`, not empty: a
     body the guard cannot parse is a body it cannot clear.
+
+    🔴 The argument object travels back with the command because the `workdir` is IN it.
+    The recorded session that motivated code-mode support called
+    `tools.exec_command({"cmd": …, "workdir": …})` twenty times, each with its own
+    directory — so a code-mode program is exactly where one payload carries several
+    execution bases, and judging them all against the session's `cwd` is the revision-8
+    mistake with more than one chance to be wrong per call.
     """
-    commands: "list[str]" = []
+    commands: "list[tuple[str, object]]" = []
     for match in CODE_MODE_CALL.finditer(body):
         cursor = match.end()
         while cursor < len(body) and body[cursor] in " \t\n":
@@ -290,11 +297,73 @@ def code_mode_commands(body: str) -> "list[str]":
                 "it cannot clear a shell call it cannot see"
             )
         argument, _ = _json_object_at(body, cursor)
-        commands.append(command_text(argument))
+        commands.append((command_text(argument), argument))
     return commands
 
 
 # ── decision ───────────────────────────────────────────────────────────────────────
+
+def derive_workdir(payload: dict, tool_input: object) -> "str":
+    """The directory the command will ACTUALLY run in. Relative targets resolve here.
+
+    🔴 Revision 8 read `tool_input.workdir` only to declare it a known key, and anchored
+    every relative path to the payload's `cwd`. Codex's `exec_command` takes a `workdir`
+    and honours it, so the two differ routinely — and the divergence was measured on
+    2026-08-29 to falsify target prediction in BOTH directions:
+
+    ```text
+    cwd=<REPO>  workdir=<REPO>   echo x > framework/probe.md   DENY   correct
+    cwd=/tmp    workdir=<REPO>   echo x > framework/probe.md   ALLOW  the repository write
+                                                                     the guard exists to stop
+    cwd=<REPO>  workdir=/tmp     echo x > framework/probe.md   DENY   a scratch write refused
+    ```
+
+    The first wrong answer is a bypass; the second is a guard that blocks ordinary work,
+    which is the failure that gets guards turned off. One rule fixes both:
+
+        EFFECTIVE_WORKDIR = tool_input.workdir, resolved, when it is present and usable
+                            else the payload's cwd
+
+    A `workdir` that is present but NOT usable — not a string, empty, expanding, or not
+    an existing directory — is not ignored and is not guessed at. The command will run
+    somewhere this guard cannot name, so no relative target it carries can be placed,
+    and the answer is `Undecidable`, which denies. Ignoring it would silently restore
+    exactly the revision-8 behaviour for the one input designed to defeat it.
+    """
+    cwd = payload.get("cwd")
+    cwd = cwd if isinstance(cwd, str) and cwd else None
+
+    workdir = tool_input.get("workdir") if isinstance(tool_input, dict) else None
+    if workdir is None:
+        return cwd or ""
+    if not isinstance(workdir, str) or not workdir.strip():
+        raise Undecidable(
+            "`tool_input.workdir` is present but is not a usable directory "
+            f"({workdir!r}), so the directory this command runs in — and therefore what "
+            "its relative paths mean — is not derivable.")
+    if any(marker in workdir for marker in ("$", "`", "*", "?")):
+        raise Undecidable(
+            f"`tool_input.workdir` is {workdir!r}, which needs a shell to resolve. The "
+            "execution directory has to be known before a relative target can be placed "
+            "in the repository.")
+
+    # A relative workdir is relative to the session's cwd, which is the only anchor there
+    # is. Without one, a relative workdir names nothing.
+    if not os.path.isabs(workdir):
+        if not cwd:
+            raise Undecidable(
+                f"`tool_input.workdir` is the relative path {workdir!r} and the payload "
+                "carries no `cwd` to resolve it against.")
+        workdir = os.path.join(cwd, workdir)
+
+    resolved = os.path.realpath(workdir)
+    if not os.path.isdir(resolved):
+        raise Undecidable(
+            f"`tool_input.workdir` names {workdir!r}, which is not an existing "
+            "directory. A command whose execution directory does not exist has no "
+            "derivable target for any relative path it carries.")
+    return resolved
+
 
 def repo_root_of(cwd: object) -> "str | None":
     """The working-tree root containing `cwd`, or None when it is not derivable.
@@ -378,22 +447,28 @@ def decide(payload: object) -> "dict | None":
             "variable that removes one."
         )
 
-    cwd = payload.get("cwd")
-    cwd = cwd if isinstance(cwd, str) else None
-    root = repo_root_of(cwd)
     tool_input = payload.get("tool_input")
 
+    # 🔴 The base every relative target is placed against, and the ONE value that must be
+    # right for the whole prediction to mean anything. `PREDICTED_TARGET_BASE ==
+    # ACTUAL_EXECUTION_BASE` is the invariant; `derive_workdir` establishes it or denies.
+    #
+    # `(command, its own tool_input)` pairs: under code mode each inner call carries its
+    # own `workdir`, so the base is per-command and not per-payload.
     if tool_name in CODE_MODE_TOOLS:
-        commands = code_mode_commands(program_text(tool_input))
+        calls = code_mode_commands(program_text(tool_input))
     elif tool_name in PATCH_TOOLS:
         # An envelope is policed as the `apply_patch` shell form, which the policy already
         # knows how to read: it names its own targets.
-        commands = ["apply_patch <<'PATCH'\n" + program_text(tool_input) + "\nPATCH"]
+        calls = [("apply_patch <<'PATCH'\n" + program_text(tool_input) + "\nPATCH",
+                  tool_input)]
     else:
-        commands = [command_text(tool_input)]
+        calls = [(command_text(tool_input), tool_input)]
 
-    for command in commands:
-        reason = guard_policy.verdict(command, cwd=cwd, repo_root=root)
+    for command, carrier in calls:
+        workdir = derive_workdir(payload, carrier)
+        root = repo_root_of(workdir)
+        reason = guard_policy.verdict(command, cwd=workdir or None, repo_root=root)
         if reason:
             return _deny(reason)
     return None

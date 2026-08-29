@@ -59,6 +59,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 import time
@@ -70,6 +71,57 @@ NOT_LOADED = "NOT_LOADED"        # the runtime sees no hook here at all
 LOADED_UNTRUSTED = "LOADED_UNTRUSTED"   # present, awaiting the per-hook review
 LOADED_TRUSTED = "LOADED_TRUSTED"       # present and reviewed; still not proof it FIRES
 UNDERIVABLE = "UNDERIVABLE"      # the app-server could not be asked
+
+# ── revision 9: the states above could not tell two causes apart ───────────────────
+#
+# 🔴 `NOT_LOADED` was returned for BOTH "there is no config here" and "there is a config
+# and the runtime declined to load it". Those need opposite repairs — the first wants a
+# file placed, the second wants a trust decision — and a diagnostic that gives them one
+# name sends the reader to fix the wrong thing. The runtime cannot separate them: an
+# empty `hooks/list` with empty `warnings` and empty `errors` is what BOTH produce.
+#
+# So the discrimination cannot come from the runtime, and asking it harder was the wrong
+# instinct. It comes from asking a SECOND, independent question that the filesystem can
+# answer for free: is there a config layer here at all, and does it name hooks? The
+# cross-product of "what the config says" and "what the runtime loaded" is what
+# separates the causes.
+
+CONFIG_ABSENT = "CONFIG_ABSENT"        # no config layer discoverable for this cwd
+CONFIG_INVALID = "CONFIG_INVALID"      # a config exists and cannot be read
+CONFIG_DISCOVERED = "CONFIG_DISCOVERED"  # a config on the path names hooks, none loaded
+HOOKS_EMPTY = "HOOKS_EMPTY"            # a config exists, is readable, declares no hooks
+HOOKS_LOADED_UNTRUSTED = "HOOKS_LOADED_UNTRUSTED"
+HOOKS_LOADED_TRUSTED = "HOOKS_LOADED_TRUSTED"
+TRUST_BLOCKED = "TRUST_BLOCKED"        # a config ON THE PATH names hooks, none loaded
+
+#: 🔴 A fifth cause, and writing the first draft of this table is what found it.
+#:
+#: That draft called this repository's own worktree `TRUST_BLOCKED`: a `.codex` naming
+#: five hooks, and `hooks/list` returning zero. Trust is a plausible story for that pair
+#: and it is the WRONG one — the measured cause is in this module's own docstring.
+#: codex-cli 0.147.0 resolves the project config layer through git to the SHARED
+#: CHECKOUT, so a linked worktree's own `.codex` is never read, and no trust decision
+#: was ever withheld because nothing was ever offered for review.
+#:
+#: The two need opposite repairs — this one wants a file moved, `TRUST_BLOCKED` wants a
+#: human decision — which is the exact failure the P0 brief names: different causes
+#: requiring different repairs must not collapse into one diagnostic state. The first
+#: draft of the repair reproduced the defect it was repairing, one level in.
+CONFIG_OFF_RESOLUTION_PATH = "CONFIG_OFF_RESOLUTION_PATH"
+
+#: The revision-9 vocabulary. `state_for` still returns the revision-8 value so nothing
+#: downstream breaks; `diagnose` returns one of these, and the two are reported side by
+#: side so a reader can see which distinction is new.
+DIAGNOSTIC_STATES = (
+    CONFIG_ABSENT, CONFIG_INVALID, CONFIG_DISCOVERED, CONFIG_OFF_RESOLUTION_PATH,
+    HOOKS_EMPTY, HOOKS_LOADED_UNTRUSTED, HOOKS_LOADED_TRUSTED, TRUST_BLOCKED,
+    UNDERIVABLE,
+)
+
+#: 🔴 Never derivable from `hooks/list`. A hook that is loaded and trusted has still not
+#: been shown to RUN, and one that has run has still not been shown to REFUSE anything.
+#: Only a session probe reaches these, and that probe is a spend under Annex J.4.
+NOT_DERIVABLE_WITHOUT_A_SESSION = ("FIRING", "ENFORCING")
 
 
 def hooks_list(cwd: str, env: Optional[dict] = None,
@@ -142,6 +194,149 @@ def state_for(cwd: str) -> Tuple[str, List[dict], str]:
     if all(hook.get("trustStatus") == "trusted" for hook in hooks):
         return LOADED_TRUSTED, hooks, stderr
     return LOADED_UNTRUSTED, hooks, stderr
+
+
+# ── the second, independent question: what does the CONFIG say? ────────────────────
+
+#: Where a Codex project config layer can live, in the order the runtime resolves them.
+#: The SHARED CHECKOUT entry is not an extra guess: codex-cli 0.147.0 resolves the
+#: project layer through git to the shared checkout, which is the measured finding this
+#: module was written to record, so a worktree's own `.codex` is listed after it and
+#: reported separately rather than being treated as the answer.
+CONFIG_CANDIDATES = ("shared_checkout", "worktree", "user")
+
+#: A `[[hooks...]]` table, or a `hooks` key. Read textually rather than with a TOML
+#: parser: the standard library has `tomllib` only from 3.11, the guard has to run on
+#: whatever interpreter the runtime brings, and the question here is "does this file
+#: name hooks at all", not "what exactly do they say".
+HOOK_TABLE = re.compile(r"^\s*\[+\s*hooks\b|^\s*hooks\s*=", re.M)
+
+
+def config_layer(cwd: str) -> Dict[str, object]:
+    """Which config files exist for this cwd, and do they name hooks?
+
+    🔴 This is the half of the diagnostic the runtime cannot supply. `hooks/list`
+    returning `[]` is the same observation whether the cause is a missing file or a
+    withheld trust decision; the file's existence is what tells them apart, and it costs
+    a `stat`.
+    """
+    shared = common_checkout_of(cwd)
+    worktree = repo_root_of(cwd)
+    #: 🔴 Measured for codex-cli 0.147.0, with the positive controls in this module's
+    #: docstring, and version-bound: a linked worktree's own `.codex` is NOT read, the
+    #: shared checkout's is. When the worktree IS the shared checkout the same directory
+    #: is both, and it is on the path.
+    linked_worktree = bool(shared and worktree and Path(shared) != Path(worktree))
+
+    found: List[Dict[str, object]] = []
+    seen = set()
+    for name, base, on_path in (("shared_checkout", shared, True),
+                                ("worktree", worktree, not linked_worktree),
+                                ("user", os.path.expanduser("~"), True)):
+        if not base:
+            continue
+        path = Path(base) / ".codex" / "config.toml"
+        if str(path) in seen:
+            continue
+        seen.add(str(path))
+        if not path.is_file():
+            continue
+        entry: Dict[str, object] = {"layer": name, "path": str(path),
+                                    "on_resolution_path": on_path}
+        try:
+            text = path.read_text(encoding="utf-8", errors="replace")
+        except OSError as exc:
+            entry.update({"readable": False, "names_hooks": False, "detail": str(exc)})
+        else:
+            entry.update({"readable": True,
+                          "names_hooks": bool(HOOK_TABLE.search(text)), "detail": ""})
+        found.append(entry)
+
+    on_path = [e for e in found if e["on_resolution_path"]]
+    return {
+        "layers": found,
+        "linked_worktree": linked_worktree,
+        "on_path_names_hooks": any(e.get("names_hooks") for e in on_path),
+        "off_path_names_hooks": any(e.get("names_hooks") for e in found
+                                    if not e["on_resolution_path"]),
+        "any_unreadable": any(not e.get("readable") for e in found),
+    }
+
+
+def diagnose(cwd: str) -> Dict[str, object]:
+    """Cross the config layer with the runtime's answer, and name ONE cause.
+
+    The whole table, so the reasoning is inspectable rather than implied:
+
+    ```text
+    config                        hooks/list     diagnostic         repair
+    ───────────────────────────   ───────────    ────────────────   ──────────────────
+    no config file anywhere       []             CONFIG_ABSENT      place a config layer
+    a file that cannot be read    []             CONFIG_INVALID     fix the file
+    files, none naming hooks      []             HOOKS_EMPTY        declare the hook
+    hooks named only OFF the      []             CONFIG_OFF_        move the file to a
+      resolution path                            RESOLUTION_PATH      layer that is read
+    hooks named ON the path       []             TRUST_BLOCKED      a trust decision is
+                                                                      owed by a human
+    any                           [h] untrusted  HOOKS_LOADED_      the per-hook review
+                                                   UNTRUSTED
+    any                           [h] trusted    HOOKS_LOADED_      nothing; and still
+                                                   TRUSTED            not FIRING
+    any                           no answer      UNDERIVABLE        app-server did not run
+    ```
+
+    The last two rows of the "loaded" column are where the honesty is: neither says the
+    hook FIRES, and `firing`/`enforcing` are returned as `NOT_TESTED` from every branch
+    because no amount of `hooks/list` can reach them.
+    """
+    runtime_state, hooks, detail = state_for(cwd)
+    config = config_layer(cwd)
+
+    if runtime_state == UNDERIVABLE:
+        state = UNDERIVABLE
+    elif hooks:
+        state = (HOOKS_LOADED_TRUSTED if runtime_state == LOADED_TRUSTED
+                 else HOOKS_LOADED_UNTRUSTED)
+    elif config["any_unreadable"]:
+        state = CONFIG_INVALID
+    elif not config["layers"]:
+        state = CONFIG_ABSENT
+    elif config["on_path_names_hooks"]:
+        # A file the runtime DOES read, naming hooks, and none loaded. Trust is the
+        # remaining condition — the runtime does not say so, so the name records what
+        # was derived and `config` records the evidence it was derived from.
+        state = TRUST_BLOCKED
+    elif config["off_path_names_hooks"]:
+        state = CONFIG_OFF_RESOLUTION_PATH
+    else:
+        state = HOOKS_EMPTY
+
+    return {
+        "cwd": cwd,
+        "diagnostic_state": state,
+        "runtime_state": runtime_state,
+        "config": config,
+        "hooks": hooks,
+        "hook_sources": [h.get("sourcePath") or h.get("source") for h in hooks],
+        "trust_status": sorted({str(h.get("trustStatus")) for h in hooks}) or [],
+        "codex_version": codex_version(),
+        # 🔴 Both streams, always, and never only on the failure path. Revision 8
+        # returned stderr and then classified on two substrings that only its own
+        # failure messages contained, so on the success path the stream was carried and
+        # never read — which is the same as discarding it, with a longer signature.
+        "stderr": (detail or "").strip()[:1000],
+        "firing": "NOT_TESTED",
+        "enforcing": "NOT_TESTED",
+    }
+
+
+def codex_version() -> str:
+    try:
+        out = subprocess.run(["codex", "--version"], capture_output=True, text=True,
+                             timeout=15)
+    except (OSError, subprocess.SubprocessError) as exc:
+        return f"<underivable: {exc}>"
+    return (out.stdout or out.stderr).strip() or "<no version reported>"
 
 
 def repo_root_of(cwd: str) -> Optional[str]:

@@ -71,6 +71,7 @@ from typing import Iterable, List, Optional, Sequence, Tuple
 if str(Path(__file__).resolve().parent) not in sys.path:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
 import effect_model as em  # noqa: E402
+import repo_topology as rt  # noqa: E402
 
 # ── outcomes ───────────────────────────────────────────────────────────────────────
 
@@ -107,6 +108,7 @@ RULE_EFFECT = {
     "PERMISSION_CHANGE": em.PERMISSION_CHANGE,
     "REF_MUTATION": em.REF_MUTATION,
     "NETWORK_WRITE": em.NETWORK_WRITE,
+    "DELEGATE": em.DELEGATE,
     # Shapes whose effect is precisely what could not be derived.
     "OPAQUE_PROGRAM": em.UNKNOWN_EFFECT,
     "STDIN_SHELL": em.UNKNOWN_EFFECT,
@@ -186,6 +188,66 @@ INTERPRETERS = frozenset({"python", "python2", "python3", "perl", "ruby", "node"
 #: Interpreter flags whose value is a program body rather than a file.
 INLINE_PROGRAM_FLAGS = frozenset({"-c", "-e", "-E", "--eval", "--exec"})
 
+# ── delegation to another agent runtime ────────────────────────────────────────────
+
+#: Binaries that can start an agent session which will act on this repository on its own.
+#: Measured allowed on revision 8, 2026-08-29: `codex exec 'do it'`,
+#: `codex exec --full-auto 'do it'` and `claude -p 'write it'` were ordinary shell.
+#:
+#: 🔴 The membership test is on the BINARY and the exemption list is what is enumerated,
+#: not the other way round. `codex exec` and `codex resume` and whatever the next
+#: subcommand is called all delegate; `codex --version` does not. Enumerating the
+#: delegating subcommands would mean a new one ships allowed, and the whole point of a
+#: fail-closed rule is which side of it a surprise lands on.
+DELEGATING_BINARIES = frozenset({"codex", "claude"})
+
+#: Invocations of those binaries that start no session. Everything else delegates.
+#: `app-server` is here because `codex_hook_state.py` documents it as the way to ask the
+#: runtime what hooks it would load — a local JSON-RPC service, no prompt, no turn, and
+#: explicitly not a spend under Annex J.4.
+DELEGATION_EXEMPT_SUBCOMMANDS = frozenset({
+    "app-server", "mcp", "plugin", "login", "logout", "doctor", "hooks", "completion",
+})
+DELEGATION_EXEMPT_FLAGS = frozenset({"--version", "-V", "--help", "-h"})
+
+# ── residual command families (M-06) ───────────────────────────────────────────────
+
+#: Editors that rewrite the file they are pointed at. Driven from a script flag they are
+#: batch writers, and `ed -s f`, `ex -sc wq f` and `vim -es -c wq f` were all allowed on
+#: revision 8. Their operands are their targets, whatever the script says.
+BATCH_EDITORS = frozenset({"ed", "ex", "vi", "vim", "nvim", "emacs", "nano", "sponge"})
+
+#: Programs whose in-place flag makes them rewrite their operands. `sed` keeps its own
+#: branch above because BSD `sed -i ''` consumes an empty suffix as the option value;
+#: this is the general family, and it closes `awk -i inplace` and `gawk -i inplace`.
+IN_PLACE_PROGRAMS = frozenset({"awk", "gawk", "mawk", "nawk", "ruby", "rpl", "crudini"})
+
+#: Programs that write a SERIES of files at a named prefix. The prefix is the target and
+#: the suffixes are generated, so the write is to everything under it.
+SPLITTERS = {"split": ("-a", "--suffix-length", "-b", "--bytes", "-C", "--line-bytes",
+                       "-l", "--lines", "-n", "--number", "--additional-suffix"),
+             "csplit": ("-f", "--prefix", "-b", "--suffix-format", "-n", "--digits")}
+
+#: Package managers whose install verb writes into a directory the flags name — or, when
+#: they do not, into a location the command never states.
+PACKAGE_MANAGERS = frozenset({"npm", "pnpm", "yarn", "pip", "pip3", "uv", "gem",
+                              "cargo", "bundle", "poetry", "composer"})
+INSTALLING_SUBCOMMANDS = frozenset({"install", "i", "add", "ci", "update", "upgrade",
+                                    "remove", "uninstall", "rm", "link", "sync"})
+PACKAGE_TARGET_FLAGS = ("-t", "--target", "--prefix", "--root", "--install-dir",
+                        "--path", "--dest", "--destination")
+
+#: Python `-m` modules that only read. Everything else run through `-m` is UNKNOWN_EFFECT.
+#:
+#: 🔴 The list is positive and short on purpose. `python3 -m pip install -t framework/ x`
+#: was ALLOWED on revision 8 — `-m` was not read at all, so a module that installs into
+#: the repository looked like an interpreter with no inline program. Enumerating the
+#: WRITING modules instead would have to enumerate every module anyone might ever run.
+READ_ONLY_MODULES = frozenset({
+    "json.tool", "pydoc", "this", "site", "sysconfig", "platform", "timeit",
+    "calendar", "base64", "gzip", "tokenize", "dis", "ast", "py_compile",
+})
+
 
 # ── write primitives, by argv[0] ───────────────────────────────────────────────────
 
@@ -228,6 +290,29 @@ OPTIONS_WITH_VALUE = {
     "7z": frozenset({"-o", "-p", "-x"}),
     "rm": frozenset({}),
     "git": frozenset({"-C", "-c", "--git-dir", "--work-tree", "--namespace", "--exec-path"}),
+    # 🔴 Added in revision 9. Without these, `split -l 5 /tmp/a framework/part-` had `5`
+    # read as an operand, which pushed the real prefix out of the position the rule looked
+    # at and left the command ALLOWED. An option-value not listed here arrives in
+    # `operands()` as if it were a path — the same defect that reported a chmod mode as a
+    # write target, one family further on.
+    "split": frozenset({"-a", "--suffix-length", "-b", "--bytes", "-C", "--line-bytes",
+                        "-l", "--lines", "-n", "--number", "--additional-suffix",
+                        "--filter", "-d", "--numeric-suffixes"}),
+    "csplit": frozenset({"-f", "--prefix", "-b", "--suffix-format", "-n", "--digits"}),
+    "awk": frozenset({"-v", "-f", "--file", "--source", "-i"}),
+    "gawk": frozenset({"-v", "-f", "--file", "--source", "-i", "--include", "--load"}),
+    "ed": frozenset({"-p", "--prompt"}),
+    "ex": frozenset({"-c", "--cmd", "-u", "-s"}),
+    "vim": frozenset({"-c", "--cmd", "-u", "-U", "-i", "-s", "-w", "-W", "-T"}),
+    "nvim": frozenset({"-c", "--cmd", "-u", "-i", "-s", "-w", "-W"}),
+    "npm": frozenset({"--prefix", "--registry", "--userconfig", "--globalconfig",
+                      "-w", "--workspace", "--cache"}),
+    "pip": frozenset({"-t", "--target", "--prefix", "--root", "-r", "--requirement",
+                      "-i", "--index-url", "--cache-dir", "--find-links", "-c",
+                      "--constraint"}),
+    "pip3": frozenset({"-t", "--target", "--prefix", "--root", "-r", "--requirement",
+                       "-i", "--index-url", "--cache-dir", "--find-links", "-c",
+                       "--constraint"}),
 }
 
 #: Python/Perl/Ruby/Node source that opens a file for writing. Applied ONLY to a program
@@ -283,10 +368,32 @@ EXPANDS = re.compile(r"[$`*?\[\]~{}]|\x00")
 INSIDE_REPO = "INSIDE_REPO"
 OUTSIDE_REPO = "OUTSIDE_REPO"
 SCRATCH = "SCRATCH"
+PEER_WORKTREE = "PEER_WORKTREE"
+SHARED_CHECKOUT = "SHARED_CHECKOUT"
+GIT_COMMON_DIR = "GIT_COMMON_DIR"
+
+#: `repo_topology`'s vocabulary onto this module's. Only the three confined scopes are
+#: new; the rest already had names here.
+_FROM_TOPOLOGY = {
+    rt.ASSIGNED_WORKTREE: INSIDE_REPO,
+    rt.PEER_WORKTREE: PEER_WORKTREE,
+    rt.SHARED_CHECKOUT: SHARED_CHECKOUT,
+    rt.GIT_COMMON_DIR: GIT_COMMON_DIR,
+    rt.EXTERNAL_SCRATCH: SCRATCH,
+    rt.EXTERNAL_OTHER: OUTSIDE_REPO,
+    rt.UNDERIVABLE: UNDERIVABLE,
+}
 
 
 def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str]) -> str:
-    """Where does this operand point? `UNDERIVABLE` when the answer needs a shell."""
+    """Where does this operand point? `UNDERIVABLE` when the answer needs a shell.
+
+    🔴 `cwd` is the EFFECTIVE working directory — the one the command will actually run
+    in — not the session's. `pre_tool_use_guard.derive_workdir` establishes it before
+    calling, because a relative operand means nothing until that base is fixed, and
+    revision 8 anchored it to the payload's `cwd` while the runtime executed in
+    `tool_input.workdir`. The two differ routinely under Codex code mode.
+    """
     if token == UNNAMED:
         return UNNAMED
     if token == OPAQUE or not token:
@@ -298,6 +405,27 @@ def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str]) ->
 
     path = token if posixpath.isabs(token) else posixpath.join(cwd or "", token)
     path = posixpath.normpath(path)
+
+    # 🔴 The repository is the set of worktrees sharing one object store, and asking
+    # only "is this under my toplevel?" answered NO for every peer worktree, for the
+    # shared checkout and for `.git` itself. The topology is consulted FIRST, before the
+    # scratch prefixes and before the root comparison, because a peer worktree living
+    # under `/var/folders` is still a peer worktree — the same ordering mistake, one
+    # level out, that revision 8 fixed for the assigned worktree.
+    #
+    # 🔴 ASSIGNED_WORKTREE is taken from the topology too, and that is a REPAIR and not
+    # tidiness. The prefix comparison below is lexical, and on macOS `git rev-parse
+    # --show-toplevel` answers `/private/var/folders/...` while the cwd a runtime sends
+    # is `/var/folders/...` — the same directory through the `/private` symlink. The
+    # comparison failed, the path fell through to the scratch prefixes, and a fixture
+    # repository under TMPDIR was writable. Revision 8 believed it had closed exactly
+    # this case; it closed the spelling where the two agree. Found by running the
+    # committed corpus against BOTH engines, which is what the corpus is for.
+    if posixpath.isabs(path):
+        placed = rt.cached(cwd if cwd else repo_root).classify(path)
+        if placed in (rt.ASSIGNED_WORKTREE, rt.PEER_WORKTREE, rt.SHARED_CHECKOUT,
+                      rt.GIT_COMMON_DIR):
+            return _FROM_TOPOLOGY[placed]
 
     # 🔴 REPOSITORY MEMBERSHIP BEATS THE SCRATCH PREFIX, and until revision 8 it did
     # not. `/tmp`, `/private/tmp`, `/var/folders` and any path with a `scratchpad`
@@ -358,7 +486,13 @@ def _classify_by_prefix(token: str, cwd: Optional[str], repo_root: Optional[str]
         # A bare expanding filename in the current directory.
         return classify_target(".", cwd, repo_root)
     where = classify_target(prefix, cwd, repo_root)
-    return where if where in (SCRATCH, INSIDE_REPO) else UNDERIVABLE
+    # The confined scopes propagate rather than collapsing to UNDERIVABLE. Both refuse,
+    # so the outcome is the same; only the SENTENCE differs, and `<peer>/out_$n.md`
+    # deserves the denial that says which peer rather than the one that says the guard
+    # could not resolve a glob.
+    if where in (SCRATCH, INSIDE_REPO, PEER_WORKTREE, SHARED_CHECKOUT, GIT_COMMON_DIR):
+        return where
+    return UNDERIVABLE
 
 
 # ── lexing ─────────────────────────────────────────────────────────────────────────
@@ -747,6 +881,25 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
                                 "the program name is produced by an expansion"))
         return
 
+    # ── delegation to another agent runtime ──
+    #
+    # Placed before every wrapper and every write primitive: `codex exec` names no path
+    # and writes nothing itself, so every branch below reads it as a harmless program
+    # with a string argument, which is exactly how revision 8 allowed it.
+    if program in DELEGATING_BINARIES:
+        rest = [t for t in argv[1:] if t not in ("--",)]
+        first = next((t for t in rest if not t.startswith("-")), "")
+        only_flags = all(t.startswith("-") for t in rest) if rest else True
+        exempt = (
+            (first and first in DELEGATION_EXEMPT_SUBCOMMANDS)
+            or (only_flags and rest and all(t in DELEGATION_EXEMPT_FLAGS for t in rest))
+        )
+        if not exempt:
+            findings.append(Finding("DELEGATE", " ".join(argv[:2]), [UNNAMED],
+                                    "starts another agent runtime, whose effects this "
+                                    "guard never sees"))
+        return
+
     # ── wrappers that carry another command ──
     if program in SHELL_BINARIES:
         for index, token in enumerate(argv[1:], start=1):
@@ -796,6 +949,33 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
 
     # ── git ──
     if program == "git":
+        # 🔴 `git -C <peer> …` moves the whole subcommand into another working tree, and
+        # every branch below derives paths relative to the one the command runs in.
+        # Without this, confinement holds for `echo x > <peer>/f` and not for
+        # `git -C <peer> commit -a`, which is the same act with better tooling.
+        #
+        # The repair is to RETARGET the subcommand's findings, not to add a finding of
+        # its own. `git -C <peer> status` must stay allowed — reading a peer is granted —
+        # and a standalone finding for the `-C` value could only be READ (which denies
+        # nothing) or a write (which would deny every cross-worktree read). Retargeting
+        # asks the right question: whatever this subcommand MUTATES, it mutates over
+        # there.
+        elsewhere = flag_value(argv, "-C", "--git-dir", "--work-tree")
+        if elsewhere is not None:
+            here: List[Finding] = []
+            analyse_argv([argv[0]] + strip_wrapper_options(
+                argv[1:], frozenset({"-C", "--git-dir", "--work-tree"})),
+                [], heredocs, here, depth + 1)
+            for finding in here:
+                if finding.effect in (em.READ,):
+                    continue
+                finding.targets = [posixpath.join(elsewhere, t)
+                                   if t not in (UNNAMED, OPAQUE) and not posixpath.isabs(t)
+                                   else t for t in finding.targets] or [elsewhere]
+                finding.detail = (finding.detail
+                                  + f" · in the working tree at `{elsewhere}`").strip()
+            findings.extend(here)
+            return
         sub, rest = git_subcommand(argv)
         if sub == "add":
             paths = [t for t in rest if not t.startswith("-")]
@@ -845,6 +1025,45 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
         targets = [t for t in targets if t != ""]
         findings.append(Finding("IN_PLACE_EDIT", "sed -i", targets[1:] or targets or [UNNAMED],
                                 "rewrites the files it names, unread"))
+        return
+    if program in IN_PLACE_PROGRAMS and (
+            has_flag(argv, "-i", "--in-place") or "inplace" in argv):
+        # `gawk -i inplace '{print}' f` — the `-i` value is the extension library name,
+        # not a suffix, so the operands after the program text are the targets.
+        targets = [t for t in operands(argv, program)
+                   if t not in ("inplace", "") and not t.startswith("{")]
+        findings.append(Finding("IN_PLACE_EDIT", f"{program} -i",
+                                targets[1:] or targets or [UNNAMED],
+                                "rewrites the files it names, unread"))
+        return
+    if program in BATCH_EDITORS:
+        findings.append(Finding("FILE_WRITE", program, operands(argv, program) or [UNNAMED],
+                                "an editor writes the file it is pointed at"))
+        return
+    if program in SPLITTERS:
+        into = flag_value(argv, "-f", "--prefix")
+        targets = operands(argv, program)
+        # `split [OPTS] INPUT PREFIX` puts the prefix LAST and defaults it to `x` in the
+        # working directory when it is absent — which the command does not name, so that
+        # case is UNNAMED rather than "no write". `csplit -f PREFIX INPUT …` carries it
+        # in the flag and defaults to `xx`, the same way.
+        if into is not None:
+            destination = [into]
+        elif program == "split" and len(targets) >= 2:
+            destination = targets[-1:]
+        else:
+            destination = [UNNAMED]
+        findings.append(Finding("FILE_WRITE", program, destination,
+                                "writes a series of files at the prefix it names"))
+        return
+    if program in PACKAGE_MANAGERS:
+        rest = [t for t in argv[1:] if not t.startswith("-")]
+        if rest and rest[0] in INSTALLING_SUBCOMMANDS or program.startswith("pip"):
+            into = flag_value(argv, *PACKAGE_TARGET_FLAGS)
+            findings.append(Finding("FILE_WRITE", f"{program} install",
+                                    [into] if into else [UNNAMED],
+                                    "unpacks packages this command does not enumerate "
+                                    "into a directory it may not name"))
         return
     if program in INTERPRETERS:
         analyse_interpreter(argv, program, heredocs, findings)
@@ -1169,6 +1388,28 @@ def analyse_interpreter(argv: List[str], program: str, heredocs: List[str],
                                 "rewrites the files it names, unread"))
         return
 
+    # 🔴 `-m MODULE` runs a whole program this guard has not read.
+    #
+    # Revision 8 read `-c`/`-e` bodies and ignored `-m` entirely, so
+    # `python3 -m pip install -t framework/ pkg` arrived here as an interpreter with no
+    # inline program and produced NO finding at all — allowed. The module is not the
+    # command's argument, it IS the command, and the only module whose effect is
+    # derivable from its name is one on a list someone checked.
+    module = flag_value(argv, "-m", "--module")
+    if module is not None:
+        if module in READ_ONLY_MODULES:
+            return
+        # `python3 -m pip install --target X` — the module's own argv is a command in
+        # its own right and the family rules above already read it.
+        rest = argv[argv.index(module) + 1:] if module in argv else []
+        if base(module) in PACKAGE_MANAGERS or module.split(".")[0] in PACKAGE_MANAGERS:
+            analyse_argv([module] + rest, [], heredocs, findings, depth=7)
+            return
+        findings.append(Finding("OPAQUE_PROGRAM", f"{program} -m {module}", [UNNAMED],
+                                "a module run as a program, whose effect is not "
+                                "derivable from its name"))
+        return
+
     bodies: List[str] = []
     for index, token in enumerate(argv[1:], start=1):
         if token in INLINE_PROGRAM_FLAGS and index + 1 < len(argv):
@@ -1372,6 +1613,31 @@ DENY_UNKNOWN_EFFECT = (
     "Write the command so its effect is readable, or invoke a committed script by name."
 )
 
+DENY_CONFINED = (
+    "This command mutates state that belongs to the WHOLE repository, not to this "
+    "worktree, and no authority class grants that from the shell.\n\n"
+    "A peer's worktree, the shared checkout, and the shared `.git` — its config, its "
+    "hooks, its refs, its worktree administration — are reachable from here because "
+    "every worktree shares one object store. Being reachable is not being yours: the "
+    "files under a peer worktree are another actor's uncommitted work, and a hook or a "
+    "ref under the common dir changes what happens in every worktree at once.\n\n"
+    "Read them freely — READ is granted in all three. To CHANGE one, the owning actor "
+    "makes the change in its own worktree, or the operator does it deliberately. There "
+    "is no rung of this ladder that reaches across."
+)
+
+DENY_DELEGATE = (
+    "This command hands the work to another agent runtime, and the guard cannot follow "
+    "it there.\n\n"
+    "A delegated session runs with its own permissions, its own hooks — or none — and "
+    "its effects land in this repository without ever passing this policy. Allowing the "
+    "handoff would authorise an unbounded effect set behind a single name, which is the "
+    "one thing the effect model exists to refuse.\n\n"
+    "Do the work in this session, or invoke a committed script by name. A delegated "
+    "runtime becomes usable when it has demonstrated its OWN write floor — not before, "
+    "and not by being invoked from a session that has one."
+)
+
 #: The authority a shell command is judged under when no attestation names another.
 #: 🔴 Not a permissive default: it is the third rung of six, and it is the rung that
 #: grants named staging and commit — because that is how work lands in this repository —
@@ -1392,6 +1658,9 @@ _SCOPE = {
     INSIDE_REPO: em.INSIDE_REPO,
     OUTSIDE_REPO: em.OUTSIDE_REPO,
     SCRATCH: em.SCRATCH,
+    PEER_WORKTREE: em.PEER_WORKTREE,
+    SHARED_CHECKOUT: em.SHARED_CHECKOUT,
+    GIT_COMMON_DIR: em.GIT_COMMON_DIR,
     UNDERIVABLE: em.UNDERIVABLE,
     UNNAMED: em.UNNAMED,
 }
@@ -1469,6 +1738,17 @@ def classify(command: object, cwd: Optional[str] = None, repo_root: Optional[str
     # thing that makes `git clean` dangerous — that untracked files are exactly where
     # another actor's in-flight work lives. Same for `git reset --hard`. A denial that
     # does not name the hazard is a denial the reader will try to route around.
+    # 🔴 Checked BEFORE every other sentence, including the destructive-git one.
+    #
+    # `git -C <peer> reset --hard` is both a history rewrite and a cross-worktree act,
+    # and the reader needs the second: the first tells them to be careful with a command
+    # they may repeat correctly in their own worktree, and only the second says the
+    # target was never theirs. The most specific true sentence goes first.
+    if scopes & em.CONFINED:
+        return PROHIBITED, DENY_CONFINED, findings
+    if em.DELEGATE in kinds:
+        return PROHIBITED, DENY_DELEGATE, findings
+
     if primitives & DESTRUCTIVE_GIT:
         return PROHIBITED, DENY_REF, findings
 

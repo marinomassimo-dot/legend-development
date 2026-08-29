@@ -34,9 +34,17 @@ GUARD_POLICY = "framework/scripts/guard_policy.py"
 GUARD_ENTRY = "framework/scripts/pre_tool_use_guard.py"
 PARITY = "framework/scripts/runtime_parity.py"
 
+GUARD_TOPOLOGY = "framework/scripts/repo_topology.py"
+
 GUARD_SUITES = ("framework/scripts/test_pre_tool_use_guard.py",
                 "scripts/test_guard_bash_command.py")
 PARITY_SUITES = ("framework/scripts/test_runtime_parity.py",)
+
+#: 🔴 The revision-9 guarantees are asserted end to end against a real multi-worktree
+#: fixture, so the suite that must notice their removal is that one — not the guard
+#: suites, which run against this worktree and would report a confinement failure as an
+#: ordinary denial. A mutation pointed at the wrong suite survives for the wrong reason.
+CONFINEMENT_SUITES = ("framework/scripts/test_confinement_and_delegation.py",)
 
 
 class Mutation:
@@ -144,14 +152,21 @@ MUTATIONS = [
         "            continue\n            raise Undecidable(\n                f\"`{match.group(1)}` is called with an argument this guard cannot read; \"",
         GUARD_SUITES, "an unreadable code-mode shell call is skipped instead of denied"),
     Mutation(
+        # 🔴 M15 and M16 are REBOUND, not retired. `decide` now iterates
+        # `(command, carrier)` pairs so each code-mode call is judged against its own
+        # workdir, and the old anchors vanished with that edit. The guarantees are
+        # unchanged; a mutation left pointing at deleted text reports ANCHOR_MISSING,
+        # and ANCHOR_MISSING is not a kill — it is a mutation that was never applied.
         "M15", GUARD_ENTRY,
-        "    for command in commands:\n        reason = guard_policy.verdict(command, cwd=cwd, repo_root=root)",
-        "    for command in commands[:1]:\n        reason = guard_policy.verdict(command, cwd=cwd, repo_root=root)",
-        GUARD_SUITES, "only the first shell call in a code-mode body is judged"),
+        "    for command, carrier in calls:",
+        "    for command, carrier in calls[:1]:",
+        GUARD_SUITES + CONFINEMENT_SUITES,
+        "only the first shell call in a code-mode body is judged"),
     Mutation(
         "M16", GUARD_ENTRY,
-        '        commands = ["apply_patch <<\'PATCH\'\\n" + program_text(tool_input) + "\\nPATCH"]',
-        "        commands = []",
+        '        calls = [("apply_patch <<\'PATCH\'\\n" + program_text(tool_input) + "\\nPATCH",\n'
+        '                  tool_input)]',
+        "        calls = []",
         GUARD_SUITES, "the apply_patch tool payload stops being policed"),
 
     # ── the battery ───────────────────────────────────────────────────────────────
@@ -365,6 +380,129 @@ MUTATIONS = [
         "a duplicate of M43 by a different edit — the revocation is removed by a "
         "CONDITION rather than by deleting the branch, which a test matching on "
         "source text would miss and a test asserting behaviour catches"),
+
+    # ── revision 9: the confinement, the workdir, and the two post-effect repairs ───
+    #
+    # 🔴 Each of these removes ONE guarantee revision 9 adds, and each was measured
+    # false before it was repaired. A survivor here is not a weak test, it is a P0
+    # guarantee nothing asserts — which makes the candidate NOT READY, not merely
+    # under-tested.
+    Mutation(
+        "M47", GUARD_POLICY,
+        '        if placed in (rt.ASSIGNED_WORKTREE, rt.PEER_WORKTREE, rt.SHARED_CHECKOUT,\n'
+        '                      rt.GIT_COMMON_DIR):\n'
+        '            return _FROM_TOPOLOGY[placed]',
+        '        pass',
+        CONFINEMENT_SUITES,
+        "the topology stops being consulted at all, so every peer worktree, the shared "
+        "checkout and the whole git common dir collapse back into OUTSIDE_REPO — where "
+        "SHELL_DEFAULT grants content writes"),
+    Mutation(
+        "M48", "framework/scripts/effect_model.py",
+        'CONFINED: FrozenSet[str] = frozenset({PEER_WORKTREE, SHARED_CHECKOUT, GIT_COMMON_DIR})',
+        'CONFINED: FrozenSet[str] = frozenset()',
+        CONFINEMENT_SUITES + ("framework/scripts/test_effect_model.py",),
+        "the confined set empties, so the property test passes vacuously and the "
+        "denial message that names the scope stops firing — the shape of a guarantee "
+        "removed by emptying the set it quantifies over"),
+    Mutation(
+        "M49", "framework/scripts/effect_model.py",
+        '_L2 = {kind: {SCRATCH, OUTSIDE_REPO} for kind in _CONTENT}',
+        '_L2 = {kind: {SCRATCH, OUTSIDE_REPO, PEER_WORKTREE, SHARED_CHECKOUT,\n'
+        '              GIT_COMMON_DIR} for kind in _CONTENT}',
+        CONFINEMENT_SUITES + ("framework/scripts/test_effect_model.py",),
+        "a rung is GIVEN the confined scopes. The confinement is an OMISSION from the "
+        "table, and this is the edit that undoes an omission with no error anywhere"),
+    Mutation(
+        "M50", "framework/scripts/repo_topology.py",
+        '        return sorted(table, key=lambda pair: len(pair[0]), reverse=True)',
+        '        return table',
+        CONFINEMENT_SUITES + ("framework/scripts/test_repo_topology.py",),
+        "longest-prefix becomes declaration order, so a worktree nested inside the "
+        "shared checkout — which is how this repository is laid out — is classified as "
+        "the checkout that contains it"),
+    Mutation(
+        "M51", "framework/scripts/repo_topology.py",
+        '        resolved = self._one(_realpath(path))\n'
+        '        return lexical if STRICTNESS[lexical] >= STRICTNESS[resolved] else resolved',
+        '        return lexical',
+        CONFINEMENT_SUITES + ("framework/scripts/test_repo_topology.py",),
+        "only the lexical spelling is classified, so a symlink inside the assigned "
+        "worktree pointing at a peer or at the common dir launders the write"),
+    Mutation(
+        "M52", GUARD_ENTRY,
+        '    workdir = derive_workdir(payload, carrier)',
+        '    workdir = payload.get("cwd") or ""',
+        CONFINEMENT_SUITES,
+        "the effective working directory reverts to the session cwd, so a command that "
+        "RUNS inside the worktree with cwd elsewhere has its relative repository writes "
+        "measured against /tmp"),
+    Mutation(
+        "M53", GUARD_ENTRY,
+        '    if not os.path.isdir(resolved):\n        raise Undecidable(',
+        '    if False:\n        raise Undecidable(',
+        CONFINEMENT_SUITES,
+        "a workdir that does not exist stops failing closed and silently falls back, "
+        "which restores the revision-8 reading for the one input designed to defeat it"),
+    Mutation(
+        "M54", GUARD_POLICY,
+        '    if program in DELEGATING_BINARIES:',
+        '    if False and program in DELEGATING_BINARIES:',
+        CONFINEMENT_SUITES,
+        "`codex exec` and `claude -p` become ordinary programs again, so the work is "
+        "handed to a runtime with its own permissions and no hook this guard can see"),
+    Mutation(
+        "M55", "framework/scripts/post_effect_verify.py",
+        '    if not current_branch or branch_after != current_branch:\n'
+        '        return frozenset()\n'
+        '    return frozenset({f"refs/heads/{current_branch}"})',
+        '    return frozenset({f"refs/heads/{name}" for name in\n'
+        '                      (current_branch, branch_after) if name})',
+        ("framework/scripts/test_confinement_and_delegation.py",
+         "framework/scripts/test_post_effect_verify.py"),
+        "COMMIT covers a ref the commit did not move — a commit that also switched "
+        "branch, or that moved a second ref, verifies as if it had not"),
+    Mutation(
+        "M56", "framework/scripts/post_effect_verify.py",
+        '        mode_moved[path] = (was_mode, now_mode)\n'
+        '        observed.append(em.Effect(em.PERMISSION_CHANGE, path, em.INSIDE_REPO, "mode",',
+        '        mode_moved[path] = (was_mode, now_mode)\n'
+        '        _unused = (em.Effect(em.PERMISSION_CHANGE, path, em.INSIDE_REPO, "mode",',
+        ("framework/scripts/test_confinement_and_delegation.py",
+         "framework/scripts/test_post_effect_verify.py"),
+        "a permission change stops being observed while still being authorised, which "
+        "is UNOBSERVABLE_EFFECT quietly becoming ASSUMED_MATCH"),
+    Mutation(
+        "M57", "framework/scripts/post_effect_verify.py",
+        '        if added == "-" or removed == "-":\n            return True',
+        '        if added == "-" or removed == "-":\n            return False',
+        ("framework/scripts/test_confinement_and_delegation.py",
+         "framework/scripts/test_post_effect_verify.py"),
+        "a BINARY file's content change is read as no change, so a chmod authorisation "
+        "covers a content rewrite git declined to count lines for"),
+    Mutation(
+        "M58", "framework/scripts/codex_hook_state.py",
+        '    elif config["on_path_names_hooks"]:',
+        '    elif config["on_path_names_hooks"] or config["off_path_names_hooks"]:',
+        ("framework/scripts/test_runtime_diagnostics.py",),
+        "a config the runtime never reads is reported as TRUST_BLOCKED, sending the "
+        "reader to ask for a trust decision about a file nothing ever offered"),
+    Mutation(
+        "M59", "framework/scripts/guard_revision.py",
+        '    elif UNKNOWN in generations or ABSENT in generations:',
+        '    elif False:',
+        ("framework/scripts/test_runtime_diagnostics.py",),
+        "a worktree whose guard could not be read is folded into the YES/NO answer, so "
+        "a failure to measure is reported as a measurement"),
+    Mutation(
+        "M60", "framework/scripts/hostile_corpus.py",
+        '    mutating = [r for r in rows\n'
+        '                if r.get("mutating") and not r.get("positive_control")\n'
+        '                and r["observed"] != SKIP]',
+        '    mutating = [r for r in rows if r.get("mutating") and r["observed"] != SKIP]',
+        ("framework/scripts/test_runtime_diagnostics.py",),
+        "the positive floor is counted as bypasses again, so the corpus reports a "
+        "revision as worse the more controls it is given"),
 ]
 
 

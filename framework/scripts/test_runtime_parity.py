@@ -650,14 +650,23 @@ class TheResidualDebtStaysDeclared(unittest.TestCase):
         runtimes, so a later edit that restores a bypass fails as loudly as closing one
         used to — and closing a gap without moving its entry fails too.
         """
-        for label, command in rp.GUARD_CLOSED_DEBT:
+        probed = 0
+        for label, template in rp.GUARD_CLOSED_DEBT:
             with self.subTest(gap=label):
+                command = rp.expand_placeholders(template, REAL)
+                if command is None:
+                    self.skipTest(f"{label!r} needs a topology this surface lacks")
+                probed += 1
                 claude = rp._hook(REAL, rp.claude_payload(REAL, command))
                 codex = rp._hook(REAL, rp.codex_payload(REAL, command))
                 self.assertEqual(claude, codex,
                                  "a control on one side only is an escalation by runtime")
                 self.assertEqual(claude, "deny",
-                                 f"{label!r} was closed in revision 8 and is open again")
+                                 f"{label!r} was closed and is open again")
+        # 🔴 A loop that skipped every case is a green test that measured nothing, and
+        # `skipTest` inside `subTest` does not fail the method. The counter is what makes
+        # "all closed" distinguishable from "none asked".
+        self.assertGreater(probed, 0, "no closed-debt entry was actually probed")
 
     def test_the_positive_floor_survives_in_both_runtimes(self) -> None:
         """A write-control system that blocks everything is not a write-control system.
@@ -690,24 +699,43 @@ class TheBridgesOwnFilesDoNotAddSurfaceDefects(unittest.TestCase):
     change to red and mean something.
     """
 
-    OWNED = (
-        "framework/scripts/guard_policy.py",
-        "framework/scripts/pre_tool_use_guard.py",
-        "framework/scripts/runtime_parity.py",
-        "framework/scripts/codex_runtime_probe.py",
-        "framework/scripts/mutate_guard_suite.py",
-        "framework/scripts/test_pre_tool_use_guard.py",
-        "framework/scripts/test_runtime_parity.py",
-        "framework/scripts/test_codex_runtime_probe.py",
+    #: 🔴 REVISION 9: the list is DERIVED, and the hand-written one is why it was green.
+    #:
+    #: Revision 8 added five modules and four suites to this bridge and extended this
+    #: tuple by none of them. All nine were committed at `100644`, `test_release_surface`
+    #: went from four offenders to thirteen, and THIS test — the one written to be the
+    #: class fix — stayed green, because a hand-maintained list of what to check does
+    #: not grow when someone adds a file. A check that only sees what its author
+    #: remembered to enumerate is a check that reports on its author's memory.
+    #:
+    #: `framework/scripts/` is the bridge's directory and every file in it is an
+    #: entrypoint by convention; deriving from the tracked set means a module added
+    #: tomorrow is covered the moment it is tracked, with nobody remembering anything.
+    EXPLICIT = (
         "scripts/guard_bash_command.py",
         "scripts/test_guard_bash_command.py",
     )
+
+    @property
+    def OWNED(self):
+        tracked = rp._git(REAL, "ls-files", "framework/scripts").splitlines()
+        return tuple(sorted(p for p in tracked if p.endswith(".py"))) + self.EXPLICIT
 
     def test_every_owned_file_is_tracked(self) -> None:
         """The list is the point; a stale entry would make the next test vacuous."""
         tracked = set(rp._git(REAL, "ls-files").splitlines())
         missing = [path for path in self.OWNED if path not in tracked]
         self.assertEqual([], missing, "this list names a file the repository does not track")
+
+    def test_the_owned_set_actually_grew_with_the_bridge(self) -> None:
+        """🔴 A derived list can also be derived WRONG — an empty glob would make the
+        mode check below pass over nothing. Ten was the hand-written count."""
+        self.assertGreater(len(self.OWNED), 10)
+        for required in ("framework/scripts/effect_model.py",
+                         "framework/scripts/repo_topology.py",
+                         "framework/scripts/post_effect_verify.py",
+                         "framework/scripts/hostile_corpus.py"):
+            self.assertIn(required, self.OWNED)
 
     def test_no_owned_shebang_file_sits_at_mode_100644(self) -> None:
         entries = rp._git(REAL, "ls-tree", "-r", "HEAD").splitlines()
