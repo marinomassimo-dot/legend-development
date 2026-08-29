@@ -33,10 +33,19 @@ BASE_HEAD                 6cd485974c358f03aaefd3cdc6f591241376e125
                           the revision-7 TIP, deliberately. Not main (788c357): this
                           candidate is the delta FROM revision 7, and hashing against
                           main would bind 81 prior Plan commits to this review.
-TIP                       8ffcd020ca65e91815c6cf81481d511668b9816a
+TIP                       ca124b067e27a34cc8dce80f5ef386d5959d33f0
                           the last commit in the CONTENT domain. This file is committed
                           after it and cannot move the hash — see INVARIANCE.
-CANDIDATE_CONTENT_HASH    4b014a2f7684a1463e95db8fc94846197d6791b7039920a6bb004be28264479e
+CANDIDATE_CONTENT_HASH    733207e25b856ba1eeb89e9eecd3a7fe29bf60557858cda07edc3eae494f4413
+                          🔴 SUPERSEDES  4b014a2f…64479e  tip 8ffcd02
+                          That value was correct for the tree it named and is superseded,
+                          not withdrawn (Annex D.2). It was published in this file before
+                          `framework/protocols/runtime_bridge.md` was corrected — the
+                          protocol asserted five things this candidate had measured false,
+                          and leaving a NORMATIVE file wrong to keep a hash stable is the
+                          wrong trade. The earlier value stays visible because a candidate
+                          that silently rewrites its own hash teaches a reviewer to trust
+                          the current one, which is the single thing a hash cannot ask for.
 CHANGE_CLASS              MAJOR — it changes what is forbidden for every actor in both
                           runtimes (nineteen families closed), it changes what a
                           "verdict" IS (an effect set judged against an authority), and
@@ -44,12 +53,12 @@ CHANGE_CLASS              MAJOR — it changes what is forbidden for every actor
                           Mirror classifies; this field is the author's declaration.
 RECIPE                    python3 governance/scripts/candidate_content_hash.py \
                             --base 6cd485974c358f03aaefd3cdc6f591241376e125 \
-                            --tip  8ffcd020ca65e91815c6cf81481d511668b9816a
+                            --tip  ca124b067e27a34cc8dce80f5ef386d5959d33f0
 INVARIANCE                Re-run with --tip set to the branch tip carrying THIS file. It
-                          must print the same value, because every commit after 8ffcd02
+                          must print the same value, because every commit after ca124b0
                           touches only governance/candidates/, which P5.1 excludes. If it
                           does not, the hash is stale and this manifest is wrong.
-FILES                     15 changed · +4240 −64 · 6 new modules, 4 new suites
+FILES                     16 changed · 6 new modules, 4 new suites, 1 protocol
 ```
 
 ## 2 · The one-sentence change, and the measurement that forced it
@@ -78,9 +87,11 @@ not anyone thought to list it.
 ### 2.1 · Three of them were bypasses of rules the policy already held
 
 Not scope gaps. Holes in rules that were already written, already tested, and already
-believed.
+believed. *(Fenced as `text`, not `bash`: the documented-corpus harvest reads shell-fenced
+lines as commands, and a results table describing forbidden shapes would otherwise be run
+as one — which is exactly how revision 7's own debt table joined its denied list.)*
 
-```
+```text
 echo x 1> framework/x        ALLOWED     while `echo x > framework/x` was DENIED
 cp -t framework /tmp/a       ALLOWED     while `cp /tmp/a framework/x` was DENIED
 echo hi                      ALLOWED     while `git add -A` alone was DENIED
@@ -201,21 +212,29 @@ moved on its own between revisions (208 → 211). Comparing revision 7's publish
 the corpus was harvested ONCE and evaluated under both policies, with the policy as the
 only variable:
 
-```
-corpus 211 lines
+```text
+corpus 210 lines
   rev7 denied  9    survives 95.7%
-  rev8 denied 16    survives 92.4%
-  newly denied 7 · newly allowed 0
+  rev8 denied 15    survives 92.9%
+  newly denied 6 · newly allowed 0
 ```
 
-Every one of the seven, named rather than rounded away:
+Every one of the six, named rather than rounded away:
 
 | # | line | reading |
 |---|---|---|
-| 2 | this protocol's own `GUARD_HARDENING_DEBT` table, harvested out of a fenced block. The rows read `git clean -fd  git push` | self-reference. The rule fires on the words it forbids |
+| 1 | revision 7's own `GUARD_HARDENING_DEBT` table, harvested out of a shell-fenced block. The row reads `git clean -fd  git push` | self-reference: the rule fires on the words it forbids. Revision 7's file is **not edited** to fix this — that would move the baseline this delta is measured against |
 | 2 | prose fragments beginning with `git` — "git at session open and", "git identity · lease derivation" | `UNKNOWN_EFFECT`: an unclassified git subcommand is refused rather than assumed harmless |
 | 2 | `candidate_content_hash.py … --tip <any tip ≥ e839db38>` | a PLACEHOLDER with an unbalanced `>`. rev7 allowed these **only because its own `\d+>` ate the `38>` out of the SHA** — the same bug that hid `1>`. Fixing one exposed these |
 | 1 | `git clone --no-local "$LEGEND_SOURCE" "$clone_dir"` | a real write to a destination held in a variable from an EARLIER command. `UNDERIVABLE`, the declared failure direction |
+
+🔴 **A seventh existed and I removed it by fixing my own writing, not the threshold.**
+This candidate and the protocol both document the closed bypasses in tables, and a table
+whose rows begin `echo x 1>` is harvested as a command and correctly denied. Those blocks
+are now fenced ```` ```text ```` rather than left as bare fences, which is what they are.
+The distinction matters and is worth being explicit about: relabelling a results table
+that was never a command is a correction; relabelling a real command to escape the harvest
+would be evasion, and none was relabelled.
 
 The threshold moves from 0.94 to 0.90. 🔴 Lowering a threshold to admit one's own change
 is how a gate stops being one, so the number is not the claim — the isolated delta above
@@ -487,6 +506,7 @@ plane; none is required for a bridge candidate, and none is fixed here.
 | B · attestation, post-effect, receipts | `7d6d1c0` | `git revert 7d6d1c0` — removes 4 modules |
 | C · fail-closed payloads, the hook state | `0d94e0d` | `git revert 0d94e0d` — restores the env waiver |
 | D · the widened guard assertions | `8ffcd02` | `git revert 8ffcd02` — reopens M32–M36 |
+| E · the protocol corrections | `ca124b0` | `git revert ca124b0` — restores the five false claims |
 
 🔴 Unit A cannot be reverted alone once B is in place: `guard_policy` imports
 `effect_model`. Reverting B alone is safe; reverting A requires reverting B first.
