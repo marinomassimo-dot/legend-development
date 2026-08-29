@@ -533,6 +533,9 @@ def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str],
         if topology is not None:
             placed = topology.classify(path)
             if placed in _REPOSITORY_SCOPES:
+                # The session's own repository. Nothing after this can widen it, and
+                # nothing after this needs to: every worktree of it is covered here,
+                # whatever directory the command runs in.
                 return _FROM_TOPOLOGY[placed]
 
         # 🔴 The runtime's own registration, checked AFTER the repository and before
@@ -549,26 +552,15 @@ def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str],
         # path rather than of the repository — and everything else is UNDERIVABLE,
         # which denies every mutation and no read. Falling back to the effective
         # workdir here is precisely the defect this parameter exists to remove.
-        if unbound:
-            return SCRATCH if _is_scratch_path(path) else UNDERIVABLE
+        outside = (SCRATCH if _is_scratch_path(path) else UNDERIVABLE) if unbound \
+            else _FROM_TOPOLOGY[topology.classify(path)]
+        return _stricter(outside, _workdir_repository_overlay(path, repo_root, unbound))
 
-    # 🔴 REPOSITORY MEMBERSHIP BEATS THE SCRATCH PREFIX, and until revision 8 it did
-    # not. `/tmp`, `/private/tmp`, `/var/folders` and any path with a `scratchpad`
-    # segment were classified SCRATCH before the root was consulted — so a git working
-    # tree living under any of them was entirely unguarded. That is not hypothetical:
-    # `TMPDIR` on macOS points into `/var/folders`, every fixture repository in this
-    # repository's own test suites is created there, and the live floor written for
-    # this revision measured `echo tampered > kept.txt` as ALLOWED and watched it
-    # rewrite a committed file.
-    #
-    # A repository in scratch space is still a repository. The scratch exemption exists
-    # so that work OUTSIDE the tree is not this guard's business, and inside the tree
-    # is exactly its business.
+    # A path that is still relative here had no `cwd` to anchor it.
     if repo_root is not None:
         root = posixpath.normpath(repo_root)
         if path == root or path.startswith(root.rstrip("/") + "/"):
             return INSIDE_REPO
-
     if _is_scratch_path(path):
         return SCRATCH
     if repo_root is None:
@@ -577,6 +569,64 @@ def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str],
         # as repository space.
         return INSIDE_REPO
     return OUTSIDE_REPO
+
+
+#: How much a wrong ALLOW would cost, per scope. Used ONLY to combine two readings of
+#: one path, never to decide anything on its own — `repo_topology.STRICTNESS` is the same
+#: idea over that module's vocabulary, and `test_pre_tool_use_guard.py` asserts every
+#: scope appears here so one added later cannot default to zero.
+_STRICTNESS = {
+    SCRATCH: 0, OUTSIDE_REPO: 1, INSIDE_REPO: 2, PEER_WORKTREE: 3,
+    SHARED_CHECKOUT: 4, GIT_COMMON_DIR: 5, RUNTIME_CONFIG: 6, UNDERIVABLE: 7,
+}
+
+
+def _stricter(left: str, right: str) -> str:
+    return left if _STRICTNESS.get(left, 7) >= _STRICTNESS.get(right, 7) else right
+
+
+def _workdir_repository_overlay(path: str, repo_root: Optional[str],
+                                unbound: bool) -> str:
+    """A STRICTNESS-ONLY reading of *is this path inside the effective workdir's own
+    working tree*, for a path outside the session's repository entirely.
+
+    🔴 It can only ever raise strictness, never lower it, and that is what makes it safe
+    to derive from `repo_root` — which comes from the effective workdir, which the model
+    writes. A rotation into a peer still classifies `PEER_WORKTREE` (stricter than
+    `INSIDE_REPO`) and still denies; the overlay cannot demote it, because the caller
+    takes the maximum.
+
+    Why it exists: revision 9 derived the whole topology from the effective workdir, and
+    so happened to protect an UNRELATED repository the actor had cd'd into — case
+    `K1-repo-under-tmp`, a working tree under `TMPDIR`. Pinning the assignment took that
+    away as a side effect, and the corpus caught it as a 🔴 regression on the first run
+    after the repair. Restoring it as a strictness-only overlay keeps both properties
+    instead of trading one for the other.
+
+    Both spellings are compared. `git rev-parse --show-toplevel` answers
+    `/private/var/folders/…` on macOS while a runtime's `cwd` is `/var/folders/…`, and a
+    lexical comparison between them is exactly the K1 defect that revision 9's topology
+    was hiding.
+
+    🔴 When the session is UNBOUND the overlay is `UNDERIVABLE`, not `INSIDE_REPO`. With
+    no assignment, "inside the effective workdir's repository" does not say WHICH
+    repository — and `INSIDE_REPO` is a GRANT for `STAGE` and `COMMIT`. An unbound
+    session committing into a working tree under `TMPDIR` was the second finding of that
+    same corpus run: `SCRATCH` was rewritten to `INSIDE_REPO` by the index rule, and
+    `SHELL_DEFAULT` grants a commit there.
+    """
+    if repo_root is None:
+        return SCRATCH  # the weakest value: contributes nothing to the maximum
+    root = posixpath.normpath(repo_root)
+    inside = _under(root, path) or _under(rt.realpath(root), rt.realpath(path))
+    if not inside:
+        return SCRATCH
+    return UNDERIVABLE if unbound else INSIDE_REPO
+
+
+def _under(directory: str, path: str) -> bool:
+    directory = directory.rstrip("/")
+    return bool(directory) and (path == directory or path.startswith(directory + "/"))
 
 
 def _is_scratch_path(path: str) -> bool:

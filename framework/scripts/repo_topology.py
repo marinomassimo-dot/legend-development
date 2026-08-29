@@ -218,6 +218,13 @@ def _is_scratch(path: str) -> bool:
     return SCRATCH_SEGMENT in path.split("/")
 
 
+def realpath(path: str) -> str:
+    """Public alias. `guard_policy` needs the same resolution for its workdir overlay,
+    and a second implementation of "resolve what exists, normalise the rest" is the
+    shape that drifts until one of the two stops following a symlink."""
+    return _realpath(path)
+
+
 def _realpath(path: str) -> str:
     """`realpath`, resolving what exists and normalising the rest.
 
