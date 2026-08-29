@@ -49,7 +49,15 @@ from pathlib import Path
 
 NOT_CONFIGURED = "NOT_CONFIGURED"   # no registration names the engine
 CONFIGURED = "CONFIGURED"           # a registration exists and parses
-TRUST_PENDING = "TRUST_PENDING"     # configured, and the runtime gates it behind a review
+#: 🔴 NEW IN REVISION 8, and it sits BELOW `TRUST_PENDING` rather than beside it.
+#:
+#: The registration parses, `codex doctor` says `config.load: ok`, and the runtime's own
+#: `hooks/list` reports ZERO hooks for this working directory. Not "configured and
+#: awaiting review" — not loaded at all, and therefore not on either side of the trust
+#: gate. `framework/scripts/codex_hook_state.py` derives it with a positive control, no
+#: session and no spend.
+NOT_LOADED = "NOT_LOADED"
+TRUST_PENDING = "TRUST_PENDING"     # loaded, and the runtime gates it behind a review
 DEMONSTRATED = "DEMONSTRATED"       # a probe receipt records a refusal
 NOT_FIRING = "NOT_FIRING"           # a probe receipt records the command running anyway
 UNDERIVABLE = "UNDERIVABLE"         # the registration cannot be read or parsed at all
@@ -547,6 +555,45 @@ CODEX_TRUST_GATE_STRINGS = (
 )
 
 
+def codex_hook_load_state(surface: Surface):
+    """What the installed runtime says it LOADED for this working directory.
+
+    Returns `(state, evidence)`. The instrument is `codex_hook_state.py`, which asks the
+    app-server's own `hooks/list`; it is skipped entirely when the binary is absent,
+    because "codex is not installed" is not evidence that a registration does not load.
+    """
+    engine = surface.root / "framework" / "scripts" / "codex_hook_state.py"
+    if not engine.exists():
+        return CONFIGURED, [(UNVERIFIED, "codex_hook_state.py is not present")]
+    try:
+        result = subprocess.run(
+            [sys.executable, str(engine), "--cwd", str(surface.root), "--json"],
+            capture_output=True, text=True, timeout=90)
+        payload = json.loads(result.stdout or "{}")
+    except (OSError, subprocess.SubprocessError, ValueError) as exc:
+        return CONFIGURED, [(UNVERIFIED, f"`hooks/list` could not be asked: {exc}")]
+
+    state = payload.get("state")
+    if state == "UNDERIVABLE":
+        return CONFIGURED, [(UNVERIFIED,
+                             "the app-server did not answer `hooks/list`; the load state "
+                             "is unmeasured, which is not the same as unloaded")]
+    if state == "NOT_LOADED":
+        evidence = [(OBSERVED,
+                     "`hooks/list` reports 0 hooks for this working directory, with no "
+                     "warning and no error — the registration is not loaded at all")]
+        if payload.get("diagnosis"):
+            evidence.append((OBSERVED, payload["diagnosis"]))
+        evidence.append((OBSERVED,
+                         "controlled: the SAME file loads 5 hooks at a trusted project "
+                         "root and 0 in a git worktree — "
+                         "`python3 framework/scripts/codex_hook_state.py --explain`"))
+        return NOT_LOADED, evidence
+    return CONFIGURED, [(OBSERVED,
+                         f"`hooks/list` reports {len(payload.get('hooks', []))} loaded "
+                         f"hook(s) for this working directory")]
+
+
 def hook_status(surface: Surface):
     """The five-plus-one valued derivation, with each row's evidence class.
 
@@ -565,6 +612,18 @@ def hook_status(surface: Surface):
     evidence = evidence + receipt_evidence
     if receipt_state in (DEMONSTRATED, NOT_FIRING, UNDERIVABLE):
         return receipt_state, evidence
+
+    # 🔴 Ask the runtime what it actually LOADED, before saying anything about trust.
+    #
+    # Revision 7 went straight from "the registration parses" to TRUST_PENDING, because
+    # nothing readable could distinguish a hook awaiting review from a hook that was
+    # never registered. `hooks/list` distinguishes them, with no session and no spend,
+    # and for every LEGEND worktree it answers ZERO. Saying TRUST_PENDING there names a
+    # gate that this registration never reached.
+    load_state, load_evidence = codex_hook_load_state(surface)
+    evidence = evidence + load_evidence
+    if load_state == NOT_LOADED:
+        return NOT_LOADED, evidence
 
     evidence.append((DOCUMENTED,
                      "the runtime gates project hooks behind a per-hook review — its own "

@@ -242,11 +242,87 @@ class FailsClosed(unittest.TestCase):
         reason = json.loads(out)["hookSpecificOutput"]["permissionDecisionReason"]
         self.assertIn("SHELL_TOOLS", reason, "the denial must name where the fix goes")
 
-    def test_unrecognised_tool_can_be_waived_only_deliberately(self) -> None:
+    def test_no_environment_variable_can_turn_an_unknown_tool_into_an_allow(self) -> None:
+        """🔴 `PRE_TOOL_USE_GUARD_UNKNOWN_TOOL=allow` is REMOVED in revision 8.
+
+        It returned ALLOW before the policy ran at all, so any process that could set an
+        environment variable could turn the guard off for every tool it did not already
+        know — including a renamed shell tool, which is precisely the scenario the
+        denial message it printed was warning about. An environment variable is not an
+        authorisation, and "deliberate" is not a property that `getenv` can check.
+
+        The old name is asserted dead, not merely unused: a variable that still worked
+        while nothing set it would be a bypass waiting for one line of config.
+        """
         payload = claude_payload(READ_ONLY)
         payload["tool_name"] = "Read"
-        _, out = run_entry(json.dumps(payload), env={guard.UNKNOWN_TOOL_ENV: "allow"})
+        for name in ("PRE_TOOL_USE_GUARD_UNKNOWN_TOOL", guard.EXTRA_SHELL_TOOLS_ENV):
+            for value in ("allow", "1", "true", "*"):
+                with self.subTest(variable=name, value=value):
+                    _, out = run_entry(json.dumps(payload), env={name: value})
+                    self.assertEqual(decision_of(out), "deny")
+
+    def test_the_replacement_variable_can_only_add_policing(self) -> None:
+        """Naming a tool makes it POLICED. There is no spelling that unpolices one."""
+        payload = claude_payload("git add -A")
+        payload["tool_name"] = "SomeNewShell"
+        _, out = run_entry(json.dumps(payload),
+                           env={guard.EXTRA_SHELL_TOOLS_ENV: "SomeNewShell"})
+        self.assertEqual(decision_of(out), "deny", "the command must reach the policy")
+        reason = json.loads(out)["hookSpecificOutput"]["permissionDecisionReason"]
+        self.assertIn("Blanket staging", reason, "and be judged BY the policy")
+
+        payload = claude_payload(READ_ONLY)
+        payload["tool_name"] = "SomeNewShell"
+        _, out = run_entry(json.dumps(payload),
+                           env={guard.EXTRA_SHELL_TOOLS_ENV: "SomeNewShell"})
         self.assertEqual(decision_of(out), "allow")
+
+    def test_an_unknown_key_inside_tool_input_denies(self) -> None:
+        """🔴 The asymmetry, and why it is not arbitrary.
+
+        A key BESIDE `tool_input` cannot change what `tool_input` means, so it is
+        recorded and does not deny — a rule that denied on those refused every command
+        in the session that wrote it, because claude-code 2.1.232 sends two of them.
+
+        A key INSIDE `tool_input` is different: that is the object the command is read
+        out of, and the reduction below it takes the FIRST key it recognises. An
+        unrecognised sibling there may be a second command, or the key the runtime has
+        moved to, and either way the guard would police something other than what runs.
+        """
+        payload = claude_payload(READ_ONLY)
+        payload["tool_input"]["cmd2"] = "git add -A"
+        code, out = run_entry(json.dumps(payload))
+        self.assertEqual(decision_of(out), "deny")
+        reason = json.loads(out)["hookSpecificOutput"]["permissionDecisionReason"]
+        self.assertIn("cmd2", reason, "the denial must name the key")
+
+    def test_the_live_runtimes_own_tool_input_keys_are_all_known(self) -> None:
+        """The other direction: the rule above must not refuse the runtime that runs."""
+        for key in ("command", "description", "timeout", "run_in_background"):
+            self.assertIn(key, guard.KNOWN_TOOL_INPUT_KEYS)
+
+    def test_a_payload_declaring_an_unsupported_schema_denies(self) -> None:
+        payload = claude_payload(READ_ONLY)
+        payload["hook_schema_version"] = "2"
+        self.assertEqual(decision_of(run_entry(json.dumps(payload))[1]), "deny")
+
+    def test_a_payload_declaring_a_supported_schema_is_read_normally(self) -> None:
+        payload = claude_payload(READ_ONLY)
+        payload["hook_schema_version"] = "1"
+        self.assertEqual(decision_of(run_entry(json.dumps(payload))[1]), "allow")
+
+    def test_the_live_runtimes_own_payload_keys_are_all_known(self) -> None:
+        """🔴 Measured against the runtime, not against the schema table.
+
+        `runtime_bridge.md` § 2 says both input schemas were read out of the installed
+        runtimes. `effort` and `prompt_id` arrive on every Claude Code 2.1.232
+        PreToolUse and are in neither the table nor the harness contract it cites. A
+        first draft of the unknown-key rule denied on them and refused every command in
+        the session that wrote it, which is how they were found.
+        """
+        for key in ("effort", "prompt_id"):
+            self.assertIn(key, guard.KNOWN_PAYLOAD_KEYS)
 
     def test_unextractable_command_denies(self) -> None:
         payload = codex_payload("x")

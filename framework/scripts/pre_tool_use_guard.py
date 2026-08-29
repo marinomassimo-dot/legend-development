@@ -86,13 +86,71 @@ COMMAND_KEYS = ("command", "cmd", "script")
 # Keys that have been observed to hold a program body or a patch envelope.
 PROGRAM_KEYS = ("input", "source", "code", "program", "patch", "content")
 
+#: Keys observed inside `tool_input` for a shell call, per runtime. This is the object
+#: the command is READ OUT OF, so an unknown key here is not a harmless sibling: it may
+#: be a second command carrier, or the one the runtime now uses. Refused, and the
+#: denial names it.
+KNOWN_TOOL_INPUT_KEYS = frozenset({
+    # the command itself, under every spelling either runtime uses
+    "command", "cmd", "script", "input", "source", "code", "program", "patch", "content",
+    # Claude Code's Bash tool
+    "description", "timeout", "run_in_background", "shell_executable",
+    # Codex
+    "workdir", "with_escalated_permissions", "justification", "timeout_ms", "env",
+    "sandbox", "yield_time_ms", "max_output_tokens", "shell", "login",
+})
+
 SHELL_BINARIES = {"sh", "bash", "zsh", "dash", "ksh", "fish"}
 SHELL_SCRIPT_FLAGS = {"-c", "-lc", "-ic", "-lic", "-ilc"}
 
 #: `tools.exec_command({...})` / `tools.shell({...})` inside a code-mode program body.
 CODE_MODE_CALL = re.compile(r"\b(?:tools\s*\.\s*)?(exec_command|shell_command|unified_exec|shell)\s*\(")
 
-UNKNOWN_TOOL_ENV = "PRE_TOOL_USE_GUARD_UNKNOWN_TOOL"
+#: 🔴 REMOVED in revision 8: `PRE_TOOL_USE_GUARD_UNKNOWN_TOOL=allow`.
+#:
+#: It made an unrecognised tool ALLOW, and it did so by returning before the policy ran
+#: at all — so any process that could set an environment variable could turn the guard
+#: off for every tool it did not already know, including a renamed shell tool, which is
+#: the exact scenario the denial message it printed was warning about. An environment
+#: variable is not an authorisation, and "deliberate" is not a property a getenv can
+#: check.
+#:
+#: What replaces it can only ADD policing, never remove it: a comma-separated list of
+#: tool names to treat AS SHELL TOOLS. The failure direction of a mistake in this
+#: variable is that a harmless tool gets its command parsed, not that a mutating one
+#: stops being seen.
+EXTRA_SHELL_TOOLS_ENV = "PRE_TOOL_USE_GUARD_EXTRA_SHELL_TOOLS"
+
+#: Top-level payload keys either runtime is known to send. An unknown key means the
+#: payload is not the payload this guard was written against — Codex's own input schema
+#: declares `additionalProperties: false`, so an extra key is a protocol violation
+#: there and an unmeasured runtime change here. Either way it is not a thing to shrug at.
+KNOWN_PAYLOAD_KEYS = frozenset({
+    # Claude Code, per the harness contract this protocol § 2 recorded.
+    "session_id", "transcript_path", "cwd", "hook_event_name", "tool_name", "tool_input",
+    "permission_mode",
+    # 🔴 OBSERVED, claude-code 2.1.232, 2026-08-29 — and NOT in the § 2 table, which
+    # says both input schemas were "read out of the installed runtimes rather than taken
+    # from documentation about them". Two keys the live runtime sends on every
+    # PreToolUse were missing from it. The table is narrower than the wire, and it was
+    # a rule written against the table that found out.
+    "effort", "prompt_id",
+    # Codex, per `pre-tool-use.command.input` extracted from the installed binary
+    "model", "tool_use_id", "turn_id",
+    # Declared extension points, so a new field is a one-line change and not a mystery.
+    "hook_schema_version", "workspace_root",
+})
+
+#: Payload schema versions this guard has been written against. A payload DECLARING a
+#: version outside this set is refused.
+#:
+#: 🔴 This is about the PAYLOAD's declared schema, not about the runtime's version, and
+#: the two must not be collapsed. A runtime version this bridge has not measured makes
+#: its guarantees UNMEASURED rather than false — `cross_session_transport.md` § 3 — and
+#: denying every command on a version bump would make the guard the thing that breaks.
+#: A payload that declares a schema this parser does not implement is different: the
+#: fields may mean something else, and reading them anyway is guessing.
+SUPPORTED_PAYLOAD_SCHEMAS = frozenset({"1", "1.0", "v1"})
 
 
 class Undecidable(Exception):
@@ -121,6 +179,19 @@ def command_text(tool_input: object) -> str:
         return tool_input
     if not isinstance(tool_input, dict):
         raise Undecidable(f"tool_input is {type(tool_input).__name__}, not an object or a string")
+
+    # 🔴 Unknown keys HERE deny, unlike unknown keys beside `tool_input`. This is the
+    # object the command is read out of: an unrecognised key in it may be a second
+    # command carrier, or the one the runtime has moved to, and the loop below would
+    # police the first key it recognises and silently ignore the rest.
+    unknown = sorted(set(tool_input) - KNOWN_TOOL_INPUT_KEYS)
+    if unknown:
+        raise Undecidable(
+            "tool_input carries keys this guard does not know: "
+            + ", ".join(repr(k) for k in unknown)
+            + ". A key in the object the command is read out of may itself carry a "
+              "command, so this cannot be ignored. Add it to KNOWN_TOOL_INPUT_KEYS in "
+              "framework/scripts/pre_tool_use_guard.py once its meaning is established.")
 
     for key in COMMAND_KEYS:
         if key not in tool_input:
@@ -254,21 +325,57 @@ def decide(payload: object) -> "dict | None":
     if event is not None and event != HOOK_EVENT:
         raise Undecidable(f"payload declares hook_event_name={event!r}, not {HOOK_EVENT!r}")
 
+    # 🔴 A payload declaring a schema this parser does not implement is refused. Its
+    # fields may mean something other than what is read below, and reading them anyway
+    # is guessing about the one input the whole decision rests on.
+    declared = payload.get("hook_schema_version")
+    if declared is not None and str(declared) not in SUPPORTED_PAYLOAD_SCHEMAS:
+        raise Undecidable(
+            f"payload declares hook_schema_version={declared!r}; this guard implements "
+            + ", ".join(sorted(SUPPORTED_PAYLOAD_SCHEMAS))
+            + ". A schema this parser does not implement is not a schema it may read "
+              "leniently.")
+
+    # 🔴 An unknown top-level key is RECORDED, not refused, and the distinction was
+    # settled by the live runtime within a minute of the first draft.
+    #
+    # The first draft denied on any key outside KNOWN_PAYLOAD_KEYS. Claude Code 2.1.232
+    # sends `effort` and `prompt_id`, neither of which appears in the input-schema table
+    # this protocol § 2 says it MEASURED out of the installed runtimes — so the rule
+    # refused every command in the session that wrote it, immediately, including the one
+    # that would have diagnosed it.
+    #
+    # That is a real finding about the schema table and a bad rule. The reconciliation
+    # is about WHERE the key is. The decision rests on `tool_name`, `tool_input`, `cwd`
+    # and `hook_event_name`; an unknown SIBLING of those does not change what they mean,
+    # while an unknown key inside `tool_input` sits in the object the command is read
+    # out of and can change which key that is. So:
+    #
+    #   unknown key beside the decision fields  → UNMEASURED, recorded, does not deny
+    #   unknown key inside tool_input           → Undecidable, denies (see command_text)
+    #
+    # Denying on a sibling would make the guard fail on every runtime release, and a
+    # guard that fails on every release is a guard that gets disabled.
+    unmeasured_keys = sorted(set(payload) - KNOWN_PAYLOAD_KEYS)
+
     tool_name = payload.get("tool_name")
     if not isinstance(tool_name, str) or not tool_name:
         raise Undecidable("payload carries no `tool_name`")
 
-    known = set(SHELL_TOOLS) | CODE_MODE_TOOLS | PATCH_TOOLS
+    extra = {
+        name.strip() for name in os.environ.get(EXTRA_SHELL_TOOLS_ENV, "").split(",")
+        if name.strip()
+    }
+    known = set(SHELL_TOOLS) | CODE_MODE_TOOLS | PATCH_TOOLS | extra
     if tool_name not in known:
-        if os.environ.get(UNKNOWN_TOOL_ENV) == "allow":
-            return None
         raise Undecidable(
             f"`{tool_name}` is not a tool this guard knows.\n\n"
             "Either this hook is registered against tools it does not police — scope the "
-            f"matcher, or set {UNKNOWN_TOOL_ENV}=allow deliberately — or the runtime has "
-            "renamed its shell tool, in which case the guard has stopped covering the "
-            "shell and must be taught the new name in "
-            "framework/scripts/pre_tool_use_guard.py:SHELL_TOOLS."
+            "matcher — or the runtime has renamed its shell tool, in which case the "
+            "guard has stopped covering the shell and must be taught the new name in "
+            "framework/scripts/pre_tool_use_guard.py:SHELL_TOOLS.\n\n"
+            f"{EXTRA_SHELL_TOOLS_ENV} adds a name to the POLICED set; there is no "
+            "variable that removes one."
         )
 
     cwd = payload.get("cwd")

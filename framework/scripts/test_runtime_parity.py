@@ -268,9 +268,30 @@ class AMissingSafetyComponentIsNeverGreen(unittest.TestCase):
 
 class TheHookStateMachineIsFiveValued(unittest.TestCase):
     def test_configuration_alone_never_reaches_demonstrated(self) -> None:
-        """§ 38, mechanically: CONFIGURED != PROVEN."""
-        self.assertEqual(rp.hook_status(REAL)[0], rp.TRUST_PENDING)
-        self.assertNotIn(rp.TRUST_PENDING, rp.PASSING_HOOK_STATES)
+        """§ 38, mechanically: CONFIGURED != PROVEN.
+
+        🔴 The real surface now derives NOT_LOADED rather than TRUST_PENDING, and the
+        change is a strengthening, not a relaxation: revision 7 could not tell a hook
+        awaiting review from a hook that was never registered, so it said the kinder of
+        the two. `hooks/list` tells them apart, and for every LEGEND worktree the
+        answer is zero. Both states are asserted non-passing, and the assertion that
+        carries the weight is the second one.
+        """
+        state = rp.hook_status(REAL)[0]
+        self.assertIn(state, (rp.NOT_LOADED, rp.TRUST_PENDING, rp.UNDERIVABLE))
+        for unpassing in (rp.TRUST_PENDING, rp.NOT_LOADED, rp.CONFIGURED,
+                          rp.NOT_CONFIGURED, rp.NOT_FIRING, rp.UNDERIVABLE):
+            self.assertNotIn(unpassing, rp.PASSING_HOOK_STATES)
+
+    def test_not_loaded_is_strictly_worse_than_trust_pending(self) -> None:
+        """A registration that never loaded is not on either side of the trust gate.
+
+        Reporting TRUST_PENDING for it names a gate it never reached, and that is the
+        sentence revision 7 shipped for a registration that policed nothing in every
+        worktree for every actor.
+        """
+        self.assertNotEqual(rp.NOT_LOADED, rp.TRUST_PENDING)
+        self.assertNotIn(rp.NOT_LOADED, rp.PASSING_HOOK_STATES)
 
     def test_a_refusal_receipt_reaches_demonstrated(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -315,7 +336,11 @@ class TheHookStateMachineIsFiveValued(unittest.TestCase):
         result = subprocess.run([sys.executable, str(ENTRY), "--hook-status"],
                                 capture_output=True, text=True, cwd=str(REPO))
         self.assertNotEqual(result.returncode, 0)
-        self.assertIn("TRUST_PENDING", result.stdout)
+        self.assertNotIn(rp.DEMONSTRATED, result.stdout.split("\n")[0])
+        self.assertTrue(
+            any(state in result.stdout for state in
+                (rp.NOT_LOADED, rp.TRUST_PENDING, rp.UNDERIVABLE)),
+            "the CLI must name which undemonstrated state it is in")
 
 
 # ── P0-E · role reachability follows the ASSIGNED actor ────────────────────────────
