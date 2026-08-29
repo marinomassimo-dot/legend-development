@@ -58,7 +58,9 @@ INVARIANCE                Re-run with --tip set to the branch tip carrying THIS 
                           must print the same value, because every commit after ca124b0
                           touches only governance/candidates/, which P5.1 excludes. If it
                           does not, the hash is stale and this manifest is wrong.
-FILES                     16 changed · 6 new modules, 4 new suites, 1 protocol
+FILES                     16 in the CONTENT domain, +4429 −75
+                          5 new modules · 4 new suites · 6 modified · 1 protocol
+                          (17 with this file, which P5.1 excludes from the hash)
 ```
 
 ## 2 · The one-sentence change, and the measurement that forced it
@@ -152,15 +154,15 @@ and because the assertion afterwards read the file back rather than trusting the
 | the record | nothing | `execution_receipt` — 18 bound fields, chained, self-re-derived |
 | the Codex hook | `TRUST_PENDING`, cause explicitly not claimed | **`NOT_LOADED`**, cause measured with controls |
 
-Six new modules, four new suites:
+Five new modules and four new suites; `guard_policy.py` is rewritten, not added:
 
-```
-framework/scripts/effect_model.py             the vocabulary and the algebra — pure
-framework/scripts/execution_attestation.py    who, where, in what incarnation
-framework/scripts/post_effect_verify.py       predict → execute → observe → compare
-framework/scripts/execution_receipt.py        the bound, chained record
-framework/scripts/codex_hook_state.py         does the Codex registration LOAD?
-framework/scripts/guard_policy.py             now DERIVES effects; holds no verdict rule
+```text
+NEW  framework/scripts/effect_model.py             the vocabulary and the algebra — pure
+NEW  framework/scripts/execution_attestation.py    who, where, in what incarnation
+NEW  framework/scripts/post_effect_verify.py       predict → execute → observe → compare
+NEW  framework/scripts/execution_receipt.py        the bound, chained record
+NEW  framework/scripts/codex_hook_state.py         does the Codex registration LOAD?
+MOD  framework/scripts/guard_policy.py             now DERIVES effects; holds no verdict
 ```
 
 ### 3.1 · The authority had to be a mapping, not a product
