@@ -388,8 +388,10 @@ working tree's on-disk modes stay `644` while the index and HEAD say `755`. The 
 object is correct — every gate reads `git ls-tree HEAD` — but two consequences follow and
 the second is not cosmetic:
 
-1. `git status` in this worktree shows those paths as modified until someone with
-   `REF_WRITE` runs `chmod +x` or `git checkout` on them;
+1. `git status` in this worktree shows **16 paths** as modified until someone with
+   `REF_WRITE` runs `chmod +x` or `git checkout` on them. All 16 are mode-only —
+   `git diff --numstat` prints `0 0` for every one, so the diff is empty and the
+   committed objects are correct;
 2. 🔴 **any later plain `git add` on one of them silently reverts the mode**, because
    `git add` reads the on-disk bit. That is not hypothetical: commit `744e0bc` did exactly
    this to `hostile_corpus.py` and `test_runtime_diagnostics.py`, and unit 4 (`9c16d84`)
