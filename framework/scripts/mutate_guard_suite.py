@@ -128,7 +128,7 @@ MUTATIONS = [
         "M12", GUARD_POLICY,
         "            named = None if target in (UNNAMED, OPAQUE) else target",
         "            named = target if target not in (UNNAMED, OPAQUE) else '.'",
-        GUARD_SUITES,
+        GUARD_SUITES + ("framework/scripts/test_effect_model.py",),
         "a write whose target is never named is reported as a write to the working "
         "directory, so an UNNAMED mutation acquires a resolvable target"),
 
@@ -353,7 +353,7 @@ MUTATIONS = [
         "M45", GUARD_POLICY,
         '    return PROHIBITED, DENY_SHELL_WRITE + "\\n\\n" + decision.reason(), findings',
         '    return ALLOWED, None, findings',
-        GUARD_SUITES,
+        GUARD_SUITES + ("framework/scripts/test_effect_model.py",),
         "the catch-all at the end of `classify` allows anything the specific message "
         "branches did not name, so a refused decision becomes an ALLOW for any effect "
         "shape nobody wrote a sentence for"),
