@@ -1378,6 +1378,16 @@ DENY_UNKNOWN_EFFECT = (
 #: and nothing else inside it.
 DEFAULT_AUTHORITY = "SHELL_DEFAULT"
 
+#: Primitives whose hazard is history and other actors' uncommitted work, rather than
+#: the named file. They derive FILE_WRITE / FILE_DELETE with an UNNAMED target, so
+#: without this set they would be explained by the generic unnamed-target message.
+DESTRUCTIVE_GIT = frozenset({
+    "git reset --hard", "git clean", "git checkout", "git switch", "git restore",
+    "git rebase", "git branch", "git update-ref", "git stash", "git notes",
+    "git worktree", "git tag", "git reflog", "git cherry-pick", "git revert",
+    "git merge", "git am", "git filter-branch", "git replace", "git gc", "git prune",
+})
+
 _SCOPE = {
     INSIDE_REPO: em.INSIDE_REPO,
     OUTSIDE_REPO: em.OUTSIDE_REPO,
@@ -1450,6 +1460,17 @@ def classify(command: object, cwd: Optional[str] = None, repo_root: Optional[str
     denied = [effect for effect, _ in decision.denials]
     kinds = {effect.kind for effect in denied}
     scopes = {effect.scope for effect in denied}
+    primitives = {effect.primitive for effect in denied}
+
+    # 🔴 The message follows the DERIVATION, not just the scope.
+    #
+    # `git clean -fd` derives FILE_DELETE with an UNNAMED target, and the generic
+    # unnamed-target message is what an actor used to get: true, and silent about the
+    # thing that makes `git clean` dangerous — that untracked files are exactly where
+    # another actor's in-flight work lives. Same for `git reset --hard`. A denial that
+    # does not name the hazard is a denial the reader will try to route around.
+    if primitives & DESTRUCTIVE_GIT:
+        return PROHIBITED, DENY_REF, findings
 
     # Blanket staging keeps its own sentence and its own priority, because it is the
     # documented harm this policy was built for and its message is the one an actor has

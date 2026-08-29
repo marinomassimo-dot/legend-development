@@ -431,6 +431,44 @@ class TheDemonstratedMutationPathsAreClosed(unittest.TestCase):
         ("an unclassified git subcommand", "git frobnicate --all"),
     )
 
+    def test_a_denial_names_the_effect_it_derived_and_not_merely_no(self) -> None:
+        """🔴 "deny" is not enough, and a mutation run is what showed it.
+
+        `M36` deletes the branch that makes `git push` a NETWORK_WRITE, and every suite
+        still passed: the command falls through to the positive-listing catch-all and is
+        refused as UNKNOWN_EFFECT. The verdict is unchanged and the DERIVATION is gone —
+        the guard would be refusing a publication because it could not classify it, not
+        because it recognised it, and the next person to add `push` to the read list
+        would silently reopen it.
+
+        A denial that names its effect is the difference between a control and a
+        coincidence, so each row below pins the sentence, not just the answer.
+        """
+        for label, command, fragment in (
+            ("git push is a publication", "git push development HEAD",
+             "off this machine"),
+            ("git push --force too", "git push --force origin main",
+             "off this machine"),
+            ("scp is a publication", "scp AGENTS.md host:/b", "off this machine"),
+            ("reset --hard rewrites history", "git reset --hard HEAD~1",
+             "not yours to discard"),
+            ("clean deletes untracked work", "git clean -fd",
+             "not yours to discard"),
+            ("chmod is a permission change", "chmod 777 AGENTS.md", "mode"),
+            ("an undeclared extraction", "tar -xf /tmp/a.tar",
+             "does not name"),
+            ("an unclassified git subcommand", "git frobnicate --all",
+             "could not be derived"),
+            ("blanket staging", "git add -A", "Blanket staging"),
+            ("a shell write", "echo x > AGENTS.md", "Write and Edit"),
+        ):
+            with self.subTest(shape=label):
+                reason = policy.verdict(command, str(ROOT), str(ROOT))
+                self.assertIsNotNone(reason, f"{label} must deny")
+                self.assertIn(fragment, reason,
+                              f"{label} denied, but not for the reason it should: "
+                              f"{reason.splitlines()[0]}")
+
     def test_each_closed_shape_denies_identically_in_all_three(self) -> None:
         for label, command in self.CLOSED:
             with self.subTest(shape=label):

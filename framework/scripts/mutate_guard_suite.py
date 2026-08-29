@@ -62,9 +62,16 @@ MUTATIONS = [
         "        return OUTSIDE_REPO\n        # 🔴 Without a root,",
         GUARD_SUITES, "an unknown repository root fails OPEN instead of closed"),
     Mutation(
+        # 🔴 REANCHORED in revision 8. The old anchor read
+        #     if underivable:
+        #         return UNDERIVABLE, DENY_UNDERIVABLE, findings
+        # and that block no longer exists: `classify` now authorises an effect set and
+        # then chooses a sentence. The harness reported ANCHOR_MISSING rather than a
+        # pass, which is the only correct behaviour — a mutation that was never applied
+        # is not a mutation the tests killed.
         "M03", GUARD_POLICY,
-        "    if underivable:\n        return UNDERIVABLE, DENY_UNDERIVABLE, findings",
-        "    if underivable:\n        return ALLOWED, None, findings",
+        "    if em.UNDERIVABLE in scopes:\n        return UNDERIVABLE, DENY_UNDERIVABLE, findings",
+        "    if em.UNDERIVABLE in scopes:\n        return ALLOWED, None, findings",
         GUARD_SUITES, "an unresolvable write target is allowed instead of denied"),
     Mutation(
         "M04", GUARD_POLICY,
@@ -102,15 +109,28 @@ MUTATIONS = [
         "    for argv, writes, piped_in in segments(lex(stripped)):",
         GUARD_SUITES, "a scratch path behind an in-command variable stops resolving"),
     Mutation(
-        "M11", GUARD_POLICY,
-        "    if in_repo:\n        return PROHIBITED, DENY_SHELL_WRITE, findings",
-        "    if False:\n        return PROHIBITED, DENY_SHELL_WRITE, findings",
-        GUARD_SUITES, "a derived in-repository write stops being prohibited"),
+        # 🔴 REANCHORED, and moved from the MESSAGE to the DECISION.
+        #
+        # The old M11 and M12 mutated the branches that pick a denial sentence. In
+        # revision 8 those branches no longer decide anything — `em.authorize` does, and
+        # a command it refuses is refused whichever sentence is chosen. Mutating the
+        # message would now be an EQUIVALENT MUTANT: it survives because behaviour is
+        # unchanged, which says nothing about the tests. So both move onto the grant
+        # itself, where the meaning actually lives.
+        "M11", "framework/scripts/effect_model.py",
+        "_L4 = {kind: {INSIDE_REPO} for kind in _CONTENT}",
+        "_L2[INSIDE_REPO] = None\n_L4 = {kind: {INSIDE_REPO} for kind in _CONTENT}\n"
+        "_L3.update({kind: {INSIDE_REPO} for kind in _CONTENT})",
+        GUARD_SUITES + ("framework/scripts/test_effect_model.py",),
+        "SHELL_DEFAULT starts granting content writes inside the repository, which is "
+        "the whole thing revisions 1-7 exist to stop"),
     Mutation(
         "M12", GUARD_POLICY,
-        "    if unnamed:\n        return PROHIBITED, DENY_UNNAMED, findings",
-        "    if False:\n        return PROHIBITED, DENY_UNNAMED, findings",
-        GUARD_SUITES, "a write whose target is never named is allowed"),
+        "            named = None if target in (UNNAMED, OPAQUE) else target",
+        "            named = target if target not in (UNNAMED, OPAQUE) else '.'",
+        GUARD_SUITES,
+        "a write whose target is never named is reported as a write to the working "
+        "directory, so an UNNAMED mutation acquires a resolvable target"),
 
     # ── the adapter ───────────────────────────────────────────────────────────────
     Mutation(
@@ -264,10 +284,12 @@ MUTATIONS = [
         "`git push` stops being a NETWORK_WRITE, so publishing to a public remote is "
         "allowed from the shell"),
     Mutation(
-        "M37", GUARD_POLICY,
+        # 🔴 The target file was wrong: this rule lives in effect_model.py, and the
+        # harness reported ANCHOR_MISSING rather than letting it pass unapplied.
+        "M37", "framework/scripts/effect_model.py",
         '        if effect.kind in MUTATING and effect.scope not in NAMEABLE:',
         '        if False:',
-        GUARD_SUITES,
+        GUARD_SUITES + ("framework/scripts/test_effect_model.py",),
         "a mutation whose target is UNNAMED or UNDERIVABLE stops being refused ahead of "
         "the authority table, so the highest rung starts authorising them"),
     Mutation(
@@ -327,6 +349,22 @@ MUTATIONS = [
         ("framework/scripts/test_execution_receipt.py",),
         "a receipt stops having its own authorisation re-derived, so one claiming an "
         "effect set its named authority does not grant validates perfectly"),
+    Mutation(
+        "M45", GUARD_POLICY,
+        '    return PROHIBITED, DENY_SHELL_WRITE + "\\n\\n" + decision.reason(), findings',
+        '    return ALLOWED, None, findings',
+        GUARD_SUITES,
+        "the catch-all at the end of `classify` allows anything the specific message "
+        "branches did not name, so a refused decision becomes an ALLOW for any effect "
+        "shape nobody wrote a sentence for"),
+    Mutation(
+        "M46", "framework/scripts/execution_attestation.py",
+        '        if not self.ok:\n            return em.UNATTESTED',
+        '        if not self.ok and False:\n            return em.UNATTESTED',
+        ("framework/scripts/test_execution_attestation.py",),
+        "a duplicate of M43 by a different edit — the revocation is removed by a "
+        "CONDITION rather than by deleting the branch, which a test matching on "
+        "source text would miss and a test asserting behaviour catches"),
 ]
 
 

@@ -141,6 +141,28 @@ class AResumeMayNotInheritAuthority(unittest.TestCase):
                 result = ea.revalidate(binding(), binding(**{name: ea.UNDERIVABLE}))
                 self.assertEqual(ea.RESUME_BINDING_MISMATCH, result.verdict)
 
+    def test_a_dimension_underivable_in_BOTH_bindings_still_fails(self) -> None:
+        """🔴 The case that distinguishes the completeness check from the diff, and the
+        one a mutation run found missing.
+
+        The test above passes even with the completeness check deleted, because a field
+        that WAS a value and is now UNDERIVABLE differs, and the difference check catches
+        it. The discriminating case is a field that was underivable BEFORE and still is:
+        nothing differs, and without the completeness check the resume revalidates.
+
+        That is not hypothetical. `session` is UNDERIVABLE whenever a runtime emits no
+        session identifier, which is every invocation outside a hook payload — so this
+        is the ordinary shape of an unattested session, not an exotic one, and treating
+        it as MATCH would revalidate exactly the bindings that were never established.
+        """
+        for name in ea.DIMENSIONS:
+            with self.subTest(dimension=name):
+                stale = binding(**{name: ea.UNDERIVABLE})
+                result = ea.revalidate(stale, binding(**{name: ea.UNDERIVABLE}))
+                self.assertEqual(ea.RESUME_BINDING_MISMATCH, result.verdict,
+                                 f"{name} was UNDERIVABLE in both and revalidated")
+                self.assertEqual(em.UNATTESTED, result.effective_authority)
+
     def test_every_dimension_is_load_bearing_on_resume(self) -> None:
         """No subset may drift. Asserted over DIMENSIONS, not over the cases above."""
         for name in ea.DIMENSIONS:
