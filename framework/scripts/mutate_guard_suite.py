@@ -601,10 +601,16 @@ MUTATIONS = [
         "a MODEL-WRITTEN payload key is added to the trusted source table, which hands "
         "the authority perimeter straight back to the model with the adapter untouched"),
     Mutation(
+        # 🔴 SUITE LIST CORRECTED. It SURVIVED with the confinement and topology suites,
+        # and the assertion that kills it lives in `test_pre_tool_use_guard.py` — the
+        # unbound session whose non-scratch path must stay UNDERIVABLE. Wrong suite is one
+        # of the three causes of a survivor, and it is the one that looks exactly like a
+        # weak assertion until the suite list is read.
         "M66", GUARD_POLICY,
         '    return _stricter(outside, _workdir_repository_overlay(path, repo_root, unbound))',
         '    return _stricter(SCRATCH, _workdir_repository_overlay(path, repo_root, unbound))',
-        CONFINEMENT_SUITES + ("framework/scripts/test_repo_topology.py",),
+        CONFINEMENT_SUITES + ("framework/scripts/test_repo_topology.py",
+                              "framework/scripts/test_pre_tool_use_guard.py"),
         "the SESSION's answer is discarded and only the workdir overlay decides, so "
         "every path outside the effective workdir's own tree reads as scratch"),
     Mutation(
@@ -652,9 +658,17 @@ MUTATIONS = [
         "launcher unwrapping is removed, so `npx codex exec` reaches an agent runtime "
         "with the delegation test looking at `npx`"),
     Mutation(
+        # 🔴 THE MUTATION ITSELF WAS BROKEN, and it took a survivor to notice.
+        #
+        # It was `PACKAGE_LAUNCHERS = {} or {`, and `{} or {...}` evaluates to `{...}` in
+        # Python because an empty dict is falsy. The edit applied cleanly, changed
+        # nothing, and was reported as a survivor — indistinguishable in the report from
+        # a hole in the tests. A mutation that does not mutate is the fourth cause of a
+        # survivor and the only one that is a defect in the harness rather than in the
+        # suite; the emptied table now goes to a dead name.
         "M73", GUARD_POLICY,
         'PACKAGE_LAUNCHERS = {',
-        'PACKAGE_LAUNCHERS = {} or {',
+        'PACKAGE_LAUNCHERS = {}\n_UNREACHED_LAUNCHERS = {',
         CONFINEMENT_SUITES,
         "the launcher table is emptied rather than the branch removed — the same "
         "behaviour by a different edit, and the one a test that asserts on the branch "

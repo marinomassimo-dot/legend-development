@@ -981,6 +981,30 @@ class TheRepositoryBoundaryIsWhatMakesAWriteProhibited(unittest.TestCase):
                                          assigned=str(ROOT)),
                           "scratch space stays scratch space with or without a root")
 
+    def test_a_relative_target_with_no_cwd_and_no_root_is_repository_space(self) -> None:
+        """🔴 The last branch in `classify_target`, and nothing reached it.
+
+        A target that is still relative after the join had no `cwd` to anchor it, and with
+        no `repo_root` either there is no outside to place it in. Guessing outward is
+        guessing in the unsafe direction, so it is repository space and it denies.
+
+        A mutation returning `OUTSIDE_REPO` there SURVIVED the whole suite: every other
+        case supplies a cwd, so the branch is only reachable through a direct API call —
+        which is exactly the shape `M35`'s docstring warns about, one branch further down.
+        """
+        self.assertEqual(
+            policy.classify_target("AGENTS.md", cwd=None, repo_root=None,
+                                   assigned=str(ROOT)),
+            policy.INSIDE_REPO)
+        self.assertIsNotNone(
+            policy.verdict("echo x > AGENTS.md", cwd=None, repo_root=None,
+                           assigned=str(ROOT)),
+            "with neither an anchor nor a root, a relative write must not be allowed")
+        self.assertEqual(
+            policy.classify_target("AGENTS.md", cwd=None, repo_root=None, assigned=None),
+            policy.INSIDE_REPO,
+            "and losing the assignment as well must not make it MORE permissive")
+
     def test_an_unknown_assignment_treats_everything_as_repository_space(self) -> None:
         """The fail-closed arm, where revision 10 put it: on the ASSIGNMENT.
 

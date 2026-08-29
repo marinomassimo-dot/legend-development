@@ -350,6 +350,32 @@ class TheHookStateMachineIsFiveValued(unittest.TestCase):
                                           "guard_generation": "REV9"})
             self.assertEqual(state, rp.UNDERIVABLE)
 
+    def test_an_older_schema_is_refused_even_carrying_every_newer_field(self) -> None:
+        """🔴 The schema gate, made load-bearing — and it was not.
+
+        A mutation deleting the schema check SURVIVED: a revision-9 receipt has no
+        `guard_generation`, so the next check caught it anyway, and the two tests above
+        passed with the gate gone. That is an EQUIVALENT MUTANT only for the receipts
+        anyone has actually written; it is not equivalent for this one.
+
+        A receipt that declares `codex_hook_probe/1` and then carries every v2 field is a
+        producer that did not agree to the v2 contract. `pre_tool_use_guard` already
+        applies this rule to its own payloads — *a payload declaring a schema this parser
+        does not implement is not a schema it may read leniently* — and the same rule
+        holds for a receipt that a spend produced.
+        """
+        with tempfile.TemporaryDirectory() as tmp:
+            state, _ = self._status(tmp, {**self.DISCRIMINATING_RECEIPT,
+                                          "schema": "codex_hook_probe/1"})
+            self.assertEqual(state, rp.UNDERIVABLE)
+        with tempfile.TemporaryDirectory() as tmp:
+            state, _ = self._status(tmp, {**self.DISCRIMINATING_RECEIPT,
+                                          "schema": "codex_hook_probe/3"})
+            self.assertEqual(state, rp.UNDERIVABLE,
+                             "a LATER schema is refused too: this parser implements one "
+                             "contract, and a future one may mean something else by the "
+                             "same field names")
+
     def test_the_blanket_staging_code_is_excluded_from_the_discriminators(self) -> None:
         """🔴 The table, not an example. `BLANKET_STAGING` is the code for the one command
         both engines refuse identically; every other code is one the legacy engine has no
