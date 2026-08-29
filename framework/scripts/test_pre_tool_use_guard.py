@@ -788,6 +788,37 @@ class TheRepositorysOwnDocumentedCommandsStillRun(unittest.TestCase):
 class TheRepositoryBoundaryIsWhatMakesAWriteProhibited(unittest.TestCase):
     """Scope, asserted: this is a repository guard, not a filesystem guard."""
 
+    def test_repository_membership_beats_the_scratch_prefix_without_a_topology(self) -> None:
+        """🔴 The lexical root comparison is DEFENCE IN DEPTH, and it is reachable.
+
+        Revision 9 consults the topology first, which answers ASSIGNED_WORKTREE for a
+        path inside the tree — so for every caller in this repository the lexical
+        comparison below it never decides anything, and the mutation deleting it
+        survived the whole suite as an apparently equivalent mutant.
+
+        It is not equivalent. The topology is derived from `cwd`; the root is passed
+        separately. A caller that hands this function a `cwd` OUTSIDE any repository
+        together with a `repo_root` — which the hook path never does, and a direct API
+        call may — gets `topology.ok == False`, no topology answer, and then only this
+        branch stands between a repository under `TMPDIR` and the scratch prefixes.
+
+        Revision 8 shipped exactly that hole with the ordering the other way round, and
+        a fixture repository was writable for a whole revision. Deleting the redundant
+        check because the newer one usually fires first is how it comes back.
+        """
+        with tempfile.TemporaryDirectory() as raw:
+            repo = Path(raw) / "repo"
+            repo.mkdir()
+            subprocess.run(["git", "-C", str(repo), "init", "-q"], capture_output=True)
+            outside = Path(raw) / "not-a-repo"
+            outside.mkdir()
+            self.assertEqual(
+                policy.classify_target(str(repo / "a.md"), cwd=str(outside),
+                                       repo_root=str(repo)),
+                policy.INSIDE_REPO,
+                "a path inside the named root is repository space even when the "
+                "topology could not be derived and the path sits under TMPDIR")
+
     def test_a_write_outside_the_repository_is_not_this_guards_business(self) -> None:
         self.assertIsNone(policy.verdict("echo x > /Users/someone/notes.md",
                                          cwd=str(ROOT), repo_root=str(ROOT)))

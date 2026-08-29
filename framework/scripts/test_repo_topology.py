@@ -106,6 +106,39 @@ class LongestPrefixWins(unittest.TestCase):
         cls.fx.close()
         rt.reset()
 
+    def test_the_root_table_is_ordered_longest_first(self):
+        """🔴 The ORDERING, asserted directly — the classification results do not pin it.
+
+        Every nesting case below happens to answer correctly under declaration order
+        too, because the table is built with the subdivisions before the shared
+        checkout. So a mutation replacing the sort with `return table` survived: the
+        property held by luck, and luck is not a property. What must be true is that no
+        shorter root can win over a longer one, whatever order they were appended in.
+        """
+        roots = self.topology.roots()
+        lengths = [len(root) for root, _ in roots]
+        self.assertEqual(lengths, sorted(lengths, reverse=True))
+        # And the pair that actually collides: the common dir sits INSIDE the shared
+        # checkout, so its entry must precede it.
+        order = [scope for _, scope in roots]
+        self.assertLess(order.index(rt.GIT_COMMON_DIR), order.index(rt.SHARED_CHECKOUT))
+        self.assertLess(order.index(rt.ASSIGNED_WORKTREE), order.index(rt.SHARED_CHECKOUT))
+
+    def test_ordering_survives_a_reversed_table(self):
+        """The same question asked so it cannot pass by construction order: build a
+        topology whose shared checkout is listed first and longest-prefix must still
+        put a nested peer in the peer."""
+        shuffled = rt.Topology(
+            repository_id=self.topology.git_common_dir,
+            assigned_worktree=self.topology.assigned_worktree,
+            shared_checkout=self.topology.shared_checkout,
+            git_common_dir=self.topology.git_common_dir,
+            peer_worktrees=list(reversed(self.topology.peer_worktrees)),
+        )
+        self.assertEqual(shuffled.classify(str(self.fx.peer / "x.md")), rt.PEER_WORKTREE)
+        self.assertEqual(shuffled.classify(str(self.fx.assigned / "x.md")),
+                         rt.ASSIGNED_WORKTREE)
+
     def test_a_nested_peer_is_a_peer_and_not_the_shared_checkout(self):
         self.assertEqual(self.topology.classify(str(self.fx.peer / "framework" / "x.md")),
                          rt.PEER_WORKTREE)

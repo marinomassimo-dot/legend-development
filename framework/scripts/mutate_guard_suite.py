@@ -482,15 +482,16 @@ MUTATIONS = [
         "covers a content rewrite git declined to count lines for"),
     Mutation(
         "M58", "framework/scripts/codex_hook_state.py",
-        '    elif config["on_path_names_hooks"]:',
-        '    elif config["on_path_names_hooks"] or config["off_path_names_hooks"]:',
+        '    if config.get("on_path_names_hooks"):',
+        '    if config.get("on_path_names_hooks") or config.get("off_path_names_hooks"):',
         ("framework/scripts/test_runtime_diagnostics.py",),
         "a config the runtime never reads is reported as TRUST_BLOCKED, sending the "
         "reader to ask for a trust decision about a file nothing ever offered"),
     Mutation(
         "M59", "framework/scripts/guard_revision.py",
-        '    elif UNKNOWN in generations or ABSENT in generations:',
-        '    elif False:',
+        '    if UNKNOWN in generations or ABSENT in generations:\n'
+        '        return "UNDERIVABLE"',
+        '    if False:\n        return "UNDERIVABLE"',
         ("framework/scripts/test_runtime_diagnostics.py",),
         "a worktree whose guard could not be read is folded into the YES/NO answer, so "
         "a failure to measure is reported as a measurement"),

@@ -171,6 +171,23 @@ class NoAuthorityReachesAcrossTheRepository(unittest.TestCase):
     that: a seventh authority class inherits the property or fails here.
     """
 
+    def test_the_confined_set_is_not_empty(self):
+        """🔴 A property quantified over a set is vacuously true when the set is empty.
+
+        Every assertion below iterates `em.CONFINED`. Emptying it makes all of them
+        pass while the confinement is gone — and that mutation survived this suite until
+        this test existed. A quantified property needs its domain pinned as well as its
+        predicate.
+        """
+        self.assertEqual(em.CONFINED,
+                         frozenset({em.PEER_WORKTREE, em.SHARED_CHECKOUT,
+                                    em.GIT_COMMON_DIR}))
+        for scope in em.CONFINED:
+            self.assertIn(scope, em.SCOPES)
+            self.assertIn(scope, em.NAMEABLE,
+                          "a confined scope IS nameable; what stops it is that no "
+                          "authority grants it, which is a different denial message")
+
     def test_no_authority_grants_any_mutation_across_the_repository(self):
         for name, authority in em.AUTHORITIES.items():
             for kind in em.MUTATING:
@@ -245,6 +262,20 @@ class TheEffectiveWorkdirIsTheExecutionDirectory(unittest.TestCase):
         """🔴 Falling back to cwd would restore the revision-8 reading for the one
         input designed to defeat it."""
         self.assertEqual(self.verdict("/tmp", "/no/such/directory/anywhere"), "DENY")
+
+    def test_a_nonexistent_workdir_denies_even_where_falling_back_would_allow(self):
+        """🔴 The DISCRIMINATING case, and the reason the one above is not enough.
+
+        With the workdir check removed, a nonexistent path still yields no repository
+        root, and an unknown root makes every non-scratch target `INSIDE_REPO` — so the
+        command denies anyway and the test above passes with the guarantee deleted.
+        That mutation survived until this case existed.
+
+        Point the nonexistent workdir at SCRATCH space and the two readings separate:
+        falling back derives `/tmp/<gone>/probe.md`, which is scratch and ALLOWED, while
+        refusing to guess denies. Same rule, and now only one answer satisfies it.
+        """
+        self.assertEqual(self.verdict("/tmp", "/tmp/no-such-directory-here"), "DENY")
 
     def test_an_expanding_workdir_denies(self):
         self.assertEqual(self.verdict("/tmp", "$HOME/x"), "DENY")
@@ -393,6 +424,31 @@ class PostEffectVerificationMatchesTheAuthorisedSurface(unittest.TestCase):
         kinds = {(e.kind, e.target) for e in observed}
         self.assertIn((em.PERMISSION_CHANGE, "s.sh"), kinds)
         self.assertIn((em.WRITE, "s.sh"), kinds)
+
+    def test_a_binary_files_content_change_is_never_read_as_no_change(self):
+        """🔴 `git diff --numstat` prints `-` for both counts on a binary file.
+
+        Reading that as zero makes a content rewrite invisible, so an authorised
+        `chmod` would cover a rewrite of the bytes — `content_moved` returning False is
+        a claim that nothing changed, and git declining to COUNT lines is not evidence
+        that none moved. That mutation survived until this test existed, because every
+        other fixture here is a text file.
+        """
+        d = self.repo()
+        Path(d, "blob.bin").write_bytes(bytes(range(256)))
+        git(d, "add", "blob.bin")
+        git(d, "commit", "-qm", "binary")
+        Path(d, "blob.bin").write_bytes(bytes(reversed(range(256))))
+        self.assertTrue(pev.content_moved(d, "blob.bin"),
+                        "a binary rewrite must be reported as a content change")
+
+    def test_a_binary_file_left_alone_is_not_reported_as_changed(self):
+        """The positive control: `content_moved` must not simply always say yes."""
+        d = self.repo()
+        Path(d, "blob.bin").write_bytes(bytes(range(256)))
+        git(d, "add", "blob.bin")
+        git(d, "commit", "-qm", "binary")
+        self.assertFalse(pev.content_moved(d, "blob.bin"))
 
     def test_a_chmod_is_refused_from_the_shell_floor(self):
         d = self.repo()

@@ -560,8 +560,30 @@ def run(revision: str, root: Path, workspace: Path,
     # `A1-workdir-in-in` is the control: an ordinary repository write with cwd and
     # workdir both inside. An engine that ALLOWS it cannot see the scene as a
     # repository, and its `@ASSIGNED` rows are reported CONFOUNDED rather than scored.
+    return score(revision, rows)
+
+
+def scene_is_recognised(rows: List[Dict[str, object]]) -> bool:
+    """Does this engine see the scene's own worktree as a repository at all?
+
+    `A1-workdir-in-in` is an ordinary repository write with cwd and workdir both inside.
+    An engine that ALLOWS it is reading the scene's root as scratch.
+    """
     control = next((r for r in rows if r["id"] == "A1-workdir-in-in"), None)
-    scene_recognised = bool(control and control["observed"] == DENY)
+    return bool(control and control["observed"] == DENY)
+
+
+def score(revision: str, rows: List[Dict[str, object]]) -> Dict[str, object]:
+    """Turn observations into the reported quantities.
+
+    🔴 A pure function over rows, so a test can hand it a table and check the counting
+    without reconstructing an engine. It was inline, and the tests for the two counting
+    rules RE-IMPLEMENTED them in the test body — asserting that a copy of the code
+    behaves like the copy. Both mutations survived: the positive floor could be counted
+    as bypasses again, and a totally-confounded run could be scored anyway, and the
+    suite noticed neither.
+    """
+    scene_recognised = scene_is_recognised(rows)
     # 🔴 The confound is TOTAL, not partial, and a first version of this got that wrong.
     #
     # It excluded the rows whose `effect_class` said `@ASSIGNED`, which left

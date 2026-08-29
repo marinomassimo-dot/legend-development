@@ -112,6 +112,28 @@ def actor_of(root: Path) -> str:
     return root.name
 
 
+def uniformity(generations) -> str:
+    """`YES` / `NO` / `UNDERIVABLE` from the set of generations found.
+
+    🔴 A pure function so a test can drive all three answers without eleven worktrees.
+    It was inline, and the only test of the UNDERIVABLE arm asserted that
+    `generation_of(<empty dir>)` is `ABSENT` — true, and silent about what the SURVEY
+    then does with an `ABSENT` row. A mutation that folded unreadable worktrees into the
+    YES/NO answer survived, because nothing ever asked this question.
+
+    "Not uniform" is a measurement. "One of them could not be read" is a failure to
+    measure, and reporting the second as the first makes an unreadable worktree look
+    like a merely stale one — which is the difference between "nine actors need a merge"
+    and "one actor's tree is broken".
+    """
+    generations = set(generations)
+    if not generations:
+        return "UNDERIVABLE"
+    if UNKNOWN in generations or ABSENT in generations:
+        return "UNDERIVABLE"
+    return "YES" if len(generations) == 1 else "NO"
+
+
 def survey(cwd: str = ".") -> Dict[str, object]:
     """Every worktree, its guard, and whether they agree. Reads only."""
     roots = worktrees(cwd)
@@ -133,16 +155,7 @@ def survey(cwd: str = ".") -> Dict[str, object]:
         })
 
     generations = {row["guard_generation"] for row in rows}
-    if not rows:
-        uniform = "UNDERIVABLE"
-    elif UNKNOWN in generations or ABSENT in generations:
-        # 🔴 A worktree whose guard could not be classified makes the ANSWER unknown,
-        # not the answer NO. "Not uniform" is a measurement; "one of them could not be
-        # read" is a failure to measure, and reporting the second as the first would
-        # let an unreadable worktree look like a merely-stale one.
-        uniform = "UNDERIVABLE"
-    else:
-        uniform = "YES" if len(generations) == 1 else "NO"
+    uniform = uniformity(generations)
 
     return {
         "worktrees": rows,

@@ -45,11 +45,48 @@ class TheHookDiagnosticSeparatesItsCauses(unittest.TestCase):
         self.assertIn(chs.CONFIG_ABSENT, chs.DIAGNOSTIC_STATES)
         self.assertIn(chs.TRUST_BLOCKED, chs.DIAGNOSTIC_STATES)
 
-    def test_a_config_off_the_resolution_path_is_its_own_state(self):
-        """The measured cause here, and NOT a trust problem: nothing was ever offered
-        for review, so no decision was ever withheld."""
-        self.assertIn(chs.CONFIG_OFF_RESOLUTION_PATH, chs.DIAGNOSTIC_STATES)
-        self.assertNotEqual(chs.CONFIG_OFF_RESOLUTION_PATH, chs.TRUST_BLOCKED)
+    def test_every_branch_of_the_decision_is_driven(self):
+        """🔴 Through `classify_state`, the real function — not a copy of it.
+
+        The first version of this class asserted that two CONSTANTS were unequal, which
+        is true however the branch is written, and a mutation reporting an off-path
+        config as TRUST_BLOCKED survived the whole suite.
+        """
+        def config(layers=(), on_path=False, off_path=False, unreadable=False):
+            return {"layers": list(layers), "on_path_names_hooks": on_path,
+                    "off_path_names_hooks": off_path, "any_unreadable": unreadable}
+
+        cases = [
+            ("no config anywhere", chs.NOT_LOADED, [], config(), chs.CONFIG_ABSENT),
+            ("a file that cannot be read", chs.NOT_LOADED, [],
+             config(layers=[{}], unreadable=True), chs.CONFIG_INVALID),
+            ("files, none naming hooks", chs.NOT_LOADED, [],
+             config(layers=[{}]), chs.HOOKS_EMPTY),
+            ("hooks named ON the path", chs.NOT_LOADED, [],
+             config(layers=[{}], on_path=True), chs.TRUST_BLOCKED),
+            ("hooks named only OFF the path", chs.NOT_LOADED, [],
+             config(layers=[{}], off_path=True), chs.CONFIG_OFF_RESOLUTION_PATH),
+            ("loaded, untrusted", chs.LOADED_UNTRUSTED, [{"trustStatus": "untrusted"}],
+             config(), chs.HOOKS_LOADED_UNTRUSTED),
+            ("loaded, trusted", chs.LOADED_TRUSTED, [{"trustStatus": "trusted"}],
+             config(), chs.HOOKS_LOADED_TRUSTED),
+            ("no answer", chs.UNDERIVABLE, [], config(), chs.UNDERIVABLE),
+        ]
+        for label, runtime, hooks, cfg, expected in cases:
+            with self.subTest(case=label):
+                self.assertEqual(chs.classify_state(runtime, hooks, cfg), expected)
+        self.assertEqual(len({c[-1] for c in cases}), len(cases),
+                         "two rows expecting one state would leave a branch undriven")
+
+    def test_an_off_path_config_is_never_reported_as_a_withheld_trust_decision(self):
+        """🔴 The distinction that costs a reader a wrong repair: TRUST_BLOCKED sends
+        them to ask a human for a decision about a file nothing ever offered."""
+        off_path = {"layers": [{}], "on_path_names_hooks": False,
+                    "off_path_names_hooks": True, "any_unreadable": False}
+        self.assertEqual(chs.classify_state(chs.NOT_LOADED, [], off_path),
+                         chs.CONFIG_OFF_RESOLUTION_PATH)
+        self.assertNotEqual(chs.classify_state(chs.NOT_LOADED, [], off_path),
+                            chs.TRUST_BLOCKED)
 
     def test_firing_and_enforcing_are_never_derived_from_hooks_list(self):
         """🔴 `hooks/list` reports what is LOADED. Loaded is not trusted, trusted is not
@@ -92,10 +129,25 @@ class GuardRevisionUniformityIsMeasuredAndNotAssumed(unittest.TestCase):
     def test_the_verdict_is_one_of_three_values(self):
         self.assertIn(self.report["guard_revision_uniform"], ("YES", "NO", "UNDERIVABLE"))
 
-    def test_an_unreadable_worktree_makes_the_answer_underivable_not_no(self):
-        """🔴 'Not uniform' is a measurement; 'one could not be read' is a failure to
-        measure, and reporting the second as the first makes an unreadable worktree
-        look like a merely stale one."""
+    def test_the_verdict_is_driven_through_the_real_function(self):
+        """🔴 `uniformity`, not a copy of it.
+
+        The first version asserted `generation_of(<empty dir>) == ABSENT` — true, and
+        silent about what the SURVEY does with an ABSENT row. A mutation folding
+        unreadable worktrees into the YES/NO answer survived the whole suite.
+
+        'Not uniform' is a measurement; 'one could not be read' is a failure to measure,
+        and reporting the second as the first is the difference between "nine actors
+        need a merge" and "one actor's tree is broken".
+        """
+        self.assertEqual(gr.uniformity({gr.REV9}), "YES")
+        self.assertEqual(gr.uniformity({gr.REV9, gr.LEGACY}), "NO")
+        self.assertEqual(gr.uniformity({gr.REV9, gr.ABSENT}), "UNDERIVABLE")
+        self.assertEqual(gr.uniformity({gr.REV9, gr.UNKNOWN}), "UNDERIVABLE")
+        self.assertEqual(gr.uniformity({gr.ABSENT}), "UNDERIVABLE")
+        self.assertEqual(gr.uniformity(set()), "UNDERIVABLE")
+
+    def test_an_unreadable_directory_classifies_as_absent(self):
         with tempfile.TemporaryDirectory() as raw:
             empty = Path(raw) / "nothing"
             empty.mkdir()
@@ -170,32 +222,65 @@ class TheHostileCorpusIsSelfDescribing(unittest.TestCase):
                                 "a corpus with no positive floor scores a guard that "
                                 "denies everything as perfect")
 
-    def test_a_positive_control_is_never_counted_as_a_bypass(self):
-        """🔴 The first counter reported eight bypasses for a revision that had one;
-        seven were the positive floor. A corpus that counts its own controls as
-        bypasses improves every time someone adds a control."""
-        rows = [{"mutating": True, "positive_control": True, "observed": hc.ALLOW},
-                {"mutating": True, "positive_control": False, "observed": hc.ALLOW}]
-        counted = [r for r in rows
-                   if r["mutating"] and not r["positive_control"]
-                   and r["observed"] != hc.SKIP]
-        self.assertEqual(len(counted), 1)
+    @staticmethod
+    def _row(case_id, observed, mutating=True, control=False, expected=hc.DENY):
+        return {"id": case_id, "observed": observed, "expected": expected,
+                "mutating": mutating, "positive_control": control,
+                "effect_class": "WRITE@ASSIGNED", "provenance": hc.PLAN_BRIEF,
+                "agrees": observed == expected}
 
-    def test_an_unrecognised_scene_makes_nothing_attributable(self):
-        """🔴 The confound is TOTAL, and a first version scored the half it thought was
-        safe. If an engine reads the scene's root as scratch, every case touching the
-        scene is allowed for that ONE reason, and a ratio over any subset of them
-        attributes a location defect to whatever families the subset happened to name.
+    def test_a_positive_control_is_never_counted_as_a_bypass(self):
+        """🔴 Scored through `hc.score`, the real counter — not a copy of it.
+
+        The first version of this test re-implemented the filter in its own body and
+        asserted that the copy behaved like the copy. The mutation that puts positive
+        controls back into the denominator survived the whole suite.
+
+        The first counter reported eight bypasses for a revision that had one; seven
+        were the positive floor. A corpus that counts its own controls as bypasses gets
+        worse every time someone adds a control.
         """
-        rows = [{"id": "A1-workdir-in-in", "observed": hc.ALLOW},
-                {"id": "Z2-numbered-redirect", "observed": hc.ALLOW},
-                {"id": "T1-scratch-write", "observed": hc.ALLOW}]
-        control = next(r for r in rows if r["id"] == "A1-workdir-in-in")
-        recognised = control["observed"] == hc.DENY
-        confounded = [] if recognised else [r["id"] for r in rows]
-        self.assertFalse(recognised)
-        self.assertEqual(len(confounded), len(rows),
-                         "a partially-scored confounded run misattributes by design")
+        rows = [self._row("A1-workdir-in-in", hc.DENY),
+                self._row("T1-scratch", hc.ALLOW, control=True, expected=hc.ALLOW),
+                self._row("T2-commit", hc.ALLOW, control=True, expected=hc.ALLOW),
+                self._row("X1-real-bypass", hc.ALLOW)]
+        report = hc.score("rev9", rows)
+        self.assertEqual(report["bypasses"], 1, "the two controls are not bypasses")
+        self.assertEqual(report["mutating_shapes_that_must_be_refused"], 2)
+        self.assertEqual(report["positive_controls"], 2)
+        self.assertEqual(report["positive_controls_refused"], 0)
+
+    def test_an_unrecognised_scene_scores_nothing_at_all(self):
+        """🔴 Through `hc.score`. If the scene control is ALLOWED, every row is
+        confounded and no ratio over any subset of them measures a family."""
+        rows = [self._row("A1-workdir-in-in", hc.ALLOW),
+                self._row("Z2-numbered-redirect", hc.ALLOW),
+                self._row("T1-scratch", hc.ALLOW, control=True, expected=hc.ALLOW)]
+        report = hc.score("rev8", rows)
+        self.assertFalse(report["scene_recognised_as_a_repository"])
+        self.assertEqual(len(report["confounded_by_scene_location"]), len(rows))
+        self.assertEqual(report["mutating_shapes_that_must_be_refused"], 0)
+        self.assertEqual(report["bypasses"], 0)
+
+    def test_a_confounded_rows_recorded_expectation_is_not_scored(self):
+        """🔴 `Z2` records rev8=DENY, measured where revision 8 recognises the
+        repository. Marking it MISRECORDED here would push a later editor to 'correct'
+        the table to say revision 8 never closed the numbered redirect. It did."""
+        rows = [self._row("A1-workdir-in-in", hc.ALLOW),
+                self._row("Z2-numbered-redirect", hc.ALLOW, expected=hc.DENY)]
+        report = hc.score("rev8", rows)
+        self.assertEqual(report["misrecorded"], [])
+        z2 = next(r for r in report["rows"] if r["id"] == "Z2-numbered-redirect")
+        self.assertEqual(z2["expected"], hc.NA)
+
+    def test_a_recognised_scene_does_score_the_recorded_expectations(self):
+        """The positive control for the two tests above: with the scene recognised, a
+        genuinely wrong record IS reported."""
+        rows = [self._row("A1-workdir-in-in", hc.DENY),
+                self._row("Z2-numbered-redirect", hc.ALLOW, expected=hc.DENY)]
+        report = hc.score("rev8", rows)
+        self.assertTrue(report["scene_recognised_as_a_repository"])
+        self.assertEqual(report["misrecorded"], ["Z2-numbered-redirect"])
 
     def test_the_k1_fixture_is_always_built_in_the_system_temp_dir(self):
         """🔴 TMPDIR is the whole content of case K1. Building its fixture beside a

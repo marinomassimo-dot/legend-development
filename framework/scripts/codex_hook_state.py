@@ -263,6 +263,35 @@ def config_layer(cwd: str) -> Dict[str, object]:
     }
 
 
+def classify_state(runtime_state: str, hooks: List[dict],
+                   config: Dict[str, object]) -> str:
+    """The decision itself, as a PURE function of the two observations.
+
+    🔴 Separated from `diagnose` so a test can drive every branch without a runtime.
+    It was inline, and the only test of the `CONFIG_OFF_RESOLUTION_PATH` branch asserted
+    that two CONSTANTS were unequal — which is true however the branch is written.
+    A mutation that reported an off-path config as `TRUST_BLOCKED` survived the suite,
+    because nothing in it ever ran this decision.
+    """
+    if runtime_state == UNDERIVABLE:
+        return UNDERIVABLE
+    if hooks:
+        return (HOOKS_LOADED_TRUSTED if runtime_state == LOADED_TRUSTED
+                else HOOKS_LOADED_UNTRUSTED)
+    if config.get("any_unreadable"):
+        return CONFIG_INVALID
+    if not config.get("layers"):
+        return CONFIG_ABSENT
+    if config.get("on_path_names_hooks"):
+        # A file the runtime DOES read, naming hooks, and none loaded. Trust is the
+        # remaining condition — the runtime does not say so, so the name records what
+        # was derived and `config` records the evidence it was derived from.
+        return TRUST_BLOCKED
+    if config.get("off_path_names_hooks"):
+        return CONFIG_OFF_RESOLUTION_PATH
+    return HOOKS_EMPTY
+
+
 def diagnose(cwd: str) -> Dict[str, object]:
     """Cross the config layer with the runtime's answer, and name ONE cause.
 
@@ -291,25 +320,7 @@ def diagnose(cwd: str) -> Dict[str, object]:
     """
     runtime_state, hooks, detail = state_for(cwd)
     config = config_layer(cwd)
-
-    if runtime_state == UNDERIVABLE:
-        state = UNDERIVABLE
-    elif hooks:
-        state = (HOOKS_LOADED_TRUSTED if runtime_state == LOADED_TRUSTED
-                 else HOOKS_LOADED_UNTRUSTED)
-    elif config["any_unreadable"]:
-        state = CONFIG_INVALID
-    elif not config["layers"]:
-        state = CONFIG_ABSENT
-    elif config["on_path_names_hooks"]:
-        # A file the runtime DOES read, naming hooks, and none loaded. Trust is the
-        # remaining condition — the runtime does not say so, so the name records what
-        # was derived and `config` records the evidence it was derived from.
-        state = TRUST_BLOCKED
-    elif config["off_path_names_hooks"]:
-        state = CONFIG_OFF_RESOLUTION_PATH
-    else:
-        state = HOOKS_EMPTY
+    state = classify_state(runtime_state, hooks, config)
 
     return {
         "cwd": cwd,
