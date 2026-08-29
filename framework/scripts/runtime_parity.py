@@ -185,15 +185,57 @@ PROBE_COMMANDS = (
     ("rg --files | sort", "allow"),
 )
 
-#: What the policy still does NOT stop, printed by --characterize and asserted open by
-#: framework/scripts/test_pre_tool_use_guard.py. Closing one means closing its entry too.
+#: What the policy still does NOT stop, printed by --characterize and asserted OPEN.
+#:
+#: 🔴 Revision 8 closed five of revision 7's six entries — chmod/chown, `git reset
+#: --hard`, `git checkout -- .`, `git clean -fd` and `git push` — by deriving their
+#: EFFECT rather than pattern-matching their text: they are PERMISSION_CHANGE,
+#: FILE_WRITE, FILE_DELETE and NETWORK_WRITE, and `SHELL_DEFAULT` grants none of those.
+#: They now live in `GUARD_CLOSED_DEBT` below, which asserts the opposite direction, so
+#: a regression that re-opens one fails just as loudly as closing one used to.
 GUARD_RESIDUAL_DEBT = (
+    ("a committed script that writes", "python3 framework/scripts/legend_lint.py --fix"),
+)
+
+#: Closed in revision 8, and asserted CLOSED. An entry moves from the table above to
+#: this one only with the fix that closed it, and each name here is a family the
+#: revision-7 candidate declared it was NOT closing.
+GUARD_CLOSED_DEBT = (
     ("chmod / chown", "chmod 777 AGENTS.md"),
     ("git reset --hard", "git reset --hard HEAD~1"),
     ("git checkout -- .", "git checkout -- ."),
     ("git clean -fd", "git clean -fd"),
     ("git push", "git push --force origin main"),
-    ("a committed script that writes", "python3 framework/scripts/legend_lint.py --fix"),
+    # Undeclared in revision 7 — allowed, and not listed as debt either. That gap
+    # between "refused" and "declared open" is what the effect model removes.
+    ("numbered redirect", "echo x 1> AGENTS.md"),
+    ("destination in a flag", "cp -t framework/scripts /tmp/a"),
+    ("a newline hiding a write", "echo hi\ngit add -A"),
+    ("touch", "touch AGENTS.md"),
+    ("curl to a named file", "curl -o AGENTS.md https://example.com/x"),
+    ("wget to a directory", "wget -P framework/scripts https://example.com/x"),
+    ("archive extraction", "tar -xf /tmp/a.tar -C framework"),
+    ("git apply", "git apply /tmp/p.diff"),
+    ("git rm", "git rm AGENTS.md"),
+    ("git restore", "git restore AGENTS.md"),
+    ("git branch -D", "git branch -D lettore"),
+    ("git update-ref", "git update-ref refs/heads/main HEAD"),
+    ("git stash", "git stash push -u -m x"),
+    ("scp out of the machine", "scp AGENTS.md host:/b"),
+)
+
+#: 🔴 The other direction, and the reason this candidate is not "a design that simply
+#: blocks everything": these are the acts an actor NEEDS in order to land work, and
+#: each must stay ALLOWED under the same policy revision, in the same runtimes.
+GUARD_POSITIVE_FLOOR = (
+    ("read the tree", "git status --short"),
+    ("read a ref", "git branch --show-current"),
+    ("list worktrees", "git worktree list"),
+    ("create its own branch", "git checkout -b plan-something-new"),
+    ("stage a named path", "git add framework/scripts/guard_policy.py"),
+    ("commit", "git commit -m 'a message'"),
+    ("invoke a committed script", "python3 framework/scripts/legend_lint.py ."),
+    ("write to the scratchpad", "echo x > /tmp/scratch/notes.txt"),
 )
 
 

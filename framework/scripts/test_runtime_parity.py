@@ -617,6 +617,39 @@ class TheResidualDebtStaysDeclared(unittest.TestCase):
                 self.assertEqual(claude, "allow",
                                  "if this now denies, close the debt entry with the fix")
 
+    def test_every_closed_gap_stays_closed_on_both_sides(self) -> None:
+        """🔴 The mirror assertion, and the one revision 7 did not have.
+
+        A table that only asserts gaps are OPEN cannot notice one re-opening. Every
+        family revision 8 closed is pinned here in the deny direction, in BOTH
+        runtimes, so a later edit that restores a bypass fails as loudly as closing one
+        used to — and closing a gap without moving its entry fails too.
+        """
+        for label, command in rp.GUARD_CLOSED_DEBT:
+            with self.subTest(gap=label):
+                claude = rp._hook(REAL, rp.claude_payload(REAL, command))
+                codex = rp._hook(REAL, rp.codex_payload(REAL, command))
+                self.assertEqual(claude, codex,
+                                 "a control on one side only is an escalation by runtime")
+                self.assertEqual(claude, "deny",
+                                 f"{label!r} was closed in revision 8 and is open again")
+
+    def test_the_positive_floor_survives_in_both_runtimes(self) -> None:
+        """A write-control system that blocks everything is not a write-control system.
+
+        FORBIDDEN_WRITE → REFUSED is half a claim. This is the other half, and it runs
+        against the SAME policy revision, the SAME engine and both payload shapes, so
+        the two halves cannot be measured on different trees.
+        """
+        for label, command in rp.GUARD_POSITIVE_FLOOR:
+            with self.subTest(act=label):
+                claude = rp._hook(REAL, rp.claude_payload(REAL, command))
+                codex = rp._hook(REAL, rp.codex_payload(REAL, command))
+                self.assertEqual(claude, codex,
+                                 "an act permitted in one runtime only is an escalation")
+                self.assertEqual(claude, "allow",
+                                 f"{label!r} is how work lands here and it is refused")
+
 
 class TheBridgesOwnFilesDoNotAddSurfaceDefects(unittest.TestCase):
     """A delta check, because the absolute one is already red and cannot report a new fault.

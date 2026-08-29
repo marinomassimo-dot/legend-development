@@ -64,7 +64,13 @@ from __future__ import annotations
 import posixpath
 import re
 import shlex
+import sys
+from pathlib import Path
 from typing import Iterable, List, Optional, Sequence, Tuple
+
+if str(Path(__file__).resolve().parent) not in sys.path:
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+import effect_model as em  # noqa: E402
 
 # ── outcomes ───────────────────────────────────────────────────────────────────────
 
@@ -79,14 +85,62 @@ UNNAMED = "\x00UNNAMED\x00"
 OPAQUE = "\x00OPAQUE\x00"
 
 
-class Finding:
-    """One derived mutation: what would write, where, and how that was decided."""
+#: Every rule this policy can derive, mapped onto the closed effect vocabulary.
+#:
+#: 🔴 The mapping is total and `test_pre_tool_use_guard.py::EveryRuleMapsToAnEffect`
+#: asserts it over the rules the module actually emits, not over this dictionary. A rule
+#: added without an entry does not silently become harmless — `Finding.effect` returns
+#: `UNKNOWN_EFFECT` for an unmapped rule, which is denied under every authority. The
+#: failure direction of forgetting is refusal.
+RULE_EFFECT = {
+    "BLANKET_STAGING": em.STAGE,
+    "NAMED_STAGING": em.STAGE,
+    "COMMIT": em.COMMIT,
+    "REDIRECTION": em.WRITE,
+    "FILE_WRITE": em.WRITE,
+    "FILE_DELETE": em.DELETE,
+    "FILE_RENAME": em.RENAME,
+    "IN_PLACE_EDIT": em.WRITE,
+    "PATCH_APPLY": em.WRITE,
+    "PROGRAM_WRITE": em.WRITE,
+    "ARCHIVE_EXTRACT": em.ARCHIVE_EXTRACT,
+    "PERMISSION_CHANGE": em.PERMISSION_CHANGE,
+    "REF_MUTATION": em.REF_MUTATION,
+    "NETWORK_WRITE": em.NETWORK_WRITE,
+    # Shapes whose effect is precisely what could not be derived.
+    "OPAQUE_PROGRAM": em.UNKNOWN_EFFECT,
+    "STDIN_SHELL": em.UNKNOWN_EFFECT,
+    "WRAPPER_DEPTH": em.UNKNOWN_EFFECT,
+    "SHELL_OUT": em.UNKNOWN_EFFECT,
+}
 
-    def __init__(self, rule: str, primitive: str, targets: Sequence[str], detail: str = ""):
+
+class Finding:
+    """One derived mutation: what would write, where, and how that was decided.
+
+    A finding is the policy's own vocabulary; `effect` projects it onto the shared one
+    in `effect_model.py`, which is the only vocabulary `post_effect_verify.py` can also
+    speak. The two are kept separate because a rule name says *how the guard decided*
+    (`IN_PLACE_EDIT`) and an effect kind says *what would happen* (`WRITE`), and a
+    filesystem delta can corroborate the second and never the first.
+    """
+
+    def __init__(self, rule: str, primitive: str, targets: Sequence[str], detail: str = "",
+                 scope: Optional[str] = None):
         self.rule = rule
         self.primitive = primitive
         self.targets = list(targets)
         self.detail = detail
+        # 🔴 A scope the finding DECLARES, overriding path classification. Needed
+        # because a target is not always a path: `git push development` names a remote,
+        # and classifying `development` as a path puts a publication at INSIDE_REPO —
+        # the one scope where the guard would wave it through. Set it only where the
+        # target is known not to be a working-tree path.
+        self.scope = scope
+
+    @property
+    def effect(self) -> str:
+        return RULE_EFFECT.get(self.rule, em.UNKNOWN_EFFECT)
 
     def __repr__(self) -> str:  # pragma: no cover - diagnostics only
         return f"Finding({self.rule!r}, {self.primitive!r}, {self.targets!r})"
@@ -151,6 +205,29 @@ OPTIONS_WITH_VALUE = {
     "sed": frozenset({"-e", "--expression", "-f", "--file", "-l"}),
     "perl": frozenset({"-e", "-E", "-I", "-m", "-M"}),
     "tee": frozenset({}),
+    # Added in revision 8, with the families they belong to. An option-value that is not
+    # listed here arrives in `operands()` as if it were a path, which is how `chmod 755`
+    # reported a mode as a write target.
+    "ln": frozenset({"-S", "--suffix", "-t", "--target-directory"}),
+    "touch": frozenset({"-r", "--reference", "-t", "-d", "--date"}),
+    "mkdir": frozenset({"-m", "--mode"}),
+    "chmod": frozenset({"--reference"}),
+    "chown": frozenset({"--reference", "--from"}),
+    "chgrp": frozenset({"--reference"}),
+    "curl": frozenset({"-o", "--output", "-T", "--upload-file", "-d", "--data", "-H",
+                       "--header", "-X", "--request", "-u", "--user", "-F", "--form",
+                       "-A", "--user-agent", "-b", "--cookie", "-c", "--cookie-jar",
+                       "-e", "--referer", "-m", "--max-time", "--data-binary",
+                       "--data-raw", "-w", "--write-out", "-K", "--config"}),
+    "wget": frozenset({"-O", "--output-document", "-P", "--directory-prefix",
+                       "-o", "--output-file", "-U", "--user-agent", "-T", "--timeout",
+                       "--header", "--post-data", "--post-file", "-i", "--input-file"}),
+    "tar": frozenset({"-f", "--file", "-C", "--directory", "-T", "--files-from",
+                      "--exclude", "--transform", "--strip-components"}),
+    "unzip": frozenset({"-d", "-x", "-P"}),
+    "7z": frozenset({"-o", "-p", "-x"}),
+    "rm": frozenset({}),
+    "git": frozenset({"-C", "-c", "--git-dir", "--work-tree", "--namespace", "--exec-path"}),
 }
 
 #: Python/Perl/Ruby/Node source that opens a file for writing. Applied ONLY to a program
@@ -190,6 +267,8 @@ SHELL_OUT = re.compile(
 
 #: `*** Update File: path` — the apply_patch envelope names its own targets.
 PATCH_TARGET = re.compile(r"^\*\*\*\s+(?:Add|Update|Delete)\s+File:\s*(.+?)\s*$", re.MULTILINE)
+#: `+++ b/path` — a unified diff names its targets too, and `git apply` reads them.
+DIFF_TARGET = re.compile(r"^\+\+\+\s+(?:b/)?(\S+)\s*$", re.MULTILINE)
 
 
 # ── target classification ──────────────────────────────────────────────────────────
@@ -270,7 +349,31 @@ def _classify_by_prefix(token: str, cwd: Optional[str], repo_root: Optional[str]
 # ── lexing ─────────────────────────────────────────────────────────────────────────
 
 HEREDOC_START = re.compile(r"<<-?\s*(['\"]?)([A-Za-z_][A-Za-z0-9_]*)\1")
-FD_REDIRECT = re.compile(r"\d*>&\d*|&>>|&>|\d+>>|\d+>")
+
+#: A file-descriptor **duplication**: `2>&1`, `>&2`, `1<&0`. It names no path, so there
+#: is nothing to police and deleting it keeps it out of the argv.
+#:
+#: 🔴 The digits must begin a token. `echo hi2>/tmp/f` writes "hi2" to the file — bash
+#: binds the `2` to the WORD, verified against bash itself on 2026-08-29 — and revision
+#: 7's unanchored `\d+>` ate it, turning `--tip <any tip ≥ e839db38>` into
+#: `--tip < any tip ≥ e839db >`. That is how two documented lines in this repository
+#: passed the guard: the same expression that hid `1>` also swallowed the `38` and the
+#: `>` with it. The lookbehind is negative-for-a-non-separator so it also holds at
+#: position 0, where a lookbehind for a separator would fail.
+_FD_START = r"(?<![^\s;&|()])"
+FD_DUP = re.compile(_FD_START + r"\d*>&\d*|" + _FD_START + r"\d*<&\d*")
+#: A file-descriptor **redirection that takes a path**: `1> f`, `2>> f`, `&> f`, `&>> f`.
+#:
+#: 🔴 These used to be deleted by the same expression that deletes a duplication, and
+#: that was a bypass of this policy's own redirection rule by one character.
+#: `echo x 1> framework/scripts/guard_policy.py` had the `1>` erased before lexing, so
+#: the target arrived as a harmless argument to `echo` and the command was ALLOWED —
+#: while `echo x > …`, which does exactly the same thing, was denied. Measured on
+#: revision 7 on 2026-08-29, together with `2>`, `1>>`, `&>` and `exec 3>`.
+#:
+#: They are now rewritten to the plain form the segmenter already understands, rather
+#: than deleted. Dups are stripped FIRST, so `2>&1` never reaches this pattern.
+FD_WRITE = re.compile(r"&>>|&>|" + _FD_START + r"\d+>>|" + _FD_START + r"\d+>")
 SUBSTITUTION = re.compile(r"\$\(|\`|<\(|>\(")
 
 
@@ -391,9 +494,43 @@ REDIRECT_WRITE = frozenset({">", ">>", ">|", "<>"})
 REDIRECT_READ = frozenset({"<", "<<", "<<<"})
 
 
+#: 🔴 A NEWLINE IS A COMMAND SEPARATOR, and for revisions 1–7 it was not.
+#:
+#: `CONTROL_TOKENS` has contained `"\n"` since revision 1, and the lexer below was
+#: `shlex(punctuation_chars=True)` with `whitespace_split=True` — under which a newline
+#: is *whitespace* and is never emitted as a token. So the entry was unreachable for
+#: every real newline, and two lines were lexed into ONE argv. Only the first line's
+#: program was ever analysed:
+#:
+#:     echo hi                                  ALLOWED   — measured 2026-08-29
+#:     rm framework/scripts/guard_policy.py               on revision 7
+#:
+#:     echo hi                                  ALLOWED
+#:     git add -A                                         the documented harm itself
+#:
+#: A multi-line block is the ordinary shape of agent shell use — every Bash call in the
+#: session that found this was multi-line — so this is not an exotic bypass. It is the
+#: default one. `;` split correctly, `|` split correctly, and a newline did not.
+#:
+#: The entry was not merely dead, either: it fired in exactly one case, a BACKSLASH
+#: continuation, where the two lines are one command and must NOT be split. Hence the
+#: substitution below runs first.
+CONTINUATION = re.compile(r"\\\n")
+NEWLINE_RUN = re.compile(r"\A\n+\Z")
+
+
 def lex(command: str) -> List[str]:
-    lexer = shlex.shlex(command, posix=True, punctuation_chars=True)
+    """Tokenise, with an unescaped newline emitted as its own separator token.
+
+    `punctuation_chars` cannot be changed after construction and `whitespace` can, so
+    the newline joins the punctuation set at construction and leaves the whitespace set
+    afterwards. Quoting is unaffected: `'a\\nb'` and `"one\\ntwo"` stay single tokens,
+    which `test_pre_tool_use_guard.py::ANewlineSeparatesCommands` pins in both
+    directions.
+    """
+    lexer = shlex.shlex(command, posix=True, punctuation_chars="();<>|&\n")
     lexer.whitespace_split = True
+    lexer.whitespace = " \t\r"
     try:
         return list(lexer)
     except ValueError as exc:
@@ -424,7 +561,7 @@ def segments(tokens: Sequence[str]) -> List[Tuple[List[str], List[str], bool]]:
         if token in REDIRECT_READ:
             pending_redirect = False
             continue
-        if token in CONTROL_TOKENS:
+        if token in CONTROL_TOKENS or NEWLINE_RUN.match(token):
             if argv or writes:
                 result.append((argv, writes, piped_in))
             argv, writes = [], []
@@ -480,6 +617,34 @@ def has_flag(argv: Sequence[str], *names: str) -> bool:
             if len(name) == 2 and name.startswith("-") and name[1] in token[1:]:
                 return True
     return False
+
+
+def flag_value(argv: Sequence[str], *names: str) -> Optional[str]:
+    """The value of `-o VALUE`, `--output=VALUE` or `--output VALUE`, or None.
+
+    🔴 This exists because of a bypass measured on revision 7: `cp -t framework/scripts
+    /tmp/a /tmp/b` writes into `framework/scripts`, but `-t` is an option-with-value, so
+    `operands()` skipped both the flag AND its value — and the destination the policy
+    then reported was `/tmp/b`, a *source*. The command was ALLOWED. A destination that
+    travels in a flag has to be read out of the flag; skipping it names a read as a
+    write and calls the result derived. Same shape for `mv -t`, `install -t`,
+    `curl -o`, `wget -O`, `wget -P`, `tar -C` and `unzip -d`.
+    """
+    index = 1
+    while index < len(argv):
+        token = argv[index]
+        for name in names:
+            if token == name and index + 1 < len(argv):
+                return argv[index + 1]
+            if name.startswith("--") and token.startswith(name + "="):
+                return token[len(name) + 1:]
+            # `-ofile`, `-Cdir` — a short flag with its value attached.
+            if (len(name) == 2 and name.startswith("-") and not name.startswith("--")
+                    and token.startswith(name) and len(token) > 2
+                    and not token.startswith("--")):
+                return token[2:]
+        index += 1
+    return None
 
 
 def strip_wrapper_options(argv: Sequence[str], value_flags: Iterable[str],
@@ -628,13 +793,34 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
             if blanket or not paths or UNNAMED in paths:
                 findings.append(Finding("BLANKET_STAGING", "git add", [UNNAMED],
                                         "stages paths the command does not name"))
+            else:
+                # 🔴 An ALLOWED staging is still an EFFECT, and revisions 1–7 emitted
+                # nothing for it. That was invisible while the only question was
+                # allow/deny; under post-effect verification it is the whole game — an
+                # authorised effect set that omits the STAGE cannot match an observed
+                # index change, so every legitimate `git add <path>` would have been
+                # reported as an unexplained side effect.
+                findings.append(Finding("NAMED_STAGING", "git add", named,
+                                        "stages the paths it names"))
         elif sub == "commit":
             if has_flag(["git"] + rest, "-a", "--all"):
                 findings.append(Finding("BLANKET_STAGING", "git commit -a", [UNNAMED],
                                         "stages every tracked change, named or not"))
+            paths = [t for t in rest if not t.startswith("-")]
+            # `git commit -m msg` — the message is the value of `-m`, not a path.
+            message = flag_value(["git"] + rest, "-m", "--message", "-F", "--file",
+                                 "-C", "--reuse-message", "--author", "--date")
+            paths = [t for t in paths if t != message]
+            if paths:
+                findings.append(Finding("NAMED_STAGING", "git commit <path>", paths,
+                                        "commits the paths it names, staging them first"))
+            findings.append(Finding("COMMIT", "git commit", ["HEAD"],
+                                    "creates a commit and advances HEAD"))
         elif sub == "stage":
             findings.append(Finding("BLANKET_STAGING", "git stage", [UNNAMED],
                                     "an alias of `git add` with the same reach"))
+        else:
+            analyse_git(sub, rest, heredocs, findings)
         return
 
     # ── in-place editors ──
@@ -668,8 +854,97 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
         return
     if program in WRITES_LAST_OPERAND:
         targets = operands(argv, program)
-        findings.append(Finding("FILE_WRITE", program, targets[-1:] or [UNNAMED],
-                                "writes its destination operand"))
+        # 🔴 `-t DIR` / `--target-directory=DIR` moves the destination OUT of the
+        # operand list and into a flag, and `operands()` skips option values — so the
+        # "destination" derived here used to be the last SOURCE. `cp -t framework/scripts
+        # /tmp/a /tmp/b` reported `/tmp/b`, classified it SCRATCH, and allowed a write
+        # into the repository. Measured on revision 7, 2026-08-29, for cp, mv and install.
+        into = flag_value(argv, "-t", "--target-directory")
+        if into is not None:
+            destination = [into]
+        else:
+            destination = targets[-1:] or [UNNAMED]
+        if program == "mv":
+            # A move mutates BOTH ends: the source ceases to exist where it was. Both
+            # are authorised, so `mv framework/a /tmp/b` is refused for the source even
+            # though its destination is scratch.
+            sources = targets if into is not None else targets[:-1]
+            findings.append(Finding("FILE_RENAME", "mv", (sources + destination) or [UNNAMED],
+                                    "moves its operands, mutating source and destination"))
+        else:
+            findings.append(Finding("FILE_WRITE", program, destination,
+                                    "writes its destination operand"))
+        return
+
+    # ── permission and ownership ──
+    if program in ("chmod", "chown", "chgrp", "chflags", "xattr", "setfacl"):
+        targets = operands(argv, program)
+        # The first operand is the mode / owner / flag spec, not a path. Reporting `755`
+        # as a write target would deny for the right reason and name the wrong thing,
+        # and a receipt has to name what was actually touched.
+        targets = targets[1:] if program in ("chmod", "chown", "chgrp", "chflags") else targets
+        findings.append(Finding("PERMISSION_CHANGE", program, targets or [UNNAMED],
+                                "changes mode, ownership or attributes of every operand"))
+        return
+
+    # ── creation without content ──
+    if program in ("touch", "mkdir", "mktemp"):
+        targets = operands(argv, program)
+        if program == "mktemp" and not targets:
+            return  # `mktemp` with no template writes into the system temp directory
+        findings.append(Finding("FILE_WRITE", program, targets or [UNNAMED],
+                                "creates the path, or moves its mtime"))
+        return
+
+    # ── network transfers that name a local destination ──
+    if program in ("curl", "wget", "wget2", "aria2c", "http", "https"):
+        into = flag_value(argv, "-o", "--output", "-O", "--remote-name",
+                          "--output-document", "-P", "--directory-prefix", "-d", "--dir")
+        remote_name = has_flag(argv, "-O", "--remote-name") and into is None
+        if program.startswith("wget") and has_flag(argv, "-O"):
+            into = flag_value(argv, "-O") or into
+        if remote_name:
+            # `curl -O url` writes the URL's basename into the CURRENT directory, which
+            # the command never names. Unnamed, therefore refused.
+            findings.append(Finding("FILE_WRITE", f"{program} -O", [UNNAMED],
+                                    "writes the URL's basename into the working directory"))
+        elif into is not None:
+            findings.append(Finding("FILE_WRITE", program, [into],
+                                    "writes the fetched bytes to its destination"))
+        elif program.startswith("wget"):
+            # Bare `wget url` also writes into the working directory.
+            findings.append(Finding("FILE_WRITE", program, [UNNAMED],
+                                    "writes into the working directory by default"))
+        upload = flag_value(argv, "-T", "--upload-file", "-d", "--data", "--data-binary",
+                            "-F", "--form")
+        if upload is not None or has_flag(argv, "-T", "--upload-file"):
+            findings.append(Finding("NETWORK_WRITE", program, [upload or UNNAMED],
+                                    "sends local bytes to a remote host",
+                                    scope=em.NONLOCAL))
+        return
+
+    if program in ("scp", "sftp", "ftp", "rclone"):
+        findings.append(Finding("NETWORK_WRITE", program,
+                                operands(argv, program) or [UNNAMED],
+                                "copies between this machine and a remote host",
+                                scope=em.NONLOCAL))
+        return
+
+    # ── archive extraction ──
+    if program in ("tar", "gtar", "bsdtar"):
+        extracting = has_flag(argv, "-x", "--extract", "--get") or any(
+            t.startswith("x") and not t.startswith("-") for t in argv[1:2])
+        if not extracting:
+            return  # creating or listing an archive writes only what `-f` names, below
+        into = flag_value(argv, "-C", "--directory")
+        findings.append(Finding("ARCHIVE_EXTRACT", "tar", [into] if into else [UNNAMED],
+                                "expands members this command does not enumerate; a member "
+                                "path may contain `..` and land outside the destination"))
+        return
+    if program in ("unzip", "7z", "7za", "unrar", "gunzip", "bunzip2", "unxz", "zstd"):
+        into = flag_value(argv, "-d", "-o", "--output-dir", "-C")
+        findings.append(Finding("ARCHIVE_EXTRACT", program, [into] if into else [UNNAMED],
+                                "expands members this command does not enumerate"))
         return
     if program in DESTROYS_OPERANDS:
         findings.append(Finding("FILE_DELETE", program, operands(argv, program) or [UNNAMED],
@@ -694,6 +969,180 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
                     finding.detail = (finding.detail + " · run per traversal match").strip()
                 findings.extend(sub)
         return
+
+
+#: `git <sub>` families beyond add/commit/stage. Revision 7 derived NOTHING for any of
+#: these: a probe of 46 shapes on 2026-08-29 found `git rm`, `git mv`, `git restore`,
+#: `git apply`, `git checkout -- .`, `git reset --hard`, `git clean -fd`, `git push`,
+#: `git tag`, `git branch -D`, `git update-ref`, `git stash`, `git notes` and
+#: `git worktree remove` ALL allowed. Six of those were declared open debt; the other
+#: eight were not declared anywhere, which is the difference between a scope boundary
+#: and a hole.
+GIT_REF_SUBCOMMANDS = frozenset({
+    "tag", "update-ref", "symbolic-ref", "branch", "notes", "stash", "reflog",
+    "rebase", "cherry-pick", "revert", "merge", "am", "filter-branch", "replace",
+    "worktree", "gc", "prune", "fast-import",
+})
+GIT_NETWORK_SUBCOMMANDS = frozenset({"push", "send-pack", "send-email", "request-pull"})
+#: `git branch` / `git tag` flags that move or delete a ref that ALREADY EXISTS. Naming
+#: a new ref without one of these is a creation, and a creation loses nothing.
+REF_DESTRUCTIVE_FLAGS = ("-d", "-D", "--delete", "-m", "-M", "--move", "-c", "-C",
+                         "--copy", "-f", "--force", "--set-upstream-to", "-u",
+                         "--unset-upstream", "--edit-description")
+#: Families whose SECOND word decides whether anything is mutated at all.
+GIT_SUB_READ = {
+    "worktree": frozenset({"list"}),
+    "stash": frozenset({"list", "show"}),
+    "notes": frozenset({"list", "show", ""}),
+    "reflog": frozenset({"show", ""}),
+    "rebase": frozenset(),
+    "replace": frozenset({"-l", "--list", ""}),
+}
+#: Read-only plumbing and porcelain. Listed positively: everything NOT here and not in
+#: a table above is UNKNOWN_EFFECT, which denies. A new git subcommand is refused until
+#: someone classifies it, which is the failure direction this policy wants.
+GIT_READ_SUBCOMMANDS = frozenset({
+    "status", "log", "show", "diff", "cat-file", "rev-parse", "rev-list", "ls-files",
+    "ls-tree", "ls-remote", "for-each-ref", "describe", "blame", "grep", "shortlog",
+    "show-ref", "name-rev", "merge-base", "hash-object", "var", "count-objects",
+    "verify-commit", "verify-tag", "check-ignore", "check-attr", "whatchanged",
+    "annotate", "cherry", "difftool", "help", "version", "bisect", "range-diff",
+    "fetch", "remote", "config", "archive", "bundle", "instaweb", "citool", "gui",
+})
+
+
+def analyse_git(sub: str, rest: List[str], heredocs: List[str],
+                findings: List[Finding]) -> None:
+    """Every `git` subcommand but add/commit/stage, projected onto the effect model."""
+    argv = ["git"] + rest
+
+    if sub in GIT_NETWORK_SUBCOMMANDS:
+        remote = next((t for t in rest if not t.startswith("-")), "<default remote>")
+        findings.append(Finding(
+            "NETWORK_WRITE", f"git {sub}", [remote],
+            "🔴 sends objects to a remote. `development` and `origin` are both PUBLIC "
+            "repositories, so this publishes",
+            scope=em.NONLOCAL))
+        return
+
+    if sub == "rm":
+        paths = [t for t in rest if not t.startswith("-")]
+        findings.append(Finding("FILE_DELETE", "git rm", paths or [UNNAMED],
+                                "deletes the working-tree file and stages the removal"))
+        findings.append(Finding("NAMED_STAGING", "git rm", paths or [UNNAMED],
+                                "stages the removal"))
+        return
+
+    if sub == "mv":
+        paths = [t for t in rest if not t.startswith("-")]
+        findings.append(Finding("FILE_RENAME", "git mv", paths or [UNNAMED],
+                                "moves the working-tree file and stages the move"))
+        return
+
+    if sub == "apply":
+        # The diff names its targets, but it lives in a FILE this guard cannot read.
+        # A heredoc-fed diff is the one case where the targets are in the command text.
+        targets: List[str] = []
+        for body in heredocs:
+            targets.extend(PATCH_TARGET.findall(body))
+            targets.extend(DIFF_TARGET.findall(body))
+        findings.append(Finding("PATCH_APPLY", "git apply", targets or [UNNAMED],
+                                "writes every file the diff names"))
+        return
+
+    if sub in ("restore", "checkout", "switch"):
+        paths = [t for t in rest if not t.startswith("-")]
+        if "--" in rest:
+            paths = rest[rest.index("--") + 1:]
+        elif sub in ("checkout", "switch"):
+            # 🔴 CREATING a branch and SWITCHING to one are different acts and the first
+            # draft of this rule called both REF_MUTATION, which denied
+            # `git checkout -b <new>` — the very command an actor runs to stop sharing
+            # a branch with another session, and the remedy for the harm this
+            # repository has actually suffered. A creation is additive: no ref moves,
+            # no file changes, nothing is lost.
+            #
+            # Switching to an EXISTING branch is the destructive one, and the honest
+            # name for it is not REF_MUTATION either — it rewrites every file in the
+            # working tree that differs between the two commits, and the command names
+            # none of them.
+            if has_flag(argv, "-b", "-B", "-c", "-C", "--orphan"):
+                return
+            findings.append(Finding("FILE_WRITE", f"git {sub}", [UNNAMED],
+                                    "rewrites every working-tree file that differs "
+                                    "between the two commits, naming none of them"))
+            return
+        findings.append(Finding("FILE_WRITE", f"git {sub}",
+                                paths or [UNNAMED],
+                                "overwrites working-tree files from the index or a commit, "
+                                "discarding what is there unread"))
+        return
+
+    if sub == "clone":
+        # The destination is the second operand, or derived from the URL when absent.
+        positional = [t for t in rest if not t.startswith("-")]
+        findings.append(Finding("FILE_WRITE", "git clone",
+                                positional[1:2] or [UNNAMED],
+                                "writes a whole checkout into its destination"))
+        return
+
+    if sub == "reset":
+        hard = has_flag(argv, "--hard")
+        paths = [t for t in rest if not t.startswith("-")]
+        if hard:
+            findings.append(Finding("FILE_WRITE", "git reset --hard", [UNNAMED],
+                                    "discards every uncommitted change in the working tree"))
+        findings.append(Finding("REF_MUTATION", "git reset", ["HEAD"],
+                                "moves HEAD and rewrites the index"))
+        if paths and not hard:
+            findings.append(Finding("NAMED_STAGING", "git reset <path>", paths,
+                                    "unstages the paths it names"))
+        return
+
+    if sub == "clean":
+        findings.append(Finding("FILE_DELETE", "git clean", [UNNAMED],
+                                "deletes untracked files, which is where another actor's "
+                                "in-flight work lives"))
+        return
+
+    if sub in GIT_REF_SUBCOMMANDS:
+        named = [t for t in rest if not t.startswith("-")]
+        second = named[0] if named else ""
+
+        # 🔴 A subcommand whose SECOND word decides. `git worktree list` and
+        # `git stash list` are reads, and the first draft of this rule denied both —
+        # `git worktree list` appears in this repository's own documented corpus, and
+        # `git branch --show-current` is in the pre-flight every actor is told to run.
+        # Classifying a family by its first word only is the same error as classifying
+        # a command by its first word only, one level down.
+        if sub in GIT_SUB_READ:
+            if second in GIT_SUB_READ[sub]:
+                return
+        elif sub in ("branch", "tag"):
+            # Listing (`git branch`, `git tag -l`, `--show-current`) reads. Naming a new
+            # ref CREATES one, which destroys nothing. Only the destructive flags move
+            # or remove a ref that already exists.
+            if not has_flag(argv, *REF_DESTRUCTIVE_FLAGS):
+                return
+        elif sub == "worktree" and second == "add":
+            # Additive, but it writes a whole checkout, so it is judged by where.
+            findings.append(Finding("FILE_WRITE", "git worktree add",
+                                    named[1:2] or [UNNAMED],
+                                    "writes a whole checkout into its destination"))
+            return
+
+        findings.append(Finding("REF_MUTATION", f"git {sub}", named or ["HEAD"],
+                                "moves or deletes a ref, or rewrites history"))
+        return
+
+    if sub in GIT_READ_SUBCOMMANDS or not sub:
+        return
+
+    # 🔴 Positive listing, and this is the branch that makes it one. An unclassified
+    # subcommand is not "probably a read": `git` grows, and the last three additions to
+    # this repository's vocabulary were all mutations.
+    findings.append(Finding("SHELL_OUT", f"git {sub}", [UNNAMED],
+                            "a git subcommand this policy has not classified"))
 
 
 def analyse_interpreter(argv: List[str], program: str, heredocs: List[str],
@@ -804,8 +1253,13 @@ ANSI_C_QUOTE = re.compile(r"\$(?=')")
 
 def analyse_command(command: str, findings: List[Finding], depth: int = 0) -> None:
     stripped, heredocs = extract_heredocs(command)
+    # A backslash-continuation joins two LINES into one COMMAND; every newline that
+    # survives this substitution separates two commands. Order matters — heredoc bodies
+    # are already out of the text, so a continuation inside one is untouched.
+    stripped = CONTINUATION.sub(" ", stripped)
     stripped, subs = extract_substitutions(stripped)
-    stripped = FD_REDIRECT.sub(" ", stripped)
+    stripped = FD_DUP.sub(" ", stripped)
+    stripped = FD_WRITE.sub(lambda m: " >> " if ">>" in m.group(0) else " > ", stripped)
     stripped = ANSI_C_QUOTE.sub("", stripped)
     for body in subs:
         analyse_command(body, findings, depth + 1)
@@ -860,50 +1314,170 @@ DENY_UNPARSEABLE = (
 )
 
 
-def classify(command: object, cwd: Optional[str] = None,
-             repo_root: Optional[str] = None) -> Tuple[str, Optional[str], List[Finding]]:
-    """Return `(outcome, reason, findings)` for one shell command.
+DENY_REF = (
+    "A command that moves git refs or rewrites history is blocked.\n\n"
+    "`git reset --hard`, `git checkout -- .`, `git clean`, `git branch -D`, "
+    "`git update-ref`, `git rebase` and `git stash` discard or relocate work that is not "
+    "yours to discard: other actors share this repository's object store and its stash "
+    "stack, and untracked files are exactly where their in-flight work lives.\n\n"
+    "This needs REF_WRITE authority, which no runtime, role or lease grants. Ask the "
+    "operator, or do the narrow thing: `git restore <path>` names what it touches."
+)
 
-    `outcome` is `ALLOWED`, `PROHIBITED` or `UNDERIVABLE`; `reason` is the denial text, or
-    `None` when allowed. `findings` are the derived mutations, for characterisation.
+DENY_NETWORK = (
+    "A command that sends bytes off this machine is blocked.\n\n"
+    "🔴 `development` and `origin` are BOTH public GitHub repositories. Pushing a branch "
+    "to either one PUBLISHES it, and a bare `git push` goes to `origin`, which is a "
+    "different repository from the one most work here targets.\n\n"
+    "Publication is an operator act and needs PUBLISH authority, which is never granted "
+    "by a runtime. Commit locally; the operator pushes."
+)
+
+DENY_PERMISSION = (
+    "A command that changes file mode or ownership is blocked.\n\n"
+    "`chmod` and `chown` change what every later actor may do to a file, and the change "
+    "is invisible in a diff of its contents. That needs REF_WRITE authority.\n\n"
+    "If a script needs to be executable, add it with the mode set, or ask the operator."
+)
+
+DENY_ARCHIVE = (
+    "An archive extraction whose destination this command does not name is blocked.\n\n"
+    "`tar -xf` and `unzip` write members the command never enumerates, and a member path "
+    "may contain `..` and land outside wherever you thought it would. Neither you nor a "
+    "reviewer can tell from the command what it wrote.\n\n"
+    "Extract into a named directory outside the repository: `tar -xf a.tar -C /tmp/x`."
+)
+
+DENY_UNKNOWN_EFFECT = (
+    "This command's effect could not be derived, so the guard cannot say what it would "
+    "do, and answers no.\n\n"
+    "UNKNOWN_EFFECT denies under every authority class. That is the whole fail-closed "
+    "rule and it has no override: a command whose effect nobody can name is a command "
+    "nobody can review.\n\n"
+    "Write the command so its effect is readable, or invoke a committed script by name."
+)
+
+#: The authority a shell command is judged under when no attestation names another.
+#: 🔴 Not a permissive default: it is the third rung of six, and it is the rung that
+#: grants named staging and commit — because that is how work lands in this repository —
+#: and nothing else inside it.
+DEFAULT_AUTHORITY = "SHELL_DEFAULT"
+
+_SCOPE = {
+    INSIDE_REPO: em.INSIDE_REPO,
+    OUTSIDE_REPO: em.OUTSIDE_REPO,
+    SCRATCH: em.SCRATCH,
+    UNDERIVABLE: em.UNDERIVABLE,
+    UNNAMED: em.UNNAMED,
+}
+
+
+def effects(command: object, cwd: Optional[str] = None,
+            repo_root: Optional[str] = None) -> Tuple[List[em.Effect], List[Finding],
+                                                      Optional[str]]:
+    """Derive the PREDICTED effect set for one command.
+
+    Returns `(effects, findings, parse_error)`. `findings` are the policy's own
+    reasoning, kept for characterisation; `effects` is the projection every other
+    module in the bridge speaks. A parse failure yields a single `UNKNOWN_EFFECT`
+    rather than an empty set — an empty set means "no mutation", and those are the two
+    answers that must never be confused.
     """
     if not isinstance(command, str):
-        return UNDERIVABLE, DENY_UNPARSEABLE + "it is not text.", []
+        return ([em.Effect(em.UNKNOWN_EFFECT, None, em.UNDERIVABLE, "input",
+                           "the command is not text")], [], "it is not text.")
 
     findings: List[Finding] = []
     try:
         analyse_command(command, findings)
     except Unparseable as exc:
-        return UNDERIVABLE, DENY_UNPARSEABLE + str(exc), []
+        return ([em.Effect(em.UNKNOWN_EFFECT, None, em.UNDERIVABLE, "parser", str(exc))],
+                [], str(exc))
 
-    staged = [f for f in findings if f.rule == "BLANKET_STAGING"]
-    if staged:
-        return PROHIBITED, DENY_STAGING, findings
-
-    unnamed = False
-    underivable = False
-    in_repo = False
+    derived: List[em.Effect] = []
     for finding in findings:
         for target in finding.targets:
-            where = classify_target(target, cwd, repo_root)
-            if where == UNNAMED:
-                unnamed = True
-            elif where == UNDERIVABLE:
-                underivable = True
-            elif where == INSIDE_REPO:
-                in_repo = True
+            scope = finding.scope or _SCOPE.get(
+                classify_target(target, cwd, repo_root), em.UNDERIVABLE)
+            # The index and HEAD are repository objects whatever path is named, so a
+            # STAGE of a scratch path is still a mutation of the repository's index.
+            # This runs only for a target that RESOLVED — UNNAMED and UNDERIVABLE fall
+            # through unchanged, so `git rm` with no operand stays refused.
+            if finding.effect in (em.STAGE, em.COMMIT) and scope in (em.SCRATCH,
+                                                                     em.OUTSIDE_REPO):
+                scope = em.INSIDE_REPO
+            named = None if target in (UNNAMED, OPAQUE) else target
+            derived.append(em.Effect(finding.effect, named, scope,
+                                     finding.primitive, finding.detail))
+    return derived, findings, None
 
-    if in_repo:
+
+def classify(command: object, cwd: Optional[str] = None, repo_root: Optional[str] = None,
+             authority: str = DEFAULT_AUTHORITY) -> Tuple[str, Optional[str], List[Finding]]:
+    """Return `(outcome, reason, findings)` for one shell command.
+
+    `outcome` is `ALLOWED`, `PROHIBITED` or `UNDERIVABLE`; `reason` is the denial text, or
+    `None` when allowed. `findings` are the derived mutations, for characterisation.
+
+    The decision itself is `effect_model.authorize`; everything below it is choosing
+    which sentence to say. That split is the revision-8 change: the *rule* now lives in
+    a table of effects and authorities that another module can also read, and this
+    function no longer holds any policy of its own.
+    """
+    derived, findings, parse_error = effects(command, cwd, repo_root)
+    if parse_error is not None:
+        return UNDERIVABLE, DENY_UNPARSEABLE + parse_error, findings
+
+    decision = em.authorize(derived, authority)
+    if decision.authorized:
+        return ALLOWED, None, findings
+
+    denied = [effect for effect, _ in decision.denials]
+    kinds = {effect.kind for effect in denied}
+    scopes = {effect.scope for effect in denied}
+
+    # Blanket staging keeps its own sentence and its own priority, because it is the
+    # documented harm this policy was built for and its message is the one an actor has
+    # already learned to read.
+    if any(f.rule == "BLANKET_STAGING" for f in findings):
+        return PROHIBITED, DENY_STAGING, findings
+    if any(e.kind in (em.WRITE, em.DELETE, em.RENAME) and e.scope == em.INSIDE_REPO
+           for e in denied):
         return PROHIBITED, DENY_SHELL_WRITE, findings
-    if unnamed:
+    if em.NETWORK_WRITE in kinds:
+        return PROHIBITED, DENY_NETWORK, findings
+    if em.REF_MUTATION in kinds:
+        return PROHIBITED, DENY_REF, findings
+    if em.PERMISSION_CHANGE in kinds:
+        return PROHIBITED, DENY_PERMISSION, findings
+    if em.ARCHIVE_EXTRACT in kinds:
+        return PROHIBITED, DENY_ARCHIVE, findings
+    if em.UNKNOWN_EFFECT in kinds:
+        return UNDERIVABLE, DENY_UNKNOWN_EFFECT, findings
+    if em.UNNAMED in scopes:
         return PROHIBITED, DENY_UNNAMED, findings
-    if underivable:
+    if em.UNDERIVABLE in scopes:
         return UNDERIVABLE, DENY_UNDERIVABLE, findings
-    return ALLOWED, None, findings
+    return PROHIBITED, DENY_SHELL_WRITE + "\n\n" + decision.reason(), findings
 
 
-def verdict(command: object, cwd: Optional[str] = None,
-            repo_root: Optional[str] = None) -> Optional[str]:
+def verdict(command: object, cwd: Optional[str] = None, repo_root: Optional[str] = None,
+            authority: str = DEFAULT_AUTHORITY) -> Optional[str]:
     """Return a denial reason, or None to allow. `UNDERIVABLE` denies — it fails closed."""
-    outcome, reason, _ = classify(command, cwd, repo_root)
+    outcome, reason, _ = classify(command, cwd, repo_root, authority)
     return None if outcome == ALLOWED else reason
+
+
+def authorized_effects(command: object, cwd: Optional[str] = None,
+                       repo_root: Optional[str] = None,
+                       authority: str = DEFAULT_AUTHORITY) -> List[em.Effect]:
+    """The effect set an execution of this command is permitted to produce.
+
+    Empty when the command is refused — a refused command is authorised for nothing,
+    and `post_effect_verify` comparing against an empty set is exactly right: if it ran
+    anyway, every effect it produced is EXTRA.
+    """
+    derived, _, parse_error = effects(command, cwd, repo_root)
+    if parse_error is not None:
+        return []
+    return em.authorize(derived, authority).authorized_effects
