@@ -293,11 +293,29 @@ def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str]) ->
         return UNDERIVABLE
     if EXPANDS.search(token):
         return _classify_by_prefix(token, cwd, repo_root)
-    if token in SCRATCH_EXACT or token.startswith(SCRATCH_PREFIXES):
+    if token in SCRATCH_EXACT:
         return SCRATCH
 
     path = token if posixpath.isabs(token) else posixpath.join(cwd or "", token)
     path = posixpath.normpath(path)
+
+    # 🔴 REPOSITORY MEMBERSHIP BEATS THE SCRATCH PREFIX, and until revision 8 it did
+    # not. `/tmp`, `/private/tmp`, `/var/folders` and any path with a `scratchpad`
+    # segment were classified SCRATCH before the root was consulted — so a git working
+    # tree living under any of them was entirely unguarded. That is not hypothetical:
+    # `TMPDIR` on macOS points into `/var/folders`, every fixture repository in this
+    # repository's own test suites is created there, and the live floor written for
+    # this revision measured `echo tampered > kept.txt` as ALLOWED and watched it
+    # rewrite a committed file.
+    #
+    # A repository in scratch space is still a repository. The scratch exemption exists
+    # so that work OUTSIDE the tree is not this guard's business, and inside the tree
+    # is exactly its business.
+    if repo_root is not None:
+        root = posixpath.normpath(repo_root)
+        if path == root or path.startswith(root.rstrip("/") + "/"):
+            return INSIDE_REPO
+
     if SCRATCH_SEGMENT in path.split("/"):
         return SCRATCH
     if path in SCRATCH_EXACT or path.startswith(SCRATCH_PREFIXES):
@@ -306,9 +324,6 @@ def classify_target(token: str, cwd: Optional[str], repo_root: Optional[str]) ->
         # 🔴 Without a root, "outside the repository" is not derivable, and guessing
         # outward is guessing in the unsafe direction. Everything non-scratch is treated
         # as repository space.
-        return INSIDE_REPO
-    root = posixpath.normpath(repo_root)
-    if path == root or path.startswith(root.rstrip("/") + "/"):
         return INSIDE_REPO
     return OUTSIDE_REPO
 
