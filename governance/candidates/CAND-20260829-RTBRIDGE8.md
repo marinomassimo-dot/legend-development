@@ -33,19 +33,24 @@ BASE_HEAD                 6cd485974c358f03aaefd3cdc6f591241376e125
                           the revision-7 TIP, deliberately. Not main (788c357): this
                           candidate is the delta FROM revision 7, and hashing against
                           main would bind 81 prior Plan commits to this review.
-TIP                       ca124b067e27a34cc8dce80f5ef386d5959d33f0
-                          the last commit in the CONTENT domain. This file is committed
-                          after it and cannot move the hash — see INVARIANCE.
-CANDIDATE_CONTENT_HASH    733207e25b856ba1eeb89e9eecd3a7fe29bf60557858cda07edc3eae494f4413
-                          🔴 SUPERSEDES  4b014a2f…64479e  tip 8ffcd02
-                          That value was correct for the tree it named and is superseded,
-                          not withdrawn (Annex D.2). It was published in this file before
-                          `framework/protocols/runtime_bridge.md` was corrected — the
-                          protocol asserted five things this candidate had measured false,
-                          and leaving a NORMATIVE file wrong to keep a hash stable is the
-                          wrong trade. The earlier value stays visible because a candidate
-                          that silently rewrites its own hash teaches a reviewer to trust
-                          the current one, which is the single thing a hash cannot ask for.
+TIP                       c74340a  (the last commit in the CONTENT domain)
+                          This file is committed after it and cannot move the hash — see
+                          INVARIANCE.
+CANDIDATE_CONTENT_HASH    18c8a055b63ae285eb465207b41a8a32aaedc5d9ff1b6b74906568a1d4feab7b
+                          🔴 SUPERSEDES, newest first:
+                            733207e2…4f4413   tip ca124b0   before the mutation repairs
+                            4b014a2f…64479e   tip 8ffcd02   before the protocol correction
+                          Each was correct for the tree it named and is superseded, not
+                          withdrawn (Annex D.2). Both expired for the same reason and it
+                          is worth naming: **the work that answered a review finding was
+                          itself a content change.** The first expired when the protocol
+                          was corrected; the second when three surviving mutations forced
+                          a repair to `guard_policy.py` and its suites. A hash published
+                          before the last finding is answered is a hash that describes a
+                          tree the candidate has already left.
+                          They stay visible because a candidate that silently rewrites
+                          its own hash teaches a reviewer to trust the current value,
+                          which is the one thing a hash cannot ask for.
 CHANGE_CLASS              MAJOR — it changes what is forbidden for every actor in both
                           runtimes (nineteen families closed), it changes what a
                           "verdict" IS (an effect set judged against an authority), and
@@ -53,12 +58,12 @@ CHANGE_CLASS              MAJOR — it changes what is forbidden for every actor
                           Mirror classifies; this field is the author's declaration.
 RECIPE                    python3 governance/scripts/candidate_content_hash.py \
                             --base 6cd485974c358f03aaefd3cdc6f591241376e125 \
-                            --tip  ca124b067e27a34cc8dce80f5ef386d5959d33f0
+                            --tip  c74340a
 INVARIANCE                Re-run with --tip set to the branch tip carrying THIS file. It
-                          must print the same value, because every commit after ca124b0
+                          must print the same value, because every commit after c74340a
                           touches only governance/candidates/, which P5.1 excludes. If it
                           does not, the hash is stale and this manifest is wrong.
-FILES                     16 in the CONTENT domain, +4429 −75
+FILES                     16 in the CONTENT domain
                           5 new modules · 4 new suites · 6 modified · 1 protocol
                           (17 with this file, which P5.1 excludes from the hash)
 ```
@@ -416,14 +421,21 @@ exists.**
 
 ## 8 · Verification actually run
 
-```
-framework/scripts/test_pre_tool_use_guard.py        41 pass
+```text
+framework/scripts/test_pre_tool_use_guard.py        42 pass
 framework/scripts/test_runtime_parity.py            55 pass
-framework/scripts/test_effect_model.py              25 pass
-framework/scripts/test_execution_attestation.py     26 pass
+framework/scripts/test_effect_model.py              28 pass
+framework/scripts/test_execution_attestation.py     27 pass
 framework/scripts/test_post_effect_verify.py        24 pass
 framework/scripts/test_execution_receipt.py         19 pass
 scripts/test_guard_bash_command.py                  14 pass
+                                                   ─────────
+                                                   209 pass, 0 fail
+
+python3 framework/scripts/mutate_guard_suite.py     46/46 killed, 0 survived
+
+python3 framework/scripts/legend_lint.py .          VERDICT: PASS
+python3 scripts/public_release_gate.py              VERDICT: PASS · BLOCKS: 0
 ```
 
 ### 8.1 · The test floor is indexed, and the index is checked
@@ -452,13 +464,61 @@ granted only at `REF_WRITE`, so `chmod 755 /tmp/probe.sh` was denied. The bounda
 policy defends is the **repository**, and it has to be the same boundary for every effect
 kind.
 
-### 8.3 · Thirteen new mutations, and they are semantic
+### 8.3 · The mutation battery: 46 mutations, and what the survivors taught
 
-The test for whether a mutation is semantic: could a plausible refactor introduce it
+Fifteen new mutations, all semantic. The test: could a plausible refactor introduce it
 while keeping every identifier and every message intact? `M32` is a one-character regex
 edit; `M35` reorders two blocks; `M40` removes one condition from a comprehension; `M39`
-replaces per-kind scopes with the flat product this candidate rejected in § 3.1. None
-changes a name a test could be matching on.
+replaces per-kind scopes with the flat product § 3.1 rejects; `M46` removes a branch by
+adding a condition rather than deleting it, which a test matching on source text would
+miss. None changes a name a test could be matching on.
+
+**Three runs, and the first two were the useful ones.**
+
+```text
+run 1   38/44 killed   4 ANCHOR_MISSING   2 SURVIVED
+run 2   43/46 killed   0 ANCHOR_MISSING   3 SURVIVED
+run 3   46/46 killed   0 ANCHOR_MISSING   0 SURVIVED
+```
+
+🔴 **`46/46` is a statement about these forty-six mutations and about nothing else.**
+Revision 7 published `31/31` and the three defects that mattered most were found by
+someone's real work being refused, not by its suite. Revision 8 publishes `46/46` and the
+three defects that mattered most — the newline, the numbered redirect, the scratch-prefix
+inversion — were found by a probe written against a brief and by a floor that executes.
+Both scores are true, and neither is evidence that the next hole is covered. The number
+that would be evidence is one nobody has: the proportion of *reachable* defects these
+mutations sample.
+
+🔴 **Four mutations in run 1 were never applied**, because I had moved their anchors:
+`M03`, `M11` and `M12` targeted the old `classify` body, and `M37` named the wrong file
+for a rule that lives in `effect_model.py`. The harness reports that as `ANCHOR_MISSING`
+and explicitly **not** as a pass, which is the only correct behaviour — a mutation that
+never ran is not a mutation the tests killed. A harness that had counted them as kills
+would have reported 42/44 for a suite that had tested nothing.
+
+`M11` and `M12` were **moved rather than re-anchored**: their old anchors were the
+branches that pick a denial *sentence*, and in revision 8 those decide nothing — the
+authorisation does. Mutating a message there would be an *equivalent mutant*, surviving
+because behaviour is unchanged, which says nothing about the tests.
+
+**What each survivor was:**
+
+| | why it survived | what it forced |
+|---|---|---|
+| `M36` | deleting the `NETWORK_WRITE` branch changed no verdict: `git push` falls through to the positive-listing catch-all and is refused as `UNKNOWN_EFFECT`. Fail-closed working — and the guard would be refusing a publication because it *could not classify* it | ten denials now assert the **sentence**, not just the answer. That immediately exposed `git clean -fd` being explained by the generic unnamed-target message, silent about the thing that makes it dangerous |
+| `M42` | the existing test set a dimension to `UNDERIVABLE` that previously held a value, so the **difference** check caught it either way | the discriminating case: a field underivable in **both** bindings. Not exotic — `session` is `UNDERIVABLE` for every invocation outside a hook payload |
+| `M37` | equivalent for the verdict: `UNNAMED` appears in no authority's grant, so the per-kind check refuses it anyway | the **order** is asserted, not only the outcome |
+| `M12` | equivalent for the verdict; the scope is computed from the sentinel and stays `UNNAMED` | not equivalent for the **receipt**: an effect recorded against `.` covers every path in the repository in `_under`, and would silently match any observed write |
+| `M45` | 🔴 **no test ever reached the catch-all at the end of `classify`** | it *is* reachable — a scratch write under `READ_ONLY`, the authority an unattested session holds, is denied by the grant and matches no specific branch |
+
+`M45` is the one I would not have found by reading. A branch nobody reaches looks
+identical to a branch nobody needs, and only a mutation run tells them apart.
+
+🔴 And twice, a survivor was not a weak assertion but an assertion in the wrong file:
+`M12` and `M45` are killed by `test_effect_model.py`, which was not in their suite list.
+That is the same shape as § 8.2 and it happened again after I had already written § 8.2
+about it.
 
 ## 9 · Mirror's independent findings, classified
 
@@ -509,6 +569,7 @@ plane; none is required for a bridge candidate, and none is fixed here.
 | C · fail-closed payloads, the hook state | `0d94e0d` | `git revert 0d94e0d` — restores the env waiver |
 | D · the widened guard assertions | `8ffcd02` | `git revert 8ffcd02` — reopens M32–M36 |
 | E · the protocol corrections | `ca124b0` | `git revert ca124b0` — restores the five false claims |
+| F · the mutation repairs | `0b2896a` `d38e2f2` `c74340a` | `git revert c74340a d38e2f2 0b2896a` — drops the denial-reason assertions and the resume completeness case |
 
 🔴 Unit A cannot be reverted alone once B is in place: `guard_policy` imports
 `effect_model`. Reverting B alone is safe; reverting A requires reverting B first.
@@ -527,7 +588,39 @@ ignored files are outside the default snapshot         `--include-ignored` widen
 the attestation store is runtime-local                 § 10
 ```
 
-## 13 · What a reviewer should attack first
+## 13 · Readiness, field by field
+
+Every row is a verdict, not a status. `NOT READY` means an actor in that position may not
+write under this candidate; it does not mean the work is incomplete.
+
+| field | verdict | why |
+|---|---|---|
+| `WRITE_PARITY` | 🔴 **FAIL** | the guard is `DEMONSTRATED` in Claude and `NOT_LOADED` in Codex. A control that exists on one side and not the other makes the choice of host a choice of authority — the invariant this protocol exists to defend, currently violated and now measurably so |
+| `MIRROR_WRITE` | **NOT READY** | Codex-hosted. Read-only floor holds; the write floor needs § 7.3 and § 7.4 |
+| `SCIENTIST_WRITE` | **NOT READY** on Codex · **READY** on Claude | the Claude guard refused its own author five times during this candidate and permitted every act needed to land it |
+| `PLAN_WRITE` | **READY** on Claude, and exercised | this candidate's nine commits were staged and committed from the shell, under the guard, using `git add <path>` and `git commit -m` |
+| `ORCHESTRATOR_WRITE` | **NOT READY** | unchanged by this candidate: body § 33.1 grants no authority by runtime, and an `ACTIVE` lease is a governance act. Mirror finding 1 (§ 9) is directly relevant and is **not** fixed here |
+| `FULL_CODEX_FAILOVER` | 🔴 **NOT READY** | with `NOT_LOADED`, a Codex session has no write control at all. Failover would move an actor from a runtime where the guard fires to one where it has never run |
+| `RESUME_INTEGRITY` | **IMPLEMENTED, NOT DEPLOYED** | `execution_attestation.py` derives, binds and revalidates, with 27 tests. Nothing calls it from a hook: `SessionStart` exists in both runtimes and is where it belongs, and registering it while `PreToolUse` is `NOT_LOADED` would build on an unverified floor |
+| `POST_EFFECT_VERIFICATION` | **IMPLEMENTED, NOT DEPLOYED** | same. `PostToolUse` exists in both runtimes; `post_effect_verify.py run` is the CLI form and is exercised against real repositories by 24 tests |
+| `TRUE_HUMAN_REQUIRED` | **YES — two items** | (1) the registration must reach the SHARED CHECKOUT, whose branch is canonical `main`, protected, which no Plan commit may reach; (2) the session probe is a spend under Annex J.4. **No `APPROVAL_ID` is prefilled and none exists.** |
+
+### 13.1 · Residual known bypass classes
+
+Declared in § 12. The honest summary: **one deliberate** (a committed script invoked by
+name), **three inherent to a text-parsing guard** (a body that mentions a write, `cd` not
+followed, a variable whose value climbs out), and **three that are limits of the
+instrument** rather than of the policy (network writes unobservable after the fact,
+ignored files outside the default snapshot, the attestation store runtime-local).
+
+### 13.2 · Separate LEGEND P0 repairs discovered
+
+Five, in § 9, none absorbed. Three re-derived here rather than taken from the report:
+zero-`ACTIVE`-lease acceptance, the cwd-dependent lease surface, and LINT's silence on
+`current_state` — a field `CLAUDE.md` § 0 instructs every session to confirm and which
+`legend_lint.py` never reads.
+
+## 14 · What a reviewer should attack first
 
 1. **§ 2.1's newline claim.** Run `echo hi\ngit add -A` against `6cd4859`. If it does not
    return ALLOWED, this candidate's central finding is wrong.
