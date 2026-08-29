@@ -444,6 +444,22 @@ class TheHostileCorpusIsSelfDescribing(unittest.TestCase):
                 self.assertNotIn("/Users/", case.program or "")
         self.assertNotIn("/Users/", source)
 
+    def test_every_case_id_is_unique_including_its_prefix_token(self):
+        """🔴 A defect in this corpus, found by reading its own output.
+
+        Revision 10 added families numbered `F1`, `G1`, `H1`, `H2` and `J1` — every one
+        already taken by a revision-9 case. The full ids stayed unique, so nothing
+        failed, and a reviewer reading "F1" in a report would have had two cases to pick
+        from. The prefix token is what a human quotes; uniqueness of the whole string is
+        not enough for a table meant to be cited.
+        """
+        ids = [case.id for case in hc.CASES]
+        self.assertEqual(len(ids), len(set(ids)))
+        tokens = [case.id.split("-", 1)[0] for case in hc.CASES]
+        duplicates = sorted({t for t in tokens if tokens.count(t) > 1})
+        self.assertEqual([], duplicates,
+                         f"these prefix tokens name more than one case: {duplicates}")
+
     def test_the_frame_rotation_family_is_present_and_expects_a_change(self):
         """🔴 R1's family, asserted as a FAMILY rather than as thirteen strings.
 
@@ -452,7 +468,7 @@ class TheHostileCorpusIsSelfDescribing(unittest.TestCase):
         revision-10 verdict CHANGE for the rotation family — a table that carried the
         cases with both columns saying DENY would be recording a repair nobody made.
         """
-        rotation = [case for case in hc.CASES if case.id.startswith("F")]
+        rotation = [case for case in hc.CASES if case.id.startswith("P")]
         self.assertGreaterEqual(len(rotation), 13)
         tightened = [c for c in rotation if c.rev9 == hc.ALLOW and c.rev10 == hc.DENY]
         self.assertGreaterEqual(len(tightened), 6,
@@ -474,6 +490,43 @@ class TheHostileCorpusIsSelfDescribing(unittest.TestCase):
                     self.assertTrue(
                         case.positive_control,
                         f"{case.id} loosened and is not declared a positive control")
+
+
+class TheMutationHarnessCanCleanUpAfterAKilledRun(unittest.TestCase):
+    """🔴 The harness's own cleanup, and the state revision 9's could not clear.
+
+    Revision 9 added `--prune` for worktrees an interrupted run left behind, and skipped
+    any whose DIRECTORY still existed — "a run may be in progress". A run killed with the
+    directory intact therefore left an entry nobody could remove: `git worktree prune`
+    needs `REF_WRITE`, and `rm -rf` on the path classifies `PEER_WORKTREE`, because it IS
+    a registered worktree of this repository. Correctly refused, and with no way out.
+
+    The stranded entry is not cosmetic: it appears in `guard_revision.survey` and in the
+    hook-state census, both of which a candidate reports as counts over "every worktree".
+    This one was found by killing a mutation run, and the census read 12 worktrees.
+    """
+
+    def test_the_on_disk_arm_is_opt_in(self):
+        source = (HERE / "mutate_guard_suite.py").read_text()
+        self.assertIn("def prune(on_disk: bool = False)", source,
+                      "the default must stay the conservative one: a live run and a "
+                      "dead one look identical from here")
+        self.assertIn("--prune-on-disk", source)
+
+    def test_removal_needs_the_prefix_AND_the_system_temp_directory(self):
+        """🔴 Both conditions. `WORKTREE_PREFIX` alone would let any directory on the
+        filesystem be deleted by naming it `mutate-something`, which is the
+        cross-worktree act this harness exists to verify the prevention of."""
+        source = (HERE / "mutate_guard_suite.py").read_text()
+        self.assertIn("tempfile.gettempdir()", source)
+        self.assertIn("under_scratch", source)
+        self.assertIn("if not (on_disk and under_scratch):", source)
+
+    def test_the_prefix_is_the_one_the_harness_actually_uses(self):
+        """A prefix constant nobody creates worktrees with makes prune a no-op."""
+        source = (HERE / "mutate_guard_suite.py").read_text()
+        self.assertIn('WORKTREE_PREFIX = "mutate-"', source)
+        self.assertIn('prefix=f"{WORKTREE_PREFIX}', source)
 
 
 class TheLiveProbeCanTellTheEnginesApart(unittest.TestCase):

@@ -22,6 +22,7 @@ with it, and the surviving mutation would be indistinguishable from a dirty tree
 from __future__ import annotations
 
 import argparse
+import os
 import shutil
 import subprocess
 import sys
@@ -730,7 +731,11 @@ def apply_and_run(mutation, head):
     about a tree if every mutation saw the same one, so the tip is resolved once and
     printed with the results.
     """
-    tmp = Path(tempfile.mkdtemp(prefix=f"mutate-{mutation.name}-"))
+    # 🔴 Derived from the constant, not spelled again. It was a literal `"mutate-"`, and
+    # `prune()` matches on `WORKTREE_PREFIX` — two spellings of one convention, either of
+    # which could be changed alone, and the failure would be silent: prune would simply
+    # stop recognising the worktrees this harness creates.
+    tmp = Path(tempfile.mkdtemp(prefix=f"{WORKTREE_PREFIX}{mutation.name}-"))
     tree = tmp / "tree"
     add = subprocess.run(["git", "-C", str(ROOT), "worktree", "add", "--detach",
                           str(tree), head], capture_output=True, text=True)
@@ -769,7 +774,7 @@ def apply_and_run(mutation, head):
 WORKTREE_PREFIX = "mutate-"
 
 
-def prune() -> int:
+def prune(on_disk: bool = False) -> int:
     """Remove worktrees an INTERRUPTED run of this harness left behind.
 
     🔴 This exists because the guard this harness tests forbids the cleanup. `git
@@ -779,14 +784,28 @@ def prune() -> int:
     `UNDERIVABLE` where the truth is `NO`. The sanctioned path out of a denial is "a
     committed script invoked by name", and this is that script doing its own cleaning.
 
-    🔴 It removes ONLY worktrees this harness could have created: the path must be
-    absent from disk AND its directory name must carry `WORKTREE_PREFIX`. A prune that
-    matched on prunability alone would remove another actor's worktree the moment their
-    external drive was unmounted, which is precisely the cross-worktree act the guard
-    exists to prevent — performed by the tool that verifies the prevention.
+    🔴 It removes ONLY worktrees this harness could have created: the directory name
+    must carry `WORKTREE_PREFIX`, and it must sit under the system temp directory. A
+    prune that matched on prunability alone would remove another actor's worktree the
+    moment their external drive was unmounted, which is precisely the cross-worktree act
+    the guard exists to prevent — performed by the tool that verifies the prevention.
+
+    🔴 `on_disk` is revision 10, and it was added because a killed run produced a state
+    the first version could not clear. Revision 9's prune skipped any worktree still
+    PRESENT on disk — "a run may be in progress" — and the resulting directory could not
+    be removed from the shell either: it is a registered worktree of this repository, so
+    `rm -rf` on it classifies `PEER_WORKTREE` and is refused. Correctly refused, and
+    with no way out: the stranded entry then contaminates `guard_revision.survey` and
+    the hook-state census, both of which a candidate reports.
+
+    So the on-disk case is reachable, and it is OPT-IN rather than default, because the
+    harness genuinely cannot tell a dead run from a live one. What it can tell is that
+    the path is a temporary directory named by this harness, and that is the whole of
+    what the flag is trusted with.
     """
     listing = subprocess.run(["git", "-C", str(ROOT), "worktree", "list", "--porcelain"],
                              capture_output=True, text=True).stdout
+    scratch = Path(tempfile.gettempdir()).resolve()
     removed, skipped = [], []
     for line in listing.splitlines():
         if not line.startswith("worktree "):
@@ -796,10 +815,22 @@ def prune() -> int:
                 not any(p.startswith(WORKTREE_PREFIX) for p in path.parts):
             continue
         if path.exists():
-            skipped.append(f"{path}  — still on disk; a run may be in progress")
-            continue
+            # 🔴 Both conditions, and the second is not decoration: `WORKTREE_PREFIX`
+            # alone would let a directory anywhere on the filesystem be deleted by
+            # naming it `mutate-something`.
+            under_scratch = str(path.resolve()).startswith(str(scratch) + os.sep)
+            if not (on_disk and under_scratch):
+                why = ("still on disk; a run may be in progress — pass --prune-on-disk "
+                       if under_scratch else
+                       "still on disk and NOT under the system temp directory, so this "
+                       "harness did not create it — ")
+                skipped.append(f"{path}  — {why}")
+                continue
+            shutil.rmtree(path, ignore_errors=True)
         subprocess.run(["git", "-C", str(ROOT), "worktree", "remove", "--force",
                         str(path)], capture_output=True)
+        subprocess.run(["git", "-C", str(ROOT), "worktree", "prune"],
+                       capture_output=True)
         removed.append(str(path))
     for path in removed:
         print(f"REMOVED   {path}")
@@ -816,6 +847,11 @@ def main() -> int:
     parser.add_argument("--only", default=None)
     parser.add_argument("--prune", action="store_true",
                         help="remove worktrees a previous interrupted run left behind")
+    parser.add_argument("--prune-on-disk", action="store_true",
+                        help="also remove a stranded worktree whose DIRECTORY still "
+                             "exists, provided it is under the system temp directory "
+                             "and named by this harness. Opt-in: a live run looks the "
+                             "same from here")
     args = parser.parse_args()
 
     chosen = [m for m in MUTATIONS if not args.only or m.name == args.only]
@@ -823,8 +859,8 @@ def main() -> int:
         for m in chosen:
             print(f"{m.name}  {Path(m.target).name:<26} {m.why}")
         return 0
-    if args.prune:
-        return prune()
+    if args.prune or args.prune_on_disk:
+        return prune(on_disk=args.prune_on_disk)
 
     head = subprocess.run(["git", "-C", str(ROOT), "rev-parse", "HEAD"],
                           capture_output=True, text=True).stdout.strip()

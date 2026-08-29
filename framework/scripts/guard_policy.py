@@ -1521,6 +1521,28 @@ GIT_NETWORK_SUBCOMMANDS = frozenset({"push", "send-pack", "send-email", "request
 REF_DESTRUCTIVE_FLAGS = ("-d", "-D", "--delete", "-m", "-M", "--move", "-c", "-C",
                          "--copy", "-f", "--force", "--set-upstream-to", "-u",
                          "--unset-upstream", "--edit-description")
+#: 🔴 Families whose FIRST non-flag operand is a VERB and not a ref — revision 10.
+#:
+#: `git worktree add --detach /tmp/base <sha>` predicted three ref mutations, on `add`,
+#: on `/tmp/base` and on `<sha>`. Only the middle one names anything, and `add` is the
+#: subcommand's own verb. This is the `git update-ref <ref> <sha>` defect in a second
+#: place — a receipt has to name what was actually touched, and two of those three could
+#: never be observed, so an authorised call would report them MISSING forever.
+#:
+#: 🔴 It does not change a single VERDICT and is not meant to. Measured against the
+#: revision-9 engine at `6fb7a83`, `git worktree add` is REF_MUTATION at `INSIDE_REPO`
+#: and refused; it still is. What changes is what the refusal, and any receipt of it,
+#: says was touched. The wider question — whether adding a worktree should be
+#: `FILE_WRITE` at its destination rather than a ref mutation, which is what the
+#: `elif sub == "worktree" and second == "add"` branch below was written to do and which
+#: is UNREACHABLE because `worktree` is also in `GIT_SUB_READ` — is a revision-9
+#: behaviour this candidate found and deliberately did NOT repair. It is outside R1–R12,
+#: the denial it produces is defensible on its own terms (a new worktree writes
+#: `.git/worktrees/<name>`, which § 4.7 confines), and changing it here would be a
+#: behaviour change nobody reviewed.
+GIT_VERB_SUBCOMMANDS = frozenset({"worktree", "stash", "notes", "reflog", "replace",
+                                  "submodule", "bisect", "remote"})
+
 #: Families whose SECOND word decides whether anything is mutated at all.
 GIT_SUB_READ = {
     "worktree": frozenset({"list"}),
@@ -1698,6 +1720,10 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
         # `post_effect_verify` for every authorised update-ref there could ever be.
         if sub == "update-ref" and named:
             named = named[:1]
+        # The verb families: `add`, `push`, `remove`, `show` are the subcommand's own
+        # word, never a ref. See GIT_VERB_SUBCOMMANDS.
+        if sub in GIT_VERB_SUBCOMMANDS and named:
+            named = named[1:]
 
         # 🔴 A predicted ref is written in the namespace its subcommand implies, so that
         # the prediction and the observation are the same string. `git branch -D other`
