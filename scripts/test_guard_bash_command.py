@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
 import subprocess
 import sys
 import unittest
@@ -26,8 +27,18 @@ SPEC.loader.exec_module(guard)
 
 
 def verdict(command: str):
-    """Judge as the hook does from this repository: a real cwd and a real root."""
-    return guard.verdict(command, cwd=str(ROOT), repo_root=str(ROOT))
+    """Judge as the hook does from this repository: a real cwd, root and ASSIGNMENT.
+
+    🔴 `assigned=` is stated, and stating it is the revision-10 discipline. The
+    assignment is session-bound, so a suite that omitted it would be judged under
+    whatever `CLAUDE_PROJECT_DIR` this process inherited — the session's own worktree
+    under `python -m unittest`, and nothing at all under a runner that clears the
+    environment. Both answers are wrong for a suite about this repository, and the
+    second denies every positive control with `SESSION_ASSIGNMENT_UNDERIVABLE`, which
+    would look like a policy result.
+    """
+    return guard.verdict(command, cwd=str(ROOT), repo_root=str(ROOT),
+                         assigned=str(ROOT))
 
 
 HEREDOC_WRITE = (
@@ -153,11 +164,33 @@ class HookContract(unittest.TestCase):
     def _run(self, command: str):
         payload = json.dumps({"tool_name": "Bash", "cwd": str(ROOT),
                               "tool_input": {"command": command}})
+        # 🔴 The assignment travels in the ENVIRONMENT, never in the payload — that
+        # separation is the revision-10 repair, and a suite that put it in the payload
+        # would be testing the shape the repair removed. Without it every denial here
+        # would read `SESSION_ASSIGNMENT_UNDERIVABLE`, which is a true answer to a
+        # different question, and the way-forward assertions below would fail for a
+        # reason that has nothing to do with what they check.
+        env = {**os.environ, "LEGEND_ASSIGNED_WORKTREE": str(ROOT)}
+        env.pop("CLAUDE_PROJECT_DIR", None)
         result = subprocess.run(
             [sys.executable, str(HERE / "guard_bash_command.py")],
-            input=payload, capture_output=True, text=True,
+            input=payload, capture_output=True, text=True, env=env,
         )
         return result.returncode, result.stdout.strip()
+
+    def test_a_denial_carries_the_generation_that_emitted_it(self) -> None:
+        """🔴 R2. Every denial ends with a token the legacy guard does not contain.
+
+        The revision-9 probe named `"Blanket staging is blocked in this repository."` as
+        the sentence that proves the hook fired. It is BYTE-IDENTICAL in the legacy
+        single-file guard on `main`, so the probe could have reported FIRING while
+        measuring the engine this candidate replaces.
+        """
+        _, out = self._run("git add -A")
+        reason = json.loads(out)["hookSpecificOutput"]["permissionDecisionReason"]
+        self.assertIn("LEGEND_GUARD GENERATION=REV10", reason)
+        self.assertIn("DECISION_CODE=BLANKET_STAGING", reason)
+        self.assertIn("ASSIGNED_WORKTREE_SOURCE=OPERATOR_ENV", reason)
 
     def test_denial_emits_a_deny_decision_with_a_reason(self) -> None:
         code, out = self._run("git add -A")

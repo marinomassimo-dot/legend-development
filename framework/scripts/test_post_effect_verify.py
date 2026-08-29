@@ -274,5 +274,130 @@ class TheRefusedCaseIsItsOwnOutcome(Fixture):
                 self.assertEqual("AUTHORIZED", self.observe(command)["authorization"])
 
 
+class ARefIsPredictedInTheNamespaceItWillBeObservedIn(Fixture):
+    """🔴 R10. A legitimate `git branch -D` verified INVALID for a spelling difference.
+
+    The prediction came out of command text — `other` — and the observation comes out of
+    `for-each-ref`, which answers `refs/heads/other`. The two never met, so the deletion
+    was reported MISSING and the whole result INVALID. A verifier that invalidates the
+    acts it authorises is not a verifier, and it is the failure mode that gets one
+    switched off.
+
+    Namespaces are qualified SEPARATELY and never into each other: a `git tag -d` that
+    moved a branch is a mismatch and has to stay one.
+    """
+
+    def predicted(self, command):
+        effects, _, _ = policy.effects(command, cwd=str(self.root),
+                                       repo_root=str(self.root),
+                                       assigned=str(self.root))
+        return [(e.kind, e.target) for e in effects]
+
+    def test_a_branch_deletion_is_predicted_fully_qualified(self):
+        self.assertEqual(self.predicted("git branch -D other"),
+                         [(em.REF_MUTATION, "refs/heads/other")])
+
+    def test_a_branch_name_containing_a_slash_is_still_qualified(self):
+        """🔴 An earlier draft read any slash as 'already qualified', which left exactly
+        the branches whose names contain one unmatched — the common case here, where
+        every actor branch is `plan-…` or `codex/…`."""
+        self.assertEqual(self.predicted("git branch -D codex/work"),
+                         [(em.REF_MUTATION, "refs/heads/codex/work")])
+
+    def test_a_tag_deletion_is_predicted_in_the_tag_namespace(self):
+        self.assertEqual(self.predicted("git tag -d v1"),
+                         [(em.REF_MUTATION, "refs/tags/v1")])
+
+    def test_an_already_qualified_ref_is_left_exactly_as_written(self):
+        """Including one qualified into the OTHER namespace: `git branch -D
+        refs/tags/v1` failing to match an observed tag mutation is the correct answer,
+        not a spelling to smooth over."""
+        self.assertEqual(self.predicted("git branch -D refs/tags/v1"),
+                         [(em.REF_MUTATION, "refs/tags/v1")])
+
+    def test_update_ref_names_one_ref_and_not_its_new_value(self):
+        """🔴 `git update-ref refs/heads/x <sha>` predicted a second REF_MUTATION on a
+        ref called `<sha>` — a target that does not exist, cannot be observed, and would
+        be reported MISSING for every authorised update-ref there could ever be."""
+        self.assertEqual(self.predicted("git update-ref refs/heads/x deadbeef"),
+                         [(em.REF_MUTATION, "refs/heads/x")])
+        self.assertEqual(self.predicted("git update-ref -d refs/heads/x"),
+                         [(em.REF_MUTATION, "refs/heads/x")])
+
+    def test_an_authorised_branch_deletion_round_trips_to_VALID(self):
+        """The end-to-end property: AUTHORISE → EXECUTE → OBSERVE → VERIFY, at the
+        authority that actually grants a ref mutation."""
+        self.git("branch", "other")
+        result = self.observe("git branch -q -D other", authority="REF_WRITE")
+        self.assertEqual(result["result"], pev.VALID, result["result_reason"])
+        self.assertEqual(result["extra_effect"], [])
+        self.assertEqual(result["missing_effect"], [])
+
+    def test_deleting_a_different_ref_than_the_one_authorised_is_invalid(self):
+        """🔴 The negative control. Normalisation must not make every ref match every
+        other one — which is what a comparison that stripped the namespace entirely
+        would do."""
+        self.git("branch", "other")
+        self.git("branch", "unrelated")
+        authorized = policy.authorized_effects(
+            "git branch -q -D other", cwd=str(self.root), repo_root=str(self.root),
+            authority="REF_WRITE", assigned=str(self.root))
+        before = pev.snapshot(str(self.root))
+        self.git("branch", "-q", "-D", "unrelated")
+        after = pev.snapshot(str(self.root))
+        self.assertNotEqual(before.refs.get("refs/heads/unrelated"),
+                            after.refs.get("refs/heads/unrelated"),
+                            "the fixture must actually delete the other ref")
+        comparison = pev.verify(authorized, pev.delta(before, after, str(self.root)),
+                                str(self.root), current_branch=before.branch,
+                                branch_after=after.branch)
+        self.assertFalse(comparison.valid)
+
+    def test_a_tag_mutation_is_not_covered_by_a_branch_authorisation(self):
+        """Namespaces are qualified separately and never into each other."""
+        self.git("branch", "other")
+        self.git("tag", "v1")
+        authorized = policy.authorized_effects(
+            "git branch -q -D other", cwd=str(self.root), repo_root=str(self.root),
+            authority="REF_WRITE", assigned=str(self.root))
+        before = pev.snapshot(str(self.root))
+        self.git("tag", "-d", "v1")
+        after = pev.snapshot(str(self.root))
+        comparison = pev.verify(authorized, pev.delta(before, after, str(self.root)),
+                                str(self.root), current_branch=before.branch,
+                                branch_after=after.branch)
+        self.assertFalse(comparison.valid)
+        self.assertTrue(any(e.target == "refs/tags/v1" for e in comparison.extra))
+
+
+class AReceiptSeparatesTheThreeDirectories(Fixture):
+    """🔴 R16. `SESSION_ASSIGNED_WORKTREE`, `EFFECTIVE_WORKDIR` and
+    `ACTUAL_EXECUTION_BASE` are three facts, and a receipt that prints one value under
+    one name cannot show a reader that a rotation happened."""
+
+    def test_the_receipt_carries_all_three_and_the_guard_generation(self):
+        report = self.observe("git status --short")
+        for field in ("session_assigned_worktree", "effective_workdir",
+                      "actual_execution_base", "guard_generation",
+                      "guard_policy_hash", "repository_id", "target_scope"):
+            with self.subTest(field=field):
+                self.assertIn(field, report)
+        self.assertEqual(report["session_assigned_worktree"],
+                         str(Path(self.root).resolve()))
+        self.assertEqual(report["actual_execution_base"], str(self.root))
+
+    def test_the_verifier_states_its_own_assignment_rather_than_inheriting_one(self):
+        """🔴 This module executes in a disposable fixture. Inheriting whatever
+        `CLAUDE_PROJECT_DIR` the calling process carries would judge a fixture command
+        against the SESSION's worktree — a different repository, in which every fixture
+        path classifies OUTSIDE_REPO and the whole floor measures nothing."""
+        source = (HERE / "post_effect_verify.py").read_text()
+        self.assertIn("assigned=root", source)
+        report = self.observe("echo tampered > kept.txt")
+        self.assertEqual(report["authorization"], "DENIED",
+                         "the fixture root is the assignment, so its files are "
+                         "repository files")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

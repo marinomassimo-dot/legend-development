@@ -30,6 +30,8 @@ import effect_model as em  # noqa: E402
 import guard_policy  # noqa: E402
 import post_effect_verify as pev  # noqa: E402
 import repo_topology as rt  # noqa: E402
+import runtime_config as rc  # noqa: E402
+import session_binding as sb  # noqa: E402
 
 GUARD_ENTRY = HERE / "pre_tool_use_guard.py"
 
@@ -38,22 +40,61 @@ def git(cwd, *args):
     return subprocess.run(["git", "-C", str(cwd), *args], capture_output=True, text=True)
 
 
-def ask(command, cwd, workdir=None, tool="Bash", key="command"):
-    """Run the real hook engine exactly as a runtime would."""
-    tool_input = {key: command}
-    if workdir is not None:
+def hook_env(assigned, home=None):
+    """The environment a runtime would start the hook in, with the frame stated.
+
+    🔴 `CLAUDE_PROJECT_DIR` is CLEARED. Under a live session it points at this worktree,
+    and every fixture case would then be judged against the session's own repository
+    instead of the scene the test built — which is a suite passing for a reason it never
+    wrote down. `assigned=None` is a state, not an omission: it is a session with no
+    trusted binding at all, and it must be reachable from here or the fail-closed branch
+    is untestable.
+    """
+    env = {**os.environ}
+    env.pop("CLAUDE_PROJECT_DIR", None)
+    env.pop("LEGEND_ASSIGNED_WORKTREE", None)
+    if assigned is not None:
+        env["LEGEND_ASSIGNED_WORKTREE"] = str(assigned)
+    env.update(home or {})
+    return env
+
+
+def ask_full(command, cwd, workdir=None, tool="Bash", key="command",
+             assigned=..., program=None, home=None):
+    """`(verdict, decision code)` from the real hook engine, exactly as a runtime runs it.
+
+    The code is returned because a denial is not one fact. `DENY` alone cannot tell
+    `CONFINED_PEER_WORKTREE` from `SESSION_ASSIGNMENT_UNDERIVABLE`, and a confinement
+    suite whose engine had simply lost its binding would be uniformly green — every
+    `deny` assertion satisfied, and nothing confined by anything.
+    """
+    tool_input = {"input": program} if program is not None else {key: command}
+    if workdir is not None and program is None:
         tool_input["workdir"] = workdir
     payload = {"session_id": "s", "transcript_path": "/tmp/t", "cwd": cwd,
                "hook_event_name": "PreToolUse", "tool_name": tool,
                "tool_input": tool_input}
-    result = subprocess.run([sys.executable, str(GUARD_ENTRY)],
-                            input=json.dumps(payload), capture_output=True, text=True)
+    result = subprocess.run(
+        [sys.executable, str(GUARD_ENTRY)], input=json.dumps(payload),
+        capture_output=True, text=True,
+        env=hook_env(cwd if assigned is ... else assigned, home))
     if result.returncode != 0:
-        return "ERROR"
+        return "ERROR", "ERROR"
     if not result.stdout.strip():
-        return "ALLOW"
-    return ("DENY" if json.loads(result.stdout)["hookSpecificOutput"][
-        "permissionDecision"] == "deny" else "ALLOW")
+        return "ALLOW", ""
+    decision = json.loads(result.stdout)["hookSpecificOutput"]
+    if decision["permissionDecision"] != "deny":
+        return "ALLOW", ""
+    trailer = [line for line in decision["permissionDecisionReason"].splitlines()
+               if line.startswith("LEGEND_GUARD")]
+    code = trailer[0].split("DECISION_CODE=")[1].split()[0] if trailer else "NO_TRAILER"
+    return "DENY", code
+
+
+def ask(command, cwd, workdir=None, tool="Bash", key="command", assigned=...,
+        program=None, home=None):
+    """Run the real hook engine exactly as a runtime would."""
+    return ask_full(command, cwd, workdir, tool, key, assigned, program, home)[0]
 
 
 class Fixture:
@@ -94,9 +135,19 @@ class OneActorCannotMutateAnother(unittest.TestCase):
         cls.fx.close()
         rt.reset()
 
+    #: 🔴 The codes a CONFINEMENT denial may legitimately carry. Anything else — most of
+    #: all `SESSION_ASSIGNMENT_UNDERIVABLE` — is a denial for a different reason, and a
+    #: suite that accepted it would be green with the confinement gone.
+    CONFINED_CODES = frozenset({"CONFINED_PEER_WORKTREE", "CONFINED_SHARED_CHECKOUT",
+                                "CONFINED_GIT_COMMON_DIR", "CONFINED_MULTIPLE_SCOPES"})
+
     def deny(self, command):
         rt.reset()
-        self.assertEqual(ask(command, str(self.fx.assigned)), "DENY", command)
+        outcome, code = ask_full(command, str(self.fx.assigned),
+                                 assigned=str(self.fx.assigned))
+        self.assertEqual(outcome, "DENY", command)
+        self.assertIn(code, self.CONFINED_CODES,
+                      f"{command!r} was refused as {code}, which is not confinement")
 
     def test_a_peer_worktree_is_not_writable_absolutely(self):
         self.deny(f"echo x > {self.fx.peer}/framework/pwned.md")
@@ -233,7 +284,12 @@ class TheEffectiveWorkdirIsTheExecutionDirectory(unittest.TestCase):
 
     def verdict(self, cwd, workdir, command="echo x > probe.md"):
         rt.reset()
-        return ask(command, cwd, workdir=workdir)
+        return ask(command, cwd, workdir=workdir, assigned=str(self.fx.assigned))
+
+    def code(self, cwd, workdir, command="echo x > probe.md"):
+        rt.reset()
+        return ask_full(command, cwd, workdir=workdir,
+                        assigned=str(self.fx.assigned))[1]
 
     def test_inside_inside_denies(self):
         self.assertEqual(self.verdict(str(self.fx.assigned), str(self.fx.assigned)),
@@ -242,6 +298,23 @@ class TheEffectiveWorkdirIsTheExecutionDirectory(unittest.TestCase):
     def test_outside_cwd_with_inside_workdir_denies(self):
         """🔴 The bypass: the command RUNS in the worktree."""
         self.assertEqual(self.verdict("/tmp", str(self.fx.assigned)), "DENY")
+
+    def test_the_2x2_denies_for_the_right_reason_in_every_cell(self):
+        """🔴 The assignment is HELD FIXED across all four cells — revision 10.
+
+        Every cell here varies only where the command RUNS. Letting the assignment move
+        with the cwd, as revision 9 did, makes the outside-cwd rows deny because the
+        binding vanished rather than because the target is in the repository — the same
+        verdict from a derivation that has stopped working, which is what the decision
+        code is for.
+        """
+        self.assertEqual(
+            self.code(str(self.fx.assigned), str(self.fx.assigned)),
+            "SHELL_WRITE_IN_ASSIGNED_WORKTREE")
+        self.assertEqual(
+            self.code("/tmp", str(self.fx.assigned)),
+            "SHELL_WRITE_IN_ASSIGNED_WORKTREE",
+            "the target is in the assigned worktree wherever the session's cwd is")
 
     def test_inside_cwd_with_outside_workdir_allows(self):
         """The other direction. A guard that refuses scratch work gets turned off."""
@@ -485,6 +558,447 @@ class PostEffectVerificationMatchesTheAuthorisedSurface(unittest.TestCase):
                         pev.COVERS.get(piece.kind),
                         f"{kind} is granted inside the repository and, after expansion, "
                         f"{piece.kind} is observed by nothing")
+
+
+class TheAssignedWorktreeIsSessionBound(unittest.TestCase):
+    """🔴 R1, as the cross-product the brief asks for, through the PRODUCTION adapter.
+
+        MODEL-SELECTED EXECUTION LOCATION
+        MUST NOT CHANGE
+        THE ACTOR'S AUTHORITY PERIMETER.
+
+    Revision 9 tested confinement and `workdir` in separate files, and each passed. The
+    defect lived in the cell where they cross: confinement was measured with the target
+    named absolutely and the frame left alone, `workdir` was measured with the target
+    relative and the frame moved, and nobody moved the frame ONTO a confined target. Six
+    spellings reached `ALLOW` at ordinary `SHELL_DEFAULT`.
+
+    So the axes are crossed here, in one table, and every cell goes through
+    `pre_tool_use_guard` rather than through `guard_policy` — the adapter is where the
+    assignment is derived, and a policy-level test would pass with the adapter still
+    handing it the workdir.
+    """
+
+    #: The mutating families `SHELL_DEFAULT` GRANTS inside the assigned worktree. That
+    #: is what makes them the interesting ones: rotating the frame does not defeat a
+    #: rule, it moves the target into the class the rule permits.
+    FAMILIES = (
+        ("named staging", "git add framework/probe.md"),
+        ("commit", "git commit -m x framework/probe.md"),
+        ("a content write", "echo x > framework/probe.md"),
+        ("a delete", "rm framework/probe.md"),
+    )
+
+    @classmethod
+    def setUpClass(cls):
+        cls.fx = Fixture()
+        rt.reset()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.fx.close()
+        rt.reset()
+
+    def targets(self):
+        return (("assigned", str(self.fx.assigned), None),
+                ("peer", str(self.fx.peer), "CONFINED_PEER_WORKTREE"),
+                ("shared", str(self.fx.shared), "CONFINED_SHARED_CHECKOUT"))
+
+    # ── the cross-product ──────────────────────────────────────────────────────────
+
+    def test_every_rotation_of_the_execution_frame_is_refused(self):
+        """target × invocation × family, with the assignment held fixed throughout."""
+        assigned = str(self.fx.assigned)
+        probed = 0
+        for label, target, code in self.targets():
+            if code is None:
+                continue
+            for spelling, cwd, workdir in (
+                ("workdir", assigned, target),
+                ("cwd", target, None),
+                ("cwd and workdir", target, target),
+                ("cwd assigned, workdir peer-ish", assigned, target),
+            ):
+                for family, command in self.FAMILIES:
+                    with self.subTest(target=label, via=spelling, family=family):
+                        rt.reset()
+                        outcome, observed = ask_full(command, cwd, workdir=workdir,
+                                                     assigned=assigned)
+                        probed += 1
+                        self.assertEqual(outcome, "DENY")
+                        self.assertEqual(
+                            observed, code,
+                            "refused, but not as a cross-repository act — a denial "
+                            "from a lost binding is a different failure")
+        # 🔴 A loop that ran zero cells is a green test that measured nothing.
+        self.assertEqual(probed, 2 * 4 * len(self.FAMILIES))
+
+    def test_git_dash_C_and_a_rotated_workdir_agree(self):
+        """The two spellings of one act must reach the same verdict AND the same code.
+
+        Under revision 9 they did not: `git -C <peer>` was refused and `workdir=<peer>`
+        was allowed. That disagreement was the tell, and it is asserted here so a repair
+        that closes one spelling and not the other cannot pass.
+        """
+        assigned = str(self.fx.assigned)
+        for family, command in self.FAMILIES:
+            if not command.startswith("git "):
+                continue
+            with self.subTest(family=family):
+                rt.reset()
+                rotated = ask_full(command, assigned, workdir=str(self.fx.peer),
+                                   assigned=assigned)
+                rt.reset()
+                retargeted = ask_full(
+                    command.replace("git ", f"git -C {self.fx.peer} ", 1),
+                    assigned, assigned=assigned)
+                self.assertEqual(rotated, retargeted)
+
+    def test_a_code_mode_inner_workdir_cannot_rotate_the_frame_either(self):
+        """One payload, several execution bases, exactly one actor.
+
+        The recorded 2026-08-28 Codex session called `tools.exec_command({...})` twenty
+        times with a `workdir` per call. Revision 9 honoured each inner workdir for path
+        resolution AND for the assignment, so code mode carried the bypass too.
+        """
+        assigned = str(self.fx.assigned)
+        body = ("await tools.exec_command("
+                + json.dumps({"cmd": "git add framework/probe.md",
+                              "workdir": str(self.fx.peer)}) + ");")
+        rt.reset()
+        outcome, code = ask_full("", assigned, tool="exec", program=body,
+                                 assigned=assigned)
+        self.assertEqual((outcome, code), ("DENY", "CONFINED_PEER_WORKTREE"))
+
+    # ── the other direction ────────────────────────────────────────────────────────
+
+    def test_the_assigned_worktree_keeps_every_granted_family(self):
+        """🔴 The control. An engine that closed the rotations by refusing these would
+        pass every assertion above and be useless."""
+        assigned = str(self.fx.assigned)
+        for spelling, cwd, workdir in (("no workdir", assigned, None),
+                                       ("workdir=assigned", assigned, assigned),
+                                       ("workdir=assigned, cwd elsewhere", "/tmp",
+                                        assigned)):
+            for family, command in (("named staging", "git add framework/probe.md"),
+                                    ("commit", "git commit -m x framework/probe.md")):
+                with self.subTest(via=spelling, family=family):
+                    rt.reset()
+                    self.assertEqual(ask(command, cwd, workdir=workdir,
+                                         assigned=assigned), "ALLOW")
+
+    def test_the_shared_checkout_is_writable_by_the_actor_assigned_to_it(self):
+        """🔴 Confinement is a RELATION, not a directory.
+
+        An Orchestrator whose session is bound to the shared checkout owns it, and the
+        same command that F6 refuses must succeed for that actor. An engine that
+        hard-coded "the main working tree is never writable" would pass every rotation
+        case and fail here.
+        """
+        rt.reset()
+        self.assertEqual(ask("git add CLAUDE.md", str(self.fx.shared),
+                             assigned=str(self.fx.shared)), "ALLOW")
+        rt.reset()
+        self.assertEqual(
+            ask_full("git add framework/probe.md", str(self.fx.peer),
+                     assigned=str(self.fx.shared)),
+            ("DENY", "CONFINED_PEER_WORKTREE"),
+            "and the actor assigned the shared checkout still has peers")
+
+    def test_reads_survive_every_rotation(self):
+        assigned = str(self.fx.assigned)
+        for label, target, _ in self.targets():
+            with self.subTest(target=label):
+                rt.reset()
+                self.assertEqual(ask("git status --short", target, workdir=target,
+                                     assigned=assigned), "ALLOW")
+
+    # ── the binding itself ─────────────────────────────────────────────────────────
+
+    def test_with_no_binding_every_repository_mutation_is_refused(self):
+        assigned = str(self.fx.assigned)
+        for family, command in self.FAMILIES:
+            with self.subTest(family=family):
+                rt.reset()
+                outcome, code = ask_full(command, assigned, assigned=None)
+                self.assertEqual((outcome, code),
+                                 ("DENY", "SESSION_ASSIGNMENT_UNDERIVABLE"))
+
+    def test_with_no_binding_scratch_and_reads_survive(self):
+        assigned = str(self.fx.assigned)
+        rt.reset()
+        self.assertEqual(ask("echo x > /tmp/legend-probe.txt", assigned, assigned=None),
+                         "ALLOW")
+        rt.reset()
+        self.assertEqual(ask("git status --short", assigned, assigned=None), "ALLOW")
+
+    def test_the_binding_never_comes_from_the_payload(self):
+        """🔴 The property, asserted on the module rather than on an example.
+
+        `session_binding` names every source it will read. `workdir`, `cwd` and any key
+        inside `tool_input` must not be among them — a source added there later would
+        hand the perimeter back to the model with no test failing anywhere else.
+        """
+        forbidden = {"workdir", "cwd", "command", "cmd", "script", "tool_input"}
+        for source, _ in sb.candidates({"workdir": "/x", "cwd": "/y"}, {}):
+            self.assertNotIn(source.lower(), forbidden)
+        self.assertEqual(sb.PAYLOAD_KEY, "workspace_root",
+                         "the only payload key read is the ENVELOPE's workspace root, "
+                         "which the runtime writes and the model does not")
+        found = sb.derive({"workdir": str(self.fx.peer), "cwd": str(self.fx.peer)}, {})
+        self.assertIsNone(found.worktree)
+        self.assertEqual(found.source, sb.NONE)
+
+
+class TheSessionBindingReportsWhichSourceAnsweredIt(unittest.TestCase):
+    """The precedence table, and the fact that a rejected candidate is not a silent one."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.fx = Fixture()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.fx.close()
+
+    def test_the_caller_outranks_every_environment_source(self):
+        found = sb.derive({}, {sb.OPERATOR_ENV_VAR: str(self.fx.peer)},
+                          assigned=str(self.fx.assigned))
+        self.assertEqual(found.source, sb.CALLER)
+        self.assertEqual(found.worktree, os.path.realpath(str(self.fx.assigned)))
+
+    def test_the_operator_variable_outranks_the_runtime_one(self):
+        found = sb.derive({}, {sb.OPERATOR_ENV_VAR: str(self.fx.assigned),
+                               sb.RUNTIME_ENV_VAR: str(self.fx.peer)})
+        self.assertEqual(found.source, sb.OPERATOR_ENV)
+
+    def test_the_runtime_variable_answers_when_the_operator_sets_none(self):
+        found = sb.derive({}, {sb.RUNTIME_ENV_VAR: str(self.fx.assigned)})
+        self.assertEqual(found.source, sb.RUNTIME_ENV)
+
+    def test_the_payload_envelope_is_the_last_source(self):
+        found = sb.derive({sb.PAYLOAD_KEY: str(self.fx.assigned)}, {})
+        self.assertEqual(found.source, sb.RUNTIME_PAYLOAD)
+
+    def test_a_subdirectory_binds_the_worktree_that_contains_it(self):
+        """`CLAUDE_PROJECT_DIR` names the directory a session was opened in, which may
+        be below the root. The binding is the worktree, not the directory."""
+        below = Path(self.fx.assigned) / "framework"
+        below.mkdir(exist_ok=True)
+        found = sb.derive({}, {sb.RUNTIME_ENV_VAR: str(below)})
+        self.assertEqual(found.worktree, os.path.realpath(str(self.fx.assigned)))
+
+    def test_a_candidate_outside_any_working_tree_binds_nothing_and_says_so(self):
+        found = sb.derive({}, {sb.OPERATOR_ENV_VAR: "/"})
+        self.assertIsNone(found.worktree)
+        self.assertIn("not inside a git working tree", found.detail)
+
+    def test_a_candidate_that_needs_a_shell_is_refused(self):
+        found = sb.derive({}, {sb.OPERATOR_ENV_VAR: "$HOME/x"})
+        self.assertIsNone(found.worktree)
+
+    def test_a_relative_candidate_is_refused(self):
+        found = sb.derive({}, {sb.OPERATOR_ENV_VAR: "../peer"})
+        self.assertIsNone(found.worktree)
+
+    def test_nothing_set_at_all_is_a_state_with_a_name(self):
+        found = sb.derive({}, {})
+        self.assertIsNone(found.worktree)
+        self.assertEqual(found.source, sb.NONE)
+        self.assertFalse(found.ok)
+
+
+class LaunchersReachTheirChild(unittest.TestCase):
+    """🔴 R9. Nine measured spellings that put a launcher in `argv[0]`.
+
+    The repair is UNWRAPPING and not a name list: whatever the child does, the launcher
+    does. That is why the benign controls matter as much as the delegating ones — a rule
+    that denied every `npx` would satisfy the first half and be a ban.
+    """
+
+    ROOT = str(Path(__file__).resolve().parents[2])
+
+    def verdict(self, command):
+        rt.reset()
+        return ask(command, self.ROOT, assigned=self.ROOT)
+
+    def test_every_measured_launcher_reaches_delegate(self):
+        for command in ("npx codex exec 'go'", "npx -y codex exec 'go'",
+                        "bunx codex exec 'go'", "pnpm dlx codex exec 'go'",
+                        "yarn dlx codex exec 'go'", "uvx codex exec 'go'",
+                        "pipx run codex exec 'go'", "npm exec codex exec 'go'",
+                        "npx claude -p 'write framework/x'"):
+            with self.subTest(command=command):
+                self.assertEqual(self.verdict(command), "DENY")
+
+    def test_the_denial_is_delegation_and_not_something_else(self):
+        _, code = ask_full("npx codex exec 'go'", self.ROOT, assigned=self.ROOT)
+        self.assertEqual(code, "DELEGATE")
+
+    def test_a_package_flag_does_not_hide_the_program(self):
+        self.assertEqual(self.verdict("npx -p some-package codex exec 'go'"), "DENY")
+
+    def test_a_call_flag_carries_a_shell_string_and_is_read_as_one(self):
+        self.assertEqual(self.verdict("npx -c 'codex exec go'"), "DENY")
+
+    def test_a_launcher_inside_a_shell_wrapper_still_reaches_delegate(self):
+        self.assertEqual(self.verdict("bash -c \"npx codex exec 'go'\""), "DENY")
+
+    def test_a_launcher_running_an_ordinary_program_stays_allowed(self):
+        """🔴 The control. `npx cowsay hi` is an ordinary invocation."""
+        for command in ("npx cowsay hi", "npx -y prettier --check .",
+                        "uvx ruff check .", "pnpm dlx tsc --noEmit"):
+            with self.subTest(command=command):
+                self.assertEqual(self.verdict(command), "ALLOW")
+
+    def test_a_launcher_running_a_writer_is_read_as_that_writer(self):
+        """The general property, and the reason this is unwrapping: a child that writes
+        into the repository is a repository write however it was started."""
+        self.assertEqual(self.verdict("npx some-tool > AGENTS.md"), "DENY")
+
+    def test_a_launcher_with_no_program_fails_closed(self):
+        self.assertEqual(self.verdict("npx"), "DENY")
+
+    def test_the_launcher_table_is_not_empty(self):
+        """A property quantified over a table is vacuously true when the table is empty,
+        and emptying it is the mutation that would otherwise survive every case above."""
+        self.assertGreaterEqual(len(guard_policy.PACKAGE_LAUNCHERS), 9)
+        self.assertIn(("npx",), guard_policy.PACKAGE_LAUNCHERS)
+        self.assertIn(("pnpm", "dlx"), guard_policy.PACKAGE_LAUNCHERS)
+
+
+class TheActiveRuntimeConfigurationCannotEraseItself(unittest.TestCase):
+    """🔴 R7. The registration is the switch, and revision 9 let the actor move it."""
+
+    def setUp(self):
+        self.base = Path(tempfile.mkdtemp(prefix="runtime-config-"))
+        self.addCleanup(shutil.rmtree, self.base, ignore_errors=True)
+        (self.base / ".claude").mkdir()
+        (self.base / ".codex" / "sessions").mkdir(parents=True)
+        (self.base / ".claude" / "settings.json").write_text("{}\n")
+        (self.base / ".codex" / "config.toml").write_text("# x\n")
+        self.env = {"HOME": str(self.base),
+                    "CLAUDE_CONFIG_DIR": str(self.base / ".claude"),
+                    "CODEX_HOME": str(self.base / ".codex")}
+        rc.reset()
+        self.addCleanup(rc.reset)
+
+    def verdict(self, command):
+        rt.reset()
+        return ask(command, str(Path(__file__).resolve().parents[2]),
+                   assigned=str(Path(__file__).resolve().parents[2]), home=self.env)
+
+    def test_the_active_claude_registration_is_not_writable(self):
+        self.assertEqual(
+            self.verdict(f"echo x > {self.base}/.claude/settings.json"), "DENY")
+
+    def test_the_machine_local_claude_layer_is_not_writable(self):
+        self.assertEqual(
+            self.verdict(f"echo x > {self.base}/.claude/settings.local.json"), "DENY")
+
+    def test_the_active_codex_registration_is_not_writable(self):
+        self.assertEqual(
+            self.verdict(f"echo x > {self.base}/.codex/config.toml"), "DENY")
+
+    def test_deleting_the_codex_home_is_not_allowed(self):
+        """🔴 The directory holds the config without naming it, which is why membership
+        is equal-or-ancestor rather than equality."""
+        self.assertEqual(self.verdict(f"rm -rf {self.base}/.codex"), "DENY")
+
+    def test_moving_the_codex_home_aside_is_not_allowed(self):
+        self.assertEqual(
+            self.verdict(f"mv {self.base}/.codex {self.base}/.codex-off"), "DENY")
+
+    def test_the_denial_names_the_runtime_configuration(self):
+        _, code = ask_full(f"echo x > {self.base}/.codex/config.toml",
+                           str(Path(__file__).resolve().parents[2]),
+                           assigned=str(Path(__file__).resolve().parents[2]),
+                           home=self.env)
+        self.assertEqual(code, "RUNTIME_CONFIG")
+
+    # ── the other direction ────────────────────────────────────────────────────────
+
+    def test_unrelated_contents_beside_the_registration_stay_writable(self):
+        """🔴 The control that keeps this a RESOLUTION and not a prefix ban. Sessions,
+        caches and plugin data are not control surfaces."""
+        for path in (f"{self.base}/.codex/sessions/rollout.jsonl",
+                     f"{self.base}/.claude/cache.json",
+                     f"{self.base}/notes.txt"):
+            with self.subTest(path=path):
+                self.assertEqual(self.verdict(f"echo x > {path}"), "ALLOW")
+
+    def test_reading_the_registration_stays_granted(self):
+        self.assertEqual(self.verdict(f"cat {self.base}/.codex/config.toml"), "ALLOW")
+
+    def test_an_unresolvable_surface_claims_nothing(self):
+        """🔴 The honest direction: with no HOME there are no members, `ok` is False, and
+        the readiness table must say UNDERIVABLE rather than PASS."""
+        surface = rc.resolve({})
+        self.assertFalse(surface.ok)
+        self.assertEqual(surface.members, frozenset())
+        self.assertFalse(surface.contains("/anything"))
+
+    def test_a_member_that_does_not_exist_yet_is_still_a_member(self):
+        """Creating the file IS the registration act."""
+        surface = rc.resolve({"HOME": "/nowhere-at-all"})
+        self.assertTrue(surface.contains("/nowhere-at-all/.codex/config.toml"))
+
+    def test_the_repositorys_own_settings_are_not_runtime_config(self):
+        """Inside the worktree the governance surface already exists — Write/Edit, a
+        named `git add`, a reviewed commit. Pulling it in here would make deployment
+        route D unreachable by the actor who proposes it."""
+        root = Path(__file__).resolve().parents[2]
+        surface = rc.resolve(self.env)
+        self.assertFalse(surface.contains(str(root / ".claude" / "settings.json")))
+
+
+class ChmodLocatesItsModeOperand(unittest.TestCase):
+    """🔴 R8. A refusal in the WRONG direction, which is still a defect."""
+
+    ROOT = str(Path(__file__).resolve().parents[2])
+
+    def verdict(self, command):
+        rt.reset()
+        return ask(command, self.ROOT, assigned=self.ROOT)
+
+    def test_short_mode_operands_on_scratch_are_allowed(self):
+        for command in ("chmod -x /tmp/probe.sh", "chmod -w /tmp/probe.sh",
+                        "chmod -r /tmp/probe.sh", "chmod -R -x /tmp/probe-dir",
+                        "chmod u+x /tmp/probe.sh", "chmod a-w /tmp/probe.sh",
+                        "chmod +x /tmp/probe.sh", "chmod 755 /tmp/probe.sh"):
+            with self.subTest(command=command):
+                self.assertEqual(self.verdict(command), "ALLOW")
+
+    def test_the_same_spellings_inside_the_repository_still_need_ref_write(self):
+        """🔴 The negative that keeps the repair from being 'stop reading chmod'."""
+        for command in ("chmod -x framework/scripts/legend_lint.py",
+                        "chmod +x framework/scripts/legend_lint.py",
+                        "chmod 755 framework/scripts/legend_lint.py"):
+            with self.subTest(command=command):
+                self.assertEqual(self.verdict(command), "DENY")
+
+    def test_the_mode_is_located_and_the_path_is_named(self):
+        """A receipt has to name what was touched, so the operand split is asserted
+        directly rather than through the verdict — both spellings deny, and only this
+        can tell a located mode from a lost path."""
+        self.assertEqual(guard_policy.chmod_operands(["chmod", "-x", "a.py"]),
+                         ("-x", ["a.py"]))
+        self.assertEqual(guard_policy.chmod_operands(["chmod", "-R", "-x", "d"]),
+                         ("-x", ["d"]))
+        self.assertEqual(guard_policy.chmod_operands(["chmod", "755", "a.py"]),
+                         ("755", ["a.py"]))
+        self.assertEqual(
+            guard_policy.chmod_operands(["chmod", "--reference", "b", "a.py"]),
+            (None, ["a.py"]),
+            "`--reference` supplies the mode, so there is no mode OPERAND and the "
+            "positional rule would have eaten the path")
+
+    def test_chown_keeps_its_positional_owner_spec(self):
+        """The repair is chmod-shaped. `chown user file` still drops the first operand,
+        because `user` is not a path and never looked like a mode."""
+        self.assertEqual(self.verdict("chown me /tmp/probe.sh"), "ALLOW")
+        self.assertEqual(self.verdict("chown me framework/scripts/legend_lint.py"),
+                         "DENY")
 
 
 if __name__ == "__main__":

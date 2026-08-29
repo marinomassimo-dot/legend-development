@@ -54,8 +54,15 @@ def report(**overrides) -> dict:
         "repository_id": "/repo/.git",
         "effective_workdir": "/repo/wt",
         "target_scope": em.INSIDE_REPO,
-        "guard_generation": "REV9",
+        "guard_generation": "REV10",
         "guard_policy_hash": "0" * 16,
+        # ── revision 10 ──
+        #
+        # Three directories, three fields. They coincide here because this fixture is an
+        # ordinary invocation; `AReceiptRecordsAFrameRotationRatherThanHidingIt` below
+        # is the one where they do not, and it is the case the fields exist for.
+        "session_assigned_worktree": "/repo/wt",
+        "actual_execution_base": "/repo/wt",
     }
     base.update(overrides)
     return base
@@ -268,6 +275,46 @@ class TheTwoLedgersAreNotTheSameLedger(unittest.TestCase):
         receipt = er.build(binding(task=ea.task_fingerprint("a sensitive assignment")),
                            report())
         self.assertNotIn("sensitive", json.dumps(receipt))
+
+
+class AReceiptRecordsAFrameRotationRatherThanHidingIt(unittest.TestCase):
+    """🔴 R16. Three directories, separately auditable.
+
+    Revision 9 recorded `effective_workdir` and let it stand for the actor's perimeter
+    as well — the same collapse the policy made, written into the record rather than
+    repaired in it. A reader of such a receipt cannot tell an ordinary invocation from
+    one where the model named a peer as its execution base.
+    """
+
+    def test_the_three_directories_are_separate_required_fields(self):
+        for field in ("session_assigned_worktree", "effective_workdir",
+                      "actual_execution_base"):
+            with self.subTest(field=field):
+                self.assertIn(field, er.REQUIRED)
+
+    def test_a_rotation_is_visible_in_the_record(self):
+        receipt = er.build(binding(), report(
+            session_assigned_worktree="/repo/wt",
+            effective_workdir="/repo/peer",
+            actual_execution_base="/repo/peer",
+            target_scope=em.PEER_WORKTREE,
+            result="WRITE_REFUSED"))
+        self.assertNotEqual(receipt["session_assigned_worktree"],
+                            receipt["effective_workdir"])
+        self.assertEqual(receipt["target_scope"], em.PEER_WORKTREE)
+
+    def test_a_missing_directory_is_underivable_and_not_borrowed(self):
+        """🔴 Never defaulted to this process's own topology. A receipt is a record of
+        what judged THAT command; filling a gap from the recorder's environment would
+        make every receipt describe the machine that read it."""
+        receipt = er.build(binding(), {k: v for k, v in report().items()
+                                       if k != "session_assigned_worktree"})
+        self.assertEqual(receipt["session_assigned_worktree"], ea.UNDERIVABLE)
+
+    def test_the_guard_generation_travels_with_the_verdict(self):
+        receipt = er.build(binding(), report())
+        self.assertEqual(receipt["guard_generation"], "REV10")
+        self.assertIn("guard_policy_hash", er.REQUIRED)
 
 
 if __name__ == "__main__":

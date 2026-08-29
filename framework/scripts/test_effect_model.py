@@ -111,6 +111,39 @@ class UnknownEffectIsDeniedByEveryAuthority(unittest.TestCase):
                         effect = em.Effect(kind, None, scope)
                         self.assertFalse(em.authorize([effect], name).authorized)
 
+    def test_no_authority_grants_a_mutation_in_any_ungranted_scope(self) -> None:
+        """🔴 Over `UNGRANTED`, which is `CONFINED` plus `RUNTIME_CONFIG` — revision 10.
+
+        The confined scopes are absent from every grant by OMISSION, and an omission can
+        be undone by someone writing `_L7 = {WRITE: {RUNTIME_CONFIG}}` with no error
+        anywhere. Quantifying over the SET rather than over a list of expected denials is
+        what makes a scope added later inherit the property — or fail here.
+        """
+        self.assertTrue(em.UNGRANTED, "an empty set makes this vacuously true")
+        self.assertEqual(em.UNGRANTED, em.CONFINED | {em.RUNTIME_CONFIG})
+        for name, grant in em.AUTHORITIES.items():
+            for kind in sorted(em.MUTATING):
+                for scope in sorted(em.UNGRANTED):
+                    with self.subTest(authority=name, kind=kind, scope=scope):
+                        self.assertFalse(grant.permits(kind, scope))
+
+    def test_reading_is_granted_in_every_ungranted_scope(self) -> None:
+        """🔴 The other direction. A read confinement on the runtime configuration would
+        stop `codex_registration.py` diagnosing a registration at all, and a read
+        confinement on a peer would break review — which is how a rule gets turned off."""
+        for name, grant in em.AUTHORITIES.items():
+            for scope in sorted(em.UNGRANTED):
+                with self.subTest(authority=name, scope=scope):
+                    self.assertTrue(grant.permits(em.READ, scope))
+
+    def test_every_ungranted_scope_is_nameable(self) -> None:
+        """What stops them is that no authority grants them, which is a different
+        sentence from 'the guard could not see the path' and a different repair."""
+        for scope in sorted(em.UNGRANTED):
+            with self.subTest(scope=scope):
+                self.assertIn(scope, em.SCOPES)
+                self.assertIn(scope, em.NAMEABLE)
+
     def test_an_unresolvable_authority_is_no_authority(self) -> None:
         """Not a weaker grant — none. A typo must not become a permissive default."""
         decision = em.authorize([em.Effect(em.READ, "x", em.INSIDE_REPO)], "PUBLICH")

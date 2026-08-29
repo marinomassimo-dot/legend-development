@@ -48,6 +48,21 @@ POLICY_SPEC = importlib.util.spec_from_file_location("guard_policy", HERE / "gua
 policy = importlib.util.module_from_spec(POLICY_SPEC)
 POLICY_SPEC.loader.exec_module(policy)
 
+#: 🔴 THE FRAME, stated once and passed explicitly — revision 10.
+#:
+#: Three directories, and revision 9 had one name for two of them. `cwd` is the
+#: EFFECTIVE WORKDIR, which the model writes and which anchors relative operands;
+#: `assigned` is the SESSION-BOUND worktree, which decides the authority perimeter. They
+#: are equal in this suite because these cases are about command SHAPES and not about
+#: the frame — the cases that vary them live in
+#: `test_confinement_and_delegation.py::TheAssignedWorktreeIsSessionBound`.
+#:
+#: It is a keyword argument rather than an environment variable on purpose. Setting
+#: `LEGEND_ASSIGNED_WORKTREE` for the process would be shorter and would leak into every
+#: other suite a runner imports beside this one, which is how a suite that forgot to
+#: state its frame goes on passing because another one stated it.
+FRAME = {"cwd": str(ROOT), "repo_root": str(ROOT), "assigned": str(ROOT)}
+
 STAGING = "git add -A"
 HEREDOC_WRITE = (
     "python3 - <<'PY'\n"
@@ -107,9 +122,17 @@ def codemode_payload(command: str) -> dict:
 
 
 def run_entry(raw: str, env: dict = None) -> tuple:
+    # 🔴 The session assignment is supplied through the ENVIRONMENT and the payload is
+    # left alone, which is the revision-10 separation under test: the model writes the
+    # payload, and the perimeter is not in it. `CLAUDE_PROJECT_DIR` is cleared first so
+    # this suite's answer does not depend on whether the runner happens to be a live
+    # session — under one it would be set to this worktree and the tests would pass for
+    # a reason the suite never stated.
+    base = {**os.environ, "LEGEND_ASSIGNED_WORKTREE": str(ROOT)}
+    base.pop("CLAUDE_PROJECT_DIR", None)
     result = subprocess.run(
         [sys.executable, str(ENTRY)], input=raw, capture_output=True, text=True,
-        env={**os.environ, **(env or {})},
+        env={**base, **(env or {})},
     )
     return result.returncode, result.stdout.strip()
 
@@ -463,7 +486,7 @@ class TheDemonstratedMutationPathsAreClosed(unittest.TestCase):
             ("a shell write", "echo x > AGENTS.md", "Write and Edit"),
         ):
             with self.subTest(shape=label):
-                reason = policy.verdict(command, str(ROOT), str(ROOT))
+                reason = policy.verdict(command, **FRAME)
                 self.assertIsNotNone(reason, f"{label} must deny")
                 self.assertIn(fragment, reason,
                               f"{label} denied, but not for the reason it should: "
@@ -519,7 +542,7 @@ class AlternateEncodingsDoNotEvadeTheParser(unittest.TestCase):
         for label, command in self.EVASIONS:
             with self.subTest(evasion=label):
                 self.assertIsNotNone(
-                    policy.verdict(command, cwd=str(ROOT), repo_root=str(ROOT)),
+                    policy.verdict(command, **FRAME),
                     f"{label} evaded the parser")
 
     def test_evasions_are_refused_identically_in_every_runtime(self) -> None:
@@ -634,14 +657,14 @@ class NegativeControlsMustKeepWorking(unittest.TestCase):
             ("git add framework/scripts/guard_policy.py", "allow"),
         ):
             with self.subTest(command=command):
-                reason = policy.verdict(command, cwd=str(ROOT), repo_root=str(ROOT))
+                reason = policy.verdict(command, **FRAME)
                 self.assertEqual("deny" if reason else "allow", expected)
 
     def test_every_negative_control_is_allowed(self) -> None:
         for label, command in self.ALLOWED:
             with self.subTest(control=label):
                 self.assertIsNone(
-                    policy.verdict(command, cwd=str(ROOT), repo_root=str(ROOT)),
+                    policy.verdict(command, **FRAME),
                     f"{label} was denied; ordinary work must not be blocked")
 
     def test_negative_controls_are_allowed_in_every_runtime(self) -> None:
@@ -732,7 +755,7 @@ class TheRepositorysOwnDocumentedCommandsStillRun(unittest.TestCase):
         self.assertGreater(len(cases), 150, "the harvest itself must not silently empty")
         denied = []
         for rel, line, command in cases:
-            outcome, _, _ = policy.classify(command, str(ROOT), str(ROOT))
+            outcome, _, _ = policy.classify(command, **FRAME)
             if outcome != policy.ALLOWED:
                 denied.append((rel, line, command))
         ratio = 1 - len(denied) / len(cases)
@@ -761,7 +784,7 @@ class TheRepositorysOwnDocumentedCommandsStillRun(unittest.TestCase):
         refused = []
         for script in scripts:
             for command in (f"python3 {script}", f"python3 {script} --help"):
-                outcome, reason, _ = policy.classify(command, str(ROOT), str(ROOT))
+                outcome, reason, _ = policy.classify(command, **FRAME)
                 if outcome != policy.ALLOWED:
                     refused.append(f"{command}\n    {reason.splitlines()[0]}")
         self.assertEqual(
@@ -782,7 +805,7 @@ class TheRepositorysOwnDocumentedCommandsStillRun(unittest.TestCase):
             "python3 framework/scripts/runtime_parity.py --bootstrap",
         ):
             with self.subTest(command=command):
-                self.assertIsNone(policy.verdict(command, cwd=str(ROOT), repo_root=str(ROOT)))
+                self.assertIsNone(policy.verdict(command, **FRAME))
 
 
 class TheRepositoryBoundaryIsWhatMakesAWriteProhibited(unittest.TestCase):
@@ -814,22 +837,48 @@ class TheRepositoryBoundaryIsWhatMakesAWriteProhibited(unittest.TestCase):
             outside.mkdir()
             self.assertEqual(
                 policy.classify_target(str(repo / "a.md"), cwd=str(outside),
-                                       repo_root=str(repo)),
+                                       repo_root=str(repo), assigned=str(ROOT)),
                 policy.INSIDE_REPO,
-                "a path inside the named root is repository space even when the "
-                "topology could not be derived and the path sits under TMPDIR")
+                "a path inside the named root is repository space even when it belongs "
+                "to no worktree of the SESSION's repository and sits under TMPDIR")
+
+    def test_the_same_path_with_no_assignment_is_underivable_not_scratch(self) -> None:
+        """🔴 The revision-10 half of the branch above, and it fails DIFFERENTLY.
+
+        With no session assignment there is no perimeter, so "inside the effective
+        workdir's repository" does not say WHICH repository — and `INSIDE_REPO` is a
+        GRANT for `STAGE` and `COMMIT`. The overlay therefore reads `UNDERIVABLE` when
+        unbound, which denies every mutation instead of granting two of them.
+
+        Both answers deny a shell write, which is exactly why this needs its own
+        assertion: a verdict-level test could not tell them apart, and the corpus caught
+        the difference only because case `F11` commits rather than writes.
+        """
+        with tempfile.TemporaryDirectory() as raw:
+            repo = Path(raw) / "repo"
+            repo.mkdir()
+            subprocess.run(["git", "-C", str(repo), "init", "-q"], capture_output=True)
+            outside = Path(raw) / "not-a-repo"
+            outside.mkdir()
+            self.assertEqual(
+                policy.classify_target(str(repo / "a.md"), cwd=str(outside),
+                                       repo_root=str(repo), assigned=None),
+                policy.UNDERIVABLE)
 
     def test_a_write_outside_the_repository_is_not_this_guards_business(self) -> None:
         self.assertIsNone(policy.verdict("echo x > /Users/someone/notes.md",
-                                         cwd=str(ROOT), repo_root=str(ROOT)))
+                                         cwd=str(ROOT), repo_root=str(ROOT),
+                                         assigned=str(ROOT)))
 
     def test_the_same_write_inside_the_repository_is_denied(self) -> None:
         self.assertIsNotNone(policy.verdict("echo x > AGENTS.md",
-                                            cwd=str(ROOT), repo_root=str(ROOT)))
+                                            cwd=str(ROOT), repo_root=str(ROOT),
+                                            assigned=str(ROOT)))
 
     def test_a_relative_path_that_climbs_back_in_is_denied(self) -> None:
         self.assertIsNotNone(policy.verdict("echo x > ./framework/../AGENTS.md",
-                                            cwd=str(ROOT), repo_root=str(ROOT)))
+                                            cwd=str(ROOT), repo_root=str(ROOT),
+                                            assigned=str(ROOT)))
 
     def test_a_shell_out_is_judged_as_the_command_it_runs(self) -> None:
         """The escape hatch must survive being taken from inside a program.
@@ -850,8 +899,7 @@ class TheRepositoryBoundaryIsWhatMakesAWriteProhibited(unittest.TestCase):
             ("import subprocess\nsubprocess.run(build_argv())", "deny"),
         ):
             with self.subTest(program=program.splitlines()[-1][:50]):
-                reason = policy.verdict(body.format(program), cwd=str(ROOT),
-                                        repo_root=str(ROOT))
+                reason = policy.verdict(body.format(program), **FRAME)
                 self.assertEqual("deny" if reason else "allow", expected)
 
     def test_the_directory_decides_when_only_the_filename_expands(self) -> None:
@@ -875,16 +923,57 @@ class TheRepositoryBoundaryIsWhatMakesAWriteProhibited(unittest.TestCase):
             ("rm framework/scripts/*.pyc", "deny"),
         ):
             with self.subTest(command=command):
-                reason = policy.verdict(command, cwd=str(ROOT), repo_root=str(ROOT))
+                reason = policy.verdict(command, **FRAME)
                 self.assertEqual("deny" if reason else "allow", expected)
 
     def test_an_unknown_root_treats_everything_as_repository_space(self) -> None:
-        """Fail-closed, stated: no root means no safe outside."""
-        self.assertIsNotNone(policy.verdict("echo x > /Users/someone/notes.md",
-                                            cwd=str(ROOT), repo_root=None))
+        """Fail-closed, stated — and revision 10 moved WHERE the closing happens.
+
+        🔴 Revision 9 read `repo_root=None` as *we do not know where we are*, and made
+        every non-scratch path repository space on that basis. It no longer means that:
+        the SESSION ASSIGNMENT establishes the repository, `repo_root` only anchors the
+        workdir overlay, and with an assignment in hand an unknown root leaves a path
+        outside the repository outside it — which is the correct answer and not a
+        weakening, because the perimeter was derived from something better.
+
+        The fail-closed arm therefore moved to the assignment, and it is asserted
+        immediately below rather than deleted. If a later edit lets an UNBOUND session
+        write outside scratch, that test goes red — this one would not, and reading it
+        as the fail-closed check is exactly the mistake this docstring exists to stop.
+        """
+        self.assertIsNone(policy.verdict("echo x > /Users/someone/notes.md",
+                                         cwd=str(ROOT), repo_root=None,
+                                         assigned=str(ROOT)),
+                          "an assignment establishes the repository; an unknown root "
+                          "does not make an outside path this guard's business")
         self.assertIsNone(policy.verdict("echo x > /tmp/notes.md",
-                                         cwd=str(ROOT), repo_root=None),
+                                         cwd=str(ROOT), repo_root=None,
+                                         assigned=str(ROOT)),
                           "scratch space stays scratch space with or without a root")
+
+    def test_an_unknown_assignment_treats_everything_as_repository_space(self) -> None:
+        """The fail-closed arm, where revision 10 put it: on the ASSIGNMENT.
+
+        No trusted source answered, so there is no perimeter, so every mutation outside
+        scratch is refused — including one that revision 9 would have allowed as
+        `OUTSIDE_REPO`. Reads and scratch writes survive, because a guard that refuses
+        `echo x > /tmp/f` when a variable is unset is a guard that gets turned off.
+        """
+        self.assertIsNotNone(policy.verdict("echo x > /Users/someone/notes.md",
+                                            cwd=str(ROOT), repo_root=None,
+                                            assigned=None))
+        self.assertIsNotNone(policy.verdict("git commit -m x framework/probe.md",
+                                            cwd=str(ROOT), repo_root=str(ROOT),
+                                            assigned=None),
+                             "a commit with no perimeter is a commit into an "
+                             "unidentified repository")
+        self.assertIsNone(policy.verdict("echo x > /tmp/notes.md",
+                                         cwd=str(ROOT), repo_root=None, assigned=None),
+                          "scratch is a property of the path, not of the repository")
+        self.assertIsNone(policy.verdict("git status --short",
+                                         cwd=str(ROOT), repo_root=str(ROOT),
+                                         assigned=None),
+                          "READ is granted with no assignment; only mutation is not")
 
 
 if __name__ == "__main__":

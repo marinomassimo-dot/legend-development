@@ -278,5 +278,81 @@ class TheStrictnessOrderIsTotal(unittest.TestCase):
         self.assertEqual(max(rt.STRICTNESS, key=rt.STRICTNESS.get), rt.UNDERIVABLE)
 
 
+class TheAssignmentIsPinnedAndNotDerivedFromTheCwd(unittest.TestCase):
+    """🔴 R1, at the topology layer. `of` answers *around this directory*; `of_assigned`
+    answers *around this ACTOR* — and only the second may decide anything."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.fx = Fixture()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.fx.close()
+
+    def test_of_follows_the_directory_it_is_given(self):
+        """The behaviour that made the bypass possible, kept measurable: standing in a
+        peer makes `of` call the peer the assignment. That is a true answer to the
+        question `of` asks, and the wrong question for a decision."""
+        self.assertEqual(rt.of(str(self.fx.peer)).assigned_worktree,
+                         os.path.realpath(str(self.fx.peer)))
+
+    def test_of_assigned_pins_the_assignment_whatever_the_cwd(self):
+        topology = rt.of_assigned(str(self.fx.assigned))
+        self.assertEqual(topology.assigned_worktree,
+                         os.path.realpath(str(self.fx.assigned)))
+        self.assertEqual(topology.classify(str(self.fx.peer / "x.md")),
+                         rt.PEER_WORKTREE)
+        self.assertEqual(topology.classify(str(self.fx.assigned / "x.md")),
+                         rt.ASSIGNED_WORKTREE)
+
+    def test_the_two_disagree_about_exactly_the_thing_that_matters(self):
+        """Standing in the peer, `of` says the peer is mine and `of_assigned` says it is
+        a peer. That disagreement IS the repair, so it is asserted rather than implied."""
+        from_cwd = rt.of(str(self.fx.peer))
+        from_session = rt.of_assigned(str(self.fx.assigned))
+        target = str(self.fx.peer / "x.md")
+        self.assertEqual(from_cwd.classify(target), rt.ASSIGNED_WORKTREE)
+        self.assertEqual(from_session.classify(target), rt.PEER_WORKTREE)
+
+    def test_the_shared_checkout_is_the_assignment_for_the_actor_bound_to_it(self):
+        topology = rt.of_assigned(str(self.fx.shared))
+        self.assertEqual(topology.classify(str(self.fx.shared / "CLAUDE.md")),
+                         rt.ASSIGNED_WORKTREE)
+        self.assertEqual(topology.classify(str(self.fx.peer / "x.md")),
+                         rt.PEER_WORKTREE)
+
+    def test_an_assignment_that_is_not_a_working_tree_is_not_a_topology(self):
+        for candidate in (None, "", "/", str(self.fx.base / "nowhere")):
+            with self.subTest(candidate=candidate):
+                self.assertFalse(rt.of_assigned(candidate).ok)
+
+    def test_a_failed_assignment_classifies_nothing_as_the_actors_own(self):
+        """🔴 The path is deliberately OUTSIDE scratch space. The fixture lives under
+        `TMPDIR`, and a failed topology still answers `EXTERNAL_SCRATCH` there — the
+        documented carve-out, because scratch is a property of the path. Asserting the
+        UNDERIVABLE arm against a fixture path would have measured the carve-out and
+        called it the fail-closed branch."""
+        broken = rt.of_assigned("/")
+        self.assertFalse(broken.ok)
+        self.assertEqual(broken.classify("/opt/some-repository/x.md"), rt.UNDERIVABLE)
+        self.assertEqual(broken.classify("/tmp/x.md"), rt.EXTERNAL_SCRATCH,
+                         "scratch survives a failed derivation; nothing else does")
+
+    def test_the_two_caches_do_not_answer_each_others_question(self):
+        """🔴 One cache keyed on a path would return whichever question was asked first,
+        and the two questions have different answers for the same path."""
+        rt.reset()
+        self.assertEqual(rt.cached(str(self.fx.peer)).assigned_worktree,
+                         os.path.realpath(str(self.fx.peer)))
+        self.assertEqual(rt.cached_for(str(self.fx.peer)).assigned_worktree,
+                         os.path.realpath(str(self.fx.peer)))
+        self.assertEqual(rt.cached_for(str(self.fx.assigned)).assigned_worktree,
+                         os.path.realpath(str(self.fx.assigned)))
+        rt.reset()
+        self.assertEqual(rt._CACHE, {})
+        self.assertEqual(rt._ASSIGNED_CACHE, {})
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

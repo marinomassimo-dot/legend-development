@@ -75,6 +75,20 @@ REQUIRED: Tuple[str, ...] = (
     # a receipt that does not name its engine cannot be compared with one from another
     # worktree — the two were produced by different rules.
     "guard_generation", "guard_policy_hash",
+    # ── revision 10 ──
+    #
+    # 🔴 THREE DIRECTORIES, THREE FIELDS. Revision 9 had `effective_workdir` and let it
+    # stand for the actor's perimeter as well as for the base relative paths resolve
+    # against — which is the same collapse the policy made, recorded rather than fixed.
+    #
+    #   session_assigned_worktree  the worktree this actor was GIVEN. Decides authority.
+    #   effective_workdir          where relative operands were anchored. Model-selected.
+    #   actual_execution_base      where the command actually ran.
+    #
+    # A receipt that printed one value under one name could not show a reader that a
+    # rotation happened, which is the whole of what Mirror demonstrated. They coincide
+    # in the ordinary case; a receipt in which they do not is the interesting one.
+    "session_assigned_worktree", "actual_execution_base",
 )
 
 VALID_ATTESTATIONS = frozenset({ea.ATTESTED, ea.UNATTESTED,
@@ -138,7 +152,10 @@ def build(binding: ea.Binding, report: Dict[str, object],
         # judged THAT command; filling a gap from the recorder's environment would make
         # every receipt describe the machine that read it.
         "repository_id": report.get("repository_id", ea.UNDERIVABLE),
+        "session_assigned_worktree": report.get("session_assigned_worktree",
+                                                ea.UNDERIVABLE),
         "effective_workdir": report.get("effective_workdir", ea.UNDERIVABLE),
+        "actual_execution_base": report.get("actual_execution_base", ea.UNDERIVABLE),
         "target_scope": report.get("target_scope", ea.UNDERIVABLE),
         "guard_generation": report.get("guard_generation", ea.UNDERIVABLE),
         "guard_policy_hash": report.get("guard_policy_hash", ea.UNDERIVABLE),

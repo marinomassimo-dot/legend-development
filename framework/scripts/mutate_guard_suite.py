@@ -513,6 +513,211 @@ MUTATIONS = [
         "an engine that reads the whole scene as scratch is scored anyway, so a "
         "location defect is attributed to every family the corpus names and the "
         "revision that fixed the location is credited with closing all of them"),
+
+    # ══ REVISION 10 ═════════════════════════════════════════════════════════════════
+    #
+    # 🔴 The first four are the R1 repair, broken in the four ways it can be broken: at
+    # the adapter, at the policy default, at the module's source table, and at the
+    # topology. A repair that lives in four places has to be attacked in four places, and
+    # a suite that only notices one of them is a suite that would let the other three
+    # ship.
+    Mutation(
+        "M62", GUARD_ENTRY,
+        '            assigned=assignment.worktree)',
+        '            assigned=workdir)',
+        CONFINEMENT_SUITES,
+        "🔴 THE REVISION-9 DEFECT ITSELF: the assigned worktree is sourced from the "
+        "EFFECTIVE WORKDIR again, so naming a peer as the workdir makes the peer this "
+        "actor's own tree and SHELL_DEFAULT's staging and commit grants apply to it"),
+    Mutation(
+        "M63", GUARD_ENTRY,
+        '    assignment = session_binding.derive(payload)',
+        '    assignment = session_binding.Assignment(\n'
+        '        payload.get("cwd"), session_binding.CALLER)',
+        CONFINEMENT_SUITES,
+        "the assignment is sourced from the INVOCATION CWD instead of the session "
+        "binding — the same defect one field over, and the spelling that survives a "
+        "repair aimed only at `workdir`"),
+    Mutation(
+        "M64", GUARD_POLICY,
+        '    if not assigned or not isinstance(assigned, str):\n        return None',
+        '    if not assigned or not isinstance(assigned, str):\n'
+        '        import inspect\n'
+        '        return rt.cached(inspect.currentframe().f_back.f_locals.get("cwd"))',
+        CONFINEMENT_SUITES,
+        "an UNDERIVABLE assignment falls back to the effective workdir's topology "
+        "instead of denying, which is the fail-open reading of 'we do not know'"),
+    Mutation(
+        "M65", "framework/scripts/session_binding.py",
+        '        (CALLER, assigned),',
+        '        (CALLER, assigned),\n        ("WORKDIR", payload.get("workdir")),',
+        CONFINEMENT_SUITES,
+        "a MODEL-WRITTEN payload key is added to the trusted source table, which hands "
+        "the authority perimeter straight back to the model with the adapter untouched"),
+    Mutation(
+        "M66", GUARD_POLICY,
+        '    return _stricter(outside, _workdir_repository_overlay(path, repo_root, unbound))',
+        '    return _stricter(SCRATCH, _workdir_repository_overlay(path, repo_root, unbound))',
+        CONFINEMENT_SUITES + ("framework/scripts/test_repo_topology.py",),
+        "the SESSION's answer is discarded and only the workdir overlay decides, so "
+        "every path outside the effective workdir's own tree reads as scratch"),
+    Mutation(
+        "M67", GUARD_POLICY,
+        '    return UNDERIVABLE if unbound else INSIDE_REPO',
+        '    return INSIDE_REPO',
+        CONFINEMENT_SUITES + ("framework/scripts/test_pre_tool_use_guard.py",),
+        "an UNBOUND session gets INSIDE_REPO from the overlay — and INSIDE_REPO is a "
+        "GRANT for STAGE and COMMIT, so a session with no perimeter commits into "
+        "whatever repository it is standing in"),
+    Mutation(
+        "M68", GUARD_POLICY,
+        '        if rc.cached().contains(path):\n            return RUNTIME_CONFIG',
+        '        if False:\n            return RUNTIME_CONFIG',
+        CONFINEMENT_SUITES,
+        "the runtime configuration scope is removed from classification, so the file "
+        "that decides whether this guard runs becomes writable by the actor it governs"),
+    Mutation(
+        "M69", "framework/scripts/effect_model.py",
+        'UNGRANTED: FrozenSet[str] = CONFINED | frozenset({RUNTIME_CONFIG})',
+        'UNGRANTED: FrozenSet[str] = frozenset()',
+        CONFINEMENT_SUITES + ("framework/scripts/test_effect_model.py",),
+        "🔴 the domain every ungranted-scope property is quantified over is EMPTIED, "
+        "which makes all of them vacuously true — the M48 lesson, one scope later"),
+    Mutation(
+        "M70", "framework/scripts/runtime_config.py",
+        '        return candidate in self.members or candidate in self.ancestors',
+        '        return candidate in self.members',
+        CONFINEMENT_SUITES,
+        "membership stops covering ancestors, so `rm -rf <CODEX_HOME>` destroys the "
+        "registration without ever naming it"),
+    Mutation(
+        "M71", "framework/scripts/runtime_config.py",
+        '        members.extend(posixpath.join(claude_home, name)\n'
+        '                       for name in CLAUDE_REGISTRATION_FILES)',
+        '        pass',
+        CONFINEMENT_SUITES,
+        "the Claude registration leaves the surface, so the settings file carrying both "
+        "the hook and the `env` block session_binding reads becomes writable"),
+    Mutation(
+        "M72", GUARD_POLICY,
+        '    launcher = launcher_key(argv)\n    if launcher is not None:',
+        '    launcher = launcher_key(argv)\n    if False:',
+        CONFINEMENT_SUITES,
+        "launcher unwrapping is removed, so `npx codex exec` reaches an agent runtime "
+        "with the delegation test looking at `npx`"),
+    Mutation(
+        "M73", GUARD_POLICY,
+        'PACKAGE_LAUNCHERS = {',
+        'PACKAGE_LAUNCHERS = {} or {',
+        CONFINEMENT_SUITES,
+        "the launcher table is emptied rather than the branch removed — the same "
+        "behaviour by a different edit, and the one a test that asserts on the branch "
+        "would miss"),
+    Mutation(
+        "M74", GUARD_POLICY,
+        '            _, targets = chmod_operands(argv)',
+        '            targets = operands(argv, program)[1:]',
+        CONFINEMENT_SUITES,
+        "chmod goes back to counting its mode off the front, so `chmod -x <scratch>` "
+        "loses its path and is refused for having no target"),
+    Mutation(
+        "M75", GUARD_POLICY,
+        '        named = [qualify_ref(sub, t) for t in named] if named else ["HEAD"]',
+        '        named = named or ["HEAD"]',
+        ("framework/scripts/test_post_effect_verify.py",),
+        "ref normalisation is removed, so `git branch -D other` predicts `other` while "
+        "the observation says `refs/heads/other` and an authorised deletion verifies "
+        "INVALID"),
+    Mutation(
+        "M76", GUARD_POLICY,
+        '        if sub == "update-ref" and named:\n            named = named[:1]',
+        '        if False:\n            named = named[:1]',
+        ("framework/scripts/test_post_effect_verify.py",),
+        "`git update-ref <ref> <sha>` predicts a second ref mutation on the SHA, a "
+        "target that cannot exist and is reported MISSING for every authorised call"),
+    Mutation(
+        "M77", "framework/scripts/codex_hook_state.py",
+        '    if answer.get("error") is not None:\n        return None, stderr',
+        '    if False:\n        return None, stderr',
+        ("framework/scripts/test_runtime_diagnostics.py",),
+        "a JSON-RPC error becomes an empty hook set again, so a query that FAILED is "
+        "crossed with the filesystem and named CONFIG_ABSENT or TRUST_BLOCKED"),
+    Mutation(
+        "M78", "framework/scripts/codex_hook_state.py",
+        '    if hooks is None:\n        # 🔴 The runtime did not answer.',
+        '    if False:\n        # 🔴 The runtime did not answer.',
+        ("framework/scripts/test_runtime_diagnostics.py",),
+        "the non-answer branch is removed one layer down, so `hooks_for` returning None "
+        "falls through to the empty-hooks reading"),
+    Mutation(
+        "M79", "framework/scripts/codex_hook_state.py",
+        '    CONFIG_ABSENT, CONFIG_INVALID, CONFIG_OFF_RESOLUTION_PATH,',
+        '    CONFIG_ABSENT, CONFIG_INVALID, "CONFIG_DISCOVERED", CONFIG_OFF_RESOLUTION_PATH,',
+        ("framework/scripts/test_runtime_diagnostics.py",),
+        "a dead diagnostic state is reintroduced — declared, unreachable, and findable "
+        "in a report a reader will never see it in"),
+    Mutation(
+        "M80", "framework/scripts/hostile_corpus.py",
+        '        "sha": "HEAD",',
+        '        "sha": None,',
+        ("framework/scripts/test_runtime_diagnostics.py",),
+        "🔴 the candidate's own engine reverts to the WORKING TREE, so the headline "
+        "ratio becomes a function of disk state and nobody re-running it from the "
+        "repository gets the same answer"),
+    Mutation(
+        "M81", "framework/scripts/hostile_corpus.py",
+        '    pin = (overrides or {}).get(revision) or str(ENGINES[revision]["sha"])',
+        '    pin = str(ENGINES[revision]["sha"])',
+        ("framework/scripts/test_runtime_diagnostics.py",),
+        "an explicit --engine-sha pin is ignored, so a run that names the content commit "
+        "silently measures whatever HEAD has become"),
+    Mutation(
+        "M82", GUARD_ENTRY,
+        '            return _deny(reason, code, assignment.source)',
+        '            return _deny(reason)',
+        ("scripts/test_guard_bash_command.py",),
+        "the decision code and the binding source leave the denial, so a live probe is "
+        "back to a sentence the legacy guard also contains"),
+    Mutation(
+        "M83", "framework/scripts/codex_registration.py",
+        '    return UNANCHORED',
+        '    return RUNTIME_ANCHORED',
+        ("framework/scripts/test_runtime_diagnostics.py",),
+        "a RELATIVE registration is reported as deterministically anchored, so the "
+        "probe starts against a config that names a different file per cwd"),
+    Mutation(
+        "M84", "framework/scripts/codex_registration.py",
+        '    unmet = [name for name, _ in PRECONDITIONS if observations.get(name) is not True]',
+        '    unmet = [name for name in observations if observations[name] is not True]',
+        ("framework/scripts/test_runtime_diagnostics.py",),
+        "a precondition nobody answered counts as met, so a probe starts with a "
+        "requirement never checked — the failed-query defect inside the module written "
+        "to stop it"),
+    Mutation(
+        "M85", "framework/scripts/codex_registration.py",
+        '    if not (observations.get("REV10_GENERATION_CONFIRMED") is True\n'
+        '            and observations.get("REV10_UNIQUE_DENIAL_OBSERVED") is True):',
+        '    if False:',
+        ("framework/scripts/test_runtime_diagnostics.py",),
+        "🔴 the legacy discriminator is accepted as revision-10 proof: any refusal at "
+        "all is scored as the candidate's engine firing, which is exactly the false GO "
+        "the revision-9 protocol could return"),
+    Mutation(
+        "M86", "framework/scripts/guard_revision.py",
+        '    if rev10:\n        return REV10',
+        '    if False:\n        return REV10',
+        ("framework/scripts/test_runtime_diagnostics.py",),
+        "the revision-10 generation stops being derivable, so the census reports the "
+        "candidate worktree as revision 9 and the probe precondition passes on the "
+        "wrong engine"),
+    Mutation(
+        "M87", "framework/scripts/runtime_parity.py",
+        '        "<WORKTREE_B_REL>": (os.path.relpath(peer, str(surface.root)) if peer else ""),',
+        '        "<WORKTREE_B_REL>": "../mirror",',
+        ("framework/scripts/test_runtime_parity.py",),
+        "the relative peer placeholder is hard-coded again, so on a host without that "
+        "layout the row changes from PEER_WORKTREE to OUTSIDE_REPO with no skip and no "
+        "warning"),
 ]
 
 

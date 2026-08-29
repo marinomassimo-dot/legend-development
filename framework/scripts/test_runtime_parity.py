@@ -766,5 +766,189 @@ class TheBridgesOwnFilesDoNotAddSurfaceDefects(unittest.TestCase):
                                "anywhere in the tree, and four are known to exist")
 
 
+class TheCandidateFinalisationChecksItsOwnModes(unittest.TestCase):
+    """🔴 R11. The committed object is correct and the INDEX is where it can go wrong.
+
+    `chmod` needs `REF_WRITE`, which no runtime, role or lease grants, so the executable
+    bit is set with `git add --chmod=+x` and the working tree's on-disk bit stays `644`.
+    That residue is cosmetic. What is not cosmetic is the consequence: **a later plain
+    `git add` on one of these files silently reverts the mode**, because `git add` reads
+    the on-disk bit. It has already happened twice in this candidate series — commit
+    `744e0bc` did it to two files, and the repair had to be committed again.
+
+    So the finalisation check is on the INDEX against HEAD, which is exactly where a
+    reverted mode shows up before it is committed, and it is the one place a reviewer
+    can be shown "nothing about the mode moved in this commit".
+    """
+
+    def modes(self, *args):
+        out = {}
+        for line in rp._git(REAL, *args).splitlines():
+            meta, _, path = line.partition("\t")
+            out[path] = meta.split()[0]
+        return out
+
+    def owned(self):
+        tracked = rp._git(REAL, "ls-files", "framework/scripts").splitlines()
+        return sorted(p for p in tracked if p.endswith(".py"))
+
+    def test_the_index_mode_matches_the_committed_mode_for_every_owned_file(self):
+        """A plain `git add` that reverted an executable bit shows up HERE, staged and
+        not yet committed, which is the only moment it can still be repaired cheaply."""
+        head = self.modes("ls-tree", "-r", "HEAD")
+        index = {}
+        for line in rp._git(REAL, "ls-files", "-s", "framework/scripts").splitlines():
+            meta, _, path = line.partition("\t")
+            index[path] = meta.split()[0]
+        drifted = [p for p in self.owned()
+                   if p in head and index.get(p) != head[p]]
+        self.assertEqual(
+            [], drifted,
+            "the index disagrees with HEAD about a mode. A plain `git add` reads the "
+            "on-disk bit and reverts it; re-stage with `git add --chmod=+x <path>`")
+
+    def test_the_check_reads_a_real_mode_field(self):
+        """POSITIVE CONTROL. A comparison over two empty dictionaries agrees perfectly."""
+        head = self.modes("ls-tree", "-r", "HEAD")
+        self.assertTrue(head, "ls-tree returned nothing, so the check above compared "
+                              "two empty maps and agreed")
+        self.assertIn("100755", set(head.values()))
+        self.assertTrue(self.owned(), "no owned file was enumerated")
+
+    def test_a_path_described_as_mode_residue_really_is_mode_only(self):
+        """🔴 The honest half. The on-disk bit CANNOT be repaired at this authority —
+        `chmod` inside the repository is `REF_WRITE`, and the guard refuses it, correctly
+        (measured: the denial says so). So the candidate reports a worktree residue, and
+        the claim that has to be falsifiable is *that it is only a mode*.
+
+        This cross-references the two things git says about the same paths: a path listed
+        by `--summary` as a mode change must be listed by `--numstat` as `0 0`. A path
+        that is both a mode change AND a content change is not residue, and describing it
+        as residue in a candidate manifest would hide a content edit behind a cosmetic
+        word.
+
+        It says nothing about paths that carry content changes for ordinary reasons —
+        during development that is most of them, and a check that failed on those would
+        be a check nobody could run while working.
+        """
+        changes = [line.strip() for line in
+                   rp._git(REAL, "diff", "--summary", "--",
+                           "framework/scripts").splitlines()
+                   if line.strip().startswith("mode change")]
+        for line in changes:
+            with self.subTest(change=line):
+                self.assertIn(
+                    "100755 => 100644", line,
+                    "every worktree mode difference here must be the KNOWN residue — "
+                    "the disk losing an executable bit the index and HEAD still carry. "
+                    "The other direction is an executable bit appearing from nowhere, "
+                    "which is a grant of authority and not a cosmetic leftover")
+
+    def test_every_committed_executable_owned_file_is_an_entrypoint(self):
+        """The other half of the mode claim, and the one that is always checkable.
+
+        `100755` on a tracked file says *anyone may run this*. Asserting that every owned
+        file carrying that mode begins with a shebang is what keeps the executable bit a
+        statement about entrypoints rather than a mode someone once staged."""
+        head = self.modes("ls-tree", "-r", "HEAD")
+        checked = 0
+        for path in self.owned():
+            if head.get(path) != "100755":
+                continue
+            with self.subTest(path=path):
+                checked += 1
+                self.assertEqual((REPO / path).read_bytes()[:2], b"#!")
+        self.assertGreater(checked, 10, "no executable owned file was examined")
+
+
+class ThePeerPlaceholdersAreDerivedAndNotThisMachinesLayout(unittest.TestCase):
+    """🔴 R4. Three debt entries hard-coded `../mirror` beside a placeholder table.
+
+    On a host whose layout has no `../mirror`, those rows silently changed from
+    measuring `PEER_WORKTREE` to measuring `OUTSIDE_REPO` — no skip, no warning, and a
+    green probe that names one thing and measures another. The rule the fresh-clone case
+    pins is that a peer path is DERIVED, so a surface with no peer SKIPS.
+    """
+
+    def fresh_clone(self):
+        raw = tempfile.mkdtemp(prefix="fresh-clone-")
+        self.addCleanup(shutil.rmtree, raw, ignore_errors=True)
+        destination = Path(raw) / "clone"
+        out = subprocess.run(["git", "clone", "-q", "--no-local", "--depth", "1",
+                              str(REPO), str(destination)],
+                             capture_output=True, text=True)
+        if out.returncode != 0:
+            self.skipTest(f"the clone did not succeed: {out.stderr[:200]}")
+        return rp.Surface(destination)
+
+    def test_no_debt_entry_hard_codes_a_peer_worktree_name(self):
+        """The committed text must name no directory this machine happens to have."""
+        for table in (rp.GUARD_CLOSED_DEBT, rp.GUARD_RESIDUAL_DEBT,
+                      rp.GUARD_POSITIVE_FLOOR):
+            for label, command in table:
+                with self.subTest(entry=label):
+                    self.assertNotIn("../mirror", command)
+                    self.assertNotIn("/Users/", command)
+
+    def test_a_fresh_clone_skips_the_peer_entries_instead_of_measuring_something_else(self):
+        """🔴 The requirement, executed rather than asserted: a clone has ONE working
+        tree, so every peer placeholder is unresolvable and every row that needs one
+        must come back `None`."""
+        surface = self.fresh_clone()
+        needs_a_peer = [(label, command)
+                        for label, command in rp.GUARD_CLOSED_DEBT
+                        if "<WORKTREE_B" in command]
+        self.assertGreaterEqual(len(needs_a_peer), 4,
+                                "no entry needs a peer, so this test measures nothing")
+        for label, command in needs_a_peer:
+            with self.subTest(entry=label):
+                self.assertIsNone(rp.expand_placeholders(command, surface),
+                                  "a peer placeholder that cannot be resolved must "
+                                  "yield None so the caller SKIPS")
+
+    def test_the_same_entries_do_resolve_where_a_peer_exists(self):
+        """The positive control: `None` everywhere would satisfy the test above."""
+        resolved = 0
+        for label, command in rp.GUARD_CLOSED_DEBT:
+            if "<WORKTREE_B" not in command:
+                continue
+            filled = rp.expand_placeholders(command, REAL)
+            if filled is not None:
+                resolved += 1
+                self.assertNotIn("<WORKTREE_B", filled)
+        self.assertGreater(resolved, 0,
+                           "no peer placeholder resolved even here, so the skip above "
+                           "proves nothing about the placeholder machinery")
+
+    def test_the_relative_spelling_is_preserved_and_still_points_at_the_peer(self):
+        """The relative cases are ABOUT the spelling, so deriving them must not turn
+        them into absolute paths."""
+        command = rp.expand_placeholders(
+            "echo x > <WORKTREE_B_REL>/framework/pwned.md", REAL)
+        if command is None:
+            self.skipTest("this surface has no peer worktree")
+        target = command.split("> ", 1)[1]
+        self.assertFalse(target.startswith("/"), "the relative case must stay relative")
+        self.assertTrue(target.startswith(".."), "and must climb out of this worktree")
+
+    def test_the_dash_C_entry_is_sensitive_to_its_target(self):
+        """🔴 `git -C <peer> commit -am x` denied because of `-a`, identically with a
+        peer, with a nonexistent directory and with no `-C` at all. The entry now names
+        a path, and the same command WITHOUT `-C` is in the positive floor — so if both
+        denied, the row would be recording blanket staging under another name."""
+        entry = dict(rp.GUARD_CLOSED_DEBT)["git run in a peer worktree"]
+        self.assertNotIn("-am", entry)
+        self.assertNotIn("-a ", entry)
+        command = rp.expand_placeholders(entry, REAL)
+        if command is None:
+            self.skipTest("this surface has no peer worktree")
+        without = command.split(" commit", 1)[1]
+        self.assertEqual(rp._hook(REAL, rp.claude_payload(REAL, command)), "deny")
+        self.assertEqual(rp._hook(REAL, rp.claude_payload(REAL, "git commit" + without)),
+                         "allow",
+                         "the SAME command without -C must be allowed, or the entry is "
+                         "measuring something other than its target")
+
+
 if __name__ == "__main__":
     sys.exit(0 if unittest.main(exit=False, verbosity=2).result.wasSuccessful() else 1)
