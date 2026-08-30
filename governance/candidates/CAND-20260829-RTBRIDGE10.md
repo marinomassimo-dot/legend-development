@@ -1053,12 +1053,62 @@ code. Same number, different measurement. Both caught it themselves by reading t
 is the argument for § 4.2's insistence that a confinement suite assert the CODE and not the
 verdict, arriving from outside.
 
+### Three corrections to the two blocks above, all measured after they were written
+
+**1 · A provenance date of mine was wrong, and the truth is worse.** I wrote that
+`STDIN_FED_WRAPPERS` is "revision 9's". It carries 2 references at `6cd4859` (rev7),
+`c74340a` (rev8), `6fb7a83` (rev9) and `da0fb72` — so it is rev7's or older, and the
+payload-as-command hole has survived **four** revisions of hardening and every corpus in
+between, not one.
+
+🔴 **I nearly reported the peer who corrected me as wrong, because my own instrument was
+broken in a way I have written down before.** My first sweep ran
+`git show $sha:framework/scripts/guard_policy.py` unbraced; zsh consumed `:fr` as a history
+modifier, git failed with `ambiguous argument '6cd4859amework/...'`, and `2>/dev/null` turned
+that fatal into a silent `0` for every SHA. Three zeroes, no error, and the conclusion would
+have been "the peer is mistaken". Braces and a positive control — `def analyse_argv` present
+once per SHA — produced the real answer. A sweep that reports ABSENT everywhere is a sweep to
+distrust, and suppressing stderr is what converts a loud failure into a quiet wrong number.
+
+**2 · Exactly ONE of the seven is a regression against what is deployed today.** Measured
+against the legacy 125-line guard on `main`, same frame:
+
+```text
+python3 - <<< "<program>"          LEGACY DENY  · REV10 ALLOW   🔴 a capability LOST
+python3 - <<'PY' … PY             LEGACY DENY  · REV10 DENY
+python3   <<'PY' … PY   (no dash) LEGACY ALLOW · REV10 ALLOW    a hole NEITHER ever closed
+echo x > framework/scripts/…      LEGACY ALLOW · REV10 DENY     hardened
+git add -A                        LEGACY DENY  · REV10 DENY
+```
+
+"We lost something that was working" and "nobody ever had it" are different sentences with
+different repairs, and § 19.9 above stated the first without separating out the second.
+Everywhere but the herestring, REV10 is equal to or strictly stronger than the control
+actually deployed.
+
+**3 · `py_compile` is not one bad row — it is a defect CLASS, and I measured how wide.**
+`READ_ONLY_MODULES` has 14 members, all presumably judged the same way. Checked by execution:
+
+```text
+python3 -m py_compile a.py    writes __pycache__/a.cpython-39.pyc  — MASKED on this host only
+python3 -m gzip a.txt         creates a.txt.gz                     — 🔴 UNMASKED, writes here
+python3 -m base64 -e -o … a   exit 2, writes nothing               — the peer's example does NOT hold
+python3 -m tokenize a.txt     writes nothing                       — does NOT hold either
+```
+
+So **two of fourteen** are misclassified, not four: the peer that raised the class over-reached
+on two of its three examples, and was right that the class exists. `gzip` is the sharper one —
+`py_compile`'s harm is hidden by this machine's `sys.pycache_prefix`, and `gzip`'s is not
+hidden by anything. The remaining eleven have not been checked by anyone.
+
 ### What this changes
 
 ```
-NO_KNOWN_STRUCTURAL_BYPASS               🔴 FALSIFIED — SEVEN shapes now known at da0fb72, and
-                                         one of them was committed as H-05 four days BEFORE
-                                         this object was frozen
+NO_KNOWN_STRUCTURAL_BYPASS               🔴 FALSIFIED — EIGHT shapes now known at da0fb72
+                                         (seven, plus `python3 -m gzip`), and one of them was
+                                         committed as H-05 four days BEFORE the freeze
+REGRESSION AGAINST WHAT IS DEPLOYED      exactly ONE of the eight: `python3 - <<<`. Everywhere
+                                         else REV10 is equal to or stronger than legacy main
 DEVELOPMENT_MAIN_INTEGRATION_READINESS   🔴 WITHDRAWN — § 18 says READY; read READY_AFTER_REPAIR
 REGRESSION BASELINE                      🔴 INSUFFICIENT for the claim. § 10.1's REV9 → REV10
                                          comparison is correct and cannot see a capability lost
