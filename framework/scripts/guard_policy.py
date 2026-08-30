@@ -1438,6 +1438,41 @@ PROGRAM_ALIASES = {
 }
 
 
+#: 🔴 **A NORMALISATION MUST NEVER INCREASE PERMISSION** — and the first draft of
+#: revision 12 did, which is why this set exists.
+#:
+#: The version-suffix rule as first written stripped a trailing version from ANY name and
+#: landed it on ANY known program. `file1` became `file`, `cat2` became `cat`, `wc1`
+#: became `wc` — all pure readers — and an unmodelled program was thereby EXEMPTED from
+#: `unclassified`. Measured against the revision-11 engine on this tree, 8 of 8 probed
+#: spellings moved in the forbidden direction:
+#:
+#: ```text
+#:                    REV11                     REV12 (first draft)
+#: file1 <peer>/x     DENY CONFINED_PEER…       ALLOW  🔴
+#: cat2  <registration>  DENY RUNTIME_CONFIG    ALLOW  🔴
+#: wc1 · tr5 · man9 · test1 · date1 · file2     ALLOW  🔴  (DENY at revision 11)
+#: control  someunknowntool <peer>/x   DENY → DENY ✓
+#: control  tee <peer>/x               DENY → DENY ✓
+#: ```
+#:
+#: Revision 12 was repairing a family by widening a key, and widened it into the ALLOW
+#: direction — the one direction nothing else in this repository would have reported. It
+#: is the same defect this revision was written to fix, made by the fix.
+#:
+#: The repair is a SUBTRACTION and not another list: a name may absorb a version suffix
+#: only if the program it would become is NOT a reader. Every genuine versioned spelling
+#: — `python3.12`, `perl5.34`, `bash5`, `node20` — lands on an interpreter or a shell and
+#: is unaffected. Every collision that caused the regression lands on a reader and is now
+#: refused, so the name keeps its own spelling, falls through to `unclassified`, and
+#: fails closed at every ungranted scope.
+#:
+#: 🔴 The guarantee this buys is directional, and that is the point: if a versioned
+#: family is ever MISSED here, the failure is over-refusal of an unmodelled program —
+#: which is the trade this policy has always made — and never a silent exemption.
+VERSIONED_PROGRAM_FAMILIES = frozenset(_KNOWN_PROGRAM_NAMES) - frozenset(KNOWN_READERS)
+
+
 def normalise_program(token: str) -> str:
     """The program name every table in this module is keyed on.
 
@@ -1448,6 +1483,11 @@ def normalise_program(token: str) -> str:
     🔴 A name that normalises to nothing keeps its original: `3.12` alone is not
     `python`, and a rule that invented a program out of a version string would classify
     an operand as an interpreter.
+
+    🔴 And a name never normalises onto a READER — see `VERSIONED_PROGRAM_FAMILIES`. A
+    normalisation that turned an unmodelled program into an exempt one would be a
+    permission increase performed by a repair, which is exactly what this rule did in its
+    first draft.
     """
     name = posixpath.basename(token)
     if name in PROGRAM_ALIASES:
@@ -1464,9 +1504,11 @@ def normalise_program(token: str) -> str:
     while _VERSION_SUFFIX.match(candidate):
         candidate = candidate[:-1]
         trimmed = candidate.rstrip("-.")
-        if trimmed in PROGRAM_ALIASES:
+        # An ALIAS is a packaging fact and is allowed to land anywhere it names; a
+        # version suffix is a guess about spelling and may only land on a non-reader.
+        if trimmed in PROGRAM_ALIASES and PROGRAM_ALIASES[trimmed] not in KNOWN_READERS:
             return PROGRAM_ALIASES[trimmed]
-        if trimmed in _KNOWN_PROGRAM_NAMES:
+        if trimmed in VERSIONED_PROGRAM_FAMILIES:
             return trimmed
     return name
 
