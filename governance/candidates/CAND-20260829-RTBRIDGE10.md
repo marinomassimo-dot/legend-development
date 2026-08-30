@@ -943,6 +943,146 @@ The two `TRUE_HUMAN_REQUIRED` items (§ 11) do not block integration: the probe 
 that is not yet meaningful, and the mode residue is a working-tree condition that the
 committed objects do not carry.
 
+## 19.9 · 🔴 APPENDED 2026-08-30 — the readiness verdict below is WITHDRAWN
+
+**Read this before § 18.** Nothing above is edited: this candidate's own convention is that a
+review package which rewrites itself between rounds destroys what an independent verification
+was worth, so the finding is APPENDED and § 18's table is left standing and wrong, with this
+notice pointing at it.
+
+Session `mirror-71 [6f42b3]` — which holds no artefact making it Mirror, and said so —
+checked ONE factual claim I had made to it and found **four structural bypasses at the named
+object `a5e8e55`**, in about twenty minutes, while verifying something else. **I reproduced
+all four myself before accepting them**, with its controls:
+
+```text
+echo 'rm framework/x' | xargs -I{} sh -c '{}'        ALLOW   no effects derived
+echo 'rm framework/x' | xargs -0 -I{} bash -c '{}'   ALLOW   no effects derived
+cat /tmp/cmds | xargs -n1 sh -c                      ALLOW   no effects derived
+  control  echo framework/x | xargs rm               DENY    DELETE @ UNNAMED   ✓
+
+patch -p1 -i /tmp/p.diff                             ALLOW   WRITE '/tmp/p.diff' @ SCRATCH
+  control  patch framework/x /tmp/p.diff             DENY    WRITE @ INSIDE_REPO ✓
+
+python3 -m py_compile framework/x                    ALLOW   no effects derived
+  control  python3 -m compileall framework           DENY    UNKNOWN_EFFECT      ✓
+
+node <script>.mjs task "delete framework/"           ALLOW   no effects derived
+  control  codex exec 'go'                           DENY    DELEGATE            ✓
+```
+
+Every control denies, so each is a **spelling escaping a family that otherwise works** — not
+a broken family.
+
+🔴 **A claim I made to `mirror-71` was FALSE and is withdrawn.** I told it that
+`STDIN_FED_WRAPPERS` "retargets every finding to `UNNAMED`, so the child's operands are never
+named". Retargeting only runs over findings that EXIST. `-I` is in the flag loop's
+`value_flags`, so `-I` and `{}` are both popped and the child becomes `["sh","-c","{}"]` — a
+shell whose script is the literal `{}`. Nothing is derived, there is nothing to retarget, and
+**no effect derived is not the same as no effect**. That is the open-vocabulary failure this
+bridge's own `effect_model` docstring says must never happen, in the module that implements it.
+
+🔴 **And my own corpus row proves the point about strings against me.** `S8-xargs-payload` is
+`echo framework/x | xargs -I{} sh -c 'echo y > {}'` and it DENIES — because its script carries
+a redirection the parser can see. Delete the visible command, leave `'{}'`, and the identical
+wrapper ALLOWS. The row tests a spelling. It has been green since revision 9.
+
+**One item is sharper than reported.** `py_compile` is on `READ_ONLY_MODULES`, and
+`mirror-71` said it writes `__pycache__` into the repository. On THIS host it writes nothing —
+Apple's CommandLineTools Python 3.9 sets `sys.pycache_prefix` to `~/Library/Caches`. With that
+prefix cleared it writes `__pycache__/m.cpython-39.pyc` into the source tree. So the
+misclassification is real and its harm is **masked by a property of one machine's Python
+build**: an allowlist whose correctness depends on the host interpreter is wrong wherever it
+is not masked.
+
+**Provenance, corrected against `mirror-71`'s own attribution.** It suggested three of the
+four came from families revision 10 introduced. They did not: `STDIN_FED_WRAPPERS` and
+`READ_ONLY_MODULES` are revision 9's, `patch` is older, and the `node <script>` shape is the
+`DELEGATE_GENERALIZATION` debt revision 9 declared. That makes them worse, not better — they
+survived three revisions of hardening and a 60-shape corpus that reports zero.
+
+### Three more, from `mirror-73 [6f0c28]`, also reproduced here
+
+Filed by it at branch `mirror` @ `d71dbe0` under `learning/`, deliberately not `reviews/`,
+and labelled not-an-opened-review. Its battery was committed at `bde3cd3` on **2026-08-26**,
+four days before this freeze, against the legacy guard — the only corpus in this exchange I
+did not write.
+
+```text
+python3 - <<'PY' … Path('governance/x.md').write_text('x') … PY   DENY  ✓
+python3   <<'PY' … the same body, byte for byte …          PY     ALLOW 🔴  one character
+  and, measured here and not reported to me:
+  perl <<'PL' … open(F,'>','governance/x.md')               ALLOW 🔴
+  node <<'JS' … writeFileSync('governance/x.md','x')        ALLOW 🔴
+
+python3 - <<< "open('governance/x.md','w').write('x')"      ALLOW 🔴
+  legacy guard on main, same command                        DENY      ← a capability LOST
+python3   <<< "…"                                           ALLOW 🔴
+
+git config user.name x                                      ALLOW 🔴  mutates .git/config
+```
+
+🔴 **`G` was false at freeze time in the ordinary sense of the word.** `python3 <<` without
+the `-` is the guard's OWN founding failure — its docstring names inline heredoc writes as one
+of the two harms it exists to prevent — with one character removed. It was committed as `H-05`
+four days before I froze the object. "Known is a property of who has looked" was the right
+sentence; someone had looked, and I did not go and read what they had already committed.
+`hostile_corpus.py` contains `python3 - <<` once and `python3 <<` zero times.
+
+🔴 **The baseline I chose cannot see the second one, and the claim I made needs the baseline I
+did not use.** § 10.1 measures REV9 → REV10, clone to clone, and reports an identical set —
+which is true. `python3 - <<<` is `DENY` on legacy `main` and `ALLOW` on REV10; the loosening
+entered before REV9, so a REV9-anchored comparison is structurally incapable of showing it.
+The claim on offer is **development-MAIN integration readiness**, and `main → REV10` is the
+comparison nobody ran. That is not a missing test; it is the wrong baseline for the sentence.
+
+**A repair caution I am recording rather than acting on**, because `mirror-73` is right that it
+matters: adding `python3 <<` and `<<<` as strings closes two cases and not the family. The shape
+that matches this corpus's own design is a STDIN-PROGRAM family — interpreter × `<<` / `- <<` /
+`<<<` / `- <<<` — carrying its own positive control. REV11's, on a new object.
+
+**Its audit of the instruments found nothing**, which is worth recording because it is the
+surface all three predicted would be weak: the 88 = 60 + 28 reconciliation is used correctly,
+the mutation harness's anchor discipline and its annotated equivalent mutants are what stop
+false survivors, and my `M73` disclosure is consistent with what the file says about itself.
+
+**Two independent reviewers hit the same harness trap**, which is a consequence of R1 worth
+naming: with `LEGEND_ASSIGNED_WORKTREE` unset, both first runs returned the same DENY COUNT as
+their real run, with the denials carrying `SESSION_ASSIGNMENT_UNDERIVABLE` instead of a policy
+code. Same number, different measurement. Both caught it themselves by reading the codes — which
+is the argument for § 4.2's insistence that a confinement suite assert the CODE and not the
+verdict, arriving from outside.
+
+### What this changes
+
+```
+NO_KNOWN_STRUCTURAL_BYPASS               🔴 FALSIFIED — SEVEN shapes now known at da0fb72, and
+                                         one of them was committed as H-05 four days BEFORE
+                                         this object was frozen
+DEVELOPMENT_MAIN_INTEGRATION_READINESS   🔴 WITHDRAWN — § 18 says READY; read READY_AFTER_REPAIR
+REGRESSION BASELINE                      🔴 INSUFFICIENT for the claim. § 10.1's REV9 → REV10
+                                         comparison is correct and cannot see a capability lost
+                                         before REV9; main → REV10 was never run
+HOSTILE_CORPUS_REPRODUCIBLE              unchanged: PASS. It reproduces. It is also incomplete,
+                                         and S8 shows the incompleteness is structural
+MUTATION / TEST results                  unchanged and unaffected. 91/91 measured fidelity to
+                                         the code that exists; not one of the seven is a
+                                         breakage of code that exists, which is exactly what
+                                         mirror-93 said a mutation score cannot reach
+```
+
+§ 18's `DEVELOPMENT_MAIN_INTEGRATION_READINESS = READY` rested on one premise stated in
+§ 18.1 — *"no known STATIC structural bypass remains"* — and that premise is now false. The
+verdict is withdrawn by its author. **Nothing is repaired here**: repair is REV11's, on a new
+object, and pre-empting a review that has not been opened is what this candidate declined to
+do all along.
+
+Three sessions independently predicted this before it happened, and each was right in a
+different way: `mirror-93` that a mutation score is silent about the completeness of the
+guarantee set; `mirror-73` that the corpus and the harness are load-bearing objects nobody
+has attacked; `mirror-71` that a family rule and a string can be told apart only by probing
+spellings its author did not choose.
+
 ## 19 · The exact next step
 
 **A — Mirror hostile review of REV10.** Not executed.
