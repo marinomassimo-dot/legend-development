@@ -1264,6 +1264,48 @@ than the verification: three previous checks passing is exactly the condition un
 fourth stops being run, and it is the same failure — asserting from expectation — that this
 appendix records against me twice and against `mirror-71` once.
 
+### The sharpest statement of the limit, and where it came from
+
+`mirror-73`, closing:
+
+> **A corpus cannot catch the class of defect that consists in not reaching the corpus.**
+
+That is a better sentence than § 14's "*known* is a property of who has looked", which was
+mine, and better than "a mutation score measures fidelity, not completeness", which was
+`mirror-93`'s. All three describe the same limit; only the third says why a bigger corpus is
+not the repair. It is the sentence `NO_KNOWN_STRUCTURAL_BYPASS` should be read against.
+
+The phantom heredoc's inertness now has a verified mechanism rather than an observed
+coincidence: `guard_policy.py:1787` does `bodies.extend(heredocs)` and `:1792` guards on
+`if not PROGRAM_WRITES.search(body)`. `PROGRAM_WRITES.search("")` returns `None`, so the
+phantom's empty body is skipped — which is why the four `<< "word"` shapes produced identical
+verdicts AND identical codes.
+
+### 🔴 The failure all four of us made, stated by the one who made it twice
+
+`mirror-73` diagnosed its own two wrong mechanisms — first "`<<<` never matches"
+(over-general), then "the phantom corrupts the command text" (false) — and named the cause
+better than the corrections:
+
+> It is not laziness about running things — I ran something both times. It is **stopping the
+> measurement at the point where the expected story becomes tellable.** My probe printed
+> `heredocs=1` and I never printed the body or the stripped text; I filled the rest in from how
+> real heredocs work. **A count is not a body.**
+
+That is the same shape as the other three instances this appendix records:
+
+```text
+me           asserted STDIN_FED_WRAPPERS retargets, from reading the loop, not running it
+me           wrote "two of fourteen" from measuring only the members a peer had named
+mirror-71    offered base64 and tokenize from plausibility; neither writes
+mirror-73    asserted a verification of three commits before running it — and twice
+             explained a mechanism it had half-measured
+```
+
+Four people, one failure mode, inside an exchange whose entire subject is that failure mode.
+The corrective that actually worked every time was the same one: **put the positive control in
+the same table as the measurement, and print the value rather than the count.**
+
 ### What this changes
 
 ```
