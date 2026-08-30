@@ -1101,11 +1101,73 @@ on two of its three examples, and was right that the class exists. `gzip` is the
 `py_compile`'s harm is hidden by this machine's `sys.pycache_prefix`, and `gzip`'s is not
 hidden by anything. The remaining eleven have not been checked by anyone.
 
+### The stdin-program finding has a ROOT CAUSE, and it is not a missing spelling
+
+`mirror-73` took it from symptom to mechanism. Reproduced here in full — 4 interpreters ×
+4 forms, REV10 at `da0fb72`, assignment set, controls passing:
+
+```text
+                - <<'EOF'    <<'EOF'     - <<<      <<<
+  python3        DENY        ALLOW       ALLOW      ALLOW
+  perl           DENY        ALLOW       ALLOW      ALLOW
+  ruby           DENY        ALLOW       ALLOW      ALLOW      ← ruby, which nobody had listed
+  node           DENY        ALLOW       ALLOW      ALLOW
+```
+
+**12 open cells of 16**, exactly one closed per interpreter. Not seven shapes and not a list
+of strings.
+
+**The cause is that a correct clause is unreachable.** `guard_policy.py:1785` reads
+
+```python
+reads_stdin = any(t == "-" for t in argv[1:]) or len(argv) == 1
+```
+
+and the second disjunct is written for precisely the bare form. `extract_heredocs` captures the
+BODY for both spellings and leaves the OPERATOR behind as argv residue:
+
+```text
+python3 - <<'EOF'      heredocs=1   argv ['python3','-','<<','EOF']   "-" found     → DENY
+python3   <<'EOF'      heredocs=1   argv ['python3','<<','EOF']       len 3         → ALLOW
+cat <<'EOF' | python3  heredocs=1   argv ['cat','<<','EOF','|','python3']           → DENY
+```
+
+so `len(argv) == 1` can never hold for a directly-fed heredoc. 🔴 **And the positive control
+settles it as a measurement rather than an inference:** `cat <<'EOF' | python3` DENIES, because
+through a pipe the interpreter's own argv is exactly `['python3']`, the clause fires, and the
+body is attributed. **The code is right and the preprocessing removes the condition it depends
+on.**
+
+**Two causes, so a one-sided repair leaves four cells open.** Herestrings fail a step earlier:
+`extract_heredocs` returns `heredocs=0` for `<<<`, so no body is extracted at all and there is
+nothing to attribute. One precision, because it will mislead whoever repairs this:
+`HEREDOC_START` *does* match inside `<<<` — at an offset, reading `x` as a quoted delimiter —
+so "make the pattern match `<<<`" is not the fix; the herestring needs a body extractor of its
+own. Repairing the residue closes the eight heredoc cells through the existing clause and none
+of the four herestring cells.
+
+🔴 **The regression test that would have caught this is an INVARIANT, not a command string,**
+and this is the most transferable thing in the exchange:
+
+```text
+`cat <<EOF | python3` and `python3 <<EOF` MUST receive the same verdict.
+```
+
+Their two halves disagree today. A corpus row spelled `python3 <<'PY' …` closes one cell and
+teaches the corpus nothing — which is `S8-xargs-payload`'s failure restated, and the reason
+§ 8.2's family idiom is worth more than sixty rows. The same pairing applies to the herestring
+once it extracts.
+
 ### What this changes
 
 ```
-NO_KNOWN_STRUCTURAL_BYPASS               🔴 FALSIFIED — EIGHT shapes now known at da0fb72
-                                         (seven, plus `python3 -m gzip`), and one of them was
+NO_KNOWN_STRUCTURAL_BYPASS               🔴 FALSIFIED at da0fb72. Counted as FAMILIES rather
+                                         than shapes, because counting shapes is the error the
+                                         findings are about: the stdin-program family is 12
+                                         open cells of 16, and beside it sit xargs
+                                         payload-as-command, `patch -i`, the READ_ONLY_MODULES
+                                         misclassification (2 of 14 confirmed, 11 unexamined),
+                                         `node <script>` and `git config`. One cell was
                                          committed as H-05 four days BEFORE the freeze
 REGRESSION AGAINST WHAT IS DEPLOYED      exactly ONE of the eight: `python3 - <<<`. Everywhere
                                          else REV10 is equal to or stronger than legacy main
