@@ -59,6 +59,18 @@ CONFINEMENT_SUITES = ("framework/scripts/test_confinement_and_delegation.py",)
 #: passed on both would kill nothing and every mutation pointed at it would be
 #: EQUIVALENT without anybody noticing.
 FAMILY_SUITES = ("framework/scripts/test_guard_families_rev11.py",)
+#: 🔴 Revision 12's own family suite, and it needed its own constant.
+#:
+#: Before this line, `test_guard_families_rev12.py` was referenced by ZERO mutations —
+#: 115 mutants, none of them pointed at the suite written for this revision, so its bite
+#: was entirely unmeasured. That is the revision-12 defect one level up: a suite whose
+#: passing nobody had checked was a discriminator.
+#:
+#: It is a SEPARATE constant rather than an addition to `FAMILY_SUITES`, because adding
+#: it there would run a 34-second suite for 24 unrelated mutations and buy nothing: those
+#: mutants already have a killer named. What is wanted is the mutants that attack THIS
+#: revision's repair, aimed at THIS revision's suite.
+FAMILY_SUITES_12 = ("framework/scripts/test_guard_families_rev12.py",)
 RUNTIME_CONFIG = "framework/scripts/runtime_config.py"
 
 
@@ -1081,6 +1093,40 @@ MUTATIONS = [
         "🔴 every revision-11 rule keeps firing and is mapped onto READ, which is "
         "granted everywhere. The findings would still appear in a characterisation, the "
         "denials would vanish, and nothing in the report would say so"),
+
+    # ── revision 12's own repair, attacked by revision 12's own suite ──────────────
+    Mutation(
+        "M115", GUARD_POLICY,
+        "    return bool(name) and normalise_program(token) != name",
+        "    return False",
+        FAMILY_SUITES_12,
+        "🔴 the ASYMMETRIC rule is switched off, so a normalised name goes back to "
+        "inheriting the exemptions of the program it was inferred to be. `bash1`, "
+        "`curl1`, `env1`, `nodejs` and 55 more reach a peer worktree, the shared "
+        "`.git` and the runtime registration — 177 of 1158 cases at three scopes, in "
+        "the ALLOW direction, which is the one direction nothing else here reports"),
+    Mutation(
+        "M116", GUARD_POLICY,
+        "VERSIONED_PROGRAM_FAMILIES = frozenset(_KNOWN_PROGRAM_NAMES) - frozenset(KNOWN_READERS)",
+        "VERSIONED_PROGRAM_FAMILIES = frozenset(_KNOWN_PROGRAM_NAMES)",
+        FAMILY_SUITES_12,
+        "the reader subtraction is removed, so a version suffix can land on `cat`, `wc` "
+        "or `file` again — the first draft's `cat2` bypass. 🔴 The kill is STRUCTURAL, "
+        "not behavioural: with M115's rule still in place the VERDICT for `cat2 "
+        "<registration>` does not move, because the operand finding fires either way. "
+        "The suite asserts `normalise_program('cat2') == 'cat2'` and the landing set's "
+        "disjointness from the readers, which is what a second line of defence has to "
+        "be checked by if removing it is to be visible at all"),
+    Mutation(
+        "M117", GUARD_POLICY,
+        "        underived_operand(argv, posixpath.basename(argv[0]), findings)",
+        "        underived_operand(argv, program, findings)",
+        FAMILY_SUITES_12,
+        "🔴 the added operand rule is keyed on the NORMALISED name instead of the name "
+        "as written, so it consults that program's own `OPTIONS_WITH_VALUE` and drops "
+        "operands revision 11 counted: `python3.12 -c <peer>/x` loses its target to "
+        "`-c`. A negative that must not loosen has to be computed the way the engine it "
+        "must not loosen computed it"),
 ]
 
 
