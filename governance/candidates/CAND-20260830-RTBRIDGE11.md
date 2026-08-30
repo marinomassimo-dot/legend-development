@@ -1206,9 +1206,81 @@ where it exists elsewhere.
 
 ### 17.2 · The identifiers
 
+Every value below was derived **immediately before the freeze**, by the command printed
+beside it, and from no earlier draft. One quantity in this session took three different
+values as the object moved; that is why nothing here is copied.
+
 ```text
-<recorded at freeze>
+CANDIDATE_ID      CAND-20260830-RTBRIDGE11
+CANDIDATE_BRANCH  plan-runtime-bridge-p00-rev11
+BASE_SHA          e01d6d2135b9dd30340e8e3a093401561ffc22d8   the revision-10 MANIFEST TIP
+CONTENT_TIP       fba1e23e11d948785d2906fee31f05048c0dbbd6
+CONTENT_HASH      e982ea5eebe134eaa5d11461e0d1a5d04dc396ea9cb4a51bc8c4e29a657372d2
+GUARD_GENERATION  REV11
+POLICY_HASH       c4327f1747d658f1     framework/scripts/guard_policy.py
+ENTRY_HASH        2467f4be9cc6fb37     scripts/guard_bash_command.py
+MAIN BASELINE     788c357d9b7ca7afcbe7c1efc3a06b426cf7e2d5   == development/main
+
+CANDIDATE_TIP     the branch tip. A manifest cannot contain the hash of the commit that
+                  carries it, so it is stated as a RULE rather than a value:
+                      git rev-parse plan-runtime-bridge-p00-rev11
+                  It differs from CONTENT_TIP by exactly the two governance files below,
+                  and § 17.3 proves the content hash is invariant across that difference.
 ```
+
+```bash
+# CONTENT_HASH — the recipe, not the number
+python3 governance/scripts/candidate_content_hash.py \
+  --base e01d6d2135b9dd30340e8e3a093401561ffc22d8 \
+  --tip  fba1e23e11d948785d2906fee31f05048c0dbbd6
+
+# GUARD_GENERATION, POLICY_HASH, ENTRY_HASH — read from the shape of what is installed
+python3 framework/scripts/guard_revision.py --json
+
+# the mutation result, and the tip it was pinned to, printed by the harness itself
+python3 framework/scripts/mutate_guard_suite.py
+```
+
+### 17.3 · `CONTENT_TIP` ≠ `CANDIDATE_TIP`, and the hash is invariant — VERIFIED
+
+Established structurally beforehand — `governance/candidates/` is a declared
+`CONTROL_PLANE_ROOT` in § P5 and the domain filter is a prefix match — and then **measured
+rather than assumed**, because a structural argument is not a measurement:
+
+```text
+hash at CONTENT_TIP   fba1e23e   e982ea5eebe134eaa5d11461e0d1a5d04dc396ea9cb4a51bc8c4e29a657372d2
+hash at CANDIDATE_TIP <tip>      e982ea5eebe134eaa5d11461e0d1a5d04dc396ea9cb4a51bc8c4e29a657372d2
+INVARIANT
+
+git diff --name-only <CONTENT_TIP> <CANDIDATE_TIP>
+  governance/candidates/CAND-20260830-RTBRIDGE11.md
+  governance/candidates/HANDOFF-20260830-RTBRIDGE11-MIRROR.md
+```
+
+The same property was checked independently against revision 10's committed history, where
+three tips — `da0fb72`, `cb3b2c1` and `e01d6d2` — all hash to `e59cbf48…`, and the only
+differences between them are that revision's own two governance files. A property that
+holds on one candidate is an anecdote; on two, with the diff shown both times, it is the
+rule the domain declares.
+
+### 17.4 · Hygiene at the frozen tip
+
+```text
+branch                                          plan-runtime-bridge-p00-rev11
+tracked paths dirty                             0
+untracked paths                                 0
+the 19 residue-prone paths: population asserted 19 of an expected 19
+  HEAD == INDEX == 100755 and FILESYSTEM == 755 19 of 19
+shebang files committed 100644                  0
+committed 100755 whose filesystem mode is not 755   0
+index-vs-HEAD mode disagreements                0
+POSITIVE CONTROL — committed-100755 files walked 148
+```
+
+Measured with `git -C <worktree>` and absolute paths throughout. A bare `git status`
+measures where the process is standing, not the object — this session's Bash working
+directory does not persist between calls, and an earlier pass of these same numbers was
+taken from the wrong directory.
 
 ## 18 · What is NOT claimed
 

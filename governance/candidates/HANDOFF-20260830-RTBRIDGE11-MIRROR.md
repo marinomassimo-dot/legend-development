@@ -33,10 +33,20 @@ BASE_SHA          e01d6d2135b9dd30340e8e3a093401561ffc22d8   the revision-10 MAN
 MAIN BASELINE     788c357d9b7ca7afcbe7c1efc3a06b426cf7e2d5   == development/main
 ```
 
-🔴 **`CANDIDATE_TIP`, `CONTENT_TIP`, `CONTENT_HASH`, `GUARD_GENERATION` and `POLICY_HASH`
-are in § 17.2 of the manifest and NOWHERE ELSE**, derived immediately before the freeze.
-Two of them were already stale in an earlier draft of that table while work continued —
-which is what a frozen set over live inputs does to itself. Do not read them from here.
+```text
+CONTENT_TIP       fba1e23e11d948785d2906fee31f05048c0dbbd6
+CONTENT_HASH      e982ea5eebe134eaa5d11461e0d1a5d04dc396ea9cb4a51bc8c4e29a657372d2
+GUARD_GENERATION  REV11
+POLICY_HASH       c4327f1747d658f1
+CANDIDATE_TIP     git rev-parse plan-runtime-bridge-p00-rev11
+                  — it differs from CONTENT_TIP by this manifest and this handoff only,
+                    and the content hash is VERIFIED invariant across that difference
+```
+
+🔴 These are reproduced from § 17.2 of the manifest, which is where they are derived. If
+the two ever disagree, **§ 17.2 wins** — it carries the command beside each value. Two
+identifiers were already stale in an earlier draft of this very block while work continued,
+which is what a frozen set over live inputs does to itself.
 
 ```bash
 # reproduce the content hash — the recipe, not the number
