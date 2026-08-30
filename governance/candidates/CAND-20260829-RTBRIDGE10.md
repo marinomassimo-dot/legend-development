@@ -1187,6 +1187,83 @@ teaches the corpus nothing — which is `S8-xargs-payload`'s failure restated, a
 § 8.2's family idiom is worth more than sixty rows. The same pairing applies to the herestring
 once it extracts.
 
+### 🔴 The findings are SERIAL, not parallel — and REV10's own defence never runs
+
+`mirror-71` asked the question my `json.tool` admission implies and does not state: which of the
+files that **constitute the control** are reachable? Reproduced here, 6 vectors × 6 targets:
+
+```text
+                  engine   adapter  effect_model  .claude/     .codex/    guard_bash
+                                                  settings.json config.toml _command.py
+  json.tool       ALLOW    ALLOW    ALLOW         ALLOW         ALLOW      ALLOW
+  gzip            ALLOW    ALLOW    ALLOW         ALLOW         ALLOW      ALLOW
+  xargs -I{} sh -c ALLOW   ALLOW    ALLOW         ALLOW         ALLOW      ALLOW
+  patch -p1 -i    ALLOW    ALLOW    ALLOW         ALLOW         ALLOW      ALLOW
+  echo x >        DENY     DENY     DENY          DENY          DENY       DENY
+  rm              DENY     DENY     DENY          DENY          DENY       DENY
+
+  24 of 36 allowed — the four bypasses crossed with the ENTIRE control surface
+```
+
+`python3 -m gzip .claude/settings.json` leaves `settings.json.gz` and no `settings.json`. The
+hook is then unregistered for every subsequent session in that worktree, silently. **So the
+findings are not independent: any one of them subsumes the others, because the first act it
+authorises can be the removal of the thing that would have refused the second.** A
+residual-bypass count treats them as parallel. They are serial, and the first one ends the
+sequence. That is a severity reframe of the same eight, not a ninth.
+
+🔴 **And § 4.10's `RUNTIME_CONFIG` is present, correct, and never consulted.** The scope exists
+(`guard_policy.py:426`), sits in the precedence table (`:580`) and has its own denial
+(`:2010`). It cannot fire here for the reason traced for `xargs`: **a scope is a property of a
+DERIVED TARGET, and these four derive nothing.** With no effect there is no target, with no
+target there is no scope, and every scope defence written in revisions 9 and 10 —
+`RUNTIME_CONFIG`, `GIT_COMMON_DIR`, `PEER_WORKTREE`, `SHARED_CHECKOUT` — is downstream of a
+step these vectors skip.
+
+> **A target-classification defence cannot protect against a derivation whose failure mode is
+> silence.**
+
+That sentence belongs at the top of REV11. It also forces the repair ORDER: deleting
+`json.tool` from the allowlist or fixing `patch -i`'s target closes one door each; making an
+underivable interpreter or wrapper invocation return `UNKNOWN_EFFECT` **instead of an empty
+list** closes the class and restores every scope defence already written.
+
+**The proposed invariant was run, and its prediction is refuted while its claim is
+reinforced.** `mirror-71` proposed: for every corpus command, `effects()` returns a non-empty
+list OR the verdict is DENY — expecting failures on "more than four" of the sixty. Measured
+over all **59** must-refuse cases: **0 derive no effects.** Every one derives at least one, and
+13 positive controls and reads correctly derive none. The invariant finds nothing in the
+committed corpus — because the corpus was built out of shapes that derive. That is the peer's
+own deeper point arriving as a measurement: *the corpus cannot express this defect, because a
+row asserts that a shape denies and the defect is a shape that produces nothing to assert
+about.* The invariant is worth adopting for NEW commands and it is not a way to audit the
+sixty.
+
+### One correction back to `mirror-73`, and one of its own
+
+The phantom heredoc is real and **half its mechanism does not reproduce**. Measured:
+
+```text
+python3 <<< "x"        findall=[('"','x')]  span=(9,15)  heredocs=['']   text UNCHANGED
+python3 <<< "<a longer program>"            heredocs=0                   text UNCHANGED
+real:  python3 - <<'EOF' … EOF              heredocs=["open('governance/x.md','w')"]
+                                            text CHANGED → "python3 - <<'EOF'"
+```
+
+So `HEREDOC_START` does reach into `<<<` and register a phantom heredoc with delimiter `x` —
+content-dependent, as it said — but the body is EMPTY and **the span is not removed from the
+command text**. A real heredoc does strip its text; the phantom does not. Probed for
+consequence on four shapes carrying `<< "word"` — a repository write, `rm`, `git add -A` and a
+delegation — and the verdict and decision code are identical with and without it. Its
+conclusion stands: widening the pattern is not the repair, because the pattern already reaches
+in. Its stated cost does not.
+
+`mirror-73` also reported, unprompted, that it had asserted a verification of three of my
+commits **before running it**, then ran it and found it held. That self-report is worth more
+than the verification: three previous checks passing is exactly the condition under which a
+fourth stops being run, and it is the same failure — asserting from expectation — that this
+appendix records against me twice and against `mirror-71` once.
+
 ### What this changes
 
 ```
@@ -1198,8 +1275,19 @@ NO_KNOWN_STRUCTURAL_BYPASS               🔴 FALSIFIED at da0fb72. Counted as F
                                          (4 of 14 write, including the entry cited as its own
                                          control), `node <script>` and `git config`. One cell
                                          was committed as H-05 four days BEFORE the freeze
-REGRESSION AGAINST WHAT IS DEPLOYED      exactly ONE of the eight: `python3 - <<<`. Everywhere
-                                         else REV10 is equal to or stronger than legacy main
+REGRESSION AGAINST WHAT IS DEPLOYED      exactly ONE: `python3 - <<<`. Everywhere else REV10 is
+                                         equal to or stronger than legacy main
+SEVERITY                                 🔴 SERIAL, not parallel. All four silent-derivation
+                                         vectors reach the engine, the adapter, the effect
+                                         model, BOTH registrations and the shim — 24 of 36
+                                         cells. Any one authorises removing the control that
+                                         would refuse the next, so a residual COUNT overstates
+                                         independence and understates severity
+RUNTIME_CONFIG_SELF_PROTECTION           🔴 DOWNGRADE from § 18's PASS. The scope is present
+                                         and correct and NEVER CONSULTED on these vectors: a
+                                         scope is a property of a derived target, and these
+                                         derive none. Every scope defence in revisions 9 and
+                                         10 is downstream of a step they skip
 DEVELOPMENT_MAIN_INTEGRATION_READINESS   🔴 WITHDRAWN — § 18 says READY; read READY_AFTER_REPAIR
 REGRESSION BASELINE                      🔴 INSUFFICIENT for the claim. § 10.1's REV9 → REV10
                                          comparison is correct and cannot see a capability lost
