@@ -438,6 +438,39 @@ class TheSilentDerivationClassFailsClosed(SceneCase):
         }
         self.assert_matrix(table, "DENY", "argv-conditioned module writers")
 
+    def test_the_module_models_derive_the_operand_they_actually_write(self):
+        """🔴 Revision 11, closing `M97` — a hole the verdict could never have shown.
+
+        Dropping `MODULE_WRITE_MODEL` leaves every one of these still DENIED, by the
+        `UNDERIVED_MODULE_OPERAND` backstop. So a suite that asserts only the verdict
+        passes with the per-module derivation entirely removed, and `M97` survived.
+
+        What moves is the EFFECT SET, and that is not cosmetic: `post_effect_verify`
+        compares AUTHORISED against OBSERVED, so an authorised `json.tool a.json b.json`
+        in scratch would authorise NOTHING while writing `b.json` — and the real write
+        would be reported as an unexplained EXTRA effect. A receipt has to name what was
+        actually touched.
+
+        Asserted on the TARGET, per model, including the scratch forms that stay allowed
+        — those are the ones where only the effect set can betray the loss.
+        """
+        cases = {
+            "json.tool 2-arg": ("python3 -m json.tool /tmp/a.json /tmp/b.json",
+                                {"/tmp/b.json"}),
+            "gzip": ("python3 -m gzip /tmp/a.txt",
+                     {"/tmp/a.txt", "/tmp/a.txt.gz"}),
+            "py_compile": ("python3 -m py_compile /tmp/m.py",
+                           {"/tmp/__pycache__"}),
+        }
+        for label, (command, expected) in cases.items():
+            with self.subTest(model=label):
+                targets = {e.target for e in self.effects(command)}
+                self.assertEqual(expected, targets,
+                                 "the per-module argv derivation stopped naming the "
+                                 "operand this module writes")
+        # `pydoc -w` writes into the working directory, which the command never states.
+        self.assertEqual([None], [e.target for e in self.effects("python3 -m pydoc -w os")])
+
     def test_the_one_argument_form_that_prints_stays_allowed(self):
         """🔴 The control that keeps the above an argv derivation rather than four
         deletions from a frozen set."""
@@ -577,6 +610,40 @@ class EveryRouteToOneObjectGivesOneAnswer(SceneCase):
         table["git remote set-url"] = self.verdict(
             "git remote set-url origin https://x/y.git")
         self.assert_matrix(table, "DENY", "routes to the repository configuration")
+
+    def test_the_read_list_subcommands_that_write_are_judged_by_their_branch(self):
+        """🔴 Revision 11, and it exists because `M109` was EQUIVALENT.
+
+        `M109` puts `config`, `remote`, `archive` and `bundle` back on
+        `GIT_READ_SUBCOMMANDS` — the exact revision-10 line — and NOTHING moves, because
+        `analyse_git` reaches their explicit branches first. Membership of that list is
+        DEAD for all four, so the list edit is cosmetic and the BRANCHES are the repair.
+
+        `config` and `remote` were already covered. `archive` and `bundle` had no
+        assertion here at all, which is why `M113` and `M114` — which disable their
+        branches — needed a suite that can see them.
+        """
+        writes = {
+            "archive -o into the repo": ("git archive -o framework/a.tar HEAD",
+                                         "framework/a.tar"),
+            "archive --output= into the repo": (
+                "git archive --output=framework/a.tar HEAD", "framework/a.tar"),
+            "bundle create into the repo": (
+                "git bundle create framework/a.bundle HEAD", "framework/a.bundle"),
+        }
+        for label, (command, target) in writes.items():
+            with self.subTest(case=label):
+                self.assertEqual("DENY", self.verdict(command))
+                self.assertIn(target, {e.target for e in self.effects(command)},
+                              "the destination must be NAMED, not merely refused")
+        # the controls: the same subcommands reading, and writing into scratch
+        for label, command in (("archive to scratch", "git archive -o /tmp/a.tar HEAD"),
+                               ("bundle to scratch",
+                                "git bundle create /tmp/a.bundle HEAD"),
+                               ("archive with no -o", "git archive HEAD"),
+                               ("bundle verify", "git bundle verify /tmp/a.bundle")):
+            with self.subTest(control=label):
+                self.assertEqual("ALLOW", self.verdict(command))
 
     def test_reading_every_one_of_those_objects_is_still_granted(self):
         """🔴 THE CONTROL, and it is the reason this is a resolution and not a ban.

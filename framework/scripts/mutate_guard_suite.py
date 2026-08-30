@@ -63,13 +63,24 @@ RUNTIME_CONFIG = "framework/scripts/runtime_config.py"
 
 
 class Mutation:
-    def __init__(self, name, target, old, new, suites, why):
+    #: 🔴 `equivalent` — revision 11. A mutation whose behaviour is provably identical to
+    #: the unmutated code is NOT a hole in the tests, and reporting it as `SURVIVED`
+    #: alongside real holes is how a score stops meaning anything. It is also not a KILL,
+    #: and must never be folded into one: the honest report has five categories, and
+    #: EQUIVALENT is its own.
+    #:
+    #: The flag is a CLAIM, and it is only allowed with the measurement that supports it
+    #: written into `why` — verdict, decision code AND derived effect set unchanged across
+    #: named probes. An effect change with no verdict change is still a behaviour change,
+    #: because `post_effect_verify` compares effect SETS.
+    def __init__(self, name, target, old, new, suites, why, equivalent=False):
         self.name = name
         self.target = target
         self.old = old
         self.new = new
         self.suites = suites
         self.why = why
+        self.equivalent = equivalent
 
 
 MUTATIONS = [
@@ -124,7 +135,16 @@ MUTATIONS = [
         "M07", GUARD_POLICY,
         "    if OPAQUE in argv[0]:",
         "    if False and OPAQUE in argv[0]:",
-        GUARD_SUITES, "an expansion in argv[0] is read as a harmless program"),
+        GUARD_SUITES,
+        "an expansion in argv[0] is read as a harmless program — 🔴 EQUIVALENT AT "
+        "REVISION 11, and it was a KILL at revision 10. `unclassified()` now emits "
+        "OPAQUE_PROGRAM for a program name carrying an expansion, so removing this early "
+        "branch changes nothing observable. Measured over `$(echo git) add -A`, "
+        "`` `echo git` add -A `` and `$(echo rm) framework/x`: verdict DENY, code "
+        "UNKNOWN_EFFECT and effect set UNKNOWN_EFFECT@UNDERIVABLE are IDENTICAL with and "
+        "without the mutation. Defence in depth, and the cost of it is that this operator "
+        "no longer measures anything",
+        equivalent=True),
     Mutation(
         "M08", GUARD_POLICY,
         "                analyse_command(argv[index + 1], findings, depth + 1)\n                return",
@@ -1009,9 +1029,32 @@ MUTATIONS = [
         '    "annotate", "cherry", "difftool", "help", "version", "bisect", "range-diff",\n'
         '    "fetch", "instaweb", "citool", "gui", "config", "remote", "archive", "bundle",',
         FAMILY_SUITES,
-        "🔴 the four writing subcommands rejoin `GIT_READ_SUBCOMMANDS` — the exact "
-        "revision-10 line. The positive listing is what makes an unclassified "
-        "subcommand refuse, and this is how a writer gets onto the wrong side of it"),
+        "the four writing subcommands rejoin `GIT_READ_SUBCOMMANDS` — the exact "
+        "revision-10 line. 🔴 EQUIVALENT, and the equivalence is the FINDING: "
+        "`analyse_git` reaches its explicit `config`/`remote`/`archive`/`bundle` branches "
+        "BEFORE it consults `GIT_READ_SUBCOMMANDS`, so membership of that list is DEAD "
+        "for all four and removing them was cosmetic. Measured over `git config user.name "
+        "x`, `git archive -o framework/a.tar HEAD` and `git bundle create "
+        "framework/a.bundle HEAD`: verdict, code and effect set identical with and without "
+        "it. The mechanism a reader should attack is the BRANCHES — M102 and M106 attack "
+        "config and remote, and M113/M114 attack archive and bundle, which nothing did "
+        "until this survivor said so",
+        equivalent=True),
+    Mutation(
+        "M113", GUARD_POLICY,
+        '    if sub == "archive":',
+        '    if False and sub == "archive":',
+        FAMILY_SUITES,
+        "🔴 the REAL mechanism for `git archive`, which M109 only appeared to test. With "
+        "the branch gone the subcommand falls through to the read list and "
+        "`git archive -o framework/a.tar HEAD` writes into the repository unremarked"),
+    Mutation(
+        "M114", GUARD_POLICY,
+        '    if sub == "bundle":',
+        '    if False and sub == "bundle":',
+        FAMILY_SUITES,
+        "and the same for `git bundle create`, whose destination is a positional after "
+        "the verb — a shape no other operator in this suite reaches"),
     Mutation(
         "M110", GUARD_POLICY,
         '            if finding.rule == "UNDERIVED_OPERAND":\n'
@@ -1190,29 +1233,54 @@ def main() -> int:
         print(f"🔴 {len(dirty.splitlines())} uncommitted path(s) — they are NOT in the "
               "worktrees below, so this run judges the committed tree, not yours")
     print()
-    survivors, broken = [], []
+    survivors, broken, equivalent, false_equivalents = [], [], [], []
     for m in chosen:
         verdict, detail = apply_and_run(m, head)
-        print(f"{verdict:<16} {m.name}  {m.why}")
-        if verdict == "SURVIVED":
+        label = "EQUIVALENT" if (verdict == "SURVIVED" and m.equivalent) else verdict
+        print(f"{label:<16} {m.name}  {m.why}")
+        if verdict == "SURVIVED" and m.equivalent:
+            equivalent.append(m)
+        elif verdict == "SURVIVED":
             survivors.append(m)
             print(f"{'':<16}   🔴 {detail}")
+        elif verdict == "KILLED" and m.equivalent:
+            # 🔴 A mutation DECLARED equivalent that a suite then killed. The declaration
+            # was wrong — behaviour did change — and reporting it as a quiet kill would
+            # bury a false claim inside a good number.
+            false_equivalents.append(m)
+            print(f"{'':<16}   🔴 declared EQUIVALENT and yet KILLED — the claim is false")
         elif verdict not in ("KILLED",):
             broken.append(m)
             print(f"{'':<16}   ⚠️  {detail}")
 
     print()
-    print(f"KILLED    {len(chosen) - len(survivors) - len(broken)}/{len(chosen)}")
+    # 🔴 FIVE categories, reported separately, because they mean different things and only
+    # one of them is a pass. An EQUIVALENT mutant is not a kill and is not a hole.
+    killed = len(chosen) - len(survivors) - len(broken) - len(equivalent)
+    print(f"KILLED      {killed}/{len(chosen)}")
+    print(f"EQUIVALENT  {len(equivalent)} — behaviour provably unchanged, so nothing could "
+          "have failed. NOT a kill; the argument for each is in its `why`")
+    for m in equivalent:
+        print(f"            {m.name} {m.target}")
+    print(f"SURVIVED    {len(survivors)}")
+    print(f"UNUSABLE    {len(broken)}")
+    print(f"ANCHOR_MISSING / ANCHOR_AMBIGUOUS / WORKTREE_FAILED are reported per row above; "
+          f"none is a pass")
     if broken:
-        print(f"UNUSABLE  {len(broken)} — the anchor moved; the mutation was never applied, "
-              "which is NOT a pass")
+        print(f"🔴 UNUSABLE {len(broken)} — the anchor moved; the mutation was never "
+              "applied, which is NOT a pass")
         for m in broken:
             print(f"          {m.name} {m.target}")
     if survivors:
-        print(f"SURVIVED  {len(survivors)} — each is a hole in the tests:")
+        print(f"🔴 SURVIVED {len(survivors)} — each is a hole in the tests:")
         for m in survivors:
             print(f"          {m.name} {m.why}")
-    return 1 if (survivors or broken) else 0
+    if false_equivalents:
+        print(f"🔴 FALSE EQUIVALENCE {len(false_equivalents)} — declared equivalent and "
+              "killed anyway; the declaration is wrong and must be withdrawn:")
+        for m in false_equivalents:
+            print(f"          {m.name} {m.target}")
+    return 1 if (survivors or broken or false_equivalents) else 0
 
 
 if __name__ == "__main__":

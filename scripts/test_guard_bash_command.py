@@ -192,6 +192,31 @@ class HookContract(unittest.TestCase):
         self.assertIn("DECISION_CODE=BLANKET_STAGING", reason)
         self.assertIn("ASSIGNED_WORKTREE_SOURCE=OPERATOR_ENV", reason)
 
+    def test_a_wrapped_blanket_staging_keeps_the_code_that_names_the_harm(self) -> None:
+        """🔴 Revision 11, and it closes a hole revision 11 itself opened (`M06`).
+
+        `bash -c $'git add -A'` is ANSI-C quoting: the `$` is syntax, not part of the
+        word, and without `ANSI_C_QUOTE` the line parses as a program called `$git`. At
+        revision 10 removing that substitution flipped the verdict to ALLOW and the
+        mutation died. At revision 11 the verdict SURVIVES — `unclassified()` refuses an
+        unstateable program name — so the mutant lived, because nothing asserted the
+        DECISION CODE.
+
+        The verdict is not the whole guarantee. `BLANKET_STAGING` is the sentence the
+        actor has already learned for this harm, the probe reads decision codes to
+        identify which engine answered, and this policy's own rule is that a denial which
+        does not name the hazard is a denial the reader will try to route around. So the
+        code is asserted, not merely the refusal.
+
+        Verified as a discriminator before being written: it HOLDS on the real tree and
+        FAILS with `ANSI_C_QUOTE.sub` removed.
+        """
+        for command in ("bash -c $'git add -A'", "sh -c $'git add -A'"):
+            with self.subTest(command=command):
+                _, out = self._run(command)
+                reason = json.loads(out)["hookSpecificOutput"]["permissionDecisionReason"]
+                self.assertIn("DECISION_CODE=BLANKET_STAGING", reason)
+
     def test_denial_emits_a_deny_decision_with_a_reason(self) -> None:
         code, out = self._run("git add -A")
         self.assertEqual(code, 0, "the hook itself must not error")
