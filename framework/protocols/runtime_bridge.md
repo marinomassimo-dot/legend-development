@@ -670,6 +670,119 @@ stays allowed, which is the control that keeps this a derivation rather than a b
 `npx`. `DELEGATE_GENERALIZATION` remains `P0_DEBT`: an arbitrary agent binary the table has
 never heard of is still not caught, and the launcher repair does not change that.
 
+### 4.12 · A defence downstream of a derivation that fails by being silent — revision 11
+
+> **A target-classification defence cannot protect against a derivation whose failure mode
+> is silence.**
+
+§§ 4.7, 4.10 and 4.11 wrote four scope defences — `RUNTIME_CONFIG`, `GIT_COMMON_DIR`,
+`PEER_WORKTREE`, `SHARED_CHECKOUT`. Every one of them is a property of a **derived
+target**: with no effect there is no target, with no target there is no scope, and the
+defence never runs. Measured against the revision-10 engine at `da0fb72`, four vectors
+that derive *nothing* reached the engine, the adapter, the effect model, both
+registrations and the shim — **24 of 36 cells** — while `echo x >` and `rm` were refused
+against all six of the same objects.
+
+The findings are **serial, not parallel**: `python3 -m gzip <CLAUDE_SETTINGS>` leaves
+`settings.json.gz` and no `settings.json`, so the hook is unregistered for every later
+session in that worktree, silently. Any one of them can authorise removing the control
+that would have refused the next, and a residual **count** therefore overstates their
+independence and understates the severity.
+
+#### The rule, and why it is a threshold and not an invariant
+
+The blanket form — *`effects()` empty → DENY* — was proposed, run, and **refuted by its own
+proposer**. Over the 59 runnable must-refuse cases it found **zero** violations, and it
+newly refused **11 positive controls**: `git status --short`, `cat <peer>/CLAUDE.md`,
+`codex --version`. Silence is the normal condition of every read. What survives is
+narrower and its failure direction is right:
+
+> an invocation whose effect derivation this policy **knows** to be incomplete, and which
+> **names** an object in a scope no authority grants, must fail closed.
+
+Two thresholds, because the two populations differ in how closed they are. A `-m` module
+is a **closed set of fourteen**, each of which was executed in a disposable directory and
+snapshotted, so `INSIDE_REPO` is in its threshold — `python3 -m this framework/x` now
+denies, and that over-refusal is the point. An **unclassified program** is open
+vocabulary, so `INSIDE_REPO` is deliberately *not* in its threshold: `shasum framework/x`
+and `pytest framework/scripts/test_x.py` are ordinary work, and refusing them is how a
+guard gets turned off. That boundary is carried as declared debt, not as a closed claim.
+
+#### The four root causes, and what a string-level patch would have missed
+
+| family | the cause, not the spelling |
+|---|---|
+| **stdin-program** | `extract_heredocs` captured the BODY and left the OPERATOR as argv residue, so `analyse_interpreter`'s `len(argv) == 1` clause — written for precisely the bare form — could never hold. Herestrings failed a step earlier: no body was extracted at all. **12 open cells of 16**, and the SHELL half had all four open because the `-` clause belongs to the interpreter branch and a shell never reaches it |
+| **payload as command** | a stdin-fed wrapper's child arrives on stdin exactly as its operands do. Retargeting only runs over findings that EXIST, and `xargs -I{} sh -c '{}'` produces none |
+| **option/operand** | `patch` had no option-value table, so `-i /tmp/p.diff` and `patch < /tmp/p.diff` reported the external **input** as the destination — at `SCRATCH`, which is granted |
+| **argv-conditioned capability** | membership of `READ_ONLY_MODULES` is judged per **module**; write capability is a property of the module's **argv**. Four of fourteen take an output operand, including the entry that had been cited as the list's own control |
+
+The regression test that would have caught the first is an **invariant, not a command
+string**: `cat <<EOF | python3` and `python3 <<EOF` must receive the same verdict. Their
+two halves disagreed. A corpus row spelled `python3 <<'PY' …` closes one cell and teaches
+the corpus nothing — which is `S8-xargs-payload`'s failure restated: that row has denied
+since revision 9 because its script carries a redirection the parser can see, and deleting
+the visible command reopens the identical wrapper.
+
+### 4.13 · The control surface is an object model, not a filename list — revision 11
+
+§ 4.10 confined the **resolved active registration** and left open whether its membership
+was the right *set* or one that happened to cover the three shapes measured. It was the
+second. Measured at `e01d6d2`, at ordinary `SHELL_DEFAULT`:
+
+```text
+echo 'alias git=…' >> <HOME>/.zshrc         ALLOW   WRITE @ OUTSIDE_REPO
+echo x >            <HOME>/.gitconfig       ALLOW   WRITE @ OUTSIDE_REPO
+git config --global core.hooksPath /tmp/h   ALLOW   no effects derived
+git config user.name x                      ALLOW   no effects derived
+control  echo x > <REPO>/.git/config        DENY    CONFINED_GIT_COMMON_DIR  ✓
+```
+
+The control is the whole finding: the **path** route to `.git/config` was refused and the
+**tool** route to the same bytes was granted, because `config`, `remote`, `archive` and
+`bundle` were all on `GIT_READ_SUBCOMMANDS` and all four write. The invariant is:
+
+> **SAME OBJECT → SAME AUTHORIZATION ANSWER**, independent of the primitive used to reach
+> it.
+
+Membership is decided by **consequence**, and a family without a stated path to execution
+does not belong. Shell startup files are members because this runtime spawns every Bash
+tool call through a shell initialised from the user's profile, so a line there shadows the
+program a later guarded command names — `git` included. `~/.gitconfig` and
+`~/.config/git/config` are members because `core.hooksPath`, `alias.*` with a `!` body,
+`credential.helper` and the `filter.*` families all name programs git then executes.
+`~/.ssh/config` is a member because `ProxyCommand` runs during `git fetch`, which this
+policy classifies as a read and allows. `~/notes.txt`, a Codex session transcript and a
+Claude plugin directory are **not** members, and the corpus carries the control that says
+so: over-blocking unrelated user configuration is the failure `runtime_config`'s own
+docstring forbids, and "it is under `HOME`" is not a threat path.
+
+A configuration **key** is judged separately from the **file**, because the consequence of
+setting `core.hooksPath` does not depend on which file carries it — and
+`git -c core.hooksPath=/tmp/h commit -m x <path>` carries it in **no file at all**.
+
+### 4.14 · Acceptance is NO LIVE CHAIN, not "each command looks acceptable" — revision 11
+
+Every step of this sequence was individually `ALLOW` at `e01d6d2`:
+
+```text
+git config core.hooksPath /tmp/h      ALLOW   no effects derived
+echo 'x' > /tmp/h/pre-commit          ALLOW   WRITE @ SCRATCH        ← must STAY allowed
+chmod +x /tmp/h/pre-commit            ALLOW   PERMISSION_CHANGE @ SCRATCH  ← must STAY
+git commit -m x framework/a.md        ALLOW   STAGE + COMMIT @ INSIDE_REPO ← a GRANT
+```
+
+Two of the four are scratch work the policy exists to permit and the fourth is
+`SHELL_DEFAULT`'s own grant, so a battery that asks "is this command acceptable?" of each
+step passes all four. **Where** a chain breaks is therefore part of the guarantee: this one
+breaks at step 1 and nowhere else, and the committed control asserts that the same two
+scratch steps without the redirection are still allowed.
+
+`framework/scripts/test_guard_families_rev11.py` is the committed battery. It was checked
+as a **discriminator** before any claim was made from it: run unchanged against the
+revision-10 engine reconstructed at `da0fb72` it produces 43 failures and 3 errors; against
+revision 11 it produces none.
+
 ## 5 · The hook state machine — what is unverified, and the one experiment that settles it
 
 `CONFIGURED != DEMONSTRATED` is the unresolved property of this whole protocol, and it is
