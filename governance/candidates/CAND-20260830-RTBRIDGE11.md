@@ -568,7 +568,8 @@ read redirection's source leaves the argv — and neither is confined to the fam
 repair. 23 shapes where `<` or `<<` is *not* a stdin-program at all, both engines:
 
 ```text
-[[ 1 < 2 ]]   ·  [ 1 -lt 2 ]  ·  sort < in  ·  sort < in > out  ·  tee f < in
+bash double-bracket test with `<`  ·  [ 1 -lt 2 ]  ·  sort < in  ·  sort < in > out
+tee f < in
 rm f < /dev/null  ·  cat 2</tmp/in  ·  diff <(a) <(b)  ·  echo "a < b"
 python3 -c 'print(1<2)'  ·  cat > f <<EOF  ·  git apply <<EOF  ·  apply_patch <<EOF
 cat <<EOF | sort > out  ·  a delimiter word inside its own body  ·  two heredocs on

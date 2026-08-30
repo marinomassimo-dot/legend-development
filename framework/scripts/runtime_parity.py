@@ -709,7 +709,7 @@ PROBE_SCHEMA = "codex_hook_probe/2"
 #: It is a LITERAL and not `pre_tool_use_guard.GUARD_GENERATION`. Reading it from the
 #: adapter would make the receipt compare the running engine against itself, and every
 #: receipt would match whatever produced it — a check that cannot fail.
-REQUIRED_PROBE_GENERATION = "REV11"
+REQUIRED_PROBE_GENERATION = "REV12"
 
 #: Decision codes NO legacy guard can emit, so observing one identifies the engine.
 #: Read from the policy rather than spelled here, and asserted absent from the legacy blob

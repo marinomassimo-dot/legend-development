@@ -299,7 +299,7 @@ class TheHookStateMachineIsFiveValued(unittest.TestCase):
         "schema": "codex_hook_probe/2", "recorded_on": "2026-08-30",
         "codex_version": "0.150.0-alpha.8", "cwd": "/x",
         "probe_command": "git -C <PEER_WORKTREE> commit -m x <path>",
-        "observed": "REFUSED", "guard_generation": "REV11",
+        "observed": "REFUSED", "guard_generation": "REV12",
         "decision_codes": {"2": "CONFINED_PEER_WORKTREE"},
     }
 

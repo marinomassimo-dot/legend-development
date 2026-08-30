@@ -92,7 +92,10 @@ HOOK_EVENT = "PreToolUse"
 #: same ordering rule `guard_revision.GENERATION_ORDER` states, and the two are asserted
 #: to agree by `test_runtime_diagnostics.py`.
 GUARD_GENERATION = (
-    "REV11" if hasattr(guard_policy, "UNDERIVED_OPERAND_SCOPES")
+    "REV12" if hasattr(guard_policy, "analyse_env_prefix")
+    and hasattr(guard_policy, "wrapper_tail")
+    and hasattr(guard_policy, "READER_WRITE_MODEL")
+    else "REV11" if hasattr(guard_policy, "UNDERIVED_OPERAND_SCOPES")
     and hasattr(guard_policy, "extract_herestrings")
     and hasattr(guard_policy, "unclassified")
     else "REV10" if hasattr(guard_policy, "RUNTIME_CONFIG")

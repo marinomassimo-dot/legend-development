@@ -365,12 +365,16 @@ PRECONDITIONS: Tuple[Tuple[str, str], ...] = (
     # 🔴 Revision 11. The precondition is that the worktree carries the CANDIDATE
     # engine, and the rung moved — a probe that confirmed `REV10` would be confirming
     # the engine this candidate replaces.
-    ("GUARD_GENERATION_IS_REV11",
-     "guard_revision reports REV11 for that worktree"),
+    ("GUARD_GENERATION_IS_REV12",
+     "guard_revision reports REV12 for that worktree"),
     ("REGISTERED_ENGINE_PATH_RESOLVES",
      "the registration's engine path is ABSOLUTE or RUNTIME_ANCHORED and resolves"),
     ("REGISTERED_ENGINE_HASH_MATCHES",
-     "the resolved engine hashes to the deployed revision-10 engine"),
+     # 🔴 Revision 12 · D9. This said "the deployed revision-10 engine", two entries
+     # below one revision 11 had deliberately moved — so the tuple asserted two different
+     # generations at once and the declared `PROBE_VERDICT_NAMES` debt did not cover it.
+     # It names the CURRENT rung rather than a number, so it cannot go stale again.
+     "the resolved engine hashes to the deployed engine of the current generation"),
     ("HOOK_DISCOVERY_ESTABLISHED",
      "codex_hook_state reports the hook loaded, as far as a static query can say"),
     ("DISCRIMINATOR_ABSENT_FROM_LEGACY",

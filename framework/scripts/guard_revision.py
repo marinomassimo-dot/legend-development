@@ -34,6 +34,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -44,16 +45,17 @@ REV8 = "REV8"            # guard_policy + effect_model, no topology
 REV9 = "REV9"            # the above, plus repository-topology confinement
 REV10 = "REV10"          # the above, plus the session-bound assigned worktree
 REV11 = "REV11"          # the above, plus the silence rules and the stdin repair
+REV12 = "REV12"          # the above, plus environment, wrapper-tail and reader models
 ABSENT = "ABSENT"        # no guard entrypoint at all
 UNKNOWN = "UNKNOWN"      # an entrypoint that matches no known shape
 
-GENERATIONS = (LEGACY, REV8, REV9, REV10, REV11, ABSENT, UNKNOWN)
+GENERATIONS = (LEGACY, REV8, REV9, REV10, REV11, REV12, ABSENT, UNKNOWN)
 
 #: Newest first. The survey walks this in order and takes the first generation whose
 #: structural signature is present, so a worktree carrying revision 10 is never reported
 #: as revision 9 merely because revision 9's signature is also there — every generation
 #: is a superset of the one below it.
-GENERATION_ORDER = (REV11, REV10, REV9, REV8)
+GENERATION_ORDER = (REV12, REV11, REV10, REV9, REV8)
 
 #: The entry point every runtime registers, relative to a worktree root.
 GUARD_ENTRY = Path("scripts/guard_bash_command.py")
@@ -98,8 +100,74 @@ RUNTIME_CONFIG_IMPORT = "import runtime_config"
 #: `SESSION_BINDING_CALL`: the presence of a function proves nothing if nothing invokes
 #: it, and both of these repairs are exactly of the kind that can be present and
 #: unreachable — which is the defect revision 11 is about.
+class _Markers:
+    """How much of one generation's evidence is present."""
+
+    __slots__ = ("found", "total")
+
+    def __init__(self, found: int, total: int) -> None:
+        self.found, self.total = found, total
+
+    @property
+    def complete(self) -> bool:
+        return self.total > 0 and self.found == self.total
+
+    @property
+    def partial(self) -> bool:
+        return 0 < self.found < self.total
+
+
+def _markers_present(source: str, names) -> "_Markers":
+    """A marker counts when its NAME is both defined and used at least once.
+
+    🔴 Keyed on the callee, never on a whole call site. `stripped, herestrings =
+    extract_herestrings(command)` names two locals that a refactor may rename freely
+    without changing a thing the guard does — and revision 11 matched the whole line, so
+    renaming one of them reported the tree two generations older than it is.
+
+    Two occurrences is the test because one is the definition: a function that exists and
+    is never invoked proves nothing, which is the rule this ladder has applied since
+    `SESSION_BINDING_CALL`, and it is preserved here rather than traded away for
+    robustness.
+
+    🔴 Matched on a WORD BOUNDARY, not as a substring. A first draft counted
+    `source.count(name)`, and a marker renamed to `__gone_wrapper_tail__` still contained
+    `wrapper_tail` — so a capability deleted outright was reported present. A detector
+    that cannot tell a name from a name inside another name measures nothing, which is
+    the defect this whole function is being repaired for, one level down.
+    """
+    found = 0
+    for name in names:
+        if len(re.findall(rf"\b{re.escape(name)}\b", source)) >= 2:
+            found += 1
+    return _Markers(found, len(names))
+
+
+#: Revision 11's evidence: the herestring extractor and the silence rule, each defined and
+#: invoked. Names only — see `_markers_present`.
+REV11_MARKERS = ("extract_herestrings", "unclassified")
+#: Revision 12's: the environment-prefix derivation, the wrapper-tail re-analysis, and the
+#: conditional-reader model.
+REV12_MARKERS = ("analyse_env_prefix", "wrapper_tail", "READER_WRITE_MODEL")
+
 HERESTRING_CALL = "stripped, herestrings = extract_herestrings(command)"
-SILENCE_CALL = "unclassified(argv, program, findings)"
+#: 🔴 The call SIGNATURE changed in revision 12 — `unclassified` gained `depth` and
+#: `heredocs` so it can re-analyse a wrapper's tail. Left as revision 11's spelling this
+#: marker stopped matching, and the census reported a revision-12 engine as `REV10`:
+#: the exact defect revision 11 repaired, re-opened by revision 12's own edit and caught
+#: by revision 11's own test. A marker keyed on an exact call site is brittle by design —
+#: that is what makes it a STRUCTURAL fact rather than a declared constant — so it is
+#: matched on the callee and its first three arguments, which the refactor preserved.
+SILENCE_CALL = "unclassified(argv, program, findings"
+
+#: 🔴 Revision 12. Three call sites, each the entry point of one repair that has no
+#: earlier equivalent: the environment-prefix derivation, the wrapper-tail re-analysis,
+#: and the conditional-reader model. All three must be present AND invoked — the presence
+#: of a function proves nothing if nothing calls it, which is the rule this ladder has
+#: applied since `SESSION_BINDING_CALL`.
+ENV_PREFIX_CALL = "analyse_env_prefix(assignments, findings)"
+WRAPPER_TAIL_CALL = "child = wrapper_tail(argv)"
+READER_MODEL_CALL = "model = READER_WRITE_MODEL.get(program)"
 
 
 def _sha256(path: Path) -> str:
@@ -150,7 +218,43 @@ def generation_of(root: Path) -> str:
         and (root / GUARD_SESSION_BINDING).is_file()
         and (root / GUARD_RUNTIME_CONFIG).is_file()
     )
-    if rev10 and HERESTRING_CALL in source and SILENCE_CALL in source:
+
+    # 🔴 PARTIAL EVIDENCE MUST NOT DEMOTE — revision 12, and it is a defect in the
+    # instrument that decides `GUARD_REVISION_UNIFORM`.
+    #
+    # Every rung above revision 10 used to be an `and` chain over exact call-site strings,
+    # so a rung was awarded only on a full match and any near-miss fell through to the
+    # rung below. Measured on this tree, five behaviour-preserving edits, four of them
+    # downgrading and one by TWO rungs:
+    #
+    # ```text
+    # baseline                                      REV12
+    # rename a local in the herestring call         REV10   🔴 two rungs
+    # reformat the env-prefix call over two lines   REV11   🔴
+    # rename the wrapper-tail local                 REV11   🔴
+    # assign the reader model to another local      REV11   🔴
+    # ```
+    #
+    # None of those changes what the guard DOES. And the direction is the dangerous one: a
+    # newer engine reporting an older rung invites an operator to "upgrade" a worktree
+    # that is already ahead, and it makes `GUARD_REVISION_UNIFORM` answer a question about
+    # a fleet it has mis-read.
+    #
+    # Two repairs, and both are needed. The markers are matched on the CALLEE — a name
+    # defined and invoked at least once — so renaming a local or wrapping a line cannot
+    # move them. And a rung whose evidence is PARTIAL returns `UNKNOWN`, never the rung
+    # below: "some of revision 12 is here" is a failure to measure, not a measurement of
+    # revision 11.
+    rev11_markers = _markers_present(source, REV11_MARKERS)
+    rev12_markers = _markers_present(source, REV12_MARKERS)
+
+    if rev10 and rev11_markers.partial:
+        return UNKNOWN
+    if rev10 and rev11_markers.complete and rev12_markers.partial:
+        return UNKNOWN
+    if rev10 and rev11_markers.complete and rev12_markers.complete:
+        return REV12
+    if rev10 and rev11_markers.complete:
         return REV11
     if rev10:
         return REV10

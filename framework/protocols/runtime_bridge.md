@@ -1034,7 +1034,7 @@ nobody answered is **not** met:
 
 ```text
 A  PROBE_WORKTREE_IDENTIFIED          the probe cwd resolves to a session-bound assignment
-B  GUARD_GENERATION_IS_REV11          guard_revision reports REV11 for that worktree
+B  GUARD_GENERATION_IS_REV12          guard_revision reports REV12 for that worktree
 C  REGISTERED_ENGINE_PATH_RESOLVES    the registration is ABSOLUTE or RUNTIME_ANCHORED
 D  REGISTERED_ENGINE_HASH_MATCHES     the resolved engine hashes to the deployed engine
 E  HOOK_DISCOVERY_ESTABLISHED         codex_hook_state reports the hook loaded, as far as

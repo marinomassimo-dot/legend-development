@@ -188,7 +188,7 @@ class HookContract(unittest.TestCase):
         """
         _, out = self._run("git add -A")
         reason = json.loads(out)["hookSpecificOutput"]["permissionDecisionReason"]
-        self.assertIn("LEGEND_GUARD GENERATION=REV11", reason)
+        self.assertIn("LEGEND_GUARD GENERATION=REV12", reason)
         self.assertIn("DECISION_CODE=BLANKET_STAGING", reason)
         self.assertIn("ASSIGNED_WORKTREE_SOURCE=OPERATOR_ENV", reason)
 

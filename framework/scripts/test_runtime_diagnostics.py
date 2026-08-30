@@ -260,7 +260,7 @@ class GuardRevisionUniformityIsMeasuredAndNotAssumed(unittest.TestCase):
         mine = [row for row in self.report["worktrees"]
                 if Path(str(row["worktree"])).resolve() == ROOT.resolve()]
         self.assertEqual(len(mine), 1)
-        self.assertEqual(mine[0]["guard_generation"], gr.REV11)
+        self.assertEqual(mine[0]["guard_generation"], gr.REV12)
 
     def test_the_generation_ladder_reaches_the_revision_under_test(self):
         """🔴 Revision 11, and this is the test that had to exist BEFORE the rung did.
@@ -284,7 +284,8 @@ class GuardRevisionUniformityIsMeasuredAndNotAssumed(unittest.TestCase):
         """The ladder is CUMULATIVE — a revision-11 engine satisfies revision 10's
         condition too — so an order that asked the older question first would answer
         `REV10` forever, which is precisely how the rung went missing."""
-        self.assertEqual((gr.REV11, gr.REV10, gr.REV9, gr.REV8), gr.GENERATION_ORDER)
+        self.assertEqual((gr.REV12, gr.REV11, gr.REV10, gr.REV9, gr.REV8),
+                         gr.GENERATION_ORDER)
 
     def test_the_survey_writes_nothing(self):
         """🔴 Upgrading a peer from here would be the cross-worktree write that
@@ -678,7 +679,7 @@ class TheLiveProbeCanTellTheEnginesApart(unittest.TestCase):
         says, and the drift would be invisible: the probe would look for a token nothing
         emits and conclude NOT_FIRING."""
         self.assertIn(f"GENERATION={adapter.GUARD_GENERATION}", cr.discriminators()[0])
-        self.assertEqual(adapter.GUARD_GENERATION, "REV11")
+        self.assertEqual(adapter.GUARD_GENERATION, "REV12")
 
     def test_every_decision_code_is_absent_from_the_legacy_engine(self):
         for code in gp.DECISION_CODES:

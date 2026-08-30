@@ -152,8 +152,8 @@ MUTATIONS = [
         GUARD_SUITES, "a `-c` script argument stops being re-analysed"),
     Mutation(
         "M09", GUARD_POLICY,
-        'WRITES_LAST_OPERAND = frozenset({"cp", "mv", "install", "rsync", "ln"})',
-        'WRITES_LAST_OPERAND = frozenset({"mv", "install", "rsync", "ln"})',
+        'WRITES_LAST_OPERAND = frozenset({"cp", "mv", "install", "rsync", "ln", "ditto"})',
+        'WRITES_LAST_OPERAND = frozenset({"mv", "install", "rsync", "ln", "ditto"})',
         GUARD_SUITES, "`cp` over a tracked file stops being a write"),
     Mutation(
         "M10", GUARD_POLICY,
@@ -278,8 +278,9 @@ MUTATIONS = [
                       "`echo \"$(git add -A)\"` runs unpoliced"),
     Mutation(
         "M28", GUARD_POLICY,
-        "    while argv and ASSIGNMENT.match(argv[0]) and not argv[0].startswith(\"-\"):\n        argv = argv[1:]",
-        "    pass  # assignment prefixes left in place",
+        "    while argv and ASSIGNMENT.match(argv[0]) and not argv[0].startswith(\"-\"):\n"
+        "        assignments.append(argv[0])\n        argv = argv[1:]",
+        "    assignments = []  # assignment prefixes left in place",
         GUARD_SUITES, "a leading NAME=VALUE is read as the program, so `FOO=1 git add -A` "
                       "matches no rule"),
     Mutation(
@@ -934,7 +935,7 @@ MUTATIONS = [
         "measured — the fifteenth entry — arrives silently allowed over a repository path"),
     Mutation(
         "M99", GUARD_POLICY,
-        '        if not sub and base(child[0] if child else "") not in KNOWN_READERS:',
+        '        if not sub and normalise_program(child[0] if child else "") not in KNOWN_READERS:',
         '        if False:',
         FAMILY_SUITES,
         "🔴 a stdin-fed wrapper whose child derives NOTHING stops being a finding, which "
@@ -942,7 +943,7 @@ MUTATIONS = [
         "`xargs -I{} sh -c '{}'`"),
     Mutation(
         "M100", GUARD_POLICY,
-        '    unclassified(argv, program, findings)',
+        '    unclassified(argv, program, findings, depth, heredocs)',
         '    return',
         FAMILY_SUITES,
         "the final branch returns silently again, so an unmodelled program reaching a "
@@ -992,7 +993,7 @@ MUTATIONS = [
         "catch a repair failing in that direction"),
     Mutation(
         "M105", GUARD_POLICY,
-        '    if program in KNOWN_READERS:\n        return',
+        '    if program in PURE_READERS:\n        return',
         '    if True:\n        return',
         FAMILY_SUITES,
         "every program becomes a known reader, so the unclassified branch never fires. "

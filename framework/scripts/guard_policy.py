@@ -217,7 +217,14 @@ class Finding:
 
 # ── the command shapes that carry other commands ───────────────────────────────────
 
-SHELL_BINARIES = frozenset({"sh", "bash", "zsh", "dash", "ksh", "mksh", "ash", "fish", "busybox"})
+#: 🔴 `tcsh` and `csh` added in revision 12. They are not version spellings of anything —
+#: they are separate shells with their own `-c` — so normalisation could not reach them
+#: and this is a DECLARED list extension. Measured at revision 11: `tcsh -c '<blanket>'`
+#: and `csh -c '<blanket>'` both ALLOWED. The shell family is one of the few genuinely
+#: closed sets in this module, which is why extending it is defensible here and is not
+#: the answer for `TRANSPARENT_WRAPPERS` — see `unclassified`.
+SHELL_BINARIES = frozenset({"sh", "bash", "zsh", "dash", "ksh", "mksh", "ash", "fish",
+                            "busybox", "tcsh", "csh"})
 SHELL_SCRIPT_FLAGS = frozenset({"-c", "-lc", "-ic", "-lic", "-ilc", "-cl", "-li", "-il"})
 
 #: Wrappers that run their remaining argv as a command, after their own options.
@@ -351,6 +358,10 @@ PACKAGE_MANAGERS = frozenset({"npm", "pnpm", "yarn", "pip", "pip3", "uv", "gem",
                               "cargo", "bundle", "poetry", "composer"})
 INSTALLING_SUBCOMMANDS = frozenset({"install", "i", "add", "ci", "update", "upgrade",
                                     "remove", "uninstall", "rm", "link", "sync"})
+#: 🔴 Revision 12. The verbs under which a package manager EXECUTES rather than installs.
+#: `uv run codex exec` allowed while `uvx codex exec` denied — the same act, split across
+#: two branches because one spelling was a declared launcher and the other was not.
+PACKAGE_RUN_SUBCOMMANDS = frozenset({"run", "exec", "x", "dlx", "tool"})
 PACKAGE_TARGET_FLAGS = ("-t", "--target", "--prefix", "--root", "--install-dir",
                         "--path", "--dest", "--destination")
 
@@ -453,13 +464,46 @@ MODULE_WRITE_MODEL = {
 #: names a peer worktree, the shared checkout, the common dir or the runtime
 #: registration now fails closed. That is the correct direction for a surprise to land,
 #: and the cost is one entry.
-KNOWN_READERS = frozenset({
+#: 🔴 **Split in revision 12, and the split is the repair.**
+#:
+#: Revision 11 had ONE reader set and exempted it BEFORE the `UNDERIVED_OPERAND`
+#: threshold, so a member with a write mode reached every confined scope. Measured
+#: against revision 11 — 15 of 15 cells, `tee` denying at the same path in all of them:
+#:
+#: ```text
+#:                     PEER_WORKTREE   SHARED_CHECKOUT   RUNTIME_CONFIG
+#: sort -o             ALLOW           ALLOW             ALLOW
+#: sed -n 'w FILE'     ALLOW           ALLOW             ALLOW
+#: awk '{print > F}'   ALLOW           ALLOW             ALLOW
+#: xxd -r in out       ALLOW           ALLOW             ALLOW
+#: xmllint --output    ALLOW           ALLOW             ALLOW
+#: control  tee        DENY            DENY              DENY   ✓
+#: ```
+#:
+#: Revision 11 measured these only at `INSIDE_REPO`, where it argued the failure
+#: direction is refusal, and carried them as declared debt. At a confined scope the
+#: direction is ALLOW — so that debt row was a true sentence standing beside a hole,
+#: which is the exact move revision 11 warned about and then made.
+#:
+#: The repair is the one this bridge already applies to `-m` modules: a program whose
+#: write capability depends on its ARGV gets its argv DERIVED, and only a program with no
+#: reachable write mode is exempt. Two sets, and the boundary between them is a claim
+#: about each program rather than a convenience.
+#:
+#: 🔴 What is NOT claimed: that this membership is complete. A program's write mode is a
+#: property of its CLI and is not derivable from command text — no rule can close this
+#: family. What IS closed is the DEFAULT: anything outside both sets falls to
+#: `UNDERIVED_OPERAND` and fails closed at every ungranted scope. The residual risk is
+#: therefore bounded by `PURE_READERS` membership alone, and that set is deliberately
+#: small, justified per line, and asserted by the family suite at all three confined
+#: scopes.
+PURE_READERS = frozenset({
     "cat", "bat", "head", "tail", "less", "more", "nl", "rev", "strings",
     "grep", "egrep", "fgrep", "rg", "ag", "ack", "ripgrep",
     "ls", "dir", "stat", "file", "du", "df", "wc", "basename", "dirname",
     "realpath", "readlink", "pwd", "which", "type", "command_not_found",
-    "sort", "uniq", "cut", "paste", "join", "column", "fold", "expand", "unexpand",
-    "tr", "comm", "diff", "diff3", "cmp", "colordiff", "delta", "xxd", "od", "hexdump",
+    "uniq", "cut", "paste", "join", "column", "fold", "expand", "unexpand",
+    "tr", "comm", "diff", "diff3", "cmp", "colordiff", "delta", "od", "hexdump",
     "md5", "md5sum", "shasum", "sha1sum", "sha256sum", "sha512sum", "cksum", "b2sum",
     "echo", "printf", "true", "false", "date", "seq", "yes", "sleep",
     # 🔴 The shell TEST builtin, whose name really is a bracket. Without it,
@@ -467,10 +511,102 @@ KNOWN_READERS = frozenset({
     # reads `[` as a program produced by a glob and refuses ordinary work. Found by
     # running this repository's own control set, not by reading the pattern.
     "[", "[[", "test",
-    "jq", "yq", "xmllint", "csvlook", "tree", "wdiff",
-    "sed", "gsed", "awk", "gawk", "mawk", "nawk",  # the -i forms branch above this
-    "git-lfs", "pygmentize", "glow", "man", "info", "whatis", "apropos",
+    "csvlook", "wdiff", "glow", "man", "info", "whatis", "apropos",
 })
+
+#: Programs that READ by default and WRITE under a specific argv. Each entry derives its
+#: own targets; an empty derivation means this invocation reads, and the program stays
+#: allowed. Same contract as `MODULE_WRITE_MODEL`, one layer out.
+#:
+#: Every member below was moved OUT of the revision-11 reader set because Mirror
+#: demonstrated it writing, or because its own manual documents a write mode.
+
+
+def _model_sort(argv: Sequence[str]) -> List[str]:
+    """`sort -o FILE` writes FILE. Verified truncating a file to zero bytes."""
+    into = flag_value(argv, "-o", "--output")
+    return [into] if into else []
+
+
+def _model_xxd(argv: Sequence[str]) -> List[str]:
+    """`xxd [-r] INFILE OUTFILE` writes the SECOND operand."""
+    positional = [t for t in argv[1:] if not t.startswith("-")]
+    return positional[1:2]
+
+
+def _model_flag_output(argv: Sequence[str]) -> List[str]:
+    """`--output FILE` / `-o FILE` — xmllint, tree, pygmentize and their kin."""
+    into = flag_value(argv, "--output", "-o")
+    return [into] if into else []
+
+
+def _model_in_place(argv: Sequence[str]) -> List[str]:
+    """`yq -i` / `jq -i` rewrite every operand they are given."""
+    if not has_flag(argv, "-i", "--in-place"):
+        return []
+    return [t for t in argv[1:] if not t.startswith("-")][1:] or [UNNAMED]
+
+
+#: `w FILE` as a sed command, and the `w` flag on a substitution. Both write.
+SED_WRITE = re.compile(r"(?:^|[;\n])\s*\d*\s*w\s+(\S+)|s/(?:[^/\\]|\\.)*/(?:[^/\\]|\\.)*/[a-z]*w\s+(\S+)")
+
+
+def _model_sed(argv: Sequence[str]) -> List[str]:
+    """A `w` command inside a sed script names a file sed writes.
+
+    The `-i` form is caught by its own branch above; this is the OTHER write mode, which
+    revision 11 did not derive at all.
+    """
+    out: List[str] = []
+    for token in argv[1:]:
+        if token.startswith("-"):
+            continue
+        for match in SED_WRITE.finditer(token):
+            out.extend(g for g in match.groups() if g)
+    return out
+
+
+#: `print > "file"` / `printf … >> "file"` inside an awk program.
+AWK_WRITE = re.compile(r">>?\s*\"([^\"]+)\"|>>?\s*'([^']+)'")
+
+
+def _model_awk(argv: Sequence[str]) -> List[str]:
+    """A redirection inside an awk PROGRAM writes the file it names."""
+    out: List[str] = []
+    for token in argv[1:]:
+        if token.startswith("-"):
+            continue
+        for match in AWK_WRITE.finditer(token):
+            out.extend(g for g in match.groups() if g)
+    return out
+
+
+def _model_git_lfs(argv: Sequence[str]) -> List[str]:
+    """`git-lfs install` writes hooks into the shared `.git`."""
+    verb = next((t for t in argv[1:] if not t.startswith("-")), "")
+    return [UNNAMED] if verb in ("install", "uninstall") else []
+
+
+READER_WRITE_MODEL = {
+    "sort": _model_sort,
+    "xxd": _model_xxd,
+    "xmllint": _model_flag_output,
+    "tree": _model_flag_output,
+    "pygmentize": _model_flag_output,
+    "yq": _model_in_place,
+    "jq": _model_in_place,
+    "sed": _model_sed,
+    "gsed": _model_sed,
+    "awk": _model_awk,
+    "gawk": _model_awk,
+    "mawk": _model_awk,
+    "nawk": _model_awk,
+    "git-lfs": _model_git_lfs,
+}
+
+#: Kept as the union so existing call sites and tests keep one name for "does not need
+#: an UNDERIVED_OPERAND finding on its own account".
+KNOWN_READERS = PURE_READERS | frozenset(READER_WRITE_MODEL)
 
 #: A program name this guard can classify at all. `{}`, `$CMD` and a leftover
 #: substitution marker are not names — they are a program the command does not state.
@@ -479,13 +615,46 @@ KNOWN_READERS = frozenset({
 #: program, and reading a home-relative path as an unstateable program would refuse it.
 OPAQUE_PROGRAM_NAME = re.compile(r"[$`*?\[\]{}]|\x00")
 
+#: Every bare program name any table in this module is keyed on — revision 12.
+#:
+#: `normalise_program` collapses a version suffix ONLY onto a member of this set, so
+#: `python3.12` becomes `python3` while `report2` stays `report2`. Derived from the
+#: tables rather than spelled again: a name added to a table below is covered without
+#: anybody remembering to add it here, and `test_guard_families_rev12.py` asserts the
+#: derivation is non-empty so an empty set cannot silently disable normalisation.
+_KNOWN_PROGRAM_NAMES = frozenset(
+    set(SHELL_BINARIES)
+    | set(INTERPRETERS)
+    | set(TRANSPARENT_WRAPPERS)
+    | set(POSITIONAL_WRAPPERS)
+    | set(STDIN_FED_WRAPPERS)
+    | set(DELEGATING_BINARIES)
+    | set(BATCH_EDITORS)
+    | set(IN_PLACE_PROGRAMS)
+    | set(SPLITTERS)
+    | set(PACKAGE_MANAGERS)
+    | set(KNOWN_READERS)
+    | {"git", "patch", "apply_patch", "applypatch", "find", "dd", "eval", "env",
+       "chmod", "chown", "chgrp", "chflags", "xattr", "setfacl",
+       "touch", "mkdir", "mktemp", "curl", "wget", "wget2", "aria2c", "http", "https",
+       "scp", "sftp", "ftp", "rclone", "tar", "gtar", "bsdtar", "unzip", "7z", "7za",
+       "unrar", "gunzip", "bunzip2", "unxz", "zstd", "sed", "gsed", "node", "python",
+       "perl", "ruby", "bash", "sh"}
+)
+
 
 # ── write primitives, by argv[0] ───────────────────────────────────────────────────
 
 #: Commands whose non-option operands are all written to.
 WRITES_ALL_OPERANDS = frozenset({"tee", "truncate", "shred", "unlink", "mkfifo"})
 #: Commands that read every operand but the last and write the last.
-WRITES_LAST_OPERAND = frozenset({"cp", "mv", "install", "rsync", "ln"})
+#: 🔴 `ditto` added in revision 12, and it is a CORRECTION TO MIRROR as well as a repair.
+#: Mirror listed `ditto` among the exec-wrappers of D2, "verified to execute a command in
+#: cwd". Its manual says otherwise — `ditto [options] src ... dst_directory` copies — so
+#: it executes nothing and the wrapper classification is wrong. It IS an unmodelled
+#: WRITER of its last operand, which is a real defect of the other kind, and that is what
+#: this entry repairs.
+WRITES_LAST_OPERAND = frozenset({"cp", "mv", "install", "rsync", "ln", "ditto"})
 #: Commands that destroy every operand.
 DESTROYS_OPERANDS = frozenset({"rm", "rmdir", "srm"})
 
@@ -1237,6 +1406,71 @@ def base(token: str) -> str:
     return posixpath.basename(token)
 
 
+#: 🔴 A VERSION SUFFIX is not a different program — revision 12.
+#:
+#: Every table in this module is keyed on a bare name, and revision 11 handled the
+#: DIRECTORY (`/usr/bin/python3` and `./python3` both resolve through `base()`) while
+#: leaving the version. Measured against the revision-11 engine, all of these ALLOWED a
+#: repository write through a heredoc, a `-c` body and a `-m` module:
+#:
+#: ```text
+#: python3.12  python3.9  perl5.34  node20      ← a trailing version
+#: nodejs                                        ← a distribution's alias
+#: bash5  sh5.2                                  ← the same, for shells
+#: control  /usr/bin/python3  ./python3  python3  DENY on all three ✓
+#: ```
+#:
+#: That defeats the Family-II repair and the `-m` repair at once, and it is not a gap in
+#: the interpreter LIST — the list is right and the KEY was wrong. So this is a
+#: normalisation, applied everywhere a program name is derived, rather than fourteen more
+#: entries: `python3.12` and `python3` are one program spelled two ways, and a table that
+#: cannot say so will be defeated by the next release of anything.
+_VERSION_SUFFIX = re.compile(r"^(.*?)-?[\d.]+$")
+
+#: Distribution aliases, where the alternate name is NOT a version and cannot be derived.
+#: This IS a list, and it is declared as one: an alias is a fact about a packaging
+#: decision, not a property of the text.
+PROGRAM_ALIASES = {
+    "nodejs": "node",
+    "python3m": "python3",
+    "pypy": "python",
+    "pypy3": "python3",
+}
+
+
+def normalise_program(token: str) -> str:
+    """The program name every table in this module is keyed on.
+
+    `basename` first — the directory was revision 11's repair — then the alias map, then
+    the version suffix. Order matters: `nodejs` must alias before a suffix rule could see
+    a trailing `s`, and `/usr/local/bin/python3.12` must lose its directory first.
+
+    🔴 A name that normalises to nothing keeps its original: `3.12` alone is not
+    `python`, and a rule that invented a program out of a version string would classify
+    an operand as an interpreter.
+    """
+    name = posixpath.basename(token)
+    if name in PROGRAM_ALIASES:
+        return PROGRAM_ALIASES[name]
+    if name in _KNOWN_PROGRAM_NAMES:
+        return name
+    # 🔴 LONGEST known prefix wins, not the first cut. A non-greedy strip turns
+    # `python3.12` into `python`, which happens to classify the same here and is still
+    # the wrong answer to report: `python3` is a name this policy knows and is one
+    # character of information away. Peeling one trailing version character at a time and
+    # stopping at the first KNOWN name keeps `python3.12 -> python3` and `perl5.34 ->
+    # perl`, and leaves `report2` alone because no prefix of it is a program.
+    candidate = name
+    while _VERSION_SUFFIX.match(candidate):
+        candidate = candidate[:-1]
+        trimmed = candidate.rstrip("-.")
+        if trimmed in PROGRAM_ALIASES:
+            return PROGRAM_ALIASES[trimmed]
+        if trimmed in _KNOWN_PROGRAM_NAMES:
+            return trimmed
+    return name
+
+
 def operands(argv: Sequence[str], program: str) -> List[str]:
     """Non-option arguments, with option-values skipped for the programs that take them."""
     takes_value = OPTIONS_WITH_VALUE.get(program, frozenset())
@@ -1295,7 +1529,7 @@ def launcher_key(argv: Sequence[str]) -> "Optional[Tuple[int, frozenset]]":
     Two-word forms are tried first: `pnpm dlx` must not be read as bare `pnpm`, whose
     branch is about installing, and `npm exec` must not fall through to `npm install`'s.
     """
-    program = base(argv[0]) if argv else ""
+    program = normalise_program(argv[0]) if argv else ""
     if not program:
         return None
     if len(argv) > 1:
@@ -1455,11 +1689,18 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
     # value came from a substitution, `a=$(git rev-parse HEAD)`, was denied as an opaque
     # program. Both are the same missing step. The substitution's body is analysed
     # separately either way, so nothing hides inside the value.
+    # 🔴 The prefixes are ANALYSED before they are stripped — revision 12. Revision 11
+    # parsed them and threw them away, which is how `GIT_CONFIG_KEY_0=core.hooksPath`
+    # reached a commit that `git -c core.hooksPath=` could not. See `analyse_env_prefix`.
+    assignments: List[str] = []
     while argv and ASSIGNMENT.match(argv[0]) and not argv[0].startswith("-"):
+        assignments.append(argv[0])
         argv = argv[1:]
+    if assignments:
+        analyse_env_prefix(assignments, findings)
     if not argv:
         return
-    program = base(argv[0])
+    program = normalise_program(argv[0])
 
     if OPAQUE in argv[0]:
         # `$(echo git) add -A` — the program itself is the result of an expansion, so
@@ -1589,7 +1830,7 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
         # `S8-xargs-payload` is `… xargs -I{} sh -c 'echo y > {}'` and DENIES — because
         # its script carries a redirection the parser can see. Delete the visible command
         # and the identical wrapper allows: the row tests a spelling.
-        if not sub and base(child[0] if child else "") not in KNOWN_READERS:
+        if not sub and normalise_program(child[0] if child else "") not in KNOWN_READERS:
             findings.append(Finding(
                 "UNDERIVED_STDIN_CHILD", " ".join(argv[:2]), [UNNAMED],
                 "runs a child whose command AND operands both arrive on stdin, so this "
@@ -1741,6 +1982,22 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
         return
     if program in PACKAGE_MANAGERS:
         rest = [t for t in argv[1:] if not t.startswith("-")]
+        # 🔴 A package manager's RUN verb executes a child — revision 12.
+        #
+        # `uv run codex exec 'go'` ALLOWED at revision 11 while `uvx codex exec 'go'`
+        # DENIED, because `uvx` is a declared launcher and `uv` is a package manager whose
+        # branch only ever looked for an INSTALL verb. `npm run` had the same split from
+        # `npm exec`. The tail is a command, so it is analysed as one — the rule already
+        # applied to `npx` and to every launcher in `PACKAGE_LAUNCHERS`.
+        if rest and rest[0] in PACKAGE_RUN_SUBCOMMANDS:
+            child = argv[argv.index(rest[0]) + 1:]
+            if child:
+                analyse_argv(list(child), [], heredocs, findings, depth + 1)
+            else:
+                findings.append(Finding(
+                    "SHELL_OUT", f"{program} {rest[0]}", [UNNAMED],
+                    "runs a program this command does not name"))
+            return
         if rest and rest[0] in INSTALLING_SUBCOMMANDS or program.startswith("pip"):
             into = flag_value(argv, *PACKAGE_TARGET_FLAGS)
             findings.append(Finding("FILE_WRITE", f"{program} install",
@@ -1928,10 +2185,100 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
     # 🔴 For revisions 1–10 this was an unconditional `return`, and that silence IS the
     # defect class. "No effect derived" was read as "no effect", which is the
     # open-vocabulary failure `effect_model`'s own docstring says must never happen.
-    unclassified(argv, program, findings)
+    unclassified(argv, program, findings, depth, heredocs)
 
 
-def unclassified(argv: Sequence[str], program: str, findings: List[Finding]) -> None:
+def _env_value_is_actor_controlled(value: str) -> bool:
+    """Does this value name something the ACTOR can put a program into?
+
+    🔴 The discriminator that keeps `GIT_PAGER=cat git log --oneline -5` working — a
+    COMMITTED positive control of this repository. `cat` is a bare name resolved through
+    `PATH` to a system binary; `/tmp/evil` is a file the actor just wrote. A rule that
+    refused both would close the family and break the control, which is the trade this
+    whole revision exists to avoid making blindly.
+
+    A value carrying a path separator, a `~`, or an expansion is actor-controlled. A bare
+    word is not. `PATH` is handled by its caller, because for `PATH` the hazard is the
+    LIST it prepends rather than the value as a whole.
+    """
+    if not value:
+        return False
+    return ("/" in value or value.startswith("~") or EXPANDS.search(value) is not None
+            or value.startswith("."))
+
+
+def analyse_env_prefix(assignments: Sequence[str], findings: List[Finding]) -> None:
+    """Judge `NAME=VALUE` prefixes by the CONSEQUENCE of the variable — revision 12.
+
+    Four rules, and the first is the one that repairs invariant A:
+
+    ```text
+    GIT_CONFIG_KEY_<n>=<key>   ->  the same question `git -c <key>=` asks, so the same
+                                   answer: is_execution_control_key(<key>)
+    GIT_CONFIG_GLOBAL=<file>   ->  a config file the actor chose, which can carry
+                                   core.hooksPath or an alias with a `!` body
+    LD_PRELOAD=<anything>      ->  no benign value exists in a guarded shell
+    <name naming a program>    ->  execution control WHEN the value is actor-controlled
+    ```
+
+    Everything else is left alone. That is a declared boundary, not an oversight: the
+    variable space is open, and a rule that denied every unrecognised assignment would
+    refuse `FOO=1 make` and be removed within a day.
+    """
+    values = {}
+    for token in assignments:
+        match = ASSIGNMENT.match(token)
+        if match:
+            values[match.group(1)] = match.group(2)
+
+    for name, value in values.items():
+        # 1 · a git configuration KEY delivered through the environment
+        if ENV_GIT_CONFIG_KEY.match(name):
+            if is_execution_control_key(value):
+                findings.append(Finding(
+                    "EXECUTION_CONTROL", f"{name}={value}", [f"git config: {value}"],
+                    "sets a git configuration key through the environment whose value is "
+                    "a PROGRAM git executes — the same object `git -c` reaches, and it "
+                    "must get the same answer",
+                    scope=em.RUNTIME_CONFIG))
+            continue
+        # 2 · a configuration FILE the actor chose
+        if name in ENV_CONFIG_FILE:
+            findings.append(Finding(
+                "EXECUTION_CONTROL", f"{name}={value}", [f"git config file: {value}"],
+                "points git at a configuration file this command names, which can carry "
+                "`core.hooksPath`, an `alias.*` with a `!` body, or a `filter.*` program",
+                scope=em.RUNTIME_CONFIG))
+            continue
+        # 3 · loader injection, which has no benign form here
+        if name in ENV_ALWAYS_EXECUTION_CONTROL:
+            findings.append(Finding(
+                "EXECUTION_CONTROL", f"{name}={value}", [f"loader: {name}"],
+                "injects code into every process this command starts",
+                scope=em.RUNTIME_CONFIG))
+            continue
+        # 4 · a variable naming a program or a startup file, enumerated OR shaped
+        known = name in ENV_EXECUTION_CONTROL or ENV_CONTROL_SHAPE.search(name)
+        if known and _env_value_is_actor_controlled(value):
+            findings.append(Finding(
+                "EXECUTION_CONTROL", f"{name}={value}", [f"env: {name}"],
+                "names a program or startup file this command chose, which the runtime "
+                "will execute — changing what runs without writing any file",
+                scope=em.RUNTIME_CONFIG))
+
+
+#: The names `wrapper_tail` will re-analyse from. Derived by SUBTRACTION — every program
+#: this module models, minus the pure readers — so a program added to a table below is
+#: reachable through an unknown wrapper without anybody remembering this set exists.
+#: `test_guard_families_rev12.py` asserts it is non-empty and excludes the readers, so it
+#: cannot silently become the empty set and stop firing.
+#: 🔴 Subtracted from PURE_READERS, not from KNOWN_READERS: a CONDITIONAL reader hiding
+#: in an unknown wrapper's tail — `xcrun sort -o <peer>/f in` — must still be reached.
+WRAPPER_TAIL_PROGRAMS = frozenset(_KNOWN_PROGRAM_NAMES) - frozenset(PURE_READERS)
+
+
+def unclassified(argv: Sequence[str], program: str, findings: List[Finding],
+                 depth: int = 0, heredocs: Sequence[str] = ()) -> None:
     """The last branch: a program this policy has no model for.
 
     Three outcomes, and the middle one is the revision-11 repair:
@@ -1949,18 +2296,91 @@ def unclassified(argv: Sequence[str], program: str, findings: List[Finding]) -> 
     Reaching such an object through a program nobody classified is the same act as
     reaching it with `rm`, and SAME OBJECT → SAME AUTHORIZATION ANSWER.
     """
-    if program in KNOWN_READERS:
+    # 🔴 THE READERS ARE ANSWERED FIRST, and the order is load-bearing.
+    #
+    # A first draft of this revision put the opaque-name test above them, and `[` — the
+    # shell TEST builtin, whose name really is a bracket — was read as a program produced
+    # by a glob. That refused `printf "%s\n" "$([ 1 = 1 ] && echo "A -> B")"`, a
+    # COMMITTED negative control, for the SECOND time in two revisions. The same control
+    # caught it both times.
+    if program in PURE_READERS:
         return
+
+    # A CONDITIONAL reader — revision 12. Its argv is derived before it is exempted,
+    # because `sort` reads and `sort -o FILE` truncates FILE, and revision 11 exempted
+    # both. An empty derivation means this invocation really is a read.
+    model = READER_WRITE_MODEL.get(program)
+    if model is not None:
+        written = [t for t in model(argv) if t]
+        if written:
+            findings.append(Finding(
+                "FILE_WRITE", program, written,
+                "writes a file its ARGV names — this program reads by default, and the "
+                "write mode is a property of how it was invoked"))
+        return
+
     if OPAQUE_PROGRAM_NAME.search(program):
         findings.append(Finding("OPAQUE_PROGRAM", program, [OPAQUE],
                                 "the program is not a name this command states"))
         return
+
+    # 🔴 THE WRAPPER TAIL — revision 12, and it is the repair for `TRANSPARENT_WRAPPERS`
+    # being a list.
+    #
+    # Measured at revision 11, each verified to execute its child on this host:
+    #
+    # ```text
+    # xcrun <blanket>              script -q /dev/null <blanket>     screen -dm <blanket>
+    # uv run codex exec 'go'       npm run <blanket>
+    # control  nohup <blanket> · env <blanket> · timeout 5 <blanket>   DENY ✓
+    # ```
+    #
+    # Adding eight names would close eight commands. The FAMILY is *a program this policy
+    # has no model for, whose argv contains a command this policy DOES model* — and that
+    # is derivable from the text without knowing the wrapper. So the tail is re-analysed
+    # from the first token that names a modelled, non-reading program.
+    #
+    # The failure direction is refusal and the cost is over-refusal when an OPERAND
+    # happens to be spelled like a program: `mytool rm` re-reads as `rm` with no operand
+    # and is refused. That is the trade this policy has always made for an unmodelled
+    # program, and it is bounded by only scanning names the tables already carry.
+    child = wrapper_tail(argv)
+    if child is not None:
+        sub: List[Finding] = []
+        analyse_argv(list(child), [], list(heredocs), sub, depth + 1)
+        for finding in sub:
+            finding.detail = (finding.detail + f" · carried by `{program}`, a program "
+                              "this guard has no model for").strip(" ·")
+        findings.extend(sub)
+        return
+
     targets = [t for t in operands(argv, program) if t not in (UNNAMED, OPAQUE)]
     if targets:
         findings.append(Finding(
             "UNDERIVED_OPERAND", program, targets,
             "names an object this guard derived no effect on, through a program it has "
             "no model for"))
+
+
+def wrapper_tail(argv: Sequence[str]) -> "Optional[List[str]]":
+    """The child command hiding in an unmodelled program's argv, or None.
+
+    Scans for the first token that NORMALISES to a program some table in this module
+    models and that is not a pure reader. `xcrun git add -A` yields `['git','add','-A']`;
+    `xcrun --version` yields None because no token names a program.
+
+    🔴 Position 0 is skipped — that is the unmodelled program itself. And a token that is
+    an OPTION is skipped, so `script -q /dev/null git …` reaches `git` rather than
+    stopping at a flag that happens to share a name.
+    """
+    for index in range(1, len(argv)):
+        token = argv[index]
+        if not token or token.startswith("-") or token in (UNNAMED, OPAQUE):
+            continue
+        name = normalise_program(token)
+        if name in WRAPPER_TAIL_PROGRAMS:
+            return list(argv[index:])
+    return None
 
 
 #: `git <sub>` families beyond add/commit/stage. Revision 7 derived NOTHING for any of
@@ -2073,7 +2493,92 @@ EXECUTION_CONTROL_KEYS = (
     "uploadpack.", "receivepack.", "http.proxy", "remote.", "url.",
     "sequence.editor", "gpg.program", "ssh.variant", "safe.directory",
     "include.path", "includeif.",
+    # 🔴 Revision 12 · SECTIONS whose every key names a program, so the family is the
+    # section and not the leaf. `pager.<subcommand>` was ALLOW at revision 11 and is not
+    # reachable by a suffix rule, because its last component is the subcommand's own name.
+    "pager.", "man.", "browser.", "guitool.", "instaweb.", "sendemail.", "web.",
 )
+
+#: 🔴 The STRUCTURAL half of the same question — revision 12. A git configuration key
+#: whose LAST component is one of these names something git executes, in whatever section
+#: it appears. This is what reaches `man.<viewer>.cmd` and `pager.<subcommand>` — both
+#: measured ALLOW at revision 11 and both verified to execute — without enumerating the
+#: sections, and what will reach the section git adds next.
+EXECUTION_CONTROL_KEY_SUFFIXES = frozenset({
+    "cmd", "command", "tool", "helper", "program", "editor", "pager", "path",
+    "textconv", "clean", "smudge", "process", "driver", "proxy", "askpass",
+    "sshcommand", "hookspath", "templatedir", "binary", "exec", "shell", "script",
+})
+
+
+#: 🔴 ENVIRONMENT INDIRECTION — revision 12, and it refutes revision 11's own invariant A
+#: at the sharpest point there is.
+#:
+#: ```text
+#: git -c core.hooksPath=/tmp/h commit …                              DENY   RUNTIME_CONFIG
+#: GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0=core.hooksPath \
+#:   GIT_CONFIG_VALUE_0=/tmp/h git commit …                           ALLOW  🔴
+#: ```
+#:
+#: Same object, same primitive, two spellings, two answers — and the second was verified
+#: by execution, with the hook firing. `SAME OBJECT → SAME AUTHORIZATION ANSWER` is the
+#: invariant revision 11 published; this is it failing.
+#:
+#: `resolve_assignments` already PARSES these prefixes — `FOO=1 git add -A` has been
+#: handled since revision 8 — and `analyse_argv` then throws them away. So this is not new
+#: architecture: it is revision 11's own "model the consequence, not the filename" rule
+#: applied to a surface the parser already sees.
+#:
+#: **This family is OPEN and is declared so.** Any program may read any variable, so no
+#: enumeration can be complete. What is closed is the DIRECTION: a variable that names a
+#: program to run, or a configuration file to read, is judged by that consequence, and a
+#: variable whose value is not actor-controlled is left alone so `GIT_PAGER=cat git log`
+#: — a committed positive control — keeps working.
+
+#: Variables whose value IS a git configuration file. A config file can carry
+#: `core.hooksPath`, an `alias.*` with a `!` body, or a `filter.*` program, so pointing
+#: git at one the actor chose is the same act as writing those keys.
+ENV_CONFIG_FILE = frozenset({
+    "GIT_CONFIG", "GIT_CONFIG_GLOBAL", "GIT_CONFIG_SYSTEM",
+})
+
+#: Variables whose value names a PROGRAM the runtime will execute, or a file it will
+#: source at startup. Judged only when the value is actor-controlled — see
+#: `_env_value_is_actor_controlled`.
+ENV_EXECUTION_CONTROL = frozenset({
+    "GIT_EDITOR", "GIT_SEQUENCE_EDITOR", "GIT_PAGER", "GIT_EXTERNAL_DIFF",
+    "GIT_SSH", "GIT_SSH_COMMAND", "GIT_ASKPASS", "GIT_PROXY_COMMAND",
+    "GIT_ALTERNATE_OBJECT_DIRECTORIES", "GIT_TEMPLATE_DIR", "GIT_EXEC_PATH",
+    "GIT_HOOKS_PATH", "GIT_INDEX_FILE", "GIT_OBJECT_DIRECTORY", "GIT_DIR",
+    "GIT_WORK_TREE", "GIT_NAMESPACE", "GIT_ATTR_NOSYSTEM", "GIT_CEILING_DIRECTORIES",
+    "EDITOR", "VISUAL", "PAGER",
+    "BASH_ENV", "ENV", "SHELLOPTS", "PROMPT_COMMAND", "ZDOTDIR",
+    "PYTHONSTARTUP", "PYTHONPATH", "PYTHONHOME", "PERL5OPT", "PERL5LIB",
+    "RUBYOPT", "RUBYLIB", "NODE_OPTIONS", "NODE_PATH",
+    "PATH",
+})
+
+#: Variables that redirect execution unconditionally — there is no benign value for them
+#: in a guarded shell, so the actor-controlled test is not applied.
+ENV_ALWAYS_EXECUTION_CONTROL = frozenset({
+    "LD_PRELOAD", "LD_LIBRARY_PATH", "LD_AUDIT",
+    "DYLD_INSERT_LIBRARIES", "DYLD_LIBRARY_PATH", "DYLD_FRAMEWORK_PATH",
+})
+
+#: The STRUCTURAL half: a name this policy has never seen, whose SHAPE says its value is
+#: a program or a startup file. Matched so that a variable nobody enumerated is still
+#: judged — which is what stops this being another list standing in for a family.
+ENV_CONTROL_SHAPE = re.compile(
+    r"(?:^|_)(?:EDITOR|PAGER|VIEWER|BROWSER|SHELL)$"
+    r"|_(?:COMMAND|CMD|PROG|PROGRAM|BIN|EXE|LAUNCHER|WRAPPER|HOOK|HOOKS)$"
+    r"|(?:^|_)(?:PRELOAD|STARTUP|RCFILE|PROFILE|INIT)$"
+    r"|^(?:GIT|HG|SVN)_.*_(?:COMMAND|CMD|PATH)$"
+)
+
+#: `GIT_CONFIG_KEY_<n>` carries an arbitrary configuration KEY, so the answer is the one
+#: `is_execution_control_key` already gives for `git -c` — the same question, reached
+#: through the environment.
+ENV_GIT_CONFIG_KEY = re.compile(r"^GIT_CONFIG_KEY_(\d+)$")
 
 
 def is_execution_control_key(key: str) -> bool:
@@ -2082,11 +2587,32 @@ def is_execution_control_key(key: str) -> bool:
     Prefix-matched on the lowercased dotted name. `alias.` and `filter.` are families —
     `alias.zz` is an arbitrary shell command bound to a git word, and `filter.x.clean` is
     a program git runs over file contents on checkout.
+
+    🔴 **Revision 12 adds the SUFFIX half, and that is the repair.** The prefix list is a
+    list, and Mirror defeated it with keys nobody had enumerated — each verified to
+    execute:
+
+    ```text
+    git -c man.<viewer>.cmd=…    ALLOW at revision 11, no tty needed
+    git -c pager.<subcommand>=…  ALLOW at revision 11
+    control  core.pager · core.editor · alias.* · filter.*   DENY ✓
+    ```
+
+    Git's configuration space has a SHAPE: a key whose last component is `cmd`,
+    `command`, `tool`, `helper`, `program`, `editor`, `pager`, `path`, `textconv`,
+    `clean`, `smudge`, `process`, `driver` or `proxy` names something git executes,
+    whatever section it sits in. Matching that suffix reaches `man.x.cmd` and
+    `pager.log` without anyone having listed them, and it will reach the next section git
+    adds. The prefix list stays for the keys whose hazard is NOT in their name —
+    `init.templatedir`, `safe.directory`, `protocol.*`, `include.path`.
     """
     if not key or "=" in key:
         key = key.split("=", 1)[0]
     lowered = key.strip().lower()
-    return any(lowered == p or lowered.startswith(p) for p in EXECUTION_CONTROL_KEYS)
+    if any(lowered == p or lowered.startswith(p) for p in EXECUTION_CONTROL_KEYS):
+        return True
+    last = lowered.rsplit(".", 1)[-1] if "." in lowered else ""
+    return last in EXECUTION_CONTROL_KEY_SUFFIXES
 
 
 #: The ref namespace each subcommand operates in. `update-ref`, `reflog` and the
@@ -2225,6 +2751,42 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
             "worktree of this repository shares — and `remote.*.url` is where the "
             "objects of this repository would be sent",
             scope=em.GIT_COMMON_DIR))
+        return
+
+    # 🔴 Revision 12 · three git subcommands that RUN A PROGRAM the command names, and
+    # one that writes into the object store. All four were ALLOW at revision 11 and all
+    # four verified by Mirror. They are branches rather than config keys because the
+    # program travels in an OPTION or an operand, where `is_execution_control_key` — which
+    # reads keys — can never see it.
+    if sub == "difftool":
+        runner = flag_value(argv, "--extcmd", "-x")
+        if runner is not None:
+            findings.append(Finding(
+                "EXECUTION_CONTROL", "git difftool --extcmd",
+                [f"git difftool: {runner}"],
+                "runs the program it names once per differing path",
+                scope=em.RUNTIME_CONFIG))
+        return
+
+    if sub == "bisect":
+        verb = next((t for t in rest if not t.startswith("-")), "")
+        if verb == "run":
+            after = rest[rest.index(verb) + 1:] if verb in rest else []
+            findings.append(Finding(
+                "EXECUTION_CONTROL", "git bisect run",
+                [f"git bisect run: {after[0] if after else UNNAMED}"],
+                "runs the program it names once per revision, and rewrites HEAD between "
+                "each run",
+                scope=em.RUNTIME_CONFIG))
+        return
+
+    if sub == "hash-object":
+        if has_flag(argv, "-w", "--stdin-paths") or "-w" in rest:
+            findings.append(Finding(
+                "FILE_WRITE", "git hash-object -w", ["<git object store>"],
+                "writes a loose object into the shared object store, which every "
+                "worktree of this repository reads",
+                scope=em.GIT_COMMON_DIR))
         return
 
     if sub == "archive":
