@@ -1,5 +1,37 @@
-#!/usr/bin/env python3
 """Revision 11's guarantees, stated as FAMILY PROPERTIES rather than as command strings.
+
+🔴 **This file deliberately carries NO shebang, and the reason is a finding.**
+
+`test_runtime_parity.py::test_no_owned_shebang_file_sits_at_mode_100644` refuses a shebang
+file committed at `100644` and names its own remediation: *run `git add --chmod=+x
+<path>`*. Run here, on this file, that remediation produced:
+
+```text
+before   index 100644   filesystem 644   HEAD 100644
+after    index 100755   filesystem 644   HEAD 100644      ← `git status` now ` M`, forever
+```
+
+`git add --chmod` moves the INDEX and never the filesystem. The only thing that clears the
+divergence is `chmod`, which this policy refuses at `INSIDE_REPO` — correctly, and by
+design. So an actor who follows the tooling's own remediation puts its worktree into a
+dirty state it has no authorised way to leave, and the next ordinary `git add <path>` of
+that file re-records `100644` and silently moves the candidate content hash.
+
+**That is the R11/N9 mechanism, reproduced deliberately rather than inherited**: it is how
+a long-lived worktree accumulates mode residue, and nothing committed detects it — the
+check above reads the COMMITTED mode via `ls-tree` and never compares it to the
+filesystem. The asymmetry itself is a `SAME OBJECT → SAME ANSWER` question this candidate
+does NOT settle: `chmod +x <path>` derives `PERMISSION_CHANGE @ INSIDE_REPO` and denies,
+while `git add --chmod=+x <path>` derives only `STAGE @ INSIDE_REPO` and allows. Both
+change the mode a later actor sees. It is carried to review as a declared finding rather
+than repaired here, because the two defensible answers — *both deny* (and the remediation
+text must then name an operator act) and *they legitimately differ* (a staged mode change
+is visible in a diff and gets reviewed, which is the review surface `DENY_SHELL_WRITE`
+already recommends) — are a policy choice with no governing rule, and the author is not
+the one to make it.
+
+Having no shebang is the one option that needs neither: the file is invoked as
+`python3 framework/scripts/test_guard_families_rev11.py`, exactly as every suite here is.
 
 The sentence this whole suite exists to enforce, and it is not this candidate's:
 
