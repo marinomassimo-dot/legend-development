@@ -116,7 +116,50 @@ RULE_EFFECT = {
     "STDIN_SHELL": em.UNKNOWN_EFFECT,
     "WRAPPER_DEPTH": em.UNKNOWN_EFFECT,
     "SHELL_OUT": em.UNKNOWN_EFFECT,
+    # 🔴 Revision 11. The command NAMES a protected object and the derivation produced
+    # nothing about it. See `SILENCE_IS_NOT_ABSENCE` below.
+    "UNDERIVED_OPERAND": em.UNKNOWN_EFFECT,
+    "UNDERIVED_MODULE_OPERAND": em.UNKNOWN_EFFECT,
+    "UNDERIVED_STDIN_CHILD": em.UNKNOWN_EFFECT,
+    "EXECUTION_CONTROL": em.WRITE,
+    "CONFIG_WRITE": em.WRITE,
 }
+
+#: 🔴 **A target-classification defence cannot protect against a derivation whose failure
+#: mode is silence.** Revision 11 exists for this sentence.
+#:
+#: Revisions 9 and 10 wrote four scope defences — `RUNTIME_CONFIG`, `GIT_COMMON_DIR`,
+#: `PEER_WORKTREE`, `SHARED_CHECKOUT` — and every one of them is DOWNSTREAM of deriving
+#: an effect at all. A scope is a property of a derived TARGET: with no effect there is
+#: no target, with no target there is no scope, and the defence never runs. Measured at
+#: `e01d6d2`, four vectors that derive NOTHING reached the engine, the adapter, the
+#: effect model, both registrations and the shim — 24 of 36 cells — while `echo x >` and
+#: `rm` were refused against all six.
+#:
+#: The rules below are the repair, and they are stated as a threshold rather than as a
+#: blanket invariant on purpose. A peer proposed `effects() == [] → DENY` for every
+#: command; measured over this corpus's 59 runnable must-refuse cases it found ZERO
+#: violations, and it newly refused **11 positive controls** — `git status --short`,
+#: `cat <peer>/CLAUDE.md`, `codex --version`. Silence is the NORMAL condition of every
+#: read, so the rule cannot be "silence denies". It has to be:
+#:
+#: > an invocation whose effect derivation this policy KNOWS to be incomplete, which
+#: > NAMES an object in a scope no authority grants, must fail closed.
+#:
+#: Two thresholds, because the two populations differ in how closed they are:
+_UNDERIVED_STRICT = frozenset({em.PEER_WORKTREE, em.SHARED_CHECKOUT,
+                               em.GIT_COMMON_DIR, em.RUNTIME_CONFIG, em.UNDERIVABLE})
+#: An UNCLASSIFIED program is open vocabulary — anything on `PATH` — so `INSIDE_REPO` is
+#: deliberately NOT here. `shasum framework/x`, `jq . framework/a.json`, `pytest
+#: framework/scripts/test_x.py` are ordinary work, and a guard that refuses ordinary work
+#: is a guard that gets turned off. What it costs is stated as residual debt rather than
+#: hidden: an unknown program writing INSIDE the assigned worktree is still underived.
+UNDERIVED_OPERAND_SCOPES = _UNDERIVED_STRICT
+#: A `-m` MODULE is a CLOSED set of fourteen whose members were each executed and
+#: snapshotted, so `INSIDE_REPO` belongs here. The over-refusal — `python3 -m this
+#: framework/x` now denies — is the point: refusing an inert command costs a sentence in
+#: a denial message; allowing `python3 -m gzip .claude/settings.json` costs the guard.
+UNDERIVED_MODULE_SCOPES = _UNDERIVED_STRICT | frozenset({em.INSIDE_REPO})
 
 
 class Finding:
@@ -295,10 +338,124 @@ PACKAGE_TARGET_FLAGS = ("-t", "--target", "--prefix", "--root", "--install-dir",
 #: was ALLOWED on revision 8 — `-m` was not read at all, so a module that installs into
 #: the repository looked like an interpreter with no inline program. Enumerating the
 #: WRITING modules instead would have to enumerate every module anyone might ever run.
+#:
+#: 🔴 **Four of the fourteen WRITE, and one of them was cited as this list's own
+#: control.** All fourteen were executed in a disposable directory, snapshotted before
+#: and after:
+#:
+#: ```text
+#: python3 -m json.tool a.json out.json   → NEW out.json    🔴 THE CITED CONTROL
+#: python3 -m pydoc -w os                 → NEW os.html     🔴
+#: python3 -m gzip a.txt                  → NEW a.txt.gz    🔴
+#: python3 -m py_compile m.py             → __pycache__, with sys.pycache_prefix cleared
+#: the other ten                          → wrote nothing, rc=0
+#: ```
+#:
+#: One-argument `json.tool` prints to stdout, which is what made it look safe; the
+#: two-argument form is `json.tool INFILE OUTFILE` and it writes. `pydoc` is the same
+#: shape — read-only until one flag makes it a writer.
+#:
+#: **The class is not "host-dependent" and it is not four deletions.** Membership is
+#: judged per MODULE; write capability is a property of the module's ARGV. A module-name
+#: allowlist cannot express "read-only" for anything that takes an output operand, and
+#: four of fourteen take one. So the repair is per-module ARGV DERIVATION — the mapping
+#: below — plus `UNDERIVED_MODULE_OPERAND` behind it, which fails closed for a member
+#: that names a protected object and derives nothing, whether or not anyone measured it.
+#: `py_compile` is host-dependent (Apple's CommandLineTools Python sets
+#: `sys.pycache_prefix`, which MASKS the write on this machine and on no other); the
+#: other three are argv-dependent and wrong on every host including this one.
 READ_ONLY_MODULES = frozenset({
     "json.tool", "pydoc", "this", "site", "sysconfig", "platform", "timeit",
     "calendar", "base64", "gzip", "tokenize", "dis", "ast", "py_compile",
 })
+
+#: How each argv-conditioned member derives its own write targets, given the module's
+#: own argv. `None` from a model means *this invocation writes nothing*; a list means
+#: those paths are written. The backstop still runs either way.
+#:
+#: `UNNAMED` is used where the destination is real but the command does not state it —
+#: `pydoc -w os` writes `os.html` into the working directory, which is not in the argv.
+
+
+def _model_json_tool(rest: Sequence[str]) -> List[str]:
+    """`json.tool [INFILE [OUTFILE]]` — the SECOND positional is written."""
+    positional = [t for t in rest if not t.startswith("-")]
+    return positional[1:2]
+
+
+def _model_pydoc(rest: Sequence[str]) -> List[str]:
+    """`pydoc -w NAME` writes `NAME.html` into the working directory, unnamed."""
+    return [UNNAMED] if any(t == "-w" for t in rest) else []
+
+
+def _model_gzip(rest: Sequence[str]) -> List[str]:
+    """`gzip FILE` writes `FILE.gz` AND removes `FILE`; `-d` reverses it.
+
+    Both ends are reported, because a compression that deletes its input is a mutation
+    of the input whatever it does with the output — the same reasoning `mv` gets.
+    """
+    positional = [t for t in rest if not t.startswith("-")]
+    out: List[str] = []
+    for path in positional:
+        out.append(path)
+        out.append(path[:-3] if path.endswith(".gz") else path + ".gz")
+    return out or ([UNNAMED] if not positional else [])
+
+
+def _model_py_compile(rest: Sequence[str]) -> List[str]:
+    """`py_compile SRC` writes `__pycache__/…` BESIDE each source, unless the host
+    interpreter sets `sys.pycache_prefix`. The guard cannot read the host interpreter's
+    build, so the destination is the source's own directory and the answer does not
+    depend on which machine is asking."""
+    positional = [t for t in rest if not t.startswith("-")]
+    return [posixpath.join(posixpath.dirname(p) or ".", "__pycache__")
+            for p in positional] or [UNNAMED]
+
+
+MODULE_WRITE_MODEL = {
+    "json.tool": _model_json_tool,
+    "pydoc": _model_pydoc,
+    "gzip": _model_gzip,
+    "py_compile": _model_py_compile,
+}
+
+#: 🔴 Programs whose entire effect is READ, whatever their argv — revision 11.
+#:
+#: This exists so that `UNDERIVED_OPERAND` can fail closed on an UNCLASSIFIED program
+#: without refusing the reads that are this repository's declared positive controls:
+#: `cat <peer>/CLAUDE.md`, `grep -rn x <peer>/framework`, `head <git-common-dir>/config`.
+#: Every member is a program that has no write mode reachable from its own argv, or
+#: whose write mode is already branched on above (`sed -i`, `awk -i`, `find -delete`).
+#:
+#: It is a POSITIVE list and it is the new frontier: a reading tool absent from it that
+#: names a peer worktree, the shared checkout, the common dir or the runtime
+#: registration now fails closed. That is the correct direction for a surprise to land,
+#: and the cost is one entry.
+KNOWN_READERS = frozenset({
+    "cat", "bat", "head", "tail", "less", "more", "nl", "rev", "strings",
+    "grep", "egrep", "fgrep", "rg", "ag", "ack", "ripgrep",
+    "ls", "dir", "stat", "file", "du", "df", "wc", "basename", "dirname",
+    "realpath", "readlink", "pwd", "which", "type", "command_not_found",
+    "sort", "uniq", "cut", "paste", "join", "column", "fold", "expand", "unexpand",
+    "tr", "comm", "diff", "diff3", "cmp", "colordiff", "delta", "xxd", "od", "hexdump",
+    "md5", "md5sum", "shasum", "sha1sum", "sha256sum", "sha512sum", "cksum", "b2sum",
+    "echo", "printf", "true", "false", "date", "seq", "yes", "sleep",
+    # 🔴 The shell TEST builtin, whose name really is a bracket. Without it,
+    # `printf "%s\n" "$([ 1 = 1 ] && echo "A -> B")"` — a committed negative control —
+    # reads `[` as a program produced by a glob and refuses ordinary work. Found by
+    # running this repository's own control set, not by reading the pattern.
+    "[", "[[", "test",
+    "jq", "yq", "xmllint", "csvlook", "tree", "wdiff",
+    "sed", "gsed", "awk", "gawk", "mawk", "nawk",  # the -i forms branch above this
+    "git-lfs", "pygmentize", "glow", "man", "info", "whatis", "apropos",
+})
+
+#: A program name this guard can classify at all. `{}`, `$CMD` and a leftover
+#: substitution marker are not names — they are a program the command does not state.
+#:
+#: 🔴 `~` is deliberately absent: `~/bin/tool` is an ordinary invocation of a named
+#: program, and reading a home-relative path as an unstateable program would refuse it.
+OPAQUE_PROGRAM_NAME = re.compile(r"[$`*?\[\]{}]|\x00")
 
 
 # ── write primitives, by argv[0] ───────────────────────────────────────────────────
@@ -342,6 +499,9 @@ OPTIONS_WITH_VALUE = {
     "7z": frozenset({"-o", "-p", "-x"}),
     "rm": frozenset({}),
     "git": frozenset({"-C", "-c", "--git-dir", "--work-tree", "--namespace", "--exec-path"}),
+    # 🔴 Revision 11. Without this, `git config -f /tmp/x.cfg a b` read `/tmp/x.cfg` as
+    # the KEY and `a` as the value — the option/operand family inside git's own porcelain.
+    "config": frozenset({"-f", "--file", "--type", "--default", "--blob"}),
     # 🔴 Added in revision 9. Without these, `split -l 5 /tmp/a framework/part-` had `5`
     # read as an operand, which pushed the real prefix out of the position the rule looked
     # at and left the command ALLOWED. An option-value not listed here arrives in
@@ -351,6 +511,13 @@ OPTIONS_WITH_VALUE = {
                         "-l", "--lines", "-n", "--number", "--additional-suffix",
                         "--filter", "-d", "--numeric-suffixes"}),
     "csplit": frozenset({"-f", "--prefix", "-b", "--suffix-format", "-n", "--digits"}),
+    # 🔴 Revision 11. Without this, `patch -p1 -i /tmp/p.diff` read the DIFF as the file
+    # being written — an external input reported as the destination, in the direction
+    # that allows. See the `patch` branch in `analyse_argv`.
+    "patch": frozenset({"-i", "--input", "-o", "--output", "-d", "--directory",
+                        "-p", "--strip", "-B", "--prefix", "-r", "--reject-file",
+                        "-D", "--ifdef", "-F", "--fuzz", "-V", "--version-control",
+                        "-b", "--suffix", "-z", "-g", "--get", "--basename-prefix"}),
     "awk": frozenset({"-v", "-f", "--file", "--source", "-i"}),
     "gawk": frozenset({"-v", "-f", "--file", "--source", "-i", "--include", "--load"}),
     "ed": frozenset({"-p", "--prompt"}),
@@ -727,6 +894,28 @@ def extract_heredocs(command: str) -> Tuple[str, List[str]]:
 
     A heredoc body is program text, not command text: lexing it as a command produces
     nonsense, and leaving it in place makes every quote in it a lexing hazard.
+
+    🔴 **The OPERATOR is removed too, and for revisions 1–10 it was not.** This is the
+    root cause of the stdin-program family, and it is not a missing spelling. The body
+    was lifted out and `<<` and its delimiter were left behind as argv residue:
+
+    ```text
+    python3 - <<'PY'   heredocs=1  argv ['python3','-','<<','PY']  "-" found  → DENY
+    python3   <<'PY'   heredocs=1  argv ['python3','<<','PY']      len 3      → ALLOW
+    cat <<'PY' | python3            argv ['python3']               len 1      → DENY
+    ```
+
+    `analyse_interpreter`'s `len(argv) == 1` clause is written for exactly the bare form
+    and could never hold while the residue was there — while the same body arriving
+    through a PIPE, where the interpreter's argv really is `['python3']`, was refused.
+    The clause was correct; its own preprocessing removed the condition it depends on.
+    Measured at `e01d6d2` over 4 interpreters × 4 forms: 12 of 16 cells open, with
+    `cat <<EOF | <interp>` and `<interp> -c <body>` denying for all four.
+
+    So the residue is deleted rather than the downstream clause being widened, and the
+    invariant that says so is executable:
+
+    > `cat <<EOF | python3` and `python3 <<EOF` MUST receive the same verdict.
     """
     bodies: List[str] = []
     lines = command.split("\n")
@@ -734,8 +923,9 @@ def extract_heredocs(command: str) -> Tuple[str, List[str]]:
     index = 0
     while index < len(lines):
         line = lines[index]
-        out.append(line)
         starts = HEREDOC_START.findall(line)
+        # 🔴 The operator and its delimiter leave the command text with the body.
+        out.append(HEREDOC_START.sub(" ", line) if starts else line)
         index += 1
         for _, delimiter in starts:
             body: List[str] = []
@@ -745,6 +935,99 @@ def extract_heredocs(command: str) -> Tuple[str, List[str]]:
             index += 1  # consume the terminator
             bodies.append("\n".join(body))
     return "\n".join(out), bodies
+
+
+def extract_herestrings(command: str) -> Tuple[str, List[str]]:
+    """Lift `<<< word` bodies out of the command text, operator and word together.
+
+    🔴 The second cause of the stdin-program family, and it fails a step EARLIER than
+    the heredoc residue: `extract_heredocs` returns no body at all for `<<<`, so there
+    was never anything to attribute. Repairing only the residue closes the eight heredoc
+    cells and none of the four herestring cells.
+
+    One precision, because it misleads whoever repairs this by pattern: `HEREDOC_START`
+    *does* reach inside `<<<` — at an offset, reading a bare word as a quoted delimiter —
+    and registers a PHANTOM heredoc with an EMPTY body. That phantom is inert only
+    because `PROGRAM_WRITES.search("")` is `None`. "Make the pattern match `<<<`" is
+    therefore not the repair: the herestring needs a body extractor of its own, and it
+    must run BEFORE `extract_heredocs` so the phantom never forms.
+
+    Quote state is tracked because `echo "a <<< b"` is an argument, not a redirection —
+    the same rule `extract_substitutions` applies, and for the same reason.
+    """
+    bodies: List[str] = []
+    out: List[str] = []
+    i, n = 0, len(command)
+    quote = ""
+    while i < n:
+        char = command[i]
+        if quote:
+            out.append(char)
+            if char == "\\" and quote == '"' and i + 1 < n:
+                out.append(command[i + 1])
+                i += 2
+                continue
+            if char == quote:
+                quote = ""
+            i += 1
+            continue
+        if char in "'\"":
+            quote = char
+            out.append(char)
+            i += 1
+            continue
+        if command.startswith("<<<", i):
+            j = i + 3
+            while j < n and command[j] in " \t":
+                j += 1
+            word, j = _read_word(command, j)
+            bodies.append(word)
+            out.append(" ")
+            i = j
+            continue
+        out.append(char)
+        i += 1
+    return "".join(out), bodies
+
+
+def _read_word(text: str, start: int) -> Tuple[str, int]:
+    """One shell word from `start`, quotes honoured, returning (content, end).
+
+    The content is the word with its outer quoting removed, because that is what the
+    interpreter receives on stdin — `python3 <<< "open('x','w')"` feeds the interpreter
+    the inside of the double quotes, and judging the quotes as part of the program is how
+    a body stops matching `PROGRAM_WRITES`.
+    """
+    out: List[str] = []
+    i, n = start, len(text)
+    quote = ""
+    while i < n:
+        char = text[i]
+        if quote:
+            if char == "\\" and quote == '"' and i + 1 < n:
+                out.append(text[i + 1])
+                i += 2
+                continue
+            if char == quote:
+                quote = ""
+                i += 1
+                continue
+            out.append(char)
+            i += 1
+            continue
+        if char in "'\"":
+            quote = char
+            i += 1
+            continue
+        if char in " \t\n;&|()<>":
+            break
+        if char == "\\" and i + 1 < n:
+            out.append(text[i + 1])
+            i += 2
+            continue
+        out.append(char)
+        i += 1
+    return "".join(out), i
 
 
 def extract_substitutions(command: str) -> Tuple[str, List[str]]:
@@ -889,6 +1172,7 @@ def segments(tokens: Sequence[str]) -> List[Tuple[List[str], List[str], bool]]:
     argv: List[str] = []
     writes: List[str] = []
     pending_redirect = False
+    pending_read = False
     piped_in = False
     next_piped = False
     for token in tokens:
@@ -896,11 +1180,20 @@ def segments(tokens: Sequence[str]) -> List[Tuple[List[str], List[str], bool]]:
             writes.append(token)
             pending_redirect = False
             continue
+        # 🔴 A READ redirection's source is an INPUT, never an operand — revision 11.
+        # Revisions 1–10 dropped the `<` and left the filename in the argv, so
+        # `patch -p1 < /tmp/p.diff` derived a WRITE on the DIFF at `SCRATCH` and was
+        # allowed. That is the option/operand confusion spelled with shell syntax, and
+        # repairing only `-i` would have left it standing.
+        if pending_read:
+            pending_read = False
+            continue
         if token in REDIRECT_WRITE:
             pending_redirect = True
             continue
         if token in REDIRECT_READ:
             pending_redirect = False
+            pending_read = True
             continue
         if token in CONTROL_TOKENS or NEWLINE_RUN.match(token):
             if argv or writes:
@@ -1199,6 +1492,25 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
                 analyse_command(argv[index + 1], findings, depth + 1)
                 return
         operands_ = [t for t in argv[1:] if not t.startswith("-")]
+        # 🔴 A heredoc or herestring fed to a SHELL is that shell's script — revision 11.
+        # The stdin-program family is not confined to interpreters, and the shell half of
+        # it was worse: all four cells were open, not three.
+        #
+        # ```text
+        # bash <<'EOF' … git add -A … EOF        ALLOW  🔴  the founding harm itself
+        # bash - <<'EOF' … git add -A … EOF      ALLOW  🔴
+        # sh <<< 'git add -A'                    ALLOW  🔴
+        # control  echo 'git add -A' | sh        DENY   STDIN_SHELL ✓
+        # control  sh -c 'git add -A'            DENY   BLANKET_STAGING ✓
+        # ```
+        #
+        # Analysed as a COMMAND rather than reported as opaque, because it is one and the
+        # guard can read it — `bash <<EOF … git add -A` now denies for BLANKET_STAGING,
+        # the same sentence the actor already knows, and not for an unnameable effect.
+        if heredocs and not operands_:
+            for body in heredocs:
+                analyse_command(body, findings, depth + 1)
+            return
         if piped_in and not operands_:
             # `echo 'git add -A' | sh` — the script arrives on stdin, so the command
             # names nothing about what will run. `sh script.sh` is the declared escape
@@ -1236,6 +1548,30 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
             finding.detail = (finding.detail + " · operands arrive on stdin, so the "
                               "command names none of them").strip(" ·")
             finding.targets = [UNNAMED]
+        # 🔴 PAYLOAD AS COMMAND — revision 11. Retargeting only runs over findings that
+        # EXIST, and for the shape below there are none:
+        #
+        # ```text
+        # echo 'rm framework/x' | xargs -I{} sh -c '{}'        ALLOW  no effects derived
+        # echo 'rm framework/x' | xargs -0 -I{} bash -c '{}'   ALLOW  no effects derived
+        # cat /tmp/cmds        | xargs -n1 sh -c               ALLOW  no effects derived
+        # control  echo framework/x | xargs rm                 DENY   DELETE @ UNNAMED ✓
+        # ```
+        #
+        # `-I` is in the value-flag loop, so `-I` and `{}` are both popped and the child
+        # becomes `['sh','-c','{}']` — a shell whose script is the literal replacement
+        # marker. The COMMAND arrives on stdin, exactly as the operands do, and this
+        # wrapper's whole reason for existing is that what arrives on stdin is not named.
+        #
+        # A survivor of four revisions of hardening. This repository's own corpus row
+        # `S8-xargs-payload` is `… xargs -I{} sh -c 'echo y > {}'` and DENIES — because
+        # its script carries a redirection the parser can see. Delete the visible command
+        # and the identical wrapper allows: the row tests a spelling.
+        if not sub and base(child[0] if child else "") not in KNOWN_READERS:
+            findings.append(Finding(
+                "UNDERIVED_STDIN_CHILD", " ".join(argv[:2]), [UNNAMED],
+                "runs a child whose command AND operands both arrive on stdin, so this "
+                "command states neither"))
         findings.extend(sub)
         return
 
@@ -1252,11 +1588,44 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
         # nothing) or a write (which would deny every cross-worktree read). Retargeting
         # asks the right question: whatever this subcommand MUTATES, it mutates over
         # there.
+        # 🔴 `git -c <key>=<value> <subcommand>` sets configuration for ONE invocation,
+        # writing no file at all — revision 11. Measured at `e01d6d2`:
+        #
+        # ```text
+        # git -c core.hooksPath=/tmp/h commit -m x CLAUDE.md   ALLOW  🔴
+        #     STAGE @ INSIDE_REPO · COMMIT @ INSIDE_REPO — and a hook out of /tmp/h
+        # ```
+        #
+        # That is the whole `git config core.hooksPath` → scratch hook → `chmod +x` →
+        # `git commit` chain collapsed into ONE command, with every part of it granted:
+        # writing and `chmod`-ing under `/tmp` are `SCRATCH`, staging and committing a
+        # named path are `SHELL_DEFAULT`'s own grants, and `-c` was an option whose value
+        # `operands()` skipped. No file is written, so no scope defence could ever fire,
+        # and no composability test that looked at each step could see it.
+        #
+        # Judged as the execution-control redirection it is, and NOT as a config write:
+        # nothing is persisted, and a receipt has to name what was actually touched.
+        for index, token in enumerate(argv[1:], start=1):
+            inline = None
+            if token == "-c" and index + 1 < len(argv):
+                inline = argv[index + 1]
+            elif token.startswith("-c") and len(token) > 2 and not token.startswith("--"):
+                inline = token[2:]
+            if inline is not None and is_execution_control_key(inline):
+                findings.append(Finding(
+                    "EXECUTION_CONTROL", f"git -c {inline.split('=', 1)[0]}",
+                    [f"git -c: {inline.split('=', 1)[0]}"],
+                    "sets a configuration key whose value is a PROGRAM git executes, "
+                    "for this invocation — changing what runs without writing any file",
+                    scope=em.RUNTIME_CONFIG))
+
         elsewhere = flag_value(argv, "-C", "--git-dir", "--work-tree")
         if elsewhere is not None:
             here: List[Finding] = []
+            # `-c` is stripped here too: the loop above has already emitted its finding,
+            # and leaving it in would emit a second one from the recursion.
             analyse_argv([argv[0]] + strip_wrapper_options(
-                argv[1:], frozenset({"-C", "--git-dir", "--work-tree"})),
+                argv[1:], frozenset({"-C", "--git-dir", "--work-tree", "-c"})),
                 [], heredocs, here, depth + 1)
             for finding in here:
                 if finding.effect in (em.READ,):
@@ -1368,8 +1737,38 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
                                 "writes every file its envelope names"))
         return
     if program == "patch":
-        findings.append(Finding("PATCH_APPLY", "patch", operands(argv, "patch") or [UNNAMED],
-                                "writes the files the diff names"))
+        # 🔴 OPTION/OPERAND CONFUSION — revision 11. `operands()` had no entry for
+        # `patch`, so every option value arrived as if it were a path and the DIFF was
+        # read as the destination:
+        #
+        # ```text
+        # patch -p1 -i /tmp/p.diff     ALLOW   WRITE '/tmp/p.diff' @ SCRATCH   🔴
+        # patch -p1  < /tmp/p.diff     ALLOW   WRITE '/tmp/p.diff' @ SCRATCH   🔴
+        # patch --input /tmp/p.diff    ALLOW   WRITE '/tmp/p.diff' @ SCRATCH   🔴
+        # patch --input=/tmp/p.diff    DENY    UNNAMED    ← right answer, by accident
+        # control  patch framework/x /tmp/p.diff          DENY  @ INSIDE_REPO  ✓
+        # ```
+        #
+        # The input is not the target. `patch [OPTS] [ORIGFILE [PATCHFILE]]` names its
+        # destination only in the FIRST positional; with `-i`/`<` the destination is
+        # stated inside a diff this guard cannot read, and `-o` overrides it entirely.
+        # An unnamed destination is UNNAMED, which fails closed — the same answer the
+        # `--input=` spelling reached for the wrong reason.
+        into = flag_value(argv, "-o", "--output")
+        directory = flag_value(argv, "-d", "--directory")
+        positional = operands(argv, "patch")
+        if into is not None:
+            destination = [into]
+        elif positional:
+            destination = positional[:1]
+        else:
+            destination = [UNNAMED]
+        if directory is not None:
+            destination = [posixpath.join(directory, t) if t not in (UNNAMED, OPAQUE)
+                           and not posixpath.isabs(t) else t for t in destination]
+        findings.append(Finding("PATCH_APPLY", "patch", destination,
+                                "writes the file it is applied to — which the diff "
+                                "names, and this command may not"))
         return
 
     # ── plain filesystem writes ──
@@ -1502,6 +1901,45 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
                 findings.extend(sub)
         return
 
+    # ── nothing above classified this program ─────────────────────────────────────
+    #
+    # 🔴 For revisions 1–10 this was an unconditional `return`, and that silence IS the
+    # defect class. "No effect derived" was read as "no effect", which is the
+    # open-vocabulary failure `effect_model`'s own docstring says must never happen.
+    unclassified(argv, program, findings)
+
+
+def unclassified(argv: Sequence[str], program: str, findings: List[Finding]) -> None:
+    """The last branch: a program this policy has no model for.
+
+    Three outcomes, and the middle one is the revision-11 repair:
+
+    ```text
+    a KNOWN_READER                       nothing — a read is granted everywhere
+    a program the command does not STATE  UNKNOWN_EFFECT — `{}`, `$CMD`, an expansion
+    anything else                         UNDERIVED_OPERAND over its operands, which
+                                          denies only where no authority grants a write
+    ```
+
+    The third is not "deny unknown programs". It is *this command names an object that
+    belongs to a peer, to the shared checkout, to the common `.git`, or to the
+    registration that decides whether this guard runs — and I derived nothing about it.*
+    Reaching such an object through a program nobody classified is the same act as
+    reaching it with `rm`, and SAME OBJECT → SAME AUTHORIZATION ANSWER.
+    """
+    if program in KNOWN_READERS:
+        return
+    if OPAQUE_PROGRAM_NAME.search(program):
+        findings.append(Finding("OPAQUE_PROGRAM", program, [OPAQUE],
+                                "the program is not a name this command states"))
+        return
+    targets = [t for t in operands(argv, program) if t not in (UNNAMED, OPAQUE)]
+    if targets:
+        findings.append(Finding(
+            "UNDERIVED_OPERAND", program, targets,
+            "names an object this guard derived no effect on, through a program it has "
+            "no model for"))
+
 
 #: `git <sub>` families beyond add/commit/stage. Revision 7 derived NOTHING for any of
 #: these: a probe of 46 shapes on 2026-08-29 found `git rm`, `git mv`, `git restore`,
@@ -1561,8 +1999,72 @@ GIT_READ_SUBCOMMANDS = frozenset({
     "show-ref", "name-rev", "merge-base", "hash-object", "var", "count-objects",
     "verify-commit", "verify-tag", "check-ignore", "check-attr", "whatchanged",
     "annotate", "cherry", "difftool", "help", "version", "bisect", "range-diff",
-    "fetch", "remote", "config", "archive", "bundle", "instaweb", "citool", "gui",
+    "fetch", "instaweb", "citool", "gui",
 })
+
+#: 🔴 Revision 11. `config`, `remote`, `archive` and `bundle` were on the READ list, and
+#: all four write. Measured at `e01d6d2`, at ordinary `SHELL_DEFAULT`:
+#:
+#: ```text
+#: git config user.name x                      ALLOW  🔴  mutates .git/config
+#: git config --global core.hooksPath /tmp/h   ALLOW  🔴  redirects every hook
+#: git config --add alias.zz '!sh -c …'        ALLOW  🔴  binds a shell command to a word
+#: git remote set-url origin https://evil/x    ALLOW  🔴  moves the publication route
+#: git archive -o framework/a.tar HEAD         ALLOW  🔴  writes into the repository
+#: git bundle create framework/a.bundle HEAD   ALLOW  🔴  writes into the repository
+#: control  echo x > <repo>/.git/config        DENY   CONFINED_GIT_COMMON_DIR  ✓
+#: ```
+#:
+#: The control is the whole finding: the PATH route to `.git/config` was refused and the
+#: TOOL route to the same bytes was granted. SAME OBJECT → SAME AUTHORIZATION ANSWER.
+#:
+#: `fetch` is deliberately still a read, and that is DECLARED rather than repaired: it
+#: does move `refs/remotes/*`, which is a ref mutation this policy does not derive.
+#: Changing it would refuse a command the orchestration runs constantly, on a family
+#: outside this revision's four, and a behaviour change nobody reviewed is what revision
+#: 10 declined to make in the same position. It is carried as residual debt.
+GIT_CONFIG_READ_FLAGS = frozenset({
+    "--get", "--get-all", "--get-regexp", "--get-urlmatch", "--list", "-l",
+    "--get-color", "--get-colorbool", "--show-origin", "--show-scope", "--default",
+})
+GIT_CONFIG_WRITE_FLAGS = frozenset({
+    "--add", "--unset", "--unset-all", "--replace-all", "--rename-section",
+    "--remove-section", "--edit", "-e",
+})
+#: Which FILE a `git config` invocation lands in. The default is the repository's own
+#: config, which for every worktree is one shared file under the common dir.
+GIT_CONFIG_SCOPE_FLAGS = ("--global", "--system", "--local", "--worktree")
+
+#: 🔴 Config keys whose VALUE is a program git will execute, or a location git will look
+#: for programs in. This is the "model the consequence, not the filename" half: setting
+#: one of these redirects execution no matter which config file it is written to, and
+#: `git -c <key>=<value> <cmd>` sets one for a single invocation without writing any file
+#: at all — which is how a complete hook installation fits in ONE allowed command.
+#:
+#: Matched as a prefix on the dotted key, lowercased, because git's section names are
+#: case-insensitive and the middle component of `filter.<name>.clean` is arbitrary.
+EXECUTION_CONTROL_KEYS = (
+    "core.hookspath", "core.editor", "core.pager", "core.sshcommand", "core.gitproxy",
+    "core.fsmonitor", "core.askpass", "core.symlinks", "core.filemode",
+    "alias.", "filter.", "diff.", "merge.", "difftool.", "mergetool.",
+    "credential.helper", "credential.", "init.templatedir", "protocol.",
+    "uploadpack.", "receivepack.", "http.proxy", "remote.", "url.",
+    "sequence.editor", "gpg.program", "ssh.variant", "safe.directory",
+    "include.path", "includeif.",
+)
+
+
+def is_execution_control_key(key: str) -> bool:
+    """Does setting this config key change WHAT RUNS?
+
+    Prefix-matched on the lowercased dotted name. `alias.` and `filter.` are families —
+    `alias.zz` is an arbitrary shell command bound to a git word, and `filter.x.clean` is
+    a program git runs over file contents on checkout.
+    """
+    if not key or "=" in key:
+        key = key.split("=", 1)[0]
+    lowered = key.strip().lower()
+    return any(lowered == p or lowered.startswith(p) for p in EXECUTION_CONTROL_KEYS)
 
 
 #: The ref namespace each subcommand operates in. `update-ref`, `reflog` and the
@@ -1687,6 +2189,41 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
                                 "in-flight work lives"))
         return
 
+    if sub == "config":
+        analyse_git_config(rest, findings)
+        return
+
+    if sub == "remote":
+        verb = next((t for t in rest if not t.startswith("-")), "")
+        if verb in ("", "show", "get-url", "-v", "--verbose"):
+            return
+        findings.append(Finding(
+            "CONFIG_WRITE", f"git remote {verb}", ["<repository config>"],
+            "rewrites the `remote.*` section of the repository config, which every "
+            "worktree of this repository shares — and `remote.*.url` is where the "
+            "objects of this repository would be sent",
+            scope=em.GIT_COMMON_DIR))
+        return
+
+    if sub == "archive":
+        into = flag_value(argv, "-o", "--output")
+        into = into or next((t.split("=", 1)[1] for t in rest
+                             if t.startswith("--output=")), None)
+        if into is not None:
+            findings.append(Finding("FILE_WRITE", "git archive -o", [into],
+                                    "writes the archive to its output operand"))
+        return
+
+    if sub == "bundle":
+        verb = next((t for t in rest if not t.startswith("-")), "")
+        if verb != "create":
+            return
+        after = rest[rest.index(verb) + 1:] if verb in rest else []
+        into = next((t for t in after if not t.startswith("-")), UNNAMED)
+        findings.append(Finding("FILE_WRITE", "git bundle create", [into],
+                                "writes the bundle to the file it names"))
+        return
+
     if sub in GIT_REF_SUBCOMMANDS:
         named = [t for t in rest if not t.startswith("-")]
         second = named[0] if named else ""
@@ -1747,6 +2284,48 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
                             "a git subcommand this policy has not classified"))
 
 
+def analyse_git_config(rest: List[str], findings: List[Finding]) -> None:
+    """`git config` — a WRITE to a named file, judged as that file.
+
+    The read forms stay read. Everything else writes, and WHICH file it writes decides
+    the scope: the repository config is one file shared by every worktree
+    (`GIT_COMMON_DIR`), `--global` is `~/.gitconfig` (a `RUNTIME_CONFIG` member since
+    revision 11), `-f` is whatever it names.
+
+    🔴 The key is judged SEPARATELY from the file, because the consequence of setting
+    `core.hooksPath` does not depend on which file carries it.
+    """
+    argv = ["git", "config"] + rest
+    if any(t in GIT_CONFIG_READ_FLAGS for t in rest):
+        return
+    positional = [t for t in operands(argv, "config") if t not in ("config",)]
+    explicit_write = any(t in GIT_CONFIG_WRITE_FLAGS for t in rest)
+    # `git config` with no positional and no write flag lists or errors; it never writes.
+    if not explicit_write and len(positional) < 2:
+        return
+    key = positional[0] if positional else ""
+
+    home = rc.cached().sources.get("home")
+    if "--global" in rest:
+        target, scope = (posixpath.join(home, ".gitconfig") if home else UNNAMED), None
+    elif "--system" in rest:
+        target, scope = "/etc/gitconfig", em.RUNTIME_CONFIG
+    elif flag_value(argv, "-f", "--file") is not None:
+        target, scope = flag_value(argv, "-f", "--file"), None
+    else:
+        target, scope = "<repository config>", em.GIT_COMMON_DIR
+    findings.append(Finding("CONFIG_WRITE", "git config", [target],
+                            "writes the git configuration file it is scoped to",
+                            scope=scope))
+    if is_execution_control_key(key) and flag_value(argv, "-f", "--file") is None:
+        findings.append(Finding(
+            "EXECUTION_CONTROL", f"git config {key}", [f"git config: {key}"],
+            "sets a configuration key whose value is a PROGRAM git executes, or a "
+            "location git looks for programs in — changing what runs, in every worktree "
+            "of this repository or for this whole account",
+            scope=em.RUNTIME_CONFIG))
+
+
 def analyse_interpreter(argv: List[str], program: str, heredocs: List[str],
                         findings: List[Finding]) -> None:
     """`python3 -c …`, `perl -pi -e …`, `node -e …`, and the heredoc-fed forms."""
@@ -1765,11 +2344,30 @@ def analyse_interpreter(argv: List[str], program: str, heredocs: List[str],
     # derivable from its name is one on a list someone checked.
     module = flag_value(argv, "-m", "--module")
     if module is not None:
+        rest = argv[argv.index(module) + 1:] if module in argv else []
         if module in READ_ONLY_MODULES:
+            # 🔴 Membership is per MODULE; write capability is per ARGV. Both are asked.
+            model = MODULE_WRITE_MODEL.get(module)
+            written = model(rest) if model else []
+            if written:
+                findings.append(Finding(
+                    "FILE_WRITE", f"{program} -m {module}", written,
+                    "this module writes an operand its NAME does not reveal — "
+                    "membership of the read-only list is per module, write capability "
+                    "is per argv"))
+                return
+            # The backstop, for every member including the ten that were measured
+            # inert: an allowlisted module that NAMES a protected object and derived
+            # nothing about it is exactly the silent-derivation shape.
+            targets = [t for t in rest if not t.startswith("-")]
+            if targets:
+                findings.append(Finding(
+                    "UNDERIVED_MODULE_OPERAND", f"{program} -m {module}", targets,
+                    "an allowlisted module naming an object this guard derived no "
+                    "effect on"))
             return
         # `python3 -m pip install --target X` — the module's own argv is a command in
         # its own right and the family rules above already read it.
-        rest = argv[argv.index(module) + 1:] if module in argv else []
         if base(module) in PACKAGE_MANAGERS or module.split(".")[0] in PACKAGE_MANAGERS:
             analyse_argv([module] + rest, [], heredocs, findings, depth=7)
             return
@@ -1876,7 +2474,12 @@ ANSI_C_QUOTE = re.compile(r"\$(?=')")
 
 
 def analyse_command(command: str, findings: List[Finding], depth: int = 0) -> None:
-    stripped, heredocs = extract_heredocs(command)
+    # 🔴 Herestrings FIRST. `HEREDOC_START` reaches inside `<<<` and registers a phantom
+    # heredoc with an empty body; extracting the herestring removes the span before that
+    # can happen, so the two extractors never see the same characters.
+    stripped, herestrings = extract_herestrings(command)
+    stripped, heredocs = extract_heredocs(stripped)
+    heredocs = heredocs + herestrings
     # A backslash-continuation joins two LINES into one COMMAND; every newline that
     # survives this substitution separates two commands. Order matters — heredoc bodies
     # are already out of the text, so a continuation inside one is untouched.
@@ -2091,6 +2694,17 @@ def effects(command: object, cwd: Optional[str] = None,
         for target in finding.targets:
             scope = finding.scope or _SCOPE.get(
                 classify_target(target, cwd, repo_root, assigned), em.UNDERIVABLE)
+            # 🔴 The silence rules are the only ones whose THRESHOLD is a scope, and
+            # they are applied here because here is where the scope exists. Below the
+            # threshold the operand is dropped entirely rather than emitted as a
+            # harmless effect: `wc -l framework/x` must produce an EMPTY set, not a
+            # `READ`, or every characterisation of an ordinary read changes shape.
+            if finding.rule == "UNDERIVED_OPERAND":
+                if scope not in UNDERIVED_OPERAND_SCOPES:
+                    continue
+            elif finding.rule == "UNDERIVED_MODULE_OPERAND":
+                if scope not in UNDERIVED_MODULE_SCOPES:
+                    continue
             # The index and HEAD are repository objects whatever path is named, so a
             # STAGE of a scratch path is still a mutation of the repository's index.
             # This runs only for a target that RESOLVED — UNNAMED and UNDERIVABLE fall

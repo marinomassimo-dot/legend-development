@@ -83,6 +83,56 @@ CODEX_HOME_DEFAULT = ".codex"
 CLAUDE_REGISTRATION_FILES: Tuple[str, ...] = ("settings.json", "settings.local.json")
 CODEX_REGISTRATION_FILES: Tuple[str, ...] = ("config.toml",)
 
+#: 🔴 Revision 11. The membership question revision 10 left open was whether this set is
+#: the RIGHT set or merely one covering the three shapes that had been measured. Measured
+#: at `e01d6d2`, from an actor worktree, at ordinary `SHELL_DEFAULT` — the answer is the
+#: second, and here is the evidence rather than the argument:
+#:
+#: ```text
+#: echo 'alias git=…' >> <HOME>/.zshrc        ALLOW   WRITE @ OUTSIDE_REPO
+#: cp /tmp/evil       <HOME>/.zprofile        ALLOW   WRITE @ OUTSIDE_REPO
+#: echo x >           <HOME>/.gitconfig       ALLOW   WRITE @ OUTSIDE_REPO
+#: git config --global core.hooksPath /tmp/h  ALLOW   no effects derived
+#: ```
+#:
+#: Each of those changes WHAT RUNS on this host, and the scope that exists to say so was
+#: never reached, because `OUTSIDE_REPO` is a GRANT. The repair models the CONSEQUENCE —
+#: *can mutating this object change the program that executes when the guarded actor
+#: runs an ordinary command?* — rather than a list of runtime filenames.
+#:
+#: Each family is here with the path by which it reaches execution, and a family without
+#: one does not belong here. Over-blocking a user's unrelated configuration is the
+#: failure this module's own docstring forbids, and "it is under HOME" is not a threat
+#: path.
+#:
+#: **Shell startup.** This runtime spawns every Bash tool call through a shell that is
+#: initialised from the user's profile. A line in any of these files redirects, wraps or
+#: shadows the program that a later guarded command names — including `git` itself, and
+#: including the interpreter that runs the guard's own committed scripts.
+SHELL_STARTUP_FILES: Tuple[str, ...] = (
+    ".zshenv", ".zshrc", ".zprofile", ".zlogin", ".zlogout",
+    ".bashrc", ".bash_profile", ".bash_login", ".bash_logout", ".profile",
+)
+
+#: **Git configuration outside the repository.** `core.hooksPath` re-points every hook
+#: for every worktree at once; `alias.*` with a `!` body is an arbitrary shell command
+#: bound to a git word; `core.pager`, `core.editor`, `*.sshCommand`, `credential.helper`
+#: and the `filter.*`/`diff.*.textconv` families all name programs git then executes. The
+#: repository's own `.git/config` is already `GIT_COMMON_DIR` and already refused; these
+#: two are the same object reached from outside the repository, where nothing refused it.
+GIT_CONFIG_FILES: Tuple[Tuple[str, ...], ...] = (
+    (".gitconfig",),
+    (".config", "git", "config"),
+)
+
+#: **SSH client configuration.** `ProxyCommand`, `LocalCommand` and `Match exec` are
+#: executed by ssh, and `git fetch` — which this policy classifies as a read and allows —
+#: is enough to reach them. That is the demonstrated path; it is narrower than the two
+#: above and it is real.
+SSH_CONFIG_FILES: Tuple[Tuple[str, ...], ...] = (
+    (".ssh", "config"),
+)
+
 
 class Surface:
     """The active runtime control surface, and whether it could be resolved at all."""
@@ -181,6 +231,18 @@ def resolve(env: Optional[Dict[str, str]] = None,
                        for name in CODEX_REGISTRATION_FILES)
     else:
         rejected.append("the codex configuration home is not derivable")
+
+    # 🔴 The EXECUTION-CONTROL surfaces, revision 11. They depend on `HOME` alone, so
+    # they resolve even when a runtime home does not — and their absence is recorded in
+    # `rejected` the same way, because a surface that could not be resolved must not be
+    # reported as protected.
+    if home:
+        sources["home"] = home
+        members.extend(posixpath.join(home, name) for name in SHELL_STARTUP_FILES)
+        for parts in GIT_CONFIG_FILES + SSH_CONFIG_FILES:
+            members.append(posixpath.join(home, *parts))
+    else:
+        rejected.append("HOME is not derivable, so no execution-control surface is")
 
     for engine in extra:
         if isinstance(engine, str) and posixpath.isabs(engine):

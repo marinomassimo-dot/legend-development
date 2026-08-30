@@ -47,6 +47,20 @@ PARITY_SUITES = ("framework/scripts/test_runtime_parity.py",)
 #: ordinary denial. A mutation pointed at the wrong suite survives for the wrong reason.
 CONFINEMENT_SUITES = ("framework/scripts/test_confinement_and_delegation.py",)
 
+#: 🔴 Revision 11's guarantees are FAMILY PROPERTIES over enumerations, and the suite
+#: that asserts them is the one that must notice their removal. Pointing a revision-11
+#: mutation at the guard suites would report a survivor for the wrong reason: those
+#: suites test individual commands, and the whole argument of this revision is that a
+#: command-level assertion cannot see a family-level hole.
+#:
+#: The suite was checked as a DISCRIMINATOR before any mutation was written against it:
+#: run unchanged against the revision-10 engine reconstructed at `da0fb72` it produces
+#: 43 failures and 3 errors, and against revision 11 it produces none. A suite that
+#: passed on both would kill nothing and every mutation pointed at it would be
+#: EQUIVALENT without anybody noticing.
+FAMILY_SUITES = ("framework/scripts/test_guard_families_rev11.py",)
+RUNTIME_CONFIG = "framework/scripts/runtime_config.py"
+
 
 class Mutation:
     def __init__(self, name, target, old, new, suites, why):
@@ -810,6 +824,207 @@ MUTATIONS = [
         "the relative peer placeholder is hard-coded again, so on a host without that "
         "layout the row changes from PEER_WORKTREE to OUTSIDE_REPO with no skip and no "
         "warning"),
+
+    # ══ REVISION 11 ═════════════════════════════════════════════════════════════════
+    #
+    # 🔴 Each of these reverts ONE revision-11 repair to the exact revision-10 text, so
+    # a survivor names a guarantee the family suite does not actually hold. They are
+    # written against `FAMILY_SUITES` for the reason recorded beside that constant.
+    #
+    # 🔴 And the limit, stated here because a score is about to be quoted from this
+    # file: **91/91, or 103/103, is not structural completeness.** A mutation score
+    # measures FIDELITY to the code that exists — whether breaking a control breaks a
+    # test. Not one of the seven defects revision 11 repairs was a breakage of code that
+    # existed; every one was a capability the code never had. The score below could have
+    # been perfect at revision 10 and was, and the family was open anyway.
+
+    Mutation(
+        "M91", GUARD_POLICY,
+        '        out.append(HEREDOC_START.sub(" ", line) if starts else line)',
+        '        out.append(line)',
+        FAMILY_SUITES,
+        "🔴 the heredoc OPERATOR is left behind as argv residue again — the exact "
+        "revision-10 text. `len(argv) == 1` can then never hold for a directly-fed "
+        "heredoc, so `python3 <<EOF` allows while `cat <<EOF | python3` denies"),
+    Mutation(
+        "M92", GUARD_POLICY,
+        '    stripped, herestrings = extract_herestrings(command)',
+        '    stripped, herestrings = command, []',
+        FAMILY_SUITES,
+        "herestring bodies are never extracted, which is revision 10's state: `<<<` "
+        "produces no body, so there is nothing to attribute and all four herestring "
+        "cells reopen"),
+    Mutation(
+        "M93", GUARD_POLICY,
+        '        if heredocs and not operands_:\n'
+        '            for body in heredocs:\n'
+        '                analyse_command(body, findings, depth + 1)\n'
+        '            return',
+        '        if False:\n'
+        '            for body in heredocs:\n'
+        '                analyse_command(body, findings, depth + 1)\n'
+        '            return',
+        FAMILY_SUITES,
+        "a heredoc fed to a SHELL stops being that shell's script, so "
+        "`bash <<EOF … git add -A` — this policy's founding harm — allows again"),
+    Mutation(
+        "M94", GUARD_POLICY,
+        '        if pending_read:\n            pending_read = False\n            continue',
+        '        if False:\n            pending_read = False\n            continue',
+        FAMILY_SUITES,
+        "a read redirection's SOURCE returns to the argv, so `patch -p1 < /tmp/p.diff` "
+        "reads the diff as the file being written — at SCRATCH, which is granted"),
+    Mutation(
+        "M95", GUARD_POLICY,
+        '        into = flag_value(argv, "-o", "--output")\n'
+        '        directory = flag_value(argv, "-d", "--directory")\n'
+        '        positional = operands(argv, "patch")',
+        '        into = None\n'
+        '        directory = None\n'
+        '        positional = operands(argv, "patch")',
+        FAMILY_SUITES,
+        "`patch -o` stops naming the destination, so a diff applied wholly within "
+        "scratch is refused — the FALSE-REFUSAL direction of the same defect"),
+    Mutation(
+        "M96", GUARD_POLICY,
+        '    "patch": frozenset({"-i", "--input", "-o", "--output", "-d", "--directory",',
+        '    "patch_disabled": frozenset({"-i", "--input", "-o", "--output", "-d", "--directory",',
+        FAMILY_SUITES,
+        "🔴 `patch` loses its option-value table, so every option value arrives in "
+        "`operands()` as if it were a path and `-i /tmp/p.diff` is read as the target"),
+    Mutation(
+        "M97", GUARD_POLICY,
+        '            model = MODULE_WRITE_MODEL.get(module)',
+        '            model = None',
+        FAMILY_SUITES,
+        "the per-module ARGV derivation is dropped, so two-argument `json.tool`, "
+        "`pydoc -w` and `gzip` stop deriving the operand they write"),
+    Mutation(
+        "M98", GUARD_POLICY,
+        '            targets = [t for t in rest if not t.startswith("-")]\n'
+        '            if targets:\n'
+        '                findings.append(Finding(\n'
+        '                    "UNDERIVED_MODULE_OPERAND"',
+        '            targets = []\n'
+        '            if targets:\n'
+        '                findings.append(Finding(\n'
+        '                    "UNDERIVED_MODULE_OPERAND"',
+        FAMILY_SUITES,
+        "the backstop behind the module allowlist is removed, so a member nobody "
+        "measured — the fifteenth entry — arrives silently allowed over a repository path"),
+    Mutation(
+        "M99", GUARD_POLICY,
+        '        if not sub and base(child[0] if child else "") not in KNOWN_READERS:',
+        '        if False:',
+        FAMILY_SUITES,
+        "🔴 a stdin-fed wrapper whose child derives NOTHING stops being a finding, which "
+        "is the payload-as-command hole that survived four revisions: "
+        "`xargs -I{} sh -c '{}'`"),
+    Mutation(
+        "M100", GUARD_POLICY,
+        '    unclassified(argv, program, findings)',
+        '    return',
+        FAMILY_SUITES,
+        "the final branch returns silently again, so an unmodelled program reaching a "
+        "peer worktree, the shared checkout or the registration derives nothing — and "
+        "every scope defence is downstream of that step"),
+    Mutation(
+        "M101", GUARD_POLICY,
+        'UNDERIVED_OPERAND_SCOPES = _UNDERIVED_STRICT',
+        'UNDERIVED_OPERAND_SCOPES = frozenset()',
+        FAMILY_SUITES,
+        "the unclassified-program threshold is emptied, so the rule still runs and "
+        "never fires — a repair present, correct and unreachable, which is the exact "
+        "shape of the defect revision 11 was written to fix"),
+    Mutation(
+        "M102", GUARD_POLICY,
+        '    if sub == "config":\n        analyse_git_config(rest, findings)\n        return',
+        '    if False:\n        analyse_git_config(rest, findings)\n        return',
+        FAMILY_SUITES,
+        "`git config` falls back through to the read list, so the TOOL route to "
+        "`.git/config` is granted while the PATH route to the same bytes is refused"),
+    Mutation(
+        "M103", GUARD_POLICY,
+        '    if is_execution_control_key(key) and flag_value(argv, "-f", "--file") is None:',
+        '    if False:',
+        FAMILY_SUITES,
+        "setting `core.hooksPath` or an `alias.*` becomes an ordinary config write, so "
+        "the denial stops naming the execution redirection as what it is"),
+    Mutation(
+        "M104", GUARD_POLICY,
+        '            if inline is not None and is_execution_control_key(inline):',
+        '            if False:',
+        FAMILY_SUITES,
+        "🔴 `git -c core.hooksPath=/tmp/h commit -m x <path>` allows again — the whole "
+        "hook-installation chain collapsed into ONE command that writes no file, which "
+        "is the row a per-step composability battery cannot see"),
+    Mutation(
+        "M105", GUARD_POLICY,
+        '    if program in KNOWN_READERS:\n        return',
+        '    if True:\n        return',
+        FAMILY_SUITES,
+        "every program becomes a known reader, so the unclassified branch never fires. "
+        "The mirror of M101: same hole, reached by widening the exemption instead of "
+        "emptying the threshold"),
+    Mutation(
+        "M106", GUARD_POLICY,
+        '    if sub == "remote":',
+        '    if False and sub == "remote":',
+        FAMILY_SUITES,
+        "`git remote set-url` returns to the read list, so the publication route of "
+        "this repository is rewritable through a subcommand nobody classified"),
+    Mutation(
+        "M107", RUNTIME_CONFIG,
+        '        members.extend(posixpath.join(home, name) for name in SHELL_STARTUP_FILES)',
+        '        members.extend([])',
+        FAMILY_SUITES,
+        "the shell startup files leave the control surface, so `echo … >> ~/.zshrc` is "
+        "`OUTSIDE_REPO` — a GRANT — and a later guarded command runs a shadowed `git`"),
+    Mutation(
+        "M108", RUNTIME_CONFIG,
+        '        for parts in GIT_CONFIG_FILES + SSH_CONFIG_FILES:\n'
+        '            members.append(posixpath.join(home, *parts))',
+        '        for parts in ():\n'
+        '            members.append(posixpath.join(home, *parts))',
+        FAMILY_SUITES,
+        "`~/.gitconfig` and `~/.ssh/config` leave the surface, so the PATH route to the "
+        "account git configuration is granted while the `git config --global` route is "
+        "refused — one object, two answers, which is the invariant this revision is"),
+    Mutation(
+        "M109", GUARD_POLICY,
+        '    "annotate", "cherry", "difftool", "help", "version", "bisect", "range-diff",\n'
+        '    "fetch", "instaweb", "citool", "gui",',
+        '    "annotate", "cherry", "difftool", "help", "version", "bisect", "range-diff",\n'
+        '    "fetch", "instaweb", "citool", "gui", "config", "remote", "archive", "bundle",',
+        FAMILY_SUITES,
+        "🔴 the four writing subcommands rejoin `GIT_READ_SUBCOMMANDS` — the exact "
+        "revision-10 line. The positive listing is what makes an unclassified "
+        "subcommand refuse, and this is how a writer gets onto the wrong side of it"),
+    Mutation(
+        "M110", GUARD_POLICY,
+        '            if finding.rule == "UNDERIVED_OPERAND":\n'
+        '                if scope not in UNDERIVED_OPERAND_SCOPES:\n'
+        '                    continue',
+        '            if finding.rule == "UNDERIVED_OPERAND":\n'
+        '                continue',
+        FAMILY_SUITES,
+        "the silence rule is dropped at the point where its scope becomes known, which "
+        "is the one place a threshold can be removed without touching the rule that "
+        "emits it — the failure would look like a derivation that simply found nothing"),
+    Mutation(
+        "M111", GUARD_POLICY,
+        '    "UNDERIVED_OPERAND": em.UNKNOWN_EFFECT,\n'
+        '    "UNDERIVED_MODULE_OPERAND": em.UNKNOWN_EFFECT,\n'
+        '    "UNDERIVED_STDIN_CHILD": em.UNKNOWN_EFFECT,\n'
+        '    "EXECUTION_CONTROL": em.WRITE,',
+        '    "UNDERIVED_OPERAND": em.READ,\n'
+        '    "UNDERIVED_MODULE_OPERAND": em.READ,\n'
+        '    "UNDERIVED_STDIN_CHILD": em.READ,\n'
+        '    "EXECUTION_CONTROL": em.READ,',
+        FAMILY_SUITES,
+        "🔴 every revision-11 rule keeps firing and is mapped onto READ, which is "
+        "granted everywhere. The findings would still appear in a characterisation, the "
+        "denials would vanish, and nothing in the report would say so"),
 ]
 
 

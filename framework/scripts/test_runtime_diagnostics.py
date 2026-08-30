@@ -406,18 +406,40 @@ class TheHostileCorpusIsSelfDescribing(unittest.TestCase):
     def test_a_report_names_the_object_every_number_describes(self):
         """`HEAD` is a pin, and printing `HEAD` beside a ratio names nothing. The runner
         resolves it to a 40-character sha and reports THAT."""
-        sha = hc.resolve_sha(ROOT, "rev10")
+        # 🔴 Asked of `hc.CURRENT` rather than of a revision named in this file. It was
+        # spelled `rev10`, and revision 11 pinned rev10 to a fixed sha — so the test
+        # would have kept passing while asserting the property of an engine that is no
+        # longer the one under test. A test that names a revision decays into a test of
+        # a historical constant.
+        sha = hc.resolve_sha(ROOT, hc.CURRENT)
         self.assertRegex(sha, r"^[0-9a-f]{40}$")
-        self.assertEqual(sha, hc.resolve_sha(ROOT, "rev10", {"rev10": "HEAD"}))
+        self.assertEqual(sha, hc.resolve_sha(ROOT, hc.CURRENT, {hc.CURRENT: "HEAD"}))
 
     def test_an_override_pins_a_revision_to_a_named_object(self):
         """The candidate's own two-step: commit the content, then re-run against that
         content commit by name rather than against whatever HEAD has become."""
         parent = git(ROOT, "rev-parse", "HEAD~1").stdout.strip()
-        self.assertEqual(hc.resolve_sha(ROOT, "rev10", {"rev10": parent}), parent)
+        self.assertEqual(hc.resolve_sha(ROOT, hc.CURRENT, {hc.CURRENT: parent}), parent)
 
     def test_an_unresolvable_pin_is_a_failure_and_not_a_fallback(self):
-        self.assertIsNone(hc.resolve_sha(ROOT, "rev10", {"rev10": "no-such-ref-anywhere"}))
+        self.assertIsNone(
+            hc.resolve_sha(ROOT, hc.CURRENT, {hc.CURRENT: "no-such-ref-anywhere"}))
+
+    def test_every_historical_engine_is_pinned_to_a_fixed_object(self):
+        """🔴 Revision 11. Only the CURRENT revision may be pinned to `HEAD`.
+
+        Revision 10 left its own engine at `HEAD`, which was right while it WAS the
+        current one. Read from a revision-11 branch, that same entry would reconstruct
+        the revision-11 engine and label the column `rev10` — and a REV10 → REV11 delta
+        computed from it would be empty for the one reason that makes it worthless: both
+        columns would be the same engine.
+        """
+        for revision, spec in hc.ENGINES.items():
+            if revision == hc.CURRENT:
+                continue
+            with self.subTest(revision=revision):
+                self.assertRegex(str(spec["sha"]), r"^[0-9a-f]{40}$",
+                                 "a historical engine pinned to a moving ref")
 
     def test_every_reconstructed_file_exists_at_its_sha(self):
         """🔴 The first draft named revision 7's engine as a single file that was
@@ -431,6 +453,52 @@ class TheHostileCorpusIsSelfDescribing(unittest.TestCase):
                     self.assertEqual(out.stdout.strip(), "blob")
             with self.subTest(revision=revision, entry=spec["entry"]):
                 self.assertIn(spec["entry"], spec["files"])
+
+    def test_the_main_engine_is_exempt_from_the_scene_confound_for_a_measured_reason(self):
+        """🔴 The `location_sensitive: False` claim, MEASURED rather than argued.
+
+        `score()` skips the scene-location confound for `main`, and the reason written
+        beside that flag is that the legacy guard has no path model — so the control the
+        confound uses (`A1-workdir-in-in`, an ordinary repository write) is allowed by
+        it for a reason that has nothing to do with where the scene is. An exemption
+        justified by a sentence is an exemption nobody checked.
+
+        The property is stronger and cheaper to test than two scenes: main's verdict is
+        a pure function of the command TEXT. So the same command is asked with wildly
+        different `cwd`, `workdir`, assignment and `HOME` — every input by which a
+        location could reach the engine — and the answers must be identical.
+
+        The FIRST assertion is the positive control: at least one of the sampled
+        commands must DENY. A guard that answered ALLOW to everything would satisfy the
+        invariance test perfectly and prove nothing.
+        """
+        with tempfile.TemporaryDirectory() as raw:
+            entry = hc.materialise("main", ROOT, Path(raw))
+            self.assertIsNotNone(entry, "main's engine could not be reconstructed")
+            sampled = ["git add -A", "echo x > framework/probe.md",
+                       "python3 - <<'PY'\nopen('framework/x','w')\nPY",
+                       "git status --short", "rm framework/x"]
+            frames = [
+                {"cwd": "/tmp/one", "workdir": None, "assigned": "/tmp/one",
+                 "home": {"HOME": "/tmp/one"}},
+                {"cwd": str(ROOT), "workdir": str(ROOT), "assigned": str(ROOT),
+                 "home": {"HOME": str(ROOT)}},
+                {"cwd": "/var/folders/zz", "workdir": "/etc", "assigned": None,
+                 "home": {"HOME": "/var/folders/zz"}},
+            ]
+            answers = {}
+            for command in sampled:
+                seen = {hc.ask(entry, command, frame["cwd"], frame["workdir"],
+                               frame["assigned"], "Bash", None, frame["home"])
+                        for frame in frames}
+                answers[command] = seen
+            self.assertIn(hc.DENY, {v for s in answers.values() for v in s},
+                          "the control: this engine must refuse SOMETHING, or "
+                          "invariance is satisfied by a guard that allows everything")
+            for command, seen in answers.items():
+                with self.subTest(command=command[:40]):
+                    self.assertEqual(1, len(seen),
+                                     f"main's answer moved with the frame: {seen}")
 
     def test_the_committed_text_carries_no_machine_specific_path(self):
         """The corpus must be publishable: placeholders, resolved at run time."""
