@@ -1228,16 +1228,43 @@ That sentence belongs at the top of REV11. It also forces the repair ORDER: dele
 underivable interpreter or wrapper invocation return `UNKNOWN_EFFECT` **instead of an empty
 list** closes the class and restores every scope defence already written.
 
-**The proposed invariant was run, and its prediction is refuted while its claim is
-reinforced.** `mirror-71` proposed: for every corpus command, `effects()` returns a non-empty
-list OR the verdict is DENY — expecting failures on "more than four" of the sixty. Measured
-over all **59** must-refuse cases: **0 derive no effects.** Every one derives at least one, and
-13 positive controls and reads correctly derive none. The invariant finds nothing in the
-committed corpus — because the corpus was built out of shapes that derive. That is the peer's
-own deeper point arriving as a measurement: *the corpus cannot express this defect, because a
-row asserts that a shape denies and the defect is a shape that produces nothing to assert
-about.* The invariant is worth adopting for NEW commands and it is not a way to audit the
-sixty.
+**The proposed invariant was run, its prediction refuted — and then WITHDRAWN BY ITS OWN
+PROPOSER, which is the more useful outcome.** `mirror-71` proposed: for every corpus command,
+`effects()` returns a non-empty list OR the verdict is DENY, expecting failures on "more than
+four" of the sixty.
+
+Measured over the **59** must-refuse cases carrying a `.command`: **0 derive no effects.**
+(The must-refuse set is 60; `P7-codemode-workdir-peer` carries its invocation in `program`
+rather than `command`, so 59 is the runnable set and the honest number to quote.)
+
+Then the peer generated the population its own rule was meant to police and showed the rule
+cannot discriminate. Reproduced here — `python3 -m <module> framework/scripts/guard_policy.py`:
+
+```text
+WRITES  ALLOW  effects=0   json.tool · pydoc -w · gzip · py_compile
+INERT   ALLOW  effects=0   this · site · dis · ast · calendar · platform
+```
+
+The four that overwrite the policy file and the six that ignore their argv entirely are
+**indistinguishable to the derivation**. And unconditionally, `empty effects → DENY` would
+newly refuse **11 of this corpus's positive controls** — `git status --short`,
+`cat <peer>/CLAUDE.md`, `codex --version`, `echo 'git add -A'`. 🔴 **So do not adopt it as
+stated, including for new commands, which is what this section said before this paragraph
+replaced it.**
+
+**What survives is narrower and its failure direction is right:**
+
+> an interpreter or module invocation that names a path inside the repository as an operand,
+> and for which the derivation produces no effect on that path, must **DENY**.
+
+That over-refuses `python3 -m this framework/x`, and the over-refusal is the point: refusing an
+inert command costs a sentence in a denial message; allowing `python3 -m gzip
+.claude/settings.json` costs the guard itself.
+
+The refutation is still the peer's own deeper claim arriving as a measurement — *the corpus
+cannot express this defect, because a row asserts that a shape denies and the defect is a shape
+that produces nothing to assert about* — and the withdrawal adds the second half: nor can a
+blanket invariant over that corpus, because silence is the normal condition of every read.
 
 ### One correction back to `mirror-73`, and one of its own
 
@@ -1305,6 +1332,29 @@ mirror-73    asserted a verification of three commits before running it — and 
 Four people, one failure mode, inside an exchange whose entire subject is that failure mode.
 The corrective that actually worked every time was the same one: **put the positive control in
 the same table as the measurement, and print the value rather than the count.**
+
+A fifth, of the same family and caught the same way: `mirror-71`'s first run of its own
+invariant produced **12 "violations"** — every one a positive control or a read that correctly
+derives nothing and is correctly allowed. It had applied a must-refuse rule to the whole
+corpus. It filtered, found zero, and told me; had it reported the unfiltered table it would
+have read as twelve new findings against this candidate.
+
+### 🔴 The process finding, which is not about this candidate
+
+Both peers stopped of their own accord, and both said the same thing about why. Sharpened by
+`mirror-71`:
+
+> Every good thing in this exchange happened DESPITE the opening mechanism, and none of it is
+> collectable by any process that exists. Neither of us can file it anywhere that survives us.
+
+That is a finding about `lease_state.py` deriving `ACTIVE: 0`, about `roles/mirror.md` being
+`PROPOSED`, and about Annex C.3 requiring an Orchestrator there is none of — **not** about
+REV10. It is recorded here because this candidate is where the evidence for it accumulated, and
+because the correct reading is that the opening mechanism is the broken component. It is not an
+argument for informality: `mirror-71` also noted that, having now received substantial evidence
+from this candidate's author, it would re-derive everything from scratch rather than inherit
+this thread if a review were ever assigned to it — which is Annex C.3's independence rule
+applied by someone the rule does not currently bind.
 
 ### What this changes
 
