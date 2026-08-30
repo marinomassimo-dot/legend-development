@@ -154,7 +154,29 @@ _UNDERIVED_STRICT = frozenset({em.PEER_WORKTREE, em.SHARED_CHECKOUT,
 #: framework/scripts/test_x.py` are ordinary work, and a guard that refuses ordinary work
 #: is a guard that gets turned off. What it costs is stated as residual debt rather than
 #: hidden: an unknown program writing INSIDE the assigned worktree is still underived.
-UNDERIVED_OPERAND_SCOPES = _UNDERIVED_STRICT
+#:
+#: 🔴 And `UNDERIVABLE` is not here either, which the FIRST draft of this rule got wrong.
+#: Measured over every fenced shell line in every committed markdown file of this
+#: repository — 323 commands from 68 files, a population this candidate did not choose —
+#: the draft newly refused:
+#:
+#: ```text
+#: gh repo view "$OWNER/$REPO" --json nameWithOwner,visibility,url   ← release/PUBLISH_RUNBOOK.md
+#: ```
+#:
+#: A variable operand under an unmodelled program is the ordinary shape of documented
+#: work, not a reach at a protected object. The four scopes that remain are RESOLVED,
+#: specific objects; `UNDERIVABLE` is *I could not tell*, and failing closed on it here
+#: refuses `docker run $IMAGE` and its kin.
+#:
+#: The draft was also internally inconsistent, which is the sharper argument: `mytool
+#: "$VAR"` ALLOWED and `mytool $VAR/x` DENIED — the same shape, two answers, decided by
+#: whether the value happened to contain a slash. A threshold that answers differently
+#: for one operand's spelling is not expressing a scope at all.
+#:
+#: The residual gap is DECLARED: `someunknowntool "$PEER/x"` — an unmodelled program
+#: reaching a peer through a variable — is allowed. The spelled path is not.
+UNDERIVED_OPERAND_SCOPES = _UNDERIVED_STRICT - frozenset({em.UNDERIVABLE})
 #: A `-m` MODULE is a CLOSED set of fourteen whose members were each executed and
 #: snapshotted, so `INSIDE_REPO` belongs here. The over-refusal — `python3 -m this
 #: framework/x` now denies — is the point: refusing an inert command costs a sentence in

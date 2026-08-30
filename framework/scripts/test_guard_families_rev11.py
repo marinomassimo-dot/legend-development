@@ -381,6 +381,50 @@ class TheSilentDerivationClassFailsClosed(SceneCase):
         self.assertEqual("ALLOW", self.verdict("someunknowntool framework/x"))
         self.assertNotIn(em.INSIDE_REPO, gp.UNDERIVED_OPERAND_SCOPES)
 
+    def test_an_unclassified_program_with_a_variable_operand_is_allowed(self):
+        """🔴 The OTHER half of the boundary, and the first draft of this rule got it
+        wrong — caught by a population this candidate did not choose.
+
+        Over every fenced shell line in every committed markdown file of this repository
+        (323 commands, 68 files), the draft newly refused
+
+            gh repo view "$OWNER/$REPO" --json nameWithOwner,visibility,url
+
+        which is documented in `release/PUBLISH_RUNBOOK.md`. A variable operand under an
+        unmodelled program is the ordinary shape of documented work, not a reach at a
+        protected object.
+
+        The draft was also internally inconsistent, which is the sharper argument:
+        `mytool "$VAR"` ALLOWED while `mytool $VAR/x` DENIED — the same shape, two
+        answers, decided by whether the value happened to contain a slash. A threshold
+        that answers differently for one operand's spelling is not expressing a scope.
+
+        The residual gap is DECLARED and asserted below, so it cannot close by accident
+        and cannot be forgotten: the SPELLED peer path denies, the variable does not.
+        """
+        self.assertNotIn(em.UNDERIVABLE, gp.UNDERIVED_OPERAND_SCOPES)
+        for command in ('gh repo view "$OWNER/$REPO" --json url',
+                        "docker run $IMAGE",
+                        "mytool $VAR/x",
+                        'mytool "$VAR"'):
+            with self.subTest(command=command):
+                self.assertEqual("ALLOW", self.verdict(command))
+        # the declared gap, pinned in BOTH directions
+        peer = self.scene.peer
+        self.assertEqual("DENY", self.verdict(f"someunknowntool {peer}/framework/x"))
+        self.assertEqual("ALLOW", self.verdict('someunknowntool "$PEER/framework/x"'))
+
+    def test_a_module_operand_that_cannot_be_resolved_still_fails_closed(self):
+        """🔴 And the module threshold KEEPS `UNDERIVABLE`, which is the asymmetry.
+
+        The fourteen modules are a CLOSED set whose members were each executed and
+        snapshotted; four of them write an operand. `python3 -m gzip "$VAR/x"` is not
+        ordinary documented work, and the failure direction of not knowing where a
+        measured writer points must be refusal.
+        """
+        self.assertIn(em.UNDERIVABLE, gp.UNDERIVED_MODULE_SCOPES)
+        self.assertEqual("DENY", self.verdict('python3 -m gzip "$VAR/x"'))
+
     def test_the_module_allowlist_derives_its_own_argv(self):
         """🔴 Membership is per MODULE; write capability is per ARGV, and four of the
         fourteen members take an output operand — including the one that was cited as

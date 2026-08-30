@@ -908,6 +908,27 @@ CASES: Tuple[Case, ...] = (
          "residual debt, not as a closed claim.",
          REV9_NEW_CONTROL, rev9=ALLOW, rev10=ALLOW, rev11=ALLOW,
          mutating=False, positive_control=True),
+    Case("W16-unclassified-variable-operand",
+         "gh repo view \"$OWNER/$REPO\" --json nameWithOwner,visibility,url", "READ",
+         "🔴 THE OTHER HALF OF W13'S BOUNDARY, and the first draft of the rule refused "
+         "it. This exact line is documented in `release/PUBLISH_RUNBOOK.md`. A variable "
+         "operand under an unmodelled program is the ordinary shape of documented work, "
+         "and `UNDERIVABLE` is *I could not tell* rather than a resolved protected "
+         "object. Found by running every fenced shell line in every committed markdown "
+         "file — 323 commands, a population this candidate did not choose — through both "
+         "engines, which is the only way a family rule's cost to ORDINARY use gets "
+         "measured rather than assumed.",
+         REV9_NEW_CONTROL, rev9=ALLOW, rev10=ALLOW, rev11=ALLOW,
+         mutating=False, positive_control=True),
+    Case("W17-unclassified-variable-reaches-peer",
+         "someunknowntool \"$PEER/framework/x\"", "UNKNOWN_EFFECT",
+         "🔴 A DECLARED RESIDUAL GAP, pinned so it cannot close by accident and cannot "
+         "be forgotten. The SPELLED peer path (W13) denies; reached through a variable "
+         "it does not, because refusing every unresolvable operand under an unmodelled "
+         "program costs the documented commands W16 measures. The row records the "
+         "trade rather than hiding either side of it.",
+         REV9_NEW_CONTROL, rev9=ALLOW, rev10=ALLOW, rev11=ALLOW,
+         mutating=False, positive_control=True),
     Case("W15-reader-reaches-peer-control", "cat <WORKTREE_B>/CLAUDE.md",
          "READ@PEER_WORKTREE",
          "🔴 The control on W13. Reading a peer is GRANTED, and an engine that closed "

@@ -930,7 +930,7 @@ MUTATIONS = [
         "every scope defence is downstream of that step"),
     Mutation(
         "M101", GUARD_POLICY,
-        'UNDERIVED_OPERAND_SCOPES = _UNDERIVED_STRICT',
+        'UNDERIVED_OPERAND_SCOPES = _UNDERIVED_STRICT - frozenset({em.UNDERIVABLE})',
         'UNDERIVED_OPERAND_SCOPES = frozenset()',
         FAMILY_SUITES,
         "the unclassified-program threshold is emptied, so the rule still runs and "
@@ -958,6 +958,18 @@ MUTATIONS = [
         "🔴 `git -c core.hooksPath=/tmp/h commit -m x <path>` allows again — the whole "
         "hook-installation chain collapsed into ONE command that writes no file, which "
         "is the row a per-step composability battery cannot see"),
+    Mutation(
+        "M112", GUARD_POLICY,
+        'UNDERIVED_OPERAND_SCOPES = _UNDERIVED_STRICT - frozenset({em.UNDERIVABLE})',
+        'UNDERIVED_OPERAND_SCOPES = _UNDERIVED_STRICT',
+        FAMILY_SUITES,
+        "🔴 the mirror of M101, and it attacks the OVER-refusal rather than the "
+        "under-refusal: `UNDERIVABLE` rejoins the unclassified-program threshold, which "
+        "is the FIRST DRAFT of this rule. It newly refuses `gh repo view \"$OWNER/$REPO\"` "
+        "— a line documented in release/PUBLISH_RUNBOOK.md — and answers differently for "
+        "`mytool \"$VAR\"` and `mytool $VAR/x`. A guard that refuses ordinary work is a "
+        "guard that gets turned off, and no mutation pointed only at bypasses would "
+        "catch a repair failing in that direction"),
     Mutation(
         "M105", GUARD_POLICY,
         '    if program in KNOWN_READERS:\n        return',
