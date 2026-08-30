@@ -43,16 +43,17 @@ LEGACY = "LEGACY"        # a single-file guard, no effect model
 REV8 = "REV8"            # guard_policy + effect_model, no topology
 REV9 = "REV9"            # the above, plus repository-topology confinement
 REV10 = "REV10"          # the above, plus the session-bound assigned worktree
+REV11 = "REV11"          # the above, plus the silence rules and the stdin repair
 ABSENT = "ABSENT"        # no guard entrypoint at all
 UNKNOWN = "UNKNOWN"      # an entrypoint that matches no known shape
 
-GENERATIONS = (LEGACY, REV8, REV9, REV10, ABSENT, UNKNOWN)
+GENERATIONS = (LEGACY, REV8, REV9, REV10, REV11, ABSENT, UNKNOWN)
 
 #: Newest first. The survey walks this in order and takes the first generation whose
 #: structural signature is present, so a worktree carrying revision 10 is never reported
 #: as revision 9 merely because revision 9's signature is also there — every generation
 #: is a superset of the one below it.
-GENERATION_ORDER = (REV10, REV9, REV8)
+GENERATION_ORDER = (REV11, REV10, REV9, REV8)
 
 #: The entry point every runtime registers, relative to a worktree root.
 GUARD_ENTRY = Path("scripts/guard_bash_command.py")
@@ -81,6 +82,24 @@ TOPOLOGY_IMPORT = "import repo_topology"
 SESSION_BINDING_IMPORT = "import session_binding"
 SESSION_BINDING_CALL = "assigned=assignment.worktree"
 RUNTIME_CONFIG_IMPORT = "import runtime_config"
+
+#: 🔴 Revision 11, and this rung had to exist or the census would go BLIND at exactly the
+#: moment it matters most.
+#:
+#: The ladder stopped at REV10, so a worktree carrying revision 11 reported `REV10`. That
+#: is not a cosmetic gap: after a merge the census would read `{LEGACY: 0, REV10: 13}` and
+#: `GUARD_REVISION_UNIFORM = YES` while some trees carried REV10 and some REV11 — a family
+#: closed here and open there, with the instrument that exists to say so reporting
+#: uniformity. `GUARD_REVISION_UNIFORM` is the precondition on every write-floor claim in
+#: this protocol, and a detector that cannot see the newest generation answers it wrongly
+#: in the permissive direction.
+#:
+#: Two CALL SITES, following the rule this module already applies to
+#: `SESSION_BINDING_CALL`: the presence of a function proves nothing if nothing invokes
+#: it, and both of these repairs are exactly of the kind that can be present and
+#: unreachable — which is the defect revision 11 is about.
+HERESTRING_CALL = "stripped, herestrings = extract_herestrings(command)"
+SILENCE_CALL = "unclassified(argv, program, findings)"
 
 
 def _sha256(path: Path) -> str:
@@ -131,6 +150,8 @@ def generation_of(root: Path) -> str:
         and (root / GUARD_SESSION_BINDING).is_file()
         and (root / GUARD_RUNTIME_CONFIG).is_file()
     )
+    if rev10 and HERESTRING_CALL in source and SILENCE_CALL in source:
+        return REV11
     if rev10:
         return REV10
     if TOPOLOGY_IMPORT in source and (root / GUARD_TOPOLOGY).is_file():

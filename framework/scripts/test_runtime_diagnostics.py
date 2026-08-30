@@ -260,7 +260,31 @@ class GuardRevisionUniformityIsMeasuredAndNotAssumed(unittest.TestCase):
         mine = [row for row in self.report["worktrees"]
                 if Path(str(row["worktree"])).resolve() == ROOT.resolve()]
         self.assertEqual(len(mine), 1)
-        self.assertEqual(mine[0]["guard_generation"], gr.REV10)
+        self.assertEqual(mine[0]["guard_generation"], gr.REV11)
+
+    def test_the_generation_ladder_reaches_the_revision_under_test(self):
+        """🔴 Revision 11, and this is the test that had to exist BEFORE the rung did.
+
+        The ladder stopped at `REV10`, so this worktree — structurally revision 11 —
+        reported `REV10`, and the assertion above passed while measuring the wrong
+        thing. The consequence is not cosmetic: after a merge the census would read
+        `GUARD_REVISION_UNIFORM = YES` with some trees on REV10 and some on REV11, and
+        `GUARD_REVISION_UNIFORM` is the precondition on every write-floor claim in this
+        protocol. A detector blind to the newest generation answers it in the permissive
+        direction.
+
+        So the ladder's newest rung is asserted to be the generation the ADAPTER stamps,
+        which is the token a probe receipt records. Two constants that could drift apart
+        silently, pinned to each other.
+        """
+        self.assertEqual(gr.GENERATION_ORDER[0], adapter.GUARD_GENERATION)
+        self.assertIn(adapter.GUARD_GENERATION, gr.GENERATIONS)
+
+    def test_the_newest_rung_is_tested_before_the_older_ones(self):
+        """The ladder is CUMULATIVE — a revision-11 engine satisfies revision 10's
+        condition too — so an order that asked the older question first would answer
+        `REV10` forever, which is precisely how the rung went missing."""
+        self.assertEqual((gr.REV11, gr.REV10, gr.REV9, gr.REV8), gr.GENERATION_ORDER)
 
     def test_the_survey_writes_nothing(self):
         """🔴 Upgrading a peer from here would be the cross-worktree write that
@@ -654,7 +678,7 @@ class TheLiveProbeCanTellTheEnginesApart(unittest.TestCase):
         says, and the drift would be invisible: the probe would look for a token nothing
         emits and conclude NOT_FIRING."""
         self.assertIn(f"GENERATION={adapter.GUARD_GENERATION}", cr.discriminators()[0])
-        self.assertEqual(adapter.GUARD_GENERATION, "REV10")
+        self.assertEqual(adapter.GUARD_GENERATION, "REV11")
 
     def test_every_decision_code_is_absent_from_the_legacy_engine(self):
         for code in gp.DECISION_CODES:
@@ -736,14 +760,19 @@ class TheRegistrationResolvesToTheEngineItNames(unittest.TestCase):
         self.assertEqual(cr.engine_of('python3 "$CLAUDE_PROJECT_DIR/scripts/g.py"'),
                          "$CLAUDE_PROJECT_DIR/scripts/g.py")
 
-    def test_the_claude_registration_in_this_repository_resolves_and_is_rev10(self):
+    def test_the_claude_registration_in_this_repository_resolves_and_is_current(self):
         """The Claude side already meets the bar R3 asks the Codex side to reach, and
-        this is what makes that a measurement rather than an assertion about it."""
+        this is what makes that a measurement rather than an assertion about it.
+
+        🔴 Asked of the CURRENT rung rather than of a number written here. Spelled
+        `gr.REV10` it would keep passing after the ladder moved, while asserting that
+        the registration resolves to an engine one generation old.
+        """
         found = cr.read_registration(str(ROOT / ".claude" / "settings.json"),
                                      {"CLAUDE_PROJECT_DIR": str(ROOT)})
         self.assertEqual(found.anchoring, cr.RUNTIME_ANCHORED)
         self.assertTrue(found.deterministic)
-        self.assertEqual(found.guard_generation, gr.REV10)
+        self.assertEqual(found.guard_generation, gr.GENERATION_ORDER[0])
         self.assertRegex(found.engine_hash, r"^[0-9a-f]{64}$")
 
     def test_the_codex_registration_here_is_reported_unanchored_rather_than_ignored(self):

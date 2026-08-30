@@ -362,8 +362,11 @@ PROBE_VERDICTS: Tuple[str, ...] = (NOT_FIRING, LEGACY_FIRING, REV10_FIRING,
 PRECONDITIONS: Tuple[Tuple[str, str], ...] = (
     ("PROBE_WORKTREE_IDENTIFIED",
      "the cwd the session will use resolves to a session-bound assigned worktree"),
-    ("GUARD_GENERATION_IS_REV10",
-     "guard_revision reports REV10 for that worktree"),
+    # 🔴 Revision 11. The precondition is that the worktree carries the CANDIDATE
+    # engine, and the rung moved — a probe that confirmed `REV10` would be confirming
+    # the engine this candidate replaces.
+    ("GUARD_GENERATION_IS_REV11",
+     "guard_revision reports REV11 for that worktree"),
     ("REGISTERED_ENGINE_PATH_RESOLVES",
      "the registration's engine path is ABSOLUTE or RUNTIME_ANCHORED and resolves"),
     ("REGISTERED_ENGINE_HASH_MATCHES",

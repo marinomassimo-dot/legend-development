@@ -80,8 +80,24 @@ HOOK_EVENT = "PreToolUse"
 #: The token is derived from a STRUCTURAL fact rather than declared: `guard_policy` has
 #: to expose the revision-10 scope for this to read. A constant nobody checks is a claim,
 #: and `guard_revision.py` already refuses to read one.
-GUARD_GENERATION = ("REV10" if hasattr(guard_policy, "RUNTIME_CONFIG")
-                    and hasattr(guard_policy, "session_topology") else "PRE_REV10")
+#: 🔴 Revision 11 adds a rung, and it had to: this token is what a probe receipt records
+#: as *the engine that answered*. Leaving it at `REV10` would make every revision-11
+#: denial attest to an engine it is not — and the whole reason the token exists is that
+#: revision 9's probe could not tell the engines apart. A discriminator that is wrong is
+#: worse than one that is absent, because it is believed.
+#:
+#: Structural, never declared, and the newest rung is tested FIRST — the ladder is
+#: cumulative, so a revision-11 engine satisfies revision 10's condition too and an
+#: order that asked the older question first would answer `REV10` forever. That is the
+#: same ordering rule `guard_revision.GENERATION_ORDER` states, and the two are asserted
+#: to agree by `test_runtime_diagnostics.py`.
+GUARD_GENERATION = (
+    "REV11" if hasattr(guard_policy, "UNDERIVED_OPERAND_SCOPES")
+    and hasattr(guard_policy, "extract_herestrings")
+    and hasattr(guard_policy, "unclassified")
+    else "REV10" if hasattr(guard_policy, "RUNTIME_CONFIG")
+    and hasattr(guard_policy, "session_topology")
+    else "PRE_REV10")
 
 #: The structured trailer every denial carries. `codex_registration.probe_preconditions`
 #: parses it, and `test_runtime_diagnostics.py` asserts that no byte of it appears in the
