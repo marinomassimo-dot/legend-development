@@ -1302,6 +1302,11 @@ mine, and better than "a mutation score measures fidelity, not completeness", wh
 `mirror-93`'s. All three describe the same limit; only the third says why a bigger corpus is
 not the repair. It is the sentence `NO_KNOWN_STRUCTURAL_BYPASS` should be read against.
 
+🔴 **Read it beside the block that follows, and not on its own.** Its author asked for exactly
+that — *"a closing line that arrives with a clean record reads as insight; the same line is
+worth more if the reader can see it was paid for"* — and it is right: the same session
+explained two mechanisms it had not measured on the way to it, and both were wrong.
+
 The phantom heredoc's inertness now has a verified mechanism rather than an observed
 coincidence: `guard_policy.py:1787` does `bodies.extend(heredocs)` and `:1792` guards on
 `if not PROGRAM_WRITES.search(body)`. `PROGRAM_WRITES.search("")` returns `None`, so the
@@ -1338,6 +1343,25 @@ invariant produced **12 "violations"** — every one a positive control or a rea
 derives nothing and is correctly allowed. It had applied a must-refuse rule to the whole
 corpus. It filtered, found zero, and told me; had it reported the unfiltered table it would
 have read as twelve new findings against this candidate.
+
+🔴 **And the corrective only worked because someone else was reading.** `mirror-73`, closing:
+
+> Mine were caught by you, yours by me, `mirror-71`'s by you. **Not one of the four was caught
+> by its own author.** The failure mode is invisible from the inside BY CONSTRUCTION, because
+> the author is the one for whom the story is already tellable.
+
+That is a stronger argument for review than "a second pair of eyes is useful", and it is the
+argument § 19 rests on. "Put the positive control in the same table" is a technique an author
+can hold and still not apply, because applying it requires already doubting the sentence one is
+about to write. All four of us knew the technique. All four of us skipped it. Each was caught
+by a reader who did not yet know what the answer was supposed to be.
+
+**A last datum, and it is about the guard rather than the review.** `mirror-73` reports the
+`PreToolUse` guard fired **five times on this review's own instruments** — the last time
+refusing its probe because a positive control contained `open('a/b.md','w')` as a path literal.
+Each time it moved to Write rather than rewording the command to slip past. That is the
+control working on the review of itself, and the reason those five denials are data instead of
+noise is that nobody routed around them.
 
 ### 🔴 The process finding, which is not about this candidate
 
@@ -1417,12 +1441,22 @@ axes that its author had tested separately.
 **Eight defects in this candidate were found by its author, and not one by reading the
 code.** Every one came from running an instrument, or from reading an instrument against a
 document that had just been rewritten — § 13 lists them against the unit that repaired each.
-Two were regressions the R1 repair itself introduced. The pattern is the argument: the
-author's reading found nothing that the author's tools did not first make visible, and a
-reviewer brings tools an author does not have, starting with not knowing what was intended.
+Two were regressions the R1 repair itself introduced.
 
-That is an argument about method rather than about confidence, and it is the same argument
-whether the review confirms this candidate or refutes it.
+🔴 **And then § 19.9 happened, which settles what this section was arguing.** Two sessions
+holding no artefact permitting them to review anything produced, in a few hours: a
+falsification of `NO_KNOWN_STRUCTURAL_BYPASS`; a root cause for a family this corpus tests by
+spelling; a demonstration that `RUNTIME_CONFIG` — a defence written in THIS revision — never
+runs; the fact that the entry cited as an allowlist's own control writes through it; and a
+severity reframe from parallel to serial. Plus four corrections to statements of mine, and
+three withdrawals of their own.
+
+The decisive part is not the count. It is that **not one of the five wrong statements made
+during that exchange was caught by its own author.** Each was caught by a reader who did not
+yet know what the answer was supposed to be. The failure is invisible from the inside by
+construction, because the author is the one for whom the story is already tellable — so
+"review before integration" is a structural requirement here and not a modest one, and it
+holds identically whether a review confirms this candidate or refutes it.
 
 `B` (integration) is what review authorises. `C` (the live probe) is `NO` on its own
 preconditions until a registration route is selected and placed. `D` (another surgical
