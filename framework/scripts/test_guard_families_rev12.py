@@ -572,6 +572,58 @@ class ANormalisedNameNeverGainsAnExemptionTheWrittenNameLacks(SceneCase):
         self.assertEqual("cat2", gp.normalise_program("cat2"))
         self.assertEqual("wc1", gp.normalise_program("wc1"))
 
+    def test_the_added_finding_is_keyed_on_the_NAME_AS_WRITTEN(self):
+        """🔴 **Found by a mutant, not by reading.** M117 replaces the original basename
+        with the normalised key at the one call site, and the first version of this class
+        did not kill it.
+
+        `operands()` consults `OPTIONS_WITH_VALUE[program]`, and 22 of the 104 programs a
+        normalisation can land on have an entry there. Keyed on the normalised name, a
+        path travelling in one of those flags is skipped as an option-VALUE and stops
+        being a target:
+
+        ```text
+                                       rev11    rev12    rev12 with M117
+        perl5.34 -I <peer>/lib -e …    DENY     DENY     ALLOW  🔴
+        tar1 -C <peer> -tf /tmp/a.tar  DENY     DENY     ALLOW  🔴
+        curl1 -K <peer>/rc <url>       DENY     DENY     ALLOW  🔴
+        npm1 --prefix <peer> ls        DENY     DENY     ALLOW  🔴
+        control  perl -I <peer>/lib    ALLOW    ALLOW    ALLOW
+        control  git -C <peer> status  ALLOW    ALLOW    ALLOW
+        ```
+
+        🔴 The controls are the point of the shape, not decoration. The bare programs
+        answer ALLOW at every column, and they must: the asymmetric rule fires only for a
+        name the policy had to INFER, and `perl -I <peer>/lib` is `perl` invoked as
+        itself. That the versioned spelling is judged more strictly than the bare one is
+        the trade, and it is revision 11's own answer for that spelling — so it costs
+        nothing against the baseline this revision must not loosen.
+
+        My first probe for this mutant used `python3.12 -c <peer>/x` and found nothing,
+        because `python3` has no `OPTIONS_WITH_VALUE` entry at all. A survivor has to be
+        chased to an input where the branch actually fires, or the equivalence claim is
+        a story about the code rather than a measurement of it.
+        """
+        table = {c: self.verdict(c) for c in (
+            f'perl5.34 -I {self.PEER}/lib -e "print 1"',
+            f'perl1 -I {self.PEER}/lib -e "print 1"',
+            f"tar1 -C {self.PEER} -tf /tmp/a.tar",
+            f"curl1 -K {self.PEER}/rc https://example.invalid/x",
+            f"npm1 --prefix {self.PEER} ls",
+        )}
+        self.assert_matrix(
+            table, "DENY",
+            "a path in an option-VALUE position must still be a target when the "
+            "program name had to be inferred")
+        controls = {c: self.verdict(c) for c in (
+            f'perl -I {self.PEER}/lib -e "print 1"',
+            f"git -C {self.PEER} status",
+        )}
+        self.assert_matrix(
+            controls, "ALLOW",
+            "the BARE program is not touched by the asymmetric rule — same table, so a "
+            "repair cannot buy the row above with these")
+
     def test_the_hardening_the_normalisation_was_built_for_is_not_lost(self):
         """🔴 The other direction, in the same class. An asymmetric rule that also
         removed the ADDED effects would be a revert wearing a repair's docstring.
