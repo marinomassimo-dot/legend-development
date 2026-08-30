@@ -1086,20 +1086,49 @@ different repairs, and § 19.9 above stated the first without separating out the
 Everywhere but the herestring, REV10 is equal to or strictly stronger than the control
 actually deployed.
 
-**3 · `py_compile` is not one bad row — it is a defect CLASS, and I measured how wide.**
-`READ_ONLY_MODULES` has 14 members, all presumably judged the same way. Checked by execution:
+**3 · 🔴 `READ_ONLY_MODULES` — and the entry cited as its own CONTROL is an instance of the
+defect.** All fourteen members executed in a disposable directory, snapshotted before and
+after:
 
 ```text
-python3 -m py_compile a.py    writes __pycache__/a.cpython-39.pyc  — MASKED on this host only
-python3 -m gzip a.txt         creates a.txt.gz                     — 🔴 UNMASKED, writes here
-python3 -m base64 -e -o … a   exit 2, writes nothing               — the peer's example does NOT hold
-python3 -m tokenize a.txt     writes nothing                       — does NOT hold either
+python3 -m json.tool a.json out.json    → NEW out.json     🔴 THE CITED CONTROL
+python3 -m pydoc -w os                  → NEW os.html      🔴
+python3 -m gzip a.txt                   → NEW a.txt.gz     🔴
+python3 -m py_compile m.py              → masked here; writes __pycache__ with the prefix cleared
+the other ten                           → wrote nothing, rc=0
 ```
 
-So **two of fourteen** are misclassified, not four: the peer that raised the class over-reached
-on two of its three examples, and was right that the class exists. `gzip` is the sharper one —
-`py_compile`'s harm is hidden by this machine's `sys.pycache_prefix`, and `gzip`'s is not
-hidden by anything. The remaining eleven have not been checked by anyone.
+**Four of fourteen.** And the guard lets them into the repository:
+
+```text
+python3 -m json.tool a.json framework/scripts/guard_policy.py   ALLOWED, no effects derived
+python3 -m pydoc -w os                                          ALLOWED, no effects derived
+python3 -m gzip framework/scripts/guard_policy.py               ALLOWED, no effects derived
+control  python3 -m pip install -t framework pkg                DENIED, WRITE @ INSIDE_REPO ✓
+```
+
+I told `mirror-71` that `json.tool` "stays allowed as the control that keeps it a derivation".
+**One-argument `json.tool` prints to stdout, which is what makes it look safe; the two-argument
+form is `json.tool infile outfile` and it writes.** The entry chosen to demonstrate the rule is
+sound is a repository write. `pydoc` is the same shape — read-only until one flag makes it a
+writer.
+
+**The class is sharper than "host-dependent".** Membership is judged per **MODULE**; write
+capability is a property of the module's **ARGV**. `py_compile` is host-dependent;
+`json.tool`, `pydoc` and `gzip` are argv-dependent and wrong on every host including this one.
+A module-name allowlist cannot express "read-only" for anything that takes an output operand,
+and four of fourteen take one.
+
+**Counted as ONE defect, not four.** Four instances of a module allowlist that cannot express
+an argv-conditioned capability; the repair is per-module argv derivation, not four deletions
+from a frozen set. Counting them separately would make the corpus the unit of repair again,
+which is what this whole exchange argues against.
+
+**Two earlier statements of mine and two of the peer's are superseded here.** The peer offered
+`base64` and `tokenize` from plausibility; both were measured and neither writes. I then wrote
+"two of fourteen" from measuring only what it had named, and asserted the remaining eleven were
+"unexamined" while treating that as a small number — it was four, and one of them was my own
+control. Both of us asserted inside an exchange about not asserting.
 
 ### The stdin-program finding has a ROOT CAUSE, and it is not a missing spelling
 
@@ -1165,10 +1194,10 @@ NO_KNOWN_STRUCTURAL_BYPASS               🔴 FALSIFIED at da0fb72. Counted as F
                                          than shapes, because counting shapes is the error the
                                          findings are about: the stdin-program family is 12
                                          open cells of 16, and beside it sit xargs
-                                         payload-as-command, `patch -i`, the READ_ONLY_MODULES
-                                         misclassification (2 of 14 confirmed, 11 unexamined),
-                                         `node <script>` and `git config`. One cell was
-                                         committed as H-05 four days BEFORE the freeze
+                                         payload-as-command, `patch -i`, READ_ONLY_MODULES
+                                         (4 of 14 write, including the entry cited as its own
+                                         control), `node <script>` and `git config`. One cell
+                                         was committed as H-05 four days BEFORE the freeze
 REGRESSION AGAINST WHAT IS DEPLOYED      exactly ONE of the eight: `python3 - <<<`. Everywhere
                                          else REV10 is equal to or stronger than legacy main
 DEVELOPMENT_MAIN_INTEGRATION_READINESS   🔴 WITHDRAWN — § 18 says READY; read READY_AFTER_REPAIR
