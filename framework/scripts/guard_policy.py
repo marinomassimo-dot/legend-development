@@ -1513,6 +1513,54 @@ def normalise_program(token: str) -> str:
     return name
 
 
+def renamed_by_normalisation(token: str) -> bool:
+    """Did this token reach its table key by being SPELLED DIFFERENTLY from what ran?
+
+    🔴 **The subtraction above was necessary and it was not sufficient**, and only
+    enumerating the whole population showed it.
+
+    Excluding the readers stopped `cat2` inheriting a reader's exemption. It did nothing
+    about the other 104 names a suffix can land on, and those confer exemptions too:
+    `bash1`, `curl1`, `env1`, `find1`, `sudo1`, `tar1`, `node1`, `python31`, `nodejs` and
+    50 more reached a MODELLED branch that derives nothing for an operand in a confined
+    scope, and were allowed where revision 11 refused them. Measured over the whole set
+    of 192 known program names at three confined scopes:
+
+    ```text
+                                       denominator   LOOSENED (DENY -> ALLOW)
+    rev11 -> rev12 first draft          1158 cases            441
+    rev11 -> rev12 + the reader subtraction alone             177   🔴 still open
+    ```
+
+    The 8 spellings the first repair was built from were a SAMPLE of 441, and a repair
+    verified against the sample closed 264 of them. That is the defect this file has now
+    recorded at three levels: the population was never enumerated before it was measured.
+
+    **The rule that closes the family rather than a sample.** Normalisation is not
+    symmetric and must not be applied as though it were. A version suffix or a
+    distribution alias is EVIDENCE ABOUT WHAT A NAME PROBABLY MEANS, and evidence of that
+    kind may:
+
+    ```text
+    ADD an effect this guard would otherwise miss   python3.12 -c "open(…,'w')"  DENY
+    NEVER remove one it would otherwise derive      bash1 <peer>/x               DENY
+    ```
+
+    So `analyse_argv` keeps the normalised key for every derivation — the whole D3 repair
+    survives — and additionally applies the operand rule the UNMODELLED name would have
+    got. A spelling nobody enumerated therefore gets, at worst, the answer its own
+    spelling earns, and the failure direction is over-refusal of a program that does not
+    exist.
+
+    🔴 Keyed on `basename`, and aliases count. `nodejs` is not a version spelling and the
+    alias table calls it a packaging fact — which is a claim about the NAME and not about
+    the binary the actor put on `PATH`. Revision 11 refused `nodejs <peer>/x`; nothing
+    about writing `"nodejs": "node"` in a dict is evidence that it should now be allowed.
+    """
+    name = posixpath.basename(token)
+    return bool(name) and normalise_program(token) != name
+
+
 def operands(argv: Sequence[str], program: str) -> List[str]:
     """Non-option arguments, with option-values skipped for the programs that take them."""
     takes_value = OPTIONS_WITH_VALUE.get(program, frozenset())
@@ -1750,6 +1798,21 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
         findings.append(Finding("OPAQUE_PROGRAM", "expansion", [OPAQUE],
                                 "the program name is produced by an expansion"))
         return
+
+    # 🔴 A NORMALISED NAME MAY ADD AN EFFECT AND MAY NEVER REMOVE ONE.
+    #
+    # Every branch below is keyed on the NORMALISED program, which is the whole D3
+    # repair and is kept. What is added here is the operand rule the name AS WRITTEN
+    # would have earned, so that a spelling this policy inferred a meaning for cannot
+    # inherit the meaning's exemptions. See `renamed_by_normalisation` for the
+    # measurement — the reader subtraction alone left 177 of 1158 cases loosened.
+    #
+    # 🔴 Keyed on the ORIGINAL basename, not on `program`. Passing the normalised key
+    # would consult that program's own `OPTIONS_WITH_VALUE` and drop operands revision 11
+    # counted — `python3.12 -c <peer>/x` would lose its target to `-c` and be allowed.
+    # The negative has to be computed the way the engine it must not loosen computed it.
+    if renamed_by_normalisation(argv[0]):
+        underived_operand(argv, posixpath.basename(argv[0]), findings)
 
     # ── delegation to another agent runtime ──
     #
@@ -2396,12 +2459,32 @@ def unclassified(argv: Sequence[str], program: str, findings: List[Finding],
         findings.extend(sub)
         return
 
+    underived_operand(argv, program, findings)
+
+
+def underived_operand(argv: Sequence[str], program: str,
+                      findings: List[Finding]) -> None:
+    """*This command names an object, through a program nobody modelled.*
+
+    Split out of `unclassified` because revision 12 needs it at a SECOND site — see
+    `renamed_by_normalisation`. It denies only where no authority grants a write, so on
+    an operand inside the actor's own worktree, or in scratch, it costs nothing.
+
+    🔴 Idempotent. Two call sites can reach the same argv, and a finding appended twice
+    is the same verdict reported as two objects, which is how a reader is led to think
+    the guard saw two things.
+    """
     targets = [t for t in operands(argv, program) if t not in (UNNAMED, OPAQUE)]
-    if targets:
-        findings.append(Finding(
-            "UNDERIVED_OPERAND", program, targets,
-            "names an object this guard derived no effect on, through a program it has "
-            "no model for"))
+    if not targets:
+        return
+    for existing in findings:
+        if (existing.rule == "UNDERIVED_OPERAND" and existing.primitive == program
+                and existing.targets == targets):
+            return
+    findings.append(Finding(
+        "UNDERIVED_OPERAND", program, targets,
+        "names an object this guard derived no effect on, through a program it has "
+        "no model for"))
 
 
 def wrapper_tail(argv: Sequence[str]) -> "Optional[List[str]]":

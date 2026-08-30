@@ -437,6 +437,205 @@ class AVersionSuffixIsNotADifferentProgram(SceneCase):
         self.assert_matrix(table, "ALLOW", "versioned interpreter reading")
 
 
+class ANormalisedNameNeverGainsAnExemptionTheWrittenNameLacks(SceneCase):
+    """🔴 **D3's own repair, twice, and the second time over the whole population.**
+
+    This class exists because the first two attempts at D3 both increased permission,
+    and each was verified against the sample that had failed rather than against the set
+    the rule ranges over.
+
+    ```text
+    attempt                        probed   denominator   LOOSENED vs rev11
+    first draft                         8        8 cases        8   the sample
+    first draft                         —     1158 cases      441   the population
+    + subtract the READERS              —     1158 cases      177   🔴 still open
+    + subtract the READERS              —     2946 cases      747   with aliases probed
+    + asymmetric normalisation          —     2946 cases        6   csh/tcsh only
+    ```
+
+    The reader subtraction was correct and it was a SAMPLE-SHAPED repair: `cat2` reached
+    a reader, so readers were excluded, and the other 104 landing sites — shells,
+    interpreters, wrappers, package managers — went on conferring their own exemptions.
+    `bash1`, `curl1`, `env1`, `find1`, `sudo1`, `tar1`, `nodejs` and 50 more were allowed
+    at a peer worktree, at the shared `.git`, and at the runtime registration, where
+    revision 11 refused every one of them.
+
+    The tests below are stated over the ENUMERATION, not over the names that failed.
+    """
+
+    #: The confined scopes a name must not buy its way into. Every one is a place this
+    #: repository's confinement model says an actor may not reach.
+    def _scopes(self):
+        return {"peer worktree": f"{self.PEER}/x",
+                "shared git common dir": f"{self.SHARED}/.git/config",
+                "runtime registration": self.REG}
+
+    def test_every_name_a_suffix_can_reach_still_denies_at_every_confined_scope(self):
+        """🔴 The population, not a sample: every name any table in this module is keyed
+        on, plus every alias key, each given a version-like suffix, at three scopes.
+
+        The denominator is printed in the failure message, because a negative without
+        its denominator is a number and not a measurement.
+        """
+        names = sorted(gp._KNOWN_PROGRAM_NAMES) + sorted(gp.PROGRAM_ALIASES)
+        known = frozenset(gp._KNOWN_PROGRAM_NAMES) | frozenset(gp.PROGRAM_ALIASES)
+        table, collided = {}, []
+        for name in names:
+            for suffix in ("1", "2", "3.4"):
+                spelling = f"{name}{suffix}"
+                # 🔴 `python` + `2` is `python2`, a program in its own right. The first
+                # draft of this test generated it and read its ALLOW as a bypass — a
+                # generator that manufactures a REAL name and then accuses the engine of
+                # honouring it. A spelling that IS a known name is not an inferred one
+                # and is out of this test's population by construction.
+                if spelling in known:
+                    collided.append(spelling)
+                    continue
+                for label, target in self._scopes().items():
+                    table[f"{spelling} @ {label}"] = self.verdict(
+                        f"{spelling} {target}")
+        # The positive control on the POPULATION itself: say how many cells were built
+        # and how many were excluded, so a run that quietly measured nothing is visible.
+        self.assertEqual(len(table), 3 * (3 * len(names) - len(collided)),
+                         "the enumeration does not account for every cell")
+        self.assertGreater(len(table), 1500,
+                           "the enumeration collapsed — a derived set went empty")
+        self.assert_matrix(
+            table, "DENY",
+            f"{len(names)} names x 3 suffixes x 3 confined scopes, minus "
+            f"{len(collided)} spellings that are themselves known names "
+            f"({sorted(set(collided))}) = {len(table)} cases; a spelling this policy "
+            "INFERRED a meaning for must not inherit the meaning's exemptions")
+
+    def test_the_alias_keys_are_covered_by_the_same_rule_as_the_suffixes(self):
+        """🔴 The aliases were NOT in the first population and were loosened by name.
+
+        `nodejs`, `pypy`, `pypy3` and `python3m` are not in `_KNOWN_PROGRAM_NAMES`, so a
+        sweep over that set alone reported them as untouched while all four had moved
+        from DENY to ALLOW. An alias is a claim about a NAME; it is not evidence about
+        the binary the actor put on `PATH`.
+        """
+        table = {}
+        for alias in sorted(gp.PROGRAM_ALIASES):
+            for label, target in self._scopes().items():
+                table[f"{alias} @ {label}"] = self.verdict(f"{alias} {target}")
+        self.assertEqual(len(table), 3 * len(gp.PROGRAM_ALIASES))
+        self.assert_matrix(table, "DENY",
+                           f"{len(gp.PROGRAM_ALIASES)} alias keys x 3 confined scopes")
+
+    def test_the_bare_names_are_untouched_and_that_is_the_positive_control(self):
+        """🔴 In the SAME table as the negative above, and this is the half a
+        bypass-only suite would have skipped.
+
+        The asymmetric rule fires only when the WRITTEN name differs from the key. A
+        program invoked by its own name must answer exactly as it did before, or the
+        repair has bought a closed family with a refusal of ordinary work.
+        """
+        table = {}
+        for name in ("python3", "bash", "node", "cat", "git", "curl", "find", "tar"):
+            for label, target in self._scopes().items():
+                table[f"{name} @ {label}"] = self.verdict(f"{name} {target}")
+        moved = {k: v for k, v in table.items() if not gp.renamed_by_normalisation(
+            k.split(" @ ")[0])}
+        self.assertEqual(len(moved), len(table),
+                         "a BARE name was treated as normalised — the predicate is wrong")
+
+    def test_the_predicate_answers_for_the_shapes_it_is_keyed_on(self):
+        renamed = {n: gp.renamed_by_normalisation(n) for n in
+                   ("python3.12", "perl5.34", "nodejs", "pypy3", "bash1",
+                    "/usr/local/bin/python3.12", "./node20")}
+        self.assertEqual({}, {k: v for k, v in renamed.items() if v is not True},
+                         f"these are spelled differently from their key: {renamed}")
+        # 🔴 `cat2` belongs HERE and not above, and the first draft of this test put it
+        # above and failed. It is not renamed, because the reader subtraction refuses to
+        # move it at all — the two halves of the repair answer it in different places,
+        # and a test that expected one of them to do the other's work was asserting an
+        # implementation it had not read.
+        kept = {n: gp.renamed_by_normalisation(n) for n in
+                ("python3", "bash", "cat", "git", "someunknowntool", "report2",
+                 "3.12", "/usr/bin/python3", "cat2", "wc1", "file1")}
+        self.assertEqual({}, {k: v for k, v in kept.items() if v is not False},
+                         f"these are written as their own key: {kept}")
+
+    def test_the_reader_subtraction_is_still_there_as_the_second_line(self):
+        """🔴 Both halves are kept. The asymmetric rule subsumes the reader
+        subtraction — with it, `cat2` is refused by its operand rather than by its
+        landing site — and the subtraction is retained because a rule that fails closed
+        twice for two different reasons is not redundancy, it is the only structure that
+        survives one of them being edited away.
+        """
+        self.assertTrue(gp.VERSIONED_PROGRAM_FAMILIES,
+                        "the landing set went empty — normalisation is disabled")
+        overlap = gp.VERSIONED_PROGRAM_FAMILIES & frozenset(gp.KNOWN_READERS)
+        self.assertEqual(frozenset(), overlap,
+                         f"a suffix can land on a reader again: {sorted(overlap)}")
+        self.assertEqual("cat2", gp.normalise_program("cat2"))
+        self.assertEqual("wc1", gp.normalise_program("wc1"))
+
+    def test_the_hardening_the_normalisation_was_built_for_is_not_lost(self):
+        """🔴 The other direction, in the same class. An asymmetric rule that also
+        removed the ADDED effects would be a revert wearing a repair's docstring.
+        """
+        table = {c: self.verdict(c) for c in (
+            'python3.12 -c "open(\'framework/x\',\'w\').write(\'x\')"',
+            'perl5.34 -e "open(my $f,\'>\',\'framework/x\')"',
+            'nodejs -e "require(\'fs\').writeFileSync(\'framework/x\',\'x\')"',
+            'pypy3 -c "open(\'framework/x\',\'w\').write(\'x\')"',
+            "bash5 -c 'git add -A'",
+        )}
+        self.assert_matrix(table, "DENY", "the D3 hardening, after the asymmetric rule")
+
+    def test_ordinary_versioned_work_is_still_allowed(self):
+        """🔴 The over-refusal control for the asymmetric rule itself. The added finding
+        denies only where no authority grants a write, so an operand in the actor's own
+        worktree or in scratch must cost nothing.
+        """
+        table = {c: self.verdict(c) for c in (
+            "python3.12 framework/scripts/legend_lint.py .",
+            "python3.12 -c \"print(1)\"",
+            "bash5 scripts/build.sh",
+            "node20 build.js",
+            f"python3.12 {self.IN}",
+            "perl5.34 --version",
+        )}
+        self.assert_matrix(table, "ALLOW", "ordinary work through a versioned spelling")
+
+    def test_the_declared_shell_extension_carries_its_measured_cost(self):
+        """🔴 **The one residual REV11 -> REV12 loosening, recorded so it cannot move
+        silently.** 6 cases of 2946, and none of them is normalisation.
+
+        `csh` and `tcsh` were added to `SHELL_BINARIES`, which closes `csh -c '<blanket>'`
+        — ALLOW at revision 11, DENY here. It also gives those two names the escape hatch
+        the other nine shells already have: *a shell invoked with a named script carries
+        nothing to police here* (`guard_policy.SHELL_BINARIES` branch, revision 11's own
+        committed decision). So `csh <peer>/script` moved DENY -> ALLOW.
+
+        ```text
+                                   rev11 (f3e9816)   rev12 (this tree)
+        csh  -c 'git add -A'       ALLOW        🔴   DENY  BLANKET_STAGING
+        tcsh -c 'git add -A'       ALLOW        🔴   DENY  BLANKET_STAGING
+        csh  <peer>/script         DENY              ALLOW           🔴
+        control  bash <peer>/script   ALLOW          ALLOW    <- the sibling exemption,
+                                                               unchanged by this revision
+        ```
+
+        The control is the point: the exemption `csh` gained is not new, it is the one
+        `bash`, `sh`, `zsh` and six others already had at revision 11. This test does not
+        say the trade is right — that is an adjudication, and it is stated as an open
+        item in the candidate. It says the trade is MEASURED, and that either half moving
+        breaks a test.
+        """
+        hardened = {sh: self.verdict(f"{sh} -c 'git add -A'")
+                    for sh in ("csh", "tcsh")}
+        self.assert_matrix(hardened, "DENY", "the closure the extension buys")
+        loosened = {f"{sh} <peer>/script": self.verdict(f"{sh} {self.PEER}/script")
+                    for sh in ("csh", "tcsh", "bash", "sh", "zsh")}
+        self.assert_matrix(
+            loosened, "ALLOW",
+            "the cost the extension carries, beside the nine shells that already "
+            "carried it")
+
+
 # ══ D · THE WRAPPER TAIL ═══════════════════════════════════════════════════════════
 
 class AnUnmodelledWrapperDoesNotLaunderItsChild(SceneCase):
@@ -540,17 +739,53 @@ class TheExecutionControlKeysAreAShapeAndNotOnlyAList(SceneCase):
         wrong = {k: v for k, v in table.items() if v is not True}
         self.assertEqual({}, wrong, f"these should be execution control: {wrong}")
 
-    def test_an_ordinary_key_is_not_swept_up(self):
+    def test_an_ordinary_key_is_not_swept_up_by_the_suffix_half(self):
         """🔴 The over-refusal control, and it belongs in this file rather than in a
-        separate one. A suffix rule is a broad instrument: `user.name`, `color.ui` and
-        `diff.algorithm` must survive it, or the repair has traded a bypass for a
-        refusal of ordinary configuration."""
+        separate one. A suffix rule is a broad instrument: an ordinary key must survive
+        it, or the repair has traded a bypass for a refusal of ordinary configuration."""
         table = {k: gp.is_execution_control_key(k) for k in (
-            "user.name", "user.email", "color.ui", "diff.algorithm", "push.default",
-            "merge.conflictstyle", "log.date", "status.short", "core.autocrlf",
+            "user.name", "user.email", "color.ui", "push.default",
+            "log.date", "status.short", "core.autocrlf",
             "branch.main.remote", "commit.verbose")}
         wrong = {k: v for k, v in table.items() if v is not False}
         self.assertEqual({}, wrong, f"these are ordinary configuration: {wrong}")
+
+    def test_the_prefix_half_over_refuses_and_that_is_INHERITED_not_this_revision(self):
+        """🔴 A DECLARED, MEASURED over-refusal — recorded rather than asserted away.
+
+        The first draft of this test put `diff.algorithm` and `merge.conflictstyle` in
+        the row above and FAILED. The failure was real and the test was wrong about
+        whose failure it is: `diff.` and `merge.` are whole-section PREFIXES that predate
+        revision 12, so both keys answer `True` — and `git -c diff.algorithm=histogram
+        log` is `DENY RUNTIME_CONFIG` — at revision 11 exactly as here.
+
+        ```text
+                                       rev11 (f3e9816)      rev12 (this tree)
+        diff.algorithm                 DENY  RUNTIME_CONFIG DENY  RUNTIME_CONFIG
+        merge.conflictstyle            DENY  RUNTIME_CONFIG DENY  RUNTIME_CONFIG
+        control  diff.<d>.textconv     DENY  RUNTIME_CONFIG DENY  RUNTIME_CONFIG
+        control  merge.<m>.driver      DENY  RUNTIME_CONFIG DENY  RUNTIME_CONFIG
+        control  man.<v>.cmd           ALLOW           🔴   DENY  RUNTIME_CONFIG
+        ```
+
+        So the suffix half — this revision's addition — is NOT the cause, and repairing
+        it here would be repairing the wrong object with the wrong revision's budget. It
+        is DECLARED DEBT: it fails in the refusing direction, and narrowing `diff.` and
+        `merge.` to the sub-key forms that actually execute is a change with its own
+        blast radius that belongs to whoever takes it.
+
+        🔴 Asserted `True` on purpose. A successor who narrows those prefixes fails this
+        test and has to come here and say so, rather than discovering later that a
+        recorded behaviour moved with nothing naming it.
+        """
+        inherited = {k: gp.is_execution_control_key(k)
+                     for k in ("diff.algorithm", "merge.conflictstyle",
+                               "diff.colorMoved", "merge.ff")}
+        wrong = {k: v for k, v in inherited.items() if v is not True}
+        self.assertEqual(
+            {}, wrong,
+            "these over-refuse at BOTH revisions; if that has changed, the debt row in "
+            f"CAND-20260830-RTBRIDGE12 § 'declared debt' is now false: {wrong}")
 
     def test_the_new_keys_deny_through_the_policy_and_the_old_ones_still_do(self):
         table = {c: self.verdict(c) for c in (
@@ -739,7 +974,11 @@ class TheRepositoryHookRegistrationIsCoveredByThePremiseItRestsOn(SceneCase):
         This test does NOT claim the exclusion is correct — it claims it is INTENTIONAL
         and that changing it is a governance decision with a stated cost, not a tidy-up.
         """
-        surface = rc.surface()
+        # 🔴 `rc.resolve()`, not `rc.surface()`. The first draft of this test called a
+        # function that does not exist and ERRORED — a test asserting a property of an
+        # API nobody had checked was there, which is the same defect as the docstrings
+        # that claimed this file existed before anyone wrote it.
+        surface = rc.resolve()
         self.assertFalse(
             surface.contains(str(self.scene.assigned / ".claude" / "settings.json")),
             "the repository's own registration is deliberately not a RUNTIME_CONFIG "
@@ -781,6 +1020,77 @@ class TheOrdinaryWorkOfThisRepositoryStillPasses(SceneCase):
             "git commit -m x framework/scripts/guard_policy.py",
         )}
         self.assert_matrix(table, "ALLOW", "named-path staging")
+
+    def test_the_command_this_repository_documents_for_the_release_is_allowed(self):
+        """🔴 Revision 11's worst self-inflicted defect pointed the other way from a
+        bypass: its first silence rule refused `gh repo view "$OWNER/$REPO"`, a command
+        `PUBLISH_RUNBOOK.md` instructs. No test aimed only at bypasses would have caught
+        it, so it is asserted here beside the other three surfaces of that shape.
+        """
+        table = {c: self.verdict(c) for c in (
+            'gh repo view "$OWNER/$REPO"',
+            'printf "%s\\n" "$([ 1 = 1 ] && echo "A -> B")"',
+            "GIT_PAGER=cat git log --oneline -5",
+            "git config user.name",
+            "git remote -v",
+        )}
+        self.assert_matrix(table, "ALLOW", "documented and committed positive controls")
+
+
+# ══ I · AN UNRESOLVABLE VARIABLE IS AN INHERITED OVER-REFUSAL, MEASURED ════════════
+
+class AnUnderivableTargetRefusesAndThatPredatesThisRevision(SceneCase):
+    """🔴 The MIRROR IMAGE of the normalisation defect, and it is declared debt.
+
+    Both are the guard answering a question about an operand it cannot resolve. The
+    normalisation invented membership in a privileged set and LOOSENED; an unresolved
+    variable invents a location and TIGHTENS. Keeping them in one file is the only way a
+    reader sees that the guard has one weakness with two signs.
+
+    The corpus census of this repository's own documented commands measured **22
+    FALSE_REFUSAL of 296 runnable documented lines**, and most of them are this class,
+    not a policy decision. It is NOT repaired here: it predates revision 12, it fails in
+    the refusing direction, and the narrowed scope of this revision puts completeness
+    findings into declared debt. What this class does is FENCE it — if revision 12 had
+    made it worse, these rows would say so.
+
+    🔴 The guard also answers the same unresolvable situation with two different codes —
+    `git clone … "$dst"` as `SHELL_WRITE_IN_ASSIGNED_WORKTREE`, asserting a location it
+    cannot derive, and `> "$dst/f"` as `UNDERIVABLE_TARGET`. Recorded, not repaired.
+    """
+
+    def test_the_literal_half_is_allowed(self):
+        """The positive control, in the same table as the refusal it is paired with. A
+        repair that closed this class by refusing the literals too would pass any
+        bypass-only suite."""
+        table = {c: self.verdict(c) for c in (
+            f"git clone --no-local . {self.scene.scratch}/clone",
+            f"echo x > {self.scene.scratch}/f",
+            f"curl -o {self.scene.scratch}/out.json https://example.invalid/x",
+        )}
+        self.assert_matrix(table, "ALLOW", "the literal spelling of each shape")
+
+    def test_the_variable_half_refuses_at_this_revision_exactly_as_at_the_last(self):
+        """🔴 Asserted DENY on purpose — this is a RECORD, not an endorsement. Measured
+        identical at revision 11 (f3e9816) and here, so revision 12 neither caused it
+        nor made it worse. A successor who repairs it fails this test and has to move
+        the debt row rather than discover the change later.
+        """
+        table = {
+            'git clone --no-local . "$clone_dir"':
+                self.decide('git clone --no-local . "$clone_dir"'),
+            'echo x > "$review_root/f"':
+                self.decide('echo x > "$review_root/f"'),
+            'curl -o "$out" https://example.invalid/x':
+                self.decide('curl -o "$out" https://example.invalid/x'),
+        }
+        verdicts = {k: v[0] for k, v in table.items()}
+        self.assert_matrix(verdicts, "DENY",
+                           "the inherited unresolved-variable over-refusal")
+        codes = {k: v[1] for k, v in table.items()}
+        self.assertEqual(
+            "UNDERIVABLE_TARGET", codes['echo x > "$review_root/f"'],
+            f"the redirect shape changed its code: {codes}")
 
 
 if __name__ == "__main__":

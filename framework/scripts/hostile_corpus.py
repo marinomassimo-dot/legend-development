@@ -113,8 +113,28 @@ ENGINES: Dict[str, Dict[str, object]] = {
                   "framework/scripts/runtime_config.py"),
     },
     "rev11": {
-        # `HEAD` resolves at run time and is REPORTED resolved. The candidate pins it to
-        # its own content tip with `--engine-sha` once that commit exists.
+        # 🔴 Revision 12 PINS this, where revision 11 left it at `HEAD` — the same edit
+        # revision 11 had to make to revision 10's entry, for the same reason, one rung
+        # later. Read from THIS branch, `HEAD` would reconstruct the revision-12 engine
+        # and label the column `rev11`, and `REV11 -> REV12 LOOSENED = 0` would be true
+        # because both columns were the same object.
+        #
+        # The value is revision 11's own CONTENT TIP as `CAND-20260830-RTBRIDGE11.md § 1`
+        # froze it, and it is also this candidate's `BASE_SHA`.
+        "sha": "f3e981675c718d7f43fccee59fbd6ca5002734cb",
+        "entry": "framework/scripts/pre_tool_use_guard.py",
+        "files": ("framework/scripts/pre_tool_use_guard.py",
+                  "framework/scripts/guard_policy.py",
+                  "framework/scripts/effect_model.py",
+                  "framework/scripts/repo_topology.py",
+                  "framework/scripts/session_binding.py",
+                  "framework/scripts/runtime_config.py"),
+    },
+    "rev12": {
+        # `HEAD` resolves at run time and is REPORTED resolved. Only the CURRENT
+        # revision may be pinned to a moving ref — `test_runtime_diagnostics.py`
+        # asserts that — and the candidate replaces it with `--engine-sha
+        # rev12=<content tip>` the moment that commit exists.
         "sha": "HEAD",
         "entry": "framework/scripts/pre_tool_use_guard.py",
         "files": ("framework/scripts/pre_tool_use_guard.py",
@@ -161,11 +181,11 @@ ENGINES: Dict[str, Dict[str, object]] = {
 }
 
 #: The order revisions are reported in, and the order a default run uses.
-REVISIONS: Tuple[str, ...] = ("main", "rev7", "rev8", "rev9", "rev10", "rev11")
+REVISIONS: Tuple[str, ...] = ("main", "rev7", "rev8", "rev9", "rev10", "rev11", "rev12")
 
 #: The revision this corpus is the corpus OF. Its column is the one a reader compares
 #: the others to, and `main` refuses to omit it from a run.
-CURRENT = "rev11"
+CURRENT = "rev12"
 
 # ── the vocabulary a case is described in ──────────────────────────────────────────
 
@@ -187,11 +207,12 @@ class Case:
 
     __slots__ = ("id", "command", "effect_class", "mutating", "positive_control",
                  "rationale", "provenance", "main", "rev7", "rev8", "rev9", "rev10",
-                 "rev11", "workdir", "cwd", "assigned", "program", "tool")
+                 "rev11", "rev12", "workdir", "cwd", "assigned", "program", "tool")
 
     def __init__(self, id: str, command: str, effect_class: str, rationale: str,
                  provenance: str, rev9: str, rev8: str = NA, rev7: str = NA,
                  rev10: Optional[str] = None, rev11: Optional[str] = None,
+                 rev12: Optional[str] = None,
                  main: str = NA,
                  mutating: bool = True, positive_control: bool = False,
                  workdir: Optional[str] = None, cwd: Optional[str] = None,
@@ -220,6 +241,11 @@ class Case:
         # nothing about it — which is the claim most of the corpus makes and the one
         # `MAIN → REV11 LOOSENED = 0` is measured against.
         self.rev11 = self.rev10 if rev11 is None else rev11
+        # 🔴 And `rev12` inherits `rev11`, one rung on. A row that does NOT state its own
+        # revision-12 expectation is asserting that this revision changed nothing about
+        # it — which is the claim `REV11 -> REV12 LOOSENED = 0` rests on, and the runner
+        # reports a contradicted expectation as MISRECORDED rather than overwriting it.
+        self.rev12 = self.rev11 if rev12 is None else rev12
         self.mutating = mutating
         self.positive_control = positive_control
         #: Set only where the case IS about the divergence between them.
@@ -1085,6 +1111,60 @@ CASES: Tuple[Case, ...] = (
          "that closed Q2 by refusing commits would pass it and fail here.",
          REV9_NEW_CONTROL, rev9=ALLOW, rev10=ALLOW, rev11=ALLOW,
          positive_control=True),
+
+    # ── AA · a normalised name may add an effect and never remove one (revision 12) ──
+    #
+    # 🔴 These six exist because revision 12's own repair opened a family, twice, and
+    # neither opening was visible in the 140 cases above. A corpus that cannot see a
+    # regression is not a baseline for the revision that caused it.
+    #
+    # `normalise_program` collapses a version suffix onto a known program so
+    # `python3.12 -c "<write>"` reaches the interpreter model. Its first draft let ANY
+    # name land on ANY known program: `cat2` became `cat`, inherited the reader
+    # exemption, and reached the runtime registration. Subtracting the readers closed
+    # that and left 104 other landing sites conferring their own exemptions. The rule
+    # that closes the family is asymmetric — the normalised key still derives every
+    # effect, and the name AS WRITTEN still earns its own operand finding.
+    Case("AA1-suffix-onto-a-reader",
+         "cat2 <CLAUDE_SETTINGS>", "UNKNOWN_EFFECT",
+         "🔴 The spelling that broke revision 12's first draft. `cat2` is not `cat`; a "
+         "normalisation that says it is has EXEMPTED an unmodelled program from the "
+         "silence rule, at the registration that decides whether this guard runs at all.",
+         PLAN_BRIEF, rev9=ALLOW, rev10=ALLOW, rev11=DENY),
+    Case("AA2-suffix-onto-a-shell",
+         "bash1 <WORKTREE_B>/framework/x", "UNKNOWN_EFFECT",
+         "🔴 The half the reader subtraction did not reach. `bash` is not a reader, so "
+         "`bash1` normalised onto it and took the shell branch's exemption into a peer "
+         "worktree. 56 more program names had the same shape.",
+         PLAN_BRIEF, rev9=ALLOW, rev10=ALLOW, rev11=DENY),
+    Case("AA3-alias-key-onto-an-interpreter",
+         "nodejs <WORKTREE_B>/framework/x", "UNKNOWN_EFFECT",
+         "🔴 The four ALIAS keys were not in `_KNOWN_PROGRAM_NAMES`, so a sweep over "
+         "that set reported them untouched while all four had moved from DENY to ALLOW. "
+         "An alias is a claim about a NAME, not evidence about the binary on `PATH`.",
+         PLAN_BRIEF, rev9=ALLOW, rev10=ALLOW, rev11=DENY),
+    Case("AA4-versioned-interpreter-still-derives-its-write",
+         'python3.12 -c "open(\'framework/x\',\'w\').write(\'x\')"', "WRITE@ASSIGNED",
+         "🔴 The OTHER direction, in the same family. The asymmetric rule must not "
+         "become a revert: revision 11 could not see this write at all, because its "
+         "table was keyed on `python3` and the command said `python3.12`.",
+         PLAN_BRIEF, rev9=ALLOW, rev10=ALLOW, rev11=ALLOW, rev12=DENY),
+    Case("AA5-versioned-interpreter-ordinary-work",
+         "python3.12 framework/scripts/legend_lint.py .", "READ",
+         "🔴 The positive control on the asymmetric rule, and it is what stops the "
+         "repair being paid for with ordinary work. The added operand finding denies "
+         "only where no authority grants a write, so an operand in the actor's own "
+         "worktree costs nothing.",
+         PLAN_BRIEF, rev9=ALLOW, rev10=ALLOW, rev11=ALLOW,
+         mutating=False, positive_control=True),
+    Case("AA6-alternate-shell-blanket-staging",
+         "csh -c 'git add -A'", "STAGE@ASSIGNED",
+         "🔴 A DECLARED list extension, not a normalisation — `csh` is not a version "
+         "spelling of anything. It closes the blanket-staging route through two shells "
+         "revision 11 did not model. Its measured cost is that those two names also "
+         "gain the escape hatch the other nine shells already had, which is stated in "
+         "the candidate as the one residual REV11 -> REV12 loosening.",
+         PLAN_BRIEF, rev9=ALLOW, rev10=ALLOW, rev11=ALLOW, rev12=DENY),
 )
 
 
