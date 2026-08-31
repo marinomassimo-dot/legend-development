@@ -71,6 +71,13 @@ FAMILY_SUITES = ("framework/scripts/test_guard_families_rev11.py",)
 #: mutants already have a killer named. What is wanted is the mutants that attack THIS
 #: revision's repair, aimed at THIS revision's suite.
 FAMILY_SUITES_12 = ("framework/scripts/test_guard_families_rev12.py",)
+#: 🔴 Revision 13's suite, and it was checked as a DISCRIMINATOR before a single mutation
+#: was pointed at it — the rule this file states for `FAMILY_SUITES` and did not apply to
+#: `FAMILY_SUITES_12`. Run unchanged against the revision-12 engine reconstructed at
+#: 5520655 it produces 10 failures of 13; against this tree, none. A suite that passed on
+#: both would kill nothing, and every mutation aimed at it would be EQUIVALENT with
+#: nobody noticing.
+FAMILY_SUITES_13 = ("framework/scripts/test_guard_families_rev13.py",)
 RUNTIME_CONFIG = "framework/scripts/runtime_config.py"
 
 
@@ -1127,6 +1134,82 @@ MUTATIONS = [
         "operands revision 11 counted: `python3.12 -c <peer>/x` loses its target to "
         "`-c`. A negative that must not loosen has to be computed the way the engine it "
         "must not loosen computed it"),
+
+    # ── revision 13's repairs, attacked by revision 13's own suite ────────────────
+    #
+    # 🔴 Why these five exist, stated as the measurement that demanded them.
+    #
+    # Revision 12 froze with 118 operators, 116 KILLED, 2 EQUIVALENT, 0 SURVIVED — and
+    # `wrapper_tail`, `analyse_env_prefix`, `READER_WRITE_MODEL`,
+    # `EXECUTION_CONTROL_KEY_SUFFIXES` and `PACKAGE_RUN_SUBCOMMANDS` were named by ZERO
+    # of the 118, measured with `normalise_program`, `unclassified`, `underived_operand`
+    # and `PURE_READERS` as non-zero positive controls in the same count. Five of the
+    # seven mechanisms that revision declared had no mutant at all.
+    #
+    # A perfect score therefore said nothing about M1, M3 or M7: those were not
+    # BREAKAGES of existing behaviour, they WERE the existing behaviour, and no mutant
+    # could have found them. A mutation score measures FIDELITY, never coverage.
+    #
+    # What these five buy is the future: a regression BACK to revision 12's behaviour is
+    # now a breakage the suite can see. M118 and M119 do not invent a defect — they
+    # reinstate revision 12's exactly, so each is a run of the question "would we notice
+    # if this were undone".
+    Mutation(
+        "M118", GUARD_POLICY,
+        '    carried_command(argv, heredocs, findings, depth,\n'
+        '                    f"carried by `{program}`, a program this guard has no model for")',
+        '    if carried_command(argv, heredocs, findings, depth,\n'
+        '                       f"carried by `{program}`, a program this guard has no model for"):\n'
+        '        return',
+        FAMILY_SUITES_13,
+        "🔴 REVISION 12'S DEFECT, REINSTATED VERBATIM: the wrapper tail SUBSTITUTES for "
+        "the parent's operands instead of adding to them, so `UNDERIVED_OPERAND` is "
+        "dropped for every argv containing a modelled name — 438 loosenings of an "
+        "enumerated 714 against revision 11, and `mytool <registration> env` allowed "
+        "where `mytool <registration>` denied"),
+    Mutation(
+        "M119", GUARD_POLICY,
+        "        rest = strip_wrapper_options(argv[1:], value_flags)\n",
+        "        rest = strip_wrapper_options(argv[1:], value_flags)\n"
+        "        while (program == \"env\" and rest and \"=\" in rest[0]\n"
+        "               and not rest[0].startswith(\"-\")):\n"
+        "            rest.pop(0)\n",
+        FAMILY_SUITES_13,
+        "🔴 REVISION 12'S OTHER DEFECT, REINSTATED: `env` drops its `NAME=VALUE` tokens "
+        "before `analyse_env_prefix` can read them, so `env GIT_CONFIG_KEY_0="
+        "core.hooksPath git status` is allowed while `git -c core.hooksPath=` is "
+        "denied — 18 rows of an enumerated 53 failing revision 12's own invariant A"),
+    Mutation(
+        "M120", GUARD_POLICY,
+        '        carried_command(argv, heredocs, findings, depth,\n'
+        '                        f"carried by `{program}`, a package-manager verb this guard has "\n'
+        '                        "no model for")',
+        '        pass  # an unrecognised package-manager verb derives nothing',
+        FAMILY_SUITES_13,
+        "a package manager's unrecognised RUN VERB stops carrying its command, so "
+        "`PACKAGE_RUN_SUBCOMMANDS` is a five-word list again and `npm run-script`, "
+        "`npm start`, `npm test` and `npm task` each launder their payload — the 7 "
+        "main-to-revision-12 loosenings this revision closed"),
+    Mutation(
+        "M121", GUARD_POLICY,
+        '        carried_command(argv, heredocs, findings, depth,\n'
+        '                        f"carried by `{program}`, an interpreter verb this guard has "\n'
+        '                        "no model for")',
+        '        pass  # an unrecognised interpreter verb derives nothing',
+        FAMILY_SUITES_13,
+        "🔴 THE SECOND SITE, which is a separate mutation on purpose: `deno task <cmd>` "
+        "reaches the interpreter branch and not the package-manager one, so a single "
+        "mutant covering only the first would leave this half unmeasured — which is how "
+        "`deno task` survived revision 12 in the first place"),
+    Mutation(
+        "M122", GUARD_POLICY,
+        "        analyse_env_prefix(assignments, findings)\n",
+        "        pass  # the assignment prefixes are parsed and then not judged\n",
+        FAMILY_SUITES_13 + FAMILY_SUITES_12,
+        "🔴 `analyse_env_prefix` is DEFINED and never CALLED — revision 11's exact "
+        "defect, and the mechanism revision 12 declared while zero of its 118 operators "
+        "named it. Pointed at both family suites because the rule it removes is "
+        "asserted by both"),
 ]
 
 
