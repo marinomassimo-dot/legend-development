@@ -62,6 +62,7 @@ TESTS = (
     # which was failing for this one reason before DISCOVERY was added beside it.
     "governance/scripts/test_candidate_content_hash.py",
     "framework/scripts/test_trace_claim_foundation.py",
+    "framework/scripts/test_legend_handoff.py",
     "framework/scripts/test_build_evidence_index.py",
     "framework/scripts/test_surface_census.py",
     "framework/scripts/test_locator_audit.py",
