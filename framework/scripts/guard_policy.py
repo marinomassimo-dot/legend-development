@@ -1707,21 +1707,26 @@ def flag_value(argv: Sequence[str], *names: str) -> Optional[str]:
     return None
 
 
-def strip_wrapper_options(argv: Sequence[str], value_flags: Iterable[str],
-                          assignments: bool = False) -> List[str]:
+def strip_wrapper_options(argv: Sequence[str], value_flags: Iterable[str]) -> List[str]:
     """Drop a wrapper's OWN leading options and reach the child argv untouched.
 
     🔴 The child argv is returned verbatim, flags included. Filtering `-`-prefixed tokens
     out of the whole tail is what turned `nohup bash -c 'git add -A'` into `bash 'git add
     -A'` — a shell with no script flag, which this guard then had nothing to follow.
+
+    🔴 AN ASSIGNMENT IS NOT AN OPTION, and this function no longer has a switch that says
+    it is. Revision 12 carried `assignments: bool = False`, set only for `env`, which
+    dropped `NAME=VALUE` tokens on the floor before `analyse_env_prefix` could ask what
+    they set — `env GIT_CONFIG_KEY_0=core.hooksPath git status` allowed where
+    `git -c core.hooksPath=…` denied. Stripping stops at the first non-option token now,
+    so the assignments reach `analyse_argv`, which already judges exactly this prefix for
+    a command that has no wrapper. The parameter is removed rather than defaulted off: a
+    switch that turns a derivation off is a bypass with a keyword argument.
     """
     value_flags = frozenset(value_flags)
     rest = list(argv)
     while rest:
         token = rest[0]
-        if assignments and "=" in token and not token.startswith("-"):
-            rest.pop(0)
-            continue
         if not token.startswith("-") or token == "-":
             break
         rest.pop(0)
@@ -1895,7 +1900,32 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
     if program in TRANSPARENT_WRAPPERS or program in POSITIONAL_WRAPPERS or program == "env":
         value_flags = TRANSPARENT_WRAPPERS.get(program) or POSITIONAL_WRAPPERS.get(
             program, frozenset({"-u", "--unset"}))
-        rest = strip_wrapper_options(argv[1:], value_flags, assignments=(program == "env"))
+        # 🔴 `env`'s ASSIGNMENTS ARE NOT ITS OPTIONS — revision 13, and this one line was
+        # a laundry for every rule `analyse_env_prefix` states.
+        #
+        # Revision 12 called this with `assignments=(program == "env")`, which DROPPED the
+        # `NAME=VALUE` tokens before anything looked at them. `analyse_env_prefix` was
+        # then never reached through the `env` spelling, and revision 12's own stated
+        # invariant A — *a configuration key gets ONE answer however it is delivered* —
+        # failed on 18 rows of an enumerated 53:
+        #
+        # ```text
+        # key               git -c   NAME=V git   env NAME=V git   env -i   nohup env
+        # core.hooksPath    DENY     DENY          ALLOW 🔴          ALLOW 🔴  ALLOW 🔴
+        # alias.zz          DENY     DENY          ALLOW 🔴          ALLOW 🔴  ALLOW 🔴
+        # filter.x.clean    DENY     DENY          ALLOW 🔴          ALLOW 🔴  ALLOW 🔴
+        # pager.log         DENY     DENY          ALLOW 🔴          ALLOW 🔴  ALLOW 🔴
+        # GIT_CONFIG_GLOBAL / LD_PRELOAD / GIT_EDITOR   prefix DENY, env ALLOW 🔴
+        # control  user.name · color.ui   ALLOW in all six spellings          12/12
+        # ```
+        #
+        # The repair is not a second copy of the rule for `env`. It is to STOP STRIPPING,
+        # so the assignments arrive at the top of `analyse_argv` and are judged by the one
+        # loop that judges a bare `NAME=VALUE git …` prefix. `sudo` already denied these,
+        # for exactly that reason: it never stripped them. Same object, same code, same
+        # answer — which is what the invariant asks for and what a duplicated rule could
+        # not promise.
+        rest = strip_wrapper_options(argv[1:], value_flags)
         if program in POSITIONAL_WRAPPERS:
             rest = rest[1:]  # the duration, or the new root
         analyse_argv(rest, [], heredocs, findings, depth + 1)
@@ -2109,9 +2139,37 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
                                     [into] if into else [UNNAMED],
                                     "unpacks packages this command does not enumerate "
                                     "into a directory it may not name"))
+            return
+        # 🔴 A VERB THIS BRANCH DOES NOT KNOW IS STILL A CARRIER — revision 13.
+        #
+        # `PACKAGE_RUN_SUBCOMMANDS` is five words, and `npm run-script` — npm's own
+        # documented alias for `npm run` — is not one of them. Neither is `npm start`,
+        # `npm test`, or `deno task`. Revision 12 fell out of this branch deriving
+        # NOTHING, so the payload behind an unrecognised verb was never read at all.
+        # Measured against `main`, two payloads per wrapper so the attribution is
+        # separable (26 rows):
+        #
+        # ```text
+        #                         main   revision 12   revision 13
+        # npm run-script <blanket-staging>   DENY   ALLOW 🔴   DENY
+        # npm start / test / node / task / script, deno task — the same seven
+        # npm run-script rm -rf <peer>/framework   ALLOW  ALLOW 🔴  DENY
+        # control  npm run · npm exec · npx · uvx        DENY at 12 and 13
+        # LOOSENED main -> revision 12  7 of 26      LOOSENED main -> revision 13  0
+        # ```
+        #
+        # main's refusal of the first payload was a TEXT match on the blanket string, not
+        # a safety property: it allowed the destructive payload behind every one of those
+        # verbs. So the answer is not to enumerate more verbs — that is the same list one
+        # entry longer. The tail is read as the command it is, by the same law
+        # `unclassified` applies to a wrapper nobody modelled, and it fires only when the
+        # argv actually names a program some table here models. `npm ls`, `npm view react`
+        # and `npm audit` carry nothing and are untouched.
+        carried_command(argv, heredocs, findings, depth,
+                        f"carried by `{program}`, whose verb this guard has no model for")
         return
     if program in INTERPRETERS:
-        analyse_interpreter(argv, program, heredocs, findings)
+        analyse_interpreter(argv, program, heredocs, findings, depth)
         return
     if program in ("apply_patch", "applypatch"):
         targets: List[str] = []
@@ -2449,16 +2507,43 @@ def unclassified(argv: Sequence[str], program: str, findings: List[Finding],
     # happens to be spelled like a program: `mytool rm` re-reads as `rm` with no operand
     # and is refused. That is the trade this policy has always made for an unmodelled
     # program, and it is bounded by only scanning names the tables already carry.
-    child = wrapper_tail(argv)
-    if child is not None:
-        sub: List[Finding] = []
-        analyse_argv(list(child), [], list(heredocs), sub, depth + 1)
-        for finding in sub:
-            finding.detail = (finding.detail + f" · carried by `{program}`, a program "
-                              "this guard has no model for").strip(" ·")
-        findings.extend(sub)
-        return
+    carried_command(argv, heredocs, findings, depth,
+                    f"carried by `{program}`, a program this guard has no model for")
 
+    # 🔴 AND THEN THE PARENT'S OWN OPERANDS. THE TAIL ADDS; IT DOES NOT SUBSTITUTE —
+    # revision 13.
+    #
+    # Revision 12 `return`ed as soon as a tail was found, so a modelled name appearing
+    # ANYWHERE in an unmodelled program's argv REPLACED the parent's derivation instead
+    # of adding to it, and `UNDERIVED_OPERAND` — the revision-11 "same object, same
+    # answer" repair — was dropped for every such command. Measured over the population
+    # enumerated from this module (118 `WRAPPER_TAIL_PROGRAMS` × 2 positions × 3 confined
+    # scopes = 708, + 6 controls = 714):
+    #
+    # ```text
+    # denominator                                                714
+    # LOOSENED  revision 11 -> revision 12                        438
+    # LOOSENED  revision 11 -> revision 13                          0
+    # control  no-tail PEER / SHARED / GITDIR   PROHIBITED at 11, 12 and 13    3/3
+    # control  own-worktree / tmp / `ls -la`    ALLOWED    at 11, 12 and 13    3/3
+    # ```
+    #
+    # `mytool <peer>/framework/x` was refused and `mytool <peer>/framework/x env` was
+    # allowed: the same object, reached through the same unmodelled program, answered two
+    # ways because a trailing word happened to name something this module models. It
+    # reached the registration that decides whether this guard runs at all —
+    # `mytool ~/.claude/settings.json env` ALLOWED where the same command without the
+    # tail word DENIED.
+    #
+    # This is the rule `analyse_argv` states for normalisation — A NORMALISED NAME MAY
+    # ADD AN EFFECT AND MAY NEVER REMOVE ONE — applied to the OTHER place this module
+    # re-reads a name. Adding an effect is what a tail is for; removing one is not.
+    #
+    # 🔴 Keyed on the NORMALISED `program`, because that is the key revision 11's
+    # `unclassified` computed its operands with. The negative that must not be loosened
+    # has to be computed the way the engine that must not be loosened computed it — the
+    # mirror image of the `renamed_by_normalisation` call site, which keys on the name AS
+    # WRITTEN for exactly the same reason.
     underived_operand(argv, program, findings)
 
 
@@ -2506,6 +2591,41 @@ def wrapper_tail(argv: Sequence[str]) -> "Optional[List[str]]":
         if name in WRAPPER_TAIL_PROGRAMS:
             return list(argv[index:])
     return None
+
+
+def carried_command(argv: Sequence[str], heredocs: Sequence[str],
+                    findings: List[Finding], depth: int, note: str) -> bool:
+    """Analyse the command an argv CARRIES, and say whether it carried one.
+
+    Split out of `unclassified` because revision 13 needs the wrapper-tail law at THREE
+    sites, and a law that exists at one call site is a list of one — the shape this
+    module has now repaired four times.
+
+    ```text
+    an unmodelled program            `mytool git add -A`      — revision 12's site
+    a package manager's unknown VERB `npm run-script git …`   — revision 13
+    an interpreter's unknown VERB    `deno task git …`        — revision 13
+    ```
+
+    The two new sites are not "programs nobody modelled". They are programs this module
+    DOES model, invoked in a SHAPE it does not: `PACKAGE_RUN_SUBCOMMANDS` enumerated five
+    verbs, and `npm run-script` — npm's own documented alias for `npm run` — was not one
+    of them. A list standing in for a family, which is what `wrapper_tail` exists to stop.
+
+    🔴 It ADDS. Every caller keeps deriving whatever it derives on its own account; this
+    function only ever appends. Returning `True` is for a caller that needs to know a
+    child was found, not a licence to skip its own derivation — revision 12's
+    `unclassified` skipped its own derivation and lost 438 refusals for it.
+    """
+    child = wrapper_tail(argv)
+    if child is None:
+        return False
+    sub: List[Finding] = []
+    analyse_argv(list(child), [], list(heredocs), sub, depth + 1)
+    for finding in sub:
+        finding.detail = (finding.detail + " · " + note).strip(" ·")
+    findings.extend(sub)
+    return True
 
 
 #: `git <sub>` families beyond add/commit/stage. Revision 7 derived NOTHING for any of
@@ -3036,7 +3156,7 @@ def analyse_git_config(rest: List[str], findings: List[Finding]) -> None:
 
 
 def analyse_interpreter(argv: List[str], program: str, heredocs: List[str],
-                        findings: List[Finding]) -> None:
+                        findings: List[Finding], depth: int = 0) -> None:
     """`python3 -c …`, `perl -pi -e …`, `node -e …`, and the heredoc-fed forms."""
     if program == "perl" and has_flag(argv, "-i"):
         findings.append(Finding("IN_PLACE_EDIT", "perl -i",
@@ -3092,6 +3212,26 @@ def analyse_interpreter(argv: List[str], program: str, heredocs: List[str],
     reads_stdin = any(t == "-" for t in argv[1:]) or len(argv) == 1
     if reads_stdin:
         bodies.extend(heredocs)
+
+    if not bodies:
+        # 🔴 A RUN VERB IS NOT A SCRIPT — revision 13, and the second half of the
+        # `PACKAGE_RUN_SUBCOMMANDS` repair.
+        #
+        # `deno` and `bun` are in `INTERPRETERS`, so `deno task <command>` reached here,
+        # found no `-e` body and no `-m` module, and derived nothing:
+        # `deno task git add -A` ALLOWED at revision 12, DENIED by `main`'s text match.
+        # Adding `task` to a list of verbs would repair one word; reading the tail as the
+        # command it is repairs the shape, and it is the law `unclassified` already
+        # applies to a wrapper nobody modelled.
+        #
+        # 🔴 Only when NO inline body was found. An interpreter running a program this
+        # guard has read has already been derived from, and its remaining argv is that
+        # program's arguments, not a command — `python3 -c '…' git` is left alone, and
+        # said so here rather than discovered later. `python3 script.py` is untouched
+        # too: `script.py` does not normalise onto `script` (the version-suffix rule
+        # only peels digits), so no tail is found and nothing is appended.
+        carried_command(argv, heredocs, findings, depth,
+                        f"carried by `{program}`, whose verb this guard has no model for")
 
     for body in bodies:
         for match in SHELL_OUT.finditer(body):
