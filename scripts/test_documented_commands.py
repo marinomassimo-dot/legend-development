@@ -99,13 +99,17 @@ def documented_cli_invocations() -> list[tuple[Path, int, Path, str]]:
                 reference = match.group("path")
                 target = resolve_reference(document, reference)
                 if target is not None and target.is_file():
+                    # A command written inside a markdown code span ends at the closing
+                    # backtick; everything after it is prose. Without this the closing
+                    # backtick is captured as part of the first argument and becomes a
+                    # bogus sub-command — `fulltext_receipts.py verify` in five session
+                    # evaluations of 2026-08-05/06 was reported as "--help exited 2" for
+                    # exactly that reason. The records are historical evidence and are not
+                    # edited to make a checker pass; the checker is the defect and is fixed
+                    # here.
+                    arguments = match.group("arguments").split("`", 1)[0]
                     invocations.append(
-                        (
-                            document,
-                            line_number,
-                            target,
-                            match.group("arguments"),
-                        )
+                        (document, line_number, target, arguments)
                     )
             index += 1
     return invocations

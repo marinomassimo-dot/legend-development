@@ -56,6 +56,11 @@ TESTS = (
     "framework/scripts/test_regenerate_adjudications.py",
     "framework/scripts/test_growth_anchors.py",
     "framework/scripts/test_record_conventions.py",
+    "framework/scripts/test_artifact_index.py",
+    # Tracked and passing, but absent from this inventory until 2026-08-23 — found by
+    # test_release_runner_verdict.py's own "every tracked suite is actually run" check,
+    # which was failing for this one reason before DISCOVERY was added beside it.
+    "governance/scripts/test_candidate_content_hash.py",
     "framework/scripts/test_trace_claim_foundation.py",
     "framework/scripts/test_build_evidence_index.py",
     "framework/scripts/test_surface_census.py",
@@ -66,6 +71,18 @@ TESTS = (
     "framework/scripts/test_figure_ppi_preflight.py",
     "framework/scripts/test_pmc_pow_fetch.py",
     "framework/scripts/test_recapture_snippets.py",
+    # The runtime bridge: one guard engine registered by both runtimes, and the battery
+    # that refuses the bridge when they stop agreeing. Added 2026-08-26 with the bridge.
+    "framework/scripts/test_pre_tool_use_guard.py",
+    "framework/scripts/test_runtime_parity.py",
+    # The probe behind the matcher list. Its finding is a set of ZEROES — which tool names
+    # never appear — and a zero from a sweep that silently parsed nothing is indistinguish-
+    # able from a zero that is true. This suite is the positive control for those zeroes.
+    # 🔴 `codex_runtime_probe.py` itself is NOT enrolled: it reads ~/.codex, which does not
+    # exist in CI, and `mutate_guard_suite.py` is not enrolled either — it spawns a worktree
+    # per mutation and takes tens of minutes. Both are operator-run instruments; only their
+    # parsing is a regression.
+    "framework/scripts/test_codex_runtime_probe.py",
     ".claude/skills/legend-study-intake-triage/scripts/"
     "test_study_dedup_triage.py",
     ".claude/skills/legend-batch-inferential-sweep/scripts/"

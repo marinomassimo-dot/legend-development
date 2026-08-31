@@ -1,37 +1,125 @@
-# AGENTS.md — agent entrypoint (thin pointer)
+# AGENTS.md — the Codex adapter, and nothing else
 
-This file is only the **entry point** for Codex and compatible agentic tooling.
-[`CLAUDE.md`](CLAUDE.md) is the **router**: it is deliberately minimal and does not itself carry
-the operating law. The normative sources it routes to are
-[`framework/instruction/LEGEND_CORE.md`](framework/instruction/LEGEND_CORE.md),
-[`framework/instruction/epistemic_discipline.md`](framework/instruction/epistemic_discipline.md),
-[`framework/master/gold_is_in_the_details.md`](framework/master/gold_is_in_the_details.md),
-[`framework/master/designed_for_growth.md`](framework/master/designed_for_growth.md),
-[`framework/protocols/`](framework/protocols/) and, for the multi-agent laboratory,
-[`governance/`](governance/) with [`roles/`](roles/).
-No content is duplicated here: follow the router and operate from what it names. That is
-deliberate — two parallel normative files drift.
+This file exists so that a Codex-hosted session reaches **the same instruction chain a
+Claude-hosted session reaches**, and so that the difference between the two runtimes is
+*declared* rather than discovered. It carries no operating law of its own. Every rule it
+could restate already has a home, and a rule with two homes drifts — which is not a
+worry here but a measurement: on 2026-08-26 four live `codex/*` branches were found
+carrying an `AGENTS.md` whose sync rule contradicted the one on `main`, unnoticed for
+sixteen days, because nothing checks this file against anything.
 
-## Read order (mandatory, in this order)
+> `ACTOR_ID != RUNTIME != SESSION != WORKTREE != AUTHORITY`
+>
+> You are running **Codex**. That is a runtime. It is not an actor, it is not an
+> authority, and it does not decide which of those you have.
 
-1. [`framework/state/state_manifest_current.md`](framework/state/state_manifest_current.md) — the live state, **always first**; confirm `current_state: READY`.
-2. [`CLAUDE.md`](CLAUDE.md) — the router, then the normative files it names for the work at hand.
-3. The bootstrap skills named in `CLAUDE.md`: [`legend-capability-scout`](.claude/skills/legend-capability-scout/SKILL.md), [`legend-session-takeaways`](.claude/skills/legend-session-takeaways/SKILL.md), and [`legend`](.claude/skills/legend/SKILL.md) as the autopilot when a study list is supplied.
-4. The 4 canonical current files in [`disease-models/wwox/registries/`](disease-models/wwox/registries/) (plus [`meta_index_current.md`](disease-models/wwox/meta/meta_index_current.md) for Standard sessions).
+The whole contract is in
+[`framework/protocols/runtime_bridge.md`](framework/protocols/runtime_bridge.md).
+Read it before you act on anything below.
 
-## Inviolable facts (valid before you have finished reading `CLAUDE.md`)
+---
 
-- The **4 scientific current files** change **only** via `BATCH_COMMIT`. Never reconstruct them from chat memory.
-- LINT gate: `python3 framework/scripts/legend_lint.py .` → exit `0` ok · exit `2` = only `BATCH_COMMIT` blocked (read-only deep dive / ingest may continue) · exit `3` = `BLOCK_SYSTEM`, recovery mandatory.
-- Publication gate: `python3 scripts/public_release_gate.py` must return `PASS` before anything leaves this repository. `python3 scripts/run_release_regressions.py` runs every release suite.
-- In a deep dive the full text must be read **in full**; `grep`/keyword is **forbidden** as a method of analysing a study (allowed only for file-finding, dedup, post-reading audit).
-- Every full-text analysis, regardless of route, must emit and persist a `FULLTEXT_READ_RECEIPT`; retrieval, indexing or RAG queries never count as a complete read. Check existing receipts before rereading.
-- **A local abstract corpus is not full-text evidence.** [`pubmed_corpus_harvest.py`](framework/scripts/pubmed_corpus_harvest.py) writes a gitignored census/triage corpus whose artefact declares `evidential_status: NOT_EVIDENCE`; an honest `abstract_only` event is allowed but clears no reading debt. **Un abstract non è una lettura.** A new complete read requires a local full-text artifact with matching SHA-256 plus a schema-v2 manifest: every evidentiary locator must name a non-abstract `surface` and a fingerprinted `artifact`, and text quotes are matched against the declared file with the XML abstract separated from its body. The authoritative append primitive fails closed on any missing validator, artifact, surface, quote or declared gap; direct calls cannot bypass the CLI gate. Hundreds of greppable abstracts make answering from them feel like working — that is the whole hazard. Retractions and expressions of concern carried by the seed create `PUBLICATION_INTEGRITY_HOLD`; LINT blocks `BATCH_COMMIT` when a canonical claim links a held PAPER, while ordinary errata remain annotations.
-- **Capture verbatim locators while the document is open.** For every statement the reading will carry out, record what it is evidence *for*, the sentence quoted verbatim, and its position — section, figure or table. They go in the work manifest under `verbatim_locators`, and `deepdive_manifest.py` refuses a `complete_fulltext_read` without them. A receipt attests that a document was read; it does not attest which sentence supports which statement, and on 2026-08-04 an export found no verbatim locator anywhere in the canonical state. Waiving is allowed with an argument; silence is not.
-- Append-only files never lose entries — only status changes.
-- **Nothing is medical advice**: every clinical-strategic output exists to support discussion with a treating clinical team.
-- The public edition contains **no individual-level record**. Where the private edition reasons about one person, this edition reasons about **the reference genotype**, a disease-level genotype class. Do not reintroduce individual linkage, family-relationship data, institutions, dates or record identifiers.
+## 1 · The chain, in this order
 
-## Sync rule
+| # | Read | Why it is here and not summarised here |
+|---|---|---|
+| 1 | [`framework/state/state_manifest_current.md`](framework/state/state_manifest_current.md) | the live state; confirm `current_state: READY` |
+| 2 | [`CLAUDE.md`](CLAUDE.md) | the router — **including its § 0**, which binds before anything else and which this file deliberately does not copy |
+| 3 | [`BOOTSTRAP.md`](BOOTSTRAP.md) | if there is no valid runtime inventory and no `ACTIVE` `ORCHESTRATOR_LEASE`. Being in the root does not make you the Orchestrator |
+| 4 | [`governance/ANNEX_INDEX.md`](governance/ANNEX_INDEX.md) → the body and annexes | the constitution |
+| 5 | [`roles/`](roles/) — **your own contract, named by the operator** | who you are is assigned, never inferred |
+| 6 | [`framework/protocols/index.md`](framework/protocols/index.md) and the skills `CLAUDE.md` § 2 names | the procedures for the work at hand |
 
-If this file and the normative sources diverge, **the normative sources + the state manifest win** — `CLAUDE.md` routes, it does not adjudicate. This file is deliberately minimal: update it **only** if the read order or the inviolable facts above change — **never** re-duplicate the normative files.
+`CLAUDE.md` is the router for both runtimes. It is not "the Claude file": it is the
+shared entry, and this file's only job is to put a Codex session on it with the runtime
+difference stated.
+
+### 1.1 · Three obligations, **named here and stated elsewhere**
+
+These bind before you reach the protocol that defines them, so an entry point that does
+not at least *name* them makes them optional in practice. What follows is the name and
+the address. **The rule itself is not reproduced here** — go and read it, because a rule
+with two homes is a rule with two versions.
+
+| Obligation | Where the rule actually lives |
+|---|---|
+| `FULLTEXT_READ_RECEIPT` — every full-text analysis emits and persists one, on every route | [`framework/protocols/fulltext_read_receipt.md`](framework/protocols/fulltext_read_receipt.md) |
+| `verbatim_locators` — captured while the document is open, and `deepdive_manifest.py` refuses a complete read without them | [`framework/protocols/fulltext_read_receipt.md`](framework/protocols/fulltext_read_receipt.md), enforced by [`framework/scripts/deepdive_manifest.py`](framework/scripts/deepdive_manifest.py) |
+| the local abstract corpus written by [`pubmed_corpus_harvest.py`](framework/scripts/pubmed_corpus_harvest.py) is a census, not evidence — **un abstract non è una lettura**, and it clears no reading debt | the harvester's own `evidential_status` declaration, and [`framework/master/gold_is_in_the_details.md`](framework/master/gold_is_in_the_details.md) |
+
+Naming is not stating: nothing above tells you what to *do*, and every one of them will
+refuse you at a gate if you skipped its file.
+
+## 2 · Fail closed
+
+**If any surface in § 1 cannot be read, stop.** Do not proceed on the ones that loaded, and
+do not reconstruct the missing one from memory or from this file. Record
+`BLOCKED_BY_GOVERNANCE`, name the surface, and ask the operator.
+
+Derive that mechanically before your first write, never by impression:
+
+```bash
+python3 framework/scripts/runtime_parity.py --bootstrap
+```
+
+It prints `ACTOR_ID`, worktree, branch, `HEAD`, dirty state, role contract and its
+`sha256`, governance fingerprint, lease state, the gates you owe, and **two separate
+verdicts** — `READ_ONLY_PARITY` and `WRITE_ENABLED_PARITY`. It **exits non-zero** while
+either is unresolved. A non-zero exit is not advice.
+
+🔴 **`--bootstrap` will not choose an actor for you.** With no `ACTOR_ID` it reports
+`UNRESOLVED` and blocks, and an `ACTOR_ID` naming no role contract is refused rather than
+approximated. That is § 4 made mechanical, not a convenience it declines to offer.
+
+## 3 · What is not equivalent, and must not be assumed
+
+Two runtimes reaching the same rule is not two runtimes having the same powers. Before
+you rely on a capability, check it against
+[`framework/protocols/runtime_bridge.md`](framework/protocols/runtime_bridge.md) § 3 —
+which is the list, kept in one place, of what this runtime does **not** have here:
+`.claude/skills` and `.claude/agents` are readable by path but are **not** discovered or
+applied automatically, the `claude`-bound launch kernel in [`launch/`](launch/) does not
+run, and the cross-session transport primitives are Claude-side.
+
+Declare every one of them `UNAVAILABLE` or `UNVERIFIED` in your registration rather than
+working around it. A capability nobody smoke-tested is not a capability — body § 38,
+`CONFIGURED != PROVEN` — and that rule does not soften because the runtime changed.
+
+## 4 · Your ACTOR_ID
+
+**It is assigned by the operator and confirmed at registration.** It is never derived
+from the runtime you are hosted on, the session you are in, the directory you opened, or
+the branch you are on. A working directory is not an identity, in either direction; the
+lease is the Orchestrator's authority and nothing else is.
+
+If you do not know your `ACTOR_ID`, you do not have one yet. Ask.
+
+## 5 · The write guard
+
+Codex registers the same engine Claude registers —
+[`framework/scripts/pre_tool_use_guard.py`](framework/scripts/pre_tool_use_guard.py),
+declared in [`.codex/config.toml`](.codex/config.toml). There is no Codex copy of the
+policy, and there must never be one.
+
+Check the state, never assume it:
+
+```bash
+python3 framework/scripts/runtime_parity.py --hook-status
+```
+
+Only `DEMONSTRATED` — a session-probe receipt recording an actual refusal — permits a
+write. `CONFIGURED` and `TRUST_PENDING` do not: a registration that parses is not a
+control, and the runtime gates project hooks behind a review this repository cannot read.
+While it is anything else **you are read-only**, and what is holding is the Codex sandbox,
+not this sentence.
+
+🔴 The repository gives you **textual authority, one enforced class of shell mutation, CI
+on push, and audit**. It does not enforce who you are or what you may decide — see
+[`framework/protocols/runtime_bridge.md`](framework/protocols/runtime_bridge.md) § 3.1,
+which states exactly what was checked. Do not read a passing gate as permission.
+
+## 6 · Sync rule
+
+Normative sources and the state manifest win. This file routes and declares; it
+adjudicates nothing. Change it only when the chain in § 1 changes — never to restate a
+rule that already has a home.

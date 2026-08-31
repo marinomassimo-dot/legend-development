@@ -1,0 +1,146 @@
+# LEGEND — Codex adapter registration.
+#
+# This file is the Codex half of the runtime bridge. Its Claude counterpart is
+# `.claude/settings.json`, and BOTH register the SAME engine:
+# `framework/scripts/pre_tool_use_guard.py`. There is no Codex copy of the policy and
+# there must never be one — see `framework/protocols/runtime_bridge.md`.
+#
+# ─────────────────────────────────────────────────────────────────────────────────
+# WHAT WAS MEASURED, AND WHAT WAS NOT
+# ─────────────────────────────────────────────────────────────────────────────────
+#
+# Against the installed runtime (codex-cli 0.147.0), with controls, on 2026-08-26:
+#
+#   OBSERVED    a project `.codex/config.toml` IS loaded — a deliberately wrong type on
+#               a known key (`model = 1`) made `codex doctor` exit 1 from a scratch
+#               fixture, while an unknown key (`zzz_fake = 1`) exited 0.
+#   OBSERVED    `hooks.PreToolUse` is a recognized config key: wrong-typed values (`hooks=1`,
+#               `hooks="x"`, `hooks.PreToolUse=1`) are a hard config error on three
+#               consecutive runs, while an invented key at the same depth
+#               (`zzz.PreToolUse=1`) is ignored. Three controls, both directions.
+#   OBSERVED    the group shape written below parses.
+#
+#   🔴 WITHDRAWN — an earlier revision of this comment said `matcher` is REQUIRED, on a
+#   single run that returned an error for a group without one. It does not reproduce:
+#   three consecutive runs accept a matcher-less group while the controls stay correct.
+#   The claim is withdrawn rather than quietly deleted, because it had already been used
+#   to judge another actor's registration. `matcher` is used below to scope the hook to
+#   shell tools, which is a choice this file makes, not a requirement the runtime imposes.
+#   DOCUMENTED  the runtime describes this file as "Project `.codex/config.toml`:
+#               settings for a trusted repository, including sandbox, MCP, hooks, model,
+#               and reasoning defaults", and gates project-local hooks behind directory
+#               trust and a persisted hook hash.
+#
+#   🔴 NOT OBSERVED — that the hook actually FIRES, and that it fires BEFORE the shell
+#   mutates anything. `codex doctor --json` reports 18 checks and NOT ONE of them is about
+#   hooks — the word does not occur in its report — so no local no-cost probe can settle
+#   it; settling it needs a Codex session, which is a spend. Until a session probe records
+#   otherwise, `framework/scripts/runtime_parity.py --hook-status` reports TRUST_PENDING
+#   and the write floor FAILS. Parsing is not firing, and a registration that parses is
+#   not a control.
+#
+#   🔴 TRUST_PENDING, and why that word rather than CONFIGURED. The installed binary
+#   carries its own per-hook trust gate — the strings "New hook - review required",
+#   "Modified since last trusted - review required", "Trusted", "Managed hooks are always
+#   on", "1 hook needs review before it can run." — and a `bypass_hook_trust` config key.
+#   `~/.codex/config.toml` grants DIRECTORY trust to /Users/massimo/Desktop/legend-public,
+#   which every worktree beneath it inherits; the PER-HOOK review state is not recorded
+#   anywhere this repository can read. So the gate is DOCUMENTED and which side of it this
+#   file is on is UNVERIFIED. That distinction is the whole of § 38 here, and it must not
+#   be collapsed into a cause: a peer reported the hook not firing and was careful that the
+#   trust gate was an inference from a flag's existence, not a measurement. It still is.
+#
+# ─────────────────────────────────────────────────────────────────────────────────
+# THE MATCHER LIST, AND THE TOOL NAME THAT WAS MISSING FROM IT
+# ─────────────────────────────────────────────────────────────────────────────────
+#
+#   🔴 OBSERVED, 2026-08-28, over the WHOLE local session corpus — `shell_command` and
+#   `unified_exec` appear ZERO times in 62 recorded sessions. In the 17 whose cwd is inside
+#   this repository the tool is `exec` 2988 times and nothing else but `wait`; `exec_command`
+#   survives across the corpus only on cli_version <= 0.145, which is why it stays declared.
+#   Each `exec` call carries a JavaScript body calling
+#   `tools.exec_command({"cmd": …, "workdir": …})`.
+#
+#   INSTRUMENT  python3 framework/scripts/codex_runtime_probe.py   (read-only, no spend)
+#               It prints MATCHER_COVERAGE — declared, used-here, used-and-undeclared,
+#               declared-and-never-seen — so this list cannot go stale silently again.
+#
+#   🔴 The first reading of this said "20 calls in one session". That was a count taken
+#   from a rollout that was STILL RUNNING; the same file reached 27 an hour later. The
+#   claim that survives is the proportion, not the count.
+#
+#   A two-matcher registration would therefore have policed nothing in any recorded session
+#   even had it fired, and the parity battery would have gone on reporting a guard that was
+#   never consulted. `exec`, `exec_command` and `apply_patch` are registered below, and
+#   `pre_tool_use_guard.py` reduces a code-mode body to the shell commands inside it.
+#
+#   🔴 The runtime that ran was NOT the runtime this file was measured against: 0.147.0 on
+#   the CLI, 0.150.0-alpha.8 in the extension. Under `cross_session_transport.md` § 3 that
+#   makes every row above UNMEASURED for the extension host rather than false.
+#
+# ─────────────────────────────────────────────────────────────────────────────────
+# WHY THE COMMAND PATH IS RELATIVE
+# ─────────────────────────────────────────────────────────────────────────────────
+#
+# `deployment/deployment_profile.md` forbids an absolute path anywhere in the portable
+# half: one hard-coded home directory makes a clone non-portable, and this file is
+# tracked into every worktree. Codex resolves the repository root per working directory
+# — `codex doctor` reported `repo root` as the worktree, not the shared checkout — so a
+# relative path resolves correctly in each actor's own worktree, which is also the only
+# reading of `ONE_WRITER_PER_WORKING_DIRECTORY` that survives six actors.
+#
+# ─────────────────────────────────────────────────────────────────────────────────
+# 🔴 REVISION 10 — THIS FILE IS NOT A DEPLOYABLE REGISTRATION, AND SAYS SO
+# ─────────────────────────────────────────────────────────────────────────────────
+#
+# `framework/scripts/codex_registration.py --config .codex/config.toml` measures this
+# file and reports:
+#
+#     ANCHORING       UNANCHORED
+#     RESOLVED_ENGINE_PATH   UNDERIVABLE
+#
+# The paragraph above is not withdrawn — its reasoning about portability is right, and it
+# is why the path CANNOT simply be made absolute here. What it did not say is that the
+# consequence is a registration that names a different file depending on which directory
+# the runtime starts the hook process in. `codex doctor` reporting a repo root is a
+# statement about `codex doctor`, not a guarantee about the hook process's cwd, and it was
+# read as one.
+#
+# Compounding it, and measured at revision 9: codex-cli 0.147.0 resolves the PROJECT
+# config layer through git to the SHARED CHECKOUT, so a linked worktree's own `.codex` is
+# never read at all. Where this file IS read, the engine is absent (`main` carries the
+# legacy guard); where the engine exists, this file is not read.
+#
+# The DEPLOYMENT PROTOCOL, and nothing here performs it:
+#
+#   routes A/B/C   the config is machine-local and never committed, so the engine path is
+#                  ABSOLUTE. Render it with
+#                      codex_registration.py --emit-registration <ABS ENGINE PATH>
+#                  which PRINTS; placing the output is an operator act.
+#   route D        a tracked config may not carry this machine's layout, so it needs a
+#                  Codex runtime anchor variable — `$CODEX_PROJECT_DIR` or equivalent.
+#                  🔴 NOT MEASURED. No such variable has been observed in a Codex hook
+#                  environment here, and until one is, route D cannot be anchored.
+#
+# The hooks below are therefore a SHAPE that parses, kept because the shape itself was
+# measured, and NOT a control. `codex_registration.preconditions_met` refuses to let a
+# live probe start against an UNANCHORED registration.
+
+[hooks]
+PreToolUse = [
+  { matcher = "shell_command", hooks = [
+    { type = "command", command = "python3 framework/scripts/pre_tool_use_guard.py" },
+  ] },
+  { matcher = "unified_exec", hooks = [
+    { type = "command", command = "python3 framework/scripts/pre_tool_use_guard.py" },
+  ] },
+  { matcher = "exec_command", hooks = [
+    { type = "command", command = "python3 framework/scripts/pre_tool_use_guard.py" },
+  ] },
+  { matcher = "exec", hooks = [
+    { type = "command", command = "python3 framework/scripts/pre_tool_use_guard.py" },
+  ] },
+  { matcher = "apply_patch", hooks = [
+    { type = "command", command = "python3 framework/scripts/pre_tool_use_guard.py" },
+  ] },
+]

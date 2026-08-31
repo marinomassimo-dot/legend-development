@@ -3583,3 +3583,60 @@ reference list, lo **stato già-letto** di un riferimento verificato contro il l
 **incoerenze interne** fra `resolved`, `queued` e `gap`. Restano materia di ispezione e review la
 **lettura dei pixel** e la **verità semantica** delle relazioni `panel_text_relation`. Una cosa è
 dire che un controllo non l'ha vista; un'altra è dire che non poteva.
+
+---
+
+## FT-073 — The only primary behind DisMech's TGF-β arm, and LEGEND has no object for it
+
+**Paper:** PMID 27845895 / DOI 10.18632/oncotarget.13268 / PMCID PMC5386674 — Hsu LJ *et al.*,
+*Oncotarget* 2017;8(12):19137–19155 — *Hyaluronan activates Hyal-2/WWOX/Smad4 signaling and causes
+bubbling cell death when the signaling complex is overexpressed*.
+**Surface:** not yet retrieved. PMC record exists (`PMC5386674`, pmc-release 2017-03-21), so an
+open-access route is expected to exist and has not been exercised.
+**Priority:** **MEDIA**
+**Epistemic status:** declared reading debt. Nothing is inferred from this paper anywhere in this
+repository, and nothing may be until it is read.
+
+**Why.** The current public DisMech entry for WWOX-DEE
+(`kb/disorders/WWOX-Related_Developmental_and_Epileptic_Encephalopathy.yaml`, blob
+`d61eff6b37de0c280908c269814b798065e32959`) carries a pathophysiology node
+*Hyal-2/WWOX/Smad4 Complex Failure* whose **single** evidence item is this PMID, quoted as
+*"In WWOX-deficient cells, HA failed to induce Smad2/3/4 relocation to the nucleus."*
+
+**Current LEGEND state for this identifier — enumerated, not asserted.** No `PAPER` record, no
+`CORPUS-STUB`, no `CORPUS P` block, no receipt in `fulltext_read_receipts.jsonl`, no deep-dive
+manifest. **Misurato prima che questa voce esistesse**, l'identificatore compariva in cinque file
+soltanto: `corpus_seed_pubmed_20260705.tsv`, `…_20260805.tsv`, `…_20260806.tsv`,
+`…_20260806.jsonl` e `batch_queue.md:131`, marcato `unmatched`. 🔴 **Questa voce falsifica il
+proprio negativo**: da ora `grep -rIl 27845895` restituisce anche `FT-073` e
+`dismech_legend_evidence_crosswalk_v2.md`, che sono *registrazioni dell'assenza* e non oggetti di
+lettura. Riprodurre il negativo richiede di escludere il proprio referto:
+`grep -rIl 27845895 --exclude=full_text_queue_current.md --exclude=dismech_legend_evidence_crosswalk_v2.md`.
+**NOT FOUND IN INSPECTED LEGEND SURFACES is not the same statement as "the biological evidence
+does not exist".**
+
+**The adjacent defect, which this entry does not fix.** `CLAIM 027` (`in observation`, HYAL-2 /
+WWOX / SMAD4 as an ECM/membrane-to-nucleus node) rests on a single source, `CORPUS P214`, whose
+**`Identifier:` field reads `PENDING`**. So LEGEND's own claim on this arm cannot be resolved to a
+publication either. Whether `CORPUS P214` *is* this paper, or the 2019 review at
+`paper_registry_current.md:1027`, or a third source, is not established here and must not be
+guessed — resolving it is registry work for a `BATCH_COMMIT`, not for this queue.
+
+**Why it is filed now.** `dismech_legend_evidence_crosswalk_v2.md` names this PMID while reporting
+what DisMech cites and what LEGEND holds. That citation is a *report about* a paper, not a
+premise leaning on one — but `session_self_eval.unread_premises()` cannot distinguish the two, and
+it is right not to try: the honest resolution is to declare the debt, which is what this entry is.
+The queue is not a canonical scientific file, so this append is outside `BATCH_COMMIT` by the same
+rule that admitted `FT-048` and `FT-049`.
+
+**Downstream effect of this very entry, declared.** `batch_queue.md` is a **generated** file
+derived from the registries and this queue, and `FT-073` moves `27845895` from `NEW` to
+`IN_PIPELINE`. `framework/scripts/test_batch_queue.py` failed on `test_committed_queue_is_current`
+until it was regenerated with the command the file's own header names. Whole delta: four counter
+lines (unprocessed 415→414, free full text 233→232, `NEW` 73→72, `IN_PIPELINE` 25→26) and one row
+relocating from line 131 to line 712, its content byte-identical. Nothing hand-edited. 36/36 tests
+`OK` after regeneration.
+
+**First gesture:** retrieve from PMC (`PMC5386674`), run the surface sentinel on the raw text
+before any normalisation, then read. Second: resolve `CORPUS P214`'s identifier against the
+tracking log entry of 2026-04-17 that the placeholder cites.

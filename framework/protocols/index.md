@@ -92,6 +92,7 @@ Provide a content map of the LEGEND system organized by:
 | [[scientist_reading_modes]] | Reading modes A/B, Scientist actor identity, task ownership of a reading |
 | [[controlled_benchmark_ab]] | Controlled A/B reading benchmark — blind input surface, freezing, evaluation |
 | [[cross_session_transport]] | Cross-session transport — durable artifact vs control envelope, delivery taxonomy, version-bound runtime guarantees |
+| [[legend_operating_convention_v1]] | Operating Convention v1 — the session layer: artifact classes, lifecycle, ownership, dispatch, handoff, review, preservation, escalation (non-binding working layer; governance wins on any disagreement) |
 | [[wikilink_schema]] | Wikilinking rules |
 
 ---
