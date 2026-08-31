@@ -84,6 +84,26 @@ EPHEMERAL_UNTRACKED = (
     ".venv/",
 )
 
+#: A per-file adjudication of untracked state, tracked in git so it travels with the
+#: repository. It is a DECLARATION, not a waiver: `adjudicate_untracked` re-verifies
+#: every record against the disk and against the live object store on every run, and a
+#: record whose evidence no longer holds returns its file to UNKNOWN. Writing a line
+#: here can therefore never, on its own, make a gate green.
+ADJUDICATION_FILE = "framework/state/handoff_adjudication.jsonl"
+
+#: The durable non-git surface. `~/.legend/lineage` already existed; `~/.legend/state`
+#: is its sibling for content that must outlive this machine but that no ref carries.
+#: `payload/<worktree-basename>/<path-relative-to-that-worktree>` mirrors the origin
+#: layout so a destination can put each file back where it came from.
+LEGEND_STATE_DIR = ("state",)
+LEGEND_STATE_PAYLOAD = "payload"
+
+#: Classes whose declaration is only honoured if the content is DEMONSTRABLY preserved
+#: somewhere that survives this machine. The other classes assert the opposite — that
+#: the content is not worth carrying — so demanding preservation of them would be
+#: incoherent.
+CLASSES_REQUIRING_PRESERVATION = (VERSIONED, RUNTIME_DURABLE)
+
 
 def _utcnow() -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -213,6 +233,117 @@ def is_declared_ephemeral(relpath):
         elif relpath == pat or relpath.endswith("/" + pat):
             return True
     return False
+
+
+def all_reachable_blobs(root):
+    """Every blob id reachable from EVERY ref, tree-typed refs included.
+
+    🔴 The denominator here is `for-each-ref` with no pattern, and that is the whole
+    point of the function. A sweep restricted to `refs/heads`, `refs/tags` and
+    `refs/remotes` — the three `--all` covers — reports that this repository's
+    `learning/mirror/*` documents exist in NO ref. Adding `refs/codex/**` to the
+    population changes that answer to fourteen of fifteen files. The tool must never
+    be the thing that decides which refs count.
+    """
+    ok, tips, _ = git_ok(root, "for-each-ref", "--format=%(objectname)")
+    if not ok or not tips.strip():
+        return set()
+    proc = subprocess.run(
+        ["git", "-C", str(root), "rev-list", "--objects", "--stdin"],
+        input=tips, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+    )
+    if proc.returncode != 0:
+        return set()
+    return set(line.split()[0] for line in proc.stdout.splitlines() if line.strip())
+
+
+def load_adjudications(root):
+    """(records keyed by (worktree_basename, relpath), list of parse problems).
+
+    A malformed line is a problem, never a silently skipped record: an adjudication
+    file that half-parses would quietly return files to UNKNOWN with no explanation.
+    """
+    path = Path(root) / ADJUDICATION_FILE
+    records, problems = {}, []
+    if not path.is_file():
+        return records, problems
+    for lineno, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+        if not line.strip() or line.lstrip().startswith("#"):
+            continue
+        try:
+            rec = json.loads(line)
+        except ValueError as exc:
+            problems.append("%s:%d is not JSON: %s" % (ADJUDICATION_FILE, lineno, exc))
+            continue
+        wt, rel, klass = rec.get("worktree"), rec.get("path"), rec.get("class")
+        if not wt or not rel:
+            problems.append("%s:%d has no worktree/path" % (ADJUDICATION_FILE, lineno))
+            continue
+        if klass not in CLASSES:
+            problems.append(
+                "%s:%d declares class %r, which is not one of %s"
+                % (ADJUDICATION_FILE, lineno, klass, ", ".join(CLASSES))
+            )
+            continue
+        records[(wt, rel)] = rec
+    return records, problems
+
+
+def durable_payload_path(home, worktree_basename, relpath):
+    return Path(home).joinpath(".legend", *LEGEND_STATE_DIR) / LEGEND_STATE_PAYLOAD \
+        / worktree_basename / relpath
+
+
+def adjudicate_untracked(root, home, worktree_basename, relpath, abspath,
+                         records, blobs):
+    """(class, reason) for one untracked file. UNKNOWN is the failure direction.
+
+    Four ways to stay UNKNOWN, and each is a separate sentence in the reason so a
+    reader never has to guess which one fired:
+
+        undeclared        nobody adjudicated it
+        drifted           the file changed after it was adjudicated
+        unpreserved       it is declared worth keeping and is nowhere durable
+        declared UNKNOWN  an honest residual, recorded rather than rounded away
+    """
+    rec = records.get((worktree_basename, relpath))
+    if rec is None:
+        return UNKNOWN, "no adjudication record in " + ADJUDICATION_FILE
+    klass = rec["class"]
+
+    declared = rec.get("sha256")
+    try:
+        actual = sha256_file(abspath)
+    except (IOError, OSError) as exc:
+        return UNKNOWN, "adjudicated but unreadable on disk: %s" % exc
+    if not declared or declared != actual:
+        return UNKNOWN, (
+            "DRIFTED: adjudicated at sha256 %s, on disk now %s. The adjudication "
+            "describes bytes that are no longer there."
+            % (str(declared)[:12], actual[:12])
+        )
+
+    if klass == UNKNOWN:
+        return UNKNOWN, rec.get("reason") or "declared UNKNOWN"
+
+    if klass in CLASSES_REQUIRING_PRESERVATION:
+        held = []
+        blob = git(root, "hash-object", str(abspath), check=False)
+        if blob and blob in blobs:
+            held.append("git-object:" + blob[:12])
+        copy = durable_payload_path(home, worktree_basename, relpath)
+        if copy.is_file() and sha256_file(copy) == actual:
+            held.append("durable-copy:" + str(copy))
+        if not held:
+            return UNKNOWN, (
+                "UNPRESERVED: declared %s, but its bytes are reachable from no ref and "
+                "no byte-identical copy exists under ~/.legend/%s/%s. A class that "
+                "promises survival is not honoured by the promise."
+                % (klass, "/".join(LEGEND_STATE_DIR), LEGEND_STATE_PAYLOAD)
+            )
+        return klass, "%s; preserved by %s" % (rec.get("reason", ""), " + ".join(held))
+
+    return klass, rec.get("reason") or "declared %s with no reason given" % klass
 
 
 def sha256_file(path):
@@ -381,16 +512,31 @@ def classify(root, home=None):
     wts = worktrees(root)
     dirty_total, untracked_unknown, untracked_ephemeral = 0, [], 0
     dirty_detail = []
+    records, adj_problems = load_adjudications(root)
+    blobs = all_reachable_blobs(root)
+    adjudicated = []
+    adjudicated_counts = dict((c, 0) for c in CLASSES)
     for wt in wts:
         branch, head, modified, untracked = worktree_state(wt)
         if modified:
             dirty_total += len(modified)
             dirty_detail.append({"worktree": wt, "branch": branch, "modified": len(modified)})
+        base = Path(wt).name or "root"
         for rel in untracked:
             if is_declared_ephemeral(rel):
                 untracked_ephemeral += 1
+                continue
+            klass, why = adjudicate_untracked(
+                root, home, base, rel, Path(wt) / rel, records, blobs
+            )
+            if klass == UNKNOWN:
+                untracked_unknown.append({"worktree": wt, "path": rel, "why": why})
             else:
-                untracked_unknown.append({"worktree": wt, "path": rel})
+                adjudicated_counts[klass] += 1
+                adjudicated.append(
+                    {"worktree": base, "path": rel, "class": klass,
+                     "owner": records[(base, rel)].get("owner"), "why": why}
+                )
 
     surfaces.append(
         Surface(
@@ -415,16 +561,45 @@ def classify(root, home=None):
     )
     surfaces.append(
         Surface(
+            "git.worktree.untracked.adjudicated",
+            RUNTIME_DURABLE,
+            len(adjudicated),
+            True,
+            "untracked files with a per-file adjudication in %s whose evidence was "
+            "RE-VERIFIED this run: the declared digest still matches the disk, and any "
+            "class promising survival is backed by a reachable blob or a byte-identical "
+            "durable copy. by_class=%s detail=%s"
+            % (ADJUDICATION_FILE,
+               json.dumps(dict((k, v) for k, v in adjudicated_counts.items() if v)),
+               json.dumps(adjudicated[:40])),
+            "bundle (durable payload) + refs already carried",
+        )
+    )
+    surfaces.append(
+        Surface(
             "git.worktree.untracked.unclassified",
             UNKNOWN,
             len(untracked_unknown),
             True,
-            "untracked files nobody has classified. Each is either in-progress work or "
-            "junk, and the tool cannot tell which. detail=%s"
-            % json.dumps(untracked_unknown[:40]),
+            "untracked files nobody has classified, or whose adjudication no longer "
+            "holds. Each is either in-progress work or junk, and the tool cannot tell "
+            "which. detail=%s" % json.dumps(untracked_unknown[:40]),
             "DENY until committed or declared",
         )
     )
+    if adj_problems:
+        surfaces.append(
+            Surface(
+                "git.worktree.untracked.adjudication_malformed",
+                UNKNOWN,
+                len(adj_problems),
+                True,
+                "lines of %s that could not be read as an adjudication. An unreadable "
+                "record is not an absent one: it may be the record that was supposed to "
+                "cover a file. detail=%s" % (ADJUDICATION_FILE, json.dumps(adj_problems[:20])),
+                "DENY until the record parses",
+            )
+        )
 
     # non-git durable runtime state
     lineage = home / ".legend" / "lineage"
@@ -437,6 +612,23 @@ def classify(root, home=None):
             True,
             "~/.legend/lineage — actor lineage, session ids, cell migrations. Outside the "
             "repository, so no clone and no push moves it. files=%s" % json.dumps(lineage_files),
+            "copied into bundle",
+        )
+    )
+
+    lstate = home.joinpath(".legend", *LEGEND_STATE_DIR)
+    state_files = sorted(
+        str(p.relative_to(lstate)) for p in lstate.rglob("*") if p.is_file()
+    ) if lstate.is_dir() else []
+    surfaces.append(
+        Surface(
+            "fs.legend.state",
+            RUNTIME_DURABLE,
+            len(state_files),
+            True,
+            "~/.legend/%s — the durable payload for adjudicated state that no ref "
+            "carries. Outside the repository, so no clone and no push moves it. "
+            "files=%s" % ("/".join(LEGEND_STATE_DIR), json.dumps(state_files[:40])),
             "copied into bundle",
         )
     )
@@ -674,16 +866,20 @@ def cmd_handoff(args):
 
     # 6 — durable runtime state outside the repository
     runtime_state = []
-    lineage = home / ".legend" / "lineage"
-    if lineage.is_dir():
-        dest = out / "runtime-artifacts" / "lineage"
-        shutil.copytree(str(lineage), str(dest))
+    for name, src_dir in (
+        ("lineage", home / ".legend" / "lineage"),
+        ("/".join(LEGEND_STATE_DIR), home.joinpath(".legend", *LEGEND_STATE_DIR)),
+    ):
+        if not src_dir.is_dir():
+            continue
+        dest = out / "runtime-artifacts" / name
+        shutil.copytree(str(src_dir), str(dest))
         for p in sorted(dest.rglob("*")):
             if p.is_file():
                 runtime_state.append(
                     {
                         "path": str(p.relative_to(out)),
-                        "origin": str(p).replace(str(dest), str(lineage)),
+                        "origin": str(p).replace(str(dest), str(src_dir)),
                         "sha256": sha256_file(p),
                     }
                 )
@@ -772,6 +968,9 @@ def cmd_handoff(args):
                 "git fetch <bundle> '+refs/*:refs/*' to restore branch-unreachable refs",
                 "re-apply dirty/*.patch onto the recorded head",
                 "copy runtime-artifacts/lineage to ~/.legend/lineage",
+                "copy runtime-artifacts/state to ~/.legend/state — its payload/ holds "
+                "adjudicated untracked work; put each file back at "
+                "<worktree>/<path> named by framework/state/handoff_adjudication.jsonl",
                 "author a NEW deployment/local_instance.md on the destination",
                 "re-acquire authority explicitly; never inherit it",
             ],
@@ -824,6 +1023,14 @@ DECLARED_LIMITATIONS = [
     "parity is asserted against the remote-tracking ref as of the last fetch.",
     "The chat transcript store (~/.claude/projects/**) is EXTERNAL_REFERENCE and is not "
     "transferred; only what was committed or bundled survives.",
+    "framework/state/handoff_adjudication.jsonl records a CLASS and a REASON for an "
+    "untracked file; it does not record where that file should finally live. A file can "
+    "be losslessly preserved and still be waiting on its owner to decide whether it "
+    "belongs in a commit — those are two different questions and this tool answers one.",
+    "An adjudication is re-verified, never trusted: the declared digest is recompared to "
+    "the disk and the preservation evidence recomputed on every run, so a file edited "
+    "after adjudication returns to UNKNOWN and re-raises the gate. What the mechanism "
+    "cannot check is whether the stated REASON is true.",
 ]
 
 
@@ -954,13 +1161,16 @@ def cmd_resume(args):
     # runtime artefacts
     if args.home:
         home = Path(args.home).expanduser()
-        src = bundle_dir / "runtime-artifacts" / "lineage"
-        if src.is_dir() and not args.dry_run:
-            dest = home / ".legend" / "lineage"
-            dest.parent.mkdir(parents=True, exist_ok=True)
-            if dest.exists():
-                shutil.rmtree(str(dest))
-            shutil.copytree(str(src), str(dest))
+        for name, dest in (
+            ("lineage", home / ".legend" / "lineage"),
+            ("/".join(LEGEND_STATE_DIR), home.joinpath(".legend", *LEGEND_STATE_DIR)),
+        ):
+            src = bundle_dir / "runtime-artifacts" / name
+            if src.is_dir() and not args.dry_run:
+                dest.parent.mkdir(parents=True, exist_ok=True)
+                if dest.exists():
+                    shutil.rmtree(str(dest))
+                shutil.copytree(str(src), str(dest))
         for entry in manifest.get("artifact_references", {}).get("runtime_state", []):
             p = bundle_dir / entry["path"]
             if not p.is_file() or sha256_file(p) != entry["sha256"]:

@@ -144,6 +144,61 @@ def build_source(base):
     return src, remote, home
 
 
+ADJ_REL = "framework/state/handoff_adjudication.jsonl"
+
+
+def sha256_of(path):
+    import hashlib
+    h = hashlib.sha256()
+    with open(str(path), "rb") as fh:
+        for chunk in iter(lambda: fh.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+
+def adjudicate(src, records):
+    """Write the per-file adjudication the classifier consults."""
+    p = src / ADJ_REL
+    p.parent.mkdir(parents=True, exist_ok=True)
+    p.write_text("\n".join(json.dumps(r, sort_keys=True) for r in records) + "\n",
+                 encoding="utf-8")
+    return p
+
+
+def preserve(home, worktree_basename, relpath, src_file):
+    """Put a byte-identical copy in the durable payload, as `handoff` would carry it."""
+    dest = home / ".legend" / "state" / "payload" / worktree_basename / relpath
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(str(src_file), str(dest))
+    return dest
+
+
+def declared_untracked(src, home, klass="RUNTIME_DURABLE", preserved=True,
+                       body="an adjudicated artefact\n"):
+    """An untracked file plus its adjudication. Returns (path, record)."""
+    f = src / "adjudicated_artifact.md"
+    f.write_text(body, encoding="utf-8")
+    rec = {
+        "worktree": Path(src).name, "path": "adjudicated_artifact.md",
+        "owner": "fixture-actor", "class": klass, "sha256": sha256_of(f),
+        "required_for_resume": True, "reason": "fixture record",
+        "adjudicated_by": "test", "adjudicated_at": "2026-08-31T00:00:00Z",
+    }
+    if preserved:
+        preserve(home, Path(src).name, "adjudicated_artifact.md", f)
+    # the adjudication file is itself untracked state, so it must be tracked or the
+    # classifier correctly reports the very file that resolves the others.
+    adjudicate(src, [rec])
+    g(src, "add", ADJ_REL)
+    g(src, "-c", "user.email=fixture@example.invalid", "-c", "user.name=Fixture",
+      "commit", "-q", "-m", "adjudication")
+    # keep remote parity: this commit is fixture scaffolding, and letting it diverge
+    # would make every test here fail for a reason none of them is about.
+    g(src, "push", "-q", "development", "main")
+    g(src, "fetch", "-q", "development")
+    return f, rec
+
+
 def do_handoff(src, home, out, extra=None):
     args = [
         "handoff", "--root", str(src), "--out", str(out), "--home", str(home),
@@ -196,6 +251,14 @@ def collect_state(repo, home, manifest=None):
     st["worktree:README.md"] = rm.read_text(encoding="utf-8").strip() if rm.is_file() else "ABSENT"
     lin = home / ".legend" / "lineage" / "mac-fixture-001" / "plan.json"
     st["lineage"] = lin.read_text(encoding="utf-8").strip() if lin.is_file() else "ABSENT"
+    # the durable payload: adjudicated untracked work whose ONLY copy may be here.
+    # A handoff that carried the adjudication and dropped the bytes it points at would
+    # pass every other row in this table.
+    pay = home / ".legend" / "state" / "payload"
+    st["durable_payload"] = ";".join(
+        "%s=%s" % (p.relative_to(pay), sha256_of(p))
+        for p in sorted(pay.rglob("*")) if p.is_file()
+    ) if pay.is_dir() else "ABSENT"
     if manifest:
         st["actor"] = manifest.get("actor_id")
         st["task"] = manifest.get("task_id")
@@ -219,7 +282,64 @@ class HandoffRoundtrip(unittest.TestCase):
         self.assertIn("HANDOFF_DENY", out)
         self.assertIn("UNKNOWN_REQUIRED_STATE", out)
 
+    def test_adjudicated_untracked_state_resolves_the_gate(self):
+        """A verified adjudication clears UNKNOWN — and the bytes actually travel."""
+        f, _ = declared_untracked(self.src, self.home)
+        rc, out = do_handoff(self.src, self.home, self.out)
+        self.assertEqual(rc, 0, out)
+        self.assertIn("HANDOFF_COMPLETE", out)
+        m = json.loads((self.out / "manifest.json").read_text(encoding="utf-8"))
+        by_id = dict((s["id"], s) for s in m["classification"]["surfaces"])
+        self.assertEqual(by_id["git.worktree.untracked.unclassified"]["count"], 0)
+        self.assertEqual(by_id["git.worktree.untracked.adjudicated"]["count"], 1)
+        self.assertEqual(by_id["git.worktree.untracked.adjudicated"]["class"], "RUNTIME_DURABLE")
+        # positive control: the payload is in the handoff directory, not merely named
+        carried = self.out / "runtime-artifacts" / "state" / "payload" / \
+            Path(self.src).name / "adjudicated_artifact.md"
+        self.assertTrue(carried.is_file(), "durable payload did not travel")
+        self.assertEqual(sha256_of(carried), sha256_of(f))
+
+    def test_negative_control_adjudication_drifted(self):
+        """Editing a file AFTER adjudicating it returns it to UNKNOWN.
+
+        Without this, a declaration written once would keep vouching for bytes that
+        have since changed — which is how a stale record becomes a false green.
+        """
+        f, _ = declared_untracked(self.src, self.home)
+        f.write_text("edited after the adjudication was written\n", encoding="utf-8")
+        rc, out = do_handoff(self.src, self.home, self.base / "drifted")
+        self.assertNotEqual(rc, 0, out)
+        self.assertIn("HANDOFF_DENY", out)
+        m = json.loads((self.base / "drifted" / "manifest.json").read_text(encoding="utf-8"))
+        by_id = dict((s["id"], s) for s in m["classification"]["surfaces"])
+        self.assertEqual(by_id["git.worktree.untracked.unclassified"]["count"], 1)
+        self.assertIn("DRIFTED", by_id["git.worktree.untracked.unclassified"]["detail"])
+
+    def test_negative_control_adjudication_without_preservation(self):
+        """Declaring RUNTIME_DURABLE does not make anything durable."""
+        declared_untracked(self.src, self.home, preserved=False)
+        rc, out = do_handoff(self.src, self.home, self.base / "unpreserved")
+        self.assertNotEqual(rc, 0, out)
+        self.assertIn("HANDOFF_DENY", out)
+        m = json.loads((self.base / "unpreserved" / "manifest.json").read_text(encoding="utf-8"))
+        by_id = dict((s["id"], s) for s in m["classification"]["surfaces"])
+        self.assertEqual(by_id["git.worktree.untracked.unclassified"]["count"], 1)
+        self.assertIn("UNPRESERVED", by_id["git.worktree.untracked.unclassified"]["detail"])
+
+    def test_negative_control_malformed_adjudication(self):
+        """An unreadable record is not an absent one, and must not pass silently."""
+        declared_untracked(self.src, self.home)
+        p = self.src / ADJ_REL
+        p.write_text(p.read_text(encoding="utf-8") + "{not json at all\n", encoding="utf-8")
+        rc, out = do_handoff(self.src, self.home, self.base / "malformed")
+        self.assertNotEqual(rc, 0, out)
+        m = json.loads((self.base / "malformed" / "manifest.json").read_text(encoding="utf-8"))
+        by_id = dict((s["id"], s) for s in m["classification"]["surfaces"])
+        self.assertIn("git.worktree.untracked.adjudication_malformed", by_id)
+        self.assertEqual(by_id["git.worktree.untracked.adjudication_malformed"]["class"], "UNKNOWN")
+
     def test_roundtrip_is_lossless(self):
+        declared_untracked(self.src, self.home)
         rc, out = do_handoff(self.src, self.home, self.out)
         self.assertEqual(rc, 0, out)
         self.assertIn("HANDOFF_COMPLETE", out)
@@ -325,6 +445,9 @@ def print_table():
     base = Path(tempfile.mkdtemp(prefix="legend-handoff-demo-"))
     try:
         src, remote, home = build_source(base)
+        # Without this the durable_payload row compares ABSENT to ABSENT and prints
+        # MATCH — a row that measures nothing while looking exactly like one that does.
+        declared_untracked(src, home)
         out = base / "handoff"
         rc, ho = do_handoff(src, home, out)
         print("=" * 78)
