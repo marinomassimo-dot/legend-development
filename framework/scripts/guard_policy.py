@@ -2166,7 +2166,8 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
         # argv actually names a program some table here models. `npm ls`, `npm view react`
         # and `npm audit` carry nothing and are untouched.
         carried_command(argv, heredocs, findings, depth,
-                        f"carried by `{program}`, whose verb this guard has no model for")
+                        f"carried by `{program}`, a package-manager verb this guard has "
+                        "no model for")
         return
     if program in INTERPRETERS:
         analyse_interpreter(argv, program, heredocs, findings, depth)
@@ -3231,7 +3232,8 @@ def analyse_interpreter(argv: List[str], program: str, heredocs: List[str],
         # too: `script.py` does not normalise onto `script` (the version-suffix rule
         # only peels digits), so no tail is found and nothing is appended.
         carried_command(argv, heredocs, findings, depth,
-                        f"carried by `{program}`, whose verb this guard has no model for")
+                        f"carried by `{program}`, an interpreter verb this guard has "
+                        "no model for")
 
     for body in bodies:
         for match in SHELL_OUT.finditer(body):
