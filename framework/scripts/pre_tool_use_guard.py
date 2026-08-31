@@ -542,7 +542,50 @@ def decide(payload: object) -> "dict | None":
     return None
 
 
+#: 🔴 A SHIPPED ENTRYPOINT THAT ANSWERS NOTHING AND SAYS NOTHING.
+#: The guard is a hook ADAPTER, not a CLI: a runtime hands it one event on stdin and
+#: reads one decision from stdout, so it consulted `sys.argv` nowhere at all. The cost is
+#: that `sys.stdin.read()` against a terminal — or any pipe nobody writes to — blocks
+#: forever, with no output and no exit. Found 2026-08-31 by `test_documented_commands.py`,
+#: which harvested `command = "python3 …"` out of a TOML block in `runtime_bridge.md` and
+#: timed out after 15s. The malformed `"` in that argv was a RED HERRING: measured against
+#: an open dataless stdin, a bare `--help`, a bare `-h` and NO ARGV AT ALL all block
+#: identically, so the quote never entered into it.
+#:
+#: Two constraints pull against the usual shape of `--help`, and both are decided here:
+#:   1. stdout is the DECISION CHANNEL. Usage text written there is not a help message,
+#:      it is a malformed decision — so the usage goes to stderr.
+#:   2. SILENCE on stdout means ALLOW. An argv this adapter cannot act on must therefore
+#:      still emit a refusal, or `--help` becomes a fail-open bypass of the guard.
+#: `EXIT` stays `0`, as on every other path: a non-zero exit is a broken hook, not a
+#: denial. Only the help flags are handled — every registration in `.codex/config.toml`
+#: passes no argv, so a wider argv contract would be inventing one nobody asked for.
+HELP_FLAGS = ("--help", "-h")
+
+USAGE = """\
+pre_tool_use_guard.py — the PreToolUse hook adapter for the LEGEND write guard.
+
+This is not a command-line tool and it takes no flags. It reads ONE PreToolUse event as
+JSON on stdin, writes ONE decision as JSON on stdout, and exits 0 in every case: the
+decision travels in the JSON, and a non-zero exit is a broken hook, not a denial.
+
+Register it with a runtime rather than running it by hand, as `.codex/config.toml` does:
+
+    { type = "command", command = "python3 framework/scripts/pre_tool_use_guard.py" }
+
+Invoked with a flag it emits a DENY on stdout, because on that channel silence is ALLOW.
+"""
+
+
 def main() -> int:
+    if any(flag in sys.argv[1:] for flag in HELP_FLAGS):
+        print(USAGE, file=sys.stderr)
+        print(json.dumps(_deny(
+            "The write guard was handed a flag instead of a PreToolUse event on stdin, so "
+            "there is no tool call for it to judge, and it answers no rather than falling "
+            f"silent — on this channel silence is allow.\n\n{USAGE}")))
+        return 0
+
     raw = sys.stdin.read()
     try:
         payload = json.loads(raw)
