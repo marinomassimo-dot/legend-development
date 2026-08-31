@@ -250,11 +250,43 @@ class TheEnvironmentSpellingGetsTheSameAnswerAsTheFlag(SceneCase):
     asserting the second denies: it cannot be satisfied by a rule that denies everything.
     """
 
+    #: 🔴 THE DELIVERY SPELLINGS, ENUMERATED — revision 13.
+    #:
+    #: `_pair()` tested exactly TWO of them, and both were derived by the same code path,
+    #: so this class could not see the four spellings that were not. `env` stripped its
+    #: `NAME=VALUE` tokens before `analyse_env_prefix` was reached and every one of those
+    #: four ALLOWED what the two DENIED — 18 rows of an enumerated 53 failing this
+    #: class's own stated invariant, while this class reported green.
+    #:
+    #: A list standing in for a family, inside the test written to stop a list standing
+    #: in for a family. The set is a module-level constant now, so a spelling added here
+    #: is measured by every test below without any of them being edited.
+    DELIVERIES = {
+        "flag": "git -c {k}={v} {sub}",
+        "prefix": "{a} git {sub}",
+        "env": "env {a} git {sub}",
+        "env -i": "env -i {a} git {sub}",
+        "env -u": "env -u NOPE {a} git {sub}",
+        "nohup env": "nohup env {a} git {sub}",
+        "sudo prefix": "sudo {a} git {sub}",
+    }
+
+    def _spellings(self, key, value, sub="commit -m x"):
+        """Every delivery of one key, as `{name: verdict}`. The denominator of every
+        matrix below is `len(self.DELIVERIES)`, and it is read from the set itself."""
+        assignments = (f"GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0={key} "
+                       f"GIT_CONFIG_VALUE_0={value}")
+        return {name: self.verdict(form.format(k=key, v=value, a=assignments, sub=sub))
+                for name, form in self.DELIVERIES.items()}
+
     def _pair(self, key, value):
-        flag = f"git -c {key}={value} commit -m x"
-        env = (f"GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0={key} "
-               f"GIT_CONFIG_VALUE_0={value} git commit -m x")
-        return self.verdict(flag), self.verdict(env)
+        """Kept for the callers below, and now derived FROM the enumeration rather than
+        beside it: the flag spelling, and every other spelling collapsed to one answer.
+        A disagreement among the environment spellings surfaces as a disagreement with
+        the flag, which is the invariant this class is about."""
+        spellings = self._spellings(key, value)
+        others = {v for name, v in spellings.items() if name != "flag"}
+        return spellings["flag"], (others.pop() if len(others) == 1 else sorted(others))
 
     def test_a_config_key_gets_one_answer_however_it_is_delivered(self):
         cases = {
@@ -279,24 +311,26 @@ class TheEnvironmentSpellingGetsTheSameAnswerAsTheFlag(SceneCase):
         self.assertEqual({}, disagreed,
                          f"the two spellings must agree: {disagreed}")
 
-    def test_the_execution_control_keys_deny_in_both_spellings(self):
+    def test_the_execution_control_keys_deny_in_every_spelling(self):
+        """Revision 13: `in both spellings` became `in every spelling`, and the cells
+        went from 12 to 6 keys x `len(DELIVERIES)`."""
         table = {}
         for key in ("core.hooksPath", "alias.zz", "core.editor", "man.v.cmd",
                     "pager.log", "filter.x.clean"):
-            flag, env = self._pair(key, "/tmp/x")
-            table[f"-c {key}"] = flag
-            table[f"env {key}"] = env
-        self.assert_matrix(table, "DENY", "execution-control keys, both spellings")
+            for name, got in self._spellings(key, "/tmp/x").items():
+                table[f"{key} via {name}"] = got
+        self.assertEqual(6 * len(self.DELIVERIES), len(table), "denominator")
+        self.assert_matrix(table, "DENY", "execution-control keys, every spelling")
 
-    def test_an_ordinary_key_is_allowed_in_both_spellings(self):
+    def test_an_ordinary_key_is_allowed_in_every_spelling(self):
+        """🔴 The other direction over the SAME enumeration. A rule that denied every
+        environment-delivered key would pass the matrix above and be wrong here."""
         table = {}
         for key, value in (("user.name", "someone"), ("color.ui", "always")):
-            flag = f"git -c {key}={value} log --oneline -5"
-            env = (f"GIT_CONFIG_COUNT=1 GIT_CONFIG_KEY_0={key} "
-                   f"GIT_CONFIG_VALUE_0={value} git log --oneline -5")
-            table[f"-c {key}"] = self.verdict(flag)
-            table[f"env {key}"] = self.verdict(env)
-        self.assert_matrix(table, "ALLOW", "ordinary keys, both spellings")
+            for name, got in self._spellings(key, value, "log --oneline -5").items():
+                table[f"{key} via {name}"] = got
+        self.assertEqual(2 * len(self.DELIVERIES), len(table), "denominator")
+        self.assert_matrix(table, "ALLOW", "ordinary keys, every spelling")
 
     def test_a_configuration_file_the_command_names_is_execution_control(self):
         table = {name: self.verdict(f"{name}={self.IN} git commit -m x")
