@@ -417,6 +417,94 @@ class HandoffRoundtrip(unittest.TestCase):
         self.assertEqual(rc, 0, out)
         self.assertIn("AUTHORITY    WRITE", out)
 
+    def test_destination_with_fewer_roots_still_resumes(self):
+        """A fresh clone reaches fewer root commits than the source, and that is normal.
+
+        `bench-blind-participant` in the real repository was started empty, so the
+        source has two root commits and a clone of the remote has one. Equality of the
+        root SET refused the right repository, before the bundle that carries the
+        missing root had been fetched.
+        """
+        env = dict(os.environ)
+        env.update(GIT_ENV)
+        # an orphan-rooted branch that no remote reaches: a second root commit
+        g(self.src, "checkout", "-q", "--orphan", "orphan-rooted")
+        g(self.src, "rm", "-q", "-rf", ".")
+        (self.src / "orphan.md").write_text("its own root\n", encoding="utf-8")
+        g(self.src, "add", "orphan.md")
+        g(self.src, "-c", "user.email=fixture@example.invalid", "-c", "user.name=Fixture",
+          "commit", "-q", "-m", "orphan root")
+        g(self.src, "checkout", "-q", "-f", "main")
+
+        _, roots = g(self.src, "rev-list", "--max-parents=0", "--all")
+        self.assertEqual(len(roots.split()), 2, "positive control: the source needs 2 roots")
+
+        rc, out = do_handoff(self.src, self.home, self.out)
+        self.assertEqual(rc, 0, out)
+        dest = fresh_destination(self.remote, self.base / "dest")
+        _, droots = g(dest, "rev-list", "--max-parents=0", "--all")
+        self.assertEqual(len(droots.split()), 1,
+                         "positive control: the destination must have FEWER roots")
+        rc, out = tool("resume", "--bundle", str(self.out), "--into", str(dest), check=False)
+        self.assertNotIn("repo identity mismatch", out)
+        self.assertEqual(rc, 0, out)
+
+    def test_bundled_checked_out_branch_is_landed(self):
+        """A bundled `refs/heads/main` must land even though main is checked out.
+
+        `git fetch` refuses to write the checked-out branch and aborts the entire
+        refspec, so one such ref left `refs restored: 0` — every other ref lost with it.
+        A real source has main ahead of the remote, so main IS bundled; the fixture
+        publishes main, so it never saw this.
+        """
+        # take main past the remote so it becomes an unpublished, therefore bundled, ref
+        (self.src / "ahead.md").write_text("local main is ahead of the remote\n",
+                                           encoding="utf-8")
+        g(self.src, "add", "ahead.md")
+        g(self.src, "-c", "user.email=fixture@example.invalid", "-c", "user.name=Fixture",
+          "commit", "-q", "-m", "ahead of the remote")
+        _, want = g(self.src, "rev-parse", "refs/heads/main")
+        want = want.strip()
+
+        rc, out = do_handoff(self.src, self.home, self.out)
+        m = json.loads((self.out / "manifest.json").read_text(encoding="utf-8"))
+        bundled = [e["ref"] for e in m["artifact_references"]["bundle"]["refs"]]
+        self.assertIn("refs/heads/main", bundled,
+                      "positive control: main must be bundled for this test to mean anything")
+
+        dest = fresh_destination(self.remote, self.base / "dest")
+        _, cur = g(dest, "branch", "--show-current")
+        self.assertEqual(cur.strip(), "main", "positive control: destination is on main")
+        rc, out = tool("resume", "--bundle", str(self.out), "--into", str(dest), check=False)
+        self.assertNotIn("bundle fetch failed", out)
+        _, got = g(dest, "rev-parse", "refs/heads/main")
+        self.assertEqual(got.strip(), want, out)
+        self.assertIn("refs restored: %d" % len(bundled), out)
+
+    def test_negative_control_checked_out_branch_diverged(self):
+        """Landing the checked-out branch must never discard destination work."""
+        (self.src / "ahead.md").write_text("source side\n", encoding="utf-8")
+        g(self.src, "add", "ahead.md")
+        g(self.src, "-c", "user.email=fixture@example.invalid", "-c", "user.name=Fixture",
+          "commit", "-q", "-m", "source ahead")
+        # handoff itself reports DENY here because main is deliberately ahead of the
+        # remote; the payload is still written, and the payload is what this tests.
+        do_handoff(self.src, self.home, self.out)
+        self.assertTrue((self.out / "manifest.json").is_file())
+
+        dest = fresh_destination(self.remote, self.base / "dest")
+        (dest / "dest_only.md").write_text("work that exists only here\n", encoding="utf-8")
+        g(dest, "add", "dest_only.md")
+        g(dest, "-c", "user.email=fixture@example.invalid", "-c", "user.name=Fixture",
+          "commit", "-q", "-m", "destination-only commit")
+        _, before = g(dest, "rev-parse", "HEAD")
+
+        rc, out = tool("resume", "--bundle", str(self.out), "--into", str(dest), check=False)
+        self.assertNotEqual(rc, 0, out)
+        self.assertIn("Refusing to discard destination work", out)
+        _, after = g(dest, "rev-parse", "HEAD")
+        self.assertEqual(before, after, "destination HEAD was moved despite the refusal")
+
     def test_negative_control_wrong_repository(self):
         """Resuming into a different repository must fail closed."""
         rc, _ = do_handoff(self.src, self.home, self.out)
@@ -500,8 +588,135 @@ def print_table():
         shutil.rmtree(str(base), True)
 
 
+def reconstruct_real(root, payload, scratch, remote="development", branch="main"):
+    """Reconstruct from a REAL handoff payload, into what a fresh clone actually gets.
+
+    The fixture roundtrip proves the mechanism. It cannot prove that THIS machine's
+    payload reconstructs, because the fixture builds every surface it then checks. So
+    this builds the destination the way the destination really arrives — a repository
+    holding only what `refs/remotes/<remote>/*` carries, which is exactly a fresh clone
+    of the remote and nothing else — and resumes the real payload into it.
+
+    It is a verification, not a test case: it needs a payload that already exists on
+    disk, so it cannot run in the fixture suite.
+    """
+    root, payload, scratch = Path(root), Path(payload), Path(scratch)
+    dest, dhome = scratch / "dest", scratch / "desthome"
+    for d in (dest, dhome):
+        shutil.rmtree(str(d), True)
+    dest.mkdir(parents=True)
+    dhome.mkdir(parents=True)
+    env = dict(os.environ)
+    env.update(GIT_ENV)
+
+    run(["git", "init", "-q", "-b", branch, str(dest)], env=env)
+    # exactly what the remote carries, under both the branch and the tracking name
+    run(["git", "-C", str(dest), "fetch", "-q", str(root),
+         "+refs/remotes/%s/*:refs/remotes/%s/*" % (remote, remote)], env=env)
+    rc, tip = g(dest, "rev-parse", "refs/remotes/%s/%s" % (remote, branch), check=False)
+    if rc != 0:
+        print("RECONSTRUCT_FAIL: the source has no refs/remotes/%s/%s" % (remote, branch))
+        return 2
+    # `fetch` refuses to write the branch that is checked out, so land the tip with a
+    # reset: same result, and it also populates the working tree the patches apply to.
+    g(dest, "reset", "-q", "--hard", tip.strip())
+
+    manifest = json.loads((payload / "manifest.json").read_text(encoding="utf-8"))
+    print("=" * 78)
+    print("CLEAN RECONSTRUCTION FROM THE REAL PAYLOAD")
+    print("=" * 78)
+    print("source root      %s" % root)
+    print("payload          %s" % payload)
+    print("destination      %s   (holds ONLY refs/remotes/%s/*)" % (dest, remote))
+    print("destination tip  %s" % tip.strip())
+    print("source HEAD      %s" % manifest.get("head"))
+    print()
+
+    rc, out = tool("resume", "--bundle", str(payload), "--into", str(dest),
+                   "--home", str(dhome), check=False)
+    print(out.rstrip())
+    print()
+
+    # Every promise in the manifest, checked against the destination. The denominator
+    # is printed beside the failure count because they print identically at zero.
+    rows = []
+    for entry in manifest.get("artifact_references", {}).get("bundle", {}).get("refs", []):
+        rcx, got = g(dest, "rev-parse", entry["ref"], check=False)
+        rows.append(("ref " + entry["ref"],
+                     entry["object"] == (got.strip() if rcx == 0 else "ABSENT")))
+    for entry in manifest.get("artifact_references", {}).get("runtime_state", []):
+        p = payload / entry["path"]
+        rows.append(("runtime " + entry["path"],
+                     p.is_file() and sha256_of(p) == entry["sha256"]))
+    # the adjudicated files: present in the destination's payload, at the declared digest
+    adj = root / ADJ_REL
+    adj_rows = 0
+    if adj.is_file():
+        for line in adj.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            r = json.loads(line)
+            landed = dhome / ".legend" / "state" / "payload" / r["worktree"] / r["path"]
+            rows.append(("adjudicated %s/%s" % (r["worktree"], r["path"]),
+                         landed.is_file() and sha256_of(landed) == r["sha256"]))
+            adj_rows += 1
+
+    # Dirty patches: a real source has many worktrees, each at its own commit, and a
+    # destination is ONE checkout. `resume` refuses to apply a patch at the wrong
+    # commit — correctly — so "not applied here" is not "lost". What losslessness
+    # requires is that each patch DOES apply at the commit it was taken at, and that
+    # commit is one of the refs just restored. Check exactly that.
+    patch_rows = 0
+    for entry in manifest.get("artifact_references", {}).get("dirty_patches", []):
+        p = payload / entry["patch"]
+        head = entry.get("head")
+        ok = p.is_file() and sha256_of(p) == entry["sha256"]
+        if ok and head:
+            wt = scratch / ("wt-" + entry["worktree_basename"])
+            shutil.rmtree(str(wt), True)
+            rcw, _ = g(dest, "worktree", "add", "-q", "--detach", str(wt), head, check=False)
+            ok = rcw == 0
+            if ok:
+                rca, _ = g(wt, "apply", "--check", str(p), check=False)
+                ok = rca == 0
+        rows.append(("dirty %s applies at %s" % (entry["patch"], (head or "?")[:12]), ok))
+        patch_rows += 1
+
+    bad = [name for name, ok in rows if not ok]
+    print("checks run: %d   (refs %d · runtime %d · adjudicated %d · dirty %d)   "
+          "failures: %d"
+          % (len(rows),
+             len(manifest.get("artifact_references", {}).get("bundle", {}).get("refs", [])),
+             len(manifest.get("artifact_references", {}).get("runtime_state", [])),
+             adj_rows, patch_rows, len(bad)))
+    for name in bad[:40]:
+        print("  ! %s" % name)
+    # `resume` returning non-zero solely because a patch belongs to a commit this
+    # single checkout is not on is a correct refusal, not a loss — provided the patch
+    # was proved to apply at its own commit just above.
+    only_patch_placement = all(
+        "belongs to" in m and "destination HEAD is" in m
+        for m in [l.strip(" !") for l in out.splitlines() if l.strip().startswith("!")]
+    ) and any(l.strip().startswith("!") for l in out.splitlines())
+    ok = (rc == 0 or only_patch_placement) and not bad and len(rows) > 0
+    print()
+    print("REAL_MAC_RESUME_RECONSTRUCTION = %s" % ("PASS" if ok else "FAIL"))
+    return 0 if ok else 1
+
+
 if __name__ == "__main__":
     if "--table" in sys.argv:
         print_table()
+    elif "--reconstruct-real" in sys.argv:
+        import argparse
+        ap = argparse.ArgumentParser()
+        ap.add_argument("--reconstruct-real", action="store_true")
+        ap.add_argument("--root", required=True)
+        ap.add_argument("--payload", required=True)
+        ap.add_argument("--scratch", required=True)
+        ap.add_argument("--remote", default="development")
+        ap.add_argument("--branch", default="main")
+        a = ap.parse_args()
+        sys.exit(reconstruct_real(a.root, a.payload, a.scratch, a.remote, a.branch))
     else:
         unittest.main()

@@ -1075,10 +1075,28 @@ def cmd_resume(args):
     # repo identity must match — refuse to resume into the wrong repository
     dest_identity = repo_identity(into)
     src_identity = manifest.get("repo_identity", {})
-    if dest_identity["root_digest"] != src_identity.get("root_digest"):
+    # 🔴 Equality of root-commit sets was WRONG, and only real state showed it. The set
+    # is population-derived: it grows with every orphan-rooted branch. This repository
+    # has two roots because `bench-blind-participant` was started empty; a fresh clone
+    # of the development remote — which is exactly what a destination is — reaches one.
+    # Equality therefore refused the RIGHT repository, and refused it BEFORE fetching
+    # the bundle that carries the missing root. Containment is the honest relation:
+    # every root the destination already has must be one this repository knows, and the
+    # two must share at least one. An unrelated repository shares none and still fails.
+    dest_roots = set(dest_identity["root_commits"])
+    src_roots = set(src_identity.get("root_commits") or [])
+    foreign = sorted(dest_roots - src_roots)
+    if not src_roots:
+        mismatches.append("manifest records no root commit; identity cannot be checked")
+    elif foreign:
         mismatches.append(
-            "repo identity mismatch: destination root_digest %s != manifest %s"
-            % (dest_identity["root_digest"][:12], str(src_identity.get("root_digest"))[:12])
+            "repo identity mismatch: destination has %d root commit(s) this repository "
+            "does not know (%s) — that is foreign history, not a subset"
+            % (len(foreign), ", ".join(r[:12] for r in foreign))
+        )
+    elif dest_roots and not (dest_roots & src_roots):
+        mismatches.append(
+            "repo identity mismatch: destination shares no root commit with the manifest"
         )
 
     # restore the bundled refs
@@ -1092,9 +1110,43 @@ def cmd_resume(args):
         if not ok:
             mismatches.append("refs.bundle failed verification at destination: %s" % err[:200])
         elif not args.dry_run:
-            ok2, _, err2 = git_ok(into, "fetch", str(bpath), "+refs/*:refs/*")
+            # 🔴 `git fetch` REFUSES to write the branch the destination has checked
+            # out, and aborts the WHOLE refspec when it does — so one such ref left
+            # `refs restored: 0`. The fixture never saw it: there `main` is published,
+            # so it is not bundled. On a real source `main` is usually AHEAD of the
+            # remote, so it IS bundled, and the destination is always on `main`.
+            _, checked_out, _ = git_ok(into, "branch", "--show-current")
+            skip = "refs/heads/" + checked_out if checked_out else None
+            refspecs = ["+refs/*:refs/*"]
+            if skip and any(e["ref"] == skip for e in expect.get("refs", [])):
+                # everything except the checked-out branch, which is landed below
+                refspecs = [
+                    "+%s:%s" % (e["ref"], e["ref"])
+                    for e in expect.get("refs", []) if e["ref"] != skip
+                ]
+            ok2, _, err2 = git_ok(into, "fetch", str(bpath), *refspecs)
             if not ok2:
                 mismatches.append("bundle fetch failed: %s" % err2[:300])
+            elif skip and any(e["ref"] == skip for e in expect.get("refs", [])):
+                want = [e["object"] for e in expect.get("refs", []) if e["ref"] == skip][0]
+                _, have, _ = git_ok(into, "rev-parse", "HEAD")
+                okf, _, _ = git_ok(into, "merge-base", "--is-ancestor", have, want)
+                if have == want:
+                    pass
+                elif okf:
+                    # a fast-forward of the checked-out branch onto the handed-off tip:
+                    # the destination held only the remote's tip, which is behind
+                    okr, _, errr = git_ok(into, "reset", "--hard", want)
+                    if not okr:
+                        mismatches.append(
+                            "could not land %s at %s: %s" % (skip, want[:12], errr[:200])
+                        )
+                else:
+                    mismatches.append(
+                        "%s is checked out at %s, which is NOT an ancestor of the "
+                        "handed-off %s. Refusing to discard destination work."
+                        % (skip, have[:12], want[:12])
+                    )
         # every ref the manifest promised must now exist at the promised object
         for entry in expect.get("refs", []):
             ok3, got, _ = git_ok(into, "rev-parse", entry["ref"])
