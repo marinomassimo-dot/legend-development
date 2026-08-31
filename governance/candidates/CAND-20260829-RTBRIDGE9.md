@@ -271,15 +271,23 @@ UNDERIVABLE        the topology failed, or the path is relative and unanchorable
 
 ## 6 · The workdir 2×2
 
-| `cwd` | `workdir` | target | rev8 | rev9 | |
+| `cwd` | `workdir` | write attempted | rev8 | rev9 | |
 |---|---|---|---|---|---|
-| inside | inside | `framework/probe.md` | DENY | **DENY** | the only cell revision 8 had right |
-| **outside** | **inside** | `framework/probe.md` | 🔴 ALLOW | **DENY** | the bypass |
-| inside | outside | `framework/probe.md` | 🔴 DENY | **ALLOW** | a refused scratch write |
-| outside | outside | `framework/probe.md` | ALLOW | **ALLOW** | |
+| inside | inside | `echo x > framework/probe.md` | DENY | **DENY** | the only cell revision 8 had right |
+| **outside** | **inside** | `echo x > framework/probe.md` | 🔴 ALLOW | **DENY** | the bypass |
+| inside | outside | `echo x > framework/probe.md` | 🔴 DENY | **ALLOW** | a refused scratch write |
+| outside | outside | `echo x > framework/probe.md` | ALLOW | **ALLOW** | |
 
 Plus: absent → falls back to `cwd`; relative → resolved against `cwd`; nonexistent →
 **DENY**; expanding → **DENY**; empty → **DENY**; code mode → per-call.
+
+> **Integration-time repair, not a re-review.** The cells above name the probe *write* rather
+> than a bare probe path. The probe target is hypothetical — it exists in no tree, which is
+> why row 1's own gloss reads "nonexistent → DENY" — and spelled bare it was read by
+> `scripts/test_fresh_clone_reader_journey.py` as a repository path a reader should be able to
+> open. This is the spelling `CAND-20260829-RTBRIDGE10.md` already uses for the same probe.
+> The reviewed record on `plan-runtime-bridge-p00-rev9` is unchanged; only this integration
+> branch carries the correction.
 
 ## 7 · The corpus
 
@@ -372,8 +380,9 @@ also be derived wrong, and an empty glob would make the mode check pass over not
 
 `scripts/test_documented_commands.py` fails on
 `learning/plan/PLAN-INTEGRATION-TOOLING-DURABILITY-001.md`, which references
-`framework/scripts/integration_matrix.py` — a file that lives on another branch and does
-not exist at revision 8 either. This candidate changes nothing under `learning/`.
+`integration_matrix.py` under `framework/scripts/` — a file that lives on the unmerged
+branch `plan-integration-matrix`, not in this tree, and did not exist at revision 8 either.
+This candidate changes nothing under `learning/`.
 
 ### 8.4 · The mode changes
 

@@ -705,7 +705,7 @@ is a **closed set of fourteen**, each of which was executed in a disposable dire
 snapshotted, so `INSIDE_REPO` is in its threshold — `python3 -m this framework/x` now
 denies, and that over-refusal is the point. An **unclassified program** is open
 vocabulary, so `INSIDE_REPO` is deliberately *not* in its threshold: `shasum framework/x`
-and `pytest framework/scripts/test_x.py` are ordinary work, and refusing them is how a
+and `pytest framework/scripts/test_*.py` are ordinary work, and refusing them is how a
 guard gets turned off. That boundary is carried as declared debt, not as a closed claim.
 
 #### The four root causes, and what a string-level patch would have missed

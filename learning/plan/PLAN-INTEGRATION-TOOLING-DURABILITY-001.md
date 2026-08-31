@@ -31,7 +31,8 @@ its own.
 
 ## 2 · Placement, and why the alternatives are worse
 
-`framework/scripts/integration_matrix.py` on `plan-integration-matrix`, based on `788c357d`.
+`integration_matrix.py` under `framework/scripts/` on `plan-integration-matrix`, based on
+`788c357d`. That branch is unmerged, so the file is reachable there and in no other tree.
 
 | Candidate home | Why not |
 |---|---|
@@ -99,7 +100,7 @@ one side deletes a line                -> SIMULATION_REFUSED, exit 3, no branch 
 | every 100644 blob read as **text** | `UnicodeDecodeError: byte 0x89 in position 0` — a PNG — **nine minutes into a ten-step run** | one `cat-file --batch` in bytes; committed as a fixture. It failed closed, which is right, and still cost a whole measurement. A repository check that assumes its own repository is all text has not met one |
 | the stub runner carried a shebang at `100644` | every fixture inherited a mode-bit finding it never caused | `chmod 0o755` in the fixture; a defect of the fixture reading as a defect of the tool |
 | `drops_a_suite` branched from the base | it conflicted on the runner, the union guard refused it, and the test measured the **refusal** instead of the loss | branch it from its predecessor so the loss arrives through a clean merge |
-| **I nearly filed a defect against `candidate_content_hash.py`** | the hash looked unchanged across two tips that differ by two files | 🔴 **The tool was right and I had mis-sequenced my own commands.** Re-derived: the domain listing is not byte-identical between the tips (`framework/scripts/integration_matrix.py` `6805764c` → `5155e5e1`), and the domain hashes to `e7c4dec4…` at `66f0546` and `2df0ce95…` at `4149901`. The value I had recorded was always the second one. **The positive control is that the hash moved with the content**, and I checked that before saying anything |
+| **I nearly filed a defect against `candidate_content_hash.py`** | the hash looked unchanged across two tips that differ by two files | 🔴 **The tool was right and I had mis-sequenced my own commands.** Re-derived: the domain listing is not byte-identical between the tips (`integration_matrix.py` `6805764c` → `5155e5e1`), and the domain hashes to `e7c4dec4…` at `66f0546` and `2df0ce95…` at `4149901`. The value I had recorded was always the second one. **The positive control is that the hash moved with the content**, and I checked that before saying anything |
 
 ---
 
