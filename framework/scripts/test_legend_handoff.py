@@ -307,7 +307,8 @@ class HandoffRoundtrip(unittest.TestCase):
         run(["git", "init", "-q", "-b", "main", str(other)], env=env)
         (other / "x.md").write_text("unrelated\n", encoding="utf-8")
         g(other, "add", "x.md")
-        g(other, "-c", "user.email=f@x.invalid", "-c", "user.name=F", "commit", "-q", "-m", "unrelated")
+        g(other, "-c", "user.email=fixture@example.invalid", "-c", "user.name=Fixture",
+          "commit", "-q", "-m", "unrelated")
         rc, out = tool("resume", "--bundle", str(self.out), "--into", str(other), check=False)
         self.assertNotEqual(rc, 0, out)
         self.assertIn("repo identity mismatch", out)
