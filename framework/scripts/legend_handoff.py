@@ -650,11 +650,17 @@ def cmd_handoff(args):
     for wt, branch, head, modified in dirty:
         name = Path(wt).name or "root"
         target = pdir / (name + ".patch")
-        ok, diff, err = git_ok(wt, "diff", "HEAD")
-        if not ok:
-            problems.append("could not capture dirty diff for %s: %s" % (wt, err[:200]))
+        # NOT git_ok: it strips, and a stripped trailing newline is a corrupt patch.
+        proc = subprocess.run(
+            ["git", "-C", str(wt), "diff", "--binary", "HEAD"],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+        )
+        if proc.returncode != 0:
+            problems.append(
+                "could not capture dirty diff for %s: %s" % (wt, proc.stderr.strip()[:200])
+            )
             continue
-        target.write_text(diff, encoding="utf-8")
+        target.write_text(proc.stdout, encoding="utf-8")
         patches.append(
             {
                 "worktree_basename": name,
@@ -895,6 +901,56 @@ def cmd_resume(args):
     else:
         mismatches.append("refs.bundle absent from the handoff directory")
 
+    # uncommitted tracked work — captured at handoff, RE-APPLIED here.
+    # Capturing a patch and never applying it is not losslessness, it is a receipt for
+    # work that did not arrive.
+    applied = []
+    already = []
+    for entry in manifest.get("artifact_references", {}).get("dirty_patches", []):
+        p = bundle_dir / entry["patch"]
+        if not p.is_file():
+            mismatches.append("dirty patch absent: %s" % entry["patch"])
+            continue
+        if sha256_file(p) != entry["sha256"]:
+            mismatches.append("dirty patch altered in transit: %s" % entry["patch"])
+            continue
+        if entry.get("head"):
+            okc, _, _ = git_ok(into, "cat-file", "-e", entry["head"] + "^{commit}")
+            if not okc:
+                mismatches.append(
+                    "dirty patch %s was taken at %s, which is absent at the destination"
+                    % (entry["patch"], entry["head"][:12])
+                )
+                continue
+        # the destination must be at the same commit, or the patch is being applied blind
+        _, dest_head, _ = git_ok(into, "rev-parse", "HEAD")
+        if entry.get("head") and dest_head != entry["head"]:
+            if not args.apply_dirty_anywhere:
+                mismatches.append(
+                    "dirty patch %s belongs to %s but destination HEAD is %s "
+                    "(use --apply-dirty-anywhere to force)"
+                    % (entry["patch"], entry["head"][:12], dest_head[:12])
+                )
+                continue
+        okchk, _, errchk = git_ok(into, "apply", "--check", str(p))
+        if not okchk:
+            # Already applied is not a failure: resume must be idempotent, or a retry
+            # after a partial reconstruction reports a loss that did not happen.
+            okrev, _, _ = git_ok(into, "apply", "--check", "--reverse", str(p))
+            if okrev:
+                already.append(entry["patch"])
+                continue
+            mismatches.append("dirty patch does not apply cleanly: %s: %s"
+                              % (entry["patch"], errchk[:200]))
+            continue
+        if not args.dry_run:
+            oka, _, erra = git_ok(into, "apply", str(p))
+            if not oka:
+                mismatches.append("dirty patch failed to apply: %s: %s"
+                                  % (entry["patch"], erra[:200]))
+                continue
+        applied.append(entry["patch"])
+
     # runtime artefacts
     if args.home:
         home = Path(args.home).expanduser()
@@ -936,11 +992,14 @@ def cmd_resume(args):
                 "grant fingerprint. Landing as OBSERVER."
             )
 
-    return _resume_verdict(manifest, mismatches, authority, restored)
+    return _resume_verdict(manifest, mismatches, authority, restored, applied, already)
 
 
-def _resume_verdict(manifest, mismatches, authority, restored=None):
+def _resume_verdict(manifest, mismatches, authority, restored=None, applied=None,
+                    already=None):
     restored = restored or []
+    applied = applied or []
+    already = already or []
     status = "RESUME_OK" if not mismatches else "RESUME_FAIL"
     print("%s" % status)
     print("  SESSION_ID   %s" % manifest.get("session_id"))
@@ -953,7 +1012,8 @@ def _resume_verdict(manifest, mismatches, authority, restored=None):
     print("  AUTHORITY    %s   (at handoff: %s — never inherited)"
           % (authority, manifest.get("authority", {}).get("at_handoff")))
     print("  CHECKPOINT   %s" % manifest.get("last_valid_checkpoint", {}).get("commit"))
-    print("  refs restored: %d" % len(restored))
+    print("  refs restored: %d   dirty patches applied: %d (already present: %d)"
+          % (len(restored), len(applied), len(already)))
     for m in mismatches:
         print("  ! %s" % m)
     return 0 if not mismatches else 1
@@ -1095,6 +1155,9 @@ def main(argv=None):
     r.add_argument("--claim-authority", default=None)
     r.add_argument("--expect-head", default=None)
     r.add_argument("--dry-run", action="store_true")
+    r.add_argument("--apply-dirty-anywhere", action="store_true",
+                   help="apply a captured patch even when destination HEAD differs from "
+                        "the commit it was taken at")
     r.set_defaults(func=cmd_resume)
 
     s = sub.add_parser("sync", help="verify remote parity")
