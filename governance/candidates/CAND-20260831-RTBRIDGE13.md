@@ -815,7 +815,52 @@ files walked, HEAD tree                 678                (equal — index matc
 
 ### 13.4 · The readings taken after the freezing commit
 
-<!-- POST_FREEZE -->
+A document cannot contain a reading taken after the commit that carries it, so the freeze
+is two commits and this section names the first one as the object it describes.
+`0330a55` adds this file and the handoff; a second commit adds only this section. The
+`CANDIDATE_TIP` rule in § 13 resolves to that second commit, and every reading below is
+re-run there — the values are tree-comparisons and file hashes, so they do not move.
+
+**Measured at `0330a55`, the first governance commit:**
+
+```text
+hash @ CONTENT_TIP    d8c888b  142a228245416d6c2f5d460bb17682caf0257b3b54b1533a1815aa3017ea89db
+hash @ 0330a55                 142a228245416d6c2f5d460bb17682caf0257b3b54b1533a1815aa3017ea89db
+                                                                                     EQUAL ✓
+git diff --name-only d8c888b 0330a55
+    governance/candidates/CAND-20260831-RTBRIDGE13.md
+    governance/candidates/HANDOFF-20260831-RTBRIDGE13-MIRROR.md      exactly two ✓
+
+POLICY_HASH @ CONTENT_TIP    66cc2970ce6a10ea90c0322af1475530755cf5ed945c26d92962184c9bc1ceff
+POLICY_HASH @ 0330a55        66cc2970ce6a10ea90c0322af1475530755cf5ed945c26d92962184c9bc1ceff
+    🔴 invariance VERIFIED, not assumed. The positive control is in the same table:
+    test_guard_families_rev12.py @ BASE 8955cbf0dc6d4be9 · @ tip 4933d465a3858410 —
+    a file that DID change hashes differently, so an equal pair above is a reading and
+    not a broken command.
+    🔴 One broken command was caught this way. `$T:framework/…` in zsh applies the `:r`
+    modifier and hands `git show` a mangled argument; the hash that came back was
+    `e3b0c44298fc…`, the sha256 of EMPTY INPUT. Braces, and a control that must differ.
+
+git status --porcelain=v1 --untracked-files=all      0 rows      (2 rows before, § 13.3)
+git diff --name-status            (tree vs index)    empty
+git diff --cached --name-status   (index vs HEAD)    empty
+git diff --summary                (mode changes)     empty
+files walked, index 680 · HEAD tree 680 · equal      (678 before the two files were added)
+mutate-* worktree debris                             0
+remote refs containing the tip                       0
+```
+
+**The publication gate, run at the CANDIDATE tip and not at the content tip** — revision 11
+shipped a gate failure because it measured at the content tip, and the candidate tip is the
+object handed over:
+
+```text
+tip measured   0330a55        working tree clean, 0 rows
+VERDICT        PASS
+BLOCKS         0
+REVIEW         4, all content (PARENT_OF_ORIGIN), none guard — the same four as revision 12
+legend_lint.py VERDICT: PASS
+```
 
 ## 14 · What is NOT claimed
 
