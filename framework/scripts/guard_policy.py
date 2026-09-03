@@ -2020,6 +2020,23 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
 
         elsewhere = flag_value(argv, "-C", "--git-dir", "--work-tree")
         if elsewhere is not None:
+            # 🔴 A network subcommand is not RELOCATABLE, and must be refused before the
+            # recursion rather than inside it. Every other effect can be rewritten to sit
+            # under `elsewhere` and judged there; a push changes the object store AND the
+            # remote, so the push permission would verify a SHA and a ledger in the assigned
+            # worktree while the objects left from a different repository. The recursion
+            # strips `-C`, so by the time the permission is consulted the redirection is
+            # invisible to it — which is exactly how this was allowed.
+            redirected_sub, _ = git_subcommand([argv[0]] + strip_wrapper_options(
+                argv[1:], frozenset({"-C", "--git-dir", "--work-tree", "-c"})))
+            if redirected_sub in GIT_NETWORK_SUBCOMMANDS:
+                findings.append(Finding(
+                    "NETWORK_WRITE", f"git {redirected_sub}", [elsewhere],
+                    "🔴 publishes, and this push is not authorised: the command moves the "
+                    "repository it acts on, so the SHA and the ledger would be read in one "
+                    "repository while the objects were sent from another",
+                    scope=em.NONLOCAL))
+                return
             here: List[Finding] = []
             # `-c` is stripped here too: the loop above has already emitted its finding,
             # and leaving it in would emit a second one from the recursion.
@@ -2075,7 +2092,7 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
             findings.append(Finding("BLANKET_STAGING", "git stage", [UNNAMED],
                                     "an alias of `git add` with the same reach"))
         else:
-            analyse_git(sub, rest, heredocs, findings)
+            analyse_git(sub, rest, heredocs, findings, argv)
         return
 
     # ── in-place editors ──
@@ -2891,8 +2908,15 @@ def qualify_ref(sub: str, target: str) -> str:
 
 
 def analyse_git(sub: str, rest: List[str], heredocs: List[str],
-                findings: List[Finding]) -> None:
-    """Every `git` subcommand but add/commit/stage, projected onto the effect model."""
+                findings: List[Finding], full_argv: Optional[Sequence[str]] = None) -> None:
+    """Every `git` subcommand but add/commit/stage, projected onto the effect model.
+
+    🔴 `full_argv` is the line BEFORE `git_subcommand` skipped git's global options, and it
+    exists for one reason: `-C <dir>`, `--git-dir` and `--work-tree` move the repository the
+    command acts on, and skipping them to find the subcommand also hid them from every rule
+    downstream. `git -C <peer> push` had its SHA and its ledger read in the assigned
+    worktree while its objects were sent from another repository entirely.
+    """
     argv = ["git"] + rest
 
     if sub in GIT_NETWORK_SUBCOMMANDS:
@@ -2905,8 +2929,11 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
             # to exactly the NETWORK_WRITE it met before, with the failed condition in the
             # finding — a refusal that names what to fix, not only what was refused.
             topology = session_topology()
+            redirected = [token.split("=", 1)[0] for token in (full_argv or [])
+                          if token.split("=", 1)[0] in pa.REDIRECTING_GLOBALS]
             verdict = pa.evaluate(
-                rest, root=topology.assigned_worktree if topology is not None else None)
+                rest, root=topology.assigned_worktree if topology is not None else None,
+                redirected=redirected)
             if verdict.allowed:
                 return
             findings.append(Finding(

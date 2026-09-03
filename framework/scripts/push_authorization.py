@@ -53,7 +53,7 @@ import sys
 from dataclasses import dataclass
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Callable, Dict, List, Optional
+from typing import Callable, Dict, List, Optional, Sequence
 
 LEDGER_RELATIVE = "ledger/push_authorizations.jsonl"
 ALLOWED_REMOTE = "development"
@@ -67,6 +67,37 @@ REFUSED_FLAGS = frozenset({
     "--mirror", "--delete", "-d", "--prune",
     "--all", "--tags", "--follow-tags",
 })
+
+#: 🔴 Short options BUNDLE, and an exact-match list does not see it. The first draft
+#: refused `-f` and allowed `-fu`, which is the same forced update with one letter added;
+#: Mirror pushed a real non-fast-forward through it. Membership is now tested per letter.
+REFUSED_SHORT = frozenset("fd")
+
+#: Global options that move the repository the command acts on. `git_subcommand` skips them
+#: to reach the subcommand, so by the time this module is consulted they are gone — which
+#: is how `git -C <peer> push` had its SHA verified in one repository and its objects sent
+#: from another. The guard passes them back in explicitly.
+REDIRECTING_GLOBALS = frozenset({"-C", "--git-dir", "--work-tree", "--namespace"})
+
+
+def _side(token: str) -> Optional[str]:
+    """The branch one side of a refspec names, or None when it does not name a branch.
+
+    🔴 The first draft took the last path segment, so `refs/tags/work` was gated as the
+    branch `work` and published an object the release gate had never seen. A qualified ref
+    is accepted only under `refs/heads/`; everything else — tags, remotes, `HEAD`, an empty
+    side, anything carrying a control character or the parser's OPAQUE sentinel — is not a
+    branch this permission covers.
+    """
+    if token.startswith("refs/"):
+        if not token.startswith("refs/heads/"):
+            return None
+        token = token[len("refs/heads/"):]
+    if not token or token == "HEAD" or token.startswith("-"):
+        return None
+    if any(character.isspace() or not character.isprintable() for character in token):
+        return None
+    return token
 
 
 @dataclass(frozen=True)
@@ -85,7 +116,11 @@ def _resolve_with_git(root: str) -> Callable[[str], Optional[str]]:
             done = subprocess.run(
                 ["git", "-C", root, "rev-parse", "--verify", "--quiet", f"refs/heads/{ref}"],
                 stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True, timeout=5)
-        except (OSError, subprocess.SubprocessError):
+        except (OSError, ValueError, subprocess.SubprocessError):
+            # 🔴 ValueError belongs here: a refspec carrying the parser's OPAQUE sentinel
+            # reaches `subprocess` with an embedded null byte and raises. The hook caught
+            # only `Undecidable`, so the process died — and on this channel a dead hook is
+            # silence, and silence is ALLOW. Failing to resolve must refuse, never crash.
             return None
         sha = done.stdout.strip()
         return sha if done.returncode == 0 and len(sha) == 40 else None
@@ -114,35 +149,53 @@ def read_ledger(root: str) -> List[Dict]:
 
 
 def branch_of(refspec: str) -> Optional[str]:
-    """The branch a refspec pushes TO, or None when the two ends disagree.
+    """The branch a refspec pushes TO, or None when it is not one branch to itself.
 
     A refspec that renames — `local:refs/heads/other` — is outside this permission. Not
-    because it is necessarily wrong, but because the record is keyed on one branch name
-    and a rename makes "which branch was authorised" a question with two answers.
+    because it is necessarily wrong, but because the record is keyed on one branch name and
+    a rename makes "which branch was authorised" a question with two answers. Both sides
+    must name the SAME branch under `refs/heads/`, which is also what stops
+    `refs/remotes/x/work:refs/heads/work` from publishing an unreviewed object as `work`.
     """
     if ":" not in refspec:
-        return refspec.rsplit("/", 1)[-1] or None
+        return _side(refspec)
     source, _, destination = refspec.partition(":")
-    if not source or not destination:
+    left, right = _side(source), _side(destination)
+    if not left or not right or left != right:
         return None
-    if source.rsplit("/", 1)[-1] != destination.rsplit("/", 1)[-1]:
-        return None
-    return destination.rsplit("/", 1)[-1] or None
+    return right
 
 
 def evaluate(rest: List[str], root: Optional[str] = None,
              records: Optional[List[Dict]] = None,
-             resolve: Optional[Callable[[str], Optional[str]]] = None) -> Verdict:
+             resolve: Optional[Callable[[str], Optional[str]]] = None,
+             redirected: Sequence[str] = ()) -> Verdict:
     """Judge one `git push`. `rest` is the argv AFTER the `push` subcommand.
 
-    `records` and `resolve` are injectable so the battery can state a case without
-    building a repository for it — the same reason `session_binding` takes an env.
+    `records` and `resolve` are injectable so the battery can state a case without building
+    a repository for it — the same reason `session_binding` takes an env. `redirected`
+    carries the repository-moving globals the guard stripped before reaching here.
     """
-    flags = [token for token in rest if token.startswith("-")]
-    for flag in flags:
-        if flag in REFUSED_FLAGS:
-            return Verdict(False, f"`{flag}` is refused: a push under this permission is "
+    if redirected:
+        return Verdict(False,
+                       f"`{', '.join(sorted(set(redirected)))}` moves the repository this "
+                       "command acts on, so the SHA and the ledger would be read in one "
+                       "repository while the objects were sent from another")
+
+    for token in rest:
+        if not token.startswith("-"):
+            continue
+        stem = token.split("=", 1)[0]
+        if token in REFUSED_FLAGS or stem in REFUSED_FLAGS:
+            return Verdict(False, f"`{token}` is refused: a push under this permission is "
                                   "fast-forward, names one ref, and deletes nothing")
+        if not token.startswith("--"):
+            bundled = sorted(set(token[1:]) & REFUSED_SHORT)
+            if bundled:
+                return Verdict(False,
+                               f"`{token}` bundles `-{'`, `-'.join(bundled)}`, and a short "
+                               "option is refused by the letter it carries, not by how it "
+                               "was spelled")
 
     operands = [token for token in rest if not token.startswith("-")]
     if not operands:
@@ -200,8 +253,15 @@ def evaluate(rest: List[str], root: Optional[str] = None,
                        f"--branch {branch}`",
                        remote=remote, ref=branch)
 
-    passing = [r for r in for_branch
-               if r.get("gate_verdict") == "PASS" and r.get("gate_blocks") == 0]
+    def clean(entry: Dict) -> bool:
+        blocks = entry.get("gate_blocks")
+        # `== 0` alone accepts False and 0.0; a boolean in this field means the record was
+        # written by something that did not read the gate's output.
+        return (entry.get("gate_verdict") == "PASS"
+                and isinstance(blocks, int) and not isinstance(blocks, bool)
+                and blocks == 0)
+
+    passing = [r for r in for_branch if clean(r)]
     if not passing:
         return Verdict(False, f"the recorded release gate for `{branch}` at {sha[:12]} is "
                               "not a clean PASS, and a red gate is not published",

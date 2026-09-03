@@ -128,12 +128,23 @@ Two open problems are recorded here rather than resolved, because §21d's body i
    reassigned set is empty and §21d transfers nothing. Read without the sentence, the opening
    clause still sweeps up rows H.1 assigns elsewhere. One of the two readings is wrong and the
    text does not say which.
-2. **Two H.1 rows are prohibitions, not assignments,** and a residual grant reaches them
-   most sharply: `Modifica rubrica/metodi di Mirror | mai Mirror da solo (G.2)` and
-   `Promozione BOOTSTRAP_CONTROLLER → Orchestrator | protocollo Annex I (mai
-   autoassunzione)`. Neither appears in RESERVED.
+2. **Three H.1 rows are not ordinary assignments,** and a residual grant reaches them most
+   sharply. Two are prohibitions: `Modifica rubrica/metodi di Mirror | mai Mirror da solo
+   (G.2)` and `Promozione BOOTSTRAP_CONTROLLER → Orchestrator | protocollo Annex I (mai
+   autoassunzione)` — the second would let the Orchestrator decide its own promotion, which
+   that row forbids by name. The third was missed by the first version of this list and
+   found by Mirror: `Lifecycle learning: epistemico Mirror, durevolezza Plan | —`, whose
+   Authority cell is `—`. It assigns to no actor, so a clause scoped to "questions H.1 does
+   not assign to another actor" sweeps it up whole, taking Mirror's epistemic lifecycle and
+   Plan's durability. None of the three appears in RESERVED.
+3. **The scoping repair makes the section's own next sentence false.** With the clause
+   narrowed to questions H.1 assigns to no other actor, and the Operator being another
+   actor, the grant no longer reaches H.1's two Operatore rows — so *"§21d reassigns to the
+   Orchestrator only the decisions H.1 assigns to the Operator"* now reassigns nothing. The
+   clause is non-vacuous as a grant and self-contradictory as a description of itself.
 
-Both are operator decisions on reserved text. They are named in OUT_OF_SCOPE as open.
+All three are operator decisions on reserved text, and they are why D-1 below is recorded as
+PARTIALLY CLOSED rather than closed.
 
 ## SAFE_DEFAULTS — who may extend it
 
@@ -220,6 +231,26 @@ seconds and runs on every command. The actor records the verdict against a SHA f
 is also how the recording obligation is discharged by construction — without the record
 there is no push.
 
+### Four bypasses, found by review and closed before merge
+
+The first implementation was **weaker than the blanket refusal it replaced**. Mirror found
+four ways to reach a real `git push`; each was allowed at `8abe371` and refused at the commit
+carrying this text, and each is now a named case in the battery.
+
+| Bypass | Why it worked | Closed by |
+|---|---|---|
+| `git push -fu development work` | the refused-flag list was exact-match, and git bundles short options — `-f` was refused, `-fu` was not | membership tested per LETTER, not per spelling |
+| `git -C <peer> push development work` | `git_subcommand` skips `-C` to reach the subcommand, so the permission read the SHA and the ledger in the assigned worktree while the objects were sent from another repository | a network subcommand under a repository-moving global is refused BEFORE the recursion — a push is not a relocatable effect |
+| `git push development refs/tags/work` | the ref was reduced to its last path segment, so a tag was gated as the branch of that name and published an object the gate never saw | a qualified ref is accepted only under `refs/heads/`, and both sides of a refspec must name the same branch |
+| `git push development $(echo work)` | the substitution sentinel carries NUL, `subprocess` raised `ValueError`, the hook died — and on this channel a dead hook is silence, and silence is ALLOW | non-printable operands refused before resolution, and `ValueError` caught at the resolver |
+
+The review that found them also named why the first battery missed them, and it is the more
+useful finding: seven integration cases, six asserting a refusal and one an allowance, and
+the allowance was the single canonical spelling. Not one asked whether a **variant of the
+permitted form** was still permitted — the only quadrant that can hurt anyone. The battery
+now carries that quadrant as a class of its own, `VariantsOfThePermittedFormAreStillRefused`,
+including the cases that must stay ALLOWED so the repair cannot drift into refusing by shape.
+
 ### What this control does NOT guarantee
 
 Stated in the shape Annex J.0 requires, because a control described more strongly than it
@@ -236,11 +267,27 @@ behaves is worse than no control:
   control raises the cost of a mistake to near-certain detection; it does not defeat a
   deliberate false record. Separately, the guard is registered on the `Bash` matcher alone,
   so a runtime that pushes through another channel is not evaluated at all.
-- `DETECTION` — the ledger is committed, so a forged entry is in the diff Mirror reviews and
-  in the history afterwards; the gate can be re-run against the recorded SHA by anyone.
+- `DETECTION` — **weaker than the first draft of this bullet claimed.** That draft said "the
+  ledger is committed, so a forged entry is in the diff Mirror reviews". Nothing commits it,
+  nothing requires it to be committed, and `read_ledger` reads the working tree: an actor can
+  write the entry, push, and delete the file, leaving no artefact behind. What detection
+  actually exists is that the gate can be re-run against the recorded SHA by anyone, and the
+  remote records what arrived. Making this ledger tamper-evident — the hash chain
+  `fulltext_receipts.py` already implements, anchored in the state manifest, whose hand-edit
+  halts LEGEND — is the obvious repair and is **not done here**. The one ledger guarding the
+  only irreversible act is the one without a chain.
 - `RECOVERY` — none for the publication itself. A push to a public repository is
   irreversible, which is why the reservation list still opens with publication and why
   `origin` is never in scope.
+- Two further limits, stated rather than discovered later. **The authority ladder no longer
+  sees an allowed push**: the permission returns before emitting a `Finding`, so
+  `authorized_effects` for a permitted push is empty and `effect_model`'s PUBLISH sentence
+  — "never granted by a runtime, a role or a lease" — remains literally true while
+  describing nothing, because publication no longer passes through PUBLISH at all. G6 in
+  PLAN-MODULAR-EVOLUTION-001 §M4 cites that pairing as evidence for "authority explicit";
+  that citation is now stale. And **fast-forwardness is not checked here**: forced spellings
+  are refused, and a genuine non-fast-forward is left to git's own refusal, which is a
+  different instrument from this one.
 
 ## VERIFICATION_TRAIL
 
@@ -274,7 +321,7 @@ text or an operator decision:
 
 | # | Item | State |
 |---|---|---|
-| D-1 | §21d's opening clause was a blanket grant, making the added sentence either vacuous or non-binding | **CLOSED** — the clause is now scoped: *"every question that H.1 does not assign to another actor and that is not on the RESERVED list"*. The sentence now describes a real, non-empty residual |
+| D-1 | §21d's opening clause was a blanket grant, making the added sentence either vacuous or non-binding | **PARTIALLY CLOSED** — the clause is scoped to *"every question that H.1 does not assign to another actor"*, which removes the blanket. Three H.1 rows still fall through it, and the scoping makes the section's own next sentence describe an empty reassignment. An earlier version of this table said CLOSED while MAPPING two sections above kept the same defect open; that contradiction is the reason for this row's wording — see MAPPING, open problems 2 and 3 |
 | D-2 | §21d permitted a `development` push that RESERVED bullet 1 and `DENY_NETWORK` both forbade | **CLOSED** — bullet 1 carries the carve-out, the proviso is replaced by the push discriminator, and the guard enforces it |
 | D-3 | Appending to SAFE_DEFAULTS forced edits to five declarations including the test constant | **CLOSED** — the list is outside the hashed body; an append is proved not to disturb it |
 | D-4 | This record declines the `HUMAN_APPROVAL_QUEUE` object that GOVERNANCE §130, Annex J.3 and GATE 5 require, substituting the merge | **OPEN** — operator. Mirror's repair: a queue entry `TYPE: GOVERNANCE`, `OBJECT: <candidate content hash> + BASE_HEAD` |

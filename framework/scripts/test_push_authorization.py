@@ -108,6 +108,77 @@ class ARefusalKeepsItsShape(unittest.TestCase):
         self.assertIn("does not resolve", got.reason)
 
 
+class VariantsOfThePermittedFormAreStillRefused(unittest.TestCase):
+    """The quadrant that can hurt anyone: what a permitted-looking push lets through.
+
+    Every case here was ALLOWED by the first implementation with a valid ledger entry, and
+    each was found by pointing the existing harness at a variant of the one spelling the
+    original battery tested. They are grouped so that a future widening of the rule has to
+    walk past them.
+    """
+
+    def test_a_bundled_short_flag_carries_its_letter(self) -> None:
+        """`-f` was refused and `-fu` was not: the same forced update, one letter longer."""
+        for token in ("-fu", "-uf", "-qf", "-fd"):
+            with self.subTest(token=token):
+                got = judge(["development", token, "work"], [record()])
+                self.assertFalse(got.allowed, f"{token} was allowed")
+                self.assertIn("bundles", got.reason)
+
+    def test_a_short_flag_without_a_refused_letter_still_passes(self) -> None:
+        """The repair must not refuse by shape. `-u` sets upstream and loses nothing."""
+        self.assertTrue(judge(["development", "-u", "work"], [record()]).allowed)
+
+    def test_force_with_lease_carrying_a_value_is_refused(self) -> None:
+        got = judge(["development", "--force-with-lease=refs/heads/work", "work"], [record()])
+        self.assertFalse(got.allowed)
+
+    def test_a_tag_refspec_is_not_a_branch(self) -> None:
+        """`refs/tags/work` was reduced to `work` and gated as the branch of that name."""
+        got = judge(["development", "refs/tags/work"], [record()])
+        self.assertFalse(got.allowed)
+        self.assertIn("renames", got.reason)
+
+    def test_a_remote_tracking_source_cannot_become_the_branch(self) -> None:
+        """This published an object the gate never saw, under the authorised branch name."""
+        got = judge(["development", "refs/remotes/x/work:refs/heads/work"], [record()])
+        self.assertFalse(got.allowed)
+
+    def test_head_is_not_a_branch_name(self) -> None:
+        self.assertFalse(judge(["development", "HEAD:refs/heads/work"], [record()]).allowed)
+
+    def test_an_empty_source_is_a_deletion(self) -> None:
+        self.assertFalse(judge(["development", ":refs/heads/work"], [record()]).allowed)
+
+    def test_an_opaque_operand_is_refused_and_does_not_crash(self) -> None:
+        """`$(echo work)` reaches here as a sentinel carrying NUL. It used to kill the hook,
+        and a dead hook is silence, and silence on this channel is ALLOW."""
+        got = judge(["development", "\x00OPAQUE\x00"], [record()])
+        self.assertFalse(got.allowed)
+
+    def test_a_qualified_branch_ref_is_still_allowed(self) -> None:
+        self.assertTrue(judge(["development", "refs/heads/work"], [record()]).allowed)
+
+    def test_a_branch_name_containing_a_slash_is_still_allowed(self) -> None:
+        got = pa.evaluate(["development", "feature/work"],
+                          records=[record(branch="feature/work")],
+                          resolve=lambda ref: GOOD_SHA)
+        self.assertTrue(got.allowed)
+
+    def test_a_repository_redirecting_global_is_refused(self) -> None:
+        """SHA and ledger read in one repository, objects sent from another."""
+        got = pa.evaluate(["development", "work"], records=[record()],
+                          resolve=lambda ref: GOOD_SHA, redirected=["-C"])
+        self.assertFalse(got.allowed)
+        self.assertIn("moves the repository", got.reason)
+
+    def test_a_boolean_block_count_is_not_zero_blocks(self) -> None:
+        for blocks in (False, 0.0):
+            with self.subTest(blocks=blocks):
+                self.assertFalse(judge(["development", "work"],
+                                       [record(blocks=blocks)]).allowed)
+
+
 class TheGateResultIsReadNotAssumed(unittest.TestCase):
     def test_no_record_at_all_is_refused_and_names_the_repair(self) -> None:
         got = judge(["development", "work"], [])
@@ -281,6 +352,31 @@ class TheGuardActuallyConsultsThePermission(unittest.TestCase):
     def test_the_guard_refuses_a_bare_push_with_a_valid_record(self) -> None:
         self.authorise()
         self.assertIsNotNone(self.ask("git push"))
+
+    def test_the_guard_refuses_a_bundled_force(self) -> None:
+        """Through the real guard, not just the module: `-fu` published a forced update."""
+        self.authorise()
+        self.assertIsNotNone(self.ask("git push -fu development work"))
+
+    def test_the_guard_refuses_a_repository_redirecting_push(self) -> None:
+        """`git -C <elsewhere> push` verified here and published from there."""
+        self.authorise()
+        self.assertIsNotNone(self.ask(f"git -C {self.root} push development work"))
+        self.assertIsNotNone(self.ask(f"git --git-dir={self.root}/.git push development work"))
+
+    def test_the_guard_refuses_a_tag_refspec(self) -> None:
+        self.authorise()
+        self.assertIsNotNone(self.ask("git push development refs/tags/work"))
+
+    def test_the_guard_refuses_a_substituted_refspec_without_dying(self) -> None:
+        """A crashed hook is silence, and silence on this channel is ALLOW."""
+        self.authorise()
+        self.assertIsNotNone(self.ask("git push development $(echo work)"))
+
+    def test_the_guard_still_allows_the_qualified_form(self) -> None:
+        """The repair must not refuse by shape: a legitimate variant stays permitted."""
+        self.authorise()
+        self.assertIsNone(self.ask("git push development refs/heads/work"))
 
     def test_other_network_subcommands_are_untouched_by_this_permission(self) -> None:
         """The carve-out is `push`. `send-pack` and friends keep the blanket refusal."""

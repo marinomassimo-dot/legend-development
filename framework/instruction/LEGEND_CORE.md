@@ -394,6 +394,8 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
   - population counts that decay (refs, worktrees) → re-derive at start, never wait
   - a test that fails on a dead premise when enrolled → enroll, leave red, report
   - a report that exists only in a transcript → persist verbatim, note the source
+  - options offered with a default → execute the default and report; closing the turn on a
+    question that has a default is itself a class-3 stop
 
 ---
 
