@@ -1,0 +1,292 @@
+#!/usr/bin/env python3
+"""The push permission, stated as the set of pushes it REFUSES.
+
+A permission is only as good as its negative space, and this one replaced a blanket
+refusal — so every test that matters here is a refusal that must survive. The four the
+operator named explicitly are `--force`, `origin`, `main` after a merge that was not the
+agents' to make, and a red gate; each has its own case below, and so does every other
+condition the rule states.
+
+🔴 **The last three cases go through `guard_policy.verdict`, not through this module.**
+Proving `evaluate` refuses a push proves nothing about what the guard does with a command:
+the guard could stop consulting it and every unit test here would stay green. The
+integration cases build a real repository, bind the session to it, and assert on the
+guard's own answer — which is the only surface a runtime actually meets.
+"""
+from __future__ import annotations
+
+import json
+import os
+import subprocess
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+HERE = Path(__file__).resolve().parent
+if str(HERE) not in sys.path:
+    sys.path.insert(0, str(HERE))
+
+import push_authorization as pa                              # noqa: E402
+
+GOOD_SHA = "a" * 40
+OTHER_SHA = "b" * 40
+
+
+def record(branch="work", sha=GOOD_SHA, verdict="PASS", blocks=0,
+           actor="orchestrator", **extra):
+    entry = {"branch": branch, "sha": sha, "gate_verdict": verdict,
+             "gate_blocks": blocks, "actor": actor}
+    entry.update(extra)
+    return entry
+
+
+def judge(rest, records=None, resolve=None):
+    return pa.evaluate(rest,
+                       records=[] if records is None else records,
+                       resolve=resolve or (lambda ref: GOOD_SHA))
+
+
+class ARefusalKeepsItsShape(unittest.TestCase):
+    """Every condition the rule states, exercised as the push that violates it."""
+
+    def test_force_is_refused_in_every_spelling(self) -> None:
+        for flag in ("--force", "-f", "--force-with-lease", "--force-if-includes"):
+            with self.subTest(flag=flag):
+                got = judge(["development", flag, "work"], [record()])
+                self.assertFalse(got.allowed)
+                self.assertIn(flag, got.reason)
+
+    def test_a_plus_refspec_is_a_non_fast_forward(self) -> None:
+        got = judge(["development", "+work"], [record()])
+        self.assertFalse(got.allowed)
+        self.assertIn("non-fast-forward", got.reason)
+
+    def test_flags_that_push_more_than_the_named_ref_are_refused(self) -> None:
+        for flag in ("--all", "--tags", "--follow-tags", "--mirror", "--prune"):
+            with self.subTest(flag=flag):
+                self.assertFalse(judge(["development", flag, "work"], [record()]).allowed)
+
+    def test_deletion_is_refused(self) -> None:
+        for flag in ("--delete", "-d"):
+            with self.subTest(flag=flag):
+                self.assertFalse(judge(["development", flag, "work"], [record()]).allowed)
+
+    def test_origin_is_refused_even_with_a_perfect_record(self) -> None:
+        """The record authorises a push; it does not authorise a repository."""
+        got = judge(["origin", "work"], [record()])
+        self.assertFalse(got.allowed)
+        self.assertIn("origin", got.reason)
+
+    def test_any_other_remote_is_refused(self) -> None:
+        for remote in ("upstream", "https://github.com/someone/else.git", "local"):
+            with self.subTest(remote=remote):
+                self.assertFalse(judge([remote, "work"], [record()]).allowed)
+
+    def test_a_bare_push_is_refused_because_its_destination_is_a_default(self) -> None:
+        got = judge([], [record()])
+        self.assertFalse(got.allowed)
+        self.assertIn("origin", got.reason)
+
+    def test_a_remote_without_a_ref_is_refused(self) -> None:
+        self.assertFalse(judge(["development"], [record()]).allowed)
+
+    def test_more_than_one_ref_is_refused(self) -> None:
+        self.assertFalse(judge(["development", "work", "other"], [record()]).allowed)
+
+    def test_a_renaming_refspec_is_refused(self) -> None:
+        got = judge(["development", "work:refs/heads/other"], [record()])
+        self.assertFalse(got.allowed)
+        self.assertIn("renames", got.reason)
+
+    def test_a_same_name_refspec_is_accepted(self) -> None:
+        self.assertTrue(judge(["development", "work:refs/heads/work"], [record()]).allowed)
+
+    def test_an_unresolvable_branch_is_refused(self) -> None:
+        got = judge(["development", "ghost"], [record()], resolve=lambda ref: None)
+        self.assertFalse(got.allowed)
+        self.assertIn("does not resolve", got.reason)
+
+
+class TheGateResultIsReadNotAssumed(unittest.TestCase):
+    def test_no_record_at_all_is_refused_and_names_the_repair(self) -> None:
+        got = judge(["development", "work"], [])
+        self.assertFalse(got.allowed)
+        self.assertIn("push_authorization.py record", got.reason)
+
+    def test_a_record_for_a_different_sha_does_not_authorise_this_one(self) -> None:
+        """The whole point of keying on the SHA: yesterday's PASS is not today's tree."""
+        got = judge(["development", "work"], [record(sha=OTHER_SHA)])
+        self.assertFalse(got.allowed)
+        self.assertIn("no authorisation", got.reason)
+
+    def test_a_red_gate_is_not_published(self) -> None:
+        got = judge(["development", "work"], [record(verdict="FAIL")])
+        self.assertFalse(got.allowed)
+        self.assertIn("not a clean PASS", got.reason)
+
+    def test_a_pass_carrying_blocks_is_not_a_clean_pass(self) -> None:
+        self.assertFalse(judge(["development", "work"], [record(blocks=3)]).allowed)
+
+    def test_an_unattributed_authorisation_is_refused(self) -> None:
+        for actor in ("", "   ", None):
+            with self.subTest(actor=actor):
+                got = judge(["development", "work"], [record(actor=actor)])
+                self.assertFalse(got.allowed)
+                self.assertIn("no actor", got.reason)
+
+    def test_a_clean_record_authorises_an_ordinary_branch(self) -> None:
+        self.assertTrue(judge(["development", "work"], [record()]).allowed)
+
+    def test_a_stale_record_beside_a_good_one_does_not_spoil_it(self) -> None:
+        got = judge(["development", "work"],
+                    [record(sha=OTHER_SHA, verdict="FAIL"), record()])
+        self.assertTrue(got.allowed)
+
+
+class MainIsPublishedOnlyWhenTheMergeWasOurs(unittest.TestCase):
+    def resolve_main(self, ref):
+        return GOOD_SHA
+
+    def test_main_without_the_assertion_is_the_operators(self) -> None:
+        got = pa.evaluate(["development", "main"],
+                          records=[record(branch="main")], resolve=self.resolve_main)
+        self.assertFalse(got.allowed)
+        self.assertIn("operator", got.reason)
+
+    def test_main_with_the_assertion_false_is_the_operators(self) -> None:
+        got = pa.evaluate(["development", "main"],
+                          records=[record(branch="main",
+                                          merge_changed_no_guarantee=False)],
+                          resolve=self.resolve_main)
+        self.assertFalse(got.allowed)
+
+    def test_main_with_the_assertion_is_allowed(self) -> None:
+        got = pa.evaluate(["development", "main"],
+                          records=[record(branch="main",
+                                          merge_changed_no_guarantee=True)],
+                          resolve=self.resolve_main)
+        self.assertTrue(got.allowed)
+
+    def test_the_assertion_does_not_rescue_a_red_gate_on_main(self) -> None:
+        got = pa.evaluate(["development", "main"],
+                          records=[record(branch="main", verdict="FAIL",
+                                          merge_changed_no_guarantee=True)],
+                          resolve=self.resolve_main)
+        self.assertFalse(got.allowed)
+
+
+class TheLedgerIsReadDefensively(unittest.TestCase):
+    def test_a_missing_ledger_reads_as_no_authorisations(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            self.assertEqual([], pa.read_ledger(tmp))
+
+    def test_a_malformed_line_is_skipped_and_the_good_one_survives(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / pa.LEDGER_RELATIVE
+            path.parent.mkdir(parents=True)
+            path.write_text("{not json\n\n" + json.dumps(record()) + "\n", encoding="utf-8")
+            got = pa.read_ledger(tmp)
+            self.assertEqual(1, len(got))
+            self.assertEqual("work", got[0]["branch"])
+
+
+# --------------------------------------------------------------- through the real guard
+
+
+def build_repository(root: Path, branch: str) -> str:
+    """A real repository with one commit on `branch`, and the SHA it resolves to."""
+    def git(*args):
+        subprocess.run(["git", "-C", str(root), *args], check=True,
+                       stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    git("init", "-q")
+    git("config", "user.email", "t@example.invalid")
+    git("config", "user.name", "test")
+    (root / "seed.txt").write_text("seed\n", encoding="utf-8")
+    git("add", "seed.txt")
+    git("commit", "-qm", "seed")
+    git("branch", "-M", branch)
+    done = subprocess.run(["git", "-C", str(root), "rev-parse", f"refs/heads/{branch}"],
+                          stdout=subprocess.PIPE, text=True, check=True)
+    return done.stdout.strip()
+
+
+class TheGuardActuallyConsultsThePermission(unittest.TestCase):
+    """The unit tests above prove `evaluate`. These prove the guard asks it."""
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.addCleanup(self.tmp.cleanup)
+        self.root = Path(self.tmp.name) / "repo"
+        self.root.mkdir()
+        self.sha = build_repository(self.root, "work")
+
+        import guard_policy as gp
+        import repo_topology as rt
+        import session_binding as sb
+        self.gp, self.rt = gp, rt
+
+        # 🔴 Bound through the SESSION BINDING, not through `verdict(assigned=…)`. The
+        # analysis layer derives the assignment itself, exactly as the hook process does,
+        # so a test that injects it only at the decision layer would exercise a path the
+        # runtime never takes — and would have passed while production read another root.
+        saved = os.environ.get(sb.OPERATOR_ENV_VAR)
+        os.environ[sb.OPERATOR_ENV_VAR] = str(self.root)
+
+        def restore():
+            if saved is None:
+                os.environ.pop(sb.OPERATOR_ENV_VAR, None)
+            else:
+                os.environ[sb.OPERATOR_ENV_VAR] = saved
+            sb.reset()
+            rt.reset()
+
+        self.addCleanup(restore)
+        sb.reset()
+        rt.reset()
+
+    def authorise(self, **overrides) -> None:
+        entry = record(branch="work", sha=self.sha)
+        entry.update(overrides)
+        path = self.root / pa.LEDGER_RELATIVE
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(entry) + "\n", encoding="utf-8")
+
+    def ask(self, command: str):
+        return self.gp.verdict(command)
+
+    def test_an_unauthorised_push_is_refused_by_the_guard(self) -> None:
+        reason = self.ask("git push development work")
+        self.assertIsNotNone(reason)
+        self.assertIn("no authorisation", reason)
+
+    def test_an_authorised_push_is_allowed_by_the_guard(self) -> None:
+        self.authorise()
+        self.assertIsNone(self.ask("git push development work"))
+
+    def test_the_guard_still_refuses_origin_with_a_valid_record(self) -> None:
+        self.authorise()
+        reason = self.ask("git push origin work")
+        self.assertIsNotNone(reason)
+        self.assertIn("origin", reason)
+
+    def test_the_guard_still_refuses_force_with_a_valid_record(self) -> None:
+        self.authorise()
+        self.assertIsNotNone(self.ask("git push --force development work"))
+
+    def test_the_guard_still_refuses_a_red_gate(self) -> None:
+        self.authorise(gate_verdict="FAIL")
+        self.assertIsNotNone(self.ask("git push development work"))
+
+    def test_the_guard_refuses_a_bare_push_with_a_valid_record(self) -> None:
+        self.authorise()
+        self.assertIsNotNone(self.ask("git push"))
+
+    def test_other_network_subcommands_are_untouched_by_this_permission(self) -> None:
+        """The carve-out is `push`. `send-pack` and friends keep the blanket refusal."""
+        self.authorise()
+        self.assertIsNotNone(self.ask("git send-pack development work"))
+
+
+if __name__ == "__main__":
+    unittest.main(verbosity=2)

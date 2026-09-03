@@ -71,6 +71,7 @@ from typing import Iterable, List, Optional, Sequence, Tuple
 if str(Path(__file__).resolve().parent) not in sys.path:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
 import effect_model as em  # noqa: E402
+import push_authorization as pa  # noqa: E402
 import repo_topology as rt  # noqa: E402
 import runtime_config as rc  # noqa: E402
 import session_binding as sb  # noqa: E402
@@ -2896,6 +2897,23 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
 
     if sub in GIT_NETWORK_SUBCOMMANDS:
         remote = next((t for t in rest if not t.startswith("-")), "<default remote>")
+        if sub == "push":
+            # 🔴 The permission is a property of the PUSH, not of the remote. The first
+            # attempt keyed it on "is the remote credential-gated", which is true of
+            # `origin` as well and therefore separated nothing; `push_authorization`
+            # carries the conditions that do. A push failing any one of them falls through
+            # to exactly the NETWORK_WRITE it met before, with the failed condition in the
+            # finding — a refusal that names what to fix, not only what was refused.
+            topology = session_topology()
+            verdict = pa.evaluate(
+                rest, root=topology.assigned_worktree if topology is not None else None)
+            if verdict.allowed:
+                return
+            findings.append(Finding(
+                "NETWORK_WRITE", "git push", [verdict.remote or remote],
+                "🔴 publishes, and this push is not authorised: " + verdict.reason,
+                scope=em.NONLOCAL))
+            return
         findings.append(Finding(
             "NETWORK_WRITE", f"git {sub}", [remote],
             "🔴 sends objects to a remote. `development` and `origin` are both PUBLIC "
@@ -3407,8 +3425,14 @@ DENY_NETWORK = (
     "🔴 `development` and `origin` are BOTH public GitHub repositories. Pushing a branch "
     "to either one PUBLISHES it, and a bare `git push` goes to `origin`, which is a "
     "different repository from the one most work here targets.\n\n"
-    "Publication is an operator act and needs PUBLISH authority, which is never granted "
-    "by a runtime. Commit locally; the operator pushes."
+    "`origin` is denied to every runtime, always, and so is every remote that is not "
+    "`development`. A `development` push is the one narrow exception, and it turns on "
+    "properties of the PUSH rather than of the remote: one named ref, fast-forward, no "
+    "force, a clean `public_release_gate` recorded against the exact SHA, and an entry "
+    "naming the actor in `ledger/push_authorizations.jsonl`. Pushing `main` additionally "
+    "requires that the merge which produced it was the agents' to make under §21d.\n\n"
+    "Record the authorisation first — `python3 framework/scripts/push_authorization.py "
+    "record --branch <branch>` — or commit locally and let the operator push."
 )
 
 DENY_PERMISSION = (
@@ -3698,6 +3722,13 @@ def adjudicate(command: object, cwd: Optional[str] = None,
            for e in denied):
         return PROHIBITED, DENY_SHELL_WRITE, CODE_SHELL_WRITE, findings
     if em.NETWORK_WRITE in kinds:
+        # A push carries the condition it failed. The blanket sentence says what the rule
+        # is; without the specific clause an actor cannot tell "record the gate first" from
+        # "this remote is never allowed", and the two have opposite repairs.
+        detail = next((f.detail for f in findings
+                       if f.rule == "NETWORK_WRITE" and f.primitive == "git push"), "")
+        if detail:
+            return PROHIBITED, DENY_NETWORK + "\n\n" + detail, CODE_NETWORK, findings
         return PROHIBITED, DENY_NETWORK, CODE_NETWORK, findings
     if em.REF_MUTATION in kinds:
         return PROHIBITED, DENY_REF, CODE_REF_WRITE, findings

@@ -79,6 +79,11 @@ TESTS = (
     # that refuses the bridge when they stop agreeing. Added 2026-08-26 with the bridge.
     "framework/scripts/test_pre_tool_use_guard.py",
     "framework/scripts/test_runtime_parity.py",
+    # The push permission, enrolled with the guard change it constrains. Its integration
+    # cases bind the session the way the hook process does and ask guard_policy.verdict
+    # itself, because a permission proved only at its own module is a permission nobody
+    # has shown the guard consults.
+    "framework/scripts/test_push_authorization.py",
     # The probe behind the matcher list. Its finding is a set of ZEROES — which tool names
     # never appear — and a zero from a sweep that silently parsed nothing is indistinguish-
     # able from a zero that is true. This suite is the positive control for those zeroes.

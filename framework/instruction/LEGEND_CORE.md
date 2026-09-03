@@ -344,9 +344,11 @@ state manifest → current files → meta index → active metas → research/bi
 
 ## 21c. STOP POLICY
 
-> Provenance: `DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY` · block sha256
-> `776e6556d5fbbac3d23fd99e15a3b1bce416d27d17f6701685bd93369030f941` (42 lines). The block
-> below is the operator's dictated text; the DEC records what authorises it, maps its
+> Provenance: `DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY` · body sha256
+> `eb6fb4f70d8a61363bb5ad73b290a8b808166729e29ca7eb9af78eaa7ff80558` (35 lines, ending
+> before the SAFE_DEFAULTS list — that list is append-only by agents and is deliberately
+> outside the hash, so exercising the §21c permission disturbs nothing reserved). The text
+> below is the operator's dictated wording; the DEC records what authorises it, maps its
 > reservations onto Annex H.1, and declares that ratification is the operator's own merge
 > to `main` — not any commit on the branch that carries it.
 
@@ -398,13 +400,16 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
 ## 21d. DECISION AUTHORITY
 
 > Provenance: `DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY` · block sha256
-> `a1eff7741ffe03f8349b49f4d38e23be5bed4cd1725dfaf58473fdaf631029ba` (32 lines). Same DEC
+> `a0b6e194ba6f83229c00aa6b7edb798eea2e4c65b0f3e20f307dd09b111cf384` (39 lines). Same DEC
 > and same ratification clause as §21c; the DEC's MAPPING section is where each RESERVED
-> item is traced to its H.1 row or to the frozen guarantee it actually comes from.
+> item is traced to its H.1 row or to the frozen guarantee it actually comes from, and the
+> push rule below is implemented by `framework/scripts/push_authorization.py`, which the
+> guard consults before every `git push`.
 
 DECISION AUTHORITY (HARD RULE, operator decision 2026-09-03)
 
-The Orchestrator decides every question not on the RESERVED list, consulting Plan
+The Orchestrator decides every question that H.1 does not assign to another actor and
+that is not on the RESERVED list, consulting Plan
 (measurement) and Mirror (hostile review) when it judges necessary. Consultation is
 mandatory only where a guarantee requires it: Mirror on any non-zero scientific delta;
 producer ≠ verifier on scientific claims. §21d reassigns to the Orchestrator only the
@@ -412,7 +417,8 @@ decisions H.1 assigns to the Operator. It moves no authority H.1 assigns to Scie
 Plan or Mirror.
 
 RESERVED to the operator (exceptions, by nature not by habit):
-  - publication to origin or any public surface
+  - publication to origin, or to any public surface other than a `development` push
+    meeting every condition of the push rule below
   - history rewrite
   - irreversible deletion of unique material
   - a change to a fundamental guarantee — including this list, all of §21d, and the STOP
@@ -431,9 +437,14 @@ Operator decisions already taken (2026-09-03), retiring class-2 stops:
   - branch switch inside a single-owner worktree: agents. Root: reserved.
   - worktree provisioning: agents, once the guard false refusal is fixed (0B).
   - birth of bound sessions: BOOTSTRAP automates it; not an operator act per dispatch.
-  - push of an actor's own branch to `development`: agents, PROVIDED development is
-    credential-gated. Orchestrator verifies and records the verification. origin stays
-    reserved.
+  - push: agents, and only when ALL of these hold — the remote is `development`, named
+    explicitly; the push is fast-forward, with no force in any spelling and no `+`
+    refspec; it names exactly one ref; `public_release_gate` is recorded PASS with zero
+    blocks against the exact SHA pushed; and the authorisation names branch, SHA, gate
+    result and actor in `ledger/push_authorizations.jsonl`. The ref must not be `main`,
+    unless the merge that produced `main` was itself the agents' to make under this
+    section — that is, it changed no guarantee. A merge that changes a guarantee, and its
+    push, stay the operator's. `origin` is denied to every runtime, always.
 
 ---
 

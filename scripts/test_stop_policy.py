@@ -46,11 +46,11 @@ ALWAYS_LOADED = ("CLAUDE.md",)
 # finding was about into the thing keeping the test green.
 LINK_TO_SURFACE = "](framework/instruction/LEGEND_CORE.md)"
 
-# Verbatim, sha256 776e6556d5fbbac3d23fd99e15a3b1bce416d27d17f6701685bd93369030f941 over the 42
+# Verbatim, sha256 eb6fb4f70d8a61363bb5ad73b290a8b808166729e29ca7eb9af78eaa7ff80558 over the 35
 # lines below. Anchored to DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY rather than to a bare
 # date: a date records when someone typed the text, a hash records which bytes were ratified. A
 # paraphrase is a different rule, so this is compared as one block and never token by token.
-STOP_POLICY = """STOP POLICY (HARD RULE, operator decision 2026-09-03)
+STOP_POLICY_BODY = """STOP POLICY (HARD RULE, operator decision 2026-09-03)
 
 An actor stops only for one of three reasons:
   1. a guard denial;
@@ -84,23 +84,32 @@ operator's decisions; class 1 only.
 
 SAFE_DEFAULTS is the one part of this policy agents may extend, by appending an entry
 under Class 3 above; the rules stated before it, and all of §21d, are reserved to the
-operator.
+operator."""
 
-SAFE_DEFAULTS (seeded from 2026-09-02/03):
-  - idle peer sessions on a shared checkout → proceed, note them
-  - prior-report figures not re-derivable in minutes → treat as hypothesis, proceed
-  - population counts that decay (refs, worktrees) → re-derive at start, never wait
-  - a test that fails on a dead premise when enrolled → enroll, leave red, report
-  - a report that exists only in a transcript → persist verbatim, note the source"""
+# The seeded defaults sit OUTSIDE the hashed body, and that is the repair for the collision
+# Mirror found: §21c lets an agent append a hindsight default while §21d reserves the STOP
+# POLICY body, and with the list inside the hash, exercising the permission moved the block,
+# broke this constant, and forced the agent to edit the one thing the failure message below
+# forbids editing — five declarations disturbed for one append. The body is now fixed and the
+# list is append-only: every seeded entry must survive, and what follows them is the agents'.
+SAFE_DEFAULTS_HEADING = "SAFE_DEFAULTS (seeded from 2026-09-02/03):"
+SAFE_DEFAULTS_SEED = (
+    "  - idle peer sessions on a shared checkout → proceed, note them",
+    "  - prior-report figures not re-derivable in minutes → treat as hypothesis, proceed",
+    "  - population counts that decay (refs, worktrees) → re-derive at start, never wait",
+    "  - a test that fails on a dead premise when enrolled → enroll, leave red, report",
+    "  - a report that exists only in a transcript → persist verbatim, note the source",
+)
 
 # The companion rule: same day, same surface, same DEC. sha256
-# a1eff7741ffe03f8349b49f4d38e23be5bed4cd1725dfaf58473fdaf631029ba over the 32 lines below. It
+# a0b6e194ba6f83229c00aa6b7edb798eea2e4c65b0f3e20f307dd09b111cf384 over the 39 lines below. It
 # names itself a fundamental guarantee, so drift in it is reserved to the operator by its own
 # terms — which is exactly why it is asserted verbatim. SAFE_DEFAULTS is the one carve-out, and
 # it is stated inside the RESERVED list so the exemption lives where the reservation does.
 DECISION_AUTHORITY = """DECISION AUTHORITY (HARD RULE, operator decision 2026-09-03)
 
-The Orchestrator decides every question not on the RESERVED list, consulting Plan
+The Orchestrator decides every question that H.1 does not assign to another actor and
+that is not on the RESERVED list, consulting Plan
 (measurement) and Mirror (hostile review) when it judges necessary. Consultation is
 mandatory only where a guarantee requires it: Mirror on any non-zero scientific delta;
 producer ≠ verifier on scientific claims. §21d reassigns to the Orchestrator only the
@@ -108,7 +117,8 @@ decisions H.1 assigns to the Operator. It moves no authority H.1 assigns to Scie
 Plan or Mirror.
 
 RESERVED to the operator (exceptions, by nature not by habit):
-  - publication to origin or any public surface
+  - publication to origin, or to any public surface other than a `development` push
+    meeting every condition of the push rule below
   - history rewrite
   - irreversible deletion of unique material
   - a change to a fundamental guarantee — including this list, all of §21d, and the STOP
@@ -127,9 +137,14 @@ Operator decisions already taken (2026-09-03), retiring class-2 stops:
   - branch switch inside a single-owner worktree: agents. Root: reserved.
   - worktree provisioning: agents, once the guard false refusal is fixed (0B).
   - birth of bound sessions: BOOTSTRAP automates it; not an operator act per dispatch.
-  - push of an actor's own branch to `development`: agents, PROVIDED development is
-    credential-gated. Orchestrator verifies and records the verification. origin stays
-    reserved."""
+  - push: agents, and only when ALL of these hold — the remote is `development`, named
+    explicitly; the push is fast-forward, with no force in any spelling and no `+`
+    refspec; it names exactly one ref; `public_release_gate` is recorded PASS with zero
+    blocks against the exact SHA pushed; and the authorisation names branch, SHA, gate
+    result and actor in `ledger/push_authorizations.jsonl`. The ref must not be `main`,
+    unless the merge that produced `main` was itself the agents' to make under this
+    section — that is, it changed no guarantee. A merge that changes a guarantee, and its
+    push, stay the operator's. `origin` is denied to every runtime, always."""
 
 
 class TheStopPolicyIsCarriedWhereActorsLoadIt(unittest.TestCase):
@@ -151,12 +166,50 @@ class TheStopPolicyIsCarriedWhereActorsLoadIt(unittest.TestCase):
         body = "\n".join(ln for ln in body.split("\n") if not ln.startswith("> ")).strip()
         return body[:-3].rstrip() if body.endswith("---") else body
 
-    def test_the_stop_policy_section_is_exactly_the_ratified_text(self) -> None:
+    def stop_policy_parts(self):
+        """The reserved body, and the appendable SAFE_DEFAULTS list, split at the heading."""
+        section = self.ratified_section("## 21c. STOP POLICY")
+        head, separator, tail = section.partition(SAFE_DEFAULTS_HEADING)
+        self.assertTrue(separator, f"§21c no longer carries `{SAFE_DEFAULTS_HEADING}`")
+        return head.rstrip(), tail
+
+    def test_the_stop_policy_body_is_exactly_the_ratified_text(self) -> None:
+        body, _ = self.stop_policy_parts()
         self.assertEqual(
-            STOP_POLICY, self.ratified_section("## 21c. STOP POLICY"),
+            STOP_POLICY_BODY, body,
             f"§21c of {SURFACE} is no longer exactly the ratified stop policy. Restore the "
             "text, or have the operator ratify a replacement — editing this constant instead "
-            "would let the rule and its test drift together.")
+            "would let the rule and its test drift together. Appending a SAFE_DEFAULT is not "
+            "this failure: the list is below the body and outside this comparison.")
+
+    def test_appending_a_default_disturbs_nothing_reserved(self) -> None:
+        """The §21c permission must be exercisable without touching a reserved byte.
+
+        This is the collision Mirror found, tested rather than argued: an agent appends a
+        hindsight default and the reserved body, and therefore the hash the DEC anchors,
+        must be untouched. When the list lived inside the hashed block this failed.
+        """
+        grown = (self.ratified_section("## 21c. STOP POLICY")
+                 + "\n  - a new condition met in the field → take the default, note it")
+        body, _, defaults = grown.partition(SAFE_DEFAULTS_HEADING)
+        self.assertEqual(STOP_POLICY_BODY, body.rstrip())
+        self.assertTrue(all(entry in defaults for entry in SAFE_DEFAULTS_SEED))
+
+    def test_removing_a_seeded_default_is_visible(self) -> None:
+        """Append-only means append. A deletion must not pass as an edit to a free list."""
+        pruned = self.ratified_section("## 21c. STOP POLICY").replace(
+            SAFE_DEFAULTS_SEED[0] + "\n", "", 1)
+        _, _, defaults = pruned.partition(SAFE_DEFAULTS_HEADING)
+        self.assertNotIn(SAFE_DEFAULTS_SEED[0], defaults)
+
+    def test_every_seeded_safe_default_survives(self) -> None:
+        """Append-only: the list may grow, and no seeded entry may quietly leave it."""
+        _, defaults = self.stop_policy_parts()
+        missing = [entry for entry in SAFE_DEFAULTS_SEED if entry not in defaults]
+        self.assertFalse(
+            missing,
+            "these seeded safe defaults are gone from §21c. Agents may APPEND to this list; "
+            f"removing an entry is a change to the policy and is the operator's: {missing}")
 
     def test_the_decision_authority_section_is_exactly_the_ratified_text(self) -> None:
         self.assertEqual(

@@ -63,8 +63,16 @@ added word or dropped line.
 
 | Block | Lines | sha256 |
 |---|---|---|
-| STOP POLICY — §21c body, including STOP LOG and SAFE_DEFAULTS | 42 | `776e6556d5fbbac3d23fd99e15a3b1bce416d27d17f6701685bd93369030f941` |
-| DECISION AUTHORITY — §21d body | 32 | `a1eff7741ffe03f8349b49f4d38e23be5bed4cd1725dfaf58473fdaf631029ba` |
+| STOP POLICY — §21c body, ending before the SAFE_DEFAULTS list | 35 | `eb6fb4f70d8a61363bb5ad73b290a8b808166729e29ca7eb9af78eaa7ff80558` |
+| DECISION AUTHORITY — §21d body | 39 | `a0b6e194ba6f83229c00aa6b7edb798eea2e4c65b0f3e20f307dd09b111cf384` |
+
+**The SAFE_DEFAULTS list is deliberately outside the hash.** §21c authorises agents to
+append a hindsight default. With the list inside the hashed block, one permitted append
+moved the hash, broke the verbatim constant, and forced the agent to edit the very test
+whose failure message forbids editing it — five declarations disturbed by one authorised
+act. The body is hashed and compared for equality; the list is append-only and asserted
+entry by entry; and `scripts/test_stop_policy.py` carries the case proving an append leaves
+the body byte-identical.
 
 Each hash covers the text from its opening line (`STOP POLICY (HARD RULE, …)` /
 `DECISION AUTHORITY (HARD RULE, …)`) to the last character of its closing line, with no
@@ -75,9 +83,10 @@ from the repository root:
 python3 -c "
 import hashlib, sys, pathlib
 sys.path.insert(0, 'scripts')
-from test_stop_policy import STOP_POLICY, DECISION_AUTHORITY
+from test_stop_policy import STOP_POLICY_BODY, DECISION_AUTHORITY
 text = pathlib.Path('framework/instruction/LEGEND_CORE.md').read_text(encoding='utf-8')
-for name, block in (('STOP_POLICY', STOP_POLICY), ('DECISION_AUTHORITY', DECISION_AUTHORITY)):
+for name, block in (('STOP_POLICY_BODY', STOP_POLICY_BODY),
+                    ('DECISION_AUTHORITY', DECISION_AUTHORITY)):
     assert block in text, name + ' is not carried verbatim'
     print(name, hashlib.sha256(block.encode()).hexdigest())
 "
@@ -169,10 +178,47 @@ established above or in the tree:
 3. "Credential-gated" cannot discriminate anyway. It is true of every GitHub repository,
    `origin` included — which §21d reserves — so the proviso does no work as a test.
 
-**`development` push therefore remains RESERVED to the operator, on the reservation's own
-terms and on the guard's, not merely because §21d is unratified.** Whether the permission
-bullet should be struck, or rewritten against a different property than credential-gating,
-is an operator decision on reserved text and is open.
+### The operator's decision, 2026-09-03
+
+Presented with the three facts above, the operator did not strike the permission and did
+not keep it as written. The proviso is replaced by a discriminator that is a property of
+the **push**, not of the remote, and the guard is changed to enforce it in the same branch:
+
+```text
+remote is `development`, named explicitly     no force, in any spelling, and no `+` refspec
+exactly one ref                               public_release_gate PASS, 0 blocks, at the exact SHA
+recorded: branch · SHA · gate result · actor  ref != main, OR main when the merge was the agents' to make
+`origin` is denied to every runtime, always
+```
+
+**The operator records knowing what this permits.** `development` is a public GitHub
+repository: an authorised push publishes, immediately and irreversibly, and no later act
+retracts it. That is accepted deliberately, not overlooked — it is why the ref, the
+fast-forward property, the gate result and the actor are all pinned before the push rather
+than reported after it.
+
+**The gate is a precondition, not a guarantee, and the operator records knowing that too.**
+`public_release_gate` PASS means one detector found nothing on one population. On the same
+tree, `independent_privacy_scan` reports **17 BLOCKs against the gate's 1** — a disagreement
+that no executable object adjudicates (PLAN-MODULAR-EVOLUTION-001 §M4). **Adjudicating that
+1-vs-17 is a priority item for 0B**, and until it is adjudicated the push rule rests on the
+weaker of the two instruments, knowingly.
+
+**Implementation, in this branch.** `framework/scripts/push_authorization.py` carries the
+conditions and reads `ledger/push_authorizations.jsonl`; `guard_policy.analyse_git` consults
+it before every `git push`, and a push failing any condition falls through to the same
+`NETWORK_WRITE` refusal as before, now carrying the clause that failed.
+`framework/scripts/test_push_authorization.py` states the permission as the set of pushes it
+refuses — force in four spellings, `origin` with a perfect record, a bare push, a `+`
+refspec, a renaming refspec, a stale SHA, a red gate, an unattributed record, `main` without
+the merge assertion — and its last seven cases bind the session the way the hook process
+does and ask `guard_policy.verdict` itself, because a permission proved only at its own
+module is one nobody has shown the guard consults.
+
+The gate result is **read, never recomputed inside the hook**: a `PreToolUse` hook has ten
+seconds and runs on every command. The actor records the verdict against a SHA first, which
+is also how the recording obligation is discharged by construction — without the record
+there is no push.
 
 ## VERIFICATION_TRAIL
 
@@ -204,13 +250,13 @@ Mirror reviewed the commit that created this record and refuted four of its five
 closures. Recorded here rather than repaired, because each remaining item is either reserved
 text or an operator decision:
 
-| # | Open item | Owner |
+| # | Item | State |
 |---|---|---|
-| D-1 | The sentence added to §21d is either vacuous or does not bind — see MAPPING | operator (reserved text) |
-| D-2 | §21d permits pushing to `development`, which RESERVED bullet 1 and `DENY_NETWORK` both forbid — see F2 | operator (reserved text) |
-| D-3 | Appending to SAFE_DEFAULTS now forces edits to five declarations, including the test constant the suite's own message forbids editing and this record's hash table. The §21c permission and the hashing mechanism still collide | operator (reserved text) |
-| D-4 | This record declines the `HUMAN_APPROVAL_QUEUE` object that GOVERNANCE §130, Annex J.3 and GATE 5 require, and substitutes the merge. The cheap repair Mirror names is a queue entry of `TYPE: GOVERNANCE`, `OBJECT: <candidate content hash> + BASE_HEAD 4dd9b83` | operator |
-| D-5 | Producer ≠ verifier: the Orchestrator authored the record that grants the Orchestrator authority, and §21d scopes that discipline to *scientific* claims only | operator |
+| D-1 | §21d's opening clause was a blanket grant, making the added sentence either vacuous or non-binding | **CLOSED** — the clause is now scoped: *"every question that H.1 does not assign to another actor and that is not on the RESERVED list"*. The sentence now describes a real, non-empty residual |
+| D-2 | §21d permitted a `development` push that RESERVED bullet 1 and `DENY_NETWORK` both forbade | **CLOSED** — bullet 1 carries the carve-out, the proviso is replaced by the push discriminator, and the guard enforces it |
+| D-3 | Appending to SAFE_DEFAULTS forced edits to five declarations including the test constant | **CLOSED** — the list is outside the hashed body; an append is proved not to disturb it |
+| D-4 | This record declines the `HUMAN_APPROVAL_QUEUE` object that GOVERNANCE §130, Annex J.3 and GATE 5 require, substituting the merge | **OPEN** — operator. Mirror's repair: a queue entry `TYPE: GOVERNANCE`, `OBJECT: <candidate content hash> + BASE_HEAD` |
+| D-5 | Producer ≠ verifier: the Orchestrator authored the record granting the Orchestrator authority, and §21d scopes that discipline to *scientific* claims only | **OPEN** — operator. Mitigation in place, not a closure: Mirror reviewed the delta independently, and the operator's merge is the human ratification |
 
 Repaired in the commit following this record, and not left open: the 3/3 miscount, the
 under-enumeration of H.1's 17 rows, the over-broad reading of the guard's `REF_WRITE`
