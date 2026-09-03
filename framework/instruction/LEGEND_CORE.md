@@ -385,6 +385,38 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
 
 ---
 
+## 21d. DECISION AUTHORITY
+
+DECISION AUTHORITY (HARD RULE, operator decision 2026-09-03)
+
+The Orchestrator decides every question not on the RESERVED list, consulting Plan
+(measurement) and Mirror (hostile review) when it judges necessary. Consultation is
+mandatory only where a guarantee requires it: Mirror on any non-zero scientific delta;
+producer ≠ verifier on scientific claims.
+
+RESERVED to the operator (exceptions, by nature not by habit):
+  - publication to origin or any public surface
+  - history rewrite
+  - irreversible deletion of unique material
+  - a change to a fundamental guarantee — including this list and the STOP POLICY
+  - external spend above the declared default
+  - exposure of private or patient data outside the declared perimeter
+
+Everything else: decide, act, record. Each decision goes in the report under
+DECISIONS_TAKEN: what · alternatives rejected · who was consulted · reversibility ·
+how to revert. Mirror reviews DECISIONS_TAKEN after the fact. The operator reads it when
+present; a wrong decision is a finding and a revert, never a reason to have waited.
+
+Operator decisions already taken (2026-09-03), retiring class-2 stops:
+  - branch switch inside a single-owner worktree: agents. Root: reserved.
+  - worktree provisioning: agents, once the guard false refusal is fixed (0B).
+  - birth of bound sessions: BOOTSTRAP automates it; not an operator act per dispatch.
+  - push of an actor's own branch to `development`: agents, PROVIDED development is
+    credential-gated. Orchestrator verifies and records the verification. origin stays
+    reserved.
+
+---
+
 ## 22. FINAL MAXIMS
 
 > Better a blocked commit than silent data loss

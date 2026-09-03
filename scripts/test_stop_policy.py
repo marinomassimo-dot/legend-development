@@ -66,6 +66,37 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
   - a test that fails on a dead premise when enrolled → enroll, leave red, report
   - a report that exists only in a transcript → persist verbatim, note the source"""
 
+# The companion rule, ratified the same day and carried on the same surface. It names itself
+# a fundamental guarantee ("including this list and the STOP POLICY"), so drift in it is
+# reserved to the operator by its own terms — which is exactly why it is asserted verbatim.
+DECISION_AUTHORITY = """DECISION AUTHORITY (HARD RULE, operator decision 2026-09-03)
+
+The Orchestrator decides every question not on the RESERVED list, consulting Plan
+(measurement) and Mirror (hostile review) when it judges necessary. Consultation is
+mandatory only where a guarantee requires it: Mirror on any non-zero scientific delta;
+producer ≠ verifier on scientific claims.
+
+RESERVED to the operator (exceptions, by nature not by habit):
+  - publication to origin or any public surface
+  - history rewrite
+  - irreversible deletion of unique material
+  - a change to a fundamental guarantee — including this list and the STOP POLICY
+  - external spend above the declared default
+  - exposure of private or patient data outside the declared perimeter
+
+Everything else: decide, act, record. Each decision goes in the report under
+DECISIONS_TAKEN: what · alternatives rejected · who was consulted · reversibility ·
+how to revert. Mirror reviews DECISIONS_TAKEN after the fact. The operator reads it when
+present; a wrong decision is a finding and a revert, never a reason to have waited.
+
+Operator decisions already taken (2026-09-03), retiring class-2 stops:
+  - branch switch inside a single-owner worktree: agents. Root: reserved.
+  - worktree provisioning: agents, once the guard false refusal is fixed (0B).
+  - birth of bound sessions: BOOTSTRAP automates it; not an operator act per dispatch.
+  - push of an actor's own branch to `development`: agents, PROVIDED development is
+    credential-gated. Orchestrator verifies and records the verification. origin stays
+    reserved."""
+
 
 class TheStopPolicyIsCarriedWhereActorsLoadIt(unittest.TestCase):
     def surface_text(self) -> str:
@@ -77,6 +108,13 @@ class TheStopPolicyIsCarriedWhereActorsLoadIt(unittest.TestCase):
             f"{SURFACE} no longer carries the ratified stop policy verbatim. Restore the "
             "text, or have the operator ratify a replacement — editing it here instead "
             "would let the rule and its test drift together.")
+
+    def test_the_decision_authority_is_present_verbatim(self) -> None:
+        self.assertIn(
+            DECISION_AUTHORITY, self.surface_text(),
+            f"{SURFACE} no longer carries the ratified decision authority verbatim. Its "
+            "RESERVED list is a fundamental guarantee by its own text, so a change to it "
+            "is an operator act — restore it rather than editing this constant.")
 
     def test_the_surface_is_reachable_from_the_router_chain(self) -> None:
         """Same predicate `runtime_parity` uses: a chain member must NAME the destination."""
