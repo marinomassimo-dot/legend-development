@@ -15,6 +15,9 @@ TESTS = (
     "scripts/test_public_release_gate.py",
     "scripts/test_independent_privacy_scan.py",
     "scripts/test_losslessness_manifest.py",
+    # Enrolled with the rule it guards, in the same commit: an operating rule whose test is
+    # added later is unenforced for exactly as long as that gap lasts.
+    "scripts/test_stop_policy.py",
     "scripts/test_documented_commands.py",
     "scripts/test_fresh_clone_reader_journey.py",
     "scripts/test_mission_contract.py",

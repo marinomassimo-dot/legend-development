@@ -342,6 +342,31 @@ state manifest → current files → meta index → active metas → research/bi
 
 ---
 
+## 21c. STOP POLICY
+
+STOP POLICY (HARD RULE, operator decision 2026-09-03)
+
+An actor stops only for one of three reasons:
+  1. a guard denial;
+  2. an act reserved to the operator by H.1 with no sanctioned alternative;
+  3. a condition with NO safe default.
+
+Every other condition has a safe default. The actor takes the default, continues, and
+records it in the report under the heading DEFAULTS_TAKEN (condition · default taken · why
+it is safe · what would have been different). Idle peer sessions, stale counts, unverified
+prior figures, missing operator presence are conditions with a safe default, never reasons
+to stop.
+
+When an actor stops, it says in four lines: what the act does; why it is reserved; what the
+operator pastes in the terminal; what the operator pastes back. If the actor believes the
+reserved act should pass to agents, it adds one yes/no question with one line on what
+changes if the answer is yes.
+
+Nothing waits on operator presence except a reason 1–3 stop. Mirror reviews DEFAULTS_TAKEN
+after the fact; a wrong default is a finding, not a reason to have stopped.
+
+---
+
 ## 22. FINAL MAXIMS
 
 > Better a blocked commit than silent data loss
