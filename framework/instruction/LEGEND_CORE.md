@@ -344,6 +344,12 @@ state manifest → current files → meta index → active metas → research/bi
 
 ## 21c. STOP POLICY
 
+> Provenance: `DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY` · block sha256
+> `776e6556d5fbbac3d23fd99e15a3b1bce416d27d17f6701685bd93369030f941` (42 lines). The block
+> below is the operator's dictated text; the DEC records what authorises it, maps its
+> reservations onto Annex H.1, and declares that ratification is the operator's own merge
+> to `main` — not any commit on the branch that carries it.
+
 STOP POLICY (HARD RULE, operator decision 2026-09-03)
 
 An actor stops only for one of three reasons:
@@ -376,6 +382,10 @@ A stop that recurs after its default or decision exists is a finding against the
 Target on any unattended deployment: STOP_LOG class 3 = 0; class 2 = 0 after the
 operator's decisions; class 1 only.
 
+SAFE_DEFAULTS is the one part of this policy agents may extend, by appending an entry
+under Class 3 above; the rules stated before it, and all of §21d, are reserved to the
+operator.
+
 SAFE_DEFAULTS (seeded from 2026-09-02/03):
   - idle peer sessions on a shared checkout → proceed, note them
   - prior-report figures not re-derivable in minutes → treat as hypothesis, proceed
@@ -387,18 +397,28 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
 
 ## 21d. DECISION AUTHORITY
 
+> Provenance: `DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY` · block sha256
+> `a1eff7741ffe03f8349b49f4d38e23be5bed4cd1725dfaf58473fdaf631029ba` (32 lines). Same DEC
+> and same ratification clause as §21c; the DEC's MAPPING section is where each RESERVED
+> item is traced to its H.1 row or to the frozen guarantee it actually comes from.
+
 DECISION AUTHORITY (HARD RULE, operator decision 2026-09-03)
 
 The Orchestrator decides every question not on the RESERVED list, consulting Plan
 (measurement) and Mirror (hostile review) when it judges necessary. Consultation is
 mandatory only where a guarantee requires it: Mirror on any non-zero scientific delta;
-producer ≠ verifier on scientific claims.
+producer ≠ verifier on scientific claims. §21d reassigns to the Orchestrator only the
+decisions H.1 assigns to the Operator. It moves no authority H.1 assigns to Scientist,
+Plan or Mirror.
 
 RESERVED to the operator (exceptions, by nature not by habit):
   - publication to origin or any public surface
   - history rewrite
   - irreversible deletion of unique material
-  - a change to a fundamental guarantee — including this list and the STOP POLICY
+  - a change to a fundamental guarantee — including this list, all of §21d, and the STOP
+    POLICY body. SAFE_DEFAULTS is the sole exception: §21c authorises agents to append a
+    hindsight default there, and an append is not a change to the STOP POLICY body it
+    sits inside.
   - external spend above the declared default
   - exposure of private or patient data outside the declared perimeter
 

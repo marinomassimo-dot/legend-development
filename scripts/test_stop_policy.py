@@ -8,9 +8,16 @@ cost a session: the text is paraphrased rather than carried (a paraphrase is a d
 the text is dropped; or the router stops naming its destination, which is the moment an actor
 loads the chain and never reaches the rule at all.
 
-Reachability is asserted with the router's own predicate — `ROUTER_CHAIN` is imported rather
-than restated, because a second copy of the chain would pass this test while the real chain
-was broken.
+Reachability is asserted PER SURFACE, over the surfaces every actor loads, rather than as "some
+member of `ROUTER_CHAIN` mentions the file". The weaker form was satisfied by a single incidental
+YAML field and would still have passed with `CLAUDE.md`'s own reference deleted — Mirror's F4
+finding against the first version of this suite. The four suites this repository already trusts
+for obligation reachability assert per named file, and this one now matches them. `ROUTER_CHAIN`
+is still imported rather than restated, so the chain is checked against the router's own copy and
+never against a second one that could agree while the real chain was broken.
+
+Provenance of both ratified blocks below:
+`governance/decisions/DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY.md`.
 """
 from __future__ import annotations
 
@@ -25,8 +32,16 @@ from runtime_parity import ROUTER_CHAIN  # noqa: E402
 
 SURFACE = Path("framework/instruction/LEGEND_CORE.md")
 
-# Verbatim. The operator ratified this text on 2026-09-03; a paraphrase is a different rule,
-# so this is compared as one block and not probed token by token.
+# Asserted individually, the way test_fulltext_trace_contract.py and its three siblings assert
+# their obligations: a fixed tuple of named files, each checked on its own. Both are loaded every
+# session — CLAUDE.md by the harness, the state manifest by CLAUDE.md §0's "first, every session"
+# — so deleting either reference fails this suite, which "any member of the chain" did not.
+ALWAYS_LOADED = ("CLAUDE.md", "framework/state/state_manifest_current.md")
+
+# Verbatim, sha256 776e6556d5fbbac3d23fd99e15a3b1bce416d27d17f6701685bd93369030f941 over the 42
+# lines below. Anchored to DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY rather than to a bare
+# date: a date records when someone typed the text, a hash records which bytes were ratified. A
+# paraphrase is a different rule, so this is compared as one block and never token by token.
 STOP_POLICY = """STOP POLICY (HARD RULE, operator decision 2026-09-03)
 
 An actor stops only for one of three reasons:
@@ -59,6 +74,10 @@ A stop that recurs after its default or decision exists is a finding against the
 Target on any unattended deployment: STOP_LOG class 3 = 0; class 2 = 0 after the
 operator's decisions; class 1 only.
 
+SAFE_DEFAULTS is the one part of this policy agents may extend, by appending an entry
+under Class 3 above; the rules stated before it, and all of §21d, are reserved to the
+operator.
+
 SAFE_DEFAULTS (seeded from 2026-09-02/03):
   - idle peer sessions on a shared checkout → proceed, note them
   - prior-report figures not re-derivable in minutes → treat as hypothesis, proceed
@@ -66,21 +85,28 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
   - a test that fails on a dead premise when enrolled → enroll, leave red, report
   - a report that exists only in a transcript → persist verbatim, note the source"""
 
-# The companion rule, ratified the same day and carried on the same surface. It names itself
-# a fundamental guarantee ("including this list and the STOP POLICY"), so drift in it is
-# reserved to the operator by its own terms — which is exactly why it is asserted verbatim.
+# The companion rule: same day, same surface, same DEC. sha256
+# a1eff7741ffe03f8349b49f4d38e23be5bed4cd1725dfaf58473fdaf631029ba over the 32 lines below. It
+# names itself a fundamental guarantee, so drift in it is reserved to the operator by its own
+# terms — which is exactly why it is asserted verbatim. SAFE_DEFAULTS is the one carve-out, and
+# it is stated inside the RESERVED list so the exemption lives where the reservation does.
 DECISION_AUTHORITY = """DECISION AUTHORITY (HARD RULE, operator decision 2026-09-03)
 
 The Orchestrator decides every question not on the RESERVED list, consulting Plan
 (measurement) and Mirror (hostile review) when it judges necessary. Consultation is
 mandatory only where a guarantee requires it: Mirror on any non-zero scientific delta;
-producer ≠ verifier on scientific claims.
+producer ≠ verifier on scientific claims. §21d reassigns to the Orchestrator only the
+decisions H.1 assigns to the Operator. It moves no authority H.1 assigns to Scientist,
+Plan or Mirror.
 
 RESERVED to the operator (exceptions, by nature not by habit):
   - publication to origin or any public surface
   - history rewrite
   - irreversible deletion of unique material
-  - a change to a fundamental guarantee — including this list and the STOP POLICY
+  - a change to a fundamental guarantee — including this list, all of §21d, and the STOP
+    POLICY body. SAFE_DEFAULTS is the sole exception: §21c authorises agents to append a
+    hindsight default there, and an append is not a change to the STOP POLICY body it
+    sits inside.
   - external spend above the declared default
   - exposure of private or patient data outside the declared perimeter
 
@@ -116,25 +142,34 @@ class TheStopPolicyIsCarriedWhereActorsLoadIt(unittest.TestCase):
             "RESERVED list is a fundamental guarantee by its own text, so a change to it "
             "is an operator act — restore it rather than editing this constant.")
 
-    def test_the_surface_is_reachable_from_the_router_chain(self) -> None:
-        """Same predicate `runtime_parity` uses: a chain member must NAME the destination."""
-        naming = []
-        for member in ROUTER_CHAIN:
-            path = ROOT / member
-            if not path.is_file():
-                continue
-            text = path.read_text(encoding="utf-8", errors="replace")
-            if str(SURFACE) in text or SURFACE.name in text:
-                naming.append(str(member))
-        self.assertTrue(
-            naming,
-            f"no member of ROUTER_CHAIN names {SURFACE}, so an actor traversing the chain "
-            "never reaches the stop policy. Name it from a chain member.")
+    def test_every_always_loaded_surface_names_the_destination(self) -> None:
+        """Per surface, not "any member of the chain" — one deleted reference must fail this.
 
-    def test_the_chain_member_that_names_it_is_itself_present(self) -> None:
+        The predicate is the router's own (name or path appears in the text), but the quantifier
+        is universal over ALWAYS_LOADED rather than existential over ROUTER_CHAIN. Under the old
+        form the state manifest's `framework_file:` YAML field alone kept this green, so removing
+        the router's actual instruction to read LEGEND_CORE.md changed nothing here.
+        """
+        missing = []
+        for surface in ALWAYS_LOADED:
+            text = (ROOT / surface).read_text(encoding="utf-8", errors="replace")
+            if str(SURFACE) not in text and SURFACE.name not in text:
+                missing.append(surface)
+        self.assertFalse(
+            missing,
+            f"these always-loaded surfaces no longer name {SURFACE}, so an actor that loads "
+            f"them is never routed to the stop policy: {missing}")
+
+    def test_the_chain_resolves_and_still_covers_the_asserted_surfaces(self) -> None:
         """A chain that names a destination it cannot resolve is not a route."""
         unresolvable = [str(m) for m in ROUTER_CHAIN if not (ROOT / m).exists()]
         self.assertFalse(unresolvable, f"ROUTER_CHAIN members absent from the tree: {unresolvable}")
+        outside = [s for s in ALWAYS_LOADED if s not in {str(m) for m in ROUTER_CHAIN}]
+        self.assertFalse(
+            outside,
+            f"asserted surfaces that are no longer ROUTER_CHAIN members: {outside}. Either the "
+            "chain changed or this tuple drifted — reconcile them, rather than asserting on a "
+            "surface the router no longer routes through.")
 
 
 if __name__ == "__main__":
