@@ -46,7 +46,25 @@ reserved act should pass to agents, it adds one yes/no question with one line on
 changes if the answer is yes.
 
 Nothing waits on operator presence except a reason 1–3 stop. Mirror reviews DEFAULTS_TAKEN
-after the fact; a wrong default is a finding, not a reason to have stopped."""
+after the fact; a wrong default is a finding, not a reason to have stopped.
+
+STOP LOG. Every stop — taken or avoided — is recorded in the report under STOP_LOG:
+reason class (1 guard · 2 reserved act · 3 no safe default) · what was asked · time
+waited · outcome.
+  Class 2 entries carry the yes/no question. An operator YES retires that stop permanently
+  and is recorded as a decision.
+  Class 3 entries carry the hindsight default: "the safe default would have been X".
+  X is added to SAFE_DEFAULTS in this policy by the next dispatch that touches it.
+A stop that recurs after its default or decision exists is a finding against the actor.
+Target on any unattended deployment: STOP_LOG class 3 = 0; class 2 = 0 after the
+operator's decisions; class 1 only.
+
+SAFE_DEFAULTS (seeded from 2026-09-02/03):
+  - idle peer sessions on a shared checkout → proceed, note them
+  - prior-report figures not re-derivable in minutes → treat as hypothesis, proceed
+  - population counts that decay (refs, worktrees) → re-derive at start, never wait
+  - a test that fails on a dead premise when enrolled → enroll, leave red, report
+  - a report that exists only in a transcript → persist verbatim, note the source"""
 
 
 class TheStopPolicyIsCarriedWhereActorsLoadIt(unittest.TestCase):
