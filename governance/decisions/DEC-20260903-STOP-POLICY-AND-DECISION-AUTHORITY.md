@@ -5,8 +5,8 @@ title: Stop policy, decision authority, and branch-switch authority for unattend
 date: 2026-09-03
 authority: >
   Operatore — Annex H.1 rows "Spese / MAJOR approval / governance" and "Strategia
-  complessiva" (governance/annex_h_authority_matrix.md:35-36). Four of the six RESERVED
-  items are NOT sourced from an H.1 row; see MAPPING.
+  complessiva" (governance/annex_h_authority_matrix.md:35-36). Three of the six RESERVED
+  items trace to those two rows; the other three trace to no H.1 row at all. See MAPPING.
 status: RATIFIED_ON_MERGE
 status_note: >
   This record and the two texts it anchors are OPERATOR-AUTHORED and IN FORCE ON
@@ -90,30 +90,41 @@ anchor; the two live copies are the content.
 
 ## MAPPING — the RESERVED list against Annex H.1
 
-Mapped, not asserted. Two of six items are literal H.1 rows. The other four are not, and
-this record says so rather than manufacturing a correspondence.
+Mapped, not asserted. **Three** of the six items trace to a literal H.1 row, and to only
+**two distinct rows**, because "Spese / MAJOR approval / governance" carries two of them.
+The other three trace to no H.1 row, and this record says so rather than manufacturing a
+correspondence. An earlier draft of this section read "two of six items", conflating the
+count of rows with the count of items; the table below is the authority, and it is 3 / 3.
 
 | §21d RESERVED item | H.1 row | Source, where it is not H.1 |
 |---|---|---|
 | external spend above the declared default | **"Spese / MAJOR approval / governance" → Operatore** | — |
 | a change to a fundamental guarantee (this list, §21d, STOP POLICY body) | **"Spese / MAJOR approval / governance" → Operatore** — a governance change | — |
 | publication to origin or any public surface | **"Strategia complessiva" → Operatore** | also touches the governance row |
-| history rewrite | *no H.1 row* | the guard denies `REF_WRITE` to every runtime, role and lease. Reserving it here moves no authority away from any actor, because no actor held it |
+| history rewrite | *no H.1 row* | the guard refuses `REF_WRITE` to every runtime, role and lease — but it is registered as a `PreToolUse` hook on the `Bash` matcher alone, so that is a control on one channel, not a property of the repository. The reservation here is a real one, not a restatement of something no actor could do |
 | irreversible deletion of unique material | *no H.1 row* | `LEGEND_CORE.md` §2 ABSOLUTE PRINCIPLE — "No information may be lost … If preservation is not guaranteed → COMMIT BLOCKED" |
 | exposure of private or patient data outside the declared perimeter | *no H.1 row* | `CLAUDE.md` §0's three binding facts (public edition, no individual-level record) and the G7 privacy guarantee inventoried in PLAN-MODULAR-EVOLUTION-001 §M4 |
 
-**The sentence added to §21d, checked against this table.** *"§21d reassigns to the
-Orchestrator only the decisions H.1 assigns to the Operator. It moves no authority H.1
-assigns to Scientist, Plan or Mirror."* Confirmed: every RESERVED item traces either to
-one of H.1's two Operatore rows or to a guarantee that already bound every actor before
-this record existed. None of H.1's rows for other actors is reassigned — not
-`Conclusione scientifica → Scientist`, not `Integrazione strutturale / candidate → Plan`,
-not `Rifiuto integrazione → Plan (INTEGRATION_BLOCK)`, not
-`Composizione APPLICABLE_GOVERNANCE_FINGERPRINT → Plan`, not
-`Epistemic / method review → Mirror`, not `Classificazione MAJOR dubbia → Mirror
-(fail-closed)`. Mirror's F5 finding was that §21d's opening clause, read literally,
-displaced those six rows; the added sentence is the operator's fix and this table is its
-verification.
+**The sentence added to §21d, and the limit of what this table can show.** H.1 carries
+**17** rows: 2 to the Operatore, 15 elsewhere. This table audits the **reservation** — what
+§21d withholds. Mirror's F5 finding was about the **grant**: §21d's opening clause says the
+Orchestrator decides *every question not on the RESERVED list*, and the residual set of a
+withholding list is not established by enumerating the list. **This table therefore does not
+verify the added sentence, and this record does not claim it does.**
+
+Two open problems are recorded here rather than resolved, because §21d's body is reserved:
+
+1. **The sentence may be vacuous.** If §21d reassigns only decisions H.1 gives the
+   Operatore, and all three items deriving from those two rows sit inside RESERVED, then the
+   reassigned set is empty and §21d transfers nothing. Read without the sentence, the opening
+   clause still sweeps up rows H.1 assigns elsewhere. One of the two readings is wrong and the
+   text does not say which.
+2. **Two H.1 rows are prohibitions, not assignments,** and a residual grant reaches them
+   most sharply: `Modifica rubrica/metodi di Mirror | mai Mirror da solo (G.2)` and
+   `Promozione BOOTSTRAP_CONTROLLER → Orchestrator | protocollo Annex I (mai
+   autoassunzione)`. Neither appears in RESERVED.
+
+Both are operator decisions on reserved text. They are named in OUT_OF_SCOPE as open.
 
 ## SAFE_DEFAULTS — who may extend it
 
@@ -142,11 +153,26 @@ was unverified when §21d was written (Mirror, F2). Verified now, without pushin
   This is a platform property, **not** a per-repository policy this session audited — no
   attempt was made to enumerate which identities hold write access, and no push was made.
 
-**Outcome: `development` IS credential-gated for writes; the proviso is satisfied as
-written.** This does not make the permission operative. §21d is not ratified until the
-merge (see `status`), so **push remains reserved to the operator** until then, and the
-first actor to rely on this permission afterwards inherits the narrow scope of what was
-verified here.
+**Outcome: the measurement does not satisfy the proviso — it invalidates the permission.**
+An earlier draft of this section recorded the opposite, and it was wrong. Three facts, all
+established above or in the tree:
+
+1. `development` **is a public surface** — that is what `visibility: public` and the
+   anonymous read establish. §21d's own RESERVED bullet 1 reserves *"publication to origin
+   or any public surface"* to the operator, so the permission and the reservation collide
+   inside the same section, on a fact this very verification produced.
+2. `framework/scripts/guard_policy.py`, `DENY_NETWORK`, says it outright: *"🔴
+   `development` and `origin` are BOTH public GitHub repositories. Pushing a branch to
+   either one PUBLISHES it… Publication is an operator act and needs PUBLISH authority,
+   which is never granted by a runtime. Commit locally; the operator pushes."* This record
+   cited the file ten lines above that paragraph and did not report it.
+3. "Credential-gated" cannot discriminate anyway. It is true of every GitHub repository,
+   `origin` included — which §21d reserves — so the proviso does no work as a test.
+
+**`development` push therefore remains RESERVED to the operator, on the reservation's own
+terms and on the guard's, not merely because §21d is unratified.** Whether the permission
+bullet should be struck, or rewritten against a different property than credential-gating,
+is an operator decision on reserved text and is open.
 
 ## VERIFICATION_TRAIL
 
@@ -171,6 +197,26 @@ Not done, not authorized, not implied by this record:
   and are carried forward. This delta closes **F2–F6** only;
 - any push to `development` or `origin`;
 - any `HUMAN_APPROVAL_QUEUE` entry.
+
+## OPEN — Mirror's delta review of this record
+
+Mirror reviewed the commit that created this record and refuted four of its five claimed
+closures. Recorded here rather than repaired, because each remaining item is either reserved
+text or an operator decision:
+
+| # | Open item | Owner |
+|---|---|---|
+| D-1 | The sentence added to §21d is either vacuous or does not bind — see MAPPING | operator (reserved text) |
+| D-2 | §21d permits pushing to `development`, which RESERVED bullet 1 and `DENY_NETWORK` both forbid — see F2 | operator (reserved text) |
+| D-3 | Appending to SAFE_DEFAULTS now forces edits to five declarations, including the test constant the suite's own message forbids editing and this record's hash table. The §21c permission and the hashing mechanism still collide | operator (reserved text) |
+| D-4 | This record declines the `HUMAN_APPROVAL_QUEUE` object that GOVERNANCE §130, Annex J.3 and GATE 5 require, and substitutes the merge. The cheap repair Mirror names is a queue entry of `TYPE: GOVERNANCE`, `OBJECT: <candidate content hash> + BASE_HEAD 4dd9b83` | operator |
+| D-5 | Producer ≠ verifier: the Orchestrator authored the record that grants the Orchestrator authority, and §21d scopes that discipline to *scientific* claims only | operator |
+
+Repaired in the commit following this record, and not left open: the 3/3 miscount, the
+under-enumeration of H.1's 17 rows, the over-broad reading of the guard's `REF_WRITE`
+refusal, the F2 conclusion above, and two test weaknesses — `assertIn` replaced by section
+equality, and the reachability predicate replaced by a markdown link, each falsified before
+being claimed.
 
 ## ATTESTATION
 

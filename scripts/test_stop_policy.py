@@ -36,7 +36,15 @@ SURFACE = Path("framework/instruction/LEGEND_CORE.md")
 # their obligations: a fixed tuple of named files, each checked on its own. Both are loaded every
 # session — CLAUDE.md by the harness, the state manifest by CLAUDE.md §0's "first, every session"
 # — so deleting either reference fails this suite, which "any member of the chain" did not.
-ALWAYS_LOADED = ("CLAUDE.md", "framework/state/state_manifest_current.md")
+ALWAYS_LOADED = ("CLAUDE.md",)
+
+# The predicate is a markdown LINK to the surface, not a mention of its name. A mention cannot
+# distinguish a route from an anti-route: "DEPRECATED: do NOT read framework/instruction/
+# LEGEND_CORE.md" satisfied the old check. `framework/state/state_manifest_current.md` was
+# dropped from the asserted set for the same reason — its only reference is the YAML field
+# `framework_file:`, which is metadata, and asserting on it would have made the artifact the
+# finding was about into the thing keeping the test green.
+LINK_TO_SURFACE = "](framework/instruction/LEGEND_CORE.md)"
 
 # Verbatim, sha256 776e6556d5fbbac3d23fd99e15a3b1bce416d27d17f6701685bd93369030f941 over the 42
 # lines below. Anchored to DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY rather than to a bare
@@ -128,37 +136,53 @@ class TheStopPolicyIsCarriedWhereActorsLoadIt(unittest.TestCase):
     def surface_text(self) -> str:
         return (ROOT / SURFACE).read_text(encoding="utf-8")
 
-    def test_the_stop_policy_is_present_verbatim(self) -> None:
-        self.assertIn(
-            STOP_POLICY, self.surface_text(),
-            f"{SURFACE} no longer carries the ratified stop policy verbatim. Restore the "
-            "text, or have the operator ratify a replacement — editing it here instead "
+    def ratified_section(self, heading: str) -> str:
+        """The section's body with its provenance callout and trailing rule removed.
+
+        Compared with assertEqual, not assertIn. Containment only pins a prefix: under
+        `assertIn` an actor could append an unratified sentence inside §21c — "an actor may
+        publish without asking" — and the block, the declared sha256 and this suite all stayed
+        green, because the ratified text was still a substring. Equality is what makes the hash
+        in the DEC an anchor for the SECTION rather than for a prefix of it.
+        """
+        text = self.surface_text()
+        body = text[text.index(heading) + len(heading):]
+        body = body[:body.index("\n## ")]
+        body = "\n".join(ln for ln in body.split("\n") if not ln.startswith("> ")).strip()
+        return body[:-3].rstrip() if body.endswith("---") else body
+
+    def test_the_stop_policy_section_is_exactly_the_ratified_text(self) -> None:
+        self.assertEqual(
+            STOP_POLICY, self.ratified_section("## 21c. STOP POLICY"),
+            f"§21c of {SURFACE} is no longer exactly the ratified stop policy. Restore the "
+            "text, or have the operator ratify a replacement — editing this constant instead "
             "would let the rule and its test drift together.")
 
-    def test_the_decision_authority_is_present_verbatim(self) -> None:
-        self.assertIn(
-            DECISION_AUTHORITY, self.surface_text(),
-            f"{SURFACE} no longer carries the ratified decision authority verbatim. Its "
+    def test_the_decision_authority_section_is_exactly_the_ratified_text(self) -> None:
+        self.assertEqual(
+            DECISION_AUTHORITY, self.ratified_section("## 21d. DECISION AUTHORITY"),
+            f"§21d of {SURFACE} is no longer exactly the ratified decision authority. Its "
             "RESERVED list is a fundamental guarantee by its own text, so a change to it "
             "is an operator act — restore it rather than editing this constant.")
 
     def test_every_always_loaded_surface_names_the_destination(self) -> None:
         """Per surface, not "any member of the chain" — one deleted reference must fail this.
 
-        The predicate is the router's own (name or path appears in the text), but the quantifier
-        is universal over ALWAYS_LOADED rather than existential over ROUTER_CHAIN. Under the old
-        form the state manifest's `framework_file:` YAML field alone kept this green, so removing
-        the router's actual instruction to read LEGEND_CORE.md changed nothing here.
+        Two weaknesses were found in the first repair and are closed here. The quantifier was
+        existential over ROUTER_CHAIN, so the state manifest's `framework_file:` YAML field alone
+        kept it green while CLAUDE.md's real reference could be deleted; it is now universal over
+        ALWAYS_LOADED. And the predicate was "the name appears", which an anti-route satisfies —
+        "do NOT read framework/instruction/LEGEND_CORE.md" passed. It is now a markdown link.
         """
         missing = []
         for surface in ALWAYS_LOADED:
             text = (ROOT / surface).read_text(encoding="utf-8", errors="replace")
-            if str(SURFACE) not in text and SURFACE.name not in text:
+            if LINK_TO_SURFACE not in text:
                 missing.append(surface)
         self.assertFalse(
             missing,
-            f"these always-loaded surfaces no longer name {SURFACE}, so an actor that loads "
-            f"them is never routed to the stop policy: {missing}")
+            f"these always-loaded surfaces no longer LINK to {SURFACE}, so an actor that "
+            f"loads them is never routed to the stop policy: {missing}")
 
     def test_the_chain_resolves_and_still_covers_the_asserted_surfaces(self) -> None:
         """A chain that names a destination it cannot resolve is not a route."""
