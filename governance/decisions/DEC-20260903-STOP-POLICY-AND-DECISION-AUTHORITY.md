@@ -220,6 +220,28 @@ seconds and runs on every command. The actor records the verdict against a SHA f
 is also how the recording obligation is discharged by construction — without the record
 there is no push.
 
+### What this control does NOT guarantee
+
+Stated in the shape Annex J.0 requires, because a control described more strongly than it
+behaves is worse than no control:
+
+- `GUARANTEE_PROVIDED` — no push reaches a remote other than `development`; none carries a
+  force or `+` refspec; none proceeds without a ledger entry naming the exact SHA, a clean
+  gate, and an actor; `main` needs the merge assertion as well. All of it is enforced in
+  the guard, on the channel the guard watches, and the battery states each refusal.
+- `FAILURE_MODE_STILL_POSSIBLE` — **the ledger is written by the same actor that pushes.**
+  Nothing stops an actor from hand-writing an entry claiming `gate_verdict: PASS` without
+  running the gate, or asserting `merge_changed_no_guarantee` about a merge that changed
+  one. The `record` subcommand runs the gate honestly, but using it is not compelled. This
+  control raises the cost of a mistake to near-certain detection; it does not defeat a
+  deliberate false record. Separately, the guard is registered on the `Bash` matcher alone,
+  so a runtime that pushes through another channel is not evaluated at all.
+- `DETECTION` — the ledger is committed, so a forged entry is in the diff Mirror reviews and
+  in the history afterwards; the gate can be re-run against the recorded SHA by anyone.
+- `RECOVERY` — none for the publication itself. A push to a public repository is
+  irreversible, which is why the reservation list still opens with publication and why
+  `origin` is never in scope.
+
 ## VERIFICATION_TRAIL
 
 | Check | Command | Result |
