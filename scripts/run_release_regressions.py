@@ -87,6 +87,27 @@ TESTS = (
     # per mutation and takes tens of minutes. Both are operator-run instruments; only their
     # parsing is a regression.
     "framework/scripts/test_codex_runtime_probe.py",
+    # Ten suites that entered the tree 2026-08-29→08-31 and were never registered. The
+    # enrollment invariant in test_release_runner_verdict.py had been failing for exactly
+    # this reason: 81 tracked, 71 registered, and "PASS (71 targets)" reads the same as
+    # "PASS (81 targets)" to anyone not counting. They are enrolled unchanged — no skip, no
+    # xfail, no NOT_RUN_BY_DESIGN entry, no edit to their contents.
+    # 🔴 test_runtime_diagnostics.py enters RED and stays red: it asserts the string
+    # "Blanket staging is blocked in this repository." inside scripts/guard_bash_command.py,
+    # which stopped being the guard when the policy moved to guard_policy.py. That is a dead
+    # premise in the test, not a regression in the guard, and repairing it here would be
+    # editing a suite to make the battery green — which is the one thing enrollment must not
+    # buy. It is left failing, visible, and owned by a separate repair.
+    "framework/scripts/test_confinement_and_delegation.py",
+    "framework/scripts/test_effect_model.py",
+    "framework/scripts/test_execution_attestation.py",
+    "framework/scripts/test_execution_receipt.py",
+    "framework/scripts/test_guard_families_rev11.py",
+    "framework/scripts/test_guard_families_rev12.py",
+    "framework/scripts/test_guard_families_rev13.py",
+    "framework/scripts/test_post_effect_verify.py",
+    "framework/scripts/test_repo_topology.py",
+    "framework/scripts/test_runtime_diagnostics.py",
     ".claude/skills/legend-study-intake-triage/scripts/"
     "test_study_dedup_triage.py",
     ".claude/skills/legend-batch-inferential-sweep/scripts/"
