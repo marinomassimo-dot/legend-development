@@ -100,8 +100,12 @@ class TheFileToolsAreDecidableAtAll(unittest.TestCase):
 
 class ThePeerLockIsTheSameThroughBothDoors(unittest.TestCase):
     def test_a_peer_worktree_is_refused_through_write_and_edit(self) -> None:
+        """🔴 SKIPPED where there are none. A fresh clone has one worktree, so asserting
+        that peers exist made this red in every clone — measuring the checkout it ran in
+        and reporting it as a property of the repository."""
         found = peers()
-        self.assertTrue(found, "git reports no peer worktrees, so this check is vacuous")
+        if not found:
+            self.skipTest("this checkout has no peer worktrees; nothing to refuse")
         for peer in found:
             for tool in ("Write", "Edit"):
                 with self.subTest(peer=peer, tool=tool):

@@ -54,9 +54,16 @@ class ProvisioningIsJudgedByDestination(unittest.TestCase):
         self.assertEqual(gp.ALLOWED, decide("git worktree add /tmp/wt-scratch -b throwaway"))
 
     def test_every_live_peer_worktree_is_still_refused(self) -> None:
-        """The population is git's, not this file's."""
+        """The population is git's, not this file's.
+
+        🔴 SKIPPED, not failed, where there are no peers. A fresh clone has exactly one
+        worktree, so asserting that peers exist made this suite red in every clone — it was
+        measuring the checkout it happened to run in and calling that a property of the
+        repository. The scratch case below carries the behaviour claim on its own.
+        """
         peers = live_worktrees()
-        self.assertTrue(peers, "git reports no peer worktrees, so this check is vacuous")
+        if not peers:
+            self.skipTest("this checkout has no peer worktrees; nothing to refuse")
         for peer in peers:
             with self.subTest(peer=peer):
                 self.assertNotEqual(
