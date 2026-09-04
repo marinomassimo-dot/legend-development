@@ -2681,103 +2681,38 @@ REF_DESTRUCTIVE_FLAGS = ("-d", "-D", "--delete", "-m", "-M", "--move", "-c", "-C
 GIT_VERB_SUBCOMMANDS = frozenset({"worktree", "stash", "notes", "reflog", "replace",
                                   "submodule", "bisect", "remote"})
 
-#: 🔴 `git worktree add` OPTION GRAMMAR — an ALLOWLIST, because two hand-rolled versions
-#: of this parser both shipped holes.
+#: 🔴 `git worktree add` DESTINATION PARSING — ATTEMPTED AND REVERTED, 2026-09-04.
 #:
-#: The first kept flag VALUES (`--lock --reason /tmp/ok <peer>` judged the reason string).
-#: The second enumerated value-taking flags and let everything else through, so `-fb hijack
-#: <peer>` — which git parses as `-f` plus `-b hijack`, confirmed against real git — judged
-#: the branch name and let a checkout land on a live peer worktree. Both spellings were
-#: PROHIBITED before either repair. Twice, an unrecognised option shape meant "carry on
-#: guessing", and twice the guess was the attacker's.
+#: Four parsers were written to make the unreachable `FILE_WRITE` branch below reachable,
+#: so that provisioning could be judged by DESTINATION rather than refused wholesale. Three
+#: of them shipped live bypasses that placed a checkout on a peer worktree, each found by
+#: blind review and none by this repository's own tests:
 #:
-#: So the failure direction is inverted. Every option is enumerated by name and arity, and
-#: anything NOT on these lists makes the parse return None, which becomes `UNNAMED` and
-#: denies. A new git option therefore costs a refusal until it is added here, which is the
-#: direction a guard should fail in; the alternative has now been wrong twice.
-WORKTREE_ADD_BOOLEAN_LONG = frozenset({
-    "--force", "--detach", "--checkout", "--no-checkout", "--lock", "--orphan",
-    "--guess-remote", "--no-guess-remote", "--track", "--no-track", "--quiet",
-    "--relative-paths", "--no-relative-paths",
-})
-#: `--orphan` is HERE and not among the value flags: git derives the branch from the path's
-#: basename and consumes no operand — `git worktree add <path> --orphan` works. Listing it
-#: as value-taking made the guard swallow the destination and refuse a legitimate scratch
-#: worktree, which is a control wrongly refused rather than a hole, and equally a defect.
-WORKTREE_ADD_VALUE_LONG = frozenset({"--reason"})
-WORKTREE_ADD_BOOLEAN_SHORT = frozenset({"f", "d", "q"})
-WORKTREE_ADD_VALUE_SHORT = frozenset({"b", "B"})
-WORKTREE_ADD_HELP = frozenset({"-h", "--help"})
+#:   1. kept flag VALUES            `--lock --reason /tmp/ok <peer>`  judged the decoy
+#:   2. unknown option shapes passed `-fb hijack <peer>`               judged the branch
+#:   3. `.lstrip("=")` on an attached value  `-B= <peer> main`         judged the commit-ish
+#:
+#: The fourth had no bypass anyone found, and it was reverted anyway. The reason is the
+#: instrument, not the parser. A differential oracle against real git was built after the
+#: second failure and claimed to retire enumeration; it did not catch the third, because
+#: its spellings were still hand-written. Generated from the option grammar, it still did
+#: not, because the operand grammar was hand-fixed. Generated over both, review then found
+#: a mutant surviving in the `-bf` family — excluded by a comment of mine asserting that
+#: the value-taking letter must come last, which is false of real git — and a whole `help`
+#: axis on which the oracle could not fail at all.
+#:
+#: Four dimensions, each discovered only after the previous one was closed. The parser may
+#: well be correct now; what is certain is that nothing here can demonstrate it, and a
+#: safety control whose test cannot fail on a known bypass is not evidence of anything.
+#: Reverting costs a documented refusal. Keeping it would have shipped a control that
+#: LOOKS like it judges destinations, which is worse than one that plainly refuses.
+#:
+#: The work is at `040dabb` and re-queued as TASK-GUARD52-A2. Its precondition is stated
+#: rather than left to judgement: before any parser lands, an instrument must be shown to
+#: FAIL against each of the three historical bypasses above, and a mutation battery over
+#: the parser must reach zero survivors. `git worktree add` stays refused until then.
 
 
-def parse_worktree_add(rest: List[str]) -> Tuple[str, Optional[str]]:
-    """One arity-aware walk, returning ("help"|"path"|"unknown", destination or None).
-
-    🔴 ONE walk, because two disagreed. `-h` used to be detected by a separate
-    `any(token in HELP for token in rest)` scan with no notion of arity, so `--reason -h
-    <peer>` returned ALLOW before the destination was ever parsed — the help check saw a
-    flag VALUE and called it a flag. The parser underneath had the peer path right; the
-    early return threw it away. Two readings of one argv is two chances to disagree, and
-    `--reason` is the exact flag that shipped the first hole.
-    """
-    tokens = list(rest)
-    if tokens and tokens[0] == "worktree":
-        tokens = tokens[1:]
-    if tokens and tokens[0] == "add":
-        tokens = tokens[1:]
-    expect_value = False
-    end_of_options = False
-    for token in tokens:
-        if expect_value:
-            expect_value = False
-            continue
-        if end_of_options:
-            return "path", token
-        if token == "--":
-            end_of_options = True
-            continue
-        if not token.startswith("-") or token == "-":
-            return "path", token
-        if token in WORKTREE_ADD_HELP:
-            return "help", None
-        if token.startswith("--"):
-            name, sep, _ = token.partition("=")
-            if name in WORKTREE_ADD_BOOLEAN_LONG and not sep:
-                continue
-            if name in WORKTREE_ADD_VALUE_LONG:
-                expect_value = not sep      # `--reason=x` carries its own value
-                continue
-            return "unknown", None
-        letters = token[1:]
-        for index, letter in enumerate(letters):
-            if letter in WORKTREE_ADD_BOOLEAN_SHORT:
-                continue
-            if letter in WORKTREE_ADD_VALUE_SHORT:
-                # 🔴 NO `.lstrip("=")` here, and that single call was the third bypass.
-                # git does not strip a leading `=` from a short option's attached value:
-                # `-B=` means the branch is literally `=`, consuming nothing further. With
-                # the strip, the remainder read as empty, the walk consumed the NEXT token
-                # as the branch — the peer path — and judged the commit-ish instead.
-                expect_value = not letters[index + 1:]
-                break
-            return "unknown", None
-    return "unknown", None
-
-
-def worktree_add_destination(rest: List[str]) -> Optional[str]:
-    """The path `git worktree add` would write, or None when it cannot be identified.
-
-    None denies. There is no useful guess for "which directory is about to be filled with a
-    checkout", and guessing is exactly how a peer worktree twice stopped being looked at.
-
-    `git worktree add [<options>] <path> [<commit-ish>]` — the FIRST operand is the path;
-    anything after it is a commit-ish and never a write target.
-
-    A thin wrapper over `parse_worktree_add`, which does the single arity-aware walk. It
-    exists so callers that only want the path are not obliged to interpret "help".
-    """
-    kind, destination = parse_worktree_add(rest)
-    return destination if kind == "path" else None
 
 #: Families whose SECOND word decides whether anything is mutated at all.
 GIT_SUB_READ = {
@@ -3184,31 +3119,24 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
         # `git branch --show-current` is in the pre-flight every actor is told to run.
         # Classifying a family by its first word only is the same error as classifying
         # a command by its first word only, one level down.
-        # 🔴 Two separate `if`s, not one chain, and that is the whole repair. `worktree` is
-        # a key of GIT_SUB_READ, so `git worktree add` matched the outer `if`, failed the
-        # inner `second in {"list"}`, returned nothing — and because the outer branch had
-        # already matched, every `elif` below it was skipped, including the one written for
-        # this exact command. The refusal that reached the actor was therefore the generic
-        # ref handling and not any decision about worktrees.
-        if sub in GIT_SUB_READ and second in GIT_SUB_READ[sub]:
-            return
-        if sub in ("branch", "tag"):
+        # 🔴 REVERTED 2026-09-04 to the chain form, which leaves `git worktree add`
+        # refused as a ref mutation. See the note above `GIT_VERB_SUBCOMMANDS`.
+        if sub in GIT_SUB_READ:
+            if second in GIT_SUB_READ[sub]:
+                return
+        elif sub in ("branch", "tag"):
             # Listing (`git branch`, `git tag -l`, `--show-current`) reads. Naming a new
             # ref CREATES one, which destroys nothing. Only the destructive flags move
             # or remove a ref that already exists.
             if not has_flag(argv, *REF_DESTRUCTIVE_FLAGS):
                 return
         elif sub == "worktree" and second == "add":
-            # ONE walk decides both questions. The previous version asked "is `-h`
-            # anywhere in argv" separately, which saw `--reason -h <peer>` as a help
-            # request and returned ALLOW while the parser underneath had the peer path
-            # right. `-h` counts only in an option position, which is what arity means.
-            kind, destination = parse_worktree_add(rest)
-            if kind == "help":
-                return                      # prints usage, writes nothing
             # Additive, but it writes a whole checkout, so it is judged by where.
+            # UNREACHABLE, as it has been since revision 9 — see the note above
+            # `GIT_VERB_SUBCOMMANDS`. Left exactly as found rather than deleted, because
+            # the reverted work is queued to return and this is the branch it targets.
             findings.append(Finding("FILE_WRITE", "git worktree add",
-                                    [destination or UNNAMED],
+                                    named[1:2] or [UNNAMED],
                                     "writes a whole checkout into its destination"))
             return
 
