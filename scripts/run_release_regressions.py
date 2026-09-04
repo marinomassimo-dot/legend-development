@@ -22,6 +22,10 @@ TESTS = (
     # This one checks the router links to the two SECTIONS, in the part of the surface read
     # before acting — the gap a session fell through on 2026-09-04 with every check green.
     "scripts/test_stop_policy_is_reachable.py",
+    # §21d's push callout is prose about what code does, and it has already been false for
+    # one commit. This suite derives the answer from source bytes and refuses to let the
+    # three surfaces that state it disagree with the guard, in either direction.
+    "scripts/test_the_push_callout_is_executable.py",
     "scripts/test_documented_commands.py",
     "scripts/test_fresh_clone_reader_journey.py",
     "scripts/test_mission_contract.py",
