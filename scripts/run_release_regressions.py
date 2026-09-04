@@ -122,6 +122,10 @@ TESTS = (
     # Enrolled with the behaviour change it guards: `git worktree add` is now judged by
     # its destination, and the branch that does so was unreachable code until 0B.
     "framework/scripts/test_worktree_provisioning.py",
+    # The policy half of Write/Edit coverage. Enrolled BEFORE the matcher is registered:
+    # an unknown tool fails closed, so registering first would have denied all file
+    # authoring in the session.
+    "framework/scripts/test_file_tool_coverage.py",
     "framework/scripts/test_guard_families_rev11.py",
     "framework/scripts/test_guard_families_rev12.py",
     "framework/scripts/test_guard_families_rev13.py",

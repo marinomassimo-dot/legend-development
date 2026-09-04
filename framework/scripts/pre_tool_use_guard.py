@@ -122,6 +122,26 @@ CODE_MODE_TOOLS = {"exec"}
 # Tools whose payload is a patch envelope rather than a shell command.
 PATCH_TOOLS = {"apply_patch"}
 
+#: Tools that write ONE named file and carry no command at all — Claude Code's file
+#: authoring surface. Until now the guard was registered on `Bash` alone, so a `Write` or
+#: an `Edit` aimed at a peer worktree was never evaluated, while `echo x >` at the same
+#: path was refused. The two are the same act through two doors, and only one had a lock.
+#:
+#: 🔴 The ORDER of this repair is load-bearing, and measuring it first is what showed why.
+#: Registering the matcher before teaching the guard these names does not add a control:
+#: an unknown tool raises `Undecidable`, which fails CLOSED, so the hook would have denied
+#: EVERY `Write` and `Edit` in the session — including every legitimate one — the moment
+#: it was registered. Policy first, registration second; the registration is a separate
+#: task and this module's coverage is the precondition for it, not the other way round.
+#:
+#: The value is the PATH, so each name is paired with the key that holds it.
+FILE_WRITE_TOOLS = {
+    "Write": "file_path",
+    "Edit": "file_path",
+    "MultiEdit": "file_path",
+    "NotebookEdit": "notebook_path",
+}
+
 # Keys that have been observed to hold the command, in the order they are tried.
 COMMAND_KEYS = ("command", "cmd", "script")
 # Keys that have been observed to hold a program body or a patch envelope.
@@ -139,6 +159,11 @@ KNOWN_TOOL_INPUT_KEYS = frozenset({
     # Codex
     "workdir", "with_escalated_permissions", "justification", "timeout_ms", "env",
     "sandbox", "yield_time_ms", "max_output_tokens", "shell", "login",
+    # Claude Code's file-authoring tools. `file_path`/`notebook_path` is the target; the
+    # rest are the payload's own fields and are named here so an unexpected sibling still
+    # gets refused rather than ignored.
+    "file_path", "notebook_path", "old_string", "new_string", "replace_all", "edits",
+    "new_source", "cell_id", "cell_type", "edit_mode",
 })
 
 SHELL_BINARIES = {"sh", "bash", "zsh", "dash", "ksh", "fish"}
@@ -295,6 +320,27 @@ def program_text(tool_input: object) -> str:
         "no program body found under any of "
         + ", ".join(f"`{k}`" for k in PROGRAM_KEYS + COMMAND_KEYS)
     )
+
+
+def file_target(tool_name: str, tool_input: object) -> str:
+    """The single path a file-authoring tool would write, or a refusal.
+
+    Fails closed on every shape that is not a plain non-empty string: a missing key, a
+    null, a list, a number. There is no useful default for "which file is about to be
+    overwritten", and guessing one would put the guard's answer on the wrong path while
+    looking like it had checked something.
+    """
+    key = FILE_WRITE_TOOLS[tool_name]
+    if not isinstance(tool_input, dict):
+        raise Undecidable(
+            f"tool_input is {type(tool_input).__name__}, not an object, so `{key}` "
+            f"cannot be read for `{tool_name}`")
+    value = tool_input.get(key)
+    if not isinstance(value, str) or not value.strip():
+        raise Undecidable(
+            f"`{tool_name}` carries no usable `{key}`, so the guard cannot say which file "
+            f"would be written: {value!r}")
+    return value
 
 
 def _json_object_at(text: str, start: int) -> "tuple[object, int]":
@@ -488,7 +534,7 @@ def decide(payload: object) -> "dict | None":
         name.strip() for name in os.environ.get(EXTRA_SHELL_TOOLS_ENV, "").split(",")
         if name.strip()
     }
-    known = set(SHELL_TOOLS) | CODE_MODE_TOOLS | PATCH_TOOLS | extra
+    known = set(SHELL_TOOLS) | CODE_MODE_TOOLS | PATCH_TOOLS | set(FILE_WRITE_TOOLS) | extra
     if tool_name not in known:
         raise Undecidable(
             f"`{tool_name}` is not a tool this guard knows.\n\n"
@@ -515,6 +561,15 @@ def decide(payload: object) -> "dict | None":
         # knows how to read: it names its own targets.
         calls = [("apply_patch <<'PATCH'\n" + program_text(tool_input) + "\nPATCH",
                   tool_input)]
+    elif tool_name in FILE_WRITE_TOOLS:
+        # Projected onto a redirection write, the same way a patch envelope is projected
+        # onto `apply_patch`. The point is that ONE scope decision covers both doors: this
+        # synthesises the shell form the policy already refuses at a peer worktree and
+        # already allows in scratch, so `Write` cannot disagree with `echo x >` about a
+        # path. A second classifier would be a second answer, and two answers to one
+        # question is how the surfaces drifted apart in the first place.
+        calls = [(f"echo x > {shlex.quote(file_target(tool_name, tool_input))}",
+                  tool_input)]
     else:
         calls = [(command_text(tool_input), tool_input)]
 
@@ -538,6 +593,23 @@ def decide(payload: object) -> "dict | None":
             command, cwd=workdir or None, repo_root=root,
             assigned=assignment.worktree)
         if outcome != guard_policy.ALLOWED and reason:
+            # 🔴 The ONE denial that cannot apply to the tool it names as its own remedy.
+            #
+            # `SHELL_WRITE_IN_ASSIGNED_WORKTREE` refuses a shell write inside this actor's
+            # own worktree and says: "Use Write or Edit (they enforce read-before-overwrite)".
+            # Projecting a `Write` onto `echo x >` therefore made the guard answer every
+            # legitimate Write with an instruction to use Write — circular, and it would have
+            # denied all file authoring in the session the moment the matcher was registered.
+            # Caught by running it rather than by reading the projection.
+            #
+            # It is skipped ONLY for this tool family and ONLY for this code. Every rule
+            # ABOVE it in the priority chain has already had its say and still denies:
+            # `RUNTIME_CONFIG`, the `CONFINED` scopes (`PEER_WORKTREE`, `SHARED_CHECKOUT`,
+            # `GIT_COMMON_DIR`), a missing session assignment. Those are the reasons a file
+            # tool must be refused, and they are untouched — this removes the single reason
+            # that exists only to route a caller toward the tool now doing the calling.
+            if tool_name in FILE_WRITE_TOOLS and code == guard_policy.CODE_SHELL_WRITE:
+                continue
             return _deny(reason, code, assignment.source)
     return None
 
