@@ -24,6 +24,11 @@ sys.path.insert(0, str(ROOT / "framework" / "scripts"))
 import event_ledger as el  # noqa: E402
 
 
+def messages(events) -> list[str]:
+    """The finding texts alone, for cases that care about what was found and not by whom."""
+    return [message for _, message in el.cross_actor_findings(events)]
+
+
 class LedgerCase(unittest.TestCase):
     def setUp(self) -> None:
         self.tmp = tempfile.TemporaryDirectory()
@@ -179,21 +184,21 @@ class ClosureLivesInTheClosingEvent(LedgerCase):
         """An append cannot see peers' files, so this check can only live in the view."""
         self.append("scientist", "TASK_COMPLETE", "done", task_id="T-1",
                     closes_event_id="EV-orchestrator-0009")
-        errors = el.cross_actor_errors(el.read_all(self.events)[0])
+        errors = messages(el.read_all(self.events)[0])
         self.assertTrue(any("is in no actor ledger" in e for e in errors), errors)
 
     def test_a_closure_may_not_cross_a_task_boundary_or_precede_its_opening(self) -> None:
         opened = self.assign("T-1")
         self.append("scientist", "TASK_COMPLETE", "done", task_id="T-2",
                     closes_event_id=opened["event_id"])
-        errors = el.cross_actor_errors(el.read_all(self.events)[0])
+        errors = messages(el.read_all(self.events)[0])
         self.assertTrue(any("across a task boundary" in e for e in errors), errors)
 
     def test_a_review_closure_may_not_close_an_assignment(self) -> None:
         opened = self.assign("T-1")
         self.append("mirror", "REVIEW_CLOSED", "PASS", task_id="T-1",
                     closes_event_id=opened["event_id"])
-        errors = el.cross_actor_errors(el.read_all(self.events)[0])
+        errors = messages(el.read_all(self.events)[0])
         self.assertTrue(any("which it may not close" in e for e in errors), errors)
 
 
@@ -331,6 +336,85 @@ class TheDerivedViewIsItselfChecked(LedgerCase):
         self.assertEqual([], el.view_disagreements(el.read_all(self.events)[0], self.view))
 
 
+class APermanentFindingIsAcknowledgedNotSilenced(LedgerCase):
+    """🔴 Found by using the tool: one mistyped `--closes` halted consolidation forever.
+
+    The ledger is append-only, so a mis-linked closure cannot be edited out and no later
+    event retracts it. Treating it as blocking meant a typo permanently destroyed the audit
+    surface J.1 exists to give Mirror. Structural failures stay blocking because they are
+    repairable; permanent content findings are acknowledged with a written reason.
+    """
+
+    def mislink(self) -> str:
+        opened = self.assign("T-1")
+        bad = self.append("mirror", "REVIEW_CLOSED", "PASS", task_id="T-1",
+                          closes_event_id=opened["event_id"])
+        return bad["event_id"]
+
+    def acknowledge(self, event_id: str, reason: str) -> None:
+        self.view.mkdir(parents=True, exist_ok=True)
+        (self.view / "acknowledged.json").write_text(
+            json.dumps({"events": {event_id: reason}}), encoding="utf-8")
+
+    GOOD = ("a mistyped --closes on an append-only record that cannot be edited out, "
+            "and the queue is unaffected because open_tasks filters by closer type")
+
+    def test_an_unacknowledged_finding_blocks(self) -> None:
+        self.mislink()
+        errors, anchor = el.consolidate(self.events, self.view)
+        self.assertTrue(any("may not close" in e for e in errors), errors)
+        self.assertEqual({}, anchor)
+
+    def test_an_acknowledged_finding_is_reported_and_does_not_block(self) -> None:
+        self.acknowledge(self.mislink(), self.GOOD)
+        errors, anchor = el.consolidate(self.events, self.view)
+        self.assertEqual([], errors)
+        self.assertEqual(2, anchor["events"])
+
+    def test_a_reason_too_short_to_be_one_does_not_acknowledge(self) -> None:
+        """"known issue" is a label. An acknowledgement needs an argument."""
+        self.acknowledge(self.mislink(), "known issue")
+        errors, _ = el.consolidate(self.events, self.view)
+        self.assertTrue(any("too short to be one" in e for e in errors), errors)
+
+    def test_a_stale_acknowledgement_is_itself_an_error(self) -> None:
+        """The file cannot accumulate cover for problems that are gone."""
+        self.assign("T-1")
+        self.acknowledge("EV-orchestrator-9999", self.GOOD)
+        errors, _ = el.consolidate(self.events, self.view)
+        self.assertTrue(any("stale acknowledgement" in e for e in errors), errors)
+
+    def test_acknowledgement_does_not_excuse_a_STRUCTURAL_failure(self) -> None:
+        """The line that keeps this from being a silencer.
+
+        A chain break and a forged view are repairable — restore the file, rebuild the
+        view — so no acknowledgement may wave either through. If this ever goes green, the
+        mechanism has become an off switch.
+        """
+        bad = self.mislink()
+        self.assign("T-2")
+        self.assign("T-3")
+        self.acknowledge(bad, self.GOOD)
+        self.assertEqual([], el.consolidate(self.events, self.view)[0])
+        path = el.actor_ledger_path(self.events, "orchestrator")
+        lines = el.load_actor_file(path)
+        lines[0]["object"] = "tampered"
+        path.write_text("".join(el.canonical_line(e) + "\n" for e in lines), encoding="utf-8")
+        errors, anchor = el.consolidate(self.events, self.view)
+        # Asserted on the PROPERTY, not on one detector's wording. The first version named
+        # "broken hash chain" and went red against a single-event file, where tampering
+        # leaves the chain self-consistent and the ANCHOR is what fires — which would have
+        # read as the mechanism failing when it was the assertion aiming at the wrong one.
+        self.assertNotEqual([], errors)
+        self.assertEqual({}, anchor)
+        self.assertFalse([e for e in errors if "may not close" in e],
+                         "the acknowledged CONTENT finding must stay excused, and only the "
+                         f"structural failure may block: {errors}")
+        self.assertTrue(
+            any("broken hash chain" in e or "EXTENDS its anchored history" in e
+                for e in errors), errors)
+
+
 class OrderingSurvivesFiveDigits(LedgerCase):
     def test_the_sort_key_is_numeric_not_lexical(self) -> None:
         """🔴 `EV-a-10000` sorts before `EV-a-9998` as a string, and `append_event` mints
@@ -375,7 +459,7 @@ class TheQueueIsAJoinNotAStateMachine(LedgerCase):
                     closes_event_id=opened["event_id"])
         events = el.read_all(self.events)[0]
         self.assertEqual(["T-1"], [r["task_id"] for r in el.open_tasks(events)])
-        self.assertNotEqual([], el.cross_actor_errors(events))
+        self.assertNotEqual([], messages(events))
 
     def test_one_opening_may_not_be_closed_twice(self) -> None:
         """J.1's DETECTION names openings without closures and not the reverse, so nothing
@@ -386,7 +470,7 @@ class TheQueueIsAJoinNotAStateMachine(LedgerCase):
                     closes_event_id=opened["event_id"])
         self.append("orchestrator", "TASK_CANCELLED", "parked", task_id="T-1",
                     closes_event_id=opened["event_id"])
-        errors = el.cross_actor_errors(el.read_all(self.events)[0])
+        errors = messages(el.read_all(self.events)[0])
         self.assertTrue(any("closed twice" in e for e in errors), errors)
 
     def test_claims_and_acks_are_joined_on_task_id_and_do_not_close_anything(self) -> None:
@@ -444,7 +528,8 @@ class TheRepositoryLedgerIsWellFormed(unittest.TestCase):
         events_dir = ROOT / el.DEFAULT_EVENTS_DIR
         view_dir = ROOT / el.DEFAULT_VIEW_DIR
         events, per_actor, errors = el.read_all(events_dir)
-        errors += el.cross_actor_errors(events)
+        errors += el.triage_findings(el.cross_actor_findings(events),
+                                     el.load_acknowledgements(view_dir))[0]
         # The committed view must BE the replay. Nothing checked this until Mirror
         # fabricated a row in it and the whole battery stayed green.
         errors += el.view_disagreements(events, view_dir)

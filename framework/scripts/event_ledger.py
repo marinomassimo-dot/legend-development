@@ -389,15 +389,29 @@ def anchors_for(per_actor: dict[str, list[dict[str, Any]]]) -> dict[str, dict[st
             for actor, lines in per_actor.items()}
 
 
-def cross_actor_errors(events: list[dict[str, Any]]) -> list[str]:
+def cross_actor_findings(events: list[dict[str, Any]]) -> list[tuple[str, str]]:
     """Rules that only the consolidated view can see, because they span writers.
 
     A closure written by the actor that finished the work points at an opening written by
     the Orchestrator that assigned it. Neither file can check that alone — which is why
     this check lives here and not in `append_event`, and why an append is not proof that
     the event it closes exists.
+
+    🔴 These are FINDINGS, not structural errors, and the difference was learned by being
+    bitten. A chain break or a forged view is repairable: restore the file, rebuild the
+    view. A mis-linked closure is a permanent fact about an immutable record — the ledger
+    is append-only, so there is no edit that removes it. Treating it as blocking meant one
+    mistyped `--closes` halted consolidation *forever*, and the audit surface J.1 gives
+    Mirror would have stayed unbuildable because of a typo. That happened here, on the
+    third use of this tool, to its own author.
+
+    So each finding is returned WITH the event id that carries it, and
+    `ledger/consolidated/acknowledged.json` may carry a reason per id. An unacknowledged
+    finding still blocks; an acknowledged one is reported and does not. This is not a
+    weakening — the acknowledgement demands a written reason, and a stale one is itself an
+    error, which is the same discipline this repository already applies to test exemptions.
     """
-    errors: list[str] = []
+    findings: list[tuple[str, str]] = []
     by_id = {e.get("event_id"): e for e in events}
     closers: dict[str, str] = {}
     for event in events:
@@ -409,30 +423,68 @@ def cross_actor_errors(events: list[dict[str, Any]]) -> list[str]:
         # a TASK_CANCELLED could both close one assignment, consolidation reported no
         # error, and the view silently kept whichever sorted first — i.e. the outcome of
         # the task became a function of the sort order.
+        here = str(event.get("event_id"))
         if target_id in closers:
-            errors.append(
-                f"{target_id} is closed twice: by {closers[target_id]} and by "
-                f"{event.get('event_id')}. An opening has one outcome")
+            findings.append((here,
+                f"{target_id} is closed twice: by {closers[str(target_id)]} and by "
+                f"{here}. An opening has one outcome"))
         else:
-            closers[str(target_id)] = str(event.get("event_id"))
+            closers[str(target_id)] = here
         target = by_id.get(target_id)
         if target is None:
-            errors.append(
-                f"{event.get('event_id')} closes `{target_id}`, which is in no actor ledger")
+            findings.append((here, f"{here} closes `{target_id}`, which is in no actor ledger"))
             continue
         allowed = CLOSES.get(str(event.get("event_type")), frozenset())
         if target.get("event_type") not in allowed:
-            errors.append(
-                f"{event.get('event_id')} ({event.get('event_type')}) closes "
-                f"{target_id} ({target.get('event_type')}), which it may not close")
+            findings.append((here,
+                f"{here} ({event.get('event_type')}) closes {target_id} "
+                f"({target.get('event_type')}), which it may not close"))
         elif event.get("task_id") != target.get("task_id"):
-            errors.append(
-                f"{event.get('event_id')} closes {target_id} across a task boundary: "
-                f"`{event.get('task_id')}` vs `{target.get('task_id')}`")
+            findings.append((here,
+                f"{here} closes {target_id} across a task boundary: "
+                f"`{event.get('task_id')}` vs `{target.get('task_id')}`"))
         elif str(event.get("event_at", "")) < str(target.get("event_at", "")):
-            errors.append(
-                f"{event.get('event_id')} closes {target_id} before it was opened")
-    return errors
+            findings.append((here, f"{here} closes {target_id} before it was opened"))
+    return findings
+
+
+def load_acknowledgements(view_dir: Path) -> dict[str, str]:
+    path = view_dir / "acknowledged.json"
+    if not path.is_file():
+        return {}
+    return json.loads(path.read_text(encoding="utf-8")).get("events") or {}
+
+
+MIN_REASON = 40
+
+
+def triage_findings(findings: list[tuple[str, str]],
+                    acknowledged: dict[str, str]) -> tuple[list[str], list[str]]:
+    """Split content findings into (blocking, acknowledged) and police the reasons.
+
+    A stale acknowledgement — one naming an event that no longer produces a finding — is an
+    error in its own right, so the file cannot accumulate cover for problems that are gone.
+    A reason shorter than `MIN_REASON` is refused: an acknowledgement needs an argument,
+    not a label.
+    """
+    blocking: list[str] = []
+    excused: list[str] = []
+    seen: set[str] = set()
+    for event_id, message in findings:
+        seen.add(event_id)
+        reason = acknowledged.get(event_id)
+        if reason is None:
+            blocking.append(message)
+        elif len(reason.strip()) < MIN_REASON:
+            blocking.append(
+                f"{message} — acknowledged with a reason too short to be one: {reason!r}")
+        else:
+            excused.append(f"{message} [ACKNOWLEDGED: {reason}]")
+    for event_id in sorted(set(acknowledged) - seen):
+        blocking.append(
+            f"stale acknowledgement for {event_id}: it produces no finding. Remove it, "
+            "rather than leaving cover for a problem that is gone")
+    return blocking, excused
 
 
 def consolidated_view(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
@@ -524,7 +576,9 @@ def view_disagreements(events: list[dict[str, Any]], view_dir: Path) -> list[str
 def consolidate(events_dir: Path, view_dir: Path) -> tuple[list[str], dict[str, Any]]:
     """Rebuild the derived view and advance the anchor, or refuse and change nothing."""
     events, per_actor, errors = read_all(events_dir)
-    errors += cross_actor_errors(events)
+    blocking, excused = triage_findings(cross_actor_findings(events),
+                                        load_acknowledgements(view_dir))
+    errors += blocking
     anchor_path = view_dir / "anchors.json"
     previous: dict[str, Any] = {}
     if anchor_path.is_file():
@@ -532,6 +586,8 @@ def consolidate(events_dir: Path, view_dir: Path) -> tuple[list[str], dict[str, 
     errors += anchor_regressions(previous, per_actor, events_dir)
     if errors:
         return errors, {}
+    for note in excused:
+        print(f"FINDING: {note}", file=sys.stderr)
     anchors = anchors_for(per_actor)
     view_dir.mkdir(parents=True, exist_ok=True)
     (view_dir / "events.jsonl").write_text(view_bytes(events), encoding="utf-8")
@@ -669,8 +725,12 @@ def main() -> int:
 
     if args.command == "validate":
         events, per_actor, errors = read_all(events_dir)
-        errors += cross_actor_errors(events)
+        blocking, excused = triage_findings(cross_actor_findings(events),
+                                            load_acknowledgements(view_dir))
+        errors += blocking
         errors += view_disagreements(events, view_dir)
+        for note in excused:
+            print(f"FINDING: {note}")
         anchor_path = view_dir / "anchors.json"
         if anchor_path.is_file():
             previous = json.loads(anchor_path.read_text(encoding="utf-8"))
