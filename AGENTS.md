@@ -34,7 +34,7 @@ Read it before you act on anything below.
 shared entry, and this file's only job is to put a Codex session on it with the runtime
 difference stated.
 
-### 1.1 · Three obligations, **named here and stated elsewhere**
+### 1.1 · Four obligations, **named here and stated elsewhere**
 
 These bind before you reach the protocol that defines them, so an entry point that does
 not at least *name* them makes them optional in practice. What follows is the name and
@@ -46,6 +46,7 @@ with two homes is a rule with two versions.
 | `FULLTEXT_READ_RECEIPT` — every full-text analysis emits and persists one, on every route | [`framework/protocols/fulltext_read_receipt.md`](framework/protocols/fulltext_read_receipt.md) |
 | `verbatim_locators` — captured while the document is open, and `deepdive_manifest.py` refuses a complete read without them | [`framework/protocols/fulltext_read_receipt.md`](framework/protocols/fulltext_read_receipt.md), enforced by [`framework/scripts/deepdive_manifest.py`](framework/scripts/deepdive_manifest.py) |
 | the local abstract corpus written by [`pubmed_corpus_harvest.py`](framework/scripts/pubmed_corpus_harvest.py) is a census, not evidence — **un abstract non è una lettura**, and it clears no reading debt | the harvester's own `evidential_status` declaration, and [`framework/master/gold_is_in_the_details.md`](framework/master/gold_is_in_the_details.md) |
+| `STOP POLICY` and `DECISION AUTHORITY` — when you may **not** stop, and what you decide without the operator. Open both at the start of the session, not when you first want to stop | [§21c STOP POLICY](framework/instruction/LEGEND_CORE.md#21c-stop-policy) and [§21d DECISION AUTHORITY](framework/instruction/LEGEND_CORE.md#21d-decision-authority) |
 
 Naming is not stating: nothing above tells you what to *do*, and every one of them will
 refuse you at a gate if you skipped its file.

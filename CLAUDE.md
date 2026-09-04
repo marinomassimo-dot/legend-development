@@ -21,6 +21,15 @@ IF a valid ACTIVE lease exists:
 Read [`framework/state/state_manifest_current.md`](framework/state/state_manifest_current.md)
 **first, every session**, and confirm `current_state: READY`.
 
+Then open, by name and before your first act,
+[§21c STOP POLICY](framework/instruction/LEGEND_CORE.md#21c-stop-policy) and
+[§21d DECISION AUTHORITY](framework/instruction/LEGEND_CORE.md#21d-decision-authority).
+They govern when you may **not** stop and what you may decide without the operator, so an
+actor who has not loaded them falls back to asking — which is the failure they exist to
+remove. This router names the two sections rather than the file alone because naming the
+file was not enough: on 2026-09-04 a session read this router end to end and reached
+neither, and it was the operator who noticed.
+
 Three facts bind before you have finished reading anything else:
 
 - **Nothing here is medical advice.** Therapeutic output supports discussion with a treating

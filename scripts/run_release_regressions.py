@@ -18,6 +18,10 @@ TESTS = (
     # Enrolled with the rule it guards, in the same commit: an operating rule whose test is
     # added later is unenforced for exactly as long as that gap lasts.
     "scripts/test_stop_policy.py",
+    # `test_stop_policy` pins the two sections and checks the router links to their FILE.
+    # This one checks the router links to the two SECTIONS, in the part of the surface read
+    # before acting — the gap a session fell through on 2026-09-04 with every check green.
+    "scripts/test_stop_policy_is_reachable.py",
     "scripts/test_documented_commands.py",
     "scripts/test_fresh_clone_reader_journey.py",
     "scripts/test_mission_contract.py",
