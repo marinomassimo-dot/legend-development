@@ -1,10 +1,10 @@
 {
   "actors": {
     "orchestrator": {
-      "events": 47,
-      "head": "334ef46acfed62a472b29be311e1db6e621dcd0bfd1363561721a6460cf20426"
+      "events": 48,
+      "head": "5d4ab2e8dab120ddb8e2c29a8e5c60d0bb7ee383fd899fbee7e7da8e1b416ed6"
     }
   },
-  "events": 47,
+  "events": 48,
   "generated_by": "framework/scripts/event_ledger.py consolidate"
 }
