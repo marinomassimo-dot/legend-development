@@ -122,6 +122,9 @@ TESTS = (
     # Enrolled with the behaviour change it guards: `git worktree add` is now judged by
     # its destination, and the branch that does so was unreachable code until 0B.
     "framework/scripts/test_worktree_provisioning.py",
+    # Differential against real git. Two hand-rolled parsers shipped holes because the
+    # test population was "spellings the author thought of"; this makes git the oracle.
+    "framework/scripts/test_worktree_parser_against_git.py",
     # The policy half of Write/Edit coverage. Enrolled BEFORE the matcher is registered:
     # an unknown tool fails closed, so registering first would have denied all file
     # authoring in the session.
