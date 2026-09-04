@@ -703,6 +703,41 @@ def task_history(events: Iterable[dict[str, Any]], task_id: str) -> list[dict[st
     return [e for e in events if e.get("task_id") == task_id]
 
 
+def resolve_closes(events: list[dict[str, Any]], event_type: str,
+                   task_id: str) -> tuple[Optional[str], str]:
+    """The one still-open event of the right type for this task, or a reason there isn't one.
+
+    🔴 Written after mis-linking a closure THREE times by hand in one session: a
+    `REVIEW_CLOSED` aimed at a `TASK_CLAIMED`, a second aimed at a `TASK_ASSIGNED`, and a
+    `TASK_COMPLETE` for one task closing another task's opening. Every one was caught by
+    the consolidator, and every one is now permanent, because the ledger is append-only.
+
+    Three occurrences is not carelessness to be resolved by being more careful. It is an
+    interface that requires a human to carry an opaque `EV-<actor>-<NNNN>` between two
+    commands and offers no way to say the thing actually meant, which is "close the open
+    one for this task". So the id becomes derivable and `--closes` becomes the override
+    rather than the only road. Ambiguity refuses rather than guessing: zero candidates and
+    two candidates are different problems and neither has a safe default.
+    """
+    openable = CLOSES.get(event_type, frozenset())
+    if not openable:
+        return None, f"`{event_type}` closes nothing, so there is no id to resolve"
+    closed = {str(e["closes_event_id"]) for e in events if e.get("closes_event_id")}
+    candidates = [e for e in events
+                  if e.get("task_id") == task_id
+                  and e.get("event_type") in openable
+                  and str(e.get("event_id")) not in closed]
+    if len(candidates) == 1:
+        return str(candidates[0]["event_id"]), ""
+    kinds = " or ".join(sorted(openable))
+    if not candidates:
+        return None, (f"no open {kinds} for task `{task_id}`, so `{event_type}` has "
+                      "nothing to close. Pass --closes explicitly if you mean a specific id")
+    ids = ", ".join(str(e.get("event_id")) for e in candidates)
+    return None, (f"{len(candidates)} open {kinds} events for task `{task_id}` ({ids}); "
+                  "pass --closes to say which")
+
+
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
@@ -754,11 +789,21 @@ def main() -> int:
     root, events_dir, view_dir = _dirs(args)
 
     if args.command == "append":
+        closes = args.closes_event_id
+        if closes is None and args.event_type in CLOSURE_REQUIRED and args.task_id:
+            # Derived across ALL actor ledgers, because the opening this closes was very
+            # often written by a different actor than the one closing it.
+            closes, why = resolve_closes(read_all(events_dir)[0], args.event_type,
+                                         args.task_id)
+            if closes is None:
+                print(f"ERROR: {why}", file=sys.stderr)
+                return 2
+            print(f"# --closes resolved to {closes}", file=sys.stderr)
         try:
             record = append_event(
                 events_dir, args.actor, args.event_type, args.obj,
                 task_id=args.task_id, durable_pointer=args.durable_pointer,
-                closes_event_id=args.closes_event_id)
+                closes_event_id=closes)
         except (ValueError, RuntimeError) as exc:
             print(f"ERROR: {exc}", file=sys.stderr)
             return 2
