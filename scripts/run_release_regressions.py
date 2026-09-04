@@ -126,6 +126,9 @@ TESTS = (
     # an unknown tool fails closed, so registering first would have denied all file
     # authoring in the session.
     "framework/scripts/test_file_tool_coverage.py",
+    # A crashed guard must SAY no. Writing nothing to stdout is silence, and a harness is
+    # free to read silence as no objection.
+    "framework/scripts/test_guard_fails_closed_on_crash.py",
     "framework/scripts/test_guard_families_rev11.py",
     "framework/scripts/test_guard_families_rev12.py",
     "framework/scripts/test_guard_families_rev13.py",

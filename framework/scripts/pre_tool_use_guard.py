@@ -343,6 +343,31 @@ def file_target(tool_name: str, tool_input: object) -> str:
     return value
 
 
+def anchored_file_target(tool_name: str, tool_input: object, workdir: str) -> str:
+    """The target, refused unless there is a base to resolve a relative one against.
+
+    🔴 The carve-out below skips `SHELL_WRITE_IN_ASSIGNED_WORKTREE`, and blind review used
+    that to walk a RELATIVE path past the guard: with no `cwd` key in the payload,
+    `derive_workdir` yields `""`, an unanchored `../peer/CLAUDE.md` falls to the
+    INSIDE_REPO default, and the carve-out then allowed it — while the identical path
+    through `Bash` was denied. A relative path with no base is not a path; it is a
+    path-shaped string, and `file_target`'s promise to "fail closed on every shape that is
+    not a plain non-empty string" was true of the STRING and silent about the BASE.
+
+    An absolute path needs no base and is passed through unchanged.
+    """
+    target = file_target(tool_name, tool_input)
+    if os.path.isabs(target):
+        return target
+    if not workdir:
+        raise Undecidable(
+            f"`{tool_name}` names the relative path `{target}` and the payload carries no "
+            "workdir to resolve it against, so the guard cannot say which file would be "
+            "written. Send an absolute `"
+            f"{FILE_WRITE_TOOLS[tool_name]}`, or a payload with `cwd`.")
+    return os.path.join(workdir, target)
+
+
 def _json_object_at(text: str, start: int) -> "tuple[object, int]":
     """Read one balanced `{…}` span starting at `start`, quotes respected."""
     depth = 0
@@ -568,8 +593,12 @@ def decide(payload: object) -> "dict | None":
         # already allows in scratch, so `Write` cannot disagree with `echo x >` about a
         # path. A second classifier would be a second answer, and two answers to one
         # question is how the surfaces drifted apart in the first place.
-        calls = [(f"echo x > {shlex.quote(file_target(tool_name, tool_input))}",
-                  tool_input)]
+        # Anchored HERE, before the policy sees it: a relative path with no base is
+        # refused rather than resolved against a default, which is how one walked past
+        # the carve-out below.
+        target = anchored_file_target(tool_name, tool_input,
+                                      derive_workdir(payload, tool_input))
+        calls = [(f"echo x > {shlex.quote(target)}", tool_input)]
     else:
         calls = [(command_text(tool_input), tool_input)]
 
@@ -674,6 +703,31 @@ def main() -> int:
         print(json.dumps(_deny(
             "The write guard could not establish what it was asked about, and answers "
             f"no rather than assuming.\n\n{exc}"
+        )))
+        return 0
+    except Exception as exc:  # noqa: BLE001 - the whole point is that the kind is unknown
+        # 🔴 Only `Undecidable` was caught. Every other exception — a `KeyError` in the
+        # policy, a `TypeError` on a payload shape nobody anticipated, an `OSError` out of
+        # `session_binding`, any bug at all — escaped `main()`, and Python's default
+        # handler wrote a traceback to STDERR and exited non-zero with an EMPTY STDOUT.
+        #
+        # Measured, not reasoned: injected `KeyError`, `TypeError`, `OSError` and
+        # `RecursionError` each produced `returncode=1, stdout=''`. A `PreToolUse` hook
+        # SAYS deny by writing JSON to stdout, so writing nothing is not a denial — it is
+        # silence, and a harness is free to read silence as no objection. That is
+        # fail-SILENT wearing the name fail-closed, and it is the one direction a guard
+        # must never fail in.
+        #
+        # 🔴 What this still does not cover, stated rather than implied: a process that is
+        # killed, runs out of memory, or exceeds the harness's timeout produces no output
+        # either, and no in-process handler can speak for a process that is not running.
+        # Only the harness can fail closed on a dead hook. This closes the half that is
+        # reachable from inside; the other half belongs to the runtime and is queued.
+        print(json.dumps(_deny(
+            "The write guard crashed while deciding, so it cannot say whether this command "
+            f"is safe, and answers no.\n\n{type(exc).__name__}: {exc}\n\n"
+            "This is a guard defect, not a property of the command. Report it rather than "
+            "working around it: a guard that crashes on one shape may be crashing on more."
         )))
         return 0
 

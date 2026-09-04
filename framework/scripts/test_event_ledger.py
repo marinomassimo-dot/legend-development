@@ -444,6 +444,69 @@ class APermanentFindingIsAcknowledgedNotSilenced(LedgerCase):
                 for e in errors), errors)
 
 
+class DerivingTheClosureTarget(LedgerCase):
+    """`resolve_closes` decides which opening a PERMANENT closure attaches to.
+
+    🔴 It shipped with no test at all — 35 lines choosing the target of an append-only
+    record, written precisely because three closures had been mis-linked by hand. Untested
+    logic whose whole justification is "hand-written ids get this wrong" is the logic most
+    in need of a case, and blind review pointed at the gap rather than at a bug.
+    """
+
+    def test_it_finds_the_one_open_assignment_for_the_task(self) -> None:
+        opened = self.assign("T-1")
+        self.assign("T-2")
+        target, why = el.resolve_closes(el.read_all(self.events)[0], "TASK_COMPLETE", "T-1")
+        self.assertEqual(opened["event_id"], target, why)
+
+    def test_it_refuses_rather_than_guessing_when_there_is_none(self) -> None:
+        self.assign("T-1")
+        target, why = el.resolve_closes(el.read_all(self.events)[0], "TASK_COMPLETE", "T-9")
+        self.assertIsNone(target)
+        self.assertIn("no open", why)
+
+    def test_it_refuses_rather_than_picking_when_there_are_two(self) -> None:
+        """Two candidates and zero candidates are different problems, and neither has a
+        safe default — which is the whole reason this returns a reason and not a guess."""
+        first, second = self.assign("T-1"), self.assign("T-1")
+        target, why = el.resolve_closes(el.read_all(self.events)[0], "TASK_COMPLETE", "T-1")
+        self.assertIsNone(target)
+        self.assertIn("pass --closes", why)
+        self.assertIn(first["event_id"], why)
+        self.assertIn(second["event_id"], why)
+
+    def test_an_already_closed_opening_is_not_a_candidate(self) -> None:
+        """The case that fired for real: a mis-linked closure consumed an opening, and the
+        resolver then refused instead of silently attaching a second closure to it."""
+        opened = self.assign("T-1")
+        self.append("scientist", "TASK_COMPLETE", "done", task_id="T-1",
+                    closes_event_id=opened["event_id"])
+        target, why = el.resolve_closes(el.read_all(self.events)[0], "TASK_CANCELLED", "T-1")
+        self.assertIsNone(target)
+        self.assertIn("no open", why)
+
+    def test_it_resolves_across_actors_because_the_opener_usually_is_another(self) -> None:
+        opened = self.assign("T-1")
+        events = el.read_all(self.events)[0]
+        self.assertEqual(opened["event_id"],
+                         el.resolve_closes(events, "TASK_COMPLETE", "T-1")[0])
+
+    def test_it_matches_only_types_that_may_close_the_one_asked_for(self) -> None:
+        """A REVIEW_CLOSED must not resolve onto a TASK_ASSIGNED — the exact mis-link that
+        started all of this."""
+        self.assign("T-1")
+        target, why = el.resolve_closes(el.read_all(self.events)[0], "REVIEW_CLOSED", "T-1")
+        self.assertIsNone(target, "a TASK_ASSIGNED is not a REVIEW_OPENED")
+        self.assertIn("REVIEW_OPENED", why)
+
+    def test_a_non_closing_type_has_nothing_to_resolve(self) -> None:
+        self.assign("T-1")
+        target, why = el.resolve_closes(el.read_all(self.events)[0],
+                                        "CHECKPOINT_WRITTEN", "T-1")
+        self.assertIsNone(target)
+        self.assertIn("closes nothing", why)
+
+
 class OrderingSurvivesFiveDigits(LedgerCase):
     def test_the_sort_key_is_numeric_not_lexical(self) -> None:
         """🔴 `EV-a-10000` sorts before `EV-a-9998` as a string, and `append_event` mints

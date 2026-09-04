@@ -145,6 +145,42 @@ class ThePeerLockIsTheSameThroughBothDoors(unittest.TestCase):
             self.assertEqual("deny", decide(write_to(f"{peer}/CLAUDE.md")))
 
 
+class ARelativePathWithNoBaseIsNotAPath(unittest.TestCase):
+    """🔴 The carve-out let an unanchored relative path walk past the guard.
+
+    With no `cwd` key, `derive_workdir` yields `""`, `../peer/CLAUDE.md` fell to the
+    INSIDE_REPO default, and skipping `SHELL_WRITE_IN_ASSIGNED_WORKTREE` then allowed it —
+    while the identical path through `Bash` was denied. `file_target` promised to "fail
+    closed on every shape that is not a plain non-empty string", and that was true of the
+    STRING and silent about the BASE. A relative path with no base is a path-shaped string.
+    """
+
+    def payload(self, path: str, cwd=...) -> dict:
+        body = {"tool_name": "Write", "tool_input": {"file_path": path, "content": "x"}}
+        if cwd is not ...:
+            body["cwd"] = cwd
+        return body
+
+    def test_a_relative_path_with_no_cwd_key_fails_closed(self) -> None:
+        self.assertEqual("deny", decide(self.payload("../elsewhere/CLAUDE.md")))
+
+    def test_a_relative_path_with_an_empty_cwd_fails_closed(self) -> None:
+        self.assertEqual("deny", decide(self.payload("notes.md", cwd="")))
+
+    def test_an_absolute_path_needs_no_base_and_is_unaffected(self) -> None:
+        """The positive control: refusing everything unanchored must not refuse the
+        anchored case, or the repair is just a denial."""
+        self.assertNotEqual("deny", decide(self.payload(str(ROOT / "notes.md"), cwd=None)))
+
+    def test_a_relative_path_WITH_a_cwd_still_resolves_and_still_locks_peers(self) -> None:
+        self.assertNotEqual("deny", decide(self.payload("notes.md", cwd=str(ROOT))))
+        for peer in peers():
+            name = Path(peer).name
+            if Path(peer).parent == ROOT.parent:
+                self.assertEqual("deny", decide(
+                    self.payload(f"../{name}/CLAUDE.md", cwd=str(ROOT))))
+
+
 class WhatThisChangeDoesNotProtect(unittest.TestCase):
     """Stated as a test so it is read, and so it goes red if the reasoning stops holding."""
 

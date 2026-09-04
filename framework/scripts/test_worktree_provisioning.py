@@ -24,6 +24,7 @@ from __future__ import annotations
 
 import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -103,6 +104,94 @@ class ProvisioningIsJudgedByDestination(unittest.TestCase):
         """`add` is additive; `remove` destroys a checkout and stays refused. Naming it
         here keeps the change's scope honest rather than leaving it to be discovered."""
         self.assertNotEqual(gp.ALLOWED, decide("git worktree remove ../legend-codex-aqeilan"))
+
+
+class TheDestinationSurvivesEveryArgumentORDER(unittest.TestCase):
+    """🔴 The regression this suite SHIPPED, and the reason it shipped green.
+
+    The first destination check was `[t for t in rest if not t.startswith("-")][1:2]`,
+    which keeps flag VALUES. So `git worktree add --lock --reason /tmp/ok <peer>` judged
+    the reason string and never looked at the peer, and `-b hijack <peer>` judged the
+    branch name — both ALLOWED, both PROHIBITED before the repair. A guard made weaker
+    while its own suite stayed green.
+
+    It stayed green because every case here spelled the destination FIRST
+    (`add <path> -b <branch>`). One argument order was tested and one was not, and the
+    untested order is the one an attacker writes. The population is now the ORDERS, not a
+    path that happened to occur to me.
+
+    The peer is BUILT rather than borrowed: a fresh clone has no peer worktrees, so the
+    borrowed-population version of these checks skipped in exactly the environment
+    `run_release_regressions.py` runs in — which is the other half of why this shipped.
+    """
+
+    @classmethod
+    def setUpClass(cls) -> None:
+        cls._tmp = tempfile.TemporaryDirectory()
+        base = Path(cls._tmp.name)
+        cls.origin = base / "origin"
+        cls.origin.mkdir()
+        for argv in (["init", "-q", "-b", "main"], ["add", "-A"],
+                     ["-c", "user.email=t@t", "-c", "user.name=t",
+                      "commit", "-q", "--allow-empty", "-m", "base"]):
+            subprocess.run(["git", "-C", str(cls.origin), *argv], check=True,
+                           capture_output=True, text=True)
+        cls.peer = base / "peer"
+        subprocess.run(["git", "-C", str(cls.origin), "worktree", "add", "-q",
+                        str(cls.peer), "-b", "peer-branch"], check=True,
+                       capture_output=True, text=True)
+        listed = subprocess.run(["git", "-C", str(cls.origin), "worktree", "list"],
+                                capture_output=True, text=True).stdout
+        assert str(cls.peer) in listed, f"the fixture peer was not created: {listed}"
+
+    @classmethod
+    def tearDownClass(cls) -> None:
+        cls._tmp.cleanup()
+
+    def decide_in_fixture(self, command: str) -> str:
+        outcome, _, _ = gp.classify(command, str(self.origin), None,
+                                    gp.DEFAULT_AUTHORITY, str(self.origin))
+        return outcome
+
+    def test_the_fixture_peer_is_refused_in_every_argument_order(self) -> None:
+        target = f"{self.peer}/new"
+        for label, command in (
+            ("destination first", f"git worktree add {target} -b hijack"),
+            ("-b before it", f"git worktree add -b hijack {target}"),
+            ("--reason before it", f"git worktree add --lock --reason /tmp/ok {target}"),
+            ("--reason= inline", f"git worktree add --reason=x {target}"),
+            ("-B before it", f"git worktree add -B hijack {target}"),
+            ("after --", f"git worktree add -- {target}"),
+            ("flags both sides", f"git worktree add --detach -b h {target} HEAD"),
+        ):
+            with self.subTest(order=label):
+                self.assertNotEqual(gp.ALLOWED, self.decide_in_fixture(command),
+                                    f"`{command}` reached a peer worktree")
+
+    def test_a_scratch_destination_still_passes_in_those_same_orders(self) -> None:
+        """The positive control: the parse must not have become "refuse everything"."""
+        for command in ("git worktree add /tmp/wt-ok -b b",
+                        "git worktree add -b b /tmp/wt-ok",
+                        "git worktree add --lock --reason r /tmp/wt-ok",
+                        "git worktree add -- /tmp/wt-ok"):
+            with self.subTest(command=command):
+                self.assertEqual(gp.ALLOWED, self.decide_in_fixture(command))
+
+    def test_the_destination_parser_picks_the_path_and_not_a_flag_value(self) -> None:
+        """Unit-level, so a failure names the parse rather than a verdict."""
+        cases = {
+            "add /p -b b": "/p",
+            "add -b b /p": "/p",
+            "add --lock --reason /decoy /p": "/p",
+            "add --reason=/decoy /p": "/p",
+            "add -- /p": "/p",
+            "add --detach -B b /p HEAD": "/p",
+        }
+        for spelling, expected in cases.items():
+            with self.subTest(spelling=spelling):
+                self.assertEqual(expected, gp.worktree_add_destination(spelling.split()))
+        self.assertIsNone(gp.worktree_add_destination(["add", "-b", "only-a-branch"]),
+                          "with no operand there is no destination, and None denies")
 
 
 class TheBranchIsActuallyTheOneRunning(unittest.TestCase):
