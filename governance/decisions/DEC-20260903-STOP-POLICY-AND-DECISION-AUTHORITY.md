@@ -126,9 +126,10 @@ Problem 2 has since been closed by operator amendment; problems 1 and 3 remain o
 
 1. **The sentence may be vacuous.** If §21d reassigns only decisions H.1 gives the
    Operatore, and all three items deriving from those two rows sit inside RESERVED, then the
-   reassigned set is empty and §21d transfers nothing. Read without the sentence, the opening
-   clause still sweeps up rows H.1 assigns elsewhere. One of the two readings is wrong and the
-   text does not say which.
+   reassigned set is empty and §21d transfers nothing. This problem had a second half — that
+   read without the sentence, the opening clause still sweeps up rows H.1 assigns elsewhere —
+   and the 2026-09-04 amendment falsified it by scoping the clause to questions H.1 assigns
+   to no other actor. What remains is the vacuity alone, unresolved.
 2. ~~**Three H.1 rows are not ordinary assignments**~~ — **CLOSED by operator amendment.**
    `Modifica rubrica/metodi di Mirror | mai Mirror da solo (G.2)` and
    `Promozione BOOTSTRAP_CONTROLLER → Orchestrator | protocollo Annex I (mai autoassunzione)`
@@ -377,7 +378,7 @@ text or an operator decision:
 
 | # | Item | State |
 |---|---|---|
-| D-1 | §21d's opening clause was a blanket grant, making the added sentence either vacuous or non-binding | **PARTIALLY CLOSED** — the clause is scoped to *"every question that H.1 does not assign to another actor"*, which removes the blanket. The residual grant no longer reaches the prohibition rows or the empty-Authority row: §21d excludes both by name, on the operator's amendment of 2026-09-04, which closed MAPPING problem 2. Problems 1 and 3 remain — the grant may be vacuous, and with the Operator counting as "another actor" the sentence *"§21d reassigns to the Orchestrator only the decisions H.1 assigns to the Operator"* describes a reassignment the scoped clause does not make. Non-vacuous as a grant, self-contradictory as a description |
+| D-1 | §21d's opening clause was a blanket grant, making the added sentence either vacuous or non-binding | **PARTIALLY CLOSED** — the clause is scoped to *"every question that H.1 does not assign to another actor"*, which removes the blanket. The residual grant no longer reaches the prohibition rows or the empty-Authority row: §21d excludes both by name, on the operator's amendment of 2026-09-04, which closed MAPPING problem 2. Problems 1 and 3 remain, and both are about the SENTENCE rather than about the grant: with the Operator counting as "another actor", *"§21d reassigns to the Orchestrator only the decisions H.1 assigns to the Operator"* describes a reassignment the scoped clause does not make, so the sentence is either vacuous or false. The grant the clause states is well defined either way |
 | D-2 | §21d permitted a `development` push that RESERVED bullet 1 and `DENY_NETWORK` both forbade | **CLOSED** — bullet 1 carries the carve-out and the credential-gating proviso is replaced by the push discriminator. **The guard does NOT enforce it:** the rule self-declares `NOT YET ENFORCED` and every push is refused, so the collision is gone because nothing is permitted, not because something now checks. An earlier version of this row read "and the guard enforces it", which was false, in a row asserting a closure |
 | D-3 | Appending to SAFE_DEFAULTS forced edits to five declarations including the test constant | **CLOSED** — the list is outside the hashed body; an append is proved not to disturb it |
 | D-4 | This record declines the `HUMAN_APPROVAL_QUEUE` object that GOVERNANCE §130, Annex J.3 and GATE 5 require, substituting the merge | **ACCEPTED, not repaired.** Raised again by blind review at `d610c37` (`grep -c` over the queue → 0 across 6 lines). Reason: the operator authored this text and performs the merge, so approval and authorship are one act by one authority, and a queue object would record the operator approving the operator. Reversibility: total — the entry can be added at any time and binds retroactively to `CANDIDATE_CONTENT_HASH + BASE_HEAD`, which are recoverable from this branch's history. Mirror's repair stands available and is not foreclosed |
