@@ -399,6 +399,11 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
   - a round-2 BLOCK parks the change → repairing its open findings is a NEW task with its
     own budget, re-queued without operator authorisation; it is not an exception to the
     two-round rule and not a question for the operator
+  - tasks still in the queue and no reserved act blocking them → the turn does not end;
+    claim the next task and keep going. Closing to report what was finished is itself a
+    class-3 stop, and a completed report reads exactly like a completed queue. Running out
+    of context is the one honest reason to stop, and it is stated in one line as that
+    reason — never dressed as a summing-up
 
 ---
 
