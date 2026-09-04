@@ -53,6 +53,10 @@ TESTS = (
     "framework/scripts/test_pubmed_clipboard_to_seed.py",
     "framework/scripts/test_pubmed_corpus_harvest.py",
     "framework/scripts/test_fulltext_receipts.py",
+    # The P7 event ledger, enrolled in the commit that builds it. It reuses the receipt
+    # ledger's chain-and-lock pattern, so the two suites go red together if that pattern
+    # is broken — which is the point of not having invented a second one.
+    "framework/scripts/test_event_ledger.py",
     "framework/scripts/test_session_self_eval.py",
     "framework/scripts/test_deepdive_manifest.py",
     "framework/scripts/test_benchmark_input_surface.py",
