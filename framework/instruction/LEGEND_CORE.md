@@ -396,6 +396,9 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
   - a report that exists only in a transcript → persist verbatim, note the source
   - options offered with a default → execute the default and report; closing the turn on a
     question that has a default is itself a class-3 stop
+  - a round-2 BLOCK parks the change → repairing its open findings is a NEW task with its
+    own budget, re-queued without operator authorisation; it is not an exception to the
+    two-round rule and not a question for the operator
 
 ---
 
