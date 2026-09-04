@@ -34,7 +34,64 @@ sys.path.insert(0, str(ROOT / "framework" / "scripts"))
 
 import guard_policy as gp  # noqa: E402
 
-# `DEST` is substituted with the throwaway destination, `REF` with a valid branch name.
+#: 🔴 GENERATED, not enumerated — and the distinction is the whole point of this file.
+#:
+#: The hand-written list below caught the two bypasses it was written after and MISSED the
+#: third: `-B=` and `-b==`, where an attached value made of nothing but `=` signs let the
+#: destination be eaten as a branch name. Review found it by appending three spellings to
+#: this very list and watching the oracle fire immediately. So the oracle was sound and the
+#: POPULATION was still mine, which is the same defect one level up — and it is the third
+#: time in this function that "the shapes I thought of" has been the actual bug.
+#:
+#: The combinations below are produced by the option grammar itself: every value-taking
+#: option crossed with every way git lets a value attach, every boolean crossed with
+#: grouping, and each placed before and after the operand. Nothing here is a spelling
+#: anyone chose; the `=`-suffix family that bit third falls out of `ATTACHMENTS` without
+#: being named.
+VALUE_SHORT = ("b", "B")
+BOOLEAN_SHORT = ("f", "q", "d")
+VALUE_LONG = ("--reason",)
+BOOLEAN_LONG = ("--force", "--detach", "--lock", "--orphan", "--no-checkout", "--quiet")
+#: How a value can be stuck to its option. The `=`-only forms are the family that bit.
+ATTACHMENTS = ("{opt} {val}", "{opt}{val}", "{opt}={val}", "{opt}=", "{opt}==", "{opt}=={val}")
+
+
+def generated_spellings() -> list[str]:
+    """Every combination the grammar allows, with the destination in both positions."""
+    fragments: list[str] = []
+    for short in VALUE_SHORT:
+        for shape in ATTACHMENTS:
+            fragments.append(shape.format(opt=f"-{short}", val="REF"))
+            for boolean in BOOLEAN_SHORT:
+                # Grouped: the value-taking letter last, which is the only legal place.
+                fragments.append(shape.format(opt=f"-{boolean}{short}", val="REF"))
+    for long in VALUE_LONG:
+        for shape in ATTACHMENTS:
+            fragments.append(shape.format(opt=long, val="REF"))
+    fragments += list(BOOLEAN_LONG)
+    fragments += [f"-{b}" for b in BOOLEAN_SHORT]
+    fragments += ["-fq", "-qd", "--lock --reason REF", ""]
+
+    # 🔴 The OPERAND grammar, not only the option grammar. `git worktree add` takes
+    # `<path> [<commit-ish>]`, and the first generated population had exactly one operand
+    # in every spelling — so `-B= <peer> main`, which needs the trailing commit-ish to
+    # make git succeed at all, never ran, and the oracle reported zero disagreements
+    # against the very parser that shipped that bypass. Generating over one grammar while
+    # hand-fixing the other is the same defect one level up, and it is the fourth time
+    # this function has been bitten by a population I chose.
+    tails = ("", " main")
+
+    spellings = set()
+    for tail in tails:
+        spellings.add(f"add DEST{tail}")
+        for fragment in fragments:
+            spellings.add(f"add {fragment} DEST{tail}".replace("  ", " "))
+            spellings.add(f"add DEST {fragment}{tail}".replace("  ", " "))
+            spellings.add(f"add {fragment} -- DEST{tail}".replace("  ", " "))
+    return sorted(spellings)
+
+
+# Kept as the readable core; the generated set is what the comparison actually runs over.
 SPELLINGS = [
     "add DEST",
     "add DEST -b REF",
@@ -99,7 +156,8 @@ class TheParserAgreesWithGit(unittest.TestCase):
 
     def test_the_guard_never_predicts_a_path_git_did_not_write(self) -> None:
         disagreements = []
-        for index, template in enumerate(SPELLINGS):
+        population = generated_spellings()
+        for index, template in enumerate(population):
             destination = Path(self._tmp.name) / f"wt{index}"
             argv = template.replace("DEST", str(destination)).replace(
                 "REF", f"br{index}").split()
@@ -124,16 +182,21 @@ class TheParserAgreesWithGit(unittest.TestCase):
     def test_the_oracle_actually_exercises_something(self) -> None:
         """POSITIVE CONTROL: if git refused every spelling, the test above is vacuous."""
         created_count = 0
-        for index, template in enumerate(SPELLINGS):
+        population = generated_spellings()
+        for index, template in enumerate(population):
             destination = Path(self._tmp.name) / f"ctl{index}"
             argv = template.replace("DEST", str(destination)).replace(
                 "REF", f"cb{index}").split()
             created, _ = self.what_git_creates(argv, destination)
             created_count += int(created)
+        total = len(population)
         self.assertGreaterEqual(
-            created_count, len(SPELLINGS) - 3,
-            f"git only created {created_count}/{len(SPELLINGS)} worktrees, so the "
-            "comparison above is mostly skipping rather than agreeing")
+            created_count, total // 3,
+            f"git only created {created_count}/{total} worktrees, so the comparison above "
+            "is mostly skipping rather than agreeing. A generated population contains "
+            "spellings git rejects, which is fine — but if almost all of them are "
+            "rejected, the oracle is measuring nothing.")
+        print(f"\n    oracle: git created {created_count} of {total} generated spellings")
 
     def test_a_deliberately_broken_parser_is_caught_by_this_oracle(self) -> None:
         """The differential test must be able to FAIL, or it certifies nothing.
@@ -148,7 +211,8 @@ class TheParserAgreesWithGit(unittest.TestCase):
             return tokens[0] if tokens else None
 
         caught = []
-        for index, template in enumerate(SPELLINGS):
+        population = generated_spellings()
+        for index, template in enumerate(population):
             destination = Path(self._tmp.name) / f"brk{index}"
             argv = template.replace("DEST", str(destination)).replace(
                 "REF", f"kb{index}").split()

@@ -2710,16 +2710,15 @@ WORKTREE_ADD_VALUE_SHORT = frozenset({"b", "B"})
 WORKTREE_ADD_HELP = frozenset({"-h", "--help"})
 
 
-def worktree_add_destination(rest: List[str]) -> Optional[str]:
-    """The path `git worktree add` would write, or None when it cannot be identified.
+def parse_worktree_add(rest: List[str]) -> Tuple[str, Optional[str]]:
+    """One arity-aware walk, returning ("help"|"path"|"unknown", destination or None).
 
-    None denies. There is no useful guess for "which directory is about to be filled with a
-    checkout", and guessing is exactly how a peer worktree twice stopped being looked at.
-
-    `git worktree add [<options>] <path> [<commit-ish>]` — the FIRST operand is the path;
-    anything after it is a commit-ish and never a write target. Short options may be
-    GROUPED (`-fb name` is `-f -b name`) and may carry their value inline (`-bname`), which
-    is the case the previous version missed.
+    🔴 ONE walk, because two disagreed. `-h` used to be detected by a separate
+    `any(token in HELP for token in rest)` scan with no notion of arity, so `--reason -h
+    <peer>` returned ALLOW before the destination was ever parsed — the help check saw a
+    flag VALUE and called it a flag. The parser underneath had the peer path right; the
+    early return threw it away. Two readings of one argv is two chances to disagree, and
+    `--reason` is the exact flag that shipped the first hole.
     """
     tokens = list(rest)
     if tokens and tokens[0] == "worktree":
@@ -2733,32 +2732,52 @@ def worktree_add_destination(rest: List[str]) -> Optional[str]:
             expect_value = False
             continue
         if end_of_options:
-            return token
+            return "path", token
         if token == "--":
             end_of_options = True
             continue
         if not token.startswith("-") or token == "-":
-            return token
+            return "path", token
+        if token in WORKTREE_ADD_HELP:
+            return "help", None
         if token.startswith("--"):
-            name, sep, inline = token.partition("=")
+            name, sep, _ = token.partition("=")
             if name in WORKTREE_ADD_BOOLEAN_LONG and not sep:
                 continue
             if name in WORKTREE_ADD_VALUE_LONG:
                 expect_value = not sep      # `--reason=x` carries its own value
                 continue
-            return None                     # unknown long option: refuse to guess
-        # A short cluster: every letter is a flag until one takes a value, and the REST of
-        # the cluster is that value if anything follows it.
+            return "unknown", None
         letters = token[1:]
         for index, letter in enumerate(letters):
             if letter in WORKTREE_ADD_BOOLEAN_SHORT:
                 continue
             if letter in WORKTREE_ADD_VALUE_SHORT:
-                remainder = letters[index + 1:].lstrip("=")
-                expect_value = not remainder
+                # 🔴 NO `.lstrip("=")` here, and that single call was the third bypass.
+                # git does not strip a leading `=` from a short option's attached value:
+                # `-B=` means the branch is literally `=`, consuming nothing further. With
+                # the strip, the remainder read as empty, the walk consumed the NEXT token
+                # as the branch — the peer path — and judged the commit-ish instead.
+                expect_value = not letters[index + 1:]
                 break
-            return None                     # unknown short option: refuse to guess
-    return None
+            return "unknown", None
+    return "unknown", None
+
+
+def worktree_add_destination(rest: List[str]) -> Optional[str]:
+    """The path `git worktree add` would write, or None when it cannot be identified.
+
+    None denies. There is no useful guess for "which directory is about to be filled with a
+    checkout", and guessing is exactly how a peer worktree twice stopped being looked at.
+
+    `git worktree add [<options>] <path> [<commit-ish>]` — the FIRST operand is the path;
+    anything after it is a commit-ish and never a write target.
+
+    A thin wrapper over `parse_worktree_add`, which does the single arity-aware walk. It
+    exists so callers that only want the path are not obliged to interpret "help".
+    """
+    kind, destination = parse_worktree_add(rest)
+    return destination if kind == "path" else None
 
 #: Families whose SECOND word decides whether anything is mutated at all.
 GIT_SUB_READ = {
@@ -3180,13 +3199,14 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
             if not has_flag(argv, *REF_DESTRUCTIVE_FLAGS):
                 return
         elif sub == "worktree" and second == "add":
-            # `-h` prints usage and writes nothing, so it is a read and returns before the
-            # destination is looked for — otherwise the allowlist refuses `git worktree
-            # add -h` for having no operand, which is a control wrongly refused.
-            if any(token in WORKTREE_ADD_HELP for token in rest):
-                return
+            # ONE walk decides both questions. The previous version asked "is `-h`
+            # anywhere in argv" separately, which saw `--reason -h <peer>` as a help
+            # request and returned ALLOW while the parser underneath had the peer path
+            # right. `-h` counts only in an option position, which is what arity means.
+            kind, destination = parse_worktree_add(rest)
+            if kind == "help":
+                return                      # prints usage, writes nothing
             # Additive, but it writes a whole checkout, so it is judged by where.
-            destination = worktree_add_destination(rest)
             findings.append(Finding("FILE_WRITE", "git worktree add",
                                     [destination or UNNAMED],
                                     "writes a whole checkout into its destination"))
