@@ -241,9 +241,21 @@ an actor loading the rule cannot read it as a permission it holds.
 `framework/scripts/test_push_authorization.py` states the permission as the set of pushes it
 refuses — force in four spellings, `origin` with a perfect record, a bare push, a `+`
 refspec, a renaming refspec, a stale SHA, a red gate, an unattributed record, `main` without
-the merge assertion — and its last seven cases bind the session the way the hook process
-does and ask `guard_policy.verdict` itself, because a permission proved only at its own
-module is one nobody has shown the guard consults.
+the merge assertion — and one class of it binds the session the way the hook process does
+and asks `guard_policy.verdict` itself, because a permission proved only at its own module
+is one nobody has shown the guard consults. That class now asserts that every push is
+refused, which is the state that holds.
+
+A second class, `KnownHolesThisSpecificationStillHas`, asserts the **defects** the module
+still carries: long options abbreviate past an exact-match list (`--del`, `--prun`,
+`--force-w`), `--exec-path=` names the program git runs, `--receive-pack=` and `--exec=`
+name the program the far side runs, and `--repo=origin` reaches a remote the operand does
+not name. Recording them as English in a docstring left 49 tests green over a module that
+admits them — a certificate where a specification was wanted. As cases, closing a hole turns
+it red and forces the next author to invert the assertion deliberately. Three further holes
+are not expressible at this layer at all — environment prefixes, the payload `workdir`, and
+a second statement after `&&` — and that is precisely why the work belongs at the decision
+layer.
 
 The gate result is **read, never recomputed inside the hook**: a `PreToolUse` hook has ten
 seconds and runs on every command. The actor records the verdict against a SHA first, which

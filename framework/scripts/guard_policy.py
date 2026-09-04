@@ -3423,7 +3423,9 @@ DENY_NETWORK = (
     "named ref, fast-forward, a clean `public_release_gate` recorded against the exact "
     "SHA, an authorisation naming the actor. `framework/scripts/push_authorization.py` "
     "carries them and is NOT yet consulted here: wiring it in was attempted and reverted "
-    "after review found ten ways past it. Until that work lands, this refusal is total."
+    "after review found repeated ways past it. Until that work lands every push is refused "
+    "on this channel — and this hook is registered on `Bash` alone, so 'refused' means "
+    "refused where the guard runs, not everywhere a runtime could push from."
 )
 
 DENY_PERMISSION = (

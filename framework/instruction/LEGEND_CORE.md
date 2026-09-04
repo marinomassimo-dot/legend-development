@@ -404,9 +404,11 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
 > Provenance: `DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY` · block sha256
 > `99413aa71e82bd3bbbc063db951dbfb45cc84a488aae0a76f3ea87d9ea9cc909` (42 lines). Same DEC
 > and same ratification clause as §21c; the DEC's MAPPING section is where each RESERVED
-> item is traced to its H.1 row or to the frozen guarantee it actually comes from, and the
-> push rule below is implemented by `framework/scripts/push_authorization.py`, which the
-> guard consults before every `git push`.
+> item is traced to its H.1 row or to the frozen guarantee it actually comes from. The push
+> rule below is SPECIFIED by `framework/scripts/push_authorization.py` and the guard does
+> NOT consult it: every push is refused today. This callout said the opposite for one
+> commit, and no check caught it — the equality assertion skips the leading callout before
+> comparing, which is exactly where a false sentence is least visible and most read.
 
 DECISION AUTHORITY (HARD RULE, operator decision 2026-09-03)
 

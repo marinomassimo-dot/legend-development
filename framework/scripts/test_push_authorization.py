@@ -282,6 +282,51 @@ def build_repository(root: Path, branch: str) -> str:
     return done.stdout.strip()
 
 
+class KnownHolesThisSpecificationStillHas(unittest.TestCase):
+    """Executable record of what `evaluate` still gets WRONG. Every case asserts a DEFECT.
+
+    🔴 A to-do list, not a guarantee. The previous version of this battery recorded these
+    holes as English inside a docstring, so 49 tests stayed green over a module that admits
+    `--del` and `--exec-path=` — a certificate where a specification was wanted. Written
+    this way, closing a hole turns its case RED, which forces whoever closes it to come here
+    and invert the assertion deliberately instead of inheriting a passing score.
+
+    The common cause is one defect, not several: the module decides by matching tokens
+    against hand-written lists, and git has more spellings than the lists have entries.
+
+    Three further holes cannot be expressed at this layer at all, and that is the reason the
+    permission is not wired in: `GIT_DIR=`/`GIT_NAMESPACE=`/`GIT_EXEC_PATH=` are environment
+    prefixes, `workdir` is a payload field, and `git commit … && git push` is a second
+    statement — none of them is a token in `rest`. They need the decision layer, where the
+    effective directory and the shape of the whole line are known.
+    """
+
+    def permits(self, rest) -> bool:
+        return pa.evaluate(rest, records=[record()], resolve=lambda ref: GOOD_SHA).allowed
+
+    def test_HOLE_long_options_abbreviate_past_an_exact_match_list(self) -> None:
+        """git accepts unambiguous prefixes; the refused list holds only full spellings."""
+        for token in ("--del", "--dele", "--prun", "--force-w", "--forc", "--tag"):
+            with self.subTest(token=token):
+                self.assertTrue(
+                    self.permits(["development", token, "work"]),
+                    f"`{token}` is refused now — good. Remove it from this class and add it "
+                    "to the battery's refusal cases.")
+
+    def test_HOLE_exec_path_names_the_program_git_itself_runs(self) -> None:
+        self.assertTrue(self.permits(["development", "--exec-path=/tmp/evil", "work"]))
+
+    def test_HOLE_receive_pack_names_the_program_the_far_side_runs(self) -> None:
+        for token in ("--receive-pack=/tmp/x", "--exec=/tmp/x"):
+            with self.subTest(token=token):
+                self.assertTrue(self.permits(["development", token, "work"]))
+
+    def test_HOLE_repo_option_reaches_a_remote_the_operand_does_not_name(self) -> None:
+        """`--repo=origin` pushes to origin while the operand this module reads says
+        `development`, which is the discriminator answering about the wrong object."""
+        self.assertTrue(self.permits(["development", "--repo=origin", "work"]))
+
+
 class TheGuardRefusesEveryPushForNow(unittest.TestCase):
     """The permission above is a SPECIFICATION. The guard does not consult it yet.
 
@@ -352,11 +397,14 @@ class TheGuardRefusesEveryPushForNow(unittest.TestCase):
         self.assertIsNotNone(reason)
         self.assertIn("NOT yet consulted", reason)
 
-    def test_the_guard_still_refuses_origin_with_a_valid_record(self) -> None:
+    def test_origin_is_refused_by_the_module_and_by_the_guard(self) -> None:
+        """Asserting `"origin" in reason` proved nothing: DENY_NETWORK names origin twice,
+        so it passed for a `development` push too. The module carries the real distinction."""
         self.authorise()
-        reason = self.ask("git push origin work")
-        self.assertIsNotNone(reason)
-        self.assertIn("origin", reason)
+        self.assertFalse(judge(["origin", "work"], [record()]).allowed)
+        self.assertIn("`origin` is denied to every runtime",
+                      judge(["origin", "work"], [record()]).reason)
+        self.assertIsNotNone(self.ask("git push origin work"))
 
     def test_the_guard_still_refuses_force_with_a_valid_record(self) -> None:
         self.authorise()
