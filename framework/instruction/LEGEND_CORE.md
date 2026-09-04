@@ -402,7 +402,7 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
 ## 21d. DECISION AUTHORITY
 
 > Provenance: `DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY` · block sha256
-> `99413aa71e82bd3bbbc063db951dbfb45cc84a488aae0a76f3ea87d9ea9cc909` (42 lines). Same DEC
+> `114885d8cbc7aca0fc22a62e221aa64e32406acd6e71c45fc5564ac20ceffdd8` (62 lines). Same DEC
 > and same ratification clause as §21c; the DEC's MAPPING section is where each RESERVED
 > item is traced to its H.1 row or to the frozen guarantee it actually comes from. The push
 > rule below is SPECIFIED by `framework/scripts/push_authorization.py` and the guard does
@@ -418,7 +418,11 @@ that is not on the RESERVED list, consulting Plan
 mandatory only where a guarantee requires it: Mirror on any non-zero scientific delta;
 producer ≠ verifier on scientific claims. §21d reassigns to the Orchestrator only the
 decisions H.1 assigns to the Operator. It moves no authority H.1 assigns to Scientist,
-Plan or Mirror.
+Plan or Mirror. Two kinds of H.1 row are never reassigned by it: a row formulated as a
+PROHIBITION — `Promozione BOOTSTRAP_CONTROLLER → Orchestrator | protocollo Annex I (mai
+autoassunzione)`, `Modifica rubrica/metodi di Mirror | mai Mirror da solo (G.2)` — and a row
+whose Authority cell is `—`, such as `Lifecycle learning: epistemico Mirror, durevolezza
+Plan`. A rule that forbids is not inherited; an empty cell is not collected.
 
 RESERVED to the operator (exceptions, by nature not by habit):
   - publication to origin, or to any public surface other than a `development` push
@@ -444,14 +448,30 @@ Operator decisions already taken (2026-09-03), retiring class-2 stops:
   - push: agents, and only when ALL of these hold — the remote is `development`, named
     explicitly; the push is fast-forward, with no force in any spelling and no `+`
     refspec; it names exactly one ref; `public_release_gate` is recorded PASS with zero
-    blocks against the exact SHA pushed; and the authorisation names branch, SHA, gate
-    result and actor in `ledger/push_authorizations.jsonl`. The ref must not be `main`,
+    blocks against the exact SHA pushed; the authorisation names branch, SHA, gate
+    result and actor in `ledger/push_authorizations.jsonl`; and a blind Mirror review —
+    fresh instance, given only the tip SHA, the diff and the release-gate output, no
+    conversation history — with verdict PASS bound to the exact tip SHA. BLOCK = findings
+    to repair, then re-review of the delta only; never a question for the operator. This
+    condition holds for every push, `main` and branches alike. The ref must not be `main`,
     unless the merge that produced `main` was itself the agents' to make under this
     section — that is, it changed no guarantee. A merge that changes a guarantee, and its
     push, stay the operator's. `origin` is denied to every runtime, always.
     NOT YET ENFORCED: `framework/scripts/push_authorization.py` states these conditions and
     the guard does not consult it, so every push is refused and remains the operator's
     until that wiring lands. Do not read this bullet as a permission you hold today.
+
+REVIEW BUDGET (part of the push condition above). The purpose of the review is FRESHNESS OF
+CONTEXT, not debate. Mirror sees only the diff; the Orchestrator sees only the verdict.
+  Round 1 — blind Mirror → PASS or BLOCK. Findings are one line each with evidence. No prose.
+  The Orchestrator answers each finding in one of two ways only: REPAIR (one commit), or
+  ACCEPT (one line in DECISIONS_TAKEN giving the reason and the reversibility). No reply
+  document and no counter-argument: a finding is repaired or accepted, never discussed.
+  Round 2 — Mirror on the delta only → PASS or BLOCK. It may touch only round-1 findings and
+  regressions introduced by the repairs. No new scope.
+  There is no round 3. BLOCK at round 2 means the push does not happen, the change goes to
+  STOP_LOG as class 3 with its findings left open, and the queue moves to the next task. It
+  does not reach the operator.
 
 ---
 

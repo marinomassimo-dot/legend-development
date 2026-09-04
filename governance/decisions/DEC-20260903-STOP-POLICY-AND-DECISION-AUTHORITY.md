@@ -64,7 +64,7 @@ added word or dropped line.
 | Block | Lines | sha256 |
 |---|---|---|
 | STOP POLICY — §21c body, ending before the SAFE_DEFAULTS list | 35 | `eb6fb4f70d8a61363bb5ad73b290a8b808166729e29ca7eb9af78eaa7ff80558` |
-| DECISION AUTHORITY — §21d body | 42 | `99413aa71e82bd3bbbc063db951dbfb45cc84a488aae0a76f3ea87d9ea9cc909` |
+| DECISION AUTHORITY — §21d body | 62 | `114885d8cbc7aca0fc22a62e221aa64e32406acd6e71c45fc5564ac20ceffdd8` |
 
 **The SAFE_DEFAULTS list is deliberately outside the hash.** §21c authorises agents to
 append a hindsight default. With the list inside the hashed block, one permitted append

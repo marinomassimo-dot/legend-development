@@ -329,6 +329,18 @@ class KnownHolesThisSpecificationStillHas(unittest.TestCase):
             with self.subTest(token=token):
                 self.assertTrue(self.permits(["development", token, "work"]))
 
+    def test_HOLE_no_blind_mirror_verdict_is_required(self) -> None:
+        """§21d requires a blind Mirror PASS bound to the exact tip SHA, for EVERY push.
+
+        The module does not ask for it and the record has no field to carry it. Recorded as
+        a hole rather than implemented: the record's shape belongs with the guard rebuild,
+        and enforcing it here would refuse every push for a field nothing writes yet. When
+        0B implements it, this case goes red — which is the signal to add `mirror_verdict`
+        and `mirror_sha` to the ledger schema and to assert them beside `gate_verdict`.
+        """
+        self.assertNotIn("mirror_verdict", record())
+        self.assertTrue(self.permits(["development", "work"]))
+
     def test_NOT_A_HOLE_repo_loses_to_the_operand(self) -> None:
         """Recorded because an earlier version of this class asserted the opposite.
 
