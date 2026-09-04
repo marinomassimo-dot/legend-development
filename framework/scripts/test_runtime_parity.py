@@ -835,17 +835,55 @@ class TheBridgesOwnFilesDoNotAddSurfaceDefects(unittest.TestCase):
                          "`git add --chmod=+x <path>`")
 
     def test_the_check_can_see_an_offender(self) -> None:
-        """POSITIVE CONTROL. A green delta check that cannot detect is worse than a red one."""
+        """POSITIVE CONTROL. A green delta check that cannot detect is worse than a red one.
+
+        🔴 This control used to scan the LIVE tree and assert that at least one 100644
+        shebang `.py` file existed — "four are known to exist". Repairing all of them made
+        it fail, which is the wrong direction for a repository to be pushed in: a control
+        that needs the tree to stay defective rewards leaving defects in place, and would
+        have been "fixed" by reverting a real repair. The predicate is now exercised
+        against a purpose-built fixture, so it proves the detector can see an offender
+        without requiring one to exist here.
+
+        The two assertions above it are kept and still run against the real tree, because
+        "ls-tree returns entries" and "the mode field is being read at all" are properties
+        of the REAL surface and a fixture cannot vouch for them.
+        """
         entries = rp._git(REAL, "ls-tree", "-r", "HEAD").splitlines()
         self.assertTrue(entries, "ls-tree returned nothing, so the check above tested nothing")
         modes = {line.partition("\t")[2]: line.split()[0] for line in entries}
         self.assertIn("100755", set(modes.values()),
                       "no executable file at all — the mode field is not being read")
-        known = [p for p, m in modes.items()
-                 if m == "100644" and p.endswith(".py")
-                 and (REPO / p).exists() and (REPO / p).read_bytes()[:2] == b"#!"]
-        self.assertTrue(known, "POSITIVE CONTROL FAILED — the detector finds no offender "
-                               "anywhere in the tree, and four are known to exist")
+
+        def offenders(root: Path, tree_modes: dict) -> list:
+            return [p for p, m in tree_modes.items()
+                    if m == "100644" and p.endswith(".py")
+                    and (root / p).exists() and (root / p).read_bytes()[:2] == b"#!"]
+
+        with tempfile.TemporaryDirectory() as tmp:
+            fixture = Path(tmp)
+            for name, mode in (("offender.py", 0o644), ("proper.py", 0o755),
+                               ("plain.py", 0o644)):
+                target = fixture / name
+                target.write_text(
+                    "#!/usr/bin/env python3\n" if name != "plain.py" else "x = 1\n",
+                    encoding="utf-8")
+                target.chmod(mode)
+            for argv in (["init", "-q"], ["add", "-A"],
+                         ["-c", "user.email=t@t", "-c", "user.name=t",
+                          "commit", "-q", "-m", "fixture"]):
+                subprocess.run(["git", "-C", str(fixture), *argv],
+                               capture_output=True, text=True, check=True)
+            lines = rp._git(rp.Surface(fixture), "ls-tree", "-r", "HEAD").splitlines()
+            fixture_modes = {ln.partition("\t")[2]: ln.split()[0] for ln in lines}
+            self.assertEqual(
+                ["offender.py"], sorted(offenders(fixture, fixture_modes)),
+                "the predicate must find the shebang file at 100644, and only it — "
+                f"`proper.py` is executable and `plain.py` has no shebang: {fixture_modes}")
+
+        # The live tree is REPORTED, never asserted on: zero offenders here is the goal
+        # state, not a failure, and this line is what tells a reader which it is looking at.
+        print(f"\n    live-tree shebang offenders: {sorted(offenders(REPO, modes))}")
 
 
 class TheCandidateFinalisationChecksItsOwnModes(unittest.TestCase):
