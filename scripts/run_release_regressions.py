@@ -119,6 +119,9 @@ TESTS = (
     "framework/scripts/test_effect_model.py",
     "framework/scripts/test_execution_attestation.py",
     "framework/scripts/test_execution_receipt.py",
+    # Enrolled with the behaviour change it guards: `git worktree add` is now judged by
+    # its destination, and the branch that does so was unreachable code until 0B.
+    "framework/scripts/test_worktree_provisioning.py",
     "framework/scripts/test_guard_families_rev11.py",
     "framework/scripts/test_guard_families_rev12.py",
     "framework/scripts/test_guard_families_rev13.py",

@@ -2655,17 +2655,29 @@ REF_DESTRUCTIVE_FLAGS = ("-d", "-D", "--delete", "-m", "-M", "--move", "-c", "-C
 #: place — a receipt has to name what was actually touched, and two of those three could
 #: never be observed, so an authorised call would report them MISSING forever.
 #:
-#: 🔴 It does not change a single VERDICT and is not meant to. Measured against the
-#: revision-9 engine at `6fb7a83`, `git worktree add` is REF_MUTATION at `INSIDE_REPO`
-#: and refused; it still is. What changes is what the refusal, and any receipt of it,
-#: says was touched. The wider question — whether adding a worktree should be
-#: `FILE_WRITE` at its destination rather than a ref mutation, which is what the
-#: `elif sub == "worktree" and second == "add"` branch below was written to do and which
-#: is UNREACHABLE because `worktree` is also in `GIT_SUB_READ` — is a revision-9
-#: behaviour this candidate found and deliberately did NOT repair. It is outside R1–R12,
-#: the denial it produces is defensible on its own terms (a new worktree writes
-#: `.git/worktrees/<name>`, which § 4.7 confines), and changing it here would be a
-#: behaviour change nobody reviewed.
+#: 🔴 REPAIRED 2026-09-04 (TASK-GUARD52-A). The `elif sub == "worktree" and second ==
+#: "add"` branch below was UNREACHABLE — `worktree` is a key of `GIT_SUB_READ`, so the
+#: outer `if` matched, the inner membership test failed, and the whole `elif` chain was
+#: skipped. Revision 12 recorded this and declined to change it: "the denial it produces
+#: is defensible on its own terms (a new worktree writes `.git/worktrees/<name>`, which
+#: § 4.7 confines), and changing it here would be a behaviour change nobody reviewed."
+#:
+#: Both halves of that sentence were checked before acting on it. The second is now
+#: satisfied: §21d requires a blind Mirror review for every push, so the change is
+#: reviewed. The FIRST is false as a description of the mechanism — measured, `git
+#: worktree add` was refused as `REF_MUTATION`, never as a common-dir write, and no
+#: `GIT_COMMON_DIR` finding was ever emitted for it. The confinement argument was a
+#: justification for the outcome, not an account of the control that produced it, and a
+#: comment that explains a refusal by naming a control that did not fire is the kind of
+#: prose §21d's own push callout has already been wrong in once.
+#:
+#: What the repair changes, measured against live peers rather than invented ones: the
+#: destination is now judged as a `FILE_WRITE` by WHERE it lands. A real peer worktree
+#: (`legend-codex-aqeilan`), the nested `.claude/worktrees/evidence-index`, and the
+#: relative spelling of the first are all still PROHIBITED, identically to `echo x >`
+#: aimed at the same three paths; `/tmp` is ALLOWED. §21d's operator decision of
+#: 2026-09-03 grants worktree provisioning to agents "once the guard false refusal is
+#: fixed (0B)", and this is that fix.
 GIT_VERB_SUBCOMMANDS = frozenset({"worktree", "stash", "notes", "reflog", "replace",
                                   "submodule", "bisect", "remote"})
 
@@ -3074,10 +3086,15 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
         # `git branch --show-current` is in the pre-flight every actor is told to run.
         # Classifying a family by its first word only is the same error as classifying
         # a command by its first word only, one level down.
-        if sub in GIT_SUB_READ:
-            if second in GIT_SUB_READ[sub]:
-                return
-        elif sub in ("branch", "tag"):
+        # 🔴 Two separate `if`s, not one chain, and that is the whole repair. `worktree` is
+        # a key of GIT_SUB_READ, so `git worktree add` matched the outer `if`, failed the
+        # inner `second in {"list"}`, returned nothing — and because the outer branch had
+        # already matched, every `elif` below it was skipped, including the one written for
+        # this exact command. The refusal that reached the actor was therefore the generic
+        # ref handling and not any decision about worktrees.
+        if sub in GIT_SUB_READ and second in GIT_SUB_READ[sub]:
+            return
+        if sub in ("branch", "tag"):
             # Listing (`git branch`, `git tag -l`, `--show-current`) reads. Naming a new
             # ref CREATES one, which destroys nothing. Only the destructive flags move
             # or remove a ref that already exists.
