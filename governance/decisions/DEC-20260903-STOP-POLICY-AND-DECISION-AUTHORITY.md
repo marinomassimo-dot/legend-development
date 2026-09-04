@@ -230,7 +230,7 @@ resolved it, so the gate result is bound to a tree that is no longer the one lea
 
 The last two need the **decision layer**, where `cwd` and the shape of the whole line are
 known — not the per-subcommand analysis where the attempt put the check. That is the 0B
-work, and the module plus its 49-case battery are its specification: the battery now asserts
+work, and the module plus its battery are its specification: the battery now asserts
 the state that actually holds, that every push is refused including one carrying a flawless
 authorisation, and it is written to fail the day the permission is wired in, so that day
 somebody has to come and state the new truth deliberately.
@@ -247,15 +247,28 @@ is one nobody has shown the guard consults. That class now asserts that every pu
 refused, which is the state that holds.
 
 A second class, `KnownHolesThisSpecificationStillHas`, asserts the **defects** the module
-still carries: long options abbreviate past an exact-match list (`--del`, `--prun`,
-`--force-w`), `--exec-path=` names the program git runs, `--receive-pack=` and `--exec=`
-name the program the far side runs, and `--repo=origin` reaches a remote the operand does
-not name. Recording them as English in a docstring left 49 tests green over a module that
-admits them — a certificate where a specification was wanted. As cases, closing a hole turns
-it red and forces the next author to invert the assertion deliberately. Three further holes
-are not expressible at this layer at all — environment prefixes, the payload `workdir`, and
-a second statement after `&&` — and that is precisely why the work belongs at the decision
-layer.
+still carries: long options abbreviate past an exact-match list — thirteen spellings are
+recorded, including every abbreviation of `--mirror`, the most destructive of the refused
+flags — and `--receive-pack=` / `--exec=` name the program the far side runs, a family the
+guard already polices when it is spelled `-c <key>=<program>`. Recording these as English in
+a docstring left the battery green over a module that admits them: a certificate where a
+specification was wanted. As cases, closing a hole turns it red and forces the next author to
+invert the assertion deliberately.
+
+Two claims made in the first version of that class were **wrong, and are now recorded as
+non-holes**: `--repo=origin` loses to the command-line operand (git-push(1): *"If both are
+specified, the command-line argument takes precedence"*), and `--exec-path=` is not an option
+of `git push` at all — the real vector is the global `git --exec-path=… push`, which is why
+`--exec-path` is now in `REDIRECTING_GLOBALS`. Both were written up on the strength of
+reading the module and never running `git`, which is the same error as the permission they
+document, one layer up.
+
+**And one deferral claim was false.** This record previously said three holes were "not
+expressible at this layer" — environment prefixes, the payload `workdir`, and a second
+statement after `&&` — and used that to justify moving the whole job to the decision layer.
+Only `&&` qualifies. `evaluate(..., redirected=("GIT_DIR=…",))` refuses **today**: the channel
+exists and denies, and what is missing is a caller that populates it, which is guard work of
+a much smaller size than "rebuild this at the decision layer".
 
 The gate result is **read, never recomputed inside the hook**: a `PreToolUse` hook has ten
 seconds and runs on every command. The actor records the verdict against a SHA first, which
@@ -352,8 +365,8 @@ text or an operator decision:
 
 | # | Item | State |
 |---|---|---|
-| D-1 | §21d's opening clause was a blanket grant, making the added sentence either vacuous or non-binding | **PARTIALLY CLOSED** — the clause is scoped to *"every question that H.1 does not assign to another actor"*, which removes the blanket. Three H.1 rows still fall through it, and the scoping makes the section's own next sentence describe an empty reassignment. An earlier version of this table said CLOSED while MAPPING two sections above kept the same defect open; that contradiction is the reason for this row's wording — see MAPPING, open problems 2 and 3 |
-| D-2 | §21d permitted a `development` push that RESERVED bullet 1 and `DENY_NETWORK` both forbade | **CLOSED** — bullet 1 carries the carve-out, the proviso is replaced by the push discriminator, and the guard enforces it |
+| D-1 | §21d's opening clause was a blanket grant, making the added sentence either vacuous or non-binding | **PARTIALLY CLOSED** — the clause is scoped to *"every question that H.1 does not assign to another actor"*, which removes the blanket. Three H.1 rows still fall through it, and the scoping makes the section's own next sentence describe an empty reassignment. An earlier version of this table said CLOSED while MAPPING two sections above kept the same defect open; that contradiction is the reason for this row's wording — see MAPPING, open problems 2 and 3. 🔴 **This is a merge-time decision, not a post-merge finding.** Merging ratifies a §21d whose residual grant reaches `Promozione BOOTSTRAP_CONTROLLER → Orchestrator \| protocollo Annex I (mai autoassunzione)` — a row that forbids self-promotion by name — and `Lifecycle learning: epistemico Mirror, durevolezza Plan`, whose Authority cell is `—`. That is a substantive expansion of Orchestrator authority, and the operator should decide it deliberately rather than inherit it |
+| D-2 | §21d permitted a `development` push that RESERVED bullet 1 and `DENY_NETWORK` both forbade | **CLOSED** — bullet 1 carries the carve-out and the credential-gating proviso is replaced by the push discriminator. **The guard does NOT enforce it:** the rule self-declares `NOT YET ENFORCED` and every push is refused, so the collision is gone because nothing is permitted, not because something now checks. An earlier version of this row read "and the guard enforces it", which was false, in a row asserting a closure |
 | D-3 | Appending to SAFE_DEFAULTS forced edits to five declarations including the test constant | **CLOSED** — the list is outside the hashed body; an append is proved not to disturb it |
 | D-4 | This record declines the `HUMAN_APPROVAL_QUEUE` object that GOVERNANCE §130, Annex J.3 and GATE 5 require, substituting the merge | **OPEN** — operator. Mirror's repair: a queue entry `TYPE: GOVERNANCE`, `OBJECT: <candidate content hash> + BASE_HEAD` |
 | D-5 | Producer ≠ verifier: the Orchestrator authored the record granting the Orchestrator authority, and §21d scopes that discipline to *scientific* claims only | **OPEN** — operator. Mitigation in place, not a closure: Mirror reviewed the delta independently, and the operator's merge is the human ratification |

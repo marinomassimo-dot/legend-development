@@ -77,7 +77,19 @@ REFUSED_SHORT = frozenset("fd")
 #: to reach the subcommand, so by the time this module is consulted they are gone — which
 #: is how `git -C <peer> push` had its SHA verified in one repository and its objects sent
 #: from another. The guard passes them back in explicitly.
-REDIRECTING_GLOBALS = frozenset({"-C", "--git-dir", "--work-tree", "--namespace"})
+REDIRECTING_GLOBALS = frozenset({"-C", "--git-dir", "--work-tree", "--namespace",
+                                 "--exec-path"})
+
+#: 🔴 `redirected` is not only for option tokens. It is the channel for ANY out-of-band way
+#: the command's repository or its executables were moved, and it already refuses whatever it
+#: is handed — an earlier note in this file claimed environment prefixes and the payload's
+#: `workdir` were "not expressible at this layer", and that was wrong: the parameter takes
+#: them today and denies. What is missing is a CALLER that populates it, which is guard work,
+#: not module work. These are the names such a caller must pass through:
+REDIRECTING_ENVIRONMENT = frozenset({
+    "GIT_DIR", "GIT_WORK_TREE", "GIT_NAMESPACE", "GIT_EXEC_PATH",
+    "GIT_OBJECT_DIRECTORY", "GIT_ALTERNATE_OBJECT_DIRECTORIES",
+})
 
 
 def _side(token: str) -> Optional[str]:

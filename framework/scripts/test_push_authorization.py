@@ -294,37 +294,52 @@ class KnownHolesThisSpecificationStillHas(unittest.TestCase):
     The common cause is one defect, not several: the module decides by matching tokens
     against hand-written lists, and git has more spellings than the lists have entries.
 
-    Three further holes cannot be expressed at this layer at all, and that is the reason the
-    permission is not wired in: `GIT_DIR=`/`GIT_NAMESPACE=`/`GIT_EXEC_PATH=` are environment
-    prefixes, `workdir` is a payload field, and `git commit … && git push` is a second
-    statement — none of them is a token in `rest`. They need the decision layer, where the
-    effective directory and the shape of the whole line are known.
+    Only ONE further hole is genuinely outside this layer: `git commit … && git push` is a
+    second statement, and no parameter here can see it. The other two named in an earlier
+    version of this docstring — environment prefixes and the payload's `workdir` — were
+    wrongly called inexpressible. `evaluate(..., redirected=("GIT_DIR=…",))` refuses today.
+    The channel exists and denies; what is missing is a CALLER that populates it, which is
+    guard work. Saying otherwise justified deferring work that is half already done.
     """
 
     def permits(self, rest) -> bool:
         return pa.evaluate(rest, records=[record()], resolve=lambda ref: GOOD_SHA).allowed
 
     def test_HOLE_long_options_abbreviate_past_an_exact_match_list(self) -> None:
-        """git accepts unambiguous prefixes; the refused list holds only full spellings."""
-        for token in ("--del", "--dele", "--prun", "--force-w", "--forc", "--tag"):
+        """git accepts UNAMBIGUOUS prefixes; the refused list holds only full spellings.
+
+        `--forc` is deliberately absent: it is ambiguous among `--force`,
+        `--force-with-lease` and `--force-if-includes`, so git rejects it and it is not a
+        hole. The first version of this case asserted it, having tested the module and never
+        `git` — the same error, one layer up, as the permission it documents.
+        """
+        for token in ("--del", "--dele", "--delet", "--prun", "--pru",
+                      "--force-w", "--force-i", "--tag", "--ta", "--follow",
+                      "--mir", "--mirr", "--mirro"):
             with self.subTest(token=token):
                 self.assertTrue(
                     self.permits(["development", token, "work"]),
                     f"`{token}` is refused now — good. Remove it from this class and add it "
                     "to the battery's refusal cases.")
 
-    def test_HOLE_exec_path_names_the_program_git_itself_runs(self) -> None:
-        self.assertTrue(self.permits(["development", "--exec-path=/tmp/evil", "work"]))
-
     def test_HOLE_receive_pack_names_the_program_the_far_side_runs(self) -> None:
+        """Real options of git-push, and the guard already treats `-c <key>=<program>` as
+        EXECUTION_CONTROL — the same family, spelled as a push option, is not looked at."""
         for token in ("--receive-pack=/tmp/x", "--exec=/tmp/x"):
             with self.subTest(token=token):
                 self.assertTrue(self.permits(["development", token, "work"]))
 
-    def test_HOLE_repo_option_reaches_a_remote_the_operand_does_not_name(self) -> None:
-        """`--repo=origin` pushes to origin while the operand this module reads says
-        `development`, which is the discriminator answering about the wrong object."""
+    def test_NOT_A_HOLE_repo_loses_to_the_operand(self) -> None:
+        """Recorded because an earlier version of this class asserted the opposite.
+
+        git-push(1): "This option is equivalent to the <repository> argument. If both are
+        specified, the command-line argument takes precedence." So `--repo=origin` beside the
+        operand `development` reaches development, and with no operand the module refuses for
+        naming no ref. It was written up as a hole on the strength of reading the module.
+        """
         self.assertTrue(self.permits(["development", "--repo=origin", "work"]))
+        self.assertFalse(pa.evaluate(["--repo=origin"], records=[record()],
+                                     resolve=lambda ref: GOOD_SHA).allowed)
 
 
 class TheGuardRefusesEveryPushForNow(unittest.TestCase):
