@@ -92,18 +92,30 @@ def section_of(text: str, heading: str) -> str:
 
 
 HTML_COMMENT = re.compile(r"<!--.*?-->", re.S)
+FENCE = re.compile(r"(?ms)^[ \t]*```.*?^[ \t]*```[ \t]*$")
 
 
 def anchors_in(text: str) -> set[str]:
     """Every `#fragment` a LIVE markdown link in `text` aims at LEGEND_CORE.md.
 
-    HTML comments are stripped first. A link inside `<!-- retired route, do not use: … -->`
-    is not a route an actor follows, and the suite was green on a surface whose only two
-    references were commented out — which is one of the two ways a markdown link turned out
-    to be no better at telling a route from an anti-route than a bare mention was.
+    Two kinds of non-route are removed first, and both were found by blind review after
+    the suite passed surfaces that routed nobody.
+
+    * HTML comments. A link inside `<!-- retired route, do not use: … -->` is not markup an
+      actor follows, and the suite was green on a surface whose only references were
+      commented out.
+    * Fenced code blocks. A link shown as an EXAMPLE is not a route either, and
+      `test_link_targets.heading_slugs` already skips fences on the destination side — this
+      is the same rule applied on the source side, so the two agree about what markdown is
+      live.
+
+    Residual, stated because it is real: an UNBALANCED `<!--` earlier in a file swallows
+    everything after it, so a live link can be missed. That direction is a false RED, which
+    is the safe way for a reachability check to be wrong, and it is why the stripper is not
+    made cleverer than this.
     """
     pattern = re.compile(r"\]\(" + re.escape(SURFACE) + r"#([^)\s]+)\)")
-    return set(pattern.findall(HTML_COMMENT.sub("", text)))
+    return set(pattern.findall(FENCE.sub("", HTML_COMMENT.sub("", text))))
 
 
 class TheTwoSectionsAreReachableByName(unittest.TestCase):
@@ -191,6 +203,28 @@ class TheTwoSectionsAreReachableByName(unittest.TestCase):
         self.assertEqual(set(), anchors_in(commented))
         self.assertEqual({"21c-stop-policy"}, anchors_in(commented + "\n" + live),
                          "a commented copy must not suppress a real one beside it")
+
+    def test_a_route_shown_as_a_fenced_example_does_not_count(self) -> None:
+        """The destination side already skips fences; the source side now agrees.
+
+        A link inside ``` is documentation of a link, not a link. Both non-routes are
+        checked here together so the two strippers cannot drift apart silently.
+        """
+        live = "[§21c](" + SURFACE + "#21c-stop-policy)"
+        self.assertEqual({"21c-stop-policy"}, anchors_in(live))
+        self.assertEqual(set(), anchors_in("```\n" + live + "\n```"))
+        self.assertEqual({"21c-stop-policy"}, anchors_in("```\n" + live + "\n```\n" + live),
+                         "a fenced copy must not suppress a real one beside it")
+
+    def test_an_unbalanced_comment_fails_CLOSED_and_that_is_the_safe_direction(self) -> None:
+        """The residual the stripper keeps, asserted rather than left to be rediscovered.
+
+        An unterminated `<!--` swallows a live link, so the suite goes RED on a surface
+        that is in fact routed. A reachability check that errs toward "unreachable" sends
+        someone to look; one that errs the other way certifies a rule nobody loads.
+        """
+        live = "[§21c](" + SURFACE + "#21c-stop-policy)"
+        self.assertEqual(set(), anchors_in("<!-- unterminated\n" + live + "\n--> tail"))
 
     def test_the_limit_this_suite_does_not_close_is_stated_and_true(self) -> None:
         """Blind review's counter-example (B), NOT closed — recorded rather than hidden.

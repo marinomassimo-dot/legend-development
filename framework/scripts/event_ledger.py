@@ -653,7 +653,12 @@ def open_tasks(events: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
             "acked": task in acked,
             "claimed_by": claimed.get(task),
         })
-    out.sort(key=lambda r: (str(r["assigned_at"]), str(r["event_id"])))
+    # 🔴 The SAME numeric key as `read_all`. Fixing the sort in one place and leaving it
+    # lexical here was worse than not fixing it: the repair's own comment named "the
+    # queue's ordering" as a consumer of the corrected key, and the queue went on sorting
+    # `EV-a-10000` before `EV-a-9998`. A claim that a defect is fixed everywhere it matters
+    # has to be checked at every site, not at the one that was edited.
+    out.sort(key=lambda r: (str(r["assigned_at"]), sequence_number(r)))
     return out
 
 

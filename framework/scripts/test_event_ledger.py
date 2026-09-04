@@ -2,7 +2,9 @@
 """The P7 event ledger keeps the four properties J.1 and §P7 actually name.
 
 Those four, and nothing about "the loop works": append-only enforced by a chain rather
-than asserted; one writer per file by construction; `closed_by` in the derived view and
+than asserted; one writer per file by convention and a read-time check keyed on the
+FILENAME — not by construction, because six concurrent processes do all append to one actor
+file successfully; `closed_by` in the derived view and
 never at the source; truncation detected against an anchor that may only move forward.
 
 Every case below runs against a temporary events directory. The repository's own ledger is
@@ -427,6 +429,21 @@ class OrderingSurvivesFiveDigits(LedgerCase):
         self.assertNotEqual(
             ids, [r["event_id"] for r in sorted(rows, key=lambda e: str(e["event_id"]))],
             "the lexical key must actually disagree, or this test proves nothing")
+
+    def test_the_QUEUE_ordering_uses_it_too_and_not_only_read_all(self) -> None:
+        """🔴 The site the first repair missed while claiming to cover it.
+
+        `read_all` was given the numeric key and `open_tasks` kept its own lexical sort, so
+        the queue — the surface a reader actually consumes — went on ordering `EV-a-10000`
+        before `EV-a-9998`. The repair's comment named the queue as a consumer of the fixed
+        key. Checking the one site that was edited is not checking the claim.
+        """
+        rows = [{"event_at": "2026-09-04T12:00:00Z", "actor_id": "a",
+                 "event_id": f"EV-a-{n}", "event_type": "TASK_ASSIGNED",
+                 "task_id": f"T-{n}", "object": "x"}
+                for n in (9998, 9999, 10000, 10001)]
+        self.assertEqual(["EV-a-9998", "EV-a-9999", "EV-a-10000", "EV-a-10001"],
+                         [r["event_id"] for r in el.open_tasks(rows)])
 
 
 class TheQueueIsAJoinNotAStateMachine(LedgerCase):
