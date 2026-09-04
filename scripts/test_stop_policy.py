@@ -102,7 +102,7 @@ SAFE_DEFAULTS_SEED = (
 )
 
 # The companion rule: same day, same surface, same DEC. sha256
-# a0b6e194ba6f83229c00aa6b7edb798eea2e4c65b0f3e20f307dd09b111cf384 over the 39 lines below. It
+# 99413aa71e82bd3bbbc063db951dbfb45cc84a488aae0a76f3ea87d9ea9cc909 over the 42 lines below. It
 # names itself a fundamental guarantee, so drift in it is reserved to the operator by its own
 # terms — which is exactly why it is asserted verbatim. SAFE_DEFAULTS is the one carve-out, and
 # it is stated inside the RESERVED list so the exemption lives where the reservation does.
@@ -144,7 +144,10 @@ Operator decisions already taken (2026-09-03), retiring class-2 stops:
     result and actor in `ledger/push_authorizations.jsonl`. The ref must not be `main`,
     unless the merge that produced `main` was itself the agents' to make under this
     section — that is, it changed no guarantee. A merge that changes a guarantee, and its
-    push, stay the operator's. `origin` is denied to every runtime, always."""
+    push, stay the operator's. `origin` is denied to every runtime, always.
+    NOT YET ENFORCED: `framework/scripts/push_authorization.py` states these conditions and
+    the guard does not consult it, so every push is refused and remains the operator's
+    until that wiring lands. Do not read this bullet as a permission you hold today."""
 
 
 class TheStopPolicyIsCarriedWhereActorsLoadIt(unittest.TestCase):

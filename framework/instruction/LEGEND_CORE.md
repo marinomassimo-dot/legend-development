@@ -402,7 +402,7 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
 ## 21d. DECISION AUTHORITY
 
 > Provenance: `DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY` · block sha256
-> `a0b6e194ba6f83229c00aa6b7edb798eea2e4c65b0f3e20f307dd09b111cf384` (39 lines). Same DEC
+> `99413aa71e82bd3bbbc063db951dbfb45cc84a488aae0a76f3ea87d9ea9cc909` (42 lines). Same DEC
 > and same ratification clause as §21c; the DEC's MAPPING section is where each RESERVED
 > item is traced to its H.1 row or to the frozen guarantee it actually comes from, and the
 > push rule below is implemented by `framework/scripts/push_authorization.py`, which the
@@ -447,6 +447,9 @@ Operator decisions already taken (2026-09-03), retiring class-2 stops:
     unless the merge that produced `main` was itself the agents' to make under this
     section — that is, it changed no guarantee. A merge that changes a guarantee, and its
     push, stay the operator's. `origin` is denied to every runtime, always.
+    NOT YET ENFORCED: `framework/scripts/push_authorization.py` states these conditions and
+    the guard does not consult it, so every push is refused and remains the operator's
+    until that wiring lands. Do not read this bullet as a permission you hold today.
 
 ---
 

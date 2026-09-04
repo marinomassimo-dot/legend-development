@@ -282,8 +282,22 @@ def build_repository(root: Path, branch: str) -> str:
     return done.stdout.strip()
 
 
-class TheGuardActuallyConsultsThePermission(unittest.TestCase):
-    """The unit tests above prove `evaluate`. These prove the guard asks it."""
+class TheGuardRefusesEveryPushForNow(unittest.TestCase):
+    """The permission above is a SPECIFICATION. The guard does not consult it yet.
+
+    🔴 Wiring it in was attempted and reverted. Two review rounds found ten ways to reach a
+    real push past a permission that decides by matching tokens against hand-written lists:
+    long options abbreviate (`--del`, `--prun`, `--force-w`), the relocating globals have
+    environment twins (`GIT_DIR=`, `GIT_NAMESPACE=`), the payload's `workdir` moves the
+    command without being a token at all, `--exec-path=` names the program git runs, and
+    `git commit … && git push` moves the branch after the hook has already resolved it. The
+    last two need the DECISION layer, where `cwd` and the shape of the whole line are known.
+
+    So these cases assert the state that actually holds: every push is refused, including
+    one carrying a flawless authorisation. They are written to FAIL the day the permission
+    is wired in, which is the point — the day it is wired in, somebody has to come here and
+    state the new truth deliberately.
+    """
 
     def setUp(self) -> None:
         self.tmp = tempfile.TemporaryDirectory()
@@ -329,11 +343,14 @@ class TheGuardActuallyConsultsThePermission(unittest.TestCase):
     def test_an_unauthorised_push_is_refused_by_the_guard(self) -> None:
         reason = self.ask("git push development work")
         self.assertIsNotNone(reason)
-        self.assertIn("no authorisation", reason)
+        self.assertIn("Publication is an operator act", reason)
 
-    def test_an_authorised_push_is_allowed_by_the_guard(self) -> None:
+    def test_even_a_flawless_authorisation_does_not_move_the_guard(self) -> None:
+        """The ledger entry is perfect and the push is still refused: nothing reads it yet."""
         self.authorise()
-        self.assertIsNone(self.ask("git push development work"))
+        reason = self.ask("git push development work")
+        self.assertIsNotNone(reason)
+        self.assertIn("NOT yet consulted", reason)
 
     def test_the_guard_still_refuses_origin_with_a_valid_record(self) -> None:
         self.authorise()
@@ -373,10 +390,11 @@ class TheGuardActuallyConsultsThePermission(unittest.TestCase):
         self.authorise()
         self.assertIsNotNone(self.ask("git push development $(echo work)"))
 
-    def test_the_guard_still_allows_the_qualified_form(self) -> None:
-        """The repair must not refuse by shape: a legitimate variant stays permitted."""
+    def test_the_qualified_form_is_refused_too(self) -> None:
+        """`evaluate` would permit this one; the guard refuses it, which is the whole point."""
         self.authorise()
-        self.assertIsNone(self.ask("git push development refs/heads/work"))
+        self.assertTrue(judge(["development", "refs/heads/work"], [record()]).allowed)
+        self.assertIsNotNone(self.ask("git push development refs/heads/work"))
 
     def test_other_network_subcommands_are_untouched_by_this_permission(self) -> None:
         """The carve-out is `push`. `send-pack` and friends keep the blanket refusal."""

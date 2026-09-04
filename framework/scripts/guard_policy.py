@@ -71,7 +71,6 @@ from typing import Iterable, List, Optional, Sequence, Tuple
 if str(Path(__file__).resolve().parent) not in sys.path:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
 import effect_model as em  # noqa: E402
-import push_authorization as pa  # noqa: E402
 import repo_topology as rt  # noqa: E402
 import runtime_config as rc  # noqa: E402
 import session_binding as sb  # noqa: E402
@@ -2020,23 +2019,6 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
 
         elsewhere = flag_value(argv, "-C", "--git-dir", "--work-tree")
         if elsewhere is not None:
-            # 🔴 A network subcommand is not RELOCATABLE, and must be refused before the
-            # recursion rather than inside it. Every other effect can be rewritten to sit
-            # under `elsewhere` and judged there; a push changes the object store AND the
-            # remote, so the push permission would verify a SHA and a ledger in the assigned
-            # worktree while the objects left from a different repository. The recursion
-            # strips `-C`, so by the time the permission is consulted the redirection is
-            # invisible to it — which is exactly how this was allowed.
-            redirected_sub, _ = git_subcommand([argv[0]] + strip_wrapper_options(
-                argv[1:], frozenset({"-C", "--git-dir", "--work-tree", "-c"})))
-            if redirected_sub in GIT_NETWORK_SUBCOMMANDS:
-                findings.append(Finding(
-                    "NETWORK_WRITE", f"git {redirected_sub}", [elsewhere],
-                    "🔴 publishes, and this push is not authorised: the command moves the "
-                    "repository it acts on, so the SHA and the ledger would be read in one "
-                    "repository while the objects were sent from another",
-                    scope=em.NONLOCAL))
-                return
             here: List[Finding] = []
             # `-c` is stripped here too: the loop above has already emitted its finding,
             # and leaving it in would emit a second one from the recursion.
@@ -2092,7 +2074,7 @@ def analyse_argv(argv: List[str], redirect_targets: List[str], heredocs: List[st
             findings.append(Finding("BLANKET_STAGING", "git stage", [UNNAMED],
                                     "an alias of `git add` with the same reach"))
         else:
-            analyse_git(sub, rest, heredocs, findings, argv)
+            analyse_git(sub, rest, heredocs, findings)
         return
 
     # ── in-place editors ──
@@ -2908,39 +2890,22 @@ def qualify_ref(sub: str, target: str) -> str:
 
 
 def analyse_git(sub: str, rest: List[str], heredocs: List[str],
-                findings: List[Finding], full_argv: Optional[Sequence[str]] = None) -> None:
-    """Every `git` subcommand but add/commit/stage, projected onto the effect model.
-
-    🔴 `full_argv` is the line BEFORE `git_subcommand` skipped git's global options, and it
-    exists for one reason: `-C <dir>`, `--git-dir` and `--work-tree` move the repository the
-    command acts on, and skipping them to find the subcommand also hid them from every rule
-    downstream. `git -C <peer> push` had its SHA and its ledger read in the assigned
-    worktree while its objects were sent from another repository entirely.
-    """
+                findings: List[Finding]) -> None:
+    """Every `git` subcommand but add/commit/stage, projected onto the effect model."""
     argv = ["git"] + rest
 
     if sub in GIT_NETWORK_SUBCOMMANDS:
         remote = next((t for t in rest if not t.startswith("-")), "<default remote>")
-        if sub == "push":
-            # 🔴 The permission is a property of the PUSH, not of the remote. The first
-            # attempt keyed it on "is the remote credential-gated", which is true of
-            # `origin` as well and therefore separated nothing; `push_authorization`
-            # carries the conditions that do. A push failing any one of them falls through
-            # to exactly the NETWORK_WRITE it met before, with the failed condition in the
-            # finding — a refusal that names what to fix, not only what was refused.
-            topology = session_topology()
-            redirected = [token.split("=", 1)[0] for token in (full_argv or [])
-                          if token.split("=", 1)[0] in pa.REDIRECTING_GLOBALS]
-            verdict = pa.evaluate(
-                rest, root=topology.assigned_worktree if topology is not None else None,
-                redirected=redirected)
-            if verdict.allowed:
-                return
-            findings.append(Finding(
-                "NETWORK_WRITE", "git push", [verdict.remote or remote],
-                "🔴 publishes, and this push is not authorised: " + verdict.reason,
-                scope=em.NONLOCAL))
-            return
+        # 🔴 `push_authorization` states the conditions under which a `development` push
+        # would be the actor's, and it is deliberately NOT consulted here. Wiring it in was
+        # attempted and reverted: two review rounds found ten ways to reach a real push past
+        # a permission that decides by matching tokens against hand-written lists — long
+        # options abbreviate (`--del`, `--prun`), globals have environment twins
+        # (`GIT_DIR=`), the payload's `workdir` relocates the command without being a token
+        # at all, and `git commit … && git push` moves the branch after the hook resolved
+        # it. Two of those need the decision layer, where `cwd` and the shape of the whole
+        # line are known. Until that exists, every push is refused, which is the behaviour
+        # this guard had before the attempt and the one that fails closed.
         findings.append(Finding(
             "NETWORK_WRITE", f"git {sub}", [remote],
             "🔴 sends objects to a remote. `development` and `origin` are both PUBLIC "
@@ -3452,14 +3417,13 @@ DENY_NETWORK = (
     "🔴 `development` and `origin` are BOTH public GitHub repositories. Pushing a branch "
     "to either one PUBLISHES it, and a bare `git push` goes to `origin`, which is a "
     "different repository from the one most work here targets.\n\n"
-    "`origin` is denied to every runtime, always, and so is every remote that is not "
-    "`development`. A `development` push is the one narrow exception, and it turns on "
-    "properties of the PUSH rather than of the remote: one named ref, fast-forward, no "
-    "force, a clean `public_release_gate` recorded against the exact SHA, and an entry "
-    "naming the actor in `ledger/push_authorizations.jsonl`. Pushing `main` additionally "
-    "requires that the merge which produced it was the agents' to make under §21d.\n\n"
-    "Record the authorisation first — `python3 framework/scripts/push_authorization.py "
-    "record --branch <branch>` — or commit locally and let the operator push."
+    "Publication is an operator act and needs PUBLISH authority, which is never granted "
+    "by a runtime. Commit locally; the operator pushes.\n\n"
+    "§21d states conditions under which a `development` push would be an actor's — one "
+    "named ref, fast-forward, a clean `public_release_gate` recorded against the exact "
+    "SHA, an authorisation naming the actor. `framework/scripts/push_authorization.py` "
+    "carries them and is NOT yet consulted here: wiring it in was attempted and reverted "
+    "after review found ten ways past it. Until that work lands, this refusal is total."
 )
 
 DENY_PERMISSION = (
@@ -3749,13 +3713,6 @@ def adjudicate(command: object, cwd: Optional[str] = None,
            for e in denied):
         return PROHIBITED, DENY_SHELL_WRITE, CODE_SHELL_WRITE, findings
     if em.NETWORK_WRITE in kinds:
-        # A push carries the condition it failed. The blanket sentence says what the rule
-        # is; without the specific clause an actor cannot tell "record the gate first" from
-        # "this remote is never allowed", and the two have opposite repairs.
-        detail = next((f.detail for f in findings
-                       if f.rule == "NETWORK_WRITE" and f.primitive == "git push"), "")
-        if detail:
-            return PROHIBITED, DENY_NETWORK + "\n\n" + detail, CODE_NETWORK, findings
         return PROHIBITED, DENY_NETWORK, CODE_NETWORK, findings
     if em.REF_MUTATION in kinds:
         return PROHIBITED, DENY_REF, CODE_REF_WRITE, findings

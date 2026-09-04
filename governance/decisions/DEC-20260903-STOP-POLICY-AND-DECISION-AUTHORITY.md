@@ -64,7 +64,7 @@ added word or dropped line.
 | Block | Lines | sha256 |
 |---|---|---|
 | STOP POLICY — §21c body, ending before the SAFE_DEFAULTS list | 35 | `eb6fb4f70d8a61363bb5ad73b290a8b808166729e29ca7eb9af78eaa7ff80558` |
-| DECISION AUTHORITY — §21d body | 39 | `a0b6e194ba6f83229c00aa6b7edb798eea2e4c65b0f3e20f307dd09b111cf384` |
+| DECISION AUTHORITY — §21d body | 42 | `99413aa71e82bd3bbbc063db951dbfb45cc84a488aae0a76f3ea87d9ea9cc909` |
 
 **The SAFE_DEFAULTS list is deliberately outside the hash.** §21c authorises agents to
 append a hindsight default. With the list inside the hashed block, one permitted append
@@ -215,10 +215,29 @@ that no executable object adjudicates (PLAN-MODULAR-EVOLUTION-001 §M4). **Adjud
 1-vs-17 is a priority item for 0B**, and until it is adjudicated the push rule rests on the
 weaker of the two instruments, knowingly.
 
-**Implementation, in this branch.** `framework/scripts/push_authorization.py` carries the
-conditions and reads `ledger/push_authorizations.jsonl`; `guard_policy.analyse_git` consults
-it before every `git push`, and a push failing any condition falls through to the same
-`NETWORK_WRITE` refusal as before, now carrying the clause that failed.
+**Implementation status: SPECIFIED, NOT ENFORCED.** `framework/scripts/push_authorization.py`
+carries the conditions and reads `ledger/push_authorizations.jsonl`. It was wired into
+`guard_policy.analyse_git` and the wiring was **reverted before merge**. Two review rounds
+found ten ways to reach a real push past it, and the diagnosis was not ten bugs but one:
+a permission that decides by matching tokens against hand-written lists, in a command
+language with more spellings than the lists have entries. Long options abbreviate, so
+`--del` and `--prun` and `--force-w` walk past a list containing `--delete`, `--prune`,
+`--force`. The relocating globals have environment twins, so `GIT_DIR=` walks past a list
+containing `--git-dir`. The payload's `workdir` field relocates the command without being a
+token at all. `--exec-path=` names the program git runs and appears in the guard only in
+skip lists. And `git commit … && git push` moves the branch after the hook has already
+resolved it, so the gate result is bound to a tree that is no longer the one leaving.
+
+The last two need the **decision layer**, where `cwd` and the shape of the whole line are
+known — not the per-subcommand analysis where the attempt put the check. That is the 0B
+work, and the module plus its 49-case battery are its specification: the battery now asserts
+the state that actually holds, that every push is refused including one carrying a flawless
+authorisation, and it is written to fail the day the permission is wired in, so that day
+somebody has to come and state the new truth deliberately.
+
+Until then the refusal is total, which is the behaviour the guard had before the attempt and
+the one that fails closed. §21d's push bullet carries `NOT YET ENFORCED` in its own text, so
+an actor loading the rule cannot read it as a permission it holds.
 `framework/scripts/test_push_authorization.py` states the permission as the set of pushes it
 refuses — force in four spellings, `origin` with a perfect record, a bare push, a `+`
 refspec, a renaming refspec, a stale SHA, a red gate, an unattributed record, `main` without
