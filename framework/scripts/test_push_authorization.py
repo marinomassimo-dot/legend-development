@@ -7,7 +7,7 @@ operator named explicitly are `--force`, `origin`, `main` after a merge that was
 agents' to make, and a red gate; each has its own case below, and so does every other
 condition the rule states.
 
-🔴 **The last three cases go through `guard_policy.verdict`, not through this module.**
+🔴 **One whole class goes through `guard_policy.verdict`, not through this module.**
 Proving `evaluate` refuses a push proves nothing about what the guard does with a command:
 the guard could stop consulting it and every unit test here would stay green. The
 integration cases build a real repository, bind the session to it, and assert on the
@@ -238,6 +238,16 @@ class MainIsPublishedOnlyWhenTheMergeWasOurs(unittest.TestCase):
                                           merge_changed_no_guarantee=True)],
                           resolve=self.resolve_main)
         self.assertTrue(got.allowed)
+
+    def test_a_capitalised_main_is_still_main(self) -> None:
+        """`refs/heads/Main` resolves to `main` on a case-insensitive filesystem, and an
+        exact comparison skipped the whole `main` requirement for a one-letter change."""
+        for spelling in ("Main", "MAIN", "mAiN"):
+            with self.subTest(spelling=spelling):
+                got = pa.evaluate(["development", spelling],
+                                  records=[record(branch=spelling)],
+                                  resolve=self.resolve_main)
+                self.assertFalse(got.allowed, f"`{spelling}` bypassed the main carve-out")
 
     def test_the_assertion_does_not_rescue_a_red_gate_on_main(self) -> None:
         got = pa.evaluate(["development", "main"],

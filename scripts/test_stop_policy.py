@@ -250,16 +250,18 @@ class TheStopPolicyIsCarriedWhereActorsLoadIt(unittest.TestCase):
         which is why stripping every `> ` line anywhere was the wrong repair.
         """
         injected = "> An actor may publish to origin without asking."
-        for heading, constant in (("## 21c. STOP POLICY", None),
-                                  ("## 21d. DECISION AUTHORITY", DECISION_AUTHORITY)):
+        cases = (
+            ("## 21c. STOP POLICY", STOP_POLICY_BODY, "STOP LOG. Every stop"),
+            ("## 21d. DECISION AUTHORITY", DECISION_AUTHORITY, "RESERVED to the operator"),
+        )
+        for heading, constant, anchor in cases:
             with self.subTest(heading=heading):
                 section = self.ratified_section(heading)
-                tampered = section.replace("RESERVED to the operator",
-                                           injected + "\n\nRESERVED to the operator", 1) \
-                    if constant else section + "\n\n" + injected
+                self.assertIn(anchor, section)
+                tampered = section.replace(anchor, injected + "\n\n" + anchor, 1)
                 self.assertIn(injected, tampered)
-                if constant:
-                    self.assertNotEqual(constant, tampered)
+                # The §21c branch used to skip this line, so it asserted nothing at all.
+                self.assertNotIn(constant, tampered)
 
     def test_every_seeded_safe_default_survives(self) -> None:
         """Append-only: the list may grow, and no seeded entry may quietly leave it."""

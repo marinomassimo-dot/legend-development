@@ -128,22 +128,21 @@ Two open problems are recorded here rather than resolved, because §21d's body i
    reassigned set is empty and §21d transfers nothing. Read without the sentence, the opening
    clause still sweeps up rows H.1 assigns elsewhere. One of the two readings is wrong and the
    text does not say which.
-2. **Three H.1 rows are not ordinary assignments,** and a residual grant reaches them most
-   sharply. Two are prohibitions: `Modifica rubrica/metodi di Mirror | mai Mirror da solo
-   (G.2)` and `Promozione BOOTSTRAP_CONTROLLER → Orchestrator | protocollo Annex I (mai
-   autoassunzione)` — the second would let the Orchestrator decide its own promotion, which
-   that row forbids by name. The third was missed by the first version of this list and
-   found by Mirror: `Lifecycle learning: epistemico Mirror, durevolezza Plan | —`, whose
-   Authority cell is `—`. It assigns to no actor, so a clause scoped to "questions H.1 does
-   not assign to another actor" sweeps it up whole, taking Mirror's epistemic lifecycle and
-   Plan's durability. None of the three appears in RESERVED.
+2. ~~**Three H.1 rows are not ordinary assignments**~~ — **CLOSED by operator amendment.**
+   `Modifica rubrica/metodi di Mirror | mai Mirror da solo (G.2)` and
+   `Promozione BOOTSTRAP_CONTROLLER → Orchestrator | protocollo Annex I (mai autoassunzione)`
+   are prohibitions, and the second would have let the Orchestrator decide its own promotion,
+   which that row forbids by name. `Lifecycle learning: epistemico Mirror, durevolezza Plan`
+   has `—` in its Authority cell, so a clause scoped to "questions H.1 does not assign to
+   another actor" swept it up whole. §21d now excludes both kinds by name: *a rule that
+   forbids is not inherited; an empty cell is not collected.*
 3. **The scoping repair makes the section's own next sentence false.** With the clause
    narrowed to questions H.1 assigns to no other actor, and the Operator being another
    actor, the grant no longer reaches H.1's two Operatore rows — so *"§21d reassigns to the
    Orchestrator only the decisions H.1 assigns to the Operator"* now reassigns nothing. The
    clause is non-vacuous as a grant and self-contradictory as a description of itself.
 
-All three are operator decisions on reserved text, and they are why D-1 below is recorded as
+Problem 3 is the one that remains, and it is why D-1 below is recorded as
 PARTIALLY CLOSED rather than closed.
 
 ## SAFE_DEFAULTS — who may extend it
@@ -193,14 +192,22 @@ established above or in the tree:
 
 Presented with the three facts above, the operator did not strike the permission and did
 not keep it as written. The proviso is replaced by a discriminator that is a property of
-the **push**, not of the remote, and the guard is changed to enforce it in the same branch:
+the **push**, not of the remote. The guard is **not** changed to enforce it: the wiring was
+attempted in this branch and reverted, and every push is refused today.
 
 ```text
 remote is `development`, named explicitly     no force, in any spelling, and no `+` refspec
 exactly one ref                               public_release_gate PASS, 0 blocks, at the exact SHA
 recorded: branch · SHA · gate result · actor  ref != main, OR main when the merge was the agents' to make
-`origin` is denied to every runtime, always
+blind Mirror PASS bound to the exact tip SHA  `origin` is denied to every runtime, always
 ```
+
+The blind Mirror condition holds for **every** push, `main` and branches alike: a fresh
+instance given only the tip SHA, the diff and the release-gate output, with no conversation
+history. BLOCK means findings to repair and a re-review of the delta only — never a question
+for the operator. §21d carries the review budget that bounds it: one line per finding, each
+answered by REPAIR or ACCEPT and never argued, a second round confined to those findings and
+the regressions their repairs caused, and no third round.
 
 **The operator records knowing what this permits.** `development` is a public GitHub
 repository: an authorised push publishes, immediately and irreversibly, and no later act
@@ -300,10 +307,13 @@ including the cases that must stay ALLOWED so the repair cannot drift into refus
 Stated in the shape Annex J.0 requires, because a control described more strongly than it
 behaves is worse than no control:
 
-- `GUARANTEE_PROVIDED` — no push reaches a remote other than `development`; none carries a
-  force or `+` refspec; none proceeds without a ledger entry naming the exact SHA, a clean
-  gate, and an actor; `main` needs the merge assertion as well. All of it is enforced in
-  the guard, on the channel the guard watches, and the battery states each refusal.
+- `GUARANTEE_PROVIDED` — **today, exactly one thing: no push happens at all.** The guard
+  refuses every push on the channel it watches, and it does so without consulting any of the
+  conditions below. When the module is wired in, the guarantee becomes: no push reaches a
+  remote other than `development`; none carries a force or `+` refspec; none proceeds without
+  a ledger entry naming the exact SHA, a clean gate, an actor and a blind Mirror PASS; and
+  `main` needs the merge assertion as well. An earlier version of this bullet asserted that
+  set as already enforced, which contradicted this same record in two other places.
 - `FAILURE_MODE_STILL_POSSIBLE` — **the ledger is written by the same actor that pushes.**
   Nothing stops an actor from hand-writing an entry claiming `gate_verdict: PASS` without
   running the gate, or asserting `merge_changed_no_guarantee` about a merge that changed
@@ -327,9 +337,11 @@ behaves is worse than no control:
   sees an allowed push**: the permission returns before emitting a `Finding`, so
   `authorized_effects` for a permitted push is empty and `effect_model`'s PUBLISH sentence
   — "never granted by a runtime, a role or a lease" — remains literally true while
-  describing nothing, because publication no longer passes through PUBLISH at all. G6 in
-  PLAN-MODULAR-EVOLUTION-001 §M4 cites that pairing as evidence for "authority explicit";
-  that citation is now stale. And **fast-forwardness is not checked here**: forced spellings
+  describing nothing. That was true only while the module was wired; the wiring is reverted,
+  `gp.effects("git push development work")` again yields a `NETWORK_WRITE` effect, and G6's
+  citation in PLAN-MODULAR-EVOLUTION-001 §M4 stands. The limit returns the day the module is
+  wired in, and whoever wires it must restore the effect rather than return before emitting
+  it. And **fast-forwardness is not checked here**: forced spellings
   are refused, and a genuine non-fast-forward is left to git's own refusal, which is a
   different instrument from this one.
 
@@ -365,10 +377,10 @@ text or an operator decision:
 
 | # | Item | State |
 |---|---|---|
-| D-1 | §21d's opening clause was a blanket grant, making the added sentence either vacuous or non-binding | **PARTIALLY CLOSED** — the clause is scoped to *"every question that H.1 does not assign to another actor"*, which removes the blanket. Three H.1 rows still fall through it, and the scoping makes the section's own next sentence describe an empty reassignment. An earlier version of this table said CLOSED while MAPPING two sections above kept the same defect open; that contradiction is the reason for this row's wording — see MAPPING, open problems 2 and 3. 🔴 **This is a merge-time decision, not a post-merge finding.** Merging ratifies a §21d whose residual grant reaches `Promozione BOOTSTRAP_CONTROLLER → Orchestrator \| protocollo Annex I (mai autoassunzione)` — a row that forbids self-promotion by name — and `Lifecycle learning: epistemico Mirror, durevolezza Plan`, whose Authority cell is `—`. That is a substantive expansion of Orchestrator authority, and the operator should decide it deliberately rather than inherit it |
+| D-1 | §21d's opening clause was a blanket grant, making the added sentence either vacuous or non-binding | **PARTIALLY CLOSED** — the clause is scoped to *"every question that H.1 does not assign to another actor"*, which removes the blanket. Three H.1 rows still fall through it, and the scoping makes the section's own next sentence describe an empty reassignment. An earlier version of this table said CLOSED while MAPPING two sections above kept the same defect open; that contradiction is the reason for this row's wording — see MAPPING, open problems 2 and 3. The residual grant no longer reaches the prohibition rows or the empty-Authority row: §21d excludes both by name, on the operator's amendment of 2026-09-04. What remains open is only problem 3 — with the Operator counting as "another actor", the sentence *"§21d reassigns to the Orchestrator only the decisions H.1 assigns to the Operator"* describes a reassignment the scoped clause does not make. Non-vacuous as a grant, self-contradictory as a description |
 | D-2 | §21d permitted a `development` push that RESERVED bullet 1 and `DENY_NETWORK` both forbade | **CLOSED** — bullet 1 carries the carve-out and the credential-gating proviso is replaced by the push discriminator. **The guard does NOT enforce it:** the rule self-declares `NOT YET ENFORCED` and every push is refused, so the collision is gone because nothing is permitted, not because something now checks. An earlier version of this row read "and the guard enforces it", which was false, in a row asserting a closure |
 | D-3 | Appending to SAFE_DEFAULTS forced edits to five declarations including the test constant | **CLOSED** — the list is outside the hashed body; an append is proved not to disturb it |
-| D-4 | This record declines the `HUMAN_APPROVAL_QUEUE` object that GOVERNANCE §130, Annex J.3 and GATE 5 require, substituting the merge | **OPEN** — operator. Mirror's repair: a queue entry `TYPE: GOVERNANCE`, `OBJECT: <candidate content hash> + BASE_HEAD` |
+| D-4 | This record declines the `HUMAN_APPROVAL_QUEUE` object that GOVERNANCE §130, Annex J.3 and GATE 5 require, substituting the merge | **ACCEPTED, not repaired.** Raised again by blind review at `d610c37` (`grep -c` over the queue → 0 across 6 lines). Reason: the operator authored this text and performs the merge, so approval and authorship are one act by one authority, and a queue object would record the operator approving the operator. Reversibility: total — the entry can be added at any time and binds retroactively to `CANDIDATE_CONTENT_HASH + BASE_HEAD`, which are recoverable from this branch's history. Mirror's repair stands available and is not foreclosed |
 | D-5 | Producer ≠ verifier: the Orchestrator authored the record granting the Orchestrator authority, and §21d scopes that discipline to *scientific* claims only | **OPEN** — operator. Mitigation in place, not a closure: Mirror reviewed the delta independently, and the operator's merge is the human ratification |
 
 Repaired in the commit following this record, and not left open: the 3/3 miscount, the

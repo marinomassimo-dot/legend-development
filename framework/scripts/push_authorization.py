@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 """When a `git push` is the actor's to make, and when it stays the operator's.
 
+🔴 **SPECIFIED, NOT ENFORCED.** Nothing consults this module: `guard_policy` does not import
+it, and every push is refused by the blanket `DENY_NETWORK`. Read everything below as the
+shape the guard must take when it is rebuilt, never as a description of what runs today.
+`KnownHolesThisSpecificationStillHas` in the battery is the list of what this module still
+gets wrong, and it is not short.
+
 Publication used to be refused outright: `DENY_NETWORK` said *"Publication is an operator
 act and needs PUBLISH authority, which is never granted by a runtime."* That is the right
 rule for `origin`, and it was too coarse for `development` — it made every CI observation
@@ -84,8 +90,9 @@ REDIRECTING_GLOBALS = frozenset({"-C", "--git-dir", "--work-tree", "--namespace"
 #: the command's repository or its executables were moved, and it already refuses whatever it
 #: is handed — an earlier note in this file claimed environment prefixes and the payload's
 #: `workdir` were "not expressible at this layer", and that was wrong: the parameter takes
-#: them today and denies. What is missing is a CALLER that populates it, which is guard work,
-#: not module work. These are the names such a caller must pass through:
+#: them today and denies. NO CALLER POPULATES EITHER SET — nothing in the tree reads these
+#: two names, and that is the work, not an oversight to be read as done. These are the names
+#: a caller must pass through once one exists:
 REDIRECTING_ENVIRONMENT = frozenset({
     "GIT_DIR", "GIT_WORK_TREE", "GIT_NAMESPACE", "GIT_EXEC_PATH",
     "GIT_OBJECT_DIRECTORY", "GIT_ALTERNATE_OBJECT_DIRECTORIES",
@@ -286,7 +293,7 @@ def evaluate(rest: List[str], root: Optional[str] = None,
                        remote=remote, ref=branch)
     passing = [r for r in passing if str(r.get("actor") or "").strip()]
 
-    if branch == PROTECTED_REF:
+    if branch.lower() == PROTECTED_REF:
         cleared = [r for r in passing if r.get("merge_changed_no_guarantee") is True]
         if not cleared:
             return Verdict(False,
@@ -332,7 +339,7 @@ def record(root: str, branch: str, actor: str,
         "actor": actor,
         "recorded_at": datetime.now(timezone.utc).astimezone().isoformat(timespec="seconds"),
     }
-    if branch == PROTECTED_REF:
+    if branch.lower() == PROTECTED_REF:
         entry["merge_changed_no_guarantee"] = merge_changed_no_guarantee
 
     path = Path(root) / LEDGER_RELATIVE
