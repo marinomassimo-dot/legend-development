@@ -379,6 +379,33 @@ class APermanentFindingIsAcknowledgedNotSilenced(LedgerCase):
         errors, _ = el.consolidate(self.events, self.view)
         self.assertTrue(any("too short to be one" in e for e in errors), errors)
 
+    def test_one_reason_does_not_excuse_a_SECOND_finding_of_the_same_event(self) -> None:
+        """🔴 The hole blind review walked through: the key was the event, not the finding.
+
+        A single `TASK_CANCELLED` can close an already-closed opening AND cross a task
+        boundary — two findings, one event id. One reason speaking only about the duplicate
+        closure excused both, so the boundary crossing was silenced with no argument ever
+        written for it. That is precisely what this mechanism exists not to do.
+        """
+        opened = self.assign("T-1")
+        self.append("scientist", "TASK_COMPLETE", "done", task_id="T-1",
+                    closes_event_id=opened["event_id"])
+        second = self.append("orchestrator", "TASK_CANCELLED", "parked", task_id="T-2",
+                             closes_event_id=opened["event_id"])
+        findings = el.cross_actor_findings(el.read_all(self.events)[0])
+        offending = [m for e, m in findings if e == second["event_id"]]
+        self.assertEqual(2, len(offending), f"this fixture must produce two: {offending}")
+
+        one_reason = {second["event_id"]: self.GOOD}
+        blocking, excused = el.triage_findings(findings, one_reason)
+        self.assertTrue(blocking, "a bare event-id reason must not cover both findings")
+        self.assertTrue(any("does not cover this one" in b for b in blocking), blocking)
+
+        keyed = {el.finding_key(second["event_id"], m): self.GOOD for m in offending}
+        blocking, excused = el.triage_findings(findings, keyed)
+        self.assertEqual(2, len(excused), "each finding acknowledged on its own key")
+        self.assertFalse([b for b in blocking if "does not cover" in b], blocking)
+
     def test_a_stale_acknowledgement_is_itself_an_error(self) -> None:
         """The file cannot accumulate cover for problems that are gone."""
         self.assign("T-1")

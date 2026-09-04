@@ -1,5 +1,11 @@
 #!/usr/bin/env python3
-"""Four surfaces say the guard does not consult `push_authorization`. Only code knows.
+"""The surfaces that say the guard does not consult `push_authorization`. Only code knows.
+
+The count is deliberately not written into this sentence any more. It was "four" here while
+`NOT_ENFORCED_MARKERS` held three, and the number was wrong in the direction that hides a
+gap: the real fourth surface — the DEC's own D-2 row — existed and was uncovered, so the
+prose was simultaneously miscounting and describing something true. `len(NOT_ENFORCED_MARKERS)`
+is the count, and the tests below iterate it rather than a number anyone typed.
 
 This is prose that has already been false. `6f8e73d` is titled *"The callout that said the
 guard consults it"* — for one commit §21d's own provenance callout asserted the opposite of
@@ -15,13 +21,13 @@ is bidirectional by construction:
 * while the guard does NOT consult the module, every surface must carry its "not enforced"
   marker — a surface that quietly drops the caveat is a surface that reads as a permission;
 * the moment the guard DOES consult it, every one of those markers must be gone — the
-  wiring commit cannot land while four files still tell an actor the wiring is absent.
+  wiring commit cannot land while any of these files still tells an actor it is absent.
 
 The second direction needs no guess about how a future commit will word the enforced case,
 which is why it is stated as the ABSENCE of the current marker rather than the presence of
 some predicted replacement.
 
-🔴 One of the four surfaces is inside the ratified body of §21d, whose text is reserved to
+🔴 One of these surfaces is inside the ratified body of §21d, whose text is reserved to
 the operator by its own RESERVED list. If this suite goes red because the guard started
 consulting the module, the repair to THAT surface is an operator act — a re-ratification —
 and not an edit an agent may make to turn the suite green. The failure message says so.
@@ -158,6 +164,18 @@ def flat(text: str) -> str:
 # matching would make this suite vacuously green, which is the failure mode of every
 # string-matching gate in this repository.
 NOT_ENFORCED_MARKERS = {
+    # 🔴 Added after blind review. The docstring and the commit message both said "four
+    # surfaces" while this dict held three — a checkable number stated without being
+    # checked, inside the suite whose whole purpose is that prose about code must be
+    # executable. Worse, the missing fourth was real: the DEC's own D-2 row carries the
+    # same claim, was uncovered, and flipping it to "DOES enforce it" left the suite green.
+    # That row already records "An earlier version of this row read 'and the guard enforces
+    # it', which was false" — so the one surface with a history of stating this wrongly was
+    # the one nothing watched.
+    "governance/decisions/DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY.md": (
+        "The guard does NOT enforce it:",
+        "the rule self-declares `NOT YET ENFORCED` and every push is refused",
+    ),
     "framework/instruction/LEGEND_CORE.md": (
         "the guard does NOT consult it: every push is refused today",
         "NOT YET ENFORCED: `framework/scripts/push_authorization.py` states these conditions",
@@ -317,8 +335,8 @@ class TheProseAgreesWithTheCode(unittest.TestCase):
             with self.subTest(command=command):
                 self.assertEqual(
                     "deny", self.decision(command),
-                    f"`{command}` was not denied, while three files say every push is "
-                    "refused until the wiring lands")
+                    f"`{command}` was not denied, while {len(NOT_ENFORCED_MARKERS)} files "
+                    "say every push is refused until the wiring lands")
 
     def test_a_command_that_is_not_a_push_is_still_allowed(self) -> None:
         """The positive control: `deny` must not be the answer to everything.

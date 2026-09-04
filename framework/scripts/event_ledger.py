@@ -458,32 +458,69 @@ def load_acknowledgements(view_dir: Path) -> dict[str, str]:
 MIN_REASON = 40
 
 
+def finding_key(event_id: str, message: str) -> str:
+    """The identity an acknowledgement must match: the EVENT and the finding's own kind.
+
+    🔴 Keying on the event id alone was a hole, and blind review walked through it. One
+    event can produce several findings — a `TASK_CANCELLED` that both closes an
+    already-closed opening AND crosses a task boundary produces two — and a single written
+    reason, speaking about only the first, excused both. The second was silenced with no
+    argument ever written for it, which is exactly what this mechanism exists not to do.
+
+    The kind is taken from the finding's own wording rather than a code, because that is
+    what the messages carry; an unrecognised message falls back to the event id, which
+    keeps the old (weaker) behaviour rather than crashing, and is listed here so adding a
+    finding without adding its kind is a visible omission and not a silent widening.
+    """
+    kinds = (
+        ("closed twice", "double-closure"),
+        ("which it may not close", "type-mismatch"),
+        ("across a task boundary", "task-boundary"),
+        ("before it was opened", "closes-before-open"),
+        ("is in no actor ledger", "dangling-target"),
+    )
+    for needle, kind in kinds:
+        if needle in message:
+            return f"{event_id}:{kind}"
+    return event_id
+
+
 def triage_findings(findings: list[tuple[str, str]],
                     acknowledged: dict[str, str]) -> tuple[list[str], list[str]]:
     """Split content findings into (blocking, acknowledged) and police the reasons.
 
-    A stale acknowledgement — one naming an event that no longer produces a finding — is an
-    error in its own right, so the file cannot accumulate cover for problems that are gone.
-    A reason shorter than `MIN_REASON` is refused: an acknowledgement needs an argument,
-    not a label.
+    Each finding is matched on `<event_id>:<kind>` and, for compatibility with reasons
+    written before that distinction existed, on the bare event id. A stale acknowledgement
+    — one matching no finding — is an error in its own right, so the file cannot accumulate
+    cover for problems that are gone. A reason shorter than `MIN_REASON` is refused: an
+    acknowledgement needs an argument, not a label.
     """
     blocking: list[str] = []
     excused: list[str] = []
-    seen: set[str] = set()
+    used: set[str] = set()
     for event_id, message in findings:
-        seen.add(event_id)
-        reason = acknowledged.get(event_id)
+        key = finding_key(event_id, message)
+        reason = acknowledged.get(key)
+        matched = key
+        if reason is None and key != event_id and event_id in acknowledged:
+            # A bare-event-id reason covers a SINGLE finding from that event. If the event
+            # produces more than one, the others still block — which is the repair.
+            if sum(1 for e, m in findings if e == event_id) == 1:
+                reason, matched = acknowledged[event_id], event_id
         if reason is None:
-            blocking.append(message)
+            blocking.append(
+                f"{message} — no acknowledgement for `{key}`. A reason for another finding "
+                "of the same event does not cover this one")
         elif len(reason.strip()) < MIN_REASON:
             blocking.append(
                 f"{message} — acknowledged with a reason too short to be one: {reason!r}")
         else:
+            used.add(matched)
             excused.append(f"{message} [ACKNOWLEDGED: {reason}]")
-    for event_id in sorted(set(acknowledged) - seen):
+    for key in sorted(set(acknowledged) - used):
         blocking.append(
-            f"stale acknowledgement for {event_id}: it produces no finding. Remove it, "
-            "rather than leaving cover for a problem that is gone")
+            f"stale acknowledgement for `{key}`: it matches no finding. Remove it, rather "
+            "than leaving cover for a problem that is gone")
     return blocking, excused
 
 

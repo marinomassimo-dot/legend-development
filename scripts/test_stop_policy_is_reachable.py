@@ -93,6 +93,11 @@ def section_of(text: str, heading: str) -> str:
 
 HTML_COMMENT = re.compile(r"<!--.*?-->", re.S)
 FENCE = re.compile(r"(?ms)^[ \t]*```.*?^[ \t]*```[ \t]*$")
+#: An INLINE code span. Same class as the fence, and it was missed twice: a link wrapped in
+#: single backticks renders as literal text, routes nobody, and kept the whole suite green.
+#: Blind review found it by trying the third spelling after the first two were closed —
+#: which is the lesson, not the regex: "the two ways I thought of" is not a class.
+CODE_SPAN = re.compile(r"(`+)(?:(?!\1).)*?\1", re.S)
 
 
 def anchors_in(text: str) -> set[str]:
@@ -115,7 +120,8 @@ def anchors_in(text: str) -> set[str]:
     made cleverer than this.
     """
     pattern = re.compile(r"\]\(" + re.escape(SURFACE) + r"#([^)\s]+)\)")
-    return set(pattern.findall(FENCE.sub("", HTML_COMMENT.sub("", text))))
+    live = CODE_SPAN.sub("", FENCE.sub("", HTML_COMMENT.sub("", text)))
+    return set(pattern.findall(live))
 
 
 class TheTwoSectionsAreReachableByName(unittest.TestCase):
@@ -203,6 +209,25 @@ class TheTwoSectionsAreReachableByName(unittest.TestCase):
         self.assertEqual(set(), anchors_in(commented))
         self.assertEqual({"21c-stop-policy"}, anchors_in(commented + "\n" + live),
                          "a commented copy must not suppress a real one beside it")
+
+    def test_the_three_non_route_spellings_are_all_dead(self) -> None:
+        """Comment, fence, inline span — asserted together so the next one is noticed.
+
+        🔴 The first two were closed one at a time, each time with a docstring implying the
+        class was handled. Blind review then supplied the third: a link in single backticks
+        renders as literal text and kept the suite green. Three spellings do not prove the
+        class is closed either; what this case buys is that they fail together, so a repair
+        to one that quietly drops another goes red here.
+        """
+        live = "[§21c](" + SURFACE + "#21c-stop-policy)"
+        self.assertEqual({"21c-stop-policy"}, anchors_in(live), "the control must route")
+        for label, dead in (("html comment", "<!-- retired: " + live + " -->"),
+                            ("fenced block", "```\n" + live + "\n```"),
+                            ("inline span", "`" + live + "`")):
+            with self.subTest(spelling=label):
+                self.assertEqual(set(), anchors_in(dead))
+                self.assertEqual({"21c-stop-policy"}, anchors_in(dead + "\n\n" + live),
+                                 "a dead copy must not suppress a live one beside it")
 
     def test_a_route_shown_as_a_fenced_example_does_not_count(self) -> None:
         """The destination side already skips fences; the source side now agrees.
