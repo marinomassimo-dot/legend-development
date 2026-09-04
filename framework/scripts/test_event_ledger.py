@@ -85,13 +85,7 @@ class TheChainIsEnforcedNotAsserted(LedgerCase):
             self.assign("T-3")
         self.assertIn("refusing to append onto unverified history", str(caught.exception))
 
-    def test_a_dropped_line_is_caught_by_the_sequence_not_only_the_chain(self) -> None:
-        """Deleting the LAST line leaves a valid chain; the event_id/position rule catches it.
-
-        A hash chain binds each event to its predecessor, which leaves truncation of the
-        tail invisible to the chain alone. Two independent detectors matter here: this one
-        is local to the file, and `anchor_regressions` is the external one.
-        """
+    def test_dropping_a_MIDDLE_line_is_caught_inside_the_file(self) -> None:
         for n in range(1, 4):
             self.assign(f"T-{n}")
         path = el.actor_ledger_path(self.events, "orchestrator")
@@ -102,6 +96,30 @@ class TheChainIsEnforcedNotAsserted(LedgerCase):
         self.assertNotEqual([], el.validate_chain(surviving))
         self.assertNotEqual([], el.validate_sequence(surviving))
 
+    def test_dropping_the_LAST_line_is_invisible_to_every_check_inside_the_file(self) -> None:
+        """The honest version. The docstring here used to claim the opposite.
+
+        It said "deleting the LAST line leaves a valid chain; the event_id/position rule
+        catches it" — and the body underneath deleted a MIDDLE line, so it never tested the
+        sentence above it. Deleting the last line leaves a file that is valid by every
+        file-local measure: the chain verifies, the ids still match their positions, every
+        event validates. A chain binds each event to its predecessor, which leaves the LAST
+        event bound by nothing, and no amount of checking inside the file recovers that.
+
+        The external anchor is the only detector, which is exactly why
+        `TheAnchorOnlyMovesForward` has to be more than a count comparison.
+        """
+        for n in range(1, 4):
+            self.assign(f"T-{n}")
+        path = el.actor_ledger_path(self.events, "orchestrator")
+        lines = el.load_actor_file(path)[:-1]
+        path.write_text("".join(el.canonical_line(e) + "\n" for e in lines), encoding="utf-8")
+        surviving = el.load_actor_file(path)
+        self.assertEqual([], el.validate_chain(surviving))
+        self.assertEqual([], el.validate_sequence(surviving))
+        self.assertEqual([], el.read_all(self.events)[2])
+        self.assertEqual(2, len(surviving), "the event really is gone")
+
 
 class OneWriterPerFile(LedgerCase):
     def test_an_event_may_not_name_an_actor_other_than_its_file(self) -> None:
@@ -110,7 +128,8 @@ class OneWriterPerFile(LedgerCase):
         lines = el.load_actor_file(path)
         lines[0]["actor_id"] = "mirror"
         problems = el.validate_event(lines[0], actor_id="orchestrator")
-        self.assertTrue(any("one writer per file" in p for p in problems), problems)
+        self.assertTrue(any("belong to the actor its name declares" in p for p in problems),
+                        problems)
 
     def test_two_actors_write_two_files_and_neither_shares_a_sequence(self) -> None:
         self.assign("T-1")
@@ -118,10 +137,10 @@ class OneWriterPerFile(LedgerCase):
         self.assertEqual(
             {"mirror.jsonl", "orchestrator.jsonl"},
             {p.name for p in el.actor_files(self.events)})
-        events, anchors, errors = el.read_all(self.events)
+        events, per_actor, errors = el.read_all(self.events)
         self.assertEqual([], errors)
         self.assertEqual({"mirror": 1, "orchestrator": 1},
-                         {k: v["events"] for k, v in anchors.items()})
+                         {k: v["events"] for k, v in el.anchors_for(per_actor).items()})
 
     def test_the_event_id_is_the_tools_not_the_callers(self) -> None:
         """`append_event` takes no event_id: a caller that could name one could lie about it."""
@@ -202,7 +221,13 @@ class TheAnchorOnlyMovesForward(LedgerCase):
         self.assertEqual({}, anchor, "a refused consolidation must change nothing")
 
     def test_rewriting_in_place_without_changing_the_count_is_refused(self) -> None:
-        """Same length, different head. The count alone would have called this unchanged."""
+        """Same length, different head — the count alone calls this unchanged.
+
+        Caught by the same prefix comparison that catches truncate-then-regrow, which is
+        why replacing the count check was the right shape: one predicate — "does the
+        current file still EXTEND its anchored history" — covers both, and the two-branch
+        version covered neither completely.
+        """
         self.assign("T-1")
         self.assertEqual([], self.consolidate()[0])
         path = el.actor_ledger_path(self.events, "orchestrator")
@@ -210,7 +235,8 @@ class TheAnchorOnlyMovesForward(LedgerCase):
         lines[0]["object"] = "a different instruction"
         path.write_text("".join(el.canonical_line(e) + "\n" for e in lines), encoding="utf-8")
         errors, _ = self.consolidate()
-        self.assertTrue(any("rewritten in place" in e for e in errors), errors)
+        self.assertTrue(any("no longer EXTENDS its anchored history" in e for e in errors),
+                        errors)
 
     def test_an_anchored_actor_whose_ledger_vanishes_is_refused(self) -> None:
         self.assign("T-1")
@@ -218,6 +244,30 @@ class TheAnchorOnlyMovesForward(LedgerCase):
         el.actor_ledger_path(self.events, "orchestrator").unlink()
         errors, _ = self.consolidate()
         self.assertTrue(any("now absent" in e for e in errors), errors)
+
+    def test_truncating_then_appending_past_the_anchor_is_still_refused(self) -> None:
+        """🔴 The move that broke the first version of `anchor_regressions`.
+
+        Truncate — refused, correctly. Then simply append until the count passes the
+        anchor again: `after > before` skipped both branches, the anchor advanced, and the
+        erased events were gone from history and from the queue with every check green.
+        Nobody re-anchored by hand, so this was never the residual limit the module
+        declares; the tool laundered it. A count is not a history.
+        """
+        for n in range(1, 5):
+            self.assign(f"T-{n}")
+        self.assertEqual([], self.consolidate()[0])
+        path = el.actor_ledger_path(self.events, "orchestrator")
+        kept = el.load_actor_file(path)[:2]
+        path.write_text("".join(el.canonical_line(e) + "\n" for e in kept), encoding="utf-8")
+        self.assertTrue(any("truncated" in e for e in self.consolidate()[0]))
+        for n in range(9, 13):
+            self.assign(f"T-{n}")
+        self.assertEqual(6, len(el.load_actor_file(path)), "the file now EXCEEDS the anchor")
+        errors, anchor = self.consolidate()
+        self.assertTrue(any("no longer EXTENDS its anchored history" in e for e in errors),
+                        errors)
+        self.assertEqual({}, anchor)
 
     def test_growth_is_not_a_regression(self) -> None:
         """The positive control: the refusals above must not fire on an ordinary append."""
@@ -241,6 +291,60 @@ class TheAnchorOnlyMovesForward(LedgerCase):
         self.assertEqual(anchor_before, (self.view / "anchors.json").read_text(encoding="utf-8"))
 
 
+class TheDerivedViewIsItselfChecked(LedgerCase):
+    """🔴 Nothing re-derived the view, and the view is what every reader reads."""
+
+    def build(self):
+        self.assign("T-1")
+        self.assign("T-2")
+        self.assertEqual([], el.consolidate(self.events, self.view)[0])
+        return self.view / "events.jsonl"
+
+    def test_a_row_fabricated_in_the_view_is_caught(self) -> None:
+        """Deleting real rows and inserting an invented one left the whole battery green:
+        `validate` said PASS, and `open` listed a task nobody ever assigned. The source
+        ledgers were untouched and perfectly chained the entire time, which is why chaining
+        them was never enough on its own."""
+        path = self.build()
+        forged = dict(el.load_view(self.view)[0],
+                      event_id="EV-orchestrator-0099", task_id="T-FORGED",
+                      object="a task nobody ever assigned")
+        path.write_text(path.read_text(encoding="utf-8") + el.canonical_line(forged) + "\n",
+                        encoding="utf-8")
+        events = el.read_all(self.events)[0]
+        self.assertNotEqual([], el.view_disagreements(events, self.view))
+        self.assertIn("T-FORGED", [r["task_id"] for r in el.open_tasks(el.load_view(self.view))])
+
+    def test_a_row_deleted_from_the_view_is_caught(self) -> None:
+        path = self.build()
+        rows = el.load_view(self.view)
+        path.write_text("".join(el.canonical_line(r) + "\n" for r in rows[:-1]), encoding="utf-8")
+        self.assertNotEqual([], el.view_disagreements(el.read_all(self.events)[0], self.view))
+
+    def test_an_untouched_view_agrees(self) -> None:
+        """The positive control: the check must not call every view a forgery."""
+        self.build()
+        self.assertEqual([], el.view_disagreements(el.read_all(self.events)[0], self.view))
+
+    def test_no_view_is_not_a_disagreement(self) -> None:
+        self.assign("T-1")
+        self.assertEqual([], el.view_disagreements(el.read_all(self.events)[0], self.view))
+
+
+class OrderingSurvivesFiveDigits(LedgerCase):
+    def test_the_sort_key_is_numeric_not_lexical(self) -> None:
+        """🔴 `EV-a-10000` sorts before `EV-a-9998` as a string, and `append_event` mints
+        exactly those ids: `:04d` stops padding at five digits. Every consumer rides this
+        key, so the reordering would be silent, total, and reached by ordinary growth."""
+        ids = ["EV-a-9998", "EV-a-9999", "EV-a-10000", "EV-a-10001"]
+        rows = [{"event_at": "2026-09-04T12:00:00Z", "actor_id": "a", "event_id": i}
+                for i in ids]
+        self.assertEqual(ids, [r["event_id"] for r in sorted(rows, key=el.sort_key)])
+        self.assertNotEqual(
+            ids, [r["event_id"] for r in sorted(rows, key=lambda e: str(e["event_id"]))],
+            "the lexical key must actually disagree, or this test proves nothing")
+
+
 class TheQueueIsAJoinNotAStateMachine(LedgerCase):
     def test_an_assignment_is_open_until_a_closure_points_at_it(self) -> None:
         opened = self.assign("T-1", "repair the router")
@@ -256,6 +360,34 @@ class TheQueueIsAJoinNotAStateMachine(LedgerCase):
         self.append("orchestrator", "TASK_CANCELLED", "round-2 BLOCK: parked", task_id="T-1",
                     closes_event_id=opened["event_id"])
         self.assertEqual([], el.open_tasks(el.read_all(self.events)[0]))
+
+    def test_a_review_closure_cannot_evict_an_assignment_from_the_queue(self) -> None:
+        """🔴 The `closed` set was built from EVERY event carrying `closes_event_id`.
+
+        A `REVIEW_CLOSED` mis-pointed at a `TASK_ASSIGNED` is accepted by the writer, which
+        cannot see peer files — and it made a live assignment vanish from the queue.
+        `cross_actor_errors` does catch the mis-link, but the queue is also read straight
+        off the unconsolidated source, where that check never runs. The predicate was wider
+        than the unit its own docstring described.
+        """
+        opened = self.assign("T-1")
+        self.append("mirror", "REVIEW_CLOSED", "PASS", task_id="T-1",
+                    closes_event_id=opened["event_id"])
+        events = el.read_all(self.events)[0]
+        self.assertEqual(["T-1"], [r["task_id"] for r in el.open_tasks(events)])
+        self.assertNotEqual([], el.cross_actor_errors(events))
+
+    def test_one_opening_may_not_be_closed_twice(self) -> None:
+        """J.1's DETECTION names openings without closures and not the reverse, so nothing
+        looked for it: the view kept whichever closure sorted first, making the outcome of
+        a task a function of the sort order."""
+        opened = self.assign("T-1")
+        self.append("scientist", "TASK_COMPLETE", "done", task_id="T-1",
+                    closes_event_id=opened["event_id"])
+        self.append("orchestrator", "TASK_CANCELLED", "parked", task_id="T-1",
+                    closes_event_id=opened["event_id"])
+        errors = el.cross_actor_errors(el.read_all(self.events)[0])
+        self.assertTrue(any("closed twice" in e for e in errors), errors)
 
     def test_claims_and_acks_are_joined_on_task_id_and_do_not_close_anything(self) -> None:
         self.assign("T-1")
@@ -311,14 +443,17 @@ class TheRepositoryLedgerIsWellFormed(unittest.TestCase):
     def test_whatever_is_committed_validates(self) -> None:
         events_dir = ROOT / el.DEFAULT_EVENTS_DIR
         view_dir = ROOT / el.DEFAULT_VIEW_DIR
-        events, anchors, errors = el.read_all(events_dir)
+        events, per_actor, errors = el.read_all(events_dir)
         errors += el.cross_actor_errors(events)
+        # The committed view must BE the replay. Nothing checked this until Mirror
+        # fabricated a row in it and the whole battery stayed green.
+        errors += el.view_disagreements(events, view_dir)
         anchor_path = view_dir / "anchors.json"
         if anchor_path.is_file():
             errors += el.anchor_regressions(
-                json.loads(anchor_path.read_text(encoding="utf-8")), anchors, events_dir)
+                json.loads(anchor_path.read_text(encoding="utf-8")), per_actor, events_dir)
         self.assertEqual([], errors)
-        if not anchors:
+        if not per_actor:
             self.skipTest(f"no actor ledgers under {events_dir}: this check is vacuous")
 
 

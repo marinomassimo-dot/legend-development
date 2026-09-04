@@ -23,7 +23,16 @@ green while the rule was unreachable:
   siblings — assert over a fixed tuple of named files with `subTest(file=...)`. This one is
   the same shape, over the same two files those suites use.
 * **A markdown link with a fragment, not a mention of "§21c".** A mention cannot tell a
-  route from an anti-route: "§21c is DEPRECATED, do not read it" contains the string.
+  route from an anti-route, and 🔴 **neither can a link — this rationale was overstated and
+  is corrected here.** Blind review built two surfaces that carry the real fragments and
+  route nobody: the links wrapped in `<!-- retired route, do not use: … -->`, and the links
+  present but immediately labelled "**DEPRECATED — do not read them**". The suite passed
+  both. The first is now closed, because a link inside an HTML comment is not markup an
+  actor follows and `anchors_in` strips comments before matching. The second is NOT closed
+  and cannot be by this method: no string test distinguishes a live route from a live route
+  standing next to a sentence that disowns it. What a fragment link buys over a mention is
+  narrower than first claimed — it pins WHICH section and it is checkable against the
+  destination's real headings — and that narrower claim is the one this suite makes.
 * **Position, not merely presence.** A link in `CLAUDE.md` §4's read-order list is not
   "before your first act". The `CLAUDE.md` assertion is scoped to §0, the section whose own
   heading is "Before anything else", so moving the line down the file fails this suite.
@@ -45,11 +54,14 @@ sys.path.insert(0, str(ROOT / "framework" / "scripts"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from runtime_parity import ROUTER_CHAIN  # noqa: E402
-# `heading_slug` is imported from the suite that already owns fragment resolution rather
-# than reimplemented. A second copy of the slug rule could agree with this file while
-# disagreeing with the checker that actually validates the repository's links — which is
-# how a test ends up certifying an anchor that resolves nowhere.
-from test_link_targets import heading_slug  # noqa: E402
+# 🔴 BOTH are imported from the suite that owns fragment resolution. Importing only
+# `heading_slug` and reimplementing the file walk was not the same guarantee, and the
+# docstring claimed it was: `heading_slugs` owns fence-skipping and duplicate
+# disambiguation, so a local reimplementation happily produced `21c-stop-policy` for a
+# heading sitting inside a ``` fence, where the repository's own checker produces nothing.
+# The suite would then have certified an anchor `test_link_targets.py` rejects — the exact
+# failure the import was supposed to prevent.
+from test_link_targets import heading_slug, heading_slugs  # noqa: E402
 
 SURFACE = "framework/instruction/LEGEND_CORE.md"
 
@@ -79,16 +91,19 @@ def section_of(text: str, heading: str) -> str:
     return rest if end == -1 else rest[:end]
 
 
+HTML_COMMENT = re.compile(r"<!--.*?-->", re.S)
+
+
 def anchors_in(text: str) -> set[str]:
-    """Every `#fragment` that a markdown link in `text` aims at LEGEND_CORE.md."""
+    """Every `#fragment` a LIVE markdown link in `text` aims at LEGEND_CORE.md.
+
+    HTML comments are stripped first. A link inside `<!-- retired route, do not use: … -->`
+    is not a route an actor follows, and the suite was green on a surface whose only two
+    references were commented out — which is one of the two ways a markdown link turned out
+    to be no better at telling a route from an anti-route than a bare mention was.
+    """
     pattern = re.compile(r"\]\(" + re.escape(SURFACE) + r"#([^)\s]+)\)")
-    return set(pattern.findall(text))
-
-
-def legend_core_slugs() -> set[str]:
-    return {heading_slug(line.lstrip("#").strip())
-            for line in (ROOT / SURFACE).read_text(encoding="utf-8").splitlines()
-            if line.startswith("#")}
+    return set(pattern.findall(HTML_COMMENT.sub("", text)))
 
 
 class TheTwoSectionsAreReachableByName(unittest.TestCase):
@@ -125,7 +140,7 @@ class TheTwoSectionsAreReachableByName(unittest.TestCase):
         Checked against `LEGEND_CORE.md`'s own headings, so renaming §21c fails here even
         though the link text would still read correctly.
         """
-        slugs = legend_core_slugs()
+        slugs = heading_slugs(ROOT / SURFACE)
         for heading, anchor in SECTIONS:
             with self.subTest(anchor=anchor):
                 self.assertEqual(
@@ -133,11 +148,31 @@ class TheTwoSectionsAreReachableByName(unittest.TestCase):
                     f"`{heading}` no longer slugs to `{anchor}`")
                 self.assertIn(anchor, slugs, f"{SURFACE} has no heading anchored at #{anchor}")
 
+    def test_a_heading_inside_a_code_fence_does_not_count_as_a_destination(self) -> None:
+        """The check that `heading_slugs` is doing the work, and not a local lookalike.
+
+        A local reimplementation scanned every line starting with `#` and accepted a
+        heading inside a ``` fence; `test_link_targets.heading_slugs` does not. If this
+        suite ever drifts back to its own walk, this case goes green when it should be red.
+        """
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            fenced = Path(tmp) / "fenced.md"
+            fenced.write_text("# Real Title\n\n```\n## 21c. STOP POLICY\n```\n",
+                              encoding="utf-8")
+            slugs = heading_slugs(fenced)
+            self.assertIn("real-title", slugs, "the positive control must be found")
+            self.assertNotIn("21c-stop-policy", slugs)
+
     def test_the_detector_fires_on_a_surface_that_only_names_the_file(self) -> None:
         """The negative control, and it is the case this suite exists to catch.
 
         `CLAUDE.md` as it stood at 57c0f25 — the commit at which the failure happened —
-        linked to `LEGEND_CORE.md` five times and to neither section. Stripping the
+        named `LEGEND_CORE.md` 4 times, linked to it twice, and pointed at neither
+        section; `AGENTS.md` named it 0 times either way, so across the two asserted
+        surfaces there were 2 links and 0 anchors. ("Five times" stood here and in the
+        commit message until blind review re-derived it; no reading of either file yields
+        five, and it was a checkable number stated without being checked.) Stripping the
         fragments from the live text reconstructs that surface, and every assertion above
         must go red on it. Without this, a bug in `anchors_in` would make the whole suite
         pass by finding nothing to complain about.
@@ -147,6 +182,30 @@ class TheTwoSectionsAreReachableByName(unittest.TestCase):
         self.assertIn(f"]({SURFACE})", as_it_was, "the file link itself must survive")
         self.assertEqual(set(), anchors_in(as_it_was))
         self.assertEqual(set(), anchors_in(section_of(as_it_was, SCOPES["CLAUDE.md"])))
+
+    def test_a_route_inside_an_html_comment_does_not_count(self) -> None:
+        """Blind review's counter-example (A), closed. A commented link routes nobody."""
+        live = "See [§21c](" + SURFACE + "#21c-stop-policy) before acting."
+        self.assertEqual({"21c-stop-policy"}, anchors_in(live))
+        commented = "<!-- retired route, do not use: " + live + " -->"
+        self.assertEqual(set(), anchors_in(commented))
+        self.assertEqual({"21c-stop-policy"}, anchors_in(commented + "\n" + live),
+                         "a commented copy must not suppress a real one beside it")
+
+    def test_the_limit_this_suite_does_not_close_is_stated_and_true(self) -> None:
+        """Blind review's counter-example (B), NOT closed — recorded rather than hidden.
+
+        A live link standing next to a sentence that disowns it still passes, and no string
+        test separates those two. This asserts the weakness so it stays visible: if someone
+        later believes the suite excludes anti-routes, this case says otherwise in the one
+        place they will run.
+        """
+        disowned = ("[§21c](" + SURFACE + "#21c-stop-policy) and "
+                    "[§21d](" + SURFACE + "#21d-decision-authority) "
+                    "are **DEPRECATED — do not read them**.")
+        self.assertEqual({"21c-stop-policy", "21d-decision-authority"}, anchors_in(disowned))
+        self.assertIn("cannot be by this method", __doc__ or "",
+                      "the docstring must keep stating the limit this case demonstrates")
 
     def test_the_asserted_surfaces_are_ones_the_router_actually_routes_through(self) -> None:
         """Guards the tuple against drifting onto a file nobody opens.

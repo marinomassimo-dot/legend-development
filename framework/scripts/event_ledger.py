@@ -34,6 +34,16 @@ why that view must be rebuildable by replay rather than maintained in place.
 
 Sovereignty, also from J.1: repository state wins. This ledger is audit and analysis
 surface, never a second source of truth.
+
+🔴 **What "one writer per file" is, and is not.** It is a CONVENTION plus a read-time
+check, not a construction. Six concurrent processes were run against one actor file and
+all six appended successfully — the `flock` held, the chain stayed valid, the sequence
+stayed valid, and 120 events landed. Nothing prevents a second process from writing
+another actor's ledger; what exists is that `read_all` takes each event's owner from the
+FILENAME and rejects any event declaring a different `actor_id`, so a cross-written event
+is detected on the next read rather than prevented at the write. The equivalent check
+inside `append_event` is a tautology and is marked as one where it sits. Concurrency
+safety and single-writership are two claims, and only the first is enforced.
 """
 
 from __future__ import annotations
@@ -92,7 +102,6 @@ TASK_SCOPED = frozenset({
 })
 
 CHAIN_FIELD = "ledger_prev_hash"
-LEDGER_MANAGED = frozenset({CHAIN_FIELD, "event_id", "event_at"})
 DERIVED_ONLY = frozenset({"closed_by"})
 
 REQUIRED = ("event_id", "event_at", "actor_id", "event_type", "object")
@@ -202,9 +211,12 @@ def validate_event(event: Any, *, actor_id: Optional[str] = None) -> list[str]:
     if event.get("actor_id") and not ACTOR_ID.match(str(event["actor_id"])):
         errors.append(f"actor_id `{event['actor_id']}` is not a lowercase slug")
     if actor_id is not None and event.get("actor_id") != actor_id:
+        # This has content only where `actor_id` comes from the FILENAME — i.e. in
+        # `read_all`. Called from `append_event` it is a tautology, because the record's
+        # `actor_id` was assigned from the same parameter moments earlier.
         errors.append(
             f"event declares actor_id `{event.get('actor_id')}` in the ledger of "
-            f"`{actor_id}`: option (a) is one writer per file, by construction")
+            f"`{actor_id}`: a file's events belong to the actor its name declares")
     if event.get("event_id") and not EVENT_ID.match(str(event["event_id"])):
         errors.append(f"event_id `{event['event_id']}` is not `EV-<actor>-<seq>`")
     if event.get("event_at") and not _valid_timestamp(event["event_at"]):
@@ -330,10 +342,29 @@ def actor_files(events_dir: Path) -> list[Path]:
     return sorted(p for p in events_dir.glob("*.jsonl") if p.is_file())
 
 
-def read_all(events_dir: Path) -> tuple[list[dict[str, Any]], dict[str, dict[str, Any]], list[str]]:
-    """Every actor file, chain-verified, plus the per-actor anchor each one implies."""
+def sequence_number(event: dict[str, Any]) -> int:
+    """The integer at the end of an `event_id`, for ordering.
+
+    🔴 Sorting on the id STRING reorders the ledger at 10,000 events: `EV-a-10000` sorts
+    before `EV-a-9998` lexically, and `append_event` mints exactly those ids with `:04d`,
+    which stops zero-padding at five digits. Every consumer rides this key — the view's
+    "first closure wins", the queue's ordering — so the reordering would be silent and
+    total, and it is a boundary this module reaches on its own.
+    """
+    tail = str(event.get("event_id", "")).rsplit("-", 1)[-1]
+    return int(tail) if tail.isdigit() else -1
+
+
+def sort_key(event: dict[str, Any]) -> tuple[str, str, int]:
+    return (str(event.get("event_at", "")), str(event.get("actor_id", "")),
+            sequence_number(event))
+
+
+def read_all(events_dir: Path) -> tuple[list[dict[str, Any]], dict[str, list[dict[str, Any]]],
+                                        list[str]]:
+    """Every actor file, chain-verified, keyed by the actor its FILENAME names."""
     events: list[dict[str, Any]] = []
-    anchors: dict[str, dict[str, Any]] = {}
+    per_actor: dict[str, list[dict[str, Any]]] = {}
     errors: list[str] = []
     for path in actor_files(events_dir):
         actor_id = path.stem
@@ -347,10 +378,15 @@ def read_all(events_dir: Path) -> tuple[list[dict[str, Any]], dict[str, dict[str
         for number, event in enumerate(lines, 1):
             for problem in validate_event(event, actor_id=actor_id):
                 errors.append(f"{path.name}: line {number}: {problem}")
-        anchors[actor_id] = {"events": len(lines), "head": ledger_head(lines)}
+        per_actor[actor_id] = lines
         events += lines
-    events.sort(key=lambda e: (str(e.get("event_at", "")), str(e.get("event_id", ""))))
-    return events, anchors, errors
+    events.sort(key=sort_key)
+    return events, per_actor, errors
+
+
+def anchors_for(per_actor: dict[str, list[dict[str, Any]]]) -> dict[str, dict[str, Any]]:
+    return {actor: {"events": len(lines), "head": ledger_head(lines)}
+            for actor, lines in per_actor.items()}
 
 
 def cross_actor_errors(events: list[dict[str, Any]]) -> list[str]:
@@ -363,10 +399,22 @@ def cross_actor_errors(events: list[dict[str, Any]]) -> list[str]:
     """
     errors: list[str] = []
     by_id = {e.get("event_id"): e for e in events}
+    closers: dict[str, str] = {}
     for event in events:
         target_id = event.get("closes_event_id")
         if not target_id:
             continue
+        # 🔴 Two closures for one opening. J.1's DETECTION names "aperture senza chiusura"
+        # and says nothing about the reverse, so nothing looked for it: a TASK_COMPLETE and
+        # a TASK_CANCELLED could both close one assignment, consolidation reported no
+        # error, and the view silently kept whichever sorted first — i.e. the outcome of
+        # the task became a function of the sort order.
+        if target_id in closers:
+            errors.append(
+                f"{target_id} is closed twice: by {closers[target_id]} and by "
+                f"{event.get('event_id')}. An opening has one outcome")
+        else:
+            closers[str(target_id)] = str(event.get("event_id"))
         target = by_id.get(target_id)
         if target is None:
             errors.append(
@@ -408,52 +456,88 @@ def consolidated_view(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return view
 
 
-def anchor_regressions(previous: dict[str, Any], current: dict[str, dict[str, Any]],
+def anchor_regressions(previous: dict[str, Any], events: dict[str, list[dict[str, Any]]],
                        events_dir: Path) -> list[str]:
-    """An anchor may only ever move forward. A shrunken actor file is an error.
+    """The anchored history must still be a PREFIX of the current file, byte for byte.
 
-    `fulltext_receipts` re-anchors whatever it finds; here a consolidation that would
-    lower an actor's event count, or move its head without its count growing, refuses.
-    This is the divergence the module docstring declares, and it is the only defence
-    against truncation that does not put lab telemetry inside the science gate.
+    🔴 The first version of this compared only `(count, head)` and asked whether the count
+    had gone down. Mirror broke it in one move: truncate the ledger — refused, correctly —
+    then simply append until the count passes the anchor again. `after > before` skipped
+    both branches, the anchor advanced, and three real assignments were gone from history
+    and from the queue with every check green. Nobody re-anchored by hand, so that was not
+    the residual limit this module declares; the tool laundered it.
+
+    A count is not a history. What is checked now is EXTENSION: replay the first N events
+    of the current file, where N is the anchored count, and require that prefix to hash to
+    exactly the anchored head. Truncate-then-regrow fails because the prefix at position N
+    is no longer the history that was anchored — which is the property the docstring
+    claimed all along and did not have.
     """
     errors: list[str] = []
     for actor_id, before in (previous.get("actors") or {}).items():
-        after = current.get(actor_id)
-        if after is None:
+        anchored = int(before.get("events") or 0)
+        current = events.get(actor_id)
+        if current is None:
             errors.append(
-                f"`{actor_id}` was anchored at {before.get('events')} events and its ledger "
-                f"is now absent from {events_dir}")
+                f"`{actor_id}` was anchored at {anchored} events and its ledger is now "
+                f"absent from {events_dir}")
             continue
-        if after["events"] < before.get("events", 0):
+        if len(current) < anchored:
             errors.append(
-                f"`{actor_id}` was anchored at {before.get('events')} events and now has "
-                f"{after['events']}: history was truncated")
-        elif after["events"] == before.get("events", 0) and after["head"] != before.get("head"):
+                f"`{actor_id}` was anchored at {anchored} events and now has "
+                f"{len(current)}: history was truncated")
+            continue
+        prefix_head = ledger_head(current[:anchored])
+        if prefix_head != before.get("head"):
             errors.append(
-                f"`{actor_id}` still has {after['events']} events but its head moved from "
-                f"{before.get('head')} to {after['head']}: history was rewritten in place")
+                f"`{actor_id}` no longer EXTENDS its anchored history: replaying its first "
+                f"{anchored} events gives {prefix_head}, and {before.get('head')} was "
+                "anchored. Appending past a truncation does not repair it")
     return errors
+
+
+def view_bytes(events: list[dict[str, Any]]) -> str:
+    return "".join(canonical_line(row) + "\n" for row in consolidated_view(events))
+
+
+def view_disagreements(events: list[dict[str, Any]], view_dir: Path) -> list[str]:
+    """The committed view must be exactly what replaying the sources produces.
+
+    🔴 Nothing checked this, and the view is the surface every reader reads: `queue_source`
+    prefers it, so `open` and `show` answer from it. Mirror deleted two assignments from
+    the committed view, appended a fabricated `TASK-FORGED` row, and the whole battery
+    stayed green — `validate` said PASS, the suite said OK, and `open` listed a task nobody
+    ever assigned while omitting two that were. The source ledgers were untouched and
+    perfectly chained the entire time, which is precisely why chaining them was never
+    enough: a derived file that nobody re-derives is an unchecked second source of truth.
+    """
+    path = view_dir / "events.jsonl"
+    if not path.is_file():
+        return []
+    actual = path.read_text(encoding="utf-8")
+    if actual == view_bytes(events):
+        return []
+    return [f"{path} is not the replay of the actor ledgers: it was edited, or it is stale. "
+            "Rebuild it with `event_ledger.py consolidate`; never hand-edit it"]
 
 
 def consolidate(events_dir: Path, view_dir: Path) -> tuple[list[str], dict[str, Any]]:
     """Rebuild the derived view and advance the anchor, or refuse and change nothing."""
-    events, anchors, errors = read_all(events_dir)
+    events, per_actor, errors = read_all(events_dir)
     errors += cross_actor_errors(events)
     anchor_path = view_dir / "anchors.json"
     previous: dict[str, Any] = {}
     if anchor_path.is_file():
         previous = json.loads(anchor_path.read_text(encoding="utf-8"))
-    errors += anchor_regressions(previous, anchors, events_dir)
+    errors += anchor_regressions(previous, per_actor, events_dir)
     if errors:
         return errors, {}
-    view = consolidated_view(events)
+    anchors = anchors_for(per_actor)
     view_dir.mkdir(parents=True, exist_ok=True)
-    (view_dir / "events.jsonl").write_text(
-        "".join(canonical_line(row) + "\n" for row in view), encoding="utf-8")
+    (view_dir / "events.jsonl").write_text(view_bytes(events), encoding="utf-8")
     anchor = {
         "generated_by": "framework/scripts/event_ledger.py consolidate",
-        "events": len(view),
+        "events": len(events),
         "actors": {k: anchors[k] for k in sorted(anchors)},
     }
     anchor_path.write_text(json.dumps(anchor, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -479,7 +563,15 @@ def open_tasks(events: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
     same join on `task_id`. Nothing here decides what happens next — a reader does.
     """
     rows = list(events)
-    closed = {str(e["closes_event_id"]) for e in rows if e.get("closes_event_id")}
+    # 🔴 Only a closure that MAY close an assignment removes one from the queue. Built from
+    # every event carrying `closes_event_id`, this set was wider than the unit the
+    # docstring describes: a `REVIEW_CLOSED` mis-pointed at a `TASK_ASSIGNED` is accepted
+    # by the writer — which cannot see peer files — and made a live assignment disappear
+    # from the queue. `cross_actor_errors` does catch the mis-link, but the queue is also
+    # read straight off the unconsolidated source, where that check never runs.
+    closers = {kind for kind, targets in CLOSES.items() if "TASK_ASSIGNED" in targets}
+    closed = {str(e["closes_event_id"]) for e in rows
+              if e.get("closes_event_id") and e.get("event_type") in closers}
     claimed: dict[str, str] = {}
     acked: set[str] = set()
     for event in rows:
@@ -576,19 +668,20 @@ def main() -> int:
         return 0
 
     if args.command == "validate":
-        events, anchors, errors = read_all(events_dir)
+        events, per_actor, errors = read_all(events_dir)
         errors += cross_actor_errors(events)
+        errors += view_disagreements(events, view_dir)
         anchor_path = view_dir / "anchors.json"
         if anchor_path.is_file():
             previous = json.loads(anchor_path.read_text(encoding="utf-8"))
-            errors += anchor_regressions(previous, anchors, events_dir)
+            errors += anchor_regressions(previous, per_actor, events_dir)
         else:
             print(f"NOTE: no anchor at {anchor_path}; truncation is undetectable until "
                   "`consolidate` writes one")
         for problem in errors:
             print(f"ERROR: {problem}", file=sys.stderr)
         print(f"VERDICT: {'BLOCK' if errors else 'PASS'} — {len(events)} events, "
-              f"{len(anchors)} actor ledgers")
+              f"{len(per_actor)} actor ledgers")
         return 2 if errors else 0
 
     if args.command == "consolidate":
