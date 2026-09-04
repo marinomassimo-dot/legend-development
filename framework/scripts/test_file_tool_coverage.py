@@ -172,13 +172,32 @@ class ARelativePathWithNoBaseIsNotAPath(unittest.TestCase):
         anchored case, or the repair is just a denial."""
         self.assertNotEqual("deny", decide(self.payload(str(ROOT / "notes.md"), cwd=None)))
 
-    def test_a_relative_path_WITH_a_cwd_still_resolves_and_still_locks_peers(self) -> None:
-        self.assertNotEqual("deny", decide(self.payload("notes.md", cwd=str(ROOT))))
-        for peer in peers():
-            name = Path(peer).name
-            if Path(peer).parent == ROOT.parent:
+    def test_a_relative_base_is_not_a_base(self) -> None:
+        """🔴 `cwd="."`, `".."` and `"legend-public"` are truthy and meaningless.
+
+        The first repair refused an EMPTY base and accepted these, so `os.path.join` gave
+        a relative path that the policy resolved against the GUARD PROCESS's directory —
+        which is not where the tool would write. Same "a base that is not a base" defect
+        the repair's own docstring named, one step in.
+        """
+        for cwd in (".", "..", "legend-public", "./x"):
+            with self.subTest(cwd=cwd):
                 self.assertEqual("deny", decide(
-                    self.payload(f"../{name}/CLAUDE.md", cwd=str(ROOT))))
+                    self.payload("../elsewhere/CLAUDE.md", cwd=cwd)))
+
+    def test_a_relative_path_WITH_an_absolute_cwd_resolves_and_is_still_scoped(self) -> None:
+        """The population is scopes that exist in EVERY checkout, not peers this machine
+        happens to have.
+
+        The borrowed version iterated `git worktree list`, so in a fresh clone — where the
+        gate runs — it iterated nothing and asserted nothing. `.git/` exists in every clone
+        and is a confined scope, so a relative path that walks into it is a claim that can
+        actually be made anywhere.
+        """
+        self.assertNotEqual("deny", decide(self.payload("notes.md", cwd=str(ROOT))))
+        self.assertEqual("deny", decide(self.payload(".git/config", cwd=str(ROOT))))
+        self.assertEqual("deny", decide(
+            self.payload("framework/../.git/hooks/pre-commit", cwd=str(ROOT))))
 
 
 class WhatThisChangeDoesNotProtect(unittest.TestCase):

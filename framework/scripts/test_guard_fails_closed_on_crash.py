@@ -93,6 +93,35 @@ class ACrashedGuardStillAnswers(unittest.TestCase):
                          "an allowed command must produce no output, or the contrast above "
                          "means nothing")
 
+    def test_a_crash_in_the_PARSE_is_covered_too_and_not_only_in_decide(self) -> None:
+        """🔴 The gap blind review found in the first version of this suite.
+
+        Every case above monkeypatches `decide`, so all of them raise INSIDE the inner
+        `try` and none ever reaches `sys.stdin.read()` or `json.loads`. `json.loads` was
+        guarded only by `except (json.JSONDecodeError, ValueError)`, and 200k nested
+        brackets raise `RecursionError`, which escaped both — rc=1, empty stdout. The
+        commit that added the inner handler claimed to close "the half reachable from
+        inside the process" and did not, and this suite certified that claim while
+        structurally unable to test it.
+
+        These inputs go through the REAL entry point with no patching at all.
+        """
+        hook = ROOT / "scripts" / "guard_bash_command.py"
+        for label, data in (("deeply nested array", "[" * 200000 + "]" * 200000),
+                            ("deeply nested object", '{"a":' * 100000 + "1" + "}" * 100000),
+                            ("unparseable", "{not json"),
+                            ("empty", "")):
+            with self.subTest(input=label):
+                result = subprocess.run([sys.executable, str(hook)], input=data,
+                                        capture_output=True, text=True)
+                self.assertTrue(
+                    result.stdout.strip(),
+                    f"{label} produced an EMPTY stdout — silence, which a harness may read "
+                    "as no objection")
+                self.assertEqual(
+                    "deny",
+                    json.loads(result.stdout)["hookSpecificOutput"]["permissionDecision"])
+
     def test_unparseable_stdin_was_already_covered_and_still_is(self) -> None:
         """The pre-existing arm, kept under test so the new one cannot displace it."""
         result = subprocess.run(

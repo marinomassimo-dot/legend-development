@@ -359,12 +359,18 @@ def anchored_file_target(tool_name: str, tool_input: object, workdir: str) -> st
     target = file_target(tool_name, tool_input)
     if os.path.isabs(target):
         return target
-    if not workdir:
+    # 🔴 An ABSOLUTE base, not merely a non-empty one. `cwd="."`, `cwd=".."` and
+    # `cwd="legend-public"` are all truthy and all meaningless: `os.path.join` then yields
+    # a relative path that the policy resolves against the GUARD PROCESS's own directory,
+    # which is not where the tool would write. The first repair refused an empty base and
+    # accepted these, which is the same "a base that is not a base" defect it was written
+    # to close, one step in.
+    if not workdir or not os.path.isabs(workdir):
         raise Undecidable(
-            f"`{tool_name}` names the relative path `{target}` and the payload carries no "
-            "workdir to resolve it against, so the guard cannot say which file would be "
-            "written. Send an absolute `"
-            f"{FILE_WRITE_TOOLS[tool_name]}`, or a payload with `cwd`.")
+            f"`{tool_name}` names the relative path `{target}` and the payload's workdir "
+            f"is {workdir!r}, which is not an absolute base to resolve it against, so the "
+            "guard cannot say which file would be written. Send an absolute "
+            f"`{FILE_WRITE_TOOLS[tool_name]}`, or a payload whose `cwd` is absolute.")
     return os.path.join(workdir, target)
 
 
@@ -679,6 +685,28 @@ Invoked with a flag it emits a DENY on stdout, because on that channel silence i
 
 
 def main() -> int:
+    """Every path out of here writes a decision. 🔴 Silence on this channel is ALLOW.
+
+    The broad handler lives HERE and not around `decide` alone, which is where it was and
+    which was not enough: `sys.stdin.read()` and `json.loads` sit before that inner `try`,
+    and `json.loads` was guarded only by `except (json.JSONDecodeError, ValueError)`. Feed
+    it 200k nested brackets and the `RecursionError` escaped both — rc=1, empty stdout,
+    which a harness may read as no objection. The commit that added the inner handler
+    claimed to close "the half reachable from inside the process"; it did not, and the test
+    that certified it monkeypatched `decide`, so it never exercised the parse at all.
+    """
+    try:
+        return _main()
+    except Exception as exc:  # noqa: BLE001 - the kind is unknown by construction
+        print(json.dumps(_deny(
+            "The write guard failed before it could decide, so it cannot say whether this "
+            f"command is safe, and answers no.\n\n{type(exc).__name__}: {exc}\n\n"
+            "This is a guard defect, not a property of the command. Report it rather than "
+            "working around it.")))
+        return 0
+
+
+def _main() -> int:
     if any(flag in sys.argv[1:] for flag in HELP_FLAGS):
         print(USAGE, file=sys.stderr)
         print(json.dumps(_deny(

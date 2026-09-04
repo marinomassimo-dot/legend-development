@@ -485,11 +485,28 @@ class DerivingTheClosureTarget(LedgerCase):
         self.assertIsNone(target)
         self.assertIn("no open", why)
 
-    def test_it_resolves_across_actors_because_the_opener_usually_is_another(self) -> None:
+    def test_it_reads_openings_from_files_other_than_the_closers_own(self) -> None:
+        """🔴 Rewritten: the first version named cross-actor resolution and could not test
+        it — `resolve_closes` takes no actor argument, so it was strictly weaker than the
+        happy-path case above and killed none of five mutants.
+
+        The property that IS real: the candidate set is drawn from every actor's ledger,
+        so an opening written by the orchestrator is found while the scientist's own file
+        contains no assignment at all. Asserted by checking the scientist's ledger is
+        genuinely empty of openings first, which is what makes the resolution cross-file.
+        """
         opened = self.assign("T-1")
+        self.append("scientist", "TASK_ACKED", "ack", task_id="T-1")
+        scientist = el.load_actor_file(el.actor_ledger_path(self.events, "scientist"))
+        self.assertEqual([], [e for e in scientist if e["event_type"] == "TASK_ASSIGNED"],
+                         "the closing actor must hold no opening, or this proves nothing")
         events = el.read_all(self.events)[0]
         self.assertEqual(opened["event_id"],
                          el.resolve_closes(events, "TASK_COMPLETE", "T-1")[0])
+        only_scientist = [e for e in events if e["actor_id"] == "scientist"]
+        self.assertIsNone(el.resolve_closes(only_scientist, "TASK_COMPLETE", "T-1")[0],
+                          "restricted to one file the opening is unreachable, which is "
+                          "what makes reading all of them the load-bearing part")
 
     def test_it_matches_only_types_that_may_close_the_one_asked_for(self) -> None:
         """A REVIEW_CLOSED must not resolve onto a TASK_ASSIGNED — the exact mis-link that

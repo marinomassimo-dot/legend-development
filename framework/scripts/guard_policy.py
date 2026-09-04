@@ -2681,55 +2681,83 @@ REF_DESTRUCTIVE_FLAGS = ("-d", "-D", "--delete", "-m", "-M", "--move", "-c", "-C
 GIT_VERB_SUBCOMMANDS = frozenset({"worktree", "stash", "notes", "reflog", "replace",
                                   "submodule", "bisect", "remote"})
 
-#: 🔴 `git worktree add` OPTIONS THAT CONSUME THE NEXT ARGUMENT.
+#: 🔴 `git worktree add` OPTION GRAMMAR — an ALLOWLIST, because two hand-rolled versions
+#: of this parser both shipped holes.
 #:
-#: Blind review broke the first version of the destination check with one command:
-#: `git worktree add --lock --reason /tmp/ok <peer>` was ALLOWED, because
-#: `[t for t in rest if not t.startswith("-")]` keeps flag VALUES, so the reason string
-#: was judged as the destination and the peer worktree was never looked at. `-b hijack
-#: <peer>` did the same with the branch name. Both were PROHIBITED before the repair, so
-#: the repair SHIPPED A REGRESSION — a guard made weaker while its suite stayed green.
+#: The first kept flag VALUES (`--lock --reason /tmp/ok <peer>` judged the reason string).
+#: The second enumerated value-taking flags and let everything else through, so `-fb hijack
+#: <peer>` — which git parses as `-f` plus `-b hijack`, confirmed against real git — judged
+#: the branch name and let a checkout land on a live peer worktree. Both spellings were
+#: PROHIBITED before either repair. Twice, an unrecognised option shape meant "carry on
+#: guessing", and twice the guess was the attacker's.
 #:
-#: The suite stayed green because it only ever spelled the destination FIRST
-#: (`add <path> -b <branch>`). One argument order was tested and one was not, and the
-#: untested order is the one an attacker writes.
-WORKTREE_ADD_VALUE_FLAGS = frozenset({"--reason", "-b", "-B", "--orphan"})
+#: So the failure direction is inverted. Every option is enumerated by name and arity, and
+#: anything NOT on these lists makes the parse return None, which becomes `UNNAMED` and
+#: denies. A new git option therefore costs a refusal until it is added here, which is the
+#: direction a guard should fail in; the alternative has now been wrong twice.
+WORKTREE_ADD_BOOLEAN_LONG = frozenset({
+    "--force", "--detach", "--checkout", "--no-checkout", "--lock", "--orphan",
+    "--guess-remote", "--no-guess-remote", "--track", "--no-track", "--quiet",
+    "--relative-paths", "--no-relative-paths",
+})
+#: `--orphan` is HERE and not among the value flags: git derives the branch from the path's
+#: basename and consumes no operand — `git worktree add <path> --orphan` works. Listing it
+#: as value-taking made the guard swallow the destination and refuse a legitimate scratch
+#: worktree, which is a control wrongly refused rather than a hole, and equally a defect.
+WORKTREE_ADD_VALUE_LONG = frozenset({"--reason"})
+WORKTREE_ADD_BOOLEAN_SHORT = frozenset({"f", "d", "q"})
+WORKTREE_ADD_VALUE_SHORT = frozenset({"b", "B"})
+WORKTREE_ADD_HELP = frozenset({"-h", "--help"})
 
 
 def worktree_add_destination(rest: List[str]) -> Optional[str]:
-    """The path `git worktree add` would write, honouring options that take a value.
+    """The path `git worktree add` would write, or None when it cannot be identified.
 
-    Returns None when the destination cannot be identified, and the caller turns that into
-    `UNNAMED`, which denies. There is no useful guess for "which directory is about to be
-    filled with a checkout": guessing wrong here is precisely how a peer worktree stopped
-    being looked at.
+    None denies. There is no useful guess for "which directory is about to be filled with a
+    checkout", and guessing is exactly how a peer worktree twice stopped being looked at.
 
-    `git worktree add [<options>] <path> [<commit-ish>]` — the FIRST operand after the
-    subcommand is the path; anything after it is a commit-ish and never a write target.
+    `git worktree add [<options>] <path> [<commit-ish>]` — the FIRST operand is the path;
+    anything after it is a commit-ish and never a write target. Short options may be
+    GROUPED (`-fb name` is `-f -b name`) and may carry their value inline (`-bname`), which
+    is the case the previous version missed.
     """
     tokens = list(rest)
     if tokens and tokens[0] == "worktree":
         tokens = tokens[1:]
     if tokens and tokens[0] == "add":
         tokens = tokens[1:]
-    skip_next = False
+    expect_value = False
     end_of_options = False
     for token in tokens:
-        if skip_next:
-            skip_next = False
+        if expect_value:
+            expect_value = False
             continue
         if end_of_options:
             return token
         if token == "--":
-            # Everything after `--` is an operand, including a path that begins with `-`.
             end_of_options = True
             continue
-        if token.startswith("-"):
-            # `--reason=x` and `-bname` carry their value inline and consume nothing.
-            if token in WORKTREE_ADD_VALUE_FLAGS:
-                skip_next = True
-            continue
-        return token
+        if not token.startswith("-") or token == "-":
+            return token
+        if token.startswith("--"):
+            name, sep, inline = token.partition("=")
+            if name in WORKTREE_ADD_BOOLEAN_LONG and not sep:
+                continue
+            if name in WORKTREE_ADD_VALUE_LONG:
+                expect_value = not sep      # `--reason=x` carries its own value
+                continue
+            return None                     # unknown long option: refuse to guess
+        # A short cluster: every letter is a flag until one takes a value, and the REST of
+        # the cluster is that value if anything follows it.
+        letters = token[1:]
+        for index, letter in enumerate(letters):
+            if letter in WORKTREE_ADD_BOOLEAN_SHORT:
+                continue
+            if letter in WORKTREE_ADD_VALUE_SHORT:
+                remainder = letters[index + 1:].lstrip("=")
+                expect_value = not remainder
+                break
+            return None                     # unknown short option: refuse to guess
     return None
 
 #: Families whose SECOND word decides whether anything is mutated at all.
@@ -3152,6 +3180,11 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
             if not has_flag(argv, *REF_DESTRUCTIVE_FLAGS):
                 return
         elif sub == "worktree" and second == "add":
+            # `-h` prints usage and writes nothing, so it is a read and returns before the
+            # destination is looked for — otherwise the allowlist refuses `git worktree
+            # add -h` for having no operand, which is a control wrongly refused.
+            if any(token in WORKTREE_ADD_HELP for token in rest):
+                return
             # Additive, but it writes a whole checkout, so it is judged by where.
             destination = worktree_add_destination(rest)
             findings.append(Finding("FILE_WRITE", "git worktree add",

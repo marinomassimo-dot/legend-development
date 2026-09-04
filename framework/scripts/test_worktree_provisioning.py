@@ -148,8 +148,17 @@ class TheDestinationSurvivesEveryArgumentORDER(unittest.TestCase):
     def tearDownClass(cls) -> None:
         cls._tmp.cleanup()
 
-    def decide_in_fixture(self, command: str) -> str:
-        outcome, _, _ = gp.classify(command, str(self.origin), None,
+    def decide_in_fixture(self, command: str, cwd: str = "/tmp") -> str:
+        """🔴 cwd defaults to OUTSIDE the fixture repo, and that is not incidental.
+
+        The first version ran these with cwd inside the repo, where a peer destination is
+        refused by `SHELL_WRITE_IN_ASSIGNED_WORKTREE` for an unrelated reason. So the suite
+        went green against the very code that shipped F2: `-b hijack <peer>` was denied,
+        but by the wrong rule, and the destination check it claimed to exercise was never
+        consulted. A test whose subject is masked by a stronger neighbouring rule is
+        measuring the neighbour.
+        """
+        outcome, _, _ = gp.classify(command, cwd, None,
                                     gp.DEFAULT_AUTHORITY, str(self.origin))
         return outcome
 
@@ -163,6 +172,15 @@ class TheDestinationSurvivesEveryArgumentORDER(unittest.TestCase):
             ("-B before it", f"git worktree add -B hijack {target}"),
             ("after --", f"git worktree add -- {target}"),
             ("flags both sides", f"git worktree add --detach -b h {target} HEAD"),
+            # 🔴 Grouped short flags. `-fb hijack` is `-f -b hijack` to git, confirmed
+            # against real git, and the second parser judged `hijack` as the destination
+            # and let a checkout land on a live peer. An option grammar is not a list of
+            # the spellings that occurred to me.
+            ("grouped -fb", f"git worktree add -fb hijack {target}"),
+            ("grouped -fB", f"git worktree add -fB hijack {target}"),
+            ("grouped -qb", f"git worktree add -qb hijack {target}"),
+            ("grouped inline -fbname", f"git worktree add -fbhijack {target}"),
+            ("short inline -bname", f"git worktree add -bhijack {target}"),
         ):
             with self.subTest(order=label):
                 self.assertNotEqual(gp.ALLOWED, self.decide_in_fixture(command),
@@ -173,7 +191,36 @@ class TheDestinationSurvivesEveryArgumentORDER(unittest.TestCase):
         for command in ("git worktree add /tmp/wt-ok -b b",
                         "git worktree add -b b /tmp/wt-ok",
                         "git worktree add --lock --reason r /tmp/wt-ok",
-                        "git worktree add -- /tmp/wt-ok"):
+                        "git worktree add --reason=r /tmp/wt-ok",
+                        "git worktree add -- /tmp/wt-ok",
+                        "git worktree add -fb b /tmp/wt-ok",
+                        "git worktree add -bb /tmp/wt-ok",
+                        # `--orphan` takes NO value: git derives the branch from the path's
+                        # basename. Listing it as value-taking swallowed the destination
+                        # and refused a legitimate scratch worktree — a control wrongly
+                        # refused is a defect in the same way a bypass is.
+                        "git worktree add --orphan /tmp/wt-ok",
+                        "git worktree add /tmp/wt-ok --orphan"):
+            with self.subTest(command=command):
+                self.assertEqual(gp.ALLOWED, self.decide_in_fixture(command))
+
+    def test_an_unknown_option_denies_rather_than_guessing_past_it(self) -> None:
+        """The failure direction, inverted after two parsers guessed wrong.
+
+        An option the allowlist does not know makes the parse return None, which becomes
+        UNNAMED and denies. A future git flag therefore costs a refusal until it is added,
+        which is the direction a guard should fail in.
+        """
+        for command in (f"git worktree add --brand-new-flag {self.peer}/new",
+                        f"git worktree add -Z {self.peer}/new",
+                        "git worktree add --brand-new-flag /tmp/wt-ok"):
+            with self.subTest(command=command):
+                self.assertNotEqual(gp.ALLOWED, self.decide_in_fixture(command))
+
+    def test_help_is_a_read_and_is_not_refused(self) -> None:
+        """`git worktree add -h` prints usage and writes nothing. The allowlist refuses it
+        for having no operand unless help is recognised first."""
+        for command in ("git worktree add -h", "git worktree add --help"):
             with self.subTest(command=command):
                 self.assertEqual(gp.ALLOWED, self.decide_in_fixture(command))
 
@@ -186,6 +233,13 @@ class TheDestinationSurvivesEveryArgumentORDER(unittest.TestCase):
             "add --reason=/decoy /p": "/p",
             "add -- /p": "/p",
             "add --detach -B b /p HEAD": "/p",
+            "add -fb decoy /p": "/p",
+            "add -fB decoy /p": "/p",
+            "add -qb decoy /p": "/p",
+            "add -fbdecoy /p": "/p",
+            "add -bdecoy /p": "/p",
+            "add --orphan /p": "/p",
+            "add /p --orphan": "/p",
         }
         for spelling, expected in cases.items():
             with self.subTest(spelling=spelling):
