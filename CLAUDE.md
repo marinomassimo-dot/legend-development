@@ -11,24 +11,25 @@ to canonical homes — the map of that migration is in
 ## 0 · Before anything else
 
 ```
-IF no valid runtime inventory / no ACTIVE ORCHESTRATOR_LEASE:
-    ENTER BOOTSTRAP_MODE. Read /BOOTSTRAP.md.
-    Do NOT assume Orchestrator authority merely because you are in root.
-IF a valid ACTIVE lease exists:
-    You are NOT Orchestrator. Operate as OBSERVER or ask the operator.
+Your ACTOR_ID is assigned by the operator — never inferred from your directory (AGENTS.md § 4).
+No lease gates your work: root and `main` are writable by every actor (LEGEND_CORE §21e).
+Work on a task branch in your worktree; land it on `main` yourself at task end; delete it.
+First run with no laboratory at all (no roles registered, no worktrees): read /BOOTSTRAP.md.
 ```
 
 Read [`framework/state/state_manifest_current.md`](framework/state/state_manifest_current.md)
 **first, every session**, and confirm `current_state: READY`.
 
 Then open, by name and before your first act,
-[§21c STOP POLICY](framework/instruction/LEGEND_CORE.md#21c-stop-policy) and
-[§21d DECISION AUTHORITY](framework/instruction/LEGEND_CORE.md#21d-decision-authority).
-They govern when you may **not** stop and what you may decide without the operator, so an
-actor who has not loaded them falls back to asking — which is the failure they exist to
-remove. This router names the two sections rather than the file alone because naming the
-file was not enough: on 2026-09-04 a session read this router end to end and reached
-neither, and it was the operator who noticed.
+[§21c STOP POLICY](framework/instruction/LEGEND_CORE.md#21c-stop-policy),
+[§21d DECISION AUTHORITY](framework/instruction/LEGEND_CORE.md#21d-decision-authority) and
+[§21e AGILE OPERATING MODE](framework/instruction/LEGEND_CORE.md#21e-agile-operating-mode).
+They govern when you may **not** stop, what you may decide without the operator, and how work
+moves from a worktree to `main` in hours — so an actor who has not loaded them falls back to
+asking or to waiting, which are the failures they exist to remove. This router names the
+sections rather than the file alone because naming the file was not enough: on 2026-09-04 a
+session read this router end to end and reached neither §21c nor §21d, and it was the
+operator who noticed.
 
 Three facts bind before you have finished reading anything else:
 

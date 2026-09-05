@@ -483,6 +483,105 @@ CONTEXT, not debate. Mirror sees only the diff; the Orchestrator sees only the v
 
 ---
 
+## 21e. AGILE OPERATING MODE
+
+> Provenance: `DEC-20260905-AGILE-HARNESS-MODE` · operator decision, dictated in session on
+> 2026-09-05 and landed on `main` at the operator's instruction. **Where this section and any
+> older text disagree — body §11, §12, §14, §30, §35.1, §47, §48; Annex D.1, D.3, D.4; Annex
+> H.1; a role contract; `BOOTSTRAP.md`; `parallel_legend_protocol.md` rules 1–2;
+> `legend_operating_convention_v1.md` § S.6.3 — this section prevails.** The older text is kept
+> for provenance and carries an amendment callout pointing here; it is not rewritten line by
+> line, because the operator asked for a working laboratory in hours, not a re-materialised
+> constitution.
+
+AGILE OPERATING MODE (HARD RULE, operator decision 2026-09-05)
+
+T0. A change that has been decided is made NOW — in the same session, in hours. There is
+one horizon and it is T0. T1 ("next session"), T2 ("next week", "next phase", "0B") and T3
+("next release", "next governance version") do not exist as places to put a decided change.
+"Declared debt", "carried forward", "queued", "PROPOSED — binding once Mirror hostile review
+passes" are not permitted resting states for an implementable change: implement it, or
+record in one line why it cannot be implemented at all.
+
+SURFACES. The root checkout and `main` are writable by every actor. There is no canonical
+batch surface reserved to one actor, no session-home / work-surface split, no "integrating
+session" with a monopoly on merging, and no ORCHESTRATOR_LEASE precondition for writing on
+`main`. A worktree is concurrency hygiene between simultaneously open chats; it is not a
+rank, and its branch is not a place to keep work.
+
+WORKTREE AND BRANCH LIFECYCLE. A worktree is a place to work during a task, never a place
+to keep work.
+  1. Task start — a task-scoped branch from `main`, in the actor's own worktree:
+        git switch -c task/<id> main
+     One task, one branch. A change that is finished when it is written may be committed
+     on `main` directly from the root checkout; a task that spans hours gets a branch.
+  2. Task end — the AUTHOR lands the branch on `main` the same day, from the root checkout
+     or from its worktree with `git -C <root>`:
+        git -C <root> merge --no-ff task/<id>     # or --ff-only when main has not moved
+        git branch -d task/<id>                    # safe delete: git refuses an unmerged branch
+     Landing needs no Mirror review, no INTEGRATION_CANDIDATE, no HUMAN_APPROVAL, no gate
+     0–5 and no lease. Its only preconditions are the ones the tooling already enforces:
+     `LINT` green when the four scientific current files changed; no release-regression
+     suite that was green before the change red after it when `framework/`, `governance/`,
+     `scripts/`, `roles/` or `.claude/` changed.
+  3. A worktree whose chat is closed and whose branches are landed is removed with
+     `git worktree remove <path>` (git refuses a dirty one). A persistent chat keeps its
+     worktree as a home and keeps it clean between tasks.
+  4. Rest state — nothing unmerged. A branch ahead of `main` for more than one day is a
+     finding against its author. `framework/scripts/branch_hygiene.py` lists them; Harness
+     Engineering runs it weekly and lands or retires what it lists. A branch may be retired
+     without landing only by its author or by the operator — deleting unique material is
+     reserved (§21d) — and only after its content is recorded as deliberately abandoned.
+  5. `codex/*` branches follow the same rule: task-scoped, landed by their author at task
+     end, deleted after landing. Codex is a runtime, not an actor (AGENTS.md § 4); the
+     ACTOR_ID it runs under owns the branch and lands it.
+
+GATES. For HARNESS changes — everything under `framework/`, `governance/`, `roles/`,
+`scripts/`, `.claude/`, `deployment/`, `BOOTSTRAP.md`, `CLAUDE.md`, `AGENTS.md`, the skills
+and the agents — there are no active gates: no Mirror precondition, no HUMAN_APPROVAL, no
+GATE 0–5, no MAJOR / ORDINARY classification. The implementer lands at T0 with the
+regression suites in the state item 2 requires. Mirror reviews ex post and on request; a
+Mirror finding is a new task, never a hold on a landed change.
+The SCIENTIFIC discipline is unchanged and is not a gate in this sense: the four current
+files still change only through `BATCH_COMMIT` under `LINT`, one batch at a time; read
+receipts, verbatim locators, the locator audit on a baseline reversal and BLOCK-1 still
+bind. That is method, not ceremony.
+
+RESERVED. §21d's RESERVED list stands unchanged: publication to any remote, history rewrite,
+irreversible deletion of unique material, external spend above the default, private-data
+exposure, and a change to this section, §21c or §21d. Nothing else is reserved. "A change to
+a fundamental guarantee" means exactly those items plus CLAUDE.md § 0's three binding
+facts; a guard rule, a gate, a role contract, a protocol, an annex or a skill is harness,
+and harness is T0.
+
+ROLES.
+  - HARNESS ENGINEERING — ACTOR_ID `plan`, formerly "Plan" (`roles/plan.md`). Owns the
+    harness and implements harness changes at T0, in hours, never weeks. It no longer
+    prepares INTEGRATION_CANDIDATEs for someone else to land: it lands. It triages the
+    Junior's weekly list every Monday — ADOPT (implement now), TRIAL, WATCH, REJECT with
+    one line — and runs the weekly branch-hygiene sweep.
+  - JUNIOR HARNESS ENGINEER — ACTOR_ID `junior-harness` (`roles/junior_harness.md`). Scouts
+    similar systems weekly — GitHub, Hugging Face, the Nature portfolio — and hands Harness
+    Engineering a candidate list every Monday (`governance/candidates/HARNESS-SCOUT-<YYYY>-W<WW>.md`,
+    skill `legend-harness-scout`). Proposes; does not gate; implements only what Harness
+    Engineering assigns, at T0.
+  - ORCHESTRATOR keeps task assignment, priority and adjudication (H.1). It works and
+    commits like every other actor, root and `main` included; it is no longer the sole
+    merger and holds no lease precondition for anything.
+  - MIRROR reviews ex post and on request. It is not a precondition for any landing.
+  - SCIENTISTS A / B / C land their own reading branches at task end.
+  - CODEX — same lifecycle under its assigned ACTOR_ID; no separate regime.
+
+GUARD. The Bash guard enforces this section, not the older regime: `git merge` (own
+checkout, or `git -C <root>` from a worktree), `git worktree add / remove / prune` and
+`git branch -d` are ordinary acts. Force in any spelling, `git clean`, history rewrite,
+every `git push`, blanket staging and shell writes into the repository stay refused — those
+protect peers' in-flight work and the public remotes, and §21d reserves them. A guard
+refusal of an act this section calls ordinary is a defect in the guard, repaired at T0 by
+Harness Engineering, never a reason to route around the guard.
+
+---
+
 ## 22. FINAL MAXIMS
 
 > Better a blocked commit than silent data loss

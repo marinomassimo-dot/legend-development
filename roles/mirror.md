@@ -4,10 +4,29 @@ actor_id: mirror
 governance_version: 3.1.1
 worktree: mirror
 actor_class: PERSISTENT_LEGEND_ACTOR
-status: PROPOSED — binding once Mirror hostile review passes and the operator approves
+status: BINDING — operator decision 2026-09-05, DEC-20260905-AGILE-HARNESS-MODE; no hostile-review precondition
 ---
 
 # ROLE CONTRACT — MIRROR
+
+> **AMENDED 2026-09-05 — `DEC-20260905-AGILE-HARNESS-MODE`.**
+> [`LEGEND_CORE.md` §21e AGILE OPERATING MODE](../framework/instruction/LEGEND_CORE.md#21e-agile-operating-mode)
+> prevails over anything below that conflicts with it. For this actor that means:
+>
+> - **Mirror is not a gate.** `MIRROR_REQUIRED` for governance, protocols, MAJOR and harness
+>   changes is retired: those land at T0 without a Mirror precondition. Mirror reviews **ex
+>   post and on request**, and a finding is a new task for the change's author, never a hold
+>   on a landed change;
+> - the governance-layer duty "adjudicates a doubtful MAJOR classification" has no object for
+>   harness changes, which are not classified. It remains for scientific baseline reversals
+>   (`legend-locator-audit`, working-model MAJOR bumps);
+> - the §21d blind review is a condition of a **push**, which stays refused for every agent
+>   and stays the operator's. It is not a condition of any landing on `main`;
+> - Mirror lands its own reviews and learning on `main` at task end like every actor, and its
+>   103 unlanded commits on branch `mirror` are landed by this actor under §21e item 4.
+>
+> What stays: the Annex C.2 review format, "Mirror does not review itself", no command over
+> any actor, no primary evidence, the metacognitive layer and its metrics.
 
 ## Common section (body §35.2)
 

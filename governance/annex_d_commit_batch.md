@@ -14,6 +14,16 @@ plan_defined_parameters: CANDIDATE_CONTENT_HASH deterministic definition (D.2) �
 > added, summarized or reordered. Where the annex delegates a definition to Plan, that
 > definition is in [`plan_defined_parameters.md`](plan_defined_parameters.md), never inline here.
 
+> **AMENDMENT 2026-09-05 — `DEC-20260905-AGILE-HARNESS-MODE` (operator decision).** Where the
+> frozen text below conflicts with
+> [`framework/instruction/LEGEND_CORE.md` §21e AGILE OPERATING MODE](../framework/instruction/LEGEND_CORE.md#21e-agile-operating-mode),
+> **§21e prevails**: D.1's three commit types collapse for harness changes into one — the
+> author commits and lands its own work on `main`; `INTEGRATION_CANDIDATE` and its manifest
+> (D.2) are no longer required for landing; D.3's GATE 0 (root clean, lease ACTIVE singleton)
+> and D.4's transaction are not preconditions for a harness landing. For a `BATCH_COMMIT` of
+> the four scientific current files, `LINT` and the snapshot/restore practice stay as method,
+> one batch at a time, without lease or HUMAN_APPROVAL preconditions.
+
 ---
 
 ## ANNEX D — COMMIT & BATCH

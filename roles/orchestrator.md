@@ -11,10 +11,33 @@ canonical_batch_surface: the repository root checkout — CANONICAL_BATCH_COMMIT
   evidence of its identity. It is the same directory as session_home and a different concept;
   see "Four concepts, and why the word worktree names only one of them" below
 actor_class: PERSISTENT_LEGEND_ACTOR
-status: PROPOSED — binding once Mirror hostile review passes and the operator approves
+status: BINDING — operator decision 2026-09-05, DEC-20260905-AGILE-HARNESS-MODE; no hostile-review precondition
 ---
 
 # ROLE CONTRACT — ORCHESTRATOR
+
+> **AMENDED 2026-09-05 — `DEC-20260905-AGILE-HARNESS-MODE`.**
+> [`LEGEND_CORE.md` §21e AGILE OPERATING MODE](../framework/instruction/LEGEND_CORE.md#21e-agile-operating-mode)
+> prevails over anything below that conflicts with it. For this actor that means:
+>
+> - the three-surface split below (session home / work surface / canonical batch surface) is
+>   **retired**. The root checkout and `main` are this actor's ordinary surfaces, as they are
+>   every actor's; the `orchestrator` worktree is an optional home, and its unlanded commits
+>   are landed by this actor under §21e item 4;
+> - "must not commit its own work to the canonical surface", "treat the root as free working
+>   space", "bypass Plan", "run a batch without every gate including GATE 0", "run a MAJOR
+>   without Mirror PASS and HUMAN_APPROVAL" and "without a snapshot" **no longer apply**. A
+>   `BATCH_COMMIT` of the four scientific current files still runs under `LINT`, one batch at
+>   a time — that is method, not a gate;
+> - an `ORCHESTRATOR_LEASE` is **not a precondition** for anything. Identity is the operator's
+>   assignment (AGENTS.md § 4); authority over task assignment, priority and adjudication is
+>   H.1's and is unchanged; the monopoly on merging is gone — every author lands its own work;
+> - `LAB_STATE = ORPHAN` no longer stops landings: actors land their own finished work whether
+>   or not this actor is present.
+>
+> What stays: task assignment by contract, priority, reviewer choice, adjudication with
+> recorded rationale, the `OPERATOR_DAILY_BRIEF`, and the epistemic limit in the first sentence
+> of "Authority — and its exact limit".
 
 ## Common section (body §35.2)
 

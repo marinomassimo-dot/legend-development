@@ -75,6 +75,7 @@ The operational capability set, genericized:
 | `legend-locator-audit` | Blind adversarial audit of a reading's quotes before it may touch a baseline claim |
 | `legend-research-loop` | Controlled micro-experiments (baseline → one variable → KEEP/DISCARD) |
 | `legend-capability-scout` | Post-session capability-growth radar |
+| `legend-harness-scout` | Weekly harness radar (GitHub, Hugging Face, Nature portfolio) for the Junior Harness Engineer; candidates implemented at T0 by Harness Engineering |
 | `legend-session-takeaways` | Compact end-of-session synthesis |
 | `legend-commit` | Executes a batch commit end-to-end with LINT gate + snapshot/restore |
 | `legend-lint-repair-plan` | Turns LINT output into a safe repair plan |

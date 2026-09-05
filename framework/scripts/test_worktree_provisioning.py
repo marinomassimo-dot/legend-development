@@ -1,21 +1,28 @@
 #!/usr/bin/env python3
-"""`git worktree add` is refused, and this suite exists to keep it refused ON PURPOSE.
+"""`git worktree add` is ALLOWED, `git worktree remove` is allowed without force, and the two
+spellings that can still destroy something are refused — on purpose, since 2026-09-05.
 
-§21d's operator decision of 2026-09-03 grants worktree provisioning to agents "once the
-guard false refusal is fixed (0B)". Four parsers were written to fix it. Three shipped live
-bypasses that put a checkout on a peer worktree — each found by blind review, none by this
-repository's own tests — and the fourth was reverted with no known bypass, because the
-instrument that was supposed to demonstrate its correctness could not fail on two axes.
+Until 2026-09-05 this suite kept provisioning REFUSED: four destination parsers had been
+written to judge `git worktree add` by where the checkout lands, three of them shipped live
+bypasses onto a peer worktree, and the fourth was reverted at `040dabb` because no instrument
+could be shown to fail against the known bypasses. `DEC-20260905-AGILE-HARNESS-MODE`
+(LEGEND_CORE §21e) made the destination question moot: provisioning one's own worktree is an
+ordinary agent act, and the guard judges it as what it is — an additive creation. Git refuses
+a destination that exists and is not empty, and refuses a branch checked out elsewhere, so no
+spelling of `add` overwrites a peer's checkout or its in-flight work.
 
-The full account is in `guard_policy.py` above `GIT_VERB_SUBCOMMANDS`; the reverted work is
-at `040dabb` and re-queued as TASK-GUARD52-A2.
+The historical bypass corpus is kept as DATA. Every one of those spellings is now simply
+ALLOWED, and the test says so rather than pretending the refusal was narrowed.
 
-So the assertion here is inverted from what it was. It is not "provisioning works"; it is
-"provisioning is refused, uniformly, and the refusal has not been quietly narrowed". A
-refusal is a fact worth guarding: three of the four parsers made it stop being one.
+What can still destroy something is `remove --force` (discards a dirty checkout) and `move`
+(relocates a directory that may be another chat's home). Both stay refused, in every spelling
+git accepts — bundled short flags and long-option abbreviations included, because the push
+battery already recorded thirteen one-character spelling bypasses of exactly that shape.
 """
 from __future__ import annotations
 
+import json
+import os
 import subprocess
 import sys
 import unittest
@@ -26,9 +33,8 @@ sys.path.insert(0, str(ROOT / "framework" / "scripts"))
 
 import guard_policy as gp  # noqa: E402
 
-# The three historical bypasses, each a spelling that reached a peer worktree at some
-# revision. They are kept as DATA rather than prose: TASK-GUARD52-A2 must show that any
-# future instrument fails against every one of them before a parser may land again.
+# The historical bypass spellings, each of which once placed a checkout on a peer worktree
+# past a destination parser. Kept as data: under §21e they are ordinary provisioning.
 HISTORICAL_BYPASSES = {
     "kept flag values (v1)": "git worktree add --lock --reason /tmp/ok {peer}",
     "grouped short flags (v2)": "git worktree add -fb hijack {peer}",
@@ -45,65 +51,111 @@ def decide(command: str, cwd: str = "/tmp") -> str:
     return outcome
 
 
-class ProvisioningIsRefusedAndStaysRefused(unittest.TestCase):
-    def test_every_historical_bypass_spelling_is_refused(self) -> None:
-        """None of these may be allowed while no parser judges destinations."""
+def hook(command: str, cwd: str = str(ROOT)) -> str:
+    """What the SHIPPED hook answers: `deny`, or `allow` when it says nothing."""
+    payload = json.dumps({"tool_name": "Bash", "cwd": cwd,
+                          "tool_input": {"command": command}})
+    env = {**os.environ, "LEGEND_ASSIGNED_WORKTREE": str(ROOT)}
+    env.pop("CLAUDE_PROJECT_DIR", None)
+    result = subprocess.run(
+        [sys.executable, str(ROOT / "scripts" / "guard_bash_command.py")],
+        input=payload, capture_output=True, text=True, env=env)
+    if not result.stdout.strip():
+        return "allow"
+    return json.loads(result.stdout)["hookSpecificOutput"]["permissionDecision"]
+
+
+class ProvisioningIsOrdinary(unittest.TestCase):
+    def test_every_historical_bypass_spelling_is_now_simply_allowed(self) -> None:
+        """DEC-20260905-AGILE-HARNESS-MODE. Not narrowed: allowed, because `add` cannot
+        overwrite anything git considers occupied."""
         for label, template in HISTORICAL_BYPASSES.items():
             with self.subTest(bypass=label):
-                self.assertNotEqual(gp.ALLOWED, decide(template.format(peer=PEER)))
+                self.assertEqual(gp.ALLOWED, decide(template.format(peer=PEER)))
 
-    def test_a_scratch_destination_is_refused_too(self) -> None:
-        """The honest cost of the revert, asserted so it is not forgotten.
-
-        A worktree in `/tmp` is harmless and is refused anyway, because the guard has no
-        way to tell one destination from another without the parser that was reverted.
-        This test failing means someone re-enabled provisioning; it should fail only in the
-        commit that lands TASK-GUARD52-A2 together with its instrument.
-        """
+    def test_the_landing_recipe_spellings_are_allowed(self) -> None:
         for command in ("git worktree add /tmp/wt-scratch -b throwaway",
                         "git worktree add -b throwaway /tmp/wt-scratch",
-                        "git worktree add --orphan /tmp/wt-scratch"):
+                        "git worktree add --orphan /tmp/wt-scratch",
+                        "git worktree add ../legend-junior -b task/scout main",
+                        "git worktree add --detach /tmp/base HEAD",
+                        "git worktree remove /tmp/wt-scratch",
+                        "git worktree remove ../legend-junior",
+                        "git worktree prune",
+                        "git worktree prune -v",
+                        "git worktree list",
+                        "git worktree list --porcelain",
+                        "git worktree lock /tmp/wt-scratch",
+                        "git worktree unlock /tmp/wt-scratch",
+                        "git worktree repair",
+                        "git worktree -h"):
+            with self.subTest(command=command):
+                self.assertEqual(gp.ALLOWED, decide(command))
+
+    def test_an_additive_verb_derives_no_effect_at_all(self) -> None:
+        """Nothing is overwritten, so there is nothing for `post_effect_verify` to match:
+        the authorised effect set is empty, and an empty set is the honest prediction."""
+        for command in ("git worktree add /tmp/x -b y", "git worktree remove /tmp/x",
+                        "git worktree prune"):
+            with self.subTest(command=command):
+                derived, _, parse_error = gp.effects(command, "/tmp", None, str(ROOT))
+                self.assertIsNone(parse_error)
+                self.assertEqual([], list(derived))
+
+    def test_provisioning_reaches_the_shipped_hook_as_allow(self) -> None:
+        self.assertEqual("allow", hook(f"git worktree add {PEER}-scratch -b h"))
+
+
+class WhatCanStillDestroyIsRefused(unittest.TestCase):
+    def test_forced_removal_is_refused_in_every_spelling(self) -> None:
+        for command in ("git worktree remove --force /tmp/wt",
+                        "git worktree remove -f /tmp/wt",
+                        "git worktree remove -fv /tmp/wt",
+                        "git worktree remove -vf /tmp/wt",
+                        "git worktree remove --forc /tmp/wt",
+                        "git worktree remove --fo /tmp/wt",
+                        "git worktree remove /tmp/wt --force",
+                        "git worktree remove --force --force /tmp/wt",
+                        f"git worktree remove --force {PEER}"):
             with self.subTest(command=command):
                 self.assertNotEqual(gp.ALLOWED, decide(command))
 
-    def test_the_parser_that_was_reverted_is_actually_gone(self) -> None:
-        """Not merely unreferenced. Unreachable-but-present code is how this started:
-        revision 9 left a `FILE_WRITE` branch that no input could reach, and it sat there
-        for three revisions being cited as the behaviour."""
+    def test_forced_removal_names_its_hazard(self) -> None:
+        """The denial must say what makes force dangerous, not only that it is refused."""
+        _, reason, _ = gp.classify("git worktree remove --force /tmp/wt", "/tmp", None,
+                                   gp.DEFAULT_AUTHORITY, str(ROOT))
+        self.assertIsNotNone(reason)
+        self.assertIn("worktree remove --force", reason)
+
+    def test_move_is_refused(self) -> None:
+        for command in ("git worktree move /tmp/a /tmp/b",
+                        f"git worktree move {PEER} /tmp/elsewhere"):
+            with self.subTest(command=command):
+                self.assertNotEqual(gp.ALLOWED, decide(command))
+
+    def test_the_refusal_reaches_the_shipped_hook(self) -> None:
+        self.assertEqual("deny", hook(f"git worktree remove --force {PEER}"))
+
+
+class TheDecisionIsRecordedWhereItWillBeRead(unittest.TestCase):
+    def test_the_policy_states_why_provisioning_is_ordinary(self) -> None:
+        """An actor whose `remove --force` is refused must find the rule at the rule, and an
+        actor reading the old refusal must find out that it is gone — both at the code."""
+        text = (ROOT / "framework" / "scripts" / "guard_policy.py").read_text(
+            encoding="utf-8")
+        self.assertIn("DEC-20260905-AGILE-HARNESS-MODE", text)
+        self.assertIn("DESTINATION PARSING IS MOOT", text)
+        self.assertIn("040dabb", text,
+                      "the reverted parser work must stay locatable, or it is lost rather "
+                      "than retired")
+
+    def test_no_destination_parser_came_back(self) -> None:
+        """A parser would judge a question §21e retired, and would reintroduce the bypass
+        surface that three of them shipped. Unreachable-but-present code is how the previous
+        regime started; absent is the only state this test accepts."""
         self.assertFalse(hasattr(gp, "parse_worktree_add"))
         self.assertFalse(hasattr(gp, "worktree_add_destination"))
         self.assertFalse(hasattr(gp, "WORKTREE_ADD_VALUE_SHORT"))
-
-    def test_reads_are_still_reads(self) -> None:
-        """The revert must not have taken `git worktree list` with it."""
-        self.assertEqual(gp.ALLOWED, decide("git worktree list"))
-
-    def test_the_refusal_reaches_the_shipped_hook_and_not_only_the_policy(self) -> None:
-        import json
-        import os
-        payload = json.dumps({"tool_name": "Bash", "cwd": str(ROOT),
-                              "tool_input": {"command": f"git worktree add {PEER} -b h"}})
-        env = {**os.environ, "LEGEND_ASSIGNED_WORKTREE": str(ROOT)}
-        env.pop("CLAUDE_PROJECT_DIR", None)
-        result = subprocess.run(
-            [sys.executable, str(ROOT / "scripts" / "guard_bash_command.py")],
-            input=payload, capture_output=True, text=True, env=env)
-        self.assertTrue(result.stdout.strip(), "the hook said nothing, which is allow")
-        self.assertEqual(
-            "deny", json.loads(result.stdout)["hookSpecificOutput"]["permissionDecision"])
-
-
-class TheRevertIsRecordedWhereItWillBeRead(unittest.TestCase):
-    def test_the_policy_states_why_provisioning_is_refused(self) -> None:
-        """An actor refused by this rule must find the reason at the rule, not in a commit
-        message it has no way to know exists."""
-        text = (ROOT / "framework" / "scripts" / "guard_policy.py").read_text(
-            encoding="utf-8")
-        self.assertIn("ATTEMPTED AND REVERTED", text)
-        self.assertIn("TASK-GUARD52-A2", text)
-        self.assertIn("040dabb", text,
-                      "the reverted work must be locatable, or it is lost rather than "
-                      "parked")
 
 
 if __name__ == "__main__":

@@ -20,6 +20,17 @@ design_records: governance/design_records/ — architectural provenance, NON nor
 > [`design_records/materialization_log.md`](design_records/materialization_log.md), so that this
 > file remains a faithful carrier of the frozen text and can be hashed as such.
 
+> **AMENDMENT 2026-09-05 — `DEC-20260905-AGILE-HARNESS-MODE` (operator decision).** The frozen
+> text below is preserved verbatim for provenance. Where it conflicts with
+> [`framework/instruction/LEGEND_CORE.md` §21e AGILE OPERATING MODE](../framework/instruction/LEGEND_CORE.md#21e-agile-operating-mode),
+> **§21e prevails** — in particular § 11 (`WORK_COMMIT` only on one's own branch;
+> `CANONICAL_BATCH_COMMIT` only by the Orchestrator, in root, under gates), § 12 (GATE 0–5 and
+> the lease), § 14 as applied to the root checkout, § 30 (Plan "mai su main/root"; Plan is now
+> Harness Engineering), § 35.1 (the Orchestrator fence), § 47 steps 8–11 and § 48's worktree
+> clause. The operator made this amendment directly, without gate 3: the amendment is the
+> decision that gate 3 no longer applies to harness changes. The scientific discipline is
+> untouched. Record: [`decisions/DEC-20260905-AGILE-HARNESS-MODE.md`](decisions/DEC-20260905-AGILE-HARNESS-MODE.md).
+
 ---
 
 # LEGEND — GOVERNANCE v3.1.1 — FROZEN

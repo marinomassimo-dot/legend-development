@@ -2636,10 +2636,13 @@ def carried_command(argv: Sequence[str], heredocs: Sequence[str],
 #: `git worktree remove` ALL allowed. Six of those were declared open debt; the other
 #: eight were not declared anywhere, which is the difference between a scope boundary
 #: and a hole.
+#: `merge` and `worktree` left this set on 2026-09-05: they are LANDING operations under
+#: LEGEND_CORE §21e and are derived by their own branches in `analyse_git`, as a COMMIT and
+#: as an additive provisioning act respectively. See `SAFE_DELETE_FLAGS` below.
 GIT_REF_SUBCOMMANDS = frozenset({
     "tag", "update-ref", "symbolic-ref", "branch", "notes", "stash", "reflog",
-    "rebase", "cherry-pick", "revert", "merge", "am", "filter-branch", "replace",
-    "worktree", "gc", "prune", "fast-import",
+    "rebase", "cherry-pick", "revert", "am", "filter-branch", "replace",
+    "gc", "prune", "fast-import",
 })
 GIT_NETWORK_SUBCOMMANDS = frozenset({"push", "send-pack", "send-email", "request-pull"})
 #: `git branch` / `git tag` flags that move or delete a ref that ALREADY EXISTS. Naming
@@ -2647,6 +2650,37 @@ GIT_NETWORK_SUBCOMMANDS = frozenset({"push", "send-pack", "send-email", "request
 REF_DESTRUCTIVE_FLAGS = ("-d", "-D", "--delete", "-m", "-M", "--move", "-c", "-C",
                          "--copy", "-f", "--force", "--set-upstream-to", "-u",
                          "--unset-upstream", "--edit-description")
+#: 🔴 LANDING OPERATIONS — ordinary since 2026-09-05 (`DEC-20260905-AGILE-HARNESS-MODE`,
+#: LEGEND_CORE §21e). Every author lands its own task branch on `main` and deletes it; a
+#: worktree is provisioned and removed by the chat that uses it. `git branch -d` is the
+#: SAFE delete — git refuses a branch not merged into HEAD — so it loses nothing; the
+#: force / move / copy / upstream flags still move or destroy a ref that exists.
+SAFE_DELETE_FLAGS = ("-d", "--delete")
+FORCE_OR_MOVE_FLAGS = tuple(f for f in REF_DESTRUCTIVE_FLAGS if f not in SAFE_DELETE_FLAGS)
+#: `git worktree` verbs that create, list or tidy without overwriting anything that exists:
+#: `add` refuses a non-empty destination and a branch checked out elsewhere; `prune` drops
+#: administrative entries whose directories are already gone; `""` is `git worktree -h`.
+WORKTREE_ADDITIVE_VERBS = frozenset({"", "list", "add", "prune", "lock", "unlock", "repair"})
+
+
+def has_flag_or_prefix(argv: Sequence[str], *names: str) -> bool:
+    """`has_flag`, plus git's long-option abbreviation: `--forc` IS `--force`.
+
+    Git accepts any unambiguous prefix of a long option, and a guard that matches long
+    options exactly has a spelling bypass one character wide — the push battery recorded
+    thirteen of them. A prefix that could name one of `names` counts as naming it: the
+    fail-closed direction, and the one git itself takes when the prefix is unambiguous.
+    """
+    if has_flag(argv, *names):
+        return True
+    longs = [n for n in names if n.startswith("--")]
+    for token in argv[1:]:
+        head = token.split("=", 1)[0]
+        if not head.startswith("--") or len(head) < 3:
+            continue
+        if any(option.startswith(head) for option in longs):
+            return True
+    return False
 #: 🔴 Families whose FIRST non-flag operand is a VERB and not a ref — revision 10.
 #:
 #: `git worktree add --detach /tmp/base <sha>` predicted three ref mutations, on `add`,
@@ -2655,62 +2689,21 @@ REF_DESTRUCTIVE_FLAGS = ("-d", "-D", "--delete", "-m", "-M", "--move", "-c", "-C
 #: place — a receipt has to name what was actually touched, and two of those three could
 #: never be observed, so an authorised call would report them MISSING forever.
 #:
-#: 🔴 REPAIRED 2026-09-04 (TASK-GUARD52-A). The `elif sub == "worktree" and second ==
-#: "add"` branch below was UNREACHABLE — `worktree` is a key of `GIT_SUB_READ`, so the
-#: outer `if` matched, the inner membership test failed, and the whole `elif` chain was
-#: skipped. Revision 12 recorded this and declined to change it: "the denial it produces
-#: is defensible on its own terms (a new worktree writes `.git/worktrees/<name>`, which
-#: § 4.7 confines), and changing it here would be a behaviour change nobody reviewed."
+#: 🔴 `git worktree add` — DESTINATION PARSING IS MOOT since 2026-09-05.
 #:
-#: Both halves of that sentence were checked before acting on it. The second is now
-#: satisfied: §21d requires a blind Mirror review for every push, so the change is
-#: reviewed. The FIRST is false as a description of the mechanism — measured, `git
-#: worktree add` was refused as `REF_MUTATION`, never as a common-dir write, and no
-#: `GIT_COMMON_DIR` finding was ever emitted for it. The confinement argument was a
-#: justification for the outcome, not an account of the control that produced it, and a
-#: comment that explains a refusal by naming a control that did not fire is the kind of
-#: prose §21d's own push callout has already been wrong in once.
-#:
-#: What the repair changes, measured against live peers rather than invented ones: the
-#: destination is now judged as a `FILE_WRITE` by WHERE it lands. A real peer worktree
-#: (`legend-codex-aqeilan`), the nested `.claude/worktrees/evidence-index`, and the
-#: relative spelling of the first are all still PROHIBITED, identically to `echo x >`
-#: aimed at the same three paths; `/tmp` is ALLOWED. §21d's operator decision of
-#: 2026-09-03 grants worktree provisioning to agents "once the guard false refusal is
-#: fixed (0B)", and this is that fix.
+#: Between 2026-09-04 and 2026-09-05 four destination parsers were written and reverted
+#: (`040dabb`, TASK-GUARD52-A / A2): each tried to judge `git worktree add` by WHERE the
+#: checkout lands, three shipped live bypasses onto a peer worktree, and the fourth was
+#: reverted because no instrument could be shown to fail against the known bypasses. The
+#: question they were answering no longer exists. Under `DEC-20260905-AGILE-HARNESS-MODE`
+#: (LEGEND_CORE §21e) provisioning a worktree is an ordinary agent act, and it is judged as
+#: what it IS — an additive creation: git refuses a destination that exists and is not
+#: empty, and refuses a branch that is checked out elsewhere, so no existing checkout and no
+#: in-flight work is overwritten by any spelling of `add`. Only `remove --force` (discards
+#: a dirty checkout) and `move` (relocates a directory that may be another chat's home)
+#: still derive a mutation. See the `worktree` branch in `analyse_git`.
 GIT_VERB_SUBCOMMANDS = frozenset({"worktree", "stash", "notes", "reflog", "replace",
                                   "submodule", "bisect", "remote"})
-
-#: 🔴 `git worktree add` DESTINATION PARSING — ATTEMPTED AND REVERTED, 2026-09-04.
-#:
-#: Four parsers were written to make the unreachable `FILE_WRITE` branch below reachable,
-#: so that provisioning could be judged by DESTINATION rather than refused wholesale. Three
-#: of them shipped live bypasses that placed a checkout on a peer worktree, each found by
-#: blind review and none by this repository's own tests:
-#:
-#:   1. kept flag VALUES            `--lock --reason /tmp/ok <peer>`  judged the decoy
-#:   2. unknown option shapes passed `-fb hijack <peer>`               judged the branch
-#:   3. `.lstrip("=")` on an attached value  `-B= <peer> main`         judged the commit-ish
-#:
-#: The fourth had no bypass anyone found, and it was reverted anyway. The reason is the
-#: instrument, not the parser. A differential oracle against real git was built after the
-#: second failure and claimed to retire enumeration; it did not catch the third, because
-#: its spellings were still hand-written. Generated from the option grammar, it still did
-#: not, because the operand grammar was hand-fixed. Generated over both, review then found
-#: a mutant surviving in the `-bf` family — excluded by a comment of mine asserting that
-#: the value-taking letter must come last, which is false of real git — and a whole `help`
-#: axis on which the oracle could not fail at all.
-#:
-#: Four dimensions, each discovered only after the previous one was closed. The parser may
-#: well be correct now; what is certain is that nothing here can demonstrate it, and a
-#: safety control whose test cannot fail on a known bypass is not evidence of anything.
-#: Reverting costs a documented refusal. Keeping it would have shipped a control that
-#: LOOKS like it judges destinations, which is worse than one that plainly refuses.
-#:
-#: The work is at `040dabb` and re-queued as TASK-GUARD52-A2. Its precondition is stated
-#: rather than left to judgement: before any parser lands, an instrument must be shown to
-#: FAIL against each of the three historical bypasses above, and a mutation battery over
-#: the parser must reach zero survivors. `git worktree add` stays refused until then.
 
 
 
@@ -3109,36 +3102,61 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
                                 "writes the bundle to the file it names"))
         return
 
+    if sub == "merge":
+        # 🔴 LANDING — ordinary since 2026-09-05 (DEC-20260905-AGILE-HARNESS-MODE, §21e).
+        # A merge creates a commit on, or fast-forwards, the CURRENT branch, and is
+        # additive: git refuses to start over conflicting uncommitted changes, and
+        # `--abort` returns the merger's own checkout to its pre-merge state. Derived as a
+        # COMMIT so the authority ladder decides WHERE it is allowed — the session's own
+        # checkout and, for `git -C <root> merge <branch>` from a worktree, the shared
+        # checkout (effect_model `_L3`, the one carve-out from confinement).
+        findings.append(Finding("COMMIT", "git merge", ["HEAD"],
+                                "lands a branch on the current branch — additive; git "
+                                "refuses over conflicting uncommitted changes"))
+        return
+
+    if sub == "worktree":
+        # The verb is the first operand — git parses `git worktree <verb> [<options>]` and
+        # rejects options before the verb — so a `-b <name>` value can never be read as one.
+        verb = rest[0] if rest and not rest[0].startswith("-") else ""
+        if verb in WORKTREE_ADDITIVE_VERBS:
+            return
+        if verb == "remove":
+            if has_flag_or_prefix(argv, "-f", "--force"):
+                findings.append(Finding("FILE_DELETE", "git worktree remove --force",
+                                        [UNNAMED],
+                                        "deletes a checkout that may hold uncommitted work"))
+                return
+            # Without force git refuses a dirty or locked worktree: nothing unlanded is lost.
+            return
+        findings.append(Finding("FILE_WRITE", f"git worktree {verb}", [UNNAMED],
+                                "relocates or rewrites a checkout that may be another "
+                                "chat's home"))
+        return
+
     if sub in GIT_REF_SUBCOMMANDS:
         named = [t for t in rest if not t.startswith("-")]
         second = named[0] if named else ""
 
-        # 🔴 A subcommand whose SECOND word decides. `git worktree list` and
-        # `git stash list` are reads, and the first draft of this rule denied both —
-        # `git worktree list` appears in this repository's own documented corpus, and
-        # `git branch --show-current` is in the pre-flight every actor is told to run.
-        # Classifying a family by its first word only is the same error as classifying
-        # a command by its first word only, one level down.
-        # 🔴 REVERTED 2026-09-04 to the chain form, which leaves `git worktree add`
-        # refused as a ref mutation. See the note above `GIT_VERB_SUBCOMMANDS`.
+        # 🔴 A subcommand whose SECOND word decides. `git stash list` is a read, and the
+        # first draft of this rule denied it. Classifying a family by its first word only
+        # is the same error as classifying a command by its first word only, one level
+        # down. (`git worktree` has its own branch above since 2026-09-05.)
         if sub in GIT_SUB_READ:
             if second in GIT_SUB_READ[sub]:
                 return
         elif sub in ("branch", "tag"):
             # Listing (`git branch`, `git tag -l`, `--show-current`) reads. Naming a new
             # ref CREATES one, which destroys nothing. Only the destructive flags move
-            # or remove a ref that already exists.
-            if not has_flag(argv, *REF_DESTRUCTIVE_FLAGS):
+            # or remove a ref that already exists — matched per letter and per long-option
+            # prefix, so `-df` and `--forc` are read as the force they are.
+            if not has_flag_or_prefix(argv, *REF_DESTRUCTIVE_FLAGS):
                 return
-        elif sub == "worktree" and second == "add":
-            # Additive, but it writes a whole checkout, so it is judged by where.
-            # UNREACHABLE, as it has been since revision 9 — see the note above
-            # `GIT_VERB_SUBCOMMANDS`. Left exactly as found rather than deleted, because
-            # the reverted work is queued to return and this is the branch it targets.
-            findings.append(Finding("FILE_WRITE", "git worktree add",
-                                    named[1:2] or [UNNAMED],
-                                    "writes a whole checkout into its destination"))
-            return
+            # 🔴 `git branch -d <merged>` is the SAFE delete — git refuses an unmerged
+            # branch — and is ordinary since 2026-09-05 (§21e: delete the branch you just
+            # landed). `-D`, force in any spelling, move, copy and upstream edits are not.
+            if sub == "branch" and not has_flag_or_prefix(argv, *FORCE_OR_MOVE_FLAGS):
+                return
 
         # 🔴 `git update-ref <ref> <newvalue> [<oldvalue>]` names ONE ref. Revision 9
         # took every non-flag operand, so `git update-ref refs/heads/x deadbeef`
@@ -3455,11 +3473,17 @@ DENY_UNPARSEABLE = (
 DENY_REF = (
     "A command that moves git refs or rewrites history is blocked.\n\n"
     "`git reset --hard`, `git checkout -- .`, `git clean`, `git branch -D`, "
-    "`git update-ref`, `git rebase` and `git stash` discard or relocate work that is not "
-    "yours to discard: other actors share this repository's object store and its stash "
-    "stack, and untracked files are exactly where their in-flight work lives.\n\n"
-    "This needs REF_WRITE authority, which no runtime, role or lease grants. Ask the "
-    "operator, or do the narrow thing: `git restore <path>` names what it touches."
+    "`git worktree remove --force`, `git update-ref`, `git rebase` and `git stash` "
+    "discard or relocate work that is not yours to discard: other actors share this "
+    "repository's object store and its stash stack, and untracked files are exactly "
+    "where their in-flight work lives.\n\n"
+    "Landing your own finished branch on `main` (`git merge`), creating or removing a "
+    "clean worktree (`git worktree add` / `remove`) and deleting a merged branch "
+    "(`git branch -d`) are ordinary acts under LEGEND_CORE §21e and are not what this "
+    "refusal is about. What stays blocked is force in any spelling, history rewrite and "
+    "discarding others' work. That needs REF_WRITE authority, which no runtime, role or "
+    "lease grants. Ask the operator, or do the narrow thing: `git restore <path>` names "
+    "what it touches."
 )
 
 DENY_NETWORK = (
@@ -3567,8 +3591,10 @@ DEFAULT_AUTHORITY = "SHELL_DEFAULT"
 DESTRUCTIVE_GIT = frozenset({
     "git reset --hard", "git clean", "git checkout", "git switch", "git restore",
     "git rebase", "git branch", "git update-ref", "git stash", "git notes",
-    "git worktree", "git tag", "git reflog", "git cherry-pick", "git revert",
-    "git merge", "git am", "git filter-branch", "git replace", "git gc", "git prune",
+    "git worktree", "git worktree remove --force", "git tag", "git reflog",
+    "git cherry-pick", "git revert", "git am", "git filter-branch", "git replace",
+    "git gc", "git prune",
+    # `git merge` left this set on 2026-09-05: it is a COMMIT (landing), §21e.
 })
 
 _SCOPE = {

@@ -9,11 +9,29 @@ actor_id_status:
 governance_version: 3.1.1
 worktrees: {scientist-a: lettore, scientist-b: lettore-b, scientist-c: lettore-c}
 actor_class: PERSISTENT_LEGEND_ACTOR
-status: PROPOSED — binding once Mirror hostile review passes and the operator approves
+status: BINDING — operator decision 2026-09-05, DEC-20260905-AGILE-HARNESS-MODE; no hostile-review precondition
 note: ONE contract shared by all three scientists — see "Why one file" below
 ---
 
 # ROLE CONTRACT — SCIENTIST (A / B / C)
+
+> **AMENDED 2026-09-05 — `DEC-20260905-AGILE-HARNESS-MODE`.**
+> [`LEGEND_CORE.md` §21e AGILE OPERATING MODE](../framework/instruction/LEGEND_CORE.md#21e-agile-operating-mode)
+> prevails over anything below that conflicts with it. For these actors that means:
+>
+> - a reading is a task; it gets a task-scoped branch in the actor's worktree, and **the actor
+>   lands it on `main` at task end** (`git -C <root> merge --no-ff task/<id>`, then
+>   `git branch -d`). No integrating session, no INTEGRATION_CANDIDATE, no Mirror precondition.
+>   The unlanded commits on `lettore`, `lettore-b` and `lettore-c` are landed by their authors
+>   under §21e item 4;
+> - the root checkout and `main` are writable by these actors too. The "worktree confinement"
+>   capability below is re-read: a WRITE into a **peer's** worktree is still refused by the
+>   guard; landing on the shared checkout's `main` is ordinary;
+> - the evidence-locality rule stands unchanged — evidentiary artefacts go in the shared
+>   checkout's `files/`, and the validation that counts is the one re-run there.
+>
+> What stays: everything scientific — epistemic independence, parity of sources, verbatim
+> locators, read receipts, reading modes, peer review discipline.
 
 ## Why one file and not three
 

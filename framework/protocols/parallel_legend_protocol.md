@@ -373,10 +373,16 @@ index, one working tree — and it broke four times in two days, three different
 
 Nothing was lost, and that is luck rather than design. The binding rules:
 
-1. **Every actor works in its own `git worktree`, on its own branch.** Not a convention — the
-   shared checkout is what makes the other three failures possible.
-2. **Only the integrating session merges to `main`**, and only from the shared checkout. Other
-   actors publish by pushing their branch, never by checking `main` out.
+1. **Every simultaneously open chat works in its own `git worktree`, on a task-scoped branch.**
+   Not a convention — the shared checkout is what makes the other three failures possible
+   when two sessions share it *at the same time*. The worktree is concurrency hygiene, not a
+   rank, and not a place to keep work.
+2. **The author lands its own branch on `main` at task end** — from the root checkout, or
+   from its worktree with `git -C <root> merge --no-ff task/<id>`, then `git branch -d`.
+   There is no integrating session and no monopoly on merging; nothing stays unmerged at
+   rest. Rule and recipe: [`LEGEND_CORE.md` §21e](../instruction/LEGEND_CORE.md#21e-agile-operating-mode)
+   (operator decision 2026-09-05, `DEC-20260905-AGILE-HARNESS-MODE`), which replaced the
+   earlier "only the integrating session merges to `main`".
 3. **Never commit, revert or stage a file another actor is holding** unless that actor has
    declared it finished. If you do it anyway because the work would otherwise be lost, say so in
    the commit message and name the author.

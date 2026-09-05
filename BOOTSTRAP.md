@@ -1,11 +1,28 @@
 ---
 artifact: LEGEND — first-run bootstrap
 governance_version: 3.1.1
-status: PROPOSED — binding once Mirror hostile review passes and the operator approves
-authority: Annex I.1, I.2, I.6; body §0.1–0.4, §38, §47
+status: BINDING — operator decision 2026-09-05, DEC-20260905-AGILE-HARNESS-MODE; amended by LEGEND_CORE §21e
+authority: Annex I.1, I.2, I.6; body §0.1–0.4, §38, §47; LEGEND_CORE §21e
 ---
 
 # BOOTSTRAP — start here
+
+> **AMENDED 2026-09-05 — `DEC-20260905-AGILE-HARNESS-MODE`.** This file describes the first
+> run of the laboratory. Since that decision,
+> [`LEGEND_CORE.md` §21e AGILE OPERATING MODE](framework/instruction/LEGEND_CORE.md#21e-agile-operating-mode)
+> prevails where the procedure below conflicts with it:
+>
+> - the **worktrees are homes for simultaneously open chats**, one per chat, on task-scoped
+>   branches; the count is however many chats are open, and a Junior Harness Engineer gets
+>   one when its chat opens (`junior-harness`);
+> - **the `ORCHESTRATOR_LEASE` is not a precondition** for writing on `main` or for landing
+>   work; steps 8–11 (L2 smoke, lease, provisioning of a separate Orchestrator work surface)
+>   are optional qualification, not gates. Identity is still the operator's assignment;
+> - **root and `main` are writable by every actor**; every author lands its own branch on
+>   `main` at task end and deletes it;
+> - the stop condition "delete a worktree that has not been surveyed or that holds
+>   unintegrated content" stands **as written**: it forbids destroying unlanded work, not
+>   removing one's own clean, landed worktree.
 
 You are reading this because a chat opened in this repository and found no laboratory running.
 This file tells you what to do. **It assumes you know nothing about LEGEND**, and if at any point

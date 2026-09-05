@@ -1,6 +1,6 @@
 # Skills & agents — what this system can actually do
 
-The reasoning power of LEGEND does not live in one big prompt. It lives in **21 composable skills** and **5 reusable subagents** that call each other in a defined order, each with its own gate, its own output contract and — where it exists — its own runnable code.
+The reasoning power of LEGEND does not live in one big prompt. It lives in **22 composable skills** and **5 reusable subagents** that call each other in a defined order, each with its own gate, its own output contract and — where it exists — its own runnable code.
 
 This page is the catalogue. It exists because a skill is only useful if you can find it.
 
@@ -61,6 +61,7 @@ The dotted arrow is the point of the whole system: a batch does not only add kno
 | [`legend-start`](.claude/skills/legend-start/SKILL.md) | Session boot: loads the state manifest and the 4 current files, runs the structural LINT, declares `READY` or `BLOCK`. | SPECIFIED |
 | [`legend-session-takeaways`](.claude/skills/legend-session-takeaways/SKILL.md) | Mandatory close: what the session *learned*, not what files changed. Compact, tabular, with epistemic tags. | SPECIFIED |
 | [`legend-capability-scout`](.claude/skills/legend-capability-scout/SKILL.md) | The evolutionary radar. Every session must leave at least one proportional micro-upgrade of capability. This is the engine behind the compounding claim. | SPECIFIED |
+| [`legend-harness-scout`](.claude/skills/legend-harness-scout/SKILL.md) | The weekly harness radar of the Junior Harness Engineer. Mines GitHub, Hugging Face and the Nature portfolio for systems similar to LEGEND, and hands Harness Engineering a candidate table with integration cost in hours and a proposed ADOPT / TRIAL / WATCH / REJECT verdict — implemented at T0, with no Mirror gate (LEGEND_CORE §21e). | SPECIFIED |
 
 ## 2 — Intake and triage
 

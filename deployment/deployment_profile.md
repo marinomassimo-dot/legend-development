@@ -1,11 +1,18 @@
 ---
 artifact: LEGEND — deployment profile
 governance_version: 3.1.1
-status: PROPOSED — binding once Mirror hostile review passes and the operator approves
-authority: Annex I.5, I.1; body §34
+status: BINDING — operator decision 2026-09-05, DEC-20260905-AGILE-HARNESS-MODE; amended by LEGEND_CORE §21e
+authority: Annex I.5, I.1; body §34; LEGEND_CORE §21e
 ---
 
 # DEPLOYMENT PROFILE
+
+> **AMENDED 2026-09-05 — `DEC-20260905-AGILE-HARNESS-MODE`.** The two-column location table
+> below is kept for provenance. Since
+> [`LEGEND_CORE.md` §21e](framework/instruction/LEGEND_CORE.md#21e-agile-operating-mode), every
+> actor's session home is also its work surface, root and `main` are every actor's surfaces, the
+> `orchestrator` worktree is optional, and a `junior-harness` worktree exists when that chat is
+> open. Provisioning and clean removal of one's own worktree are ordinary agent acts.
 
 Annex I.5 splits a running laboratory into two halves, and the split is what makes it portable:
 

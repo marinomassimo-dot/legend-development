@@ -12,7 +12,7 @@ describing it exists. The vocabulary — **BUNDLED**, **IMPLEMENTED**,
 
 ## 1. What can you actually do?
 
-LEGEND is not a chatbot with a bibliography attached. It is **21 composable
+LEGEND is not a chatbot with a bibliography attached. It is **22 composable
 skills** and **5 subagents** operating over a set of versioned Markdown state
 files, with gates between the stages. Five families:
 

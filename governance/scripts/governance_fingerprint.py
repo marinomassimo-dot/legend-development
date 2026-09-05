@@ -30,6 +30,8 @@ ROLE_CONTRACT = {
     "mirror": "roles/mirror.md",
     "orchestrator": "roles/orchestrator.md",
     "scientist": "roles/scientist.md",
+    # Junior Harness Engineer — DEC-20260905-AGILE-HARNESS-MODE, LEGEND_CORE §21e.
+    "junior-harness": "roles/junior_harness.md",
 }
 
 

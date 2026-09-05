@@ -240,13 +240,33 @@ class NoAuthorityReachesAcrossTheRepository(unittest.TestCase):
                           "authority grants it, which is a different denial message")
 
     def test_no_authority_grants_any_mutation_across_the_repository(self):
+        # DEC-20260905-AGILE-HARNESS-MODE (LEGEND_CORE §21e): the ONE pair that does reach
+        # across is `(COMMIT, SHARED_CHECKOUT)` — a worktree session landing its finished
+        # branch on `main` with `git -C <root> merge`. It is named in
+        # `em.UNGRANTED_EXCEPTIONS`, asserted on its own in `test_effect_model.py`, and
+        # skipped here so that every OTHER pair keeps the property this test exists for.
         for name, authority in em.AUTHORITIES.items():
             for kind in em.MUTATING:
                 for scope in em.CONFINED:
+                    if (kind, scope) in em.UNGRANTED_EXCEPTIONS:
+                        continue
                     with self.subTest(authority=name, kind=kind, scope=scope):
                         self.assertFalse(
                             authority.permits(kind, scope),
                             f"{name} grants {kind} at {scope}; no rung may reach across")
+
+    def test_the_landing_merge_is_the_only_thing_that_reaches_across(self):
+        """The carve-out, pinned from this suite's side too: a worktree session may land on
+        the shared checkout's `main` and may not stage, write, delete or reset there."""
+        self.assertEqual(frozenset({(em.COMMIT, em.SHARED_CHECKOUT)}), em.UNGRANTED_EXCEPTIONS)
+        shell = em.AUTHORITIES["SHELL_DEFAULT"]
+        self.assertTrue(shell.permits(em.COMMIT, em.SHARED_CHECKOUT))
+        for kind in (em.STAGE, em.WRITE, em.DELETE, em.RENAME, em.REF_MUTATION):
+            with self.subTest(kind=kind):
+                self.assertFalse(shell.permits(kind, em.SHARED_CHECKOUT))
+        for scope in (em.PEER_WORKTREE, em.GIT_COMMON_DIR):
+            with self.subTest(scope=scope):
+                self.assertFalse(shell.permits(em.COMMIT, scope))
 
     def test_reading_across_the_repository_is_granted_everywhere(self):
         for name, authority in em.AUTHORITIES.items():

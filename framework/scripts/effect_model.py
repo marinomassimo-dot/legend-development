@@ -156,6 +156,13 @@ CONFINED: FrozenSet[str] = frozenset({PEER_WORKTREE, SHARED_CHECKOUT, GIT_COMMON
 #: grantable.
 UNGRANTED: FrozenSet[str] = CONFINED | frozenset({RUNTIME_CONFIG})
 
+#: 🔴 The (kind, scope) pairs that ARE granted inside an UNGRANTED scope — exactly one, and
+#: named here so that a second one has to be added deliberately. `(COMMIT, SHARED_CHECKOUT)`
+#: is the landing merge of `DEC-20260905-AGILE-HARNESS-MODE` (LEGEND_CORE §21e): a worktree
+#: session runs `git -C <root> merge <its-branch>` to land finished work on `main`. The
+#: suite quantifies over `MUTATING × UNGRANTED` minus this set.
+UNGRANTED_EXCEPTIONS: FrozenSet[Tuple[str, str]] = frozenset({(COMMIT, SHARED_CHECKOUT)})
+
 #: Scopes in which a mutating effect can be reviewed, because a reader of the command
 #: can say what it touched. The complement is refused by every authority.
 #:
@@ -342,7 +349,15 @@ _L1 = {READ: _EVERYWHERE}
 # added them — a guard that blocks ordinary work gets turned off, and this was ordinary.
 _L2 = {kind: {SCRATCH, OUTSIDE_REPO} for kind in _CONTENT}
 _L2[PERMISSION_CHANGE] = {SCRATCH, OUTSIDE_REPO}
-_L3 = {STAGE: {INSIDE_REPO}, COMMIT: {INSIDE_REPO}}
+# 🔴 COMMIT is granted on the SHARED checkout as well — the one carve-out from the
+# confinement asserted below, made by the operator on 2026-09-05
+# (DEC-20260905-AGILE-HARNESS-MODE, LEGEND_CORE §21e): a worktree session lands its
+# finished branch on `main` with `git -C <root> merge <branch>`, which is a COMMIT whose
+# HEAD is the root's. Nothing else crosses: STAGE, WRITE, DELETE, RENAME and REF_MUTATION
+# at SHARED_CHECKOUT stay ungranted, so a worktree session still cannot stage, edit or
+# reset the root's working tree. `UNGRANTED_EXCEPTIONS` names the pair; the suite
+# quantifies over everything else.
+_L3 = {STAGE: {INSIDE_REPO}, COMMIT: {INSIDE_REPO, SHARED_CHECKOUT}}
 _L4 = {kind: {INSIDE_REPO} for kind in _CONTENT}
 _L5 = {REF_MUTATION: {INSIDE_REPO}, PERMISSION_CHANGE: {INSIDE_REPO}}
 _L6 = {NETWORK_WRITE: {NONLOCAL}, REF_MUTATION: {NONLOCAL}}
@@ -350,9 +365,10 @@ _L6 = {NETWORK_WRITE: {NONLOCAL}, REF_MUTATION: {NONLOCAL}}
 #: 🔴 No authority in this table grants UNKNOWN_EFFECT or DELEGATE, none grants any kind
 #: at UNNAMED or UNDERIVABLE scope, and none grants any MUTATING kind at any scope in
 #: `UNGRANTED` — PEER_WORKTREE, SHARED_CHECKOUT, GIT_COMMON_DIR and, from revision 10,
-#: RUNTIME_CONFIG. All four are asserted over the table by
-#: `test_effect_model.py` rather than trusted to review: a seventh authority added
-#: later inherits the properties or fails the suite.
+#: RUNTIME_CONFIG — with exactly the pairs in `UNGRANTED_EXCEPTIONS` excepted (one pair,
+#: `(COMMIT, SHARED_CHECKOUT)`, the landing merge of 2026-09-05). All of it is asserted
+#: over the table by `test_effect_model.py` rather than trusted to review: a seventh
+#: authority added later inherits the properties or fails the suite.
 #:
 #: DELEGATE and the confined scopes are absent by OMISSION, not by an exclusion rule,
 #: and that is worth naming because the two fail differently. An exclusion checked

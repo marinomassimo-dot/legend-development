@@ -333,9 +333,12 @@ completed work (A.3, A.7, body § 36.3).
 **S.6.2 — Nobody commits, edits, repairs, relocates or deletes another session's artifact.** Report
 it. `git add -A` is the mechanism; a named path is the remedy.
 
-**S.6.3 — Held as HAZARD, not authority:** `checkout · switch · reset · clean · stash · stash pop ·
-add -A / add . · branch change · git rm · worktree remove/prune`. A prune sweep is destruction
-wearing a maintenance hat.
+**S.6.3 — Held as HAZARD, not authority:** `checkout <existing> · switch <existing> · reset ·
+clean · stash · stash pop · add -A / add . · git rm · worktree remove --force · a prune or
+removal sweep over worktrees that are not yours`. A prune sweep is destruction wearing a
+maintenance hat. **Ordinary, not hazard, since 2026-09-05** (`LEGEND_CORE.md` §21e): creating
+a task branch, landing one's own branch on `main` with `git merge`, `git branch -d` of a merged
+branch, `git worktree add`, and `git worktree remove` of one's own clean worktree.
 
 **S.6.4 — 🔴 The stash stack is REPOSITORY-GLOBAL, and an entry's seat is not its owner.**
 

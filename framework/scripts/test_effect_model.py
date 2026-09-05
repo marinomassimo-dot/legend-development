@@ -124,8 +124,31 @@ class UnknownEffectIsDeniedByEveryAuthority(unittest.TestCase):
         for name, grant in em.AUTHORITIES.items():
             for kind in sorted(em.MUTATING):
                 for scope in sorted(em.UNGRANTED):
+                    if (kind, scope) in em.UNGRANTED_EXCEPTIONS:
+                        continue  # asserted on its own, below
                     with self.subTest(authority=name, kind=kind, scope=scope):
                         self.assertFalse(grant.permits(kind, scope))
+
+    def test_the_landing_carve_out_is_exactly_one_pair_on_the_shell_rung(self) -> None:
+        """🔴 DEC-20260905-AGILE-HARNESS-MODE (LEGEND_CORE §21e). `git -C <root> merge
+        <branch>` from a worktree is a COMMIT on the SHARED checkout, and it is granted from
+        SHELL_DEFAULT upward and nowhere below. It is the ONLY mutation any authority grants
+        in an UNGRANTED scope; the property test above skips exactly this set, so a second
+        carve-out has to be written into `UNGRANTED_EXCEPTIONS` deliberately and shows up
+        here as a changed equality."""
+        self.assertEqual(em.UNGRANTED_EXCEPTIONS,
+                         frozenset({(em.COMMIT, em.SHARED_CHECKOUT)}))
+        for name in ("READ_ONLY", "SCRATCH_WRITE"):
+            with self.subTest(authority=name):
+                self.assertFalse(em.AUTHORITIES[name].permits(em.COMMIT, em.SHARED_CHECKOUT))
+        for name in ("SHELL_DEFAULT", "WORKTREE_WRITE", "REF_WRITE", "PUBLISH"):
+            with self.subTest(authority=name):
+                self.assertTrue(em.AUTHORITIES[name].permits(em.COMMIT, em.SHARED_CHECKOUT))
+        # And nothing else crosses into the shared checkout at the shell rung.
+        shell = em.AUTHORITIES["SHELL_DEFAULT"]
+        for kind in sorted(em.MUTATING - {em.COMMIT}):
+            with self.subTest(kind=kind):
+                self.assertFalse(shell.permits(kind, em.SHARED_CHECKOUT))
 
     def test_reading_is_granted_in_every_ungranted_scope(self) -> None:
         """🔴 The other direction. A read confinement on the runtime configuration would

@@ -73,6 +73,9 @@ ALWAYS_LOADED = ("CLAUDE.md", "AGENTS.md")
 SECTIONS = (
     ("## 21c. STOP POLICY", "21c-stop-policy"),
     ("## 21d. DECISION AUTHORITY", "21d-decision-authority"),
+    # DEC-20260905-AGILE-HARNESS-MODE: the agile mode binds before the first act too — an
+    # actor that has not loaded it falls back to waiting for an integrator that no longer exists.
+    ("## 21e. AGILE OPERATING MODE", "21e-agile-operating-mode"),
 )
 
 # `CLAUDE.md` §0 runs from its heading to the next `## `. Scoping the assertion to it is

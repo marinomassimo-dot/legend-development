@@ -104,6 +104,7 @@ CORE = GOVERNANCE_v3.1.1.md
 | `plan` | Annex D, Annex E, Annex I, Annex J § J.1 |
 | `mirror` | Annex C, Annex E, Annex F, Annex G, Annex J § J.1 |
 | `orchestrator` | Annex C, Annex D, Annex F, Annex G, Annex I, Annex J § J.1, Annex J § J.4 |
+| `junior-harness` | Annex D, Annex E, Annex I |
 
 **Annex J is deliberately split rather than hashed whole.** A.6's own worked example of a
 change that must *not* invalidate anything is *"un cambio alla COST_POLICY mentre uno Scientist

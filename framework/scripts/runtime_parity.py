@@ -110,6 +110,8 @@ ROLE_CONTRACTS = {
     "plan": Path("roles/plan.md"),
     "mirror": Path("roles/mirror.md"),
     "scientist": Path("roles/scientist.md"),
+    # Junior Harness Engineer — DEC-20260905-AGILE-HARNESS-MODE, LEGEND_CORE §21e.
+    "junior-harness": Path("roles/junior_harness.md"),
 }
 
 # One mandatory bootstrap skill, one scientific skill, one governance/review skill.
