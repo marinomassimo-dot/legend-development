@@ -109,6 +109,7 @@ RULE_EFFECT = {
     "ARCHIVE_EXTRACT": em.ARCHIVE_EXTRACT,
     "PERMISSION_CHANGE": em.PERMISSION_CHANGE,
     "REF_MUTATION": em.REF_MUTATION,
+    "DETACH_CURRENT_HEAD": em.REF_MUTATION,
     "NETWORK_WRITE": em.NETWORK_WRITE,
     "DELEGATE": em.DELEGATE,
     # Shapes whose effect is precisely what could not be derived.
@@ -2658,9 +2659,41 @@ REF_DESTRUCTIVE_FLAGS = ("-d", "-D", "--delete", "-m", "-M", "--move", "-c", "-C
 SAFE_DELETE_FLAGS = ("-d", "--delete")
 FORCE_OR_MOVE_FLAGS = tuple(f for f in REF_DESTRUCTIVE_FLAGS if f not in SAFE_DELETE_FLAGS)
 #: `git worktree` verbs that create, list or tidy without overwriting anything that exists:
-#: `add` refuses a non-empty destination and a branch checked out elsewhere; `prune` drops
+#: ordinary `add` refuses a non-empty destination and a branch checked out elsewhere;
+#: force/reset options are rejected before this allowlist. `prune` drops
 #: administrative entries whose directories are already gone; `""` is `git worktree -h`.
 WORKTREE_ADDITIVE_VERBS = frozenset({"", "list", "add", "prune", "lock", "unlock", "repair"})
+
+
+def unsafe_git_creation(options: Sequence[str], branch_options: str = "b",
+                        reset_options: str = "B") -> bool:
+    """Inspect option semantics, without parsing or authorising a destination.
+
+    -bf creates branch 'f'; -fb forces creation. An option value is not a flag.
+    """
+    skip_value = False
+    for token in options:
+        if skip_value:
+            skip_value = False
+            continue
+        if token == "--":
+            break
+        if token.startswith("--"):
+            flag = token.split("=", 1)[0]
+            if len(flag) > 2 and any(name.startswith(flag) for name in
+                                    ("--force", "--force-create", "--discard-changes",
+                                     "--ignore-other-worktrees")):
+                return True
+            if len(flag) > 2 and "--reason".startswith(flag) and "=" not in token:
+                skip_value = True
+        elif token.startswith("-"):
+            for index, letter in enumerate(token[1:], 1):
+                if letter in "f" + reset_options:
+                    return True
+                if letter in branch_options:
+                    skip_value = index == len(token) - 1
+                    break
+    return False
 
 
 def has_flag_or_prefix(argv: Sequence[str], *names: str) -> bool:
@@ -2698,10 +2731,9 @@ def has_flag_or_prefix(argv: Sequence[str], *names: str) -> bool:
 #: question they were answering no longer exists. Under `DEC-20260905-AGILE-HARNESS-MODE`
 #: (LEGEND_CORE §21e) provisioning a worktree is an ordinary agent act, and it is judged as
 #: what it IS — an additive creation: git refuses a destination that exists and is not
-#: empty, and refuses a branch that is checked out elsewhere, so no existing checkout and no
-#: in-flight work is overwritten by any spelling of `add`. Only `remove --force` (discards
-#: a dirty checkout) and `move` (relocates a directory that may be another chat's home)
-#: still derive a mutation. See the `worktree` branch in `analyse_git`.
+#: empty. This holds only WITHOUT force/reset: `add -B` can reset an existing branch and
+#: `add --force` bypasses branch isolation. Those options, `remove --force` and `move`
+#: still derive prohibited mutations. See the `worktree` branch in `analyse_git`.
 GIT_VERB_SUBCOMMANDS = frozenset({"worktree", "stash", "notes", "reflog", "replace",
                                   "submodule", "bisect", "remote"})
 
@@ -2977,6 +3009,10 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
         return
 
     if sub in ("restore", "checkout", "switch"):
+        if sub == "switch" and rest == ["--detach", "HEAD"]:
+            findings.append(Finding("DETACH_CURRENT_HEAD", "git switch --detach HEAD",
+                                    ["HEAD"], "releases the current branch without moving it"))
+            return
         paths = [t for t in rest if not t.startswith("-")]
         if "--" in rest:
             paths = rest[rest.index("--") + 1:]
@@ -2992,7 +3028,8 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
             # name for it is not REF_MUTATION either — it rewrites every file in the
             # working tree that differs between the two commits, and the command names
             # none of them.
-            if has_flag(argv, "-b", "-B", "-c", "-C", "--orphan"):
+            if (has_flag(argv, "-b", "-c", "--orphan")
+                    and not unsafe_git_creation(rest, "bc", "BC")):
                 return
             findings.append(Finding("FILE_WRITE", f"git {sub}", [UNNAMED],
                                     "rewrites every working-tree file that differs "
@@ -3119,6 +3156,10 @@ def analyse_git(sub: str, rest: List[str], heredocs: List[str],
         # The verb is the first operand — git parses `git worktree <verb> [<options>]` and
         # rejects options before the verb — so a `-b <name>` value can never be read as one.
         verb = rest[0] if rest and not rest[0].startswith("-") else ""
+        if verb == "add" and unsafe_git_creation(rest[1:]):
+            findings.append(Finding("REF_MUTATION", "git worktree add --force/-B",
+                                    ["HEAD"], "may reset an existing branch or bypass isolation"))
+            return
         if verb in WORKTREE_ADDITIVE_VERBS:
             return
         if verb == "remove":
@@ -3638,6 +3679,11 @@ def effects(command: object, cwd: Optional[str] = None,
         for target in finding.targets:
             scope = finding.scope or _SCOPE.get(
                 classify_target(target, cwd, repo_root, assigned), em.UNDERIVABLE)
+            # Like ordinary branch creation, detaching at the SAME commit leaves all
+            # named refs and worktree content intact. Only one's assigned checkout may
+            # release its branch; a peer/root reached via -C is still confined.
+            if finding.rule == "DETACH_CURRENT_HEAD" and scope == em.INSIDE_REPO:
+                continue
             # 🔴 The silence rules are the only ones whose THRESHOLD is a scope, and
             # they are applied here because here is where the scope exists. Below the
             # threshold the operand is dropped entirely rather than emitted as a

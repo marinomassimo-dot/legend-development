@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-"""`git worktree add` is ALLOWED, `git worktree remove` is allowed without force, and the two
-spellings that can still destroy something are refused — on purpose, since 2026-09-05.
+"""Ordinary worktree creation/removal is allowed; force, branch reset and moves are refused.
 
 Until 2026-09-05 this suite kept provisioning REFUSED: four destination parsers had been
 written to judge `git worktree add` by where the checkout lands, three of them shipped live
@@ -8,13 +7,13 @@ bypasses onto a peer worktree, and the fourth was reverted at `040dabb` because 
 could be shown to fail against the known bypasses. `DEC-20260905-AGILE-HARNESS-MODE`
 (LEGEND_CORE §21e) made the destination question moot: provisioning one's own worktree is an
 ordinary agent act, and the guard judges it as what it is — an additive creation. Git refuses
-a destination that exists and is not empty, and refuses a branch checked out elsewhere, so no
-spelling of `add` overwrites a peer's checkout or its in-flight work.
+a destination that exists and is not empty, and ordinarily refuses a branch checked out
+elsewhere. Force and -B invalidate that reasoning and are now tested separately.
 
-The historical bypass corpus is kept as DATA. Every one of those spellings is now simply
-ALLOWED, and the test says so rather than pretending the refusal was narrowed.
+The historical bypass corpus is kept as DATA. Its verdicts follow option semantics:
+-fb forces creation, -bf names branch f, and -B resets an existing branch.
 
-What can still destroy something is `remove --force` (discards a dirty checkout) and `move`
+What can still destroy something includes `remove --force` (discards a dirty checkout) and `move`
 (relocates a directory that may be another chat's home). Both stay refused, in every spelling
 git accepts — bundled short flags and long-option abbreviations included, because the push
 battery already recorded thirteen one-character spelling bypasses of exactly that shape.
@@ -35,12 +34,15 @@ import guard_policy as gp  # noqa: E402
 
 # The historical bypass spellings, each of which once placed a checkout on a peer worktree
 # past a destination parser. Kept as data: under §21e they are ordinary provisioning.
+#: label -> (spelling, verdict). The verdict lives beside the spelling, not in a set of
+#: labels inside the assertion, so renaming a label cannot silently flip it to ALLOWED.
 HISTORICAL_BYPASSES = {
-    "kept flag values (v1)": "git worktree add --lock --reason /tmp/ok {peer}",
-    "grouped short flags (v2)": "git worktree add -fb hijack {peer}",
-    "value-first cluster (v2, found by mutation)": "git worktree add -bf hijack {peer} main",
-    "= attached value (v3)": "git worktree add -B= {peer} main",
-    "help as a flag value (v3)": "git worktree add --lock --reason -h {peer}",
+    "kept flag values (v1)": ("git worktree add --lock --reason /tmp/ok {peer}", gp.ALLOWED),
+    "grouped short flags (v2)": ("git worktree add -fb hijack {peer}", gp.PROHIBITED),  # -f
+    "value-first cluster (v2, found by mutation)":
+        ("git worktree add -bf hijack {peer} main", gp.ALLOWED),  # -b f: the branch is 'f'
+    "= attached value (v3)": ("git worktree add -B= {peer} main", gp.PROHIBITED),  # -B resets
+    "help as a flag value (v3)": ("git worktree add --lock --reason -h {peer}", gp.ALLOWED),
 }
 
 PEER = "/Users/massimo/Desktop/legend-codex-aqeilan/new"
@@ -66,12 +68,11 @@ def hook(command: str, cwd: str = str(ROOT)) -> str:
 
 
 class ProvisioningIsOrdinary(unittest.TestCase):
-    def test_every_historical_bypass_spelling_is_now_simply_allowed(self) -> None:
-        """DEC-20260905-AGILE-HARNESS-MODE. Not narrowed: allowed, because `add` cannot
-        overwrite anything git considers occupied."""
-        for label, template in HISTORICAL_BYPASSES.items():
+    def test_historical_spellings_distinguish_force_from_branch_values(self) -> None:
+        """A branch reset or forced checkout is not ordinary provisioning."""
+        for label, (template, expected) in HISTORICAL_BYPASSES.items():
             with self.subTest(bypass=label):
-                self.assertEqual(gp.ALLOWED, decide(template.format(peer=PEER)))
+                self.assertEqual(expected, decide(template.format(peer=PEER)))
 
     def test_the_landing_recipe_spellings_are_allowed(self) -> None:
         for command in ("git worktree add /tmp/wt-scratch -b throwaway",
@@ -107,6 +108,19 @@ class ProvisioningIsOrdinary(unittest.TestCase):
 
 
 class WhatCanStillDestroyIsRefused(unittest.TestCase):
+    def test_forced_add_and_branch_reset_are_refused(self) -> None:
+        for flags in ("-f", "-ff", "--force", "--forc", "--fo", "--f", "-fb existing",
+                      "-B existing", "-Bexisting", "-B=", "-qBexisting"):
+            for command in (f"git worktree add {flags} /tmp/new main",
+                            f"git worktree add /tmp/new {flags} main"):
+                with self.subTest(command=command):
+                    self.assertNotEqual(gp.ALLOWED, decide(command))
+        for command in ("git worktree add -bf /tmp/new main",
+                        "git worktree add -bfeature /tmp/new main",
+                        "git worktree add --lock --reason --force /tmp/new main"):
+            self.assertEqual(gp.ALLOWED, decide(command))
+        self.assertEqual("deny", hook("git worktree add -B existing /tmp/new main"))
+
     def test_forced_removal_is_refused_in_every_spelling(self) -> None:
         for command in ("git worktree remove --force /tmp/wt",
                         "git worktree remove -f /tmp/wt",

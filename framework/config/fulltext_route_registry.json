@@ -14,6 +14,7 @@
   ".claude/skills/legend-deepdive/SKILL.md": "complete_analysis",
   ".claude/skills/legend-discovery/SKILL.md": "complete_analysis",
   ".claude/skills/legend-hypothesis-forge/SKILL.md": "receipt_reuse_only",
+  ".claude/skills/legend-harness-scout/SKILL.md": "not_applicable",
   ".claude/skills/legend-ingest/SKILL.md": "not_applicable",
   ".claude/skills/legend-lint-repair-plan/SKILL.md": "not_applicable",
   ".claude/skills/legend-paperqa/SKILL.md": "non_exhaustive",

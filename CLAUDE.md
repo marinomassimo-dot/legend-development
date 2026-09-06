@@ -51,6 +51,10 @@ Three facts bind before you have finished reading anything else:
 | Claim classification, premises and negatives, revival triggers | [`framework/instruction/epistemic_discipline.md`](framework/instruction/epistemic_discipline.md) |
 | Parity of sources; what counts as having read something (rules 1–8, 5b–5e) | [`framework/master/gold_is_in_the_details.md`](framework/master/gold_is_in_the_details.md) |
 | Designing for a system that never stops growing | [`framework/master/designed_for_growth.md`](framework/master/designed_for_growth.md) |
+| `FULLTEXT_READ_RECEIPT` on every full-text route; `verbatim_locators` and persistence | [`framework/protocols/fulltext_read_receipt.md`](framework/protocols/fulltext_read_receipt.md) |
+| `pubmed_corpus_harvest` produces a census, not evidence; an abstract is not a read | [`framework/master/gold_is_in_the_details.md`](framework/master/gold_is_in_the_details.md) and [`framework/scripts/pubmed_corpus_harvest.py`](framework/scripts/pubmed_corpus_harvest.py) |
+| The state-control exception and append-only carve-out | [`framework/state/state_manifest_current.md`](framework/state/state_manifest_current.md) |
+| Self-diagnosis before growth and takeaways | [`framework/protocols/session_self_evaluation.md`](framework/protocols/session_self_evaluation.md) |
 | Batch commit, LINT, ingest, parallelism and worktree isolation, wikilinks, file generation, read receipts | [`framework/protocols/`](framework/protocols/) → [`index.md`](framework/protocols/index.md) |
 | Layers, modes, core invariants | [`ARCHITECTURE.md`](ARCHITECTURE.md) |
 | How to actually run a session; session types | [`framework/manuals/operator_manual.md`](framework/manuals/operator_manual.md) |
@@ -76,6 +80,7 @@ Three facts bind before you have finished reading anything else:
 |---|---|
 | A new reader asks what this is, how to start, or why it matters | Answer from [`FAQ.md`](FAQ.md); never improvise a capability [`SKILLS.md`](SKILLS.md) does not claim |
 | Session start | [`legend-start`](.claude/skills/legend-start/SKILL.md) |
+| Session start for `plan` / `junior-harness`; weekly scout due or report awaiting triage | [`legend-harness-scout`](.claude/skills/legend-harness-scout/SKILL.md), dispatched by `framework/scripts/harness_session_start.py` |
 | A list of studies / PMIDs / DOIs arrives with "start / process / analyze" | [`legend`](.claude/skills/legend/SKILL.md) — the autopilot |
 | Any study list, before ingest or deep dive | [`legend-study-intake-triage`](.claude/skills/legend-study-intake-triage/SKILL.md) |
 | After intake, over the whole batch | [`legend-batch-inferential-sweep`](.claude/skills/legend-batch-inferential-sweep/SKILL.md) |

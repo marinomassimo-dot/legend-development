@@ -11,6 +11,12 @@ Paths are relative to the repo root.
 1. Reads `framework/state/state_manifest_current.md` and confirms `current_state: READY`.
 2. Reads `.claude/skills/legend-capability-scout/SKILL.md` (mandatory capability growth).
 3. Reads `.claude/skills/legend-session-takeaways/SKILL.md` for the final closing.
+   For an assigned `plan` or `junior-harness` actor, also run
+   `python3 framework/scripts/harness_session_start.py --actor <ACTOR_ID>`.
+   This reports the current ISO week's scout status and, for Plan, branch hygiene.
+   `SCOUT_DUE` invokes `legend-harness-scout` for Junior; `TRIAGE_DUE` sends Plan to
+   the named weekly report. Missing or invalid reports stay visible; they are not gates.
+   Codex's `runtime_parity.py --bootstrap --actor <ACTOR_ID>` runs the same check.
 4. If the operator provided studies/papers/PMIDs/DOIs/titles:
    - if they want to start the process, use `.claude/skills/legend/SKILL.md` as autopilot;
    - if they ask only for dedup/screening, activate `.claude/skills/legend-study-intake-triage/SKILL.md`.

@@ -445,7 +445,9 @@ def role_contract_for(surface: Surface, actor):
     """
     if not actor:
         return None, "no ACTOR_ID assigned"
-    role = str(actor).split("-")[0].strip().lower()
+    role = str(actor).strip().lower()
+    if role not in ROLE_CONTRACTS:
+        role = role.split("-")[0]
     if role not in ROLE_CONTRACTS:
         return None, f"ACTOR_ID {actor!r} names no role contract; roles are not invented"
     return ROLE_CONTRACTS[role], ""
@@ -1051,7 +1053,8 @@ def bootstrap(surface: Surface, actor_id):
     if role_path and surface.fingerprint_tool.exists():
         out = subprocess.run(
             [sys.executable, str(surface.fingerprint_tool), "compose", "--role",
-             str(actor).split("-")[0]],
+             next(key for key, value in ROLE_CONTRACTS.items()
+                  if value == role_path)],
             capture_output=True, text=True, cwd=str(surface.root),
         )
         if out.returncode == 0 and out.stdout.strip():
@@ -1090,6 +1093,14 @@ def bootstrap(surface: Surface, actor_id):
         "WRITE_ENABLED_PARITY": "PASS" if battery.subset(WRITE_ENABLED_REQUIRES) else "FAIL",
         "CODEX_HOOK": hook,
     }
+    if role_path in (ROLE_CONTRACTS["plan"], ROLE_CONTRACTS["junior-harness"]):
+        from harness_session_start import startup
+        role_name = "plan" if role_path == ROLE_CONTRACTS["plan"] else "junior-harness"
+        weekly = startup(surface.root, role_name)
+        fields["HARNESS_SCOUT"] = f"{weekly['week']} {weekly['status']} — {weekly['report']}"
+        fields["HARNESS_ACTION"] = weekly["action"]
+        if "branch_hygiene" in weekly:
+            fields["BRANCH_HYGIENE"] = weekly["branch_hygiene"]
 
     blockers = []
     if not actor:

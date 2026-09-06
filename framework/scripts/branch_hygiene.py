@@ -53,7 +53,10 @@ class GitError(RuntimeError):
 def git(args: List[str], cwd: Path) -> str:
     result = subprocess.run(["git", *args], cwd=str(cwd), capture_output=True, text=True)
     if result.returncode != 0:
-        raise GitError(f"git {' '.join(args)}: {result.stderr.strip()}")
+        # `git merge` writes its conflict diagnostic to STDOUT; a stderr-only message
+        # ended at the colon with no cause when task_close reported a conflict.
+        detail = " | ".join(s for s in (result.stderr.strip(), result.stdout.strip()) if s)
+        raise GitError(f"git {' '.join(args)}: {detail}")
     return result.stdout
 
 
@@ -80,6 +83,8 @@ def worktrees(root: Path) -> List[Dict[str, object]]:
             current["branch"] = value.replace("refs/heads/", "", 1)
         elif key == "detached":
             current["branch"] = None
+        elif key == "locked":
+            current["locked"] = value or True
     if current:
         out.append(current)
     for entry in out:
@@ -110,7 +115,8 @@ def branches(root: Path, main: str, now: dt.datetime) -> List[Dict[str, object]]
         when = dt.datetime.fromisoformat(date.strip().replace("Z", "+00:00"))
         if when.tzinfo is None:
             when = when.replace(tzinfo=dt.timezone.utc)
-        age_days = max(0, int((now - when).total_seconds() // 86400))
+        age_seconds = max(0, (now - when).total_seconds())
+        age_days = int(age_seconds // 86400)
         if name == main:
             behind = ahead = 0
         else:
@@ -118,7 +124,8 @@ def branches(root: Path, main: str, now: dt.datetime) -> List[Dict[str, object]]
             left, _, right = counts.strip().partition("\t")
             behind, ahead = int(left or 0), int(right or 0)
         rows.append({"branch": name, "ahead": ahead, "behind": behind,
-                     "last_commit": when.isoformat(), "age_days": age_days})
+                     "last_commit": when.isoformat(), "age_days": age_days,
+                     "age_seconds": age_seconds})
     return rows
 
 
@@ -131,7 +138,8 @@ def classify(rows: List[Dict[str, object]], trees: List[Dict[str, object]],
         if name == main:
             row["class"] = MAIN
         elif int(row["ahead"]) > 0:
-            row["class"] = LAND_OVERDUE if int(row["age_days"]) > max_age_days else IN_PROGRESS
+            elapsed = float(row.get("age_seconds", float(row["age_days"]) * 86400))
+            row["class"] = LAND_OVERDUE if elapsed > max_age_days * 86400 else IN_PROGRESS
         elif row["checked_out_at"]:
             row["class"] = DELETE_BLOCKED_CHECKED_OUT
         else:
@@ -153,10 +161,14 @@ def totals_line(rows: List[Dict[str, object]]) -> str:
 def landing_recipe(root: Path) -> str:
     return "\n".join([
         "```",
-        "# from the root checkout, or from your worktree with `git -C <root>`:",
-        f"git -C {root} merge --no-ff <branch>      # or --ff-only when main has not moved",
-        "git branch -d <branch>                    # safe delete: refuses if unmerged",
-        "git worktree remove <path>                # only for a worktree whose chat is closed; refuses if dirty",
+        "# In your clean task worktree, after committing the task:",
+        "python3 framework/scripts/task_close.py",
+        "# Keeps the worktree detached; --remove-worktree also removes the worktree, and is",
+        "# refused while it holds untracked OR ignored files, or is locked.",
+        "# Sequence performed by the command (a conflicting merge is aborted, main unchanged):",
+        "# git -C <checkout-holding-main> merge --no-ff --no-edit --no-overwrite-ignore refs/heads/<branch>",
+        "# git switch --detach HEAD                       # in the task worktree",
+        "# git -C <checkout-holding-main> branch -d <branch>   # after verifying ancestry in main",
         "```",
     ])
 

@@ -356,7 +356,7 @@ Day 4 (later):
 
 ---
 
-## 🔴 One actor, one worktree, one branch — and one integrator
+## 🔴 One actor, one worktree, one task branch — author-owned landing
 
 Everything above governs parallelism **logically**: disjoint scopes, merge before commit. It says
 nothing about where the work physically lives, because it was written for a system with one actor
@@ -377,8 +377,11 @@ Nothing was lost, and that is luck rather than design. The binding rules:
    Not a convention — the shared checkout is what makes the other three failures possible
    when two sessions share it *at the same time*. The worktree is concurrency hygiene, not a
    rank, and not a place to keep work.
-2. **The author lands its own branch on `main` at task end** — from the root checkout, or
-   from its worktree with `git -C <root> merge --no-ff task/<id>`, then `git branch -d`.
+2. **The author lands its own branch on `main` at task end** —
+   from its clean task worktree with `python3 framework/scripts/task_close.py` after
+   committing and running the required checks. It merges, verifies ancestry, detaches at
+   the same commit and safely deletes the branch. `--remove-worktree` also removes the
+   clean worktree when its chat is closed. A failed merge preserves the task branch.
    There is no integrating session and no monopoly on merging; nothing stays unmerged at
    rest. Rule and recipe: [`LEGEND_CORE.md` §21e](../instruction/LEGEND_CORE.md#21e-agile-operating-mode)
    (operator decision 2026-09-05, `DEC-20260905-AGILE-HARNESS-MODE`), which replaced the

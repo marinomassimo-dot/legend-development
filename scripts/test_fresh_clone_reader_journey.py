@@ -8,6 +8,8 @@ import re
 import unittest
 from pathlib import Path
 
+from test_documented_commands import markdown_files
+
 
 ROOT = Path(__file__).resolve().parents[1]
 FRONT_DOORS = (
@@ -35,7 +37,7 @@ class FreshCloneReaderJourneyTests(unittest.TestCase):
 
     def test_inline_repository_paths_resolve(self) -> None:
         problems = []
-        for document in sorted(ROOT.rglob("*.md")):
+        for document in markdown_files():
             # `backup/` is the BATCH_COMMIT Phase-3 snapshot root: gitignored copies of the
             # canonical files, kept at a different depth, so their relative links no longer
             # resolve. Scanning them made the mandatory pre-commit backup fail this test.

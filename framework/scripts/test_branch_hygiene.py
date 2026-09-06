@@ -128,7 +128,8 @@ class TheReportClassifiesWhatItBuilt(unittest.TestCase):
              "--root", str(self.fx.repo)], capture_output=True, text=True)
         self.assertEqual(0, result.returncode, result.stderr)
         self.assertIn("## Landing recipe", result.stdout)
-        self.assertIn("git branch -d <branch>", result.stdout)
+        self.assertIn("python3 framework/scripts/task_close.py", result.stdout)
+        self.assertIn("branch -d <branch>", result.stdout)
         self.assertIn("| LAND_OVERDUE | `old-work` |", result.stdout)
 
     def test_exclude_pattern_drops_rows_but_never_main(self) -> None:
@@ -145,6 +146,22 @@ class TheReportClassifiesWhatItBuilt(unittest.TestCase):
 
 
 class TheHealthyCaseIsQuiet(unittest.TestCase):
+    def test_overdue_uses_elapsed_seconds_not_rounded_days(self) -> None:
+        for seconds, expected in ((86399, bh.IN_PROGRESS), (86400, bh.IN_PROGRESS),
+                                  (86401, bh.LAND_OVERDUE), (90000, bh.LAND_OVERDUE)):
+            with self.subTest(seconds=seconds):
+                row = {"branch": "task/x", "ahead": 1, "age_days": seconds // 86400,
+                       "age_seconds": seconds}
+                self.assertEqual(expected, bh.classify([row], [], "main", 1)[0]["class"])
+
+    def test_25_hour_old_commit_is_overdue_in_real_git(self) -> None:
+        fx = Fixture()
+        self.addCleanup(fx.close)
+        when = dt.datetime.fromisoformat(run(["show", "-s", "--format=%cI", "fresh-work"], fx.repo).strip())
+        report = bh.build_report(fx.repo, "main", 1, None, None, when + dt.timedelta(hours=25))
+        self.assertEqual(bh.LAND_OVERDUE, next(r["class"] for r in report["branches"]
+                                              if r["branch"] == "fresh-work"))
+
     def test_a_repository_with_only_main_exits_zero(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
             repo = Path(tmp) / "repo"

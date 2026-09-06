@@ -9,7 +9,7 @@ authority: Annex I.5, I.1; body §34; LEGEND_CORE §21e
 
 > **AMENDED 2026-09-05 — `DEC-20260905-AGILE-HARNESS-MODE`.** The two-column location table
 > below is kept for provenance. Since
-> [`LEGEND_CORE.md` §21e](framework/instruction/LEGEND_CORE.md#21e-agile-operating-mode), every
+> [`LEGEND_CORE.md` §21e](../framework/instruction/LEGEND_CORE.md#21e-agile-operating-mode), every
 > actor's session home is also its work surface, root and `main` are every actor's surfaces, the
 > `orchestrator` worktree is optional, and a `junior-harness` worktree exists when that chat is
 > open. Provisioning and clean removal of one's own worktree are ordinary agent acts.

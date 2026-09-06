@@ -32,6 +32,8 @@ EXPECTED_IGNORED_PARTS = {
     "node_modules",
 }
 EXPECTED_IGNORED_SUFFIXES = {".pyc", ".log", ".dcd"}
+# Explicit private runtime surfaces, not public capabilities hidden by a broad glob.
+LOCAL_RUNTIME_FILES = {".claude/settings.local.json", "deployment/local_instance.md"}
 REQUIRED_ROOT_FILES = {
     ".gitignore",
     "LICENSE",
@@ -196,10 +198,16 @@ def unexpectedly_ignored_files() -> list[str]:
         path.as_posix()
         for path in ignored
         if not is_expected_generated_path(path) and path.parts[0] in public_roots
+        and path.as_posix() not in LOCAL_RUNTIME_FILES
     )
 
 
 class ReleaseSurfaceTests(unittest.TestCase):
+    def test_local_runtime_files_are_explicitly_ignored_and_never_tracked(self) -> None:
+        patterns = set((ROOT / ".gitignore").read_text().splitlines())
+        self.assertTrue(LOCAL_RUNTIME_FILES <= patterns)
+        self.assertFalse(LOCAL_RUNTIME_FILES & tracked_paths())
+
     def test_example_agent_policy_does_not_bypass_permissions(self) -> None:
         settings = json.loads(
             (ROOT / ".claude" / "settings.json.example").read_text(

@@ -47,6 +47,8 @@ grants/
 # carries a runtime identifier. The release gate looks for patient re-identification, not
 # for either of those, so the exclusion is structural rather than a reminder to be careful.
 deployment/local_instance.md
+# Machine-local runtime permissions and credentials; the shared template stays tracked.
+.claude/settings.local.json
 
 # === Standard ===
 .DS_Store

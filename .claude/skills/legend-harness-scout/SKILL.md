@@ -24,6 +24,13 @@ the *machine*.
 
 ## Who runs it, when
 
+At session start, `legend-start` and Codex's `runtime_parity.py --bootstrap --actor <ACTOR_ID>`
+run `framework/scripts/harness_session_start.py`. The check derives the ISO week and names
+the exact report due, including on a first session after Monday. It distinguishes missing
+scouting (`SCOUT_DUE`), malformed metadata (`INVALID_REPORT`), pending Harness Engineering
+verdicts (`TRIAGE_DUE`) and a triaged report (`CURRENT`). It is a reminder, never a gate or
+an assertion that a scout ran. Without an active session, no scheduled execution is implied.
+
 | Actor | Role | Cadence |
 |---|---|---|
 | **Junior Harness Engineer** (`junior-harness`, [`roles/junior_harness.md`](../../../roles/junior_harness.md)) | runs the scout, writes the weekly file | every Monday, and on request |
@@ -87,8 +94,17 @@ record_type: HARNESS_SCOUT
 week: <YYYY>-W<WW>
 author: junior-harness
 handoff_to: plan
-status: PROPOSED → TRIAGED (Harness Engineering fills the verdict column)
+status: PROPOSED
 ---
+```
+
+`status` takes exactly one of two literal values, and `harness_session_start.py` reads them
+literally: the Junior writes `status: PROPOSED`; Harness Engineering, after filling every
+`HE verdict` cell with `ADOPT`, `TRIAL`, `WATCH` or `REJECT`, changes it to `status: TRIAGED`.
+Any other value (an arrow, a note, a blank) keeps the week reported as `TRIAGE_DUE`. A
+literal `|` inside a table cell breaks the nine-column count and has the same effect.
+
+```markdown
 
 # Harness scout — <YYYY>-W<WW>
 

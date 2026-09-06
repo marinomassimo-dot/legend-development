@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import re
 import subprocess
 import sys
@@ -11,7 +12,7 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-TESTS = (
+PRIORITY_TESTS = (
     "scripts/test_public_release_gate.py",
     "scripts/test_independent_privacy_scan.py",
     "scripts/test_losslessness_manifest.py",
@@ -152,6 +153,46 @@ TESTS = (
     "disease-models/wwox/analysis/scripts/test_md_status.py",
     "disease-models/wwox/analysis/scripts/test_md_run_matrix.py",
 )
+
+
+def discover_tests(root: Path) -> tuple[str, ...]:
+    """Include uncommitted suites; exclude ignored files and other worktrees.
+
+    Source archives have no index: walk them while pruning dependency/cache directories
+    and nested checkouts. Git failures in an actual checkout remain errors.
+    """
+    if (root / ".git").exists():
+        result = subprocess.run(
+            ["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard",
+             "*test_*.py"], cwd=root, capture_output=True, text=True, check=True)
+        return tuple(sorted({p for p in result.stdout.split("\0")
+                             if p and Path(p).name.startswith("test_")}))
+    found = []
+    for directory, children, files in os.walk(root):
+        children[:] = sorted(child for child in children
+                             if child not in {".git", "__pycache__", "node_modules", ".venv", "venv"}
+                             and not (Path(directory) / child / ".git").exists()
+                             and not (Path(directory) / child).is_symlink())
+        found.extend((Path(directory) / name).relative_to(root).as_posix()
+                     for name in files if name.startswith("test_") and name.endswith(".py"))
+    return tuple(sorted(found))
+
+
+#: An exclusion is a decision with a reason, never a name silently absent from the battery.
+#: Keys are repo-relative paths that exist; `test_release_runner_verdict.py` checks both.
+NOT_RUN_BY_DESIGN: dict[str, str] = {}
+
+
+def battery(priority: tuple[str, ...], discovered: tuple[str, ...],
+            excluded: dict[str, str]) -> tuple[str, ...]:
+    """Established order first, then every discovered suite, minus recorded exclusions."""
+    return tuple(name for name in dict.fromkeys((*priority, *discovered))
+                 if name not in excluded)
+
+
+DISCOVERED_TESTS = discover_tests(ROOT)
+# Preserve the established execution order, but no suite needs manual enrollment.
+TESTS = battery(PRIORITY_TESTS, DISCOVERED_TESTS, NOT_RUN_BY_DESIGN)
 
 
 SKIP_REASON_RE = re.compile(r"\.\.\. skipped ['\"](.+?)['\"]\s*$")

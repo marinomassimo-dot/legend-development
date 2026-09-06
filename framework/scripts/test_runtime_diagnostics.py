@@ -660,7 +660,14 @@ class TheLiveProbeCanTellTheEnginesApart(unittest.TestCase):
     """
 
     def setUp(self):
-        self.legacy = cr.legacy_blob(str(ROOT), "main")
+        # main now carries the adapter. Pin the legacy single-file guard this class's
+        # premise was measured against (blob 4bf5ee9e, the revision that carries the
+        # "Blanket staging is blocked" discriminator) instead of letting a historical
+        # assertion change its subject with every landing. It is not the LAST
+        # pre-migration revision (that is 8065e695); the premise is about the
+        # discriminator, and this is the blob that carries it.
+        result = git(ROOT, "cat-file", "blob", "4bf5ee9e1f5add166d270663af6c4e9878513bbf")
+        self.legacy = result.stdout if result.returncode == 0 else ""
         if not self.legacy:
             self.skipTest("the legacy blob is not reachable from this checkout")
 

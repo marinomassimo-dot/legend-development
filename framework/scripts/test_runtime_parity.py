@@ -43,6 +43,16 @@ SPEC.loader.exec_module(rp)
 
 REAL = rp.Surface(REPO)
 
+
+class CompleteActorIdentifiers(unittest.TestCase):
+    def test_junior_harness_is_resolved_before_instance_suffixes(self):
+        for actor, expected in (("junior-harness", "roles/junior_harness.md"),
+                                ("plan", "roles/plan.md"),
+                                ("scientist-C", "roles/scientist.md")):
+            self.assertEqual(Path(expected), rp.role_contract_for(REAL, actor)[0])
+        for actor in (None, "junior", "invented"):
+            self.assertIsNone(rp.role_contract_for(REAL, actor)[0])
+
 #: Everything a fixture needs to look like this repository to the battery.
 FIXTURE_FILES = (
     "AGENTS.md",
@@ -1092,7 +1102,10 @@ class ThePeerPlaceholdersAreDerivedAndNotThisMachinesLayout(unittest.TestCase):
             self.skipTest("this surface has no peer worktree")
         target = command.split("> ", 1)[1]
         self.assertFalse(target.startswith("/"), "the relative case must stay relative")
-        self.assertTrue(target.startswith(".."), "and must climb out of this worktree")
+        import repo_topology as topo
+        topology = topo.of_assigned(str(REAL.root))
+        self.assertEqual(topo.PEER_WORKTREE, topology.classify(str((REAL.root / target).resolve())),
+                         "relative paths must resolve to a peer, including nested worktrees")
 
     def test_the_dash_C_entry_is_sensitive_to_its_target(self):
         """🔴 `git -C <peer> commit -am x` denied because of `-a`, identically with a

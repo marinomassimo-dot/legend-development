@@ -13,7 +13,11 @@ import os
 import subprocess
 import sys
 import unittest
+import tempfile
+from unittest.mock import patch
 from pathlib import Path
+
+from public_release_gate import is_nested_checkout
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -31,11 +35,12 @@ IGNORED_PARTS = frozenset({".git", ".venv", "node_modules", "__pycache__"})
 
 
 def markdown_files() -> list[Path]:
-    return sorted(
-        path
-        for path in ROOT.rglob("*.md")
-        if not any(part in IGNORED_PARTS for part in path.relative_to(ROOT).parts)
-    )
+    found = []
+    for directory, children, files in os.walk(ROOT):
+        children[:] = [name for name in children if name not in IGNORED_PARTS
+                       and name != "backup" and not is_nested_checkout(Path(directory) / name)]
+        found.extend(Path(directory) / name for name in files if name.endswith(".md"))
+    return sorted(found)
 
 
 def resolve_reference(document: Path, reference: str) -> Path | None:
@@ -116,6 +121,18 @@ def documented_cli_invocations() -> list[tuple[Path, int, Path, str]]:
 
 
 class DocumentedCommandIntegrityTests(unittest.TestCase):
+    def test_markdown_scan_prunes_peer_worktrees_but_keeps_local_documents(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            local = root / "README.md"
+            local.write_text("local")
+            peer = root / "nested-peer"
+            peer.mkdir()
+            (peer / ".git").write_text("gitdir: elsewhere")
+            (peer / "README.md").write_text("peer")
+            with patch.dict(markdown_files.__globals__, ROOT=root):
+                self.assertEqual([local], markdown_files())
+
     def test_repository_local_python_commands_exist(self) -> None:
         missing = missing_documented_commands()
         self.assertEqual(

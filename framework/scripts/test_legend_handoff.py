@@ -705,7 +705,13 @@ def reconstruct_real(root, payload, scratch, remote="development", branch="main"
 
 
 if __name__ == "__main__":
-    if "--table" in sys.argv:
+    if "--help" in sys.argv or "-h" in sys.argv:
+        print("Usage: test_legend_handoff.py [unittest options]\n"
+              "  --table: print the losslessness table\n"
+              "  --reconstruct-real --root ROOT --payload DIR --scratch DIR\n"
+              "                     [--remote development] [--branch main]\n"
+              "With no mode selected, run the regression tests.")
+    elif "--table" in sys.argv:
         print_table()
     elif "--reconstruct-real" in sys.argv:
         import argparse

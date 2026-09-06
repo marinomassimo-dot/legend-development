@@ -35,28 +35,29 @@ class EveryTestSuiteIsActuallyRun(unittest.TestCase):
     uneven-application failure this repository keeps finding in itself.
     """
 
-    # An exclusion must be a decision, not an oversight, so it is named with its reason here
-    # rather than silently absent from `TESTS`.
-    NOT_RUN_BY_DESIGN: dict[str, str] = {}
+    # Since 2026-09-06 the runner discovers suites itself (`discover_tests`), so "every
+    # tracked test file is in TESTS" holds by construction and a test restating it with the
+    # same `git ls-files` call could never fail (blind review finding 4). What can still
+    # go wrong is now asserted instead: an exclusion that names nothing on disk, a priority
+    # entry that no longer exists, and a battery that is not exactly discovery minus the
+    # recorded exclusions.
 
-    def test_every_tracked_test_file_is_in_the_runner(self) -> None:
-        # 🔴 `--others --exclude-standard` as well as the index, because the moment this check
-        # matters most is BEFORE the new suite is committed. Written first with a bare
-        # `git ls-files`, it passed over `test_recapture_snippets.py` — a file that existed,
-        # was green, and was not in the battery — because the listing it consulted could not
-        # see anything uncommitted. A guard blind precisely when it is needed is the shape this
-        # repository keeps finding in itself; here it was in the guard against that shape.
-        listed = subprocess.run(
-            ["git", "ls-files", "--cached", "--others", "--exclude-standard", "*test_*.py"],
-            cwd=ROOT, capture_output=True, text=True, check=True).stdout.split()
-        tracked = {path for path in listed if Path(path).name.startswith("test_")}
-        registered = set(runner.TESTS)
-        missing = sorted(tracked - registered - set(self.NOT_RUN_BY_DESIGN))
-        self.assertEqual(
-            missing, [],
-            "these test files exist and the release battery never runs them; add them to "
-            "TESTS in scripts/run_release_regressions.py, or record why not in "
-            "NOT_RUN_BY_DESIGN with a reason")
+    def test_the_battery_is_discovery_minus_recorded_exclusions(self) -> None:
+        discovered = set(runner.discover_tests(ROOT))
+        expected = (set(runner.PRIORITY_TESTS) | discovered) - set(runner.NOT_RUN_BY_DESIGN)
+        self.assertEqual(expected, set(runner.TESTS))
+        for path, reason in runner.NOT_RUN_BY_DESIGN.items():
+            with self.subTest(excluded=path):
+                self.assertTrue((ROOT / path).is_file(), "an exclusion must name a real suite")
+                self.assertTrue(reason.strip(), "an exclusion must carry its reason")
+                self.assertNotIn(path, runner.TESTS)
+
+    def test_an_exclusion_actually_removes_the_suite(self) -> None:
+        """Positive control for the mechanism the test above relies on."""
+        self.assertEqual(("a.py", "b.py"),
+                         runner.battery(("a.py",), ("b.py", "c.py"), {"c.py": "why"}))
+        self.assertEqual(("b.py",),
+                         runner.battery(("a.py",), ("a.py", "b.py"), {"a.py": "priority too"}))
 
     def test_the_runner_names_no_file_that_is_gone(self) -> None:
         """The other direction: a target that no longer exists would fail loudly, but a
@@ -66,6 +67,25 @@ class EveryTestSuiteIsActuallyRun(unittest.TestCase):
 
 
 class VerdictFormattingTests(unittest.TestCase):
+    def test_discovery_includes_untracked_suites_and_excludes_ignored_suites(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            subprocess.run(["git", "init", "-q"], cwd=root, check=True)
+            (root / "test_new.py").write_text("pass\n")
+            (root / "test_ignored.py").write_text("pass\n")
+            (root / ".gitignore").write_text("test_ignored.py\n")
+            self.assertEqual(("test_new.py",), runner.discover_tests(root))
+
+    def test_archive_discovery_prunes_nested_checkouts(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "test_source.py").write_text("pass\n")
+            peer = root / "peer"
+            peer.mkdir()
+            (peer / ".git").write_text("gitdir: elsewhere")
+            (peer / "test_peer.py").write_text("pass\n")
+            self.assertEqual(("test_source.py",), runner.discover_tests(root))
+
     def test_plain_pass_requires_zero_skips(self) -> None:
         self.assertEqual(runner.format_success_verdict(40, []),
                          ["REGRESSION VERDICT: PASS (40 targets)"])

@@ -515,10 +515,13 @@ to keep work.
         git switch -c task/<id> main
      One task, one branch. A change that is finished when it is written may be committed
      on `main` directly from the root checkout; a task that spans hours gets a branch.
-  2. Task end — the AUTHOR lands the branch on `main` the same day, from the root checkout
-     or from its worktree with `git -C <root>`:
-        git -C <root> merge --no-ff task/<id>     # or --ff-only when main has not moved
-        git branch -d task/<id>                    # safe delete: git refuses an unmerged branch
+  2. Task end — the AUTHOR lands the branch on `main` the same day. Run the closure command
+     from the author's committed, verified task worktree:
+        python3 framework/scripts/task_close.py   # from the committed, verified task worktree
+     The command merges into the checkout holding `main`, verifies ancestry, detaches the
+     task worktree at its unchanged HEAD, then safely deletes the landed branch. It keeps
+     the worktree for the next task; `--remove-worktree` also removes a clean closed-chat
+     worktree. `--dry-run` prints the sequence. A conflict keeps the branch for repair.
      Landing needs no Mirror review, no INTEGRATION_CANDIDATE, no HUMAN_APPROVAL, no gate
      0–5 and no lease. Its only preconditions are the ones the tooling already enforces:
      `LINT` green when the four scientific current files changed; no release-regression
