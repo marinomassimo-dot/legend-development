@@ -166,6 +166,9 @@ before the commit (result recorded in the commit message and in the manifest not
 - Codex hook `TRUST_PENDING` → `DEMONSTRATED` needs a session probe that records a refusal,
   run from a Codex session; it is a spend under Annex J.4 and is the operator's to open.
 - The three `test_runtime_parity.py` skips need a peer worktree whose shared checkout is
-  this root; run from a detached scratch worktree of the landed commit (result below).
+  this root. CLOSED: run from a detached scratch worktree at `30fa785` (`git worktree add
+  --detach`, admitted by the guard as ordinary creation), the whole
+  `ThePeerPlaceholdersAreDerivedAndNotThisMachinesLayout` class passed 7/7 with no skip,
+  the three formerly skipped tests included; the scratch worktree was then removed clean.
 - 59 LAND_OVERDUE branches: authors land or record abandonment; retiring is reserved.
 - `HARNESS-SCOUT-2026-W36.md`: Junior scouts, Plan triages.
