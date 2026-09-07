@@ -43,10 +43,18 @@ from __future__ import annotations
 
 import argparse
 import datetime as _dt
+import hashlib
 import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repo_root import RootError, control_plane  # noqa: E402
+
+# 🔴 Relative on purpose — it is a name inside the repository, not a path from the
+# working directory. It is joined to the DERIVED root, never to the cwd: resolving it
+# against wherever the caller stood made this tool read a 5-record lease from the
+# repository root and a 9-record one from the orchestrator worktree, both exit 0.
 DEFAULT_HOME = "runtime/orchestrator_lease.md"
 
 FIELD = re.compile(r"^\s{2,}([A-Z_]+):\s*([^#\n]*?)\s*(?:#.*)?$")
@@ -129,7 +137,8 @@ def findings(record: dict[str, str], derived: str, index: int) -> list[str]:
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--home", default=DEFAULT_HOME, help=f"lease record (default {DEFAULT_HOME})")
+    parser.add_argument("--home", default=None,
+                        help=f"lease record (default: {DEFAULT_HOME} under the derived repository root)")
     parser.add_argument("--check", action="store_true",
                         help="report disagreements and expired-unused leases; exit 1 on any")
     parser.add_argument("--now", help="ISO-8601 instant to derive against; defaults to the clock")
@@ -137,12 +146,22 @@ def main(argv: list[str] | None = None) -> int:
 
     try:
         now = _parse_ts(args.now) if args.now else _dt.datetime.now(_dt.timezone.utc)
-        records = parse(Path(args.home))
+        home = Path(args.home) if args.home else control_plane(DEFAULT_HOME)
+        records = parse(home)
         derived = [derive(record, now) for record in records]
-    except RecordError as exc:
+    except (RecordError, RootError) as exc:
         print(f"LEASE STATE UNDERIVABLE: {exc}", file=sys.stderr)
         return 2
 
+    # 🔴 Say WHICH object was measured. The same command, run from two directories, read a
+    # 5-record lease and a 9-record one and printed the same shape of answer both times; the
+    # only way to tell them apart was to already know. A derived answer that does not name its
+    # source cannot be reconciled with another derived answer, and reconciling them is the
+    # whole of the control-plane problem. This is evidence, not policy: it asserts nothing
+    # about which object SHOULD have been read.
+    print(f"CONTROL_PLANE_SOURCE_PATH {home}")
+    print(f"CONTROL_PLANE_SOURCE_SHA256 {hashlib.sha256(home.read_bytes()).hexdigest()}")
+    print(f"CONTROL_PLANE_RECORD_COUNT {len(records)}")
     print(f"now (derivation instant)  {now.isoformat()}")
     for index, (record, state) in enumerate(zip(records, derived), start=1):
         stored = record.get("STATUS", "—").strip() or "—"

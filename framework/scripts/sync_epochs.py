@@ -52,6 +52,10 @@ import json
 import os
 import sys
 from pathlib import Path
+
+import sys as _sys
+_sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repo_root import RootError, repo_root  # noqa: E402
 from typing import Any, Optional
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -315,14 +319,21 @@ def verify(root: Path) -> list[str]:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    parser.add_argument("--root", default=".")
+    # See repo_root: a "." default reported "no sync epoch recorded" from any
+    # subdirectory — an absence produced by looking in the wrong place, at exit 0.
+    parser.add_argument("--root", default=None,
+                        help="repository root (default: derived from the working tree)")
     subparsers = parser.add_subparsers(dest="command", required=True)
     recorder = subparsers.add_parser("record", help="append one SYNC_EPOCH and re-anchor")
     recorder.add_argument("--event", required=True, help="path to the event JSON")
     subparsers.add_parser("verify", help="chain plus tail anchor")
     subparsers.add_parser("status", help="the latest epoch and what it asked of readers")
     args = parser.parse_args()
-    root = Path(args.root).resolve()
+    try:
+        root = Path(args.root).resolve() if args.root else repo_root()
+    except RootError as exc:
+        print(f"SYNC EPOCH UNDERIVABLE: {exc}", file=sys.stderr)
+        return 2
 
     if args.command == "record":
         payload = json.loads(Path(args.event).read_text(encoding="utf-8"))

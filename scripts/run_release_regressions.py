@@ -68,6 +68,7 @@ PRIORITY_TESTS = (
     "framework/scripts/test_regenerate_adjudications.py",
     "framework/scripts/test_lease_state.py",
     "governance/scripts/test_governance_fingerprint.py",
+    "framework/scripts/test_repo_root.py",
     "framework/scripts/test_growth_anchors.py",
     "framework/scripts/test_record_conventions.py",
     "framework/scripts/test_artifact_index.py",

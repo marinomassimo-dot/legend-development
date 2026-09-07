@@ -15,6 +15,7 @@ from dataclasses import dataclass
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+from repo_root import RootError, repo_root  # noqa: E402
 import growth_anchors  # noqa: E402 - the single definition of a canonical record heading
 
 # Bound at module level, not inside the function that uses it, so a test can pin it by
@@ -770,9 +771,19 @@ def lint(repo_root):
 
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("root", nargs="?", default=".", help="repository root")
+    # `default="."` is the cwd defect spelled as an argument default: with no argument
+    # this returned PASS from the repository root and BLOCK_SYSTEM from a subdirectory
+    # of the same checkout — a false BLOCK, which is the same defect with the sign
+    # flipped and trains a reader to disbelieve the gate.
+    parser.add_argument("root", nargs="?", default=None,
+                        help="repository root (default: derived from the working tree)")
     args = parser.parse_args(argv)
-    res = lint(args.root)
+    try:
+        root = args.root if args.root else str(repo_root())
+    except RootError as exc:
+        print(f"LINT UNDERIVABLE: {exc}", file=sys.stderr)
+        return 3
+    res = lint(root)
     print(f"VERDICT: {res.verdict}")
     for f in res.findings:
         print(f"  [{f.severity}] {f.code}: {f.message}")
