@@ -73,6 +73,8 @@ PRIORITY_TESTS = (
     # lived in run(). This one drives the script as a subprocess and asserts the exit code
     # a gate would read. It needs no PDF corpus — it builds its own single-page source.
     "framework/scripts/test_regenerate_adjudications_fails_closed.py",
+    "governance/scripts/test_consolidate_approval_queue.py",
+    "governance/scripts/test_consolidate_approval_queue_cli.py",
     "framework/scripts/test_growth_anchors.py",
     "framework/scripts/test_record_conventions.py",
     "framework/scripts/test_artifact_index.py",
