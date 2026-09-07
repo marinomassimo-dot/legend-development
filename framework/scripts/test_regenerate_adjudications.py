@@ -53,7 +53,8 @@ def artifact(*adjudicates, crop=(86, 309, 583, 605)):
 
 class NeedleGuardTests(unittest.TestCase):
     def check(self, art, snippets=SNIPPETS):
-        return check_needles(PAGE, art, snippets, "17803050 p02.png")
+        # check_needles now also reports how much it verified; the problems are element 0.
+        return check_needles(PAGE, art, snippets, "17803050 p02.png")[0]
 
     def test_a_needle_that_resolves_inside_its_crop_passes(self):
         self.assertEqual(
@@ -110,7 +111,7 @@ class NeedleGuardTests(unittest.TestCase):
                                           "needle": "the levels of BUN,"},
                                          crop=(300, 630, 580, 690)),
                           ["the levels of BUN CRE and female IP were higher"],
-                          "17803050 p03.png"),
+                          "17803050 p03.png")[0],
             [])
 
     def test_without_a_manifest_geometry_is_still_enforced(self):
@@ -118,9 +119,9 @@ class NeedleGuardTests(unittest.TestCase):
         drifted = artifact({"locator": "entries[1]",
                             "needle": "We detected epileptic seizures"})
         self.assertEqual(len(self.check(drifted)), 1)          # with a manifest: refused
-        self.assertEqual(check_needles(PAGE, drifted, None, "17803050 p02.png"), [])
+        self.assertEqual(check_needles(PAGE, drifted, None, "17803050 p02.png")[0], [])
         problems = check_needles(PAGE, artifact({"locator": "entries[0]", "needle": "Brain"}),
-                                 None, "17803050 p02.png")
+                                 None, "17803050 p02.png")[0]
         self.assertEqual(len(problems), 1)
         self.assertIn("matches 2 span(s)", problems[0])
 
