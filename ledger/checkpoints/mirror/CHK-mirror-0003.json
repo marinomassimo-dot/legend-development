@@ -1,0 +1,80 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Delta verification of manifest revision 5.1. Scope was narrow BECAUSE the content hash was verified unchanged first, not assumed.",
+
+  "CHECKPOINT_ID": "CHK-mirror-0003",
+  "SUPERSEDES": "CHK-mirror-0002",
+  "ACTOR_ID": "mirror",
+  "TASK_ID": "GOV311-MIRROR-REVIEW-002-DELTA",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 2,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "84d2b841b6081929e59d61e961e49077aca69c03136451d1000c72d902ef0738",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+  "PREVIOUS_CHECKPOINT_COMPATIBILITY": "CHK-mirror-0002 is COMPATIBLE: same fingerprint, same generation, same directive version. No CORE artifact changed between the two — verified by recomputation, not inferred.",
+
+  "TIMESTAMP": "2026-08-16",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "REVIEWED_OBJECT": {
+    "candidate_id": "CAND-20260816-GOV311",
+    "content_revision": 5,
+    "manifest_revision": "5.1",
+    "candidate_content_hash": "c39ecae89677363802c8c7d24b704da185fc568fed360b08ad01adb39730c239",
+    "content_hash_unchanged_since_review_002": true,
+    "base_head": "749a9a9b8f29c855f803a43b979c591532557561",
+    "manifest_commit": "a87506a0109a7d167fd195cf41b3c937e28bacf4",
+    "files_changed_since_reviewed_head": ["governance/candidates/CAND-20260816-GOV311.md"],
+    "content_paths_touched": 0
+  },
+
+  "MILESTONES_REACHED": [
+    {
+      "milestone": "scope precondition — content unchanged",
+      "durable_evidence": "reviews/mirror/REV-GOV311-MIRROR-003.md § 1",
+      "status": "COMPLETE — one file changed, control plane; hash identical at both tips; domain and all four fingerprints unchanged"
+    },
+    {
+      "milestone": "RC-6…RC-10 verified individually",
+      "durable_evidence": "reviews/mirror/REV-GOV311-MIRROR-003.md § 2",
+      "status": "COMPLETE — all five RESOLVED; 14/14 source commits resolve; both omitted artifacts declared; structure repaired; counts removed; branch position corrected"
+    },
+    {
+      "milestone": "new material in 5.1 reviewed",
+      "durable_evidence": "reviews/mirror/REV-GOV311-MIRROR-003.md § 3",
+      "status": "COMPLETE — § 7 ESCALATIONS represents Mirror's verdicts faithfully; no added line asserts a Mirror PASS or ratification"
+    },
+    {
+      "milestone": "disposition recorded",
+      "durable_evidence": "reviews/mirror/REV-GOV311-MIRROR-003.md § 5",
+      "status": "COMPLETE — MIRROR_REVIEW: PASS_WITH_NOTES"
+    },
+    {
+      "milestone": "WORK_COMMIT + Session Learning Review",
+      "durable_evidence": "this commit; learning/mirror/SLR-mirror-0003.md",
+      "status": "COMPLETE"
+    }
+  ],
+
+  "TASK_STATE": "COMPLETE",
+
+  "FINDINGS": {
+    "required_changes_outstanding": [],
+    "resolved_and_verified": ["RC-6", "RC-7", "RC-8", "RC-9", "RC-10"],
+    "escalations_open": ["ESC-2", "ESC-3"],
+    "non_blocking_notes": ["NBN-3", "NBN-4", "NBN-5", "NBN-6"],
+    "governance_defect_candidates": ["GDC-1", "GDC-2"],
+    "operator_awareness": "Approving as written ratifies the two declared deviations from frozen text (PID-09, PID-10). Mirror recommends ACCEPT for both and declines to ratify them itself (H.1)."
+  },
+
+  "DURABLE_POINTERS": {
+    "branch": "mirror",
+    "delta_record": "reviews/mirror/REV-GOV311-MIRROR-003.md",
+    "full_review": "reviews/mirror/REV-GOV311-MIRROR-002.md (2d7c4ab8)",
+    "first_review": "reviews/mirror/REV-GOV311-MIRROR-001.md (c6a290e1)",
+    "session_learning_record": "learning/mirror/SLR-mirror-0003.md"
+  },
+
+  "RESUME_RULE": "Annex A.6 refusal rule. COMPLETE; do not resume. The disposition is bound to CANDIDATE_CONTENT_HASH c39ecae8… If any CONTENT path changes, that hash changes and a full new review is mandatory — PASS_WITH_NOTES must never be transferred across hashes. A further manifest-only revision may be delta-verified as this one was, but only after re-establishing, by recomputation, that the content hash is unchanged."
+}

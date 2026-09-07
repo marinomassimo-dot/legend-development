@@ -1,0 +1,154 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Independent R4 review of CAND-20260818-SCIENTIST-AB-SPEC REVISION 6, from R-1, in a fresh Mirror session that inherited nothing — not from a prior chat, and not from REV-SCIAB-MIRROR-001, -002, -003, -004 or -005, whose verdicts do not transfer to this content. Every value below was re-derived.",
+  "CHECKPOINT_ID": "CHK-mirror-0008",
+  "SUPERSEDES": "CHK-mirror-0007 (COMPLETE, revision 5 of the same candidate — a different content hash, not resumed)",
+  "ACTOR_ID": "mirror",
+  "TASK_ID": "SCIAB-MIRROR-REVIEW-006",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "_task_note": "Operator-directed review (body §10.2 OBSERVE/ASK/STEER), not a Task Contract issued under H.1 — no ACTIVE lease was consulted and none is needed for a review. Recorded for provenance, not to assert that an assignment authority was exercised.",
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "3dff8954d4f6a56f6be14bc72be369095a1436437913a1e908c4b33c9762f65c",
+  "FINGERPRINT_COMPOSED_AT": "BASE_HEAD cbce30168091f7769c56c4f019055fa55fd0d66a — and identical at the candidate content tip 2a854177, measured, so this review runs under exactly the governance the candidate is based on",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+  "TIMESTAMP": "2026-08-19",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "REHYDRATION": {
+    "VERDICT": "PASS",
+    "worktree": "pwd == git top-level == .claude/worktrees/mirror · branch mirror · HEAD 1b988344 · clean",
+    "role_contract": "roles/mirror.md read in full — PERSISTENT_LEGEND_ACTOR, worktree mirror, governance 3.1.1",
+    "governance_read": "Annex C (C.1-C.4), Annex D (D.1-D.5), Annex E (E.1, E.2, E.5, E.6), Annex G (G.1, G.2, G.3), Annex H.1/H.2, P5 v4 — all at BASE_HEAD",
+    "STABLE_ACTOR_IDENTITY": "mirror — reconstructed from durable repository evidence alone; no part depended on a prior conversation",
+    "CURRENT_SESSION_ROUTING": "NOT DECLARED. Not durable in the repository; an actor cannot observe its own routing reference. None invented, none inherited, no other Mirror session superseded.",
+    "agent_card": "no agent_card path exists at BASE_HEAD, on the candidate, or on branch mirror — verified by git ls-tree. Mirror's four declared capabilities remain UNVERIFIED; L2 suspended.",
+    "permitted_writes": "branch mirror only, under reviews/ · ledger/ · learning/",
+    "forbidden_writes": "main, root, any other actor's worktree, any *_current.md, any registry, the receipt ledger, the candidate branch",
+    "separation": "author plan · reviewer mirror · adjudicator operator — holds",
+    "G2": "NOT ENGAGED — nothing in the candidate touches Mirror's rubric, clustering, active-learning selection, review-yield or autonomy methodology, and nothing in this review self-ratifies Mirror methodology",
+    "worktree_debt": "branch mirror still carries plan_defined_parameters.md at P5 v3 while BASE_HEAD carries v4 (R-10, sixth review running). Every binding number was computed with BASE_HEAD's own script in a detached worktree, or by an implementation written in the scratchpad from the v4 normative text."
+  },
+
+  "REVIEWED_OBJECT": {
+    "CANDIDATE_ID": "CAND-20260818-SCIENTIST-AB-SPEC",
+    "REVISION": 6,
+    "BASE_HEAD": "cbce30168091f7769c56c4f019055fa55fd0d66a",
+    "CONTENT_TIP": "2a854177a1b4cdf1c6d00867c7278c97f62f1645",
+    "MANIFEST_TIP": "5edfd040ec273d5a92be1f3e6f1dfeb410665d22",
+    "CANDIDATE_CONTENT_HASH": "beef6db08bdf8489b68078fc00c08fee913a585a4e1ee8359b592fc9e31a6061",
+    "CANDIDATE_HASH_VERSION": "legend-candidate-v4",
+    "CHANGE_CLASS": "MAJOR",
+    "topology_verified": "5edfd040^ == 2a854177; the manifest commit touches only governance/candidates/ and ledger/, both declared CONTROL_PLANE_ROOTS; revision 6 has exactly ONE content commit, so no pre-SLR revision-6 hash could have been declared, and none was",
+    "review_level": "R4 (MIRROR_REQUIRED — role contract in CORE, two new protocols, MAJOR)",
+    "population_reviewed": "manifest at 5edfd040 (1736 lines) in full; REV-SCIAB-MIRROR-005 and SLR-mirror-0013; the complete rev5->rev6 diffs of all four edited content files; SLR-plan-0006; controlled_benchmark_ab.md §1, §2.2, §2.3, §3, §4.3, §4.4 and the guarantee table at the content tip; benchmark_input_surface.py around cmd_verify, scan_skip_reason and SCAN_SKIP_CLASSES; the edited docstring and its test; surface_spec.json; CHK-plan-0016; at source roles/mirror.md, Annexes C, D, E, G, H.1, P5 v4"
+  },
+
+  "MILESTONES_REACHED": [
+    "M-1 rehydration fail-closed, PASS",
+    "M-2 binding reproduced: 4 governed runs + 8 independent recomputations + 6 published controls + 2 traps",
+    "M-3 asymmetry direction re-derived independently from §1/§2.2/§2.3/§3 — ENTAILED",
+    "M-4 blocking level re-derived independently — POLICY CHOICE; falsifier run across BASE_HEAD and revisions 1-4, no clause found",
+    "M-5 the M-5 remedy verified in canonical content, not only in the manifest — CLOSED",
+    "M-6 false-claim sweep over all 23 content files for the meaning, with a discriminating rev-5 control — 0 remaining",
+    "M-7 behaviour identity measured on 4 AST conventions + structural JSON + 4 live runs + payload-controlled digest control — IDENTICAL",
+    "M-8 M-1..M-4 re-measured from R-1 with an independent os.walk oracle and a passing instrument check in every run",
+    "M-9 UTF-16 gate, freeze and mode oracles re-run; oracles proved load-bearing by mutation (18 failures)",
+    "M-10 regression accounting with an AST-based target reader: 65/64 targets, 7/7 same-reason, ADDED 0, omission channel empty, non-granular targets compared by output",
+    "M-11 SLR-plan-0006 bound and curated under Annex E.2 — three re-classifications, none auto-ratified",
+    "M-12 human approval surface read as the operator meets it — CLEAR",
+    "M-13 durable review artifact written: reviews/mirror/REV-SCIAB-MIRROR-006.md"
+  ],
+
+  "TASK_STATE": "COMPLETE",
+
+  "MEASURED": {
+    "BINDING": "PASS",
+    "binding_runs": "governed script (BASE_HEAD's own) x3 at the content tip and x1 at the manifest tip; independent implementation x3 at the content tip and x1 at the manifest tip; all beef6db0…6061",
+    "domain_counts": "content tip 527 included / 32 excluded; manifest tip 527 / 33 (+CHK-plan-0016, control plane)",
+    "positive_controls": "all SIX published earlier values reproduce through the independent route: 2ffaedb2 5307d4d2… (526/31), a210f738 07b65b37… (525/30), a3cad1d 570fcbbb… (524/29), b634829 7cef4ccc… (523/28), daaa3335 c0701094… (523/27), b965ca58 3b568aae… (522/24)",
+    "trap": "line-sorted instead of path-sorted gives 740cb9c1… at 2a854177 and ab884df6… at 2ffaedb2 — both exactly the values the manifest publishes as its own trap",
+    "single_entry_delta": "learning/plan/SLR-plan-0006.md — the one content-domain entry taking 526 to 527, derived from the tree; nothing removed",
+    "superseded_chain": "every occurrence of every superseded value read with its line, in content and control plane alike — each is a supersedes: clause, a SUPERSEDED_* field, a labelled control row, a historical checkpoint record, or a sentence naming it superseded. No third place presents any as current.",
+    "ASYMMETRY_DIRECTION": "ENTAILED — re-derived from §2.2 (Plan sole writer until handover), §3 (build copies, no templating), §1 P-7, §2.3. The pre-handover guarantee row asserts 'all of it observed'; the post-read row asserts enumeration; an undecodable_text file is inconsistent with the first as written and consistent with the second. I1's surviving source-root disjunct does not defeat it: either branch leaves the same epistemic state. 16 of 16 allowlisted text-suffixed files decode at the content tip, so the surviving branch is empirically empty today — contingent, and stated as contingent.",
+    "PRE_HANDOVER_BLOCKING_LEVEL": "POLICY CHOICE — I4 eliminates only 'unscoped row + PASS'. (b) enumerate-and-scope is consistent with §1, §2.2, §2.3, §3 and §4.3, and is what --post-read already does with the same class. §3's 'rebuilt from the spec, never patched' governs what happens WHEN a surface fails, not which states are failures.",
+    "FALSIFIER_RUN": "no clause at BASE_HEAD or at revisions 1-4 requires an unanticipated-but-allowlisted artifact to exit non-zero. controlled_benchmark_ab.md and benchmark_input_surface.py DO NOT EXIST at cbce3016 (verified from the tree); the token BLOCKING first appears in the protocol at revision 5.",
+    "PLAN_AUTHORITY_TO_PROPOSE": "PASS — H.1 integrazione strutturale/candidate; no prior durable rule overridden; MAJOR, so Mirror R4 and operator HUMAN_APPROVAL are the gates and neither is spent",
+    "FAIL_CLOSED_CLAIM": "verified STRUCTURALLY, not from prose: the pre-handover branch in cmd_verify is a guarded loop that only APPENDS to findings and alters no other check, so (a) can only refuse surfaces (b) would admit, in every reachable state",
+    "POLICY_CHOICE_EXPLICIT": "YES — in canonical content at §4.4 (POLICY CHOICE / RATIONALE / ALTERNATIVE NOT CHOSEN / FAIL-CLOSED / STANDING), and repeated in manifest §1b",
+    "ALTERNATIVE_EXPLICIT": "YES — (b) named in §4.4 and in §1b, with what refusing costs",
+    "HUMAN_OPERATOR_AUTHORITY": "EXPLICIT — §4.4 STANDING: 'the choice is the Human Operator's to approve or refuse under H.1, and refusing it selects (b) without disturbing any other claim in this section'",
+    "FALSE_OPERATIVE_CLAIMS": 0,
+    "false_claim_sweep": "all 23 content files, for the meaning not the wording, with a control: the same sweep at revision 5 finds the two known false sites and at revision 6 finds none. Every surviving hit classified CURRENT TRUE or HISTORICAL. Every content site mentioning the class or the rule was read individually; all DECLARE the rule, none claims it was entailed.",
+    "BEHAVIOR_REV5_REV6": "IDENTICAL",
+    "behaviour_evidence": "benchmark_input_surface.py: 32/32 top-level defs, 32/32 stripped, 33/33 including nested, 51/51 top-level statements — all identical by ast.dump, 0 added, 0 removed. test file: 27/28 plain (HandoverGateCensusTests, where the docstring was edited), 28/28 stripped, 126/126 nested stripped, 0 test methods added. surface_spec.json: exactly one key path differs, content_scan/_note. Live: pre-handover clean and --post-read clean BYTE-IDENTICAL; the two hostile runs differ only in tree digests, and a control planting IDENTICAL bytes at both revisions makes them byte-identical including the digests.",
+    "comparator_instrument_check": "run over rev4->rev5 my comparator reports exactly two changed definitions, cmd_verify and unchecked_surface — the pair REV-SCIAB-MIRROR-005 measured",
+    "M_1": "PASS — guard byte-identical to BASE_HEAD (git diff empty over cbce3016->2a854177 and 2ffaedb2->2a854177); §5.1 present, verbatim_locators x3; the named test green at BASE and at the content tip and absent from both failing sets",
+    "M_2": "PASS — output/renders/smuggled.md -> NOT ALLOWLISTED + IDENTIFIER LEAK 20 hits, rc=1; the same bytes at …/fulltext_dossiers/NOTES.md -> identical findings; a real render -> rc=0 and named undecodable_prefix",
+    "M_3": "PASS — SILENT 0 in both modes at both revisions, measured against an independent os.walk universe",
+    "M_4": "PASS — PRESENT 48 · SCANNED 16 · CENSUSED 32 · SILENT 0 · OVERLAP 0, in BOTH modes at BOTH revisions, instrument check (roles/scientist.md must leak) PASSED in all four runs",
+    "UTF16_HANDOVER": "PASS — pre-handover rc=1, VERDICT FAIL, UNANTICIPATED x2 (one per surface), class undecodable_text, MODE line 'pre-handover (HANDOVER GATE)'; same bytes --post-read rc=0, PASS, UNANTICIPATED 0, named under [UNCHECKED]. Identical at both revisions.",
+    "FREEZE": "PASS — receipts field-for-field identical at both revisions (29 fields, same TREE_SHA256 e2c1e171…); SURFACE_ABSOLUTE_PATH carries the declared-absent value, not a path; verify-freeze PASS on the untouched tree; one byte appended after the freeze refuses with rc=1",
+    "MODE_SPECIFIC_ORACLES": "PASS — verify_pre() redirected to --post-read in a scratchpad copy produces 18 failures, every mode-specific test in HandoverGateCensusTests plus the at-handover partition, and the post-read partition correctly does not move",
+    "WRONG_REASON_LOAD_BEARING_PASSES": 0,
+    "BASE_GRANULAR_FAILING_TESTS": 7,
+    "REV6_GRANULAR_FAILING_TESTS": 7,
+    "ADDED_FAILING_TESTS": 0,
+    "REMOVED_FAILING_TESTS": 0,
+    "SAME_REASON": "PASS — 7/7 identical after normalization; UNEXPLAINED REASON CHANGES 0. Paths, temp dirs, line numbers, times and addresses normalized; NO assertion text normalized.",
+    "failing_suites": "6 at both tips, identical set",
+    "tests_executed": "870 at BASE_HEAD, 953 at the content tip, delta 83 = exactly the added suite — reconciling with Plan's corrected figures and with REV-SCIAB-MIRROR-004's published 870",
+    "targets": "65 at the candidate, 64 at base, read by AST because a regex misses two implicit-string-concatenation entries",
+    "omission_channel": "EMPTY at both tips, measured — no target exits non-zero while reporting no failing test",
+    "non_granular_targets": "3 — launch/test_legend_launch.py and the two skill-package suites. rc=0 at both tips and their ACTUAL OUTPUT is byte-identical after path normalization. Reported apart; never counted as test-level passes.",
+    "GATES": "legend_lint PASS (1 pre-existing INFO) · public_release_gate PASS BLOCKS 0 · growth_anchors PASS 39/70/356/390 · fulltext_receipts OK 128 chained and anchored · fresh-clone reader journey 5 tests OK · documented commands 2 tests OK — all identical at BASE_HEAD and at the content tip",
+    "CANONICALIZATION_DEPENDENCY": "CONFIRMED — scientist fingerprint rotates 355e3529… -> 82423a48…; mirror, plan and orchestrator identical at both tips",
+    "STABILIZED_PROPERTIES": "18 of 23 content files byte-identical to revision 5 by blob sha. B-1 population re-derived from the tree: 65 units, 109 sub-units, kind distribution recorded. B-3, B-5, MODE A/B, actor equivalence, C-2, input parity, scientific depth, actor registration, no parallel claim schema (all three claims.json hits read individually and every one is a FORBIDDING clause) — PRESERVED.",
+    "SCOPE_CREEP": "NONE — content diff cbce3016 -> 2a854177 has zero paths matching session|rout|registr, zero *_current.md, zero registry or receipt-ledger paths; rev5 -> rev6 changes exactly 4 content files edited plus 1 added"
+  },
+
+  "FINDINGS": {
+    "BLOCKING": "NONE",
+    "M_5": "CLOSED — the entailed direction is separated from the chosen level in canonical content, the alternative and its cost are named, and the approver is named. All four operative sites corrected; no fifth found by a meaning-search proved to discriminate.",
+    "RESOLVED": {
+      "P-9": "RESOLVED — four Status cells now read (rev 3, rev 4, rev 5, rev 6); probe count 83 matches the measured suite; control-plane figure 9 at the content tip matches my measurement (10 at the manifest tip), with every checkpoint row listed",
+      "P-10": "RESOLVED — tests executed 870/953 reproduces my independent measurement exactly; the revision-4 cell is struck rather than back-filled"
+    },
+    "NEW_NON_BLOCKING": {
+      "P-12": "§4.3 of the manifest states '59 tests, all green (45 at revision 2)' and 'against this revision 45 ran · 45 pass' while the suite is 83, and §4.3 carries NO revision label although the section immediately after it is titled 'Revision 1's evidence, retained'. P-9's class one revision after P-9 was closed. Control plane, moves no hash, and the true count is stated correctly three times elsewhere in the same document. Weighed NON-BLOCKING on consistency with REV-SCIAB-MIRROR-005, which classed P-9 and P-10 — the same class, same document — as P-class. Remedy: a four-word retention label.",
+      "P-13": "The manifest §4.6a and SLR-plan-0006 both say '51 of 51 top-level definitions' and '40 of 40 definitions'. Those are top-level STATEMENTS: the tool has 32 top-level definitions, 33 including nested, 51 top-level statements. The counts reproduce exactly under the statement convention and the substantive claim is true on all four conventions, so this is a naming defect, not a false measurement. Same record's unqualified 'byte-identical' for the two hostile runs is qualified correctly in manifest §4.6a and not in the record."
+    },
+    "N_7": "UNRESOLVED NON-BLOCKING — fifth review running, and I established WHY rather than only that. Its numbers are evidence for the revision-2 suite discriminating against revision 1's tool; that claim is now carried by the rev-4 differential (20 of 83, 17 on substance), the rev-3 differential (12 of 71), and my own mutation experiment (18 failures), which uses none of the disputed figures. No PASS sentence, census claim, census class, guarantee row or test cites the revision-1 differential. It lives only in manifest §4.3 — control plane, and the section P-12 is about.",
+    "CARRIED": "P-4 (cmd_verify has 0 emit_digests references, cmd_build has 6 — verified by AST; stated, not closed) · P-6 (iter_files byte-identical, .git still outside both populations; not closed) · P-7 (test byte-identical and green) · P-11 (correctly declined) · N-1 · N-2 · N-3 · N-6 (0 test methods added, so no exit-code-only assertion could have been added — measured by name-set difference) · N-8 · N-9 · P-1 · P-3 · P-5 — all carried by byte identity over every definition including nested ones. R-1..R-12 not reopened; R-10 remains Mirror's own worktree debt.",
+    "SLR_PLAN_0006": "BOUND — belongs to task SCIENTIST-AB-SPEC-001 / directive v1 / generation 6 matching CHK-plan-0016; is CONTENT under P5.1; present at the content tip and absent at revision 5; and IS the single entry taking the domain 526 -> 527, so it was written before any revision-6 binding could be named",
+    "SLR_CURATION_E2": "Three re-classifications, none auto-ratified. L-1 SPLIT: the defect instance is EXPOSURE_AFTER_BROADCAST (origin mirror, -005 §4C); the mechanism 'a fail-closed choice is the kind most likely to be written up as an entailment' is ORIGINAL_OBSERVATION by Plan and meets E.2's second threshold (1 + Mirror validation) -> BEST_PRACTICE_CANDIDATE. L-2 SPLIT: the observed gap is -005 §4B and is REPLICATION; the DETECTOR (premises about what can be claimed vs conclusion about what the machine does) is ORIGINAL_OBSERVATION and is the durable half. L-3 REFINED to REPLICATION of SLR-plan-0004 L-1 by the record's own text, SCOPE widened from a code population to a normative-claim population — which is the second confirmation SLR-plan-0004 L-1 needed, so that learning crosses E.2's >=2 threshold. The boundary section's own classification is RATIFIED AS WRITTEN."
+  },
+
+  "SELF_REPORTED_HARNESS_DEFECTS": [
+    "My falsifier sweep across revisions 1-4 returned zero hits at every tip and the zeros were an error, not a measurement: in zsh, \"$tip:framework/…\" consumes :f and :r as history modifiers, so every git show received a truncated path and failed, and 2>/dev/null swallowed the message. Caught by an instrument check — a string I knew was present came back absent. Re-run with ${tip}:${P}, the sweep discriminates and every number in the derivation is from the corrected run. New form of the SLR-mirror-0013 family: there the shell's grep was shimmed, here the shell's QUOTING was the instrument.",
+    "My first hostile battery wrote its pristine copies INSIDE the surface, and verify correctly reported them as NOT ALLOWLISTED — my findings, not the tool's, inflating the pre-handover run to 4 findings and the post-read run to 2. Backups moved outside the surface tree, surfaces rebuilt, and a clean-pair control added that must PASS in both modes at both revisions before any hostile run is read.",
+    "My first byte-comparison of two verify outputs reported BYTE-IDENTICAL while both runs had exited rc=2 on a wrong --surfaces argument — two identical refusal messages. Caught by requiring a real VERDICT line rather than an exit code.",
+    "I nearly filed P-13 as a false measurement. Enumerating the counting conventions showed the claim reproduces exactly under one Plan did not name. Recorded because the error would have been in the direction my previous review's success biased me toward."
+  ],
+
+  "DURABLE_POINTERS": {
+    "review": "reviews/mirror/REV-SCIAB-MIRROR-006.md",
+    "session_learning_review": "learning/mirror/SLR-mirror-0014.md",
+    "prior_review": "reviews/mirror/REV-SCIAB-MIRROR-005.md (revision 5, REQUEST CHANGES)",
+    "prior_checkpoint": "ledger/checkpoints/mirror/CHK-mirror-0007.json",
+    "candidate_manifest": "governance/candidates/CAND-20260818-SCIENTIST-AB-SPEC.md at 5edfd040 (control plane, not on this branch)"
+  },
+
+  "SCOPE": {
+    "VERDICT": "ACCEPT",
+    "HUMAN_APPROVAL": "NONE — not granted, not recommended, not implied. ACCEPT is a review verdict under H.1 (epistemic/method review -> Mirror); the MAJOR approval is the operator's and is unspent.",
+    "MAIN": "cbce30168091f7769c56c4f019055fa55fd0d66a — UNCHANGED",
+    "BATCH": "NOT AUTHORIZED — CANONICAL_BATCH_COMMIT is Orchestrator's alone, under an ACTIVE lease and GATE 0",
+    "BENCHMARK": "NOT AUTHORIZED — not executed",
+    "not_done": "no actor registered, no capability verified, L2 suspension not lifted, no lease taken, no *_current.md / registry / receipt ledger written, no other actor's worktree written, the candidate branch not written",
+    "SESSION_ROUTING_DEBT": "OUT OF SCOPE — NOT SILENTLY RESOLVED. Nothing implemented, no SESSION_REF declared or inferred, no routing inferred from chat recency, no other Mirror session superseded.",
+    "MIRROR_METHODOLOGY": "UNRATIFIED and not self-ratified (G.2). E.2 curation of another actor's record is Mirror's under H.1 and touches none of Mirror's own rubric, clustering, active-learning selection, review-yield or autonomy method."
+  },
+
+  "RESUME_RULE": "Annex A.6 refusal rule. COMPLETE; do not resume. The verdict is bound to CANDIDATE_CONTENT_HASH beef6db08bdf8489b68078fc00c08fee913a585a4e1ee8359b592fc9e31a6061 at BASE_HEAD cbce30168091f7769c56c4f019055fa55fd0d66a. Any material change to the candidate invalidates it (D.2) and a revision 7 must be reviewed from R-1 by a new independent review: no verdict, no PASS, no CONFIRMED and no closure recorded here transfers to different content — M-1, M-2, M-3, M-4 and M-5 included. Recompute the mirror fingerprint before resuming and never compare against a value copied from prose; recompute the candidate hash with BASE_HEAD's own candidate_content_hash.py, in a tree carrying P5 v4, and never in the mirror checkout while R-10 stands."
+}

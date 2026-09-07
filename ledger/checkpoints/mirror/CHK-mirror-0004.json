@@ -1,0 +1,73 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Independent R4 review of CAND-20260818-SCIENTIST-AB-SPEC, from R-1, in a fresh Mirror session that inherited nothing. Every value below was re-derived; none was carried from a prior chat.",
+
+  "CHECKPOINT_ID": "CHK-mirror-0004",
+  "SUPERSEDES": "CHK-mirror-0003 (COMPLETE, unrelated object — not resumed)",
+  "ACTOR_ID": "mirror",
+  "TASK_ID": "SCIAB-MIRROR-REVIEW-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "_task_note": "Operator-directed review (body §10.2 OBSERVE/ASK/STEER), not a Task Contract issued under H.1 — no ACTIVE lease was consulted for this assignment and none was needed for a review; recorded so the review has provenance, not to assert that a task-assignment authority was exercised.",
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "3dff8954d4f6a56f6be14bc72be369095a1436437913a1e908c4b33c9762f65c",
+  "FINGERPRINT_COMPOSED_AT": "BASE_HEAD cbce30168091f7769c56c4f019055fa55fd0d66a — the governance the candidate is based on",
+  "FINGERPRINT_AT_OWN_WORKTREE_HEAD": "84d2b841b6081929e59d61e961e49077aca69c03136451d1000c72d902ef0738 — branch mirror carries plan_defined_parameters.md at P5 v3 (stale vs main); the difference is exactly that file; role contract identical",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+
+  "TIMESTAMP": "2026-08-18",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "REHYDRATION": {
+    "worktree": "mirror",
+    "worktree_matches_git_toplevel": true,
+    "branch": "mirror",
+    "head_at_open": "9cf939f2b95c010c07da49a3b2dad73c357c222e",
+    "tree_at_open": "clean",
+    "role_contract_read": "roles/mirror.md — in full; identical on main and on this branch",
+    "stable_actor_identity": "mirror · worktree mirror · roles/mirror.md — deployment/deployment_profile.md + roles/",
+    "current_session_ref": "NOT DECLARED — an actor cannot observe its own routing reference; the git-ignored local_instance.md row `mirror: mirror-9c` describes a prior incarnation and is not asserted for this one (body §43: stale row is not authoritative)",
+    "result": "MIRROR REHYDRATION: PASS"
+  },
+
+  "REVIEWED_OBJECT": {
+    "candidate_id": "CAND-20260818-SCIENTIST-AB-SPEC",
+    "revision": 1,
+    "base_head": "cbce30168091f7769c56c4f019055fa55fd0d66a",
+    "content_tip": "b965ca5880e93ad57770a0483aaa4652ec5f390c",
+    "latest_manifest_tip": "6cb3b446f798f55261786800d78f65e612764197",
+    "candidate_content_hash": "3b568aae6c76848da197cacd43e517373ab7ca9532cf9289a73097e261916c75",
+    "hash_version": "legend-candidate-v4",
+    "hash_reproduced_at": ["b965ca58 ×2", "07564905", "7641dfdf", "e9b8680", "6cb3b446", "independent recomputation without the script: 522 entries, 27 excluded"],
+    "content_files": 17,
+    "control_plane_files": 4,
+    "main_unchanged": true
+  },
+
+  "MILESTONES_REACHED": [
+    {"milestone": "identity rehydration fail-closed", "durable_evidence": "reviews/mirror/REV-SCIAB-MIRROR-001.md § 0", "status": "COMPLETE — PASS"},
+    {"milestone": "binding reproduced at content tip ×2, at every later commit, and independently", "durable_evidence": "REV-SCIAB-MIRROR-001.md § 1", "status": "COMPLETE — PASS"},
+    {"milestone": "candidate read in full; tooling executed with positive and negative controls; population re-derived; regressions measured at both tips with controls; gate with positive control", "durable_evidence": "REV-SCIAB-MIRROR-001.md § 3", "status": "COMPLETE"},
+    {"milestone": "findings recorded — five blocking (B-1 population wrong; B-2 DELTA +2 suites vs 'identical' claim; B-3 freeze receipt under-binds; B-4 tool PASS over-states: symlinks, forbidden paths under slots, traversal; B-5 three refused fields are required labels and the registry premise fails measurement), twelve recorded", "durable_evidence": "REV-SCIAB-MIRROR-001.md § 4–5", "status": "COMPLETE"},
+    {"milestone": "verdict + WORK_COMMIT + Session Learning Review", "durable_evidence": "this commit; learning/mirror/SLR-mirror-0009.md", "status": "COMPLETE — REQUEST CHANGES"}
+  ],
+
+  "TASK_STATE": "COMPLETE",
+
+  "FINDINGS": {
+    "blocking": ["B-1", "B-2", "B-3", "B-4", "B-5"],
+    "recorded": ["R-1", "R-2", "R-3", "R-4", "R-5", "R-6", "R-7", "R-8", "R-9", "R-10", "R-11", "R-12"],
+    "unresolved": ["Plan's '18 broken links' count not reproducible from history (class reproduced by positive control)", "Plan's '8 suites at BASE_HEAD in root' not reproducible in a clean checkout (6); irrelevant to the delta"],
+    "verdict": "REQUEST CHANGES",
+    "human_approval": "NONE — not granted, not recommended yet, not implied"
+  },
+
+  "DURABLE_POINTERS": {
+    "branch": "mirror",
+    "review": "reviews/mirror/REV-SCIAB-MIRROR-001.md",
+    "session_learning_record": "learning/mirror/SLR-mirror-0009.md"
+  },
+
+  "RESUME_RULE": "Annex A.6 refusal rule. COMPLETE; do not resume. The verdict is bound to CANDIDATE_CONTENT_HASH 3b568aae…916c75 @ cbce3016. Any content change produces a new hash and requires a new review from R-1; REQUEST CHANGES transfers no partial credit to a revision, and a revision is not delta-verified unless the content hash is first re-established unchanged by recomputation."
+}

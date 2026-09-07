@@ -1,0 +1,72 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Written at the PARK point of GOV311-MIRROR-REVIEW-001. The path follows PID-13, which is PROPOSED and was itself parked unreviewed; using it is a practical choice pending adjudication, not an endorsement of PID-13.",
+
+  "CHECKPOINT_ID": "CHK-mirror-0001",
+  "ACTOR_ID": "mirror",
+  "TASK_ID": "GOV311-MIRROR-REVIEW-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "fddbe5a5c4709ef127db58e1e2ea434f4f3cb7ccecabf948f08ea6833d7532bd",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "FINGERPRINT_PROVENANCE": "computed with governance/scripts/governance_fingerprint.py compose --role mirror over evidence-index@154aef5, exported read-only to a scratchpad; never copied from prose. PROVISIONAL: the hashed artifacts are PROPOSED, not canonically committed.",
+  "GOVERNANCE_VERSION": "3.1.1",
+
+  "TIMESTAMP": "2026-08-16",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "MILESTONES_REACHED": [
+    {
+      "milestone": "M1 — CANDIDATE_BINDING_VERIFIED",
+      "durable_evidence": "reviews/mirror/REV-GOV311-MIRROR-001.md § 1",
+      "status": "COMPLETE — OUTCOME: FAILED. BASE_HEAD verified; CANDIDATE_CONTENT_HASH does not reproduce from any committed tree under 16 serialization variants across 9 commits. Method validated: the superseded revision-1 hash reproduces exactly under P5 v1."
+    },
+    {
+      "milestone": "M2 — HOSTILE_REVIEW_COMPLETED",
+      "durable_evidence": "reviews/mirror/REV-GOV311-MIRROR-001.md § 7",
+      "status": "NOT REACHED — PARKED. R-1 reviewed under Annex C.2; R-2 through R-7 not reviewed."
+    },
+    {
+      "milestone": "M3 — FINAL_DISPOSITION_RECORDED",
+      "durable_evidence": "reviews/mirror/REV-GOV311-MIRROR-001.md § 8",
+      "status": "COMPLETE — MIRROR_REVIEW: REVISION_REQUESTED, bound to the assigned hash and base."
+    },
+    {
+      "milestone": "M4 — REVIEW_WORK_COMMIT",
+      "durable_evidence": "this commit on branch mirror",
+      "status": "COMPLETE"
+    },
+    {
+      "milestone": "M5 — SESSION_LEARNING_REVIEW",
+      "durable_evidence": "learning/mirror/SLR-mirror-0001.md",
+      "status": "COMPLETE"
+    }
+  ],
+
+  "TASK_STATE": "PARKED",
+  "PARK_REASON": "RETRY_POLICY non_retryable condition reached: CANDIDATE_CONTENT_HASH mismatch. on_exhaust = PARK + report BLOCKER to operator.",
+
+  "REVIEWED_OBJECT": {
+    "candidate_id": "CAND-20260816-GOV311",
+    "revision": 4,
+    "recorded_content_hash": "2e7da13ff3bfff4554a28300d01b6e23b62ead3b787c3de78f92a2cd5b9256d7",
+    "recomputed_content_hash_via_manifest_command": "e3ca1983f6f09bc613fa1b108efc805f28c0a43782978eba2586cc1e04e79e76",
+    "base_head": "749a9a9b8f29c855f803a43b979c591532557561",
+    "base_head_verified": true,
+    "tree_reviewed": "evidence-index@154aef5b6257cd16e602447e881946091933ea23",
+    "manifest_recorded_tip": "3c6c6e15d2e95d6ccf18a1d27cca810bfc126a31"
+  },
+
+  "DURABLE_POINTERS": {
+    "branch": "mirror",
+    "review_record": "reviews/mirror/REV-GOV311-MIRROR-001.md",
+    "session_learning_record": "learning/mirror/SLR-mirror-0001.md",
+    "required_changes": ["RC-1", "RC-2", "RC-3", "RC-4", "RC-5"],
+    "escalations": ["ESC-1"],
+    "non_blocking_notes": ["NBN-1", "NBN-2"],
+    "governance_defect_candidates": []
+  },
+
+  "RESUME_RULE": "Annex A.6 refusal rule. Do not resume this task: its object is superseded by construction. Any corrected candidate carries a new CANDIDATE_CONTENT_HASH and requires a NEW review under a new TASK_ID or generation — a verdict must never be transferred across hashes. Note also that RC-2 amends plan_defined_parameters.md, which sits in CORE: applying it changes every role fingerprint, including this checkpoint's, which is the intended behaviour per P2.3 and not a malfunction."
+}

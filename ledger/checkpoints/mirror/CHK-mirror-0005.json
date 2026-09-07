@@ -1,0 +1,100 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Independent R4 review of CAND-20260818-SCIENTIST-AB-SPEC REVISION 2, from R-1, in a fresh Mirror session that inherited nothing — not from a prior chat, and not from REV-SCIAB-MIRROR-001, whose verdicts do not transfer to this content. Every value below was re-derived.",
+
+  "CHECKPOINT_ID": "CHK-mirror-0005",
+  "SUPERSEDES": "CHK-mirror-0004 (COMPLETE, revision 1 of the same candidate — a different content hash, not resumed)",
+  "ACTOR_ID": "mirror",
+  "TASK_ID": "SCIAB-MIRROR-REVIEW-002",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "_task_note": "Operator-directed review (body §10.2 OBSERVE/ASK/STEER), not a Task Contract issued under H.1 — no ACTIVE lease was consulted and none is needed for a review. Recorded for provenance, not to assert that an assignment authority was exercised.",
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "3dff8954d4f6a56f6be14bc72be369095a1436437913a1e908c4b33c9762f65c",
+  "FINGERPRINT_COMPOSED_AT": "BASE_HEAD cbce30168091f7769c56c4f019055fa55fd0d66a — and identical at the candidate content tip daaa3335, measured, so this review runs under exactly the governance the candidate is based on",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+
+  "TIMESTAMP": "2026-08-19",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "REHYDRATION": {
+    "worktree": "mirror",
+    "worktree_matches_git_toplevel": true,
+    "branch": "mirror",
+    "head_at_open": "ff8b15ccf45188b57eaf7dfbca2ba35abe9aafe8",
+    "tree_at_open": "clean",
+    "role_contract_read": "roles/mirror.md — in full, plus Annex C and Annex G at BASE_HEAD",
+    "stable_actor_identity": "mirror · worktree mirror · roles/mirror.md · PERSISTENT_LEGEND_ACTOR",
+    "current_session_ref": "NOT DECLARED — an actor cannot observe its own routing reference, and no durable protocol provides one here. None invented, none inherited.",
+    "worktree_debt_disclosed": "branch mirror carries plan_defined_parameters.md at P5 v3 and candidate_content_hash.py in its pre-fix (working-tree-reading) form; that pair yields 02231e82… for this candidate. Every binding number was therefore computed in a clean detached worktree of BASE_HEAD. This is revision 1's R-10, unchanged.",
+    "result": "MIRROR REHYDRATION: PASS"
+  },
+
+  "REVIEWED_OBJECT": {
+    "candidate_id": "CAND-20260818-SCIENTIST-AB-SPEC",
+    "revision": 2,
+    "base_head": "cbce30168091f7769c56c4f019055fa55fd0d66a",
+    "content_tip": "daaa33353840304aaa7d288b393a2b3bb4faa08d",
+    "latest_manifest_tip": "90fcfa2511accef4b749b4bf85d1bc1259e2bb7d",
+    "candidate_content_hash": "c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf",
+    "hash_version": "legend-candidate-v4",
+    "superseded_hash": "3b568aae6c76848da197cacd43e517373ab7ca9532cf9289a73097e261916c75",
+    "hash_reproduced_at": [
+      "daaa3335 via the canonical script",
+      "90fcfa25 via the canonical script ×3",
+      "daaa3335 independently, without the script: 523 included / 27 excluded",
+      "90fcfa25 independently, without the script: 523 included / 28 excluded"
+    ],
+    "content_files": 19,
+    "control_plane_files": 4,
+    "commits_after_content_tip": "90fcfa25 only, confined to governance/candidates/ and ledger/",
+    "main_unchanged": true
+  },
+
+  "MILESTONES_REACHED": [
+    {"milestone": "identity rehydration fail-closed", "durable_evidence": "reviews/mirror/REV-SCIAB-MIRROR-002.md § 0", "status": "COMPLETE — PASS"},
+    {"milestone": "revision-1 review read as historical evidence; no verdict transferred", "durable_evidence": "REV-SCIAB-MIRROR-002.md preamble and § 6", "status": "COMPLETE"},
+    {"milestone": "binding reproduced at the content tip, at the manifest tip ×3, and twice independently of the script", "durable_evidence": "REV-SCIAB-MIRROR-002.md § 1", "status": "COMPLETE — PASS"},
+    {"milestone": "population re-derived twice, byte-identical to the tracked file, and verified against the source caption by caption and heading by heading", "durable_evidence": "REV-SCIAB-MIRROR-002.md § 3 and § 5", "status": "COMPLETE — PASS"},
+    {"milestone": "hostile batteries executed: 13 post-read/symlink cases, 13 freeze cases, 8 locator cases, each asserting the reason code and not only the exit status", "durable_evidence": "REV-SCIAB-MIRROR-002.md § 3, § 4, § 5", "status": "COMPLETE"},
+    {"milestone": "release regressions measured at both tips in clean worktrees with no files/, compared at suite AND test-method granularity", "durable_evidence": "REV-SCIAB-MIRROR-002.md § 4 M-1", "status": "COMPLETE — DELTA +1 at test granularity"},
+    {"milestone": "findings recorded — two blocking (M-1 the delta is not zero; M-2 the printed blind spot omits an exemption prefix), nine recorded", "durable_evidence": "REV-SCIAB-MIRROR-002.md § 4–6", "status": "COMPLETE"},
+    {"milestone": "verdict + WORK_COMMIT + Session Learning Review", "durable_evidence": "this commit; learning/mirror/SLR-mirror-0010.md", "status": "COMPLETE — REQUEST CHANGES"}
+  ],
+
+  "TASK_STATE": "COMPLETE",
+
+  "MEASURED": {
+    "population": {"units": 65, "panels": 109, "main_figures": 6, "main_panels": 46, "supplementary_figures": 10, "supplementary_panels": 63, "supplement_methods_sections": 24, "main_methods_sections": 2, "main_results_sections": 7, "main_tables": 0, "supplement_table_sections": 7, "source_data_blots": 9, "declared_empty": ["brain-2025-03809-File008.pdf"], "determinism": "byte-identical across two runs and to the tracked evidence_units.json (sha256 b41c7b9f…)"},
+    "baseline_failure_set": ["scripts/test_release_runner_verdict.py", "scripts/test_locator_obligation_reaches_every_route.py", "scripts/test_abstract_corpus_is_not_evidence.py", "scripts/test_release_surface.py", "scripts/test_fulltext_trace_contract.py", "framework/scripts/test_session_self_eval.py"],
+    "candidate_failure_set": ["scripts/test_release_runner_verdict.py", "scripts/test_locator_obligation_reaches_every_route.py", "scripts/test_abstract_corpus_is_not_evidence.py", "scripts/test_release_surface.py", "scripts/test_fulltext_trace_contract.py", "framework/scripts/test_session_self_eval.py"],
+    "delta_regression_suite_granularity": 0,
+    "delta_regression_test_granularity": 1,
+    "added_failing_test": "scripts/test_locator_obligation_reaches_every_route.py::ObligationReachesEveryRoute::test_every_route_carries_the_obligation_or_declares_an_exemption — OK at cbce3016, FAILED at daaa3335, cause named by the assertion: framework/protocols/controlled_benchmark_ab.md",
+    "same_reason_check": "FAIL — five of six suites identical up to worktree path and timing; the sixth gained a failure",
+    "candidate_suite": "45 tests, 45 green",
+    "differential_against_pre_fix_tool": {"ran": 45, "failures": 22, "errors": 9, "passed": 14, "spurious_argparse_passes": 2, "genuine_passes": 12, "note": "Plan reports 41/10/9/7; the conclusion is unaffected — 31 discriminating probes here against Plan's 32"},
+    "publication_gate": "PASS / BLOCKS 0 at both tips",
+    "fingerprints": {"scientist": "355e3529… → 82423a48…", "plan": "identical", "mirror": "identical", "orchestrator": "identical"},
+    "claim_registry_at_base": {"claims": 39, "Uncertainty_label": 0, "Limitations_label": 0, "Contradictory_evidence_label": 0, "Evidence_boundary_label": 5}
+  },
+
+  "FINDINGS": {
+    "blocking": ["M-1", "M-2"],
+    "recorded": ["N-1", "N-2", "N-3", "N-4", "N-5", "N-6", "N-7", "N-8", "N-9"],
+    "blind_spot_classification": "MATERIAL-BLOCKING as a claim, CONTAINED as an exposure — the region under expected_output_prefixes is unchecked by verify --post-read, unflagged by freeze, and absent from the printed blind spot, while three artifacts assert it cannot be widened silently; the contamination it would carry still requires the already-declared J.0 residual",
+    "unresolved": ["Plan's 41/9/7 differential counts are not reproducible here (45/14/12); the cause is inferred, not observed, and the conclusion is unaffected"],
+    "verdict": "REQUEST CHANGES",
+    "human_approval": "NONE — not granted, not recommended yet, not implied"
+  },
+
+  "DURABLE_POINTERS": {
+    "branch": "mirror",
+    "review": "reviews/mirror/REV-SCIAB-MIRROR-002.md",
+    "prior_review": "reviews/mirror/REV-SCIAB-MIRROR-001.md — revision 1, not amended, verdicts not transferred",
+    "session_learning_record": "learning/mirror/SLR-mirror-0010.md"
+  },
+
+  "RESUME_RULE": "Annex A.6 refusal rule. COMPLETE; do not resume. The verdict is bound to CANDIDATE_CONTENT_HASH c0701094…21bcf @ cbce3016. Any content change produces a new hash and requires a new review from R-1; REQUEST CHANGES transfers no partial credit to a revision, and no PASS row above transfers either."
+}

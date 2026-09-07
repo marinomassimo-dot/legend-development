@@ -470,7 +470,7 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}"
         r"(?![A-Z0-9_%+-])"
     )
-    report_id = re.compile(r"(?i)\b(?:referto|report)\s+(?:id\s*)?(?<![A-Za-z0-9])(NG[-\d]{5,})\b")
+    report_id = re.compile(r"(?i)\b(?:referto|report)\s+(?:id\s*)?(?<![A-Za-z0-9])((?-i:NG)[-\d]{5,})\b")
     private_key = re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----")
     token_patterns = [
         ("OPENAI_KEY", re.compile(r"\bsk-[A-Za-z0-9_-]{20,}\b")),
@@ -979,7 +979,7 @@ def scan_readme_consistency(root: Path, findings: list[Finding]) -> None:
         corpus,
     )
     patient_markers = re.search(
-        r"(?i)(?:(?<![A-Za-z0-9])NG[-\d]{5,}|allele materno|allele paterno|"
+        r"(?i)(?:(?<![A-Za-z0-9])(?-i:NG)[-\d]{5,}|allele materno|allele paterno|"
         r"maternal\s+c\.1057-2A>G|paternal\s+(?:Q230P|p\.Gln230Pro)|"
         r"the proband.{0,200}(?:folinato|folinate|mg/kg|patient cells))",
         corpus,

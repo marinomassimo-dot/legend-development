@@ -1,0 +1,156 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Independent R4 review of CAND-20260818-SCIENTIST-AB-SPEC REVISION 5, from R-1, in a fresh Mirror session that inherited nothing — not from a prior chat, and not from REV-SCIAB-MIRROR-001, -002, -003 or -004, whose verdicts do not transfer to this content. Every value below was re-derived.",
+
+  "CHECKPOINT_ID": "CHK-mirror-0007",
+  "SUPERSEDES": "CHK-mirror-0006 (COMPLETE, revision 4 of the same candidate — a different content hash, not resumed)",
+  "ACTOR_ID": "mirror",
+  "TASK_ID": "SCIAB-MIRROR-REVIEW-005",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "_task_note": "Operator-directed review (body §10.2 OBSERVE/ASK/STEER), not a Task Contract issued under H.1 — no ACTIVE lease was consulted and none is needed for a review. Recorded for provenance, not to assert that an assignment authority was exercised.",
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "3dff8954d4f6a56f6be14bc72be369095a1436437913a1e908c4b33c9762f65c",
+  "FINGERPRINT_COMPOSED_AT": "BASE_HEAD cbce30168091f7769c56c4f019055fa55fd0d66a — and identical at the candidate content tip 2ffaedb2, measured, so this review runs under exactly the governance the candidate is based on",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+
+  "TIMESTAMP": "2026-08-19",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "REHYDRATION": {
+    "worktree": "mirror",
+    "worktree_matches_git_toplevel": true,
+    "branch": "mirror",
+    "head_at_open": "609553cce962236d2c70bd28e9e8c3c83cbf3753",
+    "tree_at_open": "clean",
+    "role_contract_read": "roles/mirror.md in full. Annexes C, D, E, G, H.1, body §12/§14/§15/§36.5 and P5 v4 read at BASE_HEAD",
+    "agent_card": "runtime/agent_card_registry.md is not on main and not on this branch; mirror's four declared capabilities remain UNVERIFIED per contract and L2 is suspended",
+    "stable_actor_identity": "mirror · worktree mirror · roles/mirror.md · PERSISTENT_LEGEND_ACTOR — reconstructed from durable repository evidence alone",
+    "current_session_ref": "NOT DECLARED — an actor cannot observe its own routing reference, and no durable protocol provides one here. None invented, none inherited. No prior Mirror session superseded.",
+    "worktree_debt_disclosed": "branch mirror carries plan_defined_parameters.md at P5 v3 and candidate_content_hash.py in its pre-fix form. Every binding number was computed in a clean detached worktree of BASE_HEAD (P5 v4, canonical script) or by an implementation written in the scratchpad from P5.1/P5.2. This is revision 1's R-10, unchanged, fifth review running.",
+    "result": "MIRROR REHYDRATION: PASS"
+  },
+
+  "REVIEWED_OBJECT": {
+    "candidate_id": "CAND-20260818-SCIENTIST-AB-SPEC",
+    "revision": 5,
+    "base_head": "cbce30168091f7769c56c4f019055fa55fd0d66a",
+    "content_tip": "2ffaedb2218ae9a9d96acf99fa6051ee545d6fef",
+    "manifest_tip": "4501a8af1a8ff75440d2cf7d9b590c9bf3ec9f56",
+    "candidate_content_hash": "5307d4d213c1d25c42a51e27811b7e375907ceed77682b343dee68e0e2b8423f",
+    "hash_version": "legend-candidate-v4",
+    "superseded_hashes": {
+      "revision_4": "07b65b3707a4e63df23918b844140e7548929b27a8a182f8ebf2d9b0ab165198",
+      "revision_3": "570fcbbbc7439a4dfa3bddaefa1166ce7e92fa280948a43851b9bef12ab78ab7",
+      "revision_3_intra": "7cef4cccb6684ef39cd6e17f605d396b2a1ad62a52c5d2c1413d64f97a794596",
+      "revision_2": "c0701094da01e6eb13a69a2194e040327ad6d2b691a4b31d9a1fb29bcba21bcf",
+      "revision_1": "3b568aae6c76848da197cacd43e517373ab7ca9532cf9289a73097e261916c75"
+    },
+    "not_a_binding": "1613fa3b26b79b4e099af0d9f24847e45693d14523b106f76787acb5fccb9332 at b1061ebb — a real content commit, never declared as a binding; reproduced here as a control",
+    "hash_reproduced_at": [
+      "2ffaedb2 via the governed script x3",
+      "4501a8af via the governed script — invariant, measured",
+      "2ffaedb2 independently, without the script: 526 included / 31 excluded",
+      "4501a8af independently, without the script: 526 included / 32 excluded (+CHK-plan-0015)",
+      "POSITIVE CONTROLS reproduced — all FIVE published values: a210f738 07b65b37… (525/30), a3cad1d 570fcbbb… (524/29), b634829 7cef4ccc… (523/28), daaa3335 c0701094… (523/27), b965ca58 3b568aae… (522/24)",
+      "b1061ebb 1613fa3b… (524/30) — the non-binding mid-revision-4 commit",
+      "TRAP exercised: line-sorted instead of path-sorted at 2ffaedb2 gives ab884df6d3065202b7f9537d0e02f2cafd7ee4927da033a9f0e5b92ed4e1db2c — exactly the value the manifest publishes as the wrong one"
+    ],
+    "content_files": 22,
+    "content_changed_at_rev5": "4 edited + 1 added (learning/plan/SLR-plan-0005.md)",
+    "content_byte_identical_to_rev4": 17,
+    "function_level_delta": "37 of 39 top-level definitions byte-identical by AST segment, 2 changed (cmd_verify, unchecked_surface), 0 added, 0 removed. scan_skip_reason and SCAN_SKIP_CLASSES among the identical.",
+    "main_unchanged": true
+  },
+
+  "MILESTONES_REACHED": [
+    {"milestone": "identity rehydration fail-closed", "durable_evidence": "reviews/mirror/REV-SCIAB-MIRROR-005.md § 0", "status": "COMPLETE — PASS"},
+    {"milestone": "prior reviews read as historical evidence; no verdict transferred", "durable_evidence": "REV-SCIAB-MIRROR-005.md preamble and § 16", "status": "COMPLETE"},
+    {"milestone": "binding reproduced 12 times, 8 without the governed script, with FIVE published controls and the line-sort trap matching the published wrong value", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 1", "status": "COMPLETE — PASS"},
+    {"milestone": "PRIMARY: the §4.4 pre-handover blocking derivation written out as numbered premises with sources and each inference attacked", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 4A–§4E", "status": "COMPLETE — SUPPORTED_BUT_NOT_ENTAILED"},
+    {"milestone": "Plan's authority to specify the stricter rule inside this candidate determined from H.1, D.2 and the fact that the protocol is not canonical at BASE_HEAD", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 4D", "status": "COMPLETE — PASS"},
+    {"milestone": "REV4→REV5 contract delta tabulated per property, with the source of each change and its class", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 5", "status": "COMPLETE — MIXED"},
+    {"milestone": "M-4 reproduced historically at revision 4 on a clean build before revision 5 was assessed", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 6", "status": "COMPLETE — REPRODUCED: SILENT 32, CENSUS 0, VERDICT PASS, path named 0x"},
+    {"milestone": "revision 5 partition measured in BOTH modes with an independent os.walk universe and a behavioural scan probe, instrument-checked in each", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 7", "status": "COMPLETE — 48 = 16 + 32, SILENT 0, OVERLAP 0, both modes"},
+    {"milestone": "mode-specific contract matrix built independently and compared across normative text, tool output, executable behaviour and test expectation", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 8", "status": "COMPLETE — all four agree per mode"},
+    {"milestone": "UTF-16 hostile battery at the gate: 10 payload rows x 2 modes, identical bytes in both surfaces, 2 instrument checks first", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 9", "status": "COMPLETE — PASS, blocking with the correct reason"},
+    {"milestone": "P-7 encoding boundary reproduced by construction over 9 code points, both byte orders", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 10", "status": "COMPLETE — my old reasoning FALSE, Plan's revised boundary SUPPORTED"},
+    {"milestone": "mode-specific oracles proved by mutation rather than by reading", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 11", "status": "COMPLETE — wrong mode → 18 failures"},
+    {"milestone": "discrimination compared as SETS, not counts, raw and with the MODE line back-ported", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 12", "status": "COMPLETE — 20 → 17; the 3 that stop are exactly the 2 positive controls and the post-read partition"},
+    {"milestone": "M-1, M-2, M-3 re-measured from R-1; freeze battery with the positive control first and AST-proved isolation from both changed functions", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 13", "status": "COMPLETE — all closed, freeze 13/13"},
+    {"milestone": "release regressions measured at both tips with my own harness at test-method granularity, with the omission channel and the non-granular targets recorded separately", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 14", "status": "COMPLETE — ADDED 0, REMOVED 0, same-reason 7/7, omission channel empty, 3 non-granular targets identical"},
+    {"milestone": "gates, documented commands, fresh-clone journey, and the question whether the live route invokes the mode revision 5 specifies", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 15", "status": "COMPLETE — PASS; the gate is the pre-handover mode"},
+    {"milestone": "SLR-plan-0005 procedural integrity verified and curated under E.2", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 17", "status": "COMPLETE — BOUND"},
+    {"milestone": "findings recorded — one blocking (M-5), three recorded (P-9, P-10, P-11), thirteen carried re-classified, one resolved (P-8)", "durable_evidence": "REV-SCIAB-MIRROR-005.md § 16", "status": "COMPLETE"},
+    {"milestone": "verdict + WORK_COMMIT + Session Learning Review", "durable_evidence": "this commit; learning/mirror/SLR-mirror-0013.md", "status": "COMPLETE — REQUEST CHANGES"}
+  ],
+
+  "TASK_STATE": "COMPLETE",
+
+  "MEASURED": {
+    "file_universe_rev5_pre_handover": {"present_regular": 48, "symlinks": 0, "scanned": 16, "censused": 32, "silent": 0, "overlap": 0, "instrument_check": "PASSED"},
+    "file_universe_rev5_post_read": {"present_regular": 48, "symlinks": 0, "scanned": 16, "censused": 32, "silent": 0, "overlap": 0, "instrument_check": "PASSED"},
+    "file_universe_rev4_pre_handover": {"present_regular": 48, "scanned": 16, "censused": 0, "silent": 32, "overlap": 0, "verdict": "PASS", "instrument_check": "PASSED"},
+    "file_universe_rev4_post_read": {"present_regular": 48, "scanned": 16, "censused": 32, "silent": 0, "overlap": 0},
+    "census_classes_pre_handover": {"scan_exempt_input": 12, "suffix_not_scanned": 20},
+    "classes_reachable_pre_handover": 3,
+    "utf16_at_the_gate": {"rc": 1, "verdict": "FAIL", "finding": "UNANTICIPATED", "class": "undecodable_text", "path_named": 4, "parity": "holds", "post_read_counterpart": "rc=0 PASS, named 2x, EXPECTED_BY_PROTOCOL NO, counted separately"},
+    "encoding_rows": {"non_ascii_utf16_and_legacy": 7, "all_block_pre_handover": true, "all_informational_post_read": true, "p7_ascii_only_bomless_rows": 2, "p7_still_scanned": true},
+    "p7_boundary": {"old_reasoning": "FALSE — U+2014/U+2013/U+2018-201D encode below 0x80 in both UTF-16 byte orders and decode as UTF-8", "revised_boundary": "SUPPORTED — the criterion is a byte above 0x7f", "real_artifact": "411 non-ascii chars, 188 bytes > 0x7f in utf-16-le, does not decode"},
+    "mode_oracle_mutation": {"mutation": "verify_pre() redirected to --post-read in a scratchpad copy", "failures": 18, "post_read_partition_correctly_unaffected": true},
+    "candidate_suite": {"tests": 83, "green": 83, "at_rev4": 71, "added": 13, "removed": 1},
+    "discrimination": {"raw_vs_rev4_tool": 20, "with_mode_backported": 17, "stopped_failing": ["test_every_present_file_is_either_scanned_or_named_post_read", "test_positive_control_the_same_payload_in_utf8_is_read_and_caught", "test_positive_control_the_scan_fires_at_the_handover_gate"], "newly_failing": [], "note": "two tests moved FAIL→ERROR and remained non-passing; a count comparison would have agreed for the wrong reason"},
+    "freeze_battery": {"cases": 13, "as_predicted": 13, "receipt_fields": 29, "machine_absolute_paths": 0, "isolated_from_changed_functions": "verified by AST — cmd_freeze, cmd_verify_freeze and _classify call neither cmd_verify nor unchecked_surface"},
+    "input_parity_negatives": {"cases": 5, "as_predicted": 5, "modes": "both"},
+    "six_path_same_bytes": {"runs": 24, "parity_broken_in_any": false, "controls_fail_in_both_modes_at_both_revisions": true},
+    "population": {"units": 65, "panels": 109, "determinism": "byte-identical across two runs and to the tracked evidence_units.json (sha256 b41c7b9f432e48c74eb79be08b6d544f534aba9d0560063b1ee48f851e0b403a)"},
+    "regression": {"targets_base": 64, "targets_rev5": 65, "tests_executed_base": 870, "tests_executed_rev5": 953, "failing_suites": "6 at both, identical set", "granular_failing_tests": "7 at both, identical set", "added": 0, "removed": 0, "same_reason": "7/7", "unattributed_channel": "empty at both tips", "non_granular_targets": 3, "non_granular_comparison": "rc 0 and normalized output byte-identical at both tips, all three"},
+    "publication_gate": "PASS / BLOCKS 0 at the content tip",
+    "legend_lint": "PASS (1 pre-existing INFO)",
+    "growth_anchors": "PASS — claims=39 · papers=70 · corpus=356 · literature=390",
+    "fingerprints": {"scientist": "355e3529… → 82423a48…", "plan": "9c0c13fb… identical", "mirror": "3dff8954… identical", "orchestrator": "e2c54470… identical"},
+    "source_root_steelman": "16 of 16 allowlisted text-suffixed source files decode as UTF-8 — the un-forbidden disjunct of §4.4's derivation is empirically empty for BENCH-AB-001 today, which is contingent and not normative"
+  },
+
+  "FINDINGS": {
+    "blocking": ["M-5"],
+    "m5_statement": "§4.4 of controlled_benchmark_ab.md states that the pre-handover BLOCKING level of EXPECTED_BY_PROTOCOL: NO is 'derived and not chosen'. The DIRECTION of the asymmetry (anomaly before handover vs artifact after) is entailed by §2.2's writer identity and is correctly derived. The LEVEL is not: §4.4's first leg is a disjunction of which §3 forbids only the 'patched surface' branch, leaving 'the source root carries a non-UTF-8 text-suffixed file' un-excluded by any clause; and its remaining legs establish only that the pre-handover guarantee row cannot be asserted over such a file, which forces a choice between blocking and scoping the row rather than blocking itself. An alternative consistent with every premise §4.4 cites — PASS, named under [UNCHECKED], counted separately, guarantee row scoped, exactly as --post-read does — was available, and Plan states in §4.0aaa of the manifest and in SLR-plan-0005 L-2 that it was available and refused. Neither disclosure is in §4.4, and §4.4 is content that canonicalizes while the manifest is control plane that does not. The candidate is MAJOR and H.1 places MAJOR approval with the operator; a decision described as an entailment is a decision removed from whoever holds the authority to make it. Remedy: one sentence in §4.4, no behaviour change and no test change.",
+    "derivation_classification": "SUPPORTED_BUT_NOT_ENTAILED",
+    "plan_authority_for_the_change": "PASS — the protocol does not exist at BASE_HEAD, so the candidate is where it is authored; H.1 gives Plan candidate authority; the change is MAJOR with Mirror R4 and operator HUMAN_APPROVAL both unspent; the rule is declared in three places in the candidate's own normative text and implemented exactly as declared; G.2 not engaged",
+    "closed": ["M-1", "M-2", "M-3 in both modes", "M-4 in both modes"],
+    "recorded": [
+      "P-9 (the manifest's §2 file-list table is stale at revision 5: four Status cells omit rev 5, the test-file cell says 71 probes where the suite is 83, and 'control plane 6 files' where the measured count is 8 at the content tip and 9 at the manifest tip. The prose under the same table is updated and exact. Control plane, moves no binding — P-8's class, one revision after P-8 was closed)",
+      "P-10 (§4.2's 'tests executed' row reports 850/933 where two independently authored instruments measure 870/953, and is internally inconsistent with its own revision-4 cell of 941. Descriptive; no load-bearing row depends on it and all of those reconcile exactly)",
+      "P-11 (one of the 17 substantively discriminating tests discriminates on the new printed line '[BLIND SPOT] none in this mode' while the forbidden-path enforcement block is byte-identical rev4→rev5 and produces the same 8 findings at both tips. The line is true; Plan's characterization of all 17 as failing on substance is imprecise for this one)"
+    ],
+    "carried": ["P-1", "P-3", "P-4", "P-5", "P-6", "P-7", "N-1", "N-2", "N-3", "N-6", "N-8", "N-9"],
+    "resolved_by_rev5": ["P-8"],
+    "unresolved": ["N-7 — Plan's revision-1 differential counts remain unreconciled for the fourth review running; neither side re-ran revision 1's tool"],
+    "verdict": "REQUEST CHANGES",
+    "human_approval": "NONE — not granted, not recommended, not implied"
+  },
+
+  "SELF_REPORTED_HARNESS_DEFECTS": [
+    "the file-universe probe reported PRESENT 48 / SCANNED 0 / CENSUSED 0 / SILENT 48 in both modes because --surfaces was given the wrong directory, so every run exited rc=2; caught by the instrument check requiring roles/scientist.md to be observed leaking. Run discarded and re-authored. Sixth sighting of this family (SLR-mirror-0010 §4, -0011 §3, -0012 §2).",
+    "the check of Plan's §2.3 grep premise returned 7 where it should return 0, which would have falsified a load-bearing premise of §4.4. The defect was not in the script: `grep` in this session's shell is a Claude Code shell function shimming to ugrep, which auto-decodes a UTF-16 BOM. /usr/bin/grep returns 0 and Plan's premise stands. NEW FORM — the instrument was the shell, and no positive control inside the script could have caught it.",
+    "the AST audit of the added probes reported two as exit-code-only because it did not follow their delegation into _assert_partition; reading the helper corrected it and N-6's claim is true.",
+    "all three recorded LOCAL in SLR-mirror-0013, NOT self-ratified — G.2 route if they are to bind."
+  ],
+
+  "DURABLE_POINTERS": {
+    "branch": "mirror",
+    "review": "reviews/mirror/REV-SCIAB-MIRROR-005.md",
+    "prior_reviews": "reviews/mirror/REV-SCIAB-MIRROR-001.md, -002.md, -003.md, -004.md — revisions 1–4; not amended, verdicts not transferred",
+    "session_learning_record": "learning/mirror/SLR-mirror-0013.md",
+    "curated_object": "learning/plan/SLR-plan-0005.md (on branch scientist-ab-spec, read from the git object without merging)"
+  },
+
+  "SCOPE": {
+    "scope_creep": "NONE — zero content paths matching session|rout|registr, zero *_current.md, zero registry or receipt-ledger paths; the rev4→rev5 diff touches exactly 8 files, 5 content and 3 control plane",
+    "session_routing_debt": "OUT OF SCOPE — NOT SILENTLY RESOLVED. No SESSION_REF declared or inferred; no routing inferred from chat recency; no prior Mirror session superseded.",
+    "not_done": "no HUMAN_APPROVAL granted; nothing canonicalized; no benchmark executed; no batch authorized; main unchanged; no other actor's worktree written; the candidate branch not written."
+  },
+
+  "RESUME_RULE": "Annex A.6 refusal rule. COMPLETE; do not resume. The verdict is bound to CANDIDATE_CONTENT_HASH 5307d4d2…423f @ cbce3016. Any content change produces a new hash and requires a new review from R-1; REQUEST CHANGES transfers no partial credit to a revision, and no PASS row above transfers either — M-1's closure, M-2's closure, M-3's closure and M-4's closure in both modes included."
+}

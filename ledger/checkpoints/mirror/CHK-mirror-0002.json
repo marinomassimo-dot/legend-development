@@ -1,0 +1,83 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Written at the completion of GOV311-MIRROR-REVIEW-002. Path follows PID-13, reviewed and CONFIRMED in this review.",
+
+  "CHECKPOINT_ID": "CHK-mirror-0002",
+  "SUPERSEDES": "CHK-mirror-0001",
+  "ACTOR_ID": "mirror",
+  "TASK_ID": "GOV311-MIRROR-REVIEW-002",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 2,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "84d2b841b6081929e59d61e961e49077aca69c03136451d1000c72d902ef0738",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "FINGERPRINT_PROVENANCE": "recomputed independently with governance/scripts/governance_fingerprint.py compose --all over evidence-index, in an isolated clone; matches the value Plan declared. PROVISIONAL: hashed artifacts remain PROPOSED until operator approval.",
+  "GOVERNANCE_VERSION": "3.1.1",
+
+  "PREVIOUS_CHECKPOINT_COMPATIBILITY": "CHK-mirror-0001 is INCOMPATIBLE: it records the pre-RC-2 fingerprint fddbe5a5…, a different TASK_ID and generation 1. Not resumed, not rewritten. This is P2.3's intended behaviour on a CORE change — the second data point of the invalidation-rate signal A.6 and G.3 assign to Mirror.",
+
+  "TIMESTAMP": "2026-08-16",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "REVIEWED_OBJECT": {
+    "candidate_id": "CAND-20260816-GOV311",
+    "revision": 5,
+    "candidate_content_hash": "c39ecae89677363802c8c7d24b704da185fc568fed360b08ad01adb39730c239",
+    "content_hash_verified": true,
+    "base_head": "749a9a9b8f29c855f803a43b979c591532557561",
+    "base_head_verified": true,
+    "branch_tip": "9720a0cd1dddfe457f8e4eec1ebe47bd627512cc",
+    "branch_head_at_review": "6b3c038de49740894480297cd1ce5cd7b0ffc4ee",
+    "domain": "504 included, 8 excluded (control plane)"
+  },
+
+  "MILESTONES_REACHED": [
+    {
+      "milestone": "M1 — CANDIDATE_BINDING_VERIFIED",
+      "durable_evidence": "reviews/mirror/REV-GOV311-MIRROR-002.md § 1",
+      "status": "COMPLETE — PASSED. All ten assigned checks run; hash reproduced 3×, deterministic, invariant across three tips, mutation-sensitive on content and insensitive on control plane. Two checks carry a qualification (6 → NBN-3, 10 → RC-6)."
+    },
+    {
+      "milestone": "M2 — HOSTILE_REVIEW_COMPLETED",
+      "durable_evidence": "reviews/mirror/REV-GOV311-MIRROR-002.md §§ 1-7",
+      "status": "COMPLETE — R-1…R-7 under Annex C.2; 19 PIDs adjudicated individually; 8 PENDING and 10 UNRESOLVED censused and adjudicated."
+    },
+    {
+      "milestone": "M3 — FINAL_DISPOSITION_RECORDED",
+      "durable_evidence": "reviews/mirror/REV-GOV311-MIRROR-002.md § 12",
+      "status": "COMPLETE — MIRROR_REVIEW: REVISION_REQUESTED, bound to c39ecae8… and 749a9a9b…"
+    },
+    {
+      "milestone": "M4 — REVIEW_WORK_COMMIT",
+      "durable_evidence": "this commit on branch mirror",
+      "status": "COMPLETE"
+    },
+    {
+      "milestone": "M5 — SESSION_LEARNING_REVIEW",
+      "durable_evidence": "learning/mirror/SLR-mirror-0002.md",
+      "status": "COMPLETE"
+    }
+  ],
+
+  "TASK_STATE": "COMPLETE",
+
+  "FINDINGS": {
+    "required_changes": ["RC-6", "RC-7", "RC-8", "RC-9", "RC-10"],
+    "blocking": ["RC-6", "RC-7"],
+    "all_manifest_local": true,
+    "content_hash_unaffected_by_repair": true,
+    "escalations": ["ESC-2", "ESC-3"],
+    "non_blocking_notes": ["NBN-3", "NBN-4", "NBN-5", "NBN-6"],
+    "governance_defect_candidates": ["GDC-1", "GDC-2"],
+    "closed_by_this_review": ["manifest UNRESOLVED #9 — all four post-RC-2 fingerprints independently reproduced"]
+  },
+
+  "DURABLE_POINTERS": {
+    "branch": "mirror",
+    "review_record": "reviews/mirror/REV-GOV311-MIRROR-002.md",
+    "prior_review": "reviews/mirror/REV-GOV311-MIRROR-001.md (c6a290e1)",
+    "session_learning_record": "learning/mirror/SLR-mirror-0002.md"
+  },
+
+  "RESUME_RULE": "Annex A.6 refusal rule. Do not resume this task: it is COMPLETE. Because every required change is manifest-local and the manifest sits outside the content domain (PID-19, verified), a corrected manifest carries the SAME CANDIDATE_CONTENT_HASH c39ecae8…, and the R-1…R-7 verdicts recorded here remain bound to it. A re-review is therefore scoped to the corrected fields only. Should any CONTENT file change, the hash changes and a full new review is mandatory — no verdict may be transferred across hashes."
+}
