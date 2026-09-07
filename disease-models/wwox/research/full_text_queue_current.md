@@ -2158,9 +2158,9 @@ istanza del campo arriverà prima del gate se nessuno lo costruisce.
 ciò che serve per ripartire senza rileggere niente sta qui.*
 
 ## Dove sono gli artefatti
-**Tutti nel `files/` del checkout condiviso** `/Users/massimo/Desktop/legend-public/files/fulltext/`,
+**Tutti nel `files/` del checkout condiviso** `<REPO_ROOT>/files/fulltext/`,
 **mai nel worktree** — `files/` è gitignored per copyright, quindi il ramo porta il manifest e non
-l'evidenza. Validare sempre con `--artifact-workspace /Users/massimo/Desktop/legend-public`.
+l'evidenza. Validare sempre con `--artifact-workspace <REPO_ROOT>`.
 
 | artefatto | sha256 | note |
 |---|---|---|
@@ -3640,3 +3640,54 @@ relocating from line 131 to line 712, its content byte-identical. Nothing hand-e
 **First gesture:** retrieve from PMC (`PMC5386674`), run the surface sentinel on the raw text
 before any normalisation, then read. Second: resolve `CORPUS P214`'s identifier against the
 tracking log entry of 2026-04-17 that the placeholder cites.
+
+## FT-074 — I quattro stub mTOR/autofagia su cui due file di ragionamento si appoggiano, e il debito che solo uno dei quattro faceva vedere
+
+**Papers:** PMID 31966718 (PMC6965410) — Qin L, Li X, Lin Z, Li H, Mo Y, Su F, Mo W, Yang Z,
+*Int J Clin Exp Pathol* 2017;10(8):8619–8625, *EBV-LMP1 regulating AKT/mTOR signaling pathway and
+WWOX in nasopharyngeal carcinoma* ([[paper_registry_current#CORPUS-STUB-177]]) ·
+PMID 36621327 / DOI 10.1016/j.intimp.2022.109671 — *WWOX activates autophagy to alleviate
+lipopolysaccharide-induced acute lung injury by regulating mTOR*
+([[paper_registry_current#CORPUS-STUB-043]]) ·
+PMID 33300063 — *WWOX inhibits autophagy* (paclitaxel, ovarian carcinoma)
+([[paper_registry_current#CORPUS-STUB-056]]) ·
+PMID 24008736 — *WWOX suppresses autophagy* (methotrexate, squamous cell carcinoma)
+([[paper_registry_current#CORPUS-STUB-139]]).
+Tutti e quattro `not_processed`. **Nessuno letto.** Questa voce è il loro debito, dichiarato.
+
+**Perché esiste.** `mechanism_intervention_map.md` e `therapeutic_translation_second_pass.md` si
+appoggiano a questi quattro record per **due mosse distinte**, e la distinzione va tenuta:
+
+| Mossa | Cosa serve del paper | Serve averlo letto? |
+|---|---|---|
+| *«`CORPUS-STUB-043` non è l'unico record WWOX che nomina mTOR»* | **esistenza + titolo** di `-177` nel registro | no — è una misura sul registro |
+| *«l'asse autofagia è catalogato in due direzioni opposte»* | il **segno** dichiarato nei titoli di `-043`, `-056`, `-139` | 🔴 **sì** — un titolo non è un risultato, e la direzione è la cosa in questione |
+
+La seconda mossa è quella che porta il peso: il secondo passaggio la usa per mostrare che la
+direzione mTOR/autofagia **non è fissata da nessuna parte in questo corpus**. La conclusione è
+*negativa* — nessuna direzione è stabilita — e per questo sopravvive senza la lettura; ma la
+sopravvivenza va detta, non presunta. **Se uno solo dei tre venisse letto e fissasse un segno in un
+sistema trasferibile, la conclusione cambierebbe classe.**
+
+🔴 **E il motivo per cui questa voce copre quattro paper invece di uno.** Il ratchet
+`UNREAD_PREMISE` ne ha visto **uno solo** — `31966718` — perché `session_self_eval.py` cerca
+`\bPMID[:\s]*(\d{7,8})\b`: gli altri tre compaiono nelle tabelle del secondo passaggio come **cifre
+nude**, senza il prefisso letterale `PMID`. Misurato, non dedotto: dei quattro, `read_receipt`,
+`in_queue` e `registry full text reviewed` sono **falsi per tutti e quattro**, e
+`PREMISE_GLOBS`+`PMID_PATTERN` restituiscono i file citanti **solo per `31966718`**. Il controllo
+è cioè sensibile a una convenzione tipografica, non alla citazione: **la popolazione la definisce
+il formato della stringa.** Dichiararne uno solo — quello che il tool sa vedere — sarebbe stato
+aggirare il controllo mentre lo si soddisfa.
+
+**Non è mia da chiudere** la parte sullo strumento: allargare `PMID_PATTERN` o farlo lavorare sui
+record del registro invece che sulla stringa è una modifica a un gate, e passa da Plan. La parte
+mia è che il debito ora è dichiarato per tutti e quattro.
+
+**Priorità:** MEDIA per `-043`/`-056`/`-139` — sono i tre che potrebbero fissare un segno; nessuno
+è CNS, nessuno è sviluppo, e la distanza di trasferimento resta il primo motivo per cui la lettura
+potrebbe non cambiare nulla. **BASSA** per `-177`: carcinoma nasofaringeo, EBV-LMP1, e il file lo
+usa per un'affermazione sul registro che la lettura non tocca.
+**Next action:** leggere `-043` per primo (open access, ed è quello che il testo del secondo
+passaggio nomina come possibile origine mTORC1-indipendente della direzione autofagica); poi
+decidere se `-056` e `-139` valgono la lettura o una dismissione motivata con `REVIVAL_TRIGGER`.
+**Current status:** ⬜ aperto — debito di lettura dichiarato il 2026-08-26, nessuno dei quattro letto.
