@@ -76,6 +76,7 @@ PRIORITY_TESTS = (
     "governance/scripts/test_consolidate_approval_queue.py",
     "governance/scripts/test_consolidate_approval_queue_cli.py",
     "framework/scripts/test_growth_anchors.py",
+    "framework/scripts/test_integration_matrix.py",
     "framework/scripts/test_record_conventions.py",
     "framework/scripts/test_artifact_index.py",
     # Tracked and passing, but absent from this inventory until 2026-08-23 — found by
