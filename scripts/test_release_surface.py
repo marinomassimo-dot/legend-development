@@ -147,12 +147,25 @@ def walk_this_checkout(root: Path) -> list[Path]:
     Pruning is the only correct instrument here, and `is_nested_checkout` is imported rather
     than re-implemented because a second copy of "what is a checkout" is how the first one
     stops being maintained.
+
+    🔴 Importing it is not the same as being protected by it. While the predicate answered
+    from the path alone, one untracked line written to `governance/.git` emptied this audit:
+
+        walk_this_checkout                    3601 -> 3562 files
+        unexpectedly_ignored_files()          ['governance/notes_private_draft.md'] -> []
+        test_no_public_file_is_silently_gitignored
+            without the marker  FAILED (failures=1)      with it  OK
+
+    A file this repository was silently hiding stopped being reported because the directory
+    holding it stopped being walked. The audit asks the disk on purpose; the predicate has to
+    ask the index, and it is now given the repository and its tracked set to ask about.
     """
+    tracked = GATE.tracked_paths(root)
     found: list[Path] = []
     for dirpath, dirnames, filenames in os.walk(root):
         here = Path(dirpath)
         dirnames[:] = [name for name in dirnames
-                       if not GATE.is_nested_checkout(here / name)]
+                       if not GATE.is_nested_checkout(here / name, root, tracked)]
         found.extend(here / name for name in filenames)
     return found
 

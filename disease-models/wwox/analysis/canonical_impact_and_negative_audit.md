@@ -49,7 +49,7 @@ whole result of the audit is that a record can be sound on one endpoint and unsu
 | `CLAIM 032` | *(baseline)* | **haploinsufficiency** | the declared limit is now filled with **positive counter-observations** — bursting in 4/23 het slices vs 0/11 WT, four intrinsic properties, Tc-MEP latency indistinguishable from the null — not with absence of evidence | *(second pass)* | ⚠️ boundary |
 | `TX-005` | tracker | **scoring** | scored on the mechanistic rationale; must be scored on the **failed specificity test**. `SAFETY` still does not carry the **GSK3β2** developmental-window risk | B | MINOR |
 | `therapy_levers.md` A2 | analysis | **framing** | *"the strongest repurposing signal"* retires; the genotype boundary arrives. ⚠️ the verb *"abolishes"* is **the source's own word** and is **not** a defect | B | MINOR |
-| `paper_registry_current.md` | registry | **mTOR denominator** | `CORPUS-STUB-177` is a **second** unread WWOX+mTOR record; three stubs name autophagy in **two opposite directions**. Reading debt now declared at [[full_text_queue_current#FT-073]] | A | MINOR |
+| `paper_registry_current.md` | registry | **mTOR denominator** | `CORPUS-STUB-177` is a **second** unread WWOX+mTOR record; three stubs name autophagy in **two opposite directions**. Reading debt now declared at [[full_text_queue_current#FT-074 — I quattro stub mTOR/autofagia su cui due file di ragionamento si appoggiano, e il debito che solo uno dei quattro faceva vedere]] | A | MINOR |
 
 > ### `AAV9_ENDPOINT_AUDIT` → canonical consequence
 > **Eight (record × endpoint) cells across `CLAIM 011` (5) and `CLAIM 004` (3) alone**, of which one

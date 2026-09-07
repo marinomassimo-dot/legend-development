@@ -33,6 +33,7 @@ PRIORITY_TESTS = (
     "scripts/test_provenance_coverage.py",
     "scripts/test_freeze_scope.py",
     "scripts/test_release_runner_verdict.py",
+    "scripts/test_repository_surface_determinism.py",
     "scripts/test_locator_obligation_reaches_every_route.py",
     "scripts/test_no_closed_world_assertions_on_live_state.py",
     "scripts/test_abstract_corpus_is_not_evidence.py",

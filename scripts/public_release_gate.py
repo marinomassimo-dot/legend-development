@@ -111,9 +111,160 @@ def is_exempt(relative: str, exempt: frozenset[str]) -> bool:
     return any(entry.endswith("/") and relative.startswith(entry) for entry in exempt)
 
 
-def is_nested_checkout(path: Path) -> bool:
-    """A directory that is itself a git checkout — worktree (`.git` file) or clone (dir)."""
-    return (path / ".git").exists()
+def tracked_paths(root: Path) -> frozenset[str] | None:
+    """Every path this repository tracks, relative to `root` — or `None` if git cannot say.
+
+    🔴 The first draft returned an empty frozenset on every failure, which reads as "this
+    repository tracks nothing" and is indistinguishable from it. Every predicate below then
+    concludes that no directory holds tracked content, which is the *pruning* answer — so a
+    tool that could not run git pruned more, silently, in the direction that loses files.
+
+    🔴 The second draft returned `None` on every failure, and that was the same mistake with
+    the sign flipped. Two failures were being merged again, and this time the merge broke two
+    controls that were already green:
+
+        test_the_ignore_audit_does_not_walk_into_another_checkout   FAIL
+        test_markdown_of_a_nested_checkout_is_not_collected         FAIL
+
+    Both fixtures mount a real nested checkout inside a temp directory that is deliberately
+    NOT a repository. There, "the outer index claims nothing inside this subdirectory" is not
+    an unanswered question — it is simply true, because there is no outer index at all, and a
+    subtree with its own `.git` is unambiguously a different repository's disk. Pruning is
+    correct, and refusing to prune made the walker collect another repository's files.
+
+    So the two cases are separated rather than compressed onto one sentinel:
+
+        not inside a work tree      frozenset()   nothing outer is claimed, so nested
+                                                  checkouts prune — an archive extraction,
+                                                  a plain directory, a test fixture
+        inside one, index unread    None          the question was asked and not answered;
+                                                  callers must not prune on it
+
+    Absence of an index is not the same as absence of an answer, and only the second one is
+    a reason to distrust the result.
+    """
+    inside = subprocess.run(
+        ["git", "-C", str(root), "rev-parse", "--is-inside-work-tree"],
+        check=False, capture_output=True, text=True,
+    )
+    if inside.returncode != 0 or inside.stdout.strip() != "true":
+        return frozenset()
+    try:
+        completed = subprocess.run(
+            ["git", "-C", str(root), "ls-files", "-z"],
+            check=True, capture_output=True, text=True,
+        )
+    except (OSError, subprocess.CalledProcessError):
+        return None
+    return frozenset(entry for entry in completed.stdout.split("\0") if entry)
+
+
+def tracked_documents(root: Path, suffix: str = ".md") -> list[Path]:
+    """The DOCUMENTATION population: what a reader of a clone actually holds.
+
+    🔴 This is deliberately NOT `walk_publishable`, and the difference is the whole point.
+
+    The two questions are not the same question:
+
+      PUBLISHABLE   — "what could leak from here?"  Asked of the DISK, and answered
+                      over-inclusively on purpose: an untracked file one commit away from
+                      shipping must be scanned, because the cost of a miss is a published
+                      privacy breach.
+      DOCUMENTATION — "what does a reader hold?"  Asked of the INDEX. A promise is made to
+                      whoever receives the repository, and what they receive is what git
+                      tracks.
+
+    On a clean checkout the two sets are identical — measured at `788c357d`, 281 markdown
+    files each, set-equal — which is exactly why one helper looked adequate for both. They
+    separate only under local filesystem state, and that is the state the guards must be
+    immune to:
+
+        untracked, not ignored `NOTES.md`   publishable 282 · tracked 281
+                                            -> the documentation guard turns RED for a file
+                                               in no commit and no clone
+        tracked document deleted on disk    publishable 280 · tracked 281
+                                            -> a tracked governance document leaves the
+                                               population because somebody ran `rm`
+
+    Both are answered by asking the index instead of the disk. Nothing a local working tree
+    does — a stray marker, a deletion, a scratch file, a rename — can move this population.
+
+    Nested checkouts need no pruning here: their files are not in this repository's index.
+    A submodule appears as its own gitlink path and carries no `.md` suffix, so it drops out
+    of the filter rather than contributing its contents.
+
+    🔴 An empty answer is refused, not returned. `tracked_paths` says `frozenset()` for "not
+    a repository", which is the right answer for a pruning predicate and a catastrophic one
+    here: a documentation guard handed an empty population checks nothing and exits 0. That
+    is the vacuous pass `test_release_surface` already names in
+    `test_an_empty_index_is_a_refusal_not_a_pass`, arriving through a different door.
+    """
+    tracked = tracked_paths(root)
+    if not tracked:
+        raise RuntimeError(
+            f"tracked_documents({root}): the index is empty or unreadable. The documentation "
+            "population is defined by the index, an empty population is a guard that checks "
+            "nothing, and there is no disk-based substitute that is not the defect this "
+            "function exists to avoid."
+        )
+    return sorted(
+        root / entry for entry in tracked
+        if entry.endswith(suffix) and (root / entry).is_file()
+    )
+
+
+def is_nested_checkout(path: Path, root: Path, tracked: frozenset[str] | None) -> bool:
+    """A directory that is a checkout of a DIFFERENT repository than `root`.
+
+    🔴 The predecessor was `(path / ".git").exists()` and nothing else, which is a filesystem
+    NAME, not repository metadata. Any untracked one-line file called `.git` — a stray editor
+    artefact, a half-finished `git init`, a copied directory, anything — made this return True
+    and pruned the whole subtree.
+
+    Measured on a clean checkout of `main`, dropping a bare `.git` file into `governance/`:
+
+        281 publishable markdown  ->  246
+        35 TRACKED documents removed, including GOVERNANCE_v3.1.1.md and every annex
+
+    and, with a broken markdown link planted in one of them first:
+
+        without the marker   VERDICT: BLOCK_PUBLICATION   BLOCKS: 1
+        with the marker      VERDICT: PASS                BLOCKS: 0
+
+    **A one-line untracked file turned a publication BLOCK into a PASS.** The gate did not
+    fail to detect the violation; it removed the file holding it from its own population, and
+    then reported that it had found nothing.
+
+    The repair asks the OUTER repository instead of the filesystem: a directory is a nested
+    checkout only if it looks like one **and this repository tracks nothing inside it.** A real
+    nested worktree holds zero tracked paths of ours, so it still prunes — whether or not an
+    ignore rule reaches it; a tracked tree with a stray marker holds tracked paths, so it does
+    not. Content of the index decides, not a name on the disk.
+
+    🔴 `root` and `tracked` are REQUIRED. The first repair made them optional and fell back to
+    the old name-only answer, so `walk_publishable` was fixed and the two other call sites —
+    `test_link_targets.markdown_files` and `test_release_surface.walk_this_checkout` — kept
+    the defect, because "existing callers keep working" meant "existing callers keep the
+    bypass". Measured on that repair, at the level of the test that owns each guard:
+
+        test_release_surface  ReleaseSurfaceTests.test_no_public_file_is_silently_gitignored
+            without marker  FAILED (failures=1)      with marker  OK
+        test_link_targets     LinkTargetTests.test_markdown_fragments_resolve_to_headings
+            without marker  FAILED (failures=1)      with marker  OK
+
+    A caller that cannot name the repository it means has not decided what it is asking, and a
+    `TypeError` says so where a wrong boolean would not.
+
+    `tracked is None` means git could not be asked. That is not a licence to prune: pruning on
+    an unanswered question is how the original defect lost 35 documents. Uncertainty resolves
+    towards scanning more, which is noisy and visible, and never towards scanning less.
+    """
+    if not (path / ".git").exists():
+        return False
+    if tracked is None:
+        return False
+    prefix = path.relative_to(root).as_posix() + "/"
+    return not any(entry.startswith(prefix) for entry in tracked)
 
 
 def walk_publishable(root: Path) -> Iterable[Path]:
@@ -125,12 +276,13 @@ def walk_publishable(root: Path) -> Iterable[Path]:
     not.
     """
     exempt = unpublishable_paths(root)
+    tracked = tracked_paths(root)
     for dirpath, dirnames, filenames in os.walk(root):
         here = Path(dirpath)
         dirnames[:] = sorted(
             name for name in dirnames
             if name not in SKIP_DIRS
-            and not is_nested_checkout(here / name)
+            and not is_nested_checkout(here / name, root, tracked)
             and not is_exempt((here / name).relative_to(root).as_posix() + "/", exempt)
         )
         if here != root:

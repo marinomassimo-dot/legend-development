@@ -17,7 +17,8 @@ import tempfile
 from unittest.mock import patch
 from pathlib import Path
 
-from public_release_gate import is_nested_checkout
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from public_release_gate import tracked_documents  # noqa: E402
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -35,18 +36,46 @@ IGNORED_PARTS = frozenset({".git", ".venv", "node_modules", "__pycache__"})
 ARCHIVAL_DIRECTORIES = ("governance/candidates", "governance/decisions", "learning", "ledger")
 
 
+# 🔴 The population is the DOCUMENTED surface: what a reader of a clone holds.
+#
+# `ROOT.rglob("*.md")` measured whatever happened to be in the working directory. Same tracked
+# tree, three verdicts:
+#
+#   clean checkout of main                          281 markdown, exit 0
+#   + one GITIGNORED file naming a missing script   282 markdown, exit 1
+#   + a nested checkout under the tree              562 markdown  — the population DOUBLED
+#
+# A file that is in no commit, in no clone and explicitly gitignored could turn the release
+# battery red; and a second checkout inside the first doubled the scan set, agreeing only
+# because the copy happened to be self-consistent.
+#
+# 🔴 The first repair routed this through `public_release_gate.walk_publishable`, and that was
+# the wrong population for the right reason. `walk_publishable` answers "what could leak" — it
+# is asked of the DISK and is over-inclusive on purpose, because a missed privacy finding is a
+# published breach. This guard answers "what is promised to a reader", and a promise is carried
+# by the index. On a clean tree the two sets are identical (281 each, set-equal at `788c357d`),
+# which is precisely why reuse looked adequate. They separate under local filesystem state:
+#
+#   untracked, not ignored NOTES.md   publishable 282 · tracked 281  -> FAILED, for a file in
+#                                                                       no commit and no clone
+#   tracked document removed by `rm`  publishable 280 · tracked 281  -> a tracked governance
+#                                                                       document leaves the
+#                                                                       population entirely
+#
+# `tracked_documents` asks `git ls-files`. Nothing a working tree does to itself — a stray
+# `.git` marker, a deletion, a scratch file, a rename — can move this population, which is the
+# only property that makes a documentation guard trustworthy.
 def markdown_files() -> list[Path]:
-    found = []
-    for directory, children, files in os.walk(ROOT):
-        relative_directory = Path(directory).relative_to(ROOT).as_posix()
-        if any(relative_directory == archived or relative_directory.startswith(archived + "/")
-               for archived in ARCHIVAL_DIRECTORIES):
-            children[:] = []
-            continue
-        children[:] = [name for name in children if name not in IGNORED_PARTS
-                       and name != "backup" and not is_nested_checkout(Path(directory) / name)]
-        found.extend(Path(directory) / name for name in files if name.endswith(".md"))
-    return sorted(found)
+    # Index-derived population (plan-repo-surface-determinism), with main's archival pruning
+    # re-applied on top: candidates, decisions, learning and ledger records are historical and
+    # may legitimately name executables that have since moved or been retired.
+    return sorted(
+        path
+        for path in tracked_documents(ROOT)
+        if not any(part in IGNORED_PARTS for part in path.relative_to(ROOT).parts)
+        and not any(path.relative_to(ROOT).as_posix().startswith(archived + "/")
+                    for archived in ARCHIVAL_DIRECTORIES)
+    )
 
 
 def resolve_reference(document: Path, reference: str) -> Path | None:
@@ -128,10 +157,16 @@ def documented_cli_invocations() -> list[tuple[Path, int, Path, str]]:
 
 class DocumentedCommandIntegrityTests(unittest.TestCase):
     def test_markdown_scan_prunes_peer_worktrees_but_keeps_local_documents(self) -> None:
+        # The population is index-derived, so the fixture must be a real repository: a bare
+        # temporary directory has no index and `tracked_documents` fails closed on it by design.
         with tempfile.TemporaryDirectory() as temporary:
-            root = Path(temporary)
+            root = Path(temporary).resolve()
+            git = ["git", "-c", "user.name=t", "-c", "user.email=t@example.invalid"]
+            subprocess.run(git + ["init", "-q", str(root)], check=True)
             local = root / "README.md"
             local.write_text("local")
+            subprocess.run(git + ["-C", str(root), "add", "README.md"], check=True)
+            subprocess.run(git + ["-C", str(root), "commit", "-q", "-m", "local"], check=True)
             peer = root / "nested-peer"
             peer.mkdir()
             (peer / ".git").write_text("gitdir: elsewhere")

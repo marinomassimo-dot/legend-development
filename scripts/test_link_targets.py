@@ -77,13 +77,29 @@ def markdown_files(root: Path = ROOT) -> list[Path]:
     resolver, and every dangling link in another repository reported as a defect in this one.
     Pruning, not an ignore rule — the audit is supposed to see gitignored files, it is just
     not supposed to see other repositories.
+
+    🔴 The predicate is now given the repository it is pruning *for*, and one `git ls-files`
+    is paid for the whole walk. It used to be called with the path alone, and the path alone
+    cannot tell a checkout from a directory with a file named `.git` in it. Measured here,
+    with one untracked line written to `governance/.git`:
+
+        markdown collected      282 -> 246
+        governance markdown      36 -> 0
+        test_markdown_fragments_resolve_to_headings
+            without the marker  FAILED (failures=1)      with it  OK
+
+    A planted broken fragment stopped being a failure because the document holding it stopped
+    being in the population. That is the same defect `public_release_gate.walk_publishable`
+    was repaired for, still live here, because the repair left the one-argument form intact
+    and this caller kept using it.
     """
+    tracked = GATE.tracked_paths(root)
     found: list[Path] = []
     for dirpath, dirnames, filenames in os.walk(root):
         here = Path(dirpath)
         dirnames[:] = [name for name in dirnames
                        if name not in SKIP_PARTS
-                       and not GATE.is_nested_checkout(here / name)]
+                       and not GATE.is_nested_checkout(here / name, root, tracked)]
         found.extend(here / name for name in filenames if name.endswith(".md"))
     return sorted(found)
 
