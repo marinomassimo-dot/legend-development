@@ -47,6 +47,24 @@ The rare-disease bottleneck is not ideas — it is **which expensive wet-lab exp
 | Tissue proxy | GTEx | accessible-tissue readout validity (biomarker feasibility) |
 | Lever assignment | mechanism → modality mapping | chaperone-amenable vs ASO-amenable vs gene-addition |
 
+## The pathograph layer — the causal graph, assembled rather than authored
+
+[`pathograph_inventory.md`](pathograph_inventory.md) is a generated view of the graph the
+registries **already** declare: claims as nodes, claim→claim wikilinks as edges, and every
+relational proposition already written in a claim title, in the working model's claim mirror
+or in a deep-dive work manifest, extracted as a *candidate* awaiting review. The machine-
+readable form is [`data/pathograph_export.jsonl`](data/pathograph_export.jsonl).
+
+It adds nothing. An edge appears only where a registry declares one, and an edge carries a
+relation type only where a claim record annotates the link with one — so the current count of
+typed edges is reported at whatever it happens to be, and deriving a type from the endpoints'
+declared fields is refused in code and in a regression. Typing an edge is a reading against
+evidence, which is Scientist work; this layer prepares the packet and reads the verdict back.
+
+```bash
+python3 framework/scripts/pathograph.py --disease wwox
+```
+
 ## The DisMech export pipeline
 
 A second, independent line of work lives in this folder: turning LEGEND's canonical claims into

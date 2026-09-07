@@ -75,6 +75,7 @@ PRIORITY_TESTS = (
     "framework/scripts/test_trace_claim_foundation.py",
     "framework/scripts/test_legend_handoff.py",
     "framework/scripts/test_build_evidence_index.py",
+    "framework/scripts/test_pathograph.py",
     "framework/scripts/test_surface_census.py",
     "framework/scripts/test_locator_audit.py",
     "framework/scripts/test_dossier_quote_audit.py",

@@ -186,6 +186,9 @@ python3 framework/scripts/coverage_report.py --disease wwox \
     --out disease-models/wwox/registries/coverage_report.md
 python3 framework/scripts/batch_queue.py --disease wwox \
     --out disease-models/wwox/registries/batch_queue.md
+python3 framework/scripts/pathograph.py --disease wwox \
+    --out disease-models/wwox/analysis/pathograph_inventory.md \
+    --export disease-models/wwox/analysis/data/pathograph_export.jsonl
 ```
 
 🔴 **Why this is a phase and not a reminder.** `coverage_report.md` declares itself generated

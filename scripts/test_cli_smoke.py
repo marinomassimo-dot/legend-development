@@ -20,6 +20,7 @@ PUBLIC_CLIS = (
     "framework/scripts/batch_commit.py",
     "framework/scripts/unread_gold.py",
     "framework/scripts/generate_semantic_graph.py",
+    "framework/scripts/pathograph.py",
     "framework/scripts/fulltext_receipts.py",
     "framework/scripts/surface_census.py",
     "disease-models/wwox/analysis/scripts/residue_context.py",
