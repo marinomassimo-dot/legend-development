@@ -390,8 +390,7 @@ Nothing was lost, and that is luck rather than design. The binding rules:
    declared it finished. If you do it anyway because the work would otherwise be lost, say so in
    the commit message and name the author.
 4. **Read the whole diff before reverting.** `git checkout -- <path>` is a destructive write with
-   no confirmation, and — unlike blanket staging and heredoc writes — the `PreToolUse` Bash guard
-   does not cover it. `git diff <path>` in full, or not at all.
+   no confirmation. `git diff <path>` in full, or not at all.
 5. **A `BATCH_COMMIT` owns the shared checkout for its duration.** It snapshots, propagates and
    restores on failure; a foreign commit inside that window corrupts the snapshot it would
    restore from.

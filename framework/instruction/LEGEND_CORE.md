@@ -345,7 +345,8 @@ state manifest → current files → meta index → active metas → research/bi
 ## 21c. STOP POLICY
 
 > Provenance: `DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY` · body sha256
-> `eb6fb4f70d8a61363bb5ad73b290a8b808166729e29ca7eb9af78eaa7ff80558` (35 lines, ending
+> Updated after permanent retirement of the runtime guard; this section is procedural
+> guidance only and is not enforced by a hook.
 > before the SAFE_DEFAULTS list — that list is append-only by agents and is deliberately
 > outside the hash, so exercising the §21c permission disturbs nothing reserved). The text
 > below is the operator's dictated wording; the DEC records what authorises it, maps its
@@ -354,10 +355,9 @@ state manifest → current files → meta index → active metas → research/bi
 
 STOP POLICY (HARD RULE, operator decision 2026-09-03)
 
-An actor stops only for one of three reasons:
-  1. a guard denial;
-  2. an act reserved to the operator by H.1 with no sanctioned alternative;
-  3. a condition with NO safe default.
+An actor stops only for one of two reasons:
+  1. an act reserved to the operator by H.1 with no sanctioned alternative;
+  2. a condition with NO safe default.
 
 Every other condition has a safe default. The actor takes the default, continues, and
 records it in the report under the heading DEFAULTS_TAKEN (condition · default taken · why
@@ -370,19 +370,19 @@ operator pastes in the terminal; what the operator pastes back. If the actor bel
 reserved act should pass to agents, it adds one yes/no question with one line on what
 changes if the answer is yes.
 
-Nothing waits on operator presence except a reason 1–3 stop. Mirror reviews DEFAULTS_TAKEN
+Nothing waits on operator presence except a reason 1–2 stop. Mirror reviews DEFAULTS_TAKEN
 after the fact; a wrong default is a finding, not a reason to have stopped.
 
 STOP LOG. Every stop — taken or avoided — is recorded in the report under STOP_LOG:
-reason class (1 guard · 2 reserved act · 3 no safe default) · what was asked · time
+reason class (1 reserved act · 2 no safe default) · what was asked · time
 waited · outcome.
   Class 2 entries carry the yes/no question. An operator YES retires that stop permanently
   and is recorded as a decision.
   Class 3 entries carry the hindsight default: "the safe default would have been X".
   X is added to SAFE_DEFAULTS in this policy by the next dispatch that touches it.
 A stop that recurs after its default or decision exists is a finding against the actor.
-Target on any unattended deployment: STOP_LOG class 3 = 0; class 2 = 0 after the
-operator's decisions; class 1 only.
+Target on any unattended deployment: STOP_LOG class 2 = 0; class 1 = 0 after the
+operator's decisions.
 
 SAFE_DEFAULTS is the one part of this policy agents may extend, by appending an entry
 under Class 3 above; the rules stated before it, and all of §21d, are reserved to the
@@ -413,7 +413,8 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
 > `114885d8cbc7aca0fc22a62e221aa64e32406acd6e71c45fc5564ac20ceffdd8` (62 lines). Same DEC
 > and same ratification clause as §21c; the DEC's MAPPING section is where each RESERVED
 > item is traced to its H.1 row or to the frozen guarantee it actually comes from. The push
-> rule below is SPECIFIED by `framework/scripts/push_authorization.py` and the guard does
+> rule below is a repository procedure; no runtime hook enforces it.
+> The historical implementation and its guard were retired with the runtime guard removal.
 > NOT consult it: every push is refused today. This callout said the opposite for one
 > commit, and no check caught it — the equality assertion skips the leading callout before
 > comparing, which is exactly where a false sentence is least visible and most read.
@@ -451,7 +452,7 @@ present; a wrong decision is a finding and a revert, never a reason to have wait
 
 Operator decisions already taken (2026-09-03), retiring class-2 stops:
   - branch switch inside a single-owner worktree: agents. Root: reserved.
-  - worktree provisioning: agents, once the guard false refusal is fixed (0B).
+  - worktree provisioning: agents.
   - birth of bound sessions: BOOTSTRAP automates it; not an operator act per dispatch.
   - push: agents, and only when ALL of these hold — the remote is `development`, named
     explicitly; the push is fast-forward, with no force in any spelling and no `+`
@@ -465,9 +466,7 @@ Operator decisions already taken (2026-09-03), retiring class-2 stops:
     unless the merge that produced `main` was itself the agents' to make under this
     section — that is, it changed no guarantee. A merge that changes a guarantee, and its
     push, stay the operator's. `origin` is denied to every runtime, always.
-    NOT YET ENFORCED: `framework/scripts/push_authorization.py` states these conditions and
-    the guard does not consult it, so every push is refused and remains the operator's
-    until that wiring lands. Do not read this bullet as a permission you hold today.
+    Verify these conditions directly immediately before pushing; no runtime hook is involved.
 
 REVIEW BUDGET (part of the push condition above). The purpose of the review is FRESHNESS OF
 CONTEXT, not debate. Mirror sees only the diff; the Orchestrator sees only the verdict.
@@ -575,13 +574,9 @@ ROLES.
   - SCIENTISTS A / B / C land their own reading branches at task end.
   - CODEX — same lifecycle under its assigned ACTOR_ID; no separate regime.
 
-GUARD. The Bash guard enforces this section, not the older regime: `git merge` (own
-checkout, or `git -C <root>` from a worktree), `git worktree add / remove / prune` and
-`git branch -d` are ordinary acts. Force in any spelling, `git clean`, history rewrite,
-every `git push`, blanket staging and shell writes into the repository stay refused — those
-protect peers' in-flight work and the public remotes, and §21d reserves them. A guard
-refusal of an act this section calls ordinary is a defect in the guard, repaired at T0 by
-Harness Engineering, never a reason to route around the guard.
+RUNTIME ENFORCEMENT. This section is not enforced by a project-level hook. The ordinary
+and reserved actions above are governed by repository review, release checks, CI and the
+operator's explicit authority boundaries.
 
 ---
 

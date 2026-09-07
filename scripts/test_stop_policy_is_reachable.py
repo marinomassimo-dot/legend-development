@@ -53,7 +53,8 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "framework" / "scripts"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from runtime_parity import ROUTER_CHAIN  # noqa: E402
+ROUTER_CHAIN = ("CLAUDE.md", "BOOTSTRAP.md", "governance/ANNEX_INDEX.md",
+                "roles/plan.md", "framework/protocols/index.md")
 # 🔴 BOTH are imported from the suite that owns fragment resolution. Importing only
 # `heading_slug` and reimplementing the file walk was not the same guarantee, and the
 # docstring claimed it was: `heading_slugs` owns fence-skipping and duplicate

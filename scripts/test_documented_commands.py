@@ -32,11 +32,17 @@ REPO_PREFIXES = (
     "scripts/",
 )
 IGNORED_PARTS = frozenset({".git", ".venv", "node_modules", "__pycache__"})
+ARCHIVAL_DIRECTORIES = ("governance/candidates", "governance/decisions", "learning", "ledger")
 
 
 def markdown_files() -> list[Path]:
     found = []
     for directory, children, files in os.walk(ROOT):
+        relative_directory = Path(directory).relative_to(ROOT).as_posix()
+        if any(relative_directory == archived or relative_directory.startswith(archived + "/")
+               for archived in ARCHIVAL_DIRECTORIES):
+            children[:] = []
+            continue
         children[:] = [name for name in children if name not in IGNORED_PARTS
                        and name != "backup" and not is_nested_checkout(Path(directory) / name)]
         found.extend(Path(directory) / name for name in files if name.endswith(".md"))

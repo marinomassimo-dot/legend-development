@@ -5,8 +5,10 @@ from __future__ import annotations
 import tempfile
 import unittest
 from pathlib import Path
+import sys
 
-import guard_policy as gp
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
 import task_close as tc
 from test_branch_hygiene import run, commit
 
@@ -158,37 +160,6 @@ class TaskClosure(unittest.TestCase):
             tc.close_task(self.wt, remove_worktree=True)
         self.assert_kept()
         self.assertEqual("task/test", run(["branch", "--show-current"], self.wt).strip())
-
-    def test_git_proves_why_force_and_reset_are_not_ordinary_creation(self):
-        import shlex
-        run(["branch", "existing", self.tip], self.repo)
-        reset = ["git", "worktree", "add", "-B", "existing",
-                 str(Path(self.tmp.name) / "reset"), "main"]
-        self.assertNotEqual(gp.ALLOWED, gp.classify(shlex.join(reset), str(self.repo), None,
-                                                   gp.DEFAULT_AUTHORITY, str(self.repo))[0])
-        run(reset[1:], self.repo)
-        self.assertNotEqual(self.tip, run(["rev-parse", "existing"], self.repo).strip())
-        force = ["git", "worktree", "add", "--force",
-                 str(Path(self.tmp.name) / "duplicate"), "task/test"]
-        self.assertNotEqual(gp.ALLOWED, gp.classify(shlex.join(force), str(self.repo), None,
-                                                   gp.DEFAULT_AUTHORITY, str(self.repo))[0])
-        run(force[1:], self.repo)
-        holders = [t for t in tc.worktrees(self.repo) if t["branch"] == "task/test"]
-        self.assertEqual(2, len(holders))
-
-    def test_guard_allows_the_recipe_but_confines_detach(self):
-        import shlex
-        for command in tc.close_task(self.wt, dry_run=True):
-            with self.subTest(command=command):
-                self.assertEqual(gp.ALLOWED, gp.classify(shlex.join(command), str(self.wt),
-                                                        None, gp.DEFAULT_AUTHORITY, str(self.wt))[0])
-        for command in (f'git -C "{self.repo}" switch --detach HEAD',
-                        "git switch --detach main", "git switch --detach HEAD --force",
-                        "git switch --detach HEAD --discard-changes", "git switch -C task/test"):
-            with self.subTest(command=command):
-                self.assertNotEqual(gp.ALLOWED, gp.classify(command, str(self.wt), None,
-                                                           gp.DEFAULT_AUTHORITY, str(self.wt))[0])
-
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

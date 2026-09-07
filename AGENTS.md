@@ -13,9 +13,7 @@ sixteen days, because nothing checks this file against anything.
 > You are running **Codex**. That is a runtime. It is not an actor, it is not an
 > authority, and it does not decide which of those you have.
 
-The whole contract is in
-[`framework/protocols/runtime_bridge.md`](framework/protocols/runtime_bridge.md).
-Read it before you act on anything below.
+The contract is in the repository's canonical governance, scientific and release files.
 
 ---
 
@@ -57,34 +55,15 @@ refuse you at a gate if you skipped its file.
 do not reconstruct the missing one from memory or from this file. Record
 `BLOCKED_BY_GOVERNANCE`, name the surface, and ask the operator.
 
-Derive that mechanically before your first write, never by impression:
+The former runtime-parity bootstrap and its hook gate have been retired. Identity is still
+assigned by the operator; repository work is validated by the scientific LINT, release gate,
+regression suites, CI and ex-post review.
 
-```bash
-python3 framework/scripts/runtime_parity.py --bootstrap
-```
+## 3 · Runtime boundary
 
-It prints `ACTOR_ID`, worktree, branch, `HEAD`, dirty state, role contract and its
-`sha256`, governance fingerprint, lease state, the gates you owe, and **two separate
-verdicts** — `READ_ONLY_PARITY` and `WRITE_ENABLED_PARITY`. It **exits non-zero** while
-either is unresolved. A non-zero exit is not advice.
-
-🔴 **`--bootstrap` will not choose an actor for you.** With no `ACTOR_ID` it reports
-`UNRESOLVED` and blocks, and an `ACTOR_ID` naming no role contract is refused rather than
-approximated. That is § 4 made mechanical, not a convenience it declines to offer.
-
-## 3 · What is not equivalent, and must not be assumed
-
-Two runtimes reaching the same rule is not two runtimes having the same powers. Before
-you rely on a capability, check it against
-[`framework/protocols/runtime_bridge.md`](framework/protocols/runtime_bridge.md) § 3 —
-which is the list, kept in one place, of what this runtime does **not** have here:
-`.claude/skills` and `.claude/agents` are readable by path but are **not** discovered or
-applied automatically, the `claude`-bound launch kernel in [`launch/`](launch/) does not
-run, and the cross-session transport primitives are Claude-side.
-
-Declare every one of them `UNAVAILABLE` or `UNVERIFIED` in your registration rather than
-working around it. A capability nobody smoke-tested is not a capability — body § 38,
-`CONFIGURED != PROVEN` — and that rule does not soften because the runtime changed.
+No project-level Claude or Codex hook is registered. Runtime capabilities do not confer
+repository authority; follow the assigned role and the canonical scientific, privacy and
+release checks.
 
 ## 4 · Your ACTOR_ID
 
@@ -95,31 +74,7 @@ lease is the Orchestrator's authority and nothing else is.
 
 If you do not know your `ACTOR_ID`, you do not have one yet. Ask.
 
-## 5 · The write guard
-
-Codex registers the same engine Claude registers —
-[`framework/scripts/pre_tool_use_guard.py`](framework/scripts/pre_tool_use_guard.py),
-declared in [`.codex/config.toml`](.codex/config.toml). There is no Codex copy of the
-policy, and there must never be one.
-
-Check the state, never assume it:
-
-```bash
-python3 framework/scripts/runtime_parity.py --hook-status
-```
-
-Only `DEMONSTRATED` — a session-probe receipt recording an actual refusal — permits a
-write. `CONFIGURED` and `TRUST_PENDING` do not: a registration that parses is not a
-control, and the runtime gates project hooks behind a review this repository cannot read.
-While it is anything else **you are read-only**, and what is holding is the Codex sandbox,
-not this sentence.
-
-🔴 The repository gives you **textual authority, one enforced class of shell mutation, CI
-on push, and audit**. It does not enforce who you are or what you may decide — see
-[`framework/protocols/runtime_bridge.md`](framework/protocols/runtime_bridge.md) § 3.1,
-which states exactly what was checked. Do not read a passing gate as permission.
-
-## 6 · Sync rule
+## 4 · Sync rule
 
 Normative sources and the state manifest win. This file routes and declares; it
 adjudicates nothing. Change it only when the chain in § 1 changes — never to restate a

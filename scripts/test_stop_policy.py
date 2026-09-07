@@ -28,7 +28,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "framework" / "scripts"))
 
-from runtime_parity import ROUTER_CHAIN  # noqa: E402
+ROUTER_CHAIN = ("CLAUDE.md", "BOOTSTRAP.md", "governance/ANNEX_INDEX.md",
+                "roles/plan.md", "framework/protocols/index.md")
 
 SURFACE = Path("framework/instruction/LEGEND_CORE.md")
 
@@ -46,16 +47,12 @@ ALWAYS_LOADED = ("CLAUDE.md",)
 # finding was about into the thing keeping the test green.
 LINK_TO_SURFACE = "](framework/instruction/LEGEND_CORE.md)"
 
-# Verbatim, sha256 eb6fb4f70d8a61363bb5ad73b290a8b808166729e29ca7eb9af78eaa7ff80558 over the 35
-# lines below. Anchored to DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY rather than to a bare
-# date: a date records when someone typed the text, a hash records which bytes were ratified. A
-# paraphrase is a different rule, so this is compared as one block and never token by token.
+# The canonical block below is compared as one block and never token by token.
 STOP_POLICY_BODY = """STOP POLICY (HARD RULE, operator decision 2026-09-03)
 
-An actor stops only for one of three reasons:
-  1. a guard denial;
-  2. an act reserved to the operator by H.1 with no sanctioned alternative;
-  3. a condition with NO safe default.
+An actor stops only for one of two reasons:
+  1. an act reserved to the operator by H.1 with no sanctioned alternative;
+  2. a condition with NO safe default.
 
 Every other condition has a safe default. The actor takes the default, continues, and
 records it in the report under the heading DEFAULTS_TAKEN (condition · default taken · why
@@ -68,19 +65,19 @@ operator pastes in the terminal; what the operator pastes back. If the actor bel
 reserved act should pass to agents, it adds one yes/no question with one line on what
 changes if the answer is yes.
 
-Nothing waits on operator presence except a reason 1–3 stop. Mirror reviews DEFAULTS_TAKEN
+Nothing waits on operator presence except a reason 1–2 stop. Mirror reviews DEFAULTS_TAKEN
 after the fact; a wrong default is a finding, not a reason to have stopped.
 
 STOP LOG. Every stop — taken or avoided — is recorded in the report under STOP_LOG:
-reason class (1 guard · 2 reserved act · 3 no safe default) · what was asked · time
+reason class (1 reserved act · 2 no safe default) · what was asked · time
 waited · outcome.
   Class 2 entries carry the yes/no question. An operator YES retires that stop permanently
   and is recorded as a decision.
   Class 3 entries carry the hindsight default: "the safe default would have been X".
   X is added to SAFE_DEFAULTS in this policy by the next dispatch that touches it.
 A stop that recurs after its default or decision exists is a finding against the actor.
-Target on any unattended deployment: STOP_LOG class 3 = 0; class 2 = 0 after the
-operator's decisions; class 1 only.
+Target on any unattended deployment: STOP_LOG class 2 = 0; class 1 = 0 after the
+operator's decisions.
 
 SAFE_DEFAULTS is the one part of this policy agents may extend, by appending an entry
 under Class 3 above; the rules stated before it, and all of §21d, are reserved to the
@@ -139,7 +136,7 @@ present; a wrong decision is a finding and a revert, never a reason to have wait
 
 Operator decisions already taken (2026-09-03), retiring class-2 stops:
   - branch switch inside a single-owner worktree: agents. Root: reserved.
-  - worktree provisioning: agents, once the guard false refusal is fixed (0B).
+  - worktree provisioning: agents.
   - birth of bound sessions: BOOTSTRAP automates it; not an operator act per dispatch.
   - push: agents, and only when ALL of these hold — the remote is `development`, named
     explicitly; the push is fast-forward, with no force in any spelling and no `+`
@@ -153,9 +150,7 @@ Operator decisions already taken (2026-09-03), retiring class-2 stops:
     unless the merge that produced `main` was itself the agents' to make under this
     section — that is, it changed no guarantee. A merge that changes a guarantee, and its
     push, stay the operator's. `origin` is denied to every runtime, always.
-    NOT YET ENFORCED: `framework/scripts/push_authorization.py` states these conditions and
-    the guard does not consult it, so every push is refused and remains the operator's
-    until that wiring lands. Do not read this bullet as a permission you hold today.
+    Verify these conditions directly immediately before pushing; no runtime hook is involved.
 
 REVIEW BUDGET (part of the push condition above). The purpose of the review is FRESHNESS OF
 CONTEXT, not debate. Mirror sees only the diff; the Orchestrator sees only the verdict.

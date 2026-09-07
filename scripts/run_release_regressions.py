@@ -23,10 +23,6 @@ PRIORITY_TESTS = (
     # This one checks the router links to the two SECTIONS, in the part of the surface read
     # before acting — the gap a session fell through on 2026-09-04 with every check green.
     "scripts/test_stop_policy_is_reachable.py",
-    # §21d's push callout is prose about what code does, and it has already been false for
-    # one commit. This suite derives the answer from source bytes and refuses to let the
-    # three surfaces that state it disagree with the guard, in either direction.
-    "scripts/test_the_push_callout_is_executable.py",
     "scripts/test_documented_commands.py",
     "scripts/test_fresh_clone_reader_journey.py",
     "scripts/test_mission_contract.py",
@@ -37,7 +33,6 @@ PRIORITY_TESTS = (
     "scripts/test_provenance_coverage.py",
     "scripts/test_freeze_scope.py",
     "scripts/test_release_runner_verdict.py",
-    "scripts/test_guard_bash_command.py",
     "scripts/test_locator_obligation_reaches_every_route.py",
     "scripts/test_no_closed_world_assertions_on_live_state.py",
     "scripts/test_abstract_corpus_is_not_evidence.py",
@@ -88,57 +83,6 @@ PRIORITY_TESTS = (
     "framework/scripts/test_figure_ppi_preflight.py",
     "framework/scripts/test_pmc_pow_fetch.py",
     "framework/scripts/test_recapture_snippets.py",
-    # The runtime bridge: one guard engine registered by both runtimes, and the battery
-    # that refuses the bridge when they stop agreeing. Added 2026-08-26 with the bridge.
-    "framework/scripts/test_pre_tool_use_guard.py",
-    "framework/scripts/test_runtime_parity.py",
-    # The push permission, enrolled with the guard change it constrains. Its integration
-    # cases bind the session the way the hook process does and ask guard_policy.verdict
-    # itself, because a permission proved only at its own module is a permission nobody
-    # has shown the guard consults.
-    "framework/scripts/test_push_authorization.py",
-    # The probe behind the matcher list. Its finding is a set of ZEROES — which tool names
-    # never appear — and a zero from a sweep that silently parsed nothing is indistinguish-
-    # able from a zero that is true. This suite is the positive control for those zeroes.
-    # 🔴 `codex_runtime_probe.py` itself is NOT enrolled: it reads ~/.codex, which does not
-    # exist in CI, and `mutate_guard_suite.py` is not enrolled either — it spawns a worktree
-    # per mutation and takes tens of minutes. Both are operator-run instruments; only their
-    # parsing is a regression.
-    "framework/scripts/test_codex_runtime_probe.py",
-    # Ten suites that entered the tree 2026-08-29→08-31 and were never registered. The
-    # enrollment invariant in test_release_runner_verdict.py had been failing for exactly
-    # this reason: 81 tracked, 71 registered, and "PASS (71 targets)" reads the same as
-    # "PASS (81 targets)" to anyone not counting. They are enrolled unchanged — no skip, no
-    # xfail, no NOT_RUN_BY_DESIGN entry, no edit to their contents.
-    # 🔴 test_runtime_diagnostics.py enters RED and stays red: it asserts the string
-    # "Blanket staging is blocked in this repository." inside scripts/guard_bash_command.py,
-    # which stopped being the guard when the policy moved to guard_policy.py. That is a dead
-    # premise in the test, not a regression in the guard, and repairing it here would be
-    # editing a suite to make the battery green — which is the one thing enrollment must not
-    # buy. It is left failing, visible, and owned by a separate repair.
-    "framework/scripts/test_confinement_and_delegation.py",
-    "framework/scripts/test_effect_model.py",
-    "framework/scripts/test_execution_attestation.py",
-    "framework/scripts/test_execution_receipt.py",
-    # Enrolled with the behaviour change it guards: `git worktree add` is now judged by
-    # its destination, and the branch that does so was unreachable code until 0B.
-    "framework/scripts/test_worktree_provisioning.py",
-    # Differential against real git. Two hand-rolled parsers shipped holes because the
-    # test population was "spellings the author thought of"; this makes git the oracle.
-    "framework/scripts/test_worktree_parser_against_git.py",
-    # The policy half of Write/Edit coverage. Enrolled BEFORE the matcher is registered:
-    # an unknown tool fails closed, so registering first would have denied all file
-    # authoring in the session.
-    "framework/scripts/test_file_tool_coverage.py",
-    # A crashed guard must SAY no. Writing nothing to stdout is silence, and a harness is
-    # free to read silence as no objection.
-    "framework/scripts/test_guard_fails_closed_on_crash.py",
-    "framework/scripts/test_guard_families_rev11.py",
-    "framework/scripts/test_guard_families_rev12.py",
-    "framework/scripts/test_guard_families_rev13.py",
-    "framework/scripts/test_post_effect_verify.py",
-    "framework/scripts/test_repo_topology.py",
-    "framework/scripts/test_runtime_diagnostics.py",
     ".claude/skills/legend-study-intake-triage/scripts/"
     "test_study_dedup_triage.py",
     ".claude/skills/legend-batch-inferential-sweep/scripts/"

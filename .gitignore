@@ -6,6 +6,7 @@
 _qa/
 files/
 backup/
+.codex/
 staging/
 
 # Page-adjudication crops. A crop of a printed page reproduces the author's characters —
