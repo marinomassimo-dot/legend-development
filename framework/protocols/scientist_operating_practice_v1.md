@@ -35,6 +35,8 @@ Resolve PMID and DOI, then query the receipt ledger **before fetching anything**
 | Prior state | Action |
 |---|---|
 | `complete_fulltext_read` with adequate coverage | reuse the dossier; do not re-read |
+
+> **Obligation carried by every complete read.** A `complete_fulltext_read` is recorded through `FULLTEXT_READ_RECEIPT` and carries `verbatim_locators` in its deep-dive manifest, as [`fulltext_read_receipt.md`](fulltext_read_receipt.md) requires; this descriptive document restates the rule and does not relax it.
 | `partial_fulltext_read` | resume from the uncovered sections |
 | any | a new complete read requires an explicit `reread_reason` |
 

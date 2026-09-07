@@ -33,7 +33,10 @@ REPO_PREFIXES = (
     "scripts/",
 )
 IGNORED_PARTS = frozenset({".git", ".venv", "node_modules", "__pycache__"})
-ARCHIVAL_DIRECTORIES = ("governance/candidates", "governance/decisions", "learning", "ledger")
+# `reviews/` joined this tuple at the 2026-09-07 consolidation: the Mirror review corpus names the
+# retired guard scripts it reviewed, and a review record is a dated record like a learning
+# record, not a promise that the executable still exists.
+ARCHIVAL_DIRECTORIES = ("governance/candidates", "governance/decisions", "learning", "ledger", "reviews")
 
 
 # 🔴 The population is the DOCUMENTED surface: what a reader of a clone holds.
