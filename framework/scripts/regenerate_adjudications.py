@@ -179,7 +179,7 @@ def render(pdf, page_number: int, crop: list[float], dpi: int) -> bytes:
     return pixmap.tobytes("png")
 
 
-def run(action: str, only: str | None) -> int:
+def run(action: str, only: str | None, artifact_root: Path | None = None) -> int:
     try:
         import fitz  # noqa: F401, PLC0415
     except ImportError:
@@ -199,11 +199,17 @@ def run(action: str, only: str | None) -> int:
             continue
 
         source = recipe["source_pdf"]
-        pdf_path = ROOT / source["path"]
+        # files/ is gitignored and does NOT travel with a branch, so a worktree can hold the
+        # recipe and not the article. --artifact-workspace points at the tree that has the
+        # PDFs, exactly as deepdive_manifest.py and fulltext_receipts.py already do.
+        pdf_path = (artifact_root or ROOT) / source["path"]
         if not pdf_path.exists():
+            hint = ("" if artifact_root else
+                    " If the article is in another checkout, re-run with "
+                    "--artifact-workspace <that tree>.")
             failures.append(
                 f"{pmid}: source PDF absent at {source['path']}. The recipe cannot be run "
-                f"without your own copy of the article; this repository does not ship it")
+                f"without your own copy of the article; this repository does not ship it.{hint}")
             continue
         actual = digest(pdf_path.read_bytes())
         if actual != source["sha256"]:
@@ -258,8 +264,14 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
     parser.add_argument("action", nargs="?", default="verify", choices=("verify", "write"))
     parser.add_argument("--pmid", default=None, help="restrict to one study")
+    parser.add_argument(
+        "--artifact-workspace", default=None,
+        help="workspace root used ONLY to resolve source PDFs; recipes are still read from "
+             "this checkout. files/ is gitignored and does not travel with a branch, so a "
+             "worktree can hold the recipe and not the article")
     arguments = parser.parse_args()
-    return run(arguments.action, arguments.pmid)
+    root = Path(arguments.artifact_workspace).resolve() if arguments.artifact_workspace else None
+    return run(arguments.action, arguments.pmid, root)
 
 
 if __name__ == "__main__":

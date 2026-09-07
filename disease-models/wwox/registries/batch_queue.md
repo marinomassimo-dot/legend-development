@@ -83,9 +83,9 @@ time; it does not redistribute or license the article text.
 |---|---:|---:|
 | **Not found by identifier** — run the intake gate | 320 | 45% |
 | **Catalogued, never processed** — the reading debt | 157 | 22% |
-| Known to the tracking log only | 146 | 21% |
+| Known to the tracking log only | 145 | 21% |
 | Processed from the abstract | 7 | 1% |
-| Partial full text read | 14 | 2% |
+| Partial full text read | 15 | 2% |
 | Full text read | 62 | 9% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
@@ -351,7 +351,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [37324196](https://pubmed.ncbi.nlm.nih.gov/37324196/) | 2023 | ✅ | Journal Article | screened | WWOX Polymorphisms as Predictors of the Biochemical Recurrence of Localized Prostate Cancer after Radical Prostatectomy. |
 | [37248434](https://pubmed.ncbi.nlm.nih.gov/37248434/) | 2023 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | screened | WWOX binds MERIT40 and modulates its function in homologous recombination, implications in breast cancer. |
 | [36979157](https://pubmed.ncbi.nlm.nih.gov/36979157/) | 2023 | ✅ | Journal Article | screened | Antineoplastic Nature of WWOX in Glioblastoma Is Mainly a Consequence of Reduced Cell Viability and Invasion. |
-| [36828035](https://pubmed.ncbi.nlm.nih.gov/36828035/) | 2023 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | screened | WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice phenocopying human SCAR12. |
 | [36530994](https://pubmed.ncbi.nlm.nih.gov/36530994/) | 2022 | ✅ | Journal Article | screened | WWOX-rs13338697 genotype predicts therapeutic efficacy of ADI-PEG 20 for patients with advanced hepatocellular carcinoma. |
 | [36364214](https://pubmed.ncbi.nlm.nih.gov/36364214/) | 2022 | ✅ | Journal Article | screened | WWOX Modulates ROS-Dependent Senescence in Bladder Cancer. |
 | [35984507](https://pubmed.ncbi.nlm.nih.gov/35984507/) | 2022 | ✅ | Journal Article | screened | WWOX inhibition by Zfra1-31 restores mitochondrial homeostasis and viability of neuronal cells exposed to high glucose. |
@@ -728,7 +727,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [36271927](https://pubmed.ncbi.nlm.nih.gov/36271927/) | 2022 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | screened | WWOX and metabolic regulation in normal and pathological conditions. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 623 outstanding records)*
+*(showing all 622 outstanding records)*
 
 ## Already processed from this seed
 
@@ -740,6 +739,7 @@ for an entirely unprocessed record.
 |---|---:|:---:|---|---|---|
 | [29808465](https://pubmed.ncbi.nlm.nih.gov/29808465/) | 2018 | — | abstract only | PAPER 041 | A novel missense variant in the SDR domain of the WWOX gene leads to complete loss of WWOX protein with early-onset epileptic encephalopathy and severe developmental delay. |
 | [38499540](https://pubmed.ncbi.nlm.nih.gov/38499540/) | 2024 | ✅ | partial full text | receipt FTR-20260810-38499540-01 | Unveiling the relationship between WWOX and BRCA1 in mammary tumorigenicity and in DNA repair pathway selection. |
+| [36828035](https://pubmed.ncbi.nlm.nih.gov/36828035/) | 2023 | ✅ | partial full text | receipt FTR-20260826-36828035-02 | WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice phenocopying human SCAR12. |
 | [34268881](https://pubmed.ncbi.nlm.nih.gov/34268881/) | 2021 | ✅ | partial full text | receipt FTR-20260814-34268881-03 | Modeling genetic epileptic encephalopathies using brain organoids. |
 | [30356099](https://pubmed.ncbi.nlm.nih.gov/30356099/) | 2019 | ✅ | partial full text | receipt FTR-20260811-30356099-01 | ✎ corrected — The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature. |
 | [30158849](https://pubmed.ncbi.nlm.nih.gov/30158849/) | 2018 | ✅ | partial full text | receipt FTR-20260811-30158849-01 | WWOX Phosphorylation, Signaling, and Role in Neurodegeneration. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [17360458](https://pubmed.ncbi.nlm.nih.gov/17360458/) | 2007 | ✅ | full text | PAPER 078 | Targeted deletion of Wwox reveals a tumor suppressor function. |
 | [40875931](https://pubmed.ncbi.nlm.nih.gov/40875931/) | 2025 | — | full text | PAPER 014 | WWOX-Related Developmental and Epileptic Encephalopathy: Expanding the Clinical Spectrum and Deciphering the Genotype-Phenotype. |
 
-*(showing all 83 processed records from the seed)*
+*(showing all 84 processed records from the seed)*
 
 ## How to work one
 

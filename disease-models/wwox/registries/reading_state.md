@@ -20,7 +20,7 @@ asserted by no receipt. `prior_receipt` means the reading this one builds on, an
 sharing a parent are the normal case under parallel branches.
 
 
-**82 paper(s)** with at least one receipt · **128 receipt(s)** · **1 paper(s) read in parallel** by two receipts sharing a parent.
+**83 paper(s)** with at least one receipt · **130 receipt(s)** · **1 paper(s) read in parallel** by two receipts sharing a parent.
 
 ## Papers read in parallel
 
@@ -99,6 +99,7 @@ Two receipts naming one parent. Neither supersedes the other; the union below is
 | PMID 36537114 | `partial_fulltext_read` | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | — | 1 |
 | PMID 36572673 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | not_present | read | read | 1 |
 | PMID 36779245 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | unavailable | read | 3 |
+| PMID 36828035 | `partial_fulltext_read` | read | read | read | read | read | not_read | read | read | unavailable | not_read | 2 |
 | PMID 37519886 | `complete_fulltext_read` | read | read | read | read | read | read | read | not_present | read | read | 1 |
 | PMID 38161429 | `partial_fulltext_read` | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | unknown_legacy | — | 1 |
 | PMID 38182577 | `complete_fulltext_read` | read | read | read | read | read | not_present | read | read | read | read | 2 |

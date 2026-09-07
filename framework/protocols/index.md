@@ -90,6 +90,8 @@ Provide a content map of the LEGEND system organized by:
 | [[ingest_protocol]] | Ingest protocol with quarantine |
 | [[parallel_legend_protocol]] | Parallel-branch protocol |
 | [[scientist_reading_modes]] | Reading modes A/B, Scientist actor identity, task ownership of a reading |
+| [[scientist_evidence_standard]] | Non-canonical, PROPOSED output contract for a Scientist reading (evidence standard) |
+| [[scientist_operating_practice_v1]] | Non-canonical, DESCRIPTIVE reconstruction of the Scientist operating practice |
 | [[controlled_benchmark_ab]] | Controlled A/B reading benchmark — blind input surface, freezing, evaluation |
 | [[cross_session_transport]] | Cross-session transport — durable artifact vs control envelope, delivery taxonomy, version-bound runtime guarantees |
 | [[legend_operating_convention_v1]] | Operating Convention v1 — the session layer: artifact classes, lifecycle, ownership, dispatch, handoff, review, preservation, escalation (non-binding working layer; governance wins on any disagreement) |
