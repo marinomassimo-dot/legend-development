@@ -1,0 +1,1402 @@
+{
+ "_schema": "LEGEND evaluation - evaluator-side frozen case set v1",
+ "_warning": "EVALUATOR ONLY. Never place this file, or anything derived from it, in a participant surface.",
+ "branch": "lettore-c",
+ "cases": {
+  "HC-A1": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "32000863"
+   ],
+   "reader_prior_work": {
+    "evidence": "both branches carry the PMID32000863 lithium adjudication pilot (62/111 references)",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "ADJUDICATED"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "deepdive_manifest.py L100-101 states the complete answer",
+   "surface_leak_grade": "L3",
+   "surfaces_held": {
+    "32000863": [
+     "PMID32000863_Cheng2020_PMC.xml",
+     "PMID32000863_Cheng2020_assets",
+     "PMID32000863_Cheng2020_supplementary.pdf"
+    ]
+   }
+  },
+  "HC-A2": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "UNRESOLVABLE",
+   "eligibility_prior": "UNRESOLVABLE",
+   "pmids": [
+    "32000863"
+   ],
+   "reader_prior_work": {
+    "evidence": "as HC-A1, same figure",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "ADJUDICATED"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "deepdive_manifest.py L100-101 gives the panel observation the level question sits on",
+   "surface_leak_grade": "L2",
+   "surfaces_held": {
+    "32000863": [
+     "PMID32000863_Cheng2020_PMC.xml",
+     "PMID32000863_Cheng2020_assets",
+     "PMID32000863_Cheng2020_supplementary.pdf"
+    ]
+   }
+  },
+  "HC-A3": {
+   "blocker": "deciding surface not held - acquire it, then re-classify",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "the deciding panel is required and PMID 32581702 is held as PMC XML only - no PDF, no figure asset, no page-adjudication crop",
+   "eligibility_now": "UNVERIFIABLE_SURFACE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "32581702"
+   ],
+   "reader_prior_work": {
+    "evidence": "neither names the paper and the cell-identity terms on one line; lettore-b asserts a progenitor defect at model level",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "MENTIONED",
+    "scientist_b_branch_lettore_b": "WORKED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "32581702": [
+     "PMID32581702_Repudi2020_PMC.xml"
+    ]
+   }
+  },
+  "HC-A4": {
+   "blocker": "dispatchable only with the residual declared to the evaluator",
+   "contaminated_by_construction": false,
+   "dispatchable": true,
+   "eligibility_moved_by": "confirmed text-decidable: 23.3 / 24.7 / 57.3 / 27.5 each occur in the held XML, so no figure surface is needed",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "34634460"
+   ],
+   "reader_prior_work": {
+    "evidence": "no line names the paper and the two amplitude arms together",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "WORKED",
+    "scientist_b_branch_lettore_b": "WORKED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "34634460": [
+     "PMID34634460_Breton2021_PMC.xml"
+    ]
+   }
+  },
+  "HC-B1": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "UNRESOLVABLE",
+   "eligibility_prior": "UNRESOLVABLE",
+   "pmids": [
+    "22193544"
+   ],
+   "reader_prior_work": {
+    "evidence": "both name 22193544; neither restates the Tau finding, which is already in the discipline file",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "WORKED",
+    "scientist_b_branch_lettore_b": "WORKED"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "fulltext_read_receipt.md L145-147 states the complete answer with its reasoning",
+   "surface_leak_grade": "L3",
+   "surfaces_held": {
+    "22193544": [
+     "PMID22193544_Wang2012.pdf",
+     "PMID22193544_Wang2012_PMC_JATS.xml",
+     "PMID22193544_Wang2012_supplement.zip"
+    ]
+   }
+  },
+  "HC-B2": {
+   "blocker": "deciding surface not held - acquire it, then re-classify",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "the bar assignment is read off Figure 4B; PMID 18487609 is held as PDF + PMC HTML, so the figure IS reachable - retained as GOLD_ELIGIBLE only if the reader renders from the PDF; flagged because the prior spec cited no render route",
+   "eligibility_now": "UNVERIFIABLE_SURFACE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "18487609"
+   ],
+   "reader_prior_work": {
+    "evidence": "lettore quantifies Figure 4B tissue density and reports a misread bar in panel 3D, not 4B",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "WORKED",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "deepdive_manifest.py L578 on 18487609 text layer; no science disclosed",
+   "surface_leak_grade": "L1",
+   "surfaces_held": {
+    "18487609": [
+     "PMID18487609_Aqeilan2008.pdf",
+     "PMID18487609_Aqeilan2008_PMC.html"
+    ]
+   }
+  },
+  "HC-B3": {
+   "blocker": "dispatchable only with the residual declared to the evaluator",
+   "contaminated_by_construction": false,
+   "dispatchable": true,
+   "eligibility_moved_by": "and additionally surface-incomplete: the axis sign lives in a Breton figure and no figure surface is held",
+   "eligibility_now": "STRESS_ONLY",
+   "eligibility_prior": "STRESS_ONLY",
+   "pmids": [
+    "34634460"
+   ],
+   "reader_prior_work": {
+    "evidence": "adjudicative-language screen fired; NOT read line by line - an upper bound, not a classification",
+    "provenance": "SCREEN_ONLY",
+    "scientist_a_branch_lettore": "SCREENED",
+    "scientist_b_branch_lettore_b": "SCREENED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "34634460": [
+     "PMID34634460_Breton2021_PMC.xml"
+    ]
+   }
+  },
+  "HC-B4": {
+   "blocker": "deciding surface not held - acquire it, then re-classify",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "the case turns on what the PANEL prints against what the caption says; PMID 34634460 is held as PMC XML only, its six graphic hrefs (gr1..gr6.jpg) are not on disk, and the string \"5D\" occurs 0 times in the XML",
+   "eligibility_now": "UNVERIFIABLE_SURFACE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "34634460"
+   ],
+   "reader_prior_work": {
+    "evidence": "zero lines on either branch match Fig 5D or the caption-vs-panel terms",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "CLEAN",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "CLEAN_BLIND",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "34634460": [
+     "PMID34634460_Breton2021_PMC.xml"
+    ]
+   }
+  },
+  "HC-B5": {
+   "blocker": "dispatchable only with the residual declared to the evaluator",
+   "contaminated_by_construction": false,
+   "dispatchable": true,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "42128308"
+   ],
+   "reader_prior_work": {
+    "evidence": "no line names the paper and the fragile-site taxonomy together; zero taxonomy hits on both",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "WORKED",
+    "scientist_b_branch_lettore_b": "MENTIONED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "42128308": [
+     "PMID42128308_Aqeilan2026.pdf",
+     "PMID42128308_Aqeilan2026_assets",
+     "PMID42128308_Aqeilan2026_fitz.txt"
+    ]
+   }
+  },
+  "HC-B6": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "34214506"
+   ],
+   "reader_prior_work": {
+    "evidence": "lettore-b: \"Calpain. Rejected as an established WWOX turnover route (DIS-008): no proteolysis was ever ...\"",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "CLEAN",
+    "scientist_b_branch_lettore_b": "ADJUDICATED"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "34214506": [
+     "PMID34214506_Saadane2021.pdf"
+    ]
+   }
+  },
+  "HC-C1": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "23370280"
+   ],
+   "reader_prior_work": {
+    "evidence": "lettore: \"Figure 6: four bar charts ... not one significance marker or p-value anywhere in the figure\"",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "23370280": [
+     "PMID23370280_Salah2013.pdf",
+     "PMID23370280_Salah2013_PMC.xml",
+     "PMID23370280_assets"
+    ]
+   }
+  },
+  "HC-C2": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "confirmed text-decidable: both asterisk definitions are printed inside <fig> captions in the held XML",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "34634460"
+   ],
+   "reader_prior_work": {
+    "evidence": "lettore: \"Figure 3's caption inverts the asterisk convention (* p = 0.0036, ** p = 0.027) while Figure 6 has it right\"",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "34634460": [
+     "PMID34634460_Breton2021_PMC.xml"
+    ]
+   }
+  },
+  "HC-C3": {
+   "blocker": "dispatchable only with the residual declared to the evaluator",
+   "contaminated_by_construction": false,
+   "dispatchable": true,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_WITH_MULTIPLE",
+   "eligibility_prior": "GOLD_WITH_MULTIPLE",
+   "pmids": [
+    "24550385"
+   ],
+   "reader_prior_work": {
+    "evidence": "both mention 24550385 only for panel-count / extractor defects",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "MENTIONED",
+    "scientist_b_branch_lettore_b": "MENTIONED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "deepdive_manifest.py L343/L601: 24550385 markup boundaries, reading anchored to XML",
+   "surface_leak_grade": "L1",
+   "surfaces_held": {
+    "24550385": [
+     "PMID24550385_AbuOdeh2014.pdf",
+     "PMID24550385_AbuOdeh2014_PMC.html"
+    ]
+   }
+  },
+  "HC-C4": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "the Methods-vs-Results half is text-decidable in the held XML; the third surface (the Ctrl column) is not held",
+   "eligibility_now": "UNRESOLVABLE",
+   "eligibility_prior": "UNRESOLVABLE",
+   "pmids": [
+    "32581702"
+   ],
+   "reader_prior_work": {
+    "evidence": "lettore: \"one affected fetus against one control fetus - Methods say one, Results say three\"",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "32581702": [
+     "PMID32581702_Repudi2020_PMC.xml"
+    ]
+   }
+  },
+  "HC-D1": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "19500159",
+    "19936220",
+    "30290271"
+   ],
+   "reader_prior_work": {
+    "evidence": "lettore: \"PMID 19936220 ... epileptogenesis not measured in any form\" and \"a Table 2 whose Epilepsy row is empty for both mouse models\"",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "deepdive_manifest.py L1275 (19500159 mutation test) and L1383 (19936220 EPMC example)",
+   "surface_leak_grade": "L1",
+   "surfaces_held": {
+    "19500159": [
+     "PMID19500159_Suzuki2009.handoff.md",
+     "PMID19500159_Suzuki2009.html",
+     "PMID19500159_Suzuki2009.pdf"
+    ],
+    "19936220": [
+     "PMID19936220_Ludes-Meyers2009.pdf",
+     "PMID19936220_Ludes-Meyers2009_PMC.xml",
+     "PMID19936220_Ludes-Meyers2009_assets"
+    ],
+    "30290271": [
+     "PMID30290271_Hussain2019.html",
+     "PMID30290271_Hussain2019.pdf",
+     "PMID30290271_Hussain2019_assets"
+    ]
+   }
+  },
+  "HC-D2": {
+   "blocker": "dispatchable only with the residual declared to the evaluator",
+   "contaminated_by_construction": false,
+   "dispatchable": true,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "18487609"
+   ],
+   "reader_prior_work": {
+    "evidence": "no line names 18487609 and the osteoclast terms together",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "WORKED",
+    "scientist_b_branch_lettore_b": "WORKED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "as HC-B2",
+   "surface_leak_grade": "L1",
+   "surfaces_held": {
+    "18487609": [
+     "PMID18487609_Aqeilan2008.pdf",
+     "PMID18487609_Aqeilan2008_PMC.html"
+    ]
+   }
+  },
+  "HC-D3": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "STRESS_ONLY",
+   "eligibility_prior": "STRESS_ONLY",
+   "pmids": [
+    "42128308"
+   ],
+   "reader_prior_work": {
+    "evidence": "lettore cites manifest PMID42128308 entry 9 on the Olig2-Cre readout as a designed false negative",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "WORKED"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "42128308": [
+     "PMID42128308_Aqeilan2026.pdf",
+     "PMID42128308_Aqeilan2026_assets",
+     "PMID42128308_Aqeilan2026_fitz.txt"
+    ]
+   }
+  },
+  "HC-D4": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "24550385",
+    "26675548"
+   ],
+   "reader_prior_work": {
+    "evidence": "lettore: \"The text says ... but not the mutated form WWOX-K274R. The blot shows a clear band. Reduced, not abolished.\"",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "as HC-C3, plus L463 on 26675548 timepoint labels",
+   "surface_leak_grade": "L1",
+   "surfaces_held": {
+    "24550385": [
+     "PMID24550385_AbuOdeh2014.pdf",
+     "PMID24550385_AbuOdeh2014_PMC.html"
+    ],
+    "26675548": [
+     "PMID26675548_AbuOdeh2016.pdf",
+     "PMID26675548_AbuOdeh2016_PMC.xml",
+     "PMID26675548_assets"
+    ]
+   }
+  },
+  "HC-E1": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "22193544",
+    "32000863"
+   ],
+   "reader_prior_work": {
+    "evidence": "as HC-A1; lettore-b holds PILOT_PMID32000863_GSK3B_LITHIUM_ADJUDICATION",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "ADJUDICATED"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "via the L3 HC-A1 comment on the same figure, plus fulltext_read_receipt.md on 22193544",
+   "surface_leak_grade": "L2",
+   "surfaces_held": {
+    "22193544": [
+     "PMID22193544_Wang2012.pdf",
+     "PMID22193544_Wang2012_PMC_JATS.xml",
+     "PMID22193544_Wang2012_supplement.zip"
+    ],
+    "32000863": [
+     "PMID32000863_Cheng2020_PMC.xml",
+     "PMID32000863_Cheng2020_assets",
+     "PMID32000863_Cheng2020_supplementary.pdf"
+    ]
+   }
+  },
+  "HC-E2": {
+   "blocker": "",
+   "contaminated_by_construction": false,
+   "dispatchable": true,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "26675548"
+   ],
+   "reader_prior_work": {
+    "evidence": "lettore names 26675548 three times, all on the K274R blot and the caption census; zero on ATR or the title",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "MENTIONED",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "CLEAN_BLIND",
+   "surface_leak_evidence": "deepdive_manifest.py L463 only - a timepoint-label example, no science",
+   "surface_leak_grade": "L0",
+   "surfaces_held": {
+    "26675548": [
+     "PMID26675548_AbuOdeh2016.pdf",
+     "PMID26675548_AbuOdeh2016_PMC.xml",
+     "PMID26675548_assets"
+    ]
+   }
+  },
+  "HC-E3": {
+   "blocker": "dispatchable only with the residual declared to the evaluator",
+   "contaminated_by_construction": false,
+   "dispatchable": true,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "42128308",
+    "42397075"
+   ],
+   "reader_prior_work": {
+    "evidence": "adjudicative-language screen fired; NOT read line by line - an upper bound, not a classification",
+    "provenance": "SCREEN_ONLY",
+    "scientist_a_branch_lettore": "SCREENED",
+    "scientist_b_branch_lettore_b": "SCREENED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "BENCHMARK_INSTRUCTIONS.md and OUTPUT_SCHEMA.md are paper-specific to 42397075",
+   "surface_leak_grade": "L2",
+   "surfaces_held": {
+    "42128308": [
+     "PMID42128308_Aqeilan2026.pdf",
+     "PMID42128308_Aqeilan2026_assets",
+     "PMID42128308_Aqeilan2026_fitz.txt"
+    ],
+    "42397075": [
+     "PMID42397075_Aqeilan2026.pdf",
+     "PMID42397075_Aqeilan2026_assets",
+     "PMID42397075_Aqeilan2026_fitz.txt",
+     "PMID42397075_Aqeilan2026_sup.textClipping"
+    ]
+   }
+  },
+  "HC-F1": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "23370280",
+    "24550385",
+    "26675548"
+   ],
+   "reader_prior_work": {
+    "evidence": "lettore types the claim \"DNA damage promotes ITCH-dependent K63 ubiquitination of WWOX at Lys274 | DATO\" and carries a DEGRADATION_DIRECTION_GATE",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "epistemic_discipline.md L39 hands the K48/K63 discriminant; names neither WWOX nor ITCH",
+   "surface_leak_grade": "L2",
+   "surfaces_held": {
+    "23370280": [
+     "PMID23370280_Salah2013.pdf",
+     "PMID23370280_Salah2013_PMC.xml",
+     "PMID23370280_assets"
+    ],
+    "24550385": [
+     "PMID24550385_AbuOdeh2014.pdf",
+     "PMID24550385_AbuOdeh2014_PMC.html"
+    ],
+    "26675548": [
+     "PMID26675548_AbuOdeh2016.pdf",
+     "PMID26675548_AbuOdeh2016_PMC.xml",
+     "PMID26675548_assets"
+    ]
+   }
+  },
+  "HC-F2": {
+   "blocker": "dispatchable only with the residual declared to the evaluator",
+   "contaminated_by_construction": false,
+   "dispatchable": true,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "36779245",
+    "42128308"
+   ],
+   "reader_prior_work": {
+    "evidence": "adjudicative-language screen fired; NOT read line by line - an upper bound, not a classification",
+    "provenance": "SCREEN_ONLY",
+    "scientist_a_branch_lettore": "SCREENED",
+    "scientist_b_branch_lettore_b": "SCREENED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "deepdive_manifest.py L98-99 gives the text finding AND the Figure 4A ordering",
+   "surface_leak_grade": "L2",
+   "surfaces_held": {
+    "36779245": [
+     "PMID36779245_Oliver2023_PMC.xml",
+     "PMID36779245_Oliver2023_assets"
+    ],
+    "42128308": [
+     "PMID42128308_Aqeilan2026.pdf",
+     "PMID42128308_Aqeilan2026_assets",
+     "PMID42128308_Aqeilan2026_fitz.txt"
+    ]
+   }
+  },
+  "HC-F3": {
+   "blocker": "dispatchable only with the residual declared to the evaluator",
+   "contaminated_by_construction": false,
+   "dispatchable": true,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_WITH_MULTIPLE",
+   "eligibility_prior": "GOLD_WITH_MULTIPLE",
+   "pmids": [],
+   "reader_prior_work": {
+    "evidence": "adjudicative-language screen fired; NOT read line by line - an upper bound, not a classification",
+    "provenance": "SCREEN_ONLY",
+    "scientist_a_branch_lettore": "SCREENED",
+    "scientist_b_branch_lettore_b": "SCREENED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {}
+  },
+  "HC-F4": {
+   "blocker": "deciding surface not held - acquire it, then re-classify",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "neither terminal surface is held: PMID 12065620 absent, and the citing review PMC3139124 absent - only Saeki (PMID 21212533) is on disk. The prior artifact named one acquisition; there are two",
+   "eligibility_now": "UNVERIFIABLE_SURFACE",
+   "eligibility_prior": "UNRESOLVABLE",
+   "pmids": [
+    "12065620"
+   ],
+   "reader_prior_work": {
+    "evidence": "one bare mention on lettore-b; no adjudication",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "CLEAN",
+    "scientist_b_branch_lettore_b": "MENTIONED"
+   },
+   "single_label": "CLEAN_BLIND",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "12065620": []
+   }
+  },
+  "HC-G1": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "18487609"
+   ],
+   "reader_prior_work": {
+    "evidence": "lettore: \"Panel 5A measures the in-vivo direction and it is up, not down: RUNX2 at 1.50 in femur\"",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "as HC-B2",
+   "surface_leak_grade": "L1",
+   "surfaces_held": {
+    "18487609": [
+     "PMID18487609_Aqeilan2008.pdf",
+     "PMID18487609_Aqeilan2008_PMC.html"
+    ]
+   }
+  },
+  "HC-G2": {
+   "blocker": "dispatchable only with the residual declared to the evaluator",
+   "contaminated_by_construction": false,
+   "dispatchable": true,
+   "eligibility_moved_by": "",
+   "eligibility_now": "STRESS_ONLY",
+   "eligibility_prior": "STRESS_ONLY",
+   "pmids": [
+    "22193544",
+    "42128308"
+   ],
+   "reader_prior_work": {
+    "evidence": "adjudicative-language screen fired; NOT read line by line - an upper bound, not a classification",
+    "provenance": "SCREEN_ONLY",
+    "scientist_a_branch_lettore": "SCREENED",
+    "scientist_b_branch_lettore_b": "SCREENED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "fulltext_read_receipt.md names 22193544",
+   "surface_leak_grade": "L1",
+   "surfaces_held": {
+    "22193544": [
+     "PMID22193544_Wang2012.pdf",
+     "PMID22193544_Wang2012_PMC_JATS.xml",
+     "PMID22193544_Wang2012_supplement.zip"
+    ],
+    "42128308": [
+     "PMID42128308_Aqeilan2026.pdf",
+     "PMID42128308_Aqeilan2026_assets",
+     "PMID42128308_Aqeilan2026_fitz.txt"
+    ]
+   }
+  },
+  "HC-G3": {
+   "blocker": "dispatchable only with the residual declared to the evaluator",
+   "contaminated_by_construction": false,
+   "dispatchable": true,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "34268881"
+   ],
+   "reader_prior_work": {
+    "evidence": "no line names 34268881 and the stage-confound terms together",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "WORKED",
+    "scientist_b_branch_lettore_b": "WORKED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "34268881": [
+     "PMID34268881_Steinberg2021.pdf",
+     "PMID34268881_Steinberg2021_PMC.xml",
+     "PMID34268881_assets"
+    ]
+   }
+  },
+  "HC-G4": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "18487609",
+    "34634460"
+   ],
+   "reader_prior_work": {
+    "evidence": "lettore: \"three heterozygote-sensitive readouts (slice bursting incidence, sIPSC amplitude, resting ...)\"",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "as HC-B2",
+   "surface_leak_grade": "L1",
+   "surfaces_held": {
+    "18487609": [
+     "PMID18487609_Aqeilan2008.pdf",
+     "PMID18487609_Aqeilan2008_PMC.html"
+    ],
+    "34634460": [
+     "PMID34634460_Breton2021_PMC.xml"
+    ]
+   }
+  },
+  "HC-H1": {
+   "blocker": "deciding surface not held - acquire it, then re-classify",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "UNVERIFIABLE_SURFACE",
+   "eligibility_prior": "UNVERIFIABLE_SURFACE",
+   "pmids": [
+    "42128308",
+    "42397075",
+    "42422765"
+   ],
+   "reader_prior_work": {
+    "evidence": "lettore cites manifest PMID42128308 entry 24 on the Abudiab preprint / successor relation",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "WORKED"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "42422765 named x14 across three surface files; 42397075 x12 in the instructions",
+   "surface_leak_grade": "L2",
+   "surfaces_held": {
+    "42128308": [
+     "PMID42128308_Aqeilan2026.pdf",
+     "PMID42128308_Aqeilan2026_assets",
+     "PMID42128308_Aqeilan2026_fitz.txt"
+    ],
+    "42397075": [
+     "PMID42397075_Aqeilan2026.pdf",
+     "PMID42397075_Aqeilan2026_assets",
+     "PMID42397075_Aqeilan2026_fitz.txt",
+     "PMID42397075_Aqeilan2026_sup.textClipping"
+    ],
+    "42422765": [
+     "PMID42422765_Obeid2026_PMC.html",
+     "PMID42422765_Obeid2026_assets"
+    ]
+   }
+  },
+  "HC-I1": {
+   "blocker": "excluded by the rubric; not a benchmark item",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "EXCLUDE",
+   "eligibility_prior": "EXCLUDE",
+   "pmids": [
+    "36779245"
+   ],
+   "reader_prior_work": {
+    "evidence": "zero hits",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "CLEAN",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "deepdive_manifest.py L340-349 carries the diagnosis and the fix",
+   "surface_leak_grade": "L3",
+   "surfaces_held": {
+    "36779245": [
+     "PMID36779245_Oliver2023_PMC.xml",
+     "PMID36779245_Oliver2023_assets"
+    ]
+   }
+  },
+  "HC-I10": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": true,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "15070730",
+    "18487609"
+   ],
+   "reader_prior_work": {
+    "evidence": "adjudicative-language screen fired; NOT read line by line - an upper bound, not a classification",
+    "provenance": "SCREEN_ONLY",
+    "scientist_a_branch_lettore": "SCREENED",
+    "scientist_b_branch_lettore_b": "SCREENED"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "deepdive_manifest.py L578: 18487609 text layer is unusable - procedural, no science",
+   "surface_leak_grade": "L1",
+   "surfaces_held": {
+    "15070730": [
+     "PMID15070730_Aqeilan2004.pdf",
+     "PMID15070730_Aqeilan2004_PMC.html"
+    ],
+    "18487609": [
+     "PMID18487609_Aqeilan2008.pdf",
+     "PMID18487609_Aqeilan2008_PMC.html"
+    ]
+   }
+  },
+  "HC-I2": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "16061658"
+   ],
+   "reader_prior_work": {
+    "evidence": "adjudicative-language screen fired; NOT read line by line - an upper bound, not a classification",
+    "provenance": "SCREEN_ONLY",
+    "scientist_a_branch_lettore": "SCREENED",
+    "scientist_b_branch_lettore_b": "SCREENED"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "deepdive_manifest.py L559 names the paper and the exact corruption (p73b->p73h, ug->Ag)",
+   "surface_leak_grade": "L3",
+   "surfaces_held": {
+    "16061658": [
+     "PMID16061658_Aqeilan2005.pdf"
+    ]
+   }
+  },
+  "HC-I3": {
+   "blocker": "dispatchable only with the residual declared to the evaluator",
+   "contaminated_by_construction": false,
+   "dispatchable": true,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "23370280"
+   ],
+   "reader_prior_work": {
+    "evidence": "adjudicative-language screen fired; NOT read line by line - an upper bound, not a classification",
+    "provenance": "SCREEN_ONLY",
+    "scientist_a_branch_lettore": "SCREENED",
+    "scientist_b_branch_lettore_b": "SCREENED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "23370280": [
+     "PMID23370280_Salah2013.pdf",
+     "PMID23370280_Salah2013_PMC.xml",
+     "PMID23370280_assets"
+    ]
+   }
+  },
+  "HC-I4": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": true,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "42397075"
+   ],
+   "reader_prior_work": {
+    "evidence": "adjudicative-language screen fired; NOT read line by line - an upper bound, not a classification",
+    "provenance": "SCREEN_ONLY",
+    "scientist_a_branch_lettore": "SCREENED",
+    "scientist_b_branch_lettore_b": "SCREENED"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "as HC-E3 - the case IS 42397075 provenance and the instructions enumerate it",
+   "surface_leak_grade": "L2",
+   "surfaces_held": {
+    "42397075": [
+     "PMID42397075_Aqeilan2026.pdf",
+     "PMID42397075_Aqeilan2026_assets",
+     "PMID42397075_Aqeilan2026_fitz.txt",
+     "PMID42397075_Aqeilan2026_sup.textClipping"
+    ]
+   }
+  },
+  "HC-I5": {
+   "blocker": "the case rests on a fact this session measured to be false",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "the supplement IS held: files/fulltext/PMID26675548_assets/oncotarget-07-4344-s001.pdf, 1527965 bytes, 7 pages, page 4 headed \"Supplementary Figure S4: Impaired checkpoint activation in MCF7 cells\". The prior status rested on an INHERITED claim that it sat behind a challenge. E-1 does not fail, so the gold \"a declared, addressed gap\" is void",
+   "eligibility_now": "CASE_PREMISE_FALSIFIED",
+   "eligibility_prior": "UNVERIFIABLE_SURFACE",
+   "pmids": [
+    "26675548"
+   ],
+   "reader_prior_work": {
+    "evidence": "as HC-E2, same three lines",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "MENTIONED",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "CLEAN_BLIND",
+   "surface_leak_evidence": "deepdive_manifest.py L463: 26675548 \"two days (D2), D5 and D7\" is a timepoint label",
+   "surface_leak_grade": "L0",
+   "surfaces_held": {
+    "26675548": [
+     "PMID26675548_AbuOdeh2016.pdf",
+     "PMID26675548_AbuOdeh2016_PMC.xml",
+     "PMID26675548_assets"
+    ]
+   }
+  },
+  "HC-I6": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": true,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "STRESS_ONLY",
+   "eligibility_prior": "STRESS_ONLY",
+   "pmids": [
+    "15070730",
+    "32185845"
+   ],
+   "reader_prior_work": {
+    "evidence": "adjudicative-language screen fired; NOT read line by line - an upper bound, not a classification",
+    "provenance": "SCREEN_ONLY",
+    "scientist_a_branch_lettore": "SCREENED",
+    "scientist_b_branch_lettore_b": "SCREENED"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "15070730": [
+     "PMID15070730_Aqeilan2004.pdf",
+     "PMID15070730_Aqeilan2004_PMC.html"
+    ],
+    "32185845": []
+   }
+  },
+  "HC-I7": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": true,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [],
+   "reader_prior_work": {
+    "evidence": "zero hits",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "CLEAN",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {}
+  },
+  "HC-I8": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "18487609",
+    "24550385",
+    "26675548",
+    "34268881"
+   ],
+   "reader_prior_work": {
+    "evidence": "lettore and lettore-b both report per-paper panel-count errors on the case's own papers",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "WORKED"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "deepdive_manifest.py names three of the four panel-count papers as parser-hostile",
+   "surface_leak_grade": "L2",
+   "surfaces_held": {
+    "18487609": [
+     "PMID18487609_Aqeilan2008.pdf",
+     "PMID18487609_Aqeilan2008_PMC.html"
+    ],
+    "24550385": [
+     "PMID24550385_AbuOdeh2014.pdf",
+     "PMID24550385_AbuOdeh2014_PMC.html"
+    ],
+    "26675548": [
+     "PMID26675548_AbuOdeh2016.pdf",
+     "PMID26675548_AbuOdeh2016_PMC.xml",
+     "PMID26675548_assets"
+    ],
+    "34268881": [
+     "PMID34268881_Steinberg2021.pdf",
+     "PMID34268881_Steinberg2021_PMC.xml",
+     "PMID34268881_assets"
+    ]
+   }
+  },
+  "HC-I9": {
+   "blocker": "",
+   "contaminated_by_construction": false,
+   "dispatchable": true,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "34034642"
+   ],
+   "reader_prior_work": {
+    "evidence": "zero hits",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "CLEAN",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "CLEAN_BLIND",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "34034642": []
+   }
+  },
+  "HC-J1": {
+   "blocker": "deciding surface not held - acquire it, then re-classify",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "UNVERIFIABLE_SURFACE",
+   "eligibility_prior": "UNVERIFIABLE_SURFACE",
+   "pmids": [
+    "25703206"
+   ],
+   "reader_prior_work": {
+    "evidence": "zero hits",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "CLEAN",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "CLEAN_BLIND",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "25703206": []
+   }
+  },
+  "HC-J2": {
+   "blocker": "dispatchable only with the residual declared to the evaluator",
+   "contaminated_by_construction": false,
+   "dispatchable": true,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "22193544"
+   ],
+   "reader_prior_work": {
+    "evidence": "both name 22193544; neither touches GS-1 or substrate selectivity",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "WORKED",
+    "scientist_b_branch_lettore_b": "WORKED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "fulltext_read_receipt.md names 22193544 and says its supplement repays inspection",
+   "surface_leak_grade": "L1",
+   "surfaces_held": {
+    "22193544": [
+     "PMID22193544_Wang2012.pdf",
+     "PMID22193544_Wang2012_PMC_JATS.xml",
+     "PMID22193544_Wang2012_supplement.zip"
+    ]
+   }
+  },
+  "HC-J3": {
+   "blocker": "answer already held by a required surface or by a reader",
+   "contaminated_by_construction": true,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "GOLD_ELIGIBLE",
+   "eligibility_prior": "GOLD_ELIGIBLE",
+   "pmids": [
+    "22193544",
+    "32000863"
+   ],
+   "reader_prior_work": {
+    "evidence": "as HC-A1",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "ADJUDICATED",
+    "scientist_b_branch_lettore_b": "ADJUDICATED"
+   },
+   "single_label": "FULLY_CONTAMINATED",
+   "surface_leak_evidence": "deepdive_manifest.py names 32000863; fulltext_read_receipt.md names 22193544",
+   "surface_leak_grade": "L2",
+   "surfaces_held": {
+    "22193544": [
+     "PMID22193544_Wang2012.pdf",
+     "PMID22193544_Wang2012_PMC_JATS.xml",
+     "PMID22193544_Wang2012_supplement.zip"
+    ],
+    "32000863": [
+     "PMID32000863_Cheng2020_PMC.xml",
+     "PMID32000863_Cheng2020_assets",
+     "PMID32000863_Cheng2020_supplementary.pdf"
+    ]
+   }
+  },
+  "HC-X1": {
+   "blocker": "deciding surface not held - acquire it, then re-classify",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "UNVERIFIABLE_SURFACE",
+   "eligibility_prior": "UNVERIFIABLE_SURFACE",
+   "pmids": [
+    "29808465"
+   ],
+   "reader_prior_work": {
+    "evidence": "adjudicative-language screen fired; NOT read line by line - an upper bound, not a classification",
+    "provenance": "SCREEN_ONLY",
+    "scientist_a_branch_lettore": "SCREENED",
+    "scientist_b_branch_lettore_b": "SCREENED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "29808465": []
+   }
+  },
+  "HC-X2": {
+   "blocker": "excluded by the rubric; not a benchmark item",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "EXCLUDE",
+   "eligibility_prior": "EXCLUDE",
+   "pmids": [
+    "30356099",
+    "31543760",
+    "39952983"
+   ],
+   "reader_prior_work": {
+    "evidence": "adjudicative-language screen fired; NOT read line by line - an upper bound, not a classification",
+    "provenance": "SCREEN_ONLY",
+    "scientist_a_branch_lettore": "SCREENED",
+    "scientist_b_branch_lettore_b": "SCREENED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "30356099": [
+     "PMID30356099_Piard2019_EPMC.xml"
+    ],
+    "31543760": [
+     "PMID31543760_Kosla2019_EPMC.xml"
+    ],
+    "39952983": [
+     "PMID39952983_Kim2025_EPMC.xml"
+    ]
+   }
+  },
+  "HC-X3": {
+   "blocker": "excluded by the rubric; not a benchmark item",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "EXCLUDE",
+   "eligibility_prior": "EXCLUDE",
+   "pmids": [],
+   "reader_prior_work": {
+    "evidence": "zero hits",
+    "provenance": "VERIFIED",
+    "scientist_a_branch_lettore": "CLEAN",
+    "scientist_b_branch_lettore_b": "CLEAN"
+   },
+   "single_label": "CLEAN_BLIND",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {}
+  },
+  "HC-X4": {
+   "blocker": "excluded by the rubric; not a benchmark item",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "EXCLUDE",
+   "eligibility_prior": "EXCLUDE",
+   "pmids": [
+    "34634460"
+   ],
+   "reader_prior_work": {
+    "evidence": "adjudicative-language screen fired; NOT read line by line - an upper bound, not a classification",
+    "provenance": "SCREEN_ONLY",
+    "scientist_a_branch_lettore": "SCREENED",
+    "scientist_b_branch_lettore_b": "SCREENED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "no hit over the 13-file inherited population, 27 PMIDs + 50 content patterns",
+   "surface_leak_grade": "--",
+   "surfaces_held": {
+    "34634460": [
+     "PMID34634460_Breton2021_PMC.xml"
+    ]
+   }
+  },
+  "HC-X5": {
+   "blocker": "excluded by the rubric; not a benchmark item",
+   "contaminated_by_construction": false,
+   "dispatchable": false,
+   "eligibility_moved_by": "",
+   "eligibility_now": "EXCLUDE",
+   "eligibility_prior": "EXCLUDE",
+   "pmids": [
+    "18487609",
+    "24550385",
+    "32000863",
+    "36779245"
+   ],
+   "reader_prior_work": {
+    "evidence": "adjudicative-language screen fired; NOT read line by line - an upper bound, not a classification",
+    "provenance": "SCREEN_ONLY",
+    "scientist_a_branch_lettore": "SCREENED",
+    "scientist_b_branch_lettore_b": "SCREENED"
+   },
+   "single_label": "PARTIALLY_CONTAMINATED",
+   "surface_leak_evidence": "four of its PMIDs named in deepdive_manifest.py as tooling examples",
+   "surface_leak_grade": "L1",
+   "surfaces_held": {
+    "18487609": [
+     "PMID18487609_Aqeilan2008.pdf",
+     "PMID18487609_Aqeilan2008_PMC.html"
+    ],
+    "24550385": [
+     "PMID24550385_AbuOdeh2014.pdf",
+     "PMID24550385_AbuOdeh2014_PMC.html"
+    ],
+    "32000863": [
+     "PMID32000863_Cheng2020_PMC.xml",
+     "PMID32000863_Cheng2020_assets",
+     "PMID32000863_Cheng2020_supplementary.pdf"
+    ],
+    "36779245": [
+     "PMID36779245_Oliver2023_PMC.xml",
+     "PMID36779245_Oliver2023_assets"
+    ]
+   }
+  }
+ },
+ "corpus_root": "/Users/massimo/Desktop/legend-public/files/fulltext",
+ "corpus_root_note": "files/ is gitignored, so the held-surface census is a property of this working directory, not of the repository. A worktree with an empty files/ would report every surface absent.",
+ "frozen_set_id": "EVALSET-BLIND-R1-2026-08-26",
+ "head": "82c9f651558936334e41cb8d959ebd62c024f4d3",
+ "head_pinned": true,
+ "inherited_participant_population": [
+  "framework/eval/benchmarks/BENCH-AB-001/instructions/BENCHMARK_INSTRUCTIONS.md",
+  "framework/eval/benchmarks/BENCH-AB-001/instructions/MODE_A.md",
+  "framework/eval/benchmarks/BENCH-AB-001/instructions/MODE_B.md",
+  "framework/eval/benchmarks/BENCH-AB-001/instructions/OUTPUT_SCHEMA.md",
+  "framework/eval/benchmarks/BENCH-AB-001/instructions/SURFACE_CLAUDE.md",
+  "framework/eval/failure_taxonomy.md",
+  "framework/instruction/epistemic_discipline.md",
+  "framework/master/gold_is_in_the_details.md",
+  "framework/protocols/fulltext_read_receipt.md",
+  "framework/protocols/scientist_reading_modes.md",
+  "framework/scripts/corpus_firewall.py",
+  "framework/scripts/deepdive_manifest.py",
+  "roles/scientist.md"
+ ],
+ "inherited_participant_population_n": 13,
+ "inputs_sha256": {
+  "framework/eval/benchmarks/BENCH-AB-001/surface_spec.json": "e7c2715b44a823ef19af3f7e803e622c81179c3c14944f059bc256f29df76c5b",
+  "framework/protocols/controlled_benchmark_ab.md": "43a6cddc899cedffacb78196876de1616b2af3ac31c112ea72e547dd9d08dc54",
+  "learning/scientist/BENCHMARK_ELIGIBILITY_AND_BLIND_DESIGN_SCIC_v1.md": "8bea614d64199170c9192d2485982a342f5efd4e15d22ec4ce7511b1d044c6a1",
+  "learning/scientist/HARD_CASE_MINING_BENCHMARK_CANDIDATES_SCIC_v1.md": "7a4a1d634b31c0c5696baa3cdde0ebae95fe2ed4997a417e0599f7c72a06cc4d"
+ },
+ "label_precedence": "by_construction > L3|reader_ADJUDICATED > L2|reader_SCREENED > L1|reader_WORKED > eligibility(UNRESOLVABLE|STRESS_ONLY) > CLEAN_BLIND",
+ "prior_handset_overlap": "8 of 13 (62%) - the prior sweep swept 4 files not in the surface and missed 5 that are",
+ "reader_axis_shelf_life": "The reader branches are live. This axis describes their tips above and nothing later. Re-run before any dispatch; a case clean at these tips can be spent by the next commit.",
+ "reader_branch_tips": {
+  "lettore": {
+   "commits_ahead": "24",
+   "committed_at": "2026-08-26T10:43:01+02:00",
+   "merge_base_with_main": "788c357d9b7ca7afcbe7c1efc3a06b426cf7e2d5",
+   "pinned": true,
+   "tip": "c536fc7f5b718b06d589821889bff4293314c881"
+  },
+  "lettore-b": {
+   "commits_ahead": "19",
+   "committed_at": "2026-08-26T10:39:04+02:00",
+   "merge_base_with_main": "788c357d9b7ca7afcbe7c1efc3a06b426cf7e2d5",
+   "pinned": true,
+   "tip": "111b96324f6bdcbd545459c6a1013db04ab832de"
+  }
+ }
+}

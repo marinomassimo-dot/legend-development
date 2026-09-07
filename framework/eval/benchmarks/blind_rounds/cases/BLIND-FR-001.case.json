@@ -1,0 +1,60 @@
+{
+  "_schema": "LEGEND blind round — evaluator case spec v1",
+  "_warning": "EVALUATOR ONLY. Carries no answer, but it carries the allowlist and the exclusions, and an exclusion reason can imply what is being protected. Not a participant file.",
+  "case_id": "BLIND-FR-001",
+  "internal_ref": "HC-E2",
+  "pmids": ["26675548"],
+  "doi": "10.18632/oncotarget.6571",
+
+  "question": "What does this paper's title assert, and what does the paper's own evidence establish about that assertion?",
+  "stop_condition": "Stop when you can state what the title asserts, name the evidence in this paper that bears on it, and say whether that evidence settles it. Do not stop earlier because the answer looks obvious, and do not go on to settle anything the question did not ask.",
+  "_stop_condition_note": "The clause 'or record that the published record does not decide, naming the exact object that would' was REMOVED from this per-case field on 2026-08-26 and moved verbatim into the fixed assignment template, where it renders byte-identically for every case. Measured across the two cases that exist: the clause appeared in exactly the one whose answer is a negative, and nowhere else. An outcome offered in the case where it is the answer and withheld elsewhere is a category label written into the assignment. Uniform text carries no information; per-case text carries whatever distinguishes it.",
+
+  "packet": [
+    {
+      "source": "PMID26675548_AbuOdeh2016.pdf",
+      "dest": "sources/article.pdf",
+      "kind": "article_binary",
+      "why_required": "the article as published; the only surface on which figure panels can be rendered",
+      "no_adjudication_assertion": "publisher bytes, unmodified; no LEGEND actor has written into this file"
+    },
+    {
+      "source": "PMID26675548_AbuOdeh2016_PMC.xml",
+      "dest": "sources/article.xml",
+      "kind": "article_text",
+      "why_required": "the structured text surface verbatim locators are quoted against",
+      "no_adjudication_assertion": "PMC deposit bytes, unmodified"
+    },
+    {
+      "source": "PMID26675548_assets/oncotarget-07-4344-s001.pdf",
+      "dest": "sources/supplement_01.pdf",
+      "kind": "supplement",
+      "why_required": "the published supplementary deposit; it carries figures and a table that bear on the question, and excluding it would withhold evidence the question needs",
+      "no_adjudication_assertion": "publisher bytes, unmodified"
+    },
+    {
+      "source": "PMID26675548_assets/oncotarget-07-4344-s002.pptx",
+      "dest": "sources/supplement_02.pptx",
+      "kind": "supplement",
+      "why_required": "the second published deposit; included so the packet is the whole published record rather than the part a prior reader found useful",
+      "no_adjudication_assertion": "publisher bytes, unmodified"
+    }
+  ],
+
+  "excluded": [
+    {
+      "source": "PMID26675548_assets/supp_page01_144dpi.png … supp_page07_144dpi.png",
+      "count": 7,
+      "why_excluded": "renders produced by a prior reader. controlled_benchmark_ab.md 2.3: their selection encodes a prior reader's attention - which pages, at what dpi. The reader renders its own."
+    },
+    {
+      "source": "PMID26675548_assets/table_s1_render.png",
+      "count": 1,
+      "why_excluded": "same"
+    }
+  ],
+
+  "declared_residuals": [
+    "framework/scripts/deepdive_manifest.py L463 names PMID 26675548 as an example of a real timepoint label (`two days (D2), D5 and D7`) while explaining a regex. Graded L0: it discloses nothing about the paper's science and marks no scientific suspicion. The file is in the packet because it is the validator both readers must run, and its bytes cannot change without breaking parity."
+  ]
+}

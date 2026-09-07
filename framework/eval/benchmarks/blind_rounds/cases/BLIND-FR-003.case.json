@@ -1,0 +1,40 @@
+{
+  "_schema": "LEGEND blind round — evaluator case spec v1",
+  "_warning": "EVALUATOR ONLY. Carries no answer, but it carries the allowlist and the exclusions, and an exclusion reason can imply what is being protected. Not a participant file.",
+  "case_id": "BLIND-FR-003",
+  "internal_ref": "HC-B5",
+  "pmids": ["42128308"],
+  "doi": "10.1002/ana.27201",
+
+  "question": "How many categories of neurodevelopmental fragile-site gene does this review define, and which genes does it place in each?",
+  "stop_condition": "Stop when you can state the taxonomy and cite, for every category and for every gene you assign to one, the surface you took it from. Do not stop earlier because the answer looks obvious, and do not go on to settle anything the question did not ask.",
+
+  "packet": [
+    {
+      "source": "PMID42128308_Aqeilan2026.pdf",
+      "dest": "sources/article.pdf",
+      "kind": "article_binary",
+      "why_required": "the review as published; the only surface on which the figure and its caption can be rendered together",
+      "no_adjudication_assertion": "publisher bytes, unmodified"
+    },
+    {
+      "source": "PMID42128308_Aqeilan2026_fitz.txt",
+      "dest": "sources/article_text.txt",
+      "kind": "article_text",
+      "why_required": "the extracted text surface verbatim locators are quoted against; its identity is its digest, not its recipe",
+      "no_adjudication_assertion": "mechanical extraction of the publisher PDF; no LEGEND actor has written into it"
+    }
+  ],
+
+  "excluded": [
+    {
+      "source": "PMID42128308_Aqeilan2026_assets/fig1_timeline_p2_300ppi.jpeg … fig4_overview_p4_300ppi.jpeg",
+      "count": 4,
+      "why_excluded": "renders produced by a prior reader. Their selection encodes which figures a prior reader thought worth 300 ppi. The reader renders its own from the PDF."
+    }
+  ],
+
+  "declared_residuals": [
+    "Zero hits for this case's identifiers and taxonomy terms across the thirteen inherited participant files, and zero across both reader branches. The paper itself has been worked in one reader's branch (11 references, citing manifest entries 8, 9 and 24) but on the Olig2-Cre readout and the preprint successor relation, not on the taxonomy. That residual is one-sided and does not travel to a built surface; it is recorded because session memory is not inspectable."
+  ]
+}

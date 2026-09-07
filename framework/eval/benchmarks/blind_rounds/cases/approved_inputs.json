@@ -1,0 +1,50 @@
+{
+ "_schema": "LEGEND blind round — approved participant inputs v1",
+ "_what_this_is": "Free text cannot be certified clean by any pattern. A leak written into a case spec's `question` renders faithfully into ASSIGNMENT.md and defeats the byte-for-byte derivation check, because the derivation is FROM the spec. This file replaces the undecidable question ('is this text clean?') with a decidable one ('is this the text that was approved?'). It does not make text clean. It makes a change to it visible, which is the most a checker can honestly do.",
+ "_what_this_is_not": "An approval is NOT an adjudication, NOT a dispatch authorization, and NOT evidence that the approver read the case's source. `approver_case_exposure` records what the approver could and could not certify, and is enforced only under `surface_properties.py --dispatch-gate`.",
+ "required_surface_constants": {
+  "_why": "Required values live HERE and not in the build manifest. A checker that read what the builder recorded would let a builder change silently relax the check; read from an approvals file, a builder change becomes a finding until the approval is deliberately updated.",
+  "git_user_name": "benchmark participant",
+  "git_user_email": "participant@invalid",
+  "commit_message": "surface as handed over",
+  "commit_count": 1,
+  "branch": "reading",
+  "_pinning_note": "An assignment is (template + spec). Binding only the spec was measured to catch the case whose spec was edited and to let the other case pass unchanged, while the text ITS reader would be handed had changed too. Pinning ASSIGNMENT_TEMPLATE then repeated the mistake one level over: adding PROVENANCE.json and CONTAMINATION_DECLARATION.md put two more participant-facing templates into every surface, plus the uniform strings embedded in render_provenance, and a single-template pin saw none of them. What is bound per case is `rendered_authored_sha256` — the digest of the rendered OUTPUT of every renderer in AUTHORED. A change to any template, any embedded string, any renderer or the spec moves it. `participant_projection_sha256` is kept alongside it because the two disagree informatively: the projection moves when the SPEC changed, the rendered digest moves when anything a reader is handed changed."
+ },
+ "approved_bench_roots": [
+  "/private/tmp/lgbench/r1",
+  "/private/tmp/lgbench/r2"
+ ],
+ "_approved_bench_roots_note": "BENCH_ROOT is a local-instance value. Adding one is a deliberate recorded act, which is the point: a surface built into an unapproved root is a finding, not a default. These two are PROTOTYPE roots, chosen because the prior session's root was inside a scratchpad whose directory name spelled out the repository — a reader in it read the provenance out of its own `pwd`. That was a declared residual; it is now a check.",
+ "repository_identifying_tokens": [
+  "legend",
+  "lettore",
+  "wwox",
+  "aqeilan",
+  "deepdive",
+  "orchestrator"
+ ],
+ "approved_cases": {
+  "BLIND-FR-001": {
+   "participant_projection_sha256": "3f4a738bdafc1106b7761ec67e938e30756a899ba5642e6c795553a83861c359",
+   "approved_by": "scientist-c",
+   "approved_at": "2026-08-26",
+   "supersedes": "80d2267b4cb7e5fbe0c91546f9bf99348618c7b0aef14c3c90086f92f0d937c7",
+   "why_superseded": "The stop_condition offered 'or record that the published record does not decide, naming the exact object that would'. Measured across the two cases that exist, that clause appeared in exactly the one whose answer is a negative and nowhere else — an outcome offered where it is the answer and withheld elsewhere is a category label written into the assignment. The clause moved verbatim into the fixed template, where it renders byte-identically for every case and therefore carries no information. This is a REMOVAL of a tell, not an addition, which is the only kind of edit an approver with SEEN_ANSWER exposure can make to a participant field without the edit itself needing independent review.",
+   "approver_case_exposure": "SEEN_ANSWER",
+   "exposure_basis": "I quoted this case's answer in two prior sessions' reports. I can certify that the participant text has not CHANGED since this digest was taken. I cannot certify that the text does not leak, because I cannot read it as someone who does not already know what it is protecting.",
+   "covers": "case_id, question, stop_condition, pmid, doi, and per packet row (dest, why_required head). Evaluator fields are deliberately outside the projection: an approval that expired every time a residual was recorded would stop being read.",
+   "rendered_authored_sha256": "cfe50abb2b5b9c8406a6fdf2d19ea3f826ca782267c379a29cee1e959bbc2ef6"
+  },
+  "BLIND-FR-003": {
+   "participant_projection_sha256": "56616cbd0cfa36e05dd4fbe89bd9f169cab9511d9c4520ee7e0a34eb53807536",
+   "approved_by": "scientist-c",
+   "approved_at": "2026-08-26",
+   "approver_case_exposure": "UNKNOWN",
+   "exposure_basis": "This case is named in three of my own prior reports (8 mentions). Whether any of them states the taxonomy this case asks for, I did not determine: the only probe that would settle it is reading them, which would convert UNKNOWN into SEEN_ANSWER by the act of checking. A count-only probe was run instead and can move the label only downward, never to NOT_SEEN — absence of evidence of exposure is not exclusion of exposure. UNKNOWN is therefore the terminal label available to me, and it is not NOT_SEEN.",
+   "covers": "same projection",
+   "rendered_authored_sha256": "49612a84364141e1b16c1eb1ffcdd6a9d780aa1e00ce9dcdc54b22982ce13e3b"
+  }
+ },
+ "_no_case_is_dispatch_approved": "No entry here carries `approver_case_exposure: NOT_SEEN`, so `--dispatch-gate` fails for every case in this file. That is the correct state: every approval on record was written by an actor that has worked inside the repository the surface is blind to."
+}

@@ -1,0 +1,65 @@
+{
+ "_schema": "LEGEND blind round — gold pipeline declared state v1",
+ "_what_this_is": "Declared facts about adjudication acts, so that gold readiness is COMPUTED from them rather than asserted in prose that ages. Every entry records an ACT that happened and names who performed it. A case advances by an act, never by a judgement about one.",
+ "_what_this_is_not": "Not an adjudication and not a gold answer. It records THAT an adjudication exists and by whom; it never records WHAT it concluded. Putting the conclusion here would make this file an answer-bearing artifact and pull it into the contamination it exists to track.",
+
+ "actors": {
+  "scientist-c": {
+   "exposure_to_this_repository": "EXTENSIVE",
+   "basis": "authored the blind-surface infrastructure across four sessions; read main, which adjudicates 24 of 27 case papers; quoted at least one case's answer in a committed report",
+   "disqualified_as": "second adjudicator for every case it adjudicated, and for every case main adjudicates — which is 43 of 48"
+  },
+  "scientist-a": {
+   "exposure_to_this_repository": "EXTENSIVE",
+   "basis": "reader branch descends from main; per-case exposure measured, not assumed"
+  },
+  "scientist-b": {
+   "exposure_to_this_repository": "EXTENSIVE",
+   "basis": "reader branch descends from main; per-case exposure measured, not assumed"
+  }
+ },
+
+ "cases": {
+  "HC-A4": {
+   "first_adjudication": {"by": "scientist-c", "when": "2026-08-25"},
+   "second_adjudication": null,
+   "disqualified_actors": ["scientist-a", "scientist-b"],
+   "agreement": null
+  },
+  "HC-C2": {
+   "first_adjudication": {"by": "scientist-c", "when": "2026-08-25"},
+   "second_adjudication": null,
+   "disqualified_actors": ["scientist-a", "scientist-b"],
+   "agreement": null
+  },
+  "HC-A2": {
+   "first_adjudication": {"by": "scientist-c", "when": "2026-08-26"},
+   "second_adjudication": null,
+   "disqualified_actors": ["scientist-a", "scientist-b"],
+   "agreement": null,
+   "note": "FULLY_CONTAMINATED and not dispatchable for a separate reason: its category is UNRESOLVABLE, and telling a participant a case is unresolvable tells them not to resolve it, which is the answer."
+  },
+  "HC-D2": {
+   "first_adjudication": null,
+   "missing_act_for_first": "enumerate the assay inventory of PMID 18487609",
+   "second_adjudication": null,
+   "disqualified_actors": ["scientist-a", "scientist-b"],
+   "agreement": null
+  },
+  "HC-G3": {
+   "first_adjudication": null,
+   "missing_act_for_first": "re-derive the stage confound from PMID 34268881",
+   "second_adjudication": null,
+   "disqualified_actors": ["scientist-a", "scientist-b"],
+   "agreement": null
+  },
+  "HC-B5": {
+   "first_adjudication": null,
+   "missing_act_for_first": "adjudicate the taxonomy of PMID 42128308 — and NOT by scientist-c, whose exposure to this case is UNKNOWN rather than NOT_SEEN, so an adjudication by it would fix the answer using knowledge it cannot rule out having",
+   "second_adjudication": null,
+   "disqualified_actors": ["scientist-a"],
+   "agreement": null,
+   "note": "This is the C5 pilot case. Its surface is built and both validators pass. It is short of dispatch only on the actor, and short of gold on two."
+  }
+ }
+}
