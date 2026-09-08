@@ -1,0 +1,148 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT",
+ "_note": "Operator directive of 2026-09-08 (session legend-development-2e): distribute the 54 Aqeilan PubMed-free-full-text PMIDs across scientist-a/b/c, skipping what is already read, and proceed autonomously for ~10 hours. The orchestrator ran the duplicate-work gate over the receipt ledger before assigning: 31 of the 54 already carry a complete_fulltext_read receipt and are NOT assigned. 23 remain — 14 with no receipt at all, 9 with a partial or legacy-only receipt.",
+ "TASK_ID": "AQEILAN-FT-A-001",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "orchestrator",
+ "ACTOR_ID": "scientist-a",
+ "PRIORITY": "HIGH",
+ "OBJECTIVE": "Take each assigned PMID from acquisition to a durable, verifiable full-text reading: complete_fulltext_read where the available surface permits it, honestly partial where it does not, with verbatim locators captured while the document is open, a schema-v2 work manifest that passes the strict validator, a dossier, and a receipt appended through the validated writer.",
+ "SCOPE": {
+  "assigned_pmids": [
+   "33914858",
+   "34268881",
+   "33916893",
+   "25331887",
+   "15070730",
+   "24510053",
+   "26499798",
+   "31428585"
+  ],
+  "theme": "neuro / WOREE-adjacent biology, ATM-p73 axis, and the neurological review layer",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "parallel_read_group": null,
+  "single_owner": "Every PMID in this lot has exactly one owner. No PMID appears in two lots, so no PARALLEL_READ_GROUP is needed and none is declared.",
+  "excluded": "The four scientific current files (working_model, claim_registry, paper_registry, literature_tracking_log) and disease_model.md are NOT touched: they move only through BATCH_COMMIT, which the orchestrator runs at the end. Produce commit candidates instead."
+ },
+ "ACCEPTANCE_CRITERIA": [
+  "For each PMID: deepdive_manifest.py --pmid <PMID> --verify-artifacts --require-current-schema exits PASS with 0 gaps, run from the shared root checkout.",
+  "For each PMID: fulltext_receipts.py record --receipt <event.json> succeeded, and fulltext_receipts.py verify is OK afterwards.",
+  "For each PMID: a dossier in disease-models/wwox/research/fulltext_dossiers/PMID<PMID>.md that states what the reading found, what it does NOT support, and the transfer verdict toward the reference genotype.",
+  "Every evidentiary locator carries surface + fingerprinted artifact; abstract is never the evidentiary surface.",
+  "Figures inspected at native resolution wherever the images are lawfully retrievable; captions_only is declared as such and downgrades the receipt.",
+  "legend_lint.py . stays PASS after every commit.",
+  "A commit candidate exists for any reading that would change or qualify a registry record or a claim."
+ ],
+ "DEPENDENCIES": [
+  "duplicate-work gate already run by the orchestrator over fulltext_read_receipts.jsonl on 2026-09-08"
+ ],
+ "REVIEW_REQUIREMENT": "Ladder floor R2. R4 / legend-locator-audit is REQUIRED before any reading is allowed to narrow, reverse, corroborate or remove a consolidated baseline claim, or to justify a MAJOR working-model bump.",
+ "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+ "RETRY_POLICY": {
+  "max_attempts": 3,
+  "retryable": [
+   "network/retrieval failure",
+   "validator rejection",
+   "transient publisher block"
+  ],
+  "on_exhaust": "PARK the single PMID with a written acquisition-cascade record, and continue with the next PMID in the lot"
+ },
+ "MILESTONE_PLAN": [
+  "M1 acquisition — lawful structured full text (XML/HTML preferred over PDF) in files/fulltext/, figures in files/figures/PMID<PMID>/, SHA-256 recorded",
+  "M2 reading — section-by-section coverage map, verbatim locators captured while the document is open",
+  "M3 manifest — schema-v2 deepdive manifest, strict validator PASS",
+  "M4 receipt — appended through fulltext_receipts.py record",
+  "M5 dossier + commit candidate — persisted and committed on main"
+ ],
+ "DELIVERABLE": {
+  "branch": "main (root checkout, path-scoped serialized commits)",
+  "artifacts": [
+   "disease-models/wwox/research/deepdive_manifests/PMID<PMID>.json",
+   "disease-models/wwox/research/fulltext_dossiers/PMID<PMID>.md",
+   "disease-models/wwox/registries/fulltext_read_receipts.jsonl (append)",
+   "disease-models/wwox/research/commit_candidates/*.md (where warranted)",
+   "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
+  ]
+ },
+ "CURRENT_STATE": "ASSIGNED",
+ "assigned_on": "2026-09-08",
+ "acquisition_hints": {
+  "33914858": {
+   "pmcid": null,
+   "doi": "10.1093/brain/awab174",
+   "year": "2021",
+   "title": "Neuronal deletion of Wwox, associated with WOREE syndrome, causes epilepsy and myelin defects.",
+   "free_sites": [
+    "Unpaywall"
+   ]
+  },
+  "34268881": {
+   "pmcid": "PMC8350905",
+   "doi": "10.15252/emmm.202013610",
+   "year": "2021",
+   "title": "Modeling genetic epileptic encephalopathies using brain organoids.",
+   "free_sites": [
+    "Europe_PMC",
+    "Unpaywall"
+   ]
+  },
+  "33916893": {
+   "pmcid": "PMC8067556",
+   "doi": "10.3390/cells10040824",
+   "year": "2021",
+   "title": "Neurological Disorders Associated with WWOX Germline Mutations-A Comprehensive Overview.",
+   "free_sites": [
+    "Europe_PMC",
+    "Unpaywall"
+   ]
+  },
+  "25331887": {
+   "pmcid": "PMC4226089",
+   "doi": "10.1073/pnas.1409252111",
+   "year": "2014",
+   "title": "WWOX, the common fragile site FRA16D gene product, regulates ATM activation and the DNA damage response.",
+   "free_sites": [
+    "DOI",
+    "Europe_PMC"
+   ]
+  },
+  "15070730": {
+   "pmcid": "PMC384759",
+   "doi": "10.1073/pnas.0400805101",
+   "year": "2004",
+   "title": "Functional association between Wwox tumor suppressor protein and p73, a p53 homolog.",
+   "free_sites": [
+    "DOI",
+    "Europe_PMC"
+   ]
+  },
+  "24510053": {
+   "pmcid": null,
+   "doi": "10.1177/1535370213519213",
+   "year": "2014",
+   "title": "WW domain-containing oxidoreductase's role in myriad cancers: clinical significance and future implications.",
+   "free_sites": []
+  },
+  "26499798": {
+   "pmcid": "PMC4692203",
+   "doi": "10.1074/jbc.r115.676346",
+   "year": "2015",
+   "title": "Pleiotropic Functions of Tumor Suppressor WWOX in Normal and Cancer Cells.",
+   "free_sites": [
+    "DOI",
+    "Europe_PMC"
+   ]
+  },
+  "31428585": {
+   "pmcid": "PMC6688159",
+   "doi": "10.3389/fonc.2019.00719",
+   "year": "2019",
+   "title": "Editorial: WW Domain Proteins in Signaling, Cancer Growth, Neural Diseases, and Metabolic Disorders.",
+   "free_sites": [
+    "Europe_PMC",
+    "Unpaywall"
+   ]
+  }
+ }
+}
