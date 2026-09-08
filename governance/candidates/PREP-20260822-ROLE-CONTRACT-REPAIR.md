@@ -60,7 +60,7 @@ status: PROPOSED — binding once Mirror hostile review passes and the operator 
 | `actor_id` | `plan` | `roles/plan.md`:3 |
 | role contract source | `roles/plan.md`, blob `7e1e04cb53`, sha256 `e1c26d42854a54ffb975095f95f1a0ee90c85eb9f881576d637ec7b6e084c0ff` | `git ls-tree`, `shasum -a 256` |
 | declared worktree | `evidence-index` | `roles/plan.md`:5 |
-| current filesystem path | `/Users/massimo/Desktop/legend-public/.claude/worktrees/evidence-index` | `pwd` |
+| current filesystem path | `<REPO_ROOT>/.claude/worktrees/evidence-index` | `pwd` |
 | current branch | `plan-orchsurf-r4-transcription` | `git rev-parse --abbrev-ref HEAD` |
 | `HEAD` | `b14a0d1466962aa79d1bbd0065a0d1141f4a0eab` | `git rev-parse HEAD` |
 | working tree status | clean before and after | `git status --porcelain` |
@@ -136,7 +136,7 @@ their activation state exists; Annex C.2 makes an author response mandatory. Wor
 ### CURRENT SURFACE
 
 ```
-checkout path       /Users/massimo/Desktop/legend-public/.claude/worktrees/evidence-index
+checkout path       <REPO_ROOT>/.claude/worktrees/evidence-index
 branch              plan-orchsurf-r4-transcription
 HEAD                b14a0d1466962aa79d1bbd0065a0d1141f4a0eab
 working tree        clean (git status --porcelain empty) before and after the commit

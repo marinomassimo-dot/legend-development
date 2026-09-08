@@ -26,6 +26,11 @@ TEXT_SUFFIXES = {
     ".csv",
     ".ini",
     ".json",
+    # `.jsonl` is tracked, publishable, line-oriented text and was omitted here while
+    # `.json` was included — so ten ledger files, the read receipts and the corpus seed
+    # among them (14 tracked today), were never opened by this scanner. An extension it does
+    # not read is a population it cannot report on, and a PASS over it says nothing.
+    ".jsonl",
     ".md",
     ".py",
     ".rst",
@@ -119,6 +124,61 @@ CASEFOLD_IDENTIFIER_DIGESTS = frozenset({
 SENSITIVE_GEO_DIGESTS = frozenset({
     "bcf8000222e6d32490a0b4b6e5354d0e40257eb3e3856e23898bffc8bb025d2c",
 })
+
+# One private token carried an exact digest and no casefolded one, so its lowercase form
+# matched neither set. That was not an oversight: the token is also an ordinary Italian
+# word, and two suites assert that `… il <token> contesto …` must NOT block. Casefolding it
+# everywhere would turn nine sentences of Italian prose into publication blockers.
+#
+# But a filesystem path is not prose. `/Users/<token>/…` is durable publishable surface and
+# is the one lowercase context where the token cannot be the common word. So the casefolded
+# digest is consulted ONLY inside a path, and "inside a path" is decided by a closed set of
+# path ROOTS rather than by the separator next to the match (Mirror v2 § 1.6, 2026-08-26):
+# the first shipped predicate — "preceded by a slash, followed by a terminator" — blocked
+# the Italian superlative pair `minimo/<token>` (F-1). A slash-pair has no root, so it is
+# silent here without a special case. The run after a root ends at whitespace, a quote or
+# list punctuation (`,` `;` `|` and brackets — cell separators, never path segments), so a
+# table row or CSV field holding a path and then the homonym is two runs; a sentence
+# period, bold or colon stays inside the run and is harmless, since only alphabetic
+# sub-runs are hashed and the token precedes the punctuation.
+PATH_CASEFOLD_IDENTIFIER_DIGESTS = frozenset({
+    "f805bcb3efc982ec60744b3cc23f11ed1a4a0c4b783f345c1dc64ebab616da91",
+})
+PATH_ROOT = re.compile(
+    r"(?<![A-Za-z0-9_.~-])(?:/Users/|/home/|/var/folders/|~/)"
+    r"|(?<![A-Za-z0-9])[A-Za-z]:\\Users\\"
+)
+PATH_RUN = re.compile(r"[^\s\"'`,;|()\[\]<>]+")
+PATH_WORD = re.compile(r"[A-Za-z]{3,}")
+
+
+def path_identifier_spans(line: str) -> list[tuple[int, int]]:
+    """Every alphabetic sub-run of a rooted path whose casefolded digest is a path identifier."""
+    spans: list[tuple[int, int]] = []
+    digests = CASEFOLD_IDENTIFIER_DIGESTS | PATH_CASEFOLD_IDENTIFIER_DIGESTS
+    for root in PATH_ROOT.finditer(line):
+        run = PATH_RUN.match(line, root.start())
+        if run is None:
+            continue
+        for word in PATH_WORD.finditer(run.group(0)):
+            folded = hashlib.sha256(word.group(0).casefold().encode()).hexdigest()
+            if folded in digests:
+                spans.append((run.start() + word.start(), run.start() + word.end()))
+    return spans
+
+
+# Ported deliberately from public_release_gate.py rather than imported: these two scanners
+# stay independent implementations on purpose. A cryptographic digest is not prose and the
+# letters inside one are not a name — the three-letter token above occurs by chance in four
+# SHA-256 seals in this repository today, and every one of them was a false BLOCK. The same
+# holds at content-address FRAGMENT length: candidate identifiers are `RPC-` + 12 hex
+# characters, and the token sat inside three of them. Twelve hex characters with at least
+# one digit are a content address, not a word. Only the digest interior is narrowed; an
+# identifier in text or in a path is unaffected.
+HEX_RUN = re.compile(r"(?<![0-9A-Fa-f])[0-9A-Fa-f]{32,}(?![0-9A-Fa-f])")
+HEX_FRAGMENT = re.compile(
+    r"(?<![0-9A-Za-z])(?=[0-9A-Fa-f]*[0-9])[0-9A-Fa-f]{12,}(?![0-9A-Za-z])"
+)
 
 
 @dataclass(frozen=True)
@@ -227,7 +287,22 @@ def scan(root: Path) -> tuple[list[Finding], list[str]]:
             continue
         relative = path.relative_to(root).as_posix()
         for line_number, line in enumerate(text.splitlines(), start=1):
+            digest_spans = [run.span() for run in HEX_RUN.finditer(line)]
+            digest_spans += [run.span() for run in HEX_FRAGMENT.finditer(line)]
+            path_spans = path_identifier_spans(line)
             for token in re.finditer(r"(?<![A-Za-z])[A-Za-z]{3,24}(?![A-Za-z])", line):
+                in_path = any(
+                    start <= token.start() and token.end() <= end
+                    for start, end in path_spans
+                )
+                # A path segment is decided first: `/var/folders/<tok>9f2c…/T` is a path
+                # carrying the token even though the token also sits inside a hex-looking
+                # run, and the digest skip must not eat the path capability.
+                if not in_path and any(
+                    start <= token.start() and token.end() <= end
+                    for start, end in digest_spans
+                ):
+                    continue
                 exact_digest = hashlib.sha256(
                     token.group(0).encode()
                 ).hexdigest()
@@ -237,6 +312,7 @@ def scan(root: Path) -> tuple[list[Finding], list[str]]:
                 if (
                     exact_digest not in PRIVATE_IDENTIFIER_DIGESTS
                     and folded_digest not in CASEFOLD_IDENTIFIER_DIGESTS
+                    and not in_path
                 ):
                     continue
                 findings.append(

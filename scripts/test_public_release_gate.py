@@ -28,6 +28,147 @@ class GateTests(unittest.TestCase):
         (root / "README.md").write_text("# Public project\n", encoding="utf-8")
         return root
 
+
+    # The lowercase form of one private token is also an ordinary Italian word. The
+    # scanner must block it inside a machine path and stay silent everywhere else; the
+    # cases below are the ones a separator-anchored rule got wrong (Mirror F-1/F-2, 2026-08-26).
+    def scan_text(self, name: str, text: str) -> set[str]:
+        root = self.make_repo()
+        (root / name).write_text(text, encoding="utf-8")
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        return {item.code for item in findings if item.severity == "BLOCK"}
+
+    @staticmethod
+    def homonym() -> str:
+        return "".join(map(chr, (77, 97, 115, 115, 105, 109, 111))).lower()
+
+    def test_jsonl_is_scanned_like_json(self) -> None:
+        """`.jsonl` was absent from TEXT_SUFFIXES while `.json` was present, so every
+        line-oriented ledger in the tree was never opened and could raise no finding."""
+        token = "".join(map(chr, (66, 105, 109, 98, 97)))
+        self.assertIn("DIRECT_IDENTIFIER",
+                      self.scan_text("ledger.jsonl", '{"note": "' + token + '"}\n'))
+
+    def test_lowercase_identifier_in_tracked_path_blocks(self) -> None:
+        self.assertIn("DIRECT_IDENTIFIER", self.scan_text(
+            "note.md", "| Worktree | `/Users/" + self.homonym() + "/Desktop/legend-public` |\n"))
+
+    def test_lowercase_identifier_in_path_inside_jsonl_blocks(self) -> None:
+        self.assertIn("DIRECT_IDENTIFIER", self.scan_text(
+            "state.jsonl", '{"path": "/Users/' + self.homonym() + '/Desktop/x"}\n'))
+
+    def test_lowercase_homonym_still_does_not_block_in_jsonl(self) -> None:
+        self.assertNotIn("DIRECT_IDENTIFIER", self.scan_text(
+            "ledger.jsonl", '{"note": "al ' + self.homonym() + ' Tier 3"}\n'))
+
+    def test_italian_slash_pair_is_not_a_path(self) -> None:
+        """F-1: `minimo/<token>` is a superlative pair, not a path segment. It has no path
+        root, so the root-anchored rule never reads it — no special case is written."""
+        self.assertNotIn("DIRECT_IDENTIFIER", self.scan_text(
+            "prose.md", "Il valore minimo/" + self.homonym() + " del parametro.\n"))
+        self.assertNotIn("DIRECT_IDENTIFIER", self.scan_text(
+            "prose.jsonl", '{"nota": "range minimo/' + self.homonym() + ' ammesso"}\n'))
+
+    def test_path_ending_a_line_mid_file_blocks(self) -> None:
+        """F-2: this scanner reads whole files; a path that ends a LINE is the commonest
+        emission form and must count, not only a path at the end of the file."""
+        self.assertIn("DIRECT_IDENTIFIER", self.scan_text(
+            "log.md", "The home directory is /Users/" + self.homonym() + "\nnext line\n"))
+
+    def test_path_terminated_by_prose_punctuation_blocks(self) -> None:
+        """F-3: sentence period, markdown bold, colon and angle bracket all end a path
+        run, because the run ends at whitespace or a quote rather than at a listed character."""
+        for text in (
+            "It lives under /Users/" + self.homonym() + ".\n",
+            "Root is **/Users/" + self.homonym() + "**\n",
+            "/Users/" + self.homonym() + ": permission denied\n",
+            "<file:///Users/" + self.homonym() + ">\n",
+            "moves inside `~/.legend/lineage/AIR-DI-X-" + self.homonym() + "/`\n",
+        ):
+            with self.subTest(text=text):
+                self.assertIn("DIRECT_IDENTIFIER", self.scan_text("form.md", text))
+
+    def test_a_path_followed_by_list_punctuation_and_the_homonym_is_two_runs(self) -> None:
+        """A CSV field, a table cell or a parenthesis after a path must not glue the
+        homonym onto the path run (blind review of this repair, 2026-09-08)."""
+        for name, text in (
+            ("cells.csv", "/home/legend," + self.homonym() + "\n"),
+            ("table.md", "|/home/legend|" + self.homonym() + "|3|\n"),
+            ("prose.md", "(vedi /home/legend)(" + self.homonym() + ")\n"),
+        ):
+            with self.subTest(text=text):
+                self.assertNotIn("DIRECT_IDENTIFIER", self.scan_text(name, text))
+
+    def test_jsonl_parental_variant_windows_do_not_cross_records(self) -> None:
+        text = '{"a": "maternal transmission reported"}\n{"b": "carries Q230P"}\n'
+        self.assertNotIn("PARENT_OF_ORIGIN_VARIANT_LINKAGE", self.scan_text("r.jsonl", text))
+        one = '{"a": "maternal transmission of Q230P reported"}\n'
+        self.assertIn("PARENT_OF_ORIGIN_VARIANT_LINKAGE", self.scan_text("r.jsonl", one))
+
+    def test_jsonl_person_context_window_still_reaches_neighbouring_records(self) -> None:
+        """A person noun in one record and the two variants in the next two must still be
+        caught: the person-context window is file-wide on purpose (blind review R-1)."""
+        text = ('{"a": "the proband is described here"}\n'
+                '{"b": "carries Q230P"}\n'
+                '{"c": "and c.1057-2A>G"}\n')
+        root = self.make_repo()
+        (root / "r.jsonl").write_text(text, encoding="utf-8")
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertIn("REIDENTIFYING_VARIANT_COMBINATION", {item.code for item in findings})
+
+    def test_identifier_inside_a_content_address_fragment_does_not_block(self) -> None:
+        """Candidate identifiers are `RPC-` + 12 hex characters; a three-letter private
+        token sat inside three of them by chance and every one was a false BLOCK."""
+        token = "".join(map(chr, (98, 101, 97)))
+        self.assertNotIn("DIRECT_IDENTIFIER", self.scan_text(
+            "export.jsonl", '{"candidate_id": "RPC-' + token + '596753ac3"}\n'))
+        # below fragment length the skip does not apply: ten hex characters block
+        self.assertIn("DIRECT_IDENTIFIER", self.scan_text(
+            "short.jsonl", '{"candidate_id": "RPC-' + token + '5967531"}\n'))
+
+    def test_jsonl_parental_rules_are_scoped_to_one_record(self) -> None:
+        """A maternal word in one record and a paternal word in another are two records,
+        not one pairing; and the reference-genotype safeguard reads the record, not the file."""
+        text = (
+            '{"pmid": "39416860", "note": "maternal allele reported"}\n'
+            '{"pmid": "39416860", "note": "the reference genotype carries Q230P"}\n'
+            '{"pmid": "39416860", "note": "paternal allele reported"}\n'
+        )
+        root = self.make_repo()
+        (root / "records.jsonl").write_text(text, encoding="utf-8")
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertNotIn("PARENT_OF_ORIGIN_PAIRING", {item.code for item in findings})
+        one_record = '{"pmid": "39416860", "note": "mother and father traces, Q230P"}\n'
+        (root / "records.jsonl").write_text(one_record, encoding="utf-8")
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertIn("PARENT_OF_ORIGIN_PAIRING", {item.code for item in findings})
+
+    def test_published_author_name_in_a_corpus_seed_is_review_not_block(self) -> None:
+        """A PubMed author sharing a given name with a private identifier is reported under
+        its own code and never silently; the same token outside the name field still blocks."""
+        token = "".join(map(chr, (77, 97, 115, 115, 105, 109, 111)))
+        root = self.make_repo()
+        seed = root / "disease-models" / "x" / "registries"
+        seed.mkdir(parents=True)
+        (seed / "corpus_seed_pubmed_20260806.jsonl").write_text(
+            '{"authors": [{"fore_name": "' + token + '", "last_name": "Rossi"}]}\n',
+            encoding="utf-8",
+        )
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        codes = {(item.code, item.severity) for item in findings}
+        self.assertIn(("PUBLIC_BIBLIOGRAPHIC_AUTHOR", "REVIEW"), codes)
+        self.assertNotIn(("DIRECT_IDENTIFIER", "BLOCK"), codes)
+        (seed / "corpus_seed_pubmed_20260806.jsonl").write_text(
+            '{"authors": [{"fore_name": "A", "note": "' + token + '"}]}\n', encoding="utf-8")
+        findings = []
+        GATE.scan_privacy_and_secrets(root, findings)
+        self.assertIn(("DIRECT_IDENTIFIER", "BLOCK"),
+                      {(item.code, item.severity) for item in findings})
     def test_direct_identifier_blocks(self) -> None:
         root = self.make_repo()
         (root / "note.md").write_text("Bim" + "ba", encoding="utf-8")

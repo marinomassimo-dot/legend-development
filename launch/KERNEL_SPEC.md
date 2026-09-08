@@ -39,7 +39,7 @@ operator.** Every receipt that depends on them records them in that form.
 
 **D1 — cell identity.** `LEGEND_RUNTIME_INSTANCE = mac-dev-001` for this machine. The existing
 lineage directory migrates as a **registered act**, not an implicit rename: the cell segment
-moves inside the existing base (`~/.legend/lineage/AIR-DI-MASSIMO-massimo/` →
+moves inside the existing base (`~/.legend/lineage/AIR-DI-⟨OP⟩-⟨op⟩/` →
 `~/.legend/lineage/mac-dev-001/`, no new layout), and each migrated record carries the receipt
 — `old_identity`, `new_identity`, `reason: "remove derived runtime identity"`, date, author.
 
@@ -427,13 +427,13 @@ Read verbatim off the actor's own screen, read-only and without attaching:
 
 ```
 Bash command
-git -C /Users/massimo/Desktop/legend-public status --short; echo "EXIT=$?"
+git -C <REPO_ROOT> status --short; echo "EXIT=$?"
 Read-only git status in shared checkout
 
 This command requires approval
 Do you want to proceed?
 ❯ 1. Yes
-  2. Yes, and don't ask again for: git -C /Users/massimo/Desktop/legend-public status --short
+  2. Yes, and don't ask again for: git -C <REPO_ROOT> status --short
   3. No
 ```
 
@@ -485,7 +485,7 @@ reached the end:
 
 | axis | result |
 |---|---|
-| `CMD_RESULT` | record 68 `TOOL_USE[Bash]` → `git -C /Users/massimo/Desktop/legend-public status --short; echo "EXIT=$?"`; record 69 `toolUseResult {"stdout": "EXIT=0", "stderr": "", "interrupted": false}` — **exit 0, working tree clean, and the actor read it** |
+| `CMD_RESULT` | record 68 `TOOL_USE[Bash]` → `git -C <REPO_ROOT> status --short; echo "EXIT=$?"`; record 69 `toolUseResult {"stdout": "EXIT=0", "stderr": "", "interrupted": false}` — **exit 0, working tree clean, and the actor read it** |
 | `NATIVE_CROSS_WORKTREE_GIT_GUARD` | **`NOT_OBSERVED`** |
 | return path | **2 round-trips** — `req_…QfhsXs` (Bash), `req_…SLhn2k` (SendMessage), plus a closing text request. **No `ToolSearch`: the tool reference was warm** |
 
@@ -533,7 +533,7 @@ the two corrections recorded above: the transcript holds the answer and not the 
 ### Permission collection — the register, entry 1
 
 ```
-command    git -C /Users/massimo/Desktop/legend-public status --short
+command    git -C <REPO_ROOT> status --short
 actor      scientist-a · background · isolation: none · permissionMode: default
 context    read-only probe against the shared checkout, attended pilot
 outcome    APPROVED (option 1) by the operator, after 21m52s of waiting

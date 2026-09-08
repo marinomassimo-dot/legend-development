@@ -345,13 +345,16 @@ state manifest → current files → meta index → active metas → research/bi
 ## 21c. STOP POLICY
 
 > Provenance: `DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY` · body sha256
-> Updated after permanent retirement of the runtime guard; this section is procedural
-> guidance only and is not enforced by a hook.
-> before the SAFE_DEFAULTS list — that list is append-only by agents and is deliberately
-> outside the hash, so exercising the §21c permission disturbs nothing reserved). The text
-> below is the operator's dictated wording; the DEC records what authorises it, maps its
+> `ec93fa768d853dfc7537cdc4810d7e223257b3b834cc53c9b090485c7e9e06f7` (34 lines, from the
+> first character of `STOP POLICY (HARD RULE, …)` to the last character of the line before
+> the SAFE_DEFAULTS list, no trailing newline — the DEC's own recipe; that list is
+> append-only by agents and is deliberately outside the hash, so exercising the §21c
+> permission disturbs nothing reserved). The text below is the operator's dictated wording,
+> amended on 2026-09-07 at the retirement of the runtime guard (`4341ef9`): this section is
+> procedural guidance and no hook enforces it. The DEC records what authorises it, maps its
 > reservations onto Annex H.1, and declares that ratification is the operator's own merge
-> to `main` — not any commit on the branch that carries it.
+> to `main` — not any commit on the branch that carries it. This callout was left without a
+> value by `4341ef9` and restored, with the re-derived digest, on 2026-09-08.
 
 STOP POLICY (HARD RULE, operator decision 2026-09-03)
 
@@ -409,15 +412,20 @@ SAFE_DEFAULTS (seeded from 2026-09-02/03):
 
 ## 21d. DECISION AUTHORITY
 
-> Provenance: `DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY` · block sha256
-> `114885d8cbc7aca0fc22a62e221aa64e32406acd6e71c45fc5564ac20ceffdd8` (62 lines). Same DEC
-> and same ratification clause as §21c; the DEC's MAPPING section is where each RESERVED
-> item is traced to its H.1 row or to the frozen guarantee it actually comes from. The push
-> rule below is a repository procedure; no runtime hook enforces it.
-> The historical implementation and its guard were retired with the runtime guard removal.
-> NOT consult it: every push is refused today. This callout said the opposite for one
-> commit, and no check caught it — the equality assertion skips the leading callout before
-> comparing, which is exactly where a false sentence is least visible and most read.
+> Provenance: `DEC-20260903-STOP-POLICY-AND-DECISION-AUTHORITY` · push rule re-ratified by
+> the operator on 2026-09-08 (residual closure after the 2026-09-07 consolidation) · block
+> sha256 `310cb3781ce62b409066decdeaee8f78c8023e38d266d0103a3a09c70b8d4750` (57 lines, from
+> the first character of `DECISION AUTHORITY (HARD RULE, …)` to the last character of the
+> closing line, no trailing newline — the DEC's own recipe, over the text
+> `scripts/test_stop_policy.py` asserts verbatim). Same DEC and same
+> ratification clause as §21c; the DEC's MAPPING section traces each RESERVED item to its
+> H.1 row or to the frozen guarantee it comes from, and its hash table carries the
+> 2026-09-03 and 2026-09-08 values side by side.
+> The push rule below is a repository procedure. No runtime hook enforces it: the guard that
+> once refused pushes was retired on 2026-09-07 (`4341ef9`), so a push is not refused today —
+> it is verified by the actor who makes it and reviewed after the fact. An earlier version of
+> this callout said the opposite for one commit and no check caught it: the equality
+> assertion skips the leading callout, which is where a false sentence is least visible.
 
 DECISION AUTHORITY (HARD RULE, operator decision 2026-09-03)
 
@@ -454,31 +462,28 @@ Operator decisions already taken (2026-09-03), retiring class-2 stops:
   - branch switch inside a single-owner worktree: agents. Root: reserved.
   - worktree provisioning: agents.
   - birth of bound sessions: BOOTSTRAP automates it; not an operator act per dispatch.
-  - push: agents, and only when ALL of these hold — the remote is `development`, named
-    explicitly; the push is fast-forward, with no force in any spelling and no `+`
-    refspec; it names exactly one ref; `public_release_gate` is recorded PASS with zero
-    blocks against the exact SHA pushed; the authorisation names branch, SHA, gate
-    result and actor in `ledger/push_authorizations.jsonl`; and a blind Mirror review —
-    fresh instance, given only the tip SHA, the diff and the release-gate output, no
-    conversation history — with verdict PASS bound to the exact tip SHA. BLOCK = findings
-    to repair, then re-review of the delta only; never a question for the operator. This
-    condition holds for every push, `main` and branches alike. The ref must not be `main`,
-    unless the merge that produced `main` was itself the agents' to make under this
-    section — that is, it changed no guarantee. A merge that changes a guarantee, and its
-    push, stay the operator's. `origin` is denied to every runtime, always.
-    Verify these conditions directly immediately before pushing; no runtime hook is involved.
+  - push: agents, to the `development` remote only, named explicitly, and only when ALL
+    of these hold — the push is fast-forward, with no force in any spelling and no `+`
+    refspec; it names exactly one ref; `public_release_gate` has been run against the
+    exact SHA pushed and is PASS with zero blocks; and the session report records branch,
+    SHA, gate result and actor. `main` is included: a fast-forward of `development/main`
+    is the agents' to make when the change alters no guarantee, or when the operator has
+    mandated it in session (2026-09-07 consolidation; 2026-09-08 residual closure). A
+    merge that changes a guarantee, and its push, stay the operator's. `origin` — the
+    public release repository — is never pushed by an agent: it is the operator's alone
+    and outside every agent mandate unless the operator names it.
+    What enforces this, stated so nobody over-reads it: nothing mechanical. The runtime
+    guard and its hooks were retired on 2026-09-07; no hook, PR gate or authorisation
+    ledger stands between an agent and `git push`. The controls are the ones the pushing
+    actor performs and records — gate PASS on the exact SHA immediately before, `git
+    ls-remote` equality immediately after — and the tracking-ref reflog, which records
+    that a push happened from this clone but not who made it. A push outside these
+    conditions is a finding and a revert, and it is visible: every remote ref is a diff.
 
-REVIEW BUDGET (part of the push condition above). The purpose of the review is FRESHNESS OF
-CONTEXT, not debate. Mirror sees only the diff; the Orchestrator sees only the verdict.
-  Round 1 — blind Mirror → PASS or BLOCK. Findings are one line each with evidence. No prose.
-  The Orchestrator answers each finding in one of two ways only: REPAIR (one commit), or
-  ACCEPT (one line in DECISIONS_TAKEN giving the reason and the reversibility). No reply
-  document and no counter-argument: a finding is repaired or accepted, never discussed.
-  Round 2 — Mirror on the delta only → PASS or BLOCK. It may touch only round-1 findings and
-  regressions introduced by the repairs. No new scope.
-  There is no round 3. BLOCK at round 2 means the push does not happen, the change goes to
-  STOP_LOG as class 3 with its findings left open, and the queue moves to the next task. It
-  does not reach the operator.
+REVIEW (after the fact, §21e). Mirror reviews landed and pushed changes ex post and on
+request; a Mirror finding is a new task, never a hold on a push that met the conditions
+above. No review round is a precondition of a `development` push, and BLOCK at review is
+findings to repair, never a question for the operator.
 
 ---
 

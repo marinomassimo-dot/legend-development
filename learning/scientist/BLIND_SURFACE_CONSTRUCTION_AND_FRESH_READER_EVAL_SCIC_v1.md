@@ -92,7 +92,7 @@ by thinking:
    shared project identity. The builder sets both explicitly to `benchmark participant`.
 
 **One declared residual.** The prototype root is inside a scratchpad whose *path name* encodes the
-repository (`…-Users-massimo-Desktop-legend-public--claude-worktrees-lettore-c…`). A reader in it
+repository (`…-Users-⟨op⟩-Desktop-legend-public--claude-worktrees-lettore-c…`). A reader in it
 sees the provenance in `pwd`. It leaks no answer, and a real build must use a neutral
 `BENCH_ROOT` — which the protocol already declares a local-instance value. Recorded, not hidden.
 

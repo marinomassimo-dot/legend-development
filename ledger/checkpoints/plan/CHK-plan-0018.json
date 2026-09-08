@@ -16,7 +16,7 @@
   "REHYDRATION": {
     "worktree": "evidence-index",
     "worktree_matches_git_toplevel": true,
-    "pwd": "/Users/massimo/Desktop/legend-public/.claude/worktrees/evidence-index",
+    "pwd": "<REPO_ROOT>/.claude/worktrees/evidence-index",
     "branch_at_open": "xport",
     "head_at_open": "c748d271de57c9bb73b755184401fddd6e614833",
     "tree_at_open": "clean — 0 porcelain entries",

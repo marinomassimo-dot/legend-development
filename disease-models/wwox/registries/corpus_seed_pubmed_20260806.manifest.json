@@ -4,7 +4,7 @@
   "evidential_status": "NOT_EVIDENCE",
   "expected_count": 706,
   "forbidden_uses": [
-    "reading. An abstract is not the paper, and the decisive detail is routinely absent from it \u2014 on 2026-08-04 a figure panel reversed a conclusion the running text did not contain",
+    "reading. An abstract is not the paper, and the decisive detail is routinely absent from it — on 2026-08-04 a figure panel reversed a conclusion the running text did not contain",
     "supporting a claim, a verbatim locator or a FULLTEXT_READ_RECEIPT. A receipt whose source is this file is refused by scripts/test_abstract_corpus_is_not_evidence.py",
     "substituting for a full-text read in the reading debt: a paper covered here is still unread"
   ],
@@ -36,15 +36,15 @@
     "PubmedData/History beyond PubMedPubDate",
     "PubmedBookData/@ objects beyond PublicationStatus and ArticleIdList"
   ],
-  "not_claimed": "This is every record returned by the query above at the timestamp above, not 'every paper on the gene'. PubMed applies Automatic Term Mapping; the query_translation field records what was actually run. pubmed_free_full_text_link=no means PubMed exposes no link it classifies as free \u2014 it does not mean paywalled.",
+  "not_claimed": "This is every record returned by the query above at the timestamp above, not 'every paper on the gene'. PubMed applies Automatic Term Mapping; the query_translation field records what was actually run. pubmed_free_full_text_link=no means PubMed exposes no link it classifies as free — it does not mean paywalled.",
   "outputs": {
     "corpus_seed_pubmed_20260806.jsonl": {
-      "content": "full record, minus not_captured",
-      "sha256": "88ef362603241ffcde7a7c7ddbdbdd84d878ee5dd223d8401c3c53bd746ae13c"
+      "content": "full record, minus not_captured, minus redacted_in_published_copy",
+      "sha256": "2d0165ef97dafdbd29b8990c4a319548ca2360252d1ef41cf16456a17fb14e43"
     },
     "corpus_seed_pubmed_20260806.tsv": {
       "abstracts": false,
-      "content": "derived triage convenience \u2014 lossy by design",
+      "content": "derived triage convenience — lossy by design",
       "sha256": "e9bc1b67f1947bc8f7ca0fc8d3e4258d27628c84129d96744827a47e446e0baf"
     }
   },
@@ -60,6 +60,16 @@
   "record_types": [
     "PubmedArticle"
   ],
+  "redacted_in_published_copy": {
+    "distinct_addresses_redacted": 262,
+    "occurrences_redacted": 430,
+    "original_preserved": "privately, outside the repository, by the operator (never published)",
+    "records_touched": 245,
+    "sha256_before_redaction": "88ef362603241ffcde7a7c7ddbdbdd84d878ee5dd223d8401c3c53bd746ae13c",
+    "what": "author affiliation e-mail addresses (authors[].affiliations[]), replaced by the literal '[email redacted]'; no field removed, no other byte changed; one malformed double-@ address (a local-part fragment left of a second @) was redacted whole",
+    "when": "2026-09-07",
+    "why": "published corresponding-author addresses are personal contact data not needed by any analysis in this repository; the privacy gate scans .jsonl since 2026-09-07 and reports them as EMAIL_ADDRESS blocks. A reader can re-fetch them from PubMed by PMID"
+  },
   "source": "NCBI E-utilities. Abstracts may be under publisher copyright; check terms before redistributing.",
   "with_abstract": 693,
   "with_abstract_text": 693,

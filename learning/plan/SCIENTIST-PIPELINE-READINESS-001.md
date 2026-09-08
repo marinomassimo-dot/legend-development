@@ -71,7 +71,7 @@ not read from a contract that says it is not binding.
 
 | Fact | Measured value | Command |
 |---|---|---|
-| Working directory | `/Users/massimo/Desktop/legend-public/.claude/worktrees/evidence-index` | `pwd` |
+| Working directory | `<REPO_ROOT>/.claude/worktrees/evidence-index` | `pwd` |
 | Git top-level | identical to the above | `git rev-parse --show-toplevel` |
 | Branch | `plan-orchsurf-r4-transcription` | `git rev-parse --abbrev-ref HEAD` |
 | HEAD | `de0ae4e961ab28a1f57a28c8eb2440da92b02cb2` | `git rev-parse HEAD` |

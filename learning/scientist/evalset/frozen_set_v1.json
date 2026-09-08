@@ -1353,7 +1353,7 @@
    }
   }
  },
- "corpus_root": "/Users/massimo/Desktop/legend-public/files/fulltext",
+ "corpus_root": "<REPO_ROOT>/files/fulltext",
  "corpus_root_note": "files/ is gitignored, so the held-surface census is a property of this working directory, not of the repository. A worktree with an empty files/ would report every surface absent.",
  "frozen_set_id": "EVALSET-BLIND-R1-2026-08-26",
  "head": "82c9f651558936334e41cb8d959ebd62c024f4d3",

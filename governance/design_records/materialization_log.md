@@ -62,7 +62,7 @@ Stub files were also refused. The LEGEND file protocol invalidates placeholders,
 
 | Fact | Measured value |
 |---|---|
-| Root checkout | `/Users/massimo/Desktop/legend-public`, branch `main`, HEAD `749a9a9`, **clean** |
+| Root checkout | `<REPO_ROOT>`, branch `main`, HEAD `749a9a9`, **clean** |
 | Plan worktree | `evidence-index`, HEAD `3f72066` |
 | Branch vs main | `evidence-index` is **35 commits behind** `main`, with **0 commits of its own**; merge-base is its own HEAD — a strict ancestor |
 | Worktrees present | root(main) · evidence-index · lettore · lettore-b · mirror · 4 Codex worktrees (aqeilan, partials, reading, wwox-mouse-series) |

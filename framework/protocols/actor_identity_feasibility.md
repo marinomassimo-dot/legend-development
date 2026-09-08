@@ -80,7 +80,7 @@ this study can distinguish those, and the transport's own error text says only t
 ### E1 — one runtime store · **INCONCLUSIVE**
 
 From `evidence-index`: `git rev-parse --path-format=absolute --git-common-dir` →
-`/Users/massimo/Desktop/legend-public/.git`. **One measured context is not six.** The others
+`<REPO_ROOT>/.git`. **One measured context is not six.** The others
 were not measured: asking their owners would have cost sends beyond the budget. The
 documentation route — every entry `git worktree list` prints is a worktree of this repository —
 is **documentation, not measurement**.
@@ -143,11 +143,11 @@ uncheckable.** The following is the literal output, recorded 2026-08-11:
 
 ```
 ### historical_observation_not_for_routing — 2026-08-11, NOT FOR ROUTING ###
-claude     1883 massimo   18u  unix 0x4d113e3dd737279a      0t0      /tmp/cc-socks/1883.sock
-claude     1978 massimo   18u  unix 0xd6da3c0c51df51a8      0t0      /tmp/cc-socks/1978.sock
-claude     2024 massimo   13u  unix 0x7b07579ddaccd765      0t0      /tmp/cc-socks/2024.sock
-claude    39715 massimo   12u  unix 0xd72a129d67b6fcd8      0t0      /tmp/cc-socks/39715.sock
-claude    92030 massimo   15u  unix 0xecc74cecae020278      0t0      /tmp/cc-socks/92030.sock
+claude     1883 <user>   18u  unix 0x4d113e3dd737279a      0t0      /tmp/cc-socks/1883.sock
+claude     1978 <user>   18u  unix 0xd6da3c0c51df51a8      0t0      /tmp/cc-socks/1978.sock
+claude     2024 <user>   13u  unix 0x7b07579ddaccd765      0t0      /tmp/cc-socks/2024.sock
+claude    39715 <user>   12u  unix 0xd72a129d67b6fcd8      0t0      /tmp/cc-socks/39715.sock
+claude    92030 <user>   15u  unix 0xecc74cecae020278      0t0      /tmp/cc-socks/92030.sock
 ### historical coordinates whose current validity is not asserted; never use for routing ###
 ```
 

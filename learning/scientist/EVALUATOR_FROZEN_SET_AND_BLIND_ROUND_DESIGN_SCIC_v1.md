@@ -197,7 +197,7 @@ directory and not of the repository.
 FROZEN_SET_ID   EVALSET-BLIND-R1-2026-08-26
 ANCHOR          82c9f651558936334e41cb8d959ebd62c024f4d3   branch lettore-c
                 — the commit at which both hashed inputs became tracked objects
-SHA256          15e2bf632fb2ce83504636b079396117115950544ca3de821dc24e532ba68e87
+SHA256          54905e7661986707e35d078efbbc4235f45f310ae80d1474989ecb9384d39f45
 RECIPE          python3 learning/scientist/evalset/emit_frozen_set.py --emit \
                   --corpus-root <REPO_ROOT>/files/fulltext \
                   --pin-head      82c9f651558936334e41cb8d959ebd62c024f4d3 \
@@ -205,6 +205,8 @@ RECIPE          python3 learning/scientist/evalset/emit_frozen_set.py --emit \
                   --pin-lettore-b 111b96324f6bdcbd545459c6a1013db04ab832de \
                 | shasum -a 256
 ```
+
+> **Digest re-pinned 2026-09-07 (operator-authorised path normalisation).** The value `corpus_root` inside `frozen_set_v1.json` carried the operator's machine-local path and now reads `<REPO_ROOT>/files/fulltext`, which is what the recipe already passed. Nothing else in the file changed — one line, one string. SHA256 before: `15e2bf632fb2ce83504636b079396117115950544ca3de821dc24e532ba68e87`; after: `54905e7661986707e35d078efbbc4235f45f310ae80d1474989ecb9384d39f45`. The pre-normalisation bytes are preserved privately by the operator. The reader-axis pins (`lettore`, `lettore-b`) name branches consolidated onto `main` on 2026-09-07; their tips survive in the private consolidation bundle, so the recipe is reproducible from it, not from a clone.
 
 **The recipe is published because a hash without one is an attestation, not a measurement.** The
 digest above was reproduced by running that exact command twice after the file was written.
@@ -849,7 +851,7 @@ construction: its population is 13 named files and this is not one of them.
 EVALUATOR_SET_FROZEN                YES
   FROZEN_SET_ID                     EVALSET-BLIND-R1-2026-08-26
   ANCHOR                            82c9f651558936334e41cb8d959ebd62c024f4d3
-  SHA256                            15e2bf632fb2ce83504636b079396117115950544ca3de821dc24e532ba68e87
+  SHA256                            54905e7661986707e35d078efbbc4235f45f310ae80d1474989ecb9384d39f45
   RECIPE                            emit_frozen_set.py --emit --corpus-root <root>
                                       --pin-head 82c9f651 --pin-lettore c536fc7f
                                       --pin-lettore-b 111b9632 | shasum -a 256

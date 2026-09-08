@@ -44,7 +44,7 @@ Established from repository evidence, not from the dispatch's assertion and not 
 | Field | Value | How established |
 |---|---|---|
 | `actor_id` | `plan` | `deployment/deployment_profile.md` line 34 maps `plan` → worktree `evidence-index`; this session is standing in that worktree. **The profile's own caveat is carried:** *"Neither column is an ACTOR_ID oracle and neither is a write-authority oracle."* The mapping locates; it does not authorize |
-| worktree | `/Users/massimo/Desktop/legend-public/.claude/worktrees/evidence-index` | `git worktree list` |
+| worktree | `<REPO_ROOT>/.claude/worktrees/evidence-index` | `git worktree list` |
 | branch | `plan-orchsurf-r4-transcription` | `git rev-parse --abbrev-ref HEAD` |
 | HEAD | `2e22c4836a85c21ccced94af91ca40529b5de09b` | `git rev-parse HEAD` |
 | working tree | clean before this file | `git status --porcelain` empty |

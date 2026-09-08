@@ -106,7 +106,7 @@ def session_clean(cwd):
 
     # A project memory store is keyed by the project path with '/' replaced by '-'.
     #
-    # 🔴 DECODED first, and the decode is ambiguous: `-Users-massimo-Desktop-legend-public`
+    # 🔴 DECODED first, and the decode is ambiguous: `-Users-⟨op⟩-Desktop-legend-public`
     # decodes to `<HOME>/Desktop/legend/public`, because the project directory name
     # contains a hyphen of its own. The probe therefore matched nothing and printed
     # "no project memory store bound to it" for a checkout that has 46 of them. A check that

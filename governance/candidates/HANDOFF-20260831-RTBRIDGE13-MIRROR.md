@@ -117,7 +117,7 @@ did not act on.
 
 - **One row of Mirror's M1 illustration.** `mytool ~/.claude/settings.json` is printed in
   the revision-12 review as `PROHIBITED RUNTIME_CONFIG`. Measured here through both
-  `adjudicate()` and `verdict()`, at revision 11, 12 and 13, with `HOME=/Users/massimo`, it
+  `adjudicate()` and `verdict()`, at revision 11, 12 and 13, with `HOME=<HOME>`, it
   is **ALLOWED** — the tilde is never expanded before scope classification. M1 itself
   reproduces exactly (438/714) on the absolute spelling. The tilde gap is real,
   revision-independent, and declared in § 12.2. I could not reconstruct the invocation that

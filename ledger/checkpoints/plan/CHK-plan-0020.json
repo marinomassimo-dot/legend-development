@@ -1,0 +1,103 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.6 checkpoint",
+  "_note": "Hand-off of the P51C9 remediation. Two candidates now exist on two branches. Successor to CHK-plan-0009, which is not edited. Control plane under P5.1.",
+
+    "_RECOVERED_UNDER_NEW_ID": {
+    "original_id": "CHK-plan-0010",
+    "new_id": "CHK-plan-0020",
+    "task_id": "P51C9-REMEDIATION-001",
+    "provenance": "branch evidence-index, tip 7a90a91, path ledger/checkpoints/plan/CHK-plan-0010.json; sha256 of the archived file 553dbb5817a53234567f395e3c134dab68d3f2ed016a2f7e86ad75caa441ad76 (also in the private consolidation bundle all-refs-and-stash.bundle)",
+    "why": "the identifier collided with main's CHK-plan-0010 (task SCIENTIST-AB-SPEC-001), which stays canonical and untouched; this record was excluded at the 2026-09-07 consolidation and is recovered here on 2026-09-08 under the next free number",
+    "what_changed": "this block and the CHECKPOINT_ID value only; every other byte is the archived record, including its SUPERSEDES line, which still reads in the numbering of the branch it was written on"
+  },
+  "CHECKPOINT_ID": "CHK-plan-0020",
+  "SUPERSEDES": "CHK-plan-0009",
+  "ACTOR_ID": "plan",
+  "TASK_ID": "P51C9-REMEDIATION-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "9c0c13fb2cba98bf4facfcb3a99bb75c7b1c21fe72cac087bd82c5b7d8af55ff",
+  "FINGERPRINT_COMPOSITION_VERSION": 1,
+  "GOVERNANCE_VERSION": "3.1.1",
+  "FINGERPRINT_IS_BRANCH_DEPENDENT": "This value holds on `evidence-index`, which carries the P5.1 amendment. On `orchestrator-worktree`, cut from main, the composer returns the pre-amendment values (plan 37c3b863…). Both are correct: a fingerprint is composed over the governance the branch carries. A resumer must recompute on the branch it is standing on.",
+
+  "TIMESTAMP": "2026-08-17",
+  "TIMESTAMP_PRECISION": "date only — the runtime exposed no wall-clock time",
+
+  "RESPONDS_TO": {
+    "review": "REV-P51C9-MIRROR-001 @ fe08e685 — REQUEST CHANGES",
+    "findings": {
+      "F-1": "RESOLVED — candidate split; deployment change removed to CAND-20260817-ORCHWT",
+      "F-2": "RESOLVED by declaring OPTION B, formal divergence. Option A was tested against §8, §0.2 and §47 steps 9/14 and is not available: a chat has one working directory, and §0.2/§47 describe the root chat promoted in place",
+      "F-3": "RESOLVED — four orphaned oids replaced with their post-rebase equivalents; every source commit now carries its ancestry verification and blob hash"
+    },
+    "non_blocking": {
+      "N-1": "APPLIED by deriving. Mirror's 504/17 is exactly right at the reviewed tip 629bc89a, verified; the counts at the new tips are stated as command output at a named tip, never as maintained constants",
+      "N-3_N-4_N-5": "NOT implemented — classified by Mirror as future candidates"
+    }
+  },
+
+  "CANDIDATES_PREPARED": [
+    {
+      "candidate_id": "CAND-20260817-P51C9",
+      "revision": 2,
+      "branch": "evidence-index",
+      "branch_tip": "b5eaf81ed50b3c994c6ee7cede47a2114cdcaa6c",
+      "base_head": "908197ba62a064546f17c9c277ff497ffc753656",
+      "content_hash": "f325bd9d1667638eeda718b73bc106263fea3a509f832bcc62e082cdba0651da",
+      "superseded_hash": "b1f3729ba493c414cba5eb1cdccc8b739f9631a3cecf87cbf070714bad32f956",
+      "hash_version": "legend-candidate-v4",
+      "change_class": "MAJOR",
+      "scope": "P5.1 amendment + C-9 closure + retirement record + SLR-plan-0001",
+      "rotates_fingerprints": true
+    },
+    {
+      "candidate_id": "CAND-20260817-ORCHWT",
+      "branch": "orchestrator-worktree",
+      "branch_tip": "ab4856b1d90c4361f63705f487d5285c54ecba0e",
+      "base_head": "908197ba62a064546f17c9c277ff497ffc753656",
+      "content_hash": "280dc4973cf046123a3356ebdf3e8ae2e575b83d6cce9e8b7b58987f2065763d",
+      "hash_version": "legend-candidate-v3",
+      "change_class": "MAJOR",
+      "scope": "deployment/deployment_profile.md ONLY",
+      "rotates_fingerprints": false
+    }
+  ],
+
+  "HASH_VERSION_ASYMMETRY": "P51C9 hashes under v4 and ORCHWT under v3, and both are correct: a candidate is hashed under the governance its own BASE_HEAD carries, and P51C9 is the candidate that changes that definition. Whichever executes first moves the other's BASE_HEAD and forces a re-base and re-hash before its approval can bind under gate 5.",
+
+  "NO_HISTORY_REWRITTEN": {
+    "statement": "The split was performed by a forward commit restoring deployment/deployment_profile.md, and ORCHWT by a new branch cut from BASE_HEAD. No rebase, no amend, no force push in this remediation.",
+    "why_it_matters": "F-3 exists because a history rewrite orphaned four cited oids. A remediation that reproduced that defect would be worthless."
+  },
+
+  "EXECUTION_ORDERING_RECOMMENDED": [
+    "Neither candidate can execute today: root not clean (9 untracked), no lease, exemption spent, L2 suspended",
+    "The 9 untracked files must leave the root before any canonical batch; creating a worktree and moving untracked files is an operational act, not a commit, so it can precede the commit that records it",
+    "ORCHWT before P51C9 — smaller, no cascade, and it unblocks the root-clean precondition both need",
+    "The second candidate re-bases and re-hashes; if ORCHWT goes first, P51C9 recomputes under v4"
+  ],
+
+  "OPEN_FOR_OPERATOR": {
+    "stop_condition_reading": "R3's STOP condition follows immediately after offering Option B for the case where Option A fails. This remediation reads STOP as ending the compatibility route, not the candidate, and declares divergence. If the operator meant the candidate should be withdrawn instead, ORCHWT should not go to review. Flagged rather than resolved silently.",
+    "adoption_of_the_divergence": "Operator, under H.1. Declaring a divergence does not adopt it."
+  },
+
+  "HOLDS_IN_FORCE": {
+    "L2": "SUSPENDED — six capabilities UNVERIFIED",
+    "status_C8_batch": "FROZEN",
+    "C9_clauses": "ACCEPTED as a document, NOT adopted",
+    "gate_0": "cannot pass on either candidate",
+    "forbidden_scope_observed": "runtime/ not classified · no new roots · legend_lint.py untouched · frozen text unmodified · SLRs not integrated · claim-foundation-trace not deleted · Mirror and Scientist branches untouched"
+  },
+
+  "OWED_AND_DEFERRED": {
+    "MAT-012_013_014_015": "log records for RC-6…RC-10, the C-9 proposal, the P51C9 candidate and this remediation",
+    "reason": "governance/design_records/ is content domain; writing there now would move a published candidate hash. Declared, not skipped."
+  },
+
+  "STATE": "AWAITING_APPROVAL — two candidates held for R4 Mirror review",
+
+  "RESUME_RULE": "Annex A.6 refusal rule. Recompute the fingerprint on the branch you are standing on — the two branches carry different governance and therefore different fingerprints. Recompute both candidate hashes with candidate_content_hash.py before treating any recorded value as current."
+}

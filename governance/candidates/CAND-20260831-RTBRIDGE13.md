@@ -109,7 +109,7 @@ controls  rsync / install (modelled, own branch)        unchanged at all four
 🔴 **One row of Mirror's illustration did not reproduce, and it is recorded rather than
 dropped.** Mirror printed `mytool ~/.claude/settings.json → PROHIBITED RUNTIME_CONFIG` as
 a control. Measured here through both `adjudicate()` and `verdict()`, with
-`HOME=/Users/massimo`, cwd and `assigned` set to this worktree, the **tilde** spelling is
+`HOME=<HOME>`, cwd and `assigned` set to this worktree, the **tilde** spelling is
 ALLOWED at revision 11, 12 **and** 13 — with and without the tail word. The tilde is never
 expanded before scope classification, so those rows are not a wrapper-tail bypass at all;
 they are a separate, revision-independent gap, declared in § 12. **M1 itself reproduces

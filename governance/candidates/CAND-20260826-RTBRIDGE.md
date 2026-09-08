@@ -1,6 +1,7 @@
 ---
 artifact: INTEGRATION_CANDIDATE — Claude ↔ Codex minimum runtime bridge
 candidate_id: CAND-20260826-RTBRIDGE
+status: RETIRED — historical record; the runtime bridge it describes was removed from main on 2026-09-07 (4341ef9)
 revision: 7
 task_id: RTBRIDGE-P00-001
 author: plan
@@ -19,6 +20,16 @@ human_approval: >
 ---
 
 # INTEGRATION_CANDIDATE — `CAND-20260826-RTBRIDGE`
+
+> **RETIRED — historical record, 2026-09-08.** This candidate describes the Claude ↔ Codex
+> runtime bridge (`RTBRIDGE-P00-001`, revisions 1–7) and the guard, parity probe and hook
+> machinery around it. That infrastructure was retired from `main` on 2026-09-07 by commit
+> `4341ef9` ("Retire LEGEND runtime guard and obsolete harness") and the guard-retirement
+> decision recorded there; the files this candidate hashes, the `BASE_HEAD` and `TIP` it names
+> and the branch it lived on no longer describe the operating laboratory. Its later revisions
+> (`CAND-20260829-RTBRIDGE8`, `CAND-20260831-RTBRIDGE13`) are in the same position. The text
+> below is kept unaltered as the record of what was designed, measured and reviewed; nothing in
+> it is an instruction to a current actor, and none of its § 10 reverts applies to `main`.
 
 ## 1 · Manifest (Annex D.2)
 

@@ -271,7 +271,7 @@ Measured mechanically rather than by eye:
 
 ```
 git worktree list          14 worktrees
-under /Users/massimo/Desktop/legend-public                 7   (the root checkout + six under
+under <REPO_ROOT>                 7   (the root checkout + six under
                                                                .claude/worktrees/)
 outside it                                                 7   (3 scratchpad, 4 legend-codex-*)
 deployment_profile.md actor worktrees                      6   orchestrator · evidence-index ·

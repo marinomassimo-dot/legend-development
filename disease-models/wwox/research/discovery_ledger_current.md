@@ -2500,7 +2500,7 @@ ereditato la cwd di un worktree, e la mia era stata scritta senza dichiarare il 
 [`caption_census.py`](../../../framework/scripts/caption_census.py), predicato esplicito:
 `inbody = |{fig : fig ∈ descendants(body)}|` contro `tot = |{fig : fig ∈ descendants(article)}|`.
 
-**Misura stabile su due esecuzioni, radice `/Users/massimo/Desktop/legend-public`:**
+**Misura stabile su due esecuzioni, radice `<REPO_ROOT>`:**
 
 | | |
 |---|---|

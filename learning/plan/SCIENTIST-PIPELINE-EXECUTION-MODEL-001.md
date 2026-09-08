@@ -87,7 +87,7 @@ neither.
 |---|---|---|
 | branch | `plan-orchsurf-r4-transcription` | `git rev-parse --abbrev-ref HEAD` |
 | HEAD | `2394b079e88e801da2c02cef8b29e8bef7b0e231` | `git rev-parse HEAD` |
-| worktree | `/Users/massimo/Desktop/legend-public/.claude/worktrees/evidence-index` | `git rev-parse --show-toplevel` |
+| worktree | `<REPO_ROOT>/.claude/worktrees/evidence-index` | `git rev-parse --show-toplevel` |
 | working tree | **clean** at session start and at every measurement below | `git status --porcelain` → empty |
 | worktree ↔ actor | the profile maps `plan` → worktree `evidence-index`; this session stands in it | `deployment/deployment_profile.md` |
 | lease | **`ACTIVE by derivation: 0`** — 5 records, all `STALE` or `RELEASED`; most recent released `2026-08-18T14:05:20Z` | `python3 framework/scripts/lease_state.py` |

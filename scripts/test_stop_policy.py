@@ -98,8 +98,10 @@ SAFE_DEFAULTS_SEED = (
     "  - a report that exists only in a transcript → persist verbatim, note the source",
 )
 
-# The companion rule: same day, same surface, same DEC. sha256
-# 114885d8cbc7aca0fc22a62e221aa64e32406acd6e71c45fc5564ac20ceffdd8 over the 62 lines below. It
+# The companion rule: same surface, same DEC; push rule re-ratified 2026-09-08. sha256
+# 310cb3781ce62b409066decdeaee8f78c8023e38d266d0103a3a09c70b8d4750 over the 57 lines below,
+# no trailing newline, by the DEC's own recipe (the 2026-09-03 value, 114885d8…, is kept in
+# the DEC as history). It
 # names itself a fundamental guarantee, so drift in it is reserved to the operator by its own
 # terms — which is exactly why it is asserted verbatim. SAFE_DEFAULTS is the one carve-out, and
 # it is stated inside the RESERVED list so the exemption lives where the reservation does.
@@ -138,31 +140,28 @@ Operator decisions already taken (2026-09-03), retiring class-2 stops:
   - branch switch inside a single-owner worktree: agents. Root: reserved.
   - worktree provisioning: agents.
   - birth of bound sessions: BOOTSTRAP automates it; not an operator act per dispatch.
-  - push: agents, and only when ALL of these hold — the remote is `development`, named
-    explicitly; the push is fast-forward, with no force in any spelling and no `+`
-    refspec; it names exactly one ref; `public_release_gate` is recorded PASS with zero
-    blocks against the exact SHA pushed; the authorisation names branch, SHA, gate
-    result and actor in `ledger/push_authorizations.jsonl`; and a blind Mirror review —
-    fresh instance, given only the tip SHA, the diff and the release-gate output, no
-    conversation history — with verdict PASS bound to the exact tip SHA. BLOCK = findings
-    to repair, then re-review of the delta only; never a question for the operator. This
-    condition holds for every push, `main` and branches alike. The ref must not be `main`,
-    unless the merge that produced `main` was itself the agents' to make under this
-    section — that is, it changed no guarantee. A merge that changes a guarantee, and its
-    push, stay the operator's. `origin` is denied to every runtime, always.
-    Verify these conditions directly immediately before pushing; no runtime hook is involved.
+  - push: agents, to the `development` remote only, named explicitly, and only when ALL
+    of these hold — the push is fast-forward, with no force in any spelling and no `+`
+    refspec; it names exactly one ref; `public_release_gate` has been run against the
+    exact SHA pushed and is PASS with zero blocks; and the session report records branch,
+    SHA, gate result and actor. `main` is included: a fast-forward of `development/main`
+    is the agents' to make when the change alters no guarantee, or when the operator has
+    mandated it in session (2026-09-07 consolidation; 2026-09-08 residual closure). A
+    merge that changes a guarantee, and its push, stay the operator's. `origin` — the
+    public release repository — is never pushed by an agent: it is the operator's alone
+    and outside every agent mandate unless the operator names it.
+    What enforces this, stated so nobody over-reads it: nothing mechanical. The runtime
+    guard and its hooks were retired on 2026-09-07; no hook, PR gate or authorisation
+    ledger stands between an agent and `git push`. The controls are the ones the pushing
+    actor performs and records — gate PASS on the exact SHA immediately before, `git
+    ls-remote` equality immediately after — and the tracking-ref reflog, which records
+    that a push happened from this clone but not who made it. A push outside these
+    conditions is a finding and a revert, and it is visible: every remote ref is a diff.
 
-REVIEW BUDGET (part of the push condition above). The purpose of the review is FRESHNESS OF
-CONTEXT, not debate. Mirror sees only the diff; the Orchestrator sees only the verdict.
-  Round 1 — blind Mirror → PASS or BLOCK. Findings are one line each with evidence. No prose.
-  The Orchestrator answers each finding in one of two ways only: REPAIR (one commit), or
-  ACCEPT (one line in DECISIONS_TAKEN giving the reason and the reversibility). No reply
-  document and no counter-argument: a finding is repaired or accepted, never discussed.
-  Round 2 — Mirror on the delta only → PASS or BLOCK. It may touch only round-1 findings and
-  regressions introduced by the repairs. No new scope.
-  There is no round 3. BLOCK at round 2 means the push does not happen, the change goes to
-  STOP_LOG as class 3 with its findings left open, and the queue moves to the next task. It
-  does not reach the operator."""
+REVIEW (after the fact, §21e). Mirror reviews landed and pushed changes ex post and on
+request; a Mirror finding is a new task, never a hold on a push that met the conditions
+above. No review round is a precondition of a `development` push, and BLOCK at review is
+findings to repair, never a question for the operator."""
 
 
 class TheStopPolicyIsCarriedWhereActorsLoadIt(unittest.TestCase):

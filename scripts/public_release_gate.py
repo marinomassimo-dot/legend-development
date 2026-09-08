@@ -29,7 +29,10 @@ from typing import Iterable
 
 
 TEXT_SUFFIXES = {
-    ".md", ".txt", ".json", ".csv", ".tsv", ".yaml", ".yml", ".toml",
+    # `.jsonl` sits beside `.json` deliberately: it was absent while `.json` was present,
+    # so every line-oriented ledger in the tree — read receipts, approval queue, corpus
+    # seed — was outside the gate's reach and could not have raised a finding of any kind.
+    ".md", ".txt", ".json", ".jsonl", ".csv", ".tsv", ".yaml", ".yml", ".toml",
     ".py", ".sh", ".rst",
 }
 # `backup/` is the BATCH_COMMIT Phase-3 snapshot root: gitignored, never part of a release
@@ -385,6 +388,29 @@ PARENT_ORIGIN = re.compile(
 )
 
 
+def record_blocks(text: str, rel: str) -> Iterable[tuple[int, str]]:
+    """The unit a block-scoped rule is evaluated over.
+
+    🔴 A `.jsonl` file has no blank lines, so `semantic_blocks` yielded it whole and every
+    block-scoped rule degenerated to file scope — over 706 unrelated published papers in the
+    corpus seed, over 400 unrelated propositions in the Pathograph export. Measured before
+    this helper existed: a maternal word in one record and a paternal word in another, 630
+    records apart, were reported as one pairing, and the reference-genotype safeguard was
+    evaluated over the whole file, so the pairing became a BLOCK on a line that contains no
+    variant at all. For a line-oriented ledger the record IS the line, and a rule that
+    describes "one record" must be evaluated over exactly that unit (Mirror, 2026-08-26).
+    """
+    if rel.endswith(".jsonl"):
+        offset = 0
+        for raw in text.splitlines(keepends=True):
+            line = raw.rstrip("\r\n")
+            if line.strip():
+                yield offset, line
+            offset += len(raw)
+        return
+    yield from semantic_blocks(text)
+
+
 def attribution_window(text: str, block_offset: int, block: str, rel: str) -> str:
     """The text a block's parental claim may be attributed to.
 
@@ -402,6 +428,10 @@ def attribution_window(text: str, block_offset: int, block: str, rel: str) -> st
     """
     if rel.endswith(".json"):
         return text
+    if rel.endswith(".jsonl"):
+        # One record per line: the record is its own attribution window, and nothing
+        # outside it — a heading search would reach back to offset 0, i.e. the whole file.
+        return block
     start = text.rfind("\n## ", 0, block_offset)
     return text[start if start >= 0 else 0: block_offset + len(block)]
 
@@ -465,6 +495,49 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
     # trip the privacy gate at random. This narrows only the digest interior: an identifier
     # in ordinary text is unaffected.
     hex_run = re.compile(r"(?<![0-9A-Fa-f])[0-9A-Fa-f]{32,}(?![0-9A-Fa-f])")
+    # The same argument at content-address FRAGMENT length. Candidate identifiers in this
+    # repository are `RPC-` + 12 hex characters, and a three-letter private token occurred by
+    # chance inside three of them (`pathograph_export.jsonl`, measured 2026-09-07: 3 BLOCKs,
+    # all false). Twelve hex characters carrying at least one digit are a content address,
+    # not a word; the digit is what separates them from letters, and only the digest
+    # interior is narrowed — a token bounded by non-letters outside such a run is unaffected.
+    hex_fragment = re.compile(
+        r"(?<![0-9A-Za-z])(?=[0-9A-Fa-f]*[0-9])[0-9A-Fa-f]{12,}(?![0-9A-Za-z])"
+    )
+    # A fourth token is exact-only in the private set above, and deliberately so: it is also
+    # an ordinary Italian word, and `test_common_lowercase_homonym_does_not_block` pins that.
+    # Inside a FILESYSTEM PATH it cannot be that word, so its casefolded digest is consulted
+    # there and nowhere else. The path rule is root-anchored (Mirror v2 § 1.6, 2026-08-26),
+    # not separator-anchored: the first shipped predicate — "preceded by a slash, followed by
+    # a terminator" — blocked the Italian superlative pair `minimo/<token>` (F-1) and, in
+    # this whole-file scanner, missed a path that ends a LINE (F-2). Both close structurally
+    # once the rule starts from a closed set of path roots and reads the run that follows:
+    # a slash-pair has no root, so no special case is written for it. The run ends at
+    # whitespace, a quote, or list punctuation (`,` `;` `|` and brackets) — the characters
+    # that separate CELLS and never sit inside a segment of a machine path — so a table row
+    # or a CSV field holding a path and then the homonym is two runs, not one. A sentence
+    # period, markdown bold or a colon stays INSIDE the run and is harmless: only alphabetic
+    # sub-runs are hashed, and the token precedes the punctuation.
+    path_casefold_identifier_digests = frozenset({
+        "f805bcb3efc982ec60744b3cc23f11ed1a4a0c4b783f345c1dc64ebab616da91",
+    })
+    path_digests = casefold_identifier_digests | path_casefold_identifier_digests
+    path_root = re.compile(
+        r"(?<![A-Za-z0-9_.~-])(?:/Users/|/home/|/var/folders/|~/)"
+        r"|(?<![A-Za-z0-9])[A-Za-z]:\\Users\\"
+    )
+    path_run = re.compile(r"[^\s\"'`,;|()\[\]<>]+")
+    path_word = re.compile(r"[A-Za-z]{3,}")
+    # Harvested bibliographic metadata: a published author may share a given name with a
+    # private identifier, and a digest scanner cannot tell them apart. The one structural
+    # context that says "this is a PubMed author, not the private individual" is the
+    # `fore_name` / `last_name` field of a record in a harvested corpus seed. There the match
+    # is REPORTED — as REVIEW, never silently — under its own code, so a reader sees it and
+    # the file is not blocked for carrying public bibliography. Option C of the Mirror
+    # decision packet (names and institutions permitted, contact fields restricted) is what
+    # the operator chose on 2026-09-07, when affiliation e-mails were redacted from the seed.
+    corpus_seed = re.compile(r"(?:^|/)registries/corpus_seed_pubmed_[0-9]{8}\.jsonl$")
+    bibliographic_name_field = re.compile(r"\"(?:fore_name|last_name)\": \"$")
     email_address = re.compile(
         r"(?i)(?<![A-Z0-9._%+-])"
         r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}"
@@ -538,6 +611,7 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         if rel in GATE_INTERNAL_FILES:
             continue
         digest_spans = [m.span() for m in hex_run.finditer(text)]
+        digest_spans += [m.span() for m in hex_fragment.finditer(text)]
         for match in identifier_token.finditer(text):
             if any(start <= match.start() and match.end() <= end
                    for start, end in digest_spans):
@@ -551,6 +625,22 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
                 and folded_digest not in casefold_identifier_digests
             ):
                 continue
+            if (
+                corpus_seed.search(rel)
+                and text[match.end():match.end() + 1] == '"'
+                and bibliographic_name_field.search(text[max(0, match.start() - 14):match.start()])
+            ):
+                findings.append(
+                    Finding(
+                        "REVIEW",
+                        "PUBLIC_BIBLIOGRAPHIC_AUTHOR",
+                        rel,
+                        line_number(text, match.start()),
+                        "A published author's name field in a harvested corpus seed matches "
+                        "a private identifier digest. Not blocked; confirm it is the author.",
+                    )
+                )
+                continue
             findings.append(
                 Finding(
                     "BLOCK",
@@ -560,6 +650,23 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
                     "Legacy personal identifier remains in public material.",
                 )
             )
+        for root_match in path_root.finditer(text):
+            run = path_run.match(text, root_match.start())
+            if run is None:
+                continue
+            for word in path_word.finditer(run.group(0)):
+                folded = hashlib.sha256(word.group(0).casefold().encode()).hexdigest()
+                if folded not in path_digests:
+                    continue
+                findings.append(
+                    Finding(
+                        "BLOCK",
+                        "DIRECT_IDENTIFIER",
+                        rel,
+                        line_number(text, run.start() + word.start()),
+                        "Personal identifier inside a machine-local path in public material.",
+                    )
+                )
         for match in email_address.finditer(text):
             address = match.group(0).lower()
             if (
@@ -609,7 +716,7 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         # A linked two-variant genotype can re-identify even when words such as
         # "proband" have been removed. A generic disease-level genotype rule
         # beside independent worked examples must remain allowed.
-        for block_offset, block in semantic_blocks(text):
+        for block_offset, block in record_blocks(text, rel):
             relationship = compound_linkage.search(block)
             if (
                 relationship
@@ -729,6 +836,12 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
         for marker in parent_origin.finditer(text):
             start = max(0, marker.start() - 350)
             end = min(len(text), marker.end() + 350)
+            if rel.endswith(".jsonl"):
+                # One record per line: a parental word in one record and a variant in the
+                # next are two records, and this window must not reach across them.
+                start = max(start, text.rfind("\n", 0, marker.start()) + 1)
+                line_end = text.find("\n", marker.end())
+                end = min(end, len(text) if line_end < 0 else line_end)
             window = text[start:end]
             if (
                 (variant_a.search(window) or variant_b.search(window))
@@ -766,6 +879,12 @@ def scan_privacy_and_secrets(root: Path, findings: list[Finding]) -> None:
                 continue
             start = max(0, marker.start() - 700)
             end = min(len(text), marker.end() + 700)
+            # Deliberately NOT clipped to one record on `.jsonl`: clipping it removed
+            # cross-record BLOCKs (a person noun in one record, the two variants in the
+            # next two) that the file-wide window raised. Uncertainty resolves towards
+            # scanning more, never less; the parental-word window above is the one record
+            # rule, because a parental word and a variant in different records are not a
+            # transmission claim. Blind review R-1, 2026-09-08.
             window = text[start:end]
             if variant_a.search(window) and variant_b.search(window):
                 findings.append(

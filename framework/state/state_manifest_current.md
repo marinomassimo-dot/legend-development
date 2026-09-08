@@ -217,7 +217,7 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
 fulltext_ledger_events: 130
-fulltext_ledger_head: c4635ce6a01df9aa434cbba81007bd271d34a942f1e417782f26cf8ed4b080aa
+fulltext_ledger_head: bcc3622d34481954fbb1671630c4d58c7504cfff8743bd84ace959eb3bd3cb07
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -241,7 +241,7 @@ is here, for the same reason as §6.1: a hash chain cannot see a truncated tail.
 ```yaml
 sync_epoch_ledger_path: framework/state/sync_epochs.jsonl
 sync_epoch_ledger_events: 1
-sync_epoch_ledger_head: 53ec0cdb2f1b3caade02f01b392427bb8aa83193221efd9a7de1994008f779f5
+sync_epoch_ledger_head: 1f10fc71a601d092fee56b9ced6ced72772e3c928de51e33f9463b2b18df1fdf
 ```
 
 Plan is the only writer. Other actors read the ledger, measure state with allowlisted

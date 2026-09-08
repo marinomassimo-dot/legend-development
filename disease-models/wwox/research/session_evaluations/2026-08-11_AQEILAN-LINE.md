@@ -8,7 +8,7 @@
 - **Executable verdict:** `session_self_eval.py` initially failed on an orphan false positive for
   the existing `LIT-0333`/`CORPUS P333` landing. The shared record-ID predicate was corrected and
   two regressions added; the rerun passes. All three manifests pass STRICT with zero gaps under
-  `main@d06a4a1`, against `/Users/massimo/Desktop/legend-public/files/`. Receipt verification is
+  `main@d06a4a1`, against `<REPO_ROOT>/files/`. Receipt verification is
   `96 chained receipt(s)`, tail anchored. Structural LINT passes.
 - **Declared global debt:** six unchanged `UNREAD PREMISE` records and legacy manifest gaps remain
   visible. They do not arise from this batch and were not hidden or widened.

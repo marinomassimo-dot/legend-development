@@ -43,7 +43,7 @@ dispatch**, and the repository's own evidence does not support the claim.
 
 | Fact | Measured value | How |
 |---|---|---|
-| Working directory | `/Users/massimo/Desktop/legend-public` | `git rev-parse --show-toplevel` |
+| Working directory | `<REPO_ROOT>` | `git rev-parse --show-toplevel` |
 | Branch | `main` | `git rev-parse --abbrev-ref HEAD` |
 | HEAD | `2bb270050d76264a13c8d595bc585ccde3b09ff3` | `git rev-parse HEAD` |
 | Working tree | **clean** (before this record) | `git status --porcelain` → empty |
