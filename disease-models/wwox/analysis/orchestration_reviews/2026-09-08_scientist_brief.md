@@ -138,10 +138,9 @@ bash <session scratchpad>/legend_commit.sh \
   "<message>" <path> [<path> ...]
 ```
 It takes an exclusive lock and commits only the paths you name. Commit at milestone granularity — one commit
-per finished paper is the right size; commit noise is as much a defect as volatile work. End every message with:
-```
-Co-Authored-By: Claude Opus 5 (1M context) <noreply@anthropic.com>
-```
+per finished paper is the right size; commit noise is as much a defect as volatile work. End every message with the `Co-Authored-By:` trailer named in the dispatch that resumed you —
+the line is carried in the dispatch rather than printed here, because the model identity in it
+changes between deployments and a literal address in public material trips the release gate.
 `files/` is gitignored by design (copyright): your evidence lives there and is *not* committed; the manifest
 that fingerprints it is. Never `git push`. Never write into another actor's files, and never edit a peer's
 manifest, dossier or task JSON. After each commit run `python3 framework/scripts/legend_lint.py .` and keep it
