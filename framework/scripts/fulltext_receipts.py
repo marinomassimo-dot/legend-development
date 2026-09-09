@@ -81,6 +81,17 @@ REREAD_REASONS = {
     "explicit_operator_request",
     "receipt_correction",
     "receipt_invalidation",
+    "identity_correction",
+}
+# The four kinds of row this ledger admits. Two record a reading; two are administrative and
+# record something about a reading already written. Kept as a constant because the set was
+# previously spelled inline inside `validate_receipt`, where adding a kind meant finding a
+# literal rather than editing a vocabulary.
+RECORD_KINDS = {
+    "contemporaneous_receipt",
+    "legacy_reconstruction",
+    "receipt_invalidation",
+    "identity_correction",
 }
 REQUIRED = {
     "event_id",
@@ -100,7 +111,25 @@ REQUIRED = {
 }
 OPTIONAL_AUTHORED = {
     "source_kind", "analysis_time_precision", "invalidates_receipt", "invalidation_reason",
+    "corrects_receipt", "correction_reason", "corrected_record_kind",
 }
+# The reading facts an `identity_correction` may not touch. `study_id` is deliberately absent —
+# it is the one field the record exists to change — and `record_kind` is absent because the
+# correcting row is itself of a different kind; the kind of the reading it stands in for is
+# preserved verbatim in `corrected_record_kind`, so no consumer has to infer it.
+#
+# 🔴 Compared with `.get()` on BOTH sides, not with `in`. A prior that omits
+# `analysis_time_precision` and a correction that supplies one would otherwise pass while
+# adding a reading fact to a record that read nothing.
+IDENTITY_CORRECTION_FROZEN_FIELDS = (
+    "analysis_at",
+    "evidence_depth",
+    "source_locator",
+    "source_fingerprint",
+    "source_kind",
+    "analysis_time_precision",
+    "coverage",
+)
 SOURCE_KINDS = {"fulltext_local", "fulltext_remote", "abstract", "metadata", "corpus_export"}
 ANALYSIS_TIME_PRECISIONS = {"second", "minute", "date_only", "unknown"}
 # Stamped by the ledger writer, never authored by hand: an author describes a reading
@@ -359,9 +388,7 @@ def validate_receipt(receipt: Any, root: Optional[Path] = None) -> list[str]:
     precision = receipt.get("analysis_time_precision")
     if precision is not None and precision not in ANALYSIS_TIME_PRECISIONS:
         errors.append("invalid analysis_time_precision")
-    if receipt["record_kind"] not in {
-        "contemporaneous_receipt", "legacy_reconstruction", "receipt_invalidation",
-    }:
+    if receipt["record_kind"] not in RECORD_KINDS:
         errors.append("invalid record_kind")
     elif receipt["record_kind"] == "contemporaneous_receipt" and receipt["analysis_at"] is None:
         errors.append("contemporaneous receipt requires analysis_at")
@@ -391,6 +418,34 @@ def validate_receipt(receipt: Any, root: Optional[Path] = None) -> list[str]:
                 "full_text_queue_current.md entry in `outputs`: removing the receipt "
                 "re-opens the reading debt, and a debt nobody declared is indistinguishable "
                 "from a paper nobody needed to read")
+    elif receipt["record_kind"] == "identity_correction":
+        # An identity correction says one thing and must be unable to say anything else: the
+        # reading stands exactly as written, and the label on it was wrong. Everything below
+        # is that sentence made mechanical.
+        if receipt.get("reread_reason") != "identity_correction":
+            errors.append("identity_correction record requires matching reread_reason")
+        if receipt.get("corrects_receipt") != receipt.get("prior_receipt"):
+            errors.append("identity_correction must correct its direct prior_receipt")
+        if receipt.get("prior_receipt") is None:
+            errors.append("identity_correction requires prior_receipt")
+        reason = receipt.get("correction_reason")
+        if not isinstance(reason, str) or len(reason.strip()) < 40:
+            errors.append(
+                "identity_correction requires a substantive correction_reason naming the "
+                "artefact evidence for the corrected identifier: a record that changes what a "
+                "reading is ABOUT and argues nothing is a relabelling, not a correction")
+        # The reading kind is carried forward rather than inferred. Without it the standing
+        # record for a corrected legacy reconstruction would read as neither legacy nor
+        # contemporaneous, and every tally over `record_kind` would quietly stop summing.
+        if receipt.get("corrected_record_kind") not in {
+                "contemporaneous_receipt", "legacy_reconstruction"}:
+            errors.append(
+                "identity_correction requires corrected_record_kind equal to the record_kind "
+                "of the reading it stands in for")
+        # 🔴 An identity correction may not be a reading. Nothing here re-reads anything, so
+        # the strict write-time gates that bind a new complete read — a fingerprinted local
+        # artifact, a schema-v2 work manifest — are checked against the CORRECTED identity in
+        # `require_work_manifest`, not skipped. See that function.
     if receipt["analysis_at"] is not None and not _valid_datetime(receipt["analysis_at"]):
         errors.append("invalid analysis_at: timezone-aware ISO-8601 required")
     elif (
@@ -417,7 +472,8 @@ def validate_receipt(receipt: Any, root: Optional[Path] = None) -> list[str]:
         values = set(coverage.values())
         if ("unknown_legacy" in values
                 and receipt["record_kind"] not in {"legacy_reconstruction",
-                                                    "receipt_invalidation"}):
+                                                    "receipt_invalidation",
+                                                    "identity_correction"}):
             errors.append("unknown_legacy coverage is allowed only for legacy history")
         if receipt["evidence_depth"] == "complete_fulltext_read":
             if {"not_read", "unknown_legacy"} & values:
@@ -558,10 +614,63 @@ def study_identity_conflict(first: dict[str, Any], second: dict[str, Any]) -> bo
     return shares_identifier and contradicts_identifier
 
 
+def identity_correction_errors(
+    receipt: dict[str, Any], prior: dict[str, Any], number: int
+) -> list[str]:
+    """What an `identity_correction` must be, checked against the record it corrects.
+
+    Three refusals, each answering a different way the record could be abused:
+
+    * a frozen reading field differs — a re-read wearing a correction's clothes;
+    * `study_id` is unchanged — a no-op that adds a row and an argument to the ledger while
+      correcting nothing, and that would let the substantive `correction_reason` be spent on
+      a record that changed nothing;
+    * no identifier survives the correction — the record would be moving a reading from one
+      paper to a completely different one, which is what `receipt_invalidation` is for. A
+      correction has to keep at least one anchor, because the anchor is the whole reason to
+      believe it is the SAME study misnamed rather than another study relabelled.
+    """
+    errors: list[str] = []
+    changed = [field for field in IDENTITY_CORRECTION_FROZEN_FIELDS
+               if receipt.get(field) != prior.get(field)]
+    if changed:
+        errors.append(
+            f"line {number}: identity_correction changed reading fields: "
+            + ", ".join(changed)
+            + ". It may change study_id and nothing else")
+    if receipt.get("corrected_record_kind") != prior.get("record_kind"):
+        errors.append(
+            f"line {number}: identity_correction declares corrected_record_kind "
+            f"{receipt.get('corrected_record_kind')!r} but corrects a "
+            f"{prior.get('record_kind')!r} record")
+    before, after = prior["study_id"], receipt["study_id"]
+    before_pmid, after_pmid = str(before.get("pmid") or ""), str(after.get("pmid") or "")
+    before_doi, after_doi = normalise_doi(before.get("doi")), normalise_doi(after.get("doi"))
+    if before_pmid == after_pmid and before_doi == after_doi:
+        errors.append(
+            f"line {number}: identity_correction leaves study_id unchanged; there is nothing "
+            "to correct")
+    elif not ((before_pmid and before_pmid == after_pmid)
+              or (before_doi and before_doi == after_doi)):
+        errors.append(
+            f"line {number}: identity_correction must keep at least one identifier of the "
+            "record it corrects. Replacing every identifier moves the reading to a different "
+            "study, which is receipt_invalidation, not a correction")
+    return errors
+
+
 def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
     errors: list[str] = []
     seen: list[dict[str, Any]] = []
     event_ids: set[str] = set()
+    # 🔴 Computed over the WHOLE file, before the walk, because supersession is a property of
+    # the ledger and not of a prefix of it. A corrected record's old identifier stops being a
+    # claim the moment the correction exists; walking left to right and only retiring it from
+    # that line onward would leave the pre-correction lines contradicting each other forever —
+    # and `validate_ledger_sequence` runs on every load, so that contradiction would make the
+    # ledger permanently unreadable for every consumer, not merely fail one append.
+    superseded = identity_corrected_event_ids(receipts)
+    by_event_id = {str(item.get("event_id")): item for item in receipts}
     for number, receipt in enumerate(receipts, 1):
         event_id = receipt["event_id"]
         if event_id in event_ids:
@@ -570,9 +679,21 @@ def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
         event_ids.add(event_id)
         pmid = str(receipt["study_id"].get("pmid") or "")
         doi = normalise_doi(receipt["study_id"].get("doi"))
-        for earlier in seen:
-            if study_identity_conflict(earlier, receipt):
-                errors.append(f"line {number}: conflicting identifiers for the same study")
+        if event_id not in superseded:
+            for earlier in seen:
+                if earlier["event_id"] in superseded:
+                    continue
+                if study_identity_conflict(earlier, receipt):
+                    errors.append(f"line {number}: conflicting identifiers for the same study")
+        # 🔴 Superseded events are NOT filtered out here, and the first draft of this change
+        # filtered them — the live ledger refused to load on the very first append. An
+        # identity correction retires an event's IDENTITY CLAIM; it does not unmake the event,
+        # and every receipt written before the correction existed legitimately names it as the
+        # reading it built on. Dropping it from the lineage lookup made an already-persisted
+        # record retroactively invalid ("line 133: prior_receipt is not an earlier event for
+        # this study") — retroactively reinterpreting a past reading, which is the one thing
+        # this schema change is forbidden to do. Supersession narrows what a record ASSERTS
+        # about identity, never what it was.
         prior_for_study = [item for item in seen if same_study(item, pmid, doi)]
         prior_id = receipt["prior_receipt"]
         # 🔴 MEMBERSHIP, not recency, and the change is the point rather than a relaxation.
@@ -605,7 +726,19 @@ def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
                 f"it builds on. Sharing a parent with a parallel reading is allowed; "
                 f"declaring no parent at all is not"
             )
-        if prior_id is not None:
+        if prior_id is not None and receipt["record_kind"] == "identity_correction":
+            # Resolved by event_id, not by study key. The record exists precisely because the
+            # prior's study key is wrong, so requiring the two to match would make every
+            # correction that matters — the ones where the wrong field is the only identifier
+            # a lookup could use — unrepresentable.
+            prior = by_event_id.get(str(prior_id))
+            if prior is None or str(prior_id) not in {item["event_id"] for item in seen}:
+                errors.append(
+                    f"line {number}: identity_correction names a prior_receipt that is not an "
+                    "earlier event in this ledger")
+            else:
+                errors.extend(identity_correction_errors(receipt, prior, number))
+        elif prior_id is not None:
             matching_prior = [item for item in prior_for_study if item["event_id"] == prior_id]
             if not matching_prior:
                 errors.append(f"line {number}: prior_receipt is not an earlier event for this study")
@@ -630,6 +763,20 @@ def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
     return errors
 
 
+def identity_corrected_event_ids(events: list[dict[str, Any]]) -> set[str]:
+    """The `event_id`s whose study identity a later `identity_correction` has superseded.
+
+    Separate from `invalidated_event_ids` because the two answer different questions and one
+    of them is not a withdrawal. An invalidation says the reading evidence belongs to another
+    study and removes it. A correction says the reading stands and its label was wrong: the
+    correcting row carries that reading verbatim under the right identifier and takes its
+    place, so exactly one record — never zero, never two — is active for the paper.
+    """
+    return {str(event["corrects_receipt"]) for event in events
+            if event.get("record_kind") == "identity_correction"
+            and event.get("corrects_receipt")}
+
+
 def invalidated_event_ids(events: list[dict[str, Any]]) -> set[str]:
     """The `event_id`s a `receipt_invalidation` has withdrawn.
 
@@ -647,7 +794,7 @@ def active_receipts(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
     Exported because "which receipts still count" was being answered independently in three
     places, and one of them answered it wrong.
     """
-    withdrawn = invalidated_event_ids(events)
+    withdrawn = invalidated_event_ids(events) | identity_corrected_event_ids(events)
     return [event for event in events
             if event.get("record_kind") != "receipt_invalidation"
             and str(event.get("event_id")) not in withdrawn]
@@ -1217,7 +1364,17 @@ def require_work_manifest(
         return
     if receipt.get("evidence_depth") != "complete_fulltext_read":
         return
-    if receipt.get("record_kind") != "contemporaneous_receipt":
+    kind = receipt.get("record_kind")
+    # 🔴 An identity correction is checked against the CORRECTED identity, not waived.
+    # It stands in for the reading it names, so after it lands the ledger asserts a complete
+    # read of the new study_id — and the work manifest is filed under `PMID<pmid>.json`. Skip
+    # this and a correction that moves a complete read onto a PMID with no manifest at all
+    # would land silently, which is exactly the over-claim `require_work_manifest` exists to
+    # make unavailable rather than merely auditable.
+    if kind == "identity_correction":
+        if receipt.get("corrected_record_kind") != "contemporaneous_receipt":
+            return
+    elif kind != "contemporaneous_receipt":
         return
     if receipt.get("reread_reason") == "receipt_correction":
         return

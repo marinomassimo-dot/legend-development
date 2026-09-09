@@ -165,7 +165,16 @@ def render(rows: list[dict], disease: str) -> str:
 
 def build(root: Path, disease: str) -> str:
     ledger = receipts.load_ledger(receipts.default_ledger_path(root, disease))
-    return render(summarise(ledger), disease)
+    # 🔴 An identity-corrected event is dropped; an invalidated one is not, and the asymmetry
+    # is deliberate rather than an oversight. This view groups by study key, so a record whose
+    # identifier has been corrected would appear as a SECOND paper under an identifier now
+    # known to be wrong — one reading counted as two papers read, in the permissive direction.
+    # An invalidation raises a different question this change does not decide: the ledger still
+    # shows the withdrawn reading here, as it did before, and `active_receipts` remains the
+    # authority for consumers that must subtract it.
+    corrected = receipts.identity_corrected_event_ids(ledger)
+    standing = [event for event in ledger if event["event_id"] not in corrected]
+    return render(summarise(standing), disease)
 
 
 def main() -> int:

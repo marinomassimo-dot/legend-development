@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import json
+import sys
 import unittest
 from pathlib import Path
 
@@ -134,9 +135,30 @@ class FulltextTraceContractTests(unittest.TestCase):
             <= required
         )
         self.assertTrue({"record_kind", "analysis_at", "evidence_basis"} <= required)
+        # Kept as an equality rather than a subset: this assertion is the only thing that
+        # notices the schema drifting behind the writer, and it had already drifted —
+        # `receipt_invalidation` was accepted by `fulltext_receipts.py` and absent here, so
+        # under `additionalProperties: false` the one persisted invalidation did not validate
+        # against its own machine schema. Widened when a kind is added, never relaxed.
         self.assertEqual(
             set(schema["properties"]["record_kind"]["enum"]),
-            {"contemporaneous_receipt", "legacy_reconstruction"},
+            {
+                "contemporaneous_receipt",
+                "legacy_reconstruction",
+                "receipt_invalidation",
+                "identity_correction",
+            },
+        )
+        sys.path.insert(0, str(ROOT / "framework/scripts"))
+        import fulltext_receipts
+
+        self.assertEqual(
+            set(schema["properties"]["record_kind"]["enum"]),
+            fulltext_receipts.RECORD_KINDS,
+        )
+        self.assertEqual(
+            set(schema["properties"]["reread_reason"]["enum"]),
+            fulltext_receipts.REREAD_REASONS,
         )
         depths = set(schema["properties"]["evidence_depth"]["enum"])
         self.assertEqual(

@@ -26,8 +26,11 @@
     "record_kind": {
       "enum": [
         "contemporaneous_receipt",
-        "legacy_reconstruction"
-      ]
+        "legacy_reconstruction",
+        "receipt_invalidation",
+        "identity_correction"
+      ],
+      "description": "Two kinds record a reading; two are administrative and record something about a reading already written. receipt_invalidation and identity_correction were accepted by the writer before they were spelled here, so a persisted invalidation did not validate against this file at all under additionalProperties:false."
     },
     "study_id": {
       "type": "object",
@@ -252,7 +255,9 @@
         "new_question_outside_prior_coverage",
         "adversarial_reanalysis",
         "explicit_operator_request",
-        "receipt_correction"
+        "receipt_correction",
+        "receipt_invalidation",
+        "identity_correction"
       ]
     },
     "ledger_prev_hash": {
@@ -262,6 +267,39 @@
       ],
       "pattern": "^[a-f0-9]{64}$",
       "description": "Stamped by the ledger writer, never authored by hand: SHA-256 of the canonical serialization of the preceding event, null for the first. Present on every persisted record; absent from the receipt a skill or agent emits."
+    },
+    "invalidates_receipt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^FTR-[0-9]{8}-[A-Za-z0-9._-]+-[0-9]{2}$",
+      "description": "receipt_invalidation only: must equal prior_receipt."
+    },
+    "invalidation_reason": {
+      "type": "string",
+      "minLength": 40,
+      "description": "receipt_invalidation only: why the reading evidence belongs to another study."
+    },
+    "corrects_receipt": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^FTR-[0-9]{8}-[A-Za-z0-9._-]+-[0-9]{2}$",
+      "description": "identity_correction only: must equal prior_receipt."
+    },
+    "correction_reason": {
+      "type": "string",
+      "minLength": 40,
+      "description": "identity_correction only: the artefact evidence for the corrected identifier. A record that changes what a reading is ABOUT and argues nothing is a relabelling."
+    },
+    "corrected_record_kind": {
+      "enum": [
+        "contemporaneous_receipt",
+        "legacy_reconstruction"
+      ],
+      "description": "identity_correction only: the record_kind of the reading this row stands in for, carried forward so no tally over record_kind has to infer it."
     }
   },
   "additionalProperties": false,

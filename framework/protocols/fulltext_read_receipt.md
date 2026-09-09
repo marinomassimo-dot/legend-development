@@ -170,7 +170,9 @@ read-only:
 ```yaml
 FULLTEXT_READ_RECEIPT:
   event_id: FTR-YYYYMMDD-<PMID-or-DOI-slug>-NN
-  record_kind: contemporaneous_receipt
+  record_kind: contemporaneous_receipt   # or legacy_reconstruction; the two
+                                         # administrative kinds are receipt_invalidation
+                                         # and identity_correction, described below
   study_id: {pmid: "...", doi: "..."}
   event_at: YYYY-MM-DDTHH:MM:SSZ
   analysis_at: YYYY-MM-DDTHH:MM:SSZ
@@ -389,6 +391,61 @@ The writer requires the correction to preserve `record_kind`, study identity, `a
 evidence depth, source locator/fingerprint and the complete coverage map; only event metadata,
 evidence basis and outputs may change. Consumers use the latest equal-depth event, while the
 incorrect historical event remains visible in the hash chain.
+
+### Correcting a wrong identifier — `identity_correction`
+
+The two records above cover a receipt whose **metadata** is wrong and a receipt whose
+**evidence belongs to another study**. Neither covers a receipt whose *own identifier* is
+wrong, and the gap is not cosmetic: `receipt_correction` must **preserve** study identity —
+which is the very field that is wrong — and `receipt_invalidation` addresses evidence
+belonging to a **different** study, which is not the case when the reading is genuinely of
+this paper. `validate_ledger_sequence` then refuses the corrected identifier with
+`conflicting identifiers for the same study`, because two receipts on one PMID declaring
+different DOIs is exactly what that check exists to catch.
+
+🔴 **Net effect before this record existed: the ledger refused a correct identifier because
+an incorrect one was written first.** It happened on **2026-09-09** — `scientist-c`, PMID
+20530675, wave 1. `FTR-20260814-20530675-01` carried `10.1038/onc.2010.222`, an *Oncogene*
+DOI; the paper is *Cancer Research* 2010;70(13):5577-86,
+`10.1158/0008-5472.CAN-09-4602`, and the `<article-id pub-id-type="doi">` element of the
+fingerprinted JATS artefact says so. The reader took the only honest route left — writing
+the true value as prose inside `evidence_basis` — which put it outside every field any tool
+queries.
+
+Append a linked `record_kind: identity_correction` event with
+`reread_reason: identity_correction`, `corrects_receipt` equal to its direct `prior_receipt`,
+a substantive `correction_reason`, and `corrected_record_kind` equal to the `record_kind` of
+the reading it stands in for. It changes `study_id` and **nothing else**: `analysis_at`,
+`evidence_depth`, `source_locator`, `source_fingerprint`, `source_kind`,
+`analysis_time_precision` and the whole `coverage` map are compared field by field against
+the prior and must be identical — *absent* is compared against *absent*, so dropping a field
+is not a way to leave it unchanged.
+
+The correcting row **stands in for** the reading it names: it carries that reading verbatim
+under the right identifier, and the prior event is subtracted from `active_receipts` and from
+`receipt_depth_index`. One reading is one active record — never zero, never two — and the
+stale identifier key **disappears** rather than being outranked. That last part is the one
+worth stating: a stale key left in the index would go on satisfying LINT's
+`UNBACKED_FULLTEXT_DECLARATION` ratchet for a record whose identifier had been corrected —
+the permissive direction, and invisible, because every count still adds up.
+
+**Two boundaries, both enforced:**
+
+| Refused | Because |
+|---|---|
+| `study_id` identical to the prior's | a no-op that spends a substantive argument on correcting nothing |
+| **no** identifier of the prior survives | replacing every identifier moves the reading to a different paper. That is `receipt_invalidation`, which carries its own reading-debt obligation; a correction must keep an anchor, because the anchor is the whole reason to believe this is the same study misnamed rather than another study relabelled |
+
+A correction of a `complete_fulltext_read` is **not** waived from `require_work_manifest`: it
+is re-checked against the **corrected** `pmid`, because after it lands the ledger asserts a
+complete read of that study and the work manifest is filed under `PMID<pmid>.json`. A
+correction that moved a complete read onto a PMID with no manifest at all would otherwise
+land in silence.
+
+The incorrect original stays visible and hash-chained; `event_id` embeds the identifier it
+was minted with and is never re-minted, so an `event_id` may permanently disagree with the
+`study_id` beside it. That is the append-only ledger working as designed, and it is the
+reason `corrects_receipt` — not the event id's spelling — is what links the two.
 
 ## Named open schema items — registered, not designed
 

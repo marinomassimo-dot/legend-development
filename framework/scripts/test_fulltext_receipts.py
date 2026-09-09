@@ -1203,5 +1203,259 @@ class ARenameReachesReferencesOutsideTheLedger(unittest.TestCase):
             receipts.manifests_naming({"A": "B"}, Path(temp.name), "wwox"), {})
 
 
+class IdentityCorrectionChangesTheLabelAndNothingElse(unittest.TestCase):
+    """`record_kind: identity_correction` — the regressions §4.2 of the 2026-09-09 review names.
+
+    The defect it closes, reproduced once for real on 2026-09-09 (PMID 20530675, wave 1): a
+    receipt persisted a DOI belonging to another journal, and the ledger then refused the
+    CORRECT DOI with `conflicting identifiers for the same study`. `receipt_correction` is
+    barred because it must PRESERVE study identity — the field that is wrong.
+    `receipt_invalidation` is barred because it is for evidence belonging to a DIFFERENT
+    study, and the reading here is genuinely of this paper. The true value survived only as
+    prose inside `evidence_basis`, outside every field a tool queries.
+    """
+
+    def setUp(self) -> None:
+        self.temporary = TemporaryDirectory()
+        self.addCleanup(self.temporary.cleanup)
+        self.ledger = Path(self.temporary.name) / "receipts.jsonl"
+        self.prior = example("FTR-20260725-42193054-01", "partial_fulltext_read")
+        self.prior["study_id"] = {"pmid": "42193054", "doi": "10.1000/wrong-journal"}
+
+    def correction(self, **overrides: object) -> dict:
+        record = copy.deepcopy(self.prior)
+        record.update({
+            "event_id": "FTR-20260726-42193054-02",
+            "record_kind": "identity_correction",
+            "corrected_record_kind": "contemporaneous_receipt",
+            "study_id": {"pmid": "42193054", "doi": "10.1000/right-journal"},
+            "event_at": "2026-07-26T09:00:00Z",
+            "prior_receipt": self.prior["event_id"],
+            "corrects_receipt": self.prior["event_id"],
+            "reread_reason": "identity_correction",
+            "correction_reason": (
+                "The article-id doi element of the fingerprinted artefact names "
+                "10.1000/right-journal; the persisted value belongs to another journal."),
+            "outputs": ["disease-models/test/registries/fulltext_read_receipts.jsonl"],
+            "evidence_basis": ["JATS front matter of the fingerprinted artefact"],
+        })
+        record.update(overrides)
+        return record
+
+    def ledger_errors(self, correction: dict) -> list[str]:
+        return receipts.validate_receipt(correction) + receipts.validate_ledger_sequence(
+            [self.prior, correction])
+
+    # --- §4.2, regression 1: a correction that alters a reading field must fail -----------
+
+    def test_it_refuses_to_change_any_reading_field(self) -> None:
+        """The whole point: an identity correction may not become a re-read.
+
+        Parameterised over every frozen field rather than spot-checking one, because the
+        failure this guards is a field being FORGOTTEN from the frozen list, and a test that
+        names one field cannot notice a second one going missing.
+        """
+        mutations = {
+            "analysis_at": "2026-07-26T08:00:00Z",
+            "evidence_depth": "complete_fulltext_read",
+            "source_locator": "PMC999",
+            "source_fingerprint": "b" * 64,
+            "source_kind": "fulltext_local",
+            "analysis_time_precision": "date_only",
+            "coverage": {key: "not_read" for key in receipts.COVERAGE_KEYS},
+        }
+        self.assertEqual(
+            set(mutations), set(receipts.IDENTITY_CORRECTION_FROZEN_FIELDS),
+            "a frozen field gained or lost without a case here")
+        for field, value in mutations.items():
+            with self.subTest(field=field):
+                errors = self.ledger_errors(self.correction(**{field: value}))
+                self.assertTrue(
+                    any("identity_correction changed reading fields" in error
+                        and field in error for error in errors),
+                    f"{field} was mutated and the ledger accepted it: {errors}")
+
+    def test_dropping_a_frozen_field_is_not_a_way_to_leave_it_unchanged(self) -> None:
+        """Absent is not equal to present. Compared with `.get()` on both sides."""
+        record = self.correction()
+        del record["analysis_time_precision"]
+        self.assertTrue(any("changed reading fields" in error
+                            for error in self.ledger_errors(record)))
+
+    # --- §4.2, regression 2: correcting only the DOI passes, depth unchanged --------------
+
+    def test_a_doi_only_correction_passes_and_leaves_depth_unchanged(self) -> None:
+        correction = self.correction()
+        self.assertEqual(self.ledger_errors(correction), [])
+        receipts.append_receipt(self.ledger, self.prior)
+        receipts.append_receipt(self.ledger, correction)
+        loaded = receipts.load_ledger(self.ledger)
+        self.assertEqual(len(loaded), 2)
+        # One reading, one active record, under the corrected identifier.
+        active = receipts.active_receipts(loaded)
+        self.assertEqual([item["event_id"] for item in active], [correction["event_id"]])
+        self.assertEqual(active[0]["evidence_depth"], self.prior["evidence_depth"])
+        self.assertEqual(active[0]["coverage"], self.prior["coverage"])
+        index = receipts.receipt_depth_index(self.ledger)
+        self.assertEqual(index["doi:10.1000/right-journal"]["event_id"], correction["event_id"])
+        self.assertEqual(index["pmid:42193054"]["event_id"], correction["event_id"])
+        # 🔴 The stale key is GONE, not merely outranked. Leaving it would let a registry
+        # record holding the wrong identifier keep satisfying the UNBACKED_FULLTEXT_DECLARATION
+        # ratchet — the permissive direction, and invisible because every count still adds up.
+        self.assertNotIn("doi:10.1000/wrong-journal", index)
+
+    def test_the_ledger_stops_refusing_the_correct_identifier_afterwards(self) -> None:
+        """The reproduction, end to end: the corrected value becomes writable."""
+        blocked = example("FTR-20260726-42193054-03")
+        blocked["study_id"] = {"pmid": "42193054", "doi": "10.1000/right-journal"}
+        blocked.update({"prior_receipt": self.prior["event_id"],
+                        "reread_reason": "inadequate_prior_coverage"})
+        self.assertTrue(
+            any("conflicting identifiers" in error
+                for error in receipts.validate_ledger_sequence([self.prior, blocked])),
+            "the defect this record_kind exists to close is not reproduced")
+        correction = self.correction()
+        unblocked = copy.deepcopy(blocked)
+        unblocked["prior_receipt"] = correction["event_id"]
+        self.assertEqual(
+            receipts.validate_ledger_sequence([self.prior, correction, unblocked]), [])
+
+    def test_the_corrected_record_stays_visible_in_the_chain(self) -> None:
+        receipts.append_receipt(self.ledger, self.prior)
+        receipts.append_receipt(self.ledger, self.correction())
+        raw = receipts.load_ledger(self.ledger)
+        self.assertIn(self.prior["event_id"], [item["event_id"] for item in raw])
+        self.assertEqual(raw[0]["study_id"]["doi"], "10.1000/wrong-journal")
+
+    # --- the boundary against the two neighbouring record kinds --------------------------
+
+    def test_a_no_op_correction_is_refused(self) -> None:
+        errors = self.ledger_errors(self.correction(study_id=dict(self.prior["study_id"])))
+        self.assertTrue(any("leaves study_id unchanged" in error for error in errors))
+
+    def test_replacing_every_identifier_is_invalidation_not_correction(self) -> None:
+        """No surviving anchor means the reading moved to a different paper.
+
+        This is the line between the two records, and it is the only thing standing between
+        `identity_correction` and a general relabelling primitive: with an anchor preserved
+        the record says one field of one study was misspelled; with none it says this reading
+        was of some other paper entirely, which is what `receipt_invalidation` exists to say,
+        with its own reading-debt obligation attached.
+        """
+        errors = self.ledger_errors(
+            self.correction(study_id={"pmid": "42193055", "doi": "10.1000/other"}))
+        self.assertTrue(any("keep at least one identifier" in error for error in errors))
+
+    def test_it_requires_a_substantive_reason_and_a_self_consistent_link(self) -> None:
+        for overrides, needle in (
+            ({"correction_reason": "typo"}, "substantive correction_reason"),
+            ({"corrects_receipt": "FTR-20260725-42193054-09"},
+             "must correct its direct prior_receipt"),
+            ({"reread_reason": "receipt_correction"}, "matching reread_reason"),
+            ({"corrected_record_kind": "legacy_reconstruction"}, "corrected_record_kind"),
+        ):
+            with self.subTest(overrides=overrides):
+                self.assertTrue(
+                    any(needle in error for error in self.ledger_errors(
+                        self.correction(**overrides))),
+                    f"{overrides} was accepted")
+
+    def test_a_correction_may_not_name_a_prior_that_is_not_in_the_ledger(self) -> None:
+        record = self.correction(prior_receipt="FTR-20260101-99999999-01",
+                                 corrects_receipt="FTR-20260101-99999999-01")
+        self.assertTrue(any("not an earlier event in this ledger" in error
+                            for error in receipts.validate_ledger_sequence([self.prior, record])))
+
+    def test_a_complete_read_correction_is_checked_against_the_corrected_pmid(self) -> None:
+        """Not waived. After the correction the ledger asserts a complete read of the NEW
+        study_id, and the work manifest is filed under `PMID<pmid>.json`."""
+        root = Path(self.temporary.name)
+        record = self.correction(evidence_depth="complete_fulltext_read",
+                                 study_id={"pmid": "42193056", "doi": "10.1000/wrong-journal"})
+        self.prior["evidence_depth"] = "complete_fulltext_read"
+        with self.assertRaises(ValueError) as raised:
+            receipts.require_work_manifest(record, root, "test", strict=True)
+        self.assertIn("complete_fulltext_read refused", str(raised.exception))
+
+    def test_a_corrected_event_remains_a_valid_parent_for_records_that_named_it(self) -> None:
+        """🔴 The flaw the live ledger caught on the first real append, kept as a regression.
+
+        The first draft filtered superseded events out of the lineage lookup as well as out of
+        the identity-conflict check. Appending the real correction then failed with
+        `line 133: prior_receipt is not an earlier event for this study` — an
+        already-persisted receipt, written weeks earlier, made retroactively invalid by a
+        record appended today. That is retroactively reinterpreting a past reading, which is
+        the one thing this schema change is forbidden to do.
+
+        A correction retires an event's IDENTITY CLAIM. It does not unmake the event, and
+        every record written before the correction existed legitimately names it as the
+        reading it built on.
+        """
+        sibling = example("FTR-20260725-42193054-04", "partial_fulltext_read")
+        sibling["study_id"] = {"pmid": "42193054"}
+        sibling.update({"prior_receipt": self.prior["event_id"],
+                        "reread_reason": "inadequate_prior_coverage"})
+        correction = self.correction()
+        self.assertEqual(
+            receipts.validate_ledger_sequence([self.prior, sibling, correction]), [],
+            "a receipt that named the corrected event as its parent must stay valid")
+
+    def test_each_record_carries_its_own_identifier_and_needs_its_own_correction(self) -> None:
+        """One correction does not launder a wrong identifier off its siblings.
+
+        Written after the previous test caught this on a fixture: a second receipt that had
+        copied the same wrong DOI still contradicts the corrected one, and is still reported.
+        That is the design holding rather than a gap. `identity_correction` corrects the
+        record it names — supersession is per event, exactly as `receipt_invalidation` is —
+        so a defect that was written twice has to be corrected twice, each time with its own
+        argument from the artefact.
+
+        This is not hypothetical: the real 2026-09-09 case (PMID 20530675) needed exactly two,
+        one per receipt holding the defect.
+        """
+        sibling = example("FTR-20260725-42193054-04", "partial_fulltext_read")
+        sibling["study_id"] = dict(self.prior["study_id"])  # copies the wrong DOI
+        sibling.update({"prior_receipt": self.prior["event_id"],
+                        "reread_reason": "inadequate_prior_coverage"})
+        first = self.correction()
+        self.assertTrue(
+            any("conflicting identifiers" in error for error in
+                receipts.validate_ledger_sequence([self.prior, sibling, first])),
+            "an uncorrected sibling holding the wrong identifier must still be reported")
+        second = copy.deepcopy(first)
+        second.update({
+            "event_id": "FTR-20260726-42193054-05",
+            "prior_receipt": sibling["event_id"],
+            "corrects_receipt": sibling["event_id"],
+        })
+        self.assertEqual(
+            receipts.validate_ledger_sequence([self.prior, sibling, first, second]), [],
+            "correcting every record that carries the defect must clear the ledger")
+
+    # --- the mutation test: proof the guard bites ----------------------------------------
+
+    def test_mutating_the_guard_makes_a_regression_go_red(self) -> None:
+        """🔴 A guard is only worth what its removal costs.
+
+        A frozen-field check that silently passed everything would leave every test above
+        green except this one: they assert that BAD records are refused, and a dead guard
+        refuses nothing while `test_a_doi_only_correction_passes` still passes. So the guard
+        is neutered here — the frozen list emptied, exactly the plausible edit a future
+        refactor could make — and the suite is required to notice.
+        """
+        forged = self.correction(
+            evidence_depth="complete_fulltext_read",
+            coverage={key: "read" for key in receipts.COVERAGE_KEYS})
+        self.assertTrue(any("changed reading fields" in error
+                            for error in self.ledger_errors(forged)),
+                        "baseline: the guard refuses a depth upgrade")
+        with mock.patch.object(receipts, "IDENTITY_CORRECTION_FROZEN_FIELDS", ()):
+            escaped = self.ledger_errors(forged)
+        self.assertEqual(
+            escaped, [],
+            "the mutant must be lethal: with the frozen list emptied the forged record has to "
+            "sail through, or this test is asserting something other than the guard")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -252,6 +252,16 @@ def build(root: Path, disease: str) -> dict:
         "legacy_reconstructions": sum(
             event["record_kind"] == "legacy_reconstruction" for event in receipt_events
         ),
+        # Administrative rows attest no reading of their own. They are counted separately
+        # rather than left out: two buckets over four kinds is a sentence that silently stops
+        # summing, and a reader who adds the printed numbers and finds them short of the
+        # event total has no way to tell a missing bucket from a missing record.
+        "identity_corrections": sum(
+            event["record_kind"] == "identity_correction" for event in receipt_events
+        ),
+        "receipt_invalidations": sum(
+            event["record_kind"] == "receipt_invalidation" for event in receipt_events
+        ),
         "receipt_backed_complete_records": receipt_backed_complete,
         "registry_only_full_records": registry_only_full,
         "receipt_events_without_registry_match": len(receipt_events) - matched_receipt_events,
@@ -305,7 +315,9 @@ def render(report: dict) -> str:
         f"- Authoritative ledger: `{report['receipt_ledger']}`",
         f"- **{report['receipt_events']}** append-only events: "
         f"**{report['contemporaneous_receipts']}** contemporaneous · "
-        f"**{report['legacy_reconstructions']}** conservative legacy reconstructions",
+        f"**{report['legacy_reconstructions']}** conservative legacy reconstructions · "
+        f"**{report['receipt_invalidations']}** invalidation(s) · "
+        f"**{report['identity_corrections']}** identity correction(s)",
         f"- **{report['receipt_backed_complete_records']}** registry records have a persisted "
         "`complete_fulltext_read` receipt",
         f"- **{report['registry_only_full_records']}** records still rely on a historical registry "
