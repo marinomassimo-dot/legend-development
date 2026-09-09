@@ -65,7 +65,7 @@
    "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
   ]
  },
- "CURRENT_STATE": "WAVE_2_IN_PROGRESS",
+ "CURRENT_STATE": "WAVE_2_COMPLETE — one R4 audit outstanding on 25331887",
  "assigned_on": "2026-09-08",
  "acquisition_hints": {
   "33914858": {
@@ -228,6 +228,59 @@
    "24510053",
    "26499798",
    "31428585"
+  ]
+ },
+ "WAVE_2_RESULT": {
+  "closed_at": "2026-09-09T13:20:00Z",
+  "actor": "scientist-a",
+  "33916893": {
+   "status": "COMPLETE",
+   "evidence_depth": "complete_fulltext_read",
+   "receipt": "FTR-20260909-33916893-01",
+   "manifest": "PASS, 0 gaps, 35 locators",
+   "commit": "3537958",
+   "outputs": [
+    "deepdive_manifests/PMID33916893.json",
+    "fulltext_dossiers/PMID33916893.md",
+    "commit_candidates/CC-20260909-33916893-01.md",
+    "discovery_ledger_current.md#DL-THER-106"
+   ],
+   "note": "First contact with the text; the only prior record was a legacy_reconstruction with every coverage value unknown_legacy. A REVIEW, treated as a secondary source throughout. Its variant-level arithmetic reproduces exactly from its own deposited supplement (Table S2 = 103 rows, 93/6/2/2 by type, allele column summing to 1057). Headline extraction: two homozygous Q230P patients alive at 12 y and 10 y against a third dead at 3 y 3 m. R4 SATISFIED — two independent blind audits, zero NOT_IN_SOURCE, five corrections taken, one finding strengthened (the Figure 3B colour inversion) and TWO OF MY OWN FINDINGS RETRACTED (56-vs-57 and 21-vs-22 both reconcile). Auditors disagreed once on the P47R pairing; resolved against the table's rowspan markup, not by preferring an auditor."
+  },
+  "25331887": {
+   "status": "COMPLETE READING, CANDIDATE HELD",
+   "evidence_depth": "partial_fulltext_read",
+   "receipt": "FTR-20260909-25331887-02",
+   "manifest": "FAIL on 7 paths only — unrecoverable figure crops",
+   "commit": "3d41643",
+   "outputs": [
+    "deepdive_manifests/PMID25331887.json",
+    "fulltext_dossiers/PMID25331887.md",
+    "commit_candidates/CC-20260909-25331887-01.md (HELD, not promotable)"
+   ],
+   "note": "M0 adjudication: the dispatch's inadequate_prior_coverage came from the prior receipt's DEPTH LABEL; its coverage MAP has no not_read and is admissible for complete_fulltext_read, so the body was not re-derived. The wave objective was the one surface the map names as missing — supplementary: unavailable — and that debt is PAID: the SI Appendix was retrieved through pmc_pow_fetch.py (Europe PMC refuses the article as not open access) and all six pages read as rendered images, because the SI text layer is SUSPECT and was refused. Prior evidence re-established: article PDF byte-identical, and all 17 prior text locators re-verify against a fresh PMC HTML whose container digest has changed.",
+   "OUTSTANDING": "🔴 R4 NOT SATISFIED. The blind audit of the ten supplementary locators did not reach this session — first auditor stalled, synchronous rerun killed by a session rate limit. Coordinator reports SUPPORTED on 4 and OVERSHOOT on 6 with replacement wording, but this session never saw the verdicts and refused to reconstruct them. All ten propositions carry an [UNAUDITED] prefix and audit_status PENDING_AUDIT_CORRECTION; the commit candidate is HELD and explicitly not promotable. NEXT SESSION: obtain the verdicts, apply the six corrections, then rewrite CC-20260909-25331887-01 as a live candidate."
+  },
+  "capability_micro_upgrade": {
+   "artifact": "framework/scripts/tool_preflight.py + test_tool_preflight.py",
+   "commit": "c1dab05",
+   "tests": "12/12, mutation-tested",
+   "first_measurement": "fitz absent; referenced by 10 repository scripts including deepdive_manifest.py and regenerate_adjudications.py, so rule 5e page adjudication is unrunnable in this deployment",
+   "not_wired": "The one-line additions to CLAUDE.md section 3 and legend-start step 6b are written in the working tree but UNCOMMITTED: committing an instruction file was refused by the permission system."
+  },
+  "declared_debts": [
+   "PMID 25331887: seven xref-extracted figure PNGs unrecoverable here (no fitz, no pip; poppler does not reproduce the bytes). Kept declared rather than deleted for a green verdict.",
+   "PMID 29808465 (Johannsen, PAPER 041) is now the highest-value acquisition target in this lot: only functional study of Q230P, founds CLAIM 030, held here as abstract only, and the primary behind the 12 y / 10 y survival ages.",
+   "PMID 33914858 remains PARKED from wave 1, not retried this session."
+  ],
+  "not_opened_this_session": [
+   "15070730",
+   "24510053",
+   "26499798",
+   "31428585"
+  ],
+  "parked": [
+   "33914858"
   ]
  }
 }
