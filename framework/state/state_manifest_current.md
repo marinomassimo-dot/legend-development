@@ -445,6 +445,9 @@ to finish, not to average.
 
 ## 7. NOTES
 
+Harness startup audit, 2026-09-09 (`plan`): task-specific context loading implemented;
+measurements and validation: [session record](../../learning/plan/SLR-plan-20260909-startup-context-audit.md).
+
 Harness maintenance, 2026-09-06: agile task closure, non-destructive Git option handling,
 automatic regression discovery and weekly scouting at session start were implemented by
 the operator-assigned `plan` actor. LINT PASS; scientific current files unchanged.

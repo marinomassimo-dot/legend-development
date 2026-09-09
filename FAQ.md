@@ -87,7 +87,7 @@ the skills are authored for [Claude Code](https://claude.com/claude-code), which
 discovers them from `.claude/skills/` automatically — and say what you want:
 
 ```text
-"start a LEGEND session"           → loads state + the 4 current files, runs the LINT, declares READY or BLOCK
+"start a LEGEND session"           → selects context for the task, runs LINT, declares READY or BLOCK
 "work this list of PMIDs"          → the autopilot: intake → sweep → ranking → retrieval → deep dive → commit gate
 "deep dive this paper"             → coverage map → dossier → COMMIT CANDIDATE
 "squeeze this paper for leads"     → grows the discovery ledger (biomarker / molecule / repurposing)

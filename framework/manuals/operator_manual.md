@@ -21,6 +21,34 @@ Ridurre al minimo il carico operativo mantenendo la massima qualità del sistema
 
 # 1. MODALITÀ DI SESSIONE
 
+Scegliere e dichiarare `SESSION_PROFILE` in base al **compito**, non al ruolo o al runtime.
+I profili sono `HARNESS`, `MINIMAL`, `STANDARD`, `FULL`. Senza un compito definito usare
+`MINIMAL`; un compito misto applica anche il profilo scientifico prima del lavoro scientifico.
+Se il compito cambia, caricare il contesto del nuovo profilo prima di procedere.
+
+## 1.0 SESSIONE HARNESS — manutenzione tecnica
+
+**Quando**
+- codice, test, documentazione, skill, governance o strumenti, senza analisi scientifica
+
+**Caricare**
+- catena iniziale di `AGENTS.md` / `CLAUDE.md`: manifest di stato, istruzioni e governance,
+  contratto del ruolo assegnato, indice dei protocolli e skill di avvio/chiusura richieste
+- file di implementazione, protocolli e test pertinenti al compito
+- registri scientifici solo se necessari all'ispezione tecnica: cercare gli identificativi
+  o la struttura interessata e leggere i record/sezioni completi pertinenti; ampliare la
+  lettura se la dipendenza lo richiede, senza un tetto che nasconda il contesto necessario
+
+**Verificare**
+- LINT strutturale anche in questo profilo: il programma legge i file dal disco, senza
+  riversarli nel contesto del modello; non equivale ad averli letti scientificamente
+- controlli e regressioni richiesti da `LEGEND_CORE.md` §21e
+
+Una manutenzione del validatore o una ricerca tecnica non attesta una lettura scientifica.
+Prima di analizzare un paper, formulare conclusioni o propagare evidenze, passare al profilo
+scientifico pertinente e caricarne il contesto. Le letture full-text, i receipt, i locator e
+`BATCH_COMMIT` conservano i propri obblighi; il profilo non li sostituisce.
+
 ## 1.1 SESSIONE MINIMA — veloce
 
 **Quando**
@@ -79,7 +107,7 @@ Ridurre al minimo il carico operativo mantenendo la massima qualità del sistema
 
 # 2. FILE DA USARE (PRATICA)
 
-## Core (sempre)
+## Core scientifico (MINIMAL / STANDARD / FULL; per HARNESS vedere §1.0)
 - working_model_current.md
 - claim_registry_current.md
 - paper_registry_current.md
@@ -275,24 +303,27 @@ Contiene:
 
 # SESSION TYPES — AUTOPILOT-ERA ADDITIONS
 
-*(In English, alongside §1.1–1.3 above, which remain valid. These are the obligations added after
-the autopilot and the skill layer existed; they extend the three session types, they do not
-replace them.)*
+*(Workflow additions to the context profiles in §1. Profile selection and load lists live
+there; this section adds the applicable scientific workflow.)*
 
 **Always read the state manifest first**, in every session type. It is the first load target, not
 an optional extra, and `current_state: READY` is confirmed before analytical work begins.
 
-**Minimal** — the four currents + the state manifest, plus `legend-capability-scout` and
-`legend-session-takeaways`. If studies are supplied, apply intake triage, the batch inferential
+Every profile applies `legend-start`, `legend-capability-scout` and `legend-session-takeaways`.
+
+**Harness** — technical maintenance follows §1.0 and the harness lifecycle in `LEGEND_CORE.md`
+§21e. A framework change does not by itself require a Full scientific session.
+
+**Minimal** — if studies are supplied, apply intake triage, the batch inferential
 sweep and the priority matrix. No commit required.
 
-**Standard** — the above + `meta_index_current.md` + the relevant metas. With a study list, use
+**Standard** — with a study list, use
 the autopilot by default and continue autonomously through ingest / full-text / deep-dive /
 discovery / therapeutic fan-out where the gates allow. Produces commit candidates; propagation
 happens only through `BATCH_COMMIT`.
 
-**Full** — all layers. Reserved for bootstrap, recovery, batch consolidation, meta propagation
-and framework changes. Rigorous commit mandatory.
+**Full** — scientific bootstrap, scientific recovery, batch consolidation and meta propagation.
+Rigorous commit mandatory. First-run laboratory setup follows `BOOTSTRAP.md`.
 
 > Prefer a clean Standard session over a Full session on uncertain state.
 

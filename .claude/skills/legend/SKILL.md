@@ -34,7 +34,7 @@ Default: **a bounded autonomous full run**, not single manual skills.
 ## The phases (auto-sequenced)
 
 ### Phase 0 — BOOTSTRAP & GATE
-- `legend-start` → loads the state manifest + the 4 current files (+ meta_index if Standard) + the structural LINT.
+- `legend-start` → selects the scientific session profile and loads its context + structural LINT.
   - `BLOCK_SYSTEM` → recovery, **STOP**.
   - `BLOCK_BATCH_COMMIT` → read-only analysis continues; only Phase 6 is blocked.
 - Growth bootstrap: load `legend-capability-scout` and keep a notepad of the **capability gaps** that emerge during the run (needed in Phase 7).

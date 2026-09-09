@@ -1,0 +1,88 @@
+{
+  "base_commit": "451e12adfc5174fc06364306320ac39068fae3fe",
+  "full_suite_command": "python3 scripts/run_release_regressions.py",
+  "pristine_confirmation": "The five failing targets were rerun with --only in a separate unmodified checkout of base_commit.",
+  "results": {
+    "baseline": {
+      "target_count": 90,
+      "failed_targets": {
+        "scripts/test_link_targets.py": "1",
+        "framework/scripts/test_coverage_report.py": "1",
+        "framework/scripts/test_batch_queue.py": "1",
+        "framework/scripts/test_pathograph.py": "1",
+        "framework/scripts/test_reading_state.py": "1"
+      },
+      "failing_cases": [
+        "test_wikilink_fragments_match_exact_headings (__main__.LinkTargetTests.test_wikilink_fragments_match_exact_headings)",
+        "test_report_exists_and_is_current (__main__.ReportIntegrityTests.test_report_exists_and_is_current)",
+        "test_committed_queue_is_current (__main__.QueueIntegrityTests.test_committed_queue_is_current)",
+        "test_coverage_is_not_overstated_against_the_registry (__main__.QueueIntegrityTests.test_coverage_is_not_overstated_against_the_registry)",
+        "test_the_generated_surfaces_have_not_drifted (__main__.TheCommittedSurfacesAreCurrent.test_the_generated_surfaces_have_not_drifted)",
+        "test_the_page_exists_and_matches_the_ledger (__main__.TheCommittedPageIsCurrent.test_the_page_exists_and_matches_the_ledger)"
+      ],
+      "skipped_tests": 7,
+      "skip_reasons": [
+        "case-sensitive filesystem: `.GIT` cannot impersonate `.git`",
+        "no embeddable system font available",
+        "local full-text corpus is gitignored and absent from this checkout",
+        "local full-text corpus is gitignored and absent from this checkout",
+        "local full-text corpus is gitignored and absent from this checkout",
+        "local full-text corpus is gitignored and absent from this checkout",
+        "local full-text corpus not present in this checkout"
+      ]
+    },
+    "after": {
+      "target_count": 90,
+      "failed_targets": {
+        "scripts/test_link_targets.py": "1",
+        "framework/scripts/test_coverage_report.py": "1",
+        "framework/scripts/test_batch_queue.py": "1",
+        "framework/scripts/test_pathograph.py": "1",
+        "framework/scripts/test_reading_state.py": "1"
+      },
+      "failing_cases": [
+        "test_wikilink_fragments_match_exact_headings (__main__.LinkTargetTests.test_wikilink_fragments_match_exact_headings)",
+        "test_report_exists_and_is_current (__main__.ReportIntegrityTests.test_report_exists_and_is_current)",
+        "test_committed_queue_is_current (__main__.QueueIntegrityTests.test_committed_queue_is_current)",
+        "test_coverage_is_not_overstated_against_the_registry (__main__.QueueIntegrityTests.test_coverage_is_not_overstated_against_the_registry)",
+        "test_the_generated_surfaces_have_not_drifted (__main__.TheCommittedSurfacesAreCurrent.test_the_generated_surfaces_have_not_drifted)",
+        "test_the_page_exists_and_matches_the_ledger (__main__.TheCommittedPageIsCurrent.test_the_page_exists_and_matches_the_ledger)"
+      ],
+      "skipped_tests": 7,
+      "skip_reasons": [
+        "case-sensitive filesystem: `.GIT` cannot impersonate `.git`",
+        "no embeddable system font available",
+        "local full-text corpus is gitignored and absent from this checkout",
+        "local full-text corpus is gitignored and absent from this checkout",
+        "local full-text corpus is gitignored and absent from this checkout",
+        "local full-text corpus is gitignored and absent from this checkout",
+        "local full-text corpus not present in this checkout"
+      ]
+    },
+    "pristine-failures": {
+      "target_count": 5,
+      "failed_targets": {
+        "scripts/test_link_targets.py": "1",
+        "framework/scripts/test_coverage_report.py": "1",
+        "framework/scripts/test_batch_queue.py": "1",
+        "framework/scripts/test_pathograph.py": "1",
+        "framework/scripts/test_reading_state.py": "1"
+      },
+      "failing_cases": [
+        "test_wikilink_fragments_match_exact_headings (__main__.LinkTargetTests.test_wikilink_fragments_match_exact_headings)",
+        "test_report_exists_and_is_current (__main__.ReportIntegrityTests.test_report_exists_and_is_current)",
+        "test_committed_queue_is_current (__main__.QueueIntegrityTests.test_committed_queue_is_current)",
+        "test_coverage_is_not_overstated_against_the_registry (__main__.QueueIntegrityTests.test_coverage_is_not_overstated_against_the_registry)",
+        "test_the_generated_surfaces_have_not_drifted (__main__.TheCommittedSurfacesAreCurrent.test_the_generated_surfaces_have_not_drifted)",
+        "test_the_page_exists_and_matches_the_ledger (__main__.TheCommittedPageIsCurrent.test_the_page_exists_and_matches_the_ledger)"
+      ],
+      "skipped_tests": 0,
+      "skip_reasons": []
+    }
+  },
+  "comparison": "Identical target inventory, failing targets, failing test cases and skip reasons before/after; no newly failing suite.",
+  "lint": "PASS",
+  "release_gate": "PASS, BLOCKS 0; existing REVIEW notices remain",
+  "scientific_registry_hashes": "All four unchanged from measurement snapshot",
+  "skill_validation": "legend-start quick_validate PASS"
+}

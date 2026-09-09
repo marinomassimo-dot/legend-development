@@ -1,6 +1,6 @@
 ---
 name: legend-start
-description: Starts a LEGEND session — loads the state manifest + the 4 current files (+ meta_index for Standard sessions), runs the structural LINT and declares whether the system is READY or BLOCK. Use it at session start or when consistency must be checked before a commit.
+description: Starts a LEGEND session with task-specific context, structural LINT and a READY/BLOCK verdict. Use at session start or before a consistency check; harness maintenance does not preload scientific registries.
 ---
 
 # legend-start — LEGEND session bootstrap
@@ -16,15 +16,20 @@ Paths are relative to the repo root.
    This reports the current ISO week's scout status and, for Plan, branch hygiene.
    `SCOUT_DUE` invokes `legend-harness-scout` for Junior; `TRIAGE_DUE` sends Plan to
    the named weekly report. Missing or invalid reports stay visible; they are not gates.
-   Codex's `runtime_parity.py --bootstrap --actor <ACTOR_ID>` runs the same check.
 4. If the operator provided studies/papers/PMIDs/DOIs/titles:
    - if they want to start the process, use `.claude/skills/legend/SKILL.md` as autopilot;
    - if they ask only for dedup/screening, activate `.claude/skills/legend-study-intake-triage/SKILL.md`.
    In any case, do not start ingest/deep-dive until dedup is done.
-5. Loads the 4 canonical current files (and the meta index if Standard).
+5. Selects and declares `SESSION_PROFILE` from the task, using
+   [operator manual §1](../../../framework/manuals/operator_manual.md#1-modalità-di-sessione):
+   `HARNESS`, `MINIMAL`, `STANDARD` or `FULL`. Loads that profile's context; role alone does
+   not choose a profile. If the task changes, applies the new profile before the new work.
 6. Runs the structural LINT:
    `python3 framework/scripts/legend_lint.py .`
-6b. Runs the toolchain preflight:
+   LINT reads the canonical files from disk in every profile; its checks do not require
+   copying those files into model context. A PASS verifies structure, not scientific reading.
+6b. For scientific work, extraction-tool maintenance, or environment/toolchain diagnosis,
+   runs the toolchain preflight:
    `python3 framework/scripts/tool_preflight.py`
    Reports, in one line, which external extractors this deployment actually has. It never blocks
    (a fresh container legitimately lacks optional tools), but a session that will need figure
@@ -40,4 +45,6 @@ Paths are relative to the repo root.
 > Rule: only `BLOCK_SYSTEM` stops a deep-dive. `BLOCK_BATCH_COMMIT` stops **only** the commit. Do not confuse the two levels.
 
 ## Expected output
-A concise block: framework/WM version, status of the 4 files, LINT verdict (one of the 4 levels), the GATE, and "READY (deep-dive) / READY (commit) / BLOCK".
+A concise block: `SESSION_PROFILE`, framework/WM version, status of the 4 files from LINT,
+LINT verdict (one of the 4 levels), the GATE, and "READY (deep-dive) / READY (commit) / BLOCK".
+Distinguish files inspected by a validator from files actually read into context.

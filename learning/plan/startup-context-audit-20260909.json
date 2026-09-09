@@ -1,0 +1,674 @@
+{
+  "base_commit": "451e12adfc5174fc06364306320ac39068fae3fe",
+  "measured_on": "2026-09-09",
+  "metric": "Unicode characters (not provider tokens or billing)",
+  "selection": "Tracked Markdown entrypoints, framework instructions/master/manuals/protocols/state, roles, skills (including references), agents and top-level governance Markdown; excludes research, archives, generated runtime payloads and external runtime instructions. Scientific startup registries separately enumerated.",
+  "instruction_surfaces": [
+    {
+      "path": ".claude/agents/fulltext-dossier.md",
+      "characters": 4585,
+      "words": 654,
+      "lines": 71,
+      "sha256": "2254a0b33ecfa4f4f6b46e08c0d022696de42fad8422a79e7cc09ada6910b21f"
+    },
+    {
+      "path": ".claude/agents/legend-deepdive.md",
+      "characters": 4932,
+      "words": 652,
+      "lines": 37,
+      "sha256": "d41b174140be63152e1b083df430ae4b3b3fcba41db96bee0cf99abaa1e737cc"
+    },
+    {
+      "path": ".claude/agents/research-group-analyst.md",
+      "characters": 4689,
+      "words": 668,
+      "lines": 48,
+      "sha256": "f60ca2030485eb37b3b93a45de4aaed9e2989b172f69592d0020ea5dac885bf7"
+    },
+    {
+      "path": ".claude/agents/study-intake-triage.md",
+      "characters": 2245,
+      "words": 249,
+      "lines": 57,
+      "sha256": "db565c9ea5a8dcc7134fae7aa34278927afc165d7e20a1dbdb30639868274845"
+    },
+    {
+      "path": ".claude/agents/wwox-scout.md",
+      "characters": 5272,
+      "words": 795,
+      "lines": 48,
+      "sha256": "05ed21a606ed67b120e72ad8801ec07e1d9a09aee26aa6d4307296e6f1172ece"
+    },
+    {
+      "path": ".claude/skills/find-fulltext/SKILL.md",
+      "characters": 21514,
+      "words": 3062,
+      "lines": 182,
+      "sha256": "75b1700bd76de4c0a2d0539fa977fa6cb2d360969c968b35131b49f0ac11e284"
+    },
+    {
+      "path": ".claude/skills/legend-aso-designer/SKILL.md",
+      "characters": 7437,
+      "words": 1049,
+      "lines": 66,
+      "sha256": "779b9e823af1dd8c61cfa26868db26019170e42add36b759d8462d45770df85e"
+    },
+    {
+      "path": ".claude/skills/legend-aso-designer/references/aso_design_checklist.md",
+      "characters": 3429,
+      "words": 463,
+      "lines": 40,
+      "sha256": "fd7fd3538869b5585125ae417b2ec7294f3c1a6206aa1759d80305c695a5ef53"
+    },
+    {
+      "path": ".claude/skills/legend-batch-inferential-sweep/SKILL.md",
+      "characters": 5458,
+      "words": 707,
+      "lines": 94,
+      "sha256": "9ebf71b0c662526818c442576495fed8f26bbbd99cd5694b09f1771e8adade8a"
+    },
+    {
+      "path": ".claude/skills/legend-batch-inferential-sweep/references/rubric.md",
+      "characters": 2370,
+      "words": 320,
+      "lines": 41,
+      "sha256": "59271a9a7807eb7809825664b72170dfdfc954ad5f045f6c648e9bf1e694ff44"
+    },
+    {
+      "path": ".claude/skills/legend-capability-scout/SKILL.md",
+      "characters": 7957,
+      "words": 1151,
+      "lines": 161,
+      "sha256": "51a6b91cc9c89b149df7acbe3fcf4443494a757b52e5532789d6c4543b45bea4"
+    },
+    {
+      "path": ".claude/skills/legend-capability-scout/references/capability_scout_log_template.md",
+      "characters": 1219,
+      "words": 184,
+      "lines": 35,
+      "sha256": "e5e73a62e35867342f3c285f85dd70b5fef0f4f75010ae1fdfdf2a2395d59552"
+    },
+    {
+      "path": ".claude/skills/legend-commit/SKILL.md",
+      "characters": 1660,
+      "words": 234,
+      "lines": 27,
+      "sha256": "60295169859a3c2c1fd78117bb708318d3332b331d25129515165a27b4018a3a"
+    },
+    {
+      "path": ".claude/skills/legend-dashboard/SKILL.md",
+      "characters": 2015,
+      "words": 246,
+      "lines": 47,
+      "sha256": "1830fe9b7d46bea3eb2b84afa4e1a84662c4ef95df4e830646b425622371d84d"
+    },
+    {
+      "path": ".claude/skills/legend-deepdive/SKILL.md",
+      "characters": 4974,
+      "words": 653,
+      "lines": 46,
+      "sha256": "1f4cf5b95e1ad3337af6c2c08f0287e62490c347be18f9cacf9bd10cd0081009"
+    },
+    {
+      "path": ".claude/skills/legend-discovery/SKILL.md",
+      "characters": 11387,
+      "words": 1614,
+      "lines": 66,
+      "sha256": "3f8b087a90e73c64c43e00447df6f3e4c3139364a320a9d60679ddb7bbe97a1c"
+    },
+    {
+      "path": ".claude/skills/legend-discovery/references/autoresearch_patterns.md",
+      "characters": 4337,
+      "words": 653,
+      "lines": 35,
+      "sha256": "c929f092e3b970c62233f300430eac446f4e6a9e11ae866f11f56f7f912f5611"
+    },
+    {
+      "path": ".claude/skills/legend-discovery/references/discovery_ledger_template.md",
+      "characters": 4977,
+      "words": 691,
+      "lines": 93,
+      "sha256": "38406eeac1a5bcb5069d33d71ffccccf241a35c0fd0edcc0eeea26ba033c66b9"
+    },
+    {
+      "path": ".claude/skills/legend-discovery/references/discovery_lens.md",
+      "characters": 6232,
+      "words": 963,
+      "lines": 58,
+      "sha256": "88e2fa77adc544430f6bd072425ca32ec37b21658f733c33b0500cd879f22fbb"
+    },
+    {
+      "path": ".claude/skills/legend-discovery/references/discovery_methods.md",
+      "characters": 8161,
+      "words": 1215,
+      "lines": 63,
+      "sha256": "3b5b40c92b0f9ca21c153eafead8a23e0bd3f84ed9600a16eead0f51cf8185c9"
+    },
+    {
+      "path": ".claude/skills/legend-harness-scout/SKILL.md",
+      "characters": 8361,
+      "words": 1197,
+      "lines": 148,
+      "sha256": "b42a12fafe9f8419dcfd8f5ea9ca0b53ec1dbdc8141347b41332531f8abd1eef"
+    },
+    {
+      "path": ".claude/skills/legend-hypothesis-forge/SKILL.md",
+      "characters": 9844,
+      "words": 1348,
+      "lines": 94,
+      "sha256": "101b52a785b46e9aca6a045a19b2b1a5d6d3e09a076fdde3abf74bcd71455597"
+    },
+    {
+      "path": ".claude/skills/legend-hypothesis-forge/references/hypothesis_ledger_template.md",
+      "characters": 2246,
+      "words": 303,
+      "lines": 40,
+      "sha256": "345d59ad9cedd98cf40edf1863112b586b7b9b0d0d6f536bd773ee5ee216589c"
+    },
+    {
+      "path": ".claude/skills/legend-hypothesis-forge/references/ranking_rubric.md",
+      "characters": 1672,
+      "words": 277,
+      "lines": 21,
+      "sha256": "8c321ddb384c81696dba3238ab46dadfc96b25afbd2ca56cb7a86856accfaf1a"
+    },
+    {
+      "path": ".claude/skills/legend-ingest/SKILL.md",
+      "characters": 1207,
+      "words": 176,
+      "lines": 18,
+      "sha256": "f6c9bd2357836ee59263b5613aa2316af252b9b0d0e3872fbb01fb983941aa5c"
+    },
+    {
+      "path": ".claude/skills/legend-lint-repair-plan/SKILL.md",
+      "characters": 1993,
+      "words": 305,
+      "lines": 58,
+      "sha256": "e96f4d128edef4ab75c45af8d799a222f1af22fd4b32d66d5810e912af94d7ff"
+    },
+    {
+      "path": ".claude/skills/legend-locator-audit/SKILL.md",
+      "characters": 5667,
+      "words": 876,
+      "lines": 102,
+      "sha256": "d1b84e9767b5f21eec9424936780cb3afc265127bf4446bb429231ff19ef640e"
+    },
+    {
+      "path": ".claude/skills/legend-paperqa/SKILL.md",
+      "characters": 5430,
+      "words": 792,
+      "lines": 65,
+      "sha256": "4dbddd1fff12b4544ce333bda2a0a8e0442f02b34791ffe1eeedf1bad51cf14e"
+    },
+    {
+      "path": ".claude/skills/legend-paperqa/references/paperqa_setup.md",
+      "characters": 4338,
+      "words": 560,
+      "lines": 86,
+      "sha256": "469979ac8129400fe54c07f2a12e7f8c876aa7c4ca8c3ab47fa412573154f594"
+    },
+    {
+      "path": ".claude/skills/legend-proband-priority-matrix/SKILL.md",
+      "characters": 7591,
+      "words": 1040,
+      "lines": 79,
+      "sha256": "0eae50ebc0e2a5ca32bf1263b33978eda32d08e8f6a067d3b649c63b9fccd855"
+    },
+    {
+      "path": ".claude/skills/legend-research-loop/SKILL.md",
+      "characters": 3762,
+      "words": 552,
+      "lines": 91,
+      "sha256": "182dede994240b71f6d5f8d85f6b8690d4dbcdc7afd3c7b786401a72af9fe385"
+    },
+    {
+      "path": ".claude/skills/legend-safety-triage/SKILL.md",
+      "characters": 5742,
+      "words": 796,
+      "lines": 62,
+      "sha256": "d992208155775f2ba2b27361c7b223b3cdcaf0de0c265e50b0885841657af57a"
+    },
+    {
+      "path": ".claude/skills/legend-safety-triage/references/admet_medchem_reference.md",
+      "characters": 2834,
+      "words": 405,
+      "lines": 58,
+      "sha256": "5dcfaa935bbd9203d23fa07b11b238bf717496f9c4f0655b75e7505e50645920"
+    },
+    {
+      "path": ".claude/skills/legend-session-self-eval/SKILL.md",
+      "characters": 4498,
+      "words": 635,
+      "lines": 72,
+      "sha256": "f99cc1edb4f07744cc5f69ff6f76f9ed0a9409d6b3ae7c4582f1e669a60808ad"
+    },
+    {
+      "path": ".claude/skills/legend-session-takeaways/SKILL.md",
+      "characters": 4753,
+      "words": 709,
+      "lines": 117,
+      "sha256": "d141f67fb2616e2e84a6eb3e427369b813bee459a46d5b679a95e8932760f07b"
+    },
+    {
+      "path": ".claude/skills/legend-start/SKILL.md",
+      "characters": 3236,
+      "words": 431,
+      "lines": 43,
+      "sha256": "051e81533ba955477ab39ea52caa485d551cbcdb6ed0ad8caaad99088570f6b2"
+    },
+    {
+      "path": ".claude/skills/legend-study-intake-triage/SKILL.md",
+      "characters": 10240,
+      "words": 1382,
+      "lines": 196,
+      "sha256": "61eea5531b76aef9776dc58399056481ad4ab92b7aa1f04b1ebe5d7d85ae9279"
+    },
+    {
+      "path": ".claude/skills/legend-study-intake-triage/references/matching_rubric.md",
+      "characters": 3611,
+      "words": 508,
+      "lines": 73,
+      "sha256": "11898c85325b36d5d76346cda5b79a9a8fa84f1cce73eac954750ed85c19d0f1"
+    },
+    {
+      "path": ".claude/skills/legend/SKILL.md",
+      "characters": 18997,
+      "words": 2528,
+      "lines": 148,
+      "sha256": "069d2cac824cdc9f79db0bd4c391125ec948ebe801cd280fa24143a62539acf7"
+    },
+    {
+      "path": ".claude/skills/legend/references/officina_routing.md",
+      "characters": 5874,
+      "words": 875,
+      "lines": 58,
+      "sha256": "c264017868018880a30b30ef082d68c78e5454d9a572e6eee2fa030fa707ed18"
+    },
+    {
+      "path": "AGENTS.md",
+      "characters": 5445,
+      "words": 814,
+      "lines": 81,
+      "sha256": "94175ba64b905b23dd6603cc22c30366b9769f981ed866e2f5ae5cc6a1b08982"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "characters": 10224,
+      "words": 1363,
+      "lines": 109,
+      "sha256": "fe66d7e2d7458beb66452029f7852c045256c4766522e1eb9bfdeeae2e0220a1"
+    },
+    {
+      "path": "BOOTSTRAP.md",
+      "characters": 16713,
+      "words": 2627,
+      "lines": 264,
+      "sha256": "13c3147e14cd234519fa3134487e2f0cb86a09851692e43f2e2e043cdc24a0c3"
+    },
+    {
+      "path": "CAPABILITIES.md",
+      "characters": 10012,
+      "words": 1293,
+      "lines": 107,
+      "sha256": "5600f106905be3022375e0786e756ac9f6b41b7dc85d7a028408562c53195975"
+    },
+    {
+      "path": "CLAUDE.md",
+      "characters": 8660,
+      "words": 933,
+      "lines": 123,
+      "sha256": "5cd365c94a23cc3a4760c885bb675d914488ad7cb0c1b2cbc9564e777b05161b"
+    },
+    {
+      "path": "FAQ.md",
+      "characters": 15435,
+      "words": 2195,
+      "lines": 241,
+      "sha256": "f2ccb35f13bd0992d49eedf3bb0808b5415fe5775d5933a4c1b299c303dd80e8"
+    },
+    {
+      "path": "SKILLS.md",
+      "characters": 14827,
+      "words": 1769,
+      "lines": 138,
+      "sha256": "02ff4559c0b92933869c7333074fd5e4a75977c60b1ce25c8ef3097da815121c"
+    },
+    {
+      "path": "framework/instruction/LEGEND_CORE.md",
+      "characters": 31989,
+      "words": 4799,
+      "lines": 597,
+      "sha256": "d73b9d249b9f332e52f4cb4d934c10d3a7e3a2f37e1e32d373962a14f9d49a54"
+    },
+    {
+      "path": "framework/instruction/epistemic_discipline.md",
+      "characters": 5173,
+      "words": 791,
+      "lines": 56,
+      "sha256": "2bb70fa5af2c1dedda9c5e471d738877cfb385074b0b0c9aa5787126fdc07207"
+    },
+    {
+      "path": "framework/manuals/deep_dive_manual.md",
+      "characters": 34031,
+      "words": 5019,
+      "lines": 817,
+      "sha256": "75269c6c1e1239a1a0ac155025d740208b1f051fe83da3b30023693569b7053c"
+    },
+    {
+      "path": "framework/manuals/operator_manual.md",
+      "characters": 5956,
+      "words": 941,
+      "lines": 304,
+      "sha256": "44bcc8d445ca80d23a653e6771936f5c5f2482a74fa9bef055a9229b95b100af"
+    },
+    {
+      "path": "framework/master/designed_for_growth.md",
+      "characters": 6222,
+      "words": 917,
+      "lines": 97,
+      "sha256": "e67070e8ef1ab4bbf826936e6c6ed5755765d0feb9bf8e48af8a3cf1ce775547"
+    },
+    {
+      "path": "framework/master/gold_is_in_the_details.md",
+      "characters": 9088,
+      "words": 1396,
+      "lines": 47,
+      "sha256": "163f45609a40aa99dc38376166e8a273dc7aab41810563cd3b9b7715fcbc2770"
+    },
+    {
+      "path": "framework/protocols/actor_identity_feasibility.md",
+      "characters": 14770,
+      "words": 2152,
+      "lines": 273,
+      "sha256": "3d421c3248f13f256519b4caa88837716a917195554c86cfe3e2b4b5d93f60b6"
+    },
+    {
+      "path": "framework/protocols/actor_identity_proposal.md",
+      "characters": 9374,
+      "words": 1368,
+      "lines": 161,
+      "sha256": "58effaf0e5c91e6d59e2492c352ac31d1c9e2b21df12684da8846d1d370ef1d7"
+    },
+    {
+      "path": "framework/protocols/batch_self_evaluation_template.md",
+      "characters": 1695,
+      "words": 250,
+      "lines": 46,
+      "sha256": "5a99f59d31e36aef3d0516a27e8526abca2529e35da1caada174b4b039b054e9"
+    },
+    {
+      "path": "framework/protocols/controlled_benchmark_ab.md",
+      "characters": 56918,
+      "words": 8350,
+      "lines": 748,
+      "sha256": "43a6cddc899cedffacb78196876de1616b2af3ac31c112ea72e547dd9d08dc54"
+    },
+    {
+      "path": "framework/protocols/cross_host_handoff.md",
+      "characters": 15930,
+      "words": 2310,
+      "lines": 277,
+      "sha256": "773e2cf1f793ede42f74634a9e1c244065dcd4de43e84da2c605befb00bdd721"
+    },
+    {
+      "path": "framework/protocols/cross_session_transport.md",
+      "characters": 26742,
+      "words": 4145,
+      "lines": 471,
+      "sha256": "1d014b4408e1c982dc138b1ff5044b957ca5d20286ef2455a6f7d28db5d1a675"
+    },
+    {
+      "path": "framework/protocols/file_generation_rule.md",
+      "characters": 2755,
+      "words": 468,
+      "lines": 178,
+      "sha256": "888b3c4dbc4ed3b197566ab781d1505b24b2b36a0a8bac51de9a847682e8adb1"
+    },
+    {
+      "path": "framework/protocols/fulltext_read_receipt.md",
+      "characters": 37641,
+      "words": 5649,
+      "lines": 609,
+      "sha256": "b591abdb69451b71d26f4afa35d7fc9320dea9a91b95d1abd041c2d7bb76ac08"
+    },
+    {
+      "path": "framework/protocols/index.md",
+      "characters": 9814,
+      "words": 1203,
+      "lines": 246,
+      "sha256": "ebd60805fe7480d65f3eaeb2e7a985cb3e517b0e06d2324ac178e98038a58ade"
+    },
+    {
+      "path": "framework/protocols/ingest_protocol.md",
+      "characters": 9210,
+      "words": 1401,
+      "lines": 301,
+      "sha256": "9ac8d0430552744129cf5b073fbb97de4f07cede876dc542f02abbc67d6bc8ab"
+    },
+    {
+      "path": "framework/protocols/legend_operating_convention_v1.md",
+      "characters": 90538,
+      "words": 14505,
+      "lines": 1363,
+      "sha256": "5b2cb040295ce656a861d5e88eb91e31c59963555cd4b9df2486dfb35eb96359"
+    },
+    {
+      "path": "framework/protocols/parallel_legend_protocol.md",
+      "characters": 16502,
+      "words": 2454,
+      "lines": 427,
+      "sha256": "3022668817f0ad2285e09293422e827c5440c189c0c538148dd57b8ea501e156"
+    },
+    {
+      "path": "framework/protocols/prompt_batch_commit.md",
+      "characters": 15700,
+      "words": 2284,
+      "lines": 476,
+      "sha256": "71290c572c2c504a87aff7f939dc93766b58b6d30bfd8a514e37b2a33e1bd862"
+    },
+    {
+      "path": "framework/protocols/prompt_lint_integrity_check.md",
+      "characters": 11419,
+      "words": 1726,
+      "lines": 334,
+      "sha256": "c2b613d9202cac4aac997524ee355f6e2b65a51ce4c5244aea08209cb91a2c2c"
+    },
+    {
+      "path": "framework/protocols/scientist_evidence_standard.md",
+      "characters": 23031,
+      "words": 3554,
+      "lines": 392,
+      "sha256": "d51eb3d0798194109e0450ce45993a9a5896571ce53d1759f39c654df0b01cfc"
+    },
+    {
+      "path": "framework/protocols/scientist_operating_practice_v1.md",
+      "characters": 44701,
+      "words": 6764,
+      "lines": 707,
+      "sha256": "0f27ac8c93861617128808e6537f434ea78707bee08bac0ced6936669ccdc81b"
+    },
+    {
+      "path": "framework/protocols/scientist_reading_modes.md",
+      "characters": 33333,
+      "words": 4910,
+      "lines": 526,
+      "sha256": "0fdbd0e2bcea5ecf267d8623b70a60eb8c4cb4fe6a91fa1120f80c5063ddc4fd"
+    },
+    {
+      "path": "framework/protocols/session_self_evaluation.md",
+      "characters": 14347,
+      "words": 2213,
+      "lines": 205,
+      "sha256": "e4d03e3a34ff3e4c28a1730834fb30ea32e009ea5a406f741e818b823d28a58a"
+    },
+    {
+      "path": "framework/protocols/unattended_delegation_readiness.md",
+      "characters": 11528,
+      "words": 1690,
+      "lines": 220,
+      "sha256": "02fe3bbd9b23d306c70626b90d16e474c5b6a6d0f203818d52cfa318e958ec1d"
+    },
+    {
+      "path": "framework/protocols/wikilink_schema.md",
+      "characters": 15947,
+      "words": 2372,
+      "lines": 376,
+      "sha256": "4d904e1c74de78174798da31c68cd5c7cff0077c11e2e0f66494276fc5fa8ccf"
+    },
+    {
+      "path": "framework/state/state_manifest_current.md",
+      "characters": 51778,
+      "words": 7330,
+      "lines": 456,
+      "sha256": "18c0662afe6a9aac9f7e4e556adc8aefdb4a7c7f82d5576a9d0f2424516ee131"
+    },
+    {
+      "path": "governance/ANNEX_INDEX.md",
+      "characters": 5716,
+      "words": 790,
+      "lines": 87,
+      "sha256": "21affa4b5e9958e108c8987792daab606284c44fc0e8304e24ff2e9e591d882d"
+    },
+    {
+      "path": "governance/GOVERNANCE_v3.1.1.md",
+      "characters": 37067,
+      "words": 4967,
+      "lines": 477,
+      "sha256": "c67161ec5bb4435db050ae0690a33fb79a43e0043841d748dcdd3fc0f64cd414"
+    },
+    {
+      "path": "governance/annex_a_task_contract.md",
+      "characters": 6198,
+      "words": 789,
+      "lines": 106,
+      "sha256": "372d493be4fc8ee522c7a4f0bee6257c8aec2ea24836c8093a26be7f06250159"
+    },
+    {
+      "path": "governance/annex_b_message_protocol.md",
+      "characters": 2491,
+      "words": 315,
+      "lines": 58,
+      "sha256": "f148b4e64c488d0ce9a4c317d623f69e4c4ceb466ffa31cf3cb50ad0a54f0fb3"
+    },
+    {
+      "path": "governance/annex_c_review_protocol.md",
+      "characters": 2014,
+      "words": 280,
+      "lines": 54,
+      "sha256": "a3fd55876a4c17ca0f886447f5576bc8e75fa51cd8a74759c369d263e45a4a5b"
+    },
+    {
+      "path": "governance/annex_d_commit_batch.md",
+      "characters": 3057,
+      "words": 403,
+      "lines": 65,
+      "sha256": "e3693ab719a2bf6f5d39de88cb96e9f9087f8cd7f0bf7c60f858a98152c4a4d2"
+    },
+    {
+      "path": "governance/annex_e_learning_lifecycle.md",
+      "characters": 3085,
+      "words": 404,
+      "lines": 58,
+      "sha256": "db2294abd0b4e79427d62abe5aba32875b6bdeb0d6e02a8a22b6b67d45b4be35"
+    },
+    {
+      "path": "governance/annex_f_challenge_dissent.md",
+      "characters": 1714,
+      "words": 223,
+      "lines": 45,
+      "sha256": "23ee2c6e22dae3ced136c47f047150c8a338d0618106c52e03642998bb8ff807"
+    },
+    {
+      "path": "governance/annex_g_mirror.md",
+      "characters": 1864,
+      "words": 225,
+      "lines": 31,
+      "sha256": "80e37d38e03eb9d453ee0110ea30e063bb50e39d2adafeb44229d665efd59954"
+    },
+    {
+      "path": "governance/annex_h_authority_matrix.md",
+      "characters": 4558,
+      "words": 649,
+      "lines": 68,
+      "sha256": "1f9828793f087d6f95e17c05769572666912464d4de756851e7c711ffaf017e4"
+    },
+    {
+      "path": "governance/annex_i_bootstrap_deployment.md",
+      "characters": 4265,
+      "words": 554,
+      "lines": 89,
+      "sha256": "a1e9e7fa218d4f89ae44689c6d620bb434eac5a7ebe56893650a2af9dcb937ef"
+    },
+    {
+      "path": "governance/annex_j_runtime_control_plane.md",
+      "characters": 6005,
+      "words": 806,
+      "lines": 100,
+      "sha256": "20e84e15e0a95d3bab70f788ed4543e87e16ca77a596fd0e50ce1accae6c2414"
+    },
+    {
+      "path": "governance/plan_defined_parameters.md",
+      "characters": 23555,
+      "words": 3644,
+      "lines": 446,
+      "sha256": "24c8560db2e66b5dc3712adacc65aae1d47d356c76710d77b82b476c34afe9a7"
+    },
+    {
+      "path": "roles/junior_harness.md",
+      "characters": 5124,
+      "words": 729,
+      "lines": 86,
+      "sha256": "67f0ebb348e3aaba38a9b7bd649a672b7763d3412948fef203b76a4f9391d6be"
+    },
+    {
+      "path": "roles/mirror.md",
+      "characters": 5580,
+      "words": 812,
+      "lines": 107,
+      "sha256": "6f376a9b4cb7938165a420fbd220815c3598bfdc91299ea9321e848995f0f818"
+    },
+    {
+      "path": "roles/orchestrator.md",
+      "characters": 13404,
+      "words": 2027,
+      "lines": 211,
+      "sha256": "7720f683c7b3dc867d5b1555aab4f2a973daf6d00fc0b486e71433f6bb95b5af"
+    },
+    {
+      "path": "roles/plan.md",
+      "characters": 6180,
+      "words": 922,
+      "lines": 102,
+      "sha256": "310d9bd4e289b6ce206f4708774252a889beb7f71984df9c5a2e8f3a744ed898"
+    },
+    {
+      "path": "roles/scientist.md",
+      "characters": 8098,
+      "words": 1167,
+      "lines": 140,
+      "sha256": "7f4a4adbd817d27506407f118ec397c4c23d815b8fc6d2b7e019caef3b46e797"
+    }
+  ],
+  "scientific_startup_registries": [
+    {
+      "path": "disease-models/wwox/registries/working_model_current.md",
+      "characters": 45039,
+      "sha256": "ef06cc91029b9ee5ace55b54dadb050efdbb2d636d710748946232b51f5a1182"
+    },
+    {
+      "path": "disease-models/wwox/registries/claim_registry_current.md",
+      "characters": 96645,
+      "sha256": "c4ff8192e1384ebef8346b226582e59c1e74cee0eb7a5a40a0d9891bead3fd24"
+    },
+    {
+      "path": "disease-models/wwox/registries/paper_registry_current.md",
+      "characters": 375531,
+      "sha256": "da038c5ae7fb94f5db39c63ed4b4e739c225c993fe92e50654d90ee28cb2d3ce"
+    },
+    {
+      "path": "disease-models/wwox/registries/literature_tracking_log_current.md",
+      "characters": 475916,
+      "sha256": "a96246a83897385a9c04bce3f911686c2c5dbb6e3e76e90225f64f58bcd17a32"
+    }
+  ]
+}
