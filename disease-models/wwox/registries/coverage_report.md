@@ -21,10 +21,10 @@ the whole known corpus, not the part already processed.
 
 | Depth | Records | Share | What it means |
 |---|---:|---:|---|
-| **Full text depth** | 68 | 16% | complete receipt or legacy registry declaration; trace split below |
-| Partial full text | 9 | 2% | some sections read; explicitly declared incomplete |
+| **Full text depth** | 71 | 17% | complete receipt or legacy registry declaration; trace split below |
+| Partial full text | 10 | 2% | some sections read; explicitly declared incomplete |
 | Abstract / screened | 13 | 3% | classified from metadata and abstract; no full text read |
-| Catalogued only | 333 | 78% | known, deduplicated, never analytically processed — **the debt** |
+| Catalogued only | 329 | 77% | known, deduplicated, never analytically processed — **the debt** |
 | Filtered / superseded | 3 | 1% | explicitly set aside, with the reason preserved |
 
 - **70** promoted `PAPER` records · **356** `CORPUS` placeholders
@@ -34,10 +34,10 @@ the whole known corpus, not the part already processed.
 ## Receipt trace
 
 - Authoritative ledger: `disease-models/wwox/registries/fulltext_read_receipts.jsonl`
-- **145** append-only events: **122** contemporaneous · **22** conservative legacy reconstructions
-- **55** registry records have a persisted `complete_fulltext_read` receipt
+- **154** append-only events: **131** contemporaneous · **22** conservative legacy reconstructions
+- **58** registry records have a persisted `complete_fulltext_read` receipt
 - **13** records still rely on a historical registry full-text declaration without a surviving complete coverage receipt
-- **17** receipt event(s) do not yet map to a registry record
+- **21** receipt event(s) do not yet map to a registry record
 
 A full-text marker in the registry is preserved as historical state, but it is not
 retroactively converted into a complete receipt. Only a contemporaneous or adequately
