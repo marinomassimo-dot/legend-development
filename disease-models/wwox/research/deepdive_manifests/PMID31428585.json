@@ -82,7 +82,7 @@
  "multihop": {
   "references_enumerated": 6,
   "gene_direct_refs_in_source": [
-   "29581896",
+   "29310447",
    "30820047",
    "31155927",
    "29067327",
@@ -97,14 +97,14 @@
    "30158849 - Liu et al., WWOX downregulation and protein aggregation (Research Topic article) - partial_fulltext_read here"
   ],
   "queued": [
-   "29581896 - Huang and Chang 2018, phosphorylation sites of WWOX - NO RECEIPT. It is the reference that would settle what Figure 2A of PMID 26499798 marks, and it is named here for that reason.",
+   "29310447 - ref 1, Huang and Chang 2018, 'Phosphorylation/de-phosphorylation in specific sites of tumor suppressor WWOX' - NO RECEIPT. It is the reference that would settle what Figure 2A of PMID 26499798 marks, and it is named here for that reason. 🔴 Its PMID was first written as 29581896 by this reader and corrected to the value carried IN THE DEPOSIT'S OWN MARKUP after both blind auditors caught it.",
    "30820047 - Kunkle 2019 Nat Genet, the AD GWAS behind the 'five new risk factors' claim - NO RECEIPT",
    "29067327 and 25686832 - the two Zfra primaries - NO RECEIPT either of them",
    "31275852 - McBride et al., Wwox B-cell knockout - NO RECEIPT",
    "31155927 - Li 2019, WWOX and tamoxifen resistance - NO RECEIPT",
    "29760976 - Huang 2018, Raman tags in glioblastoma - NO RECEIPT"
   ],
-  "note": "THE CITATION STRUCTURE OF THIS DOCUMENT IS ITSELF A FINDING AND IS RECORDED AS ONE: the deposit carries only SIX numbered references, while the body cites TEN Research Topic articles by author name as hyperlinks with no reference-list entries. An enumeration that trusted the <ref> count alone would report six and miss ten gene-direct pointers. Of the nine sources resolved to PMIDs here, TWO are read in this corpus and SEVEN have no receipt of any kind."
+  "note": "THE CITATION STRUCTURE OF THIS DOCUMENT IS ITSELF A FINDING. The deposit carries SIX numbered references, each with its PMID in an ext-link-type='pmid' element, while the body cites TEN distinct Research Topic articles by author name through URI ext-links to doi.org, with no reference-list entry and no PMID. Both blind auditors recounted and agreed: 6 ref elements, 10 distinct Research Topic articles (Chen et al. linked five times), 0 fig, 0 table-wrap, 0 graphic, abstract absent entirely. An enumeration trusting the ref-element count alone would report six and miss ten gene-direct pointers. 🔴 AND THE DEPOSIT CARRIED THE NUMBERED REFERENCES' PMIDs ALL ALONG: this reader resolved them by external author search instead of reading the markup, and got one of the six wrong. The identifiers were inside the artefact. Of the nine sources resolved, TWO are read in this corpus - 30370248 (complete) and 30158849 (partial), both Research Topic articles resolved externally from their DOIs - and SEVEN have no receipt of any kind."
  },
  "corpus_crossquery": {
   "query": "Does this corpus already hold the therapeutic leads this editorial names, and does anything in it satisfy the REVIVAL_TRIGGER of DIS-003?",
@@ -138,7 +138,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The unmet need the editorial names, in the authors' own terms, and the endpoint they name for it. Recorded because it is the clinical target the preceding statement claims to have moved, and the two sentences sit two lines apart.",
+    "proposition": "The unmet need the editorial names, in the authors' own terms, and the endpoint it names for it. AUDIT-CORRECTED: the original said the two sentences sit 'two lines apart'; both auditors checked and they are DIRECTLY ADJACENT in the same paragraph. Adjacency is the stronger form of the point - the clinical claim of entry 0 follows immediately on the statement of the need it claims to have met.",
     "snippet": "an effective drug to lessen seizure in the newborn patients would greatly benefit them",
     "surface": "body",
     "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
@@ -154,7 +154,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The mechanism claimed for Zfra, attributed to refs 4 and 5 (Lee 2017 Alzheimers Dement, PMID 29067327; Lee 2015 Oncotarget, PMID 25686832) - NEITHER of which has any receipt in this corpus. The endpoints are murine: cancer growth and memory loss in mice, not seizures and not human.",
+    "proposition": "The mechanism claimed for Zfra, attributed to refs 4 and 5. Reference identity verified AGAINST THE DEPOSIT'S OWN MARKUP: ref 4 = Lee 2017, Alzheimers Dement 3:189-204, pmid ext-link 29067327; ref 5 = Lee 2015, Oncotarget 6:3737-51, pmid ext-link 25686832. Neither carries a receipt in this corpus - a statement about the ledger, not about this artefact, and marked as such. The endpoints are MURINE: cancer growth and memory loss in mice, not seizures and not human.",
     "snippet": "Suppression of Ser14 phosphorylation by a zinc finger peptide Zfra blocks cancer growth and restores memory loss in mice",
     "surface": "body",
     "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
@@ -162,7 +162,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "🔴 THIS SENTENCE IDENTIFIES THE PHOSPHOSITES THAT THE OTHER PAPER OF THIS WAVE MARKED AND DID NOT NAME. PMID 26499798's Figure 2A carries four unexplained marker stalks measured at residues 12.3, 14.3, 33.2 and 286.9 under a caption glossing them 'P, proline'; that reading's identification of them as phosphorylation sites was WITHDRAWN under blind audit because that article names only Tyr-287. Here, in a different source, Tyr33 and Ser14 ARE named as WWOX phosphorylation sites with opposite functional consequences. Two of the four measured positions are thereby identified from a source rather than from memory; the marker at 12.3 and the doubling of the leftmost trapezoid remain unexplained by either paper.",
+    "proposition": "🔴 THIS SOURCE NAMES TWO WWOX PHOSPHORYLATION SITES AND GIVES THEM OPPOSITE FUNCTIONAL CONSEQUENCES - Tyr33 for anticancer response, Ser14 for disease progression. AUDIT-CORRECTED, and the correction is a scoping one: the original proposition spent most of its length asserting facts about a DIFFERENT paper (PMID 26499798's Figure 2A, four measured residue positions, and the withdrawal of an identification under blind audit). Both auditors flagged that those facts are absent from this artefact - grep confirms zero occurrences of 287, 33.2, 286.9, 12.3 or 14.3 here - and one graded the triple OVERSHOOT for it. WHAT THIS LOCATOR NOW CARRIES IS ONLY WHAT THIS DOCUMENT SAYS. The cross-paper reconciliation is a two-artefact statement and lives in the dossier and the commit candidate, where both artefacts are named and fingerprinted.",
     "snippet": "switch of the phosphorylation of WWOX at Tyr33 for anticancer response to Ser14 for disease progression",
     "surface": "body",
     "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
@@ -178,7 +178,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The family-level denominator the editorial gives for WW domain proteins, attributed to ref 1 (Huang and Chang 2018, PMID 29581896, no receipt here). Recorded as the scale against which any WW-domain-based inference about WWOX is a single instance.",
+    "proposition": "The family-level denominator the editorial gives for WW domain proteins, attributed to ref 1 = Huang and Chang 2018, Exp Biol Med 243:137-47. 🔴 AUDIT-CORRECTED, AND THIS WAS A FACTUAL ERROR OF MINE: the original gave ref 1 as PMID 29581896. THE DEPOSIT ITSELF CARRIES THE PMID in its reference markup - ext-link-type='pmid' 29310447 - and 29581896 is a different Chang-group paper (FRET microscopy, Cell Death Discov 2018). Both auditors checked the deposit and both were right. The method failure is the point: I ran an external author search and took its first hit, when the identifier was inside the artefact I already had open. 29310447 has NO RECEIPT in this corpus, and it is the reference that would settle what the other paper of this wave marks and does not name.",
     "snippet": "there are at least 52 WW domain-containing proteins and more than 10,000 among all species",
     "surface": "body",
     "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
@@ -210,7 +210,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "The editorial's own framing of the paediatric phenotype - severe neural disease and early death - stated as background and immediately joined to a protein-aggregation cascade reviewed by Liu et al. (PMID 30158849, partial_fulltext_read here). The join is the editorial's, not a measurement.",
+    "proposition": "The editorial's framing of the paediatric phenotype - severe neural disease and early death - stated as background and joined in one sentence to a protein-aggregation cascade. The join is the editorial's, not a measurement. Source identity as the deposit carries it: 'Liu et al.' is a Research Topic article cited by author name through a URI ext-link to doi.org/10.3389/fnins.2018.00563, with NO numbered reference and NO PMID in this document; the PMID 30158849 (partial_fulltext_read here) was resolved externally from that DOI and is declared as an external resolution, not as something this artefact states.",
     "snippet": "While loss of WWOX in newborns leads to severe neural diseases and early death, Liu et al. reviewed the cascade of WWOX downregulation-induced protein aggregation that causes neurodegeneration",
     "surface": "body",
     "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
@@ -218,7 +218,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "A GENOMIC-INSTABILITY RESULT IN A TISSUE-SPECIFIC KNOCKOUT, reported second-hand from McBride et al. (PMID 31275852, NO RECEIPT here). It bears on CLAIM 029's genome-stability axis and is NOT carried as support for it: this is an editorial's one-sentence summary of another group's paper.",
+    "proposition": "A GENOMIC-INSTABILITY RESULT IN A TISSUE-SPECIFIC KNOCKOUT, reported second-hand in one sentence. It bears on CLAIM 029's genome-stability axis and is NOT carried as support for it. Source identity as the deposit carries it: 'McBride et al.' is a Research Topic article cited through a URI ext-link with no numbered reference and no PMID in this document; PMID 31275852 (no receipt here) was resolved externally and is declared as an external resolution.",
     "snippet": "Wwox deletion in mouse B cells leads to the development of genomic instability, neoplastic transformation, and monoclonal gammopathies",
     "surface": "body",
     "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
@@ -250,7 +250,7 @@
     "panel_text_relation": "text_only"
    },
    {
-    "proposition": "WHAT THIS DOCUMENT IS, ESTABLISHED FROM ITS OWN TEXT: an editorial framing a thematic Research Topic. PubMed and the Europe PMC deposit both type it Editorial; it has no abstract, no figures, no tables and no supplement, and it reports no experiment of its own.",
+    "proposition": "WHAT THIS DOCUMENT IS, ESTABLISHED FROM ITS OWN MARKUP: the deposit's root element carries article-type='editorial', and it has no abstract element at all, no fig, no table-wrap, no graphic and no supplementary-material. It reports no experiment of its own. AUDIT-NOTED: the original also asserted that PubMed types it Editorial; that is true and was measured by PubMed ESummary on 2026-09-09, but it is a fact about a different system and is declared here as such rather than implied to come from this artefact.",
     "snippet": "This has prompted us to propose to the Frontiers journals a specific thematic issue discussing recent knowledge and advancement on WW domain proteins in physiology and diseases",
     "surface": "body",
     "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
@@ -264,7 +264,32 @@
     "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
     "anchor": "Concluding remarks, opening sentence",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 ADDED AFTER THE BLIND AUDIT: BOTH AUDITORS INDEPENDENTLY NAMED THIS SENTENCE AS UNCOVERED, AND THEY WERE RIGHT. It is a SECOND forward-looking clinical claim, structurally weaker than the one at entry 0: that one at least names an unpublished source, while this one carries NO attribution at all - no reference, no personal communication, nothing - and asserts a preventive effect on Alzheimer's disease in middle-aged individuals with the modal 'would likely'. The finding of this reading is therefore not 'the editorial contains one unsupported clinical claim' but that it contains TWO, adjacent, and the weaker of them is the one with no source. An audit that only checks the propositions written is not an audit; the omission was the finding.",
+    "snippet": "Furthermore, blocking the downregulation of WWOX in the middle aged individuals would likely to prevent the development of AD",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Concluding section, 'what's urgent for the field' paragraph, immediately after the personal-communication sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ADDED AFTER THE BLIND AUDIT: both auditors named this as the single most disease-model-relevant Research Topic mention in the document, and no triple covered it. It is a one-sentence pointer to a cross-species animal-model review (PMID 30370248, complete_fulltext_read in this corpus, resolved externally from its Research Topic DOI), and the phenotype list it gives - growth retardation, metabolism, reproduction, neural system, early death - is the editorial's own summary of in vivo WWOX-deficiency biology. Carried as a POINTER with the weight of the article pointed at, which in this case is a paper already read here at full depth.",
+    "snippet": "Tanna and Aqeilan discussed the use of animal models to assess in vivo WWOX functions. The review covers the rodent, fish, and fly models. Defects in growth retardation, metabolism, reproduction, neural system, and early death are discussed",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Research Topic articles, Tanna and Aqeilan paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "ADDED AFTER THE BLIND AUDIT: the sentence that frames the Zfra proposal at entry 2 and states its own precondition. Quoted because it is the editorial's own qualification of every therapeutic statement around it - validation and approval - and because a reading that carried the Zfra sentence without it would report the proposal as stronger than its authors put it.",
+    "snippet": "Small molecules such as synthetic chemicals or peptides can directly support treating patients in clinics, once they are functionally validated and approved for clinical use",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Concluding remarks, final paragraph, immediately before the Zfra sentence",
+    "panel_text_relation": "text_only"
    }
-  ]
+  ],
+  "audit_note": "R4 SATISFIED, run AFTER the reading was landed and BEFORE any commit candidate - the order chosen deliberately because a session rate limit had already killed the first two auditors mid-run, and a landed reading with no commit candidate touches no claim. TWO independent blind auditors, 17 triples each, given only the triples, the artefact and the canonical text of CLAIM 023 and DIS-003. Result: ZERO NOT_IN_SOURCE quotes - every quote is a verbatim substring of the deposit. ONE FACTUAL ERROR, caught by both: entry 6 gave ref 1's PMID as 29581896 where the deposit's own markup says 29310447, and 29581896 is a different paper entirely. ONE SCOPING OVERSHOOT, caught by both: entry 4 asserted facts about a different paper that are absent from this artefact, and has been narrowed to what this document says. Three smaller corrections taken (entries 1, 10, 11, 15) on adjacency and on the provenance of externally resolved identifiers. 🔴 THE MOST VALUABLE FINDING OF THIS AUDIT WAS AN OMISSION, NOT AN ERROR, AND BOTH AUDITORS FOUND IT INDEPENDENTLY: no triple covered 'Furthermore, blocking the downregulation of WWOX in the middle aged individuals would likely to prevent the development of AD' - a SECOND forward-looking clinical claim, adjacent to the one this reading was built on and WEAKER, because it carries no attribution at all where the first at least names a personal communication. Three locators were added on the auditors' omission list (entries 17, 18, 19), and the reading's headline changed shape: the document contains two unsupported clinical claims, not one. The auditors did not disagree with each other on any verdict in this paper."
  }
 }
