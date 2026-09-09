@@ -1,0 +1,976 @@
+[
+ {
+  "pmid": "42422765",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 7,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "no",
+  "evidence": "0/18",
+  "flag_drift": "no",
+  "candidates": [
+   "CC-20260814-42422765-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "42397075",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 4,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "no",
+  "evidence": "0/22",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "42128308",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 2,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "no",
+  "evidence": "0/6",
+  "flag_drift": "SI",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "41984841",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/7",
+  "flag_drift": "no",
+  "candidates": [
+   "CC-20260810-41984841-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "41562193",
+  "set": "23 assegnati",
+  "owner": "scientist-c",
+  "state_before": "partial",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-41562193-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-41562193-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "38499540",
+  "set": "23 assegnati",
+  "owner": "scientist-b",
+  "state_before": "partial",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-38499540-02"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "38355659",
+  "set": "23 assegnati",
+  "owner": "scientist-c",
+  "state_before": "none",
+  "state_now": "complete",
+  "receipts_before": 0,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-38355659-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-38355659-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "38182577",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 2,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "no",
+  "evidence": "0/12",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "36572673",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/4",
+  "flag_drift": "no",
+  "candidates": [
+   "CC-20260810-36572673-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "34831305",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 4,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/3",
+  "flag_drift": "no",
+  "candidates": [
+   "CC-20260810-34831305-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "34747138",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 4,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "no",
+  "evidence": "0/10",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "34634460",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 2,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "no",
+  "evidence": "0/7",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "34268881",
+  "set": "23 assegnati",
+  "owner": "scientist-a",
+  "state_before": "partial",
+  "state_now": "partial",
+  "receipts_before": 3,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-34268881-04"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260814-34268881-01.md",
+   "CC-20260909-34268881-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "33916893",
+  "set": "23 assegnati",
+  "owner": "scientist-a",
+  "state_before": "partial",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-33916893-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-33916893-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "33914858",
+  "set": "23 assegnati",
+  "owner": "scientist-a",
+  "state_before": "none",
+  "state_now": "none",
+  "receipts_before": 0,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "NO",
+  "dossier": "no",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "32300104",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/5",
+  "flag_drift": "no",
+  "candidates": [
+   "CC-20260810-32300104-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "31428585",
+  "set": "23 assegnati",
+  "owner": "scientist-a",
+  "state_before": "none",
+  "state_now": "complete",
+  "receipts_before": 0,
+  "receipts_today": 2,
+  "receipt_ids": [
+   "FTR-20260909-31428585-01",
+   "FTR-20260909-31428585-02"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-31428585-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "31075076",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 2,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "no",
+  "evidence": "0/2",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "30755385",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/16",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "30470736",
+  "set": "23 assegnati",
+  "owner": "scientist-b",
+  "state_before": "none",
+  "state_now": "complete",
+  "receipts_before": 0,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-30470736-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "30370248",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/4",
+  "flag_drift": "no",
+  "candidates": [
+   "CC-20260810-30370248-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "30082886",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/4",
+  "flag_drift": "no",
+  "candidates": [
+   "CC-20260810-30082886-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "29724996",
+  "set": "23 assegnati",
+  "owner": "scientist-b",
+  "state_before": "partial",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-29724996-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-29724996-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "27550453",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/4",
+  "flag_drift": "no",
+  "candidates": [
+   "CC-20260810-27550453-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "27308504",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "no",
+  "evidence": "0/4",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "26675548",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 3,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/18",
+  "flag_drift": "no",
+  "candidates": [
+   "CC-20260814-26675548-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "26499798",
+  "set": "23 assegnati",
+  "owner": "scientist-a",
+  "state_before": "none",
+  "state_now": "complete",
+  "receipts_before": 0,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-26499798-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-26499798-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "26256646",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/5",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "27308416",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/2",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "27551470",
+  "set": "23 assegnati",
+  "owner": "scientist-b",
+  "state_before": "none",
+  "state_now": "complete",
+  "receipts_before": 0,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-27551470-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-27551470-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "25491415",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/3",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "25331887",
+  "set": "23 assegnati",
+  "owner": "scientist-a",
+  "state_before": "partial",
+  "state_now": "partial",
+  "receipts_before": 1,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-25331887-02"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-25331887-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "25245215",
+  "set": "23 assegnati",
+  "owner": "scientist-b",
+  "state_before": "none",
+  "state_now": "complete",
+  "receipts_before": 0,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-25245215-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-25245215-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "25238781",
+  "set": "23 assegnati",
+  "owner": "scientist-b",
+  "state_before": "none",
+  "state_now": "complete",
+  "receipts_before": 0,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-25238781-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-25238781-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "25012504",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/17",
+  "flag_drift": "no",
+  "candidates": [
+   "CC-20260814-25012504-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "24871327",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "no",
+  "evidence": "0/7",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "24550385",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 2,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "no",
+  "evidence": "0/9",
+  "flag_drift": "SI",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "24510053",
+  "set": "23 assegnati",
+  "owner": "scientist-a",
+  "state_before": "none",
+  "state_now": "complete",
+  "receipts_before": 0,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-24510053-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-24510053-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "23370280",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 4,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/8",
+  "flag_drift": "no",
+  "candidates": [
+   "CC-20260814-23370280-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "23254685",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/6",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "22634283",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 2,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "no",
+  "evidence": "0/10",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "21731849",
+  "set": "23 assegnati",
+  "owner": "scientist-c",
+  "state_before": "none",
+  "state_now": "complete",
+  "receipts_before": 0,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-21731849-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-21731849-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "21318118",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/4",
+  "flag_drift": "no",
+  "candidates": [
+   "CC-20260810-21318118-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "21115974",
+  "set": "23 assegnati",
+  "owner": "scientist-c",
+  "state_before": "none",
+  "state_now": "complete",
+  "receipts_before": 0,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-21115974-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-21115974-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "20530675",
+  "set": "23 assegnati",
+  "owner": "scientist-c",
+  "state_before": "partial",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-20530675-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-20530675-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "20146584",
+  "set": "23 assegnati",
+  "owner": "scientist-b",
+  "state_before": "none",
+  "state_now": "partial",
+  "receipts_before": 0,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-20146584-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-20146584-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "18974271",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/6",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "18674750",
+  "set": "23 assegnati",
+  "owner": "scientist-b",
+  "state_before": "partial",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-18674750-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-18674750-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "18487609",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "no",
+  "evidence": "0/17",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "18460020",
+  "set": "23 assegnati",
+  "owner": "scientist-c",
+  "state_before": "none",
+  "state_now": "complete",
+  "receipts_before": 0,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-18460020-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-18460020-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "17575124",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/3",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "17360458",
+  "set": "31 esclusi",
+  "owner": "-",
+  "state_before": "complete",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 0,
+  "receipt_ids": [],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "0/5",
+  "flag_drift": "no",
+  "candidates": [],
+  "integrated": "nessun candidato"
+ },
+ {
+  "pmid": "16223882",
+  "set": "23 assegnati",
+  "owner": "scientist-c",
+  "state_before": "none",
+  "state_now": "complete",
+  "receipts_before": 0,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-16223882-01"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-16223882-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ },
+ {
+  "pmid": "15070730",
+  "set": "23 assegnati",
+  "owner": "scientist-a",
+  "state_before": "partial",
+  "state_now": "complete",
+  "receipts_before": 1,
+  "receipts_today": 1,
+  "receipt_ids": [
+   "FTR-20260909-15070730-02"
+  ],
+  "manifest": "si",
+  "dossier": "si",
+  "evidence": "non misurata (nel lotto 23)",
+  "flag_drift": "-",
+  "candidates": [
+   "CC-20260909-15070730-01.md"
+  ],
+  "integrated": "no - in coda a BATCH_COMMIT"
+ }
+]
