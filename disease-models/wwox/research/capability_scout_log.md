@@ -415,3 +415,89 @@ Two candidate routes were considered against this wave's actual friction and **d
 3. **The two receipt-contract findings remain the operator's** — `identity_correction`, and coupled
    panel relations being unavailable to adjudicated locators. Unchanged, unimplemented, not worked
    around, and now carried across four waves without drift.
+
+---
+
+## 2026-09-09 · `scientist-a`, AQEILAN-FT-A-001 wave 4 (26499798, 31428585 — the lot's last readable papers)
+
+### Micro-upgrade shipped
+
+**`framework/scripts/locator_identifier_provenance.py`** + `test_locator_identifier_provenance.py`
+— **12/12, mutation-tested in three directions.**
+
+**The failure it was built from, in one line:** a locator's proposition asserted that reference 1 of
+the paper being read was `PMID 29581896`. **The Europe PMC deposit carried the answer in its own
+markup** — `<ext-link ext-link-type="pmid">29310447</ext-link>` — and 29581896 is a different paper by
+the same author. I had resolved it by external author search and taken the first hit **while the
+artefact containing the correct value was open**. Two blind auditors caught it, both by looking where
+I had not.
+
+**What the tool asks:** for every identifier (PMID, PMCID, DOI) asserted in a locator's *proposition* —
+never the snippet, which the manifest validator already verifies verbatim — *does this value occur in
+any artefact the manifest declares?* Buckets: `IN_ARTEFACT`, `DECLARED_EXTERNAL`,
+`UNDECLARED_EXTERNAL`, `SOURCE_IDENTITY_UNVERIFIED`. It never claims an identifier is **wrong**;
+nothing local can know that. It checks the cheaper property that failed here: whether the reading
+**could have got the value from what it says it read**.
+
+### 🔴 Two defects found in my own tool before it landed, and both are kept as tests
+
+1. **The anti-bug tool was immune to the bug.** As first written it would have **missed the exact
+   error it exists for**: the offending proposition contained the phrase *"no receipt here"* — a true
+   statement about the ledger — and that silenced the check on a *different* assertion in the same
+   sentence, that this identifier **is** reference 1 of the source. Provenance is two questions, and
+   only one is waivable by a declaration: *"this identifier IS a citation of the source"* is
+   adjudicated by the artefact and can never be declared away. `SOURCE_IDENTITY_UNVERIFIED` now
+   outranks every marker, and that is **test 1**. `DEFAULTS THAT BIT US` already had the general
+   form — *the anti-bug tool is immune to the bug* — and this is that entry paying out.
+2. **The first headline number answered a different question.** `files/` is gitignored, so most
+   manifests point at bytes that are not in a given checkout; with an empty haystack **every**
+   identifier is "not in the artefact". The first run reported a corpus-wide provenance crisis that
+   was really an evidence-locality fact. Unmeasurable manifests are now separated, excluded from the
+   totals and from `--strict`, and that is **test 12**. Same shape as the `outputs` inverse-index
+   trap in the receipt contract: *a plausible predicate that answers a different question, invisible
+   to any check that only verifies the result is well-formed.*
+
+### First measurement (2026-09-09, 80 manifests)
+
+| | |
+|---|---:|
+| manifests | 80 |
+| **measurable** (every declared artefact present) | **26** |
+| unmeasurable (evidence absent from this checkout) | 54 |
+| — over the measurable 26 — `IN_ARTEFACT` | 37 |
+| `DECLARED_EXTERNAL` | 4 |
+| `UNDECLARED_EXTERNAL` | 15 |
+| **`SOURCE_IDENTITY_UNVERIFIED`** | **16** |
+
+**16 identifiers are asserted as citations of a source that does not contain them, on manifests whose
+evidence is present.** That is a review surface and **not 16 errors** — the tool's own output says so
+in a printed note. It is offered to the orchestrator as a queue, not as a verdict.
+
+### Learned this wave
+
+- **A blind audit's most valuable output can be an omission, not an error.** Both auditors on the
+  editorial independently reported a sentence **no locator of mine covered** — a *second* unsupported
+  clinical claim, weaker than the one I had built the reading on because it carried no attribution at
+  all. A reading is judged not only on whether its propositions are true, but on whether the document
+  contains something worse that it walked past.
+- **Land the reading before the audit when sessions are dying.** A session limit killed two auditors
+  mid-run. The reading was persisted first and **no commit candidate was written until verdicts
+  existed**: a landed reading with no candidate touches no claim. Nothing had to be reconstructed on
+  resume. This is the repair for wave 2's `[UNAUDITED]` outcome.
+- **A wrong value already in an append-only ledger has a lawful remedy and it is not an edit.**
+  `receipt_correction` (`FTR-20260909-31428585-02`) carries coverage, depth, timestamps and fingerprint
+  over unchanged and changes only the evidence basis.
+- **Fetch the figures twice when the obvious route is low-resolution.** PMC's CDN blobs render
+  Figure 2B of PMID 26499798 illegibly at 713×398; the same figure is embedded in the PMC PDF at
+  2140×1194. The genotype finding of that reading exists only because the second surface was fetched,
+  and both are fingerprinted so the choice is visible.
+
+### Next Micro-Step
+
+1. 🔴 **Wire `text_surface_intrusion_check.py` into `deepdive_manifest.py` for PDF-derived surfaces.**
+   **Five waves of deferral now.** Unchanged and still the oldest open item on this actor's list.
+2. **Triage the 16 `SOURCE_IDENTITY_UNVERIFIED` rows** above. They are one command away and no actor
+   has been asked to own them.
+3. **The receipt-contract items remain the operator's** — `identity_correction`, coupled panel
+   relations for adjudicated locators, and the study-level rollup that leaves 25331887 and 34268881
+   partial. Carried across five waves without drift and without being worked around.
