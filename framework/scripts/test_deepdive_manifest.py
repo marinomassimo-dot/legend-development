@@ -422,6 +422,49 @@ class EntriesMustBeUsable(unittest.TestCase):
                 message = self._screen("derived.txt", payload)
                 self.assertIn("SUSPECT", message, f"{label} must refuse the surface")
 
+    def test_the_genotype_sign_substitution_is_caught_and_survives_a_repair(self) -> None:
+        """🔴 A surface can be refused twice and for neither the right reason.
+
+        Measured on PMID 25245215 (Aqeilan 2014, CMLS). Its PDF text layer renders
+        `Wwox +/-` as `Wwox?/-`, `Wwox +/+` as `Wwox?/?`, and once `Wwox +/- mice` as
+        `Wwox?/mice` with the minus dropped outright. Four extractor modes agree on the
+        literal '?' -- pdftotext default, -layout and -raw, and pdftohtml -- which is rule
+        5d's own point that cross-checking extractors detects nothing.
+
+        The gap this closes was measured by counterfactual, not supposed. As extracted the
+        surface is refused by the C0 check (8 U+0001, all harmless front-matter separators).
+        Strip those -- exactly what a well-meaning repair does -- and it is still refused, by
+        suspicion-by-absence. Strip those AND reword the statistical language below threshold
+        and the screen returned ACCEPTED with every corrupted genotype intact. Both states are
+        ordinary for other papers, and the surface that survives them is one in which
+        wild-type and heterozygote are typographically indistinguishable.
+        """
+        for label, payload in (
+            ("het against wild-type", "Tumor formation in Wwox?/- mice was higher than in wild-type (Wwox?/?) mice."),
+            ("minus dropped entirely", "Increased tumor multiplicity in Wwox?/mice was observed relative to controls."),
+        ):
+            with self.subTest(substitution=label):
+                message = self._screen("derived.txt", payload)
+                self.assertIn("SUSPECT", message, f"{label} must refuse the surface")
+
+    def test_the_genotype_pattern_does_not_fire_on_ordinary_prose(self) -> None:
+        """The other half of the upgrade: a pattern that refuses good surfaces is a defect.
+
+        Calibrated over all 45 local text-bearing artifacts in files/fulltext/ before
+        shipping: nine hits, all nine in the one defective PDF, zero in the other 44. The
+        cases below are the shapes that could plausibly collide -- a question mark ending a
+        sentence before a slashed pair, a real genotype correctly rendered, and an ordinary
+        and/or construction.
+        """
+        for label, payload in (
+            ("question then slashed pair", "Which allele is lost? /Wwox/ transcripts were then measured in each tumor."),
+            ("correct genotype notation", "Tumor formation in Wwox+/- mice was higher than in wild-type (Wwox+/+) mice."),
+            ("ordinary slashed words", "Samples were scored as positive/negative by two readers, blinded to genotype."),
+        ):
+            with self.subTest(prose=label):
+                message = self._screen("derived.txt", payload)
+                self.assertNotIn("welded", message, f"{label} must survive the screen")
+
     def test_the_elsevier_patterns_do_not_fire_on_ordinary_prose(self) -> None:
         """The other half of the upgrade: a new pattern that refuses good surfaces is a defect.
 

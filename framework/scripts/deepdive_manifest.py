@@ -484,6 +484,33 @@ PRINTABLE_SUBSTITUTIONS = (
     (re.compile(r"\d\s+3\s+10\b"),
      "the digit '3' where the page prints U+00D7 '×' in scientific notation "
      "(Elsevier/LiveCycle text layer)"),
+    # 🔴 Added 2026-09-09 from PMID 25245215, and it closes a gap the OTHER two signatures
+    # only appeared to cover. That PDF's text layer renders `Wwox +/−` as `Wwox?/-`,
+    # `Wwox +/+` as `Wwox?/?`, and in one place `Wwox +/− mice` as `Wwox?/mice` — the minus
+    # dropped outright. The substituted character is a literal '?' (U+003F), and FOUR extractor
+    # modes agree on it (pdftotext default/-layout/-raw and pdftohtml), which is rule 5d's own
+    # point that cross-checking extractors detects nothing.
+    #
+    # 🔴 WHY IT IS NEEDED WHEN THE SURFACE WAS ALREADY REFUSED. It was refused — twice — and for
+    # neither the right reason. The C0 check fired on 8 U+0001 controls that are all harmless
+    # front-matter `·` keyword separators, and suspicion-by-absence fired on 5 'significan'
+    # mentions with no comparators. Counterfactual, run rather than argued: strip the controls
+    # and it is still refused; strip them AND reword the statistics below threshold and the
+    # screen returns ACCEPTED with `Wwox?/-`, `Wwox?/?` and `Wwox?/mic` intact. Both of those
+    # states are ordinary for other papers from this producer, and the surface that survives
+    # them is one in which WILD-TYPE AND HETEROZYGOTE ARE TYPOGRAPHICALLY INDISTINGUISHABLE —
+    # exactly the distinction rule 5d names as load-bearing for a knockout paper.
+    #
+    # Calibrated before shipping the way the three above were: screened over all 45 local
+    # text-bearing artifacts in files/fulltext/ (25 structured XML/HTML/TXT surfaces and 20
+    # PDFs via pdftotext). NINE hits, all nine in PMID25245215_Aqeilan2014_PMC.pdf, ZERO in the
+    # other 44. The signature is `?` welded to `/` with no space, which ordinary prose does not
+    # produce: a question mark ends a sentence and is followed by whitespace.
+    (re.compile(r"[A-Za-z0-9]\?/[-+?A-Za-z0-9]"),
+     "'?' welded to '/' where the page prints a superscript allele sign — e.g. 'Wwox?/-' for "
+     "'Wwox +/−' and 'Wwox?/?' for 'Wwox +/+'. This substitution is PRINTABLE and it eats the "
+     "wild-type/heterozygote/homozygote distinction, so the surface can read as clean while "
+     "every genotype in it is unrecoverable"),
 )
 
 # Suspicion by ABSENCE — what the surface does NOT have. Fourteen corpus PDFs carry
