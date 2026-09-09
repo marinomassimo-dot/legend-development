@@ -65,7 +65,7 @@
    "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
   ]
  },
- "CURRENT_STATE": "CLAIMED",
+ "CURRENT_STATE": "CLAIMED — wave 2 in progress",
  "assigned_on": "2026-09-08",
  "acquisition_hints": {
   "29724996": {
@@ -167,6 +167,10 @@
   "claimed_at": "2026-09-09T08:34:26Z",
   "durable_pointer": "ledger/tasks/scientist-b/AQEILAN-FT-B-001.json on main in /root/legend-development",
   "claim_precondition_checked": "Annex A.3 rule 3 / scientist_reading_modes.md 2.2: receipt ledger queried per PMID at M0 and the task ledger checked for open contracts on the same sources. 29724996 and 30470736 appear in no other actor's lot.",
-  "wave": "wave 1 of 8: 29724996 then 30470736. The remaining six PMIDs of the lot (18674750, 38499540, 27551470, 25238781, 25245215, 20146584) are NOT claimed this session and were not opened; the orchestrator dispatches them as later waves."
+  "wave": "wave 2 of the lot: 18674750 then 38499540. Wave 1 (29724996, 30470736) closed on main under commits d5e1191, e0ed4da, f2d0446, 5add3ee. The remaining four PMIDs of the lot (27551470, 25238781, 25245215, 20146584) are NOT claimed this session and were not opened; the orchestrator dispatches them as later waves.",
+  "claimed_at_wave2": "2026-09-09T00:00:00Z",
+  "claim_precondition_checked_wave2": "M0 re-run per PMID on 2026-09-09 rather than inherited: 18674750 carries FTR-20260811-18674750-01 and 38499540 carries FTR-20260810-38499540-01, both contemporaneous partial_fulltext_read whose sole uncovered section is supplementary:not_read. Both therefore resume with reread_reason inadequate_prior_coverage and prior_receipt set. Ledger verify OK at 135 chained events. Neither PMID appears in another actor's lot.",
+  "orchestrator_correction_accepted_wave2": "Wave-2 dispatch stated 38499540 was one of the four manifests recording an erratum with no declared scope. The orchestrator corrected this mid-task and the correction is verified against the manifest itself: PMID38499540.json retraction_check reads 'No retraction, no expression of concern, no erratum attached' (PubMed esummary, 2026-08-10), hold false. There is no erratum to scope and erratum_scope_check.py has nothing to resolve there. Retraction status is still independently re-verified as M3 requires. The four genuinely flagged manifests (30290271, 36779245, 37519886, 38182577) are not in this lot and stay parked for their own readers. Noted for awareness only, not action: 38182577's attached ordinary erratum is PMID 38355659, which sits in scientist-c's lot and is c's to resolve.",
+  "evidence_locality_wave2": "Checked before claiming, not assumed: files/ in the shared checkout holds NO artefact for either wave-2 PMID. Both manifests fingerprint bytes that are not present here, so both papers require full re-acquisition, and every pre-existing locator must be re-verified character-for-character against the new deposit and every figure re-opened BEFORE its digest is changed."
  }
 }
