@@ -4009,3 +4009,69 @@ SDR come indizio di metabolismo steroideo e della steroidogenesi compromessa nei
 **È una review:** vale come **rotta verso i primari**, non come primario. **Priorità:** bassa in sé,
 media come indice. **Current status:** ⬜ aperto.
 
+
+---
+
+## FT-083 — `PMID 36828035` (Hussain 2023) · 🔴 due partial receipt sotto DUE claim consolidated baseline
+
+**Paper:** PMID 36828035 — Hussain T, Sanchez K, Crayton J, *et al.*, *WWOX P47T Partial
+Loss-Of-Function Mutation Induces Epilepsy, Progressive Neuroinflammation, and Cerebellar
+Degeneration*. Risolto da **rif. 17** di `PMID 41562193`, che ne usa i tessuti renali P47T.
+
+**Perché, e perché è la voce di coda più alta di questa lista.** Il ledger porta **due receipt
+parziali e nessuna lettura completa**: `FTR-20260826-36828035-01` (`figures: captions_only`,
+`supplementary: not_read`) e `FTR-20260826-36828035-02` (`figures: read`, `supplementary:
+unavailable`). Nessuno dei due è `complete_fulltext_read`. Nel frattempo `PAPER 007` — il record di
+registro che ne è la fonte — è citato da **`CLAIM 006` e `CLAIM 007`, entrambi `consolidated
+baseline`**, e porta `Identifier: pending normalization` con un Full title che non è il titolo di
+nessun articolo singolo. Due claim di baseline poggiano quindi su un paper che nessuno ha finito di
+leggere e su un record la cui identità non è normalizzata. È anche, indipendentemente, l'unico
+riferimento di questa lista con fenotipo **epilettico** — quindi rilevante per il genotipo di
+riferimento e non solo per l'igiene del registro. **Priorità:** ALTA. **Current status:** ⬜ aperto.
+
+---
+
+## FT-084 — `PMID 30350478` (Hussain/Aldaz 2018) · la letteratura-premessa dietro `CLAIM 029`
+
+**Paper:** PMID 30350478 — Hussain T, Liu B, Shrock MS, Williams T, Aldaz CM, *WWOX, the FRA16D
+gene: A target of and a contributor to genomic instability*. Risolto da **rif. 12** di
+`PMID 41562193`. **Assente dal ledger.**
+
+**Perché.** È la fonte-premessa dell'asse che `CLAIM 029` (`in observation`) descrive, e
+`PMID 41562193` vi si appoggia per l'affermazione che la perdita di Wwox causa instabilità
+genomica — affermazione che i suoi stessi dati Wwox non mostrano (dossier §4.2). Leggere il
+primario è il modo per stabilire se il null osservato in Figura S1 sia in tensione con la
+letteratura o coerente con essa. **Priorità:** media-alta. **Current status:** ⬜ aperto.
+
+---
+
+## FT-085 — `PMID 27773744` e `PMID 27869163` (Schrock 2016/2017) · le linee MEF usate, e la rotta Wwox–Brca1
+
+**Paper:** PMID 27773744 — Schrock MS, Karras JR, Guggenbiller MJ, Druck T, Batar B, Huebner K,
+*Fhit and Wwox loss-associated genome instability: A genome caretaker one-two punch*; e
+PMID 27869163 — Schrock MS, Batar B, Lee J, *et al.*, *Wwox-Brca1 interaction: Role in DNA repair
+pathway choice*, *Oncogene* 2017;36:2215–2227. Rif. **18** e **19** di `PMID 41562193`. **Entrambi
+assenti dal ledger.**
+
+**Perché.** Il primo è la fonte delle linee MEF `KO3/KO4/KO5/WT4/WT7` effettivamente sequenziate in
+`41562193`: è lì che si stabilisce la storia di coltura e passaggio delle linee, l'unica variabile
+che potrebbe spiegare perché una linea **wild-type** porti il carico mutazionale più alto del
+dataset. Il secondo è l'anello Wwox–Brca1, che `PMID 38499540` (già letto) tocca dall'altro lato.
+**Priorità:** media. **Current status:** ⬜ aperto.
+
+---
+
+## FT-086 — `PMID 15073846` e `PMID 15998374` (Guler 2004/2005) · la premessa di co-delezione, mai misurata
+
+**Paper:** PMID 15073846 — Guler G, Uner A, Guler N, *et al.*, *The fragile genes FHIT and WWOX are
+inactivated coordinately in invasive breast carcinoma*, *Cancer* 2004;100; e PMID 15998374 — Guler
+G, *et al.*, *Concordant loss of fragile gene expression early in breast cancer development*,
+*Pathol Int* 2005;55. Rif. **10** e **13** di `PMID 41562193`. **Entrambi assenti dal ledger.**
+
+**Perché.** Sono le **uniche** fonti empiriche della premessa su cui poggia per intero la
+conclusione WWOX di `41562193`: che FHIT e WWOX si perdano insieme, e che quindi l'SBS40c visto
+nelle cellule Fhit-ko sia attribuibile a WWOX. In `41562193` quella premessa non è mai misurata —
+nessun blot WWOX, nessun trascritto, nessun copy number di FRA16D nel materiale Fhit-ko. La forza
+della premessa si stabilisce solo qui. Sono studi di carcinoma mammario: contesto oncologico, cioè
+esattamente il caso per cui esiste la regola 3 di [[gold_is_in_the_details]]. **Priorità:** media.
+**Current status:** ⬜ aperto.

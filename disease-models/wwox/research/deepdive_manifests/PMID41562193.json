@@ -1,0 +1,516 @@
+{
+  "schema_version": 2,
+  "pmid": "41562193",
+  "doi": "10.1002/gcc.70106",
+  "receipt": "FTR-20260909-41562193-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID41562193.md",
+    "disease-models/wwox/research/commit_candidates/CC-20260909-41562193-01.md"
+  ],
+  "verbatim_locators": {
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML for PMC12820907 returned HTTP 200 and 90040 bytes of JATS on 2026-09-09; the same record reports inEPMC=Y, isOpenAccess=Y, hasSuppl=Y, license cc by-nc. The structured XML is the surface every text locator is anchored to; no PDF text layer was used for any text locator.",
+    "entries": [
+      {
+        "proposition": "The paper states in its own Results that the Wwox knockout samples carry too few substitutions for any clock-like signature to be detected in them - i.e. the Wwox arm of the study is underpowered for the study's own endpoint.",
+        "snippet": "The Wwox ko cells show very few SBSs, far too few to detect the clock‐like SBSs.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Results, the paragraph reporting the SigProfilerAssignment analysis of Figure 3",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Under SigProfilerExtractor the authors explicitly record a NEGATIVE result in the Wwox samples: no SBS40 of any sub-type was observed in either Wwox knockout or Wwox wild-type samples.",
+        "snippet": "We did not observe SBS40 or SBS40 a,b,c in these Wwox ko or wt samples.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Results, the paragraph reporting Figure S1 (SigProfilerExtractor)",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The attribution of SBS40c to WWOX is made by an argument from co-deletion inside FHIT-knockout cells, not by observing SBS40c in a WWOX-knockout sample. The authors' own connective is 'suggesting'.",
+        "snippet": "suggesting that SBS40c might be due to Wwox loss in the Fhit ko cells",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Results, the numbered list of reasons following the Figure 3 description",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Results section closes by asserting that WWOX/FRA16D loss underlies SBS40c accumulation 'in these mouse knockout tissues and cells' - a conclusion stated at a strength the Wwox-genotype data in this paper do not reach.",
+        "snippet": "We conclude from the mutational signature profiles in cells and tissues that Fhit/Fra3B loss or deletion underlies SBS5 and Wwox/Fra16D loss likely underlies SBS40c mutation accumulation in these mouse knockout tissues and cells.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Results, final sentence of the section",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "In the Discussion the same attribution is stated more weakly and conditionally, and its premise - that Fhit inactivation carries Wwox inactivation with it - is named.",
+        "snippet": "where SBS40c could have been contributed by Wwox loss, since Fhit inactivation regularly is associated with Wwox inactivation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Discussion, first paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "A filtering step removes every variant seen in any wild-type mouse from ALL samples before signature analysis, which by construction depletes the wild-type comparison group that the knockout groups are then contrasted against.",
+        "snippet": "Additionally, variants that were present in any of our WT mice were removed from all samples prior to mutational signature analysis.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Materials and Methods, Exome Sequencing",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Methods declare COSMIC signature reference v3.3 for mm10.",
+        "snippet": "using the COSMIC mutational signatures data files v3.3 for genome mm10",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Materials and Methods, Mutational Signature Analysis of Single Base Substitutions (SBS)",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The deposited supplementary table declares a DIFFERENT COSMIC reference version - 3.4 - from the v3.3 declared in the Methods, and it is v3.4 that first splits SBS40 into SBS40a/b/c, the very entity the paper's WWOX conclusion is about.",
+        "snippet": "Table S1: Cosine similarities of Cosmic SBSs version 3.4 mm10.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Supporting information section of the article XML, caption of the deposited Table S1",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The only neural tissue in the study - mouse cortex - is described in one sentence of Methods with no further disaggregation anywhere in the paper.",
+        "snippet": "Frozen cortex tissue was used to isolate the DNA for sequencing.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Materials and Methods, Tissues and Cell Lines DNA Samples, the Wwox paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure 3 - the only figure in which SBS40c appears at all - was produced with SigProfilerAssignment, a different algorithm from the SigProfilerExtractor used for Figure 2 and Figure S1.",
+        "snippet": "However, for Figure 3 we used the more recent SigProfilerAssignment method",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Results, the paragraph introducing Figure 3",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Figure S1, the only panel that shows Wwox wild-type alongside Wwox knockout samples, was produced with SigProfilerExtractor.",
+        "snippet": "Similarly, Figure S1 illustrates results of SigProfilerExtractor analysis of some Wwox wt/ko/mutant sample sequences described in Table 1.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Results, the paragraph reporting the Wwox samples",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The similarity between SBS5 and SBS40c is stated in Results as exceeding 0.91.",
+        "snippet": "SBS5 and SBS40c share > 0.91 cosine similarity",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Results, the numbered list of reasons following the Figure 3 description",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Discussion states the SBS40c cosine values against SBS3 and SBS5, and bounds the comparison it performed to the range SBS1 through SBS40.",
+        "snippet": "found interesting cosine values for comparison of SBS40c to SBS3 and SBS5 (0.82 and 0.92 respectively)",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Discussion, third paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Library input was 50 ng of genomic DNA per exome library; no replicate or power calculation is reported anywhere in the paper.",
+        "snippet": "Mouse exome libraries were prepared using 50 ng genomic DNA as input",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Materials and Methods, Exome Library Generation",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Table 2 reports the cosine similarity matrix restricted to SBS3, SBS5 and the SBS40 sub-types.",
+        "snippet": "Cosine similarities for SBS3, SBS5, and SBS40.",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Table 2, caption",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Table 1 records Wwox-knockout cortex at postnatal day 18 contributed by the Aqeilan laboratory - the only neural tissue in the study and the only material with any proximity to the WWOX-DEE phenotype.",
+        "snippet": "CortexKO1 FVB/Wwox ko P18 Aqeilan/cortex",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Table 1, Aqeilan cortex block, first knockout row",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "Table 1 also declares FOUR Wwox WILD-TYPE cortex samples at P18 - the matched controls for the cortex knockouts - which means the study possessed a wild-type-versus-knockout contrast in the one neural tissue it collected.",
+        "snippet": "CortexWT1 FVB/Wwox wt P18 Aqeilan/cortex",
+        "surface": "table",
+        "artifact": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+        "anchor": "Table 1, Aqeilan cortex block, first wild-type row",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The deposited supplementary figure legend declares two of the five signatures it plots to be known artefacts, and supports that declaration with an unresolved citation placeholder rather than a reference.",
+        "snippet": "SBS46 and 54 are known artefactual SBSs (ref,LBA 2020).",
+        "surface": "supplement",
+        "artifact": "files/supplements/PMID41562193/GCC-65-e70106-s001_text.txt",
+        "anchor": "Supplementary Figure 1, legend, second sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The y-axis of Supplementary Figure 1 is an absolute mutation count per sample, which is what makes a between-genotype comparison of burden readable off the panel.",
+        "snippet": "Number of mutations in each signatrure",
+        "surface": "supplement",
+        "artifact": "files/supplements/PMID41562193/GCC-65-e70106-s001_text.txt",
+        "anchor": "Supplementary Figure 1, y-axis label (the misspelling is the deposit's own)",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - in Figure 3, SBS40c is present ONLY in the Fhit sample block and is absent from every Wwox sample. Measured over the extracted image: pixels matching the SBS40c legend swatch RGB(43,160,72) occur in exactly 11 bar columns spanning x=1165-1560, entirely inside the 'Fhit samples' axis bracket (x=1170-1633); zero such pixels occur anywhere within the 'Wwox samples' bracket (x=1645-2049). The tallest bar under the Fhit bracket reaches approximately 831 mutations; the tallest bar under the Wwox bracket reaches approximately 42.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 3 right panel, stacked bar graph 'Number of mutations in each signature', read as pixels from the 2084x1479 embedded image stream. Legend swatches sampled directly from the plotted legend box: SBS1 RGB(180,222,200), SBS5 RGB(114,197,151), SBS26 RGB(251,222,152), SBS32 RGB(141,86,76), SBS40c RGB(43,160,72), SBS97 RGB(118,79,161). Axis brackets located from the black rules beneath the tick labels: 'Fhit samples' x=1170-1633, 'Wwox samples' x=1645-2049. SBS40c-coloured pixels: 68812 in total, x range 1165-1560, y range 117-772, distributed over 11 discrete bar columns; none right of x=1560. Y calibration from the axis ticks, 0 at y=1574 and 800 at y=144.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID41562193/FIG3_g001_2084x1479_xref100.jpeg",
+        "anchor": "Figure 3, right panel (stacked bar graph), full-panel pixel measurement",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[3]",
+        "qualifies_needle": "Wwox/Fra16D loss likely underlies SBS40c mutation accumulation in these mouse knockout tissues and cells"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - the Wwox sample bars in Figure 3 contain colour segments that the figure's own six-item legend does not define (bright magenta, cyan, orange, orchid, olive and red), so part of every Wwox bar is assigned to signatures the figure never names. Consistent with this, the six printed panel percentages sum to 98.1%, leaving 1.9% of the assigned mutations unlabelled.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 3, Wwox block (KO4, KO3, KO5, cortexKO2, cortexKO3, cortexKO5, kidneyMut899, kidneyMut902, cortexKO7, cortexKO1, cortexKO6, kidneyMut898) read at 4x magnification. Segment colours present in these bars include hues matching none of the six legend swatches. Left-panel printed totals: SBS1 529/8.8%, SBS5 1,130/18.8%, SBS26 1,694/28.2%, SBS32 66/1.1%, SBS40c 2,434/40.5%, SBS97 43/0.7%; the six counts sum to 5,896 while each count divided by its own printed percentage implies a denominator near 6,010.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID41562193/FIG3_g001_2084x1479_xref100.jpeg",
+        "anchor": "Figure 3, right panel, Wwox sample block read at 4x; left panel printed 'Sig. Mutations' annotations",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figure 2 contains no Wwox sample of any genotype. Its 19 bars are 13 Fhit-knockout and 6 Fhit-wild-type samples, so nothing in Figure 2 bears on WWOX at all.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 2 right panel, x-axis labels read left to right: 1B, 20A, 3C, 14A, 14C, D32, 1A, A31, D31, F4, G4, 2C, 9B under the bracket 'Fhit KO'; H82, I5, 2Z, 2y, 2x, 3Z under the bracket 'Fhit WT'. Five signature panels on the left, labelled SBS1, SBS5, SBS23, SBS46, SBS54, with printed totals SBS1 6,566/14.3%, SBS5 16,862/36.7%, SBS23 4,230/9.2%, SBS46 10,339/22.5%, SBS54 7,940/17.3%.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID41562193/FIG2_g003_2085x1313_xref67.jpeg",
+        "anchor": "Figure 2, both panels, read from the 2085x1313 embedded image stream",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - per-sample mutation counts measured from Figure 2 are approximately 491 SBS1 and 1315 SBS5 per Fhit-knockout sample (means; maxima 636 and 1736). Two independent routes agree: pixel segmentation of the stacked bars, and the printed panel totals divided by the 13 knockout samples (505 and 1297). The per-sample TOTAL across all five signatures is approximately 3534.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 2 right panel measured by colour segmentation at the centre column of each of the 13 Fhit-KO bars. Segment colours: SBS1 RGB(181,222,200), SBS5 RGB(114,197,151), SBS23 RGB(217,123,177), SBS46 RGB(198,198,198), SBS54 RGB(149,149,149). Calibration by the printed totals gives 5.06-5.59 mutations per pixel across the five signatures (global 5.17), and the pixel-derived mean total per sample, 3534, matches 45,937/13 = 3533.6 arithmetically.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID41562193/FIG2_g003_2085x1313_xref67.jpeg",
+        "anchor": "Figure 2, right panel, 13 Fhit-KO bars, colour-segmented per bar",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - in Supplementary Figure 1 the sample carrying the HIGHEST total mutation burden is Wwox3WT, a Wwox WILD-TYPE MEF line, at approximately 2829 mutations, exceeding every Wwox knockout and every Wwox mutant sample in the panel. Wwox wild-type and Wwox knockout samples interleave across the whole rank order; the panel shows no separation of mutation burden by Wwox genotype.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Supplementary Figure 1 rendered from the deposited PDF at 300 dpi and measured by colour segmentation. Legend swatches: SBS1 RGB(172,241,208), SBS5 RGB(98,213,158), SBS23 RGB(226,119,194), SBS46 RGB(184,184,184), SBS54 RGB(127,128,127). Y calibration 0 at y=1574, 3000 at y=330. Totals in rank order: Wwox3WT 2829 [WT], Wwox5KO 1773 [KO], KO4 1020 [KO], WT4 972 [WT], KO3 789 [KO], KO5 750 [KO], WT889 388 [WT], WT7 355 [WT], Mut902 210 [Mut], WT904 207 [WT], Mut899 186 [Mut], Mut898 174 [Mut], WT900 147 [WT]. Wwox wild-type n=6 mean 816, max 2829; Wwox knockout/mutant n=7 mean 700, max 1773.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID41562193/FIGS1_render_300dpi_p1.png",
+        "anchor": "Supplementary Figure 1, single panel, 13 bars, measured at 300 dpi render of page 1",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[0]",
+        "qualifies_needle": "very few SBSs"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - across the 13 Wwox samples of Supplementary Figure 1, 29.4% of all plotted mutations (2877 of 9798) sit in SBS46 and SBS54, the two signatures the same figure's legend declares to be known artefacts. In three of the samples the artefactual share exceeds 60%.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Supplementary Figure 1, per-sample SBS46+SBS54 share: Wwox3WT 29.5%, Wwox5KO 13.7%, KO4 61.2%, WT4 23.6%, KO3 62.1%, KO5 60.8%, and 0.0% in the seven remaining samples (WT889, WT7, Mut902, WT904, Mut899, Mut898, WT900), which plot SBS1 and SBS5 only. Panel total 9798 mutations, of which 2877 in SBS46+SBS54.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID41562193/FIGS1_render_300dpi_p1.png",
+        "anchor": "Supplementary Figure 1, per-bar SBS46 and SBS54 segments",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[17]",
+        "qualifies_needle": "SBS46 and 54 are known artefactual SBSs"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figure 1 is an unannotated gross necropsy photograph. It carries no scale bar, no genotype label, no orientation marker and no arrow or outline identifying the lesion; the genotype and the diagnosis exist only in the caption. It bears on FHIT and not on WWOX.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 1, single colour photograph, 992x1323, showing an opened murine abdominal/thoracic cavity with extensive pale pink lobulated tumour masses among viscera on a blue drape. No scale bar, no ruler, no annotation, no letter panel labels, no arrows and no text of any kind within the image field.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID41562193/FIG1_g002_992x1323_xref22.jpeg",
+        "anchor": "Figure 1, whole image",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - the four Wwox wild-type cortex samples declared in Table 1 appear in NO figure of this paper. Figure 3's Wwox block plots only knockout and mutant samples, and Supplementary Figure 1 plots no cortex sample at all. The wild-type-versus-knockout contrast in the only neural tissue collected is therefore never shown, and the cortex knockouts are displayed only against Fhit samples on a shared axis.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 3, x-axis labels of the Wwox block read left to right at 4x magnification: KO4, KO3, KO5, cortexKO2, cortexKO3, cortexKO5, kidneyMut899, kidneyMut902, cortexKO7, cortexKO1, cortexKO6, kidneyMut898 - twelve labels, every one a knockout or a P47T mutant, none a wild type. Supplementary Figure 1 x-axis labels read: Wwox3WT, Wwox5KO, KO4, WT4, KO3, KO5, WT889, WT7, Mut902, WT904, Mut899, Mut898, WT900 - thirteen labels, MEF lines and Aldaz kidney only, no cortex sample of either genotype.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID41562193/FIG3_g001_2084x1479_xref100.jpeg",
+        "anchor": "Figure 3, x-axis labels of the Wwox block; cross-read against Supplementary Figure 1 x-axis labels",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[16]",
+        "qualifies_needle": "CortexWT1 FVB/Wwox wt P18 Aqeilan/cortex"
+      }
+    ]
+  },
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": true,
+      "reason": "The route for the reading itself: structured surface first, section-by-section coverage, figures as pixels, locators captured while the document was open."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Cascade never needed. Europe PMC fullTextXML returned the JATS at the first request (HTTP 200, 90040 bytes) and supplementaryFiles returned the whole figure and supplement set in one archive. Invoking an acquisition cascade for an article that resolves on the first lawful call would have been ceremony."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "🔴 R4 THRESHOLD CHECK RUN MECHANICALLY, NOT ASSUMED. All 18 claims carrying `Status: consolidated baseline` were enumerated from claim_registry_current.md and their titles read: CLAIM 002,003,004,005,006,007,008,012,014,015,017,018,019,020,021,022,023,024. Every one is WWOX-DEE neurobiology, human genotype-phenotype, prenatal cortical development, network physiology, myelin, or WW-domain biochemistry. None concerns somatic mutation burden, mutational signatures, clock-like signatures or the FHIT/WWOX co-loss axis. The only registry record this reading bears on is CLAIM 029, whose Status is `in observation`, not `consolidated baseline`; and the transfer verdict is ESPANSIONE/T3, which cannot justify a MAJOR working-model bump. R4 is therefore NOT triggered. Recorded rather than skipped silently, because the finding here is counter-directional and the temptation to skip the check is exactly where it would be skipped."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "Considered seriously and declined. The paper yields no biomarker, molecule, pathway correction or repurposing lead: its only WWOX-directed output is a negative about a mutational-signature attribution, and a negative of that shape belongs in the dossier and the dismissal-adjacent record, not in the discovery ledger as capital. One methodological lead IS carried forward and is recorded as a discovery-ledger entry rather than a discovery sweep."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "No molecule, no dose, no endpoint, no target engagement. T3/ESPANSIONE material cannot mature a therapeutic lever."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No compound is named or promoted anywhere in this reading."
+    },
+    {
+      "skill": "legend-proband-priority-matrix",
+      "used": false,
+      "reason": "Wave order was fixed by the dispatch; a single assigned PMID has no ordering decision to make."
+    },
+    {
+      "skill": "legend-session-self-eval",
+      "used": true,
+      "reason": "Run at the end of the wave, before capability-scout and before the closing report."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 408,
+    "publications_on_gene": 32,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "counts_measured_at": "2026-09-09, PubMed ESearch",
+    "weighting": "🔴 THIS IS THE HUEBNER LABORATORY'S PAPER, NOT THE AQEILAN LABORATORY'S, and the lot being an Aqeilan sweep is exactly why that is stated first. Measured today: Huebner K 408 publications, 131 with FHIT, 32 with WWOX - a FHIT laboratory of thirty years' standing, for which WWOX is the adjacent second fragile site. Aqeilan RI (137 publications, 65 on WWOX, 14 on epilepsy/encephalopathy) appears third-from-first as the contributor of one tissue set; Aldaz CM (38 on WWOX) contributed the P47T kidneys. Consequences applied throughout: (a) the Fhit material - the knockout, the ageing cohort, the tumour spectrum, the exome pipeline - is this group's own long-standing system and its observation is weighted first-hand; (b) every step that carries an observation made in Fhit-knockout cells ACROSS to a statement about WWOX is weighted as interpretation, because the WWOX arm is contributed material analysed by a FHIT laboratory and the paper's WWOX conclusion is reached by an argument about co-deletion rather than by a WWOX-genotype contrast; (c) primary for the gene is not primary for the disease, and this group is primary for neither WWOX nor WWOX-DEE - there is no human subject, no patient, no neurological phenotype and no reference-genotype variant anywhere in the study."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX",
+        "count": 707,
+        "source": "PubMed ESearch, 2026-09-09"
+      },
+      {
+        "query": "WWOX AND mutational signature",
+        "count": 18,
+        "source": "PubMed ESearch, 2026-09-09"
+      },
+      {
+        "query": "WWOX AND \"fragile site\"",
+        "count": 123,
+        "source": "PubMed ESearch, 2026-09-09"
+      },
+      {
+        "query": "FHIT AND mutational signature",
+        "count": 11,
+        "source": "PubMed ESearch, 2026-09-09"
+      },
+      {
+        "query": "\"clock-like\" AND mutational signature",
+        "count": 71,
+        "source": "PubMed ESearch, 2026-09-09"
+      },
+      {
+        "query": "SBS40",
+        "count": 18,
+        "source": "PubMed ESearch, 2026-09-09"
+      }
+    ],
+    "note": "Measured today, not carried forward. The WWOX x mutational-signature intersection is 18 records against a 707-record WWOX field - a genuinely thin corner, which is why this single paper carries disproportionate weight in it and why the strength of its WWOX conclusion matters more than its citation count would suggest."
+  },
+  "multihop": {
+    "references_enumerated": 36,
+    "gene_direct_refs_in_source": [
+      "15073846",
+      "38499540",
+      "30350478",
+      "15998374",
+      "17360458",
+      "36828035",
+      "27773744",
+      "27869163",
+      "25245215"
+    ],
+    "resolved": [
+      {
+        "pmid": "17360458",
+        "why": "ref [16], the source of the Wwox-knockout mouse used here",
+        "status": "complete_fulltext_read already in the ledger"
+      },
+      {
+        "pmid": "38499540",
+        "why": "ref [11], WWOX-BRCA1 in mammary tumorigenesis",
+        "status": "complete_fulltext_read already in the ledger (scientist-b, this session's sweep)"
+      }
+    ],
+    "queued": [
+      {
+        "pmid": "36828035",
+        "why": "ref [17]. THE HIGHEST-VALUE HOP IN THIS REFERENCE LIST. It is the provenance of the Wwox P47T kidney tissues analysed here, and independently it is a WWOX-DEE-relevant model paper - epilepsy, progressive neuroinflammation, cerebellar degeneration. The ledger holds two partial receipts for it (FTR-20260826-36828035-01 figures captions_only / supplementary not_read; -02 figures read / supplementary unavailable) and no complete read.",
+        "status": "queued as reading debt"
+      },
+      {
+        "pmid": "30350478",
+        "why": "ref [12], Hussain/Aldaz, WWOX as a target of and contributor to genomic instability - the direct premise literature behind CLAIM 029, which this reading bears on",
+        "status": "no receipt of any kind; queued"
+      },
+      {
+        "pmid": "27869163",
+        "why": "ref [19], Schrock, Wwox-Brca1 interaction and DNA repair pathway choice",
+        "status": "no receipt of any kind; queued"
+      },
+      {
+        "pmid": "27773744",
+        "why": "ref [18], Schrock, Fhit and Wwox loss-associated genome instability - the source of the MEF lines used here",
+        "status": "no receipt of any kind; queued"
+      },
+      {
+        "pmid": "15073846",
+        "why": "ref [10], Guler, coordinate FHIT/WWOX inactivation in breast carcinoma - the empirical basis for the co-deletion premise this paper's WWOX conclusion rests on",
+        "status": "no receipt of any kind; queued"
+      },
+      {
+        "pmid": "15998374",
+        "why": "ref [13], Guler, concordant loss of fragile gene expression early in breast cancer - same premise",
+        "status": "no receipt of any kind; queued"
+      }
+    ],
+    "not_opened_because_owned_elsewhere": [
+      {
+        "pmid": "25245215",
+        "why": "ref [31], Aqeilan FRA16D/WWOX review. It is assigned to AQEILAN-FT-B-001 (scientist-b) and is therefore not this actor's to open. Named, not read."
+      }
+    ],
+    "note": "36 references enumerated as an integer from the article XML back matter, each with its PubMed identifier where the deposit carries one (35 of 36; ref [21] is an arXiv preprint with no PMID). Nine are gene-direct. The two premise papers behind the co-deletion argument - refs [10] and [13], both Guler - are unread in this corpus, which matters because the paper's WWOX conclusion is carried entirely by that premise."
+  },
+  "corpus_crossquery": {
+    "query": "Does anything already in this corpus read a mutational-signature, somatic-mutation-burden or clock-like-signature result for WWOX, and does any existing claim record a WWOX genome-stability direction that this paper's Wwox-genotype data would bear on?",
+    "hits": 2,
+    "note": "Two surfaces answered and the first answer is an absence that matters. (1) ZERO of the 43 fulltext dossiers and ZERO of the 70 deepdive manifests mention a mutational signature, SBS40, SBS5 or a clock-like signature: this reading is the corpus's first contact with the mutational-signature axis for WWOX, so there is no prior reading to agree or disagree with, and the negative recorded here is the corpus's only datum on it. (2) claim_registry_current.md CLAIM 029 - `in observation`, 'WWOX contributes directly to DNA-damage-response competence and genome-stability maintenance' - is the one record this reading bears on; its source is PMID 25331887 via PAPER 030. This paper does not test ATM activation or relocalization and so does not touch CLAIM 029's mechanism; what it adds is a null at the phenotypic end of the same axis, in the one panel where Wwox wild-type and Wwox knockout are plotted side by side. Recorded as qualification, not as reversal. Additionally noted while cross-querying, and reported rather than repaired: PAPER 007 (Hussain 2023 P47T), the registry source of consolidated baseline CLAIM 006 and CLAIM 007, carries `Identifier: pending normalization`, and its recorded Full title is not the title of any single article."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-09-09",
+    "route": "PubMed efetch db=pubmed for PMID 41562193, and Europe PMC resultType=core for PMC12820907",
+    "result": "CLEAN. PubMed returns no CommentsCorrections element of any RefType; no retraction, no expression of concern, no erratum, no correction. PublicationTypes are Journal Article and Research Support N.I.H. Extramural only. Europe PMC returns commentCorrectionList: null. The article is 2026 and current."
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID41562193_Druck2026_PMC.xml",
+      "sha256": "13399d2d761f03c9e087f67985338ecdb8a926c3739845c1826bead4562202b5",
+      "kind": "article_text",
+      "note": "THE STRUCTURED SURFACE, obtained first and used for every text locator (rule 5d). Europe PMC REST fullTextXML for PMC12820907, HTTP 200, 90040 bytes of JATS 1.4. No PDF text layer underlies any text locator in this manifest. The validator's own extractor separates 29847 characters of non-abstract body from 1509 characters of abstract; text_surface_intrusion_check.py returns clean on the extracted body surface."
+    },
+    {
+      "path": "files/fulltext/PMID41562193_Druck2026_EuropePMC_render.pdf",
+      "sha256": "9424664260a701253d70f04cfddb04a392d8c0284a343a8d1f7bb4e2018aef46",
+      "kind": "article_binary",
+      "note": "Europe PMC render PDF (pdf=render), 8 pages, retained ONLY as the provenance of the high-resolution figure image streams extracted from it by xref. No text locator is anchored here."
+    },
+    {
+      "path": "files/supplements/PMID41562193/GCC-65-e70106-s001.pdf",
+      "sha256": "56601d8499f687abd6a319b200bf7dfb27d6f53fa3712ad32526d0ec11a69675",
+      "kind": "article_binary",
+      "note": "Deposited Supplementary Figure 1, from the Europe PMC supplementaryFiles archive. Vector, single page, no raster image streams."
+    },
+    {
+      "path": "files/supplements/PMID41562193/GCC-65-e70106-s001_text.txt",
+      "sha256": "1583c5e42b4b5371ef7c157229a485d23a98d09e2fd956ea936d976dfb22cdad",
+      "kind": "supplement_text",
+      "note": "Deterministic text extraction of the supplement PDF via PyMuPDF get_text(), 318 characters. _refuse_suspect_surface returns clean and text_surface_intrusion_check.py returns clean. Both supplement locators are anchored here."
+    },
+    {
+      "path": "files/supplements/PMID41562193/GCC-65-e70106-s002.xlsx",
+      "sha256": "314c0b0ccbfb65473343473c91075dfbfffd4cbbb3be77de6fbed778241d69ff",
+      "kind": "supplement_text",
+      "note": "Deposited Supplementary Table 1, xlsx, an 86x86 cosine-similarity matrix. Read in full by parsing the workbook XML. NOT used as a locator surface - the validator verifies text against XML/HTML/TXT/DOCX and an xlsx is none of those - so what it established is carried as arithmetic in the dossier: all ten values of the article's Table 2 reconcile exactly against it, 10 of 10."
+    },
+    {
+      "path": "files/figures/PMID41562193/FIG3_g001_2084x1479_xref100.jpeg",
+      "sha256": "47dd048cec71317fdb1f175e46627f7e19b167cf9801651ab1ddb456c88c6911",
+      "kind": "figure",
+      "note": "Figure 3, 2084x1479, extracted by xref from the render PDF (page 5, xref 100). The decisive panel."
+    },
+    {
+      "path": "files/figures/PMID41562193/FIG2_g003_2085x1313_xref67.jpeg",
+      "sha256": "a20e92541a87da56e4cce9377142a68a9feb77fbdbe59d85c3abbef01f12dd4e",
+      "kind": "figure",
+      "note": "Figure 2, 2085x1313, xref 67, page 3."
+    },
+    {
+      "path": "files/figures/PMID41562193/FIG1_g002_992x1323_xref22.jpeg",
+      "sha256": "b76c889324547241361ce4dfdf78841376f2725bd13afa216d2089fe6169e81b",
+      "kind": "figure",
+      "note": "Figure 1, 992x1323, xref 22, page 2."
+    },
+    {
+      "path": "files/figures/PMID41562193/FIGS1_render_300dpi_p1.png",
+      "sha256": "7c065ee219578442d32786bb49f66a85d00874fd2e5061f5cc0759b6875d837e",
+      "kind": "figure",
+      "note": "Supplementary Figure 1 rendered from the deposited vector PDF at 300 dpi. Derivation recipe in page_renders."
+    },
+    {
+      "path": "files/figures/PMID41562193/GCC-65-e70106-g003.jpg",
+      "sha256": "e0a1916614685a35c919eb751205c8c4863284c51837d7dad668bab28335e8f2",
+      "kind": "figure",
+      "note": "Publisher web-display JPEG of Figure 2, 532x335, from the supplementaryFiles archive. Retained as the lower-resolution counterpart actually distributed by the archive; superseded for reading by the xref stream."
+    },
+    {
+      "path": "files/figures/PMID41562193/GCC-65-e70106-g001.jpg",
+      "sha256": "c330a5840610d804e68df121709a37e931647c735a4e8f7df06a6f1feda9f436",
+      "kind": "figure",
+      "note": "Publisher web-display JPEG of Figure 3, 532x378. Superseded for reading by the xref stream."
+    },
+    {
+      "path": "files/figures/PMID41562193/GCC-65-e70106-g002.jpg",
+      "sha256": "839ed123da86a3f5d095efae45fd2d346d01ea0d53b5efb447eac55a0d9f64b5",
+      "kind": "figure",
+      "note": "Publisher web-display JPEG of Figure 1, 496x662. Superseded for reading by the xref stream."
+    }
+  ],
+  "figure_extractions": [
+    {
+      "method": "PyMuPDF Document.extract_image() over the xref table of the Europe PMC render PDF",
+      "source": "files/fulltext/PMID41562193_Druck2026_EuropePMC_render.pdf",
+      "source_sha256": "9424664260a701253d70f04cfddb04a392d8c0284a343a8d1f7bb4e2018aef46",
+      "streams": [
+        {
+          "page": 2,
+          "xref": 22,
+          "px": "992x1323",
+          "saved_as": "files/figures/PMID41562193/FIG1_g002_992x1323_xref22.jpeg"
+        },
+        {
+          "page": 3,
+          "xref": 67,
+          "px": "2085x1313",
+          "saved_as": "files/figures/PMID41562193/FIG2_g003_2085x1313_xref67.jpeg"
+        },
+        {
+          "page": 5,
+          "xref": 100,
+          "px": "2084x1479",
+          "saved_as": "files/figures/PMID41562193/FIG3_g001_2084x1479_xref100.jpeg"
+        }
+      ],
+      "note": "🔴 WHY THIS ROUTE AND NOT THE ARCHIVE JPEGs. The Europe PMC supplementaryFiles archive distributes the three main figures at 532x378, 496x662 and 532x335 - too coarse to read a 96-substitution signature panel or to segment a stacked bar. The render PDF embeds the same three figures as image streams at roughly four times that linear resolution. extract_image returns the EMBEDDED STREAM, not a rasterisation of the page, so these are the deposit's own figure bytes at the highest resolution this deployment can lawfully reach. Both versions are fingerprinted above and the archive JPEGs are retained rather than discarded. PyMuPDF became available in this deployment only for this wave; in wave 1 this article's figures would have been read at 532 px or declared unrecoverable."
+    }
+  ],
+  "page_renders": [
+    {
+      "source": "files/supplements/PMID41562193/GCC-65-e70106-s001.pdf",
+      "source_sha256": "56601d8499f687abd6a319b200bf7dfb27d6f53fa3712ad32526d0ec11a69675",
+      "page": 1,
+      "dpi": 300,
+      "output": "files/figures/PMID41562193/FIGS1_render_300dpi_p1.png",
+      "output_sha256": "7c065ee219578442d32786bb49f66a85d00874fd2e5061f5cc0759b6875d837e",
+      "renderer": "PyMuPDF Page.get_pixmap(dpi=300)",
+      "output_px": "2280x2100",
+      "note": "Supplementary Figure 1 is vector and carries no embedded raster, so the pixels have to be produced rather than extracted. Recorded as a recipe per rule 5e: same source digest, same page, same dpi, same renderer reproduces the identical bytes from a reader's own copy of the deposit."
+    }
+  ]
+}
