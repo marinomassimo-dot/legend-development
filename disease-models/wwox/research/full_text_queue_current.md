@@ -3516,8 +3516,34 @@ già in `FT-057`. **«Probabilmente» non è un'identificazione:** primo gesto, 
 
 **Next action:** recuperare il supplementary di `18674750` (`S4` per primo); poi risolvere e leggere
 il rif. 42; poi confermare l'identità del rif. 47 contro `FT-057` invece di presumerla.
-**Current status:** ⬜ aperto. **Priorità:** ALTA per `S4` — è l'unico pezzo che rende quantitativo
-un risultato oggi solo visivo; media per gli hop.
+
+🟢 **AGGIORNATO 2026-09-09 — `scientist-b`, wave 2 di `AQEILAN-FT-B-001`, ricevuta
+`FTR-20260909-18674750-01` (`complete_fulltext_read`, 0 gap).** Delle tre next action, **due sono
+chiuse e una resta**:
+
+1. **Supplementary recuperato e letto per intero** — non da PMC, il cui percorso `/bin/` sta dietro
+   il proof-of-work, ma dalla cattura Internet Archive del percorso PMC pre-2024. Provenienza
+   confermata in modo indipendente: l'articolo dichiara *«mmc1.pdf (227.3KB)»* e il file recuperato
+   è di 232.805 byte = 227,3 KiB. `S1`–`S4` lette **come immagini** a risoluzione nativa, `S1`/`S2`
+   tabelle comprese.
+   🔴 **E la premessa di questa voce va corretta: `S4` NON è supporto «quantitativo».** È una
+   titolazione competitiva letta a occhio — nessuna densitometria, nessun controllo di caricamento,
+   nessuna quantificazione in legenda o nel testo. Stabilisce la **direzione** (il complesso
+   sull'allele T viene competuto via progressivamente fino a quasi sparire a 100X, quello
+   sull'allele G regge ancora a 100X), **non un'affinità**. Il debito è pagato e la sua descrizione
+   era più forte dell'evidenza.
+2. **Rif. 47 identificato, e la congettura era sbagliata.** Risolto dal DOI della referenza stessa
+   (`10.1073/pnas.0609783104`): è **`PMID 17360458`** (Aqeilan *et al.*, *PNAS* 2007), **non**
+   `PMID 18487609`. Entrambi risultano già letti a profondità completa in questo ledger, quindi il
+   lead sulla morte metabolica del KO **non era affatto debito di lettura**. «Probabilmente» non era
+   un'identificazione, e non lo era in una direzione che nessuno avrebbe controllato.
+3. ⬜ **Resta il rif. 42** — risolto a **`PMID 17086198`** (Pennacchio *et al.*, *Nature* 2006,
+   *In vivo enhancer analysis of human conserved non-coding sequences*), **assente dal ledger**.
+   È l'item singolo di maggior valore che questa lettura nomina: evidenza *in vivo*, di terzi, di un
+   **secondo** enhancer funzionale nello stesso introne 8.
+
+**Current status:** 🟡 parzialmente chiusa — debito supplementary **PAGATO**, identità rif. 47
+**RISOLTA**, resta il solo rif. 42. **Priorità:** media, e ora concentrata su `FT-071` → `PMID 17086198`.
 
 ---
 
@@ -3870,3 +3896,66 @@ because it was found from two directions at once.*
 **Supplement:** ✅ retrieved — `NIHMS263536-supplement-1.pdf`, 24 pages, 6.0 MB, via
 `framework/scripts/pmc_pow_fetch.py`. The prior reading declared it unretrievable and named it as
 holding the refutation of the Figure 5 title; **it does, and four separate findings came out of it.**
+
+---
+
+## FT-079 — `PMID 16941225` (Nunez 2006) · il livello proteico della distribuzione tissutale di WWOX
+
+**Paper:** PMID 16941225 · DOI 10.1007/s10735-006-9046-5 — Nunez MI, Ludes-Meyers J, Aldaz CM.
+*WWOX protein expression in normal human tissues.* *J Mol Histol* 2006;37:115–125. Risolto per
+titolo esatto da **rif. 46** di `PMID 18674750`.
+**Assente dal ledger delle ricevute.**
+
+**Perché ora.** La lettura del 2026-09-09 di `18674750` ha aperto la sua `Figure S3`: un pannello
+RT-PCR su **nove tessuti umani** in cui il prodotto WWOX è presente **in tutte e nove le corsie,
+cervello compreso** — mentre il testo dell'articolo nomina soltanto fegato, adipe, pancreas e
+muscolo scheletrico. Questa referenza è la **controparte proteica** di quel gel, ed è la fonte
+dell'affermazione, nella Discussione di `18674750`, che l'espressione più alta di WWOX sia nei
+tessuti a regolazione ormonale (testicolo, ovaio, prostata). Leggerla permetterebbe al corpus di
+dire qualcosa sulla distribuzione tissutale di WWOX **a due livelli** invece di appoggiarsi a una
+RT-PCR endpoint del 2008 su gel di agarosio, che è evidenza debole di abbondanza relativa.
+**Priorità:** ALTA fra i quattro nuovi hop.
+**Current status:** ⬜ aperto.
+
+---
+
+## FT-080 — `PMID 10861292` (Ried 2000) · le tre delezioni omozigoti dentro l'introne 8
+
+**Paper:** PMID 10861292 — Ried K *et al.*, *Common chromosomal fragile site FRA16D sequence:
+identification of the FOR gene spanning FRA16D and homozygous deletions and translocation
+breakpoints in cancer cells*, *Hum Mol Genet* 2000;9:1651–1663. Risolto da **rif. 43** di
+`PMID 18674750`. **Assente dal ledger.**
+`FOR` è `WWOX` sotto il suo nome originale.
+
+**Perché.** È la fonte delle **tre regioni distinte di delezione omozigote nell'introne 8** in linee
+di adenocarcinoma gastrico AGS. Lega lo **stesso introne** che porta l'elemento cis-regolatorio di
+`rs2548861` all'instabilità associata al cancro: il lato «instabilità» della medesima regione
+regolatoria. **Priorità:** media. **Current status:** ⬜ aperto.
+
+---
+
+## FT-081 — `PMID 18193043` (Willer 2008) · il secondo segnale indipendente nello stesso introne
+
+**Paper:** PMID 18193043 · DOI 10.1038/ng.76 — Willer CJ *et al.*, *Newly identified loci that
+influence lipid concentrations and risk of coronary artery disease*, *Nat Genet* 2008;40:161–169.
+Risolto da **rif. 12** di `PMID 18674750`. **Assente dal ledger.**
+
+**Perché.** Porta `rs2667590` (MAF 0.03), top hit della regione da 12,4 Mb in quella meta-analisi,
+**nello stesso introne 8** e **senza alcun LD** con `rs2548861` (r² < 0.02). Due varianti
+indipendenti in un introne sostengono **WWOX come locus**, non `rs2548861` come variante — ed è
+anche il GWAS in cui `rs2548861` **non** replica sotto modello additivo. **Priorità:** media.
+**Current status:** ⬜ aperto.
+
+---
+
+## FT-082 — `PMID 17458891` (Aqeilan & Croce 2007) · review, quindi rotta verso i primari
+
+**Paper:** PMID 17458891 · DOI 10.1002/jcp.21099 — Aqeilan RI, Croce CM, *WWOX in biological
+control and tumorigenesis*, *J Cell Physiol* 2007;212:307–310. Risolto da **rif. 45** di
+`PMID 18674750`. **Assente dal ledger.**
+
+**Perché, e con quale peso.** È la fonte, citata a un passo di distanza da `18674750`, del dominio
+SDR come indizio di metabolismo steroideo e della steroidogenesi compromessa nei topi Wwox-null.
+**È una review:** vale come **rotta verso i primari**, non come primario. **Priorità:** bassa in sé,
+media come indice. **Current status:** ⬜ aperto.
+
