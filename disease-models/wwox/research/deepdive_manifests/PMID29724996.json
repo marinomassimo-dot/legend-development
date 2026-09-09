@@ -2,9 +2,10 @@
  "schema_version": 2,
  "pmid": "29724996",
  "doi": "10.1038/s41419-018-0510-4",
- "receipt": "FTR-20260810-29724996-01",
+ "receipt": "FTR-20260909-29724996-01",
  "landing": [
   "FTR-20260810-29724996-01",
+  "FTR-20260909-29724996-01",
   "full_text_queue_current",
   "discovery_ledger_current"
  ],
@@ -32,6 +33,21 @@
    "skill": "legend-safety-triage",
    "used": false,
    "reason": "Digoxin appears as a tool compound, not a proposed therapy. A cardiac glycoside with a narrow therapeutic index and no CNS rationale here does not reach BLOCK-1 triage on the strength of a mouse liver-tumour experiment whose two strongest targets were not measured."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Review floor checked and NOT met, deliberately and with the check written down. The audit is required when a reading would narrow, reverse, corroborate or remove a `consolidated baseline` claim, or justify a MAJOR working-model bump. The claims this hepatic reading touches are CLAIM 025 (WWOX/HIF1A ratio) and CLAIM 009 (mitochondrial/metabolic), and BOTH carry Status `in observation`. The three `consolidated baseline` claims in the registry (012, 017, 019) are human clinical-genotype claims that this mouse hepatic paper does not reach. No MAJOR bump is proposed; the commit candidate is MINOR and adds boundaries rather than reversing a baseline."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "The supplement's discovery-grade leads (CTGF/YAP time course, the context-dependence of the glycolytic target set, serum ALT under HFD) are recorded as locators and as a discovery-ledger append. Running the cumulative discovery skill on top would restate them in a second place without adding a source."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is promoted by this reading. Digoxin appears as the paper's own tool compound and this reading NARROWS what it demonstrates (entries[9], entries[16], entries[17]); narrowing a compound's evidence does not promote it, so BLOCK-1 has nothing to gate."
   }
  ],
  "group_assessment": {
@@ -120,19 +136,25 @@
   "performed": true,
   "query": "Of the local full texts with no complete read, which carry a structured XML/HTML surface after this session's retrieval sweep, and which of those sit on a live cross-paper premise?",
   "hits": 24,
-  "finding": "The sweep converted 24 of 35 PDF-only Aqeilan papers to a structured surface; 11 have no PMCID at all and stay in the degraded class with 17803050. This paper was read out of most-recent-first order, deliberately and declaredly, because it is the third side of a triangle whose other two sides closed the same day: the hepatic knockout that does not lower HDL (24871327) and the muscle knockout that raises HIF1alpha/PKM2/PDK1 (30755385)."
+  "finding": "The sweep converted 24 of 35 PDF-only Aqeilan papers to a structured surface; 11 have no PMCID at all and stay in the degraded class with 17803050. This paper was read out of most-recent-first order, deliberately and declaredly, because it is the third side of a triangle whose other two sides closed the same day: the hepatic knockout that does not lower HDL (24871327) and the muscle knockout that raises HIF1alpha/PKM2/PDK1 (30755385).",
+  "performed_again": {
+   "at": "2026-09-09",
+   "query": "Which sections of this paper does the existing receipt ledger leave uncovered, and does the uncovered material bear on any locator already in canonical state?",
+   "hits": 1,
+   "finding": "Exactly one receipt exists for this PMID (FTR-20260810-29724996-01, partial) and it leaves exactly one section uncovered: supplementary, recorded `not_read`. That section was read in full on 2026-09-09. It bore on canonical state in three ways rather than none: it QUALIFIED a running-text sentence (entries[27]/[28]), it CORROBORATED an existing panel finding in a second cohort (entries[31] against entries[7]), and it BOUNDED the paper's central positive result by naming the closed five-promoter ChIP roster (entries[30] against entries[0])."
+  }
  },
  "retraction_check": {
   "performed": true,
-  "at": "2026-08-10",
+  "at": "2026-09-09",
   "route": "PubMed esummary for 29724996",
-  "result": "No retraction and no expression of concern. One ORDINARY ERRATUM is attached: 'Erratum in' Cell Death Dis 2018 Nov 23;9(12):1159, PMID 30470736, recording that duplication had mistakenly occurred in the Fig 3A and D H&E panels. Per the corpus rule an ordinary erratum is annotated and does NOT create a PUBLICATION_INTEGRITY_HOLD. The surface read here is the corrected version: the XML carries a Change history entry dated 11/23/2018, so the Fig 3 panels inspected below are post-correction. The erratum itself was retrieved as a structured surface during this session's sweep.",
+  "result": "No retraction and no expression of concern. One ORDINARY ERRATUM is attached: 'Erratum in' Cell Death Dis 2018 Nov 23;9(12):1159, PMID 30470736, recording that duplication had mistakenly occurred in the Fig 3A and D H&E panels. Per the corpus rule an ordinary erratum is annotated and does NOT create a PUBLICATION_INTEGRITY_HOLD. The surface read here is the corrected version: the XML carries a Change history entry dated 11/23/2018, so the Fig 3 panels inspected below are post-correction. The erratum itself was retrieved as a structured surface during this session's sweep. RE-CHECKED 2026-09-09 on the freshly acquired Europe PMC deposit: the erratum (PMID 30470736) remains an ordinary Author Correction, no retraction and no expression of concern. The 2026-09-09 resume additionally reads the correction itself as its own assigned PMID in the same wave, so the erratum stops being an annotation on this record and becomes a read source.",
   "hold": false
  },
  "source_artifacts": [
   {
    "path": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
-   "sha256": "0460ee2f58840cd25613441039aff76bccdf97325d4197c7387516189fa9e100",
+   "sha256": "1561c478a49329bb0d6d8c5bcdcfc7cd6954be729515560b22065bb8dab70494",
    "kind": "article_text"
   },
   {
@@ -141,38 +163,69 @@
    "kind": "article_binary"
   },
   {
+   "path": "files/fulltext/PMID29724996_AbuRemaileh2018_supplement.txt",
+   "sha256": "3882f4aab307f5a5e474b4dc2b7879d36a8052d611850e435e69e2e2f8310e30",
+   "kind": "article_text",
+   "extraction": "pdftotext -raw -nopgbrk (poppler) over PMID29724996_AbuRemaileh2018_supplement.pdf, whose SHA-256 reproduces the digest fingerprinted by the 2026-08-10 reading. -nopgbrk is a re-derivation, not a post-hoc strip: the page-break U+000C the default emitter inserts is a delimiter pdftotext adds, not a glyph of the document, and the protocol forbids cleaning a surface after the fact."
+  },
+  {
+   "path": "files/fulltext/PMID29724996_AbuRemaileh2018_article.pdf",
+   "sha256": "56aaba7132856f07cf2705f9023eb10c069b676cc648b9dd273462ffe001e2da",
+   "kind": "article_binary"
+  },
+  {
    "path": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig1_HTML.jpg",
-   "sha256": "2f323f13a798f49f09885b607e37ffaaf3902e913b06234c49b1cb0cc3430267",
+   "sha256": "f70cffe2a9c5a7237a79c0faf67cd5b3316802e6b1e3ac30595e76cf5991160b",
    "kind": "figure"
   },
   {
    "path": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig2_HTML.jpg",
-   "sha256": "d3dacf4b0cb6c994155043ed563946c7ed5bbaa2811b6f17e94044fa9c23af82",
+   "sha256": "ef2951e59955e7d37d0eda330af2cb9b8c218eca1c242b3c605102a53dcd70bb",
    "kind": "figure"
   },
   {
    "path": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig3_HTML.jpg",
-   "sha256": "14e047df52ad9c8f4830a99ec013d3be04767d2291cc72f8795552d2c95ee16d",
+   "sha256": "52d6603ed1ebb63d4b8ddcccf0de3d00d2c0d2f645d5fe03edffb35d1962af2d",
    "kind": "figure"
   },
   {
    "path": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig4_HTML.jpg",
-   "sha256": "d4c28510cb31c2230d4610db8e27e78d270baac47c168927cbfc3b299aec074e",
+   "sha256": "fbf95e3cec3b2e381f181870328315da6f12b61f741e876c7500e0d4d4d575fc",
    "kind": "figure"
   },
   {
    "path": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig5_HTML.jpg",
-   "sha256": "341e97257c35cb140c88ef72f12766129d6bd97da69438ff1dc63a17472664a0",
+   "sha256": "753572bc8209c059f275c363cbf2f96e6dc0a453b04b5f05072db5d0c774bc46",
    "kind": "figure"
   },
   {
    "path": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig6_HTML.jpg",
-   "sha256": "0716747935a0e95864a5d0fb6f95c414484fa91c2ee7bc92e54a7baf87d3c46c",
+   "sha256": "991aa00cb8622ae20c9f1adceca31c5cdba8708c5ca6552a71ac79743abf24be",
    "kind": "figure"
   },
   {
    "path": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig7_HTML.jpg",
-   "sha256": "3b245b9efdee6fb8e8deeafd1ee786aeb8ec36fd7680fecc54cac5f131908ffa",
+   "sha256": "c08faa00c589d1376583dcbe1f5da0d8e461a3144695e3224379caed43ff8107",
+   "kind": "figure"
+  },
+  {
+   "path": "files/figures/PMID29724996/SuppFig1_p4-4.png",
+   "sha256": "63753ab8ed699be8c6c17f384d2360795b2f8aceb94b92ddb02460342e819578",
+   "kind": "figure"
+  },
+  {
+   "path": "files/figures/PMID29724996/SuppFig2_p5-5.png",
+   "sha256": "2ae7cd364c1acffaac3fed208a202a81416595f214fa44d2aa0d9b13efcb1ffc",
+   "kind": "figure"
+  },
+  {
+   "path": "files/figures/PMID29724996/SuppFig3_p6-6.png",
+   "sha256": "ff6ee9b7fe144c80facb5862e8c73831ab80ceeb9cd99d7dbfd6fd81b3e9e254",
+   "kind": "figure"
+  },
+  {
+   "path": "files/figures/PMID29724996/SuppFig4_p7-7.png",
+   "sha256": "458fad12755a4002283944efc284f7f4b19bb1051686a86a21c5ee5a559ecd61",
    "kind": "figure"
   }
  ],
@@ -209,15 +262,14 @@
    },
    {
     "contradicts": "entries[2]",
-    "contradicts_needle": "liver weight relative to body weight",
+    "contradicts_needle": "tumor load, as assessed by liver weight relative to body weight, was significantly higher",
     "cited_panel_check": "The sentence cites (Fig. 2e ) and this locator reads Fig 2E. Cited panel and falsifying panel are the same, so the contradiction is between the sentence and its own evidence.",
     "proposition": "PAIR 1, PANEL SIDE. Fig 2E plots absolute grams, not a body-weight ratio. Without normalisation the measurement cannot separate tumour burden from a larger animal.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 2E y-axis reads 'Liver Weight (g)', scale 0 to 4; Control ~1.53 g, cKO ~3.45 g, marked ***. No body-weight normalisation appears anywhere in the panel.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig2_HTML.jpg",
     "anchor": "Figure 2, panel E, axis label read at original resolution",
-    "panel_text_relation": "text_contradicted_by_panel",
-    "contradicts_needle": "tumor load, as assessed by liver weight relative to body weight, was significantly higher"
+    "panel_text_relation": "text_contradicted_by_panel"
    },
    {
     "proposition": "PAIR 2, BODY SIDE. The text asserts the glycolytic targets did not change at the early timepoints — an assertion of measured absence.",
@@ -229,15 +281,14 @@
    },
    {
     "contradicts": "entries[4]",
-    "contradicts_needle": "no change at 1 and 3-months post treatment",
+    "contradicts_needle": "demonstrated no change at 1 and 3-months post treatment",
     "cited_panel_check": "The sentence cites (Fig. 4a, b ) and the falsifying observation is read in those two panels: they plot five genes. Fig 4C is read only to enumerate the eight genes of the later timepoint, which is what makes four of them untested early; the next sentence of the paper cites 4c, d for that panel.",
     "proposition": "PAIR 2, PANEL SIDE. The early and late gene panels are not the same panel. Four genes were never measured at 1 and 3 months, so for those four 'no change' is not a negative result — it is an untested condition. This is the not-significant versus not-tested distinction.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 4A (1 Month) and 4B (3 Months) each plot exactly five genes: HK2, GLUT1, PKM2, LDHA1, GAPDH. Fig 4C (6 Months) plots eight: HK2, GLUT1, PKM2, LDHA1, PDK1, ENO1, ALDOA2, PGK1. PDK1, ENO1, ALDOA2 and PGK1 appear in no early panel.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig4_HTML.jpg",
     "anchor": "Figure 4, panels A, B and C, x-axis category labels read at original resolution",
-    "panel_text_relation": "text_contradicted_by_panel",
-    "contradicts_needle": "demonstrated no change at 1 and 3-months post treatment"
+    "panel_text_relation": "text_contradicted_by_panel"
    },
    {
     "proposition": "PAIR 3, BODY SIDE. The text puts all four proliferation genes, Axin included, up from one month.",
@@ -256,8 +307,7 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig3_HTML.jpg",
     "anchor": "Figure 3, panel F, significance marks and bar heights read at original resolution",
-    "panel_text_relation": "text_contradicted_by_panel",
-    "contradicts_needle": "from as early as 1-month post DEN treatment"
+    "panel_text_relation": "text_contradicted_by_panel"
    },
    {
     "proposition": "PAIR 4, BODY SIDE. The therapeutic claim: digoxin downregulates the HIF1alpha targets in the knockout.",
@@ -269,15 +319,14 @@
    },
    {
     "contradicts": "entries[8]",
-    "contradicts_needle": "showed downregulations of HIF1α targets",
+    "contradicts_needle": "showed downregulations of HIF1α targets, whereas no significant changes were observed in digoxin-treated DEN control mice",
     "cited_panel_check": "The sentence cites (Fig. 5d, f ) and this locator reads Fig 5D and 5F. Same panels.",
     "proposition": "PAIR 4, PANEL SIDE. Three of four targets fall under digoxin; PDK1 RISES and carries no significance mark, in the knockout and again in wild-type. The rescue is not uniform across the targets it is claimed for.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 5D: LDHA1 falls ~0.72 to ~0.36 (*), GLUT1 ~0.67 to ~0.26 (*), GAPDH ~1.05 to ~0.57 (**), PDK1 RISES ~1.50 to ~1.92 and is unmarked. Fig 5F repeats the PDK1 rise in WT saline versus WT digoxin.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig5_HTML.jpg",
     "anchor": "Figure 5, panels D and F, bar directions and significance marks read at original resolution",
-    "panel_text_relation": "text_contradicted_by_panel",
-    "contradicts_needle": "showed downregulations of HIF1α targets, whereas no significant changes were observed in digoxin-treated DEN control mice"
+    "panel_text_relation": "text_contradicted_by_panel"
    },
    {
     "proposition": "PAIR 5, BODY SIDE. The text places the c-Myc elevation after hepatectomy on days 2, 3 and 4.",
@@ -296,8 +345,7 @@
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig7_HTML.jpg",
     "anchor": "Figure 7, panel D, significance marks per timepoint read at original resolution",
-    "panel_text_relation": "text_contradicted_by_panel",
-    "contradicts_needle": "on day 2, 3, and 4 as compared with control mice"
+    "panel_text_relation": "text_contradicted_by_panel"
    },
    {
     "proposition": "PAIR 6, BODY SIDE. The text says the knockout proliferation index kept rising while the control fell — the basis for the claim that WWOX loss removes the termination phase of liver regeneration. THE CITATION IS INHERITED, NOT THE SENTENCE'S OWN: this sentence names no figure, so the snippet is extended backwards to carry the citation of the sentence immediately before it, which is the panel the passage is reading. That inheritance is a reader's inference and is declared as one here rather than presented as the author's pointer.",
@@ -309,15 +357,14 @@
    },
    {
     "contradicts": "entries[12]",
-    "contradicts_needle": "it continued rising in Wwox ΔHep mice",
+    "contradicts_needle": "whereas the proliferation index was reduced 4 and 7 days post hepatectomy in control mice, it continued rising",
     "cited_panel_check": "WEAKEST OF THE SIX PAIRS. The contradicted sentence carries no figure citation of its own; the citation in its snippet, (Fig. 7a, b ), belongs to the preceding sentence. This locator reads Fig 7B, which is inside that inherited citation, but the link from sentence to panel is the reader's and not the author's.",
     "proposition": "PAIR 6, PANEL SIDE. The knockout curve does not rise monotonically: it falls at day 4 before rising again at day 7.",
     "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7B cKO series: 3 Days ~0.44, 4 Days ~0.38, 7 Days ~0.48, so day 4 is a decrease from day 3. Marks are *** at 3, 4 and 7 days and absent at 1 and 2 days.",
     "surface": "figure",
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig7_HTML.jpg",
     "anchor": "Figure 7, panel B, cKO series values at days 3, 4 and 7 read at original resolution",
-    "panel_text_relation": "text_contradicted_by_panel",
-    "contradicts_needle": "whereas the proliferation index was reduced 4 and 7 days post hepatectomy in control mice, it continued rising"
+    "panel_text_relation": "text_contradicted_by_panel"
    },
    {
     "proposition": "The finding that lives only in a panel: florid hepatic steatosis in the knockout on NORMAL chow at 10 months. The running text describes these livers only as poorly differentiated tumours and reports steatosis solely for the high-fat arm. A lipid phenotype on standard diet is the currency of the Iatan lipid question and is invisible to a text-only reader.",
@@ -406,6 +453,112 @@
     "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
     "anchor": "Discussion, paragraph beginning 'Our data further present a critical metabolic and anti-proliferative role'",
     "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PAIR 1, AND THE METHODS SETTLE IT AGAINST THE RESULTS TEXT. The Results sentence (entries[2]) says tumour load was assessed by liver weight RELATIVE TO BODY WEIGHT; the Methods say, in their own words, that it was grams. So the disagreement is not merely text-versus-panel: the paper contradicts itself in prose, and the Methods side with the panel axis of Fig 2e. This is the locator that removes the charitable reading under which entries[2] was loose wording about a normalised measure.",
+    "snippet": "Tumor load was assessed by liver weight in grams.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
+    "anchor": "Materials and Methods, 'Mice and related experiments', final sentence of the paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The same paper DOES normalise liver weight to body weight — in the hepatectomy experiment, whose panel axis is a percentage of body weight. So the absolute-grams measure of Fig 2e and Fig 5c is not a house convention, an unavailable measurement or a limitation of the assay: the authors use both measures in one paper and apply the normalised one only where tumour burden is not the endpoint. That converts entries[3] from 'a normalisation was omitted' into 'a normalisation the authors demonstrably possess was omitted where it would have mattered most'.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 7C y-axis reads 'Liver Weight % of BW' against 'Days Post Hepatectomy'; compare Fig 2E, whose y-axis reads 'Liver Weight (g)', and Fig 5C, whose y-axis reads 'Liver Weight (g)'.",
+    "surface": "figure",
+    "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_assets/41419_2018_510_Fig7_HTML.jpg",
+    "anchor": "Figure 7, panel C, y-axis label, read at original resolution and compared with the y-axis labels of Figure 2E and Figure 5C",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "SUPPLEMENT PAIR, BODY SIDE. The running text characterises the DEN-free experiment as showing only a 'tendency' of glycolytic-target upregulation, and cites Supplementary Figure S3A for it. 'Tendency' is the vocabulary of a sub-significant drift.",
+    "snippet": "displayed a tendency of HIF1α glycolytic target genes upregulation (Figure S3A)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
+    "anchor": "Results, 'Enhanced expression of glycolytic genes in livers of DEN-WwoxDeltaHep mice', sentence beginning 'Interestingly, DEN-free'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SUPPLEMENT PAIR, PANEL SIDE, AND THE REASON THE SUPPLEMENT HAD TO BE OPENED. S3A does not show a uniform sub-significant drift: two of the five glycolytic targets carry significance marks (PKM2 and PDK1) and three do not (LDHA1, HK2, GLUT1). 'A tendency' understates the two marked genes and overstates the three null ones, so the panel neither simply confirms nor simply contradicts the sentence — it splits it. Recorded also because WWOX itself, reduced to roughly a quarter of control, carries NO significance mark in this panel while the legend defines one.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplement Fig S3A, DEN-free control vs cKO, n=4: WWOX ~0.95 -> ~0.25 with NO mark; PKM2 ~1.17 -> ~1.68 (*); PDK1 ~0.88 -> ~1.52 (*); LDHA1 ~0.82 -> ~0.92 unmarked; HK2 ~0.87 -> ~0.88 unmarked; GLUT1 ~0.86 -> ~0.72 unmarked (direction reversed).",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29724996/SuppFig3_p6-6.png",
+    "anchor": "Supplemental Figure 3, panel A, bar heights and significance marks read at 300 dpi from the rendered supplement page",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[27]",
+    "qualifies_needle": "a tendency of HIF1α glycolytic target genes upregulation"
+   },
+   {
+    "proposition": "The design fact that makes S3A worth its own locator: this cohort is DEN-FREE. It is the only place in the paper where HIF1alpha glycolytic targets are measured in Wwox-deleted liver WITHOUT the carcinogen, so it is the only evidence that the glycolytic shift is not purely a tumour-context phenomenon. n=4 per genotype.",
+    "snippet": "(A) mRNA expression levels of HIF1α glycolytic target genes in DEN-free control and",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_supplement.txt",
+    "anchor": "Supplemental Figures Legend, 'Supplement Figure3.', sentence (A)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE BOUNDARY ON THE PAPER'S CENTRAL POSITIVE RESULT, VISIBLE ONLY IN THE SUPPLEMENT. The ChIP experiment of Fig 4f — HIF1alpha occupancy on glycolytic promoters, the third side of the hepatic triangle recorded at entries[0] — was run with exactly five promoter primer pairs: PKM, GAPDH, HK2, Glut1 and Aldoa, plus two negative-region controls. PDK1 and LDHA1 are NOT among them. So the promoter-occupancy claim does not extend to the two targets that carry the strongest cross-paper bridges in this repository, and no locator anywhere in the corpus should be read as though it did. The main text names the five genes but the primer roster is what proves the set is closed.",
+    "snippet": "Supplement Table 2: List of ChIP primers: Primer Sequence mPKM-Pro-F AGTGTTCGCAGCTCTTCGTC mPKM-Pro-R TGGAGGTTGAAAGGATGCTG mGAPDH-Pro-F AGCTACGTGCACCCGTAAAG mGAPDH-Pro-R GGTCCAAAGAGAGGGAGGAG mHK2-Pro-F ACGTGTGTTCCGTGGCTAGA mHK2-Pro-R ACCCGAAGCTGAGCCTGAC mGlut1-Pro-F CAGCAGCAAGGTGAGTAACG mGlut1-Pro-R GTGAGGAAGCGGGGACTC mAldoa-Pro-F CGATAGGAGGCGGCACTG mAldoa-Pro-R TGGCTCGAGTCACGTCCT mGAPDH-Negative-F CCCCAGGCTATCTCATGTTC mGAPDH-Negative-R ATAGCTGATGGCTGCAGGTT mPGK1-Negative-F GGGTGCTCTATGGATGTGGT mPGK1-Negative-R",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_supplement.txt",
+    "anchor": "Supplemental Tables, 'Supplement Table 2: List of ChIP primers', full table",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "INDEPENDENT CORROBORATION OF PAIR 3, IN A SECOND COHORT. entries[7] found AXIN2 unraised in the DEN model. In the DEN-FREE cohort the same pattern recurs: AXIN2 is marginally LOWER in cKO and carries no significance mark. Recorded with it, because it bounds the proliferative programme rather than extending it: MYC is also unmarked here, so without the carcinogen only JUN and FOS move.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplement Fig S2A, DEN-free control vs cKO, n=4: MYC ~1.05 -> ~1.78 with NO mark; JUN ~1.00 -> ~3.20 (*); FOS ~0.95 -> ~3.85 (*); AXIN2 ~1.03 -> ~0.93, cKO LOWER, no mark.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29724996/SuppFig2_p5-5.png",
+    "anchor": "Supplemental Figure 2, panel A, bar heights and significance marks read at 300 dpi from the rendered supplement page",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE CONTROL THAT STRENGTHENS THE HIGH-FAT-DIET RESULT, AND IT EXISTS ONLY IN THE SUPPLEMENT. Under high-fat diet the control and knockout weight curves are superimposed across all 19 sampled points. The HFD tumour difference of Fig 6a (11/12 versus 4/18) therefore cannot be attributed to the knockout becoming more obese on the same diet. This is a genuine negative finding doing positive work, and the running text does not carry it.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplement Fig S4A, Weight (Grams) against 19 sampled timepoints: Control and cKO traces overlie each other from ~19-20 g at point 1 to ~47 g at point 19, with no visible separation, no error bars and no significance marks.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29724996/SuppFig4_p7-7.png",
+    "anchor": "Supplemental Figure 4, panel A, both traces read at 300 dpi from the rendered supplement page",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE GLYCOLYTIC TARGET SET IS CONTEXT-DEPENDENT, AND THE PAPER'S FLAGSHIP GENE IS THE ONE THAT DROPS OUT. Under high-fat diet at 11 months PKM2 — the target with the highest ChIP enrichment in Fig 4f and the only one given protein-level confirmation by IHC in Fig 4e — is NOT elevated: it sits slightly below control and carries no mark. What is marked instead is PDK1, LDHA1 and ENO1. So 'HIF1alpha glycolytic targets rise when WWOX is lost' is not a fixed gene set; which members move depends on the metabolic context, and any transfer of this axis that names PKM2 as the invariant readout is unsupported.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplement Fig S4C, DEN-treated control vs cKO on HFD at 11 months: WWOX ~0.79 -> ~0.19 (*); PDK1 ~0.95 -> ~1.74 (*); LDHA1 ~1.01 -> ~1.15 (*); HK2 ~0.97 -> ~0.77 unmarked; ENO1 ~1.06 -> ~1.61 (*); PGK1 ~1.20 -> ~1.52 unmarked; GLUT1 ~1.25 -> ~1.41 unmarked; ALDOA2 ~1.10 -> ~1.21 unmarked; PKM2 ~1.03 -> ~0.85 unmarked and DIRECTIONALLY DOWN.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29724996/SuppFig4_p7-7.png",
+    "anchor": "Supplemental Figure 4, panel C, bar heights and significance marks read at 300 dpi from the rendered supplement page",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "THE MOUSE-MODEL COUNTERPART OF THE PAPER'S HUMAN PREMISE, AND IT IS UNMARKED. Wwox mRNA in DEN-induced tumours of CONTROL mice is roughly half that of adjacent parenchyma — but the panel carries no significance mark, on n=3 versus n=3, while the legend defines the asterisk convention. The reduction of WWOX in spontaneous mouse liver tumours is therefore a direction with a plausible effect size and no declared statistic, and should not be cited as an established mouse datum.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplement Fig S1A: Liver parenchyma ~1.02, Tumors ~0.49, error bars present, NO asterisk over either bar. Panel B is a single representative WWOX IHC image with regions labelled P and T and no quantification.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29724996/SuppFig1_p4-4.png",
+    "anchor": "Supplemental Figure 1, panels A and B, read at 300 dpi from the rendered supplement page",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The absolute-grams measure recurs in the supplement, and its time course is not monotonic: liver weight separates at 1 month, does NOT separate at 3 months where the knockout is marginally lighter, and separates again at 6 months. A reader taking liver weight as a monotone proxy for accumulating tumour burden is contradicted by the paper's own intermediate timepoint.",
+    "snippet": "(C) Liver weight of DEN-treated control and WwoxΔ Hep mice at the age of 1, 3 and 6 months (n=7 for each group).",
+    "surface": "supplement",
+    "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_supplement.txt",
+    "anchor": "Supplemental Figures Legend, 'Supplement Figure2.', sentence (C); panel read at 300 dpi",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Liver injury under high-fat diet: serum ALT is roughly doubled in the knockout at 7 months and carries a significance mark. Recorded with its uncertainty — the knockout error bar spans roughly 45 to 73 against a control bar near 30, so the separation rests on a wide distribution.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplement Fig S4B, titled 'ALTL', y-axis in U/L: Control ~30.5 with a narrow error bar, cKO ~59 with an error bar reaching ~73, one asterisk placed between the bars.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29724996/SuppFig4_p7-7.png",
+    "anchor": "Supplemental Figure 4, panel B, read at 300 dpi from the rendered supplement page",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "A YAP/Hippo-axis readout the main text does not carry: CTGF is elevated roughly 24-fold in the knockout at 1 month and again at 3 months, then returns to control levels at 6 and 10 months. The direction of travel is the opposite of the glycolytic programme, which only separates at 6 and 10 months — so the paper contains two transcriptional programmes with opposite time courses, and this supports the timing argument recorded at entries[24] rather than the paper's own causal ordering.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Supplement Fig S2B, CTGF fold change, DEN-treated, n=3: 1M control ~1 vs cKO ~24 (***); 3M ~3.3 vs ~24.6 (*); 6M ~0.8 vs ~1.0 unmarked; 10M ~1.0 vs ~1.2 unmarked.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID29724996/SuppFig2_p5-5.png",
+    "anchor": "Supplemental Figure 2, panel B, read at 300 dpi from the rendered supplement page",
+    "panel_text_relation": "panel_only"
    }
   ],
   "note": "Coverage: complete. Introduction, Results, Discussion, Materials and Methods and the reference list read in the JATS body; all seven figures inspected as images at original resolution from fingerprinted artifacts, never through a text conversion; supplementary PDF retrieved and fingerprinted. The supplementary panels S1 to S4 are cited by the running text and were not individually adjudicated in this pass — declared as a bounded gap, not as absence."
