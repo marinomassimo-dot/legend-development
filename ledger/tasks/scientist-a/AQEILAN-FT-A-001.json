@@ -65,7 +65,7 @@
    "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
   ]
  },
- "CURRENT_STATE": "WAVE_2_COMPLETE — one R4 audit outstanding on 25331887",
+ "CURRENT_STATE": "WAVE_2_COMPLETE — R4 satisfied on both papers; no work outstanding in this wave",
  "assigned_on": "2026-09-08",
  "acquisition_hints": {
   "33914858": {
@@ -248,10 +248,10 @@
    "note": "First contact with the text; the only prior record was a legacy_reconstruction with every coverage value unknown_legacy. A REVIEW, treated as a secondary source throughout. Its variant-level arithmetic reproduces exactly from its own deposited supplement (Table S2 = 103 rows, 93/6/2/2 by type, allele column summing to 1057). Headline extraction: two homozygous Q230P patients alive at 12 y and 10 y against a third dead at 3 y 3 m. R4 SATISFIED — two independent blind audits, zero NOT_IN_SOURCE, five corrections taken, one finding strengthened (the Figure 3B colour inversion) and TWO OF MY OWN FINDINGS RETRACTED (56-vs-57 and 21-vs-22 both reconcile). Auditors disagreed once on the P47R pairing; resolved against the table's rowspan markup, not by preferring an auditor."
   },
   "25331887": {
-   "status": "COMPLETE READING, CANDIDATE HELD",
+   "status": "COMPLETE — candidate RELEASED after the audit verdicts were applied",
    "evidence_depth": "partial_fulltext_read",
    "receipt": "FTR-20260909-25331887-02",
-   "manifest": "FAIL on 7 paths only — unrecoverable figure crops",
+   "manifest": "FAIL on 7 paths only — unrecoverable xref figure crops; all 39 locators verify",
    "commit": "3d41643",
    "outputs": [
     "deepdive_manifests/PMID25331887.json",
@@ -259,14 +259,26 @@
     "commit_candidates/CC-20260909-25331887-01.md (HELD, not promotable)"
    ],
    "note": "M0 adjudication: the dispatch's inadequate_prior_coverage came from the prior receipt's DEPTH LABEL; its coverage MAP has no not_read and is admissible for complete_fulltext_read, so the body was not re-derived. The wave objective was the one surface the map names as missing — supplementary: unavailable — and that debt is PAID: the SI Appendix was retrieved through pmc_pow_fetch.py (Europe PMC refuses the article as not open access) and all six pages read as rendered images, because the SI text layer is SUSPECT and was refused. Prior evidence re-established: article PDF byte-identical, and all 17 prior text locators re-verify against a fresh PMC HTML whose container digest has changed.",
-   "OUTSTANDING": "🔴 R4 NOT SATISFIED. The blind audit of the ten supplementary locators did not reach this session — first auditor stalled, synchronous rerun killed by a session rate limit. Coordinator reports SUPPORTED on 4 and OVERSHOOT on 6 with replacement wording, but this session never saw the verdicts and refused to reconstruct them. All ten propositions carry an [UNAUDITED] prefix and audit_status PENDING_AUDIT_CORRECTION; the commit candidate is HELD and explicitly not promotable. NEXT SESSION: obtain the verdicts, apply the six corrections, then rewrite CC-20260909-25331887-01 as a live candidate."
+   "commits": [
+    "3d41643 (reading, locators held UNAUDITED)",
+    "(this) audit verdicts applied, candidate released"
+   ],
+   "R4": "SATISFIED. The blind audit completed but never reached the wave-2 session, which refused to reconstruct it and shipped the ten SI locators marked [UNAUDITED] with the candidate HELD. The orchestrator relayed the report verbatim and the verdicts are applied: SUPPORTED on triples 2, 4, 7, 8; OVERSHOOT on 0, 1, 3, 5, 6, 9; five clauses struck as not in source. TWO OF MY ATTESTATIONS WERE FACTUALLY WRONG — no gamma-H2AX foci at 48 h in either genotype, and the S4B Coomassie loading is not comparable. The WW1-not-SDR finding survives only as an isolated-domain SUFFICIENCY test with \"not detectable on one blot\" replacing \"abolished\", and the P47T bridge to the human allelic series is WITHDRAWN because a lysate pull-down establishes no direct or PPxY-mediated contact. One overshoot failed in my favour: the supplement's K63 evidence is STRONG (S6C), only the S6B antibody panel is uninformative, so my scope claim was wrong.",
+   "claim_dispositions": {
+    "CLAIM 029": "NARROW — four narrowings, two additions, stays in observation (not one error bar or statistical test across the six SI pages)",
+    "CLAIM 024": "CORROBORATE (weak) + narrowing rider that isolated WW1 suffices for one partner, with the lysate caveat",
+    "CLAIM 030": "CORROBORATE (weak, principle-level). NO body edit. Logged as a mechanistic analogue only; must not raise a T1 claim's transferability",
+    "CLAIM 007": "LEAVE UNCHANGED",
+    "CLAIM 023": "LEAVE UNCHANGED"
+   },
+   "receipt_depth_decision": "Considered and deliberately unchanged at partial_fulltext_read. The coverage map records what THIS event did and the body was not re-read. Study-level note left for the orchestrator: the prior receipt's only reason for being partial was supplementary: unavailable, that surface is now read, and there is no receipt field for a study-level rollup — not something to manufacture by writing a coverage map for sections this session did not open."
   },
   "capability_micro_upgrade": {
    "artifact": "framework/scripts/tool_preflight.py + test_tool_preflight.py",
    "commit": "c1dab05",
    "tests": "12/12, mutation-tested",
    "first_measurement": "fitz absent; referenced by 10 repository scripts including deepdive_manifest.py and regenerate_adjudications.py, so rule 5e page adjudication is unrunnable in this deployment",
-   "not_wired": "The one-line additions to CLAUDE.md section 3 and legend-start step 6b are written in the working tree but UNCOMMITTED: committing an instruction file was refused by the permission system."
+   "not_wired": "The one-line additions to CLAUDE.md section 3 and legend-start step 6b are written in the working tree but UNCOMMITTED: the permission system refused an instruction-file commit. The orchestrator has confirmed these edits are scientist-a's (an earlier attribution to scientist-b was withdrawn) and will handle landing them."
   },
   "declared_debts": [
    "PMID 25331887: seven xref-extracted figure PNGs unrecoverable here (no fitz, no pip; poppler does not reproduce the bytes). Kept declared rather than deleted for a green verdict.",
