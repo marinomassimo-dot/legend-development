@@ -58,6 +58,12 @@ CONTINUATION_RE = re.compile(r"^\s*[a-z0-9(\[]")
 HEADER_MIN_REPEATS = 3
 HEADER_MAX_WORDS = 14
 
+# 🔴 How widely a repeated line must be SPREAD through the document before it counts as page
+# furniture. Added 2026-09-09 after the second production run, on PMID 18460020, where the
+# gap-based exclusion below was defeated: see _running_headers.
+HEADER_MIN_SPREAD = 0.25
+
+
 
 def _significant_lines(text: str) -> list[tuple[int, str]]:
     """Return (line_number, line) for non-blank lines, 1-based."""
@@ -74,24 +80,66 @@ TABLE_ROW_RE = re.compile(r"\S {3,}\S.* {3,}\S")
 
 
 def _running_headers(lines: list[tuple[int, str]]) -> set[str]:
-    """Lines that repeat often enough, and are short enough, to be page furniture.
+    """Lines that repeat often enough, are short enough, and are SPREAD widely enough to be
+    page furniture.
 
-    🔴 Refined after the first production run, which is the only reason the refinement is
-    right. On the PMID 20530675 supplement — a document of tables — the first version reported
-    repeated TABLE ROWS ('Lung  M  S  +') as running headers. They repeat, they are short, and
-    they are not page furniture at all. A table row is recognisable by its wide inter-column
-    gaps, so rows are excluded rather than the repeat threshold being raised, which would have
-    silenced genuine headers on short papers instead.
+    🔴 Refined twice, and only ever after a production run, which is the only reason either
+    refinement is right.
+
+    FIRST (PMID 20530675 supplement, a document of tables): repeated TABLE ROWS
+    ('Lung  M  S  +') were reported as running headers. A table row is recognisable by its wide
+    inter-column gaps, so rows are excluded via TABLE_ROW_RE rather than the repeat threshold
+    being raised, which would have silenced genuine headers on short papers instead.
+
+    SECOND (PMID 18460020, 2026-09-09): that exclusion was DEFEATED, and the way it failed is
+    the useful part. TABLE_ROW_RE looks for wide inter-column gaps, which exist only when the
+    extractor emits a whole table row on one line. PyMuPDF's get_text() emits ONE CELL PER LINE,
+    so a table's cells arrive as short repeated lines with NO gaps to detect, and Table 1's
+    values ('3 (9%)', 'Negative', 'Positive') were reported as running headers — 25 false
+    positives on a 7-page paper, which is enough noise to make a reader ignore the real ones.
+
+    The discriminator is DISPERSION, and it was chosen by measuring both classes rather than
+    guessed. Page furniture recurs once per page, so its occurrences span most of the document;
+    table cells recur densely inside one block. Measured over the two papers:
+
+        genuine furniture   span 53.7%-111.5% of the document
+        table cell values   span  2.7%-  7.6%
+
+    A threshold of 25% sits in an empty band an order of magnitude wide on either side.
+
+    🔴 THE RATIO IS DELIBERATE AND AN ABSOLUTE LINE FLOOR WAS TRIED AND REJECTED. A floor of
+    100 lines ("furniture must cross about a page") separates the measured classes just as
+    cleanly, and it silenced the suite's OLDEST regression - the real PMID 21731849 header,
+    whose fixture is a short extract. Breaking a genuine existing regression to remove a false
+    positive is the wrong trade, so the ratio stands alone. Its own known limit, declared
+    rather than hidden: on a SHORT document a table can honestly occupy more than a quarter of
+    the text and would be reported again. The defect measured in production was on 7- and
+    10-page papers, and there the bands do not overlap.
+
+    🔴 Dispersion, not the median gap between occurrences, and the counterexample decided it:
+    the separator '|' of 'Cancer Sci | July 2008 | vol. 99 | no. 7' is genuine furniture with a
+    span of 70.2% and a median gap of 2.0, because the pieces of one header line arrive
+    together. A gap-based test would have discarded real furniture to remove false furniture.
     """
-    counts = collections.Counter(
-        line.strip()
-        for _, line in lines
-        if len(line.split()) <= HEADER_MAX_WORDS and not TABLE_ROW_RE.search(line)
-    )
+    if not lines:
+        return set()
+    first_line, last_line = lines[0][0], lines[-1][0]
+    extent = max(last_line - first_line, 1)
+
+    positions: dict[str, list[int]] = {}
+    for number, line in lines:
+        if len(line.split()) > HEADER_MAX_WORDS or TABLE_ROW_RE.search(line):
+            continue
+        stripped = line.strip()
+        if stripped:
+            positions.setdefault(stripped, []).append(number)
+
     return {
         text
-        for text, n in counts.items()
-        if n >= HEADER_MIN_REPEATS and text and not PAGE_NUMBER_RE.match(text)
+        for text, seen in positions.items()
+        if len(seen) >= HEADER_MIN_REPEATS
+        and not PAGE_NUMBER_RE.match(text)
+        and (seen[-1] - seen[0]) / extent >= HEADER_MIN_SPREAD
     }
 
 

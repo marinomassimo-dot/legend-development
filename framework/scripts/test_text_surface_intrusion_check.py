@@ -149,6 +149,79 @@ def test_the_detector_distinguishes_the_two_extractions() -> None:
     assert find_intrusions(REAL_CLEAN) == []
 
 
+# --------------------------------------------------------------------------------------
+# 🔴 Regressions for the DISPERSION test, added 2026-09-09 from the second production run
+# (PMID 18460020). Each of the three encodes a case that actually occurred; the third is the
+# counterexample that decided the SHAPE of the fix and would be invisible without it.
+# --------------------------------------------------------------------------------------
+
+# PyMuPDF get_text() emits ONE TABLE CELL PER LINE, so a table's repeated values arrive as
+# short repeated lines with no inter-column gaps for TABLE_ROW_RE to catch. On PMID 18460020
+# this produced 25 false positives on a 7-page paper.
+_PROSE = ["Supporting prose that carries the argument forward in an ordinary way."] * 60
+
+ONE_CELL_PER_LINE_TABLE = "\n".join(
+    _PROSE +
+    ["The frequencies of methylation were measured in every resected specimen and the",
+     "counts are given in Table 1 below, which reports each subgroup separately.",
+     "Table 1. Association with clinicopathological findings",
+     "Lymphatic vessels infiltration", "Negative", "3 (9%)", "2 (6%)", "1 (3%)", "0.881",
+     "Positive", "29 (91%)", "23 (72%)", "6 (19%)",
+     "Venous vessels infiltration", "Negative", "5 (16%)", "2 (7%)", "3 (9%)", "0.057",
+     "Positive", "27 (84%)", "23 (71%)", "4 (13%)",
+     "Lymph node metastasis", "Negative", "7 (22%)", "3 (9%)", "4 (13%)", "0.026",
+     "Positive", "25 (78%)", "22 (69%)", "3 (9%)",
+     "and the analysis was repeated for every subgroup listed above without exception."]
+    + _PROSE)
+
+
+def test_repeated_table_cells_emitted_one_per_line_are_not_running_headers() -> None:
+    """The defect this fix exists for: no column gaps to detect, so the earlier exclusion
+    could not fire and legitimate table values were reported as page furniture."""
+    found = find_intrusions(ONE_CELL_PER_LINE_TABLE)
+    bad = [f for f in found if str(f.get("intrusion", "")) in
+           {"Negative", "Positive", "3 (9%)", "4 (13%)", "1 (3%)"}]
+    assert bad == [], bad
+
+
+def test_a_genuine_header_spread_across_the_document_is_still_caught() -> None:
+    """Proof the fix does not simply silence the detector: the SAME repeated line, dispersed
+    the way page furniture actually is, must still be reported.
+
+    NOTE the varied surrounding sentences. An earlier version of this fixture repeated ONE
+    sentence around every header, which made those sentences repeat often enough to be
+    classified as furniture themselves - and a furniture line between two furniture lines is
+    correctly NOT an intrusion into a sentence. The tool was right and the fixture was wrong.
+    """
+    header = "Cancer Sci | July 2008 | vol. 99 | no. 7"
+    doc: list[str] = []
+    for index in range(4):
+        doc += [f"clause number {index} runs past the page boundary and does not end here",
+                header,
+                f"and it resumes below in lower case for block {index} of the article."]
+        doc += [f"Filler sentence {index}-{n} carrying the argument forward." for n in range(60)]
+    found = find_intrusions("\n".join(doc))
+    assert any(f["kind"] == "running_header" and f.get("intrusion") == header
+               for f in found), found
+
+
+def test_dispersion_is_measured_by_span_and_not_by_gap_between_occurrences() -> None:
+    """🔴 THE COUNTEREXAMPLE THAT CHOSE THE SHAPE OF THE FIX. The separator '|' of a running
+    header is emitted as its own line, so its occurrences cluster in threes with a median gap
+    of 2 - yet it is genuine page furniture, spanning 70% of the document. A median-gap test
+    would have discarded real furniture in order to remove false furniture; a span test keeps
+    it. Without this test the two designs are indistinguishable on every other case."""
+    doc: list[str] = []
+    for index in range(4):
+        doc += [f"clause number {index} is cut off mid-sentence by the furniture below",
+                "Cancer Sci", "|", "July 2008", "|", "vol. 99", "|", "no. 7",
+                f"and then continues in lower case on page {index} of the article."]
+        doc += [f"Ordinary prose {index}-{n} continuing the paragraph." for n in range(60)]
+    found = find_intrusions("\n".join(doc))
+    assert any(str(f.get("intrusion")) == "|" for f in found), \
+        "the '|' separator is genuine furniture and must survive the dispersion test"
+
+
 def _run() -> int:
     failures = 0
     for name, function in sorted(globals().items()):
