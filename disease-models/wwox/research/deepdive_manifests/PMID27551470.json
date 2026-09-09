@@ -1,0 +1,447 @@
+{
+ "schema_version": 2,
+ "pmid": "27551470",
+ "doi": "10.1038/cddiscovery.2015.40",
+ "receipt": "FTR-20260909-27551470-01",
+ "landing": [
+  "FTR-20260909-27551470-01",
+  "disease-models/wwox/research/fulltext_dossiers/PMID27551470.md",
+  "full_text_queue_current",
+  "batch_queue"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "M0 duplicate-work gate re-run per paper on 2026-09-09 rather than inherited from the wave-4 dispatch: fulltext_receipts.py status --pmid 27551470 returns an EMPTY history — no receipt of any kind, not a legacy reconstruction and not a partial. reread_reason is therefore first_read with prior_receipt null. The paper appears in no other actor's lot (dispatch 2026-09-08 section 3)."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed and therefore not run. Europe PMC served the structured JATS XML for PMC4979517 on the first request, which is the surface the protocol requires before any PDF. The publisher PDF was additionally acquired only as the higher-resolution surface for the single figure, and both it and the figure JPEG were verified against the digests the deposit itself declares."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "🔴 THRESHOLD CHECKED AND NOT MET, recorded so the non-trigger is auditable. The rule fires when a reading would narrow, reverse, corroborate or remove a `consolidated baseline` claim, or justify a MAJOR working-model bump. Checked mechanically against claim_registry_current.md: 21 claims carry `consolidated baseline`, no claim record cites PMID 27551470, and this reading proposes no change to any claim's Status. What it touches is CLAIM 029 (WWOX/ATM DDR competence), whose status is `in observation`, NOT baseline — and it touches it by observing that this editorial's citation for the ITCH step points where this repository's own record does not, which leaves 029 exactly as open as it was. No MAJOR bump is proposed. An audit WOULD be warranted on the Figure 1 caption-versus-panel finding for its own sake if that finding were ever promoted into a claim; it is not, and the dossier says so."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined on the evidence, not on budget. This is a 5-section editorial that reports no new measurement of its own: every empirical statement in it is a restatement of another paper, and two of them carry no resolvable citation at all ('unpublished data'; an uncited in vitro/in vivo apoptosis claim). A discovery pass mines full texts for leads toward biomarkers, molecules or repurposing; mining a citation layer would produce leads attributed to this document that belong to its sources. The correct product here is the fidelity check, which is what was run."
+  },
+  {
+   "skill": "legend-proband-priority-matrix",
+   "used": false,
+   "reason": "Nothing here is a therapeutic lever to rank. The single sentence that reaches the reference genotype is a citation to one unread paper (ref 14) inside an evolutionary argument, and that citation is queued rather than scored."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No hypothesis this document supports would be attributable to it. Forging from a citation layer would attach this repository's hypotheses to an editorial rather than to the primaries it cites, three of which this ledger already holds at complete depth and can be forged from directly."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is named, proposed or promoted anywhere in this reading."
+  },
+  {
+   "skill": "legend-session-self-eval",
+   "used": true,
+   "reason": "Run at the end of the wave and BEFORE any closing report, per the protocol's order of operations."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 137,
+  "publications_on_gene": 65,
+  "counts_measured": "PubMed esearch, 2026-09-09, run this wave rather than carried over: 'Aqeilan RI[au]' = 137, 'Aqeilan RI[au] AND WWOX' = 65 — both identical to the values measured on 2026-08-10 and again on 2026-09-09 for PMID 38499540. First author: 'Hazan I[au]' = 68, 'Hazan I[au] AND WWOX' = 2.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "primary_group_note": "🔴 PRIMARY FOR THE GENE, NOT FOR THE DISEASE, AND THE GAP MATTERS MORE HERE THAN IN A DATA PAPER. The Aqeilan laboratory is the principal WWOX cancer-biology group and 65 of its 137 records concern the gene. This document, however, contains NO measurement of its own: it is a citation layer. So the group's experimental authority does not transfer to it in the usual way — what transfers is authority over the SELECTION and RESTATEMENT of the literature, and four of the seventeen references are the group's own or co-authored by its senior author (refs 7, 8, 9, 10). The disease this repository models is WWOX-DEE; this group is not primary for it, and the single sentence in this piece that reaches that phenotype rests on one citation to a different group entirely (ref 14).",
+  "weighting": "OBSERVATIONS: this document makes none. INTERPRETATIONS: weighted as an expert laboratory's reading of its own field, which is real weight — and bounded by the fact that the piece announces its verdict in the introduction and the journal published no counterpoint (measured: one record in all of Cell Death Discovery, all years, with 'fragile' or 'FRA16D' in the title, this one). RESTATEMENTS of other papers: weighted at ZERO on their own and checked one by one against the sources this repository holds, which is the method this reading exists to apply.",
+  "first_author_note": "I Hazan carries 68 PubMed records of which 2 concern WWOX. The senior and corresponding author is R I Aqeilan.",
+  "research_type_note": "Classified on the evidence the LABORATORY can produce — mouse conditional genetics, cell-line biochemistry, ChIP, foci imaging — and not on the genre of this particular document, which produces no evidence at all. The distinction is recorded because it is the whole reason this reading is a fidelity check rather than a data extraction."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX AND FRA16D",
+    "count": 119,
+    "date": "2026-09-09",
+    "route": "PubMed E-utilities esearch"
+   },
+   {
+    "query": "FRA16D",
+    "count": 154,
+    "date": "2026-09-09",
+    "route": "PubMed E-utilities esearch"
+   },
+   {
+    "query": "\"common fragile site\" AND cancer",
+    "count": 227,
+    "date": "2026-09-09",
+    "route": "PubMed E-utilities esearch"
+   },
+   {
+    "query": "WWOX AND (passenger OR driver)",
+    "count": 15,
+    "date": "2026-09-09",
+    "route": "PubMed E-utilities esearch"
+   },
+   {
+    "query": "WWOX AND haploinsufficien*",
+    "count": 3,
+    "date": "2026-09-09",
+    "route": "PubMed E-utilities esearch"
+   },
+   {
+    "query": "\"Cell Death Discov\"[jour] AND (fragile[ti] OR FRA16D[ti]), all years",
+    "count": 1,
+    "date": "2026-09-09",
+    "route": "PubMed E-utilities esearch — the count is this article itself"
+   }
+  ],
+  "note": "🔴 THE DECISIVE NUMBER IS THE LAST ONE, AND IT IS A NEGATIVE SEARCH REPORTED AS A RESULT. The piece is framed as one side of a 'current questions and controversies' debate. Across the whole of Cell Death Discovery, all years, exactly ONE article carries 'fragile' or 'FRA16D' in its title, and it is this one. No counterpoint was published, so the passive view is represented in this venue only by the sentences its opponents wrote for it. Separately: 'WWOX AND haploinsufficien*' returns THREE records in all of PubMed, which is the entire published field behind the haploinsufficiency inference this editorial treats as settled."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 17,
+  "enumeration_route": "Counted by element in the fingerprinted XML: 17 <ref> elements inside a single <ref-list>, ids bib1-bib17, none missing. Every one carries a PMID, so all 17 resolved without a lookup by title — which was necessary, because none of them carries a title at all (see back_matter_note).",
+  "back_matter_note": "🔴 MEASURED, AND IT CLOSES OPEN ITEM 3 OF THE RECEIPT CONTRACT FOR THIS ARTICLE SPECIFICALLY. The known hazard is that a deposit folding the bibliography into <body> puts reference TITLES inside the surface a locator is verified against, where a review's reference titles read like its own findings. Here every one of the 17 references is a <mixed-citation publication-type=\"other\"> carrying author, journal, year, volume and pages and NO <article-title> element whatsoever. Zero reference titles exist in this surface, so the contamination this article could suffer is structurally nil — verified by element count, not assumed. Recorded because a checked-and-not-found is a result.",
+  "gene_direct_refs_in_source": [
+   "24510053",
+   "25331887",
+   "17360458",
+   "25245215",
+   "23370280",
+   "24008736",
+   "25416187",
+   "23339925",
+   "18000379"
+  ],
+  "resolved": [
+   {
+    "pmid": "24510053",
+    "role": "ref 7, Gardenswartz & Aqeilan 2014 review",
+    "status": "complete_fulltext_read in this ledger",
+    "use": "FIDELITY CHECK RUN — see verbatim_locators entries[16]"
+   },
+   {
+    "pmid": "25331887",
+    "role": "ref 8, Abu-Odeh 2014 PNAS, the ATM primary",
+    "status": "partial_fulltext_read in this ledger",
+    "use": "FIDELITY CHECK RUN, bounded by the partial depth — see entries[9]"
+   },
+   {
+    "pmid": "17360458",
+    "role": "ref 9, Aqeilan 2007 PNAS, the knockout",
+    "status": "complete_fulltext_read in this ledger",
+    "use": "FIDELITY CHECK RUN — see entries[3]"
+   },
+   {
+    "pmid": "23370280",
+    "role": "ref 12, Salah 2013, ΔNp63α",
+    "status": "complete_fulltext_read in this ledger",
+    "use": "FIDELITY CHECK RUN — see entries[10]"
+   },
+   {
+    "pmid": "24550385",
+    "role": "NOT CITED by this article; named here because this repository's reading of PMID 23370280 assigns ITCH-dependent K63 stabilisation of WWOX to it",
+    "status": "complete_fulltext_read in this ledger",
+    "use": "the comparator that makes entries[9] checkable"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "25416187",
+    "why": "ref 14, Tabarki 2015 — the SINGLE citation carrying this article's only statement about germline WWOX loss and neuronal disorders, and therefore the only load-bearing reference for the reference genotype in the whole document. No receipt of any kind."
+   },
+   {
+    "pmid": "25245215",
+    "why": "ref 10, Aqeilan/Abu-Remaileh/Abu-Odeh 2014 review — co-carries the ITCH/ATM mechanism with ref 8. ALREADY IN THIS ACTOR'S OWN LOT (AQEILAN-FT-B-001), unclaimed, not opened this wave."
+   },
+   {
+    "pmid": "18000379",
+    "why": "ref 5, McAvoy 2007 — the negative result this editorial absorbs by reframing (entries[6]). Unread, so the reframing could not be checked against its source."
+   },
+   {
+    "pmid": "25238782",
+    "why": "ref 6, Georgakilas 2014 — the 'sensors' proposal the Conclusions build on directly. Note it is the SISTER article of PMID 25238781, which is this actor's second wave-5 paper."
+   },
+   {
+    "pmid": "24008736",
+    "why": "ref 13, Tsai 2013 — the WWOX/mTOR/autophagy claim, transmitted here in one sentence and unchecked."
+   }
+  ],
+  "resolution_note": "All 17 references resolved to PMIDs from the deposit's own <pub-id> elements. Measured against the receipt ledger this wave: 3 of 17 at complete_fulltext_read, 1 at partial, 13 with no receipt of any kind. The fidelity test in this manifest therefore has a COVERAGE OF 4 RESTATEMENTS OUT OF 17 REFERENCES, and that denominator is stated rather than left implicit — the test is real, and it is not exhaustive."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Of the 17 references this editorial restates, how many does this repository hold at a depth that lets the restatement be checked against its source?",
+  "route": "Every <pub-id pub-id-type=\"pmid\"> in the fingerprinted XML extracted by element, then joined against disease-models/wwox/registries/fulltext_read_receipts.jsonl by study_id.pmid, 2026-09-09.",
+  "hits": 4,
+  "finding": "🔴 FOUR OF SEVENTEEN — three complete (24510053, 17360458, 23370280) and one partial (25331887). That is the whole basis on which this document's transmission fidelity can be judged today, and on those four the result is not uniform: ΔNp63α transmits faithfully on what it says while dropping its source's headline; the 2007 knockout datum transmits faithfully while its interpretive haploinsufficiency status is stripped; the Gardenswartz review is cited for a loss-only framing that the review itself contradicts in its own text; and the ITCH step's citation points where this repository's own record does not.",
+  "second_query": "Does any claim, commit candidate or registry record in this repository currently rest on PMID 27551470?",
+  "second_query_route": "grep over disease-models/wwox/registries/ and disease-models/wwox/research/commit_candidates/, 2026-09-09.",
+  "second_query_hits": 0,
+  "second_query_finding": "NO. The PMID appears only in three PubMed seed corpora and as an 'unmatched' row of batch_queue.md. Nothing in the model rests on it, which is why this reading changes no claim and why the locator-audit threshold is not met."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-09",
+  "route": "PubMed esummary for 27551470, run this session rather than inherited.",
+  "result": "No retraction, no expression of concern, no erratum. Publication types: ['Journal Article'] only — note that PubMed assigns NO 'Review' publication type, while the PMC deposit carries article-type=\"editorial\" and subject 'Editorial'. The article XML declares no <related-article> and no change-history event.",
+  "corrected_items": [],
+  "corrected_items_basis": "No erratum exists for this article, so the scope list is empty by fact and not by omission. framework/scripts/erratum_scope_check.py has nothing to resolve here.",
+  "genre_note": "🔴 RECORDED BECAUSE THE DISPATCH CALLED IT A REVIEW AND THE DEPOSIT DOES NOT. It is an editorial. The distinction is not cosmetic for a repository that weights sources: an editorial carries no obligation of systematic coverage, and this one has 17 references against the 103 of the review (PMID 24510053) it cites for the same territory.",
+  "hold": false
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+   "sha256": "2e8ae55fb4cefa5c8a30d8fd80e8f6b7bf1fb60f1f4fd8234bde55accacbd4dd",
+   "kind": "article_text",
+   "note": "Europe PMC fullTextXML for PMC4979517, fetched 2026-09-09. JATS 1.4, article-type=\"editorial\". Structured markup, so no PDF text layer is trusted anywhere in this reading. Element counts taken from this file: abstract 0, fig 1, table-wrap 0, supplementary-material 0, ref 17, sec 5."
+  },
+  {
+   "path": "files/fulltext/PMID27551470_Hazan2015_PMC.pdf",
+   "sha256": "2955c99c38b52d2b50327014d30eba42978d6ebf6fad82920350b9896290d2a2",
+   "kind": "article_binary",
+   "note": "Publisher PDF, 3 pages, acquired from europepmc.org/articles/PMC4979517?pdf=render after the PMC CDN route 404'd. 🔴 PROVENANCE IS MACHINE-VERIFIED, NOT ASSERTED: md5 c72df04a... on the failed route was an error page and was deleted; the file kept here has md5 2ea5ceaaa93cafda14d54eb661385752, IDENTICAL to the <?pdf-md5?> the article's own XML declares. Used ONLY as the higher-resolution surface for the single figure. NO text locator is drawn from it."
+  },
+  {
+   "path": "files/figures/PMID27551470/cddiscovery201540-f1.jpg",
+   "sha256": "b03427d1e07dbc2062074ef3e65e81398eb69fc7dba03e3e1cbb8cdf68ae594d",
+   "kind": "figure",
+   "note": "The article's own Figure 1 graphic, 697x565, 300 dpi. 🔴 md5 f216edac0da720866c9fd0b8125e0ca6, IDENTICAL to the <?image-md5?> the article XML declares for its <graphic> element. This is the composite figure as published and is the primary visual surface."
+  },
+  {
+   "path": "files/figures/PMID27551470/PMID27551470_pdfpage2_render400dpi.png",
+   "sha256": "646a7d2681263b38faa2476fa0bb1c75ead896e6d307f4bb40563ffeac939c80",
+   "kind": "figure",
+   "note": "Deterministic 400 dpi render of page 2 of the fingerprinted PDF: `pdftoppm -f 2 -l 2 -r 400 -png`, 3308x4410. Derived surface, declared as derived, with its recipe: it is the rendered page, which under rule 5d is the reference surface because the drawn glyph is the author's. Used to adjudicate the FRA16 label and the Δ/X assignment at magnification. Figure bbox on that page, from the PDF itself: Rect(164.57, 63.67, 396.23, 307.17) pt."
+  },
+  {
+   "path": "files/figures/PMID27551470/PMID27551470_fig1_from_pdf_p2_1447x1521.png",
+   "sha256": "dd05730c51493af6a4d115d17c67b4853957d9adf586c72f6666f52096fe4bb3",
+   "kind": "figure",
+   "note": "🔴 KEPT AND DECLARED FOR EXACTLY WHAT IT IS, WHICH IS NOT THE FIGURE. `pdfimages` extraction of the single raster XObject on PDF page 2: 1447x1521, colorspace Separation/DeviceCMYK, ONE component. It contains the figure's text and the WWOX ovals and NONE of its arrows, lightning bolts, boxes, triangle, X or coloured wedges — those are vector objects drawn on the page, not part of this raster. It is retained because it is the evidence that the raster layer alone is NOT the figure, and a reading that had stopped at this extraction would have inspected an image that omits every symbol the finding turns on. It is never the artifact behind a symbol locator."
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "XML acquired 2026-09-09 and screened by deepdive_manifest.py's own extractor before any snippet was chosen: 13,575 characters of extracted text, zero C0 controls, comparator glyphs present as correct entities (the article prints Q-values with U+2212 MINUS, e.g. 1.31E−266), so the surface is not SUSPECT and needed no page adjudication for text. Every snippet below was verified to occur EXACTLY ONCE in that extracted surface before it was written into this manifest.",
+  "abstract_anchoring_waived": "Not applicable and verified by element count rather than assumed: the deposit contains ZERO <abstract> elements. There is no abstract to anchor to and none to contaminate a locator with. No locator draws on the article title or the front matter either, although both sit inside the extracted surface.",
+  "figure_coverage": {
+   "figures_present": 1,
+   "figures_with_locators": 1,
+   "coverage": "1/1",
+   "supplementary_figures_present": 0,
+   "supplementary_figures_with_locators": 0,
+   "denominator_basis": "Counted per artifact and per surface. Main figures: ONE <fig> element in the XML, matching one <graphic>, matching the single raster XObject that pdfimages lists on PDF page 2. Panels: the figure is a schematic with no lettered panels — there is no A/B/C decomposition to count, so the panel denominator is the figure itself and three distinct regions of it were inspected at magnification (left locus label; right passenger element; right driver element).",
+   "denominator_status": "known",
+   "budget_declared_before_reading": "One figure, target of full inspection at native resolution plus targeted adjudication of anything a text locator would rest on. MET: the composite was opened at native resolution, then three crops of the 400 dpi page render were viewed at 300%.",
+   "supplementary_gap": "NONE, AND VERIFIED TWO INDEPENDENT WAYS RATHER THAN ASSUMED. (1) The deposit's own custom-meta declares pmc-prop-has-supplement = no, and the XML contains zero <supplementary-material> elements. (2) The Europe PMC supplementaryFiles endpoint for PMC4979517 returns HTTP 200 with a 130,599-byte ZIP — which contains exactly one member, cddiscovery201540-f1.jpg, the main figure. 🔴 THAT ZIP IS A TRAP AND IS RECORDED AS ONE: a reader who took a 200 and a non-empty archive as evidence of a supplement would declare supplementary:read over the main figure. Coverage is supplementary: not_present, and it is not_present by fact.",
+   "caption_census": {
+    "fig_in_body": 0,
+    "fig_in_article": 1,
+    "predicate": "inbody = |{fig : fig in descendants(body)}| against tot = |{fig : fig in descendants(article)}|, the explicit predicate of framework/scripts/caption_census.py, run on the fingerprinted deposit.",
+    "verdict": "PURE CLASS — 0 of 1. The single <fig> sits in <floats-group>, outside <body>.",
+    "why_it_is_recorded_here": "🔴 BECAUSE THIS REPOSITORY ALREADY PAID FOR IT AND PRESCRIBED THIS EXACT COUNT. The discovery ledger's caption-census finding names PMID 27551470 in the pure class and states the operational consequence in one line: before declaring an article_text, count <fig> inside <body> against <fig> in the article, and put the count in the manifest beside figure_coverage, because figure_coverage measures how many figures have a locator and NOT whether their captions were readable. That count is now here. It is not decoration on this article: entries[18] IS the caption, and it is the anchor of the reading's principal figure finding — an agent reading this deposit with a <body>-delimited extractor would have received flowing, complete-looking text containing not one caption, would have found the panel's Δ/X assignment strange with nothing to compare it against, and would have passed the validator anyway, because the validator checks what you quoted and not what you were able to read. The validator's own extractor walks the ARTICLE and not the body, which is why the caption locator verifies; the hazard is a reading defect, not a verification defect, and it is recorded as the former."
+   }
+  },
+  "panel_text_relation_note": "Three figure locators, all three genuinely reading the pixels, and each pointing at a TEXT locator with a needle drawn from that locator's own snippet. The caption of Figure 1 is quoted as entries[18] with surface `body` and panel_text_relation `text_only`, and is deliberately NOT relabelled `figure`: labelling a caption quote `figure` would exempt it from character-for-character verification, which is precisely the modelling error registered as open item 4 of the receipt contract. The contradiction here is panel-against-caption, so the assertion sits on the panel locator, which is where the evidence is.",
+  "entries": [
+   {
+    "proposition": "WHAT THIS DOCUMENT IS. It states the controversy as a live two-sided question. This matters for how much weight the piece may carry: PMC deposits it as article-type 'editorial' with subject 'Editorial', and PubMed assigns publication type 'Journal Article' with NO Review tag. It is a 5-section, 17-reference opinion piece of 13,575 characters of extracted text, not a systematic review, and this repository must not weight it as one.",
+    "snippet": "The role of CFSs in cancer is debatable and two major views dominate the discussion in this regard",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Introduction, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AND IT ANNOUNCES ITS VERDICT BEFORE PRESENTING ANY EVIDENCE. The last sentence of the introduction commits the piece to one side of the two-sided question its own title asks. Paired with the framing locator, this fixes the genre: the passive view is stated in order to be set aside, and it is never given an advocate. MEASURED, not impressionistic: PubMed returns exactly ONE record in all of Cell Death Discovery, all years, with 'fragile' or 'FRA16D' in the title -- this one. The 'Current questions and controversies' series published no counterpoint.",
+    "snippet": "Here we discuss supporting evidence favoring active and tumor suppressor functions of WWOX in tumorigenesis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Introduction, final sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE OPPOSING VIEW'S OWN PREMISE, STATED FAIRLY AND THEN SET ASIDE. Hemizygosity is introduced as what licenses the passenger hypothesis, with the authors' own hedge ('although not proven') intact.",
+    "snippet": "Many of these deletions are hemizygous, suggesting, although not proven, that the other allele is maintained. This assumption led to the hypothesis that alterations in CFSs are secondary events that do not contribute to the multistep tumorigenesis process.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Introduction, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PRINCIPAL FINDING 1 -- THE SAME OBSERVATION IS USED ON BOTH SIDES, AND THE PIECE NEVER RECONCILES THE TWO USES. Hemizygosity was the premise of the passenger hypothesis three paragraphs earlier; here the identical fact becomes evidence for haploinsufficiency, i.e. for the driver view. No argument is offered for why hemizygosity favours haploinsufficiency over passenger status -- the two uses simply sit in the same article. This is text-versus-text within one document and is declared text_only on both sides; nothing here is a panel reading. FIDELITY CHECK on the mouse clause, against PMID 17360458 held at complete_fulltext_read in this ledger: the datum transmits FAITHFULLY (spontaneous tumour-bearing 10/58 heterozygotes vs 2/60 wild type). The INFERENCE does not: that source's own haploinsufficiency conclusion is interpretive -- its tumours retain Wwox immunoreactivity, and protein positivity does not demonstrate an intact second allele or unchanged dosage -- and the editorial transmits the inference stripped of that declared interpretive status.",
+    "snippet": "Another interesting observation is that most of the deletions within WWOX are hemizygous rather than homozygous, suggesting haploinsufficiency. In support of this notion, Wwox heterozygous mice develop higher incidence of spontaneous tumors.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Section 'Alterations of WWOX in cancers support its role as a tumor suppressor', paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PRINCIPAL FINDING 2, PART A -- THE CENTRAL STATISTIC AND ITS UNRESOLVABLE CITATION. The quantitative claim that carries the whole 'selective pressure' argument is cited to the ROOT URL of a project homepage: no accession, no dataset name, no GISTIC run identifier, no access date. The number is not reproducible from the citation given. An external anchor was sought before asserting anything about the value and none is offered by the source.",
+    "snippet": "the WWOX locus is the fifth most frequently deleted locus in 10 844 samples from 33 cancer types (Q-value=1.31E−266; http://www.broadinstitute.org/tcga/home)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Section 'Alterations of WWOX in cancers support its role as a tumor suppressor', paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PRINCIPAL FINDING 2, PART B -- THE CALIBRATION SET UNDERCUTS THE INFERENCE IT IS OFFERED TO SUPPORT, AND THIS IS ARITHMETIC ON THE ARTICLE'S OWN PRINTED NUMBERS. Checked BOTH WAYS before being asserted. INTERNALLY COHERENT: by the quoted Q-values WWOX (1.31E-266) ranks below PTEN (0) and RB1 (7.24E-273), which is consistent with the claimed fifth place if two further unnamed loci also outrank it. BUT THE INFERENCE FAILS: TP53 -- the canonical tumour suppressor, offered here as calibration for what 'significantly deleted' means -- is quoted at 5.04E-22, some 244 orders of magnitude WEAKER than WWOX. If this metric ranked loci by tumour-suppressor importance, TP53 could not sit that far below WWOX. It does not: it ranks RECURRENT FOCAL DELETION, which is precisely what a common fragile site is expected to produce whether or not the gene inside it is a driver. THE STATISTIC THEREFORE CANNOT DISCRIMINATE THE PASSIVE HYPOTHESIS FROM THE ACTIVE ONE, and it is the piece's leading evidence for the active one. The 'single gene within the deleted peak' argument is the one part of this paragraph that does bear on driver status, and it is a peak-width argument, not a Q-value argument.",
+    "snippet": "Well-known tumor suppressors such as PTEN, RB1 and TP53 are significantly deleted (0, 7.24E−273 and 5.04E−22, respectively), although the deleted regions have additional genes within their peaks (i.e. PTEN with the tumor suppressor KLLN); WWOX, on the other hand, is a single gene within the deleted peak emphasizing that losing its own activity contributes to cancer",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Section 'Alterations of WWOX in cancers support its role as a tumor suppressor', paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PRINCIPAL FINDING 3 -- HOW THE PIECE DISPOSES OF A NEGATIVE THAT RUNS AGAINST IT: BY REFRAMING, INSIDE A SECTION HEADED 'support its role as a tumor suppressor'. McAvoy's result is that CFS alteration does not predict the associated gene product's expression -- a null that weakens the deletion-to-loss-of-function chain the whole argument needs. The gloss converts it into a claim that the alterations 'are not merely responsible' for WWOX dysregulation, i.e. into a call for additional mechanisms rather than a constraint on the existing one. The negative is neither refuted nor conceded; it is absorbed. PMID 18000379 is NOT held in this ledger at any depth, so this restatement could not be checked against its source and that is recorded rather than glossed.",
+    "snippet": "reported that there is no relationship between alteration of a given CFS and expression of its associated gene product in a given cancer, suggesting that these alterations are not merely responsible for dysregulation of WWOX protein expression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Section 'Alterations of WWOX in cancers support its role as a tumor suppressor', paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE PIECE CONCEDES BOTH CAUSES IN ONE SENTENCE, WHICH IS MORE HONEST THAN ITS CONCLUSIONS. Selective pressure AND fragility are named together as reasons for the deletion frequency. The Conclusions then assert that the loss is 'not a secondary/passive event because of the fragility of its locus', dropping the concession. Recorded because a reading that only collects a paper's errors is not reading it: this sentence is the piece's own best statement of the position its title asks about.",
+    "snippet": "WWOX is among the most significantly deleted genes in cancers,",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Introduction, paragraph 4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AN UNCHECKABLE LOAD-BEARING CITATION. Half of the induction claim -- the single-strand-break arm -- rests on 'unpublished data'. There is no route by which any reader, then or now, can verify it, and it cannot be entered into this repository at any epistemic level above IPOTESI. Recorded as a permanent limit of this source.",
+    "snippet": "levels of WWOX protein were recently shown to be induced following DSBs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Section 'WWOX facilitates DDR', sentence 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PRINCIPAL FINDING 4 -- THE MECHANISM MOST LIKELY TO BE CARRIED FORWARD BY A READER, AND THE CITATION FOR ITS FIRST STEP DOES NOT MATCH THIS REPOSITORY'S OWN RECORD. The chain is asserted as established fact and cited to refs 8 and 10. Ref 8 is PMID 25331887, held here at partial_fulltext_read: this repository's BLIND LOCATOR AUDIT of that paper's supplement struck the clause 'ITCH-dependent' from CLAIM 029's own text on the finding that it 'has no blot, lane, label or legend mention anywhere in this supplement'. Ref 10 is PMID 25245215, a REVIEW, unread in this ledger. And this repository's reading of PMID 23370280 assigns ITCH-dependent K63 stabilisation of WWOX to a DIFFERENT paper and mechanism, PMID 24550385 (complete_fulltext_read here), which the editorial does not cite. NOT a claim that the editorial is wrong -- 25331887's body was read under an earlier receipt and the audit covered only its six SI pages -- but the citation offered for the ITCH step points where this repository's own record does not. ONE THING IT GETS RIGHT AND IT IS WORTH SAYING: K63 here carries a non-proteasomal, trafficking-type role, which is the CORRECTED form of the textbook default in epistemic_discipline.md, not the false universal 'polyUb leads to the proteasome'.",
+    "snippet": "ITCH mediates K63-linked ubiquitination of WWOX and promotes its translocation into the nucleus where it activates ATM in a positive feed-forward loop manner",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Section 'WWOX facilitates DDR'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIDELITY CHECK, AND THIS ONE PASSES ON WHAT IT SAYS AND DROPS HALF OF WHAT ITS SOURCE SHOWS. Against PMID 23370280, held at complete_fulltext_read in this ledger: cytoplasmic retention and suppressed transactivation are transmitted FAITHFULLY. What is dropped is that source's headline -- WWOX competes with ITCH and thereby INCREASES DeltaNp63alpha abundance while lowering its activity, the demonstration that greater protein abundance can coexist with lower function. Under a heading 'WWOX promotes apoptosis' only the suppressive half survives. Incomplete, not false, and incomplete in the direction that serves the argument.",
+    "snippet": "WWOX interaction with ΔNp63α inhibits its nuclear translocation and suppresses its transactivation function",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Section 'WWOX promotes apoptosis'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AN EMPIRICAL CLAIM WITH NO CITATION AT ALL. The apoptosis section opens with an in vitro and an in vivo result and carries no reference; the section's first xref is ref 11, two sentences later. A reader cannot resolve which cell lines, which tumour models or whose data. Recorded because 'reviewed elsewhere' at least points somewhere and this points nowhere.",
+    "snippet": "Ectopic expression of WWOX in different cancer cell lines resulted in apoptosis in vitro and marked inhibition of tumorigenicity in vivo",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Section 'WWOX promotes apoptosis', sentence 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PRINCIPAL FINDING 5 -- DISPOSAL BY OMISSION, CHECKED AGAINST THE VERY REVIEW BEING CITED. The 'frequent loss' framing is attributed to PMID 24510053, which this ledger holds at complete_fulltext_read. That review's own content, as read here: 'WWOX loss is not the only direction reported. Some studies document INCREASED WWOX in breast, gastric and prostate carcinomas, which the authors read as complex regulation.' The editorial cites the review for the loss-only direction and does not carry the countervailing observation the review itself reports. The entire selective-pressure argument requires loss to be the rule.",
+    "snippet": "was originally cloned as a putative tumor suppressor because of its frequent loss in cancer",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Section 'Alterations of WWOX in cancers support its role as a tumor suppressor', sentence 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PRINCIPAL FINDING 6 -- THE ONE PLACE THIS PIECE TOUCHES THE REFERENCE GENOTYPE, AND THE CITED FACT RUNS AGAINST THE ARGUMENT IT IS OFFERED IN SUPPORT OF. The premise is that loss of a common fragile site carries no INHERITED selective pressure because cancer strikes after reproduction. The support offered is that GERMLINE WWOX loss of function causes neuronal disorders. But a germline loss-of-function phenotype is exactly what inherited selective pressure on that locus looks like, and it acts before reproduction, not after it. The second sentence contradicts the first; it is introduced with 'In support of this assumption'. This needs no external data -- the inversion is visible in the article's own two consecutive sentences. The neuronal claim rests on a single citation, ref 14 (PMID 25416187, Tabarki 2015), which is NOT held in this ledger at any depth; the two Aqeilan-authored reviews cited elsewhere in this piece cannot carry it, because this repository's complete read of PMID 24510053 measured ZERO occurrences of epilepsy, seizure, brain, CNS, WOREE, encephalopathy, ataxia, intellectual, recessive or syndrome across its 38,845-character body.",
+    "snippet": "One explanation might be that cancer usually occurs after the reproductive phase and therefore loss of CFS would not have an inherited selective pressure. In support of this assumption, germline mutations or loss of function of WWOX are associated with neuronal disorders,",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Conclusions, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE PIECE'S OWN THESIS, QUOTED SO THAT WHAT THE FIGURE DOES TO IT IS CHECKABLE. It asserts a single-sided resolution: not passive, actively contributing.",
+    "snippet": "we propose that WWOX loss early in the precancerous stage is not a secondary/passive event because of the fragility of its locus but provides a growth advantage that actively contributes to tumorigenesis",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Conclusions, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE PIECE'S STRONGEST SELF-LIMITATION, AND IT IS IN THE LAST PARAGRAPH. CFS expression is cell-type-specific, so behaviour is expected to vary between cancer types. This is the sentence that most constrains any transfer of the thesis to another tissue -- and a fortiori to a post-mitotic, non-neoplastic one. It is stated once, after the conclusion it qualifies.",
+    "snippet": "As the expression of these CFSs and their associated genes is cell-type-specific,",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Conclusions, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "SCOPE OF THE GENERALISATION, RECORDED BECAUSE IT NAMES THE COMPARATORS. Four further CFS genes are named as having DDR roles, with the hedge 'some having established tumor suppressor function' -- i.e. not all of them. None of the four is held in this ledger at any depth.",
+    "snippet": "Other CFS genes such as FHIT, SPIDR, PARK2 and RORA have also roles in DDR, with some having established tumor suppressor function",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Conclusions, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE TEXT'S NAME FOR THE LOCUS, CAPTURED SO THE PANEL'S LABEL CAN BE COMPARED WITH IT. The article names the fragile site FRA16D throughout, including in its own title.",
+    "snippet": "One such example of a tumor suppressor gene is the WW domain-containing oxidoreductase (WWOX), which spans the CFS FRA16D.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Introduction, paragraph 4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE CAPTION'S DECLARED SYMBOL CONVENTION -- A TEXT SURFACE, DELIBERATELY NOT RELABELLED 'figure'. Quoted character-for-character from the caption element, because a caption quote must remain subject to text verification and must never stand in for a reading of the pixels. It declares that the deletion is depicted as Delta and that cells carrying it are POSITIVELY SELECTED -- which is the driver property.",
+    "snippet": "Cells with deletions within WWOX-encoding gene (depicted as Δ) are positively selected owing to the role of WWOX in DDR leading to genomic instability and mutator phenotype",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID27551470_Hazan2015_PMC.xml",
+    "anchor": "Figure 1 caption",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PRINCIPAL FINDING 7, PANEL SIDE -- THE CAPTION'S DELTA SITS ON THE ELEMENT THE PANEL LABELS 'Passenger'. Read at native resolution and then adjudicated on a 400 dpi render of PDF page 2 before anything was asserted. On the right ('Extensive' replication stress) branch the panel draws exactly ONE open triangle, and it sits directly above a TRUNCATED DNA helix whose shaded field extends past the drawn duplex -- the deletion -- and the label beneath that helix reads 'Passenger'. The element labelled 'Driver' is a separate object: the WWOX protein oval struck through with a large X. The X is the panel's driver symbol and the caption never mentions it. So the caption attributes positive selection -- the driver property -- to the symbol the panel assigns to the passenger side, and the caption's '(depicted as Delta)' has NO referent anywhere on the driver side of the panel. CHARITABLE RECONSTRUCTION, STATED BECAUSE IT MUST BE: the authors may intend two distinct deletions, one in the locus and one in the gene. The panel draws one. On an article whose title asks whether the event is passive or active, the reader who trusts the caption and the reader who opens the figure get OPPOSITE assignments. Left branch, for contrast: the helix is drawn intact and unlabelled by any triangle.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1, right branch: exactly one open triangle, drawn directly above a truncated DNA helix whose shaded field extends past the drawn duplex; the label beneath that helix reads 'Passenger'. The adjacent WWOX protein oval is struck through with a large X and its label reads 'Driver'. No triangle appears anywhere on the driver element. Left branch, for contrast: the helix is drawn intact and carries no triangle.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27551470/cddiscovery201540-f1.jpg",
+    "anchor": "Figure 1, right branch: open triangle above the truncated helix labelled 'Passenger'; WWOX oval struck through with an X labelled 'Driver'. Inspected at native resolution in the deposit JPEG (697x565, md5 f216edac... identical to the value the article XML declares for its own graphic) and adjudicated on files/figures/PMID27551470/PMID27551470_pdfpage2_render400dpi.png, a deterministic pdftoppm -r 400 render of page 2 of the fingerprinted PDF, cropped 520x330+1500+740 and 420x360+1950+700 at 300%.",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[18]",
+    "contradicts_needle": "depicted as Δ) are positively selected",
+    "cited_panel_check": "PASS BY CONSTRUCTION. The contradicted sentence IS the caption of Figure 1 and this locator reads the panels of Figure 1, so the sentence and the panel that falsifies its symbol assignment belong to the same figure. There is only one figure in this article, so no cross-figure mismatch is possible."
+   },
+   {
+    "proposition": "PANEL SIDE, QUALIFYING THE THESIS -- THE FIGURE IS LESS ONE-SIDED THAN THE TEXT. The Conclusions assert that WWOX loss is 'not a secondary/passive event'. The panel does not draw a choice between passenger and driver: it draws BOTH, side by side on the same 'Extensive' branch, assigning 'Passenger' to the locus break and 'Driver' to the loss of the gene product. That is a both-and model, and it is a better answer to the title's question than the text's either-or. Recorded as a qualification and not as a contradiction: the panel does not deny the thesis, it decomposes it.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1, right branch: 'Passenger' and 'Driver' are drawn as two adjacent elements under a single 'Extensive' replication-stress arm, both downstream of the same lightning symbol, rather than as two alternative branches of a choice.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27551470/cddiscovery201540-f1.jpg",
+    "anchor": "Figure 1, right branch: 'Passenger' and 'Driver' labels drawn as two adjacent elements under one 'Extensive' arm, both downstream of the same lightning symbol.",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[14]",
+    "qualifies_needle": "provides a growth advantage that actively contributes",
+    "cited_panel_check": "The qualified sentence is the Conclusions' thesis and this locator reads the article's only figure, which the Conclusions cite by name at that point. Same figure, same claim."
+   },
+   {
+    "proposition": "PANEL SIDE, QUALIFYING THE LOCUS NAME. The panel labels the fragile site 'FRA16' -- no terminal D. Verified at 400 dpi and again at 300% magnification of that render; the glyph sequence is F-R-A-1-6 and the label ends there. The article's title, body and caption all say FRA16D. FRA16 is not a fragile-site designation on its own: FRA16A, FRA16B, FRA16C and FRA16D are four distinct sites, so the panel's label is ambiguous between them while the text is specific. Small, and reported as small -- it changes no result. It is recorded because it is the article's own title object and because it is invisible to every check that does not open the image.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1, left branch: the locus label above the intact DNA helix reads FRA16 — glyph sequence F, R, A, 1, 6, with no terminal D. Verified on the 400 dpi render of PDF page 2 and again at 300% magnification of the crop 460x300+960+740.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID27551470/PMID27551470_pdfpage2_render400dpi.png",
+    "anchor": "Figure 1, left branch: locus label immediately above the intact DNA helix. Crop 460x300+960+740 of the 400 dpi page-2 render, viewed at 300%.",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[17]",
+    "qualifies_needle": "spans the CFS FRA16D",
+    "cited_panel_check": "The qualified sentence names the locus the panel labels; this locator reads that label in the article's only figure."
+   }
+  ],
+  "note": "First read of this article; no prior receipt of any kind existed. 22 locators over 5 fingerprinted artifacts: 19 text locators on the XML, 3 figure locators on the pixels. The reading's product is concentrated in six findings — the double use of hemizygosity, the Q-value calibration that cannot discriminate the hypothesis it is offered for, the absorption of the McAvoy negative, the ITCH citation, the loss-only framing contradicted by the very review cited for it, and the reproductive-phase argument whose supporting fact runs the other way — plus the caption-versus-panel symbol assignment on the article's only figure."
+ }
+}
