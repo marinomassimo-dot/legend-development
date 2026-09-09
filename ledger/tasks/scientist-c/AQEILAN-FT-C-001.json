@@ -64,7 +64,7 @@
    "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
   ]
  },
- "CURRENT_STATE": "CLAIMED",
+ "CURRENT_STATE": "WAVE_1_COMPLETE — 2 of 7 PMIDs closed; 5 remain for a later wave",
  "assigned_on": "2026-09-08",
  "acquisition_hints": {
   "20530675": {
@@ -161,5 +161,37 @@
    "21731849": "no receipt of any kind -> reread_reason first_read"
   },
   "evidence_locality_finding": "files/fulltext/ and files/figures/ are EMPTY in this shared checkout. The artifact FTR-20260814-20530675-01 fingerprints (files/fulltext/PMID20530675_Kurek2010_PMC.html, sha256 8fadfda1...) is not present here, so the prior reading cannot be re-verified from bytes in this checkout and its surfaces must be re-acquired. Recorded, not worked around."
- }
+ },
+ "CHECKPOINTS": [
+  {
+   "milestone": "wave 1 complete",
+   "at": "2026-09-09T09:30:00Z",
+   "actor": "scientist-c",
+   "pmids_closed": [
+    "20530675",
+    "21731849"
+   ],
+   "receipts": [
+    "FTR-20260909-20530675-01",
+    "FTR-20260909-21731849-01"
+   ],
+   "evidence_depth": "complete_fulltext_read (both)",
+   "manifests": "strict validator PASS, 0 gaps, 31 and 18 locators",
+   "commits": [
+    "f9c2e8e ack/claim",
+    "d67f337 PMID 20530675",
+    "a41db15 PMID 21731849",
+    "cfa68b7 self-eval + queue + micro-upgrade",
+    "d81f165 capability scout"
+   ],
+   "remaining_pmids": [
+    "38355659",
+    "21115974",
+    "16223882",
+    "18460020",
+    "41562193"
+   ],
+   "note_for_next_wave": "41562193 carries only a legacy_reconstruction, so it is first_read - the article itself has never been opened. 16223882 is now also FT-076 in the queue and carries a standing expression of concern that must be read alongside it. 18460020 has no PMCID and no free site listed; expect the full acquisition cascade."
+  }
+ ]
 }
