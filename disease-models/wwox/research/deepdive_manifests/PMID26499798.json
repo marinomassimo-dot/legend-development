@@ -1,0 +1,430 @@
+{
+ "schema_version": 2,
+ "pmid": "26499798",
+ "doi": "10.1074/jbc.r115.676346",
+ "receipt": "FTR-20260909-26499798-01",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID26499798.md",
+  "disease-models/wwox/research/commit_candidates/CC-20260909-26499798-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "The reading route itself."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": true,
+   "reason": "MANDATORY R4: the reading corroborates consolidated baseline CLAIM 017 and CLAIM 024 and bears on CLAIM 029 and CLAIM 030. Blind audit run over the (proposition, snippet, anchor) triples BEFORE the commit candidate was written."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed. The PMC HTML rendering answered on the first request and the PMC PDF came through pmc_pow_fetch.py. Recorded rather than omitted: Europe PMC fullTextXML returns HTTP 404 and NCBI efetch returns front matter only with the comment 'The publisher of this article does not allow downloading of the full text in XML form', so NO structured XML surface exists for this article and the HTML rendering is the structured surface that does."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined on evidence grounds. A discovery pass looks for leads toward biomarkers, molecules or repurposing; every mechanistic statement in this review is a summary of a primary paper, and the two that matter here (PMID 24550385 ITCH/K63, PMID 25331887 ATM) are already read at depth in this corpus. Squeezing a secondary source for leads its own primaries already supply is how a review gets promoted into a datum (D-15)."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever matures here. The one lever-shaped statement (ITCH raises WWOX abundance) belongs to PMID 24550385 and is already carried in DL-THER-095."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is proposed or promoted by this reading."
+  },
+  {
+   "skill": "legend-proband-priority-matrix",
+   "used": false,
+   "reason": "Single-paper reading inside an assigned lot; no batch to order."
+  },
+  {
+   "skill": "legend-session-self-eval",
+   "used": true
+  },
+  {
+   "skill": "legend-capability-scout",
+   "used": true
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 137,
+  "publications_on_gene": 64,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed ESearch 2026-09-09: 'Aqeilan RI[Author]' = 137 records, 'Aqeilan RI[Author] AND WWOX[Title/Abstract]' = 64; the structural co-author 'Schueler-Furman O[Author]' = 120. This is the primary WWOX EXPERIMENTAL laboratory and it is NOT the primary clinical group for WWOX-DEE: every patient in Figure 2B was ascertained by another group (refs 20, 61, 62, 63, 65, 75) and the caption says so. Weighting applied throughout this reading: where the review summarises the laboratory's own work it is a SELF-SUMMARY of primary papers this corpus has already read (24550385, 25331887, 15070730) and adds no independent weight; where it tabulates other groups' patients its value is checkability; and where the structural co-author contributes (Figures 2A, 3A, 3B) the output is COMPUTATIONAL MODELLING generated for this review, which is the one place the article is primary - and it is primary for models, not for measurements."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX",
+    "count": 707,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND (WOREE OR SCAR12)",
+    "count": 29,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND ubiquitination",
+    "count": 24,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND ITCH",
+    "count": 5,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND Ack1",
+    "count": 4,
+    "source": "PubMed ESearch, 2026-09-09"
+   }
+  ],
+  "note": "The ubiquitination sub-field is 24 records against 707 for the gene, and the two arms this reading turns on are 5 (ITCH) and 4 (Ack1). At that size the corpus can be complete rather than sampled, which is what makes the observation that PMID 16288044 has never been opened here a gap rather than a triage decision."
+ },
+ "multihop": {
+  "references_enumerated": 78,
+  "gene_direct_refs_resolved": {
+   "24550385": "ref 41, Abu-Odeh 2014 JBC - the ITCH/K63 primary. complete_fulltext_read here (FTR-20260810-24550385-02). epub 2014-02-18.",
+   "16288044": "ref 74, Mahajan 2005 Cancer Res - the Ack1/Tyr-287 primary and the source DIS-001 turns on. NO RECEIPT OF ANY KIND. Unread here for the second wave running.",
+   "25411445": "ref 63, Mignot 2015 - the source of Figure 2B patients vi-ix INCLUDING the P47R/A16* genotype, and of the WOREE cohort. NO RECEIPT OF ANY KIND.",
+   "24369382": "ref 20, Mallaret 2014 - P47T, PAPER 042. partial_fulltext_read.",
+   "24456803": "ref 61, Abdel-Salam 2014 - R54*, PAPER 043. partial_fulltext_read.",
+   "25403906": "ref 62, Ben-Salem 2015 - patient v. NO RECEIPT.",
+   "25716914": "ref 64, Valduga 2015. NO RECEIPT.",
+   "26345274": "ref 65, Tabarki 2015 - patient iii. NO RECEIPT.",
+   "25331887": "ref 51, Abu-Odeh 2014 PNAS - ATM/DDR. partial_fulltext_read (this actor, wave 2).",
+   "15070730": "ref 30, Aqeilan 2004 PNAS - p73. complete_fulltext_read (this actor, wave 3).",
+   "22193544": "ref 69, Wang 2012 - GSK3beta/Tau. complete_fulltext_read, and the source of dismissal-ledger entry D-14."
+  },
+  "queued": [
+   "25411445 — ref 63, Mignot 2015 — NO RECEIPT OF ANY KIND, and it is the primary behind Figure 2B patients vi-ix including the P47R/A16* genotype this reading turns on. Highest-value acquisition named by this reading.",
+   "16288044 — ref 74, Mahajan 2005, Ack1/Tyr-287 — NO RECEIPT OF ANY KIND. Named again, second wave running; it is the primary DIS-001 turns on.",
+   "25403906 — ref 62, Ben-Salem 2015, patient v — NO RECEIPT",
+   "25716914 — ref 64, Valduga 2015 — NO RECEIPT",
+   "26345274 — ref 65, Tabarki 2015, patient iii — NO RECEIPT"
+  ],
+  "note": "11 of the 78 references were resolved to PMIDs and their receipt status measured, chosen as the ones this reading's statements actually depend on. THREE of the five patient-source references have no receipt of any kind, which is the multi-hop shape of this reading's principal finding: the genotype-level facts are reachable here only through secondary sources.",
+  "gene_direct_refs_in_source": [
+   "24550385",
+   "16288044",
+   "25411445",
+   "24369382",
+   "24456803",
+   "25403906",
+   "25716914",
+   "26345274",
+   "25331887",
+   "15070730",
+   "22193544"
+  ],
+  "resolved": [
+   "24550385 — ref 41, ITCH/K63 primary — complete_fulltext_read here (FTR-20260810-24550385-02)",
+   "25331887 — ref 51, ATM/DDR — partial_fulltext_read (this actor, wave 2)",
+   "15070730 — ref 30, p73 — complete_fulltext_read (this actor, wave 3)",
+   "22193544 — ref 69, GSK3beta/Tau — complete_fulltext_read; source of dismissal-ledger D-14",
+   "24369382 — ref 20, Mallaret 2014, P47T — partial_fulltext_read, PAPER 042",
+   "24456803 — ref 61, Abdel-Salam 2014, R54* — partial_fulltext_read, PAPER 043"
+  ]
+ },
+ "corpus_crossquery": {
+  "query": "Does the corpus already hold the primary evidence for the two mechanistic statements this review makes about WWOX ubiquitination, and does it hold the primary for the P47R genotype?",
+  "hits": 3,
+  "note": "Three receipt histories answered: 24550385 complete (ITCH/K63/stabilisation, with the CHX-chase and Itch-null numbers), 25331887 partial-but-body-complete (ATM/DDR), and 16288044 empty. The claim registry answered a fourth question the review could not: CLAIM 029 already carries 'ITCH-dependent K63 ubiquitination of WWOX on Lys274, nuclear accumulation', so the review's 'stabilization AND nuclear localization' is consistent with what the corpus already holds and overstates nothing. For P47R the corpus holds Banne 2021 (33916893, this actor wave 2) and this review - two secondary sources - and NOT Mignot 2015."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed ESummary 2026-09-09: publication types are 'Journal Article' and 'Review'; a retracted-publication / expression-of-concern / retraction-of-publication filter on 26499798 returns zero hits."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+   "sha256": "95b0f37fa9c939cd5836a061f59fac3392e9a1ede84685a814ec1c44aab18d4f",
+   "kind": "article_text"
+  },
+  {
+   "path": "files/fulltext/PMID26499798_AbuRemaileh2015.pdf",
+   "sha256": "1c5a4ad1c8bba0ab92122d2a0ebe62da68cafd997227f05be9f2d006d55e8b05",
+   "kind": "article_binary"
+  },
+  {
+   "path": "files/figures/PMID26499798/FIG1_p2_x3_950x852.jpeg",
+   "sha256": "025436b3601150cc19d715a00e97255e14a3c7d25081c27fa6613b5a2db3ac78",
+   "kind": "figure"
+  },
+  {
+   "path": "files/figures/PMID26499798/FIG2_p3_x11_2140x1194.jpeg",
+   "sha256": "41fd10ed1e75f080446a8adeba6bdb85cdba19d09aee8e72970fb22ce4723f29",
+   "kind": "figure"
+  },
+  {
+   "path": "files/figures/PMID26499798/FIG3_p6_x31_2050x614.jpeg",
+   "sha256": "27db6a4e3ef5fb7a566078dc03761a0054fd863dfa2664d2c13e84661b230cc8",
+   "kind": "figure"
+  },
+  {
+   "path": "files/figures/PMID26499798/zbc0521533020001.jpg",
+   "sha256": "002c432d2a841a30956c1da92ccb7eb919bf4fcde40a95468ae6b652cb6daa98",
+   "kind": "figure"
+  },
+  {
+   "path": "files/figures/PMID26499798/zbc0521533020002.jpg",
+   "sha256": "dbd125346eaf47bf93b997eb74043920e10a29ee587210c99eca79f19d8feb8e",
+   "kind": "figure"
+  },
+  {
+   "path": "files/figures/PMID26499798/zbc0521533020003.jpg",
+   "sha256": "0602e6724a85a59aedddf3fbab685a0708ba6bd8e3c09257a7204ac5db21c0fa",
+   "kind": "figure"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "NO STRUCTURED XML SURFACE EXISTS FOR THIS ARTICLE AND THE ABSENCE IS RECORDED RATHER THAN WORKED AROUND: Europe PMC fullTextXML for PMC4692203 returns HTTP 404, the Europe PMC supplementaryFiles endpoint returns the JSON error 'Article with id PMC4692203 is not open access one', and NCBI efetch db=pmc returns front matter only, carrying the comment 'The publisher of this article does not allow downloading of the full text in XML form'. The PMC HTML rendering IS a structured surface - it is markup with correct entities and no rendered page to diverge from - and all 23 text locators verify against it under the validator's own _html_surfaces parser, with the abstract separated off. The PDF is declared as article_binary for the figures and for the rendered-page adjudication of the Figure 2 caption; NO text locator points at it and no text was extracted from it, so rule 5d's defective-layer hazard does not arise.",
+  "abstract_anchoring_waived": "No locator is anchored to the abstract and none needs an abstract anchor: every proposition this reading carries is about a body sentence, a figure caption or a panel, and the abstract carries none of them. The abstract's own headline - that clinical studies of severe encephalopathy 'suggest that WWOX also plays a part in controlling CNS development' - is weaker than the body statements quoted here, not a shortcut to them.",
+  "figure_extraction_note": "TWO FIGURE SURFACES ARE DECLARED, AND THE READING WAS DONE ON THE HIGHER ONE. The PMC CDN blobs (zbc*.jpg) are 633x568, 713x398 and 683x205. The same three figures are embedded in the PMC PDF at 950x852, 2140x1194 and 2050x614 - a threefold linear gain on Figures 2 and 3 - and were extracted with PyMuPDF at their embedded resolution (fitz.Document.extract_image, no resampling). Every figure locator points at the PDF-embedded image; the CDN blobs are declared as artifacts so that the lower-resolution surface a later reader would reach by the obvious route is fingerprinted too, and so the choice is visible rather than silent. Figure 2B's allele rows are not legible at CDN resolution and are legible at 8x on the embedded image, which is the whole reason the second surface was fetched.",
+  "entries": [
+   {
+    "proposition": "THE FINDING THIS READING WAS MOST TEMPTED BY, AND IT IS A SECONDARY RESTATEMENT, NOT NEW EVIDENCE. The review states the ITCH-WWOX ubiquitination event as Lys-63-linked with a NON-degradative outcome. Its citation (41) resolves to Abu-Odeh 2014, J Biol Chem 289:8865-8880 = PMID 24550385, which this corpus has ALREADY read at complete_fulltext_read (FTR-20260810-24550385-02). The review therefore adds no independent evidentiary weight for this biology; what it adds is the primary laboratory's own review-level position, dated.",
+    "snippet": "the ubiquitin E3 ligase ITCH physically associates and functionally mediates Lys-63-linked ubiquitination of WWOX, leading to its stabilization and nuclear localization",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "WWOX and DNA Damage Response, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The ONLY occurrence of any degradation word in the whole article body, and it names NO route. Measured over the article prose with the 78-item reference list separated off first: 'proteasom' occurs ZERO times, 'degrad' once - this sentence - and 'Lys-63' once, in the ITCH sentence above. The 2015 review of the primary WWOX laboratory therefore carries a K63 STABILISING ubiquitination and a kinase-triggered 'rapid degradation' side by side, and asserts no endpoint for the second. AUDIT-NOTED (both auditors, independently): the boundary matters and is declared - ref 74's TITLE in the reference list reads 'role of Ack1 in polyubiquitination of tumor suppressor Wwox', so a route WORD exists in the bibliography. It names no chain linkage and no proteasome, and back matter is not the authors' prose about their subject (open item 3 of the receipt contract), so it does not change the finding; it is recorded because a negative measured over a declared window must say what the window excluded.",
+    "snippet": "Tyr-287, which upon phosphorylation by Ack1 leads to rapid degradation of WWOX",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "Structural Hints through the Lens of Mutations, SDR paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review's genotype-phenotype rule is stated at ALLELE level. Read against its own Figure 2B (see the figure locators), three of the six variants it names sit in compound-heterozygous genotypes, so the missense-mild / nonsense-severe correspondence is clean only for the three homozygous rows.",
+    "snippet": "Relatively milder phenotypes seem to originate from missense point mutations (P47T and P47R, G372R), whereas severe manifestations were observed in nonsense mutations (R54*, K297*, and W335*) or partial/complete deletions",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "WWOX in the CNS: Patients and Structures, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review's own text supplies the second allele for P47R and thereby the genotype-level confound. AUDIT-CORRECTED twice. (i) The universal is withdrawn: what is supportable is that in this figure P47R is drawn in trans with a truncating allele, and that the two secondary sources this corpus holds - this review and Banne 2021 (PMID 33916893, read by this actor in wave 2) - both place it there; they are not two patients, both trace to Mignot 2015 (PMID 25411445), which this corpus has NOT read. (ii) The text/figure mismatch is a NOTATION discrepancy and is not adjudicated here: the body says 'exon 1 frameshift allele' while Figure 2B labels the allele A16*, an asterisk the caption's own legend defines as a stop codon. A frameshift is often reported at protein level as a truncation, so the two need not describe different alleles; only the unread primary can settle which annotation is the deposited one.",
+    "snippet": "a homozygous mutation P47T (20), and a heterozygous mutation P47R with a WWOX exon 1 frameshift allele (63)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "Structural Hints through the Lens of Mutations, Pro-47 paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CORROBORATES consolidated baseline CLAIM 017 (the WOREE-to-SCAR12 severity spectrum) from a secondary source that names BOTH poles in one sentence and attaches an onset separation to them - 1.5 months at the severe pole against 9-12 months at the milder one. AUDIT-CORRECTED: the snippet was extended to carry the second pole, which the first version's quote did not contain, and the claim that the source 'dates' the WOREE term is withdrawn - it says only 'recently', bounded by this article's 2015-10-23 epub. Secondary corroboration of a claim already held on primary sources adds checkability, not weight.",
+    "snippet": "(recently termed WOREE phenotype, for WWOX-related epileptic encephalopathy), to non-progressive microcephaly and less severe phenotype in adolescence-adult with later onset at 9–12 months (associated with spinocerebellar ataxia type 12 (SCAR12))",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "WWOX in the CNS: Patients and Structures, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE NEGATIVE THAT MATTERS FOR THE CNS MECHANISM, IN THE AUTHORS' OWN WORDS. AUDIT-CORRECTED: the GSK3beta/Tau axis is A mechanistic candidate, not THE one - the same section also offers unstable genome and impaired ROS levels - and it is then explicitly NOT established for the human phenotypes. Any transfer of Tau biology to WWOX-DEE rests on this sentence being ignored.",
+    "snippet": "Whether these effectors are important for the observed SCAR12 and WOREE phenotypes is still unknown",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "WWOX in the CNS: Patients and Structures, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CORROBORATES consolidated baseline CLAIM 024 (WW1-WW2 tandem cooperativity) at the residue level: a single conserved residue in WW2 accounts for its low PPXY affinity, and reverting it restores binding.",
+    "snippet": "a Y85W mutant is enough to re-establish binding of WW2 to partner PPXY motifs",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "Expanded Search: The Many Faces of WWOX Unraveled by Its Partners",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CORROBORATES CLAIM 024's other limb - WW1 is the main interacting module - and is a self-summary of the laboratory's own primary work (ref 41 = PMID 24550385, already read here).",
+    "snippet": "the main interacting module of WWOX is its WW1 domain",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "Expanded Search: The Many Faces of WWOX Unraveled by Its Partners",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE MECHANISM BEHIND CLAIM 024 IS TWO COMPETING MODELS, NOT ONE, AND THE REVIEW DOES NOT CHOOSE. Recorded because a claim that says 'tandem cooperativity' can be read as if the mechanism were settled; the review's own 'Whatever its strategy' sentence follows immediately.",
+    "snippet": "either by stabilizing WW1 and thereby increasing binding affinity (44) or by binding to WW1 in an orientation that occludes the PPXY binding site",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "Expanded Search, WW1/WW2 chaperone-effect paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A DATED NEGATIVE, RECORDED WITH ITS DATE ATTACHED (epub 2015-10-23). The enzymatic function of the SDR domain - the domain carrying the reference genotype's missense allele - had no biochemical study of the human protein as of this review. This is the same shape as the E3-ligase negative in the 2014 review by the same senior author, which expired eleven days after its own epub.",
+    "snippet": "so far no biochemical studies have investigated the enzymatic activity of human WWOX or its SDR domain function",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "WWOX and Metabolism, final paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Premature death in the severe human phenotype is stated, with no age given, and is compared to the 3-4 week death of Wwox-null mice. Recorded because CLAIM 017 and CLAIM 020 both turn on survival, and this source gives a direction without a number.",
+    "snippet": "most severe WOREE patients died prematurely",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "WWOX in the CNS: Patients and Structures, paragraph 4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A NEGATIVE ABOUT CANCER RISK, with the authors' own two explanations (short lifespan; further hits required for multistep tumour formation). AUDIT-CORRECTED on scope and on omission: the source says 'these patients', which spans WOREE AND SCAR12 (refs 20, 61-64), not WWOX-DEE alone; and the very next sentence carries a countervailing datum this proposition originally dropped - the CNV-67048 variant of the WWOX locus is correlated with predisposition to lung cancer and gliomas.",
+    "snippet": "no tumor phenotype has yet been reported or noticed for them",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "WWOX in the CNS: Patients and Structures, paragraph 4",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states its own genotype-phenotype correlation as provisional in the same sentence that proposes it. The qualifier is what a downstream quotation of the rule tends to drop.",
+    "snippet": "although analysis of more patients would be required to further support this relationship",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "WWOX in the CNS: Patients and Structures, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AN AUTHOR INFERENCE, REPORTED AS ONE ('suggests'). The SDR domain's critical role is inferred from the severity of truncating alleles, not measured. AUDIT-CORRECTED: the original said the genotypes behind it are 'mostly compound heterozygous', which is an adjective where a count belongs. Counted from the panel and confirmed identically by both auditors: across the nine rows of Figure 2B, 4 are homozygous (i, ii, iv, v), 4 are compound heterozygous (vi, vii, viii, ix) and 1 is unresolved (iii, drawn dotted by the caption's own statement); among the seven rows carrying a deletion or truncation, 4 are compound heterozygous, 2 homozygous and 1 unresolved. Row v is a HOMOZYGOUS truncating row, which is what the withdrawn adjective obscured.",
+    "snippet": "The fact that patients harboring WWOX deletions or truncations exhibit a more severe phenotype suggests that the SDR domain indeed plays a critical role",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "WWOX in the CNS: Patients and Structures, paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE Pro-47 DESTABILISATION IS AN EXPECTATION, NOT A MEASUREMENT: no thermodynamic, expression or stability measurement on P47T or P47R appears anywhere in this article. AUDIT-CORRECTED, and this correction runs against the reading's own interest: the original attributed the expectation to the Rosetta model of Figure 3A. The source does not - it grounds it in the residue's conservation and in the 'buckle' role 'revealed by the first structure of the domain' (ref 73, Macias 1996, an EXPERIMENTAL WW-domain structure of another protein), and cites Fig 3A only as illustration. AUDIT-STRENGTHENED in the other direction: the Figure 3A caption drops the body's hedge entirely and states flatly that Pro-47 mutation is 'reducing the stability of WW and consequently its binding to peptide targets'.",
+    "snippet": "substitution of this highly conserved residue is expected to cause marked destabilization of the protein core",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "Structural Hints through the Lens of Mutations, Pro-47 paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Lde/Lde rat lesion is a frameshift from position 371, which is why the review reads G372R and the rat as pointing at the same C-terminal extension. Recorded because it is the one non-human genetic anchor for the C-terminal tail argument.",
+    "snippet": "a frameshift that changes its C-terminal protein sequence starting from position 371",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "Rodent Models: Initial Studies on WWOX and Cancer, and Beyond",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "EVERY STRUCTURAL MODEL OF WWOX IN THIS ARTICLE IS COMPUTATIONAL, and there is no experimental structure of WWOX in it: the SDR model is a comparative model from template 3rd5 and the WW1 model is built on ITCH's WW3 domain (PDB 4n7f). AUDIT-CORRECTED: the original universal - 'every structural statement rests on computational models' - is falsified inside the same paper, which also carries two experimental structural anchors: the Pro-47 buckle role from the first WW-domain structure (ref 73) and the YXXXK catalytic motif 'confirmed by alanine substitution of residues Tyr-293 and Lys-297'.",
+    "snippet": "generated by the RosettaCM protocol as implemented by the Robetta server",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "FIGURE 3 caption, panel B",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE FIGURE 3 CAPTION DROPS THE QUALIFIER ITS OWN BODY TEXT CARRIES, and the unqualified form is false on the paper's own Figure 2B, which displays P47T, P47R and G372R as point mutations in CNS-disease patients.",
+    "snippet": "G372R, the only point mutation associated with CNS-related diseases",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "FIGURE 3 caption, right panel",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The body text's MORE QUALIFIED form of the same statement, quoted beside the caption so the two can be compared without leaving the source. AUDIT-CORRECTED: the original called this form 'correctly qualified' and it is not correct either - by the same counting rule that falsifies the caption, Figure 2B places four further single-residue changes inside the SDR region in CNS-disease patients (H173*, V202*, K297*, W335*). BOTH forms survive only if 'point mutation' silently means 'missense', and that equivocation - not the missing region qualifier - is the actual defect the pair exposes.",
+    "snippet": "the sole point mutation in the SDR region linked to CNS disease, G372R",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "Structural Hints through the Lens of Mutations, final paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE FIGURE 2 CAPTION GLOSSES ITS 'P' MARKER AS 'proline', AND NO MARKED POSITION IS A PROLINE THE ARTICLE DISCUSSES. AUDIT-CORRECTED, and this was the reading's worst error: the original asserted that the marked positions 'are phosphorylation sites in the paper's own text'. They are not. Searched exhaustively, the article's prose names exactly ONE WWOX phosphorylation site - Tyr-287, phosphorylated by Ack1 - and the only WWOX residues it names anywhere are Pro-47, Tyr-85, Ser-281, Tyr-287, Tyr-293 and Lys-297. The identification of the other marked positions came from this reader's background knowledge and not from the source, which is an undeclared DEFAULT_FROM_TEXTBOOK and is withdrawn. What survives, measured: see the Figure 2A attestation.",
+    "snippet": "MTS, mitochondrial transmission signal; P, proline",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "FIGURE 2 caption, panel A legend",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE FIGURE 2 CAPTION'S BLANKET SOURCE ATTRIBUTION IS INCONSISTENT WITH ITS OWN PER-PATIENT LIST. Reference 59 is Nunez et al. 2006, 'WWOX protein expression in normal human tissues', a normal-tissue expression study with no patients; the per-patient attributions that follow in the same caption name refs 20, 61, 62, 63, 65 and 75, and never 59. Verified on the rendered PDF page 3 as well as in the HTML, because a digit is exactly what an extraction can damage.",
+    "snippet": "The two alleles of each of the reported patients (59, 63) are presented below the architecture scheme",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "FIGURE 2 caption, first sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Figure 1's caption asserts the GSK3beta-Tau arm without a qualifier, in the same caption that marks ATM and p73 as unknown for the same phenotype. Quoted so the asymmetry can be checked against the panel.",
+    "snippet": "WWOX inhibits GSK3β activity to phosphorylate Tau that is crucial for proper neurodevelopment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "FIGURE 1 caption",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The caption's own hedge, applied to ATM and p73 only.",
+    "snippet": "Whether DDR proteins such as ATM and p73 are important for the neurodegeneration phenotype upon WWOX loss is unknown",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID26499798_AbuRemaileh2015_PMC.html",
+    "anchor": "FIGURE 1 caption",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "READ FROM THE PIXELS AT 8x, AND THIS IS THE READING'S PRINCIPAL GENOTYPE-LEVEL FINDING. In Figure 2B the patient rows are drawn as two allele bars each. Row vi carries a solid blue bar truncating at a tick near residue 16 labelled A16*, and a full-length GREEN bar carrying a tick at approximately residue 47 labelled P47R. P47R is therefore in trans with a truncating exon-1 allele in this figure, never alone. The phenotype annotation for row vi is not a single letter: it is 'S' and 'W' separated by a double-headed arrow, the only row in the panel so marked, while the caption defines only 'S stands for SCAR12, and W stands for WOREE' and never explains the arrow.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] row vi shows blue allele solid to a tick at approximately residue 16 (label A16*) then hollow; green allele full-length solid with a tick at approximately residue 47 (label P47R); the row's phenotype annotation is S <-> W, and no other row carries two letters",
+    "surface": "figure",
+    "artifact": "files/figures/PMID26499798/FIG2_p3_x11_2140x1194.jpeg",
+    "anchor": "Figure 2, panel B, row vi",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[2]",
+    "contradicts_needle": "Relatively milder phenotypes seem to originate from missense point mutations"
+   },
+   {
+    "proposition": "THE ALLELE-LEVEL RULE AGAINST THE GENOTYPE-LEVEL PANEL, COUNTED. Of the six variants the running text names in its genotype-phenotype sentence, Figure 2B draws THREE as homozygous - P47T (row i, tick crossing both bars, phenotype S), G372R (row ii, tick crossing both bars, phenotype S) and R54* (row iv, tick crossing both bars, phenotype W) - and THREE in trans with a different second allele: P47R with A16* (row vi), W335* with the Exon5del/H173* allele (row viii, phenotype W) and K297* with Exon1-9del (row ix, phenotype W).",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] rows i, ii and iv each show a single tick crossing BOTH allele bars (homozygous); rows vi, viii and ix each show two differently labelled alleles, one blue and one green",
+    "surface": "figure",
+    "artifact": "files/figures/PMID26499798/FIG2_p3_x11_2140x1194.jpeg",
+    "anchor": "Figure 2, panel B, rows i-ix",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[2]",
+    "qualifies_needle": "whereas severe manifestations were observed in nonsense mutations"
+   },
+   {
+    "proposition": "MEASURED FROM THE PIXELS, AND THE ONE POINT ON WHICH THE TWO BLIND AUDITORS DISAGREED - ADJUDICATED HERE AGAINST ONE OF THEM. Figure 2A carries FOUR marker stalks, not the three this reading first counted: the leftmost box is a doubled trapezoid. Calibrating on the protein bar's own ends (x=68 -> residue 1, x=2121 -> residue 414), the stalks sit at residues 12.3, 14.3, 33.2 and 286.9. One auditor placed the left pair at 12.1 and 14.1 and said they do NOT land on the residue-16 boundary tick; the other placed them at 13.4 and 15.4 and accepted 'the residue-16 tick'. This measurement agrees with the first: the tick for residue 16 falls at x=142.6 and both left stalks are 8 and 19 px to its left, so they sit inside the beige pre-WW1 block and not on the tick. CONSEQUENCE: of the four marked positions, exactly one (286.9) corresponds to a residue the article identifies at all - Tyr-287, its single named phosphorylation site - and three are unexplained by the text in any way. Pro-47, the only proline the article discusses and the site of both WW1 CNS missense alleles, carries no marker at all, while the caption glosses the marker as 'proline'.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] four marker stalks descend to the protein bar, carried by three trapezoid boxes of which the leftmost is a doubled trapezoid on two parallel stalks; measured stalk centres x = 124.0, 134.0, 228.0 and 1489.0 px, against a bar running x = 68 to x = 2121 px for residues 1 to 414 (4.971 px per residue), giving residues 12.3, 14.3, 33.2 and 286.9; no stalk at residue 47 (x = 296.7)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID26499798/FIG2_p3_x11_2140x1194.jpeg",
+    "anchor": "Figure 2, panel A",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[19]",
+    "contradicts_needle": "P, proline"
+   },
+   {
+    "proposition": "THE PANEL SAYS MORE THAN THE TEXT ALLOWS, AND MARKS ITS UNCERTAINTY ASYMMETRICALLY. Figure 1's neurodegeneration node lists 'Tau1, GSK3beta, ATM, p73 ?' with a single question mark following p73. AUDIT-NOTED: from the pixels alone a trailing '?' could be read as scoping the whole list; it is the CAPTION that ties the hedge to ATM and p73 specifically, so the asymmetry is established by caption and panel together and not by the panel alone. The body text states that whether the GSK3beta/Tau effectors matter for SCAR12 and WOREE is 'still unknown', so the unhedged half of the node is not better established than the hedged half.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] the purple 'Neuro-degeneration' node reads 'Tau1, GSK3beta, ATM, p73 ?' with the question mark placed after p73 and none after Tau1 or GSK3beta",
+    "surface": "figure",
+    "artifact": "files/figures/PMID26499798/FIG1_p2_x3_950x852.jpeg",
+    "anchor": "Figure 1, neurodegeneration node",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[21]",
+    "qualifies_needle": "WWOX inhibits GSK3"
+   },
+   {
+    "proposition": "Figure 3 is two ribbon models and no experimental structure. Panel A is a WW1 model with Pro-47 drawn in magenta sticks inside the fold and a peptide ligand in white; panel B is the SDR comparative model in two views, the left carrying cancer-mutation positions as spheres and the right the single CNS mutation G372R. Attested so that no structural statement carried out of this paper is mistaken for a measurement. AUDIT-NOTED: the phrase 'in the core' was the caption's language and is not adjudicable from a single rendered view; the attestation now says only where the residue sits in the render.",
+    "snippet": "[figure attestation - pixels cannot be quote-matched] panel A: green ribbon WW domain, a magenta stick residue packed within the fold beneath the beta-sheet, brown interacting side chains and a white extended peptide; panel B: two views of an orange/blue/cyan Rossmann-fold ribbon carrying spheres, with a red-and-blue sphere pair in the right view",
+    "surface": "figure",
+    "artifact": "files/figures/PMID26499798/FIG3_p6_x31_2050x614.jpeg",
+    "anchor": "Figure 3, panels A and B",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "audit_note": "R4 SATISFIED before the commit candidate was written. TWO independent blind auditors, each given only the 28 (proposition, quote, anchor) triples, the source artefacts and the canonical text of CLAIM 017 and CLAIM 024 - never this dossier, never the reader's identity, never a conclusion. Result over 28 triples: ZERO NOT_IN_SOURCE as whole triples; ONE sub-clause judged not in source by both (entry 19's 'phosphorylation sites in the paper's own text'); 8 entries corrected (3, 4, 5, 11, 13, 14, 16, 18, 19 propositions and the 25, 26, 27 attestations); 2 findings STRENGTHENED by the audit (the Figure 3A caption's unhedged 'reducing the stability', and the point-mutation equivocation behind entry 18); and the reading's strongest material - the Figure 2B genotype work in entries 2, 23 and 24 - survived independent recomputation from the pixels by both auditors, who reproduced the 3-homozygous / 3-compound-heterozygous split exactly. THE AUDITORS DISAGREED TWICE. On entry 14 and entry 18 they split SUPPORTED against OVERSHOOT and the OVERSHOOT was taken in both cases, because in both the source grounds the statement somewhere other than where the proposition put it. On entry 25 they disagreed about a measurement - whether Figure 2A's left marker stalks land on the residue-16 tick - and that dispute was ADJUDICATED FROM THE PIXELS by the reader, with the calibration written into the attestation, against the auditor who said they do. THE READING'S WORST ERROR WAS AN UNDECLARED PREMISE, not a misquotation: entry 19 identified three marked positions as known phosphorylation sites from this reader's background knowledge, and the article names only one. That is DEFAULT_FROM_TEXTBOOK used without declaration, forbidden by scientist_reading_modes.md 3.3, and it was caught by both auditors independently."
+ }
+}
