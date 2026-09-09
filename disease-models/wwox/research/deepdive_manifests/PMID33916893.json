@@ -1,0 +1,542 @@
+{
+ "schema_version": 2,
+ "pmid": "33916893",
+ "doi": "10.3390/cells10040824",
+ "receipt": "FTR-20260909-33916893-01",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID33916893.md",
+  "disease-models/wwox/research/commit_candidates/CC-20260909-33916893-01.md",
+  "discovery_ledger_current#DL-THER-106"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": true,
+   "reason": "Mandatory R4: the reading corroborates and qualifies consolidated baseline CLAIM 017, CLAIM 019 and CLAIM 020 and touches CLAIM 030 and CLAIM 033. Blind audit run over the (proposition, snippet, anchor) triples before the commit candidate was written."
+  },
+  {
+   "skill": "legend-session-self-eval",
+   "used": true
+  },
+  {
+   "skill": "legend-capability-scout",
+   "used": true
+  },
+  {
+   "skill": "legend-session-takeaways",
+   "used": true
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed. Europe PMC fullTextXML returned the structured surface on the first request and the Europe PMC supplementaryFiles endpoint returned the complete supplement archive; no cascade tier beyond those two was required."
+  },
+  {
+   "skill": "legend-paperqa",
+   "used": false,
+   "reason": "External spend. PaperQA2 is API-keyed and every paid or API-keyed service is reserved from this actor by the dispatch."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is promoted. The antiepileptic responder subset is recorded as an uncontrolled retrospective observation and explicitly not as a treatment proposal, so there is no compound to run through BLOCK-1."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "This is a secondary source. It supplies a census and a genotype-phenotype qualification, not a new mechanistic lever; forging hypotheses on a review's synthesis would inherit its assertions rather than the primaries beneath them."
+  },
+  {
+   "skill": "legend-proband-priority-matrix",
+   "used": false,
+   "reason": "The wave was fixed at two named PMIDs by the orchestrator; there is no batch to order."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": true,
+   "reason": "Applied to the supplement rather than the body: Table S1's per-patient antiepileptic-response column is the only surface in this paper that carries a therapeutic signal, and the running text does not report it."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 137,
+  "publications_on_gene": 64,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "PubMed ESearch 2026-09-09: 'Aqeilan RI[Author]' = 137 records, 'Aqeilan RI[Author] AND WWOX[Title/Abstract]' = 64. This is the primary WWOX experimental laboratory and it is NOT the primary clinical group for WWOX-DEE: the 56 WOREE patients it tabulates were ascertained and phenotyped by more than 21 other groups, and the review says so. Consequence for weighting, applied throughout: where this paper reports the laboratory's own rodent and organoid work it is a self-summary of primary work already in this corpus and adds no independent weight; where it tabulates other groups' patients it is a CURATION whose value is checkability, not observation. PubMed records the publication type as 'Review'. Nothing in it is treated as primary evidence for an experiment it did not perform."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX",
+    "count": 707,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND (WOREE OR DEE28 OR SCAR12)",
+    "count": 29,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND Q230P",
+    "count": 0,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND ACTH",
+    "count": 1,
+    "source": "PubMed ESearch, 2026-09-09"
+   }
+  ],
+  "note": "The clinical-syndrome literature is 29 records against 707 for the gene, so this review is a large fraction of the syndrome-level field rather than one voice among many. 'WWOX AND Q230P' returns ZERO: the reference genotype's own allele has no PubMed title/abstract presence at all, which means every fact about it lives in full texts, tables and supplements — the surfaces this reading actually opened. That measurement is the argument against triaging this corpus from abstracts."
+ },
+ "multihop": {
+  "references_enumerated": 94,
+  "gene_direct_refs_in_source": [
+   "10.1093/brain/awt338",
+   "10.1038/s41436-018-0339-3",
+   "10.1684/epd.2018.1005",
+   "10.1038/ejhg.2011.204",
+   "10.1002/jcb.22298",
+   "10.1074/jbc.R115.676346",
+   "10.2217/fon.09.152",
+   "10.1007/s00018-014-1724-y",
+   "10.1002/jcp.21099",
+   "10.1016/j.bbcan.2014.06.001",
+   "10.1038/onc.2009.120",
+   "10.1038/s41392-020-0136-8",
+   "10.3389/fncel.2019.00391",
+   "10.1186/1471-2407-13-593",
+   "10.1158/0008-5472.CAN-05-1150",
+   "10.1158/0008-5472.CAN-07-2147",
+   "10.1021/bi400987k",
+   "10.1182/blood-2010-08-303073",
+   "10.1038/cdd.2014.95",
+   "10.1093/hmg/ddq495",
+   "10.1073/pnas.1409252111",
+   "10.1073/pnas.0400805101",
+   "10.1038/cddis.2013.6",
+   "10.3389/fnins.2018.00563",
+   "10.1007/s10735-006-9046-5",
+   "10.1016/j.neuroscience.2003.12.036",
+   "10.3390/ijms21238922",
+   "10.3390/ijms20143596",
+   "10.1111/j.1601-183X.2009.00502.x",
+   "10.1074/jbc.M800855200",
+   "10.1073/pnas.0609783104",
+   "10.1186/s40478-020-0883-3",
+   "10.1016/j.nbd.2018.09.026",
+   "10.3389/fnins.2020.00644",
+   "10.1038/cddiscovery.2015.3",
+   "10.1186/1750-1172-9-12",
+   "10.1007/s12031-014-0463-8",
+   "10.1136/jmedgenet-2014-102748",
+   "10.1038/jhg.2015.17",
+   "10.1186/s12881-016-0317-z",
+   "10.1002/ajmg.a.37363",
+   "10.1684/epd.2017.0924",
+   "10.1007/s10048-018-0549-5",
+   "10.1002/humu.23675",
+   "10.1016/j.ejpn.2019.02.003",
+   "10.1016/j.ijdevneu.2019.10.003",
+   "10.1684/epd.2020.1131",
+   "10.1002/jdn.10013",
+   "10.1515/tnsci-2018-0029",
+   "10.1007/s10072-018-3528-6"
+  ],
+  "resolved": [
+   "30356099",
+   "24369382",
+   "29808465",
+   "32581702",
+   "30290271",
+   "32000863",
+   "22193544",
+   "25012504",
+   "32300104",
+   "17360458",
+   "18487609",
+   "21075834",
+   "19500159",
+   "16061658",
+   "24456803",
+   "27495153",
+   "31543760",
+   "30158849",
+   "32581702",
+   "31340538",
+   "33255508",
+   "30362252",
+   "24932569",
+   "24308844",
+   "30361190"
+  ],
+  "queued": [
+   "FT-044"
+  ],
+  "note": "94 references enumerated from the deposited ref-list; 91 carry a DOI and 50 are gene-direct. Cross-matched by DOI against the receipt ledger: 25 of the 91 already carry a receipt in this repository, 12 of them complete. TWO unresolved references carry this reading's weight and are named rather than left implicit. (1) Johannsen 2018, PMID 29808465, reference [68] — the source of the two homozygous Q230P sisters whose survival ages this reading extracts. It is PAPER 041, it is the only functional study of Q230P, it founds CLAIM 030, and this repository holds ONLY ITS ABSTRACT because it is paywalled at Springer. The survival ages recorded here are therefore secondary-source facts awaiting primary verification. (2) Piard 2019, PMID 30356099, reference [5] — the largest WOREE series and the source of most Q230P rows; the ledger holds a partial_fulltext_read. Both are the highest-value multihop targets this reading produces.",
+  "gene_direct_refs_count": 51
+ },
+ "corpus_crossquery": {
+  "query": "Which existing WWOX-DEE claims does a curated secondary census touch, and does its variant dataset reproduce from its own deposited supplement?",
+  "hits": 30,
+  "note": "30 files in disease-models/wwox mention Q230P. The reading bears on CLAIM 017, 019, 020 (consolidated baseline) and CLAIM 030, 033 (in observation). It creates no new mechanism. Its distinctive contribution is arithmetic: every variant-level number in Section 7.3 reproduces exactly from the deposited supplement (103 VUS rows; 93/6/2/2 by type; the gnomAD allele column summing to 1057), while the patient-level cohort count does not reconcile across the article's own surfaces."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed ESummary and a retracted-publication/expression-of-concern filter on 33916893, 2026-09-09: zero hits. Publication types are 'Journal Article', 'Research Support, Non-U.S. Gov't' and 'Review'."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+   "sha256": "88682e21d23680979070c94e9cdcf5b0456af1965967344977559ce6b8602aa7",
+   "kind": "article_text"
+  },
+  {
+   "path": "files/figures/PMID33916893/cells-10-00824-g001.jpg",
+   "sha256": "a63ee436fed387fcc4fe66ecf05f28f0514a106332d5ff37fc2556c94c3f5671",
+   "kind": "figure"
+  },
+  {
+   "path": "files/figures/PMID33916893/cells-10-00824-g002.jpg",
+   "sha256": "ca41e0f69dfbcada12944d691863c9616898dbd7b17975dc579f53728a4206ee",
+   "kind": "figure"
+  },
+  {
+   "path": "files/figures/PMID33916893/cells-10-00824-g003.jpg",
+   "sha256": "d4f4f8bb59065b4ca475cb3164edd885f68908d45fe9e683326e9e934c614bf4",
+   "kind": "figure"
+  },
+  {
+   "path": "files/figures/PMID33916893/SupplementalFigure1_image1.png",
+   "sha256": "22758de23ea9db63e69ad6180bab02ac3e0f1bc6e2878d0d9c729a46fd6963e1",
+   "kind": "figure"
+  },
+  {
+   "path": "files/supplement/PMID33916893/s001/supplementary materials/Supplemental Table Legends.docx",
+   "sha256": "ab958746fa5ed205273119787f051ac1117f366421469c3a24586c1d48f6a554",
+   "kind": "supplement_text"
+  },
+  {
+   "path": "files/supplement/PMID33916893/TableS1_extracted.txt",
+   "sha256": "4cefb752b229aad6506eba35002eb9d63d3c7be273633879048690f965b898b5",
+   "kind": "supplement_text"
+  },
+  {
+   "path": "files/supplement/PMID33916893/TableS2_extracted.txt",
+   "sha256": "ea0fec2aab2f318336efdf52c105794ef3ca3da65b4e36c055978498885913a7",
+   "kind": "supplement_text"
+  },
+  {
+   "path": "files/supplement/PMID33916893/TableS3_extracted.txt",
+   "sha256": "c221ebbf347ca58c37bbd8028b1062e8022dc22aabe0b1c60c610f9f17367098",
+   "kind": "supplement_text"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC fullTextXML for PMC8067556 is local and fingerprinted; it is a structured surface, so rule 5d's defective-text-layer hazard does not arise and no PDF was used. All three main figures were inspected as images at the resolution PMC deposits, and Supplemental Figure 1's embedded PNG was extracted from the PPTX and inspected. The complete supplement was retrieved through the Europe PMC supplementaryFiles endpoint and all five files were read: Supplemental Figure 1, the table legends DOCX, and Tables S1, S2 and S3. The three XLSX tables were converted to text by a deterministic OOXML reader that preserves column position from each cell's own r= reference; no ML converter touched any surface.",
+  "abstract_anchoring_waived": "No locator is anchored to the abstract. The review's headline cohort figure of 56 WOREE patients is taken from Section 7.1 of the body, not from the abstract sentence that also carries it.",
+  "figure_extraction_note": "PMC's deposited JPEGs are 758x523, 764x616 and 787x358 while the article XML declares author originals of 3794x2620, 4203x3387 and 3937x1793. The deposited bytes served by the PMC CDN are byte-identical to those in the Europe PMC supplementaryFiles archive (verified by SHA-256 on all three), so ~760 px IS the highest resolution PMC holds; the author-resolution originals sit only behind MDPI, which returns 403 to every request from this environment. Declared rather than silently accepted: the three figures are legible at the deposited size for what is read from them here — printed phenotype text, label colours and lollipop heights — and no locator depends on a fine detail that the downsampling could have destroyed.",
+  "entries": [
+   {
+    "proposition": "Section 7.1 gives the review's WOREE tally as 45 variants across 56 patient cases (34 loss-of-function + 11 missense). The abstract's separate 'largest published cohort of WWOX individuals' phrase covers a wider set and is not this number.",
+    "snippet": "In total, 45 variants were reported in 56 WOREE patient cases",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 7.1, Published WOREE Cases",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review characterises WOREE as ending in death by one to four years of age. AUDIT-CORRECTED: this is a generalisation cited to Piard [5], NOT a range derived from the review's own dataset, and the review's own Table 1 records survivors at 12 y, 10 y, 8 y 11 m, 7 y, 6 y and 4 y.",
+    "snippet": "white matter hyperintensity representing delayed myelination, and death by the age of 1–4 years",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 2, Clinical Implications of WWOX Germline Variants",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review states the Wwox-knockout MOUSE dies two to three weeks after birth. AUDIT-CORRECTED from 'rodent': the lde/lde rat in the same section is given only unquantified 'postnatal lethality', with no age bound.",
+    "snippet": "premature death by 2 to 3 weeks after birth",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 5, Modeling WWOX Deficiency in Rodents",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review flags Q230P as a substitution at a highly conserved residue and offers loss-of-function-by-missense as the explanation for its severity. No conservation score or method is given anywhere.",
+    "snippet": "representing a very conserved amino acid residue change. This can explain the more severe disease phenotype even without a loss of function alleles, or a condition in which a missense mutation was actually causative of a loss of function effect",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 7.1, Published WOREE Cases",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AUTHOR INTERPRETATION, not a measurement: the review's central genotype-phenotype hypothesis is that complete loss of function gives WOREE while missense variants may retain residual function and give SCAR12.",
+    "snippet": "This gives rise to the hypothesis that while the complete loss of function variants will cause WOREE syndrome, the missense variants can sometimes maintain some residual protein function, therefore giving rise to the SCAR12 phenotype",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 9, Concluding Remarks",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AUDIT-CORRECTED anchor. The review states that single heterozygous loss-of-function alleles are not expected to produce severe phenotypes, citing a gnomAD pLI of 0. pLI is cited as corroboration of recessiveness, not used as the argument for it.",
+    "snippet": "The single allele heterozygous loss of function mutations are not expected to lead to severe phenotypes, as was determined from the gnomAD score of pLI = 0",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 9, Concluding Remarks",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The allele-frequency input to the review's prevalence estimate is 1057 alleles over roughly 250,000 gnomAD alleles.",
+    "snippet": "In total there were 1057 alleles out of approximately 250 thousand alleles in gnomAD",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 7.3, Data Collected from ClinVar",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review's VUS set is 103 variants partitioned as 93 missense, 6 intronic, 2 nonsense and 2 indel.",
+    "snippet": "93 were missense variants, 6 intronic, 2 nonsense and 2 were indel",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 7.3, Data Collected from ClinVar",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review projects roughly 121,000 WOREE cases worldwide from its allele-frequency arithmetic. AUDIT-NOTED: the 217 it can enumerate is a separate sentence with a DIFFERENT denominator ('WWOX-related patients', 56 published + 160 ClinVar), and that sum is 216, not 217.",
+    "snippet": "For a population of 7.5 billion people, this would result in approximately 121,000 cases of WOREE in the entire population",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 7.3, Data Collected from ClinVar",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review names, and does not quantify or prefer, the alternative explanation for its own prevalence gap: that many of the counted variants may simply be benign.",
+    "snippet": "It also could be that many of these variants are benign, which should be addressed in future studies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 7.3, Data Collected from ClinVar",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review declares the phase-unknown limitation of its own prevalence calculation; it declares a second, independent limitation (random mating) in the same passage, captured as entries[31].",
+    "snippet": "We do not know if all the variants are in cis or trans",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 7.3, Data Collected from ClinVar",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review declares that the missense-only genotype of SCAR12 may be a sampling artefact rather than a biological rule.",
+    "snippet": "it remains unknown if this genotype is common to all SCAR12 patients or if it represents a sampling bias",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 7, WWOX Variants and Mutations in Early Onset Epilepsy and Ataxia",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review's therapeutic premise is a blanket statement that antiepileptic drugs are not effective in WOREE and that most patients become refractory; it cites Table S1 and reports no responder subset.",
+    "snippet": "However, they are not effective, with most individuals becoming refractory to treatment",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 8, Future Possibilities for Personalized Medicine Interventions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AUDIT-CORRECTED, was too narrow. The review proposes nonsense-mediated-decay inhibition for splice-site alleles, naming the Yemenite founder splicing mutation as the worked case, AND extends the same proposal to any NMD-based allele deletion. It is a proposal, not a result.",
+    "snippet": "This could be a possible therapy in patients with splice-site mutations such as the case of the Yemenite founder WWOX-splicing mutation [71], and also in patients with any NMD-based allele deletion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 8, Future Possibilities for Personalized Medicine Interventions",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AUDIT-CORRECTED and materially narrowed. Table 1 places P47R in the DEE28/WOREE block, but as the SECOND ALLELE of a compound heterozygote whose other allele is the exon-1 frameshift D16fs — two patients, alive at 4 y and 3 y — whereas the P47T SCAR12 patients are HOMOZYGOUS. Codon 47 therefore appears in both syndromes, but this table supports NO allele-level comparison between P47R and P47T, because the genotypes are not matched: P47R's severity cannot be separated from the null-like allele in trans. Resolved from the table's rowspan markup, not from the linearised text, because two blind auditors read the pairing differently.",
+    "snippet": "c.46_49del (p.Asp16fs) Deletion (Exon 1)/Nonsense D16fs 2",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Table 1, DEE28 block, row 9 of the table markup: the rowspan-2 case cells (2 [62], M/F, Portuguese, compound heterozygous, onset 5 m/5 m, alive at 4 y/3 y) govern BOTH this allele and c.140C>G p.Pro47Arg, which occupies the following three-cell row as the second allele of the same patient group",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table 1 records the two homozygous Q230P sisters as alive at 12 and 10 years, with seizure onset at 2 months.",
+    "snippet": "Afghan Homozygous 2 m/2 m alive at 12 y/10 y",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Table 1, DEE28 block, c.689A>C p.Gln230Pro row, reference [68] Johannsen 2018",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AUDIT-CORRECTED. Table S1 records the two homozygous Q230P patients of Johannsen 2018 as alive at 12 and 10 years, BOTH refractory to multiple antiepileptic drugs (the table's own footnote defines MAD as 'multiple antiepileptic drugs'). Only the SECOND patient's cell additionally carries KD, an abbreviation the deposit never defines.",
+    "snippet": "MADs-Refractory/MAD,KD-Refractory",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33916893/TableS1_extracted.txt",
+    "anchor": "Table S1, DEE28 block, c.689A>C p.Gln230Pro, Afghan homozygous row, AEDs-Responsed? column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A second homozygous Q230P patient, in a different family, has a recorded endpoint of 3 y 3 m. Table 1's column for this row is headed Death and reads '3 y 3 m' where survivor rows read 'alive at', so this is a death; Table S1's column is headed 'Death/ last date of examination' and is not uniformly deaths.",
+    "snippet": "Q230P Likely pathogenic 1 F Moroccan 2 m 3 y 3 m DBA,multifocal spike",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33916893/TableS1_extracted.txt",
+    "anchor": "Table S1, DEE28 block, c.689A>C p.Gln230Pro, Moroccan homozygous row, Death/last examination = 3 y 3 m",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Long survival is not confined to missense genotypes: homozygous nonsense R264* siblings are recorded at 8 years 11 months and 5 years 2 months.",
+    "snippet": "R264* Pathogenic 2 F/M Indian 7 w/NA 8y 11 m/5y 2m Hypsarrhythmia/NA",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33916893/TableS1_extracted.txt",
+    "anchor": "Table S1, DEE28 block, c.790C>T p.Arg264Ter, Indian homozygous row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AUDIT-CORRECTED. The two homozygous W44* patients have recorded endpoints of 7 years and 20 months in a column headed 'Death/ last date of examination', so whether the divergence is in survival or in follow-up length is NOT resolved by the table. Their AED response is recorded 'Partial'.",
+    "snippet": "W44* Pathogenic 2 F/F Qatari 7 w/7w 7y/20 m Abnormal BG,SSW/NA",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33916893/TableS1_extracted.txt",
+    "anchor": "Table S1, DEE28 block, c.131G>A p.Trp44Ter, Qatari homozygous row",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Table S1 records an antiepileptic responder in WOREE on a valproate-plus-steroid regimen. It is one of FIVE explicit responders in the DEE28 block (see entries[32]); the running text mentions none of them. Note steroids are not an antiepileptic drug, and this patient's endpoint cell reads 5 m.",
+    "snippet": "1 M Emirati 2 w 5 m hypsarrhythmia + + VPA,steroids-yes",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33916893/TableS1_extracted.txt",
+    "anchor": "Table S1, DEE28 block, exon-5 deletion, Emirati homozygous row, AEDs-Responsed? column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A second WOREE responder is recorded on a phenobarbital, vigabatrin and ACTH regimen; the patient had West syndrome and an endpoint cell of <3 y. ACTH is not an antiepileptic drug.",
+    "snippet": "1 M Romanian 4 w <3 y Hypsarrhythmia, West syndrome + - PB,VGB,ACTH-Yes",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33916893/TableS1_extracted.txt",
+    "anchor": "Table S1, DEE28 block, c.918del p.Glu306fs, Romanian compound heterozygous row, AEDs-Responsed? column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AUDIT-CORRECTED, the ordinal no longer closes the list. A WOREE patient recorded seizure-free from 2 y 3 m — one of five explicit responders and nine partial responses in the DEE28 block, none of which the running text accommodates.",
+    "snippet": "1 F Italian day 20 NA Disorganized, multifocal + - seizures free since 2y3m",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33916893/TableS1_extracted.txt",
+    "anchor": "Table S1, DEE28 block, c.231_409del p.Asp77GlufsTer27, Italian compound heterozygous row, AEDs-Responsed? column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AUDIT-RECONCILED, and NO LONGER reported as an unexplained inconsistency. The supplement legend says 57 WOREE patients where the body and abstract say 56 (the deposited OOXML splits the numeral across two runs, so the surface renders '5 7'). Table S1's DEE28 Cases column sums to 58, of which exactly two rows record a prenatal medical termination of pregnancy: 58 minus 2 = 56 and 58 minus 1 = 57. The spread is an inclusion rule for terminations, not a typographic error.",
+    "snippet": "the number of cases and the seizure onset for 5 7 WOREE and 6 SCAR12 patients",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33916893/s001/supplementary materials/Supplemental Table Legends.docx",
+    "anchor": "Supplemental Table Legends.docx, Table_1_SuppInfo legend",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplementary Table S3 lists c.214C>T p.Gln72Ter on two separate rows differing only in the zygosity cell, so its 23 data rows name 22 distinct variants.",
+    "snippet": "NM_016373.4(WWOX):c.214C>T (p.Gln72Ter)",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33916893/TableS3_extracted.txt",
+    "anchor": "Table S3, rows 9 and 10 of the pathogenic/likely pathogenic list",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "AUDIT-CORRECTED twice. Figure 3B places Q230P inside the adh_short (SDR) domain and draws it at the axis maximum, making it the most recurrent single variant of ANY class — not merely of missense — in the figure's COMBINED SCAR12-plus-WOREE dataset, which is what the caption says the panel shows. The height of 8 reconciles with Table 1 only when second-allele occurrences are counted: six Table 1 rows carry Q230P with case cells (6 patients) and one further row carries Q230P as the second allele of the Yemenite c.517-2A>G compound-heterozygous group (2 patients), giving 8.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] In Figure 3B the y-axis 'WWOX mutations' runs 0-8; the green (missense) lollipop labelled Q230P stands at the axis maximum of 8 and is the tallest stem drawn of ANY mutation class, the next highest being 6; its position at residue 230 falls inside the red adh_short domain block spanning approximately residues 126-263.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33916893/cells-10-00824-g003.jpg",
+    "anchor": "Figure 3B, lollipop plot, deposited JPEG inspected at 787x358",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "AUDIT-STRENGTHENED, and the audit made this finding sharper than the draft. Figure 3B does not merely merge the SCAR12 allele P47T and the WOREE allele P47R onto one lollipop: it colours the substring 'P47R' RED and '/T' BLACK, so against its own caption key the panel applies the SCAR12 colour to the WOREE allele and the WOREE colour to the SCAR12 allele. Two independent blind auditors measured the red channel and agreed.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] In Figure 3B the codon-47 label reads 'P47R/T' over a single lollipop, and only the substring 'P47R' is drawn in red — the '/T' is black. The panel's other red label is 'G372R'. The caption assigns red to SCAR12 and black to WOREE.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33916893/cells-10-00824-g003.jpg",
+    "anchor": "Figure 3B, red-coloured labels",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[14]",
+    "qualifies_needle": "Deletion (Exon 1)/Nonsense D16fs",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Figure 2A attributes hypomyelination to the Wwox-null rodent, a phenotype the review's own Section 5 rodent text does not list. AUDIT-NOTED: the item is nonetheless traceable inside the review's own bibliography to reference [35] (Tochigi 2019, hypomyelination in the lde/lde rat), which the body cites in Section 4 for expression only.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] The upper panel of Figure 2, labelled Wwox-/-, carries the printed phenotype item 'Hypomyelination' alongside 'Hypertrophy of microglia and astrocytes'.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33916893/cells-10-00824-g002.jpg",
+    "anchor": "Figure 2A, rodent panel, deposited JPEG inspected at 764x616",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Figure 2A states the Wwox-null rodent dies within four weeks, a looser bound than the two-to-three weeks the running text gives; the panel does not contradict the text, it is less precise than it.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] The Wwox-/- panel of Figure 2A carries the printed line 'Die within 4 weeks'.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33916893/cells-10-00824-g002.jpg",
+    "anchor": "Figure 2A, rodent panel phenotype list",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[2]",
+    "qualifies_needle": "2 to 3 weeks after birth",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Figure 1 is a drawn pathway schematic carrying no measurement, so it cannot be evidence for any interaction it depicts; it is recorded as an author summary rather than as data. AUDIT-NOTED: four WWOX ovals are drawn, across the caption's three numbered pathways.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1 is a BioRender-drawn cartoon of Wnt, TGF-beta and RTK/JNK signalling with WWOX placed at three nodes; no blot, trace, micrograph, axis or data point appears anywhere in the image.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33916893/cells-10-00824-g001.jpg",
+    "anchor": "Figure 1, whole panel, deposited JPEG inspected at 758x523",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "sought"
+   },
+   {
+    "proposition": "AUDIT-RECONCILED, and NO LONGER reported as an unexplained inconsistency. Supplemental Figure 1's terminal node declares 21 pathogenic/likely pathogenic variants while Table S3 carries 23 rows naming 22 distinct variants; of those 22, c.872T>C p.Leu291Pro is annotated solely 'Esophageal squamous cell carcinoma, somatic' and is not a WOREE/SCAR12 epilepsy variant, so 22 minus 1 = 21 and the flow chart's terminal sum (76+103+21=200) closes.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] The two terminal boxes of Supplemental Figure 1 read '103 variants Variants of unknown significance and epilepsy or EIEE28 or SCAR12' and '21 variants pathogenic/likely pathogenic'; the node above them reads 'Variants smaller than 51bp: 200 variants' and 76+103+21 sums to that 200.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33916893/SupplementalFigure1_image1.png",
+    "anchor": "Supplemental Figure 1, terminal nodes of the selection flow chart",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[24]",
+    "qualifies_needle": "c.214C>T (p.Gln72Ter)",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The review declares a second, independent limitation on its prevalence calculation: that random mating is assumed and may not hold.",
+    "snippet": "We also assume random mating, but that might not always be the case",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID33916893_Aqeilan2021_PMC.xml",
+    "anchor": "Section 7.3, Data Collected from ClinVar",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A fourth explicit antiepileptic responder in the DEE28 block, on phenobarbital plus topiramate — recorded so the responder enumeration is not closed at three, which is the undershoot both blind auditors flagged.",
+    "snippet": "1 F Chinese 8 w 5 m Hypsarrhythmia + + PB,TPM-Yes",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33916893/TableS1_extracted.txt",
+    "anchor": "Table S1, DEE28 block, c.229_230+2delGAGT, Chinese compound heterozygous row, AEDs-Responsed? column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A fifth WOREE patient, initially drug-resistant, is recorded as having responded to a lamotrigine-plus-valproate combination — the only row in the table that records a response after a declared failure.",
+    "snippet": "Na-drug resistant; responded to a combined treatment with lamotrigine (LTG) and sodium valproate",
+    "surface": "supplement",
+    "artifact": "files/supplement/PMID33916893/TableS1_extracted.txt",
+    "anchor": "Table S1, DEE28 block, 6.8 Mb 16q22.2q23.1 deletion, Japanese heterozygous row, AEDs-Responsed? column",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Supplemental Figure 1's selection cascade does not close arithmetically at the 205-variant node: the node branches to an excluded set of 5, a 50-500 kb set of 4 and a sub-51 bp set of 200, and 5 + 4 + 200 = 209, not 205. Section 7.3 separately describes SIX exclusions at this step (one 1 kb-50 kb variant plus five 51 bp-1 kb variants) where the figure box says five. This one survives the audit as a genuine internal inconsistency, unlike the 56/57 and 21/22 pairs, which reconcile.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] The boxes read 'Variants smaller than 500kb: 205 variants', '5 variants between 51bp-50kb: insufficient evidence - Excluded', 'Variants between 50-500kb: 4 variants' and 'Variants smaller than 51bp: 200 variants'.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID33916893/SupplementalFigure1_image1.png",
+    "anchor": "Supplemental Figure 1, the 205-variant node and its three children",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   }
+  ],
+  "audit_note": "Blind locator audit (legend-locator-audit) run 2026-09-09 over all 31 original triples by TWO independent auditors, each given only the triples, the source artefacts and the canonical text of CLAIM 017/019/020/030/033 — neither the dossier, the commit candidate nor the reader's identity. Zero NOT_IN_SOURCE from either. Corrections taken above are marked AUDIT-CORRECTED, AUDIT-RECONCILED, AUDIT-STRENGTHENED or AUDIT-NOTED. Where the two auditors DISAGREED — the allele paired with P47R in Table 1 — the disagreement was resolved by the author against the table's rowspan markup rather than by preferring an auditor, and entries[14] records which reading won and why."
+ }
+}
