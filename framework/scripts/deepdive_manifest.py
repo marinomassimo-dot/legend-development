@@ -468,6 +468,21 @@ PRINTABLE_SUBSTITUTIONS = (
     (re.compile(r"\bD2\s+test\b|\banalyz\w+\s+by\s+D2\b|\bD2\s*=\s*\d"),
      "'D2' where the page prints U+03C7 U+00B2 'χ²'"),
     (re.compile(r"\d\s+t\s+\d{2,}"), "'t' where the page prints U+00D7 '×'"),
+    # 🔴 Added 2026-09-09 from PMID 18674750, and the reason it is a SEPARATE pair of
+    # patterns from the three above is the finding itself: a substitution table belongs to the
+    # PRODUCER, not to the corpus. The `t`-for-`×` rule above came from one extractor; this
+    # Elsevier/LiveCycle layer substitutes the DIGIT 3 for the same glyph, and `¼` for `=`.
+    # Measured on that paper against its own clean PMC HTML: 74 U+0002 <-> 74 '−' and
+    # 5 U+0003 <-> 5 '°' exactly, with 65 '¼'-for-'=' and 12 digit-3-for-'×' on top.
+    # Both branches were run against this screen. As extracted the surface is REFUSED by the C0
+    # check. With the controls stripped — exactly what a well-meaning repair does — it was
+    # ACCEPTED while every printable substitution remained, and suspicion-by-absence could not
+    # save it either, because the text still carried 5 '<' and 9 '>' from "p < 0.05".
+    (re.compile(r"[A-Za-z0-9]\s¼\s[A-Za-z0-9]"),
+     "'¼' where the page prints '=' (Elsevier/LiveCycle text layer)"),
+    (re.compile(r"\d\s+3\s+10\b"),
+     "the digit '3' where the page prints U+00D7 '×' in scientific notation "
+     "(Elsevier/LiveCycle text layer)"),
 )
 
 # Suspicion by ABSENCE — what the surface does NOT have. Fourteen corpus PDFs carry

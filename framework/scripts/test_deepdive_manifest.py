@@ -398,6 +398,46 @@ class EntriesMustBeUsable(unittest.TestCase):
                 message = self._screen("derived.txt", payload)
                 self.assertIn("SUSPECT", message, f"{label} must refuse the surface")
 
+    def test_the_elsevier_substitution_table_is_caught_after_a_repair(self) -> None:
+        """🔴 A substitution table belongs to the PRODUCER, not to the corpus.
+
+        Measured on PMID 18674750 against its own clean PMC HTML: the Elsevier/LiveCycle text
+        layer holds 74 U+0002 and 5 U+0003, and the HTML holds exactly 74 `-` (minus) and
+        exactly 5 `°` — a one-to-one count match that identifies the substitution rather
+        than inferring it. On top of the controls sit PRINTABLE substitutions: `¼` for `=`
+        (65 occurrences) and the DIGIT 3 for `×` (12, in `× 10` constructions).
+
+        The gap this closes was measured, not supposed. As extracted the surface is refused by
+        the C0 check. With the controls stripped — exactly what a well-meaning repair does —
+        it was ACCEPTED while every printable substitution survived, and suspicion-by-absence
+        could not catch it either, because the text still carried 5 `<` and 9 `>` from
+        "p < 0.05". Note also that `×` is substituted as `t` by the extractor behind the
+        rule above and as `3` by this one: the same glyph, two producers, two signatures.
+        """
+        for label, payload in (
+            ("equals as one-quarter", "The overall combined analysis provided p ¼ 6.9 3 10 7 for this SNP."),
+            ("times as digit three", "Association reached 6.9 3 10 7 in the combined sample of families."),
+        ):
+            with self.subTest(substitution=label):
+                message = self._screen("derived.txt", payload)
+                self.assertIn("SUSPECT", message, f"{label} must refuse the surface")
+
+    def test_the_elsevier_patterns_do_not_fire_on_ordinary_prose(self) -> None:
+        """The other half of the upgrade: a new pattern that refuses good surfaces is a defect.
+
+        A genuine fraction attached to a number, and an ordinary sentence in which 3 and 10 are
+        just numbers with words between them, must both survive.
+        """
+        for label, payload in (
+            ("genuine fraction", "Cells were seeded at 1¼ times the density used previously, p < 0.05."),
+            ("digits that are not an operator", "We analysed 3 of the 10 cohorts, and 3 more were excluded."),
+        ):
+            with self.subTest(payload=label):
+                self.assertEqual(
+                    self._screen("derived.txt", payload), "",
+                    f"{label} must NOT be refused",
+                )
+
     def test_a_statistical_paper_with_no_operators_at_all_is_suspect(self) -> None:
         """Suspicion by ABSENCE — what the surface does not have.
 
