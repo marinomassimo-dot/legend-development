@@ -71,7 +71,7 @@
   "note": "Breast-cancer paper carrying primary WWOX DNA-repair biology. Parity of sources: the WWOX-BRCA1 repair-choice axis exists here, not in the WOREE literature."
  },
  "multihop": {
-  "performed": true,
+  "performed": false,
   "references_enumerated": 73,
   "gene_direct_refs_in_source": [
    {
@@ -99,8 +99,9 @@
     "note": "Park et al. — heightened RAD51 in WWOX-negative cells, and a link between absent WWOX and enhanced end resection. This is the study the paper claims alignment with, so it is now the highest-value unread hop. Not resolved to a PMID here."
    }
   ],
-  "note": "The reference list holds 55 entries. The in vivo conclusion is said to 'correspond with previous in vitro findings [17,38,39]', so those three are the load-bearing hops and NONE of them is 25331887. 25331887 is cited separately at [35] and [36] for the ATM axis, and again in the Discussion as an explicit conflict on the direction of HDR. Corrected 2026-08-10 after reading it — see correction_20260810 above.",
-  "references_correction_20260909": "The prior manifest recorded 55. The deposit contains 73: ref elements CR1..CR73 counted by element count in the JATS back matter on 2026-09-09, with the maximum cited label also 73. Corrected by count, not by estimate. The ref-list sits in <back> and NOT in <body>, so the back-matter contamination hazard of fulltext_read_receipt.md open item 3 does not apply to this article — verified by element location this wave."
+  "note": "The reference list holds 73 entries (corrected from 55 by element count on 2026-09-09; the sentence below was written when the count was believed to be 55, and the reference NUMBERS it cites are unaffected by that correction). The in vivo conclusion is said to 'correspond with previous in vitro findings [17,38,39]', so those three are the load-bearing hops and NONE of them is 25331887. 25331887 is cited separately at [35] and [36] for the ATM axis, and again in the Discussion as an explicit conflict on the direction of HDR. Corrected 2026-08-10 after reading it — see correction_20260810 above.",
+  "references_correction_20260909": "The prior manifest recorded 55. The deposit contains 73: ref elements CR1..CR73 counted by element count in the JATS back matter on 2026-09-09, with the maximum cited label also 73. Corrected by count, not by estimate. The ref-list sits in <back> and NOT in <body>, so the back-matter contamination hazard of fulltext_read_receipt.md open item 3 does not apply to this article — verified by element location this wave.",
+  "performed_note_20260909": "Left FALSE deliberately. Wave 4 did NO new multi-hop work: it corrected references_enumerated by element count and nothing else. An earlier draft of this wave's edit flipped this flag to true, which would have recorded an expansion that did not happen; the session self-evaluation caught it and it was reverted. Ref 17 (Park et al.) remains the highest-value unresolved hop and is still queued, unresolved to a PMID."
  },
  "corpus_crossquery": {
   "performed": true,
