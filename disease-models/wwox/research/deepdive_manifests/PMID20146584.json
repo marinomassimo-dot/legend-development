@@ -1,0 +1,328 @@
+{
+ "schema_version": 2,
+ "pmid": "20146584",
+ "doi": "10.2217/fon.09.152",
+ "receipt": "FTR-20260909-20146584-01",
+ "landing": [
+  "FTR-20260909-20146584-01",
+  "disease-models/wwox/research/fulltext_dossiers/PMID20146584.md",
+  "full_text_queue_current",
+  "batch_queue"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "The route for the reading itself (PRIMARY_EVIDENCE_READ per the Task Contract)."
+  },
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "M0 duplicate-work gate re-run per paper on 2026-09-09 rather than inherited: fulltext_receipts.py status --pmid 20146584 returned an EMPTY history and exit 1. No receipt of any kind, so reread_reason is first_read and prior_receipt is null. The PMID appears in no other actor's lot."
+  },
+  {
+   "skill": "oa_status_dissent.py",
+   "used": true,
+   "reason": "RUN before accepting any index's access verdict, as the wave-6 dispatch requires. VERDICT PUBLISHER_MIGRATION_SUSPECTED — the DOI prefix 10.2217 is owned by 'Future Medicine Ltd' while Crossref reports the current publisher as 'Informa UK Limited'. The tool's warning was acted on rather than noted: its NEXT instruction is to search the current publisher's own platform, so tandfonline.com was probed (HTTP 403, bot-blocked) alongside futuremedicine.com (404). The migration turned out not to be the obstacle here — the article is green OA in PMC — but the check was performed before any closed verdict was accepted."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "INVOKED for the figure images after the direct cascade failed, and it did not resolve them either. Full cascade recorded in source_artifacts: Europe PMC fullTextXML 404; supplementaryFiles 'not open access one'; Europe PMC ?pdf=render HTTP 429 then HTTP 500 'Failed to retrieve PDF for pmcid: PMC2832309' twice; pmc.ncbi.nlm.nih.gov article page, /pdf/nihms-180622.pdf and /bin/<figure>.jpg all behind a Google reCAPTCHA; ncbi oa.fcgi 404; OpenAlex, Semantic Scholar and Unpaywall all resolve to PMC as the SOLE location (is_oa true, green); tandfonline 403; futuremedicine 404; Europe PMC figure page is a JS shell with no asset; open web search returns only the bot-blocked publisher and a ResearchGate 'request full-text' link, which is not a retrieval. The figures are declared as a debt and the receipt is downgraded accordingly."
+  },
+  {
+   "skill": "genre_discriminator.py",
+   "used": true,
+   "reason": "RUN on the deposit as the wave-6 dispatch requires. VERDICT AGREES: declared research-article/Review/Journal Article against a measured 11 pages, 90 references, 2 figures, 0 tables, abstract present, 13 sections. Worth recording that the PMC deposit's article-type is literally 'research-article' for what is unambiguously a review — the tool does not flag it because PubMed's 'Review' is among the declared types, so the two labels together are self-correcting. Across the three review-layer papers this actor has now screened, the verdicts are: 27551470 UNDER-described, 25238781 OVER-described, and both wave-6 papers AGREES."
+  },
+  {
+   "skill": "erratum_scope_check.py",
+   "used": true,
+   "reason": "RUN. 0 manifests with an erratum recorded for this PMID; PubMed esummary commentscorrections is empty. Nothing to scope."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "THRESHOLD CHECKED MECHANICALLY AND NOT MET, written here so the non-trigger is auditable. The trigger is a reading that would narrow, reverse, corroborate or remove a consolidated baseline claim, or justify a MAJOR working-model bump. This reading proposes no Status change and no MAJOR bump. Its findings are a cross-document adjudication of a phenotype restatement, a directional conflict between two secondary sources, an author-stated argument against the authors' own thesis, and a term screen that the reading itself DEMOTES on chronological grounds. None touches the evidentiary basis of a consolidated baseline claim."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "DECLINED with reason. This is a 2010 interactome review reporting no measurement of its own; its partner list is superseded by the 2014 chapter read earlier in this wave and by primary sources this repository already holds. The transferable leads are recorded in the dossier and routed to the queue as primary-source reads, chiefly PMID 15126504."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "DECLINED. Nothing here matures a therapeutic lever. The two intervention-adjacent statements — the tamoxifen-resistance correlation and the ovarian fibronectin-adhesion result — are restatements of primary studies, both unread in this ledger, and neither is a lever until its own source is read."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "NOT APPLICABLE — no molecule is promoted by this reading."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 113,
+  "publications_on_gene": 32,
+  "counts_measured": "PubMed esearch 2026-09-09: Salah Z[au] = 113 (first author); Huebner K[au] AND WWOX = 32 (senior author, gene-directed). Aqeilan RI[au] AND WWOX = 65, measured the same day on the sibling paper.",
+  "research_type": "experimental_lab",
+  "research_type_note": "The GROUP is an experimental laboratory; THIS ARTEFACT is a narrative interactome review with no primary data of its own, and the two are not conflated in the weighting. 🔴 Notable and load-bearing for how this paper is used: it is a JOINT review by the Aqeilan and Huebner laboratories — the WWOX group and the FHIT group. That co-authorship is visible in the content, which is markedly more balanced on passenger-versus-driver than either single-group document in this lot, and it is the only one of the three that argues a concrete mechanism AGAINST the tumour-suppressor reading.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "primary_group_note": "PRIMARY FOR THE GENE IS NOT PRIMARY FOR THE DISEASE. Both laboratories are primary for fragile-site gene products; neither is primary for the WWOX-DEE clinical phenotype. Unlike PMID 25245215, however, the phenotype absence here carries no evidential weight at all, because the article predates the description of WWOX germline disease — see the term-screen locator, which demotes its own measurement on those grounds.",
+  "weighting": "Authoritative as a 2010 SNAPSHOT of the WWOX interactome and of which primary source carries which interaction; carries no evidence of its own. Its distinctive value in this lot is the two places where it works AGAINST its own thesis — the intron-only-deletion argument and the explicit failure to replicate WWOX-p53 binding — because a review layer that records its own counter-evidence is rare and is weighted above one that does not."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "WWOX",
+    "count": 707,
+    "date": "2026-09-09",
+    "route": "PubMed E-utilities esearch"
+   },
+   {
+    "query": "WWOX AND fragile site",
+    "count": 139,
+    "date": "2026-09-09",
+    "route": "PubMed E-utilities esearch"
+   },
+   {
+    "query": "WWOX AND FRA16D",
+    "count": 119,
+    "date": "2026-09-09",
+    "route": "PubMed E-utilities esearch"
+   },
+   {
+    "query": "WWOX AND (epilepsy OR encephalopathy)",
+    "count": 118,
+    "date": "2026-09-09",
+    "route": "PubMed E-utilities esearch"
+   }
+  ],
+  "note": "Same four counts as the sibling wave-6 paper, measured the same day, and they are read differently here. On PMID 25245215 (Dec 2014) the 118-record germline literature already existed in embryo and was absent from the chapter. This paper is February 2010 and PREDATES it, so the identical counts describe the field TODAY and say nothing about what this article could have contained. The comparison is kept because it is what separates a structural absence from a chronological one, and this paper is the chronological control."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 90,
+  "enumeration_route": "Parsed from the fingerprinted NCBI efetch PMC XML deposit: 90 <ref> elements, enumerated by element with no gaps. 90 of 90 carry a <pub-id pub-id-type=\"pmid\"> and resolved to a PMID from the deposit's own identifiers — no external lookup was needed and none was used.",
+  "reference_composition_note": "Primary cancer-biology and structural-biology literature, plus the WW-domain and fragile-site methodological layer. No cross-references to sibling chapters (this is a standalone journal review, not a special-issue contribution).",
+  "ledger_join": {
+   "route": "Every resolved reference PMID joined against disease-models/wwox/registries/fulltext_read_receipts.jsonl at wave-6 time.",
+   "complete_fulltext_read": 5,
+   "other_depth": 1,
+   "absent": 84,
+   "finding": "5 complete (refs [6] 17360458, [7] 17575124, [8] 18487609, [18] 18460020, [40] 15070730), 1 partial (ref [59] 16061658), 84 absent. Markedly thinner coverage than the 20-of-109 on PMID 25245215 read earlier in this wave, and the reason is informative rather than incidental: this review's bulk is the WW-domain/interactome primary literature, which this repository has barely touched, whereas chapter 8's bulk is the mouse-model and fragile-site literature, which it has."
+  },
+  "gene_direct_refs_in_source": [
+   "17360458 [6] complete",
+   "17575124 [7] complete",
+   "18487609 [8] complete",
+   "18460020 [18] complete",
+   "15070730 [40] complete",
+   "16061658 [59] partial"
+  ],
+  "queued": [
+   "15126504 [80] Sze 2004 — the Tau/Alzheimer paper. 🔴 ABSENT at any depth, cited by BOTH papers this actor read in wave 6 (ref [80] here, ref [108] of PMID 25245215), and named EXPLICITLY by dismissal-ledger case D-14 as its own revival trigger (c), tracked as FT-024. The highest-value queue item of this wave.",
+   "16219768 [43] — the p53/Mdm2 interaction these authors could not replicate. Reading it is what would settle whether chapter 8's Table 1 TP53 row is supportable.",
+   "15798093 [69] and 16187332 [70] — the two primary sources for WWOX being REDUCED after UV, which is the side of the directional conflict PMID 25245215 reverses on unpublished data.",
+   "19465922 [87] Chan et al. — the Bloom's-syndrome/fragile-site study behind the one place this literature admits a constitutional human disease."
+  ],
+  "resolution_note": "Resolved from the deposit's own <pub-id> elements rather than from memory or from a search, so every mapping is checkable against the fingerprinted artifact.",
+  "resolved": [
+   {
+    "pmid": "25245215",
+    "role": "the 2014 special-issue WWOX chapter, read by this actor earlier in the same wave",
+    "status": "complete_fulltext_read, FTR-20260909-25245215-01",
+    "use": "the phenotype adjudication at entries[0], the Table 1 TP53 caveat asymmetry at entries[2], and the UV directional conflict at entries[3]"
+   },
+   {
+    "pmid": "17360458",
+    "role": "reference [6]; the primary source whose growth phenotype chapter 8 restated two contradictory ways",
+    "status": "complete_fulltext_read",
+    "use": "the corpus cross-query that returned zero on 25245215 and is closed here by a second secondary source"
+   },
+   {
+    "pmid": "15126504",
+    "role": "reference [80], the Tau/Alzheimer paper",
+    "status": "ABSENT at any depth",
+    "use": "entries[8] — named by dismissal-ledger case D-14 as its own revival trigger (c), tracked as FT-024, cited by both wave-6 papers"
+   },
+   {
+    "pmid": "27551470",
+    "role": "the 2015 editorial read by this actor in wave 5; the third document in this lot addressing passenger-versus-driver",
+    "status": "complete_fulltext_read, FTR-20260909-27551470-01",
+    "use": "entries[4] — the three-document comparison that makes this paper's self-directed counter-argument legible as the most balanced of the set"
+   }
+  ]
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does this document resolve the internal contradiction found earlier in this same wave on PMID 25245215 — 'growth retardation' against 'develop normally', both attributed to reference [7]?",
+  "route": "Read this article's own account of the same primary sources [6-8] and compared it, sentence by sentence, against the two chapter-8 locators already persisted in PMID25245215.json.",
+  "hits": 1,
+  "finding": "🔴 YES, AND IT SETTLES IT AGAINST BOTH HALVES. This review states the phenotype with the precision both chapter-8 sentences lose: indistinguishable from littermates AT BIRTH, SMALLER BY DAY 3, all dead by 4 weeks, with organ atrophy, gonadal abnormalities and BONE growth retardation. So 'develop normally' is true only of birth and false by day 3, and 'growth retardation' is correct but postnatal rather than developmental in onset. The chapter-8 disagreement is a compression artefact, not a dispute about data. Recorded because the corpus cross-query performed on 25245215 returned ZERO — the held complete reading of 17360458 carries no growth statement — and the question was left as declared reading debt. A second document read in the same wave closed it, which is the argument for reading a lot rather than a paper.",
+  "second_query": "Is the Tau reference this document cites already held at any depth, given that the dismissal ledger names reading it as a revival trigger?",
+  "second_query_route": "Reference [80] resolved from the deposit's own pub-id to PMID 15126504, then joined against the receipt ledger and cross-checked against dismissal_ledger_current.md case D-14.",
+  "second_query_hits": 0,
+  "second_query_finding": "🔴 ABSENT AT ANY DEPTH. D-14's revival trigger (c) names PMID 15126504 (Sze 2004) as 'la controparte diretta della questione' and it is tracked as FT-024. It is cited by both wave-6 papers. The single reading the dismissal ledger itself asks for, to reopen a rejection this repository deliberately left open, is cited twice in one wave and remains unread."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-09",
+  "route": "PubMed esummary db=pubmed id=20146584 (commentscorrections) and erratum_scope_check.py.",
+  "result": "No retraction, no expression of concern, no erratum, no comment/correction of any kind. commentscorrections is an empty list; erratum_scope_check.py reports 0 manifests with an erratum recorded.",
+  "corrected_items": [],
+  "corrected_items_basis": "PubMed esummary commentscorrections empty at the date above.",
+  "hold": false
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+   "sha256": "79f522bb16b6312fabfd0919c3f9ef5559f3209825b1876fa8173f1246a41190",
+   "kind": "article_text",
+   "note": "🔴 A FULL STRUCTURED XML SURFACE, AND IT WAS FOUND ONLY BECAUSE THE ROUTE THAT FAILED ON THE SIBLING PAPER WAS RE-RUN HERE RATHER THAN ASSUMED TO FAIL AGAIN. Europe PMC's fullTextXML endpoint returns HTTP 404 for PMC2832309, exactly as it does for the sibling PMC11113097 — but NCBI efetch db=pmc returns the COMPLETE deposit, 129,132 bytes with a 36,993-character <body>, and carries NO publisher refusal comment (the sibling's efetch carries 'The publisher of this article does not allow downloading of the full text in XML form'). Two articles, same wave, same two endpoints, opposite outcomes. Validator surface: 54,479 characters body and 950 abstract, screened CLEAN — zero C0 controls, no printable substitution, 10 real U+2212 MINUS SIGN characters, and the mouse genotypes render correctly as Wwox+/− and Wwox−/−. This is a structured markup surface with no rendered page to diverge from, which is why every text locator in this manifest is drawn from it."
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Fingerprinted NCBI efetch PMC XML deposit held locally at the digest above; every locator was verified character-for-character against the validator's own extraction of that file while the document was open.",
+  "abstract_anchoring_waived": "NOT WAIVED AND NOT NEEDED. No locator uses the abstract as its evidentiary surface; all fifteen resolve in the body.",
+  "figure_coverage": {
+   "figures_present": 2,
+   "figures_with_locators": 0,
+   "coverage": "0/2 figures inspected as images — NOT RETRIEVABLE, declared as a debt; the two figure locators are caption text on the body surface and are labelled as such",
+   "supplementary_figures_present": 0,
+   "supplementary_figures_with_locators": 0,
+   "denominator_basis": "Counted from the fingerprinted XML deposit: exactly two <fig> elements, F1 and F2, each with one <graphic xlink:href> naming a NIHMS asset. The denominator is therefore the deposit's own element count and is not in doubt; only the images are unavailable.",
+   "denominator_status": "known",
+   "budget_declared_before_reading": true,
+   "unretrievable_debt": "🔴 DECLARED DEBT, NOT AN OMISSION — THE TWO FIGURE IMAGES COULD NOT BE LAWFULLY RETRIEVED, AND THE RECEIPT IS DOWNGRADED RATHER THAN THE GAP HIDDEN. The deposit names nihms-180622-f0001.jpg (Figure 1) and nihms-180622-f0002.jpg (Figure 2). Cascade actually run, in order: Europe PMC fullTextXML 404; Europe PMC supplementaryFiles errCode 0 'Article with id PMC2832309 is not open access one'; Europe PMC ?pdf=render HTTP 429 once then HTTP 500 'Failed to retrieve PDF for pmcid: PMC2832309' on two further attempts, which is a genuine service failure for this PMCID rather than a rate limit; pmc.ncbi.nlm.nih.gov article page, /pdf/nihms-180622.pdf and /bin/<figure>.jpg all return a Google reCAPTCHA challenge page — note that /bin/ returns 200-with-challenge rather than 404, so the asset EXISTS behind the challenge; www.ncbi.nlm.nih.gov equivalents the same; NCBI oa.fcgi 404 (endpoint moved); OpenAlex, Semantic Scholar and Unpaywall all report is_oa true, oa_status GREEN, with PMC as the SOLE location and no pdf_url anywhere; tandfonline.com 403 and futuremedicine.com 404 (the current publisher, probed because oa_status_dissent.py flagged PUBLISHER_MIGRATION_SUSPECTED); the Europe PMC figure page /figure/F1/ is a JavaScript shell containing no asset; open web search surfaces only the bot-blocked publisher and a ResearchGate 'Request full-text' link, which the retrieval rules explicitly say is not a direct PDF. CONSEQUENCE, TAKEN AND NOT ARGUED AWAY: coverage figures = captions_only, which downgrades this receipt to partial_fulltext_read. The two caption locators in this manifest are declared surface: body and attest ONLY the caption text. 🔴 The cost is concrete and was measured on the sibling paper hours earlier: opening the equivalent schematic on PMID 25245215 revealed a node absent from the prose and a caption naming an entity the panel does not draw. Figure 2 here is the panel the running text points to twice as its signalling summary, so it is precisely the one whose absence costs most.",
+   "debt_declared": true
+  },
+  "entries": [
+   {
+    "proposition": "🔴 THIS ADJUDICATES THE INTERNAL CONTRADICTION THIS ACTOR COULD NOT SETTLE ON PMID 25245215 EARLIER IN THE SAME WAVE, AND IT SETTLES IT AGAINST BOTH HALVES. Chapter 8 (PMID 25245215) states in one section that 'WWOX ablation results in growth retardation' and four sections later that 'Wwox-deficient mice develop normally', citing reference [7] for both. This 2010 review — with Aqeilan as a shared author and citing the same primary sources [6-8] — gives the phenotype with the precision both later sentences lose: mice are indistinguishable from littermates AT BIRTH, are SMALLER BY DAY 3, and are all dead by 4 weeks. So 'develop normally' is true only of birth and false by day 3, and 'growth retardation' is true but postnatal in onset rather than developmental. NEITHER of chapter 8's two sentences is accurate on its own, and the disagreement between them is a compression artefact, not a dispute about data. The corpus cross-query on 17360458 could not reach this because that reading carried no growth statement; a second document did.",
+    "snippet": "At birth, homozygous Wwox-deficient (Wwox−/−) pups were indistinguishable from wild-type (WT) or heterozygous littermates; at 3 days, homozygous pups were smaller than littermates and all Wwox−/− mice died by 4 weeks after birth with severe metabolic defects",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Body, 'WWOX gene & gene product', paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE SPECIFIC GROWTH PHENOTYPE, WHICH IS SKELETAL AND ORGAN-LEVEL RATHER THAN GLOBAL. Recorded beside the preceding locator because it is the datum chapter 8's phrase 'growth retardation' compresses.",
+    "snippet": "Macroscopic and histological examination of the organs confirmed atrophy of organs, gonadal abnormalities and bone growth retardation in Wwox−/− mice",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Body, 'WWOX gene & gene product', paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 AN EXPLICIT FAILURE TO REPLICATE, STATED BY THE AUTHORS ABOUT ANOTHER GROUP'S RESULT — AND ITS CAVEAT IS PRESENT IN CHAPTER 8'S PROSE AND ABSENT FROM CHAPTER 8'S TABLE. These authors could not reproduce WWOX-p53 binding under the conditions where WWOX-p73 binding was reproducible. PMID 25245215's Table 1 lists TP53 as a WWOX partner with readout 'Promotes apoptosis' and NO caveat, while its running text does carry the qualification. That matters because a partner TABLE is exactly the surface a downstream consumer mines, and the table is where the negative disappears. A repository building an interactome from Table 1 alone would record an unqualified WWOX-p53 interaction that neither this paper nor chapter 8's own prose supports.",
+    "snippet": "we were unable to recapitulate p53 binding to Wwox reported by another group",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Body, 'Wwox–p73 association enhances apoptosis', paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 A DIRECT REVERSAL OF DIRECTION BETWEEN THE TWO DOCUMENTS READ IN THIS WAVE, AND THE LATER ONE RESTS THE NEW DIRECTION PARTLY ON UNPUBLISHED DATA. Here in 2010: WWOX expression is REDUCED following UV. In PMID 25245215 (2014): 'our recent results demonstrate that WWOX expression is INCREASED immediately after IR and UV (unpublished data)', introduced by that chapter's own admission that 'Conflicting results were reported on WWOX expression upon exposure to DNA damage'. Aqeilan is an author of both. The 2014 chapter needs the increase for its DDR model, in which WWOX is induced by damage and translocates to the nucleus. Recorded as a directional conflict between two secondary sources with a shared author, NOT as a finding about the biology: neither document measures it, and the primary sources on both sides are unread here.",
+    "snippet": "Wwox expression is reportedly reduced following UV radiation",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Body, 'Wwox associates with Jun following UV irradiation', final sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE AUTHORS ARGUE AGAINST THEIR OWN THESIS, EXPLICITLY, AND THIS IS THE MOST BALANCED TREATMENT OF THE PASSENGER/DRIVER QUESTION IN THIS ACTOR'S ENTIRE LOT. Three documents in this lot address passenger-versus-driver: PMID 27551470 frames it as a live controversy, PMID 25245215 argues against passenger status in its Introduction and calls it debated in its Conclusion, and THIS one states a concrete mechanism by which the passenger reading could be RIGHT — intron-only deletions that never touch coding sequence — and attributes it to the fragile genes' own architecture. An author-stated argument against the author's own position is the rarest thing in a review layer and is weighted accordingly.",
+    "snippet": "so that some replication stress-induced small deletions may fall entirely within introns, as has been observed for the FHIT locus, and may not contribute to clonal expansion, supporting arguments against a tumor suppressor role for fragile gene products",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Body, 'Conclusion Wwox & fragility', paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 AND IT NAMES THE EXPERIMENT THAT WOULD SETTLE IT — WHICH MAKES THIS A DATED, CHECKABLE OPEN QUESTION RATHER THAN A HEDGE. Delineating WWOX deletion end points would establish whether intron-only deletions occur. Note what this implies for the reference genotype: the question is about SOMATIC deletion architecture in cancer, and answering it either way says nothing about a germline coding variant. Recorded as the concrete revival trigger this document supplies, and as the thing to check against any later fragile-site literature.",
+    "snippet": "The WWOX locus has thus far not been examined in enough detail to precisely delineate deletion end points and will require further investigation to determine if such intron-only deletions occur.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Body, 'Conclusion Wwox & fragility', paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE SHARPEST QUALIFICATION THIS READING MAKES TO THIS ACTOR'S OWN THREE PRIOR MEASUREMENTS OF THE ABSENCE. This document DOES bring inherited human syndromes into a fragile-site discussion — Bloom's syndrome and Fanconi anemia, at length, with FANCD2 and FANCI at common fragile site loci. So the CFS literature is not closed to constitutional human disease in principle. What it admits is the CANCER-PREDISPOSING kind. That is a strictly sharper statement than 'this literature omits human genetic disorders', which is what the rare/common taxonomy alone supported, and it is available only because this paper was read.",
+    "snippet": "Bloom's syndrome and Fanconi anemia are inherited syndromes associated with extreme susceptibility to cancer development, through mechanisms that have not been defined in detail.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Body, 'Conclusion Wwox & fragility', paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE TERM SCREEN, WITH ITS DENOMINATOR AND WITH THE ONE THING THAT STOPS IT COUNTING AS A FOURTH INDEPENDENT CONFIRMATION. Screened over the 29,965-character article body: epilep 0, seizure 0, brain 0, CNS 0, WOREE 0, encephalopath 0, ataxia 0, intellectual 0, recessive 0, germline 0, neuro 0 — ELEVEN OF TWELVE LITERALLY ZERO, and 'syndrome' occurs 4 times, ALL FOUR being Bloom's syndrome or Fanconi anemia. 🔴 BUT THIS MEASUREMENT CARRIES MUCH LESS WEIGHT THAN THE THREE BEFORE IT AND THE READING SAYS SO RATHER THAN BANKING IT: this article is FEBRUARY 2010, which PREDATES the description of WWOX germline disease. There was no phenotype to omit. Chapter 8 (December 2014) had one and omitted it; this paper could not have included it. Recorded as a chronological control on the earlier measurements, not as a fourth confirmation of them.",
+    "snippet": "It is also possible that fragile chromosome regions may serve as early warning systems for DNA damage",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Body, 'Conclusion Wwox & fragility', paragraph 3 — quoted as the anchor for a screen over the whole body",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE TAU INTERACTION APPEARS HERE TOO, AND AGAIN ONLY AS A LIST ITEM WITH NO EVIDENCE ATTACHED. Reference [80] resolves to PMID 15126504 (Sze 2004). 🔴 THAT IS THE PAPER THE DISMISSAL LEDGER'S CASE D-14 NAMES AS ITS OWN REVIVAL TRIGGER (c) — 'la lettura di FT-024 (PMID 15126504, Sze 2004), che è la controparte diretta della questione'. It is cited by BOTH papers this actor read in wave 6 (ref [80] here, ref [108] of PMID 25245215) and it is ABSENT from this ledger at any depth. The single highest-value queue item that D-14 itself asks for is cited twice in one wave and unread.",
+    "snippet": "The murine Wwox (also called Wox1) protein reportedly interacts with p53",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Body, 'Other Wwox partners & functions', final paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE COOPERATION QUESTION, AND WHY CHAPTER 8'S 2014 'YET TO BE DETERMINED' IS NARROWER THAN IT READS. In 2010 a retroviral insertion screen is already cited as suggesting that WWOX inactivation cooperates with classical tumour-suppressor loss. Chapter 8 in 2014 says whether TARGETED DELETION of Wwox cooperates with loss of other tumour suppressors 'is yet to be determined'. 🔴 STATED CAREFULLY BECAUSE THE OVERCLAIM IS AVAILABLE AND WOULD BE WRONG: these are not the same claim. An insertional-mutagenesis screen is not a targeted-deletion cross, so the two statements are COMPATIBLE and chapter 8's qualifier is doing real work. What is recorded is only that the cooperation idea was already evidenced by a different design four years earlier, so the later 'yet to be determined' should not be read as 'no evidence exists'.",
+    "snippet": "suggesting that Wwox inactivation can cooperate with so called 'classical' tumor suppressor loss in tumor development",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Body, 'Wwox expression in common human cancers', paragraph 3",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "HAPLOINSUFFICIENCY IS ASSERTED FROM RETAINED PROTEIN IN THE TUMOURS, AND THE INFERENCE IS THE AUTHORS', NOT A MEASUREMENT. Recorded because haploinsufficiency is a load-bearing concept for any dose-based reasoning about a recessive human allele, and because the evidence offered for it here is immunodetection of retained protein in heterozygote tumours rather than an allelic or quantitative assay.",
+    "snippet": "These tumors expressed Wwox protein, suggesting that haploinsufficiency of Wwox is cancer predisposing.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Body, 'Wwox as a tumor suppressor', paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 A HYPOMORPH DEFINED BY AN ARGUMENT RATHER THAN BY A MEASUREMENT, AND THE AUTHORS SAY SO IN THE SAME SENTENCE. The strain's residual WWOX protein is inferred from the mice being viable — 'some protein must be produced... or these mice would not be normal' — which is reasoning from the phenotype to the molecular state, i.e. exactly the direction that cannot then be used to explain the phenotype. Recorded because this repository reasons about residual-function alleles, and a hypomorph whose residual expression was never detected is a weak anchor for any dose-response argument.",
+    "snippet": "In this mouse strain, it was difficult to demonstrate expression of Wwox protein, though some protein must be produced in multiple organs or these mice would not be normal.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Body, 'WWOX gene & gene product', paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE SDR DOMAIN IS DECLARED FUNCTIONALLY UNCHARACTERISED IN 2010, AND THAT IS DIRECTLY RELEVANT TO THE REFERENCE GENOTYPE. Every signalling function reviewed here runs through the WW domains; the SDR domain's predicted oxidoreductase role is noted and then left. The reference genotype class includes SDR-domain missense variants, so the field's dedicated interactome review of this period supplies NO mechanistic basis for reasoning about them — the absence is about the domain, not merely about the phenotype, and it is stated by the authors themselves.",
+    "snippet": "Although Wwox contains an SDR domain that is predicted to be involved in oxidation/reduction processes, Wwox signaling functions examined thus far are mainly determined by interaction of its WW domains with PPxY motifs in its partners.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Body, 'Wwox WW domains & protein interactions', final sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE 1 CAPTION — QUOTED AS TEXT, AND EXPLICITLY NOT AS A PANEL ATTESTATION. The figure image could not be retrieved (see source_artifacts and the coverage map): this locator is the caption as deposited in the article body, and it attests only what the caption says. The panel itself was NOT inspected, the receipt records figures: captions_only, and the reading is therefore partial_fulltext_read.",
+    "snippet": "Summary of studies reporting loss or reduction of Wwox expression or alterations to WWOX alleles in cancers of many organs of both males and females.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Figure 1 caption, as deposited in the article body",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "FIGURE 2 CAPTION — QUOTED AS TEXT, AND EXPLICITLY NOT AS A PANEL ATTESTATION. Same status as the Figure 1 caption locator. 🔴 This is the figure the running text repeatedly points to for the whole signalling summary ('illustrated in Figure 2', 'see Figure 2 for summary of Wwox signal pathways'), so it is precisely the panel whose unavailability costs the most — and on PMID 25245215, read earlier in this same wave, opening the equivalent panel is what revealed a node absent from the prose and a caption naming an entity the panel does not draw.",
+    "snippet": "Wwox-partner protein interactions in signal pathways are affected by absence or reduction of Wwox expression.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID20146584_Salah2010_PMC.xml",
+    "anchor": "Figure 2 caption, as deposited in the article body",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
