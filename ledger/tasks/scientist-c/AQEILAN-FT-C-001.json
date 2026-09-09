@@ -64,7 +64,7 @@
       "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
     ]
   },
-  "CURRENT_STATE": "WAVE_2_COMPLETE — 4 of 7 PMIDs closed (20530675, 21731849 in wave 1; 38355659, 21115974 in wave 2), all four at complete_fulltext_read. 3 remain and were NOT opened: 16223882, 18460020, 41562193.",
+  "CURRENT_STATE": "WAVE_3_IN_PROGRESS - 4 of 7 PMIDs closed at complete_fulltext_read (20530675, 21731849 in wave 1; 38355659, 21115974 in wave 2). Wave 3 claims 41562193 and 16223882. 18460020 is deliberately NOT in this wave: no PMCID and no free site, so it needs a full acquisition cascade and its own wave rather than the tail of one.",
   "assigned_on": "2026-09-08",
   "acquisition_hints": {
     "20530675": {
@@ -175,6 +175,23 @@
       },
       "cross_paper_obligation": "38355659 is the ordinary erratum attached to PMID 38182577, one of the four SCOPE_UNDECLARED manifests surfaced by erratum_scope_check.py. 38182577's manifest is NOT mine and will NOT be edited; the corrected scope is established from the erratum deposit and reported to its author. Note for the record: 38182577's own receipts FTR-20260810-38182577-01/-02 assert that the erratum 'corrects one author name and does not touch the title'. That assertion was made by a prior reader and is to be re-established from the deposit, not inherited.",
       "identity_correction_standing_default": "The identity_correction referral is registered with the operator and is NOT implemented and NOT worked around. If the ledger again refuses a correct identifier because an incorrect one was persisted first, omit the field, record the true value in evidence_basis and the dossier, and note it."
+    },
+    "wave_3": {
+      "claimed_at": "2026-09-09T13:40:00Z",
+      "actor": "scientist-c",
+      "pmids": [
+        "41562193",
+        "16223882"
+      ],
+      "duplicate_assignment_check": "Annex A.3 / scientist_reading_modes.md 2.2 rule 3 re-run before this claim: grep -l over ledger/tasks/*/*.json returns this contract alone for 41562193 and 16223882; no peer contract names either, so no PARALLEL_READ_GROUP is needed and none is declared.",
+      "wave_3_gate": {
+        "41562193": "fulltext_receipts.py status --pmid 41562193 -> one event, FTR-20260726-41562193-01, record_kind legacy_reconstruction, partial_fulltext_read, every coverage key unknown_legacy, source_fingerprint null, source_locator pointing at paper_registry_current.md#PAPER 010 rather than at any article surface. The article itself has never been opened -> reread_reason first_read. Note for the ratchet: PAPER 010 is a registry-only full-text declaration, and this reading is what would let that declaration rest on a real receipt.",
+        "16223882": "fulltext_receipts.py status --pmid 16223882 -> [] , exit 1: no receipt of any kind -> reread_reason first_read."
+      },
+      "expression_of_concern_protocol": "16223882 (Fabbri 2005 PNAS) carries a STANDING EXPRESSION OF CONCERN. The EoC is read as a SOURCE IN ITS OWN RIGHT and BEFORE the article: establish from the deposit what it says and what it does not say, then read the article knowing precisely what is contested. An expression of concern is not a retraction and does not void the paper; it changes what the paper may be cited for, and the dossier states exactly how.",
+      "environment_change": "PyMuPDF (fitz) and numpy are installed as of this wave; tool_preflight.py reports 6/6. Rule 5e page adjudication and xref figure extraction are runnable in this deployment for the first time, so the wave-1 default of declaring a figure artifact unrecoverable is no longer the first resort.",
+      "carried_obligations": "legend-session-self-eval and legend-capability-scout were not run at wave 2 because the orchestrator scoped that session to landing only. Both are met this wave.",
+      "identity_correction_standing_default": "Unchanged and still referred to the operator, not implemented and not worked around. If the ledger again refuses a correct identifier because an incorrect one was persisted first, omit the field, record the true value in evidence_basis and the dossier, and note it."
     }
   },
   "CHECKPOINTS": [
