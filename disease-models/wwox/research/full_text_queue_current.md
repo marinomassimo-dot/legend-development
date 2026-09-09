@@ -3691,3 +3691,62 @@ usa per un'affermazione sul registro che la lettura non tocca.
 passaggio nomina come possibile origine mTORC1-indipendente della direzione autofagica); poi
 decidere se `-056` e `-139` valgono la lettura o una dismissione motivata con `REVIVAL_TRIGGER`.
 **Current status:** ⬜ aperto — debito di lettura dichiarato il 2026-08-26, nessuno dei quattro letto.
+
+---
+
+## FT-044 — aggiornamento 2026-09-09 (`scientist-a`, task `AQEILAN-FT-A-001`, wave 1)
+
+**Stato: PARCHEGGIATO. Nessuna receipt emessa, e nessuna era dovuta: il testo non è stato acquisito.**
+
+🔴 **La situazione è PEGGIORATA rispetto al 2026-08-09, e la riga `Surface:` qui sopra ora è falsa
+in questo checkout.** Allora il PDF esisteva e il problema era la sua superficie testuale `SUSPECT`.
+Oggi **il PDF non c'è affatto**: `files/` è gitignored, e questo checkout è arrivato con l'albero
+delle prove vuoto. `files/fulltext/PMID33914858_Aqeilan2021.pdf`
+(`sha256 960569a9c0d4e7634a53e3b829fc29145767f9df0ce620cf827b891c6708d559`, dichiarato in
+`CC-20260825-ADVERSARIAL-FALSIFICATION-01.md`) **è assente**. Misurato con
+`framework/scripts/evidence_presence.py`, introdotto oggi proprio per rendere visibile questa classe
+di stato invece di scoprirla a metà lettura.
+
+**Cascata di acquisizione effettivamente eseguita il 2026-09-09 — 19 vie, nessuna lecita disponibile.**
+Registrata perché nessuno la ripeta: Unpaywall (bronze, **una sola** location, publisher) · OpenAlex
+(`any_repository_has_fulltext: false`) · Semantic Scholar (stessa URL, mirror senza copia) · Crossref
+(rivela l'URL VOR, e corregge la citazione in **Brain 144(10)**) · OUP advance-article-pdf, OUP
+article-pdf VOR, landing page, con e senza UA browser, cookie jar e Referer → **403 Cloudflare** in
+ogni forma · Silverchair CDN diretto → **403**, richiede token firmato · CHORUS → 404 · OpenAIRE →
+`instance: null`, **zero depositi** · DOAJ, Zenodo, HAL → 0 · CORE v3 (titolo e DOI) → nessuna copia ·
+BASE → sfida proof-of-work JS · **Wayback CDX su 4 prefissi → `[]`, nulla archiviato** · repository
+istituzionali HUJI CRIS, Weizmann Pure, Toronto Scholaris/TSpace → i record esistono ma espongono
+**solo link DOI/Scopus, nessun file** · proxy testuali (`r.jina.ai`, allorigins, codetabs) → sfida
+Cloudflare o 522 · Google Scholar → nessun `[PDF]` per questo articolo · Academia.edu → 403, richiede
+login (escluso) · ResearchGate → solo *"Request full-text"* · siti di laboratorio/fondazione → nessuna copia.
+
+**Non esiste un preprint.** L'indice preprint di Europe PMC (`SRC:"PPR"`, `TITLE:"Wwox"`) restituisce
+**25 preprint WWOX e nessuno è questo manoscritto**; `api.biorxiv.org` sul DOI risponde *"Preprint not
+found"*. Diversamente da `PMID 34268881`, qui non c'è nemmeno una versione parallela da rifiutare.
+
+🔴 **E una via è stata rifiutata deliberatamente, non fallita.** Il corpo HTML dell'editore **è**
+liberamente leggibile — è ciò che *bronze* significa — e il fetcher di `WebFetch` non è bloccato da
+Cloudflare, a differenza di `curl`, del CDN e di tutti e tre i proxy. **Quella resa NON è stata
+salvata come full text.** `WebFetch` restituisce la risposta di un modello sopra la pagina, non i byte
+grezzi: è una **ricostruzione**, e la regola 5c è esplicita — *«un modello che converte ricostruisce:
+normalizza, ri-flussa, occasionalmente parafrasa … gli strumenti ML sono ausili di lettura legittimi e
+non devono mai essere dichiarati come l'artefatto dietro un locator»*. Un locator verificato contro
+una parafrasi **passerebbe il gate** corrispondendo alla ricostruzione e non al paper, che è la classe
+peggiore di falso positivo che questo sistema possa produrre. Un file assente è preferibile a un file
+che sembra verificato e non lo è.
+
+**Perché resta ALTA, anzi più alta.** È la fonte primaria di `CLAIM 003` (*consolidated baseline*),
+e la densità di campo misurata oggi lo colloca in un vicolo quasi vuoto: `WWOX AND myelin` → **8**
+record su PubMed, `WWOX AND oligodendrocyte` → **4**, contro **707** per `WWOX`. Una baseline
+consolidata poggia su un testo che il repository non possiede.
+
+**Vie umane che restano, in ordine di resa:**
+1. **Aprire l'articolo in un browser normale e salvarlo in PDF** — `https://academic.oup.com/brain/article/144/10/3061/6259140` è free-to-read; a bloccare è solo il controllo bot lato server. Costo zero, pienamente lecito, resa massima. **Poi ri-verificare la superficie testuale: il difetto `SUSPECT` del 2026-08-09 riguarda il PDF, e una copia nuova va ri-testata, non assunta pulita.**
+2. E-mail all'autore corrispondente: **Rami I. Aqeilan** — indirizzo pubblicato nel companion open-access `PMID 34268881`, già nel corpus.
+3. WWOX Foundation / rete di advocacy.
+4. ResearchGate *Request full-text*.
+5. Prestito interbibliotecario sul DOI.
+6. Zotero *Find Available PDF* dall'IP dell'operatore (resolver diversi da un indirizzo non-datacenter).
+
+**Nessuna via illecita è stata interrogata**, per vincolo esplicito del task.
+**Debito dichiarato, non silenzioso.** `FT-044` resta **aperto** e la lettura resta **dovuta**.

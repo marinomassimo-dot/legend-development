@@ -65,7 +65,7 @@
    "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
   ]
  },
- "CURRENT_STATE": "CLAIMED",
+ "CURRENT_STATE": "WAVE_1_COMPLETE",
  "assigned_on": "2026-09-08",
  "acquisition_hints": {
   "33914858": {
@@ -179,5 +179,49 @@
    ],
    "note": "Wave 1 dispatched by the orchestrator on 2026-09-09; the remaining six PMIDs of the lot stay assigned to scientist-a but are not opened in this session."
   }
+ },
+ "WAVE_1_RESULT": {
+  "closed_at": "2026-09-09T09:12:06Z",
+  "actor": "scientist-a",
+  "34268881": {
+   "status": "COMPLETE",
+   "evidence_depth": "partial_fulltext_read",
+   "receipt": "FTR-20260909-34268881-04",
+   "manifest": "PASS, 0 gaps, 18 locators",
+   "locators_added": 6,
+   "artifacts_restored": "21/21 byte-identical",
+   "outputs": [
+    "deepdive_manifests/PMID34268881.json",
+    "fulltext_dossiers/PMID34268881.md",
+    "commit_candidates/CC-20260909-34268881-01.md",
+    "discovery_ledger_current.md#DL-THER-105"
+   ],
+   "commit": "da08cb9",
+   "note": "M0 gate found the dispatch premise empty: the prior receipt leaves no section uncovered. Not re-read. reread_reason new_question_outside_prior_coverage. R4 blind locator audit run before the commit candidate: 4 SUPPORTED, 1 OVERSHOOT taken and corrected."
+  },
+  "33914858": {
+   "status": "PARKED — NOT ACQUIRED",
+   "evidence_depth": null,
+   "receipt": null,
+   "reason": "No lawful automated route. 19 acquisition tiers run and recorded. No PMC record, bronze OA with a single publisher location behind Cloudflare, no repository deposit (OpenAIRE instance null), nothing in Wayback, no preprint exists, institutional records expose DOI links only.",
+   "deliberate_refusal": "The publisher HTML is free to read and WebFetch can reach it, but WebFetch returns a model reconstruction rather than raw bytes. Saving it as full text would put a paraphrase behind a verbatim locator (rule 5c). Refused, not failed.",
+   "prior_artifact_now_absent": "files/fulltext/PMID33914858_Aqeilan2021.pdf sha256 960569a9c0d4e7634a53e3b829fc29145767f9df0ce620cf827b891c6708d559",
+   "debt": "FT-044 updated 2026-09-09 with the full cascade; remains open and ALTA.",
+   "retry_policy": "on_exhaust satisfied: parked with a written acquisition-cascade record."
+  },
+  "capability_micro_upgrade": {
+   "artifact": "framework/scripts/evidence_presence.py + test_evidence_presence.py",
+   "commit": "2482071",
+   "tests": "7/7, mutation-tested",
+   "first_measurement": "65 manifests, 464 artifacts, 36 present, 428 absent, 0 digest mismatches"
+  },
+  "not_opened_this_session": [
+   "33916893",
+   "25331887",
+   "15070730",
+   "24510053",
+   "26499798",
+   "31428585"
+  ]
  }
 }
