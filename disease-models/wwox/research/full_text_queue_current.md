@@ -3755,3 +3755,118 @@ consolidata poggia su un testo che il repository non possiede.
 
 **Nessuna via illecita è stata interrogata**, per vincolo esplicito del task.
 **Debito dichiarato, non silenzioso.** `FT-044` resta **aperto** e la lettura resta **dovuta**.
+
+---
+
+## FT-075 — `PMID 18931939` (Nathan 2009) · multi-hop debt from `PMID 20530675`
+
+**Papers:** PMID 18931939 — Nathan SS *et al.*, *Mol Biol Rep* 2009;36:153–158, *"Elevated expression
+of Runx2 as a key parameter in the etiology of osteosarcoma"*.
+**Opened by:** `scientist-c`, task `AQEILAN-FT-C-001`, reading of `PMID 20530675`
+(`FTR-20260909-20530675-01`). Reference **12** of that paper.
+**Priority:** MEDIUM.
+**Why it is owed, specifically.** It is load-bearing twice over in a paper now read in full: it is the
+source of the **anti-RUNX2 monoclonal antibody** used for every human immunohistochemistry in
+`PMID 20530675`, *and* the source of the premise that **RUNX2 is elevated in osteosarcoma**, which is
+the frame the whole WWOX–RUNX2 argument is built on. `PMID 20530675`'s own human data fail to show the
+inverse association (Supplemental Table 8; biopsies trend the *opposite* way, OR 4.20, p=0.197), so the
+strength of the upstream premise is now the question. **A reagent source and a premise source in one
+citation is exactly the shape the imported-premise work of 2026-08-06 was built to catch.**
+**Status:** OPEN, declared. Not read; **no receipt of any kind**; no registry record.
+
+---
+
+## FT-076 — `PMID 16223882` (Fabbri 2005) · multi-hop debt, already assigned
+
+**Papers:** PMID 16223882 / PMC1266103 / DOI `10.1073/pnas.0505485102` — *"WWOX gene restoration
+prevents lung cancer growth in vitro and in vivo"*, *PNAS* 2005.
+**Opened by:** `scientist-c`, reading of `PMID 20530675`. Reference **22** of that paper.
+**Priority:** MEDIUM–HIGH.
+**Why it is owed.** It is the source of the **Ad-WWOX adenovirus** used for every restoration
+experiment in `PMID 20530675` (Figure 3, Supplemental Figure 3) — the construct behind the entire
+functional arm. Its own restoration claim in a different tumour type is the template the osteosarcoma
+work follows.
+🔴 **Integrity flag carried forward:** the state manifest records this PMID as holding an **expression
+of concern** (`LINT_20260806` publication-integrity audit). It must be read **with that status
+declared**, and nothing may rest on it without the notice being read alongside.
+**Status:** OPEN, and **already assigned** to `scientist-c` in a later wave of `AQEILAN-FT-C-001`
+(lot: 38355659 · 21115974 · **16223882** · 18460020 · 41562193). Recorded here so the debt is visible
+in the queue and not only in a task contract.
+
+---
+
+## FT-077 — `PMID 21731849` · SURFACE CLASSIFICATION, not a reading debt
+
+**Paper:** PMID 21731849 / PMC3124638 / **no DOI assigned by the publisher** — Del Mare S, Kurek KC,
+Stein GS, Lian JB, Aqeilan RI, *Am J Cancer Res* 2011;1(5):585–594. **Review article.**
+**Reading status:** ✅ **CLOSED** — `complete_fulltext_read`, receipt `FTR-20260909-21731849-01`,
+manifest strict PASS with 0 gaps, `scientist-c` 2026-09-09.
+
+🔴 **This entry exists because rule 5d requires it, and it is the obligation this queue was missing.**
+*"Where no structured surface exists, the paper enters a different class and the full-text queue must
+say so."* For this PMID the queue said nothing at all.
+
+**Surface:** `PDF-only` · sentinel `clean` · `PMID21731849_DelMare2011_AJCR.pdf` +
+`PMID21731849_DelMare2011_AJCR.txt`
+
+**The cascade actually run, recorded so nobody repeats it:**
+
+| Route | Result |
+|---|---|
+| Europe PMC `fullTextXML` (PMC3124638) | **404** |
+| NCBI `efetch` db=pmc | 200, but front matter + abstract only — **no `<body>`, `<sec>`, `<fig>`, `<ref>`** |
+| `pmc.ncbi.nlm.nih.gov` article HTML | reCAPTCHA interstitial |
+| Europe PMC article page | JavaScript-driven, no server-rendered text |
+| **Europe PMC `?pdf=render`** | ✅ **10-page PDF, 2.59 MB** |
+
+**Extraction, and why the obvious command would have been wrong.** Declared `article_text` is the
+**reading-order** extraction — `pdftotext -nopgbrk`, **deliberately without `-layout`**. This is a
+**two-column** article, and `-layout` preserves the visual layout by interleaving the two columns line
+by line, which manufactures adjacencies that do not exist on the page: under `-layout` the sentence
+carrying the paper's *100% penetrance* claim comes out with **the page number injected into the middle
+of it**. A locator quoted from that surface would have **verified against the artifact while matching a
+sentence nobody wrote** — the precise failure rule 5c calls the worst class this system can produce.
+The load-bearing passage was additionally **verified against the rendered page** before being quoted.
+
+**Screen result:** zero C0 controls, zero U+FFFD, `_refuse_suspect_surface` returns no refusal.
+Operators present where used (`>` once, U+2212 twice in `Wwox−/−`, `μ` three times); the absence of `<`
+and `±` is genuine — the review reports no P values.
+**Declared extraction limit, not repaired:** line-break hyphens are joined without the hyphen
+(`Wwoxdeficient`, `paraffinembedded`); snippets were **selected to avoid those spans** rather than
+hand-corrected.
+
+---
+
+## FT-078 — `PMID 20530675` · surface RE-classified, and an evidence-locality defect
+
+**Paper:** PMID 20530675 / PMC3037996 / DOI `10.1158/0008-5472.CAN-09-4602` — Kurek *et al.*,
+**Cancer Research** 2010;70(13):5577–86.
+**Reading status:** ✅ **CLOSED** — `complete_fulltext_read`, receipt `FTR-20260909-20530675-01`,
+superseding the partial `FTR-20260814-20530675-01`.
+
+🔴 **Two corrections to what this queue already says about this paper.**
+
+1. **Identity.** Entry at ~line 3526 names *"DOI 10.1038/onc.2010.222 — Kurek KC et al., **Oncogene**
+   2010"*. The article is **Cancer Research**, DOI `10.1158/0008-5472.CAN-09-4602` — confirmed from the
+   JATS front matter, the Europe PMC core record and PubMed `esummary`, and already correct in
+   `paper_registry_current.md` and `literature_tracking_log_current.md`. `10.1038/onc.2010.222` is a
+   **real DOI belonging to a different article**, which is why it survives every existence check.
+   See `CC-20260909-20530675-01` §2.
+2. **Surface.** Previously listed as `structured` with `PMID20530675_Kurek2010_PMC.html`. The
+   structured surface used for this reading is **`PMID20530675_Kurek2010_PMC.xml`** from NCBI `efetch`;
+   **Europe PMC `fullTextXML` returns 404** because the article is a **NIHPA author manuscript outside
+   the open-access subset**. Recorded because the 404 will recur for anyone who retries the OA route.
+
+🔴 **Evidence-locality defect, and the reason this entry is worth writing.** This queue states that the
+figure assets are *"già sul disco condiviso in `files/fulltext/PMID20530675_Kurek2010_assets/`"*.
+**That directory does not exist.** At session start `files/fulltext/` and `files/figures/` were
+**empty**, the prior manifest failed `--verify-artifacts` on **every** declared path, and every surface
+had to be re-acquired. Two re-fetched figures came back with **SHA-256 identical** to those the prior
+reading fingerprinted, which is the evidence the re-acquisition is faithful.
+*Independently, `scientist-a` shipped `framework/scripts/evidence_presence.py` in this same session to
+measure exactly this property — a checkout holding the bytes its manifests fingerprint. Attributed
+because it was found from two directions at once.*
+
+**Supplement:** ✅ retrieved — `NIHMS263536-supplement-1.pdf`, 24 pages, 6.0 MB, via
+`framework/scripts/pmc_pow_fetch.py`. The prior reading declared it unretrievable and named it as
+holding the refutation of the Figure 5 title; **it does, and four separate findings came out of it.**
