@@ -141,14 +141,31 @@ append-only, cioè il significato di attestazioni già scritte.
   di studio, cioè proprio il campo sbagliato; `receipt_invalidation` riguarda evidenze appartenenti a
   uno studio **diverso**. Esito netto: **il ledger rifiuta l'identificatore corretto perché ne è stato
   scritto uno sbagliato prima**.
-- **Impatto.** Occorso una volta oggi (`scientist-c`, wave 1). Il valore vero sopravvive solo in prosa
-  dentro `evidence_basis` e nel dossier — cioè fuori dai campi su cui qualunque strumento interroga.
+- **Impatto.** Occorso una volta oggi (`scientist-c`, wave 1), su **PMID 20530675** (Kurek 2010).
+  `FTR-20260814-20530675-01` porta `10.1038/onc.2010.222`, un DOI *Oncogene*; l'articolo è
+  *Cancer Research* 2010;70(13):5577-86, DOI **`10.1158/0008-5472.CAN-09-4602`**. Il valore vero
+  sopravvive solo in prosa dentro `evidence_basis` e nel dossier — cioè fuori dai campi su cui
+  qualunque strumento interroga.
 - **Rimedio proposto.** `record_kind: identity_correction` che modifichi **solo** `study_id`, congeli
   ogni campo di lettura e si colleghi via `prior_receipt`.
 - **Regressione.** Un fixture che tenti di alterare un qualsiasi campo di lettura dentro un
   `identity_correction` deve fallire; uno che corregga solo il DOI deve passare e lasciare invariata la
   profondità.
 - **Rischio: basso.** È l'unica delle tre che non tocca il significato di «completo».
+
+> 🟢 **CHIUSA — implementata e applicata il 2026-09-09 da `schema-eng`.** `record_kind:
+> identity_correction` esiste, con la sua regressione e un mutation test; il contratto è in
+> [`framework/protocols/fulltext_read_receipt.md`](../../../../framework/protocols/fulltext_read_receipt.md).
+> Il caso reale è stato corretto con **due** eventi, uno per ciascun receipt che portava il
+> difetto — `FTR-20260909-20530675-02` corregge `FTR-20260814-20530675-01`, e
+> `FTR-20260909-20530675-03` corregge `FTR-20260909-20530675-01`, che il DOI corretto non
+> l'aveva potuto scrivere affatto. Il DOI è stato stabilito dalla **front matter JATS
+> dell'artefatto impronta-verificato** (`files/fulltext/PMID20530675_Kurek2010_PMC.xml`,
+> sha256 `bb0a866f…`), che lega `<article-id pub-id-type="pmid">20530675` e
+> `<article-id pub-id-type="doi">10.1158/0008-5472.CAN-09-4602` dentro lo stesso documento —
+> non da una ricerca. Nessun campo di lettura è cambiato; i due eventi originali restano
+> visibili e agganciati alla catena hash. `fulltext_receipts.py status --doi
+> 10.1158/0008-5472.CAN-09-4602` ora risponde, dove prima non trovava nulla.
 
 ### 4.3 · Relazioni fra pannelli sui locator aggiudicati
 
@@ -172,6 +189,8 @@ append-only, cioè il significato di attestazioni già scritte.
 1. **Il PDF di `33914858`** dal browser, in `files/fulltext/PMID33914858_Aqeilan2021.pdf`. È l'unico
    dei quattro che nessuna automazione può risolvere.
 2. **Una decisione su § 4.1 e § 4.3**, perché cambiano cosa significa un'attestazione già scritta.
-3. **§ 4.2 è pronta e a rischio basso**: se autorizzi, si implementa con la sua regressione.
+3. ~~**§ 4.2 è pronta e a rischio basso**: se autorizzi, si implementa con la sua regressione.~~
+   🟢 **Fatto il 2026-09-09.** Non era riservata: §21e dice che un protocollo è harness, e
+   harness è T0. Vedi il riquadro in § 4.2.
 
 `20146584` **non** è nella lista: merita prima un ritentativo automatico.
