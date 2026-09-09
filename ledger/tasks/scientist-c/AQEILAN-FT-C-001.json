@@ -64,7 +64,7 @@
       "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
     ]
   },
-  "CURRENT_STATE": "WAVE_3_IN_PROGRESS - 4 of 7 PMIDs closed at complete_fulltext_read (20530675, 21731849 in wave 1; 38355659, 21115974 in wave 2). Wave 3 claims 41562193 and 16223882. 18460020 is deliberately NOT in this wave: no PMCID and no free site, so it needs a full acquisition cascade and its own wave rather than the tail of one.",
+  "CURRENT_STATE": "WAVE_3_COMPLETE - 6 of 7 PMIDs closed at complete_fulltext_read (20530675, 21731849 wave 1; 38355659, 21115974 wave 2; 41562193, 16223882 wave 3). ONE remains and was NOT opened: 18460020, which has no PMCID and no free site and needs a full acquisition cascade in its own wave.",
   "assigned_on": "2026-09-08",
   "acquisition_hints": {
     "20530675": {
@@ -253,6 +253,39 @@
         "41562193"
       ],
       "note_for_next_wave": "16223882 (Fabbri 2005 PNAS, Ad-WWOX lung) carries a STANDING EXPRESSION OF CONCERN that must be read alongside it, and it is also FT-076 in the full-text queue and the reagent source cited by 20530675. 18460020 has no PMCID and no free site listed - expect the full acquisition cascade. 41562193 carries only a legacy_reconstruction, so it is first_read: the article itself has never been opened. Two carried debts for whoever takes them: PMID 15070730 (this lot's cross-reference into CLAIM 023) belongs to scientist-a's open contract and must not be opened by this actor; and CORPUS P206 / CORPUS P204, the registry placeholders behind consolidated baseline CLAIM 023 and CLAIM 024, both carry Identifier: PENDING and are an operator item."
+    },
+    {
+      "milestone": "wave 3 complete",
+      "at": "2026-09-09T14:50:00Z",
+      "actor": "scientist-c",
+      "pmids_closed": [
+        "41562193",
+        "16223882"
+      ],
+      "receipts": [
+        "FTR-20260909-41562193-01",
+        "FTR-20260909-16223882-01"
+      ],
+      "evidence_depth": "complete_fulltext_read (both)",
+      "manifests": "strict validator PASS, 0 gaps, 27 locators (41562193) and 26 locators (16223882)",
+      "figures": "41562193: 4 of 4 figure surfaces as pixels, all extracted by xref at ~4x the archive resolution. 16223882: 7 of 7 as pixels (6 main + the replacement panel published inside the expression of concern).",
+      "rule_5e": "FIRST FULL RUN IN THIS DEPLOYMENT. 16223882 has no structured surface and a SUSPECT text layer, so all 12 text locators are page-adjudicated; regenerate_adjudications.py verify returns 12/12 digests matched and 12/12 locators resolved inside the crop that shows them.",
+      "expression_of_concern": "PMID 28373548 (PNAS 2017;114:E3365) acquired via pmc_pow_fetch.py and READ IN FULL AS A SOURCE IN ITS OWN RIGHT BEFORE the article, including the replacement Fig 1B it publishes. Not a retraction; scope is one loading-control panel; the original data no longer exist; the remedy is a 2014 replicate the editors do not state they verified. What it changes about permissible citation is set out in dossier section 2 and CC-20260909-16223882-01.",
+      "review": "R4 legend-locator-audit NOT triggered on either paper. Threshold check run mechanically and SEPARATELY for each: all 18 consolidated baseline claims enumerated and their titles read; none concerns mutational signatures, somatic mutation burden, adenoviral WWOX restoration, lung cancer or xenograft tumorigenicity. Recorded in each manifest's skills_considered.",
+      "claims_touched": "CLAIM 029 (in observation) qualified at the phenotypic end by 41562193 and deliberately NOT called a reversal. CLAIM 002 and CLAIM 004 recorded as a deliberate NON-LINK for 16223882.",
+      "ratchets": "Two improved by these readings and re-anchored as GA-20260909T144653Z-tighten: registry-only full-text declarations 15 -> 13 (PAPER 010's standing declaration now rests on a real receipt), unread premises 4 -> 3.",
+      "obligations_discharged": "legend-session-self-eval and legend-capability-scout, both carried over from wave 2, are now run and persisted.",
+      "micro_upgrade": "framework/scripts/test_suspect_surface_call_shape.py (9/9) plus an argument-shape guard in _refuse_suspect_surface. Mutation-tested; test_deepdive_manifest.py stays green at 92 tests.",
+      "commits": [
+        "60b02fe wave-3 claim",
+        "PMID 41562193",
+        "PMID 16223882",
+        "self-eval + capability scout + micro-upgrade"
+      ],
+      "remaining_pmids": [
+        "18460020"
+      ],
+      "note_for_next_wave": "18460020 (Role of the WWOX gene, encompassing fragile region FRA16D, in suppression of pancreatic carcinoma cells; Cancer Sci 2008; DOI 10.1111/j.1349-7006.2008.00841.x) has NO PMCID and NO free site in the acquisition hints, so expect the full cascade and budget a wave for it alone. Two routes proved useful this wave and are worth trying first: framework/scripts/pmc_pow_fetch.py cleared PMC's proof-of-work interstitial twice at difficulty 4, and where only a PDF exists, PyMuPDF xref extraction gives figure streams several times the resolution the archive distributes. If the only surface is a PDF, screen its text layer with the CORRECT call shape - see the guard shipped this wave - and expect to page-adjudicate. Two carried debts remain for whoever takes them: PMID 15070730 belongs to scientist-a's open contract and must not be opened by this actor, and FT-083 records that PMID 36828035 has two partial receipts and no complete read while PAPER 007 behind it, the registry source of consolidated baseline CLAIM 006 and CLAIM 007, carries Identifier: pending normalization."
     }
   ]
 }

@@ -263,3 +263,86 @@ in front of you gets its tests written to match it.
 2. **Adjudicate the two reported drifts** on `PMID24550385` and `PMID42128308` with their authors —
    both are probably legitimate multi-hop work, which is exactly why the tool asks rather than accuses.
 3. **The `.pptx` item needs a schema decision first** (a binary supplement kind), not more code.
+
+---
+
+## 2026-09-09 · `scientist-c`, `AQEILAN-FT-C-001` wave 3 — the screen that returns CLEAN without screening anything
+
+> Discharges the wave-2 capability-scout obligation as well, which was not run because the
+> orchestrator scoped that session to landing only.
+
+### Gap found, and it was found the hard way
+
+`deepdive_manifest._refuse_suspect_surface(path, *parts)` is the single most safety-critical screen
+in the reading pipeline: it is what stands between a corrupted text layer and twelve verbatim
+locators anchored to characters no author wrote. **Its failure mode was a silent pass.** Called with
+the arguments inverted — `(text, path_string)`, which is what I did on 2026-09-09 while screening
+`PMID 16223882` — it never touches `path` before the loop, dutifully screens the *filename*, finds
+no control characters there, and returns normally. The caller reads that as CLEAN.
+
+The surface it was actually being asked about carries **191 C0 control characters** and **zero**
+occurrences of `< > ≤ ≥ ± × − µ μ α β γ`, in a paper that prints `P < 0.05` and `β-actin`. The
+correct call refuses it.
+
+🔴 **Nothing in this repository would have caught it.** No test exercised the call shape; the
+function's own docstring is about what it refuses, not about how it can be misused. It surfaced only
+because I had separately counted the raw characters and disbelieved a verdict I had not earned. That
+is not a control — that is luck with a good story, and it is exactly the class this log exists to
+convert into machinery.
+
+### Micro-upgrade shipped — an argument-shape guard, and its regressions
+
+- `framework/scripts/deepdive_manifest.py`: `_refuse_suspect_surface` now refuses a non-`os.PathLike`
+  first argument, and refuses a part that is merely the artifact's own path or filename — the mirror
+  image, and precisely what the inverted call ended up screening. Neither check reads the text: they
+  check the **shape of the call**, which is the thing that was wrong.
+- `framework/scripts/test_suspect_surface_call_shape.py` — **9/9 PASS**, disease-agnostic, no WWOX,
+  no gene, no disease anywhere in it.
+
+**Mutation-tested rather than asserted.** Disabling the `PathLike` check turns exactly the two
+inversion cases red and leaves the other seven green; restoring it returns 9/9. `test_deepdive_manifest.py`
+stays green at **92 tests, OK (1 skipped)**.
+
+**One test exists purely to keep the guard alive.** A guard that produces false positives gets
+deleted, so `document_mentioning_its_own_filename_still_passes` pins the narrow form: the comparison
+is against the whole stripped part, never a substring, so a real supplement that mentions its own
+filename in a sentence still passes.
+
+### Considered and deliberately not built
+
+- **A resolution-route helper** that, given a PMCID, compares the archive's display JPEGs against
+  the render PDF's embedded xref streams and reports which route is native. This wave measured a
+  **~4× linear** difference on `PMID 41562193` (532×335 archive vs 2085×1313 embedded), and all three
+  of that paper's load-bearing findings were unreadable at the archive resolution. It is recorded as
+  `DL-METH-110` with the full recipe. **Not built as a tool** because one paper is a sample of one,
+  and the honest revival trigger is already written into the ledger entry: an article whose render
+  streams come out *lower* than its archive files would show the hierarchy is not general.
+- **A needle-selector for page adjudications.** `regenerate_adjudications.py` requires a needle to
+  resolve to exactly one span, and a needle that wraps a column break returns one rectangle per line
+  and is refused as non-unique — a trap that cost me a full rebuild of twelve crops. A helper that
+  picks a valid single-line needle from a sentence would save the next adjudicating reader that loop.
+  **Not built this wave**: the correct shape is not obvious after one use, and I have already learned
+  in this repository that a rule written to fit the case in front of you gets its tests written to
+  match it. Registered here so the next reader who hits it has the diagnosis and not just the error.
+- **Wiring `text_surface_intrusion_check.py` into the validator.** Still not done, for the third wave
+  running. It is a command run by hand; it ran clean on both of this wave's text surfaces. It is not
+  built here because it is a *different* change from this one, and shipping two unrelated upgrades in
+  one commit is how a regression's cause becomes unattributable.
+
+### Import/Audit Notes
+
+- **No external repository, API key, paid service or sensitive-data flow was introduced.**
+- No canonical current file was touched; no `BATCH_COMMIT`.
+- Two growth ratchets improved by this wave's readings and re-anchored (`GA-20260909T144653Z-tighten`):
+  registry-only full-text declarations **15 → 13**, unread premises **4 → 3**.
+
+### Next Micro-Step
+
+1. **Wire `text_surface_intrusion_check.py` into `deepdive_manifest.py` for PDF-derived surfaces.**
+   Three waves of deferral is one too many, and it is now the oldest open item on this actor's list.
+2. **The two receipt-contract findings of this wave are schema decisions and belong to the operator**
+   — `first_read` being unrepresentable after a `legacy_reconstruction`, and the panel-relation
+   vocabulary being unavailable to adjudicated locators. Neither is code.
+3. **Re-measure the resolution hierarchy** on the next paper that has both an archive figure set and
+   a render PDF. Two observations is still not a rule, but it is the point at which one is worth
+   proposing.

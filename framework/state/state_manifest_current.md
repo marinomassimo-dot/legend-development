@@ -265,8 +265,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 21
-growth_anchor_head: d5110b2cbaa0da781cea6a3725e0df361c084f3d5cdd67653134cb43f5af2f04
+growth_anchor_events: 22
+growth_anchor_head: 6ae2f309a69c080fe3e4e3ffdb6c0361b62ad3248136e00dbc1b0054ac277518
 ```
 
 ```bash
@@ -293,8 +293,8 @@ must be backed by a persisted `complete_fulltext_read` receipt, or `LINT_AUTOMAT
 `BLOCK_BATCH_COMMIT`.
 
 ```yaml
-registry_only_fulltext_declarations_baseline: 14
-registry_only_fulltext_declaration_ids: ["PAPER 010", "PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 032", "PAPER 042", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050", "PAPER 053"]
+registry_only_fulltext_declarations_baseline: 13
+registry_only_fulltext_declaration_ids: ["PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 032", "PAPER 042", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050", "PAPER 053"]
 ```
 
 Lowering the baseline is the intended direction of travel: back-fill a record with real
@@ -315,8 +315,8 @@ with every existing check passing. It is invisible by construction, because lean
 writes nothing anywhere. So it is measured instead of assumed.
 
 ```yaml
-unread_premise_baseline: 4
-unread_premise_measured_on: 2026-08-14
+unread_premise_baseline: 3
+unread_premise_measured_on: 2026-09-09
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions

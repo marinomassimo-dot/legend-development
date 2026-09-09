@@ -30,6 +30,7 @@ import argparse
 import hashlib
 import html
 import json
+import os
 import re
 import sys
 import unicodedata
@@ -505,7 +506,43 @@ def _refuse_suspect_surface(path: Path, *parts: str) -> None:
     a glyph that did not survive extraction, and on 2026-08-09 the glyph it replaced was the
     `<` in `(P < 0.023)`. The surface has to be re-derived from the source, which is work a
     validator cannot do and must not pretend to have done.
+
+    🔴 ARGUMENT-SHAPE GUARD, and it exists because the inversion actually happened. On
+    2026-09-09 a reader screening PMID 16223882 called this as
+    ``_refuse_suspect_surface(text, path_string)`` — the arguments the wrong way round.
+    Nothing complained: ``path`` is not touched before the loop, and the loop dutifully
+    screened the *filename*, which holds no control characters, so the call returned normally
+    and the caller read that as CLEAN. The surface it was actually asking about carried 191 C0
+    controls and zero comparators, and the correct call refuses it. **A screen whose failure
+    mode is a silent pass is worse than no screen**, because the caller now has a green result
+    to point at. It was caught only because the same reader had independently counted the raw
+    characters and disbelieved the verdict; nothing in this module would have caught it.
+
+    Two cheap checks close it, and neither looks at the text — they check the SHAPE of the
+    call, which is the thing that was wrong. First the inversion itself: every in-tree caller
+    passes a ``Path``, so a non-``PathLike`` first argument is a caller that has swapped them.
+    Second the mirror image: a part that is merely the artifact's own name, which is exactly
+    what the swapped call screened.
     """
+    if not isinstance(path, os.PathLike):
+        raise TypeError(
+            "_refuse_suspect_surface(path, *parts): the first argument is the artifact PATH "
+            f"and must be os.PathLike, not {type(path).__name__}. A caller that passes the "
+            "TEXT here screens the path instead of the document, and this function then "
+            "returns normally — a silent CLEAN on a surface nobody screened")
+    for part in parts:
+        if not isinstance(part, str):
+            raise TypeError(
+                "_refuse_suspect_surface(path, *parts): every part must be the document text "
+                f"as str, not {type(part).__name__}")
+        stripped = part.strip()
+        if stripped and len(stripped) <= 4096 and "\n" not in stripped and (
+                stripped == str(path) or stripped == path.name):
+            raise TypeError(
+                "_refuse_suspect_surface(path, *parts): a screened part is the artifact's own "
+                f"path or filename ({stripped!r}), not its text. Screening a filename always "
+                "passes and asserts nothing about the surface")
+
     for part in parts:
         found = C0_CONTROL.search(part)
         if found:
