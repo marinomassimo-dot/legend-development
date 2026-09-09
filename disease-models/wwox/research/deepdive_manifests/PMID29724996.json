@@ -149,7 +149,12 @@
   "at": "2026-09-09",
   "route": "PubMed esummary for 29724996",
   "result": "No retraction and no expression of concern. One ORDINARY ERRATUM is attached: 'Erratum in' Cell Death Dis 2018 Nov 23;9(12):1159, PMID 30470736, recording that duplication had mistakenly occurred in the Fig 3A and D H&E panels. Per the corpus rule an ordinary erratum is annotated and does NOT create a PUBLICATION_INTEGRITY_HOLD. The surface read here is the corrected version: the XML carries a Change history entry dated 11/23/2018, so the Fig 3 panels inspected below are post-correction. The erratum itself was retrieved as a structured surface during this session's sweep. RE-CHECKED 2026-09-09 on the freshly acquired Europe PMC deposit: the erratum (PMID 30470736) remains an ordinary Author Correction, no retraction and no expression of concern. The 2026-09-09 resume additionally reads the correction itself as its own assigned PMID in the same wave, so the erratum stops being an annotation on this record and becomes a read source.",
-  "hold": false
+  "hold": false,
+  "corrected_items": [
+   "Fig 3A",
+   "Fig 3D"
+  ],
+  "corrected_items_provenance": "Declared from the erratum's own words, read as its own source on 2026-09-09 (PMID 30470736, FTR-20260909-30470736-01): 'duplication had mistakenly occurred in Fig. 3a and d-panels that display H&E'. Scope is the two H&E panels of Figure 3 and nothing wider."
  },
  "source_artifacts": [
   {

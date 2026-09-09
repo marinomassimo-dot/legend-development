@@ -91,7 +91,12 @@
   "at": "2026-09-09",
   "route": "Europe PMC deposit for PMC6251905 plus the corrected-article notice in PMC5938702",
   "result": "This record IS the correction notice. It is an ordinary Author Correction (article-type 'correction'), not a retraction and not an expression of concern; the deposit's own status fields read is-retracted no. Per the corpus rule it is annotated and does NOT raise PUBLICATION_INTEGRITY_HOLD. Recorded with the caveat the 2026-08-10 reading already raised and this reading sustains: IMAGE DUPLICATION IN TWO HISTOLOGY PANELS IS NOT A TYPOGRAPHICAL CORRECTION, and the classification should not flatten the distinction.",
-  "hold": false
+  "hold": false,
+  "corrected_items": [
+   "Fig 3A",
+   "Fig 3D"
+  ],
+  "corrected_items_provenance": "The panels THIS erratum corrects in the article it is about (PMID 29724996). Declared on the erratum's own manifest as well so that erratum_scope_check.py can answer the question from either side of the pair."
  },
  "source_artifacts": [
   {
