@@ -1910,11 +1910,11 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 20146584 / DOI 10.2217/fon.09.152
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 29
-**Status:** discovered
+**Status:** processed — partial_fulltext_read
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -1922,11 +1922,14 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001 — receipt `FTR-20260909-20146584-01`
 **Note:** Title: WWOX gene and gene product: tumor suppression through specific protein interactions
 
 ---
+**Evidence depth:** partial_fulltext_read — `FTR-20260909-20146584-01` (BATCH_20260909_001)
+**Registry record:** [[paper_registry_current#PAPER 085]]
+**Batch note:** partial_fulltext_read — two NIHMS figure images unretrievable, tracked as FT-096
 
 ## LIT-0057
 **Short title:** corpus paper 31
@@ -2240,11 +2243,11 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 26499798 / DOI 10.1074/jbc.R115.676346
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 44
-**Status:** discovered
+**Status:** processed — complete_fulltext_read
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -2252,11 +2255,14 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001 — receipt `FTR-20260909-26499798-01`
 **Note:** Title: Pleiotropic Functions of Tumor Suppressor WWOX in Normal and Cancer Cells
 
 ---
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-26499798-01` (BATCH_20260909_001)
+**Registry record:** [[paper_registry_current#PAPER 089]]
+**Batch note:** secondary — review; primary only for its own Figure 2B
 
 ## LIT-0069
 **Short title:** corpus paper 45
@@ -2998,11 +3004,11 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 29724996 / DOI 10.1038/s41419-018-0510-4
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 73
-**Status:** discovered
+**Status:** processed — complete_fulltext_read
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -3010,11 +3016,14 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001 — receipt `FTR-20260909-29724996-01`
 **Note:** Title: WWOX controls hepatic HIF1alpha to suppress hepatocyte proliferation and neoplasia
 
 ---
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-29724996-01` (BATCH_20260909_001)
+**Registry record:** [[paper_registry_current#PAPER 091]]
+**Batch note:** primary experimental; Author Correction PMID 30470736 read as its own source
 
 ## LIT-0097
 **Short title:** corpus paper 74
@@ -3785,11 +3794,11 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 25245215 / DOI 10.1007/s00018-014-1724-y
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 104
-**Status:** discovered
+**Status:** processed — complete_fulltext_read
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -3797,11 +3806,14 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001 — receipt `FTR-20260909-25245215-01`
 **Note:** Title: The common fragile site FRA16D gene product WWOX: roles in tumor suppression and genomic stability
 
 ---
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-25245215-01` (BATCH_20260909_001)
+**Registry record:** [[paper_registry_current#PAPER 088]]
+**Batch note:** secondary — CMLS chapter 8, the field dedicated WWOX review
 
 ## LIT-0126
 **Short title:** corpus paper 105
@@ -4138,11 +4150,11 @@ Serves to:
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 16223882 / DOI 10.1073/pnas.0505485102
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 119
-**Status:** discovered
+**Status:** processed — complete_fulltext_read
 **Primary pathway:** unassigned
 **Genotype/model tag:** unassigned
 **Transferability:** unassigned
@@ -4150,11 +4162,14 @@ Serves to:
 **Claim links:** none
 **Working Model impact:** none yet
 **Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001 — receipt `FTR-20260909-16223882-01`
 **Note:** Title: WWOX gene restoration prevents lung cancer growth in vitro and in vivo
 
 ---
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-16223882-01` (BATCH_20260909_001)
+**Registry record:** [[paper_registry_current#PAPER 082]]
+**Batch note:** background_only — reagent provenance; STANDING EXPRESSION OF CONCERN (PMID 28373548)
 
 ## LIT-0139
 **Short title:** corpus paper 120
@@ -7140,7 +7155,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 21731849 / PMC3124638
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -7149,7 +7164,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed — complete_fulltext_read
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -7161,9 +7176,11 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
 **Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
-**Flags:** FASE 1 batch entry / no deep-dive yet
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001 — receipt `FTR-20260909-21731849-01`
 **Note:** Title: Role of the WWOX tumor suppressor gene in bone homeostasis and the pathogenesis of osteosarcoma
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-21731849-01` (BATCH_20260909_001)
+**Batch note:** REVIEW (corrected from Article); read, deliberately not promoted to PAPER
 
 ## LIT-0262
 **Short title:** Expression of WWOX and FHIT is downregulated by exposure to arsenite in human...
@@ -7344,7 +7361,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 20530675 / PMC3037996 / DOI 10.1158/0008-5472.CAN-09-4602
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -7353,7 +7370,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed — complete_fulltext_read
 **Primary pathway:** clinical spectrum / WWOX-DEE
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -7365,9 +7382,11 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
 **Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
-**Flags:** FASE 1 batch entry / no deep-dive yet
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001 — receipt `FTR-20260909-20530675-01`
 **Note:** Title: Frequent attenuation of the WWOX tumor suppressor in osteosarcoma is associated with increased tumorigenicity and aberrant RUNX2 expression
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-20530675-01` (BATCH_20260909_001)
+**Batch note:** read, deliberately not promoted to PAPER; qualifies CLAIM 036
 
 ## LIT-0269
 **Short title:** The fragile genes FHIT and WWOX are inactivated coordinately in invasive brea...
@@ -8705,7 +8724,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Identifier:** PMID 24510053 / DOI 10.1177/1535370213519213
 **Date discovered:** 2026-04-18
 **Date screened:** 2026-04-18
-**Date processed:** triage only
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
 **Date last touched:** 2026-04-18
 **Discovery window:** FASE 1 triage 221–400
 **Discovery source:** 400_paper.txt batch corpus
@@ -8714,7 +8733,7 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Quality status:** peer-reviewed (PubMed listing)
 **Filter decision:** background only
 **Tier:** C
-**Status:** screened
+**Status:** processed — complete_fulltext_read
 **Primary pathway:** P6 — DDR / genome stability
 **Genotype/model tag:** unassigned in triage
 **Species:** human
@@ -8726,9 +8745,11 @@ tier C ≈ LOW unless clinical-DEE content is explicit.
 **Working Model impact:** none yet
 **Report mentions:** FASE 1 triage 221–400
 **Current status:** screened — C
-**Next action:** background-only; escalate only on convergence signal
-**Flags:** FASE 1 batch entry / no deep-dive yet
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001 — receipt `FTR-20260909-24510053-01`
 **Note:** Title: WW domain-containing oxidoreductase's role in myriad cancers: clinical significance and future implications
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-24510053-01` (BATCH_20260909_001)
+**Batch note:** REVIEW; carries the primary provenance for DIS-001 ACK1 cascade
 
 ## LIT-0309
 **Short title:** Novel compound heterozygous mutations in the WWOX gene cause early infantile...
@@ -12077,3 +12098,206 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Status:** completed — [[paper_registry_current#PAPER 078]] (`BATCH_20260815_001`)
 **Evidence depth:** complete_fulltext_read with declared SI gap — `FTR-20260811-17360458-01`
 **Claim links:** CLAIM 032 · CLAIM 036
+
+## LIT-0410
+**Short title:** WWOX–p73 functional association (Aqeilan 2004)
+**Authors:** Aqeilan RI, Pekarsky Y, Herrero JJ, Palamarchuk A, Letofsky J, Druck T, Trapasso F, Han S-Y, Melino G, Huebner K, Croce CM
+**Year:** 2004
+**Source type:** primary experimental
+**Journal/source:** PNAS 101(13):4401–4406
+**Identifier type:** PMID / DOI / PMCID
+**Identifier value:** PMID 15070730 / DOI 10.1073/pnas.0400805101 / PMC384759
+**Date discovered:** 2026-09-08 (Aqeilan free-full-text sweep dispatch)
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
+**Discovery window:** Aqeilan 54-PMID sweep
+**Discovery source:** orchestration dispatch 2026-09-08 / task contracts AQEILAN-FT-A/B/C-001
+**Discovery query:** Aqeilan RI free full text
+**Status:** processed — complete_fulltext_read
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-15070730-02` (BATCH_20260909_001)
+**Registry record:** [[paper_registry_current#PAPER 081]]
+**Primary pathway:** signaling organization / routing / scaffold logic
+**Genotype/model tag:** no WWOX-DEE allele
+**Transferability:** T2
+**clinical relevance:** INDIRECT
+**Claim links:** CLAIM 023
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** orchestration_reviews/2026-09-09.md
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001
+**Note:** Identified primary source of CLAIM 023. Its title clause coupling phosphorylation to rerouting is NARROWED in this batch: 20 body sentences mention Src, zero also mention localisation. Promoted from CORPUS P206, whose Identifier was the literal string PENDING.
+
+---
+
+## LIT-0411
+**Short title:** Pancreatic Ad-WWOX restoration (Nakayama 2008)
+**Authors:** Nakayama S, Semba S, Maeda N, Aqeilan RI, Huebner K, Yokozaki H
+**Year:** 2008
+**Source type:** primary experimental
+**Journal/source:** Cancer Sci 99(7):1370–1376
+**Identifier type:** PMID / DOI / PMCID
+**Identifier value:** PMID 18460020 / DOI 10.1111/j.1349-7006.2008.00841.x / PMC11159152
+**Date discovered:** 2026-09-08 (Aqeilan free-full-text sweep dispatch)
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
+**Discovery window:** Aqeilan 54-PMID sweep
+**Discovery source:** orchestration dispatch 2026-09-08 / task contracts AQEILAN-FT-A/B/C-001
+**Discovery query:** Aqeilan RI free full text
+**Status:** processed — complete_fulltext_read
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-18460020-01` (BATCH_20260909_001)
+**Registry record:** [[paper_registry_current#PAPER 083]]
+**Primary pathway:** oncology / TGF-beta / SMAD4
+**Genotype/model tag:** no WWOX-DEE allele
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** orchestration_reviews/2026-09-09.md
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001
+**Note:** Carries a Reagent provenance field: Ad-WWOX, Ad-GFP and both anti-Wwox antibodies all cite PMID 16223882, which carries a standing expression of concern. Nothing about adenoviral or AAV WWOX delivery in a neuronal context may cite this paper.
+
+---
+
+## LIT-0412
+**Short title:** WWOX cis-regulatory variation and low plasma HDL-C (Lee 2008)
+**Authors:** Lee JC, Weissglas-Volkov D, Kyttälä M, … Croce CM, Aqeilan RI, … Pajukanta P
+**Year:** 2008
+**Source type:** primary human genetic association
+**Journal/source:** Am J Hum Genet 83(2):180–192
+**Identifier type:** PMID / DOI / PMCID
+**Identifier value:** PMID 18674750 / DOI 10.1016/j.ajhg.2008.07.002 / PMC2495060
+**Date discovered:** 2026-09-08 (Aqeilan free-full-text sweep dispatch)
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
+**Discovery window:** Aqeilan 54-PMID sweep
+**Discovery source:** orchestration dispatch 2026-09-08 / task contracts AQEILAN-FT-A/B/C-001
+**Discovery query:** Aqeilan RI free full text
+**Status:** processed — complete_fulltext_read
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-18674750-01` (BATCH_20260909_001)
+**Registry record:** [[paper_registry_current#PAPER 084]]
+**Primary pathway:** P5 — metabolism / lipids
+**Genotype/model tag:** no WWOX-DEE allele
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** orchestration_reviews/2026-09-09.md
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001
+**Note:** The corpus only human quantitative WWOX phenotype outside cancer and outside neurodevelopment. No neural endpoint; licenses no transfer to the reference genotype.
+
+---
+
+## LIT-0413
+**Short title:** WWOX in HTLV-I Tax tumorigenesis (Fu 2011)
+**Authors:** Fu J, Qu Z, Yan P, Ishikawa C, Aqeilan RI, Rabson AB, Xiao G
+**Year:** 2011
+**Source type:** primary experimental
+**Journal/source:** Blood 117(5):1652–1661
+**Identifier type:** PMID / DOI / PMCID
+**Identifier value:** PMID 21115974 / DOI 10.1182/blood-2010-08-303073 / PMC3318777
+**Date discovered:** 2026-09-08 (Aqeilan free-full-text sweep dispatch)
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
+**Discovery window:** Aqeilan 54-PMID sweep
+**Discovery source:** orchestration dispatch 2026-09-08 / task contracts AQEILAN-FT-A/B/C-001
+**Discovery query:** Aqeilan RI free full text
+**Status:** processed — complete_fulltext_read
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-21115974-01` (BATCH_20260909_001)
+**Registry record:** [[paper_registry_current#PAPER 086]]
+**Primary pathway:** viral oncology / NF-kB
+**Genotype/model tag:** no WWOX-DEE allele
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** CLAIM 023
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** orchestration_reviews/2026-09-09.md
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001
+**Note:** Group Xiao, not the Aqeilan group. R4 audit run and NOT clean: 12 of 32 triples defective, one disqualifying. Corroborates the not-only-by-binding leg of CLAIM 023; its rerouting-exclusion leg did not survive audit and is recorded as an author assertion on unshown data.
+
+---
+
+## LIT-0414
+**Short title:** Editor introduction, CMLS 71(23) fragile-site special issue (Aqeilan 2014)
+**Authors:** Aqeilan RI
+**Year:** 2014
+**Source type:** secondary — editor introduction
+**Journal/source:** Cell Mol Life Sci 71(23):4487–4488
+**Identifier type:** PMID / DOI / PMCID
+**Identifier value:** PMID 25238781 / DOI 10.1007/s00018-014-1716-y / PMC11113964
+**Date discovered:** 2026-09-08 (Aqeilan free-full-text sweep dispatch)
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
+**Discovery window:** Aqeilan 54-PMID sweep
+**Discovery source:** orchestration dispatch 2026-09-08 / task contracts AQEILAN-FT-A/B/C-001
+**Discovery query:** Aqeilan RI free full text
+**Status:** processed — complete_fulltext_read
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-25238781-01` (BATCH_20260909_001)
+**Registry record:** [[paper_registry_current#PAPER 087]]
+**Primary pathway:** fragile-site taxonomy
+**Genotype/model tag:** no WWOX-DEE allele
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** orchestration_reviews/2026-09-09.md
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001
+**Note:** Two pages, single-authored, no figure or table, 11 references, received and accepted the same day. PubMed and PMC both over-describe it as a review. Carries the taxonomic finding: twelve neurological terms occur zero times each over the 7,211-character body.
+
+---
+
+## LIT-0415
+**Short title:** Hazan & Aqeilan 2015 — editorial, not review
+**Authors:** Hazan I, Aqeilan RI
+**Year:** 2015
+**Source type:** secondary — EDITORIAL
+**Journal/source:** Cell Death Discov 1:15040
+**Identifier type:** PMID / DOI / PMCID
+**Identifier value:** PMID 27551470 / DOI 10.1038/cddiscovery.2015.40 / PMC4979517
+**Date discovered:** 2026-09-08 (Aqeilan free-full-text sweep dispatch)
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
+**Discovery window:** Aqeilan 54-PMID sweep
+**Discovery source:** orchestration dispatch 2026-09-08 / task contracts AQEILAN-FT-A/B/C-001
+**Discovery query:** Aqeilan RI free full text
+**Status:** processed — complete_fulltext_read
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-27551470-01` (BATCH_20260909_001)
+**Registry record:** [[paper_registry_current#PAPER 090]]
+**Primary pathway:** fragile-site / WWOX passive-vs-active
+**Genotype/model tag:** no WWOX-DEE allele
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** orchestration_reviews/2026-09-09.md
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001
+**Note:** PMC deposit carries article-type editorial; PubMed assigns no Review tag. Standing caution: of its 17 references this repository holds four, and on all four checking changed something.
+
+---
+
+## LIT-0416
+**Short title:** Published erratum to PMID 38182577 (WWOX/Myc osteosarcoma)
+**Authors:** Cell Death & Disease editorial office
+**Year:** 2024
+**Source type:** published erratum
+**Journal/source:** Cell Death Dis 15(2):141
+**Identifier type:** PMID / DOI / PMCID
+**Identifier value:** PMID 38355659 / DOI 10.1038/s41419-024-06518-8 / PMC10867017
+**Date discovered:** 2026-09-08 (Aqeilan free-full-text sweep dispatch)
+**Date processed:** 2026-09-09 (BATCH_20260909_001)
+**Discovery window:** Aqeilan 54-PMID sweep
+**Discovery source:** orchestration dispatch 2026-09-08 / task contracts AQEILAN-FT-A/B/C-001
+**Discovery query:** Aqeilan RI free full text
+**Status:** processed — complete_fulltext_read
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-38355659-01` (BATCH_20260909_001)
+**Registry record:** [[paper_registry_current#PAPER 092]]
+**Primary pathway:** oncology / osteosarcoma
+**Genotype/model tag:** no WWOX-DEE allele
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none
+**Working Model impact:** none — no working-model block is redefined by this record
+**Report mentions:** orchestration_reviews/2026-09-09.md
+**Next action:** none — read and integrated
+**Flags:** read BATCH_20260909_001
+**Note:** Read as its own source; establishes the corrected scope of PMID 38182577 from the deposit itself, closing its SCOPE_UNDECLARED status. Corrects an author name only; the title is unchanged.
+
+---

@@ -22,7 +22,7 @@
 
 **Prenatal developmental architecture.** In severe null genotypes, onset may begin prenatally, with detectable fetal brain abnormalities. Severe WWOX disease should not be read as purely postnatal epileptic deterioration; a developmental architecture failure may already be active in utero, especially in null-severe presentations. *(CLAIM 022 / paper 216.)*
 
-**WWOX as routing/scaffold protein.** Beyond tumor suppressor / metabolic regulator, WWOX is a phosphorylation-sensitive routing/scaffold protein that can change partner localization and redirect biological output. Tyr33-dependent relocalization of p73 is the anchor example: the same protein produces different output depending on where WWOX routes it. *(CLAIM 023 / paper 206.)*
+**WWOX as routing/scaffold protein.** Beyond tumor suppressor / metabolic regulator, WWOX is a routing/scaffold protein that can change partner localization and redirect biological output. Relocalization of p73 is the anchor example: the same protein produces different output depending on where WWOX routes it. *(CLAIM 023 / PAPER 081, PMID 15070730.)* — **Narrowed in `BATCH_20260909_001`:** the word *phosphorylation-sensitive* and the phrase *Tyr33-dependent* are removed, because the primary source tests no relation between phosphorylation and localisation (20 body sentences mention Src; zero also mention localisation). Tyr33 phosphorylation regulates the **binding**, which is unaffected.
 
 **Domain cooperativity.** WW-domain biology depends on WW1–WW2 tandem cooperativity; variant interpretation should consider tandem stability, partner-recognition geometry, and residual interaction architecture — not isolated single-domain logic. *(CLAIM 024 / paper 204.)*
 

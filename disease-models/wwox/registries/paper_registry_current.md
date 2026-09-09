@@ -239,7 +239,7 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **Identifier:** PMID 41562193 · PMCID PMC12820907 · DOI 10.1002/gcc.70106
 **Status:** background_only
 **Status change note:** declassato deliberatamente da `claim_linked` (v1.1) a `background_only` (v1.2) — la decisione della sessione 2026-03-29 è stata di non procedere con un claim operativo per il genotipo di riferimento; nessun dato CNS pediatrico diretto. 2026-06-28: full text recuperato; decisione background_only RICONFERMATA — nessun dato CNS pediatrico, nessuna variante del genotipo di riferimento, attribuzione causale SBS40c↔WWOX = IPOTESI.
-**Evidence depth:** full text reviewed (open access PMC)
+**Evidence depth:** full text reviewed — `FTR-20260909-41562193-01` (`complete_fulltext_read`, 2026-09-09); manifest `deepdive_manifests/PMID41562193.json` (27 locators — 19 text, 8 figure — strict PASS, 0 gaps). 🔴 **Until 2026-09-09 this declaration had no complete receipt behind it**: the ledger held one `legacy_reconstruction` whose `source_locator` pointed at the registry row itself, whose `source_fingerprint` was `null`, and whose own `evidence_basis` recorded that the coverage map did not survive. The record therefore leaves the `registry_only_fulltext_declarations_baseline` set.
 **Primary pathway:** P7 / broader WWOX biology
 **Model/species:** indirect / non-the reference genotype CNS-focused
 **Genotype/model:** WWOX loss broader biology
@@ -1006,10 +1006,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 29
 **Full title:** WWOX gene and gene product: tumor suppression through specific protein interactions
 **Identifier:** PMID 20146584 / DOI 10.2217/fon.09.152
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 085]] (BATCH_20260909_001, `CC-20260909-20146584-01`)
+**Registry role:** corpus placeholder only — **conservato append-only come storia di audit, mai cancellato**
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — risolto per promozione
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-031
@@ -1136,10 +1136,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 44
 **Full title:** Pleiotropic Functions of Tumor Suppressor WWOX in Normal and Cancer Cells
 **Identifier:** PMID 26499798 / DOI 10.1074/jbc.R115.676346
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 089]] (BATCH_20260909_001, `CC-20260909-26499798-01`)
+**Registry role:** corpus placeholder only — **conservato append-only come storia di audit, mai cancellato**
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — risolto per promozione
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-045
@@ -1417,10 +1417,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 73
 **Full title:** WWOX controls hepatic HIF1alpha to suppress hepatocyte proliferation and neoplasia
 **Identifier:** PMID 29724996 / DOI 10.1038/s41419-018-0510-4
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 091]] (BATCH_20260909_001, `CC-20260909-29724996-01`)
+**Registry role:** corpus placeholder only — **conservato append-only come storia di audit, mai cancellato**
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — risolto per promozione
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-074
@@ -1707,10 +1707,10 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 104
 **Full title:** The common fragile site FRA16D gene product WWOX: roles in tumor suppression and genomic stability
 **Identifier:** PMID 25245215 / DOI 10.1007/s00018-014-1724-y
-**Status:** not_processed
-**Registry role:** corpus placeholder only
+**Status:** promoted — see [[paper_registry_current#PAPER 088]] (BATCH_20260909_001, `CC-20260909-25245215-01`)
+**Registry role:** corpus placeholder only — **conservato append-only come storia di audit, mai cancellato**
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — risolto per promozione
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-105
@@ -1837,11 +1837,11 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 119
 **Full title:** WWOX gene restoration prevents lung cancer growth in vitro and in vivo
 **Identifier:** PMID 16223882 / DOI 10.1073/pnas.0505485102
-**Status:** not_processed
+**Status:** promoted — see [[paper_registry_current#PAPER 082]] (BATCH_20260909_001, `CC-20260909-16223882-01`)
 **Integrity status:** 🔴 `PUBLICATION_INTEGRITY_HOLD` — **expression of concern**. Field added in `BATCH_20260806_002`, closing a debt declared on 2026-08-06. **No canonical claim rests on this record.** It is cited once, as reference 17 of [[paper_registry_current#PAPER 057]], among four background xenograft examples in that paper's Introduction, and supports none of its measured results — verified during the complete read (`FTR-20260806-19936220-01`). Not admissible as evidentiary support; admissible only as bibliographic lineage.
-**Registry role:** corpus placeholder only
+**Registry role:** corpus placeholder only — **conservato append-only come storia di audit, mai cancellato**
 **Claim links:** none
-**Next action:** screening / triage required
+**Next action:** none — risolto per promozione
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-120
@@ -3309,22 +3309,23 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 ## CORPUS P261
 **Short title:** Role of the WWOX tumor suppressor gene in bone homeostasis and the pathogenes...
 **Full title:** Role of the WWOX tumor suppressor gene in bone homeostasis and the pathogenesis of osteosarcoma
-**Authors:** Mare et al.
+**Authors:** Del Mare S, Kurek KC, Stein GS, Lian JB, Aqeilan RI — corrected in `BATCH_20260909_001` from the triage value *"Mare et al."*
 **Year:** 2011
-**Source type:** Article
-**Journal/source:** Am J Cancer Res
-**Identifier:** PMID 21731849 / PMC3124638
+**Source type:** 🔴 **Review** — corrected in `BATCH_20260909_001` from `Article`. **This field is load-bearing and must not be softened back:** under `epistemic_discipline` a review is a secondary source and cannot be primary evidence for a claim, so every number in it is a pointer to its cited primary, never a measurement.
+**Journal/source:** Am J Cancer Res 2011;1(5):585–594
+**Identifier:** PMID 21731849 / PMC3124638 / **no DOI assigned by the publisher**
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** read — corpus placeholder, **deliberately not promoted to a PAPER record** (`CC-20260909-21731849-01`, §1)
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-21731849-01`; manifest `deepdive_manifests/PMID21731849.json` (18 locators, schema v2, strict PASS, 0 gaps)
 **LIT link:** LIT-0261
 **Primary pathway:** P5 — metabolism / mitochondria / redox
-**Model/species:** human
-**Genotype/model:** unassigned in triage
-**Transferability:** unassigned in triage
+**Model/species:** human + mouse (secondary)
+**Genotype/model:** no WWOX-DEE allele; bone/osteosarcoma biology
+**Transferability:** T3
 **clinical relevance:** LOW
-**Claim links:** none — triage only
-**Role:** background corpus only
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Claim links:** none — the reading adds two qualification notes to [[claim_registry_current#CLAIM 036]] and creates no link
+**Role:** secondary source; **citation-fidelity reference point** for the osteosarcoma line
+**Note:** Read in full 2026-09-09 (`CC-20260909-21731849-01`). Acquisition recorded because it constrains re-verification: Europe PMC `fullTextXML` 404; NCBI `efetch db=pmc PMC3124638` returns front matter and abstract with no `<body>`, `<sec>`, `<fig>` or `<ref>`; obtained via `pdf=render`, text by `pdftotext -nopgbrk` without `-layout`. Declared extraction limit: hyphens joined (`Wwoxdeficient`, `paraffinembedded`).
 
 ## CORPUS P262
 **Short title:** Expression of WWOX and FHIT is downregulated by exposure to arsenite in human...
@@ -3435,16 +3436,17 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** Cancer Res
 **Identifier:** PMID 20530675 / PMC3037996 / DOI 10.1158/0008-5472.CAN-09-4602
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** read — corpus placeholder, **deliberately not promoted to a PAPER record** (`CC-20260909-20530675-01`, §1)
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-20530675-01` (prior `FTR-20260814-20530675-01`, `inadequate_prior_coverage`); manifest `deepdive_manifests/PMID20530675.json` (31 locators, schema v2, strict PASS, 0 gaps)
 **LIT link:** LIT-0268
 **Primary pathway:** clinical spectrum / WWOX-DEE
-**Model/species:** human
-**Genotype/model:** unassigned in triage
-**Transferability:** unassigned in triage
+**Model/species:** mouse (Wwox-null) + human osteosarcoma
+**Genotype/model:** no WWOX-DEE allele, no neural endpoint, no CNS measurement anywhere in the paper
+**Transferability:** T3 — `ESPANSIONE`
 **clinical relevance:** LOW
-**Claim links:** none — triage only
-**Role:** background corpus only
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Claim links:** none — the reading adds one qualification to [[claim_registry_current#CLAIM 036]] and creates no link
+**Role:** background corpus only; source of the osteosarcoma-penetrance number the downstream literature quotes
+**Note:** 🔴 **The prior note — *"FASE 1 triage 221–400 — no deep-dive performed"* — was false as of 2026-09-09 and is superseded.** The paper was read in full. It is the source of the strongest pro-osteosarcoma number in this literature (*"100% of Wwox-deficient mice had developed OS by 18 days-of-age"*), and **its own Figure S1 legend reports 19 of 22 knockout mice with tumours (86%)**. See [[claim_registry_current#CLAIM 036]] for the arithmetic and the screening-criterion caveat. Receipt-ledger defect recorded and **not** silently repaired: the prior receipt `FTR-20260814-20530675-01` carries the wrong `study_id.doi`, and `receipt_correction` cannot lawfully change study identity, so `FTR-20260909-20530675-01` **omits `doi` from `study_id`** and carries the correct value in `evidence_basis`. Referred upward as an open protocol gap; a `record_kind: identity_correction` is named and deliberately not implemented.
 
 ## CORPUS P269
 **Short title:** The fragile genes FHIT and WWOX are inactivated coordinately in invasive brea...
@@ -4236,16 +4238,17 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Journal/source:** Exp Biol Med (Maywood)
 **Identifier:** PMID 24510053 / DOI 10.1177/1535370213519213
 **Tier (FASE 1):** C
-**Status:** screened — corpus placeholder
+**Status:** read — corpus placeholder promoted to a read record (`CC-20260909-24510053-01`)
+**Evidence depth:** full text reviewed — `FTR-20260909-24510053-01` (`complete_fulltext_read`); manifest `deepdive_manifests/PMID24510053.json` (9 locators, **all page adjudications**, strict PASS, 0 gaps; `regenerate_adjudications.py verify` 9/9)
 **LIT link:** LIT-0308
 **Primary pathway:** P6 — DDR / genome stability
 **Model/species:** human
-**Genotype/model:** unassigned in triage
-**Transferability:** unassigned in triage
-**clinical relevance:** LOW
-**Claim links:** none — triage only
-**Role:** background corpus only
-**Note:** FASE 1 triage 221–400 — no deep-dive performed. Entry reserved for future promotion to PAPER 0NN on deep-dive integration.
+**Genotype/model:** no WWOX-DEE allele; oncology review
+**Transferability:** T3
+**clinical relevance:** LOW — **proposed unchanged, and that is not an oversight.** The paper genuinely contains nothing about the reference genotype; inflating the field because the reading turned out useful would corrupt exactly the signal the field exists to carry. Its value is mechanistic and archival, not clinical.
+**Claim links:** none — no new claim is created by this reading
+**Role:** **read secondary source; carries the primary provenance for `DIS-001`'s ACK1 cascade**
+**Note:** 🔴 **Source type `Review` is kept prominent: secondary throughout, and no claim gains or loses evidentiary support from this reading.** Metadata corrections applied in `BATCH_20260909_001`: pages are **253–263**, not 253–9. The reading's product is provenance — it supplies the published source of the ACK1→WWOX polyubiquitination cascade that active rejection `DIS-001` rests on (ref 31 = PMID 16288044, Mahajan NP, Whang YE, Mohler JL, Earp HS, *Cancer Res* 2005;65:10514–23), a paper this repository holds at **no depth at all**. It also supplies a citable in-the-wild instance of premise `D-01` in a WWOX-specific source by the gene's own primary group: ubiquitination defined as labelling *"and thus designated for degradation via the proteasomal system"*, cited to a bone-formation review with no WWOX data. Its dated negative — *"So far no ubiquitin E3 ligase was associated with WWOX under normal or disease states."* — is recorded **with its date bound**. Acquisition note: the PDF text layer is `SUSPECT` (12 `þ` for `+`, 8 `0x02` for `−`), so all nine locators are anchored to rendered pages under rule 5e.
 
 ## CORPUS P309
 **Short title:** Novel compound heterozygous mutations in the WWOX gene cause early infantile...
@@ -6113,9 +6116,9 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Topic:** WWOX–p73 phosphorylation-dependent routing/scaffold logic
 **Deep-dive level:** deep, high-confidence, partial-access mechanistic analysis
 **Claim links:** → CLAIM 023
-**Identifier:** PENDING — likely overlaps PAPER 026 (PMID 32185845, WWOX–p73 phospho-binding); verify before merge
-**Status:** deep-dived — registry placeholder (lint restored)
-**Note:** Source description from tracking log 2026-04-17. Possible duplicate of PAPER 026 — flagged for the operator.
+**Identifier:** PMID 15070730 / DOI 10.1073/pnas.0400805101 / PMC384759 — resolved in `BATCH_20260909_001` from the literal string `PENDING`; normalized to [[paper_registry_current#PAPER 081]]
+**Status:** promoted — see [[paper_registry_current#PAPER 081]] (BATCH_20260909_001, `CC-20260909-15070730-01`); placeholder **conservato append-only come storia di audit, mai cancellato**
+**Note:** Source description from tracking log 2026-04-17. 🔴 **The duplicate hypothesis this record carried is DISPROVED, not merged.** The placeholder read *"likely overlaps PAPER 026 (PMID 32185845); verify before merge"*; the complete read `FTR-20260909-15070730-02` establishes the source as **PMID 15070730**, a different paper, so the two records must NOT be merged. `PAPER 026` remains abstract-only and continues to report the **opposite direction** for the Tyr33 effect (phosphorylation *decreases* affinity for a p73-derived peptide) — a standing tension recorded on both records and deliberately not resolved by this batch, an abstract-only record having no parity with a complete full-text read.
 
 ## CORPUS P204
 **Topic:** WW1–WW2 tandem cooperativity (WW-domain architecture / variant interpretation)
@@ -6267,10 +6270,10 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Journal/source:** *Cells* 2021;10(4):824
 **Identifier:** PMID 33916893 / PMCID PMC8067556 / DOI 10.3390/cells10040824
 **Status:** claim_linked
-**Evidence depth:** full text reviewed (CC-2026-07-05-007, letto per intero)
+**Evidence depth:** full text reviewed — back-filled in `BATCH_20260909_001` onto receipt `FTR-20260909-33916893-01` (`complete_fulltext_read`, prior `FTR-20260726-33916893-01`, `inadequate_prior_coverage`); manifest `deepdive_manifests/PMID33916893.json` (35 locators, schema v2, strict PASS, 0 gaps). Prior provenance string retained for audit: *CC-2026-07-05-007, letto per intero*.
 **Primary pathway:** genotype-phenotype / clinical spectrum
 **Model/species:** human — meta-coorte da letteratura e database
-**Genotype/model:** 56 pazienti WOREE/DEE28 + 6 SCAR12 (la coorte pubblicata più ampia al 2021)
+**Genotype/model:** 56 pazienti WOREE/DEE28 + 6 SCAR12 (la coorte pubblicata più ampia al 2021). ⚠️ **Nota di conteggio, non un errore:** la colonna `Cases` del supplemento depositato somma a **58**, di cui due interruzioni prenatali — 58−2 = 56, 58−1 = 57 (la cifra della legenda del supplemento). **È una regola d'inclusione e non va registrata come errore.**
 **Transferability:** T1
 **clinical relevance:** HIGH — è il denominatore di riferimento per la casistica WWOX
 **Claim links:** 008, 019, 033
@@ -6821,3 +6824,158 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Transferability:** T3
 **Claim links:** none
 **Note:** WWOX loss associates with weaker p-CHK1, defective G2/M arrest and more APH-associated breaks; wild-type rescue improves the break phenotype. The ATM→ITCH→K63-WWOX→ATR chain remains composite, and the APH dose conflict (0.2 mM versus 0.2 μM) is preserved.
+## PAPER 081
+**Short title:** WWOX–p73: WW1 binding, Tyr33 phosphorylation, and cytoplasmic rerouting
+**Full title:** Functional association between Wwox tumor suppressor protein and p73, a p53 homolog
+**Identifier:** PMID 15070730 / DOI 10.1073/pnas.0400805101 / PMC384759
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-15070730-02`; manifest `deepdive_manifests/PMID15070730.json` (38 locators, strict PASS, 0 gaps)
+**Source type:** primary experimental (cell-line biochemistry and immunofluorescence)
+**Transferability:** T2 mechanistic / indirect for the reference genotype
+**clinical relevance:** INDIRECT — structurally important for model architecture
+**Claim links:** → [[claim_registry_current#CLAIM 023]] (primary source of its mechanism)
+**Note:** Promoted from `CORPUS P206`, whose `Identifier` was the literal string `PENDING`; the placeholder is preserved append-only. 🔴 **The promotion also disproves the placeholder's own duplicate hypothesis:** `CORPUS P206` carried the note *"likely overlaps PAPER 026 (PMID 32185845); verify before merge"*, and this reading establishes the source as PMID 15070730, a different paper. The two records must NOT be merged, and `PAPER 026` (abstract-only) continues to report the opposite direction for the Tyr33 effect — a standing tension recorded on both records, not resolved here. Identification independently corroborated: `scientist-c`, reading PMID 21115974 the same morning, identified this paper as that paper's reference 19. **Binding leg is the best-supported content**: bidirectional co-IP, endogenous interaction in two cell types, PPxY dependence confirmed three ways, direct GST pull-down with the isolated first 50 aa, p53 excluded as a specificity control. **Routing leg is overexpression-dependent by the authors' own words** and its only graded-dose titration (Fig 5) carries no dose labels, no merged channel, no cell count, no n and no statistic. Three citation defects recorded and independently reconfirmed: the Discussion credits Fig 1G with a Y34 binding result Fig 1G does not contain; it cites "Fig. 3 D" twice for a figure declaring only (A), (B), (C); and zero P-values appear anywhere in the body. Fig 5 has no caption on either surface, so which panel is the reduced dose is an assumption, not a datum.
+**Reading debt:** PMID 12514174 (Chang et al., murine Wox1/JNK) is the source of the entire Y33 rationale and this corpus does not hold it — a `DATO` in the source that has never been verified here.
+
+## PAPER 082
+**Short title:** Ad-WWOX restoration in lung cancer — the reagent-provenance source
+**Full title:** WWOX gene restoration prevents lung cancer growth in vitro and in vivo
+**Identifier:** PMID 16223882 / DOI 10.1073/pnas.0505485102 / PMC1266103
+**Status:** background_only
+**Evidence depth:** full text reviewed — `FTR-20260909-16223882-01` (`complete_fulltext_read`); manifest `deepdive_manifests/PMID16223882.json` (26 locators, strict PASS, 0 gaps, 12/12 page adjudications verified)
+**Source type:** primary experimental (oncology; no CNS material, no reference-genotype allele)
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none — 🔴 **deliberately none.** `CLAIM 002` and `CLAIM 004` must NOT be linked to this record; the non-link is recorded as a decision, not an omission.
+**Role:** reagent provenance — the source of the Ad-WWOX construct used downstream
+**Integrity status:** 🔴 `PUBLICATION_INTEGRITY_HOLD` — **expression of concern**, PMID 28373548, *PNAS* 2017;114(16):E3365, DOI `10.1073/pnas.1704296114`, signed by Inder M. Verma. **Standing as of 2026-09-09; NOT a retraction.** Carried forward from `CORPUS-STUB-119`, where the field was added in `BATCH_20260806_002`, and now backed by a complete read of the expression of concern as its own source (`FTR-20260909-28373548-01`, fingerprint `28069dd2cf98d2eb…`). **Scope is narrow and precise:** one panel — *"Fig. 1B, β-actin panel, appears to have duplicated bands"*. The original data no longer exist (*"more than 7 years after publication"*); the published remedy is a **2014 replicate**, and the editors publish it **without stating that they verified it** — every confirmatory sentence is attributed to the authors. **Operational consequence:** Fig. 1B is the panel demonstrating that Ad-WWOX expresses Wwox at controlled load. The WWOX row is not contested and the 2014 replicate reproduces its lane pattern, so *that Wwox appears after infection* holds; **the quantitative between-lane reading does not hold without qualification.** Anyone citing load comparability must cite the 2017 replacement, not the 2005 panel.
+**Note:** Promoted from `CORPUS-STUB-119`, placeholder preserved append-only. Closes the `FT-076` reagent-provenance debt opened from PMID 20530675.
+
+## PAPER 083
+**Short title:** Pancreatic Ad-WWOX restoration, and an inherited reagent dependency
+**Full title:** Role of the WWOX gene, encompassing fragile region FRA16D, in suppression of pancreatic carcinoma cells
+**Identifier:** PMID 18460020 / DOI 10.1111/j.1349-7006.2008.00841.x / PMC11159152
+**Status:** background_only
+**Evidence depth:** full text reviewed — `FTR-20260909-18460020-01` (`complete_fulltext_read`); manifest `deepdive_manifests/PMID18460020.json` (34 locators — 22 text/table, 12 figure — strict PASS, 0 gaps)
+**Source type:** primary experimental (oncology; no CNS material, no reference-genotype allele)
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none — 🔴 **deliberately none.** Not linkable to `CLAIM 002` or `CLAIM 004`, for three independent reasons: reagent non-independence (below); the standing expression of concern on the source of those reagents; and an ex-vivo engraftment-**prevention** design, which is not rescue of an established neuronal phenotype. **Nothing about adenoviral or AAV WWOX delivery in a neuronal context may cite this paper.**
+**Reagent provenance:** 🔴 Ad-WWOX, Ad-GFP, immunoblot anti-Wwox and IHC anti-Wwox are **all** cited to ref 21 = PMID 16223882 = [[paper_registry_current#PAPER 082]], which carries a **standing expression of concern** (PMID 28373548). This record exists largely to make that dependency visible rather than inherited: a per-PMID retraction check cannot see the integrity status of the papers a paper's *reagents* descend from.
+**Note:** What is supportable from this paper: pWWOX raises Smad4 protein ~2.7×, surviving β-actin normalisation. What is **not**: that WWOX loss is an established early event in pancreatic precursor lesions; and post-transcriptional Smad4 regulation, whose mRNA arm is *"data not shown"* and is therefore `IPOTESI`. The paper has **no limitations section** — do not record one. Methodological defects recorded in the learned-gates registry, not as claims: invalid χ² across all seven Table 1 contingencies; undefined significance asterisk in Fig 5b; MOI-10 dose-decoupling; Fig 3b/3d without loading control; unadjusted survival claim; a burned-in `Neural invasion` panel label in Fig 4b(iii).
+
+## PAPER 084
+**Short title:** WWOX cis-regulatory variation and low plasma HDL-C in humans
+**Full title:** WW-domain-containing oxidoreductase is associated with low plasma HDL-C levels
+**Identifier:** PMID 18674750 / DOI 10.1016/j.ajhg.2008.07.002 / PMC2495060
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-18674750-01` (prior `FTR-20260811-18674750-01`, `inadequate_prior_coverage`); manifest `deepdive_manifests/PMID18674750.json` (41 locators over 12 fingerprinted artifacts, strict PASS, 0 gaps)
+**Source type:** primary human genetic association study (non-coding regulatory variant; 9,798 subjects; 21-year prospective arm)
+**Transferability:** T3 — `ESPANSIONE` toward the reference genotype and deliberately not more
+**clinical relevance:** LOW
+**Claim links:** none — no claim is created, modified or retired by this reading
+**Note:** Lee JC, Weissglas-Volkov D, Kyttälä M, … Croce CM, **Aqeilan RI**, … Pajukanta P. *Am J Hum Genet* 2008 Aug;83(2):180–192. **The corpus's only human quantitative WWOX phenotype outside cancer and outside neurodevelopment**, which is why the record exists; it carries no neural endpoint and licenses no transfer to the reference genotype. Recorded production defect, explicitly **not** an integrity hold: in Table S2 the Reference Allele equals the Minor Allele in 5 of 21 rows (rs8050128 C/C, rs12918952 G/G, rs2288033 A/A, rs12828 G/G, rs391870 A/A), one of which — rs12918952 — is the nonsynonymous Ala179Val row. Retraction check re-run 2026-09-09 returns nothing.
+
+## PAPER 085
+**Short title:** WWOX interactome review (Salah/Aqeilan/Huebner 2010)
+**Full title:** WWOX gene and gene product: tumor suppression through specific protein interactions
+**Identifier:** PMID 20146584 / DOI 10.2217/fon.09.152 / PMC2832309
+**Status:** processed
+**Evidence depth:** 🔴 **`partial_fulltext_read`** — `FTR-20260909-20146584-01`; manifest `deepdive_manifests/PMID20146584.json` (15 locators, strict PASS, 0 gaps). **The label denotes an unretrievable surface, not a shallow reading:** the text was read in full and the downgrade is confined to two NIHMS figure images (`nihms-180622-f0001.jpg`, `nihms-180622-f0002.jpg`) that sit behind a PMC challenge, so `figures: captions_only`. The two figure locators carry `surface: body` and attest the caption text only, never the panel. Tracked as `FT-096`. Cost of the debt, measured: Figure 2 is the panel the text twice designates as its own signalling summary.
+**Source type:** secondary — narrative interactome review (11 pages, 90 references, 2 figures, 0 tables, 13 sections). A **joint Aqeilan/Huebner review** — the WWOX group with the FHIT group — which is load-bearing for how it is weighted.
+**Transferability:** T3 — `ESPANSIONE`
+**clinical relevance:** LOW
+**Claim links:** none
+**Publication integrity:** no retraction, no expression of concern, no erratum.
+**Note:** Promoted from `CORPUS-STUB-029`, placeholder preserved append-only. Recorded findings, none promoted to a claim: a p53 non-replication whose caveat is lost between this document and CMLS chapter 8; a directional conflict in which 2010 reports WWOX **reduced** after UV where 2014 reports it **increased**, both on unpublished data; the authors' own counter-case on intronic replication-stress deletions; the SDR domain declared functionally uncharacterised; and a hypomorph defined by argument rather than measurement. **Term screen over 29,965 characters:** `epilep`, `seizure`, `brain`, `CNS`, `WOREE`, `encephalopath`, `ataxia`, `intellectual`, `recessive`, `germline`, `neuro` all zero; `syndrome` ×4, all Bloom's/Fanconi. Recorded as a **chronological control** on the 2014 measurements, not as an independent confirmation.
+
+## PAPER 086
+**Short title:** WWOX in HTLV-I Tax tumorigenesis (NF-κB corner)
+**Full title:** The tumor suppressor gene WWOX links the canonical and noncanonical NF-κB pathways in HTLV-I Tax-mediated tumorigenesis
+**Identifier:** PMID 21115974 / DOI 10.1182/blood-2010-08-303073 / PMC3318777
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-21115974-01`; manifest `deepdive_manifests/PMID21115974.json` (35 locators, strict PASS, 0 gaps)
+**Source type:** primary experimental (viral oncology; group Xiao, Pittsburgh — **not** the Aqeilan group)
+**Transferability:** T3 — `ESPANSIONE`
+**clinical relevance:** LOW
+**Claim links:** → [[claim_registry_current#CLAIM 023]] (corroborates the *"not only by binding"* leg only)
+**Note:** The first study in this corpus to place WWOX inside **viral** tumorigenesis, and the only one placing it in the **HTLV-I / NF-κB** corner. 🔴 **R4 blind locator audit run and NOT clean — 12 of 32 triples defective, one disqualifying — and the corrections are the substance of this record.** The candidate was going to assert that this paper supplies a partner in which binding is WW-independent *and rerouting is excluded*, thereby qualifying `CLAIM 023`'s mechanism. **That middle leg did not survive**: supplemental Figure S2A carries Myc-WWOX in all eight lanes with no WWOX-negative comparator, and its Input block carries Myc-WWOX, Hsp90 and LaminB but **no Tax input row** — it shows where the *complex* is recovered, never where Tax *goes*. The paper's assertion that WWOX does not relocalise Tax therefore rests on **unshown data** and is recorded as an author assertion, not a result. Two further findings the audit produced: the paper states *"all the mice had tumors by 18 weeks of age (Figure 1A)"* while **Figure 1A, read point by point at 700%, shows ~41% of that cohort still tumour-free at 18 weeks**, reaching 0% only at ~25 weeks; and the Results heading *"Knockout of p100/p52 **prevents** tumorigenesis"* stands against 10% tumour-free at 52 weeks, where the Discussion says *"reduce"* and the abstract says *"delays"*.
+
+## PAPER 087
+**Short title:** Editor's introduction to the CMLS 71(23) fragile-site special issue
+**Full title:** Role of common fragile sites and corresponding genes in cancer development
+**Identifier:** PMID 25238781 / DOI 10.1007/s00018-014-1716-y / PMC11113964
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-25238781-01`; manifest `deepdive_manifests/PMID25238781.json` (15 locators / 2 artifacts, strict PASS, 0 gaps)
+**Source type:** 🔴 secondary — **EDITOR'S INTRODUCTION** to a nine-chapter multi-author review. Two pages, single-authored, no figure, no table, no supplement, 11 references, received and accepted the same day (2014-08-28). PubMed's publication types (*review-article, Review, Journal Article*) and the PMC `article-type="review-article"` both **over-describe** it. **It must not be weighted as a systematic review.**
+**Transferability:** T3 — `ESPANSIONE`, and the honest form is that **no transfer is available from this literature layer, and the reading measures why**
+**clinical relevance:** LOW
+**Claim links:** none
+**Publication integrity:** no retraction, no expression of concern, no erratum.
+**Note:** 🔴 **The taxonomic finding this record exists to carry.** The document's opening paragraph assigns **human genetic disorders to *rare* fragile sites and cancer to *common* ones**. WWOX spans FRA16D, a **common** site; the reference genotype is a Mendelian recessive human genetic disorder of WWOX. **Measured over the 7,211-character body with the reference list separated off:** `epilep`, `seizure`, `brain`, `CNS`, `WOREE`, `encephalopath`, `ataxia`, `intellectual`, `recessive`, `syndrome`, `germline` and `neuro` occur **zero times each — twelve of twelve** — in the introduction to a review whose chapter 8 is entirely about WWOX. **Operational consequence, and it is the point:** any future reasoning of the form *"the fragile-site literature does not mention a neurological phenotype, therefore…"* is **invalid by construction**. The silence is predicted by the field's own taxonomy and carries no evidential weight.
+
+## PAPER 088
+**Short title:** CMLS chapter 8 — the field's dedicated WWOX review
+**Full title:** The common fragile site FRA16D gene product WWOX: roles in tumor suppression and genomic stability
+**Identifier:** PMID 25245215 / DOI 10.1007/s00018-014-1724-y / PMC11113097
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-25245215-01`; manifest `deepdive_manifests/PMID25245215.json` (21 locators / 5 artifacts, strict PASS, 0 gaps)
+**Source type:** secondary — chapter 8 of the CMLS 71(23) common-fragile-site special issue, the field's own dedicated WWOX review. 11 pages, 109 references, 2 schematic figures, 1 partner table, 26 sections. Received and accepted the same day (2014-08-28), the special-issue signature. 🔴 Unlike its own editor's introduction ([[paper_registry_current#PAPER 087]], over-described) and unlike [[paper_registry_current#PAPER 090]] (under-described), **the metadata here is CORRECT**: `genre_discriminator.py` returns AGREES.
+**Transferability:** T3 — `ESPANSIONE`
+**clinical relevance:** LOW
+**Claim links:** none
+**Publication integrity:** no retraction, no expression of concern, no erratum; `commentscorrections` empty at 2026-09-09.
+**Weighting:** authoritative as an **index** of what the field held in 2014 and of which primary source carries which claim; **carries no evidence of its own** — every datum is a restatement, two load-bearing steps rest on *unpublished data*, and Figure 2 is labelled *"Hypothetical model"* by its own authors.
+**Note:** Promoted from `CORPUS-STUB-104`, placeholder preserved append-only. 🔴 **Restatement-fidelity result.** The editor's introduction to the same issue ([[paper_registry_current#PAPER 087]]) restated this chapter as *"Authors **conclude** that these observations indicate that WWOX is functionally required for cell homeostasis…"*. Chapter 8's own closing proposal is **near-verbatim the same sentence with one word changed**: it says *"we **propose**"*. Its Concluding remarks hedge three further times — *"it can be argued"*, *"might have important roles"*, *"it can be speculated"*. **The chapter delivers the content it was promised to deliver, at a weaker epistemic grade than the promise assigned it — and here the summariser and the summarised are the same person.** 🔴 **Measured absence.** Over the 31,756-character body: `epilep`, `seizure`, `brain`, `CNS`, `WOREE`, `encephalopath`, `intellectual`, `recessive`, `syndrome`, `germline` — **ten of twelve literally zero**; `ataxia` occurs once as the expansion of the ATM gene name; `neuro` occurs twice, **both inside Table 1 rows**, with zero occurrences in running prose. Field density measured 2026-09-09: `WWOX AND FRA16D` = 119; `WWOX AND (epilepsy OR encephalopathy)` = 118 — two literatures of comparable size and disjoint vocabulary. Citation defects recorded: Table 1's TAU row cites `[107, 108]` where [107] is PMID 21901168, a MEK/WOX1 T-cell leukaemia paper; and its GSK3β row cites PMID 22193544, the paper at the centre of dismissal case `D-14`.
+
+## PAPER 089
+**Short title:** Pleiotropic functions of WWOX (Abu-Remaileh 2015 review)
+**Full title:** Pleiotropic Functions of Tumor Suppressor WWOX in Normal and Cancer Cells
+**Identifier:** PMID 26499798 / DOI 10.1074/jbc.R115.676346 / PMC4692203
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-26499798-01`; manifest `deepdive_manifests/PMID26499798.json` (28 locators, schema v2, strict PASS, 0 gaps)
+**Source type:** 🔴 secondary — a **REVIEW**. It is primary only for its own Figure 2B, a genotype schematic drawn by the authors, and as a **dated position statement** by the primary WWOX laboratory.
+**Transferability:** T2 / T3
+**clinical relevance:** INDIRECT
+**Claim links:** → [[claim_registry_current#CLAIM 030]] (corroborates the P47R limb at genotype level, secondary weight only)
+**Note:** Promoted from `CORPUS-STUB-044`, placeholder preserved append-only. **R4 satisfied — two independent blind locator audits run before this record.** Where this review restates a primary this corpus already holds — the ITCH/K63 biology of PMID 24550385 — it adds **no independent weight**, and no claim gains support from it on that route. Registered and deliberately **not** adjudicated: the second allele in trans with P47R is annotated three different ways across sources — Banne Table 1 `p.Asp16fs`, the review text *"exon 1 frameshift"*, and Figure 2B `A16*`. **No claim in the registry should carry either annotation as established.**
+
+## PAPER 090
+**Short title:** Hazan & Aqeilan 2015 — editorial, not review
+**Full title:** Current questions and controversies in chromosome fragile site research: does WWOX, the gene product of common fragile site FRA16D, have a passive or active role in cancer?
+**Identifier:** PMID 27551470 / DOI 10.1038/cddiscovery.2015.40 / PMC4979517
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-27551470-01`; manifest `deepdive_manifests/PMID27551470.json` (22 locators / 5 artifacts, strict PASS, 0 gaps)
+**Source type:** 🔴 **EDITORIAL, NOT REVIEW** — and this field is the point of the record. The PMC deposit carries `article-type="editorial"` and subject `Editorial`; PubMed assigns publication type `Journal Article` with **no `Review` tag**. 17 references, five sections, no measurement of its own. **It must not be weighted as a systematic review**, and the dispatch that assigned it called it one.
+**Transferability:** T3 — `ESPANSIONE`, and weaker than that word usually implies
+**clinical relevance:** LOW
+**Claim links:** none
+**Publication integrity:** no retraction, no expression of concern, no erratum (PubMed esummary 2026-09-09; no `<related-article>`, no change-history event).
+**Note:** 🔴 **Standing caution, and the reason the record is worth creating: this paper's restatements are not sources.** Of its 17 references this repository holds three at `complete_fulltext_read` and one partial. **On all four, checking changed something.** Ref 9 (PMID 17360458): datum faithful (10/58 vs 2/60), but the haploinsufficiency inference is transmitted **stripped of the source's own interpretive status**. Ref 12 (PMID 23370280): faithful on cytoplasmic retention, but **drops the source's headline** that WWOX *increases* ΔNp63α abundance while lowering its activity. Ref 7 (PMID 24510053): cited for a **loss-only framing the review itself contradicts** — that review reports *increased* WWOX in breast, gastric and prostate carcinomas. Ref 8 (PMID 25331887): the ITCH step's citation **points where this repository's own record does not**. The remaining 13 are unread and are **queued, not believed**.
+
+## PAPER 091
+**Short title:** WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia
+**Full title:** WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia
+**Identifier:** PMID 29724996 / DOI 10.1038/s41419-018-0510-4 / PMC5938702
+**Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-29724996-01` (prior `FTR-20260810-29724996-01`, `inadequate_prior_coverage`); manifest `deepdive_manifests/PMID29724996.json` (38 locators, 13 new, schema v2, strict PASS, 0 gaps)
+**Source type:** primary experimental (mouse conditional knockout, in vivo)
+**Primary pathway:** P5 — metabolism / HIF1α–glycolysis
+**Genotype/model:** `Wwox^ΔHep` (Alb-Cre × Wwox^fl/fl), DEN-induced HCC, ± high-fat diet — **not** a WWOX-DEE allele
+**Transferability:** T3 toward the reference genotype (liver, carcinogen, neoplasia endpoint; **no neural endpoint anywhere in the paper**)
+**clinical relevance:** INDIRECT
+**Claim links:** → [[claim_registry_current#CLAIM 025]] as **qualifying** evidence. No new claim created.
+**Publication integrity:** ordinary Author Correction attached — **PMID 30470736**, image duplication in the Fig 3A/3D H&E panels. Annotated, **no** `PUBLICATION_INTEGRITY_HOLD`. The erratum is not an annotation taken on trust: it was **read as its own assigned source in the same wave** (`FTR-20260909-30470736-01`, `complete_fulltext_read`, manifest `PMID30470736.json` PASS 0 gaps), and its declared scope was checked directly against this paper's 38 locators — **none of which sits on Fig 3A or 3D** (the only Figure 3 locator, `entries[7]`, reads panel F). **Any future locator on Figure 3A or 3D must be drawn from the corrected version and say so.** The read surface behind all 38 locators is verifiably post-correction: the 2026-09-09 deposit carries «This article has been corrected.» and a dated *Change history 11/23/2018* entry, both anchored as locators in the erratum's manifest. 🔴 The clean result is a fact about which panels this corpus happened to use, **not a safeguard**.
+**Note:** Promoted from `CORPUS-STUB-073`, placeholder preserved append-only; `LIT-0096` completed. Constraints that travel with the record: **no neural transfer** (transfer verdict `ESPANSIONE`); **no therapeutic promotion of digoxin**; this is **not** a mouse datum for WWOX loss in *spontaneous* liver tumours; and **the human premise carries three cohort sizes** — 438, 434, 417 — so any record citing the TCGA analysis must name which number it used.
+
+## PAPER 092
+**Short title:** Published erratum to PMID 38182577 (WWOX/Myc osteosarcoma)
+**Full title:** Correction: WWOX promotes osteosarcoma development via upregulation of Myc
+**Identifier:** PMID 38355659 / DOI 10.1038/s41419-024-06518-8 / PMC10867017
+**Status:** processed
+**Evidence depth:** full text reviewed — `FTR-20260909-38355659-01` (`complete_fulltext_read`); manifest `deepdive_manifests/PMID38355659.json` (8 locators, strict PASS, 0 gaps)
+**Source type:** **published erratum**, attached to PMID 38182577
+**Transferability:** T3 — `ESPANSIONE`
+**clinical relevance:** LOW
+**Claim links:** none — **the source supports no biological proposition.**
+**Note:** Read as a source in its own right, because reading a full text obliges a receipt. It establishes the corrected scope of PMID 38182577 from the deposit itself, closing that paper's `SCOPE_UNDECLARED` status: the erratum's body is four paragraphs, carries **no `<fig>` element**, and corrects **no item beyond an author name** — `Haji Yehya` → `Haj-Yahia`. Checked against the re-downloaded corrected deposit of the original article, whose `<article-title>` still reads *"WWOX promotes osteosarcoma development via upregulation of Myc"*, unchanged. 🔴 **The erratum had the opportunity to correct a title that asserts the opposite of its own paper's direction, and corrected a hyphen in a surname.** No `PUBLICATION_INTEGRITY_HOLD` is proposed.
