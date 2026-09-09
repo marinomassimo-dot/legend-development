@@ -64,7 +64,7 @@
       "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
     ]
   },
-  "CURRENT_STATE": "WAVE_3_COMPLETE - 6 of 7 PMIDs closed at complete_fulltext_read (20530675, 21731849 wave 1; 38355659, 21115974 wave 2; 41562193, 16223882 wave 3). ONE remains and was NOT opened: 18460020, which has no PMCID and no free site and needs a full acquisition cascade in its own wave.",
+  "CURRENT_STATE": "WAVE_4_CLAIMED - 6 of 7 PMIDs closed at complete_fulltext_read (20530675, 21731849 wave 1; 38355659, 21115974 wave 2; 41562193, 16223882 wave 3). Wave 4 is the last paper in the lot: 18460020, dispatched as the lot's hard acquisition (no PMCID and an empty free-site list in the 2026-09-08 pre-flight).",
   "assigned_on": "2026-09-08",
   "acquisition_hints": {
     "20530675": {
@@ -192,6 +192,22 @@
       "environment_change": "PyMuPDF (fitz) and numpy are installed as of this wave; tool_preflight.py reports 6/6. Rule 5e page adjudication and xref figure extraction are runnable in this deployment for the first time, so the wave-1 default of declaring a figure artifact unrecoverable is no longer the first resort.",
       "carried_obligations": "legend-session-self-eval and legend-capability-scout were not run at wave 2 because the orchestrator scoped that session to landing only. Both are met this wave.",
       "identity_correction_standing_default": "Unchanged and still referred to the operator, not implemented and not worked around. If the ledger again refuses a correct identifier because an incorrect one was persisted first, omit the field, record the true value in evidence_basis and the dossier, and note it."
+    },
+    "wave_4": {
+      "claimed_at": "2026-09-09T15:30:00Z",
+      "actor": "scientist-c",
+      "pmids": [
+        "18460020"
+      ],
+      "duplicate_assignment_check": "Annex A.3 / scientist_reading_modes.md 2.2 rule 3 re-run before this claim: grep -l over ledger/tasks/*/*.json returns this contract alone for 18460020; no peer contract names it, so no PARALLEL_READ_GROUP is needed and none is declared.",
+      "wave_4_gate": {
+        "18460020": "fulltext_receipts.py status --pmid 18460020 -> [] , exit 1: no receipt of any kind -> reread_reason first_read."
+      },
+      "acquisition_hint_dissent": "THE CONTRACT'S OWN HINT IS UNDER SUSPICION BEFORE THE CASCADE STARTS, and it is recorded here rather than discovered later. acquisition_hints.18460020 declares pmcid null and free_sites [], and the 2026-09-08 pre-flight found no PMC record. Two independent records in this repository contradict that. (1) corpus_seed_pubmed_20260806.jsonl line 103 carries identifiers.pmc = PMC11159152 for this PMID, and a pmc-release date of 2008-05-02. (2) surface_census.md line 138 records this paper as surface class structured, sentinel clean, naming PMID18460020_Nakayama2008_PMC.html alongside the PDF - so a PMC HTML surface was obtained and screened once, on the 2026-08-15 census, in a checkout whose files/ tree is now empty. Cancer Sci is Wiley with an open archive. Per the dispatch, oa_status_dissent.py is run BEFORE any index verdict is accepted. Recorded, not assumed: the hint may still be right and the census a photograph of something no longer distributed.",
+      "refusal_standard": "A WebFetch reconstruction is not the author's bytes (rule 5c). If the cascade reaches only a model-reconstructed HTML surface, that route is REFUSED rather than failed, and the refusal is recorded as such - the way scientist-a parked 33914858. Parking with an honest cascade is a legitimate outcome; a reading built on a reconstruction is not.",
+      "derived_surfaces": "NOT regenerated this wave, per the dispatch: the generators read the working tree rather than the index, so regenerating while a peer holds untracked work bakes unlanded peer work into a shared surface under this actor's name. Two peers are working. Drift is REPORTED; the orchestrator regenerates at wave close on a clean tree.",
+      "identity_correction_standing_default": "Unchanged and still referred to the operator, not implemented and not worked around.",
+      "second_contract_finding_standing": "Also unchanged and still referred: adjudicated locators carry surface figure, so coupled panel relations are unavailable in exactly the papers whose surface is worst. Three genuine ones existed on 16223882 and none could be declared."
     }
   },
   "CHECKPOINTS": [
