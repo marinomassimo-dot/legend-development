@@ -12,6 +12,7 @@ a regeneration shows a reader numbers that no longer describe the repository.
 
 from __future__ import annotations
 
+import re
 import subprocess
 import sys
 import textwrap
@@ -516,12 +517,43 @@ class QueueIntegrityTests(unittest.TestCase):
         self.assertIn("| full text | PAPER ", rendered)
         self.assertIn("| abstract only | PAPER ", rendered)
 
+    @staticmethod
+    def _papers_claiming_full_text(registry_text: str) -> int:
+        """Count PAPER records carrying at least one full-text marker — not marker occurrences.
+
+        The unit matters and was wrong until 2026-09-09. `report["counts"]["full text"]` is a
+        count of STUDIES; a substring tally over the registry is a count of STRINGS, and a single
+        PAPER record routinely carries two markers (one carried six). Comparing the two let the
+        registry side read 89 where only 59 papers actually claimed full text, so the guard passed
+        while the queue overstated coverage by 21 studies — green on exactly the condition it
+        exists to refuse.
+        """
+        heads = [m.start() for m in re.finditer(r"^#{1,4}\s*paper\s+\d+", registry_text, re.M)]
+        if not heads:
+            return 0
+        bounds = list(zip(heads, heads[1:] + [len(registry_text)]))
+        return sum(
+            1 for start, end in bounds
+            if any(marker in registry_text[start:end] for marker in bq.FULL_TEXT_MARKERS))
+
     def test_coverage_is_not_overstated_against_the_registry(self) -> None:
         """Records counted as read may never exceed the registry's own full-text claims."""
         registry = (REGISTRIES / "paper_registry_current.md").read_text(encoding="utf-8").lower()
-        claimed = sum(registry.count(marker) for marker in bq.FULL_TEXT_MARKERS)
+        claimed = self._papers_claiming_full_text(registry)
         report = bq.build(ROOT, "wwox")
-        self.assertLessEqual(report["counts"].get("full text", 0), claimed)
+        self.assertLessEqual(
+            report["counts"].get("full text", 0), claimed,
+            f"{report['counts'].get('full text', 0)} studies counted as read against {claimed} "
+            f"PAPER records claiming full text. Only a BATCH_COMMIT closes this.")
+
+    def test_a_paper_with_two_markers_counts_once(self) -> None:
+        """The regression for the unit error itself: markers are not papers."""
+        one = "#### paper 001\nstatus: full text reviewed\ndepth: complete_fulltext_read\n"
+        two = one + "#### paper 002\nstatus: abstract only\n"
+        self.assertEqual(self._papers_claiming_full_text(one), 1)
+        self.assertEqual(self._papers_claiming_full_text(two), 1)
+        self.assertEqual(
+            self._papers_claiming_full_text(two + "#### paper 003\nfull text reviewed\n"), 2)
 
     def test_committed_queue_is_current(self) -> None:
         self.assertTrue(QUEUE.is_file(), f"missing generated queue: {QUEUE}")
