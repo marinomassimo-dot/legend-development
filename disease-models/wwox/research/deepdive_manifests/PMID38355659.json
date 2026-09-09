@@ -1,0 +1,161 @@
+{
+  "schema_version": 2,
+  "pmid": "38355659",
+  "doi": "10.1038/s41419-024-06518-8",
+  "receipt": "FTR-20260909-38355659-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID38355659.md",
+    "disease-models/wwox/research/commit_candidates/CC-20260909-38355659-01.md"
+  ],
+  "skills_considered": [
+    {"skill": "legend-deepdive", "used": true,
+     "reason": "The reading route; the M0-M5 pipeline of the standing brief is its structure."},
+    {"skill": "find-fulltext", "used": false,
+     "reason": "Not reached. Europe PMC fullTextXML for PMC10867017 returned the complete structured deposit on the first tier (HTTP 200, 6445 bytes), and pmc_pow_fetch.py returned the publisher PDF. The cascade this skill runs was unnecessary."},
+    {"skill": "legend-locator-audit", "used": false,
+     "reason": "R4 THRESHOLD CHECK RUN MECHANICALLY, AND THE NON-TRIGGER IS RECORDED SO IT IS AUDITABLE. All 18 claims whose Status is `consolidated baseline` were enumerated from claim_registry_current.md and their titles read: every one is WWOX-DEE neurobiology, variant interpretation or prenatal cortical structure. None concerns osteosarcoma, bone, RUNX2, NF-kB or an oncology model. ONE IS MYC-ADJACENT AND IS NAMED RATHER THAN PASSED OVER: CLAIM 007 ('P47T abolishes PPxY binding to WW-domain partners') carries Pathway `P3 - MYC/Wnt / interaction logic`. This source still does not touch it: a one-page author-name correction establishes nothing about PPxY binding, WW-domain occupancy or MYC level, and carries no measurement of any kind. The reading therefore neither narrows, reverses, corroborates nor removes any consolidated baseline claim, and justifies no working-model bump. R4 does not trigger."},
+    {"skill": "legend-discovery", "used": false,
+     "reason": "A correction notice correcting an author's name contributes no measurement, no molecule, no pathway and no endpoint. There is nothing to squeeze. The one discovery-ledger consequence of this reading is a corroboration of an EXISTING entry (DL-METH-079), written as a commit candidate rather than as a new lead."},
+    {"skill": "legend-hypothesis-forge", "used": false,
+     "reason": "No molecule, dose, target or endpoint in the source. Transfer verdict is ESPANSIONE/T3."},
+    {"skill": "legend-safety-triage", "used": false,
+     "reason": "No molecule is promoted or even named by this source."},
+    {"skill": "legend-proband-priority-matrix", "used": false,
+     "reason": "Reading order for this wave was fixed by the dispatch; a two-PMID wave has no ordering question to answer."},
+    {"skill": "erratum_scope_check.py", "used": true,
+     "reason": "Run over the wwox corpus before and after this reading. It is the reason this source was assigned: PMID 38182577 is one of its four SCOPE_UNDECLARED manifests. Findings reported to that manifest's author; NOT acted on here, because 38182577's manifest is not this actor's to edit."}
+  ],
+  "group_assessment": {
+    "total_publications": 137,
+    "publications_on_gene": 65,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "ARTICLE TYPE IS A PUBLISHED ERRATUM; research_type classifies the GROUP, not this one-page notice. Akkawi, Hidmi, Haj-Yahia, Monin, Diment, Drier, Stein and Aqeilan - the Aqeilan laboratory, primary for the GENE and NOT primary for WWOX-DEE clinical phenotype. THE DISTINCTION DOES ALMOST NO WORK HERE AND THAT IS ITSELF THE POINT: the only assertions this deposit makes are about its own authorship and about what was changed in its own earlier article. Those are first-hand facts a publisher and an author group are the authoritative source for, and they carry full weight. Nothing in this source is a bone observation, so there is no observation-to-interpretation step to discount. COUNTS RE-DERIVED TODAY rather than carried: PubMed ESearch 2026-09-09, 'Aqeilan RI[Author]' = 137, 'Aqeilan RI[Author] AND WWOX' = 65. The wave-1 self-evaluation of this actor recorded 137/64 as a stale number carried from a 2026-08-11 measurement; re-derivation moves publications_on_gene 64 -> 65 and pays that declared debt."
+  },
+  "field_density": {
+    "queries": [
+      {"query": "WWOX", "count": 707, "source": "PubMed ESearch, 2026-09-09"},
+      {"query": "WWOX AND osteosarcoma", "count": 28, "source": "PubMed ESearch, 2026-09-09"},
+      {"query": "WWOX AND Myc", "count": 20, "source": "PubMed ESearch, 2026-09-09"},
+      {"query": "WWOX AND RUNX2", "count": 12, "source": "PubMed ESearch, 2026-09-09"}
+    ],
+    "note": "Measured today, in the same session as the reading. The relevant density for THIS source is not the literature on WWOX but the corpus-internal one: this erratum is attached to exactly one article, PMID 38182577, which this repository has already read to complete depth. Its field is a single paper."
+  },
+  "multihop": {
+    "references_enumerated": 0,
+    "gene_direct_refs_in_source": [],
+    "resolved": [],
+    "queued": [],
+    "note": "ENUMERATED AS ZERO BY FACT, NOT BY OMISSION. The deposit carries no <ref-list> and no <back> element, and the rendered page prints no reference list; the only external identifier anywhere in the source is the corrected article's own DOI. Verified on both surfaces. The single outbound pointer is a <related-article related-article-type='corrected-article'> naming PMC10770339 = PMID 38182577, which is already read to complete depth in this repository (FTR-20260810-38182577-01, FTR-20260810-38182577-02) and is therefore resolved rather than queued. NOT RE-READ: the duplicate-work gate forbids repeating a complete read with adequate coverage, and this reading did not repeat it."
+  },
+  "corpus_crossquery": {
+    "query": "Does the corrected scope of this erratum intersect any verbatim locator standing on PMID 38182577, and does the correction alter the title on which DL-METH-079 rests?",
+    "hits": 5,
+    "note": "Five surfaces answered. (1) deepdive_manifests/PMID38182577.json - 30 locators, 19 figure and 11 body; every anchor names a Results/Discussion paragraph, a figure caption or a figure panel, and NOT ONE names the byline, the author list or the title, so no locator can sit inside this erratum's corrected scope. (2) fulltext_read_receipts.jsonl - FTR-20260810-38182577-01/-02 both assert that this erratum 'corrects a single author name' and 'does NOT correct the title'; that assertion belonged to a prior reader and is now re-established from this deposit and from the corrected original deposit. (3) discovery_ledger_current.md DL-METH-079 rests on the published title of 38182577 still reading 'WWOX promotes osteosarcoma development via upregulation of Myc'; re-fetch of PMC10770339 on 2026-09-09 confirms the title is unchanged post-correction, so DL-METH-079 stands. (4) erratum_scope_check.py reports PMID 38182577 as SCOPE_UNDECLARED - the structural gap this reading resolves the content of. (5) claim_registry_current.md - all 18 consolidated baseline claims enumerated for the R4 threshold check."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-09-09",
+    "route": "PubMed efetch for PMID 38355659 and Europe PMC resultType=core for PMC10867017",
+    "result": "CLEAN, and the check is asked in both directions because this source IS a correction. (a) OF this notice: PubMed carries exactly one CommentsCorrections element, RefType=ErratumFor, pointing at Cell Death Dis 2024;15(1):13 = PMID 38182577; PublicationType is 'Published Erratum'; Europe PMC custom-meta is-retracted = no. Nothing corrects or retracts the correction. (b) BY this notice, established from the deposit rather than from any prior reader's assertion: the corrected scope is the third author's name and nothing else - 'Ameen Haji Yehya' to 'Ameen Haj-Yahia'. It corrects no datum, no figure, no panel, no table and no conclusion, and it does NOT correct the title. The notice's own byline already prints the corrected form.",
+    "corrected_items": [],
+    "corrected_items_basis": "DECLARED EMPTY, AND THE EMPTINESS IS A MEASUREMENT RATHER THAN A DEFAULT. The erratum names no figure and no panel anywhere on either surface: its entire body is four paragraphs, quoted in full in the locators below, and the rendered page carries no figure, no table, no abstract and no reference list. An empty corrected_items is therefore the true scope, not an undeclared one - it says the erratum touches no panel, which is a different statement from 'nobody looked'.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {"path": "files/fulltext/PMID38355659_Akkawi2024_correction_PMC.xml",
+     "sha256": "76a2421a9ac960624164920e808959583c2e6323eb6721118ca071ef919d709b",
+     "kind": "article_text",
+     "note": "STRUCTURED SURFACE PREFERRED OVER PDF, per rule 5d. Europe PMC fullTextXML for PMC10867017, retrieved 2026-09-09, HTTP 200, 6445 bytes, article-type='correction'. _refuse_suspect_surface passes; the abstract surface extracts to length 0, corroborating that the deposit carries no abstract. Every text locator below is anchored to THIS artifact, never to the PDF text layer."},
+    {"path": "files/fulltext/PMID38355659_Akkawi2024_correction.pdf",
+     "sha256": "f9d7e60ca670c29aa58e7c017af95d87a94ce12b001552d6db6b734900ccd611",
+     "kind": "article_binary",
+     "note": "Publisher PDF, one page, via framework/scripts/pmc_pow_fetch.py past the PMC proof-of-work interstitial. Held as the rendered reference surface. ITS TEXT LAYER IS DELIBERATELY NOT A LOCATOR ARTIFACT: the notice is two-column and pdftotext -layout interleaves the columns, which is exactly the failure text_surface_intrusion_check.py exists for. The XML carries the same four paragraphs with correct structure."},
+    {"path": "files/figures/PMID38355659/PMID38355659_page1_200dpi.png",
+     "sha256": "aba2b3ac975cf5b4245df675a4c71c445b79fadfa5a71e16eb259e3bb007fc2a",
+     "kind": "figure",
+     "note": "The single page rendered at 200 dpi and INSPECTED AS PIXELS, not read through a text conversion. It is what establishes, visually, that the notice prints the original title unchanged, that its own byline already carries the corrected name, and that the deposit contains no figure, table or reference list. Recipe under page_renders."}
+  ],
+  "page_renders": {
+    "rule": "Rule 5e - the derivation is published, never the derived image. A reader with their own copy of the PDF regenerates identical bytes.",
+    "source_pdf_sha256": "f9d7e60ca670c29aa58e7c017af95d87a94ce12b001552d6db6b734900ccd611",
+    "renders": [
+      {"page": 1, "dpi": 200, "command": "pdftoppm -r 200 -png <source pdf> pg",
+       "image_sha256": "aba2b3ac975cf5b4245df675a4c71c445b79fadfa5a71e16eb259e3bb007fc2a",
+       "note": "The whole article is this one page."}
+    ]
+  },
+  "figure_extractions": {
+    "rule": "ZERO FIGURES PRESENT, ZERO INSPECTED - 0/0, and the denominator was established by reading the rendered page rather than by counting figure citations in the text. Europe PMC hasSuppl=N corroborates the absence of a supplement independently, and the deposit carries no <fig> element. This is `not_present`, which is a fact about the document, and NOT `captions_only`, which would be a fact about the reading. The page image is inspected as pixels all the same, and carries two visual attestations below - a correction notice's figure count being zero does not excuse looking at it."
+  },
+  "verbatim_locators": {
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC REST fullTextXML for PMC10867017 returned the complete structured deposit (HTTP 200, 6445 bytes) on 2026-09-09; Europe PMC resultType=core reports inEPMC=Y, inPMC=Y, isOpenAccess=Y, hasSuppl=N.",
+    "entries": [
+      {
+        "proposition": "The notice declares which article it corrects, by DOI and publication date: PMID 38182577, Cell Death and Disease, published online 05 January 2024. The correction's target is that article and no other.",
+        "snippet": "Correction to: Cell Death and Disease 10.1038/s41419-023-06378-8, published online 05 January 2024",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38355659_Akkawi2024_correction_PMC.xml",
+        "anchor": "Body, paragraph Par1 - the whole of the notice's opening statement",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE ENTIRE CORRECTED SCOPE, first half: the item corrected is the third author's name, given erroneously in the original article. No datum, figure, panel, table, statistic or conclusion is named anywhere in the notice.",
+        "snippet": "In this article the third author name has been given erroneously as Ameen Haji Yehya.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38355659_Akkawi2024_correction_PMC.xml",
+        "anchor": "Body, paragraph Par2",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "THE ENTIRE CORRECTED SCOPE, second half: the corrected form of that name. Taken with Par2 this is the complete substantive content of the correction.",
+        "snippet": "It should be read: Ameen Haj-Yahia.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38355659_Akkawi2024_correction_PMC.xml",
+        "anchor": "Body, paragraph Par3",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The original article was amended IN PLACE rather than merely annotated. This is what makes the currently served PMC10770339 deposit a post-correction surface, and it is the sentence that had to be verified against the corrected deposit rather than assumed.",
+        "snippet": "The original article has been corrected.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38355659_Akkawi2024_correction_PMC.xml",
+        "anchor": "Body, paragraph Par4 - the last sentence of the notice",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The notice's own title REPRODUCES the original article's title unchanged, prefixed only by the word 'Correction:'. The title is therefore not among the corrected items - which is the fact DL-METH-079 depends on, since that entry's finding is that the published title asserts the opposite of its own paper and was never fixed.",
+        "snippet": "Correction: WWOX promotes osteosarcoma development via upregulation of Myc",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38355659_Akkawi2024_correction_PMC.xml",
+        "anchor": "FRONT MATTER - <article-title> of the correction notice. DECLARED EXPLICITLY AS FRONT MATTER because the proposition is ABOUT the title string itself: the title is the object of the claim, not a sentence of authors' prose smuggled in as body. This is the same shape as the two deliberate bibliographic locators the receipt protocol's open schema item 3 records on PMID 30370248, and it is named here rather than left to look like ordinary body text, because `_xml_surfaces` folds front matter into the body surface and a reviewer must be able to see which it is. The same proposition is independently attested from pixels in the entry below.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The deposit's own structured pointer to the corrected article carries the original title verbatim and unprefixed, corroborating from a second element of the same deposit that the title was not changed.",
+        "snippet": "This corrects the article \"WWOX promotes osteosarcoma development via upregulation of Myc\"",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID38355659_Akkawi2024_correction_PMC.xml",
+        "anchor": "FRONT MATTER - <related-article related-article-type=\"corrected-article\"> naming PMC10770339. Declared as front matter for the same reason as the entry above.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION, and the one that does not depend on how Europe PMC serialises anything: the rendered page prints the title as 'Correction: WWOX promotes osteosarcoma development via upregulation of Myc' and prints NO corrected title anywhere. The page carries no figure, no table, no abstract and no reference list - the whole article is a header, a four-sentence left column and the CC-BY licence block in the right column.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Page 1 of the correction notice rendered at 200 dpi from the fingerprinted publisher PDF and inspected as pixels. Read from the image: the CDDpress masthead; the label CORRECTION and the OPEN badge; the two-line title printed exactly as the original article's title with the single prefix 'Correction:'; the byline; the citation line 'Cell Death and Disease (2024)15:141'; a left column of exactly four short paragraphs; a right column containing only the Creative Commons Attribution 4.0 licence text; the footer 'Published online: 14 February 2024' and 'Official journal of CDDpress'. No figure, no panel, no table, no abstract heading and no reference list appears on the page.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID38355659/PMID38355659_page1_200dpi.png",
+        "anchor": "Rendered page 1, whole page at 200 dpi; title block read in the upper third, body columns in the middle third",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION: the correction notice's OWN byline already prints the corrected name 'Ameen Haj-Yahia' in third position, with an ORCID marker. The notice thus demonstrates the corrected form on its own surface as well as prescribing it in its body - a detail the XML author list carries structurally but which only the page shows as published.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Byline as printed on the rendered page, read left to right: 'Rania Akkawi, Osama Hidmi, Ameen Haj-Yahia [ORCID], Jonathon Monin, Judith Diment, Yotam Drier [ORCID], Gary S. Stein and Rami I. Aqeilan [ORCID]'. The third position reads Haj-Yahia, the corrected form, not the erroneous 'Haji Yehya' that the body of this same notice quotes as the error.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID38355659/PMID38355659_page1_200dpi.png",
+        "anchor": "Rendered page 1, byline immediately below the title block",
+        "panel_text_relation": "text_only"
+      }
+    ]
+  }
+}

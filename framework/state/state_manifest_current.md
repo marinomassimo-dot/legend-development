@@ -216,8 +216,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 135
-fulltext_ledger_head: 2ccc9bcb44581388aa2cec0d83bf1602aeea3e82d5181fa1cbd8cdd4e7f7d5f0
+fulltext_ledger_events: 137
+fulltext_ledger_head: 153a60ad0c4f95ae8c0ab51f05ba9da54051fa1edafcf8c2a2bcd4be21b0c932
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -293,8 +293,8 @@ must be backed by a persisted `complete_fulltext_read` receipt, or `LINT_AUTOMAT
 `BLOCK_BATCH_COMMIT`.
 
 ```yaml
-registry_only_fulltext_declarations_baseline: 15
-registry_only_fulltext_declaration_ids: ["PAPER 010", "PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 032", "PAPER 040", "PAPER 042", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050", "PAPER 053"]
+registry_only_fulltext_declarations_baseline: 14
+registry_only_fulltext_declaration_ids: ["PAPER 010", "PAPER 012", "PAPER 014", "PAPER 016", "PAPER 028", "PAPER 032", "PAPER 042", "PAPER 043", "PAPER 044", "PAPER 045", "PAPER 046", "PAPER 049", "PAPER 050", "PAPER 053"]
 ```
 
 Lowering the baseline is the intended direction of travel: back-fill a record with real
