@@ -4075,3 +4075,46 @@ nessun blot WWOX, nessun trascritto, nessun copy number di FRA16D nel materiale 
 della premessa si stabilisce solo qui. Sono studi di carcinoma mammario: contesto oncologico, cioè
 esattamente il caso per cui esiste la regola 3 di [[gold_is_in_the_details]]. **Priorità:** media.
 **Current status:** ⬜ aperto.
+
+---
+
+## FT-087 — `PMID 12704432` (Yendamuri 2003) · ogni cifra di prevalenza dell'introduzione di `16223882`
+
+**Paper:** PMID 12704432 — Yendamuri S, Kuroki T, Trapasso F, *et al.*, *WWOX gene expression in
+lung cancer*, *Cancer Res* 2003;63:878–881. Risolto da **rif. 10** di `PMID 16223882`. **Assente dal
+ledger.**
+
+**Perché.** È l'unica fonte di **tutte** le prevalenze che l'introduzione di `16223882` cita —
+trascritti privi di esoni WWOX nel 26% dei tumori e in cinque linee su otto, perdita allelica nel
+37%, promotore ipermetilato nel 62,5% dei carcinomi squamosi. `16223882` è ora letto per intero e
+quelle cifre restano premesse non verificate: sono la ragione per cui il polmone è stato scelto come
+sistema, e nessuna di esse è stata controllata alla fonte. **Priorità:** media.
+**Current status:** ⬜ aperto.
+
+---
+
+## FT-088 — 🔴 `PMID 16223882` porta una EXPRESSION OF CONCERN permanente · voce di stato, non debito di lettura
+
+**Paper:** PMID 16223882 (Fabbri 2005, *PNAS*) — **letto integralmente il 2026-09-09**, receipt
+`FTR-20260909-16223882-01`, `complete_fulltext_read`. Questa voce **non è un debito di lettura**:
+è la registrazione durevole di uno **stato editoriale** che sopravvive alla lettura e che qualunque
+citazione futura deve portare con sé.
+
+**Il fatto.** *Editorial Expression of Concern*, **PMID 28373548**, *PNAS* 2017;114(16):E3365,
+DOI `10.1073/pnas.1704296114`, firmata da Inder M. Verma. **Standing al 2026-09-09; non è una
+retraction.** Letta come fonte a sé, prima dell'articolo, fingerprint `28069dd2cf98d2eb…`.
+
+**Ambito, che è stretto:** un solo pannello — *«Fig. 1B, β-actin panel, appears to have duplicated
+bands»*. I dati originali non esistono più (*«more than 7 years after publication»*). Il rimedio
+pubblicato non è il dato originale ma un **replicato del 2014**, e gli editori lo pubblicano
+**senza dichiarare di averlo verificato**: ogni frase confermativa è citata dagli autori.
+
+**Che cosa cambia, operativamente.** Fig. 1B *è* il pannello che dimostra che il costrutto Ad-WWOX
+esprime Wwox a carico controllato — cioè la validazione del reagente che `FT-076` inseguiva. La
+riga WWOX non è contestata e il replicato 2014 ne riproduce il pattern di corsie, quindi *che Wwox
+compaia dopo infezione* regge; **non regge senza qualificazione la lettura quantitativa fra corsie**.
+Chi cita la comparabilità di carico deve citare il rimpiazzo 2017, non il pannello 2005.
+
+**Perché sta in coda e non solo nel dossier:** perché la coda è ciò che un lettore futuro
+interroga prima di citare, e uno stato editoriale che vive solo dentro un dossier è uno stato che
+qualcuno citerà senza vedere. **Priorità:** ALTA come voce di stato. **Current status:** ⬜ permanente.

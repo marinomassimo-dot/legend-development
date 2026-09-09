@@ -1,0 +1,711 @@
+{
+  "schema_version": 2,
+  "pmid": "16223882",
+  "doi": "10.1073/pnas.0505485102",
+  "pmcid": "PMC1266103",
+  "receipt": "FTR-20260909-16223882-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID16223882.md",
+    "disease-models/wwox/research/commit_candidates/CC-20260909-16223882-01.md"
+  ],
+  "expression_of_concern": {
+    "status": "STANDING, NOT RETRACTED",
+    "pmid": "28373548",
+    "doi": "10.1073/pnas.1704296114",
+    "citation": "Editorial Expression of Concern: WWOX gene restoration prevents lung cancer growth in vitro and in vivo. Proc Natl Acad Sci USA 2017;114(16):E3365. Inder M. Verma, Editor-in-Chief.",
+    "artifact": "files/fulltext/PMID28373548_EoC_PNAS2017.pdf",
+    "sha256": "28069dd2cf98d2eba98b2a7978d265e78e59487dca7f645b587444e2d4014f44",
+    "read_as_a_source_in_its_own_right": true,
+    "acquired": "PMC5402418 PDF via framework/scripts/pmc_pow_fetch.py (Europe PMC fullTextXML 404; efetch db=pmc returns front matter only with the publisher's no-XML notice). 1 page, 1728 characters of text plus one embedded replacement figure stream, all four read.",
+    "what_it_says": "Four things, and they are narrow. (1) The concern is confined to ONE panel of ONE figure: 'the editors wish to note that Fig. 1B, beta-actin panel, appears to have duplicated bands'. (2) The original data cannot settle it: the authors state that 'because this issue was first raised more than 7 years after publication, the original data are not available to confirm whether an error was made in the figure construction'. (3) The authors' position is that 'any error in figure construction does not affect their scientific conclusions'. (4) The remedy offered is a REPLICATE, not the original: an image from an experiment 'completed in 2014', republished inside the notice as the new Fig. 1B with its legend.",
+    "what_it_does_NOT_say": "It is not a retraction and does not withdraw the paper. It does not find misconduct, and does not say the duplication was intentional. It does not say the conclusions are wrong - it records the authors' assertion that they are not. It does not extend to any other figure, to Table 1, to the in vivo experiments or to the Ad-WWOX construct itself. It does not state that the editors verified the 2014 replicate: every confirmatory sentence about that image is quoted from the authors ('the authors state'). It does not say who raised the issue.",
+    "editorial_status_note": "PubMed types it ExpressionOfConcernIn and Europe PMC types it expression-of-concern, while the PNAS page footer prints the running head 'CORRECTION'. Recorded because the two labels carry different weight and the deposit carries both."
+  },
+  "verbatim_locators": {
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC resultType=core for PMID 16223882 returns pmcid PMC1266103, inEPMC Y, hasPDF Y, hasSuppl N, isOpenAccess N, licence null, and free full-text URLs at Europe PMC in html and pdf. The PDF was obtained from the PMC deposit through the proof-of-work route and is fingerprinted below; no structured surface exists (see the adjudication record).",
+    "entries": [
+      {
+        "proposition": "Figure 1B is the REAGENT-VALIDATION panel of this paper: the immunoblot that establishes the Ad-WWOX construct actually expresses Wwox protein in the three Wwox-negative lung cancer lines. It is the panel the 2017 Editorial Expression of Concern is about.",
+        "snippet": "Expression of Wwox after infection with Ad-WWOX",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16223882/p01_fig1b_caption_adwwox.png",
+        "anchor": "Page 2 rendered at 400 dpi. THE TEXT LAYER OF THIS PDF IS SUSPECT AND REFUSED, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in page_adjudications/PMID16223882/adjudications.json.",
+        "page_anchor": {
+          "page": 2,
+          "crop_pdf_points": [
+            92.56,
+            175.85,
+            275.89,
+            192.85
+          ],
+          "dpi": 400,
+          "needle": "Expression of Wwox after infection with Ad-WWOX",
+          "image_sha256": "a365fcaf87d4b541fc9942d6cab773d9ce9aff982d9634fb29dedbd43c4b14d7",
+          "source_pdf_sha256": "9c017ff1eb0384026b85ce940c37f8d14d3eb298e5850fd32278331e607ced94"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right: the crop is a rendering of the running text, not a panel, and the clause 'the text carries no equivalent' is false here. There is no admitted value for `a text quote whose evidentiary surface is the rendered page`, which is the same shape of defect the module's own comment records as 'when no admitted value is true, the defect is the enum'. Reported, not silently absorbed."
+      },
+      {
+        "proposition": "The Results assert that tumour growth was COMPLETELY suppressed in the Ad-WWOX H460 arm - a categorical claim that neither Figure 5A nor Table 1 supports.",
+        "snippet": "tumor growth was completely suppressed in mice inoculated with Ad-WWOX-infected H460 cells",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16223882/p04_h460_completely_suppressed.png",
+        "anchor": "Page 5 rendered at 400 dpi. THE TEXT LAYER OF THIS PDF IS SUSPECT AND REFUSED, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in page_adjudications/PMID16223882/adjudications.json.",
+        "page_anchor": {
+          "page": 5,
+          "crop_pdf_points": [
+            34.68,
+            613.05,
+            298.22,
+            652.51
+          ],
+          "dpi": 400,
+          "needle": "suppressed in mice inoculated with Ad-WWOX-infected H460",
+          "image_sha256": "3551246009278662501b9c9f8d644c1b063cf1ceddfaf97935c67e2c7b306f18",
+          "source_pdf_sha256": "9c017ff1eb0384026b85ce940c37f8d14d3eb298e5850fd32278331e607ced94"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right: the crop is a rendering of the running text, not a panel, and the clause 'the text carries no equivalent' is false here. There is no admitted value for `a text quote whose evidentiary surface is the rendered page`, which is the same shape of defect the module's own comment records as 'when no admitted value is true, the defect is the enum'. Reported, not silently absorbed."
+      },
+      {
+        "proposition": "The ex vivo immunoblot found NO Wwox protein in any tumour that formed, including tumours from the induced arm: the in vivo experiment therefore never demonstrates sustained Wwox expression inside a growing tumour.",
+        "snippet": "Wwox expression was not found in any of the tumors",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16223882/p04_exvivo_no_wwox_in_tumors.png",
+        "anchor": "Page 5 rendered at 400 dpi. THE TEXT LAYER OF THIS PDF IS SUSPECT AND REFUSED, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in page_adjudications/PMID16223882/adjudications.json.",
+        "page_anchor": {
+          "page": 5,
+          "crop_pdf_points": [
+            297.18,
+            462.85,
+            560.71,
+            491.97
+          ],
+          "dpi": 400,
+          "needle": "Wwox expression was not",
+          "image_sha256": "140b01a18dfce18ac53ca00477323133aa54862b162aa2513069eadabcd52092",
+          "source_pdf_sha256": "9c017ff1eb0384026b85ce940c37f8d14d3eb298e5850fd32278331e607ced94"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right: the crop is a rendering of the running text, not a panel, and the clause 'the text carries no equivalent' is false here. There is no admitted value for `a text quote whose evidentiary surface is the rendered page`, which is the same shape of defect the module's own comment records as 'when no admitted value is true, the defect is the enum'. Reported, not silently absorbed."
+      },
+      {
+        "proposition": "The authors' own account of the ex vivo null is selection: the tumours that grew are those whose cells stopped expressing Wwox. That is an interpretation of an absence, and it is the load-bearing premise of the in vivo arm.",
+        "snippet": "the small tumors were derived from inoculated cells that had lost expression of Wwox due to absence of inducer in vivo",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16223882/p04_small_tumors_lost_expression.png",
+        "anchor": "Page 5 rendered at 400 dpi. THE TEXT LAYER OF THIS PDF IS SUSPECT AND REFUSED, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in page_adjudications/PMID16223882/adjudications.json.",
+        "page_anchor": {
+          "page": 5,
+          "crop_pdf_points": [
+            297.18,
+            523.48,
+            560.72,
+            562.68
+          ],
+          "dpi": 400,
+          "needle": "small tumors were derived from inoculated cells that had lost",
+          "image_sha256": "55225ff97f474245dd4ba1efb1e739f191e43409f0f6ce416c970cf9fdc5cd72",
+          "source_pdf_sha256": "9c017ff1eb0384026b85ce940c37f8d14d3eb298e5850fd32278331e607ced94"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right: the crop is a rendering of the running text, not a panel, and the clause 'the text carries no equivalent' is false here. There is no admitted value for `a text quote whose evidentiary surface is the rendered page`, which is the same shape of defect the module's own comment records as 'when no admitted value is true, the defect is the enum'. Reported, not silently absorbed."
+      },
+      {
+        "proposition": "The Discussion reports caspase 9 and caspase 8 results for H1299 that appear in NO figure of this paper. Figure 3B carries PARP and caspase 3 rows only.",
+        "snippet": "cleavage of full-length PARP-1, but procaspase 3, 9, and 8 were not cleaved",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16223882/p05_caspases_9_and_8_not_cleaved.png",
+        "anchor": "Page 6 rendered at 400 dpi. THE TEXT LAYER OF THIS PDF IS SUSPECT AND REFUSED, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in page_adjudications/PMID16223882/adjudications.json.",
+        "page_anchor": {
+          "page": 6,
+          "crop_pdf_points": [
+            297.18,
+            124.8,
+            560.7,
+            153.74
+          ],
+          "dpi": 400,
+          "needle": "but procaspase 3, 9, and 8 were",
+          "image_sha256": "9094db9c22a49709911eaf7f2b562ddb51c56fbe9e252cb436ee521d65dfa8e0",
+          "source_pdf_sha256": "9c017ff1eb0384026b85ce940c37f8d14d3eb298e5850fd32278331e607ced94"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right: the crop is a rendering of the running text, not a panel, and the clause 'the text carries no equivalent' is false here. There is no admitted value for `a text quote whose evidentiary surface is the rendered page`, which is the same shape of defect the module's own comment records as 'when no admitted value is true, the defect is the enum'. Reported, not silently absorbed."
+      },
+      {
+        "proposition": "The INTRINSIC pathway attribution - the mechanism named in the abstract - is asserted in the Discussion. The intrinsic pathway is defined by caspase 9, and no caspase 9 blot is shown anywhere in the paper.",
+        "snippet": "we observed caspase-dependent induction of apoptosis through the intrinsic pathway",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16223882/p05_intrinsic_pathway.png",
+        "anchor": "Page 6 rendered at 400 dpi. THE TEXT LAYER OF THIS PDF IS SUSPECT AND REFUSED, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in page_adjudications/PMID16223882/adjudications.json.",
+        "page_anchor": {
+          "page": 6,
+          "crop_pdf_points": [
+            297.18,
+            104.91,
+            560.73,
+            133.86
+          ],
+          "dpi": 400,
+          "needle": "we observed caspase-dependent induction of apoptosis",
+          "image_sha256": "acc4152ef631404df274833d3d423cd4d31376f044f4664f69f714a94d0230ca",
+          "source_pdf_sha256": "9c017ff1eb0384026b85ce940c37f8d14d3eb298e5850fd32278331e607ced94"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right: the crop is a rendering of the running text, not a panel, and the clause 'the text carries no equivalent' is false here. There is no admitted value for `a text quote whose evidentiary surface is the rendered page`, which is the same shape of defect the module's own comment records as 'when no admitted value is true, the defect is the enum'. Reported, not silently absorbed."
+      },
+      {
+        "proposition": "The Results date the flow-cytometry sub-G1 measurement to 96 hr after infection.",
+        "snippet": "At 96 hr after Ad-WWOX infection",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16223882/p03_results_96hr.png",
+        "anchor": "Page 5 rendered at 400 dpi. THE TEXT LAYER OF THIS PDF IS SUSPECT AND REFUSED, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in page_adjudications/PMID16223882/adjudications.json.",
+        "page_anchor": {
+          "page": 5,
+          "crop_pdf_points": [
+            140.12,
+            214.76,
+            298.24,
+            233.76
+          ],
+          "dpi": 400,
+          "needle": "At 96 hr after Ad-WWOX infection",
+          "image_sha256": "299a38fbd261f63b3a3b433cd348476fc9770d085588f3d9ce1b6e1256ce2067",
+          "source_pdf_sha256": "9c017ff1eb0384026b85ce940c37f8d14d3eb298e5850fd32278331e607ced94"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right: the crop is a rendering of the running text, not a panel, and the clause 'the text carries no equivalent' is false here. There is no admitted value for `a text quote whose evidentiary surface is the rendered page`, which is the same shape of defect the module's own comment records as 'when no admitted value is true, the defect is the enum'. Reported, not silently absorbed."
+      },
+      {
+        "proposition": "The Methods date the SAME flow-cytometry harvest to 5 days after infection.",
+        "snippet": "harvested 5 days after infection, fixed in cold methanol",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16223882/p02_methods_5days.png",
+        "anchor": "Page 3 rendered at 400 dpi. THE TEXT LAYER OF THIS PDF IS SUSPECT AND REFUSED, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in page_adjudications/PMID16223882/adjudications.json.",
+        "page_anchor": {
+          "page": 3,
+          "crop_pdf_points": [
+            34.68,
+            604.87,
+            172.52,
+            623.87
+          ],
+          "dpi": 400,
+          "needle": "harvested 5 days after infection",
+          "image_sha256": "5800a7a3b2bf5f892bd6ae1f02be4f8d0854addd28ac6a6b46033a0866c3338a",
+          "source_pdf_sha256": "9c017ff1eb0384026b85ce940c37f8d14d3eb298e5850fd32278331e607ced94"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right: the crop is a rendering of the running text, not a panel, and the clause 'the text carries no equivalent' is false here. There is no admitted value for `a text quote whose evidentiary surface is the rendered page`, which is the same shape of defect the module's own comment records as 'when no admitted value is true, the defect is the enum'. Reported, not silently absorbed."
+      },
+      {
+        "proposition": "The Figure 2 caption dates the same measurement to 5 days. Three statements of one timepoint, and 96 hr is not 5 days.",
+        "snippet": "undergo apoptosis 5 days after restoration of Wwox expression by Ad-WWOX infection",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16223882/p02_fig2_caption_5days.png",
+        "anchor": "Page 2 rendered at 400 dpi. THE TEXT LAYER OF THIS PDF IS SUSPECT AND REFUSED, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in page_adjudications/PMID16223882/adjudications.json.",
+        "page_anchor": {
+          "page": 2,
+          "crop_pdf_points": [
+            34.68,
+            707.65,
+            560.86,
+            733.65
+          ],
+          "dpi": 400,
+          "needle": "undergo apoptosis 5 days",
+          "image_sha256": "fe97de08245208809ab6fcc711e72ea9693797b9e5ba67d60e1cf75fc9b591d3",
+          "source_pdf_sha256": "9c017ff1eb0384026b85ce940c37f8d14d3eb298e5850fd32278331e607ced94"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right: the crop is a rendering of the running text, not a panel, and the clause 'the text carries no equivalent' is false here. There is no admitted value for `a text quote whose evidentiary surface is the rendered page`, which is the same shape of defect the module's own comment records as 'when no admitted value is true, the defect is the enum'. Reported, not silently absorbed."
+      },
+      {
+        "proposition": "The specificity claim that carries the entire therapeutic argument - that normal Wwox-expressing cells would be unaffected by WWOX gene therapy - rests on a single Wwox-positive line, U2020.",
+        "snippet": "suggesting that normal Wwox-expressing lung cells would be unaffected by Wwox overexpression after WWOX gene therapy",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16223882/p05_u2020_specificity_gene_therapy.png",
+        "anchor": "Page 6 rendered at 400 dpi. THE TEXT LAYER OF THIS PDF IS SUSPECT AND REFUSED, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in page_adjudications/PMID16223882/adjudications.json.",
+        "page_anchor": {
+          "page": 6,
+          "crop_pdf_points": [
+            34.68,
+            196.52,
+            298.23,
+            235.66
+          ],
+          "dpi": 400,
+          "needle": "suggesting that normal Wwox-expressing lung",
+          "image_sha256": "0bffb581b8f9c1bbb14bd111aab33eb0b9f49f9fb91bae5fe54171d3c12a0ed7",
+          "source_pdf_sha256": "9c017ff1eb0384026b85ce940c37f8d14d3eb298e5850fd32278331e607ced94"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right: the crop is a rendering of the running text, not a panel, and the clause 'the text carries no equivalent' is false here. There is no admitted value for `a text quote whose evidentiary surface is the rendered page`, which is the same shape of defect the module's own comment records as 'when no admitted value is true, the defect is the enum'. Reported, not silently absorbed."
+      },
+      {
+        "proposition": "The A549 in vivo arm is a partial, not a complete, suppression: two of five mice were tumour-free and the remaining three grew tumours averaging 0.08 g. This is the sentence Table 1's numbers correspond to, and it is stated at the right strength - unlike the H460 sentence four lines earlier.",
+        "snippet": "two of five mice inoculated with Ad-WWOX-infected A549 cells showed no tumors",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16223882/p05_a549_two_of_five_no_tumors.png",
+        "anchor": "Page 5 rendered at 400 dpi. THE TEXT LAYER OF THIS PDF IS SUSPECT AND REFUSED, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in page_adjudications/PMID16223882/adjudications.json.",
+        "page_anchor": {
+          "page": 5,
+          "crop_pdf_points": [
+            34.68,
+            653.97,
+            298.21,
+            683.19
+          ],
+          "dpi": 400,
+          "needle": "Ad-WWOX-infected A549 cells showed no tumors",
+          "image_sha256": "78f357fd93d0b5ebba800e427c11a475542591a92469dd8460f2338a36187c17",
+          "source_pdf_sha256": "9c017ff1eb0384026b85ce940c37f8d14d3eb298e5850fd32278331e607ced94"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right: the crop is a rendering of the running text, not a panel, and the clause 'the text carries no equivalent' is false here. There is no admitted value for `a text quote whose evidentiary surface is the rendered page`, which is the same shape of defect the module's own comment records as 'when no admitted value is true, the defect is the enum'. Reported, not silently absorbed."
+      },
+      {
+        "proposition": "The paper's closing therapeutic claim, and the sentence a citing paper is most likely to carry forward.",
+        "snippet": "reactivation of the Wwox signal pathway is a potential target for lung cancer prevention and therapy",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID16223882/p06_therapy_conclusion.png",
+        "anchor": "Page 6 rendered at 400 dpi. THE TEXT LAYER OF THIS PDF IS SUSPECT AND REFUSED, so the DRAWN GLYPH adjudicates (rules 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by the recipe in page_adjudications/PMID16223882/adjudications.json.",
+        "page_anchor": {
+          "page": 6,
+          "crop_pdf_points": [
+            435.3,
+            313.72,
+            560.72,
+            332.72
+          ],
+          "dpi": 400,
+          "needle": "is a potential target for lung",
+          "image_sha256": "71196e3651983d6a51d25178c62b646dc6bf675acaad5509f94fe3e237f72015",
+          "source_pdf_sha256": "9c017ff1eb0384026b85ce940c37f8d14d3eb298e5850fd32278331e607ced94"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right: the crop is a rendering of the running text, not a panel, and the clause 'the text carries no equivalent' is false here. There is no admitted value for `a text quote whose evidentiary surface is the rendered page`, which is the same shape of defect the module's own comment records as 'when no admitted value is true, the defect is the enum'. Reported, not silently absorbed."
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figure 1 supports the reagent as described. In panel A endogenous Wwox is detected only in lanes 4 (U2020) and 5 (MCF-7) and is absent from lanes 1-3 (H1299, H460, A549); in panel B Wwox appears only in lanes 1, 4 and 7, the three Ad-WWOX-infected lanes, and is absent from every Ad-GFP and every uninfected lane.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 1 read as pixels at 5x from the 421x196 embedded stream. Panel A: WWOX row blank at lanes 1-3, band at lanes 4 and 5; beta-actin present in all 5 lanes. Panel B: WWOX row bands at lanes 1, 4, 7 only; beta-actin row present across all 9 lanes.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/FIG1_AB_p2_x3_421x196.jpeg",
+        "anchor": "Figure 1, panels A and B, whole figure",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION, MEASURED - the beta-actin loading row of Figure 1B, the row the 2017 Editorial Expression of Concern says 'appears to have duplicated bands', is unusually uniform: integrated density across the nine lanes spans only 174,576 to 184,780, a ratio of 1.06. The strongest pairwise normalised cross-correlation between lane crops is 0.930 (lanes 8-9). 🔴 THIS NEITHER CONFIRMS NOR REFUTES THE EDITORS' FINDING and is not offered as doing so: at 421x196 with JPEG compression the instrument cannot resolve band-level identity, and the measurement is recorded for what it is - a uniformity statistic with its limits stated.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 1B beta-actin strip, y 162-196 of the 421x196 stream, blot extent x 17-346 segmented into 9 equal lanes of 36.7 px. Integrated density per lane: 174702, 174576, 182790, 177212, 174964, 184780, 175543, 177214, 176539. Peak darkness 15-21 of 255. Max pairwise NCC 0.930 (lanes 8-9), median 0.272.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/FIG1_AB_p2_x3_421x196.jpeg",
+        "anchor": "Figure 1, panel B, beta-actin row, colour-segmented per lane",
+        "panel_text_relation": "panel_only",
+        "note": "The comparison against the 2017 replacement panel is in the dossier. Stated here only as a measurement, because a duplication verdict at this resolution would be exactly the kind of unearned assurance this reading is supposed to avoid."
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - the replacement Figure 1B published INSIDE the 2017 Editorial Expression of Concern, from a replicate experiment the authors say was completed in 2014, reproduces the original result: Wwox appears only in lanes 1, 4 and 7, the three Ad-WWOX-infected lanes. Its beta-actin row spans nine lanes with integrated density from 244,429 to 284,468, a ratio of 1.16 - a WIDER spread than the original panel it replaces - and no lane pair reaches identity (max NCC 0.992).",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Replacement Fig. 1B extracted from the Editorial Expression of Concern PDF (xref 6, 461x139). Top row: three bands at x 10-50, 157-200, 312-352, i.e. lanes 1, 4, 7. Bottom row: nine bands, integrated density 252740, 262964, 258643, 266271, 273814, 280054, 244429, 279633, 284468.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/EoC2017_Fig1B_replacement_x6_461x139.jpeg",
+        "anchor": "Editorial Expression of Concern (PMID 28373548, PNAS 2017;114:E3365), replacement Fig. 1B, read as pixels at 6x",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figure 5A does NOT show complete suppression in the Ad-WWOX H460 arm. The H460/Wwox box sits visibly above the axis, and Table 1 gives the same arm as 0.03 +/- 0.04 g rather than zero. The significance brackets in panel A are drawn over A549 and H460 only; the U2020 group carries none.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 5A, box-and-whisker, y axis 'Tumor volume (mm3)' 0-500. A549: Untreated ~435, GFP ~380, Wwox ~35. H460: Untreated ~270, GFP ~305, Wwox ~13 with a whisker reaching ~25 - a non-zero box. U2020: Untreated ~250, GFP ~248, Wwox ~250. Asterisk brackets over A549 GFP-vs-Wwox and H460 GFP-vs-Wwox only; '*p<0.001' printed top right.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/FIG5_p4_x17_800x428.jpeg",
+        "anchor": "Figure 5, panel A, read as pixels at 2x from the 800x428 embedded stream",
+        "panel_text_relation": "panel_only",
+        "note": "This is the panel that bears on entries[1]. The coupled relation text_contradicted_by_panel cannot be declared, because entries[1] is an ADJUDICATED text locator and therefore carries surface 'figure', which the validator refuses as a coupling target. The relation is stated here and argued in the dossier instead. That unavailability is itself reported as a contract finding."
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - in Figure 5B the UNINDUCED transfectant control (- Pon A, H1299/I-) produces the LARGEST tumours in the panel, above both parental H1299 and the Ad-GFP control. The paper does not comment on this.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 5B, y axis 'Tumor volume (mm3)' 0-1500. Untreated ~1075, GFP ~1000, Wwox ~60, '- Pon A' ~1275 (the tallest box in the panel), '+ Pon A' ~55 with a whisker to ~250. Asterisk brackets over GFP-vs-Wwox and -PonA-vs-+PonA.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/FIG5_p4_x17_800x428.jpeg",
+        "anchor": "Figure 5, panel B, read as pixels at 2x",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figure 5C is qualitative and carries no measurement: one example animal per condition, no scale bar, no ruler, no tumour outline and no per-animal identifier. It illustrates; it does not quantify.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 5C, six colour photographs of nude mice in two rows, labelled 'H460 Untreated / Ad-GFP / Ad-WWOX' and 'H1299 Control / - Pon A / + Pon A'. No scale bar, no annotation, no arrows anywhere in the image field.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/FIG5_p4_x17_800x428.jpeg",
+        "anchor": "Figure 5, panel C, whole image",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION, MEASURED - Figure 3B shows a GRADATION where the caption and the Discussion assert an absence. In the cleaved-caspase-3 row, lane 9 (H1299 + Ad-WWOX) reaches a peak darkness of 55/255: clearly weaker than the two positive lanes 3 and 6 (both 27) but distinctly darker than every other negative lane (71-92) and than the U2020 lanes (109-113). The caption says caspase 3 is cleaved in lanes 3 and 6 'but not in H1299 cells'.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 3B cleaved-caspase-3 strip, y 559-582 of the 806x619 stream. Peak darkness per lane, 0=black 255=white: L1 81, L2 71, L3 27, L4 77, L5 80, L6 27, L7 92, L8 90, L9 55, L10 109, L11 113, L12 113. Cleaved-PARP strip for comparison: L3 16, L6 23, L9 17, all other lanes 82-103 except L8 at 30.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/FIG3_AB_p3_x10_806x619.jpeg",
+        "anchor": "Figure 3, panel B, cleaved caspase 3 and cleaved PARP rows, densitometry per lane",
+        "panel_text_relation": "panel_only",
+        "note": "Bears on entries[4] and on the Figure 3B caption. Stated as a gradation, not as a refutation: a faint band at this resolution may be spillover, and what is defensible is the ordering, not a call that caspase 3 IS cleaved in H1299."
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - the U2020 lanes of Figure 3B (lanes 10-12), which carry the paper's entire specificity claim, sit on a PHYSICALLY SEPARATE blot segment from lanes 1-9. Nothing in the caption or the running text says the comparison is made across a splice.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 3B. Segmenting the beta-actin row by non-white columns returns TWO disjoint runs, x 38-463 and x 468-640, separated by a white gap. Lanes 1-9 occupy the first run at ~47 px per lane; lanes 10-12 occupy the second at ~58 px per lane. The differing lane pitch is visible in every one of the four blot rows.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/FIG3_AB_p3_x10_806x619.jpeg",
+        "anchor": "Figure 3, panel B, all rows, blot-segment boundaries",
+        "panel_text_relation": "panel_only",
+        "note": "Bears on entries[9], the U2020 specificity claim. The coupling field is unavailable for the reason recorded on the Figure 5A entry."
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figure 3B contains NO caspase 9 row and NO caspase 8 row. Its four labelled rows are Full length PARP, Cleaved PARP, Pro-Caspase 3, Cleaved Caspase 3, plus beta-Actin. The intrinsic-pathway attribution in the abstract and Discussion is therefore not shown anywhere in this paper, although the Methods list anti-caspase 9 and anti-caspase 8 among the antisera used.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 3B row labels read from the pixels, top to bottom: 'Full length PARP', 'Cleaved PARP', 'Pro-Caspase 3', 'Cleaved Caspase 3', 'beta-Actin'. No other row is present in the panel.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/FIG3_AB_p3_x10_806x619.jpeg",
+        "anchor": "Figure 3, panel B, row labels",
+        "panel_text_relation": "panel_only",
+        "note": "Bears on entries[5] and entries[4]."
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figure 6A has SIX lanes; its caption enumerates five. Wwox is detected in lane 6 alone, and lane 6 is the one lane the caption never assigns. Whether lane 6 is an unlabelled positive control or the induced tumour cannot be settled from the figure, and the difference matters: on the second reading the caption's 'Wwox was not expressed in the H1299/I- or H1299/I+ tumors' would be contradicted by its own panel.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 6A, lane numerals 1 2 3 4 5 6 printed above the blot. Wwox row: blank at lanes 1-5, single strong band at lane 6. Gapdh row: band present in all six lanes. The caption assigns lane 1 = H1299, lanes 2,3,4 = uninduced H1299/I-, lane 5 = induced H1299/I+, and assigns nothing to lane 6.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/FIG6_AB_p5_x27_350x240.jpeg",
+        "anchor": "Figure 6, panel A, read as pixels at 6x from the 350x240 embedded stream",
+        "panel_text_relation": "panel_only",
+        "note": "Bears on entries[2]. Recorded as an unresolved ambiguity in the dossier rather than as a contradiction, because the benign reading (an unlabelled positive control) is fully consistent with the panel."
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figure 6B is a ponA DOSE SERIES labelled 0, 5, 7.5 and 10 microM, with Wwox and Gapdh rows. Its caption describes a single treatment at 10 microM ponA and says nothing about a dose series. The panel carries more structure than the caption reports.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 6B. Header printed above the blot: '0  5  7.5  10' followed by 'Pon A (microM)'. Wwox row: blank at 0, bands at 5, 7.5 and 10. Gapdh row: band at all four concentrations.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/FIG6_AB_p5_x27_350x240.jpeg",
+        "anchor": "Figure 6, panel B, read as pixels at 6x",
+        "panel_text_relation": "panel_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION, MEASURED - Figure 2 prints the IDENTICAL sub-G1 value, 2.33%, for two different samples: A549 CTRL and A549 GFP100. The two histogram panels are NOT duplicated images - pixel cross-correlation between them is 0.114, indistinguishable from the 0.115 measured between two unrelated panels - so what repeats is the printed statistic, not the picture.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 2, twelve DNA-content histograms in a 4x3 grid, printed sub-G1 values: A549 CTRL 2.33%, A549 GFP100 2.33%, A549 WWOX100 57.76%; H460 CTRL 3.83%, GFP100 2.75%, WWOX100 94.3%; H1299 CTRL 1.4%, GFP100 2.0%, WWOX100 17.46%; U2020 CTRL 1.37%, GFP100 5.7%, WWOX100 7.39%. Panel-vs-panel normalised cross-correlation, A549 CTRL against A549 GFP100 = 0.114; reference pair A549 CTRL against H460 CTRL = 0.115.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/FIG2_flow_p2_x4_676x820.jpeg",
+        "anchor": "Figure 2, all twelve panels, printed statistics and pixel comparison",
+        "panel_text_relation": "panel_only",
+        "note": "The four WWOX100 values match the Results text (58%, 94%, 17%, 7%) exactly. The repeated 2.33% is recorded as a measurement; an inference about how it arose is not available from the figure and none is made."
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - the y axis of Figure 4D is printed 'cell number x10^8' against values running to 5000, i.e. 5x10^11 cells for a 9-day culture of a lung cancer line. Either the exponent or the scale is mislabelled. Panel 4D does carry error bars and asterisks at days 5, 7 and 9 with '*p<0.001'.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 4D, title 'Cell growth', y axis label 'cell number x10 8' with ticks 0 to 5000 in steps of 500, x axis 'Days' with ticks 0, 1, 3, 5, 7, 9. Three series: Control, H1299/I-, H1299/I+. Error bars on every point of all three series; asterisks above the H1299/I+ series at days 5, 7 and 9; '*p<0.001' printed at lower right. An arrow labelled 'Pon A' marks day 1.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/FIG4_p4_x16_800x550.jpeg",
+        "anchor": "Figure 4, panel D, axis labels and series",
+        "panel_text_relation": "panel_only",
+        "note": "The implausibility of 5x10^11 cells is an INFERENZA from general culture practice and is tagged as such; what is DATO is the printed label."
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figures 4A-4C support their captions. 4A shows Wwox only in the ponA-plus lanes of clones 7, 10 and 2, with clone 10's minus lane carrying a faint band, which is consistent with the caption's selection of clones 7 and 2 as the ones expressing 'only upon induction'. 4B is a dose series 2.5/5/7.5/10/0 microM with the zero control placed LAST, and 4C a time course at 24/48/72/144 hr; the Results describe the time course as running 'from 24 to 72 hr' and do not mention the 144 hr point the panel shows.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 4A: header 'Clones' over '7 10 2', row of '- +' pairs, 'Pon A (10 microM)'; Wwox band in each '+' lane, faint band in the '10 -' lane; Gapdh in all six. 4B: header '2.5 5 7.5 10 0' with 'Pon A (microM)'; Wwox absent at 0; bar chart beneath, y axis 'Relative gene expression' 0-8, bars ~1, ~5, ~5.9, ~7.3 and none at 0. 4C: header '24 48 72 144 hours'; bar chart y axis 'Relative gene expression' 0-25, bars ~1, ~13, ~22.5, ~22.5.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/FIG4_p4_x16_800x550.jpeg",
+        "anchor": "Figure 4, panels A, B and C, read as pixels at 2x",
+        "panel_text_relation": "panel_only",
+        "note": "Both densitometry charts label their y axis 'Relative gene expression' although they quantify a protein immunoblot normalised to GAPDH protein. Recorded as a labelling inconsistency, not as an error in the measurement."
+      }
+    ]
+  },
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": true,
+      "reason": "The reading route. Section by section, every figure as pixels, and the expression of concern read first as its own source."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Not needed as a skill, though a full cascade was in fact run by hand and is recorded: Europe PMC fullTextXML 404, efetch db=pmc metadata-only with the publisher's no-XML notice, PMC HTML behind reCAPTCHA, Europe PMC HTML JavaScript-rendered, Europe PMC render PDF HTTP 429, and finally the PMC PDF deposit through framework/scripts/pmc_pow_fetch.py, which succeeded at difficulty 4. The same route was run twice, once for the article and once for the expression of concern."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "🔴 R4 THRESHOLD CHECK RUN MECHANICALLY. All 18 consolidated baseline claims enumerated from claim_registry_current.md and their titles read: every one is WWOX-DEE neurobiology, human genotype-phenotype, prenatal cortical development, network physiology, myelin or WW-domain biochemistry. None concerns adenoviral WWOX restoration, lung cancer, apoptosis in tumour lines or xenograft tumorigenicity. The transfer verdict is ESPANSIONE/T3 and no MAJOR bump is proposed, so R4 is NOT triggered. Recorded rather than assumed, and re-run for this paper rather than inherited from the wave's first paper."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": false,
+      "reason": "Declined. The paper's therapeutic content is a 2005 adenoviral restoration in lung cancer lines; it yields no biomarker, no small molecule, no pathway correction and no repurposing candidate transferable to a WWOX-DEE genotype class. Its one durable contribution to this corpus is the reagent identity and the epistemic status of a paper under an expression of concern, and both belong in the dossier."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "No molecule, no dose, no CNS endpoint, no target engagement in a neural system. T3 material cannot mature a therapeutic lever."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No compound is promoted. Ponasterone A is an experimental inducer, not a candidate therapeutic, and nothing in this reading proposes it as one."
+    },
+    {
+      "skill": "legend-proband-priority-matrix",
+      "used": false,
+      "reason": "Single assigned PMID; wave order fixed by the dispatch."
+    },
+    {
+      "skill": "legend-session-self-eval",
+      "used": true,
+      "reason": "Run at the end of the wave, before capability-scout and the closing report."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 408,
+    "publications_on_gene": 32,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "counts_measured_at": "2026-09-09, PubMed ESearch",
+    "weighting": "The Croce/Huebner laboratory at Ohio State, with Aqeilan as a mid-list author early in his career - the counts above are Huebner's (408 publications, 131 with FHIT, 32 with WWOX); Aqeilan RI stands at 137 and 65 today, but in 2005 he was a postdoctoral member of this group, not yet the head of the WWOX-DEE laboratory. This is the group that discovered WWOX and it is unambiguously primary FOR THE GENE. It is not primary for the disease: there is no patient, no germline variant, no neurological phenotype and no WWOX-DEE material anywhere in the study. Consequences applied throughout: first-hand weight to the adenoviral construct, the cell lines and the xenograft system, which are theirs; interpretation weight to every therapeutic sentence, which generalises from four immortalised lung cancer lines to 'WWOX gene therapy'; and a separate, explicit weighting for the fact that one figure of this paper carries a standing editorial expression of concern, which is recorded above and reflected in what the dossier says the paper may be cited for."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX",
+        "count": 707,
+        "source": "PubMed ESearch, 2026-09-09"
+      },
+      {
+        "query": "WWOX AND \"fragile site\"",
+        "count": 123,
+        "source": "PubMed ESearch, 2026-09-09"
+      }
+    ],
+    "note": "Measured today. Density is not the informative axis for this paper: it is a 2005 PNAS paper from the discovering laboratory and its weight in the corpus comes from being the SOURCE of the Ad-WWOX reagent (queue item FT-076) and from being cited as the demonstration that restoring WWOX suppresses tumour growth, not from the size of its field."
+  },
+  "multihop": {
+    "references_enumerated": 26,
+    "gene_direct_refs_in_source": [
+      "12704432",
+      "10786678",
+      "15070730",
+      "15548688",
+      "16061658",
+      "11085536",
+      "12124776"
+    ],
+    "resolved": [
+      {
+        "pmid": "15070730",
+        "why": "ref 12, Aqeilan 2004 PNAS, WWOX-p73 - the interaction this paper cites as the downstream signalling rationale",
+        "status": "assigned to AQEILAN-FT-A-001 (scientist-a); named, NOT opened by this actor"
+      },
+      {
+        "pmid": "16061658",
+        "why": "ref 14, Aqeilan 2005, WWOX/YAP competition for ErbB-4",
+        "status": "already in this corpus with a page-adjudicated reading"
+      }
+    ],
+    "queued": [
+      {
+        "pmid": "12704432",
+        "why": "ref 10, Yendamuri 2003 - the paper that first reported WWOX alteration in non-small-cell lung cancer and supplies every prevalence figure this paper's Introduction quotes (26% of tumours, five of eight cell lines, 37% allele loss, 62.5% promoter hypermethylation)",
+        "status": "queued as FT-087"
+      }
+    ],
+    "note": "26 references enumerated as an integer from the printed reference list. The list is 2005-vintage and mostly oncology methods; seven are gene-direct. Ref 12 (PMID 15070730) belongs to a peer's open contract and was named rather than opened, per the single-owner rule."
+  },
+  "corpus_crossquery": {
+    "query": "Is the Ad-WWOX construct of this paper the reagent any other reading in this corpus depends on, and does anything here bear on a consolidated baseline claim about WWOX restoration or rescue?",
+    "hits": 3,
+    "note": "Three surfaces answered. (1) full_text_queue_current.md FT-076 already records this PMID as the source of the Ad-WWOX construct and as a multi-hop debt from PMID 20530675, this actor's wave-1 paper - so the reading closes a debt this actor itself opened. (2) claim_registry_current.md CLAIM 002 and CLAIM 004 are consolidated baseline claims about WWOX RESTORATION producing rescue - AAV-WWOX in organoids and AAV9-WWOX neuron-targeted in vivo. Both are a different vector, a different tissue, a different disease and a different endpoint, and neither cites this paper; this reading does NOT touch them, and the resemblance is thematic only. Saying so explicitly because 'restoring WWOX rescues' is exactly the sentence that would carry across contexts unexamined. (3) paper_registry_current.md holds no record for PMID 16223882, so a new paper record is proposed rather than an existing one amended."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-09-09",
+    "route": "PubMed efetch db=pubmed for PMID 16223882 (CommentsCorrections), Europe PMC resultType=core for PMID 16223882 and for PMID 28373548, and the full text of the notice itself",
+    "result": "🔴 NOT CLEAN, AND NOT A RETRACTION. PubMed returns exactly one CommentsCorrections element, RefType ExpressionOfConcernIn, pointing at PMID 28373548 (Proc Natl Acad Sci U S A. 2017 Apr 18;114(16):E3365, doi 10.1073/pnas.1704296114). No retraction, no correction and no erratum of any other kind is attached. The expression of concern is STANDING as of 2026-09-09 and has not itself been withdrawn. It was acquired and read in full as a source in its own right; what it says and what it does not say are recorded under expression_of_concern above, and what it changes about permissible citation is stated in the dossier."
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID16223882_Fabbri2005_PMC.pdf",
+      "sha256": "9c017ff1eb0384026b85ce940c37f8d14d3eb298e5850fd32278331e607ced94",
+      "kind": "article_binary",
+      "note": "🔴 THE ONLY SURFACE THAT EXISTS, AND ITS TEXT LAYER IS REFUSED. PMC deposit PMC1266103, 6 pages, obtained through framework/scripts/pmc_pow_fetch.py at proof-of-work difficulty 4. No structured surface exists anywhere the cascade reached - see the adjudication record for the enumerated failures. The extracted text was screened by deepdive_manifest.py's own _refuse_suspect_surface and REFUSED on the C0 check; it is therefore NOT declared as an article_text artifact and NO locator is verified against it. It exists in the scratchpad as a navigation aid only, and every text proposition in this manifest is anchored instead to a 400 dpi page crop."
+    },
+    {
+      "path": "files/fulltext/PMID28373548_EoC_PNAS2017.pdf",
+      "sha256": "28069dd2cf98d2eba98b2a7978d265e78e59487dca7f645b587444e2d4014f44",
+      "kind": "article_binary",
+      "note": "The Editorial Expression of Concern, PMID 28373548, PMC5402418, 1 page, read in full as a source in its own right and BEFORE the article. Its embedded replacement Fig. 1B is extracted and fingerprinted below."
+    },
+    {
+      "path": "files/figures/PMID16223882/FIG1_AB_p2_x3_421x196.jpeg",
+      "sha256": "217a72b50984a3ee6517b1470b6253cee2db9484efa5492052cd0d043e41e07d",
+      "kind": "figure",
+      "note": "Embedded image stream extracted by xref from the fingerprinted PDF, i.e. the deposit's own figure bytes rather than a rasterisation of the page."
+    },
+    {
+      "path": "files/figures/PMID16223882/FIG2_flow_p2_x4_676x820.jpeg",
+      "sha256": "563fc0d81a954eff0437fa34e77c68648ca28011dfc056cc2f2d47a80c8bdb3a",
+      "kind": "figure",
+      "note": "Embedded image stream extracted by xref from the fingerprinted PDF, i.e. the deposit's own figure bytes rather than a rasterisation of the page."
+    },
+    {
+      "path": "files/figures/PMID16223882/FIG3_AB_p3_x10_806x619.jpeg",
+      "sha256": "18905514ec9488ce8eb0e0960e6e61fff4d5977d2a4f8068b0c73c0eb54b4733",
+      "kind": "figure",
+      "note": "Embedded image stream extracted by xref from the fingerprinted PDF, i.e. the deposit's own figure bytes rather than a rasterisation of the page."
+    },
+    {
+      "path": "files/figures/PMID16223882/FIG4_p4_x16_800x550.jpeg",
+      "sha256": "014f7ec2c435dd5993c8341a4519f121051e31ac053cfae1a3b92f6c7c4ef693",
+      "kind": "figure",
+      "note": "Embedded image stream extracted by xref from the fingerprinted PDF, i.e. the deposit's own figure bytes rather than a rasterisation of the page."
+    },
+    {
+      "path": "files/figures/PMID16223882/FIG5_p4_x17_800x428.jpeg",
+      "sha256": "792ff324e76c1a81bf3743b600fa9f99439e1397f0661c2f5fff532a0bf22188",
+      "kind": "figure",
+      "note": "Embedded image stream extracted by xref from the fingerprinted PDF, i.e. the deposit's own figure bytes rather than a rasterisation of the page."
+    },
+    {
+      "path": "files/figures/PMID16223882/FIG6_AB_p5_x27_350x240.jpeg",
+      "sha256": "45d1d80813b9cbbf0526d0d2cbc5f29e195cd8d90028ee83792ba9277ebb49fb",
+      "kind": "figure",
+      "note": "Embedded image stream extracted by xref from the fingerprinted PDF, i.e. the deposit's own figure bytes rather than a rasterisation of the page."
+    },
+    {
+      "path": "files/figures/PMID16223882/EoC2017_Fig1B_replacement_x6_461x139.jpeg",
+      "sha256": "bda1d1e7c8cccf9b8d948af8d4bf180365406f8c4db9160d1cd57e9ba123ebd7",
+      "kind": "figure",
+      "note": "Embedded image stream extracted by xref from the fingerprinted PDF, i.e. the deposit's own figure bytes rather than a rasterisation of the page."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16223882/p01_fig1b_caption_adwwox.png",
+      "sha256": "a365fcaf87d4b541fc9942d6cab773d9ce9aff982d9634fb29dedbd43c4b14d7",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 2 at 400 dpi, regenerable by recipe (rule 5e). The crop shows the whole sentence; the declared needle is the unique single-line fragment that fixes its location."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16223882/p04_h460_completely_suppressed.png",
+      "sha256": "3551246009278662501b9c9f8d644c1b063cf1ceddfaf97935c67e2c7b306f18",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 5 at 400 dpi, regenerable by recipe (rule 5e). The crop shows the whole sentence; the declared needle is the unique single-line fragment that fixes its location."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16223882/p04_exvivo_no_wwox_in_tumors.png",
+      "sha256": "140b01a18dfce18ac53ca00477323133aa54862b162aa2513069eadabcd52092",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 5 at 400 dpi, regenerable by recipe (rule 5e). The crop shows the whole sentence; the declared needle is the unique single-line fragment that fixes its location."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16223882/p04_small_tumors_lost_expression.png",
+      "sha256": "55225ff97f474245dd4ba1efb1e739f191e43409f0f6ce416c970cf9fdc5cd72",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 5 at 400 dpi, regenerable by recipe (rule 5e). The crop shows the whole sentence; the declared needle is the unique single-line fragment that fixes its location."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16223882/p05_caspases_9_and_8_not_cleaved.png",
+      "sha256": "9094db9c22a49709911eaf7f2b562ddb51c56fbe9e252cb436ee521d65dfa8e0",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 6 at 400 dpi, regenerable by recipe (rule 5e). The crop shows the whole sentence; the declared needle is the unique single-line fragment that fixes its location."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16223882/p05_intrinsic_pathway.png",
+      "sha256": "acc4152ef631404df274833d3d423cd4d31376f044f4664f69f714a94d0230ca",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 6 at 400 dpi, regenerable by recipe (rule 5e). The crop shows the whole sentence; the declared needle is the unique single-line fragment that fixes its location."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16223882/p03_results_96hr.png",
+      "sha256": "299a38fbd261f63b3a3b433cd348476fc9770d085588f3d9ce1b6e1256ce2067",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 5 at 400 dpi, regenerable by recipe (rule 5e). The crop shows the whole sentence; the declared needle is the unique single-line fragment that fixes its location."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16223882/p02_methods_5days.png",
+      "sha256": "5800a7a3b2bf5f892bd6ae1f02be4f8d0854addd28ac6a6b46033a0866c3338a",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 3 at 400 dpi, regenerable by recipe (rule 5e). The crop shows the whole sentence; the declared needle is the unique single-line fragment that fixes its location."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16223882/p02_fig2_caption_5days.png",
+      "sha256": "fe97de08245208809ab6fcc711e72ea9693797b9e5ba67d60e1cf75fc9b591d3",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 2 at 400 dpi, regenerable by recipe (rule 5e). The crop shows the whole sentence; the declared needle is the unique single-line fragment that fixes its location."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16223882/p05_u2020_specificity_gene_therapy.png",
+      "sha256": "0bffb581b8f9c1bbb14bd111aab33eb0b9f49f9fb91bae5fe54171d3c12a0ed7",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 6 at 400 dpi, regenerable by recipe (rule 5e). The crop shows the whole sentence; the declared needle is the unique single-line fragment that fixes its location."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16223882/p05_a549_two_of_five_no_tumors.png",
+      "sha256": "78f357fd93d0b5ebba800e427c11a475542591a92469dd8460f2338a36187c17",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 5 at 400 dpi, regenerable by recipe (rule 5e). The crop shows the whole sentence; the declared needle is the unique single-line fragment that fixes its location."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID16223882/p06_therapy_conclusion.png",
+      "sha256": "71196e3651983d6a51d25178c62b646dc6bf675acaad5509f94fe3e237f72015",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 6 at 400 dpi, regenerable by recipe (rule 5e). The crop shows the whole sentence; the declared needle is the unique single-line fragment that fixes its location."
+    }
+  ],
+  "figure_extractions": [
+    {
+      "method": "PyMuPDF Document.extract_image() over the xref table",
+      "source": "files/fulltext/PMID16223882_Fabbri2005_PMC.pdf",
+      "source_sha256": "9c017ff1eb0384026b85ce940c37f8d14d3eb298e5850fd32278331e607ced94",
+      "streams": [
+        {
+          "page": 2,
+          "xref": 3,
+          "px": "421x196",
+          "figure": "Fig 1"
+        },
+        {
+          "page": 2,
+          "xref": 4,
+          "px": "676x820",
+          "figure": "Fig 2"
+        },
+        {
+          "page": 3,
+          "xref": 10,
+          "px": "806x619",
+          "figure": "Fig 3"
+        },
+        {
+          "page": 4,
+          "xref": 16,
+          "px": "800x550",
+          "figure": "Fig 4"
+        },
+        {
+          "page": 4,
+          "xref": 17,
+          "px": "800x428",
+          "figure": "Fig 5"
+        },
+        {
+          "page": 5,
+          "xref": 27,
+          "px": "350x240",
+          "figure": "Fig 6"
+        }
+      ],
+      "note": "Figure-to-caption assignment was VERIFIED BY PAGE GEOMETRY rather than assumed from ordering: Page.get_image_bbox() for each stream was compared against the y-extent of the 'Fig. N.' caption text block on the same page and in the same column. This mattered - Figure 6's panel B turned out to carry a ponA dose series its caption does not describe, and an ordering assumption would have made that a mis-assignment rather than a finding. A second stream, xref 87/5/11/18/28/37 at 38x1631, repeats on every page and is the journal's printed side rule, not a figure."
+    },
+    {
+      "method": "PyMuPDF Document.extract_image() over the xref table",
+      "source": "files/fulltext/PMID28373548_EoC_PNAS2017.pdf",
+      "source_sha256": "28069dd2cf98d2eba98b2a7978d265e78e59487dca7f645b587444e2d4014f44",
+      "streams": [
+        {
+          "page": 1,
+          "xref": 6,
+          "px": "461x139",
+          "figure": "replacement Fig 1B published inside the Editorial Expression of Concern"
+        }
+      ],
+      "note": "The 2014 replicate the notice publishes in place of the contested panel."
+    }
+  ]
+}
