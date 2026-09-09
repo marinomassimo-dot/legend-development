@@ -117,9 +117,14 @@
  },
  "source_artifacts": [
   {
-   "path": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
-   "sha256": "8c629a545f7cc6961dfe349148a2878709f046e6892d33328eda7dbbf3c008f2",
-   "kind": "article_text"
+   "path": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
+   "sha256": "43d2ea16f6ad4554526a7543122bdc30392514165b17bdd5452cbdffe24bc289",
+   "kind": "article_text",
+   "supersedes": {
+    "path": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "sha256": "8c629a545f7cc6961dfe349148a2878709f046e6892d33328eda7dbbf3c008f2",
+    "note": "The artifact declared by FTR-20260810-25331887-01 is absent from this checkout (files/ is gitignored) and PMC no longer serves byte-identical HTML: today's fetch digests 43d2ea16..., not 8c629a54.... The container changed; the CONTENT did not. All 17 text locators of the prior reading were re-verified character-for-character against this re-fetch and ALL 17 MATCH. The reading is therefore re-established as verifiable in this checkout; only the byte identity of the rendering is new."
+   }
   },
   {
    "path": "files/fulltext/PMID25331887_AbuOdeh2014.pdf",
@@ -129,37 +134,86 @@
   {
    "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig1_p2_xref20.png",
    "sha256": "c8c485e40c36a046da1039179a5593d00960fb05c2ff0203f4aa42bcc79790bd",
-   "kind": "figure"
+   "kind": "figure",
+   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected."
   },
   {
    "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig2_p3_xref98.png",
    "sha256": "08ce0765e19c9ce60a3dd201a3ac16c9ae7c646ddaa9c54e00217a82cd44acae",
-   "kind": "figure"
+   "kind": "figure",
+   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected."
   },
   {
    "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig3_p4_xref171.png",
    "sha256": "1c5427f53eb5b30467365cfcc5ea2f336786afe8c504dd0625ae69435e643250",
-   "kind": "figure"
+   "kind": "figure",
+   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected."
   },
   {
    "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig4_p5_xref9.png",
    "sha256": "6af07e05611e032ae200c2f65aa7b7f70563178ba222955940aabb6db4bc02c5",
-   "kind": "figure"
+   "kind": "figure",
+   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected."
   },
   {
    "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig5_p6_xref85.png",
    "sha256": "608c91c299aa07ea6f548b8809b0c7614cdefc997bd54c5140190ebeaa2b9a03",
-   "kind": "figure"
+   "kind": "figure",
+   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected."
   },
   {
    "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig6_p7_xref160.png",
    "sha256": "9c075363ce9a8f63e7700c1a7ddf9c4e385b5f5af5e54de6d8bcc0fe7cca1f53",
-   "kind": "figure"
+   "kind": "figure",
+   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected."
   },
   {
    "path": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig7_p8_xref221.png",
    "sha256": "5e3e59178f0e388e9fd0dff4ff1a7ba5dbc0af4b487592e90b035f260d7c1282",
-   "kind": "figure"
+   "kind": "figure",
+   "unrecoverable_in_this_environment": "Declared absent rather than quietly dropped. These seven PNGs were extracted from the article PDF BY XREF with PyMuPDF (the method framework/scripts/figure_ppi_preflight.py uses, `import fitz`). This deployment has NO fitz and NO pip (`python3 -m pip` reports 'No module named pip'), so they cannot be regenerated here. poppler was tried and does not reproduce them: pdfimages -png over the same byte-identical PDF yields 14 images, none matching any declared digest, because the PNG re-encoding differs. The ARTICLE PDF ITSELF re-derives byte-identical (42df070a...), so the source is intact and only the derived crops are unrecoverable. They are kept declared, and this manifest therefore FAILS --verify-artifacts on exactly these seven paths, because removing them to obtain a green verdict would delete the record of what the prior reading actually inspected."
+  },
+  {
+   "path": "files/supplement/PMID25331887/pnas.201409252SI.pdf",
+   "sha256": "85fc1ce338c140caeac131757a3d10d2d9c59cd7dd24f65c0775dc161f200230",
+   "kind": "article_binary",
+   "note": "SI Appendix, 6 pages, retrieved 2026-09-09 through framework/scripts/pmc_pow_fetch.py from the PMC instance path. This is the supplement FTR-20260810-25331887-01 recorded as 'unavailable'."
+  },
+  {
+   "path": "files/supplement/PMID25331887/pages/SI_p-1.png",
+   "sha256": "efe858416625a2a854bb6dcf7401ee6023c46499cd64a886e5f7cf7772db301d",
+   "kind": "figure",
+   "note": "Deterministic 200-dpi page render of the SI PDF via pdftoppm. The SI text layer is SUSPECT and was REFUSED by the validator (six C0 controls; and not one of < > <= >= +/- - in a statistics-bearing supplement), so under rule 5d the RENDERED PAGE is the reference surface and every SI locator is anchored to it as a visual attestation rather than quoted from the defective layer. The extracted .txt was deleted rather than kept, so it cannot be mistaken for a usable surface."
+  },
+  {
+   "path": "files/supplement/PMID25331887/pages/SI_p-2.png",
+   "sha256": "eeeefcb63cb9ac2d7a0ddd7d7e50ddb1bee03b02972537afeb7d8c4f9dc0b803",
+   "kind": "figure",
+   "note": "Deterministic 200-dpi page render of the SI PDF via pdftoppm. The SI text layer is SUSPECT and was REFUSED by the validator (six C0 controls; and not one of < > <= >= +/- - in a statistics-bearing supplement), so under rule 5d the RENDERED PAGE is the reference surface and every SI locator is anchored to it as a visual attestation rather than quoted from the defective layer. The extracted .txt was deleted rather than kept, so it cannot be mistaken for a usable surface."
+  },
+  {
+   "path": "files/supplement/PMID25331887/pages/SI_p-3.png",
+   "sha256": "2366649174baa5f047ad5d3c349adb80c3c1420f2bdc35bd72e23bf024c7fbab",
+   "kind": "figure",
+   "note": "Deterministic 200-dpi page render of the SI PDF via pdftoppm. The SI text layer is SUSPECT and was REFUSED by the validator (six C0 controls; and not one of < > <= >= +/- - in a statistics-bearing supplement), so under rule 5d the RENDERED PAGE is the reference surface and every SI locator is anchored to it as a visual attestation rather than quoted from the defective layer. The extracted .txt was deleted rather than kept, so it cannot be mistaken for a usable surface."
+  },
+  {
+   "path": "files/supplement/PMID25331887/pages/SI_p-4.png",
+   "sha256": "e334709f46d123fb89025293aa5c2b7f547a133b68c4af4ca133523a30cdfb33",
+   "kind": "figure",
+   "note": "Deterministic 200-dpi page render of the SI PDF via pdftoppm. The SI text layer is SUSPECT and was REFUSED by the validator (six C0 controls; and not one of < > <= >= +/- - in a statistics-bearing supplement), so under rule 5d the RENDERED PAGE is the reference surface and every SI locator is anchored to it as a visual attestation rather than quoted from the defective layer. The extracted .txt was deleted rather than kept, so it cannot be mistaken for a usable surface."
+  },
+  {
+   "path": "files/supplement/PMID25331887/pages/SI_p-5.png",
+   "sha256": "84c53f1faf338da2b297f612c4b543bdf528151fb3a1bd9f0a781a21e91d73af",
+   "kind": "figure",
+   "note": "Deterministic 200-dpi page render of the SI PDF via pdftoppm. The SI text layer is SUSPECT and was REFUSED by the validator (six C0 controls; and not one of < > <= >= +/- - in a statistics-bearing supplement), so under rule 5d the RENDERED PAGE is the reference surface and every SI locator is anchored to it as a visual attestation rather than quoted from the defective layer. The extracted .txt was deleted rather than kept, so it cannot be mistaken for a usable surface."
+  },
+  {
+   "path": "files/supplement/PMID25331887/pages/SI_p-6.png",
+   "sha256": "42ab5a21d91c2bc1ee0ff00dc76d9af9e41837bc9861177b9e3d0f6a4d7c3d13",
+   "kind": "figure",
+   "note": "Deterministic 200-dpi page render of the SI PDF via pdftoppm. The SI text layer is SUSPECT and was REFUSED by the validator (six C0 controls; and not one of < > <= >= +/- - in a statistics-bearing supplement), so under rule 5d the RENDERED PAGE is the reference surface and every SI locator is anchored to it as a visual attestation rather than quoted from the defective layer. The extracted .txt was deleted rather than kept, so it cannot be mistaken for a usable surface."
   }
  ],
  "figure_extractions": {
@@ -247,7 +301,7 @@
     "proposition": "THE CENTRAL RESULT, and it is the one the whole WWOX-DDR line rests on: WWOX is required for normal ATM checkpoint signalling. Stated by the paper as a level effect across three ATM readouts.",
     "snippet": "WWOX-depleted MCF7 cells exhibited reduced p-ATM, p-H2AX (γ-H2AX), and p-KAP1 levels (Fig. 2C, lanes 7–12), suggesting blunted ATM function",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Results, 'WWOX Regulates Activation of the ATM Checkpoint', first paragraph",
     "panel_text_relation": "text_only"
    },
@@ -271,7 +325,7 @@
     "proposition": "The specificity claim: the DNA-damage induction is asserted to be particular to WWOX and not to its fragile-site neighbour or to the other classic fragile gene.",
     "snippet": "no altered expressions of the fragile site gene FHIT and the WWOX neighboring gene MAF after induction of DSBs were observed (Fig. 1A), suggesting that this effect is specific for WWOX",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Results, 'Induction of WWOX Expression After DNA Damage', second sentence",
     "panel_text_relation": "text_only"
    },
@@ -291,7 +345,7 @@
     "proposition": "🔴 THE RESULT THAT PUTS THIS PAPER IN CONFLICT WITH PMID 38499540, and the reason it was queued. WWOX raises homologous recombination roughly twofold in a DR-GFP reporter.",
     "snippet": "The GFP-positive population increased approximately twofold from 10% to 21% after I-SceI expression in the cells expressing WWOX (Fig. 3E), suggesting a more efficient HR repair in the cells containing WWOX",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Results, 'WWOX Regulates DNA Repair', HR reporter paragraph",
     "panel_text_relation": "text_only"
    },
@@ -307,7 +361,7 @@
     "proposition": "TEXT-VERSUS-CAPTION PAIR, RUNNING-TEXT SIDE. The Results sentence attributes the 15-minute foci comparison to NCS.",
     "snippet": "We observed higher numbers of γ-H2AX foci in MCF7 control cells compared with WWOX-depleted cells at 15 min after NCS treatment (Fig. 3C and Fig. S3B)",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Results, 'WWOX Depletion Leads to Impaired γ-H2AX Foci Formation', final paragraph",
     "panel_text_relation": "text_only"
    },
@@ -315,7 +369,7 @@
     "proposition": "TEXT-VERSUS-CAPTION PAIR, CAPTION SIDE. The caption of the very panel that sentence cites names a different damaging agent, and the sentence that sets up the experiment two lines earlier agrees with the caption rather than with the sentence: 'WWOX-depleted MCF7 cells were treated with ionizing radiation for 15 min, 24 h, and 48 h'. So the running text says NCS once, against ionizing radiation twice. A reader taking the agent from the Results sentence attributes a radiomimetic drug result to a panel that reports radiation. NO POINTER FIELD EXISTS for this: both members are text surfaces, and contradicts is defined only on a figure entry. Declared here, in prose, as a gap in the schema rather than as an absence of a finding.",
     "snippet": "Quantification of γ-H2AX foci in MCF7 control or WWOX-depleted cells after treatment with ionizing radiation (5 Gy) for different times",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Figure 3 caption, item C. Declared surface body, not figure: this is authored prose that the PMC HTML carries in the body container and it is verified character-for-character. Labelling a caption quote 'figure' would exempt it from that check.",
     "panel_text_relation": "text_only"
    },
@@ -331,7 +385,7 @@
     "proposition": "The foci delay in knockout MEFs, stated by the paper as a delay.",
     "snippet": "Confocal microscopy revealed that γ-H2AX foci formation was clearly delayed in KO MEFs compared with their WT counterparts (Fig. 3A)",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Results, 'WWOX Depletion Leads to Impaired γ-H2AX Foci Formation'",
     "panel_text_relation": "text_only"
    },
@@ -347,7 +401,7 @@
     "proposition": "The rescue that makes the knockout phenotype attributable to WWOX rather than to the clone.",
     "snippet": "reconstitution of WWOX expression in KO MEFs rescued γ-H2AX foci formation to comparable levels as in WT cells (Fig. 3B)",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Results, 'WWOX Depletion Leads to Impaired γ-H2AX Foci Formation'",
     "panel_text_relation": "text_only"
    },
@@ -363,7 +417,7 @@
     "proposition": "The microhomology repair result, quoted with the numbers the text gives.",
     "snippet": "control MCF7 cells were able to recover about 80% of Luc activity, whereas WWOX-depleted MCF7 cells recovered only 15% (Fig. 3D)",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Results, 'WWOX Regulates DNA Repair', pGL2-Luc paragraph",
     "panel_text_relation": "text_only"
    },
@@ -379,7 +433,7 @@
     "proposition": "🔴 THE FINDING WITH THE LONGEST REACH BEYOND CANCER, and the one that touches a textbook default this repository has already been burned by. WWOX carries K63-linked polyubiquitination, and the paper's own data make that chain a STABILISING and TRAFFICKING signal rather than a degradation signal.",
     "snippet": "The results indicate that WWOX undergoes specifically K63-linked polyubiquitination",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Results, 'DNA Damage Triggers Nuclear Accumulation and Ubiquitination of WWOX', K63/K48 mutant paragraph",
     "panel_text_relation": "text_only"
    },
@@ -387,7 +441,7 @@
     "proposition": "The direct corollary, and the reason the K63 result is not a curiosity: removing the acceptor lysine SHORTENS the protein's half-life. Ubiquitination here preserves WWOX rather than consuming it, which is the exact inverse of the default the dismissal ledger records as having bitten this project before — polyubiquitination read as a proteasomal death sentence. Any future reasoning about WWOX turnover, in any genotype, has to start from the fact that at least one of its ubiquitin chains does the opposite.",
     "snippet": "We found, indeed, that half-life of WWOX-K274R is shorter compared with WWOX (Fig. S7B)",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Results, 'WWOX Is Ubiquitinated at Lysine 274 on DNA Damage'. The supporting panel S7B is in the supplementary PDF, which is NOT retrievable — see the note on coverage below — so this statement is carried as the authors' assertion with its evidence declared absent.",
     "panel_text_relation": "text_only"
    },
@@ -395,7 +449,7 @@
     "proposition": "The residue claim: K274 is named as the acceptor and the mutant is said to lack the modification.",
     "snippet": "K274R mutant WWOX lacked DNA damage-induced ubiquitination (Fig. 6A), identifying K274 as a main ubiquitin acceptor lysine residue on DSBs",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Results, 'WWOX Is Ubiquitinated at Lysine 274 on DNA Damage', opening",
     "panel_text_relation": "text_only"
    },
@@ -411,7 +465,7 @@
     "proposition": "The nuclear-ubiquitination claim, stated as an absolute negative for the WW1 mutant.",
     "snippet": "Nuclear GST-WWOX, but not WWOX-WFPA, was found to be polyubiquitinated (Fig. 5B)",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Results, 'DNA Damage Triggers Nuclear Accumulation and Ubiquitination of WWOX', fractionation paragraph",
     "panel_text_relation": "text_only"
    },
@@ -431,7 +485,7 @@
     "proposition": "The ligase claim, stated with the same absolute-negative construction.",
     "snippet": "ectopic expression of ITCH but not a catalytic mutant mediated WWOX ubiquitination (Fig. 7A, lane 3 vs. lane 5)",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Results, 'Ub E3 Ligase ITCH Ubiquitinates WWOX After DNA Damage', opening",
     "panel_text_relation": "text_only"
    },
@@ -451,7 +505,7 @@
     "proposition": "The genetic confirmation of the ITCH arm, and the cleanest control in the figure: the ITCH row is blank in the knockout, so the knockout is validated in the same blot that reports the phenotype.",
     "snippet": "Itch-KO cells display reduced p-KAP1 activation as well as reduced WWOX accumulation",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Results, 'Ub E3 Ligase ITCH Ubiquitinates WWOX After DNA Damage', MEF paragraph",
     "panel_text_relation": "text_only"
    },
@@ -459,7 +513,7 @@
     "proposition": "🔴 A SCHEMATIC, NOT AN OBSERVATION — flagged deliberately, because the surface vocabulary has no box for it and a schematic declared as 'figure' inherits the authority of a measurement. Panel 7D is a drawing of the authors' model, downstream of their prose rather than evidence for it. It is recorded here for what it asserts, which is the causal loop and the K63 chain drawn on the residue, and its status is stated in the anchor rather than left to the reader.",
     "snippet": "Hypothetical model of WWOX action in DDR",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Figure 7 caption, item D. The caption's own first word is 'Hypothetical', which is the paper doing the labelling correctly; the drawing itself carries an arrow from p-ATM to ITCH to WWOX-K274 to 'Efficient DDR' and a return arrow labelled 'Enhance ATM monomerization and activation'. Declared surface body because this is the caption text, verified character-for-character; the panel is a generated diagram and is NOT declared as a figure locator, since a figure surface in this schema means an observation read from pixels.",
     "panel_text_relation": "text_only"
    },
@@ -467,7 +521,7 @@
     "proposition": "The p53-independence claim, kept because it is what allows any of this to transfer to a non-cancer context: the DDR effect does not run through p53 status.",
     "snippet": "the effects of WWOX on DDR signaling seem to be independent of p53, because the same consequences were observed in p53 WT (MCF7) and mutant (MDA-MB231) cells",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Discussion, paragraph on p53 and p73",
     "panel_text_relation": "text_only"
    },
@@ -475,7 +529,7 @@
     "proposition": "The genome-instability result, and the boundary condition inside it: WWOX loss does not itself break DNA. It amplifies damage-induced breakage.",
     "snippet": "depletion of WWOX was associated with increased DSBs after induction of DNA damage (Fig. 2 A and B)",
     "surface": "body",
-    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC.html",
+    "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_PMC_2026-09-09.html",
     "anchor": "Results, 'WWOX Depletion Decreases Genomic Stability Upon DNA Damage'",
     "panel_text_relation": "text_only"
    },
@@ -486,8 +540,111 @@
     "artifact": "files/fulltext/PMID25331887_AbuOdeh2014_assets/pdf_figures/Fig2_p3_xref98.png",
     "anchor": "Figure 2, panel B, four bars with error bars and significance brackets, read at deposited resolution 1397 px",
     "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "[UNAUDITED — see verbatim_locators.audit_note] The WWOX induction that opens the paper's model rests on single-blot densitometry with no replicates, no error bars and no statistics anywhere in the panel.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. S1 prints fold-change rows beneath each blot — HEK293 '1.0 1.4 1.9 2.7 2.7 3.5' and LM7 '1.0 1.2 1.6 2.1 2.4 2.2' across 0-120 min after 10 Gy. No error bar, replicate count, or significance mark appears in either panel.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID25331887/pages/SI_p-1.png",
+    "anchor": "Supplemental Figure 1, panels A and B, rendered page 1",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "audit_status": "PENDING_AUDIT_CORRECTION — NOT PROMOTABLE"
+   },
+   {
+    "proposition": "[UNAUDITED — see verbatim_locators.audit_note] WWOX depletion does not merely blunt gamma-H2AX induction; it leaves foci UNRESOLVED at 24 and 48 h, which the caption's word 'phosphorylation' does not cover.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] In Fig. S3B the MCF7-sh-EV row shows abundant gamma-H2AX foci at 15 min and near-complete clearance by 24 h and 48 h, while MCF7-sh-WWOX-CL3 shows weaker foci at 15 min and foci STILL PRESENT at both 24 h and 48 h.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID25331887/pages/SI_p-2.png",
+    "anchor": "Supplemental Figure 3B, confocal panels, rendered page 2",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "audit_status": "PENDING_AUDIT_CORRECTION — NOT PROMOTABLE"
+   },
+   {
+    "proposition": "[UNAUDITED — see verbatim_locators.audit_note] In the DR-GFP reporter clones used for the homologous-recombination assay, the K274R mutant is expressed at a level comparable to wild type and to WFPA — so the HR result is not confounded by absent protein in that experiment.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. S3C is a four-lane WWOX immunoblot of U2OS-DR-EV, -DR-WWOX, -DR-WFPA and -DR-K274R over GAPDH: the EV lane is blank and the WWOX, WFPA and K274R lanes carry bands of comparable intensity.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID25331887/pages/SI_p-2.png",
+    "anchor": "Supplemental Figure 3C, rendered page 2",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "audit_status": "PENDING_AUDIT_CORRECTION — NOT PROMOTABLE"
+   },
+   {
+    "proposition": "[UNAUDITED — see verbatim_locators.audit_note] The WWOX-ATM interaction maps to the WW1 domain and NOT to the SDR domain, and it is abolished by the WW1 WFPA mutation. This is the domain assignment the disease model needs, and it is only in the supplement.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] In Fig. S4A the left pull-down shows p-ATM recovered with GST-WW1+2 and essentially absent from the GST-SDR lanes; in the right pull-down, of the four constructs GST-WW1_WT, GST-WW1_MT (WFPA), GST-WW2_WT and GST-WW2_MT, a p-ATM band appears in the GST-WW1_WT + NCS lane only.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID25331887/pages/SI_p-3.png",
+    "anchor": "Supplemental Figure 4A, lysate and pull-down blots, rendered page 3",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "audit_status": "PENDING_AUDIT_CORRECTION — NOT PROMOTABLE"
+   },
+   {
+    "proposition": "[UNAUDITED — see verbatim_locators.audit_note] On the ATM side the interaction maps to the middle region, roughly residues 1530-2100.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. S4B autoradiogram: of the six 35S-labelled ATM fragments incubated with GST-WWOX, the ATM-Middle (1,530-2,100 aa) lane carries the strongest pulled-down band, with the Coomassie panel below showing comparable GST and GST-WWOX loading.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID25331887/pages/SI_p-3.png",
+    "anchor": "Supplemental Figure 4B, autoradiogram and Coomassie, rendered page 3",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "audit_status": "PENDING_AUDIT_CORRECTION — NOT PROMOTABLE"
+   },
+   {
+    "proposition": "[UNAUDITED — see verbatim_locators.audit_note] The defect in WWOX-depleted cells is SELECTIVE and downstream, not a global failure of damage sensing: MDC1 recruitment is retained while p-CHK2 is abolished. The caption reports both as 'impaired' and flattens the difference.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] In Fig. S5 the MCF7-shWWOX + NCS row still shows discrete green MDC1 foci, reduced relative to control, while the p-CHK2 (red) channel in the same row is essentially blank against a strong red signal in the MCF7-Control + NCS row.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID25331887/pages/SI_p-4.png",
+    "anchor": "Supplemental Figure 5, MDC1 and p-CHK2 channels, rendered page 4",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "audit_status": "PENDING_AUDIT_CORRECTION — NOT PROMOTABLE"
+   },
+   {
+    "proposition": "[UNAUDITED — see verbatim_locators.audit_note] The K63-linkage-specific evidence in the supplement is weak: the K63-Ub antibody panel is faint across all lanes, unlike the HA, FK1 and FK2 panels beside it.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] In Fig. S6B four ubiquitin blots are shown side by side over the same pull-down. The HA, FK1 (poly-ub) and FK2 (poly+mono-ub) panels carry strong high-molecular-weight ladders in the GST-WWOX lanes, whereas the K-63-Ub panel at the right shows only a faint smear with no comparable ladder in any lane.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID25331887/pages/SI_p-5.png",
+    "anchor": "Supplemental Figure 6B, four-antibody ubiquitin comparison, rendered page 5",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "audit_status": "PENDING_AUDIT_CORRECTION — NOT PROMOTABLE"
+   },
+   {
+    "proposition": "[UNAUDITED — see verbatim_locators.audit_note] K274R does NOT abolish WWOX ubiquitination: a substantial ubiquitin ladder persists on the mutant, so K274 is at most a major acceptor site and not the sole one. This is the same quantitative-reduction-read-as-absolute-negative pattern already recorded three times in this paper's main figures.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] In the Fig. S6C pull-down the anti-HA panel shows high-molecular-weight ladders in the GST-K274R lanes as well as the GST-WWOX lanes; the mutant lanes are reduced relative to wild type but are not blank.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID25331887/pages/SI_p-5.png",
+    "anchor": "Supplemental Figure 6C, pull-down anti-HA panel, rendered page 5",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "audit_status": "PENDING_AUDIT_CORRECTION — NOT PROMOTABLE"
+   },
+   {
+    "proposition": "[UNAUDITED — see verbatim_locators.audit_note] The half-life claim for K274R rests on ONE cycloheximide chase whose own control series is non-monotonic, and the internal noise is as large as the effect being claimed.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Fig. S7B prints a densitometry row relative to HSP90: GST-WWOX reads '1.0 1.0 1.4 0.8' at 0/2/4/6 h without NCS and '1.0 0.9 0.7' with NCS, while GST-K274R reads '1.0 0.7 0.8 0.4' and '1.1 0.5 0.4'. There are no error bars, no replicate count and no statistics. Under cycloheximide, synthesis is blocked, so the wild-type value RISING to 1.4 at 4 h cannot be a real increase in protein.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID25331887/pages/SI_p-6.png",
+    "anchor": "Supplemental Figure 7B, cycloheximide chase densitometry row, rendered page 6",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "audit_status": "PENDING_AUDIT_CORRECTION — NOT PROMOTABLE"
+   },
+   {
+    "proposition": "[UNAUDITED — see verbatim_locators.audit_note] K274R is expressed but fails to restore ATM signalling, so its defect is functional rather than a simple absence of protein in this experiment.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] In Fig. S7A the WWOX blot shows a strong band in the MCF7-Sh+K274R lanes, while the p-KAP1 row shows a strong 1 h band in parental MCF7 and only a faint band in both MCF7-sh and MCF7-Sh+K274R.",
+    "surface": "figure",
+    "artifact": "files/supplement/PMID25331887/pages/SI_p-6.png",
+    "anchor": "Supplemental Figure 7A, rendered page 6",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found",
+    "audit_status": "PENDING_AUDIT_CORRECTION — NOT PROMOTABLE"
    }
   ],
-  "note": "Coverage: the article body is COMPLETE — Introduction, Results, Discussion, Materials and Methods and the reference list read in sequence from the PMC HTML, and all seven main figures inspected as images at the resolution the authors deposited, extracted from the fingerprinted PDF rather than taken from the publisher's downsampled CDN copies. THE SUPPLEMENT IS NOT READ AND CANNOT BE: figures S1-S7 are cited throughout and several are load-bearing — S2B carries the WWOX+/+ / +/- / -/- MEF comparison, S3C the reporter construct validation, S4 the domain mapping, S6C the K63-versus-K48 discrimination and S7B the half-life measurement quoted in entries[18]. The supplementary PDF is not retrievable by any sanctioned route: PMC reports 'identifier PMC4226089 is not Open Access', Europe PMC returns 'Article with id PMC4226089 is not open access one', and the publisher's DCSupplemental URL serves an HTML page rather than the file. The local PDF is the ten-page main article and does not contain it. This is a bounded, named gap with the routes that were tried recorded, not an omission — and it is why the receipt for this reading is partial_fulltext_read."
+  "note": "Coverage: the article body is COMPLETE — Introduction, Results, Discussion, Materials and Methods and the reference list read in sequence from the PMC HTML, and all seven main figures inspected as images at the resolution the authors deposited, extracted from the fingerprinted PDF rather than taken from the publisher's downsampled CDN copies. THE SUPPLEMENT IS NOT READ AND CANNOT BE: figures S1-S7 are cited throughout and several are load-bearing — S2B carries the WWOX+/+ / +/- / -/- MEF comparison, S3C the reporter construct validation, S4 the domain mapping, S6C the K63-versus-K48 discrimination and S7B the half-life measurement quoted in entries[18]. The supplementary PDF is not retrievable by any sanctioned route: PMC reports 'identifier PMC4226089 is not Open Access', Europe PMC returns 'Article with id PMC4226089 is not open access one', and the publisher's DCSupplemental URL serves an HTML page rather than the file. The local PDF is the ten-page main article and does not contain it. This is a bounded, named gap with the routes that were tried recorded, not an omission — and it is why the receipt for this reading is partial_fulltext_read.",
+  "supplement_note": "SUPPLEMENT PAID. FTR-20260810-25331887-01 recorded supplementary as 'unavailable'. The SI Appendix was retrieved on 2026-09-09 and all six pages were read. Its text layer is SUSPECT and was refused by the validator, so under rule 5d the rendered pages are the reference surface and all ten SI locators are visual attestations against fingerprinted 200-dpi page renders, not quotes from the defective layer. Europe PMC cannot supply this article as XML: its API answers 'Article with id PMC4226089 is not open access one', which is also why fullTextXML 404s and supplementaryFiles is empty. The route that worked was the PMC instance path through the repository's own pmc_pow_fetch.py.",
+  "strict_validation_status": "FAIL, and the failure is load-bearing rather than a defect to hide. The ONLY blocking items are the seven xref-extracted figure PNGs above, unrecoverable in this deployment for want of PyMuPDF. Everything else verifies: the re-fetched article HTML, the byte-identical article PDF, the newly retrieved SI Appendix, the six 200-dpi SI page renders, and every one of the 39 locators including all 17 prior text locators re-verified character-for-character against the new HTML. The honest verdict is therefore 'verified except for seven derived figure crops whose regeneration this environment cannot perform', and it is reported that way rather than converted into a PASS by deletion.",
+  "audit_note": "🔴 THE R4 FLOOR WAS NOT SATISFIED FOR THE TEN SUPPLEMENTARY LOCATORS, AND THEY ARE MARKED RATHER THAN QUIETLY SHIPPED. A blind locator audit over these ten (proposition, attestation, anchor) triples was dispatched twice on 2026-09-09. The first auditor stalled at its prompt record and never returned a verdict to this session; the synchronous rerun was terminated by a session rate limit before it produced any output. The coordinator reports that an auditor did complete and returned SUPPORTED on four triples and OVERSHOOT on six, with replacement wording — but THIS SESSION DOES NOT HOLD THOSE VERDICTS, and reconstructing an audit from memory is precisely the act the audit exists to prevent. So every supplementary proposition carries an [UNAUDITED] prefix and audit_status PENDING_AUDIT_CORRECTION, and CC-20260909-25331887-01.md is written as HELD and explicitly not promotable. The ten ATTESTATIONS describe pixels that were genuinely inspected and the artifacts are fingerprinted; what is unverified is whether each PROPOSITION says more than its page supports, and six of them reportedly do. Nothing here may enter canonical state until the verdicts are applied by a session that can see them."
  }
 }
