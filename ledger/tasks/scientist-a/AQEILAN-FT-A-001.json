@@ -65,7 +65,7 @@
    "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
   ]
  },
- "CURRENT_STATE": "WAVE_3_IN_PROGRESS — claimed 2026-09-09; PMIDs 15070730 then 24510053, in lot order",
+ "CURRENT_STATE": "WAVE_3_COMPLETE — both wave PMIDs at complete_fulltext_read; R4 satisfied on 15070730; nothing outstanding in this wave",
  "assigned_on": "2026-09-08",
  "acquisition_hints": {
   "33914858": {
@@ -292,6 +292,69 @@
   ],
   "parked": [
    "33914858"
+  ]
+ },
+ "WAVE_3_RESULT": {
+  "closed_at": "2026-09-09T14:45:00Z",
+  "actor": "scientist-a",
+  "15070730": {
+   "status": "COMPLETE",
+   "evidence_depth": "complete_fulltext_read",
+   "receipt": "FTR-20260909-15070730-02",
+   "prior_receipt": "FTR-20260814-15070730-01",
+   "reread_reason": "inadequate_prior_coverage",
+   "manifest": "PASS, 0 gaps, 38 locators (13 new)",
+   "commit": "8583553",
+   "outputs": [
+    "deepdive_manifests/PMID15070730.json",
+    "fulltext_dossiers/PMID15070730.md (the paper's FIRST dossier)",
+    "commit_candidates/CC-20260909-15070730-01.md"
+   ],
+   "debt_paid": "The 2026-08-14 receipt's single not_read is closed. Supporting Figs 5, 6 and 7 retrieved through pmc_pow_fetch.py — refused in August only because that client was PDF-only — and inspected at 6x-26x. Prior evidence re-established first: article PDF and all four body figures byte-identical to their declared digests; the PMC container digest had drifted, so the fresh container is declared as its own artifact and all 17 inherited body locators re-verified verbatim (17 OK, 0 MISS) rather than the old path overwritten.",
+   "finding": "CLAIM 023 NARROW proposed. Its TITLE asserts phosphorylation-dependent subcellular rerouting; no experiment in the paper manipulates phosphorylation and measures localisation. 20 body sentences mention Src, ZERO also mention localisation, cytoplasm, nucleus, redistribution or sequestration. The claim's own SUMMARY is faithful — three separate facts; it is the title that welds two into an untested relation, and the title is what gets quoted. The binding leg is untouched and is the best-supported thing in the paper.",
+   "cost_of_paying_the_debt": "The August receipt called Fig 5 the strongest form of the routing evidence. Opened, it is the weakest: no dose labels, no merge, no counts, no statistic, and its Wwox-positive area is not lower in the reduced-dose field. Paying the debt weakened the claim rather than strengthening it.",
+   "R4": "SATISFIED — two independent blind auditors, 13 triples, 7 corrected. MY MOST ATTRACTIVE FINDING WAS WITHDRAWN IN FULL: the Fig 6 to Fig 5 cross-panel bridge fails on cell line (Fig 5 is NIH 3T3, Fig 6 the SAOS-2 series), verified against the body myself rather than on an auditor's word. Also withdrawn: 'on any measure' and its 99th-percentile pair, 'both panels contain both morphologies', 'straddling unity', 'lowest by a wide margin'. One correction ran in my favour: 8 Src sentences to 20. THE AUDITORS DISAGREED TWICE AND BOTH DISPUTES WERE ADJUDICATED FROM THE PIXELS: Fig 7 y-maxima are 60/60/120 (one auditor read 68/68/128 and was wrong, settled at 26x on glyph shape), and lane 10's window sensitivity is real while the auditor's proposed mechanism does not reproduce (centroid 155.75, inside the window)."
+  },
+  "24510053": {
+   "status": "COMPLETE",
+   "evidence_depth": "complete_fulltext_read",
+   "receipt": "FTR-20260909-24510053-01",
+   "reread_reason": "first_read",
+   "manifest": "PASS, 0 gaps, 9 locators — ALL rule 5e page adjudications",
+   "commits": [
+    "3bef8dd",
+    "5312375"
+   ],
+   "outputs": [
+    "deepdive_manifests/PMID24510053.json",
+    "page_adjudications/PMID24510053/adjudications.json",
+    "fulltext_dossiers/PMID24510053.md",
+    "commit_candidates/CC-20260909-24510053-01.md",
+    "discovery_ledger_current.md#DL-MECH-111"
+   ],
+   "acquisition": "FIVE OA INDEXES WERE UNANIMOUS AND WRONG. NCBI idconv, Europe PMC, Unpaywall, OpenAlex and Semantic Scholar all report closed or not-found because all five key on the SAGE DOI; the journal has migrated to Frontiers and the article is free and complete at ebm-journal.org. Crossref's publisher field is the only structured signal that shows it.",
+   "surface": "No structured surface exists anywhere the cascade reached. The PDF text layer is SUSPECT and was REFUSED, never hand-corrected: 12 'thorn' for '+' and 8 C0 0x02 for '-', all 20 inside genotype or receptor-status notation, and a pymupdf re-extraction is worse (drops the minus entirely). FIRST USE OF THE RULE 5e REMEDY IN THIS DEPLOYMENT, runnable only because PyMuPDF was installed today on this actor's wave-2 preflight finding. 9/9 declared digests regenerate byte-identically, 9/9 needles resolve inside their crops.",
+   "finding": "The re-audit rule paid. The review defines ubiquitination as labelling for degradation via the proteasomal system — a flat universal, no linkage determination, cited to a bone-formation review with no WWOX data. That is verbatim D-01 in DEFAULTS THAT BIT US, whose logged cost is discarding a testable ACK1/ITCH cascade for days. The same section names Ack1 and cites ref 31 = PMID 16288044, the primary source of the cascade ACTIVE REOPENED rejection DIS-001 turns on, whose own receipt status is an EMPTY LIST. So the review supplies DIS-001 its missing provenance while being itself an instance of the premise that closed it, and resolves nothing about linkage. DIS-001 proposed STRENGTHENED IN PROVENANCE, VERDICT UNCHANGED.",
+   "transfer_verdict": "NEGATIVE AND MEASURED. Over the 38845-character body with the 103-item reference list separated off FIRST: zero occurrences of epilepsy, seizure, brain, CNS, WOREE, encephalopathy, ataxia, intellectual, recessive, syndrome, Q230, SCAR12. The only two 'neuro' hits in the file are journal names in the bibliography — back matter, the contamination class registered as open item 3 of the receipt contract, and separating body from refs before screening is what kept them out.",
+   "registry_note": "CORPUS P308 was Tier C, 'screened — corpus placeholder', 'Role: background corpus only', clinical relevance LOW, 'no deep-dive performed'. It held the primary provenance of an active reopened rejection. gold_is_in_the_details rule 1, worked in this lot. clinical relevance is proposed to STAY LOW: the value is mechanistic, not clinical."
+  },
+  "capability_micro_upgrade": {
+   "artifact": "framework/scripts/oa_status_dissent.py + test_oa_status_dissent.py",
+   "tests": "9/9, mutation-tested in both directions (7 and 6 failures when the verdict is forced)",
+   "self_caught_defect": "Wiley vs Wiley-Blackwell compared as a migration because the hyphen was not normalised — caught by its own suite before landing and fixed in the tool, not the test.",
+   "first_measurement": "3 of the 8 DOIs in this actor's own lot carry a stale prefix (EMBO to Springer, SAGE to Frontiers, ASBMB to Elsevier), so this is a base rate rather than an anecdote. Live positive on 10.1177, correct negative control on 10.1073."
+  },
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-09-09_scientist-a_aqeilan_wave3.md — Part 1 PASS on all four gates; neither wave PMID appears in any DECLARED GAP. Graded PARTIAL on one dimension by me: I did not check my most attractive finding as hard as my least attractive one, and the cell-line error was available in a sentence I had already quoted.",
+  "not_opened_this_session": [
+   "26499798",
+   "31428585"
+  ],
+  "parked": [
+   "33914858"
+  ],
+  "reported_not_fixed": [
+   "CORPUS P206 Identifier: PENDING under CLAIM 023 — reported, not repaired; not a reading's authority",
+   "RECEIPT_RATCHET_IMPROVED: unbacked full-text declarations fell 14 -> 13, but no grandfathered ID (PAPER 010-053) corresponds to either of this actor's papers, so the resolution is not attributable to this wave and the baseline was NOT lowered unilaterally"
   ]
  }
 }
