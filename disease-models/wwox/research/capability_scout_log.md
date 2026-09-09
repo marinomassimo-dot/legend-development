@@ -180,3 +180,86 @@ is the cheaper and more auditable answer. Recorded so the absence is a decision,
    own point estimate** — which alone would have caught the Total OS row here.
 3. **Re-derive the group publication counts** (137/64, carried forward from 2026-08-11) at the next
    wave rather than carrying them a third time.
+
+---
+
+## 2026-09-09 · `scientist-b`, wave 4 of `AQEILAN-FT-B-001`
+
+**Session shape:** one item — pay the wave-3 reading debt on PMID 38499540 by minting a manifest
+and a receipt, re-verifying rather than inheriting. `27551470` deliberately **not started**.
+
+### Gap identified
+
+**A declared-effort flag can improve between two edits of the same manifest, and nothing in this
+repository would notice.** `deepdive_manifest.py` checks that `multihop.performed` is *present* and
+well-shaped. It has no opinion about whether the value is *earned*, and it cannot have one: it sees
+one manifest at one instant, with no access to what the previous version claimed. The strict
+validator returned **PASS twice** on a manifest in which I had flipped `multihop.performed` from
+`false` to `true` while performing no multi-hop work at all.
+
+This is the same shape as `<fig\b` matching `<fig-count>`: **a plausible predicate answering a
+different question from the one asked**, invisible to any check that only verifies the result is
+well-formed — because the result *is* well-formed.
+
+| Candidate | Kind | Gap | Value | Cost | Risk | Verdict |
+|---|---|---|---|---|---|---|
+| `manifest_flag_drift.py` — effort-flag drift over git history | proposed internal | this gap | 3 | 1 | 1 | **ADOPT** — built, below |
+| A `.pptx` branch in `_artifact_text` + a binary supplement kind | internal, harness | the §7 gap, now wider | 3 | 2 | 2 | **REGISTERED, not built** — see below |
+| Enforcing flag-drift as a validator BLOCK | internal gate | this gap | 2 | 2 | 3 | **SKIP** — a detector and its gate must not land together; the first production run is what tells you the rule is wrong, and here it did, twice |
+
+### Mandatory Micro-Upgrade
+
+- **Type:** NEW INTERNAL CHECK + regressions.
+- **What improved today:** `framework/scripts/manifest_flag_drift.py` with
+  `test_manifest_flag_drift.py` (**18/18 PASS**). It reads a manifest's own git history and reports
+  every *monotonic self-improvement* of a declared-effort flag (`multihop.performed`,
+  `group_assessment.performed`, `field_density.performed`, `corpus_crossquery.performed`,
+  `retraction_check.performed`, and `verbatim_locators.waived` turning off), annotated with whether
+  the author wrote anything in that block in the same edit. Read-only, advisory, blocks nothing.
+  **Disease- and gene-agnostic:** it names no gene, disease or model.
+- **Why proportionate:** it mechanises exactly the defect this session's own self-evaluation caught
+  by hand, and which no machine check in the repository could see.
+- 🔴 **It was corrected twice by its own production runs, and that is the part worth keeping.**
+  - **v1** stayed silent whenever a note *existed* in the block. The `multihop` block of
+    `PMID38499540.json` already carried a month-old note about reference numbering, so v1 returned
+    **PASS on the exact edit it was written to catch** — while passing 11/11 of its own unit tests.
+  - **v2** required the note to be *new or changed* in that revision. The motivating commit had
+    changed one — about the **reference count**, not about the flag. **v2 also returned PASS.**
+  - **v3 stopped suppressing and started annotating.** No string test can decide whether a note is
+    *about* a flag, and tightening one until it caught this case would have manufactured false
+    positives that teach people to ignore the output. The design changed instead of the threshold.
+  - Both failures are preserved as regressions (`test_a_PREEXISTING_note_does_NOT_silence_it`,
+    `test_a_stale_note_does_not_count_as_acknowledgement`) so neither can return silently.
+- **First corpus run:** 71 manifests scanned, **3 drifts, 1 unaccompanied by any note** — a usable
+  signal-to-noise ratio rather than a wall of findings. Two of the three are on other actors'
+  manifests (`PMID24550385`, `PMID42128308`) and were **reported, not edited**.
+
+### Registered and deliberately NOT built
+
+**The `.pptx` gap, and it is wider than wave 3 recorded.** Wave 3 registered that
+`_artifact_text` has no `.pptx` branch. Wave 4 found the more basic obstruction: `ARTIFACT_KINDS`
+is `{article_binary, article_text, supplement_text, figure, table}` and has **no binary supplement
+kind**, so a `.pptx` is declarable only as `supplement_text` — which its own text verification then
+refuses. The containers are therefore not merely unreadable, they are **undeclarable**.
+Consequence, measured on this paper: the single most consequential sentence of the whole reading —
+the authors' note that the t-tests were computed on *fields* and not on *mice* — is carried in the
+dossier only, and is **not** mislabelled as a `figure`. **Judged fresh and still not built**: not
+for lack of budget, but because the fix needs a schema decision (what kind a binary supplement is)
+and this session had already learned twice, in one afternoon, that a rule written to catch the case
+in front of you gets its tests written to match it.
+
+### Import/Audit Notes
+
+- **No external repository, API key, paid service or sensitive-data flow was introduced.**
+- No canonical current file was touched; no `BATCH_COMMIT`.
+- Environment changed in this deployment's favour since wave 3: `tool_preflight.py` reports **6/6**
+  tools present (`fitz`, `numpy`, `pdftotext`, `pdftoppm`, `pdfimages`, `git`, `flock`), and `fitz`
+  plus `numpy` are what made this wave's independent re-measurement of Fig 3D possible at all.
+
+### Next Micro-Step
+
+1. **Do not gate on flag drift yet.** Let it run advisory across a few waves first; a detector that
+   was wrong twice in its first hour has not earned a BLOCK.
+2. **Adjudicate the two reported drifts** on `PMID24550385` and `PMID42128308` with their authors —
+   both are probably legitimate multi-hop work, which is exactly why the tool asks rather than accuses.
+3. **The `.pptx` item needs a schema decision first** (a binary supplement kind), not more code.
