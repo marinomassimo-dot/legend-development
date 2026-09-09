@@ -1,0 +1,297 @@
+{
+ "schema_version": 2,
+ "pmid": "21731849",
+ "doi": null,
+ "receipt": "FTR-20260909-21731849-01",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID21731849.md",
+  "disease-models/wwox/research/commit_candidates/CC-20260909-21731849-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": true,
+   "reason": "The reading route; the M0-M5 pipeline of the standing brief is its structure."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not reached. Europe PMC fullTextXML 404s and PMC E-utilities returns abstract-only, but the Europe PMC pdf=render route returned the complete 10-page article directly. The cascade this skill runs was unnecessary."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "NOT TRIGGERED. Re-determined for this paper rather than inherited from paper 1: the 18 consolidated baseline claims are all WWOX-DEE neurobiology, none concerns osteosarcoma, RUNX2 or bone. This source is a REVIEW, so under epistemic_discipline it cannot be primary evidence for a claim in any case, and it creates no claim link. The one canonical surface it bears on is the qualification note under CLAIM 036, Status in observation."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined with a reason. A review contributes no new measurement to mine; its two figures are one republished primary panel and one single-patient exemplar. The discovery value of this reading is a citation-fidelity result, which belongs in the dossier and the CLAIM 036 note, not in the discovery ledger as a mechanistic lead."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Declined. No therapeutic lever matures here; the review proposes WWOX as a prognostic marker in osteosarcoma, which is T3 toward the reference genotype and carries no molecule, dose or endpoint."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "Declined. No molecule is promoted; BLOCK-1 has no object."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 137,
+  "publications_on_gene": 64,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "ARTICLE TYPE IS A REVIEW; research_type below classifies the GROUP capability, not this article. Del Mare, Kurek, Stein, Lian and Aqeilan — the SAME group as PMID 20530675, with Kurek the first author of that primary and Aqeilan senior on both. Counts carried forward from the repository measurement of 2026-08-11 and not re-derived. Two consequences, and they pull in opposite directions. This is NOT an independent review: it is the authors summarising their own primaries, so it corroborates nothing by agreement and its agreement with ref 23 has no evidential weight whatever. But it is exactly the right instrument for a CITATION-FIDELITY test, because the same people are restating results this repository has now read in full, so any drift is authorial rather than a misreading by a third party. Primary for WWOX, NOT primary for the WWOX-DEE clinical phenotype. As a REVIEW it is a secondary source and cannot be primary evidence for any claim (epistemic_discipline); every number in it is weighted as a pointer to its cited primary, never as a measurement."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX",
+    "count": 707,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND osteosarcoma",
+    "count": 28,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND RUNX2",
+    "count": 12,
+    "source": "PubMed ESearch, 2026-09-09"
+   }
+  ],
+  "note": "Measured in the same session as PMID 20530675 and shared with it. In a 28-record intersection this review is a substantial fraction of the secondary literature, which is why the drift it introduces matters more than a review in a large field would."
+ },
+ "multihop": {
+  "references_enumerated": 63,
+  "gene_direct_refs_in_source": [
+   "17360458",
+   "18487609",
+   "20530675",
+   "19708029",
+   "11572989",
+   "10786676",
+   "19936220",
+   "17803050",
+   "23254685"
+  ],
+  "resolved": [
+   "17360458",
+   "18487609",
+   "20530675",
+   "19936220",
+   "17803050"
+  ],
+  "queued": [],
+  "note": "63 references enumerated from the reference list. THE HOPS THAT MATTER ARE ALREADY READ IN THIS REPOSITORY, which is what makes this reading a fidelity test rather than a summary: ref 20 = PMID 17360458 (the ~30% incidence, complete receipt), ref 23 = PMID 20530675 (read to completion earlier in THIS session, complete receipt FTR-20260909-20530675-01), ref 24 = PMID 18487609 (the WWOX-RUNX2 premise, complete receipt), ref 36 = PMID 19936220 = PAPER 057 (Ludes-Meyers, the 0/9 osteosarcoma negative, complete receipt) and ref 47 = the lde/lde rat = PAPER 058/059 (complete receipts). Five of the review key sources are read in full, so each of its restatements was checkable against the source rather than taken on trust. Nothing is queued from this reading: a review generates no new reading debt of its own."
+ },
+ "corpus_crossquery": {
+  "query": "Does this review restate PMID 20530675 and the rodent osteosarcoma negatives faithfully, and does it bear on the conflict CLAIM 036 records?",
+  "hits": 4,
+  "note": "Four surfaces answered. claim_registry_current.md CLAIM 036 records 'Juvenile osteosarcoma remains conflicting' across PAPER 057/075/078 — this review is where that conflict is explicitly disposed of in the literature, by attributing the negatives to detection insensitivity without test. paper_registry_current.md and literature_tracking_log_current.md hold PAPER 057 (PMID 19936220 = this review ref 36) and PAPER 058/059 (the lde rat = ref 47), both read in full, so both sides of the disposal are available in the repository. The fulltext receipt ledger supplied the five resolved hops. No consolidated baseline claim is touched."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "CLEAN. PubMed efetch for PMID 21731849 on 2026-09-09 returns no CommentsCorrections element of any RefType; PublicationType is Review plus Journal Article. Europe PMC core confirms pubTypeList review-article / Journal Article, no DOI assigned by the publisher, PMC3124638, isOpenAccess N."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID21731849_DelMare2011_AJCR.pdf",
+   "sha256": "c0b1bddf3a66907821bfcc3cdacf13b98390342bc3297d8c2a57cdce22cf68d8",
+   "kind": "article_binary",
+   "note": "10-page publisher PDF via the Europe PMC pdf=render route, 2026-09-09. 🔴 NO STRUCTURED SURFACE EXISTS FOR THIS ARTICLE and the absence is recorded rather than implied: Europe PMC fullTextXML returns 404, NCBI efetch (db=pmc, PMC3124638) returns front matter and abstract with NO <body>, <sec>, <fig> or <ref> element, and the Europe PMC article page is JavaScript-driven. Under rule 5d this paper therefore belongs to the PDF-only class."
+  },
+  {
+   "path": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+   "sha256": "340ecd9a2b228f481c0ffbaa756af8457cc8528b05a64e65709bc1f9ccb28f88",
+   "kind": "article_text",
+   "note": "Deterministic extraction with pdftotext -nopgbrk, WITHOUT -layout. The choice is deliberate and is the difference between a true and a false quote: this is a two-column article, and -layout interleaves the two columns line by line, which manufactures adjacencies that do not exist on the page — the sentence carrying the 100% claim is split across a column break and reads, under -layout, with the page number injected into it. Reading-order extraction restores the true sentence order, and the load-bearing passage was additionally verified against the rendered page (page 4 at 150 dpi) before being quoted. SCREENED before use: zero C0 control characters, zero U+FFFD, and framework/scripts/deepdive_manifest.py's own _refuse_suspect_surface returns no refusal. Operators are present where the article uses them (> once in 'a genomic locus of >1 megabase', U+2212 twice in 'Wwox−/−', μ three times); the absence of < and ± is genuine, because this review reports no P values. KNOWN EXTRACTION LIMIT, declared rather than repaired: hyphens at line breaks are joined without the hyphen ('Wwoxdeficient', 'paraffinembedded'), so snippets were selected to avoid those spans rather than hand-corrected."
+  },
+  {
+   "path": "files/figures/PMID21731849/page03_Fig1.png",
+   "sha256": "2f33762888d2f690ddae21b1678c21be36695217276aa61c63557799d4fa97dd",
+   "kind": "figure",
+   "note": "Figure 1 as rendered on page 3 at 150 dpi from the fingerprinted PDF; regenerable with pdftoppm -r 150 -png."
+  },
+  {
+   "path": "files/figures/PMID21731849/page05_Fig2.png",
+   "sha256": "b2cfaed896926b0b22cf9c68ff426c5877fad81008d1c695d562a80238d19fb4",
+   "kind": "figure",
+   "note": "Figure 2 as rendered on page 5 at 150 dpi from the fingerprinted PDF; regenerable with pdftoppm -r 150 -png."
+  }
+ ],
+ "figure_extractions": {
+  "rule": "Two figures present in the article, two inspected as images — 2/2, neither carried on its caption. The denominator was established by reading the rendered pages, not by counting figure citations in the text. There is no supplement (Europe PMC hasSuppl=N), so the supplementary denominator is zero by fact and not by omission. Because the article exists only as a PDF, the figures are rendered from the fingerprinted binary rather than fetched as deposited rasters, and the render recipe is declared so the images regenerate from a reader own copy.",
+  "figures": [
+   {
+    "label": "Figure 1",
+    "artifact": "files/figures/PMID21731849/page03_Fig1.png",
+    "dimensions": "page 3 at 150 dpi",
+    "inspected": true,
+    "note": "Panel B is a republication of Supplemental Figure S1B of PMID 20530675, which was read from pixels earlier in this same session — which is what makes the missing BN comparator observable."
+   },
+   {
+    "label": "Figure 2",
+    "artifact": "files/figures/PMID21731849/page05_Fig2.png",
+    "dimensions": "page 5 at 150 dpi",
+    "inspected": true
+   }
+  ]
+ },
+ "verbatim_locators": {
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC core record for EXT_ID:21731849, queried 2026-09-09: inEPMC=Y, PMCID PMC3124638, hasPDF=Y, hasSuppl=N, isOpenAccess=N, doi=None. The record is indexed and externally addressable as PMC3124638 so these quotes are checkable by a third party, but the publisher assigned no DOI and the article is outside the open-access subset, which is why no structured full-text surface is retrievable.",
+  "entries": [
+   {
+    "proposition": "The review states complete osteosarcoma penetrance as a flat fact, and broadens the window: its primary (ref 23, PMID 20530675) says 'by 18 days-of-age' after examining mice at 14-18 days, whereas 'prior to their death' implies eventual penetrance over the whole ~4-week lifespan.",
+    "snippet": "100% of the post-natal mice prior to their death.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Importance of WWOX in osteosarcoma, p588 (sentence spans the column break; verified against the rendered page)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The review disposes of the two independent rodent negatives by attributing them to detection insensitivity — offered as the likely cause, with no test, no re-examination of those animals and no comparison of methods.",
+    "snippet": "Analyses by others of other Wwox null rodent models failed to detect osteosarcomas [36, 47], most likely due to the lack of a sensitive detection method such as μCT to find these tiny tumors.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Importance of WWOX in osteosarcoma, p588",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The figure the 100% claim replaced: the group's own earlier incidence, by a different method, in the same model.",
+    "snippet": "mice develop spontaneous tumors by analysis of histologic sections of",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Importance of WWOX in osteosarcoma, p588 (the sentence reads '~30% of Wwox-deficient mice...' on the page; the extraction joins the line-break hyphen, so the quoted span deliberately avoids that word)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CITATION FIDELITY, POSITIVE: the review transmits its primary's central human negative accurately and without softening it.",
+    "snippet": "an inverse relationship between WWOX and RUNX2 was not evident in paired human tumors as in osteosarcoma cell lines",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Molecular function of WWOX in osteosarcoma, p590",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The Conclusions merge two different measurements: DELETION, which the same review reports at 3/10 (30%) by CGH, and PROTEIN LOSS, reported at up to 60% by immunohistochemistry. The mechanism word 'deleted' inherits the prevalence of the other assay.",
+    "snippet": "WWOX is consistently deleted in the majority of human osteosarcomas",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Conclusions and future directions, p590",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The actual deletion evidence, kept correct in the body: a minority, in ten samples.",
+    "snippet": "reported deletion of WWOX in 3 of 10 (30%) of osteosarcoma samples as assessed by CGH",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Importance of WWOX in osteosarcoma, p588",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The protein-loss figure, rounded upward from the 58% its own primary reports.",
+    "snippet": "occurring in up to 60% of clinical samples",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Importance of WWOX in osteosarcoma, p588",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The denominator is relabelled: 42%/58% is the split over all 83 osteosarcoma specimens in the primary (biopsies, resections and metastases from 51 patients), not over primary tumours, for which the primary's own Table 1A gives 20/34 = 59%.",
+    "snippet": "Our analysis specifically found that normal WWOX expression is detected in 42% of primary tumors, while 58% exhibited absent or reduced WWOX immunoreactivity",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Importance of WWOX in osteosarcoma, p588",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CITATION FIDELITY, POSITIVE: the RUNX2 prevalence figures transmit exactly — 60%, 16% and 8/11 = 73% rounded to ~70% — against Table 1B of the primary.",
+    "snippet": "We observed that 60% of primary tumor biopsies, 16% of postchemotherapeutic resections and ~70% of metastatic tumors were positive for RUNX2 staining.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Molecular function of WWOX in osteosarcoma, p590",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A modality stretch: the primary reports reduced or absent WWOX in 4 of 9 paired metastases — fewer than half — which 'often' overstates.",
+    "snippet": "tumor lung metastases often exhibit reduced WWOX levels relative to the primary tumors",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Importance of WWOX in osteosarcoma, p588",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The prognostic proposal is strengthened relative to its source. The primary states of the same observation that 'our sample size is too small to assess the significance of this observation' and that it 'speculates'; no new data appeared between the two papers.",
+    "snippet": "Independent of tumor necrosis, WWOX expression might serve as a useful prognostic marker",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Conclusions and future directions, p591",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The conditional allele is announced here as unpublished; the repository has since read its published form (PMID 23254685).",
+    "snippet": "conditional Wwox knockout mice were generated to study the WWOX function in both normal and cancer tissues [unpublished data]",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Importance of WWOX in osteosarcoma, p588",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CORROBORATES the design constraint CLAIM 036 records: the authors themselves state that the systemic null confounds the bone question and that a bone-restricted deletion is what would answer it.",
+    "snippet": "specific ablation of Wwox in mouse bone without the compound effects of total Wwox deletion",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Conclusions and future directions, p591",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A quantitative result appears only in a review figure caption, with no citation and no data shown. Runx2 upregulation in Wwox-null femurs is attributable to ref 24 elsewhere in the text; ErbB4 and Ezrin upregulation in femurs is attributable to nothing here.",
+    "snippet": "Real-time PCR analysis of RNA isolated from these femurs revealed upregulation of Runx2, ErbB4 and Ezrin levels.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Figure 1 caption, panel B, p587",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A clonal-origin inference drawn in a caption from one patient's staining pattern, with no clonality analysis anywhere in the review.",
+    "snippet": "suggesting it originated from a chemotherapy-resistant clone",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID21731849_DelMare2011_AJCR.txt",
+    "anchor": "Figure 2 caption, p589",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "PANEL SIDE, QUALIFYING the review's own human negative: the only new human figure in this review is a single patient displaying the perfect inverse WWOX/RUNX2 pattern across all three timepoints — the relationship the same review states was not evident in the paired cohort. The caption is honest (it says 'an Osteosarcoma Patient's Tumor', singular); the visual takeaway is the opposite of the cohort result.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 2, read from files/figures/PMID21731849/page05_Fig2.png, rendered from page 5 of the fingerprinted PDF with pdftoppm -r 150. A 3x3 grid: rows Primary Biopsy, Post-chemotherapy Resection, Metastasis Resection; columns H&E, WWOX, RUNX2. Primary biopsy: WWOX panel is blue counterstain with no chromogen, RUNX2 panel carries dense brown nuclear staining. Post-chemotherapy resection: WWOX panel is strongly brown, RUNX2 panel is blue with essentially none. Metastasis: WWOX blue with none, RUNX2 densely brown. Every one of the three timepoints shows a clean reciprocal pattern, and n = 1 patient. No cohort figure, no counts and no statistics appear in this review.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID21731849/page05_Fig2.png",
+    "anchor": "Figure 2, p589, rendered at 150 dpi",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[3]",
+    "qualifies_needle": "was not evident in paired human tumors"
+   },
+   {
+    "proposition": "PANEL SIDE: the republished histology has lost the normal-bone comparator its primary carried. In Supplemental Figure S1B of PMID 20530675 the same toluidine-blue femur section is expanded into two panels, BT (bone tumour) and BN (normal bone). Here both lower panels are tumour and BN is gone, so the figure that demonstrates the tumour no longer shows the tissue it is abnormal against.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1, panel B, read from files/figures/PMID21731849/page03_Fig1.png, rendered from page 3 of the fingerprinted PDF with pdftoppm -r 150. An upper whole-femur toluidine-blue section carries one red box; two lower panels are shown beneath it, the right one labelled BT in red with a red box, the left an enlargement of tumour tissue. No panel is labelled BN and no normal-bone field is displayed. The caption describes both lower panels as tumour.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID21731849/page03_Fig1.png",
+    "anchor": "Figure 1, panel B, p587, rendered at 150 dpi",
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "PANEL SIDE: the osteopenia claim is displayed as three radiographs that are not matched for scale, with no scale bar, no exposure statement and no quantification in the figure — the µCT numbers behind it live in the cited primary, not here.",
+    "snippet": "[figure attestation — pixels cannot be quote-matched] Figure 1, panel A, read from files/figures/PMID21731849/page03_Fig1.png at 150 dpi. Three femoral radiographs labelled WT, HET and KO. WT and HET appear closely similar in cortical density and trabecular definition; the KO image is visibly a different size and framing from the other two and shows a more radiolucent diaphysis with a broadened metaphysis. No scale bar, no magnification statement and no measured value appears anywhere in the panel.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID21731849/page03_Fig1.png",
+    "anchor": "Figure 1, panel A, p587, rendered at 150 dpi",
+    "panel_text_relation": "panel_only"
+   }
+  ]
+ }
+}
