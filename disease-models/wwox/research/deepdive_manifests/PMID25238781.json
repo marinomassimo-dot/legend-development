@@ -1,0 +1,394 @@
+{
+ "schema_version": 2,
+ "pmid": "25238781",
+ "doi": "10.1007/s00018-014-1716-y",
+ "receipt": "FTR-20260909-25238781-01",
+ "landing": [
+  "FTR-20260909-25238781-01",
+  "disease-models/wwox/research/fulltext_dossiers/PMID25238781.md",
+  "full_text_queue_current",
+  "batch_queue"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "M0 duplicate-work gate re-run per paper on 2026-09-09 rather than inherited: fulltext_receipts.py status --pmid 25238781 returned an EMPTY history and exit 1. No receipt of any kind, so reread_reason is first_read and prior_receipt is null. The PMID appears in no other actor's lot."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "The cascade was run by hand and is recorded, so the skill had nothing left to do. Europe PMC declares isOpenAccess: N and its fullTextXML endpoint returns HTTP 503 on three attempts; NCBI efetch db=pmc returns metadata carrying the comment 'The publisher of this article does not allow downloading of the full text in XML form'. THE ABSENCE OF A STRUCTURED XML SURFACE IS THEREFORE RECORDED AS AN ABSENCE, per rule 5d, and not passed over. The free PMC HTML rendering carries the complete text and is the declared text surface; the publisher PDF is fingerprinted as article_binary and no text locator is drawn from it."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "🔴 THRESHOLD CHECKED AND NOT MET, recorded so the non-trigger is auditable. 21 claims carry `consolidated baseline`; no claim record cites this PMID; this reading proposes no change to any claim's Status and no MAJOR working-model bump. The reading's principal finding is about the FIELD's taxonomy and a measured absence, which narrows nothing and corroborates nothing — it explains why a body of literature is silent, which is not a claim about WWOX biology."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "Declined on the evidence. The document reports no measurement and names no molecule, biomarker or pathway intervention; its content is a map of nine other papers. The correct product is the nine-chapter resolution recorded under multihop, which is what a discovery pass would have had to produce anyway and which is better placed in the queue than in the discovery ledger."
+  },
+  {
+   "skill": "legend-proband-priority-matrix",
+   "used": false,
+   "reason": "Nothing here is a therapeutic lever. What the reading yields is a READING ORDER over nine papers, which is recorded directly in multihop.queued with reasons, and a matrix would add a score without adding information."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No hypothesis supported by this document would be attributable to it rather than to the chapters it summarises, of which none is read."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is named anywhere in the document."
+  },
+  {
+   "skill": "legend-session-self-eval",
+   "used": true,
+   "reason": "Run at the end of the wave and BEFORE any closing report."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 137,
+  "publications_on_gene": 65,
+  "counts_measured": "PubMed esearch, 2026-09-09: 'Aqeilan RI[au]' = 137, 'Aqeilan RI[au] AND WWOX' = 65. Sole author of this document.",
+  "research_type": "experimental_lab",
+  "research_type_note": "Classified on the evidence the laboratory can produce — mouse conditional genetics, cell-line biochemistry, ChIP, foci imaging — not on this document, which produces none. Here the author acts as EDITOR, and the authority at stake is over selection and summary of nine other groups' work.",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "primary_group_note": "🔴 PRIMARY FOR THE GENE, NOT FOR THE DISEASE, AND IN THIS DOCUMENT THE ROLE IS EDITORIAL. R I Aqeilan is the principal WWOX cancer-biology investigator and is here the guest editor introducing nine chapters — one of which, chapter 8, is his own group's. That single overlap is ordinary for a guest-edited issue and is recorded for weighting: eight summaries are an editor's account of others' work, one is an author's account of his own.",
+  "weighting": "OBSERVATIONS: none exist in this document. EDITORIAL JUDGEMENT about what the field's important questions are, and about the state of maturity of the field in December 2014: weighted HIGH, because there is no better-placed source for it and because the statements are dated and checkable. SUMMARIES OF THE NINE CHAPTERS: weighted at ZERO as evidence about biology — each is a pointer to a paper that must be read, and none of the nine is held in this ledger at any depth. TRANSFER to the WWOX-DEE genotype class: none available, and the reading measures why."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "\"Cell Mol Life Sci\"[jour] AND 71[volume] AND 2014[dp] AND (fragile[ti] OR FHIT[ti] OR WWOX[ti] OR replication[ti] OR \"large genes\"[ti])",
+    "count": 10,
+    "date": "2026-09-09",
+    "route": "PubMed E-utilities esearch — this introduction plus exactly the nine chapters it maps"
+   },
+   {
+    "query": "\"common fragile site\" AND cancer",
+    "count": 227,
+    "date": "2026-09-09",
+    "route": "PubMed E-utilities esearch"
+   },
+   {
+    "query": "FRA16D",
+    "count": 154,
+    "date": "2026-09-09",
+    "route": "PubMed E-utilities esearch"
+   },
+   {
+    "query": "WWOX AND FRA16D",
+    "count": 119,
+    "date": "2026-09-09",
+    "route": "PubMed E-utilities esearch"
+   }
+  ],
+  "note": "The first query is the useful one and it is a completeness check rather than a density measure: it returns the introduction plus exactly nine articles, matching the nine contributions the text declares. The issue is enumerated in full, so the multihop below is complete rather than a sample. Against the 154 FRA16D records and 119 WWOX-AND-FRA16D records, this issue's dedicated WWOX chapter (PMID 25245215) is the field's own designated summary of the gene — and it is unread here."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 11,
+  "enumeration_route": "Reference list parsed from the fingerprinted PMC HTML: 11 list items with ids CR1-CR11, none missing, and every one carrying a resolvable PubMed link. All 11 resolved: 5837920 (Dekaban 1965), 6430783 (Glover 1984), 17608616 (Durkin & Glover 2007), 21376230 (Hanahan & Weinberg 2011), 20177397 (Negrini 2010), 20164920 (Beroukhim 2010), 20164919 (Bignell 2010), 15829956 (Bartkova 2005), 15829965 (Gorgoulis 2005), 21641882 (Dereli-Oz 2011), 18323444 (Halazonetis 2008).",
+  "reference_composition_note": "🔴 THE BIBLIOGRAPHY MATCHES THE GAP THE TEXT DECLARES. All eleven references are about fragility mechanisms, replication stress, DDR barriers or cancer copy-number landscapes. NOT ONE is about the function of a fragile-site GENE PRODUCT — which is precisely what the text says 'little light is shed on'. The document's own reference list is evidence for its own diagnosis of the field.",
+  "gene_direct_refs_in_source": [],
+  "chapters_resolved": [
+   {
+    "chapter_as_numbered_in_text": 1,
+    "pmid": "25297918",
+    "pages": "4495-506",
+    "authors": "Ozeri-Galai E, Tur-Sinai M (Kerem group)",
+    "topic": "genetic and epigenetic factors governing CFS instability",
+    "printed_position": 2
+   },
+   {
+    "chapter_as_numbered_in_text": 2,
+    "pmid": "25248392",
+    "pages": "4489-94",
+    "authors": "Le Tallec B, Koundrioukoff S (Debatisse group)",
+    "topic": "reconciling the different views of CFS instability",
+    "printed_position": 1,
+    "also": "ref 17 of PMID 27551470"
+   },
+   {
+    "chapter_as_numbered_in_text": 3,
+    "pmid": "25300511",
+    "pages": "4601-15",
+    "authors": "Gao G, Smith DI",
+    "topic": "very large CFS genes",
+    "printed_position": 9
+   },
+   {
+    "chapter_as_numbered_in_text": 4,
+    "pmid": "25216703",
+    "pages": "4507-17",
+    "authors": "Franchitto A, Pichierri P",
+    "topic": "replication fork recovery and CFS stability",
+    "printed_position": 3
+   },
+   {
+    "chapter_as_numbered_in_text": 5,
+    "pmid": "25238783",
+    "pages": "4545-59",
+    "authors": "Barlow JH, Nussenzweig A",
+    "topic": "replication initiation, genome instability, ERFS",
+    "printed_position": 5
+   },
+   {
+    "chapter_as_numbered_in_text": 6,
+    "pmid": "25238782",
+    "pages": "4519-44",
+    "authors": "Georgakilas AG, Tsantoulis P (Gorgoulis group)",
+    "topic": "CFS as structural domains or functional units",
+    "printed_position": 4,
+    "also": "ref 6 of PMID 27551470 — the 'sensors' proposal"
+   },
+   {
+    "chapter_as_numbered_in_text": 7,
+    "pmid": "25283145",
+    "pages": "4577-87",
+    "authors": "Waters CE, Saldivar JC (Huebner group)",
+    "topic": "FHIT as tumour suppressor and genome caretaker",
+    "printed_position": 7,
+    "also": "ref 16 of PMID 27551470"
+   },
+   {
+    "chapter_as_numbered_in_text": 8,
+    "pmid": "25245215",
+    "pages": "4589-99",
+    "authors": "Aqeilan RI, Abu-Remaileh M, Abu-Odeh M",
+    "topic": "WWOX: tumour suppression and genomic stability",
+    "printed_position": 8,
+    "also": "ref 10 of PMID 27551470, AND unclaimed in this actor's own lot"
+   },
+   {
+    "chapter_as_numbered_in_text": 9,
+    "pmid": "25231336",
+    "pages": "4561-75",
+    "authors": "Savelyeva L, Brueckner LM",
+    "topic": "molecular characterisation of CFS to discover cancer susceptibility genes",
+    "printed_position": 6
+   }
+  ],
+  "chapter_ordering_finding": "🔴 The introduction's chapter numbers map onto the issue's printed page order as 2,1,9,3,5,4,7,8,6 — seven of nine out of place, and the contribution called 'Chapter 3' is the LAST article in the issue. Small, and reported as small: it changes no scientific content. Recorded because a reading queue built from these numbers would order the special issue wrongly, and the numbers look authoritative because the editor wrote them.",
+  "resolved": [
+   {
+    "pmid": "27551470",
+    "role": "the other wave-5 paper by the same senior author, thirteen months later",
+    "status": "complete_fulltext_read, FTR-20260909-27551470-01",
+    "use": "the cross-document framing comparison at entries[5]; four of its seventeen references are chapters of this issue"
+   }
+  ],
+  "queued": [
+   {
+    "pmid": "25245215",
+    "why": "chapter 8 — the field's own dedicated WWOX chapter, and this reading establishes it as the single most valuable unread item in this actor's lot. ALREADY IN AQEILAN-FT-B-001, unclaimed."
+   },
+   {
+    "pmid": "25238782",
+    "why": "chapter 6 — the paper this introduction reports as having concluded against the passive view, and ref 6 of PMID 27551470. The pivot of the cross-document finding."
+   },
+   {
+    "pmid": "20164920",
+    "why": "Beroukhim 2010 — carries the recurrent-focal-deletion premise in BOTH wave-5 documents. No receipt of any kind."
+   },
+   {
+    "pmid": "20164919",
+    "why": "Bignell 2010 — the same premise, same status."
+   },
+   {
+    "pmid": "25283145",
+    "why": "chapter 7 — FHIT, the older and better-evidenced precedent for the CFS-gene-product-as-caretaker argument that WWOX is the junior case of."
+   }
+  ],
+  "resolution_note": "Both layers were enumerated completely: 11 of 11 references resolved to PMIDs, and 9 of 9 chapters resolved to PMIDs with page ranges. NONE of the nine chapters is held in this ledger at any depth, and neither is any of the eleven references. This document is therefore a fully mapped and entirely unread neighbourhood — which is the honest description of what a complete read of it buys."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does this corpus hold anything from the CMLS 71(23) 2014 common-fragile-site special issue, whose nine chapters this document maps?",
+  "route": "The nine chapter PMIDs resolved from PubMed, then joined against disease-models/wwox/registries/fulltext_read_receipts.jsonl by study_id.pmid, 2026-09-09.",
+  "hits": 0,
+  "finding": "🔴 ZERO OF NINE. The field's own designated summary of common fragile sites — including its dedicated WWOX chapter and its dedicated FHIT chapter — is entirely unread in this repository, and one of the nine has been sitting in this actor's own lot since the 2026-09-08 dispatch. The value of reading this two-page introduction is precisely that it converts that blind spot from unknown into enumerated: nine PMIDs, nine page ranges, nine topics, with the two that matter most named.",
+  "second_query": "Does any claim, commit candidate or registry record in this repository currently rest on PMID 25238781?",
+  "second_query_route": "grep over disease-models/wwox/registries/ and disease-models/wwox/research/commit_candidates/, 2026-09-09.",
+  "second_query_hits": 0,
+  "second_query_finding": "No. Nothing in the model rests on it, which is why this reading changes no claim."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-09",
+  "route": "PubMed esummary and the Europe PMC core record for 25238781, run this session.",
+  "result": "No retraction, no expression of concern, no erratum. Europe PMC core reports isOpenAccess N, inPMC Y, hasPDF Y, hasSuppl N. Publication types: review-article, Review, Journal Article — see entries[1] for why the Review tag over-describes this document.",
+  "corrected_items": [],
+  "corrected_items_basis": "No erratum exists for this article, so the scope list is empty by fact and not by omission.",
+  "hold": false
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+   "sha256": "bfc7db1779f04dd19c933695c61720fe4f591e262ab98c5af02810e2d47059b9",
+   "kind": "article_text",
+   "note": "PMC HTML rendering of PMC11113964, fetched 2026-09-09. THE DECLARED TEXT SURFACE, and the choice is forced rather than preferred: no XML surface exists for this article (Europe PMC isOpenAccess N and fullTextXML 503 on three attempts; NCBI efetch returns the publisher's refusal comment). Validator surface 14,042 characters, ZERO C0 controls. Element counts taken from this file: 0 <figure>, 0 <table>, 0 supplementary markers, 11 reference list items CR1-CR11."
+  },
+  {
+   "path": "files/fulltext/PMID25238781_Aqeilan2014_PMC.pdf",
+   "sha256": "63ccaf97867fa8b290d147c02cee3834656605a82d337db83612ff418e90cd8c",
+   "kind": "article_binary",
+   "note": "🔴 FINGERPRINTED AND DELIBERATELY NOT USED FOR A SINGLE TEXT LOCATOR, WITH THE REASON MEASURED RATHER THAN CITED. 2 pages, and pdfimages lists ZERO images on either page, which is the second independent confirmation that this document has no figure. Its text layer carries SEVEN U+FB01 'ﬁ' ligatures where the page prints 'fi' — so 'finally' extracts as 'ﬁnally' — plus six ‘‘ double-single-quote pairs standing for a real double quote. These are PRINTABLE substitutions: a control-character screen sees none of them, and a quote drawn from this layer would fail a character-for-character match against the page for reasons that look like the reader's error. The defect was found by running a parity check between the two surfaces rather than by trusting either, and it is exactly the rule-5d family this repository has already paid for."
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC HTML acquired 2026-09-09 and screened by deepdive_manifest.py's own extractor before any snippet was chosen: 14,042 characters, zero C0 controls. Body proper, with the reference list separated off, is 7,211 characters. Every snippet below was verified to occur EXACTLY ONCE in the extracted surface before being written into this manifest. Parity against the independent PDF surface was checked and holds in substance; the only divergences are the seven ﬁ ligatures recorded on the article_binary.",
+  "abstract_anchoring_waived": "Not applicable and verified rather than assumed: the deposit contains NO abstract — zero occurrences of 'abstract' in any form in the HTML, and the article is a two-page editorial introduction that carries keywords but no abstract element. There is no abstract to anchor to and none that could contaminate a locator.",
+  "figure_coverage": {
+   "figures_present": 0,
+   "figures_with_locators": 0,
+   "coverage": "0/0",
+   "supplementary_figures_present": 0,
+   "supplementary_figures_with_locators": 0,
+   "denominator_basis": "Counted per artifact and per surface, and confirmed on two independent surfaces. HTML: 0 <figure> elements and 0 <table> elements. PDF: pdfimages lists NO image XObject on either of the two pages. The denominator is zero because the document genuinely contains no figure, not because a figure was skipped.",
+   "denominator_status": "known",
+   "budget_declared_before_reading": "No figure budget was set because the surface census performed before reading returned zero figures on both surfaces. Nothing was downgraded to captions_only: there are no captions, because there are no figures.",
+   "supplementary_gap": "NONE. Europe PMC core reports hasSuppl: N and the HTML carries zero supplementary markers. Coverage is supplementary: not_present by fact.",
+   "caption_census": {
+    "fig_in_body": 0,
+    "fig_in_article": 0,
+    "verdict": "NOT APPLICABLE — no figures exist on any surface, so the body-versus-article caption question has no object here.",
+    "why_it_is_recorded_here": "Recorded rather than omitted because the same field was populated for this wave's other paper (PMID 27551470, pure class 0 of 1) and an absent field would be indistinguishable from an unasked question."
+   }
+  },
+  "panel_text_relation_note": "No figure locator exists in this manifest and none could: the document has no figure on either surface. Every one of the 15 locators is `text_only` on the declared HTML text surface, and no coupled panel relation is asserted anywhere — which is the correct outcome, not a gap. The one visual-looking finding in this reading, the chapter-numbering mismatch, is a comparison between the article's text and PubMed page ranges, so it is anchored on TEXT locators (entries[12] and entries[13]) and is never dressed as a panel reading.",
+  "entries": [
+   {
+    "proposition": "WHAT THIS DOCUMENT IS, AND ITS SIZE. It is the EDITOR'S INTRODUCTION to a nine-chapter multi-author review of common fragile sites in Cellular and Molecular Life Sciences 71(23), pages 4487-4488 — TWO PAGES, single-authored by R I Aqeilan, who is also the author of chapter 8. Body of 7,211 characters. It contains no experiment, no figure, no table and no supplement; its content is a map of nine other papers plus a short history of the field.",
+    "snippet": "The present multi-author-review comprises nine contributions that cover all-important aspects of understanding CFS and some of their corresponding genes.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Body, paragraph 2",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE GENRE IS FIXED BY A DATE PAIR, AND IT CUTS BOTH WAYS ACROSS THIS WAVE. Received and accepted on the SAME DAY. That is the signature of an invited editorial introduction, not of an externally refereed review — and it is checkable rather than inferred. It matters because the metadata says otherwise: PubMed assigns publication types 'review-article, Review, Journal Article' and the PMC deposit carries article-type=\"review-article\". PubMed's Review tag OVER-describes a two-page editor's introduction. On this actor's other wave-5 paper, PMID 27551470, PubMed's bare 'Journal Article' UNDER-described an editorial that PMC deposits as one. TWO PAPERS, ONE WAVE, PUBLICATION-TYPE METADATA WRONG IN OPPOSITE DIRECTIONS — which is a standing caution for any triage that routes on pubtype.",
+    "snippet": "Received 2014 Aug 28; Accepted 2014 Aug 28",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Article metadata, publication history",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 PRINCIPAL FINDING OF THIS READING, AND IT IS ABOUT THE FIELD RATHER THAN ABOUT THIS PAPER. The document opens by dividing fragile sites in two and assigning HUMAN GENETIC DISORDERS to the RARE class and CANCER to the COMMON class. WWOX spans FRA16D, a COMMON fragile site; the genotype class this repository models is a Mendelian, recessively inherited human genetic disorder of WWOX. Under the taxonomy the field organises itself by, the WWOX germline disorder falls on the WRONG SIDE of the dichotomy that defines this entire literature. This is not a criticism of the sentence, which is a correct statement about fragile-site classification. It is the STRUCTURAL EXPLANATION for a measured absence — see the neuro screen recorded beside it — and it tells this repository something it can act on: the CFS literature is where WWOX's molecular biology lives, and it is organised in a way that guarantees the WWOX phenotype will not appear there.",
+    "snippet": "Rare fragile sites are seen in a small proportion of individuals, inherited in a Mendelian manner and are associated with human genetic disorders. In contrast, common fragile sites (CFS) are present in all individuals, represent the largest class of fragile sites and are largely involved in cancer.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Body, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE MEASUREMENT THAT MAKES THE PRECEDING FINDING MORE THAN A READING OF ONE SENTENCE. Screened over the 7,211-character body with the reference list separated off first: epilep 0, seizure 0, brain 0, CNS 0, WOREE 0, encephalopath 0, ataxia 0, intellectual 0, recessive 0, syndrome 0, germline 0, and 'neuro' 0 — LITERALLY ZERO ON ALL TWELVE. The two near-misses are 'patient', which occurs once and refers to Dekaban's 1965 irradiated woman, and 'inherit', which occurs once in the sentence quoted here about RARE fragile sites. This is the introduction to a nine-chapter review whose chapter 8 is entirely about WWOX, published in December 2014, by which time WWOX germline disease was described in the literature. The absence is total and it is structural, not accidental. It reproduces, on a second document and a different author, exactly the result this repository measured on PMID 24510053 (zero across the same term set over 38,845 characters).",
+    "snippet": "This “weak” region is known today as fragile site.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Body, paragraph 1 — the sentence that closes the historical framing, quoted as the anchor for a screen over the whole body",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE EDITOR NAMES THE GAP THAT IS EXACTLY THIS REPOSITORY'S LAYER. In 2014, the person best placed to know states that the GENE PRODUCTS of common fragile sites — as opposed to the fragility mechanisms — are under-studied. Eight of the nine chapters he then introduces are about mechanism, replication, timing or mapping; two are about a gene product (FHIT, WWOX). The sentence is worth keeping because it is a dated, first-hand statement of where the field's attention was NOT.",
+    "snippet": "Of note, little light is shed on the gene products of CFS and their role in tumor suppression and genomic instability.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Body, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 CROSS-DOCUMENT FINDING, AND IT ONLY EXISTS BECAUSE BOTH WAVE-5 PAPERS WERE READ. Here, in 2014, the editor reports chapter 6 as having CONCLUDED that CFS fragility is 'unlikely only a structural passive incident'. Thirteen months later the same senior author publishes PMID 27551470, which frames passive-versus-active as a live two-sided controversy — and cites this very chapter (Georgakilas, PMID 25238782) as its ref 6, for the 'sensors' proposal it builds on. STATED CAREFULLY, BECAUSE THE OVERCLAIM IS AVAILABLE AND WRONG: one special issue leaning one way does not settle a field controversy, and an author is entitled to present a question as open. What is recorded is the narrower fact — the framing shifted from 'concluded' to 'debatable' inside one author's own output across thirteen months, and the 2015 piece's own citation for the point is the chapter described here as having concluded it.",
+    "snippet": "It is finally concluded that fragility of CFS is unlikely only a structural “passive” incident but an event which might have a profound biological effect.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Body, Chapter 6 summary",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE EDITOR SUMMARISES HIS OWN GROUP'S CHAPTER AMONG THE NINE. Chapter 8 is PMID 25245215, authored by Aqeilan, Abu-Remaileh and Abu-Odeh — and the introduction that summarises it is single-authored by Aqeilan. This is ordinary practice for a guest-edited issue and is recorded for WEIGHTING, not as an impropriety: the summary of chapter 8 is an author's account of his own work and carries no independent editorial judgement, whereas the other eight summaries do. 🔴 OPERATIONALLY RELEVANT TO THIS REPOSITORY: PMID 25245215 is in this actor's own lot on AQEILAN-FT-B-001, unread and unclaimed, and this reading establishes that it is the single most valuable unread item in that lot — it is the field's dedicated WWOX chapter.",
+    "snippet": "In chapter 8, contributed by the Aqeilan group, the emerging roles of WWOX, product of FRA16D, in tumor suppression and genome stability are discussed.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Body, Chapter 8 summary",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WHAT CHAPTER 8 IS REPORTED TO CONCLUDE — RECORDED AS A POINTER, NOT AS EVIDENCE. This is a one-sentence restatement of an unread paper by that paper's own author. It is not a finding about WWOX and must not be entered as one; it is the specification of what PMID 25245215 will have to be checked against when it is read. Note the scope of the conclusion as stated: 'functionally required for cell homeostasis' and consequences for 'the neoplastic process' — nothing about development, differentiation or a non-neoplastic tissue.",
+    "snippet": "Authors conclude that these observations indicate that WWOX is functionally required for cell homeostasis and that its deletion has important consequences contributing to the neoplastic process.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Body, Chapter 8 summary",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE COMPARATOR GENE, AND THE ONLY OTHER CFS GENE PRODUCT THE ISSUE TREATS. FHIT at FRA3B is presented as the mature case of the argument WWOX is the junior case of — a CFS gene product framed as a genome 'caretaker'. Worth keeping because any argument this repository accepts about WWOX-as-caretaker has an older, better-evidenced precedent that can be checked independently: PMID 25283145, unread here.",
+    "snippet": "Waters and colleagues discussed the accumulative recent evidence suggesting FHIT as a genome ‘caretaker.’",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Body, Chapter 7 summary",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE FIELD'S OWN LOAD-BEARING GENOMIC PREMISE, AND IT IS THE SAME TWO PAPERS THE 2015 EDITORIAL RESTS ON. Refs 6 and 7 here are Beroukhim 2010 (PMID 20164920) and Bignell 2010 (PMID 20164919) — which are refs 3 and 4 of PMID 27551470, where they support the claim that WWOX is among the most significantly deleted genes. The same two copy-number papers carry the deletion premise in both wave-5 documents. NEITHER IS HELD IN THIS LEDGER AT ANY DEPTH, and both are queued: they are the actual primary source of a premise this repository has now met twice.",
+    "snippet": "most of the prevalent recurrent focal deletions target CFS and very large genes",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Body, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE SCALE OF THE OBJECT, USEFUL AS A DENOMINATOR. Approximately 90 common fragile sites in the human genome, of which this issue treats the gene products of exactly two. It bounds how much of the CFS literature can be expected to say anything about any particular gene.",
+    "snippet": "Up to date, approximately 90 different CFS have been identified in the human genome",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Body, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A DATED SELF-ASSESSMENT OF FIELD MATURITY, KEPT WITH ITS DATE ATTACHED. December 2014: the molecular basis and contribution of CFS to cancer development are 'beginning to emerge'. Any inference this repository draws from CFS-framework arguments about WWOX inherits that maturity level as of that date, and the statement is the field's own, not an outside assessment.",
+    "snippet": "Its only now that the molecular basis and contribution of CFS to cancer development are beginning to emerge.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Body, paragraph 1",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE CHAPTER NUMBERING, QUOTED SO THAT THE ORDERING CHECK BELOW IS ANCHORED. The introduction numbers Gao and Smith's very-large-genes contribution as Chapter 3.",
+    "snippet": "In Chapter 3, the group of D. Smith focuses on the topic of very large genes and their potential role in cancer development.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Body, Chapter 3 summary",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE INTRODUCTION'S CHAPTER NUMBERS ARE NOT THE ISSUE'S ORDER, AND THE MISMATCH IS COMPLETE RATHER THAN OCCASIONAL. All nine chapters were resolved to PMIDs with their printed page ranges. Printed order in CMLS 71(23): Le Tallec 4489-94, Ozeri-Galai 4495-506, Franchitto 4507-17, Georgakilas 4519-44, Barlow 4545-59, Savelyeva 4561-75, Waters 4577-87, Aqeilan 4589-99, Gao and Smith 4601-15. The introduction's numbering maps onto that as 2,1,9,3,5,4,7,8,6 — SEVEN OF NINE ARE OUT OF PLACE, and the sharpest case is quoted here: the contribution the introduction calls CHAPTER 3 is the LAST article in the issue, printed after the one it calls Chapter 9. REPORTED AS SMALL, BECAUSE IT IS: it changes no scientific content. It is recorded because it is a trap for exactly this repository — a queue built from these chapter numbers would order the special issue wrongly, and the numbers look authoritative because the editor wrote them.",
+    "snippet": "In Chapter 2, the group of M. Debatisse",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Body, Chapter 2 summary — quoted as the second anchor of the numbering-versus-pagination check",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE NINTH CHAPTER'S PREMISE, AND THE ONE PLACE THE ISSUE POINTS AT SOMETHING OTHER THAN CANCER BIOLOGY — 'cancer susceptibility genes' rather than tumour biology. It is still cancer, and it is recorded to show that even the issue's most gene-discovery-oriented chapter does not reach a constitutional or developmental phenotype.",
+    "snippet": "Being frequent targets of genomic alterations in precancerous lesions, CFS are considered hot spots to identify cancer-related genes.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID25238781_Aqeilan2014_PMC.html",
+    "anchor": "Body, Chapter 9 summary",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "note": "First read; no prior receipt of any kind existed. 15 text locators over 2 fingerprinted artifacts, no figure locators because no figure exists. The reading's product is threefold: the field-taxonomy finding that structurally excludes the reference genotype, backed by a twelve-term screen returning literal zeros; the complete enumeration of a nine-chapter special issue of which this repository holds ZERO; and the cross-document comparison with PMID 27551470, which is only available because both were read in the same wave."
+ }
+}

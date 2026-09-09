@@ -4118,3 +4118,177 @@ Chi cita la comparabilità di carico deve citare il rimpiazzo 2017, non il panne
 **Perché sta in coda e non solo nel dossier:** perché la coda è ciò che un lettore futuro
 interroga prima di citare, e uno stato editoriale che vive solo dentro un dossier è uno stato che
 qualcuno citerà senza vedere. **Priorità:** ALTA come voce di stato. **Current status:** ⬜ permanente.
+
+---
+
+## FT-089 — `PMID 25238781` (Aqeilan 2014) letto integralmente · voce di stato + il reperto tassonomico
+
+**Paper:** PMID 25238781 · DOI `10.1007/s00018-014-1716-y` — Aqeilan RI, *Role of common fragile
+sites and corresponding genes in cancer development*, *Cell Mol Life Sci* 2014;71(23):4487–4488.
+**Letto integralmente il 2026-09-09**, receipt `FTR-20260909-25238781-01`, `complete_fulltext_read`,
+manifest a STRICT PASS con 0 gap. **Non è un debito di lettura:** è la registrazione durevole di un
+reperto che sopravvive alla lettura e che riguarda **un'intera letteratura**, non questo articolo.
+
+**Che cos'è il documento.** Non è una review: è l'**introduzione del curatore** a una multi-author
+review in nove capitoli. Due pagine, autore unico, nessuna figura, nessuna tabella, nessun
+supplemento, 11 referenze, **ricevuto e accettato lo stesso giorno** (2014-08-28). PubMed gli
+assegna `review-article, Review, Journal Article` e il deposito PMC `article-type="review-article"`:
+entrambi lo **sovradescrivono**.
+
+🔴 **Il reperto, e va portato da chiunque interroghi la letteratura CFS.** Il primo paragrafo divide
+i siti fragili in due e assegna **i disordini genetici umani ai siti RARI** e **il cancro ai siti
+COMUNI**: *«Rare fragile sites are seen in a small proportion of individuals, inherited in a
+Mendelian manner and are associated with human genetic disorders. In contrast, common fragile sites
+(CFS) are present in all individuals … and are largely involved in cancer.»* WWOX attraversa FRA16D,
+un sito **comune**; il genotipo di riferimento è un disordine genetico umano mendeliano recessivo di
+WWOX. **Sotto la tassonomia con cui questa letteratura si organizza, il disturbo germinale di WWOX
+sta dal lato sbagliato della dicotomia.**
+
+**Misurato, non impressionistico** — sul corpo di 7.211 caratteri, con la lista referenze separata
+prima: `epilep` 0 · `seizure` 0 · `brain` 0 · `CNS` 0 · `WOREE` 0 · `encephalopath` 0 · `ataxia` 0 ·
+`intellectual` 0 · `recessive` 0 · `syndrome` 0 · `germline` 0 · `neuro` 0. **Dodici su dodici**,
+nell'introduzione a una review il cui **capitolo 8 è interamente su WWOX**. Riproduce, su un secondo
+documento e un autore diverso, il risultato già misurato su `PMID 24510053` (zero sullo stesso
+insieme di termini su 38.845 caratteri).
+
+**Conseguenza operativa.** Qualunque ragionamento della forma *«la letteratura sui siti fragili non
+menziona un fenotipo neurologico, quindi…»* è **invalido per costruzione**: il silenzio è predetto
+dalla tassonomia del campo e non porta peso probatorio.
+
+**Priorità:** ALTA come voce di stato. **Current status:** ⬜ permanente.
+
+---
+
+## FT-090 — 🔴 `PMID 25416187` (Tabarki 2015) · l'unica citazione che regge l'intero aggancio di `27551470` al genotipo di riferimento
+
+**Paper:** PMID 25416187 · DOI `10.1177/1535370214561952` · PMC4935222 — Tabarki B, Al Mutairi F,
+Al Hashem A, *Exp Biol Med* 2015;240:400–402. Risolto da **rif. 14** di `PMID 27551470`.
+**Assente dal ledger delle ricevute.**
+
+**Perché è la voce a priorità più alta di questa ondata.** `27551470` contiene **una sola frase**
+che raggiunge il genotipo di riferimento — *«germline mutations or loss of function of WWOX are
+associated with neuronal disorders»* — e quella frase poggia su **questa unica referenza**. Nessuna
+delle due review di Aqeilan citate altrove in quel documento può reggerla: la lettura integrale di
+`PMID 24510053` in questo repository ha misurato **zero** occorrenze di *epilepsy, seizure, brain,
+CNS, WOREE, encephalopathy, ataxia, intellectual, recessive, syndrome* sul suo corpo di 38.845
+caratteri, e `FT-089` misura lo stesso zero su `25238781`.
+
+**E c'è una seconda ragione, più importante della prima.** In `27551470` quella frase è usata **a
+sostegno** di un argomento evolutivo che essa **contraddice**: la premessa è che la perdita di un CFS
+non porti pressione selettiva ereditaria perché il cancro colpisce dopo la fase riproduttiva, e il
+fatto addotto a sostegno è che la perdita di funzione **germinale** di WWOX causi disordini
+neuronali — cioè esattamente pressione selettiva ereditaria, agente **prima** della riproduzione.
+Leggere la fonte è ciò che permette di dire quanto è forte il fatto, non solo che l'inversione c'è.
+
+**Priorità:** 🔴 **ALTA — la più alta fra le voci aperte da questa ondata.** **Current status:** ⬜ aperto.
+
+---
+
+## FT-091 — `PMID 25245215` (Aqeilan 2014, capitolo 8) · il capitolo dedicato a WWOX, ed è già nel lotto
+
+**Paper:** PMID 25245215 · DOI `10.1007/s00018-014-1724-y` · PMC11113097 — Aqeilan RI,
+Abu-Remaileh M, Abu-Odeh M, *The common fragile site FRA16D gene product WWOX: roles in tumor
+suppression and genomic stability*, *Cell Mol Life Sci* 2014;71(23):4589–4599.
+**Assente dal ledger.** **Già assegnato a `scientist-b` in `AQEILAN-FT-B-001`, non reclamato.**
+
+**Perché.** È il **capitolo 8** della multi-author review introdotta da `25238781`, cioè la sintesi
+che il campo stesso ha designato per WWOX, ed è **ref. 10 di `PMID 27551470`**, dove co-regge —
+insieme a `25331887` — il passaggio ITCH/K63/ATM che la lettura di `27551470` ha registrato come
+citazione che *non punta dove punta il record di questo repository*. È quindi contemporaneamente:
+la sintesi mancante del gene, e il documento che può chiudere il reperto ITCH.
+
+L'introduzione lo riassume così, ed è il riassunto dell'autore sul proprio capitolo: *«Authors
+conclude that these observations indicate that WWOX is functionally required for cell homeostasis
+and that its deletion has important consequences contributing to the neoplastic process.»* Da
+verificare alla fonte, non da citare da qui.
+
+**Priorità:** 🔴 **ALTA — la voce non letta di maggior valore nel lotto.** **Current status:** ⬜ aperto.
+
+---
+
+## FT-092 — `PMID 25238782` (Georgakilas 2014, capitolo 6) · il capitolo che avrebbe già concluso contro la tesi «passiva»
+
+**Paper:** PMID 25238782 · DOI `10.1007/s00018-014-1717-x` · PMC4232749 — Georgakilas AG,
+Tsantoulis P, *et al.*, *Cell Mol Life Sci* 2014;71:4519–4544. **Assente dal ledger.**
+
+**Perché.** È il perno di un reperto trasversale che esiste solo perché entrambi i documenti
+dell'ondata 5 sono stati letti. Nel 2014 `25238781` riporta questo capitolo come avente
+**concluso** che la fragilità dei CFS è *«unlikely only a structural "passive" incident»*; tredici
+mesi dopo lo stesso autore senior pubblica `27551470`, che presenta passivo-contro-attivo come
+**controversia aperta a due voci** e cita **proprio questo capitolo** (rif. 6) per la proposta dei
+«sensori» su cui costruisce. Leggerlo è l'unico modo di stabilire che cosa il capitolo concluda
+davvero, e quindi quale dei due inquadramenti lo rappresenti.
+
+**Priorità:** alta. **Current status:** ⬜ aperto.
+
+---
+
+## FT-093 — `PMID 20164920` + `PMID 20164919` (Beroukhim 2010, Bignell 2010) · la premessa di delezione che regge ENTRAMBI i documenti dell'ondata
+
+**Papers:** PMID 20164920 (Beroukhim R *et al.*, *The landscape of somatic copy-number alteration
+across human cancers*, *Nature* 2010;463:899–905, PMC2826709) e PMID 20164919 (Bignell GR *et al.*,
+*Signatures of mutation and selection in the cancer genome*, *Nature* 2010;463:893–898, PMC3145113).
+**Entrambi assenti dal ledger.**
+
+**Perché insieme.** Sono **rif. 6 e 7 di `25238781`** e **rif. 3 e 4 di `27551470`**: la stessa
+coppia porta la premessa delle delezioni focali ricorrenti in **entrambi** i documenti letti in
+questa ondata. In `27551470` sostengono l'affermazione che WWOX sia fra i geni più significativamente
+deleti — l'argomento su cui la lettura ha registrato il reperto più forte, cioè che una Q-value di
+delezione focale ricorrente **non può discriminare** l'ipotesi passiva da quella attiva, perché un
+sito fragile è atteso essere ricorrentemente deleto in entrambi i casi. Verificare quell'argomento
+alla fonte richiede questi due lavori, e nessuno dei due è mai stato aperto qui.
+
+**Priorità:** alta. **Current status:** ⬜ aperto.
+
+---
+
+## FT-094 — `PMID 18000379` (McAvoy 2007) · il negativo che `27551470` assorbe riformulandolo
+
+**Paper:** PMID 18000379 · DOI `10.1159/000108309` — McAvoy S *et al.*, *Cytogenet Genome Res*
+2007;118:260–269. Risolto da **rif. 5** di `PMID 27551470`. **Assente dal ledger.**
+
+**Perché.** È l'**unico risultato negativo** che `27551470` riporta, e la lettura ha registrato
+come viene disposto: la constatazione che *non esiste relazione fra l'alterazione di un dato CFS e
+l'espressione del suo prodotto genico* compare **dentro una sezione intitolata «support its role as
+a tumor suppressor»**, glossata come *«suggesting that these alterations are not merely responsible
+for dysregulation of WWOX protein expression»* — cioè convertita da vincolo sul meccanismo in
+richiesta di meccanismi ulteriori. Il negativo non è né confutato né concesso: è assorbito.
+**Non essendo letto, la riformulazione non ha potuto essere verificata contro la fonte**, ed è
+registrato così nel dossier invece che glissato.
+
+È anche il `REVIVAL_TRIGGER` scritto nel dossier di `27551470`: una misura che separi la fragilità
+di FRA16D dalla perdita della proteina WWOX è ciò che renderebbe testabile la domanda
+passivo/attivo, e questo è il primo posto dove cercarla.
+
+**Priorità:** media-alta. **Current status:** ⬜ aperto.
+
+---
+
+## FT-095 — i sei capitoli restanti della special issue CMLS 71(23) · enumerati, nessuno letto
+
+**Papers:** PMID 25283145 · PMID 25248392 · PMID 25297918 · PMID 25216703 · PMID 25238783 · PMID 25231336 · PMID 25300511 — i sette capitoli della special issue non coperti da una voce a sé. La lettura di `25238781` ha risolto **tutti e nove** i capitoli della multi-author
+review a PMID e intervallo di pagine. Tre sono già voci a sé (`FT-091` cap. 8, `FT-092` cap. 6, e
+Waters qui sotto); i restanti sei sono raccolti qui perché nessuno di essi è, oggi, un debito
+mirato — sono la mappa completa di un vicinato che questo repository non ha mai aperto.
+
+| Cap. (numerazione del testo) | PMID | Pagine | Gruppo | Tema |
+|---:|---|---|---|---|
+| 7 | **25283145** | 4577–87 | Waters / Huebner | **FHIT** come *caretaker* del genoma — **il precedente più antico e meglio evidenziato** dell'argomento «prodotto genico di CFS come caretaker» di cui WWOX è il caso giovane; rif. 16 di `27551470` |
+| 2 | 25248392 | 4489–94 | Le Tallec / Debatisse | riconciliare le visioni sull'instabilità dei CFS; rif. 17 di `27551470` |
+| 1 | 25297918 | 4495–506 | Ozeri-Galai / Kerem | fattori genetici ed epigenetici dell'instabilità |
+| 4 | 25216703 | 4507–17 | Franchitto & Pichierri | recupero della forca replicativa |
+| 5 | 25238783 | 4545–59 | Barlow & Nussenzweig | inizio della replicazione, ERFS |
+| 9 | 25231336 | 4561–75 | Savelyeva | caratterizzazione molecolare dei CFS |
+| 3 | 25300511 | 4601–15 | Gao & Smith | geni CFS molto grandi |
+
+🔴 **Cross-query sul corpus: ZERO su nove.** La sintesi che il campo ha designato per sé — capitolo
+WWOX e capitolo FHIT compresi — è interamente non letta qui.
+
+⚠️ **Non ordinare questa coda con i numeri di capitolo dell'introduzione.** Mappano sull'ordine di
+stampa dell'issue come **2,1,9,3,5,4,7,8,6**: sette su nove fuori posto, e quello che il testo
+chiama *«Chapter 3»* è **l'ultimo articolo dell'issue** (4601–15), stampato dopo quello che chiama
+Chapter 9. Non cambia nulla di scientifico; è registrato perché una coda costruita su quei numeri
+ordinerebbe l'issue in modo sbagliato, e i numeri sembrano autorevoli perché li ha scritti il
+curatore.
+
+**Priorità:** `25283145` media-alta, gli altri media. **Current status:** ⬜ aperti.
