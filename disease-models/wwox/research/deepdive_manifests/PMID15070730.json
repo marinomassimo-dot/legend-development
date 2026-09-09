@@ -1,419 +1,560 @@
 {
-  "schema_version": 2,
-  "pmid": "15070730",
-  "doi": "10.1073/pnas.0400805101",
-  "pmcid": "PMC384759",
-  "receipt": "FTR-20260814-15070730-01",
-  "landing": [
-    "FTR-20260814-15070730-01",
-    "full_text_queue_current.md#FT-046"
+ "schema_version": 2,
+ "pmid": "15070730",
+ "doi": "10.1073/pnas.0400805101",
+ "pmcid": "PMC384759",
+ "receipt": "FTR-20260909-15070730-02",
+ "landing": [
+  "FTR-20260814-15070730-01",
+  "full_text_queue_current.md#FT-046"
+ ],
+ "landing_note": "Aqeilan, Pekarsky, Herrero, Palamarchuk, Letofsky, Druck, Trapasso, Han, Melino, Huebner, Croce 2004, PNAS 101(13):4401-4406 — 'Functional association between Wwox tumor suppressor protein and p73, a p53 homolog'. THIS IS THE PRIMARY SOURCE OF THE p73 ARC THE MODEL HAS CARRIED SINCE 2026-04-17 WITHOUT ANYONE OPENING IT. The assignment framed the question correctly: not 'does it confirm the association' but 'on which figure does it rest, with what method, and is the claim we carry theirs or our reformulation'. The answer is layered and the layers disagree with each other.",
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The task is a provenance audit as much as a reading: the claim already exists in the canonical state as `consolidated baseline` / `DATO`, and the question is whether the source supports the form we carry. That comparison needs the registry and the paper open at the same time, which a dossier hand-off would separate."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "🔴 SHOULD BE RUN BY SOMEONE ELSE ON THIS READING, AND I AM SAYING SO RATHER THAN RUNNING IT MYSELF. This reading narrows a `consolidated baseline` claim (CLAIM 023) and its trigger condition is met exactly. A blind auditor who does not know I wrote it is the point; self-auditing would defeat the mechanism."
+  }
+ ],
+ "reading_budget": {
+  "declared_before_reading": true,
+  "figures_present": 7,
+  "figures_in_body": 4,
+  "figures_supplementary": 3,
+  "panels_present_in_body": 40,
+  "panels_present_supplementary": "UNKNOWN AND DECLARED AS UNKNOWN RATHER THAN PADDED — panels cannot be counted in figures that could not be opened. The captions for Fig 5/6/7 are one-line pointers in the running text ('which is published as supporting information on the PNAS web site') and enumerate no panels.",
+  "panels_inspected": 40,
+  "panel_coverage": "40/40 of the body; 0/3 of the supplementary figures",
+  "tables_present": 0,
+  "method": "MEASURED, NOT INTENDED. Counted by reading the captions, not by counting <fig> — the HTML deposit carries ZERO <fig> elements, so that count is meaningless here and was not used. Fig 1: A-I = 9. Fig 2: A(a,b,c1,c2,d1,d2,e1,e2)=8 + B(f,g1,g2,h1,h2,i,j,k)=8 + C=1 + D(3 rows x 2 channels)=6 = 23. Fig 3: A,B,C = 3. Fig 4: A-E = 5. Total 40. Every one inspected as an image at native resolution, with 6x-7x LANCZOS crops on Fig 1G, 4A, 4B and 4E where band-level adjudication was needed.",
+  "image_surface": "PARTIAL. The four body figures were retrieved as native JPEG rasters from cdn.ncbi.nlm.nih.gov blob URLs embedded in the article HTML already held. The three supplementary figures COULD NOT BE RETRIEVED — see figure_gap.",
+  "figure_gap": {
+   "missing": [
+    "Fig 5",
+    "Fig 6",
+    "Fig 7"
+   ],
+   "🔴 they_are_load_bearing_not_decorative": "This is the finding, not the apology. All three are cited in the running text as the support for a specific step, and each step is one the model leans on. Fig 5 carries the DOSE-DEPENDENCE of p73 relocalisation — the strongest form of the routing evidence, and the only place where less Wwox is shown to give more nuclear p73. Fig 6 carries the WWOX-vs-WWY33R EXPRESSION COMPARABILITY control, which is what makes Fig 3B interpretable at all: without it, a lower p21 with Wwox and a restored p21 with WWY33R could be an expression difference rather than a functional one. Fig 7 supports the sub-G1 apoptosis quantification of Fig 3C. A reader who treats the gap as cosmetic will over-read all three of those steps.",
+   "route_1_europe_pmc": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC384759/supplementaryFiles — HTTP 200, 163 bytes, and the body is an errorBean: `Article with id PMC384759 is not open access one`. THE FIRST GESTURE PAID: the endpoint did not merely fail, it declared the article's access class, which is why the remaining routes were chosen knowing what they were up against.",
+   "route_2_pmc_instance": "https://pmc.ncbi.nlm.nih.gov/articles/instance/384759/bin/pnas_101_13_4401__00805Fig{5,6,7}.jpg — HTTP 200 but 1,814-1,817 bytes of HTML, not JPEG. The payload is PMC's cloud-viewer PROOF-OF-WORK interstitial: `POW_CHALLENGE`, `POW_DIFFICULTY 4`, cookie `cloudpmc-viewer-pow`. The three files were deleted rather than kept; an interstitial saved under a .jpg name is a future false artifact.",
+   "route_3_variants": "www.ncbi.nlm.nih.gov/pmc/... -> 301. europepmc.org/articles/PMC384759/bin/... -> 301 empty. cdn.ncbi.nlm.nih.gov/pmc/blobs/966a/384759/bin/... -> 404. The supplementary binaries are not on the CDN path the body figures use.",
+   "🔴 the_repository_already_owns_the_solution_and_it_does_not_fit": "`framework/scripts/pmc_pow_fetch.py` exists and solves exactly this interstitial, with a documented rationale I agree with: the page publishes its own challenge, difficulty and cookie name for a client to solve, so solving it IS the intended interaction, one document at a time, with an honest User-Agent. PATTERN_ALREADY_SOLVED_GATE caught me: my first three probes used `curl -A 'Mozilla/5.0'`, which is precisely the misrepresentation that script's header comment warns against — I was pretending to be a browser when a documented, honest client already existed. BUT THE TOOL IS PDF-ONLY. `%PDF` is hardcoded twice: once in the early return (`if first.startswith(b'%PDF')`) and once in the post-POW assertion, which raises `ValueError` on anything else. A JPEG supplement cannot pass through it. This is a narrow, real limitation of a sanctioned tool and it is recorded here as a defect for the operator, NOT worked around: hand-rolling the same POW protocol inline would duplicate the one honest client the repository has, which is the uneven-application failure CLAUDE.md names.",
+   "declared_status": "not_read"
+  }
+ },
+ "surface_preflight": {
+  "structured_surface_preferred": true,
+  "text_surface": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
+  "route": "PMC HTML deposit, held locally. The PDF is also on disk and was NOT used as a text surface: rule 5d prefers the structured surface, and rule 5c refuses a PDF as a text surface by suffix in any case.",
+  "sentinel": "clean",
+  "sentinel_method": "Screened on the deterministically extracted body BEFORE any locator was drawn from it. ZERO C0 control characters. The glyphs that matter are present and correct: `±` 1, `×` 1, `μ` 2, `α` 12, `β` 42, `Δ` 16, `γ` 13, `>` 1. No suspicion-by-absence: the paper's statistical vocabulary is genuinely thin (`SD` x5, `significan` x2, and ZERO occurrences of `P <` / `P =` / `P<` / `P=` anywhere), which is a property of the paper — see entries[6] — and not a symptom of a defective text layer.",
+  "pdf_font_screen": "NOT PERFORMED, AND THE REASON IS THAT IT WOULD BE THEATRE. The assignment asked for `--font-screen` before touching the PDF text layer. The PDF text layer was never touched: the structured HTML exists, is clean, and is the declared surface, so there is no text layer to screen. A screen run on a surface no locator draws from proves nothing about any locator. `framework/scripts/` also has no `--font-screen` entry point — the per-font ToUnicode screen I used earlier this week was inline analysis, not a committed tool, which is itself worth recording: a capability that lives only in a transcript is not a capability.",
+  "surface_measurement": {
+   "in_tree_html_bytes": 171393,
+   "extracted_body_chars": 39565,
+   "🔴 the_brief_said_47616": "The assignment declared a body of 47,616 characters; deterministic extraction of the `main-article-body` section gives 39,565. The 8,051-character difference is the reference list plus the PMC navigation furniture, which my extraction boundary excludes and a whole-document extraction would not. RECORDED RATHER THAN RECONCILED: the number a locator is checked against is the validator's own `_html_surfaces` output, not mine and not the brief's, so neither figure is authoritative for verification. It matters only as a reminder that 'body characters' is not one quantity."
+  },
+  "🔴 ref_list_contamination_note": "The `_html_surfaces` extractor pulls reference-list content into the body surface, as established earlier this week on the McDonald HTML. That defect is unfixed and it is BENIGN HERE ONLY BECAUSE no locator in this manifest quotes a reference. Stated so the next reader does not infer from a clean run that the extractor is clean."
+ },
+ "group_assessment": {
+  "performed": true,
+  "research_type": "experimental_lab",
+  "total_publications": 0,
+  "publications_on_gene": 0,
+  "output_kind": "primary research",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "counts_measured": "Not measured as a publication count. The relevant measurement is that this is the Croce laboratory with Aqeilan as first author — the founding series of the gene — and that the paper cites its own group heavily: refs 4, 5, 6, 7 are Croce-lab papers, two of them 'in press' at submission (refs 6 and 7), i.e. uncheckable by a 2004 reader and only now resolvable.",
+  "weighting": "OBSERVATION: the group that cloned and characterised WWOX is the group reporting its partners; four of the twenty-seven references are its own, two of which were unpublished at the time. INTERPRETATION, KEPT SEPARATE AND DECLARED AS SUCH: this is the ordinary condition of a founding series and is NOT a reason to discount the paper — parity of sources runs the other way, and the oncology origin is precisely why the mechanistic detail exists at all. It is a reason to weight the paper's INTERNAL evidence over its citations to itself, which is what this reading did: every finding below rests on a panel in this paper, not on a claim it inherits."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "what does the canonical state already assert about the p73 arc, and on what",
+    "route": "grep over the four currents and the meta index, then resolution of the named source",
+    "count": 1,
+    "detail": "🔴 CLAIM 023 — status `consolidated baseline`, type `DATO` — asserts the whole arc. Its `Source` is `paper 206 (corpus 181-220)`, whose registry record `CORPUS P206` carries `Identifier: PENDING` and the note `likely overlaps PAPER 026 (PMID 32185845, WWOX-p73 phospho-binding); verify before merge`. See entries[0]."
+   }
+  ]
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 27,
+  "gene_direct_count": 9,
+  "gene_direct_refs_in_source": [
+   "10786676",
+   "11719429",
+   "11572989",
+   "12036884",
+   "11223860"
   ],
-  "landing_note": "Aqeilan, Pekarsky, Herrero, Palamarchuk, Letofsky, Druck, Trapasso, Han, Melino, Huebner, Croce 2004, PNAS 101(13):4401-4406 — 'Functional association between Wwox tumor suppressor protein and p73, a p53 homolog'. THIS IS THE PRIMARY SOURCE OF THE p73 ARC THE MODEL HAS CARRIED SINCE 2026-04-17 WITHOUT ANYONE OPENING IT. The assignment framed the question correctly: not 'does it confirm the association' but 'on which figure does it rest, with what method, and is the claim we carry theirs or our reformulation'. The answer is layered and the layers disagree with each other.",
-  "skills_considered": [
-    {
-      "skill": "legend-deepdive",
-      "used": false,
-      "reason": "Run inline. The task is a provenance audit as much as a reading: the claim already exists in the canonical state as `consolidated baseline` / `DATO`, and the question is whether the source supports the form we carry. That comparison needs the registry and the paper open at the same time, which a dossier hand-off would separate."
-    },
-    {
-      "skill": "legend-locator-audit",
-      "used": false,
-      "reason": "🔴 SHOULD BE RUN BY SOMEONE ELSE ON THIS READING, AND I AM SAYING SO RATHER THAN RUNNING IT MYSELF. This reading narrows a `consolidated baseline` claim (CLAIM 023) and its trigger condition is met exactly. A blind auditor who does not know I wrote it is the point; self-auditing would defeat the mechanism."
-    }
+  "resolved": [
+   "12514174"
   ],
-  "reading_budget": {
-    "declared_before_reading": true,
-    "figures_present": 7,
-    "figures_in_body": 4,
-    "figures_supplementary": 3,
-    "panels_present_in_body": 40,
-    "panels_present_supplementary": "UNKNOWN AND DECLARED AS UNKNOWN RATHER THAN PADDED — panels cannot be counted in figures that could not be opened. The captions for Fig 5/6/7 are one-line pointers in the running text ('which is published as supporting information on the PNAS web site') and enumerate no panels.",
-    "panels_inspected": 40,
-    "panel_coverage": "40/40 of the body; 0/3 of the supplementary figures",
-    "tables_present": 0,
-    "method": "MEASURED, NOT INTENDED. Counted by reading the captions, not by counting <fig> — the HTML deposit carries ZERO <fig> elements, so that count is meaningless here and was not used. Fig 1: A-I = 9. Fig 2: A(a,b,c1,c2,d1,d2,e1,e2)=8 + B(f,g1,g2,h1,h2,i,j,k)=8 + C=1 + D(3 rows x 2 channels)=6 = 23. Fig 3: A,B,C = 3. Fig 4: A-E = 5. Total 40. Every one inspected as an image at native resolution, with 6x-7x LANCZOS crops on Fig 1G, 4A, 4B and 4E where band-level adjudication was needed.",
-    "image_surface": "PARTIAL. The four body figures were retrieved as native JPEG rasters from cdn.ncbi.nlm.nih.gov blob URLs embedded in the article HTML already held. The three supplementary figures COULD NOT BE RETRIEVED — see figure_gap.",
-    "figure_gap": {
-      "missing": [
-        "Fig 5",
-        "Fig 6",
-        "Fig 7"
-      ],
-      "🔴 they_are_load_bearing_not_decorative": "This is the finding, not the apology. All three are cited in the running text as the support for a specific step, and each step is one the model leans on. Fig 5 carries the DOSE-DEPENDENCE of p73 relocalisation — the strongest form of the routing evidence, and the only place where less Wwox is shown to give more nuclear p73. Fig 6 carries the WWOX-vs-WWY33R EXPRESSION COMPARABILITY control, which is what makes Fig 3B interpretable at all: without it, a lower p21 with Wwox and a restored p21 with WWY33R could be an expression difference rather than a functional one. Fig 7 supports the sub-G1 apoptosis quantification of Fig 3C. A reader who treats the gap as cosmetic will over-read all three of those steps.",
-      "route_1_europe_pmc": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC384759/supplementaryFiles — HTTP 200, 163 bytes, and the body is an errorBean: `Article with id PMC384759 is not open access one`. THE FIRST GESTURE PAID: the endpoint did not merely fail, it declared the article's access class, which is why the remaining routes were chosen knowing what they were up against.",
-      "route_2_pmc_instance": "https://pmc.ncbi.nlm.nih.gov/articles/instance/384759/bin/pnas_101_13_4401__00805Fig{5,6,7}.jpg — HTTP 200 but 1,814-1,817 bytes of HTML, not JPEG. The payload is PMC's cloud-viewer PROOF-OF-WORK interstitial: `POW_CHALLENGE`, `POW_DIFFICULTY 4`, cookie `cloudpmc-viewer-pow`. The three files were deleted rather than kept; an interstitial saved under a .jpg name is a future false artifact.",
-      "route_3_variants": "www.ncbi.nlm.nih.gov/pmc/... -> 301. europepmc.org/articles/PMC384759/bin/... -> 301 empty. cdn.ncbi.nlm.nih.gov/pmc/blobs/966a/384759/bin/... -> 404. The supplementary binaries are not on the CDN path the body figures use.",
-      "🔴 the_repository_already_owns_the_solution_and_it_does_not_fit": "`framework/scripts/pmc_pow_fetch.py` exists and solves exactly this interstitial, with a documented rationale I agree with: the page publishes its own challenge, difficulty and cookie name for a client to solve, so solving it IS the intended interaction, one document at a time, with an honest User-Agent. PATTERN_ALREADY_SOLVED_GATE caught me: my first three probes used `curl -A 'Mozilla/5.0'`, which is precisely the misrepresentation that script's header comment warns against — I was pretending to be a browser when a documented, honest client already existed. BUT THE TOOL IS PDF-ONLY. `%PDF` is hardcoded twice: once in the early return (`if first.startswith(b'%PDF')`) and once in the post-POW assertion, which raises `ValueError` on anything else. A JPEG supplement cannot pass through it. This is a narrow, real limitation of a sanctioned tool and it is recorded here as a defect for the operator, NOT worked around: hand-rolling the same POW protocol inline would duplicate the one honest client the repository has, which is the uneven-application failure CLAUDE.md names.",
-      "declared_status": "not_read"
-    }
-  },
-  "surface_preflight": {
-    "structured_surface_preferred": true,
-    "text_surface": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-    "route": "PMC HTML deposit, held locally. The PDF is also on disk and was NOT used as a text surface: rule 5d prefers the structured surface, and rule 5c refuses a PDF as a text surface by suffix in any case.",
-    "sentinel": "clean",
-    "sentinel_method": "Screened on the deterministically extracted body BEFORE any locator was drawn from it. ZERO C0 control characters. The glyphs that matter are present and correct: `±` 1, `×` 1, `μ` 2, `α` 12, `β` 42, `Δ` 16, `γ` 13, `>` 1. No suspicion-by-absence: the paper's statistical vocabulary is genuinely thin (`SD` x5, `significan` x2, and ZERO occurrences of `P <` / `P =` / `P<` / `P=` anywhere), which is a property of the paper — see entries[6] — and not a symptom of a defective text layer.",
-    "pdf_font_screen": "NOT PERFORMED, AND THE REASON IS THAT IT WOULD BE THEATRE. The assignment asked for `--font-screen` before touching the PDF text layer. The PDF text layer was never touched: the structured HTML exists, is clean, and is the declared surface, so there is no text layer to screen. A screen run on a surface no locator draws from proves nothing about any locator. `framework/scripts/` also has no `--font-screen` entry point — the per-font ToUnicode screen I used earlier this week was inline analysis, not a committed tool, which is itself worth recording: a capability that lives only in a transcript is not a capability.",
-    "surface_measurement": {
-      "in_tree_html_bytes": 171393,
-      "extracted_body_chars": 39565,
-      "🔴 the_brief_said_47616": "The assignment declared a body of 47,616 characters; deterministic extraction of the `main-article-body` section gives 39,565. The 8,051-character difference is the reference list plus the PMC navigation furniture, which my extraction boundary excludes and a whole-document extraction would not. RECORDED RATHER THAN RECONCILED: the number a locator is checked against is the validator's own `_html_surfaces` output, not mine and not the brief's, so neither figure is authoritative for verification. It matters only as a reminder that 'body characters' is not one quantity."
-    },
-    "🔴 ref_list_contamination_note": "The `_html_surfaces` extractor pulls reference-list content into the body surface, as established earlier this week on the McDonald HTML. That defect is unfixed and it is BENIGN HERE ONLY BECAUSE no locator in this manifest quotes a reference. Stated so the next reader does not infer from a clean run that the extractor is clean."
-  },
-  "group_assessment": {
-    "performed": true,
-    "research_type": "experimental_lab",
-    "total_publications": 0,
-    "publications_on_gene": 0,
-    "output_kind": "primary research",
-    "is_primary_group_for_disease": false,
-    "is_primary_group_for_gene": true,
-    "counts_measured": "Not measured as a publication count. The relevant measurement is that this is the Croce laboratory with Aqeilan as first author — the founding series of the gene — and that the paper cites its own group heavily: refs 4, 5, 6, 7 are Croce-lab papers, two of them 'in press' at submission (refs 6 and 7), i.e. uncheckable by a 2004 reader and only now resolvable.",
-    "weighting": "OBSERVATION: the group that cloned and characterised WWOX is the group reporting its partners; four of the twenty-seven references are its own, two of which were unpublished at the time. INTERPRETATION, KEPT SEPARATE AND DECLARED AS SUCH: this is the ordinary condition of a founding series and is NOT a reason to discount the paper — parity of sources runs the other way, and the oncology origin is precisely why the mechanistic detail exists at all. It is a reason to weight the paper's INTERNAL evidence over its citations to itself, which is what this reading did: every finding below rests on a panel in this paper, not on a claim it inherits."
-  },
-  "field_density": {
-    "wwox_directed": true,
-    "queries": [
-      {
-        "query": "what does the canonical state already assert about the p73 arc, and on what",
-        "route": "grep over the four currents and the meta index, then resolution of the named source",
-        "count": 1,
-        "detail": "🔴 CLAIM 023 — status `consolidated baseline`, type `DATO` — asserts the whole arc. Its `Source` is `paper 206 (corpus 181-220)`, whose registry record `CORPUS P206` carries `Identifier: PENDING` and the note `likely overlaps PAPER 026 (PMID 32185845, WWOX-p73 phospho-binding); verify before merge`. See entries[0]."
-      }
-    ]
-  },
-  "multihop": {
-    "performed": true,
-    "references_enumerated": 27,
-    "gene_direct_count": 9,
-    "gene_direct_refs_in_source": [
-      "10786676",
-      "11719429",
-      "11572989",
-      "12036884",
-      "11223860"
-    ],
-    "resolved": [
-      "12514174"
-    ],
-    "resolved_depth_declaration": "🔴 NOT RESOLVED, AND DECLARED AS NOT RESOLVED. The reference list is a 2004 PNAS list: author-year-journal-volume-page, with no PMIDs and no DOIs in the deposit. The PMIDs above are the WWOX/FHIT-directed entries I could match with confidence from journal-volume-page; I did NOT attempt to resolve the remaining eighteen offline, having been burned by exactly that this week. An empty `resolved` with the reason is the honest value; a padded one is the failure mode this field exists to prevent.",
-    "queued": [
-      "12514174",
-      "11719429"
-    ],
-    "enumeration_method": "27 numbered entries read from the reference section of the HTML. Nine concern WWOX/FRA16D/FHIT directly (refs 1-9, 26); the rest are p73/p53 biology (12-18, 24, 25, 27), WW-domain biology (10, 11), Src consensus (23) and methods (19, 20).",
-    "🔴 the_two_chang_references_are_the_hinge": "Refs 21 and 22 are Chang et al. 2001 and Chang et al. 2003 — the murine Wox1 papers. THIS PAPER'S ENTIRE Y33 RATIONALE IS INHERITED FROM THEM: 'Tyrosine 33 (Y33) located in the first WW domain was previously reported to affect the murine Wox1 interaction with JNK (22)' and 'alteration of Y33 in Wwox was previously shown to reduce the proapoptotic activity of Wwox (22)'. Ref 22 (J Biol Chem 278:9195-9202, 2003) is PMID 12514174 — WHICH THIS CORPUS HAS ALREADY IDENTIFIED AS MISSING FROM DISK AND STILL HAS NOT READ. The premise under the Y33 story is a paper we do not hold."
-  },
-  "corpus_crossquery": {
-    "performed": true,
-    "query": "prior receipts and manifests for 15070730, across every ref not just HEAD",
-    "hits": 0,
-    "finding": "ZERO receipts for 15070730 across ALL NINETEEN refs (`claim-foundation-trace`, nine `codex/*`, `delegation-readiness`, `evidence-index`, `extractor-to-main`, `harden-release-scan-scoping`, two `hostile-review/*`, `lettore`, `lettore-b`, `main`, `mirror`), ledger sizes 34 to 106. Measured in this session rather than inherited: the assignment supplied the same result from a three-day-stale context and explicitly asked that the measurement belong to the sender. It does. No prior manifest either.",
-    "reread_reason": "not applicable — first read"
-  },
-  "retraction_check": {
-    "performed": true,
-    "at": "2026-08-14",
-    "route": "local PubMed corpus record for PMID 15070730, harvested 2026-08-06 — offline and re-runnable",
-    "result": "no retraction, no expression of concern, no erratum",
-    "🔴 but_the_neighbourhood_is_not_clean": "PMID 23446842, 'p73 participates in WWOX-mediated apoptosis in leukemia cells', is RETRACTED (retraction notice PMID 42464650), and it sits in `batch_queue.md` already flagged. It is not cited by this paper and cannot be — it postdates it by nine years — but it is downstream of the same arc, and a p73 claim promoted out of this reading must not pick it up as corroboration."
-  },
-  "source_artifacts": [
-    {
-      "path": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-      "sha256": "77ef1b3fce161524dcc9f03909ae52a8647495c5509eb380b23cd93e3fcbdad0",
-      "kind": "article_text",
-      "route": "PMC HTML deposit held locally; digest matches the assignment's declared value byte for byte (171,393 B)",
-      "rights": "not open access — Europe PMC returns `Article with id PMC384759 is not open access one`; held gitignored in the shared files/, bytes never committed"
-    },
-    {
-      "path": "files/fulltext/PMID15070730_Aqeilan2004.pdf",
-      "sha256": "a4c13952ff09feb0f49f4dc03d50565ca27c2b317fbd3c5610a3534c1d27cc6d",
-      "kind": "article_binary",
-      "route": "held locally; digest matches the assignment's declared value (522,396 B). NOT used as a text surface and not screened — see surface_preflight.pdf_font_screen.",
-      "rights": "not open access; held gitignored in the shared files/, bytes never committed"
-    },
-    {
-      "path": "files/figures/PMID15070730/zpq0130443520001.jpg",
-      "sha256": "a0414fe37e1892abf2a3973c1799faf656af6940c7031c68da811138508920eb",
-      "kind": "figure",
-      "native_px": "653x227",
-      "effective_ppi": "not_applicable — native HTML raster, no rendering",
-      "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/966a/384759/27ee3c616cb4/zpq0130443520001.jpg — URL embedded in the article HTML already held",
-      "figure": "Fig 1 (panels A-I)",
-      "rights": "not open access; held gitignored in the shared files/, bytes never committed"
-    },
-    {
-      "path": "files/figures/PMID15070730/zpq0130443520002.jpg",
-      "sha256": "6013025b3fb69e0577b93bc2ddbba9750c90ea330454fcd9b40035fd3d8a7efd",
-      "kind": "figure",
-      "native_px": "495x666",
-      "effective_ppi": "not_applicable — native HTML raster, no rendering",
-      "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/966a/384759/0ce56b11ee04/zpq0130443520002.jpg — URL embedded in the article HTML already held",
-      "figure": "Fig 2 (panels A-D)",
-      "rights": "not open access; held gitignored in the shared files/, bytes never committed"
-    },
-    {
-      "path": "files/figures/PMID15070730/zpq0130443520003.jpg",
-      "sha256": "a29e3a7e47900aeacfb0e182d3d57ffcf8e340598addeaed78f76b7c805e0738",
-      "kind": "figure",
-      "native_px": "462x747",
-      "effective_ppi": "not_applicable — native HTML raster, no rendering",
-      "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/966a/384759/1604051426f5/zpq0130443520003.jpg — URL embedded in the article HTML already held",
-      "figure": "Fig 3 (panels A-C)",
-      "rights": "not open access; held gitignored in the shared files/, bytes never committed"
-    },
-    {
-      "path": "files/figures/PMID15070730/zpq0130443520004.jpg",
-      "sha256": "fc6a1a1695552d22af0922cba6349aef5567cf7863b7cd1bad292d0cfc5fea46",
-      "kind": "figure",
-      "native_px": "631x189",
-      "effective_ppi": "not_applicable — native HTML raster, no rendering",
-      "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/966a/384759/f0478ce842c6/zpq0130443520004.jpg — URL embedded in the article HTML already held",
-      "figure": "Fig 4 (panels A-E)",
-      "rights": "not open access; held gitignored in the shared files/, bytes never committed"
-    }
+  "resolved_depth_declaration": "🔴 NOT RESOLVED, AND DECLARED AS NOT RESOLVED. The reference list is a 2004 PNAS list: author-year-journal-volume-page, with no PMIDs and no DOIs in the deposit. The PMIDs above are the WWOX/FHIT-directed entries I could match with confidence from journal-volume-page; I did NOT attempt to resolve the remaining eighteen offline, having been burned by exactly that this week. An empty `resolved` with the reason is the honest value; a padded one is the failure mode this field exists to prevent.",
+  "queued": [
+   "12514174",
+   "11719429"
   ],
-  "verbatim_locators": {
-    "waived": false,
-    "source_fulltext_indexed": true,
-    "source_fulltext_indexed_evidence": "PMC HTML, digest verified against the assignment's declared value in the shared checkout. Four figure surfaces exist locally, acquired in this session from CDN URLs embedded in that HTML; three supplementary figure surfaces DO NOT exist locally and were not acquired — see reading_budget.figure_gap, declared_status `not_read`.",
-    "abstract_anchoring_waived": "No evidentiary locator uses the abstract. This mattered here more than usual: the abstract states the phosphorylation finding WITHOUT the hedge the Results carry, so anchoring to it would have reproduced the very loss this reading documents. Every locator below is drawn from the non-abstract body and was tested against the separated body surface.",
-    "entries": [
-      {
-        "proposition": "🔴 THE ANSWER TO THE ASSIGNMENT'S QUESTION, AND IT IS NOT 'THEIRS' OR 'OURS' BUT A THIRD THING. CLAIM 023's four clauses are each FAITHFUL to this paper's abstract — I checked them one at a time against it. What is not faithful is the PROVENANCE: CLAIM 023 is `consolidated baseline`/`DATO` sourced to `CORPUS P206`, a registry record whose `Identifier` is the literal string `PENDING` and whose own note says `likely overlaps PAPER 026 (PMID 32185845); verify before merge`. PAPER 026 is ABSTRACT-ONLY and reports the OPPOSITE direction for the Tyr33 effect (phosphorylation DECREASES affinity for a p73-derived peptide). So the model has been carrying, as a datum, a correctly-worded summary of a paper nobody opened, attributed to a placeholder that names no paper, flagged as possibly the same record as an abstract that contradicts it. The content is right and the chain of custody is absent — which is worse than a misreading, because a misreading is visible.",
-        "snippet": "We have also demonstrated specific phosphorylation of Y33",
-        "surface": "body",
-        "anchor": "Discussion — the flat restatement, four paragraphs after the hedged one",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "note": "🔴 ANCHORED IN THE DISCUSSION AND NOT IN THE ABSTRACT, ON PURPOSE AND AFTER THE VALIDATOR REFUSED THE ABSTRACT. The refusal improved the entry. The abstract's flat wording is what a reader downstream copies, but the Discussion shows the SAME hardening happening INSIDE the paper: `demonstrated` here, against `suggesting` in the Results section that describes the actual data. The loss of the modal is not something later readers did to this paper — it starts on page five of the paper itself, and the canonical claim is the fourth link in that chain, not the first.",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "🔴 THE MODAL IS PRESENT EXACTLY ONCE, AT THE ONLY PLACE WHERE THE DATA ARE DESCRIBED. The Results hedge the phosphorylation finding with `suggesting`. The figure title drops it ('Phosphorylation of Wwox enhances its association with p73'). The abstract drops it. CLAIM 023 carries the flat form as `DATO`. Nobody falsified anything at any step; the hedge simply did not survive three transports, and the fourth turned the survivor into a datum.",
-        "snippet": "cotransfection of cells with DN-Src results in some interaction of Wwox and p73, although this interaction increases several-fold when Src is cotransfected with Wwox and p73, suggesting that phosphorylation enhances this interaction",
-        "surface": "body",
-        "anchor": "Results — 'Src Enhances Phosphorylation of Wwox and Increases Its Binding to p73'",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The 'several-fold' increase is quantified NOWHERE. Fig 4 is five blots with no graph, no error bar, no densitometry and no stated replicate count; the phrase rests on visual band comparison in a single panel.",
-        "snippet": "Purified active c-Src kinase (Biomol, Plymouth Meeting, PA) was incubated with GST-WI fusions and ATP in kinase buffer",
-        "surface": "body",
-        "anchor": "Materials and Methods — 'In Vitro Kinase Assay'",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "note": "Anchored on the Methods because the absence of a quantification method is the evidence; there is no sentence describing densitometry to quote, and quoting one that does not exist is not available.",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "🔴 FIG 4A IS NOT NORMALISED FOR THE AMOUNT OF p73 PRESENT, AND THE PANEL SHOWS WHY. The text compares lane 3 (Myc IP, DN-Src) with lane 6 (Myc IP, Act-Src) and lane 6 is indeed the stronger — that much the panel supports. But lane 4 (the anti-HA immunoprecipitate under Act-Src, i.e. the p73 recovery control) is grossly overloaded relative to lane 1 (anti-HA under DN-Src): a saturated black mass that bleeds below the 50 kDa marker, against a strong but contained band in lane 1. Fig 4B lanes 1 and 2 show the same asymmetry independently. MORE p73 WAS RECOVERED IN THE +Src ARM, so a stronger co-IP in lane 6 cannot be attributed to more association per unit p73. There is no input blot and no loading control in the panel. The direction of the effect survives; its magnitude and its cause do not.",
-        "snippet": "293 cells were transfected with HA-p73β, Myc-Wwox, and Act-Src or DN-Src. Thirty-six hours later, whole-cell lysates were immunoprecipitated with anti-HA, anti-IgG, or anti-Myc.",
-        "surface": "figure",
-        "anchor": "Fig 4A, lanes 1-6 (IP: HA/IgG/Myc under -Src and +Src; IB: anti-HA), inspected at 6x LANCZOS from the native 631x189 raster",
-        "artifact": "files/figures/PMID15070730/zpq0130443520004.jpg",
-        "panel_text_relation": "panel_qualifies_text",
-        "qualifies": "entries[1]",
-        "qualifies_needle": "suggesting that phosphorylation enhances this interaction"
-      },
-      {
-        "proposition": "🔴 FIG 4B DOES NOT SHOW WHAT THE TEXT SAYS IT SHOWS, AND THE AUTHORS DRAW A CONCLUSION FROM IT. The text states the level of phosphorylated p73 did not change between DN-Src and Src, citing lanes 6 and 8, and concludes p73 is not a Src target. In the panel, lane 8's P-p73 signal is visibly DARKER AND LARGER than lane 6's — they are not equal. FAIRNESS CUTS BOTH WAYS AND IS RECORDED: lane 8 is a Myc (Wwox) immunoprecipitate under +Src, so by the paper's own central claim it contains MORE co-precipitated p73, which would raise P-p73 signal at constant phosphorylation per molecule. There is no anti-HA reprobe of lanes 5-8 to normalise. So the panel neither establishes the equality the text asserts nor refutes the conclusion: IT CANNOT RESOLVE THE QUESTION EITHER WAY, and the text does not acknowledge that. The conclusion is under-determined by the figure it cites.",
-        "snippet": "Because the level of phosphorylated p73 did not change in cells with DN-Src or Src expression, we concluded that p73 is not a target of Src phosphorylation",
-        "surface": "body",
-        "anchor": "Results — 'Src Enhances Phosphorylation of Wwox and Increases Its Binding to p73'",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The pixel side of the preceding entry: P-p73 in lane 8 exceeds P-p73 in lane 6, against a text asserting no change.",
-        "snippet": "were immunoblotted with anti-HA (lanes1 and 2), anti-Myc (lanes 3 and 4), and anti-phosphotyrosine (lanes 5–8).",
-        "surface": "figure",
-        "anchor": "Fig 4B, lanes 5-8 (IB: anti-P-Tyrosine), P-p73 band position, inspected at 6x LANCZOS from the native 631x189 raster",
-        "artifact": "files/figures/PMID15070730/zpq0130443520004.jpg",
-        "panel_text_relation": "text_contradicted_by_panel",
-        "contradicts": "entries[4]",
-        "contradicts_needle": "the level of phosphorylated p73 did not change"
-      },
-      {
-        "proposition": "🔴 FIG 4E SHOWS RESIDUAL Y33F PHOSPHORYLATION THAT THE TEXT DENIES WITH AN ABSOLUTE NEGATIVE. The text says WI-WT and WI-Y34F but NOT WI-Y33F and WI-Y33,34F could be phosphorylated. The panel at 7x shows a faint but present band for Y33F at 30 min, while Y33,34F at 30 min is genuinely blank. That pattern is internally consistent — a minor Y34 contribution revealed once Y33 is removed, abolished when both go — and it reads as Y33-major/Y34-minor rather than Y33-exclusive. The distinction matters because the Discussion elsewhere treats Y34 as dispensable outright.",
-        "snippet": "Analysis of the products by Western Blot with anti-phosphotyrosine antibody showed that both WI-WT and WI-Y34F GST fusions, but not WI-Y33F and WI-Y33,34F, could be directly phosphorylated by Src",
-        "surface": "body",
-        "anchor": "Results — 'Src Enhances Phosphorylation of Wwox and Increases Its Binding to p73'",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The pixel side: a faint band is present in the Y33F 30-min lane; the Y33,34F 30-min lane is blank.",
-        "snippet": "Purified GST-polypeptide fusions with the different mutations were incubated with recombinant Src",
-        "surface": "figure",
-        "anchor": "Fig 4E, eight lanes (WT/Y33F/Y34F/Y33,34F at 0 and 30 min; IB: anti-P-Tyrosine), inspected at 7x LANCZOS from the native 631x189 raster",
-        "artifact": "files/figures/PMID15070730/zpq0130443520004.jpg",
-        "panel_text_relation": "text_contradicted_by_panel",
-        "contradicts": "entries[6]",
-        "contradicts_needle": "but not WI-Y33F and WI-Y33,34F, could be directly phosphorylated by Src"
-      },
-      {
-        "proposition": "🔴 THE DISCUSSION CREDITS FIG 1G WITH AN EXPERIMENT FIG 1G DOES NOT CONTAIN. It states that Y34 and Y61 are dispensable for the interaction, citing Fig 1G. Fig 1G contains exactly three constructs — Wwox, WWY33R, WWY61R — verified by reading the panel headers at 7x. THERE IS NO Y34 CONSTRUCT IN ANY BINDING ASSAY IN THIS PAPER. WI-Y34F exists only in Fig 4E, the in-vitro kinase assay, which measures phosphorylation and not binding. The Y61 half of the sentence is supported; the Y34 half cites a panel that could not support it. Anyone transporting 'Y34 is dispensable for p73 binding' would be transporting an untested proposition with a figure number attached.",
-        "snippet": "Alteration of Y33 disturbed the Wwox–p73 association, whereas Y34 in the first WW domain and Y61 in the second WW domain are dispensable for this interaction",
-        "surface": "body",
-        "anchor": "Discussion",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The pixel side: Fig 1G's three construct headers read Wwox, WWY33R, WWY61R across nine lanes. No Y34.",
-        "snippet": "293 cells were transiently transfected with the different Wwox expression constructs",
-        "surface": "figure",
-        "anchor": "Fig 1G panel header, inspected at 7x LANCZOS from the native 653x227 raster",
-        "artifact": "files/figures/PMID15070730/zpq0130443520001.jpg",
-        "panel_text_relation": "text_contradicted_by_panel",
-        "contradicts": "entries[8]",
-        "contradicts_needle": "Y34 in the first WW domain and Y61 in the second WW domain are dispensable for this interaction"
-      },
-      {
-        "proposition": "The Discussion cites `Fig. 3D` twice — for the ΔNp73 apoptosis result and for the increased apoptotic activity — and FIG 3 HAS NO PANEL D. Its caption declares A, B and C only, and the image carries exactly three panels. The data meant are in Fig 3C. A dangling internal cross-reference, twice, in the paragraph that carries the paper's central interpretive move.",
-        "snippet": "Interaction between Wwox and p73 contributes to Wwox proapoptotic activity.",
-        "surface": "body",
-        "anchor": "Fig 3 caption, panel (C) — the last panel the caption declares",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "🔴 'SIGNIFICANTLY' IS USED WITH NO STATISTIC ANYWHERE IN THE PAPER, AND FIG 3A HAS NO ERROR BARS. The caption says the luciferase results are the average of three experiments; the panel shows twelve bars with ZERO dispersion indicators, while Fig 3C — from the same paper, same figure — does carry error bars and an explicit `average ± SD`. The screen over the whole body finds `P <`, `P =`, `P<` and `P=` at ZERO occurrences: no test, no threshold, no n per condition. The dose-dependence and the suppression are visible as a trend; 'significantly' is a word here, not a result.",
-        "snippet": "Expression of Wwox significantly suppressed the transactivation function of p73 in a dose-dependent manner",
-        "surface": "body",
-        "anchor": "Results — 'Wwox Suppresses p73-Mediated Transactivation'",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The pixel side, plus a second defect the text does not cause: Fig 3A carries no error bars on any of its twelve bars, and its y-axis is MISLABELLED. The axis reads `% of Luciferase (10³)` while the caption defines the values as fold induction over empty vector — and bar 1 is printed as 1.0, which is a fold and not a percentage. The printed bar values (1.0, 497, 1.7, 3.7, 2.7, 339, 63, 1481, 2062, 996, 303, 3366) are fold inductions on an axis claiming percent-times-a-thousand. Same class as the Z-score-printed-as-fold found in Liu 2018: a units label that would mislead anyone reading the panel without the caption.",
-        "snippet": "Results are shown as fold induction of the luciferase activity compared to control cells transfected with empty vector alone and are the average of three experiments.",
-        "surface": "figure",
-        "anchor": "Fig 3A, y-axis label and twelve bars, inspected at native 462x747",
-        "artifact": "files/figures/PMID15070730/zpq0130443520003.jpg",
-        "panel_text_relation": "text_contradicted_by_panel",
-        "contradicts": "entries[11]",
-        "contradicts_needle": "significantly suppressed the transactivation function of p73"
-      },
-      {
-        "proposition": "🔴 COLOCALISATION IS ASSERTED WITHOUT A MERGED IMAGE, AND THE ASYMMETRY RUNS AGAINST THE CLAIM. Fig 2A shows each condition as two separate single-channel images side by side (c1/c2, d1/d2, e1/e2) — there is no overlay panel anywhere in Fig 2A, so 'colocalization' is inferred from two images and not shown in one. In Fig 2B the pattern inverts in the least helpful direction: the NEGATIVE conditions (i = p73γ, j = p73βY487A, k = p53) ARE displayed as two-colour merged images, while the POSITIVE ones (g = p73α, h = ΔNp73) are displayed as separate channels. The panels that would benefit most from an overlay are the ones that do not get one.",
-        "snippet": "Interestingly, coexpression of p73 and WT-Wwox or WWY61R causes the sequestration of p73 and colocalization with Wwox in the cytoplasm",
-        "surface": "body",
-        "anchor": "Results — 'Wwox Sequesters p73 in Cytoplasm'",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The pixel side: Fig 2A c1/c2, d1/d2 and e1/e2 are single-channel pairs with no overlay; Fig 2B i, j and k are two-colour merges while g and h are single-channel pairs.",
-        "snippet": "After fixation and permeabilization, the cells were stained with anti-HA and anti-Myc",
-        "surface": "figure",
-        "anchor": "Fig 2A (panels a-e2) and Fig 2B (panels f-k), inspected at native 495x666",
-        "artifact": "files/figures/PMID15070730/zpq0130443520002.jpg",
-        "panel_text_relation": "panel_qualifies_text",
-        "qualifies": "entries[13]",
-        "qualifies_needle": "colocalization with Wwox in the cytoplasm"
-      },
-      {
-        "proposition": "THE ROUTING RESULT IS AN OVEREXPRESSION RESULT AND THE AUTHORS SAY SO IN THE DISCUSSION. This is the single most important qualification for a model that carries the routing principle as architecture: the redistribution of p73 is what OVEREXPRESSED Wwox does. The endogenous support is real but narrower — Fig 1B (etoposide-treated 293), Fig 1F and Fig 2B (MCF-7 endogenous Wwox), Fig 2C/D (siRNA knockdown) — and the endogenous localisation result is reported as 'more than 50% of MCF-7 cells' with no n and no test.",
-        "snippet": "Overexpression of Wwox caused the redistribution of p73 from the nuclear compartment to the cytosol.",
-        "surface": "body",
-        "anchor": "Discussion",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The endogenous localisation figure is a bare proportion: no denominator, no field count, no statistic.",
-        "snippet": "More than 50% of MCF-7 cells exhibited cytoplasmic p73α where it colocalized with endogenous Wwox",
-        "surface": "body",
-        "anchor": "Results — 'Wwox Sequesters p73 in Cytoplasm'",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "🔴 THE DOSE-DEPENDENCE OF THE RELOCALISATION — THE STRONGEST FORM OF THE ROUTING EVIDENCE — IS IN A FIGURE THIS READING COULD NOT OPEN. Less Wwox giving more nuclear p73 is the closest thing in the paper to a causal titration, and it lives in supplementary Fig 5, behind PMC's proof-of-work. The claim is therefore carried here at the level the accessible panels support (Fig 2A, categorical, overexpression) and NOT at the level the text implies.",
-        "snippet": "We found that a reduced amount of Wwox in transfection causes a decrease in expression of Wwox and retention of p73 in the nucleus of some cells",
-        "surface": "body",
-        "anchor": "Results — 'Wwox Sequesters p73 in Cytoplasm'; the sentence cites supplementary Fig 5",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "🔴 THE CONTROL THAT MAKES FIG 3B INTERPRETABLE IS ALSO IN AN UNOPENABLE FIGURE. Fig 3B compares p21 levels across Wwox and WWY33R conditions; whether Wwox and WWY33R were expressed comparably is the difference between a functional result and an expression artefact, and that control is supplementary Fig 6. Without it, the p21 restoration by WWY33R cannot be separated from a difference in how much protein each construct made.",
-        "snippet": "Expression of Wwox and WWY33R were comparable in all experiments",
-        "surface": "body",
-        "anchor": "Results — 'Wwox Suppresses p73-Mediated Transactivation'; the sentence cites supplementary Fig 6",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "THE Y33 RATIONALE IS INHERITED FROM A PAPER THIS CORPUS DOES NOT HOLD. Y33 was chosen for study because Chang et al. reported it affects murine Wox1's interaction with JNK; the same reference supplies the claim that altering Y33 reduces Wwox's proapoptotic activity. That reference is J Biol Chem 278:9195-9202 (2003) = PMID 12514174, already known to this corpus as MISSING FROM DISK AND UNREAD. PREMISE: DATO in the source, but a DATO we have never verified — the load-bearing premise under the whole Y33 story is a paper we do not have.",
-        "snippet": "Tyrosine 33 (Y33) located in the first WW domain was previously reported to affect the murine Wox1 interaction with JNK",
-        "surface": "body",
-        "anchor": "Results — 'Wwox Physically Interacts with p73 both in Vivo and in Vitro'",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "A NEGATIVE PANEL, AND IT IS TREATED AS ONE. The p53 non-interaction is a genuine and useful result — it is what makes the PPPPY-motif explanation specific rather than decorative — but Fig 1C is a negative panel and, per the standing correction, a negative panel does not by itself permit a comparison normalised for bait quantity. The authors' own framing is appropriately modal ('perhaps explaining'), and that modal is worth preserving on the way out.",
-        "snippet": "Both p73γ and p53 lack the proline-rich motif PPPPY, perhaps explaining the absence of complex formation with Wwox.",
-        "surface": "body",
-        "anchor": "Discussion",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "THE APOPTOSIS RESULT CONTAINS ITS OWN TENSION AND THE AUTHORS FLAG IT AS A GUESS. WWY33R does not bind p73, yet WWY33R + p73β gives the LARGEST apoptotic population in Fig 3C (~38%, above WT-Wwox + p73β at ~31%). The explanation offered is explicitly one possibility among others, not a demonstration. Anyone carrying 'Wwox-p73 cytoplasmic cooperation drives apoptosis' out of this paper must also carry the fact that the non-binding mutant produced more apoptosis than the binder.",
-        "snippet": "One possible explanation of this effect of WWY33R is that this mutation has a dominant negative effect on endogenous Wwox.",
-        "surface": "body",
-        "anchor": "Discussion",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "A LABELLING HAZARD FOR ANYONE TRANSPORTING FIG 3C. The panel labels the amino-terminally truncated p73 isoform as `DN-p73`, while the same paper uses `DN-Src` to mean DOMINANT-NEGATIVE Src. In Fig 3C `DN-p73` means ΔNp73 — a deletion variant — not a dominant-negative construct, and the two senses of `DN` sit in adjacent figures. Recorded because the misreading is silent and would invert the interpretation of the ΔNp73 bars.",
-        "snippet": "ΔNp73 lacks the transactivation domain and possesses a dominant negative activity against p73, as well as p53",
-        "surface": "body",
-        "anchor": "Introduction",
-        "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC.html",
-        "note": "The quoted sentence is what makes the collision genuinely confusing rather than merely notational: ΔNp73 IS described as having dominant-negative ACTIVITY, so `DN-p73` is defensible shorthand — and is still not the same thing as the `DN-Src` construct two figures away.",
-        "panel_text_relation": "text_only"
-      },
-      {
-        "proposition": "The pixel side of the p53 negative: Fig 1C is a two-blot negative panel — anti-p53 shows p53 in the p53 immunoprecipitate, anti-Myc shows Wwox in the Myc immunoprecipitate, and neither protein appears in the other's lane. It is a clean absence, and an absence is all it is: with no input blot the panel carries no normalisation for how much bait was present in each arm.",
-        "snippet": "p53 and Myc-Wwox were coexpressed in 293 cells and immunoprecipitated by anti-p53, anti-IgG, or anti-Myc antibodies",
-        "surface": "figure",
-        "anchor": "Fig 1C, two blots (IB: anti-p53 upper, anti-Myc lower), inspected at native 653x227",
-        "artifact": "files/figures/PMID15070730/zpq0130443520001.jpg",
-        "panel_text_relation": "panel_qualifies_text",
-        "qualifies": "entries[20]",
-        "qualifies_needle": "Both p73γ and p53 lack the proline-rich motif PPPPY, perhaps explaining the"
-      },
-      {
-        "proposition": "The pixel side of the apoptosis tension: reading the Fig 3C bar heights against its axis gives empty vector ~7.5%, Wwox ~16.5%, p73β ~14%, Wwox+p73β ~31%, ΔNp73 ~8%, Wwox+ΔNp73 ~26.5%, WWY33R ~11%, WWY33R+p73β ~38%, WWY33R+ΔNp73 ~12.5%. THE NON-BINDING MUTANT PLUS p73β IS THE TALLEST BAR IN THE PANEL. Error bars are present here, unlike Fig 3A. The panel also labels ΔNp73 as `DN-p73`, two figures away from a `DN-Src` that means dominant-negative. AND THE PANEL COUNT ITSELF: Fig 3 carries exactly three panels — A (luciferase), B (blots), C (these bars). There is no panel D anywhere in the image, which is what makes the Discussion's two `Fig. 3D` citations dangling.",
-        "snippet": "SAOS-2 cells were transfected with the indicated combinations together with pEGFP vector (1:10) as control for transfection efficiency.",
-        "surface": "figure",
-        "anchor": "Fig 3C, nine bars with SD, and the x-axis condition labels, inspected at native 462x747; whole-figure panel inventory read from the same raster",
-        "artifact": "files/figures/PMID15070730/zpq0130443520003.jpg",
-        "panel_text_relation": "panel_qualifies_text",
-        "qualifies": "entries[21]",
-        "qualifies_needle": "One possible explanation of this effect of WWY33R is that this mutation"
-      }
-    ]
+  "enumeration_method": "27 numbered entries read from the reference section of the HTML. Nine concern WWOX/FRA16D/FHIT directly (refs 1-9, 26); the rest are p73/p53 biology (12-18, 24, 25, 27), WW-domain biology (10, 11), Src consensus (23) and methods (19, 20).",
+  "🔴 the_two_chang_references_are_the_hinge": "Refs 21 and 22 are Chang et al. 2001 and Chang et al. 2003 — the murine Wox1 papers. THIS PAPER'S ENTIRE Y33 RATIONALE IS INHERITED FROM THEM: 'Tyrosine 33 (Y33) located in the first WW domain was previously reported to affect the murine Wox1 interaction with JNK (22)' and 'alteration of Y33 in Wwox was previously shown to reduce the proapoptotic activity of Wwox (22)'. Ref 22 (J Biol Chem 278:9195-9202, 2003) is PMID 12514174 — WHICH THIS CORPUS HAS ALREADY IDENTIFIED AS MISSING FROM DISK AND STILL HAS NOT READ. The premise under the Y33 story is a paper we do not hold."
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "prior receipts and manifests for 15070730, across every ref not just HEAD",
+  "hits": 0,
+  "finding": "ZERO receipts for 15070730 across ALL NINETEEN refs (`claim-foundation-trace`, nine `codex/*`, `delegation-readiness`, `evidence-index`, `extractor-to-main`, `harden-release-scan-scoping`, two `hostile-review/*`, `lettore`, `lettore-b`, `main`, `mirror`), ledger sizes 34 to 106. Measured in this session rather than inherited: the assignment supplied the same result from a three-day-stale context and explicitly asked that the measurement belong to the sender. It does. No prior manifest either.",
+  "reread_reason": "not applicable — first read"
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-08-14",
+  "route": "local PubMed corpus record for PMID 15070730, harvested 2026-08-06 — offline and re-runnable",
+  "result": "no retraction, no expression of concern, no erratum",
+  "🔴 but_the_neighbourhood_is_not_clean": "PMID 23446842, 'p73 participates in WWOX-mediated apoptosis in leukemia cells', is RETRACTED (retraction notice PMID 42464650), and it sits in `batch_queue.md` already flagged. It is not cited by this paper and cannot be — it postdates it by nine years — but it is downstream of the same arc, and a p73 claim promoted out of this reading must not pick it up as corroboration."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+   "sha256": "d2ae13cb067646bdeb1623ac06f1663de715eccf3c92fd4786296ac3d3fb5b10",
+   "kind": "article_text",
+   "note": "Re-acquired 2026-09-09 from https://pmc.ncbi.nlm.nih.gov/articles/PMC384759/ after the gitignored files/ tree was emptied. The CONTAINER digest differs from the 2026-08-14 artifact (77ef1b3f...) because PMC re-renders its chrome; the ARTICLE is the same, and all 17 body locators inherited from that reading were re-verified verbatim against these bytes before being re-pointed here (17 OK, 0 MISS). The superseded path is recorded rather than overwritten: writing new bytes to the old path would have falsified its declared digest."
   },
-  "coverage_map": {
-    "abstract": "read",
-    "introduction": "read",
-    "methods": "read",
-    "results": "read",
-    "discussion": "read",
-    "figures_body": "read — 40/40 panels at native resolution, with 6x-7x crops on Fig 1G, 4A, 4B, 4E",
-    "figures_supplementary": "not_read — Fig 5, 6, 7 behind PMC proof-of-work; see reading_budget.figure_gap",
-    "tables": "not_present",
-    "references": "read",
-    "supplement": "not_read"
+  {
+   "path": "files/fulltext/PMID15070730_Aqeilan2004.pdf",
+   "sha256": "a4c13952ff09feb0f49f4dc03d50565ca27c2b317fbd3c5610a3534c1d27cc6d",
+   "kind": "article_binary",
+   "route": "held locally; digest matches the assignment's declared value (522,396 B). NOT used as a text surface and not screened — see surface_preflight.pdf_font_screen.",
+   "rights": "not open access; held gitignored in the shared files/, bytes never committed"
   },
-  "coverage_status": "partial_fulltext_read",
-  "coverage_status_reason": "🔴 `partial`, NOT `complete`, AND THE REASON IS SUBSTANTIVE RATHER THAN BOOKKEEPING. Every section of the body and all forty body panels were read. Three supplementary figures were not, and they are not decoration: Fig 5 is the dose-dependence of the relocalisation, Fig 6 is the expression-comparability control for Fig 3B, Fig 7 supports the Fig 3C quantification. Declaring `complete` would assert that the reading saw the controls under three of its own findings. It did not."
+  {
+   "path": "files/figures/PMID15070730/zpq0130443520001.jpg",
+   "sha256": "a0414fe37e1892abf2a3973c1799faf656af6940c7031c68da811138508920eb",
+   "kind": "figure",
+   "native_px": "653x227",
+   "effective_ppi": "not_applicable — native HTML raster, no rendering",
+   "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/966a/384759/27ee3c616cb4/zpq0130443520001.jpg — URL embedded in the article HTML already held",
+   "figure": "Fig 1 (panels A-I)",
+   "rights": "not open access; held gitignored in the shared files/, bytes never committed"
+  },
+  {
+   "path": "files/figures/PMID15070730/zpq0130443520002.jpg",
+   "sha256": "6013025b3fb69e0577b93bc2ddbba9750c90ea330454fcd9b40035fd3d8a7efd",
+   "kind": "figure",
+   "native_px": "495x666",
+   "effective_ppi": "not_applicable — native HTML raster, no rendering",
+   "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/966a/384759/0ce56b11ee04/zpq0130443520002.jpg — URL embedded in the article HTML already held",
+   "figure": "Fig 2 (panels A-D)",
+   "rights": "not open access; held gitignored in the shared files/, bytes never committed"
+  },
+  {
+   "path": "files/figures/PMID15070730/zpq0130443520003.jpg",
+   "sha256": "a29e3a7e47900aeacfb0e182d3d57ffcf8e340598addeaed78f76b7c805e0738",
+   "kind": "figure",
+   "native_px": "462x747",
+   "effective_ppi": "not_applicable — native HTML raster, no rendering",
+   "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/966a/384759/1604051426f5/zpq0130443520003.jpg — URL embedded in the article HTML already held",
+   "figure": "Fig 3 (panels A-C)",
+   "rights": "not open access; held gitignored in the shared files/, bytes never committed"
+  },
+  {
+   "path": "files/figures/PMID15070730/zpq0130443520004.jpg",
+   "sha256": "fc6a1a1695552d22af0922cba6349aef5567cf7863b7cd1bad292d0cfc5fea46",
+   "kind": "figure",
+   "native_px": "631x189",
+   "effective_ppi": "not_applicable — native HTML raster, no rendering",
+   "route": "cdn.ncbi.nlm.nih.gov/pmc/blobs/966a/384759/f0478ce842c6/zpq0130443520004.jpg — URL embedded in the article HTML already held",
+   "figure": "Fig 4 (panels A-E)",
+   "rights": "not open access; held gitignored in the shared files/, bytes never committed"
+  },
+  {
+   "path": "files/figures/PMID15070730/pnas_101_13_4401__00805Fig5.jpg",
+   "sha256": "ee7f280456c2a41209e18c5df20a657af50c186bb3d07b26370deb9d712f92f5",
+   "kind": "figure",
+   "note": "PNAS Supporting Figure 5. Retrieved 2026-09-09 via framework/scripts/pmc_pow_fetch.py (POW difficulty 4, content-type image/jpeg). Refused by the same interstitial on 2026-08-14, when that client was PDF-only; it now accepts image types, so the debt that receipt declared became payable rather than permanent. Native raster 600x122."
+  },
+  {
+   "path": "files/figures/PMID15070730/pnas_101_13_4401__00805Fig6.jpg",
+   "sha256": "5d038ddba56eb9cae7bfa0fc12c77967fbc3d97f3e9aa219784eb556698ebd48",
+   "kind": "figure",
+   "note": "PNAS Supporting Figure 6. Same route and date. Native raster 500x182."
+  },
+  {
+   "path": "files/figures/PMID15070730/pnas_101_13_4401__00805Fig7.jpg",
+   "sha256": "7bb7a69800852d84e7ace43190258de3c370985bacd0ae87de0291d92df0449e",
+   "kind": "figure",
+   "note": "PNAS Supporting Figure 7. Same route and date. Native raster 500x507."
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "PMC HTML, digest verified against the assignment's declared value in the shared checkout. Four figure surfaces exist locally, acquired in this session from CDN URLs embedded in that HTML; three supplementary figure surfaces DO NOT exist locally and were not acquired — see reading_budget.figure_gap, declared_status `not_read`.",
+  "abstract_anchoring_waived": "No evidentiary locator uses the abstract. This mattered here more than usual: the abstract states the phosphorylation finding WITHOUT the hedge the Results carry, so anchoring to it would have reproduced the very loss this reading documents. Every locator below is drawn from the non-abstract body and was tested against the separated body surface.",
+  "entries": [
+   {
+    "proposition": "🔴 THE ANSWER TO THE ASSIGNMENT'S QUESTION, AND IT IS NOT 'THEIRS' OR 'OURS' BUT A THIRD THING. CLAIM 023's four clauses are each FAITHFUL to this paper's abstract — I checked them one at a time against it. What is not faithful is the PROVENANCE: CLAIM 023 is `consolidated baseline`/`DATO` sourced to `CORPUS P206`, a registry record whose `Identifier` is the literal string `PENDING` and whose own note says `likely overlaps PAPER 026 (PMID 32185845); verify before merge`. PAPER 026 is ABSTRACT-ONLY and reports the OPPOSITE direction for the Tyr33 effect (phosphorylation DECREASES affinity for a p73-derived peptide). So the model has been carrying, as a datum, a correctly-worded summary of a paper nobody opened, attributed to a placeholder that names no paper, flagged as possibly the same record as an abstract that contradicts it. The content is right and the chain of custody is absent — which is worse than a misreading, because a misreading is visible.",
+    "snippet": "We have also demonstrated specific phosphorylation of Y33",
+    "surface": "body",
+    "anchor": "Discussion — the flat restatement, four paragraphs after the hedged one",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "note": "🔴 ANCHORED IN THE DISCUSSION AND NOT IN THE ABSTRACT, ON PURPOSE AND AFTER THE VALIDATOR REFUSED THE ABSTRACT. The refusal improved the entry. The abstract's flat wording is what a reader downstream copies, but the Discussion shows the SAME hardening happening INSIDE the paper: `demonstrated` here, against `suggesting` in the Results section that describes the actual data. The loss of the modal is not something later readers did to this paper — it starts on page five of the paper itself, and the canonical claim is the fourth link in that chain, not the first.",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE MODAL IS PRESENT EXACTLY ONCE, AT THE ONLY PLACE WHERE THE DATA ARE DESCRIBED. The Results hedge the phosphorylation finding with `suggesting`. The figure title drops it ('Phosphorylation of Wwox enhances its association with p73'). The abstract drops it. CLAIM 023 carries the flat form as `DATO`. Nobody falsified anything at any step; the hedge simply did not survive three transports, and the fourth turned the survivor into a datum.",
+    "snippet": "cotransfection of cells with DN-Src results in some interaction of Wwox and p73, although this interaction increases several-fold when Src is cotransfected with Wwox and p73, suggesting that phosphorylation enhances this interaction",
+    "surface": "body",
+    "anchor": "Results — 'Src Enhances Phosphorylation of Wwox and Increases Its Binding to p73'",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The 'several-fold' increase is quantified NOWHERE. Fig 4 is five blots with no graph, no error bar, no densitometry and no stated replicate count; the phrase rests on visual band comparison in a single panel.",
+    "snippet": "Purified active c-Src kinase (Biomol, Plymouth Meeting, PA) was incubated with GST-WI fusions and ATP in kinase buffer",
+    "surface": "body",
+    "anchor": "Materials and Methods — 'In Vitro Kinase Assay'",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "note": "Anchored on the Methods because the absence of a quantification method is the evidence; there is no sentence describing densitometry to quote, and quoting one that does not exist is not available.",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 FIG 4A IS NOT NORMALISED FOR THE AMOUNT OF p73 PRESENT, AND THE PANEL SHOWS WHY. The text compares lane 3 (Myc IP, DN-Src) with lane 6 (Myc IP, Act-Src) and lane 6 is indeed the stronger — that much the panel supports. But lane 4 (the anti-HA immunoprecipitate under Act-Src, i.e. the p73 recovery control) is grossly overloaded relative to lane 1 (anti-HA under DN-Src): a saturated black mass that bleeds below the 50 kDa marker, against a strong but contained band in lane 1. Fig 4B lanes 1 and 2 show the same asymmetry independently. MORE p73 WAS RECOVERED IN THE +Src ARM, so a stronger co-IP in lane 6 cannot be attributed to more association per unit p73. There is no input blot and no loading control in the panel. The direction of the effect survives; its magnitude and its cause do not.",
+    "snippet": "293 cells were transfected with HA-p73β, Myc-Wwox, and Act-Src or DN-Src. Thirty-six hours later, whole-cell lysates were immunoprecipitated with anti-HA, anti-IgG, or anti-Myc.",
+    "surface": "figure",
+    "anchor": "Fig 4A, lanes 1-6 (IP: HA/IgG/Myc under -Src and +Src; IB: anti-HA), inspected at 6x LANCZOS from the native 631x189 raster",
+    "artifact": "files/figures/PMID15070730/zpq0130443520004.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[1]",
+    "qualifies_needle": "suggesting that phosphorylation enhances this interaction"
+   },
+   {
+    "proposition": "🔴 FIG 4B DOES NOT SHOW WHAT THE TEXT SAYS IT SHOWS, AND THE AUTHORS DRAW A CONCLUSION FROM IT. The text states the level of phosphorylated p73 did not change between DN-Src and Src, citing lanes 6 and 8, and concludes p73 is not a Src target. In the panel, lane 8's P-p73 signal is visibly DARKER AND LARGER than lane 6's — they are not equal. FAIRNESS CUTS BOTH WAYS AND IS RECORDED: lane 8 is a Myc (Wwox) immunoprecipitate under +Src, so by the paper's own central claim it contains MORE co-precipitated p73, which would raise P-p73 signal at constant phosphorylation per molecule. There is no anti-HA reprobe of lanes 5-8 to normalise. So the panel neither establishes the equality the text asserts nor refutes the conclusion: IT CANNOT RESOLVE THE QUESTION EITHER WAY, and the text does not acknowledge that. The conclusion is under-determined by the figure it cites.",
+    "snippet": "Because the level of phosphorylated p73 did not change in cells with DN-Src or Src expression, we concluded that p73 is not a target of Src phosphorylation",
+    "surface": "body",
+    "anchor": "Results — 'Src Enhances Phosphorylation of Wwox and Increases Its Binding to p73'",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pixel side of the preceding entry: P-p73 in lane 8 exceeds P-p73 in lane 6, against a text asserting no change.",
+    "snippet": "were immunoblotted with anti-HA (lanes1 and 2), anti-Myc (lanes 3 and 4), and anti-phosphotyrosine (lanes 5–8).",
+    "surface": "figure",
+    "anchor": "Fig 4B, lanes 5-8 (IB: anti-P-Tyrosine), P-p73 band position, inspected at 6x LANCZOS from the native 631x189 raster",
+    "artifact": "files/figures/PMID15070730/zpq0130443520004.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[4]",
+    "contradicts_needle": "the level of phosphorylated p73 did not change"
+   },
+   {
+    "proposition": "🔴 FIG 4E SHOWS RESIDUAL Y33F PHOSPHORYLATION THAT THE TEXT DENIES WITH AN ABSOLUTE NEGATIVE. The text says WI-WT and WI-Y34F but NOT WI-Y33F and WI-Y33,34F could be phosphorylated. The panel at 7x shows a faint but present band for Y33F at 30 min, while Y33,34F at 30 min is genuinely blank. That pattern is internally consistent — a minor Y34 contribution revealed once Y33 is removed, abolished when both go — and it reads as Y33-major/Y34-minor rather than Y33-exclusive. The distinction matters because the Discussion elsewhere treats Y34 as dispensable outright.",
+    "snippet": "Analysis of the products by Western Blot with anti-phosphotyrosine antibody showed that both WI-WT and WI-Y34F GST fusions, but not WI-Y33F and WI-Y33,34F, could be directly phosphorylated by Src",
+    "surface": "body",
+    "anchor": "Results — 'Src Enhances Phosphorylation of Wwox and Increases Its Binding to p73'",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pixel side: a faint band is present in the Y33F 30-min lane; the Y33,34F 30-min lane is blank.",
+    "snippet": "Purified GST-polypeptide fusions with the different mutations were incubated with recombinant Src",
+    "surface": "figure",
+    "anchor": "Fig 4E, eight lanes (WT/Y33F/Y34F/Y33,34F at 0 and 30 min; IB: anti-P-Tyrosine), inspected at 7x LANCZOS from the native 631x189 raster",
+    "artifact": "files/figures/PMID15070730/zpq0130443520004.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[6]",
+    "contradicts_needle": "but not WI-Y33F and WI-Y33,34F, could be directly phosphorylated by Src"
+   },
+   {
+    "proposition": "🔴 THE DISCUSSION CREDITS FIG 1G WITH AN EXPERIMENT FIG 1G DOES NOT CONTAIN. It states that Y34 and Y61 are dispensable for the interaction, citing Fig 1G. Fig 1G contains exactly three constructs — Wwox, WWY33R, WWY61R — verified by reading the panel headers at 7x. THERE IS NO Y34 CONSTRUCT IN ANY BINDING ASSAY IN THIS PAPER. WI-Y34F exists only in Fig 4E, the in-vitro kinase assay, which measures phosphorylation and not binding. The Y61 half of the sentence is supported; the Y34 half cites a panel that could not support it. Anyone transporting 'Y34 is dispensable for p73 binding' would be transporting an untested proposition with a figure number attached.",
+    "snippet": "Alteration of Y33 disturbed the Wwox–p73 association, whereas Y34 in the first WW domain and Y61 in the second WW domain are dispensable for this interaction",
+    "surface": "body",
+    "anchor": "Discussion",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pixel side: Fig 1G's three construct headers read Wwox, WWY33R, WWY61R across nine lanes. No Y34.",
+    "snippet": "293 cells were transiently transfected with the different Wwox expression constructs",
+    "surface": "figure",
+    "anchor": "Fig 1G panel header, inspected at 7x LANCZOS from the native 653x227 raster",
+    "artifact": "files/figures/PMID15070730/zpq0130443520001.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[8]",
+    "contradicts_needle": "Y34 in the first WW domain and Y61 in the second WW domain are dispensable for this interaction"
+   },
+   {
+    "proposition": "The Discussion cites `Fig. 3D` twice — for the ΔNp73 apoptosis result and for the increased apoptotic activity — and FIG 3 HAS NO PANEL D. Its caption declares A, B and C only, and the image carries exactly three panels. The data meant are in Fig 3C. A dangling internal cross-reference, twice, in the paragraph that carries the paper's central interpretive move.",
+    "snippet": "Interaction between Wwox and p73 contributes to Wwox proapoptotic activity.",
+    "surface": "body",
+    "anchor": "Fig 3 caption, panel (C) — the last panel the caption declares",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 'SIGNIFICANTLY' IS USED WITH NO STATISTIC ANYWHERE IN THE PAPER, AND FIG 3A HAS NO ERROR BARS. The caption says the luciferase results are the average of three experiments; the panel shows twelve bars with ZERO dispersion indicators, while Fig 3C — from the same paper, same figure — does carry error bars and an explicit `average ± SD`. The screen over the whole body finds `P <`, `P =`, `P<` and `P=` at ZERO occurrences: no test, no threshold, no n per condition. The dose-dependence and the suppression are visible as a trend; 'significantly' is a word here, not a result.",
+    "snippet": "Expression of Wwox significantly suppressed the transactivation function of p73 in a dose-dependent manner",
+    "surface": "body",
+    "anchor": "Results — 'Wwox Suppresses p73-Mediated Transactivation'",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pixel side, plus a second defect the text does not cause: Fig 3A carries no error bars on any of its twelve bars, and its y-axis is MISLABELLED. The axis reads `% of Luciferase (10³)` while the caption defines the values as fold induction over empty vector — and bar 1 is printed as 1.0, which is a fold and not a percentage. The printed bar values (1.0, 497, 1.7, 3.7, 2.7, 339, 63, 1481, 2062, 996, 303, 3366) are fold inductions on an axis claiming percent-times-a-thousand. Same class as the Z-score-printed-as-fold found in Liu 2018: a units label that would mislead anyone reading the panel without the caption.",
+    "snippet": "Results are shown as fold induction of the luciferase activity compared to control cells transfected with empty vector alone and are the average of three experiments.",
+    "surface": "figure",
+    "anchor": "Fig 3A, y-axis label and twelve bars, inspected at native 462x747",
+    "artifact": "files/figures/PMID15070730/zpq0130443520003.jpg",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[11]",
+    "contradicts_needle": "significantly suppressed the transactivation function of p73"
+   },
+   {
+    "proposition": "🔴 COLOCALISATION IS ASSERTED WITHOUT A MERGED IMAGE, AND THE ASYMMETRY RUNS AGAINST THE CLAIM. Fig 2A shows each condition as two separate single-channel images side by side (c1/c2, d1/d2, e1/e2) — there is no overlay panel anywhere in Fig 2A, so 'colocalization' is inferred from two images and not shown in one. In Fig 2B the pattern inverts in the least helpful direction: the NEGATIVE conditions (i = p73γ, j = p73βY487A, k = p53) ARE displayed as two-colour merged images, while the POSITIVE ones (g = p73α, h = ΔNp73) are displayed as separate channels. The panels that would benefit most from an overlay are the ones that do not get one.",
+    "snippet": "Interestingly, coexpression of p73 and WT-Wwox or WWY61R causes the sequestration of p73 and colocalization with Wwox in the cytoplasm",
+    "surface": "body",
+    "anchor": "Results — 'Wwox Sequesters p73 in Cytoplasm'",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pixel side: Fig 2A c1/c2, d1/d2 and e1/e2 are single-channel pairs with no overlay; Fig 2B i, j and k are two-colour merges while g and h are single-channel pairs.",
+    "snippet": "After fixation and permeabilization, the cells were stained with anti-HA and anti-Myc",
+    "surface": "figure",
+    "anchor": "Fig 2A (panels a-e2) and Fig 2B (panels f-k), inspected at native 495x666",
+    "artifact": "files/figures/PMID15070730/zpq0130443520002.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[13]",
+    "qualifies_needle": "colocalization with Wwox in the cytoplasm"
+   },
+   {
+    "proposition": "THE ROUTING RESULT IS AN OVEREXPRESSION RESULT AND THE AUTHORS SAY SO IN THE DISCUSSION. This is the single most important qualification for a model that carries the routing principle as architecture: the redistribution of p73 is what OVEREXPRESSED Wwox does. The endogenous support is real but narrower — Fig 1B (etoposide-treated 293), Fig 1F and Fig 2B (MCF-7 endogenous Wwox), Fig 2C/D (siRNA knockdown) — and the endogenous localisation result is reported as 'more than 50% of MCF-7 cells' with no n and no test.",
+    "snippet": "Overexpression of Wwox caused the redistribution of p73 from the nuclear compartment to the cytosol.",
+    "surface": "body",
+    "anchor": "Discussion",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The endogenous localisation figure is a bare proportion: no denominator, no field count, no statistic.",
+    "snippet": "More than 50% of MCF-7 cells exhibited cytoplasmic p73α where it colocalized with endogenous Wwox",
+    "surface": "body",
+    "anchor": "Results — 'Wwox Sequesters p73 in Cytoplasm'",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE DOSE-DEPENDENCE OF THE RELOCALISATION — THE STRONGEST FORM OF THE ROUTING EVIDENCE — IS IN A FIGURE THIS READING COULD NOT OPEN. Less Wwox giving more nuclear p73 is the closest thing in the paper to a causal titration, and it lives in supplementary Fig 5, behind PMC's proof-of-work. The claim is therefore carried here at the level the accessible panels support (Fig 2A, categorical, overexpression) and NOT at the level the text implies.",
+    "snippet": "We found that a reduced amount of Wwox in transfection causes a decrease in expression of Wwox and retention of p73 in the nucleus of some cells",
+    "surface": "body",
+    "anchor": "Results — 'Wwox Sequesters p73 in Cytoplasm'; the sentence cites supplementary Fig 5",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THE CONTROL THAT MAKES FIG 3B INTERPRETABLE IS ALSO IN AN UNOPENABLE FIGURE. Fig 3B compares p21 levels across Wwox and WWY33R conditions; whether Wwox and WWY33R were expressed comparably is the difference between a functional result and an expression artefact, and that control is supplementary Fig 6. Without it, the p21 restoration by WWY33R cannot be separated from a difference in how much protein each construct made.",
+    "snippet": "Expression of Wwox and WWY33R were comparable in all experiments",
+    "surface": "body",
+    "anchor": "Results — 'Wwox Suppresses p73-Mediated Transactivation'; the sentence cites supplementary Fig 6",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE Y33 RATIONALE IS INHERITED FROM A PAPER THIS CORPUS DOES NOT HOLD. Y33 was chosen for study because Chang et al. reported it affects murine Wox1's interaction with JNK; the same reference supplies the claim that altering Y33 reduces Wwox's proapoptotic activity. That reference is J Biol Chem 278:9195-9202 (2003) = PMID 12514174, already known to this corpus as MISSING FROM DISK AND UNREAD. PREMISE: DATO in the source, but a DATO we have never verified — the load-bearing premise under the whole Y33 story is a paper we do not have.",
+    "snippet": "Tyrosine 33 (Y33) located in the first WW domain was previously reported to affect the murine Wox1 interaction with JNK",
+    "surface": "body",
+    "anchor": "Results — 'Wwox Physically Interacts with p73 both in Vivo and in Vitro'",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A NEGATIVE PANEL, AND IT IS TREATED AS ONE. The p53 non-interaction is a genuine and useful result — it is what makes the PPPPY-motif explanation specific rather than decorative — but Fig 1C is a negative panel and, per the standing correction, a negative panel does not by itself permit a comparison normalised for bait quantity. The authors' own framing is appropriately modal ('perhaps explaining'), and that modal is worth preserving on the way out.",
+    "snippet": "Both p73γ and p53 lack the proline-rich motif PPPPY, perhaps explaining the absence of complex formation with Wwox.",
+    "surface": "body",
+    "anchor": "Discussion",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE APOPTOSIS RESULT CONTAINS ITS OWN TENSION AND THE AUTHORS FLAG IT AS A GUESS. WWY33R does not bind p73, yet WWY33R + p73β gives the LARGEST apoptotic population in Fig 3C (~38%, above WT-Wwox + p73β at ~31%). The explanation offered is explicitly one possibility among others, not a demonstration. Anyone carrying 'Wwox-p73 cytoplasmic cooperation drives apoptosis' out of this paper must also carry the fact that the non-binding mutant produced more apoptosis than the binder.",
+    "snippet": "One possible explanation of this effect of WWY33R is that this mutation has a dominant negative effect on endogenous Wwox.",
+    "surface": "body",
+    "anchor": "Discussion",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A LABELLING HAZARD FOR ANYONE TRANSPORTING FIG 3C. The panel labels the amino-terminally truncated p73 isoform as `DN-p73`, while the same paper uses `DN-Src` to mean DOMINANT-NEGATIVE Src. In Fig 3C `DN-p73` means ΔNp73 — a deletion variant — not a dominant-negative construct, and the two senses of `DN` sit in adjacent figures. Recorded because the misreading is silent and would invert the interpretation of the ΔNp73 bars.",
+    "snippet": "ΔNp73 lacks the transactivation domain and possesses a dominant negative activity against p73, as well as p53",
+    "surface": "body",
+    "anchor": "Introduction",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "note": "The quoted sentence is what makes the collision genuinely confusing rather than merely notational: ΔNp73 IS described as having dominant-negative ACTIVITY, so `DN-p73` is defensible shorthand — and is still not the same thing as the `DN-Src` construct two figures away.",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The pixel side of the p53 negative: Fig 1C is a two-blot negative panel — anti-p53 shows p53 in the p53 immunoprecipitate, anti-Myc shows Wwox in the Myc immunoprecipitate, and neither protein appears in the other's lane. It is a clean absence, and an absence is all it is: with no input blot the panel carries no normalisation for how much bait was present in each arm.",
+    "snippet": "p53 and Myc-Wwox were coexpressed in 293 cells and immunoprecipitated by anti-p53, anti-IgG, or anti-Myc antibodies",
+    "surface": "figure",
+    "anchor": "Fig 1C, two blots (IB: anti-p53 upper, anti-Myc lower), inspected at native 653x227",
+    "artifact": "files/figures/PMID15070730/zpq0130443520001.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[20]",
+    "qualifies_needle": "Both p73γ and p53 lack the proline-rich motif PPPPY, perhaps explaining the"
+   },
+   {
+    "proposition": "The pixel side of the apoptosis tension: reading the Fig 3C bar heights against its axis gives empty vector ~7.5%, Wwox ~16.5%, p73β ~14%, Wwox+p73β ~31%, ΔNp73 ~8%, Wwox+ΔNp73 ~26.5%, WWY33R ~11%, WWY33R+p73β ~38%, WWY33R+ΔNp73 ~12.5%. THE NON-BINDING MUTANT PLUS p73β IS THE TALLEST BAR IN THE PANEL. Error bars are present here, unlike Fig 3A. The panel also labels ΔNp73 as `DN-p73`, two figures away from a `DN-Src` that means dominant-negative. AND THE PANEL COUNT ITSELF: Fig 3 carries exactly three panels — A (luciferase), B (blots), C (these bars). There is no panel D anywhere in the image, which is what makes the Discussion's two `Fig. 3D` citations dangling.",
+    "snippet": "SAOS-2 cells were transfected with the indicated combinations together with pEGFP vector (1:10) as control for transfection efficiency.",
+    "surface": "figure",
+    "anchor": "Fig 3C, nine bars with SD, and the x-axis condition labels, inspected at native 462x747; whole-figure panel inventory read from the same raster",
+    "artifact": "files/figures/PMID15070730/zpq0130443520003.jpg",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[21]",
+    "qualifies_needle": "One possible explanation of this effect of WWY33R is that this mutation"
+   },
+   {
+    "proposition": "The paper's ONLY titration of Wwox against p73 localisation displays neither of the two things it is cited for. The panel carries no dose labels of any kind — the amounts of Myc-Wwox the text says were varied appear nowhere on the figure — there is no merged channel anywhere (Wwox and p73 are shown as separate single channels b1/b2 and c1/c2, the same absence already recorded for Fig 2A), and no cell count, n or statistic appears on it, although the proposition it supports is explicitly about a PROPORTION of cells ('some cells').",
+    "snippet": "Cells were examined by confocal microscopy (Bio-Rad) under ×63 magnification",
+    "surface": "figure",
+    "artifact": "files/figures/PMID15070730/pnas_101_13_4401__00805Fig5.jpg",
+    "anchor": "Fig 5 (Supporting), whole figure: five panels a, b1, b2, c1, c2, inspected at 6x and 9x from the native 600x122 raster",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[17]",
+    "note": "entries[17] is the citing sentence, captured on 2026-08-14 by a reading that could not open this image. This is the pixel side of that debt.",
+    "qualifies_needle": "retention of p73 in the nucleus of some cells"
+   },
+   {
+    "proposition": "MEASURED, and it does not show what it is cited for: in the panel cited to establish that a reduced amount of Wwox lowers Wwox expression, the Wwox (red) channel of the REDUCED-dose field c1 is not lower than the higher-dose field b1 on any measure — Wwox-positive area 6.04% vs 4.70%, mean intensity of positive pixels 173.3 vs 160.8, 99th percentile 255 vs 237. ⚠️ STATED WITH ITS LIMIT: immunofluorescence intensity compared across two different confocal fields is NOT a quantitative measure of expression — gain, exposure and cell number all differ and none is reported. So this establishes only that the figure CANNOT support the asserted decrease, in either direction; it is not a claim that Wwox was higher at the lower dose.",
+    "snippet": "Cells were examined by confocal microscopy (Bio-Rad) under ×63 magnification",
+    "surface": "figure",
+    "artifact": "files/figures/PMID15070730/pnas_101_13_4401__00805Fig5.jpg",
+    "anchor": "Fig 5 panels b1 and c1 (anti-Wwox channel), red-channel statistics over the panel interiors, rows 10-110",
+    "panel_text_relation": "text_contradicted_by_panel",
+    "contradicts": "entries[17]",
+    "contradicts_needle": "causes a decrease in expression of Wwox and retention of p73"
+   },
+   {
+    "proposition": "Both p73 panels of Fig 5 contain BOTH morphologies, so the figure does not display the contrast the sentence draws from it. The high-Wwox field b2 contains a solid green ellipse whose centre-to-body brightness ratio is 1.10 (body mean 176.9, thirteen consecutive pixels at 193-199 across its middle) — indistinguishable from the nuclear p73 of the p73-alone control panel a, whose objects run 1.08-1.14. The reduced-Wwox field c2 contains a cell whose horizontal profile at row 61 runs bright-dark-bright (113 -> 54 -> 201), i.e. p73 EXCLUDED from the nuclear region. 🔴 METHOD NOTE, recorded because it governs how far this entry may be read: two independent automated segmentations of these panels disagreed with each other and with my own first visual impression, so NO directional claim is made about b versus c. What is established is the presence of both morphologies in both fields and the absence of any count that could weigh them.",
+    "snippet": "Cells were examined by confocal microscopy (Bio-Rad) under ×63 magnification",
+    "surface": "figure",
+    "artifact": "files/figures/PMID15070730/pnas_101_13_4401__00805Fig5.jpg",
+    "anchor": "Fig 5 panels a, b2, c2 (anti-HA/p73 channel); per-object centroid-vs-body green statistics and row-61 line profile",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[17]",
+    "qualifies_needle": "retention of p73 in the nucleus of some cells"
+   },
+   {
+    "proposition": "Fig 6 SUPPORTS the control it is cited for, and this is the reading's clearest positive finding about the supplement. At matched plasmid (1 µg) and matched p73β, the Wwox-to-tubulin density ratio of WT-Wwox versus WWY33R is 1.640 vs 1.503 at 0 ng p73β, 1.695 vs 1.217 at 10 ng and 1.827 vs 2.234 at 50 ng — WT/mutant ratios of 1.09, 1.39 and 0.82, straddling unity. The mutant is not systematically over- or under-expressed, so the Fig 3B result that WWY33R restores p21 is NOT obviously an expression artefact. ⚠️ My densitometry, not a reported result: the paper performs no densitometry, states no replicate count for this blot and prints no statistic on it.",
+    "snippet": "Western blotting was performed under standard conditions",
+    "surface": "figure",
+    "artifact": "files/figures/PMID15070730/pnas_101_13_4401__00805Fig6.jpg",
+    "anchor": "Fig 6 (Supporting), anti-Wwox blot rows 82-96 over anti-Tubulin rows 145-159, ten lanes integrated; design row read off the panel header",
+    "panel_text_relation": "text_confirmed_by_panel",
+    "supports": "entries[18]",
+    "confirms": "entries[18]",
+    "confirms_needle": "Expression of Wwox and WWY33R were comparable"
+   },
+   {
+    "proposition": "Fig 6 carries the labelled dose axis Fig 5 lacks, and on it plasmid dose DOES control Wwox protein: Wwox-to-tubulin rises monotonically from 0.762 / 1.100 / 1.167 at 0.5 µg to 1.640 / 1.695 / 1.827 at 1 µg across the three p73β levels — roughly 1.6-fold protein for 2-fold plasmid. 🔴 THE CROSS-PANEL CONSEQUENCE: the dose-to-expression step that Fig 5's citing sentence asserts and does not display is established elsewhere in the same supplement, in a different assay, one that measures protein rather than localisation. The step is therefore not unsupported in the paper — it is unsupported IN THE FIGURE THE SENTENCE CITES FOR IT, and the localisation half of that sentence remains without any quantification anywhere.",
+    "snippet": "Western blotting was performed under standard conditions",
+    "surface": "figure",
+    "artifact": "files/figures/PMID15070730/pnas_101_13_4401__00805Fig6.jpg",
+    "anchor": "Fig 6 lanes 2-7 (Wwox 0.5 vs 1 µg at p73β 0/10/50 ng), Wwox-to-tubulin per lane",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[17]",
+    "qualifies_needle": "retention of p73 in the nucleus of some cells"
+   },
+   {
+    "proposition": "Lane 1 of Fig 6 (no Wwox, no WWY33R, no p73β) carries a Wwox-to-tubulin ratio of 0.071 against 0.762-2.234 in every transfected lane: no detectable endogenous Wwox at this exposure. This corroborates FROM THE PIXELS the body's own statement about the cell line, and fixes the epistemic status of every Wwox result obtained in SAOS-2 in this paper — they are overexpression on a near-null background, not modulation of an endogenous pool.",
+    "snippet": "Western blotting was performed under standard conditions",
+    "surface": "figure",
+    "artifact": "files/figures/PMID15070730/pnas_101_13_4401__00805Fig6.jpg",
+    "anchor": "Fig 6 lane 1, anti-Wwox row 82-96 against anti-Tubulin row 145-159",
+    "panel_text_relation": "text_confirmed_by_panel"
+   },
+   {
+    "proposition": "FAIRNESS RECORDED AGAINST MY OWN POSITIVE FINDING: the single matched pair in which WWY33R appears to EXCEED wild-type (ratio 0.82, at 50 ng p73β) is the pair whose loading control is weakest — lane 10's tubulin density is 29.93 against 46.96-61.41 in all nine other lanes, the lowest by a wide margin. The comparability conclusion is not overturned by this, but the one lane that would argue against it is the lane least able to carry the argument, and a normalisation dividing by an anomalously small denominator inflates exactly that ratio.",
+    "snippet": "Western blotting was performed under standard conditions",
+    "surface": "figure",
+    "artifact": "files/figures/PMID15070730/pnas_101_13_4401__00805Fig6.jpg",
+    "anchor": "Fig 6 lane 10 (WWY33R 1 µg, p73β 50 ng), anti-Tubulin row 145-159 compared across all ten lanes",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[18]",
+    "qualifies_needle": "Expression of Wwox and WWY33R were comparable"
+   },
+   {
+    "proposition": "The nine DNA-content histograms of Fig 7, which are the raw data behind the Fig 3C sub-G1 quantification, are EACH AUTO-SCALED TO A DIFFERENT MAXIMUM COUNT — reading the printed y-axis maxima in panel order: 148, 72, 88, 60, 132, 64, 124, 60, 120. The height of a sub-G1 peak is therefore not comparable between panels by eye, and the visual prominence of the effect is confounded with the scaling.",
+    "snippet": "DNA content was assessed by propidium iodide staining of methanol-fixed cells ( 19 ) and monitoring by FACScan (Becton Dickinson)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID15070730/pnas_101_13_4401__00805Fig7.jpg",
+    "anchor": "Fig 7 (Supporting), nine panels; y-axis maximum of each read at 14x from the native 500x507 raster",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[37]",
+    "qualifies_needle": "increases the number of cells with sub-G 1 DNA content"
+   },
+   {
+    "proposition": "No sub-G1 gate marker is drawn on any of the nine panels of Fig 7, and no percentage is printed on any of them. The figure therefore does NOT display the gating that produced the percentages plotted in Fig 3C: the reader is shown the distributions and not the region that was counted, so Fig 3C's numbers cannot be checked against Fig 7 by any means available in the paper.",
+    "snippet": "DNA content was assessed by propidium iodide staining of methanol-fixed cells ( 19 ) and monitoring by FACScan (Becton Dickinson)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID15070730/pnas_101_13_4401__00805Fig7.jpg",
+    "anchor": "Fig 7, all nine panels, inspected for gate markers, region bars and printed percentages",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[37]",
+    "qualifies_needle": "increases the number of cells with sub-G 1 DNA content"
+   },
+   {
+    "proposition": "🔴 STATED SO IT CANNOT BE MISREAD AS AN ACCUSATION. The four Fig 7 panels with the LOWEST y-maxima (60, 60, 64, 72 — Wwox+p73β, WWY33R+p73β, ΔNp73+Wwox, Wwox) are exactly the four conditions Fig 3C reports as most apoptotic. That correlation is what GENUINE apoptosis would produce, because a depleted G1 peak lowers the auto-scale; it is recorded as a confound in the DISPLAY and explicitly NOT as evidence of manipulation. The consequence is only that the eye cannot be used here, and Fig 3C's own average ± SD from three experiments — which the caption does report — remains the quantification that carries the result.",
+    "snippet": "DNA content was assessed by propidium iodide staining of methanol-fixed cells ( 19 ) and monitoring by FACScan (Becton Dickinson)",
+    "surface": "figure",
+    "artifact": "files/figures/PMID15070730/pnas_101_13_4401__00805Fig7.jpg",
+    "anchor": "Fig 7 y-maxima cross-referenced against the Fig 3C caption and bar order",
+    "panel_text_relation": "panel_qualifies_text",
+    "qualifies": "entries[37]",
+    "qualifies_needle": "increases the number of cells with sub-G 1 DNA content"
+   },
+   {
+    "proposition": "🔴 THE FINDING THAT NARROWS CLAIM 023, AND IT IS AN ABSENCE MADE MACHINE-CHECKABLE. The authors' own scope for the phosphorylation result is the INTERACTION, not the localisation: Y33 phosphorylation is said to regulate the Wwox–p73 interaction, and nothing more. Screened over the whole body from Abstract to Discussion, EIGHT sentences mention Src and ZERO of them also mention localisation, cytoplasm, nucleus, redistribution or sequestration. No experiment in this paper manipulates phosphorylation and measures where p73 goes: Fig 4 is entirely binding and phospho-blot biochemistry, while Fig 2 and Fig 5 are localisation with no Src arm. 'Phosphorylation-dependent subcellular rerouting' is therefore a CONJUNCTION of two separately supported legs and not a relation this paper tests.",
+    "snippet": "We have also demonstrated specific phosphorylation of Y33 ( Fig. 4 ), which regulate Wwox–p73 interaction",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "anchor": "Discussion, second paragraph — the authors' own statement of what the phosphorylation result governs",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The two Discussion sentences that carry the 'cytoplasmic cooperation drives apoptosis' leg BOTH cite a panel that does not exist. Fig 3's caption declares panels (A), (B) and (C) and the image carries three panels; the Discussion cites 'Fig. 3 D' twice, once for the ΔNp73 result and once for the increased apoptotic activity. The data meant are in Fig 3C, so this is a citation defect and not a missing experiment — but the leg of the argument that a downstream reader would follow terminates, twice, at a label with nothing behind it.",
+    "snippet": "we detected increased apoptotic activity ( Fig. 3 D )",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "anchor": "Discussion, third paragraph; checked against the Fig 3 caption's declared panel letters (A, B, C)",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The sentence that sends the reader to Fig 7 for the sub-G1 apoptosis result. It is the text side of the three Fig 7 attestations that follow it in this manifest: what Fig 7 is cited to show is that Wwox or p73β alone raises the sub-G1 fraction over empty vector, a comparison of MAGNITUDES between panels.",
+    "snippet": "Transfection of Wwox or p73β alone increases the number of cells with sub-G 1 DNA content compared to cells expressing empty vector",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID15070730_Aqeilan2004_PMC_2026-09-09.html",
+    "anchor": "Results — 'Interaction Between Wwox and p73 Contributes to Wwox Proapoptotic Activity', the sentence citing Fig. 3 C and Fig. 7",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ },
+ "coverage_map": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "read",
+  "results": "read",
+  "discussion": "read",
+  "figures_body": "read — 40/40 panels at native resolution (2026-08-14), re-anchored 2026-09-09 to the re-acquired container",
+  "figures_supplementary": "read — Fig 5, 6 and 7 retrieved 2026-09-09 through pmc_pow_fetch.py and inspected at native resolution with 6x-14x crops; the debt the 2026-08-14 receipt declared is PAID",
+  "tables": "not_present",
+  "references": "read — 27 enumerated",
+  "supplement": "read — the three Supporting Figures are the whole of the supplement's evidentiary content; their three caption stubs (pnas_101_13_4401__.html 746B, __1.html 487B, __2.html 289B and the Fig 7 stub) returned HTTP 403 through the same POW client that delivered the images, and are named here as unavailable rather than omitted. A caption is not a figure: the surface that carries the evidence was obtained, the surface that describes it was not."
+ },
+ "coverage_status": "complete_fulltext_read",
+ "coverage_status_reason": "Upgraded from partial_fulltext_read on 2026-09-09 by scientist-a. The 2026-08-14 reading was partial for exactly one declared reason — Fig 5, 6 and 7 sat behind PMC's proof-of-work and its client was PDF-only. That client now accepts image types, all three figures were retrieved and inspected at native resolution, and the whole body was re-read section by section in this session rather than inherited, so this event's coverage map is its own and carries no not_read. The three caption stubs are named as unavailable material, which a complete read permits and which silence would not."
 }
