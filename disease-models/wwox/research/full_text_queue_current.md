@@ -3694,7 +3694,12 @@ decidere se `-056` e `-139` valgono la lettura o una dismissione motivata con `R
 
 ---
 
-## FT-044 — aggiornamento 2026-09-09 (`scientist-a`, task `AQEILAN-FT-A-001`, wave 1)
+## Aggiornamento 2026-09-09 alla voce `FT-044` (`scientist-a`, task `AQEILAN-FT-A-001`, wave 1)
+
+> Non è una nuova voce di coda e non conia un identificatore: è un aggiornamento di stato della
+> voce `FT-044` qui sopra, che resta l'unica. Il titolo è deliberatamente privo del prefisso
+> `FT-` iniziale perché il LINT conta gli identificatori dalle intestazioni, e una seconda
+> intestazione `FT-044` rende ambiguo ogni riferimento già scritto nelle receipt.
 
 **Stato: PARCHEGGIATO. Nessuna receipt emessa, e nessuna era dovuta: il testo non è stato acquisito.**
 
