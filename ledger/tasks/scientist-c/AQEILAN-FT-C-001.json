@@ -64,7 +64,7 @@
       "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
     ]
   },
-  "CURRENT_STATE": "WAVE_2_IN_PROGRESS — wave 1 closed (20530675, 21731849); wave 2 dispatched as 38355659 then 21115974; 3 PMIDs (16223882, 18460020, 41562193) remain unassigned to a session",
+  "CURRENT_STATE": "WAVE_2_COMPLETE — 4 of 7 PMIDs closed (20530675, 21731849 in wave 1; 38355659, 21115974 in wave 2), all four at complete_fulltext_read. 3 remain and were NOT opened: 16223882, 18460020, 41562193.",
   "assigned_on": "2026-09-08",
   "acquisition_hints": {
     "20530675": {
@@ -207,6 +207,35 @@
         "41562193"
       ],
       "note_for_next_wave": "41562193 carries only a legacy_reconstruction, so it is first_read - the article itself has never been opened. 16223882 is now also FT-076 in the queue and carries a standing expression of concern that must be read alongside it. 18460020 has no PMCID and no free site listed; expect the full acquisition cascade."
+    },
+    {
+      "milestone": "wave 2 complete",
+      "at": "2026-09-09T11:40:00Z",
+      "actor": "scientist-c",
+      "pmids_closed": [
+        "38355659",
+        "21115974"
+      ],
+      "receipts": [
+        "FTR-20260909-38355659-01",
+        "FTR-20260909-21115974-01"
+      ],
+      "evidence_depth": "complete_fulltext_read (both)",
+      "manifests": "strict validator PASS, 0 gaps, 8 locators (38355659) and 35 locators (21115974)",
+      "figures": "38355659: 0 figures present, 0/0, the single page still read as pixels. 21115974: 9 of 9 surfaces read as pixels (6 main + 3 supplemental); native resolution 432 px is a PMC archival limit, verified not assumed.",
+      "review": "R4 legend-locator-audit NOT triggered on 38355659 (threshold check run mechanically and recorded in skills_considered). R4 TRIGGERED AND RUN on 21115974: returned NOT CLEAN, 12 of 32 triples defective, one disqualifying; corrections incorporated and the reading's conclusion was materially narrowed as a result.",
+      "commits": [
+        "f84171b wave-2 claim",
+        "8906906 PMID 38355659",
+        "9c9197d PMID 21115974"
+      ],
+      "interruption": "This session was terminated by a rate limit immediately after the 21115974 receipt was appended and before its discovery-ledger append was written, leaving LINT at BLOCK_BATCH_COMMIT with OUTPUT_STUDY_MISMATCH. On resume the intended append was written (DL-MECH-106 corroboration + new DL-METH-109) rather than the receipt's declared outputs being walked back, and LINT returned to PASS. The ledger JSONL was never hand-edited.",
+      "remaining_pmids": [
+        "16223882",
+        "18460020",
+        "41562193"
+      ],
+      "note_for_next_wave": "16223882 (Fabbri 2005 PNAS, Ad-WWOX lung) carries a STANDING EXPRESSION OF CONCERN that must be read alongside it, and it is also FT-076 in the full-text queue and the reagent source cited by 20530675. 18460020 has no PMCID and no free site listed - expect the full acquisition cascade. 41562193 carries only a legacy_reconstruction, so it is first_read: the article itself has never been opened. Two carried debts for whoever takes them: PMID 15070730 (this lot's cross-reference into CLAIM 023) belongs to scientist-a's open contract and must not be opened by this actor; and CORPUS P206 / CORPUS P204, the registry placeholders behind consolidated baseline CLAIM 023 and CLAIM 024, both carry Identifier: PENDING and are an operator item."
     }
   ]
 }
