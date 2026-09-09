@@ -1,0 +1,182 @@
+{
+ "schema_version": 2,
+ "pmid": "24510053",
+ "citation": "Gardenswartz A, Aqeilan RI. WW domain-containing oxidoreductase's role in myriad cancers: clinical significance and future implications. Exp Biol Med (Maywood) 2014;239(3):253-263. DOI 10.1177/1535370213519213",
+ "rights": {
+  "notice": "Copyright 2014 by the Society for Experimental Biology and Medicine (ISSN 1535-3702), as printed on page 1 of the article",
+  "open_licence": null,
+  "pmc_deposit": false,
+  "redistribution": "NOT_REDISTRIBUTED",
+  "why": "The article has no PMC deposit and no open licence; it is served free to read on the publisher's current platform, which is access, not a redistribution right. These crops reproduce substantial portions of the printed page, so the images are gitignored and not published with this repository. This file is the recipe that regenerates them byte-identically from a copy of the PDF the reader already holds — publish the derivation, not the derived."
+ },
+ "source_pdf": {
+  "path": "files/fulltext/PMID24510053_Gardenswartz2014.pdf",
+  "sha256": "ef0ba8d0ebed36feb95a9bf576f4ea9b1ca8cf6a118360db3f9b399abf15daf4"
+ },
+ "manifest": "disease-models/wwox/research/deepdive_manifests/PMID24510053.json",
+ "needles": "Each artifact names the locator it adjudicates and the needle that must fall inside the crop. Every body locator in this reading is page-adjudicated, because the PDF's text layer is SUSPECT (12 'þ' for '+', 8 0x02 for '−', all in genotype and receptor-status notation) and no structured surface exists for this article anywhere the retrieval cascade reached.",
+ "artifacts": [
+  {
+   "file": "p01_review_scope_myriad_cancers.png",
+   "page": 1,
+   "crop": [
+    288.0,
+    303.39,
+    570.0,
+    340.35
+   ],
+   "dpi": 400,
+   "sha256": "d4116361db1e7cedb3d73060e4b51053cf4028832ad95fd0766af5d2dfbe837a",
+   "adjudicates": [
+    {
+     "locator": "entries[0]",
+     "needle": "role that has been unearthed thus far in different types of"
+    }
+   ]
+  },
+  {
+   "file": "p01_knockout_osteosarcoma_hetero_lung.png",
+   "page": 1,
+   "crop": [
+    288.0,
+    611.79,
+    570.0,
+    649.34
+   ],
+   "dpi": 400,
+   "sha256": "56668b026cff00fedc7814309fc5cfb34d2541f3ec544b0a644c229f643c366e",
+   "adjudicates": [
+    {
+     "locator": "entries[1]",
+     "needle": "papillary carcinomas, in the case of Wwox-heterozygous"
+    }
+   ]
+  },
+  {
+   "file": "p01_wwox_increased_in_some_cancers.png",
+   "page": 1,
+   "crop": [
+    26.0,
+    676.53,
+    308.0,
+    714.08
+   ],
+   "dpi": 400,
+   "sha256": "d279445fd9a45a55045b7da0dc9c9f5b79b4b4d7ea64219c808a244efe8e1ae7",
+   "adjudicates": [
+    {
+     "locator": "entries[2]",
+     "needle": "documented increased levels of WWOX in breast, gastric"
+    }
+   ]
+  },
+  {
+   "file": "p02_c3h_het_mammary_50pct.png",
+   "page": 2,
+   "crop": [
+    288.0,
+    469.32,
+    570.0,
+    506.87
+   ],
+   "dpi": 400,
+   "sha256": "cc3c12a286e15f18ddda15cd1b7ef13ec608d63a606e626c1ae2551618328ea4",
+   "adjudicates": [
+    {
+     "locator": "entries[3]",
+     "needle": "of female mice formed tumors while only 7% of female"
+    }
+   ]
+  },
+  {
+   "file": "p02_ubiquitination_proteasome_definition.png",
+   "page": 2,
+   "crop": [
+    288.0,
+    144.75,
+    570.0,
+    182.3
+   ],
+   "dpi": 400,
+   "sha256": "b16b9ccbc01d491b2f17315d5686ed9808785bb14badac00739ee052cda239b8",
+   "adjudicates": [
+    {
+     "locator": "entries[4]",
+     "needle": "labeled with a ubiquitin tag and thus designated for deg"
+    }
+   ]
+  },
+  {
+   "file": "p02_ack1_polyubiquitination.png",
+   "page": 2,
+   "crop": [
+    288.0,
+    190.9,
+    570.0,
+    228.45
+   ],
+   "dpi": 400,
+   "sha256": "ab623a24f57ca2b101aa3f2b6a4af5cd8cc935f96e2dd734699213424225331b",
+   "adjudicates": [
+    {
+     "locator": "entries[5]",
+     "needle": "Ack1, an intracellular tyrosine kinase induces"
+    }
+   ]
+  },
+  {
+   "file": "p02_no_e3_ligase_known.png",
+   "page": 2,
+   "crop": [
+    288.0,
+    294.76,
+    570.0,
+    332.31
+   ],
+   "dpi": 400,
+   "sha256": "f8ea1d9dc520e54483fd2ce8192c0e61aba43521a8972adb907a748578aff134",
+   "adjudicates": [
+    {
+     "locator": "entries[6]",
+     "needle": "So far no ubiquitin E3 ligase was asso"
+    }
+   ]
+  },
+  {
+   "file": "p07_gbm_loh_methylation.png",
+   "page": 7,
+   "crop": [
+    288.0,
+    384.73,
+    570.0,
+    422.28
+   ],
+   "dpi": 400,
+   "sha256": "71bb3a8f6bb9162d9f1d2ea4bf6e8d0a7757e64a4959a745922c67ec014e34eb",
+   "adjudicates": [
+    {
+     "locator": "entries[7]",
+     "needle": "They also found WWOX to be correlated with"
+    }
+   ]
+  },
+  {
+   "file": "p07_gbm_overexpression_apoptosis.png",
+   "page": 7,
+   "crop": [
+    288.0,
+    419.26,
+    570.0,
+    456.81
+   ],
+   "dpi": 400,
+   "sha256": "e4fb5850fc74da847aa226524b705ac75f2649264307490be11af16874b5f1c0",
+   "adjudicates": [
+    {
+     "locator": "entries[8]",
+     "needle": "GBM cell lines with a mutant p53 and reported"
+    }
+   ]
+  }
+ ]
+}

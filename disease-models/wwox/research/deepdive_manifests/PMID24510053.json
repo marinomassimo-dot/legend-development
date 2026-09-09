@@ -1,0 +1,414 @@
+{
+ "schema_version": 2,
+ "pmid": "24510053",
+ "doi": "10.1177/1535370213519213",
+ "pmcid": null,
+ "receipt": "FTR-20260909-24510053-01",
+ "landing": [
+  "FTR-20260909-24510053-01",
+  "paper_registry_current.md#CORPUS P308",
+  "LIT-0308"
+ ],
+ "landing_note": "🔴 EVERY OA AGGREGATOR SAID CLOSED, AND ALL OF THEM WERE WRONG. Unpaywall (is_oa false, oa_status closed, zero oa_locations), OpenAlex (is_oa false, two non-OA locations), Semantic Scholar (openAccessPdf status CLOSED), Europe PMC (isOpenAccess N, inPMC N, single subscription-required fullTextUrl) and NCBI idconv ('Identifier not found in PMC') agree unanimously — because every one of them keys on the SAGE DOI record, and Experimental Biology and Medicine has since migrated to Frontiers. Crossref is the only structured source that shows it: its publisher field reads 'Frontiers Media SA' against a sagepub.com licence URL. The article is served free and complete at the Frontiers-hosted ebm-journal.org. journals.sagepub.com returns HTTP 403 (Cloudflare) on the landing page and on both Crossref TDM links.",
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": true,
+   "reason": "The acquisition was the hard part and this is the sanctioned cascade for it. Recorded in full because the result overturns what five OA indexes report: the win came at the open-web tier, on a Frontiers-hosted platform, after Unpaywall, OpenAlex, Semantic Scholar, Europe PMC and NCBI idconv all returned closed or not-found."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Declined deliberately. This is a REVIEW. A claim-producing pipeline run over a secondary source is precisely how a review's summary sentence becomes a canonical datum, which is the failure D-15 in the dismissal ledger already records for this corpus. Read as a census of what its authors report instead."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Not triggered, and the trigger was checked rather than assumed. R4 is mandatory when a reading narrows, reverses, corroborates or removes a consolidated baseline claim, or justifies a MAJOR bump. This reading changes no claim's evidentiary basis: its dispositions are a registry promotion (Tier C placeholder to read) and a dismissal-ledger re-audit that STRENGTHENS the provenance of an already-reopened rejection without altering its verdict. If the ACK1 primary (PMID 16288044) is later read and moves DIS-001, that reading carries the audit."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": true,
+   "reason": "Used in substance rather than as a separate run: the paper was squeezed past the template on the degradation axis, which is where a cancer review's transferable content for a proteostasis-focused disease model actually sits. It produced the ACK1 provenance link and the dated E3-ligase negative."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is promoted by this reading, so BLOCK-1 has nothing to gate."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No therapeutic lever matures here. The ACK1 lead is already held as an experimental probe under DIS-001 and is not a new candidate."
+  }
+ ],
+ "surface_preflight": {
+  "structured_surface": "ABSENT, and recorded as such per rule 5d. No PMC/Europe PMC deposit exists. The Frontiers platform serves the PDF only: /full returns the same application/pdf, and /fulltext and /html return HTTP 404. There is no XML or HTML rendering of this article anywhere the cascade reached.",
+  "text_layer_verdict": "SUSPECT — REFUSED, NOT NORMALISED",
+  "text_layer_evidence": "pdftotext -layout output carries 12 occurrences of 'þ' where the page prints '+' and 8 occurrences of the C0 control 0x02 where the page prints '−'. Every one of the 20 corrupted characters sits in genotype or receptor-status notation: 'WWOX (C3H)þ/\\x02' for 'Wwox (C3H)+/−', 'WWOXþ/þ' for 'WWOX+/+', 'ERþ/\\x02' patterns for ER− carcinomas. This is the exact defect class named in gold_is_in_the_details rule 5d, and it consumes precisely the load-bearing marks. A pymupdf re-extraction does not repair it — it drops the 0x02 entirely, so 'Wwox (C3H)+/−' becomes 'Wwox (C3H)þ/', silently losing the minus. Roughly 60% of the damage here is printable ('þ'), so a control-character screen alone would have passed 12 of the 20.",
+  "consequence": "The .txt is declared as article_text for provenance and is NOT used as the evidentiary surface behind any locator. Every body locator in this manifest is anchored to a rendered page crop under page_adjudications/PMID24510053/, whose recipe regenerates from the fingerprinted PDF. This is the first reading in this deployment to use the rule 5e remedy, which became runnable only when PyMuPDF was installed on 2026-09-09.",
+  "column_layout_note": "The article is two-column and pdftotext -layout interleaves the columns across the gutter, so a sentence read linearly from that output can splice text from two different columns. Reading was done from a column-aware pymupdf extraction (clipped left/right half-pages) used ONLY as a reading aid, never as a declared artifact."
+ },
+ "group_assessment": {
+  "performed": true,
+  "research_type": "experimental_lab",
+  "total_publications": 137,
+  "publications_on_gene": 65,
+  "counts_measured": "PubMed esearch 2026-09-09: 'Aqeilan RI[Author]' = 137; 'Aqeilan RI[Author] AND WWOX' = 65.",
+  "output_kind": "secondary_review",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "🔴 PRIMARY FOR THE GENE IS NOT PRIMARY FOR THE DISEASE, and here the split runs inside the paper. OBSERVATION: where this review recounts which Wwox mouse allele produced which tumour, it is reporting the group's OWN experiments (refs 13 and 14 are its own), so those statements sit close to first-hand and are weighted accordingly. INTERPRETATION: where it explains somatic cancer mechanism — above all the flat proteasomal endpoint it gives ubiquitination — it is a secondary reading of other laboratories' work and carries no more weight than the primaries it cites, several of which this corpus has never opened, including the ACK1 primary its own degradation section rests on. DISEASE: the group is not primary for the WWOX-DEE clinical phenotype and this article does not address that phenotype at all, so nothing here may be weighted as clinical evidence for the reference genotype.",
+  "research_type_note": "The GROUP is experimental_lab — the Aqeilan laboratory generates mouse genetics and cell biology. THIS ARTICLE, however, is a minireview and produces no data of its own; the enum classifies what the group can produce, and the distinction between that and what this paper contains is the whole of how its statements may be weighted."
+ },
+ "field_density": {
+  "measured_on": "2026-09-09",
+  "source": "PubMed E-utilities esearch",
+  "queries": [
+   {
+    "query": "WWOX AND cancer",
+    "count": 524,
+    "measured_on": "2026-09-09"
+   },
+   {
+    "query": "WWOX AND ubiquitination",
+    "count": 24,
+    "measured_on": "2026-09-09"
+   },
+   {
+    "query": "WWOX AND Ack1",
+    "count": 4,
+    "measured_on": "2026-09-09"
+   },
+   {
+    "query": "WWOX AND (E3 ligase)",
+    "count": 18,
+    "measured_on": "2026-09-09"
+   },
+   {
+    "query": "WWOX AND glioblastoma",
+    "count": 16,
+    "measured_on": "2026-09-09"
+   }
+  ],
+  "note": "WWOX AND Ack1 returns FOUR records in the whole of PubMed. The degradation route this review names is one of the sparsest literatures touching the gene, and it is the one with a live, reopened rejection standing on it."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 103,
+  "gene_direct_count": 7,
+  "gene_direct_refs_in_source": [
+   "16288044"
+  ],
+  "resolved": [
+   "16288044"
+  ],
+  "resolved_depth_declaration": "🔴 ONE RESOLVED, SIX IDENTIFIED BUT NOT PMID-RESOLVED, AND DECLARED AS SUCH. The 2014 reference list is author-title-journal-volume-page with no PMIDs and no DOIs, so resolution means matching by citation. I resolved exactly one, because it is the only one whose identity is load-bearing for this reading: ref 31 = Mahajan NP, Whang YE, Mohler JL, Earp HS, Cancer Res 2005;65:10514-23 = PMID 16288044, confirmed by esearch and esummary against title and journal. Its receipt status is an EMPTY list — never opened by this corpus — while it is the primary source of the ACK1-to-WWOX polyubiquitination cascade that active rejection DIS-001 turns on, and it already sits in full_text_queue_current.md. Refs 30, 13, 14, 15, 100 and 101 are identified by full citation in gene_direct_notes but were NOT PMID-resolved: none of them changes a disposition in this reading, and resolving a citation I am not going to act on would be work performed to look thorough.",
+  "gene_direct_notes": [
+   "31 = PMID 16288044 (Mahajan 2005, Cancer Res) — ACK1 polyubiquitination of Wwox; UNREAD, empty receipt status, highest-value target this reading surfaces",
+   "30 = Severe 2013, Cell Death Dis — generic E3-ligase/bone review; the citation behind the proteasomal definition, carrying no WWOX linkage data",
+   "13 = Aqeilan 2007, PNAS — targeted Wwox deletion",
+   "14 = Abdeen 2011, Oncogene — Wwox (C3H)+/- mammary tumorigenesis",
+   "15 = Ludes-Meyers 2007, Genes Chromosomes Cancer — hypomorphic mice; distinct from the already-read Ludes-Meyers 2009 PMID 19936220",
+   "100 = Kosla 2011, J Neuro-oncol — WWOX in glioblastoma",
+   "101 = Chiang 2012, Biomed Pharmacother — WOX1 overexpression in GBM lines with mutant p53"
+  ],
+  "queued": "PMID 16288044 (ref 31) is the one this reading argues should move up the queue. Refs 100 and 101 are the only CNS-adjacent primaries and are somatic tumour biology, queued at low priority."
+ },
+ "corpus_crossquery": {
+  "query": "Does this corpus already hold the ACK1/ubiquitination thread this review names, and does anything here depend on the proteasomal endpoint the review asserts as a definition?",
+  "hits": 6,
+  "hits_note": "Six distinct files in disease-models/wwox/ answered the ACK1/ubiquitination question directly: dismissal_ledger_current.md (DIS-001 and D-01), discovery_ledger_current.md, full_text_queue_current.md, deepdive_manifests/PMID24550385.json, deepdive_manifests/PMID21115974.json, registries/paper_registry_current.md (CORPUS P308). Wider term counts, for scale rather than as the answer: Ack1/ACK1 15 files, TNK2 2, 'E3 ligase' 7, polyubiquitin 20, ubiquitin 45.",
+  "answered": "YES on both, and the second is the finding. 15 files mention Ack1/ACK1 and 2 mention TNK2; 45 mention ubiquitin and 20 polyubiquitin; 7 mention an E3 ligase. The dismissal ledger carries ACTIVE rejection DIS-001 («Inhibiting ACK1/ITCH will not rescue Q230P»), already REOPENED, whose declared load-bearing premise is 'that this route ends in the proteasome', tagged PREMISE: DEFAULT_FROM_TEXTBOOK and pointing at D-01 (polyubiquitination to proteasome) in the DEFAULTS THAT BIT US table, whose recorded cost is 'Discarded a testable ACK1/ITCH cascade for days'.",
+  "files_that_answered": "disease-models/wwox/research/dismissal_ledger_current.md (DIS-001, D-01); discovery_ledger_current.md; full_text_queue_current.md; deepdive_manifests/PMID24550385.json and PMID21115974.json; registries/paper_registry_current.md (CORPUS P308)."
+ },
+ "retraction_check": {
+  "checked_on": "2026-09-09",
+  "source": "PubMed esummary for PMID 24510053",
+  "result": "No retraction, erratum, correction or expression-of-concern is attached. Publication types: Journal Article; Research Support, Non-U.S. Gov't; Review.",
+  "note": "Publication type Review is recorded here deliberately: it is the fact that governs how every statement in this manifest may be used."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID24510053_Gardenswartz2014.pdf",
+   "sha256": "ef0ba8d0ebed36feb95a9bf576f4ea9b1ca8cf6a118360db3f9b399abf15daf4",
+   "kind": "article_binary",
+   "note": "Version of record, 11 pages, pages 253-263 as printed. Retrieved 2026-09-09 from the Frontiers-hosted ebm-journal.org. Validated: %PDF magic, title/authors/journal/volume/DOI all match the requested record, real body sections present, not a paywall or cover stub."
+  },
+  {
+   "path": "files/fulltext/PMID24510053_Gardenswartz2014.txt",
+   "sha256": "379ba5ea47d70dda1b5b0f783c9b92138ac4a900195588cb250cd5ea5dfe8070",
+   "kind": "article_text",
+   "note": "🔴 DECLARED FOR PROVENANCE, REFUSED AS EVIDENCE. Deterministic pdftotext -layout extraction. Its verdict is SUSPECT (see surface_preflight): 12 'þ' for '+' and 8 0x02 for '−', all in genotype and receptor-status notation. NO locator in this manifest is verified against it, and it is never hand-corrected — cleaning it would launder the defect into every quote drawn from it."
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID24510053/p01_review_scope_myriad_cancers.png",
+   "sha256": "d4116361db1e7cedb3d73060e4b51053cf4028832ad95fd0766af5d2dfbe837a",
+   "kind": "figure",
+   "note": "Rule 5e recipe: page 1, crop [288.0, 303.39, 570.0, 340.35] in PDF points at 400 dpi, rendered through the canonical regenerator call. The image is gitignored; regenerate_adjudications.py reproduces these exact bytes from a reader's own copy of the PDF."
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID24510053/p01_knockout_osteosarcoma_hetero_lung.png",
+   "sha256": "56668b026cff00fedc7814309fc5cfb34d2541f3ec544b0a644c229f643c366e",
+   "kind": "figure",
+   "note": "Rule 5e recipe: page 1, crop [288.0, 611.79, 570.0, 649.34] in PDF points at 400 dpi, rendered through the canonical regenerator call. The image is gitignored; regenerate_adjudications.py reproduces these exact bytes from a reader's own copy of the PDF."
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID24510053/p01_wwox_increased_in_some_cancers.png",
+   "sha256": "d279445fd9a45a55045b7da0dc9c9f5b79b4b4d7ea64219c808a244efe8e1ae7",
+   "kind": "figure",
+   "note": "Rule 5e recipe: page 1, crop [26.0, 676.53, 308.0, 714.08] in PDF points at 400 dpi, rendered through the canonical regenerator call. The image is gitignored; regenerate_adjudications.py reproduces these exact bytes from a reader's own copy of the PDF."
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID24510053/p02_c3h_het_mammary_50pct.png",
+   "sha256": "cc3c12a286e15f18ddda15cd1b7ef13ec608d63a606e626c1ae2551618328ea4",
+   "kind": "figure",
+   "note": "Rule 5e recipe: page 2, crop [288.0, 469.32, 570.0, 506.87] in PDF points at 400 dpi, rendered through the canonical regenerator call. The image is gitignored; regenerate_adjudications.py reproduces these exact bytes from a reader's own copy of the PDF."
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID24510053/p02_ubiquitination_proteasome_definition.png",
+   "sha256": "b16b9ccbc01d491b2f17315d5686ed9808785bb14badac00739ee052cda239b8",
+   "kind": "figure",
+   "note": "Rule 5e recipe: page 2, crop [288.0, 144.75, 570.0, 182.3] in PDF points at 400 dpi, rendered through the canonical regenerator call. The image is gitignored; regenerate_adjudications.py reproduces these exact bytes from a reader's own copy of the PDF."
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID24510053/p02_ack1_polyubiquitination.png",
+   "sha256": "ab623a24f57ca2b101aa3f2b6a4af5cd8cc935f96e2dd734699213424225331b",
+   "kind": "figure",
+   "note": "Rule 5e recipe: page 2, crop [288.0, 190.9, 570.0, 228.45] in PDF points at 400 dpi, rendered through the canonical regenerator call. The image is gitignored; regenerate_adjudications.py reproduces these exact bytes from a reader's own copy of the PDF."
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID24510053/p02_no_e3_ligase_known.png",
+   "sha256": "f8ea1d9dc520e54483fd2ce8192c0e61aba43521a8972adb907a748578aff134",
+   "kind": "figure",
+   "note": "Rule 5e recipe: page 2, crop [288.0, 294.76, 570.0, 332.31] in PDF points at 400 dpi, rendered through the canonical regenerator call. The image is gitignored; regenerate_adjudications.py reproduces these exact bytes from a reader's own copy of the PDF."
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID24510053/p07_gbm_loh_methylation.png",
+   "sha256": "71bb3a8f6bb9162d9f1d2ea4bf6e8d0a7757e64a4959a745922c67ec014e34eb",
+   "kind": "figure",
+   "note": "Rule 5e recipe: page 7, crop [288.0, 384.73, 570.0, 422.28] in PDF points at 400 dpi, rendered through the canonical regenerator call. The image is gitignored; regenerate_adjudications.py reproduces these exact bytes from a reader's own copy of the PDF."
+  },
+  {
+   "path": "disease-models/wwox/research/page_adjudications/PMID24510053/p07_gbm_overexpression_apoptosis.png",
+   "sha256": "e4fb5850fc74da847aa226524b705ac75f2649264307490be11af16874b5f1c0",
+   "kind": "figure",
+   "note": "Rule 5e recipe: page 7, crop [288.0, 419.26, 570.0, 456.81] in PDF points at 400 dpi, rendered through the canonical regenerator call. The image is gitignored; regenerate_adjudications.py reproduces these exact bytes from a reader's own copy of the PDF."
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Column-aware pymupdf extraction of all 11 pages, 67738 characters, section headings and the 103-item reference list enumerated; used as a reading aid only.",
+  "abstract_anchoring_waived": false,
+  "entries": [
+   {
+    "proposition": "The review states its own remit, and the remit is oncology. It is a census of WWOX in cancer; it is not, and does not claim to be, about germline WWOX disease. Screened over the BODY with the 103-item reference list separated off first: zero occurrences of epilepsy, seizure, brain, CNS, WOREE, encephalopathy, ataxia, intellectual, recessive or syndrome, and zero of Q230 or SCAR12. The only two 'neuro' hits in the whole file are JOURNAL NAMES in the reference list ('Neuro endocrinol Lett', 'J Neuro-oncol') — back matter, not content, and exactly the contamination class registered as open item 3 of the receipt contract. Its single 'germline' mention is two germline mutations found in a somatic lung-cancer sequencing series.",
+    "snippet": "role that has been unearthed thus far in different types of",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID24510053/p01_review_scope_myriad_cancers.png",
+    "anchor": "Page 1 rendered at 400 dpi. The text layer of this PDF is SUSPECT and refused, so the DRAWN GLYPH adjudicates (rule 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by recipe.",
+    "page_anchor": {
+     "page": 1,
+     "crop_pdf_points": [
+      288.0,
+      303.39,
+      570.0,
+      340.35
+     ],
+     "dpi": 400,
+     "needle": "role that has been unearthed thus far in different types of",
+     "image_sha256": "d4116361db1e7cedb3d73060e4b51053cf4028832ad95fd0766af5d2dfbe837a",
+     "source_pdf_sha256": "ef0ba8d0ebed36feb95a9bf576f4ea9b1ca8cf6a118360db3f9b399abf15daf4"
+    },
+    "panel_text_relation": "panel_only",
+    "note": "This is the locator that fixes the transfer verdict for the whole paper, and it is deliberately built on a measured absence rather than on a sentence: a review's scope is better established by what it never mentions across 38,845 body characters than by its own framing sentence."
+   },
+   {
+    "proposition": "The mouse allele-to-tumour mapping, stated by the group that made the mice. Targeted deletion of Wwox gives osteosarcomas in null mice and spontaneous lung papillary carcinomas in heterozygotes. This is close to first-hand for this group (its own refs 13 and 14) and is the part of the review whose observational weight is highest.",
+    "snippet": "papillary carcinomas, in the case of Wwox-heterozygous",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID24510053/p01_knockout_osteosarcoma_hetero_lung.png",
+    "anchor": "Page 1 rendered at 400 dpi. The text layer of this PDF is SUSPECT and refused, so the DRAWN GLYPH adjudicates (rule 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by recipe.",
+    "page_anchor": {
+     "page": 1,
+     "crop_pdf_points": [
+      288.0,
+      611.79,
+      570.0,
+      649.34
+     ],
+     "dpi": 400,
+     "needle": "papillary carcinomas, in the case of Wwox-heterozygous",
+     "image_sha256": "56668b026cff00fedc7814309fc5cfb34d2541f3ec544b0a644c229f643c366e",
+     "source_pdf_sha256": "ef0ba8d0ebed36feb95a9bf576f4ea9b1ca8cf6a118360db3f9b399abf15daf4"
+    },
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "A complication the simple loss-of-tumour-suppressor narrative does not carry, and the review does state it: some reports document INCREASED WWOX levels in breast, gastric and prostate carcinomas, which the authors themselves read as evidence of complex regulation rather than of simple loss. Recorded because a model that reasons only about WWOX absence would drop it.",
+    "snippet": "documented increased levels of WWOX in breast, gastric",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID24510053/p01_wwox_increased_in_some_cancers.png",
+    "anchor": "Page 1 rendered at 400 dpi. The text layer of this PDF is SUSPECT and refused, so the DRAWN GLYPH adjudicates (rule 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by recipe.",
+    "page_anchor": {
+     "page": 1,
+     "crop_pdf_points": [
+      26.0,
+      676.53,
+      308.0,
+      714.08
+     ],
+     "dpi": 400,
+     "needle": "documented increased levels of WWOX in breast, gastric",
+     "image_sha256": "d279445fd9a45a55045b7da0dc9c9f5b79b4b4d7ea64219c808a244efe8e1ae7",
+     "source_pdf_sha256": "ef0ba8d0ebed36feb95a9bf576f4ea9b1ca8cf6a118360db3f9b399abf15daf4"
+    },
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The Wwox (C3H)+/− mammary figure: 50% of female heterozygous mice formed tumours against 7% of female wild type. THE GENOTYPE HERE IS THE REASON THIS LOCATOR IS PAGE-ADJUDICATED — the text layer renders it 'Wwox (C3H)þ/' and a pymupdf re-extraction renders it 'Wwox (C3H)þ/' with the minus dropped entirely, so in neither derived surface can heterozygous be distinguished from wild type. The rendered page prints 'Wwox (C3H)+/−' and settles it.",
+    "snippet": "of female mice formed tumors while only 7% of female",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID24510053/p02_c3h_het_mammary_50pct.png",
+    "anchor": "Page 2 rendered at 400 dpi. The text layer of this PDF is SUSPECT and refused, so the DRAWN GLYPH adjudicates (rule 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by recipe.",
+    "page_anchor": {
+     "page": 2,
+     "crop_pdf_points": [
+      288.0,
+      469.32,
+      570.0,
+      506.87
+     ],
+     "dpi": 400,
+     "needle": "of female mice formed tumors while only 7% of female",
+     "image_sha256": "cc3c12a286e15f18ddda15cd1b7ef13ec608d63a606e626c1ae2551618328ea4",
+     "source_pdf_sha256": "ef0ba8d0ebed36feb95a9bf576f4ea9b1ca8cf6a118360db3f9b399abf15daf4"
+    },
+    "panel_text_relation": "panel_only",
+    "note": "The worked example of why rule 5d exists, found in this lot rather than quoted from the protocol: the corrupted characters are precisely the ones that carry the genotype."
+   },
+   {
+    "proposition": "🔴 THE REVIEW ENCODES, AS A DEFINITION, THE EXACT TEXTBOOK DEFAULT THIS REPOSITORY NAMES AS D-01. It defines ubiquitination as an enzymatic cascade whereby proteins are labelled with a ubiquitin tag 'and thus designated for degradation via the proteasomal system' — a flat universal, with no linkage determination anywhere in the paper, cited to ref 30, which is a bone-formation review carrying no WWOX linkage data. D-01 in the dismissal ledger's DEFAULTS THAT BIT US table is 'polyubiquitination → proteasome', recorded as FALSE as a universal because K48 commonly supports proteasomal turnover while K63 is multifunctional. The review is therefore a source-level INSTANCE of that default, not a resolution of it.",
+    "snippet": "labeled with a ubiquitin tag and thus designated for deg",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID24510053/p02_ubiquitination_proteasome_definition.png",
+    "anchor": "Page 2 rendered at 400 dpi. The text layer of this PDF is SUSPECT and refused, so the DRAWN GLYPH adjudicates (rule 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by recipe.",
+    "page_anchor": {
+     "page": 2,
+     "crop_pdf_points": [
+      288.0,
+      144.75,
+      570.0,
+      182.3
+     ],
+     "dpi": 400,
+     "needle": "labeled with a ubiquitin tag and thus designated for deg",
+     "image_sha256": "b16b9ccbc01d491b2f17315d5686ed9808785bb14badac00739ee052cda239b8",
+     "source_pdf_sha256": "ef0ba8d0ebed36feb95a9bf576f4ea9b1ca8cf6a118360db3f9b399abf15daf4"
+    },
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The ACK1 route, and the provenance active rejection DIS-001 was missing. Ack1, an intracellular tyrosine kinase, induces WWOX polyubiquitination and subsequent degradation in prostate cancer cells; in human androgen-independent prostate cancer specimens, raised phospho-Ack1 accompanies reduced WWOX against benign tissue. The review's own modal is 'suggesting' for the causal step, and the primary is ref 31 = PMID 16288044, which this corpus has never opened.",
+    "snippet": "Ack1, an intracellular tyrosine kinase induces",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID24510053/p02_ack1_polyubiquitination.png",
+    "anchor": "Page 2 rendered at 400 dpi. The text layer of this PDF is SUSPECT and refused, so the DRAWN GLYPH adjudicates (rule 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by recipe.",
+    "page_anchor": {
+     "page": 2,
+     "crop_pdf_points": [
+      288.0,
+      190.9,
+      570.0,
+      228.45
+     ],
+     "dpi": 400,
+     "needle": "Ack1, an intracellular tyrosine kinase induces",
+     "image_sha256": "ab623a24f57ca2b101aa3f2b6a4af5cd8cc935f96e2dd734699213424225331b",
+     "source_pdf_sha256": "ef0ba8d0ebed36feb95a9bf576f4ea9b1ca8cf6a118360db3f9b399abf15daf4"
+    },
+    "panel_text_relation": "panel_only",
+    "note": "DIS-001 («Inhibiting ACK1/ITCH will not rescue Q230P») is REOPENED and its load-bearing premise is the proteasomal endpoint. This locator supplies where that cascade was published; it does NOT resolve the linkage question, because this paper never determines a linkage."
+   },
+   {
+    "proposition": "A dated NEGATIVE, and it is the kind that must not be carried forward silently: as of this 2014 review, no ubiquitin E3 ligase had been associated with WWOX under normal or disease states. Recorded with its date attached, because the corpus's own ACK1/ITCH thread names ITCH — an E3 ligase — in the WWOX P252A context, which is later work. The statement is a snapshot of 2014 and is superseded, not a standing fact.",
+    "snippet": "So far no ubiquitin E3 ligase was asso",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID24510053/p02_no_e3_ligase_known.png",
+    "anchor": "Page 2 rendered at 400 dpi. The text layer of this PDF is SUSPECT and refused, so the DRAWN GLYPH adjudicates (rule 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by recipe.",
+    "page_anchor": {
+     "page": 2,
+     "crop_pdf_points": [
+      288.0,
+      294.76,
+      570.0,
+      332.31
+     ],
+     "dpi": 400,
+     "needle": "So far no ubiquitin E3 ligase was asso",
+     "image_sha256": "f8ea1d9dc520e54483fd2ce8192c0e61aba43521a8972adb907a748578aff134",
+     "source_pdf_sha256": "ef0ba8d0ebed36feb95a9bf576f4ea9b1ca8cf6a118360db3f9b399abf15daf4"
+    },
+    "panel_text_relation": "panel_only",
+    "note": "REVIVAL_TRIGGER for anyone reading this negative later: any post-2014 report associating a specific E3 ligase with WWOX retires it. The corpus already holds such a thread, so it is retired on arrival — which is exactly why the date has to travel with the sentence."
+   },
+   {
+    "proposition": "The only CNS content in the review, and it is somatic tumour biology: Kosla et al. found WWOX LOH and WWOX promoter methylation in glioblastoma multiforme, with WWOX correlated to the antiapoptotic marker Bcl2 and the proliferation marker Ki67.",
+    "snippet": "They also found WWOX to be correlated with",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID24510053/p07_gbm_loh_methylation.png",
+    "anchor": "Page 7 rendered at 400 dpi. The text layer of this PDF is SUSPECT and refused, so the DRAWN GLYPH adjudicates (rule 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by recipe.",
+    "page_anchor": {
+     "page": 7,
+     "crop_pdf_points": [
+      288.0,
+      384.73,
+      570.0,
+      422.28
+     ],
+     "dpi": 400,
+     "needle": "They also found WWOX to be correlated with",
+     "image_sha256": "71bb3a8f6bb9162d9f1d2ea4bf6e8d0a7757e64a4959a745922c67ec014e34eb",
+     "source_pdf_sha256": "ef0ba8d0ebed36feb95a9bf576f4ea9b1ca8cf6a118360db3f9b399abf15daf4"
+    },
+    "panel_text_relation": "panel_only"
+   },
+   {
+    "proposition": "The second and last CNS item: Chiang et al. overexpressed WWOX in glioblastoma cell lines harbouring mutant p53 and reported that overexpression induces apoptosis. An overexpression result in a tumour line with a mutant p53 background — recorded with those two qualifiers attached, because both are load-bearing and neither survives a one-line summary.",
+    "snippet": "GBM cell lines with a mutant p53 and reported",
+    "surface": "figure",
+    "artifact": "disease-models/wwox/research/page_adjudications/PMID24510053/p07_gbm_overexpression_apoptosis.png",
+    "anchor": "Page 7 rendered at 400 dpi. The text layer of this PDF is SUSPECT and refused, so the DRAWN GLYPH adjudicates (rule 5d/5e); the crop regenerates byte-identically from the fingerprinted PDF by recipe.",
+    "page_anchor": {
+     "page": 7,
+     "crop_pdf_points": [
+      288.0,
+      419.26,
+      570.0,
+      456.81
+     ],
+     "dpi": 400,
+     "needle": "GBM cell lines with a mutant p53 and reported",
+     "image_sha256": "e4fb5850fc74da847aa226524b705ac75f2649264307490be11af16874b5f1c0",
+     "source_pdf_sha256": "ef0ba8d0ebed36feb95a9bf576f4ea9b1ca8cf6a118360db3f9b399abf15daf4"
+    },
+    "panel_text_relation": "panel_only"
+   }
+  ]
+ },
+ "coverage_map": {
+  "abstract": "read",
+  "introduction": "read",
+  "methods": "not_present — a minireview reports no methods of its own",
+  "results": "not_present — a minireview presents no results of its own; its equivalent is the cancer-by-cancer census, read in full",
+  "discussion": "read — the 'Clinical significance' section",
+  "figures": "not_present — the article contains no figures",
+  "tables": "read — Table 1 (alterations by cancer type) and Table 2 (clinical correlations), both read from the rendered pages",
+  "limitations": "not_present — none stated",
+  "references": "read — 103 enumerated",
+  "supplement": "not_present — none published"
+ },
+ "coverage_status": "complete_fulltext_read",
+ "coverage_status_reason": "All 11 pages read from the rendered page images, which is the reference surface here because no structured surface exists and the extracted text layer is SUSPECT and refused. The sections a minireview does not have are marked not_present rather than not_read, and the article carries no figures and no supplement. Every evidentiary locator is a page adjudication regenerable by recipe from the fingerprinted PDF."
+}
