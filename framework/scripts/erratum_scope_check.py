@@ -187,6 +187,7 @@ def check_manifest(path: Path) -> dict | None:
                 "status": "NO_ERRATUM_RECORDED", "detail": "all mentions negated"}
 
     pmid = str(data.get("pmid") or path.stem)
+    entries = ((data.get("verbatim_locators") or {}).get("entries")) or []
     declared = rc.get("corrected_items")
     if declared is not None and not declared:
         # DECLARED EMPTY is not UNDECLARED. An erratum can genuinely touch no figure — the
@@ -196,7 +197,6 @@ def check_manifest(path: Path) -> dict | None:
                 "scope": [], "review": [], "anchor_unparseable": [],
                 "locators": len(entries),
                 "detail": "corrected_items declared empty: the erratum names no figure panel"}
-    entries = ((data.get("verbatim_locators") or {}).get("entries")) or []
 
     if not declared:
         return {"manifest": str(path), "pmid": pmid, "status": "SCOPE_UNDECLARED",
@@ -262,6 +262,43 @@ def self_test() -> int:
         ok = got == expect_hit
         failures += (not ok)
         print(f"  [{'ok' if ok else 'FAIL'}] {name}: expected hit={expect_hit}, got {got}")
+    # The branch cases. These call check_manifest itself, because the panel-matching
+    # cases above cannot see a crash inside it: on 2026-09-09 the declared-empty branch
+    # read len(entries) one line before entries was bound, the corpus-wide run crashed,
+    # and this self-test still printed 12/12 green. A test that never calls the function
+    # cannot report on the function.
+    import tempfile
+
+    def _manifest(corrected, n_locators=2):
+        return {
+            "pmid": "38182577",
+            "retraction_check": {"result": "One ordinary erratum is attached: PMID 38355659."},
+            "verbatim_locators": {"entries": [{"anchor": f"Figure {i}, panel A"}
+                                              for i in range(1, n_locators + 1)]},
+            **({"_": None} if corrected is None else {}),
+        }
+
+    branch_cases = [
+        ("erratum declared with an EMPTY scope is CLEAR, not UNDECLARED", [], "CLEAR"),
+        ("erratum with no corrected_items key at all is SCOPE_UNDECLARED", None, "SCOPE_UNDECLARED"),
+    ]
+    with tempfile.TemporaryDirectory() as td:
+        for name, corrected, expect_status in branch_cases:
+            data = _manifest(corrected)
+            if corrected is not None:
+                data["retraction_check"]["corrected_items"] = corrected
+            data.pop("_", None)
+            f = Path(td) / f"PMID38182577_{expect_status}.json"
+            f.write_text(json.dumps(data), encoding="utf-8")
+            try:
+                got = (check_manifest(f) or {}).get("status")
+            except Exception as exc:                      # a crash is a failure, not a traceback
+                got = f"RAISED {type(exc).__name__}: {exc}"
+            ok = got == expect_status
+            failures += (not ok)
+            cases.append(name)
+            print(f"  [{'ok' if ok else 'FAIL'}] {name}: expected {expect_status}, got {got}")
+
     print(f"self-test: {len(cases) - failures}/{len(cases)} passed")
     return 1 if failures else 0
 
