@@ -1,0 +1,270 @@
+{
+ "schema_version": 2,
+ "pmid": "31428585",
+ "doi": "10.3389/fonc.2019.00719",
+ "receipt": "FTR-20260909-31428585-01",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID31428585.md",
+  "disease-models/wwox/research/commit_candidates/CC-20260909-31428585-01.md",
+  "discovery_ledger_current#DL-THER-NEXT"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-deepdive",
+   "used": true
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": true,
+   "reason": "MANDATORY R4 - the reading bears on consolidated baseline CLAIM 023 (its Tyr33 phosphorylation limb) and on the ACTIVE rejection DIS-003, and the audit skill makes a rejection's scrutiny equal to a positive's. STATUS AT THE TIME THIS MANIFEST LANDED: the first two blind auditors were killed mid-run by a session rate limit, so the READING was landed first - it is durable and survives a session death - and NO COMMIT CANDIDATE EXISTS until verdicts are applied. The audit is run against these same triples before any candidate is written, and its verdicts are appended here as verbatim_locators.audit_note. A reading landed without a candidate touches no claim, which is why this order is the safe one."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": true,
+   "reason": "Used, and it is the reason this editorial was worth full depth: it carries a clinical-treatment lead and a named molecule that a form-based triage would have skipped."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "Cannot run and must not be faked: Zfra is a peptide with no SMILES in this document, and ADMET-AI takes small molecules. No molecule is promoted by this reading, so BLOCK-1 is not reached."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "Declined. The forced-transcription statement is an unpublished personal communication; forging hypotheses on it would launder an unverifiable claim into a scored portfolio. It is recorded as a lead with its provenance instead."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed: Europe PMC fullTextXML returned the structured surface on the first request (CC BY, isOpenAccess Y)."
+  },
+  {
+   "skill": "legend-session-self-eval",
+   "used": true
+  },
+  {
+   "skill": "legend-capability-scout",
+   "used": true
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 137,
+  "publications_on_gene": 64,
+  "research_type": "mixed",
+  "is_primary_group_for_disease": false,
+  "weighting": "FOUR-AUTHOR EDITORIAL AND THE WEIGHTING IS NOT THE SAME FOR ALL FOUR. Nan-Shan Chang (corresponding, and the author of the WOX1/Tau/Zfra line), Rongtuan Lin, Chun-I Sze and Rami Aqeilan. Measured 2026-09-09: 'Aqeilan RI[Author]' = 137 PubMed records, 64 with WWOX in title/abstract. The document is primary for NOTHING - it reports no experiment - and its statements are of three kinds, each weighted differently in this reading: (a) summaries of Research Topic articles, which are pointers and carry the weight of the article pointed at; (b) claims about the literature attributed to numbered references, carried only as far as the reference identity; (c) ONE clinical claim sourced to an unpublished personal communication, which is carried as a lead and not as evidence. The corresponding author's own therapeutic programme (Zfra, Ser14) is summarised by himself here, so it is a self-summary and adds no independent weight."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX",
+    "count": 707,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND (WOREE OR SCAR12)",
+    "count": 29,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND Zfra",
+    "count": 13,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND Alzheimer",
+    "count": 32,
+    "source": "PubMed ESearch, 2026-09-09"
+   }
+  ],
+  "note": "Zfra returns 13 records against 707 for the gene and Alzheimer 32. 🔴 SELF-CAUGHT BEFORE THE AUDIT: this reading first WROTE 2 and 36 from expectation rather than measurement, and the sentence built on the wrong number - 'a two-paper literature' - was false. Both were re-run and corrected before anything was built on them. Recorded because it is the same failure the blind audit caught in this wave's other paper (an undeclared assumption standing in for a source), found here by the author instead. What the corrected numbers support: the Zfra literature is 13 records, small enough to read exhaustively and NOT read here at all - neither Zfra primary named by this editorial (PMID 29067327, PMID 25686832) carries any receipt."
+ },
+ "multihop": {
+  "references_enumerated": 6,
+  "gene_direct_refs_in_source": [
+   "29581896",
+   "30820047",
+   "31155927",
+   "29067327",
+   "25686832",
+   "29760976",
+   "30370248",
+   "30158849",
+   "31275852"
+  ],
+  "resolved": [
+   "30370248 - Tanna and Aqeilan, WWOX animal models (Research Topic article) - complete_fulltext_read here",
+   "30158849 - Liu et al., WWOX downregulation and protein aggregation (Research Topic article) - partial_fulltext_read here"
+  ],
+  "queued": [
+   "29581896 - Huang and Chang 2018, phosphorylation sites of WWOX - NO RECEIPT. It is the reference that would settle what Figure 2A of PMID 26499798 marks, and it is named here for that reason.",
+   "30820047 - Kunkle 2019 Nat Genet, the AD GWAS behind the 'five new risk factors' claim - NO RECEIPT",
+   "29067327 and 25686832 - the two Zfra primaries - NO RECEIPT either of them",
+   "31275852 - McBride et al., Wwox B-cell knockout - NO RECEIPT",
+   "31155927 - Li 2019, WWOX and tamoxifen resistance - NO RECEIPT",
+   "29760976 - Huang 2018, Raman tags in glioblastoma - NO RECEIPT"
+  ],
+  "note": "THE CITATION STRUCTURE OF THIS DOCUMENT IS ITSELF A FINDING AND IS RECORDED AS ONE: the deposit carries only SIX numbered references, while the body cites TEN Research Topic articles by author name as hyperlinks with no reference-list entries. An enumeration that trusted the <ref> count alone would report six and miss ten gene-direct pointers. Of the nine sources resolved to PMIDs here, TWO are read in this corpus and SEVEN have no receipt of any kind."
+ },
+ "corpus_crossquery": {
+  "query": "Does this corpus already hold the therapeutic leads this editorial names, and does anything in it satisfy the REVIVAL_TRIGGER of DIS-003?",
+  "hits": 10,
+  "note": "Zfra is already present in 10 files including therapeutic_hypotheses_ledger_current.md and discovery_ledger_current.md, so the molecule is not new. 'forced transcription' and 'Taipei Medical' return ZERO occurrences outside this reading, so the clinical statement is new to the corpus. DIS-003's REVIVAL_TRIGGER is specific - 'if it emerged that a compound-heterozygous transcript behaves differently from the Johannsen homozygote' - and this statement does not touch it: it reports no transcript measurement, no genotype and no comparison. DIS-003 is UNCHANGED."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "PubMed ESummary 2026-09-09: publication type is 'Editorial'; the Europe PMC deposit's own metadata carries is-retracted no. A retracted-publication / expression-of-concern filter on 31428585 returns zero hits."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+   "sha256": "dfedc10c687503a7d83bb89499eb94f3e104362d24b174a6df488f2378ccc772",
+   "kind": "article_text"
+  }
+ ],
+ "verbatim_locators": {
+  "waived": false,
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC fullTextXML for PMC6688159 is local and fingerprinted (CC BY, isOpenAccess Y). It is a STRUCTURED surface, so rule 5d's defective-text-layer hazard does not arise and no PDF was fetched or needed. All 17 locators verify against it under the validator's own _xml_surfaces parser. The deposit contains ZERO fig elements, ZERO table-wrap elements and ZERO graphic elements, and Europe PMC reports hasSuppl N, so there is no figure surface to inspect and none is claimed - the completeness of this read does not rest on any image.",
+  "abstract_anchoring_waived": "THE ARTICLE HAS NO ABSTRACT AT ALL: the parser returns an abstract surface of ZERO characters, which is the expected shape of a Frontiers editorial. No locator could be abstract-anchored even in principle, and none is.",
+  "figure_extraction_note": "No figures exist in this deposit (0 fig, 0 graphic elements). coverage.figures is not_present rather than captions_only, and that value is measured from the markup rather than assumed from the document type.",
+  "entries": [
+   {
+    "proposition": "🔴 THE HEADLINE OF THIS READING, AND ITS EVIDENTIARY STATUS IS THE WEAKEST POSSIBLE. An editorial with no data of its own carries a CLINICAL-TREATMENT statement about the exact intervention class this repository has rejected in DIS-003 - and sources it to an unpublished personal communication. There is no genotype, no n, no design, no seizure outcome measure, no transcript or protein readout, and the population is 'patients with neurodegeneration', which is not stated to be WWOX-DEE newborns. It is recorded as a LEAD WITH NAMED PROVENANCE and explicitly NOT as evidence.",
+    "snippet": "Preliminary findings from clinical treatment shows that despite mutations, forced transcription of WWOX gene appears to be a feasible approach to lessen the symptoms of seizure in patients with neurodegeneration (personal communications with Dr. D. S. Lin at the Taipei Medical University)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Concluding section, 'what's urgent for the field' paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The unmet need the editorial names, in the authors' own terms, and the endpoint they name for it. Recorded because it is the clinical target the preceding statement claims to have moved, and the two sentences sit two lines apart.",
+    "snippet": "an effective drug to lessen seizure in the newborn patients would greatly benefit them",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Concluding section, 'what's urgent for the field' paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A MOLECULE PROPOSED FOR WWOX-DEFICIENCY NEURAL DISEASE BY NAME. Zfra is already carried in this corpus's therapeutic hypotheses and discovery ledgers, so this is not a new lead; what the editorial adds is that the primary group proposes it specifically for neural disease associated with WWOX deficiency, in a sentence with no data behind it in this document.",
+    "snippet": "Zfra peptides can be used as therapeutic options and strategies to target cancer and neural diseases associated with WWOX deficiency",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Concluding remarks, final paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The mechanism claimed for Zfra, attributed to refs 4 and 5 (Lee 2017 Alzheimers Dement, PMID 29067327; Lee 2015 Oncotarget, PMID 25686832) - NEITHER of which has any receipt in this corpus. The endpoints are murine: cancer growth and memory loss in mice, not seizures and not human.",
+    "snippet": "Suppression of Ser14 phosphorylation by a zinc finger peptide Zfra blocks cancer growth and restores memory loss in mice",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Research Topic articles, Liu et al. paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "🔴 THIS SENTENCE IDENTIFIES THE PHOSPHOSITES THAT THE OTHER PAPER OF THIS WAVE MARKED AND DID NOT NAME. PMID 26499798's Figure 2A carries four unexplained marker stalks measured at residues 12.3, 14.3, 33.2 and 286.9 under a caption glossing them 'P, proline'; that reading's identification of them as phosphorylation sites was WITHDRAWN under blind audit because that article names only Tyr-287. Here, in a different source, Tyr33 and Ser14 ARE named as WWOX phosphorylation sites with opposite functional consequences. Two of the four measured positions are thereby identified from a source rather than from memory; the marker at 12.3 and the doubling of the leftmost trapezoid remain unexplained by either paper.",
+    "snippet": "switch of the phosphorylation of WWOX at Tyr33 for anticancer response to Ser14 for disease progression",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Research Topic articles, Liu et al. paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A CLAIM ABOUT THE GENETIC ARCHITECTURE OF ALZHEIMER'S DISEASE, attributed to ref 2 = Kunkle 2019, Nat Genet 51:414-430 (PMID 30820047), which has NO RECEIPT in this corpus. The editorial reports the locus as one of five new risk factors; this reading does not verify that against the GWAS itself and does not carry it as a datum.",
+    "snippet": "tumor suppressor WWOX gene has recently been recognized as one of the five new risk factors in Alzheimer's disease",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Opening section, WW domain family paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The family-level denominator the editorial gives for WW domain proteins, attributed to ref 1 (Huang and Chang 2018, PMID 29581896, no receipt here). Recorded as the scale against which any WW-domain-based inference about WWOX is a single instance.",
+    "snippet": "there are at least 52 WW domain-containing proteins and more than 10,000 among all species",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Opening section, WW domain family paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A HEDGED PATHWAY CLAIM, AND THE HEDGE IS THE POINT. WWOX is placed upstream of Hippo with 'may oversee', citing a Research Topic review rather than a primary experiment. Any transfer of Hippo biology to WWOX-DEE must carry this modal verb.",
+    "snippet": "this protein may oversee the Hippo signaling pathway from the upstream via interacting with proteins in the TGF-β, hyaluronidase Hyal-2, and Wnt/β-catenin pathways",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Research Topic articles, Chen et al. paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A cancer-context functional consequence of WWOX loss, attributed to ref 3 (Li 2019, PMID 31155927, no receipt here). Carried as an oncology datum about the literature, not transferred to the CNS axis.",
+    "snippet": "downregulation of WWOX results in tamoxifen resistance in breast cancer due to inactivation of Hippo signaling",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Research Topic articles, Chen et al. paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WHY THE ISSUE EXISTS, IN THE EDITORS' OWN WORDS. Recorded because it is the document's declared motivation and it is a statement about the field's incentives rather than about WWOX biology: the paediatric patient community is named as the driver of a cancer-journal Research Topic.",
+    "snippet": "wakeup calls from parents of newborn patients with WWOX deficiency have pushed us to propose this specific issue",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Opening section, second paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The editorial's own framing of the paediatric phenotype - severe neural disease and early death - stated as background and immediately joined to a protein-aggregation cascade reviewed by Liu et al. (PMID 30158849, partial_fulltext_read here). The join is the editorial's, not a measurement.",
+    "snippet": "While loss of WWOX in newborns leads to severe neural diseases and early death, Liu et al. reviewed the cascade of WWOX downregulation-induced protein aggregation that causes neurodegeneration",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Research Topic articles, Liu et al. paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A GENOMIC-INSTABILITY RESULT IN A TISSUE-SPECIFIC KNOCKOUT, reported second-hand from McBride et al. (PMID 31275852, NO RECEIPT here). It bears on CLAIM 029's genome-stability axis and is NOT carried as support for it: this is an editorial's one-sentence summary of another group's paper.",
+    "snippet": "Wwox deletion in mouse B cells leads to the development of genomic instability, neoplastic transformation, and monoclonal gammopathies",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Research Topic articles, McBride et al. paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The metabolic interactome statement, reported second-hand from Hussain et al. Recorded because WWOX metabolic function is one of the three axes this editorial organises the field around, and the corpus holds the metabolic axis mainly through the Aqeilan laboratory's own primaries.",
+    "snippet": "WWOX interactors are associated with metabolic pathways for proteins, carbohydrates, and lipids breakdown",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Research Topic articles, Hussain et al. paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "A PROPOSAL, NOT A RESULT, AND THE EDITORIAL SAYS SO IN THE NEXT SENTENCE. The SERS/Raman WWOX-imaging idea is offered by analogy with an EGFR result in glioblastoma (ref 6, PMID 29760976, no receipt here); no WWOX Raman tag exists in this document.",
+    "snippet": "Raman tags can be designed to identify WWOX expression and its phosphorylation in normal neurons and glioblastoma cells in the brain",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Concluding remarks, SERS paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The editorial's own statement of the limit on the preceding proposal, quoted so that the proposal is never carried without it.",
+    "snippet": "there are expected difficulties in the brain imaging for patients, which requires further technical innovations",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Concluding remarks, SERS paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "WHAT THIS DOCUMENT IS, ESTABLISHED FROM ITS OWN TEXT: an editorial framing a thematic Research Topic. PubMed and the Europe PMC deposit both type it Editorial; it has no abstract, no figures, no tables and no supplement, and it reports no experiment of its own.",
+    "snippet": "This has prompted us to propose to the Frontiers journals a specific thematic issue discussing recent knowledge and advancement on WW domain proteins in physiology and diseases",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Opening section, second paragraph",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "THE STRONGEST FORWARD-LOOKING CLAIM THE DOCUMENT MAKES, AND IT IS AN ASSERTION OF FEASIBILITY WITH NO CRITERION ATTACHED. Quoted because it is the sentence that frames everything after it, including the Zfra and Raman proposals.",
+    "snippet": "it is achievable to design WWOX-targeted therapy",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID31428585_Chang2019_PMC.xml",
+    "anchor": "Concluding remarks, opening sentence",
+    "panel_text_relation": "text_only"
+   }
+  ]
+ }
+}
