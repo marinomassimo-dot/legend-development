@@ -1451,8 +1451,30 @@ dichiararla `figure` sarebbe falso, perché è testo. 3 dei 4 supplementari di q
 `.pptx`. La correzione è piccola e specifica ed è scritta lì; non è stata costruita perché una
 modifica al validatore scritta sotto rate limit si scrive i test addosso.
 
-**Current status:** 🟡 **aperto, ma ridotto** — resta solo manifest + receipt (+ il ramo `.pptx`, o
-la dichiarazione del debito su quell'unico locator). Nessun recupero e nessuna rilettura residui.
+**Aggiornamento 2026-09-09 (`scientist-b`, wave 4) — CHIUSO.** Manifest schema-v2 a **STRICT PASS,
+0 gap**, 34 locator su 14 artefatti fingerprintati; receipt **`FTR-20260909-38499540-02`,
+`complete_fulltext_read`**, appeso attraverso il writer validato, ledger a 141 receipt concatenati
+con la coda ri-ancorata. La ricetta del § 8 del dossier è stata trattata **come comodità e non come
+licenza**: tutti i 18 artefatti ri-fingerprintati (18/18 identici), i 9 locator body ri-verificati
+carattere per carattere contro l'XML corrente (**9 esatti, 0 miss, 0 nell'abstract**), tutte e sei
+le figure principali e tutte e sei le immagini del supplemento **ri-ispezionate in questa wave**, e
+la contraddizione di Fig 3D **ri-misurata da capo** dai centroidi dei marker rilevati
+programmaticamente contro un asse calibrato sui tick stampati dal pannello stesso — la calibrazione
+si auto-ancora, perché i marker rilevati riproducono i valori di gate stampati in Fig 3C (4.28 % e
+10.43 %). `references_enumerated` corretto **55 → 73** per conteggio di elementi; `table-wrap` = 0,
+quindi `tables: not_present` per conteggio e non per impressione.
+
+🔴 **Il blocco `.pptx` resta, e ha una seconda faccia scoperta in questa wave:** oltre all'assenza
+del ramo `.pptx` in `_artifact_text`, `ARTIFACT_KINDS` **non ha un kind binario per i supplementari**
+(`{article_binary, article_text, supplement_text, figure, table}`), quindi un `.pptx` è dichiarabile
+solo come `supplement_text` — che poi la verifica del testo rifiuta. I tre contenitori `.pptx` non
+sono perciò dichiarati affatto in `source_artifacts`; **ciò che è stato ispezionato — le immagini
+estratte — è dichiarato e fingerprintato.** La nota degli autori sui *campi* invece dei *topi* resta
+quindi **solo nel dossier**, dichiarata come debito, e **non è stata mascherata da `figure`**.
+
+**Current status:** ✅ **CHIUSO** — `FTR-20260909-38499540-02`, `complete_fulltext_read`.
+Resta registrato, e non come parte di questa voce, il solo item harness: il ramo `.pptx` di
+`_artifact_text` più un kind binario per i supplementari.
 
 ---
 
