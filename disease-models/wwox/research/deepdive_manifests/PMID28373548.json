@@ -1,0 +1,256 @@
+{
+  "schema_version": 2,
+  "pmid": "28373548",
+  "doi": "10.1073/pnas.1704296114",
+  "pmcid": "PMC5402418",
+  "receipt": "FTR-20260909-28373548-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID16223882.md",
+    "disease-models/wwox/research/commit_candidates/CC-20260909-16223882-01.md"
+  ],
+  "landing_note": "This source has no dossier of its own by design: it is a one-page editorial notice about PMID 16223882, and its findings belong in that paper's dossier, where a reader deciding what the article may be cited for will actually look. It is receipted and manifested separately because it WAS read in full and independently, and the contract does not let a full-text reading go unreceipted.",
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": true,
+      "reason": "Read as a source in its own right and BEFORE the article it concerns, so the article could be read knowing precisely what is contested."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Cascade run by hand and recorded: Europe PMC fullTextXML 404; efetch db=pmc front matter only with the publisher's no-XML notice; Europe PMC render PDF 429; PMC deposit obtained through framework/scripts/pmc_pow_fetch.py at proof-of-work difficulty 4."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": false,
+      "reason": "R4 threshold check run: this source touches no claim at all, consolidated baseline or otherwise. It changes what ANOTHER paper may be cited for, which is a registry-record question and is carried in CC-20260909-16223882-01."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 0,
+    "publications_on_gene": 0,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "🔴 NO ADMITTED research_type VALUE DESCRIBES AN EDITORIAL NOTICE, and the choice is recorded rather than hidden. This deposit is a signed editorial act by the Editor-in-Chief of PNAS, Inder M. Verma; the enum ['adjacent_method_expert','computational','descriptive_clinical','experimental_lab','mixed','primary_disease_group'] classifies the evidence a research group can produce, and an editorial office produces none. `experimental_lab` is chosen because the enum asks about the EVIDENCE THE DEPOSIT CARRIES, and the one piece of evidence in it is a wet-lab immunoblot - the 2014 replicate Fig 1B, supplied by the Croce/Huebner laboratory, which is an experimental lab. It is the least-wrong value and it is not the right one; the same shape of defect is recorded on this actor's other two manifests this wave for panel_text_relation.\n\nWHAT THE WEIGHTING ACTUALLY IS, since the enum cannot carry it. This source is AUTHORITATIVE about one thing and silent about everything else. Authoritative: what the journal has decided to record, and the SCOPE of its concern - one panel of one figure. Silent: the biology. It makes no measurement of its own, and the single confirmatory claim about the replacement image is reported speech, quoted from the authors, with no statement anywhere that the editors verified it. Weighted accordingly throughout - decisive on scope, silent on the science. The publication counts are zero because the field has no meaning for an editorial notice, and they are declared rather than omitted."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX",
+        "count": 707,
+        "source": "PubMed ESearch, 2026-09-09"
+      }
+    ],
+    "note": "Field density is not an informative axis for a one-page editorial notice and is recorded only so the field is not silently absent. What matters about this source is its object, not its field."
+  },
+  "multihop": {
+    "references_enumerated": 1,
+    "gene_direct_refs_in_source": [
+      "16223882"
+    ],
+    "resolved": [
+      {
+        "pmid": "16223882",
+        "why": "the object of the notice",
+        "status": "read to complete_fulltext_read in the same session, FTR-20260909-16223882-01"
+      }
+    ],
+    "queued": [],
+    "note": "The notice cites exactly one work - the article it concerns - and that article was read in full in the same session. There is no further hop."
+  },
+  "corpus_crossquery": {
+    "query": "Does this corpus hold any other source under an expression of concern, a retraction or a correction, and is any of them recorded as such where a reader would look?",
+    "hits": 2,
+    "note": "Two surfaces answered. (1) PMID 38355659, read by this actor in wave 2, is an ordinary correction attached to PMID 38182577 - so the corpus already treats an editorial deposit as a source to be read rather than as metadata, and this reading follows that precedent. (2) full_text_queue_current.md now carries FT-088, which records this expression of concern as a permanent STATUS entry rather than a reading debt, because the queue is what a future reader interrogates before citing, and an editorial status that lives only inside a dossier is one somebody will cite without seeing."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-09-09",
+    "route": "PubMed efetch db=pubmed and Europe PMC resultType=core for PMID 28373548",
+    "result": "CLEAN as to the notice itself: the expression of concern has not been retracted, corrected or withdrawn, and is STANDING as of 2026-09-09. Europe PMC types it expression-of-concern with a commentCorrection of type 'Expression of concern for' pointing at PMID 16223882; PubMed types the reciprocal link ExpressionOfConcernIn on the article. The PNAS page footer prints the running head CORRECTION, a third label, recorded because the deposit carries it."
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID28373548_EoC_PNAS2017.pdf",
+      "sha256": "28069dd2cf98d2eba98b2a7978d265e78e59487dca7f645b587444e2d4014f44",
+      "kind": "article_binary",
+      "note": "The notice, PMC5402418, one page, obtained through pmc_pow_fetch.py. Its text layer is SUSPECT and REFUSED - one C0 control at offset 1308, where the printed page reads beta-actin - so it is NOT declared as article_text and no locator is verified against it. Every text proposition is anchored to a 400 dpi page crop."
+    },
+    {
+      "path": "files/figures/PMID16223882/EoC2017_Fig1B_replacement_x6_461x139.jpeg",
+      "sha256": "bda1d1e7c8cccf9b8d948af8d4bf180365406f8c4db9160d1cd57e9ba123ebd7",
+      "kind": "figure",
+      "note": "The replacement Fig 1B, extracted by xref from the notice PDF. Filed under the article's figure directory because that is where a reader comparing it with the original will look."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID28373548/eoc_scope_fig1b_beta_actin.png",
+      "sha256": "a6cd1252dc0deb770069d482465d1bf803565f7476a26d54150736484d1c639e",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 1 at 400 dpi, regenerable by recipe (rule 5e)."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID28373548/eoc_original_data_unavailable.png",
+      "sha256": "196fbc8f12c430f8dc4c50e4806b898601482e9ebf8de4367c1aa662312f010f",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 1 at 400 dpi, regenerable by recipe (rule 5e)."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID28373548/eoc_authors_conclusions_unaffected.png",
+      "sha256": "7eb1824ed420e9e4c5837e12ad6c89b841b5b7ab31e851e45a4d87867b0a6146",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 1 at 400 dpi, regenerable by recipe (rule 5e)."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID28373548/eoc_remedy_is_a_2014_replicate.png",
+      "sha256": "688b430efed9c8eae81cde7337fe5ac2558dd7cbbd7e4c7b987cc1117f4baa82",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 1 at 400 dpi, regenerable by recipe (rule 5e)."
+    },
+    {
+      "path": "disease-models/wwox/research/page_adjudications/PMID28373548/eoc_confirmation_is_quoted_from_authors.png",
+      "sha256": "38976f6b7937365740897bdf093ab93f02a03a1b5eb79c723ead348c9f1b3aaa",
+      "kind": "figure",
+      "note": "Page-adjudication crop, page 1 at 400 dpi, regenerable by recipe (rule 5e)."
+    }
+  ],
+  "figure_extractions": [
+    {
+      "method": "PyMuPDF Document.extract_image() over the xref table",
+      "source": "files/fulltext/PMID28373548_EoC_PNAS2017.pdf",
+      "source_sha256": "28069dd2cf98d2eba98b2a7978d265e78e59487dca7f645b587444e2d4014f44",
+      "streams": [
+        {
+          "page": 1,
+          "xref": 6,
+          "px": "461x139",
+          "figure": "replacement Fig 1B"
+        }
+      ],
+      "note": "A second stream, xref 1 at 38x1631, is the journal's printed side rule and not a figure."
+    }
+  ],
+  "verbatim_locators": {
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC resultType=core for PMID 28373548 returns pmcid PMC5402418, inEPMC Y, hasPDF Y, isOpenAccess N, pubTypeList expression-of-concern. fullTextXML returns 404 and efetch db=pmc returns front matter only with the publisher's explicit no-XML notice, so the PDF deposit is the only surface and it is fingerprinted above.",
+    "entries": [
+      {
+        "proposition": "The concern is confined to ONE PANEL of one figure - the beta-actin loading row of Figure 1B - and is phrased as an appearance, not a finding. Everything else in the 2005 article is outside its scope.",
+        "snippet": "The editors wish to note that Fig. 1B, β-actin panel, appears to have duplicated bands",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID28373548/eoc_scope_fig1b_beta_actin.png",
+        "anchor": "Page 1 rendered at 400 dpi. THE TEXT LAYER OF THIS ONE-PAGE PDF IS SUSPECT AND REFUSED (one C0 control at offset 1308, where the printed page reads beta-actin), so the DRAWN GLYPH adjudicates (rules 5d/5e).",
+        "page_anchor": {
+          "page": 1,
+          "crop_pdf_points": [
+            30.38,
+            227.6,
+            291.44,
+            258.75
+          ],
+          "dpi": 400,
+          "needle": "β-actin panel, appears",
+          "image_sha256": "a6cd1252dc0deb770069d482465d1bf803565f7476a26d54150736484d1c639e",
+          "source_pdf_sha256": "28069dd2cf98d2eba98b2a7978d265e78e59487dca7f645b587444e2d4014f44"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right - the crop is a rendering of the running text, not a panel. Recorded, not silently absorbed; the same limitation is registered on PMID 16223882."
+      },
+      {
+        "proposition": "The question cannot be settled from the original data, and the notice says why: the issue was raised more than seven years after publication and the primary data no longer exist. This is why no verdict on the original panel is available to anyone, including a later reader.",
+        "snippet": "because this issue was first raised more than 7 years after publication, the original data are not available to confirm whether an error was made in the figure construction",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID28373548/eoc_original_data_unavailable.png",
+        "anchor": "Page 1 rendered at 400 dpi. THE TEXT LAYER OF THIS ONE-PAGE PDF IS SUSPECT AND REFUSED (one C0 control at offset 1308, where the printed page reads beta-actin), so the DRAWN GLYPH adjudicates (rules 5d/5e).",
+        "page_anchor": {
+          "page": 1,
+          "crop_pdf_points": [
+            30.38,
+            239.78,
+            291.51,
+            288.62
+          ],
+          "dpi": 400,
+          "needle": "the original data",
+          "image_sha256": "196fbc8f12c430f8dc4c50e4806b898601482e9ebf8de4367c1aa662312f010f",
+          "source_pdf_sha256": "28069dd2cf98d2eba98b2a7978d265e78e59487dca7f645b587444e2d4014f44"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right - the crop is a rendering of the running text, not a panel. Recorded, not silently absorbed; the same limitation is registered on PMID 16223882."
+      },
+      {
+        "proposition": "The notice records the AUTHORS' position that the conclusions are unaffected. It is reported speech; the editors do not adopt it in their own voice.",
+        "snippet": "the authors state that any error in figure construction does not affect their scientific conclusions",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID28373548/eoc_authors_conclusions_unaffected.png",
+        "anchor": "Page 1 rendered at 400 dpi. THE TEXT LAYER OF THIS ONE-PAGE PDF IS SUSPECT AND REFUSED (one C0 control at offset 1308, where the printed page reads beta-actin), so the DRAWN GLYPH adjudicates (rules 5d/5e).",
+        "page_anchor": {
+          "page": 1,
+          "crop_pdf_points": [
+            30.38,
+            269.66,
+            291.42,
+            298.6
+          ],
+          "dpi": 400,
+          "needle": "does not affect their scientific conclusions",
+          "image_sha256": "7eb1824ed420e9e4c5837e12ad6c89b841b5b7ab31e851e45a4d87867b0a6146",
+          "source_pdf_sha256": "28069dd2cf98d2eba98b2a7978d265e78e59487dca7f645b587444e2d4014f44"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right - the crop is a rendering of the running text, not a panel. Recorded, not silently absorbed; the same limitation is registered on PMID 16223882."
+      },
+      {
+        "proposition": "The remedy published is a REPLICATE experiment from 2014, not the original data - a different experiment offered nine years after the paper.",
+        "snippet": "The authors have provided an image from a replicate experiment completed in 2014",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID28373548/eoc_remedy_is_a_2014_replicate.png",
+        "anchor": "Page 1 rendered at 400 dpi. THE TEXT LAYER OF THIS ONE-PAGE PDF IS SUSPECT AND REFUSED (one C0 control at offset 1308, where the printed page reads beta-actin), so the DRAWN GLYPH adjudicates (rules 5d/5e).",
+        "page_anchor": {
+          "page": 1,
+          "crop_pdf_points": [
+            30.38,
+            289.61,
+            291.41,
+            318.56
+          ],
+          "dpi": 400,
+          "needle": "completed in 2014",
+          "image_sha256": "688b430efed9c8eae81cde7337fe5ac2558dd7cbbd7e4c7b987cc1117f4baa82",
+          "source_pdf_sha256": "28069dd2cf98d2eba98b2a7978d265e78e59487dca7f645b587444e2d4014f44"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right - the crop is a rendering of the running text, not a panel. Recorded, not silently absorbed; the same limitation is registered on PMID 16223882."
+      },
+      {
+        "proposition": "🔴 The confirmatory claim about the replacement image is QUOTED FROM THE AUTHORS. Nowhere does the notice state that the editors verified it. What PNAS publishes is the authors' assertion plus the image; what it does not publish is an editorial endorsement of either.",
+        "snippet": "which, the authors state, “confirms the results shown in Figure 1B. This confirmation supports the conclusions in this work.”",
+        "surface": "figure",
+        "artifact": "disease-models/wwox/research/page_adjudications/PMID28373548/eoc_confirmation_is_quoted_from_authors.png",
+        "anchor": "Page 1 rendered at 400 dpi. THE TEXT LAYER OF THIS ONE-PAGE PDF IS SUSPECT AND REFUSED (one C0 control at offset 1308, where the printed page reads beta-actin), so the DRAWN GLYPH adjudicates (rules 5d/5e).",
+        "page_anchor": {
+          "page": 1,
+          "crop_pdf_points": [
+            30.38,
+            299.59,
+            291.45,
+            338.46
+          ],
+          "dpi": 400,
+          "needle": "confirms the results",
+          "image_sha256": "38976f6b7937365740897bdf093ab93f02a03a1b5eb79c723ead348c9f1b3aaa",
+          "source_pdf_sha256": "28069dd2cf98d2eba98b2a7978d265e78e59487dca7f645b587444e2d4014f44"
+        },
+        "panel_text_relation": "panel_only",
+        "note": "An ADJUDICATED TEXT locator. `panel_only` is the least-wrong admitted value and it is not right - the crop is a rendering of the running text, not a panel. Recorded, not silently absorbed; the same limitation is registered on PMID 16223882."
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - the replacement Fig 1B the notice publishes reproduces the original lane pattern: Wwox appears only in lanes 1, 4 and 7, the three Ad-WWOX-infected lanes. Its beta-actin row spans nine lanes whose integrated density ranges from 244429 to 284468, a ratio of 1.16 - a WIDER spread than the 1.06 of the original panel it replaces - and no lane pair reaches identity (maximum pairwise normalised cross-correlation 0.992). 🔴 NO DUPLICATION VERDICT IS OFFERED ON EITHER PANEL: at 461x139 and 421x196 with JPEG compression the instrument cannot resolve band-level identity, and a verdict from it would be exactly the unearned assurance this discipline exists to prevent.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Replacement Fig. 1B extracted by xref from the notice PDF, 461x139. Top row: three bands centred at x 10-50, 157-200 and 312-352, i.e. lanes 1, 4 and 7 of nine. Bottom row: nine bands, integrated density 252740, 262964, 258643, 266271, 273814, 280054, 244429, 279633, 284468.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID16223882/EoC2017_Fig1B_replacement_x6_461x139.jpeg",
+        "anchor": "Editorial Expression of Concern, replacement Fig. 1B, read as pixels at 6x",
+        "panel_text_relation": "panel_only"
+      }
+    ]
+  }
+}

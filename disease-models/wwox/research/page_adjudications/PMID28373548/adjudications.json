@@ -1,0 +1,111 @@
+{
+  "schema_version": 2,
+  "pmid": "28373548",
+  "citation": "Editorial Expression of Concern: WWOX gene restoration prevents lung cancer growth in vitro and in vivo. Proc Natl Acad Sci USA 2017;114(16):E3365. Inder M. Verma, Editor-in-Chief. DOI 10.1073/pnas.1704296114",
+  "rights": {
+    "notice": "(c) 2017 National Academy of Sciences",
+    "open_licence": null,
+    "pmc_deposit": true,
+    "redistribution": "NOT_REDISTRIBUTED",
+    "why": "Europe PMC reports isOpenAccess N for this record. The crops reproduce printed sentences, so the images are gitignored and not published with this repository. This file is the recipe that regenerates them byte-identically from a copy of the PDF the reader already holds."
+  },
+  "source_pdf": {
+    "path": "files/fulltext/PMID28373548_EoC_PNAS2017.pdf",
+    "sha256": "28069dd2cf98d2eba98b2a7978d265e78e59487dca7f645b587444e2d4014f44"
+  },
+  "manifest": "disease-models/wwox/research/deepdive_manifests/PMID28373548.json",
+  "why_this_article_is_adjudicated": "The text layer of this one-page PDF carries a C0 control at offset 1308, at the point where the printed page reads 'beta-actin' - the very term the notice is about. _refuse_suspect_surface refuses it, and no structured surface exists: fullTextXML returns 404 and efetch db=pmc returns front matter only with the publisher's own notice that XML download is not allowed.",
+  "needles": "The crop is built over the whole sentence so the drawn glyphs can be read in context; the NEEDLE is a single-line fragment chosen because search_for returns exactly one span for it.",
+  "artifacts": [
+    {
+      "file": "eoc_scope_fig1b_beta_actin.png",
+      "page": 1,
+      "crop": [
+        30.38,
+        227.6,
+        291.44,
+        258.75
+      ],
+      "dpi": 400,
+      "sha256": "a6cd1252dc0deb770069d482465d1bf803565f7476a26d54150736484d1c639e",
+      "adjudicates": [
+        {
+          "locator": "entries[0]",
+          "needle": "β-actin panel, appears"
+        }
+      ]
+    },
+    {
+      "file": "eoc_original_data_unavailable.png",
+      "page": 1,
+      "crop": [
+        30.38,
+        239.78,
+        291.51,
+        288.62
+      ],
+      "dpi": 400,
+      "sha256": "196fbc8f12c430f8dc4c50e4806b898601482e9ebf8de4367c1aa662312f010f",
+      "adjudicates": [
+        {
+          "locator": "entries[1]",
+          "needle": "the original data"
+        }
+      ]
+    },
+    {
+      "file": "eoc_authors_conclusions_unaffected.png",
+      "page": 1,
+      "crop": [
+        30.38,
+        269.66,
+        291.42,
+        298.6
+      ],
+      "dpi": 400,
+      "sha256": "7eb1824ed420e9e4c5837e12ad6c89b841b5b7ab31e851e45a4d87867b0a6146",
+      "adjudicates": [
+        {
+          "locator": "entries[2]",
+          "needle": "does not affect their scientific conclusions"
+        }
+      ]
+    },
+    {
+      "file": "eoc_remedy_is_a_2014_replicate.png",
+      "page": 1,
+      "crop": [
+        30.38,
+        289.61,
+        291.41,
+        318.56
+      ],
+      "dpi": 400,
+      "sha256": "688b430efed9c8eae81cde7337fe5ac2558dd7cbbd7e4c7b987cc1117f4baa82",
+      "adjudicates": [
+        {
+          "locator": "entries[3]",
+          "needle": "completed in 2014"
+        }
+      ]
+    },
+    {
+      "file": "eoc_confirmation_is_quoted_from_authors.png",
+      "page": 1,
+      "crop": [
+        30.38,
+        299.59,
+        291.45,
+        338.46
+      ],
+      "dpi": 400,
+      "sha256": "38976f6b7937365740897bdf093ab93f02a03a1b5eb79c723ead348c9f1b3aaa",
+      "adjudicates": [
+        {
+          "locator": "entries[4]",
+          "needle": "confirms the results"
+        }
+      ]
+    }
+  ]
+}
