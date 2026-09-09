@@ -64,7 +64,7 @@
    "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
   ]
  },
- "CURRENT_STATE": "ASSIGNED",
+ "CURRENT_STATE": "CLAIMED",
  "assigned_on": "2026-09-08",
  "acquisition_hints": {
   "20530675": {
@@ -137,5 +137,29 @@
     "Europe_PMC"
    ]
   }
+ },
+ "TASK_ACK": {
+  "TASK_ID": "AQEILAN-FT-C-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "DECISION": "ACCEPTED",
+  "acked_at": "2026-09-09T00:00:00Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "duplicate_assignment_check": "Annex A.3 / scientist_reading_modes.md 2.2 rule 3 run before claim: grep over ledger/tasks/*/*.json returns this contract alone for both wave PMIDs; no peer contract names 20530675 or 21731849, so no PARALLEL_READ_GROUP is needed and none is declared. Receipt ledger queried per PMID (M0) — results recorded under wave_1_gate below.",
+  "note": "Wave 1 of the lot is 20530675 then 21731849. The remaining five PMIDs (38355659, 21115974, 16223882, 18460020, 41562193) are assigned to this contract but NOT to this session and were not opened."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "AQEILAN-FT-C-001",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-c",
+  "claimed_at": "2026-09-09T00:00:00Z",
+  "durable_pointer": "ledger/tasks/scientist-c/AQEILAN-FT-C-001.json on main, root checkout /root/legend-development",
+  "wave": "1 of the lot — PMIDs 20530675, 21731849",
+  "wave_1_gate": {
+   "20530675": "prior contemporaneous partial_fulltext_read FTR-20260814-20530675-01 (figures captions_only, supplementary not_read) -> reread_reason inadequate_prior_coverage, prior_receipt FTR-20260814-20530675-01, resume from the uncovered surfaces",
+   "21731849": "no receipt of any kind -> reread_reason first_read"
+  },
+  "evidence_locality_finding": "files/fulltext/ and files/figures/ are EMPTY in this shared checkout. The artifact FTR-20260814-20530675-01 fingerprints (files/fulltext/PMID20530675_Kurek2010_PMC.html, sha256 8fadfda1...) is not present here, so the prior reading cannot be re-verified from bytes in this checkout and its surfaces must be re-acquired. Recorded, not worked around."
  }
 }
