@@ -346,3 +346,72 @@ filename in a sentence still passes.
 3. **Re-measure the resolution hierarchy** on the next paper that has both an archive figure set and
    a render PDF. Two observations is still not a rule, but it is the point at which one is worth
    proposing.
+
+---
+
+## 2026-09-09 · `scientist-c` · `AQEILAN-FT-C-001` **wave 4 — the lot closes**
+
+### Gap found, and it was found in my own tool
+
+🔴 **`text_surface_intrusion_check.py`, shipped by this actor in wave 1, produced 25 false positives
+on its second production paper.** `TABLE_ROW_RE` excludes repeated table rows by their wide
+inter-column gaps; **PyMuPDF `get_text()` emits one cell per line**, so a table's values arrive as
+short repeated lines with no gaps to detect. The wave-1 refinement was not wrong — it was **defeated
+by a different extractor's line model**, which is a failure mode no amount of care on the original
+document would have surfaced.
+
+**The lesson is about the shape of the guard, not the bug.** A guard keyed to *how one extractor
+lays text out* generalises no further than that extractor. The fix is keyed instead to a property of
+the **document**: page furniture recurs once per page and is therefore *dispersed*, while table cells
+recur densely inside one block. That property survives a change of extractor.
+
+### Shipped
+
+- **Dispersion test** (`HEADER_MIN_SPREAD = 0.25`), threshold chosen by **measuring both classes on
+  two real papers**, not guessed: genuine furniture spans **53.7–111.5%** of a document, table cells
+  **2.7–7.6%**. Result **28 → 14** intrusions on PMID 18460020, **false positives 25 → 0**, and the
+  wave-1 paper (PMID 21731849) **unchanged at 13**.
+- **Three regressions** (suite **10/10**), including the counterexample that chose the fix's shape:
+  the `|` separator of a running header spans 70% of the document with a **median gap of 2**, so the
+  obvious gap-based alternative would have discarded real furniture to remove false furniture.
+- 🔴 **A rejected design recorded in the docstring rather than silently dropped.** An absolute line
+  floor separated the classes just as cleanly *and silenced the suite's oldest regression*. Recorded
+  so the next reader does not re-propose it, together with the ratio's own declared limit (a short
+  document where a table honestly exceeds a quarter of the text).
+
+### External scouting — nothing adopted, and the reason is specific
+
+Two candidate routes were considered against this wave's actual friction and **declined**:
+
+| Candidate | Verdict |
+|---|---|
+| A general table-region detector (heuristic or ML layout model) to replace `TABLE_ROW_RE` | **REJECT for now.** It is the same class of fix that just failed — keyed to layout rather than to a document property — and it would carry a model dependency into a guard whose whole value is that it is cheap and legible. The dispersion test costs four lines and no dependency. |
+| Wiley TDM API for the supplement | **REFUSED, not rejected.** It is an API-keyed service; external spend is reserved to the operator. Recorded as a refusal so nobody reads the empty result as "the supplement does not exist". |
+
+### Measured this wave, and worth keeping
+
+- 🔴 **A task contract's acquisition hint can be false, and two repository records caught it before
+  any network call**: `corpus_seed_pubmed_20260806.jsonl` carried the PMCID the hint denied, and
+  `surface_census.md` recorded a structured surface the pre-flight said did not exist. **The census
+  and the seed are usable as an acquisition dissent channel** — they were built for other purposes
+  and answered this one. `oa_status_dissent.py` was run first and correctly returned a *negative*.
+- 🔴 **`grep -c` as a counting method reported 21 `consolidated baseline` claims where a
+  section-aware parse reports 18** — three occurrences are prose inside a CLAIM 004 audit note.
+  Rule 4 forbids grep as a method of *analysis*; this is the same hazard pointed at a *threshold
+  check*, where a wrong count silently changes whether a review floor triggers.
+- **A per-PMID `retraction_check` cannot see the integrity status of the papers a paper depends on.**
+  PMID 18460020 is clean and draws its virus and both antibodies from a paper under a standing
+  expression of concern.
+
+### Next Micro-Step
+
+1. 🔴 **Wire `text_surface_intrusion_check.py` into `deepdive_manifest.py` for PDF-derived
+   surfaces.** **Four waves of deferral.** It is now decisively the oldest open item on this actor's
+   list, and this wave supplied the argument for it: the tool caught a real intrusion inside the
+   sentence carrying a load-bearing claim, and it did so only because I remembered to run it.
+2. **Propose a `Reagent provenance:` field for the paper registry** (`CC-20260909-18460020-01` §1).
+   The registry can record that a paper *is* concerned; it cannot record that a paper *descends from*
+   one, and a per-PMID check will never surface it.
+3. **The two receipt-contract findings remain the operator's** — `identity_correction`, and coupled
+   panel relations being unavailable to adjudicated locators. Unchanged, unimplemented, not worked
+   around, and now carried across four waves without drift.

@@ -64,7 +64,7 @@
       "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
     ]
   },
-  "CURRENT_STATE": "WAVE_4_CLAIMED - 6 of 7 PMIDs closed at complete_fulltext_read (20530675, 21731849 wave 1; 38355659, 21115974 wave 2; 41562193, 16223882 wave 3). Wave 4 is the last paper in the lot: 18460020, dispatched as the lot's hard acquisition (no PMCID and an empty free-site list in the 2026-09-08 pre-flight).",
+  "CURRENT_STATE": "LOT COMPLETE - all 7 assigned PMIDs closed at complete_fulltext_read (20530675, 21731849 wave 1; 38355659, 21115974 wave 2; 41562193, 16223882 wave 3; 18460020 wave 4). Nothing remains assigned to this contract. Two contract findings stay REFERRED to the operator and were never worked around: identity_correction, and coupled panel relations being unavailable to adjudicated locators.",
   "assigned_on": "2026-09-08",
   "acquisition_hints": {
     "20530675": {
@@ -302,6 +302,36 @@
         "18460020"
       ],
       "note_for_next_wave": "18460020 (Role of the WWOX gene, encompassing fragile region FRA16D, in suppression of pancreatic carcinoma cells; Cancer Sci 2008; DOI 10.1111/j.1349-7006.2008.00841.x) has NO PMCID and NO free site in the acquisition hints, so expect the full cascade and budget a wave for it alone. Two routes proved useful this wave and are worth trying first: framework/scripts/pmc_pow_fetch.py cleared PMC's proof-of-work interstitial twice at difficulty 4, and where only a PDF exists, PyMuPDF xref extraction gives figure streams several times the resolution the archive distributes. If the only surface is a PDF, screen its text layer with the CORRECT call shape - see the guard shipped this wave - and expect to page-adjudicate. Two carried debts remain for whoever takes them: PMID 15070730 belongs to scientist-a's open contract and must not be opened by this actor, and FT-083 records that PMID 36828035 has two partial receipts and no complete read while PAPER 007 behind it, the registry source of consolidated baseline CLAIM 006 and CLAIM 007, carries Identifier: pending normalization."
+    },
+    {
+      "milestone": "wave 4 complete - LOT CLOSED",
+      "at": "2026-09-09T18:45:00Z",
+      "actor": "scientist-c",
+      "pmids_closed": [
+        "18460020"
+      ],
+      "receipts": [
+        "FTR-20260909-18460020-01"
+      ],
+      "evidence_depth": "complete_fulltext_read",
+      "manifest": "strict validator PASS, 0 gaps, 34 locators (22 text/table, 12 figure), 14 fingerprinted artifacts",
+      "acquisition": "THE CONTRACT'S OWN HINT WAS FALSE. acquisition_hints declared pmcid null and free_sites [], and the 2026-09-08 pre-flight and Europe PMC agreed; NCBI idconv returns PMC11159152 and the article is free from PMC. Caught by two repository records before any network call - the 2026-08-06 corpus seed and the 2026-08-15 surface census. oa_status_dissent.py was run first per the dispatch and returned PREFIX_CONSISTENT, a true negative, credited as such. pmc_pow_fetch.py then cleared PMC's proof-of-work at difficulty 4. Two routes REFUSED rather than failed: WebFetch under rule 5c, and the Wiley TDM API as external spend.",
+      "figures": "15 of 15 main-figure panels read as pixels at 200-900 dpi, plus Table 1 re-read on the rendered page, plus one authentic embedded raster extracted for densitometry. No captions_only anywhere. Every quantitative statement in this paper is figure-resident: the running text carries no P value and no dispersion statement at all.",
+      "headline_finding": "Figure 2B(b) is captioned 'Histological examination of the s.c. tumors' and contains exactly two H&E panels, labelled Control and Ad-GFP. There is no Ad-WWOX panel: the experimental arm occupies zero pixels and both displayed panels are control arms. Honest consequence of panel (c) - no treated tumours formed to section - but neither caption nor text says so.",
+      "two_lines_refused": "Recorded because a reading that reports only its successes is not a reading. (1) The apparent Fig 3c-vs-3d contradiction is a confounded measurement, not a defect - the Mock plate is rendered at a different scale and background - and was DISCARDED. (2) The beta-actin in Fig 5c is NOT the confound expected: densitometry on the authentic embedded raster shows Mock and pWWOX well loading-matched, and the paper's central in vitro claim SURVIVES normalisation at 2.69x.",
+      "review": "R4 legend-locator-audit NOT triggered. Threshold re-run mechanically over all 18 consolidated baseline claims by a section-aware parse; a bare grep -c reports 21 because three occurrences are prose inside a CLAIM 004 audit note. None concerns pancreatic carcinoma, PanIN, SMAD4/TGF-beta, adenoviral WWOX restoration or xenograft tumorigenicity.",
+      "claims_touched": "NONE. A deliberate NON-LINK to CLAIM 002 and CLAIM 004 is recorded in CC-20260909-18460020-01 with three independent reasons: the papers are not independent (this one's reagents come from 16223882), 16223882 is under a standing expression of concern, and the design here is engraftment prevention with an inoculum already committed to death rather than rescue of an established phenotype.",
+      "micro_upgrade": "text_surface_intrusion_check.py - the tool this actor shipped in wave 1 - produced 25 false positives on its second production paper because PyMuPDF emits one table cell per line and the wave-1 column-gap exclusion had no gaps to find. Fixed by a dispersion test whose threshold was MEASURED on two real papers, not guessed. 28 -> 14 intrusions, false positives 25 -> 0, wave-1 paper unchanged at 13. Suite 10/10 with three new regressions; an absolute-line-floor design was tried, found to silence the suite's oldest regression, and REVERTED with its rationale recorded in the docstring.",
+      "release_suites": "Six red - link_targets, coverage_report, batch_queue, pathograph, surface_census, reading_state - and PROVEN red before this actor's change by stashing it and re-running. None references the changed tool. They are the derived surfaces, stale against today's readings.",
+      "derived_surfaces": "NOT regenerated, per the dispatch. Drift REPORTED: reading_state.md has no row for 18460020 and no derived surface names its receipt. Tree is clean; the orchestrator regenerates at wave close.",
+      "obligations": "legend-session-self-eval and legend-capability-scout both run and persisted for wave 4. NOTE FOR THE COORDINATOR: these were NOT outstanding from wave 2 - they were discharged at wave 3 in commit 91357fe.",
+      "commits": [
+        "4a711bd wave-4 claim",
+        "3fcb5c0 PMID 18460020",
+        "492a532 intrusion-check dispersion fix",
+        "(this) lot close"
+      ],
+      "remaining_pmids": []
     }
   ]
 }
