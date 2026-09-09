@@ -4292,3 +4292,33 @@ ordinerebbe l'issue in modo sbagliato, e i numeri sembrano autorevoli perché li
 curatore.
 
 **Priorità:** `25283145` media-alta, gli altri media. **Current status:** ⬜ aperti.
+
+## FT-096 — PMID 20146584 · le due immagini di figura, debito di acquisizione dichiarato
+
+**Paper:** PMID 20146584 — Salah, Aqeilan 2010, *Future Oncol* 6(2):249–59 · PMCID `PMC2832309`
+**Surface:** XML PMC letto integralmente; **`figures: captions_only`**
+**Priority:** MEDIA
+**Why:** il testo è stato letto per intero il 2026-09-09 e il receipt
+`FTR-20260909-20146584-01` è **`partial_fulltext_read` per declassamento dichiarato**, non per
+copertura incompleta del corpo. Mancano soltanto `nihms-180622-f0001.jpg` e
+`nihms-180622-f0002.jpg`. Il costo del debito è misurato, non supposto: **la Figura 2 è il pannello
+che il testo indica due volte come il proprio riassunto di signalling**, e poche ore prima, sullo
+stesso tipo di schema in `25245215`, l'apertura dell'immagine aveva rivelato un nodo assente sia
+dalla prosa sia dalla didascalia e una didascalia che nomina un'entità che il pannello non disegna.
+
+**Cascata già eseguita** (`scientist-b`, wave 6): Europe PMC `fullTextXML` 404 · `supplementaryFiles`
+*"not open access one"* · `?pdf=render` 429 poi **HTTP 500 ×2**, un guasto di servizio · pagina PMC,
+`/pdf/` e `/bin/<figura>.jpg` dietro reCAPTCHA, con `/bin/` che risponde **200-con-challenge, non
+404**, quindi l'asset esiste · `oa.fcgi` 404 · OpenAlex, Semantic Scholar e Unpaywall danno
+`is_oa: true`, green, **PMC come sola location** · tandfonline 403 · futuremedicine 404 · pagina
+figure di Europe PMC è uno shell JS · `find-fulltext` invocato, non risolve.
+
+**Verificato in più il 2026-09-09 (orchestratore):** la variante **senza User-Agent** — che sblocca
+l'HTML dell'articolo — **non** sblocca gli asset: entrambe le figure rispondono 200 con la pagina di
+challenge (21.400 e 21.397 byte). Il 404 dell'endpoint OA REST è coerente e non è un guasto: è un
+*author manuscript* NIHMS, fuori dal subset open-access.
+
+**Prossimo passo, in ordine:** un solo ritentativo di `?pdf=render` a distanza di ore, perché il suo
+fallimento era 500/429 e non un rifiuto; se il PDF arriva, **PyMuPDF — disponibile in questo
+deployment solo dal 2026-09-09** — estrae le due figure alla risoluzione depositata e il receipt sale
+a `complete`. Solo se anche quello fallisce serve un browser umano sulla pagina PMC.
