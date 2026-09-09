@@ -1,0 +1,527 @@
+{
+  "schema_version": 2,
+  "pmid": "21115974",
+  "doi": "10.1182/blood-2010-08-303073",
+  "receipt": "FTR-20260909-21115974-01",
+  "landing": [
+    "disease-models/wwox/research/fulltext_dossiers/PMID21115974.md",
+    "disease-models/wwox/research/commit_candidates/CC-20260909-21115974-01.md"
+  ],
+  "skills_considered": [
+    {
+      "skill": "legend-deepdive",
+      "used": true,
+      "reason": "The reading route; the M0-M5 pipeline of the standing brief is its structure."
+    },
+    {
+      "skill": "find-fulltext",
+      "used": false,
+      "reason": "Not reached as a skill, though its cascade was run by hand and is recorded under source_artifacts: Europe PMC fullTextXML 404, NCBI efetch db=pmc metadata-only, europepmc pdf=render 404, fullTextPDF 504 then 404, publisher PDF (Unpaywall-declared, ashpublications.org) HTTP 403 behind Cloudflare. The PMC article HTML carried the complete text and ended the cascade."
+    },
+    {
+      "skill": "legend-locator-audit",
+      "used": true,
+      "reason": "R4 TRIGGERED AND RUN. This reading qualifies CLAIM 023 (`consolidated baseline`), whose principle is that WWOX controls partner function not only by binding but by phosphorylation-dependent subcellular rerouting. This paper supplies a partner - the HTLV-I Tax oncoprotein - in which binding is explicitly WW-domain-independent and Y33-independent, rerouting explicitly does NOT occur, and yet Y33 still determines the functional outcome through a third route (blocking IKKa recruitment to RelA). Corroborating the headline while adding a mechanism the claim does not name is `narrow/corroborate` under the task's review rule, so the blind audit was run over the locator triples before the commit candidate was written."
+    },
+    {
+      "skill": "legend-discovery",
+      "used": true,
+      "reason": "Run, and it paid. The uncited supplementary Figure S3 (HBZ mRNA in the same nine ATL patients) is a lead no keyword or caption pass would surface: the word HBZ appears nowhere in the article body."
+    },
+    {
+      "skill": "legend-hypothesis-forge",
+      "used": false,
+      "reason": "No molecule, dose or endpoint is advanced by this paper toward a WWOX-DEE genotype class; transfer verdict is ESPANSIONE/T3. Forging hypotheses from an oncology signalling result at T3 would manufacture a portfolio the evidence does not carry."
+    },
+    {
+      "skill": "legend-safety-triage",
+      "used": false,
+      "reason": "No molecule is promoted. MG132 and cycloheximide are laboratory reagents used as tools, not candidates."
+    },
+    {
+      "skill": "legend-proband-priority-matrix",
+      "used": false,
+      "reason": "Reading order for this two-PMID wave was fixed by the dispatch; there is no ordering question to answer."
+    },
+    {
+      "skill": "text_surface_intrusion_check.py",
+      "used": true,
+      "reason": "This actor's own wave-1 micro-upgrade, run on both derived text surfaces before any locator was written. Both clean."
+    }
+  ],
+  "group_assessment": {
+    "total_publications": 137,
+    "publications_on_gene": 65,
+    "research_type": "experimental_lab",
+    "is_primary_group_for_disease": false,
+    "weighting": "🔴 THE COUNTS ABOVE ARE THE AQEILAN LABORATORY'S, AND THIS IS NOT THE AQEILAN LABORATORY'S PAPER - stated first because the lot is an Aqeilan sweep and the assumption would otherwise pass unexamined. The corresponding and senior author is Gutian Xiao (University of Pittsburgh Cancer Institute), an NF-kB signalling laboratory; the first authors are J. Fu and Z. Qu, who contributed equally. Rami Aqeilan appears as a mid-list collaborator through the Lautenberg Center, Hebrew University. Consequences for weighting, applied throughout the reading: (a) the NF-kB machinery - p100/p52 processing, IKKa recruitment, RelA S536, the Tax-transgenic and p100-knockout mice, the M22/M47 mutants - is this group's own long-standing system, and its handling carries first-hand weight; (b) every WWOX-specific reagent and interpretation is the COLLABORATOR's contribution and is weighted as such, which is exactly where the paper's WW-domain structural claims sit and exactly where they are thinnest (see the two `data not shown` locators); (c) the group is primary for NEITHER the gene NOR the disease - it is primary for the pathway. PubMed ESearch 2026-09-09 re-derived today: 'Aqeilan RI[Author]' = 137, 'Aqeilan RI[Author] AND WWOX' = 65, paying the stale-count debt this actor's wave-1 self-evaluation recorded (was 137/64, carried from 2026-08-11)."
+  },
+  "field_density": {
+    "queries": [
+      {
+        "query": "WWOX",
+        "count": 707,
+        "source": "PubMed ESearch, 2026-09-09"
+      },
+      {
+        "query": "WWOX AND osteosarcoma",
+        "count": 28,
+        "source": "PubMed ESearch, 2026-09-09"
+      },
+      {
+        "query": "WWOX AND Myc",
+        "count": 20,
+        "source": "PubMed ESearch, 2026-09-09"
+      },
+      {
+        "query": "WWOX AND RUNX2",
+        "count": 12,
+        "source": "PubMed ESearch, 2026-09-09"
+      }
+    ],
+    "note": "Measured today. The densities above were derived for this session's other paper and are carried here as the WWOX-field denominator; they are NOT the density of this paper's own intersection, which is the WWOX/NF-kB/HTLV-I corner. That corner is thin enough that this 2011 Blood paper remains, as far as this corpus records, the only study placing WWOX inside HTLV-I Tax tumorigenesis."
+  },
+  "multihop": {
+    "references_enumerated": 42,
+    "gene_direct_refs_in_source": [
+      "17360458",
+      "17142102",
+      "15070730",
+      "16288044"
+    ],
+    "resolved": [
+      "17360458"
+    ],
+    "queued": [
+      "17142102",
+      "15070730",
+      "16288044"
+    ],
+    "note": "42 references enumerated as an integer from the reference list itself, numbered 1-42 with no gaps. Five are gene-direct: ref 17 (Aqeilan & Croce 2007, WWOX in biological control and tumorigenesis = PMID 17360458, ALREADY READ to complete depth in this repository), ref 18 (Chang NS 2007 Trends Mol Med review = PMID 17142102), ref 19 (Aqeilan 2004 PNAS, Wwox-p73 functional association = PMID 15070730), ref 39 (Mahajan 2005, Ack1 polyubiquitination of WWOX = PMID 16288044) and ref 42 (Sze CI, WWOX down-regulation induces Tau phosphorylation). 🔴 REF 19 IS THE CROSS-ACTOR HOP THAT MATTERS AND IT IS NOT QUEUED BY THIS ACTOR: PMID 15070730 is the WWOX-p73 / WW1 / Tyr33 study from which CLAIM 023's mechanism descends, and it is assigned to `scientist-a` under AQEILAN-FT-A-001. It is named here, and flagged in the commit candidate for its owner, rather than opened - a source with an open contract on it is not this actor's to read. Ref 39 (Ack1-mediated WWOX polyubiquitination) is the queued hop that bears on this paper's own `data not shown` degradation claim."
+  },
+  "corpus_crossquery": {
+    "query": "Does a WWOX result obtained in HTLV-I/NF-kB tumorigenesis touch any consolidated baseline claim about WW-domain function or partner routing, and does its mRNA-versus-protein pattern bear on this actor's wave-1 entry DL-MECH-106?",
+    "hits": 6,
+    "note": "Six surfaces answered. (1) claim_registry_current.md CLAIM 023 - the routing/scaffold principle this reading qualifies; its primary source CORPUS P206 carries `Identifier: PENDING`. (2) CLAIM 024 - WW1-WW2 tandem cooperativity; source CORPUS P204 also `Identifier: PENDING`. Both placeholders are reported, not repaired. (3) CLAIM 007 - the only other MYC/WW-adjacent baseline claim, untouched. (4) discovery_ledger_current.md DL-MECH-106, this actor's wave-1 entry recording WWOX mRNA preserved and protein lost in the osteosarcoma line SAOS-2: the same dissociation appears here in six HTLV-I-transformed and ATL T-cell lines, in a different tissue and a different disease, which turns a single-line observation into a cross-context one. (5) paper_registry_current.md - no existing record for PMID 21115974. (6) ledger/tasks/scientist-a/AQEILAN-FT-A-001.json - confirms PMID 15070730, this paper's ref 19, belongs to a peer's open contract."
+  },
+  "retraction_check": {
+    "performed": true,
+    "at": "2026-09-09",
+    "route": "PubMed efetch for PMID 21115974 and Europe PMC resultType=core for PMC3318777",
+    "result": "CLEAN. No retraction, no expression of concern, no erratum and no correction of any kind is attached; PubMed returns no CommentsCorrections element of any RefType and Europe PMC custom-meta is-retracted = no. PublicationType is Journal Article / Research Support. Independently re-verified in this session rather than inherited.",
+    "hold": false
+  },
+  "source_artifacts": [
+    {
+      "path": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+      "sha256": "c391eb08c936b10f1c9ac3c731b25b91576ca935abebc58f46e722b0bc36d69f",
+      "kind": "article_text",
+      "note": "🔴 NO XML SURFACE EXISTS FOR THIS ARTICLE AND THE ABSENCE IS RECORDED RATHER THAN IMPLIED (rule 5d). Cascade run 2026-09-09, in order: Europe PMC fullTextXML for PMC3318777 -> HTTP 404; NCBI efetch db=pmc -> HTTP 200 but 8549 bytes of metadata with no <body> and zero <sec>; europepmc pdf=render -> 404; Europe PMC fullTextPDF -> 504 then 404; publisher PDF at ashpublications.org, the single OA location Unpaywall declares -> HTTP 403 behind Cloudflare. The PMC article HTML is the structured surface that succeeded: 205 827 bytes, all sections present, _refuse_suspect_surface passes, abstract separated cleanly at 1081 characters against a 63 487-character body. Every text locator is anchored here."
+    },
+    {
+      "path": "files/fulltext/PMID21115974_Fu2011_supplement.pdf",
+      "sha256": "bedd10451d46f6c7993d92d11ed4d1abce263e81bfdd1ef746bfdbe0e19f9441",
+      "kind": "article_binary",
+      "note": "Supplementary Document 1, 3 pages, retrieved through framework/scripts/pmc_pow_fetch.py after a plain GET returned an HTML interstitial rather than the PDF. Contains supplemental Figures S1, S2 and S3."
+    },
+    {
+      "path": "files/fulltext/PMID21115974_Fu2011_supplement.txt",
+      "sha256": "829936a247df6cce8fb212a3ac7ae0e2b6aff54e99756642d5c3187bf9495df5",
+      "kind": "article_text",
+      "note": "🔴 RE-DERIVED, NOT NORMALISED, AND THE FIRST DERIVATION IS RECORDED RATHER THAN QUIETLY REPLACED. The first extraction (pdftotext -layout) was REFUSED by the validator's own screen as a SUSPECT surface: it carried the C0 control U+000C at offset 3039. Under rule 5d a SUSPECT surface is refused, never normalised, and never hand-corrected - so the control was NOT stripped. The artifact was re-derived from the same source PDF with an extraction option that does not emit page separators (pdftotext -layout -nopgbrk), which is a different deterministic extraction and not an edit of the output. The re-derived surface passes _refuse_suspect_surface and text_surface_intrusion_check.py. Only the two supplement captions are quoted from it; every supplement QUANTITY is read from the 200 dpi page renders instead."
+    },
+    {
+      "path": "files/figures/PMID21115974/zh89991065650001.jpg",
+      "sha256": "bbf3b99dfcd3eb59a516a34a7510df0f33a05b694e39b648417753af540662b2",
+      "kind": "figure",
+      "note": "Figure 1, 432x608, PMC archived resolution."
+    },
+    {
+      "path": "files/figures/PMID21115974/zh89991065650002.jpg",
+      "sha256": "bdd7b371e073edef9b981dfe1fff60024a8bd9e49f325752cf6247e7d83f1678",
+      "kind": "figure",
+      "note": "Figure 2, 432x618."
+    },
+    {
+      "path": "files/figures/PMID21115974/zh89991065650003.jpg",
+      "sha256": "8f2b10e3495da7f0eddf089c00794312d13a18ec57f16055f113682f35a8e9ca",
+      "kind": "figure",
+      "note": "Figure 3, 432x311."
+    },
+    {
+      "path": "files/figures/PMID21115974/zh89991065650004.jpg",
+      "sha256": "205556583875c52695fc449806d9321cc365905b46e6baab0d7cfed4df798239",
+      "kind": "figure",
+      "note": "Figure 4, 432x417."
+    },
+    {
+      "path": "files/figures/PMID21115974/zh89991065650005.jpg",
+      "sha256": "720d1b4d30c43bf98da129df3a975537b2e9fba83ae3e6fd22fae798537cbaeb",
+      "kind": "figure",
+      "note": "Figure 5, 432x381."
+    },
+    {
+      "path": "files/figures/PMID21115974/zh89991065650006.jpg",
+      "sha256": "3d9fecfda773ce9aa585730f87469c2848939c229ba77d206d22ea524c9e08d6",
+      "kind": "figure",
+      "note": "Figure 6, 432x554."
+    },
+    {
+      "path": "files/figures/PMID21115974/supplement_page1_200dpi.png",
+      "sha256": "b27f3c67bfc93a9e0547bba0a587d81ee963c662cb03c183193eefd21db0690f",
+      "kind": "figure",
+      "note": "Supplement page 1 (Figure S1) rendered at 200 dpi from the fingerprinted supplement PDF and inspected as pixels."
+    },
+    {
+      "path": "files/figures/PMID21115974/supplement_page3_200dpi.png",
+      "sha256": "d5ec90a942160993c33f6480f029e3b06565af06c4b236ded677712bae1d4f20",
+      "kind": "figure",
+      "note": "Supplement page 3 (Figure S3, the uncited HBZ panel) rendered at 200 dpi and inspected as pixels."
+    },
+    {
+      "path": "files/figures/PMID21115974/supplement_page2_200dpi.png",
+      "sha256": "956b2102f6d5f57999bba600a22c01f19d11f4ff8647f6bd3a2cba72373d71cb",
+      "kind": "figure",
+      "note": "Supplement page 2 (Figure S2) rendered at 200 dpi and inspected as pixels. Retrieved and read during the response to the blind locator audit, to adjudicate whether S2A can carry the subcellular-localisation claim. It cannot."
+    }
+  ],
+  "page_renders": {
+    "rule": "Rule 5e - the derivation is published, never the derived image.",
+    "source_pdf_sha256": "bedd10451d46f6c7993d92d11ed4d1abce263e81bfdd1ef746bfdbe0e19f9441",
+    "renders": [
+      {
+        "page": 1,
+        "dpi": 200,
+        "command": "pdftoppm -r 200 -png <supplement pdf> sup",
+        "image_sha256": "b27f3c67bfc93a9e0547bba0a587d81ee963c662cb03c183193eefd21db0690f"
+      },
+      {
+        "page": 2,
+        "dpi": 200,
+        "command": "pdftoppm -r 200 -png <supplement pdf> sup",
+        "image_sha256": "956b2102f6d5f57999bba600a22c01f19d11f4ff8647f6bd3a2cba72373d71cb"
+      },
+      {
+        "page": 3,
+        "dpi": 200,
+        "command": "pdftoppm -r 200 -png <supplement pdf> sup",
+        "image_sha256": "d5ec90a942160993c33f6480f029e3b06565af06c4b236ded677712bae1d4f20"
+      }
+    ]
+  },
+  "figure_extractions": {
+    "rule": "🔴 9 OF 9 FIGURE SURFACES INSPECTED AS PIXELS, NONE CARRIED ON ITS CAPTION - six main figures and three supplemental figures. The denominators were established by reading the rendered material, not by counting figure citations in the text: the main-figure count comes from the six <figure> elements in the PMC deposit, the supplement count from the three pages of the supplement PDF. NATIVE RESOLUTION IS 432 px WIDE AND THAT IS A LIMIT, NOT A CHOICE: it is what PMC archives for this 2011 deposit. Checked rather than assumed - the /bin/ route returns byte-identical files to the blobs CDN, the tileshop zoom endpoint returns a template referencing an unrelated article, Europe PMC's figure route 301s away, and the publisher's print-resolution PDF is HTTP 403 behind Cloudflare. Panels were therefore read by cropping and upscaling 330-850%, and every quantity below was read at the magnification at which its glyphs resolve; Figures 6C and 6H were re-opened at 800-850% specifically because the WW-domain and IKKa-recruitment claims rest on them. The supplement was rendered at 200 dpi from its own fingerprinted PDF."
+  },
+  "verbatim_locators": {
+    "source_fulltext_indexed": true,
+    "source_fulltext_indexed_evidence": "Europe PMC resultType=core for PMC3318777 on 2026-09-09 reports inEPMC=Y, inPMC=Y, isOpenAccess=Y; the PMC article HTML returned 205 827 bytes containing Methods, Results, Discussion and a 42-item reference list.",
+    "entries": [
+      {
+        "proposition": "The Results section heading asserts that p100/p52 knockout PREVENTS tumorigenesis, while the paragraph beneath it reports that only 10% of the knockout mice remained tumour-free - i.e. roughly 90% developed tumours, and the effect is a delay of onset, not prevention.",
+        "snippet": "Knockout of p100/p52 prevents tumorigenesis in Tax transgenic mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Results, section heading (first heading of Results)",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The paper's own paragraph gives the numbers that make the heading above an overstatement: tumour onset in the knockout is delayed to 24 weeks and 10% remain tumour-free at 52 weeks, so about 90% of Tax+ p100-/- mice did develop tumours.",
+        "snippet": "the earliest onset of tumor formation in Tax+ p100−/− mice, which lack expression of both the p100 and p52 proteins, started at 24 weeks, and only 10% of mice developed tumors by 25 weeks of age and 10% of mice remained tumor-free during the 52-week observation period",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Results, 'Knockout of p100/p52 prevents tumorigenesis in Tax transgenic mice', first paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The Discussion states the same result accurately as a REDUCTION, so the overstatement is confined to the Results heading and the paper contradicts it itself. This is what makes the finding a surface defect rather than a disagreement about the biology.",
+        "snippet": "Genetic knockout of the nf-kb2 gene can significantly reduce Tax-mediated tumor formation in Tax transgenic mice",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Discussion, paragraph beginning 'The Tax oncoprotein is a potent activator'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - the Kaplan-Meier curve confirms delay rather than prevention, and gives the shape the prose does not: the knockout curve falls steeply from ~22 weeks and plateaus at 10% tumour-free from ~34 weeks through the end of observation, while the Tax+ p100+/+ curve reaches 0% tumour-free by ~24-25 weeks.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 1A read as pixels at 400%. Y axis 'Tumor free mice (%)' 0-100, X axis 'Age (weeks)' 10-55. Tax+ p100+/+ (filled circles): 100% at 10 weeks, declining from ~11 weeks, reaching 0% at ~24-25 weeks. Tax+ p100-/- (filled triangles): flat at 100% until ~22 weeks, then a steep decline through ~30 weeks, reaching a plateau at 10% tumour-free at ~34 weeks and remaining flat at 10% to 52 weeks. Both Tax-negative control series (open symbols) remain flat at 100% across the whole 52 weeks.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21115974/zh89991065650001.jpg",
+        "anchor": "Figure 1, panel A, Kaplan-Meier plot read at 400% magnification of the 432 px archived image",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[0]",
+        "qualifies_needle": "prevents tumorigenesis in Tax transgenic mice"
+      },
+      {
+        "proposition": "The figure caption names a single control-group size for both Tax-negative genotypes together, which is the statement the panel's own legend qualifies.",
+        "snippet": "Tax-free p100+/+ or p100−/− mice (n = 9) were monitored daily for tumor formation for up to 52 weeks",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Figure 1 caption, panel A description. Declared surface body, not figure: this is authored caption prose carried in the JATS/HTML text and verified character-for-character, not a reading of pixels.",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - the in-panel legend prints n=9 for EACH of the two Tax-negative control groups, whereas the caption names 'Tax-free p100+/+ or p100-/- mice (n = 9)', which reads as nine control animals in total rather than eighteen. The control-arm size differs between the caption and the figure's own legend.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 1A in-panel legend, four entries read at 400%: 'Tax+ p100+/+ (n=17)', 'Tax+ p100-/- (n=20)', 'Tax- p100+/+ (n=9)', 'Tax- p100-/- (n=9)'. The two control entries each carry their own n=9.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21115974/zh89991065650001.jpg",
+        "anchor": "Figure 1, panel A, legend box inside the plot area",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[4]",
+        "qualifies_needle": "(n = 9) were monitored daily"
+      },
+      {
+        "proposition": "The rescue conclusion - that re-expressed p100, and p52 alone, restore Tax-driven transformation - is the claim the unmarked bars of Figure 1C have to carry.",
+        "snippet": "re-expression of exogenous p100 could rescue the transformation of the p100−/− MEFs by Tax. Interestingly, reconstitution of the p100 processed product p52 alone was also able to restore Tax-induced transformation of the p100−/− MEFs.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Results, 'Knockout of p100/p52 prevents tumorigenesis in Tax transgenic mice', second paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - in Figure 1C the two arms that FALL carry significance marks while the two rescue arms that RISE carry none. The rescue conclusion is therefore statistically unmarked at n=3. Stated as absence of a drawn marker, NOT as a difference tested and found absent.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 1C read at 380%. Five bars, y-axis 'Colony percentile' 0-180. p100+/+ Tax '-' = 100 with error bar to ~115, no mark. p100-/- 'Vec' ~59 with '**'. p100-/- 'p100' ~121, NO significance mark. p100-/- 'p52' ~134, NO significance mark. The error bars in this panel are drawn ONE-SIDED (upward only), so no drawn whisker crosses the reference level and none is claimed to. p100-/- 'p100SS/AA' ~50 with '**'. Only the two reduced bars are marked.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21115974/zh89991065650001.jpg",
+        "anchor": "Figure 1, panel C, bar chart and significance marks read at 380%",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[6]",
+        "qualifies_needle": "reconstitution of the p100 processed product p52 alone"
+      },
+      {
+        "proposition": "The text claims that loss of p100/p52 produces almost COMPLETE recovery of WWOX from Tax-mediated repression.",
+        "snippet": "deficiency of p100/p52 resulted in almost complete recovery of the WWOX gene from Tax-mediated repression",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Results, 'Tax inhibits expression of the WWOX gene largely dependent on p100/p52 expression', second paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figure 2B's own printed percentiles refute 'almost complete recovery': in the p100-knockout background Tax still lowers wwox from 94 to 63, a residual repression of about a third. Recovery is substantial and partial, not almost complete. The paper's section heading, which says 'largely dependent', is the accurate surface.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 2B read at 330%. Four RT-PCR lanes with percentile values printed beneath the wwox row: lane 1 p100+/+ Tax(-) = 100; lane 2 p100+/+ Tax(+) = 18; lane 3 p100-/- Tax(-) = 94; lane 4 p100-/- Tax(+) = 63. The tax row shows product only in lanes 2 and 4; gapdh is even across all four.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21115974/zh89991065650002.jpg",
+        "anchor": "Figure 2, panel B, printed percentile values beneath the wwox row",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[8]",
+        "contradicts_needle": "almost complete recovery"
+      },
+      {
+        "proposition": "The paper states that WWOX repression in HTLV-I-transformed and ATL lines is stronger at the protein level than at the mRNA level - a post-transcriptional component to WWOX loss.",
+        "snippet": "It should be pointed out that repression of WWOX expression was stronger at the protein level.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Results, 'Tax inhibits expression of the WWOX gene largely dependent on p100/p52 expression', final paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - WWOX protein is lower than WWOX mRNA in every one of the six virus-positive lines, and the panels carry numbers the running text does not. CAVEAT CARRIED WITH IT: 2E is normalised to β-actin and 2F to Hsp90, they are single runs, and neither panel carries a significance mark, so this is a consistent direction across six lines and not a tested dissociation.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figures 2E and 2F read at 330%, same seven cell lines in the same left-to-right order. 2E, wwox mRNA as % of Jurkat: Jurkat 100, C8166 ~75, MT-2 ~44, SLB-1 ~60, Hut102 ~38, TL-Om1 ~75, ED40515(-) ~9. 2F, WWOX protein percentiles printed beneath the blot: 100, 22.4, 28.9, 21.1, 11.8, 51.3, 3.95. Protein is lower than mRNA in every one of the six virus-positive lines.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21115974/zh89991065650002.jpg",
+        "anchor": "Figure 2, panels E and F compared; printed percentile values beneath the 2F blot",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The proposed mechanism for the protein-level loss - ubiquitination and proteasomal degradation with BOTH a Tax-dependent and a Tax-independent arm - is asserted partly on data that were not shown.",
+        "snippet": "Our data suggested that WWOX proteins undergo ubiquitination and proteasomal degradation through both Tax-dependent and -independent mechanisms (data not shown and see Figure 6D).",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Results, 'Tax inhibits expression of the WWOX gene largely dependent on p100/p52 expression', final paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figure 6D, the panel cited in support, contains NO Tax-negative condition: Tax is present in all nine lanes. The panel can therefore establish that WWOX is proteasomally degraded, but cannot separate a Tax-dependent from a Tax-independent arm, and the Tax-INDEPENDENT half of the claim rests entirely on the unshown data.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 6D read at 400%. Nine lanes under a single continuous 'Tax' bar spanning all of them. Condition rows: CHX -,+,+ / -,+,+ / -,+,+ and MG132 -,-,+ / -,-,+ / -,-,+; lanes 4-6 additionally Myc-WWOX WT, lanes 7-9 Myc-WWOX Y33R. The Myc-WWOX row falls with CHX (lanes 5 and 8) and is restored with CHX+MG132 (lanes 6 and 9). The Tax row is comparable across all nine lanes. No lane lacks Tax.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21115974/zh89991065650006.jpg",
+        "anchor": "Figure 6, panel D, condition rows and the Tax bar spanning all nine lanes, read at 400%",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[12]",
+        "contradicts_needle": "Tax-dependent and -independent mechanisms"
+      },
+      {
+        "proposition": "The paper's only clinical anchor: WWOX is reported as significantly decreased in about 78% of primary ATL patient samples.",
+        "snippet": "approximately 78% (7 of 9) ATL samples showed significantly decreased WWOX expression",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Results, 'Tax inhibits expression of the WWOX gene largely dependent on p100/p52 expression', final paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figure 2G carries NO significance mark of any kind, on any bar, although the sentence citing it says 'significantly decreased'. The comparator is a single healthy donor set to 100 while the other two controls sit at 117 and 149, and one of the two unreduced patients (#2) has an error bar reaching the comparator.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 2G read at 500%. Healthy controls: #1 = 100 (no error bar, the normalising reference), #2 ~117, #3 ~149. ATL patients: #1 ~35, #2 ~76 with an error bar reaching ~100, #3 ~41, #4 ~20.5, #5 ~31, #6 ~27, #7 ~26, #8 ~39.5, #9 ~100. No asterisk, dagger or bracket appears anywhere in the panel.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21115974/zh89991065650002.jpg",
+        "anchor": "Figure 2, panel G, all twelve bars and the absence of significance marks, read at 500%",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[14]",
+        "contradicts_needle": "significantly decreased WWOX expression"
+      },
+      {
+        "proposition": "The paper's pathophysiologic conclusion for primary patient material - the step from cell lines to human disease - and the sentence the uncited supplement bears on.",
+        "snippet": "These data strongly suggested that wwox repression is an HTLV-I pathophysiologic event.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Results, 'Tax inhibits expression of the WWOX gene largely dependent on p100/p52 expression', final paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "🔴 THE CLINICAL CLAIM'S MISSING MEASUREMENT. The only viral transcript ever measured in the ATL patients is HBZ, in the uncited supplemental Figure S3; Tax itself is never measured in patient material. ⚠️ STATED AS AN ASSUMPTION, NOT A FACT: the cross-read below assumes that 'ATL #1-#9' denotes the same patients in the same order in Figure 2G and in Figure S3. NOTHING in either caption, the figures or the Methods asserts that. On that assumption WWOX does not track HBZ; without it, only the absence of any Tax measurement stands.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Supplemental Figure S3 read as pixels from the supplement page rendered at 200 dpi. Y axis 'Relative level of HTLV-I HBZ mRNA (%)', normalised to ATL #1 = 100. Healthy controls #1-#3: ~3, ~0, ~0. ATL patients: #1 ~101, #2 ~13, #3 ~2, #4 ~3, #5 ~2.5, #6 ~23, #7 ~4, #8 ~1, #9 ~3.5. Cross-read against Figure 2G ON THE ASSUMPTION - unstated by the paper - that the patient numbering is shared: ATL #4 has the LOWEST WWOX (~20.5) with HBZ ~3, while ATL #1 has the HIGHEST HBZ (~101) with WWOX ~35, and ATL #9 has normal WWOX (~100) with HBZ ~3.5. There is no monotone relationship between the two.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21115974/supplement_page3_200dpi.png",
+        "anchor": "Supplemental Figure S3, all twelve bars, read from the 200 dpi render of supplement page 3",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[16]",
+        "qualifies_needle": "an HTLV-I pathophysiologic event"
+      },
+      {
+        "proposition": "Supplemental Figure S3's own caption confirms what it measures and in which subjects - HBZ transcript in the ATL patients and controls - which is what makes its absence from the main text a gap rather than a mislabelling.",
+        "snippet": "RNA levels of HBZ in ATL cells.",
+        "surface": "supplement",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_supplement.txt",
+        "anchor": "Supplement page 3, Figure S3 caption, opening sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The specificity control for the whole NF-kB argument: WWOX does not inhibit TNFa-induced NF-kB, so its effect is Tax-selective rather than a general suppression of the reporter. A genuine and well-placed negative.",
+        "snippet": "overexpression of WWOX had no effect on TNFα-induced NF-κB activation",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Results, 'WWOX inhibits HTLV-I/Tax-mediated NF-κB activation', first paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The text describes the Y33R mutant as DRAMATICALLY enhancing Tax oncogenicity.",
+        "snippet": "whereas the WWOX Y33R mutant dramatically enhanced the oncogenic ability of Tax",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Results, 'WWOX coexpression suppresses Tax-mediated cellular transformation and tumor formation', final paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - the word 'dramatically' is attached to the WEAKER and less significant of the two effects. In both the colony and the tumour-weight panels the Y33R increase is about +28% at a single asterisk, while the wild-type suppression is about -60% at two asterisks.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figures 4B and 4D read at 400%. 4B 'Colony percentile': Vec 100, WWOX WT ~41 marked '**', WWOX Y33R ~128 marked with a single '*'. 4D 'Tumor Weight (mg)': Vec ~52.5, WWOX WT ~21 marked '**', WWOX Y33R ~67 marked with a single '*'. In both panels the suppression is roughly twice the magnitude of the enhancement and carries the stronger significance mark.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21115974/zh89991065650004.jpg",
+        "anchor": "Figure 4, panels B and D, bar heights and significance marks read at 400%",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[20]",
+        "contradicts_needle": "dramatically enhanced the oncogenic ability of Tax"
+      },
+      {
+        "proposition": "The text asserts an inverse correlation between Tax-induced NF-kB activity and WWOX knockdown efficiency. The separate dose-dependence claim is carried by a different sentence and is not quoted here.",
+        "snippet": "NF-κB activity induced by Tax was inversely correlated with the knockdown efficiency of WWOX.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Results, 'WWOX inhibits HTLV-I/Tax-mediated NF-κB activation', first paragraph (this section has only one prose paragraph)",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figure 5 carries NO significance mark in ANY of its four panels, so every dose-dependence and correlation claim resting on it is statistically unmarked. In Figure 5C the Y33R error bars reach below the control level, so the Y33R increase in MT-2 cells is not separable from the comparator by inspection.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 5 read at 420%, all four panels. 5A (293 cells): control 100; WWOX WT dose series ~79, ~59, ~47, ~35; WWOX Y33R dose series ~99, ~107, ~117, ~124. 5B (C8166): control 100; WT ~61, ~54, ~38; Y33R ~117, ~155, ~180 with the top bar's error bar spanning roughly 140-235. 5C (MT-2): control 100; WT ~67, ~46, ~40; Y33R ~95, ~126, ~133 with the top bar's error bar spanning roughly 85-182, i.e. crossing the control level of 100. 5D (293, shRNA): Vec ~97; shRNA #1 ~228, #2 ~203, #3 ~138. No asterisk or other significance mark appears in any panel of Figure 5.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21115974/zh89991065650005.jpg",
+        "anchor": "Figure 5, panels A, B, C and D, bar values and the absence of significance marks, read at 420%",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[22]",
+        "contradicts_needle": "inversely correlated with the knockdown efficiency"
+      },
+      {
+        "proposition": "The statistical apparatus for the whole paper is a two-tailed Student t test between two groups, with no correction for multiplicity declared anywhere despite repeated multi-arm comparisons.",
+        "snippet": "The Student 2-tailed t test was used to assess the significance of difference between 2 groups",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Methods, 'Statistical analysis'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "🔴 THE FIRST LEG OF WHAT BEARS ON CLAIM 023. Y33R retains Tax binding, so for this partner Y33 is not the determinant of binding; the paper generalises to a WW-domain-independent binding activity. TWO LIMITS CARRIED: the confirmatory WW-deletion experiment is 'data not shown', and the generalising sentence also cites reference 42, so the conclusion does not rest on the unshown deletion alone.",
+        "snippet": "Moreover, Tax binding activity of WWOX does not require a functional WW domain, as the Y33R mutant still retains the ability to bind to Tax (Figure 6). In further support of this finding, N-terminal deletion of both WW domains does not affect WWOX binding to Tax (data not shown). These data substantiate a WW domain–independent binding activity of WWOX.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Discussion, paragraph beginning 'Our studies show that the Tax viral oncoprotein is another binding target of WWOX'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figure 6C supports 'binding retained' and cannot support any quantitative equivalence, because the Tax INPUT is visibly weaker in the Y33R lane than in the wild-type lane and the immunoprecipitation is anti-Tax. Less bait was loaded, so the reduced co-precipitated WWOX cannot be attributed to the mutation. The paper does not note this.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 6C read at 850%. IP: anti-Tax, four lanes: WT/-Tax, WT/+Tax, Y33R/-Tax, Y33R/+Tax. IP-IB Myc-WWOX row: lane 1 blank, lane 2 strong, lane 3 blank, lane 4 present but distinctly weaker than lane 2. Input Myc-WWOX row: all four lanes comparably strong. Input Tax row: lane 2 strong, lane 4 visibly weaker than lane 2.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21115974/zh89991065650006.jpg",
+        "anchor": "Figure 6, panel C, IP-IB and input rows compared, read at 850%",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[25]",
+        "qualifies_needle": "WW domain–independent binding activity of WWOX"
+      },
+      {
+        "proposition": "🔴 CORRECTED AFTER A BLIND LOCATOR AUDIT, AND THE CORRECTION IS THE POINT. The authors ASSERT that WWOX does not affect Tax subcellular localisation. This is an AUTHOR ASSERTION RESTING ON UNSHOWN DATA and is NOT a result: the supplemental figure it cites cannot carry it (next entry). It therefore may NOT be used to exclude the relocalisation route of CLAIM 023 - the exclusion is unresolved in this paper, not demonstrated.",
+        "snippet": "Different from its cellular targets, WWOX does not affect Tax subcellular localization (data not shown and supplemental Figure 2).",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Discussion, paragraph beginning 'Our studies show that the Tax viral oncoprotein is another binding target of WWOX'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - supplemental Figure S2A CANNOT support 'WWOX does not affect Tax subcellular localisation'. It shows where the WWOX-Tax COMPLEX is recovered, not where Tax goes: every lane contains Myc-WWOX, so there is no WWOX-negative comparator, and the Input block carries Myc-WWOX, Hsp90 and LaminB but NO Tax input row, so Tax's own distribution is never displayed.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Supplemental Figure S2A read as pixels from the supplement page rendered at 200 dpi. Eight lanes: cytoplasmic (C) lanes 1-4 and nuclear (N) lanes 5-8, each block Tax -,+,-,+ over Myc-WWOX WT,WT,Y33R,Y33R. IP-IB block has two rows, Myc-WWOX and Tax, with bands only in the +Tax lanes 2, 4, 6 and 8. Input block has three rows and they are Myc-WWOX (even across all eight lanes), Hsp90 (strong in the C lanes, faint in the N lanes) and LaminB (absent in C, strong in N). There is no Tax input row anywhere in the panel and no lane lacking Myc-WWOX.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21115974/supplement_page2_200dpi.png",
+        "anchor": "Supplemental Figure S2, panel A, all eight lanes and all five blot rows, read from the 200 dpi render of supplement page 2",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[27]",
+        "contradicts_needle": "WWOX does not affect Tax subcellular localization"
+      },
+      {
+        "proposition": "Binding is explicitly declared insufficient for function: the Y33R mutant binds Tax and still fails to suppress it. Together with the two locators above this is the paper's own separation of binding from functional output for this partner.",
+        "snippet": "These data thus suggested that binding to Tax is not sufficient for WWOX to suppress the oncogenic actions of Tax.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Results, 'WWOX selectively blocks Tax-mediated IKKα recruitment and RelA S536 phosphorylation', first paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The third route this paper supplies, and the one CLAIM 023 does not name: WWOX acts by blocking a third protein's recruitment to a partner, not by binding strength and not by relocalisation.",
+        "snippet": "WWOX specifically blocks Tax-promoted IKKα recruitment to RelA and subsequent IKKα-mediated S536 phosphorylation of RelA",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Discussion, paragraph beginning 'Our studies show that the Tax viral oncoprotein is another binding target of WWOX'",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "The authors' wording is hedged on the mutant's gain-of-function and unhedged on the wild type. The panel supports the WILD-TYPE half as written; it does NOT support the Y33R half, because Tax input is higher in the Y33R lane than in the Tax-only lane, so the 'slight increase' is confounded by inducer dose.",
+        "snippet": "WWOX completely prevented Tax-mediated IKKα recruitment to RelA, whereas the WWOX Y33R mutant actually increased, although slightly, IKKα recruitment.",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Results, 'WWOX selectively blocks Tax-mediated IKKα recruitment and RelA S536 phosphorylation', final paragraph",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - Figure 6H supports the mechanism as stated and disciplines how strongly it may be read. Wild-type WWOX returns IKKa-RelA association to the Tax-negative baseline rather than abolishing it, so 'completely prevented' is correct for the TAX-MEDIATED increment and must not be carried forward as abolition of the interaction. Inputs are controlled: WWOX WT and Y33R are expressed comparably and Tax is not lower in the WWOX lane.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 6H read at 800%. IP anti-IKKa, IP-IB HA-RelA row across six lanes: lane 1 (IgG control) blank; lane 2 (RelA, no Tax) faint but present; lane 3 (RelA + Tax) strong; lane 4 (RelA + Tax + WWOX WT) faint, comparable to lane 2; lane 5 (RelA + Tax + WWOX Y33R) strong, comparable to or marginally above lane 3; lane 6 (no RelA) blank. IKKa IP row even across lanes 2-6. Input rows: HA-RelA even across lanes 1-5; Tax present in lanes 3-5, and lane 3 is VISIBLY WEAKER than lanes 4 and 5 - which cuts both ways and is recorded in both directions: it strengthens the wild-type conclusion in lane 4 (more inducer, less recruitment) and CONFOUNDS the Y33R conclusion in lane 5 (more inducer, more recruitment); Myc-WWOX comparable in lanes 4 and 5.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21115974/zh89991065650006.jpg",
+        "anchor": "Figure 6, panel H, IP-IB and input rows across all six lanes, read at 800%",
+        "panel_text_relation": "panel_qualifies_text",
+        "qualifies": "entries[31]",
+        "qualifies_needle": "completely prevented Tax-mediated IKK"
+      },
+      {
+        "proposition": "🔴 ADDED AFTER A BLIND LOCATOR AUDIT FOUND IT, AND IT IS A HARDER INTERNAL CONTRADICTION THAN THE SECTION HEADING. The paper states that ALL Tax+ p100+/+ mice had tumours by 18 weeks of age, citing Figure 1A - and Figure 1A shows about 41% of them still tumour-free at 18 weeks, reaching 0% only at about 25 weeks.",
+        "snippet": "In agreement with a previous study,30 Tax+ p100+/+ mice started to develop visible tumors on their ears, mouths, noses, legs, and/or tails at the age of 11 weeks, and all the mice had tumors by 18 weeks of age",
+        "surface": "body",
+        "artifact": "files/fulltext/PMID21115974_Fu2011_PMC.html",
+        "anchor": "Results, 'Knockout of p100/p52 prevents tumorigenesis in Tax transgenic mice', first paragraph, opening sentence",
+        "panel_text_relation": "text_only"
+      },
+      {
+        "proposition": "VISUAL ATTESTATION - the Tax+ p100+/+ Kaplan-Meier curve read point by point refutes 'all the mice had tumors by 18 weeks of age'. At 18 weeks roughly 41% of that cohort is still tumour-free; the curve does not reach 0% until about 25 weeks.",
+        "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 1A, the Tax+ p100+/+ series (light filled circles), read at 700%: 10 wk 100%, 11-12 wk ~94%, 13-14 wk ~88%, 15-16 wk ~76.5%, 17 wk ~52.5%, 18 wk ~41%, 19 wk ~35%, 20 wk ~31%, 21-24 wk ~11.7%, 25 wk 0%. The value at the 18-week mark is far above zero and the series reaches zero only at about 25 weeks.",
+        "surface": "figure",
+        "artifact": "files/figures/PMID21115974/zh89991065650001.jpg",
+        "anchor": "Figure 1, panel A, Tax+ p100+/+ series read point by point at 700% magnification",
+        "panel_text_relation": "text_contradicted_by_panel",
+        "contradicts": "entries[33]",
+        "contradicts_needle": "all the mice had tumors by 18 weeks of age"
+      }
+    ]
+  }
+}
