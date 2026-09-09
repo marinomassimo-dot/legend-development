@@ -24,6 +24,14 @@ Paths are relative to the repo root.
 5. Loads the 4 canonical current files (and the meta index if Standard).
 6. Runs the structural LINT:
    `python3 framework/scripts/legend_lint.py .`
+6b. Runs the toolchain preflight:
+   `python3 framework/scripts/tool_preflight.py`
+   Reports, in one line, which external extractors this deployment actually has. It never blocks
+   (a fresh container legitimately lacks optional tools), but a session that will need figure
+   extraction, page adjudication or PDF text must know BEFORE it plans, not mid-reading. On
+   2026-09-09 an actor discovered only after re-acquiring a PDF that `fitz` was absent, which makes
+   `regenerate_adjudications.py` — rule 5e's own remedy for a SUSPECT PDF surface — unrunnable, and
+   leaves every xref-extracted figure artifact in the corpus unrestorable in that environment.
 7. Reports the verdict (4 levels, aligned with CLAUDE.md §LINT Severity; CLI exit code: 0=PASS/WARN, 2=BLOCK_BATCH_COMMIT, 3=BLOCK_SYSTEM):
    - `PASS` / `WARN` → **READY** for everything (deep-dive and commit; WARNs stay in the queue).
    - `BLOCK_BATCH_COMMIT` → **READY-for-DEEP_DIVE, NOT-for-commit**. A DEEP_DIVE is read-only and may proceed; the BATCH_COMMIT stays blocked until the findings are resolved. The CLI prints `GATE: only BATCH_COMMIT blocked`.

@@ -97,6 +97,7 @@ Three facts bind before you have finished reading anything else:
 python3 framework/scripts/legend_lint.py .              # structural LINT over the canonical state
 python3 framework/scripts/fulltext_receipts.py verify   # ledger chain + state-manifest tail anchor
 python3 framework/scripts/growth_anchors.py check       # registry cardinality + both debt ratchets
+python3 framework/scripts/tool_preflight.py             # which external extractors this deployment actually has
 python3 framework/scripts/unread_gold.py --help         # the unread-gold sweep
 python3 scripts/public_release_gate.py                  # the publication gate
 python3 scripts/run_release_regressions.py              # every release suite at once
