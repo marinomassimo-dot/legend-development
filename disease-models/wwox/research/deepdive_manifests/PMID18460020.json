@@ -1,0 +1,542 @@
+{
+ "schema_version": 2,
+ "pmid": "18460020",
+ "doi": "10.1111/j.1349-7006.2008.00841.x",
+ "receipt": "FTR-20260909-18460020-01",
+ "landing": [
+  "disease-models/wwox/research/fulltext_dossiers/PMID18460020.md",
+  "disease-models/wwox/research/commit_candidates/CC-20260909-18460020-01.md"
+ ],
+ "skills_considered": [
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "The tiered cascade was run by hand and terminated at tier 2 (PMC proof-of-work PDF) before the skill was needed. Recorded because the dispatch expected the full cascade: the task contract's acquisition hint declared pmcid null and free_sites [], and BOTH were wrong - NCBI idconv returns PMC11159152 for this PMID. The skill would have been invoked had tier 2 failed."
+  },
+  {
+   "skill": "oa_status_dissent.py",
+   "used": true,
+   "reason": "Run BEFORE accepting any index verdict, per the dispatch. Verdict PREFIX_CONSISTENT: Wiley owns prefix 10.1111 and is still the current publisher, so the publisher-migration failure mode does NOT explain this case. The dissent came from elsewhere - the repository's own 2026-08-06 corpus seed carried identifiers.pmc PMC11159152, and the 2026-08-15 surface census recorded the paper as structured/clean. The tool correctly returned a negative and the acquisition was rescued by a different route; recorded so the tool is not credited with a find it did not make."
+  },
+  {
+   "skill": "legend-locator-audit (R4)",
+   "used": false,
+   "reason": "THRESHOLD CHECK RUN MECHANICALLY, not assumed. All 18 consolidated baseline claims in claim_registry_current.md were enumerated and their titles read. None concerns pancreatic carcinoma, PanIN, SMAD4/TGF-beta signalling, adenoviral WWOX restoration or xenograft tumorigenicity; every one is WWOX-DEE neurobiology. This reading narrows, reverses, corroborates and removes nothing at baseline and justifies no MAJOR bump, so R4 does not trigger. It WOULD have triggered had the reading been allowed to carry the Ad-WWOX restoration result toward CLAIM 002/004 - and it deliberately does not; see the dossier's non-link section."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": true,
+   "reason": "The paper is worth squeezing beyond the template: WWOX AND PanIN returns exactly ONE PubMed record, which is this paper, so the precursor-lesion observation has had no independent corroboration in eighteen years. Appended to the discovery ledger."
+  },
+  {
+   "skill": "legend-hypothesis-forge",
+   "used": false,
+   "reason": "No molecule, dose, exposure window or CNS-relevant endpoint. The intervention is an adenoviral vector delivered ex vivo to a pancreatic carcinoma line; nothing here matures a therapeutic lever for the reference genotype."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule is promoted anywhere by this reading."
+  },
+  {
+   "skill": "legend-proband-priority-matrix",
+   "used": false,
+   "reason": "A single assigned PMID and the last in the lot; reading order is fixed by dispatch and there is nothing to rank."
+  },
+  {
+   "skill": "text_surface_intrusion_check.py",
+   "used": true,
+   "reason": "Run on this manifest's own text locators before they were committed, per the dispatch. It is the tool this actor shipped in wave 1 and it earned its place here: the sentence carrying the caspase MOI-dependence claim is interrupted mid-clause by page furniture, and entries[9]'s snippet is truncated before that intrusion as a direct result."
+  }
+ ],
+ "group_assessment": {
+  "total_publications": 316,
+  "publications_on_gene": 3,
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "weighting": "THE LOT IS THE 'AQEILAN SWEEP' AND THIS IS NOT AN AQEILAN-LAB PAPER. Aqeilan is fourth of six authors; the corresponding author is Semba and the senior author Yokozaki, Division of Pathology, Kobe University. Counts above are Yokozaki H (316 publications, 3 on WWOX), re-derived by PubMed ESearch on 2026-09-09 rather than carried forward - the stale-count debt that this actor's wave-1 self-evaluation raised against itself is closed here. Companion counts, same date: Semba S 140 total / 5 on WWOX; Aqeilan RI 137 total / 65 on WWOX (the repository's carried 137/64 is now re-measured). CONSEQUENCE FOR WEIGHTING, and it splits three ways. (1) The human pathology - the 32-patient cohort, the PanIN series, the IHC grading, the survival analysis - is the Kobe group's own competence and carries first-hand weight. (2) The WWOX-specific molecular reagents are NOT theirs: the adenovirus and both anti-Wwox antibodies come from reference 21, the Ohio State group, i.e. PMID 16223882. (3) NEITHER group is primary for WWOX-DEE: primary for the gene is not primary for the disease, and here not even the gene expertise sits with the first-listed group. Every step that carries a pancreatic observation toward a disease interpretation is therefore weighted down twice."
+ },
+ "field_density": {
+  "queries": [
+   {
+    "query": "WWOX",
+    "count": 693,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND pancrea*",
+    "count": 14,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND SMAD4",
+    "count": 18,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND Smad*",
+    "count": 28,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND PanIN",
+    "count": 1,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND (perineural invasion OR neural invasion)",
+    "count": 2,
+    "source": "PubMed ESearch, 2026-09-09"
+   },
+   {
+    "query": "WWOX AND (epilep* OR encephalopathy)",
+    "count": 118,
+    "source": "PubMed ESearch, 2026-09-09"
+   }
+  ],
+  "note": "The decisive number is WWOX AND PanIN = 1, and the one record IS this paper. The claim that WWOX loss is an EARLY event tracking precursor-lesion grade - the paper's most transferable idea and the one its own abstract leads with - has therefore never been independently reproduced in eighteen years. That is not evidence against it; it is the reason it cannot be leaned on. WWOX AND pancrea* = 14 places the whole pancreatic literature at two percent of the WWOX corpus."
+ },
+ "multihop": {
+  "references_enumerated": 50,
+  "gene_direct_refs_in_source": [
+   "16223882",
+   "15070730",
+   "24871327",
+   "19936220",
+   "17360458",
+   "15131042",
+   "15548692",
+   "11562471",
+   "11719439",
+   "16007205"
+  ],
+  "resolved": [
+   "16223882"
+  ],
+  "queued": [
+   "FT-084 (PMID 18931939 equivalent not applicable); reference 29, Kuroki 2004 Clin Cancer Res 10:2459-65, is the direct antecedent that established PANC-1 as Wwox-negative and is the premise for this paper's cell-line choice - queued, not read"
+  ],
+  "note": "Reference count 50, enumerated from the printed list and independently confirmed by Crossref (reference-count 50). THE LOAD-BEARING HOP IS REFERENCE 21 = PMID 16223882, and it is already read in full by this actor in wave 3 of this same lot, so the dependency could be checked rather than assumed: the Ad-WWOX adenovirus, the immunoblot anti-Wwox and the IHC anti-Wwox all trace to it, and it carries a STANDING EXPRESSION OF CONCERN (PMID 28373548). The boundary runs in BOTH directions and is stated precisely in the dossier: the concern's declared scope is ONE loading-control panel (Fig 1B of that paper), so it does NOT impugn the adenoviral construct or the antibodies, and this paper's reagents are not thereby invalidated. What it does establish is a dependency: were the concern ever to broaden, it would propagate into every figure of this paper."
+ },
+ "corpus_crossquery": {
+  "query": "Does the existing corpus already carry a WWOX-Smad4/TGF-beta node, a pancreatic node, or the reagent provenance running through PMID 16223882 - and does this reading touch any consolidated baseline claim?",
+  "hits": 13,
+  "note": "Thirteen files mention Smad4 and twelve mention pancreas, but none carries a pancreatic WWOX PAPER record: the corpus references are incidental. The reagent question returned the significant hit - reading_state.md records PMID 16223882 at complete_fulltext_read (this actor, wave 3, FTR-20260909-16223882-01) and batch_queue.md carries it flagged EXPRESSION OF CONCERN with the standing instruction 'no canonical promotion until the concern is resolved; readable for audit'. So the reagent dependency of this paper was checkable inside the repository, from a reading made hours earlier in the same lot."
+ },
+ "retraction_check": {
+  "checked": true,
+  "result": "CLEAN. PubMed ESummary for PMID 18460020 on 2026-09-09 returns publication types 'Journal Article', 'Research Support, N.I.H., Extramural', \"Research Support, Non-U.S. Gov't\" and NO CommentsCorrections element of any RefType - no erratum, no expression of concern, no retraction. Crossref registers no update-to, no relation and no component. Note the asymmetry deliberately: this paper is clean, but its principal reagent source PMID 16223882 is not, and a retraction check on one PMID does not see the integrity status of the papers it depends on."
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID18460020_Nakayama2008_PMC.pdf",
+   "sha256": "a345d0b45bc9e2ea5fb2d41c1b9522da8ddce89b6d240d8a9064dde514863156",
+   "kind": "article_binary",
+   "note": "7-page publisher PDF obtained from PMC (PMC11159152) on 2026-09-09 via framework/scripts/pmc_pow_fetch.py, which cleared PMC's proof-of-work interstitial at difficulty 4. NO STRUCTURED SURFACE EXISTS and the absence is recorded rather than implied (rule 5d): NCBI efetch db=pmc returns front matter only and carries the publisher's explicit note 'The publisher of this article does not allow downloading of the full text in XML form' (no <body>, no <sec>); Europe PMC fullTextXML returns 404 and Europe PMC has no record of the article at all; the PMC article HTML page returns a reCAPTCHA interstitial; Wiley Online Library returns HTTP 403 behind Cloudflare."
+  },
+  {
+   "path": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+   "sha256": "acbc24cd9177a57e9a8902ac8baa0ea673063158537505c794a077bb0163a811",
+   "kind": "article_text",
+   "note": "Deterministic extraction with PyMuPDF get_text() over all 7 pages, no layout mode. SCREENED AND CLEAN, verified rather than assumed: deepdive_manifest._refuse_suspect_surface accepts it, zero C0 control characters, and the statistical marks < > and x are present. The absence of '+/-' is honest and not a substitution - the running text contains no P value and no mean+/-SD statement at all, because every statistic in this paper lives in a figure caption or Table 1. The green verdict was itself controlled: the same function refuses a deliberately corrupted string, and the zero-parts call shape that returns a meaningless green was re-confirmed (see framework/scripts/test_suspect_surface_call_shape.py)."
+  },
+  {
+   "path": "files/figures/PMID18460020/fig1a_bars.png",
+   "sha256": "d20b71f203f16582a5604f8a3b4dc83d42a819bb5acc01f55aac2c30096fb4a2",
+   "kind": "figure",
+   "note": "Rendered from the fingerprinted PMC PDF with PyMuPDF at the dpi named in the locator anchor, or, for xref23, extracted as the authentic embedded image stream."
+  },
+  {
+   "path": "files/figures/PMID18460020/fig1a_blot.png",
+   "sha256": "b2a1a8b805c90aa51590ff3af1f32f568b41ce488c888849fbc585d402d4163d",
+   "kind": "figure",
+   "note": "Rendered from the fingerprinted PMC PDF with PyMuPDF at the dpi named in the locator anchor, or, for xref23, extracted as the authentic embedded image stream."
+  },
+  {
+   "path": "files/figures/PMID18460020/fig1c_bars.png",
+   "sha256": "3e6323fea19b4d54b84e497133d4408008ec937942a862126ff4fcf515774f2a",
+   "kind": "figure",
+   "note": "Rendered from the fingerprinted PMC PDF with PyMuPDF at the dpi named in the locator anchor, or, for xref23, extracted as the authentic embedded image stream."
+  },
+  {
+   "path": "files/figures/PMID18460020/fig2A_growth.png",
+   "sha256": "48baee6e2471283e8bd73fad87e320f5d8b1421ee7f5cedfd5d4b0b2013e4958",
+   "kind": "figure",
+   "note": "Rendered from the fingerprinted PMC PDF with PyMuPDF at the dpi named in the locator anchor, or, for xref23, extracted as the authentic embedded image stream."
+  },
+  {
+   "path": "files/figures/PMID18460020/fig2Bb_histology.png",
+   "sha256": "f42ebf51c18c14e15ed814f9933d4c805447c9e69994af027d973575d88fc9af",
+   "kind": "figure",
+   "note": "Rendered from the fingerprinted PMC PDF with PyMuPDF at the dpi named in the locator anchor, or, for xref23, extracted as the authentic embedded image stream."
+  },
+  {
+   "path": "files/figures/PMID18460020/fig2Bc_xenograft.png",
+   "sha256": "6c60ebe7f2765590532b708637c5aaaf18f6114ab2b905aa98cbaf65c53b0ac1",
+   "kind": "figure",
+   "note": "Rendered from the fingerprinted PMC PDF with PyMuPDF at the dpi named in the locator anchor, or, for xref23, extracted as the authentic embedded image stream."
+  },
+  {
+   "path": "files/figures/PMID18460020/fig3b_myc_blot_full.png",
+   "sha256": "9c72f36580067d8b9f6993fc1860cc4c5049dc0e21c229ba97336147323e4915",
+   "kind": "figure",
+   "note": "Rendered from the fingerprinted PMC PDF with PyMuPDF at the dpi named in the locator anchor, or, for xref23, extracted as the authentic embedded image stream."
+  },
+  {
+   "path": "files/figures/PMID18460020/fig3cd_colonies.png",
+   "sha256": "bca02955c2a87d0559b709b699fec14c1f05cb6c12595f765198a284b69d4e0c",
+   "kind": "figure",
+   "note": "Rendered from the fingerprinted PMC PDF with PyMuPDF at the dpi named in the locator anchor, or, for xref23, extracted as the authentic embedded image stream."
+  },
+  {
+   "path": "files/figures/PMID18460020/fig4b_ihc.png",
+   "sha256": "afc00561ccf00cf71c1d75cbfa66754cc963cea70a24fac85ca91caebfa67f7a",
+   "kind": "figure",
+   "note": "Rendered from the fingerprinted PMC PDF with PyMuPDF at the dpi named in the locator anchor, or, for xref23, extracted as the authentic embedded image stream."
+  },
+  {
+   "path": "files/figures/PMID18460020/fig4c_km.png",
+   "sha256": "cff80e46bc004d7e4d7199f8b11a8f052ba9b936d32e8da94f4c3aefcdd2d332",
+   "kind": "figure",
+   "note": "Rendered from the fingerprinted PMC PDF with PyMuPDF at the dpi named in the locator anchor, or, for xref23, extracted as the authentic embedded image stream."
+  },
+  {
+   "path": "files/figures/PMID18460020/fig5b_smad4_freq.png",
+   "sha256": "d0b4ecc94ed44417ed771197a4e48a47fe1c7221fa9b0b98121481b4e8b7d153",
+   "kind": "figure",
+   "note": "Rendered from the fingerprinted PMC PDF with PyMuPDF at the dpi named in the locator anchor, or, for xref23, extracted as the authentic embedded image stream."
+  },
+  {
+   "path": "files/figures/PMID18460020/xref23_83x146.jpeg",
+   "sha256": "92e85fa0676f208766aedbe479fe97e29a179ab9d53092bf6f788e43797a2188",
+   "kind": "figure",
+   "note": "Rendered from the fingerprinted PMC PDF with PyMuPDF at the dpi named in the locator anchor, or, for xref23, extracted as the authentic embedded image stream."
+  }
+ ],
+ "figure_extractions": {
+  "panels_present": "5 numbered main figures comprising 15 discrete panels (1a with an inset blot, 1b, 1c with an inset blot, 2A, 2B a/b/c, 3a, 3b, 3c, 3d, 4a, 4b, 4c, 5a, 5b, 5c) plus Table 1; supplementary Fig. S1 is cited and undistributed.",
+  "panels_inspected": "15 of 15 main-figure panels inspected AS PIXELS at 200-900 dpi from the fingerprinted PDF, plus Table 1 read as text and re-read on the rendered page. 0 panels read as captions only.",
+  "denominator_basis": "Panels as printed in the Cancer Sci 2008 published figures, counted from the rendered PMC PDF pages 3-6.",
+  "denominator_status": "known",
+  "note": "Every quantitative statement in this paper is figure-resident: the running text contains no P value and no dispersion statement anywhere. Reading the images was therefore not a supplement to the reading, it WAS the reading. Where the printed figure is a composite of small rasters (the embedded streams run 71x84 to 542x131), the printed page rendered at high dpi is the better surface and was used; the one exception is Figure 5c, whose authentic 83x146 embedded stream was extracted for densitometry so the measurement is on the deposited bytes rather than on a re-render."
+ },
+ "verbatim_locators": {
+  "source_fulltext_indexed": false,
+  "source_fulltext_indexed_evidence": "FALSE, and the negative is the point. Europe PMC has NO RECORD of this article: search EXT_ID:18460020 resultType=core on 2026-09-09 returns pmcid null, inEPMC N, inPMC N, hasPDF N, isOpenAccess N, with a single fullTextUrl of availability 'Subscription required'; the REST fullTextXML endpoint for PMC11159152 returns 404 and supplementaryFiles returns an errorBean saying the article id is not found. NCBI does hold it - idconv maps PMID 18460020 to PMC11159152 - but efetch db=pmc returns front matter carrying the publisher's explicit refusal, 'The publisher of this article does not allow downloading of the full text in XML form', and the PMC article HTML page answers with a reCAPTCHA interstitial. So NO structured full-text index exposes this article's body, and the quotes in this manifest are verifiable only against the fingerprinted local PDF and its deterministic text extraction. Recorded as false rather than reasoned into true on the strength of the PMCID existing: a PMCID is a record, not an indexed body.",
+  "abstract_anchoring_waived": "WAIVED WITH AN ARGUMENT, AND THE ARGUMENT IS STRUCTURAL RATHER THAN CONVENIENT. Almost every proposition in this manifest is a statement ABOUT what the paper does or does not establish - that a control is declared in a caption and absent from the panel, that a stated test is invalid for the table it is applied to, that a significance mark has no defined threshold, that an arm of an experiment occupies zero pixels, that three prevalence figures are data not shown. An abstract is by construction a statement of conclusions with the controls, the dispersion, the panel content and the negative results removed, so it cannot carry a single one of these propositions; anchoring them to it would attach a sentence that asserts the very claim the locator qualifies. Where the abstract DOES speak - it carries the MOI-dependence sentence, the Y33R colony sentence and the Smad4 association - it speaks for the paper's claim and not for this reading's proposition about that claim, so an abstract_snippet there would be actively misleading rather than merely useless. The evidentiary surfaces are the fingerprinted PDF, its screened-clean deterministic text extraction, and the figure images; external verifiability is honestly recorded as absent in source_fulltext_indexed_evidence above. EXPLICIT SCOPE, per the protocol's own fixture that abstract_anchoring_waived is NOT a figure waiver: this waives abstract anchoring only. It waives nothing about the figure surface, and the twelve figure locators here are visual attestations bound to fingerprinted images that were opened and read as pixels, not captions.",
+  "entries": [
+   {
+    "proposition": "The Ad-WWOX and Ad-GFP adenoviruses used for every in vitro and in vivo result in this paper are not characterised here: they are taken wholesale from reference 21, which is PMID 16223882 (Fabbri 2005, PNAS) - a paper carrying a STANDING EXPRESSION OF CONCERN (PMID 28373548) that this repository already holds under 'no canonical promotion until the concern is resolved'.",
+    "snippet": "Adenoviruses carrying human recombinant wild-type WWOX (Ad-WWOX) and GFP (Ad-GFP) were prepared, amplified, and titrated as described elsewhere.(21)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Materials and Methods > Gene transduction, first sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The anti-Wwox antibody for every immunoblot in the paper also comes from reference 21 / PMID 16223882. Reagent provenance and the concerned paper are therefore the same dependency, reached twice.",
+    "snippet": "Membranes were probed with the following antibodies: anti-Wwox,(21)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Materials and Methods > Immunoblot",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The IHC primary antibody behind Figure 4, Figure 5a and the whole 32-patient Table 1 analysis is the SAME reference-21 antibody. So the human cohort - the part of the paper with the most clinical reach - rests on the same undescribed reagent.",
+    "snippet": "the primary antibodies against Wwox,(21) and Smad4 (Cell Signaling) were applied to sections",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Materials and Methods > Immunohistochemistry",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The xenograft volume formula OMITS the conventional 0.5 coefficient (standard: V = 0.5 x L x W^2). Absolute mm^3 values in Figure 2B(c) are therefore about twice what the same tumours would be assigned under the usual formula, and are not comparable to literature using it. The comparison BETWEEN arms is unaffected.",
+    "snippet": "tumor volumes were calculated using the formula V = (the shortest diameter)2 × (the longest diameter).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Materials and Methods > Cell growth test, colony formation assay and tumorigenicity tests",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The entire in vivo result rests on five mice per group.",
+    "snippet": "five mice per group. Five control mice were injected with the same number of uninfected PANC-1 cells.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Materials and Methods > tumorigenicity tests",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The DECLARED contingency test is chi-square. It is the wrong test for this table: every one of the seven 2x2 contingencies in Table 1 has an expected cell count below 5 (minimum expected ranges 0.66 to 3.06), which violates the chi-square approximation in all seven.",
+    "snippet": "Statistical analysis was conducted using χ2 test to evaluate the relationship between Wwox immunoreactivity and clincopathologic characters.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Materials and Methods > Statistical analysis (the misspelling 'clincopathologic' is the source's own)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The (+) grade is defined so weakly - as few as 5% of tumour cells, weak intensity - that a representative (+) field can be visually indistinguishable from a negative one. Table 1 then COLLAPSES (-) and (+) together, so the entire cohort analysis is really '(++) versus everything else', with (++) numbering only seven patients.",
+    "snippet": "(–), almost no positive cells; (+), 5–50% of tumor cells showed weak immunoreactivity; (++), >50% of tumor cells showed weak immunoreactivity or tumor cells showed intense immunoreactivity.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Materials and Methods > Immunohistochemistry, grading definitions",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The MOI-dependence claim for subG1 accumulation is attributed to Fig 1a,b. Fig 1a carries no error bars, no significance marks and no Ad-GFP bars; Fig 1b is a single-MOI qualitative histogram. So the claim rests on an unreplicated, untested four-point series.",
+    "snippet": "Ad-WWOX led to a MOI-dependent elevation in the number of cells with subG1 DNA contents (Fig. 1a,b).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Results > Restoration of WWOX induces caspase-dependent apoptosis, 1st paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The generality of the effect beyond PANC-1 - the PK-1 positive and the PK-9 negative, which together constitute the paper's only Wwox-status-dependent control - is DATA NOT SHOWN. The PK-9 result is a negative and is disposed of in a parenthesis.",
+    "snippet": "Ad-WWOX infection was less effective in PK-9 (Wwox-positive) cells (data not shown).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Results, 1st paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The MOI-dependence of caspase-3 activation is said to be CONFIRMED by the procaspase immunoblot. That blot (Fig 1c, right) has three lanes - No infection, Ad-GFP, Ad-WWOX - and no MOI axis at all, so it cannot confirm MOI-dependence of anything. NOTE ON QUOTATION: the printed sentence is interrupted mid-clause by page furniture ('1372 doi: ... (c) 2008 Japanese Cancer Association') between 'procaspase-3' and 'and procaspase-8'; this snippet deliberately stops before that intrusion.",
+    "snippet": "Activation of caspase-3 was also MOI-dependent, which was confirmed by detection of reduced levels of procaspase-3",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Results, 1st paragraph - snippet truncated at the page-furniture intrusion, verified with text_surface_intrusion_check.py",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The WW1/Y33 conclusion is drawn only comparatively. The panel supports a stronger and a weaker statement the text does not make: the SDR-deleted mutant RETAINS significant colony suppression, so the SDR domain is not required; and Y33R abolishes suppression even in the SDR-deleted background.",
+    "snippet": "the Y33 mutant Wwox did not lead to inhibition of colony formation; thus, the Y33 mutant Wwox was much less effective than the SDR-deleted mutant in terms of suppressing colony formation (Fig. 3c,d).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Results, 2nd paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Three prevalence figures central to the paper's epigenetic argument - 22% LOH, 20% promoter methylation, 83% exon-1 methylation - are DATA NOT SHOWN. Reference 17 attached here is Iliopoulos 2005, a lung/breast/bladder methodology source, not a pancreatic data source, so the numbers are this paper's own unshown data.",
+    "snippet": "The frequencies of LOH at D16S3029 within the WWOX locus and hypermethylation of the WWOX promoter CpG (cytosine and guanine separated by a phosphate) island were 22% and 20%, respectively",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Results > Reduction of Wwox expression during pancreatic duct carcinogenesis",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The single significant clinicopathological association in the paper. It is one of seven contingency tests with no multiplicity correction (Bonferroni threshold 0.0071; 0.026 does not survive it), and the reported value reproduces Fisher's exact (0.0258) rather than the declared chi-square (0.0107).",
+    "snippet": "with a significant correlation with frequent incidence of lymph node metastasis (P = 0.026; Table 1)",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Results > Reduction of Wwox expression during pancreatic duct carcinogenesis",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The survival claim. It is UNADJUSTED: the paper's own Table 1 shows the (++) group is markedly enriched for node-negative disease (4 of 7 node-negative, versus 3 of 25 in the (- & +) group), and nodal status is the dominant prognostic variable in resected pancreatic cancer. No multivariate analysis is performed anywhere in the paper.",
+    "snippet": "a significant difference in survival rates was detected depending on Wwox level: the absent (–) and low (+) Wwox expression was significantly associated with shorter survival times",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Results, survival paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The authors' own hedge for the Wwox/Smad4 association is 'tended to' - the language of a non-significant trend - yet Figure 5b carries a significance bracket and asterisk over the very comparison.",
+    "snippet": "Loss of Smad4 expression tended to associate with low Wwox levels (Fig. 5a,b).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Results > Wwox restores Smad4 levels in PC cells",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The post-transcriptional mechanism - the paper's principal mechanistic conclusion, repeated in the Abstract and the Discussion - rests ENTIRELY on an unshown negative. The mRNA measurement that would make 'post-transcriptional' more than a hypothesis is data not shown.",
+    "snippet": "No alteration was found at the messenger RNA (mRNA) levels of Smad4 expression (data not shown).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Results > Wwox restores Smad4 levels in PC cells, final sentence",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The Ad-GFP control for the subG1 experiment is declared in the CAPTION and not displayed in the panel: Figure 1a shows Ad-WWOX bars only. A reader who does not open the image would reasonably believe the four bars include a vector control.",
+    "snippet": "Ad-antigreen fluorescent protein (GFP) did not increase the fraction of subG1 DNA content more than 5% (data not shown).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Figure 1 caption, sentence 3",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The caption presents panel (b) as histology OF THE SUBCUTANEOUS TUMOURS, without stating that the treated arm is absent from it.",
+    "snippet": "(b) Histological examination of the s.c. tumors (hematoxylin & eosin (HE). staining).",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Figure 2 caption, panel (b)",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The supplementary figure S1 - the sole evidence for the demethylation-restores-Wwox claim in the Discussion - is hosted at blackwell-synergy.com, a domain retired when Blackwell merged into Wiley Online Library. The article's own pointer to its supplement is dead, and the paper itself notes the link resolves only to the abstract.",
+    "snippet": "This material is available as part of the online article from: http://www.blackwell-synergy.com/doi/abs/10.1111/j.1349-7006.2008.00841.x",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Supplemental material section, final page",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The Discussion states the post-transcriptional mechanism as a suggestion drawn from the unshown mRNA negative. PREMISE: the unmeasured-here claim that Smad4 mRNA is unchanged.",
+    "snippet": "pWWOX transfection increased Smad4 expression at the protein level, but not at the mRNA level, suggesting the Wwox-mediated post-transcriptional regulation of Smad4 levels.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Discussion, Smad4 paragraph",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "Table 1's only significant row. The 2x2 is [[3,4],[22,3]] with a minimum expected cell count of 1.53, so the declared chi-square is invalid; Fisher's exact gives 0.0258, which is what the paper prints.",
+    "snippet": "Lymph node metastasis Negative 7 (22%) 3 (9%) 4 (13%) 0.026 Positive 25 (78%) 22 (69%) 3 (9%)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Table 1, lymph node metastasis rows",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "The header row's own percentages are wrong in BOTH directions: 25/32 is 78.1% (printed 79%) and 7/32 is 21.9% (printed 21%). The counts themselves are internally consistent - every row sums to 32 and the columns sum to 25 and 7 - so the defect is in the derived percentages, not the data.",
+    "snippet": "Total 32 (100%) 25 (79%) 7 (21%)",
+    "surface": "table",
+    "artifact": "files/fulltext/PMID18460020_Nakayama2008_PMC.txt",
+    "anchor": "Table 1, Total row",
+    "panel_text_relation": "text_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "VISUAL ATTESTATION - Figure 1a, read as pixels at 900 dpi. The bar series carries NO error bars and NO significance marks of any kind, and contains no Ad-GFP bars: four bars only (MOI 0 ~4%, MOI 10 ~15%, MOI 25 ~24%, MOI 50 ~32%). The y-axis reads 'Percentage of cells in subG1 phase' where the caption and body say 'subG1 DNA content' - subG1 is a DNA-content region, not a cell-cycle phase.",
+    "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 1a bar series, rendered from the PMC PDF page 3 at 900 dpi.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID18460020/fig1a_bars.png",
+    "anchor": "Figure 1a, page 1372",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "VISUAL ATTESTATION - Figure 1a immunoblot, 700 dpi. The GFP row shows DISTINCT BANDS IN THE Ad-WWOX LANES at 24 h and 48 h, not only in the Ad-GFP lanes. The Methods describe Ad-GFP as 'a non-specific control for gene transfer' and never state that Ad-WWOX also carries GFP, yet they assess Ad-WWOX transduction efficiency by GFP fluorescence - which only works if it does. Whichever is true, the panel shows a fact the Methods do not state. The GFP signal is also markedly unequal between the two viruses at matched time points (Ad-GFP 48 h is a broad strong band; Ad-WWOX 48 h a small sharp one), so the two arms are not transduction-matched.",
+    "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 1a immunoblot, Wwox / GFP / beta-actin rows, six lanes.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID18460020/fig1a_blot.png",
+    "anchor": "Figure 1a immunoblot, page 1372",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "VISUAL ATTESTATION - Figure 1c, 700 dpi. At Ad-WWOX MOI 10 the caspase-3 substrate signal is ~0.36 dOD405, INDISTINGUISHABLE from all four control conditions (~0.34-0.36) and carrying no asterisk - while Figure 1a shows MOI 10 already producing ~15% subG1 against ~4% at MOI 0. subG1 accumulation and caspase-3 activation are therefore DECOUPLED at the lowest effective dose. Caspase dependence is demonstrated only at MOI 25 and 50. Separately, the Ac-DEVD-CHO inhibitor bar at MOI 50 (~0.46) sits ABOVE every control substrate bar, so the inhibitor does not return the signal to baseline.",
+    "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 1c, seven paired bars, grey Ac-DEVD-pNA and black Ac-DEVD-CHO, with the MOI table beneath.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID18460020/fig1c_bars.png",
+    "anchor": "Figure 1c, page 1372",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies": "entries[9]",
+    "qualifies_needle": "Activation of caspase-3 was also MOI-dependent"
+   },
+   {
+    "proposition": "VISUAL ATTESTATION - Figure 2A, 700 dpi. NO error bars on any point of any of the three curves, yet asterisks mark P<0.05 at 72 h and 96 h. The Ad-WWOX curve falls BELOW its own starting value (~1.0 x10^5 at 0 h to ~0.2 x10^5 at 96 h): this is net cell loss, i.e. cytotoxicity, which is a stronger and different statement than the caption's 'growth suppression'. Ad-GFP tracks No infection closely, so the vector control itself behaves. The plotted line styles are also transposed relative to the legend (markers disambiguate).",
+    "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 2A viable-cell growth curves, 0-96 h, three arms.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID18460020/fig2A_growth.png",
+    "anchor": "Figure 2A, page 1373",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "VISUAL ATTESTATION - Figure 2B(b), 900 dpi. The panel contains EXACTLY TWO H&E images, labelled 'Control' and 'Ad-GFP'. THERE IS NO Ad-WWOX HISTOLOGY PANEL: the experimental arm occupies zero pixels. Both displayed panels are control arms, so the figure a reader takes as a treated-versus-untreated histological comparison compares two untreated tumours to each other. This is the honest consequence of panel (c) - no Ad-WWOX tumours formed to section - but the caption does not say so.",
+    "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 2B(b), two stacked haematoxylin-and-eosin photomicrographs with burned-in labels.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID18460020/fig2Bb_histology.png",
+    "anchor": "Figure 2B panel b, page 1373",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies": "entries[17]",
+    "qualifies_needle": "Histological examination of the s.c. tumors"
+   },
+   {
+    "proposition": "VISUAL ATTESTATION - Figure 2B(c), 700 dpi. The Ad-WWOX curve is flat at essentially 0 mm^3 for all seven weeks - no measurable tumours at all, not merely smaller ones - while No infection reaches ~975 and Ad-GFP ~770 mm^3. Asterisks appear only at weeks 6, 6.5 and 7 although the arms visibly separate from about week 4.5-5, so the earliest time of significant suppression cannot be read off the panel. Error bars are present on the two control arms and absent on Ad-WWOX, consistent with all-zero values.",
+    "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 2B(c), mean xenograft volume against time, three arms, n=5 per group.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID18460020/fig2Bc_xenograft.png",
+    "anchor": "Figure 2B panel c, page 1373",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "VISUAL ATTESTATION - Figure 3b, 900 dpi, all four lanes. There is NO LOADING CONTROL on this blot - a single anti-Myc panel, no beta-actin, though the Methods list beta-actin and Figure 1 uses it. The four constructs are visibly NOT equally expressed: pWWOX and pWWOX-Y33R give broad dark bands, both SDR-deletion constructs run lower AND fainter, and pDeltaWWOX-Y33R is fainter than pDeltaWWOX. Because Figure 3d's domain-function conclusion compares colony suppression across exactly these four constructs, an expression difference is an unexcluded alternative explanation for the differences in suppression.",
+    "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 3b, IB: anti-Myc, four lanes, 46 kDa marker.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID18460020/fig3b_myc_blot_full.png",
+    "anchor": "Figure 3b, page 1374",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "VISUAL ATTESTATION - Figure 3d, 700 dpi. Colonies per dish: Mock ~95, pWWOX ~3 (asterisked), pWWOX-Y33R ~100, pDeltaWWOX ~35 (asterisked), pDeltaWWOX-Y33R ~88. Two statements the running text does not make follow directly: the SDR-deletion mutant RETAINS significant suppression (~63% reduction), so the SDR domain is NOT required for colony suppression though it contributes about a third of the full-length effect; and adding Y33R to that SDR-deleted background abolishes the residual suppression, so Y33 is required even without SDR. Error bars are present here, and the Methods specify triplicate plates.",
+    "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 3d, five-bar colony-count quantification with error bars.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID18460020/fig3cd_colonies.png",
+    "anchor": "Figure 3d, page 1374",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "VISUAL ATTESTATION - Figure 4b, 900 dpi. Panel (i), the exemplar the caption calls 'weak' and the burned-in label calls 'Wwox (+)', shows NO VISIBLE BROWN DAB CHROMOGEN in this artifact - it is haematoxylin-blue and visually indistinguishable from the (-) exemplar in panel (ii) - while Figure 4a's 'Normal' duct renders vividly brown in the same rendering of the same PDF. This is consistent with the paper's own grading, in which (+) can mean as few as 5% of cells stained weakly. SEPARATELY: panel (iii) is labelled 'Neural invasion' in the image, but the caption folds it into 'negative Wwox expression' and never mentions neural invasion; perineural invasion appears nowhere in the text, nowhere in Table 1 and is never analysed.",
+    "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 4b, three immunohistochemistry photomicrographs with insets and burned-in labels.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID18460020/fig4b_ihc.png",
+    "anchor": "Figure 4b panels i-iii, page 1374",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "VISUAL ATTESTATION - Figure 4c Kaplan-Meier, 900 dpi. The favourable arm is the Wwox (++) group, which Table 1 fixes at SEVEN patients; its curve plateaus near 0.44 with censoring marks to ~43 months. The log-rank P = 0.024 is printed inside the panel. A seven-patient survival arm, unadjusted for the nodal imbalance the paper's own Table 1 documents, is the whole basis of the outcome claim.",
+    "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 4c, two-arm Kaplan-Meier with printed P value.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID18460020/fig4c_km.png",
+    "anchor": "Figure 4c, page 1374",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   },
+   {
+    "proposition": "VISUAL ATTESTATION - Figure 5b, 800 dpi. Three bars - Wwox (-) at 100%, (+) at ~62.5%, (++) at ~43% - with a bracket and a single asterisk spanning (-) to (++). THE ASTERISK IS NEVER DEFINED: unlike the captions of Figures 1, 2 and 3, the Figure 5 caption contains no '*P < 0.05' statement or any other threshold. No group sizes are printed and there are no error bars. Table 1 fixes (++) at 7, so that bar is 3 of 7 patients; the (-)/(+) split is NOT recoverable, and across the three splits consistent with the printed bar heights the marked comparison ranges from Fisher p = 1.00 to p = 0.003. The reader therefore cannot check the asterisk.",
+    "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 5b, frequency of Smad4 loss by Wwox grade, three bars with a significance bracket.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID18460020/fig5b_smad4_freq.png",
+    "anchor": "Figure 5b, page 1375",
+    "panel_text_relation": "panel_qualifies_text",
+    "found_or_sought": "found",
+    "qualifies": "entries[14]",
+    "qualifies_needle": "tended to associate with low Wwox levels"
+   },
+   {
+    "proposition": "VISUAL ATTESTATION WITH DENSITOMETRY - Figure 5c, measured on the AUTHENTIC embedded 83x146 JPEG stream (xref 23), not on a re-render. Integrated optical density per lane against a per-strip 90th-percentile background: beta-actin No-transfection 1.00 / Mock 1.35 / pWWOX 1.37; Smad4 1.00 / 0.96 / 2.63. THE PAPER'S CLAIM SURVIVES NORMALISATION: Mock and pWWOX are well loading-matched, and Smad4 pWWOX-over-Mock is 2.73x raw and 2.69x after beta-actin correction. What the measurement DOES show is that Smad2/3, the implicit specificity control, is not invariant - 1.42x in Mock and 1.23x in pWWOX after the same correction. The authors report no densitometry and no replicate number for this blot. LIMIT: the source raster is 83x146 and JPEG-compressed, so these ratios are indicative, not publication-grade.",
+    "snippet": "[FIGURE SURFACE - ATTESTATION, NOT A QUOTE] Figure 5c, four-strip immunoblot (Smad4, Smad2/3, Wwox, beta-actin) over three lanes.",
+    "surface": "figure",
+    "artifact": "files/figures/PMID18460020/xref23_83x146.jpeg",
+    "anchor": "Figure 5c, page 1375",
+    "panel_text_relation": "panel_only",
+    "found_or_sought": "found"
+   }
+  ]
+ }
+}
