@@ -1424,7 +1424,35 @@ la stessa forma che oggi, su `FT-050`, ha corretto due mie coppie di contraddizi
 subito costa una riga; scoprirlo dopo costa la lettura due volte.
 **Next action:** recuperare i quattro supplementari, adjudicare S1, ri-registrare a profondità
 completa con `reread_reason: inadequate_prior_coverage`.
-**Current status:** ⬜ aperto.
+
+**Aggiornamento 2026-09-09 (`scientist-b`, wave 3 di `AQEILAN-FT-B-001`) — il debito è PAGATO come
+lettura, NON ancora come receipt.** I quattro supplementari sono stati recuperati (Europe PMC
+`supplementaryFiles`), aperti e letti tutti: `MOESM1` (Sup Fig 1 A–D, quattro immagini ispezionate),
+`MOESM2` (Sup Fig 2, micrografie più il grafico EMF letto a livello di record), `MOESM3` (le legende,
+`.docx`), `MOESM4` (il western blot grezzo, ispezionato e misurato). Sup Fig 1 è adjudicata. La
+lettura è **completa in copertura** — nessuna sezione resta `not_read` — ma la sessione è stata
+terminata da un rate limit **prima** che esistesse il manifest schema-v2, quindi **nessun receipt è
+stato appeso**: lo stato è `ANALYSIS_DONE_RECEIPT_NOT_PERSISTED` e il paper resta
+`partial_fulltext_read` nel ledger. Non è marcato completo in silenzio.
+
+Tutto ciò che serve per chiudere senza rileggere è in
+[[fulltext_dossiers/PMID38499540]] — tabella degli artefatti con i digest, i locator con le loro
+ancore, e § 8 come ricetta meccanica. I 9 locator body preesistenti sono stati ri-verificati
+carattere per carattere contro il nuovo deposito (9 esatti, 0 miss) e le 6 figure sono tornate
+byte-identiche ai digest del manifest precedente, quindi **nessun locator preesistente va rifatto**.
+`references_enumerated` va corretto da 55 a **73**, contato sul deposito.
+
+🔴 **Un blocco non di budget resta, ed è registrato con la sua misura in § 7 del dossier:**
+`deepdive_manifest.py::_artifact_text` non ha un ramo `.pptx`, quindi la frase più consequenziale di
+tutta la lettura — la nota degli autori che dichiara che i t-test sono stati fatti sui *campi* e non
+sui *topi*, depositata nel riquadro note della slide di Sup Fig 2 — **non è oggi trasportabile come
+locator di testo verificabile dalla macchina**. Dichiararla `supplement` fallisce il validatore;
+dichiararla `figure` sarebbe falso, perché è testo. 3 dei 4 supplementari di questo articolo sono
+`.pptx`. La correzione è piccola e specifica ed è scritta lì; non è stata costruita perché una
+modifica al validatore scritta sotto rate limit si scrive i test addosso.
+
+**Current status:** 🟡 **aperto, ma ridotto** — resta solo manifest + receipt (+ il ramo `.pptx`, o
+la dichiarazione del debito su quell'unico locator). Nessun recupero e nessuna rilettura residui.
 
 ---
 
