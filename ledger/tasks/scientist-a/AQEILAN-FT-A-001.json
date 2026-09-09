@@ -65,7 +65,7 @@
    "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
   ]
  },
- "CURRENT_STATE": "WAVE_1_COMPLETE",
+ "CURRENT_STATE": "WAVE_2_IN_PROGRESS",
  "assigned_on": "2026-09-08",
  "acquisition_hints": {
   "33914858": {
@@ -163,21 +163,27 @@
   "output_root": "disease-models/wwox/research/",
   "pre_claim_check": "Annex A.3 rule 3 of scientist_reading_modes.md §2.2 performed: fulltext_receipts.py status queried per PMID before the reading, and ledger/tasks/*/ carries no second open contract naming any PMID in this lot. No PARALLEL_READ_GROUP is declared and none is needed (single_owner).",
   "wave": {
-   "wave": 1,
+   "wave": 2,
    "of_lot": 8,
+   "claimed_at": "2026-09-09T10:05:00Z",
    "pmids_this_wave": [
-    "34268881",
-    "33914858"
+    "33916893",
+    "25331887"
    ],
    "not_opened_this_session": [
-    "33916893",
-    "25331887",
     "15070730",
     "24510053",
     "26499798",
     "31428585"
    ],
-   "note": "Wave 1 dispatched by the orchestrator on 2026-09-09; the remaining six PMIDs of the lot stay assigned to scientist-a but are not opened in this session."
+   "parked_from_wave_1": [
+    "33914858"
+   ],
+   "note": "Wave 2 dispatched to a fresh session with ACTOR_ID scientist-a on 2026-09-09. Wave 1 (34268881 read, 33914858 parked unacquired) is on main. Pre-claim check re-performed: fulltext_receipts.py status re-run per PMID against the ledger at 135 events, and ledger/tasks/*/ carries no second open contract naming 33916893 or 25331887 — scientist-b and scientist-c lots are disjoint. Single-owner scope holds; no PARALLEL_READ_GROUP required.",
+   "M0_gate_result": {
+    "33916893": "Only FTR-20260726-33916893-01, record_kind legacy_reconstruction, every coverage value unknown_legacy, source_locator pointing at the paper registry rather than at any article surface, source_fingerprint null. The article itself has never been opened. reread_reason: first_read, as dispatched. Note the paper is a REVIEW: a secondary source, not primary evidence for the experiments it reports.",
+    "25331887": "Divergence from the dispatch, declared rather than absorbed. The dispatch derived inadequate_prior_coverage from the DEPTH LABEL partial_fulltext_read. The coverage MAP of FTR-20260810-25331887-01 carries no not_read at all: abstract/introduction/methods/results/figures/tables(not_present)/discussion/limitations/references all read or lawfully absent, supplementary unavailable. Under fulltext_read_receipt.md that map is admissible for complete_fulltext_read, so the prior reading is not inadequate in coverage and will not be re-derived. The one genuinely uncovered surface is the one the map itself names: supplementary unavailable. That is the wave-2 objective for this PMID."
+   }
   }
  },
  "WAVE_1_RESULT": {
