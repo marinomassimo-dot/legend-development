@@ -21,6 +21,25 @@ ROOTS = [
     ("DO_NOT_COPY", "cli_state",      Path("/root/.claude.json")),
 ]
 
+# Destination mapping for the root -> desktop handover on this same VPS. The transcript
+# directory name ENCODES the project path, so it is remapped, not merely moved: a session
+# whose directory name does not match the new cwd is not offered by the resume picker.
+NEW_USER_HOME = "/home/desktop"
+DEST_RULES = [
+    ("/root/legend-development",                       f"{NEW_USER_HOME}/legend-development"),
+    ("/root/.claude/projects/-root-legend-development",
+     f"{NEW_USER_HOME}/.claude/projects/-home-desktop-legend-development"),
+    ("/root/.claude",                                  f"{NEW_USER_HOME}/.claude"),
+]
+
+
+def destination(path: str) -> str | None:
+    for src, dst in DEST_RULES:
+        if path == src or path.startswith(src + "/"):
+            return dst + path[len(src):]
+    return None
+
+
 def sha256(p: Path) -> str:
     h = hashlib.sha256()
     with p.open("rb") as fh:
@@ -37,7 +56,9 @@ with OUT.open("w", encoding="utf-8") as out:
         paths = [root] if root.is_file() else sorted(p for p in root.rglob("*") if p.is_file())
         for p in paths:
             size = p.stat().st_size
-            rec = {"class": cls, "group": group, "path": str(p.resolve()), "bytes": size,
+            abs_path = str(p.resolve())
+            rec = {"class": cls, "group": group, "path": abs_path, "bytes": size,
+                   "dest": (destination(abs_path) if cls == "INDISPENSABLE" else None),
                    "sha256": (sha256(p) if cls != "DO_NOT_COPY" else None)}
             out.write(json.dumps(rec) + "\n")
             rows.append(rec)

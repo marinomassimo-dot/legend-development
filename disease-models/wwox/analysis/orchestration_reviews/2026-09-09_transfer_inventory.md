@@ -115,3 +115,66 @@ PY
 
 Zero difformità su 837 voci significa trasferimento completo e integro. Qualunque altro numero
 nomina esattamente i file da ricopiare.
+
+---
+
+## 6 · Ripresa delle trascrizioni — la rinomina non basta, e si vede da cosa
+
+**Da cosa dipende davvero la ripresa.** Due cose, non una:
+
+1. **La directory delle trascrizioni**, il cui nome **codifica il percorso di lavoro**:
+   `/root/.claude/projects/-root-legend-development` ↔ cwd `/root/legend-development`. Il picker
+   `--resume` offre solo le sessioni la cui directory corrisponde alla cwd corrente, quindi sotto
+   l'utente desktop il nome deve diventare `-home-desktop-legend-development`. Il manifest applica
+   questa rimappatura nel campo `dest`: è una **rimappatura**, non uno spostamento.
+2. **Lo stato per-progetto in `~/.claude.json`**, che è indicizzato per **percorso assoluto**. Sotto
+   `projects["/root/legend-development"]` vivono `hasTrustDialogAccepted`, `allowedTools`,
+   `mcpServers`, `enabledMcpjsonServers`. Quel file è in **DO_NOT_COPY** perché contiene anche
+   `userID`, `machineID` e le credenziali di sessione.
+
+**Conseguenza, dichiarata come tale:** copiare le trascrizioni e rinominarne la directory è
+**necessario e non sufficiente**. Lo stato per-progetto non arriva, e non deve arrivare per copia
+integrale.
+
+**Raccomandazione, e il motivo.** L'utente desktop **riaccetta il trust dialog e ri-autorizza gli
+strumenti** invece di ereditare `allowedTools` da `root`. Non è pedanteria: `allowedTools` è una
+decisione di permesso presa da un altro utente, e trapiantarla farebbe agire il nuovo account su
+autorizzazioni che non ha mai dato. Le due sessioni sono `3e1bc608-80c5-4c1c-a5a3-3c4da9b68c75` e
+`d9ba7473-cfd2-4fcc-865b-0b236437dd03`.
+
+### Collaudo — la migrazione delle trascrizioni non è riuscita finché questo non passa
+
+Come utente desktop, dalla nuova directory di progetto:
+
+```bash
+cd /home/desktop/legend-development
+ls ~/.claude/projects/-home-desktop-legend-development/*.jsonl   # 1. i file sono al loro posto
+claude --resume                                                  # 2. il picker le elenca
+claude --resume 3e1bc608-80c5-4c1c-a5a3-3c4da9b68c75             # 3. si apre per id
+```
+
+| Passo | Cosa dimostra | Esito richiesto |
+|---|---|---|
+| 1 | Copia e rimappatura riuscite | due `.jsonl`, byte e hash uguali al manifest |
+| 2 | Il picker **trova** le sessioni dalla nuova cwd | entrambi gli id compaiono |
+| 3 | La sessione **si apre e ha contenuto** | la conversazione carica e mostra la storia dello sweep |
+
+**Il passo 2 è quello che la sola rinomina non garantisce**, ed è il motivo per cui il collaudo
+esiste. Se il picker non le elenca, la causa più probabile è che il nome della directory non
+corrisponde alla cwd — si verifica confrontando `pwd` con il nome codificato, non ipotizzando.
+
+Finché il passo 3 non è passato **l'ambiente originale sotto `root` resta intatto**: è la copia di
+sicurezza, ed è l'unica. Solo dopo un collaudo verde ha senso valutare la dismissione, che comunque
+resta una tua decisione e non una conseguenza automatica del collaudo.
+
+### Un vincolo temporale sulle trascrizioni
+
+La trascrizione di **questa** sessione è in scrittura mentre la sessione è viva:
+`3e1bc608-…jsonl` cambia a ogni turno. Una copia presa ora è corretta fino all'istante della copia e
+**non conterrà la coda**. Due modi leciti, entrambi verificabili con il manifest:
+
+- copiare **dopo** la chiusura di questa sessione, e rigenerare il manifest subito prima; oppure
+- copiare ora e **risincronizzare quel singolo file** alla fine, ricalcolandone l'hash.
+
+Gli altri 142 file di trascrizione e tutte le evidenze sono **quiescenti**: ultima scrittura in
+`files/` alle 18:45, nei plugin alle 20:40, e nessun processo Claude è vivo oltre a questa sessione.
