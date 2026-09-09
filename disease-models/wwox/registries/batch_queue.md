@@ -8,7 +8,7 @@
 
 ## ▶ Start here
 
-**414 records have not been processed.** **232** of them have a free full text and can be worked immediately.
+**414 records have not been processed.** **229** of them have a free full text and can be worked immediately.
 
 | Verdict | Records | What it means |
 |---|---:|---|
@@ -36,7 +36,7 @@ a corrigendum says the record was repaired, a retraction says it should not have
 |---|---|---|---|---|
 | [32606933](https://pubmed.ncbi.nlm.nih.gov/32606933/) | retracted | CORPUS P310 | `disease-models/wwox/registries/literature_tracking_log_current.md`<br>`disease-models/wwox/registries/paper_registry_current.md` | may not support or promote any claim; audit every claim already resting on it; readable for audit only |
 | [26041563](https://pubmed.ncbi.nlm.nih.gov/26041563/) | retracted | CORPUS P303 | `disease-models/wwox/registries/literature_tracking_log_current.md`<br>`disease-models/wwox/registries/paper_registry_current.md`<br>`disease-models/wwox/research/discovery_ledger_current.md` | may not support or promote any claim; audit every claim already resting on it; readable for audit only |
-| [16223882](https://pubmed.ncbi.nlm.nih.gov/16223882/) | concern | tracking log | `disease-models/wwox/registries/literature_tracking_log_current.md`<br>`disease-models/wwox/registries/paper_registry_current.md`<br>`disease-models/wwox/research/full_text_queue_current.md` | no canonical promotion until the concern is resolved; readable for audit |
+| [16223882](https://pubmed.ncbi.nlm.nih.gov/16223882/) | concern | tracking log | `disease-models/wwox/registries/literature_tracking_log_current.md`<br>`disease-models/wwox/registries/paper_registry_current.md`<br>`disease-models/wwox/research/discovery_ledger_current.md`<br>`disease-models/wwox/research/full_text_queue_current.md` | no canonical promotion until the concern is resolved; readable for audit |
 | [23446842](https://pubmed.ncbi.nlm.nih.gov/23446842/) | retracted | tracking log | `disease-models/wwox/registries/literature_tracking_log_current.md`<br>`disease-models/wwox/registries/paper_registry_current.md` | may not support or promote any claim; audit every claim already resting on it; readable for audit only |
 | [12719539](https://pubmed.ncbi.nlm.nih.gov/12719539/) | concern | — | — | no canonical promotion until the concern is resolved; readable for audit |
 | [25447306](https://pubmed.ncbi.nlm.nih.gov/25447306/) | retracted | — | — | may not support or promote any claim; audit every claim already resting on it; readable for audit only |
@@ -81,12 +81,12 @@ time; it does not redistribute or license the article text.
 
 | Status | Records | Share |
 |---|---:|---:|
-| **Not found by identifier** — run the intake gate | 320 | 45% |
-| **Catalogued, never processed** — the reading debt | 157 | 22% |
+| **Not found by identifier** — run the intake gate | 319 | 45% |
+| **Catalogued, never processed** — the reading debt | 156 | 22% |
 | Known to the tracking log only | 145 | 21% |
 | Processed from the abstract | 7 | 1% |
-| Partial full text read | 15 | 2% |
-| Full text read | 62 | 9% |
+| Partial full text read | 13 | 2% |
+| Full text read | 66 | 9% |
 
 ⚠️ This second table combines registry state with the authoritative append-only
 `fulltext_read_receipts.jsonl`. Historical registry-only full-text declarations remain
@@ -240,7 +240,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [22479346](https://pubmed.ncbi.nlm.nih.gov/22479346/) | 2012 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Identification of IGF1, SLC4A4, WWOX, and SFMBT1 as hypertension susceptibility genes in Han Chinese with a genome-wide gene-based association study. |
 | [22071891](https://pubmed.ncbi.nlm.nih.gov/22071891/) | 2012 | ✅ | Case Reports; Journal Article; Research Support, Non-U.S. Gov't | catalogued only | A multi-exon deletion within WWOX is associated with a 46,XY disorder of sex development. |
 | [21892104](https://pubmed.ncbi.nlm.nih.gov/21892104/) | 2011 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Functional and clinical characterization of the putative tumor suppressor WWOX in non-small cell lung cancer. |
-| [21731849](https://pubmed.ncbi.nlm.nih.gov/21731849/) | 2011 | ✅ | Journal Article | catalogued only | Role of the WWOX tumor suppressor gene in bone homeostasis and the pathogenesis of osteosarcoma. |
 | [21685375](https://pubmed.ncbi.nlm.nih.gov/21685375/) | 2011 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | catalogued only | Tumor suppressor genes FHIT and WWOX are deleted in primary effusion lymphoma (PEL) cell lines. |
 | [21115974](https://pubmed.ncbi.nlm.nih.gov/21115974/) | 2011 | ✅ | Journal Article; Research Support, N.I.H., Extramural; Research Support, Non-U.S. Gov't | catalogued only | The tumor suppressor gene WWOX links the canonical and noncanonical NF-κB pathways in HTLV-I Tax-mediated tumorigenesis. |
 | [20535528](https://pubmed.ncbi.nlm.nih.gov/20535528/) | 2011 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | catalogued only | Molecular analysis of WWOX expression correlation with proliferation and apoptosis in glioblastoma multiforme. |
@@ -475,7 +474,6 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [38355659](https://pubmed.ncbi.nlm.nih.gov/38355659/) | 2024 | ✅ | Published Erratum | unmatched | ✎ corrected — Correction: WWOX promotes osteosarcoma development via upregulation of Myc. |
 | [34513711](https://pubmed.ncbi.nlm.nih.gov/34513711/) | 2021 | ✅ | Published Erratum | unmatched | ✎ corrected — Corrigendum: Fragile Gene WWOX Guides TFAP2A/TFAP2C-Dependent Actions Against Tumor Progression in Grade II Bladder Cancer. |
 | [30783266](https://pubmed.ncbi.nlm.nih.gov/30783266/) | 2019 | ✅ | Published Erratum | unmatched | ✎ corrected — Correction: The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature. |
-| [30470736](https://pubmed.ncbi.nlm.nih.gov/30470736/) | 2018 | ✅ | Published Erratum | unmatched | ✎ corrected — Author Correction: WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
 | [28708106](https://pubmed.ncbi.nlm.nih.gov/28708106/) | 2017 | ✅ | Journal Article | unmatched | Evodiamine Exerts an Anti-Hepatocellular Carcinoma Activity through a WWOX-Dependent Pathway. |
 | [24503545](https://pubmed.ncbi.nlm.nih.gov/24503545/) | 2013 | ✅ | Journal Article; Research Support, Non-U.S. Gov't | unmatched | Expression of WW domain-containing oxidoreductase WOX1 in human nervous system tumors. |
 | [42327583](https://pubmed.ncbi.nlm.nih.gov/42327583/) | 2026 | ✅ | Journal Article | unmatched | GALNT14-rs9679162 Genotypes Predict Post-immunotherapy Side Effect and Survival in Patients with Hepatitis B Virus-related Hepatocellular Carcinoma. |
@@ -727,7 +725,7 @@ visible but are separated from receipt-backed completion in `coverage_report.md`
 | [36271927](https://pubmed.ncbi.nlm.nih.gov/36271927/) | 2022 | ✅ | Journal Article; Research Support, Non-U.S. Gov't; Review | screened | WWOX and metabolic regulation in normal and pathological conditions. |
 | [28151481](https://pubmed.ncbi.nlm.nih.gov/28151481/) | 2017 | ✅ | Journal Article; Retracted Publication | screened | 🛑 RETRACTED — Epigenetic regulation of HGF/Met receptor axis is critical for the outgrowth of bone metastasis from breast carcinoma. |
 
-*(showing all 622 outstanding records)*
+*(showing all 620 outstanding records)*
 
 ## Already processed from this seed
 
@@ -740,12 +738,10 @@ for an entirely unprocessed record.
 | [29808465](https://pubmed.ncbi.nlm.nih.gov/29808465/) | 2018 | — | abstract only | PAPER 041 | A novel missense variant in the SDR domain of the WWOX gene leads to complete loss of WWOX protein with early-onset epileptic encephalopathy and severe developmental delay. |
 | [38499540](https://pubmed.ncbi.nlm.nih.gov/38499540/) | 2024 | ✅ | partial full text | receipt FTR-20260810-38499540-01 | Unveiling the relationship between WWOX and BRCA1 in mammary tumorigenicity and in DNA repair pathway selection. |
 | [36828035](https://pubmed.ncbi.nlm.nih.gov/36828035/) | 2023 | ✅ | partial full text | receipt FTR-20260826-36828035-02 | WWOX P47T partial loss-of-function mutation induces epilepsy, progressive neuroinflammation, and cerebellar degeneration in mice phenocopying human SCAR12. |
-| [34268881](https://pubmed.ncbi.nlm.nih.gov/34268881/) | 2021 | ✅ | partial full text | receipt FTR-20260814-34268881-03 | Modeling genetic epileptic encephalopathies using brain organoids. |
+| [34268881](https://pubmed.ncbi.nlm.nih.gov/34268881/) | 2021 | ✅ | partial full text | receipt FTR-20260909-34268881-04 | Modeling genetic epileptic encephalopathies using brain organoids. |
 | [30356099](https://pubmed.ncbi.nlm.nih.gov/30356099/) | 2019 | ✅ | partial full text | receipt FTR-20260811-30356099-01 | ✎ corrected — The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and review of the literature. |
 | [30158849](https://pubmed.ncbi.nlm.nih.gov/30158849/) | 2018 | ✅ | partial full text | receipt FTR-20260811-30158849-01 | WWOX Phosphorylation, Signaling, and Role in Neurodegeneration. |
-| [29724996](https://pubmed.ncbi.nlm.nih.gov/29724996/) | 2018 | ✅ | partial full text | receipt FTR-20260810-29724996-01 | ✎ corrected — WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
 | [24308844](https://pubmed.ncbi.nlm.nih.gov/24308844/) | 2013 | ✅ | partial full text | receipt FTR-20260810-24308844-01 | Molecular origin of the binding of WWOX tumor suppressor to ErbB4 receptor tyrosine kinase. |
-| [20530675](https://pubmed.ncbi.nlm.nih.gov/20530675/) | 2010 | ✅ | partial full text | receipt FTR-20260814-20530675-01 | Frequent attenuation of the WWOX tumor suppressor in osteosarcoma is associated with increased tumorigenicity and aberrant RUNX2 expression. |
 | [16061658](https://pubmed.ncbi.nlm.nih.gov/16061658/) | 2005 | — | partial full text | receipt FTR-20260811-16061658-02 | WW domain-containing proteins, WWOX and YAP, compete for interaction with ErbB-4 and modulate its transcriptional function. |
 | [39416860](https://pubmed.ncbi.nlm.nih.gov/39416860/) | 2024 | ✅ | full text | receipt FTR-20260810-39416860-01 | WWOX-related epileptic encephalopathy caused by a novel mutation in the WWOX gene: a case report. |
 | [38182577](https://pubmed.ncbi.nlm.nih.gov/38182577/) | 2024 | ✅ | full text | receipt FTR-20260810-38182577-02 | ✎ corrected — WWOX promotes osteosarcoma development via upregulation of Myc. |
@@ -762,6 +758,7 @@ for an entirely unprocessed record.
 | [30619736](https://pubmed.ncbi.nlm.nih.gov/30619736/) | 2018 | ✅ | full text | PAPER 032 | Delineating WWOX Protein Interactome by Tandem Affinity Purification-Mass Spectrometry: Identification of Top Interactors and Key Metabolic Pathways Involved. |
 | [30370248](https://pubmed.ncbi.nlm.nih.gov/30370248/) | 2018 | ✅ | full text | PAPER 067 | Modeling WWOX Loss of Function in vivo: What Have We Learned? |
 | [30082886](https://pubmed.ncbi.nlm.nih.gov/30082886/) | 2018 | ✅ | full text | PAPER 066 | Somatic loss of WWOX is associated with TP53 perturbation in basal-like breast cancer. |
+| [29724996](https://pubmed.ncbi.nlm.nih.gov/29724996/) | 2018 | ✅ | full text | receipt FTR-20260909-29724996-01 | ✎ corrected — WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
 | [27550453](https://pubmed.ncbi.nlm.nih.gov/27550453/) | 2016 | ✅ | full text | PAPER 065 | WWOX and p53 Dysregulation Synergize to Drive the Development of Osteosarcoma. |
 | [27495153](https://pubmed.ncbi.nlm.nih.gov/27495153/) | 2016 | ✅ | full text | PAPER 049 | W44X mutation in the WWOX gene causes intractable seizures and developmental delay: a case report. |
 | [26857392](https://pubmed.ncbi.nlm.nih.gov/26857392/) | 2016 | ✅ | full text | PAPER 050 | ✎ corrected — Relevance of Sp Binding Site Polymorphism in WWOX for Treatment Outcome in Pancreatic Cancer. |
@@ -778,12 +775,15 @@ for an entirely unprocessed record.
 | [23370280](https://pubmed.ncbi.nlm.nih.gov/23370280/) | 2013 | ✅ | full text | PAPER 079 | Tumor suppressor WWOX binds to ΔNp63α and sensitizes cancer cells to chemotherapy. |
 | [23254685](https://pubmed.ncbi.nlm.nih.gov/23254685/) | 2013 | ✅ | full text | PAPER 075 | Conditional inactivation of the mouse Wwox tumor suppressor gene recapitulates the null phenotype. |
 | [22634283](https://pubmed.ncbi.nlm.nih.gov/22634283/) | 2012 | ✅ | full text | receipt FTR-20260811-22634283-02 | Biophysical basis of the binding of WWOX tumor suppressor to WBP1 and WBP2 adaptors. |
+| [21731849](https://pubmed.ncbi.nlm.nih.gov/21731849/) | 2011 | ✅ | full text | receipt FTR-20260909-21731849-01 | Role of the WWOX tumor suppressor gene in bone homeostasis and the pathogenesis of osteosarcoma. |
 | [21075834](https://pubmed.ncbi.nlm.nih.gov/21075834/) | 2011 | ✅ | full text | PAPER 071 | Drosophila orthologue of WWOX, the chromosomal fragile site FRA16D tumour suppressor gene, functions in aerobic metabolism and regulates reactive oxygen species. |
+| [20530675](https://pubmed.ncbi.nlm.nih.gov/20530675/) | 2010 | ✅ | full text | receipt FTR-20260909-20530675-01 | Frequent attenuation of the WWOX tumor suppressor in osteosarcoma is associated with increased tumorigenicity and aberrant RUNX2 expression. |
 | [19936220](https://pubmed.ncbi.nlm.nih.gov/19936220/) | 2009 | ✅ | full text | PAPER 057 | Generation and characterization of mice carrying a conditional allele of the Wwox tumor suppressor gene. |
 | [19500159](https://pubmed.ncbi.nlm.nih.gov/19500159/) | 2009 | ✅ | full text | PAPER 058 | A spontaneous mutation of the Wwox gene and audiogenic seizures in rats with lethal dwarfism and epilepsy. |
 | [18487609](https://pubmed.ncbi.nlm.nih.gov/18487609/) | 2008 | ✅ | full text | receipt FTR-20260811-18487609-01 | The WWOX tumor suppressor is essential for postnatal survival and normal bone metabolism. |
 | [17575124](https://pubmed.ncbi.nlm.nih.gov/17575124/) | 2007 | ✅ | full text | PAPER 077 | Inactivation of the Wwox gene accelerates forestomach tumor progression in vivo. |
 | [30361190](https://pubmed.ncbi.nlm.nih.gov/30361190/) | 2018 | — | full text | PAPER 045 | West syndrome, developmental and epileptic encephalopathy, and severe CNS disorder associated with WWOX mutations. |
+| [30470736](https://pubmed.ncbi.nlm.nih.gov/30470736/) | 2018 | ✅ | full text | receipt FTR-20260909-30470736-01 | ✎ corrected — Author Correction: WWOX controls hepatic HIF1α to suppress hepatocyte proliferation and neoplasia. |
 | [39952983](https://pubmed.ncbi.nlm.nih.gov/39952983/) | 2025 | ✅ | partial full text | receipt FTR-20260811-39952983-01 | Genome-wide identification and functional validation of the WW domain containing oxidoreductase gene associated with sleep duration. |
 | [18674750](https://pubmed.ncbi.nlm.nih.gov/18674750/) | 2008 | ✅ | partial full text | receipt FTR-20260811-18674750-01 | WW-domain-containing oxidoreductase is associated with low plasma HDL-C levels. |
 | [15070730](https://pubmed.ncbi.nlm.nih.gov/15070730/) | 2004 | ✅ | partial full text | receipt FTR-20260814-15070730-01 | Functional association between Wwox tumor suppressor protein and p73, a p53 homolog. |
@@ -822,7 +822,7 @@ for an entirely unprocessed record.
 | [17360458](https://pubmed.ncbi.nlm.nih.gov/17360458/) | 2007 | ✅ | full text | PAPER 078 | Targeted deletion of Wwox reveals a tumor suppressor function. |
 | [40875931](https://pubmed.ncbi.nlm.nih.gov/40875931/) | 2025 | — | full text | PAPER 014 | WWOX-Related Developmental and Epileptic Encephalopathy: Expanding the Clinical Spectrum and Deciphering the Genotype-Phenotype. |
 
-*(showing all 84 processed records from the seed)*
+*(showing all 86 processed records from the seed)*
 
 ## How to work one
 
