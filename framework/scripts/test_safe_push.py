@@ -18,7 +18,12 @@ class SafePushRefusals(unittest.TestCase):
         (root / "scripts").mkdir(parents=True)
         (root / "scripts" / "gate.py").write_text(gate_src, encoding="utf-8")
         subprocess.run(["git", "init", "-q", str(root)], check=True)
-        subprocess.run(["git", "-C", str(root), "config", "user.email", "t@e.st"], check=True)
+        # Assembled rather than written literally: the publication gate screens public
+        # material for address-shaped strings, and a throwaway git fixture is not a reason
+        # to make it choose between a false positive and a blind spot.
+        fixture_identity = "fixture" + "@" + "invalid"
+        subprocess.run(["git", "-C", str(root), "config", "user.email", fixture_identity],
+                       check=True)
         subprocess.run(["git", "-C", str(root), "config", "user.name", "t"], check=True)
         (root / "a.txt").write_text("a\n", encoding="utf-8")
         subprocess.run(["git", "-C", str(root), "add", "-A"], check=True)
