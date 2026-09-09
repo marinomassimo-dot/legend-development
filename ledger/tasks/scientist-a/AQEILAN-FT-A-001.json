@@ -65,7 +65,7 @@
    "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
   ]
  },
- "CURRENT_STATE": "ASSIGNED",
+ "CURRENT_STATE": "CLAIMED",
  "assigned_on": "2026-09-08",
  "acquisition_hints": {
   "33914858": {
@@ -143,6 +143,41 @@
     "Europe_PMC",
     "Unpaywall"
    ]
+  }
+ },
+ "TASK_ACK": {
+  "TASK_ID": "AQEILAN-FT-A-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-a",
+  "DECISION": "ACCEPTED",
+  "acked_at": "2026-09-09T08:34:17Z",
+  "note": "Accepted as dispatched on 2026-09-08 and resumed 2026-09-09 under the standing brief disease-models/wwox/analysis/orchestration_reviews/2026-09-08_scientist_brief.md with the three RESUME amendments (session commit wrapper path, attribution line without the '(1M context)' variant, and 2026-09-09 dates in new identifiers). No CHALLENGE raised: the reading mode PRIMARY_EVIDENCE_READ, the single-owner scope and the R4/locator-audit floor are all consistent with roles/scientist.md and framework/protocols/scientist_reading_modes.md."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "AQEILAN-FT-A-001",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-a",
+  "claimed_at": "2026-09-09T08:34:17Z",
+  "durable_pointer": "ledger/tasks/scientist-a/AQEILAN-FT-A-001.json",
+  "output_root": "disease-models/wwox/research/",
+  "pre_claim_check": "Annex A.3 rule 3 of scientist_reading_modes.md §2.2 performed: fulltext_receipts.py status queried per PMID before the reading, and ledger/tasks/*/ carries no second open contract naming any PMID in this lot. No PARALLEL_READ_GROUP is declared and none is needed (single_owner).",
+  "wave": {
+   "wave": 1,
+   "of_lot": 8,
+   "pmids_this_wave": [
+    "34268881",
+    "33914858"
+   ],
+   "not_opened_this_session": [
+    "33916893",
+    "25331887",
+    "15070730",
+    "24510053",
+    "26499798",
+    "31428585"
+   ],
+   "note": "Wave 1 dispatched by the orchestrator on 2026-09-09; the remaining six PMIDs of the lot stay assigned to scientist-a but are not opened in this session."
   }
  }
 }
