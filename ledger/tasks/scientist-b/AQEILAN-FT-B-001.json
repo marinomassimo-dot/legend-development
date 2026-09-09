@@ -65,7 +65,7 @@
    "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
   ]
  },
- "CURRENT_STATE": "ASSIGNED",
+ "CURRENT_STATE": "CLAIMED",
  "assigned_on": "2026-09-08",
  "acquisition_hints": {
   "29724996": {
@@ -149,5 +149,24 @@
     "www.futuremedicine.com"
    ]
   }
+ },
+ "TASK_ACK": {
+  "TASK_ID": "AQEILAN-FT-B-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "DECISION": "ACCEPTED",
+  "ACTOR_ID": "scientist-b",
+  "acked_at": "2026-09-09T08:34:26Z",
+  "reading_mode": "PRIMARY_EVIDENCE_READ",
+  "note": "Resumed 2026-09-09 after the 2026-09-08 dispatch was halted before any reading began. Standing brief disease-models/wwox/analysis/orchestration_reviews/2026-09-08_scientist_brief.md read in full together with everything its section 0 enumerates: state manifest (current_state READY), roles/scientist.md, LEGEND_CORE 21c/21d/21e by name, framework/protocols/fulltext_read_receipt.md in full, epistemic_discipline.md, gold_is_in_the_details.md rules 1-8 and 5b-5e, scientist_reading_modes.md, this contract and the dispatch record 2026-09-08.md. Three resume amendments accepted: session commit wrapper path, attribution line without the (1M context) variant, and 20260909 dates in new identifiers. No PARALLEL_READ_GROUP is declared and none is needed: every PMID in this lot has a single owner."
+ },
+ "TASK_CLAIM": {
+  "TASK_ID": "AQEILAN-FT-B-001",
+  "GENERATION": 1,
+  "ACTOR_ID": "scientist-b",
+  "claimed_at": "2026-09-09T08:34:26Z",
+  "durable_pointer": "ledger/tasks/scientist-b/AQEILAN-FT-B-001.json on main in /root/legend-development",
+  "claim_precondition_checked": "Annex A.3 rule 3 / scientist_reading_modes.md 2.2: receipt ledger queried per PMID at M0 and the task ledger checked for open contracts on the same sources. 29724996 and 30470736 appear in no other actor's lot.",
+  "wave": "wave 1 of 8: 29724996 then 30470736. The remaining six PMIDs of the lot (18674750, 38499540, 27551470, 25238781, 25245215, 20146584) are NOT claimed this session and were not opened; the orchestrator dispatches them as later waves."
  }
 }
