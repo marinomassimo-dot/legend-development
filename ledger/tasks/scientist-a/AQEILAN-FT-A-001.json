@@ -65,7 +65,7 @@
    "disease-models/wwox/research/discovery_ledger_current.md (append, where warranted)"
   ]
  },
- "CURRENT_STATE": "WAVE_4_CLAIMED — last two readable PMIDs of the lot (26499798, 31428585); M0 gate re-run per PMID against the ledger at 145 events: both return an EMPTY LIST, no receipt of any kind, so both are first_read exactly as dispatched. 33914858 stays PARKED (19-tier cascade, needs a human browser); 25331887 and 34268881 stay at partial_fulltext_read on the operator-registered study-level-rollup question and are NOT touched.",
+ "CURRENT_STATE": "WAVE_4_COMPLETE — THE READABLE LOT IS CLOSED. Both wave-4 PMIDs at complete_fulltext_read with R4 satisfied on each. 6 of the 8 assigned PMIDs are now read by this actor (5 complete, 1 partial-by-design); 33914858 remains PARKED after a 19-tier cascade and needs a human browser; 25331887 and 34268881 remain at partial_fulltext_read on the operator-registered study-level-rollup schema question and were NOT touched.",
  "assigned_on": "2026-09-08",
  "acquisition_hints": {
   "33914858": {
@@ -357,5 +357,81 @@
    "CORPUS P206 Identifier: PENDING under CLAIM 023 — reported, not repaired; not a reading's authority",
    "RECEIPT_RATCHET_IMPROVED: unbacked full-text declarations fell 14 -> 13, but no grandfathered ID (PAPER 010-053) corresponds to either of this actor's papers, so the resolution is not attributable to this wave and the baseline was NOT lowered unilaterally"
   ]
+ },
+ "WAVE_4_RESULT": {
+  "closed_at": "2026-09-09T18:55:00Z",
+  "actor": "scientist-a",
+  "26499798": {
+   "status": "COMPLETE",
+   "evidence_depth": "complete_fulltext_read",
+   "receipt": "FTR-20260909-26499798-01",
+   "reread_reason": "first_read",
+   "manifest": "PASS, 0 gaps, 28 locators",
+   "commits": [
+    "9666dd5",
+    "(wikilink repair)"
+   ],
+   "outputs": [
+    "deepdive_manifests/PMID26499798.json",
+    "fulltext_dossiers/PMID26499798.md",
+    "commit_candidates/CC-20260909-26499798-01.md"
+   ],
+   "acquisition": "NO STRUCTURED XML SURFACE EXISTS AND THE ABSENCE IS THE RECORD: Europe PMC fullTextXML 404, supplementaryFiles returns 'not open access', NCBI efetch returns front matter carrying the publisher's own refusal comment. The PMC HTML rendering is the structured surface. FIGURES FETCHED TWICE ON PURPOSE: the PMC CDN blobs render Figure 2B illegibly at 713x398 while the PMC PDF embeds it at 2140x1194, and the wave's principal finding exists only because the second surface was fetched. Both are fingerprinted.",
+   "finding": "The review states its genotype-phenotype rule at ALLELE level while its own Figure 2B records three of the six named variants in COMPOUND-HETEROZYGOUS genotypes (P47R/A16*, W335*/Exon5del-H173*, K297*/Exon1-9del). The correspondence missense-mild / nonsense-severe is clean only on the three homozygous rows. Row vi (P47R) is the ONLY row in the panel not assigned a single phenotype letter: it reads S and W joined by a double-headed arrow the caption never explains. CORROBORATES this actor's wave-2 narrowing of CLAIM 030's P47R limb from an independent source - but NOT an independent patient: both trace to Mignot 2015 (PMID 25411445), which this corpus holds at no depth at all.",
+   "second_finding": "D-01 and DIS-001 gain dating, not a verdict. The same senior author's 2014 review denied any E3 ligase eleven days before the ITCH primary appeared (epub 2014-02-07 vs 2014-02-18), and this 2015 review carries a K63 STABILISING event with ZERO occurrences of 'proteasom' in its prose. The Ack1 arm still has no linkage and no route in any source this corpus has read; PMID 16288044 named again, unread.",
+   "R4": "SATISFIED - two independent blind auditors, 28 triples, zero whole-triple NOT_IN_SOURCE, 8 entries corrected, 2 findings strengthened. THE ERROR CAUGHT WAS AN UNDECLARED PREMISE, NOT A MISQUOTATION: I identified Figure 2A's markers as known phosphorylation sites and the article names exactly one. Auditors disagreed three times; two verdict splits taken as OVERSHOOT, and one MEASUREMENT dispute adjudicated from the pixels by me against one auditor, with the calibration recorded."
+  },
+  "31428585": {
+   "status": "COMPLETE",
+   "evidence_depth": "complete_fulltext_read",
+   "receipt": "FTR-20260909-31428585-01",
+   "receipt_correction": "FTR-20260909-31428585-02",
+   "reread_reason": "first_read",
+   "manifest": "PASS, 0 gaps, 20 locators",
+   "commits": [
+    "a387bf1",
+    "ef02e94",
+    "(dossier audit carry)"
+   ],
+   "outputs": [
+    "deepdive_manifests/PMID31428585.json",
+    "fulltext_dossiers/PMID31428585.md",
+    "commit_candidates/CC-20260909-31428585-01.md"
+   ],
+   "finding": "An editorial with no data of its own carries TWO forward-looking clinical claims. The first - that forced transcription of WWOX lessens seizure symptoms despite mutations - is sourced to an UNPUBLISHED PERSONAL COMMUNICATION with no genotype, n, design, outcome measure or transcript readout, and its population is 'patients with neurodegeneration'. DIS-003 is UNCHANGED: its revival trigger asks for a compound-heterozygous transcript comparison and this statement reports no transcript measurement at all. What would convert it is written into the candidate instead.",
+   "audit_found_an_omission": "BOTH auditors independently reported a SECOND clinical claim that no locator of mine covered - 'blocking the downregulation of WWOX in the middle aged individuals would likely to prevent the development of AD' - which carries NO attribution at all where the first at least names a personal communication. Three locators added; the reading's headline changed from one unsupported claim to two, the weaker being the unsourced one.",
+   "cross_paper": "This source names Tyr33 and Ser14 as WWOX phosphosites with opposite consequences, supplying provenance for two of the four unexplained markers in this wave's other paper - the identification both auditors made me withdraw there. The withdrawal STANDS (it was not in that article); what changed is that the identification now has a citation. The marker at residue 12.3 remains unexplained by either document, and the reference that would settle it (PMID 29310447) has no receipt.",
+   "R4": "SATISFIED - two independent blind auditors, 17 triples, no disagreement between them, zero NOT_IN_SOURCE quotes. ONE FACTUAL ERROR OF MINE, caught by both: ref 1's PMID given as 29581896 where the DEPOSIT'S OWN MARKUP carries 29310447. I ran an external author search and took its first hit while the identifier sat inside the artefact I had open. Because the wrong value was already persisted, it was corrected through a lawful receipt_correction and never by editing the ledger.",
+   "sequencing_decision": "THE READING WAS LANDED BEFORE ITS AUDIT, DELIBERATELY. A session rate limit killed the first two auditors mid-run. Manifest, receipt and dossier were persisted first and NO commit candidate was written until verdicts existed, on the reasoning that a landed reading with no candidate touches no claim. Nothing had to be reconstructed on resume. This is the repair for wave 2's [UNAUDITED] outcome."
+  },
+  "capability_micro_upgrade": {
+   "artifact": "framework/scripts/locator_identifier_provenance.py + test_locator_identifier_provenance.py",
+   "tests": "12/12, mutation-tested in three directions",
+   "self_caught_defects": "TWO, both kept as tests. (1) The tool would have MISSED the error it was built for: a true statement about the ledger ('no receipt here') silenced the check on a different assertion in the same sentence. An identity claim about a citation of the source is now adjudicated by the artefact and cannot be declared away. (2) Its first headline number answered a different question: files/ is gitignored, so with an empty haystack every identifier is absent, and the run reported a corpus-wide provenance crisis that was an evidence-locality fact.",
+   "first_measurement": "80 manifests, 26 measurable, 54 unmeasurable. Over the measurable: 37 IN_ARTEFACT, 4 DECLARED_EXTERNAL, 15 UNDECLARED_EXTERNAL, 16 SOURCE_IDENTITY_UNVERIFIED - offered as a review queue, never as 16 errors."
+  },
+  "self_eval": "disease-models/wwox/research/session_evaluations/2026-09-09_scientist-a_aqeilan_wave4.md - executable gate PASS on all four checks, neither wave PMID in any DECLARED GAP. Graded PARTIAL: the self-imposed target was met (the most attractive finding was checked first and survived two pixel recomputations) and every error came from somewhere else - a fact never doubted at all. Three instances of one failure: an undeclared textbook premise, two counts written from expectation, and a PMID taken from a search while the identifier was in the artefact. One caught by me, two by auditors.",
+  "reported_not_fixed": [
+   "FIVE release-regression suites are red and are NOT mine to clear: coverage_report, batch_queue, pathograph and reading_state are derived-surface DRIFT from new receipts entering the ledger (this wave's dispatch forbids regenerating them while peers hold untracked work); surface_census fails on an evidence file absent from this checkout. The ONE red that was mine - test_link_targets, a wikilink to a registry heading nobody has made - was repaired and is 5/5 green.",
+   "PMID 24550385 is at complete_fulltext_read since 2026-08-10 and HAS NO DOSSIER. Same shape as 15070730 in wave 3. Not my paper; not touched.",
+   "16 SOURCE_IDENTITY_UNVERIFIED rows across the corpus are one command away and no actor has been asked to own them."
+  ],
+  "lot_disposition": {
+   "read_by_this_actor": [
+    "33916893 complete",
+    "15070730 complete",
+    "24510053 complete",
+    "26499798 complete",
+    "31428585 complete",
+    "25331887 partial (supplement debt paid)",
+    "34268881 partial (prior coverage found complete)"
+   ],
+   "parked": [
+    "33914858 - 19-tier cascade exhausted, needs a human browser, NOT retried this wave as dispatched"
+   ],
+   "untouched_by_design": [
+    "25331887 and 34268881 remain partial: there is no receipt field for a study-level rollup and one was NOT manufactured. Operator item."
+   ]
+  }
  }
 }
