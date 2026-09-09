@@ -1,0 +1,154 @@
+{
+ "schema_version": 2,
+ "pmid": "30470736",
+ "doi": "10.1038/s41419-018-1158-9",
+ "receipt": "FTR-20260909-30470736-01",
+ "landing": [
+  "FTR-20260909-30470736-01",
+  "full_text_queue_current"
+ ],
+ "skills_considered": [
+  {
+   "skill": "legend-study-intake-triage",
+   "used": true,
+   "reason": "Ran as the M0 duplicate-work gate: fulltext_receipts.py status --pmid 30470736 returned an empty history, so this is first contact with the document and reread_reason is first_read."
+  },
+  {
+   "skill": "find-fulltext",
+   "used": false,
+   "reason": "Not needed. The Task Contract's acquisition_hints carried PMCID PMC6251905 already resolved, and Europe PMC fullTextXML returned the structured surface on the first request. Invoking the cascade would have been ceremony."
+  },
+  {
+   "skill": "legend-deepdive",
+   "used": false,
+   "reason": "Run inline. The document is a three-sentence notice; delegating it to a sub-agent would cost more than reading it."
+  },
+  {
+   "skill": "legend-discovery",
+   "used": false,
+   "reason": "An erratum carries no biology. There is no biomarker, molecule, pathway or repurposing lead in it, and inventing one would be the failure this skill exists to avoid."
+  },
+  {
+   "skill": "legend-locator-audit",
+   "used": false,
+   "reason": "Review floor checked and not met: this reading narrows, reverses, corroborates and removes nothing in any claim, consolidated baseline or otherwise. Its whole effect is on a PAPER record's integrity field."
+  },
+  {
+   "skill": "legend-safety-triage",
+   "used": false,
+   "reason": "No molecule appears anywhere in this document. An Author Correction about duplicated histology panels proposes no compound, no dose and no route, so the BLOCK-1 druggability gate has nothing to act on."
+  }
+ ],
+ "group_assessment": {
+  "performed": true,
+  "total_publications": 137,
+  "publications_on_gene": 65,
+  "counts_measured": "PubMed esearch re-run 2026-09-09 (not carried from the 2026-08-10 measurement): 'Aqeilan RI[au]' 137, 'Aqeilan RI[au] AND WWOX' 65. Unchanged from 2026-08-10.",
+  "research_type": "experimental_lab",
+  "is_primary_group_for_disease": false,
+  "is_primary_group_for_gene": true,
+  "weighting": "Group weighting is close to irrelevant for an erratum and saying so is the honest assessment. An Author Correction is a self-report: its evidentiary value does not come from the laboratory's standing but from the fact that the journal of record published it. It is weighted as an ADMINISTRATIVE record about the state of another paper, never as evidence about WWOX biology, and it is the corrected article — not this notice — that carries the science.",
+  "research_type_note": "The enum classifies what the GROUP can produce, not what this document is. Aqeilan's laboratory is experimental_lab — it builds the conditional alleles and runs the in vivo work. The document at hand is an editorial self-report and carries none of that evidentiary weight, which is stated in `weighting` rather than smuggled into this field."
+ },
+ "field_density": {
+  "wwox_directed": true,
+  "queries": [
+   {
+    "query": "Aqeilan RI[au] AND WWOX",
+    "route": "PubMed esearch 2026-09-09",
+    "count": 65
+   },
+   {
+    "query": "Aqeilan RI[au]",
+    "route": "PubMed esearch 2026-09-09",
+    "count": 137
+   }
+  ],
+  "note": "Measured for form. The density of the field says nothing about an erratum's reliability; recorded because the schema asks for a measured count with its date and a carried-over number would be a value that ages silently."
+ },
+ "multihop": {
+  "performed": true,
+  "references_enumerated": 0,
+  "note": "Zero, and verified rather than assumed: the deposit contains no ref-list element and no reference is cited anywhere in the notice. The only outbound link an erratum has is to the article it corrects, which is not a bibliographic reference but the object of the document.",
+  "gene_direct_refs_in_source": [],
+  "resolved": [
+   {
+    "ref": "corrected-article",
+    "pmid": "29724996",
+    "why": "The object of the correction, read to complete_fulltext_read in the same wave (FTR-20260909-29724996-01). Reading the erratum WITH the article rather than after it is what let the scope of the duplication be checked against the locator set instead of taken on trust."
+   }
+  ],
+  "queued": []
+ },
+ "corpus_crossquery": {
+  "performed": true,
+  "query": "Does any locator, claim or registry record in this corpus rest on Figure 3a or Figure 3d of PMID 29724996 — the two H&E panels this erratum declares duplicated?",
+  "hits": 0,
+  "finding": "NO. Checked directly against the 38 locators of deepdive_manifests/PMID29724996.json rather than recalled: the manifest's only Figure 3 locator is entries[7], which reads panel F, the AXIN2/MYC/JUN/FOS qPCR bar chart. Its H&E panels A-D carry no locator at all, and CORPUS-STUB-073 records 'Claim links: none'. So no statement anywhere in this repository rests on a corrected panel. That is a fact about which panels this corpus happened to use, NOT a safeguard: nothing in the pipeline checks an erratum's scope against the locator set, and had a locator sat on 3a it would have passed every gate."
+ },
+ "retraction_check": {
+  "performed": true,
+  "at": "2026-09-09",
+  "route": "Europe PMC deposit for PMC6251905 plus the corrected-article notice in PMC5938702",
+  "result": "This record IS the correction notice. It is an ordinary Author Correction (article-type 'correction'), not a retraction and not an expression of concern; the deposit's own status fields read is-retracted no. Per the corpus rule it is annotated and does NOT raise PUBLICATION_INTEGRITY_HOLD. Recorded with the caveat the 2026-08-10 reading already raised and this reading sustains: IMAGE DUPLICATION IN TWO HISTOLOGY PANELS IS NOT A TYPOGRAPHICAL CORRECTION, and the classification should not flatten the distinction.",
+  "hold": false
+ },
+ "source_artifacts": [
+  {
+   "path": "files/fulltext/PMID30470736_AbuRemaileh2018_correction_PMC.xml",
+   "sha256": "faac9f48d27b90c297313cba94c626044ffb3fcf54679863a0b7a946cb78bf99",
+   "kind": "article_text"
+  },
+  {
+   "path": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
+   "sha256": "1561c478a49329bb0d6d8c5bcdcfc7cd6954be729515560b22065bb8dab70494",
+   "kind": "article_text"
+  }
+ ],
+ "verbatim_locators": {
+  "entries": [
+   {
+    "proposition": "What the Author Correction actually corrects, named exactly: image DUPLICATION in two H&E panels of Figure 3 of PMID 29724996. This is the sentence that bounds the integrity event — it names the figure, the panels and the nature of the defect, and nothing wider.",
+    "snippet": "Since the publication of this Article, the authors reported that duplication had mistakenly occurred in Fig. 3a and d—panels that display H&E.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30470736_AbuRemaileh2018_correction_PMC.xml",
+    "anchor": "Correction body, first sentence after 'Correction to:'",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The correction is a REPLACEMENT of the article of record, not an annotation left beside it: the corrected Article is published together with the erratum. This is what licenses treating a PMC deposit fetched after 2018-11-23 as the corrected version rather than the original.",
+    "snippet": "The corrected Article appears online together with this erratum.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30470736_AbuRemaileh2018_correction_PMC.xml",
+    "anchor": "Correction body, second sentence",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "Identity of the corrected article, stated in the correction itself: DOI 10.1038/s41419-018-0510-4, published online 03 May 2018 — i.e. PMID 29724996. Anchored so the erratum-to-article link rests on the erratum's own words rather than on a PubMed metadata field.",
+    "snippet": "Correction to: Cell Death and Disease (2018); 10.1038/s41419-018-0510-4; published online 03 May 2018.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID30470736_AbuRemaileh2018_correction_PMC.xml",
+    "anchor": "Correction body, opening line",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "CROSS-CHECK ON THE READ SURFACE, AND THE REASON THIS ERRATUM WAS WORTH ITS OWN READING. The main-article deposit acquired on 2026-09-09 declares on its own face that it has been corrected, and carries a dated Change history entry reproducing the duplication notice. So the surface behind all 38 locators of PMID 29724996 is verifiably POST-correction — established from the deposit itself, not inherited from an earlier receipt's assertion.",
+    "snippet": "This article has been corrected.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
+    "anchor": "Main article PMC deposit, front matter notice; the dated 'Change history 11/23/2018' entry sits in the same deposit",
+    "panel_text_relation": "text_only"
+   },
+   {
+    "proposition": "The main article's Change history entry, dated, reproducing the same scope: Fig 3A and D, H&E panels. It matches the erratum word for word in substance, so the two records do not disagree about what was wrong.",
+    "snippet": "Since the publication of their article, the authors reported that duplication had mistakenly occurred in Fig 3A and D - H&E panels.",
+    "surface": "body",
+    "artifact": "files/fulltext/PMID29724996_AbuRemaileh2018_PMC.xml",
+    "anchor": "Main article PMC deposit, 'Change history', entry dated 11/23/2018",
+    "panel_text_relation": "text_only"
+   }
+  ],
+  "source_fulltext_indexed": true,
+  "source_fulltext_indexed_evidence": "Europe PMC resultType=core for EXT_ID:30470736, queried 2026-09-09: inEPMC=Y, isOpenAccess=Y, hasTextMinedTerms=Y, pmcid=PMC6251905. Both artifacts named by these locators are full-text indexed in Europe PMC, so every quote here is externally verifiable by a third party without access to this repository."
+ }
+}
