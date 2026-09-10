@@ -19,9 +19,14 @@ prose. Real documents number consecutively, so the rule costs nothing where it m
 
 from __future__ import annotations
 
+import hashlib
 import importlib.util
+import json
+import os
 import pathlib
+import subprocess
 import sys
+import tempfile
 
 _spec = importlib.util.spec_from_file_location(
     "tsic", pathlib.Path(__file__).with_name("text_surface_intrusion_check.py")
@@ -29,6 +34,27 @@ _spec = importlib.util.spec_from_file_location(
 tsic = importlib.util.module_from_spec(_spec)
 _spec.loader.exec_module(tsic)
 find_intrusions = tsic.find_intrusions
+screen = tsic.screen
+
+SCRIPT = pathlib.Path(__file__).with_name("text_surface_intrusion_check.py")
+ROOT = SCRIPT.resolve().parents[2]
+
+#: The artefact of the motivating incident itself: the two-column extraction of PMID 21731849
+#: whose headline sentence swallowed the page number 588. `files/` is gitignored, so this is
+#: present in a working checkout and absent from a fresh clone — and a real-artefact case that
+#: silently passes when the bytes are missing is the defect this whole task is about, one
+#: level up. Hence Skipped, which the harness prints and never counts as a pass.
+REAL_ARTEFACT = ROOT / "files" / "fulltext" / "PMID21731849_DelMare2011_AJCR.txt"
+
+
+class Skipped(Exception):
+    """A case that could not run. Printed as SKIP, never as PASS."""
+
+
+def run_cli(*args: str) -> tuple[int, str]:
+    proc = subprocess.run([sys.executable, str(SCRIPT), *args],
+                          capture_output=True, text=True)
+    return proc.returncode, proc.stdout + proc.stderr
 
 
 # The real case, 2026-09-09, PMID 21731849 pages 586-588, with the consecutive numbering a
@@ -222,6 +248,102 @@ def test_dispersion_is_measured_by_span_and_not_by_gap_between_occurrences() -> 
         "the '|' separator is genuine furniture and must survive the dispersion test"
 
 
+# ----------------------------------------------------------------------------------------
+# The verdict contract (retrospective 9.2), and the CLI itself (9.3).
+#
+# Everything above this line calls `find_intrusions`, which is the SIGNATURE. Nothing above
+# this line ever called `main`, so until 2026-09-10 the argument parsing, the file reading,
+# the exit codes and the reporting of this tool were certified by a suite that never ran them.
+# ----------------------------------------------------------------------------------------
+
+
+def test_an_empty_surface_is_insufficient_data_and_not_a_pass() -> None:
+    """🔴 Before the verdict contract this printed 'OK: no page furniture found'."""
+    verdict = screen("")
+    assert verdict.verdict == "INSUFFICIENT_DATA", verdict
+    assert "zero-length" in verdict.detail, verdict.detail
+
+
+def test_a_path_handed_where_the_surface_belongs_is_insufficient_data() -> None:
+    """🔴 The 2026-09-09 inversion. find_intrusions(path) returns [] — a silent CLEAN."""
+    with tempfile.TemporaryDirectory() as tmp:
+        artefact = pathlib.Path(tmp) / "PMID16223882.txt"
+        artefact.write_text("some text\n", encoding="utf-8")
+        assert find_intrusions(str(artefact)) == [], "the old, uninformative answer"
+        verdict = screen(str(artefact))
+        assert verdict.verdict == "INSUFFICIENT_DATA", verdict
+        assert "always passes" in verdict.detail, verdict.detail
+
+
+def test_a_clean_verdict_carries_the_digest_of_exactly_what_was_screened() -> None:
+    verdict = screen(REAL_CLEAN)
+    assert verdict.verdict == "CLEAN", verdict
+    assert verdict.covers(REAL_CLEAN), verdict
+    assert not verdict.covers(REAL_INTERLEAVED), "a verdict must not cover other bytes"
+    assert verdict.screened["bytes"] == len(REAL_CLEAN.encode("utf-8"))
+
+
+def test_a_refusal_names_the_signature_that_fired() -> None:
+    """'The gate said no' is not a finding; 'the gate said no because X' is."""
+    verdict = screen(REAL_INTERLEAVED)
+    assert verdict.verdict == "REFUSED", verdict
+    assert verdict.signature == "PAGE_FURNITURE_IN_SENTENCE", verdict.signature
+    assert verdict.evidence["count"] == len(find_intrusions(REAL_INTERLEAVED))
+
+
+def test_the_cli_returns_zero_one_and_two_for_the_three_verdicts() -> None:
+    """Drives main() as a gate would. Exit 2 is INSUFFICIENT_DATA and is not a pass."""
+    with tempfile.TemporaryDirectory() as tmp:
+        clean = pathlib.Path(tmp) / "clean.txt"
+        clean.write_text(REAL_CLEAN, encoding="utf-8")
+        dirty = pathlib.Path(tmp) / "dirty.txt"
+        dirty.write_text(REAL_INTERLEAVED, encoding="utf-8")
+        empty = pathlib.Path(tmp) / "empty.txt"
+        empty.write_bytes(b"")
+
+        code, out = run_cli(str(clean))
+        assert code == 0 and "[CLEAN]" in out, (code, out)
+        code, out = run_cli(str(dirty))
+        assert code == 1 and "[REFUSED]" in out, (code, out)
+        code, out = run_cli(str(empty))
+        assert code == 2 and "[INSUFFICIENT_DATA]" in out, (code, out)
+        code, out = run_cli(str(pathlib.Path(tmp) / "absent.txt"))
+        assert code == 2 and "[INSUFFICIENT_DATA]" in out, (code, out)
+
+
+def test_the_cli_json_record_is_the_verdict_record() -> None:
+    with tempfile.TemporaryDirectory() as tmp:
+        dirty = pathlib.Path(tmp) / "dirty.txt"
+        dirty.write_text(REAL_INTERLEAVED, encoding="utf-8")
+        code, out = run_cli(str(dirty), "--json")
+        record = json.loads(out)
+        assert record["verdict"] == "REFUSED", record
+        assert record["screened"]["digest"].startswith("sha256:"), record
+        assert record["signature"] == "PAGE_FURNITURE_IN_SENTENCE", record
+        assert record["intrusions"], "the pre-existing key is retained for old callers"
+        assert code == 1
+
+
+def test_the_real_artefact_of_the_motivating_incident() -> None:
+    """A case drawn from the corpus, not from a fixture — and skipped, loudly, when absent.
+
+    PMID 21731849 is the paper whose headline sentence swallowed the page number 588. The
+    tool must still refuse this surface, and the digest it reports must be the digest of the
+    file on disk, recomputable by anyone with `sha256sum`.
+    """
+    if not REAL_ARTEFACT.exists():
+        raise Skipped(
+            f"real artefact absent: {REAL_ARTEFACT.relative_to(ROOT)} — files/ is gitignored, "
+            "so this case does not run in a fresh clone. It is skipped, never passed")
+    code, out = run_cli(str(REAL_ARTEFACT), "--json")
+    record = json.loads(out)
+    assert code == 1 and record["verdict"] == "REFUSED", record["verdict"]
+    on_disk = hashlib.sha256(REAL_ARTEFACT.read_bytes()).hexdigest()
+    assert record["screened"]["digest"] == "sha256:" + on_disk, (
+        "the digest must be of the artefact's own bytes, recomputable outside this tool")
+    assert record["screened"]["bytes"] == REAL_ARTEFACT.stat().st_size
+
+
 def _run() -> int:
     failures = 0
     for name, function in sorted(globals().items()):
@@ -229,9 +351,17 @@ def _run() -> int:
             try:
                 function()
                 print(f"PASS {name}")
+            except Skipped as exc:
+                print(f"SKIP {name}: {exc}")
             except AssertionError as exc:
                 failures += 1
                 print(f"FAIL {name}: {exc}")
+            except Exception as exc:  # noqa: BLE001 - a crash is a failure, not an abort
+                # A harness that stops at the first non-assertion exception reports nothing
+                # about every case after it, which is the same shape of silence this tool
+                # exists to remove.
+                failures += 1
+                print(f"FAIL {name}: {type(exc).__name__}: {exc}")
     print(f"\n{failures} failure(s)")
     return 1 if failures else 0
 

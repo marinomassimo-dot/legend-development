@@ -40,6 +40,17 @@ import collections
 import json
 import re
 import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from screen_verdict import ScreenVerdict  # noqa: E402
+
+SCREEN = "text_surface_intrusion_check"
+SIGNATURE = "PAGE_FURNITURE_IN_SENTENCE"
+
+#: CLEAN passes, REFUSED is the finding, INSUFFICIENT_DATA is not a pass and must
+#: not be read as one by a caller that only checks for zero.
+EXIT_CODES = {"CLEAN": 0, "REFUSED": 1, "INSUFFICIENT_DATA": 2}
 
 # A line that is nothing but a small integer is page furniture, not prose. Four digits covers
 # journals that number continuously through a volume; more than that and it is likelier data.
@@ -238,47 +249,84 @@ def find_intrusions(text: str) -> list[dict]:
     return findings
 
 
+def screen(text: str) -> ScreenVerdict:
+    """Screen a text surface and return a verdict that names the bytes it screened.
+
+    🔴 This is the function to call, and ``find_intrusions`` is not, unless you are writing a
+    test of the signature itself. ``find_intrusions("")`` returns ``[]`` and
+    ``find_intrusions(path_string)`` also returns ``[]`` — an empty list that a caller reads
+    as CLEAN, on a surface that was never screened. That is the 2026-09-09 defect verbatim,
+    and this module had it too: before this change, running the CLI against a zero-byte file
+    printed *"OK: no page furniture found"*.
+
+    A verdict carries the sha256 of exactly the screened bytes, so a caller can ask
+    ``verdict.covers(my_text)`` instead of trusting a colour.
+    """
+    uninformative = ScreenVerdict.reject_uninformative(
+        SCREEN, text, expected="the extracted text surface")
+    if uninformative is not None:
+        return uninformative
+
+    findings = find_intrusions(text)
+    if findings:
+        return ScreenVerdict.refused(
+            SCREEN, text, signature=SIGNATURE,
+            detail=(f"{len(findings)} place(s) where page furniture sits inside a continuing "
+                    "sentence; a verbatim locator must not be quoted across them"),
+            evidence={"count": len(findings), "intrusions": findings})
+    return ScreenVerdict.clean(
+        SCREEN, text,
+        detail=("no page furniture found inside a sentence. This is not proof the surface is "
+                "faithful — only that this signature is absent"))
+
+
+def screen_file(path) -> ScreenVerdict:
+    """Read ``path`` and screen its content, or say why it could not be screened."""
+    try:
+        with open(path, encoding="utf-8", errors="replace") as handle:
+            text = handle.read()
+    except OSError as exc:
+        return ScreenVerdict.insufficient(
+            SCREEN, missing=f"artifact {path}", detail=str(exc))
+    return screen(text)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description=(
             "Detect page furniture inside a sentence in an extracted text surface. "
-            "Exit 1 when any is found: a verbatim locator must not be quoted across such a span."
+            "Exit 1 when any is found: a verbatim locator must not be quoted across such a "
+            "span. Exit 2 when the surface could not be screened at all — which is never a "
+            "pass."
         )
     )
     parser.add_argument("text_file", help="the declared article_text artifact")
     parser.add_argument("--json", action="store_true", dest="as_json")
     args = parser.parse_args()
 
-    try:
-        with open(args.text_file, encoding="utf-8", errors="replace") as handle:
-            text = handle.read()
-    except OSError as exc:
-        print(f"ERROR: cannot read {args.text_file}: {exc}", file=sys.stderr)
-        return 2
-
-    findings = find_intrusions(text)
+    verdict = screen_file(args.text_file)
 
     if args.as_json:
-        print(json.dumps({"file": args.text_file, "intrusions": findings}, indent=1))
-    else:
-        if not findings:
+        record = verdict.as_dict()
+        record["file"] = args.text_file
+        # Retained for callers that read the old shape; the verdict record is authoritative.
+        record["intrusions"] = verdict.evidence.get("intrusions", [])
+        print(json.dumps(record, indent=1))
+        return EXIT_CODES[verdict.verdict]
+
+    print(verdict.render())
+    if verdict.is_refused:
+        print(
+            "Do NOT quote a locator across these spans; re-extract in reading order "
+            "(pdftotext -nopgbrk, without -layout) or anchor to the rendered page. Never "
+            "hand-correct the surface."
+        )
+        for found in verdict.evidence.get("intrusions", []):
             print(
-                f"OK: no page furniture found inside a sentence in {args.text_file}. "
-                "This is not proof the surface is faithful — only that this signature is absent."
+                f"  line {found['line']}: {found['kind']} {found['intrusion']!r}\n"
+                f"    reads as: ...{found['reconstructed']}..."
             )
-        else:
-            print(
-                f"INTRUSION: {len(findings)} place(s) in {args.text_file} where page furniture "
-                "sits inside a continuing sentence. Do NOT quote a locator across these spans; "
-                "re-extract in reading order (pdftotext -nopgbrk, without -layout) or anchor to "
-                "the rendered page. Never hand-correct the surface."
-            )
-            for found in findings:
-                print(
-                    f"  line {found['line']}: {found['kind']} {found['intrusion']!r}\n"
-                    f"    reads as: ...{found['reconstructed']}..."
-                )
-    return 1 if findings else 0
+    return EXIT_CODES[verdict.verdict]
 
 
 if __name__ == "__main__":
