@@ -83,6 +83,11 @@ class WaveRecord:
     has_defaults: bool
     has_stop_log: bool
     structured: bool
+    # SINGLE_WAVE is not a lesser shape. A task that runs once records the two keys at the
+    # top level of its contract, and the first version of this parser counted only
+    # WAVE_n_RESULT keys - so three actors that complied on 2026-09-10 were reported as
+    # 0 of 4 and did not appear at all. The instrument was wrong and the record was right.
+    shape: str = "WAVE"
 
 
 @dataclass
@@ -176,7 +181,17 @@ def screen(root: Path = ROOT) -> Result:
                 has_stop_log="STOP_LOG" in serialised,
                 structured=True,
             ))
-        if not structured and WAVE_PROSE.search(json.dumps(contract)):
+        if structured:
+            continue
+        top_level = "DEFAULTS_TAKEN" in contract or "STOP_LOG" in contract
+        if top_level:
+            result.waves.append(WaveRecord(
+                contract=relative, wave="(single wave, top level)",
+                has_defaults="DEFAULTS_TAKEN" in contract,
+                has_stop_log="STOP_LOG" in contract,
+                structured=True, shape="SINGLE_WAVE",
+            ))
+        elif WAVE_PROSE.search(json.dumps(contract)):
             result.unstructured_contracts.append(relative)
 
     result.digest = digest.hexdigest()
@@ -214,8 +229,11 @@ def render(result: Result, queue: bool) -> str:
 
     structured = [w for w in result.waves if w.structured]
     both = [w for w in structured if w.has_defaults and w.has_stop_log]
+    single = [w for w in structured if w.shape == "SINGLE_WAVE"]
     lines.append(f"waves carrying DEFAULTS_TAKEN and STOP_LOG: "
-                 f"{len(both)}/{len(structured)}")
+                 f"{len(both)}/{len(structured)}"
+                 + (f"  (of which {len(single)} single-wave contracts recording them at "
+                    f"top level)" if single else ""))
     if result.unstructured_contracts:
         lines.append(
             f"  contracts recording waves in prose rather than WAVE_n_RESULT keys: "

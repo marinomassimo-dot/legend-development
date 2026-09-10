@@ -75,6 +75,41 @@ class AttributionCensus(unittest.TestCase):
         self.assertEqual(3, len(waves))
         self.assertEqual(1, len([w for w in waves if w.has_defaults and w.has_stop_log]))
 
+    def test_a_single_wave_contract_records_the_keys_at_the_top_level(self) -> None:
+        """The instrument's own defect, found by the record on 2026-09-10.
+
+        Three actors complied - single-wave tasks carrying DEFAULTS_TAKEN and STOP_LOG at
+        the top level of the contract - and the first version of this parser counted only
+        WAVE_n_RESULT keys, reported 0 of 4, and did not show them at all. Invisible
+        compliance is worse than visible non-compliance: it teaches the actor that the
+        rule is not read.
+        """
+        (self.tasks / "T.json").write_text(json.dumps({
+            "TASK_ID": "T", "DEFAULTS_TAKEN": [], "STOP_LOG": [],
+        }), encoding="utf-8")
+        waves = tool.screen(self.root).waves
+        self.assertEqual(1, len(waves))
+        self.assertEqual("SINGLE_WAVE", waves[0].shape)
+        self.assertTrue(waves[0].has_defaults and waves[0].has_stop_log)
+
+    def test_a_single_wave_contract_with_one_key_is_not_compliant(self) -> None:
+        (self.tasks / "T.json").write_text(
+            json.dumps({"TASK_ID": "T", "DEFAULTS_TAKEN": []}), encoding="utf-8")
+        waves = tool.screen(self.root).waves
+        self.assertEqual(1, len(waves))
+        self.assertFalse(waves[0].has_stop_log)
+
+    def test_wave_keys_win_over_the_top_level_shape(self) -> None:
+        """A multi-wave contract is measured per wave, not once for the whole task."""
+        (self.tasks / "T.json").write_text(json.dumps({
+            "TASK_ID": "T", "DEFAULTS_TAKEN": [], "STOP_LOG": [],
+            "WAVE_1_RESULT": {"outcome": "closed"},
+        }), encoding="utf-8")
+        waves = tool.screen(self.root).waves
+        self.assertEqual(1, len(waves))
+        self.assertEqual("WAVE", waves[0].shape)
+        self.assertFalse(waves[0].has_defaults)
+
     def test_prose_waves_are_their_own_state_not_a_zero(self) -> None:
         (self.tasks / "T.json").write_text(
             json.dumps({"TASK_CLAIM": {"wave": "wave 3 of the lot"}}), encoding="utf-8")
