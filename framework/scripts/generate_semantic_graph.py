@@ -121,19 +121,31 @@ def note_link(folder: str, name: str) -> str:
     return f"[[{folder}/{name}|{name}]]"
 
 
+def canonical_label(basename: str) -> str:
+    """A reader-facing name for a canonical file the vault does not contain."""
+    return basename.removesuffix("_current").replace("_", " ").strip() or basename
+
+
 def rewrite_registry_links(
     text: str,
     paper_names: dict[str, str],
     claim_names: dict[str, str],
 ) -> str:
-    """Retarget canonical registry links to nodes inside the derived vault."""
+    """Retarget canonical registry links to nodes inside the derived vault.
+
+    Every wikilink in a registry field points into the canonical repository, and the vault
+    is standalone by contract: a link it cannot retarget is rendered as text, never kept.
+    Until 2026-09-10 a link to any file other than the two registries — or a registry link
+    with no ``#`` fragment — was returned unchanged, so the README's own command failed
+    closed on the real registries (``dismissal_ledger_current``, ``full_text_queue_current``,
+    ``discovery_ledger_current``, ``meta_metabolism_current`` all occur there) while the
+    fixture suite, whose fixtures carried none of those, stayed green.
+    """
 
     def replace(match: re.Match[str]) -> str:
         raw = match.group(1)
         target, separator, alias = raw.partition("|")
         basename, fragment_separator, fragment = target.partition("#")
-        if not fragment_separator:
-            return match.group(0)
         if basename == "paper_registry_current":
             identifier = re.search(r"\bPAPER\s+(\d+)\b", fragment)
             names = paper_names
@@ -145,7 +157,13 @@ def rewrite_registry_links(
             prefix = "CLAIM"
             folder = "claims"
         else:
-            return match.group(0)
+            # A canonical file the vault does not carry: keep the words, drop the link.
+            if separator:
+                return alias
+            label = canonical_label(basename)
+            return f"{fragment} ({label})" if fragment_separator else label
+        if not fragment_separator:
+            return alias if separator else canonical_label(basename)
         if not identifier:
             return alias if separator else fragment
         key = f"{int(identifier.group(1)):03d}"
@@ -310,6 +328,7 @@ def generate(
             ],
             block,
         )
+        table = rewrite_registry_links(table, paper_names, claim_names)
         summary = rewrite_registry_links(
             (
             field(block, "Note")
@@ -377,6 +396,7 @@ def generate(
             ],
             block,
         )
+        table = rewrite_registry_links(table, paper_names, claim_names)
         summary = rewrite_registry_links(
             field(block, "Summary"), paper_names, claim_names
         )
