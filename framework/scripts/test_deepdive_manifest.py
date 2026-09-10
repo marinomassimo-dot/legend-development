@@ -1318,6 +1318,196 @@ class AFileCanBeWellFormedAndDeclareTheFalse(unittest.TestCase):
         self.assertFalse([item for item in errors if "symbol fonts unmapped" in item], errors)
 
 
+class PageFurnitureInsideAQuote(unittest.TestCase):
+    """§ 9.5(b): a locator may not be quoted ACROSS page furniture in a derived text surface.
+
+    The document below is the real shape of the 2026-09-09 failure: `pdftotext -layout` on a
+    two-column page put the page number `588` between the two halves of the sentence carrying
+    the headline claim. A quote taken across it verifies — that is what makes it dangerous.
+
+    🔴 Three of these five tests exist to keep the check from becoming a false-positive
+    factory. The wiring is a FILTER over a peer-owned detector, so the detector's counts are
+    not the budget: what must stay at zero is locators refused on documents that contain
+    intrusions the locators do not touch.
+    """
+
+    DOCUMENT = (
+        "WWOX in bone biology and osteosarcoma\n"
+        "\n"
+        "Some earlier prose that ends properly here.\n"
+        "587\n"
+        "\n"
+        "A fresh sentence begins after that page break.\n"
+        "WWOX in bone biology and osteosarcoma\n"
+        "\n"
+        "imaging as a guide for sectioning. Using\n"
+        "this protocol, osteosarcomas are detected in\n"
+        "\n"
+        "588\n"
+        "\n"
+        "100% of the post-natal mice prior to their death.\n"
+        "Analyses by others of other Wwox null rodent\n"
+        "models are broadly consistent with\n"
+        "WWOX in bone biology and osteosarcoma\n"
+        "\n"
+        "589\n"
+        "\n"
+        "this observation in every reported cohort.\n"
+    )
+
+    def _workspace(self, snippet: str, *, kind: str = "article_text",
+                   relative: str = "files/fulltext/paper.txt"):
+        tmp = TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        root = Path(tmp.name)
+        artifact = root / relative
+        artifact.parent.mkdir(parents=True, exist_ok=True)
+        artifact.write_text(self.DOCUMENT, encoding="utf-8")
+        manifest = schema_v2(relative)
+        manifest["source_artifacts"][0]["kind"] = kind
+        manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+            artifact.read_bytes()).hexdigest()
+        manifest["verbatim_locators"]["entries"][0]["snippet"] = snippet
+        return root, manifest
+
+    def _errors(self, snippet: str, **kwargs) -> list[str]:
+        root, manifest = self._workspace(snippet, **kwargs)
+        errors, _ = gate.validate(manifest, root=root, verify_artifacts=True,
+                                  require_current_schema=True)
+        return errors
+
+    def test_the_detector_sees_this_document(self) -> None:
+        """🔴 A red baseline is not a capture: without an intrusion here, all of this is air."""
+        spans = gate.intrusion_spans(self.DOCUMENT)
+        self.assertTrue(spans, "the fixture must actually contain a detected intrusion")
+        self.assertIn("588", [found["intrusion"] for _s, _e, found in spans])
+
+    def test_a_quote_taken_across_the_page_number_is_a_block(self) -> None:
+        errors = self._errors(
+            "this protocol, osteosarcomas are detected in 588 100% of the post-natal mice")
+        self.assertTrue([e for e in errors if "ACROSS page furniture" in e], errors)
+        # The message must carry the evidence, not merely the verdict (§ 2.3: "the gate said
+        # no because X" is a finding; "the gate said no" is not).
+        self.assertTrue([e for e in errors if "'588'" in e and "page_number" in e], errors)
+
+    def test_a_quote_that_stops_before_the_furniture_passes(self) -> None:
+        """The false-positive guard: same document, same 3 intrusions, clean quote."""
+        errors = self._errors(
+            "imaging as a guide for sectioning. Using this protocol, osteosarcomas are "
+            "detected in")
+        self.assertEqual(errors, [])
+
+    def test_a_quote_that_starts_after_the_furniture_passes(self) -> None:
+        errors = self._errors(
+            "100% of the post-natal mice prior to their death. Analyses by others of other "
+            "Wwox null rodent models are broadly consistent with")
+        self.assertEqual(errors, [])
+
+    def test_a_quote_across_a_running_header_is_a_block(self) -> None:
+        """Both furniture classes the detector reports, not only the numeric one."""
+        errors = self._errors(
+            "Wwox null rodent models are broadly consistent with WWOX in bone biology and "
+            "osteosarcoma 589 this observation in every reported cohort.")
+        self.assertTrue([e for e in errors if "ACROSS page furniture" in e], errors)
+
+    # 🔴 An XML deposit whose RAW BYTES carry the same page-number chain the .txt fixture
+    # does. The first version of the out-of-scope test below used a single-line XML, so the
+    # detector found nothing in it and the test passed whether or not the scope guard
+    # existed — it survived the mutant that deletes the guard entirely. A structured surface
+    # is out of scope because it is not PDF-derived, and asserting that requires a fixture in
+    # which an unscoped screen WOULD fire.
+    STRUCTURED_DOCUMENT = (
+        "<article><body>\n"
+        "<p>Some earlier prose that ends properly here.\n"
+        "587\n"
+        "A fresh sentence begins after that page break.</p>\n"
+        "<p>this protocol, osteosarcomas are detected in\n"
+        "588\n"
+        "100% of the post-natal mice prior to their death.</p>\n"
+        "<p>models are broadly consistent with\n"
+        "589\n"
+        "this observation in every reported cohort.</p>\n"
+        "</body></article>\n"
+    )
+
+    def test_a_structured_surface_is_out_of_scope(self) -> None:
+        """An XML deposit is not PDF-derived; screening it would invent a hazard."""
+        self.assertTrue(
+            gate.intrusion_spans(self.STRUCTURED_DOCUMENT),
+            "the fixture must be one an UNSCOPED screen would fire on, or this proves nothing")
+        tmp = TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        root = Path(tmp.name)
+        relative = "files/fulltext/paper.xml"
+        artifact = root / relative
+        artifact.parent.mkdir(parents=True)
+        artifact.write_text(self.STRUCTURED_DOCUMENT, encoding="utf-8")
+        manifest = schema_v2(relative)
+        manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+            artifact.read_bytes()).hexdigest()
+        manifest["verbatim_locators"]["entries"][0]["snippet"] = (
+            "this protocol, osteosarcomas are detected in 588 100% of the post-natal mice")
+        errors, _ = gate.validate(manifest, root=root, verify_artifacts=True,
+                                  require_current_schema=True)
+        self.assertEqual(errors, [])
+
+    def test_a_supplement_text_surface_is_in_scope(self) -> None:
+        """The measured widening beyond § 9.5(b)'s letter, asserted so it cannot regress."""
+        errors = self._errors(
+            "this protocol, osteosarcomas are detected in 588 100% of the post-natal mice",
+            kind="supplement_text")
+        self.assertTrue([e for e in errors if "ACROSS page furniture" in e], errors)
+
+    def test_the_real_pmid_21731849_sentence_blocks_and_its_neighbours_do_not(self) -> None:
+        """The production case, on the production bytes, when this checkout has them."""
+        surface = ROOT / "files/fulltext/PMID21731849_DelMare2011_AJCR.txt"
+        if not surface.is_file():  # files/ is gitignored by design
+            self.skipTest("PMID 21731849 article text absent from this checkout")
+        text = surface.read_text(encoding="utf-8")
+        spans = gate.intrusion_spans(text)
+        self.assertEqual(len(spans), 13, "the tuned detector baseline moved")
+        self.assertIsNotNone(gate.snippet_spans_intrusion(
+            "Using this protocol, osteosarcomas are detected in 588 100% of the post-natal "
+            "mice prior to their death.", text, spans))
+        for clean in (
+            "imaging as a guide for sectioning [23]. Using this protocol, osteosarcomas "
+            "are detected in",
+            "100% of the post-natal mice prior to their death. Analyses by others of other "
+            "Wwox null rodent",
+        ):
+            self.assertIsNone(gate.snippet_spans_intrusion(clean, text, spans), clean)
+
+    def test_every_landed_manifest_still_passes_the_screen(self) -> None:
+        """The false-positive budget itself: 0 locators refused across the whole corpus."""
+        directory = ROOT / "disease-models/wwox/research/deepdive_manifests"
+        if not directory.is_dir():  # pragma: no cover
+            self.skipTest("no manifests in this workspace")
+        refused = []
+        for path in sorted(directory.glob("PMID*.json")):
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            declared = {a.get("path"): a for a in (manifest.get("source_artifacts") or [])}
+            for relative, meta in declared.items():
+                if meta.get("kind") not in gate.DERIVED_TEXT_KINDS:
+                    continue
+                if not str(relative).lower().endswith(".txt"):
+                    continue
+                surface = ROOT / str(relative)
+                if not surface.is_file():
+                    continue
+                text = surface.read_text(encoding="utf-8", errors="replace")
+                spans = gate.intrusion_spans(text)
+                entries = (manifest.get("verbatim_locators") or {}).get("entries") or []
+                for index, entry in enumerate(entries):
+                    named = entry.get("artifact")
+                    named = [named] if isinstance(named, str) else (named or [])
+                    if relative not in named:
+                        continue
+                    if gate.snippet_spans_intrusion(
+                            str(entry.get("snippet", "")), text, spans):
+                        refused.append((path.name, index, relative))
+        self.assertEqual(refused, [], "the wiring added a false positive to the corpus")
+
+
 class QueueIdentifiersAreCrossChecked(unittest.TestCase):
     """§ 9.5(a): a queued hop may not point at another paper's queue entry.
 

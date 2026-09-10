@@ -44,6 +44,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import corpus_firewall as firewall  # noqa: E402
 import manifest_queue_id_crosscheck as queue_ids  # noqa: E402
+import text_surface_intrusion_check as intrusion_check  # noqa: E402
 
 MANIFEST_DIR = "disease-models/{disease}/research/deepdive_manifests"
 
@@ -139,6 +140,10 @@ COUPLED_RELATIONS = {
 POINTER_FIELDS = {spec[0] for spec in COUPLED_RELATIONS.values()}
 NEEDLE_FIELDS = {spec[1] for spec in COUPLED_RELATIONS.values()}
 ARTIFACT_KINDS = {"article_binary", "article_text", "supplement_text", "figure", "table"}
+# The kinds that can be a text surface DERIVED from a PDF, and therefore carry extraction
+# damage into a quote. Shared by the font-encoding screen and the page-furniture screen so
+# the two cannot drift apart over which surfaces they consider derived.
+DERIVED_TEXT_KINDS = {"article_text", "supplement_text"}
 SHA256_RE = re.compile(r"[a-f0-9]{64}")
 # An elided quote is verbatim in each half and not verbatim as a whole. LEGEND reads it fine;
 # a validator doing exact substring matching against a cached source rejects it.
@@ -785,6 +790,110 @@ def _artifact_text(path: Path, kind: str) -> tuple[str, str]:
     return "", ""
 
 
+# 🔴 § 9.5(b). `text_surface_intrusion_check.py` was written on 2026-09-09 because
+# `pdftotext -layout` on a two-column article injected the page number `588` into the middle
+# of the sentence carrying the headline claim. A locator quoted across that point verifies
+# against the declared artifact and PASSES, while matching a character sequence no author
+# ever wrote. It was caught by comparing against the rendered page — "a human act that does
+# not scale" — and it stayed a command run by hand through three more waves, which means the
+# defect was caught only when someone remembered to run it.
+#
+# It is peer-owned and is IMPORTED here, never edited: the detector's own false-positive
+# budget was tuned in production on two papers and the numbers must not move.
+#
+# WHAT THIS WIRING ADDS is a filter, not a detector. An intrusion in a document is not by
+# itself a reason to refuse a manifest — every one of the 14 on PMID 18460020 is harmless to
+# a locator that does not quote across it. What is refused is the intersection: a locator
+# whose snippet SPANS a detected intrusion. That is the only configuration in which the
+# hazard can reach a canonical claim.
+#
+# WHY THE SURFACE IS SCOPED TO A `.txt` OF A DERIVED TEXT KIND. `_artifact_text` refuses
+# `.pdf` for a text kind, so a PDF can never be a text surface itself; a derived `.txt` is the
+# one way PDF extraction damage can carry a quote. The predicate is the same one the
+# font-encoding screen above already uses for "a derived text surface", reused rather than
+# re-invented. XML and HTML deposits are structured surfaces and are not PDF-derived, so they
+# are out of scope by construction.
+#
+# 🔴 § 9.5(b) names `article_text`; this covers `supplement_text` too, and that widening was
+# MEASURED rather than assumed. A supplement extracted with `-layout` carries the identical
+# hazard, and across the corpus the five present `supplement_text` `.txt` surfaces hold zero
+# detected intrusions, so the widening adds zero false positives to the budget below. Naming
+# only `article_text` would have left the same defect reachable through the artefact kind
+# that PMID 20530675's own supplement happens NOT to use.
+
+
+def _alnum_offsets(text: str) -> tuple[str, list[int]]:
+    """Alphanumeric key of `text` plus the source offset of each kept character.
+
+    Deliberately NOT `_normalise_text` first: that collapses newlines, and this needs the
+    raw offsets so a span can be compared with the LINE the intrusion sits on. It mirrors
+    `_fold_with_offsets` in every other respect, case included.
+    """
+    kept: list[str] = []
+    offsets: list[int] = []
+    for index, character in enumerate(text):
+        if character.isalnum():
+            kept.append(character)
+            offsets.append(index)
+    return "".join(kept), offsets
+
+
+def intrusion_spans(text: str) -> list[tuple[int, int, dict]]:
+    """`(start, end, finding)` character span of every page-furniture line found inside a
+    sentence. The findings are the peer detector's, unmodified and uncounted-over."""
+    lines = text.split("\n")
+    starts: list[int] = [0]
+    for line in lines[:-1]:
+        starts.append(starts[-1] + len(line) + 1)
+    spans: list[tuple[int, int, dict]] = []
+    for found in intrusion_check.find_intrusions(text):
+        number = found.get("line")
+        if isinstance(number, int) and 1 <= number <= len(lines):
+            start = starts[number - 1]
+            spans.append((start, start + len(lines[number - 1]), found))
+    return spans
+
+
+def snippet_spans_intrusion(
+    snippet: str, text: str, spans: list[tuple[int, int, dict]]
+) -> dict | None:
+    """The finding a quote is taken ACROSS, or None.
+
+    🔴 EVERY occurrence must be damaged, not merely the first. `_quote_matches` documents
+    that `find` takes the first occurrence and that refusing on it is the safe direction
+    there; here the safe direction is the opposite one, because this decides whether to add
+    a BLOCK. If the same word sequence occurs anywhere in the document without an intrusion
+    inside it, the reader could have quoted that occurrence and this must not refuse them.
+    In practice a damaged quote carries the furniture text itself and matches nowhere clean.
+
+    Declared limit, in the direction that costs a miss rather than a false refusal: the fold
+    here is over the raw bytes, while `_quote_matches` folds NFKC-normalised text. A snippet
+    whose characters differ from the artifact's only under NFKC is not located, and nothing
+    is reported for it.
+    """
+    if not spans:
+        return None
+    snippet_key, _snippet_offsets = _alnum_offsets(snippet)
+    text_key, text_offsets = _alnum_offsets(text)
+    if not snippet_key:
+        return None
+    position = text_key.find(snippet_key)
+    if position < 0:
+        return None
+    crossed: dict | None = None
+    while position >= 0:
+        start = text_offsets[position]
+        end = text_offsets[position + len(snippet_key) - 1] + 1
+        here = [found for (line_start, line_end, found) in spans
+                if start < line_start and end > line_end]
+        if not here:
+            # A clean occurrence of these words exists. The reader is not refused.
+            return None
+        crossed = crossed or here[0]
+        position = text_key.find(snippet_key, position + 1)
+    return crossed
+
+
 def _pointer_needle_errors(
     entry: dict, entries: list, target: int, position: int, relation: str
 ) -> list[str]:
@@ -1105,6 +1214,8 @@ def validate(
 
     artifacts: dict[str, dict[str, str]] = {}
     text_cache: dict[str, tuple[str, str]] = {}
+    # One detector run per derived text surface, however many locators quote it.
+    intrusion_cache: dict[str, list[tuple[int, int, dict]]] = {}
     if schema_version >= 2:
         declared_artifacts = manifest.get("source_artifacts")
         if not isinstance(declared_artifacts, list) or not declared_artifacts:
@@ -1164,7 +1275,7 @@ def validate(
         # refused — refused, never normalised, exactly like the C0 and printable screens.
         if schema_version >= 2 and verify_artifacts and root is not None:
             derived_text = [path for path, meta in artifacts.items()
-                            if meta.get("kind") in {"article_text", "supplement_text"}
+                            if meta.get("kind") in DERIVED_TEXT_KINDS
                             and path.lower().endswith(".txt")]
             if derived_text:
                 for path_value, meta in artifacts.items():
@@ -1351,6 +1462,7 @@ def validate(
                     and surface in TEXT_SURFACES and snippet and artifact_paths and not unknown
                 ):
                     matched = False
+                    matched_path: str | None = None
                     verification_failures: list[str] = []
                     for artifact_path in artifact_paths:
                         metadata = artifacts[artifact_path]
@@ -1365,6 +1477,7 @@ def validate(
                             continue
                         matched, mode = _quote_matches(snippet, body_text)
                         if matched:
+                            matched_path = artifact_path
                             break
                         # The abstract probe runs whatever the body verdict was. It is
                         # diagnostic, not permissive — it never sets `matched` — and skipping
@@ -1388,6 +1501,37 @@ def validate(
                         errors.append(
                             f"verbatim_locators.entries[{position}].snippet: not verified in "
                             f"the declared {surface} artifact ({detail})")
+                    elif (
+                        matched_path is not None
+                        and artifacts[matched_path].get("kind") in DERIVED_TEXT_KINDS
+                        and matched_path.lower().endswith(".txt")
+                    ):
+                        # Verified — and verification is exactly what makes this dangerous.
+                        # The quote matched the artifact because the artifact contains the
+                        # page furniture; the PAGE does not. See § 9.5(b) above.
+                        try:
+                            raw_surface = _safe_repo_path(
+                                root, matched_path).read_text(encoding="utf-8")
+                        except (OSError, ValueError, UnicodeDecodeError):
+                            raw_surface = None
+                        if raw_surface is not None:
+                            if matched_path not in intrusion_cache:
+                                intrusion_cache[matched_path] = intrusion_spans(raw_surface)
+                            found = snippet_spans_intrusion(
+                                snippet, raw_surface, intrusion_cache[matched_path])
+                            if found is not None:
+                                errors.append(
+                                    f"verbatim_locators.entries[{position}].snippet: quoted "
+                                    f"ACROSS page furniture in {matched_path}. Line "
+                                    f"{found['line']} is a {found['kind']} "
+                                    f"({found['intrusion']!r}) sitting inside a continuing "
+                                    f"sentence, so the extracted text reads "
+                                    f"\"...{found['reconstructed']}...\" and this quote "
+                                    "verifies against a character sequence no author wrote. "
+                                    "Do NOT hand-correct the surface: re-extract in reading "
+                                    "order (pdftotext -nopgbrk, without -layout) or anchor "
+                                    "this locator to the rendered page"
+                                )
                 if ELISION_RE.search(snippet):
                     errors.append(
                         f"verbatim_locators.entries[{position}].snippet: stitched quote. Two "
