@@ -81,6 +81,7 @@ PRIORITY_TESTS = (
     "framework/scripts/test_event_ledger.py",
     "framework/scripts/test_session_self_eval.py",
     "framework/scripts/test_deepdive_manifest.py",
+    "framework/scripts/test_dependency_integrity.py",
     "framework/scripts/test_benchmark_input_surface.py",
     "framework/scripts/test_regenerate_adjudications.py",
     "framework/scripts/test_lease_state.py",

@@ -1,0 +1,194 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.2 TASK_ACK + A.3 TASK_CLAIM · §21c DEFAULTS_TAKEN + STOP_LOG",
+  "_note": "Harness change under LEGEND_CORE §21e AGILE OPERATING MODE. T0: implemented and landed in-session, no gate, no Mirror precondition. The dispatch arrived through the orchestrator channel and names the specification and the problem record it derives from.",
+  "TASK_ID": "HARNESS-DEPINTEG-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+  "TASK_ACK": {
+    "state": "ACCEPTED",
+    "accepted_on": "2026-09-10",
+    "objective": "Build dependency-integrity propagation: screen the integrity status of the papers a corpus paper DEPENDS ON, which a per-PMID retraction check cannot see. Specification: governance/candidates/2026-09-09_sweep_capability_comparison.md §1.2, §2 P1, §3, §5. Problem: disease-models/wwox/analysis/orchestration_reviews/2026-09-09_actor_retrospective.md §6.1 S7, §6.3 H6, §8.2.",
+    "interaction_mode": "AUTONOMOUS_COMPLETE",
+    "review_requirement": "None. §21e GATES: harness changes carry no Mirror precondition, no HUMAN_APPROVAL, no gate 0-5. Mirror reviews ex post.",
+    "scope_limit": "Emit a report and a review queue. Touch no claim, no registry, no dossier and none of the four scientific current files."
+  },
+  "TASK_CLAIM": {
+    "claimed_by": "plan",
+    "claimed_on": "2026-09-10",
+    "durable_pointer": "framework/scripts/dependency_integrity.py",
+    "uniqueness": "no competing claim exists for this TASK_ID + GENERATION"
+  },
+  "WRITE_PERIMETER": {
+    "permitted_and_written": [
+      "framework/scripts/dependency_integrity.py",
+      "framework/scripts/test_dependency_integrity.py",
+      "framework/config/retraction_watch_pin.json",
+      "disease-models/wwox/research/2026-09-10_dependency_integrity_screen.md",
+      "_external_repos/MANIFEST.md (one row + one audit note)",
+      "ledger/tasks/plan/HARNESS-DEPINTEG-001.json",
+      "scripts/run_release_regressions.py (one line — see DEFAULTS_TAKEN 4)"
+    ],
+    "deliberately_not_touched": {
+      "framework/scripts/deepdive_manifest.py and every other existing screen": "owned by two peer sessions editing them concurrently; imported in spirit, never edited. Confirmed modified in the working tree by a peer at the time of this task.",
+      "disease-models/wwox/registries/*": "read-only. The claim-chain join opens paper_registry_current.md and claim_registry_current.md for READING only; test_no_canonical_surface_is_ever_opened_for_writing asserts this at the AST level.",
+      "discovery_ledger_current.md, full_text_queue_current.md": "named as out of perimeter by the dispatch; untouched.",
+      "the four scientific current files": "unchanged. Nothing here is a BATCH_COMMIT and nothing here is a claim."
+    }
+  },
+  "DELIVERABLES": {
+    "positive_control": "PASS — PMID 16223882 / 10.1073/pnas.0505485102 reproduces Expression of concern, RetractionPubMedID 28373548, Reason naming image duplication and error in image. Reached through the ordinary screen path, not a special case.",
+    "pin": "framework/config/retraction_watch_pin.json — sha256 8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5, 66,609,820 bytes, 72,476 rows, fetched 2026-09-10. The 66 MB snapshot itself lives under files/ and is not committed.",
+    "corpus_measurement": {
+      "manifests": 81,
+      "screenable_with_a_doi": 79,
+      "unscreened_no_doi_on_the_manifest": 2,
+      "papers_with_a_flagged_dependency": 13,
+      "papers_screened_clean": 60,
+      "papers_unscreenable": 6,
+      "reference_dois_screened_over_declared": "3995 / 4341 = 92.0%",
+      "references_unscreenable_no_doi": 346,
+      "papers_flagged_by_a_direct_per_pmid_check": 1,
+      "claims_whose_chain_touches_a_flagged_paper": "6 of 39"
+    },
+    "mutation_matrix": "14 mutations applied to the shipped file, suite re-run against each, 14/14 CAUGHT, file restored and sha256-verified after every run. See the report.",
+    "self_test": "selftest calls screen_paper() — the same function corpus calls — on a real deep-dive manifest, plus the positive control through the loaded index.",
+    "regression_suite": "framework/scripts/test_dependency_integrity.py — 60 assertions, enrolled in scripts/run_release_regressions.py."
+  },
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "framework/scripts/screen_verdict.py does not exist (git log for it is empty; the file is absent from disk), so the shared verdict shape the dispatch offered could not be imported.",
+      "default": "Carried the same shape in-module: an explicit `screened` boolean alongside the verdict string, so 'not flagged' can never be read off a reference that was never looked at. Said so in the docstring and named the reconciliation surface for when that module lands.",
+      "why_safe": "No peer file touched, and the invariant is preserved rather than deferred. If the peer module lands, one named constant block is the merge point.",
+      "what_would_have_been_different": "If a peer lands screen_verdict.py with different constant spellings, a follow-up task reconciles the two vocabularies."
+    },
+    {
+      "condition": "The dispatch required a versioned pin but named no path for it.",
+      "default": "framework/config/retraction_watch_pin.json.",
+      "why_safe": "framework/config/ already holds a versioned JSON config, is not scoped by legend_lint.py, and is not a canonical scientific surface. framework/state/ was rejected because it holds the state-control manifest and its append-only ledgers.",
+      "what_would_have_been_different": "Moving the pin later is a one-line constant change plus a git mv."
+    },
+    {
+      "condition": "The dataset licence could not be verified. The specification asserts CC0; the endpoint sends no licence header; api.labs.crossref.org/openapi.json declares MIT, but for the API SOFTWARE, not the data; the Crossref documentation page served no machine-readable dataset licence.",
+      "default": "Entered the manifest row as AUDITED rather than REPRODUCED, with the licence cell stating plainly that CC0 is asserted by Crossref but NOT verified in this run, and warning against conflating the API's MIT with the data's licence.",
+      "why_safe": "Fail-closed direction, and it matches the manifest's own rule that REPRODUCED requires licence verification. An unverified licence recorded as verified is precisely what the inclusion contract exists to prevent.",
+      "what_would_have_been_different": "One verified licence notice promotes the row to REPRODUCED; the pin and the smoke test are already in place."
+    },
+    {
+      "condition": "The new suite would not run in any release gate unless enrolled in scripts/run_release_regressions.py, which has an explicit SUITES list and is not in this task's declared file ownership.",
+      "default": "Added one line enrolling framework/scripts/test_dependency_integrity.py, after confirming with git status that the file carried no peer modifications, and committed it path-scoped immediately.",
+      "why_safe": "A one-line insertion into a clean file, committed at once so no peer edit could be swept up. The alternative — not enrolling — would have shipped a suite that is decoration, which is the failure the dispatch names in red.",
+      "what_would_have_been_different": "If a peer had the file open, the safe move would have been to report the enrolment as owed rather than make it."
+    },
+    {
+      "condition": "After fixing the all-DOI-less bug, the corpus run had to be repeated; re-fetching 79 Crossref reference lists would have changed two variables at once.",
+      "default": "Re-ran with --offline against the reference lists cached by the first run, so the only changed variable is the fix.",
+      "why_safe": "Identical inputs, so the single verdict that moved (PMID 27551470, SCREENED_CLEAN to UNSCREENABLE_NO_SCREENABLE_REFERENCES) is attributable to the fix and to nothing else.",
+      "what_would_have_been_different": "Nothing measured here depends on a fresh fetch; the snapshot pin is what dates the run."
+    },
+    {
+      "condition": "Adding the read-only claim-registry join collided with this suite's own test, which forbade the module from MENTIONING a canonical surface.",
+      "default": "Replaced the mention check with an AST-level check that no canonical surface is ever opened in a write mode, plus a check that every write target is the pin, a snapshot, the refs cache or an explicit --json argument.",
+      "why_safe": "The guarantee got strictly stronger. The old test forbade a legitimate read and would have passed a module that assembled a registry write path at runtime; the new one polices the mode, which is the thing that actually matters.",
+      "what_would_have_been_different": "Had the join not been needed, the weaker test would have survived unexamined — which is the more interesting half of this entry."
+    },
+    {
+      "condition": "One corpus paper's Crossref reference lookup failed on the run (PMID 24550385).",
+      "default": "Reported it as UNSCREENABLE_FETCH_FAILED and left it visible in the measurement rather than retrying until green.",
+      "why_safe": "Fail-closed and counted against coverage. A retry loop that eventually succeeds hides a transport failure rate that the coverage ratio should carry.",
+      "what_would_have_been_different": "Re-running the corpus command resolves it if the failure was transient; the verdict says so."
+    }
+  ],
+  "STOP_LOG": {
+    "class_1_reserved_act": 0,
+    "class_2_no_safe_default": 0,
+    "class_3_hindsight_default": 0,
+    "stops_avoided": [
+      {
+        "candidate_class": "1 — reserved act (private-data exposure)",
+        "what_was_at_stake": "The Crossref labs endpoint documents a `mailto` contact parameter. Sending the operator's personal address to an external service is reserved and was not going to happen.",
+        "how_it_dissolved": "Tested rather than assumed. HEAD returns 405 with `allow: GET`; a plain GET with no email returns HTTP 200 and the complete CSV (`content-disposition: attachment; filename=retractions.csv`). The full 66,609,820-byte snapshot was fetched with no contact parameter of any kind.",
+        "residual": "The labs `/docs` path DOES return a 403 `not-polite` without an email. The data path does not, and the data path is the only one this tool uses. The tool has no code path that accepts a contact address, and a regression test asserts the source contains no email address and constructs no mailto parameter.",
+        "time_waited": "none",
+        "outcome": "No stop. Zero external spend, no key, no address."
+      }
+    ],
+    "note": "No condition in this task required an operator decision. Two peer sessions were editing framework/scripts/deepdive_manifest.py throughout; under SAFE_DEFAULTS that is 'proceed, note them', and it is noted rather than waited on."
+  },
+  "PEER_FINDINGS_REPORTED_NOT_FIXED": [
+    {
+      "finding": "scripts/test_release_surface.py::test_shebang_python_entrypoints_are_executable is RED at baseline: scripts/test_legend_commit.py carries a shebang without the executable mode bit.",
+      "attribution": "pre-existing, and the file belongs to the legend_commit wrapper work, not to this task",
+      "action": "Reported, not fixed. Both files shipped by this task were given the executable bit so they do not add to that list."
+    },
+    {
+      "finding": "framework/scripts/test_batch_queue.py::test_coverage_is_not_overstated_against_the_registry is RED at baseline: 80 studies counted as read against 59 PAPER records claiming full text.",
+      "attribution": "known-red, retrospective §6.4 I6 — the ratchet working as written; only a BATCH_COMMIT closes it, and that is the operator's",
+      "action": "Reported, not fixed."
+    }
+  ],
+  "ATTRIBUTION_CENSUS": {
+    "incidents": 8,
+    "machine": 5,
+    "blind_auditor": 0,
+    "peer": 0,
+    "self": 3,
+    "severity_high": 3,
+    "severity_high_of_which_self": 1,
+    "undetected_known": 1,
+    "incident_detail": [
+      {
+        "id": 1,
+        "what": "screen_paper() returned SCREENED_CLEAN for a paper whose references were ALL DOI-less. It reached the first live corpus run and reported PMID 27551470 clean.",
+        "catcher": "machine (own regression suite)",
+        "severity_high": true
+      },
+      {
+        "id": 2,
+        "what": "Test fixture DOIs used a 1-digit prefix (10.1/x) that normalise_doi correctly refuses; 20 tests errored.",
+        "catcher": "machine (test run)",
+        "severity_high": false
+      },
+      {
+        "id": 3,
+        "what": "The mutation loader exec'd module source without __file__, so every mutant raised NameError.",
+        "catcher": "machine (test run)",
+        "severity_high": false
+      },
+      {
+        "id": 4,
+        "what": "Assumed all five RetractionNature classes would be reachable by a DOI-keyed screen. All 218 blank-nature rows carry no OriginalPaperDOI, so one class is unreachable. Would have entered the report as a false statement about the dataset.",
+        "catcher": "machine (own regression suite)",
+        "severity_high": true
+      },
+      {
+        "id": 5,
+        "what": "Was about to record the dataset licence as CC0 on the specification's authority. Refused to assert it, probed for verification, and found only MIT-for-the-API-software and no dataset licence statement.",
+        "catcher": "self",
+        "severity_high": true
+      },
+      {
+        "id": 6,
+        "what": "Docstring failure modes were numbered 1-6, 8, 9, 7 after an append.",
+        "catcher": "self",
+        "severity_high": false
+      },
+      {
+        "id": 7,
+        "what": "The tool's own no-canonical-write test asserted MENTION rather than write MODE, so it gave a guarantee it did not hold and blocked a legitimate read.",
+        "catcher": "self",
+        "severity_high": false
+      },
+      {
+        "id": 8,
+        "what": "The claim-chain join declared its own ^## PAPER (\\d+) record-heading regex, a second copy of a canonical pattern. test_no_consumer_declares_its_own_record_heading_regex rejected it and named growth_anchors.RECORD_PATTERNS. The refactor also closed an unnamed defect: the paper registry carries CORPUS placeholders, so passing only the `papers` convention would have let a placeholder's body join the PAPER record above it.",
+        "catcher": "machine (release regression suite)",
+        "severity_high": false
+      }
+    ],
+    "undetected_known_detail": "A Crossref deposit may carry only SOME of a paper's references. This screen measures coverage over what was deposited, not over what the paper actually cites, so a partially-deposited reference list reads as full coverage of a smaller denominator. No test and no measurement here detects it, and the coverage ratio cannot see it.",
+    "reading": "3 of 8 incidents were severity_high and only 1 of those 3 was caught by self. Five of eight went to the machine, and two of those five are the ones that matter: the regression suite caught a screen reporting CLEAN without screening anything, and the release suite caught a second copy of a canonical pattern that was producing the RIGHT answer — which is exactly how a second copy survives long enough to drift. The suite earned its place; reader practice caught only the licence."
+  },
+  "STATE": "COMPLETE — landed on main"
+}

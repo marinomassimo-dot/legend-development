@@ -1,0 +1,11 @@
+{
+  "bytes": 66609820,
+  "fetched": "2026-09-10",
+  "filename": "retractionwatch_20260910.csv",
+  "licence": "CC0",
+  "note": "The snapshot itself is ~66 MB and lives under files/, which is gitignored. This pin is what is versioned. Re-fetch with `dependency_integrity.py fetch`; a changed row count is a signal, not an error. No email address is sent to the endpoint.",
+  "resource": "Retraction Watch database, hosted by Crossref",
+  "rows": 72476,
+  "sha256": "8ff64393b342e18ec2c04b06d54dba834e37e77575913c97fa93c8da41dde3d5",
+  "url": "https://api.labs.crossref.org/data/retractionwatch"
+}
