@@ -35,6 +35,34 @@ MILESTONE_PLAN: le milestone durevoli attese del task — ciascuna con l'evidenz
 DELIVERABLE (artefatto + worktree/branch) / CURRENT_STATE (durable pointer)
 ```
 
+### A.1b · WAVE_n_RESULT — e le due chiavi che §21c produce **[aggiunto 2026-09-10]**
+
+Un task che si svolge in più wave scrive lo stato di ciascuna nel proprio contratto. Ogni
+`WAVE_n_RESULT` porta, obbligatoriamente, anche quando sono vuote:
+
+```
+WAVE_n_RESULT:
+  ...                        (esito, sorgenti chiuse, artefatti, commit)
+  DEFAULTS_TAKEN: [ { condition, default_taken, why_safe, what_would_have_differed }, ... ]
+  STOP_LOG:       [ { reason_class: 1|2|3, asked, waited, outcome, question? }, ... ]
+```
+
+**Questa riga non modifica §21c**, che è riservata all'operatore e resta intatta: la STOP POLICY
+già obbliga a registrare entrambe. Cambia solo *dove* atterrano. Il 2026-09-09 il meccanismo dei
+safe default ha retto dieci ore non presidiate su undici wave, e il giorno dopo un grep
+sull'intero repository trovava `DEFAULTS_TAKEN` in **due** file: il brief che lo impone e un
+commit candidate. Tutto il resto viveva nei messaggi finali al coordinatore, cioè in trascritti.
+Il contratto di task è invece la superficie che l'attore già scrive a ogni wave e che sopravvive
+alla morte della sessione — tre wave su undici sono state terminate da rate limit e i loro
+contratti sono rimasti leggibili.
+
+Effetto secondario voluto: il numero di default presi per wave diventa misurabile, e **un attore
+che dichiara zero default dopo dieci ore non presidiate diventa visibile come l'anomalia che
+probabilmente è.**
+
+Misura: `python3 framework/scripts/attribution_census.py --queue`. Baseline al 2026-09-10:
+**0 wave su 11** portano le due chiavi.
+
 ### A.2 · TASK_ACK
 
 `TASK_ID / DIRECTIVE_VERSION / GENERATION / ACCEPTED | REJECTED(motivo → CHALLENGE, Annex F)`. Nessun lavoro senza ACK; ACK assente entro timeout → reinvio (Annex B).

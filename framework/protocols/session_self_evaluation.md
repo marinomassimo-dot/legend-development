@@ -198,8 +198,85 @@ diagnosis in a durable disease-level research path, never only in `staging/`. If
 workspace-wide executable verdict is blocked by a concurrent run, report both the local
 paper verdict and the global blocking condition; do not collapse one into the other.
 
+## Part 3 — The attribution census. Required, fixed, parseable.
+
+Added **2026-09-10**, after the 2026-09-09 sweep had to have this reconstructed by hand from
+nine prose diagnoses written in inconsistent vocabularies — a reconstruction its own analyst
+called *"contestable at the margins"*, over the number that is the most decision-relevant thing
+in the record. **It is what tells the operator whether to invest in gates, in auditors, or in
+reader practice**, and it was the one thing nine careful diagnoses did not make readable.
+
+Every diagnosis ends with exactly this block:
+
+```
+ATTRIBUTION_CENSUS
+incidents: <n>
+machine: <n>   blind_auditor: <n>   peer: <n>   self: <n>
+severity_high: <n>   of which self: <n>
+undetected_known: <n>
+```
+
+**The counting rule**, so the number is reproducible and not a mood. An **incident** is one
+defect or near-error. Repeated instances of one rejection class inside one wave — *"the
+validator rejected my locator design four times"* — count as **one**, with the instance count in
+the prose. A **catcher** is: `machine` (a validator, writer, linter, screen, test suite, HTTP
+status or shell error) · `blind_auditor` (`legend-locator-audit`, run blind on triples) · `peer`
+(another actor or the coordinator) · `self` (your own re-reading, cross-measurement, control run,
+or refusal to believe a result you had not earned). `severity_high` counts the incidents that
+would have **reached the record** — a wrong locator, a wrong coverage claim, a wrong identifier —
+as opposed to a schema rejection that could never have got past the writer.
+
+🔴 **The last two lines carry the information the aggregate hides, and they are the reason the
+block exists.**
+
+- `severity_high · of which self` is the number to watch. **2026-09-09: 3 of 6.** A rising ratio
+  means reader practice is improving; a falling one means the gates are carrying more of the load
+  than the readers are — the condition an actor named in wave 1 of that sweep: *"Every one of the
+  six was caught by a machine or another agent. Not one was caught by my own re-reading, which is
+  the single most useful line in this diagnosis."*
+- `undetected_known` — defects found **later** and attributed to this wave — is the only line that
+  pushes back on the census's structural blind spot: **a diagnosis is written by the actor, so an
+  error nobody caught appears in no list.** The aggregate measures how caught errors were caught;
+  it cannot measure the undetected rate. Leaving this line at `0` forever is itself a finding.
+
+Why the aggregate alone misleads, measured on the sweep that produced this section: across 57
+incidents the split was machine 24 · self 23 · blind auditor 5 · peer 5, which reads as a
+repository whose machines are doing the work. **On the six near-errors that were one step from
+landing, the split was self 3 · blind auditor 2 · peer 1 · machine 0.** The validators are
+excellent at refusing malformed *declarations* and blind to wrong *content* — that is their
+design, and it is why the two controls that actually worked are the ones to invest in.
+
+```bash
+python3 framework/scripts/attribution_census.py            # ratios across the diagnoses
+python3 framework/scripts/attribution_census.py --queue    # which surfaces are missing the block
+```
+
+The parser reports ratios and **never blocks**. A census is a measurement, and a measurement that
+can fail a build gets written to pass the build.
+
+## Part 4 — What §21c produced, in a surface that survives the session
+
+§21c's safe-default mechanism is what allows a sweep to run unattended at all: an actor takes the
+default, continues, and records it. On 2026-09-09 that machinery ran for ten hours across eleven
+waves, and **a repository-wide grep afterwards found `DEFAULTS_TAKEN` in two files** — the brief
+that mandates it and one commit candidate. Everything else lived in final messages to the
+coordinator, which are transcripts. The evidence of every decision taken without the operator was
+gone by morning.
+
+So both go where the actor already writes per-wave state and where it already survives a session
+death: **the task contract JSON**, as required keys of each `WAVE_n_RESULT` (Annex A.1). The
+shape is in [`../../governance/annex_a_task_contract.md`](../../governance/annex_a_task_contract.md).
+
+**This changes nothing in §21c**, which is reserved to the operator and is not touched: the stop
+policy already requires both. What changes is that they land in durable state instead of a
+transcript, so a later session can answer *"what did this actor decide without the operator, and
+why was it safe?"* from committed artefacts alone. A secondary effect is worth having: the count
+of defaults taken per wave becomes a measurable, and **an actor reporting zero defaults across a
+ten-hour unattended wave becomes visible as the anomaly it probably is.**
+
 ## The rule
 
-A session is not closed by having produced output. It is closed when Part 1 returns `PASS`
-and Part 2 is answered in writing. **Where an answer is weak, the session owes a
-proportional micro-upgrade** — and the upgrade is the answer, not the promise of one.
+A session is not closed by having produced output. It is closed when Part 1 returns `PASS`,
+Part 2 is answered in writing, Part 3 carries the census and Part 4's two keys are in the task
+contract. **Where an answer is weak, the session owes a proportional micro-upgrade** — and the
+upgrade is the answer, not the promise of one.

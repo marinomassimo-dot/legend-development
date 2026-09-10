@@ -44,3 +44,31 @@
 - Disease-agnostic micro-upgrade shipped:
 - Regression/evidence that makes the upgrade persistent:
 - Residual risk and next decisive action:
+
+## Attribution census — required, fixed, parseable
+
+Fill it from the failures enumerated above. The counting rule and the reason each line exists
+are in [`session_self_evaluation.md`](session_self_evaluation.md) Part 3. In short: one incident
+per defect or near-error, repeated instances of one rejection class counted once, and
+`severity_high` reserved for the incidents that would have **reached the record** rather than
+been refused by a writer.
+
+```
+ATTRIBUTION_CENSUS
+incidents: <n>
+machine: <n>   blind_auditor: <n>   peer: <n>   self: <n>
+severity_high: <n>   of which self: <n>
+undetected_known: <n>
+```
+
+`undetected_known` counts defects found **later** and attributed back to this wave. It is the one
+line that pushes back on this diagnosis being written by the actor whose work it grades: an error
+nobody caught appears in no list, so a corpus where this line is always `0` is reporting the limit
+of the census, not the absence of the defects.
+
+## §21c output — written to the task contract, not only here
+
+`DEFAULTS_TAKEN` and `STOP_LOG` belong in this wave's `WAVE_n_RESULT` in the task contract JSON
+(Annex A.1b), **both, even when empty**. A default recorded only in a message to the coordinator
+is a transcript: after the ten unattended hours of 2026-09-09, a repository-wide grep found
+`DEFAULTS_TAKEN` in two files.

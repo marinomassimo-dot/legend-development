@@ -67,6 +67,10 @@ PRIORITY_TESTS = (
     # blind - the fourth Annex C.1 R4 trigger, added 2026-09-10. It reports a ratio
     # and never blocks; what the suite pins is that the ratio is honest.
     "framework/scripts/test_locator_contradiction_audit.py",
+    # Parses the required ATTRIBUTION_CENSUS block and the two §21c keys. Also a
+    # ratio, never a block: a measurement that can fail a build gets written to
+    # pass the build.
+    "framework/scripts/test_attribution_census.py",
     # The P7 event ledger, enrolled in the commit that builds it. It reuses the receipt
     # ledger's chain-and-lock pattern, so the two suites go red together if that pattern
     # is broken — which is the point of not having invented a second one.
