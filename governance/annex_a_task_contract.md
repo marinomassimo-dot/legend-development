@@ -33,7 +33,25 @@ MILESTONE_PLAN: le milestone durevoli attese del task — ciascuna con l'evidenz
                 durevole verificabile che deve lasciare (receipt, output, registry,
                 checkpoint). Definisce la granularità di WORK_COMMIT e idempotenza [E2]
 DELIVERABLE (artefatto + worktree/branch) / CURRENT_STATE (durable pointer)
+INTERNAL_EDGES: le relazioni fra i membri del lotto, risolte PRIMA dell'assegnazione   [2026-09-10]
 ```
+
+**`INTERNAL_EDGES`** — un lotto i cui membri si citano, condividono un contenitore, un autore o
+un reagente va letto come un insieme e **dichiarato tale a M0, non scoperto a M5**. Il
+`compression` finding più netto dello sweep 2026-09-09 esiste solo perché due paper sono
+capitati nella stessa wave, e il lettore *"stava per scrivere il primo dossier come se stesse in
+piedi da solo"*. Baseline: **0 contratti su 3** portavano il blocco, mentre almeno **4 edge reali**
+esistevano. Si genera con una sola interrogazione su dati che il dispatch ha già:
+
+```bash
+python3 framework/scripts/lot_internal_edges.py --from-contract <contratto> --json
+```
+
+Il blocco nomina anche i membri **non screenabili**: un paper la cui lista di riferimenti non è
+depositata non "non cita nulla", e collassare i due stati è la classe di errore peggiore che
+questo repository abbia misurato. Una edge `SAME_CONTAINER` non è decorazione — l'introduzione di
+un curatore **non cita** il capitolo che introduce, e un rilevatore basato sulle sole citazioni
+riporterebbe 3 edge su 4 sembrando completo.
 
 ### A.1b · WAVE_n_RESULT — e le due chiavi che §21c produce **[aggiunto 2026-09-10]**
 
