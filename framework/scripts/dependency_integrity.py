@@ -280,12 +280,28 @@ def fetch_snapshot(dest=None):
     return dest
 
 
+LICENCE_VERIFICATION_NOTE = (
+    "Crossref asserts CC0 for the Retraction Watch dataset under the 2023 agreement, and "
+    "this run could not confirm it: the data endpoint sends no licence header and "
+    "api.labs.crossref.org/openapi.json declares MIT for the API SOFTWARE, which is a "
+    "different object. The MANIFEST row carries the same caveat and is AUDITED rather than "
+    "REPRODUCED for exactly this reason. Verify before redistributing any row."
+)
+
+
 def build_pin(path):
     sha, size = _digest_and_size(path)
     return {
         "resource": "Retraction Watch database, hosted by Crossref",
         "url": RETRACTION_WATCH_URL,
-        "licence": "CC0",
+        # NOT "CC0" bare. Crossref asserts CC0 for the dataset and this run could not
+        # confirm it: the data endpoint sends no licence header and the API's own
+        # openapi.json declares MIT — for the API SOFTWARE, a different object and an easy
+        # conflation. The MANIFEST row says so in prose and is AUDITED rather than
+        # REPRODUCED for exactly this reason; a bare "CC0" in the machine-read field would
+        # hand a script the assurance the prose beside it declines to give.
+        "licence": "CC0 ASSERTED, NOT VERIFIED",
+        "licence_verification": LICENCE_VERIFICATION_NOTE,
         "filename": os.path.basename(path),
         "sha256": sha,
         "bytes": size,

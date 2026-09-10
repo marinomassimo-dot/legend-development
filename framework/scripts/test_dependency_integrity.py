@@ -156,6 +156,34 @@ class TheScreenSaysWhatItScreened(unittest.TestCase):
                          "Concerns/Issues about Data;Duplication of/in Image;")
 
 
+class ThePinDoesNotAssertWhatTheRunCouldNotVerify(unittest.TestCase):
+    """A bare "CC0" in a machine-read field is an assurance nobody earned.
+
+    The MANIFEST row states the caveat in prose and marks the route AUDITED rather than
+    REPRODUCED. The pin is the field a script would actually read, and as first written it
+    said "CC0" flat while the run beside it reported the licence unverified. Repaired at
+    the generator rather than in the artefact, because the next `pin --write` would have
+    restored it - the same reason a corrected output is not a corrected tool.
+    """
+
+    def _pin(self):
+        with tempfile.NamedTemporaryFile("w", suffix=".csv", delete=False) as handle:
+            handle.write("RetractionNature,OriginalPaperDOI\nRetraction,10.1/x\n")
+            path = handle.name
+        try:
+            return di.build_pin(path)
+        finally:
+            os.unlink(path)
+
+    def test_the_licence_field_carries_its_verification_state(self):
+        pin = self._pin()
+        self.assertNotEqual("CC0", pin["licence"])
+        self.assertIn("NOT VERIFIED", pin["licence"])
+
+    def test_the_note_names_the_conflation_it_guards_against(self):
+        self.assertIn("MIT", self._pin()["licence_verification"])
+
+
 class PaperLevelVerdicts(unittest.TestCase):
     def setUp(self):
         self.index = fake_index()
@@ -304,7 +332,12 @@ class PositiveControl(unittest.TestCase):
         path, pin, problems = di.verify_snapshot()
         self.assertEqual(problems, [])
         self.assertTrue(os.path.exists(path))
-        self.assertEqual(pin["licence"], "CC0")
+        # Was `assertEqual(pin["licence"], "CC0")`, which pinned the one claim this
+        # run could not make. The licence state is asserted by
+        # ThePinDoesNotAssertWhatTheRunCouldNotVerify; here the point is only that
+        # the field is present and carries its verification state with it.
+        self.assertIn("CC0", pin["licence"])
+        self.assertIn("NOT VERIFIED", pin["licence"])
 
     def test_the_entry_point_runs_the_control_end_to_end(self):
         """Calls main() — the shipped entry point — not an internal helper."""
