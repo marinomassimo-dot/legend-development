@@ -60,6 +60,12 @@ import subprocess
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from screen_verdict import ScreenVerdict  # noqa: E402
+
+SCREEN = "manifest_flag_drift"
+SIGNATURE = "EFFORT_FLAG_IMPROVED"
+
 # Flags whose "true" asserts that a unit of work was performed. `verbatim_locators.waived`
 # is inverted: waiving is the ADMISSION, so un-waiving (true -> false) is the improvement.
 EFFORT_FLAGS: tuple[tuple[str, str, bool], ...] = (
@@ -77,6 +83,66 @@ EFFORT_FLAGS: tuple[tuple[str, str, bool], ...] = (
 NOTE_HINTS = ("note", "correction", "why", "reason", "performed_note", "evidence")
 
 
+def screen_manifest(root: Path, rel: str, depth: int) -> ScreenVerdict:
+    """Screen one manifest's history and say exactly which revisions were compared.
+
+    🔴 The uninformative pass this closes, and it is not hypothetical: `scan()` returns an
+    empty list both when nothing drifted and when there was nothing to compare. A manifest
+    with a single revision -- every manifest, on the day it is minted -- produced
+    *"VERDICT: PASS - no declared-effort flag improved in the scanned range"*. A flag cannot
+    drift across one revision, so PASS there is a statement about the tool's reach, not about
+    the manifest, and it reads exactly like a clean bill of health.
+
+    The screened surface is the concatenation of the manifest's raw bytes at each compared
+    revision, in order, so the digest identifies the comparison itself. Re-running against a
+    deeper history legitimately produces a different digest: a different surface was screened.
+    """
+    revs = revisions(root, rel, depth)
+    blobs = [(rev, _git(root, "show", f"{rev}:{rel}")) for rev in revs]
+    blobs = [(rev, raw) for rev, raw in blobs if raw.strip()]
+
+    if not blobs:
+        return ScreenVerdict.insufficient(
+            SCREEN, missing=f"git history for {rel}",
+            detail=("the manifest has no readable revision in this checkout; it may be "
+                    "untracked, or the path may be wrong"))
+    surface = "\n".join(raw for _rev, raw in blobs)
+    if len(blobs) < 2:
+        return ScreenVerdict.insufficient(
+            SCREEN, missing=f"a second revision of {rel} to compare against", data=surface,
+            detail=("a declared-effort flag cannot drift across a single revision, so there "
+                    "is nothing here to pass or fail. This is the tool's reach, not the "
+                    "manifest's condition"),
+            evidence={"revisions": [rev[:9] for rev, _ in blobs]})
+
+    findings: list[tuple[str, bool]] = []
+    for (newer_rev, newer_raw), (older_rev, older_raw) in zip(blobs, blobs[1:]):
+        newer, older = _parse(newer_raw), _parse(older_raw)
+        if newer is None or older is None:
+            continue
+        for drift, noted in drifts(older, newer):
+            subject = _git(root, "log", "-1", "--format=%s", newer_rev).strip()
+            findings.append(
+                (f"{rel} @ {newer_rev[:9]}  {drift}\n      commit: {subject}", noted))
+
+    evidence = {"revisions_compared": len(blobs),
+                "findings": [text for text, _ in findings],
+                "unnoted": [text for text, noted in findings if not noted]}
+    if findings:
+        return ScreenVerdict.refused(
+            SCREEN, surface, signature=SIGNATURE,
+            detail=(f"{len(findings)} declared-effort flag(s) moved in the direction that "
+                    f"claims more work, {len(evidence['unnoted'])} unaccompanied by a note "
+                    "written in the same edit. Advisory: a QUESTION, not an accusation"),
+            evidence=evidence)
+    return ScreenVerdict.clean(
+        SCREEN, surface,
+        detail=(f"no declared-effort flag improved across the {len(blobs)} revision(s) "
+                "compared. Not proof the work was done — only that no flag claimed it "
+                "silently"),
+        evidence=evidence)
+
+
 def _git(root: Path, *args: str) -> str:
     out = subprocess.run(
         ["git", "-C", str(root), *args],
@@ -92,14 +158,17 @@ def revisions(root: Path, rel: str, limit: int) -> list[str]:
     return [line.strip() for line in raw.splitlines() if line.strip()]
 
 
-def manifest_at(root: Path, rev: str, rel: str) -> dict | None:
-    raw = _git(root, "show", f"{rev}:{rel}")
+def _parse(raw: str) -> dict | None:
     if not raw.strip():
         return None
     try:
         return json.loads(raw)
     except json.JSONDecodeError:
         return None
+
+
+def manifest_at(root: Path, rev: str, rel: str) -> dict | None:
+    return _parse(_git(root, "show", f"{rev}:{rel}"))
 
 
 def _block(manifest: dict, block: str) -> dict:
@@ -196,6 +265,7 @@ def main() -> int:
     parser.add_argument("--pmid", help="one PMID; default scans every manifest")
     parser.add_argument("--depth", type=int, default=25,
                         help="how many revisions back per manifest (default 25)")
+    parser.add_argument("--json", action="store_true", dest="as_json")
     args = parser.parse_args()
 
     root = Path(args.workspace).resolve()
@@ -205,33 +275,50 @@ def main() -> int:
     else:
         directory = root / base
         if not directory.is_dir():
-            print(f"REFUSED: no manifest directory at {base}")
+            verdict = ScreenVerdict.insufficient(
+                SCREEN, missing=f"manifest directory {base}",
+                detail="nothing was screened; this is not a pass")
+            print(verdict.render())
             return 2
         targets = sorted(base / p.name for p in directory.glob("PMID*.json"))
 
-    findings: list[tuple[str, bool]] = []
-    scanned = 0
-    for rel in targets:
-        if not (root / rel).is_file():
-            print(f"REFUSED: no manifest at {rel}")
-            return 2
-        scanned += 1
-        findings.extend(scan(root, rel.as_posix(), args.depth))
+    verdicts = [screen_manifest(root, rel.as_posix(), args.depth) for rel in targets]
 
-    unnoted = [text for text, noted in findings if not noted]
-    for text, noted in findings:
-        print(f"  [FLAG DRIFT{' · noted' if noted else ''}] {text}")
-    print(f"manifests scanned: {scanned} | flag drifts: {len(findings)} "
-          f"| unaccompanied by a note written in the same edit: {len(unnoted)}")
-    if findings:
-        print("VERDICT: FINDINGS — a declared-effort flag moved in the direction that claims "
-              "more work. That is a QUESTION, not an accusation: point at the work, or put "
-              "the flag back. A `· noted` drift means the author wrote something in that "
-              "block in the same edit; whether it is ABOUT the flag is for a reader to judge, "
-              "which is why it is shown rather than suppressed. Advisory; nothing is blocked.")
+    if args.as_json:
+        print(json.dumps([v.as_dict() for v in verdicts], indent=1))
     else:
-        print("VERDICT: PASS — no declared-effort flag improved in the scanned range")
-    return 0
+        for verdict in verdicts:
+            unnoted_here = verdict.evidence.get("unnoted", [])
+            for text in verdict.evidence.get("findings", []):
+                noted = text not in unnoted_here
+                print(f"  [FLAG DRIFT{' · noted' if noted else ''}] {text}")
+            if not verdict.is_clean:
+                print(f"  {verdict.render()}")
+        clean = sum(1 for v in verdicts if v.is_clean)
+        refused = sum(1 for v in verdicts if v.is_refused)
+        unscreened = [v for v in verdicts if v.is_insufficient]
+        drifts_found = sum(len(v.evidence.get("findings", [])) for v in verdicts)
+        unnoted = sum(len(v.evidence.get("unnoted", [])) for v in verdicts)
+        print(f"manifests targeted: {len(verdicts)} | screened: {clean + refused} | "
+              f"INSUFFICIENT_DATA: {len(unscreened)} | flag drifts: {drifts_found} "
+              f"| unaccompanied by a note written in the same edit: {unnoted}")
+        if refused:
+            print("VERDICT: FINDINGS — a declared-effort flag moved in the direction that "
+                  "claims more work. That is a QUESTION, not an accusation: point at the "
+                  "work, or put the flag back. A `· noted` drift means the author wrote "
+                  "something in that block in the same edit; whether it is ABOUT the flag is "
+                  "for a reader to judge, which is why it is shown rather than suppressed. "
+                  "Advisory; nothing is blocked.")
+        elif clean:
+            print("VERDICT: PASS — no declared-effort flag improved in the revisions actually "
+                  "compared. Manifests reported INSUFFICIENT_DATA above were NOT screened and "
+                  "are not covered by this line.")
+        else:
+            print("VERDICT: INSUFFICIENT_DATA — nothing was screened. This is not a pass.")
+
+    # Advisory by design: findings never fail the run. Screening NOTHING does, because a
+    # caller that only checks for zero would otherwise read silence as a clean corpus.
+    return 0 if any(not v.is_insufficient for v in verdicts) else 2
 
 
 if __name__ == "__main__":

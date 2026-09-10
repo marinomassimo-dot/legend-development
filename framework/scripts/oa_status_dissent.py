@@ -62,6 +62,13 @@ import sys
 import urllib.error
 import urllib.parse
 import urllib.request
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from screen_verdict import ScreenVerdict  # noqa: E402
+
+SCREEN = "oa_status_dissent"
+SIGNATURE = "DOI_PREFIX_STALE"
 
 USER_AGENT = "LEGEND-research/1.0 (rare-disease literature model; metadata only)"
 TIMEOUT = 30
@@ -173,6 +180,52 @@ def assess(doi: str, fetcher=fetch_crossref, prefix_fetcher=fetch_prefix_owner) 
     return out
 
 
+def screened_surface(result: dict) -> str:
+    """The exact text this screen compared, canonicalised so its digest is reproducible.
+
+    The screened surface of this tool is not a document — it is the two Crossref fields whose
+    disagreement is the whole signal. Hashing them, rather than the DOI, is what makes the
+    verdict checkable: a later session can see whether the record it is reading was reached
+    from the same publisher strings, or from an index that has since been corrected.
+    """
+    return json.dumps({"doi": result.get("doi"),
+                       "doi_prefix": result.get("doi_prefix"),
+                       "prefix_owner": result.get("prefix_owner"),
+                       "current_publisher": result.get("current_publisher"),
+                       "container_title": result.get("container_title")},
+                      sort_keys=True, ensure_ascii=False)
+
+
+def screen(doi: str, fetcher=fetch_crossref, prefix_fetcher=fetch_prefix_owner) -> ScreenVerdict:
+    """Assess a DOI and return a verdict that names what it compared.
+
+    🔴 UNDETERMINED is INSUFFICIENT_DATA and never a pass, and this tool's own wording used
+    to blur that: *"Crossref did not supply both a current publisher and a prefix owner"*
+    says two things could be missing without saying which one is. The verdict now names the
+    absent field, because the repair differs — a missing prefix owner is a Crossref prefix
+    lookup to retry, a missing publisher is a DOI that Crossref does not know at all.
+    """
+    if not isinstance(doi, str) or not DOI_RE.match(doi or ""):
+        return ScreenVerdict.insufficient(
+            SCREEN, missing="a syntactically valid DOI",
+            detail=f"not a DOI: {doi!r}. A PMID or a doi.org URL is not a DOI record key")
+    result = assess(doi, fetcher=fetcher, prefix_fetcher=prefix_fetcher)
+    surface = screened_surface(result)
+
+    if result["verdict"] == VERDICT_UNKNOWN:
+        absent = [name for name, value in (("Crossref current publisher",
+                                            result.get("current_publisher")),
+                                           ("DOI prefix owner", result.get("prefix_owner")))
+                  if not (value or "").strip()]
+        return ScreenVerdict.insufficient(
+            SCREEN, missing=" and ".join(absent) or "Crossref metadata", data=surface,
+            detail=result["explanation"], evidence=result)
+    if result["verdict"] == VERDICT_MIGRATION:
+        return ScreenVerdict.refused(SCREEN, surface, signature=SIGNATURE,
+                                     detail=result["explanation"], evidence=result)
+    return ScreenVerdict.clean(SCREEN, surface, detail=result["explanation"], evidence=result)
+
+
 def render(result: dict) -> str:
     lines = [
         "DOI                %s" % result["doi"],
@@ -205,25 +258,47 @@ def main() -> int:
     args = ap.parse_args()
 
     if args.offline_fixture:
-        fx = json.load(open(args.offline_fixture, encoding="utf-8"))
-        result = assess(fx["doi"],
-                        fetcher=lambda _d: fx["crossref"],
-                        prefix_fetcher=lambda _p: fx["prefix_owner"])
+        try:
+            fx = json.load(open(args.offline_fixture, encoding="utf-8"))
+        except (OSError, ValueError) as exc:
+            verdict = ScreenVerdict.insufficient(
+                SCREEN, missing=f"offline fixture {args.offline_fixture}", detail=str(exc))
+            print(verdict.render(), file=sys.stderr)
+            return 2
+        verdict = screen(fx["doi"],
+                         fetcher=lambda _d: fx["crossref"],
+                         prefix_fetcher=lambda _p: fx["prefix_owner"])
     else:
         if not args.doi:
             ap.error("a DOI is required unless --offline-fixture is given")
         try:
-            result = assess(args.doi)
+            verdict = screen(args.doi)
         except urllib.error.HTTPError as exc:
-            print("Crossref refused the request (HTTP %s). No verdict." % exc.code,
-                  file=sys.stderr)
-            return 2
-        except ValueError as exc:
-            print(str(exc), file=sys.stderr)
-            return 2
+            verdict = ScreenVerdict.insufficient(
+                SCREEN, missing="the Crossref record",
+                detail="Crossref refused the request (HTTP %s). No verdict." % exc.code)
 
-    print(json.dumps(result, indent=1) if args.json else render(result))
-    return 0 if result["verdict"] != VERDICT_UNKNOWN else 1
+    if args.json:
+        record = verdict.as_dict()
+        # The domain record stays at the top level -- every pre-existing caller reads
+        # doi_prefix, prefix_owner, current_publisher there -- but its own `verdict` key
+        # collides with the screen verdict, and the two vocabularies mean different things
+        # (PREFIX_CONSISTENT vs CLEAN). Silently letting one overwrite the other is how a
+        # reader ends up quoting the wrong word; it is renamed instead.
+        domain = dict(verdict.evidence)
+        record["assessment_verdict"] = domain.pop("verdict", None)
+        record["explanation"] = domain.pop("explanation", verdict.detail)
+        record.update(domain)
+        print(json.dumps(record, indent=1))
+    else:
+        print(verdict.render())
+        if verdict.evidence:
+            print()
+            print(render(verdict.evidence))
+
+    if verdict.is_insufficient:
+        return 2 if verdict.screened is None else 1
+    return 0
 
 
 if __name__ == "__main__":
