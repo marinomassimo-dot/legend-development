@@ -61,7 +61,47 @@ Spawn the auditor as a separate agent with no session history. Give it the tripl
 - the reading **narrows, reverses, corroborates or removes** a `consolidated baseline` claim;
 - the commit candidate declares **`Change class: MAJOR`**;
 - the reading produces a **rejection** that closes a research direction — negatives get the
-  same scrutiny as positives, per the premise/negative discipline in `CLAUDE.md`.
+  same scrutiny as positives, per the premise/negative discipline in `CLAUDE.md`;
+- 🔴 the reading **contradicts, corrects or replaces an existing persisted verbatim locator**,
+  whatever claim status is involved. Added 2026-09-10; the evidence is below.
+
+### Why the fourth trigger exists
+
+The 2026-09-09 sweep produced six near-errors that were one step from landing. **Machines caught
+none of them** (`2026-09-09_actor_retrospective.md` § 5.2). Blind auditors caught two — and were
+run at all only because a `consolidated baseline` claim happened to be in scope on one actor's
+readings.
+
+The one this trigger is named after was caught by nobody but the reader. `scientist-b`, reading
+Figure 6A of PMID 29724996 at the 667 px PMC rendering, made the counts ~14 vs ~1 of ~15 and
+**began drafting a correction to an existing locator that was exactly right** — at 400 dpi the
+bars resolve as stacked by genotype within each outcome category, and the persisted values 11/12
+vs 4/18 are what the figure shows. In the actor's own words:
+
+> *"The wrong edit would have been confident, well-argued, and would have passed every gate this
+> repository owns."*
+
+It touched no `consolidated baseline` claim, so no auditor was ever in the loop. What stood
+between it and the ledger was one reader applying one procedural rule in the right order. **A
+repository whose deepest control is "the reader remembered the rule" has a control gap at exactly
+the point where an actor is most confident** — and an edit to an existing correct locator is the
+highest-confidence act a reader performs, because the reader believes they are fixing an error.
+
+### The cost, measured rather than feared
+
+The objection below — a gate that fires on everything gets switched off — is real and this trigger
+is scoped to survive it. **The audit need cover only the contradicted triples**, not the reading,
+so its cost is bounded by how often a reading contradicts a persisted locator. Measured over the
+eleven waves of the 2026-09-09 sweep, that is **three times**:
+
+| Reading | Disposition | Audited? |
+|---|---|---|
+| `scientist-b`, PMID 18674750 `entries[21]` | landed, and correct | no |
+| `scientist-b`, PMID 29724996 Fig 6A | withdrawn by the reader | no |
+| `scientist-a`, PMID 34268881 `entries[14]` | corrected by the audit | **yes** |
+
+**1 of 3 today; the target is 3 of 3.** Three audits across a day of eleven waves is not a gate
+that fires on everything.
 
 ## When it is NOT required
 

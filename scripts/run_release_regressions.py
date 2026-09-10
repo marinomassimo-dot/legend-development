@@ -63,6 +63,10 @@ PRIORITY_TESTS = (
     "framework/scripts/test_pubmed_clipboard_to_seed.py",
     "framework/scripts/test_pubmed_corpus_harvest.py",
     "framework/scripts/test_fulltext_receipts.py",
+    # Measures whether a reading that contradicted a persisted locator was audited
+    # blind - the fourth Annex C.1 R4 trigger, added 2026-09-10. It reports a ratio
+    # and never blocks; what the suite pins is that the ratio is honest.
+    "framework/scripts/test_locator_contradiction_audit.py",
     # The P7 event ledger, enrolled in the commit that builds it. It reuses the receipt
     # ledger's chain-and-lock pattern, so the two suites go red together if that pattern
     # is broken — which is the point of not having invented a second one.

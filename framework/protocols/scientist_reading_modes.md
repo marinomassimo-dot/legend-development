@@ -275,6 +275,23 @@ one (`roles/scientist.md`, *Working discipline*). Named so a reviewer can point 
   IPOTESI | ESPANSIONE` (`framework/instruction/epistemic_discipline.md` §1); every rejection or
   non-trivial conclusion names its premise and tags it `PREMISE: DATO | INFERENZA |
   DEFAULT_FROM_TEXTBOOK`; every negative carries a `REVIVAL_TRIGGER`.
+- 🔴 **Contradicting a locator that is already persisted is its own act, with its own order of
+  operations.** Re-inspect the surface at original resolution **before** drafting the
+  contradiction, not after it; then run the blind audit on the contradicted triples
+  (`.claude/skills/legend-locator-audit/SKILL.md`, fourth mandatory trigger; Annex C.1). The rule
+  is stated in this order because the order is the whole control: on 2026-09-09 a reader working
+  from a 667 px rendering **began drafting a correction to a locator that was exactly right**, and
+  what stopped it was re-opening the figure at 400 dpi *before* writing rather than after. An edit
+  to an existing locator is the highest-confidence act a reader performs — the reader believes
+  they are fixing an error — and it is therefore the act least likely to be re-checked.
+- 🔴 **An identifier, a count or a residue identity comes from the artefact or from a command run
+  in this session** — never from recall, never from the first hit of a search. Where it genuinely
+  comes from outside, it carries `external_provenance` naming the command or index and the date.
+  The rule is `scientist-a`'s own, adopted verbatim after a wave in which a PMID was taken from a
+  search *while the correct identifier sat in the open artefact's `ext-link` markup*, two
+  field-density counts were written from expectation, and a false sentence was built on one of
+  them: *"an assumption asserted with the confidence of a measurement, in a place too small to
+  look at twice."*
 
 ### 3.3 · Forbidden — in both modes
 
@@ -287,6 +304,8 @@ one (`roles/scientist.md`, *Working discipline*). Named so a reviewer can point 
 | Modifying the canonical disease model or any `*_current.md` | readings propose; `BATCH_COMMIT` disposes |
 | Reading the other reader's output, or any prior LEGEND output on the paper, during a first pass declared blind | blindness is a property of the surface (benchmark protocol §4), and stepping outside the surface is the one act that defeats it |
 | Contacting the other reader during the first pass, or asking Orchestrator to relay content | the same, by another channel |
+| Correcting a persisted locator without re-inspecting the surface at original resolution first, or without the blind audit on the contradicted triples | the sweep of 2026-09-09 produced three such contradictions and audited one; the unaudited near-miss would have been *"confident, well-argued, and would have passed every gate this repository owns"* |
+| Reporting a screen's verdict without stating what it screened | a screen that returns CLEAN on an unscreened input is worse than no screen, and this repository has now shipped one: `_refuse_suspect_surface` called with inverted arguments screened a *filename* and returned green over a surface carrying 191 C0 controls |
 
 ### 3.4 · Permitted inference, and where it stops
 

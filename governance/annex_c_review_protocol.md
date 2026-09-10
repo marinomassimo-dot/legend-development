@@ -27,9 +27,20 @@ body: GOVERNANCE_v3.1.1.md
 | inferenza therapeutic-actionable | R2 |
 | disaccordo scientifico persistente | R3 |
 | processo inferenziale methodology-changing | R4 |
+| **contraddizione, correzione o sostituzione di un `verbatim_locator` già persistito** | **R4** |
 | casi cross-model specificati | R5 |
 
 Derogabili solo verso l'ALTO; sotto il floor solo con rationale registrato.
+
+> **Riga aggiunta il 2026-09-10.** L'audit copre **solo le triple contraddette**, non l'intera
+> lettura: il costo è limitato dalla frequenza dell'evento, misurata in 3 occorrenze su undici
+> wave (`disease-models/wwox/analysis/orchestration_reviews/2026-09-09_actor_retrospective.md`
+> § 9.1). Esiste perché la modifica di un locator già persistito è l'atto che un lettore compie
+> con la massima fiducia — crede di correggere un errore — e nello sweep del 2026-09-09 una
+> correzione **falsa a un locator corretto**, argomentata dai pixel, non ha incontrato nessun
+> gate: non toccava una `consolidated baseline` claim e nessun auditor è mai stato convocato.
+> Sui sei quasi-errori a un passo dal record, le macchine ne hanno colti **zero** (§ 5.2).
+> Condizione di innesco e forma operativa: `.claude/skills/legend-locator-audit/SKILL.md`.
 
 ### C.2 · Formato unico
 
