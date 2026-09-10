@@ -16,6 +16,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import locator_identifier_provenance as L  # noqa: E402
 
 SCRIPT = Path(__file__).resolve().parent / "locator_identifier_provenance.py"
+ROOT = SCRIPT.parents[2]
+MANIFESTS = ROOT / "disease-models" / "wwox" / "research" / "deepdive_manifests"
 
 
 def build(tmp: Path, proposition: str, artefact_text: str = "reference list pmid 29310447") -> Path:
@@ -135,6 +137,128 @@ class TestProvenance(unittest.TestCase):
             self.assertEqual(len(out["unmeasurable"]), 1)
             self.assertEqual(r.returncode, 0,
                              "absent evidence is not a provenance failure of the reading")
+
+
+class TheVerdictSaysWhatWasScreened(unittest.TestCase):
+    """Retrospective 9.2. Four zero counts read exactly like a clean result."""
+
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.tmp = Path(self._tmp.name)
+        self.addCleanup(self._tmp.cleanup)
+
+    def test_a_manifest_with_no_identifier_is_insufficient_data(self):
+        """🔴 Nothing measured is not the same as nothing wrong.
+
+        Corpus-wide this is 11 of 81 manifests, and all 11 were previously inside the
+        headline count of what the tool had measured.
+        """
+        path = build(self.tmp, "The paper reports a growth phenotype in mouse pups.")
+        verdict = L.screen_manifest(path, self.tmp)
+        self.assertTrue(verdict.is_insufficient, verdict)
+        self.assertIn("identifier", verdict.missing)
+
+    def test_an_absent_artefact_is_insufficient_data_naming_the_artefact(self):
+        """With an empty haystack every identifier reads as absent. That is locality, not
+        provenance, and the verdict must say which bytes are missing."""
+        path = build(self.tmp, "PMID 29310447 is cited by the source.")
+        (self.tmp / "files" / "src.xml").unlink()
+        verdict = L.screen_manifest(path, self.tmp)
+        self.assertTrue(verdict.is_insufficient, verdict)
+        self.assertIn("declared artefacts", verdict.missing)
+        self.assertIn("src.xml", verdict.missing)
+
+    def test_an_unreadable_manifest_is_insufficient_data(self):
+        broken = self.tmp / "broken.json"
+        broken.write_text("{not json", encoding="utf-8")
+        self.assertTrue(L.screen_manifest(broken, self.tmp).is_insufficient)
+        self.assertTrue(L.screen_manifest(self.tmp / "absent.json", self.tmp).is_insufficient)
+
+    def test_an_identifier_in_the_artefact_is_clean_with_a_digest(self):
+        path = build(self.tmp, "PMID 29310447 is cited by the source.")
+        verdict = L.screen_manifest(path, self.tmp)
+        self.assertTrue(verdict.is_clean, verdict.render())
+        self.assertTrue(verdict.digest.startswith("sha256:"))
+
+    def test_an_undeclared_external_identifier_is_refused_naming_the_signature(self):
+        path = build(self.tmp, "PMID 12345678 supports this.")
+        verdict = L.screen_manifest(path, self.tmp)
+        self.assertTrue(verdict.is_refused, verdict.render())
+        self.assertIn("UNDECLARED_EXTERNAL", verdict.signature)
+
+    def test_the_digest_moves_when_the_artefact_moves(self):
+        """🔴 The haystack is half the comparison, so it is half the digest.
+
+        A digest over the manifest alone would stay constant while the answer changed.
+        """
+        path = build(self.tmp, "PMID 29310447 is cited by the source.")
+        before = L.screen_manifest(path, self.tmp)
+        (self.tmp / "files" / "src.xml").write_text("a different reference list", encoding="utf-8")
+        after = L.screen_manifest(path, self.tmp)
+        self.assertNotEqual(before.digest, after.digest)
+        self.assertNotEqual(before.verdict, after.verdict)
+
+
+class TheCommandLine(unittest.TestCase):
+    """main() was never entered by this suite before 2026-09-10."""
+
+    def setUp(self):
+        self._tmp = tempfile.TemporaryDirectory()
+        self.tmp = Path(self._tmp.name)
+        self.addCleanup(self._tmp.cleanup)
+
+    def run_cli(self, *args):
+        proc = subprocess.run([sys.executable, str(SCRIPT), *args],
+                              capture_output=True, text=True)
+        return proc.returncode, proc.stdout + proc.stderr
+
+    def test_strict_exits_one_on_a_refusal_and_zero_on_absent_evidence(self):
+        path = build(self.tmp, "PMID 12345678 supports this.")
+        code, out = self.run_cli(str(path), "--root", str(self.tmp), "--strict")
+        self.assertEqual(code, 1, out)
+        (self.tmp / "files" / "src.xml").unlink()
+        code, out = self.run_cli(str(path), "--root", str(self.tmp), "--strict")
+        self.assertEqual(code, 0, "absent evidence is not a provenance failure of the reading")
+        self.assertIn("[INSUFFICIENT_DATA]", out)
+
+    def test_the_json_carries_a_verdict_per_manifest(self):
+        path = build(self.tmp, "PMID 29310447 is cited by the source.")
+        code, out = self.run_cli(str(path), "--root", str(self.tmp), "--json")
+        record = json.loads(out)
+        self.assertEqual(len(record["verdicts"]), 1)
+        self.assertEqual(record["verdicts"][0]["verdict"], "CLEAN")
+        self.assertTrue(record["verdicts"][0]["screened"]["digest"].startswith("sha256:"))
+        self.assertEqual(code, 0)
+
+    def test_a_manifest_that_could_not_be_measured_is_not_counted_as_measurable(self):
+        path = build(self.tmp, "No identifier appears in this proposition at all.")
+        code, out = self.run_cli(str(path), "--root", str(self.tmp))
+        self.assertIn("measurable (all artefacts present): 0", out)
+        self.assertIn("unmeasurable (evidence absent): 1", out)
+
+
+class RealManifestsFromTheCorpus(unittest.TestCase):
+    """Cases drawn from the tracked corpus, degrading to a declared skip when absent."""
+
+    def test_every_verdict_over_the_real_corpus_is_self_consistent(self):
+        if not MANIFESTS.is_dir():
+            self.skipTest(f"real artefacts absent: {MANIFESTS}")
+        paths = sorted(MANIFESTS.glob("PMID*.json"))[:8]
+        if not paths:
+            self.skipTest("no manifest in the corpus directory")
+        for path in paths:
+            with self.subTest(manifest=path.name):
+                verdict = L.screen_manifest(path, ROOT)
+                if verdict.is_insufficient and verdict.missing.startswith("declared artefacts"):
+                    # files/ is gitignored: the named bytes must really be absent.
+                    for name in verdict.missing.split(": ", 1)[1].split(", "):
+                        self.assertFalse((ROOT / name).exists(),
+                                         f"{name} exists but was reported missing")
+                    continue
+                self.assertIsNotNone(verdict.screened,
+                                     "a verdict over a real manifest must name its bytes")
+                if verdict.is_refused:
+                    self.assertTrue(verdict.evidence["rows"])
 
 
 if __name__ == "__main__":

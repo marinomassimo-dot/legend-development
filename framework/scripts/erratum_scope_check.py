@@ -119,6 +119,70 @@ NEGATION = {"no", "not", "none", "without", "nessun", "nessuna", "nessuno", "nei
 SELECTABLE_FIELDS = ("result", "note", "notes", "detail")
 
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from screen_verdict import ScreenVerdict  # noqa: E402
+
+SCREEN = "erratum_scope_check"
+SIGNATURE = "LOCATOR_ON_CORRECTED_PANEL"
+
+#: How each status of `check_manifest` maps onto the repository-wide verdict vocabulary.
+#: SCOPE_UNDECLARED and SCOPE_UNPARSEABLE are INSUFFICIENT_DATA and never CLEAN: the tool's
+#: own docstring already said the question "is NOT assumed clean", and a verdict record is
+#: where that sentence becomes machine-readable instead of advisory prose.
+STATUS_TO_VERDICT = {
+    "REVIEW_REQUIRED": "REFUSED",
+    "CLEAR": "CLEAN",
+    "NO_ERRATUM_RECORDED": "CLEAN",
+    "SCOPE_UNDECLARED": "INSUFFICIENT_DATA",
+    "SCOPE_UNPARSEABLE": "INSUFFICIENT_DATA",
+    "UNREADABLE": "INSUFFICIENT_DATA",
+}
+
+
+def screen_manifest(path: Path) -> ScreenVerdict:
+    """Screen one manifest and return a verdict naming the bytes it read.
+
+    🔴 The silent pass this closes is `check_manifest` returning **None** when the word
+    "erratum" appears nowhere. `main` then drops the manifest from `results` entirely, so it
+    is absent from every count and from every listing — indistinguishable, downstream, from a
+    manifest that was screened and found clean. It is not the same thing: the tool has learned
+    only that the READING does not mention an erratum, which is silence about the reading, not
+    evidence about the paper. Suspicion-by-absence was one of the 2026-09-09 near-errors in
+    the other direction; this is its mirror, and it gets a named INSUFFICIENT_DATA.
+    """
+    try:
+        raw = path.read_text(encoding="utf-8")
+    except OSError as exc:
+        return ScreenVerdict.insufficient(
+            SCREEN, missing=f"manifest {path}", detail=str(exc))
+
+    report = check_manifest(path)
+    if report is None:
+        return ScreenVerdict.insufficient(
+            SCREEN, missing="any erratum statement in retraction_check", data=raw,
+            detail=("the manifest never mentions an erratum, so this tool learned nothing "
+                    "about whether one exists. Absence of the word is silence about the "
+                    "reading, not evidence about the paper"),
+            evidence={"manifest": str(path), "status": "NOT_MENTIONED"})
+
+    verdict = STATUS_TO_VERDICT.get(report["status"], "INSUFFICIENT_DATA")
+    if verdict == "REFUSED":
+        return ScreenVerdict.refused(
+            SCREEN, raw, signature=SIGNATURE,
+            detail=(f"{len(report['review'])} locator(s) stand on a corrected panel "
+                    f"{report['scope']}; say in writing which version each was read from"),
+            evidence=report)
+    if verdict == "CLEAN":
+        return ScreenVerdict.clean(
+            SCREEN, raw, detail=report.get("detail")
+            or f"no locator intersects {report.get('scope')}", evidence=report)
+    return ScreenVerdict.insufficient(
+        SCREEN, missing=("`corrected_items` naming the erratum's scope"
+                         if report["status"] in ("SCOPE_UNDECLARED", "SCOPE_UNPARSEABLE")
+                         else f"a readable manifest at {path}"),
+        data=raw, detail=report.get("detail", ""), evidence=report)
+
+
 def _is_negated(text: str, at: int) -> bool:
     """Is the erratum word at `at` governed by a negation earlier in its own sentence?"""
     before = text[max(0, at - 90):at]
@@ -299,6 +363,83 @@ def self_test() -> int:
             cases.append(name)
             print(f"  [{'ok' if ok else 'FAIL'}] {name}: expected {expect_status}, got {got}")
 
+    # ------------------------------------------------------------------------------
+    # The verdict layer (retrospective 9.2), and the real-corpus control (9.3).
+    # ------------------------------------------------------------------------------
+    with tempfile.TemporaryDirectory() as td:
+        verdict_cases = [
+            ("a manifest that never mentions an erratum is INSUFFICIENT_DATA, not absent",
+             {"pmid": "1", "retraction_check": {"result": "checked"}}, "INSUFFICIENT_DATA"),
+            ("an erratum naming no corrected_items is INSUFFICIENT_DATA",
+             {"pmid": "2", "retraction_check": {"result": "an erratum is attached"}},
+             "INSUFFICIENT_DATA"),
+            ("all mentions negated is CLEAN",
+             {"pmid": "3", "retraction_check": {"result": "no erratum is attached"}}, "CLEAN"),
+            ("a locator on a corrected panel is REFUSED",
+             {"pmid": "4",
+              "retraction_check": {"result": "an erratum is attached",
+                                   "corrected_items": ["Figure 3A"]},
+              "verbatim_locators": {"entries": [{"anchor": "Figure 3, panel A"}]}}, "REFUSED"),
+            ("a locator clear of the corrected panel is CLEAN",
+             {"pmid": "5",
+              "retraction_check": {"result": "an erratum is attached",
+                                   "corrected_items": ["Figure 3A"]},
+              "verbatim_locators": {"entries": [{"anchor": "Figure 7, panel B"}]}}, "CLEAN"),
+        ]
+        for name, data, expect in verdict_cases:
+            f = Path(td) / f"PMID{data['pmid']}.json"
+            f.write_text(json.dumps(data), encoding="utf-8")
+            try:
+                verdict = screen_manifest(f)
+                got = verdict.verdict
+                # Every verdict must name the bytes it screened, or name what was missing.
+                if verdict.is_clean and not verdict.digest:
+                    got = "CLEAN WITHOUT A DIGEST"
+                if verdict.is_refused and not verdict.signature:
+                    got = "REFUSED WITHOUT A SIGNATURE"
+                if verdict.is_insufficient and not verdict.missing:
+                    got = "INSUFFICIENT WITHOUT A NAMED INPUT"
+            except Exception as exc:
+                got = f"RAISED {type(exc).__name__}: {exc}"
+            ok = got == expect
+            failures += (not ok)
+            cases.append(name)
+            print(f"  [{'ok' if ok else 'FAIL'}] {name}: expected {expect}, got {got}")
+
+        f = Path(td) / "PMID6.json"
+        f.write_text("{not json", encoding="utf-8")
+        got = screen_manifest(f).verdict
+        ok = got == "INSUFFICIENT_DATA"
+        failures += (not ok)
+        cases.append("an unreadable manifest is INSUFFICIENT_DATA")
+        print(f"  [{'ok' if ok else 'FAIL'}] an unreadable manifest is INSUFFICIENT_DATA: "
+              f"expected INSUFFICIENT_DATA, got {got}")
+
+    # 🔴 THE CONTROL RUN. Fixtures written by this tool's author agree with this tool's
+    # author. The 2026-09-09 crash lived in a branch no fixture had ever taken, and was found
+    # by a corpus-wide run. So the self-test ends by screening REAL manifests — and when they
+    # are absent it says SKIP, loudly, because a control that quietly passes when its inputs
+    # are missing is the defect this check exists to find.
+    corpus = sorted((Path(__file__).resolve().parents[2] / "disease-models").glob(
+        "*/research/deepdive_manifests/PMID*.json"))[:25]
+    if not corpus:
+        print("  [SKIP] real-corpus control: no manifest found under disease-models/ — "
+              "this case did not run and is NOT counted as passed")
+    else:
+        crashed = []
+        for path in corpus:
+            try:
+                verdict = screen_manifest(path)
+                assert verdict.verdict in ("CLEAN", "REFUSED", "INSUFFICIENT_DATA")
+                assert verdict.screened is not None, "a real manifest was read but not hashed"
+            except Exception as exc:
+                crashed.append(f"{path.name}: {type(exc).__name__}: {exc}")
+        ok = not crashed
+        failures += (not ok)
+        cases.append("real-corpus control run")
+        print(f"  [{'ok' if ok else 'FAIL'}] real-corpus control run over {len(corpus)} "
+              f"manifest(s): {'no crash, every verdict names its bytes' if ok else crashed[:3]}")
+
     print(f"self-test: {len(cases) - failures}/{len(cases)} passed")
     return 1 if failures else 0
 
@@ -323,13 +464,15 @@ def main() -> int:
     root = Path(args.root).resolve()
     pattern = (f"disease-models/{args.disease}/research/deepdive_manifests/*.json"
                if args.disease else "disease-models/*/research/deepdive_manifests/*.json")
-    results = []
+    verdicts = []
     for path in sorted(root.glob(pattern)):
         if args.pmid and not any(p in path.stem for p in args.pmid):
             continue
-        r = check_manifest(path)
-        if r:
-            results.append(r)
+        verdicts.append(screen_manifest(path))
+    # A manifest that never mentions an erratum stays out of the status listing, as before —
+    # but it is now counted in the verdict census below rather than vanishing.
+    results = [v.evidence for v in verdicts
+               if v.evidence.get("status") not in (None, "NOT_MENTIONED")]
 
     if args.json:
         for r in results:
@@ -362,6 +505,18 @@ def main() -> int:
         counts[r["status"]] = counts.get(r["status"], 0) + 1
     print("manifests with an erratum recorded: " + str(len(results)) + " | " +
           " | ".join(f"{k}: {v}" for k, v in sorted(counts.items())) or "none")
+
+    # The verdict census covers EVERY manifest looked at, including the ones that mention no
+    # erratum. Those were previously dropped from `results` and so from every number this
+    # tool printed, which made its denominator the manifests it had something to say about
+    # rather than the manifests it examined.
+    census = {"CLEAN": 0, "REFUSED": 0, "INSUFFICIENT_DATA": 0}
+    for v in verdicts:
+        census[v.verdict] += 1
+    print(f"manifests examined: {len(verdicts)} | CLEAN: {census['CLEAN']} | "
+          f"REFUSED: {census['REFUSED']} | INSUFFICIENT_DATA: {census['INSUFFICIENT_DATA']} "
+          "(of which the erratum question was never raised in the reading: "
+          f"{sum(1 for v in verdicts if v.evidence.get('status') == 'NOT_MENTIONED')})")
 
     if args.fail_on_review and counts.get("REVIEW_REQUIRED"):
         print("VERDICT: REVIEW_REQUIRED — a locator stands on a corrected panel; say in writing "

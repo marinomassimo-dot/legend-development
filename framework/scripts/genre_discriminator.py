@@ -44,6 +44,11 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from screen_verdict import ScreenVerdict  # noqa: E402
+
+SCREEN = "genre_discriminator"
+
 # Declared labels that assert a SUBSTANTIAL, refereed, surveying document.
 SURVEY_LABELS = {"review", "review-article", "systematic review", "meta-analysis"}
 # Declared labels that assert a SHORT, non-primary, usually invited document.
@@ -69,6 +74,39 @@ SHORT_REFERENCE_COUNT = 25
 
 def _norm(label: str) -> str:
     return re.sub(r"\s+", " ", str(label or "")).strip().lower()
+
+
+def screen(text: str, pubtypes=None) -> ScreenVerdict:
+    """Screen a deposit against its declared labels, naming the bytes it screened.
+
+    🔴 The verdict vocabulary here (AGREES / OVER_DESCRIBED / UNDER_DESCRIBED / DISAGREES /
+    INSUFFICIENT_DATA) is the tool's own and is kept: it is the finding. The screen verdict
+    sits beside it, because the repository-wide question — *did this screen look at the bytes
+    I am asking about?* — is not answerable from a genre word. On 2026-09-09 this tool flagged
+    every ordinary primary paper as UNDER_DESCRIBED while its fixtures all passed; a digest
+    would not have caught that (only the control run did), but it does make each verdict
+    attributable to a specific deposit afterwards, which is how such a run is audited.
+    """
+    uninformative = ScreenVerdict.reject_uninformative(
+        SCREEN, text, expected="the deposit (JATS XML or PMC HTML)")
+    if uninformative is not None:
+        return uninformative
+
+    result = classify([p for p in (pubtypes or []) if str(p).strip()], measure_deposit(text))
+    if result["verdict"] == "INSUFFICIENT_DATA":
+        missing = ", ".join(result["unmeasurable"]) or "a declared publication type or a deposit article-type"
+        return ScreenVerdict.insufficient(
+            SCREEN, missing=missing, data=text,
+            detail="; ".join(result["reasons"]), evidence=result)
+    if result["verdict"] == "AGREES":
+        return ScreenVerdict.clean(
+            SCREEN, text,
+            detail=("the declared labels and the deposit's own structure do not disagree. "
+                    "This never determines genre"),
+            evidence=result)
+    return ScreenVerdict.refused(
+        SCREEN, text, signature=result["verdict"],
+        detail="; ".join(result["reasons"]) or result["verdict"], evidence=result)
 
 
 def measure_deposit(text: str) -> dict:
@@ -306,6 +344,81 @@ def _self_test() -> int:
                        "figures": 3, "abstract": True})
     check("no declaration at all is INSUFFICIENT_DATA", r7["verdict"] == "INSUFFICIENT_DATA")
 
+    # ---------------------------------------------------------------------------
+    # The verdict contract (retrospective 9.2).
+    # ---------------------------------------------------------------------------
+    v_clean = screen(_F_REAL_REVIEW, ["Review"])
+    check("a deposit agreeing with its labels is CLEAN with a digest",
+          v_clean.is_clean and (v_clean.digest or "").startswith("sha256:"))
+    check("the digest is of the deposit's own bytes",
+          v_clean.covers(_F_REAL_REVIEW) and not v_clean.covers(_F_SHORT_REVIEW))
+    v_ref = screen(_F_SHORT_REVIEW, ["Review"])
+    check("a disagreement is REFUSED and names the genre verdict as its signature",
+          v_ref.is_refused and v_ref.signature == v_ref.evidence["verdict"])
+    # 🔴 These two assert on WHAT IS NAMED, not merely on the word INSUFFICIENT_DATA, and
+    # that distinction was found by mutation: this tool already returns INSUFFICIENT_DATA for
+    # an unmeasurable deposit, so removing the input guard entirely left both cases green
+    # while the verdict named "page_span, references" as the missing input for a surface that
+    # was never there at all. A verdict that names the wrong missing thing sends the reader to
+    # re-derive discriminators when the repair is to acquire the deposit.
+    v_empty = screen("", ["Review"])
+    check("an empty deposit names the DEPOSIT as the missing input, not a discriminator",
+          v_empty.is_insufficient and "deposit" in v_empty.missing)
+    v_path = screen(__file__, ["Review"])
+    check("a path handed where the deposit belongs is refused as a path",
+          v_path.is_insufficient and "always passes" in v_path.detail)
+
+    # ---------------------------------------------------------------------------
+    # 🔴 THE CONTROL RUN, and it is the reason this block exists.
+    #
+    # On 2026-09-09 this tool flagged EVERY ordinary primary paper as UNDER_DESCRIBED while
+    # all of its fixtures passed. Fixtures are written by the author and agree with the
+    # author; only real deposits whose genre was never in doubt exposed it. So the self-test
+    # ends by running against the real corpus, with the declared type read out of the tracked
+    # corpus seed rather than assumed here — and it says SKIP, loudly, when files/ is absent.
+    #
+    # What is asserted is what the defect actually was: EVERY primary flagged. It is
+    # deliberately not "no primary is ever flagged" — two of the deposits in this checkout are
+    # published CORRECTIONS, which are genuinely short against a bare "Journal Article" label,
+    # and the coarse primary/review column here is not the paper's real PubMed type. This
+    # tool reports a reason to look; an assertion stricter than the evidence would make it
+    # report a reason to ignore it.
+    # ---------------------------------------------------------------------------
+    root = Path(__file__).resolve().parents[2]
+    seed = root / "disease-models" / "wwox" / "registries" / "corpus_seed_pubmed_20260705.tsv"
+    deposits = sorted((root / "files" / "fulltext").glob("*_PMC*.xml")) + \
+        sorted((root / "files" / "fulltext").glob("*_PMC*.html"))
+    if not deposits or not seed.is_file():
+        print("  [SKIP] real-corpus control run: no deposit under files/fulltext/ (gitignored) "
+              "or no corpus seed — this case did NOT run and is not counted as passed")
+    else:
+        import csv as _csv
+        with seed.open(encoding="utf-8") as handle:
+            declared_type = {row["pmid"]: row["type"]
+                             for row in _csv.DictReader(handle, delimiter="\t")}
+        primaries, under, crashed = 0, 0, []
+        for deposit in deposits:
+            match = re.match(r"PMID(\d+)", deposit.name)
+            if not match:
+                continue
+            kind = declared_type.get(match.group(1))
+            pubtypes = ["Journal Article"] + (["Review"] if kind == "review" else [])
+            try:
+                verdict = screen(deposit.read_text(encoding="utf-8", errors="replace"),
+                                 pubtypes)
+                assert verdict.screened is not None, "a real deposit was read but not hashed"
+            except Exception as exc:
+                crashed.append(f"{deposit.name}: {type(exc).__name__}: {exc}")
+                continue
+            if kind == "primary":
+                primaries += 1
+                under += verdict.evidence.get("verdict") == "UNDER_DESCRIBED"
+        check(f"the corpus-wide control run does not crash ({len(deposits)} deposits)",
+              not crashed)
+        check(f"not every ordinary primary deposit is UNDER_DESCRIBED "
+              f"({under} of {primaries} — 2026-09-09 baseline: all of them)",
+              primaries > 0 and under < primaries)
+
     print(f"self-test: {ok} passed, {fail} failed")
     return 0 if fail == 0 else 1
 
@@ -327,14 +440,23 @@ def main() -> int:
 
     path = Path(a.artifact)
     if not path.is_file():
-        print(f"ERROR: no such artifact: {path}", file=sys.stderr)
+        verdict = ScreenVerdict.insufficient(
+            SCREEN, missing=f"artifact {path}", detail="no such file")
+        print(verdict.render(), file=sys.stderr)
         return 2
-    measured = measure_deposit(path.read_text(encoding="utf-8", errors="replace"))
-    result = classify([p for p in a.pubtypes.split(",") if p.strip()], measured)
+    verdict = screen(path.read_text(encoding="utf-8", errors="replace"),
+                     [p for p in a.pubtypes.split(",") if p.strip()])
+    result = verdict.evidence or {"verdict": verdict.verdict, "reasons": [verdict.detail],
+                                  "flags": [], "declared": [], "article_type": None,
+                                  "measured": {}}
 
     if a.json:
-        print(json.dumps(result, indent=1, ensure_ascii=False))
+        record = verdict.as_dict()
+        record["genre_verdict"] = result.get("verdict")
+        record["result"] = result
+        print(json.dumps(record, indent=1, ensure_ascii=False))
         return 0
+    print(verdict.render())
     print(f"VERDICT: {result['verdict']}")
     print(f"  declared publication types : {result['declared'] or '(none given)'}")
     print(f"  deposit article-type       : {result['article_type']}")

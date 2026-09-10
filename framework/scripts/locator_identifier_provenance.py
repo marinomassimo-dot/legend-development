@@ -48,6 +48,13 @@ import re
 import sys
 from pathlib import Path
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from screen_verdict import ScreenVerdict  # noqa: E402
+
+SCREEN = "locator_identifier_provenance"
+SIGNATURE_UNDECLARED = "UNDECLARED_EXTERNAL_IDENTIFIER"
+SIGNATURE_SOURCE_IDENTITY = "SOURCE_IDENTITY_UNVERIFIED"
+
 PMID_RE = re.compile(r"\bPMID[:\s]*([0-9]{7,8})\b", re.IGNORECASE)
 BARE_PMID_RE = re.compile(r"\b([0-9]{8})\b")
 PMCID_RE = re.compile(r"\bPMC([0-9]{5,9})\b")
@@ -174,6 +181,76 @@ def audit_manifest(path: Path, root: Path) -> dict:
     }
 
 
+def screened_surface(manifest: dict, hay: str) -> str:
+    """The exact text compared: every proposition, then the artefact haystack.
+
+    Both halves belong in the digest. The propositions are what is searched FOR identifiers;
+    the haystack is what they are searched IN, and a verdict computed against a haystack that
+    has since changed is a verdict about a different comparison. Including only the manifest
+    would produce a digest that stays constant while the answer moves.
+    """
+    entries = ((manifest.get("verbatim_locators") or {}).get("entries")) or []
+    props = "\n".join(str(entry.get("proposition", "")) for entry in entries)
+    return props + "\0" + hay
+
+
+def screen_manifest(path: Path, root: Path) -> ScreenVerdict:
+    """Screen one manifest's propositions for identifiers, and say what was screened.
+
+    🔴 The three uninformative passes this closes, all of which previously produced a record
+    of four zero counts that reads exactly like a clean result:
+
+    * an unreadable or malformed manifest;
+    * a manifest whose declared artefacts are ABSENT — `files/` is gitignored, so the haystack
+      is then empty and every identifier is trivially "not in the artefact". The tool's own
+      first measurement found only 26 of 80 manifests fully present, and `main` already
+      separated them; the per-manifest record did not, so a caller using this function
+      directly got a green about bytes it never saw;
+    * a manifest with no identifier in any proposition — nothing was measured, which is not
+      the same as nothing being wrong.
+    """
+    try:
+        manifest = json.loads(path.read_text())
+    except (OSError, ValueError) as exc:
+        return ScreenVerdict.insufficient(
+            SCREEN, missing=f"manifest {path}", detail=str(exc))
+
+    hay, missing = artefact_haystack(manifest, root)
+    report = audit_manifest(path, root)
+    surface = screened_surface(manifest, hay)
+
+    if missing:
+        return ScreenVerdict.insufficient(
+            SCREEN, missing="declared artefacts: " + ", ".join(missing), data=surface,
+            detail=("the evidence these propositions would be checked against is not in this "
+                    "checkout, so every identifier would read as absent from the artefact. "
+                    "That is an evidence-locality fact, not a provenance finding"),
+            evidence=report)
+    if not report["rows"]:
+        return ScreenVerdict.insufficient(
+            SCREEN, missing="an identifier in any proposition", data=surface,
+            detail=("no proposition in this manifest asserts a PMID, PMCID or DOI, so there "
+                    "was nothing to trace. Nothing measured is not the same as nothing wrong"),
+            evidence=report)
+
+    flagged = [row for row in report["rows"]
+               if row["verdict"] in ("UNDECLARED_EXTERNAL", "SOURCE_IDENTITY_UNVERIFIED")]
+    if flagged:
+        signatures = sorted({row["verdict"] for row in flagged})
+        return ScreenVerdict.refused(
+            SCREEN, surface, signature="+".join(signatures),
+            detail=(f"{len(flagged)} identifier(s) asserted in a proposition that do not occur "
+                    "in any declared artefact. This is a review queue, never an accusation: it "
+                    "reports where a reading COULD have got the value, never whether the value "
+                    "is correct"),
+            evidence=report)
+    return ScreenVerdict.clean(
+        SCREEN, surface,
+        detail=(f"{len(report['rows'])} identifier(s) traced; each occurs in a declared "
+                "artefact or is declared external. Not a claim that any value is correct"),
+        evidence=report)
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("manifest", nargs="*", help="manifest paths; default is every manifest of the disease")
@@ -190,14 +267,7 @@ def main() -> int:
     else:
         paths = sorted((root / "disease-models" / args.disease / "research" / "deepdive_manifests").glob("PMID*.json"))
 
-    reports = []
-    for path in paths:
-        try:
-            reports.append(audit_manifest(path, root))
-        except (json.JSONDecodeError, OSError) as exc:
-            reports.append({"manifest": str(path), "error": str(exc), "rows": [],
-                            "counts": {"IN_ARTEFACT": 0, "DECLARED_EXTERNAL": 0,
-                                       "UNDECLARED_EXTERNAL": 0, "SOURCE_IDENTITY_UNVERIFIED": 0}})
+    verdicts = [screen_manifest(path, root) for path in paths]
 
     # 🔴 A MANIFEST WHOSE EVIDENCE IS ABSENT CANNOT BE MEASURED, AND COUNTING IT ANYWAY PRODUCES
     # A HEADLINE NUMBER THAT ANSWERS A DIFFERENT QUESTION. `files/` is gitignored by design, so in
@@ -205,16 +275,20 @@ def main() -> int:
     # haystack EVERY identifier is "not in the artefact" and the tool would report a corpus-wide
     # provenance crisis that is really an evidence-locality fact. First run, 2026-09-09: 80
     # manifests, of which only 26 had all their declared artefacts present. The unmeasurable ones
-    # are separated here rather than averaged in.
-    measurable = [r for r in reports if not r.get("artefacts_missing") and "error" not in r]
-    unmeasurable = [r for r in reports if r.get("artefacts_missing") or "error" in r]
+    # are separated here rather than averaged in — and since 2026-09-10 they carry the verdict
+    # INSUFFICIENT_DATA naming exactly which artefacts are missing, rather than four zero counts.
+    measured = [v for v in verdicts if not v.is_insufficient]
+    unmeasurable = [v for v in verdicts if v.is_insufficient]
 
     if args.json:
-        print(json.dumps({"measurable": measurable, "unmeasurable": unmeasurable}, indent=1))
+        print(json.dumps({"measurable": [v.evidence for v in measured],
+                          "unmeasurable": [v.evidence for v in unmeasurable],
+                          "verdicts": [v.as_dict() for v in verdicts]}, indent=1))
     else:
         total = {"IN_ARTEFACT": 0, "DECLARED_EXTERNAL": 0, "UNDECLARED_EXTERNAL": 0,
                  "SOURCE_IDENTITY_UNVERIFIED": 0}
-        for rep in measurable:
+        for verdict in measured:
+            rep = verdict.evidence
             for k, v in rep["counts"].items():
                 total[k] += v
             flagged = [r for r in rep["rows"]
@@ -223,10 +297,10 @@ def main() -> int:
                 print(f"{rep.get('pmid')}  {rep['manifest']}")
                 for r in flagged:
                     print(f"    [{r['verdict']}] entries[{r['entry']}]: {r['identifier']}")
-        for rep in unmeasurable:
-            if rep.get("artefacts_missing"):
-                print(f"{rep.get('pmid')}  [UNMEASURABLE - artefact absent] {', '.join(rep['artefacts_missing'])}")
-        print(f"manifests: {len(reports)} | measurable (all artefacts present): {len(measurable)} | "
+                print(f"    {verdict.render()}")
+        for verdict in unmeasurable:
+            print(f"{verdict.evidence.get('pmid')}  {verdict.render()}")
+        print(f"manifests: {len(verdicts)} | measurable (all artefacts present): {len(measured)} | "
               f"unmeasurable (evidence absent): {len(unmeasurable)}")
         print(f"over the measurable ones -- in artefact: {total['IN_ARTEFACT']} | "
               f"declared external: {total['DECLARED_EXTERNAL']} | undeclared external: "
@@ -236,8 +310,7 @@ def main() -> int:
 
     # --strict judges only what could be measured: an absent artefact is an evidence-locality
     # problem for the receipt contract to raise, never a provenance failure of the reading.
-    if args.strict and any(r["counts"]["UNDECLARED_EXTERNAL"]
-                           or r["counts"]["SOURCE_IDENTITY_UNVERIFIED"] for r in measurable):
+    if args.strict and any(v.is_refused for v in measured):
         return 1
     return 0
 
