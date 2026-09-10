@@ -46,6 +46,7 @@ import corpus_firewall as firewall  # noqa: E402
 import manifest_queue_id_crosscheck as queue_ids  # noqa: E402
 import text_surface_intrusion_check as intrusion_check  # noqa: E402
 import locator_identifier_provenance as provenance  # noqa: E402
+from screen_verdict import ScreenVerdict  # noqa: E402
 
 MANIFEST_DIR = "disease-models/{disease}/research/deepdive_manifests"
 
@@ -531,8 +532,42 @@ STATISTICAL_LANGUAGE = re.compile(
 MIN_STATISTICAL_MENTIONS = 3
 
 
-def _refuse_suspect_surface(path: Path, *parts: str) -> None:
-    """A declared text surface holding C0 controls is SUSPECT and is refused, not cleaned.
+SUSPECT_SCREEN = "deepdive_manifest.suspect_surface"
+SIGNATURE_C0_CONTROL = "C0_CONTROL"
+SIGNATURE_PRINTABLE_SUBSTITUTION = "PRINTABLE_SUBSTITUTION"
+SIGNATURE_COMPARATORS_ABSENT = "STATISTICAL_LANGUAGE_WITHOUT_COMPARATOR"
+
+
+class SuspectSurface(ValueError):
+    """A refusal that carries the verdict record which produced it.
+
+    🔴 A `ValueError` SUBCLASS on purpose, and the subclassing is the whole compatibility
+    story. `_artifact_text` raises through `validate`, which catches `ValueError`; the
+    argument-shape regressions assert `ValueError`; and every existing `except ValueError`
+    keeps working unchanged. What is added is `.verdict` — so a caller that wants to know
+    WHICH signature fired, and over which bytes, can ask instead of parsing the message.
+    "The gate said no" is not a finding; "the gate said no because X" is.
+    """
+
+    def __init__(self, verdict: ScreenVerdict) -> None:
+        super().__init__(verdict.detail)
+        self.verdict = verdict
+
+
+def screen_suspect_surface(path: Path, *parts: str) -> ScreenVerdict:
+    """The § 9.2 verdict form of the suspect-surface screen.
+
+    A verdict here is a RECORD, not a boolean, and it carries the digest of exactly the
+    bytes screened. That is what lets a later caller answer the question the 2026-09-09
+    inversion could not: *did this screen look at the surface I am asking about?* Compare
+    `verdict.screened["digest"]` with the digest of your own bytes; if they differ the
+    verdict is about a different document, whatever colour it is.
+
+    The argument-shape violations below stay TypeErrors and are NOT verdicts. They are
+    caller bugs — a call that screens a filename asserts nothing — and a verdict record
+    about the wrong bytes is precisely what the contract exists to make unrepresentable.
+
+    A declared text surface holding C0 controls is SUSPECT and is refused, not cleaned.
 
     🔴 Refused, never normalised. Stripping the controls would launder the defect into every
     quote drawn from the surface, and the quotes would then verify — against a document that
@@ -577,15 +612,29 @@ def _refuse_suspect_surface(path: Path, *parts: str) -> None:
                 f"path or filename ({stripped!r}), not its text. Screening a filename always "
                 "passes and asserts nothing about the surface")
 
+    # 🔴 The digest is taken over the JOINED parts — exactly the bytes examined below, and
+    # nothing else. A verdict whose digest covered the file while the screen read a subset
+    # would be the same lie the contract exists to prevent, one level down.
+    screened = "\n".join(parts)
+    uninformative = ScreenVerdict.reject_uninformative(
+        SUSPECT_SCREEN, screened, expected="the artifact's own decoded text")
+    if uninformative is not None:
+        return uninformative
+
     for part in parts:
         found = C0_CONTROL.search(part)
         if found:
-            raise ValueError(
-                f"SUSPECT text surface: {path.name} contains the C0 control "
-                f"U+{ord(found.group()):04X} at offset {found.start()}. A control character is "
-                f"not whitespace — it is a glyph that did not survive extraction, so every "
-                f"quote taken from this surface is unverifiable. Re-derive the artifact from "
-                f"the source; do not strip the controls"
+            return ScreenVerdict.refused(
+                SUSPECT_SCREEN, screened, signature=SIGNATURE_C0_CONTROL,
+                detail=(
+                    f"SUSPECT text surface: {path.name} contains the C0 control "
+                    f"U+{ord(found.group()):04X} at offset {found.start()}. A control "
+                    f"character is not whitespace — it is a glyph that did not survive "
+                    f"extraction, so every quote taken from this surface is unverifiable. "
+                    f"Re-derive the artifact from the source; do not strip the controls"),
+                evidence={"codepoint": f"U+{ord(found.group()):04X}",
+                          "offset": found.start(),
+                          "count": len(C0_CONTROL.findall(part))},
             )
 
     # The remaining checks read entities, not raw markup: a PMC XML writes `&lt;`, and that IS
@@ -596,24 +645,64 @@ def _refuse_suspect_surface(path: Path, *parts: str) -> None:
         for pattern, description in PRINTABLE_SUBSTITUTIONS:
             found = pattern.search(readable)
             if found:
-                raise ValueError(
-                    f"SUSPECT text surface: {path.name} contains {description} at offset "
-                    f"{found.start()} ({found.group()!r}). This substitution is PRINTABLE, so "
-                    f"no control-character check can see it, and repairing the controls would "
-                    f"leave the surface looking clean and reading wrong. Adjudicate against "
-                    f"the rendered page and re-derive; do not edit the character"
+                return ScreenVerdict.refused(
+                    SUSPECT_SCREEN, screened,
+                    signature=SIGNATURE_PRINTABLE_SUBSTITUTION,
+                    detail=(
+                        f"SUSPECT text surface: {path.name} contains {description} at offset "
+                        f"{found.start()} ({found.group()!r}). This substitution is PRINTABLE, "
+                        f"so no control-character check can see it, and repairing the controls "
+                        f"would leave the surface looking clean and reading wrong. Adjudicate "
+                        f"against the rendered page and re-derive; do not edit the character"),
+                    evidence={"description": description, "offset": found.start(),
+                              "matched": found.group()},
                 )
         mentions = len(STATISTICAL_LANGUAGE.findall(readable))
         operators = sum(readable.count(character) for character in TYPOGRAPHIC_OPERATORS)
         if mentions >= MIN_STATISTICAL_MENTIONS and operators == 0:
-            raise ValueError(
-                f"SUSPECT text surface: {path.name} uses statistical language "
-                f"({mentions} mentions) and contains none of "
-                f"{' '.join(TYPOGRAPHIC_OPERATORS)}. Suspicion here is by ABSENCE: a paper "
-                f"that tests significance and never prints a comparator is a text layer that "
-                f"lost them. Adjudicate against the rendered page before declaring this "
-                f"surface"
+            return ScreenVerdict.refused(
+                SUSPECT_SCREEN, screened, signature=SIGNATURE_COMPARATORS_ABSENT,
+                detail=(
+                    f"SUSPECT text surface: {path.name} uses statistical language "
+                    f"({mentions} mentions) and contains none of "
+                    f"{' '.join(TYPOGRAPHIC_OPERATORS)}. Suspicion here is by ABSENCE: a "
+                    f"paper that tests significance and never prints a comparator is a text "
+                    f"layer that lost them. Adjudicate against the rendered page before "
+                    f"declaring this surface"),
+                # 🔴 B16: this signature fired on 8 harmless front-matter separators while
+                # the real corruption matched nothing, and was one step from being accepted
+                # as a verdict about the corruption. The counts are carried so the next
+                # caller can ask what it refused FOR without re-deriving them.
+                evidence={"statistical_mentions": mentions, "typographic_operators": 0,
+                          "threshold": MIN_STATISTICAL_MENTIONS},
             )
+
+    return ScreenVerdict.clean(
+        SUSPECT_SCREEN, screened,
+        detail=(
+            f"{path.name}: no C0 control, no printable substitution, and comparators present "
+            f"or statistical language below {MIN_STATISTICAL_MENTIONS} mentions. This is NOT "
+            f"proof the surface is faithful — only that these three signatures are absent"),
+    )
+
+
+def _refuse_suspect_surface(path: Path, *parts: str) -> ScreenVerdict:
+    """Screen a surface and RAISE on refusal, returning the verdict record otherwise.
+
+    🔴 It returns the verdict now instead of `None`, and that is the § 9.2 conversion: a
+    caller holding this record can say which bytes were screened and, through
+    `SuspectSurface.verdict`, which signature fired. The raising behaviour is deliberately
+    unchanged — every in-tree caller and the argument-shape regressions depend on it, and a
+    screen whose refusal became a return value would be a silent pass at every site that
+    forgot to check.
+
+    INSUFFICIENT_DATA raises too. A zero-length surface is not a clean surface; treating it
+    as one is the same silent pass in its quietest form.
+    """
+    verdict = screen_suspect_surface(path, *parts)
+    if verdict.is_refused or verdict.is_insufficient:
+        raise SuspectSurface(verdict)
+    return verdict
 
 
 # A subset name that says the font carries mathematics or Greek. These are where `α β × ± µ Δ`

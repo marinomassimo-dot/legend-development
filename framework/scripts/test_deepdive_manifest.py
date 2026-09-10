@@ -1318,6 +1318,117 @@ class AFileCanBeWellFormedAndDeclareTheFalse(unittest.TestCase):
         self.assertFalse([item for item in errors if "symbol fonts unmapped" in item], errors)
 
 
+class TheSuspectSurfaceScreenReturnsAVerdict(unittest.TestCase):
+    """§ 9.2: every screen must say what it screened.
+
+    A boolean is a claim with its evidence deleted. `True` cannot say what it looked at —
+    which is how a call with inverted arguments screened a FILENAME and returned CLEAN over
+    a PDF text layer carrying 191 C0 controls — and `False` cannot say what fired, which is
+    how a refusal over 8 harmless front-matter separators was one step from being accepted
+    as a verdict about a genotype corruption it had matched with nothing.
+    """
+
+    CLEAN_TEXT = ("A perfectly ordinary sentence from a paper, long enough to be a surface "
+                  "and carrying no signature at all.")
+
+    def _path(self, name: str = "PMID99999999_Fixture.txt") -> Path:
+        tmp = TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        return Path(tmp.name) / name
+
+    def test_a_clean_surface_returns_a_verdict_that_names_the_bytes(self) -> None:
+        verdict = gate.screen_suspect_surface(self._path(), self.CLEAN_TEXT)
+        self.assertTrue(verdict.is_clean)
+        self.assertEqual(verdict.screened["bytes"], len(self.CLEAN_TEXT.encode("utf-8")))
+        self.assertTrue(verdict.digest.startswith("sha256:"))
+        self.assertTrue(verdict.covers(self.CLEAN_TEXT))
+
+    def test_the_digest_is_over_what_was_screened_not_over_the_file(self) -> None:
+        """Two parts are screened as one; the digest must cover exactly that."""
+        verdict = gate.screen_suspect_surface(self._path(), "First half of it. ", "Second.")
+        self.assertTrue(verdict.covers("First half of it. \nSecond."))
+        self.assertFalse(verdict.covers("First half of it. "))
+
+    def test_a_clean_verdict_never_claims_the_surface_is_faithful(self) -> None:
+        verdict = gate.screen_suspect_surface(self._path(), self.CLEAN_TEXT)
+        self.assertIn("NOT proof the surface is faithful", verdict.detail)
+
+    def test_a_c0_control_refusal_names_its_signature_and_its_evidence(self) -> None:
+        text = "The value was (P \x1d 0.023) in that experiment, which the page prints with <."
+        verdict = gate.screen_suspect_surface(self._path(), text)
+        self.assertTrue(verdict.is_refused)
+        self.assertEqual(verdict.signature, gate.SIGNATURE_C0_CONTROL)
+        self.assertEqual(verdict.evidence["codepoint"], "U+001D")
+        self.assertTrue(verdict.covers(text))
+
+    def test_a_printable_substitution_refusal_names_its_signature(self) -> None:
+        text = ("Densitometry gave a ratio of 3 ¼ 7 across the lanes, which is the Elsevier "
+                "text layer writing an equals sign as a fraction glyph.")
+        verdict = gate.screen_suspect_surface(self._path(), text)
+        self.assertTrue(verdict.is_refused)
+        self.assertEqual(verdict.signature, gate.SIGNATURE_PRINTABLE_SUBSTITUTION)
+
+    def test_the_absence_signature_carries_the_counts_it_refused_on(self) -> None:
+        """🔴 B16: 'the gate said no' is not a finding; 'the gate said no because X' is."""
+        text = ("The difference was significant by t-test, and the P-value was reported for "
+                "every comparison, with significance throughout and a standard deviation "
+                "given per group.")
+        verdict = gate.screen_suspect_surface(self._path(), text)
+        self.assertTrue(verdict.is_refused)
+        self.assertEqual(verdict.signature, gate.SIGNATURE_COMPARATORS_ABSENT)
+        self.assertGreaterEqual(verdict.evidence["statistical_mentions"],
+                                gate.MIN_STATISTICAL_MENTIONS)
+        self.assertEqual(verdict.evidence["typographic_operators"], 0)
+
+    def test_an_empty_surface_is_insufficient_data_and_never_clean(self) -> None:
+        """A zero-length surface is not a clean surface; that is the quietest silent pass."""
+        verdict = gate.screen_suspect_surface(self._path(), "")
+        self.assertTrue(verdict.is_insufficient)
+        self.assertFalse(verdict.is_clean)
+
+    def test_the_screen_returns_a_refusal_instead_of_raising_it(self) -> None:
+        """A caller may inspect a refusal without exception handling — that is the point."""
+        verdict = gate.screen_suspect_surface(self._path(), "Bad \x0c surface text here now.")
+        self.assertTrue(verdict.is_refused)
+
+    def test_the_refusing_wrapper_still_raises_and_carries_the_verdict(self) -> None:
+        path = self._path()
+        with self.assertRaises(gate.SuspectSurface) as caught:
+            gate._refuse_suspect_surface(path, "The value was (P \x1d 0.023) in that run.")
+        self.assertEqual(caught.exception.verdict.signature, gate.SIGNATURE_C0_CONTROL)
+        self.assertIn("SUSPECT text surface", str(caught.exception))
+
+    def test_the_refusal_is_still_a_valueerror(self) -> None:
+        """Compatibility: validate() catches ValueError, and so do the shape regressions."""
+        self.assertTrue(issubclass(gate.SuspectSurface, ValueError))
+        with self.assertRaises(ValueError):
+            gate._refuse_suspect_surface(self._path(), "Bad \x1e surface text right here.")
+
+    def test_insufficient_data_raises_rather_than_passing(self) -> None:
+        with self.assertRaises(gate.SuspectSurface) as caught:
+            gate._refuse_suspect_surface(self._path(), "")
+        self.assertTrue(caught.exception.verdict.is_insufficient)
+
+    def test_the_wrapper_returns_the_verdict_on_a_clean_surface(self) -> None:
+        verdict = gate._refuse_suspect_surface(self._path(), self.CLEAN_TEXT)
+        self.assertTrue(verdict.is_clean)
+        self.assertTrue(verdict.covers(self.CLEAN_TEXT))
+
+    def test_an_inverted_call_is_a_typeerror_and_not_a_verdict(self) -> None:
+        """🔴 A verdict record about the wrong bytes is what the contract makes impossible.
+
+        The argument-shape violations stay exceptions rather than becoming
+        INSUFFICIENT_DATA: they are caller bugs, and returning a well-formed verdict for
+        them would hand the caller exactly the green result to point at that the whole
+        contract exists to withhold.
+        """
+        path = self._path()
+        with self.assertRaises(TypeError):
+            gate.screen_suspect_surface("the text goes here, inverted", str(path))
+        with self.assertRaises(TypeError):
+            gate.screen_suspect_surface(path, path.name)
+
+
 class IdentifiersAndCountsMustComeFromTheArtefact(unittest.TestCase):
     """§ 9.4: a value asserted in a proposition is in the artefact, or it is DECLARED.
 
