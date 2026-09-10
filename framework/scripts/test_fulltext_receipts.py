@@ -9,6 +9,7 @@ import json
 import multiprocessing
 import os
 import tempfile
+import subprocess
 import sys
 import time
 import unittest
@@ -1498,6 +1499,97 @@ class IdentityCorrectionChangesTheLabelAndNothingElse(unittest.TestCase):
             "the mutant must be lethal: with the frozen list emptied the forged record has to "
             "sail through, or this test is asserting something other than the guard")
 
+
+
+class TheCommandLineIsWhatActorsRun(unittest.TestCase):
+    """Every case above enters the library. None entered `main`, and `main` is the surface.
+
+    The 2026-09-10 self-test meta-test (`self_test_coverage.py`) reported this suite with
+    `entry_point_called: false`: 94 cases and not one through the CLI that three actors
+    invoke on every reading. A CLI that parsed an option wrongly, printed the wrong exit
+    status or swallowed the writer's reason would have passed every case here. These run the
+    real subprocess, because that is what a reader's shell does.
+    """
+
+    MANIFEST = "# fixture state manifest\nfulltext_ledger_events: 0\nfulltext_ledger_head: none\n"
+
+    def setUp(self) -> None:
+        self.temporary = TemporaryDirectory()
+        self.addCleanup(self.temporary.cleanup)
+        root = Path(self.temporary.name)
+        self.ledger = root / "receipts.jsonl"
+        self.manifest = root / "state_manifest.md"
+        self.manifest.write_text(self.MANIFEST, encoding="utf-8")
+        self.script = Path(__file__).resolve().with_name("fulltext_receipts.py")
+
+    def cli(self, *args: str) -> subprocess.CompletedProcess:
+        return subprocess.run(
+            [sys.executable, str(self.script), "--ledger", str(self.ledger),
+             "--manifest", str(self.manifest), *args],
+            capture_output=True, text=True,
+        )
+
+    def write_receipt(self, name: str, **overrides) -> Path:
+        receipt = example(f"FTR-20260725-42193054-{name}")
+        receipt.update(overrides)
+        path = Path(self.temporary.name) / f"{name}.json"
+        path.write_text(json.dumps(receipt), encoding="utf-8")
+        return path
+
+    def test_record_then_validate_then_status_through_the_cli(self) -> None:
+        recorded = self.cli("record", "--receipt", str(self.write_receipt("01")))
+        self.assertEqual(0, recorded.returncode, recorded.stderr)
+        self.assertIn("RECORDED: FTR-20260725-42193054-01", recorded.stdout)
+
+        validated = self.cli("validate")
+        self.assertEqual(0, validated.returncode, validated.stderr)
+        self.assertIn("OK: 1 valid receipt(s)", validated.stdout)
+
+        # `status` exits 0 only on a complete receipt - the preflight actors gate on.
+        self.assertEqual(0, self.cli("status", "--pmid", "42193054").returncode)
+        self.assertEqual(1, self.cli("status", "--pmid", "99999999").returncode)
+
+    def test_a_refused_record_says_why_on_stderr_and_exits_non_zero(self) -> None:
+        """'The gate said no' is not a finding; 'the gate said no because X' is."""
+        bad = self.write_receipt("01", coverage={key: "not_read" for key in receipts.COVERAGE_KEYS})
+        result = self.cli("record", "--receipt", str(bad))
+        self.assertNotEqual(0, result.returncode)
+        self.assertIn("not_read", result.stderr + result.stdout)
+        self.assertFalse(self.ledger.exists(), "a refused append must leave no ledger behind")
+
+    def test_anchor_then_verify_then_truncation_is_caught_at_the_cli(self) -> None:
+        self.cli("record", "--receipt", str(self.write_receipt("01")))
+        partial = self.write_receipt(
+            "02", evidence_depth="partial_fulltext_read",
+            prior_receipt="FTR-20260725-42193054-01",
+            reread_reason="inadequate_prior_coverage",
+        )
+        self.cli("record", "--receipt", str(partial))
+        anchored = self.cli("anchor")
+        self.assertEqual(0, anchored.returncode, anchored.stderr)
+        self.assertIn("ANCHORED: 2 event(s)", anchored.stdout)
+        self.assertEqual(0, self.cli("verify").returncode)
+
+        # Lop off the last event: the chain stays self-consistent, only the anchor sees it.
+        lines = self.ledger.read_text(encoding="utf-8").splitlines(keepends=True)
+        self.ledger.write_text("".join(lines[:-1]), encoding="utf-8")
+        self.assertEqual(0, self.cli("validate").returncode, "the chain alone cannot see it")
+        truncated = self.cli("verify")
+        self.assertNotEqual(0, truncated.returncode)
+
+    def test_verify_runs_against_the_live_repository_ledger(self) -> None:
+        """A real corpus artefact, read-only. Degrades to a declared skip, never a green."""
+        root = Path(__file__).resolve().parents[2]
+        live_ledger = root / "disease-models" / "wwox" / "registries" / "fulltext_read_receipts.jsonl"
+        live_manifest = root / "framework" / "state" / "state_manifest_current.md"
+        if not (live_ledger.is_file() and live_manifest.is_file()):
+            self.skipTest("live ledger or state manifest absent from this checkout")
+        result = subprocess.run(
+            [sys.executable, str(self.script), "--root", str(root), "verify"],
+            capture_output=True, text=True, cwd=root,
+        )
+        self.assertEqual(0, result.returncode, result.stderr)
+        self.assertRegex(result.stdout, r"OK: \d+ chained receipt\(s\), tail anchored")
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
