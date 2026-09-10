@@ -1,0 +1,250 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.2 TASK_ACK + A.3 TASK_CLAIM",
+  "_note": "Harness Engineering work under LEGEND_CORE §21e (T0, no gate, no Mirror precondition). DEFAULTS_TAKEN and STOP_LOG are recorded HERE and not only in the final message, because retrospective § 9.7 measured that every default taken during ten unattended hours on 2026-09-09 lived in a transcript: a repository-wide grep found DEFAULTS_TAKEN in two files, and the baseline for waves carrying both keys was 0 of 11.",
+  "TASK_ID": "HARNESS-SCREENS-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+  "TASK_ACK": {
+    "state": "COMPLETE",
+    "accepted_on": "2026-09-10",
+    "objective": "Retrospective § 9.2: every screen must say what it screened — a shared verdict contract carrying the digest of exactly the bytes screened, and the conversion of the screens to it. Retrospective § 9.3: a meta-test measuring whether each tool's own suite ever drives the tool's top-level entry point, with at least one case drawn from a real corpus artefact.",
+    "specification": "disease-models/wwox/analysis/orchestration_reviews/2026-09-09_actor_retrospective.md §§ 0.3, 2.2 (B13, B16), 3.1, 4.1, 4.2, 5.2, 9.2, 9.3",
+    "interaction_mode": "AUTONOMOUS_COMPLETE",
+    "review_requirement": "none — harness is T0 under §21e; Mirror reviews ex post and on request"
+  },
+  "TASK_CLAIM": {
+    "claimed_by": "plan",
+    "claimed_on": "2026-09-10",
+    "timestamp_precision": "date only — the runtime exposed no wall-clock time",
+    "durable_pointer": "framework/scripts/screen_verdict.py, framework/scripts/self_test_coverage.py",
+    "uniqueness": "no competing claim exists for this TASK_ID + GENERATION"
+  },
+  "WRITE_PERIMETER": {
+    "permitted_here": [
+      "framework/scripts/screen_verdict.py",
+      "framework/scripts/self_test_coverage.py",
+      "framework/scripts/text_surface_intrusion_check.py",
+      "framework/scripts/oa_status_dissent.py",
+      "framework/scripts/manifest_flag_drift.py",
+      "framework/scripts/locator_identifier_provenance.py",
+      "framework/scripts/erratum_scope_check.py",
+      "framework/scripts/genre_discriminator.py",
+      "their test_*.py",
+      "ledger/tasks/plan/HARNESS-SCREENS-001.json"
+    ],
+    "deliberately_not_touched": {
+      "framework/scripts/deepdive_manifest.py": "peer-owned this session; it holds _refuse_suspect_surface, the seventh screen, and imports this task's contract module",
+      "framework/scripts/dependency_integrity.py": "peer-owned; carries a reconciliation point for this contract (see PEER_FINDINGS_REPORTED_NOT_FIXED)",
+      "disease-models/**": "not this task's perimeter; the retrospective is read-only input",
+      "scripts/legend_commit.sh": "shared commit wrapper in concurrent use by three actors"
+    }
+  },
+  "COMMITS": [
+    {
+      "sha": "1ef620f",
+      "what": "screen_verdict.py + its 32-case suite — the contract, landed alone and first so a peer could import it"
+    },
+    {
+      "sha": "fbee22d",
+      "what": "executable bit restored on the two files above, after the coordinator reported test_release_surface.py red"
+    },
+    {
+      "sha": "2a26a25",
+      "what": "self_test_coverage.py + 13-case suite — the § 9.3 meta-test and its first measurement"
+    },
+    {
+      "sha": "093f8be",
+      "what": "text_surface_intrusion_check converted"
+    },
+    {
+      "sha": "8ba2a43",
+      "what": "oa_status_dissent and manifest_flag_drift converted"
+    },
+    {
+      "sha": "3973ada",
+      "what": "locator_identifier_provenance, erratum_scope_check, genre_discriminator converted"
+    }
+  ],
+  "MEASUREMENTS": {
+    "9_2_screens": {
+      "method": "each screen handed a zero-length input, an absent path, and a real input; verdict and digest read off the returned record. Re-derived this session rather than taken from the retrospective.",
+      "baseline_retrospective_claim": "1 of 7 refuses an uninformative pass; 0 of 7 report the digest of what they screened",
+      "baseline_as_re_measured": {
+        "refuses_an_uninformative_pass": "1 of 7 strictly (genre_discriminator, a named INSUFFICIENT_DATA); 2 of 7 if oa_status_dissent's UNDETERMINED counts, which names a cause but not which input is missing",
+        "reports_a_digest": "0 of 7 — confirmed",
+        "worked_examples_of_the_defect": [
+          "text_surface_intrusion_check.py on a zero-byte file printed 'OK: no page furniture found inside a sentence'",
+          "find_intrusions(path_string) returned [] — the empty list a caller reads as CLEAN, the 2026-09-09 inversion present in this tool too",
+          "manifest_flag_drift.scan() of an untracked manifest returned [] = PASS",
+          "locator_identifier_provenance on an empty manifest returned four zero counts",
+          "erratum_scope_check.check_manifest returned None, and main dropped those manifests from every count"
+        ]
+      },
+      "after": {
+        "converted_by_this_task": 6,
+        "refuses_an_uninformative_pass": "6 of 6 converted, each naming the missing input",
+        "reports_screened_digest_and_bytes": "6 of 6 converted",
+        "seventh_screen": "_refuse_suspect_surface, inside peer-owned deepdive_manifest.py; the contract module and its suite are what that peer imports"
+      },
+      "corpus_effects_measured": {
+        "manifest_flag_drift": "81 manifests: before, one aggregate PASS over all 81; after, 45 screened and 36 INSUFFICIENT_DATA (44% were single-revision and never comparable)",
+        "locator_identifier_provenance": "81 manifests: before, measurable 26; after, REFUSED 12, CLEAN 4, artefacts absent 54, no identifier in any proposition 11 — the last 11 had been counted as measured",
+        "erratum_scope_check": "81 examined: 63 CLEAN, 0 REFUSED, 18 INSUFFICIENT_DATA, of which 12 never raised the erratum question and had appeared in no number the tool printed",
+        "text_surface_intrusion_check": "unchanged findings: PMID 21731849 refuses with 13 intrusions, PMID 18460020 with 14 — the same 14 the retrospective § 9.5(b) records",
+        "genre_discriminator": "control run over 18 real deposits: 4 of 12 declared-primary flagged UNDER_DESCRIBED, two of which are published corrections"
+      }
+    },
+    "9_3_entry_point_coverage": {
+      "method": "every suite executed under a profiler recording each Python function entered and each file opened, in the suite process and in every subprocess it spawns. Not a static grep — a static grep would be a fourth instance of the defect being measured.",
+      "criterion": "entry_point_called = main entered AND at least one direct callee of main that is not the self-test dispatch. real_artifact_case = a file opened under files/, disease-models/, ledger/, framework/state/ or _external_repos/ — three-state, degrading to skipped_declared when the bytes are absent.",
+      "baseline": {
+        "note": "measured over the 46 qualifying scripts that pre-dated this task (the sweep as run covered 48, two of which were this task's own new files)",
+        "scripts": 46,
+        "entry_point_called_true": 26,
+        "real_artifact_case_true": 19,
+        "both_false": 13,
+        "both_false_mine_to_fix": 3,
+        "both_false_other_actors": 10,
+        "tools_shipping_with_a_green_self_test_and_a_crashing_corpus_run": 0
+      },
+      "after": {
+        "scripts": 49,
+        "entry_point_called_true": 32,
+        "real_artifact_case_true": 25,
+        "real_artifact_case_skipped_declared": 1,
+        "both_false": 10,
+        "both_false_owned_by_me": 0
+      },
+      "validated_against_real_history": "erratum_scope_check.py measured at 0e33f0f^ and 0e33f0f: before the orchestrator's repair the self-test exits 0 (12/12 green) with entry_point_called false and callees_entered empty; after it, true with check_manifest entered. A fixture written by this tool's own author could not have proved the criterion; the two commits can.",
+      "false_negative_check": "three of the 21 false readings verified by hand before the number was trusted: test_legend_lint.py calls lint() directly, test_oa_status_dissent.py calls assess(), test_text_surface_intrusion_check.py calls find_intrusions(). None enters main. The readings are true negatives, not instrumentation artefacts."
+    }
+  },
+  "MUTATION_TESTING": {
+    "rule_applied": "every shipped change had its defect reintroduced, the failing and passing cases recorded, the defect restored, and green re-shown. Matrices are in the commit messages.",
+    "holes_found_by_mutation_that_reading_did_not_find": [
+      {
+        "where": "manifest_flag_drift",
+        "mutation": "R4 — a run that screened nothing exits 0",
+        "outcome": "SURVIVED: no case asserted a non-zero exit when nothing could be screened, which is this task's own failure class one level up. Case written, R4 re-run, now turns it red."
+      },
+      {
+        "where": "genre_discriminator",
+        "mutation": "U1 — the uninformative-input guard removed",
+        "outcome": "SURVIVED: the tool already returns INSUFFICIENT_DATA for an unmeasurable deposit, so both cases stayed green while the verdict named 'page_span, references' as the missing input for a surface that was never there. The cases now assert WHAT IS NAMED; U1 turns them red."
+      }
+    ]
+  },
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "The retrospective's § 9.2 baseline (1 of 7 refusing an uninformative pass) did not match my own re-measurement exactly: oa_status_dissent already returned a named UNDETERMINED verdict.",
+      "default": "Reported both readings — 1 of 7 by the retrospective's strict criterion, 2 of 7 if UNDETERMINED counts — and targeted 7 of 7 unambiguously rather than arguing the denominator.",
+      "why_safe": "The target and the work are identical under either reading; only the headline delta changes, and both numbers are stated.",
+      "what_would_have_been_different": "Had I adopted the retrospective's number without deriving it, I would have reported a delta of +6 where the honest figure is +5 or +6 depending on a definition — the exact class of value § 9.4 exists to prevent."
+    },
+    {
+      "condition": "The seventh screen, _refuse_suspect_surface, lives in peer-owned deepdive_manifest.py.",
+      "default": "Did not touch it. Made the contract module importable with a docstring carrying a complete worked example, and the suite EXECUTES that example rather than only displaying it.",
+      "why_safe": "Preserves the file division that produced zero cross-actor collisions in eleven waves (§ 4.4). The peer needs no conversation with me to implement.",
+      "what_would_have_been_different": "If the peer's conversion needs a contract change, that is a follow-up task on my module, not an edit to theirs."
+    },
+    {
+      "condition": "The durable fix for the missing-executable-bit red is mechanical and belongs in scripts/legend_commit.sh, which three actors are committing through right now; the coordinator suggested a tool-shipping checklist, and no such checklist file exists in the repository.",
+      "default": "Restored the bit by hand, recommended the wrapper change to the coordinator whose file it is, and declined to create a second home for a rule test_release_surface.py already owns canonically.",
+      "why_safe": "A bash defect in the shared wrapper halts two peers mid-sweep; the manual repair is instant and the suite catches every recurrence.",
+      "what_would_have_been_different": "If the coordinator takes the wrapper change, this stops recurring; if not, it recurs and the suite keeps catching it after the fact rather than before."
+    },
+    {
+      "condition": "The § 9.3 meta-test's full sweep takes ~4 minutes, and every test_*.py is auto-enrolled in the release battery by discovery.",
+      "default": "Split the tool (self_test_coverage.py, run on demand for the corpus-wide number) from its suite (test_self_test_coverage.py, 13 cases in 16s, including the two real historical commits). The suite proves the criterion; the tool produces the census.",
+      "why_safe": "The battery stays fast, and the property that matters is pinned by a suite that runs every time. The census is reproducible with one command.",
+      "what_would_have_been_different": "Enrolling the full sweep would have added ~4 minutes to every release run to re-derive a number that changes only when a suite changes."
+    },
+    {
+      "condition": "genre_discriminator's real-corpus control could assert either 'no ordinary primary deposit is UNDER_DESCRIBED' or 'not every one is'. Measured: 4 of 12, two of them published corrections that are genuinely short against a bare Journal Article label, and the primary/review column is a coarse stand-in for real PubMed types.",
+      "default": "Asserted what the B13 defect actually was — EVERY ordinary primary flagged — and reported the 4 of 12 as a number rather than a failure.",
+      "why_safe": "The assertion is true by measurement and would have gone red on the B13 version. A stricter one would fail for legitimate reasons and train readers to ignore the tool.",
+      "what_would_have_been_different": "A stricter assertion would be red today for two corrections that the tool is arguably describing correctly."
+    },
+    {
+      "condition": "evidence_presence.py is inside my declared ownership but is not one of § 9.2's seven screens; it reads true/false on the § 9.3 axes.",
+      "default": "Left unconverted and named in the report. It is not at false/false, so it does not stand between this task and its stated target.",
+      "why_safe": "No regression: its suite is green and unchanged.",
+      "what_would_have_been_different": "A real-artefact case for it is a small follow-up; nothing depends on it."
+    }
+  ],
+  "STOP_LOG": [],
+  "_stop_log_note": "Empty, and recorded empty deliberately. No class-1 stop (no reserved act was required: no push, no history rewrite, no deletion of unique material, no spend, no private-data exposure, no BATCH_COMMIT) and no class-2 stop (every condition above had a safe default). The coordinator's mid-task message about the executable bit was acted on immediately and is not a stop.",
+  "PEER_FINDINGS_REPORTED_NOT_FIXED": [
+    {
+      "file": "framework/scripts/test_legend_handoff.py",
+      "finding": "4 of 14 cases red, and red BEFORE this task began (recorded in the pre-work baseline). Failures are 'Refusing to discard destination work' not raised, and a lossless-roundtrip RESUME_FAIL on a dirty-patch/HEAD mismatch.",
+      "why_not_fixed": "Peer-owned; not in my perimeter. It is one of the three suites the release battery reports red, alongside the two known-red by design (test_batch_queue, test_surface_census)."
+    },
+    {
+      "file": "framework/scripts/dependency_integrity.py",
+      "finding": "Its docstring records that screen_verdict.py did not exist when it was written, so it carries the same shape in-module (an explicit `screened` boolean beside the verdict) and names its VERDICTS block as the surface to reconcile. screen_verdict.py has now landed (1ef620f).",
+      "why_not_fixed": "Peer-owned. The reconciliation is theirs to make; the contract, its guards and its worked example are in place for it."
+    },
+    {
+      "file": "10 scripts at entry_point_called=false AND real_artifact_case=false",
+      "finding": "dossier_quote_audit, figure_ppi_preflight, generate_semantic_graph, harness_session_start, pmc_pow_fetch, pubmed_clipboard_to_seed, pubmed_corpus_harvest, recapture_snippets, regenerate_adjudications, task_close — none enters its own main(); the CLI path (argument parsing, discovery, exit codes) is certified by suites that never run it.",
+      "why_not_fixed": "All peer-owned. Reported as a queue, not repaired. A further 11 scripts enter main but touch no corpus artefact."
+    }
+  ],
+  "REGRESSION_STATE_AT_CLOSE": {
+    "framework_scripts_suites": "50 files, 3 red — test_batch_queue, test_surface_census, test_legend_handoff. Identical set to the pre-work baseline, verified by diff.",
+    "release_battery": "REGRESSION VERDICT: FAIL on exactly those same three targets and no others.",
+    "attribution": "no suite that was green before this task is red after it"
+  },
+  "ATTRIBUTION_CENSUS": {
+    "incidents": 6,
+    "machine": 4,
+    "blind_auditor": 0,
+    "peer": 1,
+    "self": 1,
+    "severity_high": 3,
+    "severity_high_self": 1,
+    "undetected_known": 0,
+    "_counted_by": "retrospective § 0.2. A catcher is machine (validator/linter/test suite/shell), blind auditor, peer/coordinator, or self (re-reading, cross-measurement, control run, or refusal to believe an unearned result).",
+    "_incidents": [
+      {
+        "n": 1,
+        "what": "Shipped screen_verdict.py and its suite without the executable bit; scripts/test_release_surface.py went red.",
+        "catcher": "peer/coordinator",
+        "severity": "normal"
+      },
+      {
+        "n": 2,
+        "what": "Mutation R4 SURVIVED: nothing asserted that manifest_flag_drift exits non-zero when it screened nothing — a caller checking only for zero would read silence as a clean corpus.",
+        "catcher": "machine (mutation harness)",
+        "severity": "high"
+      },
+      {
+        "n": 3,
+        "what": "Mutation U1 SURVIVED: genre_discriminator's two new cases stayed green with the input guard removed, because the tool's own INSUFFICIENT_DATA masked it; the verdict then named the wrong missing input.",
+        "catcher": "machine (mutation harness)",
+        "severity": "high"
+      },
+      {
+        "n": 4,
+        "what": "oa_status_dissent --json let the domain record's `verdict` key overwrite the screen verdict: two vocabularies, one key, and the tool printed a word the screen contract never emits.",
+        "catcher": "machine (the new CLI test failed)",
+        "severity": "normal"
+      },
+      {
+        "n": 5,
+        "what": "Asserted that PMID38499540 still declares multihop.performed true; the manifest says false — the claim was retracted after the sweep. An assumption asserted with the confidence of a measurement.",
+        "catcher": "machine (the test I had just written failed against the corpus)",
+        "severity": "normal"
+      },
+      {
+        "n": 6,
+        "what": "self_test_coverage detected --self-test by substring, so it invoked `self_test_coverage.py --self-test`, which its own CLI does not accept, and reported a failing suite that does not exist — a measurement confounded by prose about the measurement.",
+        "catcher": "self (read the row, disbelieved it; nothing asserted it)",
+        "severity": "high"
+      }
+    ]
+  }
+}
