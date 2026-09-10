@@ -957,9 +957,24 @@ only when someone remembers to run it.
 - *Observable criterion:* `deepdive_manifest.py` invokes it on every artifact of kind
   `article_text` derived from a PDF; a locator whose snippet spans a detected intrusion **BLOCKs**.
   *False-positive baseline after the wave-4 dispersion fix:* **14** on PMID 18460020 (from 28),
-  **0** table false positives (from 25), **13** unchanged on PMID 20530675. Target: the wiring adds
-  **no** new false positives against those two numbers, proven by re-running both papers before and
-  after.
+  **0** table false positives (from 25), **13** unchanged on ~~PMID 20530675~~ **PMID 21731849**.
+  Target: the wiring adds **no** new false positives against those two numbers, proven by
+  re-running both papers before and after.
+
+  > 🔴 **Corrected 2026-09-10 — the paper was misattributed, and this document's own rule is that
+  > the record wins.** The wave-4 evaluation reads *"28 → 14 on this paper, table false positives
+  > 25 → 0, and **the wave-1 paper unchanged at 13**"*; wave 4's paper is PMID 18460020 and the
+  > wave-1 paper is PMID 21731849, named as such in the same evaluation's account of the reverted
+  > absolute-line-floor fix. PMID 20530675 contributed a different datum entirely — the supplement
+  > that went **12 → 1** in wave 1. Measured independently by two sessions on 2026-09-10 while
+  > implementing § 9.5(b), each reporting 13 on 21731849 and 0 on the 20530675 supplement, and the
+  > false-positive budget was held against the corrected attribution.
+  >
+  > **The propagation is the lesson, not the digit.** This line is a specification; the dispatch
+  > that commissioned the work quoted it verbatim, so a number wrong in the record became a target
+  > wrong in the task, and only a measurement caught it. It is § 9.4's own pattern — *an assumption
+  > asserted with the confidence of a measurement, in a place too small to look at twice* — committed
+  > by the document that names it.
 
 ### 9.6 · Make the attribution census a standing, parseable metric
 
