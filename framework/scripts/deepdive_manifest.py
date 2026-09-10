@@ -45,6 +45,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import corpus_firewall as firewall  # noqa: E402
 import manifest_queue_id_crosscheck as queue_ids  # noqa: E402
 import text_surface_intrusion_check as intrusion_check  # noqa: E402
+import locator_identifier_provenance as provenance  # noqa: E402
 
 MANIFEST_DIR = "disease-models/{disease}/research/deepdive_manifests"
 
@@ -894,6 +895,143 @@ def snippet_spans_intrusion(
     return crossed
 
 
+# 🔴 § 9.4. `scientist-a`'s wave-4 pattern, in its own words: "an assumption asserted with
+# the confidence of a measurement, in a place too small to look at twice." Three instances in
+# one wave — a PMID taken from an external search WHILE THE CORRECT IDENTIFIER SAT INSIDE THE
+# OPEN ARTEFACT'S OWN ext-link MARKUP (29581896 for 29310447, a different paper); two
+# field-density counts written from expectation, Zfra as 2 when it is 13 and Alzheimer as 36
+# when it is 32, with a false sentence built on one; and phosphosite residues named from
+# background knowledge when the article names one phosphosite and those residues appear
+# nowhere in its prose. Two of the three were caught only because two blind auditors looked,
+# and on most readings no auditor is ever run.
+#
+# THIS IS A WARN AND NEVER A BLOCK, and the reason is in the peer tool's own docstring: an
+# identifier absent from the artefact is not thereby wrong. A manifest may legitimately name
+# a corpus PMID whose provenance is obvious to a human. What the WARN says is the weaker and
+# checkable thing — *nothing in the record says where this value came from, and it is not in
+# the source*. THE DECLARATION IS THE POINT: a value that must be declared external is a
+# value someone can challenge.
+
+MIN_PROVENANCE_CHARS = 12
+ISO_DATE_RE = re.compile(r"\b(\d{4}-\d{2}-\d{2})\b")
+
+# A number standing next to a counting noun is a MEASUREMENT claim, which is the A12 class:
+# a field-density count written from expectation. Identifiers are the peer tool's business;
+# counts are checked here because a count is not identifier-shaped and its verifier is the
+# command that produced it, never the artefact.
+COUNT_CLAIM_RE = re.compile(
+    r"\b(\d{1,6})\s+(?:\w+\s+){0,3}?"
+    r"(mentions?|occurrences?|hits?|records?|manifests?|papers?|studies|instances?|times|"
+    r"references?|sentences?|entries)\b",
+    re.IGNORECASE,
+)
+
+
+def external_provenance_defect(value: Any) -> str | None:
+    """What an `external_provenance` declaration is missing, or None when it is complete.
+
+    A declaration must name the COMMAND OR INDEX that produced the value and the DATE it was
+    produced. Both halves earn their place: without the source nobody can re-run it, and
+    without the date nobody can tell whether it still holds — `scientist-c`'s C9 was exactly
+    a group publication count carried forward from a measurement three weeks old.
+    """
+    if value is None:
+        return "absent"
+    if isinstance(value, dict):
+        source = str(value.get("source") or value.get("command")
+                     or value.get("index") or "").strip()
+        date = str(value.get("date") or "").strip()
+    else:
+        text = str(value)
+        found = ISO_DATE_RE.search(text)
+        date = found.group(1) if found else ""
+        source = ISO_DATE_RE.sub("", text).strip(" .,;·—-")
+    if len(source) < MIN_PROVENANCE_CHARS:
+        return "it names no command or index that produced the value"
+    if not ISO_DATE_RE.fullmatch(date):
+        return "it names no ISO date (YYYY-MM-DD) on which the value was produced"
+    return None
+
+
+def provenance_warnings(manifest: dict, root: Path) -> list[str]:
+    """WARN lines for identifiers and counts asserted in a proposition without provenance."""
+    locators = manifest.get("verbatim_locators")
+    if not isinstance(locators, dict):
+        return []
+    entries = locators.get("entries")
+    if not isinstance(entries, list) or not entries:
+        return []
+
+    haystack, missing = provenance.artefact_haystack(manifest, root)
+    if missing:
+        # 🔴 UNMEASURABLE IS NOT CLEAN, AND IT IS NOT DIRTY EITHER. `files/` is gitignored by
+        # design, so in most checkouts the evidence is absent; with an empty haystack EVERY
+        # identifier is "not in the artefact" and this would report a corpus-wide provenance
+        # crisis that is really an evidence-locality fact. The peer tool separates the two
+        # rather than averaging them, and so does this.
+        return [
+            "verbatim_locators: identifier and count provenance NOT checked — "
+            f"{len(missing)} declared artefact(s) absent from this workspace "
+            f"({', '.join(sorted(missing)[:3])}"
+            f"{', …' if len(missing) > 3 else ''}). An absent artefact is an "
+            "evidence-locality fact, not a provenance failure of the reading"
+        ]
+
+    warnings: list[str] = []
+    for position, entry in enumerate(entries):
+        if not isinstance(entry, dict):
+            continue
+        proposition = str(entry.get("proposition", ""))
+        if not proposition:
+            continue
+        declaration = entry.get("external_provenance")
+        defect = external_provenance_defect(declaration)
+
+        for identifier in sorted(provenance.identifiers(proposition)):
+            if provenance.in_haystack(identifier, haystack):
+                continue
+            if provenance.claims_source_identity(proposition):
+                # The peer tool's own hardest-won rule, preserved rather than overridden:
+                # "this identifier IS a citation of the source" is adjudicated by the
+                # ARTEFACT and by nothing else, so no declaration waives it. Written
+                # naively that check would have missed the very error it was built for.
+                warnings.append(
+                    f"verbatim_locators.entries[{position}]: {identifier} is asserted as a "
+                    "citation OF THE SOURCE and the source does not contain it. No "
+                    "external_provenance declaration can settle this one — the artefact is "
+                    "the authority on its own reference list. Look in the deposit's markup "
+                    "before trusting a search result"
+                )
+                continue
+            if provenance.declared(proposition):
+                continue
+            if defect is None:
+                continue
+            warnings.append(
+                f"verbatim_locators.entries[{position}]: {identifier} occurs in no declared "
+                f"artefact and its provenance is undeclared ({defect}). Either quote it from "
+                "the source, or add external_provenance naming the command or index that "
+                "produced it and the date"
+            )
+
+        for match in COUNT_CLAIM_RE.finditer(proposition):
+            value = match.group(1)
+            if defect is None:
+                continue
+            if re.search(r"(?<!\d)" + re.escape(value) + r"(?!\d)", haystack):
+                # The number is in the bytes the reading was done on. Checkable, and the
+                # A12 class is specifically a count that is NOT.
+                continue
+            warnings.append(
+                f"verbatim_locators.entries[{position}]: the count \"{match.group(0)}\" is "
+                f"asserted with no provenance ({defect}). A field-density count is produced "
+                "by a command, so name it: external_provenance with the command and the "
+                "date. Two counts written from expectation in one wave were wrong by 11 and "
+                "by 4, and a false sentence was built on one of them"
+            )
+    return warnings
+
+
 def _pointer_needle_errors(
     entry: dict, entries: list, target: int, position: int, relation: str
 ) -> list[str]:
@@ -1679,6 +1817,12 @@ def validate(
         if isinstance(manifest[section], dict) and manifest[section].get("waived"):
             incomplete.append(f"{section}: waived")
 
+    # § 9.4, last because it decides nothing: warnings never touch the verdict. A caller
+    # that passes no sink is byte-for-byte unaffected, which is what keeps this a review
+    # surface rather than a gate that would have to be argued with on a deadline.
+    if warnings is not None and root is not None:
+        warnings.extend(provenance_warnings(manifest, root))
+
     return errors, incomplete
 
 
@@ -1831,6 +1975,7 @@ def main() -> int:
         return 1 if counts["UNTRUSTWORTHY"] else 0
     if not args.pmid:
         parser.error("--pmid is required unless --font-screen is given")
+    warnings: list[str] = []
     errors, incomplete = load_and_validate(
         Path(args.workspace).resolve(), args.disease, args.pmid,
         artifact_root=(
@@ -1839,9 +1984,12 @@ def main() -> int:
         ),
         verify_artifacts=args.verify_artifacts,
         require_current_schema=args.require_current_schema,
+        warnings=warnings,
     )
     for item in incomplete:
         print(f"  [INCOMPLETE] {item}")
+    for item in warnings:
+        print(f"  [WARN] {item}")
     scope = verification_scope(
         verify_artifacts=args.verify_artifacts,
         require_current_schema=args.require_current_schema,

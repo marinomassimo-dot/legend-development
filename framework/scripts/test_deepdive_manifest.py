@@ -1318,6 +1318,168 @@ class AFileCanBeWellFormedAndDeclareTheFalse(unittest.TestCase):
         self.assertFalse([item for item in errors if "symbol fonts unmapped" in item], errors)
 
 
+class IdentifiersAndCountsMustComeFromTheArtefact(unittest.TestCase):
+    """§ 9.4: a value asserted in a proposition is in the artefact, or it is DECLARED.
+
+    🔴 A WARN, never a BLOCK, and the tests assert that too — `test_warnings_never_change
+    _the_verdict`. An identifier absent from the artefact is not thereby wrong; what the
+    warning says is the checkable thing: nothing in the record says where this value came
+    from. The declaration is the point, because a value that must be declared external is a
+    value someone can challenge.
+    """
+
+    SENTENCE = "This body sentence is long enough to act as exact evidentiary text."
+
+    def _run(self, proposition: str, *, declaration=None, artefact_extra: str = ""):
+        tmp = TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        root = Path(tmp.name)
+        relative = "files/fulltext/paper.xml"
+        artifact = root / relative
+        artifact.parent.mkdir(parents=True)
+        artifact.write_text(
+            f"<article><body><p>{self.SENTENCE}</p><p>{artefact_extra}</p></body></article>",
+            encoding="utf-8")
+        manifest = schema_v2(relative)
+        manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+            artifact.read_bytes()).hexdigest()
+        entry = manifest["verbatim_locators"]["entries"][0]
+        entry["snippet"] = self.SENTENCE
+        entry["proposition"] = proposition
+        if declaration is not None:
+            entry["external_provenance"] = declaration
+        warnings: list[str] = []
+        errors, _ = gate.validate(manifest, root=root, verify_artifacts=True,
+                                  require_current_schema=True, warnings=warnings)
+        return errors, warnings
+
+    def test_an_undeclared_identifier_warns(self) -> None:
+        _errors, warnings = self._run("The upstream work is 29581896 by the same group.")
+        self.assertTrue([w for w in warnings if "29581896" in w and "undeclared" in w],
+                        warnings)
+
+    def test_a_complete_declaration_silences_it(self) -> None:
+        """The target state for every manifest minted after this change."""
+        _errors, warnings = self._run(
+            "The upstream work is 29581896 by the same group.",
+            declaration="PubMed esearch author query, 2026-09-10")
+        self.assertEqual(warnings, [])
+
+    def test_a_dict_shaped_declaration_is_accepted(self) -> None:
+        _errors, warnings = self._run(
+            "The upstream work is 29581896 by the same group.",
+            declaration={"source": "PubMed esearch", "date": "2026-09-10"})
+        self.assertEqual(warnings, [])
+
+    def test_a_declaration_without_a_date_still_warns(self) -> None:
+        """C9 was a group count carried forward from a measurement three weeks old."""
+        _errors, warnings = self._run(
+            "The upstream work is 29581896 by the same group.",
+            declaration="PubMed esearch author query")
+        self.assertTrue([w for w in warnings if "no ISO date" in w], warnings)
+
+    def test_a_declaration_without_a_source_still_warns(self) -> None:
+        _errors, warnings = self._run(
+            "The upstream work is 29581896 by the same group.", declaration="2026-09-10")
+        self.assertTrue([w for w in warnings if "no command or index" in w], warnings)
+
+    def test_an_identifier_present_in_the_artefact_never_warns(self) -> None:
+        """🔴 The green half: without it, a checker that warned on everything would pass."""
+        _errors, warnings = self._run(
+            "The upstream work is 29310447 by the same group.",
+            artefact_extra="<ext-link ext-link-type='pmid'>29310447</ext-link>")
+        self.assertEqual(warnings, [])
+
+    def test_a_source_identity_claim_is_not_waivable_by_a_declaration(self) -> None:
+        """The peer tool's hardest-won rule, preserved rather than overridden.
+
+        Written naively this checker would have MISSED the error it exists for: the failing
+        proposition carried a legitimate declaration ABOUT THE LEDGER in the same sentence as
+        a claim only the ARTEFACT can adjudicate.
+        """
+        _errors, warnings = self._run(
+            "Attributed to ref 1, PMID 29581896, no receipt here.",
+            declaration="PubMed esearch author query, 2026-09-10")
+        self.assertTrue([w for w in warnings if "citation OF THE SOURCE" in w], warnings)
+
+    def test_an_undeclared_count_warns(self) -> None:
+        """A12: Zfra written as 2 when it is 13, with a false sentence built on it."""
+        _errors, warnings = self._run(
+            "The corpus holds only 2 mentions of Zfra across every manifest read so far.")
+        self.assertTrue([w for w in warnings if "the count" in w and "2 mentions" in w],
+                        warnings)
+
+    def test_a_declared_count_does_not_warn(self) -> None:
+        _errors, warnings = self._run(
+            "The corpus holds only 2 mentions of Zfra across every manifest read so far.",
+            declaration="grep -c over deepdive_manifests, 2026-09-10")
+        self.assertEqual(warnings, [])
+
+    def test_a_count_that_occurs_in_the_artefact_does_not_warn(self) -> None:
+        _errors, warnings = self._run(
+            "The authors report 13 mentions of the residue in their own discussion.",
+            artefact_extra="a total of 13 separate observations")
+        self.assertEqual(warnings, [])
+
+    def test_warnings_never_change_the_verdict(self) -> None:
+        errors, warnings = self._run("The upstream work is 29581896 by the same group.")
+        self.assertEqual(errors, [])
+        self.assertTrue(warnings)
+
+    def test_a_caller_that_passes_no_sink_is_unaffected(self) -> None:
+        """Backwards compatibility, asserted: session_self_eval.py passes no sink."""
+        tmp = TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        root = Path(tmp.name)
+        relative = "files/fulltext/paper.xml"
+        artifact = root / relative
+        artifact.parent.mkdir(parents=True)
+        artifact.write_text(f"<article><body><p>{self.SENTENCE}</p></body></article>",
+                            encoding="utf-8")
+        manifest = schema_v2(relative)
+        manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+            artifact.read_bytes()).hexdigest()
+        manifest["verbatim_locators"]["entries"][0]["snippet"] = self.SENTENCE
+        manifest["verbatim_locators"]["entries"][0]["proposition"] = "Ref 1 is 29581896."
+        with_sink: list[str] = []
+        a_errors, a_incomplete = gate.validate(
+            manifest, root=root, verify_artifacts=True, require_current_schema=True)
+        b_errors, b_incomplete = gate.validate(
+            manifest, root=root, verify_artifacts=True, require_current_schema=True,
+            warnings=with_sink)
+        self.assertEqual((a_errors, a_incomplete), (b_errors, b_incomplete))
+        self.assertTrue(with_sink)
+
+    def test_absent_evidence_is_reported_as_unmeasurable_not_as_a_flood(self) -> None:
+        """files/ is gitignored: an empty haystack would make EVERY value undeclared."""
+        tmp = TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        root = Path(tmp.name)
+        manifest = schema_v2("files/fulltext/absent.xml")
+        manifest["verbatim_locators"]["entries"][0]["proposition"] = (
+            "Refs 29581896, 30158849 and 31275852 are all cited here.")
+        warnings = gate.provenance_warnings(manifest, root)
+        self.assertEqual(len(warnings), 1)
+        self.assertIn("NOT checked", warnings[0])
+        self.assertIn("evidence-locality fact", warnings[0])
+
+    def test_the_corpus_baseline_is_reproduced(self) -> None:
+        """The § 9.4 measurement as an executable claim, re-derived from the tool's buckets."""
+        directory = ROOT / "disease-models/wwox/research/deepdive_manifests"
+        if not directory.is_dir():  # pragma: no cover
+            self.skipTest("no manifests in this workspace")
+        measurable = unmeasurable = 0
+        for path in sorted(directory.glob("PMID*.json")):
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            found = gate.provenance_warnings(manifest, ROOT)
+            if found and "NOT checked" in found[0]:
+                unmeasurable += 1
+            else:
+                measurable += 1
+        self.assertEqual(measurable + unmeasurable, len(list(directory.glob("PMID*.json"))))
+        self.assertGreater(measurable, 0, "no manifest could be measured at all")
+
+
 class PageFurnitureInsideAQuote(unittest.TestCase):
     """§ 9.5(b): a locator may not be quoted ACROSS page furniture in a derived text surface.
 
