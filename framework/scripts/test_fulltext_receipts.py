@@ -381,6 +381,48 @@ class FulltextReceiptTests(unittest.TestCase):
         receipts.append_receipt(self.ledger, complete)
         self.assertEqual(len(receipts.load_ledger(self.ledger)), 2)
 
+    def test_first_contact_with_the_text_after_a_legacy_reconstruction(self) -> None:
+        """A `legacy_reconstruction` is a record ABOUT a reading, not a reading.
+
+        The protocol's duplicate-work gate says a prior reconstruction means the article
+        has never been opened, so the next event is a `first_read`. Two rules made that
+        sentence unwritable and an actor hit both in one append on 2026-09-09: the reading
+        was first, and the ledger would accept neither the truth nor a defensible
+        falsehood.
+        """
+        legacy = example("FTR-20260725-42193054-01", "partial_fulltext_read")
+        legacy["record_kind"] = "legacy_reconstruction"
+        legacy["coverage"] = {key: "unknown_legacy" for key in receipts.COVERAGE_KEYS}
+        legacy["source_fingerprint"] = None
+        legacy["evidence_basis"] = ["registry line, not the article"]
+        receipts.append_receipt(self.ledger, legacy)
+
+        first_contact = example("FTR-20260909-42193054-02")
+        first_contact["reread_reason"] = "first_read"
+        first_contact["prior_receipt"] = legacy["event_id"]
+        receipts.append_receipt(self.ledger, first_contact)
+        self.assertEqual(2, len(receipts.load_ledger(self.ledger)))
+
+    def test_first_contact_after_a_reconstruction_must_name_it(self) -> None:
+        """The reading is first; the record of it is not. The lineage is still owed."""
+        legacy = example("FTR-20260725-42193054-01", "partial_fulltext_read")
+        legacy["record_kind"] = "legacy_reconstruction"
+        legacy["coverage"] = {key: "unknown_legacy" for key in receipts.COVERAGE_KEYS}
+        legacy["evidence_basis"] = ["registry line, not the article"]
+        receipts.append_receipt(self.ledger, legacy)
+
+        orphan = example("FTR-20260909-42193054-02")
+        orphan["reread_reason"] = "first_read"
+        orphan["prior_receipt"] = None
+        with self.assertRaisesRegex(ValueError, "must name the reconstruction"):
+            receipts.append_receipt(self.ledger, orphan)
+
+    def test_first_read_may_not_invent_a_parent_that_does_not_exist(self) -> None:
+        genuine_first = example("FTR-20260909-42193054-01")
+        genuine_first["prior_receipt"] = "FTR-20260101-42193054-00"
+        with self.assertRaisesRegex(ValueError, "no earlier event"):
+            receipts.append_receipt(self.ledger, genuine_first)
+
     def test_persisted_events_are_chained_and_rewriting_history_is_detected(self) -> None:
         first = receipts.append_receipt(self.ledger, example("FTR-20260725-42193054-01"))
         second = example("FTR-20260725-42193054-02", "partial_fulltext_read")

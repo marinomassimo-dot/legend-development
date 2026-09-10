@@ -494,10 +494,14 @@ def validate_receipt(receipt: Any, root: Optional[Path] = None) -> list[str]:
             errors.append("contemporaneous partial_fulltext_read requires at least one read section")
     if receipt["reread_reason"] not in REREAD_REASONS:
         errors.append("invalid reread_reason")
-    elif receipt["reread_reason"] == "first_read" and receipt["prior_receipt"] is not None:
-        errors.append("first_read cannot name prior_receipt")
     elif receipt["reread_reason"] != "first_read" and receipt["prior_receipt"] is None:
         errors.append("continued or repeated work requires prior_receipt")
+    # `first_read` naming a prior_receipt USED to be refused here, context-free. It is now
+    # decided in `validate_ledger_sequence`, where the earlier events for the study are
+    # visible, because whether it is a lie depends entirely on what those events are. See
+    # the block headed "first contact with the text, after a reconstruction of a reading"
+    # there. A context-free check cannot tell a first contact from a false one, and the
+    # version that tried made an honest reading unrepresentable.
     if not receipt["outputs"] or not isinstance(receipt["outputs"], list) or not all(
         isinstance(item, str) and item.strip() for item in receipt["outputs"]
     ):
@@ -719,7 +723,46 @@ def validate_ledger_sequence(receipts: list[dict[str, Any]]) -> list[str]:
         # and A could not name a receipt that did not exist in A's world. It belongs to a view
         # over all of them — `reading_state.py`, derived and committed — which is also the only
         # place a FORK can be reported instead of silently linearised.
-        if prior_for_study and prior_id is None:
+        # 🔴 First contact with the text, after a reconstruction of a reading.
+        #
+        # A `legacy_reconstruction` is not a reading. It is a record ABOUT a reading, built
+        # from a registry line rather than from the article, and the protocol's duplicate-work
+        # gate says so: "A prior legacy_reconstruction means the article itself has never been
+        # opened: that is first_read." Two rules then made that sentence unwritable — a
+        # context-free "first_read cannot name prior_receipt" and the sequence rule below,
+        # which refuses a null parent when the study already has events. An actor hit both in
+        # one append on 2026-09-09 and could record neither the truth nor a defensible
+        # falsehood.
+        #
+        # When no admitted arrangement is true, the defect is the rule — the same conclusion
+        # this validator already reached above about positional lineage. So `first_read` may
+        # name a prior receipt, and MUST, when every earlier event for the study is a
+        # reconstruction: the lineage the sequence rule exists to protect is kept, and the
+        # depth claim stays honest. What is still refused is `first_read` after a real
+        # reading, which is the case where the phrase would be a falsehood.
+        priors_are_all_legacy = bool(prior_for_study) and all(
+            item.get("record_kind") == "legacy_reconstruction" for item in prior_for_study
+        )
+        if receipt["reread_reason"] == "first_read":
+            if not prior_for_study and prior_id is not None:
+                errors.append(
+                    f"line {number}: first_read names a prior_receipt but this study has no "
+                    f"earlier event")
+            elif priors_are_all_legacy and prior_id is None:
+                errors.append(
+                    f"line {number}: first contact with the text after a legacy_reconstruction "
+                    f"is first_read AND must name the reconstruction it supersedes in "
+                    f"prior_receipt - the reading is first, the record of it is not")
+        # SCOPE, DELIBERATELY NOT WIDENED. A first draft of this change also refused
+        # `first_read` when a study already carried a reading of the ARTICLE - which is a
+        # defensible rule, since the phrase is then false - and it turned seven existing
+        # tests red, four of them about `rechain` semantics that have nothing to do with
+        # this defect. The reported defect is the legacy case and only that. The wider rule
+        # is a separate decision with its own evidence, and is recorded rather than smuggled
+        # in behind a bug fix.
+        if prior_for_study and prior_id is None and not (
+            receipt["reread_reason"] == "first_read" and priors_are_all_legacy
+        ):
             errors.append(
                 f"line {number}: prior_receipt is null and this study already has "
                 f"{len(prior_for_study)} receipt(s), so a further reading must say which one "

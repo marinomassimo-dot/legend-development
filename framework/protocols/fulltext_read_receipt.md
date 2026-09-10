@@ -25,6 +25,13 @@ analysing the paper.
   new question outside the earlier coverage, adversarial re-analysis, or explicit operator
   request.
 - A preprint and its published version are linked but are not silently treated as identical.
+- 🔴 **A prior `legacy_reconstruction` is not a reading**, so first contact with the text after
+  one is `reread_reason: first_read` — **and it names that reconstruction in `prior_receipt`**.
+  The reading is first; the record of it is not, and the lineage is still owed. Until
+  2026-09-10 the writer refused both halves of that sentence — `first_read` could not name a
+  prior, and a null prior was refused once the study had any event — so an actor that hit the
+  case on 2026-09-09 could record neither the truth nor a defensible falsehood. `first_read`
+  after a reading of the **article** remains what it always was: not a first read.
 
 This gate saves tokens without turning an old shallow pass into a permanent false negative.
 
