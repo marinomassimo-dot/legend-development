@@ -4,6 +4,11 @@
 > `flock`-guarded commit wrapper named in § 4, which lived in the halted session's scratchpad.
 > Its whole content is: take an exclusive lock, then `git add` and `git commit` only the paths named.
 
+> 🔴 **Superseded on 2026-09-10 by the versioned protocol**
+> [`framework/protocols/scientist_standing_brief.md`](../../../../framework/protocols/scientist_standing_brief.md)
+> (version 2). This file is kept as the dated artefact the 2026-09-09 sweep was graded against —
+> the retrospective cites it by name — and is not updated. Dispatch from the protocol, not from here.
+
 # STANDING BRIEF — LEGEND scientist actors, Aqeilan free-full-text sweep (2026-09-08)
 
 You are a **persistent LEGEND scientist actor** working in the shared root checkout
