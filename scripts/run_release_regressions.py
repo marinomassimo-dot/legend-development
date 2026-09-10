@@ -49,6 +49,11 @@ PRIORITY_TESTS = (
     "scripts/test_deepdive_method_contract.py",
     "scripts/test_fulltext_trace_contract.py",
     "scripts/test_phenotypic_neighbors.py",
+    # The commit wrapper three concurrent actors depend on. Enrolled in the same
+    # commit that versions the tool, because a wrapper that lived in a scratchpad
+    # and shipped defective twice (2026-09-09 retrospective § 4.1) is exactly the
+    # kind of infrastructure whose absence from the suite is how it stayed broken.
+    "scripts/test_legend_commit.py",
     "launch/test_legend_launch.py",
     "framework/scripts/test_legend_lint.py",
     "framework/scripts/test_batch_commit.py",
