@@ -15,6 +15,7 @@ import json
 import subprocess
 import sys
 import unittest
+import zipfile
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -1316,6 +1317,191 @@ class AFileCanBeWellFormedAndDeclareTheFalse(unittest.TestCase):
         finally:
             gate.font_encoding_verdict = original
         self.assertFalse([item for item in errors if "symbol fonts unmapped" in item], errors)
+
+
+def pptx_part(*paragraphs: list[str]) -> bytes:
+    """A minimal DrawingML part. Each paragraph is a list of RUNS, as PowerPoint stores it."""
+    body = ""
+    for runs in paragraphs:
+        cells = "".join(f"<a:r><a:t>{run}</a:t></a:r>" for run in runs)
+        body += f"<a:p>{cells}</a:p>"
+    return (
+        '<?xml version="1.0" encoding="UTF-8"?>'
+        '<p:sld xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main" '
+        'xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">'
+        f"<p:cSld><p:spTree><p:sp><p:txBody>{body}</p:txBody></p:sp></p:spTree></p:cSld>"
+        "</p:sld>"
+    ).encode("utf-8")
+
+
+def write_pptx(path: Path, parts: dict[str, bytes]) -> Path:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with zipfile.ZipFile(path, "w") as archive:
+        archive.writestr("[Content_Types].xml", "<Types/>")
+        for name, payload in parts.items():
+            archive.writestr(name, payload)
+    return path
+
+
+class ABinarySupplementCanBeDeclared(unittest.TestCase):
+    """§ 6.3 H4 / census P3: a `.pptx` supplement was declarable by nothing.
+
+    `supplement_text` was the only supplement kind, and its own text verification refuses a
+    `.pptx`. So four deposited files sat on disk outside every manifest, and the single most
+    consequential sentence of the PMID 38499540 reading — the authors' note that the t-tests
+    were computed over microscopy FIELDS and not per MOUSE — lived in a speaker-notes pane,
+    in the dossier and in no machine-verified locator.
+    """
+
+    NOTE = "all the t-tests were done over all the fields and not over each mouse"
+
+    def _deck(self, parts: dict[str, bytes]) -> tuple[Path, Path]:
+        tmp = TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        root = Path(tmp.name)
+        return root, write_pptx(root / "files/supplement/deck.pptx", parts)
+
+    def _manifest(self, root: Path, deck: Path, snippet: str) -> dict:
+        relative = "files/supplement/deck.pptx"
+        manifest = schema_v2(relative)
+        manifest["source_artifacts"][0]["kind"] = "supplement_binary"
+        manifest["source_artifacts"][0]["sha256"] = hashlib.sha256(
+            deck.read_bytes()).hexdigest()
+        entry = manifest["verbatim_locators"]["entries"][0]
+        entry["surface"] = "supplement"
+        entry["snippet"] = snippet
+        entry["anchor"] = "Supplementary deck, slide 1 speaker notes"
+        return manifest
+
+    def test_supplement_binary_is_an_accepted_kind(self) -> None:
+        self.assertIn("supplement_binary", gate.ARTIFACT_KINDS)
+
+    def test_a_locator_verifies_against_slide_text(self) -> None:
+        sentence = "Scale bars represent twenty micrometres in every panel shown here."
+        root, deck = self._deck({"ppt/slides/slide1.xml": pptx_part([sentence])})
+        errors, _ = gate.validate(self._manifest(root, deck, sentence), root=root,
+                                  verify_artifacts=True, require_current_schema=True)
+        self.assertEqual(errors, [])
+
+    def test_a_locator_verifies_against_the_speaker_notes_pane(self) -> None:
+        """🔴 The whole reason this exists. Slides alone would have missed the sentence."""
+        root, deck = self._deck({
+            "ppt/slides/slide1.xml": pptx_part(["Figure S2"]),
+            "ppt/notesSlides/notesSlide1.xml": pptx_part([self.NOTE]),
+        })
+        errors, _ = gate.validate(self._manifest(root, deck, self.NOTE), root=root,
+                                  verify_artifacts=True, require_current_schema=True)
+        self.assertEqual(errors, [])
+
+    def test_runs_inside_a_paragraph_are_joined_without_a_fabricated_space(self) -> None:
+        """PowerPoint splits a word across runs at a formatting or script boundary.
+
+        🔴 Measured on the real deposit: the notes pane carries `ה` and `ttest` as separate
+        runs, so a space-joining extractor writes `ה ttest` — a space the author never typed,
+        in the single most consequential sentence of that reading. A quote re-captured from
+        that output would carry the fabrication and verify against it.
+        """
+        text = gate._pptx_part_text(pptx_part(["WWO", "X", "-DEE"]))
+        self.assertEqual(text, "WWOX-DEE")
+
+    def test_paragraphs_are_separated_and_parts_ordered_deterministically(self) -> None:
+        root, deck = self._deck({
+            "ppt/slides/slide1.xml": pptx_part(["first slide"]),
+            "ppt/notesSlides/notesSlide1.xml": pptx_part(["note on one"]),
+            "ppt/slides/slide2.xml": pptx_part(["second slide"]),
+            "ppt/slides/slide10.xml": pptx_part(["tenth slide"]),
+        })
+        body, abstract = gate._artifact_text(deck, "supplement_binary")
+        self.assertEqual(abstract, "")
+        self.assertEqual(body.split("\n"),
+                         ["first slide", "note on one", "second slide", "tenth slide"])
+
+    def test_the_suspect_surface_screen_runs_on_the_deck_too(self) -> None:
+        """Rule 5c: same screen, same order — raw decoded bytes, before any parser."""
+        _root, deck = self._deck({
+            "ppt/slides/slide1.xml": pptx_part(["The value was (P \x1d 0.023) in that run."])})
+        with self.assertRaises(gate.SuspectSurface) as caught:
+            gate._artifact_text(deck, "supplement_binary")
+        self.assertEqual(caught.exception.verdict.signature, gate.SIGNATURE_C0_CONTROL)
+
+    def test_a_zip_that_is_not_a_deck_says_so(self) -> None:
+        _root, deck = self._deck({"docProps/app.xml": b"<Properties/>"})
+        with self.assertRaises(ValueError) as caught:
+            gate._artifact_text(deck, "supplement_binary")
+        self.assertIn("no slide or notes part", str(caught.exception))
+
+    def test_an_unreadable_suffix_under_this_kind_is_an_error_not_an_empty_surface(self) -> None:
+        """A locator would otherwise fail with 'exact text not found' for the wrong reason."""
+        tmp = TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        book = Path(tmp.name) / "table.xlsx"
+        book.write_bytes(b"not really a workbook")
+        with self.assertRaises(ValueError) as caught:
+            gate._artifact_text(book, "supplement_binary")
+        self.assertIn("unsupported", str(caught.exception))
+
+    def test_an_article_binary_pdf_stays_silent(self) -> None:
+        """🔴 The green half. article_binary beside a structured surface is correct practice
+        and must not start raising — blocking there would punish the practice."""
+        tmp = TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        pdf = Path(tmp.name) / "paper.pdf"
+        pdf.write_bytes(b"%PDF-1.4 not parsed here")
+        self.assertEqual(gate._artifact_text(pdf, "article_binary"), ("", ""))
+
+    def test_the_real_deposits_are_now_readable(self) -> None:
+        """The four containers the census counted, on the production bytes."""
+        deposits = [
+            ROOT / "files/fulltext/PMID38499540_BidanyMizrahi2024_supplement"
+                 / "41420_2024_1878_MOESM1_ESM.pptx",
+            ROOT / "files/fulltext/PMID38499540_BidanyMizrahi2024_supplement"
+                 / "41420_2024_1878_MOESM2_ESM.pptx",
+            ROOT / "files/fulltext/PMID38499540_BidanyMizrahi2024_supplement"
+                 / "41420_2024_1878_MOESM4_ESM.pptx",
+            ROOT / "files/supplement/PMID33916893/s001/supplementary materials"
+                 / "Supplemental Figure 1.pptx",
+        ]
+        present = [path for path in deposits if path.is_file()]
+        if not present:  # files/ is gitignored by design
+            self.skipTest("no .pptx deposits in this checkout")
+        for path in present:
+            body, abstract = gate._artifact_text(path, "supplement_binary")
+            self.assertEqual(abstract, "")
+            self.assertTrue(body.strip(), f"{path.name} yielded no text")
+
+    def test_the_fields_not_mice_note_is_now_quotable(self) -> None:
+        """The sentence the census named, verified as a locator would verify it."""
+        deposit = (ROOT / "files/fulltext/PMID38499540_BidanyMizrahi2024_supplement"
+                        / "41420_2024_1878_MOESM2_ESM.pptx")
+        if not deposit.is_file():
+            self.skipTest("PMID 38499540 supplement absent from this checkout")
+        body, _abstract = gate._artifact_text(deposit, "supplement_binary")
+        self.assertIn("fields", body)
+        matched, _mode = gate._quote_matches("נעשו על כל הfields ולא על כל עכבר", body)
+        self.assertTrue(matched, body)
+
+    def test_undeclared_binary_supplements_are_a_falling_ratchet(self) -> None:
+        """🔴 Measured 4 on 2026-09-10, and only a scientist can lower it.
+
+        Making them DECLARABLE is harness work and is done. DECLARING them edits a manifest
+        under `disease-models/`, which this task has read access to and nothing more. So the
+        number is asserted as a ratchet that may only fall, never as an equality that would
+        go red the day somebody does the right thing.
+        """
+        deposits = sorted(p for p in (ROOT / "files").rglob("*.pptx") if p.is_file())
+        if not deposits:
+            self.skipTest("no .pptx deposits in this checkout")
+        declared: set[str] = set()
+        directory = ROOT / "disease-models/wwox/research/deepdive_manifests"
+        for path in directory.glob("PMID*.json"):
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            for artifact in manifest.get("source_artifacts") or []:
+                declared.add(str(artifact.get("path", "")))
+        undeclared = [p for p in deposits
+                      if str(p.relative_to(ROOT)) not in declared]
+        self.assertLessEqual(
+            len(undeclared), 4,
+            f"undeclared binary supplements rose above the 2026-09-10 baseline: {undeclared}")
 
 
 class TheSuspectSurfaceScreenReturnsAVerdict(unittest.TestCase):

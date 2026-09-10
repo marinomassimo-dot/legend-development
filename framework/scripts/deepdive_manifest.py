@@ -141,7 +141,27 @@ COUPLED_RELATIONS = {
 }
 POINTER_FIELDS = {spec[0] for spec in COUPLED_RELATIONS.values()}
 NEEDLE_FIELDS = {spec[1] for spec in COUPLED_RELATIONS.values()}
-ARTIFACT_KINDS = {"article_binary", "article_text", "supplement_text", "figure", "table"}
+ARTIFACT_KINDS = {"article_binary", "article_text", "supplement_binary", "supplement_text",
+                  "figure", "table"}
+# 🔴 `supplement_binary` added 2026-09-10, and the gap it closes was a SILENT HOLE IN THE
+# COVERAGE MAP rather than friction. A `.pptx` supplement could be declared only as
+# `supplement_text`, whose own text verification then refuses it, so four deposited files sat
+# on disk declarable by nothing:
+#
+#   files/fulltext/PMID38499540_BidanyMizrahi2024_supplement/41420_2024_1878_MOESM{1,2,4}_ESM.pptx
+#   files/supplement/PMID33916893/s001/supplementary materials/Supplemental Figure 1.pptx
+#
+# `PMID38499540.md` records that the containers are "not declared at all", and the single
+# most consequential sentence of that reading — the authors' own deposited note that the
+# t-tests were computed over microscopy FIELDS and not per MOUSE — lives in a speaker-notes
+# pane, carried in the dossier and in no machine-verified locator. Two actors escalated it on
+# 2026-09-09 and neither built it.
+#
+# A `.pptx` is an OPC zip, so the stdlib reaches its slide XML with no new dependency: the
+# CONTAINER is declared and fingerprinted as a binary, and its text is routed through the
+# existing verifier. Rule 5c stays intact — nothing here reconstructs text and then calls it
+# a surface. The deposited runs are read in document order, exactly as the `.docx` branch has
+# always read `word/document.xml`.
 # The kinds that can be a text surface DERIVED from a PDF, and therefore carry extraction
 # damage into a quote. Shared by the font-encoding screen and the page-furniture screen so
 # the two cannot drift apart over which surfaces they consider derived.
@@ -845,6 +865,76 @@ def font_encoding_verdict(path: Path) -> tuple[str, str]:
         f"still be wrong, and most damaged files in this corpus have one")
 
 
+# The OPC parts of a deck that hold authored text. `notesSlides` is not an optional extra:
+# the sentence this branch exists for — "all the t-tests were done over all the FIELDS and
+# not over each MOUSE" — is in a speaker-notes pane and nowhere else in the deposit.
+PPTX_TEXT_PART = re.compile(r"^ppt/(slides|notesSlides)/[A-Za-z]+(\d+)\.xml$")
+
+
+def _local_name(tag: Any) -> str:
+    """The tag without its namespace. DrawingML namespaces vary by producer."""
+    return str(tag).rsplit("}", 1)[-1]
+
+
+def _pptx_part_order(name: str) -> tuple[int, int]:
+    """Deterministic reading order: slide 1, its notes, slide 2, its notes, …
+
+    🔴 It orders; it does NOT assert that `notesSlide2` belongs to `slide2`. That mapping
+    lives in the part relationships and this does not read them, so nothing here may be used
+    to say which slide a note annotates. The anchor of a locator says where it came from.
+    """
+    matched = PPTX_TEXT_PART.match(name)
+    assert matched is not None
+    return int(matched.group(2)), 0 if matched.group(1) == "slides" else 1
+
+
+def _pptx_part_text(raw: bytes) -> str:
+    """Authored text of one slide or notes part, in document order.
+
+    Runs inside a paragraph are joined with NO separator, which is the same discipline
+    `XML_INLINE_TAGS` enforces for JATS and for the same measured reason: PowerPoint splits
+    a word across `<a:r>` runs whenever formatting changes mid-word, and joining runs with a
+    space would manufacture a space the author never typed — then a quote re-captured from
+    the joined output would carry the fabrication and verify against it.
+    """
+    root = ElementTree.fromstring(raw)
+    lines: list[str] = []
+    for element in root.iter():
+        if _local_name(element.tag) != "p":
+            continue
+        runs: list[str] = []
+        for node in element.iter():
+            local = _local_name(node.tag)
+            if local == "t":
+                runs.append(node.text or "")
+            elif local == "br":
+                runs.append("\n")
+        line = "".join(runs).strip()
+        if line:
+            lines.append(line)
+    return "\n".join(lines)
+
+
+def _pptx_surfaces(path: Path) -> tuple[str, str]:
+    """(deck text, abstract) for a declared `.pptx` container. A deck has no abstract."""
+    chunks: list[str] = []
+    with zipfile.ZipFile(path) as archive:
+        names = [name for name in archive.namelist() if PPTX_TEXT_PART.match(name)]
+        if not names:
+            raise ValueError(
+                f"{path.name} declares no slide or notes part (ppt/slides/*.xml, "
+                f"ppt/notesSlides/*.xml). It is a zip, but it is not a deck this can read")
+        for name in sorted(names, key=_pptx_part_order):
+            raw = archive.read(name)
+            # Same screen, same order as every other surface: raw decoded bytes, before any
+            # parser. A deck is not exempt from being an extraction that lost its glyphs.
+            _refuse_suspect_surface(path, raw.decode("utf-8", errors="replace"))
+            part = _pptx_part_text(raw)
+            if part:
+                chunks.append(part)
+    return "\n".join(chunks), ""
+
+
 def _artifact_text(path: Path, kind: str) -> tuple[str, str]:
     """Return (body/supplement text, abstract text) for strict write-time verification.
 
@@ -871,11 +961,18 @@ def _artifact_text(path: Path, kind: str) -> tuple[str, str]:
         raw = path.read_bytes()
         _refuse_suspect_surface(path, raw.decode("utf-8", errors="replace"))
         return _html_surfaces(raw)
+    if suffix == ".pptx":
+        return _pptx_surfaces(path)
     if suffix in {".txt", ".md"}:
         raw_text = path.read_text(encoding="utf-8")
         _refuse_suspect_surface(path, raw_text)
         return _normalise_text(raw_text), ""
-    if kind in {"article_text", "supplement_text", "table"}:
+    # `supplement_binary` is in this set and `article_binary` is deliberately NOT. A `.pdf`
+    # declared as `article_binary` beside a structured surface is correct practice and must
+    # stay silent; a container declared as a binary SUPPLEMENT is declared precisely so its
+    # text can be verified, so an unreadable suffix there is an error worth saying out loud
+    # rather than an empty surface a locator then fails against for the wrong reason.
+    if kind in {"article_text", "supplement_text", "supplement_binary", "table"}:
         raise ValueError(f"text verification is unsupported for {path.suffix or 'this file type'}")
     return "", ""
 

@@ -57,9 +57,20 @@
    "historical_manifests_retro_edited": 0
   },
   "intrusion_baseline_2026_09_10": {
-   "PMID18460020_Nakayama2008_PMC.txt": {"intrusions": 14, "page_number": 2, "running_header": 12},
-   "PMID21731849_DelMare2011_AJCR.txt": {"intrusions": 13, "page_number": 6, "running_header": 7},
-   "PMID20530675_Kurek2010_supplement1.txt": {"intrusions": 0}
+   "PMID18460020_Nakayama2008_PMC.txt": {
+    "intrusions": 14,
+    "page_number": 2,
+    "running_header": 12
+   },
+   "PMID21731849_DelMare2011_AJCR.txt": {
+    "intrusions": 13,
+    "page_number": 6,
+    "running_header": 7
+   },
+   "PMID20530675_Kurek2010_supplement1.txt": {
+    "intrusions": 0
+   },
+   "_correction": "The specification (§ 9.5(b)) states '13 unchanged on PMID 20530675'. That surface returns 0. Every primary record - the wave-4 self-evaluation, capability_scout_log, scientist-c's task ledger and commit 492a532 - attributes the 13 to 'the wave-1 paper', which is PMID 21731849. PMID 20530675 contributed a false-positive tuning datum (12 -> 1), never a 13."
   },
   "provenance_baseline_2026_09_10": {
    "manifests": 81,
@@ -70,6 +81,42 @@
    "source_identity_unverified": 18,
    "specification_said": "80 / 26 / 37 / 4 / 15 / 16 — the corpus has grown by one manifest since that measurement",
    "historical_manifests_retro_edited": 0
+  },
+  "intrusion_false_positive_budget_after_wiring": {
+   "detector_counts_after": "unchanged: 14 / 13 / 0 - the detector is imported, not edited",
+   "in_scope_derived_text_surfaces_present": 6,
+   "in_scope_surfaces_absent_from_checkout": 2,
+   "detected_intrusions_across_them": 50,
+   "locators_refused_by_the_wiring": 0,
+   "manifests_whose_STRICT_verdict_changed": 0,
+   "not_vacuous": "the real PMID 21731849 sentence quoted across 588 BLOCKS; its two clean neighbours on the same page PASS",
+   "scope_widening": "supplement_text included beyond the spec's letter; its five present surfaces hold 0 intrusions, so 0 added false positives"
+  },
+  "provenance_after_wiring": {
+   "measurable": 27,
+   "unmeasurable": 54,
+   "undeclared_identifier": 19,
+   "source_identity_unverified": 18,
+   "undeclared_count": 3,
+   "total_review_lines": 40,
+   "manifests_carrying_at_least_one": 13,
+   "target": "undeclared external = 0 on manifests minted after the change; a complete external_provenance achieves it",
+   "known_noise": "PMID 31428585 entries[6] flags 29581896 in the CORRECTED record, which narrates the wrong value. Left as noise deliberately: a heuristic recognising correction language would silence a genuine error phrased apologetically."
+  },
+  "binary_supplement_baseline_2026_09_10": {
+   "pptx_on_disk": 5,
+   "pptx_declared_in_a_manifest": 1,
+   "declared_one": "PMID26675548 declares oncotarget-07-4344-s002.pptx as article_binary; its bytes are absent from this checkout",
+   "undeclared_and_undeclarable_before_this_change": 4,
+   "files": [
+    "files/fulltext/PMID38499540_BidanyMizrahi2024_supplement/41420_2024_1878_MOESM1_ESM.pptx",
+    "files/fulltext/PMID38499540_BidanyMizrahi2024_supplement/41420_2024_1878_MOESM2_ESM.pptx",
+    "files/fulltext/PMID38499540_BidanyMizrahi2024_supplement/41420_2024_1878_MOESM4_ESM.pptx",
+    "files/supplement/PMID33916893/s001/supplementary materials/Supplemental Figure 1.pptx"
+   ],
+   "after": "all four now extract and their text verifies through the existing verifier. The fields-not-mice note is in MOESM2 ppt/notesSlides/notesSlide1.xml and is now quotable.",
+   "evidence_presence_before_and_after": "81 manifests | 616 artifacts | 218 present | 398 absent | 0 digest_mismatch - UNCHANGED, because declaring the four edits a manifest under disease-models/, which this task has read access to and nothing more.",
+   "residual": "undeclared binary supplements 4 -> 4. Making them DECLARABLE is done; DECLARING them is a scientist's act. Asserted in the suite as a ratchet that may only fall, never as an equality that would go red the day somebody does the right thing."
   }
  },
  "DEFAULTS_TAKEN": [
@@ -102,14 +149,42 @@
    "default_taken": "Recorded in the report; deliverable 4 handled per the dispatch's own instruction to implement the same contract inline rather than wait idle, and screen_verdict.py was NOT created by me.",
    "why_safe": "The dispatch names this branch explicitly. Creating the peer's file would violate exclusive ownership.",
    "what_would_have_been_different": "Waiting would have been a class-3 stop under §21c."
+  },
+  {
+   "condition": "The coordinator's measurable for the binary-supplement deliverable is 'binary supplements present on disk but absent from every manifest - 4 today, target 0'. Reaching 0 requires editing manifests under disease-models/, which the dispatch grants read access only.",
+   "default_taken": "Deliver the capability, the extraction, the regressions and an executable ratchet; report that the count moves only when a scientist declares them.",
+   "why_safe": "Exclusive file ownership is a stated rule of the dispatch, and § 4.4 says a needed change inside someone else's file is REPORTED, not made. Nothing is lost: the four containers are readable and their locators verifiable the moment they are declared.",
+   "what_would_have_been_different": "Editing four manifests would have hit 0 and violated the ownership boundary this laboratory runs on."
+  },
+  {
+   "condition": "screen_verdict.py landed mid-task (1ef620f) after the dispatch recorded it as absent.",
+   "default_taken": "Read its docstring and adopt the real contract rather than implementing the same shape inline.",
+   "why_safe": "The dispatch's inline route was explicitly the fallback for the peer's file not existing. It exists, so the better branch is available; screen_verdict.py was neither created nor edited here.",
+   "what_would_have_been_different": "An inline contract would have had to be reconciled with the peer's later."
   }
  ],
  "STOP_LOG": [],
  "MILESTONE_PLAN": [
-  {"id": "M-1", "milestone": "§ 9.5(a) measured over the whole corpus, then refused by the validator with a regression fixture built from the real historical defect", "durable_evidence": "framework/scripts/manifest_queue_id_crosscheck.py, framework/scripts/test_manifest_queue_id_crosscheck.py, QueueIdentifiersAreCrossChecked in test_deepdive_manifest.py"},
-  {"id": "M-2", "milestone": "§ 9.5(b) text_surface_intrusion_check wired for PDF-derived article_text, inside the measured false-positive budget", "durable_evidence": "framework/scripts/deepdive_manifest.py"},
-  {"id": "M-3", "milestone": "§ 9.4 locator_identifier_provenance wired as a WARN with a required external_provenance declaration", "durable_evidence": "framework/scripts/deepdive_manifest.py"},
-  {"id": "M-4", "milestone": "_refuse_suspect_surface converted to the verdict contract of § 9.2", "durable_evidence": "framework/scripts/deepdive_manifest.py"}
+  {
+   "id": "M-1",
+   "milestone": "§ 9.5(a) measured over the whole corpus, then refused by the validator with a regression fixture built from the real historical defect",
+   "durable_evidence": "framework/scripts/manifest_queue_id_crosscheck.py, framework/scripts/test_manifest_queue_id_crosscheck.py, QueueIdentifiersAreCrossChecked in test_deepdive_manifest.py"
+  },
+  {
+   "id": "M-2",
+   "milestone": "§ 9.5(b) text_surface_intrusion_check wired for PDF-derived article_text, inside the measured false-positive budget",
+   "durable_evidence": "framework/scripts/deepdive_manifest.py"
+  },
+  {
+   "id": "M-3",
+   "milestone": "§ 9.4 locator_identifier_provenance wired as a WARN with a required external_provenance declaration",
+   "durable_evidence": "framework/scripts/deepdive_manifest.py"
+  },
+  {
+   "id": "M-4",
+   "milestone": "_refuse_suspect_surface converted to the verdict contract of § 9.2",
+   "durable_evidence": "framework/scripts/deepdive_manifest.py"
+  }
  ],
- "STATE": "IN_PROGRESS — opened 2026-09-10."
+ "STATE": "COMPLETE - five deliverables landed on main 2026-09-10: 54beb84, 8020931, b626e12, 9950522 and this commit."
 }
