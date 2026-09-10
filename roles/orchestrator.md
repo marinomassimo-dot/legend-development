@@ -191,6 +191,45 @@ were discharged; **leg 3, root non-perturbation, is not retrospectively measurab
 owed by this actor.** `CONFIGURED != PROVEN` applies here as everywhere, and it applies to the
 actor that enforces it on others.
 
+## Dispatch obligations — what this actor owes a reading lot before anyone reads
+
+> Added 2026-09-10. The 2026-09-09 retrospective § 4.5 records two defects that were the
+> orchestrator's and were multiplied by three actors: a **false acquisition hint** carried into a
+> task contract as fact (`pmcid: null` for a paper that had a PMC deposit) under a brief that told
+> actors *"do not re-derive them"*; and a **stale brief** that lived in a scratchpad, did not
+> survive the session, and shipped a defective commit wrapper with it. Assignment authority (H.1)
+> carries these obligations with it, and none of them is scientific work.
+
+Before a Task Contract is issued for a lot:
+
+1. **The duplicate-work gate is run over the lot, on the receipt ledger** — never on memory or on
+   the registries — and the outcome per PMID (complete / partial / legacy-only / none) is written
+   into the dispatch record with the derivation. `fulltext_receipts.py status --pmid` per member.
+2. **Acquisition hints are re-derived from more than one index and labelled by their source.** A
+   hint is a claim, and a contract that says *"do not re-derive"* makes it authoritative; five OA
+   indexes unanimously called PMID 24510053 closed and all five were wrong. Where indexes
+   disagree, the contract carries the disagreement, not a chosen side (`oa_status_dissent.py`).
+3. **`INTERNAL_EDGES` are resolved and written into the contract** (Annex A.1,
+   `lot_internal_edges.py --from-contract <T> --json`). A lot whose members cite each other, share
+   an issue, an author or a reagent is declared a set at M0; the sweep's sharpest cross-document
+   finding existed only because two such papers happened to land in one wave. `UNSCREENABLE`
+   members are named, never treated as edgeless.
+4. **The brief the lot is dispatched with is the versioned protocol**,
+   [`framework/protocols/scientist_standing_brief.md`](../framework/protocols/scientist_standing_brief.md),
+   named by version — never a session artefact. If a rule changed since the brief's version, the
+   brief is revised first and the dispatch names the new version.
+5. **A number quoted from a record into a contract — a baseline, a budget, an attribution — is
+   re-derived before it becomes a target** (`SPECIFICATION_NUMBER_PROVENANCE_GATE`). The morning
+   of 2026-09-10 a dispatch quoted a false-positive baseline verbatim from the retrospective; the
+   paper it named was wrong, and only a measurement downstream caught it.
+6. **Cross-actor repairs are the orchestrator's and are logged as such.** A scientist reports a
+   red in a peer's file and does not fix it; this actor fixes it, or assigns it, and records the
+   repair in the orchestration record. That division produced zero cross-actor collisions across
+   eleven waves and the one authorship incident of the sweep (§ 4.3) happened where it lapsed.
+7. **What every actor reports in a transcript is persisted by the actor that receives it.** A
+   closing report that exists only in a message to this actor is written verbatim into durable
+   state with its source noted — §21c's own safe default, applied to the coordinator.
+
 ## Fingerprint set
 
 `CORE` plus Annex C, Annex D, Annex F, Annex G, Annex I, Annex J § J.1 and Annex J § J.4

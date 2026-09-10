@@ -111,6 +111,20 @@ For each gap, search resources by category. If the gap is small, do a short sear
 
 Use web/GitHub/GitLab when the data may have changed or be recent.
 
+### 3b. Environment preflight — a verdict is keyed to the host that produced it
+
+Before any `SKIP` or `REJECT` on the ground that a tool is *absent* or *present*, run
+`python3 framework/scripts/tool_preflight.py` and write its verdict, the host, and the versions
+that matter (`python3 -c "import fitz; print(fitz.__doc__)"` for PyMuPDF) into the entry.
+
+Why: `capability_scout_log.md` skipped PyMuPDF on 2026-09-09 because *"`fitz` is already absent
+in this environment and a red suite proves it."* On the same day, in the same repository, on a
+different host, `import fitz` succeeded (PyMuPDF 1.28.2) and `tool_preflight.py` reported 6/6
+present — the surface census's own sentinel was running on it. **Actor sessions do not share an
+environment, and a capability verdict keyed to one session's environment does not generalise.**
+A verdict that names its host is still true when the host changes; one that does not is a claim
+about nothing in particular.
+
 ### 4. Score
 
 Each candidate receives:
