@@ -1,0 +1,115 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.2 TASK_ACK + A.3 TASK_CLAIM",
+ "_note": "Harness work under LEGEND_CORE §21e: everything under framework/ is T0, landed by its author on main with no Mirror precondition and no gate. This record exists so the work has provenance, and — per the 2026-09-09 retrospective § 9.7 — so that DEFAULTS_TAKEN and STOP_LOG survive the transcript they would otherwise die in.",
+ "TASK_ID": "HARNESS-VALIDATOR-001",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "plan",
+ "ACTOR_ID": "plan",
+ "TASK_ACK": {
+  "state": "ACCEPTED",
+  "accepted_on": "2026-09-10",
+  "objective": "Close the three validator gaps the 2026-09-09 actor retrospective registered: § 9.5(a) the multihop queue-ID cross-check (measure the corpus first, then refuse), § 9.5(b) wire text_surface_intrusion_check.py into the validator for PDF-derived article_text surfaces inside a false-positive budget, and § 9.4 wire locator_identifier_provenance.py as a WARN with a required declaration.",
+  "interaction_mode": "AUTONOMOUS_COMPLETE",
+  "review_requirement": "None as a precondition (§21e GATES). Mirror reviews ex post; a finding is a new task.",
+  "scope_limit": "framework/scripts/deepdive_manifest.py, its suite, new scripts owned by this task and their tests, and this ledger file. Peer-owned screens are IMPORTED, never edited. disease-models/ is read-only here, and no historical manifest is retro-edited."
+ },
+ "TASK_CLAIM": {
+  "claimed_by": "plan",
+  "claimed_on": "2026-09-10",
+  "timestamp_precision": "date only — the runtime exposed no wall-clock time",
+  "durable_pointer": "framework/scripts/deepdive_manifest.py",
+  "uniqueness": "no competing claim exists for this TASK_ID + GENERATION"
+ },
+ "WRITE_PERIMETER": {
+  "permitted_here": [
+   "framework/scripts/deepdive_manifest.py",
+   "framework/scripts/test_deepdive_manifest.py",
+   "framework/scripts/manifest_queue_id_crosscheck.py",
+   "framework/scripts/test_manifest_queue_id_crosscheck.py",
+   "ledger/tasks/plan/HARNESS-VALIDATOR-001.json"
+  ],
+  "refused_here": [
+   "framework/scripts/screen_verdict.py",
+   "framework/scripts/text_surface_intrusion_check.py",
+   "framework/scripts/locator_identifier_provenance.py",
+   "framework/scripts/genre_discriminator.py",
+   "framework/scripts/erratum_scope_check.py",
+   "framework/scripts/oa_status_dissent.py",
+   "framework/scripts/manifest_flag_drift.py",
+   "framework/scripts/evidence_presence.py",
+   "disease-models/** (read access only)",
+   "_external_repos/MANIFEST.md"
+  ],
+  "reason": "Exclusive file ownership declared in the dispatch. A needed change inside a peer's file is REPORTED, never made (§ 4.4)."
+ },
+ "MEASUREMENTS": {
+  "_note": "Each baseline was re-derived in this session rather than trusted from the retrospective. Where the re-derivation disagrees with the specification, the disagreement is recorded here and not silently reconciled.",
+  "queue_id_crosscheck_baseline_2026_09_10": {
+   "manifests": 81,
+   "queue_entries": 96,
+   "ft_references_checked": 16,
+   "unresolved": 0,
+   "foreign": 0,
+   "unchecked_no_ft_identifier": 2,
+   "unchecked_detail": "PMID 25012504 multihop.queued[0].queue = 'integrity review'; PMID 42422765 multihop.queued[0].queue = 'full_text_queue_current'. Neither names an FT address, so neither is approved — both are reported UNCHECKED.",
+   "why_zero": "The B7 defect (FT-072–FT-075 on PMID 18674750) was caught by scientist-b's own grep IN DRAFT and never landed. Replayed from git (the draft is reconstructible from commit 7e21e12's diff) the new check refuses all four foreign identifiers and passes the one correct identifier FT-071.",
+   "historical_manifests_retro_edited": 0
+  },
+  "intrusion_baseline_2026_09_10": {
+   "PMID18460020_Nakayama2008_PMC.txt": {"intrusions": 14, "page_number": 2, "running_header": 12},
+   "PMID21731849_DelMare2011_AJCR.txt": {"intrusions": 13, "page_number": 6, "running_header": 7},
+   "PMID20530675_Kurek2010_supplement1.txt": {"intrusions": 0}
+  },
+  "provenance_baseline_2026_09_10": {
+   "manifests": 81,
+   "measurable": 27,
+   "in_artefact": 39,
+   "declared_external": 5,
+   "undeclared_external": 19,
+   "source_identity_unverified": 18,
+   "specification_said": "80 / 26 / 37 / 4 / 15 / 16 — the corpus has grown by one manifest since that measurement",
+   "historical_manifests_retro_edited": 0
+  }
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "The dispatch places me in the shared root checkout on `main`, while §21e says a task spanning hours gets a task branch. Switching the ROOT checkout's branch is reserved to the operator (§21d, 'branch switch inside a single-owner worktree: agents. Root: reserved.') and would move the branch under every peer sharing the checkout.",
+   "default_taken": "Commit directly on `main` from the root checkout through scripts/legend_commit.sh, path-scoped and under the commit lock.",
+   "why_safe": "§21e states in terms that the root checkout and `main` are writable by every actor, and that a change finished when it is written may be committed on `main` directly. Path-scoping means no peer's in-flight file can be swept up.",
+   "what_would_have_been_different": "A task branch would have isolated the work, at the cost of either switching the shared root's branch (reserved) or provisioning a worktree whose only purpose is a change that is green when it lands."
+  },
+  {
+   "condition": "§ 9.5(b)'s stated false-positive baseline — '13 unchanged on PMID 20530675' — does not reproduce: that surface returns 0. Every primary record (wave-4 eval, capability_scout_log, scientist-c's task ledger, commit 492a532) attributes the 13 to 'the wave-1 paper', which is PMID 21731849.",
+   "default_taken": "Measure all three surfaces, report the misattribution plainly, and hold the wiring to the budget on the CORRECTED attribution: 14 on PMID 18460020, 13 on PMID 21731849, 0 on the PMID 20530675 supplement.",
+   "why_safe": "The retrospective is not a normative file, and the numbers it misattributes are still the right numbers — only the paper label was wrong. Re-deriving all three costs one command each and removes the ambiguity instead of inheriting it.",
+   "what_would_have_been_different": "Reporting '13 on PMID 20530675, unchanged' would have been a false sentence in exactly the class § 9.4 exists to prevent — a value asserted with the confidence of a measurement."
+  },
+  {
+   "condition": "`validate()` has callers outside this module (session_self_eval.py) and 94 existing regressions; § 9.4 requires a WARN channel it does not have.",
+   "default_taken": "An optional `warnings: list[str] | None` sink parameter rather than widening the return tuple.",
+   "why_safe": "Every existing caller is byte-for-byte unaffected; a caller that wants warnings opts in. Reversible in one edit.",
+   "what_would_have_been_different": "A three-tuple would have made every existing call site a mandatory edit before a single warning could be emitted, and would have broken session_self_eval.py, which is not mine to edit."
+  },
+  {
+   "condition": "A workspace with no full_text_queue_current.md cannot resolve any queue address, and blocking there would refuse every manifest validated against a bare workspace.",
+   "default_taken": "Declare the gap in `incomplete`, naming each identifier that went unchecked, instead of either blocking or passing silently.",
+   "why_safe": "The reader is told what was NOT asked. 'This check had nothing to check' and 'this check approved it' stay distinguishable — the exact failure class § 3.1 of the retrospective records (a screen that returned CLEAN without screening anything).",
+   "what_would_have_been_different": "Blocking would have made the check unusable off the shared checkout; silence would have reproduced the fail-open the retrospective names as the worst class."
+  },
+  {
+   "condition": "`framework/scripts/screen_verdict.py` has not landed (git log over that path is empty at the time of this task's deliverable 4).",
+   "default_taken": "Recorded in the report; deliverable 4 handled per the dispatch's own instruction to implement the same contract inline rather than wait idle, and screen_verdict.py was NOT created by me.",
+   "why_safe": "The dispatch names this branch explicitly. Creating the peer's file would violate exclusive ownership.",
+   "what_would_have_been_different": "Waiting would have been a class-3 stop under §21c."
+  }
+ ],
+ "STOP_LOG": [],
+ "MILESTONE_PLAN": [
+  {"id": "M-1", "milestone": "§ 9.5(a) measured over the whole corpus, then refused by the validator with a regression fixture built from the real historical defect", "durable_evidence": "framework/scripts/manifest_queue_id_crosscheck.py, framework/scripts/test_manifest_queue_id_crosscheck.py, QueueIdentifiersAreCrossChecked in test_deepdive_manifest.py"},
+  {"id": "M-2", "milestone": "§ 9.5(b) text_surface_intrusion_check wired for PDF-derived article_text, inside the measured false-positive budget", "durable_evidence": "framework/scripts/deepdive_manifest.py"},
+  {"id": "M-3", "milestone": "§ 9.4 locator_identifier_provenance wired as a WARN with a required external_provenance declaration", "durable_evidence": "framework/scripts/deepdive_manifest.py"},
+  {"id": "M-4", "milestone": "_refuse_suspect_surface converted to the verdict contract of § 9.2", "durable_evidence": "framework/scripts/deepdive_manifest.py"}
+ ],
+ "STATE": "IN_PROGRESS — opened 2026-09-10."
+}

@@ -1318,5 +1318,77 @@ class AFileCanBeWellFormedAndDeclareTheFalse(unittest.TestCase):
         self.assertFalse([item for item in errors if "symbol fonts unmapped" in item], errors)
 
 
+class QueueIdentifiersAreCrossChecked(unittest.TestCase):
+    """§ 9.5(a): a queued hop may not point at another paper's queue entry.
+
+    The unit tests of the check itself live in `test_manifest_queue_id_crosscheck.py`. What
+    is asserted HERE is the property that was missing on 2026-09-09 and that only the
+    validator can provide: that `deepdive_manifest.validate` actually calls it, and refuses.
+    A check nobody invokes is a check that catches the defect only when someone remembers.
+    """
+
+    QUEUE = (
+        "# FULL TEXT QUEUE\n\n"
+        "## FT-071 — This paper's own entry\n"
+        "**Paper:** PMID 12345678 — the manifest under test.\n\n"
+        "## FT-072 — An unrelated paper\n"
+        "**Paper:** PMID 20530675 — Kurek KC et al., Oncogene 2010.\n"
+    )
+
+    def _workspace(self, queue_id: str, *, with_queue: bool = True):
+        tmp = TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        root = Path(tmp.name)
+        if with_queue:
+            queue = root / "disease-models/wwox/research/full_text_queue_current.md"
+            queue.parent.mkdir(parents=True)
+            queue.write_text(self.QUEUE, encoding="utf-8")
+        manifest = minimal()
+        manifest["multihop"] = {
+            "gene_direct_refs_in_source": ["ref 42"],
+            "references_enumerated": 48,
+            "resolved": ["17086198"],
+            "queued": [{"ref": 46, "pmid": "16941225", "queue": queue_id,
+                        "reason": "a hop this reading owes"}],
+        }
+        return root, manifest
+
+    def test_a_foreign_queue_identifier_is_a_block(self) -> None:
+        root, manifest = self._workspace("FT-072")
+        errors, _ = gate.validate(manifest, root=root)
+        self.assertTrue([e for e in errors if "FT-072" in e and "different paper" in e], errors)
+
+    def test_an_unresolvable_queue_identifier_is_a_block(self) -> None:
+        root, manifest = self._workspace("FT-999")
+        errors, _ = gate.validate(manifest, root=root)
+        self.assertTrue([e for e in errors if "FT-999" in e and "no entry" in e], errors)
+
+    def test_the_paper_s_own_entry_passes(self) -> None:
+        """🔴 The green half. Without it, a check that refused everything would pass above."""
+        root, manifest = self._workspace("FT-071")
+        errors, incomplete = gate.validate(manifest, root=root)
+        self.assertEqual(errors, [])
+        self.assertEqual(incomplete, [])
+
+    def test_a_workspace_without_the_queue_declares_the_gap_instead_of_passing(self) -> None:
+        """Not silence: the identifiers that went unchecked are named."""
+        root, manifest = self._workspace("FT-072", with_queue=False)
+        errors, incomplete = gate.validate(manifest, root=root)
+        self.assertEqual(errors, [])
+        self.assertTrue([i for i in incomplete if "FT-072" in i and "NOT checked" in i],
+                        incomplete)
+
+    def test_the_queue_is_looked_up_beside_the_manifest_not_beside_the_evidence(self) -> None:
+        """A branch carries the manifest and the queue; gitignored evidence stays elsewhere."""
+        with TemporaryDirectory() as evidence_tmp:
+            root, manifest = self._workspace("FT-072")
+            work = gate.manifest_path(root, "wwox", "12345678")
+            work.parent.mkdir(parents=True, exist_ok=True)
+            work.write_text(json.dumps(manifest), encoding="utf-8")
+            errors, _ = gate.load_and_validate(
+                root, "wwox", "12345678", artifact_root=Path(evidence_tmp))
+            self.assertTrue([e for e in errors if "FT-072" in e], errors)
+
+
 if __name__ == "__main__":
     sys.exit(0 if unittest.main(exit=False, verbosity=2).result.wasSuccessful() else 1)

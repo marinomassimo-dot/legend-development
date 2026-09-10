@@ -43,6 +43,7 @@ from xml.etree import ElementTree
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import corpus_firewall as firewall  # noqa: E402
+import manifest_queue_id_crosscheck as queue_ids  # noqa: E402
 
 MANIFEST_DIR = "disease-models/{disease}/research/deepdive_manifests"
 
@@ -934,8 +935,23 @@ def validate(
     root: Path | None = None,
     verify_artifacts: bool = False,
     require_current_schema: bool = False,
+    disease: str = "wwox",
+    queue_root: Path | None = None,
+    warnings: list[str] | None = None,
 ) -> tuple[list[str], list[str]]:
-    """Return (errors, incomplete_steps)."""
+    """Return (errors, incomplete_steps).
+
+    `queue_root` is the workspace holding `full_text_queue_current.md`. It is separate from
+    `root` because `root` may be an *artifact* workspace: a branch can carry the manifest
+    while copyright-controlled evidence stays in the shared checkout's gitignored `files/`.
+    The queue is repository content, never evidence, so it is looked up beside the manifest.
+
+    `warnings` is an optional sink rather than a third return value, and deliberately so:
+    `validate` has callers outside this module (`session_self_eval.py`) and inside its own
+    suite, and widening the tuple would make every one of them a site that must be edited
+    before a single warning could be emitted. A caller that wants warnings passes a list; a
+    caller that does not is unaffected and sees exactly the behaviour it saw before.
+    """
     errors: list[str] = []
     incomplete: list[str] = []
     if not isinstance(manifest, dict):
@@ -1045,6 +1061,40 @@ def validate(
                 "reference list actually holds (0 only if it genuinely has none) — multi-hop "
                 "starts there, and declaring debt is not the same as enumerating it"
             )
+
+        # 🔴 A queued hop names a queue entry, and until 2026-09-10 nothing asked whether
+        # that entry exists or has anything to do with this paper. A draft manifest for
+        # PMID 18674750 named `FT-072`–`FT-075` — four live entries about four unrelated
+        # papers — and passed STRICT. It was caught by the reader's own grep of the queue
+        # AFTER the gate had gone green, which is the definition of a gap in the gate.
+        # See `manifest_queue_id_crosscheck` for what the two questions are and are not.
+        queue_lookup_root = queue_root if queue_root is not None else root
+        queue_entries = (
+            queue_ids.load_queue(queue_lookup_root, disease)
+            if queue_lookup_root is not None else None
+        )
+        if queue_entries is not None:
+            errors.extend(queue_ids.errors_for(manifest, queue_entries))
+        else:
+            # 🔴 NOT SILENCE. The queue is absent from this workspace, so the addresses
+            # cannot be resolved — and an unresolvable address is exactly the state this
+            # check exists to refuse. Blocking here would refuse every manifest validated
+            # against a bare workspace, so the honest record is a declared gap: the reader
+            # is told which identifiers went unchecked and why, rather than being handed a
+            # PASS that quietly means "not asked".
+            addressed = sorted({
+                identifier
+                for item in (hop.get("queued") or [])
+                if isinstance(item, dict)
+                for identifier in queue_ids.referenced_ids(item.get("queue"))
+            })
+            if addressed:
+                incomplete.append(
+                    "multihop.queued: no full_text_queue_current.md in this workspace, so "
+                    f"{len(addressed)} queue identifier(s) were NOT checked against it "
+                    f"({', '.join(addressed)}) — neither that they resolve nor that they "
+                    "name this paper"
+                )
 
     cross = manifest["corpus_crossquery"]
     if not _waived(cross, "corpus_crossquery", errors):
@@ -1496,6 +1546,7 @@ def load_and_validate(
     artifact_root: Path | None = None,
     verify_artifacts: bool = False,
     require_current_schema: bool = False,
+    warnings: list[str] | None = None,
 ) -> tuple[list[str], list[str]]:
     path = manifest_path(root, disease, pmid)
     if not path.exists():
@@ -1517,6 +1568,11 @@ def load_and_validate(
         root=artifact_root or root,
         verify_artifacts=verify_artifacts,
         require_current_schema=require_current_schema,
+        # The queue is repository content, not evidence, so it is resolved beside the
+        # manifest even when the artifacts live in another workspace entirely.
+        disease=disease,
+        queue_root=root,
+        warnings=warnings,
     )
 
 
