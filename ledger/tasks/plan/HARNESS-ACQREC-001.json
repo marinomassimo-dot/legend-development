@@ -7,7 +7,7 @@
   "OWNER": "plan",
   "ACTOR_ID": "plan",
   "TASK_ACK": {
-    "state": "COMPLETE_PENDING_COMMIT",
+    "state": "COMPLETE",
     "accepted_on": "2026-09-10",
     "objective": "D1: the dependency-integrity screen becomes an optional manifest slot `retraction_check.dependencies` (shape-checked when present, [DECLARED GAP] when absent), emitted verbatim by `dependency_integrity.py screen --manifest-block`. D2: census P2 — an `acquisition_recipe` per source artefact, `reacquire.py` that replays a recipe and diffs the digest with verdicts that say what they did, a versioned home for the retrieval outcome, a declaredly incomplete back-fill, and the two predicted partial failures measured as dated FAILED with a named cause.",
     "specification": "governance/candidates/2026-09-09_sweep_capability_comparison.md § 2 P2; disease-models/wwox/analysis/orchestration_reviews/2026-09-09_actor_retrospective.md § 6.1 S7, § 6.3 H6, § 8.2; orchestration record 2026-09-10 § 2",
@@ -53,7 +53,20 @@
     "provenance_in_notes": "112 of 616 artefact notes carry any acquisition hint; 35 name a route or URL explicitly (efetch / Europe PMC fullTextXML / pdf=render / pmc_pow_fetch / cdn blob URL)",
     "network_probe_2026-09-10": "efetch db=pmc id=2832309 with no UA: 200, 129132 B, digest == declared 79f522bb… on two consecutive fetches; PMC /bin/ figure asset: 200 + reCAPTCHA page under none/browser/identified UA; PMC /pdf/: 200 + reCAPTCHA; OUP awab174.pdf: 403 server=cloudflare cf-ray present; Europe PMC fullTextXML PMC2832309: 404 as recorded"
   },
-  "COMMITS": [],
+  "COMMITS": [
+    {
+      "sha": "85091df",
+      "what": "D1: retraction_check.dependencies slot + emitter; the ratchets sink (both slots' validator branch)"
+    },
+    {
+      "sha": "5f68b23",
+      "what": "D2: acquisition_recipe, reacquire.py + suite, protocol section, .gitignore repointed, PyMuPDF pin + notice"
+    },
+    {
+      "sha": "b016678",
+      "what": "D2 item 4: the back-fill in the versioned retrieval manifest (653 lines), no manifest touched; task ledger"
+    }
+  ],
   "MEASUREMENTS": {
     "D1_dependency_slot": {
       "before": "retraction_check carried {checked,result} and 10 other legacy shapes; no manifest could say at reading time whether its reagents descend from flagged work; dependency_integrity.py had no per-PMID emitter",
@@ -216,5 +229,6 @@
       "what": "reacquire.py selftest passed global options after the subcommand; my own suite's address-mutant asserted the wrong thing",
       "fix": "both corrected before the suite first went green"
     }
-  ]
+  ],
+  "BATTERY_AFTER": "under flock, 06:18Z: REGRESSION VERDICT: FAIL on test_batch_queue and test_surface_census only (inherited); no TRACKED_FILES_WRITTEN_BY_SUITE line; nothing green before is red after"
 }
