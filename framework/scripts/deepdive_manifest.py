@@ -47,6 +47,7 @@ import manifest_queue_id_crosscheck as queue_ids  # noqa: E402
 import text_surface_intrusion_check as intrusion_check  # noqa: E402
 import locator_identifier_provenance as provenance  # noqa: E402
 from screen_verdict import ScreenVerdict  # noqa: E402
+import dependency_integrity as dependency_screen  # noqa: E402
 
 MANIFEST_DIR = "disease-models/{disease}/research/deepdive_manifests"
 
@@ -167,6 +168,34 @@ ARTIFACT_KINDS = {"article_binary", "article_text", "supplement_binary", "supple
 # the two cannot drift apart over which surfaces they consider derived.
 DERIVED_TEXT_KINDS = {"article_text", "supplement_text"}
 SHA256_RE = re.compile(r"[a-f0-9]{64}")
+
+# --- two optional slots, both ratchets in the `references` sense (2026-09-10) -----------
+#
+# Shape-checked when present, a `[DECLARED GAP]` when absent, never a BLOCK, and no
+# historical manifest is rewritten to carry them. The markers are constants because
+# `session_self_eval.py` sums these two gaps into one line each rather than printing one
+# line per manifest — absent on nearly every historical manifest by construction, they would
+# otherwise bury the gaps that are news.
+# 🔴 A RATCHET IS NOT A DECLARED GAP. `fulltext_receipts.require_work_manifest` extends its
+# errors with every `incomplete` item under `strict`, by design: "declared gaps block the
+# append". The first version of these two slots emitted their absence into `incomplete`, and
+# every manifest minted before 2026-09-10 — and every fixture appending a complete receipt —
+# was refused (`test_legend_lint.py`, 5 ERRORs, caught by the coordinator before landing).
+# So absence goes to a separate, optional `ratchets` sink, the shape `warnings` already uses:
+# a caller that passes no list is byte-for-byte unaffected, `session_self_eval.py` counts it,
+# nothing blocks. Presence is still shape-checked and a malformed block still blocks.
+DEPENDENCY_GAP = "retraction_check.dependencies: not declared"
+RECIPE_GAP = "source_artifacts: acquisition_recipe absent"
+
+ISO_DATE_RE = re.compile(r"\d{4}-\d{2}-\d{2}")
+# The sweep measured PMC serving a reCAPTCHA to browser-like User-Agents and nothing to NO
+# User-Agent, then extending the challenge to asset paths regardless; the policy is therefore
+# part of the recipe, not a detail of the client.
+UA_POLICIES = {"none", "identified", "browser_like"}
+HTTP_METHODS = {"GET", "POST"}
+# A URL that carries an address is a URL that sends it. No email address of any person goes
+# to any endpoint, so a recipe may not encode one — a `mailto=` query parameter included.
+RECIPE_URL_RE = re.compile(r"^https?://[^\s@]+$")
 # An elided quote is verbatim in each half and not verbatim as a whole. LEGEND reads it fine;
 # a validator doing exact substring matching against a cached source rejects it.
 ELISION_RE = re.compile(r"\[\s*(?:…|\.\.\.)\s*\]|\s(?:…|\.\.\.)\s")
@@ -1274,6 +1303,175 @@ def _pointer_needle_errors(
     return []
 
 
+def dependency_screen_defects(block: Any) -> list[str]:
+    """What is wrong with a `retraction_check.dependencies` block, or [] when nothing is.
+
+    The vocabulary is `dependency_integrity.py`'s own, imported and never respelled: a
+    second copy of the verdict set is how a class gets collapsed. Three things this refuses
+    that a looser shape check would let through, each measured in the 2026-09-09 sweep:
+    a clean verdict over zero screened references (the screen that returned CLEAN without
+    screening anything); an unscreenable class summed into the screened count (UNSCREENABLE
+    is never clean); and a flagged dependency whose relation to this paper is the emitted
+    placeholder — the one field the tool cannot fill, because it is a reading act.
+    """
+    prefix = "retraction_check.dependencies"
+    if not isinstance(block, dict):
+        return [f"{prefix}: must be an object — paste the output of "
+                f"`dependency_integrity.py screen --pmid <PMID> --manifest-block`"]
+    errors: list[str] = []
+    verdict = str(block.get("paper_verdict", "")).strip()
+    known = (dependency_screen.INTEGRITY_FLAGS | dependency_screen.UNSCREENABLE
+             | {dependency_screen.V_CLEAN})
+    if verdict not in known:
+        errors.append(f"{prefix}.paper_verdict: must be one of {sorted(known)}")
+    screened = block.get("screened")
+    if not isinstance(screened, bool):
+        errors.append(f"{prefix}.screened: must be true or false")
+    counts = {}
+    for key in ("references_declared", "references_screened"):
+        value = block.get(key)
+        if not isinstance(value, int) or isinstance(value, bool) or value < 0:
+            errors.append(f"{prefix}.{key}: must be a non-negative integer")
+        else:
+            counts[key] = value
+    unscreenable = block.get("unscreenable")
+    if not isinstance(unscreenable, dict):
+        errors.append(f"{prefix}.unscreenable: must be an object of {{class: count}} — "
+                      f"an empty object when nothing was unscreenable")
+        unscreenable = {}
+    for klass, count in unscreenable.items():
+        if klass not in dependency_screen.UNSCREENABLE:
+            errors.append(f"{prefix}.unscreenable: {klass!r} is not an unscreenable class "
+                          f"({sorted(dependency_screen.UNSCREENABLE)})")
+        if not isinstance(count, int) or isinstance(count, bool) or count < 0:
+            errors.append(f"{prefix}.unscreenable[{klass!r}]: must be a non-negative integer")
+    if len(counts) == 2 and all(isinstance(c, int) for c in unscreenable.values()):
+        if counts["references_screened"] + sum(unscreenable.values()) \
+                != counts["references_declared"]:
+            errors.append(
+                f"{prefix}: references_screened ({counts['references_screened']}) + "
+                f"unscreenable ({sum(unscreenable.values())}) must equal "
+                f"references_declared ({counts['references_declared']}) — an unscreenable "
+                f"reference is neither screened nor clean, and it does not disappear")
+    flagged = block.get("flagged")
+    if not isinstance(flagged, list):
+        errors.append(f"{prefix}.flagged: must be a list — empty when nothing is flagged")
+        flagged = []
+    natures = {n.lower() for n in dependency_screen._NATURE_MAP} | {""}
+    for position, entry in enumerate(flagged):
+        where = f"{prefix}.flagged[{position}]"
+        if not isinstance(entry, dict):
+            errors.append(f"{where}: must be an object")
+            continue
+        if not dependency_screen.normalise_doi(entry.get("doi")):
+            errors.append(f"{where}.doi: a flagged dependency is identified by its DOI")
+        nature = str(entry.get("nature", "")).strip()
+        if nature.lower() not in natures:
+            errors.append(f"{where}.nature: must be one of the snapshot's RetractionNature "
+                          f"values, verbatim — never a merged class")
+        expected = dependency_screen.classify_nature(nature)
+        if entry.get("verdict") != expected:
+            errors.append(f"{where}.verdict: {entry.get('verdict')!r} does not follow from "
+                          f"nature {nature!r} (expected {expected}) — Retraction, Expression "
+                          f"of concern, Correction and Reinstatement are never collapsed")
+        if expected not in dependency_screen.INTEGRITY_FLAGS:
+            errors.append(f"{where}: a {nature or 'blank'} row is not an integrity flag and "
+                          f"belongs under `noted`, not `flagged`")
+        relation = str(entry.get("citing_relation", "")).strip()
+        if relation == dependency_screen.CITING_RELATION_PLACEHOLDER \
+                or len(relation) < MIN_REASON_CHARS:
+            errors.append(f"{where}.citing_relation: state how THIS paper depends on the "
+                          f"flagged one (reagent, method, data, citation only) in at least "
+                          f"{MIN_REASON_CHARS} characters — the tool emits a placeholder "
+                          f"because this is a reading act, and the placeholder is refused")
+    if verdict == dependency_screen.V_CLEAN:
+        if screened is not True:
+            errors.append(f"{prefix}: SCREENED_CLEAN with screened=false is a contradiction")
+        if counts.get("references_screened", 0) == 0:
+            errors.append(f"{prefix}: SCREENED_CLEAN over 0 screened references — a screen "
+                          f"that looked at nothing is UNSCREENABLE, not clean")
+        if flagged:
+            errors.append(f"{prefix}: SCREENED_CLEAN with a non-empty flagged list")
+    if verdict in dependency_screen.UNSCREENABLE and screened is True:
+        errors.append(f"{prefix}: an UNSCREENABLE verdict cannot carry screened=true")
+    if verdict in dependency_screen.INTEGRITY_FLAGS and not flagged:
+        errors.append(f"{prefix}: a FLAGGED verdict with an empty flagged list")
+    snapshot = block.get("snapshot")
+    if not isinstance(snapshot, dict) or not ISO_DATE_RE.fullmatch(
+            str(snapshot.get("date", ""))):
+        errors.append(f"{prefix}.snapshot.date: the Retraction Watch snapshot date "
+                      f"(YYYY-MM-DD) — a screen is only as current as its snapshot")
+    return errors
+
+
+def acquisition_recipe_defects(
+    recipe: Any, *, declared_sha256: str, own_path: str, declared_paths: set[str]
+) -> list[str]:
+    """What is wrong with an artefact's `acquisition_recipe`, or [] when nothing is.
+
+    The recipe is the derivation the census P2 asks for, published where the bytes cannot
+    be: resolved URL, HTTP method, the cascade tier that won, the User-Agent policy, the
+    date — or, for a DERIVED artefact, the source artefact and the extractor WITH ITS
+    VERSION, because receipts in this repository were written under PyMuPDF 1.26.5 and a
+    replay under 1.28.2 may not reproduce a declared SHA-256. The digest of the result is
+    the entry's own `sha256`; a recipe may repeat it as `result_sha256`, and then it must
+    agree, because a recipe whose result differs from the artefact's digest is a recipe
+    for a different artefact.
+
+    `{"no_recipe": "<reason>"}` is accepted as an explicit statement that no route can be
+    shown — it is still counted as a gap, but a named one.
+    """
+    prefix = f"source_artifacts[{own_path}].acquisition_recipe"
+    if not isinstance(recipe, dict):
+        return [f"{prefix}: must be an object"]
+    if "no_recipe" in recipe:
+        reason = str(recipe.get("no_recipe", "")).strip()
+        if len(reason) < MIN_REASON_CHARS:
+            return [f"{prefix}.no_recipe: say why no route can be shown, in at least "
+                    f"{MIN_REASON_CHARS} characters"]
+        return []
+    errors: list[str] = []
+    derived = recipe.get("derived", False)
+    if not isinstance(derived, bool):
+        errors.append(f"{prefix}.derived: must be true or false")
+        derived = False
+    if derived:
+        source = str(recipe.get("derived_from", "")).strip()
+        if not source or source == own_path or source not in declared_paths:
+            errors.append(f"{prefix}.derived_from: must name ANOTHER artefact declared in "
+                          f"this manifest's source_artifacts — the bytes it was derived from")
+        extractor = recipe.get("extractor")
+        if not isinstance(extractor, dict):
+            errors.append(f"{prefix}.extractor: a derived artefact names its extractor as "
+                          f"{{name, version, call}}")
+        else:
+            for key in ("name", "version", "call"):
+                if not str(extractor.get(key, "")).strip():
+                    errors.append(f"{prefix}.extractor.{key}: required — a replay under a "
+                                  f"different extractor version is EXTRACTOR_DRIFT, and drift "
+                                  f"cannot be named without the version it drifted from")
+    else:
+        url = str(recipe.get("resolved_url", "")).strip()
+        if not RECIPE_URL_RE.fullmatch(url):
+            errors.append(f"{prefix}.resolved_url: an http(s) URL with no whitespace and no "
+                          f"'@' — a recipe never carries an email address to an endpoint")
+        if str(recipe.get("http_method", "")).strip() not in HTTP_METHODS:
+            errors.append(f"{prefix}.http_method: must be one of {sorted(HTTP_METHODS)}")
+        if len(str(recipe.get("tier", "")).strip()) < 3:
+            errors.append(f"{prefix}.tier: name the cascade tier that won")
+        if str(recipe.get("user_agent_policy", "")).strip() not in UA_POLICIES:
+            errors.append(f"{prefix}.user_agent_policy: must be one of {sorted(UA_POLICIES)} "
+                          f"— PMC served a reCAPTCHA to browser-like agents and nothing to "
+                          f"none, so the policy is part of the route")
+    if not ISO_DATE_RE.fullmatch(str(recipe.get("acquired_on", ""))):
+        errors.append(f"{prefix}.acquired_on: YYYY-MM-DD")
+    result = recipe.get("result_sha256")
+    if result is not None and str(result) != declared_sha256:
+        errors.append(f"{prefix}.result_sha256: differs from the entry's sha256 — this "
+                      f"recipe describes a different artefact")
+    return errors
+
+
 ADJUDICATION_DIR = "page_adjudications"
 ADJUDICATION_RECIPE = "adjudications.json"
 
@@ -1371,8 +1569,13 @@ def validate(
     disease: str = "wwox",
     queue_root: Path | None = None,
     warnings: list[str] | None = None,
+    ratchets: list[str] | None = None,
 ) -> tuple[list[str], list[str]]:
     """Return (errors, incomplete_steps).
+
+    `ratchets` is a second optional sink, for the two optional slots whose absence is a
+    non-blocking ratchet category (`acquisition_recipe`, `retraction_check.dependencies`):
+    distinct from `incomplete`, which the strict receipt writer treats as blocking.
 
     `queue_root` is the workspace holding `full_text_queue_current.md`. It is separate from
     `root` because `root` may be an *artifact* workspace: a branch can carry the manifest
@@ -1583,6 +1786,33 @@ def validate(
                         if actual != digest:
                             errors.append(
                                 f"{prefix}.sha256: fingerprint mismatch for {path_value}")
+
+            # Census P2: the recipe is checked after the loop because a derived artefact
+            # names its source by path, and the source may be declared after it.
+            with_recipe = without_recipe = named_no_recipe = 0
+            for artifact in declared_artifacts:
+                if not isinstance(artifact, dict) or not str(artifact.get("path", "")).strip():
+                    continue
+                recipe = artifact.get("acquisition_recipe")
+                if recipe is None:
+                    without_recipe += 1
+                    continue
+                defects = acquisition_recipe_defects(
+                    recipe, declared_sha256=str(artifact.get("sha256", "")).strip(),
+                    own_path=str(artifact.get("path")).strip(), declared_paths=set(artifacts))
+                errors.extend(defects)
+                if isinstance(recipe, dict) and "no_recipe" in recipe:
+                    named_no_recipe += 1
+                else:
+                    with_recipe += 1
+            if (without_recipe or named_no_recipe) and ratchets is not None:
+                total = with_recipe + without_recipe + named_no_recipe
+                ratchets.append(
+                    f"{RECIPE_GAP} on {without_recipe + named_no_recipe} of {total} artefact(s)"
+                    f" ({named_no_recipe} with a stated no_recipe reason) — the derivation "
+                    f"is not versioned, so a fresh checkout cannot re-acquire them without a "
+                    f"human; new reads declare it (fulltext_read_receipt.md § Acquisition "
+                    f"recipes), history is not rewritten")
 
         # 🔴 Font-encoding screen, scoped as narrowly as the hazard actually is.
         #
@@ -1998,6 +2228,16 @@ def validate(
     if not _waived(retraction, "retraction_check", errors):
         if not str(retraction.get("result", "")).strip():
             errors.append("retraction_check.result: state the outcome")
+        # S7 / H6: the per-PMID check cannot see what this paper depends on. Optional,
+        # shape-checked when present, a visible gap when absent — never a block.
+        if "dependencies" in retraction:
+            errors.extend(dependency_screen_defects(retraction["dependencies"]))
+        elif ratchets is not None:
+            ratchets.append(
+                f"{DEPENDENCY_GAP} — a per-PMID retraction check cannot see the integrity "
+                f"status of the papers this one depends on; paste the output of "
+                f"`dependency_integrity.py screen --pmid <PMID> --manifest-block` and state "
+                f"each flagged dependency's citing_relation")
 
     for section in SECTIONS:
         if isinstance(manifest[section], dict) and manifest[section].get("waived"):
@@ -2021,6 +2261,7 @@ def load_and_validate(
     verify_artifacts: bool = False,
     require_current_schema: bool = False,
     warnings: list[str] | None = None,
+    ratchets: list[str] | None = None,
 ) -> tuple[list[str], list[str]]:
     path = manifest_path(root, disease, pmid)
     if not path.exists():
@@ -2047,6 +2288,7 @@ def load_and_validate(
         disease=disease,
         queue_root=root,
         warnings=warnings,
+        ratchets=ratchets,
     )
 
 
@@ -2162,6 +2404,7 @@ def main() -> int:
     if not args.pmid:
         parser.error("--pmid is required unless --font-screen is given")
     warnings: list[str] = []
+    ratchets: list[str] = []
     errors, incomplete = load_and_validate(
         Path(args.workspace).resolve(), args.disease, args.pmid,
         artifact_root=(
@@ -2171,9 +2414,12 @@ def main() -> int:
         verify_artifacts=args.verify_artifacts,
         require_current_schema=args.require_current_schema,
         warnings=warnings,
+        ratchets=ratchets,
     )
     for item in incomplete:
         print(f"  [INCOMPLETE] {item}")
+    for item in ratchets:
+        print(f"  [RATCHET] {item}")
     for item in warnings:
         print(f"  [WARN] {item}")
     scope = verification_scope(

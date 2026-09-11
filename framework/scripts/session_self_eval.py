@@ -237,6 +237,7 @@ def main() -> int:
     # either evidenced or explicitly refused. Without this the gate is blind to omission.
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     declared_gaps: list[str] = []
+    ratchets: list[str] = []
     try:
         import deepdive_manifest
     except ImportError:  # pragma: no cover
@@ -244,7 +245,8 @@ def main() -> int:
         failures.append("MANIFEST_VALIDATOR_MISSING: deepdive_manifest.py is unavailable")
     if deepdive_manifest is not None:
         for pmid in sorted({(r.get("study_id") or {}).get("pmid") for r in complete} - {None}):
-            errors, incomplete = deepdive_manifest.load_and_validate(root, disease, str(pmid))
+            errors, incomplete = deepdive_manifest.load_and_validate(
+                root, disease, str(pmid), ratchets=ratchets)
             failures.extend(f"WORK_MANIFEST: PMID {pmid}: {error}" for error in errors)
             declared_gaps.extend(f"PMID {pmid}: {item}" for item in incomplete)
 
@@ -279,6 +281,16 @@ def main() -> int:
         f"unread_premises: {len(unread)}"
         + (f"/{baseline}" if baseline is not None else "")
     )
+    # Two ratchets (HARNESS-ACQREC-001) — a NON-BLOCKING category, distinct from a declared
+    # gap, which the strict receipt writer refuses. Absent on nearly every historical manifest
+    # by construction, so they are summed into one line each rather than printed per manifest.
+    for marker, label in (((deepdive_manifest.DEPENDENCY_GAP, "retraction_check.dependencies absent"),
+                           (deepdive_manifest.RECIPE_GAP, "acquisition_recipe absent"))
+                          if deepdive_manifest is not None else ()):
+        hit = [item for item in ratchets if marker in item]
+        if hit:
+            print(f"  [RATCHET] {label} on {len(hit)} manifest(s) — new reads declare it, "
+                  f"history is not rewritten, nothing blocks")
     for gap in declared_gaps:
         print(f"  [DECLARED GAP] {gap}")
     for warning in warnings:

@@ -97,8 +97,25 @@ MINIMUM REPRODUCIBLE INVOCATION
     python3 framework/scripts/dependency_integrity.py pin --write
     python3 framework/scripts/dependency_integrity.py control    # positive control
     python3 framework/scripts/dependency_integrity.py screen --doi 10.1093/brain/awab174
+    python3 framework/scripts/dependency_integrity.py screen --pmid 18460020 --manifest-block
     python3 framework/scripts/dependency_integrity.py corpus --json out.json
     python3 framework/scripts/dependency_integrity.py selftest
+
+THE MANIFEST SLOT (2026-09-10, HARNESS-ACQREC-001). A corpus report is not something a
+reading does at reading time. `PMID18460020.json`'s own `retraction_check.result` says why a
+per-PMID check is not enough: "this paper is clean, but its principal reagent source PMID
+16223882 is not". So the deep-dive manifest carries an OPTIONAL sub-block
+`retraction_check.dependencies`, shape-checked by `deepdive_manifest.py` when present and
+reported as a `[RATCHET]` when absent — the `references` ratchet pattern: new reads declare
+it, historical manifests are not rewritten, absence is visible and never blocks. Not a
+declared gap: the strict receipt writer refuses those, and an absence routed there refused
+every historical manifest (caught before landing, 2026-09-11).
+`screen --manifest-block` emits EXACTLY that block so a scientist pastes rather than
+transcribes. One field is deliberately NOT machine-filled: `citing_relation` on every
+flagged dependency (reagent? method? data? citation only?) is a reading act, and the emitted
+placeholder is refused by the validator until a reader replaces it. The block never
+collapses Retraction / Expression of concern / Correction / Reinstatement — one entry per
+snapshot row — and `UNSCREENABLE` is never clean; the validator re-checks both.
 
 CONTACT PARAMETER. The Crossref labs endpoint documents a `mailto` contact parameter.
 This tool sends NO email address, ever: there is no code path that accepts one, and the
@@ -628,6 +645,67 @@ def render_paper(res):
     return "\n".join(lines)
 
 
+# --- the manifest slot ----------------------------------------------------
+
+MANIFEST_BLOCK_SCHEMA = "retraction_check.dependencies/1"
+# Refused by the validator verbatim: the relation between the citing paper and the flagged
+# one is what a reader knows and a reference list does not.
+CITING_RELATION_PLACEHOLDER = (
+    "STATE THE RELATION — reagent / method / data / citation only — this is a reading act")
+
+
+def manifest_block(res, pin, stale_days=None):
+    """The `retraction_check.dependencies` block for ONE screened paper.
+
+    Everything here is copied from the screen result and the pin; nothing is computed
+    twice. Corrections and reinstatements travel under `noted`, never under `flagged`,
+    so a validator or a reader cannot mistake housekeeping for an integrity signal.
+    """
+    unscreenable = {v: n for v, n in (res.get("counts") or {}).items() if v in UNSCREENABLE}
+    flagged = []
+    for f in res.get("flagged", []):
+        for row in f["rows"]:
+            flagged.append({
+                "doi": f["doi"],
+                "verdict": row["verdict"],
+                "nature": row["nature"],
+                "retraction_pmid": row["retraction_pmid"],
+                "retraction_date": row["retraction_date"],
+                "reason_verbatim": row["reason"],
+                "citing_relation": CITING_RELATION_PLACEHOLDER,
+            })
+    noted = []
+    for f in res.get("noted", []):
+        for row in f["rows"]:
+            noted.append({"doi": f["doi"], "verdict": row["verdict"], "nature": row["nature"]})
+    return {
+        "schema": MANIFEST_BLOCK_SCHEMA,
+        "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+        "paper_verdict": res["paper_verdict"],
+        "screened": bool(res["screened"]),
+        "references_declared": int(res["references_declared"]),
+        "references_with_doi": int(res["references_with_doi"]),
+        "references_screened": int(res["screened_count"]),
+        "unscreenable": unscreenable,
+        "flagged": flagged,
+        "noted": noted,
+        "reference_source": res.get("reference_source"),
+        "snapshot": {
+            "date": (pin or {}).get("fetched"),
+            "sha256": (pin or {}).get("sha256"),
+            "rows": (pin or {}).get("rows"),
+            "days_since_fetch": stale_days,
+        },
+    }
+
+
+def _pmid_to_doi(pmid, manifest_dir=MANIFEST_DIR):
+    for known_pmid, doi in corpus_papers(manifest_dir):
+        if known_pmid == str(pmid):
+            return doi
+    return None
+
+
 # --- commands -------------------------------------------------------------
 
 def _load_or_fail(args):
@@ -708,15 +786,35 @@ def cmd_screen(args):
     if rc:
         return rc
     stale = days_since_fetch(pin)
-    print(_stale_line(pin))
+    targets = [(None, doi) for doi in (args.doi or [])]
+    for pmid in (args.pmid or []):
+        doi = _pmid_to_doi(pmid, args.manifest_dir)
+        if doi is None:
+            sys.stderr.write("PMID %s: no deep-dive manifest with a DOI under %s\n"
+                             % (pmid, args.manifest_dir))
+            return 2
+        targets.append((str(pmid), doi))
+    if not targets:
+        sys.stderr.write("screen: give --doi and/or --pmid\n")
+        return 2
+    if not args.manifest_block:
+        print(_stale_line(pin))
     worst = 0
-    for doi in args.doi:
-        res = screen_paper(doi, index, offline=args.offline, stale_days=stale)
-        print(render_paper(res))
+    blocks = []
+    for pmid, doi in targets:
+        res = screen_paper(doi, index, pmid=pmid, offline=args.offline, stale_days=stale)
+        if args.manifest_block:
+            blocks.append(manifest_block(res, pin, stale))
+        else:
+            print(render_paper(res))
         if res["paper_verdict"] in INTEGRITY_FLAGS:
             worst = max(worst, 1)
         elif not res["screened"]:
             worst = max(worst, 2)
+    if args.manifest_block:
+        # Exactly the block, so it is pasted and not transcribed. One target prints the
+        # object itself; several print a list in target order.
+        print(json.dumps(blocks[0] if len(blocks) == 1 else blocks, indent=2, sort_keys=True))
     return 0 if not args.strict else worst
 
 
@@ -874,6 +972,19 @@ def cmd_selftest(args):
             failures.append("a paper with 0 references was reported SCREENED_CLEAN")
         if res.get("screened") and res.get("paper_verdict") in UNSCREENABLE:
             failures.append("screened=True with an UNSCREENABLE verdict")
+        block = manifest_block(res, pin, days_since_fetch(pin))
+        for key in ("paper_verdict", "screened", "references_declared",
+                    "references_screened", "unscreenable", "flagged", "noted", "snapshot"):
+            if key not in block:
+                failures.append("manifest_block() output missing %r" % key)
+        if block["references_screened"] + sum(block["unscreenable"].values()) \
+                != block["references_declared"]:
+            failures.append("manifest_block(): screened + unscreenable != declared")
+        for entry in block["flagged"]:
+            if entry["citing_relation"] != CITING_RELATION_PLACEHOLDER:
+                failures.append("manifest_block() filled in a citing_relation it cannot know")
+        print("selftest called manifest_block(): %s, %d flagged, %d noted"
+              % (block["paper_verdict"], len(block["flagged"]), len(block["noted"])))
 
     # The invariant the whole tool exists to protect.
     probe = screen_reference(None, index)
@@ -909,7 +1020,12 @@ def build_parser():
     sub.add_parser("control", help="run the positive control (PMID 16223882)")
 
     s = sub.add_parser("screen", help="screen one or more papers' reference lists")
-    s.add_argument("--doi", action="append", required=True)
+    s.add_argument("--doi", action="append", help="a DOI to screen (repeatable)")
+    s.add_argument("--pmid", action="append",
+                   help="a corpus PMID; its DOI is read from its deep-dive manifest (repeatable)")
+    s.add_argument("--manifest-dir", default=MANIFEST_DIR)
+    s.add_argument("--manifest-block", action="store_true",
+                   help="emit exactly the `retraction_check.dependencies` block as JSON")
     s.add_argument("--offline", action="store_true", help="cached reference lists only")
     s.add_argument("--strict", action="store_true", help="non-zero exit on flag/unscreenable")
 

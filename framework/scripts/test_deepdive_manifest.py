@@ -28,6 +28,57 @@ ROOT = HERE.parents[1]
 MANIFESTS = ROOT / "disease-models/wwox/research/deepdive_manifests"
 
 
+def dependencies_block(**overrides) -> dict:
+    """A valid `retraction_check.dependencies` block, the shape `screen --manifest-block` emits."""
+    block = {
+        "schema": "retraction_check.dependencies/1",
+        "tool": "framework/scripts/dependency_integrity.py screen --manifest-block",
+        "paper_verdict": "SCREENED_CLEAN", "screened": True,
+        "references_declared": 28, "references_with_doi": 26, "references_screened": 26,
+        "unscreenable": {"UNSCREENABLE_NO_DOI": 2},
+        "flagged": [], "noted": [], "reference_source": "cache",
+        "snapshot": {"date": "2026-09-10", "sha256": "8" * 64, "rows": 72476,
+                     "days_since_fetch": 0},
+    }
+    block.update(overrides)
+    return block
+
+
+def flagged_entry(**overrides) -> dict:
+    entry = {
+        "doi": "10.1073/pnas.0505485102", "verdict": "FLAGGED_EXPRESSION_OF_CONCERN",
+        "nature": "Expression of concern", "retraction_pmid": "28373548",
+        "retraction_date": "4/3/2017 0:00",
+        "reason_verbatim": "Concerns/Issues about Data;Duplication of/in Image;",
+        "citing_relation": "reagent source: this paper's adenovirus and both antibodies "
+                           "come from the flagged paper",
+    }
+    entry.update(overrides)
+    return entry
+
+
+def acquisition_recipe(**overrides) -> dict:
+    """A valid fetch recipe — the efetch route that replayed byte-identical on 2026-09-10."""
+    recipe = {
+        "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=2832309",
+        "http_method": "GET", "tier": "ncbi_efetch_pmc_xml", "user_agent_policy": "none",
+        "acquired_on": "2026-09-09", "derived": False,
+    }
+    recipe.update(overrides)
+    return recipe
+
+
+def derived_recipe(**overrides) -> dict:
+    recipe = {
+        "derived": True, "derived_from": "files/fulltext/paper.pdf",
+        "extractor": {"name": "PyMuPDF", "version": "1.26.5",
+                      "call": "page.get_text() default mode", "join": ""},
+        "acquired_on": "2026-09-09",
+    }
+    recipe.update(overrides)
+    return recipe
+
+
 def minimal(**overrides) -> dict:
     manifest = {
         "pmid": "12345678",
@@ -41,7 +92,8 @@ def minimal(**overrides) -> dict:
         "field_density": {"queries": [{"query": "WWOX AND GSK3", "count": 5}]},
         "multihop": {"gene_direct_refs_in_source": [], "references_enumerated": 28},
         "corpus_crossquery": {"query": "GSK3 in the existing corpus", "hits": 3},
-        "retraction_check": {"result": "no retraction notice found"},
+        "retraction_check": {"result": "no retraction notice found",
+                             "dependencies": dependencies_block()},
         "verbatim_locators": {"source_fulltext_indexed": True, "source_fulltext_indexed_evidence": "Europe PMC EXT_ID:1 on 2026-08-07: inEPMC=Y, PMCID PMC1 — fixture lookup", "entries": [
             {"proposition": "WWOX 388-407 is required for the interaction with GSK3beta",
              "snippet": "This indicates that WWOX amino acids 388-407 are required for its interaction with GSK3b.",
@@ -58,6 +110,7 @@ def schema_v2(artifact_path: str = "files/fulltext/paper.xml", **overrides) -> d
         "path": artifact_path,
         "sha256": "a" * 64,
         "kind": "article_text",
+        "acquisition_recipe": acquisition_recipe(),
     }]
     manifest["verbatim_locators"]["entries"][0]["artifact"] = artifact_path
     manifest.update(overrides)
@@ -2037,6 +2090,454 @@ class QueueIdentifiersAreCrossChecked(unittest.TestCase):
             errors, _ = gate.load_and_validate(
                 root, "wwox", "12345678", artifact_root=Path(evidence_tmp))
             self.assertTrue([e for e in errors if "FT-072" in e], errors)
+
+
+def load_mutated(*substitutions):
+    """Load deepdive_manifest.py with textual substitutions applied — the shipped file, mutated."""
+    src = (HERE / "deepdive_manifest.py").read_text(encoding="utf-8")
+    for old, new in substitutions:
+        if old not in src:
+            raise AssertionError(f"mutation target not present in source: {old!r}")
+        src = src.replace(old, new, 1)
+    spec = importlib.util.spec_from_loader("deepdive_manifest_mutant", loader=None)
+    module = importlib.util.module_from_spec(spec)
+    module.__dict__["__file__"] = str(HERE / "deepdive_manifest.py")
+    exec(compile(src, str(HERE / "deepdive_manifest.py") + " [MUTANT]", "exec"), module.__dict__)
+    return module
+
+
+class TheDependencyScreenIsAManifestSlot(unittest.TestCase):
+    """S7 / H6: a per-PMID retraction check cannot see what a paper depends on.
+
+    The slot is optional and a ratchet: shape-checked when present, a `[DECLARED GAP]` when
+    absent, never a block, no historical manifest rewritten. What it refuses is exactly what
+    `dependency_integrity.py` already refuses one layer down — a collapsed nature class and
+    an UNSCREENABLE that reads as clean — so the slot cannot weaken the tool it carries.
+    """
+
+    def _with(self, **block_overrides) -> dict:
+        manifest = minimal()
+        manifest["retraction_check"]["dependencies"] = dependencies_block(**block_overrides)
+        return manifest
+
+    def test_a_valid_block_is_neither_an_error_nor_a_ratchet(self) -> None:
+        ratchets: list[str] = []
+        errors, incomplete = gate.validate(minimal(), ratchets=ratchets)
+        self.assertEqual(errors, [])
+        self.assertFalse([i for i in ratchets if gate.DEPENDENCY_GAP in i])
+
+    def test_absence_is_a_ratchet_never_a_gap_and_never_a_block(self) -> None:
+        """🔴 Not `incomplete`: the strict receipt writer refuses every declared gap, by design,
+        so an absence emitted there refused every manifest minted before the slot existed
+        (test_legend_lint.py, 5 ERRORs, caught before landing). A ratchet is its own sink."""
+        manifest = minimal()
+        del manifest["retraction_check"]["dependencies"]
+        ratchets: list[str] = []
+        errors, incomplete = gate.validate(manifest, ratchets=ratchets)
+        self.assertEqual(errors, [])
+        self.assertFalse([i for i in incomplete if gate.DEPENDENCY_GAP in i], incomplete)
+        self.assertTrue([i for i in ratchets if i.startswith(gate.DEPENDENCY_GAP)], ratchets)
+        # a caller that passes no sink is byte-for-byte unaffected
+        self.assertEqual(gate.validate(manifest), (errors, incomplete))
+
+    def test_every_committed_manifest_is_a_ratchet_not_a_block_here(self) -> None:
+        """History is not rewritten: committed manifests without the slot validate, ratchet noted."""
+        found = sorted(MANIFESTS.glob("PMID*.json"))
+        self.assertTrue(found)
+        for path in found:
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            ratchets: list[str] = []
+            errors, incomplete = gate.validate(manifest, ratchets=ratchets)
+            self.assertEqual(errors, [], path.name)
+            self.assertFalse([i for i in incomplete if gate.DEPENDENCY_GAP in i], path.name)
+            retraction = manifest["retraction_check"]
+            if "dependencies" not in retraction and not retraction.get("waived"):
+                self.assertTrue([i for i in ratchets if i.startswith(gate.DEPENDENCY_GAP)],
+                                path.name)
+
+    def test_the_vocabulary_is_the_tools_own_by_identity(self) -> None:
+        self.assertIs(gate.dependency_screen.UNSCREENABLE,
+                      sys.modules["dependency_integrity"].UNSCREENABLE)
+        self.assertIs(gate.dependency_screen.INTEGRITY_FLAGS,
+                      sys.modules["dependency_integrity"].INTEGRITY_FLAGS)
+
+    def test_a_flagged_dependency_needs_a_stated_citing_relation(self) -> None:
+        placeholder = gate.dependency_screen.CITING_RELATION_PLACEHOLDER
+        errors, _ = gate.validate(self._with(
+            paper_verdict="FLAGGED_EXPRESSION_OF_CONCERN",
+            flagged=[flagged_entry(citing_relation=placeholder)]))
+        self.assertTrue(any("citing_relation" in e for e in errors), errors)
+        errors, _ = gate.validate(self._with(
+            paper_verdict="FLAGGED_EXPRESSION_OF_CONCERN", flagged=[flagged_entry()]))
+        self.assertEqual(errors, [])
+
+    def test_the_natures_are_never_collapsed(self) -> None:
+        errors, _ = gate.validate(self._with(
+            paper_verdict="FLAGGED_RETRACTION",
+            flagged=[flagged_entry(nature="Expression of concern", verdict="FLAGGED_RETRACTION")]))
+        self.assertTrue(any("never collapsed" in e for e in errors), errors)
+
+    def test_a_correction_may_not_sit_under_flagged(self) -> None:
+        errors, _ = gate.validate(self._with(
+            paper_verdict="FLAGGED_EXPRESSION_OF_CONCERN",
+            flagged=[flagged_entry(),
+                     flagged_entry(doi="10.1038/sj.onc.1209323", nature="Correction",
+                                   verdict="NOTED_CORRECTION")]))
+        self.assertTrue(any("belongs under `noted`" in e for e in errors), errors)
+
+    def test_unscreenable_is_never_clean(self) -> None:
+        errors, _ = gate.validate(self._with(
+            paper_verdict="UNSCREENABLE_NO_REFERENCE_LIST", screened=True,
+            references_declared=0, references_screened=0, unscreenable={}))
+        self.assertTrue(any("UNSCREENABLE verdict cannot carry screened=true" in e
+                            for e in errors), errors)
+
+    def test_clean_over_zero_screened_references_is_refused(self) -> None:
+        errors, _ = gate.validate(self._with(
+            references_declared=0, references_screened=0, unscreenable={}))
+        self.assertTrue(any("looked at nothing" in e for e in errors), errors)
+
+    def test_the_counts_must_add_up(self) -> None:
+        errors, _ = gate.validate(self._with(references_screened=20))
+        self.assertTrue(any("must equal references_declared" in e for e in errors), errors)
+
+    def test_an_unknown_unscreenable_class_is_refused(self) -> None:
+        errors, _ = gate.validate(self._with(unscreenable={"NOT_A_CLASS": 2}))
+        self.assertTrue(any("not an unscreenable class" in e for e in errors), errors)
+
+    def test_the_snapshot_date_is_required(self) -> None:
+        errors, _ = gate.validate(self._with(snapshot={"date": "yesterday"}))
+        self.assertTrue(any("snapshot.date" in e for e in errors), errors)
+
+    def test_the_emitted_block_validates_once_the_relation_is_stated(self) -> None:
+        """The real emitter's output, on the real S7 manifest, pastes in and validates."""
+        di = gate.dependency_screen
+        path, pin, problems = di.verify_snapshot()
+        if problems:
+            self.skipTest("Retraction Watch snapshot unusable: " + "; ".join(problems))
+        cache = Path(di.REFS_CACHE) / "10_1111_j_1349_7006_2008_00841_x.json"
+        if not cache.is_file():
+            self.skipTest("Crossref reference cache for PMID 18460020 absent (files/ is gitignored)")
+        res = di.screen_paper("10.1111/j.1349-7006.2008.00841.x", di.load_index(path),
+                              pmid="18460020", offline=True, stale_days=0)
+        block = di.manifest_block(res, pin, 0)
+        self.assertEqual(block["paper_verdict"], "FLAGGED_EXPRESSION_OF_CONCERN")
+        manifest = json.loads((MANIFESTS / "PMID18460020.json").read_text(encoding="utf-8"))
+        manifest["retraction_check"]["dependencies"] = block
+        errors, _ = gate.validate(manifest)
+        self.assertTrue(any("citing_relation" in e for e in errors), "placeholder accepted")
+        for entry in block["flagged"]:
+            entry["citing_relation"] = ("reagent source: the adenovirus and both antibodies "
+                                        "descend from the flagged paper (PMID18460020.md § 7)")
+        ratchets: list[str] = []
+        errors, _incomplete = gate.validate(manifest, ratchets=ratchets)
+        self.assertEqual(errors, [])
+        self.assertFalse([i for i in ratchets if gate.DEPENDENCY_GAP in i])
+
+    # --- mutation battery: each names the invariant it breaks -------------------------
+    def test_mutation_collapsing_natures_is_caught(self) -> None:
+        mut = load_mutated(('        if entry.get("verdict") != expected:',
+                            '        if False:'))
+        manifest = self._with(paper_verdict="FLAGGED_RETRACTION",
+                              flagged=[flagged_entry(nature="Expression of concern",
+                                                     verdict="FLAGGED_RETRACTION")])
+        self.assertEqual(mut.validate(manifest)[0], [])
+        self.assertNotEqual(gate.validate(manifest)[0], [])
+
+    def test_mutation_letting_unscreenable_read_as_screened_is_caught(self) -> None:
+        mut = load_mutated(('    if verdict in dependency_screen.UNSCREENABLE and screened is True:',
+                            '    if False:'))
+        manifest = self._with(paper_verdict="UNSCREENABLE_NO_REFERENCE_LIST", screened=True,
+                              references_declared=0, references_screened=0, unscreenable={})
+        self.assertEqual(mut.validate(manifest)[0], [])
+        self.assertNotEqual(gate.validate(manifest)[0], [])
+
+    def test_mutation_accepting_clean_over_nothing_is_caught(self) -> None:
+        mut = load_mutated(('        if counts.get("references_screened", 0) == 0:',
+                            '        if False:'))
+        manifest = self._with(references_declared=0, references_screened=0, unscreenable={})
+        self.assertEqual(mut.validate(manifest)[0], [])
+        self.assertNotEqual(gate.validate(manifest)[0], [])
+
+    def test_mutation_accepting_the_placeholder_relation_is_caught(self) -> None:
+        mut = load_mutated(('        if relation == dependency_screen.CITING_RELATION_PLACEHOLDER \\\n'
+                            '                or len(relation) < MIN_REASON_CHARS:',
+                            '        if False:'))
+        manifest = self._with(paper_verdict="FLAGGED_EXPRESSION_OF_CONCERN",
+                              flagged=[flagged_entry(
+                                  citing_relation=gate.dependency_screen.CITING_RELATION_PLACEHOLDER)])
+        self.assertEqual(mut.validate(manifest)[0], [])
+        self.assertNotEqual(gate.validate(manifest)[0], [])
+
+    def test_mutation_dropping_the_count_arithmetic_is_caught(self) -> None:
+        mut = load_mutated(('    if len(counts) == 2 and all(isinstance(c, int) for c in unscreenable.values()):',
+                            '    if False:'))
+        manifest = self._with(references_screened=20)
+        self.assertEqual(mut.validate(manifest)[0], [])
+        self.assertNotEqual(gate.validate(manifest)[0], [])
+
+    def test_mutation_silencing_the_absence_ratchet_is_caught(self) -> None:
+        mut = load_mutated(('        elif ratchets is not None:\n            ratchets.append(',
+                            '        elif False:\n            ratchets.append('))
+        manifest = minimal()
+        del manifest["retraction_check"]["dependencies"]
+        sink: list[str] = []
+        mut.validate(manifest, ratchets=sink)
+        self.assertFalse([i for i in sink if mut.DEPENDENCY_GAP in i])
+        sink = []
+        gate.validate(manifest, ratchets=sink)
+        self.assertTrue([i for i in sink if gate.DEPENDENCY_GAP in i])
+
+    def test_mutation_routing_the_ratchet_into_incomplete_is_caught(self) -> None:
+        """The defect that was caught before landing, kept as a mutant so it stays caught."""
+        mut = load_mutated(('        elif ratchets is not None:\n            ratchets.append(',
+                            '        else:\n            incomplete.append('))
+        manifest = minimal()
+        del manifest["retraction_check"]["dependencies"]
+        self.assertTrue([i for i in mut.validate(manifest)[1] if mut.DEPENDENCY_GAP in i])
+        self.assertFalse([i for i in gate.validate(manifest)[1] if gate.DEPENDENCY_GAP in i])
+
+
+class TheAcquisitionRecipeIsPublishedWhereTheBytesCannotBe(unittest.TestCase):
+    """Census P2: `files/` is gitignored, so a fresh checkout holds none of the bytes its
+    manifests fingerprint. `regenerate_adjudications.py` already publishes the RECIPE for
+    page crops; acquisitions carried a digest and no recipe. This slot is the recipe.
+    """
+
+    def _v2(self, recipe) -> dict:
+        manifest = schema_v2()
+        manifest["source_artifacts"][0]["acquisition_recipe"] = recipe
+        return manifest
+
+    def test_a_fetch_recipe_validates_and_closes_the_ratchet(self) -> None:
+        ratchets: list[str] = []
+        errors, _incomplete = gate.validate(schema_v2(), ratchets=ratchets)
+        self.assertEqual(errors, [])
+        self.assertFalse([i for i in ratchets if gate.RECIPE_GAP in i])
+
+    def test_absence_is_a_ratchet_never_a_gap_and_never_a_block(self) -> None:
+        manifest = schema_v2()
+        del manifest["source_artifacts"][0]["acquisition_recipe"]
+        ratchets: list[str] = []
+        errors, incomplete = gate.validate(manifest, ratchets=ratchets)
+        self.assertEqual(errors, [])
+        self.assertFalse([i for i in incomplete if gate.RECIPE_GAP in i], incomplete)
+        gap = [i for i in ratchets if i.startswith(gate.RECIPE_GAP)]
+        self.assertEqual(len(gap), 1, ratchets)
+        self.assertIn("1 of 1 artefact(s)", gap[0])
+        self.assertEqual(gate.validate(manifest), (errors, incomplete))
+
+    def test_a_stated_no_recipe_is_accepted_and_still_counted_as_a_ratchet(self) -> None:
+        manifest = self._v2({"no_recipe": "the route was never recorded; the note names "
+                                          "only the PMCID and the day"})
+        ratchets: list[str] = []
+        errors, _incomplete = gate.validate(manifest, ratchets=ratchets)
+        self.assertEqual(errors, [])
+        gap = [i for i in ratchets if i.startswith(gate.RECIPE_GAP)]
+        self.assertIn("(1 with a stated no_recipe reason)", gap[0])
+
+    def test_a_manifest_without_the_two_blocks_still_supports_a_complete_receipt(self) -> None:
+        """🔴 The acceptance case, through the real strict receipt gate, mutated both ways.
+
+        A manifest minted before the slots existed must still back a `complete_fulltext_read`;
+        a malformed block must still refuse it. `fulltext_receipts.require_work_manifest` is
+        called as it is shipped — it is the consumer that turned red on 2026-09-11.
+        """
+        import fulltext_receipts
+        with TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            relative = "files/fulltext/paper.xml"
+            artifact = root / relative
+            artifact.parent.mkdir(parents=True)
+            sentence = "This body sentence is long enough to act as exact evidentiary text."
+            artifact.write_text(f"<article><body><p>{sentence}</p></body></article>", encoding="utf-8")
+            manifest = schema_v2(relative)
+            del manifest["source_artifacts"][0]["acquisition_recipe"]
+            del manifest["retraction_check"]["dependencies"]
+            digest = hashlib.sha256(artifact.read_bytes()).hexdigest()
+            manifest["source_artifacts"][0]["sha256"] = digest
+            manifest["verbatim_locators"]["entries"][0]["snippet"] = sentence
+            work = gate.manifest_path(root, "wwox", "12345678")
+            work.parent.mkdir(parents=True)
+            work.write_text(json.dumps(manifest), encoding="utf-8")
+            receipt = {"evidence_depth": "complete_fulltext_read",
+                       "record_kind": "contemporaneous_receipt", "reread_reason": "first_read",
+                       "study_id": {"pmid": "12345678"}, "source_locator": relative,
+                       "source_fingerprint": digest}
+            # 1. absent slots: the complete receipt is allowed
+            fulltext_receipts.require_work_manifest(receipt, root, "wwox", strict=True)
+            # 2. a malformed block: refused, naming the block
+            manifest["retraction_check"]["dependencies"] = {"paper_verdict": "SCREENED_CLEAN",
+                                                            "screened": True}
+            work.write_text(json.dumps(manifest), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "retraction_check.dependencies"):
+                fulltext_receipts.require_work_manifest(receipt, root, "wwox", strict=True)
+            del manifest["retraction_check"]["dependencies"]
+            manifest["source_artifacts"][0]["acquisition_recipe"] = {"resolved_url": "ftp://x",
+                                                                     "derived": False}
+            work.write_text(json.dumps(manifest), encoding="utf-8")
+            with self.assertRaisesRegex(ValueError, "acquisition_recipe"):
+                fulltext_receipts.require_work_manifest(receipt, root, "wwox", strict=True)
+            # 3. mutation both ways, through the same gate: the ratchet routed into
+            #    `incomplete` refuses the clean manifest; the shape check dropped admits the bad one
+            del manifest["source_artifacts"][0]["acquisition_recipe"]
+            work.write_text(json.dumps(manifest), encoding="utf-8")
+            routed = load_mutated(('            if (without_recipe or named_no_recipe) and ratchets is not None:\n'
+                                   '                total = with_recipe + without_recipe + named_no_recipe\n'
+                                   '                ratchets.append(',
+                                   '            if (without_recipe or named_no_recipe):\n'
+                                   '                total = with_recipe + without_recipe + named_no_recipe\n'
+                                   '                incomplete.append('))
+            self.assertTrue([i for i in routed.load_and_validate(
+                root, "wwox", "12345678", verify_artifacts=True, require_current_schema=True)[1]
+                if routed.RECIPE_GAP in i])
+            self.assertFalse([i for i in gate.load_and_validate(
+                root, "wwox", "12345678", verify_artifacts=True, require_current_schema=True)[1]
+                if gate.RECIPE_GAP in i])
+            manifest["retraction_check"]["dependencies"] = {"paper_verdict": "SCREENED_CLEAN",
+                                                            "screened": True}
+            work.write_text(json.dumps(manifest), encoding="utf-8")
+            lax = load_mutated(('            errors.extend(dependency_screen_defects(retraction["dependencies"]))',
+                                '            pass'))
+            self.assertEqual(lax.load_and_validate(root, "wwox", "12345678", verify_artifacts=True,
+                                                   require_current_schema=True)[0], [])
+            self.assertNotEqual(gate.load_and_validate(root, "wwox", "12345678", verify_artifacts=True,
+                                                       require_current_schema=True)[0], [])
+
+    def test_a_hollow_no_recipe_is_refused(self) -> None:
+        errors, _ = gate.validate(self._v2({"no_recipe": "unknown"}))
+        self.assertTrue(any("no_recipe" in e for e in errors), errors)
+
+    def test_no_email_address_ever_rides_in_a_recipe_url(self) -> None:
+        for url in ("https://api.unpaywall.org/v2/10.1/x?email=someone@example.invalid",
+                    "https://x.org/?mailto=a@b.c"):
+            errors, _ = gate.validate(self._v2(acquisition_recipe(resolved_url=url)))
+            self.assertTrue(any("email address" in e for e in errors), url)
+
+    def test_the_user_agent_policy_is_part_of_the_route(self) -> None:
+        errors, _ = gate.validate(self._v2(acquisition_recipe(user_agent_policy="whatever")))
+        self.assertTrue(any("user_agent_policy" in e for e in errors), errors)
+        for policy in sorted(gate.UA_POLICIES):
+            errors, _ = gate.validate(self._v2(acquisition_recipe(user_agent_policy=policy)))
+            self.assertEqual(errors, [], policy)
+
+    def test_a_result_digest_that_disagrees_with_the_entry_is_refused(self) -> None:
+        errors, _ = gate.validate(self._v2(acquisition_recipe(result_sha256="b" * 64)))
+        self.assertTrue(any("describes a different artefact" in e for e in errors), errors)
+        errors, _ = gate.validate(self._v2(acquisition_recipe(result_sha256="a" * 64)))
+        self.assertEqual(errors, [])
+
+    def test_a_derived_artefact_names_its_source_and_its_extractor_version(self) -> None:
+        manifest = schema_v2()
+        manifest["source_artifacts"].append({
+            "path": "files/fulltext/paper.pdf", "sha256": "c" * 64, "kind": "article_binary",
+            "acquisition_recipe": acquisition_recipe(tier="pmc_pow")})
+        manifest["source_artifacts"][0]["acquisition_recipe"] = derived_recipe()
+        errors, incomplete = gate.validate(manifest)
+        self.assertEqual(errors, [])
+        self.assertFalse([i for i in incomplete if gate.RECIPE_GAP in i])
+        # version missing: drift could never be named
+        manifest["source_artifacts"][0]["acquisition_recipe"] = derived_recipe(
+            extractor={"name": "PyMuPDF", "call": "page.get_text()"})
+        errors, _ = gate.validate(manifest)
+        self.assertTrue(any("extractor.version" in e for e in errors), errors)
+        # source not declared in this manifest
+        manifest["source_artifacts"][0]["acquisition_recipe"] = derived_recipe(
+            derived_from="files/fulltext/elsewhere.pdf")
+        errors, _ = gate.validate(manifest)
+        self.assertTrue(any("derived_from" in e for e in errors), errors)
+        # a source may not be itself
+        manifest["source_artifacts"][0]["acquisition_recipe"] = derived_recipe(
+            derived_from="files/fulltext/paper.xml")
+        errors, _ = gate.validate(manifest)
+        self.assertTrue(any("derived_from" in e for e in errors), errors)
+
+    def test_the_gap_counts_every_artefact_once(self) -> None:
+        manifest = schema_v2()
+        manifest["source_artifacts"].append({
+            "path": "files/figures/f1.png", "sha256": "d" * 64, "kind": "figure"})
+        manifest["source_artifacts"].append({
+            "path": "files/figures/f2.png", "sha256": "e" * 64, "kind": "figure",
+            "acquisition_recipe": {"no_recipe": "figure render dpi lives only in a locator "
+                                                "anchor, so no derivation is stated here"}})
+        ratchets: list[str] = []
+        gate.validate(manifest, ratchets=ratchets)
+        gap = [i for i in ratchets if i.startswith(gate.RECIPE_GAP)][0]
+        self.assertIn("2 of 3 artefact(s) (1 with a stated no_recipe reason)", gap)
+
+    def test_legacy_v1_manifests_carry_no_recipe_ratchet(self) -> None:
+        """No source_artifacts, nothing to have a recipe for — the ratchet starts at v2."""
+        ratchets: list[str] = []
+        gate.validate(minimal(), ratchets=ratchets)
+        self.assertFalse([i for i in ratchets if gate.RECIPE_GAP in i])
+
+    def test_every_committed_v2_manifest_reports_the_ratchet_and_none_is_blocked(self) -> None:
+        found = sorted(MANIFESTS.glob("PMID*.json"))
+        with_gap = declared = 0
+        for path in found:
+            manifest = json.loads(path.read_text(encoding="utf-8"))
+            ratchets: list[str] = []
+            errors, incomplete = gate.validate(manifest, ratchets=ratchets)
+            self.assertEqual(errors, [], path.name)
+            self.assertFalse([i for i in incomplete if gate.RECIPE_GAP in i], path.name)
+            if manifest.get("schema_version", 1) >= 2:
+                if [i for i in ratchets if i.startswith(gate.RECIPE_GAP)]:
+                    with_gap += 1
+                else:
+                    declared += 1
+        self.assertGreater(with_gap + declared, 0)
+
+    # --- mutation battery -------------------------------------------------------------
+    def test_mutation_admitting_an_address_in_the_url_is_caught(self) -> None:
+        mut = load_mutated(('RECIPE_URL_RE = re.compile(r"^https?://[^\\s@]+$")',
+                            'RECIPE_URL_RE = re.compile(r"^https?://\\S+$")'))
+        manifest = self._v2(acquisition_recipe(resolved_url="https://x.org/?mailto=a@b.c"))
+        self.assertEqual(mut.validate(manifest)[0], [])
+        self.assertNotEqual(gate.validate(manifest)[0], [])
+
+    def test_mutation_dropping_the_extractor_version_requirement_is_caught(self) -> None:
+        mut = load_mutated(('            for key in ("name", "version", "call"):',
+                            '            for key in ("name", "call"):'))
+        manifest = schema_v2()
+        manifest["source_artifacts"].append({
+            "path": "files/fulltext/paper.pdf", "sha256": "c" * 64, "kind": "article_binary"})
+        manifest["source_artifacts"][0]["acquisition_recipe"] = derived_recipe(
+            extractor={"name": "PyMuPDF", "call": "page.get_text()"})
+        self.assertEqual(mut.validate(manifest)[0], [])
+        self.assertNotEqual(gate.validate(manifest)[0], [])
+
+    def test_mutation_accepting_a_foreign_result_digest_is_caught(self) -> None:
+        mut = load_mutated(('    if result is not None and str(result) != declared_sha256:',
+                            '    if False:'))
+        manifest = self._v2(acquisition_recipe(result_sha256="b" * 64))
+        self.assertEqual(mut.validate(manifest)[0], [])
+        self.assertNotEqual(gate.validate(manifest)[0], [])
+
+    def test_mutation_silencing_the_recipe_ratchet_is_caught(self) -> None:
+        mut = load_mutated(('            if (without_recipe or named_no_recipe) and ratchets is not None:',
+                            '            if False:'))
+        manifest = schema_v2()
+        del manifest["source_artifacts"][0]["acquisition_recipe"]
+        sink: list[str] = []
+        mut.validate(manifest, ratchets=sink)
+        self.assertFalse([i for i in sink if mut.RECIPE_GAP in i])
+        sink = []
+        gate.validate(manifest, ratchets=sink)
+        self.assertTrue([i for i in sink if gate.RECIPE_GAP in i])
+
+    def test_mutation_letting_a_derived_artefact_source_itself_is_caught(self) -> None:
+        mut = load_mutated(('        if not source or source == own_path or source not in declared_paths:',
+                            '        if not source:'))
+        manifest = self._v2(derived_recipe(derived_from="files/fulltext/paper.xml"))
+        self.assertEqual(mut.validate(manifest)[0], [])
+        self.assertNotEqual(gate.validate(manifest)[0], [])
+
+    def test_mutation_widening_the_user_agent_policies_is_caught(self) -> None:
+        mut = load_mutated(('UA_POLICIES = {"none", "identified", "browser_like"}',
+                            'UA_POLICIES = {"none", "identified", "browser_like", "whatever"}'))
+        manifest = self._v2(acquisition_recipe(user_agent_policy="whatever"))
+        self.assertEqual(mut.validate(manifest)[0], [])
+        self.assertNotEqual(gate.validate(manifest)[0], [])
 
 
 if __name__ == "__main__":

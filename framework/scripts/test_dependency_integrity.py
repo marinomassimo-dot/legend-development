@@ -21,7 +21,7 @@ import os
 import sys
 import tempfile
 import unittest
-from contextlib import redirect_stdout
+from contextlib import redirect_stderr, redirect_stdout
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 MODULE_PATH = os.path.join(HERE, "dependency_integrity.py")
@@ -504,6 +504,79 @@ class TheClaimChainJoin(unittest.TestCase):
 
 
 # --------------------------------------------------------------------------
+# the manifest slot (HARNESS-ACQREC-001, deliverable 1)
+
+class TheManifestBlockIsPastedNotTranscribed(unittest.TestCase):
+    """`screen --manifest-block` emits exactly `retraction_check.dependencies`."""
+
+    def _res(self, module=di, refs=None):
+        mod = load_mutated()
+        patched_refs(mod, refs if refs is not None else [
+            {"DOI": "10.1000/eoc"}, {"DOI": "10.1000/correction"},
+            {"DOI": "10.1000/clean-one"}, {"unstructured": "Smith 1999"}])
+        return mod, mod.screen_paper("10.1000/citing", fake_index(mod), pmid="1", stale_days=3)
+
+    def test_the_block_carries_counts_flags_and_the_snapshot_date(self):
+        mod, res = self._res()
+        block = mod.manifest_block(res, {"fetched": "2026-09-10", "sha256": "x", "rows": 5}, 3)
+        self.assertEqual(block["references_declared"], 4)
+        self.assertEqual(block["references_screened"], 3)
+        self.assertEqual(block["unscreenable"], {mod.V_NO_DOI: 1})
+        self.assertEqual(block["snapshot"]["date"], "2026-09-10")
+        self.assertEqual(block["snapshot"]["days_since_fetch"], 3)
+        self.assertEqual(block["paper_verdict"], mod.V_EOC)
+
+    def test_a_correction_travels_under_noted_never_under_flagged(self):
+        mod, res = self._res()
+        block = mod.manifest_block(res, {}, 0)
+        self.assertEqual([f["nature"] for f in block["flagged"]], ["Expression of concern"])
+        self.assertEqual([n["nature"] for n in block["noted"]], ["Correction"])
+
+    def test_one_entry_per_snapshot_row_so_natures_are_never_merged(self):
+        mod, res = self._res(refs=[{"DOI": "10.1000/twice"}])
+        block = mod.manifest_block(res, {}, 0)
+        self.assertEqual(sorted(f["nature"] for f in block["flagged"]),
+                         ["Expression of concern", "Retraction"])
+
+    def test_the_citing_relation_is_a_placeholder_the_tool_refuses_to_fill(self):
+        mod, res = self._res()
+        block = mod.manifest_block(res, {}, 0)
+        for entry in block["flagged"]:
+            self.assertEqual(entry["citing_relation"], mod.CITING_RELATION_PLACEHOLDER)
+
+    def test_screened_plus_unscreenable_equals_declared(self):
+        mod, res = self._res()
+        block = mod.manifest_block(res, {}, 0)
+        self.assertEqual(block["references_screened"] + sum(block["unscreenable"].values()),
+                         block["references_declared"])
+
+    def test_the_entry_point_emits_the_block_for_a_real_corpus_pmid(self):
+        """Calls main() on PMID 18460020 — the S7 case — through the shipped CLI."""
+        _path, _pin, problems = di.verify_snapshot()
+        if problems:
+            self.skipTest("snapshot unusable: %s" % "; ".join(problems))
+        cache = os.path.join(di.REFS_CACHE, "10_1111_j_1349_7006_2008_00841_x.json")
+        if not os.path.exists(cache):
+            self.skipTest("Crossref reference cache for PMID 18460020 absent (files/ is gitignored)")
+        buf = io.StringIO()
+        with redirect_stdout(buf):
+            rc = di.main(["screen", "--pmid", "18460020", "--manifest-block", "--offline"])
+        self.assertEqual(rc, 0)
+        block = json.loads(buf.getvalue())
+        self.assertEqual(block["schema"], di.MANIFEST_BLOCK_SCHEMA)
+        self.assertEqual(block["paper_verdict"], di.V_EOC)
+        self.assertEqual([f["doi"] for f in block["flagged"]], ["10.1073/pnas.0505485102"])
+        self.assertEqual([n["verdict"] for n in block["noted"]], [di.V_CORRECTION])
+        self.assertIn(di.V_NO_DOI, block["unscreenable"])
+
+    def test_an_unknown_pmid_is_a_named_refusal_not_a_traceback(self):
+        buf, err = io.StringIO(), io.StringIO()
+        with redirect_stdout(buf), redirect_stderr(err):
+            rc = di.main(["screen", "--pmid", "0", "--manifest-block", "--offline"])
+        self.assertIn(rc, (2, 3))
+
+
+# --------------------------------------------------------------------------
 # the mutation battery
 
 class MutationBattery(unittest.TestCase):
@@ -649,6 +722,43 @@ class MutationBattery(unittest.TestCase):
         self.assertEqual(res["paper_verdict"], mod.V_NO_SCREENABLE)
         self.assertFalse(res["screened"])
 
+    # --- M14
+    def test_mutation_folding_noted_into_flagged_in_the_block_is_caught(self):
+        mut = load_mutated(('    for f in res.get("noted", []):\n        for row in f["rows"]:\n            noted.append(',
+                            '    for f in res.get("noted", []):\n        for row in f["rows"]:\n            flagged.append('))
+        patched_refs(mut, [{"DOI": "10.1000/correction"}])
+        res = mut.screen_paper("10.1000/c", fake_index(mut))
+        self.assertTrue(mut.manifest_block(res, {}, 0)["flagged"])  # wrongly flagged
+        mod = load_mutated()
+        patched_refs(mod, [{"DOI": "10.1000/correction"}])
+        block = mod.manifest_block(mod.screen_paper("10.1000/c", fake_index(mod)), {}, 0)
+        self.assertEqual(block["flagged"], [])
+        self.assertEqual(len(block["noted"]), 1)
+
+    # --- M15
+    def test_mutation_filling_the_citing_relation_is_caught(self):
+        mut = load_mutated(('                "citing_relation": CITING_RELATION_PLACEHOLDER,',
+                            '                "citing_relation": "cites the flagged paper in its reference list",'))
+        patched_refs(mut, [{"DOI": "10.1000/eoc"}])
+        block = mut.manifest_block(mut.screen_paper("10.1000/c", fake_index(mut)), {}, 0)
+        self.assertNotEqual(block["flagged"][0]["citing_relation"], mut.CITING_RELATION_PLACEHOLDER)
+        mod = load_mutated()
+        patched_refs(mod, [{"DOI": "10.1000/eoc"}])
+        block = mod.manifest_block(mod.screen_paper("10.1000/c", fake_index(mod)), {}, 0)
+        self.assertEqual(block["flagged"][0]["citing_relation"], mod.CITING_RELATION_PLACEHOLDER)
+
+    # --- M16
+    def test_mutation_dropping_unscreenable_counts_from_the_block_is_caught(self):
+        mut = load_mutated(('    unscreenable = {v: n for v, n in (res.get("counts") or {}).items() if v in UNSCREENABLE}',
+                            '    unscreenable = {}'))
+        patched_refs(mut, [{"DOI": "10.1000/clean"}, {"unstructured": "Smith 1999"}])
+        block = mut.manifest_block(mut.screen_paper("10.1000/c", fake_index(mut)), {}, 0)
+        self.assertEqual(block["unscreenable"], {})
+        mod = load_mutated()
+        patched_refs(mod, [{"DOI": "10.1000/clean"}, {"unstructured": "Smith 1999"}])
+        block = mod.manifest_block(mod.screen_paper("10.1000/c", fake_index(mod)), {}, 0)
+        self.assertEqual(block["unscreenable"], {mod.V_NO_DOI: 1})
+
     def test_the_battery_is_exhaustive_over_the_named_invariants(self):
         """A named invariant with no mutation is a hole in this suite."""
         invariants = {
@@ -657,6 +767,9 @@ class MutationBattery(unittest.TestCase):
             "no_refs_not_clean", "absence_is_none", "fail_closed_no_snapshot",
             "control_is_strict", "multi_row_severity", "rows_retained",
             "staleness_travels_with_the_verdict", "all_doi_less_paper_not_clean",
+            # the manifest slot (HARNESS-ACQREC-001)
+            "block_never_folds_noted_into_flagged", "block_never_fills_the_citing_relation",
+            "block_keeps_unscreenable_counts",
         }
         mutation_tests = {n for n in dir(self) if n.startswith("test_mutation_")}
         self.assertEqual(
