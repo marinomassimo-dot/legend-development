@@ -119,6 +119,14 @@ Three rules that the sweep added, each with the incident it comes from:
   manifest**, run `python3 framework/scripts/locator_contradiction_audit.py --working-tree
   --fail-on-undeclared`: it lists every persisted snippet or proposition you changed without a
   declaration and exits 1 — the undeclared in-place rewrite is the one shape no file-level gate sees.
+- 🔴 **A relation between two locators declares the system both sides were measured in.** On a
+  `panel_qualifies_text` or `text_contradicted_by_panel` entry, add `experimental_context` —
+  `{system, cell_line, genotype, treatment, timepoint, comparator, endpoint}`, any subset, but name
+  `system` or `cell_line` — on the panel side and on the text side it points at. The validator
+  **WARNs** when the two declare different systems and blocks nothing: a bridge across systems can
+  be the finding, and the warning asks you to say so in the proposition. A committed Fig 6 → Fig 5
+  bridge joined NIH 3T3 and SAOS-2 and was withdrawn in full by a blind auditor; the cell line was
+  in a sentence the same reading had captured two hours earlier.
 - 🔴 **An identifier, a count or a residue identity comes from the artefact or from a command run in
   this session** — never from recall, never from the first hit of a search. From outside, it carries
   `external_provenance` naming the command or index and the date; the validator warns on the

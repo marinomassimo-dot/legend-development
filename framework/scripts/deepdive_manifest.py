@@ -142,6 +142,72 @@ COUPLED_RELATIONS = {
         "contradicts", "contradicts_needle", "contradict", "overturns"),
     "panel_qualifies_text": ("qualifies", "qualifies_needle", "qualify", "qualifies"),
 }
+# 🔴 THE AXIS A COUPLED RELATION COULD NOT DECLARE, AND THE INCIDENT THAT NAMES IT.
+# 2026-09-09, `scientist-a` wave 3 (retrospective A9): a Fig 6 → Fig 5 bridge was built,
+# written into a manifest and committed, and it joins results obtained in TWO DIFFERENT CELL
+# LINES — NIH 3T3 in the transfection panel, SAOS-2 in the localisation panel. The fact was in
+# a sentence the actor had itself captured as a locator two hours earlier (*"we transfected
+# NIH 3T3"*). No gate could see it: a relation entry names WHICH locator it bears on and says
+# nothing about the system either side was measured in, so there was nothing for a check to
+# disagree with. A blind auditor caught it and the finding was withdrawn in full — see
+# `PMID15070730.json` entries[29], which records the withdrawal rather than deleting it.
+#
+# `experimental_context` is the smallest field that makes that discordance machine-visible. It
+# is OPTIONAL and it WARNS, never blocks, for two measured reasons: 0 of 1,458 live locator
+# entries carry it (2026-09-11), so a block would refuse the whole corpus; and a difference
+# between two declared systems is a REASON TO LOOK, not a defect — joining two systems can be
+# exactly the finding, when the reading says so. What the check establishes is that the
+# difference was visible; whether it is legitimate is a reading judgement and stays one.
+EXPERIMENTAL_CONTEXT_FIELDS = (
+    "system",       # in vitro cell line, primary culture, organoid, mouse, human, in silico…
+    "cell_line",    # the named line, when the system is a line
+    "genotype",     # WT, Wwox-/-, Q230P/Q230P, knockdown, transfected construct…
+    "treatment",    # vector, drug, dose, vehicle
+    "timepoint",    # when the readout was taken
+    "comparator",   # what it is measured against
+    "endpoint",     # what was measured
+)
+# Only these two decide a discordance WARN. The others are recorded because a reader needs them
+# and a later check may use them; they are not compared, because a different timepoint or a
+# different endpoint on the two sides of a qualification is ordinary and expected, while a
+# different system is the A9 shape.
+COMPARED_CONTEXT_FIELDS = ("system", "cell_line")
+
+
+def normalise_context_value(value: Any) -> str:
+    """`NIH 3T3`, `NIH-3T3` and `nih3t3` are one system; `SAOS-2` is another."""
+    return re.sub(r"[\s_\-/]+", "", str(value or "")).casefold()
+
+
+def experimental_context_defect(value: Any) -> str | None:
+    """What an `experimental_context` declaration is missing, or None when it is usable."""
+    if not isinstance(value, dict):
+        return (f"must be an object naming any of {list(EXPERIMENTAL_CONTEXT_FIELDS)}, "
+                f"got {type(value).__name__}")
+    unknown = sorted(set(value) - set(EXPERIMENTAL_CONTEXT_FIELDS))
+    if unknown:
+        return f"unknown field(s) {unknown}; allowed: {list(EXPERIMENTAL_CONTEXT_FIELDS)}"
+    for key, item in value.items():
+        if not isinstance(item, str) or not item.strip():
+            return f"{key}: must be a non-empty string, or omitted entirely"
+    if not any(str(value.get(key) or "").strip() for key in COMPARED_CONTEXT_FIELDS):
+        return ("names neither `system` nor `cell_line`, so nothing in it can be compared "
+                "against the locator this relation points at")
+    return None
+
+
+def context_discordance(source: Any, target: Any) -> list[tuple[str, str, str]]:
+    """(field, source value, target value) for each compared axis both sides declare differently."""
+    if not isinstance(source, dict) or not isinstance(target, dict):
+        return []
+    found = []
+    for key in COMPARED_CONTEXT_FIELDS:
+        left, right = str(source.get(key) or "").strip(), str(target.get(key) or "").strip()
+        if left and right and normalise_context_value(left) != normalise_context_value(right):
+            found.append((key, left, right))
+    return found
+
+
 POINTER_FIELDS = {spec[0] for spec in COUPLED_RELATIONS.values()}
 NEEDLE_FIELDS = {spec[1] for spec in COUPLED_RELATIONS.values()}
 ARTIFACT_KINDS = {"article_binary", "article_text", "supplement_binary", "supplement_text",
@@ -2061,6 +2127,21 @@ def validate(
                         else:
                             errors.extend(_pointer_needle_errors(
                                 entry, entries, target, position, str(relation)))
+                            if warnings is not None:
+                                for field, mine, theirs in context_discordance(
+                                        entry.get("experimental_context"),
+                                        entries[target].get("experimental_context")):
+                                    warnings.append(
+                                        f"verbatim_locators.entries[{position}]."
+                                        f"experimental_context.{field}: this `{relation}` joins "
+                                        f"two locators measured in different systems — "
+                                        f"entries[{position}] declares {mine!r}, "
+                                        f"entries[{target}] declares {theirs!r}. A relation "
+                                        "across systems may be the finding; say so in the "
+                                        "proposition, or the reading is asserting a bridge the "
+                                        "sources do not share (retrospective A9: a committed "
+                                        "Fig 6 -> Fig 5 bridge across NIH 3T3 and SAOS-2, "
+                                        "withdrawn in full by a blind audit)")
                 for field in sorted(POINTER_FIELDS | NEEDLE_FIELDS):
                     if entry.get(field) is None:
                         continue
@@ -2072,6 +2153,14 @@ def validate(
                             f"`{owner}` locator may carry one")
 
                 errors.extend(_contradiction_errors(entry, position, root, incomplete))
+
+                declared_context = entry.get("experimental_context")
+                if declared_context is not None:
+                    defect = experimental_context_defect(declared_context)
+                    if defect:
+                        errors.append(
+                            f"verbatim_locators.entries[{position}].experimental_context: "
+                            f"{defect}")
 
                 artifact_values = entry.get("artifact")
                 if isinstance(artifact_values, str):

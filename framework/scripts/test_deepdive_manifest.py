@@ -2620,5 +2620,109 @@ class ContradictingAPersistedLocatorIsDeclaredAndAudited(unittest.TestCase):
         self.assertFalse([x for x in errors + incomplete if "contradicts_locator" in x])
 
 
+class ACoupledRelationDeclaresTheSystemItWasMeasuredIn(unittest.TestCase):
+    """Retrospective A9: a committed Fig 6 -> Fig 5 bridge across NIH 3T3 and SAOS-2.
+
+    The fixture is the historical case, rebuilt from `PMID15070730.json`: a panel locator
+    qualifying a text locator, the two measured in different cell lines, the fact available in
+    a sentence the same reading had already captured. Before 2026-09-11 nothing in the schema
+    could carry the system, so no check could disagree; a blind auditor withdrew the finding
+    in full. The WARN is the machine-visible half of that catch — never a BLOCK, because 0 of
+    1,458 live entries carry the field and because a cross-system relation can be the finding.
+    """
+
+    def _manifest(self, source_context=None, target_context=None, relation="panel_qualifies_text"):
+        manifest = minimal()
+        needle = "varying the amount of Wwox redistributes p73"
+        text = {
+            "proposition": "The authors state that varying the amount of Wwox redistributes p73.",
+            "snippet": f"We found that {needle} between the nucleus and the cytoplasm.",
+            "surface": "body",
+            "anchor": "Results — 'Wwox Sequesters p73 in Cytoplasm'",
+        }
+        panel = {
+            "proposition": "The pixel side: the transfection panel carries the dose series the text cites.",
+            "snippet": "[figure attestation — pixels cannot be quote-matched] Fig 6, lanes 2-7, read at native resolution.",
+            "surface": "figure",
+            "anchor": "Fig 6, lanes 2-7, inspected at native resolution",
+            "panel_text_relation": relation,
+        }
+        if relation == "text_contradicted_by_panel":
+            panel["contradicts"] = "entries[0]"
+            panel["contradicts_needle"] = needle
+        else:
+            panel["qualifies"] = "entries[0]"
+            panel["qualifies_needle"] = needle
+        if source_context is not None:
+            panel["experimental_context"] = source_context
+        if target_context is not None:
+            text["experimental_context"] = target_context
+        manifest["verbatim_locators"]["entries"] = [text, panel]
+        return manifest
+
+    def _run(self, **kwargs):
+        warnings: list[str] = []
+        errors, _ = gate.validate(self._manifest(**kwargs), warnings=warnings)
+        return errors, warnings
+
+    def test_the_historical_bridge_now_warns(self) -> None:
+        errors, warnings = self._run(
+            source_context={"system": "cell line", "cell_line": "NIH 3T3",
+                            "treatment": "Myc-Wwox transfection, 0.5 vs 1 ug"},
+            target_context={"system": "cell line", "cell_line": "SAOS-2",
+                            "endpoint": "p73 subcellular localisation"})
+        self.assertEqual([], errors, "a cross-system relation is a WARN, never a BLOCK")
+        hit = [w for w in warnings if "NIH 3T3" in w and "SAOS-2" in w]
+        self.assertTrue(hit, warnings)
+        self.assertIn("cell_line", hit[0])
+        self.assertIn("entries[1]", hit[0])
+
+    def test_it_warns_on_the_contradiction_relation_too(self) -> None:
+        _errors, warnings = self._run(
+            relation="text_contradicted_by_panel",
+            source_context={"cell_line": "NIH 3T3"}, target_context={"cell_line": "SAOS-2"})
+        self.assertTrue([w for w in warnings if "SAOS-2" in w], warnings)
+
+    def test_the_same_system_spelled_differently_is_not_a_discordance(self) -> None:
+        """`NIH 3T3` / `NIH-3T3` / `nih3t3` are one line; a detector that cannot see that is noise."""
+        for spelling in ("NIH-3T3", "nih3t3", " NIH 3T3 "):
+            _errors, warnings = self._run(
+                source_context={"cell_line": "NIH 3T3"}, target_context={"cell_line": spelling})
+            self.assertEqual([], [w for w in warnings if "experimental_context" in w], spelling)
+
+    def test_a_differing_axis_that_is_not_compared_is_silent(self) -> None:
+        """Different timepoints or endpoints across a qualification are ordinary, not the A9 shape."""
+        _errors, warnings = self._run(
+            source_context={"cell_line": "NIH 3T3", "timepoint": "30 min", "endpoint": "blot"},
+            target_context={"cell_line": "NIH 3T3", "timepoint": "48 h", "endpoint": "localisation"})
+        self.assertEqual([], [w for w in warnings if "experimental_context" in w], warnings)
+
+    def test_one_side_declaring_nothing_is_silent(self) -> None:
+        """Partial adoption must not produce a warning on every legacy relation."""
+        _errors, warnings = self._run(source_context={"cell_line": "NIH 3T3"})
+        self.assertEqual([], [w for w in warnings if "experimental_context" in w], warnings)
+        _errors, warnings = self._run()
+        self.assertEqual([], [w for w in warnings if "experimental_context" in w], warnings)
+
+    def test_a_malformed_declaration_is_a_block(self) -> None:
+        for bad in ("NIH 3T3", {"cellline": "NIH 3T3"}, {"cell_line": ""}, {"cell_line": 3},
+                    {"timepoint": "48 h"}):
+            errors, _warnings = self._run(source_context=bad)
+            self.assertTrue([e for e in errors if "experimental_context" in e], f"{bad!r} passed")
+
+    def test_a_well_formed_declaration_blocks_nothing(self) -> None:
+        errors, _warnings = self._run(
+            source_context={"system": "cell line", "cell_line": "NIH 3T3", "genotype": "WT",
+                            "treatment": "Myc-Wwox", "timepoint": "48 h",
+                            "comparator": "empty vector", "endpoint": "Wwox/tubulin ratio"})
+        self.assertEqual([], errors)
+
+    def test_warnings_never_change_the_verdict(self) -> None:
+        errors, warnings = self._run(
+            source_context={"cell_line": "NIH 3T3"}, target_context={"cell_line": "SAOS-2"})
+        self.assertTrue(warnings)
+        self.assertEqual([], errors)
+
+
 if __name__ == "__main__":
     sys.exit(0 if unittest.main(exit=False, verbosity=2).result.wasSuccessful() else 1)
