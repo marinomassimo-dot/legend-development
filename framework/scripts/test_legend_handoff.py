@@ -16,9 +16,13 @@ printed beside the mismatch count on purpose: "0 mismatches" and "0 items compar
 print identically, and only one of them means anything.
 
 The negative controls are the point of the file. A handoff test that only ever passes
-has not been tested, so three resumes here MUST fail closed:
+has not been tested, so these resumes MUST fail closed:
 
     tampered checkpoint  ·  deleted bundle ref  ·  wrong authority secret
+    diverged checked-out branch  ·  wrong repository  ·  UNBORN destination HEAD
+
+The fixture is pinned to `main` on BOTH sides of the remote. It was green for ten days
+only on a host whose `init.defaultBranch` was `main`; see build_source.
 """
 
 from __future__ import annotations
@@ -74,7 +78,13 @@ def build_source(base):
     run(["git", "init", "-q", "-b", "main", str(src)], env=env)
     g(src, "config", "user.email", "fixture@example.invalid")
     g(src, "config", "user.name", "Fixture")
-    run(["git", "init", "-q", "--bare", str(remote)], env=env)
+    # 🔴 `-b main` on the BARE remote too, or the fixture is green only on a host whose
+    # `init.defaultBranch` happens to be `main`. Without it the remote's HEAD names a
+    # `master` that is never pushed; `git clone` then warns "remote HEAD refers to
+    # nonexistent ref, unable to checkout" and the destination lands with an UNBORN
+    # HEAD and an empty tree. Measured 2026-09-10 on git 2.43.0 with no global config:
+    # 4 of 14 red; with `init.defaultBranch=main` the same file was 14 of 14 green.
+    run(["git", "init", "-q", "--bare", "-b", "main", str(remote)], env=env)
 
     # tracked canonical state, receipts, pending queue
     (src / "disease-models" / "wwox" / "registries").mkdir(parents=True)
@@ -215,8 +225,36 @@ def fresh_destination(remote, dest):
     env = dict(os.environ)
     env.update(GIT_ENV)
     run(["git", "clone", "-q", str(remote), str(dest)], env=env)
+    # positive control on the FIXTURE: a clone with nothing checked out is not "what a
+    # new machine gets", it is a remote whose HEAD names a branch nobody pushed.
+    rc, _ = g(dest, "rev-parse", "--verify", "-q", "HEAD^{commit}", check=False)
+    if rc != 0:
+        raise RuntimeError(
+            "fixture: the fresh clone has an UNBORN HEAD — the remote's HEAD names a "
+            "branch that was never pushed (host init.defaultBranch leaking into the "
+            "fixture). See build_source: the bare remote must be initialised with -b main."
+        )
     g(dest, "remote", "rename", "origin", "development")
     g(dest, "fetch", "-q", "development")
+    return dest
+
+
+def unborn_destination(remote, dest):
+    """A destination whose checked-out branch has NO commit: HEAD is unborn.
+
+    Built explicitly so it is the same on every host: `git init -b main` plus a fetch
+    of the remote. This is exactly what a clone produced on 2026-09-10 on a host
+    without `init.defaultBranch`, and what a `git init` + `fetch` bootstrap produces
+    anywhere before its first `reset --hard`.
+    """
+    env = dict(os.environ)
+    env.update(GIT_ENV)
+    run(["git", "init", "-q", "-b", "main", str(dest)], env=env)
+    g(dest, "remote", "add", "development", str(remote))
+    g(dest, "fetch", "-q", "development")
+    rc, _ = g(dest, "rev-parse", "--verify", "-q", "HEAD^{commit}", check=False)
+    if rc == 0:
+        raise RuntimeError("fixture: the unborn destination has a commit at HEAD")
     return dest
 
 
@@ -479,7 +517,75 @@ class HandoffRoundtrip(unittest.TestCase):
         self.assertNotIn("bundle fetch failed", out)
         _, got = g(dest, "rev-parse", "refs/heads/main")
         self.assertEqual(got.strip(), want, out)
+        # HEAD itself, not only the ref: the landing is a checkout, and a ref moved
+        # under a HEAD left elsewhere would pass the line above.
+        _, head = g(dest, "rev-parse", "--verify", "HEAD^{commit}")
+        self.assertEqual(head.strip(), want, "HEAD is not where the bundle says")
         self.assertIn("refs restored: %d" % len(bundled), out)
+
+    def test_negative_control_unborn_destination_head_is_named(self):
+        """A destination with nothing checked out is refused BY NAME.
+
+        `git rev-parse HEAD` on an unborn HEAD exits non-zero and echoes the word
+        `HEAD`; a guard that drops the status then reports `destination HEAD is HEAD`,
+        which names no commit and blames nothing. Here `main` is published, so it is
+        not bundled and `resume` has no tip to land: the only honest outcome is a
+        refusal that says UNBORN, applies nothing, and moves nothing.
+        """
+        rc, _ = do_handoff(self.src, self.home, self.out)
+        self.assertEqual(rc, 0)
+        dest = unborn_destination(self.remote, self.base / "dest")
+        rc, out = tool("resume", "--bundle", str(self.out), "--into", str(dest), check=False)
+        self.assertNotEqual(rc, 0, out)
+        self.assertIn("RESUME_FAIL", out)
+        self.assertIn("destination HEAD is UNBORN", out)
+        self.assertIn("branch 'main' has no commit", out)
+        self.assertNotIn("destination HEAD is HEAD", out)
+        self.assertIn("dirty patches applied: 0", out)
+        # forcing cannot help: there is no tree to apply to, and the tool must say so
+        # rather than let `git apply` fail for a reason that reads like a bad patch
+        rc, out = tool("resume", "--bundle", str(self.out), "--into", str(dest),
+                       "--apply-dirty-anywhere", check=False)
+        self.assertNotEqual(rc, 0, out)
+        self.assertIn("destination HEAD is UNBORN", out)
+        self.assertNotIn("does not apply cleanly", out)
+        # nothing moved: HEAD is still unborn and the uncommitted edit did not land
+        rc, _ = g(dest, "rev-parse", "--verify", "-q", "HEAD^{commit}", check=False)
+        self.assertNotEqual(rc, 0, "resume gave an unborn destination a HEAD it never promised")
+        self.assertFalse((dest / "README.md").exists(), "a patch was applied to nothing")
+
+    def test_unborn_destination_lands_bundled_checked_out_branch(self):
+        """When the bundle DOES carry the checked-out branch, an unborn HEAD is landed.
+
+        There is no destination work to discard, and the dirty patch needs a tree.
+        HEAD must end exactly where the bundle says; the divergence control next door
+        proves the same code path still refuses when there IS work.
+        """
+        (self.src / "ahead.md").write_text("local main is ahead of the remote\n",
+                                           encoding="utf-8")
+        g(self.src, "add", "ahead.md")
+        g(self.src, "-c", "user.email=fixture@example.invalid", "-c", "user.name=Fixture",
+          "commit", "-q", "-m", "ahead of the remote")
+        _, want = g(self.src, "rev-parse", "refs/heads/main")
+        want = want.strip()
+        do_handoff(self.src, self.home, self.out)
+        m = json.loads((self.out / "manifest.json").read_text(encoding="utf-8"))
+        bundled = [e["ref"] for e in m["artifact_references"]["bundle"]["refs"]]
+        self.assertIn("refs/heads/main", bundled, "positive control: main must be bundled")
+
+        dest = unborn_destination(self.remote, self.base / "dest")
+        rc, out = tool("resume", "--bundle", str(self.out), "--into", str(dest), check=False)
+        self.assertEqual(rc, 0, out)
+        self.assertIn("RESUME_OK", out)
+        self.assertNotIn("UNBORN", out)
+        _, head = g(dest, "rev-parse", "--verify", "HEAD^{commit}")
+        self.assertEqual(head.strip(), want, "HEAD is not where the bundle says")
+        _, cur = g(dest, "branch", "--show-current")
+        self.assertEqual(cur.strip(), "main")
+        self.assertIn("refs restored: %d" % len(bundled), out)
+        self.assertIn("dirty patches applied: 1", out)
+        self.assertEqual((dest / "README.md").read_text(encoding="utf-8"),
+                         "legend fixture -- uncommitted edit\n")
 
     def test_negative_control_checked_out_branch_diverged(self):
         """Landing the checked-out branch must never discard destination work."""

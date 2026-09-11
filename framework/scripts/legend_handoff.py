@@ -140,6 +140,27 @@ def git_ok(root, *args):
     return proc.returncode == 0, proc.stdout.strip(), proc.stderr.strip()
 
 
+def head_commit(root):
+    """The commit HEAD resolves to, or None when HEAD is UNBORN.
+
+    🔴 `git rev-parse HEAD` against an unborn HEAD exits non-zero AND echoes the literal
+    word `HEAD` on stdout. A caller that keeps the stdout and drops the status therefore
+    holds a four-letter string it will compare against real commits, and every message
+    it prints names no commit at all — `destination HEAD is HEAD`. That is how the
+    2026-09-10 red survived: the fixture's bare remote had no `main` HEAD on a host
+    without `init.defaultBranch`, the clone landed unborn, and the guard blamed a commit
+    that did not exist. `--verify` makes the failure a status, not a string.
+    """
+    ok, out, _ = git_ok(root, "rev-parse", "--verify", "-q", "HEAD^{commit}")
+    return out if (ok and out) else None
+
+
+def unborn_branch(root):
+    """The branch name HEAD points at, for naming an unborn HEAD in a message."""
+    ok, out, _ = git_ok(root, "symbolic-ref", "-q", "--short", "HEAD")
+    return out if (ok and out) else "(detached)"
+
+
 def all_refs(root):
     """Every ref: list of (refname, objectname, objecttype)."""
     out = git(root, "for-each-ref", "--format=%(refname)%09%(objectname)%09%(objecttype)")
@@ -1129,10 +1150,24 @@ def cmd_resume(args):
                 mismatches.append("bundle fetch failed: %s" % err2[:300])
             elif skip and any(e["ref"] == skip for e in expect.get("refs", [])):
                 want = [e["object"] for e in expect.get("refs", []) if e["ref"] == skip][0]
-                _, have, _ = git_ok(into, "rev-parse", "HEAD")
-                okf, _, _ = git_ok(into, "merge-base", "--is-ancestor", have, want)
+                have = head_commit(into)
+                okf = False
+                if have is not None:
+                    okf, _, _ = git_ok(into, "merge-base", "--is-ancestor", have, want)
                 if have == want:
                     pass
+                elif have is None:
+                    # UNBORN: the destination checked out a branch that has no commit
+                    # yet (a clone whose remote HEAD named a never-pushed branch, or a
+                    # `git init -b main` plus a fetch). There is no destination work to
+                    # discard, so landing the handed-off tip loses nothing — and it is
+                    # the only way the dirty patches below get a tree to apply to.
+                    okr, _, errr = git_ok(into, "reset", "--hard", want)
+                    if not okr:
+                        mismatches.append(
+                            "could not land %s at %s onto the UNBORN destination HEAD: %s"
+                            % (skip, want[:12], errr[:200])
+                        )
                 elif okf:
                     # a fast-forward of the checked-out branch onto the handed-off tip:
                     # the destination held only the remote's tip, which is behind
@@ -1182,7 +1217,20 @@ def cmd_resume(args):
                 )
                 continue
         # the destination must be at the same commit, or the patch is being applied blind
-        _, dest_head, _ = git_ok(into, "rev-parse", "HEAD")
+        dest_head = head_commit(into)
+        if dest_head is None:
+            # Nothing is checked out: there is no tree for the patch to land on, so
+            # `--apply-dirty-anywhere` cannot force it either. Name the condition; the
+            # old message printed `destination HEAD is HEAD` as if that were a commit.
+            mismatches.append(
+                "dirty patch %s belongs to %s but destination HEAD is UNBORN — branch "
+                "'%s' has no commit and nothing is checked out; check out a commit "
+                "(the patch's own %s applies cleanly) before resuming"
+                % (entry["patch"], entry["head"][:12] if entry.get("head") else "?",
+                   unborn_branch(into),
+                   entry["head"][:12] if entry.get("head") else "its commit")
+            )
+            continue
         if entry.get("head") and dest_head != entry["head"]:
             if not args.apply_dirty_anywhere:
                 mismatches.append(

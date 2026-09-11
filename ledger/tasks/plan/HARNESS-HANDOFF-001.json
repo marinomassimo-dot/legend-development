@@ -1,0 +1,177 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.2 TASK_ACK + A.3 TASK_CLAIM",
+  "_note": "Dispatched by the orchestrator on 2026-09-10 (orchestration_reviews/2026-09-10.md § 2) from learning/orchestrator/FINDING-20260910-HANDOFF-SUITE-RED.md. Harness, T0 under §21e; landed on main by the author.",
+  "TASK_ID": "HARNESS-HANDOFF-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+  "TASK_ACK": {
+    "state": "COMPLETE",
+    "accepted_on": "2026-09-10",
+    "objective": "Settle whether the 4-of-14 red in test_legend_handoff.py is the discarded rev-parse status, an unborn destination HEAD, or both; say whether the green was environment-dependent; repair with a mutation-tested change; fix the protocol in the same commit; close the finding.",
+    "specification": "learning/orchestrator/FINDING-20260910-HANDOFF-SUITE-RED.md",
+    "interaction_mode": "AUTONOMOUS_COMPLETE",
+    "review_requirement": "none — harness is T0 under §21e; Mirror reviews ex post and on request"
+  },
+  "TASK_CLAIM": {
+    "claimed_by": "plan",
+    "claimed_on": "2026-09-10",
+    "timestamp_precision": "date only — the runtime exposed no wall-clock time",
+    "durable_pointer": "framework/scripts/legend_handoff.py, framework/scripts/test_legend_handoff.py, framework/protocols/cross_host_handoff.md § 5.2",
+    "uniqueness": "no competing claim exists for this TASK_ID + GENERATION"
+  },
+  "WRITE_PERIMETER": {
+    "permitted_here": [
+      "framework/scripts/legend_handoff.py",
+      "framework/scripts/test_legend_handoff.py",
+      "framework/protocols/cross_host_handoff.md",
+      "learning/orchestrator/FINDING-20260910-HANDOFF-SUITE-RED.md",
+      "ledger/tasks/plan/HARNESS-HANDOFF-001.json"
+    ],
+    "deliberately_not_touched": {
+      "framework/scripts/** other than the two above": "peer-owned this afternoon (deepdive_manifest.py, dependency_integrity.py, self_test_coverage.py, many test_*.py)",
+      "scripts/run_release_regressions.py": "shared; no suite was added, so no edit",
+      "scripts/test_locator_obligation_reaches_every_route.py": "red before and after this work; a peer's file — reported in PEER_FINDINGS_REPORTED_NOT_FIXED"
+    }
+  },
+  "SETTLED_DIAGNOSIS": {
+    "verdict": "(c) both — with (b) re-stated: the unborn HEAD pre-existed resume; resume did not create it",
+    "evidence": [
+      "git init --bare without -b main on a host with init.defaultBranch unset leaves the fixture remote's HEAD at a never-pushed master; git clone warns 'remote HEAD refers to nonexistent ref, unable to checkout' and lands unborn (reproduced by hand on git 2.43.0)",
+      "unmodified suite at c1701be: 4/14 red with init.defaultBranch unset or =master; 14/14 green with =main (GIT_CONFIG_GLOBAL override, nothing else changed)",
+      "git rev-parse HEAD on an unborn HEAD: rc=128, stdout 'HEAD' — the string the old guard compared against a commit",
+      "in the fixture main is published, hence never bundled, hence resume never touches HEAD: the 5 restored refs are unrelated to HEAD",
+      "the divergence control's commit onto unborn master created a new root, so the identity gate fired before the refusal under test"
+    ],
+    "environment_dependent": true,
+    "variable": "init.defaultBranch, not the git version (2.43.0 here, 2.50.1 on the host that wrote the suite; both default git init to master)"
+  },
+  "COMMITS": [],
+  "MUTATION_TESTING": {
+    "rule_applied": "each mutation applied to a scratch copy of both files, the suite run, the failing case recorded, the copy discarded",
+    "matrix": [
+      {
+        "id": "M1",
+        "mutation": "dirty-patch guard re-discards rev-parse status",
+        "result": "RED test_negative_control_unborn_destination_head_is_named"
+      },
+      {
+        "id": "M2",
+        "mutation": "checked-out-branch landing re-discards rev-parse status",
+        "result": "RED test_unborn_destination_lands_bundled_checked_out_branch"
+      },
+      {
+        "id": "M3",
+        "mutation": "landing always reset --hard, refusal removed",
+        "result": "RED test_negative_control_checked_out_branch_diverged"
+      },
+      {
+        "id": "M4",
+        "mutation": "unborn guard names the condition but falls through to git apply",
+        "result": "RED test_negative_control_unborn_destination_head_is_named"
+      },
+      {
+        "id": "M5",
+        "mutation": "fixture bare remote without -b main",
+        "result": "7 ERRORS naming the unborn clone with init.defaultBranch unset; 16/16 GREEN with init.defaultBranch=main (the environment-dependent green, reproduced on demand)"
+      }
+    ],
+    "survivors": 0
+  },
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "The dispatch places me in the shared root checkout on main with peers editing concurrently; a branch switch in the root is reserved (§21d) and a task branch would need a worktree I was not given.",
+      "default": "Committed on main directly from the root through scripts/legend_commit.sh, path-scoped to my five files, as §21e item 1 permits for a change finished when written.",
+      "why_safe": "The commit is path-scoped and lock-serialised; no peer file can be swept in; main is writable by every actor (§21e SURFACES).",
+      "what_would_have_been_different": "A task branch would have had to be landed the same day by task_close.py; the result on main is identical."
+    },
+    {
+      "condition": "The finding hypothesised that resume leaves HEAD unborn after restoring refs; the fixture showed HEAD was unborn before resume ran.",
+      "default": "Recorded the hypothesis as false-as-stated in the Resolution without rewriting the diagnosis above it; still delivered the case the finding asked for (HEAD asserted where the bundle says) because the landing code path is real even though the fixture's four reds did not exercise it.",
+      "why_safe": "The evidence is reproducible in one command (GIT_CONFIG_GLOBAL override); the case costs nothing and closes a path a future host could hit.",
+      "what_would_have_been_different": "Trusting the finding would have produced a fix to a landing that was never reached, and left the fixture host-dependent."
+    },
+    {
+      "condition": "Whether an unborn destination should be populated when the bundle carries the checked-out branch, or refused outright (the protocol prefers declared limitations over widening).",
+      "default": "Land it — a fast-forward from nothing discards nothing — and refuse by name when the bundle does not carry the branch. Recorded as limitation 10.",
+      "why_safe": "Both branches are mutation-tested (M2, M3); the divergence control proves work is still never discarded; the only new behaviour is on a destination that has no work at all.",
+      "what_would_have_been_different": "A pure refusal would have been simpler but would leave a `git init -b main` + fetch bootstrap (what reconstruct_real builds before its reset) unable to receive dirty patches."
+    },
+    {
+      "condition": "scripts/test_locator_obligation_reaches_every_route.py is red in the baseline battery and is not on the finding's known-red list.",
+      "default": "Reported, not fixed: it is a peer's file this afternoon and was red before my first edit (battery_before captured at 4840f72).",
+      "why_safe": "The dispatch's ownership rule; the red is attributable by timestamp and by file.",
+      "what_would_have_been_different": "Nothing on my files; the orchestrator assigns it."
+    }
+  ],
+  "STOP_LOG": [
+    {
+      "reason_class": "2 — no safe default, by the coordinator's rule 2 of 2026-09-11 (a change under disease-models/ before a commit: stop, do not restore, report)",
+      "what_was_asked": "clearance to run scripts/legend_commit.sh on the five owned files while `git status --short disease-models/` prints `?? disease-models/wwox/research/retrieval_manifest.jsonl`",
+      "evidence": "untracked, 651 lines, created 06:09:19 UTC — 13 s after my locked battery ended; the versioned home hard-coded at framework/scripts/reacquire.py:102 (untracked peer tool, HARNESS-ACQREC-001); test_reacquire.py is not in the runner's tuple, so my battery did not run it",
+      "time_waited": "pending",
+      "outcome": "pending — the commit is prepared and not made",
+      "yes_no_question": "May a commit path-scoped to owned files proceed when the only disease-models/ change is an UNTRACKED file created by an identified peer tool after the actor's battery? If yes: rule 2 narrows to tracked modifications (` M`/` D`), and a `??` line becomes a report-and-proceed default."
+    }
+  ],
+  "_stop_log_note": "One class-2 stop, imposed by the coordinator's rule 2 after the 2026-09-10 dossier incident; no class-1 stop (no push, no history rewrite, no deletion, no spend, no private-data exposure, no BATCH_COMMIT, no change to §21c/d/e).",
+  "PEER_FINDINGS_REPORTED_NOT_FIXED": [
+    {
+      "file": "scripts/test_locator_obligation_reaches_every_route.py",
+      "what": "test_every_route_carries_the_obligation_or_declares_an_exemption FAILs in the release battery before and after this task; not on the finding's known-red list",
+      "owner": "the actor editing the locator-obligation route this afternoon; orchestrator to assign"
+    }
+  ],
+  "REGRESSION_STATE_AT_CLOSE": {
+    "how_run": "flock .git/legend_battery.lock python3 scripts/run_release_regressions.py — 2026-09-11 06:02:52–06:09:06 UTC, the coordinator's guarded runner",
+    "test_legend_handoff": "16 tests, OK, inside the battery",
+    "release_battery": "REGRESSION VERDICT: FAIL — test_batch_queue and test_surface_census (declared); scripts/test_locator_obligation_reaches_every_route.py (red in my pre-work baseline at 4840f72 too); framework/scripts/test_legend_lint.py (green in my pre-work baseline, red in every run after ~22:20 UTC; a peer's files are in flight — reported, not mine)",
+    "guard_line": "TRACKED_FILES_WRITTEN_BY_SUITE scripts/test_repository_surface_determinism.py: framework/protocols/fulltext_read_receipt.md — a FALSE attribution: that suite works on a mkdtemp copy; the file's +88 lines are HARNESS-ACQREC-001's acquisition-recipe section, edited at 06:04:35 UTC while the battery was in that suite's slot",
+    "attribution": "no suite that was green before this task is red after it, for the files this task owns"
+  },
+  "ATTRIBUTION_CENSUS": {
+    "incidents": 5,
+    "machine": 2,
+    "blind_auditor": 0,
+    "peer": 1,
+    "self": 2,
+    "severity_high": 2,
+    "severity_high_self": 1,
+    "undetected_known": 0,
+    "_counted_by": "retrospective § 0.2. A catcher is machine (validator/linter/test suite/shell), blind auditor, peer/coordinator, or self.",
+    "_incidents": [
+      {
+        "n": 1,
+        "what": "The finding's hypothesis (b) — resume leaves HEAD unborn — was wrong as stated; the unborn HEAD pre-dated resume and came from the fixture's remote on a host without init.defaultBranch.",
+        "catcher": "self (ran the fixture by hand before believing the diagnosis, as the dispatch required)",
+        "severity": "high"
+      },
+      {
+        "n": 2,
+        "what": "The protocol's own re-derive command `test_legend_handoff.py --table` crashed on this host with the same traceback, so § 5.1's 'Re-derive rather than quote' could not be followed here until the fix.",
+        "catcher": "machine (the command)",
+        "severity": "normal"
+      },
+      {
+        "n": 3,
+        "what": "The first draft of the fixture pin did not by itself explain the divergence-control red; the identity gate firing on a new root commit was found by reading the failing output, not predicted.",
+        "catcher": "machine (the suite's own message)",
+        "severity": "normal"
+      },
+      {
+        "n": 4,
+        "what": "54 tracked dossiers overwritten with `touched` at 22:26:40 UTC while my baseline battery and a peer's ran concurrently in the shared checkout; my suites write only under mkdtemp (test_legend_handoff), and `legend_handoff.py classify --root .` is read-only — the culprit is unattributed (FINDING-20260911-DOSSIER-TRUNCATION).",
+        "catcher": "peer/coordinator",
+        "severity": "high"
+      },
+      {
+        "n": 5,
+        "what": "The new worktree-hash guard attributed a peer's concurrent protocol edit to test_repository_surface_determinism.py, which runs on a temp copy — a guard that hashes a shared worktree between suites cannot separate a suite's write from a peer's edit in the same window.",
+        "catcher": "self (mtime, diff content, and the suite's fixture root)",
+        "severity": "normal"
+      }
+    ]
+  },
+  "STATE": "COMPLETE"
+}

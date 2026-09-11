@@ -75,3 +75,72 @@ and appears in no record found by a repository-wide search.
   condition rather than printing the word `HEAD` as if it were a commit;
 - the release inventory re-run, with `test_batch_queue` and `test_surface_census` still red
   for their own declared reasons and nothing else new.
+
+## Resolution
+
+**Repaired by:** `plan` (Harness Engineering), `HARNESS-HANDOFF-001`, 2026-09-10 · **Status:** CLOSED.
+The diagnosis above is left as written: it is the record of what was believed before the fixture
+was run, and half of it was right.
+
+### The settled diagnosis: (c) both — but not the (b) that was hypothesised
+
+Measured with the fixture, git 2.43.0, no global git configuration, at `c1701be` and at `4840f72`:
+
+1. **The unborn HEAD pre-existed `resume`; `resume` did not leave it.** The fixture built its
+   bare "development remote" with `git init --bare` and no `-b main`. On a host without
+   `init.defaultBranch` that remote's HEAD names a `master` nobody ever pushes; `git clone` of it
+   prints *remote HEAD refers to nonexistent ref, unable to checkout* and the destination arrives
+   on an unborn `master` with an empty tree. In the fixture `main` is published, so it is never
+   bundled, so `resume` restored 5 refs and never had a reason to touch HEAD. The hypothesis
+   "the resume restores 5 refs and leaves HEAD unborn" was therefore false as a statement about
+   the tool and true as a statement about the destination.
+2. **The discarded return code was real, at two sites** (`legend_handoff.py` old lines 1132 and
+   1185). `git rev-parse HEAD` against an unborn HEAD exits non-zero *and echoes the word
+   `HEAD`*; the guard kept the word and dropped the status, which is why the refusal named no
+   commit. `worktree_state` (old line 209) already honoured its status and was not a third site.
+3. All four reds trace to (1) through (2): the landing test's positive control saw `master`
+   instead of `main`; the roundtrip and the authority test hit the mis-named refusal; the
+   divergence control committed onto the unborn `master`, which created a **new root commit**,
+   so the repo-identity gate fired ("foreign history") before the refusal it was asserting.
+
+### The red was environment-dependent, in both directions
+
+| `init.defaultBranch` | unmodified suite (`c1701be`) | repaired suite |
+|---|---|---|
+| unset — this host | 4 of 14 red | 16 of 16 green |
+| `master` | 4 of 14 red | 16 of 16 green |
+| `main` — the Mac the suite was written on | **14 of 14 green** | 16 of 16 green |
+
+Not a git-version difference: git 2.43.0 and 2.50.1 both default `git init` to `master` unless
+`init.defaultBranch` is set. The protocol's own re-derive command `test_legend_handoff.py --table`
+crashed on this host from the same cause and runs again (14 fields compared, 0 mismatches).
+Recorded in `cross_host_handoff.md` § 5.2 and limitation 10.
+
+### The repair (commit named in the task JSON, `ledger/tasks/plan/HARNESS-HANDOFF-001.json`)
+
+- `legend_handoff.py`: `head_commit()` uses `rev-parse --verify -q HEAD^{commit}` and returns
+  `None` for an unborn HEAD; the dirty-patch guard refuses by name (`destination HEAD is UNBORN —
+  branch 'main' has no commit and nothing is checked out`) and does not let
+  `--apply-dirty-anywhere` force a patch onto no tree; the checked-out-branch landing treats an
+  unborn HEAD as "nothing to discard" and lands the bundled tip there, while a destination with
+  its own commit is still refused.
+- `test_legend_handoff.py`: bare remote pinned `-b main`; `fresh_destination` refuses an unborn
+  clone by name; the landing test asserts HEAD itself, not only the ref; two new cases —
+  `test_negative_control_unborn_destination_head_is_named` and
+  `test_unborn_destination_lands_bundled_checked_out_branch`.
+
+### Mutation matrix (each mutation applied to a scratch copy, run, discarded)
+
+| # | Mutation | Result |
+|---|---|---|
+| M1 | dirty-patch guard re-discards the `rev-parse` status | red: `unborn_destination_head_is_named` (message reads `destination HEAD is HEAD` again) |
+| M2 | landing re-discards the status | red: `unborn_destination_lands_bundled_checked_out_branch` |
+| M3 | landing always `reset --hard`, never refuses | red: `negative_control_checked_out_branch_diverged` — the control is not passing by accident |
+| M4 | unborn guard names the condition but falls through to `git apply` | red: `unborn_destination_head_is_named` (`does not apply cleanly` appears) |
+| M5 | fixture bare remote without `-b main`, `init.defaultBranch` unset | 7 errors, each naming "the fresh clone has an UNBORN HEAD"; the same mutant is 16/16 green under `init.defaultBranch=main` |
+
+### Release battery after the repair
+
+`test_batch_queue` and `test_surface_census` red for their declared reasons; `test_legend_handoff`
+green; `scripts/test_locator_obligation_reaches_every_route.py` red **before and after** this work
+(a peer's file, in flight this afternoon) — reported, not touched.

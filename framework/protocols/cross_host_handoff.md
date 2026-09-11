@@ -9,7 +9,7 @@ complements: framework/protocols/cross_session_transport.md (XPORT). XPORT says 
   cover: SOME DURABLE ARTIFACTS ARE NOT REACHABLE FROM THE REMOTE, so "it is committed" and
   "another machine can get it" are different claims.
 implemented_by: framework/scripts/legend_handoff.py
-demonstrated_by: framework/scripts/test_legend_handoff.py (14 tests, 8 negative controls) and
+demonstrated_by: framework/scripts/test_legend_handoff.py (16 tests, 9 negative controls) and
   its `--reconstruct-real` verb, which resumes an actual payload into a repository holding only
   what the development remote carries
 adjudicated_by: framework/state/handoff_adjudication.jsonl (per-file, re-verified every run)
@@ -199,6 +199,13 @@ practice in this repository. That is why it is a mechanism and not a sentence.
    land only after the destination recreates the worktree at that commit. Refusing is correct —
    the patch is carried and digest-verified either way — but "restored" and "applied" are two
    different counts and must not be quoted for each other.
+10. **A destination with nothing checked out is refused by name, not populated.** When the
+   destination HEAD is **unborn** — a clone whose remote HEAD named a never-pushed branch, or
+   `git init -b main` plus a fetch before any `reset --hard` — `resume` lands the handed-off
+   tip *only if the bundle carries that checked-out branch* (there is no destination work to
+   discard, and the patches need a tree). Otherwise it refuses every dirty patch with a message
+   that says `destination HEAD is UNBORN` and names the branch; `--apply-dirty-anywhere` cannot
+   force a patch onto no tree and says so. The destination checks out its own commit first.
 
 ### 5.1 · Two defects only real state exposed
 
@@ -218,10 +225,61 @@ is published and so is never bundled; on a real source `main` is ahead of the re
 bundled, and a fresh clone is always on `main`. The checked-out branch is now landed separately
 and only as a fast-forward; a destination whose own commit is not an ancestor gets a refusal.
 
+### 5.2 · A third defect only a different host exposed
+
+The suite was green from 2026-08-31 to 2026-09-09 **on one host and for a reason that host
+did not know it had**. Measured 2026-09-10 on `/home/desktop/legend-development`, git 2.43.0,
+no global git configuration, at `c1701be` and every commit since:
+
+| `init.defaultBranch` | unmodified suite at `c1701be` | suite after this fix |
+|---|---|---|
+| unset (this host's state) | **4 of 14 red** | 16 of 16 green |
+| `master` | 4 of 14 red | 16 of 16 green |
+| `main` (the Mac's state) | 14 of 14 green | 16 of 16 green |
+
+**The suite was never red on the Mac and always red here, and nobody could have known which
+without varying one variable.** Every other explanation — the host move, the git version, a
+regression from the day's commits — was excluded by holding everything else fixed and changing
+only `init.defaultBranch`; a red counter without that experiment would have been attributed to
+whatever had changed most recently, which was the host.
+
+The variable is not the git version. The fixture initialised its bare "development remote" with
+`git init --bare` and no `-b`, so the remote's HEAD pointed at a `master` that was never pushed;
+`git clone` then warned *remote HEAD refers to nonexistent ref, unable to checkout* and the
+destination arrived with an **unborn HEAD and an empty tree**. On a host whose
+`init.defaultBranch` was `main` the same command produced a remote whose HEAD named the pushed
+branch, and the suite never saw the difference. Two consequences, both fixed in the same
+commit and both mutation-tested (`test_legend_handoff.py`):
+
+- **The tool discarded the status of `git rev-parse HEAD`** at two sites. Against an unborn
+  HEAD that command exits non-zero *and echoes the literal word `HEAD`*, so the dirty-patch
+  guard compared a real commit against the string `HEAD` and refused with
+  `destination HEAD is HEAD` — a message that names no commit. The guard now keeps the status
+  (`rev-parse --verify -q HEAD^{commit}`), names the condition (limitation 10), and lands an
+  unborn checked-out branch when the bundle carries it. Re-discarding the status at either
+  site turns exactly one case red (`test_negative_control_unborn_destination_head_is_named`,
+  `test_unborn_destination_lands_bundled_checked_out_branch`).
+- **The fixture was host-dependent.** The bare remote is now `git init --bare -b main`, and
+  `fresh_destination` refuses a clone with nothing checked out *by name*, so this defect
+  cannot return as four unexplained reds. Removing the `-b main` pin on a host without
+  `init.defaultBranch` errors seven cases, each naming the unborn clone; on a host with
+  `init.defaultBranch=main` the unpinned fixture is green — which is the environment-dependent
+  green this section exists to record.
+
+`resume` was **not** leaving HEAD unborn after restoring refs, as the 2026-09-10 finding
+hypothesised: HEAD was unborn before `resume` ran, and in the fixture `main` is published and
+so never bundled, so `resume` had nothing to say about HEAD at all. The finding's other half —
+the discarded status — was correct and is the reason the condition had no name.
+
+A `git` newer than 2.43.0 has not changed this: the default branch name for `git init` is
+still `master` unless `init.defaultBranch` is set, so a host without that setting is the
+ordinary case, not the odd one. The VPS bootstrap in § 6 is unaffected because the public
+remote's HEAD names `main`; it is the *fixture's* remote that had no such HEAD.
+
 Re-derive rather than quote:
 
 ```bash
-python3 framework/scripts/test_legend_handoff.py                     # 14 tests, 8 negative controls
+python3 framework/scripts/test_legend_handoff.py                     # 16 tests, 9 negative controls
 python3 framework/scripts/test_legend_handoff.py --table             # the lossless table, with its denominator
 python3 framework/scripts/test_legend_handoff.py --reconstruct-real \
     --root . --payload HANDOFF_DIR --scratch /tmp/recon              # the REAL payload, into a remote-only clone
@@ -233,8 +291,10 @@ python3 framework/scripts/test_legend_handoff.py --reconstruct-real \
 
 No VPS was contacted. The external-access boundary is where this stops.
 
-**`VPS_GIT_READY`** — the destination needs: `git` (demonstrated on 2.50.1; no lower bound was
-tested, so none is claimed), network reach to
+**`VPS_GIT_READY`** — the destination needs: `git` (demonstrated on 2.50.1 on macOS and, since
+2026-09-10, on 2.43.0 on Linux with no global git configuration; no lower bound was tested, so
+none is claimed; `init.defaultBranch` is irrelevant to the tool and, since § 5.2, to its
+fixture), network reach to
 `github.com/marinomassimo-dot/legend-development.git`, and a credential for it. The repository is
 identified by root-commit digest, not remote URL, so `resume` refuses to reconstruct into the
 wrong repository even if the remote is renamed.
