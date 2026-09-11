@@ -448,6 +448,11 @@ to finish, not to average.
 
 ## 7. NOTES
 
+Harness quota-resume audit, 2026-09-11 (`plan`): desktop user preference enabled and
+backup verified; installed Claude Code native path excludes the current VS Code panel
+runtime. Real resumption remains unverified; no periodic resumer added. Evidence and
+natural-event acceptance procedure: [session record](../../learning/plan/SLR-plan-20260911-quota-resume.md).
+
 Harness startup audit, 2026-09-09 (`plan`): task-specific context loading implemented;
 measurements and validation: [session record](../../learning/plan/SLR-plan-20260909-startup-context-audit.md).
 

@@ -1,0 +1,135 @@
+{
+  "TASK_ID": "HARNESS-QUOTA-RESUME-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+  "ROLE": "HARNESS ENGINEERING",
+  "RUNTIME": "Codex",
+  "SESSION_PROFILE": "HARNESS",
+  "GOVERNANCE_VERSION": "3.1.1",
+  "APPLICABLE_GOVERNANCE_FINGERPRINT": "8f982e981eef13fc2bb5b95c51a40eb7381c9c9952a9665a2aba03c308d48969",
+  "PRIORITY": "operator assignment",
+  "OBJECTIVE": "Enable and verify native Claude Code usage-limit continuation for existing graphical sessions without periodic token consumption.",
+  "SCOPE": [
+    "desktop user settings: only autoContinueAtUsageLimit",
+    "read-only runtime and settings audit",
+    "task-specific report and natural-event acceptance procedure"
+  ],
+  "ACCEPTANCE_CRITERIA": [
+    "preserve other settings and backup",
+    "identify actual runtime and GUI coverage",
+    "distinguish configuration from real restart validation",
+    "no model, permission, billing changes",
+    "no extra resumer without supported same-GUI-session method"
+  ],
+  "DEPENDENCIES": [
+    "installed native feature and graphical runtime support",
+    "natural quota event for end-to-end test"
+  ],
+  "REVIEW_REQUIREMENT": "ex post, LEGEND_CORE 21e",
+  "INTERACTION_MODE": "AUTONOMOUS_COMPLETE",
+  "RETRY_POLICY": {
+    "max_attempts": 2,
+    "retryable": [
+      "transient read failure"
+    ],
+    "on_exhaust": "PARK"
+  },
+  "MILESTONE_PLAN": {
+    "M0": "dated baseline and claim",
+    "M1": "preserving user setting update with private backup",
+    "M2": "runtime coverage evidence and natural-event test procedure"
+  },
+  "DELIVERABLE": "learning/plan/SLR-plan-20260911-quota-resume.md",
+  "CURRENT_STATE": "PARKED",
+  "INTERNAL_EDGES": [],
+  "TASK_ACK": {
+    "state": "ACCEPTED",
+    "timestamp": "2026-09-11T10:05:32.715607+00:00",
+    "origin": "OPERATOR"
+  },
+  "TASK_CLAIM": {
+    "TASK_ID": "HARNESS-QUOTA-RESUME-001",
+    "GENERATION": 1,
+    "ACTOR_ID": "plan",
+    "timestamp": "2026-09-11T10:05:32.715607+00:00",
+    "durable_pointer": "ledger/tasks/plan/HARNESS-QUOTA-RESUME-001.json"
+  },
+  "BASELINE": {
+    "timestamp": "2026-09-11T10:05:32.715607+00:00",
+    "root_head": "a4ae056f6b69018290d515cff5444cb0ea423714",
+    "preexisting_untracked": [
+      "ledger/tasks/plan/HARNESS-SELFTEST-001.json"
+    ],
+    "user_setting": "UNSET",
+    "project_setting": "UNSET",
+    "active_claude_version": "2.1.267",
+    "installed_newer_extension": "2.1.268",
+    "active_claude_pids": [
+      291356,
+      291537
+    ],
+    "LINT": "PASS",
+    "weekly_scout": "W37 input missing; unrelated work not claimed"
+  },
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "native schema present but runtime mode excluded",
+      "default_taken": "enable authorized preference, document unsupported GUI, do not build daemon",
+      "why_safe": "no duplicate session or extra token polling",
+      "what_would_have_differed": "a timer alone cannot satisfy same-GUI-session continuation"
+    }
+  ],
+  "STOP_LOG": [
+    {
+      "reason_class": 3,
+      "asked": "actor identity before reading explicit role mapping",
+      "waited": "no work blocked",
+      "outcome": "HARNESS ENGINEERING explicitly maps to plan; question withdrawn"
+    }
+  ],
+  "CONFIGURATION": {
+    "path": "/home/desktop/.claude/settings.json",
+    "backup": "/home/desktop/.claude/settings.json.bak-quota-resume-20260911T100631Z",
+    "before_sha256": "8de0ba413d3d4a8fd63004d1c6d2f0429d0a483dfc4860191da1ed2a8f75de4d",
+    "after_sha256": "98ad688dc64da380f7df97e7943979449640faba9f78f7f1b74ed066e30eb295",
+    "other_properties_unchanged": true,
+    "autoContinueAtUsageLimit": true
+  },
+  "CONFIGURATION_VERIFIED": true,
+  "REAL_RESUMPTION_VERIFIED": false,
+  "GUI_COVERAGE": "UNSUPPORTED_BY_INSPECTED_NATIVE_PATH",
+  "RESIDUAL_BLOCKER": "No demonstrated supported mechanism to resume the same live VS Code panel without duplicate execution; native quota path requires interactive terminal.",
+  "REPORT": "learning/plan/SLR-plan-20260911-quota-resume.md",
+  "MILESTONES_REACHED": [
+    "M0: baseline and claim persisted",
+    "M1: native user setting enabled, backed up and preserved",
+    "M2: installed runtime audit, native GUI limitation and natural-event test documented"
+  ],
+  "CHECKPOINT": {
+    "CHECKPOINT_ID": "HARNESS-QUOTA-RESUME-001-M2",
+    "ACTOR_ID": "plan",
+    "TASK_ID": "HARNESS-QUOTA-RESUME-001",
+    "DIRECTIVE_VERSION": 1,
+    "GENERATION": 1,
+    "APPLICABLE_GOVERNANCE_FINGERPRINT": "8f982e981eef13fc2bb5b95c51a40eb7381c9c9952a9665a2aba03c308d48969",
+    "TIMESTAMP": "2026-09-11T10:11:31.113996+00:00",
+    "DURABLE_POINTERS": [
+      "learning/plan/SLR-plan-20260911-quota-resume.md",
+      "ledger/tasks/plan/HARNESS-QUOTA-RESUME-001.json"
+    ],
+    "RESUME_CONDITION": "A native version or documented API supports existing GUI sessions, or operator changes UI constraint. Natural-event observation remains pending; do not induce quota."
+  },
+  "VALIDATION": {
+    "LINT": "PASS",
+    "JSON_boolean_backup_other_properties": "PASS",
+    "watcher_detected_change_UTC": [
+      "2026-09-11T10:06:32.839Z",
+      "2026-09-11T10:06:32.845Z"
+    ],
+    "isolated_transcribed_predicate_fixtures": "7 PASS, not product/backend tests",
+    "local_node_attempt": "not executed: executable absent; no install",
+    "end_to_end": "NOT RUN; natural event pending"
+  }
+}
