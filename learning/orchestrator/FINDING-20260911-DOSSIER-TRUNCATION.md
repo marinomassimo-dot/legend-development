@@ -68,7 +68,13 @@ guard than as an autopsy.
   happens under concurrency, the lock removes the condition and the attribution may never come.
   That is acceptable: the class is closed either way.
 - **Concurrent batteries defeat the attribution**, not the detection — a suite may be blamed for a
-  peer's write. The lock is the answer; the docstring says so.
+  peer's write. The lock serialises batteries. **It does not serialise editors**: within the hour
+  of shipping, the guard attributed a change to `fulltext_read_receipt.md` to
+  `test_repository_surface_determinism.py`, whose fixtures work on a `mkdtemp` copy; the file had
+  been edited by a peer session at 06:04:35, inside that suite's slot. A worktree-hash guard in a
+  shared checkout separates a suite's write from a concurrent peer edit only when the tree is
+  quiet. A cheap refinement, not yet built: record each suite's start/end and print each changed
+  path's mtime against that window, so an edit outside the window is exonerated by arithmetic.
 - **This is the `real_artifact_case` hazard the dispatch did not name.** The self-test meta-test
   asks every suite to touch a real corpus artefact; the dispatch said *never a false green* and
   did not say *never a write*. `INVISIBLE_COMPLIANCE_GATE`'s sibling: a criterion that rewards
