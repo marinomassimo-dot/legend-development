@@ -8,11 +8,37 @@ ways it must refuse are pinned here rather than in a session's scratch directory
 """
 from __future__ import annotations
 
+import json
+import re
+import subprocess
 import sys
 import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+SCRIPT = HERE / "regenerate_adjudications.py"
+ADJUDICATIONS = ROOT / "disease-models/wwox/research/page_adjudications"
+
+
+def run_cli(*args: str) -> subprocess.CompletedProcess:
+    return subprocess.run([sys.executable, str(SCRIPT), *args], cwd=ROOT,
+                          capture_output=True, text=True, timeout=600)
+
+
+def real_recipes() -> list[tuple[str, Path, bool]]:
+    """(pmid, recipe path, source PDF present) for every recipe in this checkout — a READ."""
+    found = []
+    for recipe in sorted(ADJUDICATIONS.glob("PMID*/adjudications.json")):
+        try:
+            data = json.loads(recipe.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        source = ROOT / str(data.get("source_pdf", {}).get("path", ""))
+        found.append((recipe.parent.name.removeprefix("PMID"), recipe, source.is_file()))
+    return found
 
 import deepdive_manifest as gate  # noqa: E402
 import regenerate_adjudications as regenerate  # noqa: E402
@@ -187,6 +213,74 @@ class TwoImplementationsAreWorthMoreThanOne(unittest.TestCase):
             hasattr(regenerate, "crop_contains_span"),
             "the geometric predicate is bound in this module again, so its verdict is once "
             "more produced by the code it exists to corroborate")
+
+
+class TheCliIsDriven(unittest.TestCase):
+    """``main`` -> ``run`` as a subprocess, over this checkout's real recipes.
+
+    ``test_regenerate_adjudications_fails_closed.py`` drives a *copy* of the script in a
+    sandbox, which the meta-test cannot attribute to this file. These cases drive the script
+    itself. ``verify`` reads recipes and PDFs and writes nothing; every case below asserts the
+    recipe tree is byte-identical afterwards. The PDFs live under gitignored ``files/``, so the
+    two cases that need a PDF present, or absent, each declare a skip when the host has no
+    recipe in that state — never a silent pass.
+    """
+
+    def setUp(self) -> None:
+        try:
+            import fitz  # noqa: F401
+        except ImportError:
+            self.skipTest("skipped: PyMuPDF (fitz) not installed on this host")
+        self.recipes = real_recipes()
+        if not self.recipes:
+            self.skipTest(f"skipped: no adjudication recipe under {ADJUDICATIONS}")
+        self.before = {r: r.read_bytes() for _, r, _ in self.recipes}
+        self.listing = sorted(p.relative_to(ROOT).as_posix() for p in ADJUDICATIONS.rglob("*"))
+
+    def assert_nothing_written(self) -> None:
+        self.assertEqual({r: r.read_bytes() for _, r, _ in self.recipes}, self.before,
+                         "verify wrote a recipe")
+        self.assertEqual(sorted(p.relative_to(ROOT).as_posix()
+                                for p in ADJUDICATIONS.rglob("*")), self.listing,
+                         "verify added or removed a file under page_adjudications/")
+
+    def test_a_pmid_that_selects_no_study_fails_closed_through_main(self) -> None:
+        result = run_cli("verify", "--pmid", "00000000")
+        self.assertEqual(result.returncode, 1, result.stdout + result.stderr)
+        self.assertIn("selected no study", result.stderr)
+        self.assertIn(f"{len(self.recipes)} recipe(s) exist", result.stderr)
+        self.assertNotIn("OK:", result.stdout)
+        self.assert_nothing_written()
+
+    def test_a_recipe_whose_pdf_is_present_verifies_by_digest(self) -> None:
+        present = [(pmid, recipe) for pmid, recipe, here in self.recipes if here]
+        if not present:
+            self.skipTest("skipped: no recipe's source PDF is on this host "
+                          f"(files/ is gitignored; {len(self.recipes)} recipes looked at)")
+        pmid, recipe = present[0]
+        declared = len(json.loads(recipe.read_text(encoding="utf-8"))["artifacts"])
+        result = run_cli("verify", "--pmid", pmid)
+        self.assertEqual(result.returncode, 0, result.stderr[-3000:])
+        match = re.search(r"OK: (\d+) of (\d+) declared digest\(s\) matched across (\d+) "
+                          r"rendered artifact\(s\) in 1 study\(ies\)", result.stdout)
+        self.assertIsNotNone(match, result.stdout[-2000:])
+        matched, declared_seen, rendered = (int(g) for g in match.groups())
+        self.assertEqual((matched, declared_seen, rendered), (declared, declared, declared))
+        self.assertIn("SCOPE: this verifies RECIPES", result.stdout)
+        self.assertIn("OBSERVED, NOT VERIFIED", result.stdout)
+        self.assert_nothing_written()
+
+    def test_a_recipe_whose_pdf_is_absent_names_the_absence_and_the_way_round(self) -> None:
+        absent = [(pmid, recipe) for pmid, recipe, here in self.recipes if not here]
+        if not absent:
+            self.skipTest("skipped: every recipe's source PDF is on this host")
+        pmid, _recipe = absent[0]
+        result = run_cli("verify", "--pmid", pmid)
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("source PDF absent", result.stderr)
+        self.assertIn("--artifact-workspace", result.stderr)
+        self.assertIn("0 artifact(s) rendered", result.stderr)
+        self.assert_nothing_written()
 
 
 if __name__ == "__main__":
