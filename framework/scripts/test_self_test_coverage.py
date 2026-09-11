@@ -14,6 +14,12 @@ tool exists to detect, and would be an embarrassing one to commit here.
 
 A meta-test whose own suite never drove its own entry point would be the same joke one level
 up, so ``TheToolDrivesItself`` runs ``main()`` over a real subset of the real script tree.
+
+🔴 ``WritingAGuardedTreeIsRefused`` is the 2026-09-11 correction: a real-artefact case READS.
+The mutation matrix of 2026-09-10 drove a tool mutated to ``path.write_text("touched")``
+through its own real-artefact case against the real root, and 54 dossiers were the result.
+The suites below try exactly that, against a fake root, and assert that the bytes never land,
+that the attempt is recorded with its mode, and that the verdict says REFUSED.
 """
 
 from __future__ import annotations
@@ -110,6 +116,33 @@ if __name__ == "__main__":
 '''
 
 
+SUITE_WRITES_A_GUARDED_TREE = '''#!/usr/bin/env python3
+import sys, unittest
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import widget
+ROOT = Path(__file__).resolve().parents[2]
+
+class T(unittest.TestCase):
+    def test_reads_then_writes_the_artefact(self):
+        target = ROOT / "disease-models" / "wwox" / "artefact.json"
+        self.assertEqual(widget.do_work(str(target)), "{}")
+        target.write_text("touched", encoding="utf-8")   # the 2026-09-10 incident, verbatim
+
+if __name__ == "__main__":
+    unittest.main()
+'''
+
+SUITE_DELETES_A_GUARDED_FILE = SUITE_WRITES_A_GUARDED_TREE.replace(
+    'target.write_text("touched", encoding="utf-8")', 'target.unlink()')
+
+SUITE_RENAMES_INTO_A_GUARDED_TREE = SUITE_WRITES_A_GUARDED_TREE.replace(
+    'target.write_text("touched", encoding="utf-8")',
+    'import os, tempfile\n'
+    '        fd, tmp = tempfile.mkstemp(); os.close(fd)\n'
+    '        os.replace(tmp, str(target))')
+
+
 def _tree(tmp: Path, suite: str) -> Path:
     scripts = tmp / "framework" / "scripts"
     scripts.mkdir(parents=True, exist_ok=True)
@@ -198,6 +231,109 @@ class SyntheticSuites(unittest.TestCase):
                                  self.tracer, root, timeout=120)
         self.assertEqual(row["real_artifact_case"], "true")
         self.assertIn("disease-models/wwox/artefact.json", row["real_artifact_paths"])
+
+
+class WritingAGuardedTreeIsRefused(unittest.TestCase):
+    """🔴 A real-artefact case reads. The guard refuses the write before it lands."""
+
+    def setUp(self) -> None:
+        self._tmp = tempfile.TemporaryDirectory()
+        self.tmp = Path(self._tmp.name)
+        self.addCleanup(self._tmp.cleanup)
+        self.tracer = stc._tracer_dir()
+        self.artefact = self.tmp / "disease-models" / "wwox" / "artefact.json"
+        self.artefact.parent.mkdir(parents=True)
+        self.artefact.write_text("{}", encoding="utf-8")
+
+    def _measure(self, suite: str) -> dict:
+        root = _tree(self.tmp, suite)
+        return stc.measure_script(root / "framework" / "scripts" / "widget.py",
+                                  self.tracer, root, timeout=120)
+
+    def test_a_write_is_refused_recorded_with_its_mode_and_never_lands(self) -> None:
+        row = self._measure(SUITE_WRITES_A_GUARDED_TREE)
+        self.assertEqual(self.artefact.read_text(encoding="utf-8"), "{}",
+                         "the bytes landed: the guard is decoration")
+        self.assertTrue(row["refused"])
+        self.assertEqual([(w["op"], w["mode"], w["path"]) for w in row["guarded_writes"]],
+                         [("open", "w", "disease-models/wwox/artefact.json")])
+        self.assertEqual(row["guarded_writes"][0]["suite"], "framework/scripts/test_widget.py")
+        self.assertNotEqual(row["suites"][0]["rc"], 0, "a refused suite cannot be green")
+        # The read that preceded the write still counts as the read it was.
+        self.assertEqual(row["real_artifact_case"], "true")
+
+    def test_a_delete_and_a_rename_into_the_tree_are_refused_too(self) -> None:
+        for suite, op in ((SUITE_DELETES_A_GUARDED_FILE, "unlink"),
+                          (SUITE_RENAMES_INTO_A_GUARDED_TREE, "replace")):
+            with self.subTest(op=op):
+                row = self._measure(suite)
+                self.assertTrue(self.artefact.is_file(), f"{op} reached the artefact")
+                self.assertEqual(self.artefact.read_text(encoding="utf-8"), "{}")
+                self.assertTrue(row["refused"])
+                self.assertEqual([w["op"] for w in row["guarded_writes"]], [op])
+
+    def test_a_suite_that_only_reads_is_not_refused(self) -> None:
+        root = _tree(self.tmp, SUITE_HELPER_ONLY.replace(
+            'self.assertEqual(widget.helper("  A "), "a")',
+            'self.assertEqual(widget.helper("  A "), "a")\n'
+            '        widget.do_work(str(Path(__file__).resolve().parents[2] '
+            '/ "disease-models" / "wwox" / "artefact.json"))'))
+        row = stc.measure_script(root / "framework" / "scripts" / "widget.py",
+                                 self.tracer, root, timeout=120)
+        self.assertFalse(row["refused"])
+        self.assertEqual(row["guarded_writes"], [])
+        self.assertEqual(row["suites"][0]["rc"], 0)
+
+    def test_the_refusal_outranks_both_axes_in_the_verdict_and_fails_enforce(self) -> None:
+        row = self._measure(SUITE_WRITES_A_GUARDED_TREE)
+        text = stc.render([row])
+        self.assertIn("REFUSED — wrote under a guarded tree", text)
+        self.assertIn("VERDICT: REFUSED", text)
+        self.assertIn("disease-models/wwox/artefact.json (mode w)", text)
+        clean = stc.render([self._measure(SUITE_DRIVES_MAIN)])
+        self.assertIn("VERDICT: PASS", clean)
+
+        argv = sys.argv
+        buffer = io.StringIO()
+        try:
+            _tree(self.tmp, SUITE_WRITES_A_GUARDED_TREE)
+            sys.argv = ["self_test_coverage.py", "--root", str(self.tmp), "--enforce",
+                        "--workers", "1"]
+            with redirect_stdout(buffer):
+                code = stc.main()
+        finally:
+            sys.argv = argv
+        self.assertEqual(code, 1, buffer.getvalue())
+        self.assertEqual(self.artefact.read_text(encoding="utf-8"), "{}")
+
+    def test_guarded_run_protects_any_command(self) -> None:
+        """The way a mutation matrix is run from now on."""
+        result = stc.guarded_run(
+            [sys.executable, "-c",
+             f"open({str(self.artefact)!r}, 'w').write('touched')"], self.tmp, timeout=60)
+        self.assertTrue(result["refused"])
+        self.assertNotEqual(result["rc"], 0)
+        self.assertEqual(self.artefact.read_text(encoding="utf-8"), "{}")
+        argv = sys.argv
+        buffer = io.StringIO()
+        try:
+            sys.argv = ["self_test_coverage.py", "--root", str(self.tmp), "--guarded",
+                        sys.executable, "-c", f"open({str(self.artefact)!r}, 'a').write('x')"]
+            with redirect_stdout(buffer):
+                code = stc.main()
+        finally:
+            sys.argv = argv
+        self.assertEqual(code, 1)
+        self.assertIn("GUARDED_WRITE_REFUSED open", buffer.getvalue())
+        self.assertEqual(self.artefact.read_text(encoding="utf-8"), "{}")
+
+    def test_the_guarded_trees_agree_with_the_release_runner(self) -> None:
+        """Two guards that disagree are one guard with a hole."""
+        sys.path.insert(0, str(ROOT / "scripts"))
+        import run_release_regressions as runner
+        self.assertTrue(set(runner.GUARDED_TREES) <= set(stc.GUARDED_TREES),
+                        set(runner.GUARDED_TREES) - set(stc.GUARDED_TREES))
+        self.assertTrue(set(stc.CORPUS_ROOTS) <= set(stc.GUARDED_TREES))
 
 
 class HistoricalDefect(unittest.TestCase):

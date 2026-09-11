@@ -55,12 +55,31 @@ are candidates.
     is three-state: ``true``, ``skipped_declared`` (the suite ran and announced a skip), or
     ``false``. Only ``false`` on both axes is a finding.
 
+    🔴 **``real_artifact_case`` means a real artefact is READ. A case that writes a real
+    artefact — or runs a tool with ``--write`` against the real root — is the incident, not
+    the criterion.** On 2026-09-10 at 22:26 UTC, 54 tracked dossiers under
+    ``disease-models/wwox/research/fulltext_dossiers/`` were overwritten with the word
+    ``touched`` and a manifest had its snippets normalised, by a mutation matrix that ran a
+    deliberately broken tool through its own real-artefact cases against the real root and
+    restored the tool but not the artefacts
+    (``learning/orchestrator/FINDING-20260911-DOSSIER-TRUNCATION.md``). A criterion that
+    rewards reading real artefacts must forbid writing them in the same sentence, or it
+    trains exactly that. So the instrumentation does not merely note writes: **any attempt
+    to open a file for writing, delete, rename or truncate it under a guarded tree is refused
+    in the suite's process before the bytes land**, is recorded with its mode, and marks the
+    script ``refused`` — a verdict that outranks both axes and fails ``--enforce``. The
+    guarded trees are the corpus roots plus the ones ``scripts/run_release_regressions.py``
+    hashes (``GUARDED_TREES``). ``--guarded <command…>`` runs any command under the same
+    refusal, which is how a mutation matrix must be run from now on.
+
 USAGE
 
     python3 framework/scripts/self_test_coverage.py                  # the report
     python3 framework/scripts/self_test_coverage.py --json
     python3 framework/scripts/self_test_coverage.py --script erratum_scope_check.py
-    python3 framework/scripts/self_test_coverage.py --enforce        # non-zero on a new false/false
+    python3 framework/scripts/self_test_coverage.py --enforce        # non-zero on a new false/false or a refusal
+    python3 framework/scripts/self_test_coverage.py --guarded python3 framework/scripts/test_x.py
+                                                                     # run anything; guarded writes refused and listed
 
 WHAT IT DOES NOT CLAIM. That a suite which drives its entry point tests it *well* — coverage of
 the call, not of the behaviour. It cannot see a case that asserts nothing. It measures the one
@@ -86,6 +105,12 @@ ROOT = HERE.parent.parent
 #: case drawn from the corpus; everything under a temporary directory is a fixture.
 CORPUS_ROOTS = ("files", "disease-models", "ledger", "framework/state", "_external_repos")
 
+#: Trees a suite may never write under while it is measured. The corpus roots — an unversioned
+#: PDF under ``files/`` is unique material — plus the trees the release runner hashes after each
+#: suite (``scripts/run_release_regressions.py`` GUARDED_TREES), so the two guards agree.
+GUARDED_TREES = tuple(sorted(set(CORPUS_ROOTS) | {
+    "governance", "roles", "framework/protocols", "framework/instruction", "learning"}))
+
 #: Callee names that mean "the suite harness", never "the tool".
 SELF_TEST_NAMES = {"self_test", "_self_test", "selftest", "_selftest", "run_self_test"}
 
@@ -107,38 +132,81 @@ _dir = os.environ.get("LEGEND_TRACE_DIR")
 if _dir:
     _funcs = set()
     _files = set()
+    _writes = []
+    _guard = [os.path.abspath(g) for g in json.loads(os.environ.get("LEGEND_TRACE_GUARD", "[]"))]
 
     def _profile(frame, event, arg):
         if event == "call":
             code = frame.f_code
             _funcs.add(code.co_filename + "::" + code.co_qualname)
 
-    def _note(path):
+    def _abs(path):
         try:
-            _files.add(os.path.abspath(os.fspath(path)))
+            if isinstance(path, int):
+                return None
+            return os.path.abspath(os.fsdecode(os.fspath(path)))
         except Exception:
-            pass
+            return None
+
+    def _guarded(path):
+        return path is not None and any(
+            path == g or path.startswith(g + os.sep) for g in _guard)
+
+    def _refuse(path, mode, op):
+        # Recorded first, then refused: the attempt is the evidence, and the bytes never land.
+        _writes.append({"path": path, "mode": mode, "op": op})
+        raise PermissionError(
+            "LEGEND self-test guard: %s %r (mode %r) is under a guarded tree. A suite reads "
+            "real artefacts; it never writes them (self_test_coverage.py, "
+            "FINDING-20260911-DOSSIER-TRUNCATION)" % (op, path, mode))
+
+    def _note_open(file, mode):
+        path = _abs(file)
+        if path is None:
+            return
+        _files.add(path)
+        if any(flag in str(mode) for flag in "wax+") and _guarded(path):
+            _refuse(path, str(mode), "open")
 
     _bopen = builtins.open
     _iopen = io.open
 
-    def _open(file, *a, **k):
-        _note(file)
-        return _bopen(file, *a, **k)
+    def _open(file, mode="r", *a, **k):
+        _note_open(file, mode)
+        return _bopen(file, mode, *a, **k)
 
-    def _open_io(file, *a, **k):
-        _note(file)
-        return _iopen(file, *a, **k)
+    def _open_io(file, mode="r", *a, **k):
+        _note_open(file, mode)
+        return _iopen(file, mode, *a, **k)
 
     builtins.open = _open
     io.open = _open_io
+
+    def _wrap(name, positions):
+        original = getattr(os, name)
+
+        def guarded(*a, **k):
+            for position in positions:
+                if position < len(a):
+                    path = _abs(a[position])
+                    if _guarded(path):
+                        _refuse(path, "-", name)
+            return original(*a, **k)
+
+        guarded.__name__ = name
+        setattr(os, name, guarded)
+
+    for _name, _positions in (("remove", (0,)), ("unlink", (0,)), ("rmdir", (0,)),
+                              ("truncate", (0,)), ("rename", (0, 1)), ("replace", (0, 1))):
+        _wrap(_name, _positions)
 
     @atexit.register
     def _dump():
         try:
             target = os.path.join(_dir, "%d-%d.json" % (os.getpid(), id(_funcs)))
             with _bopen(target, "w") as handle:
-                json.dump({"funcs": sorted(_funcs), "files": sorted(_files)}, handle)
+                json.dump({"funcs": sorted(_funcs), "files": sorted(_files),
+                           "writes": _writes}, handle)
         except Exception:
             pass
 
@@ -158,12 +226,22 @@ def _tracer_dir() -> Path:
     return path
 
 
+def guarded_paths(root: Path) -> list[str]:
+    return [str((root / tree).resolve()) for tree in GUARDED_TREES]
+
+
 def run_instrumented(command: list[str], tracer: Path, cwd: Path,
-                     timeout: int = 600) -> dict:
-    """Run ``command``, returning its result plus every function entered and file opened."""
+                     timeout: int = 600, root: Path | None = None) -> dict:
+    """Run ``command``, returning its result plus every function entered and file opened.
+
+    ``writes`` lists every refused attempt to write, delete, rename or truncate under a
+    guarded tree of ``root`` (``cwd`` when ``root`` is not given). The attempt was refused in
+    the child before any byte landed; the record is the evidence that it was made.
+    """
     with tempfile.TemporaryDirectory(prefix="legend-selftest-trace-") as trace_dir:
         env = dict(os.environ)
         env["LEGEND_TRACE_DIR"] = trace_dir
+        env["LEGEND_TRACE_GUARD"] = json.dumps(guarded_paths(root or cwd))
         env["PYTHONPATH"] = os.pathsep.join(
             [str(tracer)] + ([env["PYTHONPATH"]] if env.get("PYTHONPATH") else []))
         env.pop("PYTHONDONTWRITEBYTECODE", None)
@@ -175,6 +253,7 @@ def run_instrumented(command: list[str], tracer: Path, cwd: Path,
             rc, out = 124, "TIMEOUT"
         funcs: set[str] = set()
         files: set[str] = set()
+        writes: list[dict] = []
         for dump in Path(trace_dir).glob("*.json"):
             try:
                 payload = json.loads(dump.read_text(encoding="utf-8"))
@@ -182,7 +261,19 @@ def run_instrumented(command: list[str], tracer: Path, cwd: Path,
                 continue
             funcs.update(payload.get("funcs", ()))
             files.update(payload.get("files", ()))
-    return {"rc": rc, "output": out, "funcs": funcs, "files": files}
+            writes.extend(payload.get("writes", ()))
+    return {"rc": rc, "output": out, "funcs": funcs, "files": files, "writes": writes}
+
+
+def guarded_run(command: list[str], root: Path, timeout: int = 600) -> dict:
+    """Run any command with writes under ``root``'s guarded trees refused, and say which.
+
+    This is how a mutation matrix is run: a deliberately broken tool driven through its
+    real-artefact cases must not be able to reach the corpus, whatever the mutation is.
+    """
+    result = run_instrumented(command, _tracer_dir(), root, timeout=timeout, root=root)
+    result["refused"] = bool(result["writes"])
+    return result
 
 
 # --------------------------------------------------------------------------------------
@@ -292,10 +383,13 @@ def measure_script(script: Path, tracer: Path, root: Path,
 
     funcs: set[str] = set()
     files: set[str] = set()
+    writes: list[dict] = []
     for label, command in commands:
-        result = run_instrumented(command, tracer, root, timeout=timeout)
+        result = run_instrumented(command, tracer, root, timeout=timeout, root=root)
         funcs |= result["funcs"]
         files |= result["files"]
+        for attempt in result["writes"]:
+            writes.append({"suite": label, **attempt})
         suites.append({"suite": label, "rc": result["rc"],
                        "skips": _skip_lines(result["output"])})
 
@@ -329,8 +423,20 @@ def measure_script(script: Path, tracer: Path, root: Path,
                                  "callees_entered": callees_called},
         "real_artifact_case": real,
         "real_artifact_paths": corpus[:10],
+        # 🔴 A suite that tried to write under a guarded tree. The attempt was refused before
+        # the bytes landed; the record outranks both axes and fails --enforce.
+        "guarded_writes": [{"suite": w["suite"], "op": w["op"], "mode": w["mode"],
+                            "path": _relative(w["path"], root)} for w in writes],
+        "refused": bool(writes),
         "failing": [s["suite"] for s in suites if s["rc"] != 0],
     }
+
+
+def _relative(path: str, root: Path) -> str:
+    try:
+        return Path(path).resolve().relative_to(root.resolve()).as_posix()
+    except ValueError:
+        return path
 
 
 def _skip_lines(output: str) -> list[str]:
@@ -361,7 +467,9 @@ def render(rows: list[dict]) -> str:
         lines.append(
             f"  {row['script']:<{width}}  entry_point_called: "
             f"{str(row['entry_point_called']).lower():<5}  real_artifact_case: "
-            f"{row['real_artifact_case']}")
+            f"{row['real_artifact_case']}"
+            + ("  REFUSED — wrote under a guarded tree" if row.get("refused") else ""))
+    refused = [r for r in rows if r.get("refused")]
     both_false = [r["script"] for r in rows
                   if not r["entry_point_called"] and r["real_artifact_case"] == "false"]
     no_entry = [r["script"] for r in rows if not r["entry_point_called"]]
@@ -373,10 +481,21 @@ def render(rows: list[dict]) -> str:
     for name in both_false:
         lines.append(f"    - {name}" + (f"  [expected: {EXPECTED_UNREACHABLE[name]}]"
                                         if name in EXPECTED_UNREACHABLE else ""))
+    lines.append(f"REFUSED (wrote under a guarded tree): {len(refused)}")
+    for row in refused:
+        for attempt in row["guarded_writes"]:
+            lines.append(f"    - {row['script']}: {attempt['suite']} {attempt['op']} "
+                         f"{attempt['path']} (mode {attempt['mode']})")
     unexpected = [n for n in both_false if n not in EXPECTED_UNREACHABLE]
     lines.append("")
-    lines.append("VERDICT: " + ("PASS — no script is blind on both axes" if not unexpected
-                                else f"REVIEW — {len(unexpected)} script(s) blind on both axes"))
+    if refused:
+        verdict = (f"REFUSED — {len(refused)} suite(s) tried to write a real artefact; a "
+                   "real-artefact case READS, never writes")
+    elif unexpected:
+        verdict = f"REVIEW — {len(unexpected)} script(s) blind on both axes"
+    else:
+        verdict = "PASS — no script is blind on both axes, no suite wrote a guarded tree"
+    lines.append("VERDICT: " + verdict)
     return "\n".join(lines)
 
 
@@ -389,8 +508,20 @@ def main() -> int:
     parser.add_argument("--workers", type=int, default=8)
     parser.add_argument("--timeout", type=int, default=600)
     parser.add_argument("--enforce", action="store_true",
-                        help="exit 1 when a script is false on both axes and not expected")
+                        help="exit 1 when a script is false on both axes and not expected, "
+                             "or when any suite tried to write under a guarded tree")
+    parser.add_argument("--guarded", nargs=argparse.REMAINDER, metavar="COMMAND",
+                        help="run COMMAND with writes under the guarded trees refused; exit "
+                             "1 and list the attempts if any were made, else COMMAND's status")
     args = parser.parse_args()
+
+    if args.guarded:
+        result = guarded_run(args.guarded, Path(args.root).resolve(), timeout=args.timeout)
+        sys.stdout.write(result["output"])
+        for attempt in result["writes"]:
+            print(f"GUARDED_WRITE_REFUSED {attempt['op']} {attempt['path']} "
+                  f"(mode {attempt['mode']})")
+        return 1 if result["refused"] else result["rc"]
 
     rows = survey(Path(args.root).resolve(), only=args.script, workers=args.workers,
                   timeout=args.timeout)
@@ -402,7 +533,8 @@ def main() -> int:
         unexpected = [r["script"] for r in rows
                       if not r["entry_point_called"] and r["real_artifact_case"] == "false"
                       and r["script"] not in EXPECTED_UNREACHABLE]
-        return 1 if unexpected else 0
+        refused = [r["script"] for r in rows if r.get("refused")]
+        return 1 if unexpected or refused else 0
     return 0
 
 
