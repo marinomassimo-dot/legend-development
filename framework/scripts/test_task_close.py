@@ -2,6 +2,7 @@
 """Exercise task closure on real Git repositories, including interrupted and unsafe cases."""
 from __future__ import annotations
 
+import subprocess
 import tempfile
 import unittest
 from pathlib import Path
@@ -11,6 +12,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 import task_close as tc
 from test_branch_hygiene import run, commit
+
+SCRIPT = Path(__file__).resolve().parent / "task_close.py"
+
+
+def run_cli(cwd: Path, *args: str) -> subprocess.CompletedProcess:
+    return subprocess.run([sys.executable, str(SCRIPT), *args], cwd=cwd,
+                          capture_output=True, text=True, timeout=120)
 
 
 class TaskClosure(unittest.TestCase):
@@ -160,6 +168,54 @@ class TaskClosure(unittest.TestCase):
             tc.close_task(self.wt, remove_worktree=True)
         self.assert_kept()
         self.assertEqual("task/test", run(["branch", "--show-current"], self.wt).strip())
+
+class TheCliIsDriven(unittest.TestCase):
+    """``main`` as a subprocess from the task worktree — what §21e tells an actor to run.
+
+    ``close_task`` was exercised in-process fourteen ways; the command line, its exit codes
+    and what it prints were certified by nothing (retrospective § 9.3).
+    """
+
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory(prefix="legend-close-cli-")
+        self.addCleanup(self.tmp.cleanup)
+        self.repo = Path(self.tmp.name) / "root"
+        self.repo.mkdir()
+        run(["init", "-q", "-b", "main"], self.repo)
+        run(["config", "user.name", "close-test"], self.repo)
+        run(["config", "user.email", "close@example.invalid"], self.repo)
+        commit(self.repo, "base", "base")
+        self.wt = Path(self.tmp.name) / "task space"
+        run(["worktree", "add", "-b", "task/test", str(self.wt)], self.repo)
+        commit(self.wt, "task", "completed task")
+        self.tip = run(["rev-parse", "HEAD"], self.wt).strip()
+
+    def test_dry_run_prints_the_sequence_and_changes_nothing(self):
+        main_before = run(["rev-parse", "main"], self.repo)
+        result = run_cli(self.wt, "--dry-run")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        lines = result.stdout.splitlines()
+        self.assertEqual(lines[-1], "DRY_RUN")
+        self.assertEqual(len(lines), 4, "three git commands, then the verdict")
+        self.assertTrue(all(line.startswith("git ") for line in lines[:3]), lines)
+        self.assertEqual(main_before, run(["rev-parse", "main"], self.repo))
+        self.assertEqual(self.tip, run(["rev-parse", "task/test"], self.repo).strip())
+
+    def test_closure_lands_and_says_task_closed(self):
+        result = run_cli(self.wt)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(result.stdout.splitlines()[-1], "TASK_CLOSED")
+        run(["merge-base", "--is-ancestor", self.tip, "main"], self.repo)
+        self.assertEqual("", run(["branch", "--list", "task/test"], self.repo).strip())
+        self.assertEqual("", run(["branch", "--show-current"], self.wt).strip())
+
+    def test_a_refusal_is_exit_2_with_the_reason_on_stderr(self):
+        result = run_cli(self.repo)
+        self.assertEqual(result.returncode, 2)
+        self.assertTrue(result.stderr.startswith("task_close: "), result.stderr)
+        self.assertEqual("", result.stdout)
+        self.assertEqual(self.tip, run(["rev-parse", "task/test"], self.repo).strip())
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
