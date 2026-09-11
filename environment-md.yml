@@ -9,3 +9,6 @@ dependencies:
   - openmm=8.1.1
   - pdbfixer=1.12
   - mdtraj=1.10.3
+  # PyMuPDF pin (HARNESS-ACQREC-001, 2026-09-11): 1.28.2 is what is installed on the host that
+  # received the repository; extraction receipts carry 1.26.5. See requirements-analysis.txt.
+  - pymupdf=1.28.2

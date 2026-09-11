@@ -77,6 +77,10 @@ state.tsv
 # Browser-automation session artefacts. Retrieval via a real browser (publisher
 # bot-blocks) drops page snapshots, console logs and network traces here. They
 # are transient, they record the URLs a session visited, and they have no place
-# in a public repository — the retrieval outcome belongs in
-# files/fulltext/_retrieval_manifest.jsonl and the handoff card instead.
+# in a public repository — the retrieval outcome belongs in the VERSIONED retrieval
+# manifest, disease-models/<disease>/research/retrieval_manifest.jsonl (tracked,
+# append-only; framework/scripts/reacquire.py), and the handoff card instead. Until
+# 2026-09-11 this comment promised files/fulltext/_retrieval_manifest.jsonl, which sits
+# under files/ (ignored at line 7) and was therefore lost by construction — the census of
+# 2026-09-09 (§ 2 P2) called that the root of the evidence-non-locality problem.
 .playwright-mcp/

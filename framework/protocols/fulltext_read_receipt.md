@@ -112,6 +112,102 @@ directory and must resolve the evidence there. Omitting `--artifact-workspace` p
 single-workspace fail-closed default; a symlink that escapes the selected workspace remains
 an error rather than a hidden bypass.
 
+### 🔴 Acquisition recipes — the derivation is versioned, the bytes are not
+
+`files/` is gitignored, so a fresh checkout holds none of the bytes its manifests
+fingerprint. Measured on 2026-09-10, the day after the repository changed hosts: 81
+manifests, 616 declared artefacts, **0 of 616 versioned, 398 absent, 0 digests drifted**.
+The digest half of the chain was in perfect health and the transport half did not exist:
+every verification of a prior reading required re-acquisition, and re-acquisition is the
+fragile thing — one paper's 19-tier cascade had to be reconstructed by hand.
+
+The repository had already solved the identical constraint one layer down.
+`regenerate_adjudications.py` publishes the **recipe** for a page crop — source digest, page,
+rectangle, dpi, result digest — and never the reproduction. Acquisitions carried a digest and
+no recipe. So every `source_artifacts[]` entry now takes an optional `acquisition_recipe`:
+
+```json
+"acquisition_recipe": {
+  "resolved_url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pmc&id=2832309",
+  "http_method": "GET",
+  "tier": "ncbi_efetch_pmc_xml",
+  "user_agent_policy": "none",
+  "acquired_on": "2026-09-09",
+  "derived": false
+}
+```
+
+and, for an artefact **derived** from another declared artefact (a `.txt` text layer, a
+rendered figure), the extractor **with its version**:
+
+```json
+"acquisition_recipe": {
+  "derived": true,
+  "derived_from": "files/fulltext/PMID42128308_Aqeilan2026.pdf",
+  "extractor": {"name": "PyMuPDF", "version": "1.26.5", "call": "page.get_text() default mode", "join": ""},
+  "acquired_on": "2026-09-09"
+}
+```
+
+The rules, each of which the validator (`deepdive_manifest.py`) enforces when the block is
+present:
+
+- **The User-Agent policy is part of the route.** The 2026-09-09 sweep measured PMC serving a
+  reCAPTCHA to browser-like agents and nothing to **no** agent; by 2026-09-10 the challenge
+  covered `/bin/` asset and `/pdf/` paths under every policy. `none`, `identified` or
+  `browser_like` — stated, so a replay sends what the acquisition sent.
+- **The extractor version travels with a derived artefact.** Receipts in this repository were
+  written under PyMuPDF **1.26.5**; the host that received the repository carries **1.28.2**,
+  pinned in `requirements-analysis.txt` since 2026-09-11. A replay that regenerates a
+  different digest under a different version is `EXTRACTOR_DRIFT`, naming both versions —
+  never `TAMPERED`.
+- **No email address rides in a recipe URL.** A URL carrying `@` is refused.
+- **`result_sha256`, if repeated, must equal the entry's `sha256`.** A recipe whose result
+  differs from the artefact's digest describes a different artefact.
+- **`{"no_recipe": "<reason>"}` is an honest block.** It says no route can be shown; it is still
+  counted as a gap, but a named one.
+
+**Absence is a `[RATCHET]` — a non-blocking category of its own, never a block, never a
+declared gap, and no historical manifest is rewritten** — the same ratchet as the optional
+`references` coverage key. 🔴 The distinction is load-bearing and was measured the hard way:
+the strict receipt writer refuses every entry of the validator's `incomplete` list by design
+("declared gaps block the append"), so the first version of these slots, which emitted their
+absence there, refused a `complete_fulltext_read` over every manifest minted before they
+existed and turned `test_legend_lint.py` red before it landed. The validator therefore
+returns ratchets through a separate optional sink; a consumer that does not ask sees
+nothing. `session_self_eval.py` sums each into one line (`[RATCHET] acquisition_recipe
+absent on N manifest(s)`) beside its sibling for `retraction_check.dependencies`, the
+dependency-integrity slot that a reading declares at reading time
+(`dependency_integrity.py screen --pmid <PMID> --manifest-block` emits it verbatim; the one
+field the tool refuses to fill, `citing_relation`, is the reading act). A present block that
+is malformed **does** block.
+
+**The retrieval outcome has a versioned home.** `.gitignore` once promised
+`files/fulltext/_retrieval_manifest.jsonl`, which sat under `files/` and was therefore lost by
+construction. It now lives at **`disease-models/<disease>/research/retrieval_manifest.jsonl`**,
+tracked, append-only, one JSON line per event — a back-filled recipe, a stated `NO_RECIPE`
+with its reason class, a replay with its verdict, a fresh acquisition — and it carries URLs,
+tiers, policies, digests, verdicts and dates, never a copyrighted byte.
+
+**`framework/scripts/reacquire.py` replays a recipe and diffs the digest.** Its verdicts are
+records that say what they did, as `screen_verdict.py` requires of a screen: `RECOVERED`;
+`EXTRACTOR_DRIFT` (derived, different version, both named); `DIGEST_DIFFERS_SAME_ROUTE` — a
+binary fetched by the same route came back different, which is **a finding about the
+publisher, not `TAMPERED` by default**; `DIGEST_DIFFERS_SAME_EXTRACTOR` (the recipe is
+underspecified, or the source is not the source); `FAILED_<cause>` with the cause named
+(`HTTP_403_CLOUDFLARE`, `RECAPTCHA`, `HTTP_404`, `SOURCE_ABSENT`, `EXTRACTOR_UNAVAILABLE`,
+…); `NO_RECIPE`. The predicted partial failures the census stated in advance — `33914858`
+behind Cloudflare, `20146584`'s figure assets behind a reCAPTCHA — are therefore measured,
+dated `FAILED` lines in the retrieval manifest rather than rediscoveries.
+
+**The back-fill is declaredly incomplete.** `reacquire.py backfill` writes a recipe only where
+an artefact's note, `route` or `extraction` field **shows** the route — an efetch call with
+its PMCID, a Europe PMC `fullTextXML` or `pdf=render` route with its PMCID, a quoted URL, a
+`pmc_pow_fetch.py` retrieval from PMC (route shown, URL form inferred and labelled so), a
+derived extraction whose call **and** join are stated. Everything else is `NO_RECIPE` with a
+reason class. A route the note does not show is not invented, and no manifest is edited: the
+back-fill lives entirely in the retrieval manifest.
+
 ### 🔴 A text layer is not its page
 
 **Seek XML/HTML PMC first, every time, and record its absence.** A PDF text layer is a

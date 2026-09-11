@@ -1,2 +1,8 @@
 # Optional dependencies for reproducible disease-model analysis scripts.
 numpy==2.0.2
+# PyMuPDF was declared in no requirements file while extraction receipts were written under
+# 1.26.5 and the host that received the repository on 2026-09-09 carries 1.28.2 (re-derived
+# with `import fitz` on 2026-09-11). A recipe replayed under a different MuPDF may not
+# reproduce a declared SHA-256; reacquire.py names that EXTRACTOR_DRIFT rather than TAMPERED.
+# Pinned to what is installed and measured here, not to the receipt-era version.
+PyMuPDF==1.28.2

@@ -114,6 +114,13 @@ previously working exploratory environment. It does not vendor these packages.
   <https://github.com/openmm/pdbfixer/blob/v1.12/LICENSE>
 - MDTraj 1.10.3 — LGPL-2.1-or-later, with separately licensed subcomponents:
   <https://github.com/mdtraj/mdtraj/blob/1.10.3/LICENSE>
+- PyMuPDF 1.28.2 (`requirements-analysis.txt` and the optional environment, pinned
+  2026-09-11) — AGPL-3.0-or-later, from Artifex Software, with a commercial licence
+  offered separately; MuPDF, the C library it binds, carries the same terms:
+  <https://github.com/pymupdf/PyMuPDF/blob/1.28.2/COPYING>. Used only as a local
+  extractor for text layers and page renders of lawfully held files; no PyMuPDF or MuPDF
+  code is vendored or redistributed here. Extraction receipts written before the pin name
+  1.26.5; `reacquire.py` names a digest that moves between the two `EXTRACTOR_DRIFT`.
 
 Users who materialize the optional environment receive the packages under
 their upstream terms and should retain the notices supplied by those packages.
