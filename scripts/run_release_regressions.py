@@ -80,6 +80,9 @@ PRIORITY_TESTS = (
     # its network routes are stubbed, because a regression that needs NCBI to be
     # up is a regression that will be disabled the first week it is not.
     "framework/scripts/test_lot_internal_edges.py",
+    # A number in an orchestration record sits beside its producer or is listed - the
+    # instrument for SPECIFICATION_NUMBER_PROVENANCE_GATE, after two quoted numbers in one day.
+    "framework/scripts/test_record_number_provenance.py",
     # The P7 event ledger, enrolled in the commit that builds it. It reuses the receipt
     # ledger's chain-and-lock pattern, so the two suites go red together if that pattern
     # is broken — which is the point of not having invented a second one.

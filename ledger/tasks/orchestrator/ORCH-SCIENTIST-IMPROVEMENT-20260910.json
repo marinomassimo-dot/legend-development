@@ -1,0 +1,89 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b per-wave keys",
+ "TASK_ID": "ORCH-SCIENTIST-IMPROVEMENT-20260910",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "operator",
+ "ACTOR_ID": "orchestrator",
+ "OBJECTIVE": "Restart from the problems the 2026-09-09 Aqeilan sweep exposed and improve the Scientists, using the saved census of comparable repositories; continue unattended for some hours and take every aspect as deep as it goes.",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-09-10",
+ "closed_on": "2026-09-11",
+ "dispatched": [
+  "HARNESS-SCREENS-001",
+  "HARNESS-VALIDATOR-001",
+  "HARNESS-DEPINTEG-001",
+  "HARNESS-ACQREC-001",
+  "HARNESS-HANDOFF-001",
+  "HARNESS-SELFTEST-001",
+  "MIRROR-EXPOST-20260911-001"
+ ],
+ "record": "disease-models/wwox/analysis/orchestration_reviews/2026-09-10.md",
+ "self_evaluation": "disease-models/wwox/research/session_evaluations/2026-09-11_orchestrator_scientist_improvement.md",
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "no live scientist/plan sessions exist; the laboratory's actors are subagents in one checkout",
+   "default_taken": "dispatch as background agents under ACTOR_ID plan/mirror with exclusive file ownership and a flock-guarded, path-scoped commit wrapper",
+   "why_safe": "§21e makes root and main writable by every actor; ownership by file plus a serialised commit reproduces the zero-collision division of the sweep",
+   "what_would_have_differed": "worktrees per actor would have forked the receipt ledger and required rechain"
+  },
+  {
+   "condition": "the retrospective's § 9 proposals name mechanisms that measured badly (prose grep 261/1458; citation-only edges 3 of 4)",
+   "default_taken": "measure first, ship the measured design, record the rejected one in the code",
+   "why_safe": "the gate is against the record's own numbers; the operator asked for depth, not fidelity to a draft",
+   "what_would_have_differed": "a detector with a 17.9 % false-positive rate nobody would read"
+  },
+  {
+   "condition": "changing Annex C.1 invalidates scientist checkpoints via the fingerprint",
+   "default_taken": "change it; no scientist was in flight",
+   "why_safe": "a review-ladder change SHOULD invalidate a resume; none existed to invalidate",
+   "what_would_have_differed": "nothing today; a live scientist would have been asked for state"
+  },
+  {
+   "condition": "a stricter first_read rule (refuse after any reading of the article) breaks four rechain fixtures",
+   "default_taken": "ship only the legacy case; measure the stricter rule (0 live violations) and record it as a separate decision",
+   "why_safe": "the reported defect is closed; the wider rule is free of history and can be adopted deliberately",
+   "what_would_have_differed": "seven red tests smuggled behind a bug fix"
+  },
+  {
+   "condition": "three streams killed by a rate limit with uncommitted work; then two more",
+   "default_taken": "resume by hand from transcripts, two at a time, with an A.7 instruction to re-read files from disk",
+   "why_safe": "durable state was intact; three at once is what the limit killed; the operator's own quota audit found native resume does not reach these sessions",
+   "what_would_have_differed": "re-dispatch from scratch would have re-done ~10 h of work"
+  },
+  {
+   "condition": "54 dossiers found overwritten with 'touched', culprit unknown",
+   "default_taken": "restore from HEAD after bounding the blast radius; stop the autopsy where a guard is cheaper; ship the guard; batteries under a lock; dirty tracked state before a commit is stop-and-report, never restore",
+   "why_safe": "HEAD held the readings; nothing unique was in the in-flight bytes; the guard names any repeat inside the battery",
+   "what_would_have_differed": "more forensics would not have found a literal that lived in a scratchpad JSON; the author found it"
+  },
+  {
+   "condition": "Mirror's four findings on the orchestrator's own tools",
+   "default_taken": "repair the same morning with the reviewer's fixture as the test; queue the design decisions with acceptance criteria",
+   "why_safe": "§21e: a Mirror finding is a new task; four were cheap and mine, four are validator/tracer design lines their owners should hold",
+   "what_would_have_differed": "a validator change made at the end of a long session, tested to match whatever it did"
+  },
+  {
+   "condition": "the operator halted a reading sweep over cost; scientific reading debt surfaced (13 papers, 6 claims, 4 .pptx, 3 unread primaries)",
+   "default_taken": "name the debt in the standing brief § 6 and the follow-up tasks; read nothing",
+   "why_safe": "reading is scientist work and was not the mandate; the debt is durable and findable",
+   "what_would_have_differed": "tokens spent on readings the operator had halted"
+  }
+ ],
+ "STOP_LOG": [],
+ "ATTRIBUTION_CENSUS": {
+  "incidents": 13,
+  "machine": 3,
+  "blind_auditor": 4,
+  "peer": 3,
+  "self": 3,
+  "severity_high": 6,
+  "severity_high_self": 1,
+  "undetected_known": 0
+ },
+ "referred_to_operator": [
+  "receipt-schema proposals §4.1, §4.1b, §4.3, §4.3b (framework/protocols/proposals/2026-09-09_receipt_schema_proposals.md)",
+  "BATCH_COMMIT to clear the paper-registry ratchet (test_batch_queue)",
+  "MF-7 perimeter line on HARNESS-QUOTA-RESUME-001"
+ ]
+}
