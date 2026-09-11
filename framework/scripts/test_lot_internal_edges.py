@@ -10,8 +10,10 @@ member whose reference list could not be screened and a member that cites nothin
 
 from __future__ import annotations
 
+import io
 import tempfile
 import unittest
+from contextlib import redirect_stdout
 from pathlib import Path
 
 import lot_internal_edges as tool
@@ -112,6 +114,36 @@ class LotEdges(unittest.TestCase):
 
     def test_the_modules_own_self_test_passes(self) -> None:
         self.assertEqual(0, tool.self_test())
+
+
+class TheRealDossiersAreScreened(unittest.TestCase):
+    """Two real dossiers as a lot, offline, through ``main`` — read and screened, unchanged."""
+
+    ROOT = Path(__file__).resolve().parents[2]
+
+    def test_a_lot_of_two_real_papers_is_screened_offline(self) -> None:
+        dossiers = sorted((self.ROOT / tool.DOSSIER_DIRS[0]).glob("PMID*.md"))
+        if len(dossiers) < 2:
+            self.skipTest(f"skipped: fewer than two dossiers under {tool.DOSSIER_DIRS[0]}")
+        pair = dossiers[:2]
+        before = [d.read_bytes() for d in pair]
+        pmids = [d.stem.removeprefix("PMID") for d in pair]
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            code = tool.main(["--offline", "--root", str(self.ROOT), *pmids])
+        out = buffer.getvalue()
+        self.assertEqual(code, 0, out)
+        self.assertRegex(out, r"^screened: lot=2 digest=[0-9a-f]{16} references_seen=\d+")
+        self.assertTrue("no internal edges found" in out or " -> " in out, out)
+        self.assertEqual([d.read_bytes() for d in pair], before, "the screen wrote a dossier")
+
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            code = tool.main(["--offline", "--root", str(self.ROOT), "--json", *pmids])
+        block = __import__("json").loads(buffer.getvalue())
+        self.assertEqual(code, 0)
+        self.assertEqual(block["screened"]["lot_size"], 2)
+        self.assertIn("internal_edges", block)
 
 
 if __name__ == "__main__":
