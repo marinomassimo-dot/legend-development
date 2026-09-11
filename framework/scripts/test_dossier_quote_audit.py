@@ -8,11 +8,26 @@ versus one line of it, certifying versus locating.
 from __future__ import annotations
 
 import json
+import re
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
 
 import dossier_quote_audit as dqa
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+SCRIPT = HERE / "dossier_quote_audit.py"
+SUMMARY = re.compile(r"^(\d+) quotation\(s\) across (\d+) dossier\(s\): (\d+) verbatim · "
+                     r"(\d+) stitched · (\d+) in another paper · (\d+) not found · "
+                     r"(\d+) undecidable$", re.M)
+
+
+def run_cli(*args: str, cwd: Path = ROOT) -> subprocess.CompletedProcess:
+    return subprocess.run([sys.executable, str(SCRIPT), *args], cwd=cwd,
+                          capture_output=True, text=True, timeout=600)
 
 PAPER = (
     "<article><body><p>Mutant rats had significantly increased concentrations of plasma "
@@ -148,6 +163,96 @@ class TheSearchMaySayWhereAndNeverVerified(unittest.TestCase):
         source = Path(dqa.__file__).read_text(encoding="utf-8")
         for forbidden in ("write_text(", "write_bytes(", "open(", "append_receipt"):
             self.assertNotIn(forbidden, source, f"this module must not {forbidden}")
+
+
+class TheCliIsDriven(unittest.TestCase):
+    """``main`` run as a process over a fixture root: the buckets it prints, and its totals.
+
+    Until 2026-09-10 nothing in this file entered ``main``; the buckets were tested through
+    ``audit()`` and the report a reader actually sees — the per-dossier line, the totals, the
+    NOTHING AUDITED sentinel — was certified by no case (retrospective § 9.3).
+    """
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        self.corpus = self.root / "files" / "fulltext"
+        self.corpus.mkdir(parents=True)
+        (self.corpus / "PMID11111111_Paper.xml").write_text(PAPER, encoding="utf-8")
+        (self.corpus / "PMID22222222_Other.xml").write_text(OTHER, encoding="utf-8")
+        self.dossiers = self.root / "disease-models/wwox/research/fulltext_dossiers"
+        self.dossiers.mkdir(parents=True)
+
+    def tearDown(self) -> None:
+        self.tmp.cleanup()
+
+    def test_every_bucket_reaches_the_report_with_its_own_label(self) -> None:
+        (self.dossiers / "PMID11111111.md").write_text(
+            "> The heterozygote is indistinguishable from the wild type on every measure.\n"
+            "\n"
+            "> Mutant rats had significantly increased concentrations … inorganic phosphate.\n"
+            "\n"
+            "> A sentence that lives only in the other paper and nowhere else at all.\n"
+            "\n"
+            "The reading calls this “a coined phrase that no paper anywhere contains”.\n",
+            encoding="utf-8")
+        result = run_cli("--root", str(self.root), "--corpus", str(self.corpus))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("PMID11111111.md", result.stdout)
+        self.assertRegex(result.stdout, r"4 quotation\(s\) ·\s+1 verbatim ·\s+1 stitched ·"
+                                        r"\s+1 elsewhere ·\s+1 not found")
+        self.assertIn("[stitched] Mutant rats", result.stdout)
+        self.assertIn("[elsewhere → PMID 22222222] A sentence that lives", result.stdout)
+        self.assertIn("[not found] a coined phrase", result.stdout)
+        match = SUMMARY.search(result.stdout)
+        self.assertIsNotNone(match, result.stdout)
+        self.assertEqual([int(g) for g in match.groups()], [4, 1, 1, 1, 1, 1, 0])
+        self.assertNotIn("NOTHING AUDITED", result.stdout)
+        self.assertIn("HOW TO READ THIS", result.stdout)
+
+    def test_an_unreadable_paper_is_undecidable_in_the_report(self) -> None:
+        (self.dossiers / "PMID99999999.md").write_text(
+            "> A quotation of a paper this checkout does not hold anywhere.\n", encoding="utf-8")
+        result = run_cli("--root", str(self.root), "--corpus", str(self.corpus))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("no readable text surface for this paper here", result.stdout)
+        match = SUMMARY.search(result.stdout)
+        self.assertEqual([int(g) for g in match.groups()], [1, 1, 0, 0, 0, 0, 1])
+
+    def test_no_dossiers_is_announced_not_reported_as_clean(self) -> None:
+        result = run_cli("--root", str(self.root), "--corpus", str(self.corpus))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("NOTHING AUDITED", result.stdout)
+        self.assertEqual([int(g) for g in SUMMARY.search(result.stdout).groups()],
+                         [0, 0, 0, 0, 0, 0, 0])
+
+
+class TheRealDossiersAreAudited(unittest.TestCase):
+    """The tool over this checkout's own dossiers — what a session actually runs.
+
+    The dossiers are tracked; the text surfaces under ``files/`` mostly are not, so on a host
+    without them every quotation is ``undecidable`` and that is the correct answer. What this
+    case pins is that the corpus-wide run completes, reports every dossier, and writes nothing.
+    """
+
+    def test_the_corpus_wide_run_reports_every_dossier_and_writes_nothing(self) -> None:
+        dossiers = ROOT / "disease-models/wwox/research/fulltext_dossiers"
+        named = sorted(p for p in dossiers.glob("PMID*.md")) if dossiers.is_dir() else []
+        if not named:
+            self.skipTest(f"skipped: no dossiers under {dossiers} on this host")
+        before = {p: p.read_bytes() for p in named}
+        result = run_cli("--root", str(ROOT))
+        self.assertEqual(result.returncode, 0, result.stderr[-2000:])
+        match = SUMMARY.search(result.stdout)
+        self.assertIsNotNone(match, result.stdout[-2000:])
+        total, dossier_count = int(match.group(1)), int(match.group(2))
+        self.assertEqual(dossier_count, len(named),
+                         "every PMID-named dossier must appear in the totals")
+        self.assertGreater(total, 0, "the real dossiers quote their papers")
+        for path in named:
+            self.assertIn(path.name, result.stdout)
+        self.assertEqual({p: p.read_bytes() for p in named}, before,
+                         "the audit must never write a dossier")
 
 
 if __name__ == "__main__":
