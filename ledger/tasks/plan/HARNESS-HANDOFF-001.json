@@ -47,7 +47,13 @@
     "environment_dependent": true,
     "variable": "init.defaultBranch, not the git version (2.43.0 here, 2.50.1 on the host that wrote the suite; both default git init to master)"
   },
-  "COMMITS": [],
+  "COMMITS": [
+    {
+      "sha": "6c8ff90f5d610756775a5430e87777202af1ce1d",
+      "what": "the repair, the fixture pin, protocol § 5.2 + limitation 10, the finding's Resolution, this record",
+      "landed_on": "main, from the root checkout, via scripts/legend_commit.sh"
+    }
+  ],
   "MUTATION_TESTING": {
     "rule_applied": "each mutation applied to a scratch copy of both files, the suite run, the failing case recorded, the copy discarded",
     "matrix": [
@@ -110,12 +116,12 @@
       "reason_class": "2 — no safe default, by the coordinator's rule 2 of 2026-09-11 (a change under disease-models/ before a commit: stop, do not restore, report)",
       "what_was_asked": "clearance to run scripts/legend_commit.sh on the five owned files while `git status --short disease-models/` prints `?? disease-models/wwox/research/retrieval_manifest.jsonl`",
       "evidence": "untracked, 651 lines, created 06:09:19 UTC — 13 s after my locked battery ended; the versioned home hard-coded at framework/scripts/reacquire.py:102 (untracked peer tool, HARNESS-ACQREC-001); test_reacquire.py is not in the runner's tuple, so my battery did not run it",
-      "time_waited": "pending",
-      "outcome": "pending — the commit is prepared and not made",
+      "time_waited": "one coordinator round-trip",
+      "outcome": "coordinator YES: the untracked file was HARNESS-ACQREC-001's reacquire.py manifest; rule 2 narrowed to tracked modifications ( M / M  /  D); a `??` line is report-and-proceed from now on. Committed as 6c8ff90.",
       "yes_no_question": "May a commit path-scoped to owned files proceed when the only disease-models/ change is an UNTRACKED file created by an identified peer tool after the actor's battery? If yes: rule 2 narrows to tracked modifications (` M`/` D`), and a `??` line becomes a report-and-proceed default."
     }
   ],
-  "_stop_log_note": "One class-2 stop, imposed by the coordinator's rule 2 after the 2026-09-10 dossier incident; no class-1 stop (no push, no history rewrite, no deletion, no spend, no private-data exposure, no BATCH_COMMIT, no change to §21c/d/e).",
+  "_stop_log_note": "One class-2 stop, imposed by the coordinator's rule 2 after the 2026-09-10 dossier incident; no class-1 stop (no push, no history rewrite, no deletion, no spend, no private-data exposure, no BATCH_COMMIT, no change to §21c/d/e). The coordinator's YES retires the stop for untracked files; recorded as a decision in the incident finding.",
   "PEER_FINDINGS_REPORTED_NOT_FIXED": [
     {
       "file": "scripts/test_locator_obligation_reaches_every_route.py",
