@@ -75,6 +75,70 @@ Recorded here rather than inside the historical bytes:
 These are the operator's three corrections. Where the two differ, the FROZEN body and annexes
 A–J prevail exclusively.
 
+
+## The Scientist-development ledger — `sviluppo_lettori.md`
+
+**Archived 2026-09-11**, on the operator's instruction, as the second design record in this
+directory. Same classification as the first: **non-normative, binding on no actor.** An actor
+that finds a rule here and not in the FROZEN body, an annex, `LEGEND_CORE.md` or
+`scientist_standing_brief.md` is reading a hypothesis, not law.
+
+```
+SHA-256 (source, measured before copy)   14d0b82bbf4f879eff847e4b4c2a92aa969b57159f14f2fa915dfd7741751410
+SHA-256 (archived, measured after copy)  14d0b82bbf4f879eff847e4b4c2a92aa969b57159f14f2fa915dfd7741751410
+BYTE_IDENTITY                            PASS
+bytes / lines                            282,297 / 10,612
+```
+
+**It carries no added header**, for the reason stated above: a design record annotated inside its
+own body is no longer the document that was written. The file's name is the one the document gives
+itself in its first line; the working copy carried the last-reviewed repository in its filename
+(`…_TOOLUNIVERSE`), and that suffix is deliberately not archived — the ledger is cumulative and its
+name must not move with every review.
+
+### What it is
+
+A cumulative ledger of **eighteen Tier-1 repository reviews** — Robin, AutoScientists, DisMech,
+Gemma Curation Agents, CORAL, Paperclip, ATHENA, ARIS, Medea, ARA, Scholar Loop, ResearchOS,
+llm4xray, AI-Scientist-v2, OpenScientist, BioDSA/DeepEvidence, Autoresearch, ToolUniverse — each
+mined for what it says about how LEGEND's **Scientists** should read, extract, verify and remember.
+Per review: new patterns, patterns strengthened, patterns weakened, new specialist roles, new
+deterministic-software candidates, scaling / review / provenance / context implications, changes to
+the provisional design, and new unresolved questions. Every claim carries a state from its own
+vocabulary — `EMERGING`, `STRONGER`, `WEAKER`, `UNRESOLVED`, `BENCHMARK`, `REJECT`,
+`ADOPT CANDIDATE` — and a cumulative pattern ledger is re-tabled after each review without deleting
+the previous state.
+
+**It is not a plan and it is not a decision.** Its own § 18 fixes the update protocol and its own
+closing sections repeat that final adoption stays *"surgical: maximum gain, minimum harness"*.
+
+### Why it is worth a Harness Engineer's time
+
+It is the clearest existing statement of the boundary this repository keeps rediscovering the hard
+way: **what must be deterministic software and what must stay scientific judgment.** Several of its
+strongest convergences name defects LEGEND has already paid for — corpus completeness that no
+reviewed repository solves, `citation exists ≠ citation supports`, `runtime success ≠ scientific
+completeness`, validator failure that must never become approval, retrieval failure that must never
+become negative evidence, and the rule that a producer may not self-certify its own result. Others
+are proposals LEGEND has not tested: a fungible `ScientistPool(N)` with atomic paper claiming, a
+capability plane with progressive disclosure, breadth/depth as task modes, fail-closed
+`INCONCLUSIVE`, and a reviewer that may downgrade but never upgrade on the same evidence.
+
+Read it beside — never instead of — the measured record of how the Scientists actually performed:
+[`../../disease-models/wwox/analysis/orchestration_reviews/2026-09-09_actor_retrospective.md`](../../disease-models/wwox/analysis/orchestration_reviews/2026-09-09_actor_retrospective.md)
+and
+[`../../disease-models/wwox/analysis/orchestration_reviews/2026-09-11_scientist_due_diligence_as_is.md`](../../disease-models/wwox/analysis/orchestration_reviews/2026-09-11_scientist_due_diligence_as_is.md).
+Where a pattern here and a measurement there disagree, the measurement is the evidence and the
+pattern is the hypothesis.
+
+### How to extend it
+
+Append, never overwrite: the document's § 18 gives the per-review template and the state
+vocabulary, and requires a contradicted conclusion to be recorded as
+`Previous state / New evidence / Updated state / Reason` rather than silently replaced. A future
+review lands as a new section plus a re-tabled cumulative ledger, in this same file, keeping the
+byte-faithful history of what was already concluded.
+
 ## Present contents
 
 - [`prior_art_review_v3.1.md`](prior_art_review_v3.1.md) — the archived design record.
@@ -82,3 +146,5 @@ A–J prevail exclusively.
   what source, what it refused to compose, and the session learning of each step.
 - [`claude_md_migration_map.md`](claude_md_migration_map.md) — the rule-by-rule evidence that the
   root `CLAUDE.md` became a router without losing law.
+- [`sviluppo_lettori.md`](sviluppo_lettori.md) — the cumulative Scientist-development ledger:
+  eighteen Tier-1 repository reviews, their pattern states and the open questions they leave.

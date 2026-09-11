@@ -80,6 +80,17 @@ another actor's scientific work.
 | Monday | `python3 framework/scripts/branch_hygiene.py` | branches landed or retired; the report's table pasted into the Session Learning Review |
 | Any day | a harness change decided by the operator, the Orchestrator or a Mirror finding | implemented and landed at T0 |
 
+**Standing reading, not a weekly task.**
+[`governance/design_records/sviluppo_lettori.md`](../governance/design_records/sviluppo_lettori.md)
+is the cumulative Scientist-development ledger: eighteen Tier-1 repository reviews, each mined for
+what it says about how the Scientists should read, verify and remember, with a per-pattern state
+(`EMERGING` / `STRONGER` / `WEAKER` / `UNRESOLVED` / `BENCHMARK` / `REJECT` / `ADOPT CANDIDATE`).
+It is a **design record: non-normative, binding on no actor**, and several of its conclusions are
+proposals LEGEND has never measured. Use it as a source of candidates and as a check on a proposed
+design, never as authority; where it and a measured LEGEND record disagree, the measurement wins.
+Its classification and provenance are in
+[`governance/design_records/README.md`](../governance/design_records/README.md).
+
 ## Declared capabilities
 
 | Capability | Verified by | Status |
