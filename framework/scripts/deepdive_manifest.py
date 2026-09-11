@@ -26,6 +26,8 @@ evidence and resolved identifiers are harder to fabricate than an unchecked chec
 """
 from __future__ import annotations
 
+import datetime
+
 import argparse
 import hashlib
 import html
@@ -1165,6 +1167,12 @@ def external_provenance_defect(value: Any) -> str | None:
         return "it names no command or index that produced the value"
     if not ISO_DATE_RE.fullmatch(date):
         return "it names no ISO date (YYYY-MM-DD) on which the value was produced"
+    # Shape is not the calendar: `2026-13-45` matched the regex and passed until Mirror
+    # REV-EXPOST-20260911-001 F6 (task MF-5). A date nobody can re-run a command on is no date.
+    try:
+        datetime.date.fromisoformat(date)
+    except ValueError:
+        return f"its date {date} is not on the calendar"
     return None
 
 

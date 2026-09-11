@@ -450,12 +450,18 @@ def main() -> int:
                                   "flags": [], "declared": [], "article_type": None,
                                   "measured": {}}
 
+    # 🔴 EXIT CODE FOLLOWS THE VERDICT (Mirror REV-EXPOST-20260911-001 F6, task MF-6). Until
+    # 2026-09-11 a zero-length artifact produced an INSUFFICIENT_DATA record and exit 0, so a
+    # caller reading the status — a shell `&&`, a harness step — read a pass over nothing
+    # screened. The record was already honest; the process status was not. Now: 0 only when
+    # something was screened, 2 when the verdict is uninformative, matching the other screens.
+    status = 2 if verdict.is_insufficient else 0
     if a.json:
         record = verdict.as_dict()
         record["genre_verdict"] = result.get("verdict")
         record["result"] = result
         print(json.dumps(record, indent=1, ensure_ascii=False))
-        return 0
+        return status
     print(verdict.render())
     print(f"VERDICT: {result['verdict']}")
     print(f"  declared publication types : {result['declared'] or '(none given)'}")
@@ -470,7 +476,7 @@ def main() -> int:
         print(f"  flag: {f}")
     print("  NOTE: this tool reports DISAGREEMENT between a label and the deposit's own "
           "structure. It never determines genre, and a verdict is a reason to look, not a finding.")
-    return 0
+    return status
 
 
 if __name__ == "__main__":

@@ -1703,6 +1703,19 @@ class IdentifiersAndCountsMustComeFromTheArtefact(unittest.TestCase):
                                   require_current_schema=True, warnings=warnings)
         return errors, warnings
 
+    def test_a_declared_date_off_the_calendar_is_a_defective_declaration(self) -> None:
+        """Mirror REV-EXPOST-20260911-001 F6 / MF-5: `2026-13-45` matched the shape and passed."""
+        self.assertIsNone(gate.external_provenance_defect(
+            {"source": "PubMed esearch, run this session", "date": "2026-09-11"}))
+        defect = gate.external_provenance_defect(
+            {"source": "PubMed esearch, run this session", "date": "2026-13-45"})
+        self.assertIsNotNone(defect)
+        self.assertIn("calendar", defect)
+        _errors, warnings = self._run(
+            "The upstream work is 29581896 by the same group.",
+            declaration={"source": "PubMed esearch, run this session", "date": "2026-13-45"})
+        self.assertTrue([w for w in warnings if "29581896" in w and "calendar" in w], warnings)
+
     def test_an_undeclared_identifier_warns(self) -> None:
         _errors, warnings = self._run("The upstream work is 29581896 by the same group.")
         self.assertTrue([w for w in warnings if "29581896" in w and "undeclared" in w],

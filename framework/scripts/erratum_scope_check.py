@@ -518,6 +518,17 @@ def main() -> int:
           "(of which the erratum question was never raised in the reading: "
           f"{sum(1 for v in verdicts if v.evidence.get('status') == 'NOT_MENTIONED')})")
 
+    # 🔴 NOTHING EXAMINED IS NOT A REPORT (Mirror REV-EXPOST-20260911-001 F6, task MF-6).
+    # `--pmid <absent>` used to print `examined: 0 … VERDICT: REPORTED` and exit 0 — a caller
+    # reading the status read a pass over a paper this tool never opened. SCOPE_UNDECLARED on
+    # an examined manifest still exits 0 (a reading debt, not a defect); a run that matched no
+    # manifest at all is INSUFFICIENT_DATA at the corpus level and exits 2, naming what was
+    # asked for, so the two silences cannot be confused.
+    if not verdicts:
+        asked = f"PMID {', '.join(args.pmid)}" if args.pmid else f"any manifest under {pattern}"
+        print(f"VERDICT: INSUFFICIENT_DATA — screened nothing; missing={asked}. No manifest "
+              "matched, so nothing about an erratum was examined and nothing is clean.")
+        return 2
     if args.fail_on_review and counts.get("REVIEW_REQUIRED"):
         print("VERDICT: REVIEW_REQUIRED — a locator stands on a corrected panel; say in writing "
               "which version it was read from.")
