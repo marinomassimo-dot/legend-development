@@ -104,6 +104,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import trace_claim_foundation as tcf  # noqa: E402 - shares the registry parsing
+import derived_inputs  # noqa: E402
 
 # The fields this tool is allowed to read from a claim record. `trace_claim_foundation`
 # keeps its own, shorter list and audits itself against it; widening that constant to serve
@@ -1309,9 +1310,23 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--export", help="write the JSONL export to this path")
     parser.add_argument("--verify", action="store_true",
                         help="re-derive and compare against --out / --export; exit 1 on drift")
+    derived_inputs.add_argument(parser)
     args = parser.parse_args(argv)
 
     root = Path(args.root).resolve()
+    if (args.out or args.export) and not args.verify:
+        # 2026-09-09 C22 happened HERE: the export and inventory were regenerated mid-wave
+        # over two peers' uncommitted manifests. The manifests and registries are the inputs;
+        # checked before assembly, so a peer's half-written manifest refuses rather than crashes.
+        state = derived_inputs.input_state(
+            root, [root / "disease-models" / args.disease / "registries",
+                   root / "disease-models" / args.disease / "research" / "deepdive_manifests"],
+            exclude=[root / p for p in (args.out, args.export) if p])
+        refused = derived_inputs.refuse_if_dirty(
+            state, reason=args.inputs_dirty_because,
+            surface=" / ".join(p for p in (args.out, args.export) if p))
+        if refused is not None:
+            return refused
     graph = Pathograph(root, args.disease).assemble()
     command = regeneration_command(args.disease, args.out, args.export)
     markdown = render_markdown(graph, command)

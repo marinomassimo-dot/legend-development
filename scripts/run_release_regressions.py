@@ -92,6 +92,9 @@ PRIORITY_TESTS = (
     # Two screens exited 0 over nothing screened (Mirror REV-EXPOST-20260911-001 F6, MF-6);
     # this suite drives both through the real subprocess and reads the exit code a gate reads.
     "framework/scripts/test_screen_exit_codes.py",
+    # Derived surfaces bind to committed inputs or refuse (2026-09-09 C22): the guard and the
+    # generator entry point that carries it, in a throwaway git repository.
+    "framework/scripts/test_derived_inputs.py",
     "framework/scripts/test_dependency_integrity.py",
     "framework/scripts/test_benchmark_input_surface.py",
     "framework/scripts/test_regenerate_adjudications.py",

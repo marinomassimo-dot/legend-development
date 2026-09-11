@@ -182,14 +182,25 @@ snapshot-protected window, so that a failure to regenerate aborts the batch like
 propagation failure.
 
 ```bash
+REASON="BATCH_COMMIT phase 4.7: the dirty registries are this batch's own edits and land in the same commit as the surface"
 python3 framework/scripts/coverage_report.py --disease wwox \
-    --out disease-models/wwox/registries/coverage_report.md
+    --out disease-models/wwox/registries/coverage_report.md --inputs-dirty-because "$REASON"
 python3 framework/scripts/batch_queue.py --disease wwox \
-    --out disease-models/wwox/registries/batch_queue.md
+    --out disease-models/wwox/registries/batch_queue.md --inputs-dirty-because "$REASON"
 python3 framework/scripts/pathograph.py --disease wwox \
     --out disease-models/wwox/analysis/pathograph_inventory.md \
-    --export disease-models/wwox/analysis/data/pathograph_export.jsonl
+    --export disease-models/wwox/analysis/data/pathograph_export.jsonl --inputs-dirty-because "$REASON"
 ```
+
+🔴 **Why the reason is passed, and why only here.** Since 2026-09-11 every generator refuses to
+write a derived surface while one of its inputs is uncommitted (`derived_inputs.py`): on
+2026-09-09 a mid-wave regeneration baked two peers' uncommitted manifests into the shared
+surfaces (retrospective C22), and the only thing that caught it was the actor's attention. Inside
+this phase the dirty inputs are the batch's own propagation and are committed with the surface,
+so the reason is stated on the command line where a transcript reader sees it. Outside a batch
+commit, a refusal means exactly what it says: **someone's work is in flight — wait, or name it.**
+Before passing the reason here, `git status --porcelain disease-models/wwox/research/` must be
+empty: a manifest in flight is not this batch's edit, and the reason would be false.
 
 🔴 **Why this is a phase and not a reminder.** `coverage_report.md` declares itself generated
 and a regression re-derives it and fails when it has drifted. Until this step existed, that

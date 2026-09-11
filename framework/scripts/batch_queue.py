@@ -45,6 +45,7 @@ sys.path.insert(
 )
 import study_dedup_triage as triage  # noqa: E402
 import fulltext_receipts as receipts  # noqa: E402
+import derived_inputs  # noqa: E402
 import growth_anchors  # noqa: E402 - the single definition of a canonical record heading
 
 # What the reader is actually asking: "which of these has nobody processed yet?"
@@ -823,6 +824,7 @@ def main() -> int:
     parser.add_argument("--out", default="")
     parser.add_argument("--json", action="store_true")
     parser.add_argument("--check", default="")
+    derived_inputs.add_argument(parser)
     parser.add_argument(
         "--limit",
         type=int,
@@ -830,6 +832,20 @@ def main() -> int:
         help="maximum outstanding rows in Markdown; 0 (default) means the complete queue",
     )
     args = parser.parse_args()
+
+    if args.out and not (args.json or args.check):
+        # 2026-09-09 C22: a mid-wave regeneration baked in two peers' uncommitted manifests.
+        # The registries (and the receipt ledger inside them) are this surface's inputs; a
+        # dirty one refuses the write — before anything is read, so the refusal does not
+        # depend on the dirty input being parseable — unless the caller says why it is safe.
+        root = Path(args.root)
+        state = derived_inputs.input_state(
+            root, [root / "disease-models" / args.disease / "registries"],
+            exclude=[Path(args.out)])
+        refused = derived_inputs.refuse_if_dirty(state, reason=args.inputs_dirty_because,
+                                                 surface=args.out)
+        if refused is not None:
+            return refused
 
     report = build(Path(args.root), args.disease)
 

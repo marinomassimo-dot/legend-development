@@ -41,6 +41,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import fulltext_receipts as receipts  # noqa: E402
+import derived_inputs  # noqa: E402
 
 # How coverage states combine when two readings of one paper are summed. Higher wins, and the
 # order is what a reader would ask for: an image inspected beats a caption skimmed, and both
@@ -185,7 +186,18 @@ def main() -> int:
     parser.add_argument("--check", default="",
                         help="compare a committed page against a fresh derivation; "
                              "exit non-zero on drift and write nothing")
+    derived_inputs.add_argument(parser)
     args = parser.parse_args()
+    if args.out and not args.check:
+        # 2026-09-09 C22: the ledger is this page's only input; an uncommitted ledger is a
+        # peer's receipt in flight until proven otherwise. Checked before the ledger is read.
+        root = Path(args.root).resolve()
+        state = derived_inputs.input_state(
+            root, [receipts.default_ledger_path(root, args.disease)], exclude=[Path(args.out)])
+        refused = derived_inputs.refuse_if_dirty(state, reason=args.inputs_dirty_because,
+                                                 surface=args.out)
+        if refused is not None:
+            return refused
     page = build(Path(args.root).resolve(), args.disease)
     if args.check:
         committed = Path(args.check)

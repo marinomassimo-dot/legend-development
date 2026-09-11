@@ -37,6 +37,7 @@ from collections import Counter
 from pathlib import Path
 
 import fulltext_receipts as receipts
+import derived_inputs  # noqa: E402
 import growth_anchors
 
 # The record conventions are defined once, in `growth_anchors.py`, and imported — never
@@ -389,7 +390,20 @@ def main() -> int:
     parser.add_argument("--out", default="")
     parser.add_argument("--json", action="store_true")
     parser.add_argument("--check", default="", help="compare against an existing report and fail on drift")
+    derived_inputs.add_argument(parser)
     args = parser.parse_args()
+
+    if args.out and not (args.json or args.check):
+        # 2026-09-09 C22: derived surfaces bind to committed inputs, or say why not — checked
+        # before anything is read, so the refusal does not depend on parseability.
+        root = Path(args.root)
+        state = derived_inputs.input_state(
+            root, [root / "disease-models" / args.disease / "registries"],
+            exclude=[Path(args.out)])
+        refused = derived_inputs.refuse_if_dirty(state, reason=args.inputs_dirty_because,
+                                                 surface=args.out)
+        if refused is not None:
+            return refused
 
     report = build(Path(args.root), args.disease)
 
