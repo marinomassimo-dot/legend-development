@@ -1144,6 +1144,76 @@ COUNT_CLAIM_RE = re.compile(
 )
 
 
+# --- contradicting a persisted locator is its own act (Annex C.1, fourth R4 trigger) --------
+#
+# 🔴 THE NEAR-ERROR THIS GUARDS. On 2026-09-09 a reader working from a 667 px rendering began
+# drafting a correction to a persisted locator that was exactly right (retrospective § 2.1); it
+# was caught by the reader alone. Mirror REV-EXPOST-20260911-001 F2 then showed the gate this
+# repository claimed for the act did not exist: `entries[0].proposition` reversed in place and
+# `contradicts_locator: "yes"` (a string) passed --verify-artifacts --require-current-schema
+# with 0 gaps, because this validator did not know the field. Now it does. A declaration is an
+# object naming the prior manifest, its entry (or receipt) and what changed; a declared
+# contradiction whose blind audit has not happened is a [DECLARED GAP] that blocks a complete
+# receipt — that is the R4 floor, and a floor the writer does not enforce is prose. What this
+# cannot see: a reader who overwrites a locator and declares nothing. That shape is a diff
+# against history, and lives in `locator_contradiction_audit.py --history` / `--working-tree`.
+CONTRADICTION_KEYS = ("manifest", "what_changed")
+CONTRADICTION_AUDIT_VERDICTS = {"CONFIRMED", "OVERSHOOT", "UNDERSHOOT", "UNSUPPORTED",
+                                "CORRECTED", "WITHDRAWN"}
+
+
+def contradiction_audit_is_structured(audit: Any) -> bool:
+    """The same test `locator_contradiction_audit._entry_audit_evidence` applies: an auditor
+    count above zero, or a non-empty verdict list. One definition, imported nowhere twice."""
+    if not isinstance(audit, dict):
+        return False
+    auditors = audit.get("auditors")
+    verdicts = audit.get("verdicts")
+    return (isinstance(auditors, int) and not isinstance(auditors, bool) and auditors > 0) \
+        or (isinstance(verdicts, list) and bool(verdicts))
+
+
+def _contradiction_errors(entry: dict, position: int, root: Path | None,
+                          incomplete: list[str]) -> list[str]:
+    declared = entry.get("contradicts_locator")
+    if declared is None:
+        return []
+    where = f"verbatim_locators.entries[{position}].contradicts_locator"
+    if not isinstance(declared, dict):
+        return [f"{where}: must be an object naming the prior locator — {{manifest, entry | "
+                f"receipt, what_changed, audit}} — not {type(declared).__name__} "
+                f"{str(declared)[:40]!r}. A contradiction nobody can point at is not declared"]
+    errors: list[str] = []
+    for key in CONTRADICTION_KEYS:
+        if not str(declared.get(key) or "").strip():
+            errors.append(f"{where}.{key}: required")
+    has_entry = isinstance(declared.get("entry"), int) and not isinstance(declared.get("entry"), bool)
+    has_receipt = bool(str(declared.get("receipt") or "").strip())
+    if not (has_entry or has_receipt):
+        errors.append(f"{where}: name the prior locator as `entry` (int index) or `receipt` (FTR-…)")
+    if len(str(declared.get("what_changed") or "")) < MIN_REASON_CHARS and "what_changed" in declared:
+        errors.append(f"{where}.what_changed: say what changed, in a sentence")
+    prior = str(declared.get("manifest") or "")
+    if root is not None and prior:
+        prior_path = root / prior
+        if not prior_path.is_file():
+            errors.append(f"{where}.manifest: {prior} is not a file under the workspace")
+        elif has_entry:
+            try:
+                prior_entries = (json.loads(prior_path.read_text(encoding="utf-8"))
+                                 .get("verbatim_locators") or {}).get("entries") or []
+            except (OSError, ValueError, AttributeError):
+                prior_entries = None
+            if prior_entries is not None and not 0 <= declared["entry"] < len(prior_entries):
+                errors.append(f"{where}.entry: {prior} has no entries[{declared['entry']}]")
+    if not errors and not contradiction_audit_is_structured(declared.get("audit")):
+        incomplete.append(
+            f"[DECLARED GAP] {where}: the contradicted triple has no blind audit yet "
+            "(`audit: {auditors, verdicts}`) — the fourth R4 trigger; run legend-locator-audit "
+            "on the contradicted triples before this reading can be complete")
+    return errors
+
+
 def external_provenance_defect(value: Any) -> str | None:
     """What an `external_provenance` declaration is missing, or None when it is complete.
 
@@ -2000,6 +2070,8 @@ def validate(
                         errors.append(
                             f"verbatim_locators.entries[{position}].{field}: only a "
                             f"`{owner}` locator may carry one")
+
+                errors.extend(_contradiction_errors(entry, position, root, incomplete))
 
                 artifact_values = entry.get("artifact")
                 if isinstance(artifact_values, str):

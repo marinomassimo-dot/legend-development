@@ -2553,5 +2553,72 @@ class TheAcquisitionRecipeIsPublishedWhereTheBytesCannotBe(unittest.TestCase):
         self.assertNotEqual(gate.validate(manifest)[0], [])
 
 
+class ContradictingAPersistedLocatorIsDeclaredAndAudited(unittest.TestCase):
+    """Mirror REV-EXPOST-20260911-001 F2 (MF-3a): the fourth R4 trigger had no gate.
+
+    The fixture is the reviewer's: a reversed proposition and `contradicts_locator: "yes"`
+    passed the strict validator with 0 gaps because the validator did not know the field.
+    """
+
+    PRIOR = "disease-models/wwox/research/deepdive_manifests/PMID15070730.json"
+
+    def _manifest(self, declaration):
+        manifest = minimal()
+        entry = manifest["verbatim_locators"]["entries"][0]
+        entry["proposition"] = "NOT: " + entry["proposition"]
+        entry["contradicts_locator"] = declaration
+        return manifest
+
+    def test_a_string_declaration_is_a_block(self) -> None:
+        errors, _ = gate.validate(self._manifest("yes"))
+        self.assertTrue([e for e in errors if "contradicts_locator" in e and "object" in e], errors)
+
+    def test_a_declaration_without_a_pointer_is_a_block(self) -> None:
+        errors, _ = gate.validate(self._manifest({"manifest": self.PRIOR,
+                                                  "what_changed": "the caption order was reversed"}))
+        self.assertTrue([e for e in errors if "`entry`" in e or "receipt" in e], errors)
+
+    def test_a_declared_contradiction_without_an_audit_is_a_declared_gap(self) -> None:
+        """The R4 floor: declared, well-formed, not yet audited blind -> not a complete read."""
+        errors, incomplete = gate.validate(self._manifest(
+            {"manifest": self.PRIOR, "entry": 3, "what_changed": "the caption order was reversed"}))
+        self.assertEqual([], errors)
+        self.assertTrue([g for g in incomplete if "DECLARED GAP" in g and "audit" in g], incomplete)
+
+    def test_an_audited_declaration_is_complete(self) -> None:
+        errors, incomplete = gate.validate(self._manifest(
+            {"manifest": self.PRIOR, "entry": 3, "what_changed": "the caption order was reversed",
+             "audit": {"auditors": 2, "verdicts": ["CONFIRMED", "OVERSHOOT"]}}))
+        self.assertEqual(([], []), (errors, incomplete))
+
+    def test_a_negated_or_empty_audit_object_does_not_count(self) -> None:
+        for audit in ({}, {"auditors": 0}, {"verdicts": []}, {"auditors": True}, "pending"):
+            _errors, incomplete = gate.validate(self._manifest(
+                {"manifest": self.PRIOR, "entry": 3, "what_changed": "the caption order was reversed",
+                 "audit": audit}))
+            self.assertTrue(incomplete, f"audit={audit!r} was credited")
+
+    def test_with_a_workspace_the_prior_locator_must_exist(self) -> None:
+        tmp = TemporaryDirectory()
+        self.addCleanup(tmp.cleanup)
+        root = Path(tmp.name)
+        prior = root / self.PRIOR
+        prior.parent.mkdir(parents=True)
+        prior.write_text(json.dumps({"verbatim_locators": {"entries": [{}, {}]}}), encoding="utf-8")
+        errors, _ = gate.validate(self._manifest(
+            {"manifest": self.PRIOR, "entry": 7, "what_changed": "the caption order was reversed",
+             "audit": {"auditors": 1, "verdicts": ["CONFIRMED"]}}), root=root)
+        self.assertTrue([e for e in errors if "entries[7]" in e], errors)
+        errors, _ = gate.validate(self._manifest(
+            {"manifest": "disease-models/wwox/research/deepdive_manifests/PMID0.json", "entry": 0,
+             "what_changed": "the caption order was reversed",
+             "audit": {"auditors": 1, "verdicts": ["CONFIRMED"]}}), root=root)
+        self.assertTrue([e for e in errors if "not a file" in e], errors)
+
+    def test_an_undeclared_entry_is_untouched_by_this_branch(self) -> None:
+        errors, incomplete = gate.validate(minimal())
+        self.assertFalse([x for x in errors + incomplete if "contradicts_locator" in x])
+
+
 if __name__ == "__main__":
     sys.exit(0 if unittest.main(exit=False, verbosity=2).result.wasSuccessful() else 1)

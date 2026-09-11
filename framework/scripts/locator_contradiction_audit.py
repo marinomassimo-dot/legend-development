@@ -48,10 +48,38 @@ a clean bill: the shape `screen_verdict.py` makes unrepresentable is the same sh
 produced this sweep's worst near-error, and a measurement tool is not exempt from it.
 
     python3 framework/scripts/locator_contradiction_audit.py [--json] [--queue]
+    python3 framework/scripts/locator_contradiction_audit.py --history [--include-same-day]
+    python3 framework/scripts/locator_contradiction_audit.py --working-tree [--fail-on-undeclared]
     python3 framework/scripts/locator_contradiction_audit.py --self-test
+
+THE SILENT REVERSAL (Mirror REV-EXPOST-20260911-001 F2, task MF-3b)
+--------------------------------------------------------------------
+A reader who overwrites a persisted locator IN PLACE and declares nothing meets no structural
+signal at all: the entry has no `contradicts_locator`, its prose has no correction verb, and
+the strict validator sees one well-formed manifest. That shape is only visible as a DIFF, so
+two modes read history instead of the file:
+
+  --history       for every manifest, every pair of consecutive committed revisions: an entry
+                  whose `snippet` or `proposition` changed at the same index, with no
+                  `contradicts_locator` object on the new revision, is an UNDECLARED_REVISION.
+                  Measured by this mode on its first run over the corpus (2026-09-11, 81
+                  manifests): 240 field changes over 125 revision pairs, of which 187 were
+                  same-day edits inside the wave that wrote the entry — refinement, not
+                  contradiction — and 53 crossed a commit date, i.e. touched a reading that
+                  had already closed; 0 were declared, the field being younger than all of
+                  them. The default therefore reports the cross-date set and counts the
+                  same-day set; `--include-same-day` lists both.
+  --working-tree  the same comparison between HEAD and the uncommitted file — the pre-landing
+                  check a reader runs at M3 before committing an edit to an existing manifest.
+                  `--fail-on-undeclared` exits 1 on any undeclared change, which is how the
+                  Fig 6A near-error's shape is refused before it lands rather than queued after.
+
+Neither mode judges: a changed snippet may be a re-anchoring to a fresh extraction, and only a
+reader can say. What they establish is that the change HAPPENED and was or was not declared.
 
 Exit codes:
   0  the corpus was screened and the ratio reported (findings do NOT change this)
+  1  --fail-on-undeclared and an undeclared working-tree revision exists
   2  invalid invocation
   3  nothing could be screened - the result is void, not clean
 """
@@ -62,6 +90,7 @@ import argparse
 import hashlib
 import json
 import re
+import subprocess
 import sys
 from dataclasses import dataclass, field
 from pathlib import Path
@@ -245,6 +274,192 @@ def screen(manifest_dir: Path = MANIFEST_DIR) -> Result:
     return result
 
 
+# --- history: the diff the file cannot show ---------------------------------------------
+
+REVISION_FIELDS = ("snippet", "proposition")
+
+
+@dataclass
+class Revision:
+    manifest: str
+    entry: int
+    field: str
+    commit: str        # short sha, or WORKING_TREE
+    date: str          # commit date of the new revision, or WORKING_TREE
+    prior_date: str
+    cross_date: bool
+    declared: bool
+    before: str
+    after: str
+
+    @property
+    def kind(self) -> str:
+        return "DECLARED_REVISION" if self.declared else "UNDECLARED_REVISION"
+
+
+@dataclass
+class HistoryResult:
+    verdict: str
+    manifests: int = 0
+    revision_pairs: int = 0
+    revisions: list[Revision] = field(default_factory=list)
+    missing: str = ""
+
+    def undeclared(self, include_same_day: bool) -> list[Revision]:
+        return [r for r in self.revisions
+                if not r.declared and (include_same_day or r.cross_date)]
+
+    @property
+    def same_day_undeclared(self) -> int:
+        return sum(1 for r in self.revisions if not r.declared and not r.cross_date)
+
+
+def _git(root: Path, *args: str) -> str | None:
+    try:
+        done = subprocess.run(["git", "-C", str(root), *args], capture_output=True, text=True)
+    except OSError:
+        return None
+    return done.stdout if done.returncode == 0 else None
+
+
+def _entries_of(raw: str) -> list | None:
+    try:
+        manifest = json.loads(raw)
+    except ValueError:
+        return None
+    if not isinstance(manifest, dict):
+        return None
+    return (manifest.get("verbatim_locators") or {}).get("entries") or []
+
+
+def _compare(before: list, after: list, *, manifest: str, commit: str, date: str,
+             prior_date: str) -> list[Revision]:
+    found: list[Revision] = []
+    for index, (old, new) in enumerate(zip(before, after)):
+        if not (isinstance(old, dict) and isinstance(new, dict)):
+            continue
+        for key in REVISION_FIELDS:
+            if old.get(key) is None or old.get(key) == new.get(key):
+                continue
+            found.append(Revision(
+                manifest=manifest, entry=index, field=key, commit=commit, date=date,
+                prior_date=prior_date,
+                cross_date=(date != prior_date),
+                declared=isinstance(new.get("contradicts_locator"), dict),
+                before=str(old.get(key))[:160], after=str(new.get(key))[:160]))
+    return found
+
+
+def _toplevel(root: Path) -> Path | None:
+    top = _git(root, "rev-parse", "--show-toplevel")
+    return Path(top.strip()).resolve() if top else None
+
+
+def _repo_relative(top: Path, path: Path) -> str | None:
+    # Every git call below runs with -C <toplevel>, so a pathspec relative to the toplevel is
+    # right for `log`, `show` and `status` alike. The first version ran from the manifest
+    # directory with a toplevel-relative pathspec: `log` found nothing and the mode reported
+    # manifests=0 as SCREENED — the exact void-as-clean shape this file exists to refuse.
+    try:
+        return str(path.resolve().relative_to(top)).replace("\\", "/")
+    except ValueError:
+        return None
+
+
+def screen_history(manifest_dir: Path = MANIFEST_DIR, root: Path | None = None) -> HistoryResult:
+    """Every consecutive pair of committed revisions of every manifest, compared by entry index."""
+    root = root or manifest_dir
+    paths = sorted(manifest_dir.glob("*.json")) if manifest_dir.is_dir() else []
+    if not paths:
+        return HistoryResult("INSUFFICIENT_DATA", missing=f"no manifest JSON under {manifest_dir}")
+    top = _toplevel(root)
+    if top is None:
+        return HistoryResult("INSUFFICIENT_DATA",
+                             missing=f"{root} is not inside a git repository; history is unreadable")
+    result = HistoryResult("SCREENED")
+    for path in paths:
+        rel = _repo_relative(top, path)
+        if rel is None:
+            continue
+        log = _git(top, "log", "--format=%H|%ad", "--date=short", "--", rel) or ""
+        revisions = [line.split("|", 1) for line in log.splitlines() if "|" in line][::-1]
+        if not revisions:
+            continue
+        result.manifests += 1
+        prior: tuple[list, str] | None = None
+        for sha, date in revisions:
+            raw = _git(top, "show", f"{sha}:{rel}")
+            entries = _entries_of(raw) if raw is not None else None
+            if entries is None:
+                prior = None
+                continue
+            if prior is not None:
+                result.revision_pairs += 1
+                result.revisions.extend(_compare(
+                    prior[0], entries, manifest=path.name, commit=sha[:7], date=date,
+                    prior_date=prior[1]))
+            prior = (entries, date)
+    if result.manifests == 0:
+        return HistoryResult("INSUFFICIENT_DATA", missing=f"none of {len(paths)} manifest(s) has a "
+                             f"committed revision under {top}; there is no history to compare")
+    return result
+
+
+def screen_working_tree(manifest_dir: Path = MANIFEST_DIR, root: Path | None = None) -> HistoryResult:
+    """HEAD against the uncommitted file, for every manifest the working tree has modified."""
+    root = root or manifest_dir
+    paths = sorted(manifest_dir.glob("*.json")) if manifest_dir.is_dir() else []
+    if not paths:
+        return HistoryResult("INSUFFICIENT_DATA", missing=f"no manifest JSON under {manifest_dir}")
+    top = _toplevel(root)
+    if top is None:
+        return HistoryResult("INSUFFICIENT_DATA",
+                             missing=f"{root} is not inside a git repository; HEAD is unreadable")
+    result = HistoryResult("SCREENED")
+    for path in paths:
+        rel = _repo_relative(top, path)
+        if rel is None:
+            continue
+        result.manifests += 1
+        head = _git(top, "show", f"HEAD:{rel}")
+        if head is None:
+            continue  # untracked: nothing persisted to contradict
+        before = _entries_of(head)
+        try:
+            after = _entries_of(path.read_text(encoding="utf-8"))
+        except OSError:
+            after = None
+        if before is None or after is None:
+            continue
+        result.revision_pairs += 1
+        head_date = (_git(top, "log", "-1", "--format=%ad", "--date=short", "--", rel) or "").strip()
+        result.revisions.extend(_compare(
+            before, after, manifest=path.name, commit="WORKING_TREE", date="WORKING_TREE",
+            prior_date=head_date or "HEAD"))
+    return result
+
+
+def render_history(result: HistoryResult, include_same_day: bool, mode: str) -> str:
+    if result.verdict == "INSUFFICIENT_DATA":
+        return f"INSUFFICIENT_DATA: {result.missing}"
+    listed = result.undeclared(include_same_day)
+    declared = [r for r in result.revisions if r.declared]
+    lines = [f"screened ({mode}): manifests={result.manifests} revision_pairs={result.revision_pairs} "
+             f"entry_field_changes={len(result.revisions)}",
+             f"declared revisions: {len(declared)} · undeclared, crossing a commit date: "
+             f"{sum(1 for r in result.revisions if not r.declared and r.cross_date)} · "
+             f"undeclared, same day as the prior revision: {result.same_day_undeclared}"
+             + ("" if include_same_day else " (counted, not listed; --include-same-day)")]
+    for r in listed:
+        lines.append(f"  [{r.kind}] {r.manifest} entries[{r.entry}].{r.field} @ {r.commit} "
+                     f"({r.prior_date} -> {r.date})")
+        lines.append(f"      before: {r.before[:110]}")
+        lines.append(f"      after : {r.after[:110]}")
+    if mode == "working-tree" and not listed:
+        lines.append("  no undeclared locator revision in the working tree")
+    return "\n".join(lines)
+
+
 def render(result: Result, queue: bool) -> str:
     if result.verdict == "INSUFFICIENT_DATA":
         return f"INSUFFICIENT_DATA: {result.missing}"
@@ -360,10 +575,46 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--queue", action="store_true", help="list the review queue")
     parser.add_argument("--self-test", action="store_true")
     parser.add_argument("--manifest-dir", type=Path, default=MANIFEST_DIR)
+    parser.add_argument("--history", action="store_true",
+                        help="compare every pair of committed revisions of every manifest")
+    parser.add_argument("--working-tree", action="store_true",
+                        help="compare HEAD against the uncommitted manifests (run before committing)")
+    parser.add_argument("--include-same-day", action="store_true",
+                        help="also list undeclared revisions made the same day as the prior one")
+    parser.add_argument("--fail-on-undeclared", action="store_true",
+                        help="with --working-tree: exit 1 on any undeclared revision")
     args = parser.parse_args(argv)
 
     if args.self_test:
         return self_test()
+
+    if args.history or args.working_tree:
+        if args.history and args.working_tree:
+            parser.error("--history and --working-tree are separate questions; ask one")
+        mode = "history" if args.history else "working-tree"
+        hist = screen_history(args.manifest_dir) if args.history else screen_working_tree(args.manifest_dir)
+        # In the working tree the same-day distinction is meaningless: the edit is now.
+        include = args.include_same_day or args.working_tree
+        undeclared = hist.undeclared(include)
+        if args.json:
+            print(json.dumps({
+                "verdict": hist.verdict, "mode": mode,
+                "screened": {"manifests": hist.manifests, "revision_pairs": hist.revision_pairs},
+                "entry_field_changes": len(hist.revisions),
+                "declared": sum(1 for r in hist.revisions if r.declared),
+                "undeclared_listed": len(undeclared),
+                "undeclared_same_day": hist.same_day_undeclared,
+                "missing": hist.missing,
+                "revisions": [dict(vars(r), kind=r.kind) for r in (undeclared if not include
+                                                                 else hist.revisions)],
+            }, indent=1))
+        else:
+            print(render_history(hist, include, mode))
+        if hist.verdict == "INSUFFICIENT_DATA":
+            return 3
+        if args.fail_on_undeclared and undeclared:
+            return 1
+        return 0
 
     result = screen(args.manifest_dir)
     if args.json:
