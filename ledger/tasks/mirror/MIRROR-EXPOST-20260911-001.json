@@ -1,0 +1,165 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.2 TASK_ACK + A.3 TASK_CLAIM · Mirror ex-post review under LEGEND_CORE §21e",
+ "TASK_ID": "MIRROR-EXPOST-20260911-001",
+ "OWNER": "mirror",
+ "ACTOR_ID": "mirror",
+ "TASK_ACK": {
+  "state": "CLOSED",
+  "accepted_on": "2026-09-11",
+  "objective": "Ex-post hostile review of everything landed on main from c1701be (exclusive) to HEAD; verify every asserted number by running its tool; one mutation per matrix the author did not run; the receipt-gate semantics; the fourth R4 trigger; the dossier incident; operator-facing overstatement; asked-vs-done.",
+  "specification": "dispatch MIRROR-EXPOST-20260911-001; 2026-09-09_actor_retrospective.md §5.2, §9; orchestration_reviews/2026-09-10.md",
+  "interaction_mode": "AUTONOMOUS_COMPLETE",
+  "review_requirement": "none — Mirror does not review itself; AUTHOR_RESPONSE owed by the orchestrator"
+ },
+ "TASK_CLAIM": {
+  "claimed_by": "mirror",
+  "claimed_on": "2026-09-11",
+  "durable_pointer": "reviews/mirror/REV-EXPOST-20260911-001.md"
+ },
+ "OBJECT": {
+  "from": "c1701be",
+  "frozen_tip": "6719e08",
+  "extended_tip": "d03aaa6",
+  "commits_frozen": 47,
+  "commits_extension": 6,
+  "note": "HEAD moved during the review; every tool number was re-derived at 6719e08 in a cp -r copy carrying files/; the extension was read, not re-measured."
+ },
+ "WRITE_PERIMETER": {
+  "permitted_here": [
+   "reviews/mirror/REV-EXPOST-20260911-001.md",
+   "ledger/tasks/mirror/MIRROR-EXPOST-20260911-001.json"
+  ],
+  "experiments": "scratchpad/copy and scratchpad/copy2 (cp -r of the checkout, pinned to 6719e08), fixture repos under the scratchpad; the real tree was never written"
+ },
+ "NUMBERS_REPRODUCED": {
+  "locator_contradiction_audit": "81/1458/17 candidates/1 audited — exact",
+  "attribution_census@821b44c": "0/33, 0/4 — exact",
+  "attribution_census@cf27fc0": "3/36, 3/7 — exact",
+  "attribution_census@HEAD": "5/38, 6/10",
+  "dependency_integrity corpus": "79 screened, 13 flagged — exact",
+  "dependency_integrity claims": "6 distinct of 39 — exact",
+  "session_self_eval ratchets": "69 and 66 — exact",
+  "manifest_queue_id_crosscheck": "81/96/16/0/0/2 — exact",
+  "reacquire status": "29/616 replayable, 587 NO_RECIPE stated — exact",
+  "reacquire replay sample": "3 RECOVERED + 1 DIGEST_DIFFERS_SAME_ROUTE; 33914858 FAILED_HTTP_403_CLOUDFLARE",
+  "evidence_presence": "616/227/389/0 — exact",
+  "release battery (copy)": "FAIL on test_batch_queue + test_surface_census only; no TRACKED_FILES_WRITTEN; test_legend_handoff 16/16; test_fulltext_receipts 98/98",
+  "self_test_coverage@6719e08": "50 scripts, entry 44, real true 35 / false 14 / skipped 1, both-false 0, refused 0",
+  "self_test_coverage@2a26a25": "47 scripts, entry 28, both-false 13 (no files/)",
+  "not_reproducible": [
+   "2026-09-10.md §1 row 9.3 '26/46; 13 -> 10' — commit 2a26a25 says 27/48, 14"
+  ]
+ },
+ "FINDINGS_RANKED": [
+  {
+   "id": "F1",
+   "severity": "high",
+   "what": "Dossier incident attributed on main by 1325494 (HARNESS-SELFTEST-001 unguarded mutation matrix, M6 dossier_quote_audit / M3 recapture_snippets); FINDING and 2026-09-10.md §2c still say UNATTRIBUTED and 'class closed'. Reproduced in copy2: 54/54 dossiers 'touched' by a direct run of the landed suite; refused only under --guarded. Runner guard: after-the-fact, tracked files only, battery suites only. Tracer: blind to os.open and non-Python subprocess writes (both landed bytes in a fixture); fulltext_receipts.py and task_close.py use os.open."
+  },
+  {
+   "id": "F2",
+   "severity": "high",
+   "what": "Fourth R4 trigger declared, not enforceable: in-place reversal of a persisted locator on PMID 15070730 passes strict validate, audit tool (0/0), manifest_flag_drift, receipts verify, lint. locator_contradiction_audit counts any 'audit'-named key as STRUCTURED evidence ('NOT AUDITED — pending' -> 2/2); mutations G1/G2 leave suite 10/10 and self-test 9/9 green."
+  },
+  {
+   "id": "F3",
+   "severity": "medium",
+   "what": "legend_commit.sh with a directory pathspec commits a peer's dirty file (fixture: 2 files changed under one actor's message); suite tests file paths only."
+  },
+  {
+   "id": "F4",
+   "severity": "medium",
+   "what": "retraction_check.dependencies block emitted for 18460020 (50 refs) pasted into 16223882 (26 refs) passes strict validate once the relation placeholder is filled — the slot is not bound to its paper."
+  },
+  {
+   "id": "F5",
+   "severity": "medium",
+   "what": "attribution_census.py parses 'incidents 3 / machine 5 / severity_high 1 / of which self 4' as a complete census and prints 4/1; no arithmetic pin in the suite."
+  },
+  {
+   "id": "F6",
+   "severity": "medium",
+   "what": "Operator-facing numbers: '26/46' underivable; '7/7 refuse an uninformative pass' holds at record level, 5/7 at exit-code level (genre_discriminator, erratum_scope_check exit 0 over nothing screened); external_provenance accepts 2026-13-45; P3 '4 containers' not re-derivable from manifests."
+  },
+  {
+   "id": "F7",
+   "severity": "low",
+   "what": "d1e75a1/d03aaa6 wrote ~/.claude/settings.json outside the repository under WRITE_PERIMETER null; not reserved; claims hedged honestly; needs a perimeter line and a DECISIONS_TAKEN entry."
+  }
+ ],
+ "ASKED_NOT_DONE": [
+  "§9.3: the both-false count reported in every capability-scout entry that ships a tool — appears in no scout log, only in the retrospective and the record",
+  "§9.6: a parser over a date range — attribution_census.py has no date filter",
+  "§9.4 / §9.1 next-sweep targets — no reading wave since, not measurable yet",
+  "stricter first_read rule — measured (0 live violations), deliberately not shipped, recorded",
+  "four receipt-schema decisions — referred to the operator",
+  "declaring the 4 .pptx containers; the 13-paper / 6-claim reading debt — left to the next scientist wave"
+ ],
+ "DONE_NOT_ASKED": [
+  "release-runner tracked-file guard + mtime_verdict (reactive to the incident)",
+  "--guarded runner and write-refusing tracer (reactive)",
+  "generate_semantic_graph and figure_ppi_preflight tool fixes exposed by entry-point cases",
+  "PyMuPDF pin + AGPL notice; .gitignore repoint",
+  "roles/orchestrator.md dispatch obligations; four learned gates; standing brief promoted to a protocol (asked implicitly by §4.5)",
+  "HARNESS-QUOTA-RESUME-001 (operator-directed, outside the retrospective)"
+ ],
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "HEAD advanced during the review",
+   "default": "froze the object at 6719e08 at start; extended to d03aaa6 on the coordinator's message; numbers tied to stated commits",
+   "why_safe": "a moving object yields numbers nobody can re-derive",
+   "what_would_have_been_different": "nothing in the verdicts"
+  },
+  {
+   "condition": "dispatch names the battery under flock in the real tree",
+   "default": "ran it in a cp -r copy carrying files/",
+   "why_safe": "the object under review is a write into the real tree; the copy reproduces the two declared reds exactly",
+   "what_would_have_been_different": "a real-tree run risks the incident to prove the same line"
+  },
+  {
+   "condition": "read-only tools",
+   "default": "run in the copy, not the real tree",
+   "why_safe": "same numbers; the copy has files/",
+   "what_would_have_been_different": "nothing"
+  },
+  {
+   "condition": "coordinator: resume from the start",
+   "default": "kept the measured context, extended rather than re-ran",
+   "why_safe": "all measurements were already tied to 6719e08",
+   "what_would_have_been_different": "11 minutes of identical tool output"
+  },
+  {
+   "condition": "in-flight HARNESS-SELFTEST-001.json to be ignored",
+   "default": "read for forensics, cited as the author's self-attribution, not reviewed",
+   "why_safe": "it is the primary record of who wrote the dossiers",
+   "what_would_have_been_different": "F1 would rest on 1325494 and the scratchpad alone — still sufficient"
+  },
+  {
+   "condition": "network replay",
+   "default": "5 artefacts, --no-write --no-record",
+   "why_safe": "no spend, no write; all three verdict families observed",
+   "what_would_have_been_different": "nothing"
+  },
+  {
+   "condition": "mutations and the incident reproduction",
+   "default": "copies only; tools restored by copy and diffed",
+   "why_safe": "read-only rule toward the real tree kept",
+   "what_would_have_been_different": "the incident, in the real tree"
+  }
+ ],
+ "STOP_LOG": [],
+ "ATTRIBUTION_CENSUS": {
+  "incidents": 4,
+  "machine": 2,
+  "blind_auditor": 0,
+  "peer": 0,
+  "self": 2,
+  "severity_high": 1,
+  "severity_high_self": 1,
+  "undetected_known": 0
+ },
+ "LANDING": {
+  "method": "bash scripts/legend_commit.sh on main from the root checkout, two paths",
+  "push": "never"
+ }
+}
