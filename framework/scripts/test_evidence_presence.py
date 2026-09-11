@@ -111,5 +111,46 @@ class EvidencePresenceTest(unittest.TestCase):
         self.assertIn("UNREADABLE", r.stdout)
 
 
+class TheRealManifestsAreAudited(unittest.TestCase):
+    """One real manifest through ``main`` over this checkout — read, reported, unchanged.
+
+    The bytes it fingerprints live under gitignored ``files/``, so on a bare host every
+    artifact is ABSENT and the verdict says so; that is the tool's documented answer, not a
+    failure. The manifest itself is tracked and must be byte-identical afterwards.
+    """
+
+    ROOT = Path(__file__).resolve().parents[2]
+
+    def test_one_real_manifest_through_main_in_json_and_text(self) -> None:
+        manifests = sorted((self.ROOT / "disease-models/wwox/research/deepdive_manifests")
+                           .glob("PMID*.json"))
+        if not manifests:
+            self.skipTest("skipped: no deepdive manifest in this checkout")
+        chosen = manifests[0]
+        pmid = chosen.stem.removeprefix("PMID")
+        before = chosen.read_bytes()
+        script = self.ROOT / "framework/scripts/evidence_presence.py"
+        machine = subprocess.run(
+            [sys.executable, str(script), "--root", str(self.ROOT), "--disease", "wwox",
+             "--pmid", pmid, "--json"], capture_output=True, text=True, timeout=300)
+        self.assertEqual(machine.returncode, 0, machine.stderr)
+        lines = [line for line in machine.stdout.splitlines() if line.startswith("{")]
+        self.assertEqual(len(lines), 1, "--pmid must select exactly one manifest record")
+        record = json.loads(lines[0])
+        self.assertEqual(record["pmid"], pmid)
+        self.assertEqual(record["manifest"], chosen.relative_to(self.ROOT).as_posix())
+        for row in record["artifacts"]:
+            self.assertIn(row["state"], ("PRESENT", "ABSENT", "DIGEST_MISMATCH", "NO_DIGEST",
+                                         "MISMATCH", "UNDECLARED"))
+        self.assertRegex(machine.stdout, r"manifests: 1 \| artifacts: \d+ \| present: \d+ \| "
+                                         r"absent: \d+ \| digest_mismatch: \d+ \| no_digest: \d+")
+        text = subprocess.run(
+            [sys.executable, str(script), "--root", str(self.ROOT), "--disease", "wwox",
+             "--pmid", pmid], capture_output=True, text=True, timeout=300)
+        self.assertEqual(text.returncode, 0, text.stderr)
+        self.assertIn("VERDICT:", text.stdout)
+        self.assertEqual(chosen.read_bytes(), before, "the audit wrote a real manifest")
+
+
 if __name__ == "__main__":
     unittest.main()
