@@ -212,7 +212,7 @@
       "id": "ACQREC-I2",
       "severity": "low",
       "caught_by": "machine (public_release_gate, self-run)",
-      "what": "a fixture literal someone@example.org in test_deepdive_manifest.py — the gate's EMAIL_ADDRESS block",
+      "what": "a fixture literal (someone at example dot org) in test_deepdive_manifest.py — the gate's EMAIL_ADDRESS block",
       "fix": "@example.invalid"
     },
     {
