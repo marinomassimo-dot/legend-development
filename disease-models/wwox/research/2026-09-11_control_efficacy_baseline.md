@@ -103,6 +103,46 @@ address exists, and stays impossible without it.
 Recorded as `MEASURED — REJECTED AT THIS GRANULARITY`, with the prerequisite named, rather than
 shipped and switched off later.
 
+## 3b · The pilot: a per-paper work packet and one call for the checks
+
+Built 2026-09-11 as `framework/scripts/paper_packet.py`, two subcommands, no new state, reusing
+the scripts that already exist. `packet` assembles what the repository knows **technically** about
+one PMID — identity, artefacts with digests verified rather than quoted, what a prior receipt
+covered and which sections a resume owes, which acquisition routes were already tried and what
+each returned, which checks the actual surfaces make runnable. `check` runs the runnable ones in
+one call, prints one line each and writes the full output to `files/check_runs/` (gitignored), so
+it is read only when a check has something to say.
+
+**The firewall is the load-bearing part.** `scientist_reading_modes.md` § 3.1 gives the reader the
+source packet *"and nothing else about the paper"*, and § 3.3 forbids reading prior LEGEND output
+during a blind first pass. The packet therefore carries no claim, no dossier, no commit candidate,
+no prior locator and no interpretation, and the regression asserts the absence against the real
+claim registry and the real manifest rather than trusting the docstring. A context saving that
+arrives as anticipation of the laboratory's conclusions is not a saving.
+
+**Measured on five real papers**, the commands run back to back:
+
+| | Value |
+|---|---|
+| Compact output returned to the reader, 5 papers, packet + check | 10,400 characters |
+| Full check output written to disk instead | 16,019 characters |
+| Technical calls a reader makes | 2 per paper, against 5–7 run separately before |
+| Wall clock, all ten commands | 13.4 s |
+| Packet assembly | 0.1 s per paper |
+
+🔴 **No saving percentage is claimed, and the reason is in the record.** These are characters of
+tool output and counts of calls, not provider-billed tokens: the earlier startup-context audit
+measured text sizes and not consumption
+([`learning/plan/SLR-plan-20260909-startup-context-audit.md`](../../../learning/plan/SLR-plan-20260909-startup-context-audit.md)).
+What can be said honestly is the shape of the change: the same facts now arrive once, in a fixed
+compact form, instead of being re-derived by reading registries into the reading context, and the
+verbose half of every check stays on disk unless a verdict sends the reader to it.
+
+**What the first real wave must report against § 2**, now that the instrument exists: the four
+numbers there, plus input and output tokens with cached tokens separated where the provider's
+telemetry gives them. Until then this is an instrument with a measured cost and an unmeasured
+benefit, and it is recorded as such.
+
 ## 4 · Re-deriving § 1 and § 3
 
 ```bash

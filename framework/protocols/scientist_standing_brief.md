@@ -80,8 +80,21 @@ of the four scientific current files or `disease_model.md`; `BATCH_COMMIT`; any 
 One PMID at a time, to completion, then commit, then the next. Never batch acquisitions and read
 later: a locator captured from memory is the failure this repository has already paid for.
 
-**M0 · duplicate-work gate.** `python3 framework/scripts/fulltext_receipts.py status --pmid <PMID>`,
-per paper, even though the dispatch ran it over the lot — a peer may have touched the ledger since.
+**M0 · duplicate-work gate.** One command, per paper:
+
+```bash
+python3 framework/scripts/paper_packet.py packet --pmid <PMID>
+```
+
+It assembles what this repository already knows **technically** about the paper — identity, the
+artefacts with their digests verified rather than quoted, what a prior receipt covered and which
+sections a resume owes, which acquisition routes were already tried and what each returned, and
+which checks its actual surfaces make runnable. It is the M0 lookup you were doing by hand, and it
+deliberately carries **no claim, no dossier, no commit candidate and no prior locator**: a packet
+that anticipated the laboratory's conclusions would be cheaper and contaminating
+([`scientist_reading_modes.md`](scientist_reading_modes.md) § 3.1, § 3.3), and a regression asserts
+the absence. `fulltext_receipts.py status --pmid <PMID>` remains the authority if you want the raw
+events — the packet reads the same ledger.
 A prior partial receipt: resume from the uncovered sections, `reread_reason:
 inadequate_prior_coverage`, `prior_receipt` set. A prior `legacy_reconstruction` only: the article
 has never been opened — `first_read`, naming that reconstruction in `prior_receipt`.
@@ -163,9 +176,14 @@ check found **1** flagged paper in this corpus; screening what each paper depend
 ```bash
 python3 framework/scripts/deepdive_manifest.py --disease wwox --pmid <PMID> \
         --verify-artifacts --require-current-schema
+python3 framework/scripts/paper_packet.py check --pmid <PMID>     # the rest, in one call
 ```
 
-Iterate to PASS with zero gaps. The validator's messages say precisely what is missing; a quote
+Iterate to PASS with zero gaps. `paper_packet.py check` runs the paper's other applicable checks
+in one call and prints one line each, with the full output on disk under `files/check_runs/` so it
+is read only when a check has something to say. It separates three states and none of them is a
+pass: `ok`, `refused` — open the detail — and `established nothing`, which is what an honest screen
+returns when the paper gives it nothing to screen. The validator's messages say precisely what is missing; a quote
 that spans a page-furniture intrusion in a PDF-derived surface now **BLOCKs** rather than waiting
 for someone to remember the check.
 
