@@ -1,0 +1,148 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b per-wave keys",
+ "TASK_ID": "ORCH-SCIENTIST-IMPROVEMENT-20260911",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "operator",
+ "ACTOR_ID": "orchestrator",
+ "identity_note": "The runtime assigned no identity. The operator's handover names this session the continuation of ORCH-SCIENTIST-IMPROVEMENT-20260910 (same objective, same record chain) and quotes that task's closing report as 'the last report you gave me'; the session therefore acts as `orchestrator`, as an ASSUMPTION stated here, never inferred from the directory. If the operator meant another actor, this record is the place to say so.",
+ "OBJECTIVE": "Turn the Aqeilan sweep's observed errors, near-errors and difficulties into verifiable improvements of the Scientists' way of working: incident → cause → control → test → measured result → residual limit; reconcile what was already done; pick at most three interventions; keep the scientific queue and the schema decisions explicit.",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-09-11",
+ "closed_on": "2026-09-11",
+ "started_at_head": "21e38d4a85e7136f157d03872c8d5d26552a974a",
+ "record": "disease-models/wwox/analysis/orchestration_reviews/2026-09-10_scientist_improvement_roadmap.md",
+ "deliverables": {
+  "incident_matrix": "disease-models/wwox/analysis/orchestration_reviews/data/2026-09-10_scientist_incident_controls.jsonl",
+  "pattern_selection": "governance/candidates/2026-09-10_scientist_pattern_selection.md",
+  "pilot_results": "disease-models/wwox/analysis/orchestration_reviews/2026-09-10_scientist_pilot_results.md",
+  "commits": [
+   "db35127 MF-6 + MF-5",
+   "de3628b MF-3a + MF-3b",
+   "4810628 derived_inputs (C22)",
+   "0c90fbe publication-gate literal"
+  ]
+ },
+ "interventions": [
+  {
+   "id": "I-1",
+   "closes": [
+    "MF-6",
+    "MF-5"
+   ],
+   "near_error": "NE-2 / NE-4",
+   "commit": "db35127"
+  },
+  {
+   "id": "I-2",
+   "closes": [
+    "MF-3a",
+    "MF-3b"
+   ],
+   "near_error": "NE-1",
+   "commit": "de3628b"
+  },
+  {
+   "id": "I-3",
+   "closes": [
+    "C22"
+   ],
+   "near_error": "NE-6",
+   "commit": "4810628"
+  }
+ ],
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "no ACTOR_ID assigned by the runtime; the handover continues a closed orchestrator task",
+   "default_taken": "act as orchestrator, record the assumption in this file",
+   "why_safe": "the objective, the record chain and the quoted closing report are that task's; §21c: a missing assignment with an obvious continuation is a condition with a safe default",
+   "what_would_have_differed": "a stop on the first turn with nothing delivered"
+  },
+  {
+   "condition": "the handover's file snapshot (3973ada) was 51 commits stale; every listed file had landed",
+   "default_taken": "reconcile against HEAD, cite the closed tasks, re-derive nothing from the snapshot",
+   "why_safe": "the ledger and git are the sources; the snapshot said so itself",
+   "what_would_have_differed": "re-implementing the dependency screen"
+  },
+  {
+   "condition": "the six near-errors' controls were partly landed (2026-09-10) and partly queued by Mirror (MF-1…8)",
+   "default_taken": "choose the three interventions from the queue in the operator's order of preference (complete existing controls; protect high-risk corrections; close a reproducibility gap): MF-6+MF-5, MF-3, C22",
+   "why_safe": "each has a reviewer's or the incident's own fixture; none changes receipt semantics or a guarantee",
+   "what_would_have_differed": "three new tools nobody asked for"
+  },
+  {
+   "condition": "the historical --history population is 240 field changes, 187 same-day",
+   "default_taken": "list only cross-date undeclared revisions by default, count the rest; never block on history",
+   "why_safe": "a detector listing 240 items is a detector nobody reads (the § 9.1 lesson); the working-tree gate is the blocking half",
+   "what_would_have_differed": "a 240-line queue with a 78 % same-wave-refinement share"
+  },
+  {
+   "condition": "BATCH_COMMIT phase 4.7 regenerates over registries the batch itself dirtied",
+   "default_taken": "the protocol passes --inputs-dirty-because with the reason, after `git status research/` must be empty",
+   "why_safe": "the reason is on the command line where a transcript shows it; the manifests (C22's surface) stay guarded",
+   "what_would_have_differed": "the batch protocol refused by its own guard"
+  },
+  {
+   "condition": "public_release_gate BLOCKed on an e-mail literal inside a closed peer task's ledger (a sentence describing a fixture)",
+   "default_taken": "rephrase the sentence, re-parse the JSON, separate commit",
+   "why_safe": "no content change; the push rule requires gate PASS on the exact SHA",
+   "what_would_have_differed": "no push"
+  },
+  {
+   "condition": "the scientific reading debt (33914858 behind Cloudflare; 29808465 / 25411445 / 15126504 unread; 20146584 figures undeclared; four .pptx) is scientist work and part of it needs the operator's browser",
+   "default_taken": "formulate the concrete acquisition request and the dependency order; read nothing; declare nothing on another actor's manifest",
+   "why_safe": "reading is not this mandate; a declaration is a reading act; the request is concrete and one-shot",
+   "what_would_have_differed": "tokens on readings without a receipt writer's authority"
+  },
+  {
+   "condition": "NE-3 (cross-panel bridge across cell lines) has no structural control and the cap was three interventions",
+   "default_taken": "formulate the field and the WARN concretely in the roadmap § 4; not implemented",
+   "why_safe": "the blind audit is the control that caught it and remains at R4; the proposal is 3 h for the next session",
+   "what_would_have_differed": "a fourth intervention over the cap, untested by any wave"
+  }
+ ],
+ "STOP_LOG": [],
+ "referred_to_operator": [
+  "PMID 33914858: browser download to files/fulltext/PMID33914858_Aqeilan2021.pdf and supplements to files/supplement/PMID33914858/ (roadmap § 5.1)",
+  "receipt-schema decisions §4.1, §4.1b, §4.3, §4.3b — unchanged, formulated in framework/protocols/proposals/2026-09-09_receipt_schema_proposals.md",
+  "BATCH_COMMIT to clear the paper-registry ratchet (test_batch_queue)",
+  "MF-7 (the operator's own plan session)"
+ ],
+ "ATTRIBUTION_CENSUS": {
+  "incidents": 4,
+  "machine": 2,
+  "blind_auditor": 0,
+  "peer": 0,
+  "self": 2,
+  "severity_high": 1,
+  "severity_high_self": 1,
+  "undetected_known": 0,
+  "incident_detail": [
+   {
+    "id": 1,
+    "what": "the history mode's first cut ran git from the manifest directory, found no revisions and reported manifests=0 as SCREENED — the void-as-clean shape",
+    "catcher": "self (read the live output before trusting it)",
+    "severity_high": true
+   },
+   {
+    "id": 2,
+    "what": "an insertion replaced the `def render` line of the audit tool, orphaning its body; 3 tests errored",
+    "catcher": "machine (suite)",
+    "severity_high": false
+   },
+   {
+    "id": 3,
+    "what": "the guard was first placed after build(); a dirty ledger crashed the generator before the guard could refuse (exit 1, not 2)",
+    "catcher": "machine (the new subprocess test)",
+    "severity_high": false
+   },
+   {
+    "id": 4,
+    "what": "the scratch measurement said 42 cross-date revisions (entry-level); the tool's own count is 53 (field-level); the docstring was corrected to the tool's number before commit",
+    "catcher": "self (re-derivation before quoting — SPECIFICATION_NUMBER_PROVENANCE_GATE)",
+    "severity_high": false
+   }
+  ]
+ },
+ "battery_and_publication": "filled at close — see the last commit of this task"
+}

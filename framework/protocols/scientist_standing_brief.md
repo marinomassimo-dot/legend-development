@@ -108,10 +108,17 @@ Three rules that the sweep added, each with the incident it comes from:
 
 - 🔴 **Contradicting a locator that is already persisted is its own act, with its own order.**
   Re-inspect the surface at original resolution **before** drafting the contradiction; then declare
-  `contradicts_locator` on the entry; then run [`legend-locator-audit`](../../.claude/skills/legend-locator-audit/SKILL.md)
+  `contradicts_locator` on the entry — an **object**: `{"manifest": "<prior manifest path>", "entry":
+  <int> | "receipt": "FTR-…", "what_changed": "<one sentence>", "audit": {"auditors": N, "verdicts":
+  [...]}}` — then run [`legend-locator-audit`](../../.claude/skills/legend-locator-audit/SKILL.md)
   on the contradicted triples — it is the fourth mandatory trigger, whatever claim status is
-  involved. A reader working from a 667 px rendering began drafting a correction to a locator that
-  was exactly right; what stopped it was re-opening the figure at 400 dpi first.
+  involved. Since 2026-09-11 the validator refuses a string declaration, and a declaration with no
+  audit object is a `[DECLARED GAP]` that keeps the receipt from being complete. A reader working
+  from a 667 px rendering began drafting a correction to a locator that was exactly right; what
+  stopped it was re-opening the figure at 400 dpi first. **Before committing any edit to an existing
+  manifest**, run `python3 framework/scripts/locator_contradiction_audit.py --working-tree
+  --fail-on-undeclared`: it lists every persisted snippet or proposition you changed without a
+  declaration and exits 1 — the undeclared in-place rewrite is the one shape no file-level gate sees.
 - 🔴 **An identifier, a count or a residue identity comes from the artefact or from a command run in
   this session** — never from recall, never from the first hit of a search. From outside, it carries
   `external_provenance` naming the command or index and the date; the validator warns on the
@@ -123,6 +130,11 @@ Three rules that the sweep added, each with the incident it comes from:
   and *"the gate said CLEAN"* is not a finding until you have read what it screened. A safety screen
   called with inverted arguments once screened a filename and returned green over a surface carrying
   191 control characters.
+
+**Regenerating a shared derived surface** (`batch_queue.md`, `coverage_report.md`, `reading_state.md`,
+the pathograph) is refused while any of its inputs is uncommitted in the checkout — a peer's manifest
+in flight was baked into all five on 2026-09-09. The refusal names the files; wait or name the owner.
+Do not pass `--inputs-dirty-because` for a peer's file.
 
 If the only surface is a PDF whose text layer is `SUSPECT`, do not hand-correct it: anchor the
 affected locators to the rendered page (`page_adjudications/`, `regenerate_adjudications.py`) or
