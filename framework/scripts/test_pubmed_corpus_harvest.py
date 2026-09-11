@@ -12,12 +12,20 @@ import hashlib
 import importlib.util
 import json
 import re
+import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
+SCRIPT = ROOT / "framework/scripts/pubmed_corpus_harvest.py"
+REGISTRIES = ROOT / "disease-models/wwox/registries"
+
+
+def run_cli(*args: str) -> subprocess.CompletedProcess:
+    return subprocess.run([sys.executable, str(SCRIPT), *args], cwd=ROOT,
+                          capture_output=True, text=True, timeout=300)
 
 
 def _module(name: str, relative: str):
@@ -807,6 +815,83 @@ class CompletenessInvariants(unittest.TestCase):
         self.assertIn("not 'every paper on the gene'", manifest["not_claimed"])
         self.assertEqual(manifest["with_other_abstract"], 1)
         self.assertEqual(manifest["with_corrections"], 1)
+
+
+class TheCliIsDriven(unittest.TestCase):
+    """``main`` as a subprocess: ``--verify`` over a corpus this test wrote, and the usage errors.
+
+    66 cases and none through ``main`` until 2026-09-10 (retrospective § 9.3). ``--verify`` is
+    the only network-free command, so it is the one driven here; ``--term`` reaches NCBI and is
+    not exercised.
+    """
+
+    # The evidence firewall recognises a corpus by PATH; a bare "corpus" slug in a temp dir is
+    # refused, correctly. The registry seeds' own naming is what makes the fixture writable.
+    def write_corpus(self, out_dir: Path, slug: str = "corpus_seed_pubmed_fixture") -> Path:
+        records, manifest, free = _harvest(document(ARTICLE, BOOK), count=2)
+        harvest.write_corpus(records, manifest, free, out_dir, slug, abstracts=False)
+        return out_dir / f"{slug}.manifest.json"
+
+    def test_a_corpus_it_wrote_verifies_and_a_tampered_one_does_not(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest = self.write_corpus(Path(tmp))
+            good = run_cli("--verify", str(manifest))
+            self.assertEqual(good.returncode, 0, good.stdout + good.stderr)
+            self.assertIn("OK (0 problem(s))", good.stdout)
+
+            jsonl = Path(tmp) / "corpus_seed_pubmed_fixture.jsonl"
+            with jsonl.open("a", encoding="utf-8") as handle:
+                handle.write(json.dumps({"pmid": "36779245"}) + "\n")
+            bad = run_cli("--verify", str(manifest))
+            self.assertEqual(bad.returncode, 1)
+            self.assertIn("does not match the manifest", bad.stdout)
+            self.assertIn("duplicate PMID", bad.stdout)
+            self.assertIn("FAIL", bad.stdout)
+
+    def test_no_term_and_no_verify_is_a_usage_error(self) -> None:
+        result = run_cli()
+        self.assertEqual(result.returncode, 2)
+        self.assertIn("--term is required unless --verify", result.stderr)
+
+    def test_an_unreadable_manifest_is_a_failure_not_a_traceback(self) -> None:
+        result = run_cli("--verify", "/nonexistent/corpus.manifest.json")
+        self.assertEqual(result.returncode, 1)
+        self.assertIn("manifest unreadable", result.stdout)
+        self.assertNotIn("Traceback", result.stderr)
+
+
+class TheRealCorporaAreVerified(unittest.TestCase):
+    """The two harvested corpora under the registries, read and re-checked, never written."""
+
+    CURRENT = REGISTRIES / "corpus_seed_pubmed_20260806.manifest.json"
+    OLDER = REGISTRIES / "corpus_seed_pubmed_20260805.manifest.json"
+
+    def snapshot(self, manifest: Path) -> dict[Path, bytes]:
+        stem = manifest.name.replace(".manifest.json", "")
+        return {p: p.read_bytes() for p in REGISTRIES.glob(f"{stem}*")}
+
+    def test_the_current_corpus_verifies_against_its_own_manifest(self) -> None:
+        if not self.CURRENT.is_file():
+            self.skipTest(f"skipped: {self.CURRENT.relative_to(ROOT)} absent on this host")
+        before = self.snapshot(self.CURRENT)
+        result = run_cli("--verify", str(self.CURRENT.relative_to(ROOT)))
+        self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
+        self.assertIn("OK (0 problem(s))", result.stdout)
+        self.assertEqual(self.snapshot(self.CURRENT), before)
+
+    def test_the_older_corpus_is_named_as_predating_the_schema_with_its_remedy(self) -> None:
+        """A red verdict with no remedy hands the operator a problem, not a finding."""
+        if not self.OLDER.is_file():
+            self.skipTest(f"skipped: {self.OLDER.relative_to(ROOT)} absent on this host")
+        before = self.snapshot(self.OLDER)
+        result = run_cli("--verify", str(self.OLDER.relative_to(ROOT)))
+        self.assertEqual(result.returncode, 1, result.stdout)
+        self.assertIn("predates", result.stdout)
+        self.assertIn("Re-harvest it in place", result.stdout)
+        self.assertIn("--slug corpus_seed_pubmed_20260805", result.stdout)
+        # The registries are tracked, so the remedy must strip the abstracts.
+        self.assertIn("--no-abstracts", result.stdout)
+        self.assertEqual(self.snapshot(self.OLDER), before)
 
 
 if __name__ == "__main__":
