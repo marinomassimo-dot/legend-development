@@ -8,9 +8,12 @@ answering that question and not a nearby one.
 from __future__ import annotations
 
 import importlib.util
+import io
 import json
+import re
 import sys
 import unittest
+from contextlib import redirect_stdout
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -158,6 +161,38 @@ class TheAuditFindsWhatItShould(unittest.TestCase):
                                         "--corpus", str(self.workspace.corpus), "--strict"]))
         self.assertEqual(0, audit.main(["--root", str(self.workspace.root),
                                         "--corpus", str(self.workspace.corpus)]))
+
+
+class TheRealManifestsAreAudited(unittest.TestCase):
+    """One real manifest through ``main`` — read, audited or declared unauditable, unchanged.
+
+    The manifests are tracked; the text artefacts under files/ mostly are not, so on a bare
+    host the manifest is *unauditable* and the run says so. Either way the tool completed a
+    real read and wrote nothing; the skip fires only when the checkout has no manifest.
+    """
+
+    ROOT = Path(__file__).resolve().parents[2]
+    SUMMARY = re.compile(r"^(\d+) manifest\(s\) audited, (\d+) unauditable, (\d+) quote\(s\) "
+                         r"not found$", re.M)
+
+    def test_one_real_manifest_is_read_and_left_unchanged(self) -> None:
+        manifests = sorted((self.ROOT / "disease-models/wwox/research/deepdive_manifests")
+                           .glob("PMID*.json"))
+        if not manifests:
+            self.skipTest("skipped: no deepdive manifest in this checkout")
+        chosen = manifests[0]
+        before = chosen.read_bytes()
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            code = audit.main(["--root", str(self.ROOT), "--pmid", chosen.stem.removeprefix("PMID")])
+        out = buffer.getvalue()
+        self.assertEqual(code, 0, out)
+        match = self.SUMMARY.search(out)
+        self.assertIsNotNone(match, out)
+        audited, unauditable, _missing = (int(g) for g in match.groups())
+        self.assertEqual(audited + unauditable, 1, "--pmid must select exactly one manifest")
+        self.assertIn(chosen.stem.removeprefix("PMID"), out)
+        self.assertEqual(chosen.read_bytes(), before, "the audit wrote a real manifest")
 
 
 if __name__ == "__main__":
