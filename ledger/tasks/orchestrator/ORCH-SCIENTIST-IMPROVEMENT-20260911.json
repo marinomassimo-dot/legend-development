@@ -101,7 +101,15 @@
    "what_would_have_differed": "a fourth intervention over the cap, untested by any wave"
   }
  ],
- "STOP_LOG": [],
+ "STOP_LOG": [
+  {
+   "class": "2 — no safe default for the push itself (an unauthenticated push is impossible, a key is not this actor's to install)",
+   "what_was_asked": "publish main to development after gate PASS",
+   "time_waited": "none — recorded and the turn continued",
+   "outcome": "deferred to the operator with the exact command; everything else complete",
+   "question": "Should this desktop user hold a deploy key for development so agents can complete the push rule unattended? (yes: one ssh-keygen + a GitHub deploy key with write; the push rule's controls are unchanged)"
+  }
+ ],
  "referred_to_operator": [
   "PMID 33914858: browser download to files/fulltext/PMID33914858_Aqeilan2021.pdf and supplements to files/supplement/PMID33914858/ (roadmap § 5.1)",
   "receipt-schema decisions §4.1, §4.1b, §4.3, §4.3b — unchanged, formulated in framework/protocols/proposals/2026-09-09_receipt_schema_proposals.md",
@@ -147,8 +155,9 @@
  "battery_and_publication": {
   "battery_at": "7e6e58c",
   "battery": "`FAIL` on exactly the two inherited reds — `test_batch_queue` (ratchet; operator's `BATCH_COMMIT`) and `test_surface_census` (gitignored evidence) — over 105 suites (103 at baseline + `test_screen_exit_codes.py`, `test_derived_inputs.py`); nothing green before is red after",
-  "gate": "BLOCK at 7e6e58c on the roadmap's own e-mail-shaped literal (repaired in the closing commit); PASS required on the pushed SHA — filled below after the push",
-  "push": "pending"
+  "gate": "PASS at 28616c5 (public_release_gate.py, zero blocks; REVIEW lines pre-existing)",
+  "push": "NOT DONE. The desktop user has no SSH identity: ~/.ssh did not exist, no agent, `ssh -T git@github.com` -> Permission denied (publickey); the key that pushed from /root is unreadable to this user and sudo needs a password. The gate has been run on the exact SHA to push; the operator (or a session with the key) completes it with: python3 framework/scripts/safe_push.py development main  and verifies `git ls-remote development refs/heads/main` equals the pushed SHA.",
+  "side_effect": "the diagnosis added github.com's ED25519 host key to /home/desktop/.ssh/known_hosts (file created); no key material, nothing else touched"
  },
  "self_evaluation": "disease-models/wwox/research/session_evaluations/2026-09-11_orchestrator_scientist_improvement_afternoon.md"
 }
