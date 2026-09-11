@@ -501,3 +501,55 @@ in a printed note. It is offered to the orchestrator as a queue, not as a verdic
 3. **The receipt-contract items remain the operator's** — `identity_correction`, coupled panel
    relations for adjudicated locators, and the study-level rollup that leaves 25331887 and 34268881
    partial. Carried across five waves without drift and without being worked around.
+
+## 2026-09-11 — end of the "improve the Scientists" session (orchestrator)
+
+**Environment preflight (§ 3b, host `srv1879784`, Linux 6.8.0-139-generic):** `tool_preflight.py`
+6/6 present; PyMuPDF **1.28.2**, now pinned (`requirements-analysis.txt`, `environment-md.yml`);
+`unshare` and `bwrap` present, user namespaces usable; `strace` present; `firejail`, `inotifywait`
+absent. A verdict below is keyed to this host.
+
+**Session learning delta.** The session built the controls the 2026-09-09 retrospective asked for
+and, in doing so, produced its own incident: a mutation harness wrote 54 real dossiers. Three
+controls followed — a tracked-file guard in the release runner, a write-refusing tracer in the
+meta-test, a `--guarded` runner — and Mirror showed the preventing one is blind to `os.open`, to
+shells and to git (`REV-EXPOST-20260911-001` F1d). The gap, precisely: **to run any suite, mutant
+or tool against the real checkout we lack a write refusal that does not depend on which Python
+call the writer uses.** Second gap, measured twice and instrumented today: numbers quoted into
+records (`record_number_provenance.py`, baseline 16 of 71). Third, the operator's: rate-limit
+kills — five in two days — with native resume not reaching these sessions (`HARNESS-QUOTA-RESUME-001`).
+
+**Capability gaps.**
+1. To exercise a mutated tool against real artefacts we lack a kernel-level read-only view of the
+   checkout (MF-1, MF-2).
+2. To keep quoted numbers out of records we lacked an instrument — shipped this session.
+3. To survive a session limit we lack an in-repo resumer; the operator's audit says the native path
+   requires an interactive terminal — MONITOR, theirs.
+4. The weekly `HARNESS-SCOUT-<YYYY>-W<WW>.md` channel has still never produced a file (census § 1.1)
+   — the Junior's, not this session's; named so it is not forgotten again.
+
+**Candidates, scored (case fit · LEGEND fit · novelty · maturity · cost-inverted).**
+
+| Candidate | What it closes | Score | Verdict |
+|---|---|---|---|
+| **bubblewrap (`bwrap`)** — `--ro-bind <checkout> <checkout>` with a writable scratch copy for the run | Gap 1 at the kernel: **measured on this host today** — inside `bwrap --ro-bind / / --ro-bind $R $R`, a shell `echo >` dossier, `os.open(O_WRONLY|O_TRUNC)` and `git checkout --` all fail with `Read-only file system`; reads succeed (12,904 bytes); the real tree is clean after the probe. No install, no root, no tracer, no wrapping of Python calls — the write is impossible however it is attempted | 2 · 3 · 3 · 3 · 3 | **TRIAL** → wire as the default for `self_test_coverage.py --guarded` and for `mutate_matrix.py`: positive control is the probe above; acceptance is Mirror's F1(d) fixture refused |
+| `unshare -Ur` + bind mounts | same, stdlib-ish; more assembly than `bwrap` | 2 · 3 · 2 · 3 · 3 | `AUDIT` as the fallback where `bwrap` is absent |
+| `strace -f -e trace=openat,write` audit of a suite | detection of every write route after the fact, for hosts without namespaces | 1 · 2 · 2 · 3 · 3 | `MONITOR` — `bwrap` prevents, this only records |
+| `inotifywait` on guarded trees during a battery | attribution of a concurrent editor's write in real time | 1 · 2 · 1 · 3 · 3 | `SKIP` on this host (absent); the runner's `mtime_verdict` covers the case by arithmetic |
+| An in-repo "resume on limit" loop | Gap 3 | — | `MONITOR` — the operator's audit owns it; not this session's to add |
+
+**Micro-upgrades obtained this session** (the mother rule, over-satisfied and listed once):
+`screen_verdict.py` and seven screens that say what they screened; `self_test_coverage.py` with a
+write-refusing tracer; `attribution_census.py`; `lot_internal_edges.py`;
+`locator_contradiction_audit.py`; `dependency_integrity.py` and its manifest slot; `reacquire.py`
+with recipes and a tracked retrieval manifest; the runner's tracked-file guard with `mtime_verdict`;
+`record_number_provenance.py`; the versioned wrapper; the standing brief v2; four learned gates;
+the handoff repair. **The minimal one that is this closing's own:** the `bwrap` measurement — a
+capability the host already had, never named, that closes a gap two layers of Python could not.
+
+**What remains to audit.** MF-1 to MF-8 in
+`governance/candidates/2026-09-11_mirror_followup_tasks.md`, with `bwrap` now the recommended route
+for MF-1/MF-2. **Cost / API / privacy risk:** none — nothing external, nothing installed, no spend.
+**Next surgical micro-step:** `self_test_coverage.py --guarded` runs its command under
+`bwrap --ro-bind` when `bwrap` is present and says `UNGUARDABLE` when it is not; acceptance is the
+F1(d) fixture.
