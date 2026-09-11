@@ -7,13 +7,25 @@ regress silently, which is the coupling the commit exists to enforce.
 """
 from __future__ import annotations
 
+import json
+import subprocess
 import sys
+import tempfile
 import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import deepdive_manifest as dm  # noqa: E402
 import recapture_snippets as rc  # noqa: E402
+
+HERE = Path(__file__).resolve().parent
+ROOT = HERE.parents[1]
+SCRIPT = HERE / "recapture_snippets.py"
+
+
+def run_cli(*args: str) -> subprocess.CompletedProcess:
+    return subprocess.run([sys.executable, str(SCRIPT), *args], cwd=ROOT,
+                          capture_output=True, text=True, timeout=600)
 
 
 class TheJoinNoLongerFabricatesASpace(unittest.TestCase):
@@ -119,6 +131,112 @@ class TheReCaptureTakesTheAuthorsCharacters(unittest.TestCase):
         original = "the Wwox -null mouse showed no difference"
         span, _reason = rc.retake(original, self.TEXT)
         self.assertEqual(dm._match_key(span), dm._match_key(original))
+
+
+class TheCliIsDriven(unittest.TestCase):
+    """``main`` run as a process: dry run by default, ``--write`` persists, ``--pmid`` selects.
+
+    Until 2026-09-10 nothing here entered ``main`` or ``process``; the repair was tested on
+    strings, and whether the tool wrote a manifest it was told not to — the property that
+    matters for a tool that edits locators — was certified by no case (retrospective § 9.3).
+    """
+
+    BODY = ("<article><body><p>the <italic>Wwox</italic>-null mouse showed no difference "
+            "between groups (Fig. 2A) and then stopped</p></body></article>")
+
+    def setUp(self) -> None:
+        self.tmp = tempfile.TemporaryDirectory()
+        self.root = Path(self.tmp.name)
+        self.corpus = self.root / "files" / "fulltext"
+        self.corpus.mkdir(parents=True)
+        (self.corpus / "PMID11111111_Paper.xml").write_text(self.BODY, encoding="utf-8")
+        self.manifests = self.root / "disease-models/wwox/research/deepdive_manifests"
+        self.manifests.mkdir(parents=True)
+        self.manifest = self.manifests / "PMID11111111.json"
+        self.manifest.write_text(json.dumps({
+            "source_artifacts": [{"path": "files/fulltext/PMID11111111_Paper.xml",
+                                  "sha256": "x", "kind": "article_text"}],
+            "verbatim_locators": {"entries": [
+                {"surface": "body", "snippet": "the Wwox -null mouse showed no difference"},
+                {"surface": "body", "snippet": "and then stopped"},
+                {"surface": "figure", "snippet": "not a text surface at all"},
+            ]}}, indent=1), encoding="utf-8")
+        (self.manifests / "PMID22222222.json").write_text(json.dumps({
+            "source_artifacts": [], "verbatim_locators": {"entries": []}}), encoding="utf-8")
+
+    def tearDown(self) -> None:
+        self.tmp.cleanup()
+
+    def snippets(self) -> list[str]:
+        data = json.loads(self.manifest.read_text(encoding="utf-8"))
+        return [e["snippet"] for e in data["verbatim_locators"]["entries"]]
+
+    def test_the_default_is_a_dry_run_that_reports_and_writes_nothing(self) -> None:
+        before = self.manifest.read_bytes()
+        result = run_cli("--root", str(self.root))
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("PMID11111111", result.stdout)
+        self.assertIn("PMID22222222", result.stdout)
+        self.assertIn("entries[0]", result.stdout)
+        self.assertIn("WAS: the Wwox -null mouse", result.stdout)
+        self.assertIn("NOW: the Wwox-null mouse", result.stdout)
+        self.assertIn("1 re-taken · 0 refused", result.stdout)
+        self.assertIn("DRY RUN — pass --write", result.stdout)
+        self.assertNotIn("WROTE", result.stdout)
+        self.assertEqual(self.manifest.read_bytes(), before, "a dry run wrote the manifest")
+
+    def test_write_persists_exactly_the_retaken_snippet(self) -> None:
+        result = run_cli("--root", str(self.root), "--pmid", "11111111", "--write")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("WROTE PMID11111111.json", result.stdout)
+        self.assertNotIn("DRY RUN", result.stdout)
+        self.assertNotIn("PMID22222222", result.stdout, "--pmid must select one manifest")
+        self.assertEqual(self.snippets(), ["the Wwox-null mouse showed no difference",
+                                           "and then stopped", "not a text surface at all"])
+        again = run_cli("--root", str(self.root), "--pmid", "11111111")
+        self.assertIn("0 re-taken · 0 refused", again.stdout, "the repair must be idempotent")
+
+    def test_a_snippet_the_artifact_does_not_hold_is_refused_in_the_report(self) -> None:
+        data = json.loads(self.manifest.read_text(encoding="utf-8"))
+        data["verbatim_locators"]["entries"][0]["snippet"] = "words that are nowhere in it"
+        self.manifest.write_text(json.dumps(data), encoding="utf-8")
+        result = run_cli("--root", str(self.root), "--write")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertIn("REFUSED", result.stdout)
+        self.assertIn("0 re-taken · 1 refused", result.stdout)
+        self.assertNotIn("WROTE", result.stdout)
+
+
+class TheRealManifestsAreRead(unittest.TestCase):
+    """A dry run over a real manifest whose declared text artifact is on this host.
+
+    ``files/`` is gitignored, so the artifact may be absent; then the case is skipped and says
+    so. It never passes on a manifest whose text it could not open.
+    """
+
+    def test_a_dry_run_over_a_real_manifest_reports_and_writes_nothing(self) -> None:
+        manifests = ROOT / "disease-models/wwox/research/deepdive_manifests"
+        chosen = None
+        for path in sorted(manifests.glob("PMID*.json")):
+            try:
+                data = json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, ValueError):
+                continue
+            if rc.artifact_texts(ROOT, ROOT / "files" / "fulltext", data):
+                chosen = path
+                break
+        if chosen is None:
+            self.skipTest("skipped: no real manifest has its declared text artifact on this "
+                          f"host (files/ is gitignored; {len(list(manifests.glob('PMID*.json')))}"
+                          " manifests looked at)")
+        before = chosen.read_bytes()
+        result = run_cli("--root", str(ROOT), "--pmid", chosen.stem.removeprefix("PMID"))
+        self.assertEqual(result.returncode, 0, result.stderr[-2000:])
+        self.assertIn(chosen.stem, result.stdout)
+        self.assertRegex(result.stdout, r"\d+ re-taken · \d+ refused")
+        self.assertIn("DRY RUN — pass --write", result.stdout)
+        self.assertNotIn("WROTE", result.stdout)
+        self.assertEqual(chosen.read_bytes(), before, "a dry run wrote a real manifest")
 
 
 if __name__ == "__main__":
