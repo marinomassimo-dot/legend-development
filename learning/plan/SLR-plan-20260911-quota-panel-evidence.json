@@ -1,0 +1,280 @@
+{
+  "observed_at": "2026-09-11T10:44:48.384667+00:00",
+  "method": "read-only bundle inspection; UTF-8 character offsets, not byte offsets; no extension patching, no injected code, no live-session submission",
+  "versions": {
+    "2.1.267": {
+      "package.json": {
+        "sha256": "fa34ac47b48a7b165a21e1d92252a4997ff3d687741f67a064456aa4876b1362",
+        "bytes": 18440,
+        "contributed_commands": [
+          "claude-vscode.editor.open",
+          "claude-vscode.editor.openLast",
+          "claude-vscode.primaryEditor.open",
+          "claude-vscode.window.open",
+          "claude-vscode.createWorktree",
+          "claude-vscode.sidebar.open",
+          "claude-vscode.newConversation",
+          "claude-vscode.reopenClosedSession",
+          "claude-vscode.update",
+          "claude-vscode.focus",
+          "claude-vscode.blur",
+          "claude-vscode.logout",
+          "claude-vscode.terminal.open",
+          "claude-vscode.acceptProposedDiff",
+          "claude-vscode.rejectProposedDiff",
+          "claude-vscode.insertAtMention",
+          "claude-vscode.installPlugin",
+          "claude-code.acceptProposedDiff",
+          "claude-code.rejectProposedDiff",
+          "claude-code.insertAtMentioned",
+          "claude-vscode.showLogs",
+          "claude-vscode.toggleFocusView",
+          "claude-vscode.openWalkthrough",
+          "claude-vscode.markSessionUnread",
+          "claude-vscode.renameSessionTab",
+          "claude-vscode.addSessionTabToGroup"
+        ]
+      },
+      "extension.js": {
+        "sha256": "02b0bbf7a2daa3450324175823aa8d12d3a7c9ba0550cfd77aca7ffa65135713",
+        "bytes": 3293349,
+        "registered_literal_commands": [
+          "claude-vscode.acceptProposedDiff",
+          "claude-vscode.rejectProposedDiff",
+          "claude-vscode.terminal.open",
+          "claude-vscode.terminal.open.keyboard",
+          "claude-code.acceptProposedDiff",
+          "claude-code.rejectProposedDiff",
+          "claude-code.insertAtMentioned",
+          "type",
+          "claude-vscode.editor.open",
+          "claude-vscode.primaryEditor.open",
+          "claude-vscode.editor.openLast",
+          "claude-vscode.newConversation",
+          "claude-vscode.reopenClosedSession",
+          "claude-vscode.toggleDictation",
+          "claude-vscode.markSessionUnread",
+          "claude-vscode.renameSessionTab",
+          "claude-vscode.addSessionTabToGroup",
+          "claude-vscode.toggleFocusView",
+          "claude-vscode.sidebar.open",
+          "claude-vscode.window.open",
+          "claude-vscode.logout",
+          "claude-vscode.showLogs",
+          "claude-vscode.openWalkthrough",
+          "claude-vscode.installPlugin",
+          "claude-vscode.insertAtMention",
+          "claude-vscode.blur",
+          "claude-vscode.focus"
+        ],
+        "locators": {
+          "registerUriHandler": [
+            3270481
+          ],
+          "createPanel($,Q,J,X,z)": [
+            3189924
+          ],
+          "transportMessage($,Q,J)": [
+            2876299
+          ],
+          "rate_limit_event": [
+            2870098
+          ],
+          "onRateLimitWindows=": [
+            2930557,
+            3175659,
+            3197242,
+            3199999
+          ],
+          "function $k0(": [
+            3264049
+          ],
+          "module.exports=x0$(Kk0)": [
+            1007152
+          ]
+        }
+      },
+      "webview/index.js": {
+        "sha256": "f88e2ed4df1ef3ff536cc2b6d7c1f36f8d396af27ec0db51bb00c8db05a052c2",
+        "bytes": 5109375,
+        "locators": {
+          "setUsageLimitGrace($)": [
+            3471068
+          ],
+          "handleTaskUpdated($)": [
+            3502247,
+            3504432
+          ],
+          "handleTaskNotification($)": [
+            3502162,
+            3505739
+          ],
+          "async send($,J,Z,Y,X)": [
+            3466388
+          ],
+          "async launchClaude()": [
+            3468699
+          ],
+          "rate_limit_event": [
+            3502870
+          ],
+          "initialPrompt.value": [
+            3529219,
+            3529700,
+            5012573,
+            5012637,
+            5088381,
+            5106662,
+            5106942
+          ],
+          "sendInput(": [
+            3310461,
+            3467875
+          ]
+        }
+      },
+      "semantic_presence": {
+        "open_existing_prompt_refused": true,
+        "URI_open_session_prompt": true,
+        "initial_prompt_sets_input_only": true,
+        "terminal_task_states_remove_entry": true
+      }
+    },
+    "2.1.268": {
+      "package.json": {
+        "sha256": "657415272a28b3e3dfe0313993045bdfc5dcab7e51f14a9451c06d6874374385",
+        "bytes": 18656,
+        "contributed_commands": [
+          "claude-vscode.editor.open",
+          "claude-vscode.editor.openLast",
+          "claude-vscode.primaryEditor.open",
+          "claude-vscode.window.open",
+          "claude-vscode.createWorktree",
+          "claude-vscode.sidebar.open",
+          "claude-vscode.newConversation",
+          "claude-vscode.reopenClosedSession",
+          "claude-vscode.update",
+          "claude-vscode.focus",
+          "claude-vscode.focusLastMessage",
+          "claude-vscode.blur",
+          "claude-vscode.logout",
+          "claude-vscode.terminal.open",
+          "claude-vscode.acceptProposedDiff",
+          "claude-vscode.rejectProposedDiff",
+          "claude-vscode.insertAtMention",
+          "claude-vscode.installPlugin",
+          "claude-code.acceptProposedDiff",
+          "claude-code.rejectProposedDiff",
+          "claude-code.insertAtMentioned",
+          "claude-vscode.showLogs",
+          "claude-vscode.toggleFocusView",
+          "claude-vscode.openWalkthrough",
+          "claude-vscode.markSessionUnread",
+          "claude-vscode.renameSessionTab",
+          "claude-vscode.addSessionTabToGroup"
+        ]
+      },
+      "extension.js": {
+        "sha256": "cf62d3986fd90bfd03cdc89b07cabe5672f8c6cb03809573d1ed648e2dfb3fed",
+        "bytes": 3423417,
+        "registered_literal_commands": [
+          "claude-vscode.acceptProposedDiff",
+          "claude-vscode.rejectProposedDiff",
+          "claude-vscode.terminal.open",
+          "claude-vscode.terminal.open.keyboard",
+          "claude-code.acceptProposedDiff",
+          "claude-code.rejectProposedDiff",
+          "claude-code.insertAtMentioned",
+          "type",
+          "claude-vscode.editor.open",
+          "claude-vscode.primaryEditor.open",
+          "claude-vscode.editor.openLast",
+          "claude-vscode.newConversation",
+          "claude-vscode.reopenClosedSession",
+          "claude-vscode.toggleDictation",
+          "claude-vscode.markSessionUnread",
+          "claude-vscode.renameSessionTab",
+          "claude-vscode.addSessionTabToGroup",
+          "claude-vscode.toggleFocusView",
+          "claude-vscode.sidebar.open",
+          "claude-vscode.window.open",
+          "claude-vscode.logout",
+          "claude-vscode.showLogs",
+          "claude-vscode.openWalkthrough",
+          "claude-vscode.installPlugin",
+          "claude-vscode.insertAtMention",
+          "claude-vscode.blur",
+          "claude-vscode.focus",
+          "claude-vscode.focusLastMessage"
+        ],
+        "locators": {
+          "registerUriHandler": [
+            3400287
+          ],
+          "createPanel($,Q,J,X,z)": [],
+          "transportMessage($,Q,J)": [
+            3008526
+          ],
+          "rate_limit_event": [
+            3002298
+          ],
+          "onRateLimitWindows=": [
+            3071217,
+            3302842,
+            3326338,
+            3329336
+          ],
+          "function $k0(": [],
+          "module.exports=x0$(Kk0)": []
+        }
+      },
+      "webview/index.js": {
+        "sha256": "0d06a79b44ad76e86fad78517f60214b44c3fe32daf091d93e83ebcd3d2b77bf",
+        "bytes": 5144761,
+        "locators": {
+          "setUsageLimitGrace($)": [
+            3486137
+          ],
+          "handleTaskUpdated($)": [
+            3519323,
+            3521558
+          ],
+          "handleTaskNotification($)": [
+            3519238,
+            3522865
+          ],
+          "async send($,J,Z,Y,X)": [
+            3480453
+          ],
+          "async launchClaude()": [
+            3483653
+          ],
+          "rate_limit_event": [
+            3519946
+          ],
+          "initialPrompt.value": [
+            3546552,
+            3547090,
+            5045527,
+            5045591,
+            5121951,
+            5138806,
+            5138921,
+            5141712,
+            5142019
+          ],
+          "sendInput(": [
+            3311195,
+            3482055
+          ]
+        }
+      },
+      "semantic_presence": {
+        "open_existing_prompt_refused": true,
+        "URI_open_session_prompt": true,
+        "initial_prompt_sets_input_only": true,
+        "terminal_task_states_remove_entry": true
+      }
+    }
+  }
+}

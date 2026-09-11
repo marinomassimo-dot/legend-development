@@ -1,6 +1,6 @@
 {
   "TASK_ID": "HARNESS-QUOTA-RESUME-001",
-  "DIRECTIVE_VERSION": 1,
+  "DIRECTIVE_VERSION": 2,
   "GENERATION": 1,
   "OWNER": "plan",
   "ACTOR_ID": "plan",
@@ -14,7 +14,8 @@
   "SCOPE": [
     "desktop user settings: only autoContinueAtUsageLimit",
     "read-only runtime and settings audit",
-    "task-specific report and natural-event acceptance procedure"
+    "task-specific report and natural-event acceptance procedure",
+    "directive 2: independent panel handlers, exposed APIs and separate subagent recovery audit"
   ],
   "ACCEPTANCE_CRITERIA": [
     "preserve other settings and backup",
@@ -99,27 +100,29 @@
   },
   "CONFIGURATION_VERIFIED": true,
   "REAL_RESUMPTION_VERIFIED": false,
-  "GUI_COVERAGE": "UNSUPPORTED_BY_INSPECTED_NATIVE_PATH",
-  "RESIDUAL_BLOCKER": "No demonstrated supported mechanism to resume the same live VS Code panel without duplicate execution; native quota path requires interactive terminal.",
+  "GUI_COVERAGE": "NO_SUPPORTED_LIVE_PANEL_SUBMISSION_FOUND_IN_AUDITED_SURFACES",
+  "RESIDUAL_BLOCKER": "Public panel URI only pre-fills, and explicitly refuses applying a prompt to an already open tab. Registered commands/export/IDE MCP expose no identified supported submit endpoint. Panel rate-limit handlers inspected separately from CLI. No qualifying integration found for real test-chat continuation.",
   "REPORT": "learning/plan/SLR-plan-20260911-quota-resume.md",
   "MILESTONES_REACHED": [
     "M0: baseline and claim persisted",
     "M1: native user setting enabled, backed up and preserved",
-    "M2: installed runtime audit, native GUI limitation and natural-event test documented"
+    "M2: installed runtime audit, native GUI limitation and natural-event test documented",
+    "M3: independent panel audit and reproducible command/locator/hash evidence persisted"
   ],
   "CHECKPOINT": {
-    "CHECKPOINT_ID": "HARNESS-QUOTA-RESUME-001-M2",
+    "CHECKPOINT_ID": "HARNESS-QUOTA-RESUME-001-M3",
     "ACTOR_ID": "plan",
     "TASK_ID": "HARNESS-QUOTA-RESUME-001",
-    "DIRECTIVE_VERSION": 1,
+    "DIRECTIVE_VERSION": 2,
     "GENERATION": 1,
     "APPLICABLE_GOVERNANCE_FINGERPRINT": "8f982e981eef13fc2bb5b95c51a40eb7381c9c9952a9665a2aba03c308d48969",
-    "TIMESTAMP": "2026-09-11T10:11:31.113996+00:00",
+    "TIMESTAMP": "2026-09-11T10:47:56.448624+00:00",
     "DURABLE_POINTERS": [
-      "learning/plan/SLR-plan-20260911-quota-resume.md",
+      "learning/plan/SLR-plan-20260911-quota-panel-audit.md",
+      "learning/plan/SLR-plan-20260911-quota-panel-evidence.json",
       "ledger/tasks/plan/HARNESS-QUOTA-RESUME-001.json"
     ],
-    "RESUME_CONDITION": "A native version or documented API supports existing GUI sessions, or operator changes UI constraint. Natural-event observation remains pending; do not induce quota."
+    "RESUME_CONDITION": "Demonstrate supported same-live-panel submission or native panel waiting; keep GUI, test chat identity before any timer, verify Scientist separately."
   },
   "VALIDATION": {
     "LINT": "PASS",
@@ -130,6 +133,32 @@
     ],
     "isolated_transcribed_predicate_fixtures": "7 PASS, not product/backend tests",
     "local_node_attempt": "not executed: executable absent; no install",
-    "end_to_end": "NOT RUN; natural event pending"
-  }
+    "end_to_end": "NOT RUN; natural event pending",
+    "panel_audit": "Static/documentary trace, not live test",
+    "test_chat": "NOT RUN: no qualifying supported submit mechanism",
+    "subagent_resume": "Documented SendMessage capability; laboratory quota recovery NOT TESTED"
+  },
+  "DIRECTIVE_2": {
+    "timestamp": "2026-09-11T10:42:23.239770+00:00",
+    "origin": "OPERATOR",
+    "objective": "Audit panel independently of CLI gate, including exposed commands, limit handlers and supported same-session integration; prove test-chat continuity before any timer; separately verify subagent recovery.",
+    "constraints": "Keep VS Code panel; no clicks, extension patching or alternate infrastructure.",
+    "result": "Audit completed; no timer; objective remains unfulfilled under current demonstrated integration surface."
+  },
+  "CHECKPOINT_HISTORY": [
+    {
+      "CHECKPOINT_ID": "HARNESS-QUOTA-RESUME-001-M2",
+      "ACTOR_ID": "plan",
+      "TASK_ID": "HARNESS-QUOTA-RESUME-001",
+      "DIRECTIVE_VERSION": 1,
+      "GENERATION": 1,
+      "APPLICABLE_GOVERNANCE_FINGERPRINT": "8f982e981eef13fc2bb5b95c51a40eb7381c9c9952a9665a2aba03c308d48969",
+      "TIMESTAMP": "2026-09-11T10:11:31.113996+00:00",
+      "DURABLE_POINTERS": [
+        "learning/plan/SLR-plan-20260911-quota-resume.md",
+        "ledger/tasks/plan/HARNESS-QUOTA-RESUME-001.json"
+      ],
+      "RESUME_CONDITION": "A native version or documented API supports existing GUI sessions, or operator changes UI constraint. Natural-event observation remains pending; do not induce quota."
+    }
+  ]
 }

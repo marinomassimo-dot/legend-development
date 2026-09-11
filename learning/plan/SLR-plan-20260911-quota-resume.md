@@ -1,4 +1,9 @@
-# Ripresa dopo limite quota — configurazione verificata, GUI non coperta
+# Ripresa dopo limite quota — configurazione e primo audit del percorso nativo
+
+**Approfondimento successivo, direttiva 2:** [audit indipendente del pannello](SLR-plan-20260911-quota-panel-audit.md).
+La restrizione interattiva qui rilevata riguarda il percorso CLI nativo e, da sola,
+non dimostra il comportamento del pannello. Il secondo rapporto verifica comandi,
+URI, trasporto ed eventi del pannello e circoscrive il limite dell'integrazione.
 
 Data: 2026-09-11 UTC. ACTOR_ID: `plan`, ruolo assegnato dall'operatore:
 HARNESS ENGINEERING; runtime Codex; SESSION_PROFILE HARNESS.
