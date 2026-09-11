@@ -25,8 +25,12 @@ Prevent duplicate processing. Before any paper is ingested or deep-dived, classi
 Read:
 - `.claude/skills/legend-study-intake-triage/SKILL.md`
 - `.claude/skills/legend-study-intake-triage/references/matching_rubric.md`
-- `disease-models/<disease>/registries/paper_registry_current.md`
-- `disease-models/<disease>/registries/literature_tracking_log_current.md`
+- `disease-models/<disease>/registries/paper_registry_current.md` — **by record**:
+  `python3 framework/scripts/registry_records.py get --pmid <PMID> --hops 0`, which separates the
+  record whose identity is that PMID from a record that merely cites it. That distinction is the
+  whole job of a dedup pass, and grep cannot make it.
+- `disease-models/<disease>/registries/literature_tracking_log_current.md` — by record, same command.
+  Two records claiming one identifier come back as a named AMBIGUITY, never silently merged.
 - `the operational layer (private)inbox_current.md`
 - `disease-models/<disease>/research/full_text_queue_current.md`
 - `the operational layer (private)session_commit_log.md`

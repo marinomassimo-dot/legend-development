@@ -24,6 +24,12 @@ Paths are relative to the repo root.
    [operator manual §1](../../../framework/manuals/operator_manual.md#1-modalità-di-sessione):
    `HARNESS`, `MINIMAL`, `STANDARD` or `FULL`. Loads that profile's context; role alone does
    not choose a profile. If the task changes, applies the new profile before the new work.
+   🔴 **No profile below `FULL` loads `paper_registry_current.md` or
+   `literature_tracking_log_current.md` whole** (402 KB + 480 KB on 2026-09-11, growing at every
+   commit). Their relevant records come back entire, with provenance, from
+   `python3 framework/scripts/registry_records.py get --pmid <PMID> --hops 1`. The working model
+   and the claim registry are still loaded whole: they are the global state, and a claim a paper
+   contradicts may not be linked to that paper.
 6. Runs the structural LINT:
    `python3 framework/scripts/legend_lint.py .`
    LINT reads the canonical files from disk in every profile; its checks do not require

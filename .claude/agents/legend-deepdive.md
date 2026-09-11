@@ -13,7 +13,8 @@ Read, from the workspace root, before analysing:
 - `framework/protocols/ingest_protocol.md` and `the operational layer (private)inbox_current.md` — how a source enters the system
 - `the operational layer (private)session_commit_log.md` — the COMMIT CANDIDATE template you must fill
 - `framework/protocols/wikilink_schema.md` — link syntax and mandatory links
-- `disease-models/<disease>/registries/claim_registry_current.md`, `disease-models/<disease>/registries/working_model_current.md`, `disease-models/<disease>/registries/paper_registry_current.md` — for dedup and claim-impact
+- `disease-models/<disease>/registries/claim_registry_current.md` and `working_model_current.md` — whole, for claim-impact
+- the paper registry and the literature log **by record, never whole**: `python3 framework/scripts/registry_records.py get --pmid <PMID> --hops 1` returns the relevant records entire, separates an identity match from an incidental citation, and names ambiguities and unresolved links. Grep returns fragments, and a fragment is how a caveat dies
 - `framework/state/state_manifest_current.md` — current WM version and gates
 - the relevant `disease-models/<disease>/meta/meta_*_current.md` for the paper's pathway(s)
 Use Grep to check whether the paper (PMID/DOI/title) or its claims already exist before proposing anything.

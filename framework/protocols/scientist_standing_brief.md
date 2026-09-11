@@ -198,6 +198,25 @@ python3 framework/scripts/fulltext_receipts.py verify
 coverage map has no `not_read`; `reread_reason` is honest. A chain broken because a peer appended
 between your read and your write is re-read and re-appended — **never** edited.
 
+**M4b · the comparison, and it is a SEPARATE phase from the reading.** The blind first pass has
+the sources, the method and the technical packet, and no prior LEGEND conclusion about the paper
+(`scientist_reading_modes.md` § 3.1, § 3.3). Once the reading has landed — receipt written — the
+comparison opens, and there the laboratory's records are exactly what you need:
+
+```bash
+python3 framework/scripts/registry_records.py get --pmid <PMID> --hops 1
+```
+
+Whole records, never fragments: a caveat, a negative or a qualification cannot be lost in transit,
+which is the S3 defect (*"a caveat alive in prose and dead in a table"*) removed at the transport
+layer. It separates the record whose **identity** is your PMID from a record that merely **cites**
+it, names ambiguities and unresolved links instead of dropping them, and carries the digest of
+every source it read. Expand deliberately — `--hops 2`, `--theme <term>`, `--id "CLAIM nnn"` —
+when the comparison opens a question; do not load the two large registries whole.
+
+🔴 **An empty result is not a finding.** It exits non-zero and says so: it is a statement about
+that query over those files, never evidence that the laboratory does not know the paper.
+
 **M5 · dossier, candidate, ledger.** The dossier states what the paper establishes, what it does
 **not** support — the negative is the product, not the residue — design and limits, a figure audit
 table, horizontal impact on existing claims, and the transfer verdict toward the reference genotype.

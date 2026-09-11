@@ -98,6 +98,10 @@ PRIORITY_TESTS = (
     # The per-paper work packet and the one-call check run, with the firewall test that asserts
     # no claim, dossier or prior locator reaches a reading through them.
     "framework/scripts/test_paper_packet.py",
+    # Record-level access to the two large registries, with the Aqeilan adverse cases: identifier
+    # ambiguity, identity versus incidental mention, a caveat mid-record, expansion by hop, and
+    # an empty result that must not read as "the laboratory does not know this paper".
+    "framework/scripts/test_registry_records.py",
     # Three suites that passed standalone and were in no battery (2026-09-11 self-evaluation,
     # question 19): the OA-index dissent screen, the manifest flag-drift screen, the self-test
     # coverage meta-test.

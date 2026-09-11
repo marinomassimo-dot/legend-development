@@ -57,7 +57,21 @@ scientifico pertinente e caricarne il contesto. Le letture full-text, i receipt,
 - insight locale
 
 **Caricare**
-- 4 file current
+- `working_model_current.md` e `claim_registry_current.md` per intero (46 KB + 112 KB): sono lo
+  stato globale del modello, e una claim che il paper contraddice può non essere collegata al
+  paper — un recupero selettivo non può garantirlo
+- `paper_registry_current.md` e `literature_tracking_log_current.md` **per record, non per
+  intero**: 402 KB + 480 KB il 2026-09-11, che crescono a ogni commit. I record pertinenti si
+  ottengono interi con
+
+  ```bash
+  python3 framework/scripts/registry_records.py get --pmid <PMID> --hops 1
+  ```
+
+  che distingue l'identità del record dalle menzioni incidentali, restituisce ogni record intero
+  con percorso, identificativo e digest, risolve i collegamenti dichiarati, nomina ambiguità,
+  link irrisolti e ciò che ha escluso, e **non dichiara mai completezza scientifica quando non
+  trova nulla**. Un risultato vuoto esce con codice diverso da zero e lo dice a parole.
 
 **Non fare**
 - no meta
@@ -73,7 +87,10 @@ scientifico pertinente e caricarne il contesto. Le letture full-text, i receipt,
 - insight strutturati
 
 **Caricare**
-- 4 current
+- `working_model_current.md` e `claim_registry_current.md` per intero
+- `paper_registry_current.md` e `literature_tracking_log_current.md` **per record** —
+  `registry_records.py get`, come in § 1.1; ampliare con `--hops 2` o con `--theme` quando il
+  confronto apre una domanda nuova, ed è un ampliamento esplicito, non un preload
 - meta_index
 - meta rilevanti (solo quelle coinvolte)
 
@@ -91,7 +108,10 @@ scientifico pertinente e caricarne il contesto. Le letture full-text, i receipt,
 - cambio modello
 
 **Caricare**
-- tutti i file (tutti i layer)
+- tutti i file (tutti i layer). È l'unico profilo in cui il caricamento integrale dei due
+  registri grandi è la scelta giusta: la propagazione di un `BATCH_COMMIT` tocca record che
+  nessuna query conosce in anticipo. Fuori da questo profilo, il caricamento integrale è un
+  costo senza una domanda.
 
 **Fare**
 - commit completo
@@ -108,10 +128,15 @@ scientifico pertinente e caricarne il contesto. Le letture full-text, i receipt,
 # 2. FILE DA USARE (PRATICA)
 
 ## Core scientifico (MINIMAL / STANDARD / FULL; per HARNESS vedere §1.0)
-- working_model_current.md
-- claim_registry_current.md
-- paper_registry_current.md
-- literature_tracking_log_current.md
+- working_model_current.md — intero
+- claim_registry_current.md — intero
+- paper_registry_current.md — **per record** (`registry_records.py get`), intero solo in FULL
+- literature_tracking_log_current.md — **per record**, intero solo in FULL
+
+> I due registri grandi restano integri su disco e canonici: il recupero selettivo non li
+> riassume, non li riscrive e non crea un secondo registro. Ogni risposta è ricavata dal file
+> corrente al momento della chiamata e porta il digest della fonte, così una citazione
+> invecchiata è rilevabile.
 
 ## Meta (quando serve)
 - meta_index_current.md
@@ -231,7 +256,9 @@ Come verificare (Android):
 
 # 7. RECOVERY
 
-Se non sei sicuro, carica almeno i 4 current + meta_index, poi scrivi:
+Se non sei sicuro, carica `working_model_current.md`, `claim_registry_current.md` e
+`meta_index_current.md`, recupera i record pertinenti dei due registri grandi con
+`registry_records.py get`, poi scrivi:
 
 > "verifica coerenza tra i file caricati e dimmi se posso fare commit o serve riallineamento"
 

@@ -1,0 +1,104 @@
+{
+ "_schema": "LEGEND governance v3.1.1 · Annex A.1 TASK_ASSIGNMENT (operator-directed) + A.1b",
+ "TASK_ID": "ORCH-CONTEXT-REDUCTION-20260911",
+ "DIRECTIVE_VERSION": 1,
+ "GENERATION": 1,
+ "OWNER": "operator",
+ "ACTOR_ID": "orchestrator",
+ "OBJECTIVE": "Reduce the Scientists' context and repeated work while preserving scientific coverage, provenance, caveats and the independence of the blind first read. Minimum intervention, maximum measurable result.",
+ "CURRENT_STATE": "COMPLETE",
+ "assigned_on": "2026-09-11",
+ "closed_on": "2026-09-11",
+ "started_at_head": "e791b33",
+ "record": "disease-models/wwox/research/2026-09-11_registry_context_reduction.md",
+ "what_changed": {
+  "new": [
+   "framework/scripts/registry_records.py",
+   "framework/scripts/test_registry_records.py"
+  ],
+  "mandatory_loads_removed": [
+   "operator_manual.md 1.1 MINIMAL: 'caricare i 4 file current' -> the two large registries by record",
+   "operator_manual.md 1.2 STANDARD: same",
+   "operator_manual.md 2: the core file list now states per-record for both",
+   "operator_manual.md 7 RECOVERY: 'carica almeno i 4 current' -> model + claims + selective records",
+   "legend-start step 5: no profile below FULL loads either registry whole",
+   "legend-deepdive agent: paper registry by record",
+   "study-intake-triage agent: both registries by record"
+  ],
+  "kept_whole_on_purpose": [
+   "working_model_current.md",
+   "claim_registry_current.md"
+  ],
+  "phases_separated": "standing brief M4b: the comparison is a phase after the receipt, not part of the blind read",
+  "delegation_contract": "roles/orchestrator.md — what a subagent receives and what a verifier must never receive"
+ },
+ "measurement": {
+  "old_minimal_session_chars": 1066618,
+  "new_minimal_session_chars": 193093,
+  "reduction_pct": 82,
+  "per_paper_selective_chars_median": 33471,
+  "query_seconds": 0.2,
+  "papers_measured": [
+   "33914858",
+   "29724996",
+   "18460020",
+   "20146584",
+   "25411445",
+   "21115974",
+   "15070730"
+  ],
+  "limit": "characters carried, not provider-billed tokens; no scientific reading was run through the new path"
+ },
+ "independent_verification": {
+  "delegate": "general-purpose subagent, self-sufficient brief, no producer narrative or verdict",
+  "pass_1": "4 of 5 claims REFUTED over 22 PMIDs / 118 records: em-dash headings not boundaries; Source counted as identity (13 claims mislabelled); ambiguity keyed on the whole string (10 pairs missed); CORPUS P###/LIT-EX-### withheld as prose",
+  "pass_2": "6 of 6 CONFIRMED over 67 PMIDs, zero byte/label/presence differences; 2 further ambiguity misses found (bare PMID vs PMID+DOI) and repaired, plus a cosmetic DOI-digit leak in the key",
+  "lesson": "this file's own suite passed while four of five guarantees were false, because it asked the same question with the same splitter"
+ },
+ "DEFAULTS_TAKEN": [
+  {
+   "condition": "the manual's prescription and the observed behaviour disagree (mandated full load; zero Read calls in four transcripts, 24 ad-hoc Bash calls instead)",
+   "default_taken": "replace both with one deterministic record-level command and state the three epistemic statuses in the record",
+   "why_safe": "the prescription was costly and the habit returned fragments; whole records with provenance is strictly better than either",
+   "what_would_have_differed": "blessing grep would have kept the fragment risk that kills a caveat"
+  },
+  {
+   "condition": "the claim registry and the working model could receive the same treatment",
+   "default_taken": "evaluated separately and left loaded whole below FULL",
+   "why_safe": "they are the global state; a claim a paper contradicts may not be linked to that paper, so selective retrieval cannot promise to find it",
+   "what_would_have_differed": "a saving of 163 KB against a real risk of missing a contradiction"
+  },
+  {
+   "condition": "the first selective implementation measured WORSE than the baseline (602 KB and 689 KB against a 1,067 KB preload)",
+   "default_taken": "fix at the root by naming what is addressable, not by capping the output",
+   "why_safe": "a cap is silent truncation with a better name, and the mandate forbids it",
+   "what_would_have_differed": "a tool that hid what it dropped"
+  },
+  {
+   "condition": "one targeted delegation was authorised for implementation and independent verification",
+   "default_taken": "spend it entirely on verification, in two passes against the same brief; implement in-session",
+   "why_safe": "the implementation was small and the verification found four real defects the local suite could not",
+   "what_would_have_differed": "four defects shipped green"
+  }
+ ],
+ "STOP_LOG": [],
+ "ATTRIBUTION_CENSUS": {
+  "incidents": 7,
+  "machine": 1,
+  "blind_auditor": 6,
+  "peer": 0,
+  "self": 0,
+  "severity_high": 4,
+  "severity_high_of_which_self": 0,
+  "undetected_known": 0,
+  "note": "the six blind-auditor catches are the independent verifier's two passes; the machine catch is the em-dash regression surfacing in the local suite after the fix. Zero self-caught: the local suite agreed with the tool because it shared its splitter, which is the finding."
+ },
+ "two_known_reds": "unchanged and not weakened: test_batch_queue 80 vs 59 (operator's BATCH_COMMIT), test_surface_census (gitignored evidence). Re-run and quoted verbatim in the session record.",
+ "battery_and_publication": {
+  "battery": "107 suites, FAIL on exactly the two inherited reds",
+  "lint": "PASS",
+  "growth_anchors": "PASS",
+  "receipts": "OK 156 chained",
+  "gate": "PASS"
+ }
+}

@@ -230,6 +230,31 @@ Before a Task Contract is issued for a lot:
    closing report that exists only in a message to this actor is written verbatim into durable
    state with its source noted — §21c's own safe default, applied to the coordinator.
 
+## The delegation brief — what a subagent receives, and what it must not
+
+A delegated task inherits nothing by default and should inherit nothing by accident. What is
+passed is a **self-sufficient brief**: the question, the sources it may read, the constraints, and
+the shape of the result. Not the conversation, not the reasoning that led here, and — when the
+delegate's job is to check something — not what the producer concluded.
+
+| Pass | Never pass |
+|---|---|
+| the question, stated so it can be answered without context | the transcript, or a summary of it |
+| the exact files or commands the task may use | "read whatever you need" |
+| the constraints: read-only, no state change, no model change | an open mandate |
+| the result format, section by section | "report back" |
+| for a verifier: the sources and the propositions to check | the producer's narrative, verdict or confidence |
+
+🔴 **An auditor that reads the producer's conclusion is no longer independent**, and independence
+is the only thing the audit is buying. The 2026-09-09 sweep's two blind audits corrected 7 of 13
+and 6 of 10 triples and found an unsupported clinical claim the reading had walked past; they were
+given triples and a source, and nothing else. A verifier of harness work follows the same rule:
+name the claim under test, give it the files, and let it build its own expected answer first.
+
+Delegate a concrete subtask that pays for its own cost. Deterministic work belongs in software,
+not in an agent. Avoid wide fan-out, recursive chains and polling. During a measured experiment,
+do not change models between conditions: an effect you cannot attribute is not a measurement.
+
 ## Fingerprint set
 
 `CORE` plus Annex C, Annex D, Annex F, Annex G, Annex I, Annex J § J.1 and Annex J § J.4

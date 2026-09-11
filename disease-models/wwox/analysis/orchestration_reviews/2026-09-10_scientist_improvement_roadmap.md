@@ -97,6 +97,27 @@ per commit message.
 | The 53 cross-date undeclared locator revisions in history | a review queue, not 53 defects | the next wave reads its own paper's entries from `--history --json`; a revision that was a contradiction gets a retroactive `contradicts_locator` + audit, one that was re-anchoring gets nothing |
 | Three test files not in the battery | one line each | next harness session |
 
+## 4b · Context and repeated work — the operator's roadmap of 2026-09-11
+
+Priorities 1 and 2 of that roadmap landed as one pilot (`paper_packet.py`, `e791b33`): the
+technical state a reading used to re-derive now arrives in one command, and the paper's checks run
+in one call. The priority the operator ranked first after it — **targeted registry access** —
+landed on 2026-09-11 as `registry_records.py`, with the full record in
+[`2026-09-11_registry_context_reduction.md`](../../research/2026-09-11_registry_context_reduction.md).
+
+| # | Item | State |
+|---|---|---|
+| 1 | per-PMID work packet | **landed** `e791b33` |
+| 2 | one command for the paper's checks | **landed** `e791b33` |
+| — | targeted registry access, replacing the full preload of the two large registries | **landed** 2026-09-11; MINIMAL session carries 1,066,618 → 193,093 characters |
+| 3 | load specialist procedures only when needed | open — the packet's `applicable_checks` is the natural hook |
+| 4 | reuse valid acquisitions and extractions | partly served by the packet's acquisition history; the replay decision is still the reader's |
+| 5 | incremental synthesis over new evidence and linked records | open — and `registry_records.py --hops` is its retrieval half |
+
+What the registry change did **not** do, and deliberately: it did not touch the claim registry or
+the working model, which stay loaded whole below `FULL` because a claim a paper contradicts may not
+be linked to that paper.
+
 ## 5 · Scientific queue (acquisitions and reading debt)
 
 ### 5.1 · PMID 33914858 (Repudi 2021, *Brain*) — **still absent; needs the operator's browser**
