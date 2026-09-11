@@ -33,6 +33,10 @@ PRIORITY_TESTS = (
     "scripts/test_provenance_coverage.py",
     "scripts/test_freeze_scope.py",
     "scripts/test_release_runner_verdict.py",
+    # The runner names any suite that writes a tracked file under a guarded tree -
+    # 54 dossiers were overwritten during an unattended battery on 2026-09-10 and
+    # nothing could say by which suite. Enrolled beside the verdict suite it extends.
+    "scripts/test_release_runner_guard.py",
     "scripts/test_repository_surface_determinism.py",
     "scripts/test_locator_obligation_reaches_every_route.py",
     "scripts/test_no_closed_world_assertions_on_live_state.py",
@@ -195,6 +199,39 @@ def format_success_verdict(target_count: int,
     return lines
 
 
+
+# Trees a regression suite may READ and must never WRITE. On 2026-09-10, during an
+# unattended run, 54 tracked dossiers under disease-models/ were overwritten with the seven
+# bytes "touched" while three suites were being exercised, and no suite, tool or transcript
+# contained that literal. The runner had no way to say which suite did it, because it
+# measured exit codes and nothing else. It now hashes every tracked file under these trees
+# before the battery and after each suite; a suite that changes one is named in the output
+# and fails the verdict on its own, whatever its exit code. Cheap: one `git ls-files -s`
+# per suite, index-side, no content read.
+GUARDED_TREES = ("disease-models", "governance", "roles", "framework/protocols",
+                 "framework/instruction", "framework/state", "learning", "ledger")
+
+
+def tracked_state(trees: tuple[str, ...], root: Path = ROOT) -> dict[str, str]:
+    """{path: blob-or-worktree hash} for every tracked file under the guarded trees.
+
+    `git ls-files -s` reports the INDEX blob, which does not move when the working tree is
+    written, so the working tree is hashed through `git hash-object --stdin-paths`: what a
+    suite wrote is what a later commit would carry, and that is the thing to detect.
+    """
+    listing = subprocess.run(
+        ["git", "ls-files", "-z", "--", *trees], cwd=root,
+        stdout=subprocess.PIPE, text=True, check=False).stdout
+    paths = [p for p in listing.split("\0") if p]
+    if not paths:
+        return {}
+    hashed = subprocess.run(
+        ["git", "hash-object", "--stdin-paths"], cwd=root, input="\n".join(paths) + "\n",
+        stdout=subprocess.PIPE, stderr=subprocess.DEVNULL, text=True, check=False).stdout
+    digests = hashed.split("\n")
+    return {path: digest for path, digest in zip(paths, digests)}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Run the complete public-release regression inventory."
@@ -233,6 +270,8 @@ def main() -> int:
 
     failures = []
     skips: list[tuple[str, str]] = []
+    writers: list[tuple[str, list[str]]] = []
+    baseline = tracked_state(GUARDED_TREES)
     for relative in selected:
         print(f"RUN {relative}", flush=True)
         result = subprocess.run(
@@ -240,12 +279,25 @@ def main() -> int:
             stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
         sys.stdout.write(result.stdout)
         sys.stdout.flush()
+        after = tracked_state(GUARDED_TREES)
+        if after != baseline:
+            changed = sorted(set(after.items()) ^ set(baseline.items()))
+            paths = sorted({path for path, _ in changed})
+            writers.append((relative, paths))
+            print(f"TRACKED_FILES_WRITTEN_BY_SUITE {relative}: {len(paths)} path(s)",
+                  flush=True)
+            for path in paths[:20]:
+                print(f"  wrote {path}", flush=True)
+            baseline = after
         skips.extend((relative, reason) for reason in extract_skip_reasons(result.stdout))
         if result.returncode:
             failures.append((relative, result.returncode))
 
-    if failures:
+    if failures or writers:
         print("REGRESSION VERDICT: FAIL", file=sys.stderr)
+        for relative, paths in writers:
+            print(f"- {relative}: WROTE {len(paths)} tracked file(s) under a guarded tree",
+                  file=sys.stderr)
         for relative, returncode in failures:
             print(f"- {relative}: exit {returncode}", file=sys.stderr)
         return 1
