@@ -49,7 +49,7 @@ Every number below was produced by a command run in this session; the command is
 
 | Measure | Value | Command |
 |---|---|---|
-| Historical near-errors now refusable by a machine on their own fixture | **5 of 6** counted from the JSONL rows whose `improvements` carry a `collaudato` status on the incident's fixture (NE-1 declared half, NE-2, NE-4 as WARN, NE-5, NE-6); NE-3 needs the audit | `data/2026-09-10_scientist_incident_controls.jsonl`; this file § 1–3 |
+| Historical near-errors now refusable by a machine on their own fixture | **5 of 6** — counted from `data/2026-09-10_scientist_incident_controls.jsonl` (rows written by `deepdive_manifest.py`-, `test_screen_exit_codes.py`- and `test_derived_inputs.py`-backed fixtures) of rows whose `improvements[].status` contains `collaudato` (NE-1 declared half, NE-2, NE-4 as WARN, NE-5, NE-6); NE-3 needs the audit | `data/2026-09-10_scientist_incident_controls.jsonl`; this file § 1–3 |
 | Correct cases wrongly refused | **0** observed: four live surfaces regenerated BOUND and byte-identical; 186 + 20 + 11 + 7 validator/audit/guard/screen tests green; the review fixture `AGREES` | suites named above |
 | Cases left unexaminable, named as such | history without git → exit 3; guard without git → UNBOUND; screens over nothing → exit 2 | — |
 | Additional verification cost | `--working-tree` over 81 manifests: under 2 s; `--history`: ~40 s (125 `git show` pairs); the guard: one `git status` per write | timed in session |
@@ -58,4 +58,4 @@ Every number below was produced by a command run in this session; the command is
 
 ## 5 · Battery, gate, publication
 
-Filled by the closing commit — see the task record `ledger/tasks/orchestrator/ORCH-SCIENTIST-IMPROVEMENT-20260911.json`.
+Release battery at `7e6e58c` (`scripts/run_release_regressions.py`): `FAIL` on exactly the two inherited reds — `test_batch_queue` (ratchet; operator's `BATCH_COMMIT`) and `test_surface_census` (gitignored evidence) — over 105 suites (103 at baseline + `test_screen_exit_codes.py`, `test_derived_inputs.py`); nothing green before is red after. `legend_lint.py .` PASS; `growth_anchors.py check` PASS; `fulltext_receipts.py verify` OK 156. Gate and push on the final SHA: task record `battery_and_publication`.

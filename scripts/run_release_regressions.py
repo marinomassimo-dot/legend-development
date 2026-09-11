@@ -95,6 +95,12 @@ PRIORITY_TESTS = (
     # Derived surfaces bind to committed inputs or refuse (2026-09-09 C22): the guard and the
     # generator entry point that carries it, in a throwaway git repository.
     "framework/scripts/test_derived_inputs.py",
+    # Three suites that passed standalone and were in no battery (2026-09-11 self-evaluation,
+    # question 19): the OA-index dissent screen, the manifest flag-drift screen, the self-test
+    # coverage meta-test.
+    "framework/scripts/test_oa_status_dissent.py",
+    "framework/scripts/test_manifest_flag_drift.py",
+    "framework/scripts/test_self_test_coverage.py",
     "framework/scripts/test_dependency_integrity.py",
     "framework/scripts/test_benchmark_input_surface.py",
     "framework/scripts/test_regenerate_adjudications.py",

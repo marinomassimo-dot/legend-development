@@ -24,7 +24,7 @@ Other documents link here; nothing is decided twice.
 | identity | the previous orchestrator task carries the same objective; this session continues it as `orchestrator` — assumed, not inferred from the directory, and named as an assumption in the task record |
 | live actors / owners | no open task in `ledger/tasks/*` besides Mirror's queued follow-ups (`MF-1…8`); no peer session; nothing of another actor's in flight |
 | remotes | `origin` and `development` → the same URL; push rule §21d applies |
-| publication gate | **BLOCK** at `HARNESS-ACQREC-001.json:215` on the literal `someone@example.org` inside a sentence describing a test fixture — repaired (`0c90fbe`) |
+| publication gate | **BLOCK** at `HARNESS-ACQREC-001.json:215` on an e-mail-shaped fixture literal (someone at example dot org) quoted inside a sentence describing a test fixture — repaired (`0c90fbe`) |
 | release battery baseline | `FAIL` on exactly the two declared reds (`test_batch_queue` ratchet, `test_surface_census` gitignored evidence) |
 
 Already completed before this session (verified in code, not from reports): P1, P2, P3, H2, §9.1–9.8
@@ -161,5 +161,4 @@ written there. `identity_correction`: no regression found — `reading_state.py`
 
 ## 8 · Integration and publication
 
-Commits on `main`: `db35127`, `de3628b`, `4810628`, `0c90fbe`, plus this record's commit. Battery,
-gate and push results are in the pilot results file § 5 and the task record.
+Commits on `main`: `db35127`, `de3628b`, `4810628`, `0c90fbe`, plus this record's commit. Battery: `FAIL` on exactly the two inherited reds — `test_batch_queue` (ratchet; operator's `BATCH_COMMIT`) and `test_surface_census` (gitignored evidence) — over 105 suites (103 at baseline + `test_screen_exit_codes.py`, `test_derived_inputs.py`); nothing green before is red after. Gate and push: task record `battery_and_publication`.

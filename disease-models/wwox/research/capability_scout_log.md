@@ -553,3 +553,35 @@ for MF-1/MF-2. **Cost / API / privacy risk:** none — nothing external, nothing
 **Next surgical micro-step:** `self_test_coverage.py --guarded` runs its command under
 `bwrap --ro-bind` when `bwrap` is present and says `UNGUARDABLE` when it is not; acceptance is the
 F1(d) fixture.
+
+---
+
+## 2026-09-11 (afternoon) — capability scout, `orchestrator`, re-issued Scientist mandate
+
+**Environment preflight (this host):** `git` 2.x, Python 3.12.3, `bwrap` present (measured this
+morning), no network call made by any tool landed today; nothing installed, no spend.
+
+**Gaps this session measured, in the order they hurt:**
+
+1. The undeclared in-place locator rewrite had no signal at all until read as a diff — closed today
+   for committed history and for the working tree (`de3628b`); still open for a rewrite that
+   precedes a manifest's first commit.
+2. A relation entry carries no experimental context, so a cross-cell-line bridge (NE-3) is invisible
+   to every check — OPEN; the field is specified in the roadmap § 4.
+3. Three passing suites were outside the battery — closed in this closing commit.
+4. `session_self_eval.py` executes none of the standalone screens (genre, erratum, OA dissent, flag
+   drift) — the brief names them; nothing runs them — OPEN, one candidate below.
+
+**Candidates, scored (case fit · LEGEND fit · novelty · maturity · cost-inverted).**
+
+| Candidate | What it closes | Score | Verdict |
+|---|---|---|---|
+| `git log -p` as the detector's substrate (done) | gap 1: the file cannot show what changed; history can | 3 · 3 · 2 · 3 · 3 | `ADOPTED` (`locator_contradiction_audit.py --history`) |
+| `git status --porcelain` as the derivation guard (done) | C22: inputs bound to a commit or refused | 3 · 3 · 2 · 3 · 3 | `ADOPTED` (`derived_inputs.py`) |
+| `experimental_context` on coupled relations + WARN on discordant system | gap 2 | 3 · 3 · 2 · 2 · 3 | `TRIAL` next session (3 h; fixture 15070730 Fig 6/5) |
+| a `screens` step in `session_self_eval.py` running the four standalone screens over the session's manifests and summing their INSUFFICIENT_DATA/REFUSED | gap 4 | 2 · 3 · 1 · 3 · 3 | `TRIAL` next harness session |
+| biomedical relation-extraction models (`MANIFEST.md`, all `DESCRIBED`) to fill `experimental_context` | gap 2 by extraction | 2 · 1 · 2 · 1 · 1 | `REJECT` for this: an extracted value is an unverified value (NE-4's class); the reader authors the field with the document open |
+
+**Micro-upgrade obtained this session (the mother rule):** the three enrolled suites; plus the
+tool-level ones listed in the pilot results. **Cost / API / privacy risk:** none.
+**Next surgical micro-step:** the `experimental_context` WARN, with 15070730 as the fixture.

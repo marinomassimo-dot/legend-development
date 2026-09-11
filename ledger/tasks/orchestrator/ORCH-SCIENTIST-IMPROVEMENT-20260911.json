@@ -144,5 +144,11 @@
    }
   ]
  },
- "battery_and_publication": "filled at close — see the last commit of this task"
+ "battery_and_publication": {
+  "battery_at": "7e6e58c",
+  "battery": "`FAIL` on exactly the two inherited reds — `test_batch_queue` (ratchet; operator's `BATCH_COMMIT`) and `test_surface_census` (gitignored evidence) — over 105 suites (103 at baseline + `test_screen_exit_codes.py`, `test_derived_inputs.py`); nothing green before is red after",
+  "gate": "BLOCK at 7e6e58c on the roadmap's own e-mail-shaped literal (repaired in the closing commit); PASS required on the pushed SHA — filled below after the push",
+  "push": "pending"
+ },
+ "self_evaluation": "disease-models/wwox/research/session_evaluations/2026-09-11_orchestrator_scientist_improvement_afternoon.md"
 }
