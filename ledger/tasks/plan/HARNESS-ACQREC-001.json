@@ -1,0 +1,220 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.2 TASK_ACK + A.3 TASK_CLAIM",
+  "_note": "Harness Engineering work under LEGEND_CORE §21e (T0, no gate, no Mirror precondition). DEFAULTS_TAKEN and STOP_LOG are recorded HERE, not only in the final message (retrospective § 9.7).",
+  "TASK_ID": "HARNESS-ACQREC-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+  "TASK_ACK": {
+    "state": "COMPLETE_PENDING_COMMIT",
+    "accepted_on": "2026-09-10",
+    "objective": "D1: the dependency-integrity screen becomes an optional manifest slot `retraction_check.dependencies` (shape-checked when present, [DECLARED GAP] when absent), emitted verbatim by `dependency_integrity.py screen --manifest-block`. D2: census P2 — an `acquisition_recipe` per source artefact, `reacquire.py` that replays a recipe and diffs the digest with verdicts that say what they did, a versioned home for the retrieval outcome, a declaredly incomplete back-fill, and the two predicted partial failures measured as dated FAILED with a named cause.",
+    "specification": "governance/candidates/2026-09-09_sweep_capability_comparison.md § 2 P2; disease-models/wwox/analysis/orchestration_reviews/2026-09-09_actor_retrospective.md § 6.1 S7, § 6.3 H6, § 8.2; orchestration record 2026-09-10 § 2",
+    "interaction_mode": "AUTONOMOUS_COMPLETE",
+    "review_requirement": "none — harness is T0 under §21e; Mirror reviews ex post and on request"
+  },
+  "TASK_CLAIM": {
+    "claimed_by": "plan",
+    "claimed_on": "2026-09-10T22:23:42Z",
+    "durable_pointer": "framework/scripts/reacquire.py, framework/scripts/deepdive_manifest.py, framework/scripts/dependency_integrity.py",
+    "uniqueness": "no competing claim exists for this TASK_ID + GENERATION"
+  },
+  "WRITE_PERIMETER": {
+    "permitted_here": [
+      "framework/scripts/deepdive_manifest.py",
+      "framework/scripts/test_deepdive_manifest.py",
+      "framework/scripts/dependency_integrity.py",
+      "framework/scripts/test_dependency_integrity.py",
+      "framework/scripts/reacquire.py",
+      "framework/scripts/test_reacquire.py",
+      "framework/protocols/fulltext_read_receipt.md",
+      ".gitignore",
+      "disease-models/wwox/research/retrieval_manifest.jsonl",
+      "framework/scripts/session_self_eval.py (the two [DECLARED GAP] lines only)",
+      "requirements-analysis.txt",
+      "environment-md.yml (coordinator clarification, PyMuPDF pin)",
+      "scripts/run_release_regressions.py (one enrolment line per new suite)",
+      "ledger/tasks/plan/HARNESS-ACQREC-001.json"
+    ],
+    "deliberately_not_touched": {
+      "framework/scripts/legend_handoff.py, test_legend_handoff.py, framework/protocols/cross_host_handoff.md": "peer (HARNESS-HANDOFF-001)",
+      "framework/scripts/self_test_coverage.py and every other test_*.py": "peer (HARNESS-SELFTEST-001)",
+      "framework/protocols/scientist_*.md, .claude/skills/": "orchestrator",
+      "framework/scripts/evidence_presence.py": "peer-shipped; read-only input to the measurements here"
+    }
+  },
+  "BASELINE_BEFORE_CHANGE": {
+    "release_battery": "REGRESSION VERDICT: FAIL on 4 suites at 4840f72 + peers' uncommitted files: test_batch_queue, test_legend_handoff, test_surface_census (the three named inherited reds) AND scripts/test_locator_obligation_reaches_every_route.py — framework/protocols/scientist_standing_brief.md lacks the verbatim-locator obligation; orchestrator's file, in flight this afternoon; REPORTED, NOT FIXED",
+    "evidence_presence": "81 manifests | 616 artefacts | 218 present | 398 absent | 0 digest_mismatch | 0 no_digest — re-derived on this host, matches the census",
+    "versioned_artefacts": "git ls-files files/ -> 0 (files/ is gitignored at .gitignore:7)",
+    "pymupdf": "installed 1.28.2 (import fitz, re-derived); receipts carry 1.26.5 (PMID42397075/PMID42128308 partial locators, PMID38182577.json renderer); pinned in no requirements file before this task; pdftotext 24.02.0 present",
+    "retrieval_manifest": "files/fulltext/_retrieval_manifest.jsonl does not exist on this host; promised by .gitignore:81 (a comment) and .claude/skills/find-fulltext/SKILL.md:37,164",
+    "provenance_in_notes": "112 of 616 artefact notes carry any acquisition hint; 35 name a route or URL explicitly (efetch / Europe PMC fullTextXML / pdf=render / pmc_pow_fetch / cdn blob URL)",
+    "network_probe_2026-09-10": "efetch db=pmc id=2832309 with no UA: 200, 129132 B, digest == declared 79f522bb… on two consecutive fetches; PMC /bin/ figure asset: 200 + reCAPTCHA page under none/browser/identified UA; PMC /pdf/: 200 + reCAPTCHA; OUP awab174.pdf: 403 server=cloudflare cf-ray present; Europe PMC fullTextXML PMC2832309: 404 as recorded"
+  },
+  "COMMITS": [],
+  "MEASUREMENTS": {
+    "D1_dependency_slot": {
+      "before": "retraction_check carried {checked,result} and 10 other legacy shapes; no manifest could say at reading time whether its reagents descend from flagged work; dependency_integrity.py had no per-PMID emitter",
+      "after": "screen --pmid <PMID> --manifest-block emits the block; validator shape-checks it when present (natures never collapsed, UNSCREENABLE never clean, counts must add up, placeholder citing_relation refused); absent -> [DECLARED GAP] on 69 of the complete-read manifests, 0 blocks; 0 of 81 manifests declare it today (history not rewritten)",
+      "real_case": "PMID 18460020: 50 declared / 36 screened / 14 UNSCREENABLE_NO_DOI / 1 FLAGGED_EXPRESSION_OF_CONCERN (10.1073/pnas.0505485102) / 1 NOTED_CORRECTION kept apart; pasted into the real manifest it is refused until citing_relation is stated, then validates (test_the_emitted_block_validates_once_the_relation_is_stated)",
+      "mutation_matrix_validator": "6/6 caught: collapse natures; UNSCREENABLE reads screened; CLEAN over 0 screened; placeholder relation accepted; count arithmetic dropped; absence gap silenced",
+      "mutation_matrix_emitter": "3/3 caught (M14-M16): noted folded into flagged; citing_relation filled by the tool; unscreenable counts dropped; battery now 16 named invariants"
+    },
+    "D2_acquisition_recipe": {
+      "census_numbers_rederived": "81 manifests / 616 artefacts / 218 present / 398 absent / 0 mismatch (matches '0 of 616' and '398 absent'); PyMuPDF 1.28.2 installed vs 1.26.5 in receipts (matches); pinned in no requirements file (confirmed) -> now PyMuPDF==1.28.2 in requirements-analysis.txt and pymupdf=1.28.2 in environment-md.yml",
+      "validator": "acquisition_recipe shape-checked when present (fetch: url without '@', method, tier, UA policy in {none,identified,browser_like}, date; derived: derived_from another declared artefact + extractor {name,version,call}; result_sha256 if repeated must equal the entry's); absent -> one [DECLARED GAP] per manifest counting artefacts; {no_recipe: reason} accepted and counted; 66 of the complete-read manifests carry the gap, 0 blocks",
+      "mutation_matrix_validator": "6/6 caught: '@' in URL admitted; extractor version dropped; foreign result digest accepted; gap silenced; derived_from self/undeclared accepted; UA policy set widened",
+      "reacquire_mutation_matrix": "12/12 caught: mismatch->RECOVERED; Cloudflare cause dropped; reCAPTCHA blind; publisher change labelled TAMPERED; none-policy sends a UA; NO_RECIPE->FAILED; foreign file overwritten; address on the wire; drift collapsed; host version dropped from drift; route invented from a bare PMCID; ledger truncated",
+      "versioned_home": "disease-models/wwox/research/retrieval_manifest.jsonl (tracked, append-only); .gitignore:81 comment repointed and says why; 0 -> 621 lines",
+      "backfill_ratio": "29 / 616 artefacts (4.7%) have a route the note shows (efetch+PMCID 4, Europe PMC fullTextXML 3, pdf=render 2, quoted URL/CDN 15, pmc_pow from PMC URL-form-inferred 3, derived call+join stated 2); 587 NO_RECIPE with reason class: figure_note_names_no_route 343, no_note 114, figure_render_parameters_not_on_the_entry 70, figure_pmcid_only_asset_url_unrecorded 29, pmcid_only_route_unstated 12, pow_route_named_url_not_recorded 6, note_names_no_route 5, derived_extractor_unstated 3, derived_source_undeclared 3, derived_join_unstated 2; + 3 prose-derived lines (33914858 from 2026-09-09 § 6.1 + OpenAlex; 20146584 x2 from the XML deposit hrefs); no manifest edited",
+      "replay_all_recipe_bearing_2026-09-11": "32 targets: RECOVERED 26 / FAILED 3 / NO_RECIPE 0 / DRIFT_OR_DIFFERS 3 — EXTRACTOR_DRIFT 2 (pdftotext unstated -> 24.02.0), DIGEST_DIFFERS_SAME_ROUTE 1 (PMID15070730 PMC HTML, dynamic page; the note already said the container digest moves), FAILED_HTTP_403_CLOUDFLARE 1 (33914858, cf-ray present), FAILED_HTTP_404 2 (20146584 /bin/ names from the deposit hrefs)",
+      "replay_sample_over_the_398_absent": "RECOVERED 9 / FAILED 0 / NO_RECIPE 389 / DRIFT 0 — the 9 are PMID 22634283's figures from quoted CDN blob routes, written byte-identical; evidence_presence 218 present -> 227, 398 absent -> 389, digest_mismatch still 0",
+      "predicted_partial_failures": "33914858 -> FAILED_HTTP_403_CLOUDFLARE, dated 2026-09-11, recorded (as predicted). 20146584 -> the census predicted reCAPTCHA; measured: the deposit-named /bin/ assets are HTTP 404 today (the reCAPTCHA is real — measured 2026-09-10 as 200-with-challenge on /bin/ for a different name under every UA policy, and on /pdf/ with no UA), and the article HTML names CDN blob routes that served both figures with no challenge: 39,493 B and 36,036 B, image/jpeg, recorded as `acquisition` lines with digests and saved under files/figures/PMID20146584/ — declaring them is the scientist's reading act, not done here",
+      "ua_policy_measured": "PMC /pdf/ with no UA -> 200 reCAPTCHA page; the same PDFs through pmc_pow_fetch.py (identified UA) -> POW interstitial solved -> RECOVERED (16223882, 18460020, 28373548). The 2026-09-09 'send no UA' workaround holds for efetch and the article HTML, not for /pdf/",
+      "warc": "NOT adopted as a component. wget 1.21.4 with --warc is on this host, but a WARC contains the copyrighted bytes and lives under files/, so it is lost with everything else; the retrieval manifest already carries the HTTP status, content-type, bytes, digest, UA policy and date per replay, which is the provenance a WARC would add minus the bytes. No measurement was run because the property that decides it (where the bytes live) is structural, not empirical"
+    },
+    "not_managed": [
+      "derived figure renders (70 artefacts) whose dpi lives only in locator anchors or figure_extractions blocks: a recipe could be assembled by joining those blocks, but the join is inference over another actor's reading and was left NO_RECIPE with its reason class",
+      "pmc_pow_fetch supplements (6) whose PMC instance URL was never recorded",
+      "the 15070730 HTML DIGEST_DIFFERS case is not resolved into a stable surface — a dynamic page has no stable digest by this route",
+      "run_release_regressions.py enrolment line: not added, the file is the coordinator's and discovery is automatic"
+    ]
+  },
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "the retrospective is not at governance/candidates/ as the dispatch said",
+      "default": "read it at disease-models/wwox/analysis/orchestration_reviews/2026-09-09_actor_retrospective.md (linked from the orchestration record)",
+      "why_safe": "same file, one home",
+      "different_if_not": "nothing"
+    },
+    {
+      "condition": "where the versioned retrieval manifest lives",
+      "default": "disease-models/wwox/research/retrieval_manifest.jsonl beside the manifests it describes",
+      "why_safe": "disease-model content, tracked, carries no copyrighted byte, release gate passes on it",
+      "different_if_not": "a framework/ path would have separated the ledger from the disease it indexes"
+    },
+    {
+      "condition": "coordinator rule 2 prints exactly one line before each commit: my own untracked retrieval_manifest.jsonl",
+      "default": "proceed with the commit that adds it, reporting the output verbatim; anything else printed would have stopped the commit",
+      "why_safe": "the file is in my declared perimeter and is the deliverable",
+      "different_if_not": "the versioned home could not land"
+    },
+    {
+      "condition": "census predicted reCAPTCHA for 20146584; the deposit-named assets 404 and the CDN serves them",
+      "default": "record what was measured (404 on /bin/, 200 on CDN, acquisition lines with digests), leave the manifest untouched",
+      "why_safe": "append-only, no reading act performed",
+      "different_if_not": "a rediscovery rather than a dated record"
+    },
+    {
+      "condition": "recipes back-filled from notes that name pmc_pow_fetch + PMC but not the URL",
+      "default": "URL form /articles/PMC<id>/pdf/ inferred and labelled route_named_url_form_inferred; 3 of 3 replayed RECOVERED",
+      "why_safe": "the label travels with the line; replay verified the inference",
+      "different_if_not": "3 fewer recipes, 3 fewer recoveries"
+    },
+    {
+      "condition": "session_self_eval per-manifest gaps would print ~135 lines",
+      "default": "summed into two lines (the dispatch's 'two [DECLARED GAP] lines'); per-manifest detail stays in the validator CLI",
+      "why_safe": "count preserved, nothing hidden",
+      "different_if_not": "the 14 pre-existing gaps would drown"
+    },
+    {
+      "condition": "result_sha256 in a recipe duplicates the entry's sha256",
+      "default": "optional; must equal when present",
+      "why_safe": "the digest is already declared; a duplicate that can disagree is a second copy",
+      "different_if_not": "fixtures and back-fill would carry a field that can only drift"
+    },
+    {
+      "condition": "THIRD_PARTY_NOTICES.md is outside my declared perimeter but the PyMuPDF pin (coordinator-assigned) cannot land without a versioned notice (test_provenance_coverage)",
+      "default": "one additive entry, licence stated as AGPL-3.0-or-later per the upstream COPYING for 1.28.2",
+      "why_safe": "additive; the pin was assigned to me; the release suites enforce the coupling",
+      "different_if_not": "the pin would have stayed a red in the battery"
+    },
+    {
+      "condition": "the coordinator's rule 3 assumed the back-fill writes acquisition_recipe blocks into manifests",
+      "default": "no manifest is written at all; the back-fill lives in the retrieval manifest, so the additive-commit and before/after validator rule is satisfied vacuously and stated as such",
+      "why_safe": "other actors' readings untouched; every manifest still validates (test_every_committed_manifest_validates)",
+      "different_if_not": "81 manifest edits on other actors' readings"
+    }
+  ],
+  "STOP_LOG": [
+    {
+      "class": "none",
+      "note": "no class-1 or class-2 stop; the rate-limit kill was not a stop and is recorded under RESUMPTION"
+    }
+  ],
+  "DECISIONS_TAKEN": [
+    {
+      "what": "validator imports dependency_integrity's verdict vocabulary by identity rather than respelling it",
+      "alternatives_rejected": "a second constant set in deepdive_manifest.py (the 2026-08-08 duplicate-constant defect)",
+      "consulted": "none",
+      "reversibility": "one import line",
+      "revert": "replace the import with local constants and a parity test"
+    },
+    {
+      "what": "the back-fill writes only to the retrieval manifest, never into a manifest",
+      "alternatives_rejected": "additive acquisition_recipe blocks in manifests (coordinator rule 3 shape) — an edit on other actors' readings, and the dispatch forbids retro-editing",
+      "consulted": "dispatch + coordinator message",
+      "reversibility": "full: lines can be replayed into manifests by their authors at any time",
+      "revert": "n/a"
+    },
+    {
+      "what": "20146584's two figures fetched and saved under files/, recorded as acquisition lines, NOT declared in the manifest",
+      "alternatives_rejected": "declaring them (a reading act); leaving them unfetched (they are the record's one gap)",
+      "consulted": "2026-09-09.md § 7.3",
+      "reversibility": "bytes are gitignored; lines are append-only",
+      "revert": "delete the files; the lines stay as history"
+    },
+    {
+      "what": "WARC not adopted",
+      "alternatives_rejected": "wget --warc within session",
+      "consulted": "census § 2 P2",
+      "reversibility": "trivial",
+      "revert": "add a warc_path field to the acquisition line"
+    }
+  ],
+  "RESUMPTION": {
+    "killed": "rate limit ~2026-09-10T22:3x UTC before reporting",
+    "resumed": "2026-09-11T06:02:53Z from durable state; every in-flight edit re-read from disk (A.7) and re-run before trust: deepdive 183/183, dependency 72/72, self-eval 26/26",
+    "coordinator_rules_applied": [
+      "battery only under flock .git/legend_battery.lock",
+      "run_release_regressions.py not edited (coordinator's guard; suites are auto-discovered, so the dispatch's enrolment line is unnecessary)",
+      "git status --short disease-models/ before every commit; output reported",
+      "no manifest is edited by the back-fill at all — recipes and NO_RECIPE lines live in the versioned retrieval manifest; the coordinator's rule 3 premise (acquisition_recipe blocks written into existing manifests) does not apply"
+    ],
+    "incident_window": "my baseline battery (run_release_regressions.py, unlocked, as the dispatch then instructed) was running at 22:26:40 UTC concurrently with a peer's; I cannot attribute the dossier truncation further than the coordinator's finding does; nothing I ran writes 'touched' and my only writes under disease-models/ are the new retrieval_manifest.jsonl"
+  },
+  "INCIDENTS": [
+    {
+      "id": "ACQREC-I1",
+      "severity": "high",
+      "caught_by": "peer (coordinator), before landing",
+      "what": "the two new slots emitted their absence into the validator's `incomplete` list; fulltext_receipts.require_work_manifest extends errors with every declared gap under strict, so every historical manifest and every fixture appending a complete receipt was refused — test_legend_lint.py 5 ERRORs, green at 4840f72",
+      "fix": "a separate optional `ratchets` sink on validate()/load_and_validate() (the `warnings` precedent); a consumer that passes none is unaffected; session_self_eval prints [RATCHET] lines; a malformed present block still blocks; acceptance case through the real strict gate, mutated both ways (test_a_manifest_without_the_two_blocks_still_supports_a_complete_receipt, test_mutation_routing_the_ratchet_into_incomplete_is_caught)",
+      "why_missed": "my battery baseline was run before the change and the after-battery was still running when the coordinator read the red; the lint suite is not one of the three I own and I had not run it by hand",
+      "machine_caught": "yes in principle — the battery would have named it; the coordinator read it first"
+    },
+    {
+      "id": "ACQREC-I2",
+      "severity": "low",
+      "caught_by": "machine (public_release_gate, self-run)",
+      "what": "a fixture literal someone@example.org in test_deepdive_manifest.py — the gate's EMAIL_ADDRESS block",
+      "fix": "@example.invalid"
+    },
+    {
+      "id": "ACQREC-I3",
+      "severity": "low",
+      "caught_by": "machine (test_provenance_coverage, battery)",
+      "what": "the PyMuPDF pin needs a versioned entry in THIRD_PARTY_NOTICES.md",
+      "fix": "entry added: AGPL-3.0-or-later, Artifex, 1.28.2, not vendored"
+    },
+    {
+      "id": "ACQREC-I4",
+      "severity": "low",
+      "caught_by": "self (test run)",
+      "what": "reacquire.py selftest passed global options after the subcommand; my own suite's address-mutant asserted the wrong thing",
+      "fix": "both corrected before the suite first went green"
+    }
+  ]
+}
