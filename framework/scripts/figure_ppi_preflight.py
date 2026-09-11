@@ -13,7 +13,14 @@ import json
 import statistics
 from pathlib import Path
 
-import fitz
+# 🔴 `import fitz` prints its deprecation warning on STDOUT under PyMuPDF >= 1.24, so
+# `--json` — documented as machine-readable — began with `warning: The fitz API is deprecated`
+# and no consumer could parse it. The fixture suite called inventory() in-process and never
+# saw it; the first case to run the CLI did (HARNESS-SELFTEST-001, 2026-09-11).
+try:
+    import pymupdf as fitz
+except ImportError:  # pragma: no cover - older PyMuPDF without the new module name
+    import fitz
 
 
 def inventory(pdf_path: Path) -> dict:
