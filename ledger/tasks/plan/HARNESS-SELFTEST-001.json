@@ -1,0 +1,378 @@
+{
+  "_schema": "LEGEND governance v3.1.1 · Annex A.2 TASK_ACK + A.3 TASK_CLAIM",
+  "_note": "Harness Engineering work under LEGEND_CORE §21e (T0, no gate, no Mirror precondition). DEFAULTS_TAKEN and STOP_LOG are recorded HERE and not only in the final message (retrospective § 9.7).",
+  "TASK_ID": "HARNESS-SELFTEST-001",
+  "DIRECTIVE_VERSION": 1,
+  "GENERATION": 1,
+  "OWNER": "plan",
+  "ACTOR_ID": "plan",
+  "TASK_ACK": {
+    "state": "COMPLETE",
+    "accepted_on": "2026-09-10",
+    "objective": "Retrospective § 9.3, second half: every script framework/scripts/self_test_coverage.py reports blind on both axes gets the case the meta-test asks for — one that drives the module's top-level entry point, and where the tool reads the corpus, one against a real corpus artefact degrading to a declared skip when the bytes are absent. Target 0 both-false; then the entry-true/real-false tier as far as context allows. CORRECTED 2026-09-11 after the incident: real_artifact_case means READ; first deliverable became the write refusal in self_test_coverage.py.",
+    "specification": "dispatch HARNESS-SELFTEST-001; 2026-09-09_actor_retrospective.md §§ 4.1, 4.2, 9.3; orchestration_reviews/2026-09-10.md § 2",
+    "interaction_mode": "AUTONOMOUS_COMPLETE",
+    "review_requirement": "none — harness is T0 under §21e; Mirror reviews ex post and on request"
+  },
+  "TASK_CLAIM": {
+    "claimed_by": "plan",
+    "claimed_on": "2026-09-10",
+    "timestamp_precision": "date only — the runtime exposed no wall-clock time",
+    "durable_pointer": "framework/scripts/self_test_coverage.py (the measurement); the test_*.py named in COMMITS",
+    "uniqueness": "no competing claim exists for this TASK_ID + GENERATION"
+  },
+  "WRITE_PERIMETER": {
+    "permitted_here": [
+      "framework/scripts/self_test_coverage.py and its test",
+      "the test_*.py of every script on the re-derived both-false list, and the script itself only where an entry-point case exposes a defect",
+      "scripts/run_release_regressions.py — one enrolment line at most, re-read immediately before",
+      "ledger/tasks/plan/HARNESS-SELFTEST-001.json"
+    ],
+    "deliberately_not_touched": {
+      "framework/scripts/deepdive_manifest.py, test_deepdive_manifest.py, dependency_integrity.py, test_dependency_integrity.py": "peer HARNESS-ACQREC-001",
+      "framework/scripts/legend_handoff.py, test_legend_handoff.py": "peer HARNESS-HANDOFF-001 — on the entry-true/real-false tier of the baseline; reported, skipped",
+      "framework/scripts/fulltext_receipts.py": "the ledger writer; not on the both-false list (entry false, real true); not touched",
+      "scripts/legend_commit.sh": "shared commit wrapper"
+    }
+  },
+  "BASELINE_RE_DERIVED": {
+    "method": "python3 framework/scripts/self_test_coverage.py --json, run at task start in the background, before any file was changed. The list below is taken from that output, not from the dispatch.",
+    "scripts_measured": 49,
+    "entry_point_called_false": 17,
+    "real_artifact_case_false": 23,
+    "both_false": 10,
+    "both_false_list": [
+      "dossier_quote_audit.py",
+      "figure_ppi_preflight.py",
+      "generate_semantic_graph.py",
+      "harness_session_start.py",
+      "pmc_pow_fetch.py",
+      "pubmed_clipboard_to_seed.py",
+      "pubmed_corpus_harvest.py",
+      "recapture_snippets.py",
+      "regenerate_adjudications.py",
+      "task_close.py"
+    ],
+    "agreement_with_dispatch": "identical to the ten the dispatch and the morning report named",
+    "entry_true_real_false_list": [
+      "batch_commit.py",
+      "branch_hygiene.py",
+      "evidence_presence.py",
+      "growth_anchors.py",
+      "integration_matrix.py",
+      "lease_state.py",
+      "legend_handoff.py (peer)",
+      "locator_audit.py",
+      "lot_internal_edges.py",
+      "safe_push.py",
+      "screen_verdict.py (mine, a contract module — no corpus by design)",
+      "self_test_coverage.py (mine)",
+      "tool_preflight.py"
+    ],
+    "failing_suites_at_baseline": [
+      "test_batch_queue.py (known-red, not mine)",
+      "test_legend_handoff.py (peer repairing)",
+      "test_surface_census.py (known-red, not mine)"
+    ],
+    "ten_suites_on_my_list_before_change": "all ten green (14, 1, 4, 2, 6, 3, 66, 14, 12, 14 cases)"
+  },
+  "COMMITS": [
+    {
+      "sha": "1ea0ea4",
+      "what": "generate_semantic_graph: defect exposed by the entry-point case fixed in the tool; suite 4 -> 10; matrix 5/5 killed"
+    },
+    {
+      "sha": "1325494",
+      "what": "self_test_coverage: the corrected criterion, the write guard, refusal verdict, --guarded runner; suite 13 -> 19; matrix 7/7 killed"
+    },
+    {
+      "sha": "3dd1c71",
+      "what": "dossier_quote_audit suite 14 -> 18; matrix 6/6 killed under the guard, M6 GUARDED"
+    },
+    {
+      "sha": "00f5587",
+      "what": "recapture_snippets suite 14 -> 18; matrix 6/6 killed under the guard, M3 GUARDED"
+    },
+    {
+      "sha": "91b0830",
+      "what": "figure_ppi_preflight: --json unparseable (fitz warning on stdout) fixed in the tool; suite 1 -> 4; matrix 5/5"
+    },
+    {
+      "sha": "58e65ed",
+      "what": "regenerate_adjudications suite 12 -> 15, drives the script itself over the real recipes; matrix 5/5"
+    },
+    {
+      "sha": "1e7b530",
+      "what": "pubmed_corpus_harvest suite 66 -> 71, --verify over a written corpus and both real corpora; matrix 6/6"
+    },
+    {
+      "sha": "543fd9d",
+      "what": "pubmed_clipboard_to_seed suite 3 -> 7, real 459-record seed round-trips; matrix 6/6"
+    },
+    {
+      "sha": "0f2ef4c",
+      "what": "harness_session_start suite 2 -> 6, main->startup both actors, real checkout; matrix 5/5"
+    },
+    {
+      "sha": "90db0bb",
+      "what": "pmc_pow_fetch suite 6 -> 9, main->fetch with the wire stubbed; matrix 6/6"
+    },
+    {
+      "sha": "55b3256",
+      "what": "task_close suite 14 -> 17, main as a subprocess from the worktree; matrix 5/5"
+    },
+    {
+      "sha": "5a7daf7",
+      "what": "tier 2 — growth_anchors: measure + verify over the real registries and ledger, bytes identical; 46 -> 47; matrix 3/3"
+    },
+    {
+      "sha": "6719e08",
+      "what": "tier 2 — locator_audit: one real manifest through main --pmid; 11 -> 12; matrix 3/3"
+    },
+    {
+      "sha": "5560f80",
+      "what": "tier 2 — evidence_presence: one real manifest through main, JSON and text; 7 -> 8; matrix 4/4"
+    },
+    {
+      "sha": "fd94b32",
+      "what": "tier 2 — lot_internal_edges: two real dossiers as a lot, offline, through main; 11 -> 12; matrix 3/3"
+    },
+    {
+      "sha": "a4ae056",
+      "what": "tier 2 — batch_commit: snapshot over the real current files, copied out byte-identical, never restore; 2 -> 3; matrix 3/3"
+    }
+  ],
+  "DEFECTS_EXPOSED_BY_ENTRY_POINT_CASES": [
+    {
+      "script": "generate_semantic_graph.py",
+      "exposed_by": "running the README's documented command, verbatim, against the real registries",
+      "defect": "exit 1 with 15 unresolved wikilinks: rewrite_registry_links returned links to any file other than the two registries unchanged (dismissal_ledger_current, discovery_ledger_current, full_text_queue_current, meta_metabolism_current), and fragment-less registry links too; render_field_table emitted registry fields raw, so PAPER 088's Source type leaked [[paper_registry_current#PAPER 087]]. The fixtures carried none of those shapes and were green.",
+      "fix": "links the vault cannot carry keep their words and lose the link; both field tables pass through the rewriter. Real run: 82 papers, 39 claims, 0 unresolved.",
+      "commit": "1ea0ea4"
+    },
+    {
+      "script": "self_test_coverage.py (mine)",
+      "exposed_by": "the incident",
+      "defect": "the criterion rewarded reading real artefacts and did not forbid writing them; the tracer noted opens without their mode and refused nothing",
+      "fix": "commit 1325494"
+    },
+    {
+      "script": "figure_ppi_preflight.py",
+      "exposed_by": "running the CLI with --json as a subprocess and parsing stdout",
+      "defect": "under PyMuPDF 1.28 `import fitz` prints its deprecation warning on STDOUT; the documented machine-readable output began with 'warning: The fitz API is deprecated' and json.loads failed at char 0. The single fixture case called inventory() in-process and never saw it.",
+      "fix": "import pymupdf as fitz, falling back to fitz",
+      "commit": "91b0830",
+      "note": "regenerate_adjudications.py, surface_census.py and adjudication_state_matrix.py import fitz the same way; their stdout is prose, not JSON, so the warning is noise there rather than a defect — reported, not changed"
+    }
+  ],
+  "MUTATION_MATRICES": {
+    "generate_semantic_graph.py": "M1 other-file links unchanged KILLED · M2 paper table not rewritten KILLED · M3 main swallows error KILLED · M4 counts line dropped KILLED · M5 fragment-less registry link unchanged KILLED — run 2026-09-10 BEFORE the guard existed; this tool's real case only reads registries and its mutations introduced no write; guarded trees verified clean after",
+    "self_test_coverage.py": "M1 records but never refuses KILLED · M2 mode ignored KILLED · M3 os.* not wrapped KILLED · M4 refused never set KILLED · M5 --enforce ignores refusal KILLED · M6 verdict never REFUSED KILLED · M7 disease-models dropped from the guard KILLED (direct run: the suite writes only temp roots and the guard cannot guard itself while mutated)",
+    "dossier_quote_audit.py": "M1 main never calls audit KILLED · M2 labels swapped KILLED · M3 undecidable dropped KILLED · M4 sentinel dropped KILLED · M5 non-zero exit KILLED · M6 audit writes the dossier KILLED + GUARDED (the incident mutation, refused this time) — under --guarded, trees clean",
+    "recapture_snippets.py": "M1 main never calls process KILLED · M2 --write ignored KILLED · M3 dry run writes KILLED + GUARDED (the incident mutation, refused) · M4 --pmid ignored KILLED · M5 refusals not counted KILLED · M6 span not written into the entry KILLED — under --guarded, trees clean",
+    "figure_ppi_preflight.py": "M1 --json prints text KILLED · M2 page_count off by one KILLED · M3 vector line reworded KILLED · M4 import fix reverted KILLED · M5 exit 1 KILLED (under --guarded)",
+    "regenerate_adjudications.py": "M1 no-study --pmid passes KILLED · M2 run's rc discarded KILLED · M3 matched never counted KILLED · M4 SCOPE dropped KILLED · M5 way-round dropped KILLED (under --guarded)",
+    "pubmed_corpus_harvest.py": "M1 verify never reports KILLED · M2 --verify exits 0 KILLED · M3 remediation dropped KILLED · M4 _tracked_destination inverted KILLED · M5 --term usage exits 0 KILLED · M6 sha mismatch unreported KILLED (under --guarded)",
+    "pubmed_clipboard_to_seed.py": "M1 --check compares nothing KILLED · M2 DRIFT exits 0 KILLED · M3 --out never writes KILLED · M4 reviews as primary KILLED · M5 parse error exits 0 KILLED · M6 sort reversed KILLED (under --guarded)",
+    "harness_session_start.py": "M1 startup never called KILLED · M2 --json ignored KILLED · M3 plan gets no sweep KILLED · M4 git failure reported fine KILLED · M5 exit 1 KILLED (under --guarded)",
+    "pmc_pow_fetch.py": "M1 cookie never sent KILLED · M2 output never written KILLED · M3 HTML retry accepted KILLED · M4 browser UA KILLED · M5 POW never solved KILLED · M6 pow_used misreported KILLED (under --guarded)",
+    "task_close.py": "M1 sequence never printed KILLED · M2 verdict swapped KILLED · M3 refusal exits 0 KILLED · M4 --dry-run ignored KILLED · M5 success exits 1 KILLED (under --guarded)",
+    "_totals": "16 scripts · 79 mutations · 79 KILLED · 0 SURVIVED · 2 GUARDED (the incident mutations, refused)",
+    "growth_anchors.py": "M1 measure prints nothing KILLED · M2 verify wording KILLED · M3 structural zeroed KILLED (under --guarded)",
+    "locator_audit.py": "M1 summary dropped KILLED · M2 --pmid ignored KILLED · M3 exit 1 KILLED (under --guarded)",
+    "evidence_presence.py": "M1 --pmid ignored KILLED · M2 --json silent KILLED · M3 totals dropped KILLED · M4 pmid from nowhere KILLED (under --guarded)",
+    "lot_internal_edges.py": "M1 never screens KILLED · M2 header dropped KILLED · M3 lot_size lies KILLED (under --guarded)",
+    "batch_commit.py": "M1 copies nothing KILLED · M2 skips EXTRA KILLED · M3 silent exit 1 KILLED (under --guarded)"
+  },
+  "DEFAULTS_TAKEN": [
+    {
+      "condition": "The finding records the 22:26 writer as UNATTRIBUTED; the evidence in my scratchpad and transcript attributes it to my own mutation matrix.",
+      "default": "Attributed it to myself in this record, the commit message of 1325494 and the meta-test's docstring, rather than leaving the finding's UNATTRIBUTED standing.",
+      "why_safe": "An attribution that names the actor who made it is strictly more information; the coordinator can amend the finding.",
+      "what_would_have_been_different": "Left unattributed, the finding's residual says the guard 'attributes on the next run' — it never would have, because the writer was not a suite in the battery but a mutation harness outside it."
+    },
+    {
+      "condition": "The generator's fix for links to other canonical files had no specification: keep the link, drop the link, or fail.",
+      "default": "Keep the words, drop the link (alias, else 'fragment (file label)', else the file label), because the vault is documented as self-contained and the fail-closed check exists to catch generator bugs, not to refuse the real registries.",
+      "why_safe": "Reversible in one function; the README's documented behaviour is restored; the unresolved-wikilink check is untouched.",
+      "what_would_have_been_different": "Failing would leave the documented command broken; keeping the link would leave a dangling wikilink in every vault."
+    },
+    {
+      "condition": "The meta-test's guard could record writes and refuse after the fact (as instructed) or refuse before the bytes land.",
+      "default": "Both: the attempt is recorded with its mode AND refused in the child before any byte lands, then the row, the verdict and --enforce carry it.",
+      "why_safe": "Recording alone would let the write happen during measurement — the incident under instrumentation; refusing before is strictly safer and the record survives.",
+      "what_would_have_been_different": "A suite that writes a real artefact would still destroy it once, on the run that detects it."
+    },
+    {
+      "condition": "GUARDED_TREES: the runner guards eight trees; the corpus roots add files/ and _external_repos/.",
+      "default": "Guard the union, and pin by test that the runner's list is a subset of mine.",
+      "why_safe": "An unversioned PDF under files/ is unique material — deleting it is a §21d reserved act; refusing to touch it is the conservative side.",
+      "what_would_have_been_different": "A suite deleting a PDF under files/ would pass the runner's guard (git cannot see files/) and mine alike."
+    },
+    {
+      "condition": "disease-models/ shows `?? disease-models/wwox/research/retrieval_manifest.jsonl` (untracked, a peer's) before every commit.",
+      "default": "Report and proceed, per the coordinator's rule for `??` lines; not touched.",
+      "why_safe": "Untracked and not mine; my commits are path-scoped.",
+      "what_would_have_been_different": "Nothing."
+    },
+    {
+      "condition": "Three touched suites (test_harness_session_start, test_task_close, test_self_test_coverage) have no explicit line in scripts/run_release_regressions.py.",
+      "default": "Appended nothing: all three are tracked and the runner's discover_tests() enrols every tracked test_*.py; the morning's task already relied on discovery for test_self_test_coverage.",
+      "why_safe": "The battery run below is the check that they execute.",
+      "what_would_have_been_different": "An explicit line would duplicate discovery and is the one shared-file edit the dispatch allows; not needed."
+    },
+    {
+      "condition": "Three scripts on the list read no corpus root by nature (harness_session_start reads governance/; pmc_pow_fetch fetches; task_close acts on git).",
+      "default": "Entry-point cases only; real_artifact_case left honestly false rather than manufactured.",
+      "why_safe": "The criterion is READ; a fabricated corpus read would be the invisible-compliance shape the meta-test exists to find.",
+      "what_would_have_been_different": "The both-false count is the target and is 0 either way."
+    },
+    {
+      "condition": "The corpus firewall refused my pubmed_corpus_harvest fixture (slug 'corpus' in a temp dir).",
+      "default": "Kept the firewall; the fixture uses the registries' own slug naming.",
+      "why_safe": "The refusal is the tool being right.",
+      "what_would_have_been_different": "Nothing in the tool."
+    },
+    {
+      "condition": "During my battery runs the process table showed a peer session running run_release_regressions.py WITHOUT the lock (pid 588198) and self_test_coverage.py over a repo copy under the shared scratchpad.",
+      "default": "Noted, not touched; my two batteries run under flock as instructed.",
+      "why_safe": "The runner's own guard names any suite that writes; the lock is the coordinator's rule and the peer's compliance is theirs to report.",
+      "what_would_have_been_different": "A concurrent unlocked battery can confound attribution on a peer's suite, not on mine — my runs are serialised."
+    }
+  ],
+  "STOP_LOG": [],
+  "PEER_FINDINGS_REPORTED_NOT_FIXED": [
+    {
+      "file": "learning/orchestrator/FINDING-20260911-DOSSIER-TRUNCATION.md",
+      "finding": "Status line says culprit UNATTRIBUTED; the residual says the runner's guard 'attributes on the next run'. It would not have: the writer was a mutation harness outside the battery. Attribution above.",
+      "why_not_fixed": "Orchestrator's record; amended by its author."
+    },
+    {
+      "file": "framework/scripts/legend_handoff.py",
+      "finding": "On the entry-true/real-false tier of my baseline; test_legend_handoff.py red at baseline.",
+      "why_not_fixed": "peer HARNESS-HANDOFF-001, landing."
+    },
+    {
+      "file": "disease-models/wwox/research/retrieval_manifest.jsonl",
+      "finding": "untracked file under disease-models/ present throughout this session",
+      "why_not_fixed": "not mine; reported per rule"
+    }
+  ],
+  "ATTRIBUTION_CENSUS": {
+    "incidents": 6,
+    "machine": 2,
+    "blind_auditor": 0,
+    "peer": 1,
+    "self": 3,
+    "severity_high": 1,
+    "severity_high_self": 1,
+    "undetected_known": 0,
+    "_counted_by": "retrospective § 0.2. A catcher is machine (validator/linter/test suite/shell), blind auditor, peer/coordinator, or self (re-reading, cross-measurement, control run, or refusal to believe an unearned result).",
+    "_incidents": [
+      {
+        "n": 1,
+        "what": "The 22:26 overwrite of 54 dossiers and one manifest: my mutation matrix drove tools mutated to write (M6 'touched', M3 dry-run write) through their real-artefact cases against the real root and restored the tool, not the artefacts.",
+        "catcher": "self (saw M3 killed by the real-manifest case, ran git status, saw 55 modified files) — but the session died before the report; the coordinator restored first, so the restore was the peer's",
+        "severity": "high"
+      },
+      {
+        "n": 2,
+        "what": "generate_semantic_graph: the README's documented command failed on the real registries while the fixture suite was green (links to other canonical files kept, field tables unrewritten).",
+        "catcher": "self (control run of the documented command before writing the case)",
+        "severity": "normal"
+      },
+      {
+        "n": 3,
+        "what": "figure_ppi_preflight --json unparseable: the fitz deprecation warning printed on stdout ahead of the JSON.",
+        "catcher": "machine (the new CLI case failed with JSONDecodeError at char 0)",
+        "severity": "normal"
+      },
+      {
+        "n": 4,
+        "what": "My pubmed_corpus_harvest fixture wrote a corpus with slug 'corpus' in a temp dir; the evidence firewall refused it.",
+        "catcher": "machine (the tool's own HarvestError)",
+        "severity": "normal"
+      },
+      {
+        "n": 5,
+        "what": "Asserted harness_session_start's real branch_hygiene value would be a dict; it is a one-line totals string.",
+        "catcher": "machine (the new real-root case failed)",
+        "severity": "normal"
+      },
+      {
+        "n": 6,
+        "what": "Reported five tier-2 rows as still real-false from the whole-tree sweep; the sweep's parallel workers had run those suites before the tier-2 edits landed. Re-measured with --script: true.",
+        "catcher": "self (disbelieved the row, checked the timing)",
+        "severity": "normal"
+      }
+    ]
+  },
+  "INCIDENT_20260910_2226_ATTRIBUTED": {
+    "finding": "learning/orchestrator/FINDING-20260911-DOSSIER-TRUNCATION.md — recorded there as UNATTRIBUTED",
+    "attribution": "SELF. The writer was this task's mutation matrix. Mutation M6 of dossier_quote_audit (scratchpad mut_dqa.json) replaced the dossier read with `path.write_text(\"touched\")`; mutation M3 of recapture_snippets made the dry run write. The harness ran each mutated tool through the suite's real-artefact cases against the real root, then restored the TOOL by copy and never the artefacts. The literal `touched` lived in the scratchpad JSON, which is why the forensic grep of .py files and transcripts missed it.",
+    "timing": "the matrices ran ~50 s after the two test files were written, matching the finding's 22:26:40 UTC window; both matrices reported M6/M3 as KILLED by the real-artefact case, which is only possible if the mutated tool reached the real files",
+    "how_it_was_caught": "self — the matrix output showed M3 killed by the real-manifest case, I ran git status and saw 55 modified tracked files; the session was rate-limited before I could report. The coordinator restored from HEAD first.",
+    "what_prevented_loss": "git. The committed readings were intact; only unstaged working-tree bytes were destroyed.",
+    "correction_shipped": "commit 1325494 — real_artifact_case means READ; the meta-test tracer refuses (PermissionError before the bytes land) any write/unlink/rename/replace/rmdir/truncate under a guarded tree, records op+mode+path, marks the row refused, fails the verdict and --enforce; `--guarded <command>` runs anything under the same refusal and the mutation harness now runs every suite through it. Both matrices re-run under the guard: M6 and M3 GUARDED, zero bytes landed, guarded trees clean."
+  },
+  "TIER_2_ENTRY_TRUE_REAL_FALSE": {
+    "taken": [
+      "growth_anchors",
+      "locator_audit",
+      "evidence_presence",
+      "lot_internal_edges",
+      "batch_commit"
+    ],
+    "not_taken_and_why": {
+      "branch_hygiene, safe_push, task_close": "act on git, not on a corpus root; real_artifact_case false is the honest reading",
+      "integration_matrix": "reads governance/candidates — not a corpus root",
+      "lease_state": "reads a --home lease file — not a corpus root",
+      "tool_preflight": "probes the environment for external extractors — no corpus",
+      "screen_verdict": "a contract module — no I/O by design",
+      "self_test_coverage": "mine; it reads framework/scripts — not a corpus root; its own suite drives main over the real script tree",
+      "legend_handoff": "peer HARNESS-HANDOFF-001 — skipped"
+    },
+    "where_I_stopped": "every tier-2 script that reads a corpus root has a READ case; what remains false does not read one"
+  },
+  "AFTER_MEASURED": {
+    "method": "python3 framework/scripts/self_test_coverage.py --json over the whole tree (started 06:31 UTC, after the ten both-false commits), then --script over the five tier-2 scripts whose commits post-dated the sweep's parallel run of their suites",
+    "scripts_measured": 50,
+    "entry_point_called_false": 6,
+    "real_artifact_case_false": "16 in the sweep, 11 after the five tier-2 rows are re-measured true",
+    "both_false": 0,
+    "refused": 0,
+    "failing_suites": [
+      "test_batch_queue.py (known-red)",
+      "test_surface_census.py (known-red)"
+    ],
+    "table": {
+      "dossier_quote_audit.py": "false/false -> true/true",
+      "figure_ppi_preflight.py": "false/false -> true/true",
+      "generate_semantic_graph.py": "false/false -> true/true",
+      "pubmed_clipboard_to_seed.py": "false/false -> true/true",
+      "pubmed_corpus_harvest.py": "false/false -> true/true",
+      "recapture_snippets.py": "false/false -> true/true",
+      "regenerate_adjudications.py": "false/false -> true/true",
+      "harness_session_start.py": "false/false -> true/false (reads governance/, no corpus root)",
+      "pmc_pow_fetch.py": "false/false -> true/false (fetches; no corpus)",
+      "task_close.py": "false/false -> true/false (acts on git; no corpus)",
+      "growth_anchors.py": "true/false -> true/true",
+      "locator_audit.py": "true/false -> true/true",
+      "evidence_presence.py": "true/false -> true/true",
+      "lot_internal_edges.py": "true/false -> true/true",
+      "batch_commit.py": "true/false -> true/true",
+      "self_test_coverage.py": "true/false -> true/false (reads framework/scripts; no corpus root)"
+    },
+    "remaining_entry_false_6": "build_evidence_index, event_ledger, fulltext_receipts (coordinator's 9535a1c added CLI cases; its main delegates and the callee criterion may still read false — theirs), legend_lint, manifest_queue_id_crosscheck, sync_epochs, trace_claim_foundation — all real true, none both-false, none on my list"
+  },
+  "RELEASE_BATTERY": {
+    "rule": "run only as flock .git/legend_battery.lock python3 scripts/run_release_regressions.py",
+    "battery_1_after_the_ten": "102 suites; REGRESSION VERDICT: FAIL on three lines, none mine: test_repository_surface_determinism charged with a tracked write of disease-models/wwox/analysis/orchestration_reviews/2026-09-10.md at 06:34:38 inside its window — the orchestrator's own committed edit (f906d60), the runner's stated concurrent-editor limitation; test_batch_queue and test_surface_census, known-red. test_legend_handoff green (peer repair landed). Every suite I touched passed.",
+    "battery_2_after_tier_2_and_wave_3": "102 suites; REGRESSION VERDICT: FAIL on exactly test_batch_queue and test_surface_census (known-red); no TRACKED_FILES_WRITTEN line; every suite I touched passed. Landing precondition (§21e item 2) holds.",
+    "not_re_run": "read from the output file on resume, as instructed"
+  },
+  "NOT_MINE_LANDED_MEANWHILE": [
+    "d1e75a1",
+    "d03aaa6 — quota-resume configuration, outside this task's perimeter, not touched"
+  ]
+}
