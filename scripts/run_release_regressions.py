@@ -241,9 +241,13 @@ def tracked_state(trees: tuple[str, ...], root: Path = ROOT) -> dict[str, str]:
     written, so the working tree is hashed through `git hash-object --stdin-paths`: what a
     suite wrote is what a later commit would carry, and that is the thing to detect.
     """
+    # Tracked files AND untracked creations: Mirror REV-EXPOST-20260911-001 F1(c) showed a new
+    # file created under a guarded tree was invisible to a tracked-only state. `--others
+    # --exclude-standard` lists what git would call untracked, honouring .gitignore, so files/
+    # stays out and a suite that plants a dossier is caught.
     listing = subprocess.run(
-        ["git", "ls-files", "-z", "--", *trees], cwd=root,
-        stdout=subprocess.PIPE, text=True, check=False).stdout
+        ["git", "ls-files", "-z", "--cached", "--others", "--exclude-standard", "--", *trees],
+        cwd=root, stdout=subprocess.PIPE, text=True, check=False).stdout
     paths = [p for p in listing.split("\0") if p]
     if not paths:
         return {}

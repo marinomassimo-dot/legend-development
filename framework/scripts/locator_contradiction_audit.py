@@ -136,26 +136,41 @@ class Result:
     def candidates(self) -> list[Finding]:
         return [f for f in self.findings if f.kind == "UNDECLARED_CANDIDATE"]
 
+    @property
+    def malformed(self) -> list[Finding]:
+        return [f for f in self.findings if f.kind == "MALFORMED_DECLARATION"]
+
 
 def _entry_audit_evidence(entry: dict, manifest: dict) -> str:
     """STRUCTURED | PROSE | NONE - what evidence exists that an audit was run.
 
-    PROSE is a real state and not a courtesy: an audit recorded only in an anchor
-    sentence happened, and reporting it as NONE would make the compliance ratio measure
-    the schema's age rather than the readers' practice.
+    Tightened after Mirror REV-EXPOST-20260911-001 F2, which showed the first version counting
+    ANY key containing "audit" - `audit_status: "NOT AUDITED - pending"`, a manifest-level
+    `figure_audit_table: "see dossier"` - as STRUCTURED evidence, so the compliance ratio read
+    100 % the moment anyone declared. Now: STRUCTURED is a `contradicts_locator.audit` object
+    carrying an auditor count or a verdict list, or an entry-level `audit_status` that names an
+    audit AND a date AND does not negate itself. Manifest-level keys never count: an audit of one
+    triple is not an audit of the contradiction in another. PROSE is a real state and not a
+    courtesy: an audit recorded only in an anchor sentence happened.
     """
+    negated = re.compile(r"\b(NOT|UN|pending|planned|awaiting|todo)\b", re.I)
+    dated = re.compile(r"20\d{2}-\d{2}-\d{2}")
     declared = entry.get("contradicts_locator")
-    if isinstance(declared, dict) and declared.get("audit"):
+    if isinstance(declared, dict):
+        audit = declared.get("audit")
+        if isinstance(audit, dict) and (
+            isinstance(audit.get("auditors"), int) and audit["auditors"] > 0
+            or isinstance(audit.get("verdicts"), list) and audit["verdicts"]
+        ):
+            return "STRUCTURED"
+    status = entry.get("audit_status")
+    if isinstance(status, str) and AUDIT_WORD.search(status) and dated.search(status) \
+            and not negated.search(status):
         return "STRUCTURED"
-    for key, value in entry.items():
-        if "audit" in key.lower() and str(value).strip():
-            return "STRUCTURED"
-    for key, value in manifest.items():
-        if "audit" in key.lower() and str(value).strip():
-            return "STRUCTURED"
-    for key in ("anchor", "audit_status", "proposition", "snippet"):
+    for key in ("anchor", "proposition", "snippet"):
         text = entry.get(key)
-        if isinstance(text, str) and AUDIT_WORD.search(text) and AUDIT_VERDICT.search(text):
+        if isinstance(text, str) and AUDIT_WORD.search(text) and AUDIT_VERDICT.search(text) \
+                and not negated.search(text[:80]):
             return "PROSE"
     return "NONE"
 
@@ -208,6 +223,11 @@ def screen(manifest_dir: Path = MANIFEST_DIR) -> Result:
             if NAIVE_PROSE.search(json.dumps(entry, ensure_ascii=False)):
                 result.naive_prose_hits += 1
             declared = entry.get("contradicts_locator")
+            if declared is not None and not isinstance(declared, dict):
+                result.findings.append(Finding(
+                    path.name, index, "MALFORMED_DECLARATION", "NONE",
+                    f"contradicts_locator must be an object, got {type(declared).__name__}"))
+                continue
             if isinstance(declared, dict):
                 result.findings.append(Finding(
                     path.name, index, "DECLARED_CONTRADICTION",
@@ -235,6 +255,9 @@ def render(result: Result, queue: bool) -> str:
     ]
     declared, audited = result.declared, result.audited
     lines.append(f"declared contradictions audited: {len(audited)}/{len(declared)}")
+    if result.malformed:
+        lines.append(f"MALFORMED declarations (a string where an object is required): "
+                     f"{len(result.malformed)}")
     candidates = result.candidates
     with_audit = [f for f in candidates if f.audited]
     lines.append(
@@ -352,6 +375,7 @@ def main(argv: list[str] | None = None) -> int:
                          "digest": result.digest},
             "declared_contradictions": len(result.declared),
             "declared_contradictions_audited": len(result.audited),
+            "malformed_declarations": len(result.malformed),
             "undeclared_candidates": len(result.candidates),
             "undeclared_candidates_with_audit_evidence":
                 sum(1 for f in result.candidates if f.audited),

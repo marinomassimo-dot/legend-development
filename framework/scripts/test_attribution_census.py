@@ -58,6 +58,25 @@ class AttributionCensus(unittest.TestCase):
         self.assertEqual([], result.complete_censuses)
         self.assertEqual(1, result.eval_files)
 
+    def test_impossible_arithmetic_is_inconsistent_not_complete(self) -> None:
+        """Mirror F5: `incidents: 3 / machine: 5 / severity_high: 1 / of which self: 4` parsed
+        as complete and printed 4/1."""
+        (self.evals / "a.md").write_text(
+            "ATTRIBUTION_CENSUS\nincidents: 3\nmachine: 5   blind_auditor: 0   peer: 0   "
+            "self: 0\nseverity_high: 1   of which self: 4\nundetected_known: 0\n",
+            encoding="utf-8")
+        result = tool.screen(self.root)
+        self.assertEqual([], result.complete_censuses)
+        self.assertIn("catchers sum to 5", result.censuses[0].inconsistency)
+        self.assertIn("CENSUS_INCONSISTENT", tool.render(result, True))
+
+    def test_self_high_above_high_is_inconsistent(self) -> None:
+        (self.evals / "a.md").write_text(
+            "ATTRIBUTION_CENSUS\nincidents: 4\nmachine: 2   blind_auditor: 0   peer: 0   "
+            "self: 2\nseverity_high: 1   of which self: 2\nundetected_known: 0\n",
+            encoding="utf-8")
+        self.assertEqual([], tool.screen(self.root).complete_censuses)
+
     def test_the_denominator_counts_diagnoses_without_a_block(self) -> None:
         (self.evals / "a.md").write_text(FULL_BLOCK, encoding="utf-8")
         (self.evals / "b.md").write_text("no census here\n", encoding="utf-8")

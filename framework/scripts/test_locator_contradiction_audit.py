@@ -91,6 +91,43 @@ class ContradictionScreen(unittest.TestCase):
         self.assertEqual([], result.audited)
         self.assertEqual("NONE", result.declared[0].audit_evidence)
 
+    def test_a_negated_audit_status_is_not_audit_evidence(self) -> None:
+        """Mirror F2 G2: `audit_status: "NOT AUDITED - pending"` read as STRUCTURED."""
+        write(self.dir, "a.json", [
+            {"proposition": "p", "anchor": "Figure 1",
+             "audit_status": "NOT AUDITED \u2014 pending 2026-09-12",
+             "contradicts_locator": {"manifest": "b.json", "entry": 3}},
+        ])
+        result = tool.screen(self.dir)
+        self.assertEqual(1, len(result.declared))
+        self.assertEqual("NONE", result.declared[0].audit_evidence)
+
+    def test_a_manifest_level_audit_key_never_credits_an_entry(self) -> None:
+        """Mirror F2 G1: a top-level `figure_audit_table` credited every contradiction."""
+        write(self.dir, "a.json", [
+            {"proposition": "p", "anchor": "Figure 1",
+             "contradicts_locator": {"manifest": "b.json", "entry": 3}},
+        ], figure_audit_table="see dossier", audit_note="all figures audited 2026-09-09")
+        self.assertEqual("NONE", tool.screen(self.dir).declared[0].audit_evidence)
+
+    def test_a_dated_positive_audit_status_is_structured(self) -> None:
+        write(self.dir, "a.json", [
+            {"proposition": "p", "anchor": "Figure 1",
+             "audit_status": "AUDITED 2026-09-09 - blind locator audit, verdict applied",
+             "contradicts_locator": {"manifest": "b.json", "entry": 3}},
+        ])
+        self.assertEqual("STRUCTURED", tool.screen(self.dir).declared[0].audit_evidence)
+
+    def test_a_string_declaration_is_malformed_not_invisible(self) -> None:
+        """Mirror F2: `contradicts_locator: "yes"` was silently not a declaration."""
+        write(self.dir, "a.json", [
+            {"proposition": "p", "anchor": "Figure 1", "contradicts_locator": "yes"},
+        ])
+        result = tool.screen(self.dir)
+        self.assertEqual([], result.declared)
+        self.assertEqual(1, len(result.malformed))
+        self.assertIn("MALFORMED", tool.render(result, False))
+
     def test_findings_do_not_turn_the_run_into_a_failure(self) -> None:
         """It reports a ratio; a gate that fires on everything gets switched off."""
         write(self.dir, "a.json", [

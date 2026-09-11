@@ -23,6 +23,17 @@ fi
 
 MSG="$1"; shift
 ROOT="$(git rev-parse --show-toplevel)"
+
+# FILE paths only. `git add -- <dir>` and `git commit -- <dir>` are directory-scoped, and a
+# directory sweeps every peer's in-flight file beneath it under this actor's message - which
+# is the authorship incident this wrapper exists to prevent (Mirror REV-EXPOST-20260911-001 F3,
+# reproduced: "dir pathspec" committed a peer's file). Name the files.
+for p in "$@"; do
+  if [ -d "$ROOT/$p" ] || [ -d "$p" ]; then
+    echo "refused: '$p' is a directory - name the files you own, one by one" >&2
+    exit 4
+  fi
+done
 LOCK="${LEGEND_COMMIT_LOCK:-$ROOT/.git/legend_commit.lock}"
 
 exec 9>"$LOCK"

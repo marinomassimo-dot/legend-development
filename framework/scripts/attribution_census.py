@@ -74,6 +74,7 @@ class Census:
     counts: dict[str, int] = field(default_factory=dict)
     severity_self: int | None = None
     complete: bool = False
+    inconsistency: str = ""
 
 
 @dataclass
@@ -125,6 +126,23 @@ def parse_census_block(text: str, source: str) -> Census | None:
         all(name in census.counts for name in COUNT_FIELDS)
         and census.severity_self is not None
     )
+    # Mirror REV-EXPOST-20260911-001 F5: the first version parsed `incidents: 3 / machine: 5 /
+    # severity_high: 1 / of which self: 4` as complete and printed "4/1". The block is the number
+    # the operator invests by; arithmetic that cannot be true is INCOMPLETE, with the reason.
+    if census.complete:
+        c = census.counts
+        catchers = c["machine"] + c["blind_auditor"] + c["peer"] + c["self"]
+        if catchers != c["incidents"]:
+            census.complete = False
+            census.inconsistency = (f"catchers sum to {catchers}, incidents say {c['incidents']}")
+        elif census.severity_self > c["severity_high"]:
+            census.complete = False
+            census.inconsistency = (f"severity_high self {census.severity_self} exceeds "
+                                    f"severity_high {c['severity_high']}")
+        elif c["severity_high"] > c["incidents"]:
+            census.complete = False
+            census.inconsistency = (f"severity_high {c['severity_high']} exceeds incidents "
+                                    f"{c['incidents']}")
     return census
 
 
@@ -243,10 +261,12 @@ def render(result: Result, queue: bool) -> str:
     if queue:
         for census in result.censuses:
             if not census.complete:
-                state = "ABSENT" if not census.counts else "INCOMPLETE"
+                state = "ABSENT" if not census.counts else (
+                    "INCONSISTENT" if census.inconsistency else "INCOMPLETE")
                 missing = [f for f in COUNT_FIELDS if f not in census.counts]
                 lines.append(f"  [CENSUS_{state}] {census.source}"
-                             + (f" missing={missing}" if missing else ""))
+                             + (f" missing={missing}" if missing else "")
+                             + (f" {census.inconsistency}" if census.inconsistency else ""))
         for wave in structured:
             if not (wave.has_defaults and wave.has_stop_log):
                 absent = [n for n, present in

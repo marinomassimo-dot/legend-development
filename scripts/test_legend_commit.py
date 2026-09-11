@@ -87,6 +87,23 @@ class LegendCommitWrapper(unittest.TestCase):
         self.assertEqual(0, result.returncode, result.stderr)
         self.assertIn("NOTHING_TO_COMMIT", result.stdout)
 
+    def test_a_directory_pathspec_is_refused_and_the_peers_file_stays_uncommitted(self) -> None:
+        """Mirror F3: `legend_commit.sh "msg" disease-models/` committed a peer's dirty file.
+
+        `git add -- <dir>` is directory-scoped. A control that holds only when the actor
+        names files is the control that already failed once; the wrapper now refuses the
+        directory outright, and this case pins that the peer's file is untouched.
+        """
+        (self.repo / "tree").mkdir()
+        (self.repo / "tree" / "mine.md").write_text("mine\n", encoding="utf-8")
+        (self.repo / "tree" / "peer.md").write_text("peer in flight\n", encoding="utf-8")
+        result = self.run_wrapper("dir pathspec", "tree/")
+        self.assertEqual(4, result.returncode, result.stdout + result.stderr)
+        self.assertIn("directory", result.stderr)
+        self.assertEqual("seed", git(self.repo, "log", "-1", "--format=%s"))
+        untracked = git(self.repo, "ls-files", "--others", "--exclude-standard").split()
+        self.assertIn("tree/peer.md", untracked)
+
     def test_too_few_arguments_is_refused(self) -> None:
         result = self.run_wrapper("message only")
         self.assertEqual(2, result.returncode)

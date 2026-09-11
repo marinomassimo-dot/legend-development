@@ -53,6 +53,22 @@ class TrackedStateSeesWorkingTreeWrites(unittest.TestCase):
         self.assertEqual({"disease-models/PMID1.md"},
                          {p for p, _ in set(after.items()) ^ set(before.items())})
 
+    def test_an_untracked_creation_under_a_guarded_tree_changes_the_state(self) -> None:
+        """Mirror F1(c): a planted new dossier was `detected: False` under a tracked-only state."""
+        before = runner.tracked_state(("disease-models",), root=self.repo)
+        (self.repo / "disease-models" / "NEW_dossier.md").write_text("touched", encoding="utf-8")
+        after = runner.tracked_state(("disease-models",), root=self.repo)
+        self.assertNotEqual(before, after)
+        self.assertIn("disease-models/NEW_dossier.md", after)
+
+    def test_an_ignored_creation_is_not_reported(self) -> None:
+        (self.repo / ".gitignore").write_text("disease-models/*.tmp\n", encoding="utf-8")
+        subprocess.run(["git", "add", ".gitignore"], cwd=self.repo, check=True)
+        subprocess.run(["git", "commit", "-q", "-m", "ignore"], cwd=self.repo, check=True)
+        before = runner.tracked_state(("disease-models",), root=self.repo)
+        (self.repo / "disease-models" / "scratch.tmp").write_text("x", encoding="utf-8")
+        self.assertEqual(before, runner.tracked_state(("disease-models",), root=self.repo))
+
     def test_a_write_outside_the_guarded_trees_is_not_reported(self) -> None:
         before = runner.tracked_state(("disease-models",), root=self.repo)
         (self.repo / "scratch.md").write_text("changed\n", encoding="utf-8")
