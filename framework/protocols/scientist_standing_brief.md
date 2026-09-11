@@ -99,8 +99,10 @@ cascade you actually ran, never a silent omission.
 
 **M2 · the reading.** Section by section, the whole article, and every figure **as an image at
 native resolution** — a caption read is `captions_only`, and that downgrades the receipt. Capture
-every `verbatim_locator` **while the document is open**: proposition, the sentence quoted verbatim,
-`surface`, the fingerprinted `artifact`, the `anchor`. The abstract is never an evidentiary surface.
+every locator **while the document is open**, into the manifest's `verbatim_locators` entries:
+proposition, the sentence quoted verbatim, `surface`, the fingerprinted `artifact`, the `anchor`.
+The abstract is never an evidentiary surface, and `deepdive_manifest.py` refuses a
+`complete_fulltext_read` without them.
 
 Three rules that the sweep added, each with the incident it comes from:
 
