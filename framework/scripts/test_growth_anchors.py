@@ -9,9 +9,11 @@ that anchors anything it is told.
 """
 from __future__ import annotations
 
+import io
 import json
 import sys
 import unittest
+from contextlib import redirect_stdout
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -488,6 +490,49 @@ class CandidateBacklogIsDerivedNotDeclared(unittest.TestCase):
         propagates. What must not happen is that it grows silently.
         """
         self.assertNotIn("candidate_backlog", dict(ga.RATCHET_KEYS))
+
+
+class TheRealCheckoutIsMeasured(unittest.TestCase):
+    """The two read-only commands over this checkout's registries and growth ledger.
+
+    Every policy case above injects its measurement; until 2026-09-11 nothing here let the
+    tool measure the real registries or read the real ledger under framework/state. `measure`
+    and `verify` are the commands the parser documents as writing nothing, and the case
+    asserts the ledger and the manifest are byte-identical afterwards. `check` is deliberately
+    not used: a live-state BLOCK is a finding for the release gate, not a red in this suite.
+    """
+
+    ROOT = Path(__file__).resolve().parents[2]
+
+    def run_main(self, *argv: str) -> tuple[int, str]:
+        buffer = io.StringIO()
+        with redirect_stdout(buffer):
+            code = ga.main(["--root", str(self.ROOT), *argv])
+        return code, buffer.getvalue()
+
+    def test_measure_and_verify_read_the_real_state_and_write_nothing(self) -> None:
+        ledger = self.ROOT / ga.LEDGER_REL
+        manifest = self.ROOT / ga.MANIFEST_REL
+        if not ledger.is_file() or not manifest.is_file():
+            self.skipTest(f"skipped: {ga.LEDGER_REL} or {ga.MANIFEST_REL} absent on this host")
+        before = (ledger.read_bytes(), manifest.read_bytes())
+
+        code, out = self.run_main("measure")
+        self.assertEqual(code, 0, out)
+        live = json.loads(out)
+        for key in ga.STRUCTURAL_KEYS:
+            self.assertGreater(live["structural"][key], 0, key)
+        for key, _label in ga.RATCHET_KEYS:
+            self.assertIn(key, live)
+
+        code, out = self.run_main("verify")
+        self.assertIn(code, (0, 1), out)
+        self.assertTrue(out.startswith("OK: ") or "[BLOCK]" in out,
+                        f"verify reached no verdict:\n{out}")
+        if code == 0:
+            self.assertRegex(out, r"^OK: \d+ chained growth-anchor event\(s\), tail anchored in ")
+        self.assertEqual((ledger.read_bytes(), manifest.read_bytes()), before,
+                         "measure or verify wrote the ledger or the manifest")
 
 
 if __name__ == "__main__":
