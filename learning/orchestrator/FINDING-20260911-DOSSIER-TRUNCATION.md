@@ -73,8 +73,9 @@ guard than as an autopsy.
   `test_repository_surface_determinism.py`, whose fixtures work on a `mkdtemp` copy; the file had
   been edited by a peer session at 06:04:35, inside that suite's slot. A worktree-hash guard in a
   shared checkout separates a suite's write from a concurrent peer edit only when the tree is
-  quiet. A cheap refinement, not yet built: record each suite's start/end and print each changed
-  path's mtime against that window, so an edit outside the window is exonerated by arithmetic.
+  quiet. Refinement built the same morning: the runner records each suite's start/end and prints
+  each changed path's mtime against that window — `WRITTEN BEFORE/AFTER THE SUITE` exonerates by
+  arithmetic; `INSIDE the window` stays ambiguous and says so (`mtime_verdict`).
 - **This is the `real_artifact_case` hazard the dispatch did not name.** The self-test meta-test
   asks every suite to touch a real corpus artefact; the dispatch said *never a false green* and
   did not say *never a write*. `INVISIBLE_COMPLIANCE_GATE`'s sibling: a criterion that rewards

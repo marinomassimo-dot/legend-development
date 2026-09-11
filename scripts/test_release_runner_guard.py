@@ -70,6 +70,36 @@ class TrackedStateSeesWorkingTreeWrites(unittest.TestCase):
             self.assertIn(tree, runner.GUARDED_TREES)
 
 
+class TheMtimeVerdictExoneratesByArithmetic(unittest.TestCase):
+    """A peer's edit outside the suite's window is not the suite's; inside stays ambiguous."""
+
+    def setUp(self) -> None:
+        self._tmp = tempfile.TemporaryDirectory()
+        self.path = Path(self._tmp.name) / "f.md"
+        self.path.write_text("x", encoding="utf-8")
+
+    def tearDown(self) -> None:
+        self._tmp.cleanup()
+
+    def test_an_edit_before_the_window_is_not_the_suite(self) -> None:
+        now = self.path.stat().st_mtime
+        self.assertIn("BEFORE THE SUITE", runner.mtime_verdict(self.path, now + 100, now + 200))
+
+    def test_an_edit_after_the_window_is_not_the_suite(self) -> None:
+        now = self.path.stat().st_mtime
+        self.assertIn("AFTER THE SUITE", runner.mtime_verdict(self.path, now - 200, now - 100))
+
+    def test_an_edit_inside_the_window_stays_ambiguous_and_says_so(self) -> None:
+        now = self.path.stat().st_mtime
+        verdict = runner.mtime_verdict(self.path, now - 10, now + 10)
+        self.assertIn("INSIDE", verdict)
+        self.assertIn("concurrent editor", verdict)
+
+    def test_a_deleted_path_does_not_crash_the_runner(self) -> None:
+        self.path.unlink()
+        self.assertIn("unavailable", runner.mtime_verdict(self.path, 0.0, 1.0))
+
+
 class TheLoopIsWired(unittest.TestCase):
     """Asserted at the source: the runner cannot be run against a fixture repo."""
 

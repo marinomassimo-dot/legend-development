@@ -8,6 +8,7 @@ import os
 import re
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 
@@ -212,6 +213,27 @@ GUARDED_TREES = ("disease-models", "governance", "roles", "framework/protocols",
                  "framework/instruction", "framework/state", "learning", "ledger")
 
 
+def mtime_verdict(path: Path, started: float, finished: float) -> str:
+    """Was the file written inside this suite's window, or by someone else outside it.
+
+    The guard cannot tell a suite's write from a concurrent peer edit by content. It can by
+    time, when the edit falls outside the suite's own run: an mtime before `started` or after
+    `finished` exonerates the suite by arithmetic. Inside the window stays ambiguous and says
+    so — the first false attribution, on 2026-09-11, was a peer's edit inside the window.
+    """
+    try:
+        mtime = path.stat().st_mtime
+    except OSError:
+        return "mtime unavailable (deleted?)"
+    clock = lambda t: time.strftime("%H:%M:%S", time.gmtime(t))  # noqa: E731
+    window = f"suite ran {clock(started)}-{clock(finished)} UTC"
+    if mtime < started - 1:
+        return f"WRITTEN BEFORE THE SUITE at {clock(mtime)} - not this suite ({window})"
+    if mtime > finished + 1:
+        return f"WRITTEN AFTER THE SUITE at {clock(mtime)} - not this suite ({window})"
+    return f"written INSIDE the window at {clock(mtime)} - this suite or a concurrent editor ({window})"
+
+
 def tracked_state(trees: tuple[str, ...], root: Path = ROOT) -> dict[str, str]:
     """{path: blob-or-worktree hash} for every tracked file under the guarded trees.
 
@@ -274,9 +296,11 @@ def main() -> int:
     baseline = tracked_state(GUARDED_TREES)
     for relative in selected:
         print(f"RUN {relative}", flush=True)
+        started = time.time()
         result = subprocess.run(
             [sys.executable, relative], cwd=ROOT,
             stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+        finished = time.time()
         sys.stdout.write(result.stdout)
         sys.stdout.flush()
         after = tracked_state(GUARDED_TREES)
@@ -287,7 +311,8 @@ def main() -> int:
             print(f"TRACKED_FILES_WRITTEN_BY_SUITE {relative}: {len(paths)} path(s)",
                   flush=True)
             for path in paths[:20]:
-                print(f"  wrote {path}", flush=True)
+                print(f"  wrote {path}  {mtime_verdict(ROOT / path, started, finished)}",
+                      flush=True)
             baseline = after
         skips.extend((relative, reason) for reason in extract_skip_reasons(result.stdout))
         if result.returncode:
