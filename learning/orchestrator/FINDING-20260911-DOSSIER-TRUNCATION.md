@@ -1,6 +1,6 @@
 # Finding — 54 tracked dossiers overwritten with the word `touched` during an unattended run
 
-**Recorded by:** `orchestrator`, 2026-09-11 · **Status:** RESTORED, culprit UNATTRIBUTED, guard SHIPPED
+**Recorded by:** `orchestrator`, 2026-09-11 · **Status:** RESTORED, culprit **ATTRIBUTED** (see Resolution), guard SHIPPED at two layers
 · **Severity:** high — scientific artefacts, other actors' readings, and `git` was the only reason
 nothing was lost
 
@@ -80,3 +80,33 @@ guard than as an autopsy.
   asks every suite to touch a real corpus artefact; the dispatch said *never a false green* and
   did not say *never a write*. `INVISIBLE_COMPLIANCE_GATE`'s sibling: a criterion that rewards
   reading real artefacts must forbid writing them in the same sentence, or it trains exactly this.
+
+## Resolution — attributed by its author, 2026-09-11
+
+`HARNESS-SELFTEST-001`, resumed after the rate-limit kill, reported it first and unprompted: **the
+overwrite was that task's own mutation matrix.** Mutation M6 of `dossier_quote_audit` was
+`path.write_text("touched")` in the dossier loop; M3 of `recapture_snippets` made the dry run write.
+The harness drove each mutated tool through the suite's real-artefact cases **against the real
+root**, then restored the *tool* from a copy and never the *artefacts*. The literal `touched` lived
+in the harness's scratch JSON, not in any `.py` and not in a transcript — which is exactly why the
+autopsy above, which searched both, could not find it. The actor had already caught it (M3 killed
+by the real-manifest case → `git status` → 55 modified files) when its session died before it could
+report; the coordinator restored the files first.
+
+Every statement in "What was excluded" above stands: none of the excluded suspects wrote anything.
+The 0.6-second loop, the manifest snippet normalisation (a dry run made to write), and the timing
+against the two test files' mtimes all match the account. The mutation file itself is not on disk
+in the coordinator's scratchpad and is taken on the actor's word, corroborated by the artefacts.
+
+**Guard, second layer (`1325494`):** `self_test_coverage.py`'s tracer now records the mode of every
+`open()` and **refuses — `PermissionError` before any byte lands — any write, unlink, rename,
+replace, rmdir or truncate under a guarded tree**; the verdict `REFUSED` outranks both axes; a test
+pins that its tree list and the release runner's `GUARDED_TREES` agree; `--guarded <command>` runs
+anything under the same refusal, and the mutation harness now runs every suite through it. Both
+matrices re-run under it: M6 and M3 `GUARDED`, zero bytes landed.
+
+**What this closes and what it corrects.** The class is closed at two layers: the runner detects
+and names a writing suite after the fact; the meta-test refuses the write before it happens. The
+residual above — *"the guard attributes on the next run"* — was **wrong as stated**: the writer was
+a harness outside the battery, and the runner would never have seen it. The refusal layer is the
+one that catches this shape, and it exists because the author of the incident built it.
