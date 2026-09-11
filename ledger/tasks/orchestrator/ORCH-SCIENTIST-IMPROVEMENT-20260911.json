@@ -106,7 +106,7 @@
    "class": "2 — no safe default for the push itself (an unauthenticated push is impossible, a key is not this actor's to install)",
    "what_was_asked": "publish main to development after gate PASS",
    "time_waited": "none — recorded and the turn continued",
-   "outcome": "deferred to the operator with the exact command; everything else complete",
+   "outcome": "resolved the same session: operator chose a new key for the desktop user (no root password needed); push completed and verified",
    "question": "Should this desktop user hold a deploy key for development so agents can complete the push rule unattended? (yes: one ssh-keygen + a GitHub deploy key with write; the push rule's controls are unchanged)"
   }
  ],
@@ -156,7 +156,7 @@
   "battery_at": "7e6e58c",
   "battery": "`FAIL` on exactly the two inherited reds — `test_batch_queue` (ratchet; operator's `BATCH_COMMIT`) and `test_surface_census` (gitignored evidence) — over 105 suites (103 at baseline + `test_screen_exit_codes.py`, `test_derived_inputs.py`); nothing green before is red after",
   "gate": "PASS at 28616c5 (public_release_gate.py, zero blocks; REVIEW lines pre-existing)",
-  "push": "NOT DONE. The desktop user has no SSH identity: ~/.ssh did not exist, no agent, `ssh -T` to the GitHub git user -> Permission denied (publickey); the key that pushed from /root is unreadable to this user and sudo needs a password. The gate has been run on the exact SHA to push; the operator (or a session with the key) completes it with: python3 framework/scripts/safe_push.py development main  and verifies `git ls-remote development refs/heads/main` equals the pushed SHA.",
+  "push": "DONE 2026-09-11: safe_push.py development main from cb69c64 -> PUBLISHED, gate PASS on that SHA, ls-remote verified cb69c6438148a9dc09a765cf68850fb1251dfc1d (fast-forward c1701be..cb69c64). Actor: orchestrator, with a new ed25519 authentication key generated for the desktop user and registered by the operator on GitHub; root's key untouched.",
   "side_effect": "the diagnosis added github.com's ED25519 host key to /home/desktop/.ssh/known_hosts (file created); no key material, nothing else touched"
  },
  "self_evaluation": "disease-models/wwox/research/session_evaluations/2026-09-11_orchestrator_scientist_improvement_afternoon.md"
