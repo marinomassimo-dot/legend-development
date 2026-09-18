@@ -831,4 +831,4 @@ if __name__ == "__main__":
         a = ap.parse_args()
         sys.exit(reconstruct_real(a.root, a.payload, a.scratch, a.remote, a.branch))
     else:
-        unittest.main()
+        unittest.main(verbosity=2)

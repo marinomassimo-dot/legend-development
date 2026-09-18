@@ -11,9 +11,15 @@ import tempfile
 import unittest
 from pathlib import Path
 
-import fitz
+try:                                     # the guarded form the sibling suites already use
+    import fitz
+except ModuleNotFoundError:              # pragma: no cover - deployment-dependent
+    fitz = None
 
-from figure_ppi_preflight import inventory
+if fitz is None:                         # the SUBJECT imports fitz at module level too,
+    inventory = None                     # so importing it here would raise before any
+else:                                    # skipIf could fire.
+    from figure_ppi_preflight import inventory
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
@@ -36,6 +42,7 @@ def fixture_pdf(path: Path) -> None:
     document.close()
 
 
+@unittest.skipIf(fitz is None, "PyMuPDF (fitz) is not installed here. It is an OPTIONAL dependency (requirements-analysis.txt), so its absence is a property of this deployment, not of the subject. Skipped with the reason named, never passed.")
 class FigurePpiPreflightTest(unittest.TestCase):
     def test_reports_effective_ppi_and_vector_page(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
@@ -59,6 +66,7 @@ class FigurePpiPreflightTest(unittest.TestCase):
         self.assertEqual(result["pages"][1]["note"], "vector_or_text_only")
 
 
+@unittest.skipIf(fitz is None, "PyMuPDF (fitz) is not installed here. It is an OPTIONAL dependency (requirements-analysis.txt), so its absence is a property of this deployment, not of the subject. Skipped with the reason named, never passed.")
 class TheCliIsDriven(unittest.TestCase):
     """``main`` as a subprocess: the text report, the JSON report, and a missing PDF."""
 
@@ -86,6 +94,7 @@ class TheCliIsDriven(unittest.TestCase):
         self.assertNotIn("0 pages", result.stdout)
 
 
+@unittest.skipIf(fitz is None, "PyMuPDF (fitz) is not installed here. It is an OPTIONAL dependency (requirements-analysis.txt), so its absence is a property of this deployment, not of the subject. Skipped with the reason named, never passed.")
 class TheRealPdfIsInventoried(unittest.TestCase):
     """A preflight over a real PDF under ``files/fulltext`` — read, digested, never modified."""
 
@@ -110,4 +119,4 @@ class TheRealPdfIsInventoried(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)

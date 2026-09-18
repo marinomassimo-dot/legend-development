@@ -47,6 +47,22 @@ class BaselineTests(unittest.TestCase):
     def test_current_phase2_baseline_verifies(self) -> None:
         if not protocol._git_ok(protocol.REPO_ROOT, "rev-parse", "--is-inside-work-tree"):
             self.skipTest("Git object database absent; verify-baseline must fail closed here")
+        # 🔴 A SHALLOW CLONE IS A THIRD STATE, and until 2026-09-18 it read as a baseline
+        # failure. The seal is anchored to `git_head_at_freeze`; a clone fetched with
+        # `--depth` has the working bytes but not that commit, so every one of the sealed
+        # inputs reports `git blob unavailable` — fourteen errors describing the clone, not
+        # the baseline. The guard above covers "no git at all"; this covers "git, but not
+        # this history", which is what a CI or container checkout ordinarily is.
+        freeze = protocol.load_json(protocol.BASELINE).get("git_head_at_freeze")
+        if not freeze or not protocol._git_ok(protocol.REPO_ROOT, "cat-file", "-e",
+                                              f"{freeze}^{{commit}}"):
+            self.skipTest(
+                f"the frozen commit {str(freeze)[:12]} is not in this clone "
+                f"(shallow: "
+                f"{protocol._git_ok(protocol.REPO_ROOT, 'rev-parse', '--is-shallow-repository')}"
+                f"). The seal is anchored to history this checkout does not carry, so the "
+                f"baseline cannot be verified here — it is NOT thereby verified. Re-run in a "
+                f"full clone: `git fetch --unshallow`.")
         self.assertEqual(protocol.verify_phase2_baseline(), [])
 
     def test_append_only_suffix_does_not_invalidate_prefix(self) -> None:

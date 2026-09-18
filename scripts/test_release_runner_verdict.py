@@ -143,5 +143,98 @@ class ArchiveVerdictIntegrationTests(unittest.TestCase):
         self.assertNotIn("REGRESSION VERDICT: PASS (1 targets)", combined)
 
 
+class EverySuiteCanBeAskedWhyItSkipped(unittest.TestCase):
+    """🔴 A SKIP WHOSE REASON THE VERDICT CANNOT PRINT IS A SILENT PASS WEARING A LABEL.
+
+    `extract_skip_reasons` parses `... skipped 'reason'`, which unittest emits only at
+    `verbosity=2`. A suite invoked as a bare `unittest.main()` reports its skips as `s` and the
+    verdict prints `reason unavailable` — which is the whole guarantee ("skipped, never passed")
+    reduced to a number. Thirteen of the inventory's suites were in that state on 2026-09-18,
+    including two this session had just taught to skip.
+
+    Discovered, not listed: the population is the release inventory itself, so the next suite
+    added fails this until it can say why it skipped.
+    """
+
+    @staticmethod
+    def _verbosity(path: Path) -> str | None:
+        """PARSED, NOT GREPPED — and the first cut of this check proves why.
+
+        A substring scan for `unittest.main()` reported THIS file, whose docstring and failure
+        message both quote the pattern they are about. A check that reads prose as code is the
+        defect `artifact_index.py` rule 3 and `test_record_conventions.py` were each written
+        against. Returns "bare", "verbose", or None when the file has no such call at all.
+        """
+        import ast
+        try:
+            tree = ast.parse(path.read_text(encoding="utf-8", errors="replace"))
+        except SyntaxError:                   # not our business here; other suites own that
+            return None
+        # 🔴 ONLY `unittest.main`, AND THE NARROWING WAS FORCED BY FIVE FALSE POSITIVES. The
+        # first cut also matched a bare `main()`, so five suites with their OWN `main()` — one
+        # of which does not import unittest at all and prints its own PASS/FAIL lines — were
+        # told to add a `verbosity` argument to a function that has no such parameter. A suite
+        # that emits no unittest skips has nothing to disclose and is not this check's business.
+        imported = {alias.asname or alias.name
+                    for node in ast.walk(tree) if isinstance(node, ast.ImportFrom)
+                    and node.module == "unittest" for alias in node.names}
+        found = None
+        for node in ast.walk(tree):
+            if not isinstance(node, ast.Call):
+                continue
+            target = node.func
+            if isinstance(target, ast.Attribute):
+                if not (isinstance(target.value, ast.Name)
+                        and target.value.id == "unittest" and target.attr == "main"):
+                    continue
+            elif isinstance(target, ast.Name):
+                if target.id not in imported or "main" not in imported:
+                    continue
+            else:
+                continue
+            if any(keyword.arg == "verbosity" for keyword in node.keywords):
+                return "verbose"
+            found = "bare"
+        return found
+
+    def test_no_inventory_suite_hides_its_skip_reasons(self) -> None:
+        import run_release_regressions as runner
+        bare = [relative for relative in runner.TESTS
+                if (runner.ROOT / relative).is_file()
+                and self._verbosity(runner.ROOT / relative) == "bare"]
+        self.assertFalse(bare, "these suites call unittest.main() without verbosity=2, so a "
+                               "skip of theirs reaches the release verdict with no reason "
+                               "attached:\n  " + "\n  ".join(bare))
+
+    def test_the_check_is_not_vacuous(self) -> None:
+        """Three things, because each could make the case above pass while proving nothing."""
+        import run_release_regressions as runner
+        self.assertGreater(len(runner.TESTS), 50, "the inventory must be non-trivial")
+        # the parser really does tell the two forms apart
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            bare = Path(tmp) / "bare.py"
+            bare.write_text("import unittest\nunittest.main()\n", encoding="utf-8")
+            verbose = Path(tmp) / "verbose.py"
+            verbose.write_text("import unittest\nunittest.main(verbosity=2)\n", encoding="utf-8")
+            prose = Path(tmp) / "prose.py"
+            prose.write_text('"""a docstring naming unittest.main() and nothing else"""\n',
+                             encoding="utf-8")
+            own = Path(tmp) / "own.py"
+            own.write_text("def main():\n    return 0\nraise SystemExit(main())\n",
+                           encoding="utf-8")
+            self.assertEqual("bare", self._verbosity(bare))
+            self.assertEqual("verbose", self._verbosity(verbose))
+            self.assertIsNone(self._verbosity(prose), "prose about the call is not the call")
+            self.assertIsNone(self._verbosity(own),
+                              "a suite's own main() is not unittest's, and has no verbosity")
+        # and the runner keeps an unattributable skip rather than dropping it — stronger than
+        # this check assumed on its first cut, and the reason the folded count can be trusted
+        self.assertEqual(["reason unavailable"],
+                         runner.extract_skip_reasons("s\n\nOK (skipped=1)\n"))
+        self.assertEqual(["because"],
+                         runner.extract_skip_reasons("test_x (M.C) ... skipped 'because'\n"))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

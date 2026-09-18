@@ -99,7 +99,7 @@ def build(root: Path) -> dict:
             "script": root / "framework/scripts/regenerate_adjudications.py"}
 
 
-@unittest.skipIf(fitz is None, "PyMuPDF is required to build the synthetic source PDF")
+@unittest.skipIf(fitz is None, "PyMuPDF (fitz) is not installed here. It is an OPTIONAL dependency (requirements-analysis.txt), so its absence is a property of this deployment, not of the subject. Skipped with the reason named, never passed.")
 class VerifyFailsClosed(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.mkdtemp()
@@ -222,6 +222,7 @@ class VerifyFailsClosed(unittest.TestCase):
         self.assertIn("0 of 0 locator(s) resolved", output)
 
 
+@unittest.skipIf(fitz is None, "PyMuPDF (fitz) is not installed here. It is an OPTIONAL dependency (requirements-analysis.txt), so its absence is a property of this deployment, not of the subject. Skipped with the reason named, never passed.")
 class NoDegradedStateLooksLikeACleanRun(unittest.TestCase):
     """🔴 The question that decides whether this is fail-closed at all.
 
@@ -307,6 +308,7 @@ class NoDegradedStateLooksLikeACleanRun(unittest.TestCase):
                          f"two states produce identical output: {outputs}")
 
 
+@unittest.skipIf(fitz is None, "PyMuPDF (fitz) is not installed here. It is an OPTIONAL dependency (requirements-analysis.txt), so its absence is a property of this deployment, not of the subject. Skipped with the reason named, never passed.")
 class AMalformedRecipeIsAVerdictNotATraceback(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.mkdtemp()
@@ -342,6 +344,7 @@ class AMalformedRecipeIsAVerdictNotATraceback(unittest.TestCase):
         self.assertNotIn("Traceback", output)
 
 
+@unittest.skipIf(fitz is None, "PyMuPDF (fitz) is not installed here. It is an OPTIONAL dependency (requirements-analysis.txt), so its absence is a property of this deployment, not of the subject. Skipped with the reason named, never passed.")
 class OneRegenerationCannotDestroyAnother(unittest.TestCase):
     """🔴 IN SCOPE, by the tool's own contract rather than by tidiness.
 

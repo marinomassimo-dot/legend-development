@@ -218,7 +218,15 @@ def format_success_verdict(target_count: int,
         f"REGRESSION VERDICT: PASS WITH SKIPS "
         f"({target_count} targets, {len(skips)} skipped)"
     ]
-    lines.extend(f"- {target}: {reason}" for target, reason in skips)
+    # 🔴 THE COUNT STAYS EXACT; ONLY THE PRINTING COLLAPSES. One suite can skip every case it
+    # owns for a single reason — 27 identical lines, on 2026-09-18 — and a verdict nobody reads
+    # to the end is a verdict that hides the one distinct reason further down. Repeats are
+    # folded with their multiplicity, in first-seen order; the header's total is unchanged.
+    folded: dict[tuple[str, str], int] = {}
+    for pair in skips:
+        folded[pair] = folded.get(pair, 0) + 1
+    lines.extend(f"- {target}: {reason}" + (f"  [x{count}]" if count > 1 else "")
+                 for (target, reason), count in folded.items())
     return lines
 
 
@@ -351,6 +359,15 @@ def main() -> int:
                   file=sys.stderr)
         for relative, returncode in failures:
             print(f"- {relative}: exit {returncode}", file=sys.stderr)
+        # 🔴 SKIPS ARE PRINTED ON THIS PATH TOO. Until 2026-09-18 they were printed only when
+        # the battery passed, so a run with one failure reported nothing about the suites that
+        # skipped every case they own — and "skipped, never passed" is a promise that depends
+        # entirely on being said out loud. The failure is the headline; the skips are the rest
+        # of what did not get verified, and a reader of a FAIL needs both.
+        if skips:
+            print(f"NOT VERIFIED IN THIS RUN ({len(skips)} skipped):", file=sys.stderr)
+            for line in format_success_verdict(len(selected), skips)[1:]:
+                print(line, file=sys.stderr)
         return 1
     for line in format_success_verdict(len(selected), skips):
         print(line)

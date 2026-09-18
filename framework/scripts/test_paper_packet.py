@@ -96,7 +96,17 @@ class ThePacketCarriesTheTechnicalState(unittest.TestCase):
     def test_artefact_digests_are_verified_not_quoted(self) -> None:
         packet = pp.build(ROOT, "wwox", LIVE_PMID)
         declared = [row for row in packet["artefacts"] if row["declared"] and row["present"]]
-        self.assertTrue(declared)
+        if not declared:
+            # 🔴 THE ARTEFACTS LIVE UNDER `files/`, WHICH IS GITIGNORED. A fresh clone has the
+            # manifest that declares them and none of the bytes, so this case cannot run and
+            # is NOT thereby satisfied — the sibling wording in
+            # `test_locator_obligation_reaches_every_route.py` is the precedent. What it would
+            # verify is that a digest is COMPUTED rather than quoted, which needs the bytes.
+            absent = [row["path"] for row in packet["artefacts"] if row["declared"]][:3]
+            self.skipTest(
+                f"no declared artefact is present in this checkout "
+                f"(e.g. {', '.join(absent) or '(none declared)'}) — `files/` is gitignored, so "
+                f"this case does not run in a fresh clone. It is skipped, never passed.")
         self.assertTrue(all(row["digest"] in {"match", "MISMATCH", ""} for row in declared))
         self.assertIn("match", {row["digest"] for row in declared})
 

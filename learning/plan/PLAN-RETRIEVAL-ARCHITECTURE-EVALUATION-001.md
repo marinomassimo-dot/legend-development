@@ -609,3 +609,137 @@ declare. Both weaknesses are recorded in the tests that now cover them.
 - **It did not lower the latency budget question for Phase 2.** The measured cross-registry filter
   is ≈310 ms with zero persisted state. That is the number an SQLite index would have to beat by
   enough to justify a stale-index failure mode, and it does not yet.
+
+---
+
+## 12 · A correction, and the seven red suites this record kept naming without looking
+
+### 12.1 The correction
+
+**§9.2, §10.3 and §11.3 each say the seven failing release suites are "all environmental". That
+is wrong, and it was asserted three times without being checked.** The claim came from reading
+two of the seven (`numpy`, a gitignored artefact) and generalising to the rest. Diagnosed
+properly on 2026-09-18, they are **three different things**:
+
+| Suite | Actually |
+|---|---|
+| `scripts/test_cli_smoke.py` | `numpy` absent — optional dependency |
+| `disease-models/wwox/analysis/scripts/test_structural_analysis.py` | `numpy` absent |
+| `framework/scripts/test_figure_ppi_preflight.py` | `PyMuPDF`/`fitz` absent |
+| `framework/scripts/test_regenerate_adjudications_fails_closed.py` | `fitz` absent — the suite already had `skipIf(fitz is None)`, on **one** of its four classes |
+| `framework/scripts/test_paper_packet.py` | artefacts under gitignored `files/` absent (15 declared, 0 present) |
+| `disease-models/wwox/analysis/scripts/test_dismech_independent_protocol.py` | **a shallow clone** — 54 commits, `is-shallow-repository: true`; the seal's `git_head_at_freeze` (`8ca27121…`) is not an object here, so 14 sealed inputs report `git blob unavailable` |
+| `framework/scripts/test_batch_queue.py` | **NOT environmental.** *"80 studies counted as read against 59 PAPER records claiming full text. Only a BATCH_COMMIT closes this."* |
+
+No verification conclusion changes — the §21e criterion being checked was *no suite green before
+a change is red after it*, and the same seven were red at clean HEAD each time. But the
+characterisation was wrong, it is in three commit messages, and the correction belongs where the
+claim was made.
+
+### 12.2 Why the first six are a defect and not a fact of life
+
+`test_repository_surface_determinism.py` exists to enforce one rule: **same tracked tree, same
+verdict, whatever else is on the disk.** These six broke it from the other side — the verdict was
+following the *machine* (which optional packages happen to be installed, how deep the clone is),
+not the tree. And a missing optional dependency and a broken argparse were reported identically,
+as `exit 1`, so the battery could not tell them apart.
+
+The repository already had the right idiom in three places — `skipIf(fitz is None, …)`,
+`skipUnless(LIVE_CORPUS.is_dir(), …)`, and the wording *"real artefact absent: `files/` is
+gitignored, so this case does not run in a fresh clone. It is skipped, never passed."* It was
+applied unevenly. Extending it was reuse, not invention.
+
+| Suite | Change |
+|---|---|
+| `test_regenerate_adjudications_fails_closed.py` | the existing guard extended to the three classes that lacked it |
+| `test_figure_ppi_preflight.py`, `test_structural_analysis.py` | the import guarded — **including the subject's own import**, since each subject imports the dependency at module level and would raise before any `skipIf` could fire |
+| `test_paper_packet.py` | the artefact-digest case skips when no declared artefact is present, naming three of them |
+| `test_dismech_independent_protocol.py` | a **third** state beside "git present" and "git absent": *git, but not this history*, which is what a container or CI checkout ordinarily is. The message says the baseline is **not thereby verified** and gives the remedy (`git fetch --unshallow`) |
+| `scripts/test_cli_smoke.py` | a `--help` dying on `ModuleNotFoundError` for a module **this repository does not ship** is skipped with the module named; anything else still fails. The shipped set is derived from `git ls-files`, never listed |
+| `scripts/run_release_regressions.py` | repeated skip reasons folded with their multiplicity — one suite produced **27 identical lines**, which buries the one distinct reason below them. The header's total is unchanged. And **skips are now printed on the FAIL path too**: until now they appeared only when the battery passed, so a run with one failure said nothing about the suites that skipped every case they own — and *"skipped, never passed"* is a promise that depends entirely on being said out loud |
+| 18 inventory suites | `unittest.main()` → `unittest.main(verbosity=2)`: unittest emits the skip **reason** only at that verbosity, so a skip from any of them reached the verdict as `reason unavailable` — the guarantee reduced to a number |
+| `scripts/test_release_runner_verdict.py` | a guard: no suite in the release inventory may hide its skip reasons. Discovered from the inventory, so the next suite added fails it until it can say why it skipped |
+
+**Mutation-checked where it matters most**, because the hazard of this whole change is a skip
+that hides a real breakage:
+
+| Mutation | Result |
+|---|---|
+| break a CLI's module body outright | ✅ **FAILED** — not skipped |
+| make a CLI fail on a module the repository **does** ship | ✅ **FAILED** — the shipped/not-shipped distinction is the load-bearing one |
+| *(first attempt at the above used `registry_records`, which is importable from that directory, so it produced no error at all — the mutation was re-done with a module that is shipped but off that path)* | |
+
+### 12.2b · The guard found two defects in itself, and one of them was mine twice
+
+Writing the "no suite hides its skip reasons" check produced three corrections in a row, all of
+the same shape — **an instrument that reads text where it should read structure**:
+
+1. **A substring scan for `unittest.main()` flagged the guard's own file**, whose docstring and
+   failure message both quote the pattern they are about. Rewritten with `ast`.
+2. **The same substring scan had already damaged `test_self_test_coverage.py`** — it rewrote four
+   *fixture strings*, synthetic suites embedded as constants for the coverage analyser to read,
+   while that file's real entry point had been verbose all along. Reverted; the file never needed
+   changing. This is `artifact_index.py` rule 3 restated: the population must be enumerated by an
+   instrument that cannot express the property being hunted.
+3. **The first `ast` version then over-matched**, flagging five suites that call their own local
+   `main()` — one of which does not import `unittest` at all and prints its own PASS/FAIL lines.
+   A suite that emits no unittest skips has nothing to disclose. Narrowed to `unittest.main`, plus
+   `main` only where `from unittest import main` is present, with a fixture case pinning each of
+   bare / verbose / prose / a suite's own `main()`.
+
+The "13 bare suites" figure this section first carried was therefore wrong in **both** directions
+— it counted fixtures and missed real forms. The AST count is the one to trust, and every edited
+file was re-audited afterwards to hold exactly one real `unittest.main` call.
+
+### 12.3 What was deliberately left red
+
+**`test_batch_queue.py` stays red.** *"80 studies counted as read against 59 PAPER records
+claiming full text"* is a finding about the scientific state, and the test's own message names
+the remedy: **only a `BATCH_COMMIT` closes this.** That is Scientist/Orchestrator work under the
+gate, not harness work, and this session is Harness Engineering. Skipping it, relaxing it, or
+adjusting its threshold would be precisely *"skip a test to get green"* — the thing the operating
+rules forbid and the thing this whole change could most easily have become.
+
+It is reported here so it is not lost: **the queue counts 21 more studies as read than the paper
+registry declares full text for.** Either the queue over-counts or the registry under-declares,
+and a reading decides which.
+
+### 12.3b · The number the change actually surfaced
+
+With the skips now printed on the FAIL path, the full battery reports **82 skipped cases** where
+it previously printed none. Only about a dozen of those are the six suites repaired above; **the
+rest were already skipping silently**, on every recent run, for reasons no reader of the verdict
+could see:
+
+```
+- test_deepdive_manifest.py: PyMuPDF unavailable  [x13]
+- test_deepdive_manifest.py: PMID 38499540 supplement absent from this checkout
+- test_deepdive_manifest.py: Retraction Watch snapshot unusable: … (run: dependency_integrity.py fetch)
+- test_manifest_flag_drift.py: history absent in this checkout: a second revision of …PMID38499540.json
+- test_self_test_coverage.py: history absent from this checkout: 0e33f0f
+- test_repository_surface_determinism.py: case-sensitive filesystem: `.GIT` cannot impersonate `.git`
+- test_cli_smoke.py: 23 of 26 declared commands verified; 3 not run because …
+```
+
+The battery has been red for some time, so `format_success_verdict` — the only place skips were
+printed — never ran. **That is the finding**: the repository's most load-bearing verification
+surface was reporting a one-line verdict over a battery in which eighty-two cases did not
+execute, and nothing said so. The six repaired suites are the smaller half of this section's
+value; making the other seventy visible is the larger half.
+
+Three distinct causes stand out and none is addressed here: **PyMuPDF absent** (13 cases in the
+manifest validator alone), **the shallow clone** (`0e33f0f`, `8ca27121`, prior manifest
+revisions — history the seal and the drift detector both need), and **a Retraction Watch snapshot
+that was never fetched**. Each is a deployment decision, not a code change, and each now names
+itself in the verdict.
+
+### 12.4 What this did not establish
+
+- **Nothing was verified that was not verified before.** Six suites moved from *red for a reason
+  nobody read* to *skipped for a reason printed in the verdict*. That is a gain in legibility and
+  determinism, not in coverage — and the count of what is actually exercised on this host is
+  unchanged. Eighty-two cases still do not run here; the change makes that sentence sayable, and
+  it does not make it false.
+- **The optional dependencies were not installed.** Whether these suites pass with `numpy` and
+  `PyMuPDF` present is untested here, and a deployment that has them will be the first to find out.
+- **The shallow clone was not deepened.** The dismech seal remains unverified on this host.

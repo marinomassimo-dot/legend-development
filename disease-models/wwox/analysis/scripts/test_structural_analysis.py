@@ -10,7 +10,10 @@ import tempfile
 import unittest
 from pathlib import Path
 
-import numpy as np
+try:                                     # the guarded form the sibling suites already use
+    import numpy as np
+except ModuleNotFoundError:              # pragma: no cover - deployment-dependent
+    np = None
 
 
 HERE = Path(__file__).resolve().parent
@@ -25,13 +28,17 @@ def load_module(filename: str, name: str):
     return module
 
 
-RESIDUE = load_module("residue_context.py", "residue_context")
-KFERQ = load_module("kferq_geometry.py", "kferq_geometry")
-PREPARE = load_module(
-    "prepare_redteam_structures.py", "prepare_redteam_structures"
-)
+if np is None:                           # every subject below imports numpy at module level,
+    RESIDUE = KFERQ = PREPARE = None     # so loading them here would raise before any skipIf
+else:                                    # could fire.
+    RESIDUE = load_module("residue_context.py", "residue_context")
+    KFERQ = load_module("kferq_geometry.py", "kferq_geometry")
+    PREPARE = load_module(
+        "prepare_redteam_structures.py", "prepare_redteam_structures"
+    )
 
 
+@unittest.skipIf(np is None, "numpy is not installed here. It is an OPTIONAL dependency (requirements-analysis.txt), so its absence is a property of this deployment, not of the subject. Skipped with the reason named, never passed.")
 class StructuralAnalysisTests(unittest.TestCase):
     def test_sphere_points_are_unit_length(self) -> None:
         points = RESIDUE.sphere_points(50)
@@ -119,4 +126,4 @@ class StructuralAnalysisTests(unittest.TestCase):
 
 
 if __name__ == "__main__":
-    unittest.main()
+    unittest.main(verbosity=2)
