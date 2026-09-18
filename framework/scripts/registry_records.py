@@ -38,6 +38,12 @@ WHAT IT GUARANTEES, AND WHAT IT REFUSES TO GUARANTEE
   objects and the 2026-09-09 sweep produced the error of confusing them (A13).
 - Every hit carries **source path, record id, record digest and source-file digest**, so a later
   reader can tell whether the registry has moved underneath a quoted record.
+- Every answer carries the **commit the registries were read at**, and whether any of them was
+  uncommitted in the working tree at that moment (`BOUND` / `DIRTY` / `UNBOUND`, the three states
+  `derived_inputs.py` already names). A digest says the bytes have moved; only the commit says
+  WHICH TREE they were quoted from, and `DIRTY` says the quotation reproduces somebody's
+  uncommitted edit rather than anything a second reader can check out. Reported, never refused:
+  this command reads, and a reader who is told DIRTY can decide.
 - Wikilinks are resolved one hop by default (`--hops`), and a link that resolves to **nothing**
   is reported as `UNRESOLVED` rather than silently dropped.
 - 🔴 **An empty result is never a scientific statement.** `no record matched` exits non-zero and
@@ -50,6 +56,8 @@ WHAT IT GUARANTEES, AND WHAT IT REFUSES TO GUARANTEE
     python3 framework/scripts/registry_records.py get --id "CLAIM 030" --hops 2
     python3 framework/scripts/registry_records.py get --theme myelin --limit 5
     python3 framework/scripts/registry_records.py index --verify
+    python3 framework/scripts/registry_records.py get --pmid 33914858 --json | \
+        python3 -c "import json,sys; print(json.load(sys.stdin)['repository'])"
 
 The canonical registries are never written, re-ordered, summarised or mirrored. There is no
 second registry to maintain: every answer is parsed from the current file at call time, and
@@ -69,6 +77,10 @@ from typing import Any, Iterable
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
+
+if str(HERE) not in sys.path:        # the guarded form `paper_packet.py` already uses
+    sys.path.insert(0, str(HERE))
+import derived_inputs  # noqa: E402
 
 # Every registry-shaped surface a link can point at. The key is the wikilink stem.
 SOURCES = {
@@ -173,6 +185,7 @@ class Selection:
     notes: list[str] = field(default_factory=list)
     residue: int = 0
     file_digests: dict[str, str] = field(default_factory=dict)
+    repository: dict[str, Any] = field(default_factory=dict)
 
     def add(self, record: Record, why: str) -> None:
         key = (record.source, record.record_id)
@@ -205,6 +218,38 @@ def identity_key(value: str) -> str:
 
 def file_digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def repository_state(root: Path, paths: Iterable[Path]) -> dict[str, Any]:
+    """The commit these exact files were read at, and whether any was uncommitted.
+
+    🔴 A DIGEST IS NOT A PROVENANCE. The record digest and the source-file digest say that the
+    bytes quoted are the bytes read; neither says which tree they came from. A reader holding a
+    quoted record and a digest that no longer matches cannot tell whether the registry moved
+    forward, whether they are on another branch, or whether the quotation was taken from an
+    uncommitted edit that exists in no clone at all. The commit answers the first two and
+    `DIRTY` answers the third.
+
+    Reused rather than rewritten: `derived_inputs.input_state` already computes this, already
+    defines the three states, and is already the guard other generators call. What is NOT reused
+    is `refuse_if_dirty` — this command is read-only, so a dirty tree is a fact to REPORT, not a
+    reason to refuse an answer. Refusing here would make the selective path fail exactly when a
+    BATCH_COMMIT has the registries open, which is when a reader most needs to look at them.
+
+    `verdict` is the module's own vocabulary, carried verbatim so there is one definition of
+    these three states in the repository and not two (`test_record_conventions.py` exists
+    because five modules once held five private copies of one definition).
+    """
+    state = derived_inputs.input_state(root, list(paths))
+    block: dict[str, Any] = {
+        "verdict": state.verdict,
+        "commit": state.head,
+        "inputs": state.inputs,
+        "dirty_inputs": [{"status": status, "path": rel} for status, rel in state.dirty],
+    }
+    if state.detail:
+        block["detail"] = state.detail
+    return block
 
 
 def parse_records(root: Path, disease: str, stem: str) -> list[Record]:
@@ -318,10 +363,33 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
         if not frontier:
             break
 
+    # Over the files actually consulted, which `--hops` may have widened past `stems`, and
+    # after the hop loop for that reason. Never over SOURCES: naming a file this call did not
+    # open would bind the answer to a tree state it never read.
+    found.repository = repository_state(
+        root, [root / f"disease-models/{disease}/{SOURCES[stem]}" for stem in found.file_digests])
+
     if limit and len(found.hits) > limit:
         found.residue = len(found.hits) - limit
         found.hits = found.hits[:limit]
     return found
+
+
+def repository_line(block: dict[str, Any]) -> str:
+    """One line, and it says DIRTY out loud when it is."""
+    if not block:
+        return "  read at: (repository state not computed)"
+    verdict, commit = block.get("verdict", "?"), (block.get("commit") or "")[:12]
+    if verdict == derived_inputs.DIRTY:
+        names = ", ".join(item["path"] for item in block.get("dirty_inputs", [])[:3])
+        more = "" if len(block.get("dirty_inputs", [])) <= 3 else \
+            f" (+{len(block['dirty_inputs']) - 3} more)"
+        return (f"  🔴 read at commit {commit}, WORKING TREE DIRTY: {names}{more} — a record "
+                f"quoted from here reproduces an uncommitted edit and is not in any clone")
+    if verdict == derived_inputs.UNBOUND:
+        return (f"  read at: UNBOUND — {block.get('detail', 'not bound to a commit')}; "
+                f"this answer cannot be tied to a tree")
+    return f"  read at commit {commit}, working tree clean for the files consulted"
 
 
 def render(found: Selection, *, query: str, full: bool = True) -> str:
@@ -332,6 +400,7 @@ def render(found: Selection, *, query: str, full: bool = True) -> str:
                      "is a statement about this query over these files. Widen the query, or say "
                      "in the reading that no record was found and what was searched.")
         lines.append(f"  searched: {', '.join(sorted(found.file_digests))}")
+        lines.append(repository_line(found.repository))
         return "\n".join(lines)
     by_kind: dict[str, int] = {}
     for _record, why in found.hits:
@@ -357,6 +426,7 @@ def render(found: Selection, *, query: str, full: bool = True) -> str:
                      f"here has been truncated inside a record.")
     lines.append("\n  source digests at call time: " +
                  " · ".join(f"{k}={v[:12]}" for k, v in sorted(found.file_digests.items())))
+    lines.append(repository_line(found.repository))
     lines.append("  limits of this selection: it reaches records whose identity or prose matches "
                  "the query, plus one hop per --hops along declared wikilinks. A relevant record "
                  "that names neither the query nor a returned record is not here.")
@@ -366,7 +436,7 @@ def render(found: Selection, *, query: str, full: bool = True) -> str:
 def build_index(root: Path, disease: str) -> dict[str, Any]:
     """A DERIVED index: identity -> record id, re-derivable and never authoritative."""
     index: dict[str, Any] = {"record_kind": "derived_registry_index", "disease": disease,
-                             "sources": {}, "identities": {}}
+                             "sources": {}, "identities": {}, "repository": {}}
     for stem in SOURCES:
         records = parse_records(root, disease, stem)
         if not records:
@@ -377,6 +447,8 @@ def build_index(root: Path, disease: str) -> dict[str, Any]:
         for record in records:
             for value in PMID_RE.findall(record.identity_values()):
                 index["identities"].setdefault(value, []).append(f"{stem}#{record.record_id}")
+    index["repository"] = repository_state(
+        root, [root / f"disease-models/{disease}/{SOURCES[stem]}" for stem in index["sources"]])
     return index
 
 
@@ -404,7 +476,8 @@ def main(argv: list[str] | None = None) -> int:
         index = build_index(root, args.disease)
         print(json.dumps(index, indent=1) if args.json else
               "\n".join(f"{k:<34} {v['records']:>4} records  digest={v['digest'][:12]}  {v['path']}"
-                        for k, v in sorted(index["sources"].items())))
+                        for k, v in sorted(index["sources"].items())) +
+              "\n" + repository_line(index["repository"]))
         return 0
 
     if not any((args.pmid, args.doi, args.record_id, args.theme)):
@@ -430,6 +503,7 @@ def main(argv: list[str] | None = None) -> int:
             "matched_but_not_returned": found.notes,
             "residue_not_returned": found.residue,
             "source_digests": found.file_digests,
+            "repository": found.repository,
             "empty_result_is_not_a_scientific_statement": not found.hits,
         }, indent=1, ensure_ascii=False))
     else:

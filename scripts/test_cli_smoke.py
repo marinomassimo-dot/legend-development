@@ -17,6 +17,11 @@ PUBLIC_CLIS = (
     "scripts/phenotypic_neighbors.py",
     "scripts/legend/residue_context.py",
     "framework/scripts/legend_lint.py",
+    # The two commands `operator_manual.md` 1.1-1.3 now routes every scientific session
+    # through. They were absent from this list until 2026-09-18 — the surface a reader is
+    # told to run every session was the one surface with no --help coverage.
+    "framework/scripts/registry_records.py",
+    "framework/scripts/paper_packet.py",
     "framework/scripts/batch_commit.py",
     "framework/scripts/unread_gold.py",
     "framework/scripts/generate_semantic_graph.py",

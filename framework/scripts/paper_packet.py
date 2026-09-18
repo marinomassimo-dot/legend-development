@@ -66,7 +66,9 @@ ROOT = HERE.parents[1]
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
+import derived_inputs  # noqa: E402
 import fulltext_receipts as receipts  # noqa: E402
+import registry_records  # noqa: E402
 
 # Surfaces whose presence decides which checks apply. Nothing here is a scientific judgement:
 # it is "there is a PDF, so the text-layer screens are runnable".
@@ -299,6 +301,17 @@ def build(root: Path, disease: str, pmid: str) -> dict[str, Any]:
         "acquisition_history": acquisition_history(root, disease, pmid),
         "applicable_checks": applicable_checks(rows, identity_row, manifest),
         "excludes": list(FORBIDDEN_SOURCES),
+        # 🔴 WHICH TREE THIS PACKET DESCRIBES. Every other field here is a fact about a file at
+        # a moment; without the commit, a packet read in a transcript tomorrow cannot be tied to
+        # a checkout, and `DIRTY` says at least one of its inputs exists in no clone. Reported,
+        # never refused: `refuse_if_dirty` is deliberately not called, because a packet is most
+        # wanted exactly when a BATCH_COMMIT has the sources open.
+        "repository": registry_records.repository_state(root, [
+            manifest_path(root, disease, pmid),
+            receipts.default_ledger_path(root, disease),
+            root / "disease-models" / disease / "research" / "retrieval_manifest.jsonl",
+            root / "disease-models" / disease / "research" / "corpus" / "pubmed_corpus.jsonl",
+        ]),
         "firewall": ("technical state only — no claim, dossier, commit candidate, prior locator "
                      "or interpretation (scientist_reading_modes.md 3.1, 3.3)"),
     }
@@ -343,6 +356,7 @@ def render(packet: dict[str, Any]) -> str:
     for check in packet["applicable_checks"]:
         lines.append(f"      {check['name']}")
     lines.append(f"  firewall   : {packet['firewall']}")
+    lines.append(registry_records.repository_line(packet.get("repository", {})))
     return "\n".join(lines)
 
 

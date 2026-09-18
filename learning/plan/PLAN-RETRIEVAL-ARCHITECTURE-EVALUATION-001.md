@@ -224,10 +224,10 @@ Additive, top-level, alongside the existing keys. No key is removed, no record b
                  "record_digest": "sha256:...", "text": "<the whole record>" } ],
   "source_digests": { "paper_registry_current": "..." },
   "repository": {
+    "verdict": "BOUND",
     "commit": "83ec6be…",
-    "inputs_clean": false,
-    "dirty_inputs": ["disease-models/wwox/registries/paper_registry_current.md"],
-    "bound": true
+    "inputs": ["disease-models/wwox/registries/paper_registry_current.md"],
+    "dirty_inputs": [{"status": "M", "path": "…"}]
   },
   "ambiguous": [], "unresolved_links": [], "matched_but_not_returned": [],
   "residue_not_returned": 0,
@@ -236,9 +236,17 @@ Additive, top-level, alongside the existing keys. No key is removed, no record b
 ```
 
 `repository` is computed by calling `derived_inputs.input_state()` on the source paths already
-opened — **no new logic, no new concept, no new dependency**. `bound: false` is the named
-non-git state `derived_inputs` already defines (`UNBOUND`), which keeps the temp-directory test
-fixtures working.
+opened — **no new logic, no new concept, no new dependency**.
+
+> **Amended on implementation (2026-09-18).** The block carries `derived_inputs`' own
+> three-state `verdict` — `BOUND` / `DIRTY` / `UNBOUND` — rather than the `bound` and
+> `inputs_clean` booleans this section first proposed. The booleans were two derivable
+> restatements of one state, which is the shape `test_record_conventions.py` exists to prevent
+> (*five modules, five private copies of one definition, and the shortest was wrong*). `UNBOUND`
+> is the named non-git state that keeps the temp-directory test fixtures working; it is a state,
+> never a pass. `refuse_if_dirty` is deliberately **not** called: this is a read-only command, so
+> a dirty tree is reported and the answer is still given — refusing would make the selective path
+> fail during a `BATCH_COMMIT`, which is when a reader most needs to look at the registries.
 
 ### 4.3 PROPOSTA — Phase 3, restated as what it actually is
 
@@ -404,3 +412,58 @@ documentation edits and one new script. Revert the commit; the registries were n
   become selective.** It was evaluated and deliberately left alone on 2026-09-11, for a stated
   reason — a claim a paper contradicts may not be linked to that paper — and re-opening it needs a
   measurement this record did not make.
+
+---
+
+## 9 · What was implemented, and what it measured
+
+**Implemented on 2026-09-18, same session, under §21e (harness, T0, no gate).** M1 and M2 of §6
+only. Nothing from Phases 2–4 was built, and no canonical file was touched.
+
+### 9.1 The change
+
+| File | Change |
+|---|---|
+| `framework/scripts/registry_records.py` | `repository_state()` — a thin call to `derived_inputs.input_state()` over **the files the call actually opened** (which `--hops` may widen past `--source`); a `repository` block in `--json`; `repository_line()` rendered on every exit including the empty-result refusal; the derived `index` carries it too |
+| `framework/scripts/paper_packet.py` | the same block over the packet's own inputs — manifest, receipt ledger, retrieval manifest, corpus seed |
+| `framework/scripts/test_registry_records.py` | +9 cases (`TheAnswerNamesTheTreeItWasReadFrom`) |
+| `framework/scripts/test_paper_packet.py` | +4 cases (`ThePacketNamesTheTreeItDescribes`) |
+| `scripts/test_cli_smoke.py` | both commands enrolled; 24 → **26** declared public CLIs |
+
+Two design points decided at implementation, both recorded in the code:
+
+- **`refuse_if_dirty` is deliberately not called.** These commands are read-only, so a dirty tree
+  is reported and the answer is still given. Refusing would make the selective path fail during a
+  `BATCH_COMMIT` — precisely when a reader most needs to look at the registries.
+- **The block carries `derived_inputs`' own three-state `verdict`**, not booleans derived from it.
+  See the amendment in §4.2.
+
+### 9.2 Measured against §7's criteria
+
+| Criterion | Result |
+|---|---|
+| `repository.commit` + `verdict` on 100 % of `--json` outputs | ✅ both commands, plus the rendered form, the `index` action and the empty-result refusal |
+| **`records[]` byte-identical** over the 7-PMID set | ✅ **7 of 7 IDENTICAL** (sha256 over the serialised array, before vs after) |
+| added latency < 50 ms | ✅ **+14 ms/call** (241.4 → 255 ms median over 3 runs of 7 calls); `input_state` itself costs 7.2 ms |
+| `test_cli_smoke.py` 26 of 26 at exit 0 | ⚠️ **24 of 26** — the two enrolled commands pass; 3 entries fail on `ModuleNotFoundError: numpy`, **identically at clean HEAD** (failure lists diffed, byte-equal) |
+| no regression green-before, red-after | ✅ **verified against a detached worktree at clean HEAD**: the same 7 suites fail there and here, an identical set. All 7 are environmental — `numpy` absent, and `files/` gitignored so its artefacts are absent in this container |
+
+Also green with the change in the tree: `legend_lint.py` **PASS**; `fulltext_receipts.py verify`
+**OK, 156 chained receipts, tail anchored**; `test_documented_commands.py`, `test_link_targets.py`;
+`public_release_gate.py` **PASS, 0 blocks**.
+
+**Mutation-checked, not merely asserted.** Forcing `repository_state` to report `BOUND` with an
+empty dirty list turned **2 of the 9 new cases red**. A provenance field that always says "clean"
+is the one failure mode that would make this change worse than not making it.
+
+### 9.3 What this did not do
+
+- It did not reduce context further. The −82 % was already banked; M1 buys **verifiability**, not
+  size, and the latency it costs is a real if small price paid for it.
+- It did not measure tokens, and it did not run a scientific reading through the path. The four
+  numbers of `2026-09-11_control_efficacy_baseline.md` §2 remain unpaid.
+- **M3 (the routing table over the 70 executables) was not implemented.** It is the next step in
+  §6 and the one that addresses the *routing* problem §2.5 names as the real residual defect.
+- One pre-existing failure in `test_paper_packet.py` (`test_artefact_digests_are_verified_not_quoted`)
+  is left as found: it fails at clean HEAD for the same reason, and repairing an environmental
+  fixture gap was not in this intervention's scope.

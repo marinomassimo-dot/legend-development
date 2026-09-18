@@ -29,6 +29,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 
+import derived_inputs  # noqa: E402
 import registry_records as rr  # noqa: E402
 
 REGISTRIES = ROOT / "disease-models/wwox/registries"
@@ -429,6 +430,136 @@ class TheIndexIsDerivedNeverAuthoritative(unittest.TestCase):
         after = subprocess.run(["git", "-C", str(ROOT), "status", "--porcelain"],
                                capture_output=True, text=True).stdout
         self.assertEqual(before, after)
+
+
+class TheAnswerNamesTheTreeItWasReadFrom(unittest.TestCase):
+    """🔴 A DIGEST SAYS THE BYTES MOVED; ONLY A COMMIT SAYS WHICH TREE THEY CAME FROM.
+
+    Until 2026-09-18 an answer carried the record digest and the source-file digests and
+    nothing else. A reader holding a quoted record whose digest no longer matches could not
+    tell whether the registry had moved forward, whether they were on a different branch, or
+    whether the quotation had been taken from an uncommitted edit that exists in no clone at
+    all. The first two are answered by the commit; the third only by `DIRTY`.
+
+    The tests below pin the property in all three of `derived_inputs`' states, and pin that
+    adding the state changed no record — the failure a "harmless" envelope change makes is to
+    re-normalise the bytes it is wrapping.
+    """
+
+    def _git(self, root: Path, *args: str) -> None:
+        subprocess.run(["git", "-C", str(root), *args], check=True,
+                       capture_output=True, text=True)
+
+    def _workspace(self, tmp: str) -> Path:
+        """A real git repository holding two registries, committed."""
+        root = Path(tmp)
+        registries = root / "disease-models/wwox/registries"
+        registries.mkdir(parents=True)
+        (registries / "paper_registry_current.md").write_text(
+            "## PAPER 001\n**Identifier:** PMID 11111111 / DOI 10.1/x\n"
+            "**Wikilinks:** [[claim_registry_current#CLAIM 001]]\n", encoding="utf-8")
+        (registries / "claim_registry_current.md").write_text(
+            "## CLAIM 001\n**Title:** the claim that exists\n", encoding="utf-8")
+        self._git(root, "init", "--quiet")
+        self._git(root, "config", "user.email", "t@example.invalid")
+        self._git(root, "config", "user.name", "t")
+        self._git(root, "add", "-A")
+        self._git(root, "commit", "--quiet", "-m", "registries")
+        return root
+
+    def test_a_live_answer_carries_the_commit_it_was_read_at(self) -> None:
+        found = rr.select(ROOT, "wwox", pmid=AMBIGUOUS_PMID, hops=1)
+        block = found.repository
+        self.assertIn(block["verdict"],
+                      (derived_inputs.BOUND, derived_inputs.DIRTY, derived_inputs.UNBOUND))
+        self.assertRegex(block["commit"], r"^[0-9a-f]{40}$")
+        self.assertIn("disease-models/wwox/registries/paper_registry_current.md",
+                      block["inputs"])
+
+    def test_the_commit_reaches_the_json_envelope_and_the_rendered_form(self) -> None:
+        done = subprocess.run(
+            [sys.executable, str(ROOT / "framework/scripts/registry_records.py"),
+             "get", "--pmid", AMBIGUOUS_PMID, "--json"],
+            capture_output=True, text=True, cwd=str(ROOT))
+        payload = json.loads(done.stdout)
+        self.assertRegex(payload["repository"]["commit"], r"^[0-9a-f]{40}$")
+        rendered = rr.render(rr.select(ROOT, "wwox", pmid=AMBIGUOUS_PMID, hops=1),
+                             query="x")
+        self.assertIn("read at commit", rendered)
+
+    def test_an_uncommitted_registry_is_named_and_the_answer_is_still_given(self) -> None:
+        """🔴 REPORTED, NEVER REFUSED. `derived_inputs.refuse_if_dirty` exists and is
+        deliberately not called: this command is read-only, and refusing on a dirty tree would
+        make the selective path fail during a BATCH_COMMIT — exactly when a reader most needs
+        to look at the registries. The record still comes back; the answer says it is not in
+        any clone."""
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self._workspace(tmp)
+            registry = root / "disease-models/wwox/registries/paper_registry_current.md"
+            registry.write_text(registry.read_text(encoding="utf-8") +
+                                "**Caveat:** added and not committed\n", encoding="utf-8")
+            found = rr.select(root, "wwox", pmid="11111111", hops=1)
+            self.assertEqual(derived_inputs.DIRTY, found.repository["verdict"])
+            self.assertIn("disease-models/wwox/registries/paper_registry_current.md",
+                          [row["path"] for row in found.repository["dirty_inputs"]])
+            self.assertTrue(found.hits, "a dirty tree must not suppress the answer")
+            line = rr.repository_line(found.repository)
+            self.assertIn("WORKING TREE DIRTY", line)
+            self.assertIn("not in any clone", line)
+
+    def test_a_clean_tree_is_not_reported_dirty(self) -> None:
+        """The anti-vacuity half: a detector that reports DIRTY always proves nothing."""
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = self._workspace(tmp)
+            found = rr.select(root, "wwox", pmid="11111111", hops=1)
+            self.assertEqual(derived_inputs.BOUND, found.repository["verdict"])
+            self.assertEqual([], found.repository["dirty_inputs"])
+
+    def test_outside_a_repository_the_state_is_unbound_and_says_so(self) -> None:
+        """UNBOUND is a named state, never a pass — `derived_inputs`' own rule. The fixtures
+        of this suite build plain temporary directories, so a guard that threw here would be
+        removed the same day."""
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            registries = root / "disease-models/wwox/registries"
+            registries.mkdir(parents=True)
+            (registries / "paper_registry_current.md").write_text(
+                "## PAPER 001\n**Identifier:** PMID 11111111\n", encoding="utf-8")
+            found = rr.select(root, "wwox", pmid="11111111", hops=1)
+            self.assertEqual(derived_inputs.UNBOUND, found.repository["verdict"])
+            self.assertTrue(found.hits, "an unbound workspace must still answer")
+            self.assertIn("UNBOUND", rr.repository_line(found.repository))
+
+    def test_an_empty_result_also_names_the_tree_it_searched(self) -> None:
+        """The refusal is a statement about a query over files; without the commit it is a
+        statement about files nobody can identify."""
+        found = rr.select(ROOT, "wwox", pmid="99999999", hops=1)
+        self.assertEqual([], found.hits)
+        self.assertRegex(found.repository["commit"], r"^[0-9a-f]{40}$")
+        self.assertIn("read at commit", rr.render(found, query="pmid=99999999"))
+
+    def test_naming_the_tree_changed_no_record(self) -> None:
+        """🔴 THE ONLY WAY THIS CHANGE CAN DO HARM. The record bytes are the product; the
+        envelope is packaging. Compared against an INDEPENDENT scan of the file, not against
+        the selector's own earlier output."""
+        found = rr.select(ROOT, "wwox", record_id=CAVEAT_CLAIM, hops=0)
+        record, _why = found.hits[0]
+        self.assertEqual(record_text_by_scan(CLAIMS, CAVEAT_CLAIM), record.text)
+
+    def test_the_block_names_only_files_this_call_opened(self) -> None:
+        """Binding the answer to a file the call never read would claim a tree state it never
+        observed. `--source` narrows the read; the block must narrow with it."""
+        found = rr.select(ROOT, "wwox", record_id=CAVEAT_CLAIM, hops=0,
+                          sources=["claim_registry_current"])
+        self.assertEqual(["disease-models/wwox/registries/claim_registry_current.md"],
+                         found.repository["inputs"])
+
+    def test_the_derived_index_names_its_tree_too(self) -> None:
+        index = rr.build_index(ROOT, "wwox")
+        self.assertRegex(index["repository"]["commit"], r"^[0-9a-f]{40}$")
 
 
 if __name__ == "__main__":

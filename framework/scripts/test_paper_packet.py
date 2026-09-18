@@ -21,6 +21,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
 sys.path.insert(0, str(HERE))
 
+import derived_inputs  # noqa: E402
 import paper_packet as pp  # noqa: E402
 
 LIVE_PMID = "29724996"   # complete read, 15 artefacts present, two receipts
@@ -210,6 +211,44 @@ class TheChecksRunInOneCall(unittest.TestCase):
         after = subprocess.run(["git", "-C", str(ROOT), "status", "--porcelain"],
                                capture_output=True, text=True).stdout
         self.assertEqual(before, after)
+
+
+class ThePacketNamesTheTreeItDescribes(unittest.TestCase):
+    """Every other field is a fact about a file at a moment. Without the commit, a packet read
+    back from a transcript cannot be tied to a checkout, and a reader cannot tell whether an
+    artefact digest it quotes was computed against committed state or against somebody's
+    uncommitted edit."""
+
+    def test_the_packet_carries_the_commit_and_the_three_state_verdict(self) -> None:
+        packet = pp.build(ROOT, "wwox", LIVE_PMID)
+        block = packet["repository"]
+        self.assertIn(block["verdict"],
+                      (derived_inputs.BOUND, derived_inputs.DIRTY, derived_inputs.UNBOUND))
+        self.assertRegex(block["commit"], r"^[0-9a-f]{40}$")
+
+    def test_the_block_names_the_sources_the_packet_actually_read(self) -> None:
+        packet = pp.build(ROOT, "wwox", LIVE_PMID)
+        joined = " ".join(packet["repository"]["inputs"])
+        self.assertIn(f"deepdive_manifests/PMID{LIVE_PMID}.json", joined)
+        self.assertIn("fulltext_read_receipts.jsonl", joined)
+
+    def test_the_commit_reaches_the_rendered_form_and_the_json(self) -> None:
+        packet = pp.build(ROOT, "wwox", LIVE_PMID)
+        self.assertIn("read at commit", pp.render(packet))
+        done = subprocess.run(
+            [sys.executable, str(ROOT / "framework/scripts/paper_packet.py"),
+             "packet", "--pmid", LIVE_PMID, "--json"],
+            capture_output=True, text=True, cwd=str(ROOT))
+        self.assertRegex(json.loads(done.stdout)["repository"]["commit"], r"^[0-9a-f]{40}$")
+
+    def test_naming_the_tree_did_not_breach_the_firewall(self) -> None:
+        """The block carries PATHS, never CONTENT. A provenance field that quoted a registry
+        line would smuggle a conclusion past `scientist_reading_modes.md` 3.1/3.3 — which is
+        exactly the shape of mistake a 'harmless' envelope addition makes."""
+        block = pp.build(ROOT, "wwox", LIVE_PMID)["repository"]
+        for forbidden in pp.FORBIDDEN_SOURCES:
+            self.assertNotIn(forbidden.format(disease="wwox").rstrip("/"),
+                             json.dumps(block, ensure_ascii=False))
 
 
 if __name__ == "__main__":
