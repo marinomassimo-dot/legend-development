@@ -50,11 +50,22 @@ WHAT IT GUARANTEES, AND WHAT IT REFUSES TO GUARANTEE
   says in words that it is not evidence the laboratory does not know this paper.
 - 🔴 **No silent truncation.** `--limit` prints the residue and names it; the default is no
   limit at all.
+- 🔴 **A field filter reports its denominator and the values it actually matched.** `--field`
+  matches a DECLARED field as a case-insensitive substring, because in this corpus a field value
+  is free prose: 21 of the 39 claim `Type` values are compound (`DATO + INFERENZA prudente`), and
+  only four are a bare epistemic level. So `Type=INFERENZA` returns 14 of the 39 records that
+  declare `Type`, of which exactly 2 declare a bare `INFERENZA` — and the answer prints both
+  numbers and every distinct value behind them rather than choosing for the reader. A field no
+  searched surface declares is a **named refusal with near-miss suggestions**, never an empty
+  result. `fields` prints the whole derived vocabulary, per surface.
 
     python3 framework/scripts/registry_records.py get --pmid 33914858
     python3 framework/scripts/registry_records.py get --pmid 33914858 --hops 1 --json
     python3 framework/scripts/registry_records.py get --id "CLAIM 030" --hops 2
     python3 framework/scripts/registry_records.py get --theme myelin --limit 5
+    python3 framework/scripts/registry_records.py fields --source claim_registry_current
+    python3 framework/scripts/registry_records.py get --theme myelin \
+        --field "Status=consolidated baseline" --source claim_registry_current
     python3 framework/scripts/registry_records.py index --verify
     python3 framework/scripts/registry_records.py get --pmid 33914858 --json | \
         python3 -c "import json,sys; print(json.load(sys.stdin)['repository'])"
@@ -67,6 +78,7 @@ second registry to maintain: every answer is parsed from the current file at cal
 from __future__ import annotations
 
 import argparse
+import difflib
 import hashlib
 import json
 import re
@@ -162,6 +174,20 @@ class Record:
     def digest(self) -> str:
         return hashlib.sha256(self.text.encode("utf-8")).hexdigest()
 
+    def fields(self) -> list[tuple[str, str]]:
+        """Every `**Name:** value` line this record declares, in order, verbatim.
+
+        Names are not lower-cased here and values are not stripped of their markup: the caller
+        decides how to compare, and the report prints what the file says. A field whose value
+        carries a wikilink or an em dash is still that field's value.
+        """
+        out = []
+        for raw in self.text.splitlines():
+            match = re.match(r"\*\*([^*]+):\*\*\s*(.*)$", raw.strip())
+            if match:
+                out.append((match.group(1).strip(), match.group(2).strip()))
+        return out
+
     def identity_values(self) -> str:
         """Only the fields that state what the record is about — not its prose."""
         out = []
@@ -186,6 +212,7 @@ class Selection:
     residue: int = 0
     file_digests: dict[str, str] = field(default_factory=dict)
     repository: dict[str, Any] = field(default_factory=dict)
+    field_report: list[dict[str, Any]] = field(default_factory=list)
 
     def add(self, record: Record, why: str) -> None:
         key = (record.source, record.record_id)
@@ -252,6 +279,65 @@ def repository_state(root: Path, paths: Iterable[Path]) -> dict[str, Any]:
     return block
 
 
+def parse_constraint(raw: str) -> tuple[str, str]:
+    """`Status=in observation` -> ("Status", "in observation"). The `=` is the only separator."""
+    if "=" not in raw:
+        raise ValueError(f"--field expects NAME=VALUE, got {raw!r}")
+    name, value = raw.split("=", 1)
+    if not name.strip():
+        raise ValueError(f"--field expects a field name before '=', got {raw!r}")
+    return name.strip(), value.strip()
+
+
+def matches_constraints(record: Record, constraints: list[tuple[str, str]]) -> bool:
+    """All constraints, case-insensitive substring, over the record's DECLARED fields only.
+
+    🔴 SUBSTRING, AND THE ANSWER SAYS SO. `Type=INFERENZA` matches `INFERENZA` and it also
+    matches `DATO + INFERENZA prudente` — because in this corpus 21 of the 39 claim `Type`
+    values are compound prose, and only four are a bare level. Exact matching would return 2
+    claims and call it "the inferential claims"; substring returns 16 and would call the same
+    thing by the same name. NEITHER is the answer on its own, so the selection reports the
+    distinct values it actually matched and lets the reader decide. Resolving it here would be
+    the `identity` / `mention` confusion again, one field along.
+
+    Declared fields only, never the prose: a record whose Summary discusses an inference is not
+    a record whose Type declares one.
+    """
+    if not constraints:
+        return True
+    declared = record.fields()
+    for name, value in constraints:
+        if not any(field_name.lower() == name.lower() and value.lower() in field_value.lower()
+                   for field_name, field_value in declared):
+            return False
+    return True
+
+
+def field_census(root: Path, disease: str, stems: Iterable[str]) -> dict[str, Any]:
+    """Which fields each surface declares, and what values they take — derived, never listed.
+
+    A reader filtering on a field should pick from what the files hold, not guess. The first
+    draft of the filter took `--status` and `--has-fulltext` from the roadmap that proposed it;
+    this census is how that roadmap's own example queries were found not to fit the corpus —
+    `Status` is free prose (143 `not_processed` beside a value carrying a wikilink), and the
+    epistemic level lives in `Type`, not in `Status`.
+    """
+    census: dict[str, Any] = {"record_kind": "derived_field_census", "disease": disease,
+                              "surfaces": {}}
+    for stem in stems:
+        records = [item for item in parse_records(root, disease, stem) if item.kind == "record"]
+        if not records:
+            continue
+        names: dict[str, dict[str, Any]] = {}
+        for record in records:
+            for name, value in record.fields():
+                slot = names.setdefault(name, {"records": 0, "values": {}})
+                slot["records"] += 1
+                slot["values"][value] = slot["values"].get(value, 0) + 1
+        census["surfaces"][stem] = {"records": len(records), "fields": names}
+    return census
+
+
 def parse_records(root: Path, disease: str, stem: str) -> list[Record]:
     rel = f"disease-models/{disease}/{SOURCES[stem]}"
     path = root / rel
@@ -276,7 +362,8 @@ def load_all(root: Path, disease: str, stems: Iterable[str]) -> dict[str, list[R
 
 def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id: str = "",
            theme: str = "", hops: int = 1, sources: Iterable[str] | None = None,
-           limit: int = 0) -> Selection:
+           limit: int = 0, constraints: list[tuple[str, str]] | None = None) -> Selection:
+    constraints = list(constraints or [])
     stems = list(sources or SOURCES)
     corpus = load_all(root, disease, stems)
     found = Selection()
@@ -285,6 +372,7 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
         if path.is_file():
             found.file_digests[stem] = file_digest(path)
 
+    searched = dict(corpus)     # before `--hops` widens `corpus`; see the field report below
     needle_id = record_id.strip().lower()
     for stem, records in corpus.items():
         for record in records:
@@ -299,6 +387,15 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
                 why = "mention"
             elif theme and theme.lower() in record.text.lower():
                 why = "theme"
+            elif constraints and not any((needle_id, pmid, doi, theme)):
+                # With no other selector, the constraints ARE the selection.
+                why = "field" if matches_constraints(record, constraints) else ""
+            if why and constraints and why != "record id" and not matches_constraints(
+                    record, constraints):
+                # With another selector, they filter it. `--id` is exempt: a record asked for
+                # by name is returned, and a filter that silently withheld it would make
+                # `--id X --field Y=z` indistinguishable from "X does not exist".
+                why = ""
             if why and record.kind == "section" and why != "record id":
                 # Named, never carried: a prose section that happens to cite the query is a
                 # place to look, not a record to load. The alternative is a 470 KB change-log
@@ -310,6 +407,51 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
                 why = ""
             if why:
                 found.add(record, why)
+
+    # 🔴 THE DENOMINATOR IS OVER THE SEARCHED SURFACES, so it is computed HERE — before the
+    # hop loop, which widens `corpus` with whatever a link reaches. A denominator that grew
+    # because a wikilink pulled in another registry would be a different question's answer.
+    # 🔴 AND THE DENOMINATOR TRAVELS WITH THE FILTER, and the distinct values it matched travel
+    # with it too. "3 records match Type=INFERENZA" is unreadable without knowing how many
+    # records declare `Type` at all, and dangerous without seeing that one of the three
+    # declares `DATO + INFERENZA prudente`. A field that no searched surface declares is a
+    # named refusal, not an empty result — the same rule as the empty selection.
+    for name, value in constraints:
+        declaring, matched, values = 0, 0, {}
+        for stem, records in searched.items():
+            for record in records:
+                if record.kind != "record":
+                    continue
+                for field_name, field_value in record.fields():
+                    if field_name.lower() != name.lower():
+                        continue
+                    declaring += 1
+                    if value.lower() in field_value.lower():
+                        matched += 1
+                        values[field_value] = values.get(field_value, 0) + 1
+                    break
+        entry: dict[str, Any] = {
+            "field": name, "value": value, "records_declaring_the_field": declaring,
+            "records_matching": matched,
+            "distinct_values_matched": dict(sorted(values.items(), key=lambda kv: -kv[1])),
+        }
+        if declaring == 0:
+            # 🔴 A REFUSAL THAT SUGGESTS NOTHING IS A REFUSAL THE READER RETYPES. The first cut
+            # matched substrings only, so `Stato` (an Italian slip in a bilingual corpus, and
+            # this corpus IS bilingual) suggested nothing at all while `Status` sat one letter
+            # away. difflib is standard library; a spell-check here costs nothing and the
+            # alternative is the reader guessing twice.
+            declared_names = {field_name for _stem, records in searched.items()
+                              for record in records if record.kind == "record"
+                              for field_name, _value in record.fields()}
+            near = sorted(set(difflib.get_close_matches(name, sorted(declared_names), n=5,
+                                                        cutoff=0.6))
+                          | {field_name for field_name in declared_names
+                             if name.lower() in field_name.lower()
+                             or field_name.lower() in name.lower()})
+            entry["no_surface_declares_this_field"] = True
+            entry["similar_field_names"] = near
+        found.field_report.append(entry)
 
     # 🔴 Two records claiming the same identity is an ambiguity to SHOW, not to resolve here.
     # 🔴 KEYED ON THE IDENTIFIERS, NOT ON THE STRING. The first cut compared whole identity lines,
@@ -375,6 +517,33 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
     return found
 
 
+def field_report_lines(report: list[dict[str, Any]]) -> list[str]:
+    """The denominator and the values matched — never the count alone."""
+    lines: list[str] = []
+    for entry in report:
+        lines.append(f"\n  FIELD FILTER  {entry['field']}={entry['value']}")
+        if entry.get("no_surface_declares_this_field"):
+            lines.append(f"    🔴 NO SEARCHED SURFACE DECLARES A FIELD NAMED {entry['field']!r}. "
+                         f"An empty result here is a statement about the field name, not about "
+                         f"the corpus.")
+            similar = entry.get("similar_field_names") or []
+            lines.append(f"    similar field names present: "
+                         f"{', '.join(similar) if similar else '(none)'} — "
+                         f"`fields` prints every field each surface declares")
+            continue
+        lines.append(f"    {entry['records_matching']} of "
+                     f"{entry['records_declaring_the_field']} record(s) declaring {entry['field']}")
+        values = entry["distinct_values_matched"]
+        if values:
+            lines.append("    🔴 matched as a SUBSTRING — the distinct values behind that count:")
+            for value, count in list(values.items())[:12]:
+                lines.append(f"      {count:>4}x  {value[:110]}")
+            if len(values) > 12:
+                lines.append(f"      … and {len(values) - 12} further distinct value(s); "
+                             f"`--json` carries them all")
+    return lines
+
+
 def repository_line(block: dict[str, Any]) -> str:
     """One line, and it says DIRTY out loud when it is."""
     if not block:
@@ -400,6 +569,7 @@ def render(found: Selection, *, query: str, full: bool = True) -> str:
                      "is a statement about this query over these files. Widen the query, or say "
                      "in the reading that no record was found and what was searched.")
         lines.append(f"  searched: {', '.join(sorted(found.file_digests))}")
+        lines.extend(field_report_lines(found.field_report))
         lines.append(repository_line(found.repository))
         return "\n".join(lines)
     by_kind: dict[str, int] = {}
@@ -414,6 +584,7 @@ def render(found: Selection, *, query: str, full: bool = True) -> str:
         lines.append("\n  MATCHED BUT NOT RETURNED (prose sections — named so the selection is "
                      "visible, fetch deliberately with --id):")
         lines.extend(f"    {item}" for item in found.notes)
+    lines.extend(field_report_lines(found.field_report))
     if found.ambiguous:
         lines.append("\n  AMBIGUOUS:")
         lines.extend(f"    {item}" for item in found.ambiguous)
@@ -454,11 +625,15 @@ def build_index(root: Path, disease: str) -> dict[str, Any]:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("action", choices=("get", "index"))
+    parser.add_argument("action", choices=("get", "index", "fields"))
     parser.add_argument("--pmid", default="")
     parser.add_argument("--doi", default="")
     parser.add_argument("--id", dest="record_id", default="")
     parser.add_argument("--theme", default="")
+    parser.add_argument("--field", action="append", default=[], metavar="NAME=VALUE",
+                        help="keep only records whose DECLARED field NAME contains VALUE "
+                             "(case-insensitive substring); repeatable, and all must hold. "
+                             "Run the `fields` action first to see what each surface declares.")
     parser.add_argument("--hops", type=int, default=1)
     parser.add_argument("--limit", type=int, default=0,
                         help="cap the number of records returned; the residue is always named")
@@ -472,6 +647,24 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     root = Path(args.root).resolve()
 
+    if args.action == "fields":
+        census = field_census(root, args.disease, args.source or SOURCES)
+        if args.json:
+            print(json.dumps(census, indent=1, ensure_ascii=False))
+            return 0
+        for stem, surface in sorted(census["surfaces"].items()):
+            print(f"\n{stem}  ({surface['records']} records)")
+            for name, slot in sorted(surface["fields"].items()):
+                top = sorted(slot["values"].items(), key=lambda kv: -kv[1])
+                shown = " · ".join(f"{value[:46]} ({count})" for value, count in top[:4])
+                more = f" · +{len(top) - 4} more" if len(top) > 4 else ""
+                print(f"  {name:<32} {slot['records']:>4} record(s), "
+                      f"{len(top):>3} distinct   {shown}{more}")
+        print("\n  🔴 These vocabularies are DERIVED from the files, not declared anywhere. "
+              "A value is free prose in this corpus: filter with --field and read the distinct "
+              "values the answer reports back.")
+        return 0
+
     if args.action == "index":
         index = build_index(root, args.disease)
         print(json.dumps(index, indent=1) if args.json else
@@ -480,19 +673,24 @@ def main(argv: list[str] | None = None) -> int:
               "\n" + repository_line(index["repository"]))
         return 0
 
-    if not any((args.pmid, args.doi, args.record_id, args.theme)):
-        parser.error("give at least one of --pmid, --doi, --id, --theme")
+    if not any((args.pmid, args.doi, args.record_id, args.theme, args.field)):
+        parser.error("give at least one of --pmid, --doi, --id, --theme, --field")
+    try:
+        constraints = [parse_constraint(item) for item in args.field]
+    except ValueError as error:
+        parser.error(str(error))
     for bad in args.source:
         if bad not in SOURCES:
             parser.error(f"unknown --source {bad}; known: {', '.join(SOURCES)}")
 
     found = select(root, args.disease, pmid=args.pmid, doi=args.doi, record_id=args.record_id,
                    theme=args.theme, hops=args.hops, sources=args.source or None,
-                   limit=args.limit)
+                   limit=args.limit, constraints=constraints)
     query = " ".join(filter(None, [f"pmid={args.pmid}" if args.pmid else "",
                                    f"doi={args.doi}" if args.doi else "",
                                    f"id={args.record_id}" if args.record_id else "",
                                    f"theme={args.theme}" if args.theme else "",
+                                   " ".join(f"field:{item}" for item in args.field),
                                    f"hops={args.hops}"]))
     if args.json:
         print(json.dumps({
@@ -503,6 +701,7 @@ def main(argv: list[str] | None = None) -> int:
             "matched_but_not_returned": found.notes,
             "residue_not_returned": found.residue,
             "source_digests": found.file_digests,
+            "field_filters": found.field_report,
             "repository": found.repository,
             "empty_result_is_not_a_scientific_statement": not found.hits,
         }, indent=1, ensure_ascii=False))

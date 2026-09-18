@@ -44,6 +44,19 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | what a claim rests on, down to the species and reading depth of its foundation | `framework/scripts/trace_claim_foundation.py` |
 | high-relevance corpus placeholders that were never read — the gold already at home | `framework/scripts/unread_gold.py` |
 | a cross-paper query over what the deep-dive manifests already evidence (derived, never written to disk) | `framework/scripts/build_evidence_index.py` |
+| **which fields each registry declares, and what values they take** — derived from the files, because no vocabulary is declared anywhere | `framework/scripts/registry_records.py fields` |
+| records whose **declared field** carries a value — composable with `--theme`, `--pmid`, `--id` | `framework/scripts/registry_records.py get --field "Status=consolidated baseline" --theme myelin` |
+
+> 🔴 **A field value in this corpus is free prose, and the filter says so.** `--field` matches a
+> declared field as a case-insensitive substring, so `Type=INFERENZA` returns 14 of the 39 records
+> declaring `Type` — of which only 2 declare a bare `INFERENZA`; the rest read `DATO + INFERENZA
+> prudente` and the like. The answer prints the denominator and every distinct value it matched,
+> and does not choose for you. Note also that the epistemic level lives in `Type`; `Status` is the
+> claim's lifecycle (`consolidated baseline`, `in observation`, …). Run `fields` before guessing.
+>
+> For *"has a full text but was never deep-dived"* the tool is `unread_gold.py` (§ 1) and for
+> reading depth it is `reading_state.py` / `coverage_report.py` (§ 2). The registries declare no
+> full-text field, so `--field` cannot answer that question and does not pretend to.
 
 ## 2 · What has actually been read, and what is owed
 

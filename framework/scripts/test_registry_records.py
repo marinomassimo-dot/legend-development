@@ -562,5 +562,186 @@ class TheAnswerNamesTheTreeItWasReadFrom(unittest.TestCase):
         self.assertRegex(index["repository"]["commit"], r"^[0-9a-f]{40}$")
 
 
+class AFieldFilterReportsItsDenominator(unittest.TestCase):
+    """🔴 THE FIELD VALUES IN THIS CORPUS ARE FREE PROSE, AND THAT IS THE WHOLE DESIGN PROBLEM.
+
+    The roadmap that proposed this filter asked for `--status INFERENZA`. Two things are wrong
+    with that sentence and both were found by measuring the corpus rather than by reading the
+    proposal:
+
+      - the epistemic level is declared in `Type`, not in `Status` — `Status` is the claim's
+        lifecycle (`consolidated baseline`, `in observation`, `flagged for review`);
+      - `Type` is compound prose. Of the 39 claim records, only a handful declare a bare level;
+        the rest read `DATO + INFERENZA prudente`, `DATO (le misure) + IPOTESI (entrambe le
+        spiegazioni)`, and so on.
+
+    So exact matching would return 2 records and call them "the inferential claims"; substring
+    matching returns 14 and would call the same thing by the same name. Neither is the answer.
+    The filter therefore reports **the denominator and every distinct value it matched**, and
+    lets the reader decide — the `identity` / `mention` rule, one field along.
+    """
+
+    def _independent_claim_scan(self, needle_field: str, needle_value: str) -> set[str]:
+        """The expected set, derived WITHOUT the selector: a line scan over the raw file."""
+        text = CLAIMS.read_text(encoding="utf-8")
+        heads = list(re.finditer(r"^##[ \t]+(?P<id>\S.*?)[ \t]*$", text, re.M))
+        found = set()
+        for index, head in enumerate(heads):
+            end = heads[index + 1].start() if index + 1 < len(heads) else len(text)
+            body = text[head.start():end]
+            match = re.search(rf"^\*\*{needle_field}:\*\*\s*(.*)$", body, re.M)
+            if match and needle_value.lower() in match.group(1).strip().lower():
+                found.add(head.group("id").strip())
+        return found
+
+    def test_the_compound_values_really_are_in_the_corpus(self) -> None:
+        """The fixture this class rests on. If claim `Type` ever becomes a closed vocabulary,
+        this fails and the substring rule can be revisited — rather than silently outliving
+        the corpus that justified it."""
+        records = [item for item in rr.parse_records(ROOT, "wwox", "claim_registry_current")
+                   if item.kind == "record"]
+        types = [value for item in records for name, value in item.fields() if name == "Type"]
+        compound = [value for value in types if "+" in value]
+        self.assertTrue(compound, "no compound Type value: the substring rule needs revisiting")
+        self.assertGreater(len(set(types)), 10, "Type is not the free prose this design assumes")
+
+    def test_the_count_arrives_with_its_denominator_and_its_values(self) -> None:
+        found = rr.select(ROOT, "wwox", constraints=[("Type", "INFERENZA")], hops=0,
+                          sources=["claim_registry_current"])
+        entry = found.field_report[0]
+        self.assertEqual(len(self._independent_claim_scan("Type", "INFERENZA")),
+                         entry["records_matching"])
+        self.assertGreater(entry["records_declaring_the_field"], entry["records_matching"])
+        bare = entry["distinct_values_matched"].get("INFERENZA", 0)
+        self.assertLess(bare, entry["records_matching"],
+                        "the point of the report is that the count is not the bare value")
+
+    def test_the_selection_itself_matches_compound_values_not_only_bare_ones(self) -> None:
+        """🔴 ADDED AFTER A SURVIVING MUTATION. Swapping the match to `==` left the whole class
+        green: every case used `Status`, whose values happen to be exact, and the only case
+        touching compound `Type` asserted on the REPORT rather than on the hits. The report and
+        the selection are two code paths and they must be pinned separately."""
+        expected = self._independent_claim_scan("Type", "INFERENZA")
+        found = rr.select(ROOT, "wwox", constraints=[("Type", "INFERENZA")], hops=0,
+                          sources=["claim_registry_current"])
+        self.assertEqual(expected, {record.record_id for record, _ in found.hits})
+        compound = {record.record_id for record, _ in found.hits
+                    if any(name == "Type" and value.strip() != "INFERENZA"
+                           for name, value in record.fields())}
+        self.assertTrue(compound, "no compound-valued record was selected; the fixture moved")
+
+    def test_the_selection_agrees_with_an_independent_scan(self) -> None:
+        expected = self._independent_claim_scan("Status", "consolidated baseline")
+        found = rr.select(ROOT, "wwox", constraints=[("Status", "consolidated baseline")],
+                          hops=0, sources=["claim_registry_current"])
+        self.assertEqual(expected, {record.record_id for record, _ in found.hits})
+
+    def test_a_filter_composes_with_another_selector_rather_than_replacing_it(self) -> None:
+        both = rr.select(ROOT, "wwox", theme="myelin",
+                         constraints=[("Status", "consolidated baseline")], hops=0,
+                         sources=["claim_registry_current"])
+        theme_only = rr.select(ROOT, "wwox", theme="myelin", hops=0,
+                               sources=["claim_registry_current"])
+        selected = {record.record_id for record, _ in both.hits}
+        self.assertTrue(selected < {record.record_id for record, _ in theme_only.hits},
+                        "the filter must narrow the theme selection, strictly")
+        self.assertEqual(selected,
+                         {record.record_id for record, _ in theme_only.hits}
+                         & self._independent_claim_scan("Status", "consolidated baseline"))
+
+    def test_an_unsatisfiable_filter_returns_nothing_rather_than_ignoring_itself(self) -> None:
+        """Anti-vacuity: a filter that never removes anything is not a filter."""
+        found = rr.select(ROOT, "wwox", theme="myelin",
+                          constraints=[("Status", "in observation")], hops=0,
+                          sources=["claim_registry_current"])
+        self.assertEqual(set(), self._independent_claim_scan("Status", "in observation")
+                         & {"CLAIM 003", "CLAIM 004", "CLAIM 011", "CLAIM 014", "CLAIM 015"},
+                         "the corpus changed; this case needs a new pair")
+        self.assertEqual([], found.hits)
+
+    def test_a_record_asked_for_by_name_is_not_withheld_by_a_filter(self) -> None:
+        """`--id X --field Y=z` returning nothing would be indistinguishable from 'X does not
+        exist', and this command's contract is that an empty result is never a silent one."""
+        found = rr.select(ROOT, "wwox", record_id=CAVEAT_CLAIM,
+                          constraints=[("Status", "a value no record carries")], hops=0,
+                          sources=["claim_registry_current"])
+        self.assertEqual([CAVEAT_CLAIM], [record.record_id for record, _ in found.hits])
+        self.assertEqual(0, found.field_report[0]["records_matching"])
+
+    def test_an_unknown_field_is_a_named_refusal_with_a_suggestion(self) -> None:
+        found = rr.select(ROOT, "wwox", constraints=[("Stato", "x")], hops=0,
+                          sources=["claim_registry_current"])
+        entry = found.field_report[0]
+        self.assertTrue(entry["no_surface_declares_this_field"])
+        self.assertIn("Status", entry["similar_field_names"])
+        rendered = "\n".join(rr.field_report_lines(found.field_report))
+        self.assertIn("NO SEARCHED SURFACE DECLARES A FIELD NAMED", rendered)
+        self.assertIn("not about the corpus", rendered)
+
+    def test_the_denominator_does_not_move_when_hops_widen_the_corpus(self) -> None:
+        """🔴 The denominator is over the SEARCHED surfaces. A hop pulls other registries into
+        the working corpus; a denominator that grew with it would answer a different question
+        than the one asked. Found while wiring this, not after.
+
+        🔴 THE FIELD MUST EXIST IN MORE THAN ONE SURFACE or this case is vacuous. The first cut
+        used `Type`, which only the claim registry declares, so widening the corpus added zero
+        and the mutation survived. `Status` is declared by both registries, and a wikilink from
+        a claim reaches the paper registry at hop 1."""
+        field = "Status"
+        claims_only = len([item for item in rr.parse_records(ROOT, "wwox",
+                                                             "claim_registry_current")
+                           if item.kind == "record"
+                           and any(name == field for name, _ in item.fields())])
+        papers = len([item for item in rr.parse_records(ROOT, "wwox", "paper_registry_current")
+                      if item.kind == "record"
+                      and any(name == field for name, _ in item.fields())])
+        self.assertGreater(papers, 0, f"{field} must exist in a second surface, or this is vacuous")
+        counts = []
+        for hops in (0, 2):
+            found = rr.select(ROOT, "wwox", constraints=[(field, "baseline")], hops=hops,
+                              sources=["claim_registry_current"])
+            counts.append(found.field_report[0]["records_declaring_the_field"])
+        self.assertEqual([claims_only, claims_only], counts,
+                         "the denominator followed the hop expansion instead of the search")
+
+    def test_the_filter_reads_declared_fields_and_not_the_prose(self) -> None:
+        """A record whose Summary discusses an inference is not a record whose Type declares
+        one. Asserted on a synthetic workspace so it cannot pass by corpus accident."""
+        import tempfile
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            registries = root / "disease-models/wwox/registries"
+            registries.mkdir(parents=True)
+            (registries / "claim_registry_current.md").write_text(
+                "## CLAIM 001\n**Identifier:** C1\n**Type:** DATO\n"
+                "**Summary:** this paragraph discusses an INFERENZA at length\n\n"
+                "## CLAIM 002\n**Identifier:** C2\n**Type:** INFERENZA\n"
+                "**Summary:** plain\n", encoding="utf-8")
+            found = rr.select(root, "wwox", constraints=[("Type", "INFERENZA")], hops=0,
+                              sources=["claim_registry_current"])
+            self.assertEqual(["CLAIM 002"], [record.record_id for record, _ in found.hits])
+
+    def test_the_census_is_derived_and_writes_nothing(self) -> None:
+        before = subprocess.run(["git", "-C", str(ROOT), "status", "--porcelain"],
+                                capture_output=True, text=True).stdout
+        census = rr.field_census(ROOT, "wwox", ["claim_registry_current"])
+        after = subprocess.run(["git", "-C", str(ROOT), "status", "--porcelain"],
+                               capture_output=True, text=True).stdout
+        self.assertEqual(before, after)
+        surface = census["surfaces"]["claim_registry_current"]
+        self.assertEqual(len(self._independent_claim_scan("Status", "")),
+                         surface["fields"]["Status"]["records"])
+
+    def test_a_malformed_constraint_is_refused_rather_than_guessed(self) -> None:
+        with self.assertRaises(ValueError):
+            rr.parse_constraint("Status")
+        with self.assertRaises(ValueError):
+            rr.parse_constraint("=value")
+        self.assertEqual(("Status", "in observation"),
+                         rr.parse_constraint("Status=in observation"))
+        self.assertEqual(("Note", "a=b"), rr.parse_constraint("Note=a=b"),
+                         "only the first '=' separates; a value may contain one")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -532,3 +532,80 @@ under.
   surfaces and are out of this table's population.
 - The twelve section headings are a judgement about which questions a session asks. Nothing
   tests that judgement; only completeness is executable.
+
+---
+
+## 11 · M4 — filters computed on demand, and the corpus measurement that reshaped them
+
+**Implemented on 2026-09-18, same session, under §21e.** M4 is the milestone that answers the
+roadmap's §2 example queries **without an index on disk** — the `build_evidence_index.py` pattern.
+Nothing is written; every answer is parsed from the current file at call time.
+
+### 11.1 The roadmap's own example queries did not fit the corpus
+
+`--status INFERENZA` was measured before it was implemented, and two things are wrong with it:
+
+- **The epistemic level is declared in `Type`, not in `Status`.** `Status` is the claim's
+  lifecycle — `consolidated baseline` (18), `in observation` (17), `flagged for review` (2),
+  `conflicting evidence` (1), `background only` (1).
+- **`Type` is compound free prose.** Of 39 claim records, 21 distinct `Type` values; only a
+  handful are a bare level. The rest read `DATO + INFERENZA prudente`, `DATO (le misure) +
+  IPOTESI (entrambe le spiegazioni)`, `DATO (serie allelica su cellule di paziente) + INFERENZA
+  (la regola)`.
+
+So exact matching returns **2** records and calls them *"the inferential claims"*; substring
+matching returns **14** and would call the same thing by the same name. **Neither is the answer**,
+and choosing silently would be the `identity` / `mention` confusion one field along — the error
+the 2026-09-09 sweep produced (A13) and that `registry_records.py` exists to refuse.
+
+`--has-fulltext --not-deep-dived` fits even less: the paper registry declares no full-text field
+at all. `unread_gold.py` and `reading_state.py` already answer that question and M4 does not
+reimplement them; the routing table says so in the same section.
+
+### 11.2 What was built instead
+
+| | |
+|---|---|
+| `get --field NAME=VALUE` | repeatable and AND-ed; matches a **declared** field (never the prose) as a case-insensitive substring; composes with `--pmid`, `--id`, `--theme`, `--source` |
+| **the report that travels with it** | how many records **declare** the field (the denominator), how many matched, and **every distinct value behind that count** |
+| unknown field | a **named refusal with `difflib` near-misses** (`Stato` → `Status`), never an empty result |
+| `fields` action | the whole vocabulary, per surface, derived from the files — because none is declared anywhere |
+| `--id` exemption | a record asked for by name is never withheld by a filter: `--id X --field Y=z` returning nothing would be indistinguishable from *"X does not exist"* |
+
+### 11.3 Measured
+
+| Criterion | Result |
+|---|---|
+| agreement with an independent scan | ✅ expected sets derived by line-scanning the raw file, never from the selector's own output |
+| `records[]` byte-identical on the 7-PMID set | ✅ **7 of 7** |
+| latency on the ordinary path | ✅ **no measurable change** — interleaved A/B against a detached worktree at `ec7caa1`: pre-M4 344 / 334 ms, post-M4 335 / 338 ms per call |
+| the new path | cross-registry field filter over all seven surfaces: **≈310 ms**, no file written |
+| suite | 49 → **61** cases; LINT **PASS**, receipts **OK**, gate **PASS 0 blocks** |
+
+**Four mutations, and two of them survived the first draft of the tests.** Swapping the matcher to
+`==` and moving the denominator over every reachable surface both left the class green, because
+every case used `Status` (whose values happen to be exact) and the one compound case asserted on
+the *report* rather than on the *hits*. The report and the selection are two code paths and are
+now pinned separately; the denominator case was vacuous until it used a field **two** surfaces
+declare. Both weaknesses are recorded in the tests that now cover them.
+
+### 11.4 Two corrections to this record's own method
+
+- **§9.2's "+14 ms/call" was measured without interleaving.** The A/B run above shows the host's
+  absolute numbers drifting between 255 and 344 ms for *unchanged* code, so a before/after taken
+  minutes apart cannot resolve a 14 ms effect. What §9.2 established is that M1 is not expensive;
+  the specific figure should not be quoted. M4's figure is interleaved and can be.
+- **A stale `__pycache__` briefly produced a false failure.** The mutation `in` → `==` is
+  byte-identical in length, so after restoring the source Python reused the mutated bytecode.
+  Any future mutation run in this repository should clear `__pycache__` between passes — a
+  mutation that changes no byte count is invisible to the timestamp-and-size check.
+
+### 11.5 What M4 did not do
+
+- **No dashboard, no aggregate.** `dashboard coverage` in the roadmap's §2 is `coverage_report.py`,
+  which already exists with an honest denominator. Nothing was duplicated.
+- **No natural-language query.** `legend query "which claims link glia and myelin and have
+  contradictory evidence?"` is not a filter; it is the RAG of Phase 4, whose verdict stays DEFER.
+- **It did not lower the latency budget question for Phase 2.** The measured cross-registry filter
+  is ≈310 ms with zero persisted state. That is the number an SQLite index would have to beat by
+  enough to justify a stale-index failure mode, and it does not yet.
