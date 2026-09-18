@@ -131,6 +131,9 @@ scientifico pertinente e caricarne il contesto. Le letture full-text, i receipt,
 - working_model_current.md — intero
 - claim_registry_current.md — intero
 - paper_registry_current.md — **per record** (`registry_records.py get`), intero solo in FULL
+  > Quale strumento risponde a quale domanda: [`framework/scripts/README.md`](../scripts/README.md).
+  > 🔴 I due registri grandi non si leggono mai con `grep`: un frammento perde il caveat due righe
+  > sotto, non distingue `identity` da `mention` e non nomina alcun commit.
 - literature_tracking_log_current.md — **per record**, intero solo in FULL
 
 > I due registri grandi restano integri su disco e canonici: il recupero selettivo non li

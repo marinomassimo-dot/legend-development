@@ -467,3 +467,68 @@ is the one failure mode that would make this change worse than not making it.
 - One pre-existing failure in `test_paper_packet.py` (`test_artefact_digests_are_verified_not_quoted`)
   is left as found: it fails at clean HEAD for the same reason, and repairing an environmental
   fixture gap was not in this intervention's scope.
+
+---
+
+## 10 · M3 — the routing table, and why it is a test rather than a document
+
+**Implemented on 2026-09-18, same session, under §21e.** §2.5 named routing, not size, as the
+residual defect: the tools answer almost every question a session asks, they are spread across
+three directories, and `CLAUDE.md` deliberately does not legislate a list of them. A session that
+does not know a tool exists greps — and the fragment is the failure this repository has named
+twice.
+
+### 10.1 The change
+
+| File | Change |
+|---|---|
+| `framework/scripts/README.md` | **new** — *question → tool*, in twelve sections, covering every shipped tool including the three importable-only modules, opening with the one rule it exists to carry: never grep the two large registries |
+| `scripts/test_tool_routing.py` | **new** — 7 cases; the completeness guard |
+| `CLAUDE.md` | §1 routes to the table; §3 says the handful listed there are what a session runs most and the table routes the rest |
+| `framework/manuals/operator_manual.md` | §2 core scientifico points at the table beside the per-record rule |
+
+### 10.2 Why a guard and not just a document
+
+A hand-kept table over this many tools is wrong by the third tool added. So the table is **not
+the constraint** — the suite is:
+
+- The **population is enumerated from the git index** (`git ls-files`), never from the disk.
+  Two paid-for reasons, both cited in the suite: `artifact_index.py` rule 3 (a count whose
+  denominator is *"whatever my pattern matched"* is not a measurement) and
+  `test_repository_surface_determinism.py` (one clean checkout, three verdicts from a
+  disk-walking guard). An untracked scratch script does not turn it red; a committed tool does.
+- **No tool count is written anywhere** — not in the table, not in `CLAUDE.md`, not in the suite.
+  The first draft carried one and it is precisely the constant `growth_anchors.py` calls *a quiet
+  birthday*. The registry record counts that remain are dated, with the command that reprints
+  them.
+- A library with no `__main__` must be listed **as a library**, derived from the files — so a
+  module that grows a CLI, or a command that loses one, fails the suite rather than drifting.
+
+**The rule is one section, not one row, and the suite found that itself on its first run.**
+`paper_packet.py` legitimately earns two rows in §1 — `packet` and `check` are two questions —
+while one tool offered from §1 *and* §7 would leave a reader unable to tell which is current.
+The first cut asserted one row and went red on a correct table; the assertion was wrong, not the
+table. A vacuity case now pins that the parser really attributes a tool to the section it sits
+under.
+
+### 10.3 Measured
+
+| Criterion | Result |
+|---|---|
+| every shipped tool routed | ✅ set-equality against the git index |
+| mutation: delete a routed row | ✅ **red**, naming the orphaned tool |
+| mutation: commit a new unrouted tool | ✅ **red** |
+| auto-enrolled in the release inventory | ✅ `run_release_regressions.py` discovers rather than lists: 107 → **108** suites |
+| no regression green-before, red-after | ✅ **the same 7 suites** fail as at `be8239d`, an identical set, all environmental |
+| gate, LINT, receipts | ✅ release gate **PASS 0 blocks**; LINT **PASS**; receipts **OK, 156 chained, tail anchored**; `test_documented_commands.py`, `test_link_targets.py` green |
+
+### 10.4 What M3 did not do
+
+- **It did not measure its own effect.** The success criterion in §6 is *ad-hoc `grep` calls on
+  the two large registries → 0 in the next wave's transcript*, and no wave has run. The table is
+  a prescription until then, exactly as `registry_records.py` was on 2026-09-11 — and the lesson
+  of that record is that the prescription and the behaviour were two different things.
+- It routes tools, not skills or agents. `.claude/skills/` and `.claude/agents/` have their own
+  surfaces and are out of this table's population.
+- The twelve section headings are a judgement about which questions a session asks. Nothing
+  tests that judgement; only completeness is executable.

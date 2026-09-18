@@ -56,6 +56,7 @@ Three facts bind before you have finished reading anything else:
 | The state-control exception and append-only carve-out | [`framework/state/state_manifest_current.md`](framework/state/state_manifest_current.md) |
 | Self-diagnosis before growth and takeaways | [`framework/protocols/session_self_evaluation.md`](framework/protocols/session_self_evaluation.md) |
 | Batch commit, LINT, ingest, parallelism and worktree isolation, wikilinks, file generation, read receipts | [`framework/protocols/`](framework/protocols/) → [`index.md`](framework/protocols/index.md) |
+| **Which tool answers the question you actually have** — and why you never grep the two large registries | [`framework/scripts/README.md`](framework/scripts/README.md) |
 | Layers, modes, core invariants | [`ARCHITECTURE.md`](ARCHITECTURE.md) |
 | How to actually run a session; session types | [`framework/manuals/operator_manual.md`](framework/manuals/operator_manual.md) |
 | What the system can do, with maturity status | [`SKILLS.md`](SKILLS.md) · [`CAPABILITIES.md`](CAPABILITIES.md) · [`FAQ.md`](FAQ.md) |
@@ -93,6 +94,9 @@ Three facts bind before you have finished reading anything else:
 
 ## 3 · Runnable checks
 
+Which tool answers which question: [`framework/scripts/README.md`](framework/scripts/README.md).
+The handful below are the ones a session runs most; that table routes all the rest.
+
 ```bash
 python3 framework/scripts/legend_lint.py .              # structural LINT over the canonical state
 python3 framework/scripts/fulltext_receipts.py verify   # ledger chain + state-manifest tail anchor
@@ -102,6 +106,7 @@ python3 framework/scripts/unread_gold.py --help         # the unread-gold sweep
 python3 scripts/public_release_gate.py                  # the publication gate
 python3 scripts/run_release_regressions.py              # every release suite at once
 python3 governance/scripts/governance_fingerprint.py compose --all   # per-role governance fingerprint
+python3 scripts/test_tool_routing.py                    # every shipped tool is routed, exactly once
 ```
 
 Persist receipts with `fulltext_receipts.py record`. Hand-editing the ledger breaks its hash chain
