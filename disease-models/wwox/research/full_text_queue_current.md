@@ -4507,3 +4507,30 @@ trattabile — quindi tocca la diagnosi differenziale, non il meccanismo. Entra 
 scouting vi si è appoggiato senza averlo letto, e `UNREAD_PREMISE` l'ha giustamente bloccato.
 **Next action:** acquisire da PMC (`PMC13378201`); stabilire se il parkinsonismo è **descritto** o
 **misurato**, se esiste un trial di L-DOPA e con quale esito, e se l'allele è dell'asse SDR.
+
+---
+
+## FT-107 — PMID 41153369 · **già [[paper_registry_current#PAPER 013]]** — e la prima stesura di questa voce era sbagliata
+
+**Paper:** PMID 41153369 — Sunnetci-Akkoyunlu, Kara 2025, *Genes (Basel)* 16(10):1152 · PMCID `PMC12562696` · DOI 10.3390/genes16101152
+**Registry:** **esiste già come [[paper_registry_current#PAPER 013]]** ("Turkish DEE cohort 2025", `Status: processed`, `Genotype/model: two siblings with homozygous WWOX p.L239R`, `Claim links: none`). **Non è un paper nuovo.**
+**Surface:** full text **non letto** — nessuna ricevuta. È per questo che `UNREAD_PREMISE` ha bloccato: il record esiste ma non dichiara una lettura del testo pieno.
+**Priority:** MEDIA
+
+🔴 **Correzione registrata invece che cancellata.** La prima stesura di questa voce diceva che
+*"`WWOX` non compare fra i geni nominati nell'abstract"* e la classificava BASSA, come coorte
+diagnostica senza rilevanza WWOX. **Era sbagliato.** L'abstract elide la lista dei geni con una
+serie di virgole vuote — un artefatto dell'estrattore MCP, già osservato altrove in questo batch —
+e `WWOX` è uno dei geni elisi. Il dato è visibile solo aprendo il registry, e io ho scritto la voce
+guardando l'abstract. **La stessa famiglia di errore che questo batch ha documentato cinque volte
+nella letteratura: la superficie sintetica non indicizza il contenuto.**
+
+**Il valore reale, che è specifico e non generico:** questa coorte contiene **due fratelli
+omozigoti per `p.L239R`**, lo stesso allele del caso di parkinsonismo neonatale letto oggi
+([[full_text_queue_current#FT-106]], PMID 42092735) — e in questi due fratelli **il parkinsonismo
+prominente non è riportato**. È quindi il **comparatore intra-allelico**: `p.L239R` non è un
+predittore di parkinsonismo a livello di allele. Quel confronto è il motivo per cui il full text
+serve, non la resa diagnostica del pannello.
+**Next action:** acquisire da PMC (`PMC12562696`); estrarre il fenotipo dei due fratelli `L239R`
+in dettaglio (tono, movimenti, EEG, età), e qualsiasi dato di proteina o trascritto. Verificare
+anche se la coorte dà un denominatore WWOX su 129 DEE — utile al counselling, non al meccanismo.
