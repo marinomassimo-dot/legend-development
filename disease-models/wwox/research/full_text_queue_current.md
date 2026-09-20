@@ -4419,3 +4419,44 @@ retardation assay* sugli ippocampi umani post-mortem ha un braccio cieco? (4) qu
 risultati è a sovraespressione ectopica e quale a proteina endogena?
 **Next action:** acquisire da PMC (`PMC4414138`) e leggere integralmente. **È il singolo full text
 non letto di più alto valore in questo batch.**
+
+---
+
+## FT-103 — PMID 27569545 · WWOX eterozigote come locus a bassa penetranza per ASD, evidenza umana indipendente
+
+**Paper:** PMID 27569545 — Leppa VM, … Geschwind DH 2016, *Am J Hum Genet* 99(3):540–554 · PMCID `PMC5011063` · DOI 10.1016/j.ajhg.2016.06.036
+**Surface:** non acquisito — solo abstract + MeSH. **PMC open access → ottenibile in questo ambiente.**
+**Priority:** **ALTA — la più alta evidenza umana emersa su `CLAIM 032`**
+**Why:** è **evidenza umana, indipendente, su coorte grande** (1.532 famiglie multiplex AGRE,
+laboratorio Geschwind/UCLA) che tocca esattamente l'asse che `CLAIM 032` dichiara non testato.
+L'abstract riporta *"another **lower-penetrance locus** involving **inherited** deletions and
+duplications of **WWOX**"*. Cioè: disruzione **eterozigote** di WWOX, **ereditata** (quindi da
+genitori portatori), che contribuisce al rischio di disturbo dello spettro autistico.
+🔴 **Va letto con la sua stessa qualificazione, non contro di essa.** *«Lower-penetrance»*
+significa che **la maggior parte dei portatori non è affetta** — il che è **coerente** con i
+genitori portatori clinicamente sani di ogni famiglia WWOX-DEE pubblicata. Non rovescia
+`CLAIM 032`; la **raffina**: l'aploinsufficienza non è priva di fenotipo a livello di popolazione,
+ma è a bassa penetranza. La differenza fra *«non deleterio»* e *«a bassa penetranza»* è
+esattamente ciò che una soglia terapeutica deve sapere.
+**Perché vale più del dato murino:** è umana, indipendente dal laboratorio Chang, su una coorte di
+ordini di grandezza più grande, e misura neurosviluppo invece di cognizione invecchiata.
+**Next action:** acquisire da PMC (`PMC5011063`); estrarre quante CNV WWOX, se delezioni o
+duplicazioni, l'odds ratio specifico del locus WWOX se dato, e se i portatori genitoriali sono
+stati fenotipizzati.
+
+---
+
+## FT-104 — PMID 29067327 · debito residuo dichiarato su una lettura già effettuata
+
+**Paper:** PMID 29067327 — Lee MH, … Chang NS 2017, *Alzheimers Dement (N Y)* 3(4):620–635 · PMCID `PMC5651433` · DOI 10.1016/j.trci.2017.02.001
+**Surface:** letto — ricevuta `FTR-20260920-29067327-01`, **`partial_fulltext_read`**
+**Priority:** MEDIA
+**Why:** la voce esiste perché la lettura è **dichiaratamente parziale** e una conclusione vi si
+appoggia. `figures: unavailable` e `references: unavailable` — nessun pannello è stato ispezionato,
+perché in questo ambiente non è ottenibile né il deposito JATS né un'immagine.
+**Il debito preciso, e dove morde:** la §3.5 — *«Wwox heterozygous mice exhibit enhanced memory
+decline»* — è **una sola frase, senza n, senza statistica, senza figura citabile**, ed è una delle
+due sorgenti della contro-evidenza a [[claim_registry_current#CLAIM 032]]. Finché quel pannello e
+quella numerosità non sono visti, la contro-evidenza resta **flag, non reversione**.
+**Next action:** recuperare i pannelli di §3.5 quando esista una rotta di acquisizione che
+preservi le immagini; nel frattempo **non promuovere la contro-evidenza oltre lo stato di flag**.
