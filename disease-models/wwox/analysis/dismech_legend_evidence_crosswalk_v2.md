@@ -755,6 +755,42 @@ operational value)*
   whether P214 is this paper, the 2019 HYAL-2/WWOX/SMAD4 review at
   `paper_registry_current.md:1027`, or a third source, is registry work for a `BATCH_COMMIT`.
 
+- 🔴 **RESOLVED ON THE READING HALF — 2026-09-21.** `PMID 27845895` has been read in full
+  (artefact `files/fulltext/PMID27845895_PMC_MCPtext.txt`, 44 591 bytes, sha256 `3e52aa0b…c835d6c7`,
+  CC BY 3.0; receipt `FTR-20260921-27845895-01`; audit
+  [`hyal2_wwox_smad4_audit_20260921.md`](hyal2_wwox_smad4_audit_20260921.md)). **The question this
+  finding posed — can LEGEND check DisMech's only TGF-β-arm assertion? — is now answered, and the
+  answer is that the assertion should not be imported.**
+  - ✅ **The quotation is genuine.** *"In WWOX-deficient cells, HA failed to induce Smad2/3/4
+    relocation to the nucleus."* is the fifth sentence of the paper's abstract, word for word.
+  - 🔴 **But it is the strongest of four statements the paper makes about the same observation, and
+    DisMech took the strongest.** The paper's own **Figure 2 legend** — describing the **only
+    genetically WWOX-null system in the paper** — says: *"When knockoutMEF cells were stimulated
+    with HA, Smad4 **appeared to relocate into nucleus in 4 hr**."* The Results say *"did not appear
+    to relocate"*; the Discussion says *"cannot **effectively** induce nuclear translocation of
+    Smads, **whereas Smad4 may spontaneously migrate to the nucleus**."* **A delayed relocation and
+    a failed relocation are different biology.**
+  - 🔴 **The direction is wrong for a node named "Complex Failure".** Every WWOX-removal
+    manipulation in the paper **reduces** signalling toward death, and the authors extrapolate that
+    way for neurons explicitly: *"HA protects neurons from traumatic brain injuries, and this could
+    be related with HA-mediated disappearance of Hyal-2, **which reduces the WWOX/Smad4
+    signaling**."* On the measured endpoint, **less WWOX means less death** — the opposite of what a
+    pathophysiology node driving neuronal loss requires.
+  - 🔴 **Every death readout is ectopic, and the title says so:** *"…causes bubbling cell death
+    **when the signaling complex is overexpressed**"*. In WWOX-expressing cells at endogenous
+    levels, *"**No apparent cell death occurs.**"* There is no rescue or re-expression arm anywhere
+    in the paper, and no statistical test, p value or error term either.
+  - **Neural material is thin and never WWOX-deficient:** SK-N-SH neuroblastoma (co-IP only) and a
+    **wild-type** rat stab-injury model. The MEFs are fibroblasts.
+  - **Recommendation to the crosswalk: PP04 should not be imported as a WWOX-DEE pathophysiology
+    driver on this evidence.** The single item worth carrying forward is **constitutive nuclear
+    Hyal-2 in the WWOX-null state** (*"endogenous Hyal-2 mainly localized in the nucleus of
+    knockoutMEF cells (~60%)"*) — an **open question**, not a mechanism, because the paper never
+    ties it to an outcome.
+  - **Unchanged:** the `E` half. **`CORPUS P214`'s identifier is still `PENDING` and is still not
+    guessed** — that remains registry work for a `BATCH_COMMIT`, and reading the DisMech-cited
+    primary does not resolve which source `CLAIM 027` was built from.
+
 ---
 
 **G-9 · Two safety-relevant absences in DisMech.** *(class 2, flagged for judgement, not action)*

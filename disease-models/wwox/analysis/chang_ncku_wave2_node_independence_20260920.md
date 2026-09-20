@@ -142,6 +142,44 @@ Wave 1 graded the arcs. Wave 2 adds the orthogonal grading — **who else has se
 laboratory outside NCKU has ever reported.** That is the structural answer to *"does the chain
 survive independent adjudication?"* — the ends are corroborated, the middle is not.
 
+> 🔴 **UPGRADE OF THE NEGATIVE — 2026-09-21, after reading the founding paper.** The table above
+> says of the two middle nodes only that **no one else has reported them**. Having now read
+> `PMID 25650666` adversarially (receipt `FTR-20260921-25650666-02`, audit
+> [`trappc6a_delta_founding_paper_audit_20260921.md`](trappc6a_delta_founding_paper_audit_20260921.md)),
+> that is too generous in two distinct ways.
+>
+> **First: they are not two nodes. They are one measurement.** `TRAPPC6AΔ` and `TIAF1` come from the
+> same laboratory, the same tissue bank (*"Department of Pathology, University of Colorado Health
+> Sciences Center (by Dr. CI Sze, before 2005)"*), the **same filter-retardation membranes**, the
+> same overexpression figure and the same unvalidated antibody practice — and the paper itself
+> writes *"Similar results were observed with TIAF1 aggregates."* Listing them as two rows
+> **double-counts one observation**. Corroboration weight for the pair is **one**, and the table
+> should be read that way.
+>
+> **Second: the founding paper disclaims its own load-bearing step.** Its Discussion summarises
+> *"We determined that TGF-β1 causes dissociation of WWOX from TPC6AΔ, thus leading to the
+> aggregation of TPC6AΔ and TIAF1 and subsequent events…"*, and the **same Discussion** states
+> *"Whether TGF-β1 regulates the binding of WWOX with TPC6AΔ **is unknown** and is being determined
+> in this laboratory."* **There is no binding assay in the paper at all** (*immunoprecipit*, *co-IP*,
+> *pull-down*: zero occurrences, roman-type method words, so the count is informative). The arc
+> `WWOX ⟶ TRAPPC6AΔ` is therefore not merely uncorroborated from outside — **it is undemonstrated
+> inside its own source.**
+>
+> Three further facts that bear on the same row: the **isoform's splicing origin is a web-tool
+> prediction**, never junction-sequenced; the **antisera are validated by peptide competition
+> alone**, with no genetic null, although the lab uses a `TPC6Asi` siRNA elsewhere in the same
+> paper; and the **human post-mortem arm is a null** (*"No significant difference was shown in
+> TPC6A or TIAF1 aggregation"*) between controls deliberately **21 years younger** than the cases,
+> which the abstract renders as a temporal ordering.
+>
+> **What this does to the central research question.** It does not change the shape of the answer —
+> the ends are corroborated and the middle is not — but it changes its severity. The middle of the
+> chain is **one laboratory's single, internally contradicted observation**, not two independent
+> single-lab observations that happen to agree. **And the one thing this paper does show cleanly
+> points the right way for the disease and the wrong way for a therapy:** less WWOX means more
+> aggregation (*"without WWOX, TPC6A and TIAF1 start to polymerize or aggregate"*), which makes
+> aggregation a **consequence** of the genotype rather than an intervention point upstream of it.
+
 ---
 
 ## 5 · Findings registered, not acted on

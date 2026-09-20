@@ -4225,6 +4225,52 @@ Leggere la fonte è ciò che permette di dire quanto è forte il fatto, non solo
 
 **Priorità:** 🔴 **ALTA — la più alta fra le voci aperte da questa ondata.** **Current status:** ⬜ aperto.
 
+**🔴 STATO — 2026-09-21: `EVIDENCE_BLOCKED` per licenza — MA LA DOMANDA CHE CONTAVA È RISOLTA DAI
+SOLI METADATI.** Il PMCID è corretto ed è `PMC4935222` (verificato personalmente con
+`convert_article_ids`: `{pmcid: PMC4935222, pmid: 25416187, doi: 10.1177/1535370214561952}`).
+`get_full_text_article` restituisce **successo HTTP con corpo vuoto** (`"full_text":""`, due
+tentativi), e `get_copyright_status` spiega perché: `is_open_access: false`, `found_in_pmc: 0`,
+*"© 2014 by the Society for Experimental Biology and Medicine."* **`PMC4935222` è uno stub di soli
+metadati**: il record esiste, il PMCID risolve, SAGE non ha depositato testo libero. **Muro di
+licenza, non fallimento transitorio — non ritentare le rotte automatiche.**
+
+⚠️ **Quanto segue viene dai METADATI PubMed, non da una lettura. Nessuna ricevuta è stata scritta e
+nessun locator verbatim del corpo può esistere.** Lo si registra perché cambia la conclusione, non
+perché sostituisca la lettura.
+
+🔴 **La risposta alla domanda centrale di questa voce è: `27551470` cita una REVIEW come se fosse
+evidenza.** Verificato: `article_types` = `["Journal Article", **"Review"]**`, e la review lo dichiara
+di sé — *"The aim of **this review** is to summarize the roles of WWOX in the developing brain."*
+Titolo: *"The fragile site WWOX gene and the developing brain."* Autori: **Tabarki B, Al Mutairi F,
+Al Hashem A** (Division of Pediatric Neurology e Division of Metabolic and Genetics, Prince Sultan
+Military Medical City, Riyadh). **Nessun paziente, nessun metodo, nessun risultato proprio.**
+
+**Conseguenza sulla catena citazionale, ed è precisa:** la frase di `27551470` — *"germline mutations
+or loss of function of WWOX are associated with neuronal disorders"* — è **fedelmente riformulata
+come asserzione** (la fonte lo afferma, e lo afferma in modo **più specifico** del paper citante),
+ma è **priva di dati in questo nodo**. **La catena non tocca il fondo qui: lo attraversa.** Le fonti
+primarie stanno nella bibliografia di questa review, che è esattamente ciò che il corpo vuoto ci
+nega. Il difetto non è un'attribuzione falsa: è **una review usata come evidenza**.
+
+**L'inversione evolutiva sopravvive e si affila.** L'abstract nomina *"**Homozygous** mutations
+affecting WWOX in humans"* e *"The neurologic phenotype of WWOX mutation includes **seizures,
+ataxia, developmental delay, and spasticity** of variable severity"* — cioè un fenotipo
+**recessivo, grave e pre-riproduttivo**. Il fatto addotto da `27551470` a sostegno di «nessuna
+pressione selettiva ereditaria, il cancro colpisce dopo l'età riproduttiva» è dunque **pressione
+selettiva ereditaria che agisce prima della riproduzione**. La contraddizione è reale e la fonte non
+la attenua. *(Lettura provvisoria sui metadati; da confermare sul full text.)*
+
+**Datum collaterale, utile altrove:** *"WWOX is highly expressed in different brain regions during
+murine **fetal** development and **remained unchanged** in the cortex and the corpus callosum in
+adult mice."* È un'asserzione di review — **non è un dato letto** — ma è convergente per direzione
+con [`wwox_developmental_timing_audit_20260920.md`](../analysis/wwox_developmental_timing_audit_20260920.md) e va verificata alla sua primaria, non citata da
+qui.
+
+**Next action:** **acquisizione umana** — registrata come `A7` in
+[`acquisition_packet_20260920.md`](acquisition_packet_20260920.md). **E il vero premio non è questa
+review**: è **la sua bibliografia**, cioè quale case series primaria regga il fenotipo. Chiedere
+quella, non solo il PDF.
+
 ---
 
 ## FT-091 — `PMID 25245215` (Aqeilan 2014, capitolo 8) · il capitolo dedicato a WWOX, ed è già nel lotto
@@ -4263,6 +4309,58 @@ mesi dopo lo stesso autore senior pubblica `27551470`, che presenta passivo-cont
 davvero, e quindi quale dei due inquadramenti lo rappresenti.
 
 **Priorità:** alta. **Current status:** ⬜ aperto.
+
+**🔴 STATO — 2026-09-21: LETTO. Verdetto: È L'INQUADRAMENTO DEL 2016 A ESSERE FEDELE — questo
+capitolo PROPONE, non CONCLUDE.** Artefatto `files/fulltext/PMID25238782_PMC_MCPtext.txt`
+(38 213 byte, sha256 `3c51d26f…03b7239c`, CC BY 4.0); ricevuta `FTR-20260921-25238782-01`; audit
+[`georgakilas2014_cfs_chapter_audit_20260921.md`](../analysis/georgakilas2014_cfs_chapter_audit_20260921.md).
+
+- **Verificato personalmente contro l'artefatto:** *conclude* e *conclusion* compaiono **zero
+  volte** nel corpo, e così *passive* — parole in tondo, quindi **zeri informativi**, non artefatti
+  dell'estrattore. Le parole con cui il capitolo enuncia la propria posizione sono sempre ipotetiche:
+  *"Based on these findings, **we propose** that these sites **may** represent unique 'functional'
+  units…"*, e in chiusura della sezione portante *"Overall, CFSs **may not be merely** structural
+  domains vulnerable only to breakage but highly organized 'functional' units that **may** have
+  deeper biological consequences for the cell when affected."* **Un doppio modale non è una
+  conclusione.**
+- 🔴 **`D-15`, e la distorsione è il VERBO, non l'aggettivo.** La frase attribuita non è nel corpo.
+  È quasi verbatim nell'**abstract** — ma come **domanda**, e senza modale: *"a **question that
+  emerges is whether** fragility in these regions is **only a structural 'passive' incident** or an
+  event with a profound biological effect."* Il sintagma è ripreso con precisione. Due cose sono
+  state aggiunte e non sono del capitolo: *"unlikely"*, che è all'incirca forte quanto il *"may not
+  be merely"* del capitolo ed è la metà difendibile; e il verbo di resoconto **"concluded"**, che
+  non lo è. **La domanda-cornice del capitolo è stata riemessa come sua risposta.**
+- 🔴 **Modo di fallimento nuovo per questo repository, e vale la pena nominarlo: RE-VOICING
+  INTERROGATIVO→DICHIARATIVO.** La domanda di una fonte viene citata con esattezza e riattribuita
+  come suo reperto. **Non lascia alcuna impronta lessicale** — ogni parola piena coincide — quindi
+  il confronto di stringhe e il quote-matching **non possono intercettarlo**: lo intercetta solo la
+  lettura del **modo grammaticale**. È una classe distinta dalle sette inversioni abstract-vs-Results
+  registrate in questa letteratura, che sono contraddizioni **fra due parti di uno stesso paper**.
+- **La proposta dei «sensori» è dichiarata speculativa dal capitolo stesso, nella stessa frase**
+  (unica occorrenza di *sensor* nel corpo): *"**A tempting but speculative answer** is that … they
+  may function as **alarm sensors** scattered throughout the genome…"* Qualunque costruzione a valle
+  che la tratti come acquisita poggia su un'ipotesi che la sua fonte etichetta come speculativa.
+- **Sul meccanismo il capitolo lascia in piedi il conto meccanico:** *"there is **no single
+  mechanism** … The only common shared aspect by all these mechanisms is that they can eventually
+  lead to a **mechanical breakage** of CFSs."* Recensisce entrambe le posizioni sul meccanismo e
+  propone — senza pretendere di averlo mostrato — che le **conseguenze** non siano solo strutturali.
+- 🔴 **Questo capitolo non può essere citato in alcun argomento su WWOX-DEE, e la misura è pulita:**
+  *brain*, *neuron*, *neural*, *CNS*, *epilep\**, *seizure*, *cognit\**, *intellect\** = **zero**
+  ciascuno, tutti in tondo, tutti verificati personalmente. Tutte e nove le occorrenze di
+  *develop\** sono *"cancer development"*. **Il capitolo non attribuisce al gene di FRA16D alcuna
+  funzione** — nemmeno quella di oncosoppressore: compare come esempio di dimensione (~1,1 Mb) e
+  come rinvio a un altro capitolo dello stesso numero.
+- **Reperto aggiuntivo che cambia il significato della discrepanza: entrambi i paper citanti
+  condividono un autore senior con questo capitolo (Gorgoulis).** L'incoerenza è dunque **un gruppo
+  che rappresenta il proprio lavoro precedente in due modi diversi a tredici mesi di distanza** —
+  sovra-enunciazione di sé, un segnale diverso dal fraintendere altri, e da non archiviare insieme.
+- ⚠️ **Limite dichiarato sull'altra metà del confronto:** la frase citante in `PMID 25238781`
+  **non è stata riverificata oggi**. Quel paper ha una ricevuta in questo ledger ma **nessun
+  artefatto locale**, quindi il suo testo esatto è portato dalla lettura di una sessione precedente.
+  Questa ricevuta stabilisce **che cosa dice il capitolo**; che il citante abbia scritto *"concluded"*
+  poggia sulla ricevuta anteriore.
+- ⚠️ **La bibliografia è stata distrutta dall'estrattore**, quindi il puntatore «rif. 6» di
+  `27551470` **non è stato risolto e non si è tentato di risolverlo**: sarebbe stato un indovinello.
 
 ---
 

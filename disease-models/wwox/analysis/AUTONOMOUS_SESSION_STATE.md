@@ -67,6 +67,15 @@ resumes from here. **Not a handoff and not a stop.**
   `.gitignore` and the artefact was never under version control. The earlier reading stands — its
   quotations are all present in the current artefact and were re-verified — but its fingerprint no
   longer binds to a file. Declared in `FTR-20260921-25650666-02` rather than quietly re-anchored.
+- 🔴 **INTERROGATIVE-TO-DECLARATIVE RE-VOICING — a citation-fidelity failure mode that string
+  comparison cannot catch.** A source's *question* is quoted accurately and re-attributed as its
+  *finding*. Every content word matches, so quote-matching and grep find nothing; only reading the
+  sentence's **grammatical mood** catches it. Found on `PMID 25238782`, whose abstract asks
+  *"a question that emerges is whether fragility in these regions is only a structural 'passive'
+  incident…"* and which was cited as having *concluded* that it is *"unlikely only a structural
+  'passive' incident"*. **When auditing a citation, check the mood of the sourced sentence, not
+  just its words.** Distinct from the seven abstract-versus-results inversions recorded here, which
+  are contradictions *inside* one paper.
 - **A stale queue entry will dispatch duplicate work.** `FT-102` still read *"non acquisito"* a day
   after the paper had been read. Close a queue entry in the same cycle as the read, not later.
 - **A zero string count for a gene symbol in MCP body text is an instrument reading, not a
@@ -82,17 +91,24 @@ resumes from here. **Not a handoff and not a stop.**
    to **one** node) and `FT-073` / `PMID 27845895` (the DisMech quote is real but is the strongest
    of four statements, and the axis **attenuates** death when WWOX is scarce). `DL-BIO-004` and
    `DL-MOL-008` updated; `PMID 18371080` added to the acquisition packet as **A6**.
-1. **FT-090** / `PMID 25416187` (PMC4935222) — the single citation carrying `27551470`'s only link
-   to the reference genotype. Same "one sentence holds a claim" shape as `CLAIM 039`.
-2. **FT-018** / `PMID 28123895` (PMC5214935) — C1q regulates WWOX **activation state**, not level.
-   C1q is central to microglial synaptic pruning **and is druggable**. Highest therapeutic upside
-   left in the accessible queue.
+1. ~~**FT-090** / `PMID 25416187`~~ — **CLOSED, `EVIDENCE_BLOCKED` (licence).** `PMC4935222` is a
+   metadata-only stub (`full_text:""`, `is_open_access: false`, `found_in_pmc: 0`). **But the
+   question that mattered is answered from metadata: `27551470` cites a REVIEW as evidence**
+   (`article_types` includes `Review`; *"The aim of this review is to summarize…"*). The chain does
+   not bottom out there — it passes through. Acquisition debt `A7`; **ask for the reference list,
+   not the body.**
+2. ~~**FT-018** / `PMID 28123895`~~ — **NOT ACCESSIBLE.** The surface census already records it as
+   `idIsNotOpenAccess` / `pdf_only`. Do not re-dispatch; it is acquisition work.
 3. ~~**FT-098 / FT-099** — the other two independent `TRAPPC6A` cohorts.~~ **CLOSED.** `FT-099`
    read (fails its own permutation); `FT-098` licence-walled. With `FT-097` already null, **all
    three legs of the `TRAPPC6A` node-independence claim are down and the claim is retracted in
    full** — see the retraction appended to `chang_ncku_wave2_node_independence_20260920.md`.
-4. **FT-092** / `PMID 25238782` — CFS fragility; cross-cutting citation-fidelity finding.
-5. **FT-074** — four mTOR/autophagy stubs two reasoning files already lean on.
+4. ~~**FT-092** / `PMID 25238782`~~ — **CLOSED, read.** The 2016 framing is the faithful one: the
+   chapter **proposes**, it does not conclude, and the phrase attributed to it is its **question**.
+   Named the re-voicing failure mode above.
+5. **FT-074** — four mTOR/autophagy stubs two reasoning files already lean on. **Now the highest
+   unread item in the accessible queue.**
+6. **`PMID 27869163`** (Wwox–Brca1, CC BY-NC-ND) — copyright-verified open, never dispatched.
 
 ## Permanently evidence-blocked — do not retry automated routes
 `15126504` (`FT-024`, no PMCID) · `27569545` (`FT-105`, **licence wall**, verified) · `15026124`

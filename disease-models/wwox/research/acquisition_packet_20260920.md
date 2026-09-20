@@ -134,6 +134,40 @@ route, vehicle, timing).
 
 ---
 
+## A7 · `PMID 25416187` — Tabarki, Al Mutairi, Al Hashem 2015, *Exp Biol Med (Maywood)* 240(3):400–2 · `FT-090`
+**DOI** 10.1177/1535370214561952 · **PMCID PMC4935222 exists but is a metadata-only stub** —
+`get_full_text_article` returns HTTP success with `"full_text":""`, and `get_copyright_status`
+returns `is_open_access: false`, `found_in_pmc: 0`. SAGE has deposited no free body text. *Added
+2026-09-21.*
+
+**What it settles, in one sentence:** which **primary** source, if any, stands behind the only
+sentence in `PMID 27551470` that reaches a WWOX neurological phenotype — because this source, its
+ref. 14, turns out to be a **review**, so the citation chain passes through it rather than bottoming
+out in it.
+
+**Why it is worth a human's time:** the genre question is already answered from metadata
+(`article_types` = `["Journal Article","Review"]`; the abstract says *"The aim of **this review**
+is to summarize the roles of WWOX in the developing brain"*), and answering it was most of the
+value. What remains is **the reference list**, and that is the real prize: the abstract states a
+specific clinical phenotype — *"The neurologic phenotype of WWOX mutation includes seizures,
+ataxia, developmental delay, and spasticity of variable severity"* — and this repository cannot
+currently name the case series that phenotype came from. A three-page review's bibliography is a
+short, high-yield object.
+
+**What to look for, specifically:** (1) **the reference list**, and specifically which references
+carry the seizure/ataxia/spasticity phenotype and which carry the expression data; (2) whether the
+expression claim — *"WWOX is highly expressed in different brain regions during murine fetal
+development and remained unchanged in the cortex and the corpus callosum in adult mice"* — is
+sourced to a primary or asserted; (3) whether the review names consanguinity or an ascertainment
+context for the homozygous cases.
+
+**Routes remaining:** SAGE via institutional login · Europe PMC (untried from here; the MCP surface
+is PMC-only) · ILL · corresponding author, whose address is in the PubMed record.
+**Ask for:** the reference list first, the body second. **A scan of the bibliography alone would
+discharge most of this debt.**
+
+---
+
 ## Priority order for a human with one hour
 
 1. **A1** (`15126504`) — settles a live mechanistic question *and* surfaces a therapeutic lever.
@@ -148,6 +182,9 @@ mechanistic one:)*
 - **A6** (`18371080`) — the only in-vivo therapeutic pointer in the batch, currently closed in the
   negative **on an abstract alone**. It is the cheapest way to either recover a therapeutic lead or
   retire one for good.
+- **A7** (`25416187`) — **cheapest item in the packet.** Its genre question is already settled; only
+  its three-page reference list is needed, and it is the sole route to the primary behind a
+  phenotype statement this repository currently cannot source.
 
 > **If a PDF arrives:** this checkout has **no PDF tooling**, so a PDF alone will not be readable
 > here. Extracted text or HTML is preferable; if only a PDF exists, the text layer should be
