@@ -55,10 +55,16 @@ the floor must be replaced; this claim treats the floor as zero.
 > **D-17** · *"a normal result on a coarse endpoint is a normal phenotype"* · **Why it is FALSE
 > here:** this disease has produced the inversion at least four times. `Wwox+/−` mice are normal on
 > rotarod, gait and clasping and abnormal on EEG (spontaneous network bursting) and on motor-evoked-
-> potential latency (2.13±0.22 ms vs 1.39±0.13, p<0.05). `Wwox`-null cortex is normal on bulk NeuN
-> counts — the **same investigators** wrote *"Wwox is not required for proliferation and migration of
-> immature neurons"* — and mislaminated one year later on Satb2/Tbr1 markers with E16.5 BrdU
-> birth-dating; neuron **number** was normal, laminar **placement** was not. `CLAIM 032` rests on
+> potential latency (2.13±0.22 ms vs 1.39±0.13, p<0.05). `Wwox`-null cortex is normal on **layer-resolved
+> NeuN counts** — *"no significant difference … in neuron number in each cortical layer at PND21"*,
+> with the layers themselves delimited *"based on specific morphology of NeuN-positive cells"*, which
+> is near-circular — and is mislaminated when read with Satb2/Tbr1 markers and E16.5 BrdU
+> birth-dating; neuron **number** is normal, laminar **placement** is not. 🔴 **This is a NARROWING,
+> not a self-reversal, and the distinction is the entry's whole point:** the two sets of measurements
+> are mutually compatible, taken at non-overlapping ages (PND5–21 vs E16.5→P1), and only the
+> *migration* limb of the earlier conclusion falls — its *proliferation* limb was never re-tested.
+> What was wrong was not the data but the **unqualified conclusion drawn from an endpoint that could
+> not see lamination.** `CLAIM 032` rests on
 > neoplasia, lifespan, band intensity and observed behaviour, and its cognition leg is *nobody
 > looked*, not *looked and found nothing*. And a western-blot non-detection is recorded elsewhere in
 > this registry as protein **absence**. · **Cost:** a negative was, or nearly was, promoted to a
@@ -91,6 +97,11 @@ thing afterwards, with one fewer thing that a careful reader could use against i
   2021) and from `partial_fulltext_read` receipts with `figures: unavailable` (Cheng 2020 via
   `PAPER 019`). **No figure panel was inspected anywhere in this batch**, so the entry is written as
   a methodological rule and not as a quantitative finding.
+- 🔴 **The `D-17` NeuN row above was itself corrected before landing.** As first drafted it said
+  *"bulk NeuN counts"* and *"self-reversal"*, copying the audit. A source-verification task then
+  established that Tochigi's counts were **layer-resolved**, and that Iacomino **narrows** rather than
+  reverses. Committing the first draft would have put a false contradiction into the ledger — inside
+  an entry about not over-reading evidence.
 - The audit's other three ranked items (`CLAIM 039`'s *not cerebellar* limb, `CLAIM 013`'s MRI null,
   `CLAIM 014`'s evidence boundary) are **deliberately not included**: they are under source
   verification in a separate task, and a candidate written before that returns would be exactly the

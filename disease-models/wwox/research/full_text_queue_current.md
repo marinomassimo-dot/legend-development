@@ -4493,3 +4493,17 @@ evidenza di aploinsufficienza**.
 **Next action:** **non** ritentare PMC. Rotte residue: PDF AJHG / HTML ScienceDirect da accesso
 istituzionale, oppure autore corrispondente (Geschwind). Finché non si apre, **nessuna conclusione
 su `CLAIM 032` può poggiarvi**, ed è così che il commit candidate la tratta.
+
+---
+
+## FT-106 — PMID 42092735 · WWOX neonatale-infantile che mima un disturbo dei neurotrasmettitori
+
+**Paper:** PMID 42092735 — 2026 · PMCID `PMC13378201` · **open access confermato**
+**Surface:** non acquisito — citato dallo scouting del nodo successivo, mai letto
+**Priority:** MEDIA — **ma è clinicamente la voce più fresca di questa coda**
+**Why:** parkinsonismo neonatale-infantile WWOX che **mima un disturbo dei neurotrasmettitori**. Se
+regge, è un **fenotipo di presentazione** che un clinico può scambiare per un'altra diagnosi
+trattabile — quindi tocca la diagnosi differenziale, non il meccanismo. Entra in coda perché lo
+scouting vi si è appoggiato senza averlo letto, e `UNREAD_PREMISE` l'ha giustamente bloccato.
+**Next action:** acquisire da PMC (`PMC13378201`); stabilire se il parkinsonismo è **descritto** o
+**misurato**, se esiste un trial di L-DOPA e con quale esito, e se l'allele è dell'asse SDR.
