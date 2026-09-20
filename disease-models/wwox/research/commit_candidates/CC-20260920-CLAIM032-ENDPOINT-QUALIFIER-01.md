@@ -60,7 +60,7 @@ those are different evidentiary states that the current wording conflates.
 | `PMID 34634460` Breton 2021 | **Carlen (Toronto)** — outside Chang | spontaneous electrographic bursting in **4 of 23 slices from 14 Syn1-Cre het mice** vs **0 of 11 slices from 7 WT**; *"also observed in heterozygote mice … may be reflective of epileptic network activity; however, there are no clear behavioral seizures"* | **strongest independent signal.** ⚠️ conditional (Syn1-Cre), **no statistic reported** for het vs WT, het pooled into "S-CTL" elsewhere in the same paper, Aqeilan is a co-author |
 | `PMID 32000863` Cheng 2020 | Hsu/Chang (NCKU) | het Tc-MEP latency **2.13 ± 0.22 ms (n=5) vs WT 1.39 ± 0.13 (n=10), p<0.05** at 3 weeks; amplitude normal; rotarod/gait/clasping normal | concordant, **different instrument** |
 | `PMID 29067327` §3.5 + `PMID 36498839` §2.5 | Chang (NCKU) | aged `Wwox+/−` memory decline, cortical aggregates | **single lab, corroboration not replication**; §3.5 has **no n**; aged, not developmental |
-| `PMID 27569545` Leppa 2016 | **Geschwind (UCLA)** — outside the field | heterozygous intragenic `WWOX` CNVs, *"lower-penetrance locus"*, ASD multiplex families | ⚠️ **read at abstract depth only**; the OR figures reaching this batch are **review-reported, not read** — queued as `FT-103` |
+| `PMID 27569545` Leppa 2016 | **Geschwind (UCLA)** — outside the field | heterozygous intragenic `WWOX` CNVs, *"lower-penetrance locus"*, ASD multiplex families | 🔴 **DOES NOT SUPPORT THE QUALIFIER.** Primary body behind a licence wall (permanently unobtainable here); abstract carries no number at all; the circulating OR is review-reported and **two reviews by the same author disagree** (9 vs 12, 1,532 vs 3,565). Signal is **bidirectional** — duplications cannot evidence haploinsufficiency. Kept as a recorded negative. |
 
 **The pattern across the independent sources is the finding: normal behaviour, abnormal
 instrument.** Every endpoint `CLAIM 032` rests on is of the class these studies show is insensitive
@@ -99,9 +99,28 @@ Add to `CLAIM 032`:
 - Both Chang readings are `partial_fulltext_read` with `figures: unavailable`. **No panel was
   inspected**, so per `D-14` the het findings are carried as **flag, not reversion**. `FT-104`
   records the residual debt.
-- Breton 2021 and Leppa 2016 were reached at **abstract/metadata depth** by a delegated Scientist;
-  `FT-103` queues Leppa. The Breton quote is verbatim from its deposit; its **missing statistic** is
-  stated rather than filled in.
+- Breton 2021 was reached at **abstract/metadata depth**; its quote is verbatim from its deposit and its
+  **missing statistic** is stated rather than filled in.
+- 🔴 **The Leppa limit declared above was right, and is now hardened (2026-09-20, wave 5).** The primary body
+  is **unobtainable in this environment and permanently so**: PMC5011063 is *in* PMC but **not in the open-access
+  subset** — `get_copyright_status` returns *All rights reserved*, `is_open_access: false`. The route will always
+  return empty; `FT-103` is re-queued as **acquisition-blocked (licence wall)**, not merely unread.
+  **The primary abstract's entire WWOX content is one clause** — *"another lower-penetrance locus involving
+  inherited deletions and duplications of WWOX"* — with **no count, no denominator, no percentage, no p-value
+  and no odds ratio**. The paper's only stated denominator is **1,532 AGRE families**.
+  🔴 **And the second-hand numbers are now actively suspect, not merely unverified.** The same senior author
+  reports the same result twice, incompatibly: **Aldaz & Hussain 2019** gives *"9 affected children, with very
+  high odds ratio"* against 1,532 families and **no numeric OR**; **Aldaz & Hussain 2020** gives 12/3565 vs
+  1/2633, p=0.01, **OR = 8.8**. They disagree on count (9 vs 12), unit (children vs families), denominator
+  (1,532 vs 3,565) and on whether a numeric OR exists at all. At most one is a faithful transcription, and
+  `OR = 8.8` may have been **computed or imported by the reviewing author** rather than quoted. This is `D-15`
+  caught in the act, and it is why the candidate never leaned on the figure.
+  ⚠️ **A logical cap that survives the numbers entirely: the signal is BIDIRECTIONAL.** Duplications sit in the
+  same finding as deletions, and **a duplication cannot evidence haploinsufficiency**. This is a dosage-
+  *disturbance* / locus-*fragility* signal, not a half-dose signal — WWOX spans FRA16D, the second-most-common
+  fragile site, and DGV puts large germline WWOX CNVs at ~0.10% of 27,263 individuals, the same order as the
+  case rate being claimed. **Leppa 2016 therefore does not support the endpoint qualifier and is not used for
+  it.** It is recorded because it was the best human candidate and it did not survive examination.
 - Tochigi 2019 (`PMID 31340538`) and Mallaret (`PMID 24369382`) could not be re-read in this
   environment (no PMCID / empty PMC body). The Tochigi pooling statement is the delegate's reading.
 - **This candidate changes a `VERY HIGH` clinical-relevance claim that carries the dose argument.

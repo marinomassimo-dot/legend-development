@@ -4460,3 +4460,36 @@ due sorgenti della contro-evidenza a [[claim_registry_current#CLAIM 032]]. Finch
 quella numerosità non sono visti, la contro-evidenza resta **flag, non reversione**.
 **Next action:** recuperare i pannelli di §3.5 quando esista una rotta di acquisizione che
 preservi le immagini; nel frattempo **non promuovere la contro-evidenza oltre lo stato di flag**.
+
+---
+
+## FT-105 — PMID 27569545 · **RETTIFICA DI STATO di [[full_text_queue_current#FT-103]]: non "non letto" ma bloccato da licenza**
+
+> **Numerazione.** Questa voce era stata scritta come `FT-103b` e il `LINT` l'ha rifiutata: un suffisso
+> letterale si legge come un duplicato di `FT-103`, e ogni riferimento diventa ambiguo. Rinumerata `FT-105`,
+> con il numero precedente registrato qui invece che cancellato. **`FT-103` resta in piedi e non è riscritto**
+> — è append-only e una ricevuta può già puntarvi; questa voce lo corregge dichiarandolo.
+
+**Paper:** PMID 27569545 — Leppa 2016, *Am J Hum Genet* · PMCID `PMC5011063` · DOI 10.1016/j.ajhg.2016.06.036
+**Status:** 🔴 **ACQUISITION-BLOCKED — LICENCE WALL. Non ri-accodare sulla rotta PMC: restituirà sempre vuoto.**
+**Perché, misurato e non supposto:** `get_full_text_article` su `PMC5011063` restituisce
+`"full_text": ""`; `get_copyright_status` dichiara **"All rights reserved"**, `is_open_access: false`,
+`found_in_pmc: 0`. L'articolo **è** in PMC ma **non** nel sottoinsieme open-access che questa rotta
+serve. OpenAlex, Unpaywall e Semantic Scholar: `403 CONNECT`. Scholar Gateway indicizza Wiley; AJHG
+è Elsevier.
+🔴 **Correzione a `FT-103`, che era stato scritto quando i numeri sembravano affidabili.** L'abstract
+del primario contiene **una sola clausola su WWOX** — *"another lower-penetrance locus involving
+inherited deletions and duplications of WWOX"* — **senza conteggio, denominatore, percentuale,
+p-value o odds ratio**. Gli OR 1.7 e 3.3 dell'abstract appartengono ad **altre analisi**
+(burden genome-wide; aggregato sui loci ASD noti) e **non vanno mai attaccati a WWOX**. L'unico
+denominatore dichiarato dal primario è **1.532 famiglie AGRE**, non 3.565.
+🔴 **I numeri di seconda mano si contraddicono fra loro, stesso autore senior:** Aldaz & Hussain
+**2019** riporta *"9 affected children, with very high odds ratio"* su 1.532 famiglie e **senza OR
+numerico**; Aldaz & Hussain **2020** riporta 12/3565 vs 1/2633, p=0.01, **OR 8.8**. Divergono su
+conteggio, unità, denominatore e sull'esistenza stessa di un OR. `D-15` colto sul fatto.
+⚠️ **Un limite logico che sopravvive a qualunque numero:** il segnale è **bidirezionale** — le
+duplicazioni stanno nello stesso reperto delle delezioni, e **una duplicazione non può essere
+evidenza di aploinsufficienza**.
+**Next action:** **non** ritentare PMC. Rotte residue: PDF AJHG / HTML ScienceDirect da accesso
+istituzionale, oppure autore corrispondente (Geschwind). Finché non si apre, **nessuna conclusione
+su `CLAIM 032` può poggiarvi**, ed è così che il commit candidate la tratta.
