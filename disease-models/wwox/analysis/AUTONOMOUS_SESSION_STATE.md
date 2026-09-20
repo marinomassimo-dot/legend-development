@@ -5,10 +5,31 @@ resumes from here. **Not a handoff and not a stop.**
 
 ## Current state
 - `main` == `origin/main` · working tree clean · one worktree · LINT **PASS** · publication gate
-  **PASS, 0 blocks** · receipts **175 chained, tail anchored**.
-- Papers with a receipt: **109** (was 97 at the start of the Chang batch).
-- **In flight at this write:** two Scientist readings — `FT-102` / `PMID 25650666` (the founding
-  `TRAPPC6AΔ` paper, PMC4414138) and `FT-073` / `PMID 27845895` (Hyal-2/WWOX/Smad4, PMC5386674).
+  **PASS, 0 blocks** · receipts **181 chained, tail anchored**.
+- Papers read and receipted in this continuation: `21766012`, `25650666` (adversarial re-read),
+  `27845895`, `25238782`, `24008736`, `41124647`, `35573960`.
+- **In flight at this write:** a **retrievability sweep by fetch** over every paper this repository
+  calls blocked (with `36621327` read if its body is non-empty), and a **census of WWOX splice
+  transcript evidence** for `DL-BIO-002` / `TX-001`.
+
+## 🔴 The three results a cold reader should know before anything else
+
+1. **Every therapeutic candidate this literature has produced acts by ANTAGONISING WWOX**, and an
+   independent laboratory now says so in neurons. `PMID 35984507` (Coimbra, outside NCKU):
+   *"**WWOX inhibition** by Zfra1-31 **restores** mitochondrial homeostasis and viability of
+   neuronal cells exposed to high glucose."* With the pTyr33 peptide (`18371080`: *"activated WOX1
+   plays an essential role in the MPP+-induced neuronal death"*) and the C1q axis (`19484134`:
+   *"C1q activates WOX1 in neurons, which ultimately leads to cell death"*), that is three lines.
+   **A WWOX antagonist has nothing to antagonise in a WWOX-deficient brain. This is a category
+   objection, not a dosing one.** Packet item `A9`; rests on an abstract, so it must be *read*.
+2. **The first node of the Chang cascade disclaims its own load-bearing step.** `25650666`'s
+   Discussion asserts TGF-β1 dissociates WWOX from TPC6AΔ and, two paragraphs later, says
+   *"Whether TGF-β1 regulates the binding of WWOX with TPC6AΔ **is unknown**"*. There is **no
+   binding assay in the paper**. And `TRAPPC6AΔ` and `TIAF1` are **one measurement, not two**.
+3. **All four levers the model cared about were finally tried in a WOREE null, and all four
+   failed** (`35573960`): vigabatrin, ACTH, CBD oil, ketogenic diet. `n = 1`, null/null,
+   day-one onset — **not a refutation for a genotype with residual protein**, and the ledger
+   says so.
 
 ## Completed programme so far
 1. **`SCIENTIST_CHANG_NS_…` waves 1–5** — closed, formally saturated.
