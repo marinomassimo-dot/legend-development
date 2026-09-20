@@ -380,8 +380,10 @@ name a **ceiling**, not only a floor — overexpression is not automatically saf
    or whether 8.8 was the review's arithmetic; **(iii)** the del/dup split and breakpoints, and
    whether events are intragenic; **(iv)** any sentence about FRA16D, fragile sites, platform
    matching between cases and siblings, or transmitting-parent phenotype.
-3. Failing that, **write to the corresponding author** — Daniel H. Geschwind, dhg@mednet.ucla.edu
-   (UCLA), listed as electronic contact on the PubMed record.
+3. Failing that, **write to the corresponding author** — the senior author of `PMID 27569545` (UCLA),
+   whose electronic contact is listed on the PubMed record itself. *(The address is deliberately not
+   reproduced here: this is the **public edition**, and `public_release_gate.py` refused a push that
+   carried it — correctly. Look it up at the source when the letter is actually written.)*
 4. **Correct the provenance in `wwox_heterozygote_phenotype_audit_20260920.md` line 76 and §"Third,
    the human monoallelic signal"**, which currently carries `12 (0.34%) vs 1 (0.04%), p = 0.01,
    OR = 8.8` with a review citation. The flag `⚠️ review-reported, primary body not read` is already
