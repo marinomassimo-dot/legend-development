@@ -125,6 +125,7 @@ INTEGRITY_PREFIX = {"retracted": "🛑 RETRACTED — ",
                     "concern": "⚠️ EXPRESSION OF CONCERN — ",
                     "retraction_notice": "ℹ️ RETRACTION NOTICE — ",
                     "concern_notice": "ℹ️ EXPRESSION-OF-CONCERN NOTICE — ",
+                    "erratum_notice": "ℹ️ CORRECTION NOTICE — ",
                     "corrected": "✎ corrected — "}
 
 # 🔴 Publication integrity is an ELIGIBILITY gate, not a ranking key. The two are routinely
@@ -146,6 +147,7 @@ INTEGRITY_ACTION = {
     "concern": "no canonical promotion until the concern is resolved; readable for audit",
     "retraction_notice": "editorial notice documenting a retraction; not itself retracted",
     "concern_notice": "editorial notice documenting a concern; not itself under concern",
+    "erratum_notice": "editorial notice documenting a correction; not itself corrected",
     "corrected": "annotation only — read the correction with the paper; no hold",
 }
 
@@ -203,6 +205,19 @@ def _integrity(seed: dict[str, str]) -> str:
         return "retraction_notice"
     if "ExpressionOfConcernFor" in kinds:
         return "concern_notice"
+    # 🔴 THE SAME DIRECTION RULE, AND IT WAS MISSING FOR ERRATA ONLY. `RetractionOf` and
+    # `ExpressionOfConcernFor` were separated from their inverses above; `ErratumFor` fell
+    # through to `corrected`, the value that belongs to the AFFECTED paper carrying
+    # `ErratumIn`. So a correction notice and the paper it corrects came back identical from a
+    # function whose docstring promises to preserve the direction — `Correction: WWOX promotes
+    # osteosarcoma development via upregulation of Myc` (PMID 38355659, `ErratumFor:38182577`)
+    # read the same as PMID 38182577 itself. The suite that exists for exactly this defect had
+    # a retraction arm and a concern arm and no erratum arm, which is how the hole survived.
+    # Eligibility is deliberately unchanged: neither value is in INTEGRITY_HOLD_STATES,
+    # because an erratum is not an integrity event in either direction. What changes is that
+    # the notice can now be told apart from what it annotates.
+    if "ErratumFor" in kinds:
+        return "erratum_notice"
     return "corrected"
 
 

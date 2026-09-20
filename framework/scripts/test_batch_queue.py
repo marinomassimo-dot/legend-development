@@ -480,6 +480,49 @@ class QueueIntegrityTests(unittest.TestCase):
         self.assertEqual(bq._integrity(concern_notice), "concern_notice")
         self.assertEqual(bq._eligibility(bq._integrity(concern_notice)), "")
 
+        # 🔴 THE ARM THIS SUITE WAS MISSING, AND THE ONE THE CORPUS ACTUALLY EXERCISES.
+        # `ErratumFor` lives on the correction notice; `ErratumIn` lives on the paper it
+        # corrects. Until 2026-09-20 both returned `corrected`, so PMID 38355659
+        # (`Correction: WWOX promotes osteosarcoma development via upregulation of Myc`,
+        # `ErratumFor:38182577`) was indistinguishable from PMID 38182577 itself — in a
+        # function whose docstring promises to preserve the direction of the link. Two of the
+        # three editorial notices in this corpus are errata, and neither retraction nor
+        # concern arm above could ever have caught it.
+        erratum_notice = {"corrections": "ErratumFor:38182577"}
+        affected_by_erratum = {"corrections": "ErratumIn:38355659"}
+        self.assertEqual(bq._integrity(erratum_notice), "erratum_notice")
+        self.assertEqual(bq._integrity(affected_by_erratum), "corrected")
+        self.assertNotEqual(bq._integrity(erratum_notice),
+                            bq._integrity(affected_by_erratum),
+                            "the notice and the paper it annotates are different objects")
+        # Eligibility is unchanged in both directions: an erratum is not an integrity event,
+        # so this repair renames nothing that gates anything.
+        self.assertEqual(bq._eligibility(bq._integrity(erratum_notice)), "")
+        self.assertEqual(bq._eligibility(bq._integrity(affected_by_erratum)), "")
+        # Every value the classifier can return is printable, or the queue renders a row
+        # whose integrity is known to the code and invisible to the reader.
+        for state in ("retracted", "concern", "retraction_notice", "concern_notice",
+                      "erratum_notice", "corrected"):
+            self.assertIn(state, bq.INTEGRITY_PREFIX)
+            self.assertIn(state, bq.INTEGRITY_ACTION)
+
+    def test_the_live_corpus_separates_the_three_editorial_notices_it_holds(self) -> None:
+        """Not a fixture: the three notices in the 2026-08-06 seed, classified from their own
+        `corrections` column, each distinct from the paper it annotates."""
+        seeds, _ = bq.load_seeds(REGISTRIES)
+        by_pmid = {item.get("pmid"): item for item in seeds}
+        pairs = (("38355659", "38182577", "erratum_notice", "corrected"),
+                 ("30470736", "29724996", "erratum_notice", "corrected"),
+                 ("28373548", "16223882", "concern_notice", "concern"))
+        for notice, affected, notice_state, affected_state in pairs:
+            with self.subTest(notice=notice):
+                self.assertIn(notice, by_pmid)
+                self.assertIn(affected, by_pmid)
+                self.assertEqual(bq._integrity(by_pmid[notice]), notice_state)
+                self.assertEqual(bq._integrity(by_pmid[affected]), affected_state)
+                # The notice never inherits the hold of what it documents.
+                self.assertEqual(bq._eligibility(bq._integrity(by_pmid[notice])), "")
+
     def test_the_rendered_table_shows_the_integrity_flag(self) -> None:
         report = {
             "disease": "wwox", "seed_files": ["s.tsv"], "seed_occurrences": 1,
