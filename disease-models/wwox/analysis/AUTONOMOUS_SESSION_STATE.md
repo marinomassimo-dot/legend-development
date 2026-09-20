@@ -1,0 +1,67 @@
+# Autonomous session — continuation state
+
+**Updated:** 2026-09-21 · **Purpose:** recovery point. If this session is interrupted, a cold reader
+resumes from here. **Not a handoff and not a stop.**
+
+## Current state
+- `main` == `origin/main` · working tree clean · one worktree · LINT **PASS** · publication gate
+  **PASS, 0 blocks** · receipts **170 chained, tail anchored**.
+- Papers with a receipt: **109** (was 97 at the start of the Chang batch).
+
+## Completed programme so far
+1. **`SCIENTIST_CHANG_NS_…` waves 1–5** — closed, formally saturated.
+2. **Fallback queue P1–P5** — closed.
+3. **Open-ended continuation** (current) — dynamic queue, regenerated at each boundary.
+
+## Standing commit candidates — `PARKED_PENDING_OPERATOR`, do not re-litigate
+| Candidate | Class | One line |
+|---|---|---|
+| `CC-20260920-CLAIM032-ENDPOINT-QUALIFIER-01` | MINOR | `CLAIM 032`'s cognition leg is *nobody looked*; headline quote is a tumour sentence |
+| `CC-20260920-DETECTION-FLOOR-01` | MINOR | `CLAIM 030` says *proteina assente* where `CLAIM 019` says *non rilevata*; proposes `D-17` |
+| `CC-20260920-CLAIM039-CEREBELLAR-01` | ORDINARY | *not cerebellar* rests on one hedged sentence; a P1 contradiction was read and never landed |
+| `CC-20260920-PAPER34140629-PROMOTION-01` | MINOR | `CORPUS-STUB-150` → `PAPER 096` |
+
+**None is a session blocker.** Revisit only if new evidence materially changes one.
+
+## Live findings a cold reader must not re-derive
+- **Six abstract-versus-results inversions** across six papers: `32764489` (brain engagement),
+  `29067327` (Zfra pY33), `25650666` (null rendered temporal), `31543760` (p=0.0626 conjoined),
+  `42092735` (neurotransmitter studies "normal" when never obtained), `25649963` (breast-cancer
+  similarity unsupported). **In this literature the abstract does not index the results.**
+- **Normal by blunt instrument, abnormal by sharp one** — four instances. Proposed as `D-17`.
+- **The heterozygote phenotype is inside the control groups**, not missing from the literature.
+- **Two "read but never landed" locators** (`CLAIM 016` lithium, `CLAIM 039` cerebellar) plus three
+  more found in the narrow audit (spontaneous het tumours ×2, het bone deficit).
+- **Zfra / all WWOX peptides: DISMISSED for WOREE.** No brain engagement; never dosed in a
+  WWOX-deficient animal by anyone.
+- **Lithium: DOWN.** One record in all of PubMed; no GSK3β inhibitor ever used in any WWOX context.
+- **SDR missense readout: NO.** Nine of nine candidates fail on "would the protein even be there?"
+- **`DL-MECH-021` lowered** medio → basso; domain-sufficiency arc demoted to author assertion; the
+  seizure bridge withdrawn as a category transfer. **The platform survives.**
+
+## Method rules earned here — apply, do not rediscover
+- **Never grep `paper_registry_current.md` or `literature_tracking_log_current.md`** — use
+  `registry_records.py`.
+- **The MCP extractor elides gene lists into empty commas.** An abstract read through it is not a
+  reliable index of a paper's content. *(This bit us on `PMID 41153369`, against our own registry.)*
+- **No figure panel is inspectable in this environment.** No JATS, no PDF tooling, egress denied to
+  NCBI/EBI/publishers. Per `D-14`, no figure-asserted negative may be adjudicated here.
+- **A paper can be in PMC and outside the OA subset** — that is a permanent licence wall. Check
+  `get_copyright_status` before re-queuing.
+- **The broad `landing`-field audit is a definitional artefact** (74/81) and expands into the
+  fenced-off mass reconciliation. Run that screen only against a specific claim under question.
+
+## Next queue, ranked (as of this write)
+1. **FT-090** / `PMID 25416187` (PMC4935222) — the single citation carrying `27551470`'s only link
+   to the reference genotype. Same "one sentence holds a claim" shape as `CLAIM 039`.
+2. **FT-018** / `PMID 28123895` (PMC5214935) — C1q regulates WWOX **activation state**, not level.
+   C1q is central to microglial synaptic pruning **and is druggable**. Highest therapeutic upside
+   left in the accessible queue.
+3. **FT-098 / FT-099** — the other two independent `TRAPPC6A` cohorts.
+4. **FT-092** / `PMID 25238782` — CFS fragility; cross-cutting citation-fidelity finding.
+5. **FT-074** — four mTOR/autophagy stubs two reasoning files already lean on.
+
+## Permanently evidence-blocked — do not retry automated routes
+`15126504` (`FT-024`, no PMCID) · `27569545` (`FT-105`, **licence wall**, verified) · `15026124`
+(no PMC) · `33914858` (no PMCID) · `24369382` (empty PMC body) · `17803050` (no DOI/PMCID).
+Packaged for a human in `acquisition_packet_20260920.md`.
