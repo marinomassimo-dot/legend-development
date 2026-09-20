@@ -183,8 +183,27 @@ strutturale"*. This case series is five patients from two consanguineous familie
 for the **same canonical splice-acceptor variant `NM_016373.3:c.606-1G>A`**, and its abstract states
 a neuroimaging pattern *"in which the **cerebellum is spared**"*, alongside periventricular white
 matter volume loss and corpus callosum atrophy, with selective mediodorsal thalamic degeneration in
-one patient. **Two species, two modalities, the same negative about the cerebellum.** Nothing in
-this repository has that convergence yet, because this paper has never been read.
+one patient. Nothing in this repository has read that statement, because this paper has never been
+read.
+
+🔴 **CORRECTION, same day, before this entry could propagate.** An earlier draft of this item said
+*"two species, two modalities, the same negative about the cerebellum."* **That is withdrawn.**
+Later the same session, `PMID 35573960` (Riva *et al.*, *Front Pediatr* 2022, read in full,
+receipt `FTR-20260921-35573960-01`) reported, **in prose and therefore adjudicable**, that its
+biallelic-null WOREE patient had **a small inferior vermis at 7 days**, *"inferior cerebellar vermis
+hypoplasia"* at 2 years 4 months, and *"mild signal alterations … at the level of the pons and
+dentate nuclei"* — and, at literature level, that *"corpus callosum hypoplasia, progressive cerebral
+atrophy, **cerebellar vermis hypoplasia**, and white matter hyperintensity … **have been described
+in most cases**."*
+
+**So "the cerebellum is spared in WWOX-DEE" is not supportable as a general statement, and must not
+be carried as one.** What remains worth acquiring is narrower and still real: **midline vermian
+hypoplasia on MRI and an unremarkable cerebellar cortex on histology are different propositions**,
+and `CLAIM 039`'s open question — 95 % penetrant ataxia with no structural correlate in the rat — is
+not answered by either. This paper is worth obtaining to find out **which** proposition its authors
+were making: a volumetric statement about the vermis, a signal statement about the parenchyma, or a
+comparative one about relative sparing versus the supratentorial damage. **The queue entry and this
+item both now carry the counter-evidence alongside the claim.**
 
 ⚠️ **And read the mood of that sentence before importing it.** The authors write *"We **suggest**
 that neuroimaging in these patients reveals a characteristic pattern … that **could** help with
@@ -287,10 +306,11 @@ mechanistic one:)*
   neuronal, non-cancer, loss-of-function-shaped, independently authored test of a WWOX-directed
   therapeutic in the whole corpus, and its title reports that **inhibiting** WWOX is what protects
   neurons.
-- **A8** (`26345274`) — **the highest-value single item added since this packet was written**, and
-  it travels with `A7`: same authors, same institution, one request. It is the only route to a
-  **human** counterpart for `CLAIM 039`'s cerebellar-sparing, and it carries five patients
-  homozygous for a canonical splice-acceptor allele.
+- **A8** (`26345274`) — travels with `A7`: same authors, same institution, one request. Its
+  cerebellar claim is now **contested** by `PMID 35573960` (see the correction in the entry), which
+  makes reading it more useful rather than less: it carries **five patients homozygous for a
+  canonical splice-acceptor allele** with a full natural history, and it is the only way to learn
+  what its authors actually meant by "spared".
 - **A7** (`25416187`) — **cheapest item in the packet.** Its genre question is already settled; only
   its three-page reference list is needed, and it is the sole route to the primary behind a
   phenotype statement this repository currently cannot source.

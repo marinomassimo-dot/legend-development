@@ -613,7 +613,26 @@ anatomica: l'atassia *"non ha spiegazione strutturale"*. L'abstract di questo ca
 **nell'uomo**, *"a characteristic pattern of neurodegeneration in which the **cerebellum is
 spared**"*, accanto a perdita di volume della sostanza bianca periventricolare e atrofia del corpo
 calloso, con degenerazione selettiva del **nucleo mediodorsale del talamo** in un paziente. **Due
-specie, due modalità, lo stesso negativo sul cervelletto.**
+specie, due modalità, un enunciato sul cervelletto che il repository non ha mai letto.**
+
+🔴 **RETTIFICA, stesso giorno, prima che questa voce potesse propagarsi.** Una prima stesura diceva
+«**lo stesso negativo sul cervelletto**». **È ritirata.** Più tardi nella stessa sessione,
+`PMID 35573960` (Riva *et al.*, *Front Pediatr* 2022, **letto integralmente**, ricevuta
+`FTR-20260921-35573960-01`) riporta, **in prosa e quindi aggiudicabile**, che il suo paziente WOREE
+biallelico-null aveva **un verme inferiore piccolo già a 7 giorni**, *"inferior cerebellar vermis
+hypoplasia"* a 2 anni e 4 mesi, e *"mild signal alterations … at the level of the pons and dentate
+nuclei"*; e, a livello di letteratura, che *"corpus callosum hypoplasia, progressive cerebral
+atrophy, **cerebellar vermis hypoplasia**, and white matter hyperintensity … **have been described
+in most cases**."*
+
+**Quindi «il cervelletto è risparmiato nella WWOX-DEE» non è sostenibile come enunciato generale e
+non va portato come tale.** ⚠️ **Ma i due enunciati non sono lo stesso enunciato e non vanno messi a
+punteggio l'uno contro l'altro:** un'**ipoplasia vermiana mediana alla RM** in un lattante umano è
+un'affermazione di volume sulla linea mediana; `CLAIM 039` afferma che nel ratto `lde/lde` il
+**cervelletto non mostra alterazioni patologiche marcate all'istologia** mentre l'atassia è
+penetrante al 95%. Un verme ipoplasico e una corteccia cerebellare indenne al microscopio ottico
+**possono essere entrambi veri**. La domanda aperta di `CLAIM 039` resta aperta, e `26345274` va
+acquisito proprio per sapere **quale** delle due affermazioni i suoi autori stessero facendo.
 
 ⚠️ **E il modo della frase va letto prima di importarla.** Gli autori scrivono *"**We suggest** that
 neuroimaging in these patients reveals a characteristic pattern … that **could** help with early
