@@ -38,6 +38,13 @@ WHAT IT GUARANTEES, AND WHAT IT REFUSES TO GUARANTEE
   objects and the 2026-09-09 sweep produced the error of confusing them (A13).
 - Every hit carries **source path, record id, record digest and source-file digest**, so a later
   reader can tell whether the registry has moved underneath a quoted record.
+- 🔴 **The preamble of every consulted surface travels with the answer**, once per surface. The
+  bytes before a file's first `##` belong to no record, so selective retrieval dropped them while
+  returning every record whole — and that is where each registry states that it is the
+  de-identified public edition, that it is **not medical advice**, and (in the discovery ledger)
+  what `DATO / INFERENZA / IPOTESI / ESPANSIONE` mean and that leads are re-statused, never
+  deleted. A reader who filters on `Type` needs the file that defines `Type`. This is the defect
+  named below one level up: a caveat alive in the file header and dead in every record.
 - Every answer carries the **commit the registries were read at**, and whether any of them was
   uncommitted in the working tree at that moment (`BOUND` / `DIRTY` / `UNBOUND`, the three states
   `derived_inputs.py` already names). A digest says the bytes have moved; only the commit says
@@ -211,6 +218,7 @@ class Selection:
     notes: list[str] = field(default_factory=list)
     residue: int = 0
     file_digests: dict[str, str] = field(default_factory=dict)
+    preambles: dict[str, str] = field(default_factory=dict)
     repository: dict[str, Any] = field(default_factory=dict)
     field_report: list[dict[str, Any]] = field(default_factory=list)
 
@@ -245,6 +253,37 @@ def identity_key(value: str) -> str:
 
 def file_digest(path: Path) -> str:
     return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def surface_preamble(path: Path) -> str:
+    """The bytes before the first `##` — verbatim, never summarised, never reflowed.
+
+    🔴 THESE BYTES BELONG TO NO RECORD, WHICH IS WHY THEY WERE LOST. `parse_records` splits on
+    `##` and every byte after the first heading lands in exactly one block; the header does not,
+    so a command that returns records whole still returned nothing of it. Measured across the
+    seven surfaces: 25 to 1,737 characters each, carrying the public-edition and de-identification
+    notice, "Not medical advice", and the discovery ledger's epistemic vocabulary.
+
+    Returned as read. The same rule as a record: the caller decides what to do with it, and this
+    function does not decide that a caveat is short enough to paraphrase.
+    """
+    if not path.is_file():
+        return ""
+    text = path.read_text(encoding="utf-8")
+    head = RECORD_HEAD.search(text)
+    return text[:head.start()].strip() if head else text.strip()
+
+
+def note_surface(found: "Selection", path: Path, stem: str) -> None:
+    """One place where a surface becomes *consulted*: its digest and its preamble together.
+
+    Two call sites set this — the initial `stems` loop and the hop loop, which may reach a file
+    `--source` never named. They were one line each and stayed in step by luck; a surface whose
+    digest was recorded without its preamble would be a file quoted without its own caveat.
+    """
+    if path.is_file():
+        found.file_digests[stem] = file_digest(path)
+        found.preambles[stem] = surface_preamble(path)
 
 
 def repository_state(root: Path, paths: Iterable[Path]) -> dict[str, Any]:
@@ -368,9 +407,7 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
     corpus = load_all(root, disease, stems)
     found = Selection()
     for stem in stems:
-        path = root / f"disease-models/{disease}/{SOURCES[stem]}"
-        if path.is_file():
-            found.file_digests[stem] = file_digest(path)
+        note_surface(found, root / f"disease-models/{disease}/{SOURCES[stem]}", stem)
 
     searched = dict(corpus)     # before `--hops` widens `corpus`; see the field report below
     needle_id = record_id.strip().lower()
@@ -388,8 +425,11 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
             elif theme and theme.lower() in record.text.lower():
                 why = "theme"
             elif constraints and not any((needle_id, pmid, doi, theme)):
-                # With no other selector, the constraints ARE the selection.
-                why = "field" if matches_constraints(record, constraints) else ""
+                # With no other selector, the constraints ARE the selection. The candidate is
+                # named here and the filter below decides it, for this branch exactly as for
+                # every other — evaluating `matches_constraints` in both places was one call per
+                # record spent to reach the same answer twice.
+                why = "field"
             if why and constraints and why != "record id" and not matches_constraints(
                     record, constraints):
                 # With another selector, they filter it. `--id` is exempt: a record asked for
@@ -483,9 +523,8 @@ def select(root: Path, disease: str, *, pmid: str = "", doi: str = "", record_id
                     continue
                 if stem not in corpus:
                     corpus[stem] = parse_records(root, disease, stem)
-                    path = root / f"disease-models/{disease}/{SOURCES[stem]}"
-                    if path.is_file():
-                        found.file_digests[stem] = file_digest(path)
+                    note_surface(
+                        found, root / f"disease-models/{disease}/{SOURCES[stem]}", stem)
                 target = anchor.strip()
                 matches = [item for item in corpus[stem]
                            if item.record_id.lower() == target.lower()]
@@ -561,8 +600,21 @@ def repository_line(block: dict[str, Any]) -> str:
     return f"  read at commit {commit}, working tree clean for the files consulted"
 
 
+def preamble_lines(preambles: dict[str, str]) -> list[str]:
+    """Once per consulted surface, BEFORE the records — a reading frame read after the thing it
+    frames is a reading frame that arrived too late."""
+    lines: list[str] = []
+    for stem, text in sorted(preambles.items()):
+        if not text:
+            continue
+        lines.append(f"\n  SURFACE PREAMBLE — {stem} (verbatim; belongs to no record):")
+        lines.extend(f"    {row}" if row else "" for row in text.splitlines())
+    return lines
+
+
 def render(found: Selection, *, query: str, full: bool = True) -> str:
     lines = [f"REGISTRY RECORDS — {query}"]
+    lines.extend(preamble_lines(found.preambles))
     if not found.hits:
         lines.append("  NO RECORD MATCHED.")
         lines.append("  🔴 This is not evidence that the laboratory does not know this paper: it "
@@ -701,6 +753,7 @@ def main(argv: list[str] | None = None) -> int:
             "matched_but_not_returned": found.notes,
             "residue_not_returned": found.residue,
             "source_digests": found.file_digests,
+            "surface_preambles": found.preambles,
             "field_filters": found.field_report,
             "repository": found.repository,
             "empty_result_is_not_a_scientific_statement": not found.hits,

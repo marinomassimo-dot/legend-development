@@ -743,5 +743,72 @@ class AFieldFilterReportsItsDenominator(unittest.TestCase):
                          "only the first '=' separates; a value may contain one")
 
 
+class TheSurfacePreambleTravelsWithTheAnswer(unittest.TestCase):
+    """🔴 The bytes before the first `##` belong to no record, so selective retrieval dropped them.
+
+    Measured on 2026-09-20: `parse_records` covers every byte of all seven surfaces contiguously
+    EXCEPT 25 to 1,737 characters of header per file — and that header is where each registry
+    says it is the de-identified public edition, that it is not medical advice, and (in the
+    discovery ledger) what `DATO / INFERENZA / IPOTESI / ESPANSIONE` mean. A command that returns
+    records whole and drops the file that defines their vocabulary loses the caveat one level
+    above the one `CaseD` pins.
+    """
+
+    @staticmethod
+    def _header_by_scan(stem: str) -> str:
+        """Independent of the subject: re-read the file and cut at the first `##` by hand."""
+        text = (ROOT / f"disease-models/wwox/{rr.SOURCES[stem]}").read_text(encoding="utf-8")
+        return text.split("\n## ", 1)[0].strip()
+
+    def test_the_preamble_is_carried_verbatim_for_a_consulted_surface(self) -> None:
+        found = rr.select(ROOT, "wwox", record_id=CAVEAT_CLAIM, hops=0,
+                          sources=["claim_registry_current"])
+        self.assertEqual(self._header_by_scan("claim_registry_current"),
+                         found.preambles["claim_registry_current"])
+        self.assertIn("Not medical advice", found.preambles["claim_registry_current"])
+
+    def test_it_is_emitted_once_per_surface_in_the_rendered_answer(self) -> None:
+        found = rr.select(ROOT, "wwox", record_id=CAVEAT_CLAIM, hops=0,
+                          sources=["claim_registry_current"])
+        rendered = rr.render(found, query="test")
+        self.assertEqual(1, rendered.count("SURFACE PREAMBLE — claim_registry_current"),
+                         "once per surface: a caveat repeated per hit is a caveat skimmed past")
+        self.assertIn("Not medical advice", rendered)
+
+    def test_the_epistemic_vocabulary_reaches_a_reader_of_the_discovery_ledger(self) -> None:
+        """The concrete loss: `--field Type=...` filters on a vocabulary defined only in a header."""
+        found = rr.select(ROOT, "wwox", theme="wwox", hops=0,
+                          sources=["discovery_ledger_current"], limit=1)
+        preamble = found.preambles["discovery_ledger_current"]
+        for token in ("DATO", "INFERENZA", "IPOTESI", "ESPANSIONE"):
+            self.assertIn(token, preamble)
+        self.assertIn("Append-only", preamble)
+
+    def test_a_surface_reached_only_by_a_hop_brings_its_preamble_too(self) -> None:
+        """The two call sites must stay in step: a digest without a preamble is a file quoted
+        without its own caveat."""
+        found = rr.select(ROOT, "wwox", record_id=CAVEAT_CLAIM, hops=2,
+                          sources=["claim_registry_current"])
+        self.assertGreater(len(found.file_digests), 1, "the hop must have widened the surfaces")
+        self.assertEqual(sorted(found.file_digests), sorted(found.preambles),
+                         "every consulted surface carries a preamble entry")
+
+    def test_the_json_envelope_carries_it_too(self) -> None:
+        result = subprocess.run(
+            [sys.executable, str(HERE / "registry_records.py"), "get", "--id", CAVEAT_CLAIM,
+             "--hops", "0", "--source", "claim_registry_current", "--json", "--root", str(ROOT)],
+            capture_output=True, text=True)
+        self.assertEqual(0, result.returncode, result.stderr)
+        payload = json.loads(result.stdout)
+        self.assertIn("Not medical advice",
+                      payload["surface_preambles"]["claim_registry_current"])
+
+    def test_an_empty_result_still_states_the_frame_it_searched_under(self) -> None:
+        found = rr.select(ROOT, "wwox", pmid="00000000", hops=0,
+                          sources=["claim_registry_current"])
+        self.assertEqual([], found.hits)
+        self.assertIn("Not medical advice", rr.render(found, query="test"))
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)
