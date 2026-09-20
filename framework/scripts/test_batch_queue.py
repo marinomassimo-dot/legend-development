@@ -517,24 +517,59 @@ class QueueIntegrityTests(unittest.TestCase):
         self.assertIn("| full text | PAPER ", rendered)
         self.assertIn("| abstract only | PAPER ", rendered)
 
-    @staticmethod
-    def _papers_claiming_full_text(registry_text: str) -> int:
-        """Count PAPER records carrying at least one full-text marker — not marker occurrences.
+    # 🔴 EVERY HEADING IS A BOUNDARY; ONLY SOME BLOCKS ARE COUNTABLE RECORDS. The two jobs are
+    # separated because conflating them is how the previous cut mis-measured: using only `paper N`
+    # as a boundary let a PAPER block run to the NEXT PAPER, swallowing whatever records sat
+    # between them. It happens not to change today's figure (59 either way), and a latent
+    # over-count in a denominator makes the guard weaker, silently, on the day it does.
+    # The boundary rule is the one `registry_records.py` already carries and that the independent
+    # verification of 2026-09-11 corrected there; the countable shapes are that file's vocabulary
+    # for this registry, restated here rather than imported so the suite keeps no dependency on
+    # the tool it is not testing.
+    _ANY_HEADING = re.compile(r"^#{1,4}[ \t]+\S.*$", re.M)
+    _COUNTABLE_RECORD = re.compile(r"^(?:paper\s+\d+|corpus\s+p\d+)\b")
 
-        The unit matters and was wrong until 2026-09-09. `report["counts"]["full text"]` is a
-        count of STUDIES; a substring tally over the registry is a count of STRINGS, and a single
-        PAPER record routinely carries two markers (one carried six). Comparing the two let the
-        registry side read 89 where only 59 papers actually claimed full text, so the guard passed
-        while the queue overstated coverage by 21 studies — green on exactly the condition it
-        exists to refuse.
+    @classmethod
+    def _papers_claiming_full_text(cls, registry_text: str) -> int:
+        """Count REGISTRY RECORDS carrying at least one full-text marker — not marker occurrences.
+
+        The unit matters and was wrong twice, in the same direction both times: the denominator
+        described a narrower population than the numerator.
+
+        2026-09-09 — markers are not papers. `report["counts"]["full text"]` is a count of
+        STUDIES; a substring tally over the registry is a count of STRINGS, and a single record
+        routinely carries two markers (one carried six). That let the registry side read 89 where
+        only 59 records actually claimed full text, so the guard passed while the queue overstated
+        coverage by 21 studies — green on exactly the condition it exists to refuse.
+
+        2026-09-20 — records are not only PAPER records. `registry_index` resolves read depth from
+        EVERY record in this file, `CORPUS P###` included: three CORPUS records declare a
+        `complete_fulltext_read` today and are counted as read by the numerator. The denominator
+        counted `paper N` alone, so those three reads could never appear on the registry side of
+        the comparison. `CORPUS P261` states the reason they are not simply renamed — *"corpus
+        placeholder, deliberately not promoted to a PAPER record"*: the classification is a
+        scientific decision, so the measurement is what moves to meet it, never the other way.
+
+        🔴 THIS DOES NOT RELAX THE GUARD. The invariant is unchanged — counted-as-read may never
+        exceed what the registry itself claims — and each record still contributes at most once.
+        What changed is that both sides now enumerate the same population. `CORPUS-STUB-###` stays
+        out: a stub is a placeholder by construction, and none of the 168 in this file declares a
+        full-text marker, so including them would only widen the denominator with records that can
+        never claim a read.
         """
-        heads = [m.start() for m in re.finditer(r"^#{1,4}\s*paper\s+\d+", registry_text, re.M)]
+        heads = [match.start() for match in cls._ANY_HEADING.finditer(registry_text)]
         if not heads:
             return 0
-        bounds = list(zip(heads, heads[1:] + [len(registry_text)]))
-        return sum(
-            1 for start, end in bounds
-            if any(marker in registry_text[start:end] for marker in bq.FULL_TEXT_MARKERS))
+        bounds = zip(heads, heads[1:] + [len(registry_text)])
+        counted = 0
+        for start, end in bounds:
+            block = registry_text[start:end]
+            record_id = block.split("\n", 1)[0].lstrip("#").strip()
+            if not cls._COUNTABLE_RECORD.match(record_id):
+                continue
+            if any(marker in block for marker in bq.FULL_TEXT_MARKERS):
+                counted += 1
+        return counted
 
     def test_coverage_is_not_overstated_against_the_registry(self) -> None:
         """Records counted as read may never exceed the registry's own full-text claims."""
@@ -544,7 +579,8 @@ class QueueIntegrityTests(unittest.TestCase):
         self.assertLessEqual(
             report["counts"].get("full text", 0), claimed,
             f"{report['counts'].get('full text', 0)} studies counted as read against {claimed} "
-            f"PAPER records claiming full text. Only a BATCH_COMMIT closes this.")
+            f"registry records (PAPER or CORPUS) claiming full text. The gap is reading that "
+            f"has happened and is not yet in the registry; only a BATCH_COMMIT closes it.")
 
     def test_a_paper_with_two_markers_counts_once(self) -> None:
         """The regression for the unit error itself: markers are not papers."""
@@ -554,6 +590,49 @@ class QueueIntegrityTests(unittest.TestCase):
         self.assertEqual(self._papers_claiming_full_text(two), 1)
         self.assertEqual(
             self._papers_claiming_full_text(two + "#### paper 003\nfull text reviewed\n"), 2)
+
+    def test_a_read_corpus_record_is_counted_once(self) -> None:
+        """The 2026-09-20 arm: the numerator counts a read CORPUS record, so the denominator must.
+
+        Two markers in one CORPUS record are still one record, for the same reason two markers in
+        one PAPER record are.
+        """
+        one = "## CORPUS P308\nstatus: read\ndepth: full text reviewed\n"
+        self.assertEqual(self._papers_claiming_full_text(one.lower()), 1)
+        both = one + "## CORPUS P309\ndepth: full text reviewed — complete_fulltext_read\n"
+        self.assertEqual(self._papers_claiming_full_text(both.lower()), 2)
+
+    def test_paper_and_corpus_stay_distinct_records(self) -> None:
+        """Adjacent records of different kinds are two records, and neither absorbs the other.
+
+        The boundary arm: with `paper N` as the only boundary, the PAPER block ran to the next
+        PAPER and swallowed the CORPUS record between them — so an unread PAPER inherited a
+        CORPUS record's marker and the denominator grew by a record that claims nothing.
+        """
+        text = ("## paper 001\nstatus: abstract only\n"
+                "## corpus p222\ndepth: full text reviewed\n"
+                "## corpus p223\ndepth: complete_fulltext_read\n"
+                "## paper 002\ndepth: full text reviewed\n")
+        # Two CORPUS and one PAPER declare a read; `paper 001` declares none and must not inherit
+        # the markers of the two records that follow it. The count is what separates the two
+        # rules: under `paper N`-only boundaries this reads 2 — one for the span `paper 001`
+        # absorbed, one for `paper 002` — so the arm fails against the helper it replaces.
+        self.assertEqual(self._papers_claiming_full_text(text), 3)
+
+    def test_the_denominator_is_not_inflated_by_prose_or_placeholders(self) -> None:
+        """Anti-inflation. A denominator that grows for free is a guard that stops refusing.
+
+        Three shapes that must never count: the file's own title (`# Paper Registry Current`
+        lower-cases to a heading beginning `paper `, which a naive `paper|corpus` alternation
+        matches), a prose section, and `CORPUS-STUB-###` — a placeholder, never a read.
+        """
+        noise = ("# paper registry current\n\n> public edition — full text reviewed\n"
+                 "## corpus overview\nfull text reviewed\n"
+                 "## CORPUS-STUB-004\ndepth: full text reviewed\n".lower())
+        self.assertEqual(self._papers_claiming_full_text(noise), 0)
+        # And the guard still counts the real thing when it is there, so this is not vacuous.
+        self.assertEqual(
+            self._papers_claiming_full_text(noise + "## paper 007\nfull text reviewed\n"), 1)
 
     def test_committed_queue_is_current(self) -> None:
         self.assertTrue(QUEUE.is_file(), f"missing generated queue: {QUEUE}")
