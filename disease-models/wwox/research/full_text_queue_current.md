@@ -4322,3 +4322,100 @@ challenge (21.400 e 21.397 byte). Il 404 dell'endpoint OA REST è coerente e non
 fallimento era 500/429 e non un rifiuto; se il PDF arriva, **PyMuPDF — disponibile in questo
 deployment solo dal 2026-09-09** — estrae le due figure alla risoluzione depositata e il receipt sale
 a `complete`. Solo se anche quello fallisce serve un browser umano sulla pagina PMC.
+
+---
+
+## FT-097 — PMID 41390778 · il segnale indipendente più forte sul nodo TRAPPC6A, e la trappola di omonimia
+
+**Paper:** PMID 41390778 — Fu, Chang TS 2025, *Sci Rep* 16(1):2517 · PMCID `PMC12820071` · DOI 10.1038/s41598-025-32329-8
+**Surface:** non acquisito — solo metadata PubMed
+**Priority:** **ALTA**
+**Why:** è la sola evidenza **indipendente e su larga scala** che tocca un nodo della catena
+Chang/NCKU: *TRAPPC6A* compare fra otto SNP a rischio condiviso fra **epilessia a esordio tardivo e
+Alzheimer**, su 416.212 record UCLA validati in All of Us (52.493). Rilevante due volte: corrobora
+il *gene* dall'esterno del laboratorio che lo propone, e porta un segnale **epilessia**, che è
+l'asse della malattia. 🔴 **Trappola di disambiguazione registrata:** l'autore senior è
+**Chang, Timothy S. (UCLA)** — nessuna relazione con **Chang, Nan-Shan (NCKU)**. Uno screen di
+indipendenza basato sul cognome avrebbe classificato questa evidenza come interna al laboratorio
+che essa corrobora dall'esterno.
+**Next action:** acquisire da PMC (`PMC12820071`); stabilire se il segnale TRAPPC6A è guidato
+dall'isoforma Δ o dal gene, e se l'associazione con l'epilessia sopravvive all'aggiustamento APOE.
+
+---
+
+## FT-098 — PMID 33134515 · TRAPPC6A in un transcriptional risk score AD, coorti indipendenti
+
+**Paper:** PMID 33134515 — Park 2020, *Neurol Genet* 6(6):e517 · PMCID `PMC7577551` · DOI 10.1212/NXG.0000000000000517
+**Surface:** non acquisito — solo metadata PubMed
+**Priority:** MEDIA
+**Why:** seconda fonte indipendente sul gene *TRAPPC6A* (ADNI + AddNeuroMed), associata a diagnosi
+AD, volume ippocampale e spessore entorinale. **Limite dichiarato dalla rivista stessa: Class III**
+(disegno caso-controllo, rischio di spectrum bias). Serve a stabilire se il nodo TRAPPC6A regge
+fuori dal laboratorio Chang, non a sostenere la cascata.
+**Next action:** acquisire; verificare se TRAPPC6A è misurato come gene o come isoforma.
+
+---
+
+## FT-099 — PMID 21766012 · l'aplotipo TRAPPC6A nelle Lothian Birth Cohorts
+
+**Paper:** PMID 21766012 — Hamilton 2011, *Int J Alzheimers Dis* 2011:505984 · PMCID `PMC3132531` · DOI 10.4061/2011/505984
+**Surface:** non acquisito — solo metadata PubMed
+**Priority:** MEDIA
+**Why:** terza fonte indipendente sul gene, e la più vecchia: un aplotipo *TRAPPC6A* associato al
+ragionamento non verbale in **entrambe** le coorti Lothian (n=505 e n=998) e nel dato combinato.
+🔴 **Il limite va portato con il dato:** le analisi a singolo SNP **non** sopravvivono alla
+correzione per test multipli, e l'aplotipo spiega **1,8%** della varianza. Gli autori la
+classificano come da approfondire.
+**Next action:** acquisire; stabilire se l'aplotipo copre la regione dell'isoforma Δ.
+
+---
+
+## FT-100 — PMID 32020597 · TIAF1 come variante *protettiva*, direzione opposta al modello Chang
+
+**Paper:** PMID 32020597 — Curtis 2020, *Ann Hum Genet* 84(3):291–302 · DOI 10.1111/ahg.12375
+**Surface:** non acquisito — solo metadata PubMed; **nessun PMCID** → acquisizione non garantita
+**Priority:** **ALTA**
+**Why:** è l'unica evidenza genetica umana indipendente su TIAF1 e **punta nella direzione
+opposta** al modello: su >10.000 esomi dell'Alzheimer's Disease Sequencing Project, *"variants in
+TIAF1 and/or NDRG2 might have a **protective** effect"*. Nel modello Chang l'aggregazione di TIAF1
+è patogena. Gli autori la danno come suggestiva, non stabilita, e riguarda varianti codificanti e
+non aggregazione — quindi **flag, non confutazione**. Nessuno ha riconciliato le due.
+**Next action:** acquisire se possibile; misurare la forza reale del segnale TIAF1 dentro
+un'analisi che ne riporta molti.
+
+---
+
+## FT-101 — PMID 9918798 · il paper di clonaggio di TIAF1, origine del nodo
+
+**Paper:** PMID 9918798 — Chang NS 1998, *Biochem Biophys Res Commun* 253(3):743–9 · DOI 10.1006/bbrc.1998.9846
+**Surface:** non acquisito — solo metadata PubMed; **nessun PMCID**
+**Priority:** BASSA
+**Why:** stabilisce la provenienza del nodo: TIAF1 è stato **clonato dal laboratorio Chang** nel
+1998, come fattore antiapoptotico indotto da TGF-β1 che inibisce la citotossicità del TNF. Serve
+alla mappa di indipendenza, non alla cascata: il ruolo aggregante è successivo e di un altro
+decennio. Da leggere solo se la cascata dovesse tornare a pesare su TIAF1.
+**Next action:** nessuna finché TIAF1 non torna portante.
+
+---
+
+## FT-102 — PMID 25650666 · il paper fondativo di TRAPPC6AΔ, primo nodo della catena Chang
+
+**Paper:** PMID 25650666 — Chang JY, Chang NS 2015, *Oncotarget* 6(6):3578–89 · PMCID `PMC4414138` · DOI 10.18632/oncotarget.2876
+**Surface:** non acquisito — solo abstract PubMed. **PMC open access → ottenibile in questo ambiente.**
+**Priority:** **ALTA — la più alta del wave 2**
+**Why:** è l'origine del **primo nodo mecccanicistico** dell'intera catena neuro-proteostatica
+Chang/NCKU. L'abstract dichiara *"We **isolated** an N-terminal internal deletion isoform, TPC6AΔ,
+derived from alternative splicing of the TRAPPC6A gene transcript"* — cioè l'isoforma è stata
+**scoperta da questo laboratorio**, e nessun gruppo esterno l'ha mai riportata. Tutto ciò che sta a
+valle nella catena (fosforilazione Ser35, polimerizzazione, reclutamento di TIAF1, attivazione delle
+caspasi, generazione di Aβ) è una proprietà **dell'isoforma, non del gene** — mentre le tre coorti
+indipendenti che corroborano *TRAPPC6A* ([[full_text_queue_current#FT-097]],
+[[full_text_queue_current#FT-098]], [[full_text_queue_current#FT-099]]) misurano **il gene**.
+🔴 Sede editoriale da pesare nella lettura: *Oncotarget*, 2015.
+**Domande da porre al testo, scritte per una sessione fredda:** (1) come è stata stabilita
+l'esistenza dell'isoforma — RT-PCR, sequenziamento, anticorpo, o predizione di splicing? (2) gli
+anticorpi anti-TPC6AΔ sono stati validati su un controllo negativo genetico? (3) il *filter
+retardation assay* sugli ippocampi umani post-mortem ha un braccio cieco? (4) quale frazione dei
+risultati è a sovraespressione ectopica e quale a proteina endogena?
+**Next action:** acquisire da PMC (`PMC4414138`) e leggere integralmente. **È il singolo full text
+non letto di più alto valore in questo batch.**
