@@ -145,10 +145,21 @@ def effective_depth(entry: dict[str, str], receipt: dict | None) -> str:
 def receipt_owners(
     entries: list[dict[str, str]], index: dict[str, dict]
 ) -> dict[str, dict]:
-    """Assign each receipt to one registry owner, preferring promoted PAPER over CORPUS.
+    """Assign each receipt to one registry owner: the record that declares the reading.
 
     Promoted studies may retain their old CORPUS placeholder as an audit trail. A receipt
     describes the study, not both records; counting it twice would silently inflate coverage.
+
+    🔴 THE PREFERENCE USED TO BE "PAPER OVER CORPUS", AND THAT IS NOT THE PROPERTY IT MEANT.
+    It worked for every case that existed — a `CORPUS-STUB-###` placeholder resolved into a
+    `PAPER`, where the two kinds differ — and failed the first time a stub was resolved into a
+    `CORPUS P###` instead, on 2026-09-20 under `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`.
+    Both candidates are then CORPUS, the tie fell to whichever appears first in the file, the
+    bare placeholder won because stubs sit near the top, and the record that actually declares
+    the reading was reported to LINT as an UNBACKED_FULLTEXT_DECLARATION.
+
+    The owner is the record that CLAIMS the reading; kind is only the tie-break beneath that.
+    Stated that way the rule no longer depends on which forms the registry happens to use.
     """
     matches: dict[str, list[dict[str, str]]] = {}
     by_event: dict[str, dict] = {}
@@ -160,9 +171,11 @@ def receipt_owners(
         by_event[receipt["event_id"]] = receipt
     owners: dict[str, dict] = {}
     for event_id, candidates in matches.items():
-        owner = next(
-            (entry for entry in candidates if entry["_kind"] == "PAPER"),
-            candidates[0],
+        owner = min(
+            candidates,
+            key=lambda entry: (classify_depth(entry) != "full_text",
+                               entry["_kind"] != "PAPER",
+                               candidates.index(entry)),
         )
         owners[owner["_id"]] = by_event[event_id]
     return owners

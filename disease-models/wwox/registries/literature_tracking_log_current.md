@@ -12301,3 +12301,14 @@ Tre candidati propagati, tutti da **lettura integrale con ricevuta persistita** 
 **Note:** Read as its own source; establishes the corrected scope of PMID 38182577 from the deposit itself, closing its SCOPE_UNDECLARED status. Corrects an author name only; the title is unchanged.
 
 ---
+
+## LIT-0417
+**Identifier value:** PMID 42397075 / DOI 10.1093/brain/awag239
+**Short title:** Steinberg 2026 — disrupted WWOX-MYC interplay impairs neurogenesis in human brain organoids
+**Journal/source:** *Brain* 2026
+**Status:** complete — read in full, `FTR-20260810-42397075-04`; registry record [[paper_registry_current#PAPER 094]]
+**Discovery window:** post-harvest; this PMID had no literature entry before BATCH_20260920_002
+**Flags:** created by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` to give an existing complete reading the entry its PAPER record links to
+
+---
+

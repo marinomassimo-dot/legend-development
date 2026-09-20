@@ -8,6 +8,9 @@ of its own scope and parked.
 `framework/state/state_manifest_current.md`** (2026-09-20).
 **Change class:** **MINOR**
 **Target:** no working-model bump is required or proposed.
+**Status:** `PARTIALLY PROPAGATED — BATCH_20260920_002` (2026-09-20): seven of eight records
+created. PMID 42082822 is NOT propagated and stays deferred on its identifier (§ 3), which the
+read-only convention audit of the same date confirmed has no existing convention to follow.
 **Review floor:** R2. `legend-locator-audit` (R4) **not triggered** — no claim is created,
 narrowed, reversed, corroborated or removed (§ 5).
 
@@ -95,6 +98,64 @@ holds no corpus-paper number. `P401` would claim a position in a harvest it was 
 
 Both are registry-convention decisions, so neither is this candidate's. The same question does not
 arise for `PAPER 094`: `PAPER` numbers are sequential allocation and carry no harvest provenance.
+
+---
+
+## 3-bis · The five judgement fields, derived from evidence
+
+🔴 **`Tier (FASE 1)` is NOT APPLICABLE to any of the seven, and that is a measurement rather than a
+dodge.** The field is the label of one triage exercise — `literature_tracking_log_current.md`
+*"FASE 1 TRIAGE — PAPERS 221–400"* (Tier A 7 · B 16 · C 156). Counted across the whole registry:
+**179 records carry it and every one is a corpus paper inside 221–400; zero are outside.** All six
+corpus papers here are numbered 4, 22, 27, 113, 123 and 175, and `PAPER 094` has no corpus number
+at all. Assigning one would invent a verdict from an exercise that never looked at them — and it is
+moot anyway, because `gold_is_in_the_details.md` § 1 says a tier means *"only later in the queue,
+never never"*, and all seven have been read.
+
+The other four are assigned from the readings. Scales are the ones already in force: `T1/T2/T3`,
+`HIGH/MODERATE/LOW`, and the `P1–P9` axes as the registry uses them — note `P6` is **DDR / genome
+stability** (58 records), not neuroinflammation, which appears once and is an outlier.
+
+| PMID → record | Transferability | clinical relevance | Primary pathway | Evidence | Confidence |
+|---|---|---|---|---|---|
+| 39416860 → `PAPER 093` | **T1** | **MODERATE** | clinical description / natural history — no pathway measured | Human WWOX-DEE case, and the allele is an **SDR-domain missense** (`p.Ser304Tyr`), the reference genotype's own class — so it transfers as T1, with the boundary written in rather than used to demote. The boundary: the authors state the pathogenicity is **not established** (their last sentence), and a second DEE-gene variant is present (`CACNA1A c.4646A>G`, heterozygous). Inheritance detail for that second variant is in the published paper and in the reading manifest; it is deliberately not restated in this cell. MODERATE, not HIGH, for exactly that reason. | high — two manifest locators plus the PubMed abstract |
+| 42397075 → `PAPER 094` | **T2** | **HIGH** | **P3 — prenatal structure / neurogenesis** | Patient-derived iPSC organoids carrying real WWOX genotypes **plus** isogenic CRISPR knockouts — stronger than a rodent model and not a clinical observation, so T2 and not T1, the registry's T1 being human clinical evidence throughout. HIGH because the abstract reports **gene therapy restored neuronal function**, normalising hyperexcitability and promoting maturation. P3 from the measured phenotype: radial glia accumulate in S and G2/M with MYC overexpression and reduced neuronal generation. | high |
+| 33255508 → `PAPER 095` | **T2** | **MODERATE** | review across axes — no primary measurement | Secondary source with human CNS scope, naming WOREE and SCAR12 (MIM 616211 / 614322) and mapping WWOX expression to entorhinal cortex, basolateral amygdala and cerebellar granule and basket cells. MODERATE because it carries the **Q230P recurrence census — eight reported WOREE cases from six families**. | high |
+| 31075076 → `CORPUS P022` | **T3** | **LOW** | none on-axis | BLBC/TNBC breast-cancer review by the authors of their own primary. No WWOX-DEE allele, no neural endpoint, no CNS measurement. | high |
+| 38182577 → `CORPUS P027` | **T3** | **LOW** | **P8 — bone / RUNX2 axis** | Osteosarcoma in `Wwox/Trp53` double-knockout bone-marrow mesenchymal cells. P8 is the registry's bone-oncology axis (`P223`, `P224`, `P254`, `P342`). No WWOX-DEE allele, no neural endpoint. | high |
+| 38499540 → `CORPUS P113` | **T3** | **LOW** | **P6 — DDR / genome stability** | `K14-Cre;Brca1;Wwox` mammary tumours and DSB repair-pathway choice — 53BP1 and RAD51 foci, NHEJ against HDR. Squarely the DDR axis, and mammary, so T3/LOW. | high |
+| 27308504 → `CORPUS P123` | **T3** | **LOW** | **P6 — DDR / genome stability** | Commentary on WWOX–ATM at the FRA16D common fragile site. DDR axis; no WWOX-DEE allele, no neural endpoint. | high |
+
+**`Role`, one line each — what each reading is *for* in this model.** None of these is a claim and
+none creates a claim link.
+
+- `PAPER 093` — **citation-fidelity reference point.** A downstream review (PMID 42128308) presents
+  this case as an established homozygous WWOX case and omits both the VUS classification and the
+  `CACNA1A` co-variant. The paper also contradicts itself on the nucleotide: the running text and
+  the PubMed abstract write `c.991C>A`, while Table 1 and the Discussion write `c.911C>A`, and the
+  protein change `p.Ser304Tyr` settles it arithmetically against the abstract.
+- `PAPER 094` — **the mechanistic organoid reading**: MYC as the top upregulated gene in
+  WWOX-deficient radial glia, composition and maturation shown to be separable, and a recorded
+  guard against inferring a Wnt mechanism from co-occurring enrichment.
+- `PAPER 095` — **secondary source carrying the Q230P recurrence census**, and the record that the
+  WWOX–myelin connection is labelled by its own authors a suggestion, not a tested mediator.
+- `CORPUS P022` — **methodological control.** It falsifies `DL-METH-091`'s generalisation that
+  authors restating their own work state it more firmly: here they hedge three times in two
+  sentences and label the WWOX→p53-via-ER inference speculation themselves.
+- `CORPUS P027` — 🔴 **the title asserts the opposite of the body.** The body and the figure legend
+  state that WWOX loss RAISES Myc, and WWOX restoration reduces Myc protein — the same direction
+  measured in liver by PMID 29724996 — while the title reads *"WWOX promotes osteosarcoma
+  development via upregulation of Myc"*. Carries an erratum, PMID 38355659 (`PAPER 092`).
+- `CORPUS P113` — **three caption-versus-panel direction errors**: captions attribute to WWOX
+  *loss* what two of the panels measure under *overexpression*, and Figure 2's caption states the
+  opposite direction from its own panel.
+- `CORPUS P123` — **citation-fidelity control.** The primary (PMID 25331887) captions its model
+  *Hypothetical* and writes *might reduce*; this commentary redraws the same model, the word
+  `hypothetic` occurs zero times in it, and the modal is gone from the sentence that maps a
+  laboratory manipulation onto a genotype.
+
+**No field is UNRESOLVED.** `Tier (FASE 1)` is determinately not applicable; the other four are
+assigned with their evidence above.
 
 ---
 

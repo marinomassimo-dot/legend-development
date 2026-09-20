@@ -119,6 +119,40 @@ class ReportIntegrityTests(unittest.TestCase):
         owners = cov.receipt_owners(entries, {"pmid:42193054": receipt})
         self.assertEqual(owners, {"PAPER 001": receipt})
 
+    def test_the_owner_is_the_record_that_declares_the_reading(self) -> None:
+        """🔴 The case that broke it: a placeholder resolved into a CORPUS record, not a PAPER.
+
+        `receipt_owners` preferred PAPER over CORPUS, which is the right answer only while the
+        two candidates differ in kind. On 2026-09-20 `CORPUS-STUB-022` was resolved into
+        `CORPUS P022` — both CORPUS — the tie fell to file order, the bare placeholder won
+        because stubs sit near the top of the registry, and LINT reported the record that
+        actually declares the reading as an UNBACKED_FULLTEXT_DECLARATION.
+
+        Ordered as the defect had it, so the arm fails against the rule it replaces.
+        """
+        entries = [
+            {"_id": "CORPUS-STUB-022", "_kind": "CORPUS", "identifier": "PMID 31075076"},
+            {"_id": "CORPUS P022", "_kind": "CORPUS", "identifier": "PMID 31075076",
+             "evidence depth": "complete_fulltext_read — `FTR-20260811-31075076-02`"},
+        ]
+        receipt = {"event_id": "FTR-20260811-31075076-02",
+                   "evidence_depth": "complete_fulltext_read"}
+        owners = cov.receipt_owners(entries, {"pmid:31075076": receipt})
+        self.assertEqual(owners, {"CORPUS P022": receipt},
+                         "the owner is the record that claims the reading, not the placeholder")
+
+    def test_kind_still_breaks_the_tie_when_neither_declares_more(self) -> None:
+        """The older rule survives underneath: PAPER wins when no candidate declares a reading,
+        so this repair narrows nothing."""
+        entries = [
+            {"_id": "CORPUS 001", "_kind": "CORPUS", "identifier": "PMID 42193054"},
+            {"_id": "PAPER 001", "_kind": "PAPER", "identifier": "PMID 42193054"},
+        ]
+        receipt = {"event_id": "FTR-20260726-42193054-01",
+                   "evidence_depth": "complete_fulltext_read"}
+        owners = cov.receipt_owners(entries, {"pmid:42193054": receipt})
+        self.assertEqual(owners, {"PAPER 001": receipt})
+
     def test_report_exists_and_is_current(self) -> None:
         self.assertTrue(REPORT.is_file(), f"missing generated report: {REPORT}")
         result = subprocess.run(

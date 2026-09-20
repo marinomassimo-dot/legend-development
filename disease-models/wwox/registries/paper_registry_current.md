@@ -758,10 +758,13 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-004
+**Status:** resolved — see [[paper_registry_current#PAPER 095]] (BATCH_20260920_002, `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`)
+**Registry role:** corpus placeholder only — conservato append-only come storia di audit, mai cancellato
+**Next action:** none — risolto
 **Corpus paper no:** 4
 **Full title:** WWOX Loss of Function in Neurodevelopmental and Neurodegenerative Disorders
 **Identifier:** PMID 33255508 / DOI 10.3390/ijms21238922
-**Status:** not_processed
+
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -938,10 +941,13 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-022
+**Status:** resolved — see [[paper_registry_current#CORPUS P022]] (BATCH_20260920_002, `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`)
+**Registry role:** corpus placeholder only — conservato append-only come storia di audit, mai cancellato
+**Next action:** none — risolto
 **Corpus paper no:** 22
 **Full title:** Decoding the link between WWOX and p53 in aggressive breast cancer
 **Identifier:** PMID 31075076 / DOI 10.1080/15384101.2019.1616998
-**Status:** not_processed
+
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -988,10 +994,13 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-027
+**Status:** resolved — see [[paper_registry_current#CORPUS P027]] (BATCH_20260920_002, `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`)
+**Registry role:** corpus placeholder only — conservato append-only come storia di audit, mai cancellato
+**Next action:** none — risolto
 **Corpus paper no:** 27
 **Full title:** WWOX promotes osteosarcoma development via upregulation of Myc
 **Identifier:** PMID 38182577 / DOI 10.1038/s41419-023-06378-8
-**Status:** not_processed
+
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -1789,10 +1798,13 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-113
+**Status:** resolved — see [[paper_registry_current#CORPUS P113]] (BATCH_20260920_002, `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`)
+**Registry role:** corpus placeholder only — conservato append-only come storia di audit, mai cancellato
+**Next action:** none — risolto
 **Corpus paper no:** 113
 **Full title:** Unveiling the relationship between WWOX and BRCA1 in mammary tumorigenicity and in DNA repair pathway selection
 **Identifier:** PMID 38499540 / DOI 10.1038/s41420-024-01878-8
-**Status:** not_processed
+
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -1880,10 +1892,13 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-123
+**Status:** resolved — see [[paper_registry_current#CORPUS P123]] (BATCH_20260920_002, `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`)
+**Registry role:** corpus placeholder only — conservato append-only come storia di audit, mai cancellato
+**Next action:** none — risolto
 **Corpus paper no:** 123
 **Full title:** WWOX guards genome stability by activating ATM
 **Identifier:** PMID 27308504 / DOI 10.1080/23723556.2015.1008288
-**Status:** not_processed
+
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -2370,10 +2385,13 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Note:** Added during Phase 1 corpus-to-registry alignment. Preserve until processed, filtered out, or upgraded to a full PAPER record.
 
 ## CORPUS-STUB-175
+**Status:** resolved — see [[paper_registry_current#PAPER 093]] (BATCH_20260920_002, `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`)
+**Registry role:** corpus placeholder only — conservato append-only come storia di audit, mai cancellato
+**Next action:** none — risolto
 **Corpus paper no:** 175
 **Full title:** WWOX-related epileptic encephalopathy caused by a novel mutation in the WWOX gene: a case report
 **Identifier:** PMID 39416860 / DOI 10.3389/fped.2024.1453778
-**Status:** not_processed
+
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -6145,6 +6163,98 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** deep-dived — registry placeholder (lint restored)
 **Note:** Source description from tracking log 2026-04-17.
 
+## CORPUS P022
+**Short title:** Abdeen & Aqeilan 2019 — WWOX and p53 in aggressive breast cancer
+**Full title:** Decoding the link between WWOX and p53 in aggressive breast cancer
+**Authors:** Abdeen SK, Aqeilan RI
+**Year:** 2019
+**Source type:** 🔴 **Review** — and specifically the authors' review of their own primary study. A secondary source; every number is a pointer to its primary.
+**Journal/source:** *Cell Cycle* 2019;18(11):1177–1186
+**Identifier:** PMID 31075076 / PMC PMC6592247 / DOI 10.1080/15384101.2019.1616998
+**Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only; this record is outside that window and the reading is complete, so a reading-priority label has no verdict to carry here (`BATCH_20260920_002`)
+**Status:** read — corpus placeholder resolved into its own corpus record (`CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`, BATCH_20260920_002)
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-31075076-02`; manifest `deepdive_manifests/PMID31075076.json` (9 locators, schema v2, strict PASS, 0 gaps)
+**Primary pathway:** none on-axis — BLBC/TNBC oncology, ER signalling, EMT and genomic instability
+**Model/species:** human, secondary — BLBC and TNBC cell and tumour biology
+**Genotype/model:** no WWOX-DEE allele; breast-cancer tumour suppression
+**Transferability:** T3 — no WWOX-DEE allele, no neural endpoint, no CNS measurement anywhere in it.
+**clinical relevance:** LOW
+**Claim links:** none — this record carries a reading, not a claim
+**Role:** **methodological control, and it earns the word.** It FALSIFIES `DL-METH-091`'s generalisation that authors restating their own work state it more firmly: here they hedge three times in two sentences, and label the inference from WWOX to p53 by way of ER signalling speculation themselves.
+**LIT link:** [[literature_tracking_log_current#LIT-0049]]
+**Note:** The reading also records an asymmetry worth keeping: the modals present in the running text are COMPRESSED in the figure caption and in the schematic, so a reader who takes the drawing for the argument gets a firmer claim than the prose makes.
+
+---
+
+## CORPUS P027
+**Short title:** Akkawi 2024 — WWOX/Trp53 osteosarcoma and Myc; the title contradicts the body
+**Full title:** WWOX promotes osteosarcoma development via upregulation of Myc
+**Authors:** Akkawi R, Hidmi O, Haj-Yahia A, Monin J, Diment J, Drier Y, Stein GS, Aqeilan RI
+**Year:** 2024
+**Source type:** primary experimental — traceable `Wwox/Trp53` double-knockout mouse, tdTomato reporter, bone-marrow mesenchymal stem cells, Myc ChIP-seq
+**Journal/source:** *Cell Death Dis* 2024;15(1):13
+**Identifier:** PMID 38182577 / PMC PMC10770339 / DOI 10.1038/s41419-023-06378-8
+**Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only; this record is outside that window and the reading is complete, so a reading-priority label has no verdict to carry here (`BATCH_20260920_002`)
+**Status:** read — corpus placeholder resolved into its own corpus record (`CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`, BATCH_20260920_002)
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-38182577-02`; manifest `deepdive_manifests/PMID38182577.json` (7 locators, schema v2, strict PASS, 0 gaps)
+**Primary pathway:** P8 — bone / RUNX2 axis
+**Model/species:** mouse (Osterix1-Cre; Wwox/Trp53) plus human osteosarcoma tumours
+**Genotype/model:** no WWOX-DEE allele; somatic double knockout in bone
+**Transferability:** T3 — no WWOX-DEE allele, no neural endpoint.
+**clinical relevance:** LOW
+**Claim links:** none — this record carries a reading, not a claim
+**Role:** 🔴 **THE TITLE ASSERTS THE OPPOSITE OF THE PAPER'S OWN BODY.** The body states plainly that WWOX LOSS RAISES Myc, the figure legend states the inverse correlation, panel H shows it in human tumours, and the abstract says restoring WWOX REDUCED Myc protein levels. The title reads *'WWOX promotes osteosarcoma development via upregulation of Myc'*. This is the same direction measured in liver by PMID 29724996.
+**LIT link:** [[literature_tracking_log_current#LIT-0054]] · [[literature_tracking_log_current#LIT-0416]]
+**Note:** INTEGRITY: this article carries a published erratum, PMID 38355659, recorded as `PAPER 092` — an editorial notice and not a study. An erratum is not an integrity event and this record carries no hold. TWO QUALIFIED PAIRS were DOWNGRADED FROM CONTRADICTION on 2026-08-10 and are kept qualified rather than dropped: the text calls the WWOX add-back a restoration citing Fig 6D, which contains no WWOX re-expression lane, while Fig 6G is the only panel in the article that does; and the text describes Myc as lowly expressed in the p53-only knockout while citing Fig 6A–B, the Venn and the pathway panel. TWO LITERATURE ENTRIES exist for this PMID, `LIT-0054` and `LIT-0416`; both are carried, and whether they are a mechanical duplicate is a registry question this record does not open.
+
+---
+
+## CORPUS P113
+**Short title:** Bidany-Mizrahi 2024 — WWOX and BRCA1 in DSB repair-pathway choice
+**Full title:** Unveiling the relationship between WWOX and BRCA1 in mammary tumorigenicity and in DNA repair pathway selection
+**Authors:** Bidany-Mizrahi T, Shweiki A, Maroun K, Abu-Tair L, Mali B, Aqeilan RI
+**Year:** 2024
+**Source type:** primary experimental — `K14-Cre;Brca1;Wwox` transgenic mouse, human TNBC cell lines, 53BP1 and RAD51 foci
+**Journal/source:** *Cell Death Discov* 2024;10(1):145
+**Identifier:** PMID 38499540 / PMC PMC10948869 / DOI 10.1038/s41420-024-01878-8
+**Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only; this record is outside that window and the reading is complete, so a reading-priority label has no verdict to carry here (`BATCH_20260920_002`)
+**Status:** read — corpus placeholder resolved into its own corpus record (`CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`, BATCH_20260920_002)
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-38499540-02`; manifest `deepdive_manifests/PMID38499540.json` (7 locators, schema v2, strict PASS, 0 gaps)
+**Primary pathway:** P6 — DDR / genome stability
+**Model/species:** mouse (K14-Cre; Brca1; Wwox) plus human TNBC cell lines
+**Genotype/model:** no WWOX-DEE allele; mammary tumorigenesis
+**Transferability:** T3 — no WWOX-DEE allele, no neural endpoint.
+**clinical relevance:** LOW
+**Claim links:** none — this record carries a reading, not a claim
+**Role:** **three caption-versus-panel direction errors, recorded as a reading-fidelity finding.** The paper's model — WWOX presence directs repair to NHEJ, WWOX loss compromises NHEJ and raises HDR — is correct in the body; three figure-caption TITLES state it backwards.
+**LIT link:** [[literature_tracking_log_current#LIT-0133]]
+**Note:** THE THREE PAIRS, each verified on both sides. Figure 2: the caption says the combined loss redirects repair TO NHEJ; the panel shows losing WWOX dropping the NHEJ marker about four-fold and raising the HDR marker about six-fold. Figure 4: the caption attributes a reduction in HDR to LOSS of WWOX; the experiment is OVEREXPRESSION, labelled EV against WWOX OE, with the caption's own body saying so two lines below its title. Figure 5: the caption attributes an INCREASE in NHEJ to LOSS of WWOX, which is wrong in both directions at once. Nothing measured in the paper is demoted by this; what is recorded is that its captions cannot be cited without the panels.
+
+---
+
+## CORPUS P123
+**Short title:** Hazan 2015 commentary — WWOX activates ATM; the primary's hedge is gone
+**Full title:** WWOX guards genome stability by activating ATM
+**Authors:** Hazan I, Abu-Odeh M, Hofmann TG, Aqeilan RI
+**Year:** 2015
+**Source type:** 🔴 **Commentary** — a secondary source restating the authors' own primary (PMID 25331887).
+**Journal/source:** *Mol Cell Oncol* 2015;2(4):e1008288
+**Identifier:** PMID 27308504 / PMC PMC4905350 / DOI 10.1080/23723556.2015.1008288
+**Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only; this record is outside that window and the reading is complete, so a reading-priority label has no verdict to carry here (`BATCH_20260920_002`)
+**Status:** read — corpus placeholder resolved into its own corpus record (`CC-20260920-EIGHT-RECORD-CLASSIFICATION-01`, BATCH_20260920_002)
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-27308504-01`; manifest `deepdive_manifests/PMID27308504.json` (12 locators, schema v2, strict PASS, 0 gaps)
+**Primary pathway:** P6 — DDR / genome stability
+**Model/species:** human and mouse, secondary — FRA16D common fragile site, WWOX–ATM association
+**Genotype/model:** no WWOX-DEE allele; DNA-damage response at a common fragile site
+**Transferability:** T3 — no WWOX-DEE allele, no neural endpoint.
+**clinical relevance:** LOW
+**Claim links:** none — this record carries a reading, not a claim
+**Role:** **citation-fidelity control, with its own control case recorded first.** Not everything the commentary asserts is inflated: WWOX-dependent ATM monomerisation is a real measurement in the primary.
+**LIT link:** [[literature_tracking_log_current#LIT-0142]]
+**Note:** 🔴 WHAT CHANGED BETWEEN THE PRIMARY AND ITS OWN COMMENTARY, one year apart. The sentence that maps a laboratory manipulation onto a GENOTYPE is word-for-word identical through 'reduced activation of ATM' — except that the primary writes MIGHT REDUCE and the commentary states it flatly. And the primary captions its Figure 7D model *Hypothetical*; the commentary redraws substantially the same model as its Figure 1 and the word `hypothetic` occurs ZERO times in the entire commentary. The schematic qualifies rather than contradicts the caption: it says something the caption does not say and cannot be read as saying.
+
+---
+
 ## CORPUS P182
 **Topic:** WWOX interactome / trafficking–metabolism coupling (endomembrane → Acetyl-CoA)
 **Deep-dive level:** full text deep
@@ -6988,3 +7098,75 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **clinical relevance:** LOW
 **Claim links:** none — **the source supports no biological proposition.**
 **Note:** Read as a source in its own right, because reading a full text obliges a receipt. It establishes the corrected scope of PMID 38182577 from the deposit itself, closing that paper's `SCOPE_UNDECLARED` status: the erratum's body is four paragraphs, carries **no `<fig>` element**, and corrects **no item beyond an author name** — `Haji Yehya` → `Haj-Yahia`. Checked against the re-downloaded corrected deposit of the original article, whose `<article-title>` still reads *"WWOX promotes osteosarcoma development via upregulation of Myc"*, unchanged. 🔴 **The erratum had the opportunity to correct a title that asserts the opposite of its own paper's direction, and corrected a hyphen in a surname.** No `PUBLICATION_INTEGRITY_HOLD` is proposed.
+## PAPER 093
+**Short title:** Feng 2024 WWOX-DEE case report, variant of unclear significance
+**Full title:** WWOX-related epileptic encephalopathy caused by a novel mutation in the WWOX gene: a case report
+**Authors:** Feng D, Li Y, Zhang YT, Song YJ, Qin DY, Wang F
+**Year:** 2024
+**Source type:** case report
+**Journal/source:** *Front Pediatr* 2024;12:1453778
+**Identifier:** PMID 39416860 / PMC PMC11479972 / DOI 10.3389/fped.2024.1453778
+**Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only; this record is outside that window and the reading is complete, so a reading-priority label has no verdict to carry here (`BATCH_20260920_002`)
+**Status:** processed
+**Record provenance:** read in full; corpus placeholder promoted to a PAPER record by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` (BATCH_20260920_002). `processed` and not `claim_linked`: this reading creates no claim.
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-39416860-01`; manifest `deepdive_manifests/PMID39416860.json` (7 locators, schema v2, strict PASS, 0 gaps)
+**Primary pathway:** clinical description / natural history — no pathway is measured in this paper
+**Model/species:** human — one boy, onset at one month, death at six months
+**Genotype/model:** 🔴 **SDR-domain missense, and its pathogenicity is NOT established by this paper.** The authors' own last sentence says so, and a second DEE-gene variant is present (`CACNA1A c.4646A>G p.Gln1549Arg`, heterozygous — the inheritance detail is in the published paper and in the reading manifest, and is deliberately not restated here). The phenotype is first-hand; the attribution to WWOX is not.
+**Transferability:** T1 — human, and the allele class (SDR-domain missense) is the reference genotype's own. The VUS boundary is written into `Genotype/model` rather than used to demote the record: `gold_is_in_the_details` rule 3 is that disease context does not downgrade a paper.
+**clinical relevance:** MODERATE — **proposed at MODERATE and not HIGH, deliberately.** The clinical course is informative for the disease class, and the causal attribution the record would need for HIGH is one the paper itself declines to make.
+**Claim links:** none — this record carries a reading, not a claim
+**Role:** **citation-fidelity reference point.** A downstream review (PMID 42128308 §9) presents this case as an established homozygous WWOX case and omits both the VUS classification and the `CACNA1A` co-variant.
+**LIT link:** [[literature_tracking_log_current#LIT-0191]]
+**Note:** 🔴 THE PAPER CONTRADICTS ITSELF ON THE NUCLEOTIDE. The running text and the PubMed abstract write `c.991C>A`; Table 1 and the Discussion write `c.911C>A`. The protein change `p.Ser304Tyr` settles it arithmetically against the abstract. Recorded, not resolved at source. The phenotype that survives whatever the variant's classification: refractory seizures from one month, no object tracking, no head control, bilateral hearing impairment, death at six months.
+
+---
+
+## PAPER 094
+**Short title:** Steinberg 2026 WWOX-MYC organoids, neurogenesis, gene-therapy rescue
+**Full title:** Disrupted WWOX-MYC interplay impairs neurogenesis in human brain organoids
+**Authors:** Steinberg DJ, Zonca A, Abdellatif D, Rosh I, Kustanovich I, Hidmi O, Manenti C, Maroun K, Stern S, Davila-Velderrain J, Aqeilan RI
+**Year:** 2026
+**Source type:** primary experimental — human iPSC neural organoids, scRNA-seq, isogenic CRISPR knockout plus patient-derived lines
+**Journal/source:** *Brain* 2026
+**Identifier:** PMID 42397075 / DOI 10.1093/brain/awag239
+**Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only; this record is outside that window and the reading is complete, so a reading-priority label has no verdict to carry here (`BATCH_20260920_002`)
+**Status:** processed
+**Record provenance:** read in full; this PMID was in no registry at all, so the record is new, created by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` (BATCH_20260920_002). `processed` and not `claim_linked`: this reading creates no claim.
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-42397075-04`; manifest `deepdive_manifests/PMID42397075.json` (6 locators, schema v2, strict PASS, 0 gaps)
+**Primary pathway:** P3 — prenatal structure / neurogenesis
+**Model/species:** human — iPSC-derived neural organoids: wild-type, isogenic WWOX-knockout, and patient-derived lines
+**Genotype/model:** WOREE and SCAR12 patient lines carried alongside an engineered null; the paper names both syndromes
+**Transferability:** T2 — patient-derived human cells carrying the real genotypes, which is stronger than a rodent model, but a model system and not a clinical observation. Every T1 record in this registry is human clinical evidence.
+**clinical relevance:** HIGH — **gene therapy restored neuronal function** in the patient-derived organoids, normalising hyperexcitability and promoting maturation, without disturbing radial-glia populations.
+**Claim links:** none — this record carries a reading, not a claim
+**Role:** **the mechanistic organoid reading**: MYC as the top significantly upregulated gene in WWOX-deficient radial glia, and the cell-cycle route to reduced neuronal generation.
+**LIT link:** [[literature_tracking_log_current#LIT-0417]]
+**Note:** TWO BOUNDARIES CARRIED FROM THE READING. (1) The central composition phenotype is almost entirely in the ENGINEERED KNOCKOUT — Figure 2F plots a neuronal cell-fraction log2FC of about −2.6 against wild type — while the patient lines show near-normal composition with a maturation phenotype instead, inverting the early/late neuronal balance. Composition and maturation are separable and the paper shows them separately. (2) 🔴 GUARD AGAINST A FALSE INFERENCE, recorded because it was one step away: Figure 5E shows canonical Wnt signalling among negatively-enriched GO processes and the A51 compound suppresses Wnt, but co-occurring enrichment is not a demonstrated mechanism.
+
+---
+
+## PAPER 095
+**Short title:** Aldaz & Hussain 2020 review — WWOX loss of function across CNS disorders
+**Full title:** WWOX Loss of Function in Neurodevelopmental and Neurodegenerative Disorders
+**Authors:** Aldaz CM, Hussain T
+**Year:** 2020
+**Source type:** 🔴 **Review** — a secondary source. Under `epistemic_discipline` every number in it is a pointer to its cited primary, never a measurement.
+**Journal/source:** *Int J Mol Sci* 2020;21(23):8922
+**Identifier:** PMID 33255508 / PMC PMC7727818 / DOI 10.3390/ijms21238922
+**Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only; this record is outside that window and the reading is complete, so a reading-priority label has no verdict to carry here (`BATCH_20260920_002`)
+**Status:** processed
+**Record provenance:** read in full; corpus placeholder promoted to a PAPER record by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` (BATCH_20260920_002). `processed` and not `claim_linked`: this reading creates no claim.
+**Evidence depth:** complete_fulltext_read — `FTR-20260806-33255508-01`; manifest `deepdive_manifests/PMID33255508.json` (4 locators, schema v2, strict PASS, 0 gaps)
+**Primary pathway:** review across axes — no primary measurement of its own
+**Model/species:** human and mouse, secondary — expression databases, Allen Mouse Brain Atlas, single-cell RNA-seq
+**Genotype/model:** no allele of its own; it reviews SCAR12 (MIM 614322), EIEE28/WOREE (MIM 616211) and WWOX copy-number variants in ASD
+**Transferability:** T2 — human CNS scope and on-axis syndromes, carried as a secondary source.
+**clinical relevance:** MODERATE — it carries the **Q230P recurrence census**: eight reported WOREE cases from six families as of its cutoff.
+**Claim links:** none — this record carries a reading, not a claim
+**Role:** **secondary source carrying the Q230P recurrence census**, and the expression map that puts the highest WWOX levels in entorhinal cortex, basolateral amygdala, frontal-cortex layer 5 neurons and cerebellar granule and basket cells.
+**LIT link:** [[literature_tracking_log_current#LIT-0031]]
+**Note:** FOUR THINGS THE READING MARKS, each because the review states more carefully than it is usually cited as stating. The OPC observation is LINEAGE EXPRESSION and not evidence that WWOX acts cell-autonomously in oligodendrocytes. The LPS result is a descriptive expression response in public mouse microglia data. The GABA-synthesis finding is a reviewed primary result from Wwox-null hippocampus, not a new experiment here. And the WWOX–myelin connection is labelled by the authors themselves a SUGGESTION arising from assembled observations — the lipid and trafficking routes are two potential themes, not tested mediators. The authors also acknowledge explicitly that the molecular effects of most missense variants were unknown.
+
+---
+
