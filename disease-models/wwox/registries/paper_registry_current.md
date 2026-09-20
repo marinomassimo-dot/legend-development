@@ -413,7 +413,7 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **Journal/source:** *Epilepsia*
 **Identifier:** PMID 36779245 / PMC PMC10952634 / DOI 10.1111/epi.17542
 **Status:** filtered_in
-**Evidence depth:** abstract + frammenti Scholar Gateway
+**Evidence depth:** complete_fulltext_read — `FTR-20260804-36779245-02`; manifest `deepdive_manifests/PMID36779245.json` (5 locators, schema v2, strict PASS, 3 declared gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **Primary pathway:** clinical spectrum / natural history / survival analysis
 **Model/species:** human — 13 pazienti, 12 famiglie, 5 centri
 **Genotype/model:** biallelic WWOX variants — N/N / N/M / M/M
@@ -421,7 +421,8 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **clinical relevance:** HIGH
 **Claim links:** pending
 **Role:** epilettologia WWOX-DEE; sopravvivenza Kaplan-Meier; missense vs non-missense survival
-**Next action:** full text retrieval PMC10952634 — alta priorità
+**Next action:** none — the full text was retrieved and read completely on 2026-08-04 (`FTR-20260804-36779245-02`). The instruction to retrieve it stood for six weeks after the reading and is removed here, not silently: a registry that asks for work already done sends a reader to repeat it.
+**Superseded declaration (append-only):** this record declared `Evidence depth: abstract + frammenti Scholar Gateway` until BATCH_20260920_001. The prior value is preserved rather than overwritten in silence — it is the trace of how long the registry and the ledger disagreed, on a T1 / HIGH record. `Status: filtered_in` and `Claim links: pending` are deliberately NOT changed by that batch: whether this reading produces a claim is a scientific question it did not ask.
 **Note:** key finding: presenza ≥1 missense aumenta sopravvivenza 5 anni da <50% a >75% (p=0.0085). Tipi crisi: focali 85%, spasmi 77%, toniche 69%. EEG: slow background, multifocal discharges. MRI: frontotemporal atrophy, hippocampal atrophy, thin corpus callosum. Sindromi: EIDEE 8/13, IESS 2, EIMFS 2. Distonia 11/13.
 
 ---
@@ -435,6 +436,7 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **Journal/source:** *Acta Neuropathologica Communications*
 **Identifier:** PMID 32000863 / DOI 10.1186/s40478-020-0883-3
 **Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260804-32000863-01`; manifest `deepdive_manifests/PMID32000863.json` (5 locators, schema v2, strict PASS, 3 declared gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **Primary pathway:** P3 — prenatal structure / GSK3β
 **Secondary pathway:** P4 / P1
 **Model/species:** mouse
@@ -456,6 +458,7 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **Journal/source:** *Frontiers in Neuroscience*
 **Identifier:** PMID 32581702 / DOI 10.3389/fnins.2020.00644
 **Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-32581702-01`; manifest `deepdive_manifests/PMID32581702.json` (10 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **Primary pathway:** P3 — prenatal structure / migration
 **Secondary pathway:** P4
 **Model/species:** human fetal tissue + rat + hNPC
@@ -479,6 +482,7 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **Journal/source:** *International Journal of Molecular Sciences*
 **Identifier:** PMID 31340538 / DOI 10.3390/ijms20143596
 **Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260806-31340538-01`; manifest `deepdive_manifests/PMID31340538.json` (4 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **Primary pathway:** P4 — myelination / white matter
 **Secondary pathway:** P3
 **Model/species:** rat
@@ -542,6 +546,7 @@ A paper integrated is not necessarily a paper that changes BLOCCO 1.
 **Journal/source:** *Cell Death and Differentiation*
 **Identifier:** PMID 25012504 / DOI 10.1038/cdd.2014.95
 **Status:** processed
+**Evidence depth:** complete_fulltext_read — `FTR-20260814-25012504-01`; manifest `deepdive_manifests/PMID25012504.json` (5 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **Primary pathway:** P5 — metabolism / HIF1A
 **Secondary pathway:** none
 **Model/species:** cell / animal metabolic models
@@ -2536,6 +2541,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Identifier:** PMID 18487609 / PMC2490770 / DOI 10.1074/jbc.M800855200
 **Tier (FASE 1):** B
 **Status:** screened — corpus placeholder
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-18487609-01`; manifest `deepdive_manifests/PMID18487609.json` (5 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **LIT link:** LIT-0222
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Model/species:** mouse
@@ -3518,6 +3524,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Identifier:** PMID 24550385 / PMC3979411 / DOI 10.1074/jbc.M113.506790
 **Tier (FASE 1):** C
 **Status:** screened — corpus placeholder
+**Evidence depth:** complete_fulltext_read — `FTR-20260810-24550385-02`; manifest `deepdive_manifests/PMID24550385.json` (7 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **LIT link:** LIT-0272
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Model/species:** not assessed in triage
@@ -5000,6 +5007,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Identifier:** PMID 22634283 / PMC3412936 / DOI 10.1016/j.jmb.2012.05.015
 **Tier (FASE 1):** C
 **Status:** screened — corpus placeholder
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-22634283-02`; manifest `deepdive_manifests/PMID22634283.json` (5 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **LIT link:** LIT-0346
 **Primary pathway:** oncology / tumor suppressor biology
 **Model/species:** not assessed in triage
@@ -6021,6 +6029,7 @@ CORPUS P264 is **not created** — paper PMID 39101447 is already integrated as 
 **Identifier:** PMID 31428585 / PMC6688159 / DOI 10.3389/fonc.2019.00719
 **Tier (FASE 1):** C
 **Status:** screened — corpus placeholder
+**Evidence depth:** complete_fulltext_read — `FTR-20260909-31428585-02`; manifest `deepdive_manifests/PMID31428585.json` (7 locators, schema v2, strict PASS, 0 gaps); declaration reconciled from the ledger by `CC-20260920-REGISTRY-LEDGER-DEPTH-01` (BATCH_20260920_001) — the reading is the receipt's, not this batch's
 **LIT link:** LIT-0397
 **Primary pathway:** P5 — metabolism / mitochondria / redox
 **Model/species:** not assessed in triage

@@ -6,6 +6,10 @@ disagrees with the hash-chained receipt ledger, on records **whose kind is alrea
 receipt(s), tail anchored in `framework/state/state_manifest_current.md`** (2026-09-20).
 **Change class:** **MINOR**
 **Target:** no working-model bump is required or proposed.
+**Status:** `PROPAGATED — BATCH_20260920_001` (2026-09-20). Marked here and not in
+`session_commit_log.md`: that queue file is a private operational log and is not shipped in the
+public edition, so the candidate itself is the only append-only surface available to carry its
+own outcome. Nothing was removed from the queue — the queue is append-only.
 **Review floor:** R2. `legend-locator-audit` (R4) **not triggered** — no consolidated baseline claim
 is narrowed, reversed, corroborated or removed, and no claim is touched at all (§4).
 
