@@ -282,14 +282,38 @@ establishes that it does not deliver even that at its own significance standard.
 
 **Isoform: absent. As expected, completely.**
 
-- **`TRAPPC6AΔ` — zero occurrences** in the retrieved body. The body contains no Δ-isoform, no
-  truncated transcript, no variant-transcript nomenclature of any kind for this gene.
+- **`TRAPPC6AΔ` — zero occurrences** in the retrieved body. **This count is withdrawn as
+  evidence — see the correction below.** The body contains no Δ-isoform nomenclature, no
+  truncated transcript and no variant-transcript naming of any kind, but a string count cannot
+  establish that on this surface.
 - **"splice" / "splicing" — zero occurrences** in the retrieved body.
 - **"transcript" — zero occurrences** in the retrieved body.
 - **"isoform" — one occurrence, and it is about a different gene.** § 4.3, verbatim, under the
   heading `4.3. BIN1`: "It encodes several isoforms that are expressed in the central nervous
   system and may be involved in synaptic vesicle endocytosis." This refers to `BIN1`, not to the
   chromosome-19 gene.
+
+> **CORRECTION, Orchestrator, 2026-09-21, same day, before landing.** The string counts above
+> are **not admissible as evidence on this surface, and the isoform finding does not rest on
+> them.** Verified directly against the persisted artefact
+> `files/fulltext/PMID21766012_PMC_MCPtext.txt` (sha256
+> `f43340a1…50fbbe26`, 25 275 bytes): **`TRAPPC6A` itself occurs zero times in the retrieved
+> body** — as do `APOE`, `APP`, `BIN1`, `CLU` and `PICALM`, which this paper is *entirely about*.
+> The MCP extractor deletes every italicised token, and gene symbols in this journal are
+> italicised. The damage is visible in the text it returns: *"One 3-SNP window from thelocus
+> reached significance"*, *"betweenandThis SNP was included"*. A zero count for a gene symbol on
+> this surface therefore means **the extractor removed it**, not that the paper is silent. Under
+> `D-15`, a count produced by an instrument known to delete the class of token being counted is
+> not a negative; it is an instrument reading.
+>
+> **What survives, and it is the whole of the point:** the isoform conclusion never needed a
+> string count. It rests on the paper's **design**, which is stated in its own Methods and is not
+> an extraction artefact — a 3-SNP genomic window at a chromosomal position, genotyped as
+> incidental chr19/`APOE`-region tiling coverage. A positional genotype test **cannot**
+> distinguish transcript isoforms; it has no transcript-level readout to distinguish them with.
+> That holds whether or not the gene symbol survived extraction. The counts for "splice",
+> "splicing" and "transcript" are ordinary roman-type words and are more likely to be faithful,
+> but they are now surplus to the argument and are not relied on.
 
 The paper's unit of analysis is a **3-SNP genomic window spanning 1442 bp at the 5′ end of the
 gene**. It is a positional, genotype-level test. It makes no statement whatever about which
@@ -414,9 +438,14 @@ warrant further investigation."
 
 **And the load-bearing point, which was true before this reading and is unchanged by it: none of
 these three papers ever bore on the isoform.** All three are locus-level or genotype-level human
-genetics. `TRAPPC6AΔ` appears in none of them — in this paper the strings `TRAPPC6AΔ`, "splice",
-"splicing" and "transcript" occur zero times. Even had all three legs held, they would have
-corroborated a *locus*, not the splice isoform on which the Chang/NCKU cascade actually depends.
+genetics. `TRAPPC6AΔ` appears in none of them — and in this paper that conclusion follows from
+the **design**, not from a string count: the unit of analysis is a 3-SNP genomic window at a
+chromosomal position, genotyped as incidental chr19 tiling coverage, and a positional genotype
+test has no transcript-level readout with which to distinguish one isoform from another. (The
+string counts originally offered here are withdrawn as evidence; see the correction in § 6 — the
+extractor deletes italicised gene symbols, so a zero count for a symbol on this surface measures
+the instrument, not the paper.) Even had all three legs held, they would have corroborated a
+*locus*, not the splice isoform on which the Chang/NCKU cascade actually depends.
 The node-independence assessment was, from the outset, answering a question adjacent to the one
 that matters. It now fails on its own terms as well.
 

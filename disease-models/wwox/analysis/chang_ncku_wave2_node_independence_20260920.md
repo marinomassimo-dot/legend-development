@@ -199,3 +199,79 @@ was true when this file was written and should have been said then.
 *(Receipt for the reading: see the wave's ledger entry. Method note: the same extraction defect
 applies — `TRAPPC6A` occurs zero times in the body text and survives only in the PubMed abstract
 record, so any grep-based gene audit over this tool's PMC text will produce false negatives.)*
+---
+
+## 🔴 FULL RETRACTION — 2026-09-21: the gene-level corroboration is withdrawn in its entirety
+
+The correction above softened the node-independence finding. It was not enough. The third leg has
+now been read, and **all three legs are down.** The blockquoted claim in § 3 —
+
+> *"The GENE `TRAPPC6A` has independent, large-cohort human-genetic support for a neurocognitive
+> role, including a shared epilepsy–AD risk signal."*
+
+— **is retracted in full. It is not narrowed, not rescoped and not "weaker than stated". There is
+no demonstrated independent human-genetic support for this gene reachable from this laboratory.**
+
+| Leg | As written in § 3 | On reading |
+|---|---|---|
+| `PMID 21766012` — Lothian Birth Cohorts | *"a haplotype associates with nonverbal reasoning in both cohorts and combined"* | **Failed the authors' own permutation correction in the discovery cohort.** Verbatim: *"These SNP windows were not significant postpermutation analysis of the LBC1936."* |
+| `PMID 33134515` — ADNI + AddNeuroMed | *"among the functional genes composing a blood transcriptional risk score"* | **Licence-walled, unread.** Counts in neither direction. |
+| `PMID 41390778` — Fu 2025, UCLA + All of Us | *"one of eight shared-risk SNPs for late-onset epilepsy AND Alzheimer's disease"* | **Epilepsy arm null on replication**: OR 1.01, 95% CI 0.96–1.06, p = 0.80. |
+
+**On the Lothian paper specifically** — the leg this file leaned on hardest, and the only one that
+had survived the first correction. The audit is
+[`lothian_trappc6a_audit_20260921.md`](lothian_trappc6a_audit_20260921.md); receipt
+`FTR-20260921-21766012-01`. Four things, each of which alone would have disqualified it as
+corroboration:
+
+1. **It failed its own stage-2 permutation in the discovery cohort.** The authors' Results:
+   *"Though not significant postpermutation analysis in the LBC1936, this finding was replicated in
+   the LBC1921 and in post permutation analysis of the combined cohort."* The only permutation it
+   passes is computed on a **combined dataset containing the discovery cohort** — which is not an
+   independent test of the discovery cohort's result.
+2. **It is a subgroup finding.** Significance was reached **in the APOE-ε4-negative subgroup only**,
+   on matrix reasoning.
+3. **The replication was nominal and on a different instrument.** Threshold: uncorrected p ≤ .05.
+   Effects: β −0.21 / **1.8%** of variance (LBC1936), β −0.18 / **1.3%** (LBC1921).
+4. **It was never a candidate-gene test of this gene at all.** The SNPs entered as incidental
+   chr19/APOE-region tiling coverage, are **not in LD with the motivating GWAS SNP rs597668**
+   (D′ = 0.22), and the authors themselves write: *"it is unclear whether our results are detecting
+   the same effect."* Their closing position is *"These findings warrant further investigation."*
+
+§ 3 recorded point 3 as "honest scope" and stopped there. It did not record that the result **had
+failed the correction the authors themselves applied** — which is not scope, it is the finding
+being negative. That omission is what made the leg look load-bearing.
+
+**What I got wrong, stated plainly.** I built a three-cohort independence claim from search-result
+abstracts and titles. Every one of the three collapsed on contact with the primary text or turned
+out to be unreachable. The failure mode is the one this framework names repeatedly and which I
+reproduced anyway: **a census was treated as evidence.** Seven records returned by a query became
+"three independent cohorts support the gene" without one of them being read.
+
+**What is unchanged, and it was always the load-bearing point.** *None of the three papers ever bore
+on the isoform.* All three are locus-level or genotype-level human genetics with no transcript-level
+readout — the Lothian unit of analysis is a 3-SNP genomic window spanning 1442 bp, which cannot
+distinguish `TRAPPC6AΔ` from full-length `TRAPPC6A` because it has no instrument that sees
+transcripts. So the split this file drew — *gene corroborated, isoform not* — was answering a
+question **adjacent to the one that matters** even in the version where it was true. The cascade
+depends on the isoform. The isoform remains **reported by no group other than Chang's.**
+
+**Net effect on the central research question: none of this rescues or damages the therapeutic
+argument, because it never touched it.** A common-variant association with nonverbal reasoning in
+healthy 70-year-olds, had it held, would still be a different causal regime from biallelic loss of
+function in a neonate. The node-independence status of `TRAPPC6AΔ` after all three readings is what
+it was before: **single-laboratory, uncorroborated.**
+
+**Method note, and it applies to every gene audit run over this tool's output.** The string counts
+originally offered for both `41390778` and `21766012` are **withdrawn as evidence**. The MCP
+extractor deletes every italicised token, and gene symbols in these journals are italicised:
+`TRAPPC6A` occurs **zero** times in the Lothian body text — and so do `APOE`, `APP`, `BIN1`, `CLU`
+and `PICALM`, which that paper is *entirely about*. The damage is visible in what the tool returns
+(*"One 3-SNP window from thelocus reached significance"*). Under `D-15`, **a zero count produced by
+an instrument known to delete the class of token being counted is an instrument reading, not a
+negative.** The isoform conclusion above rests on study **design**, stated in the papers' own
+Methods, and not on any count.
+
+*(Orchestrator, 2026-09-21. Retraction recorded by append, per the append-only discipline: the
+original claim in § 3 is left standing above so that what was claimed, and on what basis, remains
+readable. No canonical current file is modified by this note; no commit candidate is created.)*
