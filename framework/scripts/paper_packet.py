@@ -66,7 +66,6 @@ ROOT = HERE.parents[1]
 if str(HERE) not in sys.path:
     sys.path.insert(0, str(HERE))
 
-import derived_inputs  # noqa: E402
 import fulltext_receipts as receipts  # noqa: E402
 import registry_records  # noqa: E402
 
