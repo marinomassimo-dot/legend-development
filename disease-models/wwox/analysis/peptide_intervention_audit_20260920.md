@@ -375,3 +375,60 @@ paediatric neurodevelopmental indication that is a disqualifying property indepe
 PMID 34140629 — [10.1038/s42003-021-02271-2](https://doi.org/10.1038/s42003-021-02271-2).
 PMID 32764489 — [10.3390/cancers12082189](https://doi.org/10.3390/cancers12082189).
 Nothing in this file is medical advice; it is a therapeutic-transferability audit for a disease model.*
+
+---
+
+## 🔴 ADDENDUM — 2026-09-21: an independent laboratory, in neurons, reports that **inhibiting** WWOX is the protective move
+
+This audit established the sign for `Zfra1-31` from inside the originating laboratory: **zfration
+takes WWOX as a substrate, so in a genotype with residual WWOX protein Zfra is directionally
+harmful, not inert** (§ 3.6). That finding now has **outside confirmation**, and it arrives in the
+one context that matters here — **neurons**.
+
+**`PMID 35984507`** — Carvalho C, Correia SC, Seiça R, Moreira PI 2022, *Cell Mol Life Sci*
+79(9):487, [DOI](https://doi.org/10.1007/s00018-022-04508-7), Center for Neuroscience and Cell
+Biology / CIBB, **University of Coimbra** — a laboratory with no connection to NCKU. Its **title is
+its finding**:
+
+> *"**WWOX inhibition** by Zfra1-31 **restores** mitochondrial homeostasis and viability of neuronal
+> cells exposed to high glucose."*
+
+From the abstract: Zfra1-31 is described as *"**the specific inhibitor of WWOX**"*; *"high glucose
+increased the levels of **activated WWOX**"*; *"the **activation of WWOX preceded** mitochondrial
+dysfunction and cell death"*; *"the **inhibition of WWOX with Zfra1-31 reversed**, totally or
+partially, the alterations promoted by high glucose"*. There is an in-vivo correlate: *"brain
+cortical and hippocampal homogenates from young (6-month old) diabetic GK rats showed increased
+levels of activated WWOX compared to older GK rats"*.
+
+**What this does to the audit's conclusions.** It does not change any of them. It **hardens** the
+one that matters most, and moves it out of the originating laboratory:
+
+| Before | After |
+|---|---|
+| Zfra is directionally harmful in a WWOX-residual genotype — **inferred from the Chang lab's own chemistry** | Same conclusion, now **independently corroborated in differentiated neuronal cells, with an animal correlate**, by a group using the reagent as an **inhibitor of WWOX** and saying so in the title |
+
+🔴 **And it completes a three-line convergence that is the strongest structural result of this
+session.** Every therapeutic candidate this literature has produced acts by **antagonising WWOX**:
+
+1. **The pTyr33-WWOX peptide** (`PMID 18371080`, `FT-109`, packet `A6`) — *"activated WOX1 plays an
+   essential role in the MPP+-induced neuronal death"*; the dominant negative *"abolished this
+   event"*. The peptide protects by blocking, not by substituting.
+2. **The C1q→WOX1 axis** (`PMID 19484134`, `FTR-20260921-19484134-01`) — the authors' own neuronal
+   extrapolation is *"There is a strong possibility that C1q activates WOX1 in neurons, which
+   ultimately leads to cell death."*
+3. **Zfra1-31** — this paper, **from outside the laboratory that invented the reagent, in neurons**.
+
+**A WWOX antagonist has nothing to antagonise in a WWOX-deficient brain**, and in a compound
+heterozygote carrying a missense allele that still produces protein, removing that residual protein
+is the **opposite** of the therapeutic goal. **This is a category objection, not a dosing one: it is
+not fixed by a different schedule, a different route or a BBB-penetrant formulation.**
+
+⚠️ **Honesty about what this addendum is.** It rests on an **abstract**, not a reading. The full
+text is unobtainable here — `PMC11071800` resolves and returns a **zero-length body** — so the paper
+is filed as packet item **`A9`**, at the top of the list, precisely so that it is *read* rather than
+*cited*. The specific things that could still change the picture are named there: whether any
+**genetic** WWOX manipulation exists alongside the peptide (Zfra is covalent and promiscuous, so
+*"Zfra protects"* and *"less WWOX protects"* are not the same claim), and whether **total** WWOX or
+only **pTyr33**-WWOX moves.
+
+**Nothing in this addendum is medical advice.**

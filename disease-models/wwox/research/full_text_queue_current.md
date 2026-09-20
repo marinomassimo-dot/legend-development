@@ -3833,6 +3833,49 @@ nude**, senza il prefisso letterale `PMID`. Misurato, non dedotto: dei quattro, 
 il formato della stringa.** Dichiararne uno solo — quello che il tool sa vedere — sarebbe stato
 aggirare il controllo mentre lo si soddisfa.
 
+**🔴 STATO — 2026-09-21: PARZIALMENTE CHIUSA, E LA CONCLUSIONE NEGATIVA CHE QUESTA VOCE PROTEGGEVA
+È FALSIFICATA COME ERA FORMULATA.** Dei quattro, **uno solo era leggibile** e lo si è letto:
+`24008736` (artefatto `files/fulltext/PMID24008736_PMC_MCPtext.txt`, 32 855 byte, sha256
+`ccfcb113…42c83031`, CC BY-NC-ND 3.0; ricevuta `FTR-20260921-24008736-01`; audit
+[`wwox_autophagy_sign_audit_20260921.md`](../analysis/wwox_autophagy_sign_audit_20260921.md)).
+
+- 🔴 **Il titolo vero è** *"WWOX suppresses autophagy for inducing apoptosis in **methotrexate-treated
+  human squamous cell carcinoma**"*. Lo stub `CORPUS-STUB-139` — *"WWOX suppresses autophagy"* — sono
+  **le prime cinque parole del titolo con la clausola di scope amputata**. Non è falso: ha promosso
+  in silenzio un enunciato circoscritto a enunciato generale. **È esattamente ciò che un argomento
+  costruito su stub eredita.**
+- 🔴 **Il segno È fissato**, quattro volte, e una delle quattro è un braccio di perdita di funzione
+  **germinale, senza farmaco e non tumorale**: *"In our recently developedgene knockout mouse
+  embryonic fibroblasts, increased expression of LC3-II protein was detected … as compared with
+  thecontrol cells."* ⚠️ Le etichette di genotipo in quella frase sono **cancellate dall'estrattore**
+  (corsivo): quali genotipi siano confrontati è **inferito dalla struttura della frase, non letto**.
+- ⚠️ **Ma il flusso non è mai stato clampato su una manipolazione di WWOX.** Il clamp E64d +
+  pepstatina A è stato applicato **solo al braccio MTX**, mai ai MEF knockout. E nello stesso
+  sistema *"a proteasome inhibitor MG132 blocked MTX-induced LC3 protein downregulation"* — **LC3 è
+  degradata per via proteasomale**, quindi LC3-II non è un proxy pulito di autofagia qui. `p62`,
+  `SQSTM1`, `bafilomycin`, `chloroquine`: **zero occorrenze** (parole in tondo, zeri informativi).
+- ⚠️ **La via mTOR è asserita, mai testata:** *"**raising the possibility** that WWOX may regulate
+  autophagy through mTOR activation"*. Nessun esperimento di epistasi; `rapamycin` compare una volta,
+  come espansione dell'acronimo; `4E-BP` zero.
+- **Forma ristretta che sopravvive, e va usata al posto della vecchia:** *la direzione **è** fissata
+  come soppressiva **sull'abbondanza a stato stazionario delle proteine dell'autofagia**; **non** è
+  stabilita sul **flusso**, **non** è stabilita in tessuto **neurale o di sviluppo**, e la **via
+  mediata da mTOR** resta asserita e non testata in nessun punto di questo corpus.*
+- 🔴 **Conseguenza sulla tensione residua: lo stallo «due direzioni opposte» si riduce a UN paper.**
+  `33300063` diventa il membro **concordante** non letto; l'unico discordante è `36621327` (*WWOX
+  **attiva** l'autofagia*, danno polmonare da LPS). **La sua priorità di acquisizione sale sopra le
+  altre due.**
+- ⚠️ **Rettifica su `33300063`:** era stato annotato come «no PMC» sulla base di
+  `is_open_access:false`. Quel flag arrivava con `checked_sources: ["pubmed"]`, cioè **PMC non era
+  stato consultato**. Non è verificato come bloccato: è **non testato**.
+- **Censimento dell'asse, fatto nello stesso ciclo:**
+  [`wwox_mtor_autophagy_axis_census_20260921.md`](../analysis/wwox_mtor_autophagy_axis_census_20260921.md)
+  — 15 PMID in tutto, 4 dichiarano una direzione, **2 contro 2**, e i tre non-Chang vengono da tre
+  gruppi scollegati che **continuano a non essere d'accordo fra loro**: la spiegazione deflazionaria
+  «artefatto di un solo laboratorio» è esclusa. ⚠️ Il pareggio **non** va riportato come «la
+  letteratura è divisa, quindi l'effetto è nullo»: sono quattro abstract in quattro contesti di
+  stress diversi, **tre dei quali a sola sovraespressione**.
+
 **Non è mia da chiudere** la parte sullo strumento: allargare `PMID_PATTERN` o farlo lavorare sui
 record del registro invece che sulla stringa è una modifica a un gate, e passa da Plan. La parte
 mia è che il debito ora è dichiarato per tutti e quattro.

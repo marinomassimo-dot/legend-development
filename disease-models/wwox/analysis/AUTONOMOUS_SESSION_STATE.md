@@ -67,6 +67,12 @@ resumes from here. **Not a handoff and not a stop.**
   `.gitignore` and the artefact was never under version control. The earlier reading stands — its
   quotations are all present in the current artefact and were re-verified — but its fingerprint no
   longer binds to a file. Declared in `FTR-20260921-25650666-02` rather than quietly re-anchored.
+- 🔴 **`is_open_access: false` is often a NOT-CHECKED reading, not a paywall.** Look at
+  `checked_sources`: if it is `["pubmed"]` alone, PMC was never consulted and the flag means
+  nothing. **A PMCID existing is not evidence of retrievability either** (`PMC4935222` and
+  `PMC6965410` both resolve and both return a zero-length body). **Retrievability is established
+  only by attempting the fetch and measuring the body length.** Both halves of this rule cost this
+  session real work before it was written down.
 - 🔴 **INTERROGATIVE-TO-DECLARATIVE RE-VOICING — a citation-fidelity failure mode that string
   comparison cannot catch.** A source's *question* is quoted accurately and re-attributed as its
   *finding*. Every content word matches, so quote-matching and grep find nothing; only reading the
@@ -106,11 +112,56 @@ resumes from here. **Not a handoff and not a stop.**
 4. ~~**FT-092** / `PMID 25238782`~~ — **CLOSED, read.** The 2016 framing is the faithful one: the
    chapter **proposes**, it does not conclude, and the phrase attributed to it is its **question**.
    Named the re-voicing failure mode above.
-5. **FT-074** — four mTOR/autophagy stubs two reasoning files already lean on. **Now the highest
-   unread item in the accessible queue.**
+5. ~~**FT-074** — four mTOR/autophagy stubs two reasoning files already lean on.~~ **PARTLY
+   CLOSED, and the standing negative is FALSIFIED as stated.** `24008736` read: it **fixes** the
+   sign (WWOX ⊣ autophagy), four times, including a **germline `Wwox`-knockout MEF arm** that is
+   loss-of-function, drug-free and non-cancer. The narrowed form that survives: the direction **is**
+   fixed on **steady-state autophagy-protein abundance**; it is **not** established on **flux**
+   (no clamp was ever applied to a WWOX manipulation, and the paper's own MG132 result shows LC3 is
+   being degraded proteasomally in that system), **not** established in neural tissue, and the
+   **mTOR-mediated route is asserted, never tested**. The two-directions standoff now reduces to
+   **one** discordant paper, `36621327`, whose acquisition priority rises above the other two.
 6. **`PMID 27869163`** (Wwox–Brca1, CC BY-NC-ND) — copyright-verified open, never dispatched.
 
 ## Permanently evidence-blocked — do not retry automated routes
 `15126504` (`FT-024`, no PMCID) · `27569545` (`FT-105`, **licence wall**, verified) · `15026124`
 (no PMC) · `33914858` (no PMCID) · `24369382` (empty PMC body) · `17803050` (no DOI/PMCID).
 Packaged for a human in `acquisition_packet_20260920.md`.
+
+**Added 2026-09-21, each verified with `get_copyright_status` and/or `convert_article_ids` — do not
+re-test:**
+
+| PMID | Why it is blocked | Where it now lives |
+|---|---|---|
+| `18371080` | **no PMCID** (record returns the PMID alone); Wiley paywall | `FT-109` · packet **`A6`** |
+| `25416187` | PMCID **`PMC4935222` exists but is a metadata-only stub** — `full_text:""`, `is_open_access:false`, `found_in_pmc:0` | `FT-090` · packet **`A7`** |
+| `26345274` | **no PMCID** | `FT-032` · packet **`A8`** |
+| `33134515` | licence wall | `FT-098` |
+| `33300063` | ⚠️ **weaker than first written — see the correction below** | `FT-074` |
+| `31966718`, `36621327` | verified unobtainable earlier in this session | `FT-074` |
+| `30094525` | ⚠️ **weaker than first written — see the correction below** | `FT-032` |
+| `11719429` | ⚠️ **weaker than first written — see the correction below** | `FT-032` |
+| `17360458` | `PMC1820689` exists, PNAS 2007, **not OA-licensed**; a local PDF exists but **this checkout has no PDF tooling** | `FT-032` |
+| `28123895` | `PMC5214935`, `idIsNotOpenAccess` / `pdf_only` per the surface census | `FT-018` |
+
+🔴 **CORRECTION TO THE THREE ROWS MARKED ABOVE, made the same hour, against myself.**
+`is_open_access: false` is **not** a statement that a paper is paywalled. For `33300063`,
+`30094525` and `11719429` the tool returned `source: "not_available"` with
+`checked_sources: ["pubmed"]` — **PMC was never consulted**, so the flag records *what was not
+checked*, not *what is not there*. Demonstrated within this session: `41124647` returned
+`is_open_access: false` with `checked_sources: ["pubmed"]`, and its body then came back **in full at
+68,491 characters**. Those three rows are therefore **not verified blocked**; they are *untested*.
+The authority on whether a PMCID exists is **`convert_article_ids`**, and the only authority on
+retrievability is **attempting the fetch and measuring the body length**. The rows that ARE verified
+are the ones where `checked_sources` includes `pmc`, or where a fetch was attempted and returned an
+empty body.
+
+⚠️ **The stub trap, stated once so it is not rediscovered:** a **PMCID existing does not mean a body
+exists**. `PMC4935222` resolves, round-trips through `convert_article_ids`, and returns HTTP success
+with `"full_text":""`. **Check `get_copyright_status` for `found_in_pmc` and `is_open_access` before
+dispatching a read**, and treat an empty body as a licence wall, not a transient failure.
+
+**Copyright-verified OPEN and still unread:** `27869163` (Wwox–Brca1, CC BY-NC-ND 4.0, PMC5398941) ·
+`35573960` (Front Pediatr 2022, `PMC9100683` — the tool reports `is_open_access:false` with a null
+licence field, but Frontiers deposits full text, **so this one is worth exactly one fetch
+attempt**).

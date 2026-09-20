@@ -214,6 +214,61 @@ Military Medical City, Riyadh; King Faisal Specialist Hospital and Research Cent
 
 ---
 
+## A9 · `PMID 35984507` — Carvalho C, Correia SC, Seiça R, Moreira PI 2022, *Cell Mol Life Sci* 79(9):487 · **new, no FT entry yet**
+**DOI** 10.1007/s00018-022-04508-7 · **PMCID `PMC11071800` exists and returns a ZERO-LENGTH BODY** —
+the stub trap again. *Added 2026-09-21.*
+
+**Title, quoted because the title is the finding:** *"**WWOX inhibition** by Zfra1-31 **restores**
+mitochondrial homeostasis and viability of neuronal cells exposed to high glucose."*
+
+**What it settles, in one sentence:** whether an **independent laboratory**, working in **neurons**,
+finds that **blocking** WWOX is neuroprotective — which, if it holds, is the strongest available
+evidence that the Chang/NCKU therapeutic peptides are **categorically the wrong direction** for a
+genotype that already has too little WWOX.
+
+**Why this is the highest-value unread paper the session has surfaced.** It is, on its abstract,
+the only paper in this corpus that is **simultaneously** primary, **neuronal**, **non-cancer**,
+**loss-of-function-shaped** (it *inhibits* WWOX rather than overexpressing it), and from a
+**laboratory independent of the group that invented the reagent** (Center for Neuroscience and Cell
+Biology / CIBB, University of Coimbra — Moreira PI senior). Every other Zfra result in this
+repository is from the laboratory that proposes Zfra.
+
+**The direction, from the abstract:** *"this study aimed to evaluate the role of **WWOX activation**
+in high glucose-induced neuronal damage and death"*; *"high glucose increased the levels of
+**activated WWOX**"*; *"the **activation of WWOX preceded** mitochondrial dysfunction and cell
+death"*; *"the **inhibition of WWOX with Zfra1-31 reversed**, totally or partially, the alterations
+promoted by high glucose"*; and Zfra1-31 is described as *"**the specific inhibitor of WWOX**"*.
+There is an in-vivo correlate: *"brain cortical and hippocampal homogenates from young (6-month old)
+diabetic GK rats showed increased levels of activated WWOX compared to older GK rats"*.
+
+🔴 **The convergence this completes, and it is the session's most consequential structural finding.**
+Three separate lines now say that the therapeutic candidates arising from this literature act by
+**antagonising WWOX**: the pTyr33 peptide of `A6` (*"activated WOX1 plays an essential role in the
+MPP+-induced neuronal death"*); the C1q→WOX1 axis (*"There is a strong possibility that C1q
+activates WOX1 in neurons, which ultimately leads to cell death"*, `FTR-20260921-19484134-01`); and
+now Zfra1-31, **in neurons, from outside the originating laboratory**. **A WWOX antagonist has
+nothing to antagonise in a WWOX-deficient brain, and removing residual hypomorphic protein is the
+opposite of the therapeutic goal.**
+
+⚠️ **This is an abstract. An abstract is not a read, and nothing above is adjudicated.** It is filed
+here precisely so that it is read rather than cited.
+
+**What to look for, specifically:** (1) **is WWOX knocked down anywhere, or is Zfra1-31 the only
+manipulation?** Zfra is a covalent, promiscuous reagent, so "Zfra protects" and "less WWOX protects"
+are not the same claim, and only a genetic arm separates them; (2) whether **total WWOX** as opposed
+to **pTyr33-WWOX** changes — the distinction between activation and abundance is load-bearing for a
+genotype whose problem is abundance; (3) **concentration, exposure time and vehicle** for Zfra1-31,
+and whether a scrambled or S8G control was used; (4) whether the **GK rat** arm is anything more
+than a correlation, and its n; (5) whether autophagy or mitophagy readouts include a **flux clamp**.
+
+**Routes remaining:** Springer via institutional login · Europe PMC (untried; the MCP surface is
+PMC-only and the PMC body is empty) · ILL · corresponding authors, whose addresses are in the PubMed
+record.
+**Ask for:** the Zfra1-31 methods paragraph and whichever figure carries a genetic WWOX manipulation,
+if one exists.
+
+---
+
 ## Priority order for a human with one hour
 
 1. **A1** (`15126504`) — settles a live mechanistic question *and* surfaces a therapeutic lever.
@@ -228,6 +283,10 @@ mechanistic one:)*
 - **A6** (`18371080`) — the only in-vivo therapeutic pointer in the batch, currently closed in the
   negative **on an abstract alone**. It is the cheapest way to either recover a therapeutic lead or
   retire one for good.
+- **A9** (`35984507`) — **read this one first if only one can be obtained.** It is the only
+  neuronal, non-cancer, loss-of-function-shaped, independently authored test of a WWOX-directed
+  therapeutic in the whole corpus, and its title reports that **inhibiting** WWOX is what protects
+  neurons.
 - **A8** (`26345274`) — **the highest-value single item added since this packet was written**, and
   it travels with `A7`: same authors, same institution, one request. It is the only route to a
   **human** counterpart for `CLAIM 039`'s cerebellar-sparing, and it carries five patients
