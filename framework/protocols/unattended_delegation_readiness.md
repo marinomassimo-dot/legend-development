@@ -79,7 +79,7 @@ the gate ship unwired.
 **Problem.** An orchestrating session has no flag to consult before exporting.
 
 **Evidence.** `framework/state/state_manifest_current.md` §6 carries `current_state`,
-`deep_dive_gate`, `ingest_gate`, `batch_commit_gate`, `active_parallel_branches`. There is no
+`deep_dive_gate`, `ingest_gate` and `batch_commit_gate`. There is no
 `export_gate`. Export state lives instead in the `window` object of
 `dismech_phase2_baseline.json` and in a prose phase table in `analysis/README.md`.
 

@@ -145,8 +145,15 @@ current_state: READY
 deep_dive_gate: OPEN
 ingest_gate: OPEN
 batch_commit_gate: OPEN
-active_parallel_branches: none
 ```
+
+> 🔴 **Branch and worktree state is not declared here.** `active_parallel_branches` was removed on
+> 2026-09-20: no script in the repository ever read it, and on that date it still said `none`
+> while a branch had been five commits ahead of `main` for two days. A field that nothing
+> consults cannot be wrong loudly — it can only be wrong quietly, which is worse than absent.
+> Git is the primary source for branches and worktrees (`git branch -a`, `git worktree list`,
+> `git ls-remote --heads origin`); it is always current by construction, and keeping a second
+> copy in step would cost more than reading the first.
 
 ### Why `batch_commit_gate` is closed — 2026-08-09
 
