@@ -237,8 +237,11 @@ is unchanged in both directions, because an erratum is not an integrity event.)*
   annotation therefore outranks the paper it annotates. This follows from the operator's decision
   and from a 2026-09-09 batch that predates it; it is recorded here because a reader who meets the
   pair should see that it was noticed, not inferred as a convention.
-- **PMID 38182577 carries two literature entries**, `LIT-0054` and `LIT-0416`. Possible duplicate,
-  checked only for existence here. Resolving it is a registry question this candidate does not open.
+- **PMID 38182577's "duplicate" literature entry was not one, and the flag was mine.** `LIT-0054` is the
+  study; `LIT-0416` is the erratum PMID 38355659, which names 38182577 in its short title. A substring search
+  over entry bodies returned both — identity confused with mention, the very distinction
+  `registry_records.py` was built to keep. Checked read-only on 2026-09-20 and RETAINED as two correct
+  entries; `CORPUS P027` links only `LIT-0054`.
 - **PMID 42082822's identifier**, per § 3.
 
 ---

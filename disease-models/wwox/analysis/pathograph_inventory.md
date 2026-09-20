@@ -328,6 +328,6 @@ carried no connective from the lexicon.
 ## Provenance
 
 Derived from 84 input files; digest
-`806eac6d7ed2b2b9`. Sources: the claim, paper and
+`aa741c9898e034e4`. Sources: the claim, paper and
 working-model registries, and every deep-dive work manifest.
 
