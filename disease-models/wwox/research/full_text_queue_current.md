@@ -4542,8 +4542,10 @@ anche se la coorte dà un denominatore WWOX su 129 DEE — utile al counselling,
 
 ## FT-108 — PMID 19484134 · il paper **meccanicistico** su C1q→WWOX, open access, mai letto
 
-**Paper:** PMID 19484134 — Hsu L-J, … Chang N-S 2009, *PLoS One* · PMCID `PMC2685983` · open access
-**Registry:** esiste come [[paper_registry_current#CORPUS P331]], `Status: screened — corpus placeholder`, **nessun deep-dive**.
+**Paper:** PMID 19484134 — **Hong Q**, Sze C-I, Lin S-R, … Hsu L-J, Chang N-S 2009, *PLoS One* 4(6):e5755 · PMCID `PMC2685983` · DOI 10.1371/journal.pone.0005755 · CC BY 4.0
+**Registry:** esiste come [[paper_registry_current#CORPUS P330]], `Status: screened — corpus placeholder`, **nessun deep-dive**.
+
+> 🔴 **Due errori di puntatore in questa voce, corretti il 2026-09-21, e sono miei.** La prima stesura > diceva `CORPUS P331` e attribuiva il paper a *«Hsu L-J … Chang N-S»*. **`CORPUS P331` è Zhu et al. 2021, > *Vet Microbiol*, PMID 33191002, miR-155 del virus della malattia di Marek** — un altro paper. Il record > giusto è **`CORPUS P330`** (`LIT-0330`, «Hong et al.», PMID/PMCID/DOI corretti). E il **primo autore è > Hong Q**; Hsu L-J è decimo di undici. **Il registry era corretto su entrambi i punti: l'errore era solo > in questa voce di coda.** L'ho scritta propagando un identificatore e un'attribuzione dal rapporto di un > delegato senza verificarli contro il registry — esattamente la modalità di errore che questa sessione ha > documentato sette volte nella letteratura altrui. Registrato qui invece che riscritto in silenzio.
 **Priority:** **ALTA**
 
 🔴 **Il reperto che genera questa voce, ed è un reperto sul repository, non sulla letteratura.**
@@ -4567,4 +4569,6 @@ attivare, e nulla in questa letteratura dice che si possa alzare l'attivazione q
 scarseggia. ⚠️ Cellule di carcinoma prostatico, non neuroni. ⚠️ Laboratorio Chang: si applica il
 flag di [[paper_registry_current#PAPER 053]], e la distinzione necessità-vs-sufficienza stabilita
 nell'adjudication Chang↔Aldaz.
-**Next action:** acquisire da PMC (`PMC2685983`) e leggere integralmente.
+**Next action:** ✅ **DISCHARGED 2026-09-21** — letto integralmente, ricevuta `FTR-20260921-19484134-01`.
+**Esito, in breve:** 🟡 **PARZIALMENTE SOSTENUTO, e i due bracci non si toccano mai.** Il braccio di attivazione è su **proteina endogena** — siero ΔC1q abbassa la pTyr33-WWOX di ~50% (P<0.001, n=3) e la sposta in citoplasma; C1q purificato ripristina la p-WOX1 nucleare in 1 h — **mentre la WWOX totale resta esplicitamente invariata**. Questa è la dissociazione attivazione-vs-abbondanza che il modello cercava, ed è endogena, quindi la critica di sovraespressione di Aldaz non la raggiunge. Il braccio Y33R, invece, è **interamente ectopico** e legge **morfologia**, senza statistica, senza n per braccio e **senza controllo di espressione del costrutto** — quindi «il mutante non uccide» e «il mutante non era espresso» non sono distinguibili. 🔴 **Nessun esperimento chiede se C1q generi ancora p-WOX1 in un fondo Y33R**: il «through Tyr33» è un'inferenza fra sistemi che non si sovrappongono. L'anticorpo pY33 è un policlonale di casa **mai validato contro il mutante Y33R che il laboratorio già possedeva**. **pS14 non è mai misurata né nominata.** Nessun recettore è nominato: *«Binding of Hyal-2 with C1q remains to be determined»*.
+🔴 **E per un genotipo loss-of-function punta nella direzione sbagliata, due volte.** L'effetto richiede sovraespressione ed è dose-dipendente dalla WWOX fornita; gli autori scrivono che il signaling *«could be less efficient in cancers, as many advanced cancer cells are deficient in the wild type WWOX/WOX1»*. E l'estrapolazione neuronale degli autori stessi è **verso la morte**: *«There is a strong possibility that C1q activates WOX1 in neurons, which ultimately leads to cell death.»* L'endpoint misurato di tutto l'asse è l'apoptosi. **Nessuna terapia proposta, nessuna classe di farmaco nominata.**
