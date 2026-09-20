@@ -572,8 +572,11 @@ class QueueIntegrityTests(unittest.TestCase):
     _ANY_HEADING = re.compile(r"^#{1,4}[ \t]+\S.*$", re.M)
     _COUNTABLE_RECORD = re.compile(r"^(?:paper\s+\d+|corpus\s+p\d+)\b")
 
+    _IDENTIFIER_LINE = re.compile(r"(?m)^\*\*identifier:\*\*\s*(.*)$")
+
     @classmethod
-    def _papers_claiming_full_text(cls, registry_text: str) -> int:
+    def _papers_claiming_full_text(cls, registry_text: str,
+                                   notice_pmids: frozenset = frozenset()) -> int:
         """Count REGISTRY RECORDS carrying at least one full-text marker — not marker occurrences.
 
         The unit matters and was wrong twice, in the same direction both times: the denominator
@@ -599,6 +602,18 @@ class QueueIntegrityTests(unittest.TestCase):
         out: a stub is a placeholder by construction, and none of the 168 in this file declares a
         full-text marker, so including them would only widen the denominator with records that can
         never claim a read.
+
+        2026-09-20, second arm — records are not only studies. An editorial notice is a
+        publication and is not a study: a correction, an erratum and an expression-of-concern
+        notice are readable, citable and worth a receipt, and none of them reports a result.
+        `PAPER 092` is one — `Source type: published erratum, attached to PMID 38182577` — and it
+        declares full text, so it sat on the registry side of a comparison whose other side the
+        operator has ruled must not contain notices. `notice_pmids` comes from
+        `batch_queue.editorial_notice_pmids`, which derives it from the same `_integrity`
+        classifier the queue side uses: ONE definition, so the two populations cannot drift apart
+        by disagreeing about the term. The notice keeps its record, its receipt, its provenance
+        and its link to the paper it annotates — it is excluded from a count, not from the
+        repository.
         """
         heads = [match.start() for match in cls._ANY_HEADING.finditer(registry_text)]
         if not heads:
@@ -610,20 +625,141 @@ class QueueIntegrityTests(unittest.TestCase):
             record_id = block.split("\n", 1)[0].lstrip("#").strip()
             if not cls._COUNTABLE_RECORD.match(record_id):
                 continue
+            if notice_pmids:
+                identifier = cls._IDENTIFIER_LINE.search(block)
+                if identifier and any(pmid in notice_pmids
+                                      for pmid in bq.identifiers(identifier.group(1))[0]):
+                    continue
             if any(marker in block for marker in bq.FULL_TEXT_MARKERS):
                 counted += 1
         return counted
 
     def test_coverage_is_not_overstated_against_the_registry(self) -> None:
-        """Records counted as read may never exceed the registry's own full-text claims."""
+        """STUDIES counted as read may never exceed the registry's own full-text study claims.
+
+        Both sides exclude editorial notices, and they exclude them by the same definition.
+        """
         registry = (REGISTRIES / "paper_registry_current.md").read_text(encoding="utf-8").lower()
-        claimed = self._papers_claiming_full_text(registry)
+        notices = frozenset(bq.editorial_notice_pmids(REGISTRIES))
+        claimed = self._papers_claiming_full_text(registry, notices)
         report = bq.build(ROOT, "wwox")
+        read = report["study_counts"].get("full text", 0)
         self.assertLessEqual(
-            report["counts"].get("full text", 0), claimed,
-            f"{report['counts'].get('full text', 0)} studies counted as read against {claimed} "
-            f"registry records (PAPER or CORPUS) claiming full text. The gap is reading that "
-            f"has happened and is not yet in the registry; only a BATCH_COMMIT closes it.")
+            read, claimed,
+            f"{read} STUDIES counted as read against {claimed} registry records (PAPER or "
+            f"CORPUS, editorial notices excluded from both sides) claiming full text. The gap "
+            f"is reading that has happened and is not yet in the registry; only a BATCH_COMMIT "
+            f"closes it.")
+
+    def test_a_normal_full_text_study_is_in_the_study_numerator(self) -> None:
+        """Arm 1 — anti-vacuity. If the exclusion removed studies too, every arm below would
+        pass while the measurement collapsed."""
+        report = bq.build(ROOT, "wwox")
+        self.assertGreater(report["study_counts"]["full text"], 70,
+                           "the study numerator must still hold the corpus's real reading")
+        seeds, _ = bq.load_seeds(REGISTRIES)
+        by_pmid = {item.get("pmid"): item for item in seeds}
+        # PMID 38182577 is a study AND is annotated by a correction notice: being pointed at by
+        # a notice must not remove a paper from the study population (arm 6).
+        self.assertFalse(bq.is_editorial_notice(by_pmid["38182577"]))
+        self.assertFalse(bq.is_editorial_notice(by_pmid["16223882"]))
+        self.assertFalse(bq.is_editorial_notice(by_pmid["29724996"]))
+
+    def test_the_three_editorial_notices_leave_the_study_numerator_and_only_them(self) -> None:
+        """Arms 2, 3 and 4 — erratum notice, correction notice and expression-of-concern notice.
+
+        Asserted on the live corpus rather than a fixture, and by NAME rather than by count: the
+        difference between the two censuses must be exactly the read notices, so the arm fails
+        both if a notice stays in and if a study is dropped.
+        """
+        report = bq.build(ROOT, "wwox")
+        removed = report["counts"]["full text"] - report["study_counts"]["full text"]
+        seeds, _ = bq.load_seeds(REGISTRIES)
+        index = bq.registry_index(REGISTRIES)
+        read_notices = set()
+        for seed in seeds:
+            if not bq.is_editorial_notice(seed):
+                continue
+            hit = index.get(f"pmid:{seed.get('pmid','')}")
+            if hit and hit["depth"] == "full text":
+                read_notices.add(seed["pmid"])
+        self.assertEqual({"38355659", "30470736", "28373548"}, read_notices)
+        self.assertEqual(len(read_notices), removed)
+        by_pmid = {item.get("pmid"): item for item in seeds}
+        self.assertEqual(bq._integrity(by_pmid["38355659"]), "erratum_notice")
+        self.assertEqual(bq._integrity(by_pmid["30470736"]), "erratum_notice")
+        self.assertEqual(bq._integrity(by_pmid["28373548"]), "concern_notice")
+        for state in bq.EDITORIAL_NOTICE_STATES:
+            self.assertIn(state, bq.INTEGRITY_PREFIX, "a notice state must stay printable")
+
+    def test_a_retraction_notice_is_excluded_and_a_retracted_study_is_not(self) -> None:
+        """Arm 4, and the boundary that keeps it honest. `RetractionOf` marks the notice;
+        `RetractionIn` marks the paper. A RETRACTED STUDY IS STILL A STUDY — one that may not
+        support a claim, which is a hold, not a change of kind."""
+        self.assertTrue(bq.is_editorial_notice({"corrections": "RetractionOf:23446842"}))
+        self.assertFalse(bq.is_editorial_notice({"corrections": "RetractionIn:42464650"}))
+        self.assertFalse(bq.is_editorial_notice({"corrections": "ExpressionOfConcernIn:28373548"}))
+        self.assertFalse(bq.is_editorial_notice({"corrections": "ErratumIn:38355659"}))
+        # Arm 7 — eligibility and direction are untouched by the study/notice split.
+        self.assertEqual(bq._eligibility(bq._integrity({"corrections": "RetractionIn:42464650"})),
+                         bq.HOLD)
+        self.assertEqual(bq._eligibility(bq._integrity({"corrections": "RetractionOf:23446842"})),
+                         "")
+        self.assertEqual(bq._eligibility(bq._integrity({"corrections": "ExpressionOfConcernIn:1"})),
+                         bq.HOLD)
+
+    def test_a_notice_already_held_as_a_paper_record_leaves_the_denominator(self) -> None:
+        """Arm 5 — `PAPER 092` is PMID 38355659, `Source type: published erratum`, and it
+        declares full text. Excluded from the study denominator by the same definition the
+        numerator uses, and by exactly one record, so the arm fails if the filter over- or
+        under-reaches."""
+        registry = (REGISTRIES / "paper_registry_current.md").read_text(encoding="utf-8").lower()
+        notices = frozenset(bq.editorial_notice_pmids(REGISTRIES))
+        self.assertIn("38355659", notices)
+        with_notices = self._papers_claiming_full_text(registry)
+        without = self._papers_claiming_full_text(registry, notices)
+        self.assertEqual(with_notices - 1, without,
+                         "exactly one registry record claiming full text is an editorial notice")
+        # And it is that record, not some other one: the block still exists and still declares
+        # what it is. Excluded from a count, never deleted.
+        self.assertIn("## paper 092", registry)
+        self.assertIn("published erratum", registry)
+
+    def test_the_paper_a_notice_annotates_stays_in_both_populations(self) -> None:
+        """Arm 6 — the corrected study is counted normally on both sides.
+
+        PMID 38182577 carries `ErratumIn:38355659`. It is a study, it is eligible, and it must
+        appear in the study numerator once its record declares the reading — which is what
+        `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` proposes. What this arm pins today is that
+        nothing about the notice removed it.
+        """
+        seeds, _ = bq.load_seeds(REGISTRIES)
+        by_pmid = {item.get("pmid"): item for item in seeds}
+        self.assertEqual(bq._integrity(by_pmid["38182577"]), "corrected")
+        self.assertEqual(bq._eligibility(bq._integrity(by_pmid["38182577"])), "")
+        self.assertFalse(bq.is_editorial_notice(by_pmid["38182577"]))
+        notices = frozenset(bq.editorial_notice_pmids(REGISTRIES))
+        self.assertNotIn("38182577", notices)
+        # 16223882 is under an expression of concern: HELD, and still a study.
+        self.assertEqual(bq._eligibility(bq._integrity(by_pmid["16223882"])), bq.HOLD)
+        self.assertNotIn("16223882", notices)
+
+    def test_the_two_censuses_partition_the_seed_and_neither_hides_a_reading(self) -> None:
+        """Arm 7, the structural half. `counts` is untouched — same totals, same depths, every
+        receipt still visible in the rendered queue — and `study_counts` plus the notices
+        partition the same corpus. A census that reclassified rows would have hidden evidence
+        to move a number."""
+        report = bq.build(ROOT, "wwox")
+        self.assertEqual(sum(report["counts"].values()), report["seed_total"])
+        self.assertEqual(sum(report["study_counts"].values()) + report["editorial_notices"],
+                         report["seed_total"])
+        for depth, total in report["study_counts"].items():
+            self.assertLessEqual(total, report["counts"][depth],
+                                 "the study census can never exceed the census it is drawn from")
+        # The reading of a notice is not erased: its row keeps its depth and names its receipt.
+        rendered = bq.render(report, limit=0)
+        self.assertIn("FTR-20260909-30470736-01", rendered)
+        self.assertIn("CORRECTION NOTICE", rendered)
 
     def test_a_paper_with_two_markers_counts_once(self) -> None:
         """The regression for the unit error itself: markers are not papers."""

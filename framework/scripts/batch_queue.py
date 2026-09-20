@@ -140,6 +140,21 @@ INTEGRITY_PREFIX = {"retracted": "🛑 RETRACTED — ",
 # already integrated: the queue names those explicitly, because a hold that only governs
 # future work leaves the claims that already rest on the paper exactly where they were.
 INTEGRITY_HOLD_STATES = ("retracted", "concern")
+
+# 🔴 AN EDITORIAL NOTICE IS A PUBLICATION AND IS NOT A STUDY, AND THE COVERAGE GUARD HAS TO SAY
+# WHICH IT IS COUNTING. A correction, an erratum, an expression-of-concern notice and a
+# retraction notice are all readable, all citable, all worth a receipt when someone reads one —
+# and none of them reports a result. Counting them among "studies read" compares a population
+# that admits them against a registry population that should not, which is the same unit error
+# `_papers_claiming_full_text` was repaired for twice: markers are not papers (2026-09-09), and
+# PAPER-only is not the record population (2026-09-20). This is the third instance, one level
+# out: publications are not studies.
+#
+# These are the NOTICE side of a PubMed correction link, never the affected paper. The affected
+# paper keeps its own state (`retracted`, `concern`, `corrected`), keeps its hold where it has
+# one, and stays a study throughout — a retracted study is a study that may not support a claim,
+# not a non-study.
+EDITORIAL_NOTICE_STATES = ("retraction_notice", "concern_notice", "erratum_notice")
 HOLD = "PUBLICATION_INTEGRITY_HOLD"
 INTEGRITY_ACTION = {
     "retracted": "may not support or promote any claim; audit every claim already resting "
@@ -219,6 +234,28 @@ def _integrity(seed: dict[str, str]) -> str:
     if "ErratumFor" in kinds:
         return "erratum_notice"
     return "corrected"
+
+
+def is_editorial_notice(seed: dict[str, str]) -> bool:
+    """Is this seed row an editorial notice rather than a study?
+
+    Derived from the same `_integrity` classifier the queue already renders, so there is ONE
+    definition of "editorial notice" in the repository and the numerator and the denominator
+    cannot drift apart by disagreeing about it.
+    """
+    return _integrity(seed) in EDITORIAL_NOTICE_STATES
+
+
+def editorial_notice_pmids(registries: Path) -> set[str]:
+    """The PMIDs of every editorial notice in the seed corpus.
+
+    Exists so the registry side of the coverage comparison can exclude the SAME publications the
+    queue side excludes. A registry record cannot classify itself from its own prose without a
+    second definition of the term, and a second definition is how the two sides stop agreeing.
+    """
+    seeds, _ = load_seeds(registries)
+    return {seed["pmid"] for seed in seeds
+            if seed.get("pmid") and is_editorial_notice(seed)}
 
 
 def _free_full_text(seed: dict[str, str]) -> str:
@@ -436,13 +473,24 @@ def _build_uncached(root: Path, disease: str) -> dict:
 
     queue: list[dict[str, str]] = []
     counts = {"full text": 0, "partial full text": 0, "abstract only": 0, "catalogued only": 0, "screened": 0, "unmatched": 0}
+    # 🔴 TWO CENSUSES, BECAUSE THEY ANSWER TWO QUESTIONS AND ONE OF THEM WAS BEING ASKED IN THE
+    # OTHER'S NAME. `counts` is the read-depth census over EVERY seed row, and it stays exactly
+    # that: nothing is reclassified, no row's depth changes, no receipt is hidden, and
+    # `sum(counts.values()) == seed_total` still holds. `study_counts` is the same census over
+    # the rows that are studies. The coverage guard wants the second and had only the first.
+    study_counts = dict.fromkeys(counts, 0)
     actions: dict[str, int] = {}
+    notices = 0
     for seed in seeds:
         hit = index.get(f"pmid:{seed.get('pmid','')}")
         if hit is None and seed.get("doi"):
             hit = index.get(f"doi:{normalise_doi(seed['doi'])}")
         depth = hit["depth"] if hit else "unmatched"
         counts[depth] = counts.get(depth, 0) + 1
+        if is_editorial_notice(seed):
+            notices += 1
+        else:
+            study_counts[depth] = study_counts.get(depth, 0) + 1
 
         line = (
             f"{seed.get('title','')}. — PMID {seed.get('pmid','')}"
@@ -525,6 +573,8 @@ def _build_uncached(root: Path, disease: str) -> dict:
         "year_max": max(years) if years else None,
         "published_since_2020": sum(year >= 2020 for year in years),
         "counts": counts,
+        "study_counts": study_counts,
+        "editorial_notices": notices,
         "actions": actions,
         "outstanding": len(outstanding),
         "ready_now": len(ready_now),
