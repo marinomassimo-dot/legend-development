@@ -5,8 +5,10 @@ resumes from here. **Not a handoff and not a stop.**
 
 ## Current state
 - `main` == `origin/main` · working tree clean · one worktree · LINT **PASS** · publication gate
-  **PASS, 0 blocks** · receipts **170 chained, tail anchored**.
+  **PASS, 0 blocks** · receipts **175 chained, tail anchored**.
 - Papers with a receipt: **109** (was 97 at the start of the Chang batch).
+- **In flight at this write:** two Scientist readings — `FT-102` / `PMID 25650666` (the founding
+  `TRAPPC6AΔ` paper, PMC4414138) and `FT-073` / `PMID 27845895` (Hyal-2/WWOX/Smad4, PMC5386674).
 
 ## Completed programme so far
 1. **`SCIENTIST_CHANG_NS_…` waves 1–5** — closed, formally saturated.
@@ -50,6 +52,20 @@ resumes from here. **Not a handoff and not a stop.**
   `get_copyright_status` before re-queuing.
 - **The broad `landing`-field audit is a definitional artefact** (74/81) and expands into the
   fenced-off mass reconciliation. Run that screen only against a specific claim under question.
+- 🔴 **An identifier or a byline enters a durable record only by copy, in the same act, from a
+  verified source — never from recall and never from a delegate's prose.** This failed **twice in
+  two days**, both times mine, both times against a repository that already held the correct value:
+  `FT-108` was written with `CORPUS P331` and "Hsu L-J … Chang N-S" (correct: `CORPUS P330`,
+  first author **Hong Q**), and `FTR-20260921-21766012-01` was written with "Houlihan LM, Harris SE,
+  Luciano M" (correct: **Hamilton G**, Harris SE, Davies G, Liewald DC, Tenesa A, Starr JM,
+  Porteous D, Deary IJ — the queue entry and the analysis file both had it right). Corrected by
+  append in `FTR-20260921-21766012-02`.
+- **A zero string count for a gene symbol in MCP body text is an instrument reading, not a
+  negative.** Demonstrated conclusively on `PMID 21766012`: `TRAPPC6A` occurs **zero** times in the
+  body — as do `APOE`, `APP`, `BIN1`, `CLU`, `PICALM`, which the paper is entirely about — while the
+  symbol **survives intact in the PubMed metadata abstract**. The extractor deletes italicised
+  tokens. Under `D-15`, never let such a count carry a negative; rest the conclusion on study
+  design stated in Methods, or on prose you can quote.
 
 ## Next queue, ranked (as of this write)
 1. **FT-090** / `PMID 25416187` (PMC4935222) — the single citation carrying `27551470`'s only link
@@ -57,7 +73,10 @@ resumes from here. **Not a handoff and not a stop.**
 2. **FT-018** / `PMID 28123895` (PMC5214935) — C1q regulates WWOX **activation state**, not level.
    C1q is central to microglial synaptic pruning **and is druggable**. Highest therapeutic upside
    left in the accessible queue.
-3. **FT-098 / FT-099** — the other two independent `TRAPPC6A` cohorts.
+3. ~~**FT-098 / FT-099** — the other two independent `TRAPPC6A` cohorts.~~ **CLOSED.** `FT-099`
+   read (fails its own permutation); `FT-098` licence-walled. With `FT-097` already null, **all
+   three legs of the `TRAPPC6A` node-independence claim are down and the claim is retracted in
+   full** — see the retraction appended to `chang_ncku_wave2_node_independence_20260920.md`.
 4. **FT-092** / `PMID 25238782` — CFS fragility; cross-cutting citation-fidelity finding.
 5. **FT-074** — four mTOR/autophagy stubs two reasoning files already lean on.
 

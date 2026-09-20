@@ -4343,6 +4343,13 @@ che essa corrobora dall'esterno.
 **Next action:** acquisire da PMC (`PMC12820071`); stabilire se il segnale TRAPPC6A è guidato
 dall'isoforma Δ o dal gene, e se l'associazione con l'epilessia sopravvive all'aggiustamento APOE.
 
+**🔴 STATO — 2026-09-21: LETTO E CHIUSO. Il braccio epilessia è nullo in replicazione**
+(OR 1,01; IC 95% 0,96–1,06; p = 0,80; varianza < 0,01%). Gli autori stessi concedono *"minimal
+evidence supporting epilepsy-specific pathways"*. Nessuna analisi condizionale su APOE: l'Elastic
+Net è stato scelto **perché** tollera il LD, quindi `TRAPPC6A` (chr19q13.32) non è separabile dal
+segnale APOE. Misura il **gene**, mai l'isoforma. Settima inversione abstract-vs-risultati della
+letteratura. Vedi la correzione in `chang_ncku_wave2_node_independence_20260920.md`.
+
 ---
 
 ## FT-098 — PMID 33134515 · TRAPPC6A in un transcriptional risk score AD, coorti indipendenti
@@ -4355,6 +4362,11 @@ AD, volume ippocampale e spessore entorinale. **Limite dichiarato dalla rivista 
 (disegno caso-controllo, rischio di spectrum bias). Serve a stabilire se il nodo TRAPPC6A regge
 fuori dal laboratorio Chang, non a sostenere la cascata.
 **Next action:** acquisire; verificare se TRAPPC6A è misurato come gene o come isoforma.
+
+**🔴 STATO — 2026-09-21: BLOCCATO DA LICENZA, non letto e non leggibile qui.** Il PMCID esiste ma
+il deposito è fuori dal subset open-access (`get_copyright_status` verificato). **Non conta in
+nessuna delle due direzioni** e non può essere citato come corroborazione. Non ritentare le rotte
+automatiche: è materiale da acquisizione umana.
 
 ---
 
@@ -4369,6 +4381,23 @@ ragionamento non verbale in **entrambe** le coorti Lothian (n=505 e n=998) e nel
 correzione per test multipli, e l'aplotipo spiega **1,8%** della varianza. Gli autori la
 classificano come da approfondire.
 **Next action:** acquisire; stabilire se l'aplotipo copre la regione dell'isoforma Δ.
+
+**🔴 STATO — 2026-09-21: LETTO. Il risultato non sopravvive alla correzione degli autori stessi.**
+Verbatim dai Results: *"These SNP windows were not significant postpermutation analysis of the
+LBC1936."* L'unica permutazione che supera è calcolata sul dato **combinato, che contiene la coorte
+di scoperta** — non è un test indipendente. Significatività confinata al sottogruppo **APOE-ε4
+negativo**; replicazione a soglia **nominale non corretta** e su uno **strumento cognitivo diverso**;
+β −0,21 / 1,8 % e β −0,18 / 1,3 %. Gli SNP sono **copertura incidentale chr19/APOE**, non in LD con
+l'SNP GWAS motivante rs597668 (D′ = 0,22): *"it is unclear whether our results are detecting the
+same effect."* L'unità di analisi è una finestra genomica di 3 SNP su 1442 bp — **un test
+posizionale, privo di qualunque lettura a livello di trascritto**, quindi non poteva in nessun caso
+distinguere l'isoforma Δ. Audit: `lothian_trappc6a_audit_20260921.md`; ricevute
+`FTR-20260921-21766012-01` e `-02`.
+
+**Conseguenza sulle tre voci FT-097/098/099 prese insieme: la tesi di indipendenza del nodo
+`TRAPPC6A` è RITIRATA INTEGRALMENTE.** Una gamba nulla, una murata dalla licenza, una che fallisce
+la propria permutazione — e **nessuna delle tre ha mai riguardato l'isoforma**. `TRAPPC6AΔ` resta
+riportata da nessun gruppo fuori dal laboratorio Chang.
 
 ---
 
