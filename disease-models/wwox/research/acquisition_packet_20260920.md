@@ -100,6 +100,40 @@ the candidate needs weakening.
 
 ---
 
+## A6 · `PMID 18371080` — Lo, Chen 2008, *Eur J Neurosci* 27(7):1634–46 · `DL-MOL-008` / `HYP-20260709-04`
+**DOI** 10.1111/j.1460-9568.2008.06139.x · **no PMCID** (confirmed via `convert_article_ids`: the
+record returns the PMID alone) · Wiley paywall. *Added 2026-09-21.*
+
+**What it settles, in one sentence:** whether the pTyr33-WWOX peptide — the **only explicit
+therapeutic pointer with an in-vivo neurological result anywhere in this batch** — works by
+*supplying* a WWOX-dependent signal or by *blocking* one, because those two readings point in
+**opposite** directions for a genotype with no functional WWOX protein.
+
+**Why it is worth a human's time:** the peptide reached a therapeutic hypothesis in this repository
+on the strength of a **commentary from the same laboratory** (Sze 2015, `PMID 26355344`), which
+glosses it as useful *"in the restoration of neural function under WWOX deficiency"*. The primary's
+own abstract says the opposite about the direction of the pathway: *"activated WOX1 plays an
+essential role in the MPP+-induced neuronal death"*, and *"Dominant-negative WOX1, a potent
+inhibitor of Tyr33 phosphorylation, abolished this event."* On that reading the peptide is an
+**antagonist of an activated-WWOX death pathway**, which has nothing to antagonise in a
+WWOX-deficient brain. `HYP-20260709-04` is already `refuted` on this basis and `DL-MOL-008` is now
+closed in the same direction — **but both closures rest on an abstract, and an abstract is not a
+read.** This paper is the one document that can confirm or overturn them.
+
+**What to look for, specifically:** (1) the peptide's proposed **mechanism of action** in the
+Discussion — decoy/competitive inhibitor versus signal substitute; (2) **dose, route of
+administration, BBB penetration and duration of effect**, none of which appear in either the
+abstract or the commentary; (3) whether any arm tested the peptide in a **WWOX-depleted** background
+rather than an MPP+-intoxicated wild-type one; (4) the controls on the non-phospho peptide arm.
+
+**Routes remaining:** Wiley via institutional login · ILL · corresponding author (Chen Shur-Tzu /
+Chang Nan-Shan, National Cheng Kung University). **Do not re-test automated routes** — no PMCID
+exists and Wiley is unreachable from this deployment.
+**Ask for:** the Discussion passage on mechanism, and the peptide methods paragraph (sequence, dose,
+route, vehicle, timing).
+
+---
+
 ## Priority order for a human with one hour
 
 1. **A1** (`15126504`) — settles a live mechanistic question *and* surfaces a therapeutic lever.
@@ -107,6 +141,13 @@ the candidate needs weakening.
 3. **A3** (`15026124`) — resolves a four-way disagreement in the field's own restatements.
 4. **A2** (`27569545`) — settles whether a widely-cited odds ratio exists.
 5. **A4** (`33914858`) — removes a second-hand dependency.
+
+*(Added 2026-09-21, and it belongs near the top if the hour is a **therapeutic** hour rather than a
+mechanistic one:)*
+
+- **A6** (`18371080`) — the only in-vivo therapeutic pointer in the batch, currently closed in the
+  negative **on an abstract alone**. It is the cheapest way to either recover a therapeutic lead or
+  retire one for good.
 
 > **If a PDF arrives:** this checkout has **no PDF tooling**, so a PDF alone will not be readable
 > here. Extracted text or HTML is preferable; if only a PDF exists, the text layer should be

@@ -60,6 +60,15 @@ resumes from here. **Not a handoff and not a stop.**
   Luciano M" (correct: **Hamilton G**, Harris SE, Davies G, Liewald DC, Tenesa A, Starr JM,
   Porteous D, Deary IJ — the queue entry and the analysis file both had it right). Corrected by
   append in `FTR-20260921-21766012-02`.
+- 🔴 **Never re-fetch an article to a path an existing receipt already fingerprints, and check the
+  ledger for the PMID before dispatching a read.** `PMID 25650666` was re-fetched to
+  `files/fulltext/PMID25650666_PMC_MCPtext.txt` on 2026-09-21; the bytes changed
+  (`9635516b…` → `c6e336a9…`) and the original is **unrecoverable**, because `files/` is in
+  `.gitignore` and the artefact was never under version control. The earlier reading stands — its
+  quotations are all present in the current artefact and were re-verified — but its fingerprint no
+  longer binds to a file. Declared in `FTR-20260921-25650666-02` rather than quietly re-anchored.
+- **A stale queue entry will dispatch duplicate work.** `FT-102` still read *"non acquisito"* a day
+  after the paper had been read. Close a queue entry in the same cycle as the read, not later.
 - **A zero string count for a gene symbol in MCP body text is an instrument reading, not a
   negative.** Demonstrated conclusively on `PMID 21766012`: `TRAPPC6A` occurs **zero** times in the
   body — as do `APOE`, `APP`, `BIN1`, `CLU`, `PICALM`, which the paper is entirely about — while the
@@ -68,6 +77,11 @@ resumes from here. **Not a handoff and not a stop.**
   design stated in Methods, or on prose you can quote.
 
 ## Next queue, ranked (as of this write)
+0. **Landed this cycle:** `FT-102` / `PMID 25650666` (adversarial re-read — internal contradiction
+   on the load-bearing binding step; human arm is an age-confounded null; TPC6AΔ and TIAF1 collapse
+   to **one** node) and `FT-073` / `PMID 27845895` (the DisMech quote is real but is the strongest
+   of four statements, and the axis **attenuates** death when WWOX is scarce). `DL-BIO-004` and
+   `DL-MOL-008` updated; `PMID 18371080` added to the acquisition packet as **A6**.
 1. **FT-090** / `PMID 25416187` (PMC4935222) — the single citation carrying `27551470`'s only link
    to the reference genotype. Same "one sentence holds a claim" shape as `CLAIM 039`.
 2. **FT-018** / `PMID 28123895` (PMC5214935) — C1q regulates WWOX **activation state**, not level.

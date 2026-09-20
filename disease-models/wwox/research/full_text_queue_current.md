@@ -3719,6 +3719,47 @@ relocating from line 131 to line 712, its content byte-identical. Nothing hand-e
 before any normalisation, then read. Second: resolve `CORPUS P214`'s identifier against the
 tracking log entry of 2026-04-17 that the placeholder cites.
 
+**🔴 STATO — 2026-09-21: LETTO, debito di lettura estinto.** Artefatto
+`files/fulltext/PMID27845895_PMC_MCPtext.txt` (44 591 byte, sha256 `3e52aa0b…c835d6c7`, licenza
+CC BY 3.0); ricevuta `FTR-20260921-27845895-01`; audit `hyal2_wwox_smad4_audit_20260921.md`.
+**Verdetto: PARTIALLY SUPPORTED, CON UN DIFETTO DI SOURCING E UN PROBLEMA DI DIREZIONE.**
+
+- ✅ **`D-15`, esistenza: la frase citata da DisMech esiste verbatim** — *"In WWOX-deficient cells,
+  HA failed to induce Smad2/3/4 relocation to the nucleus."* È la **quinta frase dell'abstract**.
+  L'attribuzione è autentica.
+- 🔴 **`D-15`, fedeltà di forza: fallisce.** La stessa osservazione compare **quattro volte a quattro
+  intensità diverse**, e DisMech ha preso la più forte. La didascalia della Figura 2 — **l'unico
+  sistema geneticamente WWOX-null del paper** — dice il contrario in natura: *"When knockoutMEF
+  cells were stimulated with HA, Smad4 **appeared to relocate into nucleus in 4 hr**."* **Un
+  rilocamento ritardato e un rilocamento fallito non sono la stessa biologia**, e il nodo esterno è
+  stato costruito sulla seconda lettura.
+- 🔴 **La direzione è opposta a quella che un nodo chiamato «Complex Failure» implica per la perdita
+  neuronale.** **Ogni** manipolazione che toglie WWOX **riduce** il segnale verso la morte, e gli
+  autori estrapolano proprio così, anche per i neuroni: *"HA protects neurons from traumatic brain
+  injuries, and this could be related with HA-mediated disappearance of Hyal-2, **which reduces the
+  WWOX/Smad4 signaling**."* Sull'endpoint misurato, **meno WWOX = meno morte**.
+- **Dipendenza da WWOX: `WWOX-DEPENDENT`**, senza alcun passo a valle indipendente → **nulla di
+  questo asse è trasferibile a un genotipo privo di proteina WWOX funzionale.** WWOX è il ponte
+  fisico (*"Hyal-2 could not bind Smad4, indicating that WWOX connects the binding"*) e la Tyr33 è
+  necessaria al legame (*"No binding interaction was observed using … WWOXww(Y33R)"*).
+- **Il titolo porta la propria squalifica e il paper la ripete due volte:** *"…causes bubbling cell
+  death **when the signaling complex is overexpressed**"*, e in Discussion *"…in WWOX-expressing
+  normal and cancer cells. **No apparent cell death occurs.**"* **Ogni endpoint di morte è
+  ectopico.** Nessun braccio di rescue/ri-espressione in tutto il paper.
+- **Pavimento metodologico: nessun test statistico, nessun p, nessuna misura di errore in tutto il
+  paper**; *"All experiments in this study were repeated 2-5 times"*; l'unico n dichiarato è
+  *"(n=4; 20 cells per count)"*. Il braccio due-ibridi usa uno **Smad4 troncato (43 kDa, Δ aa
+  392–551)**; il braccio FRET usa **Hyal-2 privo dell'ancora GPI**.
+- **Materiale neurale: sottile e mai WWOX-deficiente** — SK-N-SH (solo co-IP) e un modello di trauma
+  cranico nel **ratto wild-type**. Nessun neurone primario, nessun cervello WWOX-null, nessun
+  endpoint di crisi. I MEF sono fibroblasti.
+- **La domanda C1q lasciata aperta da `PMID 19484134` NON è chiusa qui:** il paper è silente su C1q.
+- ✅ **Cosa portare avanti, ed è una sola cosa:** **Hyal-2 nucleare costitutivo nello stato
+  WWOX-null** (*"endogenous Hyal-2 mainly localized in the nucleus of knockoutMEF cells (~60%)"*).
+  È una **domanda aperta**, non un meccanismo: il paper non la lega mai a un esito.
+- **Conclusione per LEGEND: il nodo DisMech «Hyal-2/WWOX/Smad4 Complex Failure» non va importato
+  come driver di patofisiologia WWOX-DEE su questa evidenza.**
+
 ## FT-074 — I quattro stub mTOR/autofagia su cui due file di ragionamento si appoggiano, e il debito che solo uno dei quattro faceva vedere
 
 **Papers:** PMID 31966718 (PMC6965410) — Qin L, Li X, Lin Z, Li H, Mo Y, Su F, Mo W, Yang Z,
@@ -4451,6 +4492,52 @@ risultati è a sovraespressione ectopica e quale a proteina endogena?
 **Next action:** acquisire da PMC (`PMC4414138`) e leggere integralmente. **È il singolo full text
 non letto di più alto valore in questo batch.**
 
+**🔴 STATO — 2026-09-21: LETTO, DUE VOLTE, E LA SECONDA LETTURA ERA AVVERSARIALE.** ⚠️ **Questa
+voce era già obsoleta quando la si è usata:** il paper era stato letto il 2026-09-20
+(`FTR-20260920-25650666-01`, output `trappc6a_delta_node_audit_20260920.md`) mentre la voce
+continuava a dire *"non acquisito — solo abstract PubMed"*. **Una voce di coda non aggiornata ha
+fatto partire una lettura duplicata.** Il duplicato non è stato sprecato — è ciò che ha fatto
+emergere la contraddizione interna — ma non era una scelta deliberata.
+
+**Verdetto della rilettura (`FTR-20260921-25650666-02`, audit
+`trappc6a_delta_founding_paper_audit_20260921.md`): SINGLE-LAB, UNCORROBORATED, E SI CONTRADDICE SUL
+PASSO PORTANTE.** Risposte alle quattro domande scritte in questa voce:
+1. **Come è stata stabilita l'esistenza dell'isoforma:** da **predizione di splicing** (NNSplice,
+   NetGene2) più un censimento EST (13/55 cDNA umani). *"all **predicted** that the nt position 85
+   can be used as an alternative 5′ donor site"*; la proteina è *"deduced"*. **Nessuna RT-PCR a
+   cavallo della giunzione, nessun sequenziamento della giunzione, nessuna MS.** Pulito invece il
+   braccio genomico: PCR + sequenziamento su 30 campioni umani mostrano che i 42 bp **non** sono una
+   delezione genomica.
+2. **Validazione anticorpale:** **sola competizione peptidica.** *"Specificity of the antisera was
+   tested using the synthetic peptides to block immunostaining."* **Nessun controllo negativo
+   genetico**, benché il laboratorio usi un siRNA `TPC6Asi` **in questo stesso paper**. È un
+   policlonale su **neo-giunzione**: è esattamente il disegno che senza un null genetico non è
+   credibile.
+3. **Filter retardation su ippocampo umano:** **nessun braccio cieco**, e i controlli **non sono
+   age-matched — sono più giovani di ~21 anni** (59 ± 17 vs 80 ± 8.8). Il confronto fra gruppi è un
+   **nullo**: *"No significant difference was shown in TPC6A or TIAF1 aggregation."* Il saggio usa
+   inoltre l'anticorpo pan-specifico, quindi **non misura affatto l'isoforma**.
+4. **Ectopico vs endogeno:** **ogni risultato causale è ectopico**, ogni risultato endogeno è
+   descrittivo. Il braccio forte (aggregazione su knockdown di WWOX, >80% vs <10%) è in **COS7,
+   fibroblasti di rene di scimmia**, senza rescue.
+
+🔴 **In più, non previsto da questa voce: una contraddizione interna esplicita.** La Discussion
+riassume *"We determined that TGF-β1 causes dissociation of WWOX from TPC6AΔ …"* e la **stessa
+Discussion** scrive *"Whether TGF-β1 regulates the binding of WWOX with TPC6AΔ **is unknown** and is
+being determined in this laboratory."* **Nel paper non esiste alcun saggio di legame** (*immunoprecipit*,
+*co-IP*, *pull-down*: zero occorrenze, parole in tondo).
+
+🔴 **Collasso di nodo: TPC6AΔ e TIAF1 non sono due nodi, sono una misura.** Stesso laboratorio,
+stessa banca di tessuti, **stesse membrane**, stessa figura, e *"Similar results were observed with
+TIAF1 aggregates."* **Peso di corroborazione della coppia: uno.**
+
+⚠️ **Difetto di integrità dell'artefatto, dichiarato:** la rilettura ha **ri-scaricato l'articolo
+sullo stesso path**, sovrascrivendo l'artefatto che la ricevuta del 2026-09-20 aveva impronta
+`9635516b…`. Le impronte non coincidono più e **i byte originali non sono recuperabili** (`files/` è
+in `.gitignore`). La lettura precedente **regge** — le sue citazioni sono tutte presenti
+nell'artefatto attuale e sono state riverificate — ma la sua impronta non lega più a un file.
+**Regola operativa: non ri-scaricare mai un articolo su un path già impronta-to da una ricevuta.**
+
 ---
 
 ## FT-103 — PMID 27569545 · WWOX eterozigote come locus a bassa penetranza per ASD, evidenza umana indipendente
@@ -4601,3 +4688,56 @@ nell'adjudication Chang↔Aldaz.
 **Next action:** ✅ **DISCHARGED 2026-09-21** — letto integralmente, ricevuta `FTR-20260921-19484134-01`.
 **Esito, in breve:** 🟡 **PARZIALMENTE SOSTENUTO, e i due bracci non si toccano mai.** Il braccio di attivazione è su **proteina endogena** — siero ΔC1q abbassa la pTyr33-WWOX di ~50% (P<0.001, n=3) e la sposta in citoplasma; C1q purificato ripristina la p-WOX1 nucleare in 1 h — **mentre la WWOX totale resta esplicitamente invariata**. Questa è la dissociazione attivazione-vs-abbondanza che il modello cercava, ed è endogena, quindi la critica di sovraespressione di Aldaz non la raggiunge. Il braccio Y33R, invece, è **interamente ectopico** e legge **morfologia**, senza statistica, senza n per braccio e **senza controllo di espressione del costrutto** — quindi «il mutante non uccide» e «il mutante non era espresso» non sono distinguibili. 🔴 **Nessun esperimento chiede se C1q generi ancora p-WOX1 in un fondo Y33R**: il «through Tyr33» è un'inferenza fra sistemi che non si sovrappongono. L'anticorpo pY33 è un policlonale di casa **mai validato contro il mutante Y33R che il laboratorio già possedeva**. **pS14 non è mai misurata né nominata.** Nessun recettore è nominato: *«Binding of Hyal-2 with C1q remains to be determined»*.
 🔴 **E per un genotipo loss-of-function punta nella direzione sbagliata, due volte.** L'effetto richiede sovraespressione ed è dose-dipendente dalla WWOX fornita; gli autori scrivono che il signaling *«could be less efficient in cancers, as many advanced cancer cells are deficient in the wild type WWOX/WOX1»*. E l'estrapolazione neuronale degli autori stessi è **verso la morte**: *«There is a strong possibility that C1q activates WOX1 in neurons, which ultimately leads to cell death.»* L'endpoint misurato di tutto l'asse è l'apoptosi. **Nessuna terapia proposta, nessuna classe di farmaco nominata.**
+---
+
+## FT-109 — PMID 18371080 · il primario dietro l'unico puntatore terapeutico in vivo del batch, e **non è leggibile qui**
+
+**Paper:** PMID 18371080 — Lo C-P, Hsu L-J, Li M-Y, Hsu S-Y, Chuang J-I, Tsai M-S, Lin S-R,
+Chang N-S, Chen S-T 2008, *Eur J Neurosci* 27(7):1634–46 · DOI 10.1111/j.1460-9568.2008.06139.x ·
+**nessun PMCID** (verificato con `convert_article_ids`: il record restituisce il solo PMID) ·
+paywall Wiley
+**Surface:** **non ottenibile in questo ambiente.** Abstract PubMed letto; full-text mai acquisito.
+**Priority:** **ALTA per un umano — NULLA per una rotta automatica.** Questa voce non è un target di
+lettura: **è un debito di acquisizione**, registrato come `A6` in
+[`acquisition_packet_20260920.md`](acquisition_packet_20260920.md).
+**Epistemic status:** ⚠️ **questa voce esiste anche per una ragione strutturale.**
+[[discovery_ledger_current#DL-MOL-008]] annunciava da mesi una voce FT «da creare» che non era mai
+stata creata, e il PMID veniva citato dallo strato di ragionamento senza alcun oggetto di coda.
+Creandola, il riferimento smette di essere una premessa non letta e diventa un debito dichiarato.
+
+**Perché conta.** È l'unico puntatore terapeutico **esplicito e già testato in un animale con
+fenotipo neurologico** emerso da tutto il batch Chang/NCKU: un peptide WWOX fosforilato in Tyr33
+(11 residui) che *"blocked MPP+-induced neuronal death in the rat brains, whereas non-phospho-WOX1
+peptide had no effect"*.
+
+🔴 **E il segno è, sull'abstract, l'opposto di come il peptide è stato citato in questo
+repository.** Nel sistema in cui è stato testato **l'attivazione di WWOX è il segnale di morte**:
+*"activated WOX1 plays an essential role in the MPP+-induced neuronal death"*, e *"Dominant-negative
+WOX1, a potent inhibitor of Tyr33 phosphorylation, **abolished** this event."* Il peptide protegge
+dunque **bloccando** una via WWOX-dipendente, non sostituendola — e in un genotipo privo di proteina
+WWOX funzionale **non c'è alcun segnale pTyr33 da bloccare**. Il commentary dello **stesso
+laboratorio** (Sze 2015, `PMID 26355344`) lo glossa invece come utile *"in the restoration of neural
+function under WWOX deficiency"*. Su questa base
+[[therapeutic_hypotheses_ledger_current#HYP-20260709-04]] è già **`refuted`** e
+[[discovery_ledger_current#DL-MOL-008]] è stata chiusa in direzione negativa il 2026-09-21.
+
+⚠️ **Nota d'onestà, ed è la ragione per cui questa voce ha priorità alta e non è archiviata:
+entrambe quelle chiusure poggiano su un ABSTRACT, e un abstract non è una lettura.** L'abstract è
+esplicito e autonomo sul punto di segno, ma questo paper è l'unico documento che può confermarle o
+ribaltarle.
+
+**Domande da porre al testo, scritte per una sessione fredda:** (1) il **meccanismo d'azione**
+proposto nella Discussion — esca/inibitore competitivo oppure sostituto di segnale? (2) **dose, via
+di somministrazione, penetrazione BBB, durata dell'effetto**, che non compaiono né nell'abstract né
+nel commentary; (3) esiste un braccio in cui il peptide sia testato in un fondo **WWOX-depleto**,
+anziché in un wild-type intossicato con MPP+? (4) i controlli sul braccio del peptide non-fosforilato.
+
+**Indipendenza:** 🔴 **nessuna.** Chang N-S è ottavo autore, Hsu L-J seconda, affiliazione National
+Cheng Kung University. Primario e commentary sono **lo stesso gruppo**: il commentary non è una
+lettura esterna che corrobora il primario, è lo stesso laboratorio che ripresenta il proprio dato in
+una cornice terapeutica più forte di quella che il dato regge.
+
+**Next action:** **non ritentare le rotte automatiche** — nessun PMCID esiste e Wiley è irraggiungibile
+da questo deployment. Rotte rimaste: Wiley via login istituzionale · ILL · autore corrispondente
+(Chen Shur-Tzu / Chang Nan-Shan, NCKU). **Chiedere:** il passaggio della Discussion sul meccanismo e
+il paragrafo di metodi sul peptide (sequenza, dose, via, veicolo, tempistica).
