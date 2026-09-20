@@ -598,6 +598,41 @@ riga di identità, dove un dedup li può leggere.)*
 **Come sono emersi:** enumerando i 50 riferimenti di Oliver 2023 — 26 gene-diretti con PMID, 19
 già nel registry, **7 no**. Un tasso di mancanza del 27% sulla bibliografia di un paper già in
 registry come fonte di tre claim.
+
+**🔴 AGGIORNAMENTO DI PRIORITÀ — 2026-09-21: `26345274` sale a PRIORITÀ MASSIMA di questa voce, e va
+per acquisizione umana, non per rotta automatica.** Nessun PMCID (metadati PubMed verificati:
+`{pmid: 26345274, doi: 10.1002/ajmg.a.37363}`, nessun campo `pmc`). Registrato come **`A8`** in
+[`acquisition_packet_20260920.md`](acquisition_packet_20260920.md).
+
+⚠️ **Quanto segue viene dai METADATI PubMed, non da una lettura. Nessuna ricevuta è stata scritta.**
+
+**La ragione è una convergenza che questo repository non possiede ancora.**
+[[claim_registry_current#CLAIM 039]] registra, nel ratto `lde/lde`, un'andatura atassica **penetrante
+al 95%** con **cervelletto istologicamente indenne** — e la sua domanda aperta è esplicitamente
+anatomica: l'atassia *"non ha spiegazione strutturale"*. L'abstract di questo case series riporta,
+**nell'uomo**, *"a characteristic pattern of neurodegeneration in which the **cerebellum is
+spared**"*, accanto a perdita di volume della sostanza bianca periventricolare e atrofia del corpo
+calloso, con degenerazione selettiva del **nucleo mediodorsale del talamo** in un paziente. **Due
+specie, due modalità, lo stesso negativo sul cervelletto.**
+
+⚠️ **E il modo della frase va letto prima di importarla.** Gli autori scrivono *"**We suggest** that
+neuroimaging in these patients reveals a characteristic pattern … that **could** help with early
+diagnosis"*. È una **proposta**, non un reperto. Per il modo di fallimento registrato lo stesso
+giorno (re-voicing interrogativo→dichiarativo, ricevuta `FTR-20260921-25238782-01`), **va portato
+come suggerimento**: *«il cervelletto è risparmiato nella WWOX-DEE»* non è ciò che la fonte dice.
+🔴 **Nessuna modifica a `CLAIM 039` è stata fatta, e nessuna va fatta su questa base**: un abstract
+non è una lettura.
+
+**Seconda ragione, indipendente dalla prima:** i cinque pazienti sono omozigoti per **lo stesso
+allele canonico di sito accettore, `NM_016373.3:c.606-1G>A`** — la **stessa classe** dell'allele di
+sito accettore del genotipo di riferimento — da due famiglie consanguinee risultate imparentate
+all'aplotipo, e **tutti e cinque sono morti prima del terzo compleanno**. Fenotipo: microcefalia
+progressiva, spasticità **nei primi 3 mesi**, epilessia intrattabile, grave scarsa crescita,
+ritardo profondo, retinopatia in 2 su 5.
+
+**Terza ragione, a costo zero:** gli autori sono **lo stesso gruppo di Riyadh** di `A7`
+(`PMID 25416187`, Tabarki / Al Hashem). La review di `A7` con ogni probabilità cita questa serie:
+**due voci del pacchetto, una sola richiesta.**
 **Current status:** ⬜ nessuno recuperato, nessuno letto.
 
 ---

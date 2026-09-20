@@ -168,6 +168,52 @@ discharge most of this debt.**
 
 ---
 
+## A8 · `PMID 26345274` — Tabarki, AlHashem, AlShahwan, Alkuraya, Gedela, Zuccoli 2015, *Am J Med Genet A* 167A(12):3209–13 · `FT-032`
+**DOI** 10.1002/ajmg.a.37363 · **no PMCID** · `article_types`: `["Case Reports","Journal Article"]`.
+*Added 2026-09-21.*
+
+**What it settles, in one sentence:** whether the **cerebellar-sparing** that `CLAIM 039` records in
+the rat — 95 % penetrant ataxic gait with a **histologically intact cerebellum** — has a **human
+neuroimaging counterpart**, which would turn a single-species anatomical oddity into a cross-species
+convergence.
+
+**Why it is worth a human's time:** `CLAIM 039` is currently `T3` — *"fenotipo di ratto, allele non
+umano"* — and its open question is explicitly anatomical: the ataxia *"non ha spiegazione
+strutturale"*. This case series is five patients from two consanguineous families, all homozygous
+for the **same canonical splice-acceptor variant `NM_016373.3:c.606-1G>A`**, and its abstract states
+a neuroimaging pattern *"in which the **cerebellum is spared**"*, alongside periventricular white
+matter volume loss and corpus callosum atrophy, with selective mediodorsal thalamic degeneration in
+one patient. **Two species, two modalities, the same negative about the cerebellum.** Nothing in
+this repository has that convergence yet, because this paper has never been read.
+
+⚠️ **And read the mood of that sentence before importing it.** The authors write *"We **suggest**
+that neuroimaging in these patients reveals a characteristic pattern … that **could** help with
+early diagnosis"*. That is a **proposal**, not a finding. Per the re-voicing failure mode recorded
+on 2026-09-21 (`FTR-20260921-25238782-01`), it must be carried into this repository as a suggestion.
+**Do not let it enter as "the cerebellum is spared in WWOX-DEE" — that is not what the source says.**
+
+**Second reason, and it is independent of the first.** The variant class matters: `c.606-1G>A` is a
+**canonical splice-acceptor** allele, the same class as the reference genotype's acceptor-site
+allele. Five patients homozygous for one acceptor-site variant, with **all five dead before their
+third birthday**, is the most directly comparable natural-history datum in the packet.
+
+**A third reason, cheap:** the senior/first authors are **the same Riyadh group** as `A7`
+(`PMID 25416187`, Tabarki / Al Hashem). The review in `A7` very probably cites this series, so the
+two items are likely to be satisfied by one request to one group.
+
+**What to look for, specifically:** (1) **the imaging methods and how "spared" was determined** —
+qualitative read or volumetry, how many sequences, was the reader blinded to genotype; (2) the
+**age at imaging** for each patient, because sparing at 18 months and sparing at 3 years are
+different claims; (3) whether cerebellar sparing is stated for **all five** patients or for some;
+(4) the full natural history — seizure onset, semiology, EEG, treatments tried and failed, cause of
+death; (5) whether retinopathy (2/5) was characterised, and with what.
+
+**Routes remaining:** Wiley via institutional login · ILL · corresponding author (Prince Sultan
+Military Medical City, Riyadh; King Faisal Specialist Hospital and Research Center).
+**Ask for:** the neuroimaging section and its figure legends first, the clinical table second.
+
+---
+
 ## Priority order for a human with one hour
 
 1. **A1** (`15126504`) — settles a live mechanistic question *and* surfaces a therapeutic lever.
@@ -182,6 +228,10 @@ mechanistic one:)*
 - **A6** (`18371080`) — the only in-vivo therapeutic pointer in the batch, currently closed in the
   negative **on an abstract alone**. It is the cheapest way to either recover a therapeutic lead or
   retire one for good.
+- **A8** (`26345274`) — **the highest-value single item added since this packet was written**, and
+  it travels with `A7`: same authors, same institution, one request. It is the only route to a
+  **human** counterpart for `CLAIM 039`'s cerebellar-sparing, and it carries five patients
+  homozygous for a canonical splice-acceptor allele.
 - **A7** (`25416187`) — **cheapest item in the packet.** Its genre question is already settled; only
   its three-page reference list is needed, and it is the sole route to the primary behind a
   phenotype statement this repository currently cannot source.
