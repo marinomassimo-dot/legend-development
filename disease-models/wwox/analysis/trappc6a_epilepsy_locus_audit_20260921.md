@@ -10,7 +10,7 @@
 
 **Author disambiguation — checked, not assumed.** The senior author's affiliation string, retrieved verbatim from the PubMed record, is:
 
-> "Chang", "fore_name": "Timothy S" … "Mary S. Easton Center for Alzheimer's Research and Care, Department of Neurology, David Geffen School of Medicine, University of California, Los Angeles, CA, 90095, USA. timothychang@mednet.ucla.edu."
+> "Chang", "fore_name": "Timothy S" … "Mary S. Easton Center for Alzheimer's Research and Care, Department of Neurology, David Geffen School of Medicine, University of California, Los Angeles, CA, 90095, USA. [email redacted — public edition; the address is on the PubMed record]."
 
 This is **Timothy S. Chang, UCLA** — not Nan-Shan Chang, NCKU. No author on this paper holds an NCKU affiliation; all five are UCLA / UPenn. **The paper is genuinely external to the lab whose cascade it would corroborate.** The surname trap was live and was avoided.
 

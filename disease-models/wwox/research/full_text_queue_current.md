@@ -240,7 +240,9 @@ through an authorised `BATCH_COMMIT`.
 **Surface:** PMID 28123895 · `absent`
 **Priority:** HIGH
 **Why:** l'abstract riporta **attivazione di WWOX ridotta** in tumori C1q-deficienti → C1q come regolatore a monte dello **stato di attivazione** di WWOX (non del livello). C1q è centrale nel pruning sinaptico microgliale ed è druggabile (anticorpi anti-C1q già in trial umani). Asse neuroinfiammazione + stato di attivazione.
-**Current status:** `NEW` all'intake 2026-07-26; abstract letto, **full text NON letto**. PMCID PMC5214935 (open).
+**Current status:** 🔴 **RETTIFICA 2026-09-21 — `PMC5214935` NON è open access.** La voce diceva "(open)" e la tabella di acquisizione **nello stesso file** portava già il flag corretto `idIsNotOpenAccess` / `pdf_only`: la voce contraddiceva se stessa. Misurato oggi: `get_full_text_article` restituisce `"full_text": ""` su `PMC5214935` e su `5214935`; `get_copyright_status` dà `is_open_access: false`, `license.type: null`, © Taylor & Francis, deposito **`pdf_only`**. **Muro di licenza permanente — non ri-accodare su questa rotta.** Abstract letto, full text mai ottenuto e non ottenibile qui.
+**Priority:** ⬇️ **da HIGH a BASSA**, e la ragione non è solo l'acquisizione: WWOX è **assente dal titolo e dalle keyword** e occupa **1 frase su 10** dell'abstract, condivisa con il risultato sui vasi. È un reperto incidentale in un lavoro di immunologia tumorale mammaria. L'abstract non dichiara **quale** grandezza sia "activation": nessun residuo, nessun saggio, nessuna n, nessuna statistica.
+**Dove è andata la domanda:** vedi [[full_text_queue_current#FT-108]] — il paper *meccanicistico* su questo asse è quello del 2009, è open access, e non era mai stato letto.
 **Next action:** full text deep extraction
 **⚠️ Nota di calibrazione:** la matrice di priorità l'ha collocato **P3_LOW** scorando sull'asse `BLOCK-1/safety`, mentre il contenuto reale è neuroinfiammazione + repurposing. Accodato HIGH **a dispetto del tier**, per la regola «il ranking ordina la lettura, non la sostituisce».
 
@@ -4534,3 +4536,35 @@ serve, non la resa diagnostica del pannello.
 **Next action:** acquisire da PMC (`PMC12562696`); estrarre il fenotipo dei due fratelli `L239R`
 in dettaglio (tono, movimenti, EEG, età), e qualsiasi dato di proteina o trascritto. Verificare
 anche se la coorte dà un denominatore WWOX su 129 DEE — utile al counselling, non al meccanismo.
+
+
+---
+
+## FT-108 — PMID 19484134 · il paper **meccanicistico** su C1q→WWOX, open access, mai letto
+
+**Paper:** PMID 19484134 — Hsu L-J, … Chang N-S 2009, *PLoS One* · PMCID `PMC2685983` · open access
+**Registry:** esiste come [[paper_registry_current#CORPUS P331]], `Status: screened — corpus placeholder`, **nessun deep-dive**.
+**Priority:** **ALTA**
+
+🔴 **Il reperto che genera questa voce, ed è un reperto sul repository, non sulla letteratura.**
+Nel tentare `FT-018` si è stabilito che **LEGEND tiene C1q→WWOX a profondità di triage su
+entrambi i paper**: questo è un placeholder di corpus, `FT-018` è abstract-only e il suo full text è
+dietro un muro di licenza. **Non esiste in questo repository un solo dato C1q→WWOX sostenuto da una
+lettura.** E il paper *più vecchio* è quello **meccanicistico**.
+
+**Perché conta per il genotipo di riferimento.** Il problema aperto più duro del modello è che per un
+missenso destabilizzante del SDR **potrebbe non esserci proteina da misurare** — la valutazione dei
+readout SDR ha visto fallire nove candidati su nove esattamente su quel criterio. Un regolatore dello
+**stato di attivazione** è un asse diverso dall'abbondanza. L'abstract di questo lavoro nomina le tre
+cose che al paper del 2016 mancano: un **add-back** (*"Exogenous C1q rapidly restored the WOX1
+activation (with Tyr33 phosphorylation)"*), un **residuo** (Tyr33), e un **test di epistasi con
+mutante puntiforme** (*"A dominant negative and Y33R mutant of WOX1 blocked the apoptotic effect"*).
+Un Y33R che abolisce l'effetto sarebbe evidenza **a livello di residuo** che l'arco passa per Tyr33.
+
+⚠️ **Direzione, e va tenuta in vista:** C1q **alza** l'attivazione di WWOX. In un genotipo
+loss-of-function un agente che alza l'attività è direzionalmente giusto — ma solo se c'è WWOX da
+attivare, e nulla in questa letteratura dice che si possa alzare l'attivazione quando la proteina
+scarseggia. ⚠️ Cellule di carcinoma prostatico, non neuroni. ⚠️ Laboratorio Chang: si applica il
+flag di [[paper_registry_current#PAPER 053]], e la distinzione necessità-vs-sufficienza stabilita
+nell'adjudication Chang↔Aldaz.
+**Next action:** acquisire da PMC (`PMC2685983`) e leggere integralmente.

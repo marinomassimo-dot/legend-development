@@ -156,3 +156,46 @@ survive independent adjudication?"* — the ends are corroborated, the middle is
 ---
 
 **Wave 2 orchestrator segment closed. Scientist A and Scientist B outputs integrate separately.**
+
+
+---
+
+## 🔴 CORRECTION — 2026-09-21: the epilepsy signal I cited does not survive reading
+
+This file concluded that *"the **GENE** `TRAPPC6A` has independent, large-cohort human-genetic support
+for a neurocognitive role, including a **shared epilepsy–AD risk signal**"*, resting on three cohorts
+of which `PMID 41390778` (UCLA, 416,212 records, validated in All of Us) was the strongest.
+
+**That paper has now been read, and the epilepsy half of the claim fails.**
+
+- **The epilepsy arm is null on replication.** All of Us, the full shared genetic risk score against
+  late-onset epilepsy alone: **OR 1.01 (0.96–1.06), p = 0.80**, variance explained **< 0.01%**. In
+  UCLA discovery, LOE p = 0.1.
+- **Seven of the eight SNPs came from the AD GWAS**, and "shared" was defined by **coefficient sign
+  agreement only** — not by an epilepsy association.
+- **The one LOE-positive result excludes `TRAPPC6A`.** It is built from the four variants the authors
+  themselves enumerate as lying **outside** the APOE region (two on chr2, one on chr8, one on chr10).
+  `TRAPPC6A` is chr19q13.32, so by the authors' own enumeration it falls in the chr19 group they call
+  *near* the APOE region — and that positive result failed to replicate anyway (AoU p = 0.11).
+- **APOE-independence was never tested.** No conditional analysis, no LD clumping; Elastic Net was
+  chosen *because* it tolerates LD. So `TRAPPC6A` cannot be separated from the APOE signal here.
+- The authors concede **"minimal evidence supporting epilepsy-specific pathways"**, and LDSC had
+  returned **no** genetic correlation before the model was built.
+- **Seventh abstract-versus-results inversion in this literature:** an exact null (OR 1.01, p = 0.80)
+  sits beneath the abstract's claim that the score *"effectively stratified patients into distinct
+  AD-LOE risk groups."*
+
+**What this does to the node-independence finding: it makes it MORE negative, not less.** The split
+this file drew — *the gene is corroborated, the isoform is not* — still holds in form, but the
+corroboration is weaker than stated: the strongest of the three cohorts turns out to be an
+**APOE-region annotation in an AD-driven screen whose epilepsy arm is null**. `TRAPPC6AΔ`, splicing,
+transcript and `TIAF1` occur **zero** times in it; it is gene-level throughout, so it never spoke to
+the isoform in any case.
+
+And even a clean positive would not have transferred: **a common-variant risk locus for late-onset
+epilepsy in adults is a different causal regime from biallelic loss of function in a neonate.** That
+was true when this file was written and should have been said then.
+
+*(Receipt for the reading: see the wave's ledger entry. Method note: the same extraction defect
+applies — `TRAPPC6A` occurs zero times in the body text and survives only in the PubMed abstract
+record, so any grep-based gene audit over this tool's PMC text will produce false negatives.)*
