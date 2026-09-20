@@ -4599,10 +4599,24 @@ AD, volume ippocampale e spessore entorinale. **Limite dichiarato dalla rivista 
 fuori dal laboratorio Chang, non a sostenere la cascata.
 **Next action:** acquisire; verificare se TRAPPC6A è misurato come gene o come isoforma.
 
-**🔴 STATO — 2026-09-21: BLOCCATO DA LICENZA, non letto e non leggibile qui.** Il PMCID esiste ma
-il deposito è fuori dal subset open-access (`get_copyright_status` verificato). **Non conta in
-nessuna delle due direzioni** e non può essere citato come corroborazione. Non ritentare le rotte
-automatiche: è materiale da acquisizione umana.
+**🔴 STATO — 2026-09-21, ore 21: BLOCCATO DA LICENZA, non letto e non leggibile qui.** Il PMCID
+esiste ma il deposito è fuori dal subset open-access (`get_copyright_status` verificato). **Non
+conta in nessuna delle due direzioni** e non può essere citato come corroborazione. Non ritentare le
+rotte automatiche: è materiale da acquisizione umana.
+
+**🔴 RETTIFICA — 2026-09-21, ore 22: LA RIGA QUI SOPRA È SBAGLIATA. Il paper È RECUPERABILE.**
+La classificazione «fuori dal subset open-access» **non era stata misurata**: veniva da
+`get_copyright_status`, il cui `is_open_access: false` arrivava con `checked_sources: ["pubmed"]`,
+cioè **PMC non era mai stato consultato**. Un tentativo di fetch su `PMC7577551` ha restituito **un
+corpo pieno**. ✅ **`FT-098` si riapre: torna un debito di lettura, non un muro.**
+
+⚠️ **Ma la superficie è in gran parte inutilizzabile e questo va saputo prima di leggerlo.**
+L'estrattore restituisce i Results così: *"Among 6 target genes identified by COLOC and SMR from
+AD-associated SNPs with< 1 × 10, 2 genes (and) and 4 genes (,,, and) were labeled as high expression
+and low expression, respectively"* — **ogni simbolo genico cancellato**. 🔴 **Nessun negativo su
+`TRAPPC6A` può essere tratto da questa superficie**, e per aggiudicare davvero questa voce serve
+l'HTML o il PDF dell'editore. **Non conta ancora in nessuna delle due direzioni**: la ritrattazione
+della tesi di indipendenza del nodo resta valida, perché questa gamba è tuttora **non letta**.
 
 ---
 
@@ -4936,3 +4950,37 @@ una cornice terapeutica più forte di quella che il dato regge.
 da questo deployment. Rotte rimaste: Wiley via login istituzionale · ILL · autore corrispondente
 (Chen Shur-Tzu / Chang Nan-Shan, NCKU). **Chiedere:** il passaggio della Discussion sul meccanismo e
 il paragrafo di metodi sul peptide (sequenza, dose, via, veicolo, tempistica).
+
+---
+
+## FT-110 — I due alleli canonici di splicing mai passati all'RNA: `PMID 42721537` e `PMID 38902482`
+
+**Papers:** PMID 42721537 — coorte fondatrice argentina, allele canonico `c.107+1G>A`, **cinque
+pazienti** · PMID 38902482 — secondo record emerso dal censimento di splicing.
+**Surface:** `42721537` **nessun PMCID** (verificato nel censimento) · `38902482` non testato con un
+fetch.
+**Priority:** **MEDIA-ALTA per `42721537`** — non per leggerlo, ma per ciò che dimostra.
+**Epistemic status:** ⚠️ **voce di debito, non di lettura.** Entrambi i PMID sono citati dal
+censimento [`wwox_splice_transcript_census_20260921.md`](../analysis/wwox_splice_transcript_census_20260921.md)
+e nessuno dei due è stato letto. Questa voce esiste perché il riferimento smetta di essere una
+premessa non letta e diventi un debito dichiarato.
+
+**Perché contano, ed è un argomento sul campo più che sui due paper.** Il censimento ha misurato che
+nella letteratura WWOX i **trascritti** degli alleli di splicing sono quasi mai stati guardati: tre
+misure in tutto, una sola raggiungibile da qui. Questi due record stanno invece dalla parte
+**annotata**: varianti classificate come «di sito di splicing» in un referto diagnostico, **senza
+che l'RNA sia mai stato esaminato**. `42721537` porta da solo **cinque pazienti** omozigoti per un
+allele canonico di donatore.
+
+🔴 **Il punto operativo:** sommati ai **cinque pazienti** di `PMID 26345274` (`c.606-1G>A`, allele
+canonico di **accettore**, pacchetto `A8`), fanno **dieci pazienti su due alleli canonici a cui
+nessuno ha mai fatto una RT-PCR**. E un gruppo che *possiede* fibroblasti WOREE e *esegue* RT-PCR
+sui trascritti WWOX esiste ed è identificato (`PMID 35573960`, Genova). **Un solo esperimento
+economico** — RT-PCR su fibroblasti a cavallo della giunzione, ± cicloesimide, con quantificazione
+della banda — **convertirebbe [[discovery_ledger_current#DL-BIO-002]] da in-silico a misurato e
+fornirebbe a [[therapeutic_strategies_current#TX-001]] il denominatore che oggi non ha.**
+
+**Next action:** **nessuna rotta automatica** su `42721537` (nessun PMCID). Per `38902482`: un
+singolo tentativo di fetch, secondo la regola che la recuperabilità si stabilisce **solo**
+tentandola e misurando la lunghezza del corpo. Il valore di questa voce, però, **non dipende dal
+leggerli**: è la misura di assenza che porta il peso, ed è già fatta.

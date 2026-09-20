@@ -253,7 +253,7 @@ no demonstrated independent human-genetic support for this gene reachable from t
 | Leg | As written in § 3 | On reading |
 |---|---|---|
 | `PMID 21766012` — Lothian Birth Cohorts | *"a haplotype associates with nonverbal reasoning in both cohorts and combined"* | **Failed the authors' own permutation correction in the discovery cohort.** Verbatim: *"These SNP windows were not significant postpermutation analysis of the LBC1936."* |
-| `PMID 33134515` — ADNI + AddNeuroMed | *"among the functional genes composing a blood transcriptional risk score"* | **Licence-walled, unread.** Counts in neither direction. |
+| `PMID 33134515` — ADNI + AddNeuroMed | *"among the functional genes composing a blood transcriptional risk score"* | **Unread — and, 🔴 corrected 2026-09-21, NOT licence-walled.** Counts in neither direction. |
 | `PMID 41390778` — Fu 2025, UCLA + All of Us | *"one of eight shared-risk SNPs for late-onset epilepsy AND Alzheimer's disease"* | **Epilepsy arm null on replication**: OR 1.01, 95% CI 0.96–1.06, p = 0.80. |
 
 **On the Lothian paper specifically** — the leg this file leaned on hardest, and the only one that
@@ -267,6 +267,20 @@ corroboration:
    the LBC1921 and in post permutation analysis of the combined cohort."* The only permutation it
    passes is computed on a **combined dataset containing the discovery cohort** — which is not an
    independent test of the discovery cohort's result.
+> 🔴 **CORRECTION TO THIS TABLE — 2026-09-21, same day, against myself.** The row for
+> `PMID 33134515` said **"licence-walled"**. **That was never measured; it was inferred from
+> `get_copyright_status`, whose `is_open_access: false` came with `checked_sources: ["pubmed"]` —
+> PMC was never consulted.** A fetch attempt made later the same day returned a **full body from
+> `PMC7577551`**. The paper is **retrievable**, and `FT-098` should be re-opened.
+>
+> **This does not revive the retracted claim, and the reason matters.** The leg is still **unread**,
+> so it still counts in neither direction — what changes is that its silence is now *our* debt
+> rather than the publisher's. ⚠️ And a caution travels with it: the MCP extractor renders that
+> paper's Results as *"Among 6 target genes identified by COLOC and SMR from AD-associated SNPs
+> with< 1 × 10, 2 genes (and) and 4 genes (,,, and) were labeled as high expression and low
+> expression, respectively"* — **every gene symbol deleted**. **No negative about `TRAPPC6A` may be
+> drawn from that surface**, and adjudicating `FT-098` properly needs the publisher's HTML or PDF.
+
 2. **It is a subgroup finding.** Significance was reached **in the APOE-ε4-negative subgroup only**,
    on matrix reasoning.
 3. **The replication was nominal and on a different instrument.** Threshold: uncorrected p ≤ .05.
