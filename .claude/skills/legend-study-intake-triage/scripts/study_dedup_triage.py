@@ -84,6 +84,13 @@ def is_corpus_placeholder(record_id: str, block: str, status: str) -> bool:
 BLOCK_START = re.compile(
     r"^##\s+("
     r"(?:PAPER\s+\d+)"
+    # `CORPUS PMID n` is the post-harvest form, added 2026-09-20 beside the two harvest forms.
+    # It is listed FIRST so `CORPUS\s+P\d+` cannot half-match it, and it must stay in step with
+    # `growth_anchors.RECORD_PATTERNS["corpus"]` — this file is the ONE legitimate restatement of
+    # that definition, because a skill package is standard-library-only by design and cannot
+    # import it. `test_record_conventions.py` holds the two to behavioural equivalence on every
+    # canonical registry, and it is what caught this file lagging when the form was added.
+    r"|(?:CORPUS\s+PMID\s+\d+)"
     r"|(?:CORPUS(?:-STUB-|\s+P)\d+)"
     r"|(?:LIT-(?!\[)[A-Z0-9-]+)"
     r"|(?:(?:INBOX|FT|CC)[-\s]?\w+.*?)"

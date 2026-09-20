@@ -163,7 +163,15 @@ SCALE_ACK_MARGIN = 0.25
 RECORD_PATTERNS = {
     "claims": r"CLAIM\s+\d+",
     "papers": r"PAPER\s+\d+",
-    "corpus": r"CORPUS(?:-STUB-|\s+P)\d+",
+    # 🔴 THREE FORMS, ONE CONVENTION. `CORPUS-STUB-n` and `CORPUS Pn` are the two forms of the
+    # 2026-08-06 harvest index: n is the corpus-paper number, stubs hold 1-179 and P records
+    # 182-400. `CORPUS PMID n` is the POST-HARVEST form, added 2026-09-20 for the first corpus
+    # source discovered after that snapshot. It carries no corpus-paper number because it has
+    # none — inventing one would claim a position in a harvest the paper was never in, and the
+    # 31 gaps inside 182-400 are other papers' numbers — so its identity is the PMID, which is
+    # primary, stable and already how every receipt and manifest names a study. No second
+    # numbering, no allocator, no migration: the historical ids are untouched and keep working.
+    "corpus": r"CORPUS\s+PMID\s+\d+|CORPUS(?:-STUB-|\s+P)\d+",
     "literature": r"LIT-(?!\[)[A-Z0-9-]+",
 }
 

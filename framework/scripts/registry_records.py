@@ -132,7 +132,7 @@ RECORD_HEAD = re.compile(r"^##[ \t]+(?P<id>\S.*?)[ \t]*$", re.M)
 # capping the output, which would have been silent truncation with a nicer name.
 RECORD_ID = re.compile(
     r"^(?:PAPER\s+\d+|LIT-\d+|LIT-EX-\d+|CLAIM\s+\d+|FT-\d+|D-\d+|DL-[A-Z]+-\d+|"
-    r"CORPUS-STUB-\d+|CORPUS\s+P\d+|BLOCK\s+\d+|TX-\d+|DIS-\d+)"
+    r"CORPUS-STUB-\d+|CORPUS\s+PMID\s+\d+|CORPUS\s+P\d+|BLOCK\s+\d+|TX-\d+|DIS-\d+)"
     # A record may carry a descriptive title after its id — `## FT-047 — un difetto della coda`.
     # Anchoring at the end classified those as prose the moment em-dash headings became
     # boundaries, which is how one fix quietly opened the hole the other had closed.

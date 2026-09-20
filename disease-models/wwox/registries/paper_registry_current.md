@@ -6163,6 +6163,31 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Status:** deep-dived — registry placeholder (lint restored)
 **Note:** Source description from tracking log 2026-04-17.
 
+## CORPUS PMID 42082822
+**Short title:** Denkboy Ongen 2026 — WWOX p.Ala141Thr in hypospadias / 46,XY DSD
+**Full title:** The Role of WWOX Gene Variant in Hypospadias and 46,XY Disorders of Sexual Development
+**Authors:** Denkboy Ongen Y, Tezcan-Unlu H, Unal U, Efendi-Erdem E, Cecener G, Eren E
+**Year:** 2026
+**Source type:** case report with protein and in-silico analysis
+**Journal/source:** *Reprod Sci* 2026;33(5):1020–1025
+**Identifier:** PMID 42082822 / PMC PMC13230315 / DOI 10.1007/s43032-026-02112-9
+**Corpus paper no:** N/A — post-harvest discovery
+**Record provenance:** 🔴 **POST-HARVEST, AND THE IDENTIFIER SAYS SO.** This paper was published after the 2026-08-06 corpus harvest, so it holds no corpus-paper number and has no `LIT-0###` entry. `CORPUS P401` would claim a position in a harvest it was never in, and the 31 gaps inside 182–400 are other papers' numbers, so the record is keyed on the identity that is primary, stable and already how every receipt and manifest names a study: the PMID. One convention extended by one form (`growth_anchors.RECORD_PATTERNS`), no second numbering, no allocator, no migration — every historical `CORPUS P###` and `CORPUS-STUB-###` is untouched. Created by `CC-20260920-EIGHT-RECORD-CLASSIFICATION-01` (BATCH_20260920_003).
+**Tier (FASE 1):** not applicable — the FASE 1 triage covered corpus papers 221–400 only, and this record has no corpus-paper number at all
+**Status:** read — post-harvest corpus record, classified CORPUS by the operator on 2026-09-20
+**Evidence depth:** complete_fulltext_read — `FTR-20260811-42082822-01`; manifest `deepdive_manifests/PMID42082822.json` (5 locators, schema v2, strict PASS, 0 gaps)
+**Primary pathway:** none on-axis — hypospadias and 46,XY disorders of sexual development
+**Model/species:** human — one 7-month-old proband, with family genotyping and Western blot
+**Genotype/model:** `p.Ala141Thr`, homozygous in the proband. No WWOX-DEE allele, no neural endpoint, no CNS measurement anywhere in the paper.
+**Transferability:** T3
+**clinical relevance:** LOW
+**Claim links:** none — this record carries a reading, not a claim
+**Role:** 🔴 **A NEGATIVE, AND IT IS THE REASON THE READING IS WORTH KEEPING. THE VARIANT DOES NOT SEGREGATE WITH THE PHENOTYPE**, and the paper's own Results sentence says so: a healthy first-degree relative carries the IDENTICAL HOMOZYGOUS genotype, with Western blot showing WWOX protein reduced in that relative as much as in the proband. Reduced protein is therefore shown NOT to be sufficient for the reported phenotype in this family. Recorded as a boundary on any inference that reads a WWOX missense plus reduced protein as explanatory on its own.
+**LIT link:** none — no literature entry exists for this PMID; it postdates the harvest that created that series
+**Note:** The in-silico prediction that `p.Ala141Thr` disrupts the protein's secondary structure is the authors' modelling, not a measurement, and is carried as such. The publication gate raises `REVIEW / PARENT_OF_ORIGIN_ATTRIBUTED` on this paper's manifest: the finding is attributed to a published study's own subjects and is not linked to the reference genotype, which is the reviewed and admissible case — read 2026-09-20, no change required.
+
+---
+
 ## CORPUS P022
 **Short title:** Abdeen & Aqeilan 2019 — WWOX and p53 in aggressive breast cancer
 **Full title:** Decoding the link between WWOX and p53 in aggressive breast cancer

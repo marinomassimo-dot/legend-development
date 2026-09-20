@@ -8,9 +8,11 @@ of its own scope and parked.
 `framework/state/state_manifest_current.md`** (2026-09-20).
 **Change class:** **MINOR**
 **Target:** no working-model bump is required or proposed.
-**Status:** `PARTIALLY PROPAGATED — BATCH_20260920_002` (2026-09-20): seven of eight records
-created. PMID 42082822 is NOT propagated and stays deferred on its identifier (§ 3), which the
-read-only convention audit of the same date confirmed has no existing convention to follow.
+**Status:** `FULLY PROPAGATED` — seven records in `BATCH_20260920_002` and the eighth in
+`BATCH_20260920_003` (2026-09-20). PMID 42082822's deferral in § 3 is CLOSED: the operator ruled
+that `P###` is the historical identifier of the 2026-08-06 harvest rather than a universal
+requirement, so the record is keyed on its PMID as `CORPUS PMID 42082822`, with
+`Corpus paper no: N/A`. Option 1 of the two named there, taken as a decision and not derived here.
 **Review floor:** R2. `legend-locator-audit` (R4) **not triggered** — no claim is created,
 narrowed, reversed, corroborated or removed (§ 5).
 

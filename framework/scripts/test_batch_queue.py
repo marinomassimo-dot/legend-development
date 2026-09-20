@@ -570,9 +570,49 @@ class QueueIntegrityTests(unittest.TestCase):
     # for this registry, restated here rather than imported so the suite keeps no dependency on
     # the tool it is not testing.
     _ANY_HEADING = re.compile(r"^#{1,4}[ \t]+\S.*$", re.M)
-    _COUNTABLE_RECORD = re.compile(r"^(?:paper\s+\d+|corpus\s+p\d+)\b")
+    _COUNTABLE_RECORD = re.compile(
+        r"^(?:paper\s+\d+|corpus\s+pmid\s+\d+|corpus\s+p\d+)\b")
 
     _IDENTIFIER_LINE = re.compile(r"(?m)^\*\*identifier:\*\*\s*(.*)$")
+
+    @classmethod
+    def _registered_study_pmids(cls, registry_text: str,
+                                notice_pmids: frozenset = frozenset()) -> dict:
+        """PMID -> record id, for every registry record declaring full text that is a STUDY.
+
+        🔴 A COUNT CANNOT SAY *WHICH*, AND ON 2026-09-20 THAT MATTERED. The comparison read
+        77 against 77 and was green, while one study was read and unregistered (42082822) and
+        one record was registered and matched no seed (`PAPER 059`). Two identity mismatches
+        cancelled in the cardinality and the guard could not see either. The set is built here
+        and the count is derived from it, so the two can never disagree again.
+        """
+        found: dict[str, str] = {}
+        for record_id, block in cls._countable_blocks(registry_text, notice_pmids):
+            if not any(marker in block for marker in bq.FULL_TEXT_MARKERS):
+                continue
+            identifier = cls._IDENTIFIER_LINE.search(block)
+            pmids = bq.identifiers(identifier.group(1))[0] if identifier else []
+            for pmid in pmids:
+                found.setdefault(pmid, record_id)
+            if not pmids:
+                found.setdefault(f"(no PMID) {record_id}", record_id)
+        return found
+
+    @classmethod
+    def _countable_blocks(cls, registry_text: str, notice_pmids: frozenset):
+        """Every `(record_id, block)` that is a countable study record, notices excluded."""
+        heads = [match.start() for match in cls._ANY_HEADING.finditer(registry_text)]
+        for start, end in zip(heads, heads[1:] + [len(registry_text)]):
+            block = registry_text[start:end]
+            record_id = block.split("\n", 1)[0].lstrip("#").strip()
+            if not cls._COUNTABLE_RECORD.match(record_id):
+                continue
+            if notice_pmids:
+                identifier = cls._IDENTIFIER_LINE.search(block)
+                if identifier and any(pmid in notice_pmids
+                                      for pmid in bq.identifiers(identifier.group(1))[0]):
+                    continue
+            yield record_id, block
 
     @classmethod
     def _papers_claiming_full_text(cls, registry_text: str,
@@ -615,41 +655,61 @@ class QueueIntegrityTests(unittest.TestCase):
         and its link to the paper it annotates — it is excluded from a count, not from the
         repository.
         """
-        heads = [match.start() for match in cls._ANY_HEADING.finditer(registry_text)]
-        if not heads:
-            return 0
-        bounds = zip(heads, heads[1:] + [len(registry_text)])
-        counted = 0
-        for start, end in bounds:
-            block = registry_text[start:end]
-            record_id = block.split("\n", 1)[0].lstrip("#").strip()
-            if not cls._COUNTABLE_RECORD.match(record_id):
-                continue
-            if notice_pmids:
-                identifier = cls._IDENTIFIER_LINE.search(block)
-                if identifier and any(pmid in notice_pmids
-                                      for pmid in bq.identifiers(identifier.group(1))[0]):
-                    continue
-            if any(marker in block for marker in bq.FULL_TEXT_MARKERS):
-                counted += 1
-        return counted
+        return sum(
+            1 for _record_id, block in cls._countable_blocks(registry_text, notice_pmids)
+            if any(marker in block for marker in bq.FULL_TEXT_MARKERS))
+
+    @staticmethod
+    def _read_study_pmids(report: dict, notice_pmids: frozenset) -> set:
+        """The PMIDs the queue counts as STUDIES read in full."""
+        return {item["pmid"] for item in report["queue"]
+                if item["depth"] == "full text" and item["pmid"]
+                and item["pmid"] not in notice_pmids}
 
     def test_coverage_is_not_overstated_against_the_registry(self) -> None:
-        """STUDIES counted as read may never exceed the registry's own full-text study claims.
+        """Two invariants over the same two populations, because one of them is not enough.
 
-        Both sides exclude editorial notices, and they exclude them by the same definition.
+        CARDINALITY — studies counted as read may never exceed the registry's own full-text
+        study claims. IDENTITY — every study actually read must be findable in the registry by
+        its own PMID.
+
+        🔴 WHY BOTH. On 2026-09-20 this read 77 against 77 and was green while PMID 42082822 was
+        read and unregistered and `PAPER 059` was registered and matched no seed. One mismatch
+        on each side, cancelling in the count: a study with no canonical representation was
+        hidden behind an unrelated record that happened to balance the arithmetic. A count
+        cannot say *which*, so it cannot notice that.
+
+        The asymmetry is deliberate and is the repository's own rule about negatives. A read
+        study with no record is a FAILURE — the reading exists and the registry does not carry
+        it. A registered study outside the current read set is NOT: `PAPER 059` (PMID 17803050)
+        was supplied by the operator and read in full, and it is simply absent from the
+        2026-08-06 PubMed seed. So the second set is REPORTED, never asserted, and the counts
+        are allowed to differ.
         """
         registry = (REGISTRIES / "paper_registry_current.md").read_text(encoding="utf-8").lower()
         notices = frozenset(bq.editorial_notice_pmids(REGISTRIES))
-        claimed = self._papers_claiming_full_text(registry, notices)
+        registered = self._registered_study_pmids(registry, notices)
         report = bq.build(ROOT, "wwox")
-        read = report["study_counts"].get("full text", 0)
+        read = self._read_study_pmids(report, notices)
+
+        # The set and the census must agree, or one of them is measuring something else.
+        self.assertEqual(len(read), report["study_counts"].get("full text", 0))
+
+        read_not_registered = sorted(read - set(registered))
+        registered_not_read = sorted(set(registered) - read)
+        summary = (f"READ_STUDIES={len(read)} REGISTERED_STUDIES={len(registered)} · "
+                   f"READ_NOT_REGISTERED={read_not_registered or '{}'} · "
+                   f"REGISTERED_NOT_IN_READ_SET="
+                   f"{[f'{pmid} ({registered[pmid]})' for pmid in registered_not_read] or '{}'}")
+
         self.assertLessEqual(
-            read, claimed,
-            f"{read} STUDIES counted as read against {claimed} registry records (PAPER or "
-            f"CORPUS, editorial notices excluded from both sides) claiming full text. The gap "
-            f"is reading that has happened and is not yet in the registry; only a BATCH_COMMIT "
-            f"closes it.")
+            len(read), len(registered) + len(registered_not_read),
+            f"CARDINALITY: more studies are counted as read than the registry claims. {summary}")
+        self.assertEqual(
+            [], read_not_registered,
+            f"IDENTITY: these studies were read in full and no registry record carries their "
+            f"PMID. Only a BATCH_COMMIT closes this, and a matching count elsewhere does not. "
+            f"{summary}")
 
     def test_a_normal_full_text_study_is_in_the_study_numerator(self) -> None:
         """Arm 1 — anti-vacuity. If the exclusion removed studies too, every arm below would
@@ -769,6 +829,60 @@ class QueueIntegrityTests(unittest.TestCase):
         self.assertEqual(self._papers_claiming_full_text(two), 1)
         self.assertEqual(
             self._papers_claiming_full_text(two + "#### paper 003\nfull text reviewed\n"), 2)
+
+    def test_equal_counts_can_hide_two_opposite_identity_mismatches(self) -> None:
+        """🔴 THE FAILURE MODE ITSELF, as a fixture, because it shipped green.
+
+        READ = {A, B} and REGISTERED = {A, C}. Both have cardinality 2, so a guard that
+        compares only counts reports agreement — and the real 2026-09-20 state was exactly this
+        shape: 42082822 read and unregistered, PAPER 059 registered and outside the read set,
+        77 against 77.
+
+        The count is asserted equal here ON PURPOSE. That assertion is what the guard used to
+        be, and it passes; the two below are what it could not see.
+        """
+        registry = (
+            "## paper 900\n**identifier:** pmid 11111111\n**evidence depth:** full text reviewed\n"
+            "## paper 901\n**identifier:** pmid 33333333\n**evidence depth:** full text reviewed\n"
+        )
+        report = {"queue": [
+            {"pmid": "11111111", "depth": "full text"},
+            {"pmid": "22222222", "depth": "full text"},
+        ]}
+        registered = self._registered_study_pmids(registry, frozenset())
+        read = self._read_study_pmids(report, frozenset())
+
+        self.assertEqual({"11111111", "33333333"}, set(registered))
+        self.assertEqual({"11111111", "22222222"}, read)
+        # The old guard, verbatim in spirit: equal counts, no complaint.
+        self.assertEqual(len(read), len(registered),
+                         "the fixture must be cardinality-balanced or it proves nothing")
+        # The two properties the count cannot carry.
+        self.assertEqual({"22222222"}, read - set(registered), "READ_NOT_REGISTERED")
+        self.assertEqual({"33333333"}, set(registered) - read, "REGISTERED_NOT_IN_READ_SET")
+        # And the record is named, not just the PMID: a diagnostic that cannot be acted on is
+        # a diagnostic nobody acts on.
+        self.assertEqual("paper 901", registered["33333333"])
+
+    def test_a_post_harvest_corpus_record_is_countable_by_its_pmid(self) -> None:
+        """The new identity form, and the old ones beside it, in one population.
+
+        `CORPUS PMID n` carries no corpus-paper number because it has none; it is countable on
+        exactly the same terms as `CORPUS Pn`, and adding it must not disturb either historical
+        form or start matching prose.
+        """
+        registry = (
+            "# paper registry current\n"
+            "## corpus pmid 42082822\n**identifier:** pmid 42082822\n"
+            "**evidence depth:** complete_fulltext_read\n"
+            "## corpus p261\n**identifier:** pmid 21731849\n**evidence depth:** full text reviewed\n"
+            "## corpus-stub-004\n**identifier:** pmid 33255508\n**evidence depth:** full text reviewed\n"
+            "## corpus overview\nfull text reviewed\n"
+        )
+        registered = self._registered_study_pmids(registry, frozenset())
+        self.assertEqual({"42082822": "corpus pmid 42082822",
+                          "21731849": "corpus p261"}, registered,
+                         "the post-harvest form counts; the stub and the prose section do not")
 
     def test_a_read_corpus_record_is_counted_once(self) -> None:
         """The 2026-09-20 arm: the numerator counts a read CORPUS record, so the denominator must.
