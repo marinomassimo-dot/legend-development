@@ -4818,7 +4818,7 @@ stati fenotipizzati.
 ## FT-104 — PMID 29067327 · debito residuo dichiarato su una lettura già effettuata
 
 **Paper:** PMID 29067327 — Lee MH, … Chang NS 2017, *Alzheimers Dement (N Y)* 3(4):620–635 · PMCID `PMC5651433` · DOI 10.1016/j.trci.2017.02.001
-**Surface:** letto — ricevuta `FTR-20260920-29067327-01`, **`partial_fulltext_read`**
+**Surface:** letto — ricevuta [`FTR-…-29067327-01`], **`partial_fulltext_read`**
 **Priority:** MEDIA
 **Why:** la voce esiste perché la lettura è **dichiaratamente parziale** e una conclusione vi si
 appoggia. `figures: unavailable` e `references: unavailable` — nessun pannello è stato ispezionato,
@@ -4997,8 +4997,9 @@ il paragrafo di metodi sul peptide (sequenza, dose, via, veicolo, tempistica).
 
 ## FT-110 — I due alleli canonici di splicing mai passati all'RNA: `PMID 42721537` e `PMID 38902482`
 
-**Papers:** PMID 42721537 — coorte fondatrice argentina, allele canonico `c.107+1G>A`, **cinque
-pazienti** · PMID 38902482 — secondo record emerso dal censimento di splicing.
+**Papers:** PMID 42721537 · PMID 38902482
+`PMID 42721537` — coorte fondatrice argentina, allele canonico `c.107+1G>A`, **cinque pazienti**.
+`PMID 38902482` — secondo record emerso dal censimento di splicing.
 **Surface:** `42721537` **nessun PMCID** (verificato nel censimento) · `38902482` non testato con un
 fetch.
 **Priority:** **MEDIA-ALTA per `42721537`** — non per leggerlo, ma per ciò che dimostra.

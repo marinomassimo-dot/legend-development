@@ -83,6 +83,27 @@ The paper does mention the WOREE missense variants in passing, once, with no dat
 > "The missense variants (P47R, Q230P, and G137E) were also observed in WOREE syndrome individuals."
 > — Introduction. (Q230P appears exactly once in the body; there is no experiment on it.)
 
+🔴 **And nothing in this paper may be carried across to `Q230P`'s protein-loss mechanism, which
+remains unresolved.** The canonical record for that allele — `DL-MECH-029`, `CLAIM 019`
+(`consolidated baseline`) and `HYP-20260709-08` — holds **normal transcript with protein not
+detected**, and Johannsen's own reading of it is *"**impaired translation** or premature
+degradation"*: **two competing causes, neither discriminated by anyone.** A third possibility,
+**insolubility** rather than loss, is also live and equally untested, because a western blot of a
+soluble fraction cannot see a protein that has partitioned into an insoluble one.
+
+**What `P252A` demonstrates is that the degradative branch is REAL FOR SOME SDR-span missense
+substitution — not that it is the branch `Q230P` takes.** Reading this paper as settling `Q230P`
+would collapse `impaired translation | premature degradation | insolubility` into `degradation`,
+which is precisely the conflation the canonical record refuses to make and which the
+`test_q230p_protein_loss_cause_remains_unresolved` guard exists to catch. ⚠️ **The distance is
+also large in every other dimension** — a thyroid-cancer line, a stably over-expressed Flag
+transgene, no knock-in, no patient-derived material, and a different substitution at a different
+residue. The transferable object is **a mechanism class and a diagnostic question**, and the
+question is the one already written into `HYP-20260709-08`: *is the protein synthesised at a normal
+rate and degraded prematurely, is synthesis reduced, or is it made and insoluble?* A
+lysosomal-inhibitor arm is now worth adding to that discrimination — **as one arm of it, not as its
+answer.**
+
 ---
 
 ## 3 · The KFERQ-like motif
