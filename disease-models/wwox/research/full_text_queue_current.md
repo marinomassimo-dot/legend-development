@@ -5401,9 +5401,33 @@ and the whole Domain-F negative would need reopening). A negative resting on "th
 irrelevant" needs the one hit **named**, so that the next reader can check the judgement instead of
 inheriting it.
 
-**Next action:** one abstract confirmation retires it. ⚠️ If it turns out to describe an actual
-WWOX paralogue or a functional homologue, **the resilience census's central negative reopens** — so
-the cheap check is worth making rather than assuming.
+## ✅ CLOSED THE SAME DAY — abstract confirmed, the negative HOLDS
+
+Weckselblatt B, Hermetz KE, Rudd MK — *"Unbalanced translocations arise from diverse mutational
+mechanisms including chromothripsis."* *Genome Res* 2015;**25**(7):937–47.
+DOI [10.1101/gr.191247.115](https://doi.org/10.1101/gr.191247.115) · `PMC4484391`.
+
+**The hit is incidental, exactly as assessed.** *"paralogous repeats (n = 3)"* describes **sequence
+features at translocation breakpoint junctions**, not gene paralogy. Verbatim:
+
+> *"Sequencing 37 breakpoint junctions revealed that simple translocations have between 0 and 4 base
+> pairs (bp) of microhomology (n = 26), short inserted sequences (n = 8), or **paralogous repeats**
+> (n = 3) at the junctions…"*
+
+⇒ **`WWOX` has no paralogue and no documented functional backup. The resilience census's central
+negative stands, and its single supporting record has now been read rather than assumed.**
+
+🔵 **One incidental datum worth a line and not more.** The same paper reports `WWOX` in a predicted
+**in-frame gene fusion**:
+
+> *"Three simple translocations fuse genes that are predicted to produce in-frame transcripts of
+> **SIRPG-WWOX**, SMOC2-PROX1, and PIEZO2-MTA1, which **may** lead to gain of function."*
+
+A **fusion transcript is not a paralogue**, it is **predicted** not measured (the mood is the
+authors' own *"may"*), and the cohort is unbalanced translocations in neurodevelopmental disorders,
+not WWOX disease. **Recorded so it is not rediscovered as a WWOX-relevant finding; it is not one.**
+
+**Entry closed.** No further action, no read owed.
 
 
 ---
