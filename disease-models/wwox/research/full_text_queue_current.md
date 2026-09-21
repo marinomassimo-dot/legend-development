@@ -5295,3 +5295,40 @@ depth**. The depth debt stands and is what this entry exists to record.
 **Retrievability:** untested from here. **Next action:** one fetch attempt, then a full read if the
 body returns — this is a higher-value target than any method paper in `FT-113`.
 
+
+---
+
+## FT-118 — The three cross-disease window precedents, and why they are queued rather than trusted
+
+**Papers:** PMID 25866966 · PMID 17289941 · PMID 31704158
+**Opened:** 2026-09-21 · **Actor:** Orchestrator · **Priority:** MEDIUM. They carry **no WWOX
+datum** and can never produce a WWOX claim — but they carry the only published answers to the
+question `TX-007`'s entire value depends on: **can postnatal restoration recover a deficit
+established before birth?**
+
+| PMID | What it is | What it is being used for |
+|---|---|---|
+| **25866966** | Silva-Santos 2015 — Angelman, `Ube3a` reinstatement at several ages | 🔴 **The load-bearing one.** *"Motor deficits were rescued… in adolescent mice, whereas anxiety, repetitive behavior, and epilepsy were only rescued when Ube3a was reinstated during early development. In contrast, hippocampal synaptic plasticity could be restored at any age."* ⇒ **windows are phenotype-specific within a single gene** — so "the window" for WWOX is the wrong noun, and the right question is one window per endpoint |
+| **17289941** | Guy 2007 — Rett, `Mecp2` reversal | *"robust phenotypic reversal… in both immature and mature adult animals"* ⇒ a developmental-gene deficit is not automatically irrevocable. ⚠️ **The paper argues against its own transfer**: *"neurons do not die, which suggests that this is not a neurodegenerative disorder."* WWOX loss involves Purkinje loss, granule apoptosis and embryonic death. **The disanalogy is stated by the source itself and must travel with the citation** |
+| **31704158** | NURTURE interim 2019 — SMA, presymptomatic nusinersen, 25 infants | 25/25 sat, 23/25 walked with assistance, 22/25 independently ⇒ treating before the structure is lost is categorically different from treating after. Bears on **timing**, not on progenitor recoverability |
+
+🔴 **What they license, stated so nobody widens it later.** They establish that **the question is
+answerable by experiment**, that it has been **answered differently for different endpoints within
+one gene**, and **what the design looks like**: an inducible restoration allele, several ages, a
+multi-endpoint panel. **They license nothing about WWOX.** A precedent in another gene is a
+precedent for the question being tractable — never for the answer. Any sentence of the form
+*"Rett was reversible, so WWOX may be"* is a category transfer and this entry exists partly to
+refuse it in advance.
+
+**Read depth:** each was fetched and quoted in-act by Scientist B; **no receipt persisted, no
+locator manifest built, no figure inspected.** Treated exactly as `FT-113` treats `38378758`.
+
+**Why the debt is real rather than bookkeeping.** LEGEND's own timeline now places the first
+**measured** WWOX lesion at **E12.5** in mouse and the **21st gestational week** in human tissue,
+while every therapy in the portfolio acts at or after spontaneous seizures — **the `P0–P5` window
+opens roughly two weeks after the first measured lesion.** The only evidence bearing on whether
+that gap is fatal to the strategy is these three papers, and none has been read to receipt depth.
+
+**Next action:** `25866966` first — it is the one whose design LEGEND would actually copy, and the
+only one whose result is phenotype-resolved.
+
