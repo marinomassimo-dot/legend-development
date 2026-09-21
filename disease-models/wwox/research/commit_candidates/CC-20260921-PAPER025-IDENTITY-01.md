@@ -56,6 +56,42 @@ all.
 missense and a canonical splice-acceptor — meet in one 2019 case series**, which the repository has
 been reasoning about through two separate literatures.
 
+## 2bis · 🔴 The sharper diagnosis, found hours later: this is TWO PAPERS CONFLATED
+
+The byline is not a random slip. **`Piard J` is the first author of a different 2019 WWOX paper** —
+*"The phenotypic spectrum of WWOX-related disorders: 20 additional cases of WOREE syndrome and
+review of the literature"*, *Genet Med* 2019;**21**(7), established from the erratum
+**`PMID 30783266`** (`article_types: Published Erratum`,
+DOI [10.1038/s41436-019-0460-y](https://doi.org/10.1038/s41436-019-0460-y)).
+
+So `PAPER 025` holds **the identifier of one paper and the byline of another**:
+
+| | |
+|---|---|
+| Identifier carried | `PMID 30853297` — Weisz-Hubshman M … Heimer G, *"…and dysmorphism among Yemenite Jews"* |
+| Byline carried | *"Piard et al."* — first author of the **WOREE phenotypic-spectrum cohort**, a different paper |
+
+**Checked immediately, and the answer completes the diagnosis rather than deepening it.** The Piard
+cohort is **`PMID 30356099`** and it is **not missing** — but it is not a `PAPER` either:
+
+> `CORPUS-STUB-059` / `LIT-0083` · **`Authors: not yet extracted`** · `Short title: corpus paper 59`
+> · **and it carries a read receipt.**
+
+🔴 **That is the mechanism, and it is more instructive than the error.** One of the larger
+genotype–phenotype series in this disease — 20 additional WOREE cases — has been **read**, and
+still sits as an **un-promoted stub whose author field was never filled in**. A record with no
+byline cannot defend its own byline. So when *"Piard et al."* was needed somewhere, nothing in the
+repository connected that name to `30356099`, and it landed on `30853297` instead.
+
+**Corrected against myself:** the draft of this section speculated the Piard cohort *"may have no
+record of its own"*. It has one. **The defect is not a missing paper — it is a read paper left in
+a form that carries none of its own identity**, next to a `PAPER` record wearing it.
+
+⚠️ **What the erratum does NOT do**, stated so the word *"Correction"* on a load-bearing cohort
+paper is never re-opened in alarm: it records only that *"one patient [was] investigated through
+genome sequencing rather than exome sequencing as originally published"*, with amendments to the
+Abstract and Methods and added authors. **No case count, genotype, phenotype or outcome changes.**
+
 ## 3 · The allele correction this session owes itself
 
 🔴 **The Orchestrator's own brief conflated two acceptor alleles, and Scientist A caught it.**
@@ -96,10 +132,17 @@ record (**Weisz-Hubshman M … Heimer G**), and add to its `Note`:
 `PREMISE` note recording that the cited source is held at **abstract depth** and that its byline was
 corrected in this batch.
 
-**(c) `full_text_queue_current.md`** — `FT-117`, already opened, records the depth debt and the
-retrievability question. No change proposed here.
+**(c) 🔴 Promote `CORPUS-STUB-059` (`PMID 30356099`) to a `PAPER` record with its authors
+extracted.** It is **read, receipted, and cited across the model's cohort reasoning**, and it has
+no byline of its own. Correcting `PAPER 025`'s byline without this would fix the symptom and leave
+the cause: a read paper with an empty `Authors` field is a name available to be borrowed. Its
+erratum `PMID 30783266` (`FT-121`) should be linked to it at the same time, with the note that the
+correction is **administrative and changes no case count, genotype, phenotype or outcome**.
 
-**(d) `dismissal_ledger_current.md` → `🩸 DEFAULTS THAT BIT US`** — one row:
+**(d) `full_text_queue_current.md`** — `FT-117` records the depth debt on `30853297`; `FT-121`
+records the two harvested-but-unregistered records. No change proposed to either here.
+
+**(e) `dismissal_ledger_current.md` → `🩸 DEFAULTS THAT BIT US`** — one row:
 
 > **D-22** · *"two surfaces in the same repository that name the same paper agree about it"* ·
 > **Why it is FALSE here:** `paper_registry_current.md` and

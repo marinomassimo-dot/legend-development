@@ -5405,3 +5405,52 @@ inheriting it.
 WWOX paralogue or a functional homologue, **the resilience census's central negative reopens** — so
 the cheap check is worth making rather than assuming.
 
+
+---
+
+## FT-121 — Two WWOX records harvested in 2026 and never registered, settled at abstract depth
+
+**Papers:** PMID 28721938 · PMID 30783266
+**Opened:** 2026-09-21 · **Actor:** Orchestrator · **Priority:** LOW for both — **both are settled
+for the use they are being put to**, and this entry exists to record the debt honestly rather than
+to schedule work. Full context:
+[`harvest_to_registry_gap_20260921.md`](../analysis/harvest_to_registry_gap_20260921.md)
+
+Both are present in `corpus_seed_pubmed_20260806.jsonl` and have **no `CORPUS`, `PAPER` or `LIT`
+record and no receipt** — verified individually with `registry_records.py get --pmid` and
+`fulltext_receipts.py status --pmid`, **not** from the derived identity index, which was measured
+at a 4 % false-positive rate on this set and had already produced two false alarms.
+
+### `PMID 30783266` — the correction that changes nothing, recorded so nobody re-opens it
+Piard J, … Kini U, Philippe C. *Genet Med* 2019;**21**(7):1667–1671. `Published Erratum`.
+DOI 10.1038/s41436-019-0460-y. Corrects *"The phenotypic spectrum of WWOX-related disorders: 20
+additional cases of WOREE syndrome and review of the literature."*
+
+> *"The article has been corrected to account for one patient being investigated through **genome
+> sequencing rather than exome sequencing** as originally published; thus amendments to the
+> Abstract and Methods have been made as well as addition of the relevant authors and
+> acknowledgment."*
+
+✅ **Administrative. No case count, genotype, phenotype or outcome changes.** The WOREE cohort
+LEGEND reasons about is unaffected. 🔴 **But it identifies a registry defect**: `Piard J` is first
+author of *this* cohort paper, while `PAPER 025` carries **`PMID 30853297`** (Weisz-Hubshman …
+Heimer) **under the byline "Piard et al."** — two different 2019 WWOX papers conflated into one
+record. ⇒ recorded in `CC-20260921-PAPER025-IDENTITY-01`; **the open question is whether the Piard
+cohort has a record of its own at all.**
+
+### `PMID 28721938` — a diagnostic datum, corroborating, and not independent
+Tarta-Arsene O, Barca D, Craiu D, Iliescu C. *Epileptic Disord* 2017;**19**(3):357–361.
+DOI 10.1684/epd.2017.0924.
+
+> *"…with persistent epileptic spasms and hypsarhythmia as a part of the electroclinical phenotype,
+> **demonstrating that microcephaly is not mandatory for diagnosis**, even when associated with
+> progressive cerebral atrophy."* *(printed "hypsarhythmia", one `r`; reproduced as printed)*
+
+Consistent with `DL-MECH-022`'s biallelic-null case at **OFC +0.37 SD**. ⚠️ `n = 1`. ⚠️ **Not an
+independent source**: `Tarta-Arsene O` is also a co-author on the Piard cohort above, so anyone
+counting these as two independent observations of "microcephaly not mandatory" is double-counting
+one clinician's patients.
+
+**Next action for both: a `CORPUS` placeholder, not a read.** Neither needs full text for the use
+made of it here, and neither should acquire the appearance of a reading it has not had.
+
