@@ -4,6 +4,63 @@
 > The sections below it are the *previous* run's state and remain accurate except where this
 > block says otherwise. **Not a handoff and not a stop.**
 
+## Since the checkpoint — four more waves, and three of them cut AGAINST the lead
+
+**All landed on canonical `main`.** Gates green at every landing.
+
+1. 🔴 **`TX-004`'s only supporting experiment is weaker than it looked.** `A51` is almost certainly
+   **BTX-A51 — a CK1α / CDK7 / CDK9 inhibitor, not a MYC inhibitor** (Phase I verified at source by
+   the Orchestrator; Ben-Neriah at the same institution as the Aqeilan lab; identification stays
+   `INFERENZA`). Its Phase I PD readout is **reduced RNA Pol II phosphorylation** — a CDK9
+   elongation effect for which MYC is the *readout*, not the target. **`TX-004` names a target its
+   only reagent does not have.** And CK1α is the β-catenin **priming** kinase, with an independent
+   study reporting **increased** β-catenin under the compound — the **opposite** direction from the
+   one `TX-004` requires (one paper, abstract level, virus-infected cells ⇒ **FLAG, not
+   refutation**).
+2. 🔴 **And the schedule indicts the experiment itself.** Continuous CDK9 inhibition causes
+   developmental adverse effects; a **two-hour window avoids all of them**; `AZD4573` was
+   independently engineered for *transient* engagement. **`A51` was given to the organoids
+   continuously for seven weeks — the regimen this literature flags as harmful.** ⇒ the `SOX2⁺`
+   fall 60→33 % with layer markers unmoved **cannot be distinguished from an anti-proliferative
+   effect** on the published data (no proliferation index, no death readout). *Under test in the
+   open wave.*
+3. 🔴 **`PMID 30853297` is genuinely blocked** — seven routes, each measured. `CLAIM 018` remains a
+   `consolidated baseline` resting on an abstract, and that debt is documented, **not discharged**.
+4. ✅ **Table S1 is unreachable from here** (403 on both PMC hosts, `EGRESS_BLOCKED`, deposit ends
+   with two file names and no content) — **but the body came back**, Table 1 was reconstructed with
+   its alignment established against three anchors, and the Operator's question is answered in
+   [`oliver2023_table1_independent_reconstruction_20260921.md`](oliver2023_table1_independent_reconstruction_20260921.md):
+   **the descriptive imbalance is real, the log-rank is as reported, and the survival inference
+   does not carry to an individual** — syntactic exposure variable the authors decline to validate,
+   flagship allele on both tails, two strata pooled that differ in ascertainment *and* composition
+   (23 % vs 38 % mortality, 8 y 2 m vs 3 y 4 m mean age), and censoring that is **age at
+   publication, not follow-up**.
+5. 🔵 **A flag that would have undermined two of our own planned experiments does NOT hold.** A
+   passage suggested WWOX is not expressed in blood or skin fibroblasts, which would have made
+   `DL-BIO-003` and `HYP-20260709-08` uninterpretable. **`CLAIM 019` settles it**: Johannsen
+   measured **WWOX transcript at normal levels in patient fibroblasts by qRT-PCR**. Both experiments
+   stand.
+6. 🟢 **New and reachable:** `FT-125` — `PMID 36537114` is **already read with a receipt** and
+   carries a heterozygous `Q230P` brother dead at 10 years, a *de novo* intronic **`GRIA4`** variant
+   (a gene absent from this repository), and a `Q230P` + 36.3 kb exon-5 deletion genotype. **No
+   acquisition required.** *A receipt records that a paper was read, not that everything in it was
+   extracted.*
+7. 🔴 **Two instrument defects, both in the token class this repository is most fragile on**
+   (`FT-126`): the Scholar Gateway surface **silently deletes hyphens and asterisks inside variant
+   strings** (`c.606-1G>A` → `c.6061G>A`) — **the `+5`→`−3` class**, so that surface is **refused**
+   for variant coordinates; and `lookup_article_by_citation` transposes `pmid` and `key`.
+8. 🔴 **A third error of mine, same class as the other five:** I called two DOIs absent on
+   `convert_article_ids` alone. **Both exist** — `10.1016/j.ejpn.2019.02.003` and
+   `10.1002/ajmg.a.63074` — and two other routes return them. **A missing identifier from one route
+   is not an absence.** Caught by Scientist A, against my own brief, for the second time.
+9. 🔵 **Credit, twice:** the `Q230P` both-tails datum was **already in `CLAIM 019`**, and the
+   *"severe without being deterministic for early death"* reading was already in `CLAIM 030`'s
+   2026-09-09 note. **LEGEND wrote both first.** A sixth instance of the session's structural
+   pattern in a new form — **existence in the wrong place**, a finding filed under one claim that
+   another claim's analysis needed, with no link between them.
+
+---
+
 ## 🔴 BRANCH AND LEDGER RECONCILIATION — measured 2026-09-21 on Operator instruction
 
 Two anomalies were raised and both are now resolved by measurement. **Neither was a loss.**
