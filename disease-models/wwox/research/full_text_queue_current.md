@@ -5202,3 +5202,96 @@ WWOX patient, the negative would invert.** Nobody has opened it.
 **Next action:** one abstract-level confirmation is enough to retire this entry; a full read is not
 required for the use it is being put to. Retrievability untested.
 
+
+---
+
+## FT-116 — PMID 22534828, the only other record in a census that returned two
+
+**Papers:** PMID 22534828
+**Opened:** 2026-09-21 · **Actor:** Orchestrator · **Priority:** MEDIUM — it is one of **two**
+records in a census whose result is load-bearing for a **safety** score.
+
+**The census:** `(WWOX OR WOX1) AND (ectopic OR overexpression OR transfection) AND apoptosis AND
+(neuronal terms)` → **`total_count: 2`**. One is a review LEGEND already holds. **This is the
+other.** The conclusion resting on it — *no published experiment asks whether excess WWOX harms a
+neuron* — is what lowers `TX-007`'s `SAFETY` score in
+`CC-20260921-TX007-CEILING-AND-DOSE-CONTROL-01`.
+
+**Status: abstract only.** Chang/NCKU corpus; systems reported as COS, cancer and neuroblastoma
+lines. ⚠️ **Independence caution applies** — the broad Chang batch is closed and saturated, and a
+single record from it is not independent corroboration of anything.
+
+**Why the debt was declared rather than paid.** If this paper contained a genuine neuronal
+overexpression-toxicity experiment, the `PREMISE: NOBODY_LOOKED` on `TX-007`'s ceiling would become
+`PREMISE: LOOKED_ONCE_IN_A_CANCER_LINE` — a different and weaker statement, and **the dangerous
+direction of error**, because it would mean the repository declared a question unasked when it had
+been asked.
+
+## ✅ SETTLED THE SAME DAY — body read, and the census conclusion SURVIVES
+
+🟡 **Read, not receipted.** `PMC3358014` returned the **complete body** through the PubMed MCP
+extractor (Orchestrator, 2026-09-21). **No receipt is claimed and none should be inferred**: no
+fingerprinted artifact was persisted, no locator manifest was built, and **every figure callout in
+the returned text is an empty `()`** — the extractor stripped them, so not one statement below can
+be anchored to a panel. Treated exactly as `FT-113` treats `38378758`.
+
+**Identity:** Chang JY … Chang NS, *"TIAF1 self-aggregation in peritumor capsule formation,
+spontaneous activation of SMAD-responsive promoter in p53-deficient environment, and cell death"*,
+*Cell Death Dis* 2012. DOI [10.1038/cddis.2012.36](https://doi.org/10.1038/cddis.2012.36).
+
+**Verdict: it does NOT contain a neuronal WWOX-overexpression-toxicity experiment.** The census
+conclusion behind `TX-007`'s `SAFETY` downgrade stands, and stands **stronger**, because the only
+candidate record has now been opened rather than assumed.
+
+What it does contain, each with its own bound:
+
+- 🔵 **A weak datum in the REASSURING direction, and it must be quoted with its qualifier:**
+  *"Transient expression of low levels of WOX1 or TIAF1 did not cause L929 cell death (<10%)."*
+  ⚠️ **"low levels"** is the authors' own word, in a **murine fibroblast line**, by transient
+  transfection. `TX-007` reaches **8–25× wild type in forebrain, for life**. This does not speak to
+  that regime and must not be cited as if it did.
+- **The death is combinatorial, not WWOX-alone:** WOX1 + TIAF1 ≈ 40 %; WOX1 + TIAF1 + p53 ≈ 75 %,
+  *"in a synergistic manner"*, with each protein alone blocking colony formation by ~50 %.
+- 🔴 **The one sentence touching non-cancer cells is `(data not shown)`:** *"when normal cells such
+  as fibroblasts and cardiomyocytes were expressed with p53, WOX1 and TIAF1, these cells became
+  highly sensitive to death induced by cytokines TNF-and TGF-1 in 4 h (data not shown)."* An
+  assertion with no data, about a three-protein combination, in fibroblasts and **cardiomyocytes**.
+  **Not neurons, and not evidence.**
+- **The nearest thing to a neuron is `SK-N-SH`**, a **neuroblastoma** line, and WOX1 appears there
+  as an *inducer of TIAF1 expression* in co-culture — not as a toxicity arm.
+
+⇒ **`PREMISE: NOBODY_LOOKED` on WWOX overexpression toxicity in neurons is CONFIRMED by reading,
+not by counting.** The census said `total_count: 2`; both records are now accounted for, and
+neither asks the question. **Entry closed for its purpose.** A receipt remains owed if anything is
+ever to be quoted from this body into a canonical surface.
+
+---
+
+## FT-117 — PMID 30853297, where both worked-example allele classes meet, and where the registry has the wrong author
+
+**Papers:** PMID 30853297
+**Opened:** 2026-09-21 · **Actor:** Orchestrator · **Priority:** 🔴 **HIGH.** It is the cited source
+of `CLAIM 018` and `CLAIM 019` — and `CLAIM 018` is `consolidated baseline`.
+
+🔴 **`PAPER 025` carries this PMID with the wrong first author and a wrong title.** The registry
+attributes it to *"Piard et al."* with a title ending *"…dysmorphic features"*. The record is
+**Weisz-Hubshman M … Heimer G**, titled *"…and dysmorphism among Yemenite Jews"*. LEGEND's own
+splice-transcript census already attributes it correctly to Heimer/Basel-Salmon, **so the registry
+and the census disagree with each other about the same PMID.** ⇒ correction proposed at
+`BATCH_COMMIT`; `paper_registry_current.md` is canonical and is not edited here.
+
+**What it carries, and it is more than the registry suggests:**
+- 🔴 **A MEASURED transcript consequence for `c.517-2A>G`** — verbatim from the abstract:
+  *"Complementary DNA sequencing demonstrated that the WWOX c.517-2A > G splice-site variant causes
+  skipping of exon six."* (the source prints `c.517-2A > G` with spaces, and **"exon six"** as a
+  word). This is one of the very few measured RNA outcomes in the whole WWOX splice literature.
+- 🔴 **It is also a `Q230P` primary** (`c.689A>C`). **Both worked-example allele classes meet in one
+  2019 case series**, and the repository has been treating them through separate literatures.
+
+⚠️ **`CLAIM 018` is `consolidated baseline` / `DATO` and rests on this paper at ABSTRACT depth.**
+Reading the abstract verbatim, as was done today, raises token confidence and **does not change read
+depth**. The depth debt stands and is what this entry exists to record.
+
+**Retrievability:** untested from here. **Next action:** one fetch attempt, then a full read if the
+body returns — this is a higher-value target than any method paper in `FT-113`.
+
