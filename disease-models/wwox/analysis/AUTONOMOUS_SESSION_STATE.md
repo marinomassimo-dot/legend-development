@@ -3,49 +3,32 @@
 **Updated:** 2026-09-21 · **Purpose:** recovery point. If this session is interrupted, a cold reader
 resumes from here. **Not a handoff and not a stop.**
 
-## Current state
-- `main` == `origin/main` · working tree clean · one worktree · LINT **PASS** · publication gate
-  **PASS, 0 blocks** · receipts **181 chained, tail anchored**.
-- Papers read and receipted in this continuation: `21766012`, `25650666` (adversarial re-read),
-  `27845895`, `25238782`, `24008736`, `41124647`, `35573960`.
-- **In flight at this write:** a **retrievability sweep by fetch** over every paper this repository
-  calls blocked (with `36621327` read if its body is non-empty), and a **census of WWOX splice
-  transcript evidence** for `DL-BIO-002` / `TX-001`.
+## Current state — 2026-09-21, end of the autonomous continuation
 
-## ✅ RESOLVED — the publication-gate blocker (kept as a worked example, not a precedent)
+- `main` == `origin/main` · working tree clean · LINT **PASS** · publication gate **PASS, 0 blocks**
+  · receipts **186 chained, tail anchored** · growth anchors **PASS** · `session_self_eval.py`
+  **PASS** · release regressions exit 0 (every non-pass a declared environment absence).
+- 🔴 **`UNREAD_PREMISE` ratchet: 2 → 0.** For the first time this repository leans on **no** paper
+  that nobody has opened. Manifest baseline lowered to match; `growth_anchors` reports
+  `RATCHET_IMPROVED`.
+- 🔴 **The accessible reading queue is EMPTY, and that is measured rather than assumed.** Every
+  copyright-verified open paper carrying no receipt has been read. What remains is **human
+  acquisition**: packet items `A1`–`A9`, each with its route tried and recorded.
+- **Read and receipted in this continuation (13 events over 11 papers):** `21766012` (+ correction)
+  · `25650666` (adversarial re-read) · `27845895` · `25238782` · `24008736` · `41124647` ·
+  `35573960` · `39101447` · `33134515` · `35328751` · `36271927` · `27869163`.
+- **Tools shipped, both routed and regression-backed:** `scoped_record_edit.py` (16 tests) ·
+  `extraction_damage_report.py` (11 tests).
+- **Self-evaluation:** Parts 1–3 complete —
+  `research/session_evaluations/2026-09-21_orchestrator_autonomous_continuation.md`.
+  **Capability scout:** appended to `research/capability_scout_log.md` with the host-keyed preflight.
 
-**2026-09-21. Operator-authorized, scope-limited, closed.** The gate had blocked on the ledger tail
-`FTR-20260921-39101447-01`, where a published study's parental attribution for a chromosome-16
-uniparental disomy sat in the same JSONL record as reference-genotype language. Two words were
-removed, leaving `homozygous through uniparental disomy of chromosome 16`; the ledger was
-re-anchored and the chain re-validated at **182**; gate **PASS, 0 blocks**.
+### The corpus-wide measurement, so nobody re-derives it
 
-**How the edit was made safe.** It ran under a **programmatic scope assertion that refused to write**
-unless exactly one `evidence_basis` element differed and every other field was byte-identical —
-`study_id`, `evidence_depth`, `source_locator`, `source_fingerprint`, `coverage`, `prior_receipt`,
-`ledger_prev_hash`, `outputs`, `workflow`. **It caught my own first attempt**, which named the wrong
-element index, and wrote nothing. Worth reusing: when an authorized edit is narrow, encode the
-narrowness as an assertion rather than as care.
-
-🔴 **Not a precedent, and the Operator said so explicitly.** This authorises nothing about historical
-receipts, ledger rewriting, parent-of-origin removal elsewhere, gate bypass, allowlists or waivers.
-**A later case of the same shape gets judged again on its own terms.**
-
-### The rule that prevents the recurrence
-
-**Keep inheritance-side attribution out of receipts entirely** — including for a published study's
-proband, not only for this model's own genotype. The gate reads one JSONL record as a single window
-and cannot tell whose family is meant, so the mere co-occurrence blocks publication; and because the
-ledger is append-only, **by the time the gate tells you, the record can no longer be fixed without an
-authorisation.** The scientific content almost never needs the side: write the mechanism — *"disomy
-produced homozygosity"*, *"biallelic, both alleles inherited"* — and stop there.
-
-⚠️ **And the same restraint applies to prose that merely explains the rule.** The first version of
-this very note tripped the same check three more times by reproducing the offending words, and a
-second version tripped it once more; the wording above is the third attempt. **Describe the shape,
-never quote the phrase.**
-
----
+`extraction_damage_report.py` over all **29** local artefacts:
+**29/29 italic-class counts INADMISSIBLE · 29/29 reference list ABSENT.**
+So **no italic-class zero from any local artefact has ever been admissible as evidence**, and **no
+citation attribution has ever been traceable from one**. Run the tool before offering any count.
 
 ## 🔴 The three results a cold reader should know before anything else
 
