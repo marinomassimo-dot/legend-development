@@ -47,9 +47,34 @@
 > so `PMID 33914858` is worth acquiring **to verify the attribution, not to learn the answer**. Two
 > real residues travel with it: the AAV oligodendrocyte arm is **confounded by the authors' own
 > admission** (*"may reflect the limited oligodendrocyte tropism of AAV9 … rather than a lack of
-> relevance"*), so a partial oligodendrocyte contribution is not excluded; and **no g-ratio and no
+> relevance"*), so a partial oligodendrocyte contribution is not excluded; and ~~**no g-ratio and no
 > electron microscopy exist anywhere in this literature**, which § 1 measured independently and
-> `DL-MECH-031` had already flagged as its own methodological limit.
+> `DL-MECH-031` had already flagged as its own methodological limit.~~
+>
+> 🔴 **CORRECTION, 2026-09-21 — that struck-through zero is FALSE, and it is an instance of the very
+> pattern the next paragraph warns about.** § 1 measured `electron microscopy` = 0 and `g-ratio` = 0
+> **in the paper it read** (`PMID 31340538`), and scoped it correctly there. **This note widened that
+> scope to "anywhere in this literature", and the widening is wrong.**
+> **`PMID 34747138` holds both**, and LEGEND holds the measurement first-hand — its deep-dive manifest
+> names a *"Materials and Methods, 'Electron microscopy', g-ratio calculation"* section, and its
+> locator dossier records the result:
+>
+> > *"The g-ratio scatter does normalise: the treated cloud overlies WT while the KO cloud sits flat
+> > at 0.8–0.95."*
+>
+> 🔴 **And the result is more interesting than the zero would have been, in two directions at once.**
+> The **g-ratio normalises** under gene therapy — myelin thickness on the axons that are myelinated
+> recovers to wild-type. But the same dossier records that **unmyelinated-axon counts stay
+> significantly worse** in treated animals. *Thickness recovers; how many axons get myelinated at all
+> does not.* ⚠️ **With a statistical caveat that must travel with it:** the manifest records that the
+> brackets run **WT-vs-KO and KO-vs-rescued, never WT-vs-rescued**, *"so the visible residual gap is
+> untested."* **Untested is not absent** — the residual gap is neither established nor excluded.
+>
+> **Why this correction earns its place rather than merely tidying:** a zero over "this literature"
+> forecloses the myelin endpoint as unmeasurable; the truth is that it **has** been measured, and
+> what it shows is a **partial, endpoint-split ceiling** for gene addition. That is a load-bearing
+> input to [[tx007_window_and_ceiling_20260921]], and it was found by a reader who went looking for
+> the myelin evidence and found the zero standing in its way.
 >
 > ⚠️ **The pattern, stated once because it recurred three times today: a delegate's census describes
 > THE FIELD, never THIS REPOSITORY.** Before acting on any "nobody has done X", check the receipt

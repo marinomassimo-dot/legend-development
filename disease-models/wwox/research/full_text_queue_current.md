@@ -5294,6 +5294,18 @@ che cosa costerebbe valutarla; **non la propone.**
 
 ## FT-116 — 🔴 **39 record neuro-rilevanti del corpus non sono mai stati triati** · e la coda "vuota" era vera in un senso più stretto di come si legge
 
+> 🔴 **CORRECTION appended 2026-09-21, same day: *«mai guardati»* is FALSE for two of the eight.**
+> `35715422` and `37583270` carry discovery-ledger entries — **`DL-MECH-059` and `DL-MECH-060`, both
+> `promoted-to-CC`** — that declare the source *"letti integralmente"* and cite dossiers under
+> `research/staging/`. **That directory does not exist in this tree**, and neither paper has a
+> receipt, a manifest or a registry record. They were never **registered**; the discovery ledger says
+> they were **read**. 🔴 **This entry's measure runs on registry `Status` and is structurally blind to
+> the discovery ledger**, which is the fourth surface of the join and the one no other surface sees.
+> Nine papers are affected; six have no receipt and no manifest. Full audit:
+> [[staging_dossier_audit_20260921]]. ⚠️ **Also corrected there: `37095367` is filed in the ledger as
+> *"del corrigendum"* and is NOT a corrigendum** — it is the primary WGS article; the `✎ corrected`
+> marker means *has a correction*, not *is one*.
+
 **Papers:** PMID 32214227 · PMID 35715422 · PMID 37583270 · PMID 31618474 · PMID 37095367 ·
 PMID 29390993 · PMID 33919646 · PMID 30783266 — le otto righe con PMCID, che sono l'oggetto
 azionabile di questa voce. Le altre 31 sono elencate sotto per completezza della misura.
