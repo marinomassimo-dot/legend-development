@@ -5231,3 +5231,61 @@ un argomento in più perché i manifest nuovi la dichiarino.
 **Next action:** nessuna rilettura. Se e quando uno di questi quattro paper dovesse reggere una
 claim canonica — oggi nessuno lo fa — **allora** va ri-recuperato con la ricetta sopra, persistito,
 impronta presa e ricevuta scritta. Non prima.
+
+---
+
+## FT-115 — La metodologia MAVE / VAMP-seq: sei paper **fuori dalla letteratura WWOX** che rispondono alla domanda residua di Candidate D
+
+**Papers:** PMID 42425971 · PMID 34314704 · PMID 39319420 · PMID 40463067 · PMID 29785012 ·
+PMID 40957416. **Nessuno dei sei è tenuto da LEGEND in alcuna forma** — verificato con
+`registry_records.py get --pmid`, sei volte, sei zeri. Le stringhe `VAMP-seq`, `deep mutational
+scan*` e `multiplexed assay*` non compaiono **da nessuna parte** in `disease-models/` o `framework/`.
+
+**Perché sono in coda.** Censimento completo in
+[[missense_rescue_methodology_census_20260921]]. La domanda era: *esiste un laboratorio o una
+metodologia trasferibile capace di misurare se una proteina missense ri-stabilizzata è
+**funzionale** — cioè funzione per molecola, ad abbondanza appaiata?* **La risposta è sì**, ed è
+una classe di saggi matura e pubblicata (MAVE / deep mutational scanning), già applicata **a
+un'ossidoreduttasi** (`34314704`, CYP2C9, *"activity and abundance"*; `39319420`, CYP2C19, *"a
+substrate specificity–abundance tradeoff"*) e **a un gene neuro-evolutivo dell'epilessia**
+(`42425971`, TSC2, *Nat Commun* 2026). **WWOX non è mai stato passato attraverso nessuno di essi.**
+
+**Ordine di lettura, e non è quello della rilevanza apparente.**
+1. `42425971` (TSC2) — unico che è insieme malattia **neuro-evolutiva**, problema di **VUS
+   missense** della stessa forma di quello di LEGEND, e disegno **integrato** abbondanza+funzione.
+2. `40463067` (mappa dei degron citosolici, bioRxiv) — 🟢 **l'unica riga verificata aperta oggi**
+   (CC BY-NC-ND, `is_open_access: true`, `checked_sources` include `pmc`), e interrogabile contro
+   una domanda **già aperta** di LEGEND: il motivo KFERQ-like `LRSVQ` (aa 187–191) che `41124647`
+   ha **ipotizzato e mai mutato**. ⚠️ Preprint, non peer-reviewed.
+3. `34314704` / `39319420` — il disegno appaiato su ossidoreduttasi.
+4. `29785012` — la descrizione primaria di VAMP-seq, per giudicarne i **limiti**: è un saggio di
+   abbondanza su fusione fluorescente in linea reporter, e **se WWOX sia un substrato adatto è una
+   domanda vera, non una formalità**.
+
+⚠️ **Retrievability: UNTESTED su quattro righe su sei.** `get_copyright_status` ha restituito
+`checked_sources: ["pubmed"]` da solo per `42425971`, `34314704`, `39319420` e `40957416` — cioè
+**PMC non è mai stato consultato** e `is_open_access:false` registra *ciò che non è stato
+controllato*, non un paywall. Regola già pagata da questo repository su `PMID 41124647`, che
+restituì quello stesso flag e poi consegnò **68.491 caratteri**. **Si stabilisce tentando il
+fetch e misurando la lunghezza del corpo, mai leggendo il flag.**
+
+🔴 **L'ostacolo che sopravvive, e va portato con ogni citazione di questa voce.** Ogni MAVE
+*funzionale* richiede un readout **punteggiabile in formato pooled**, e WWOX non ne ha uno:
+`TX-003` registra già *"WWOX is an oxidoreductase with undefined physiological substrate/activity"*,
+e la review di Adelaide letta oggi lo dice con le parole degli autori — *"the substrate and product
+of the enzyme reaction that it catalyses are yet to be discovered"*. **La metà «abbondanza» è
+portabile su WWOX oggi; la metà «funzione» non lo è finché non esiste una funzione punteggiabile.**
+I candidati sono di **binding**, non di catalisi (pannello partner SDR: tau, GSK3β, POLE4, con un
+partner WW1-dipendente come controllo che deve restare normale). **Se uno di essi sia eseguibile in
+pooled è la domanda aperta che questo censimento consegna, e non ha risposta.**
+
+**Classificazione terapeutica dell'intero censimento: `MECHANISTIC PROBE ONLY`.** Nessuna delle sei
+voci è un intervento. 🔴 **`P282A` resta il freno:** una sostituzione nello span SDR può essere
+funzionalmente morta ad abbondanza normale, quindi un MAVE di **sola abbondanza** sarebbe
+**attivamente fuorviante** proprio per gli alleli che contano di più.
+
+**Priorità:** MEDIA come lettura, ALTA come voce di stato (colma un vuoto di capacità, non solo di
+bibliografia). **Current status:** ⬜ da assegnare. **Next action:** stabilire la retrievability con
+un fetch, poi `42425971` per primo. 🔴 **Aprire un MAVE su WWOX sarebbe un programma di ricerca
+materialmente nuovo e NON è una decisione autonoma:** questa voce registra che l'opzione esiste e
+che cosa costerebbe valutarla; **non la propone.**
