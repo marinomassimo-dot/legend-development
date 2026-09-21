@@ -2158,7 +2158,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 150
 **Full title:** Normal cells repel WWOX-negative or -dysfunctional cancer cells via WWOX cell surface epitope 286-299
 **Identifier:** PMID 34140629 / DOI 10.1038/s42003-021-02271-2
-**Status:** not_processed
+**Status:** promoted — see [[paper_registry_current#PAPER 096]] (`BATCH_20260921_001`)
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -7192,6 +7192,27 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 **Role:** **secondary source carrying the Q230P recurrence census**, and the expression map that puts the highest WWOX levels in entorhinal cortex, basolateral amygdala, frontal-cortex layer 5 neurons and cerebellar granule and basket cells.
 **LIT link:** [[literature_tracking_log_current#LIT-0031]]
 **Note:** FOUR THINGS THE READING MARKS, each because the review states more carefully than it is usually cited as stating. The OPC observation is LINEAGE EXPRESSION and not evidence that WWOX acts cell-autonomously in oligodendrocytes. The LPS result is a descriptive expression response in public mouse microglia data. The GABA-synthesis finding is a reviewed primary result from Wwox-null hippocampus, not a new experiment here. And the WWOX–myelin connection is labelled by the authors themselves a SUGGESTION arising from assembled observations — the lipid and trafficking routes are two potential themes, not tested mediators. The authors also acknowledge explicitly that the molecular effects of most missense variants were unknown.
+
+## PAPER 096
+**Short title:** Chen 2021 — epitopo di superficie WWOX 286-299; la cellula che lo espone e quella che lo riceve
+**Full title:** Normal cells repel WWOX-negative or -dysfunctional cancer cells via WWOX cell surface epitope 286-299
+**Authors:** Chen Y-A, … Chang N-S
+**Year:** 2021
+**Source type:** primary — biologia cellulare + xenotrapianto; **endpoint interamente oncologici**
+**Journal/source:** *Communications Biology* 2021;4:753
+**Identifier:** PMID 34140629 / PMCID PMC8211909 / DOI 10.1038/s42003-021-02271-2
+**Status:** processed
+**Record provenance:** letto in batch `SCIENTIST_CHANG_NS_WWOX_NEUROPROTEOSTASIS_AND_PEPTIDE_INTERVENTION` (wave 2 e 5); segnaposto `CORPUS-STUB-150` promosso da `CC-20260920-PAPER34140629-PROMOTION-01` (`BATCH_20260921_001`). Il passaggio sul dominio SDR è stato ri-verificato dall'orchestratore contro l'artefatto in cache.
+**Evidence depth:** `partial_fulltext_read` — ricevuta `FTR-20260920-34140629-01`; artefatto `files/fulltext/PMID34140629_PMC_MCPtext.txt`, 61 298 byte, `sha256 a2d6f1c1…`; **`figures: unavailable`, nessun pannello ispezionato** (in questo checkout non esiste rotta né al deposito JATS né a un'immagine). Per `D-14` nessun negativo affermato da una sola figura è aggiudicato.
+**Primary pathway:** oncologia / segnalazione di superficie Hyal-2–WWOX
+**Secondary pathway:** dominio SDR
+**Model/species:** MEF murini `Wwox+/+` e `Wwox−/−`; linee tumorali umane; topo
+**Genotype/model:** WWOX wild-type e cellule WWOX-deficienti; **nessun allele WWOX-DEE**
+**Transferability:** **T3**
+**clinical relevance:** **LOW**
+**Claim links:** none — questo record porta una lettura, non una claim
+**Role:** 🔴 **negativo registrato.** Ogni endpoint del paper è oncologico e **non genera alcuna claim**, deliberatamente. Il suo valore per questo modello è di chiudere una voce `not_processed` su un paper già letto — cioè di impedire che venga riletto — e di registrare che la rilevanza è bassa **senza gonfiarla per il fatto di essere stato promosso**.
+**Note:** La promozione non aggiunge peso scientifico. Il record esiste perché un paper letto lasciato a `not_processed` è il modo in cui lo stesso paper viene riletto, cosa già accaduta due volte in questa settimana per esattamente questa ragione.
 
 ---
 

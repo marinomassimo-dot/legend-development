@@ -7,7 +7,8 @@ Readings: `FTR-20260920-29067327-01`, `FTR-20260920-36498839-01` (both `partial_
 **Ledger:** `fulltext_receipts.py verify` → **OK: 166 chained receipt(s), tail anchored**.
 **Change class:** **MINOR** — a qualifier and a premise tag on an existing claim.
 **Target:** no working-model bump proposed.
-**Status:** `PROPOSED — NOT PROPAGATED`. Awaiting operator.
+**Status:** ✅ `PROPAGATED — BATCH_20260921_001` (2026-09-21), on the Operator's decision of 2026-09-21. ACCEPT WITH NARROWING. Title, Summary and the dose corollary of `CLAIM 032` now name the endpoint class actually measured, and carry `PREMISE: NOBODY_LOOKED` on cognition, EEG and network excitability. The canonical state is **«evidenza insufficiente per una conclusione generale di assenza di fenotipo»**, and the record states explicitly that this **does not demonstrate** disease in carriers. 🔴 **Operator condition honoured: the phrase «three independent laboratories» was NOT propagated** — the independent evidence does not support it, and the counter-signals stay as `REVIVAL_TRIGGER` material. No reversal; status unchanged.
+**Status (superseded, kept append-only):** `PROPOSED — NOT PROPAGATED`. Awaiting operator.
 **Review floor:** R2. 🔴 **`legend-locator-audit` (R4) is NOT triggered but SHOULD be considered by
 the operator**: `CLAIM 032` is `clinical relevance: VERY HIGH` and load-bearing on the gene-therapy
 dose argument. It is `in observation`, not `consolidated baseline`, so the R4 trigger does not fire

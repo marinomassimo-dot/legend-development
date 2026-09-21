@@ -7,7 +7,8 @@ blunt-instrument claim audit (`disease-models/wwox/analysis/blunt_instrument_cla
 **Ledger:** `fulltext_receipts.py verify` → **OK: 168 chained receipt(s), tail anchored**.
 **Change class:** **MINOR** — one word in one claim, plus one `DEFAULTS THAT BIT US` row.
 **Target:** no working-model bump proposed.
-**Status:** `PROPOSED — NOT PROPAGATED`.
+**Status:** ✅ `PROPAGATED — BATCH_20260921_001` (2026-09-21), on the Operator's decision of 2026-09-21. ACCEPT. One row of `CLAIM 030` changed: *proteina assente* → *proteina non rilevata al Western blot*, with `PREMISE: DETECTION_FLOOR` and a pointer to `CLAIM 019` (`consolidated baseline`), which records the same datum carefully. Assay, detection context, the rest of the claim and its status are preserved. 🔴 **`D-17` was DEFERRED by the operator and is NOT part of this batch** — it is separable and was not needed to repair the detection floor.
+**Status (superseded, kept append-only):** `PROPOSED — NOT PROPAGATED`.
 **Review floor:** R2. No claim is reversed, narrowed or removed; `CLAIM 030`'s thesis is **unchanged
 and slightly strengthened**, so `legend-locator-audit` (R4) does not apply.
 

@@ -8,7 +8,8 @@ that tested its verdict and found it understated**. Files:
 **Change class:** **ORDINARY** — a canonical claim's **title** is narrowed on one limb, and a
 `BLOCK 2` mirror row gains the endpoint it lacks. Precedent: `CLAIM 023` / `BATCH_20260909_001`.
 **Target:** no working-model version bump proposed; the BLOCK 2 row is edited in place, not restructured.
-**Status:** `PROPOSED — NOT PROPAGATED`.
+**Status:** ✅ `PROPAGATED — BATCH_20260921_001` (2026-09-21), on the Operator's decision of 2026-09-21. ACCEPT WITH FURTHER NARROWING. The title now says what the source supports — *no marked cerebellar histopathology was detected on light microscopy at ~28 days* — and the evidence boundary records that **neither evidence stream currently establishes nor excludes a cerebellar contribution**: the exclusion is one modal sentence from an unblinded look with no quantitative motor test in 32 locators, and the counter-evidence is one passing sentence, no number, n=3, unblinded, never captured as a locator. The two are compatible (ages disjoint) and neither establishes causality. The BLOCK 2 mirror row moved with the claim. 🔴 **Operator condition honoured: the human MRI material is NOT integrated** — abstract-level, *"We suggest"*, contested. `CLAIM 039` remains a rat-model claim.
+**Status (superseded, kept append-only):** `PROPOSED — NOT PROPAGATED`.
 **Review floor:** R2. 🔴 **R4 consideration for the operator:** this narrows a canonical **title**, which
 is the most-read line of a claim. It does not touch a `consolidated baseline` record, so the R4
 trigger does not fire mechanically.

@@ -40,7 +40,7 @@ edition: public
 ## 2. DISEASE-MODEL (WORKING-MODEL) VERSION
 
 ```yaml
-working_model_version: WM_v4.4
+working_model_version: WM_v4.5
 working_model_file: disease-models/wwox/registries/working_model_current.md
 narrative_view: disease-models/wwox/disease_model.md
 notes: "Canonical disease-level working model derived from public literature; disease_model.md is its narrative reader-facing view. The private individual-level record is not part of this edition."
@@ -102,9 +102,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260920_003
-last_batch_commit_date: 2026-09-20
+last_batch_commit_id: BATCH_20260921_001
+last_batch_commit_date: 2026-09-21
 last_batch_commit_type: MINOR
+batch_20260921_001_scope: "Four operator-approved candidates propagated with narrowings; no claim reversed, no status changed. CLAIM 032 title/summary/dose-corollary bounded to the endpoint class actually measured, with PREMISE: NOBODY_LOOKED on cognition, EEG and network excitability - the evidence state is 'insufficient for a general conclusion of no phenotype', and it still does not demonstrate disease in carriers. CLAIM 030 'proteina assente' -> 'proteina non rilevata al Western blot', PREMISE: DETECTION_FLOOR, aligned to CLAIM 019 (consolidated baseline). CLAIM 039 cerebellar limb narrowed: neither evidence stream establishes nor excludes a cerebellar contribution; stays a rat-model claim; no human imaging imported. CORPUS-STUB-150 promoted to PAPER 096 (PMID 34140629), T3/LOW, generating no claim. BLOCK 2 mirror rows 032 and 039 moved with their claims. D-17 DEFERRED by the operator and excluded from this batch."
+batch_20260921_001_candidates: 4
+prev_batch_commit_id_before_20260921_001: BATCH_20260920_003
 batch_20260920_003_scope: "PROPAGATED the eighth and last record of CC-20260920-EIGHT-RECORD-CLASSIFICATION-01, closing it. CORPUS PMID 42082822 (Denkboy Ongen 2026, Reprod Sci) is the repository's FIRST POST-HARVEST CORPUS RECORD and is keyed on its PMID, on the operator's decision of 2026-09-20 that P### is the historical identifier of the 2026-08-06 harvest and not a universal requirement. No P401, no reuse of the 31 gaps inside 182-400, no renumbering: `Corpus paper no: N/A`, `LIT link: none`, and a `Record provenance` line that says post-harvest discovery in words. THE SCHEMA EXTENSION IS ONE LINE, in the one place the conventions are defined - `growth_anchors.RECORD_PATTERNS['corpus']` gains `CORPUS\\s+PMID\\s+\\d+` beside the two harvest forms - so `coverage_report`, `batch_queue` and everything else composing from it inherit it at once, which is what that dict's own docstring promises. `registry_records.RECORD_ID` gains the same form. Every historical id still parses unchanged, verified by fixture. No allocator, no numbering service, no post-harvest registry, no namespace framework. THE RECORD'S SCIENTIFIC CONTENT IS A NEGATIVE AND THAT IS WHY IT IS WORTH KEEPING: the variant p.Ala141Thr does NOT segregate with the phenotype - the paper's own Results sentence reports a healthy first-degree relative carrying the identical homozygous genotype, with Western blot showing WWOX protein reduced in that relative as much as in the proband - so reduced protein is shown not to be sufficient for the reported phenotype in this family. T3, LOW, no claim, no claim link; no WWOX-DEE allele and no neural endpoint anywhere in the paper. THE COVERAGE GUARD NOW CARRIES TWO INVARIANTS INSTEAD OF ONE, and the second is the reason this batch exists. Until today it compared cardinalities and read 77 against 77 while PMID 42082822 was read and unregistered and PAPER 059 was registered and outside the read set: one mismatch on each side, cancelling in the count, a study with no canonical representation hidden behind an unrelated record that happened to balance the arithmetic. `test_coverage_is_not_overstated_against_the_registry` now builds both populations as SETS OF PMIDs and asserts CARDINALITY and IDENTITY separately, naming the PMIDs responsible in its own failure message. The asymmetry is the repository's rule about negatives: READ_NOT_REGISTERED is asserted empty, because a reading that exists and a registry that does not carry it is a failure; REGISTERED_NOT_IN_READ_SET is REPORTED and never asserted, because PAPER 059 (PMID 17803050, Suzuki 2007, Comparative Medicine) has no DOI, no PMCID and no PMC deposit, was supplied by the operator after eight automated retrieval tiers refused it, and is simply absent from the 2026-08-06 PubMed seed - a legitimate registry member, not an error. Two regression arms: the failure mode itself as a balanced fixture (READ {A,B} against REGISTERED {A,C}, equal counts asserted ON PURPOSE so the old guard's assertion passes inside the arm while the two set differences it could not see are checked), and the post-harvest form counting beside the historical ones without matching a prose heading. FINAL: READ_STUDIES 77, REGISTERED_STUDIES 78, READ_NOT_REGISTERED empty, REGISTERED_NOT_IN_READ_SET {17803050}. The counts now differ and that is more correct than 77/77 was. LINT PASS pre-flight and post-propagation; receipts 156 chained and tail-anchored; growth anchors recorded +1 corpus as GA-20260920T144832Z-batch and PASS; snapshot backup/snap_20260920_batch_postharvest."
 prev_batch_commit_id: BATCH_20260920_002
 commit_candidates_propagated: 1
@@ -284,8 +287,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 25
-growth_anchor_head: 28ae57e93eadc1d018ea945bfcc19e47ea32e3c9c2eb232cc09cb05ce0ef8e5b
+growth_anchor_events: 26
+growth_anchor_head: a2cbc4bbc2812d0e0203558ce63382fc9890ec0e496da12177466982cc4a3c72
 ```
 
 ```bash
@@ -335,7 +338,7 @@ writes nothing anywhere. So it is measured instead of assumed.
 
 ```yaml
 unread_premise_baseline: 0
-unread_premise_measured_on: 2026-09-20
+unread_premise_measured_on: 2026-09-21
 ```
 
 **It is a ratchet, not a wall.** Blocking on the whole legacy backlog would only teach sessions
