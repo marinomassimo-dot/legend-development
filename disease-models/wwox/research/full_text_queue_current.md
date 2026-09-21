@@ -5080,3 +5080,125 @@ inverte**. È la stessa amputazione di clausola trovata oggi su `CORPUS-STUB-139
 porti figure e bibliografia (HTML/PDF dell'editore), e serve a una sola domanda precisa: **quali
 primari reggano l'arco HIF1α**. Finché resta aperto, l'arco va citato per quello che la prosa nomina
 e non oltre.
+
+---
+
+## FT-113 — The adjacent-field transferable-method set: debt declared the same hour it was incurred
+
+**Papers:** PMID 17067289 · PMID 16380372 · PMID 38378758 · PMID 29785012 · PMID 32442409 · PMID 15580310 · PMID 14555208
+**Opened:** 2026-09-21 · **Actor:** Orchestrator · **Why it exists:** the node
+`MECHANISM_WWOX_SDR_FUNCTION_AND_MISSENSE_RESCUE` was explicitly authorised to search **outside**
+WWOX authorship for a transferable method to test whether a destabilised WWOX missense protein can
+be stabilised **and shown to retain function**. Seven non-WWOX papers now carry weight in
+[`wwox_sdr_function_per_molecule_census_20260921.md`](../analysis/wwox_sdr_function_per_molecule_census_20260921.md).
+`session_self_eval.py` flagged all seven as `UNREAD_PREMISE` **within the hour**, and the ratchet
+was at `0`. This entry is the answer: **the debt is declared, not paid, and not hidden.**
+
+> 🔵 **The ratchet worked on its author.** The same session that opened
+> `CC-20260921-CLAIM032-HYPOMORPH-PREMISE-01` — against a premise that leaned on an unread paper —
+> immediately leaned on seven. The difference is only this: `CLAIM 032` carried its premise for the
+> life of the claim without anything noticing, because the paper was never named. These seven were
+> named, so they were caught. **That is the whole argument for naming your sources even when you
+> cannot read them.**
+
+| PMID | What it is, and what it is carrying | Status |
+|---|---|---|
+| **17067289** | Oxford SGC orphan-SDR deorphanisation, worked on **DHRS10** — 17β-HSD activity recovered from an orphan SDR, plus an apo crystal structure | ⬜ **not read.** Reported by the delegate as PMC deposit `PMC1863559` returning **`full_text: ""`** — the stub trap, third class of it found today |
+| **16380372** | The same protocol on **DHRS6** — substrate screen, Km ≈ 10 mM, 1.8 Å structure | ⬜ **not read** |
+| **38378758** | Parkin variant atlas. Carries the **published negative** that matters most to `TX-003`: a small molecule modulating wild-type activity *in vitro* did **not** substantially raise abundance of destabilised variants | 🟡 **read by the delegate, body measured at 71,480 B — NO RECEIPT PERSISTED.** A reading without a receipt is not a reading. Treated here as unread |
+| **29785012** · **32442409** | Method citations in the transferable-route table | ⬜ **not read** |
+| **15580310** | Chang 2005 — the **NSYK tetrad** sentence and the sex-steroid binding proposal. Narrow cross-reference only; the broad Chang batch stays closed | ⬜ **abstract only.** No PMCID (verified); Oncogene 2005 |
+| **14555208** | Chang 2003, **Udo Oppermann last author** — the thread that led to the SGC deorphanisation protocol. The delegate reports it resolves **negatively**: apoptosis signalling, no enzymology | ⬜ **abstract only.** No PMCID (verified); *Biochem Pharmacol* 2003 |
+
+**What each is allowed to support while it sits here.** Nothing that a reading would be needed for.
+Specifically: **`38378758`'s Parkin negative may not be used to lower `TX-003`'s score** until it
+carries a receipt — the delegate's summary of a negative is not a negative, and this is precisely
+the *"never trust a delegate census without checking the source"* rule applied to a source the
+delegate did read. The two SGC papers support **the existence of a protocol**, which their titles
+and abstracts establish; they do **not** support any quantitative claim about what it would cost or
+yield on WWOX.
+
+**Next action.** These are **method** papers, not disease papers, and they rank **below** every
+WWOX-specific item in the acquisition packet. The order is: `A11` (`21476439`, the only WWOX
+enzymology) → `A10` (`17823927`, the hypomorph tissue panel) → `A4` (`33914858`) → this set.
+🔴 **The one item here that should NOT wait is `38378758`**, because it is **already retrievable**:
+it needs a proper read with persisted receipt and locators, not an acquisition. Whoever runs the
+`TX-003` prior-probability question owns it.
+
+
+---
+
+## FT-114 — PMID 41442931, the safety anchor that was integrated without a reading
+
+**Papers:** PMID 41442931 · DOI 10.1016/j.pediatrneurol.2025.12.001
+**Opened:** 2026-09-21 · **Actor:** Orchestrator · **Priority:** 🔴 **HIGHEST of the acquisition
+packet** — it is the only **safety** anchor in the repository standing on no reading.
+**Full audit:** [`anchor_papers_without_readings_20260921.md`](../analysis/anchor_papers_without_readings_20260921.md)
+
+Choi HW, Davids L, Reddy K, Sankhla N, Zhang G — *"Vigabatrin-Associated Brain Magnetic Resonance
+Imaging Abnormalities in Two Children With WW domain-containing oxidoreductase-Related Epileptic
+Encephalopathy Syndrome."* *Pediatr Neurol* **175**:230–233. Emory / Children's Healthcare of
+Atlanta.
+
+**Why it is here.** It is `PAPER 003`, `Status: integrated`, `Role: safety anchor paper`,
+`clinical relevance: HIGH`, and it is the source of `CLAIM 001` — a **`BLOCCO 1` safety
+position**. `fulltext_receipts.py status --pmid 41442931` returns **`[]`**. Neither ratchet saw
+this: the registry-only ratchet counts records that *declare* `full text reviewed` (this one
+declares nothing), and the unread-premise ratchet scans reasoning-layer files for PMIDs (this one
+is reached by wikilink).
+
+**Acquisition status: `EVIDENCE_BLOCKED`, verified.** `convert_article_ids(["41442931"])` returns
+**the PMID alone — no PMCID**. `get_copyright_status` → `"Published by Elsevier Inc."`,
+`found_in_pmc: 0`. No automated route in this environment reaches it.
+
+**What a human should be asked for — three things, not "the paper":**
+1. **The pre-vigabatrin MRI description for both children.** The abstract already says initial
+   imaging showed *"periventricular white matter volume loss and atrophy of the corpus callosum"* —
+   so the brains were abnormal **before** the drug. A drug-attribution claim in a disease with
+   progressive white-matter pathology needs that baseline in full.
+2. **Vigabatrin dose and duration**, and the interval between starting it and the new signal
+   changes.
+3. **Whether any de-challenge, re-challenge or follow-up MRI exists** — i.e. whether the globus
+   pallidi / thalami changes resolved after stopping. VABAM is typically reversible; if these
+   resolved, the safety statement keeps its force but changes its clinical shape.
+
+🔴 **Two hazards recorded now, before the read, so the read cannot quietly resolve them in the
+comfortable direction.**
+- The authors' own closing sentence is **interrogative**: *"Further research is warranted to
+  investigate whether children with genetic epilepsy related to the GABAergic pathway or delayed
+  myelination are more susceptible to VABAM."* It must **not** come back as *"WWOX children are
+  more susceptible"*. Checked 2026-09-21: LEGEND does not currently re-voice it. Keep it that way.
+- **Date:** the registry says `Year: 2026`; PubMed's `publication_date` is **2025-12-06** and the
+  DOI encodes 2025. Probably online-first versus issue year. **Not asserted as an error** — but any
+  chronology or cohort-overlap argument using this paper must say which date it means (§12).
+
+**What it may support while it sits here.** Exactly what its abstract says: VABAM occurred in two
+children with WWOX-related epileptic encephalopathy on vigabatrin, with new symmetrical signal
+changes in the globus pallidi and thalami. **Nothing about susceptibility, mechanism, incidence or
+genotype.** `CLAIM 001`'s status (`conflicting evidence`) and the working model's position
+(*"strong caution / avoid unless alternatives are exhausted"*) are **unchanged by this entry** —
+the point is that the anchor is unread, not that it is wrong.
+
+---
+
+## FT-115 — PMID 41510857, and the reason a one-record census result still needs a source
+
+**Papers:** PMID 41510857 · DOI 10.4103/neurol-india.Neurol-India-D-24-00886
+**Opened:** 2026-09-21 · **Actor:** Orchestrator · **Priority:** LOW — but it is load-bearing for a
+**negative**, which is why it is queued rather than dropped.
+
+*Neurol India* 2026, drug-resistant-epilepsy WES cohort. It is the **only** PubMed record joining
+`WWOX` to any T-type calcium-channel gene, and it joins them only as **co-occurrence in a
+~45-gene list across different patients** — not as a finding about either.
+
+**Why the debt matters here.** It carries the weight of a **measured zero**: the census
+`WWOX AND (CACNA1G OR CACNA1H OR CACNA1I OR "T-type" OR Cav3.1 OR Cav3.2 OR "calcium channel")`
+returned `total_count: 1`, and *this is the one*. The conclusion drawn — **there is no T-type
+calcium evidence in WWOX deficiency, so ethosuximide's genotype-specific efficacy in the
+`Wwox`-null mouse is a pharmacological fact without a mechanism** — depends on this single record
+being what it is described as. ⚠️ **If it turned out to report an actual `CACNA1H` finding in a
+WWOX patient, the negative would invert.** Nobody has opened it.
+
+**Next action:** one abstract-level confirmation is enough to retire this entry; a full read is not
+required for the use it is being put to. Retrievability untested.
+
