@@ -92,6 +92,37 @@ absence of harm. The consequence is stated by the authors too:
 ⇒ **the safety margin is bought with more capsid**, which is itself the dose-limiting toxicity axis
 for AAV9 in the CNS.
 
+### 1b-bis · 🔴 THE CEREBELLAR SIGNAL IS A SEPARATE FINDING FROM THE DOSE FINDING — Operator note, 2026-09-21
+
+Added because the two get collapsed the moment they are written in one paragraph, and they have
+**different evidence, different consequences and different remedies.**
+
+| | **The dose finding** | **The regional finding** |
+|---|---|---|
+| **What it says** | the minimum effective dose is bracketed **in vg and not in biology**, and no maximum is measured at all | one systemic dose produces **5–11× wild type in forebrain and 1.4×/0.6× in cerebellum** |
+| **Evidence** | 7-of-8 `ns` regional comparisons across two doses with opposite survival outcomes | per-region expression at P300, and the `WPRE` design record (`DL-MECH-009`, cerebellum 16.7×) |
+| **Whom it affects** | **everyone** — it is a property of the therapy at any dose | **most sharply the ataxic phenotype**, i.e. `SCAR12` and the cerebellar limb of `CLAIM 039` |
+| **What would fix it** | a dose–expression–toxicity study reporting achieved protein per region with tumour surveillance | **not more dose** — see below |
+| **Direction** | uncertainty, in both directions | 🔴 **a shortfall, in one direction, in one organ** |
+
+🔴 **The reason they must not be merged: raising the dose does not fix the regional gap, and the
+regional gap is not evidence about the ceiling.** If the cerebellum sits at 0.6–1.4× while the
+forebrain sits at 8–25×, then a dose increase sufficient to bring the cerebellum to wild type would
+push the forebrain **further into the range nobody has measured a ceiling for**. The two findings
+**constrain each other from opposite sides**, and a sentence that says only *"expression is
+dose-dependent and broadly distributed"* loses both at once.
+
+⚠️ **What the regional finding is NOT.** It is **not** a claim that the therapy fails, **not** a
+claim that ataxia will not respond, and **not** a comparison anyone has tested against outcome. It
+is a **biodistribution observation**: the organ carrying the ataxic phenotype is the organ the
+vector reaches least, at every dose and timepoint reported. **No efficacy endpoint was measured in
+cerebellum**, so whether 1.4× is sufficient there is unknown — which is the point, and is why it
+needs its own line rather than a clause inside a dose sentence.
+
+🔵 **And it is a design question with a known lever, which the dose finding does not have:** route
+and capsid, not titre. `WPRE` — removed for safety — was the element that most boosted cerebellum.
+That trade is recorded in `DL-MECH-009` and is the concrete thing a programme could revisit.
+
 ### 1c · Nobody has asked whether too much WWOX harms a neuron
 
 A bounded census — `(WWOX OR WOX1) AND (ectopic OR overexpression OR transfection) AND apoptosis
@@ -162,6 +193,16 @@ narrowing rather than promoting:**
 > one abstract-only), and the 2026 dose-ranging study performs **no tumour surveillance**. With
 > `REVERS 0`, an unmeasured ceiling is not a gap in knowledge — it is an unbounded, irreversible
 > exposure.
+
+**(a-bis) `TX-007` — carry the regional finding as its OWN line, not inside the dose sentence:**
+
+> ⚠️ **Biodistribution (separate from dose).** At P300 the achieved WWOX runs **5–11× wild type in
+> forebrain and 1.4× / 0.6× in cerebellum** — **the organ carrying the ataxic phenotype is the one
+> the vector reaches least, at every dose and timepoint reported.** **No efficacy endpoint was
+> measured in cerebellum**, so whether that level suffices there is unknown. 🔴 **Raising the dose
+> is not the remedy**: bringing cerebellum to wild type would push forebrain further into the range
+> with no measured ceiling (§1c). The lever is **route and capsid, not titre** — and `WPRE`,
+> removed for safety, was the element that most boosted cerebellum (`DL-MECH-009`, 16.7×).
 
 **(b) `TX-007` window/age caveat** — append the genotype-class status of §2, **leaving the caveat
 general**, and stating explicitly that the favourable reading was available and was refused for
