@@ -82,6 +82,50 @@ four families are almost certainly a subset of the census's six.
 🔴 **These cohorts re-report each other** — Oliver's 75 = 13 new + 62 from the literature, which
 contains the census's 56 and Piard's 20 — **and must never be summed.**
 
+## 4bis · 🔴 PRIMARY-SOURCE VERIFICATION, added on Operator instruction
+
+The body of `PMID 36779245` was subsequently read **in-act by the Orchestrator** from `PMC10952634`
+and **Table 1 reconstructed independently of the delegate** —
+[`oliver2023_table1_independent_reconstruction_20260921.md`](../../analysis/oliver2023_table1_independent_reconstruction_20260921.md).
+
+**Everything in §1–§4 above is confirmed at source**, and the alignment was **established rather
+than assumed**: the extraction returns Table 1 as parallel row-lists (13 ages, 11 variant entries,
+12 class entries), and 🔴 **Table 1 carries a published correction to column 9** — so three
+independent anchors in the running text were used to fix the mapping, and all three agree. The
+`Q230P` rows are safe.
+
+**Two things the verification ADDS, and both belong in the fifth reservation:**
+
+1. 🔴 **The deaths are not concentrated in the null class — verified per patient.** Of the three
+   deceased, **Patient 5 is `missense/missense`** and **Patient 6 is `missense/null`**
+   (`p.Glu17Lys` / intron 4 deletion); **only Patient 8 is `null/null`.**
+2. 🔴 **The pooled sample combines two strata that differ in ascertainment AND in genotype
+   composition**, from the paper's own Table 3 — **mortality 23 % (this cohort) vs 38 %
+   (literature)** with **mean age 8 y 2 m vs 3 y 4 m**, and class mix **50/33/17 vs 60/15.5/24.5**.
+   The authors note the age–mortality inversion themselves — *"despite our patient group being
+   notably older … the mortality was lower"* — **without treating it as a bias term**, and both
+   strata enter one Kaplan–Meier.
+3. 🔴 **Censoring is age-at-publication, not follow-up.** Figure 4A's dashes are *"the most recent
+   age known to be living of each individual (censored observations)"*. In a literature-assembled
+   cohort an early-fatal case is reported **because** it died, while a living case is reported at
+   whatever age someone wrote it up. **That is informative censoring and the analysis does not
+   address it.** ⚠️ The median literature age is **2 y 6 m**, so the *">60 % beyond 10 years"* tail
+   rests on few individuals inside groups of **15**, with **no numbers-at-risk reported**.
+
+**Two further limbs are therefore added to the proposed fifth reservation:** the **ascertainment
+asymmetry** (2) and the **censoring definition** (3).
+
+> ✅ **And what the verification did NOT overturn, stated because it would have been easy to
+> overstate:** the descriptive imbalance is real, the log-rank result is as reported, and null/null
+> remains the worse class on the assembled data. **`CLAIM 033` is bounded, not reversed.** What
+> fails is its transfer to an individual — which is what `D-24` records.
+
+🔴 **`TABLE S1` remains unretrieved and is now known to be unreachable from here**: `curl` to both
+PMC hosts returns `CONNECT tunnel failed, 403`; `WebFetch` returns `EGRESS_BLOCKED`; the MCP returns
+the body **and the two supplementary file names with no content**. **The recomputation stays
+blocked and no direction is asserted** — `FT-122` stands, and it is an **open-access** file, so the
+obstacle is a route, not a paywall.
+
 ## 5 · What is proposed
 
 **(a) `CLAIM 033` — add a fifth reservation: *the association does not replicate*.** Naming the

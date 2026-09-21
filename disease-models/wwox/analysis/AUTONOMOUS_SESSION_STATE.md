@@ -4,6 +4,56 @@
 > The sections below it are the *previous* run's state and remain accurate except where this
 > block says otherwise. **Not a handoff and not a stop.**
 
+## 🔴 BRANCH AND LEDGER RECONCILIATION — measured 2026-09-21 on Operator instruction
+
+Two anomalies were raised and both are now resolved by measurement. **Neither was a loss.**
+
+### 1 · The branch was NOT stale, and canonical `main` is now current
+
+| Ref | SHA | Receipts |
+|---|---|---|
+| `origin/main` **before** this reconciliation | `9a20920` | 188 |
+| `origin/main` **now** | **`89f36db`** | 188 |
+| this branch | `89f36db` (identical) | 188 |
+
+`9a20920` **was** an ancestor of this branch's HEAD — the work was based on current canonical main
+throughout. All **16** commits are now **on `main`**, landed by fast-forward.
+
+⚠️ **Two traps a later reader will hit unless warned.**
+- 🔴 **The local `origin/main` tracking ref was STALE at `83ec6be`** and `git fetch` reported a
+  `forced update` `83ec6be…9a20920`. **Do not trust the tracking ref here; read the remote**
+  (`git ls-remote origin refs/heads/main`).
+- 🔴 **This clone is SHALLOW** (`.git/shallow`, 2 grafted roots; `main` depth 50, HEAD depth 65), so
+  **`git merge-base` returns "no common ancestor" between lineages that genuinely share one.**
+  That is a truncation artefact, **not** unrelated histories, and it is exactly the sort of proxy
+  reading this run got wrong five times elsewhere.
+- `83ec6be` (156 receipts) is **not unique material** — it is an ancestor of the live remote
+  branches `claude/legend-architecture-evaluation-zovohw` and `claude/wwox-next-scientist-batch-n74f0z`.
+  Tagged locally as `preclone-main-83ec6be` anyway; nothing was deleted.
+
+### 2 · 188 vs 200 is a CONCURRENT SIBLING SESSION, not a missing-receipt defect
+
+**`claude/legend-autonomous-woree-tv6gz8` = `f7595f6`, 200 receipts, anchor 200, committed
+2026-09-21 19:51.** It branched from the same `9a20920` and appended **12** events.
+
+> ✅ **Verified by byte comparison: their first 188 lines are identical to this branch's 188.**
+> Their 200 is a **strict superset**. The chain did not fork; it was extended by one side only.
+
+🔵 **And the merge is safe in either order, for one specific reason: this run persisted ZERO
+receipts.** `git diff 9a20920..HEAD` over
+`fulltext_read_receipts.jsonl`, `state_manifest_current.md` and the **four canonical scientific
+current files** returns **empty**. Only one side ever changed the ledger or the anchor, so git
+resolves both cleanly and **no hash chain is at risk**.
+
+**Order of operations for whoever lands the sibling:** merge `main` into `tv6gz8` (or rebase it),
+keep **its** ledger at 200 and **its** manifest anchor at 200, then push. **Do not** regenerate,
+re-anchor or "fix" the ledger to make counts agree — the counts are supposed to differ until the
+12 events land.
+
+⚠️ `main` is **not** an ancestor of `f7595f6`. That session still owes a merge.
+
+---
+
 ## The second run in one screen
 
 **Branch:** `claude/wwox-woree-autonomous-scout-paqlty`, pushed. **Gates at every landing:** LINT
