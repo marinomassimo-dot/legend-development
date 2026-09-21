@@ -167,3 +167,54 @@ a contact e-mail from a public file. All reversible; all recorded in the commits
 ---
 
 *No canonical scientific current file was edited by this run. Not medical advice.*
+
+---
+
+## Append-only correction — the one gate this diagnosis left unverified is now measured
+
+**Added after the diagnosis above, same session.** The *Scope* section recorded
+`run_release_regressions.py` as **unmeasurable**, because its guard reports *"WROTE 1 tracked
+file(s) under a guarded tree"* whenever a Scientist writes its deliverable mid-run, and Scientists
+were writing for most of the session. That was true when written, and it was the honest thing to
+declare. **It was not a reason to leave it there.**
+
+With every Scientist idle and the tree clean, the run completed and named **exactly two** failures —
+**no write-guard noise at all**, which independently confirms the earlier six were concurrency
+artefacts rather than defects:
+
+| Suite | Cause | Mine? |
+|---|---|---|
+| `framework/scripts/test_batch_queue.py` | `batch_queue.md` is a **derived surface** and drifted the moment this session added six commit candidates | 🔴 **yes** |
+| `scripts/test_release_surface.py` | the three scripts shipped this run carry shebangs and **were not executable** | 🔴 **yes** |
+
+**Both repaired**: `batch_queue.py --out …` regenerated the surface (**regenerate, never edit** —
+the same rule the sixteen locator counts are about, arriving from the other direction, and here the
+derivation was already wired so it cost one command rather than a commit candidate); `chmod +x` on
+the three scripts. **`test_release_surface` 11/11 · `test_batch_queue` 49/49 · LINT PASS ·
+publication gate PASS / 0 blocks.**
+
+### What this does to the census above
+
+🔴 **It adds two incidents, both `self`, and it changes the shape of the finding rather than the
+count's flattery.** Both were **my own defects**, neither was an environment absence, and **neither
+would have been found without the clean measurement I had declared impossible.** The diagnosis
+above was right to record the gate as unverified and wrong to leave it as a standing condition —
+*"cannot be measured while the lab is running"* is an argument for measuring it when the lab stops,
+not for not measuring it.
+
+```
+ATTRIBUTION_CENSUS (revised)
+incidents: 12
+machine: 3   blind_auditor: 0   peer: 1   self: 8
+severity_high: 2   of which self: 1
+undetected_known: 0
+```
+
+**`machine` moves 1 → 3.** The two repairs above were caught by **executable suites**, not by
+reading — which lifts the machine-caught share from **one in ten to one in four** and is the single
+most encouraging number in this diagnosis. The self-caught share is unchanged in absolute terms;
+what changed is that the denominator grew in the right column.
+
+🔵 **The lesson is narrow and worth keeping:** *a measurement that concurrency makes impossible is
+not an unmeasurable quantity — it is a measurement with a scheduling constraint.* This run declared
+the constraint and then, with an hour of quiet, simply took the measurement.
