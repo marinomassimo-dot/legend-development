@@ -8,6 +8,26 @@ Bibliographic records and full text below are from **PubMed / PubMed Central**. 
 
 ---
 
+> ### ✅ ORCHESTRATOR VERIFICATION of the load-bearing derivation — 2026-09-21
+>
+> The whole individual-level denominator rests on one inference: the cohort abstract publishes only
+> percentages (**56.8 / 29.5 / 13.6**), and this file derives **n = 44 → 25 / 13 / 6** from them by
+> claiming that solution is **unique** over n ∈ [3, 50]. A derived number presented as a datum is
+> exactly what this repository has been burned by, so it was re-derived independently rather than
+> accepted.
+>
+> **Exhaustive search over every n ∈ [3,50] and every integer partition (a, b, c) with a+b+c = n,
+> matching all three percentages to one decimal place: exactly ONE solution exists — `n = 44 →
+> 25/13/6`** (56.8182 / 29.5455 / 13.6364). **Uniqueness confirmed; the derivation holds.**
+>
+> ⚠️ **What the check does and does not establish.** It establishes that *if* the published
+> percentages are correct to one decimal and *if* the three classes are exhaustive and disjoint over
+> the classifiable set, **then n = 44 and the counts are 25/13/6**. It establishes **nothing** about
+> whether the cohort's own classification is right, and it does **not** verify the allele-level
+> figures (63/88, 25/88), which come from a different part of the source and were not re-derived
+> here. The six unclassified individuals remain `UNASSIGNABLE`, which is why the individual
+> denominator is 44 and the cohort is 50.
+
 ## VERDICT
 
 **Gene addition addresses the largest share of reported patients, and it does so for a structural reason rather than a numerical one: it is the only lever whose applicability does not depend on what the endogenous alleles are.** In the largest genotype-classified cohort, **63 of 88 classified alleles (71.6 %) are predicted null and 25 of 44 classifiable individuals (56.8 %) are null/null** — a majority of reported patients therefore have **no recoverable endogenous substrate for any allele-specific lever at all**. The largest allele-specific class is PROTEIN-RESCUE at **25/88 alleles (28.4 %)**, but only **6/44 individuals (13.6 %)** could be served by it alone, and every one of those assignments is conditional on a measurement nobody has made for any WWOX missense allele; **RNA-RESCUE has zero demonstrated members**, because every measured WWOX splice outcome in the literature is exon skipping toward frameshift and no productive alternative outcome has ever been shown. Confidence: **MODERATE** on the null-versus-missense split (three independent cohorts agree in direction and magnitude), **LOW** on every partition *within* the null class (no published cohort separates splice from nonsense from frameshift from CNV), and **the entire census rests on severe-pole, consanguinity-enriched, ascertainment-biased cohorts**.
