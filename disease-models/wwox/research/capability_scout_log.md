@@ -585,3 +585,81 @@ morning), no network call made by any tool landed today; nothing installed, no s
 **Micro-upgrade obtained this session (the mother rule):** the three enrolled suites; plus the
 tool-level ones listed in the pilot results. **Cost / API / privacy risk:** none.
 **Next surgical micro-step:** the `experimental_context` WARN, with 15070730 as the fixture.
+
+---
+
+## 2026-09-21 · Orchestrator · autonomous continuation, end-of-cycle scout
+
+**Environment preflight — the verdict is keyed to the host that produced it.**
+`python3 framework/scripts/tool_preflight.py` on host `vm`: **tools 6 · present 2 · missing 4** —
+`fitz` (PyMuPDF), `pdftotext`, `pdftoppm`, `pdfimages` all **absent**; `import fitz` raises;
+`import numpy` raises. Verdict: *"usable, with 4 optional tool(s) absent … Plans depending on them
+will fail LATE unless chosen against now."* Every capability judgement below is keyed to that host.
+
+### 1 · Session learning delta
+
+Nine full-text readings receipted, two bounded censuses, the accessible queue emptied, and the
+repository's **`UNREAD_PREMISE` ratchet taken 2 → 0** for the first time. Scientifically the session
+was mostly subtractive: the TRAPPC6A independence claim retracted in full; the Chang cascade's first
+node shown to disclaim its own load-bearing step; the autophagy sign fixed on abundance but not on
+flux; the ketogenic rationale's specific step found to rest, in human cells, on a single transcript;
+and a three-line convergence established that **every therapeutic candidate this literature has
+produced acts by antagonising WWOX**, which is a category objection for a loss-of-function genotype.
+
+### 2 · Capability gaps, as they actually bit
+
+1. **To read any figure, table or reference list we lack a PDF/image surface entirely** — no
+   PyMuPDF, no poppler, no egress. Structural, host-keyed, not closable here. `D-14` absorbed it:
+   no figure-asserted negative was adjudicated all day.
+2. 🔴 **To know which string counts an artifact can answer, we lacked a measurement and had only a
+   prose warning.** The extractor deletes every italicised token. Readers were warned **in every
+   brief, nine times**, and one still offered italic-class zeros as evidence. A warning that must be
+   repeated nine times is a measurement nobody has written.
+3. **To trace a citation we lack the reference list** — it was destroyed in every artefact, which
+   structurally blocked the one question two papers were read to answer (*which primaries carry the
+   HIF1α arc*).
+4. **To stop a delegate's census being read as a statement about this repository we lacked a
+   habit** — it cost three corrections in one day.
+
+### 3 · Candidates, scored (case · LEGEND · novelty · maturity · cost-inverted)
+
+| Candidate | What it closes | Score | Verdict |
+|---|---|---|---|
+| **`extraction_damage_report.py` + 11 regressions (built this session)** | gap 2 and gap 3: measures fused-token scars, empty cross-reference stubs, orphaned statistics and reference-list presence, then emits an **admissibility verdict** per token class | 3 · 3 · 3 · 3 · 3 | ✅ **ADOPTED** |
+| **`scoped_record_edit.py` + 16 regressions (built this session)** | makes the narrowness of an operator-authorized edit to an append-only record **executable instead of careful** | 2 · 3 · 3 · 3 · 3 | ✅ **ADOPTED** |
+| The census-vs-repository rule, written into the session state with its three worked failures | gap 4 | 3 · 3 · 1 · 3 · 3 | ✅ **ADOPTED** (procedure, not code) |
+| Europe PMC `fullTextIdList` / Unpaywall / OpenAlex tiers via `find-fulltext` | gap 1 and gap 3 — the only route to figures and reference lists | 3 · 3 · 2 · 3 · **0** | `MONITOR` — needs egress this host does not have. **Not a tooling gap; a network gap.** |
+| PyMuPDF / poppler import | gap 1 | 3 · 3 · 1 · 3 · 2 | `MONITOR`, host-keyed: absent **here**, present on other hosts in this same repository on 2026-09-09. Do not record as a property of LEGEND. |
+| A biomedical NER model to recover deleted gene symbols | gap 2 by extraction | 2 · 1 · 2 · 2 · 1 | ❌ **REJECT.** An inferred symbol is a **fabricated** symbol, and the failure being guarded against is exactly a reconstructed identity. The right move is the one taken today: recover the gene from its **expanded HGNC name in roman type**, which the extractor does not touch. |
+
+### 4 · The measurement the new tool immediately produced
+
+Run over the **entire local corpus, 29 artefacts**:
+
+```
+artefacts measured: 29
+italic-class counts INADMISSIBLE on: 29/29
+reference list absent on:            29/29
+```
+
+🔴 **This is a corpus-wide property, not a per-paper accident.** Two consequences follow and should
+be treated as standing facts rather than rediscovered: **no italic-class zero from any local
+artefact has ever been admissible as evidence**, and **no citation attribution has ever been
+traceable from any local artefact** — which is why `D-15` verifications in this repository have had
+to be done against prose that names a source *in words*, and why `FT-111` exists.
+
+### 5 · Mandatory closing
+
+- **Added:** two tools with their regressions (11 + 16 tests), both routed in
+  `framework/scripts/README.md` — `scripts/test_tool_routing.py` went red until they were, twice.
+- **Micro-upgrade obtained (the mother rule):** gap 2 converted from a prose warning repeated nine
+  times into a one-command measurement with an admissibility verdict, **and immediately used to
+  characterise the whole corpus**.
+- **Remains to audit:** whether `extraction_damage_report.py` should be wired into
+  `session_self_eval.py` so that a receipt over a damaged artefact is *required* to declare the
+  admissibility verdict rather than merely permitted to. That is a gate change and goes through
+  Plan, not through this session.
+- **Cost / API / privacy risk:** none. Both tools are local, stdlib-only, and read files this
+  repository already holds.
+- **Next surgical micro-step:** the `session_self_eval.py` wiring above, with the 29-artefact run as
+  its fixture.

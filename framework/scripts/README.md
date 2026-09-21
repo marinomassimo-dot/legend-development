@@ -67,6 +67,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | which reading surface exists per paper, and whether it can be trusted | `framework/scripts/surface_census.py` |
 | to validate, append to or query the hash-chained receipt ledger | `framework/scripts/fulltext_receipts.py verify` · `… record` |
 | to apply an **operator-authorized, scope-limited** edit to one record of an append-only JSONL ledger — or to be refused | `framework/scripts/scoped_record_edit.py --file … --id … --field … --old … --new …` (dry run; add `--apply`) |
+| to find out **which string counts an extracted full-text artifact can answer**, before offering a zero as evidence | `framework/scripts/extraction_damage_report.py files/fulltext/<artifact>.txt` |
 | whether a deep-dive work manifest satisfies the gate, or which waiver it owes | `framework/scripts/deepdive_manifest.py` |
 | do the bytes a manifest fingerprints exist in **this** checkout | `framework/scripts/evidence_presence.py` |
 | a resumable work queue from a dated bibliography snapshot | `framework/scripts/batch_queue.py` |
