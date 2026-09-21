@@ -423,13 +423,49 @@ heterozygote carrying a missense allele that still produces protein, removing th
 is the **opposite** of the therapeutic goal. **This is a category objection, not a dosing one: it is
 not fixed by a different schedule, a different route or a BBB-penetrant formulation.**
 
-⚠️ **Honesty about what this addendum is.** It rests on an **abstract**, not a reading. The full
-text is unobtainable here — `PMC11071800` resolves and returns a **zero-length body** — so the paper
-is filed as packet item **`A9`**, at the top of the list, precisely so that it is *read* rather than
-*cited*. The specific things that could still change the picture are named there: whether any
-**genetic** WWOX manipulation exists alongside the peptide (Zfra is covalent and promiscuous, so
-*"Zfra protects"* and *"less WWOX protects"* are not the same claim), and whether **total** WWOX or
-only **pTyr33**-WWOX moves.
+⚠️ ~~**Honesty about what this addendum is.** It rests on an **abstract**, not a reading.~~
+**SUPERSEDED — see the read below.** The two things this paragraph named as able to change the
+picture have now been checked against the full text and the supplementary, and **one of them did.**
+
+### 🔴 2026-09-21 — the paper has been READ, and one sentence above was too strong
+
+The operator supplied the publisher PDF **and** the supplementary bundle. Both were read in full —
+[`A9_fulltext_read_20260921.md`](A9_fulltext_read_20260921.md), receipts
+`FTR-20260921-35984507-01` and `-02`. The two open questions are answered:
+
+1. **Is there a genetic WWOX arm?** **No.** `siRNA`, `shRNA`, `knockdown`, `knockout`, `CRISPR`,
+   `silenc*`, `transfect*`, `lentivir*` — **all zero**, in the article *and* in the supplementary.
+   There is also **no scrambled or inactive-peptide control** (`scrambled` 0, `S8G` 0), and the only
+   specificity statement offered is *"does not affect mitochondria and cells function under control
+   conditions **(data not shown)**"*.
+2. **Does total WWOX move, or only pTyr33?** 🔴 **Neither — because total WWOX was never reported,
+   although the antibody was in hand.** The methods antibody table lists *both*
+   `Anti-WWOX (phospho Y33) Abcam (ab193624)` **and** `WWOX Merck Millipore (ABN413)`, and the
+   stated normalisation is *"β-actin was used as a loading control"*. No total-WWOX result, and no
+   pWWOX/WWOX ratio, appears anywhere.
+
+**So the headline sentence of this addendum has to be narrowed, and here it is, narrowed:**
+
+| Written 2026-09-20, from the abstract | Corrected 2026-09-21, from the text |
+|---|---|
+| *"An independent lab confirms that **inhibiting WWOX** is protective in neurons"* | *"An independent lab confirms that **Zfra1-31 is protective in neurons and lowers the pY33-WWOX signal**."* Whether that is **inhibition** is the one thing the paper does not establish |
+
+**And the audit's conclusion does not move — the leg it stands on does.** A pTyr33 signal normalised
+to β-actin falls if phosphorylation falls **or** if WWOX protein falls, and § 3.6 of this very audit
+established that **zfration takes WWOX as a substrate**. So A9 is **consistent with** the
+substrate-consumption reading rather than a check on it, and § 3.6 becomes the load-bearing leg
+rather than the corroborated one.
+
+🔴 **That makes the therapeutic conclusion firmer, not weaker. Both readings point the same way.**
+Whether Zfra1-31 *inhibits* WWOX or *consumes* it, a reagent that lowers the pY33-WWOX signal by an
+unknown mixture of dephosphorylation and degradation is not a candidate in a genotype whose problem
+is **too little functional WWOX**. It remains a **category objection, not a dosing one**.
+
+⚠️ **One more correction to the three-line convergence below.** Line 1 (the MPP+ dominant-negative,
+`PMID 18371080`) also appears *inside* A9 — as a **citation to reference [18]**, not as A9's own
+data. Under `D-15` that does not make it a second observation. The convergence is three lines about
+**reagents that antagonise the pTyr33 axis**; it is not three independent demonstrations that less
+WWOX is better, and it must not be written as though it were.
 
 **Nothing in this addendum is medical advice.**
 

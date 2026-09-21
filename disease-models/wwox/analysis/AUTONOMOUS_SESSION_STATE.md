@@ -63,7 +63,18 @@ touched** — no authorisation was given for it.
    plays an essential role in the MPP+-induced neuronal death"*) and the C1q axis (`19484134`:
    *"C1q activates WOX1 in neurons, which ultimately leads to cell death"*), that is three lines.
    **A WWOX antagonist has nothing to antagonise in a WWOX-deficient brain. This is a category
-   objection, not a dosing one.** Packet item `A9`; rests on an abstract, so it must be *read*.
+   objection, not a dosing one.**
+   🔴 ~~Packet item `A9`; rests on an abstract, so it must be *read*.~~ **`A9` HAS NOW BEEN READ —
+   2026-09-21, operator-supplied PDF + supplementary**
+   ([`A9_fulltext_read_20260921.md`](A9_fulltext_read_20260921.md); `FTR-20260921-35984507-01`,
+   `-02`), **and the reading narrows this bullet.** There is **no genetic WWOX arm**, **no
+   inactive-peptide control**, and **total WWOX was never reported** although `ABN413` is in the
+   methods and the blots are normalised to β-actin. So `35984507` shows that **Zfra1-31 is
+   protective in neurons and lowers pY33-WWOX** — *not* that inhibiting WWOX is. And line 1 of the
+   three appears *inside* `35984507` only as a citation to its ref [18], so under `D-15` it is not
+   a second observation. **The category objection is unchanged and firmer** — inhibition and
+   substrate-consumption point the same way in a genotype short of functional WWOX — but the
+   sentence that carries it must now be the narrow one.
 2. **The first node of the Chang cascade disclaims its own load-bearing step.** `25650666`'s
    Discussion asserts TGF-β1 dissociates WWOX from TPC6AΔ and, two paragraphs later, says
    *"Whether TGF-β1 regulates the binding of WWOX with TPC6AΔ **is unknown**"*. There is **no

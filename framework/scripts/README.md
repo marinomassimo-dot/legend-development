@@ -108,6 +108,7 @@ Run everything as `python3 <path> --help` first. Paths are repo-relative.
 | harvest a PubMed corpus into a record-level JSONL, a seed TSV and a manifest — **a census, not evidence** | `framework/scripts/pubmed_corpus_harvest.py` |
 | turn a PubMed Clipboard export into a de-identified dated seed | `framework/scripts/pubmed_clipboard_to_seed.py` |
 | fetch a public PMC binary behind the cloud-viewer proof-of-work page | `framework/scripts/pmc_pow_fetch.py` |
+| read the text layer of a PDF the operator supplied, and count terms in it **only after positive controls prove the extractor read it** — an unverified zero is a reading of the tool, not of the paper | `framework/scripts/pdf_text_extract.py` |
 
 ## 6 · Screen the model itself
 

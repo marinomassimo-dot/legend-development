@@ -281,9 +281,21 @@ Military Medical City, Riyadh; King Faisal Specialist Hospital and Research Cent
 
 ---
 
-## A9 · `PMID 35984507` — Carvalho C, Correia SC, Seiça R, Moreira PI 2022, *Cell Mol Life Sci* 79(9):487 · **new, no FT entry yet**
-**DOI** 10.1007/s00018-022-04508-7 · **PMCID `PMC11071800` exists and returns a ZERO-LENGTH BODY** —
-the stub trap again. *Added 2026-09-21.*
+## A9 · `PMID 35984507` — Carvalho C, Correia SC, Seiça R, Moreira PI 2022, *Cell Mol Life Sci* 79(9):487 · ✅ **ACQUIRED AND READ — 2026-09-21. CLOSED.**
+**DOI** 10.1007/s00018-022-04508-7 · ~~**PMCID `PMC11071800` exists and returns a ZERO-LENGTH BODY**~~
+— the stub trap was real, and the operator supplied the PDF and the supplementary directly.
+*Added 2026-09-21, discharged the same day.*
+
+> 🔴 **RESOLVED. Do not request this paper again.** Read in full —
+> [`../analysis/A9_fulltext_read_20260921.md`](../analysis/A9_fulltext_read_20260921.md), receipts
+> `FTR-20260921-35984507-01` and `-02`.
+> **The answer to "what it settles" below is: it does not settle it.** Zfra1-31 is genuinely
+> protective in differentiated SH-SY5Y cells and genuinely lowers pY33-WWOX — but there is **no
+> genetic WWOX arm**, **no inactive-peptide control**, and **total WWOX was never measured although
+> `Merck Millipore ABN413` is listed in the methods and the blots are normalised to β-actin**. So
+> *"Zfra inhibited WWOX"* and *"Zfra consumed WWOX"* are not distinguished by the paper's own
+> central number. The therapeutic conclusion for the reference genotype is unchanged, because both
+> readings point the same way.
 
 **Title, quoted because the title is the finding:** *"**WWOX inhibition** by Zfra1-31 **restores**
 mitochondrial homeostasis and viability of neuronal cells exposed to high glucose."*

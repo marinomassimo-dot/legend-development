@@ -102,9 +102,12 @@ Commit candidates must declare their intended `target_wm_version`.
 ## 4. LAST BATCH_COMMIT
 
 ```yaml
-last_batch_commit_id: BATCH_20260921_001
+last_batch_commit_id: BATCH_20260921_002
 last_batch_commit_date: 2026-09-21
 last_batch_commit_type: MINOR
+batch_20260921_002_scope: "A9 CLOSED BY READING, NOT BY A BETTER ROUTE. PMID 35984507 (Carvalho 2022, Cell Mol Life Sci 79(9):487) was the session's most-requested acquisition and its PMC record is a zero-length stub; the operator supplied the publisher PDF AND the supplementary, and both were read. CORPUS-STUB-070 / LIT-0093 promoted to PAPER 097, T3, MODERATE (declassed from a triage HIGH set on the title), GENERATING NO CLAIM and moving no working model - the model organism is wild-type WWOX in hyperglycaemia and the reference genotype's problem is too little functional WWOX. THE READING NARROWS ONE SENTENCE THAT WAS ALREADY IN THE REPOSITORY: the peptide-intervention audit's 2026-09-20 addendum said an independent lab confirms that INHIBITING WWOX is protective in neurons; what the paper supports is that ZFRA1-31 IS PROTECTIVE AND LOWERS pY33-WWOX. Three text negatives carry that, all zero in article AND supplementary: no genetic WWOX arm (siRNA/shRNA/knockdown/knockout/CRISPR/transfect/lentivir), no inactive-peptide control (scrambled, S8G; the only specificity statement is 'data not shown'), and NO TOTAL-WWOX MEASUREMENT although WWOX Merck Millipore ABN413 is listed in the methods beside the phospho antibody and the blots are normalised to beta-actin - so the paper's central number, the ~64% (late-intervention arm, paired with ~16% viability), cannot separate 'Zfra inhibited WWOX' from 'Zfra consumed WWOX'. THE THERAPEUTIC CONCLUSION IS UNCHANGED AND FIRMER because both readings point the same way where functional WWOX is scarce: category objection, not dosing. D-15 recorded: the only genetic WWOX result inside the paper is a citation to its ref [18], the MPP+ dominant-negative already held as PMID 18371080, and is not a second observation. D-14 untouched: figures captions_only in both receipts, no panel inspected, every negative is a TEXT negative. INSTRUMENT: this deployment has no PDF toolchain, so framework/scripts/pdf_text_extract.py was written for this read and ships with 20 tests; it REFUSES to print a query count until named positive controls come back non-zero. That gate earned itself immediately - a first tolerant matcher returned S8G=1 from a byte run inside an embedded font program, which would have entered the reading as evidence that the inactive control peptide existed; non-text runs are now an unbridgeable barrier, and a Word language-tag artefact that would have made every phrase-level negative in the supplementary false is stripped. Receipts FTR-20260921-35984507-01 and -02; output A9_fulltext_read_20260921.md. LINT PASS."
+batch_20260921_002_candidates: 1
+prev_batch_commit_id_before_20260921_002: BATCH_20260921_001
 batch_20260921_001_scope: "Four operator-approved candidates propagated with narrowings; no claim reversed, no status changed. CLAIM 032 title/summary/dose-corollary bounded to the endpoint class actually measured, with PREMISE: NOBODY_LOOKED on cognition, EEG and network excitability - the evidence state is 'insufficient for a general conclusion of no phenotype', and it still does not demonstrate disease in carriers. CLAIM 030 'proteina assente' -> 'proteina non rilevata al Western blot', PREMISE: DETECTION_FLOOR, aligned to CLAIM 019 (consolidated baseline). CLAIM 039 cerebellar limb narrowed: neither evidence stream establishes nor excludes a cerebellar contribution; stays a rat-model claim; no human imaging imported. CORPUS-STUB-150 promoted to PAPER 096 (PMID 34140629), T3/LOW, generating no claim. BLOCK 2 mirror rows 032 and 039 moved with their claims. D-17 DEFERRED by the operator and excluded from this batch."
 batch_20260921_001_candidates: 4
 prev_batch_commit_id_before_20260921_001: BATCH_20260920_003
@@ -238,8 +241,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 186
-fulltext_ledger_head: 60817334c6e97068b8f23fd225de414a1f9c692bd94ad3b5360a6f427642d4cd
+fulltext_ledger_events: 188
+fulltext_ledger_head: 2fc6d9d62ee68c833e02f9d30643b78e19eeb77064fbcff52c9ac70ca61a910b
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -287,8 +290,8 @@ to make a suite green — the only way to move it is to have made the change you
 
 ```yaml
 growth_anchor_ledger: framework/state/growth_anchors.jsonl
-growth_anchor_events: 26
-growth_anchor_head: a2cbc4bbc2812d0e0203558ce63382fc9890ec0e496da12177466982cc4a3c72
+growth_anchor_events: 27
+growth_anchor_head: 5c8a12a495bdd586c792e2f557efc4cc06c5199d81ca08d96d901b175bdc2a22
 ```
 
 ```bash

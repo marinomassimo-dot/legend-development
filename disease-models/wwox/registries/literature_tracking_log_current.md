@@ -2915,29 +2915,29 @@ Serves to:
 ---
 
 ## LIT-0093
-**Short title:** corpus paper 70
-**Authors:** not yet extracted
-**Year:** unknown
-**Source type:** not yet screened
-**Journal/source:** not yet extracted
+**Short title:** Carvalho 2022 — Zfra1-31 in neuroni iperglicemici
+**Authors:** Carvalho C, Correia SC, Seiça R, Moreira PI (tutti Università di Coimbra)
+**Year:** 2022
+**Source type:** Article — primary
+**Journal/source:** Cellular and Molecular Life Sciences 2022;79(9):487
 **Identifier type:** PMID / DOI
 **Identifier value:** PMID 35984507 / DOI 10.1007/s00018-022-04508-7
 **Date discovered:** 2026-04-12
-**Date processed:** not yet processed
+**Date processed:** 2026-09-21
 **Discovery window:** phase-2 corpus alignment
 **Discovery source:** paper_corpus_reference_current.md
 **Discovery query:** corpus paper 70
-**Status:** discovered
-**Primary pathway:** unassigned
-**Genotype/model tag:** unassigned
-**Transferability:** unassigned
-**clinical relevance:** HIGH
-**Claim links:** none
-**Working Model impact:** none yet
-**Report mentions:** corpus alignment
-**Next action:** screening and tier assignment
-**Flags:** corpus placeholder / not yet screened
-**Note:** Title: WWOX inhibition by Zfra1-31 restores mitochondrial homeostasis and viability of neuronal cells exposed to high glucose
+**Status:** processed — promosso a [[paper_registry_current#PAPER 097]] (`BATCH_20260921_002`)
+**Primary pathway:** P5 — metabolismo / mitocondri / redox
+**Genotype/model tag:** WWOX wild-type; SH-SY5Y differenziate + ratti Goto-Kakizaki; nessun allele WWOX-DEE
+**Transferability:** T3
+**clinical relevance:** ~~HIGH~~ → **MODERATE** — declassata **dopo la lettura**: la rilevanza è di direzione terapeutica, non di meccanismo di malattia. `HIGH` era una stima di triage fatta sul titolo
+**Claim links:** none — il record porta una lettura, non una claim
+**Working Model impact:** none — nessuna claim, nessun movimento del modello
+**Report mentions:** acquisizione `A9`; addendum di `peptide_intervention_audit_20260920.md`; `HYP-20260705-05`
+**Next action:** none — letto e chiuso. **Non richiedere di nuovo questo paper**
+**Flags:** letto da PDF fornito dall'operatore (PMC stub a corpo zero); ricevute `FTR-20260921-35984507-01` e `-02`; `figures: captions_only`
+**Note:** Title: WWOX inhibition by Zfra1-31 restores mitochondrial homeostasis and viability of neuronal cells exposed to high glucose. 🔴 **Nessun braccio genetico su WWOX, nessun controllo con peptide inattivo, WWOX totale mai misurata benché `ABN413` sia elencato nei metodi.**
 
 ---
 

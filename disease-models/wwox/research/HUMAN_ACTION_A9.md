@@ -1,3 +1,25 @@
+# ✅ DISCHARGED — 2026-09-21. No action is required. Do not act on this file.
+
+The operator supplied the publisher PDF **and** the supplementary bundle on 2026-09-21. Both were
+read in full: [`../analysis/A9_fulltext_read_20260921.md`](../analysis/A9_fulltext_read_20260921.md),
+receipts `FTR-20260921-35984507-01` and `-02`.
+
+**The exact scientific question this file posed is answered: NO.** There is no genetic WWOX arm —
+`siRNA`, `shRNA`, `knockdown`, `knockout`, `CRISPR`, `transfect*`, `lentivir*` are all **zero**, in
+the article *and* in the supplementary, and there is no scrambled/inactive-peptide control either.
+
+**And the second hope in this file is also closed, with a finding attached.** The blots *"that would
+show … whether total WWOX or only pTyr33-WWOX moves"* do not exist in the supplementary — but the
+**total-WWOX antibody (`Merck Millipore ABN413`) is listed in the paper's own methods** and no
+total-WWOX result is reported anywhere; the readout is normalised to β-actin. So the ~64 % reduction
+cannot separate *"Zfra inhibited WWOX"* from *"Zfra consumed WWOX"*.
+
+**Nothing further is to be requested from the authors or from any proxy for this paper.**
+
+---
+
+*What follows is the original request, kept for the record.*
+
 # HUMAN ACTION — A9 acquisition
 
 **Citation.** Carvalho C, Correia SC, Seiça R, Moreira PI. *WWOX inhibition by Zfra1-31 restores

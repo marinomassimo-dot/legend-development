@@ -1,6 +1,16 @@
 # Acquisition Packet A9 — PMID 35984507 (Carvalho et al. 2022, *Cell Mol Life Sci*)
 
-**ACCESSIBLE: NO — `EVIDENCE_BLOCKED`.**
+**ACCESSIBLE: NO — `EVIDENCE_BLOCKED`.** → 🔴 **SUPERSEDED 2026-09-21: `ACQUIRED` → `READ` → CLOSED.**
+
+> **This packet is discharged.** Later the same day the operator supplied the publisher PDF **and**
+> the supplementary bundle directly. Both were read in full —
+> [`../analysis/A9_fulltext_read_20260921.md`](../analysis/A9_fulltext_read_20260921.md), receipts
+> `FTR-20260921-35984507-01` and `-02`. The critical question is resolved: **there is no genetic
+> WWOX arm and no inactive-peptide control**, and **total WWOX was never reported although the
+> antibody is listed in the methods**. **Do not request this paper again.** What follows is the
+> acquisition record as written, kept because it is the measurement of the blockage — which was
+> real, and which an operator-supplied file, not a better route, is what solved.
+
 
 How established: `mcp__PubMed__get_full_text_article` was called on `PMC11071800` in this session
 (2026-09-21). The call **succeeded** — it returned a record with title, identifiers, DOI and abstract —

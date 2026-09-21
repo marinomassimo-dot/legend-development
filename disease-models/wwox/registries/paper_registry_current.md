@@ -1401,7 +1401,7 @@ Rule: these records are registry placeholders only. They do NOT imply processing
 **Corpus paper no:** 70
 **Full title:** WWOX inhibition by Zfra1-31 restores mitochondrial homeostasis and viability of neuronal cells exposed to high glucose
 **Identifier:** PMID 35984507 / DOI 10.1007/s00018-022-04508-7
-**Status:** not_processed
+**Status:** promoted — see [[paper_registry_current#PAPER 097]] (`BATCH_20260921_002`)
 **Registry role:** corpus placeholder only
 **Claim links:** none
 **Next action:** screening / triage required
@@ -7216,3 +7216,34 @@ Purpose: restore the paper↔claim audit trail. These corpus IDs (181–220 batc
 
 ---
 
+## PAPER 097
+**Short title:** Carvalho 2022 — Zfra1-31 protegge neuroni in iperglicemia e abbassa pY33-WWOX; l'attribuzione causale a «inibizione di WWOX» resta aperta
+**Full title:** WWOX inhibition by Zfra1-31 restores mitochondrial homeostasis and viability of neuronal cells exposed to high glucose
+**Authors:** Carvalho C, Correia SC, Seiça R, Moreira PI — **tutti Università di Coimbra** (CNC / CIBB / IIIUC / Istituto di Fisiologia). Chang NS compare **solo in bibliografia** (rif. 16, 21, 22, 47), mai come autore
+**Year:** 2022
+**Source type:** primary — colture neuronali differenziate + braccio animale osservazionale
+**Journal/source:** *Cellular and Molecular Life Sciences* 2022;79(9):487
+**Identifier:** PMID 35984507 / PMCID PMC11071800 (**stub: corpo di lunghezza zero**) / DOI 10.1007/s00018-022-04508-7
+**LIT link:** LIT-0093
+**Status:** processed
+**Record provenance:** segnaposto `CORPUS-STUB-070` promosso da `CC-20260921-PAPER35984507-PROMOTION-01` (`BATCH_20260921_002`). 🔴 **Acquisito NON per una rotta migliore ma perché l'operatore ha fornito il PDF e il supplementary**, dopo che ogni rotta automatica aveva restituito un corpo vuoto. Nessun toolchain PDF esiste in questo deployment: il testo è stato estratto con [`framework/scripts/pdf_text_extract.py`](../../../framework/scripts/pdf_text_extract.py), scritto per questa lettura.
+**Evidence depth:** `partial_fulltext_read` ×2 — ricevute `FTR-20260921-35984507-01` (articolo, artefatto `files/fulltext/PMID35984507_OPERATOR_PDFtext.txt`, `sha256 b9a4e3e3…`; PDF sorgente `sha256 a7ce53cf…`) e `FTR-20260921-35984507-02` (supplementary, `sha256 2977c175…`; PDF sorgente `sha256 4430b209…`). **`figures: captions_only` in entrambe: nessun pannello ispezionato.** Per `D-14` nessun negativo affermato da una figura è aggiudicato qui; tutti i negativi sotto sono negativi **testuali**.
+**Strumento validato prima di accettare uno zero:** controlli positivi tutti vivi — `SH-SY5Y` 3, `Western blot` 35, `Zfra1-31` 62, `WWOX` 112, `Seahorse` 4, `Goto-Kakizaki` 4, `ABN413` 1, `ab193624` 1; nel supplementary, a livello di **frase**: `mitochondrial membrane potential` 3, `caspase 3 activity` 1. 🔴 Un primo matcher più tollerante aveva prodotto `S8G = 1` da un **font program** — falso positivo individuato e corretto con una barriera binaria, regressione sotto test.
+**Primary pathway:** P5 — metabolismo / mitocondri / redox (iperglicemia)
+**Secondary pathway:** asse pTyr33-WWOX; direzione terapeutica dei peptidi Zfra
+**Model/species:** SH-SY5Y umane differenziate (25 mM glucosio, 48 h; Zfra1-31 20 µM a 3 h «EI» o 24 h «LI»); ratti Goto-Kakizaki 6 e 12 mesi vs **Wistar di pari età** — **braccio animale puramente osservazionale, nessun animale ha ricevuto Zfra**
+**Genotype/model:** WWOX **wild-type**; **nessun allele WWOX-DEE**, nessun CNS in sviluppo, nessun endpoint convulsivo
+**Transferability:** **T3**
+**clinical relevance:** **MODERATE — e la rilevanza è interamente di direzione terapeutica, non di meccanismo di malattia.** Vincola una classe di candidati; non descrive questa malattia.
+**Claim links:** none — questo record porta una lettura, non una claim
+**Role:** 🔴 **Il paper più richiesto della sessione, e la lettura lo ridimensiona nel punto esatto in cui era stato citato.** È **evidenza vera**: Zfra1-31 protegge neuroni umani differenziati su un pannello ampio e internamente coerente (vitalità, ΔΨm, respirometria Seahorse, danno ossidativo, fissione-fusione, MTCO1/ND1/VDAC, autofagia, Aβ, pTau, proteine sinaptiche, p53, caspasi-3) **abbassando il segnale pTyr33-WWOX**, e il risultato temporale — l'attivazione di WWOX **precede** il danno — è il suo reperto meglio sostenuto. **Ma il verbo del titolo non è dimostrato dai suoi dati.**
+**Negativi testuali, articolo E supplementary, tutti zero:** `siRNA`, `shRNA`, `knockdown`, `knockout`, `CRISPR`, `silenc*`, `transfect*`, `lentivir*` — **nessun braccio genetico su WWOX**; `scrambled`, `S8G`, `inactive peptide` — **nessun controllo di specificità del peptide**; `bafilomycin`, `chloroquine`, `autophagic flux` — **nessun clamp di flusso autofagico**.
+**🔴 Il reperto che un abstract non poteva dare:** la tabella anticorpi elenca **sia** `Anti-WWOX (phospho Y33) Abcam (ab193624)` **sia** `WWOX Merck Millipore (ABN413)` — un anticorpo per **WWOX totale era in casa** — e la normalizzazione dichiarata è *"β-actin was used as a loading control"*. **Nessun dato di WWOX totale è riportato in nessun punto**, e nessun rapporto pWWOX/WWOX compare in alcuna legenda. Un segnale pTyr33 su β-actina scende se scende la fosforilazione **o** se scende la proteina; poiché la zfration prende WWOX **come substrato**, il **~64 %** (braccio **LI**, appaiato a **~16 %** di vitalità) è esattamente la quantità che **non distingue** *«Zfra ha inibito WWOX»* da *«Zfra ha consumato WWOX»*.
+**Controllo di specificità: «data not shown».** Verbatim: *"Zfra1-31 … does not affect mitochondria and cells function under control conditions (data not shown)."*
+**Braccio animale — meglio controllato dell'abstract, e non monotono:** *"young animals (6-month-old) present increased levels of pWWOX (tyr33), when compared to **age-matched control rats** and to 12-month-old GK rats"* — corteccia ~+20 %, ippocampo ~2×. Ma a **12 mesi** il segnale corticale **scende ~20 %** e l'ippocampo non è significativo. Limite dichiarato dagli autori: *"Due to the limited amount of rat brain samples, we were unable to perform key experiments done in neuronal cells."*
+**⚠️ `D-15` — l'unico risultato genetico su WWOX nel paper è di altri:** *"it was previously shown that inhibition of tyr33 phosphorylation by a **dominant-negative WWOX** was able to abolish apoptotic cell death in a MPP+ rat model for PD"* è una **citazione al rif. [18]**, cioè la linea già tenuta come `PMID 18371080` / `FT-109`. **Non va ri-vocalizzata come braccio genetico di questo paper**, e non è una seconda osservazione.
+**Formulazione canonica, da usare ovunque questo paper venga citato:** *«Evidenza neuronale indipendente che Zfra1-31 è protettivo riducendo il segnale pY33-WWOX; l'attribuzione causale della protezione all'**inibizione** di WWOX resta irrisolta — nessuna perturbazione genetica ortogonale, nessun controllo con peptide inattivo, WWOX totale mai misurata.»*
+**Effetto sul modello:** **nessuna claim.** Restringe una frase di [`peptide_intervention_audit_20260920.md`](../analysis/peptide_intervention_audit_20260920.md) e la voce `HYP-20260705-05`. **La conclusione terapeutica per il genotipo di riferimento non cambia e anzi si rafforza:** inibizione e consumo puntano nella stessa direzione dove il problema è *troppa poca* WWOX funzionale — resta **obiezione di categoria, non di dose**.
+**Note:** `A9` è **chiuso**; nessuna ulteriore acquisizione serve. **REVIVAL_TRIGGER:** una pubblicazione che riporti **WWOX totale** accanto a pTyr33-WWOX sotto Zfra1-31, o un braccio genetico su WWOX accanto al peptide in modello neuronale — quella singola misura decide fra le due letture.
+
+---
