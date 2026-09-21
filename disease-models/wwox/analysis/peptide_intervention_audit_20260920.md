@@ -432,3 +432,37 @@ is filed as packet item **`A9`**, at the top of the list, precisely so that it i
 only **pTyr33**-WWOX moves.
 
 **Nothing in this addendum is medical advice.**
+
+### 🔬 Precision note — 2026-09-21: the convergence is about the REAGENTS, and the lab's own rationale runs the other way
+
+While preparing the `A9` acquisition packet, a delegate surfaced the Chang-lab commentary
+`PMID 26355344` as evidence that *"the objection's three lines are not unanimous even inside the lab
+that generated them."* **Verified personally against the artefact
+`files/fulltext/PMID26355344_PMC_MCPtext.txt`** — both sentences are real:
+
+> *"When WWOX is knocked down by siRNA, aggregation of TPC6AΔ and TIAF1 occurs in the mitochondria to
+> induce apoptosis."*
+>
+> *"**Restoration of WWOX** is expected to help survival of neural cells by preventing accumulation of
+> protein aggregates in neurons."*
+
+**But the delegate's reading of what that shows is not quite right, and the correct reading is
+sharper.** These sentences are not counter-evidence to the convergence; they are about a **different
+proposition**. The convergence recorded above is about the **direction in which the laboratory's
+therapeutic reagents act** — the pTyr33 peptide, the C1q axis, Zfra1-31. These two sentences are
+about **the direction in which WWOX's normal function runs**: loss of WWOX permits aggregation,
+therefore restoring WWOX should help.
+
+🔴 **Both can be true at once, and their co-existence is the finding.** The same laboratory holds
+that **losing WWOX is harmful and restoring it should help**, while every therapeutic reagent it has
+produced works by **removing or inactivating WWOX**. That is an unresolved tension **inside the
+originating laboratory's own position**, not between it and an outside critic — and it is a stronger
+observation than "not unanimous", because nobody has to be wrong for it to matter.
+
+**What it changes here: nothing about the category objection, and one thing about how to state it.**
+The objection stands exactly as written — a WWOX antagonist has nothing to antagonise in a
+WWOX-deficient brain. What this adds is that **the lab's own restoration rationale is on the disease
+model's side of the argument**, and should be cited as such rather than treated as adversarial.
+⚠️ It remains a **commentary**, not a primary source, and its `siRNA → aggregation` sentence points
+back to `PMID 25650666`, whose adversarial re-read this session found disclaims its own load-bearing
+step. **Do not promote the commentary's claim above its own primary.**
