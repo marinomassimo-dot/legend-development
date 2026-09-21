@@ -54,6 +54,33 @@ re-anchor or "fix" the ledger to make counts agree — the counts are supposed t
 
 ---
 
+## 🔴 OPERATOR BOUNDARY on the structural findings — recorded so it is not overstepped
+
+The run surfaced a class of *existence-without-record* defects: **29** read and receipted papers
+with no `PAPER` record · **16 of 34** locator counts wrong (all understating) · seven "anchor"
+papers on no recorded reading · `CLAIM 032`'s unsourced hypomorph · `CORPUS P306`'s tier · a
+harvest-to-registry gap estimated near **304 of 706**.
+
+> **The Operator's instruction, 2026-09-21: DO NOT start the previously fenced-off broad
+> registry ↔ ledger reconciliation.** Instead: **(1) document the class · (2) repair only defects
+> directly encountered by current scientific work · (3) continue science.**
+> **A systematic audit remains a separate Operator decision.**
+
+**What this permits, and it is narrower than it looks.** `CORPUS P306` was repaired because the
+enzymology node hit it. `PAPER 025` is proposed because the `c.517-2A>G` work hit it. The sixteen
+locator counts are proposed as **one mechanical re-derivation with the derivation shipped**, not as
+an audit. 🔴 **The 29 and the ~304 are DOCUMENTED AND NOT ACTIONED** — they are written up in
+[`harvest_to_registry_gap_20260921.md`](harvest_to_registry_gap_20260921.md) and
+[`anchor_papers_without_readings_20260921.md`](anchor_papers_without_readings_20260921.md) and
+**nothing was created for them.**
+
+⚠️ **The specific temptation to refuse:** bulk-creating placeholders for the ~304 harvested records
+would make `unread_gold.py` report three hundred items of "gold" nobody has judged — **manufacturing
+exactly the false coverage the finding is about.** It was refused once already this run and should
+be refused again.
+
+---
+
 ## The second run in one screen
 
 **Branch:** `claude/wwox-woree-autonomous-scout-paqlty`, pushed. **Gates at every landing:** LINT
