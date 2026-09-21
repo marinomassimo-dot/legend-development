@@ -53,7 +53,43 @@ A synthesis over LEGEND's own records first, with PubMed used only to fill gaps.
 | **bytes** | **33,419** |
 | **chars** | **33,357** |
 | **sha256** | **`5dbb1c2fb85706d9e0b62ca71a0c10c1d0f2bea5b6ccaac3569a89592c7533e3`** |
-| LEGEND status before today | `CORPUS-STUB-059`, **`not_processed`** — the largest WOREE series in the literature had never been read here. |
+| LEGEND status before today | `CORPUS-STUB-059`, **`not_processed`** — 🔴 **and that registry status is STALE. See the correction immediately below: this paper HAD been read.** |
+
+> ### 🔴 CORRECTION, appended by the Orchestrator the same day — *"never read here" is FALSE*
+>
+> This row originally concluded from `CORPUS-STUB-059` / `not_processed` that *"the largest WOREE
+> series in the literature had never been read here."* **It had.** `PMID 30356099` was read on
+> **2026-08-11** — receipt `FTR-20260811-30356099-01`, `partial_fulltext_read`, off a **Europe PMC
+> XML deposit of 45,559 characters**, with a **deep-dive manifest** at
+> `deepdive_manifests/PMID30356099.json` and a queue entry at **`FT-002`**.
+>
+> 🔴 **And that six-week-old receipt already records, verbatim, both of the sentences this census
+> presents as new** — the *"All missense pathogenic variants but one (P3; p.[Ser318Leu]) are
+> interpreted based on in silico studies without experimental evidence"* premise **and** the *"up to
+> 10 %"* splicing passage with its consequence for the missense set. It also already records that
+> **Q230P is the most recurrent missense allele in this cohort at four families.** So today's read
+> was a **duplicate**, and its reader had no way of knowing from the surface it checked.
+>
+> **How it was caught, which matters more than the error.** Not by a reader. The Orchestrator tried
+> to write a receipt and `fulltext_receipts.py` **refused it**: *"prior_receipt is null and this
+> study already has 1 receipt(s)."* **The ledger's requirement that a second reading name its parent
+> is what surfaced six weeks of stale registry state.** Today's reading is now recorded as
+> `FTR-20260921-30356099-02` with that parent declared.
+>
+> **The symmetric method rule, and it is the second half of one earned this morning:**
+> - earlier today — **`NO RECORD MATCHED` ≠ `NOT HELD`** (registry silent, laboratory knows);
+> - now — 🔴 **`not_processed` ≠ `NOT READ`** (registry stale, receipt and manifest exist).
+>
+> **A paper's state is the JOIN of registry status, the receipt ledger and the manifest directory.
+> Any one of the three alone misleads, and today each of them misled once.**
+>
+> ⚠️ **What this does NOT change.** Every count, quotation and classification in this file stands —
+> the quotations were re-matched against the artefact twice, independently. What changes is the
+> **provenance claim**: this paper is a re-read on a **poorer surface** (33,357 chars, `References`
+> at 0 occurrences, no captions) than the one it duplicates (45,559 chars, reference list inside the
+> body, captions present). **The real defect is not the duplicate read — it is that
+> `paper_registry_current.md` still calls a twice-receipted, manifest-backed paper
+> `not_processed`.** That needs a commit candidate and is not fixed here.
 
 **Instrument check on the artefact, performed before any count was relied on.** The extractor's italic-deletion failure is active: `thegene` occurs **7** times and `inwere` **5** times, each a place where the italicised gene symbol *WWOX* was deleted. `WWOX` survives as a bare string only **19** times, all roman-type. **A count of `WWOX` in this artefact is an instrument reading, not a measure of how often the paper names the gene.**
 **HGVS survived and its zeros are admissible.** `p.` tokens: 17 distinct, all intact. `c.[0-9]` matches **only twice** in the whole body (`c.1228G>T`, `c.600T>A`) — and that is itself a finding: **this paper names its variants at the protein level in prose and puts the cDNA-level per-patient table in Supplemental Tables 1–4, which are named in the body and are not present in the retrievable text.** Roman-class zeros, admissible: `minigene` 0 · `nonsense-mediated` 0 · `NMD` 0 · `antisense` 0 · `oligonucleotide` 0 · `ASO` 0 · `read-through` 0 · `ataluren` 0 · `AAV` 0 · `gene therapy` 0 · `chaperone` 0 · `proteostasis` 0 · `western` 0 · `blot` 0 · `half-life` 0. Present: `CNV` 24 · `exon` 19 · `splic*` 9 · `RT-PCR` 1 · `cryptic` 1.

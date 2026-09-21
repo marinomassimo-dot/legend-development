@@ -11,7 +11,7 @@
 > A photograph, not an invariant. `files/fulltext/` is gitignored and grows between sessions, so these numbers describe the corpus on the census date and nothing re-checks them afterwards — compare the listing digest below against your own copy before trusting a row. This page blocks nothing and has no threshold: it exists so that rule 5d's *"record the absence"* is a fact in the state instead of a rediscovery made three papers into a reading.
 
 **Census date:** 2026-09-21  
-**Corpus:** `fulltext` — 14 entries, 8 papers, listing digest `cd381ef603f42eab`  
+**Corpus:** `fulltext` — 16 entries, 9 papers, listing digest `69d3415592cb982b`  
 **Sentinel:** `deepdive_manifest._refuse_suspect_surface`, PDF text via PyMuPDF 1.28.2
 
 ### Totals
@@ -19,18 +19,18 @@
 | Surface | Papers | What it means |
 |---|---:|---|
 | `structured` | 0 | publisher XML/HTML present — read this one (rule 5d) |
-| `pdf_only` | 8 | no structured surface locally — acquire XML/HTML before reading |
-| `absent` | 146 | queued, nothing local at all — retrieve first |
+| `pdf_only` | 9 | no structured surface locally — acquire XML/HTML before reading |
+| `absent` | 148 | queued, nothing local at all — retrieve first |
 
 Sentinel over the surface each paper would actually be read from — the structured file where one exists, the PDF otherwise. Structured markup is screened too, because a suffix is not a surface; see the note below:
 
 | Verdict | Papers | What it means |
 |---|---:|---|
-| `SUSPECT` | 1 | the text carries a known corruption signature — do not quote it; adjudicate against the rendered page, or re-acquire the paper structured |
+| `SUSPECT` | 2 | the text carries a known corruption signature — do not quote it; adjudicate against the rendered page, or re-acquire the paper structured |
 | `clean` | 7 | no known signature found — this is not a verification |
 | `not_screened` | 0 | no deterministic extractor available, or extraction failed |
 
-🔴 **1 of the 8 PDF-only papers cannot be read from their text layer at all**, and all of them should be acquired as XML/HTML rather than read from the PDF. A `clean` PDF is still a PDF: `deepdive_manifest` refuses it as a text surface, and a locator drawn from one has to be anchored to the page.
+🔴 **2 of the 9 PDF-only papers cannot be read from their text layer at all**, and all of them should be acquired as XML/HTML rather than read from the PDF. A `clean` PDF is still a PDF: `deepdive_manifest` refuses it as a text surface, and a locator drawn from one has to be anchored to the page.
 
 ### Per paper
 
@@ -189,6 +189,9 @@ Sentinel over the surface each paper would actually be read from — the structu
 | PMID 37095367 | FT-116 | `absent` | — | — |
 | PMID 37583270 | FT-116 | `absent` | — | — |
 | PMID 42523332 | FT-117 | `pdf_only` | `clean` | PMID42523332_PMC_MCPabstract.txt, PMID42523332_PMC_MCPtext.txt |
+| PMID 11058590 | FT-118 | `absent` | — | — |
+| PMID 28416821 | FT-120 | `absent` | — | — |
+| PMID 33565365 | — | `pdf_only` | `SUSPECT` — PMID33565365_PMC_MCPtext.txt: the artifact's own decoded text was zero-length; a screen over no bytes establishes nothing | PMID33565365_PMC_MCPtext.txt, PMID33565365_abstract_PubMedMCP.txt |
 | PMID 41228229 | — | `pdf_only` | `clean` | PMID41228229_PMC_MCPtext.txt |
 
 ### Loss ledger — queue entries this census cannot join to a local surface
@@ -204,8 +207,9 @@ Not all of these are defects. An entry resolved by DOI alone says exactly what i
 | FT-034 | `doi_only` | DOI 10.1165/rcmb.2020-0145OC · DOI 10.7759/cureus.46216 · DOI 10.1002/ana.25619 · |
 | FT-066 | `doi_only` | DOI 10.1038/onc.2013.52 — Santini S *et al.*, *Oncogene* 2014;33(9):1113–1123 — |
 | FT-069 | `not_an_article` | `NOT_AN_ARTICLE` — un contratto, non un paper: `framework/scripts/deepdive_manifest.py` su `main`, |
+| FT-119 | `not_an_article` | `NOT_AN_ARTICLE` — non esiste un articolo da accodare, e **questo è esattamente il punto**: la fonte è *"(Aldaz laboratory unpublished observations)"*, una parentetica dentro `PMID 24932569`. Il paper leggibile della catena è quella review, già letta di prima mano. |
 
-**Accounting.** Rows: 8 corpus papers + 153 queued papers − 7 in both = **154** emitted. ✓ Entries: 110 resolved + 7 unjoined = **117** queue entries. ✓
+**Accounting.** Rows: 9 corpus papers + 155 queued papers − 7 in both = **157** emitted. ✓ Entries: 112 resolved + 8 unjoined = **120** queue entries. ✓
 
 *Not medical advice. This page describes file formats, not findings.*
 

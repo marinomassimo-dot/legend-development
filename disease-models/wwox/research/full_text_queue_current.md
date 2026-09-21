@@ -5479,3 +5479,42 @@ locator della lettura sono perciò di secondo ordine, e sono dichiarati tali.
 acquisizione.** Non ri-accodare, non ri-cercare: **l'oggetto non è pubblicato.** L'azione corretta
 è epistemica — qualunque uso futuro di `DL-MECH-036` deve portare la clausola *«unpublished
 observations, nessun primario»*, e **non può reggere da solo una conclusione sul dominio**.
+
+---
+
+## FT-120 — `PMID 28416821` · **candidato non verificato** per la cifra «up to 10 %», e va tenuto come candidato
+
+**Paper:** PMID 28416821 — Soemedi R *et al.* 2017, *"Pathogenic variants that alter protein code
+often disrupt splicing"*, *Nat Genet* 49(6):848–855,
+[DOI](https://doi.org/10.1038/ng.3837). Riportato come saggio MaPSy su **4.964 varianti esoniche
+causative di malattia**, con ~10 % che alterano lo splicing.
+
+🔴 **Perché è in coda con questa etichetta e non come fonte.** `PMID 30356099` (Piard 2019)
+scrive: *"Up to 10% of known disease-associated missense variants, but only 3% of common SNPs,
+alter pre-mRNA splicing."* **Quella frase è una premessa importata** — non un risultato di Piard,
+non una misura su WWOX, mai testata su un singolo allele WWOX. La ricerca della sua fonte è stata
+tentata e **non è conclusa**: nell'artefatto la bibliografia è **assente** (`References` = 0
+occorrenze) e i richiami sono fusi alle parole vicine (28 occorrenze della firma
+`[a-z]\.[A-Z][a-z]`), quindi **la fonte non è recuperabile da quella superficie**. Questo PMID è
+stato identificato per somiglianza di contenuto tramite ricerca web, **non per collazione con la
+reference list di Piard.**
+
+⚠️ **Non registrare questo paper come «la citazione di Piard».** Finché la bibliografia non è
+recuperata, l'attribuzione resta **non verificata**.
+
+🔴 **E anche se fosse la fonte, i denominatori non coincidono.** Il candidato riporta varianti
+**esoniche**; Piard lo restringe a **missenso** nella riformulazione. Una discrepanza di
+denominatore in una cifra usata come prior su una classe terapeutica è esattamente il tipo di
+trasferimento per cui questo repository ha già pagato.
+
+**Come va usata la cifra, nel frattempo.** Come **prior su una classe**, mai come probabilità per
+allele: la frazione a rischio **si concentra vicino alle giunzioni**, ed è per questo che l'analisi
+posizionale esiste
+([[missense_splice_reclassification_risk_20260921]]). 🔴 **«Il 10 % degli alleli missenso WWOX sono
+alleli di splicing» NON può essere scritto su questa evidenza.**
+
+**Priorità:** BASSA. **Current status:** ⬜ candidato non verificato. **Next action:** nessuna
+lettura. Si chiude solo recuperando la **reference list di Piard** — cioè da una superficie che
+porti la bibliografia (l'XML Europe PMC letto il 2026-08-11 **la portava**, `references: read` in
+`FTR-20260811-30356099-01`) — e collazionando. **Quella superficie esisteva e non esiste più in
+questo container**, il che è un'altra istanza del costo registrato in `FT-114`.

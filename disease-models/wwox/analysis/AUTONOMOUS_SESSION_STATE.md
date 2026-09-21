@@ -91,13 +91,28 @@ defects.** Do not re-run without new dated literature.
 
 ## 2 · Method rules earned TODAY — apply, do not rediscover
 
-- 🔴 **`NO RECORD MATCHED` ≠ `NOT HELD`.** `registry_records.py get --pmid` answers *"is there a
-  RECORD KEYED to this PMID"*. Its surface list **excludes `disease-models/wwox/analysis/` and
-  `therapeutic_hypotheses_ledger_current.md`**, it reads **committed** state only, and it returns
-  no match for a PMID sitting inside the *body* of a record on a surface it does read. **It prints
-  its own warning and this session converted that warning into a negative — twice.** Always pair it
-  with `grep -rn "<PMID>" --include=*.md disease-models/`. (The CLAUDE.md prohibition is on grepping
-  the **two large registries** for records; `registry_records.py` covers those.)
+- 🔴 **A PAPER'S STATE IS A JOIN OF THREE SOURCES, AND EACH ONE MISLED ONCE TODAY.** Registry
+  status, the **receipt ledger**, and the **manifest directory**. Checking any one alone is how
+  every provenance error of this session was made — four times, by four different readers.
+  - **`NO RECORD MATCHED` ≠ `NOT HELD`** (registry silent, laboratory knows).
+    `registry_records.py get --pmid` answers *"is there a RECORD KEYED to this PMID"*. Its surface
+    list **excludes `disease-models/wwox/analysis/` and `therapeutic_hypotheses_ledger_current.md`**,
+    it reads **committed** state only, and it returns no match for a PMID sitting inside the *body*
+    of a record on a surface it does read. **It prints its own warning and this session converted
+    that warning into a negative — twice.** Pair it with
+    `grep -rn "<PMID>" --include=*.md disease-models/`.
+  - 🔴 **`not_processed` ≠ `NOT READ`** (registry stale, receipt and manifest exist). `PMID 30356099`
+    carried `CORPUS-STUB-059` / `not_processed` while holding a **six-week-old receipt and a
+    deep-dive manifest**. A whole re-read was spent before the ledger refused the duplicate receipt
+    and exposed it.
+  - **"No receipt" ≠ "unprocessed"** (receipt ledger silent, registry knows). `PAPER 003` is
+    `integrated`, `clinical relevance HIGH`, a BLOCK-1 **safety anchor** — and carries no full-text
+    receipt because it was processed from its abstract. It looked like a discovery twice.
+  - **The cheap check that would have caught all three:** `grep -rn "<PMID>" --include=*.md
+    disease-models/` **plus** a grep of `fulltext_read_receipts.jsonl` **plus** `ls
+    research/deepdive_manifests/PMID<PMID>.json`. Three commands.
+  - (The CLAUDE.md prohibition is on grepping the **two large registries** for records;
+    `registry_records.py` covers those.)
 - 🔴 **A brief that assigns a paper MUST order artefact persistence as step 1**, before analysis:
   body verbatim to `files/fulltext/PMID<PMID>_PMC_MCPtext.txt`, with bytes/chars/sha256. Four papers
   were read today and **could not be receipted** because their text lived only in an agent's
@@ -164,11 +179,19 @@ allele-specific levers are each bounded by a minority; the allele-agnostic one i
 - **`Q230P` is the most recurrent single WWOX allele of any class** — 8 patients, 6 families.
 - **Zero WWOX alleles have a demonstrated productive splice outcome.** Every measured outcome is
   exon skipping toward frameshift. *"Splice-site"* licenses *"ASO-rescuable"* on **no row.**
-- 🔴 **`PMID 30356099` (Piard 2019), the largest WOREE series in the literature, was
-  `CORPUS-STUB-059` `not_processed` — and open access the whole time.** Now read and fingerprinted
-  (`files/fulltext/PMID30356099_PMC_MCPtext.txt`, sha256 `5dbb1c2f…`). **A stub→PAPER upgrade is
-  warranted and was NOT made** (the reader was read-only; it needs a commit candidate). **A receipt
-  is owed and not yet written.**
+- 🔴 **`PMID 30356099` (Piard 2019) — the "never read" finding was WRONG, and the correction is
+  the more useful result.** The census concluded from `CORPUS-STUB-059` / `not_processed` that the
+  largest WOREE series had never been read. **It was read on 2026-08-11** —
+  `FTR-20260811-30356099-01`, with a **deep-dive manifest** and queue entry `FT-002` — off a Europe
+  PMC XML surface of **45,559 characters**. That six-week-old receipt **already records verbatim**
+  both sentences today's work presented as new, **and** that Q230P is the cohort's most recurrent
+  missense allele at four families. Today's read was a **duplicate on a poorer surface** (33,357
+  chars, `References` 0, no captions), now recorded as `FTR-20260921-30356099-02` with its parent
+  declared. 🔴 **It was caught by the LEDGER, not by a reader:** `fulltext_receipts.py` refused the
+  receipt — *"prior_receipt is null and this study already has 1 receipt(s)"* — and that refusal is
+  what surfaced six weeks of stale registry state. **The real defect is that
+  `paper_registry_current.md` still calls a twice-receipted, manifest-backed paper `not_processed`;
+  fixing it needs a commit candidate.**
 - 🔴 **And that paper threatens PROTEIN-RESCUE**, with a claim LEGEND did not hold: *"Up to 10 % of
   known disease-associated missense variants … alter pre-mRNA splicing"*, and that it is *"likely
   that a fraction of predicted missense variants … results in loss of expression due to abnormal
