@@ -136,3 +136,72 @@ verify**, not as established facts.
 
 *Non-canonical therapeutics-layer file. Nothing propagated. Sources: PubMed (for M1) and WebSearch
 (for M2–M5). Not medical advice.*
+
+---
+
+## 5 · 🔴 PROPOSED AMENDMENT to `TX-007`'s window caveat — a proposal, not an edit
+
+**Added 2026-09-21 after [`../analysis/tx007_window_and_ceiling_20260921.md`](../analysis/tx007_window_and_ceiling_20260921.md).**
+Nothing below is propagated. `therapeutic_strategies_current.md` declares status and next-action
+updates free, **but this touches the substance of a caveat that constrains the lever serving the
+largest patient class**, so it is put to the Operator rather than made.
+
+### The current wording, and what is wrong with it
+> *"neuronal GT rescues excitability/function but does **NOT** repair the progenitor defect (radial
+> glia/neurogenesis), largely prenatal/early-postnatal. **The older the patient, the smaller the
+> reversible fraction.**"*
+
+**That is two statements of very different evidential standing joined by a full stop**, and the join
+is what licenses more than the evidence:
+
+| Half | Standing |
+|---|---|
+| a neuron-restricted vector leaves radial glia untouched | 🟢 **MEASURED** — once, in human organoids (`PMID 42397075`). It is a **coverage** fact about a neuronal promoter, not an irreversibility fact. |
+| *"the older the patient, the smaller the reversible fraction"* | 🔴 **NO MEASUREMENT, IN ANY SPECIES.** No WWOX gene-therapy experiment in any living animal treats later than **mouse P5**. |
+
+### What the one age-varying experiment actually is
+`PMID 42422765` Supp. Fig. S8: arms at **P1, P2, P3, P5** — **four days**, **no P0**, **no P4**,
+P300 survival for two arms only, histology for one, and **no treated-vs-KO comparison drawn**.
+
+🔴 **And the authors themselves say the limit is the model, not the therapy** — the sentence that
+should travel with this caveat from now on:
+
+> Later dosing *"was not explored, as Wwox-null mice rapidly deteriorate"*, and the inability to
+> assess later intervention *"likely reflects … model-specific biological constraints and technical
+> limitations, **rather than a definitive boundary for therapeutic responsiveness**."*
+
+### The proposed replacement
+> *Neuronal gene addition rescues survival, growth, glycaemia, fertility and excitability in the
+> Wwox-null mouse, durably to P300, and the rescue is **dose-dependent**. A neuron-restricted vector
+> **does not cover** radial glia — measured once, in human organoids — so a progenitor contribution
+> is **outside the vector's reach**, which is a coverage limit, not a demonstration of
+> irreversibility. **The dependence of efficacy on age at treatment is UNMEASURED**: no experiment
+> in any living animal has dosed later than mouse P5, the one age-varying arm spans four days, and
+> the authors attribute that limit to the model's lethality rather than to a therapeutic boundary.
+> **Closure has never been measured for any endpoint.** Phenotype **onsets** differ — migration
+> prenatal, myelination postnatal and long — and **onset is not a deadline**.*
+
+### Why the change is not cosmetic
+1. **It governs the largest patient class.** 56.8 % of classifiable individuals are null/null and
+   gene addition is their only lever.
+2. **The current wording can be read as a reason not to treat an older child.** The evidence does
+   not support that reading in either direction — 🔴 **and it equally does not support the opposite
+   one.** *"Unmeasured"* is the honest word, and it is the word the amendment uses.
+3. **It changes what the sponsor's enrolment window means.** § 2.1 of this file noted that
+   `MZ-1866` enrols **ages 2–25**. Against a caveat asserting a steep age slope that reads as a
+   contradiction to be explained away; against *"the age slope is unmeasured"* it is simply
+   **untested territory that a trial is about to enter** — which is the accurate framing, and still
+   a commercial and regulatory decision rather than a biological finding.
+4. **One endpoint deserves naming.** Excitability has **no structural deadline** of the kind
+   migration and myelination have — and it is **exactly the endpoint nobody tested late**. If any
+   phenotype were to remain tractable outside the neonatal window, the evidence gives it as the
+   first candidate. ⚠️ **That is a hypothesis with a named gap, not a finding.**
+
+⚠️ **What must NOT be inferred from any of this.** Nothing here says gene therapy works in an older
+patient; nothing says it does not. **No dosing, timing or eligibility inference may be drawn, and
+nothing in this file is medical advice.** The single operational consequence is that
+`HUMAN_REQUIRED` item — *"evaluate **with the clinical team**"* — should carry the honest evidential
+state into that conversation rather than a slope nobody has measured.
+
+**Status:** ⬜ **PROPOSAL — awaiting Operator.** Not propagated, `TX-007` not re-ranked, no scoring
+field changed.
