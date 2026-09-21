@@ -5026,3 +5026,56 @@ fornirebbe a [[therapeutic_strategies_current#TX-001]] il denominatore che oggi 
 singolo tentativo di fetch, secondo la regola che la recuperabilità si stabilisce **solo**
 tentandola e misurando la lunghezza del corpo. Il valore di questa voce, però, **non dipende dal
 leggerli**: è la misura di assenza che porta il peso, ed è già fatta.
+
+---
+
+## FT-111 — `PMID 35328751` e `PMID 36271927` · lette nel corpo, **debito residuo dichiarato su figure e bibliografia**
+
+**Papers:** PMID 35328751 — Baryła I, Styczeń-Binkowska E, Płuciennik E, Kośla K, Bednarek AK 2022,
+*Int J Mol Sci* 23(6):3326 · PMCID `PMC8955937` · CC BY 4.0 · DOI 10.3390/ijms23063326 ·
+PMID 36271927 — Baryła I, Kośla K, Bednarek AK 2022, *J Mol Med (Berl)* 100(12):1691–1702 ·
+PMCID `PMC9691486` · DOI 10.1007/s00109-022-02265-5. Entrambi **Medical University of Lodz**,
+indipendenti da Chang/NCKU e da Aqeilan/HUJI (stabilito dalle **affiliazioni**, non da conteggi di
+cognome).
+**Surface:** ✅ **corpo letto integralmente e artefatto fingerprintato** per entrambi
+(`PMID35328751_PMC_MCPtext.txt`, 49 311 byte, sha256 `d06eda93…cc038caca`;
+`PMID36271927_PMC_MCPtext.txt`, 32 310 byte, sha256 `d4edaaee…a836926d`). Ricevute
+`FTR-20260921-35328751-01` e `FTR-20260921-36271927-01`, **entrambe `partial_fulltext_read`**.
+Audit: [`wwox_metabolism_reviews_audit_20260921.md`](../analysis/wwox_metabolism_reviews_audit_20260921.md).
+**Priority:** BASSA per la rilettura · **ALTA come registrazione di debito.**
+
+**Perché questa voce esiste.** Questi due erano gli **ultimi due `UNREAD_PREMISE` del repository**.
+Ora sono letti — ma `session_self_eval.py` libera una citazione solo con una ricevuta
+`complete_fulltext_read`, una dichiarazione di full text nel registry, **oppure una voce di coda**.
+Nessuna delle due ricevute può essere `complete`: **in questo ambiente nessuna immagine di figura è
+ispezionabile**, quindi dichiararle complete sarebbe falso. Questa voce è la **terza via, quella che
+il controllo stesso chiama «debito di lettura dichiarato è lavoro legittimo in corso»**.
+
+**Che cosa resta davvero non letto, e non è una formalità qui.**
+- **Nessuna figura ispezionata**, in nessuno dei due. Per `D-14` nessun negativo affermato solo da
+  una figura è stato aggiudicato, e **ogni numero citato nell'audit viene da prosa che porta il
+  proprio valore**.
+- 🔴 **Le bibliografie NON sono sopravvissute all'estrazione** — 169 marcatori di citazione svuotati
+  nella review, 125 nel primario, **zero parentesi risolvibili**. Questo è il limite che pesa di
+  più: la domanda centrale posta a questi due paper era *quali primari regga davvero l'arco
+  HIF1α*, e la tracciatura si è potuta fare **solo su ciò che la prosa nomina a parole**. Nessun
+  bersaglio è stato ricostruito per posizione o plausibilità.
+- **Le tabelle non sono sopravvissute** in nessuno dei due; la tabella condizione × readout
+  dell'audit è stata ricomposta dalla sola prosa.
+
+🔴 **Due errori di gloss del registry, corretti qui.** Il meta-file del metabolismo tiene
+`35328751` come *«Paper 64 — WWOX/HIF1A axis downregulation → altered glucose metabolism»*.
+(a) **È ricerca primaria, non una review** — `article_types` non porta il tag `Review`, e il
+repository lo trattava come tale. (b) **Il gloss è senza scope:** il risultato esiste **solo in una
+linea immortalizzata di fibroblasti cutanei umani** (`1BR.3.N`, ECACC 90020508) in quattro
+condizioni definite di O₂/glucosio — **e sono proprio le condizioni in cui la direzione si
+inverte**. È la stessa amputazione di clausola trovata oggi su `CORPUS-STUB-139`. Il gloss di
+`36271927` (*«review … comprehensive»*) è invece **accurato**.
+⚠️ **E non è un «knockout»:** CRISPR/Cas9 + selezione con puromicina, policlonale, mRNA ridotto
+**~3 volte** (§ 2.1). Ogni affermazione che eredita la parola «KO» da questo paper eredita una
+**deplezione parziale**.
+
+**Next action:** **nessuna rilettura automatica.** Il debito si chiude solo con una superficie che
+porti figure e bibliografia (HTML/PDF dell'editore), e serve a una sola domanda precisa: **quali
+primari reggano l'arco HIF1α**. Finché resta aperto, l'arco va citato per quello che la prosa nomina
+e non oltre.

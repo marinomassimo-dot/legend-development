@@ -235,8 +235,8 @@ and a mismatch is `BLOCK_SYSTEM` — reading history you cannot trust is worse t
 
 ```yaml
 fulltext_ledger_path: disease-models/wwox/registries/fulltext_read_receipts.jsonl
-fulltext_ledger_events: 183
-fulltext_ledger_head: 015804a0c92f982071a6d604248c6bf9e60079f40139d06a7f9f75ed9aed6651
+fulltext_ledger_events: 186
+fulltext_ledger_head: 60817334c6e97068b8f23fd225de414a1f9c692bd94ad3b5360a6f427642d4cd
 ```
 
 Maintained automatically — `fulltext_receipts.py record` re-anchors after every append.
@@ -334,7 +334,7 @@ with every existing check passing. It is invisible by construction, because lean
 writes nothing anywhere. So it is measured instead of assumed.
 
 ```yaml
-unread_premise_baseline: 2
+unread_premise_baseline: 0
 unread_premise_measured_on: 2026-09-20
 ```
 
