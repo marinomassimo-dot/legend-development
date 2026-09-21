@@ -161,6 +161,8 @@ undefined physiological substrate/activity"*. Proposed:
 > **Detection rule:** before trusting any selector-based tool's empty result, check that its
 > selectors match **more than zero** records in the live document.
 
+⚠️ **Numbering:** `D-17` was proposed on 2026-09-21 and **DEFERRED by the operator**; it is **reserved, not free**, and is not in the ledger. This session's candidates propose `D-18`–`D-23`, one each. **Do not renumber into `D-17`.**
+
 ## 5 · What is explicitly REFUSED
 
 - ❌ **No claim is created.** An abstract is not a reading. Nothing about WWOX enzymology enters

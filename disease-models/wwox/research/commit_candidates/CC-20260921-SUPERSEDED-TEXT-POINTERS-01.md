@@ -155,6 +155,8 @@ MANIFEST STRICT"*.
 > find. **Headings first** — a stale heading outranks a stale sentence, because it is read by
 > people who read nothing else.
 
+⚠️ **Numbering:** `D-17` was proposed on 2026-09-21 and **DEFERRED by the operator**; it is **reserved, not free**, and is not in the ledger. This session's candidates propose `D-18`–`D-23`, one each. **Do not renumber into `D-17`.**
+
 ## 4 · What is explicitly REFUSED
 
 - ❌ **Nothing is deleted or rewritten.** Every superseded sentence stays verbatim. Append-only

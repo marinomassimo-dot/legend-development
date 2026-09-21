@@ -116,6 +116,8 @@ threshold. **Direction of the correction: uncertainty goes UP.**
 > a **model, allele or animal** that its `Source` line does not account for, that is an unsourced
 > premise — check it before the claim is quoted again.
 
+⚠️ **Numbering:** `D-17` was proposed on 2026-09-21 and **DEFERRED by the operator**; it is **reserved, not free**, and is not in the ledger. This session's candidates propose `D-18`–`D-23`, one each. **Do not renumber into `D-17`.**
+
 ## 4 · What is explicitly REFUSED
 
 - ❌ **No new gate, auditor, registry or workflow.** Per the operator's §26, a scientific defect is
