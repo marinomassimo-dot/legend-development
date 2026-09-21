@@ -30,6 +30,30 @@ resumes from here. **Not a handoff and not a stop.**
 So **no italic-class zero from any local artefact has ever been admissible as evidence**, and **no
 citation attribution has ever been traceable from one**. Run the tool before offering any count.
 
+## ✅ BATCH_20260921_001 — the four parked candidates are LANDED (2026-09-21)
+
+**Operator-approved, propagated, `WM_v4.4 → WM_v4.5` (MINOR).** No claim reversed, no status
+changed, no other pending candidate dragged in. **`D-17` deferred by the Operator and excluded.**
+
+| Candidate | Canonical effect |
+|---|---|
+| `CLAIM032-ENDPOINT-QUALIFIER` | Title, Summary and dose corollary now name the endpoint class actually measured; `PREMISE: NOBODY_LOOKED` on cognition, EEG, network excitability. **State: «evidence insufficient for a general conclusion of no phenotype»** — and it still does not demonstrate disease in carriers. *"three independent laboratories"* **not propagated**. |
+| `DETECTION-FLOOR` | `CLAIM 030`: *proteina assente* → *proteina non rilevata al Western blot*, `PREMISE: DETECTION_FLOOR`, aligned to `CLAIM 019`. |
+| `CLAIM039-CEREBELLAR` | Title narrowed to the light-microscopy endpoint; boundary records that **neither stream establishes nor excludes** a cerebellar contribution. **Stays a rat-model claim**; human MRI not imported. |
+| `PAPER34140629-PROMOTION` | `CORPUS-STUB-150` → **`PAPER 096`**, `T3`/`LOW`, generating no claim. |
+
+**BLOCK 2 mirror rows 032 and 039 moved with their claims** — the defect the working model's own
+previous last-update note recorded. Growth delta declared (`papers +1`). `batch_queue.md`
+regenerated against the committed registries.
+
+⚠️ **Remote housekeeping is BLOCKED BY TOOLING**, not by policy: deleting
+`origin/claude/wwox-next-scientist-batch-n74f0z` (0 commits not on `main`) fails with
+`send-pack: unexpected disconnect` on every attempt through this proxy. A second fully-merged
+branch, `origin/claude/legend-architecture-evaluation-zovohw`, is also present and **was not
+touched** — no authorisation was given for it.
+
+---
+
 ## 🔴 The three results a cold reader should know before anything else
 
 1. **Every therapeutic candidate this literature has produced acts by ANTAGONISING WWOX**, and an
