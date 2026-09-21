@@ -417,10 +417,20 @@ compound **in its approved indication**, never in WWOX.
 > reader taking dose or expression-level expectations from this row would take them from a construct
 > that is **not the one heading to patients**, and would be out by the dose factor.
 >
-> ⚠️ **This is a derived surface.** It was corrected in place here rather than regenerated, because
-> the upstream record it derives from is the dossier, which is already right. **The generator and any
-> sibling derived file should be checked for the same stale element before this row is trusted
-> again.**
+> ⚠️ **Correction to this correction, same day.** It first said *"this is a derived surface … the
+> generator should be checked"*. **There is no generator** — this file is a hand-written analysis
+> artefact, as its own § 0 status line says. Nothing regenerates it and nothing else inherits the
+> error from it. **Checked rather than assumed:** `WPRE` appears elsewhere only in
+> `PMID42422765_partial_locators.md` and `PMID42128308_partial_locators.md`, both of which have it
+> right, and in the discovery ledger — see below.
+>
+> 🟢 **And the ledger already holds the design tension, which this row did not.**
+> **`DL-MECH-009`** records WPRE as *"un booster di espressione **dose-sparing** (3–16.7× per
+> regione), non un 'elemento da rimuovere': tensione di design vs rischio overexpression"*. So
+> LEGEND already knew removal is a trade, not an upgrade. ⚠️ **But `DL-MOL-005` carries `WPRE` in
+> its own title** (*"Gene REPLACEMENT AAV9-hSynI-hWWOX-WPRE …"*, status `maturing`), so a reader
+> taking the construct from that heading still gets the **2021** vector. **Flagged, not edited** —
+> the discovery ledger is append-only on leads and a title change is the Operator's.
 | **EVIDENCE_LEVEL** | **T1** (Wwox-null mouse, WWOX-KO and WOREE-derived organoids) + **T6** for human efficacy |
 | **WWOX_DIRECT_EVIDENCE** | Yes — multi-domain rescue: survival, growth, glycaemia, behaviour, ataxia, myelination, gliosis, SWD/ECoG; durable to P300; organoid firing normalized (P=0.77 vs parental) |
 | **NEAR_DISEASE_EVIDENCE** | AAV9 CNS gene addition is clinically established in SMA; not transferable as dose or window |
