@@ -398,9 +398,29 @@ compound **in its approved indication**, never in WWOX.
 
 | Field | Value |
 |---|---|
-| **INTERVENTION** | AAV9, human Synapsin-I promoter, WWOX cDNA, WPRE element; ICV |
+| **INTERVENTION** | AAV9, human Synapsin-I promoter, WWOX cDNA; ICV. 🔴 **WPRE: the 2021 construct carried it; the 2026 clinical-track vector REMOVED it deliberately — see the correction below.** |
 | **TARGET** | the WWOX locus product itself — neuronal WWOX protein |
 | **MECHANISM** | supplies full-length WWOX to neurons, bypassing every allele (gene addition) |
+
+> ### 🔴 CORRECTION, 2026-09-21 — the construct this row describes is the SUPERSEDED one
+>
+> This row listed a **`WPRE` element** as part of the intervention. That was true of the 2021
+> construct and is **not** true of the vector on the clinical track. `PMID 42422765` states the
+> decision in its authors' own words, held first-hand in LEGEND's locator dossier:
+>
+> > *"we removed WPRE as a proactive risk-mitigation step to improve the predictability and control
+> > of neuronal WWOX expression for potential clinical translation"*
+>
+> **Why a derived map carrying the old element is not a cosmetic slip.** The removal is not neutral:
+> the same paper's data show efficacy was **recovered by roughly six-fold more dose** without WPRE,
+> and the dossier records the stated purpose as keeping expression **closer to endogenous**. So a
+> reader taking dose or expression-level expectations from this row would take them from a construct
+> that is **not the one heading to patients**, and would be out by the dose factor.
+>
+> ⚠️ **This is a derived surface.** It was corrected in place here rather than regenerated, because
+> the upstream record it derives from is the dossier, which is already right. **The generator and any
+> sibling derived file should be checked for the same stale element before this row is trusted
+> again.**
 | **EVIDENCE_LEVEL** | **T1** (Wwox-null mouse, WWOX-KO and WOREE-derived organoids) + **T6** for human efficacy |
 | **WWOX_DIRECT_EVIDENCE** | Yes — multi-domain rescue: survival, growth, glycaemia, behaviour, ataxia, myelination, gliosis, SWD/ECoG; durable to P300; organoid firing normalized (P=0.77 vs parental) |
 | **NEAR_DISEASE_EVIDENCE** | AAV9 CNS gene addition is clinically established in SMA; not transferable as dose or window |
