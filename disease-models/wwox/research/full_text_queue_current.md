@@ -242,7 +242,7 @@ through an authorised `BATCH_COMMIT`.
 **Why:** l'abstract riporta **attivazione di WWOX ridotta** in tumori C1q-deficienti → C1q come regolatore a monte dello **stato di attivazione** di WWOX (non del livello). C1q è centrale nel pruning sinaptico microgliale ed è druggabile (anticorpi anti-C1q già in trial umani). Asse neuroinfiammazione + stato di attivazione.
 **Current status:** 🔴 **RETTIFICA 2026-09-21 — `PMC5214935` NON è open access.** La voce diceva "(open)" e la tabella di acquisizione **nello stesso file** portava già il flag corretto `idIsNotOpenAccess` / `pdf_only`: la voce contraddiceva se stessa. Misurato oggi: `get_full_text_article` restituisce `"full_text": ""` su `PMC5214935` e su `5214935`; `get_copyright_status` dà `is_open_access: false`, `license.type: null`, © Taylor & Francis, deposito **`pdf_only`**. **Muro di licenza permanente — non ri-accodare su questa rotta.** Abstract letto, full text mai ottenuto e non ottenibile qui.
 **Priority:** ⬇️ **da HIGH a BASSA**, e la ragione non è solo l'acquisizione: WWOX è **assente dal titolo e dalle keyword** e occupa **1 frase su 10** dell'abstract, condivisa con il risultato sui vasi. È un reperto incidentale in un lavoro di immunologia tumorale mammaria. L'abstract non dichiara **quale** grandezza sia "activation": nessun residuo, nessun saggio, nessuna n, nessuna statistica.
-**Dove è andata la domanda:** vedi [[full_text_queue_current#FT-108]] — il paper *meccanicistico* su questo asse è quello del 2009, è open access, e non era mai stato letto.
+**Dove è andata la domanda:** vedi `FT-108` — il paper *meccanicistico* su questo asse è quello del 2009, è open access, e non era mai stato letto.
 **Next action:** full text deep extraction
 **⚠️ Nota di calibrazione:** la matrice di priorità l'ha collocato **P3_LOW** scorando sull'asse `BLOCK-1/safety`, mentre il contenuto reale è neuroinfiammazione + repurposing. Accodato HIGH **a dispetto del tier**, per la regola «il ranking ordina la lettura, non la sostituisce».
 
@@ -4732,8 +4732,8 @@ derived from alternative splicing of the TRAPPC6A gene transcript"* — cioè l'
 **scoperta da questo laboratorio**, e nessun gruppo esterno l'ha mai riportata. Tutto ciò che sta a
 valle nella catena (fosforilazione Ser35, polimerizzazione, reclutamento di TIAF1, attivazione delle
 caspasi, generazione di Aβ) è una proprietà **dell'isoforma, non del gene** — mentre le tre coorti
-indipendenti che corroborano *TRAPPC6A* ([[full_text_queue_current#FT-097]],
-[[full_text_queue_current#FT-098]], [[full_text_queue_current#FT-099]]) misurano **il gene**.
+indipendenti che corroborano *TRAPPC6A* (`FT-097`,
+`FT-098`, `FT-099`) misurano **il gene**.
 🔴 Sede editoriale da pesare nella lettura: *Oncotarget*, 2015.
 **Domande da porre al testo, scritte per una sessione fredda:** (1) come è stata stabilita
 l'esistenza dell'isoforma — RT-PCR, sequenziamento, anticorpo, o predizione di splicing? (2) gli
@@ -4832,7 +4832,7 @@ preservi le immagini; nel frattempo **non promuovere la contro-evidenza oltre lo
 
 ---
 
-## FT-105 — PMID 27569545 · **RETTIFICA DI STATO di [[full_text_queue_current#FT-103]]: non "non letto" ma bloccato da licenza**
+## FT-105 — PMID 27569545 · **RETTIFICA DI STATO di `FT-103`: non "non letto" ma bloccato da licenza**
 
 > **Numerazione.** Questa voce era stata scritta come `FT-103b` e il `LINT` l'ha rifiutata: un suffisso
 > letterale si legge come un duplicato di `FT-103`, e ogni riferimento diventa ambiguo. Rinumerata `FT-105`,
@@ -4896,7 +4896,7 @@ nella letteratura: la superficie sintetica non indicizza il contenuto.**
 
 **Il valore reale, che è specifico e non generico:** questa coorte contiene **due fratelli
 omozigoti per `p.L239R`**, lo stesso allele del caso di parkinsonismo neonatale letto oggi
-([[full_text_queue_current#FT-106]], PMID 42092735) — e in questi due fratelli **il parkinsonismo
+(`FT-106`, PMID 42092735) — e in questi due fratelli **il parkinsonismo
 prominente non è riportato**. È quindi il **comparatore intra-allelico**: `p.L239R` non è un
 predittore di parkinsonismo a livello di allele. Quel confronto è il motivo per cui il full text
 serve, non la resa diagnostica del pannello.
@@ -4952,7 +4952,7 @@ paywall Wiley
 lettura: **è un debito di acquisizione**, registrato come `A6` in
 [`acquisition_packet_20260920.md`](acquisition_packet_20260920.md).
 **Epistemic status:** ⚠️ **questa voce esiste anche per una ragione strutturale.**
-[[discovery_ledger_current#DL-MOL-008]] annunciava da mesi una voce FT «da creare» che non era mai
+[[discovery_ledger_current#DL-MOL-008 — Peptide pTyr33-WWOX: un candidato di "restoration" già testato in vivo su un modello neurologico|DL-MOL-008]] annunciava da mesi una voce FT «da creare» che non era mai
 stata creata, e il PMID veniva citato dallo strato di ragionamento senza alcun oggetto di coda.
 Creandola, il riferimento smette di essere una premessa non letta e diventa un debito dichiarato.
 
@@ -4969,8 +4969,8 @@ dunque **bloccando** una via WWOX-dipendente, non sostituendola — e in un geno
 WWOX funzionale **non c'è alcun segnale pTyr33 da bloccare**. Il commentary dello **stesso
 laboratorio** (Sze 2015, `PMID 26355344`) lo glossa invece come utile *"in the restoration of neural
 function under WWOX deficiency"*. Su questa base
-[[therapeutic_hypotheses_ledger_current#HYP-20260709-04]] è già **`refuted`** e
-[[discovery_ledger_current#DL-MOL-008]] è stata chiusa in direzione negativa il 2026-09-21.
+[[therapeutic_hypotheses_ledger_current#HYP-20260709-04 — Peptide pTyr33-WWOX come rescue funzionale a valle della variante|HYP-20260709-04]] è già **`refuted`** e
+[[discovery_ledger_current#DL-MOL-008 — Peptide pTyr33-WWOX: un candidato di "restoration" già testato in vivo su un modello neurologico|DL-MOL-008]] è stata chiusa in direzione negativa il 2026-09-21.
 
 ⚠️ **Nota d'onestà, ed è la ragione per cui questa voce ha priorità alta e non è archiviata:
 entrambe quelle chiusure poggiano su un ABSTRACT, e un abstract non è una lettura.** L'abstract è
@@ -5019,8 +5019,8 @@ canonico di **accettore**, pacchetto `A8`), fanno **dieci pazienti su due alleli
 nessuno ha mai fatto una RT-PCR**. E un gruppo che *possiede* fibroblasti WOREE e *esegue* RT-PCR
 sui trascritti WWOX esiste ed è identificato (`PMID 35573960`, Genova). **Un solo esperimento
 economico** — RT-PCR su fibroblasti a cavallo della giunzione, ± cicloesimide, con quantificazione
-della banda — **convertirebbe [[discovery_ledger_current#DL-BIO-002]] da in-silico a misurato e
-fornirebbe a [[therapeutic_strategies_current#TX-001]] il denominatore che oggi non ha.**
+della banda — **convertirebbe [[discovery_ledger_current#DL-BIO-002 — Trascritto/proteina dell'allele di sito accettore, nominati dalla predizione di skipping esone 9 (SpliceAI/Pangolin)|DL-BIO-002]] da in-silico a misurato e
+fornirebbe a [[therapeutic_strategies_current#TX-001 — Correcting a canonical splice-acceptor allele: RNA assay → ASO/editing choice|TX-001]] il denominatore che oggi non ha.**
 
 **Next action:** **nessuna rotta automatica** su `42721537` (nessun PMCID). Per `38902482`: un
 singolo tentativo di fetch, secondo la regola che la recuperabilità si stabilisce **solo**

@@ -78,7 +78,7 @@ microscopy at ~28 days"*.
 > of `lde/lde` rats"* and contains **no quantitative motor test of any kind** (32 locators
 > enumerated; the ataxic-gait observation sits in the seizure-observation section). `PREMISE:
 > LIGHT_MICROSCOPY_FLOOR`. **Counter-directional, same strain and same colony:**
-> [[paper_registry_current#PAPER 0NN]] (`PMID 32581702`) reports at **P1** that *"the development of
+> [[paper_registry_current#PAPER 020]] (`PMID 32581702`) reports at **P1** that *"the development of
 > cerebellum was delayed … as shown by reduced number of foliation"*. The two are **compatible as
 > measurements** — ages are disjoint (P1 vs ~28 d), and a delay at P1 need not leave *marked*
 > pathology at 28 d — which is exactly why the 28-day silence was never evidence of cerebellar
