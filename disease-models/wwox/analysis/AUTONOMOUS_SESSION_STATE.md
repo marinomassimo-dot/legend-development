@@ -138,9 +138,136 @@ defects.** Do not re-run without new dated literature.
 3. **Opening a WWOX MAVE would be a materially new research programme** — recorded as existing and
    costed in `FT-115`; **explicitly not proposed.**
 
+## 3b · The two results that came after the first checkpoint write
+
+### 🔴 The first therapeutic-class denominator this repository has ever had
+[`woree_therapeutic_class_census_20260921.md`](woree_therapeutic_class_census_20260921.md).
+`variant_triage_rescuability.md` set out the mechanism→lever logic with **two worked examples** and
+said the full-set version was *"planned, resources permitting"*. This is it, at the depth the
+evidence supports.
+
+| Class | Alleles | % of 88 | Patients served alone | % of 44 |
+|---|---:|---:|---:|---:|
+| GENE-REPLACEMENT | **63** | **71.6 %** | **25** | **56.8 %** |
+| PROTEIN-RESCUE *(conditional)* | 25 | 28.4 % | 6 | 13.6 % |
+| **RNA-RESCUE** | ⊆ the 63, not separable | — | 🔴 **0 demonstrated** | **0 %** |
+| READ-THROUGH | ⊆ the 63, not separable | — | 0 | 0 % |
+
+🔴 **The finding is the asymmetry, not the percentage.** Gene addition is **allele-agnostic**, so by
+mechanism its addressable share is 100 %. What 56.8 % measures is the **complement** — the share of
+reported patients for whom **no allele-specific lever is conceivable on either allele**. The two
+allele-specific levers are each bounded by a minority; the allele-agnostic one is bounded by none.
+
+- **The denominator is 44, not 50.** The cohort abstract gives only percentages; 56.8/29.5/13.6 has
+  a **unique exact integer solution over n ∈ [3,50]**: 25/13/6. Six individuals are carried as
+  UNASSIGNABLE, not dropped.
+- **`Q230P` is the most recurrent single WWOX allele of any class** — 8 patients, 6 families.
+- **Zero WWOX alleles have a demonstrated productive splice outcome.** Every measured outcome is
+  exon skipping toward frameshift. *"Splice-site"* licenses *"ASO-rescuable"* on **no row.**
+- 🔴 **`PMID 30356099` (Piard 2019), the largest WOREE series in the literature, was
+  `CORPUS-STUB-059` `not_processed` — and open access the whole time.** Now read and fingerprinted
+  (`files/fulltext/PMID30356099_PMC_MCPtext.txt`, sha256 `5dbb1c2f…`). **A stub→PAPER upgrade is
+  warranted and was NOT made** (the reader was read-only; it needs a commit candidate). **A receipt
+  is owed and not yet written.**
+- 🔴 **And that paper threatens PROTEIN-RESCUE**, with a claim LEGEND did not hold: *"Up to 10 % of
+  known disease-associated missense variants … alter pre-mRNA splicing"*, and that it is *"likely
+  that a fraction of predicted missense variants … results in loss of expression due to abnormal
+  splicing."* **An unknown fraction of the 25 missense alleles may not be missense alleles at all.**
+  Under investigation as of this write.
+- ⚠️ **Ascertainment:** severe-pole, consanguinity-enriched, parent-reported registry with
+  documented survival bias. **56.8 % is plausibly a floor, not a ceiling.**
+
+### The sensor question, and an assessment overturned by a sibling reader
+[`wwox_activity_sensor_census_20260921.md`](wwox_activity_sensor_census_20260921.md).
+**No single-cell fluorescence/FACS-readable WWOX activity reporter exists** — 24 queries, written
+out. The **nearest thing** is a cell-surface lectin stain: WWOX knockdown → N-/O-glycosylation
+defects → **increased plasma-membrane binding of HPA and GNL**, i.e. a WWOX-dependent epitope on the
+**outside of an intact, unfixed, sortable cell** — a *better* starting point than TSC2's fixed-cell
+pS6. ⚠️ `PMID 42523332` is a **preprint**, n = 30 cells, siRNA, RPE1, **zero replication**, and it is
+a side observation in a Golgi-tethering paper.
+
+🔴 **`F4` re-scored ⚠️ ADVERSE → 🟢 FAVOURABLE**, against a sibling Scientist's own file. The
+original premise conflated WWOX's **binding** role (positive, scaffolding) with its **regulatory**
+role (suppressive). Three independent axes are **gain-on-loss**: surface lectin binding ↑ on KD;
+Wnt/β-catenin output ↑ on KD (**bidirectionally validated** — *"enforced WWOX expression inhibited,
+and inhibition of endogenous WWOX expression stimulated"*); HIF1α glycolytic output ↑ in silenced
+fibroblasts. **The § 6.C gate conclusion still stands**; what is retired is the stronger claim that
+nothing in the literature points at what such a sensor might read.
+
+🔴 **The substrate question has more texture than the inherited one-liner.** A **2011 enzymology
+paper exists** (`PMID 21476439`, Bednarek group) reporting *"a course of enzymatic reactions for
+**selected steroid substrates**, and … related Km values"*. **LEGEND holds it as `CORPUS P306`,
+Tier C, `Claim links: none` — never read, never connected.** So *"no substrate has ever been
+demonstrated"* is **FALSE**; *"no **physiological** substrate has been identified"* is **TRUE**, and
+`TX-003`'s existing wording is already correct. It reduces the `F1` gap by **nothing**: a
+spectrophotometric cuvette assay on bacterial crude extract is the opposite of a consequence
+readable inside one intact cell.
+
+⚠️ **A WebSearch fabrication was caught, and only because the paper was read.** WebSearch asserted a
+2025 review says *"the true substrate(s) … remain to be identified"*. The body was fetched and
+counted: `substrate` = **0**. **The sentence is not in that paper.** Treat WebSearch output as a
+lead, never as a quotation.
+
+### Integrity, measured not assumed
+- **`trace_claim_foundation.py --all-drift`: 39 claims scanned, 1 finding — and it is already
+  adjudicated inside `CLAIM 005`'s own `Evidence boundary`**, where the rat paper is cited **to
+  refuse a transfer**, not to make one. Classified `CONTEXTUAL_DISSOCIATION`.
+  [`claim_foundation_spot_check_20260921.md`](claim_foundation_spot_check_20260921.md).
+- 🔴 **`CLAIM 001`'s safety anchor has never been read and cannot be read here.** `PAPER 003` /
+  `PMID 41442931` — vigabatrin-associated brain MRI abnormalities in two WWOX children — has **no
+  PMCID**, and `CLAIM 001` is 1/5 manifest-backed. The authors ask whether children with epilepsy
+  *"related to the **GABAergic pathway or delayed myelination**"* are more susceptible — **WOREE has
+  both.** ⚠️ That sentence is a **question**, not a finding, and must never be re-voiced as one.
+  **This is now the sharpest acquisition item in the model.**
+- `cross_claim_contradiction_census.py`: **46 candidate pairs, 38 not cross-linked.** Run and
+  **deliberately not pursued** — adjudicating them *is* the fenced-off broad reconciliation.
+
+### Release battery — read this before trusting a green
+**The battery went 1 red → 6 red, and 5 of the 6 were ours.** Appending receipts drifts every
+surface derived from the receipt ledger. `coverage_report`, `batch_queue`, `reading_state`,
+`session_self_eval` and `paper_packet` all assert the committed derived surface still matches the
+registries. **Regenerating them restored all five.** The order is forced and the tooling enforces
+it: `derived_inputs.py` **refuses** to derive while the ledger is uncommitted, so **receipts land
+first, surfaces rebuild against the committed tree** — Phase 4.7, arriving by another route.
+**The sixth, `test_surface_census.py`, is not ours and was red before**: its two failures assert
+`files/fulltext/` holds a structured deposit and the `PMID 17803050` Suzuki HTML, and `files/` is
+gitignored.
+
+🔴 **One self-inflicted process defect, recorded.** The publication gate returned
+`BLOCK_PUBLICATION` and a commit happened anyway, because the gate was chained to the commit with
+`&&` through a `grep` that **exits 0 whatever the verdict says**. That is the exact defect
+`safe_push.py` was built to prevent — its docstring names the 2026-09-09 chained-gate incident.
+**The control worked: nothing was pushed**, because `safe_push` runs the gate itself against the
+exact SHA. **A gate's verdict must decide by exit status, never by a printed line someone greps.**
+
+🔴 **And the gate is a floor, not a ceiling.** It caught one `REIDENTIFYING_VARIANT_COMBINATION` in
+the class census and **passed a worse one** — a row pairing the same two variants more explicitly
+*and* adding four population descriptors. Both were removed by hand. **A cohort has a provenance;
+an individual's allele pair does not get one.**
+
+---
+
 ## 4 · Queue state at this checkpoint
-`FT-112` retraction notice (status entry) · `FT-113` the prenatal/infant wave · `FT-114` the
-artefact-persistence gap · `FT-115` the MAVE methodology, six papers, retrievability UNTESTED on four.
+
+| Entry | What it holds |
+|---|---|
+| `FT-112` | The retraction notice for `23446842` — **status entry, not a reading debt**. The HOLD it would justify is already on `CORPUS-STUB-179`. |
+| `FT-113` | The prenatal/infant wave, five papers. **Closed**: W-1/W-2 gained nothing on all six axes; W-3/W-4/W-5 gained roadmap, stratification and uncertainty. |
+| `FT-114` | 🔴 **Four papers read end to end that can never be receipted** — their text lived only in a closed agent context and `files/` started empty. The rule earned: **a brief must order artefact persistence as step 1.** |
+| `FT-115` | The MAVE methodology, six papers. Two now read and receipted; **retrievability still UNTESTED on the other four** (`checked_sources:["pubmed"]` alone means untested, not blocked). |
+| `FT-116` | 🔴 **39 neuro-relevant corpus records never triaged at all** — no registry record of any kind, ~14 with PMCIDs. **Eight actionable rows.** The useful residue is *multi-gene epilepsy cohorts reporting WWOX patients*, not redundant case reports. |
+| `FT-117` | `42523332` read, receipted at **partial** depth, **debt declared**: `abstract`/`introduction`/`methods`/`limitations` `not_read`. Closes the ratchet honestly rather than by claiming a complete read nobody performed. |
+
+**Receipts: 188 → 195** across this continuation. 🔴 **One receipt still owed**: `PMID 30356099`
+(Piard 2019) was read and fingerprinted today and has **no receipt**, and its registry record is
+still `CORPUS-STUB-059` `not_processed`. The stub→PAPER upgrade needs a **commit candidate**; the
+receipt does not, and should be written next.
+
+### The measure that matters, and the one that misleads
+🔴 **"No receipt" is NOT "unprocessed."** A paper can be fully triaged, registered and `integrated`
+from its abstract with no full-text receipt — `PAPER 003` is exactly that, and it looked like a
+discovery twice today before the registry said otherwise. **Measure unprocessed work by registry
+`Status`; measure reading depth by receipt.** They answer different questions.
 
 ---
 ---
