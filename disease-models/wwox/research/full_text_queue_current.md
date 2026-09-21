@@ -5409,3 +5409,73 @@ span SDR** — che è l'unico motivo per cui interessa.
 **Priorità:** MEDIA. **Current status:** 🟨 debito dichiarato. **Next action:** nessuna rilettura
 automatica. Il debito si chiude solo se questo dato deve reggere qualcosa di canonico — e allora
 servono Methods e Introduction, non una rilettura integrale.
+
+---
+
+## FT-118 — `PMID 11058590` · il primario che decide **se il readout lectina sia un readout di WWOX**, e non è leggibile qui
+
+**Paper:** PMID 11058590 — Chang NS *et al.* 2000/2001, *"Hyaluronidase induction of a WW
+domain-containing oxidoreductase that enhances tumor necrosis factor cytotoxicity"*, *J Biol Chem*
+276:3361–70, [DOI](https://doi.org/10.1074/jbc.M007140200). 🔴 **Nessun PMCID** — registrato in
+[[chang_aldaz_contradiction_packet_20260920]] § come *"CHANG | no PMCID"*. **Non leggibile qui per
+alcuna via.**
+
+**Perché entra in coda adesso.** È citato da
+[[lectin_readout_domain_dependence_20260921]] per la frase che rende la disputa Aldaz/Chang
+**a monte** della domanda sul dominio, non a valle: *"WOX1 is mainly located in the mitochondria,
+and the mitochondrial targeting sequence was **mapped within the ADH domain**."*
+
+🔴 **La conseguenza, ed è la ragione per cui questa voce non è burocrazia.** Se Chang ha ragione,
+la sequenza di targeting mappata nello span SDR è **mitocondriale**: una lesione SDR predirebbe
+allora un difetto **mitocondriale**, non un difetto di glicosilazione golgiana. Il readout lectina
+— l'unico candidato `F1`+`F2` esistente — **non sarebbe affatto un readout dell'attività di WWOX**.
+Se ha ragione Aldaz (WWOX perinucleare/Golgi), il readout è coerente. **La disputa non decide
+SDR-vs-WW: decide se il saggio misuri WWOX.** E LEGEND la tiene **deliberatamente aperta**.
+
+⚠️ **Come va citato finché non è letto.** La frase sopra è **abstract/secondaria**, presa dal
+packet di contraddizione, non da una lettura. Il metodo dichiarato nel packet è **costrutti
+ectopici marcati + deletion mapping**, in fibroblasti murini L929 / COS-7 — cioè la stessa classe
+di metodo che Aldaz contesta a Chang, e che il packet registra come *"artefatto-esposta"*. **Nessun
+allele di malattia è mai stato testato da nessuno dei due laboratori sullo span SDR.**
+
+**Priorità:** ALTA come voce di stato, **BLOCCATA** come lettura. **Current status:** ⬜ acquisizione
+umana. **Next action:** nessuna via automatica. Se un umano può procurare il PDF, la domanda precisa
+da porgli è: **la sequenza di targeting mitocondriale è mappata su residui che una sostituzione
+missense sepolta dello span SDR perturberebbe, e il mapping è su proteina full-length o su
+frammenti di dominio?** Nient'altro serve da questo paper.
+
+---
+
+## FT-119 — 🔴 `DL-MECH-036` porta come **DATO** un risultato che **non esiste come esperimento leggibile**
+
+**Paper:** `NOT_AN_ARTICLE` — non esiste un articolo da accodare, e **questo è esattamente il punto**: la fonte è *"(Aldaz laboratory unpublished observations)"*, una parentetica dentro `PMID 24932569`. Il paper leggibile della catena è quella review, già letta di prima mano.
+
+**Il fatto.** `DL-MECH-036` (discovery ledger) registra che *"la disruzione del dominio SDR altera
+la localizzazione subcellulare (perinucleare/Golgi), e i residui catalitici S281A/Y293F/K297A sono
+necessari sia per l'attività enzimatica sia per la localizzazione perinucleare"*. Una lettura
+mirata ha tracciato la catena: **LEGEND → `PMID 24932569` (Aldaz 2014, *BBA Rev Cancer*, una
+REVIEW, letta di prima mano) → hop 2: *"(Aldaz laboratory unpublished observations)"*, senza dati
+mostrati.**
+
+🔴 **Non c'è primario. Non c'è figura, non c'è metodo, non c'è n. Non c'è nulla da recuperare.**
+Una query mirata (`WWOX AND SDR AND localization`) restituisce 4 paper, **nessuno dei quali è
+quello**. Il ledger si auto-etichetta correttamente *"DATO (citato in review, primari da
+recuperare)"* — ma **il primario non esiste**, e questa voce registra quella differenza, che è la
+differenza fra *«da recuperare»* e *«non recuperabile in linea di principio»*.
+
+**Perché è costato qualcosa.** Quel risultato era **l'intera base** dell'ipotesi che il fenotipo
+lectina fosse SDR-dipendente — cioè che il solo candidato sensore esistente potesse riportare su un
+allele missense dello span SDR. L'ipotesi è **morta su questo**, e il verdetto è `CANNOT-TELL`, non
+`SDR-DEPENDENT`. 🔴 **E LEGEND tiene, di prima mano e a `complete_fulltext_read`, un primario
+pubblicato (`PMID 24550385`, ricevuta `FTR-20260810-24550385-02`) in cui un meccanismo instradato
+su WW1 (ITCH/LPXY) cambia anch'esso la localizzazione di WWOX.** Il record del laboratorio
+**fornisce quindi una via WW-dipendente allo stesso effetto e non discrimina.**
+
+⚠️ **Difetto secondario trovato nella stessa catena:** la ricevuta `FTR-20260920-24932569-01` porta
+`verbatim_locators: null` e nomina un artefatto **non presente in questo checkout**; 4 dei om 11
+locator della lettura sono perciò di secondo ordine, e sono dichiarati tali.
+
+**Priorità:** ALTA come voce di stato. **Current status:** ⬜ permanente. **Next action: nessuna
+acquisizione.** Non ri-accodare, non ri-cercare: **l'oggetto non è pubblicato.** L'azione corretta
+è epistemica — qualunque uso futuro di `DL-MECH-036` deve portare la clausola *«unpublished
+observations, nessun primario»*, e **non può reggere da solo una conclusione sul dominio**.
