@@ -1,5 +1,113 @@
 # Autonomous session — continuation state
 
+> 🔴 **2026-09-21, SECOND autonomous run (operator in transit). READ THIS BLOCK FIRST.**
+> The sections below it are the *previous* run's state and remain accurate except where this
+> block says otherwise. **Not a handoff and not a stop.**
+
+## The second run in one screen
+
+**Branch:** `claude/wwox-woree-autonomous-scout-paqlty`, pushed. **Gates at every landing:** LINT
+PASS · publication gate PASS / 0 blocks · receipts **188** chained and tail-anchored · growth
+anchors PASS · `unread_premises` **0/0** (it went above zero four times and was driven back each
+time by declaring the debt, never by removing the citation).
+
+**Node selection.** A fresh scout rejected re-running the previous scout's proposed wave and chose
+two nodes on expected therapeutic information gain: `MECHANISM_WWOX_SDR_FUNCTION_AND_MISSENSE_RESCUE`
+(the blocker on `TX-003`) and `MECHANISM_DOWNSTREAM_WWOX_INDEPENDENT_RESCUE` (the only class with a
+short path for null/null). Both ran four waves; a third and fourth node followed from what they
+found. **Two Scientists, never more, as instructed.**
+
+### The six results that change something
+
+1. 🔴 **`TX-007` has a measured efficacy FLOOR and no measured CEILING.** Two doses 2.1× apart give
+   opposite survival outcomes while being `ns` on vector genomes and mRNA in **7 of 8** regional
+   comparisons — the minimum effective dose is bracketed **in capsids, not in biology**. Expression
+   at P300 is **regional, not scalar**: forebrain 5–11× wild type, **cerebellum 1.4× and 0.6×** —
+   the therapy under-doses the ataxia organ at every dose and timepoint. `WPRE`, removed as *"a
+   proactive risk-mitigation step"* against *"no overt toxicity was observed"* (**a non-observation,
+   not a safety result**), was the element that most boosted cerebellum. **No published experiment
+   asks whether excess WWOX harms a neuron** — the census returned two records, both now opened,
+   neither asks it — for a tumour suppressor whose induction is pro-apoptotic, delivered for life
+   by a vector scored `REVERS 0`, with **no tumour surveillance** in the dose study.
+   → `CC-20260921-TX007-CEILING-AND-DOSE-CONTROL-01` (proposes `SAFETY 1–2` → **1**).
+2. 🔴 **An assay of WWOX catalysis exists and was filed as background.** `PMID 21476439` (2011,
+   Lodz) measured steroid-substrate dehydrogenase activity with NAD⁺/NADP⁺ and **Km values** —
+   oxidation only, no reduction. It sat as `CORPUS P306`, Tier C, `background only`, unread.
+   **Orphaned, not overturned**: Bednarek's own 2025 retrospective has zero occurrences of
+   substrate/Km/cofactor/NAD/steroid/retinal and reframes the SDR as an interaction surface. A 2015
+   **review** proposes a *retinal* oxidoreductase acting **reversibly** — contradicting 2011 on the
+   one property an assay must choose. **An assay of function *per molecule* still exists nowhere,
+   for any allele.** → `CC-20260921-WWOX-ENZYMOLOGY-P306-01`.
+3. 🔴 **The developmental headline is a looking limit, not an onset.** Earliest mammalian
+   examination **E12.5** — already abnormal. Earliest human tissue **GW21** — already abnormal.
+   Holoprosencephaly and embryonic deaths on the record, never followed up. **Prenatal WWOX
+   interventions: zero.** Every portfolio therapy acts at or after spontaneous seizures; the
+   `P0–P5` window opens ~2 weeks after the first measured lesion.
+4. **Domain F closes with a negative and one live residue.** Every survival outlier is explained by
+   allele class or by ascertainment; **no discordant sibling pair exists**; WWOX has no paralogue;
+   **no modifier has ever been identified in any species.** 🔵 **The residue:** the allele-class
+   rule's mechanism is **not** residual protein — Q230P abolishes protein on western blot and
+   homozygous Q230P patients are the longest survivors in two cohorts. Same question as `TX-003`,
+   arriving from the opposite direction, now with a human survival statistic on it.
+5. **Ethosuximide is the only genotype-specific pharmacological result in the WWOX animal
+   literature** (`n.s.` in `+/+` and `+/−`, significant in `−/−`, 150 mg/kg i.p.) — and lithium, in
+   the same figure, suppressed **all three** genotypes including wild type. The floor-effect
+   objection dies on that same panel. **Bounded and not promoted:** the mouse discharge has never
+   been characterised (`Hz` = 0 occurrences in a body read in full), there is **no T-type calcium
+   evidence in WWOX deficiency at all**, the human picture is **not** absence epilepsy, and
+   ethosuximide has already been given to a WWOX patient with no sustained effect.
+6. **`TX-001`'s RNA question is closed on public data.** `GSE156243` has the right instrument and
+   the **wrong cells** (WT vs engineered KO — zero molecules of any patient splice allele); the 2026
+   dataset has the right cells, no established accession, and droplet chemistry that cannot reach a
+   mid-gene junction.
+
+### Structural findings — five instances of ONE pattern
+`CLAIM 032`'s unsourced hypomorph · `CORPUS P306`'s tier · seven "anchor" papers on no recorded
+reading · **16 of 34** locator counts wrong (**all understating**) · **29** papers read, receipted
+and never given a `PAPER` record.
+> 🔵 **Every LEGEND check verifies a record against itself. Nothing verifies that a thing which
+> exists HAS a record.** All five were found by hand, while chasing something else.
+
+### 🔴 Errors this run made, caught, and recorded
+Five first measurements were wrong because a **proxy** was measured instead of the thing (an
+identity index; `len()` on a dict; a record-id prefix). **Twice a DOI was reconstructed from memory
+instead of copied** — both caught before landing. **Two alleles were conflated in a delegate brief**
+— `c.517-2A>G` is exon 6, `c.1057-2A>G` is exon 9 and the **last** exon; opposite NMD regimes;
+Scientist A caught it. The publication gate **blocked a batch over a living researcher's e-mail**
+in a delegate's file — correctly; removed.
+
+### Candidates PROPOSED this run — none propagated, none a blocker
+`CC-20260921-CLAIM032-HYPOMORPH-PREMISE-01` · `-WWOX-ENZYMOLOGY-P306-01` ·
+`-TX007-CEILING-AND-DOSE-CONTROL-01` · `-PAPER025-IDENTITY-01` · `-SUPERSEDED-TEXT-POINTERS-01` ·
+`-LOCATOR-COUNT-REDERIVATION-01`. ⚠️ **`D-17` is RESERVED** (operator-deferred); these propose
+`D-18`–`D-23`. **Do not renumber into `D-17`.**
+
+### Harness changes landed at T0 (regression-backed, mutation-tested)
+`unread_gold.py` — both field spellings, a **catalysis** clause, a **substrate-class** clause, and a
+**receipt-ledger cross-check** (19 stale rows now annotated rather than silently re-dispatched);
+13 tests, 5 fail on revert. `locator_count_crosscheck.py` — new, routed, 10 tests, 3 fail on revert.
+
+### Where to resume
+1. **`FT-117` / `PMID 30853297`** — highest-value unread: carries a **measured** exon-6 skip **and**
+   is a `Q230P` primary; `CLAIM 018` (`consolidated baseline`) rests on it at abstract depth.
+2. **`FT-114` / `PMID 41442931`** — the only **safety** anchor standing on no reading. Ask for the
+   pre-vigabatrin MRI, the dose/duration, and any de-challenge.
+3. **`FT-118` / `PMID 25866966`** — the Angelman age-of-restoration design; windows are
+   **phenotype-specific within one gene**, which is the shape `TX-007`'s ceiling question needs.
+4. **`A11` / `PMID 21476439`** — three content-named asks (Km table; protein-prep Methods and
+   whether any catalytically-dead control; whether any retinoid was screened).
+5. The **29** read-but-unrecorded papers — `36828035` and `30356099` first; each resolves a defect
+   already written into a candidate.
+
+⚠️ **Run-ending condition:** a Scientist agent terminated on an **API session rate limit**, and the
+literature MCP dropped and returned. That is `HARD_RESOURCE_LIMIT` territory, **not** a scientific
+stop — every node above is still open and every route above is still live.
+
+---
+
+# Autonomous session — continuation state (FIRST run, 2026-09-21 — retained verbatim)
+
+
 **Updated:** 2026-09-21 · **Purpose:** recovery point. If this session is interrupted, a cold reader
 resumes from here. **Not a handoff and not a stop.**
 
