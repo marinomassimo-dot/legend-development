@@ -5534,3 +5534,77 @@ primary **and** carries a **measured** exon-6 skip for `c.517-2A>G`. Three of th
 questions — the detection floor, the survival arithmetic, and the only measured WWOX splice
 transcript — sit across these three papers, and none of the three has been read to receipt depth.
 
+
+---
+
+## FT-123 — The BTX-A51 identification, and the four records the only working pharmacological arm now rests on
+
+**Papers:** PMID 40665325 · PMID 42714273 · PMID 39140066 · PMID 41704356
+**Opened:** 2026-09-21 · **Actor:** Orchestrator, from Scientist B's A51 node
+**Full context:** [`a51_deconvolution_and_repurposing_20260921.md`](../analysis/a51_deconvolution_and_repurposing_20260921.md)
+
+**Why this entry exists.** `A51` is the **only pharmacological agent that has ever moved a phenotype
+in human WWOX-deficient neural tissue**. `TX-004` names it as a MYC/Wnt lever. These four records
+say it is neither.
+
+### `PMID 40665325` — 🟢 **verified in-act by the Orchestrator, independently of the delegate**
+
+Ball BJ, … **Ben-Neriah Y**, Stein EM. *"Phase I first-in-human dose escalation study of the oral
+casein kinase 1α and cyclin dependent kinase 7/9 inhibitor BTX A51 in advanced MDS and AML."*
+*J Hematol Oncol* 2025;**18**(1):73. DOI
+[10.1186/s13045-025-01724-z](https://doi.org/10.1186/s13045-025-01724-z) · `PMC12265154`.
+
+Verbatim: *"BTX A51, a first-in-class oral small molecule inhibitor of casein kinase 1α (CK1α) and
+cyclin-dependent kinase (CDK) 7 and 9, induces apoptosis of leukemic cells by **activating p53** and
+inhibiting expression of Mcl1."* · *"BTX A51 increased the expression of p53 and **reduced the
+expression of MCL1 and RNA polymerase II phosphorylation**"* · RP2D **21 mg three days/week**,
+31 patients, 1–42 mg, **median age 75**, nausea 67 % / emesis 63 % / hypokalemia 53 % / diarrhoea
+40 %, **two hepatic DLTs**, no treatment-related deaths, 3/31 CRi, `NCT04872166`.
+
+🔴 **`Yinon Ben-Neriah` is an author, at the Lautenberg Center, Hebrew University–Hadassah — the
+same institution as the Aqeilan laboratory**, and the organoid paper states its compound was
+*"provided by the Ben-Neriah group"*.
+
+⚠️ **The identification `A51 ≈ BTX-A51` remains `INFERENZA`, not fact.** It rests on four convergent
+points (compound name, institutional provenance, "multi-kinase" = three kinases, and Wnt+MYC in one
+agent being what CK1α+CDK9 produces). **One step closes it and was not takeable here:** reference 62
+of `PMID 42397075`, or the *"MYC inhibition"* subsection of its supplementary File009. `42397075`
+has **no PMC deposit**.
+
+### What it costs `TX-004` if the identification holds
+
+- 🔴 **`TX-004` names a target its only reagent does not have.** The Phase I PD readout —
+  **reduced RNA Pol II phosphorylation** — is a **CDK9 / transcriptional-elongation** effect, for
+  which MYC is the canonical *readout*, not the *target*.
+- 🔴 **The Wnt arm may point the wrong way.** CK1α is the **β-catenin priming kinase**, and
+  `PMID 42714273` (abstract level; virus-infected cells; one paper) reports **increased β-catenin
+  protein** under BTX-A51 — **the opposite direction from the one `TX-004` requires**. ⚠️ Protein
+  level ≠ transcriptional output. **FLAG, not refutation.** But either way: if the Wnt arm is null or
+  inverted, **the organoid rescue was carried by the CDK9 arm**, and `TX-004` is right for the wrong
+  reason, on a non-selective compound.
+- 🔵 **`BTX-A51` returns `total_count: 6` — the compound's entire published record — and `brain`,
+  `CNS` and `blood–brain barrier` appear in none of them.** Roman-type tokens, so the extractor is
+  not to blame: an **exhaustive informative zero**. **No paediatric exposure of any kind.**
+
+### 🔵 The framing inversion worth carrying more than the compound
+
+**Blood–brain-barrier penetration is not the gate.** The decisive next experiment is in
+**organoids, which have no barrier**. `XAV939`, `MYCi975` and `10058-F4` are ordinary research
+chemicals, dish-testable today. **The blocker is effort, not procurement**; CNS data matters only
+for the step after a positive result. 🔴 **The mechanistically exact arm — a selective CDK9
+inhibitor — was not censused, and that is the first gap a follow-up should close.**
+
+### Two-sided risk, recorded because the upside is the easy half
+
+MYC is top-upregulated **in radial glia — a proliferation compartment in a developing brain**. A51
+dropped `SOX2⁺` 60→33 % and raised `NEUN⁺` 6→18 %, but **`SATB2⁺` and `CTIP2⁺` did not move**
+(`ns`; `CTIP2⁺` still `****` below WT). **A reduction in progenitors that did not become neurons is
+also what "preventing normal corticogenesis" looks like.** And the compound **raises p53** — in a
+compartment this same literature shows carrying DNA damage and a compromised apoptotic checkpoint.
+`DL-THER-089`'s BLOCK-1 question stays open and now has a second reason.
+
+**Read depth:** `40665325` verified in-act by the Orchestrator at **abstract level**; the other three
+at abstract level by the delegate. **No receipt persisted for any of the four.** ⚠️ Declared by the
+delegate rather than smoothed: a `convert_article_ids` pass over all seven PMIDs returned
+`API_ERROR`; `42714273` returns no DOI from the converter but `10.1128/jvi.01042-26` from metadata.
+
