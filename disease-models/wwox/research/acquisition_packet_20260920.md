@@ -88,6 +88,34 @@ holds. Lower priority than A1–A3 because LEGEND already carries much of its co
 through `PAPER 063` and related records — **but that is exactly the dependency worth removing.**
 **Routes remaining:** OUP institutional access · ILL.
 
+🔴 **PRIORITY RAISED — 2026-09-21, and the reason is specific rather than general.** A census of the
+WWOX myelin/oligodendrocyte literature run today measured the field's shape: **seven papers carry a
+cell-level myelin or oligodendrocyte readout**, four of them retrievable here, and **this is the only
+one that could establish whether the myelin defect is OLIGODENDROCYTE-AUTONOMOUS.** Its title names
+both halves of the question — *epilepsy and myelin defects* — and it is the one paper in the set that
+has **no PMCID at all**, so no automated route can ever produce it.
+
+**Why that specific question is worth a human's hour.** `DL-MECH-071` records, from a complete read of
+the `lde` rat (Tochigi 2019), that the model *"non dimostra … autonomia gliale"* — and today's
+re-reading confirmed it by a second route: no conditional allele, no oligodendrocyte culture, no
+precursor marker, `NG2` and `PDGFR` absent. **A whole-animal germline null cannot separate
+oligodendrocyte failure from axonal failure**, and the distinction decides whether a myelin-directed
+intervention has a target at all. There is also a timing asymmetry nobody has explained: the
+MBP/CNP deficit is measurable from **PND 5**, the mature-oligodendrocyte (APC⁺) deficit only from
+**PND 15–21** — the myelin-protein deficit **precedes** the demonstrated oligodendrocyte deficit.
+
+**What to look for, specifically:** (1) any **conditional or cell-type-restricted** `Wwox`
+manipulation, and which promoter; (2) oligodendrocyte-lineage **time courses** with precursor markers
+(NG2, PDGFRα, Olig2), not just mature markers; (3) **electron microscopy and g-ratios** — the census
+found none anywhere in the reachable literature, so sheath geometry is unmeasured in this disease;
+(4) whether myelin is **never built or built and lost**, which needs a time course and which the
+reachable literature answers only for PND 5–21; (5) any **intervention arm** and the age at which it
+was given.
+
+⚠️ **One thing this paper is NOT needed for.** The two Aqeilan AAV9-SynI-WWOX intervention papers
+(`PMID 34747138`, `PMID 42422765`) are **already read here to complete depth** — four and seven ledger
+events respectively. Do not request them.
+
 ---
 
 ## A5 · `PMID 24369382` — Mallaret 2014 · **PMC deposit returns an empty body**
@@ -290,6 +318,10 @@ if one exists.
 
 ## Priority order for a human with one hour
 
+0. **A4** (`33914858`) — **raised 2026-09-21 to the top of the mechanistic half of this list.** It is
+   the only route to whether the myelin defect is oligodendrocyte-autonomous — the question that
+   decides whether the model's most time-sensitive lever has a target — and no automated route can
+   ever reach it.
 1. **A1** (`15126504`) — settles a live mechanistic question *and* surfaces a therapeutic lever.
 2. **A5** (`24369382`) — directly tests a standing commit candidate's central premise.
 3. **A3** (`15026124`) — resolves a four-way disagreement in the field's own restatements.

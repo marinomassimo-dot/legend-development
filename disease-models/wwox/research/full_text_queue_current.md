@@ -4604,6 +4604,48 @@ esiste ma il deposito è fuori dal subset open-access (`get_copyright_status` ve
 conta in nessuna delle due direzioni** e non può essere citato come corroborazione. Non ritentare le
 rotte automatiche: è materiale da acquisizione umana.
 
+**✅ CHIUSA — 2026-09-21: LETTA.** Artefatto `files/fulltext/PMID33134515_PMC_MCPtext.txt`
+(22 730 byte, sha256 `16fff9c8…d559b0c`); ricevuta `FTR-20260921-33134515-01`; audit
+[`adni_trappc6a_score_audit_20260921.md`](../analysis/adni_trappc6a_score_audit_20260921.md).
+**Verdetto: può pesare sulla questione dell'indipendenza del nodo, e pesa CONTRO.**
+
+- **Il gene è leggibile — non per simbolo, ma per NOME HGNC ESTESO in tondo**, che l'estrattore non
+  cancella: *"encodes trafficking protein particle complex 6A."* ⚠️ **Tecnica da riusare su questa
+  superficie.** Il simbolo `TRAPPC6A` compare **zero volte** nel corpo **e l'abstract dei metadati
+  PubMed non lo recupera** — è danneggiato allo stesso modo. **Quale delle sei caselle dei Results
+  occupi il gene NON è leggibile**, e non è stato ricostruito per posizione o plausibilità.
+- 🔴 **Nessun singolo gene porta il peso: solo il punteggio composito, e il punteggio CANCELLA
+  l'identità dei componenti per costruzione.** Metodi, verbatim: *"we polarized gene expression
+  levels … Thus, elevated risk from gene expression, **irrespective of the direction of risk**, could
+  be additively incorporated in the TRS."* Il test per-gene che esiste è dichiaratamente una
+  **verifica che il passo di selezione abbia funzionato**, e **metà dei geni target lo fallisce in
+  ADNI**. **Far parte di uno score polarizzato a sei geni non è evidenza genetica umana per quel
+  gene.**
+- **Non esegue alcun test di associazione genetica proprio:** è uno studio **trascrittomico su
+  sangue, caso-controllo**. La rivista lo classifica da sé: *"The study is rated **Class III** because
+  of the case control design and the risk of spectrum bias."* Effetti piccoli (OR 1,18 in scoperta;
+  **OR 1,06** senza il passo di colocalizzazione) e **un endpoint di imaging che non replica**:
+  *"There was no significant association between the TRS and the hippocampal volume in AddNeuroMed."*
+- **Gene-level dai Metodi, quindi nessuna presa sull'isoforma:** array di espressione, input eQTL a
+  livello di gene, e un collasso esplicito — *"if a gene contained more than 1 microarray probe, we
+  selected only the probe with the greatest variance."* `isoform`, `splice`, `exon` = **zero** (in
+  tondo, informativi).
+- ✅ **Nessuna divergenza abstract-vs-risultati: l'abstract è accurato** — e dopo sette paper in cui
+  non lo era, questo è a sua volta un reperto.
+- 🔴 **E il controllo di modo ribalta su di noi il modo di fallimento della giornata.** Gli autori
+  scrivono *"genetic variation of[it] **is reported to be** associated with nonverbal reasoning"* —
+  passivo, citato, non misurato — subito dopo aver concesso *"it is not clear how it affects the
+  pathogenesis of AD"*, e chiudono con *"Our findings thus represent **association not causality**."*
+  **La fonte non ha esagerato: è stata la lettura di Wave 2 a ri-vocalizzare la CITAZIONE della fonte
+  come REPERTO della fonte.** Quarta istanza odierna, e la più netta, perché qui l'errore è
+  interamente nostro.
+- ⚠️ **Osservazione strutturale, registrata come PROBABILE E NON VERIFICATA:** il fenotipo che questo
+  paper cita per il gene — *nonverbal reasoning* — **è il fenotipo della gamba 3** (`PMID 21766012`).
+  Il numero di riferimento in apice è stato distrutto dall'estrattore, quindi **il bersaglio della
+  citazione non è confermabile su questa superficie**. Se regge, **le gambe 2 e 3 non sono
+  indipendenti l'una dall'altra** e le «tre coorti» non sono mai state tre.
+- **La ritrattazione NON si riapre: il debito è estinto, la tesi non è resuscitata.**
+
 **🔴 RETTIFICA — 2026-09-21, ore 22: LA RIGA QUI SOPRA È SBAGLIATA. Il paper È RECUPERABILE.**
 La classificazione «fuori dal subset open-access» **non era stata misurata**: veniva da
 `get_copyright_status`, il cui `is_open_access: false` arrivava con `checked_sources: ["pubmed"]`,
