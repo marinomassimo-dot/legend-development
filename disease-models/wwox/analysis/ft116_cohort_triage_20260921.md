@@ -142,7 +142,7 @@ The variant table gives all four WWOX genotypes. Transcript as published in ever
 
 | Source | WWOX patients | Overlap that cannot be excluded |
 |---|---|---|
-| `37583270` | 4 | India, 6 centres, recruited Jan 2021–Jun 2022. The 2019 series (30356099) and the 2021 curation (33916893) both **predate** recruitment → those two are excludable. 🔴 **The 2025 registry (40875931, 50 individuals / 45 families) does not, and its artefact is gone with the container — overlap with it cannot be excluded.** |
+| `37583270` | 4 | India, 6 centres. 🔴 **CORRECTED — the window and the exclusion built on it were both wrong. See § 12.** The artefact reads *"tested between **January 2018** and June 2022"*; `January 2021` occurs **zero** times in it. So the 2019 series (`30356099`) and the 2021 curation (`33916893`) **do NOT predate the window** and are **no longer excludable on that ground**. Overlap with `40875931` was already unexcludable. **All three overlaps are now open.** |
 | `31618474` | 0–1 | 🔴 **High.** Burgess recruits from **UK (34), Italy (20), USA (18)**; the 2019 Piard/Kini series draws on **Oxford (UK), Bosisio Parini (Italy), Pittsburgh (USA)**. Burgess states *"42/55 previously reported"* among its solved cases, and **its own authors call `p.E17K` "recurrent"** — i.e. reported before. P93 may be the same person as Piard's E17K carrier. |
 | `32214227` · `30783266` · `33919646` | 0 each | n/a |
 | `35715422` | 0 (1 excluded, § 6.1) | n/a |
@@ -178,7 +178,12 @@ Census status today: **UNASSIGNABLE** (§ 2.4), *"not in a known functional doma
 🔴 **This does NOT resolve it, and may not even be a second patient.** (i) The overlap in § 5.3 is real and unexcluded. (ii) Even if P93 is a second patient, the trans allele is an **unnamed intronic deletion predicted to alter splicing**, so the genotype is as unmatched as Piard's was — the missense contribution still cannot be isolated. **`p.(Glu17Lys)` stays UNASSIGNABLE.** What it gains is *independent annotation as a recurrent allele by a second group*, which is the weakest form of corroboration and is recorded as such.
 
 ### 6.4 · 🔴 `c.517-3C>A` — new, and it lands on a canonical acceptor LEGEND already reasons about
-`c.517‐3c>A` is **non-canonical** (−3, not ±1/±2), exactly the ambiguity class of `c.605+5G>A` — *"a −3 change may be silent, leaky or null; nothing distinguishes them here"*. Its interest is positional: it sits **one nucleotide further into intron 5 than `c.517-2A>G`**, which is `CLAIM 018`, a **consolidated baseline**, the only recurrent splice allele for which characterised patient-derived material (two independent WOREE iPSC lines) already exists. **A minigene or patient-RNA assay built for `c.517-2A>G` would test `c.517-3C>A` at the same acceptor with the same construct.** That is a roadmap observation, not a claim; nobody has measured either.
+`c.517‐3c>A` is **non-canonical** (−3, not ±1/±2), the same ambiguity class as `c.605+5G>A`. 🔴 **The
+sentence that stood here misquoted its own source and the roadmap claim that followed it has been
+reversed — see § 12.** The quotation read *"a **−3** change may be silent, leaky or null"*; the class
+census actually says *"a **+5** change…"*, about a different allele. **A position was substituted
+inside quotation marks**, which is the defect class this repository polices hardest — the judgement
+happens to transfer, the quotation does not.
 
 ---
 
@@ -248,3 +253,61 @@ Systematic review, 2000–2020, 28 genes across 49 papers. **No new patients, no
 8. **`p.E17K` is recorded as a second annotation, not a second patient.** The overlap between Burgess (UK/Italy/USA) and the 2019 Piard series (Oxford/Bosisio Parini/Pittsburgh) is real and unexcluded.
 9. **Vigabatrin note, not a safety claim:** `37583270` P37 (compound het frameshift + nonsense) is recorded as *"FIHT, response with VGB"*. LEGEND holds `PAPER 003` (vigabatrin-associated brain-MRI abnormalities in two WWOX children, `41442931`, **abstract-level**) as a BLOCK-1 safety anchor. 🔴 **These two facts are recorded side by side and are NOT combined into any statement about risk or benefit.** Nothing here is medical advice.
 10. **Nothing written outside this file** except the four artefacts under `files/fulltext/`. No receipt, no manifest, no registry edit, no commit candidate, no commit, no push. `files/` is gitignored and these artefacts will not survive the container.
+
+
+---
+
+## 12 · 🔴 CORRECTIONS — three defects in this file, found by the follow-up it triggered
+
+Appended 2026-09-21 after [`c517_minus3_rna_rescue_handle_20260921.md`](c517_minus3_rna_rescue_handle_20260921.md),
+which was commissioned **because** of § 11's `c.517-3C>A` finding and which **reversed** it. All three
+are recorded here rather than silently edited.
+
+### 12.1 · A quotation had a position substituted inside its quotation marks
+§ 11 read: *"a **−3** change may be silent, leaky or null; nothing distinguishes them here"*, presented
+as a quotation. **The source sentence is about `c.605+5G>A` and says *"a **+5** change"*.** The
+substitution converted a statement about one allele into an apparent statement about another.
+
+**Why this is not a typo.** LEGEND's whole locator discipline exists to stop exactly this: a
+quotation that is faithful in every other word acquires a defect that **string-matching cannot
+catch**, because every matched token is genuine. It is the same family as the
+interrogative-to-declarative re-voicing already on record. **The underlying judgement does transfer —
+both −3 and +5 are non-canonical positions of indeterminate effect — which is precisely what makes
+the substitution easy to make and hard to see.**
+
+### 12.2 · The recruitment window was wrong, and the overlap exclusion rested on it
+§ 2 stated *"recruited Jan 2021–Jun 2022"*. **The artefact reads *"tested between January 2018 and
+June 2022"*, and `January 2021` occurs zero times in it** (roman-class, admissible). Re-verified
+independently against `files/fulltext/PMID37583270_PMC_MCPtext.txt`.
+
+🔴 **The consequence is not bookkeeping.** The later window was used to argue that `30356099` (2019)
+and `33916893` (2021) **predate** recruitment and are therefore excludable from overlap. **With a
+2018 start that argument fails.** Overlap with `40875931` was already unexcludable. **So all three
+overlaps are open, and every patient count in this file inherits that** — the "5 new alleles" and the
+`c.790C>T` "2–3 patients" are **upper bounds under wider uncertainty than was stated**, not firm
+counts.
+
+### 12.3 · The roadmap claim is reversed, and the reversal is arithmetic
+§ 11 asserted that an assay built for `c.517-2A>G` *"would test `c.517-3C>A` at the same acceptor with
+the same construct"*, and this file scored **experimental roadmap = YES** on it. **Both are withdrawn.**
+- **The TX-001 packet's assay reads a different junction entirely** — its primers are **exon 8 / exon 9**
+  for the intron-8 acceptor, not exon 5 / exon 6. New primers, new normaliser, new expected-product
+  table. **The method transfers; the reagents do not.**
+- **No cell line carries `c.517-3C>A`.** The `c.517-2A>G` iPSC lines are two independent *families*
+  from **one laboratory**, their genotypes are a **pixel attestation** unmatchable by construction, the
+  artefact is not in this container, and **no deposition, catalogue or availability statement exists
+  anywhere in LEGEND** — obtainability is **UNKNOWN, not established**.
+- 🔴 **And the arithmetic closes it:** exon 6 = `c.517–605` = **89 nt**, and **89 mod 3 = 2**. If the
+  −3 allele does what the −2 allele is *reported* to do — exon-6 skipping — **the product is
+  frameshifted and non-productive.** That is `GENE-REPLACEMENT`, and **RNA-RESCUE stays empty.**
+
+**What survives, and it is smaller and true:** at −3 the acceptor `AG` is **intact**, so a *leaky*
+partial-correct-splicing outcome is **mechanistically permitted** rather than excluded — which a −2
+allele forbids outright. **Nobody has measured it, in this or any WWOX allele.** The allele is
+**UNASSIGNABLE**, explicitly **not** an RNA-RESCUE member.
+
+### 12.4 · What this episode is an instance of
+**A triage that flags something as promising should not also score it as a roadmap gain.** § 11 did
+both in one paragraph, and the second part did not survive one day of scrutiny by a reader who
+checked the reagents and did the modular arithmetic. **The flag was right; the score was not.**
+Flagging is cheap and correct. Scoring requires the check.
