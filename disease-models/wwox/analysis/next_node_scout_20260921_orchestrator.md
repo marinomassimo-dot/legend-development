@@ -1,5 +1,55 @@
 # Fresh scientist/node scout — 2026-09-21, autonomous continuation (Orchestrator)
 
+> ## 🔴 CORRECTION, appended the same day, against this file and by its own author
+>
+> **Two statements in § 4 were wrong, and the reading of the papers is what found them.** Both are
+> left standing below with this banner rather than silently edited, because the way they were
+> produced is more instructive than the rows themselves.
+>
+> **(1) The W-2 row reproduced an abstract and called it a finding — the exact defect this scout
+> told its Scientists to hunt.** The row reads *"A **coding-region** WWOX variant (`rs7184417`,
+> OR 6.20, p = 2.22E-06)"*. `PMID 41378749`'s **own Results** name a **different variant**,
+> `rs28688166`, and place the three chr16 variants **"within the 8th intron of"** WWOX. The rsID
+> `rs7184417` occurs **zero** times in the body — and rsIDs are unitalicised, so that zero is
+> admissible, not an extractor artefact. The row's hedge *"nominally"* was correct and survives;
+> the location and the identifier did not. **The row flagged this for scrutiny and then asserted it
+> anyway. Flagging a thing is not checking it.**
+> *(That paper carries **three** independent abstract-vs-Results discrepancies — rsID, coding-vs-intron,
+> and n = 91 vs 89 cases. See [`human_prenatal_infant_wave1_20260921.md`](human_prenatal_infant_wave1_20260921.md).)*
+>
+> **(2) "NOT HELD — no record in any surface" is false about the repository**, for W-1 and W-2 both.
+> It is true about *records and receipts* and false about *the laboratory*. Verified by a plain
+> sweep after the fact:
+> - `28763065` is **already tabulated in
+>   [`wwox_myelin_oligodendrocyte_census_20260921.md`](wwox_myelin_oligodendrocyte_census_20260921.md)
+>   L131, with the hedge intact** — *"**neared** genome-wide significance … Common variant, not WWOX
+>   deficiency"* — under a verdict that these papers *"are the class of evidence the model already
+>   had."*
+> - `41378749` is **already `READ_NEXT` under `DL-MECH-060`** in `discovery_ledger_current.md` L1487,
+>   with the caveat pre-written, and its folate lead is **already parked at 3/15 as
+>   `HYP-20260705-07`**.
+> - Both are in `batch_queue.md`.
+>
+> 🔴 **How the error was made, stated so it is not repeated.** `registry_records.py get --pmid`
+> answers *"is there a RECORD KEYED to this PMID"*. It reads a fixed surface list that **excludes
+> `disease-models/wwox/analysis/` and `therapeutic_hypotheses_ledger_current.md`**, it reads
+> **committed** state only, and it returns `NO RECORD MATCHED` for a PMID sitting inside the body of
+> a record on a surface it *does* read. **It printed its own warning — *"This is not evidence that
+> the laboratory does not know this paper"* — and this scout converted that warning into a
+> negative.** The tool behaved correctly; the reader did not.
+>
+> **Method rule earned: `NO RECORD MATCHED` ≠ `NOT HELD`.** A plain
+> `grep -rn "<PMID>" --include=*.md disease-models/` costs one command and caught all five hits.
+> This is the same family as the standing rule *"a delegate's census describes the field, never this
+> repository"* — and here the census was mine, about my own repository.
+>
+> **What it changes in the selection.** § 3's criterion 2 — *"three of five items held by LEGEND in
+> no form whatsoever"* — **does not hold as stated** and should read *"held as un-deep-dived
+> placeholders or as ledger mentions, never read"*. The node's **life-stage** argument (criterion 1)
+> is untouched and remains the reason it won. But the honest post-hoc verdict on Wave 1's first two
+> papers is that they **corroborated what the model already had, and added nothing** — see the
+> INFORMATION GAIN section of the wave file, which answers **NO on all six axes.**
+
 **Mode:** READ-ONLY census. No canonical file edited, no claim created, no therapy proposed.
 **Method:** PubMed (the only literature route open in this checkout — see § 0), cross-checked against
 LEGEND by `registry_records.py get --pmid` for **every** candidate before it was called new.
