@@ -270,6 +270,93 @@ an individual's allele pair does not get one.**
 
 ---
 
+## 3c · The therapeutic result that matters most, and three live files corrected
+
+### 🔴 `TX-007`'s window caveat is half a finding and half an inference — and the authors say which half
+[`tx007_window_and_ceiling_20260921.md`](tx007_window_and_ceiling_20260921.md). This matters because
+the class census put **56.8 % of classifiable individuals in null/null**, whose only lever is
+allele-agnostic gene addition. For that majority, the ceiling of `TX-007` is the whole question.
+
+- ✅ **Measured half:** a neuron-restricted vector leaves radial glia transcriptionally and
+  cell-cycle-wise untouched — **once**, in human organoids (`PMID 42397075`).
+- 🔴 **Unmeasured half:** *"the older the patient, the smaller the reversible fraction"* has **no
+  measurement behind it in any species.**
+- 🔴 **No WWOX gene-therapy experiment in any living animal treats later than mouse P5.** One
+  experiment varies age at all and spans **four days** (P1/P2/P3/P5; no P0, no P4; P300 survival for
+  two arms; histology for one).
+- 🔴 **And the authors state the reason themselves** — later dosing *"was not explored, as Wwox-null
+  mice rapidly deteriorate"*, and the inability to assess later intervention *"likely reflects …
+  model-specific biological constraints and technical limitations, **rather than a definitive
+  boundary for therapeutic responsiveness**."* **The window is a property of a mouse that dies at
+  3–4 weeks, not a demonstrated ceiling on the therapy.**
+- **Where the ceiling IS measured it is high:** near-WT survival to 300 days (`p = 0.78`), SWD rate
+  back to WT-indistinguishable, growth/glycaemia/fertility restored.
+- **Closure is never measured, for any endpoint.** Onsets differ — prenatal migration vs postnatal
+  and long myelination — and that is load-bearing. **But onset is not a deadline**, and the endpoint
+  with *no* structural deadline (excitability) is exactly the one nobody tested late.
+- **Never tested ≠ shown negative:** no treated animal was ever birth-dated or layer-stained.
+  *"Prenatal defect"* does not imply *"unhelpable"* without a separate irreversibility argument
+  nobody has made.
+- ⚠️ All 40 locators re-matched 40/40, but **every one is second-order** (dossier- or
+  manifest-derived) — `files/` holds none of the gene-therapy artefacts in this container.
+
+### Three live files carried something false, all corrected
+1. 🔴 **The myelin census's *"no g-ratio and no electron microscopy exist anywhere in this
+   literature"*.** § 1 measured that correctly **in the paper it read**; an orchestrator note widened
+   it to the field. **`PMID 34747138` holds both, first-hand.** And the truth is better than the
+   zero: **g-ratio normalises under gene therapy while unmyelinated-axon counts stay significantly
+   worse** — *thickness recovers, how many axons get myelinated at all does not* — with the caveat
+   that the brackets run WT-vs-KO and KO-vs-rescued, **never WT-vs-rescued, so the residual gap is
+   untested, not absent.**
+2. 🔴 **`mechanism_intervention_map.md` R-01 described a construct that is not the clinical one** —
+   it listed a **WPRE element**, which the 2026 clinical-track vector **removed deliberately**
+   (*"a proactive risk-mitigation step to improve the predictability and control of neuronal WWOX
+   expression"*). Not cosmetic: efficacy was recovered by **~6-fold more dose** without it, so dose
+   expectations read off that row were out by that factor.
+3. **`FT-116`'s *"mai guardati"*** was false for two of eight — see § 3d.
+
+### `FT-116` triage — **MARGINALLY**, and one item is the session's most concrete opening
+[`ft116_cohort_triage_20260921.md`](ft116_cohort_triage_20260921.md). Seven of eight are gene-list
+mentions or pointers. The eighth (`37583270`, 4 WWOX children, India) carries a complete per-patient
+variant table: **five new alleles, all null-like — not one new missense**, so the 19-allele missense
+enumeration is numerically unchanged and the null-majority finding is reinforced.
+- 🔴 **`c.517-3C>A`** — one nucleotide further into intron 5 than **`c.517-2A>G`** (`CLAIM 018`,
+  consolidated baseline, the allele with existing patient-derived iPSC lines). Under investigation.
+- **`c.790C>T` p.(Arg264Ter)** → **2–3 patients** (overlap with the 2025 registry cannot be
+  excluded); would be the only nonsense allele reaching 3, and a **READ-THROUGH candidate** — the
+  lever class with zero demonstrated members.
+- **`35715422` correctly EXCLUDED**: likely-pathogenic + VUS alongside a pathogenic *ATP7A*
+  frameshift with a Menkes phenotype. Not a WOREE patient.
+
+## 3d · 🔴 The provenance join needs a FOURTH surface, and a fifth error mode appeared
+
+[`staging_dossier_audit_20260921.md`](staging_dossier_audit_20260921.md). **Nine discovery-ledger
+entries declare readings *"letti integralmente"* and cite dossiers under `research/staging/` — a
+directory that does not exist here. Six of the nine have no receipt and no manifest either**, and two
+of those six are **`promoted-to-CC`**.
+
+⚠️ **This is NOT a claim the readings did not happen.** `reading_state.py`'s own header says a count
+is true of one checkout; `staging/` is the shape of an uncommitted working directory, and the public
+edition excludes a private overlay by design. **The audit demotes nothing and proposes no re-reading
+campaign** — the one such reading independently redone today (`37974179`) **confirmed** its
+declaration, 19/19 locators. It asks the Operator one cheap question instead: *does `research/staging/`
+exist in the private or unmerged edition?*
+
+**The join, with the fourth surface added:**
+
+| Surface | What it cannot tell you |
+|---|---|
+| `registry_records.py` | `NO RECORD MATCHED` ≠ **not held** |
+| Registry `Status` | `not_processed` ≠ **not read** |
+| Receipt ledger | "no receipt" ≠ **unprocessed** |
+| 🔴 **Discovery ledger** | **the other three are blind to it** — six readings are declared only here |
+
+**And a fifth, different error mode:** `37095367` is filed in the ledger as *"del corrigendum"*. It
+is **not** a corrigendum — it is the primary WGS article. Its `batch_queue` row carries **`✎ corrected`**,
+meaning *has a correction*; it was read as *is a correction*. `32214227` and `31618474` carry the same
+marker. 🔴 **A paper filed as an administrative corrigendum is a paper nobody will read** — and this
+one reports a novel WWOX variant from a population LEGEND has zero representation from.
+
 ## 4 · Queue state at this checkpoint
 
 | Entry | What it holds |
