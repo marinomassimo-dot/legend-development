@@ -31,10 +31,30 @@
 > **seven**, ending in `FTR-20260814-42422765-06` (complete). That lead is **closed, not open**, and
 > nothing in § 1 should be used to reopen it.
 >
-> ✅ **What survives as genuinely open is `PMID 33914858` (Repudi 2021, *Brain*) — zero ledger events,
-> no PMCID, unreachable by any automated route here.** It is the **only** paper that could speak to
-> oligodendrocyte autonomy, which `DL-MECH-071` records as undemonstrated. It is already packet item
-> **`A4`**, and its priority rises on that basis.
+> 🔴 **AND THE VERDICT LINE OVERSTATES THE FIELD, THOUGH NOT THE PAPER — third correction of this
+> kind today.** This file's verdict says the paper that could separate oligodendrocyte-autonomous
+> failure from axonal failure is unreachable, **as though the question were open. It is not.**
+> `DL-MECH-031` records, and `HYP-20260709-07` was **parked** on it in July, that Repudi 2021's
+> **conditional alleles** settle it: deleting `Wwox` in **neurons** (Synapsin-Cre) or progenitors
+> (Nestin-Cre) **recapitulates the whole phenotype including the myelin defects**, while deleting it
+> in **oligodendrocytes** (Olig2-Cre) or **astrocytes** (GFAP-Cre) produces no evident abnormality.
+> **The hypomyelination is secondary to the neuron.** § 2's conclusion — that *this* germline null
+> cannot address autonomy — is correct and stays; **a limit of one model is not a gap in the field.**
+>
+> ✅ **What is genuinely open, and what `A4` is now for:** LEGEND holds that conditional-genetics
+> result **only second-hand**, through Obeid 2026's summary. A result that parked a therapeutic
+> hypothesis, resting on another paper's description of a third paper, is a standing `D-15` exposure —
+> so `PMID 33914858` is worth acquiring **to verify the attribution, not to learn the answer**. Two
+> real residues travel with it: the AAV oligodendrocyte arm is **confounded by the authors' own
+> admission** (*"may reflect the limited oligodendrocyte tropism of AAV9 … rather than a lack of
+> relevance"*), so a partial oligodendrocyte contribution is not excluded; and **no g-ratio and no
+> electron microscopy exist anywhere in this literature**, which § 1 measured independently and
+> `DL-MECH-031` had already flagged as its own methodological limit.
+>
+> ⚠️ **The pattern, stated once because it recurred three times today: a delegate's census describes
+> THE FIELD, never THIS REPOSITORY.** Before acting on any "nobody has done X", check the receipt
+> ledger *and* the discovery and therapeutic ledgers. Each time I skipped that today it cost a
+> correction.
 >
 > **My briefing defect, recorded as mine.** The task told the agent to pick the best readable primary
 > and did **not** tell it to check the receipt ledger for the PMID it chose. The rule *"check the

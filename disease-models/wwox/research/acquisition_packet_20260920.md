@@ -95,17 +95,37 @@ one that could establish whether the myelin defect is OLIGODENDROCYTE-AUTONOMOUS
 both halves of the question — *epilepsy and myelin defects* — and it is the one paper in the set that
 has **no PMCID at all**, so no automated route can ever produce it.
 
-**Why that specific question is worth a human's hour.** `DL-MECH-071` records, from a complete read of
-the `lde` rat (Tochigi 2019), that the model *"non dimostra … autonomia gliale"* — and today's
-re-reading confirmed it by a second route: no conditional allele, no oligodendrocyte culture, no
-precursor marker, `NG2` and `PDGFR` absent. **A whole-animal germline null cannot separate
-oligodendrocyte failure from axonal failure**, and the distinction decides whether a myelin-directed
-intervention has a target at all. There is also a timing asymmetry nobody has explained: the
-MBP/CNP deficit is measurable from **PND 5**, the mature-oligodendrocyte (APC⁺) deficit only from
-**PND 15–21** — the myelin-protein deficit **precedes** the demonstrated oligodendrocyte deficit.
+🔴 **CORRECTION, same hour, against the paragraph I had just written here.** I raised this entry
+saying the autonomy question was unanswered. **It is answered, and this repository already holds the
+answer** — in `DL-MECH-031` and in `HYP-20260709-07`, which was **parked** on exactly this basis on
+2026-07-09. Repudi 2021's **conditional alleles** settle it: deleting `Wwox` in **neurons**
+(Synapsin-Cre) or progenitors (Nestin-Cre) **recapitulates the whole phenotype including the myelin
+defects**, while deleting it in **oligodendrocytes** (Olig2-Cre) or astrocytes (GFAP-Cre) produces
+no evident abnormality. The hypomyelination is **secondary to the neuron**, not oligodendrocyte-
+autonomous. What `DL-MECH-071` says is narrower and remains true: *the* lde *rat* does not demonstrate
+glial autonomy — a whole-animal germline null cannot — and today's re-read confirmed that by a second
+route (no conditional, no culture, no precursor marker). **A limit of one model is not a gap in the
+field, and I conflated the two.**
 
-**What to look for, specifically:** (1) any **conditional or cell-type-restricted** `Wwox`
-manipulation, and which promoter; (2) oligodendrocyte-lineage **time courses** with precursor markers
+**So the reason to acquire this paper is the one the entry originally gave, and it is a good one:
+LEGEND holds that conditional-genetics result ONLY SECOND-HAND**, through Obeid 2026's summary of it.
+A result this load-bearing — it is what parked a therapeutic hypothesis — resting on another paper's
+description of a third paper is a standing `D-15` exposure. **Read it to verify the attribution, not
+to learn the answer.**
+
+**Two genuinely open things it could also settle.** (1) The AAV arm that appears to agree with the
+genetics is **confounded and the authors say so** — the oligodendrocyte-directed vector's failure
+*"may reflect the limited oligodendrocyte tropism of AAV9 following neonatal ICV administration
+rather than a lack of relevance"* — so a partial oligodendrocyte contribution is **not excluded**,
+and only the conditional genetics carries the claim. (2) A timing asymmetry nobody has explained: in
+the `lde` rat the MBP/CNP deficit is measurable from **PND 5** while the mature-oligodendrocyte
+(APC⁺) deficit appears only at **PND 15–21** — the myelin-protein deficit **precedes** the
+demonstrated oligodendrocyte deficit, which is consistent with the neuron-first reading but has never
+been tested as such.
+
+**What to look for, specifically:** (1) the **conditional alleles verbatim** — which Cre lines, what
+was and was not seen in each, with the myelin readouts, so the second-hand attribution can be
+retired; (2) oligodendrocyte-lineage **time courses** with precursor markers
 (NG2, PDGFRα, Olig2), not just mature markers; (3) **electron microscopy and g-ratios** — the census
 found none anywhere in the reachable literature, so sheath geometry is unmeasured in this disease;
 (4) whether myelin is **never built or built and lost**, which needs a time course and which the
@@ -318,10 +338,10 @@ if one exists.
 
 ## Priority order for a human with one hour
 
-0. **A4** (`33914858`) — **raised 2026-09-21 to the top of the mechanistic half of this list.** It is
-   the only route to whether the myelin defect is oligodendrocyte-autonomous — the question that
-   decides whether the model's most time-sensitive lever has a target — and no automated route can
-   ever reach it.
+0. **A4** (`33914858`) — **raised 2026-09-21 to the top of the mechanistic half of this list**, on a
+   corrected rationale: it is not that the autonomy question is open — it is settled, and it parked
+   a therapeutic hypothesis — but that **LEGEND holds the settling result only second-hand**, through
+   another paper's summary. No automated route can ever reach it.
 1. **A1** (`15126504`) — settles a live mechanistic question *and* surfaces a therapeutic lever.
 2. **A5** (`24369382`) — directly tests a standing commit candidate's central premise.
 3. **A3** (`15026124`) — resolves a four-way disagreement in the field's own restatements.

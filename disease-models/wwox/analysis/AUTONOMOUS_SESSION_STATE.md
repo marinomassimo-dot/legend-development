@@ -123,6 +123,15 @@ never quote the phrase.**
   `.gitignore` and the artefact was never under version control. The earlier reading stands — its
   quotations are all present in the current artefact and were re-verified — but its fingerprint no
   longer binds to a file. Declared in `FTR-20260921-25650666-02` rather than quietly re-anchored.
+- 🔴 **A DELEGATE'S CENSUS DESCRIBES THE FIELD, NEVER THIS REPOSITORY — and this cost three
+  corrections in one day.** A census that says *"nobody has done X"* or *"paper Y is unread"* has
+  measured PubMed, not LEGEND. **Before acting on any such statement, check the receipt ledger AND
+  the discovery and therapeutic ledgers.** Today: `FT-102` was re-read a day after it had been read
+  (stale queue entry); the two AAV9-SynI-WWOX papers were reported unread while carrying **four and
+  seven** ledger events; and the oligodendrocyte-autonomy question was reported open while
+  `DL-MECH-031` had settled it and `HYP-20260709-07` had been **parked** on it in July. **When a
+  delegate chooses which paper to read, the ledger check must be written into the brief** — the
+  Orchestrator cannot pre-check a paper it has not yet named.
 - 🔴 **`is_open_access: false` is often a NOT-CHECKED reading, not a paywall.** Look at
   `checked_sources`: if it is `["pubmed"]` alone, PMC was never consulted and the flag means
   nothing. **A PMCID existing is not evidence of retrievability either** (`PMC4935222` and
