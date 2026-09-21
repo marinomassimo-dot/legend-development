@@ -663,3 +663,106 @@ to be done against prose that names a source *in words*, and why `FT-111` exists
   repository already holds.
 - **Next surgical micro-step:** the `session_self_eval.py` wiring above, with the 29-artefact run as
   its fixture.
+
+---
+
+## 2026-09-21 — second autonomous run · Orchestrator
+
+**Gap the session actually hit, stated as the session hit it, not as a survey.** This run did not
+go looking for capabilities. It found two by being obstructed by their absence, which is the only
+kind of capability finding this log should trust.
+
+### Gap 1 — the tool that finds unread gold could not read the registry
+
+`unread_gold.py` exists to prevent one failure (`FM-011`): a paper already on the registry,
+correctly triaged, never read, while the model reconstructs its result from scratch. It printed
+*"No unread Tier-A / Relevance-HIGH CORPUS"*, which reads as an all-clear. **It was a parse
+failure.** Its `tier` selector looked for `**Tier (PHASE 1):**` where the registry writes
+`**Tier (FASE 1):**` — **187 records, zero in English**. Its `relevance` selector looked for
+`**Relevance:**` where the registry writes `**clinical relevance:**` — **254 records, zero of the
+short form**. Both matched **nothing**.
+
+🔵 **This is the repository's own §3 rule turned on its own instrument: a zero from a parser is not
+evidence of absence until the parser is shown to be reading the document.** The same sentence was
+already written down about PDF extractors and about MCP body text. It had never been pointed at a
+LEGEND script.
+
+Parsing correctly is still not enough. Of **164** unread corpus placeholders, **155 are `C`/`LOW`
+and none is `A`/`HIGH`** — the FASE-1 triage gave one window one label, so a **tier-gated** filter
+can only surface what triage already ranked, which is the one case needing no tool.
+
+And the mechanism lens had a gap in the *question*: it hunted the proteostasis half of the missense
+problem (*is the protein there?*) with no term for the other half (*does the protein work?*) — no
+`enzym`, `substrate`, `catalytic`, `oxidoreduct`, `dehydrogenas`, `Km`, `cofactor`, `NAD`. Its one
+"function" group was `binding|interact|partner|rescue`, **the interaction proxies the SDR-readout
+assessment had already rejected as not measuring SDR function. The lens encoded the same blind spot
+the science had.**
+
+**What it was hiding:** `PMID 21476439`, the only published measurement of WWOX catalysis, filed as
+`CORPUS P306`, Tier C, `background only`, unread since April.
+
+**A second layer, found the same day by a delegate against itself:** a census run *with* catalysis
+terms but *without* retinoid vocabulary still concluded the substrate question was "steroids or
+nothing" — because its own query terms had no retinoid in them. ⇒ a substrate-class clause
+(`steroid|retinoid|retinal|retinol|fatty acid|lipid|prostagland|xenobiotic`) was added for the same
+reason one level up. **A lens that names only the class it already suspects will keep confirming
+it.**
+
+**Also fixed:** the tool chose what to read next from the registry's `Status` field alone, never
+consulting the reading ledger. **19 of 164 placeholders advertised as "never deep-dived" carry
+complete- or partial-read receipts.** They are now **annotated, not hidden** — a stale row is a
+finding, and dropping it silently would hide one. An unreadable ledger annotates nothing, because
+an absent ledger and an absent receipt are different facts.
+
+**Persistence:** `framework/scripts/test_unread_gold.py`, **13 tests, mutation-tested — 5 fail when
+the fixes are reverted.** One asserts against the **live registry** rather than a fixture, because
+a fixture test would have passed throughout the period this was broken.
+
+### Gap 2 — a number in one canonical file had stopped describing another file
+
+A delegate checked four registry records against their manifests and found three wrong. The full
+sweep found **16 of 34**, and the direction is the finding: **every one understates**, deltas
+**+2 to +27**. Random transcription error gives both directions; one direction means a systematic
+cause — and rules out the frightening reading. The registry is **not** claiming evidence it lacks;
+it is **failing to claim evidence it has**.
+
+🔴 **Two of the wrong records carry, in their own text, the sentence saying their declaration was
+"reconciled from the ledger" by a named batch.** That batch left both counts wrong, because it
+**restated** the declaration instead of **re-deriving** it. That is the whole argument for shipping
+the derivation.
+
+**Shipped:** `framework/scripts/locator_count_crosscheck.py` — read-only, routed in
+`framework/scripts/README.md`, asking **one** question (*does `N` still equal
+`len(manifest["verbatim_locators"]["entries"])`?*) and explicitly refusing the neighbouring ones,
+which three other tools already own. **It reports and never edits**, because a tool that silently
+corrected a canonical file would become a writer of canonical state — which is what the finding
+argues against. `test_locator_count_crosscheck.py`, **10 tests, mutation-tested — 3 fail on
+revert**, pinning the dict-versus-list trap, **anti-vacuity** (a scan finding nothing must FAIL,
+since a guard with an empty population agrees with nothing), and the **direction** rule.
+
+### The capability gap this run could NOT close, and did not pretend to
+
+**Five structural findings, one shape:** `CLAIM 032`'s unsourced hypomorph · `CORPUS P306`'s tier ·
+seven "anchor" papers on no recorded reading · the sixteen locator counts · **29** papers read,
+receipted, and never given a `PAPER` record.
+
+> 🔵 **Every LEGEND check verifies a record against itself. Nothing verifies that a thing which
+> exists HAS a record.** The ratchets measure honesty *within* a record and are structurally blind
+> to the space *outside* one. All five were found **by hand, while chasing something else.**
+
+**No tool is proposed for it, deliberately.** Three instruments already have gaps between them
+(harvest ↔ registry ↔ receipt ledger); a fourth would have gaps with all three. The operator's §26
+says correct the science and reuse existing mechanism, and the honest answer here is that this is a
+**one-time repair plus a reading habit**, not a guard. If it recurs after the ledger rows proposed
+this run (`D-18`–`D-23`) exist, *that* is the evidence a guard would need.
+
+**Cost / API / privacy risk:** none. Both tools are local, stdlib-only, read-only, and touch files
+this repository already holds. 🔴 One privacy incident is recorded elsewhere and belongs here too:
+the **publication gate refused a batch over a living researcher's e-mail address** written into a
+public-edition file by a delegate. The gate was right; the address was removed and replaced with a
+pointer to where it is published. **That was the only defect this run caught by machine rather than
+by hand.**
+
+**Next surgical micro-step:** wire nothing. Read `PMID 30853297` to receipt depth — it carries a
+**measured** exon-6 skip, is a `Q230P` primary, and sits under a `consolidated baseline` claim at
+abstract depth. The capability this run most lacks is not a script; it is a receipt.
