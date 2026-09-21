@@ -5478,3 +5478,59 @@ one clinician's patients.
 **Next action for both: a `CORPUS` placeholder, not a read.** Neither needs full text for the use
 made of it here, and neither should acquire the appearance of a reading it has not had.
 
+
+---
+
+## FT-122 — One open-access supplementary file closes the central arithmetic of the survival question
+
+**Papers:** PMID 36779245 · PMID 29808465
+**Opened:** 2026-09-21 · **Actor:** Orchestrator, from Scientist B's Q230P node
+**Priority:** 🎯 **HIGHEST cost-to-yield ratio in the whole queue.**
+
+### 1 · `TABLE S1` / `SUPPLEMENTARY MATERIAL S1` of `PMID 36779245`
+
+Oliver 2023, *Epilepsia*. DOI [10.1111/epi.17542](https://doi.org/10.1111/epi.17542) ·
+**`PMC10952634`, open access** (both verified by `convert_article_ids`).
+
+**Why this one item outranks every acquisition in the packet.** The body was read in-act (≈ 31,000
+characters, Table 1 and the genotype-class denominators included) and it gives the stratification:
+
+> *"We stratified all 75 cases into one of three genetic groups: (1) null/null (= 45),
+> (2) null/missense (= 15), (3) missense/missense (= 15)."*
+
+**The 13 new patients are in Table 1. The other 62 are in `TABLE S1`, named in the body and not in
+it.** Without those rows the central question of this node — *does the "≥1 missense" survival
+advantage survive removing `Q230P`?* — **cannot be computed**, and its direction is genuinely
+unpredictable: removing `Q230P` removes the class's **longest survivor** (23 y 11 m, a censored
+observation anchoring the right tail) **and at least two of its deaths**.
+
+🔴 **`CLAIM 033` is the most directly prognostic statement in the model.** One supplementary file
+from an **already-open-access** paper decides whether its central contrast is carried by one
+recurrent allele or by the class. **This is not institutional access, not a paywall, not a human
+favour — it is a file that should be fetchable.** It was not obtainable through the route available
+in this session; whoever has a working publisher or PMC supplementary route should take it first.
+
+**What to extract:** per patient — both alleles, genotype class as the authors assigned it, age at
+last follow-up or death, alive/dead, and any family identifier permitting overlap resolution.
+⚠️ §12 applies: Oliver's 75 = **13 new + 62 from the literature**, which **contains** the 2021
+census's 56 and Piard's 20. **These cohorts re-report each other and must never be summed.**
+
+### 2 · `PMID 29808465` — the detection floor, and it is confirmed unobtainable
+
+Johannsen et al., *Neurogenetics* 2018 — the source of the `Q230P` *"protein not detected"* datum
+and therefore of `CLAIM 019` and half of `CLAIM 030`. `convert_article_ids(["29808465"])` returns
+**the PMID alone — no DOI, no PMCID** (verified 2026-09-21). **`EVIDENCE_BLOCKED`, confirmed; do not
+retry automated routes.**
+
+**Why it still matters more than its blocked status suggests.** `CLAIM 030` carries
+`PREMISE: DETECTION_FLOOR` — *not detected* is not *absent*, and **the floor has never been
+measured**. Whether `Q230P` leaves a pool below that floor is the fork this session could not
+resolve, and it decides whether `TX-003` has anything to act on. **What to ask a human for:** the
+Western blot figure and its legend, the **antibody and epitope**, the loading control, and any
+statement of assay sensitivity or of how much wild-type signal was loaded alongside.
+
+🔵 **Note for whoever reads either of these:** `PMID 30853297` (`FT-117`) is **also** a `Q230P`
+primary **and** carries a **measured** exon-6 skip for `c.517-2A>G`. Three of this repository's open
+questions — the detection floor, the survival arithmetic, and the only measured WWOX splice
+transcript — sit across these three papers, and none of the three has been read to receipt depth.
+
