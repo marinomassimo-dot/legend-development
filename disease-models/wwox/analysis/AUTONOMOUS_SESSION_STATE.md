@@ -3,7 +3,149 @@
 **Updated:** 2026-09-21 · **Purpose:** recovery point. If this session is interrupted, a cold reader
 resumes from here. **Not a handoff and not a stop.**
 
-## Current state — 2026-09-21, end of the autonomous continuation
+---
+
+# ⏩ CHECKPOINT — 2026-09-21, SECOND autonomous continuation (Orchestrator)
+
+**Everything below the horizontal rule after this block is the PREVIOUS continuation and is still
+true unless contradicted here.** This block is newer. Read it first.
+
+## 0 · The environment changed, and it decides what is possible
+
+| Capability | Previous continuation | **Measured today** |
+|---|---|---|
+| `files/fulltext/` | 29 artefacts | 🔴 **EMPTY AT START.** Fresh container, `files/` is gitignored — **all 29 prior artefacts are gone and unrecoverable.** Re-populated today with 8 new ones. |
+| PyMuPDF (`fitz`) | absent | 🟢 **`pip install pymupdf` WORKS** (1.28.2). Re-run per container; not persisted. |
+| poppler (`pdftotext`/`pdftoppm`) | absent | 🔴 still absent |
+| Shell/WebFetch egress to pubmed · pmc · europepmc · unpaywall · openalex · semanticscholar · crossref · core · **clinicaltrials.gov** | "denied" | 🔴 **ALL TESTED, ALL REFUSED** (`403 CONNECT tunnel failed` / `EGRESS_BLOCKED`) |
+| **`WebSearch`** | not known to be available | 🟢 **WORKS.** Different channel from the egress proxy. **It is the only route to non-PubMed public information** and is what made the `TX-007` monitor runnable. |
+| PubMed MCP | only route | 🟢 still the only route to literature, and it works |
+
+🔴 **PyMuPDF is real but conditional:** there is no way to *get* a PDF onto disk, so it only helps
+for an **operator-supplied** PDF — as `A9` was. What it does change: `D-14` ("no figure panel is
+inspectable") is **no longer unconditional**; it is conditional on acquisition.
+
+## 1 · What this continuation did
+
+**Four landings, each gate-PASS on the exact SHA and verified by `ls-remote`:** `e096984` ·
+`0ee3cf9` · `d8573b4` · `36860a2` on `claude/legend-autonomous-woree-tv6gz8`.
+
+**Nodes settled ON EVIDENCE, not on absence — both NO:**
+- **Adelaide (Richards/O'Keefe)** — [`adelaide_node_discriminator_20260921.md`](adelaide_node_discriminator_20260921.md).
+  Dies on its own review: the fly *"displays no phenotypic consequences"*, so every readout is a
+  modifier assay in a sensitised background, and **the sign runs backwards for WOREE**. Survives as
+  a **construct constraint for `TX-007`**: raising WWOX suppresses the mitochondrial phenotype only
+  with an intact SDR catalytic site (fly Y288F abolishes; Y288 ≡ human Y293) — **necessity, not the
+  domain sufficiency `DL-MECH-021` wants. `DL-MECH-021` stays at `basso`.**
+- **Lodz (Bednarek/Kośla)** — [`lodz_node_discriminator_20260921.md`](lodz_node_discriminator_20260921.md).
+  Dies on a count: in a review titled *"The WWOX gene in brain development and pathology"*,
+  `embryonic day`, `gestation`, `fetal`, `trimester`, `cortical plate`, `radial glia` all occur
+  **zero** times. **Not one developmental timepoint.** Two citation-fidelity defects found.
+
+**The node selected and run:** `NODE_WWOX_HUMAN_PRENATAL_AND_INFANT_PHENOTYPE`
+([`next_node_scout_20260921_orchestrator.md`](next_node_scout_20260921_orchestrator.md) — **read its
+correction banner**). Wave 1 (`28763065`, `41378749`): **INFORMATION GAIN NO on all six axes.**
+Wave 1b (`37974179`, `35712340`, `42589397`): YES on experimental roadmap and uncertainty, NO on four.
+
+🔴 **The single most useful result of this continuation** —
+[`mave_portability_to_wwox_20260921.md`](mave_portability_to_wwox_20260921.md) +
+[`missense_rescue_methodology_census_20260921.md`](missense_rescue_methodology_census_20260921.md):
+
+> **The measurement the proteostasis matrix says nobody has ever made — function at matched
+> abundance — is a published, scaled platform (MAVE / VAMP-seq), already run on an oxidoreductase
+> (CYP2C9, CYP2C19) and on a neurodevelopmental epilepsy gene (TSC2). LEGEND had never heard of it:
+> `VAMP-seq`, `deep mutational scan*`, `multiplexed assay*` appeared NOWHERE in the repository.**
+>
+> **And it is not portable to WWOX today.** The function half needs five things and WWOX supplies
+> one. TSC2's trick was that its readout is **an epitope, not an activity** — an antibody stain of
+> fixed cells (pS6) with genomic DNA recovered from the sorted cells themselves. So the missing
+> piece **need not be catalytic turnover**, which *reduces* the obstacle without removing it.
+> 🔴 **The gate is the prior invention of a single-cell, fluorescence-readable WWOX activity
+> sensor** — and the matrix's own chosen readout, **co-IP, is intrinsically per-sample: the
+> pulldown destroys the cell-to-genotype link pooling depends on.**
+>
+> 🔴 **The `P282A` brake now has a number from a real gene: 31/80 = 38.75 %** of known-pathogenic
+> TSC2 missense alleles carry **normal abundance**. An abundance-only WWOX MAVE would be expected
+> to miss about **two in five** of exactly the alleles that matter.
+>
+> **The CMA question is CLOSED as ORTHOGONAL.** The one systematic degron map in existence is a
+> **ubiquitin-proteasome** screen by construction and conclusion (bortezomib and E1i stabilised;
+> *"no substantial change was observed with chloroquine"*) — the **mirror image** of the WWOX
+> observation, where MG-132 did nothing and CQ/NH₄Cl restored the band. Its 30-residue tiles could
+> never resolve `LRSVQ` 187–191 anyway.
+
+**`TX-007` monitor M1–M5 run** (it declares *"review every LEGEND session"*) —
+[`tx007_monitor_update_20260921.md`](../therapeutics/tx007_monitor_update_20260921.md).
+No peer-reviewed case report · no WWOX trial registered · no expanded access · the June-2026
+*"FDA filing within two months"* is **past date, unconfirmed**. 🔴 **But the sponsor's sibling
+programme answers the age question the discovery ledger asked for, and weakens it:** `MZ-1866`
+(AAV9-TCF4, Pitt Hopkins, `NCT07135050`, ICV route — **the same route as the WWOX n=1**) is dosing
+and enrolling **ages 2–25**, not infants; FDA **Rare Pediatric Disease Designation** August 2026.
+The WWOX asset is designated **`MZ-9138`**. ⚠️ **All press-release/registry level, none peer-reviewed,
+and `clinicaltrials.gov` is egress-blocked so even the registry was read via search summaries —
+`SEGNALE TRASLAZIONALE`, never evidence. Re-verify before acting.**
+
+**Publication-integrity sweep — a clean NEGATIVE.** All 12 retraction/erratum/EoC records in the
+WWOX literature; four concern papers LEGEND holds; **all four already correctly classified. Zero new
+defects.** Do not re-run without new dated literature.
+
+## 2 · Method rules earned TODAY — apply, do not rediscover
+
+- 🔴 **`NO RECORD MATCHED` ≠ `NOT HELD`.** `registry_records.py get --pmid` answers *"is there a
+  RECORD KEYED to this PMID"*. Its surface list **excludes `disease-models/wwox/analysis/` and
+  `therapeutic_hypotheses_ledger_current.md`**, it reads **committed** state only, and it returns
+  no match for a PMID sitting inside the *body* of a record on a surface it does read. **It prints
+  its own warning and this session converted that warning into a negative — twice.** Always pair it
+  with `grep -rn "<PMID>" --include=*.md disease-models/`. (The CLAUDE.md prohibition is on grepping
+  the **two large registries** for records; `registry_records.py` covers those.)
+- 🔴 **A brief that assigns a paper MUST order artefact persistence as step 1**, before analysis:
+  body verbatim to `files/fulltext/PMID<PMID>_PMC_MCPtext.txt`, with bytes/chars/sha256. Four papers
+  were read today and **could not be receipted** because their text lived only in an agent's
+  context — see `FT-114`. Discovered *after* the contexts closed, i.e. at the cost of a re-read.
+- 🔴 **`is_open_access:false` with `checked_sources:["pubmed"]` means PMC WAS NEVER CONSULTED.**
+  **Three false negatives in this repository now**, the latest a paper that then delivered
+  **46,589 characters**. Retrievability is established by **attempting the fetch and measuring the
+  body length** — never by reading the flag.
+- 🔴 **The publication gate's inheritance guard is conservative in one direction, and a DISCLAIMER
+  trips it harder than the thing it disclaims.** Adding a clause that *denied* any link to the
+  persistent disease-model genotype took the gate from **2 blocks to 6** — the guard tests for that
+  genotype's *presence in the window*, and a denial puts it there. To attribute such material,
+  **name the PMID and say nothing else about genotype class.** `STUDY_IDENTIFIER` requires a literal
+  `PMID <digits>`, `PMC<digits>` or a DOI — **a bare number in a table cell does not match**, which
+  is what blocked the first attempt. ⚠️ **The guard also cannot tell a rule ABOUT the topic from
+  data OF the topic:** two drafts of *this very bullet* were themselves blocked. Write guidance
+  about this guard using neither the two inheritance-side words nor the genotype phrase.
+  **Read `scripts/public_release_gate.py` around `PARENT_OF_ORIGIN_PAIRING` before drafting; it is
+  faster than three gate runs.**
+- **The `UNREAD_PREMISE` ratchet is WWOX-corpus-scoped.** It fired on single corpus PMIDs twice
+  today and stayed at `0/0` with six unheld non-corpus PMIDs in the tree. It protects against
+  leaning on an unread **WWOX** paper, not an unread **anything**. Documented, **no gate proposed**;
+  the six are queued as `FT-115` so they carry an anchor regardless.
+- **The extractor also strips citation numbers**, not only italics and superscripts — markers render
+  as `[]`. "Quote with its citation number" is **not satisfiable** from the MCP route. Attribute by
+  content-match against the cited paper's abstract, and say that is what you did.
+
+## 3 · Open flags left for the Operator — NOT resolved autonomously
+
+1. **`DL-MECH-053` is `promoted-to-CC` and its cited dossier `staging/deepdive_PMID37974179_Dong2023.md`
+   does not exist in this tree** (`research/staging/` is absent entirely). Per `reading_state.py`'s
+   own header this may mean **unmerged or private, not lost** — recorded as *unverifiable here*.
+2. **`DL-MECH-053` describes the proband as carrying *"un allele di sito accettore `del ex6-8` e un
+   allele missense"*. `PMID 37974179` describes NEITHER** — it describes an in-frame exons 6–8
+   genomic deletion plus two discontinuous genomic deletions. Those two phrases are exactly the
+   public edition's reference-genotype class names, so this is **at least as likely a
+   de-identification substitution artefact as a scientific error.** Both readings stated; neither chosen.
+3. **Opening a WWOX MAVE would be a materially new research programme** — recorded as existing and
+   costed in `FT-115`; **explicitly not proposed.**
+
+## 4 · Queue state at this checkpoint
+`FT-112` retraction notice (status entry) · `FT-113` the prenatal/infant wave · `FT-114` the
+artefact-persistence gap · `FT-115` the MAVE methodology, six papers, retrievability UNTESTED on four.
+
+---
+---
+
+## Current state — 2026-09-21, end of the PREVIOUS autonomous continuation
 
 - `main` == `origin/main` · working tree clean · LINT **PASS** · publication gate **PASS, 0 blocks**
   · receipts **186 chained, tail anchored** · growth anchors **PASS** · `session_self_eval.py`
